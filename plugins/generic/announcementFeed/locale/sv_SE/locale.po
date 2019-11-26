@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:55+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:55+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Plugin för meddelandeflöde"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "Pluginet skapar RSS/Atom-syndikeringsflöden för tidskriftens meddelanden."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Inställningar"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Visa länkar till flöden på alla tidskriftens sidor."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Visa länkar till flöden bara på förstasidan och sidan för meddelanden."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Visa länkar till flöden bara på sidan för meddelanden."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Begränsa flödet till"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "senaste meddelanden."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Lägg in ett positivt värde för senaste meddelanden."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom-logotyp"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1-logotyp"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2-logotyp"

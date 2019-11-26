@@ -1,0 +1,636 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Redaktor czasopisma"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Przesyłanie i publikowanie"
+
+msgid "editor.submissionQueue"
+msgstr "Kolejka przesłanych tekstów"
+
+msgid "editor.submissionArchive"
+msgstr "Archiwum przesłanych tekstów"
+
+msgid "editor.publishing"
+msgstr "Publikowanie"
+
+msgid "editor.publishedIssues"
+msgstr "Opublikowane numery"
+
+msgid "editor.allSections"
+msgstr "Wszystkie działy"
+
+msgid "editor.allEditors"
+msgstr "Wszyscy redaktorzy"
+
+msgid "editor.me"
+msgstr "Ja"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Brak tekstów w archiwum."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Czy zachować zmiany w archiwum? Przesłane teksty oznaczone \"do usunięcia\", zostaną nieodwracalnie usunięte z systemu."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Czy na pewno chcesz usunąć przesłane teksty?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Czy na pewno?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Przesłane teksty zostaną zarchiwizowane po przesłaniu powiadomienia do autora (możesz pominąć przesłanie powiadomienia klikając w \"Pomiń wysłanie wiadomości\"."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Zanim prześlesz tekst do Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wyborze wersji do przesłania."
+
+msgid "editor.notifyUsers"
+msgstr "Powiadom użytkowników o nowym numerze"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Wszyscy użytkownicy zarejestrowani na stronie czasopisma ({$count})"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Wszyscy czytelnicy ({$count})"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Wszyscy autorzy ({$count})"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Wszyscy subskrybenci ({$count})"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Wszyscy subskrybenci z określonej instytucji ({$count})"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Powiadomieni użytkownicy..."
+
+msgid "editor.usersNotified"
+msgstr "Powiadomieni użytkownicy"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Wszyscy użytkownicy zarejestrowani na stronie czasopisma, którzy oznaczyli chęć otrzymywania ogłoszeń ({$count})"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Zamieść w numerze spis treści:"
+
+msgid "editor.issues.createIssue"
+msgstr "Stwórz nowy numer"
+
+msgid "editor.issues.currentIssue"
+msgstr "Aktualny numer"
+
+msgid "editor.issues.numArticles"
+msgstr "Teksty"
+
+msgid "editor.issues.noArticles"
+msgstr "Aktualnie brak pozycji w tym numerze."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Czy na pewno usunąć numer?"
+
+msgid "editor.issues.published"
+msgstr "Opublikowany"
+
+msgid "editor.issues.unpublished"
+msgstr "Nieopublikowany"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Wymagane jest podanie oznaczenia Tomu (w formie liczby)."
+
+msgid "editor.issues.numberRequired"
+msgstr "Wymagane jest podanie oznaczenia Numeru (w formie liczby)."
+
+msgid "editor.issues.yearRequired"
+msgstr "Wymagane jest podanie Roku (w formie liczby)."
+
+msgid "editor.issues.titleRequired"
+msgstr "Wymagane jest podanie Tytułu."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Właściwości numeru są wymagane. Wybierz co najmniej jedną opcję."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Właściwości numeru"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Identyfikator numeru"
+
+msgid "editor.issues.description"
+msgstr "Opis"
+
+msgid "editor.issues.accessStatus"
+msgstr "Status dostępności"
+
+msgid "editor.issues.accessDate"
+msgstr "Data otwartego dostępu"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Włącz opóźniony otwarty dostęp"
+
+msgid "editor.issues.coverPage"
+msgstr "Okładka"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Dozwolone formaty: GIF, JPG lub PNG )"
+
+msgid "editor.issues.uploaded"
+msgstr "Przesłany"
+
+msgid "editor.issues.remove"
+msgstr "Usunięty"
+
+msgid "editor.issues.proofed"
+msgstr "Sprawdzone"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Czy usunąć okładkę?"
+
+msgid "editor.issues.styleFile"
+msgstr "Szablon stylów"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Niepoprawny format szablonu stylów. Sprawdź czy przesłany plik zawiera szablon stylów CSS."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Czy usunąć szablon stylów?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Napis na okładce"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Stwórz okładkę do numeru czasopisma, składającą się z poniższych elementów."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Wyświetlanie"
+
+msgid "editor.issues.openAccess"
+msgstr "Otwarty dostęp"
+
+msgid "editor.issues.subscription"
+msgstr "Subskrypcja"
+
+msgid "editor.issues.identification"
+msgstr "Właściwości"
+
+msgid "editor.issues.access"
+msgstr "Dostęp"
+
+msgid "editor.issues.cover"
+msgstr "Okładka"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Wszystkie artykuły zostaną przeniesione do edycji, a powiązane z nimi dokumenty zostaną nieodwracalnie usunięte. Czy na pewno usunąć je z tego numeru czasopisma?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Kolejność wyświetlania numerów w czasopiśmie zgodna z typowymi ustawieniami. <a href=\"{$url}\" class=\"action\">Ustaw domyślne</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Kolejność wyświetlania działów w czasopiśmie zgodna z typowymi ustawieniami. <a href=\"{$url}\" class=\"action\">Ustaw domyślne</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Dane numeru"
+
+msgid "editor.issues.saveChanges"
+msgstr "Czy zapisać zmiany w spisie treści?"
+
+msgid "editor.issues.default"
+msgstr "Domyślne"
+
+msgid "editor.issues.order"
+msgstr "Kolejność"
+
+msgid "editor.issues.publicId"
+msgstr "Id"
+
+msgid "editor.issues.publishIssue"
+msgstr "Opublikuj numer"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Wycofaj opublikowany numer"
+
+msgid "editor.issues.previewIssue"
+msgstr "Poprzedni numer"
+
+msgid "editor.issues.preview"
+msgstr "(Poprzedni)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Czy na pewno opublikować nowy numer?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Czy na pewno wycofać opublikowany numer?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Nie można zapisać Id dla artykułu:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Brak numerów"
+
+msgid "editor.issues.open"
+msgstr "Otwórz"
+
+msgid "editor.issues.pages"
+msgstr "Strony"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Planowane numery"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Archiwalne numery"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Oznacz tekst jako zrecenzowany"
+
+msgid "editor.article.uploadReviewVersion"
+msgstr "Wyślij tekst pozbawiony informacji o autorach, przeznaczony do recenzji<br/>"
+
+msgid "editor.article.showSuppFile"
+msgstr "Przedstaw tekst recenzentom"
+
+msgid "editor.article.layoutAndProof"
+msgstr "Skład i korekta"
+
+msgid "editor.article.clear"
+msgstr "Czyść"
+
+msgid "editor.article.clearReviewer"
+msgstr "Usuń recenzenta"
+
+msgid "editor.article.changeSection"
+msgstr "Zmień sekcje"
+
+msgid "editor.article.setDueDate"
+msgstr "Podaj termin przygotowania recenzji"
+
+msgid "editor.article.addReviewer"
+msgstr "Dodaj recenzenta"
+
+msgid "editor.article.toReviewer"
+msgstr "Do recenzenta"
+
+msgid "editor.article.notifyReviewer"
+msgstr "Powiadom recenzenta"
+
+msgid "editor.article.initiateReview"
+msgstr "Rozpocznij proces recenzowania"
+
+msgid "editor.article.cancelReview"
+msgstr "Anuluj żądanie"
+
+msgid "editor.article.clearReview"
+msgstr "Usuń recenzenta"
+
+msgid "editor.article.enterRecommendation"
+msgstr "Wpisz rekomendacje"
+
+msgid "editor.article.enterReviewerRecommendation"
+msgstr "Wpisz rekomendacje dla recenzenta"
+
+msgid "editor.article.recommendation"
+msgstr "Rekomendacje"
+
+msgid "editor.article.selectReviewer"
+msgstr "Wybierz recenzenta"
+
+msgid "editor.article.replaceReviewer"
+msgstr "Zmień recenzenta"
+
+msgid "editor.article.editorToEnter"
+msgstr "Redaktor do wprowadzenia rekomendacji/komentarzy dla recenzentów"
+
+msgid "editor.article.uploadReviewForReviewer"
+msgstr "Prześlij recenzje"
+
+msgid "editor.article.peerReviewOptions"
+msgstr "Opcje procesu recenzowania"
+
+msgid "editor.article.decision"
+msgstr "Decyzja"
+
+msgid "editor.article.noEditorSelected"
+msgstr "Nie wybrano redaktora"
+
+msgid "editor.article.recordDecision"
+msgstr "Zapisz"
+
+msgid "editor.article.cannotRecord"
+msgstr "Redaktor działu nie został zapisany lub tekst nie został zrecenzowany."
+
+msgid "editor.article.reviewersSeeAuthorsVersion"
+msgstr "Recenzenci widzą oryginalny tekst"
+
+msgid "editor.article.designateDueDate"
+msgstr "Zaznacz termin wykonania recenzji"
+
+msgid "editor.article.designateDueDateDescription"
+msgstr "Wpisz datę lub liczbę tygodni dla nowego terminu."
+
+msgid "editor.article.todaysDate"
+msgstr "Dzisiejsza data"
+
+msgid "editor.article.requestedByDate"
+msgstr "Oczekiwane wg daty"
+
+msgid "editor.article.dueDateFormat"
+msgstr "Format: RRRR-MM-DD"
+
+msgid "editor.article.numberOfWeeks"
+msgstr "Liczba tygodni"
+
+msgid "editor.article.selectCopyeditor"
+msgstr "Wybierz redaktora technicznego"
+
+msgid "editor.article.replaceCopyeditor"
+msgstr "Zmień redaktora technicznego"
+
+msgid "editor.article.editorsCopyedit"
+msgstr "Tekst zredagowany przez redaktora czasopisma"
+
+msgid "editor.article.showAuthor"
+msgstr "Pozwól autorowi na podgląd tekstu"
+
+msgid "editor.article.showCopyeditor"
+msgstr "Pokaż wersję redaktorowi technicznemu"
+
+msgid "editor.article.rateReviewer"
+msgstr "Ocena recenzenta"
+
+msgid "editor.article.reviewerRating.veryGood"
+msgstr "5 Wysoka"
+
+msgid "editor.article.reviewerRating.good"
+msgstr "4"
+
+msgid "editor.article.reviewerRating.average"
+msgstr "3"
+
+msgid "editor.article.reviewerRating.poor"
+msgstr "2"
+
+msgid "editor.article.reviewerRating.veryPoor"
+msgstr "1 Niska"
+
+msgid "editor.article.comments"
+msgstr "Komentarze"
+
+msgid "editor.article.commentsRequired"
+msgstr "Pole z komentarzami jest wymagane"
+
+msgid "editor.article.saveRating"
+msgstr "Zapisz ocenę"
+
+msgid "editor.article.noneSelected"
+msgstr "Nie wybrano żadnych artykułów"
+
+msgid "editor.article.authorProofing"
+msgstr "Akceptacja przez autora"
+
+msgid "editor.article.archiveSubmission"
+msgstr "Odrzuć i zarchiwizuj zgłoszony tekst"
+
+msgid "editor.article.restoreToQueue"
+msgstr "Przywróć aktywną listę"
+
+msgid "editor.article.assignSectionEditor"
+msgstr "Dodaj redaktora działu"
+
+msgid "editor.article.assignEditor"
+msgstr "Dodaj redaktora czasopisma"
+
+msgid "editor.article.selectEditor"
+msgstr "Wybierz {$roleName}"
+
+msgid "editor.article.selectDecision"
+msgstr "Wybierz decyzję"
+
+msgid "editor.article.selectLayoutEditor"
+msgstr "Wybierz składacza"
+
+msgid "editor.article.replaceLayoutEditor"
+msgstr "Zmień składacza"
+
+msgid "editor.article.reviewSubmission"
+msgstr "Prześlij recenzje"
+
+msgid "editor.article.resubmitForReview"
+msgstr "Prześlij ponownie plik do recenzji"
+
+msgid "editor.article.resubmitFileForPeerReview"
+msgstr "Prześlij ponownie plik w wersji do recenzowania"
+
+msgid "editor.article.sendToCopyedit"
+msgstr "Wyślij plik do korekty"
+
+msgid "editor.article.selectProofreader"
+msgstr "Wybierz korektora pliku do publikacji"
+
+msgid "editor.article.replaceProofreader"
+msgstr "Zmień korektora pliku do publikacji"
+
+msgid "editor.article.authorComments"
+msgstr "Komentarze autora"
+
+msgid "editor.article.proofreaderComments"
+msgstr "Komentarze korektora pliku do publikacji"
+
+msgid "editor.article.layoutEditorFinal"
+msgstr "Koniec składu"
+
+msgid "editor.article.noDate"
+msgstr "(data)"
+
+msgid "editor.submissions.showBy"
+msgstr "Pokaż wg"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Prześlij MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktywna ocena"
+
+msgid "editor.submissions.invite"
+msgstr "Zaproś"
+
+msgid "editor.submissions.accept"
+msgstr "Akceptuj"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Brak zgłoszonych tekstów"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Ostatnie"
+
+msgid "editor.submissions.averageTime"
+msgstr "tygodnie"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Ostatnio uzupełniany"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Wybrane do"
+
+msgid "editor.submissions.inSection"
+msgstr "W dziale"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Zaplanowane do publikacji w"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Wybierz z listy"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Brak opłaty za publikację. Aby zaplanować publikację tekstu powiadom autora o konieczności uiszczenia opłaty lub o umorzeniu opłaty."
+
+msgid "editor.article.display"
+msgstr "Wygląd"
+
+msgid "editor.article.hideTocAuthorDescription"
+msgstr "Pomiń dane autora w spisie treści"
+
+msgid "editor.article.hideTocAuthorDefault"
+msgstr "Domyślne"
+
+msgid "editor.article.hideTocAuthorHide"
+msgstr "Pomiń"
+
+msgid "editor.article.hideTocAuthorShow"
+msgstr "Pokaż"
+
+msgid "editor.article.cover"
+msgstr "Okładka"
+
+msgid "editor.article.uploaded"
+msgstr "Przesłane"
+
+msgid "editor.article.removeCoverPage"
+msgstr "Czy usunąć okładkę?"
+
+msgid "editor.article.remove"
+msgstr "Usuń"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Niepoprawna data dostępu."
+
+msgid "editor.reassign"
+msgstr "Przypisz ponownie"
+
+msgid "editor.publicIdentificationExists"
+msgstr "Publiczny ID '{$publicIdentifier}' istnieje dla innego obiektu (numer, artykuł, plik). Wybierz unikatowy ID."
+
+msgid "editor.issues.galleys"
+msgstr "Pliki numeru"
+
+msgid "editor.issues.galley"
+msgstr "Plik numeru"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Wyświetlanie plików numeru"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Opublikuj pliki wraz z całą zawartością numeru"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Żadne pliki nie zostały opublikowane."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Etykieta jest wymagana."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Język pliku jest wymagany."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Identyfikator już istnieje."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Powrót do plików numeru"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Czy na pewno usunąć pliki?"
+
+msgid "editor.issues.editIssue"
+msgstr "Zarządzanie numerem: {$issueIdentification}"
+
+msgid "editor.issues.datePublished"
+msgstr "Data publikacji"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Obraz okładki który chciałeś usunąć nie pokrywa się z okładką numeru. Przeładuj stronę i spróbuj ponownie."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Obraz okładki który chciałeś usunąć nie może być znaleziony. Mógł zostać usunięty wcześniej. Spróbuj przeładować stronę."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Nieprawidłowy format okładki. Akceptowane formaty to .gif, .jpg lub .png."
+
+msgid "editor.issues.identifiers"
+msgstr "Identyfikatory"
+
+msgid "grid.action.addGalley"
+msgstr "Dodaj plik do publikacji"
+
+msgid "grid.action.publish"
+msgstr "Opublikuj numer"
+
+msgid "grid.action.addIssue"
+msgstr "Utwórz numer"
+
+msgid "grid.action.viewIssue"
+msgstr "Wyświetl"
+
+msgid "grid.action.previewIssue"
+msgstr "Podgląd"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Utwórz plik do publikacji"
+
+msgid "editor.article.coverImage"
+msgstr "Obraz okładki"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Obraz okładki który próbujesz usunąć nie został znaleziony. Mógł zostać usunięty wcześniej. Spróbuj przeładować stronę."
+
+msgid "grid.action.removeArticle"
+msgstr "Usuń artykuł z numeru"
+
+msgid "editor.article.remove.confirm"
+msgstr "Czy na pewno usunąć artykuł z numeru? Artykuł będzie dostępny do publikacji w innym numerze."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Edytuj pliki do publikacji"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Osoba odpowiedzialna za skład przygotowuje pliki i przesyła do pliku gotowe do publikacji do końcowej korekty."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Wybierz pliki do publikacji."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Pliki znajdujące się na tej liście są pobierane przez korektora. Po korekcie poprawione pliki powinny zostać przesłane poniżej, w sekcji <span class=\"pkp_help_title\">Korekta</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Wszystkie pliki przesłane do dowolnego etapu mogą zostać dodane do listy korekty końcowej przez oznaczenie pola Uwzględnij poniżej i kliknięciu Szukaj: Wszystkie możliwe do dodania pliki będą widoczne w liście i dostępne do wybrania."
+
+msgid "editor.editorAdministration"
+msgstr "Administracja"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Na pewno ustawić ten numer jako aktualny?"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Ustaw aktualny numer"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "Identyfikator publiczny '{$publicIdentifier}' już istnieje dla innego obiektu tego samego rodzaju. Wybierz unikatowy identyfikator dla obiektów tego samego typu w swoim czasopiśmie."

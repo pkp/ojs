@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:20+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:20+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Anbefal artikler af forfatter"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr "Denne plug-in indsætter en fortegnelse over artikler af samme forfatter på artiklens resuméside."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Mest læste artikler af samme forfatter(e)"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr "Bemærk: Denne plug-in kræver mindst en aktiveret statistik-rapport-plug-in. Hvis dine statistiske plug-ins indeholder mere end en enhed, skal du også vælge en normalenhed på administratorens og/eller tidsskriftschefens indstillingssider."

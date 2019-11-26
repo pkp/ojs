@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:16+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.views.displayName"
+msgstr "Report delle viste"
+
+msgid "plugins.reports.views.description"
+msgstr "Questo plugin genera un report CSV che riepiloga le viste su ciascun articolo"
+
+msgid "plugins.reports.views.articleId"
+msgstr "ID dell'articolo"
+
+msgid "plugins.reports.views.articleTitle"
+msgstr "Titolo dell'articolo"
+
+msgid "plugins.reports.views.datePublished"
+msgstr "Data di pubblicazione"
+
+msgid "plugins.reports.views.abstractViews"
+msgstr "Visualizzazioni dell'abstract"
+
+msgid "plugins.reports.views.galleyViews"
+msgstr "Totale visualizzazioni della gabbia"

@@ -1,0 +1,105 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:47+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:47+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "XML Plugin Utenti"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importa e esporta utenti"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Usage: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Examples:\n"
+"\tImporta utenti dentro la rivista usando il file myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\tEsporta tutti gli utenti da myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\tEsporta gli utenti specificando il loro ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importa Utenti"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Seleziona un file di dati XML contenente informazioni sull'utente da importare in questo press. Vedi l'help del press per dettagli sul formato di questo file.<br /><br />Nota che se il importato file contiene ogni username o indirizzo email gi&#x00E0; esistente nel sistema, i dati per quegli utenti non saranno importati e ogni nuovo ruolo da creare sar&#x00E0; assegnato agli utenti esisenti."
+
+msgid "plugins.importexport.users.import.failedToImportUser"
+msgstr "Importazione utente fallita"
+
+msgid "plugins.importexport.users.import.failedToImportRole"
+msgstr "Assegnazionee ruolo all'utene fallita"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "File di Dati utente"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "invia un email di notifica ad ogni utente importato contenente la username e password."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Continua a importare altri utenti se si presenta un erore."
+
+msgid "plugins.importexport.users.import.noFileError"
+msgstr "Nessun file uploaded!"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "I seguenti utenti sono stati importati nel sistema con successo."
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Si sono presentati errori durante l'importazione"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Conferma che questi sono gli utenti che vuoi importare nel sistema"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "È stata specificata una path del press sconosciuta \"{$pressPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Esporta Utenti"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Esporta per ruolo"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Esporta tutti"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Si sono presentati errori durante l'esportazione"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Non si può scrivere sul file \"{$fileName}\"."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Attenzione"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Non si possono usare password criptate con {$importHash}; OMP è configurato per usare {$ompHash}. Se continui, dovrai resettare le password degli utenti importati."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "L'import è finito con successo. Gli utenti con usernames and email che non sono ancora in uso sono stati importati, insieme ai gruppi di utenti."
+
+msgid "plugins.importexport.users.results"
+msgstr "Risultati"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Per favore importa un file \"Importa\" per continuare"

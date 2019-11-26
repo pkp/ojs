@@ -1,0 +1,333 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:17+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Tramesa nova"
+
+msgid "author.track"
+msgstr "Trameses actives"
+
+msgid "author.competingInterests"
+msgstr "Conflicte&nbsp;d’interessos <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Política&nbsp;de CI</a>"
+
+msgid "author.submit.submitArticle"
+msgstr "Tramet un article"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Cinc passos per realitzar la tramesa"
+
+msgid "author.submit.startHereTitle"
+msgstr "Comença una tramesa nova"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Feu clic aquí</a> si voleu anar al primer dels cinc passos de què consta el procés de tramesa."
+
+msgid "author.submit.step1"
+msgstr "Pas 1. Inici de la tramesa"
+
+msgid "author.submit.step2"
+msgstr "Pas 2. Càrrega de la tramesa"
+
+msgid "author.submit.step3"
+msgstr "Pas 3. Introducció de les metadades de la tramesa"
+
+msgid "author.submit.step4"
+msgstr "Pas 4. Càrrega dels fitxers addicionals"
+
+msgid "author.submit.step4a"
+msgstr "Pas 4a. Addició d'un fitxer addicional"
+
+msgid "author.submit.step5"
+msgstr "Pas 5. Confirmació de la tramesa"
+
+msgid "author.submit.start"
+msgstr "Inici"
+
+msgid "author.submit.upload"
+msgstr "Càrrega de la tramesa"
+
+msgid "author.submit.metadata"
+msgstr "Introducció de les metadades"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Càrrega de fitxers addicionals"
+
+msgid "author.submit.confirmation"
+msgstr "Confirmació"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Podeu completar aquesta tramesa més endavant si seleccioneu «Trameses actives» a la pàgina d'inici de l’autor/a."
+
+msgid "author.submit.notAccepting"
+msgstr "Actualment aquesta revista no accepta trameses."
+
+msgid "author.submit.requestWaiver"
+msgstr "Sol·licita una exempció"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Tingueu en compte que podeu sol·licitar l’exempció de la quota per a la tramesa d’aquest article."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Utilitzeu el quadre de comentaris següent per indicar per què sol·liciteu l’exempció de la quota."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Si sol·liciteu l’exempció de la quota, heu d’introduir-ne el motiu a l’espai proporcionat."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "En ronda de revisió {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "En revisió: Calen revisions"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "En edició: S'ha sol·licitat la correcció d'originals"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "En edició: S'ha sol·licitat la correcció de proves"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Carrega la versió corregida"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Correccions de proves"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Esteu segur/a que voleu eliminar aquesta tramesa incompleta?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Visualitza l’estat"
+
+msgid "author.submissions.noSubmissions"
+msgstr "No hi ha cap tramesa."
+
+msgid "author.submit.howToSubmit"
+msgstr " En cas que necessiteu assistència, poseu-vos en contacte amb <a href=\"mailto:{$supportEmail}\">{$supportName}</a> ({$supportPhone})."
+
+msgid "author.submit.howToSubmitNoPhone"
+msgstr " En cas que necessiteu assistència, poseu-vos en contacte amb <a href=\"mailto:{$supportEmail}\">{$supportName}</a>."
+
+msgid "author.submit.journalSection"
+msgstr "Secció de la revista"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Seleccioneu la secció adequada per a aquesta tramesa (vegeu «Seccions i Polítiques» a «<a href=\"{$aboutUrl}\" target=\"_new\">Sobre</a> la revista»)."
+
+msgid "submission.submit.selectSection"
+msgstr "Seleccioneu una secció..."
+
+msgid "author.submit.submissionChecklist"
+msgstr "Llista de verificació de tramesa"
+
+msgid "author.submit.verifyChecklist"
+msgstr "Abans de continuar, comproveu que es compleixen tots els punts de la llista de verificació de la tramesa."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Els autors/ores accepten les condicions d’aquest avís de drets d'autor/a, que s’aplicarà quan aquesta tramesa es publiqui en aquesta revista (podeu incloure comentaris per a l’editor/a a continuació)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Abans de continuar, accepteu les condicions de l’avís de drets d'autor/a."
+
+msgid "submission.submit.coverNote"
+msgstr "Comentaris per a l'editor/a"
+
+msgid "author.submit.comments"
+msgstr "Introduïu el text (opcional)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Seleccioneu una secció adequada de la revista per a aquesta tramesa."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Seleccioneu la llengua per a la tramesa."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declaració de privacitat de la revista"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Reordena els autors/ores perquè apareguin en l'ordre que sortiran a la publicació."
+
+msgid "author.submit.reorder"
+msgstr "Reordena el nom de l’autor/a"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Contacte principal per a la correspondència editorial."
+
+msgid "author.submit.addAuthor"
+msgstr "Afegeix un autor/a"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Suprimeix l’autor/a"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Proporcioneu els termes per a la indexació de la tramesa i separeu-los amb punt i coma (terme1; terme2; terme3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Fa referència a la ubicació geospacial, a la cobertura cronològica o històrica o a les característiques de la mostra de recerca."
+
+msgid "author.submit.languageInstructions"
+msgstr "Anglès=en; francès=fr; castellà=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Codis addicionals</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Heu d’introduir un autor/a com a mínim."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Heu d’introduir el nom, els cognoms i l'adreça de correu electrònic de cada autor/a."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Introduïu el títol del vostre article."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Introduïu el resum del vostre article."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Heu superat el límit de paraules permeses per a resums en aquesta part de la secció."
+
+msgid "author.submit.submissionFile"
+msgstr "Fitxer de la tramesa"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Carrega el fitxer de la tramesa"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Reemplaça el fitxer de la tramesa"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "No s’ha carregat cap fitxer de tramesa."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Esteu segur/a que voleu continuar sense carregar cap fitxer de tramesa?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Aquest pas opcional us permet afegir fitxers addicionals a una tramesa. Aquests fitxers poden tenir qualsevol format i incloure (i) instruments per a la recerca, (ii) conjunts de dades que compleixin els termes de la revisió ètica de recerca per a l’estudi, (iii) fonts que altrament no estarien disponibles per als lectors/ores, (iv) figures i taules que no es puguin integrar en el text, o qualsevol altre tipus de material que contribueixi a l’obra."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Feu clic a «Desa» per carregar el fitxer (a continuació podreu carregar fitxers addicionals)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Esteu segur/a que voleu continuar sense carregar el fitxer addicional que heu triat?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "No s’ha afegit cap fitxer addicional a aquesta tramesa."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Torna a «Fitxers addicionals»"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Esteu segur/a que voleu eliminar aquest fitxer addicional?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Carrega un fitxer addicional"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Afegeix un fitxer addicional"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Edita un fitxer addicional"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metadades del fitxer addicional"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "Per indexar aquest material addicional, proporcioneu les metadades següents per al fitxer addicional que heu carregat."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Fitxer addicional"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Creador/a (o propietari/ària) del fitxer"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Instrument de recerca"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Materials de recerca"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Resultats de la recerca"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transcripcions"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Anàlisi de les dades"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Conjunt de dades"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Text original"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Descripció breu"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Presenteu el fitxer als revisors/ores (sense metadades), ja que això no comprometrà l'avaluació anònima."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Utilitzeu-lo només amb materials publicats formalment."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Data de la recopilació de les dades o de la creació de l’instrument."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Nom de l’estudi o punt d’origen."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Especifica’n un altre"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "No s'ha carregat cap fitxer."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Introduïu el títol d'aquest fitxer addicional."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Introduïu un tema."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Introduïu una descripció."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "La identificació pública del fitxer addicional ja existeix."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Identificador públic del fitxer addicional"
+
+msgid "author.submit.confirmationDescription"
+msgstr "Per trametre el vostre manuscrit a {$journalTitle} feu clic a «Finalitza la tramesa». El contacte principal de la tramesa rebrà un justificant de recepció per correu electrònic i podrà visualitzar el progrés de la tramesa a través del procés editorial quan iniciï la sessió al lloc web de la revista. Us agraïm el vostre interès per publicar a {$journalTitle}."
+
+msgid "author.submit.noFiles"
+msgstr "No s’ha adjuntat cap fitxer a aquesta tramesa."
+
+msgid "author.submit.filesSummary"
+msgstr "Resum dels fitxers"
+
+msgid "author.submit.finishSubmission"
+msgstr "Finalitza la tramesa"
+
+msgid "author.submit.submissionComplete"
+msgstr "S’ha completat la tramesa. Us agraïm el vostre interès per publicar a {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Carrega la versió de l’autor/a"
+
+msgid "author.article.copyeditedFile"
+msgstr "Fitxer corregit"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Fitxer de l'autor/a"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "Per enviar una tramesa a aquesta revista cal tenir un compte d’usuari/ària. Això permet als editors/ores fer un seguiment de les vostres trameses, enviar-vos avisos quan canviï l’estat de les trameses i sol·licitar-vos informació addicional, si escau."
+
+msgid "author.submit.nextSteps"
+msgstr "Següents passos"

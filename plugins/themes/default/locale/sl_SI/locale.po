@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:19+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:19+00:00\n"
+"Language: \n"
+
+msgid "plugins.themes.default.name"
+msgstr "Privzete teme"
+
+msgid "plugins.themes.default.description"
+msgstr "Vtičnik implementira privzete teme."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Tipografija"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Izberite kombinacijo pisave, ki ustreza vaši reviji."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr "Noto Sans: Digitalna pisava, ki jo je razvil Google z obsežno podporo jezikom."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Serifna oblika Googlove digitalne pisave."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr "Noto Serif/Noto Sans: Kombinacija serifnih naslovov in ne-serifnega besedila."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr "Noto Sans/Noto Serif: Kombinacija ne-serifnih naslovov in serifnega besedila."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Priljubljena moderna pisava sans-serif."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Široka serifna pisava za branje na spletu."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr "Lora/Open Sans: Kombinacija serifnih naslvovo in sans-serifnega besedila."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Barva"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Izberite barvo naslovov."

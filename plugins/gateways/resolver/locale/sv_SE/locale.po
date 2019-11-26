@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:53+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:53+00:00\n"
+"Language: \n"
+
+msgid "plugins.gateways.resolver.displayName"
+msgstr "Resolver-plugin"
+
+msgid "plugins.gateways.resolver.description"
+msgstr "Pluginet slår upp nummer och artiklar baserat på citeringsinformation."
+
+msgid "plugins.gateways.resolver.errors.errorMessage"
+msgstr "Kan inte slå upp ett enskilt objekt med hjälp av den angivna citeringsinformationen. Kontrollera att citeringsinformationen är fullständig och hänvisar till ett objekt som finns på den här OJS-servern."
+
+msgid "plugins.gateways.resolver.exportHoldings"
+msgstr "Exportera beståndsposter"

@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:02+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "هذه الإضافة تتيح تعيين أسماء موارد موحدة لمكونات نظام المجلات المفتوحة (أعداد، مقالات، ألواح طباعية، وملفات تكميلية)."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "لطفاً، قم بتهيئة الإضافة URN لتتمكن من إدارتها واستعمالها في نظام المجلات المفتوحة:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "محتوى المجلة"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "لطفاً، إختر المكونات التي على URN أن تعين لها."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "لطفاً، إختر مكونات النشر التي ستكون لها تسميات موارد موحدة (URN) معينة لها:"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "الأعداد"
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "المقالات"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "الألواح الطباعية"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "بادئة URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "إن بادئة URN هي الجزء الثابت الذي لا يتغير أبداً من URN (مثل: \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "نمط بادئة URN ينبغي أن يكون بشكل: \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "لاحقة URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "لاحقة URN يمكن أن تتخذ أي شكل، لكنها ينبغي أن تكون فريدة من بين كل المكونات المنشورة التي تقترن بها نفس بادئة URN:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixpattern"
+msgstr "استعمل النمط المذكور أدناه لتوليد لواحق URN. استعمل %j لبادئات المجلة، %v لرقم المجلد، %i لرقم العدد، %Y للسنة، %a لرمز تعريف مقالة نظام المجلات المفتوحة، %g لرمز تعريف اللوح الطباعي، %s للرمز التعريفي للملف التكميلي، %p لرقم الصفحة، و %x لـ \"معرفات مخصصة\" (يجب تمكينها في خطوة التهيئة 4.3)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "على سبيل المثال، vol%viss%ipp%p يمكن أن تنشئ لاحقة URN بشكل \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "للأعداد"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "للمقالات"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "للألواح الطباعية"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "لطفاً، أدخل نمط لاحقة URN للأعداد."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "لطفاً، أدخل نمط لاحقة URN للمقالات."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "لطفاً، أدخل نمط لاحقة URN للألواح الطباعية."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "استعمل الأنماط الإفتراضية."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i للأعداد<br />%j.v%vi%i.%a للمقالات<br />%j.v%vi%i.%a.g%g للألواح الطباعية."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "أدخل لاحقة URN منفردة لكل فقرة منشورة. ستجد حقل إدخال URN إضافي في كل صفحة بيانات وصفية."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "رقم التحقق"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "إن ر قم التحقق سيتم احتسابه وإضافته تلقائياً في النهاية، كرقم أخير في URN."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "مدى الاسم"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "إختر"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "إن معرف مساحة الاسم الدائمية مطلوبة عادة لغرض التسجيل (مثل حالة Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "محلل رابط الإنترنت"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(مثل: http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "لطفاً، أدخل رابط الإنترنت للمحلل."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "إعادة تعيين URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "إذا غيرت إعدادات URN، فإن قيم URN التي سبق منحها لن تتأثر. بمجرد حفظ إعدادات URN، استعمل هذا الزر لإزالة كل قيم URN الموجودة سابقاً بحيث تصير الإعدادات الجديدة مؤثرة على المكونات السابقة أيضاً."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "هل أنت متأكد من رغبتك في حذف كل قيم URN الموجودة حالياً؟"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "عدد"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "مقالة"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "لوح طباعي"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "تعذر تعيين URN لأن اللاحقة المخصصة مفقودة."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "تعذر تعيين URN لأنها تتضمن نمطاً غير متوافق."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "ما تشاهده هو معاينة أولية لـ URN. أشر خانة التأشير واحفظ النموذج لتعيين URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "لقد تم تعيين URN لهذا المكون {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "لاحقة URN المعطاة قيد الاستعمال حالياً لمكون منشور آخر. لطفاً، أدخل لاحقة URN فريدة لكل فقرة."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "إزالة URN"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "هل أنت متأكد من رغبتك في إزالة كل ما موجود من URN؟"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "إزالة مكونات URN للعدد"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "هل أنت متأكد من رغبتك في إزالة كل ما موجود من URN لمكونات الأعداد؟"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "استعمل الخيار الآتي لإزالة URN من كل المكونات (المقالات وألواحها الطباعية) والتي تمت جدولتها لهذا العدد."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "أضف رقم التحقق"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "عيِّن URN {$pubId} لهذا {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "تعذر تعيين URN لأن اللاحقة المخصصة مفقودة."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "تعذر تعيين URN {$pubId} لأنها تتضمن نمطاً غير متوافق."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "لقد تم تعيين URN {$pubId} لهذا المكون."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "رقم التحقق مفقود."

@@ -1,0 +1,2025 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:35+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Aktuell tidskrift:"
+
+msgid "context.select"
+msgstr "Växla till annan tidskrift:"
+
+msgid "navigation.categories"
+msgstr "Kategorier"
+
+msgid "navigation.categories.browse"
+msgstr "Bläddra"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Klicka på ikonen för att fylla i granskningsformuläret."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vänligen fyll i obligatoriska fält."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr " Är du säker på att du vill markera händelsen som avslutad? Ändringar i efterhand kan vara spärrade."
+
+msgid "common.payment"
+msgstr "Betalning"
+
+msgid "common.payments"
+msgstr "Betalningar"
+
+msgid "common.homePageHeader.altText"
+msgstr "Sidhuvud förstasida"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Förstasidesbild tidskrift"
+
+msgid "navigation.journalHelp"
+msgstr "Hjälp"
+
+msgid "navigation.current"
+msgstr "Senaste"
+
+msgid "navigation.otherJournals"
+msgstr "Andra tidskrifter"
+
+msgid "navigation.browseByIssue"
+msgstr " Per nummer"
+
+msgid "navigation.browseByAuthor"
+msgstr "Per författare"
+
+msgid "navigation.infoForAuthors"
+msgstr "För författare"
+
+msgid "navigation.infoForLibrarians"
+msgstr "För bibliotekarier"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Riktlinjer gällande intressekonflikter"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Information för författare"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Information för bibliotekarier"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Ej tilldelat"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Ej tilldelat"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Bidrag under redigering"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Redigeras"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Bidrag under granskning"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Granskas"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arkiv"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arkiv"
+
+msgid "common.queue.long.active"
+msgstr "Aktiva bidrag"
+
+msgid "common.queue.short.active"
+msgstr "Aktiv"
+
+msgid "common.queue.long.completed"
+msgstr "Arkiv"
+
+msgid "common.queue.short.completed"
+msgstr "Arkiv"
+
+msgid "section.section"
+msgstr "Sektion"
+
+msgid "section.sections"
+msgstr "Sektioner"
+
+msgid "section.title"
+msgstr "Sektionsnamn"
+
+msgid "section.abbreviation"
+msgstr "Förkortning"
+
+msgid "section.abbreviation.example"
+msgstr "(Till exempel Artiklar=ART)"
+
+msgid "article.article"
+msgstr "Artikel"
+
+msgid "article.articles"
+msgstr "Artiklar"
+
+msgid "common.publication"
+msgstr "Artikel"
+
+msgid "common.publications"
+msgstr "Artiklar"
+
+msgid "article.submissionId"
+msgstr "Bidragets ID"
+
+msgid "article.title"
+msgstr "Titel"
+
+msgid "article.authors"
+msgstr "Författare"
+
+msgid "article.indexingInformation"
+msgstr "Information om indexering"
+
+msgid "article.metadata"
+msgstr "Metadata"
+
+msgid "article.journalSection"
+msgstr "Tidskriftssektion"
+
+msgid "article.file"
+msgstr "Fil"
+
+msgid "article.suppFile"
+msgstr "Tilläggsfil"
+
+msgid "article.suppFiles"
+msgstr "Tilläggsfil(er)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Tilläggsfil(er)"
+
+msgid "article.discipline"
+msgstr "Ämnesområde och underämnen"
+
+msgid "article.subject"
+msgstr "Nyckelord"
+
+msgid "article.coverage"
+msgstr "Täckning"
+
+msgid "article.type"
+msgstr "Typ, metod eller infallsvinkel"
+
+msgid "article.language"
+msgstr "Språk"
+
+msgid "article.sectionEditor"
+msgstr "Sektionsredaktör"
+
+msgid "article.commentsToEditor"
+msgstr "Författarkommentarer"
+
+msgid "article.submission"
+msgstr "Bidrag"
+
+msgid "article.submissions"
+msgstr "Bidrag"
+
+msgid "article.details"
+msgstr "Detaljer"
+
+msgid "article.abstract"
+msgstr "Abstract"
+
+msgid "article.coverPage.altText"
+msgstr "Framsida"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Open access"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Begränsad åtkomst"
+
+msgid "article.comments.sectionDefault"
+msgstr "Default"
+
+msgid "article.comments.disable"
+msgstr "Avaktivera"
+
+msgid "article.comments.enable"
+msgstr "Aktivera"
+
+msgid "article.fontSize"
+msgstr "Typsnittsstorlek"
+
+msgid "article.fontSize.small.altText"
+msgstr "Liten"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Mellan"
+
+msgid "article.fontSize.large.altText"
+msgstr "Stor"
+
+msgid "article.return"
+msgstr "Gå tillbaka till artikeldetaljer"
+
+msgid "submission.submissionEditing"
+msgstr "Manuskriptredigering"
+
+msgid "submission.changeSection"
+msgstr "Ändra till"
+
+msgid "submission.sent"
+msgstr "Skickat"
+
+msgid "submission.editorDecision"
+msgstr "Redaktörsbeslut"
+
+msgid "submission.round"
+msgstr "Omgång&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Redaktörens granskning"
+
+msgid "submission.notifyAuthor"
+msgstr "Meddela författare"
+
+msgid "submission.notifyEditor"
+msgstr "Meddela redaktör"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Redaktörs/Författares e-post"
+
+msgid "submission.reviewersVersion"
+msgstr "Granskares filversion med kommentarer"
+
+msgid "submission.postReviewVersion"
+msgstr "Filversion efter granskning"
+
+msgid "submission.editorVersion"
+msgstr "Redaktörsversion"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Författares omarbetade filversion"
+
+msgid "submission.authorVersion"
+msgstr "Författarversion"
+
+msgid "submission.copyediting"
+msgstr "Manusredigering"
+
+msgid "submission.copyedit"
+msgstr "Manusredigera"
+
+msgid "submission.proofreading"
+msgstr "Korrekturläsning"
+
+msgid "submission.scheduling"
+msgstr "Planläggning"
+
+msgid "submission.scheduledIn"
+msgstr "Planlagd för publicering i {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.sec"
+msgstr "Sektion"
+
+msgid "submissions.step1"
+msgstr "Steg 1"
+
+msgid "submissions.step3"
+msgstr "Steg 3"
+
+msgid "submissions.queuedReview"
+msgstr "Under granskning"
+
+msgid "submissions.published"
+msgstr "Publicerad"
+
+msgid "submissions.initial"
+msgstr "Första"
+
+msgid "submissions.proofread"
+msgstr "Korrekturläsa"
+
+msgid "submissions.initialProof"
+msgstr "Första korrekturet"
+
+msgid "submissions.postAuthor"
+msgstr "Post författare"
+
+msgid "submissions.reviewRound"
+msgstr "Granskningsomgång"
+
+msgid "submissions.proof"
+msgstr "Korrektur"
+
+msgid "submissions.editorDecision"
+msgstr "Redaktörsbeslut"
+
+msgid "submissions.editorRuling"
+msgstr "Redaktörsutslag"
+
+msgid "submission.eventLog"
+msgstr "Händelselogg"
+
+msgid "submissions.copyeditComplete"
+msgstr "Manusredigering klar"
+
+msgid "submissions.layoutComplete"
+msgstr "Layout klar"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Korrekturläst"
+
+msgid "journal.currentIssue"
+msgstr "Senaste numret"
+
+msgid "context.contexts"
+msgstr "Tidskrifter"
+
+msgid "journal.path"
+msgstr "Sökväg"
+
+msgid "context.context"
+msgstr "Tidskrift"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Visa alla nummer"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Inkludera användare utan roll i tidskriften."
+
+msgid "user.profile.profileImage"
+msgstr "Profilbild"
+
+msgid "user.showAllJournals"
+msgstr "Visa mina tidskrifter"
+
+msgid "user.registerForOtherJournals"
+msgstr "Registrera för andra tidskrifter"
+
+msgid "user.reviewerPrompt"
+msgstr "Skulle du kunna tänka dig att granska bidrag till den här tidskriften?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Ja, begär {$userGroup}-rollen."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Ja, jag vill bli kontaktad med förfrågningar gällande granskningsuppdrag för den här tidskriften."
+
+msgid "user.register.contextsPrompt"
+msgstr "Vilka av tidskrifterna på den här webbplatsen vill du registrera dig hos?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Begär följande roller."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Om du anmälde dig som granskare, vänligen fyll i dina intresseområden."
+
+msgid "user.myJournals"
+msgstr "Mina tidskrifter"
+
+msgid "user.manageMySubscriptions"
+msgstr "Hantera mina prenumerationer"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "För tillfället är ditt konto inte kopplat till några tidskrifter. Välj en tidskrift:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "För tillfället saknar ditt konto en roll hos den här tidskriften. Välj åtgärd nedan:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Skicka in ett bidrag"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Skicka in en artikel: Författarregistrering är inte aktiverat i nuläget."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Registrera dig som granskare"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Registrera dig som granskare: Granskarregistrering är inte aktiverat i nuläget."
+
+msgid "user.role.manager"
+msgstr "Tidskriftsansvarig"
+
+msgid "user.role.subEditor"
+msgstr "Sektionsredaktör"
+
+msgid "user.role.subscriptionManager"
+msgstr "Prenumerationsansvarig"
+
+msgid "user.role.managers"
+msgstr "Tidskriftsansvariga"
+
+msgid "user.role.subEditors"
+msgstr "Sektionsredaktörer"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Prenumerationsansvariga"
+
+msgid "user.role.journalAssistant"
+msgstr "Redaktionssekreterare"
+
+msgid "user.role.journalAssistants"
+msgstr "Redaktionssekreterare"
+
+msgid "issue.issue"
+msgstr "Nummer"
+
+msgid "issue.issues"
+msgstr "Nummer"
+
+msgid "issue.title"
+msgstr "Titel"
+
+msgid "issue.volume"
+msgstr "Volym"
+
+msgid "issue.number"
+msgstr "Nummer"
+
+msgid "issue.vol"
+msgstr "Vol"
+
+msgid "issue.no"
+msgstr "Nr"
+
+msgid "issue.year"
+msgstr "År"
+
+msgid "issue.noIssues"
+msgstr "Inga nummer"
+
+msgid "issue.toc"
+msgstr "Innehållsförteckning"
+
+msgid "issue.abstract"
+msgstr "Abstract"
+
+msgid "issue.coverPage.altText"
+msgstr "Framsida"
+
+msgid "issue.fullIssue"
+msgstr "Helt nummer"
+
+msgid "issue.nonpdf.title"
+msgstr "Ladda ned nummer"
+
+msgid "issue.viewIssue"
+msgstr "Visa nummer"
+
+msgid "issue.return"
+msgstr "Gå tillbaka till nummerdetaljer"
+
+msgid "subscriptionTypes.currency"
+msgstr "Valuta"
+
+msgid "subscriptionTypes.year"
+msgstr "år"
+
+msgid "subscriptionTypes.years"
+msgstr "år"
+
+msgid "subscriptionTypes.month"
+msgstr "månad"
+
+msgid "subscriptionTypes.months"
+msgstr "månader"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Utan utgångsdatum"
+
+msgid "subscriptionTypes.format"
+msgstr "Format"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Tryckt"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Tryckt och online"
+
+msgid "subscriptions.inactive"
+msgstr "Inaktiv"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.status.active"
+msgstr "Aktiv"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Behöver information"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Behöver godkännas"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Väntar på manuell betalning"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Väntar på online-betalning"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Du har inte någon aktiv prenumeration."
+
+msgid "subscriptions.status.other"
+msgstr "Annat, se anteckningar"
+
+msgid "subscriptions.individualDescription"
+msgstr "Enskilda prenumerationer kräver inloggning för att få tillgång till prenumerationsmaterial."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Institutionsprenumerationer kräver inte inloggning. Användarens domän och/eller IP-adress används för att ge tillgång till prenumerationsmaterial."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Observera:</strong> Institutionsprenumerationer som beställs online kräver godkännande av domän och IP-omfång innan prenumerationen aktiveras."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Status för bidrag"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Bidrag inskickat"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Bidrag placerat i kö för kommande nummer"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Bidrag planerat för nummer"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artikel publicerad"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Författares revideringar inskickade"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Författarreviderad fil uppdaterad"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Redaktör utsedd för bidrag"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Redaktör avsagd bidrag"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Redaktörsbeslut inskickat"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Redaktörsfil uppdaterad"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Bidrag arkiverat"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Bidrag återställt från arkivet"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Manusredaktör utsedd för bidrag"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Manusredaktör avsagd bidrag"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Manusredigering påbörjad"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Manusredaktörs reviderade fil uppdaterad"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Första manusredigering slutförd"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Slutlig manusredigering slutförd"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Manusredigeringsfil uppdaterad"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Korrekturläsare utsedd för bidrag"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Korrekturläsare avsagd bidrag"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Korrekturläsning påbörjad"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Korrekturläsares reviderade fil uppdaterad"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Korrekturläsning slutförd"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Layoutredaktör utsedd för bidrag"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Layoutredaktör avsagd bidrag"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Layoutarbete påbörjat"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Layoutfil uppdaterad"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Layoutarbete slutfört"
+
+msgid "reader.subscribersOnly"
+msgstr "Endast för prenumeranter"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Prenumeration krävs för att få tillgång till materialet, vänligen logga in."
+
+msgid "reader.openAccess"
+msgstr "Open access"
+
+msgid "reader.subscriptionAccess"
+msgstr "Kräver prenumeration"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Kräver prenumeration eller betalning"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "Kommentarer till artikeln"
+
+msgid "comments.authenticated"
+msgstr "av <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "Sortera resultat efter"
+
+msgid "search.results.orderBy.article"
+msgstr "Artikeltitel"
+
+msgid "search.results.orderBy.author"
+msgstr "Författare"
+
+msgid "search.results.orderBy.date"
+msgstr "Publiceringsdatum"
+
+msgid "search.results.orderBy.issue"
+msgstr "Nummer"
+
+msgid "search.results.orderBy.journal"
+msgstr "Tidskriftstitel"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularitet (hittills)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularitet (senaste månaden)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevans"
+
+msgid "search.results.orderDir.asc"
+msgstr "Stigande"
+
+msgid "search.results.orderDir.desc"
+msgstr "Fallande"
+
+msgid "search.results.similarDocuments"
+msgstr "liknande dokument"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Att använda en annan förvald valideringskälla än OJS medför att:</p>\n"
+"<ul>\n"
+"\t<li>Om en användare försöker att registrera ett nytt konto på den här sidan med ett användarnamn som redan finns hos valideringskällan (men inte i OJS-databasen) så kommer registreringen bara godkännas om lösenordet överensstämmer med det aktuella användarkontot.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>OBSERVERA!</h4>\n"
+"<p>Systemet lyckades inte skriva över konfigurationsfilen automatiskt. För att spara dina ändringar, öppna <tt>config.inc.php</tt> i en lämplig textredigerare och ersätt innehållet med informationen i textfältet nedan.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Prenumerationsadministration"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Enskilda prenumerationer"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Institutionsprenumerationer"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Prenumerationstyper"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Plugins för artiklars publiceringsversioner"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Plugins för artiklars publiceringsversioner möjliggör visning av artiklars publiceringsversioner i olika filformat."
+
+msgid "plugins.categories.auth.description"
+msgstr "Plugins för autentisering tillåter Open Journal Systems att autentisera användare via andra system, t.ex. LDAP-servrar."
+
+msgid "plugins.categories.generic.description"
+msgstr "Allmänna plugins förstärker Open Journal Systems med funktioner som inte ryms inom de andra kategorierna av plugins."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Föreslagna upphovsrättsdeklarationer baserade på Creative Commons</h3>\n"
+"<h4>1. Förslag på deklaration för tidskrifter som erbjuder open access</h4>\n"
+"Författare som publicerar i den här tidskriften accepterar följande villkor:\n"
+"<ol type=\"a\">\n"
+"\t<li>Författare bibehåller upphovsrätten och ger tidskriften rätten till första publiceringen, som sker under licensvillkoren för en <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Erkännande-licens</a>. Denna tillåter andra att dela verket så länge man deklarerar verkets upphovperson(er) och att verket ursprungligen publicerats i den här tidskriften.</li>\n"
+"\t<li>Författare kan ingå separata överenskommelser och avtal om icke-exklusiv spridning av tidskriftens publicerade version av verket (t.ex. att lägga upp det i ett institutionellt arkiv eller publicera det i en bok) så länge det inkluderar en deklaration om ursprunglig publicering i den här tidskriften.</li>\n"
+"\t<li>Författare tillåts och uppmuntras att dela sitt verk online (t.ex. i institutionella arkiv eller på författares egna webbplatser) före och under inskickningsprocessen eftersom detta är något som kan leda till givande utbyten, samt att möjligheten till citeringar ökar när den kommer i ett tidigare skede. (Se <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>.)</li>\n"
+"</ol>\n"
+"\n"
+"<h4>Förslag på deklaration för tidskrifter som erbjuder fördröjd open access</h4>\n"
+"Författare som publicerar i den här tidskriften accepterar följande villkor:\n"
+"<ol type=\"a\">\n"
+"\t<li>Författare bibehåller upphovsrätten och ger tidskriften rätten till första publiceringen, och att verket [SPECIFICERA EMBARGOTID] efter publicering också blir tillgängligt under licensvillkoren för en <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Erkännande-licens</a>. Denna tillåter andra att dela verket så länge man deklarerar verkets upphovperson(er) och att verket ursprungligen publicerats i den här tidskriften.</li>\n"
+"\t <li>Författare kan ingå separata överenskommelser och avtal om icke-exklusiv spridning av tidskriftens publicerade version av verket (t.ex. att lägga upp det i ett institutionellt arkiv eller publicera det i en bok) så länge det inkluderar en deklaration om ursprunglig publicering i den här tidskriften.</li>\n"
+"\t <li>Författare tillåts och uppmuntras att dela sitt verk online (t.ex. i institutionella arkiv eller på författares egna webbplatser) före och under inskickningsprocessen eftersom detta är något som kan leda till givande utbyten, samt att möjligheten till citeringar ökar när den kommer i ett tidigare skede. (Se <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>.)</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Steg: Aktuella bidrag &gt; Granskning av bidrag &gt; Redigering av bidrag &gt; Innehållsförteckning.<br /><br />\n"
+"Välj modell för hantering av den redaktionella processen. (För att ange huvudredaktör eller sektionsredaktörer, gå till \"Redaktörer\" under \"Hantera tidskriften\".)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>För att hjälpa läsare att hitta onlineversioner av material som författaren citerar finns följande alternativ:</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Lägg till Läsverktyg</strong><p>Tidskriftsansvariga kan lägga till \"Sök efter referenser\" till de läsverktyg som finns i anslutning till publicerade artiklar. Läsaren kan där söka efter referenser i förvalda forskningsdatabaser.</p></li>\n"
+"\t<li><strong>Inbäddade referenser</strong><p>För att bädda in länkar till referenser online (gäller layoutredaktör), se följande instruktioner:</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Vill du spärra den här användaren? Hen kommer inte längre att kunna logga in i systemet.\n"
+"\n"
+"Du kan välja att ge användaren en förklaring till varför kontot har spärrats."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Tyvärr, du har inte administrativa rättigheter för den här användaren. Detta kan bero på att användaren är:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Huvudaministratör för webbplatsen</li>\n"
+"\t\t\t<li>Aktiv inom tidskrifter som inte du har tillgång till</li>\n"
+"\t\t</ul>\n"
+"\tEndast huvudaministratör för webbplatsen har möjlighet att ändra detta.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Markerade element indikerar att de kräver åtgärd från en redaktör enligt följande:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">En granskare har blivit utsedd men inte meddelad via e-post</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">All granskare har inkommit med sina kommentarer, men inget beslut är registrerat</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Författaren har laddat upp ett omarbetat manuskript</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Granskaren är försenad med svar på inbjudan att granska</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Granskaren är försenad med sin granskning</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Deadline\" fylls i när granskaren har accepterat att genomföra granskningen; fältet visar antalet veckor till deadline för granskningen, alternativt (-) antal veckor som granskningen är försenad.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Markerade element indikerar att de kräver åtgärd från en redaktör enligt följande:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Åtgärd krävs i manusredigerings-steget</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Åtgärd krävs i layoutredigerings-steget</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Åtgärd krävs i korrekturläsnings-steget</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktiva redaktionella uppdrag"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Avslutade redaktionella uppdrag"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Inga tilldelade bidrag."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Om du meddelar manusredaktören igen kommer hens uppdrag återaktiveras. Är du säker på att du vill göra det?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Om du meddelar författaren igen kommer hens uppdrag återaktiveras. Är du säker på att du vill göra det?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Om du meddelar layoutredaktören igen kommer hens uppdrag återaktiveras. Är du säker på att du vill göra det?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Om du meddelar korrekturläsaren kommer hens uppdrag återaktiveras. Är du säker på att du vill göra det?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Avslag"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Granskares avslag, återbud & tidigare granskningsomgångar"
+
+msgid "sectionEditor.regrets"
+msgstr "Avslag"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Visa avslag, återbud och tidigare granskningomgångar"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Granskning, granskningsomgång {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Redaktörsbeslut, granskningsomgång {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Granskares avslag & återbud"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Avslag"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Resultat"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Aktivera en registrerad användare som granskare"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Skapa ny granskare"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktiva redaktörsuppdrag"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Avslutade redaktörsuppdrag"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Inga aktiva redaktörsuppdrag."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Layoutredigeringsuppdrag"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Ladda upp publiceringsversion"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Ersätt fil"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Ladda upp tilläggsfil"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Ogiltigt bildformat. Giltiga format är: .gif, .jpg, och .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Den här publiceringsversionen kommer att vara tillgänglig på en extern webbplats."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Extern URL"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artiklar som väntar på granskning"
+
+msgid "reviewer.completedReviews"
+msgstr "Färdig"
+
+msgid "reviewer.averageQuality"
+msgstr "Bedömning/poäng"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Fil som ska granskas"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Meddela redaktör"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Kommer att utföra granskningsuppdraget"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Har inte möjlighet att utföra granskningsuppdraget"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Bidraget blir tillgängligt om/när granskare åtar sig granskningsuppdraget"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Redaktör för bidraget"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Skriv eller klistra in granskarens kommentarer här"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Redaktör fyller i"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Skicka påminnelse"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Rekommendation"
+
+msgid "reviewer.article.submitReview"
+msgstr "Skicka in granskning till redaktör"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Kommentarer"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Uppladdade filer"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Version uppladdad av granskaren"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Om du vill skriva kommentarer till redaktören i filen, spara först ned filen på din hårddisk och ladda sedan upp den igen (Bläddra/Ladda upp.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Redaktörens begäran"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Ditt svar"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Granskning har skickats in"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Deadline för granskning"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Acceptera bidraget"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Ändringar krävs"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Återsänd för granskning"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Skicka in till annan publikation"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Refusera bidraget"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Se kommentarer"
+
+msgid "reviewer.article.schedule"
+msgstr "Schema"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Bidrag som ska granskas"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Schema för granskningsuppdrag"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Steg för granskning"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Riktlinjer för granskare"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Riktlinjerna för granskare förser granskare med de kriterier som används för att bedöma hur väl ett bidrag passar för publicering i tidskriften och kan innehålla övriga särskilda instruktioner som granskaren ska använda för att genomföra en effektiv och användbar granskning. När granskare arbetar med sina granskningar har de två fritext-fält till sitt förfogande, den första \"för författare och redaktör\" och den andra \"för redaktör\". Alternativt kan tidskriftsansvarig skapa ett granskningsformulär under Granskningsformulär. I båda fallen kan redaktörer välja att inkludera granskningen i sin korrespondens med författaren."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Meddela bidragets redaktör"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "om du vill åta dig att göra granskningen."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Om du ska göra en granskning, se Riktlinjer för granskare nedan."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Klicka på filnamnen för att ladda ned och granska filerna (antingen direkt på skärmen eller för utskrift) som hör till bidraget."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Ange om du har en intressekonflikt avseende den här forskningen (se <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Intressekonflikter"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Klicka på ikonen för att skriva eller klistra in din granskning av bidraget."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Du kan dessutom ladda upp filer för redaktören och/eller författaren att titta på."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Välj en rekommendation och skicka in granskningen. Du måste skriva in en bedömning eller ladda upp en fil innan du kan välja rekommendation."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Fastställ eller justera granskarens rekommendation."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Ingen rekommendation har gjorts. Du måste välja rekommendation för att skicka in."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "När du har registrerat ett val har du inte längre möjlighet att ändra bedömningen i den här granskningen. Är du säker på att du vill fortsätta?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Fil till Manusredaktören"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Manusredaktörens fil"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Manusredaktörens fil"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Inga korrekturläsningsuppdrag"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>För att ladda upp ett manuskript till den här tidskriften, gå igenom följande steg.</p>\n"
+"<ol>\n"
+"<li>Klicka på Bläddra (eller Välj fil) på den här sidan. Ett fönster öppnas där du kan söka efter filen på din dators hårddisk.</li>\n"
+"<li>Lokalisera filen du vill skicka in och markera den.</li>\n"
+"<li>Klicka på Öppna i Välj fil-fönstret, vilket innebär att filnamnet skrivs ut här på sidan.</li>\n"
+"<li>Klicka på Ladda upp på den här sidan. Då laddas filen upp från datorn till tidskriftens webbplatsen och döps om enligt tidskriftens standarder.</li>\n"
+"<li>När bidraget har laddats upp, klicka på Spara och fortsätt längst ner på sidan.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "E-post med förfrågan kan inte skickas förrän en granskningsversion är på plats."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "E-post med förfrågan kan inte skickas förrän filen har valts ut för manusredigering under Redaktörsbeslut på sidan Granskning."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "E-post med förfrågan kan inte skickas förrän en fil har laddats upp för manusredigering."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Första manusredigering"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Redaktörens manusredigering"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Författarens manusredigering"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Slutgiltig manusredigering"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Manusredaktörens version"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Lägg till manusredaktör"
+
+msgid "submission.copyedit.useFile"
+msgstr "Använd fil"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Kommentarer från manusredigering"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instruktioner för manusredigering"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Saknas (Ladda upp slutgiltig manusredigerings-version som Layoutversion innan du skickar förfrågan)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Publik identifikator för publiceringsversion"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Publik identifikator för publiceringsversion finns redan."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Tilldela layoutredaktör"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Ersätt Layoutredaktör"
+
+msgid "submission.layout.layoutComments"
+msgstr "Layoutkommentarer"
+
+msgid "submission.layout.instructions"
+msgstr "Layoutinstruktioner"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Referenslänkning"
+
+msgid "submission.proofreadingComments"
+msgstr "Kommentarer från korrekturläsning"
+
+msgid "submission.proofread.corrections"
+msgstr "Rättelser efter korrekturläsning"
+
+msgid "submission.proofread.instructions"
+msgstr "Instruktioner för korrekturläsning"
+
+msgid "submission.logType.article"
+msgstr "Artikel"
+
+msgid "submission.logType.author"
+msgstr "Författare"
+
+msgid "submission.logType.editor"
+msgstr "Redaktör"
+
+msgid "submission.logType.review"
+msgstr "Granskning"
+
+msgid "submission.logType.copyedit"
+msgstr "Manusredigering"
+
+msgid "submission.logType.layout"
+msgstr "Layout"
+
+msgid "submission.logType.proofread"
+msgstr "Korrekturläst"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Redaktör/Författar-korrespondens"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Manusredigeringskommentarer"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"De här kommentarerna kan delas med författaren.<br />\n"
+"(Efter du har sparat kan du lägga till fler kommentarer.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "För författare och redaktör"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "För redaktör"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "När du har skickat, visa en redigerbar BCC-version (anonym) som kan skickas till granskare."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "För författare och redaktör"
+
+msgid "submission.comments.forEditor"
+msgstr "För redaktör"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Spara och skicka e-post till författare"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Spara och skicka e-post till redaktör"
+
+msgid "user.register.selectContext"
+msgstr "Välj en tidskrift att registrera dig hos:"
+
+msgid "user.register.noJournals"
+msgstr "Det finns inga tidskrifter att registrera sig hos på den här webbplatsen."
+
+msgid "user.register.privacyStatement"
+msgstr "Integritetspolicy"
+
+msgid "user.register.registrationDisabled"
+msgstr "Den här tidskriften tar för tillfället inte emot några registreringar."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Det lösenord du angivit är för kort."
+
+msgid "user.register.readerDescription"
+msgstr "Meddelas via e-post när nytt nummer av tidskriften publiceras."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Meddelas via e-post när ett nytt nummer av tidskriften blivit tillgänggligt som open access."
+
+msgid "user.register.authorDescription"
+msgstr "Kan skicka in material till tidskriften."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Kan sakkunniggranska insända bidrag för tidskriften."
+
+msgid "user.register.reviewerDescription"
+msgstr "Kan sakkunniggranska bidrag för tidskrifter på webbplatsen."
+
+msgid "user.register.reviewerInterests"
+msgstr "Uppge intresseområden för granskning (huvudsakliga ämnesområden och forskningsmetoder)."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Ja, jag vill bli kontaktad med information om nya publiceringar och meddelanden för alla tidskrifter jag är registrerad hos."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Mina prenumerationer"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Prenumerationsstatus"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Aktiva och förfallna prenumerationer visas nedan, tillsammans med förfallodatum. Dessutom kan följande statusinformation inkluderas för varje prenumeration."
+
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Beskrivning"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Det behövs ytterligare information innan prenumerationen kan aktiveras."
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Prenumerationen måste granskas innan den kan aktiveras."
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manuell betalning har valts men ännu inte inkommit."
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Betalning online har valts men blev avbruten eller ej slutförd."
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Enskild prenumeration"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Institutionsprenumerationer"
+
+msgid "user.subscriptions.renew"
+msgstr "Förnya"
+
+msgid "user.subscriptions.purchase"
+msgstr "Beställ"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Beställ ny prenumeration"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Beställ enskild prenumeration"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Beställ institutionsprenumeration"
+
+msgid "user.subscriptions.expires"
+msgstr "Förfallodatum"
+
+msgid "user.subscriptions.expired"
+msgstr "Förfallen"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Visa tillgängliga prenumerationsformer"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Prenumerationsform"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Medlemsskap"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Vald prenumerationstyp kräver information om medlemskap."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Välj en giltig prenumerationstyp."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Det här användarkontot har redan en enskild prenumeration."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Information om medlemskap om det krävs för vald prenumerationstyp."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Institutionens namn"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Ett namn på institutionen krävs."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Postadress"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domän"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Om du skriver in en domän här är kan IP-omfång uteslutas.<br />Giltiga värden är domännamn (t.ex. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Vald prenumerationstyp kräver att domän och/eller IP-omfång för att autentisera prenumeranter."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Skriv in en giltig domän."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP-omfång"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Om IP-omfång anges här är uppgift om domän frivilligt.<br />Giltiga värden är IP-adresser (t.ex. 142.58.103.1), IP-omfång (t.ex. 142.58.103.1 - 142.58.103.4), IP-omfång med wildcard:et '*' (t.ex. 142.58.*.*), samt IP-omfång med CIDR (t.ex. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Skriv in ett giltigt IP-omfång."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Ta bort"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Lägg till"
+
+msgid "search.browseAuthorIndex"
+msgstr "Bläddra i författarregister"
+
+msgid "search.searchFor"
+msgstr "Sök i artiklar efter"
+
+msgid "search.withinJournal"
+msgstr "Inom"
+
+msgid "search.allJournals"
+msgstr "Alla tidskrifter"
+
+msgid "search.authorIndex"
+msgstr "Bläddra i författarregister"
+
+msgid "search.authorDetails"
+msgstr "Författardetaljer"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Search tips: <ul>\n"
+"<li>Söktermer skiljer inte på versaler och gemener</li>\n"
+"<li>Vissa vanliga ord utesluts av sökmotorn</li>\n"
+"<li>Som default får du träffar på <em>alla</em> termer som angivits i sökfrågan (med andra ord, <em>AND</em> är implicit)</li>\n"
+"<li>Kombinera olika ord med <em>OR</em> för att hitta artiklar som innehåller minst ett av sökorden; t.ex. <em>utbildning OR forskning</em></li>\n"
+"<li>Använd parenteser för att skapa mer avancerade söksträngar; t.ex. <em>arkiv ((tidskrift OR konferens) NOT avhandlingar)</em></li>\n"
+"<li>Sök efter en exakt fras genom att använda citationstecken; t.ex. <em>\"open access-publicering\"</em></li>\n"
+"<li>Exkludera ord genom att skriva <strong>-</strong> eller <em>NOT</em> innan sökordet; t.ex. <em>online -politik</em> eller <em>online NOT politik</em></li>\n"
+"<li>Använd <strong>*</strong> för att matcha alla typer av tecken; t.ex. <em>soci* morality</em> ger träffar på dokument som innehåller \"sociological\" eller \"societal\"</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "Visar {$title}"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Ladda ned den här PDF-filen"
+
+msgid "article.pluginMissing"
+msgstr "<p>Här ska PDF-filen du valt visas om din webbläsare har ett plugin för att läsa PDF-filer installerad (exempelvis en nyare version av <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Artikelnedladdning"
+
+msgid "article.nonpdf.note"
+msgstr "Nedladdningen av filen du valde bör starta automatiskt. Om den inte gör det, klicka på länken nedan. Observera att filen kan behöva ett särskilt läsarprogram eller en särskild typ av plugin för att synas.<br /><br />Om nedladdningen inte startar automatiskt, <a href=\"{$url}\">klicka här</a>."
+
+msgid "site.journalsHosted"
+msgstr "Tidskrifter som den här webbplatsen är värd för"
+
+msgid "site.journalView"
+msgstr "Visa tidskrift"
+
+msgid "site.journalRegister"
+msgstr "Registrera dig"
+
+msgid "site.journalCurrent"
+msgstr "Aktuellt nummer"
+
+msgid "site.noJournals"
+msgstr "Det finns inga tillgängliga tidskrifter."
+
+msgid "current.current"
+msgstr "Aktuellt"
+
+msgid "current.noCurrentIssue"
+msgstr "Inget aktuellt nummer"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Den här tidskriften har inga publicerade nummer."
+
+msgid "archive.archives"
+msgstr "Arkiv"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arkiv - Sida {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Bläddra bland äldre nummer"
+
+msgid "archive.issueUnavailable"
+msgstr "Numret är inte tillgängligt"
+
+msgid "about.statistics"
+msgstr "Statistik"
+
+msgid "about.contact"
+msgstr "Kontakt"
+
+msgid "about.aboutContext"
+msgstr "Om tidskriften"
+
+msgid "about.history"
+msgstr "Tidskriftens historia"
+
+msgid "about.editorialTeam"
+msgstr "Redaktion"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografi"
+
+msgid "about.editorialPolicies"
+msgstr "Redaktionella policyer"
+
+msgid "about.focusAndScope"
+msgstr "Ämne och fokus"
+
+msgid "about.sectionPolicies"
+msgstr "Sektionspolicyer"
+
+msgid "about.submissions"
+msgstr "Bidrag"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Logga in"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Registrera dig"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} eller {$register} för att skicka in ett bidrag."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} eller {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Skapa nytt bidrag"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "visa bidrag som behandlas"
+
+msgid "about.authorGuidelines"
+msgstr "Riktlinjer för författare"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Checklista vid insändning av bidrag"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Som en del av insändningsprocessen måste författare kryssa för att bidraget uppfyller följande krav. Bidrag som inte uppfyller kraven kan komma att skickas tillbaka till författaren."
+
+msgid "about.copyrightNotice"
+msgstr "Upphovsrättsdeklaration"
+
+msgid "about.privacyStatement"
+msgstr "Integritetspolicy"
+
+msgid "about.authorFees"
+msgstr "Författaravgifter"
+
+msgid "about.authorFeesMessage"
+msgstr "Den här tidskriften tillämpar följande författaravgifter."
+
+msgid "about.peerReviewProcess"
+msgstr "Granskningsprocess"
+
+msgid "about.publicationFrequency"
+msgstr "Publiceringsfrekvens"
+
+msgid "about.openAccessPolicy"
+msgstr "Open access-policy"
+
+msgid "about.delayedOpenAccess"
+msgstr "Fördröjd open access"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Innehållet i den här tidskriften kommer att tillgängligöras som open access"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "månad(er) efter att numret har publicerats."
+
+msgid "about.archiving"
+msgstr "Arkivering"
+
+msgid "about.subscriptions"
+msgstr "Prenumerationer"
+
+msgid "about.subscriptions.individual"
+msgstr "Enskilda prenumerationer"
+
+msgid "about.subscriptions.institutional"
+msgstr "Institutionsprenumerationer"
+
+msgid "about.subscriptionsContact"
+msgstr "Kontakt för prenumerationer"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Namn"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Format"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Längd"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Pris"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Prenumerationsformer"
+
+msgid "about.memberships"
+msgstr "Medlemskap"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Om det här publiceringssystemet"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS process för redigering och publicering"
+
+msgid "about.aboutOJSJournal"
+msgstr "Den här tidskriften använder Open Journal Systems {$ojsVersion}, ett system för tidskriftshantering och publicering som bygger på fri och öppen programvara som utvecklas, drivs och distribueras fritt av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "Den här webbplatsen använder Open Journal Systems {$ojsVersion}, ett system för tidskriftshantering och publicering som bygger på fri och öppen programvara som utvecklas, drivs och distribueras fritt av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems-hjälp"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS-hjälp"
+
+msgid "help.searchReturnResults"
+msgstr "Gå tillbaka till sökresultat"
+
+msgid "help.goToEditPage"
+msgstr "Redigera {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Tack"
+
+msgid "donations.thankYouMessage"
+msgstr "Tack för ditt bidrag, vi uppskattar det mycket!"
+
+msgid "payment.loginRequired"
+msgstr "Du måste vara inloggad för att kunna betala."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Prenumeration eller köp av enstaka artikel krävs för att få tillgång till innehållet. Logga in på tidskriften för att verifiera prenumeration, se tidigare köp, eller för köpa enstaka artiklar."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Prenumeration eller köp av enstaka nummer krävs för att få tillgång till innehållet. Logga in på tidskriften för att verifiera prenumeration, se tidigare köp, eller köpa enstaka nummer."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Du måste vara inloggad för att lämna en donation."
+
+msgid "payment.paid"
+msgstr "Betalad"
+
+msgid "payment.payNow"
+msgstr "Betala nu"
+
+msgid "payment.waive"
+msgstr "Avstå"
+
+msgid "payment.alreadyPaid"
+msgstr "Redan betalat"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Välj den här rutan om du redan har skickat din betalning till tidskriften för att slutföra prenumerationsregistreringen. Prenumerationsregistreringen kommer att hanteras först när betalningen inkommit. Klicka på BETALA NU ovan för betalningsinstruktioner."
+
+msgid "payment.paymentReceived"
+msgstr "Betalning mottagen"
+
+msgid "payment.paymentSent"
+msgstr "Betalning har redan skickats"
+
+msgid "payment.authorFees"
+msgstr "Författaravgifter"
+
+msgid "payment.type.submission"
+msgstr "Manusavgift"
+
+msgid "payment.type.publication"
+msgstr "Publiceringsavgift"
+
+msgid "payment.type.publication.required"
+msgstr "Publiceringsavgiften ska betalas."
+
+msgid "payment.type.fastTrack"
+msgstr "Avgift för snabbspår till granskning"
+
+msgid "payment.type.membership"
+msgstr "Avgift för individuellt medlemskap"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Avgift för köp av enstaka artikel"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Avgift för köp av enstaka nummer"
+
+msgid "payment.type.subscription"
+msgstr "Prenumerationsavgift"
+
+msgid "payment.type.donation"
+msgstr "Donationer"
+
+msgid "payment.requestPublicationFee"
+msgstr "Begär publiceringsavgift ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "Betalning har begärts men begäran har förfallit. Kontakta tidskriftsansvarig för mer information."
+
+msgid "payment.donation.makeDonation"
+msgstr "Donera"
+
+msgid "payment.submission.paySubmission"
+msgstr "Betala prenumerationsavgift"
+
+msgid "payment.publication.payPublication"
+msgstr "Betala för publicering"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Publiceringsavgift betald"
+
+msgid "payment.membership.buyMembership"
+msgstr "Köp individuellt medlemskap"
+
+msgid "payment.membership.renewMembership"
+msgstr "Förnya individuellt medlemskap"
+
+msgid "payment.membership.ends"
+msgstr "Upphör"
+
+msgid "payment.subscription.purchase"
+msgstr "Köp prenumeration"
+
+msgid "payment.subscription.renew"
+msgstr "Förnya prenumeration"
+
+msgid "payment.subscription.expires"
+msgstr "Upphör"
+
+msgid "installer.appInstallation"
+msgstr "Installation av OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Uppgradering av OJS"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS-version {$version}</h4>\n"
+"\n"
+"<p>Tack för att du laddar ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Innan du fortsätter, läs <a href=\"{$baseUrl}/docs/README.md\">README</a>-filen som medföljer mjukvaran. För ytterligare information om the Public Knowledge Project och dess mjukvaruprojekt, vänligen se <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP:s webbplats</a>. Om du vill rapportera buggar i Open Journal Systems eller behöver teknisk support, se <a href=\"http://forum.pkp.sfu.ca\">PKP:s supportforum</a> eller besök PKP:s <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">buggrapporteringssystem</a>. Vi rekommenderar i första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Uppgradera</h4>\n"
+"\n"
+"<p>Om du ska uppgradera en existerande OJS-installation, <a href=\"{$upgradeUrl}\">klicka här</a> för att gå vidare.</p>\n"
+"\n"
+"<h4>Rekommenderade systemkrav</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; du använder för närvarande PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Operativsystem: Alla OS som stöder ovan nämnda programvaror, även <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.sun.com/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Eftersom PKP inte har resurser att testa alla möjliga kombinationer och versioner av programvaror och plattformar kan vi inte garantera 100% funktionalitet och support.</p>\n"
+"\n"
+"<p>Ändringar i dessa inställningar kan göras först efter installationen genom att redigera <tt>config.inc.php</tt> i OJS rotkatalog, eller i webbgränssnittet för systemadministration.</p>\n"
+"\n"
+"<h4>Databassystem som stöds</h4>\n"
+"\n"
+"<p>OJS har i nuläget endast testats på MySQL och PostgreSQL, men andra databasadministrationssystem som stöds av <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> kan fungera (helt eller delvis). Kompatibilitetsrapporter och/eller kodpatchar för alternativa DBMS kan skickas til OJS-teamet.</p>\n"
+""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Innan installationen</h4>\n"
+"\n"
+"\n"
+"<p>1. Följande filer och kataloger (och deras innehåll) måste göras skrivbara:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> är skrivbar (valfritt): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> är skrivbar: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> är skrivbar: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> är skrivbar: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> är skrivbar: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> är skrivbar: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. En katalog för lagring av uppladdade filer måste skapas och göras skrivbar (Se \"Filinställningar\" nedan).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS-version {$version}</h4>\n"
+"\n"
+"\t<p>Tack för att du laddar ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Innan du fortsätter, läs <a href=\"{$baseUrl}/docs/README.md\">README</a>- och <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a>-filerna  som medföljer mjukvaran. För ytterligare information om the Public Knowledge Project och dess mjukvaruprojekt, vänligen se <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP:s webbplats</a>. Om du vill rapportera buggar i Open Journal Systems eller behöver teknisk support, se <a href=\"http://forum.pkp.sfu.ca\">PKP:s supportforum</a> eller besök PKP:s <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">buggrapporteringssystem</a>. Vi rekommenderar i första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>Det <strong>rekommenderas starkt</strong> att du gör backup på din databas, filkatalogen, och OJS installationkatalog innan du fortsätter.</p>\n"
+"<p>Om du kör installationen i <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, vänligen försäkra dig om att the max_execution_time directive i din php.ini-konfigurationsfil är satt till ett högt gränsvärde. Om denna eller annan tidsbegränsning (t.ex. Apaches \"Timeout\"-direktiv) överskrids och uppgraderingsprocessen avbryts måste arbetet hanteras manuellt.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"För komplett Unicode-stöd (UTF-8), välj UTF-8 för samtliga teckenuppsättningsinställningar. Observera att fullt Unicode-stöd kräver att PHP har kompilerats med stöd för <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a>-biblioteket (aktiverat som default i nya PHP-installationer). Det kan uppstå problem med utökade teckenuppsättningar om inte servern uppfyller dessa krav.\n"
+"<br /><br />\n"
+"Din server stödjer för tillfället mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "Din server tillåter i nuläget uppladdning av filer: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Din server tillåter i nuläget uppladdning av filer med en maxstorlek på: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "Primärt språk som systemet ska använda. Se OJS-dokumentationen om du är intresserad av att använda språk som inte listas här."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Välj andra språk som ska stödjas av systemet. De här språken kommer finnas tillgängliga för användning i tidskrifter som sidan är värd för. Ytterligare språk kan installeras när som helst i gränssnittet för webbplatsadministration."
+
+msgid "installer.filesDirInstructions"
+msgstr "Lägg till fullständig sökväg till en existerande katalog där uppladdade filer ska sparas. Katalogen bör inte vara direkt läsbar via webben. <strong>Vänligen försäkra dig före installation om att katalogen existerar och är skrivbar.</strong> Windows-sökvägar ska skrivas snedstreck, t.ex. \"C:/mintidskrift/filer\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS behöver tillgång till en SQL-databas för att lagra data. Se systemkrav ovan för en lista över databaser som stöds. Ange detaljer i fälten nedan för databasanslutning."
+
+msgid "installer.installApplication"
+msgstr "Installera Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Uppgradera Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<b>Varning:</b> Om installationen misslyckades under själva databasinstallationen kan du tvingas kasta (\"drop\") din OJS-databas eller dina databastabeller innan du försöker att installera databasen igen."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>VIKTIGT!</h4>\n"
+"<p>Installationen kunde inte skriva över konfigurationsfilen automatiskt. Innan du försöker använda systemet, öppna <tt>config.inc.php</tt> i en lämplig textredigerare och ersätt innehållet med texten nedan.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Installationen av OJS genomfördes utan problem.</p>\n"
+"<p><a href=\"{$loginUrl}\">Logga in </a> med det användarnamn och lösenord som du angivit på föregående sida för att börja använda systemet.</p>\n"
+"<p>För att följa och delta i PKP-communityt finns följande möjligheter:\n"
+"<ol>\n"
+"\t<li>Läs <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP-bloggen</a> och följ <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS-flödet</a> för nyheter och uppdateringar.</li>\n"
+"\t<li>Besök <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">supportforumet</a> om du har frågor eller kommentarer.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Uppgraderingen av OJS till version {$version} genomfördes utan problem.</p>\n"
+"<p>Glöm inte att ändra tillbaka \"installed\"-inställningen i konfigurationsfilen config.inc.php till<em>On</em>.</p>\n"
+"<p>Skulle du inte redan ha registrerat dig och vill få nyheter och uppdateringar, <strong>registrera dig på <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Om du har frågor eller kommentarer, besök gärna <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">supportforumet</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "Det finns en ny OJS-version tillgänglig! För närvarande använder du OJS {$currentVersion}. Den senaste versionen är OJS {$latestVersion}. Gå till <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">den här sidan</a> för att ladda ned den senaste versionen och för att hitta instruktioner för uppgradering."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "Det finns en ny OJS-version tillgänglig! För närvarande använder du OJS {$currentVersion}. Den senaste versionen är OJS {$latestVersion}. Kontakta din our webbplatsadministratör ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) för att göra hen uppmärksam på den här nya releasen. Mer information finns <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">här</a>."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} har arbetat om artikel {$submissionId}. Nytt fil-ID är {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} har tagits bort som granskare för bidrag {$submissionId}, granskningsomgång {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har påbörjats."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} har betygsatts för sin granskning av bidraget {$submissionId}, omgång {$round}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "Deadline för omgång {$round} i granskningen av bidrag {$submissionId} av {$reviewerName} har satts till {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "Rekommendation för omgång {$round} i granskningen av bidrag {$submissionId} av {$reviewerName} har registrerats."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "Rekommendation för omgång {$round} i granskningen av bidrag {$submissionId} har registrerats av redaktören {$editorName} å granskaren {$reviewerName}s vägnar."
+
+msgid "log.review.resubmit"
+msgstr "Bidrag {$submissionId} har skickats in för granskning på nytt."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} har tackat nej till omgång {$round} i granskningen av bidrag {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} har tackat ja till omgång {$round} i granskningen av bidrag {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} har tackat nej till omgång {$round} i granskningen av bidrag {$submissionId} å {$reviewerName}s vägnar."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} har tackat ja till omgång {$round} i granskningen av bidrag {$submissionId} å {$reviewerName}s vägnar."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Redaktören, {$userName}, har laddat upp en granskningsfil för granskningsomgång {$round} av bidrag {$submissionId} å granskarens, {$reviewerName}, vägnar."
+
+msgid "log.review.reviewerFile"
+msgstr "En fil granskningsfil har laddats upp."
+
+msgid "log.editor.decision"
+msgstr "Ett redaktörsbeslut ({$decision}) för artikel {$submissionId} registrerades av {$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr "En redaktörsrekommendation ({$decision}) för artikel {$submissionId} registrerades av {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "Manusredigering av bidrag {$submissionId} har påbörjats av {$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Defaultfil för manusredigering har valts."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} har avslutat första manusredigering av bidrag {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} har avslutat slutgiltig manusredigering av bidrag {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} har utsetts att redigera manuskriptet {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "En manusredigerad version av manuskriptet har laddats upp."
+
+msgid "log.copyedit.authorFile"
+msgstr "En version av manuskriptet, manusredigerad av författaren, har laddats upp."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} har utsetts till layoutredaktör för bidrag {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} är inte länge ansvarig för layoutredigering av bidrag {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} har avslutat layoutredigering av bidrag {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "Artikelns metadata har ändrades av {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "En redaktörsversion av det här manuskriptet har laddats upp."
+
+msgid "log.editor.archived"
+msgstr "Bidrag {$submissionId} har arkiverats."
+
+msgid "log.editor.restored"
+msgstr "Bidrag {$submissionId} har återplacerats i kö."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} har utsetts till redaktör för bidrag {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} has utsett {$proofreaderName} att korrekturläsa bidrag {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} har skickat {$submissionId} för planläggning."
+
+msgid "log.imported"
+msgstr "{$userName} har importerat artikel {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Sakkunniggranskad artikel"
+
+msgid "notification.type.editing"
+msgstr "Redaktionella händelser"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "En ny artikel, \"{$title}\", har skickats in."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "En kommentar har tillfogats redaktörsbeslut för \"{$title}.\""
+
+msgid "notification.type.galleyModified"
+msgstr "En publiceringsversion har modifierats för \"{$title}.\""
+
+msgid "notification.type.issuePublished"
+msgstr "Ett nummer har publicerats."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Ett meddelande skickades ut."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "En granskning enligt granskningsformuläret har skickats in för \"{$title}.\""
+
+msgid "notification.type.reviewing"
+msgstr "Granskningshändelser"
+
+msgid "notification.type.site"
+msgstr "Webbplatshändelser"
+
+msgid "notification.type.submissionComment"
+msgstr "En redaktör kommenterade \"{$title}.\""
+
+msgid "notification.type.submissions"
+msgstr "Bidragshändelser"
+
+msgid "notification.type.userComment"
+msgstr "En läsare kommenterade \"{$title}\""
+
+msgid "notification.savedIssueMetadata"
+msgstr "Metadata för publiceringen av numret sparades."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "En ny artikel har skickats in och behöver bli tilldelad en redaktör."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Låt en användare skapa publiceringsversioner genom att använda Lägg till-länken i Deltagarlistan."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Väntar på publiceringsversioner."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Åtkomst nekad! Du har inte blivit tilldelad rollen som manusredaktör för den här artikeln."
+
+msgid "user.authorization.noContext"
+msgstr "Ingen tidskrift i den här kontexten!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Du försöker att nå en artikel som inte ingår i din sektion."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Ogiltigt nummer valt!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Ogiltigt bidrag från manusredaktör eller inget bidrag från manusredaktör valt!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Laddade valutalistan \"{$filename}\" från XML"
+
+msgid "grid.action.createContext"
+msgstr "Skapa en ny tidskrift"
+
+msgid "editor.navigation.issues"
+msgstr "Nummer"
+
+msgid "notification.type.approveSubmission"
+msgstr "Det här bidraget väntar för närvarande på godkännande innan det kommer att synas i numret."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Väntar på godkännande."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Registrera dig hos andra tidskrifter"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Dölj andra tidskrifter"
+
+msgid "article.view.interstitial"
+msgstr "Välj en artikelfil att ladda ned."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Godkänd"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Väntar på godkännande"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Godkännande av publiceringsversion"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Godkänn den här publiceringsversionen för publicering.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Ta tillbaka godkännande för den här publiceringsversionen.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexerar \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Den här sökfunktionaliteten tillåter inte omindexering per tidskrift."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Angiven sökväg för tidskrift, \"{$journalPath}\", kunde inte knytas till någon tidskrift."
+
+msgid "editor.issues.backIssues"
+msgstr "Publicerade nummer"
+
+msgid "editor.issues.futureIssues"
+msgstr "Kommande nummer"
+
+msgid "navigation.subscriptions"
+msgstr "Prenumerationer"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} har tagit hand om redigeringsprocessen för artikeln {$submissionId}."

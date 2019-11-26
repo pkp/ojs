@@ -1,0 +1,1593 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
+"Language: \n"
+
+msgid "manager.website.archiving"
+msgstr "بایگانی کردن"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "آیا می‌خواهید تمام الگوها را به حالت نخست برگردانید؟ تغییرات ایجاد شده در الگو‌های ایمیل‌ها از بین خواهد رفت"
+
+msgid "manager.files.note"
+msgstr "توجه: با مرورگر فایل می‌توانید به فایل‌ها یا پوشه‌های یک مجله  مستقیماً دسترسی داشته باشید"
+
+msgid "manager.journalManagement"
+msgstr "مدیریت مجله"
+
+msgid "manager.language.ui"
+msgstr "رابط کاربری"
+
+msgid "manager.language.submissions"
+msgstr "مقالات ارسالی"
+
+msgid "manager.language.forms"
+msgstr "فرم‌ها"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "این عمل باعث جایگزینی تمامی تنظیمات وابسته به زبان خواهد شد."
+
+msgid "manager.languages.languageInstructions"
+msgstr "OJS  می‌تواند در دسترس کاربران زبان‌هایی که توسط سیستم حمایت می‌شود قرار گیرد. همچنین OJS می‌تواند به عنوان یک سیستم نسبتاً چند زبانی عمل کند و امکان تغییر زبان توسط کاربران در هر صفحه را فراهم کند. همچنین داده‌های خاصی را ممکن است بتوان حداکثر به دو زبان وارد کرد.<br /><br />چنانچه یک زبان مورد حمایت OJS در لیست زیر موجود نباشد از مدیر سایت بخواهید تا آن زبان را نصب کند. برای اطلاع از نحوه افزودن یک زبان جدید به مستندات OJS مراجعه کنید."
+
+msgid "manager.languages.noneAvailable"
+msgstr "متأسفانه زبان دیگری موجود نیست. در صورت تمایل از مدیر سایت بخواهید تا نسبت به نصب آن‌ها اقدام کند."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "این زبان پیش‌فرض سایت مجله خواهد بود."
+
+msgid "manager.managementPages"
+msgstr "صفحات مدیریتی"
+
+msgid "manager.payment.action"
+msgstr "اقدام"
+
+msgid "manager.payment.addPayment"
+msgstr "افزودن پرداخت"
+
+msgid "manager.payment.amount"
+msgstr "مقدار"
+
+msgid "manager.payment.authorFees"
+msgstr "هزینه‌های نویسنده"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "گزینه‌های انتخابی همراه با شرح و قیمت‌های آن (که در این قسمت قابل ویرایش است) در مرحله ۱ ارسال مقاله و در قسمت «درباره مجله» تحت قسمت ارسال مقاله, و همچنین هر جا که پرداخت لازم باشد, خواهد آمد."
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS هیچ تبدیل واحد پولی را انجام نمی‌دهد. چنانچه پرداخت برای اشتراک‌ها را قبول می‌کنید باید از تطابق واحد پولی پرداخت‌ها از آنچه در اینجا ذکر شده اطمینان حاصل کنید "
+
+msgid "manager.payment.description"
+msgstr "توصیف"
+
+msgid "manager.payment.details"
+msgstr "جزئیات"
+
+msgid "manager.payment.editSubscription"
+msgstr "ویرایش اشتراک"
+
+msgid "manager.payment.enable"
+msgstr "فعال‌سازی"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "گزینه‌های نحوه پرداخت"
+
+msgid "manager.payment.form.numeric"
+msgstr "تمام هزینه‌ها باید مقادیر عددی مثبت باشند (اعداد اعشاری مجاز می‌باشد)"
+
+msgid "manager.payment.generalFees"
+msgstr "هزینه‌های عمومی"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "عضویت در انجمن در قسمت «درباره مجله» تحت قسمت سیاست‌ها خواهد آمد و لینک اهدا در بالای قسمت جستجو در نوار حاشیه نمایش داده خواهد شد.."
+
+msgid "manager.payment.generalOptions"
+msgstr "امکانات عمومی"
+
+msgid "manager.payment.noPayments"
+msgstr "بدون پرداخت"
+
+msgid "manager.payment.notFound"
+msgstr "پیدا نشد"
+
+msgid "manager.payment.options"
+msgstr "امکانات"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "این موجب فعال شدن سیستم پرداخت مشترکین می‌شود که در آن نوع, قیمت, مدت, و مشترکین توسط مدیر اشتراک اداره می‌شود"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "آیا مطمئنید که می‌خواهید این اشتراک را حذف کنید."
+
+msgid "manager.payment.options.enablePayments"
+msgstr "برای فعال‌سازی ماژول پرداخت اینجا را کلیک کنید. می‌بایست ابتدا با پر کردن فرم زیر, تنظیمات نحوه پرداخت را پیکره‌بندی کنید. توجه داشته باشید که کاربران باید برای پرداخت ابتدا وارد سیستم شوند."
+
+msgid "manager.payment.options.fee"
+msgstr "هزینه‌ها"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "توصیف هزینه‌ها"
+
+msgid "manager.payment.options.feeName"
+msgstr "نام هزینه"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "عضویت در انجمن"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "دسترسی فقط به نسخه PDF مسدود است"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "هزینه چاپ"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "خرید مقاله"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "خرید شماره"
+
+msgid "manager.payment.options.text"
+msgstr "توصیف نحوه پرداخت"
+
+msgid "manager.payment.paymentId"
+msgstr "شناسه پرداخت "
+
+msgid "manager.payment.paymentMethod"
+msgstr "روش پرداخت"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "شما می‌توانید هرکدام از افزونه‌های مربوط به روش‌های پرداخت زیر را از طریق این صفحه تنظیم و پیکره‌بندی نمایید"
+
+msgid "manager.payment.paymentMethods"
+msgstr "روش‌های پرداخت"
+
+msgid "manager.payment.paymentType"
+msgstr "نوع پرداخت"
+
+msgid "manager.payment.readerFees"
+msgstr "قیمت برای خوانندگان"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "گزینه‌های انتخابی همراه با شرح و قیمت‌های آن (که در این قسمت قابل ویرایش است) در قسمت «درباره مجله» تحت قسمت ارسال مقاله, و همچنین هر جا که پرداخت لازم باشد, خواهد آمد."
+
+msgid "manager.payment.records"
+msgstr "رکوردها"
+
+msgid "manager.paymentTypes"
+msgstr "انواع پرداخت "
+
+msgid "manager.payment.userName"
+msgstr "شناسه پرداخت"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "کاربران این مجله"
+
+msgid "manager.people.allJournals"
+msgstr "تمام مجلات"
+
+msgid "manager.people.allSiteUsers"
+msgstr "انتخاب یک کاربر از لیست کاربران این سایت و افزودن آن به کاربران این مجله"
+
+msgid "manager.people.showNoRole"
+msgstr "کاربران فاقد نقش را نشان بده"
+
+msgid "manager.people.allUsers"
+msgstr "تمام کاربران"
+
+msgid "manager.people.confirmRemove"
+msgstr "آیا مخواهید این کاربر را از این مجله حذف کنید؟ این اقدام کاربر را از تمامی نقش‌هایش در این مجله عزل خواهد کرد."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "انتخاب یک الگو"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "اعطای نقش به کاربر موجود"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "با مجله"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "کاربری را برای ادغام با حساب کاربر دیگر انتخاب کنید (مثال وقتی که شخصی دو حساب کاربری دارد ) حسابی که در ابتدا انتخاب شده پاک می‌شود و مقالات ارسالی, انتساب‌ها و غیره مربوط به آن حساب به حساب کاربری دوم نسبت داده می‌شود"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "کاربری را که مسئولیت‌ها و انتساب‌های کاربر قبلی باید به آن نسبت داده شود را انتخاب نمایید"
+
+msgid "manager.people.roleEnrollment"
+msgstr "اعطای نقش {$role}"
+
+msgid "manager.people.syncUserDescription"
+msgstr "هماهنگ‌سازی اعطای نقش موجب می‌شود تا تمام کاربران در یک نقش خاص در یک مجله خاص با همان نقش‌ها وارد این مجله شوند. این اقدام موجب پیدایش مجموعه مشترکی از کاربران خواهد شد."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "نیاز به چکیده ندارد"
+
+msgid "manager.section.noSectionEditors"
+msgstr "هیچ دبیری برای این نوع مقاله مشخص نشده است. حداقل به یک کاربر این نقش را عطا کنید."
+
+msgid "manager.sections.assigned"
+msgstr "دبیر این نوع مقاله"
+
+msgid "manager.sections.confirmDelete"
+msgstr "آیا می‌خواهید این نوع مقاله را برای همیشه حذف کنید؟ در صورت پشیمانی باید مقالات مربوط به این قسمت را مجدداً منتشر کنید."
+
+msgid "manager.sections.alertDelete"
+msgstr "قبل از حذف این نوع مقاله، بایستی مقالات منتشر شده از این نوع را به نوع دیگری انتقال دهید."
+
+msgid "manager.sections.create"
+msgstr "ایجاد نوع مقاله"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "از بین دبیران یک نفر را انتخاب و به عنوان دبیر این نوع مقاله انتخاب کنید."
+
+msgid "manager.sections.editorRestriction"
+msgstr "این نوع مقاله فقط توسط دبیران قابل ارسال است."
+
+msgid "manager.sections.editors"
+msgstr "دبیر نوع مقاله"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "یک عنوان اختصاری برای نوع مقاله لازم است."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "به ازای هر دبیر نوع مقاله حداقل یکی از موارد تیک خورده باشد"
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "لطفاً مطمئن شوید که یک فرم داوری معتبر انتخاب کرده‌اید"
+
+msgid "manager.sections.form.titleRequired"
+msgstr "یک عنوان برای نوع مقاله لازم است."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "در فهرست مقالات هر شماره مجله، نام نویسندگان برای مقالات از این نوع آورده نشود"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "عنوان این قسمت در فهرست مطالب شماره‌های مجله ظاهر نشود."
+
+msgid "manager.sections.identifyType"
+msgstr "در نظر گرفتن مقالات منتشر شده از این نوع به عنوان"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "مثلاً مقالات داوری شده، مقالات داوری نشده، مقالات دعوت شده و غیره."
+
+msgid "manager.sections.indexed"
+msgstr "نمایه شده"
+
+msgid "manager.sections.noneCreated"
+msgstr "هیچ نوع مقاله تعریف نشده است."
+
+msgid "manager.sections.open"
+msgstr "مقالات ارسالی باز"
+
+msgid "manager.sections.policy"
+msgstr "سیاست‌گذاری این نوع مقاله"
+
+msgid "manager.sections.readingTools"
+msgstr "ابزارهای خواندن"
+
+msgid "manager.sections.reviewed"
+msgstr "داوری شده"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "در نمایه مجله وارد نخواهد شد."
+
+msgid "manager.sections.submissionReview"
+msgstr "شامل داوری نمی‌شود."
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "ارسال مقاله برای این نوع از مقاله قابل انجام است."
+
+msgid "manager.sections.unassigned"
+msgstr "دبیران موجود"
+
+msgid "manager.sections.wordCount"
+msgstr "تعداد لغت"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "حداکثر تعداد کلمات برای این نوع مقاله (صفر تا بدون سقف)"
+
+msgid "manager.setup"
+msgstr "نصب"
+
+msgid "manager.setup.masthead"
+msgstr "سربرگ"
+
+msgid "manager.setup.masthead.description"
+msgstr "لیست دبیران، مدیران و سایر افرادی که با این مجله همکاری می‌کنند."
+
+msgid "manager.setup.homepageContent"
+msgstr "محتوای صفحه اصلی مجله"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "صفحه خانگی مجله به صورت پیش‌فرض شامل لینک‌هایی برای پیمایش سایت می‌باشد. می‌توانید با استفاده از گزینه‌های زیر محتویات دیگری را به صفحه خانگی مجله اضافه کنید."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "استایل شیت مجله"
+
+msgid "manager.setup.contextName"
+msgstr "نام مجله"
+
+msgid "manager.setup.pageHeader"
+msgstr "سرتیتر صفحات مجله"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "محتوا"
+
+msgid "manager.setup.addAboutItem"
+msgstr "افزودن یک مورد در بخش درباره"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "افزودن یک مورد به چک‌لیست"
+
+msgid "manager.setup.addItem"
+msgstr "افزودن مورد"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "افزودن یک مورد به موارد درباره مجله"
+
+msgid "manager.setup.addNavItem"
+msgstr "افزودن مورد"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "افزودن لینک بانک اطلاعاتی جدید"
+
+msgid "manager.setup.addSponsor"
+msgstr "افزودن سازمان حمایت کننده"
+
+msgid "manager.setup.alternateHeader"
+msgstr "سرتیتر جایگزین"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "به جای عنوان و لوگو یک نسخه HTML سرتیتر را می‌توان در جعبه متن زیر وارد کرد. در صورتی که نمی‌خواهید آن را خالی بگذارید."
+
+msgid "manager.setup.announcements"
+msgstr "اطلاعیه‌ها"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "اطلاعیه‌ها برای مطلع ساختن خوانندگان از خبرها و رویدادها می‌باشد که در صفحه اطلاعیه‌ها ظاهر می‌شود."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "اطلاعات تکمیلی را که می‌باید در معرض دید خوانندگان  در صفحه اطلاعیه‌ها قرار گیرد وارد کنید."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(در قسمت درباره مجله نمایش داده می‌شود)"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "لازم است که نویسنده ارسال کننده مقاله بیانیه تضاد منافع در رابطه با مقاله خود را اعلام کند."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "لازم است داوران بیانیه تضاد منافع برای مقاله‌ای که داوری می‌کنند را اعلام کنند."
+
+msgid "manager.setup.history"
+msgstr "تاریخچه مجله"
+
+msgid "manager.setup.historyDescription"
+msgstr "این متن در قسمت درباره مجله ظاهر می‌شود و از آن می‌توان برای توصیف تغییرات در عنوان، تیم سردبیری و دیگر موارد تغییر مربوط به تاریخچه انتشاراتی مجله استفاده کرد."
+
+msgid "manager.setup.metadata.coverage"
+msgstr "پوشش"
+
+msgid "manager.setup.metadata.coverage.description"
+msgstr "پوشش جغرافیائی ، زمانی یا تاریخی و یا ویژگی‌های نمونه مورد پژوهش"
+
+msgid "manager.setup.currentIssue"
+msgstr "شماره جاری"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "مرحله 5: تغییر دلخواه نمای ظاهری"
+
+msgid "manager.setup.customTags"
+msgstr "تگ‌های سفارشی"
+
+msgid "manager.setup.customTagsDescription"
+msgstr "تگ‌های هدر HTML سفارشی که بتوان در هدر هر صفحه گنجاند مانند تگ‌های META."
+
+msgid "manager.setup.details"
+msgstr "جزئیات"
+
+msgid "manager.setup.details.description"
+msgstr "نام مجله، شاپا، اطلاعات تماس، سازمان‌های حمایت کننده و موتورهای جستجو."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "غیرفعال کردن ثبت‌نام کاربران. در این صورت کاربران باید توسط مدیر مجله اضافه شوند."
+
+msgid "manager.setup.discipline"
+msgstr "رشته تخصصی یا فوق تخصصی"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "زمانی کاربرد دارد که مجله چند رشته‌ای باشد."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(مانند: تاریخ؛ آموزش؛ جامعه‌شناسی؛ روانشناسی؛ مطالعات فرهنگی؛ حقوق)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "مثال‌هایی از رشته‌های تخصصی این مجله مشخص کنید"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "افزودن فهرست مطالب شماره جاری در صورت موجود بودن."
+
+msgid "manager.setup.editorDecision"
+msgstr "تصمیم دبیر"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "آدرس برگشت"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "اگر ایمیلی برگشت بخورد پیغامی به این آدرس ارسال می‌شود"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "<strong>توجه:</strong> برای فعال ساختن این گزینه مدیر سایت می‌بایست گزینه <tt>allow_envelope_sender</tt> در فایل تنظیمات OJS فعال سازد. همچنین ممکن است امکانات خاصی در سرور نیز لازم باشد که ممکن است همه سرورها آن را نداشته باشند. برای اطلاعات بیشتر به مستندات OJS مراجعه کنید."
+
+msgid "manager.setup.emails"
+msgstr "شناسایی ایمیل"
+
+msgid "manager.setup.emailSignature"
+msgstr "امضا"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "تمام ایمیل‌های از قبل تهیه شده که از طرف مجله ارسال می‌شود در انتها دارای امضای زیر است."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "فعال‌سازی امکان افزودن اطلاعیه توسط مدیر مجله."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "خوانندگان بتوانند در مجله ثبت‌نام کنند."
+
+msgid "manager.setup.focusAndScope"
+msgstr "زمینه مطالعاتی"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "به اطلاع خوانندگان، نویسندگان و کتابخانه‌ها رسانید که مقالات این مجله در چه حیطه‌ای بوده و چه زمینه‌های مطالعاتی را پوشش می‌دهد."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "برای نویسنده به منظور نمایه‌سازی پژوهش‌هایشان"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS  بر مبنای  پروتکل <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a>  برای استخراج فراداده عمل می‌کند. این پروتکل استاندارد برای دسترسی کاملاً به منابع پژوهشی الکترونیکی نمایه شده در یک مقیاس جهانی می‌باشد. برای وارد کردن این اطلاعات فرم مشابهی در دسترس نویسندگان قرار می‌گیرد تا فراداده‌های ارسال شده خود را وارد کنند. مدیر مجله می‌تواند قسمت‌هایی که مایل به نمایه کردن است را انتخاب کند. همچنین مثال‌هایی نیز برای نویسندگان فراهم نماید تا به آن‌ها در جهت نمایه کردن فعالیت‌های خود کمک کند."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "شاپای وارد شده نامعتبر است"
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "برای اطلاعات تماس اصلی، وارد کردن ایمیل الزامی است"
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "برای اطلاعات تماس اصلی، وارد کردن نام الزامی است"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "حروف اول مجله لازم است"
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "عنوان مجله لازم است"
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "تعداد داور برای هر مورد ارسال شده لازم است"
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "ایمیل حمایت کننده لازم است"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "نام حمایت کننده لازم است"
+
+msgid "manager.setup.generalInformation"
+msgstr "اطلاعات عمومی"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "محله 1: وارد کردن جزئیات"
+
+msgid "manager.setup.guidelines"
+msgstr "دستورالعمل"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "مرحله 3: ارسال مقاله"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "افزودن مجوز Creative Commons  به تمامی مقالات انتشاری برای مجلاتی که دسترسی آزاد فوری یا تأخیری دارند."
+
+msgid "manager.setup.information"
+msgstr "اطلاعات"
+
+msgid "manager.setup.information.description"
+msgstr "توصیف مختصر مجله برای کتابخانه‌ها ، نویسندگان و خوانندگان که در قسمت اطلاعات نوار حاشیه صفحات ظاهر می‌شود."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "برای نویسندگان"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "برای کتابداران"
+
+msgid "manager.setup.information.forReaders"
+msgstr "برای خوانندگان"
+
+msgid "manager.setup.initialIssue"
+msgstr "شماره نخست"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "برحسب فرمت انتخاب شده، شماره، دوره و یا سال اولین شماره مجله را که قرار است با سیستم OJS منتشر شود وارد کنید:"
+
+msgid "manager.setup.institution"
+msgstr "موسسه"
+
+msgid "manager.setup.itemsDescription"
+msgstr "مواردی را می‌توان به موارد موجود در منوی گشت‌وگذار افزود. اقلام موجود عبارت‌اند از: صفحه اصلی، درباره، صفحه خانگی کاربر و غیره که در بالای هر صفحه ظاهر می‌شوند."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "تعداد موارد در هر صفحه"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "نام اختصاری مجله"
+
+msgid "manager.setup.journalArchiving"
+msgstr "بایگانی مجله"
+
+msgid "manager.setup.contextSummary"
+msgstr "توضیح مختصر درباره مجله"
+
+msgid "manager.setup.contextAbout"
+msgstr "درباره مجله"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "وارد کردن اطلاعاتی درباره مجله که ممکن است مورد علاقه‌ی خوانندگان و داوران باشد. اطلاعات می‌تواند شامل سیاست‌های دسترسی آزاد ، زمینه مطالعاتی مجله، حق نشر، حامیان مجله، پیشینه‌ی مجله؛ بیانیه حفظ حریمی شخصی و ... باشد."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "محتوای صفحه اصلی مجله"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "به صورت پیش‌فرض محتوی صفحه اصلی شامل لینک‌های گشت‌وگذار می‌باشد. برای افزودن محتویات دیگر به صفحه خانگی می‌توانید گزینه‌های زیر را بکار ببرید که به ترتیب ظاهر می‌شود. توجه داشته باشید که شماره جاری مجله همیشه از منوی گشت‌وگذار قابل انتخاب است."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "سرتیتر صفحه اصلی مجله"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "سرتیتر صفحه اصلی مجله"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "یک نسخه گرافیکی از عنوان و لوگو مجله (به‌صورت یک فایلgif، png یا jpg). می‌توان برای نمایش در صفحه اصلی آپلود کرد که جایگزین نسخه متنی می‌شود. در غیر این صورت نسخه متنی نمایش داده می‌شود."
+
+msgid "manager.setup.contextInitials"
+msgstr "حروف اول مجله"
+
+msgid "manager.setup.journalLayout"
+msgstr "طرح‌بندی مجله"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "در این قسمت یک پوسته و سپس اجزای طرح‌بندی را انتخاب کنید. همچنین می‌توانید به جای این کار یک استایل شیت برای مجله آپلود کرد."
+
+msgid "manager.setup.journalLogo"
+msgstr "لوگوی مجله"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "لوگوی مجله"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "پاورقی صفحات مجله"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "این قسمت مربوط به پاورقی صفحات مجله است. برای تغییر یا به‌روزرسانی آن ، متن HTML دلخواه خود را در جعبه متن زیر وارد کنید. به عنوان مثال می‌توانید یک منوی گشت‌وگذار دیگر، یک شمارشگر بازدیدکننده‌ها و غیره در این قسمت وارد کرد. این پاورقی در تمام صفحات ظاهر می‌شود."
+
+msgid "manager.setup.journalPolicies"
+msgstr "مرحله 2: سیاست‌های مجله"
+
+msgid "manager.setup.journalSetup"
+msgstr "نصب مجله"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "نصب مجله به‌روزرسانی شد"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "فرمت استایل شیت مجله نامناسب است. فرمت قابل قبول .css است."
+
+msgid "manager.setup.journalTheme"
+msgstr "پوسته مجله"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "تصویر کوچک (بندانگشتی) مجله"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "یک لوگوی کوچک از مجله برای نمایش در لیست مجلات"
+
+msgid "manager.setup.contextTitle"
+msgstr "عنوان مجله"
+
+msgid "manager.setup.labelName"
+msgstr "نام برچسب"
+
+msgid "manager.setup.lists"
+msgstr "لیست‌ها"
+
+msgid "manager.setup.lockssEnable"
+msgstr "فعال کردن  LOCKSS برای ذخیره و انتشار محتوای مجله در کتابخانه‌های ثبت‌نام شده از طریق صفحه  <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> "
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "یک مجوز LOCKSS در قسمت درباره مجله  و تحت عنوان بایگانی ظاهر می‌شود: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "توضیح مجوز LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr "6 الی 10 کتابخانه را انتخاب کنید تا مجله شما را ثبت کنند. برای این کار می‌توانید به دانشگاه‌ها و سایر مؤسساتی که یک یا چند نفر از اعضای شورای نویسندگان مجله از آنجا هستند و کتابخانه آن دانشگاه‌ها در سیستم LOCKSS استفاده می‌کنند، درخواست ارسال نمایید. برای اطلاع بیشتر  <a href=\"http://www.lockss.org/community/\" target=\"_blank\"> لیست کتابخانه‌های عضو </a> را ببینید. برای این منظور می‌توانید از متن‌های آماده ایمیل برای دعوت از <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">کتابخانه‌های عضو LOCKSS </a> و یا <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">کتابخانه‌های غیر عضو </a> LOCKSS استفاده کنید."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "فعال کردن CLOCKSS  برای ذخیره و انتشار محتوای مجله در کتابخانه‌های ثبت شده از طریق صفحه <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a>."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "مجوز CLOCKSS در قسمت «درباره مجله» نمایش داده می‌شود:\t <a href=\"http://clockss.org/\" target=\"_blank\">مجوز CLOCKSS</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "توضیح مجوز CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr "برای ثبت‌نام در سرویس CLOCKSS به <a href=\"http://clockss.org/\" target=\"_blank\">وب‌سایت CLOCKSS</a> مراجعه کنید."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "شکل ظاهری"
+
+msgid "manager.setup.look.description"
+msgstr "سرتیتر صفحه اصلی، محتوی، سرتیتر مجله، پاورقی، منوهای گشت‌وگذار و استیل شیت"
+
+msgid "manager.setup.management"
+msgstr "مدیریت"
+
+msgid "manager.setup.management.description"
+msgstr "زمان‌بندی، دسترسی آنلاین ، اطلاعیه‌ها، استفاده از ویراستار، صفحه‌آرا ، و بازبینی نهایی."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "اداره مراحل پایه‌ای دبیری مجله"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "مدیریت و راه‌اندازی انتشار"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "مرحله 4: اداره مجله"
+
+msgid "manager.setup.navigationBar"
+msgstr "منوی گشت‌وگذار"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "افزودن یا کاستن موارد منوی گشت‌وگذار"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL  وارد شده یک URL مستقیم است مانند \"http://www.example.com\" . بهتر است یک مسیر نسبی وارد شود. مانند  \"/manager/setup\"."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "عبارت وارد شده یک رشته از کلمات است مانند «نصب مجله» تا اینکه یک پیام زبانی خاص باشد مانند «راه‌اندازی مدیریت»."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "هیچ فایل تصویری آپلود نشده است."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "هیچ استایل شیتی آپلود نشده است."
+
+msgid "manager.setup.note"
+msgstr "یادداشت"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>توجه:</strong> در حال حاضر ارسال رسید مقاله ارسالی غیرفعال است. برای استفاده از این گزینه ایمیل SUBMISSION_ACK در <a class=\"action\" href=\"{$preparedEmailsUrl}\">نمونه ایمیل‌های از قبل آماده</a> را فعال کنید."
+
+msgid "manager.setup.numPageLinks"
+msgstr "تعداد لینک صفحات"
+
+msgid "manager.setup.publishingMode"
+msgstr "اداره دسترسی آنلاین"
+
+msgid "manager.setup.onlineIssn"
+msgstr "شاپا الکترونیک"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "این مجله دسترسی آزاد به محتوی خود را اجازه می‌دهد."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "گزینه‌های شماره‌گذاری صفحات"
+
+msgid "manager.setup.policies"
+msgstr "سیاست‌ها"
+
+msgid "manager.setup.policies.description"
+msgstr "زمینه مطالعاتی، داوری، انواع مقالات، محرمانگی، امنیت ، و محتویات دیگر برای نمایش در بخش «درباره»"
+
+msgid "manager.setup.printIssn"
+msgstr "شاپا چاپی"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "دستورالعمل بررسی نهائی"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "دستورالعمل بازبینی نهائی در دسترس بازبینان نهائی ، نویسندگان ، صفحه‌آراها ، و دبیران در مرحله ویراستاری مقاله ارسالی قرار می‌گیرد. متن زیر یک دستورالعمل بازبینی نهائی پیشنهادی به صورت HTML است که می‌توانید به دلخواه آن را هم اکنون و یا بعداً تغییر دهید."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "زمان‌بندی چاپ"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "مقالات را می‌توان در قالب شماره مجله همراه با فهرست مقالات چاپ کرد. همچنین مقالات را به مجرد آماده شدن می‌توان از طریق افزودن آن‌ها به دوره جاری چاپ کرد. متنی تهیه کنید که در آن در مورد نحوه چاپ مجله و تعدد چاپ آن صحبت شده باشد. این متن در قسمت درباره مجله خواهد آمد."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "زمان‌بندی کردن چاپ"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "شناسایی محتوای مجله"
+
+msgid "manager.setup.publisher"
+msgstr "ناشر"
+
+msgid "manager.setup.publishingDescription"
+msgstr "نام ناشر در صفحه «درباره مجله» خواهد آمد."
+
+msgid "manager.setup.referenceLinking"
+msgstr "لینک به مراجع"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "برای دیدن متن کامل مقالات باید ثبت‌نام کنید"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "برای دیدن سایت مجله باید ثبت‌نام کنید"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "راهنمای داوری"
+
+msgid "manager.setup.reviewOptions"
+msgstr "گزینه‌های داوری"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "ایمیل‌های خودکار یادآوری"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "<strong>توجه: </strong> برای فعال ساختن این گزینه مدیر سایت می‌بایست گزینه <tt>scheduled_tasks</tt> را در فایل تنظیمات سیستم فعال سازد، این تنظیم ممکن است نیازمند ویژگی‌های خاصی در سرور باشد که ممکن است در همه سرورها مقدور نباشد. در مستندات OJS به این موضوع اشاره شده است."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "داوری محرمانه"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "متوسط مهلت داوری"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "دبیر بر مبنای یک تا پنج نمره‌ای به داور در مورد کیفیت کار وی در مورد هر داوری می‌دهد."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "داور هنگامی به فایل ارسال شده دسترسی دارد که انجام داوری را قبول کرده باشد."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "دسترسی داور"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "فعال ساختن گزینه تک کلیک دسترسی داور"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "<strong>توجه: </strong> دعوت‌نامه ارسالی برای داور  حاوی یک URL است که با کلیک بر روی آن، داور را مستقیماً به صفحه داوری مقاله ارسالی مورد نظر هدایت می‌کند. به دلایل امنیتی در صورت فعال‌سازی این گزینه دبیران نمی‌توانند آدرس‌های ایمیل و رونوشت‌های آن را تغییر دهند."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "امتیاز داور"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "یادآوری داور"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "سیاست‌های داوری"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "نمایه در موتور جستجو"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "برای کمک به موتورهای جستجو جهت نمایه کردن بهتر این مجله توصیف مختصری از مجله و کلیدواژه‌های مناسب که با سمی کولون از هم جدا هستند بیاورید."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "انواع مقالات و دبیر آن‌ها"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(چنانچه انواع مقالات تعیین نشود ، نوع مقالات ارسالی به صورت پیش‌فرض «مقاله پژوهشی» خواهد بود.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "برای تعریف انواع مقالات و یا تغییر آن‌ها برای این مجله به قسمت مدیریت انواع مقالات بروید. <br /><br />نویسندگان در زمان ارسال مقاله می‌توانند آن‌ها را انتخاب کنند."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "دبیری که مسئول رسیدگی به مقاله است"
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "نوع مقاله که آیتم مورد نظر به آن تعلق دارد"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "نمایش لینک تمام متن و تذکر دسترسی محدود "
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "مراحل پنج‌گانه نصب مجله"
+
+msgid "manager.setup.subjectExamples"
+msgstr "مانند: فتوسنتز; سیاه‌چاله; مسئله نقشه چهار رنگ; تئوری بازی"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "کلیدواژه‌ها"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "مثال‌هایی برای کلیدواژه به عنوان راهنمایی برای نویسندگان"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "راهنمای ارسال مقاله"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "چک‌لیست موارد مورد نیاز برای ارسال مقاله"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "در بدو ارسال مقاله به مجله ابتدا از نویسنده خواسته می‌شود تا موارد مختلف مربوط ارسال مقاله را در یک چک‌لیست تیک بزند تا بدین وسیله اطمینان حاصل شود که وی آن‌ها را رعایت کرده است. این چک‌لیست همچنین در راهنمای نویسندگان نیز در قسمت درباره مجله نمایش داده  می‌شود. در زیر می‌توان این لیست را مشاهده و به‌دلخواه آن را ویرایش کنید. تمام موارد این چک‌لیست می‌بایست توسط نویسنده تیک بخورد تا وی قادر به ادامه ارسال مقاله باشد."
+
+msgid "manager.setup.submissions"
+msgstr "مقالات ارسالی"
+
+msgid "manager.setup.submissions.description"
+msgstr "راهنمای نویسندگان، حق نشر، نمایه‌سازی"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "برای دسترسی به بعضی یا تمامی محتوی این مجله ایجاد اشتراک لازم است."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "از OJS برای انتشار آنلاین محتوای مجله استفاده نخواهد شد."
+
+msgid "manager.setup.typeExamples"
+msgstr "مانند: پرسشنامه تاریخچه‌ای؛ نیمه تجربی؛ آنالیز ادبی؛ مصاحبه"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "نوع (روش/راهکار)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "مثال‌هایی برای انواع پژوهش، روش‌ها و راهکارها"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "شناسه منحصربه‌فرد"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "مقالات و شماره‌های مجله را می‌توان با یک شماره یا عبارت شناسایی مشخص کرد. برای این کار می‌توان از یک سیستم شناسایی مانند DOI استفاده کرد."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "این مجله دارای تیم سردبیری و داوران است"
+
+msgid "manager.setup.useThumbnail"
+msgstr "تصویرک"
+
+msgid "manager.setup.useImageTitle"
+msgstr "تصویر عنوان"
+
+msgid "manager.setup.userRegistration"
+msgstr "ثبت‌نام کاربران"
+
+msgid "manager.setup.useTextTitle"
+msgstr "متن عنوان"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr "مجله شما از چندین معیار اندازه‌گیری برای ذخیره آمار استفاده می‌کند. اما در برخی موارد نیاز است که از یک معیار استفاده شود، برای مثال در نمایش لیست مقالات بیشتر مشاهده شده. لطفاً یک معیار اندازه‌گیری را به عنوان معیار پیش‌فرض انتخاب کنید."
+
+msgid "manager.statistics.statistics"
+msgstr "آمار مجله"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "تعداد موارد مشاهده مقاله (فقط برای نویسندگان)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "پذیرش شده"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "رد شده"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "دوباره ارسال شده"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "متوسط مدت داوری (روز)"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "از ابتدا تا چاپ (روز)"
+
+msgid "manager.statistics.statistics.description"
+msgstr "سامانه آمار‌های زیر را برای هر مجله محاسبه می‌کند: مدت زمان داوری ، مدت زمان تا چاپ"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "موارد چاپ شده"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "مواردی که می‌خواهید در دسترس خوانندگان مجله قرار گیرد مشخص کنید."
+
+msgid "manager.statistics.statistics.note"
+msgstr "توجه: جمع درصدها ممکن است به 100 نرسد چرا که مواردی که مجدداً ارسال شده است ممکن است یا چاپ شود یا رد شود و یا هنوز در حال داوری باشد."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "شماره‌های منتشر شده"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "مجموع مقالات ارسالی"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "داوری شده"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "خوانندگان ثبت‌نام شده"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "کاربرهای ثبت‌نام شده"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "تعداد داور"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "داوران"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "نمره ارزشیابی داور"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "داوری به ازای هر داور"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "آمار کدام نوع از مقالات را می‌خواهید؟"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "اشتراک‌ها"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "دانلود فایل مقاله"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "مشاهده صفحه چکیده مقاله"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "مشاهده صفحه چکیده مقاله و دانلود"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "مشاهده صفحه اصلی مجله"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "مشاهده صفحه فهرست مطالب شماره"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "محدودتر کردن نتایج بر اساس محتوا(شماره یا مقاله)"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "محدودتر کردن نتایج بر اساس نوع (مجله، شماره، مقاله یا نوع فایل) یا شناسه داده"
+
+msgid "manager.subscriptionPolicies"
+msgstr "سیاست‌های اشتراک"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "دسترسی آزاد ( با تأخیر)"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "لطفاً تیک بزنید"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "انقضای اشتراک"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "در صورت انقضای اشتراک دسترسی خوانندگان به تمام مقالات و یا به مقالاتی که بعد از انقضا منتشر شده است بسته می‌شود"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "انقضای کامل"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "دسترسی خوانندگان به تمامی مقالات غیر آزاد بسته است"
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "انقضای نسبی"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "دسترسی به مقالات مربوط به بعد از تاریخ انقضا بسته است"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} ماه"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} هفته"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "اطلاع‌رسانی به مشترکین از طریق ایمیل پس از انقضای اشتراک"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "اطلاع‌رسانی به مشترکین از طریق ایمیل پس از انقضای اشتراک"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "اطلاع‌رسانی به مشترکین از طریق ایمیل قبل از انقضای اشتراک"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "اطلاع‌رسانی به مشترکین از طریق ایمیل قبل از انقضای اشتراک"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "یادآور انقضای اشتراک"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "یادآوری خودکار با ایمیل که متن آن در قسمت ایمیل‌های از قبل تهیه شده قابل ویرایش است. این ایمیل قبل و بعد از انقضای اشتراک برای کاربر ارسال می‌شود"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>توجه:</strong> برای فعال ساختن این گزینه‌ها ، مدیر سایت باید گزینه <tt>scheduled_tasks</tt> را در فایل تنظیمات  OJS فعال سازد. البته برای راه افتادن این گزینه ، سرور می‌بایست ویژگی‌های لازم را داشته باشد که ممکن است این ویژگی در تمام سرورها در دسترس نباشد. برای اطلاعات بیشتر به مستندات OJS مراجعه کنید."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "لطفاً یکی از موارد زیر را انتخاب کنید"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTML را می‌توان در نواحی متنی برای تنظیمات مختلف مثل اندازه فونت یا رنگ آن وارد کرد. در این متن‌ها انتهای پاراگراف به‌طور اتوماتیک با  <tt>&lt;br&gt;</tt> مشخص می‌شود. ویراستار HTML با مرورگر فایرفاکس کار می‌کند."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "لطفاً مقدار صحیحی برای تعداد ماه‌های باقیمانده بعد از انقضای اشتراک وارد کنید"
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "لطفاً مقدار صحیحی برای تعداد ماه‌های باقیمانده قبل از انقضای اشتراک وارد کنید"
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "لطفاً مقدار صحیحی برای تعداد هفته‌های باقیمانده بعد از انقضای اشتراک وارد کنید"
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "لطفاً مقدار صحیحی برای تعداد هفته‌های باقیمانده قبل از انقضای اشتراک وارد کنید"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "خوانندگان ثبت‌نام کرده می‌توانند فهرست مطالب شماره جدید را به‌محض منتشر شدن دریافت کنند."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>توجه: </strong> برای فعال ساختن این امکان ، مدیر سایت می‌بایست گزینه  <tt>scheduled_tasks</tt> را در فایل تنظیمات OJS فعال سازد. البته برای راه افتادن این امکان ، سرور می‌بایست ویژگی‌های لازم را داشته باشد که ممکن است تحت تمام سرورها مقدور نباشد. برای اطلاعات بیشتر به مستندات OJS مراجعه کنید."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "اطلاع‌رسانی پرداخت آنلاین"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "ایمیل اطلاع‌رسانی خودکار را می‌توان پس از تکمیل آنلاین فرم پرداخت هزینه اشتراک به مدیر اشتراک فرستاد. متن این ایمیل قابل ویرایش از طریق لینک ویرایش ایمیل‌های از قبل آماده شده توسط مدیر مجله می‌باشد."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "پس از خرید آنلاین اشتراک شخصی، با ایمیل به مدیر اشتراک اطلاع بده."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "پس از خرید آنلاین اشتراک سازمانی، با ایمیل به مدیر اشتراک اطلاع بده. (توصیه می‌شود)"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "پس از تمدید آنلاین اشتراک شخصی، با ایمیل به مدیر اشتراک اطلاع بده"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "پس از تمدید آنلاین اشتراک سازمانی، با ایمیل به مدیر اشتراک اطلاع بده"
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>توجه: </strong>  خرید اشتراک سازمانی آنلاین نیاز به تأیید دامنه و بازه IP مشخص شده دارد و ابتدا اشتراک می‌بایست توسط مدیر مجله فعال شود."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>توجه: </strong>  برای فعال ساختن این گزینه‌ها، ابتدا مدیر مجله باید ماژول پرداخت آنلاین و پرداخت آنلاین اشتراک را فعال کند. این دو تحت قسمت هزینه‌های خوانندگان وجود دارند."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "گزینه‌های دسترسی آزاد برای مجلات غیر رایگان"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "مجلات غیر رایگان می‌توانند دسترسی آزاد تأخیری و یا بایگانی توسط خود نویسنده را به رسمیت بشناسند و بدین وسیله خوانندگان خود را افزایش دهند. سیاست اتخاذ شده در قسمت درباره مجله خواهد آمد."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "اطلاعات اشتراک"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "انواع اشتراک‌ها و مبلغ آن‌ها به صورت خودکار در قسمت درباره مجله تحت عنوان اشتراک خواهد آمد. همچنین نام و اطلاعات تماس مدیر اشتراک نیز نشان داده خواهد شد. سایر اطلاعات اشتراک از قبیل نحوه پرداخت و یا تخفیف برای کشورهای در حال توسعه را می‌توان در این قسمت وارد کرد."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "مدیر اشتراک"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "آدرس تماس در قسمت درباره مجله تحت عنوان اشتراک مجله خواهد آمد."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "لطفاً ایمیل صحیحی وارد کنید"
+
+msgid "manager.subscriptions"
+msgstr "اشتراک"
+
+msgid "manager.individualSubscriptions"
+msgstr "اشتراک‌های شخصی"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "اشتراک‌های سازمانی"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "آیا مطمئنید که می‌خواهید اشتراکتان را تمدید کنید."
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "آیا می‌خواهید این اشتراک را حذف کنید؟"
+
+msgid "manager.subscriptions.summary"
+msgstr "خلاصه اشتراک‌ها"
+
+msgid "manager.subscriptions.create"
+msgstr "ایجاد اشتراک جدید"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "ایجاد"
+
+msgid "manager.subscriptions.renew"
+msgstr "تمدید"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "خاتمه"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "تاریخ انقضا"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "شروع"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "تاریخ شروع"
+
+msgid "manager.subscriptions.domain"
+msgstr "دامنه"
+
+msgid "manager.subscriptions.edit"
+msgstr "ویرایش اشتراک"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "ویرایش"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "دارای وضعیت"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "همه"
+
+msgid "manager.subscriptions.form.status"
+msgstr "وضعیت"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "وضعیت اشتراک لازم است"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "لطفاً نوع معتبری از وضعیت اشتراک را انتخاب کنید."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "نوع اشتراک"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "نوع اشتراک لازم است"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "لطفاً نوع صحیحی از اشتراک ایجاد کنید"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "تاریخ شروع"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "تاریخ شروع اشتراک لازم است"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "لطفاً تاریخ صحیحی برای شروع اشتراک وارد کنید"
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "تاریخ خاتمه"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "تاریخ خاتمه اشتراک لازم است"
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "لطفاً تاریخ صحیحی برای خاتمه اشتراک وارد کنید"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "توجه: تمام تغییرات زیر در صفحه‌ی پروفایل تمامی کاربران سایت منعکس می‌شود."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "کاربر"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "تماس"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "یک کاربر لازم است"
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "لطفاً یک کاربر معتبر انتخاب کنید"
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "لطفاً یک کشور معتبر انتخاب کنید."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "ارسال ایمیل حاوی نام کاربر و جزئیات اشتراک به کاربر."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "لطفاً از چک‌لیست محیا شده استفاده کنید."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "عضویت"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "شماره مرجع"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "در صورتی که نوع اشتراک انتخاب شده نشان دهنده عضویت در سازمان یا انجمن خاصی باشد لطفاً اطلاعات عضویت را وارد کنید."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "نوع اشتراک انتخاب شده نیاز به اطلاعات عضویت دارد"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "یادداشت‌ها"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "دامنه"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "نام سازمان"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "نام سازمان لازم است"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "آدرس پستی"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "چنانچه اشتراک برای موسسه خاصی است لطفاً دامنه آن را وارد کنید. در صورت وارد کردن دامنه ، وارد نمودن محدوده IP اختیاری است. (مانند lib.sfu.ca)"
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "نوع اشتراک انتخاب شده نیاز به یک دامنه یا محدوده IP برای احراز هویت دارد."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "لطفاً دامنه صحیحی وارد کنید"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "محدوده IP"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "چنانچه اشتراک برای مؤسسات است لطفاً یک محدوده IP وارد کنید. در صورت وارد کردن محدوده IP ، وارد کردن دامنه اختیاری است. مقادیر معتبر برای محدوده IP شامل عدد IP می‌باشد. مانند 142.58.103.1  و یا یک محدوده CIDR IP  مانند 142.58.100.0/24 , یک محدوده IP مانند 142.58.103.1 - 142.58.103.4 ، محدوده همراه با ستاره مانند 142.58.103.1.* ، و یا هرگونه ترکیبی از موارد فوق که با ; از هم جدا شوند مانند  142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "لطفاً محدوده IP صحیحی وارد کنید"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "حذف"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "اضافه"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "ذخیره و ایجاد یک مورد دیگر"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "برای اطلاع‌رسانی به کاربر مشخصات تماس و آدرس ایمیل می‌بایست در قسمت نصب مجله وارد شده باشد."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "این کاربر در حال حاضر مشترک این مجله است"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "قبل از اینکه بتوان یک اشتراک جدید ایجاد کرد باید یک نوع اشتراک تعریف کرد."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "محدوده IP"
+
+msgid "manager.subscriptions.membership"
+msgstr "عضویت"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "شماره مرجع"
+
+msgid "manager.subscriptions.notes"
+msgstr "یادداشت‌ها"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "هیچ اشتراکی ایجاد نشده است"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "انتخاب تماس اشتراک"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "انتخاب کاربر"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "مجوزهای دستیابی اشتراک به‌صورت خودکار در دسترس مدیر مجله ، سردبیر و دبیران، ویراستاران،  صفحه‌آرا و بازبین نهائی قرار می‌گیرد."
+
+msgid "manager.subscriptions.select"
+msgstr "انتخاب"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "اشتراک با موفقیت ایجاد شد."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "نوع اشتراک"
+
+msgid "manager.subscriptions.user"
+msgstr "کاربر"
+
+msgid "manager.subscriptions.contact"
+msgstr "نام اطلاعات تماس"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "نام سازمان"
+
+msgid "manager.subscriptionTypes"
+msgstr "انواع اشتراک"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "اخطار! کلیه اشتراکات از این نوع از بین خواهد رفت. آیا می‌خواهید ادامه داده و این نوع اشتراک را حذف کنید؟"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "قیمت"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "اشتراک‌ها"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "شخصی"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "سازمانی"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "ایجاد نوع جدید اشتراک"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "ایجاد"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "مدت"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "ویرایش نوع اشتراک"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "ویرایش"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "قیمت"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "لطفاً یک مقدار عددی وارد کنید. هیچ‌گونه کاراکتر متنی دیگر مانند \"$\" وارد نکنید."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "عدد قیمت می‌بایست عدد مثبت باشد."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "مبلغ قیمت لازم است"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "واحد پول"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "واحد پول لازم است"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "لطفاً واحد پول صحیحی انتخاب کنید"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "توصیف"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "انقضا بعد از"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "ماه (مثلاً ۱۲)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "بدون انقضا"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "لطفاً از گزینه‌ها موجود استفاده کنید."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "مدت زمان"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "مدت اشتراک برحسب ماه"
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "مدت زمان می‌بایست مقدار عددی مثبت باشد."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "مدت زمان لازم است"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "فرمت"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "انتخاب فرمتی برای نوع اشتراک لازم است"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "لطفاً فرمت صحیحی برای نوع اشتراک وارد کنید"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "اشتراک‌ها"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "شخصی. (تأیید هویت از طریق ورود به سیستم)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "مشترکین می‌بایست از طریق دامنه یا IP تأیید هویت گردند"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "لطفاً از گزینه‌های موجود استفاده کنید"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "مشترکین می‌بایست عضو یک انجمن یا سازمان باشند."
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "لطفاً از چک‌لیست محیا شده استفاده کنید."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "گزینه‌ها"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "عدم نمایش این نوع اشتراک در قسمت درباره مجله"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "لطفاً از چک‌لیست محیا شده استفاده کنید."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "ذخیره و ایجاد یک مورد دیگر"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "نام"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "این نام نوع اشتراک در حال حاضر وجود دارد."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "نامی برای نوع اشتراک لازم است"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "نوع اشتراک"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "هیچ نوع اشتراک ایجاد نشده است."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "نوع اشتراک با موفقیت ایجاد شد."
+
+msgid "manager.distribution.access"
+msgstr "دسترسی"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "لینک به صفحه توضیح نحوه اشتراک و انواع آن"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "لینک به صفحه‌ای که شامل اطلاعات اشتراک‌های کنونی و قبلی کاربر است."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "این لینک تنها زمانی نمایش داده می‌شود که کاربر وارد سیستم شده است."
+
+msgid "manager.setup.categories"
+msgstr "حوزه‌ها"
+
+msgid "manager.setup.categories.description"
+msgstr "مناسب‌ترین حوزه را از لیست زیر انتخاب کنید. خوانندگان می‌توانند بر اساس حوزه‌ها، به مشاهده محتوای مجله بپردازند."
+
+msgid "grid.category.path"
+msgstr "مسیر"
+
+msgid "grid.action.addSection"
+msgstr "افزودن نوع"
+
+msgid "manager.setup.section.description"
+msgstr "مقالات چاپ شده در داخل شماره بر اساس نوع مقاله سازماندهی می‌شود، که معمولاً بر اساس نوع محتوا مشخص می‌شود(مقاله پژوهشی، مقاله مروری، ... )"
+
+msgid "settings.roles.gridDescription"
+msgstr "نقش‌ها، گروه های کاربری است که اجازه دارند نسبت به سطح دسترسی تعریف شده برای آن‌ها، به قسمتهای مختلف مجله و گردش کار مقاله دسترسی داشته باشند. پنج سطح دسترسی مختلف در این سامانه تعریف شده است: مدیر مجله که به کل بخشها و تنظیمات مجله دسترسی دارد. دبیر بخش به کل محتویات ثبت شده دسترسی دارد. دستیار مجله به مقالات ثبت شده ای دسترسی دارد که توسط دبیر به آن کاربر انتساب شده است. داوران به مقالاتی که برای داوری به آن‌ها انتساب شده است دسترسی دارند. نویسندگان تنها به اطلاعات محدودی از مقالات ثبت شده خود دسترسی داشته و می توانند آن‌ها را ویرایش کنند. البته پنج  مرحله مختلف برای چاپ هر مقاله وجود دارد (شامل ارسال مقاله، بررسی اولیه، داوری، ویراستیاری و انتشار) که نقش‌های مختلف ممکن است مجوز دسترسی به همه یا تعدادی از آن‌ها  را داشته باشند."
+
+msgid "manager.publication.library"
+msgstr "کتابخانه ناشر"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "پایه‌گذاری تاریخ حق نشر مقالات جدید بر"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "مقاله: سال پیش‌فرض از تاریخ انتشار این مقاله حساب خواهد شد."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "شماره: سال پیش‌فرض از تاریخ انتشار این شماره‌حساب خواهد شد."
+
+msgid "manager.setup.resetPermissions"
+msgstr "رست کردن مجوزهای دسترسی مقالات"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "آیا مطمئن هستید که می‌خواهید مجوزهای دسترسی انتساب داده شده به این مقاله رست شود."
+
+msgid "grid.genres.title.short"
+msgstr "اجزاء"
+
+msgid "grid.genres.title"
+msgstr "اجزاء مقاله"
+
+msgid "grid.genres.description"
+msgstr "این اجزاء در نام‌گذاری فایل‌ها و نمایش در منوی آپلود فایل استفاده خواهد شد.  اجزائی که با ## مشخص شده‌اند این اجازه را به کاربر می‌دهند تا بتواند یک فایل را به تمامی مقاله ارسالی یا یک جزء خاص اختصاص دهد."
+
+msgid "plugins.importexport.common.settings"
+msgstr "تنظیمات"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "تنظیمات افزونه DOI"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "مقالات"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "شماره ها"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "نسخ آماده به چاپ"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "نیازمندی های افزونه برقرار نمی باشد"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "برای استفاده از این افزونه به قسمت «شناسه عمومه» رفته افزونه DOI را فعال و تنطیم کنید و یک پسوند معتبر برای DOI مشخص نمایید."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "افزونه به صورت کامل تنظیم نشده است."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "در افزونه شناسه DOI هیچ داده ای برای اختصاص DOI مشخص نشده است. بنابراین امکان برون دهی وجود ندارد."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "رمز"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "توجه داشته باشید که رمز به صورت متنی و نه رمزگذاری شده ذخیره می شود."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "هر شماره ای"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "هر وضعیتی"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "سپرده نشده"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "به عنوان ثبت شده علامت گزاری شده است."
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "ثبت شده"
+
+msgid "plugins.importexport.common.action"
+msgstr "عملیات"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "برون دهی"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "به عنوان ثبت شده علامت گزاری شده است."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "ثبت‌نام"
+
+msgid "plugins.importexport.common.validation"
+msgstr "اعتبار سنجی  XML را قبل از برون دهی"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "داده ای انتخاب نشده است."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "قابلیت تبدیل داده های مشخص شده امکان پذیر نیست."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "XML غیرمعتبر:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "فایل خرورجی {$param} قابل نوشتن نیست."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "فایل ورودی {$param} قابل خواندن نیست."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "ثبت‌نام موفق نبود، سرور ثبتنام DOI خطای زیر را برگرداند: '{$param}'"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "ثبت‌نام با موفقیت انجام شد!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "پیشوند DOI برای مجله مشخص شده در مسیر {$path} موجود نمی باشد."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "خطا:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "مسیر مجله وارد شده (\"{$journalPath}\") یافت شند."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "داده مورد نظر یافت نشد"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "ارسال یک کپی به آدرس اطلاعات تماس اصلی مجله که در مرحله اول نصب مجله وارد شده است"

@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:51+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:51+00:00\n"
+"Language: \n"
+
+msgid "plugins.gateways.resolver.displayName"
+msgstr "Rozlišovací plugin"
+
+msgid "plugins.gateways.resolver.description"
+msgstr "Tento plugin rozlišuje čísla a články na základě informací pro citování."
+
+msgid "plugins.gateways.resolver.errors.errorMessage"
+msgstr "Není možné rozlišit jedinou entitu s použitím uvedené informace pro citování. Ujistěte se prosím, že informace pro citování je úplná a odkazuje na entitu v tomto rozmístění OJS."
+
+msgid "plugins.gateways.resolver.exportHoldings"
+msgstr "Exportovat fond"

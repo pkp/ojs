@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:35+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Skicka in en artikel"
+
+msgid "submission.submit.userGroup"
+msgstr "Skicka in i egenskap av min roll som..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Välj vilken roll du skickar in den här artikeln som."
+
+msgid "submission.upload.selectComponent"
+msgstr "Välj artikelkomponent"
+
+msgid "submission.title"
+msgstr "Artikelns titel"
+
+msgid "submission.title.tip"
+msgstr "Bidragstypen är vanligen någon av 'bild', 'text', eller andra multimedia-typer som 'mjukvara' eller 'interaktiv'. Välj den som är mest relevant för ditt bidrag. Det finns exempel på <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Skicka in ett nytt bidrag i"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nytt bidrag"
+
+msgid "grid.action.workflow"
+msgstr "Arbetsflöde för bidrag"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Abstractet får inte vara längre än {$wordCount} ord."
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Tidskriften har blivit meddelad om ditt insända bidrag, och du har fått en bekräftelse skickad till dig per e-post. När redaktören har läst ditt bidrag kommer hen att kontakta dig."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Publiceringsversion visas i numrets lista"
+
+msgid "grid.action.issueEntry"
+msgstr "Visa metadata för det här bidraget"
+
+msgid "submission.publication"
+msgstr "Publicering"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Artikelns publiceringsversion \"{$galleyFormatName}\" har gjorts tillgänglig."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Artikelns publiceringsversion \"{$galleyFormatName}\" är inte längre tillgänglig."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Bidragets publika identifikatorer har uppdaterats."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Godkännande av format"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Den här publiceringsversionen <em>kommer inte längre vara tillgänglig</em> för läsare.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Den här publiceringsversionen <em>kommer göras tillgänglig</em> för läsare.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Gör den här publiceringsversionen tillgänglig."
+
+msgid "submission.galleyFiles"
+msgstr "Filer för publiceringsversion"
+
+msgid "submission.proofReadingDescription"
+msgstr "Layoutredaktören laddar upp de produktionsklara filerna här. Använd <em>Utse manusgranskare</em> för att uppdra åt författare eller andra att korrekturläsa publiceringsversionerna, med korrigerade filer uppladdade för godkännande före publicering."
+
+msgid "grid.action.approveProof"
+msgstr "Godkänn det här korrekturet för inkludering i publiceringsversionen."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Det här korrekturet har blivit godkänt för inkludering i publiceringsversionen."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Titel och abstract"
+
+msgid "submission.submit.upload.description"
+msgstr "Ladda upp filer associerade till det här bidraget, inkluderat själva artikeln, multimedia, dataset, grafik, etc."
+
+msgid "submission.pageProofs"
+msgstr "Korrekturläsning"
+
+msgid "submission.confirmSubmit"
+msgstr "Är du säker på att du vill skicka in den här artikeln till tidskriften?"
+
+msgid "workflow.review.externalReview"
+msgstr "Granskning"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Skicka till granskning"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Bidragets nummer-metadata uppdaterades."
+
+msgid "submission.upload.fileContents"
+msgstr "Artikelkomponent"
+
+msgid "submission.complete"
+msgstr "Godkänt"
+
+msgid "submission.incomplete"
+msgstr "Väntar på godkännande"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Välj språk för bidraget."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Checklista för bidrag"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Du måste läsa och acceptera att du följer kraven nedan innan du fortsätter."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Integritetspolicy"
+
+msgid "submission.submit.contributorRole"
+msgstr "Medarbetares roll"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Minst en författare krävs."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Förnamn, efternamn och e-postadress för varje författare krävs."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vänligen mata in titeln på din artikel."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vänligen mata in abstract för din artikel."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Ditt abstract är för långt. Korta det så att det ryms inom begränsningen i antal ord som gäller för den här sektionen."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vänligen välj medarbetarens roll."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Referensformatet som efterfrågades kunde inte hämtas."
+
+msgid "submission.metadataDescription"
+msgstr "Den här specifikationen baseras på metadataschemat Dublin Core, en internationell standard som används för att beskriva (bland annat) tidskriftsinnehåll."
+
+msgid "section.any"
+msgstr "Alla sektioner"

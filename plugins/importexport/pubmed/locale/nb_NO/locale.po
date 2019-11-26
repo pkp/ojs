@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:45+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:45+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "Programutvidelse for PubMed XML-eksport"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr "Eksporterer artikkelmetadata i PubMed XML-format for indeksering i MEDLINE."
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "Eksporter data"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Eksporter utgaver"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Velg en utgave for eksport."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Eksporter artikler"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Velg artikler for eksport."
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+"Bruk: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] artikler [articleId1] [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] utgave [issueId]"
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "FEIL:"
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "Ingen utgave stemmer med angitt utgave-ID \"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "Ingen artikkel stemmer med den angitte artikkel-ID \"{$articleId}\"."

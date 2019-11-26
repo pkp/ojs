@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:43+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:43+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Native XML-plug-in"
+
+msgid "plugins.importexport.native.description"
+msgstr "Importer og eksporter artikler og numre i OJS' eget XML-format."
+
+msgid "plugins.importexport.native.import"
+msgstr "Importer"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Upload XML-fil til import"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Udvælg artikler til eksport"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Eksporter artikler"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Eksporter numre"
+
+msgid "plugins.importexport.native.results"
+msgstr "Resultater"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "For at fortsætte skal du uploade en fil under \"Import\"."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "Importen blev gennemført. Følgende numre blev importeret:"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Anvendelse: {$scriptName} {$pluginName} [command] ...\n"
+"Kommandoer:\n"
+"importer [xmlFileName] [journal_path] [user_name] ...\n"
+"eksporter [xmlFileName] [journal_path] artikler [articleId1] [articleId2] ...\n"
+"eksporter [xmlFileName] [journal_path] artikel [articleId]\n"
+"eksporter [xmlFileName] [journal_path] numre [issueId1] [issueId2] ...\n"
+"eksporter [xmlFileName] [journal_path] nummer [issueId]\n"
+"\n"
+"Yderligere parametre er nødvendige for at importere data som følger, afhængigt\n"
+"af rodelement i XML-dokumentet.\n"
+"\n"
+"Hvis rodelementet er <article> eller <articles>, kræves yderligere parametre.\n"
+"Følgende formater accepteres:\n"
+"\n"
+"{$ scriptName} {$ pluginName} importere [xmlFileName] [journal_path] [user_name]\n"
+"issue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$ scriptName} {$ pluginName} importere [xmlFileName] [journal_path] [user_name]\n"
+"issue_id [issueId] section_name [name]\n"
+"\n"
+"{$ scriptName} {$ pluginName} importere [xmlFileName] [journal_path]\n"
+"issue_id [issueId] section_abbrev [abbrev]"
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Ukendt sektion {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Den angivne bruger, \"{$userName}\", eksisterer ikke."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr "Sektionstitlen \"{$section1Title}\" og sektionstitlen \"{$section2Title}\" i \"{$issueTitle}\" nummer matchede de forskellige eksisterende tidsskriftssektioner"
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr "Sektionstitlen \"{$sectionTitle}\" i \"{$issueTitle}\" nummer matchede en eksisterende tidsskriftssektion, men en anden titel i denne sektion stemmer ikke overens med en anden titel i det eksisterende tidsskrift."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr "Sektionsforkortelsen \"{$section1Abbrev}\" og sektionsforkortelsen \"{$section2Abbrev}\" fra \"{$issueTitle}\" nummer matchede de forskellige eksisterende tidsskriftssektioner."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr "Sektionsforkortelsen \"{$sectionAbbrev}\" i \"{$issueTitle}\" nummer matchede en eksisterende tidsskriftssektion, men en anden forkortelse af denne sektion stemmer ikke overens med en anden forkortelse af den eksisterende tidsskriftssektion."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "Intet eller flere end et nummer matchede den givne nummer-identifikation \"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr "Eksisterende nummer med id {$issueId} matcher den givne nummer-identifikation \"{$issueIdentification}\". Dette nummer vil ikke blive ændret, men artikler vil blive tilføjet."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "Artiklen \"{$articleTitle}\" mangler nummer-identifikation.."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr "Artiklen \"{$articleTitle}\" er indeholdt i et nummer, men har ingen publiceringsdato."

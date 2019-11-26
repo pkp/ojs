@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:03+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:03+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "مغذيات خارجية"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "كتلة المغذيات الخارجية"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "أنشر المحتوى من مغذيات Atom/RSS إنترنت خارجية. على سبيل المثال: من تنصيب خارجي لـ WordPress، Drupal، أو OCS."
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "لا مغذيات خارجية حالياً"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "العنوان"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "الطرح"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "المزيد..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "مغذيات خارجية"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "الإعدادات"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "لعرض محتوى مغذى خارجياً في كتلة على الشريط الجانبي، إذهب إلى <a href=\"{$setupStep56}\" target=\"_blank\">الخطوة 5.6 من التهيئة</a>"
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "العنوان"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "عرض الصفحة الرئيسية"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "عرض الصفحة الرئيسية"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "لا عرض في الصفحة الرئيسية"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "عرض الكتلة"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "كل الصفحات"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "الكتلة في كل الصفحات"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "لا كتلة في كل الصفحات"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "الصفحة الرئيسية"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "الكتلة في الصفحة الرئيسية حصراً"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "لا كتلة في الصفحة الرئيسية حصراً"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "لا مغذيات خارية"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "إنشاء مغذٍ خارجيٍ جديد"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "تعديل المغذي الخارجي"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "هل أنت متأكد من رغبتك في حذف هذا المغذي نهائياً؟"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "الإعدادات"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "تخصيص طريقة عرض فقرات المغذي الخارجي."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "العرض"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "ملف أنماط المغذي الخارجي"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "ملف أنماط مخصص يمكن استعماله كبديل عن ملف الأنماط الإفتراضي لهذه الإضافة. يمكن معاينة ملف الأنماط الإفتراضي هنا"
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "ملف أنماط مخصص"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "العنوان"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "عنوان المغذي على الصفحة الرئيسية و/أو عرض الكتلة"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "لطفاً، إمنح هذا المغذي عنواناً ما"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "رابط الإنترنت"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "لطفاً، حدد رابط إنترنت صحيح للمغذي (متضمناً http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "رابط الإنترنت لمغذي Atom/RSS الخارجي (مثل: http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "العرض"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "إعرضه على الصفحة الرئيسية"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "لا تعرضه ضمن كتلة"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "إعرضه ضمن كتلة على الصفحة الرئيسية حصراً"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "إعرضه ضمن كتلة على كل الصفحات"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "قيده إلى"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "فقرة تغذية"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "إحفظ وأنشئ واحداً آخر"

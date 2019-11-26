@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:11+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:11+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "The COUNTER plugin allows recording and <a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a> reporting on site activity."
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER Statistics"
+
+msgid "plugins.reports.counter.clearLog"
+msgstr "Clear Log"
+
+msgid "plugins.reports.counter.confirmClear"
+msgstr "Are you sure you wish to clear the log? This action cannot be undone."
+
+msgid "plugins.reports.counter.browseLog"
+msgstr "Browse Log"
+
+msgid "plugins.reports.counter.browseLog.logBrowser"
+msgstr "Log Browser"
+
+msgid "plugins.reports.counter.entry.timestamp"
+msgstr "Timestamp"
+
+msgid "plugins.reports.counter.entry.site"
+msgstr "Site"
+
+msgid "plugins.reports.counter.entry.journal"
+msgstr "Journal"
+
+msgid "plugins.reports.counter.entry.user"
+msgstr "User"
+
+msgid "plugins.reports.counter.sessionNumber"
+msgstr "Session #{$sessionNumber}"
+
+msgid "plugins.reports.counter.entry.type"
+msgstr "Type"
+
+msgid "plugins.reports.counter.entry.type.article"
+msgstr "Article"
+
+msgid "plugins.reports.counter.entry.type.search"
+msgstr "Search"
+
+msgid "plugins.reports.counter.entry.value"
+msgstr "Value"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Journal Report 1 (R3): Full-Text Article Requests by Month and Journal"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Journal Report 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Number of Successful Full-Text Article Requests by Month and Journal (Year {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Date run:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Publisher"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platform"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "Print ISSN"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Total"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Total for all journals"

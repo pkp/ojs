@@ -1,0 +1,441 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:17+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Pàgina inicial de l’editor/a"
+
+msgid "editor.reassign"
+msgstr "Reassignació"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Trameses i publicació"
+
+msgid "editor.submissionQueue"
+msgstr "Cua de trameses"
+
+msgid "editor.submissionArchive"
+msgstr "Arxivament de trameses"
+
+msgid "editor.publishing"
+msgstr "Publicació"
+
+msgid "editor.publishedIssues"
+msgstr "Números publicats"
+
+msgid "editor.allSections"
+msgstr "Totes les seccions"
+
+msgid "editor.allEditors"
+msgstr "Tots els editors/ores"
+
+msgid "editor.me"
+msgstr "Jo"
+
+msgid "editor.publicIdentificationExists"
+msgstr "L'identificador públic '{$publicIdentifier}' correspon a un altre objecte ja existent (número, article, galerada o fitxer addicional). Trieu identificadors únics dins de la vostra revista."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "No hi ha cap tramesa a l’arxivament."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Voleu desar els canvis fets a les trameses arxivades? Si marqueu una tramesa per suprimir-la, s’eliminarà permanentment del sistema."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Esteu segur/a que voleu suprimir permanentment aquesta tramesa?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Esteu segur/a que voleu enregistrar aquesta decisió?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Aquesta tramesa s’arxivarà després d’haver enviat el correu electrònic «Notifica a l’autor/a» o d’haver premut el botó «Omet el correu electrònic»."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Abans d’enviar la tramesa per fer la correcció d’originals, utilitzeu l’enllaç «Notifica a l’autor/a» per informar l’autor/a de la decisió i seleccioneu la versió que s’ha d’enviar."
+
+msgid "editor.notifyUsers"
+msgstr "Notifica als usuaris/àries"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Tots els lectors/ores ({$count} usuaris/àries)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Tots els autors/ores publicats ({$count} usuaris/àries)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Tots els subscriptors/ores individuals ({$count} usuaris/àries)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Tots els subscriptors/ores institucionals ({$count} usuaris/àries)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "S’està notificant als usuaris/àries..."
+
+msgid "editor.usersNotified"
+msgstr "S'ha notificat als usuaris/àries"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Envia aquest missatge a tots els usuaris/àries associats amb aquesta revista ({$count} usuaris/àries)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Envia aquest missatge als usuaris/àries associats amb aquesta revista que hagin indicat que volen rebre actualitzacions ({$count} usuaris/àries)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Inclou la taula de continguts d’aquest número:"
+
+msgid "editor.editorAdministration"
+msgstr "Administració de l’editor/a"
+
+msgid "editor.issues.createIssue"
+msgstr "Crea un número"
+
+msgid "editor.issues.backIssues"
+msgstr "Números anteriors"
+
+msgid "editor.issues.futureIssues"
+msgstr "Propers números"
+
+msgid "editor.issues.currentIssue"
+msgstr "Número actual"
+
+msgid "editor.issues.numArticles"
+msgstr "Elements"
+
+msgid "editor.issues.noArticles"
+msgstr "No hi ha cap element planificat per a aquest número."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Esteu segur/a que voleu suprimir permanentment aquest número?"
+
+msgid "editor.issues.published"
+msgstr "Publicats"
+
+msgid "editor.issues.unpublished"
+msgstr "No publicats"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Heu d’introduir un valor numèric positiu per al volum."
+
+msgid "editor.issues.numberRequired"
+msgstr "Heu d’introduir un valor numèric positiu per al número."
+
+msgid "editor.issues.yearRequired"
+msgstr "Heu d’introduir un valor numèric positiu per a l’any."
+
+msgid "editor.issues.titleRequired"
+msgstr "Heu d’introduir un títol per al número."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Heu d’introduir la identificació per al número. Seleccioneu com a mínim una de les opcions d’identificació per al número."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identificació del número"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Identificador públic del número"
+
+msgid "editor.issues.description"
+msgstr "Descripció"
+
+msgid "editor.issues.accessStatus"
+msgstr "Estat d’accés"
+
+msgid "editor.issues.accessDate"
+msgstr "Data d'accés lliure"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Habilita l’accés lliure diferit"
+
+msgid "editor.issues.coverPage"
+msgstr "Imatge per a la portada"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Formats admesos: .gif, .jpg, .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Carregat"
+
+msgid "editor.issues.remove"
+msgstr "Elimina"
+
+msgid "editor.issues.proofed"
+msgstr "Corregits"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Voleu eliminar la imatge de la portada?"
+
+msgid "editor.issues.invalidCoverPageFormat"
+msgstr "El format de la portada no és vàlid. Els formats admesos són .gif, .jpg i .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Full d’estil"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "El format del full d’estil no és vàlid. Comproveu que el fitxer que heu tramès sigui un CSS vàlid. (No s’admeten fulls d’estil amb comentaris a l’inici.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Voleu eliminar el full d’estil?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Peu de la portada"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Crea una portada per a aquest número amb els elements següents:"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Visualització"
+
+msgid "editor.issues.hideCoverPageArchives"
+msgstr "No mostris una miniatura de la imatge de la portada a la llista de números."
+
+msgid "editor.issues.hideCoverPageCover"
+msgstr "No mostris la imatge de la portada abans de la taula de continguts."
+
+msgid "editor.issues.openAccess"
+msgstr "Accés lliure"
+
+msgid "editor.issues.subscription"
+msgstr "Subscripció"
+
+msgid "editor.issues.identification"
+msgstr "Identificació"
+
+msgid "editor.issues.access"
+msgstr "Accés"
+
+msgid "editor.issues.cover"
+msgstr "Portada"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Si feu aquesta acció, tots els articles tornaran a la cua d’edició i tots els fitxers associats s'eliminaran permanentment. Esteu segur/a que voleu eliminar aquest número?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Aquesta revista utilitza una ordenació de números personalitzada. <a href=\"{$url}\" class=\"action\">Reinicia als valors predeterminats</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Aquest número utilitza una ordenació de seccions personalitzada. <a href=\"{$url}\" class=\"action\">Reinicia als valors predeterminats</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Dades del número"
+
+msgid "editor.issues.saveChanges"
+msgstr "Voleu desar els canvis a la taula de continguts?"
+
+msgid "editor.issues.default"
+msgstr "Per defecte"
+
+msgid "editor.issues.order"
+msgstr "Ordena"
+
+msgid "editor.issues.publicId"
+msgstr "Id. pública"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publica el número"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Suprimeix la publicació del número"
+
+msgid "editor.issues.previewIssue"
+msgstr "Previsualització del número"
+
+msgid "editor.issues.preview"
+msgstr "(Vista prèvia)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Esteu segur/a que voleu publicar el número nou?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Esteu segur/a que voleu suprimir la publicació d’aquest número?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "No es pot desar l’id. pública per a l’article:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "No hi ha cap número en curs."
+
+msgid "editor.issues.open"
+msgstr "Oberts"
+
+msgid "editor.issues.pages"
+msgstr "Pàgines"
+
+msgid "editor.issues.galleys"
+msgstr "Galerades del número"
+
+msgid "editor.issues.galley"
+msgstr "Galerada del número"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Visualitza la galerada del número"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publica les galerades amb tots els continguts del número."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "No s'ha publicat cap galerada d'aquest número."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Heu d’introduir una etiqueta per a les galerades d'aquest número."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Heu d’introduir una configuració regional per a les galerades d'aquest número."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "La identificació pública de la galerada d'aquest número ja existeix."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Torna a les galerades del número"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Esteu segur/a que voleu suprimir aquesta galerada del número?"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Propers números"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Números anteriors"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Designa el fitxer original com a versió de revisió"
+
+msgid "editor.article.decision"
+msgstr "Decisió"
+
+msgid "editor.submissions.showBy"
+msgstr "Mostra per"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Enviat el MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Assignacions actives"
+
+msgid "editor.submissions.invite"
+msgstr "Convida"
+
+msgid "editor.submissions.accept"
+msgstr "Accepta"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "No hi ha cap tramesa"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Darrera tramesa"
+
+msgid "editor.submissions.averageTime"
+msgstr "Setmanes"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Darrera tramesa completa"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Assignada a"
+
+msgid "editor.submissions.inSection"
+msgstr "A la secció"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Planifica per a la publicació a"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Encara no s’ha assignat"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "No s’ha pagat la quota de publicació. Per poder planificar l’element per a la publicació, notifiqueu a l’autor/a que ha de pagar la quota o fer l'exempció del pagament."
+
+msgid "editor.article.showCoverPage"
+msgstr "Crea una portada per a aquest article amb els elements següents:"
+
+msgid "editor.article.hideCoverPageToc"
+msgstr "No mostris una miniatura de la imatge de la portada a la taula de continguts."
+
+msgid "editor.article.hideCoverPageAbstract"
+msgstr "No mostris la imatge de la portada a la visualització del resum de l’article."
+
+msgid "editor.article.remove"
+msgstr "Elimina"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "La data d’accés no és vàlida."
+
+msgid "editor.issues.editIssue"
+msgstr "Gestió del número: {$issueIdentification}"
+
+msgid "editor.issues.datePublished"
+msgstr "Data de publicació"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "La imatge de portada que volíeu eliminar no coincideix amb la d'aquest número. Actualitzi la pàgina i torni-ho a provar."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Format d'imatge de portada no vàlid. Els formats acceptats són .gif, .jpg, o .png."
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Segur que voleu establir aquest número com a l'actual?"
+
+msgid "editor.issues.identifiers"
+msgstr "Identificadors"
+
+msgid "grid.action.addGalley"
+msgstr "Afegir galerada"
+
+msgid "grid.action.publish"
+msgstr "Publicar número"
+
+msgid "grid.action.addIssue"
+msgstr "Crear número"
+
+msgid "grid.action.viewIssue"
+msgstr "Visualitzar"
+
+msgid "grid.action.previewIssue"
+msgstr "Previsualitzar"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Crear galerada del número"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Establir número actual"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina."
+
+msgid "grid.action.removeArticle"
+msgstr "Eliminar article del número"
+
+msgid "editor.article.remove.confirm"
+msgstr "Segur que voleu eliminar aquest article del número? L'article estarà disponible per programar-lo en un altre número."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Editar galerada del número"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "El maquetador/a prepara aquests arxius per a cada galerada i aleshores els carrega al lloc <span class=\"pkp_help_title\">Proves</span> adequat per a la seva correcció."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Seleccionar els arxius de galerada"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "El corrector transforma els borradors finals d'aquesta llista en versions revisades i les carrega a continuació a <span class=\"pkp_help_title\">Correcció d'originals</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Qualsevol arxiu ja carregat  a una fase de la tramesa pot afegir-se a la llista de correcció de proves marcant la casella inferior \"Incloure\" i fent clic a \"Cercar\". D'aquesta manera es llistaran tots els arxius disponibles i es podran escollir per incloure'ls."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "L'identificador públic '{$publicIdentifier}' ja existeix per a un altre objecte del mateix tipus. Esculli identificadors únics per als objectes del mateix tipus dins la seva revista."
+
+msgid "editor.article.coverImage"
+msgstr "Imatge per a la portada"

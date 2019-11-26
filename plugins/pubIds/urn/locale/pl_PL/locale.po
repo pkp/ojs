@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:03+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "Wtyczka umożliwia przypisanie Uniform Resource Names (ujednoliconego formatu nazw zasobów) do numerów, tekstów i plików w OJS."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "Skonfiguruj wtyczkę, aby zarządzać i korzystać z URN w OJS."
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Zawartość czasopisma"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Wybierz obiekty, do których powinny zostać przypisane URN."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Wybierz obiekty, do których zostały przypisane Uniform Resource Names (URN):"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Numery"
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "Artykuły"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Pliki"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "Prefiks URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "Sufiks URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "Prefiks URN jest ustalony, nigdy nie zmieniaj tej części URN (np. \"\"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "Wzór prefiksu URN musi mieć format: \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "Sufiks URN może przyjąć dowolną formę, ale musi być unikalny wśród opublikowanych obiektów z przypisanym tym samym prefiksem URN."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "Użyj poniższego wzoru aby wygenerować sufiksy URN. Wykorzystaj %j dla inicjału czasopisma, %v dla oznaczenia tomu, %i dla oznaczenia numeru, %Y dla roku, %a dla identyfikatora artykułu w OJS, %g dla identyfikatora pliku z artykułem w OJS, %f dla identyfikatora pliku w OJS, %p dla numeru strony oraz %x dla \"dostosowanego identyfikatora\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Na przykład, vol%viss%ipp%p może wygenerować sufiks URN \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "dla numerów"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "dla artykułów"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "dla plików z artykułami"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Wprowadź wzór sufiksu URN dla numerów."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "Wprowadź wzór sufiksu URN dla artykułów."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Wprowadź wzór sufiksu URN dla plików z artykułami."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Użyj domyślnych wzorów."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i dla numerów <br />%j.v%vi%i.%a dla artykułów<br />%j.v%vi%i.%a.g%g dla plików z artykułami."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "Wprowadź unikalny sufiks URN dla każdej opublikowanej pozycji. Znajdziesz dodatkowe pole URN dla każdej pozycji na stronie z metadanymi."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Numer kontrolny"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "Numer kontrolny zostanie automatycznie wygenerowany i dodany na końcu, jako ostatnia cyfra URN."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Przestrzeń nazw"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Wybierz"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "Przestrzeń nazw trwałego identyfikatora zwykle wymaga rejestracji (np. w Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Resolver URL"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(np. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Wprowadź rozwiązany URL."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Ponownie przydziel URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "Jeśli zmieniałeś(aś) konfigurację URN, przypisane URN nie ulegną zmianie. Raz skonfigurowane URN jest zachowane. Użyj tego przycisku aby wyczyścić istniejące URN i przypisać do istniejących obiektów URN na podstawie nowych ustawień."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Czy na pewno usunąć wszystkie istniejące URN?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "numer"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "artykuł"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "plik z artykułem"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN nie może być przypisany ponieważ nie ma ustawionego sufiksu."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN nie może być przypisane ponieważ nie ma ustawionego wzoru."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "Widzisz podgląd URN. Zaznacz pole i zapisz, aby przypisać URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN został przypisany do {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "Dany sufiks URN jest już wykorzystany w innej opublikowanej pozycji. Wprowadź unikalny sufiks dla każdej pozycji."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Wyczyść URN"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Czy na pewno usunąć istniejący URN?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Wyczyść URN numeru"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Czy na pewno wyczyścić istniejące URN numeru?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "Użyj poniższej opcji, aby wyczyścić URN dla wszystkich obiektów (artykułów i plików z artykułami) aktualnie umieszczonych w numerze."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Dodaj numer kontrolny"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Przypisz URN {$pubId} do {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN nie może być przypisany ponieważ nie ma ustawionego sufiksu."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$pubId} nie może być przypisany ponieważ nie ma ustawionego wzoru."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} został przypisany."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Brakuje numeru kontrolnego."

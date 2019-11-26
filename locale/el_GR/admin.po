@@ -1,0 +1,212 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:19+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Φιλοξενούμενα περιοδικά"
+
+msgid "admin.settings.redirect"
+msgstr "Προώθηση σε περιοδικό"
+
+msgid "admin.settings.options"
+msgstr "Επιλογές"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Αιτήματα που υποβάλλονται στον κεντρικό ιστότοπο του συστήματος θα προωθούνται στην ιστοσελίδα αυτού του περιοδικού. Η επιλογή είναι χρήσιμη αν ο ιστότοπος φιλοξενεί μόνο ένα περιοδικό."
+
+msgid "admin.settings.noJournalRedirect"
+msgstr "Να μη γίνεται προώθηση"
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"Η εγκατάσταση του OJS καταγράφει διάφορες κατηγορίες στατιστικών χρήσης, τα οποία εμφανίζονται σε διαφορετικά συγκείμενα.\n"
+"Σε κάποιες περιπτώσεις χρησιμοποιείται ένα μοναδικό στατιστικό χρήσης (π.χ. για την εμφάνιση ενός καταλόγου των πιο δημοφιλών άρθρων ή για την ταξινόμηση των αποτελεσμάτων μίας αναζήτησης). Παρακαλούμε ορίστε ένα από τα διαμορφωμένα σύνολα ως προεπιλογή."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Επιβεβαιώνετε την απενεργοποίηση αυτής της γλώσσας; Η επιλογή σας μπορεί να επηρεάσει τη λειτουργία όσων περιοδικών χρησιμοποιούν τη συγκεκριμένη γλώσσα."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Η μεταφόρτωση γλωσσών από τον διακομιστή web του Public Knowledge Project δεν είναι δυνατή διότι:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Ο διακομιστής σας δεν έχει ή δεν επιτρέπει εκτέλεση του βοηθητικού προγράμματος GNU \"tar\".</li>\n"
+"\t\t<li>Το OJS δε μπορεί να τροποποιήσει το αρχείο μητρώου γλωσσών, συνήθως \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Τα πακέτα γλωσσών μπορούν να μεταφορτωθούν από τον δικτυακό τόπο του PKP <a href=\"http://pkp.sfu.ca\"></a>.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Αυτή θα είναι η προκαθορισμένη γλώσσα του ιστοτόπου και όλων των φιλοξενούμενων περιοδικών."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Επιλέξτε τις γλώσσες που θα υποστηρίζονται στον ιστότοπο. Οι επιλεγμένες γλώσσες θα είναι διαθέσιμες για χρήση σε όλα τα περιοδικά του ιστοτόπου και θα εμφανίζονται στο μενού επιλογής γλώσσας σε κάθε σελίδα του ιστοτόπου (η επιλογή αυτή παραμετροποιείται σε επίπεδο περιοδικού). Σε περίπτωση μη επιλογής δύο ή περισσότερων γλωσσών, το μενού επιλογής γλώσσας δεν θα εμφανίζεται και οι ρυθμίσεις γλώσσας σε επίπεδο περιοδικού δεν θα είναι διαθέσιμες."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Ενδέχεται να μην υπάρχουν πλήρεις μεταφράσεις για τις επιλεγμένες γλώσσες."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Επιβεβαιώνετε την απεγκατάσταση αυτής της γλώσσας; Η επιλογή σας μπορεί να επηρεάσει τη λειτουργία όσων περιοδικών χρησιμοποιούν τη συγκεκριμένη γλώσσα."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Επιλέξτε τις πρόσθετες γλώσσες προς εγκατάσταση. Η εγκατάσταση γλωσσών είναι προαπαιτούμενο για τη χρήση τους στα περιοδικά. Για πληροφορίες σχετικά με την υποστήριξη νέων γλωσσών, ανατρέξτε στο τεκμηριωτικό υλικό του OJS."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Η μεταφόρτωση της γλώσσας απέτυχε. Ακολουθεί η περιγραφή του σφάλματος."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Η γλώσσα \"{$locale}\" εγκαταστάθηκε."
+
+msgid "admin.languages.download"
+msgstr "Μεταφόρτωση γλώσσας"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Το άνοιγμα του αρχείου τεκμηρίωσης της γλώσσας από τον ιστότοπο του PKP δεν είναι εφικτό."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Δεν είναι δυνατή η προσθήκη της γλώσσας στο αρχείο μητρώου γλωσσών, συνήθως \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "Βάση δεδομένων Χρηστών του OJS"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Ενεργοποίηση του συγχρονισμού του προφίλ Χρήστη (εφόσον υποστηρίζεται από το συγκεκριμένο Πρόσθετο Πιστοποίησης). Οι πληροφορίες του προφίλ Χρήστη θα ενημερώνονται αυτόματα από την απομακρυσμένη πηγή όταν ο Χρήστης συνδέεται στο σύστημα, και οι αλλαγές στο προφίλ OJS (συμπεριλαμβανομένων των αλλαγών του κωδικού πρόσβασης) θα προστίθενται αυτόματα και την απομακρυσμένη πηγή. Εάν αυτή η επιλογή είναι απενεργοποιημένη, οι πληροφορίες προφίλ του OJS και της απομακρυσμένης πηγής θα φυλάσσονται χωριστά."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Ενεργοποίηση της δυνατότητας τροποποίησης του κωδικού πρόσβασης από τους Χρήστες (εφόσον υποστηρίζεται από το συγκεκριμένο Πρόσθετο πιστοποίησης). Θα επιτρέπεται η τροποποίηση του κωδικού πρόσβασης από τους Χρήστες μέσω της λειτουργίας επαναφοράς κωδικού. Σε περίπτωση μη ενεργοποίησης της επιλογής, αυτές οι λειτουργίες δεν θα είναι διαθέσιμες στους Χρήστες με τη συγκεκριμένη πηγή πιστοποίησης."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Ενεργοποίηση της δυνατότητας δημιουργίας Χρήστη (εάν υποστηρίζεται από το συγκεκριμένο Πρόσθετο Πιστοποίησης). Οι Χρήστες που δημιουργούνται εντός του OJS με τη συγκεκριμένη πηγή πιστοποίησης θα προστίθενται αυτόματα στην απομακρυσμένη πηγή πιστοποίησης, εφόσον δεν υπάρχουν ήδη. Επιπρόσθετα, εάν αυτή είναι η προκαθορισμένη πηγή πιστοποίησης, οι λογαριασμοί που δημιουργούνται στο OJS με τη διαδικασία εγγραφής Χρήστη θα προστίθενται και στην απομακρυσμένη πηγή πιστοποίησης."
+
+msgid "admin.systemVersion"
+msgstr "Έκδοση OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Ρύθμιση παραμέτρων του OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Ρύθμιση παραμέτρων του OJS από το &lt;tt&gt;config.inc.php&lt;/tt&gt;."
+
+msgid "admin.journals.createInstructions"
+msgstr "Θα σας αποδοθεί αυτόματα ο ρόλος του Διαχειριστή για αυτό το περιοδικό. Κατά τη δημιουργία ενός νέου περιοδικού, θα ανακατευθυνθείτε στις ρυθμίσεις του περιοδικού για να ολοκληρώσετε τη διαδικασία οργάνωσής του."
+
+msgid "admin.journals.journalSettings"
+msgstr "Ρυθμίσεις περιοδικού"
+
+msgid "admin.journals.noneCreated"
+msgstr "Δεν έχει δημιουργηθεί κανένα περιοδικό."
+
+msgid "admin.contexts.create"
+msgstr "Δημιουργία περιοδικού"
+
+msgid "admin.journals.urlWillBe"
+msgstr "Μια σύντομη λέξη ή ακρωνύμιο που θα ταυτοποιεί το περιοδικό. Το URL του περιοδικού θα είναι {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Απαιτείται τίτλος για το περιοδικό."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Απαιτείται διαδρομή για το περιοδικό."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Η διαδρομή πρέπει να αρχίζει και να λήγει με αλφαριθμητικό χαρακτήρα και να περιέχει μόνο αλφαριθμητικούς χαρακτήρες, κάτω παύλες ή παύλες."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Η επιλεγμένη διαδρομή χρησιμοποιείται από άλλο περιοδικό."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Δημόσια εμφάνιση του περιοδικού στον ιστότοπο"
+
+msgid "admin.journals.journalDescription"
+msgstr "Περιγραφή του περιοδικού"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Υπάρχουσα διαδρομή περιοδικού ή διαδρομή προς δημιουργία (π.χ. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Εισαγωγή συνδρομών"
+
+msgid "admin.journals.transcode"
+msgstr "Μετατροπή μεταδεδομένων άρθρου από ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Δημιουργία κώδικα για την αντιστοίχιση των OJS 1 URLs σε OJS 2 URLs"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Απαιτείται η διαδρομή εισαγωγής."
+
+msgid "admin.journals.importErrors"
+msgstr "Η εισαγωγή δεν ολοκληρώθηκε επιτυχώς."
+
+msgid "admin.mergeUsers"
+msgstr "Συγχώνευση Χρηστών"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Συγχώνευση Χρήστη"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Επιλέξτε έναν Χρήστη στον οποίο θα αποδώσετε τα δικαιώματα, τις αναθέσεις και τις εργασίες του προηγούμενου Χρήστη."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Επιλέξτε έναν ή περισσότερους Χρήστες προς συγχώνευση στον λογαριασμό άλλου Χρήστη (αν π.χ. πρόκειται για Χρήστη με δύο λογαριασμούς). Ο λογαριασμός(-σμοί) που θα επιλεγεί πρώτος θα διαγραφεί και οι συνδεδεμένες υποβολές, αναθέσεις κλπ θα αποδοθούν στον δεύτερο λογαριασμό."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Όλοι οι εγγεγραμμένοι Χρήστες"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Είστε βέβαιοι ότι επιθυμείτε να συγχωνεύσετε τον/τους επιλεγμένο(-ους) {$oldAccountCount} λογαριασμό(-ους) στον λογαριασμό με όνομα Χρήστη \"{$newUsername}\"; Ο/Οι επιλεγμένος(-οι) {$oldAccountCount} λογαριασμός(-σμοί) θα διαγραφεί(-ούν). Αυτή η ενέργεια δεν είναι αναστρέψιμη."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Κανένας εγγεγραμμένος Χρήστης"
+
+msgid "admin.categories"
+msgstr "Κατηγορίες"
+
+msgid "admin.categories.enable.description"
+msgstr "Για την ορθή οργάνωση μεγάλου αριθμού περιοδικών, ο Διαχειριστής του δικτυακού τόπου μπορεί να ορίσει επιμέρους κατηγορίες/σύνολα περιοδικών. Θα υπάρχει η δυνατότητα επιλογής κατηγορίας από τους Διαχειριστές των περιοδικών και περιήγησης των αναγνωστών στις αντίστοιχες συλλογές περιοδικών."
+
+msgid "admin.categories.disableCategories"
+msgstr "Να μη γίνει χρήση της λειτουργίας κατηγοριοποίησης"
+
+msgid "admin.categories.enableCategories"
+msgstr "Επιτρέψτε στους Διαχειριστές περιοδικών να κατατάσσουν τα περιοδικά σε κατηγορίες."
+
+msgid "admin.categories.editTitle"
+msgstr "Επεξεργασία κατηγορίας"
+
+msgid "admin.categories.createTitle"
+msgstr "Δημιουργία κατηγορίας"
+
+msgid "admin.categories.create"
+msgstr "Δημιουργία νέας κατηγορίας"
+
+msgid "admin.categories.noneCreated"
+msgstr "Δεν έχουν δημιουργηθεί κατηγορίες."
+
+msgid "admin.categories.confirmDelete"
+msgstr "Επιβεβαιώνετε τη διαγραφή αυτής της κατηγορίας;"
+
+msgid "admin.categories.name"
+msgstr "Ονομασία"
+
+msgid "admin.categories.nameRequired"
+msgstr "Απαιτείται μια ονομασία κατηγορίας."
+
+msgid "admin.presses.createInstructions"
+msgstr "Θα σας αποδοθεί αυτόματα ο ρόλος του Διαχειριστή για αυτό το περιοδικό. Κατά τη δημιουργία ενός νέου περιοδικού, θα ανακατευθυνθείτε στις ρυθμίσεις του περιοδικού για να ολοκληρώσετε τη διαδικασία οργάνωσής του."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Υπενθύμιση λήξης συνδρομής"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Γνωστοποίηση ανοικτής πρόσβασης"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Υπενθύμιση αξιολόγησης"

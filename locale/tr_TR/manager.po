@@ -1,0 +1,1649 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:36+00:00\n"
+"Language: \n"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Bu dergide yer alan bütün e-posta şablonlarını varsayılan biçime döndürmek istediğinizden emin misiniz? Bu işlemi yaparsanız, özelleştirdiğiniz tüm şablonları kaybedeceksiniz!"
+
+msgid "manager.files.note"
+msgstr "Not: Dosya tarayıcı dergi ile ilişkilendirilmiş dosyalar ve dizinlerin doğrudan görülür ve yönetilebilir olmasını sağlayan, gelişmiş bir özelliktir."
+
+msgid "manager.journalManagement"
+msgstr "Dergi Yönetimi"
+
+msgid "manager.language.ui"
+msgstr "Kullanıcı Arayüzü"
+
+msgid "manager.language.submissions"
+msgstr "Gönderiler"
+
+msgid "manager.language.forms"
+msgstr "Formlar"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Belirtmiş olduğunuz dil herhangi bir dile özgü dergi ayarlarını değiştirecektir."
+
+msgid "manager.languages.languageInstructions"
+msgstr "ADS desteklenen dillerden herhangi biriyle kullanılabilir. ADS çok dilli bir sistem yapısına sahiptir ve her sayfada diller arasında geçiş yapabilme özelliği ile kullanıcıların istedikleri dilde veri girmesini sağlar.<br /><br />ADS tarafından desteklenen bir dil aşağıdaki listede yoksa, site yönetim arayüzünden dili yüklemek için site yöneticinize başvurun. Yeni dil desteği eklemek için ilgili talimatlar ve ADS belgelerine bakınız."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Üzgünüz, başka bir ek dil kullanılamaz. Bu dergide ek bir dil kullanmak istiyorsanız site yöneticinize başvurunuz."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Bu dergi sitesi için varsayılan dil olacaktır."
+
+msgid "manager.managementPages"
+msgstr "Yönetim Sayfaları"
+
+msgid "manager.payment.action"
+msgstr "Eylem"
+
+msgid "manager.payment.addPayment"
+msgstr "Ödeme Ekle"
+
+msgid "manager.payment.amount"
+msgstr "Tutar"
+
+msgid "manager.payment.authorFees"
+msgstr "Yazar Ücretleri"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Hakkında başlığı altında, dergiye yapılan gönderilerdeki açıklamalar boyunca işaretli seçenekler ve ücretler (aşağıda düzenlenebilir) ödemenin nerede yapılacağı işaret edildiği gibi gönderi sürecinin 1. Adımında görülür."
+
+msgid "manager.payment.currencymessage"
+msgstr "ADS herhangi bir para birimi dönüşümünü gerçekleştirmez. Abonelik için ödemeleri kabul ederseniz, abonelik parasının burada belirtilenle eşleştiğinden emin olmalısınız."
+
+msgid "manager.payment.description"
+msgstr "Tanım"
+
+msgid "manager.payment.details"
+msgstr "Detaylar"
+
+msgid "manager.payment.editSubscription"
+msgstr "Abonelik Düzenle"
+
+msgid "manager.payment.enable"
+msgstr "Etkinleştir"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Ödeme Seçenekleri"
+
+msgid "manager.payment.form.numeric"
+msgstr "Tüm tutarlar pozitif numerik değerde olmalıdır (ondalık sayılar kabul edilir)."
+
+msgid "manager.payment.generalFees"
+msgstr "Genel Ücretler"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Dernek üyelikleri, Dergi Hakkında sayfasında Politikalar altında ve bağış linkleri sağ taraf çerçevede arama seçeneği üzerinde görülür."
+
+msgid "manager.payment.generalOptions"
+msgstr "Genel Seçenekler"
+
+msgid "manager.payment.noPayments"
+msgstr "Ödeme Yok"
+
+msgid "manager.payment.notFound"
+msgstr "Bulunamadı"
+
+msgid "manager.payment.options"
+msgstr "Seçenekler"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "Bu abonelikler için ödemeyi aktif hale getirir. Abone Yöneticisi tarafından tür, maliyet süre ve abnelikler yönetilir."
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Ödeme modülünü etkinleştirmek için buraya tıklayınız. Aşağıdaki formu doldurmak için ödeme ayarları konfigürasyonunu yapmalısınız. Not: Kullanıcılar ödeme yapabilmek için giriş yapmak zorundadırlar."
+
+msgid "manager.payment.options.fee"
+msgstr "Ücret"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Ücret Tanımlama"
+
+msgid "manager.payment.options.feeName"
+msgstr "Ücret Adı"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Dernek Üyeliği"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Makale ve sayılarıdaki PDF sürüme sınırlandırılmış erişim"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Makale Yayını"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Makale Satın Al"
+
+msgid "manager.payment.options.text"
+msgstr "Ödeme Metodu Açıklaması"
+
+msgid "manager.payment.paymentId"
+msgstr "Ödeme Numarası"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Ödeme Yönetmi"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "Bu ekrandan aşağıdaki ödeme metodu eklentilerinden birinin konfigürasyonunu yapmalısınız."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Ücret Ödeme Yönetemleri"
+
+msgid "manager.payment.paymentType"
+msgstr "Ödeme Türü"
+
+msgid "manager.payment.readerFees"
+msgstr "Okuyucu Ücretleri"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Hakkında başlığı altındaki politikalarda açıklamalar boyunca işaretli seçenekler ve ücretler (aşağıda düzenlenebilir) ödemenin nerede yapılacağı işaret edildiği gibi görülür."
+
+msgid "manager.payment.records"
+msgstr "Kayıtlar"
+
+msgid "manager.payment.userName"
+msgstr "Ödeme Numarası"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Bu Dergideki Kayıtlı Kullanıcılar"
+
+msgid "manager.people.allJournals"
+msgstr "Tüm Dergiler"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Bu Dergide Kullanıcı Yetkilendir"
+
+msgid "manager.people.showNoRole"
+msgstr "Rolü Olmayan Kullanıcıları Göster"
+
+msgid "manager.people.allUsers"
+msgstr "Tüm Aktif Kullanıcılar"
+
+msgid "manager.people.confirmRemove"
+msgstr "Bu kullanıcıyı bu dergiden çıkar. Bu işlem kullanıcının bu dergideki tüm görevlerini iptal edecektir."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Şablon seç"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Tüm Kayıtlı Kullancılar"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Dergi ile"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Başka bir kullanıcı hesabı ile birleştirmek için bir ya da  birden çok kullanıcı seç (Örneğin; iki kullanıcı hesabı olan kişiler için). Birincil olarak seçilen hesap silinecek ve kullanıcının gönderileri, görevleri, atamaları gibi tüm kayıtları ikinci seçilen hesaba aktarılacaktır."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Önceki seçtiğiniz kullanıcının yazarlık, atama gibi görvlerinin bağlanacağı bir kullanıcı seçiniz."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} Kayıt"
+
+msgid "manager.people.syncUserDescription"
+msgstr "Eşzamanlı kayıt belirli dergide belirli rol şeklinde kaydolmuş tüm kullanıcıları bu dergide kaydeder. Bu fonksiyon ortak kullanıcı gruplarını (Örneğin; Hakemler) dergiler arasında senkronize eder."
+
+msgid "manager.sections.assigned"
+msgstr "Bu Bölümün Editörleri"
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Abstrakt zorunlu değil"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Bu bölümü kalıcı olarak silmek istediğinizden emin misiniz?"
+
+msgid "manager.sections.create"
+msgstr "Bölüm Oluştur"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Bölüm editörlerinin gönderilere otomatik olarak atanması için bu bölüme bir bölüm editörü ekleyiniz. (Öte yandan, bir gönderi geldikten sonra bölüm editörleri manuel olarak da atanabilir.) Eğer eklendiyse bir bölüm editörü bu bölümün gönderilerini gözden geçirmeye (hakemlik) ve düzenlemeye (sayfa düzeni, mizanpaj ve tashih) otomatik olarak atanır. Bölüm editörleri Dergi Yönetimi kısmındaki Roller altında Bölüm Editörleri tıklanarak oluşturulur."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Öğeler sadece editörler ve bölüm editörleri tarafından gönderilerbilir."
+
+msgid "manager.sections.editors"
+msgstr "Bölüm Editörleri"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Bölüm için kısaltılmış bir başlık gerekir"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Her bir Bölüm Editörü atamasının işaretlenmesi için en az bir işaret kutusu olduğundan emin olun."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Lütfen geçerli bir inceleme formu seçtiğinizden emin olun."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Bölüm için başlık gerekiyor."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Sayının içindekiler sayfasında bölüm öğeleri için yazar adlarını ele."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Bu bölümün başlığını sayının içindekiler tablosundan çıkar."
+
+msgid "manager.sections.identifyType"
+msgstr "Bu bölümde yayınlanan öğelerin belirlenmesinde kullanılacak tanım:"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(Örneğin,  \"Hakemlik Sürecinden Geçmiş Makale\", \"Hakemlik Sürecinden Geçmemiş Kitap Değerlendirmesi\", \"Davetli makale\", v.b.)"
+
+msgid "manager.sections.indexed"
+msgstr "Dizinlenmiş"
+
+msgid "manager.sections.noneCreated"
+msgstr "Herhangi bir bölüm oluşturulmadı."
+
+msgid "manager.sections.open"
+msgstr "Açık Başvurular"
+
+msgid "manager.sections.policy"
+msgstr "Bölüm Politikası"
+
+msgid "manager.sections.readingTools"
+msgstr "Okuma Araçları"
+
+msgid "manager.sections.reviewed"
+msgstr "Hakam Değerlendirmesinden Geçmiş"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Bu bölümdeki maddeler derginin dizin içeriğine dahil edilmeyecektir."
+
+msgid "manager.sections.submissionReview"
+msgstr "Hakem değerlendirmesinden geçmeyecek"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Dergini bu bölümüne yapılan başvurular"
+
+msgid "manager.sections.unassigned"
+msgstr "Atanabilecek Bölüm Editörleri"
+
+msgid "manager.sections.wordCount"
+msgstr "Kelime Say"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Bu bölümde özet (abstrakt) için kelime limiti (limitsiz: 0)"
+
+msgid "manager.setup"
+msgstr "Ayar"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "İçerik"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Ek Öğe"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Kontrol Listesi Öğesi Ekle"
+
+msgid "manager.setup.addItem"
+msgstr "Öğe Ekle"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "\"Dergi Hakkında\" Kısmında Görüntülenmesi İçin Öğe Ekle"
+
+msgid "manager.setup.addNavItem"
+msgstr "Öğe Ekle"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Yeni Veri Tabanı Bağlantısı Ekle"
+
+msgid "manager.setup.addSponsor"
+msgstr "Sponsor Kurum Ekle"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Alternatif Başlık"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Alternatif olarak, başlık ve logo yerine, başlık HTML biçiminde hazırlanarak bu alana eklenebilir, gerekli değil ise bu alanı boş bırakınız."
+
+msgid "manager.setup.announcements"
+msgstr "Duyurular"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Duyurular dergi okuyucularına haber veya gelişmeleri iletmek için yayımlanır. Yayınlananlar  duyurular sayfasında görüntülenir."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Duyuru sayfasında okuyuculara gösterilmek üzere ek bilgi gir."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Dergi Hakkında sayfasında görülmek üzere)"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "Yazarların gönderileriyle birlikte bir Çıkar Çatışması bildirimi dosyası göndermeleri gereklidir."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Hakemlerin her bir değerlendirme gönderisi için Çıkar Çatışması bildirimi dosyası göndermeleri gereklidir."
+
+msgid "manager.setup.history"
+msgstr "Dergi Geçmişi"
+
+msgid "manager.setup.historyDescription"
+msgstr "Buraya yazılan metin dergi web sayfasının \"Hakkında\" kısmında görüntülenir. Dergi geçmişi ve yayın kuruluna yönelik bilgiler verilir."
+
+msgid "manager.setup.metadata.coverage"
+msgstr "Kapsam"
+
+msgid "manager.setup.metadata.coverage.description"
+msgstr "Coğrafik yerleşim, kronolojik veya tarihsel süreç, ve/veya araştırma örneklerinin özelliklerine başvur."
+
+msgid "manager.setup.currentIssue"
+msgstr "Son Sayı"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "5. Basamak: Görünümün Özelleştirilmesi"
+
+msgid "manager.setup.customTags"
+msgstr "Özel etiketler"
+
+msgid "manager.setup.customTagsDescription"
+msgstr "Özel HTML başlık etiketleri her sayfanın başlığına etiketlenir. (Örneğin Üst Veri etiketleri)."
+
+msgid "manager.setup.details"
+msgstr "Ayrıntılar"
+
+msgid "manager.setup.details.description"
+msgstr "Derginin Adı, ISSN, iletişim, sponsorlar ve arama motorları."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "Dergi Yöneticisi tüm kullanıcıları, editörler veya bölüm editörleri yalnızca hakemleri kaydedebilir."
+
+msgid "manager.setup.discipline"
+msgstr "Akademik Disiplinler ve Alt Disiplinler"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Eğer dergi akademik alanların bir kaçını kapsıyor veya yazarlar çalışmalarını akademik alanlara göre gönderiyorlar ise kullanışlıdır."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(Örneğin, Tarih; Eğitim; Sosyoloji; Psikoloji; Kültürel Çalışmalar; Hukuk)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Bu dergi için uygun akademik disiplin örnekleri ver."
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Son sayının içindekiler bölümünü ekle (mevcut ise)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Editör Kararı"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Yanıt vermeyen e-posta adresi"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "İletilemeyen her posta bu adreste hata mesajı olarak sonuçlanacaktır."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "<strong>Not:</strong> Bu seçeneği etkinleştirmek için ADS konfigürasyon dosyasında <tt>allow_envelope_sender</tt> seçeneği etkin olmalıdır. Bu işlevin kullanılabilmesi için sunucu (tüm sunucularda çalışmayabilir) ayarlarında da değişiklik yapılması gerekir. Daha fazla bilgi için ADS belgelerine bakınız."
+
+msgid "manager.setup.emails"
+msgstr "E-posta Tanımlama"
+
+msgid "manager.setup.emailSignature"
+msgstr "İmza"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "Dergi adına hazırlanmış ve sistem tarafından gönderilen e-postalara eklenen imzadır. Hazır e-posta metinleri Dergi Yönetimi sayfası altındadır."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Dergi yöneticilerinin dergilerine duyuru eklemelerini etkinleştir."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Kullanıcılar aşağıda belirtilen bir veya birden çok rol ile dergiye kendileri üye olabilirler."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Odak ve kapsam"
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Çalışmalarını Dizinlemek İsteyen Yazarlar için"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "Açık Dergi Sistemleri, dünya çapında elektronik araştırma kaynaklarına ulaşma amacı ile standart oluşturan <a href=\"http://www.openarchives.org/\" target=\"_blank\">Açık Arşiv Girişimi</a>nin Üst Veri Harmanlama Protokolünü destekler. Yazarlar makale başvuruları için veri sağlamak amacıyla benzer bir şablon kullanacaklardır. Dergi yöneticisi indeksleme için ve mevcut yazarlar ilgili örneklerle birlikte dizinlenmiş çalışmalarını bulmak için noktalı virgülle ayrılmış terim (Örneğin, terim1; terim2) kategorileri seçmelidir. Girişler “ör” veya “örneğin” kullanılarak örneklerdeki gibi yapılmalıdır."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Birincil bağlantı e-postası gereklidir."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Birincil bağlantı ismi gereklidir."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Derginin başharfleri gereklidir."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Dergi ismi gereklidir."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Her gönderi için hakem sayısı gereklidir."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Destek e-posta gereklidir."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Destek isim gereklidir."
+
+msgid "manager.setup.generalInformation"
+msgstr "Genel Bilgi"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Adım 1: Ayrıntıları Düzenleme"
+
+msgid "manager.setup.guidelines"
+msgstr "Rehberler"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Adım 3: Gönderi Rehberi"
+
+msgid "manager.setup.information"
+msgstr "Bilgi"
+
+msgid "manager.setup.information.description"
+msgstr "Kütüphaneciler, potansiyel yazarlar ve okuyucular için derginin kısa açıklamsı yan taraftaki \"Bilgi\" kısmında yer almaktadır."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Yazarlar İçin"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Kütüphaneler İçin"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Okuyucular İçin"
+
+msgid "manager.setup.initialIssue"
+msgstr "İlk sayı"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "Seçilen biçime uygun olarak ADS ile yayınlanacak ilk sayının, sayı, cilt, yıl gibi özellikleri:"
+
+msgid "manager.setup.institution"
+msgstr "Kurum"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Sayfa üstünde oluşan Yönlendirme çubuğuna başka maddeler eklenebilir (Giriş Sayfası, Hakkında, Kullanıcı, Kullanıcı Ana Sayfası, v.b.)."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Sayfa başına madde"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Dergi Kısaltması"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Dergi Arşivi"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Dergi Sayfa Sayfa İçeriği"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "Giriş sayfası var sayılan yönlendirme bağlantılarından oluşur. Aşağıdaki seçenekler kullanılarak, aşağıdaki sıra ile görülmek üzere giriş sayfasına eklenebilirler. Son  sayı yönlendirme bağlantılarında \"Son Sayı\" olarak sürekli yer alır."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Dergi Ana Sayfa Başlığı"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Dergi Ana Sayfa Başlığı"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "Dergi başlığının grafik bir biçimi (Örneğin: jpg, png veya gif) ve dergi logosu ana sayfa için yüklenebilir. Yükleme yapıldığında yazı biçimindeki başlığın yeri alır."
+
+msgid "manager.setup.contextInitials"
+msgstr "Dergi baş harfleri"
+
+msgid "manager.setup.journalLayout"
+msgstr "Dergi Mizanpajı"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Bir dergi teması seçiniz ve düzen parçalarını yerleştiriniz. Bir dergi biçimi aynı zamanda sistem çapında biçim ve tema biçimini (bir tema seçilmiş ise) geçersiz kılmak için kullanılabilir."
+
+msgid "manager.setup.journalTheme"
+msgstr "Dergi Teması"
+
+msgid "manager.setup.journalLogo"
+msgstr "Dergi Logosu"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Dergi Sayfa Altlığı"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "Dergi Sayfalarının alt bölümünde görülemesini istediğiniz bağlantıları HTML biçiminde bu alana yazınız (Örneğin; yönlendirme, sayaç, reklam v.b.). Altlık her sayfada görüntülenecektir."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Adım 2. Dergi Politikaları"
+
+msgid "manager.setup.journalSetup"
+msgstr "Dergi Yapılandırma"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Derginizin yapıladırması güncellenmiştir."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Biçimlendirme sayfası için geçersiz dosya biçimi. Desteklenen dosya biçimi .css dir."
+
+msgid "manager.setup.contextTitle"
+msgstr "Dergi başlığı"
+
+msgid "manager.setup.labelName"
+msgstr "Etiket adı"
+
+msgid "manager.setup.lists"
+msgstr "Listeler"
+
+msgid "manager.setup.lockssEnable"
+msgstr "LOCKSS aracılığı ile katılımcı kütüphanelerde dergi içeriğini depolamak, dağıtmak ve <a href=\"{$lockssUrl}\" target=\"_blank\">Yayıncı Manifestosu</a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS lisansı \"Dergi Hakkında\" sayfasında görünecektir:"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. <a href=\"http://lockss.org/lockss/Libraries\" target=\"_blank\">Katılan kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">LOCKSS da görev alan kütüphaneler</a> veya (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet yazıları için tıklayın."
+
+msgid "manager.setup.look"
+msgstr "Görünüş"
+
+msgid "manager.setup.look.description"
+msgstr "Ana sayfa başlığı, içerik, dergi başlığı, altlık, yönlendirme çubuğu ve biçim sayfası."
+
+msgid "manager.setup.management"
+msgstr "Yönetim"
+
+msgid "manager.setup.management.description"
+msgstr "Erişim ve güvenlik, program, duyurular, son kopya, mizanpaj ve düzeltme."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Temel Editöryal Basamakların Yönetimi"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Yönetim ve Yayıncılık Ayarı"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "4. Basamak: Dergi Yönetimi"
+
+msgid "manager.setup.navigationBar"
+msgstr "Yönlendirme Çubuğu"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Yönlendirme Çubuğuna madde ekle veya çıkar."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "Bağlantı adresleri tam olmalıdır (örneğin: \"http://www.example.com\"), siteye göreceli bağlantı kullanılmamalıdır (örneğin \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "Etiketler okunacak biçimde olmalı (örneğin: \"Dergi Yönetimi\"), yerel mesajı kullanılmamalı (örneğin: \"yönetim.ayar\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Görsel dosyası yüklenmedi."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Biçimlendirme sayfası yüklenmedi"
+
+msgid "manager.setup.note"
+msgstr "Not"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Not:</strong> Otomatik başvuru e-posta gönderme seçeneği başlangıçta pasifleştirildi. Açmak için <a class=\"action\" href=\"{$preparedEmailsUrl}\">Hazır E-Posta Mesajları</a> sayfasında \"SUBMISSION_ACK\" olarak tanımlanan mesajı etkinleştirin."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Sayfa bağlantıları"
+
+msgid "manager.setup.publishingMode"
+msgstr "Dergi İçeriğine Erişim"
+
+msgid "manager.setup.onlineIssn"
+msgstr "eISSN"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Dergi açık erişime izin verir."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Sayfa Numarası Seçenekleri"
+
+msgid "manager.setup.policies"
+msgstr "Politikalar"
+
+msgid "manager.setup.policies.description"
+msgstr "Odak, hakem değerlendirmesi, bölümler, gizlilik, güvenlik ve erişim öğeler hakkında ekler."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Düzenleme Yönergesi"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "Düzenleme yönergesi düzenlenme basamağında mizanpajcılara, yazarlara ve bölüm editörlerine açık tutulur. Aşağıda, dergi yöneticisi tarafından istenildiğinde değiştirilebilecek, ön tanımlı (HTML veya düz metin) bir düzenleme verilmiştir."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Yayın Planlaması"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Makaleler, kendi içindekiler tablosu olan bir sayıda toplanarak  yayınlanabilir. Ayrıca hazır olan makale son sayının içindekiler tablosuna eklenerek yayınlanabilir. Dergi Hakkında bölümünde okuyucularınıza hangi sistemin kullanıldığı ve ne sıklıkta yeni sayı yayınlandığını belirtiniz."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Yayın Planlaması"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Dergi İçeriğinin Tanımlanması"
+
+msgid "manager.setup.publisher"
+msgstr "Yayıncı"
+
+msgid "manager.setup.publishingDescription"
+msgstr "Dergiyi yayıncısının adı Dergi Hakkında kısmında görüntülenir."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Referans Bağlama"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Kullanıcılar açık erişim içeriğini görüntüleyebilmek için kayıt yaparak giriş yapmak zorundadır."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Kullanıcılar dergi sitesini görüntüleyebilmek için kayıt yaparak giriş yapmak zorundadır."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Değerlendirme Rehberi"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Değerlendirme Seçenekleri"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Hakemlere iki durumda uyarı için otomatik e-posta gönderilecektir (editör istediği her zaman gönderebilir)"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "<strong>Not:</strong> Bu özelliğin çalışabilmesi için site yöneticisinin ADS kurulum dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi gerekir. Bu iş için sunucuda da ayarlar yapmak gerekebilir ve her sunucuda bu işlev çalışmayabilir. (Daha fazla bilgi için ADS belgelerine bakınız)."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Kör Hakemlik"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Değerlendirme için tipik olarak kabul edilen süre"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Editörler her bir hakem incelemesinden sonra hakemler için 1-5 puan arasında kalite ölçeğine göre değerlendirme yapabilir."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "Hakemler değerlendirme isteğini kabul ettikten sonra değerlendirme dosyasına giriş yapabilirler."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Hakem Erişimi"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Tek tıkla hakem erişimini etkinleştir."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "<strong>Not:</strong> Hakemlere gönderilen e-posta, hakemlerin davet edildiği değerlendirme gönderisine doğrudan erişebilmesi için özel bir URL adresi içerir (oturum açılması gereken diğer sayfalar ile birlikte).  Bu seçenek, güvenlik nedenleriyle editörlerin CCs veya BCCs adresleri eklemelerine izin vermez."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Hakem Puanlama"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Hakem Hatırlatmaları"
+
+msgid "manager.setup.reviewOptions.showEnsuringLink"
+msgstr "Yazarlara ve hakemlere dosya yükleme sayfalarında <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Kör Hakemlik Güvencesi</a> için bağlantılar sağlayın."
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Değerlendirme Politikası"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Arama Motoru Dizinlemesi"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Kullanıcılara yardımcı olmak üzere arama motorlarının dergiyi dizinlemesi için dergiyle ilgili anahtar kelimeleri (noktalı virgülle ayırarak) yazabilirsiniz. Ör. İktisat; İşletme; Finans."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Bölümler ve Bölüm Editörleri"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Eğer bölüm eklenmemişse, öğeler Makaleler bölümüne varsayılan olarak gönderilir.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "Dergi için bölümler oluşturmak veya değiştirmek (Örneğin; Makaleler, Kitap Değerlendirmeleri, v.b.) için Bölüm Yönetimine gidin. <br /><br /> Yazarlar dergiye gönderi yaparken seçim yapacaklardır..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Dergi editörü bunu editoryal süreç olarak görecektir."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Dergi bölümü göz önüne alınacaktır."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Daima dizgi bağantısını göster ve sınırlı erişimi belirt."
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Bir Dergi Web Sitesi İçin Beş Adım"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(Örneğin: Fotosentez; Kara Delikler; Dört Renkli Harita Sorunu; Bayes Kuramı)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Anahtar Kelimeler"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Yazarlar için anahtar kelime veya konu örnekleri verin."
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Gönderi Rehberleri"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Başvuru Hazırlık Kontrol Listesi"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "Dergiye makale başvurusu yaparken, yazarlar önce Başvuru Hazırlık Kontrol Listesini kontrol etmelidirler. Kontrol listesi \"Dergi Hakkında\" altındaki \"Yazar Rehberi\" bölümündedir. Liste aşağıda düzenlenebilir, ama listedeki bütün öğelerin bir sonraki basamağa geçebilmek için yazarlar tarafından işaretlenmesi gerekmektedir."
+
+msgid "manager.setup.submissions"
+msgstr "Başvurular"
+
+msgid "manager.setup.submissions.description"
+msgstr "Yazar rehberleri, telif hakkı ve dizinleme (kayıt dahil)."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Dergi içeriğinin tümüne veya bir bölümüne erişim için abonelik gerekir."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "ADS derginin online içeriğini yayımlamak için kullanılmaz."
+
+msgid "manager.setup.typeExamples"
+msgstr "(Örneğin: Tarihsel Sorgu; Yarı Deneysel; Edebi Analiz; Araştırma/Görüşme)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Tür (Yöntem/Yaklaşım)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Bu alan için araştırma türleri, yöntemleri ve yaklaşımlarıyla ilgili örnekler sağlayınız."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Tek Biçim Tanımlayıcı"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Makaleler ve sayılar bir tanımlama numarası veya sözcüğü ile etiketlenirler. Digital Object Identifier (DOI) Sistemi önerilen sistemdir."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Bir editöryal/değerlendirme kurulu dergi tarafından kullanılacaktır."
+
+msgid "manager.setup.useImageTitle"
+msgstr "Başlık görseli"
+
+msgid "manager.setup.userRegistration"
+msgstr "Üye Kayıdı"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Başlık metni"
+
+msgid "manager.statistics.statistics"
+msgstr "Dergi İstatistikleri"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Makale görüntüleme sayısı (sadece yazarlar için)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Kabul (%):"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Red (%):"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Geliştirilmiş gönderi (%):"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Değerlendime süresi (Gün):"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Yayına kadar geçen süre (Gün):"
+
+msgid "manager.statistics.statistics.description"
+msgstr "ADS yazılımı her degi için şu istatistikleri hesaplar. “Değerlendirme süresi” başvuru zamanından son editör kararı verilene kadar geçen gün sayısıdır. “Yayınlama süresi” ise başvurudan yayına dek geçen toplam süredir."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Yayınlanmış öğerler:"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Dergi hakkında kısmında okuyucuların görmesini istediklerinizi seçiniz."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Not: Değerlendirme sonuçlarının toplamı %100 olmayabilir, çünkü halen değerlendirmede olanlar da vardır."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Yayınlanmış sayılar:"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Toplam başvuru sayısı:"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Dğerlendirmeden geçmiş:"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Kayıtlı okuyucular"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Kayıtlı kullanıcılar:"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Görevlendirme Sayısı:"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Hakemler:"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Editör Puanı:"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Değerlendirme Sayısı:"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Bu dergide hakem değerlendirme istatistiklerinin yapılmasını istediğiniz bölümlerini seçiniz."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Abonelik:"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Abonelik Politikası"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Gecikmiş Açık Erişim"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Abonelik Sonu"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "Abonelik bitiminden sonra, okuyucunun tüm abonelik içeriğine erişim reddedilebilir ancak abonelik sonuna kadar yayınlanan içeriğe erişimi korunabilir."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Tümünü Sonladır"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Abonelik bitiminden sonra okuyucuların tüm abonelik içeriğine erişimini engelle."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Kısmen Sonlandır"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Okuyucuların son yayınlanan abonelik içeriğine erişimi engelle ancak abonelik sonuna kadar yayınlanan içeriğe erişimini koru."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Abonelik Sonu Uyarısı"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Otomatik e-posta hatırlatıcıları (ADS tarafından hazırlanmış e-postalar Dergi Yöneticileri tarafından düzenlenebilir) hem önce hem de bir abonelik süresi dolduktan sonra abonelere gönderilebilir."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Not:</strong> Bu seçeneğin etkinleşmesi için, site yöneticisinin ADS ayar dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi gerekir. Ayrıca sunucunun da bazı özellikleri desteklemesi gerekir (her zaman mümkün olmayabilir), daha fazla bilgi için ADS belgelerine bakınız."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Aşağdakilerden birini seçiniz:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "Alana girişte HTML tagları kullanılabilir (yazı fontu, rengi vb.), \"enter\" tuşu kullanımı <tt>&lt;br&gt;</tt> olarak değiştirilecektir; HTML düzenleyici Firefox ile de çalışır."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Lütfen abonelik bitince kaç ay sonra haber vermek istediğinizi belirtiniz."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Lütfen abonelik bitmeden kaç ay önce haber vermek istediğinizi belirtiniz."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Lütfen abonelik bitince kaç hafta sonra haber vermek istediğinizi belirtiniz."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Lütfen abonelik bitmeden kaç hafta önce haber vermek istediğinizi belirtiniz."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Kayıtlı okuyucuların, açık erişim açıldığında e-posta ile dergi içeriğini almalarına izin var."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Not:</strong> Bu seçeneğin etkinleşmesi için, site yöneticisinin ADS ayar dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi gerekir. Ayrıca sunucunun da bazı özellikleri desteklemesi gerekir (her zaman mümkün olmayabilir), daha fazla bilgi için ADS belgelerine bakınız."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Online Ödeme Bildirimleri"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Otomatik e-posta bildirimleri (ADS tarafından  hazırlanmış e-postalar dergi yöneticileri tarafından düzenlenebilir) online ödemeler tamamlandıktan sonra Abone Yöneticisine gönderilebilir."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Bir biresyel abonenin online abonelik satın alması durumunda Abone Yöneticisini bilgilendir."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Bir kurumsal abonenin online abonelik satın alması durumunda Abone Yöneticisini bilgilendir (tavsiye edilir)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Bir bireysel abonenin online abonelik yenileme yapması durumunda Abone Yöneticisini bilgilendir."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Bir kurumsal abonenin online abonelik yenilemesi durumunda Abone Yöneticisini bilgilendir."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Not:</strong> Kurumsal abonelikler online satın alıdığında alan adları ve IP aralıkları için onay gereklidir. Bu aboneliklerin aktivasyonunun Abone Yöneticisi tarafından onaylanması gerektirir."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Not:</strong> Bu seçenekleri etkinleştirmek için, Dergi Yöneticisi, Okuyucu Ücretleri altındaki abonelikleri online ödeme modülü de dahil olmak üzere etkinleştirmelidir."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Abonelik Gerektiren Dergiler İçin Açık Erişim Politikası"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Abonelik gerektiren dergiler \"gecikmiş açık erişim\" ya da \"yazar kişisel arşivlemesi\" gibi yazıya daha fazla ulaşım ve kaynak gösterilmeyi sağlayacak politikalar belirleyebilirler. Belirlenen politika Dergi Hakkında sayfasında yer alacaktır."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Abonelik Bilgileri"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Abonelik türleri ve bedeli, abonelik yöneticisinin adı ve adresi ile birlikte dergi hakkında sayfasına kendiliğinden yerleştirilecektir. Abonelik ile ilgili ödeme biçimi, hesap numarası, gelişmekte olan ülkeler için özel koşullar ve benzeri tüm ek bilgiler burada eklenebilir."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Abone Yöneticisi"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Dergi Hakkında sayfasında abonelik hakkında bilgi vermek üzere gösterilecek."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Lütfen geçerli bir e-posta adresi giriniz."
+
+msgid "manager.subscriptions"
+msgstr "Abonelikler"
+
+msgid "manager.individualSubscriptions"
+msgstr "Bireysel Abonelikler"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Kurumsal Abonelikler"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Bu aboneliği silmek istediğinizden emin misiniz?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Abonelik Özeti"
+
+msgid "manager.subscriptions.create"
+msgstr "Yeni Bir Abone Oluştur"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Oluştur"
+
+msgid "manager.subscriptions.renew"
+msgstr "Yenile"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Sonlandır"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Bitiş Tarihi"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Başlat"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Başlangıç Tarihi"
+
+msgid "manager.subscriptions.domain"
+msgstr "Alan (Domain)"
+
+msgid "manager.subscriptions.edit"
+msgstr "Aboneliği Düzenle"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Düzelt"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Durum ile"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Hepsi"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Durum"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Abonelik durumu gerekli."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Lütfen geçerli bir abonelik statüsü seçiniz."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Abonelik türü"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Abonelik türü gerekli."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Lütfen geçerli bir abonelik türü seçiniz."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Başlangıç tarihi"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Abonelik başlangıç tarihi gerekli."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Lütfen geçerli bir abonelik başlangıç tarihi giriniz."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Bitiş tarihi"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Abonelik bitiş tarihi gerekli."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Lütfen geçerli bir abonelik bitiş tarihi seçiniz."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Not: Aşağıdaki tüm değişiklikler sistem genelindeki kullanıcının profilinde vardır."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Kullanıcı"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "İletişim"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Bir kullanıcı gerekli."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Lütfen geçerli bir kullanıcı seçiniz."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Lütfen geçerli bir ülke seçiniz."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Kullanıcı adı ve abonelik detaylarını bir e-mail ile kullanıcıya gönder."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Lütfen verilen onay kutularını kullanınız."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Üyelik"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Referans Numarası"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Abonelik bir dernek veya organizasyona aitse ve eğer abonelik türü gerekliyse abonelik türünü giriniz."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Seçilmiş abonelik türleri üyelik bilgisi gerektirir."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Notlar"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Alan (Domain)"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Kurum adı"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Kurum adı gerekli."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Gönderi Adresi"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Eğer buraya bir alan adı (domain) girilirse, IP aralığı girilmeyebilir. <br /> Geçerli değerler kullanım alanı isimleridir (Örneğin; lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Seçilen abonelik türü aboneliğin doğrulanması için bir alan ve/veya IP aralığı gerektirmektedir."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Lütfen geçerli bir alan adı giriniz."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP aralığı"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Eğer buraya bir IP aralığı girilirse, alan adı girilmeyebilir. Bir IP aralığı için geçerli değerler: IP adresi (Örneğin; 142.58.103.1), IP aralığı (Örneğin; 142.58.103.1 - 142.58.103.4), '*' işareti içeren bir IP aralığı (Örneğin; 142.58.103.*), veya bunların ';' işareti ile ile ayrılmış herhangi bir kombisayonu olabilir (Örneğin; 142.58.103.* - 142.58.107.* ; 142.58.108.1 ; 142.58.106.*)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Lütfen geçerli bir IP aralığı giriniz."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Sil"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Ekle"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Kaydet ve Yeni Bir Tane Oluştur"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Dergi kurulumunda kullanıcıya bir bildirim e-posta göndermek amacıyla, abone kişi adı ve e-posta adresi belirtilmelidir."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Kullanıcı hali hazırda bu deriye abone."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Abonelik türü yeni bir abone kaydetmeden önce oluşturmalıdır."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP Aralığı"
+
+msgid "manager.subscriptions.membership"
+msgstr "Üyelik"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Referans Numarası"
+
+msgid "manager.subscriptions.notes"
+msgstr "Notlar"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Abone yok"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Abonelik İletişimi Seç"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Kullanıcı Seç"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Abonelik erişim yetkisi, Dergi Yöneticisi, Editörler, Bölüm Editörleri, Mizanpajcılar, Yayın Editörleri ve Düzeltmeler için otomatik olarak verilir."
+
+msgid "manager.subscriptions.select"
+msgstr "Seç"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Kayıt başarıyla oluşturuldu."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Abonelik türü"
+
+msgid "manager.subscriptions.user"
+msgstr "Kullanıcı"
+
+msgid "manager.subscriptions.contact"
+msgstr "İletişim Kurulacak Kişi Adı"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Kurum Adı"
+
+msgid "manager.subscriptionTypes"
+msgstr "Abonelik Türleri"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Uyarı! Bu ve benzeri türlerdeki bütün abonelikler silinecek. Devam etmek ve bu abonelik türünü silmek istediğinizdan emin misiniz?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Tutar"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Abonelikler"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Bireysel"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Kurumsal"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Yeni Bir Abonelik Türü Oluştur"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Oluştur"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Devam"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Abonelik Türü Düzenle"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Düzelt"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Tutar"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Rakamsal bir değer giriniz (Örneğin; 40 veya 40.00). \"$\" gibi semboller kullanmayınız."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Tutar pozitif, rakamsal bir değer olmalıdır."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Bir tutar gereklidir."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Para birimi"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Para birimini gerekli."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Lütfen bir para birimi değeri seçiniz."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Tanımlama"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Dolduktan sonra"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "ay (Örneğin, 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Süresiz"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Lütfen verilen seçenkeleri kulanın."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Devam"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Kaç ay süreyle kayıt olacağınızı rakamla belirtiniz (Örneğin 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Süre pozitif, rakamsal bir değer olmalıdır."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Süre gereklidir."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Biçim"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Abonelik türü biçiminin bilinmesi gereklidir."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Geçerli bir abonelik türü biçimi seçiniz."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Abonelikler"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Bireysel (kullanıcı girişiyle doğrulanır)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Aboneler kullanım alanı ya da IP doğruluğu aracılığı ile onaylamalıdır."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Üyelik bilgisi için abonelik gerekli. <br />(Örneğin; dernek, organizasyon, konsorsiyum, v.b.)"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Seçenekler"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Lütfen verilen kontrol kutusunu kullanınız."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Lütfen verilen çek kutularını kullanın."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Bu abonelik türünü kamuya açık ya da görünür yapma. <br /> (Örneğin; Dergi Hakkında kısmında abonelikler altında)."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Kaydet ve Yeni Bir Tane Oluştur"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Abonelik Tür Adı"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Halen bu isimde bir abonelik türü var."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Abonelik türünün girilmesi gereklidir."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Abonelik türü"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Herhangi bir abonelik türü oluşturulmadı."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Abonelik türü başarıyla oluşturuldu."
+
+msgid "manager.sections.alertDelete"
+msgstr "Bu bölümü silmeden önce yayımlanmış makaleleri diğer bölümlere taşımalısınız."
+
+msgid "manager.setup.categories.description"
+msgstr "Yukarıda listelenen kümelerden uygun kategorileri seçiniz. Okuyucular tamamlanmış dergi kümelerinden kategoriye göre listeleme yapabilirler."
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Sayı Satın Al"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Dergi Logosu"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Dergi Görseli (Küçük)"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Küçük Görsel"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Lütfen verilen seçenekleri kullanınız."
+
+msgid "manager.setup.categories"
+msgstr "Kategoriler"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Sonuçları (sayı ve/veya makale) bağlamıyla daralt."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Sonuçları nesne türüne (dergi, sayı, makale, pdf dizgisi, diğer dizgiler) ve/veya bir veya daha fazla nesne ID'sine göre daralt."
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "İndirilen makale dosyaları"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Makale özet sayfası gösterimi"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Makale özeti ve indirmeleri"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Dergi ana sayfa görüntülemeleri"
+
+msgid "manager.setup.resetPermissions"
+msgstr "Makale İzinlerini Sıfırla"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Yeni makalenin temel telif hakkı yılı"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Ayarlar"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Şifre"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Kayıt"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Kayıt Başarılı!"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Bu aboneliği silmek istediğinizden emin misiniz?"
+
+msgid "manager.paymentTypes"
+msgstr "Ödeme Türleri"
+
+msgid "manager.section.noSectionEditors"
+msgstr "Henüz bölüm editörü yok. İlk önce Yönetim > Ayarlar > Kullanıcılar Rolleri &amp; ile en az bir kullanıcıya bu rolü ekleyin."
+
+msgid "manager.setup.masthead"
+msgstr "Yönetici Listesi"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Kişiler ve Kurullar"
+
+msgid "manager.setup.editorialTeam.description"
+msgstr "Yöneticiler, editörler ve dergiyle ilişkili diğer kişileri listeleyin."
+
+msgid "manager.setup.homepageContent"
+msgstr "Dergi Ana Sayfa İçeriği"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "Derginin ana sayfası varsayılan olarak gezinme bağlantılarından oluşur. Ek ana sayfa içeriği, gösterilen sıraya göre görünecek olan aşağıdaki seçeneklerden biri veya tümü kullanılarak eklenebilir."
+
+msgid "manager.setup.layout"
+msgstr "Dergi Düzeni"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Dergi biçim sayfası"
+
+msgid "manager.setup.contextName"
+msgstr "Dergi Adı"
+
+msgid "manager.setup.pageHeader"
+msgstr "Dergi Sayfa Başlığı"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Yazarlar, okuyucular ve kütüphanecilere derginin yayınlayacağı makaleleri ve diğer öğeleri açıklayın."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Belirtilen ISSN geçerli değil."
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Anında veya gecikmeli olarak açık erişim sunan dergiler için, yayınlanan tüm çalışmalarla birlikte uygun zamanda bir Creative Commons lisansı ekleyin."
+
+msgid "manager.setup.contextSummary"
+msgstr "Dergi Özeti"
+
+msgid "manager.setup.contextSummary.description"
+msgstr "Derginizin dergiler listesinde gösterilebilecek kısa bir açıklamasını giriniz."
+
+msgid "manager.setup.contextAbout"
+msgstr "Dergi Hakkında"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Derginiz hakkında okuyuculara, yazarlara veya hakemlere ilgilerini çekebilecek her türlü bilgiyi ekleyin. Bu, açık erişim politikanızı, derginin odak ve kapsamını, telif hakkı bildirimini, sponsorluk ifşasını, derginin tarihini, bir gizlilik bildirimini ve herhangi bir LOCKSS veya CLOCKSS arşivleme sistemine dahil edilmesini içerebilir."
+
+msgid "manager.setup.favicon"
+msgstr "Dergi Favori İkonu"
+
+msgid "manager.setup.faviconDescription"
+msgstr "Kullanıcılar sitenizi ziyaret ettiğinde gezinme çubuğunun yanında görüntülemek için buraya bir favicon ekleyin."
+
+msgid "manager.setup.faviconInvalid"
+msgstr "Geçersiz favicon biçimi. Kabul edilebilir biçimler:  .ico, .png ve .gif."
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Dergi listelerinde kullanılabilen küçük bir logo veya derginin temsili."
+
+msgid "manager.setup.journalThumbnail.altText"
+msgstr "Küçük resim için alternatif metin"
+
+msgid "manager.setup.enableArchive"
+msgstr "Arşivi Etkinleştir"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN eklentisi etkinleştirildi"
+
+msgid "manager.setup.plnDescription"
+msgstr "PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS dergisi için ücretsiz koruma hizmeti sunmaktadır."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "PKP PN için kullanım şartlarını kabul etmek için Ayarlar bağlantısına tıklayın."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Koruma Ağı (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS dergisi için ücretsiz koruma hizmeti sunmaktadır. OJS 3 için PKP PN eklentisi şu anda geliştiriliyor ve eklenti galerisinde yakında sunulacak."
+
+msgid "manager.setup.otherLockss"
+msgstr "Alternatif Arşivleme Seçenekleri"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS Lisansı</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS Lisansı Açıklaması"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Bir CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> sayfası aracılığıyla katılımcı kütüphanelerde dergi içeriğini depolamak ve dağıtmak için CLOCKSS uygulamasını etkinleştirin."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS Lisansı</a>"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"Derginiz, birden fazla kullanım metriği kaydetmek için yapılandırıldı. Kullanım istatistikleri birkaç bağlamda görüntülenecektir.\n"
+"\t\tTek kullanımlık istatistiğin kullanılması gereken durumlar vardır. Örn. En çok kullanılan makalelerin sıralı bir listesini görüntülemek veya arama sonuçlarını sıralamak için. Lütfen yapılandırılmış metriklerden birini varsayılan olarak seçin."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "İçindekiler sayfası görünümleri tablosu"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Lütfen verilen onay kutusunu kullanın."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Aylar"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Haftalar"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Aboneleri abonelik süresinin sona ermesinden sonra e-posta ile bilgilendir."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Aboneleri abonelik süresinin sona ermesinden sonra e-posta ile bilgilendir."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Aboneleri abonelik süresinin bitiminden önce e-posta ile bilgilendir."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Aboneleri abonelik süresinin bitiminden önce e-posta ile bilgilendir."
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Bu aboneliği yenilemek istediğinizden emin misiniz?"
+
+msgid "manager.distribution.access"
+msgstr "Erişim"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Sunduğunuz abonelikleri açıklayan bir sayfaya bağlantı verin."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Ziyaretçinin mevcut ve geçmiş aboneliklerini açıklayan bir sayfaya bağlantı verin."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Bu bağlantı sadece bir ziyaretçi giriş yaptığında görüntülenecektir."
+
+msgid "grid.category.path"
+msgstr "Yol"
+
+msgid "grid.action.addSection"
+msgstr "Bölüm Ekle"
+
+msgid "manager.setup.section.description"
+msgstr "Bir derginin yayınlanmış sayılarındaki makaleler, genellikle tema veya içerik türü (Örn. İnceleme Makaleleri, Araştırma, vb.) tarafından Bölümlerde düzenlenir."
+
+msgid "settings.roles.gridDescription"
+msgstr "Roller, dergideki farklı izin düzeylerine ve ilişkili iş akışlarına erişim verilmiş olan, kullanıcı grubundaki kullanıcı gruplarıdır. Beş farklı izin düzeyi vardır: Dergi Yöneticileri dergideki her şeye erişebilir (tüm içerik ve ayarlar); Bölüm Editörleri, atanan tüm içeriğe tam erişime sahiptir; Dergi Asistanları, bir editör tarafından kendilerine açıkça verilen tüm gönderilere sınırlı erişime sahiptir; Hakemler, incelenmek üzere atanmış oldukları gönderileri görebilir ve yapabilirler; Yazarlar, kendi gönderileriyle ilgili sınırlı miktarda bilgiyi görebilir ve bunlarla etkileşime girebilir. Ek olarak, rollere erişim, İç Değerlendirme, Gözden Geçirme, Editörlük ve Prodüksiyona erişim verilebilecek beş farklı aşama görevi vardır."
+
+msgid "manager.publication.library"
+msgstr "Yayıncı Kütüphanesi"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Makale: varsayılan yıl, makalenin yayınlanma tarihinden itibaren, \"olduğu gibi yayınla\" yazısında olduğu gibi alınacaktır."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Sayı: Varsayılan yıl, sayının yayınlanma tarihinden itibaren çizilecektir."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Makalelere zaten eklenmiş izin verilerini sıfırlamak istediğinizden emin misiniz?"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "Telif hakkı bildirimi ve lisans bilgileri, yayınlanan içeriklere kalıcı olarak eklenecek ve yeni gönderilere yönelik politikaları değiştirerek bu verilerin değişmeyeceğinden emin olun. Yayımlanmış içeriklere zaten eklenmiş kayıtlı izinleri sıfırlamak için aşağıdaki düğmeyi kullanın."
+
+msgid "grid.genres.title.short"
+msgstr "Bileşenler"
+
+msgid "grid.genres.title"
+msgstr "Makale Bileşenleri"
+
+msgid "grid.genres.description"
+msgstr "Bu bileşenler dosya isimlendirme amaçları için kullanılır ve dosya yükleme üzerine açılan menüde sunulur. ## belirtilen türler, kullanıcının dosyayı tüm gönderi 99Z ile veya belirli bir bileşeni numarayla ilişkilendirmesine izin verir (ör. 02)."
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI Eklentisi Ayarları"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Makaleler"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Sayılar"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Dizgiler"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Eklenti gereksinimleri karşılanmadı"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Bu eklentiyi kullanabilmek için lütfen \"Genel Belirleyici / Public Identifier\" eklenti kategorisine gidin, DOI eklentisini etkinleştirin ve yapılandırın ve orada geçerli bir DOI öneki belirtin."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Eklenti tam olarak ayarlanmamış."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "DOI Genel Tanımlayıcı eklentisinde DOI ataması için herhangi bir yayın öğesi seçilmemiştir, bu nedenle bu eklentide hiçbir depo veya ihracat olanağı yoktur."
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Şifrenin düz metin olarak, yani şifrelenmemiş olarak kaydedileceğini lütfen unutmayın."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Herhangi Bir Sayı"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Herhangi Bir Durum"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Depolanmamış"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "İşaretli kayıt"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Kayıtlı"
+
+msgid "plugins.importexport.common.action"
+msgstr "Eylem"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "İhraç"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "İşaretli kayıt"
+
+msgid "plugins.importexport.common.validation"
+msgstr "İhraç ve kayıt işleminden önce XML'i doğrulayın."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Hiçbir nesne seçilmedi."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Seçilen nesneler dönüştürülemedi."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Geçersiz XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Çıktı dosyası {$param} yazılabilir değil."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Çıktı dosyası {$param} okunabilir değil."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Kayıt başarılı değil! DOI kayıt sunucusu bir hata verdi:  '{$param}'."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "DOI öneki, günlük için {$path} yolu eksik."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "HATA:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Belirtilen günlük yolu \"{$journalPath}\" mevcut değil."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Belirtilen nesneler bulunamadı."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Dergi ayarları'nda tanımlanan birincil kişiye bir kopya gönderin."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS Lisansı Açıklaması"
+
+msgid "manager.setup.clockssRegister"
+msgstr "<a href=\"http://clockss.org/\" target=\"_blank\"> CLOCKSS Web Sitesini</a> ziyaret ederek CLOCKSS hizmetine kaydolun."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.porticoEnable"
+msgstr "Dergi içeriğini Portico'ya katılan kütüphanelere depolamak ve dağıtmak için Portico'yu etkinleştirin."
+
+msgid "manager.setup.porticoTitle"
+msgstr "Portico"
+
+msgid "manager.setup.Issn"
+msgstr "ISSN"

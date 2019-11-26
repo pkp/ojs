@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:18+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Nový příspěvek"
+
+msgid "author.track"
+msgstr "Aktivní příspěvky"
+
+msgid "author.competingInterests"
+msgstr "Střet&nbsp;zájmů <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Pravidla upravující střet zájmů</a>"
+
+msgid "author.submit.submitArticle"
+msgstr "Odeslat článek"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Pět kroků pro odeslání příspěvku"
+
+msgid "author.submit.startHereTitle"
+msgstr "Zahájit nový příspěvek"
+
+msgid "author.submit.startHereLink"
+msgstr "Pro přechod k prvnímu z pěti kroků odesílání příspěvku <a href=\"{$submitUrl}\" class=\"action\">klikněte zde</a>."
+
+msgid "author.submit.step1"
+msgstr "Krok 1. Zahájení příspěvku"
+
+msgid "author.submit.step4"
+msgstr "Krok 4. Nahrání doplňkových souborů"
+
+msgid "author.submit.step4a"
+msgstr "Krok 4a. Přidat doplňkový soubor"
+
+msgid "author.submit.step5"
+msgstr "Krok 5. Potvrzení příspěvku"
+
+msgid "author.submit.start"
+msgstr "Zahájení"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Nahrát doplňkové soubory"
+
+msgid "author.submit.confirmation"
+msgstr "Potvrzení"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Odeslání tohoto příspěvku můžete dokončit později tím, že na domácí sránce pro autora vyberete Aktivní příspěvky."
+
+msgid "author.submit.notAccepting"
+msgstr "Tento časopis aktuálně nepřijímá příspěvky."
+
+msgid "author.submit.requestWaiver"
+msgstr "Požádat o prominutí"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Zvažte, prosím, prominutí platby poplatku za zaslání příspěvku pro tento článek"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Použijte, prosím, níže umístěné pole pro komentář a uveďte, proč by Vám měl být poplatek prominut."
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Nahrát redigovanou verzi"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Korekturní opravy"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Jste si jistý, že chcete smazat tento nedokončený příspěvek?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Zobrazit stav"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Žádné příspěvky."
+
+msgid "author.submit.journalSection"
+msgstr "Sekce časopisu"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Zvolte vhodnou sekci pro tento příspěvek (viz Sekce a Pravidla v části <a href=\"{$aboutUrl}\" target=\"_new\">O časopisu</a>)."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Než budete pokračovat, musíte zajistit splnění všech položek zaškrtávacího seznamu."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Autoři souhlasí s podmínkami uvedenými v Oznámení o copyrightu, které budou aplikovány na tento příspěvek, jakmile bude publikován tímto časopisem (níže je možné přidat komentář pro editora)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Než budete pokračovat, musíte souhlasit s podmínkami uvedenými v Oznámení o copyrightu."
+
+msgid "submission.submit.coverNote"
+msgstr "Komentář pro editora"
+
+msgid "author.submit.comments"
+msgstr "Vložte text (nepovinné)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Vyberte prosím vhodnou sekci časopisu pro tento příspěvek."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Prohlášení o soukromí pro tento časopis"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Přeuspořádejte autory tak, aby byli zobrazeni ve stejném pořadí, v jakém mají být uvedeni v publikaci."
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Hlavní kontakt pro korespondenci s editory."
+
+msgid "author.submit.addAuthor"
+msgstr "Přidat autora"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Smazat autora"
+
+msgid "author.submit.coverageInstructions"
+msgstr "Vztahuje se k zeměpisné oblasti, chronologickému nebo historickému záběru a/nebo charakteristikám výzkumného souboru."
+
+msgid "author.submit.languageInstructions"
+msgstr "Čeština=cs; angličtina=en; francouzština=fr; španělština=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Další kódy</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Je vyžadován alespoň jeden autor."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Je vyžadováno jméno, příjmení a emailová adresa každého autora."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Vložte, prosím, název vašeho článku."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Vložte, prosím, abstrakt vašeho článku."
+
+msgid "author.submit.submissionFile"
+msgstr "Soubor s příspěvkem"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Nahrát soubor příspěvku"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Nahradit soubor příspěvku"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Nebyl nahrán žádný soubor příspěvku."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Jste si jistý, že chcete pokračovat bez nahrání souboru příspěvku?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Tento volitelný krok umožňuje přidat k příspěvku doplňkové soubory. Tyto souboury (jakéhokoli formátu) mohou zahrnovat (a) výzkumné instrumenty, (b) datové soubory, které jsou v souladu s podmínkami posudku etičnosti výzkumu této studie, (c) zdroje, které by jinak byly čtenářům nedostupné, (d) obrázky a tabulky, které nemohou být začleněny do samotného textu nebo další materiály, které navyšují přínos příspěvku."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Pro nahrání souboru klikněte na Uložit (poté je možné nahrát další soubory)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Jste si jistý, že chcete pokračovat bez nahrání doplňkového souboru, který jste vybral?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Žádné doplňkové soubory nebyly přidány k tomuto příspěvku."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Zpět k doplňkovým souborům"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Jste si jistý, že chcete vymazat tento doplňkový soubor?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Nahrát doplňkový soubor"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Přidat doplňkový soubor"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Upravit doplňkový soubor"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metadata doplňkového souboru"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "Pro indexaci dohoto doplňkového materiálu uveďte následující metadata pro nahraný doplňkový soubor."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Doplňkový soubor"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Tvůrce (nebo vlastník) souboru"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Výzkumný nástroj"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Výzkumné materiály"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Výsledky výzkumu"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transkripty"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Analýza dat"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Datový soubor"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Zdrojový text"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Stručný popis"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Poskytnout soubor recenzentům (bez metadat), aby nebyly narušeny anonymní recenze."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Použít pouze s formálně publikovanými materiály."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Datum, kdy byla posbírána data nebo vytvořen nástroj."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Název studie nebo jiné určení původu."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Specifikujte jiný"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Nebyl nahrán žádný soubor."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Vložte, prosím, název tohoto doplňkového souboru."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Vložte prosím předmět."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Vložte, prosím, popis."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Veřejný identifikátor doplňkového souboru již existuje."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Veřejný identifikátor doplňkového souboru"
+
+msgid "author.submit.confirmationDescription"
+msgstr "Pro odeslání vašeho příspěvku do {$journalTitle} klikněte na Dokončit příspěvek. Hlavní kontakt příspěvku obdrží e-mailem oznámení a bude moci po příhlášení na stránky časopisu sledovat postup příspěvku redakčním řízením. Děkujeme za Váš zájem publikovat v {$journalTitle}."
+
+msgid "author.submit.noFiles"
+msgstr "K příspěvku nebyly připojeny žádné soubory."
+
+msgid "author.submit.filesSummary"
+msgstr "Přehled souborů"
+
+msgid "author.submit.finishSubmission"
+msgstr "Dokončit příspěvek"
+
+msgid "author.submit.submissionComplete"
+msgstr "Odeslání příspěvku dokončeno. Děkujeme za Váš zájem publikovat v {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Nahrát verzi od autora"
+
+msgid "author.article.copyeditedFile"
+msgstr "Redigovaný soubor"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Soubor od autora"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "Pro přispívání do tohoto časopisu je vyžadován uživatelský účet. To umožní našim editorům sledovat vaše příspěvky a kontaktovat Vás v případě, že se změní stav vašeho příspěvku nebo pokud od vás budou vyžadovány další informace."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "V recenzním kole {$round}"
+
+msgid "author.submit.step2"
+msgstr "Krok 2. Nahrání příspěvku"
+
+msgid "author.submit.step3"
+msgstr "Krok 3. Vložení metadat příspěvku"
+
+msgid "author.submit.upload"
+msgstr "Nahrát příspěvek"
+
+msgid "author.submit.metadata"
+msgstr "Vložit metadata"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Pokud žádáte o prominutí platby, musíte do příslušného místa uvést důvod."
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "V recenzním řízení: Vyžaduje přepracování"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Redakční úravy: Vyžádáno redigování"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Redakční úpravy: Vyžádána korektura"
+
+msgid "author.submit.reorder"
+msgstr "Přeuspořádat jméno autora"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Překročil jste maximální limit slov pro abstrakt v této sekci."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Zvolte si, prosím, jazyk příspěvku."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Doplňte, prosím, klíčová slova pro indexování příspěvku: oddělte jednotlivá klíčová slova středníkem (klíčové slovo1; klíčové slovo 2; klíčové slovo 3)"
+
+msgid "author.submit.nextSteps"
+msgstr "Další kroky"

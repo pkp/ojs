@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:54+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:54+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr " Plugin Feed Pengumuman "
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr " Plugin ini menghasilkan RSS/ Atom web syndication feeds untuk pengumuman jurnal."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr " Pengaturan "
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr " Tampilkan link feed di seluruh halaman jurnal."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr " Tampilkan link feed hanya di homepage dan halaman pengumuman."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr " Tampilkan link feed hanya di halaman pengumuman."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr " Batasi feed pada "
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr " pengumuman baru-baru ini."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr " Masukkan bilangan bulat positif untuk pengumuman baru-baru ini."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr " Logo Atom "
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr " Logo RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr " Logo RSS2"

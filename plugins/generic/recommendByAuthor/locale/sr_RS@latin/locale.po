@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:21+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:21+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Preporuke autora"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr "Ovaj dodatak ubacuje listu članaka istog autora na stranicu apstrakta članka."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Najčitanije od istog autora"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr "Napomena: Ovaj dodatak zahteva najmanje jedan omogućen dodatak za statistiku/izveštaje. Ukoliko imate više statističkih dodataka koji pružaju više metrika odaberite koji će biti osnovni na administratorskoj stranici i/ili na stranici podešavanja samog časopisa."

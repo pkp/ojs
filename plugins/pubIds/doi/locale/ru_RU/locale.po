@@ -1,0 +1,177 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:01+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "Модуль «DOI»"
+
+msgid "plugins.pubIds.doi.description"
+msgstr "Включает присвоение идентификаторов цифровых объектов (Digital Object Identifier) выпускам, статьям и гранкам в OJS."
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr "Пожалуйста, настройте модуль «DOI», чтобы иметь возможность использовать DOI в OJS и управлять ими:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Контент журнала"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr "Пожалуйста выберите объекты, которым должны быть присвоены DOI."
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr "Пожалуйста выберите публикуемые объекты, которые будут иметь присвоенные идентификаторы цифровых объектов (Digital Object Identifier, DOI):"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Выпуски"
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Статьи"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Гранки"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "Префикс DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr "Префикс DOI назначается регистрационными агентствами (например, <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) и представляется в формате 10.xxxx (например, 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "Префикс DOI обязателен и должен быть в форме 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "Суффикс DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr "Суффикс DOI может принимать любую форму, но должен быть уникальным среди всех публикуемых объектов, которым присвоен один и тот же префикс DOI:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr "Использовать шаблон, введенный ниже, для генерации суффиксов DOI. Используйте %j для аббревиатуры журнала, %v для номера тома, %i для номера выпуска, %Y для года, %a для ID статьи в OJS, %g для ID гранки в OJS, %f для ID файла в OJS, %p для номера страницы и %x для «индивидуального суффикса»."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr "Например, vol%viss%ipp%p может создать DOI вида 10.1234/vol3iss2pp230"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "для выпусков"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "для статей"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "для гранок"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "Использовать шаблоны по умолчанию."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i для выпусков<br />%j.v%vi%i.%a для статей<br />%j.v%vi%i.%a.g%g для гранок."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Ввести индивидуальный суффикс DOI для каждого опубликованного элемента. Вы увидите дополнительное поле ввода DOI на странице метаданных для каждого элемента."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Пожалуйста, введите шаблон суффикса DOI для выпусков."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Пожалуйста, введите шаблон суффикса DOI для статей."
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Пожалуйста, введите шаблон суффикса DOI для гранок."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "Переприсвоить DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr "Если вы измените вашу конфигурацию DOI, то она не затронет DOI, которые уже были присвоены. После сохранения конфигурации DOI используйте эту кнопку, чтобы удалить все существующие DOI для того, чтобы новые настройки повлияли на существующие объекты."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr "Вы уверены, что хотите удалить все существующие DOI?"
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Назначить"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "выпуску"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "статье"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "гранке"
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "DOI не может быть присвоен, так как отсутствует пользовательский суффикс."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr "Вы не можете сгенерировать DOI, пока эта публикация не будет назначена в конкретный выпуск."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr "Вы не можете сгенерировать DOI, так как для одной или нескольких частей шаблона DOI не хватает данных. Вам может быть необходимо назначить публикацию в конкретный выпуск, задать ID издателя или ввести номера страниц."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "DOI не может быть присвоен, так как он содержит не замененный шаблон."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr "Вы видите как будет выглядеть DOI. Поставьте галочку и сохраните форму для присвоения DOI."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr " DOI присвоен {$pubObjectType}."
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Заданный суффикс DOI уже используется для другого опубликованного элемента. Пожалуйста, введите уникальный суффикс DOI для каждого элемента."
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Удалить"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Вы уверены, что хотите удалить существующий DOI?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Удалить DOI у объектов выпуска"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Вы уверены, что хотите удалить существующие DOI у объектов выпуска?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr "Используйте этот параметр, чтобы удалить DOI всех объектов (статей и гранок), запланированных на текущий момент к публикации в этом номере."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Присвоить DOI {$pubId} {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "DOI не может быть присвоен, так как отсутствует пользовательский суффикс."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} не может быть присвоен, так как он содержит не замененный шаблон."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} был присвоен."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI должен начинаться с {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "DOI для этой публикации будет {$doi}."
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "DOI не был присвоен этой публикации."
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Гранка: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Элемент"

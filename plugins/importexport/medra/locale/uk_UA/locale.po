@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:42+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:42+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "Модуль експорту/реєстрації mEDRA"
+
+msgid "plugins.importexport.medra.description"
+msgstr "Експорт метаданих випусків, статей та супровідних файлів у формат Onix for DOI (O4DOI) та реєстрація DOI через реєстраційну агенцію mEDRA."
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"Якщо Ви хочете реєструвати DOI через реєстраційну агенцію mEDRA, будь ласка, ознайомтеся з інструкціями щодо отримання імені користувача та пароля на\n"
+"\t\t<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">веб-сайті mEDRA</a>. Якщо Ви не маєте імені користувача та пароля, Ви все одно можете проводити експорт у формат mEDRA XML (Onix for DOI), але у цьому випадку Ви не зможете реєструвати DOI через агенцію mEDRA у середовищі OJS. \n"
+"\t\tБудь ласка, зауважте, що через вимоги реєстраційної служби mEDRA Ваш пароль буде зберігатися у системі в текстовому форматі, тобто у незашифрованому вигляді."
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Будь ласка, налаштуйте модуль експорту mEDRA:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Ім'я користувача"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Будь ласка, вкажіть Ваше ім'я користувача mEDRA. Ім'я користувача не може містити двокрапок."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Назва установи, зареєстрованої у mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Будь ласка, вкажіть назву установи, зареєстрованої у mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Особа, яка буде контактувати з mEDRA у разі виникнення технічних питань:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Установа"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "Будь ласка, вкажіть установу, яка несе технічну відповідальність за експорт DOI (наприклад, установу, яка надає хостинг цьому веб-серверу)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Контактна особа"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Будь ласка, вкажіть контактну особу з технічних питань."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "Адреса електронної пошти"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Будь ласка, вкажіть коректну адресу електронної пошти контактної особи з технічних питань."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Будь ласка, вкажіть країну, яка буде відображена у mEDRA як 'держава публікації'."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "Будь ласка, вкажіть як Ви хочете експортувати випуски: <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'works' або 'manifestations'</a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "робота"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "маніфестація"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Експортувати номери як"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "OJS буде автоматично реєструвати присвоєні DOI в mEDRA. Зверніть увагу, що після публікації обробка може зайняти деякий час (наприклад, залежно від налаштувань вашого cron). Ви можете перевірити всі незареєстровані DOI."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "Використовувати тестовий API mEDRA (середовище тестування) для реєстрації DOI. Будь ласка, не забудьте прибрати цей параметр для подальшої роботи."
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "Зверніть увагу: DOI, призначені для статей, будуть експортовані у mEDRA як об'єкти типу <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'works'</a>. DOI, призначені для гранок, будуть експортовані як об'єкти типу <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'manifestations'</a>."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "Завдання автоматичної реєстрації mEDRA"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Використання:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

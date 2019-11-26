@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:53+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:53+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "إضافة مغذي الإعلانات"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "هذه الإضافة تولد مغذيات الإنترنت الخاصة بـ RSS/Atom من أجل إعلانات المجلة."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "الإعدادات"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "إعرض روابط المغذي في جميع صفحات المجلة."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "إعرض روابط المغذي فقط على الصفحة الرئيسية وعلى صفحة الإعلانات."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "إعرض روابط المغذي فقط على صفحة الإعلانات."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "قيد عدد الإعلانات إلى حد"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "أكثر الإعلانات حداثة."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "لطفاً، أدخل رقماً صحيحاً موجباً يمثل عدد الإعلانات الأخيرة."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "شعار Atom"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "شعار RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "شعار RSS2"

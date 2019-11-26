@@ -1,0 +1,133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Çapraz Referans XML İhraç Eklentisi"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Makale üst verilerini çapraz referans XML formatında ihraç et."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Gereksinimler"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Tüm eklenti gereksinimleri tatmin edici."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Aşağıdaki öğeler başarılı bir CrossRef arşivleme için gereklidir."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Arşivleyenin adı"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Arşivleyenin e-postası"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Lütfen arşivleyenin adını griniz."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Lütfen arşivleyenin e-posta adresini giriniz."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Kullanıcı adı"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "CrossRef'ten almış olduğunuz kullanıcı adını giriniz."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "Bir dergi yayıncısı belirtilmemiş! <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Dergi Ayarları Sayfasında</a> bir yayınevi  belirtmelisiniz."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "Dergi ISSN bilgisi belirtilmemiş! <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Dergi Ayarları Sayfası\"</a>nda ISSN eklemelisiniz."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "DOI genel tanımlayıcı eklentisinde DOI ataması için makaleler seçilmemiştir, bu nedenle eklenti için depolama veya ihraç yapılamamaktadır."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "Bu eklentiye, Dijital Nesne Tanımlayıcıları (DOI'ler) doğrudan CrossRef'e kaydettirmek istemeniz halinde, bunu yapmak için bir kullanıcı adı ve şifreye (<a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a> den ulaşılabilir) ihtiyacınız olacaktır. Eğer kendi kullanıcı adınız ve şifreniz yoksa, yine de CrossRef XML biçimi ile dışa aktarma yapabilirsiniz, ancak DOI'lerinizi CrossRef'e OJS içinden kaydedemezsiniz."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "OJS atanmış DOI'leri otomatik olarak CrossRef'e aktarır. Lütfen bu işlemin yayınlanma işleminden sonra kısa bir süre alabileceğini unutmayın. Kayıtsız tüm DOI'leri kontrol edebilirsiniz."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "DOI depolaması için CrossRef test API'sini (test ortamı) kullanın. Lütfen bu seçeneği yayın için kaldırmayı unutmayın."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Not: Burada ihraç / kayıt için sadece sayılar (makaleler hariç) dikkate alınacaktır."
+
+msgid "plugins.importexport.crossref.status.submitted"
+msgstr "Gönderildi"
+
+msgid "plugins.importexport.crossref.status.completed"
+msgstr "Depolandı"
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Başarısız Oldu"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Etkin"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "İşaretli Etkin"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Depolama Duurmu:</p>\n"
+"\t\t<p>\n"
+"\t\t- Depolanmadı: Bu DOI için hiçbir depolama girişimi yapılmadı.<br />\n"
+"\t\t- Gönderildi: Bu DOI depolama için gönderildi.<br />\n"
+"\t\t- Depolandı: DOI, Crossref'e depolandı, ancak henüz aktif olmayabilir.<br />\n"
+"\t\t- Etkin: DOI yatırıldı ve doğru şekilde çözümleniyor.<br />\n"
+"\t\t- Başarısız: DOI depolama başarısız oldu.<br />\n"
+"\t\t- Etkin işaretli: DOI, aktif olarak elle işaretlendi.\n"
+"\t\t</p>\n"
+"\t\t<p>Sadece son depolama girişiminin durumu görüntülenir.</p>\n"
+"\t\t<p>Bir depolama başarısız olursa, lütfen sorunu çözün ve DOI'yi tekrar kaydettirmeyi deneyin.</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "XML İndir"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Etkinleri İşaretle"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Göner"
+
+msgid "plugins.importexport.crossref.action.checkStatus"
+msgstr "Durumu kontrol et"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "CrossRef bilgi göndericisi"
+
+msgid "plugins.importexport.crossref.notification.failed"
+msgstr "DOI kaydı başarısız oldu. Başarısız olanları görmek için lütfen \"Araçlar > İçe Aktar / Dışa Aktar > CrossRef XML İhraç Eklentisi\" bölümüne gidin."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Kullanım:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "Gönderi başarısız! DOI kayıt sunucusu bir hata verdi: '{$ param}'. '{$param}'."
+
+msgid "plugins.importexport.crossref.register.success"
+msgstr "Gönderi başarılı!"
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Hiçbir sayı belirtilen sayı kimliği \"{$issueId}\" ile eşleşmedi."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Hiçbir makale belirtilen makale kimliği \"{$articleId}\" ile eşleşmedi."

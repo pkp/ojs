@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:31+00:00\n"
+"Language: \n"
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Вы не можете изменить журнал для материала."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "У вас нет прав для просмотра неопубликованных выпусков."
+
+msgid "api.submissions.403.contextRequired"
+msgstr "Чтобы создать или отредактировать материал, вам нужно сделать запрос к конечной точке API журнала."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Вы можете просматривать только журналы, к которым был открыт доступ."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "У вас нет прав для просмотра этого журнала."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr "Вы не можете просматривать или редактировать этот журнал, не делая запроса к API журнала или API всего сайта."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Вы не можете редактировать этот журнал через API сайта."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "У вас нет прав для редактирования этого журнала."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "У вас нет прав на удаление этого журнала."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Запрошенный вами журнал не найден."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "У вас нет прав на перемещение этого шаблона письма в другой журнал."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Выбранный вами метод оплаты не поддерживается."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Запрошенная вами публикация не является частью этого журнала."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Запрошенная вами публикация не является частью этого материала."

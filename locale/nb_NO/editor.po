@@ -1,0 +1,348 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:27+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Ansvarlig redaktør"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Manuskript og publisering"
+
+msgid "editor.submissionQueue"
+msgstr "Manuskriptkø"
+
+msgid "editor.submissionArchive"
+msgstr "Manuskriptarkiv"
+
+msgid "editor.publishing"
+msgstr "Publisering"
+
+msgid "editor.publishedIssues"
+msgstr "Publiserte utgaver"
+
+msgid "editor.allSections"
+msgstr "Alle tidsskriftseksjoner"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Ingen manuskripter i arkivet."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Lagre endringer til arkiverte manuskripter? Manuskripter som er merket for sletting vil bli slettet for alltid."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Er du sikker på at du vil slette dette manuskriptet for alltid?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Er du sikker på at du vil registrere denne beslutningen?"
+
+msgid "editor.notifyUsers"
+msgstr "Varsle brukere"
+
+msgid "editor.usersNotified"
+msgstr "Brukere varslet"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Send denne meldingen til alle brukere som er knyttet til dette tidsskriftet ({$count} brukere)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Send denne meldingen til de brukerne som er knyttet til dette tidsskriftet, og som har oppgitt at de ønsker å holdes orientert ({$count} brukere)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Inkluder innholdsoversikten fra denne utgaven:"
+
+msgid "editor.editorAdministration"
+msgstr "Ansvarlig redaktør-administrering"
+
+msgid "editor.issues.createIssue"
+msgstr "Opprett utgave"
+
+msgid "editor.issues.backIssues"
+msgstr "Tidligere utgaver"
+
+msgid "editor.issues.futureIssues"
+msgstr "Framtidige utgaver"
+
+msgid "editor.issues.currentIssue"
+msgstr "Nåværende utgave"
+
+msgid "editor.issues.numArticles"
+msgstr "Element"
+
+msgid "editor.issues.noArticles"
+msgstr "Ingen elementer er for øyeblikket planlagt for denne utgaven."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Er du sikker på at du vil slette denne utgaven for alltid?"
+
+msgid "editor.issues.published"
+msgstr "Publisert"
+
+msgid "editor.issues.unpublished"
+msgstr "Ikke publisert"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Volum er påkrevet for utgaven."
+
+msgid "editor.issues.numberRequired"
+msgstr "Nummer er påkrevet for utgaven."
+
+msgid "editor.issues.yearRequired"
+msgstr "År er påkrevet for utgaven."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Utgaveidentifikasjon"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Offentlig utgaveidentifikator"
+
+msgid "editor.issues.description"
+msgstr "Beskrivelse"
+
+msgid "editor.issues.accessStatus"
+msgstr "Tilgangsstatus"
+
+msgid "editor.issues.accessDate"
+msgstr "Open Access-dato"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Tilgangsdato er ikke gyldig."
+
+msgid "editor.issues.coverPage"
+msgstr "Forsidebilde"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Tillatte format: .gif, .jpg, eller .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Opplastet"
+
+msgid "editor.issues.remove"
+msgstr "Fjern"
+
+msgid "editor.issues.proofed"
+msgstr "Korrigert"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Fjern forsidebilde?"
+
+msgid "editor.issues.invalidCoverPageFormat"
+msgstr "Ugyldig forsideformat. Aksepterte format er .gif, .jpg, eller .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Stilark"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Ugyldig stilarkformat. Sjekk at innsendt fil er en gyldig CSS. (Merk at stilark som innledes med kommentarer kan bli avvist.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Fjern stilark?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Forsideheading"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Opprett tilpasset forside for denne utgaven."
+
+msgid "editor.issues.openAccess"
+msgstr "Open Access"
+
+msgid "editor.issues.subscription"
+msgstr "Abonnement"
+
+msgid "editor.issues.identification"
+msgstr "Identifikasjon"
+
+msgid "editor.issues.access"
+msgstr "Tilgang"
+
+msgid "editor.issues.cover"
+msgstr "Forside"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Alle artikler vil bli sendt tilbake til manusbehandlingskøen, og alle tilknyttete filer vil bli fjernet for alltid.  Er du sikker på at du vil fjerne denne utgaven?"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Denne utgaven bruker tilpasset seksjonsorden. <a href=\"{$url}\" class=\"action\">Tilbakestill til standard</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Utgavedata"
+
+msgid "editor.issues.saveChanges"
+msgstr "Lagre endringer til innholdsoversikten?"
+
+msgid "editor.issues.default"
+msgstr "Default"
+
+msgid "editor.issues.order"
+msgstr "Ordne"
+
+msgid "editor.issues.publicId"
+msgstr "Offentlig id"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publiser utgaven"
+
+msgid "editor.issues.previewIssue"
+msgstr "Forhåndsvis utgaven"
+
+msgid "editor.issues.preview"
+msgstr "(Forhåndsvis)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Er du sikker på at du vil publisere den nye utgaven?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Kan ikke lagre offentlig id for artikkel:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Ingen akive Utgaver"
+
+msgid "editor.issues.open"
+msgstr "Nå åpent"
+
+msgid "editor.issues.pages"
+msgstr "Sider"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Framtidige utgaver"
+
+msgid "grid.action.addIssue"
+msgstr "Opprett utgave"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Tidligere utgaver"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Registrer originalfilen som fagvurderingsversjon"
+
+msgid "editor.article.decision"
+msgstr "Beslutning"
+
+msgid "editor.submissions.showBy"
+msgstr "Sorter etter"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Send inn MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktive oppdrag"
+
+msgid "editor.submissions.invite"
+msgstr "Inviter"
+
+msgid "editor.submissions.accept"
+msgstr "Aksepter"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Ingen manuskript"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Siste"
+
+msgid "editor.submissions.averageTime"
+msgstr "Uker"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Siste utført"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Planlegg for publisering i"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Skal oppnevnes"
+
+msgid "editor.article.reviewForms"
+msgstr "Vurderingsskjemaer"
+
+msgid "editor.article.selectReviewForm"
+msgstr "Velg vurderingsskjema"
+
+msgid "editor.article.confirmChangeReviewForm"
+msgstr "<b>Advarsel:</b> Hvis du endrer dette vurderingsskjemaet vil dette virke tilbake på alle svar som allerede er lagt inn av fagkonsulenter i dette skjemaet. Er du sikker på at du vil fortsette?"
+
+msgid "editor.allEditors"
+msgstr "Alle redaktører"
+
+msgid "editor.me"
+msgstr "Meg"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Dette innsendte manuskriptet vil bli overført til arkivet så snart e-post til forfatteren er sendt eller kansellert."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Før du kan sende dette manuskriptet til layoutredigering må du forsikre deg om at det er opprettet en revidert filversjon og at forfatteren er varslet via 'E-post til forfatteren'-lenken ovenfor."
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Varsler brukere ..."
+
+msgid "editor.issues.titleRequired"
+msgstr "Det er påkrevet med en tittel til utgaven."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Utgaveidentifikasjon er påkrevet: vennligst velg minst én av alternativene for utgaveidentifikasjon."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Vis"
+
+msgid "editor.issues.hideCoverPageArchives"
+msgstr "Ikke vis miniatyr av omslagsbildet i lister over utgaver."
+
+msgid "editor.issues.hideCoverPageCover"
+msgstr "Ikke vis omslagsbilde før innholdsfortegnelsen."
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Dette tidsskriftet bruker tilpasset utgaverekkefølge.  <a href=\"{$url}\" class=\"action\">Tilbakestill til standard</a>"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Oppnevnt for"
+
+msgid "editor.submissions.inSection"
+msgstr "I seksjon"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Publiseringsgebyr er ikke betalt. Hvis du vil legge dette elementet til utgivelsesplanen må du enten varsle forfatteren om å betale gebyret, eller avstå fra gebyrkravet."
+
+msgid "editor.article.showCoverPage"
+msgstr "Lag et omslag med følgende elementer for tildenne artikkelen."
+
+msgid "editor.article.hideCoverPageToc"
+msgstr "Ikke vis miniatyr av omslagsbilde i innholdsfortegnelsen."
+
+msgid "editor.article.hideCoverPageAbstract"
+msgstr "Ikke vis omslagsbilde i sammendragsvisningen."
+
+msgid "editor.article.remove"
+msgstr "Fjern"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Åpne for forsinke Open Access"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Trekk tilbake nummeret"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Er du sikker på at du ønsker å trekke tilbake dette nummeret?"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Lesere ({$count} users)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Alle publiserte forfattere ({$count} users)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Alle personlige abonnenter ({$count} users)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Alle institusjonelle abonnenter  ({$count} users)"
+
+msgid "editor.article.coverImage"
+msgstr "Omslagsbilde"

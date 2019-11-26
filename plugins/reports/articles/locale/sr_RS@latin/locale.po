@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:06+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:06+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.articles.displayName"
+msgstr "Izveštaj o člancima"
+
+msgid "plugins.reports.articles.description"
+msgstr "Ovaj dodatak primenjuje CVS izveštaj koji sadrži listu članaka i informacije o njima."
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "Nema odluke"

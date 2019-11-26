@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:31+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Новый материал"
+
+msgid "author.track"
+msgstr "Активные материалы"
+
+msgid "author.competingInterests"
+msgstr "Конфликт&nbsp;интересов <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Правила о конфликте интересов</a>"
+
+msgid "author.submit.submitArticle"
+msgstr "Отправить статью"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Пять шагов для отправки"
+
+msgid "author.submit.startHereTitle"
+msgstr "Начать отправку нового материала"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Нажмите здесь</a>, чтобы перейти к первому из пяти шагов процесса отправки."
+
+msgid "author.submit.step1"
+msgstr "Шаг 1. Начало отправки"
+
+msgid "author.submit.step2"
+msgstr "Шаг 2. Загрузка материала"
+
+msgid "author.submit.step3"
+msgstr "Шаг 3. Ввод метаданных материала"
+
+msgid "author.submit.step4"
+msgstr "Шаг 4. Загрузка дополнительных файлов"
+
+msgid "author.submit.step4a"
+msgstr "Шаг 4a. Добавить дополнительный файл"
+
+msgid "author.submit.step5"
+msgstr "Шаг 5. Подтверждение отправки материала"
+
+msgid "author.submit.start"
+msgstr "Начало"
+
+msgid "author.submit.upload"
+msgstr "Загрузка материала"
+
+msgid "author.submit.metadata"
+msgstr "Ввод метаданных"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Загрузка дополнительных файлов"
+
+msgid "author.submit.confirmation"
+msgstr "Подтверждение"
+
+msgid "author.submit.nextSteps"
+msgstr "Следующие шаги"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Вы можете закончить эту отправку позже, выбрав «Активные материалы» на домашней странице автора."
+
+msgid "author.submit.notAccepting"
+msgstr "Этот журнал сейчас не принимает материалы."
+
+msgid "author.submit.requestWaiver"
+msgstr "Запрос отмены оплаты"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Пожалуйста, рассмотрите возможность отменить плату за отправку данной статьи"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Пожалуйста, используйте поле комментариев ниже для указания причин, почему плата должна быть отменена."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Если вы просите отменить плату за отправку, вы должны указать причину в соответствующем поле."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "На рецензии: (раунд {$round})"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "На рецензии: Требуются изменения"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "На редакции: Требуется литературное редактирование"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "На редакции: Требуется корректура"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Загрузить версию, прошедшую литературное редактирование"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Исправления при корректуре"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Вы уверены, что хотите удалить этот материал, отправка которого не была завершена?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Показать статус"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Нет отправленных материалов."
+
+msgid "author.submit.journalSection"
+msgstr "Раздел журнала"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Выберите подходящий раздел для этого материала (смотрите «Разделы и правила» на странице <a href=\"{$aboutUrl}\" target=\"_new\">«О журнале»</a>)."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Чтобы продолжить вы должны убедиться, что выполнены все пункты в контрольном списке отправки."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Авторы согласны с Условиями передачи авторских прав, которые будут применены к этому материалу в случае, если он будет опубликован этим журналом (комментарии для редактора могут быть добавлены ниже)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Чтобы продолжить вы должны принять Условия передачи авторских прав."
+
+msgid "submission.submit.coverNote"
+msgstr "Комментарии для редактора"
+
+msgid "author.submit.comments"
+msgstr "Введите текст (не обязательно)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Пожалуйста, выберите подходящий раздел журнала для этого материала."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Пожалуйста, выберите язык отправляемого материала."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Заявление журнала о конфиденциальности"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Переставьте имена авторов в том порядке, в котором они должны быть указаны в публикации."
+
+msgid "author.submit.reorder"
+msgstr "Переместить имя автора"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Основной автор для переписки с редакцией."
+
+msgid "author.submit.addAuthor"
+msgstr "Добавить автора"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Удалить автора"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Укажите ключевые слова для индексирования этого материала; ключевые слова разделяйте точками с запятой (слово1; слово2; слово3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Опишите геопространственный, хронологический или исторический охват вашего исследования и/или характеристики исследуемого объекта."
+
+msgid "author.submit.languageInstructions"
+msgstr "English=en; French=fr; Spanish=es; Russian=ru. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Дополнительные коды</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Минимум один автор обязателен."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Для каждого автора обязательно нужно ввести имя, фамилию и адрес электронной почты."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Пожалуйста, введите название вашей статьи."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Пожалуйста, введите аннотацию вашей статьи."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Вы превысили максимальное количество слов для аннотации в этом разделе."
+
+msgid "author.submit.submissionFile"
+msgstr "Отправляемый файл"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Загрузить файл для отправки"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Заменить файл для отправки"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Отправляемый файл не загружен."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Вы уверены, что хотите продолжить без загрузки файла с отправляемым материалом?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Этот шаг не обязателен, он позволяет добавить к вашему материалу дополнительные файлы. Эти файлы могут быть в любом формате и представлять собой (a) использованные для проведения исследования программы, (b) наборы данных, которые построены в соответствии с принятыми правилами этики исследований, (c) источники, которые иным способом были бы недоступны читателям, (d) рисунки и таблицы, которые нельзя вставить в сам текст, или другие материалы, которые добавляют ценности работе."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Нажмите «Сохранить», чтобы загрузить файл (после этого можно будет загрузить другие файлы)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Вы уверены, что хотите продолжить без загрузки дополнительного файла, который вы выбрали?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Дополнительные файлы не были добавлены к этому материалу."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Вернуться к дополнительным файлам"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Вы уверены, что хотите удалить этот дополнительный файл?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Загрузить дополнительный файл"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Добавить дополнительный файл"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Редактировать дополнительный файл"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Метаданные дополнительного файла"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "Для индексации дополнительного материала укажите следующие метаданные для загруженного дополнительного файла."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Дополнительный файл"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Создатель (или владелец) файла"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Инструмент исследования"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Материалы исследования"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Результаты исследования"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Транскрипты"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Анализ данных"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Набор данных"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Исходный текст"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Краткое описание"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Предоставить файл рецензентам (без метаданных), так как он не нарушает требования слепого рецензирования."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Использовать только для официально опубликованных материалов."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Дата сбора данных или создания инструмента."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Название исследования или других источников материала."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Указать другой"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Нет загруженных файлов."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Пожалуйста, введите название этого дополнительного файла."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Пожалуйста, введите тему."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Пожалуйста, введите описание."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Открытая идентификация дополнительного файла уже существует."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Открытый идентификатор дополнительного файла"
+
+msgid "author.submit.confirmationDescription"
+msgstr "Нажмите «Завершить отправку», чтобы отправить ваш материал в журнал «{$journalTitle}». Основной автор, указанный для переписки с редакцией, получит подтверждение по электронной почте и будет иметь возможность следить за прохождением материала через редакционный процесс, заходя на веб-сайт журнала. Спасибо за интерес к публикации в журнале «{$journalTitle}»."
+
+msgid "author.submit.noFiles"
+msgstr "Ни один файл не был прикреплен к этому отправляемому материалу."
+
+msgid "author.submit.filesSummary"
+msgstr "Сведения о файлах"
+
+msgid "author.submit.finishSubmission"
+msgstr "Завершить отправку"
+
+msgid "author.submit.submissionComplete"
+msgstr "Материал отправлен. Спасибо за интерес к публикации в журнале «{$journalTitle}»."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Загрузить версию автора"
+
+msgid "author.article.copyeditedFile"
+msgstr "Файл после литературного редактирования"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Файл автора"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "Для отправки в этот журнал требуется учетная запись. Это позволит нашим редакторам отслеживать отправленные вами материалы и связаться с вами, когда статус материала изменится или от вас требуется дополнительная информация."

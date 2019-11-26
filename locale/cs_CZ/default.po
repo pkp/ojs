@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:18+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Články"
+
+msgid "section.default.abbrev"
+msgstr "ČL"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Příspěvek nebyl dosud publikován ani není v současnosti zaslán do jiného časopisu pro posouzení (nebo bylo podáno vysvětlení v Komentářích pro editora)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Soubor příspěvku je ve formátu OpenOffice, Microsoft Word, RTF nebo WordPerfect."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "URL odkazy na reference jsou uvedeny všude, kde to bylo možné."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Text má jednoduché řádkování; písmo má velikost 12; je použita spíše kurzíva a ne podtržení (kromě url adres); všechny ilustrace tabulky a obrázky jsou umístěny spíše v textu, než na konci."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Text odpovídá stylistickým a bibliografickým požadavkům uvedeným v <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Pokynech pro autory</a>, které se nachází na stránce O časopisu."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Jména a emailové adresy vložené na této stránce budou použity výhradně pro uvedené účely tohoto časopisu a nebudou zpřístupněny pro jiné účely ani třetí straně.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Tento časopis poskytuje okamžitý otevřený přístup ke svému obsahu na principu, podle kterého volné zpřístupnění výsledků výzkumu podporuje větší celosvětovou výměnu poznatků."
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.contextSettings.forReaders"
+msgstr "Vyzýváme čtenáře, aby se zapsali do služby pro oznamování nově vydaných čísel tohoto časopisu. Použijte odkaz <a href=\"{$indexUrl}{$contextPath}/user/register\">Registrovat</a> v horní části domácí stránky časopisu. Díky této registraci bude čtenář dostávat emailem obsah každého nově vydaného čísla. Seznam čtenářů rovněž umožňuje časopisu doložit určitou úroveň podpory nebo čtenosti časopisu. Viz <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Prohlášení o soukromí</a> tohoto časopisu, které ujišťuje čtenáře, že jejich jméno a emailová adresa nebudou použity pro jiné účely."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Máte zájem publikovat v tomto časopisu? Doporučujeme pročtení stránky <a href=\"{$indexUrl}{$contextPath}/about\">O časopisu</a> kde jsou uvedeny pravidla časopisu pro jednotlivé sekce, stejně jako <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Pokyny pro autory</a>. Než mohou autoři odeslat příspěvek, musí se do časopisu <a href=\"{$indexUrl}{$contextPath}/user/register\">zaregistrovat</a> nebo pokud již registrovaní jsou, mohou se jednoduše <a href=\"{$indexUrl}{$contextPath}/login\">přihlásit</a> a zahájit pětistupňový proces."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Vyzýváme knihovníky, aby uváděli tento časopis ve svém seznamu volně dostupných elektronických publikací. Také může být vhodné poznamenat, že open source redakční software, který tento časopis využívá, je vhodný pro použití s časopisy, v jejichž redakcích mohou členové fakult dané univerzity pracovat (viz <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Tento časopis využívá systém LOCKSS pro vytvoření distribuovaného archivačního systému mezi zúčastněnými knihovnami a dovoluje těmto knihovnám vytvářet trvalé archivy časopisu pro účely jeho uchování a obnovení. <a href=\"http://lockss.org/\">Více...</a>"
+
+msgid "default.genres.article"
+msgstr "Text článku"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Tento časopis využívá systém CLOCKSS k vytvoření distribuovaného systému archivace mezi zúčastněnými knihovnami a umožňuje knihovnám vytvářet trvalé archivy časopisu pro účely uchování a obnovy. <a href=\"http://clockss.org/\"> Více ... </a>"
+
+msgid "default.groups.name.manager"
+msgstr "Manažer časopisu"
+
+msgid "default.groups.plural.manager"
+msgstr "Manažeři časopisu"
+
+msgid "default.groups.abbrev.manager"
+msgstr "Man"
+
+msgid "default.groups.name.editor"
+msgstr "Editor časopisu"
+
+msgid "default.groups.plural.editor"
+msgstr "Editoři časopisu"
+
+msgid "default.groups.abbrev.editor"
+msgstr "Ed"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Hostující editor"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Hostující editoři"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "HEd"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor sekce"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editoři sekce"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SEd"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Manažer předplatného"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Manažeři předplatného"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "PředMan"
+
+msgid "default.genres.researchInstrument"
+msgstr "Výzkumný nástroj"
+
+msgid "default.genres.researchMaterials"
+msgstr "Výzkumné materiály"
+
+msgid "default.genres.researchResults"
+msgstr "Výsledky výzkumu"
+
+msgid "default.genres.transcripts"
+msgstr "Přepisy"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Analýza dat"
+
+msgid "default.genres.dataSet"
+msgstr "Soubor dat"
+
+msgid "default.genres.sourceTexts"
+msgstr "Zdrojové texty"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Recenzent"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Recenzenti"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Rec"

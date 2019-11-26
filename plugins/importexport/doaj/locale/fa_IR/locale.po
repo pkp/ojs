@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:39+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "افزونه برون دهی DOAJ"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "برون دهی اطلاعات مجله به DOAJ"
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "برای استفاده از DOAJ  با آن تماس بگیرید"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "اگر می خواهید مقالات را در DOAJ ثبت کنید، لطفا کلید API DOAJ خود را وارد کنید. در غیر اینصورت، همچنان قادر به برون دهی به فرمت XML DOAJ هستید، اما نمیتوانید مقالات خود را در DOAJ ثبت کنید"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "کلید DOAJ API"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "کلید API خود را در صفحه کاربری DOAJ خواهید یافت."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "سامانه مقالات را به طور خودکار در DOAJ ثبت می کند. لطفا توجه داشته باشید که ممکن است پس از انتشار ، زمان کوتاهی برای پردازش طی شود. شما می توانید تمام مقالات ثبت نشده را تیک بزنید."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "از API تست DOAJ (محیط آزمایش) برای ثبت استفاده کنید. لطفا فراموش نکنید که این گزینه را در زمان انتشار محتویات حذف کنید."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "عملیات ثبت خودکار DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "ثبت موفقیت آمیز نبود. اجرای API با خطای زیر متوقف شد: {$param}"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr "نحوه استفاده:  {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ..."

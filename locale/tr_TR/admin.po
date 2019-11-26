@@ -1,0 +1,144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:35+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Yayınlanan Dergiler"
+
+msgid "admin.settings.redirect"
+msgstr "Dergi Yönlendirmesi"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Siteye yapılan girişler doğrudan derginin ana sayfasına yönlendirir. OJS üzerinde tek dergi yayınlanıyır ise yararlıdır."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Bu site ve yayınlanan dergiler için varsayılan dil olacaktır."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Sitede kullanılacak dilleri seçiniz. Seçilen diller sitede sunulan tüm dergiler için kullanılabilir olacaktır ve özel dergi sayfaları dışında, seçtiğiniz dillerden oluşan bir dil seçme aracı tüm sayfalarda okuyucunun hizmetine sunulacaktır. Eğer birden çok dil seçilmez ise, dil seçim aracı gösterilmeyecektir ve dergiler için genişletilmiş dil olanakları çalışmayacaktır."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "İşaretlenmiş diller tamamlanmamış olabilir."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Bu dili kulanımdan kaldırmak istediğinizden emin misiniz? Dil kaldırılınca bu dili kullanan dergilerde sorun olabilir."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Sisteme eklemek üzere yeni bir dil seçiniz. Sitedeki dergiler kullanmaya başlamadan önce, diller sisteme yüklenmelidir. Yeni dil eklenmesi konusunda ADS belgelerinde daha fazla bilgi bulabilirsiniz."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Dil indirme başarısız. Hata mesaj(lar)ı aşağıda belirtilmiştir."
+
+msgid "admin.languages.localeInstalled"
+msgstr "\"{$locale}\" dili yüklendi."
+
+msgid "admin.languages.download"
+msgstr "Dil İndir"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "PKP web sitesinden dil tanımlayıcısı açılamıyor."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Dil kayıt dosyasına yeni dil eklenemiyor, tipik \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "ADS Üye Veri Tabanı"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Üye profili senkronizasyonunu etkinleştir (Eğer yetkilendirme eklentisi destekliyor ise). Kullanıcı bilgileri (şifre dahil) değiştiğinde diğer sistemden veya ADS'den otomatik güncelleme yapılacaktır. Bu seçenek etkinleştirilmez ise diğer sistem kaynaklarından ayrı ADS kullanıcı bilgisi tutulur."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Üye şifre değişimini etkinleştir (Eğer yetkilendirme eklentisi destekliyor ise). Bu seçeneğin etkinleştirmesi kullanıcıların ADS içinde şifre değiştirebilmelerini ve ADS'nin \"kayıp şifre\" yeteneğini kullanabilmelerini sağlar. Bu işlev etkinleştirilmez ise, yetkilendirme kaynağı ADS olmayan kullanıcılar anılan işlevleri kullanamazlar."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Üye oluşturmayı etkinleştir (Eğer yetkilendirme eklentisi destekliyor ise). ADS içinde oluşturulan üyeler, diğer kaynakta bulunmuyorlar ise, kendiliğinden diğer kaynağa da ekleneceklerdir. Ek olarak, eğer bu yetkilendirme kaynağı birincil kaynak ise, orada oluşturulan kullanıcılar ADS kullanıcı veritabanına da eklenirler."
+
+msgid "admin.systemVersion"
+msgstr "ADS Sürümü"
+
+msgid "admin.systemConfiguration"
+msgstr "ADS Yapılandırması"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt>'de ADS kurulum ayarları."
+
+msgid "admin.journals.createInstructions"
+msgstr "Otomatik olarak bu derginin yöneticisi olarak kaydedileceksiniz. Yeni bir dergi oluşturduktan sonra, ayarları ile devam edebilmek ve kullanıcı kaydı yapabilmek için yönetici olarak girin."
+
+msgid "admin.journals.journalSettings"
+msgstr "Dergi Ayarları"
+
+msgid "admin.journals.noneCreated"
+msgstr "Dergi Oluşturulmadı."
+
+msgid "admin.contexts.create"
+msgstr "Dergi Oluştur"
+
+msgid "admin.journals.urlWillBe"
+msgstr "Bu dergiyi tanımlayan kısa bir kelime ya da kısaltma olmalıdır. Derginin URL adresi {$sampleUrl} şeklinde olabilir."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Bir başlık gerekli."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Bir yol gerekli."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Yol sadece alfanümerik karekterler, alt çizgi, tire içerebilir ve bir alfanümerik karekterle başlamak ve bitmek zorundadır."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Seçilen yol bir başka dergi tarafından kullanılmaktadır."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Bu derginin sitede açık olarak görülebilir olmasını sağlayın"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Dergi tanımı"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Varolan dergi yolu veya dergi yolu oluşturmak (Ör., \"ads\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Abonelik Al"
+
+msgid "admin.journals.transcode"
+msgstr "Makale üst verisini ISO8859-1'den transfer et"
+
+msgid "admin.journals.redirect"
+msgstr "ADS 1 URL'sinden ADS 2 URL'sine harita için kod oluştur."
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Veri alma yolu gerekli."
+
+msgid "admin.journals.importErrors"
+msgstr "Kabul işlemi başarısız oldu"
+
+msgid "admin.mergeUsers"
+msgstr "Üyeleri Birleştir"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Üye Birleştir"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Nitelikli eski kullanıcılardan yazarlık, düzeltme atamaları vb. için bir kullanıcı seçiniz."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Bir hesabı başka bir hesap ile birleştirmek için bir (veya birkaç) üye seçiniz. Örneğin bir kişi birden fazla hesaba sahip olduğunda silinecek hesap(lar) öce seçilir ve birleştir komutundan sonra birleştirilecek hesap seçilerek onay verilir. İlk seçilen hesaplarla bağlantılı gönderiler, atamalar gibi her türlü işlem ve yetki birleştirilen hesaba aktarılır."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Tüm Kayıtlı Üyeler"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Seçilen {$oldAccountCount} hesap/hesapları \"{$newUsername}\" kullanıcı hesabında birleştirmek istediğinizen emin misiniz? Seçilen {$oldAccountCount} hesap daha sonra açılamaz. Bu işlem geri alınamaz."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Kayıtlı olmayan üyeler."

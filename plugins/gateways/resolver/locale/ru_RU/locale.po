@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:52+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:52+00:00\n"
+"Language: \n"
+
+msgid "plugins.gateways.resolver.displayName"
+msgstr "Модуль «Разбор ссылок»"
+
+msgid "plugins.gateways.resolver.description"
+msgstr "Определяет выпуски и статьи, опираясь на информацию в библографической ссылке."
+
+msgid "plugins.gateways.resolver.errors.errorMessage"
+msgstr "Указанной в библиографической ссылке информации недостаточно для определения конкретного материала. Пожалуйста убедитесь, что информация библиографической ссылки полна и указывает на материал в этой инсталляции OJS."
+
+msgid "plugins.gateways.resolver.exportHoldings"
+msgstr "Экспортировать результаты"

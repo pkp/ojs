@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:14+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:14+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.openAIRE.displayName"
+msgstr "OpenAIRE"
+
+msgid "plugins.generic.openAIRE.description"
+msgstr "إن إضافة OpenAIRE تضيف عنصر projectID إلى البيانات الوصفية للمؤلَّف وتقوم بتوسيع واجهة OAI-PMH استناداً إلى إرشادات OpenAIRE 1.1، لمساعدة نظام المجلات المفتوحة ليكون متوافقاً مع OpenAIRE."
+
+msgid "plugins.generic.openAIRE.projectID"
+msgstr "ProjectID"
+
+msgid "plugins.generic.openAIRE.metadata"
+msgstr "البيانات الوصفية المتخصصة OpenAIRE"
+
+msgid "plugins.generic.openAIRE.projectID.description"
+msgstr "(إن projectID يساوي رقم الموافقة على المنحة)"
+
+msgid "plugins.generic.openAIRE.projectIDValid"
+msgstr "لطفاً، أدخل رقم صحيح لـ projectID (ستة أرقام)"

@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Wtyczka umożliwia uwierzytelnianie użytkowników za pomocą zewnętrznych serwerów LDAP"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Ustawienia"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Host"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "np. \"ldap.example.com\", lub \"ldaps://ldap.example.com\" (SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Port"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Opcjonalne. Domyślnie 389 (LDAP) lub 636 (LDAP przez SSL)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Bazowe DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "np. \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "np. \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Hasło"

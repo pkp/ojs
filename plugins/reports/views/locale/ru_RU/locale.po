@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:17+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:17+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.views.displayName"
+msgstr "Модуль «Отчет о просмотрах»"
+
+msgid "plugins.reports.views.description"
+msgstr "Реализует отчет в формате CSV, описывающий читательский интерес к каждой статье."
+
+msgid "plugins.reports.views.articleId"
+msgstr "ID статьи"
+
+msgid "plugins.reports.views.articleTitle"
+msgstr "Название статьи"
+
+msgid "plugins.reports.views.datePublished"
+msgstr "Дата опубликования"
+
+msgid "plugins.reports.views.abstractViews"
+msgstr "Просмотры аннотации"
+
+msgid "plugins.reports.views.galleyViews"
+msgstr "Просмотры всех гранок"

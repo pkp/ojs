@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:44+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:44+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "إضافة التصدير PubMed XML"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr "تصدير بيانات المقالات الوصفية بصيغة PubMed XML لأغراض الفهرسة في MEDLINE."
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "تصدير البيانات"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "تصدير الأعداد"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "إختر عدداً لتصديره."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "تصدير المقالات"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "إختر المقالات التي تريد تصديرها."
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+"الاستعمال: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]\n"
+""
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "خطأ:"
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "لا يوجد عدد يطابق رمز تعريف العدد المحدد \"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "لا توجد مقالة يطابق رمز تعريفها الرمز المحدد \"{$articleId}\"."

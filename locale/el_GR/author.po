@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Νέα υποβολή"
+
+msgid "author.track"
+msgstr "Ενεργές υποβολές"
+
+msgid "author.competingInterests"
+msgstr "Αντικρουόμενα&nbsp;συμφέροντα &lt;a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\"&gt;Πολιτική&nbsp;Αντικρεούμενων&nbsp;Συμφερόντων&lt;/a&gt;"
+
+msgid "author.submit.submitArticle"
+msgstr "Υποβολή άρθρου"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Υποβολή σε 5 βήματα"
+
+msgid "author.submit.startHereTitle"
+msgstr "Έναρξη νέας υποβολής"
+
+msgid "author.submit.startHereLink"
+msgstr "&lt;a href=\"{$submitUrl}\" class=\"action\"&gt;Πατήστε εδώ&lt;/a&gt; για να μεταβείτε στο βήμα 1 της διαδικασίας υποβολής."
+
+msgid "author.submit.step1"
+msgstr "Βήμα 1. Έναρξη υποβολής"
+
+msgid "author.submit.step2"
+msgstr "Βήμα 2. Μεταφόρτωση αρχείου υποβολής"
+
+msgid "author.submit.step3"
+msgstr "Βήμα 3. Εισαγωγή μεταδεδομένων"
+
+msgid "author.submit.step4"
+msgstr "Βήμα 4. Μεταφόρτωση συμπληρωματικών αρχείων"
+
+msgid "author.submit.step4a"
+msgstr "Βήμα 4α. Προσθήκη συμπληρωματικού αρχείου"
+
+msgid "author.submit.step5"
+msgstr "Βήμα 5. Επιβεβαίωση υποβολής"
+
+msgid "author.submit.start"
+msgstr "1. Έναρξη"
+
+msgid "author.submit.upload"
+msgstr "2. Μεταφορτώστε το αρχείο της υποβολής."
+
+msgid "author.submit.metadata"
+msgstr "3. Εισάγετε τα μεταδεδομένα."
+
+msgid "author.submit.supplementaryFiles"
+msgstr "4. Μεταφορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)."
+
+msgid "author.submit.confirmation"
+msgstr "5. Επιβεβαίωση"
+
+msgid "author.submit.nextSteps"
+msgstr "Επόμενα βήματα"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Μπορείτε να ολοκληρώσετε αυτή την υποβολή αργότερα, επιλέγοντας \"Ενεργές υποβολές\" στην αρχική σελίδα σας ως Συγγραφέας."
+
+msgid "author.submit.notAccepting"
+msgstr "Το περιοδικό δεν δέχεται υποβολές αυτή την περίοδο."
+
+msgid "author.submit.requestWaiver"
+msgstr "Αίτηση απαλλαγής"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Παρακαλώ εξετάστε το ενδεχόμενο απαλλαγής του άρθρου από την Εισφορά Υποβολής Άρθρου."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Χρησιμοποιήστε το ακόλουθο πλαίσιο κειμένου για να υποδείξετε τους λόγους απαλλαγής από την καταβολή της εισφοράς για την υποβολή άρθρου."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Αν αιτείστε απαλλαγής, θα πρέπει να εισάγετε τους λόγους στο κενό πεδίο."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Γύρος αξιολόγησης {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Υπό αξιολόγηση: Απαιτούνται αναθεωρήσεις"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Σε επιμέλεια: Έχει γίνει αίτημα για επιμέλεια κειμένου."
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Σε επιμέλεια: Έχει γίνει αίτημα για διόρθωση τυπογραφικών δοκιμίων."
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Μεταφόρτωση έκδοσης επιμελημένου κειμένου"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Διορθώσεις Επιμελητή Τυπογραφικών Δοκιμίων"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Επιβεβαιώνετε τη διαγραφή της συγκεκριμένης μη ολοκληρωμένης υποβολής;"
+
+msgid "author.submissions.viewStatus"
+msgstr "Προβολή κατάστασης"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Δεν υπάρχουν υποβολές."
+
+msgid "author.submit.journalSection"
+msgstr "Ενότητα περιοδικού"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Επιλέξτε την κατάλληλη ενότητα για τη συγκεκριμένη υποβολή."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Πριν συνεχίσετε, βεβαιωθείτε ότι ικανοποιούνται τα κριτήρια της λίστας ελέγχου υποβολής."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Οι Συγγραφείς αποδέχονται τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων που θα ισχύουν για τη συγκεκριμένη υποβολή, εάν και όταν αυτή δημοσιευθεί από το περιοδικό (σχόλια προς τον Επιμελητή μπορούν να προστεθούν στη συνέχεια)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Πριν συνεχίσετε, πρέπει να αποδεχθείτε τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων."
+
+msgid "submission.submit.coverNote"
+msgstr "Σχόλια προς τον Επιμελητή"
+
+msgid "author.submit.comments"
+msgstr "Εισαγωγή κειμένου (προαιρετικά)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Παρακαλούμε επιλέξτε την κατάλληλη ενότητα του περιοδικού για τη συγκεκριμένη υποβολή."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Παρακαλούμε επιλέξτε τη γλώσσα υποβολής."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Δήλωση Προστασίας Προσωπικών Δεδομένων του περιοδικού"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Αντιστοιχίστε τα ονόματα των Συγγραφέων στη σειρά που θα εμφανίζονται κατά την δημοσίευση του άρθρου."
+
+msgid "author.submit.reorder"
+msgstr "Αναδιάταξη ονόματος του Συγγραφέα"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Κύριο πρόσωπο επικοινωνίας για την αλληλογραφία με τους Επιμελητές."
+
+msgid "author.submit.addAuthor"
+msgstr "Προσθήκη Συγγραφέα"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Διαγραφή Συγγραφέα"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Εισάγετε όρους για την ευρετηρίαση της υποβολής. Διαχωρίστε τους όρους με ερωτηματικό (όρος1; όρος2; όρος3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Αναφέρεται στη γεω-χωρική τοποθεσία, τη χρονολογική ή ιστορική κάλυψη, ή/και τα χαρακτηριστικά του δείγματος της έρευνας."
+
+msgid "author.submit.languageInstructions"
+msgstr "English=en; French=fr; Spanish=es. &lt;a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\"&gt;Επιπρόσθετοι κωδικοί γλώσσας&lt;/a&gt;."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Απαιτείται η καταχώριση τουλάχιστον ενός Συγγραφέα."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Απαιτούνται το όνομα, το επώνυμο και η διεύθυνση ηλεκτρονικού ταχυδρομείου του κάθε Συγγραφέα."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Παρακαλούμε εισάγετε τον τίτλο του άρθρου."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Παρακαλούμε εισάγετε την περίληψη του άρθρου."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Έχετε υπερβεί τον μέγιστο επιτρεπτό αριθμό λέξεων για την περίληψη."
+
+msgid "author.submit.submissionFile"
+msgstr "Αρχείο υποβολής"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Μεταφόρτωση αρχείου υποβολής"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Αντικατάσταση αρχείου υποβολής"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Δεν έχει μεταφορτωθεί αρχείο υποβολής."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Επιθυμείτε να προχωρήσετε χωρίς να μεταφορτώσετε ένα αρχείο υποβολής;"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Το προαιρετικό αυτό βήμα επιτρέπει την προσθήκη συμπληρωματικών αρχείων στην υποβολή. Τα αρχεία αυτά ενδέχεται να περιλαμβάνουν (α)ερευνητικά όργανα (β)σύνολα δεδομένων που συμμορφώνονται προς τους όρους της ερευνητικής δεοντολογίας που διέπει τη μελέτη (γ)πηγές που, σε διαφορετική περίπτωση, δεν θα ήταν διαθέσιμες στους αναγνώστες (δ)εικόνες και πίνακες που δεν μπορούν να ενσωματωθούν στο κείμενο, ή οποιοδήποτε άλλο υλικό τεκμηριώνει τη συνεισφορά της εργασίας αυτής."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Πατήστε \"Αποθήκευση\" για να μεταφορτωθεί το αρχείο (μπορείτε να μεταφορτώσετε και άλλα αρχεία στη συνέχεια)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Επιθυμείτε να προχωρήσετε χωρίς να μεταφορτώσετε το συμπληρωματικό αρχείο που έχετε επιλέξει;"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Δεν έχουν προστεθεί συμπληρωματικά αρχεία στη συγκεκριμένη υποβολή."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Επιστροφή στο βήμα προσθήκης συμπληρωματικών αρχείων"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Επιβεβαιώνετε τη διαγραφή αυτού του συμπληρωματικού αρχείου;"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Μεταφόρτωση συμπληρωματικού αρχείου"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Προσθήκη συμπληρωματικού αρχείου"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Επεξεργασία συμπληρωματικού αρχείου"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Μεταδεδομένα συμπληρωματικού αρχείου"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "Για την ευρετηρίαση του τεκμηριωτικού υλικού, εισάγετε τα μεταδεδομένα για το συμπληρωματικό αρχείο που έχει μεταφορτωθεί."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Συμπληρωματικό αρχείο"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Δημιουργός (ή κάτοχος) του αρχείου"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Ερευνητικό όργανο"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Ερευνητικά υλικά"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Ερευνητικά αποτελέσματα"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Μεταγραφές"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Ανάλυση δεδομένων"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Σύνολο δεδομένων"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Πηγαίο κείμενο"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Σύντομη περιγραφή"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Παρουσίαση του αρχείου (χωρίς μεταδεδομένα) στους Αξιολογητές, καθώς δεν θα επηρεάσει τη διαδικασία τυφλής αξιολόγησης."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Χρήση αποκλειστικά με επίσημα δημοσιευμένο υλικό"
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Ημερομηνία κατά την οποία έγινε η συλλογή δεδομένων ή η δημιουργία οργάνου."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Όνομα μελέτης ή άλλη πηγή προέλευσης"
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Προσδιορισμός άλλου"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Δεν έχει μεταφορτωθεί αρχείο."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Παρακαλούμε εισάγετε τον τίτλο του συμπληρωματικού αρχείου."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Παρακαλούμε εισάγετε ένα θέμα."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Παρακαλούμε εισάγετε μία περιγραφή."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Το δημόσιο αναγνωριστικό του συμπληρωματικού αρχείου υπάρχει ήδη."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Δημόσιο αναγνωριστικό συμπληρωματικού αρχείου."
+
+msgid "author.submit.confirmationDescription"
+msgstr "Για να υποβάλετε το άρθρο στο {$journalTitle} πατήστε \"Ολοκλήρωση υποβολής\". Το κύριο πρόσωπο επικοινωνίας του περιοδικού θα ενημερωθεί για την υποβολή. Σας ευχαριστούμε για το ενδιαφέρον σας να δημοσιεύσετε στο περιοδικό {$journalTitle}."
+
+msgid "author.submit.noFiles"
+msgstr "Δεν έχουν επισυναφθεί αρχεία στη συγκεκριμένη υποβολή."
+
+msgid "author.submit.filesSummary"
+msgstr "Σύνοψη αρχείου"
+
+msgid "author.submit.finishSubmission"
+msgstr "Ολοκλήρωση υποβολής"
+
+msgid "author.submit.submissionComplete"
+msgstr "Η υποβολή ολοκληρώθηκε. Σας ευχαριστούμε για το ενδιαφέρον σας να δημοσιεύσετε στο περιοδικό {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Μεταφόρτωση της έκδοσης του Συγγραφέα"
+
+msgid "author.article.copyeditedFile"
+msgstr "Επιμελημένο αρχείο"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Αρχείο Συγγραφέα"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "Για την υποβολή άρθρων στο περιοδικό απαιτείται η δημιουργία λογαριασμού Χρήστη. Αυτό επιτρέπει στους Επιμελητές του περιοδικού να παρακολουθούν τις υποβολές σας και να επικοινωνούν μαζί σας κατά τη διαδικασία αξιολόγησης και επιμέλειας, ή όταν απαιτούνται πρόσθετες πληροφορίες από εσάς."

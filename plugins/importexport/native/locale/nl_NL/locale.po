@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:43+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:43+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Native XML plugin"
+
+msgid "plugins.importexport.native.description"
+msgstr "Importeer en exporteer artikels en nummers in het XML formaat van OJS."
+
+msgid "plugins.importexport.native.import"
+msgstr "Importeer"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Upload een XML bestand om te importeren"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Selecteer artikels om te exporteren"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Exporteer artikels"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Exporteer nummers"
+
+msgid "plugins.importexport.native.results"
+msgstr "Resultaten"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Laad eerst een bestand op onder \"Importeer\"."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "De import is goed uitgevoerd. Volgende items werden geïmporteerd:"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Gebruik: {$scriptName} {$pluginName} [commando] ...\n"
+"Commando's:\n"
+"\timport [xmlBestandsNaam] [tijdschriftPad] [gebruikersnaam] ...\n"
+"\texport [xmlBestandsNaam] [tijdschriftPad] articles [artikelId1] [artikelId2] ...\n"
+"\texport [xmlBestandsNaam] [tijdschriftPad] article [artikelId]\n"
+"\texport [xmlBestandsNaam] [tijdschriftPad] issues [nummerId1] [nummerId2] ...\n"
+"\texport [xmlBestandsNaam] [tijdschriftPad] issue [nummerId]\n"
+"\n"
+"Om data te importeren zijn bijkomende parameters nodig, afhankelijk van het \n"
+"hoofdelement van het XML document.\n"
+"\n"
+"Als het hoofdelement <article> of <articles> is, zijn bijkomende parameters vereist. \n"
+"Volgende formaten worden geaccepteerd:\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad] [gebruikersnaam]\n"
+"\tissue_id [nummerId] section_id [sectieId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad] [gebruikersnaam]\n"
+"\tissue_id [nummerId] section_name [naam]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad]\n"
+"\tissue_id [nummerId] section_abbrev [afkorting]\n"
+""
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Onbekende sectie {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "De opgegeven gebruiker \"{$userName} bestaat niet."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr "De sectietitels van \"{$section1Title}\" en \"{$section2Title}\" in  het nummer \"{$issueTitle}\" komen overeen met de verschillende secties in het tijdschrift."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr "De sectietitel \"{$sectionTitle}\" in het nummer \"{$issueTitle}\" komt overeen met een bestaande tijdschriftsectie, maar een andere titel van deze sectie komt niet overeen met een andere titel van de huidige tijdschriftsectie."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr "De afkortingen van secties \"{$section1Abbrev}\" en \"{$section2Abbrev}\" in  het nummer \"{$issueTitle}\" komen overeen met de verschillende secties in het tijdschrift."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr "De afkorting van sectie \"{$sectionAbbrev}\" in het nummer \"{$issueTitle}\" komt overeen met een bestaande tijdschriftsectie, maar een andere afkorting van deze sectie komt niet overeen met een andere afkorting van de huidige tijdschriftsectie."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "Er zijn geen nummers die overeenkomen met de opgegeven nummer-identificatie \"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr "Het bestaande nummer met id {$issueId} komt overeen met de opgegeven issue id \"{$issueIdentification}\". Het nummer zal niet worden gewijzigd, maar artkels zullen worden toegevoegd."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "Het element met de identicatie van het nummer ontbreekt voor het artikel \"{$articleTitle}\"."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr "Het artikel \"{$articleTitle}\" is opgenomen in een nummer, maar heeft geen publicatiedatum."

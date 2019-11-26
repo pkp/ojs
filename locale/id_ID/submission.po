@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Serahkan Naskah"
+
+msgid "submission.submit.userGroup"
+msgstr "Serahkan sebagai..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Pilih peran yang Anda gunakan dalam menyerahkan naskah ini."
+
+msgid "submission.upload.selectComponent"
+msgstr "Pilih komponen naskah"
+
+msgid "submission.title"
+msgstr "Judul Naskah"
+
+msgid "submission.title.tip"
+msgstr "Jenis naskah biasanya berupa 'image', 'text', atau jenis multimedia lain termasuk 'software' atau 'interactive'.  Mohon pilih salah satu yang paling sesuai dengan apa yang Anda serahkan.  Contoh dapat dilihat di <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Mulai penyerahan naskah di"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Naskah Baru"
+
+msgid "grid.action.workflow"
+msgstr "Alur Penyerahan Naskah"
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Pengelola jurnal telah diberitahu tentang naskah yang Anda serahkan, dan sebuah email telah dikirimkan ke alamat Anda sebagai konfirmasi.  Ketika editor telah mereview penyerahan naskah, editor akan menghubungi Anda."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Galley tampil di terbitan"
+
+msgid "grid.action.issueEntry"
+msgstr "Lihat metadata naskah ini"
+
+msgid "submission.publication"
+msgstr "Publikasi"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Galley artikel \"{$galleyFormatName}\" tersedia."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Galley artikel \"{$galleyFormatName}\" tersedia."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Identifier publik naskah telah diperbaharui."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Persetujuan Format"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Galley ini <em>tidak tersedia lagi</em> untuk pembaca.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Galley ini <em>akan tersedia</em> untuk pembaca.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Aktifkan galley ini"
+
+msgid "submission.galleyFiles"
+msgstr "File Galley"
+
+msgid "submission.proofReadingDescription"
+msgstr "Layout editor mengunggah file siap terbit.  Gunakan <em>Tugaskan Auditor</em> untuk menentukan penulis atau pengguna lainnya untuk melakukan proofreading terhadap galley, dan mengunggah file yang telah dikoreksi sebelum publikasi dilakukan."
+
+msgid "grid.action.approveProof"
+msgstr "Setujui proof ini untuk dimasukkan dalam galley."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Proof ini telah disetujui untuk dimasukkan dalam galley."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Judul dan Abstrak"
+
+msgid "submission.submit.upload.description"
+msgstr "Unggah file terkait naskah ini, termasuk artikel, multimedia, set data, artwork, dll."
+
+msgid "submission.pageProofs"
+msgstr "Proofreading"
+
+msgid "submission.confirmSubmit"
+msgstr "Anda yakin akan menyerahkan naskah ke jurnal ini?"
+
+msgid "workflow.review.externalReview"
+msgstr "Review"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Kirim untuk Review"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metadata naskah yang diserahkan telah diperbaharui."
+
+msgid "submission.upload.fileContents"
+msgstr "Komponen Artikel"
+
+msgid "submission.complete"
+msgstr "Disetujui"
+
+msgid "submission.incomplete"
+msgstr "Menunggu Persetujuan"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Mohon pilih bahasa yang hendak digunakan."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Daftar Tilik Penyerahan Naskah"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Sebelum melanjutkan, Anda harus membaca dan menyatakan bahwa Anda telah memenuhi persyaratan berikut ini."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Pernyataan Privasi"
+
+msgid "submission.submit.contributorRole"
+msgstr "Peran Kontributor"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Dibutuhkan setidaknya satu penulis."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Nama depan, nama belakang, dan email tiap penulis harus ada."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Mohon tuliskan judul naskah Anda."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Mohon masukkan abstrak naskah Anda."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Silakan pilih peran kontributor."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Format sitasi yang diminta tidak ditemukan."
+
+msgid "submission.metadataDescription"
+msgstr "Spesifikasi ini dibuat berdasarkan set metadata Dublin Core, suatu standar internasional untuk mendeskripsikan isi jurnal."
+
+msgid "section.any"
+msgstr "Semua Bagian"

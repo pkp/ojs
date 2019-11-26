@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:58+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:58+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Ročno plačevanje"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "Upravnik bo ročno zabeležil prejem plačila (izven te aplikacije)."
+
+msgid "plugins.paymethod.manual"
+msgstr "Manual Fee Payment"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Manual Payment Instructions"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Send notification of payment"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Payment Notification"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Payment notification sent"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Title"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Fee"

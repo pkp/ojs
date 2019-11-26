@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:37+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Подати статтю"
+
+msgid "submission.submit.userGroup"
+msgstr "Подати, використовуючи мою роль..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Оберіть роль, в якій ви подаєте цю статтю."
+
+msgid "submission.upload.selectComponent"
+msgstr "Обрати компонент статті"
+
+msgid "submission.title"
+msgstr "Назва статті"
+
+msgid "submission.title.tip"
+msgstr "Тип подання, зазвичай, визначається як «зображення», «текст» або інші типи мультимедіа, такі як «програмне забезпечення» чи «інтерактив». Будь ласка, оберіть найбільш відповідний тип для вашого матеріалу. Приклади див. за посиланням <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Розпочати подання нового рукопису до"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Новий рукопис"
+
+msgid "grid.action.workflow"
+msgstr "Процес подання"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Анотація повинна містити не більше, ніж {$wordCount} слів."
+
+msgid "submission.issueEntry"
+msgstr "Метадані"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Редакцією журналу отримано повідомлення про подання Вашого рукопису; лист з підтвердженням було направлено на Вашу електронну пошту. Щойно редактори переглянуть Ваш матеріал, ми зв'яжемося з Вами."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Гранка з'явилась у випуску"
+
+msgid "grid.action.issueEntry"
+msgstr "Переглянути метадані цього подання"
+
+msgid "submission.publication"
+msgstr "Публікація"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Гранка статті \"{$galleyFormatName}\" зроблена доступною."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Гранка статті \"{$galleyFormatName}\" зроблена недоступною."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Публічні ідентифікатори подання оновлені."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Підтвердження формату"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Цю гранку <em>більше не можна зробити доступною</em> для читачів.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Цю гранку <em>можна зробити доступною</em> для читачів.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Зробити цю гранку доступною"
+
+msgid "submission.galleyFiles"
+msgstr "Файли гранок"
+
+msgid "submission.proofReadingDescription"
+msgstr "Редактор верстки вивантажує сюди підготовлені до публікації файли. Використайте <em>Призначити аудитора</em>, щоб призначити авторів або інших користувачів для коректури гранок, із завантаженням відкоригованих файлів та їх схваленням перед публікацією."
+
+msgid "grid.action.approveProof"
+msgstr "Схвалити цю правку для включення в гранку."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Ця правка була схвалена для включення в гранку."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Назва і анотація"
+
+msgid "submission.submit.upload.description"
+msgstr "Завантажити файли, пов'язані з цим матеріалом: статті, мультимедіа, набори даних, твори мистецтва і т. д."
+
+msgid "submission.pageProofs"
+msgstr "Коректура"
+
+msgid "submission.confirmSubmit"
+msgstr "Ви впевнені, що хочете подати цю статтю в журнал?"
+
+msgid "workflow.review.externalReview"
+msgstr "Рецензування"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Надіслати на рецензування"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Метадані випуска статті були оновлені."
+
+msgid "submission.upload.fileContents"
+msgstr "Компонент статті"
+
+msgid "submission.complete"
+msgstr "Підтверджено"
+
+msgid "submission.incomplete"
+msgstr "Очікується підтвердження"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Будь ласка, оберіть мову подання."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Вимоги до подання"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Ви повинні прочитати і підтвердити, що виконали всі зазначені нижче вимоги перш ніж продовжити подання рукопису."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Положення про конфіденційність"
+
+msgid "submission.submit.contributorRole"
+msgstr "Роль відправника"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Потрібно зазначити хоча б одного автора."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Потрібно вказати ім'я, прізвище та адресу електронної пошти кожного автора."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Будь ласка, введіть назву Вашої статті."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Будь ласка, введіть анотацію Вашої статті."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Ваша анотація надто довга. Будь ласка, скоротіть її до кількості слів, що задана для даного розділу"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Будь ласка, виберіть роль відправника."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Не вдається отримати зазначений формат оформлення бібліографічних посилань."
+
+msgid "submission.metadataDescription"
+msgstr "Ці специфікації базуються на наборі метаданих Dublin Core - міжнародному стандарті, що використовується для опису контенту журналу."
+
+msgid "section.any"
+msgstr "Будь-який розділ"

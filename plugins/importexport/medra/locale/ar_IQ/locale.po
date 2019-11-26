@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:41+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:41+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "إضافة التصدير/التسجيل mEDRA"
+
+msgid "plugins.importexport.medra.description"
+msgstr "تصدير البيانات الوصفية للعدد، المقالة، واللوح الطباعي في Onix من أجل تلبية صيغة DOI النسخة (O4DOI) مع تسجيل DOI في وكالة التسجيل mEDRA."
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"\n"
+"\t\tإذا أردت تسجيل DOI مع mEDRA، لطفاً، اتبع التعليمات في\n"
+"\t\t<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">الصفحة الرئيسية mEDRA</a>\n"
+"\t\tللحصول على اسم المستخدم وكلمة المرور. إن لم يكن لك اسم مستخدم\n"
+"\t\tوكلمة مرور خاصين بك، سيكون بإمكانك أيضاً التصدير إلى mEDRA بصيغة XML (Onix لـ DOI)\n"
+"\t\tلكن لن تستطيع تسجيل DOI الخاصة بك في mEDRA من داخل نظام المجلات المفتوحة. \n"
+"\t\tلطفاً، لاحظ أن كلمة المرور سيتم حفظها بشكل نص صريح غير مشفر، نظراً لمتطلبات\n"
+"\t\tخدمة التسجيل في mEDRA.\n"
+"\t"
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "لطفاً، قم بتهيئة إضافة التصدير mEDRA:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "اسم المستخدم"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "لطفاً، أدخل اسم دخولك إلى mEDRA. لا ينبغي أن يحتوي اسم المستخدم على علامات تنقيط."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "اسم المؤسسة المسجلة في mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "لطفاً، أدخل اسم المؤسسة المسجلة في mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "الشخص المعني بالتواصل مع mEDRA في حالة الاستفسارات الفنية"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "المؤسسة"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "لطفاً، أدخل اسم المؤسسة المسؤولة فنياً عن تصدير DOI (مثلاً: المؤسسة المضيفة لملقمك)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "شخص التواصل"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "لطفاً، أدخل اسم الشخص المعني بالتواصل الفني."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "البريد الالكتروني"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "لطفاً، أدخل عنوان البريد الالكتروني الصحيح للشخص المعني بالتواصل الفني."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "لطفاً، إختر البلد الذي ستتم الإشارة إليه على أنه 'بلد النشر' لـ mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "لطفاً، إختر فيما لو أردت تصدير أعداد المجلة بمثابة <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'أعمال' أو 'تجليات'</a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "عمل"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "تجلي"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "تصدير الأعداد بشكل"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "سيقوم نظام المجلات المفتوحة بتسجيل المكونات الرقمية DOI تلقائياً في mEDRA. لطفاً، لاحظ أن ذلك قد يستغرق وقتاً قصيراً بعيد النشر بسبب المعالجة (أي اعتماداً على إعداداتك للإضافة cronjob). بإمكانك بعدها التحقق من كل المكونات غير المسجلة."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "استعمل خاصية إختبار mEDRA (بيئة الاختبار) للمكونات الرقمية. لطفاً، لا تنس إزالة هذا الخيار عند التشغيل الفعلي."
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "NB: إن DOI المعينة للمقالات سيتم تصديرها إلى mEDRA بشكل <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'أعمال'</a>. أما DOI المعينة للألواح الطباعية فسيتم تصديرها بمثابة <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'تجليات'</a>."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "مهمة التسجيل التلقائي للإضافة mEDRA"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"الاستعمال: \n"
+"{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

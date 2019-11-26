@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:21+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:21+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Модуль «Рекомендуемые статьи автора»"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr "Вставляет список статей этого же автора на страницу аннотации статьи."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Наиболее читаемые статьи этого автора (авторов)"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr "Особенность: этот модуль требует, что бы был включен хотя бы один модуль статистики/отчетов. Если ваши модули статистики возвращают больше одной метрики, то пожалуйста также выберите главную метрику на странице настроек сайта администратором и/или на страницах настройки управляющего журналом."

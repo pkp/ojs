@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:00+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.description"
+msgstr "Denne plug-in gør det muligt at tildele DOI’er (Digital Object Identifiers) til numre, artikler, satsskibe og supplerende filer i OJS."
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr "Konfigurér dette DOI plug-in, så det bliver muligt at administrere og bruge DOI’er i OJS:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Tidsskriftsindhold"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr "Vælg de elementer, der skal have tildelt et DOI."
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr "Vælg de publicerede elementer, der skal have tildelt et DOI:"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Numre"
+
+msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
+msgstr "Artikler"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Satsskibe"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "DOI-præfiks"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr "DOI-præfikset tildeles af registreringsorganisationer (f.eks. <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) og er i formatet 10.xxxx (f.eks. 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "DOI-præfikset er obligatorisk og skal være i formatet 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "DOI-suffiks"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr "Et DOI-suffiks kan antage en hvilken som helst form, men det skal være unikt for hvert enkelt udgivet element under samme DOI-præfiksgruppe:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr "Brug nedenstående format til at generere DOI-suffikser ud fra. Anvend %j til tidsskriftsinitialer, %v til årgangsnummer, %i til nummeret i årgangen, %Y til året, %a til OJS-artikel-id, %g til OJS-satsskibs-id, %f til OJS fil-id %p til sidenummer og %x til \"Custom Identifier\"."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr "For eksempel ville vol%viss%ipp%p kunne generere et DOI som 10.1234/vol3iss2pp230"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "til numre"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "til artikler"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "til satsskibe"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "Anvend standardformaterne."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i til numre<br />%j.v%vi%i.%a til artikler<br />%j.v%vi%i.%a.g%g ftil satsskibe."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Indskriv et særskilt DOI-suffiks for hvert publiceret element. Der findes et ekstra DOI-felt på hvert elements metadataside."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Indsæt DOI-suffiks-formatet til numre."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Indsæt DOI-suffiks-formatet til artikler."
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Indsæt DOI-suffiks-formatet til satsskibe."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "Tildel nye DOI'er"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr "Hvis du ændrer din DOI-konfiguration, vil DOI’er, som allerede er blevet tildelt, ikke blive påvirket. Når DOI-konfigurationen gemmes, anvender du denne knap til at rydde alle eksisterende DOI’er, således at de nye indstillinger omfatter eksisterende artikler."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr "Er du sikker på, at du vil slette alle eksisterende DOI'er?"
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "Nummer"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "artikel"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "satsskib (publiceringsklar fil)"
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "DOI kan ikke tilføjes, da det brugerdefinerede suffiks mangler."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "DOI kan ikke tilføjes, da det indeholder et ikke-kendt format."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr "Dette er en forhåndsvisning af DOI. Vælg afkrydsningsfeltet og gem formularen for at tilføje DOI."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "DOI er tilføjet {$pubObjectType}."
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Det angivne DOI-suffiks er allere i brug i forbindelse med et andet publiceret element. Vælg et unikt DOI-suffiks for hvert element."
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Fjern DOI"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Er du sikker på, at du vil slette det eksisterende DOI?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Fjern nummer-objekt-DOI'er"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Er du sikker på, at du vil slette det eksisterende nummer-objekt-DOI?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr "Brug den følgende mulighed til at fjerne DOI'er fra alle objekter (artikler og satsskibe) i det planlagte indhold for dette nummer."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Tilføj DOI {$pubId} til {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "DOI kan ikke tilføjes, da det brugerdefinerede suffiks mangler."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} kan ikke tilføjes, da det indeholder et ikke-kendt format."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} er belvet tilføjet."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Tildel DOI'er"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr "Tildel DOI'er til alle publicerede tidsskrifts objekter, der ikke allerede er tildelt DOI'er. Denne handling kan ikke bruges med den individuelle suffiks-konfiguration. Hvis du har ændret DOI-konfigurationen ovenfor, skal du gemme dine ændringer, før du starter denne handling. Det kan tage lang tid at tildele DOI'er afhængigt af antallet af publicerede objekter i tidsskriftet."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "Er du sikker på, at du vil tildele DOI'er til alle publicerede objekter, der ikke allerede er tildelt DOI'er?"

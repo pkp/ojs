@@ -1,0 +1,2055 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:16+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "المجلة الحالية:"
+
+msgid "context.select"
+msgstr "إنتقل إلى مجلة أخرى:"
+
+msgid "navigation.categories"
+msgstr "الفئات"
+
+msgid "navigation.categories.browse"
+msgstr "تصفح"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "أنقر الإيقونة لملء نموذج التحكيم"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "لطفاً، عليك بإملاء الحقول المطلوبة"
+
+msgid "common.software"
+msgstr "أنظمة المجلات المفتوحة"
+
+msgid "common.confirmComplete"
+msgstr "هل أنت متأكد من رغبتك في تأشير هذه المهمة على أنها منجزة؟ قد لا تتمكن من إجراء تعديلات بعدها"
+
+msgid "common.payment"
+msgstr "دفع مال"
+
+msgid "common.payments"
+msgstr "أجور مدفوعة"
+
+msgid "common.homePageHeader.altText"
+msgstr "رأس الصفحة الرئيسية"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "صورة الصفحة الرئيسية للمجلة"
+
+msgid "navigation.journalHelp"
+msgstr "مساعدة"
+
+msgid "navigation.current"
+msgstr "الحالي"
+
+msgid "navigation.otherJournals"
+msgstr "المجلات الأخرى"
+
+msgid "navigation.browseByIssue"
+msgstr "حسب العدد"
+
+msgid "navigation.browseByAuthor"
+msgstr "حسب المؤلف"
+
+msgid "navigation.infoForAuthors"
+msgstr "للمؤلفين"
+
+msgid "navigation.infoForLibrarians"
+msgstr "لأمناء المكتبات"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "إرشادات الفوائد التنافسية"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "معلومات للمؤلفين"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "معلومات لأمناء المكتبات"
+
+msgid "navigation.skip.about"
+msgstr "القفز إلى \"عن المجلة\""
+
+msgid "navigation.skip.issue"
+msgstr "القفز إلى العدد الحالي"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "غير معين"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "غير معين"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "طلبات النشر قيد التحرير"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "قيد التحرير"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "طلبات النشر قيد التحكيم"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "قيد التحكيم"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "المحفوظات"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "المحفوظات"
+
+msgid "common.queue.long.active"
+msgstr "طلبات النشر الفعالة"
+
+msgid "common.queue.short.active"
+msgstr "فعالة"
+
+msgid "common.queue.long.completed"
+msgstr "الحفظ"
+
+msgid "common.queue.short.completed"
+msgstr "الحفظ"
+
+msgid "section.section"
+msgstr "القسم"
+
+msgid "section.sections"
+msgstr "أقسام المجلة"
+
+msgid "section.title"
+msgstr "عنوان القسم"
+
+msgid "section.abbreviation"
+msgstr "المختصر"
+
+msgid "section.abbreviation.example"
+msgstr "(مثلاً، مقالات = مقل)"
+
+msgid "section.policy"
+msgstr "سياسة القسم"
+
+msgid "article.article"
+msgstr "مقالة"
+
+msgid "article.articles"
+msgstr "مقالات"
+
+msgid "common.publication"
+msgstr "مقالة"
+
+msgid "common.publications"
+msgstr "مقالات"
+
+msgid "article.submissionId"
+msgstr "الرمز التعريفي للطلب"
+
+msgid "article.title"
+msgstr "العنوان"
+
+msgid "article.authors"
+msgstr "المؤلفون"
+
+msgid "article.indexingInformation"
+msgstr "معلومات الفهرسة"
+
+msgid "article.metadata"
+msgstr "البيانات الوصفية"
+
+msgid "article.journalSection"
+msgstr "قسم المجلة"
+
+msgid "article.file"
+msgstr "الملف"
+
+msgid "article.suppFile"
+msgstr "الملف التكميلي"
+
+msgid "article.suppFiles"
+msgstr "الملف/الملفات التكميلية"
+
+msgid "article.suppFilesAbbrev"
+msgstr "ملفات تكميلية"
+
+msgid "article.discipline"
+msgstr "الإلتزام الأكاديمي والتخصصات الفرعية"
+
+msgid "article.subject"
+msgstr "الكلمات المفتاحية"
+
+msgid "article.coverage"
+msgstr "التغطية"
+
+msgid "article.type"
+msgstr "النوع، الطريقة، الأسلوب"
+
+msgid "article.language"
+msgstr "اللغة"
+
+msgid "article.sectionEditor"
+msgstr "مح قس"
+
+msgid "article.commentsToEditor"
+msgstr "تعليقات المؤلف"
+
+msgid "article.submission"
+msgstr "طلب التقديم"
+
+msgid "article.submissions"
+msgstr "طلبات التقديم"
+
+msgid "article.details"
+msgstr "التفاصيل"
+
+msgid "article.abstract"
+msgstr "الملخص"
+
+msgid "article.coverPage.altText"
+msgstr "صورة الغلاف"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "الوصول المفتوح"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "الوصول المقيد"
+
+msgid "article.comments.sectionDefault"
+msgstr "الإفتراضي"
+
+msgid "article.comments.disable"
+msgstr "تعطيل"
+
+msgid "article.comments.enable"
+msgstr "تمكين"
+
+msgid "article.fontSize"
+msgstr "حجم الخط"
+
+msgid "article.fontSize.small.altText"
+msgstr "صغير"
+
+msgid "article.fontSize.medium.altText"
+msgstr "متوسط"
+
+msgid "article.fontSize.large.altText"
+msgstr "كبير"
+
+msgid "article.return"
+msgstr "العودة إلى تفاصيل المؤلَّف"
+
+msgid "submission.submissionEditing"
+msgstr "تحرير طلب النشر"
+
+msgid "submission.changeSection"
+msgstr "حول إلى"
+
+msgid "submission.sent"
+msgstr "أُرسِل"
+
+msgid "submission.editorDecision"
+msgstr "قرار المحرر"
+
+msgid "submission.round"
+msgstr "الجولة {$round}"
+
+msgid "submission.editorReview"
+msgstr "تنقيح المحرر"
+
+msgid "submission.notifyAuthor"
+msgstr "أشعِر المؤلف"
+
+msgid "submission.notifyEditor"
+msgstr "أشعِر المحرر"
+
+msgid "submission.editorAuthorRecord"
+msgstr "سجل رسائل المحرر مع المؤلف"
+
+msgid "submission.reviewersVersion"
+msgstr "نسخة المحكم المعلَّمة"
+
+msgid "submission.postReviewVersion"
+msgstr "نسخة ما بعد التحكيم"
+
+msgid "submission.editorVersion"
+msgstr "نسخة المحرر"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "نسخة المؤلف المعدلة"
+
+msgid "submission.authorVersion"
+msgstr "نسخة المؤلف"
+
+msgid "submission.copyediting"
+msgstr "نسخة التحرير"
+
+msgid "submission.copyedit"
+msgstr "نسخة التحرير"
+
+msgid "submission.proofreading"
+msgstr "القراءة التصحيحية"
+
+msgid "submission.scheduling"
+msgstr "جدولة"
+
+msgid "submission.scheduledIn"
+msgstr "مجدول للنشر في {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.sec"
+msgstr "قسم"
+
+msgid "submissions.step1"
+msgstr "الخطوة 1"
+
+msgid "submissions.step3"
+msgstr "الخطوة 3"
+
+msgid "submissions.queuedReview"
+msgstr "قيد التحكيم"
+
+msgid "submissions.published"
+msgstr "منشور"
+
+msgid "submissions.initial"
+msgstr "أولي"
+
+msgid "submissions.proofread"
+msgstr "مصحح طباعياً"
+
+msgid "submissions.initialProof"
+msgstr "التصحيح الأولي"
+
+msgid "submissions.postAuthor"
+msgstr "ما بعد المؤلف"
+
+msgid "submissions.reviewRound"
+msgstr "دورة التحكيم"
+
+msgid "submissions.proof"
+msgstr "تصحيح"
+
+msgid "submissions.editorDecision"
+msgstr "قرار المحرر"
+
+msgid "submissions.editorRuling"
+msgstr "حكم المحرر"
+
+msgid "submission.eventLog"
+msgstr "سجل الأحداث"
+
+msgid "submissions.copyeditComplete"
+msgstr "محرَّر"
+
+msgid "submissions.layoutComplete"
+msgstr "مصمم طباعياً"
+
+msgid "submissions.proofreadingComplete"
+msgstr "مصحح طباعياً"
+
+msgid "journal.currentIssue"
+msgstr "العدد الحالي"
+
+msgid "context.contexts"
+msgstr "المجلات"
+
+msgid "journal.path"
+msgstr "المسار"
+
+msgid "context.context"
+msgstr "المجلة"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "معاينة جميع الأعداد"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "ضمِّن المستخدمين الذين ليس لهم أدوار في هذه المجلة."
+
+msgid "user.profile.profileImage"
+msgstr "صورة الملف التعريفي"
+
+msgid "user.showAllJournals"
+msgstr "أظهر مجلاتي"
+
+msgid "user.registerForOtherJournals"
+msgstr "سجِّل في مجلات أُخر"
+
+msgid "user.reviewerPrompt"
+msgstr "هل تود تحكيم طلبات النشر المقدمة إلى هذه المجلة؟"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "نعم، أطلب دور {$userGroup}."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "نعم، أود مراسلتي بشأن تحكيم طلبات النشر المقدمة إلى هذه المجلة."
+
+msgid "user.register.contextsPrompt"
+msgstr "في أي من مجلات هذا الموقع ترغب بالتسجيل؟"
+
+msgid "user.register.otherContextRoles"
+msgstr "أطلب الأدوار الآتية:"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "إذا طلبت أن تكون محكماً في أي مجلة، لطفاً، أذكر مجالات اهتمامك."
+
+msgid "user.myJournals"
+msgstr "مجلاتي"
+
+msgid "user.manageMySubscriptions"
+msgstr "إدارة اشتراكاتي"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "حالياً، حسابك غير مرتبط بأي مجلة. لطفاً، إختر أحدها"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "حالياً، حسابك ليس له دور فيما يتعلق بهذه المجلة. لطفاً، إختر أحد الأدوار أدناه"
+
+msgid "user.noRoles.submitArticle"
+msgstr "قدم مقترحاً"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "قدم مؤلَّفاً: تسجيل المؤلف معطل حالياً"
+
+msgid "user.noRoles.regReviewer"
+msgstr "سجل بصفة محكم"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "التسجيل بصفة محكم: تسجيل المحكم معطل حالياً"
+
+msgid "user.role.manager"
+msgstr "رئيس التحرير"
+
+msgid "user.role.subEditor"
+msgstr "محرر القسم"
+
+msgid "user.role.subscriptionManager"
+msgstr "مدير الاشتراكات"
+
+msgid "user.role.managers"
+msgstr "المدراء"
+
+msgid "user.role.subEditors"
+msgstr "محررو الأقسام"
+
+msgid "user.role.subscriptionManagers"
+msgstr "مدراء الاشتراكات"
+
+msgid "user.role.journalAssistant"
+msgstr "مساعد المجلة"
+
+msgid "user.role.journalAssistants"
+msgstr "مساعدو المجلة"
+
+msgid "issue.issue"
+msgstr "إصدار"
+
+msgid "issue.issues"
+msgstr "إصدارات"
+
+msgid "issue.title"
+msgstr "العنوان"
+
+msgid "issue.volume"
+msgstr "المجلد"
+
+msgid "issue.number"
+msgstr "العدد"
+
+msgid "issue.vol"
+msgstr "مجلد"
+
+msgid "issue.no"
+msgstr "عدد"
+
+msgid "issue.year"
+msgstr "السنة"
+
+msgid "issue.noIssues"
+msgstr "لا إصدارات"
+
+msgid "issue.toc"
+msgstr "جدول المحتويات"
+
+msgid "issue.abstract"
+msgstr "الملخص"
+
+msgid "issue.coverPage.altText"
+msgstr "صفحة الغلاف"
+
+msgid "issue.fullIssue"
+msgstr "إصدار كامل"
+
+msgid "issue.nonpdf.title"
+msgstr "تنزيل الإصدار"
+
+msgid "issue.viewIssue"
+msgstr "معاينة الإصدار"
+
+msgid "issue.return"
+msgstr "العودة إلى تفاصيل العدد"
+
+msgid "subscriptionTypes.currency"
+msgstr "العملة"
+
+msgid "subscriptionTypes.year"
+msgstr "سنة"
+
+msgid "subscriptionTypes.years"
+msgstr "سنوات"
+
+msgid "subscriptionTypes.month"
+msgstr "شهر"
+
+msgid "subscriptionTypes.months"
+msgstr "أشهر"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "دائم"
+
+msgid "subscriptionTypes.format"
+msgstr "التنسيق"
+
+msgid "subscriptionTypes.format.online"
+msgstr "على الإنترنت"
+
+msgid "subscriptionTypes.format.print"
+msgstr "طباعة"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "طباعةً وعلى الإنترنت"
+
+msgid "subscriptions.inactive"
+msgstr "خامل"
+
+msgid "subscriptions.status"
+msgstr "الحالة"
+
+msgid "subscriptions.status.active"
+msgstr "نشط"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "يتطلب معلومات"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "يتطلب المصادقة"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "بانتظار الدفع السنوي"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "بانتظار الدفع عبر الإنترنت"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "ليس لديك حالياً اشتراك فعال."
+
+msgid "subscriptions.status.other"
+msgstr "غير ذلك، أنظر الملاحظات"
+
+msgid "subscriptions.individualDescription"
+msgstr "الاشتراك المنفرد يتطلب التسجيل في الموقع للوصول إلى المحتوى المطلوب"
+
+msgid "subscriptions.institutionalDescription"
+msgstr "الاشتراك المؤسساتي لا يتطلب التسجيل، النطاق وعنوان IP للمستخدم يستعملان للتحكم بالوصول إلى المحتوى المطلوب"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>ملاحظة:</strong> الاشتراكات المؤسساتية المشتراة عبر الإنترنت تتطلب المصادقة على النطاق وعنوان IP قبل تفعيل الاشتراك"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "حالة طلب النشر"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "تم إرسال المؤلَّف"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "طلب النشر مجدول ضمن طابور الإصدار"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "المؤلَّف معين إلى الإصدار"
+
+msgid "submission.event.general.articlePublished"
+msgstr "المؤلَّف منشور"
+
+msgid "submission.event.author.authorRevision"
+msgstr "تنقيح المؤلف مقدم"
+
+msgid "submission.event.general.authorRevision"
+msgstr "ملف تنقيح المؤلف محدث"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "المحرر عُيِّنَ لطلب النشر"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "المحرر ألغي تعيينه لطلب النشر"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "قرار المحرر مقدم"
+
+msgid "submission.event.editor.editorFile"
+msgstr "ملف المحرر حُدِّث"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "طلب النشر أُرسل للحفظ"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "طلب النشر استُعيد من الحفظ"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "المدقق عُيِّنَ لطلب النشر"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "المدقق ألغي تعيينه لطلب النشر"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "تعيين المدقق بُدِءَ به"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "ملف تنقيحات المدقق حُدِّث"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "التدقيق الأولي إكتمل"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "التدقيق النهائي إكتمل"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "ملف التدقيق حُدِّث"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "مصحح القراءة الطباعية عُيِّنَ لطلب النشر"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "مصحح القراءة الطباعية ألغي تعيينه لطلب النشر"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "مهمة التصحيح الطباعي إبتدأت"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "ملف تنقيحات المصحح الطباعي حُدِّث"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "مهمة التصحيح الطباعي إكتملت"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "المصمم الطباعي عُيِّنَ لطلب النشر"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "المصمم الطباعي ألغي تعيينه لطلب النشر"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "مهمة التصميم الطباعي إبتدأت"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "اللوح الطباعي حُدِّث"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "مهمة التصميم الطباعي إكتملت"
+
+msgid "reader.subscribersOnly"
+msgstr "للمشتركين حصراً"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "الوصول إليها يتطلب الاشتراك. للتحقق من الاشتراك، أدخل موقع المجلة"
+
+msgid "reader.openAccess"
+msgstr "وصول مفتوح"
+
+msgid "reader.subscriptionAccess"
+msgstr "الوصول عبر الاشتراك"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "الوصول عبر الاشتراك أو تسديد الرسوم"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "التعليقات عن هذا المؤلَّف"
+
+msgid "comments.authenticated"
+msgstr "بقلم <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "فرز النتائج حسب"
+
+msgid "search.results.orderBy.article"
+msgstr "عنوان المؤلَّف"
+
+msgid "search.results.orderBy.author"
+msgstr "المؤلف"
+
+msgid "search.results.orderBy.date"
+msgstr "تأريخ النشر"
+
+msgid "search.results.orderBy.issue"
+msgstr "العدد"
+
+msgid "search.results.orderBy.journal"
+msgstr "عنوان المجلة"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "الشعبية (لأي وقت)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "الشعبية (خلال الشهر الماضي)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "مدى الصلة"
+
+msgid "search.results.orderDir.asc"
+msgstr "تصاعدياً"
+
+msgid "search.results.orderDir.desc"
+msgstr "تنازلياً"
+
+msgid "search.results.similarDocuments"
+msgstr "ملفات مشابهة"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>تحديد مصدر مصادقة إفتراضي مغاير لنظام المجلات المفتوحة له التبعات الآتية:</p>\n"
+"\t<ul>\n"
+"\t\t<li>لو حاول مستخدم ما تسجيل حساب جديد في هذا الموقع باسم دخول مسجل سلفاً في مصدر المصادقة (لكنه غير معروف في قاعدة بيانات نظام المجلات المفتوحة)، فإن ذلك التسجيل سيكون ممكناً فقط عندما تكون كلمة المرور صحيحة في ذلك المصدر الخارجي أيضاً.</li>\n"
+"\t</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ملاحظة!</h4>\n"
+"\t<p>لا يتمكن النظام من تعديل ملف الإعدادات تلقائياً. لتتمكن من تغيير إعداداتك، عليك بفتح الملف <tt>config.inc.php</tt> مستعملاً أي برنامج مناسب لتحرير النصوص، واستبدل محتوياته بالمحتوى الظاهر في الخانة النصية أدناه.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "مدير الاشتراكات"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "اشتراكات منفردة"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "اشتراكات مؤسساتية"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "أنواع الاشتراكات"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "البرامج الإضافية للوح الطباعي"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "البرامج الإضافية للوح الطباعي تقدم الدعم اللازم لعرض أنواع مختلفة من الملفات التي يمكن لها أن تكون ألواحاً طباعية للمؤلفات."
+
+msgid "plugins.categories.auth.description"
+msgstr "إضافات المصادقة تسمح لنظام المجلات المفتوحة بتفويض مهام المصادقة إلى أنظمة أخرى، مثل: ملقمات LDAP"
+
+msgid "plugins.categories.generic.description"
+msgstr "الإضافات العامة تستعمل لتعزيز نظام المجلات المفتوحة في مجالات شتى غير مدعومة ضمن فئات الإضافات الأخرى"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>أمثلة على إشعارات الترخيص الخلاقة الدارجة ضمن ملاحظات الحقوق الفكرية</h3>\n"
+"<h4>1. السياسة المقترحة للمجلات التي تتيح الوصول المفتوح</h4>\n"
+"المؤلفون الناشرون عبر هذه المجلة يوافقون على البنود الآتية:\n"
+"<ol type=\"a\">\n"
+"\t<li>يحتفظ المؤلفون بالحقوق الفكرية ويمنحون المجلة حق النشر لأول مرة للعمل حسب الترخيص المتزامن مع <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">رخصة إسهام الإبداعات العامة</a> التي تسمح للآخرين بمشاركة العمل مع التعريف بمؤلفه وأولية النشر في هذه المجلة.</li>\n"
+"\t<li>للمؤلفين حق الدخول في اتفاقيات إضافية منفصلة بشأن نسخ المجلة المتضمنة للمؤلَّف المنشور ذات التوزيع غير الحصري (على سبيل المثال، إظهاره في مخزونات المؤسسات أو نشره في كتاب)، مع التعريف بنشره أولاً في هذه المجلة.</li>\n"
+"\t<li>يُسمح للمؤلفين بإظهار أعمالهم على الإنترنت، بل ويحثون على ذلك (على سبيل المثال، في مخزونات المؤسسات أو على مواقعهم الشخصية) قبل وخلال عملية النشر، إذ أن ذلك يساعد على التبادل البناء، فضلاً عن تمكين الاقتباس الأفضل والأبكر من العمل المنشور (أنظر <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">تداعيات الوصول المفتوح</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. السياسة المقترحة للمجلات التي تتيح الوصول المفتوح المؤجل</h4>\n"
+"المؤلفون الناشرون عبر هذه المجلة يوافقون على البنود الآتية:\n"
+"<ol type=\"a\">\n"
+"\t<li>يحتفظ المؤلفون بالحقوق الفكرية ويمنحون المجلة حق النشر لأول مرة للعمل (لفترة زمنية محددة بعد النشر) حسب الترخيص المتزامن مع <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">رخصة إسهام الإبداعات العامة</a> التي تسمح للآخرين بمشاركة العمل مع التعريف بمؤلفه وأولية النشر في هذه المجلة.</li>\n"
+"\t<li>للمؤلفين حق الدخول في اتفاقيات إضافية منفصلة بشأن نسخ المجلة المتضمنة للمؤلَّف المنشور ذات التوزيع غير الحصري (على سبيل المثال، إظهاره في مخزونات المؤسسات أو نشره في كتاب)، مع التعريف بنشره أولاً في هذه المجلة.</li>\n"
+"\t<li>يُسمح للمؤلفين بإظهار أعمالهم على الإنترنت، بل ويحثون على ذلك (على سبيل المثال، في مخزونات المؤسسات أو على مواقعهم الشخصية) قبل وخلال عملية النشر، إذ أن ذلك يساعد على التبادل البناء، فضلاً عن تمكين الاقتباس الأفضل والأبكر من العمل المنشور (أنظر <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">تداعيات الوصول المفتوح</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"الخطوات: طابور طلبات النشر &gt; تحكيم طلب النشر &gt; تحرير طلب النشر &gt; جدول المحتويات.<br /><br />\n"
+"إختر قالباً لمعالجة خطوات التحرير تلك. (لتعيين مدير تحرير ومحرر للقسم، إذهب إلى رابط (محررين) في صفحة إدارة المجلة.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>لتمكين القراء من تحديد نسخ العمل المقتبس منه على الإنترنت، فإن الخيارات الآتية متاحة:</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>أضف أداة للقراءة</strong><p>بإمكان رئيس تحرير المجلة إضافة \"العثور على مراجع\" لأدوات القراءة التي ترافق الفقرات المنشورة، مما يمكن القراء من لصق عنوان المرجع، ومن ثم البحث في قواعد بيانات تعليمية مختارة مسبقاً عن العمل المقتبس منه.</p></li>\n"
+"\t<li><strong>ضمن روابط في المراجع</strong><p>يمكن للمصمم الطباعي إضافة روابط للمراجع التي يمكن العثور عليها على الإنترنت عبر اتباع التعليمات الآتية (والتي بالإمكان تعديلها لاحقاً).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"أتريد تعطيل هذا المستخدم؟ هذا سيحرمه من دخول الموقع.\n"
+"\n"
+"\tستقوم إختيارياً بتبرير تعطيلك لحساب مستخدم معين"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"عذراً، ليس لديك صلاحيات إدارة لحساب هذا المستخدم. قد يكون ذلك بسبب:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>المستخدم هو مدير للموقع</li>\n"
+"\t\t\t<li>المستخدم فعال في مجلات أخرى لا تديرها</li>\n"
+"\t\t</ul>\n"
+"\tهذه المهمة لا يؤديها إلا مدير الموقع.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>الفقرات المسلط عليها الضوء تشير إلى إجراءات مطلوب اتخاذها من قبل المحرر، ومعلمة بما يأتي:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">تم تعيين محكم، دون إعلامه بذلك عبر البريد الالكتروني</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">وردت جميع تقييمات المحكمين وملاحظاتهم، لكن قرار هيئة التحرير لم يُتخذ بعد</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">قام المؤلف برفع نسخة منقحة من مؤلَّفه</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">أحد المحكمين متأخر بشأن قبوله لدعوة التحكيم المناظر</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">أحد المحكمين متأخر في إرجاع نتائج تقييمه</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"مستحق\" يتم تأشيرها عندما يوافق المحكم على تقييم مؤلَّفٍ معين؛ وهي تعرض عدد الأسابيع المتبقية على استيجاب نتيجة التحكيم أو  (-) أسابيع سالبة لتشير إلى تجاوز الموعد.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>الفقرات المسلط عليها الضوء تشير إلى إجراءات مطلوب اتخاذها من قبل المحرر، ومعلمة بما يأتي:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">إجراءٌ ما مطلوب في مرحلة التدقيق</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">إجراءٌ ما مطلوب في مرحلة التصميم الطباعي</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">إجراءٌ ما مطلوب في مرحلة القراءة التصحيحة</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "مهام التحرير النشطة"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "مهام التحرير المنجزة"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "لا طلبات معينة للتحرير بعد"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "إشعار هذا المدقق مرة أخرى سيؤدي إلى إعادة تعيين مهمته من البدء. هل أنت متأكد من رغبتك في عمل ذلك؟"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "إشعار هذا المؤلف مرة أخرى سيؤدي إلى إعادة تعيين مهمته من البدء. هل أنت متأكد من رغبتك في عمل ذلك؟"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "إشعار هذا المصمم الطباعي مرة أخرى سيؤدي إلى إعادة تعيين مهمته من البدء. هل أنت متأكد من رغبتك في عمل ذلك؟"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "إشعار مصحح القراءة هذا  مرة أخرى سيؤدي إلى إعادة تعيين مهمته من البدء. هل أنت متأكد من رغبتك في عمل ذلك؟"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "إعتذارات"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} إعتذارات عن التحكيم، إلغاءات، وجولات سابقة"
+
+msgid "sectionEditor.regrets"
+msgstr "الإعتذارات"
+
+msgid "sectionEditor.regrets.link"
+msgstr "معاينة الإعتذارات، الإلغاءات، الجولات السابقة"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "التحكيم المناظر، الجولة {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "قرار المحرر، الجولة {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "إعتذارات المحكم والإلغاءات"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "إعتذار"
+
+msgid "sectionEditor.regrets.result"
+msgstr "النتيجة"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "أدرج مستخدماً مسجلاً بمثابة محكم"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "أنشئ محكماً جديداً"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "مهام التحرير النشطة"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "مهام التحرير المنجزة"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "لا توجد مهام تحرير نشطة"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "مهام التصميم الطباعي"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "إرفع تنسيق لوح طباعي"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "استبدل الملف"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "إرفع ملفاً بديلاً"
+
+msgid "submission.layout.imageInvalid"
+msgstr "صيغة الصورة خاطئة. الصيغ المدعومة هي: .gif, .jpg, and .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "هذا اللوح الطباعي سيكون متاحاً على موقع مستقل."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "رابط المحتوى المستضاف خارجياً"
+
+msgid "reviewer.pendingReviews"
+msgstr "تحكيم المؤلفات قيد الانتظار"
+
+msgid "reviewer.completedReviews"
+msgstr "منجز"
+
+msgid "reviewer.averageQuality"
+msgstr "تقييم"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "الملف ينتظر التنقيح"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "أعلم المحرر"
+
+msgid "reviewer.article.canDoReview"
+msgstr "سيقوم بالتحكيم"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "غير قادر على التحكيم"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "طلب النشر سيكون متوافراً إذا وافق المحكم على تولي مهمة التقييم"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "محرر طلب النشر"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "أكتب أو إلصق ملاحظات التحكيم هنا"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "مدخل المحكم"
+
+msgid "reviewer.article.sendReminder"
+msgstr "أرسل تذكيراً"
+
+msgid "reviewer.article.automatic"
+msgstr "(آلي)"
+
+msgid "reviewer.article.recommendation"
+msgstr "التوصيات"
+
+msgid "reviewer.article.submitReview"
+msgstr "قدم التحكيم إلى المحرر"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "ملاحظات"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "الملفات المرفوعة"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "النسخة المرفوعة من قبل المحكم"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(لو رغبت في تأشير الملف للمحرر، إحفظ الملف في حاسبتك واستعمل تصفح/رفع)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "طلب المحرر"
+
+msgid "reviewer.article.schedule.response"
+msgstr "إجابتك"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "التحكيم قُدِّم"
+
+msgid "reviewer.article.schedule.due"
+msgstr "التحكيم استوجب"
+
+msgid "reviewer.article.decision.accept"
+msgstr "إقبل التقديم"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "التنقيحات مطلوبة"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "أعد التقديم للتحكيم"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "أعد التقديم في مكان آخر"
+
+msgid "reviewer.article.decision.decline"
+msgstr "أرفض طلب النشر"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "أنظر الملاحظات"
+
+msgid "reviewer.article.schedule"
+msgstr "جدوِل"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "طلب النشر ليُحكَّم"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "جدولة التحكيم"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "خطوات التحكيم"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "إرشادات المحكم"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "إن إرشادات المحكم ستقدم للمحكمين معايير الحكم على مناسبة المؤلَّف للنشر في المجلة من عدمها، كما يمكنها أن تتضمن أي تعليمات خاصة لتحضير تقييم مؤثر ومفيد. عند إجراء التقييم، يعرض الموقع للمحكمين مربعي نص، الأول \"للمؤلف والمحرر\" والثاني \"للمحرر\". بدلاً من ذلك، يمكن لرئيس تحرير المجلة إنشاء نموذج التحكيم المناظر عبر (نماذج التحكيم). وفي جميع الحالات، سيكون للمحررين خيار تضمين التقييمات المتعلقة بالمؤلف."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "أعلم محرر طلب النشر"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "فيما لو أنك ستتولى مهمة التحكيم"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "إن كنت ستقوم بالتحكيم، راجع إرشادات المحكمين أدناه"
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "أنقر أسماء الملفات لتنزيلها وتقييمها (على الشاشة أو عبر طباعتها)"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "أعلن فيما لو كانت لديك مصالح تنافسية بالنسبة لهذا البحث (أنظر <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;السياسة</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "مصالح تنافسية"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "أنقر الإيقونة للدخول (أو إلصق) تقييمك لطلب النشر هذا"
+
+msgid "reviewer.article.uploadFile"
+msgstr "فضلاً، بإمكانك رفع الملفات إلى المحرر و/أو المؤلف للمشاورة"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "إختر التوصية وقدم التحكيم لإكمال العملية. عليك أن تُدخل تحكيماً أو أن ترفع ملفاً قبل اختيار التوصية"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "إختر أو عدّل توصية المحكم."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "لم يتم اختيار التوصية. عليك أن تختار توصية تقدمها"
+
+msgid "reviewer.article.confirmDecision"
+msgstr "بمجرد تسجيلك لقرار ما، لن يكون باستطاعتك مستقبلاً تعديل هذا التحكيم. هل أنت متأكد من رغبتك في المتابعة؟"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "الملف لتدقيقه"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "ملف المدقق"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "ملف المدقق"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "لا مهمات للقراءة التصحيحية"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>لرفع مؤلَّف ما إلى هذه المجلة، أكمل الخطوات الآتية:</p>\n"
+"<ol>\n"
+"<li>في هذه الصفحة، أنقر استعراض (أو إختر ملفاً) الأمر الذي سيفتح لك نافذة لإختيار الملف الذي عليك الوصول إليه بين ملفات القرص الصلب في حاسبتك.</li>\n"
+"<li>حدد موقع الملف الذي تريد تقديمه، وأشره.</li>\n"
+"<li>أنقر زر فتح في نافذة إختيار الملف، ليقوم المستعرض بوضع اسم الملف على الصفحة.</li>\n"
+"<li>أنقر رفع في هذه الصفحة، ليتم رفع الملف من حاسبتك إلى موقع المجلة ومن ثم يعيد الموقع تسميته وفقاً لاصطلاحات المجلة.</li>\n"
+"<li>بمجرد رفع ملف المؤلَّف، أنقر زر \"إحفظ ثم استمر\" المتوضع أسفل الصفحة.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "يتعذر الالتماس برسالة ما لم تكن نسخة التحكيم في محلها"
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "يتعذر الالتماس برسالة ما لم يتم اختيار الملف لغرض التدقيق ضمن باب خيار المحرر، صفحة التحكيم"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "يتعذر الالتماس برسالة ما لم يُرفع الملف للتدقيق"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "التدقيق الأولي"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "تدقيق المحرر"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "تدقيق المؤلف"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "التدقيق النهائي"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "نسخة التدقيق"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "عين المدقق"
+
+msgid "submission.copyedit.useFile"
+msgstr "استعمل الملف"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "تعليقات التدقيق"
+
+msgid "submission.copyedit.instructions"
+msgstr "تعليمات التدقيق"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "لا ملف (إرفع نسخة التدقيق النهائية بمثابة نسخة التصميم الطباعي قبيل إرسال الالتماس)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "معرَّف لوح الطباعة العام"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "معرَّف الطباعة العام موجود سلفاً"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "عيِّن المصمم الطباعي"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "استبدل المصمم الطباعي"
+
+msgid "submission.layout.layoutComments"
+msgstr "تعليقات التصميم الطباعي"
+
+msgid "submission.layout.instructions"
+msgstr "تعليمات التصميم الطباعي"
+
+msgid "submission.layout.referenceLinking"
+msgstr "ربط المراجع"
+
+msgid "submission.proofreadingComments"
+msgstr "تعليقات القراءة التصحيحية"
+
+msgid "submission.proofread.corrections"
+msgstr "تصحيحات القراءة التصحيحية"
+
+msgid "submission.proofread.instructions"
+msgstr "تعليمات القراءة التصحيحية"
+
+msgid "submission.logType.article"
+msgstr "المؤلَّف"
+
+msgid "submission.logType.author"
+msgstr "المؤلف"
+
+msgid "submission.logType.editor"
+msgstr "المحرر"
+
+msgid "submission.logType.review"
+msgstr "التحكيم"
+
+msgid "submission.logType.copyedit"
+msgstr "التدقيق"
+
+msgid "submission.logType.layout"
+msgstr "التصميم الطباعي"
+
+msgid "submission.logType.proofread"
+msgstr "القراءة التصحيحية"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "مراسلة المحرر/المؤلف"
+
+msgid "submission.comments.copyeditComments"
+msgstr "تعليقات التدقيق"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"هذه التعليقات يمكن مشاركتها مع المؤلف.<br />\n"
+"(بعد حفظها، بالإمكان إضافة المزيد.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "للمؤلف والمحرر"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "للمحرر"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "بعد الإرسال، قدم نسخة قابلة للتحرير تُرسل للمحكمين"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "للمؤلف والمحرر"
+
+msgid "submission.comments.forEditor"
+msgstr "للمحرر"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "إحفظ وأرسل إلى المؤلف"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "إحفظ وأرسل إلى المحرر"
+
+msgid "user.register.selectContext"
+msgstr "إختر أحد مجلات الموقع لتسجل فيها:"
+
+msgid "user.register.noJournals"
+msgstr "ليس من مجلة متاحة للتسجيل فيها ضمن هذا الموقع"
+
+msgid "user.register.privacyStatement"
+msgstr "بيان الخصوصية"
+
+msgid "user.register.registrationDisabled"
+msgstr "هذه المجلة لا تتيح حالياً التسجيل فيها."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "كلمة المرور التي أدخلتها ليست طويلة بما يكفي."
+
+msgid "user.register.readerDescription"
+msgstr "أعلمني عبر البريد الالكتروني عند صدور عدد جديد من المجلة."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "أعلمني عبر البريد الالكتروني عندما يصير إصدار من المجلة متاحاً للوصول المفتوح."
+
+msgid "user.register.authorDescription"
+msgstr "قادر على تقديم مؤلفات إلى المجلة."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "راغبٌ في إجراء تحكيم مناظر لطلبات النشر في المجلة."
+
+msgid "user.register.reviewerDescription"
+msgstr "راغبٌ في إجراء تحكيم مناظر لطلبات النشر في الموقع."
+
+msgid "user.register.reviewerInterests"
+msgstr "عرِّف إهتمامات التحكيم (مجالاته الثابتة وطرق البحث):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "نعم، أود الحصول على إشعارات بشأن الإصدارات الجديدة والإعلانات من جميع المجلات التي سجلت فيها."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr "نعم، أوافق على جمع بياناتي وخزنها وفق ما ورد في <a href=\"{$privacyUrl}\" target=\"_blank\">بيان الخصوصية</a> لهذه المجلة."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "عليك الموافقة على فقرات بيان الخصوصية لكل مجلة تقوم بالتسجيل فيها."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "عليك الموافقة على فقرات بيان الخصوصية في هذا الموقع."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "اشتراكاتي"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "حالة الاشتراك"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "الاشتراكات النشطة والمنتهية الصلاحية معروضة أدناه مع تواريخ إنتهاء صلاحيتها. إضافة إلى أن معلومات الحالة القادمة قد تُذكر مع كل اشتراك."
+
+msgid "user.subscriptions.status"
+msgstr "الحالة"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "الوصف"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "يتطلب معلومات إضافية قبل أن يكون الاشتراك قابلاً للتفعيل"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "ينبغي مراجعة الاشتراك قبل تفعيله"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "الدفع المالي اليدوي متاح، غير أنه لم يحصل بعد"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "الدفع المالي عبر الإنترنت متاح، غير أنه ملغً أو غير مكتمل"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "اشتراك منفرد"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "اشتراك مؤسساتي"
+
+msgid "user.subscriptions.renew"
+msgstr "تجديد"
+
+msgid "user.subscriptions.purchase"
+msgstr "شراء"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "شراء اشتراك جديد"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "شراء اشتراك منفرد"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "شراء اشتراك مؤسساتي"
+
+msgid "user.subscriptions.expires"
+msgstr "تنتهي صلاحيته"
+
+msgid "user.subscriptions.expired"
+msgstr "منته الصلاحية"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "معاينة أنواع الاشتراكات المتاحة"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "نوع الاشنراك"
+
+msgid "user.subscriptions.form.membership"
+msgstr "العضوية"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "نوع الاشتراك المختار يتطلب معلومات العضوية"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "لطفاً، إختر نوعية اشتراك صحيحة"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "حساب هذا المستخدم لديه سلفاً اشتراك منفرد"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "بيانات العضوية، فيما لو كانت مطلوبة لنوع الاشتراك المختار"
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "اسم المؤسسة"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "اسم المؤسسة مطلوب حتماً"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "عنوان المراسلة"
+
+msgid "user.subscriptions.form.domain"
+msgstr "المجال"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "إن تم إدخال المجال، فإن مدى IP يكون إختيارياً.<br />القيم الصحيحة هي أسماء مجال، مثل: lib.sfu.ca"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "إن نوع الاشتراك المختار يتطلب مجالاً و/أو مدى IP للمصادقة على الاشتراك"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "لطفاً، أدخل مجالاً صحيحاً"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "مديات IP"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "لو أُدخلت مديات IP هنا، يكون إدخال المجال إختيارياً.<br />القيم الصحيحة تتضمن عنوان IP مثل: ( 142.58.103.1)، أو مدى IP مثل: 142.58.103.1 - 142.58.103.4)، أو مدى IP مع wildcard '*' مثل: 142.58.*.*)، أو مدى IP مع CIDR مثل:142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "لطفاً، أدخل مدى IP صحيح"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "حذف"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "إضافة"
+
+msgid "search.browseAuthorIndex"
+msgstr "استعرض فهرس المؤلفين"
+
+msgid "search.searchFor"
+msgstr "إبحث في المؤلَّفات عن"
+
+msgid "search.withinJournal"
+msgstr "ضمن"
+
+msgid "search.allJournals"
+msgstr "جميع المجلات"
+
+msgid "search.authorIndex"
+msgstr "استعرض فهرس المؤلفين"
+
+msgid "search.authorDetails"
+msgstr "تفاصيل المؤلف"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"<h4>تلميحات البحث: </h4><ul>\n"
+"<li>عبارات البحث تتحسس الفرق بين الحروف الصغيرة والكبيرة</li>\n"
+"<li>الكلمات الدارجة يتم تجاهلها</li>\n"
+"<li>إفتراضياً، نتيجة البحث تعطي المؤلفات المتضمنة <em>لكل</em> عبارات جملة البحث (بعبارة أخرى، <em>AND</em> تُطبق بين الكلمات الواردة في عبارة البحث)</li>\n"
+"<li>إربط عدة كلمات باستعمال <em>OR</em> للعثور على مؤلفات تتضمن أياً من تلك الكلمات وليس شرطاً لجميعها؛ مثلاً: <em>تعليم OR تربية</em></li>\n"
+"<li>استعمل الأقواس لإنشاء استعلامات بحث أكثر تعقيداً؛ مثل: <em>أرشيف ((مجلة OR مؤتمر) NOT أطروحة)</em></li>\n"
+"<li>للبحث عن عبارة معينة بالضبط، ضعها بين علامات إقتباس؛ مثلاً: <em>\"النشر عبر الإنترنت\"</em></li>\n"
+"<li>استبعد كلمة معينة عبر وضعها بعد <strong>-</strong> أو <em>NOT</em>؛ مثل: <em>تعليمات -نشر</em> أو <em>تعليمات NOT نشر</em></li>\n"
+"<li>استعمل <strong>*</strong> في عبارة البحث كبديل عن أي سلسلة من الحروف؛ مثل: <em>soci* morality</em> والتي ستضاهي عدة كلمات، مثل \"sociological\" أو \"societal\"</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "معاينة {$title}"
+
+msgid "article.pdf.title"
+msgstr "صيغة الملف المحمول (PDF)"
+
+msgid "article.download"
+msgstr "تنزيل هذا الملف"
+
+msgid "article.pluginMissing"
+msgstr "<p>إن الملف الذي اخترته ينبغي أن يظهر هنا إذا كان متصفحك مدعماً ببرنامج لقراءة الملفات ذات الصيغة المحمولة (على سبيل المثال، نسخة حديثة من برنامج <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "تنزيل المؤلَّف"
+
+msgid "article.nonpdf.note"
+msgstr "الملف الذي اخترته ينبغي أن يبدأ بالتحميل تلقائياً، وإن لم يحدث هذا، أنقر الرابط أدناه. لاحظ أن هذا الملف قد يتطلب برنامج معاينة خاص أو إضافة برمجية تدعمه لتتمكن من معاينته.<br /><br />إن لم يبدأ التحميل تلقائياً، <a href=\"{$url}\">أنقر هنا</a>."
+
+msgid "site.journalsHosted"
+msgstr "المجلات المستضافة في هذا الموقع"
+
+msgid "site.journalView"
+msgstr "معاينة المجلة"
+
+msgid "site.journalRegister"
+msgstr "التسجيل"
+
+msgid "site.journalCurrent"
+msgstr "الإصدار الحالي"
+
+msgid "site.noJournals"
+msgstr "لا توجد مجلات متاحة حالياً"
+
+msgid "current.current"
+msgstr "الحالي"
+
+msgid "current.noCurrentIssue"
+msgstr "لا إصدار حالياً"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "لم تصدر هذه المجلة أي عدد بعد"
+
+msgid "archive.archives"
+msgstr "المحفوظات"
+
+msgid "archive.archivesPageNumber"
+msgstr "المحفوظات - صفحة {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "استعرض الإصدارات السابقة"
+
+msgid "archive.issueUnavailable"
+msgstr "الإصدار غير متوفر"
+
+msgid "about.statistics"
+msgstr "إحصائيات"
+
+msgid "about.contact"
+msgstr "اسم الاتصال"
+
+msgid "about.aboutContext"
+msgstr "عن المجلة"
+
+msgid "about.history"
+msgstr "تأريخ المجلة"
+
+msgid "about.editorialTeam"
+msgstr "هيئة التحرير"
+
+msgid "about.editorialTeam.biography"
+msgstr "السيرة"
+
+msgid "about.editorialPolicies"
+msgstr "سياسات التحرير"
+
+msgid "about.focusAndScope"
+msgstr "التركيز ومجال العمل"
+
+msgid "about.sectionPolicies"
+msgstr "سياسات القسم"
+
+msgid "about.submissions"
+msgstr "طلبات النشر"
+
+msgid "about.onlineSubmissions.login"
+msgstr "إذهب إلى صفحة الولوج"
+
+msgid "about.onlineSubmissions.register"
+msgstr "سجّل"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} أو {$register} لتقديم طلبات النشر."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} أو {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "قدم طلباً جديداً إلى القسم <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "قدم طلباً جديداً"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "عاين طلباتك التي قيد الانتظار"
+
+msgid "about.authorGuidelines"
+msgstr "إرشادات المؤلف"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "متطلبات تحضير طلب النشر"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "كجزء من عملية تقديم طلب النشر، على المؤلفين التأكد من كون طلباتهم مستوفية لجميع الفقرات الآتية، وعليه، فقد تُرد الطلبات التي لا تلبي تلك الضوابط."
+
+msgid "about.copyrightNotice"
+msgstr "بيان الحقوق الفكرية"
+
+msgid "about.privacyStatement"
+msgstr "بيان الخصوصية"
+
+msgid "about.authorFees"
+msgstr "رسوم المؤلف"
+
+msgid "about.authorFeesMessage"
+msgstr "هذه المجلة تستوفي الرسوم الآتية من المؤلف:"
+
+msgid "about.peerReviewProcess"
+msgstr "عملية التحكيم المناظر"
+
+msgid "about.publicationFrequency"
+msgstr "معدل النشر"
+
+msgid "about.openAccessPolicy"
+msgstr "سياسة الوصول المفتوح"
+
+msgid "about.delayedOpenAccess"
+msgstr "الوصول المفتوح المؤجل"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "محتويات هذه المجلة ستكون متوافرة بشكل يسمح للوصول المفتوح"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "شهر/أشهر بعد نشر الإصدار"
+
+msgid "about.archiving"
+msgstr "الأرشفة"
+
+msgid "about.subscriptions"
+msgstr "الاشتراكات"
+
+msgid "about.subscriptions.individual"
+msgstr "اشتراكات منفردة"
+
+msgid "about.subscriptions.institutional"
+msgstr "اشتراكات مؤسساتية"
+
+msgid "about.subscriptionsContact"
+msgstr "شخص التواصل للاشتراك"
+
+msgid "about.subscriptionTypes.name"
+msgstr "الاسم"
+
+msgid "about.subscriptionTypes.format"
+msgstr "الصيغة"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "المدة"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "الكلفة"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "أنواع الاشتراكات"
+
+msgid "about.memberships"
+msgstr "العضوية"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "عن نظام النشر هذا"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "عملية التحرير والنشر لنظام المجلات المفتوحة"
+
+msgid "about.aboutOJSJournal"
+msgstr "هذه المجلة تستعمل نظام المجلات المفتوحة {$ojsVersion}، والذي هو نظام مفتوح المصدر لإدارة النشر مطور ومدعوم وموزع مجاناً عبر الرابط <a href=\"http://pkp.sfu.ca/\">مشروع المعرفة العامة</a> تحت رخصة GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "هذا الموقع يستعمل نظام المجلات المفتوحة {$ojsVersion} والذي هو نظام مفتوح المصدر لإدارة النشر العلمي، مطور ومدعوم وموزع مجاناً عبر الرابط <a href=\"http://pkp.sfu.ca/\">مشروع المعرفة العامة</a> تحت رخصة GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "ملفات المساعدة لنظام المجلات المفتوحة"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS مساعد"
+
+msgid "help.searchReturnResults"
+msgstr "العودة إلى نتائج البحث"
+
+msgid "help.goToEditPage"
+msgstr "تعديل {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "شكراً لكم"
+
+msgid "donations.thankYouMessage"
+msgstr "شكراً لمساهمتك. نثمن دعمكم لنا"
+
+msgid "payment.loginRequired"
+msgstr "ينبغي عليك الدخول إلى الموقع لتقوم بالدفع"
+
+msgid "payment.loginRequired.forArticle"
+msgstr "الاشتراك أو شراء مؤلَّف يتطلب الدخول إلى الموقع، فبهذا يمكن التحقق من حالة الاشتراك واستعراض عمليات الشراء السابقة."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "الاشتراك أو شراء إصدار يتطلب الدخول إلى الموقع، فبهذا يمكن التحقق من حالة الاشتراك واستعراض عمليات الشراء السابقة."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "ينبغي عليك الدخول إلى الموقع لتتمكن من تقديم هبة."
+
+msgid "payment.paid"
+msgstr "مدفوع"
+
+msgid "payment.payNow"
+msgstr "إدفع الآن"
+
+msgid "payment.waive"
+msgstr "الخصم"
+
+msgid "payment.alreadyPaid"
+msgstr "مدفوع مسبقاً"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "إختر هذه الخانة إن سبق لك الدفع إلى المجلة لإكمال عملية التقديم. طلب التقديم لن تبدأ معالجته حتى تستوفى الرسوم المالية. أنقر (إدفع الآن) أعلاه لمعاينة تعليمات الدفع المالي."
+
+msgid "payment.paymentReceived"
+msgstr "تم تلقي المبلغ"
+
+msgid "payment.paymentSent"
+msgstr "المبلغ مدفوع مسبقاً"
+
+msgid "payment.authorFees"
+msgstr "رسوم المؤلف"
+
+msgid "payment.type.submission"
+msgstr "رسوم طلب النشر"
+
+msgid "payment.type.publication"
+msgstr "رسوم النشر"
+
+msgid "payment.type.publication.required"
+msgstr "رسوم النشر قد استوجبت الدفع."
+
+msgid "payment.type.fastTrack"
+msgstr "رسوم مسار التحكيم السريع"
+
+msgid "payment.type.membership"
+msgstr "رسوم العضوية الشخصية"
+
+msgid "payment.type.purchaseArticle"
+msgstr "رسوم شراء مقالة"
+
+msgid "payment.type.purchaseIssue"
+msgstr "رسوم شراء إصدار (عدد من المجلة)"
+
+msgid "payment.type.subscription"
+msgstr "رسوم الاشتراك"
+
+msgid "payment.type.donation"
+msgstr "الهبات"
+
+msgid "payment.requestPublicationFee"
+msgstr "رسوم طلب النشر ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "لقد تم التماس تسديد الرسوم، غير أن الالتماس قد انتهت صلاحيته. راسل رئيس تحرير المجلة للمزيد من التفاصيل."
+
+msgid "payment.donation.makeDonation"
+msgstr "قدِّم هبة"
+
+msgid "payment.submission.paySubmission"
+msgstr "إدفع رسم التقديم"
+
+msgid "payment.publication.payPublication"
+msgstr "إدفع للنشر"
+
+msgid "payment.publication.publicationPaid"
+msgstr "تم دفع رسم النشر"
+
+msgid "payment.membership.buyMembership"
+msgstr "إشتر اشتراكاً منفرداً"
+
+msgid "payment.membership.renewMembership"
+msgstr "جدد الاشتراك المنفرد"
+
+msgid "payment.membership.ends"
+msgstr "ينتهي"
+
+msgid "payment.subscription.purchase"
+msgstr "إشتر اشتراكاً"
+
+msgid "payment.subscription.renew"
+msgstr "جدد الاشتراك"
+
+msgid "payment.subscription.expires"
+msgstr "تنتهي صلاحيته"
+
+msgid "installer.appInstallation"
+msgstr "تنصيب نظام المجلات المفتوحة"
+
+msgid "installer.ojsUpgrade"
+msgstr "ترقية نظام المجلات المفتوحة"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>نسخة نظام المجلات المفتوحة {$version}</h4>\n"
+"\n"
+"<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href=\"{$baseUrl}/docs/README.md\">ملف إقرأني</a> المضمن في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">منتدى الدعم</a> أو زر موقع PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>الترقية</h4>\n"
+"\n"
+"<p>إن كنت بصدد ترقية التنصيب الحالي من OJS 2.x, <a href=\"{$upgradeUrl}\">أنقر هنا</a> للمتابعة.</p>\n"
+"\n"
+"<h4>المتطلبات المستحسنة لتشغيل النظام</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion} (متضمناً PHP 5.x); حالياً، أنت تستعمل PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 أو <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>نظام التشغيل: أي نظام تشغيل يدعم البرمجيات أعلاه، متضمناً <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>بما أن PKP لا تمتلك الموارد لاختبار تشغيل النظام على كل احتمالات البرامجيات المتاحة من نسخ وأنظمة تشغيل، لذا فإنها لا تعطي أي ضمانات للتشغيل الصحيح.</p>\n"
+"\n"
+"<p>التعديل على هذه الإعدادات يمكن إجراؤه بعد التنصيب عبر تعديل محتوى الملف <tt>config.inc.php</tt> الموجود في حافظة الملفات الرئيسية لنظام المجلات المفتوحة، أو عبر استعمال واجعة إدارة الموقع.</p>\n"
+"\n"
+"<h4>أنظمة قواعد البيانات المدعومة</h4>\n"
+"\n"
+"<p>إن نظام المجلات المفتوحة مجرب حصرياً على MySQL و PostgreSQL، رغم أن أنظمة إدارة قواعد بيانات أخرى مدعومة من قبل <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> قد تعمل (كلياً أو جزئياً). إن تقارير التوافق و/أو حزم البرامجيات لأنظمة إدارة قواعد بيانات بديلة يمكن إرسالها إلى فريق برمجة نظام المجلات المفتوحة.</p>\n"
+""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>خطوات ما قبل التنصيب</h4>\n"
+"\n"
+"\n"
+"<p>1. الملفات وحوافظها الآتية (مع محتوياتها) ينبغي أن تكون قابلة للتعديل:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> قابل للتعديل (إختيارياً): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> قابل للتعديل: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> قابل للتعديل: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> قابل للتعديل: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> قابل للتعديل: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> قابل للتعديل: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. حافظة ملفات لتخزين الملفات المرفوعة إلى الموقع ينبغي إنشاؤها وجعلها قابلة للتعديل (أنظر \"إعدادات الملفات\" أدناه).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>نسخة نظام المجلات المفتوحة {$version}</h4>\n"
+"\n"
+"<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href=\"{$baseUrl}/docs/README.md\">ملف إقرأني</a> و <a href=\"{$baseUrl}/docs/UPGRADE.md\">ملف الترقية</a>المضمنين في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">منتدى الدعم</a> أو زر موقع PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>إنه من <strong>الموصى به بشدة</strong> أن تقوم بالخزن الإحتياطي لقاعدة بيانات النظام وحافظة ملفات التحميل وحافظة ملفات تنصيب النظام قبل المتابعة بعملية الترقية.</p>\n"
+"<p>إن كنت تقوم بالتشغيل عبر <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>، لطفاً، تأكد من أن max_execution_time directive المتوضع في الملف التعريفي php.ini مضبوط على high limit. إن كان الأمر غير ذلك (فإن مؤشرApache's \"Timeout\") سيصل حده الأقصى، وعملية الترقية ستتم مقاطعتها، ولذلك ستتطلب التدخل اليدوي.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"للحصول على دعم كامل لترميز Unicode (UTF-8)، إختر UTF-8 لجميع إعدادات ترميز الحروف. لاحظ أن هذا الدعم يتطلب حالياً أن تكون قواعد البيانات بخوادم MySQL >= 4.1.1 أو PostgreSQL >= 7.1 . فضلاً عن كون الدعم الكامل لترميز Unicode يتطلب PHP >= 4.3.0 مجتمعاً مع دعم مكتبة <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> (ممكنة إفتراضياً في معظم تنصيبات PHP الحالية). قد تواجه صعوبات عند استعمال مجموعات الحروف الإضافية فيما لو كان الملقم الذي تستعمله لا يلبي تلك المتطلبات.\n"
+"<br /><br />\n"
+"ملقمك حالياً يدعم mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "ملقمك حالياً يسمح برفع الملفات: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "ملقمك حالياً يتيح التحميل بالحجم الأقصى البالغ: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "اللغة الأساسية المستعملة في هذا النظام. لطفاً، راجع أدبيات نظام المجلات المفتوحة إن كنت راغباً بدعم النظام بلغة أخرى ليست ضمن هذه القائمة."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "إختر أي لغة أخرى ليدعمها هذا النظام. هذه اللغات ستكون متاحة للمجلات المتضافة في الموقع، كما أنه بالإمكان تنصيب لغات أخرى في أي وقت عبر واجهة إدارة الموقع."
+
+msgid "installer.filesDirInstructions"
+msgstr "أدخل اسم المسار pathname الكامل لحافظة ملفات موجودة حيث تريد حفظ الملفات المحملة. ينبغي أن تكون حافظة الملفات هذه غير متاحة بشكل مباشر لمستعملي المتصفح. <strong>لطفاً، تحقق من وجود حافظة الملفات هذه وأنها قابلة للتعديل قبل التنصيب.</strong> مسارات نظام التشغيل Windows تتطلب استعمال forward slashes، مثلاً: \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "نظام المجلات المفتوحة يتطلب الوصول إلى قاعدة بيانات لحفظ بياناته. أنظر متطلبات النظام أعلاه لمعرفة أنظمة قواعد البيانات المدعومة. في الخانات أدناه، أدرج الإعدادات التي سيستعملها النظام للاتصال بقاعدة البيانات."
+
+msgid "installer.installApplication"
+msgstr "تنصيب نظام المجلات المفتوحة"
+
+msgid "installer.upgradeApplication"
+msgstr "ترقية نظام المجلات المفتوحة"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>تحذير:</strong> إن فشلت عملية التنصيب أثناء تهيئة قاعدة البيانات، قد تضطر إلى طرح قاعدة البيانات بالكامل أو من جداولها على الأقل قبل محاولة إعادة تنصيبها."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>مهم!</h4>\n"
+"<p>برنامج التنصيب لم يتمكن من تعديل ملف الإعدادات آلياً. قبل الشروع بتشغيل هذا النظام، لطفاً، إفتح <tt>config.inc.php</tt> بأي برنامج مناسب لتحرير النصوص واستبدل محتوياته بالنص المبين في الخانة أدناه.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>تنصيب نظام المجلات المفتوحة إكتمل بنجاح.</p>\n"
+"<p>للشروع باستعمال النظام، <a href=\"{$loginUrl}\">أدخل</a> مستعملاً اسم الدخول وكلمة المرور المدخلين في الصفحة السابقة.</p>\n"
+"<p>إن رغبت في أن تكون عضواً في مجتمع مشروع المعرفة العامة، فإمكانك:</p>\n"
+"<ol>\n"
+"\t<li>قراءة <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">مدونة مشروع المعرفة العامة</a> ومتابعة <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">المغذي الخبري</a> للحصول على المستجدات والتحديثات.</li>\n"
+"\t<li>زيارة رابط <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">منتدى الدعم</a> إن كانت لديك أسئلة أو ملاحظات.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>ترقية نظام المجلات المفتوحة إلى النسخة {$version} قد إكتمل بنجاح.</p>\n"
+"<p>لا تنسَ إعادة ضبط الإعداد \"installed\" في ملفك التعريفي config.inc.php إلى <em>On</em>.</p>\n"
+"<p>إن لم يسبق لك التسجيل وترغب في الحصول على الأخبار والتحديثات <strong>لطفاً، سجل في <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> إن كانت لديك استفسارات أو تعليقات، لطفاً، أنقر <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">منتدى الدعم</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion} منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. لطفاً، قم بزيارة <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">هذه الصفحة</a> لتنزيل النسخة الأحدث والعثور على تعليمات الترقية."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion} منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. لطفاً، إتصل بمدير الموقع ({$siteAdminName}، <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) لإبلاغه عن هذا الإصدار الأخير. للمزيد من المعلومات أنظر <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">هنا</a>."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} قام بتنقيح المؤلَّف {$submissionId}. رمز الملف الجديد ID {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} قد تم فكه من تحكيم طلب النشر {$submissionId} خلال جولة التحكيم {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$submissionId} قد بوشر بها."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} قد تم تقييمه خلال الجولة {$round} من تحكيم المؤلَّف {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "تأريخ استيجاب التحكيم للجولة {$round} من تحكيم المؤلَّف {$submissionId} من قبل {$reviewerName}تم ضبطها إلى {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "تم وضع توصية التحكيم في الجولة {$round} من تحكيم المؤلَّف {$submissionId} من قبل {$reviewerName}."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "تم وضع التوصية في الجولة {$round} من تحكيم المؤلَّف {$submissionId} من قبل المحرر {$editorName}، نيابة عن المحكم {$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "طلب النشر {$submissionId} قد أعيد تقديمه للتحكيم."
+
+msgid "log.review.reviewDeclined"
+msgstr "المحكم {$reviewerName} إعتذر خلال الجولة {$round} من تحكيم المؤلَّف {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "المحكم {$reviewerName} وافق خلال الجولة {$round} لتحكيم المؤلَّف {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} إعتذر خلال الجولة {$round} من تحكيم المؤلَّف {$submissionId} نيابة عن المحكم{$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} وافق خلال الجولة {$round} لتحكيم المؤلَّف {$submissionId} نيابة عن المحكم {$reviewerName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "المحرر {$userName}، قام برفع ملف للتحكيم للجولة {$round} للمؤلَّف {$submissionId} نيابة عن المحكم {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "تم رفع ملف أحد المحكمين."
+
+msgid "log.editor.decision"
+msgstr "تم تسجيل قرار المحرر الآتي: ({$decision}) للمؤلَّف {$submissionId} من قبل {$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr "توصية المحرر: ({$decision}) للمؤلَّف {$submissionId} تم تسجيلها من قبل {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "تم الشروع بتدقيق المؤلَّف {$submissionId} من قبل {$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "تم اختيار ملف التدقيق الإفتراضي."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} قد أكمل مرحلة التدقيق الأولي للمؤلَّف {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} قد أكمل مرحلة التدقيق النهائي للمؤلَّف {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} قد تم تعيينه لتدقيق المؤلَّف {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "تم رفع نسخة مدققة من ملف طلب نشر إلى الموقع."
+
+msgid "log.copyedit.authorFile"
+msgstr "تم رفع نسخة مدققة من ملف طلب نشر إلى الموقع من قبل المؤلف."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} قد تم تعيينه كمصمم طباعي للمؤلَّف {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} قد تم فك تعيينه كمصمم طباعي من المؤلَّف {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} قد أكمل مهمة التصميم طباعي للمؤلَّف {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "تم تعديل البيانات الوصفية للمؤلَّف من قبل {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "تم رفع نسخة المحرر من ملف طلب نشر إلى الموقع."
+
+msgid "log.editor.archived"
+msgstr "المؤلَّف {$submissionId} قد تم حفظه."
+
+msgid "log.editor.restored"
+msgstr "المؤلَّف {$submissionId} قد تمت استعادته إلى طابور التحرير."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} قد تم تعيينه كمحرر لطلب النشر {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} قد عين {$proofreaderName} لمهمة القراءة التصحيحية للمؤلَّف {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} قد قدم {$submissionId} للجدولة."
+
+msgid "log.imported"
+msgstr "{$userName} قد استورد المؤلَّف {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "مؤلَّف محكَّم"
+
+msgid "notification.type.editing"
+msgstr "أحداث التحرير"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "مؤلَّف جديد بعنوان \"{$title}\"، قد تم تقديمه."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "تم وضع تعليق على قرار المحرر المتعلق بالمؤلَّف \"{$title}\"."
+
+msgid "notification.type.galleyModified"
+msgstr "تم تعديل لوح الطباعة للمؤلَّف \"{$title}\"."
+
+msgid "notification.type.issuePublished"
+msgstr "أصدرت المجلة عدداً جديداً."
+
+msgid "notification.type.newAnnouncement"
+msgstr "تم إنشاء إعلان جديد."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "تم تقديم نموذج تحكيم للمؤلَّف \"{$title}\"."
+
+msgid "notification.type.reviewing"
+msgstr "أحداث التحكيم"
+
+msgid "notification.type.site"
+msgstr "أحداث الموقع"
+
+msgid "notification.type.submissionComment"
+msgstr "وضع المحرر تعليقاً عن المؤلَّف \"{$title}\"."
+
+msgid "notification.type.submissions"
+msgstr "أحداث طلب النشر"
+
+msgid "notification.type.userComment"
+msgstr "وضع قارئ تعليقاً عن المؤلَّف \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "إشعارات عامة"
+
+msgid "notification.savedIssueMetadata"
+msgstr "البيانات الوصفية لنشر العدد قد تم حفظها."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "مؤلَّف جديد تم تقديمه وهو بحاجة إلى تعيينه لمحرر."
+
+msgid "notification.type.assignProductionUser"
+msgstr "عين أحد المستخدمين لإنشاء الألواح الطباعية مستعملاً رابط التعيين في قائمة المشاركين."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "الألواح الطباعية قيد الانتظار."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "الوصول متعذر! لم يتم تعيينك كمدقق لهذا المؤلَّف."
+
+msgid "user.authorization.noContext"
+msgstr "لا مجلة في هذا السياق!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "أنت تحاول الوصول إلى مؤلَّف ليس ضمن القسم الخاص بك."
+
+msgid "user.authorization.invalidIssue"
+msgstr "تم طلب عدد غير موجود!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "تقديم المدقق غير صحيح، أو لم تتم المطالبة به!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "قائمة العملات المحملة \"{$filename}\" من ملف بصيغة XML"
+
+msgid "grid.action.createContext"
+msgstr "إنشاء مجلة جديدة"
+
+msgid "editor.navigation.issues"
+msgstr "الأعداد"
+
+msgid "notification.type.approveSubmission"
+msgstr "طلب النشر هذا ينتظر حالياً الموافقة اللازمة ليظهر ضمن العدد."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "بانتظار الموافقة."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "التسجيل في المجلات الأخرى"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "إخفاء المجلات الأخرى"
+
+msgid "article.view.interstitial"
+msgstr "لطفاً، إختر ملف المؤلَّف لتنزيله."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "موافق عليه"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "ينتظر الموافقة"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "موافقة اللوح الطباعي"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>وافق على نشر هذا اللوح الطباعي.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>إلغاء الموافقة على هذا اللوح الطباعي.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "فهرسة \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "تطبيق هذا البحث لا يسمح بإعادة الفهرسة على مستوى المجلة الواحدة."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "إن مسار المجلة \"{$journalPath}\" تعذر الوصول منه إليها."
+
+msgid "editor.issues.backIssues"
+msgstr "الأعداد السابقة"
+
+msgid "editor.issues.futureIssues"
+msgstr "الأعداد المستقبلية"
+
+msgid "navigation.subscriptions"
+msgstr "الاشتراكات"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} قد تولى مهمة تحرير المؤلَّف {$submissionId}."
+
+msgid "catalog.sortBy"
+msgstr "ترتيب المقالات"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "إختر كيفية ترتيب المقالات ضمن هذا القطاع."

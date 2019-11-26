@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:48+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:48+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Модуль «Пользователи в XML»"
+
+msgid "plugins.importexport.users.description"
+msgstr "Импортирует и экспортирует пользователей"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Вызов: {$scriptName} {$pluginName} [команда] ...\n"
+"Команды:\n"
+"\timport [ИмяФайлаXML] [путь_журнала]\n"
+"\texport [ИмяФайлаXML] [путь_журнала]\n"
+"\texport [ИмяФайлаXML] [путь_журнала] [IdПользователя1] [IdПользователя2] ...\n"
+""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Примеры:\n"
+"\tИмпортировать пользователей в myJournal из файла myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tЭкспортировать всех пользователей из myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tЭкспортировать всех пользователей, указанных своими ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Импортировать пользователей"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Выберите файл данных XML, содержащий информацию о пользователях, для импорта в этот журнал. Подробности о формате этого файла смотрите в помощи журнала.<br /><br />Обратите внимание, что если импортируемый файл содержит имена пользователей или адреса электронной почты, уже существующие в системе, то данные для этих пользователей не будут импортированы, а все новые роли, которые должны были быть созданы, будут назначены существующим пользователям."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Файл с данными пользователей"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Отправить каждому импортированному пользователю уведомление по электронной почте с указанием его имени пользователя и пароля."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Продолжить импорт остальных пользователей при возникновении ошибки."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Следующие пользователи были успешно импортированы в систему"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "При импорте произошли ошибки"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Подтвердите, что это те самые пользователи, которых вы хотите импортировать в систему"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Предупреждение"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Нельзя использовать пароли, хэшированные алгоритмом {$importHash}; OJS сейчас настроен на использование {$ojsHash}. Если вы продолжите, то вам будет необходимо сбросить пароли импортированных пользователей."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Был указан неизвестный путь журнала «{$journalPath}»."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Экспортировать пользователей"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Экспортировать по ролям"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Экспортировать всех"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "При экспорте произошли ошибки"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Не могу записать в файл «{$fileName}»."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "Импорт выполнен успешно. Пользователи с их именами пользователей и адресами электронной почты, которые еще не использовались, были импортированы вместе с соответствующими группами пользователей."
+
+msgid "plugins.importexport.users.results"
+msgstr "Результаты"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Пожалуйста, загрузите файл в раздел «Импортировать пользователей», чтобы продолжить."

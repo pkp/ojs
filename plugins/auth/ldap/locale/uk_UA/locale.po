@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:38+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:38+00:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Цей модуль дозволяє аутентифікацію та синхронізацію облікових записів користувачів засобами зовнішніх джерел даних LDAP."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Налаштування LDAP"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Ім'я хоста серверу"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "наприклад, \"ldap.example.com\" або \"ldaps://ldap.example.com\" (для використання SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Порт серверу"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Необов'язкове. За замовчуванням 389 (LDAP) або 636 (LDAP через SSL)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "База DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "наприклад, \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "DN менеджера"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "наприклад, \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Пароль менеджера"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "DN та пароль менеджера необхідні лише у випадку, якщо дозволена синхронізація профіля/пароля користувача або опції створення користувача. Якщо LDAP буде використовуватися виключно для аутентифікації, ці опції можуть бути опущені."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Атрибут імені облікового запису"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Атрибут, який унікально ідентифікує користувача як об'єкт, наприклад, uid, cn або sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Шифрування пароля"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Налаштування SASL (необов'язкове)"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Механізм SASL"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "наприклад, \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Realm"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Неохідний authorization ID"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Параметри безпеки SASL"

@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:19+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:19+00:00\n"
+"Language: \n"
+
+msgid "plugins.themes.default.name"
+msgstr "Усталена тема оформлення"
+
+msgid "plugins.themes.default.description"
+msgstr "Застосовує усталену тему оформлення."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Типографія"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Виберіть комбінацію шрифтів, що пасує для цього журналу."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr "Noto Sans: екранний шрифт, розроблений Google для підтримки великої кількості мов."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: варіант екранного шрифту Google з засічками (антиква)."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr "Noto Serif/Noto Sans: поєднання шрифту з засічками (антиква) для заголовків та без засічок (гротеск) для основного тексту."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr "Noto Sans/Noto Serif: поєднання шрифту без засічок (гротеск) для заголовків та з засічками (антиква) для основного тексту."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: популярний сучасний шрифт без засічок (гротеск)."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: широкоформатний шрифт з засічками (антиква), зручний для читання з електронних пристроїв."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr "Lora/Open Sans: поєднання шрифту з засічками (антиква) для заголовків та без засічок (гротеск) для основного тексту."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Колір"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Виберіть колір верхнього колонтитулу."

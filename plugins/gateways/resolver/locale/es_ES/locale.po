@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:51+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:51+00:00\n"
+"Language: \n"
+
+msgid "plugins.gateways.resolver.displayName"
+msgstr "Módulo Resolver"
+
+msgid "plugins.gateways.resolver.description"
+msgstr "Este módulo obtiene números y artículos basado en información de citas."
+
+msgid "plugins.gateways.resolver.errors.errorMessage"
+msgstr "No se ha podido resolver una entidad basada en la información de la cita especificada. Por favor asegúrese que la información de la cita es comprensible y se refiere a una entidad de esta instalación de OJS."
+
+msgid "plugins.gateways.resolver.exportHoldings"
+msgstr "Exportación Participaciones"

@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:18+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Tilknyttede tidsskrifter"
+
+msgid "admin.settings.redirect"
+msgstr "Omdirigering af tidsskrift"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Forespørgsler til hovedwebstedet omdirigeres til dette tidsskrift. Dette kan f.eks. være nyttigt, hvis webstedet kun er vært for et enkelt tidsskrift."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Dette er standardsproget for webstedet og alle tilknyttede tidsskrifter."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Vælg alle de landestandarder, der skal understøttes på webstedet. De valgte landestandarder kan benyttes af alle de tidsskrifter, der er tilknyttet webstedet, og vises også i en sprogvalgsmenu, der vises på hver enkelt side på webstedet (kan tilsidesættes på tidsskriftsspecifikke sider). Hvis der ikke vælges flere landestandarder, vises sprogvalgsmenuen ikke, og udvidede sprogindstillinger vil ikke være tilgængelige for tidsskrifter."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Er du sikker på, at du vil fjerne denne landestandard? Denne handling kan påvirke alle tilknyttede tidsskrifter, der i øjeblikket benytter landestandarden."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Vælg yderligere landestandarder, du vil installere understøttelse af i dette system. Landestandarder skal installeres, inden de kan benyttes af tilknyttede tidsskrifter. Se dokumentationen til OJS for at få oplysninger om understøttelse af nye sprog."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Overførslen af landestandarden mislykkedes. Fejlen er beskrevet i nedenstående fejlmeddelelse(r)."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Landestandarden \"{$locale}\" er blevet installeret."
+
+msgid "admin.languages.download"
+msgstr "Hent landestandard"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Det er ikke muligt at åbne sprogbeskrivelsen fra PKP-webstedet."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Det er ikke muligt at føje den nye landestandard til landestandardens registreringsdatabasefil, normalt \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS-brugerdatabase"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Aktiver synkronisering af brugerprofil (hvis dette understøttes af denne godkendelses-plug-in). Oplysningerne om brugerprofil opdateres automatisk fra fjernkilden, når en bruger logger på, og de profilændringer (herunder ændringer af adgangskode), der er foretaget i OJS, opdateres automatisk på fjernkilden. Hvis denne indstilling ikke aktiveres, holdes oplysninger om OJS-profiler adskilt fra oplysninger om fjernkildeprofiler."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Aktiver ændring af brugeradgangskode (hvis dette understøttes af denne godkendelses-plug-in). Hvis denne indstilling aktiveres, kan brugere ændre deres adgangskode i OJS og bruge OJS-funktionen \"mistet adgangskode\" til at nulstille en glemt adgangskode. Disse funktioner vil ikke være tilgængelige for brugere med denne godkendelseskilde, hvis denne indstilling ikke aktiveres."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Aktiver oprettelse af bruger (hvis dette understøttes af denne godkendelses-plug-in). De brugere, der oprettes i OJS med denne godkendelseskilde, føjes automatisk til fjerngodkendelseskilden, hvis de ikke allerede findes. Hvis denne kilde er standardgodkendelseskilden, føjes de OJS-konti, der er oprettet via brugerregistrering, også til fjerngodkendelseskilden."
+
+msgid "admin.systemVersion"
+msgstr "OJS-version"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS-konfiguration"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS-konfigurationsindstillinger fra <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Tidsskriftsindstillinger"
+
+msgid "admin.journals.noneCreated"
+msgstr "Der er ikke oprettet nogen tidsskrifter."
+
+msgid "admin.contexts.create"
+msgstr "Opret tidsskrift"
+
+msgid "admin.journals.createInstructions"
+msgstr "Du vil automatisk blive registreret som chef for dette tidsskrift. Når du har oprettet et nyt tidsskrift, skal du som chef registrere det for at kunne fortsætte med dets konfiguration og brugertilmelding."
+
+msgid "admin.journals.urlWillBe"
+msgstr "Tidsskriftets URL-adresse er {$sampleUrl}"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "En sti er påkrævet."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Stien må kun indeholde alfanumeriske tegn, understregningstegn og bindestreger og skal begynde og slutte med et alfanumerisk tegn."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Den valgte sti bruges allerede af et andet tidsskrift."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Offentliggør dette tidsskrift på webstedet"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Tidsskriftsbeskrivelse"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Eksisterende tidsskriftssti eller sti, der skal oprettes (f.eks. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importer abonnementer"
+
+msgid "admin.journals.transcode"
+msgstr "Omsæt kode for artikelmetadata fra ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Gererer kode for at mappe OJS 1 URL's til OJS 2 URL's"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Importstien er påkrævet."
+
+msgid "admin.journals.importErrors"
+msgstr "Importen mislykkedes"
+
+msgid "admin.mergeUsers"
+msgstr "Flet brugere"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Flet bruger"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Vælg en bruger, som skal tilskrives den tidligere brugers forfatterskab, redigeringsopgaver osv."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Vælg en bruger, som skal flettes til en anden brugerkonto (f.eks. hvis en person har to brugerkonti). Den først valgte konto slettes, og dens manuskripter, tildelinger osv. tilskrives den anden konto."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Alle tilmeldte brugere"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Er du sikker på, at du vil flette kontoen med brugernavnet {$oldAccountCount} til kontoen med brugernavnet \"{$newUsername}\"? Kontoen med brugernavnet {$oldAccountCount} vil derefter ophøre med at eksistere. Denne handling kan ikke fortrydes."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Ingen tilmeldte brugere."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "De markerede landestandarder kan være ufuldstændige"
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"Jeres OJS-installation er konfigureret til at registrere mere end en metrisk brugerenhed. Brugerstatistikker vil blive fremvist i flere forskellige sammenhænge.\n"
+"\t\tDer er tilfælde, hvor en enkelt brugerstatistik skal anvendes, f.eks. ved visning af en sorteret liste over mest anvendte artikler eller ved rangering af\n"
+"\t\tsøgeresultater. Vælg én af de konfigurerede metriske enheder som standard."
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Open Access meddelelse"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Påmindelse om abonnementes udløb"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Titel mangler."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Er du sikker på, at du vil deaktivere denne landestandard? Det kan påvirke de hostede tidsskrifter, der måtte anvende landestandarden."
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Påmindelse om bedømmelse"
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Download af sprogpakker fra Public Knowledge Project's web-server er ikke muligt på nuværende tidspunkt fordi:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Din server har ikke eller tillader ikke afvikling af GNU \"tar\"-værktøjet.</li>\n"
+"\t\t<li>OJS kan ikke ændre landekode-registerfilen, typisk \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Sprogpakker kan downloades manuelt fra <a href=\"http://pkp.sfu.ca\"> PKPs websted </a>.</p>"

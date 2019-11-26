@@ -1,0 +1,153 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:33+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:33+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Предај рад"
+
+msgid "submission.submit.userGroup"
+msgstr "Предај у мојој улози као..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Одаберите саставни део рада"
+
+msgid "submission.title"
+msgstr "Наслов рада"
+
+msgid "submission.title.tip"
+msgstr "Врста рада је обично \"слика\", \"текст\" или неки друа врста мултимедије, укључујући и 'софтвер' или 'интерактивни рад'. Одаберите најрелевантнију за ваш рад. Примере можете видети на следећој страници <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Започните предају новог рада у"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Предаја новог рада"
+
+msgid "grid.action.workflow"
+msgstr "Процес предаје"
+
+msgid "submission.issueEntry"
+msgstr "Метаподаци"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Часопис је обавештен о вашој предају и послата вам је имејл порука са потврдом ваших података. Када уредници прегледа предају контактираће вас."
+
+msgid "grid.action.issueEntry"
+msgstr "Погледај метаподатке предаје"
+
+msgid "submission.publication"
+msgstr "Публикације"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Јавни идентификатори предаје су ажурирани."
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Омогући овај фајл приказа"
+
+msgid "submission.galleyFiles"
+msgstr "Фајлови приказа"
+
+msgid "grid.action.approveProof"
+msgstr "Одобри пртобну копију за укључивање у приказ."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Ова пробна копија је одобрена за укључивање у приказ."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Наслов и апстракт"
+
+msgid "submission.pageProofs"
+msgstr "Лектура"
+
+msgid "submission.confirmSubmit"
+msgstr "Да ли сте сигурни да желите да предате овај рад у часопис?"
+
+msgid "workflow.review.externalReview"
+msgstr "Рецензија"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Пошаљи на рецензирање"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Метаподаци предаје су ажурирани."
+
+msgid "submission.upload.fileContents"
+msgstr "Делови рада"
+
+msgid "submission.complete"
+msgstr "Одобрено"
+
+msgid "submission.incomplete"
+msgstr "Чекам одобрење"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Одаберите језик предаје."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Чеклиста предаје"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Морате прочитати и потврдити да сте испунили све захтеве пре наставка."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Изјава о приватности"
+
+msgid "submission.submit.contributorRole"
+msgstr "Улоге сарадника"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Потребан је барем један аутор."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Имена, презимена и имејл адресе свих аутора су неопходни."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Унесите наслов рада"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Унесите апстракт рада."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Одаберите улогу сарадника."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Захтевани формат цитата није могуће преузети."
+
+msgid "submission.metadataDescription"
+msgstr "Ове спецификације су базиране на Dublin Core сету метаподатака, међународном стандарду који се користи за описивање садржаја часописа."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Одаберите капацитет под којим пријављујете овај чланак."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Ова копија се појављује у броју часописа"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Пробна копија чланка \"{$galleyFormatName}\" је доступна."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Пробна копија чланка \"{$galleyFormatName}\" више није доступна."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Одобрење формата"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Ова пробна копија више <em>неће бити доступна</em> за читаоце.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Ова пробна копија ће <em>бити доступна</em> за читаоце.</p>"
+
+msgid "submission.proofReadingDescription"
+msgstr "Графички уредник поставља на сервер фајлове који су спремни за продукцију и који су припремљени за објављивање. Користи <em>Додели ревизора</em> да доделите аутора и друге за финалну проверу пробних копија,са исправљеним фајловима постављеним на сервер за одобрење пре објављивања."
+
+msgid "submission.submit.upload.description"
+msgstr "Поставите на сервер фајлове у вези овог чланка укључујући сам чланак, мултимедијалне фајлове, сетове података, уметнички рад и сл."

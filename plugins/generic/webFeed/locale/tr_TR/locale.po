@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:34+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:34+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Web Besleme Eklentisi"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Bu eklenti son sayı için RSS/Atom web sendikasyon beslemelerini üretir."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Ayarlar"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Yalnızca sayı sayfalarında web besleme bağlantılarını görüntüler."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "Sadece anasayfa ve konu sayfalarında web besleme bağlantılarını görüntüler."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Tüm dergi sayfalarında web besleme bağlantılarını görüntüler."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Yayımlanmış güncel sayıda öğeleri görüntüler."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "en son yayınlanan öğeler."
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "En son yayınlanan ürün için pozitif bir tamsayı giriniz."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Atom logosu"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "RSS1 logosu"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "RSS2 logosu"
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Son öğelerin sayısını görüntüleyin."

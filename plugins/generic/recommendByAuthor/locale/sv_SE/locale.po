@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:21+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:21+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Rekommenderade artiklar av samma författare"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr "Det här pluginet infogar en lista på artiklar av samma författare på artikelns abstractsida."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Mest lästa artiklar av samma författare"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr "OBS.: Pluginet kräver minst ett statistik/rapport-plugin aktiverat för att fungera. Om dina statistikplugin skapar mer än ett mått, välj då det huvudsakliga måttet på sidan för administratörens sidinställningar och/eller inställningarna för tidskriftsansvarig."

@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:36+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Нове подання"
+
+msgid "author.track"
+msgstr "Активні подання"
+
+msgid "author.competingInterests"
+msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Політика</a> щодо конфлікту інтересів"
+
+msgid "author.submit.submitArticle"
+msgstr "Подати статтю"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "П'ять кроків подання"
+
+msgid "author.submit.startHereTitle"
+msgstr "Розпочати нове подання"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Натисніть сюди</a>, щоб перейти до першого з п'яти кроків подання нової статті."
+
+msgid "author.submit.step1"
+msgstr "Крок 1. Початок подання"
+
+msgid "author.submit.step2"
+msgstr "Крок 2. Вивантаження подання"
+
+msgid "author.submit.step3"
+msgstr "Крок 3. Введення метаданих подання"
+
+msgid "author.submit.step4"
+msgstr "Крок 4. Вивантаження супровідних файлів"
+
+msgid "author.submit.step4a"
+msgstr "Крок 4a. Додати супровідний файл"
+
+msgid "author.submit.step5"
+msgstr "Крок 5. Підтвердження подання"
+
+msgid "author.submit.start"
+msgstr "Початок"
+
+msgid "author.submit.upload"
+msgstr "Вивантаження подання"
+
+msgid "author.submit.metadata"
+msgstr "Введення метаданих"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Вивантаження супровідних файлів"
+
+msgid "author.submit.confirmation"
+msgstr "Підтвердження"
+
+msgid "author.submit.nextSteps"
+msgstr "Наступні кроки"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Ви можете завершити це подання пізніше, вибравши його у списку \"Активні подання\" на своїй персональній сторінці."
+
+msgid "author.submit.notAccepting"
+msgstr "Цей журнал в даний час не приймає рукописів від авторів."
+
+msgid "author.submit.requestWaiver"
+msgstr "Запит про виключення"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Будь ласка, розгляньте можливість зробити виключення та не вимагати оплату за публікацію цієї статті."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "У полі коментарів нижче зазначте причини, чому оплата не повинна стягуватися."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Якщо Ви просите зробити виключення, необхідно вказати причину."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Проходить {$round} раунд рецензування"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Рецензується: необхідні виправлення"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Редагується: на літ. редагуванні"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Редагується: на етапі коректури"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Вивантажити відредаговану версію"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Виправлення коректора"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Ви впевнені, що хочете видалити це незавершене подання?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Переглянути статус"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Немає подань."
+
+msgid "author.submit.journalSection"
+msgstr "Розділ журналу"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Статті повинні бути подані до одного з розділів журналу."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Перед тим, як продовжити, Ви повинні підтвердити всі пункти вимог."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Автори погоджуються з \"Положенням про авторські права\", норми якого будуть застосовані до цього подання, коли і якщо воно буде опубліковане у цьому журналі (нижче можна додати коментарі для редактора)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Перед тим, як продовжити, Ви повинні погодитися з нормами \"Положення про авторські права\"."
+
+msgid "submission.submit.coverNote"
+msgstr "Коментарі для редактора"
+
+msgid "author.submit.comments"
+msgstr "Введіть текст (за бажанням)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Будь ласка, оберіть відповідний розділ журналу для цього подання."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Будь ласка, оберіть мову подання."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Положення про конфіденційність"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Відсортуйте авторів у тому порядку, як вони мають бути вказані у публікації."
+
+msgid "author.submit.reorder"
+msgstr "Відсортувати імена авторів"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Основна контактна особа для редакторів."
+
+msgid "author.submit.addAuthor"
+msgstr "Додати автора"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Видалити автора"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Вкажіть ключові слова для індексації цього подання, відокремлюючи їх одне від одного крапкою з комою (слово1; слово2; слово3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Охарактеризуйте власне дослідження в аспектах його географічних, хронологічних (історичних) або інших меж."
+
+msgid "author.submit.languageInstructions"
+msgstr "Українська=uk; Русский=ru; English=en. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Додаткові коди</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Потрібно вказати, принаймні, одого автора."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Необхідно ввести ім'я, прізвище та email адресу кожного з авторів."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Будь ласка, введіть назву Вашої статті."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Будь ласка, введіть анотацію Вашої статті."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Розмір анотації більший максимально допустимого для цього розділу."
+
+msgid "author.submit.submissionFile"
+msgstr "Файл подання"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Вивантажити файл подання"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Замінити файл подання"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Немає файлів подання."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Ви впевнені, що бажаєте продовжити без вивантаження файлу подання?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Цей необов'язковий крок дозволяє додати до рукопису супровідні файли. Ці файли можуть бути у будь-якому форматі, вони можуть включати (a) інструменти дослідження, (b) набори даних, що відповідають прийнятим нормам дослідницької етики, (c) джерела, які в іншому разі не були б доступні читачам, (d) зображення та таблиці, які не можна подати безпосередньо у файлі тексту рукопису, або інші матеріали, які додають цінності роботі."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Для вивантаження файлу натисніть кнопку \"Зберегти\" (після цього можна буде вивантажити інші файли)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Ви впевнені, що хочете продовжити без вивантаження обраних супровідних файлів?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Жодних супровідних файлів не було додано до цього подання."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Повернутися до супровідних файлів"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Ви впевнені, що хочете видалити цей супровідний файл?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Вивантажити супровідний файл"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Додати супровідний файл"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Редагувати супровідний файл"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Метадані супровідного файлу"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "Для індексації вивантаженого супровідного файлу введіть його метадані."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Супровідний файл"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Автор (або власник) файлу"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Дослідний інструмент"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Дослідні матеріали"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Результати дослідження"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Стенограми"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Аналіз даних"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Набір даних"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Текст першоджерела"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Короткий опис"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Дозволити рецензентам доступ до файлу (без метаданих), оскільки його зміст не суперечить нормам анонімного рецензування."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Вказується лише для матеріалів, які були опубліковані."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Дата отримання даних чи створення дослідного інструменту."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Назва дослідження або іншого джерела походження."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Вкажіть інший тип"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Немає вивантажених файлів."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Будь ласка, введіть назву супровідного файлу."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Будь ласка, введіть ключові слова."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Будь ласка, введіть опис."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Публічний ідентифікатор супровідного файлу вже існує."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Публічний ідентифікатор супровідного файлу"
+
+msgid "author.submit.confirmationDescription"
+msgstr "Для того, щоб надіслати Ваш рукопис до журналу \"{$journalTitle}\" натисніть кнопку \"Підтвердити подання\". Вказана Вами основна контактна особа отримає лист з подякою та зможе відстежувати прогрес редакційного опрацювання роботи, зайшовши на веб-сайт журналу. Дякуємо за інтерес до публікації у виданні \"{$journalTitle}\"."
+
+msgid "author.submit.noFiles"
+msgstr "Жодних файлів не було приєднано до подання."
+
+msgid "author.submit.filesSummary"
+msgstr "Опис файлу"
+
+msgid "author.submit.finishSubmission"
+msgstr "Підтвердити подання"
+
+msgid "author.submit.submissionComplete"
+msgstr "Подання завершено. Дякуємо за Ваш інтерес до журналу \"{$journalTitle}\"."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Вивантажити авторську версію"
+
+msgid "author.article.copyeditedFile"
+msgstr "Відредагований файл"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Авторський файл"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "Для подання рукописів у цей журнал необхідно створити обліковий запис користувача. Це дозволить нашим редакторам працювати з Вашим поданням і сконтактовувати з Вами у випадку, якщо змінюється статус подання або необхідні додаткові відомості про Вас."

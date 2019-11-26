@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:15+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:15+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "المجلات المستضافة"
+
+msgid "admin.settings.appearance.success"
+msgstr "إعدادات مظهر الموقع تغيرت بنجاح."
+
+msgid "admin.settings.config.success"
+msgstr "إعدادات الموقع تغيرت بنجاح."
+
+msgid "admin.settings.info.success"
+msgstr "معلومات تعريف الموقع تغيرت بنجاح."
+
+msgid "admin.settings.redirect"
+msgstr "إعادة توجيه موقع المجلة"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "إجعل الوصول إلى الموقع مؤدياً إلى تصفح هذه المجلة مباشرة. هذا الخيار نافع إن كان الموقع مستضيفاً لمجلة واحدة فقط، على سبيل المثال"
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"        هذا النظام قادر على توثيق معطيات إحصائية عن استعماله بعدة معايير، وتلك المعايير يمكن إظهارها بسياقات متعددة. غير أن هناك حالات\n"
+"        لا بد فيها من اختيار أحد معطيات الاستعمال دون غيرها... منها على سبيل المثال لا الحصر: استعراض قائمة مرتبة هجائياً لأكثر المقالات استعمالاً\n"
+"        أو لتقييم نتائج طلبات البحث (عن معلومات ضمن الموقع)، لذا، لطفاً، إختر أحد المعطيات الإحصائية ليكون بمثابة الاختيار الإفتراضي عموماً\n"
+"\t"
+
+msgid "admin.languages.confirmDisable"
+msgstr "هل أنت متأكد من رغبتك في تعطيل هذه اللغة؟ هذا الأمر سيؤثر على المجلات المستضافة التي تستعمل هذه اللغة حالياً."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>تنزيل حزم اللغة من ملقم مشروع المعرفة العامة غير متاح حالياً لأن:</p>\n"
+"\t<ul>\n"
+"\t\t<li>ملقمك لا يمتلك أو لا يسمح بتنفيذ أداة معالجة ضغط الملفات \"tar\".</li>\n"
+"\t\t<li>نظام المجلات المفتوحة غير قادر على تعديل ملف سجلاته، وهو عادة \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>إن حزم اللغات متاحة للتنزيل يدوياً عبر <a href=\"http://pkp.sfu.ca\">موقع مشروع المعرفة العامة</a>.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "ستكون هذه اللغة هي الإفتراضية للموقع ولأي مجلة يستضيفها"
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "إختر أي من اللغات التي من المفترض أن يدعمها الموقع. حيث أن تلك اللغات ستكون متاحة لتظهر بها أي مجلة يستضيفها هذا الموقع، كما أنها ستظهر ضمن قائمة إختيار اللغة المتاحة للمستخدم المستعرض للموقع، (والتي بالإمكان تجاوزها في بعض الصفحات المتخصصة فقط). فيما لو تم الاقتصار على لغة واحدة، فإن قائمة تقليب اللغات لن تكون ظاهرة للمستخدم، كما أن الإعدادات الإضافية المتعلقة باللغات لن تكون متاحة للمجلات المستضافة في الموقع."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "اللغات المعلمة بالنجمة قد تكون غير مكتملة"
+
+msgid "admin.languages.confirmUninstall"
+msgstr "هل أنت متأكد من رغبتك في تغييب هذه اللغة عن الموقع؟ إذ قد يؤثر هذا الأمر على أيٍّ من المجلات التي تستعملها حالياً"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "إختر أي من اللغات الإضافية لتنصيب الدعم لها في هذا الموقع. إذ لا بد من تنصيبها قبل أن تستعملها المجلات المستضافة في الموقع. أنظر ما هو مكتوب في وثيقة النظام لمزيد من المعلومات التي تتعلق بإضافة الدعم للغات جديدة"
+
+msgid "admin.languages.downloadFailed"
+msgstr "فشل تحميل اللغة، الوصف أدناه يشرح سبب الفشل"
+
+msgid "admin.languages.localeInstalled"
+msgstr "اللغة \"{$locale}\" تم تنصيبها بنجاح"
+
+msgid "admin.languages.download"
+msgstr "تحميل لغة"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "تعذر فتح موَصِّف اللغة من موقع النظام"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "تعذر إضافة اللغة الجديدة إلى سجل اللغات الفعالة، وهو مبدئياً ضمن حافظة الملفات: \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "قاعدة بيانات النظام"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "تمكين مزامنة ملف تعريف المستخدم (إن كانت هذه الوظيفة الإضافية تدعمها). معلومات ملف تعريف المستخدم ستكون عرضة للتحديث تلقائياً من المصدر الخارجي بمجرد ولوج ذلك المستخدم إلى هذا الموقع، وبالمقابل، فإن التحديثات عليه هنا (من ضمنها تعديل كلمة المرور) ستنعكس أيضاً على المصدر الخارجي. فيما لو تم تعطيل هذا الخيار، فإن معلومات ملف تعريف المستخدم ستكون مستقلة عن أي مصدر خارجي"
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "إسمح بتعديل كلمة مرور المستخدم (إن كانت هذه الوظيفة الإضافية تدعمه). تمكين هذه الوظيفة يسمح لمستعملي النظام بتعديل كلمات مرورهم عبره مستفيدين من آلية استعادة (كلمة المرور المفقودة) والتي تقوم بإعادة ضبطها لهم. هذه الوظيفة لن تكون متاحة لهم من مستوى المصادقة هذا فيما لو تم تعطيل هذا الخيار"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "إسمح بإضافة مستخدمين (إن كانت هذه الوظيفة الإضافية تدعمه). المستخدمون المسجلون حديثاً ضمن هذا النظام بمستوى المصادقة هذا، ستتم إضافتهم أيضاً إلى مصدر المصادقة الخارجي إن لم يكونوا مضافين إليه سابقاً. فضلاً عن ذلك، إن كان هذا النظام هو مصدر المصادقة الإفتراضي، فإن حسابات المستخدمين المسجلين عبره ستضاف أيضاً إلى مصدر المصادقة الخارجي بمجرد تسجيلهم هنا"
+
+msgid "admin.systemVersion"
+msgstr "نسخة النظام"
+
+msgid "admin.systemConfiguration"
+msgstr "تهيئة النظام"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "إعدادات ملف التهيئة المأخوذة من <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr "سيتم تلقائياً منحك دور رئيس التحرير في هذه المجلة. بعد إنشاء مجلة جديدة، سيتم توجيهك لضبط إعداداتها من أجل إكمال مرحلة التهيئة الأولية."
+
+msgid "admin.journals.journalSettings"
+msgstr "إعدادات المجلة"
+
+msgid "admin.journals.noneCreated"
+msgstr "لم تتم استضافة أي مجلة بعد"
+
+msgid "admin.contexts.create"
+msgstr "استضف مجلة"
+
+msgid "admin.journals.urlWillBe"
+msgstr "ينبغي أن يكون بشكل كلمة واحدة قصيرة أو اختصاراً يعرِّف المجلة. رابط المجلة سيكون {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "العنوان مطلوب حتماً."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "المسار مطلوب حتماً"
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "تسمية المسار متوقع لها أن تتكون من سلسلة حروف إنجليزية وأرقام وشُرط تحتية وواصلات، ولا بد لها أن تبدأ وتنتهي بحرف إنجليزي أو رقم حصراً"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "المسار الذي أدخلته سبق وأن استُعمل لمجلة أخرى"
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} قد تم إنشاؤها بنجاح."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} قد تم تعديلها بنجاح."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "إسمح لهذه المجلة بالظهور علانية في الموقع"
+
+msgid "admin.contexts.contextDescription"
+msgstr "وصف المجلة"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "المسار الحالي للمجلة، أو المسار المزمع إنشاؤه، مثلاً: \"ojs\""
+
+msgid "admin.journals.importSubscriptions"
+msgstr "استورد إشتراكات"
+
+msgid "admin.journals.transcode"
+msgstr "حول ترميز البيانات الوصفية من صيغة ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "ولِّد ترميزاً لنقل روابط النظام من شكلها في الإصدار الأول إلى شكلها في الإصدار الثاني"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "مسار الاستيراد مطلوب حتماً"
+
+msgid "admin.journals.importErrors"
+msgstr "تعذر إكمال الاستيراد بنجاح"
+
+msgid "admin.mergeUsers"
+msgstr "ضم المستخدمين"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "ضم المستخدم"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "إختر مستخدماً لمنحه سمات المستخدم السابق من صلاحيات ومهام التحرير... إلخ."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "إختر مستخدماً واحداً (أو أكثر) ليتم ضمهم إلى حساب مستخدم آخر، (على سبيل المثال: عندما يكون لمستخدم واحد أكثر من حساب في الموقع). جميع الحساب/الحسابات التي تم تحديدها بدءاً سيتم حذفها، لذلك فإن طلبات التقديم والمهام... إلخ المتعلقة بها ستصير متعلقة بالحساب الثاني"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "كل المستخدمين المسجلين"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "هل أنت متأكد من رغبتك في ضم المستخدمين المحددين البالغ عددهم {$oldAccountCount} ضمن حساب المستخدم ذو اسم الدخول \"{$newUsername}\"؟ إن جميع تلك الحسابات ستزول من الموقع بعد إتمام هذه العملية والتي لا سبيل إلى التراجع عنها لاحقاً. لاحظ أن عدد الحسابات المعنية بالضم هو {$oldAccountCount}"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "لا أحد مسجل في الموقع بعد"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "منبه انتهاء صلاحية الاشتراك"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "إشعارات الوصول المفتوح"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "منبه التحكيم"

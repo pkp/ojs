@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:27+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Nettstedets tidsskrift"
+
+msgid "admin.settings.redirect"
+msgstr "Tidsskriftomdirigering"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Dette vil bli standard språk for nettstedet og alle de tidsskriftene det er vert for."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Velg alle lokalinnstillinger som nettstedet skal støtte. De valgte lokalinnstillingene vil bli tilgjengelig til bruk for alle tidsskrift nettstedet er vert for, og de vil også bli vist i en språkvalgmeny som vil vises på hver nettstedside (men som kan overstyres på tidsskriftspesifikke sider). Hvis multiple lokalinnstillinger ikke er valgt, vil språkvekslingsmenyen ikke bli vist og utvidete språkinnstillinger vil ikke være tilgjengelig for tidsskriftet."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Er du sikker på at du vil avinstallere denne lokalinnstillingen? Dette kan påvirke alle lokale tidsskrift som for tiden bruker lokalinnstillingen."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Velg øvrige lokalinnstillinger å installere støtte for i dette systemet. Lokalinnstillinger må være installert før de kan brukes av lokale tidsskrift. Konsulter OJS-dokumentasjonen for informasjon om å legge til støtte for flere språk."
+
+msgid "admin.auth.ojs"
+msgstr "OJS brukerdatabase"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Slå på brukerprofilsynkronisering (hvis støttet av denne programutvidelse for autentisering). Brukerprofilinformasjon vil bli automatisk oppdatert fra den eksterne kilden når en bruker logger inn, og profilendringer (herunder passordendringer) som gjøres innenfor OJS vil bli automatisk oppdatert på den eksterne kilden. Hvis denne valgmuligheten ikke er slått på, vil OJS profilinformasjon bli holdt atskilt fra den eksterne kildens profilinformasjon."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Slå på endring av brukerpassord (hvis støttet av denne programutvidelsen for autentisering). Ved å slå på denne valgmuligheten tillates brukere å endre passordet sitt innenfra OJS og å bruke OJS' \"mistet passord\"-funksjon for å lage seg nytt passord. Disse funksjonene vil ikke være tilgjengelig for brukere hos denne autentiseringskilden, hvis denne valgmuligheten ikke er slått på."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Slå på brukeroppretting (hvis støttet av denne programutvidelsen for autentisering). Brukere opprettet innenfor OJS med denne autentiseringskilden vil automatisk bli lagt til i den eksterne autentiseringskilden, hvis de ikke allerede finnes der. Hvis denne kilden er default valideringskilde, vil dessuten alle OJS-kontoer opprettet gjennom brukerregistrering også bli lagt til i den eksterne valideringskilden."
+
+msgid "admin.systemVersion"
+msgstr "OJS-versjon"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS-konfigurasjon"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS-konfigurasjonsinnstillinger fra <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Tidsskriftinnstillinger"
+
+msgid "admin.journals.noneCreated"
+msgstr "Ingen tidsskrift er opprettet."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Er du sikker på at du vil slette dette tidsskriftet for alltid, også alt innhold?"
+
+msgid "admin.contexts.create"
+msgstr "Opprett tidsskrift"
+
+msgid "admin.journals.urlWillBe"
+msgstr "Dette bør være ett enkelt kort ord eller akronym som identifiserer tidsskriftet. Tidsskriftets URL vil bli {$sampleUrl}"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "En tittel er påkrevet."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "En filsti er påkrevet."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Filstien kan bare inneholde alfanumeriske tegn, understrek og bindestrek, og må begynne og slutte med et alfanumerisk tegn."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Den valgte filstien er allerede tatt i bruk av et annet tidsskrift."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Tillat at dette tidsskriftet vises offentlig på nettstedet"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Tidsskriftbeskrivelse"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Eksisterende tidsskriftfilsti, eller filsti som skal opprettes (for eks. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importer abonnement"
+
+msgid "admin.journals.transcode"
+msgstr "Artikkelens Transcode-metadata fra ISO8859-1"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Filsti for import er påkrevet."
+
+msgid "admin.journals.importErrors"
+msgstr "Importeringen var ikke vellykket"
+
+msgid "admin.languages.downloadLocales"
+msgstr "Last ned oversatte lokalfiler"
+
+msgid "admin.languages.downloadFailed"
+msgstr "Noe gikk galt med nedlastingen av oversatte lokalfiler. Se feilmeldingen(e) nedenfor."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Den oversatte lokalfilen \"{$locale}\" ble installert."
+
+msgid "admin.languages.download"
+msgstr "Last ned oversatte lokalfiler"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Språkdeskriptoren fra PKP-nettstedet lar seg ikke åpne."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Kan ikke legge til de oversatte lokalfilene i registerfilen for lokalfiler, som vanligvis heter \"registry/locales.xml\"."
+
+msgid "admin.journals.redirect"
+msgstr "Generer kode for å oversette OJS 1 URLs to OJS 2 URLs"
+
+msgid "admin.mergeUsers"
+msgstr "Slå sammen brukere"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Slå sammen bruker"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Velg en bruker som du vil overføre den forrige brukerens oppgaver til: forfatterskap, redaktøroppgaver m.m."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Velg en bruker du vil slå sammen med en annen brukerkonto (for eks. når noen har to brukerkontoer). Den brukeren du velger først slettes, og elementer og oppgaver føres over til den andre brukeren."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Alle vervete brukere"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Er du sikker på at du vil slå sammen brukerkontoen med navnet \"{$oldUsername}\" med kontoen med brukernavnet \"{$newUsername}\"?  Etterpå finnes ikke brukerkontoen med navnet \"{$oldUsername}\" lenger. Denne handlingen kan ikke omgjøres."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Ingen vervete brukere"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Merkede lokaliseringsfiler kan være ukomplette."

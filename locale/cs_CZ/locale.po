@@ -1,0 +1,2037 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:18+00:00\n"
+"Language: \n"
+
+msgid "navigation.categories"
+msgstr "Kategorie"
+
+msgid "navigation.categories.browse"
+msgstr "Procházet"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Pro vyplnění formuláře recenze klikněte na ikonu."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vyplňte prosím požadované položky."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Jste si jisti, že chcete označit tento úkol jako dokončený? Poté nebudete mít možnost provést změny."
+
+msgid "common.payment"
+msgstr "Platba"
+
+msgid "common.payments"
+msgstr "Platby"
+
+msgid "common.homePageHeader.altText"
+msgstr "Záhlaví domácí stránky"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Obrázek domácí stránky časopisu"
+
+msgid "navigation.journalHelp"
+msgstr "Nápověda časopisu"
+
+msgid "navigation.current"
+msgstr "Aktuální"
+
+msgid "navigation.otherJournals"
+msgstr "Další časopisy"
+
+msgid "navigation.browseByIssue"
+msgstr "Podle čísla"
+
+msgid "navigation.browseByAuthor"
+msgstr "Podle autora"
+
+msgid "navigation.infoForAuthors"
+msgstr "Pro autory"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Pro knihovníky"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Směrnice pro střet zájmů"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informace pro autory"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informace pro knihovníky"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Nepřidělené"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Nepřidělené"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Právě editované příspěvky"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Editované"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Příspěvky v recenzním řízení"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "V recenzním řízení"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archivy"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archivy"
+
+msgid "common.queue.long.active"
+msgstr "Aktivní příspěvky"
+
+msgid "common.queue.short.active"
+msgstr "Aktivní"
+
+msgid "common.queue.long.completed"
+msgstr "Archiv"
+
+msgid "common.queue.short.completed"
+msgstr "Archiv"
+
+msgid "section.section"
+msgstr "Sekce"
+
+msgid "section.sections"
+msgstr "Sekce časopisu"
+
+msgid "section.title"
+msgstr "Název sekce"
+
+msgid "section.abbreviation"
+msgstr "Zkratka"
+
+msgid "section.abbreviation.example"
+msgstr "(Například články=ČL)"
+
+msgid "article.article"
+msgstr "Článek"
+
+msgid "article.articles"
+msgstr "Články"
+
+msgid "common.publication"
+msgstr "Článek"
+
+msgid "common.publications"
+msgstr "Články"
+
+msgid "article.submissionId"
+msgstr "ID příspěvku"
+
+msgid "article.title"
+msgstr "Název"
+
+msgid "article.authors"
+msgstr "Autoři"
+
+msgid "article.indexingInformation"
+msgstr "Informace pro indexaci"
+
+msgid "article.metadata"
+msgstr "Metadata"
+
+msgid "article.journalSection"
+msgstr "Sekce časopisu"
+
+msgid "article.file"
+msgstr "Soubor"
+
+msgid "article.suppFile"
+msgstr "Doplňkový soubor"
+
+msgid "article.suppFiles"
+msgstr "Doplňkový/é soubor/y"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Doplň. soubory"
+
+msgid "article.discipline"
+msgstr "Akademická disciplína a subdisciplíny"
+
+msgid "article.subject"
+msgstr "Klíčová slova"
+
+msgid "article.coverage"
+msgstr "Dosah"
+
+msgid "article.type"
+msgstr "Typ, metoda nebo přístup"
+
+msgid "article.language"
+msgstr "Jazyk"
+
+msgid "article.sectionEditor"
+msgstr "ES"
+
+msgid "article.commentsToEditor"
+msgstr "Komentář autora"
+
+msgid "article.submission"
+msgstr "Příspěvek"
+
+msgid "article.submissions"
+msgstr "Příspěvky"
+
+msgid "article.abstract"
+msgstr "Abstrakt"
+
+msgid "article.details"
+msgstr "Detaily"
+
+msgid "article.coverPage.altText"
+msgstr "Obrázek obalu"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Otevřený přístup"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Omezený přístup"
+
+msgid "article.comments.sectionDefault"
+msgstr "Výchozí"
+
+msgid "article.comments.disable"
+msgstr "Zakázat"
+
+msgid "article.comments.enable"
+msgstr "Povolit"
+
+msgid "article.fontSize"
+msgstr "Velikost fontu"
+
+msgid "article.fontSize.small.altText"
+msgstr "Malý"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Střední"
+
+msgid "article.fontSize.large.altText"
+msgstr "Velký"
+
+msgid "submission.submissionEditing"
+msgstr "Editování příspěvku"
+
+msgid "submission.changeSection"
+msgstr "Změnit na"
+
+msgid "submission.sent"
+msgstr "Odesláno"
+
+msgid "submission.editorDecision"
+msgstr "Rozhodnutí editora"
+
+msgid "submission.round"
+msgstr "Kolo&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Posudek editora"
+
+msgid "submission.notifyAuthor"
+msgstr "Informovat autora"
+
+msgid "submission.notifyEditor"
+msgstr "Informovat editora"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Evidence e-mailů editora/autora"
+
+msgid "submission.reviewersVersion"
+msgstr "Recenzentem okomentovaná verze souboru"
+
+msgid "submission.postReviewVersion"
+msgstr "Verze souboru po recenzi"
+
+msgid "submission.editorVersion"
+msgstr "Verze editora"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Autorem revidovaná verze souboru"
+
+msgid "submission.authorVersion"
+msgstr "Verze autora"
+
+msgid "submission.copyediting"
+msgstr "Redigování"
+
+msgid "submission.copyedit"
+msgstr "Redigovat"
+
+msgid "submission.proofreading"
+msgstr "Korektura"
+
+msgid "submission.scheduling"
+msgstr "Plánování"
+
+msgid "submission.scheduledIn"
+msgstr "Naplánována publikace v {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(Bude oznámeno)"
+
+msgid "submissions.sec"
+msgstr "Sec"
+
+msgid "submissions.step1"
+msgstr "Krok 1"
+
+msgid "submissions.step3"
+msgstr "Krok 3"
+
+msgid "submissions.queuedReview"
+msgstr "Ve frontě k recenzi"
+
+msgid "submissions.published"
+msgstr "Publikováno"
+
+msgid "submissions.initial"
+msgstr "Počáteční"
+
+msgid "submissions.proofread"
+msgstr "Korektura"
+
+msgid "submissions.initialProof"
+msgstr "Počáteční kontrola"
+
+msgid "submissions.postAuthor"
+msgstr "Po autorovi"
+
+msgid "submissions.reviewRound"
+msgstr "Kolo recenze"
+
+msgid "submissions.proof"
+msgstr "Kontrola"
+
+msgid "submissions.editorDecision"
+msgstr "Rozhodnutí editora"
+
+msgid "submissions.editorRuling"
+msgstr "Pravidla editorování"
+
+msgid "submission.eventLog"
+msgstr "Log událostí"
+
+msgid "submissions.copyeditComplete"
+msgstr "Zredigované"
+
+msgid "submissions.layoutComplete"
+msgstr "Po typografické úpravě"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Po korektuře"
+
+msgid "journal.currentIssue"
+msgstr "Aktuální číslo"
+
+msgid "context.contexts"
+msgstr "Časopisy"
+
+msgid "journal.path"
+msgstr "Cesta"
+
+msgid "context.context"
+msgstr "Časopis"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "user.profile.profileImage"
+msgstr "Profilový obrázek"
+
+msgid "user.showAllJournals"
+msgstr "Zobrazit moje časopisy"
+
+msgid "user.registerForOtherJournals"
+msgstr "Registrovat se do dalších časopisů"
+
+msgid "user.myJournals"
+msgstr "Moje časopisy"
+
+msgid "user.manageMySubscriptions"
+msgstr "Ovládání mého předplatného"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Váš účet není aktuálně asociován s žádným časopisem. Prosím, vyberte si časopis:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Váš účet nemá aktuálně v tomto časopisu žádné role. Vyberte prosím níže akci:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Poslat článek"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Poslat článek: registrace autorů je aktuálně zakázána."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Registrovat se jako recenzent"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Registrovat se jako recenzent: registrace recenzentů je aktuálně zakázána."
+
+msgid "user.role.manager"
+msgstr "Manažer časopisu"
+
+msgid "user.role.subEditor"
+msgstr "Editor sekce"
+
+msgid "user.role.subscriptionManager"
+msgstr "Manažer předplatného"
+
+msgid "user.role.managers"
+msgstr "Manažeři časopisu"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Manažeři předplatného"
+
+msgid "issue.issue"
+msgstr "Číslo"
+
+msgid "issue.issues"
+msgstr "Čísla"
+
+msgid "issue.title"
+msgstr "Název"
+
+msgid "issue.volume"
+msgstr "Ročník"
+
+msgid "issue.number"
+msgstr "Číslo"
+
+msgid "issue.vol"
+msgstr "Vol"
+
+msgid "issue.no"
+msgstr "No"
+
+msgid "issue.year"
+msgstr "Rok"
+
+msgid "issue.noIssues"
+msgstr "Žádná čísla"
+
+msgid "issue.toc"
+msgstr "Obsah"
+
+msgid "issue.abstract"
+msgstr "Abstrakt"
+
+msgid "issue.coverPage.altText"
+msgstr "Titulní stránka"
+
+msgid "issue.fullIssue"
+msgstr "Celé číslo"
+
+msgid "issue.nonpdf.title"
+msgstr "Stažení čísla"
+
+msgid "issue.viewIssue"
+msgstr "Prohlédnout číslo"
+
+msgid "subscriptionTypes.currency"
+msgstr "Měna"
+
+msgid "subscriptionTypes.year"
+msgstr "rok"
+
+msgid "subscriptionTypes.years"
+msgstr "roky"
+
+msgid "subscriptionTypes.month"
+msgstr "měsíc"
+
+msgid "subscriptionTypes.months"
+msgstr "měsíce"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Trvalé"
+
+msgid "subscriptionTypes.format"
+msgstr "Formát"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Tisk"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Tisk a online"
+
+msgid "subscriptions.inactive"
+msgstr "Neaktivní"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.status.active"
+msgstr "Aktivní"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Potřebuje informace"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Potřebuje schválení"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Je očekávána manuální platba"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Je očekávána on-line platba"
+
+msgid "subscriptions.status.other"
+msgstr "Jiné, viz poznámky"
+
+msgid "subscriptions.individualDescription"
+msgstr "Individuální předplatné vyžaduje přihlášení, aby byl umožněn k obsahu předplatného."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Institucionální předplatné nepožaduje login. Uživatelská doména a/nebo IP adresa slouží k umožnění přístupu k obsahu předplatného."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Poznámka:</strong> Institucionální předplatné placené online vyžaduje ověření domény a rozsahu IP adres, aby mohlo být aktivováno."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Událost příspěvku"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Příspěvek odeslán do fronty pro naplánování publikace"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Příspěvek zařazen do čísla"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Článek publikován"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Autorova revize odeslána"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Autorův revidovaný soubor aktualizován"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editor přidělen k příspěvku"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor odebrán od příspěvku"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Editorovo rozhodnutí odesláno"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Editorův soubor aktualizován"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Příspěvek odeslán do archívu"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Příspěvek obnoven z archívu"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Redaktor přidělen k příspěvku"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Redaktor odebrán od příspěvku"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Přidělené redigování zahájeno"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Soubor s revizemi redaktora aktualizován"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Úvodní redigování dokončeno"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Finální redigování dokončeno"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Redigovaný soubor aktualizován"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Korektor přidělen k příspěvku"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Korektor odebrán od příspěvku"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Přidělená korektura zahájena"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Soubor s korekturami aktualizován"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Přidělená korektura dokončena"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Typograf přidělen k příspěvku"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Typograf odebrán od příspěvku"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Typografické úpravy zahájeny"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Sazebnice aktualizována"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Typografické úpravy dokončeny"
+
+msgid "reader.subscribersOnly"
+msgstr "Pouze pro předplatitele"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Pro přístup k položce je vyžadováno předplatné. Přihlaste se do časopisu pro ověření předplatného."
+
+msgid "reader.openAccess"
+msgstr "Volný přístup"
+
+msgid "reader.subscriptionAccess"
+msgstr "Předplacený přístup"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Předplatné nebo placený přístup"
+
+msgid "comments.commentsOnArticle"
+msgstr "Komentáře k tomuto článku"
+
+msgid "comments.authenticated"
+msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Specifikování jiného výchozího zdroje ověření než OJS má následující efekt:</p>\n"
+"<ul>\n"
+"\t<li>Pokud se uživatel pokusí zaregistrovat nový účet na této stránce s uživatelským jménem, které existuje ve zdroji ověření (ale ne v OJS databázi), pokus o registraci je povolen pouze tehdy, pokud je zadané heslo platné pro tento uživatelský účet.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>POZNÁMKA!</h4>\n"
+"<p>Systém nemohl automaticky přepsat konfigurační soubor. K provedení změn konfigurace musíte otevřít <tt>config.inc.php</tt> ve vhodném textovém editoru a nahradit jeho obsah obsahem textového pole níže.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Správa předplatného"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Individuální předplatné"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Institucionální předplatné"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Typy předplatného"
+
+msgid "plugins.categories.auth.description"
+msgstr "Autorizační pluginy umožňují OJS delegovat ověření uživatelů na jiné systémy jako například LDAP servery."
+
+msgid "plugins.categories.generic.description"
+msgstr "Obecné pluginy se používají k rozšíření OJS různými způsoby, které nejsou podporovány jinými kategoriemi pluginů."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Navrhovaná oznámení o copyrightu Creative Commons</h3>\n"
+"<h4>1. Navrhovaná pravidla pro časopisy, které nabízejí otevřený přístup</h4>\n"
+"Autoři, kteří publikují v tomto časopise, souhlasí s následujícími body:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autoři si ponechávají copyright a garantují časopisu právo prvního publikování, přitom je práce zároveň licencována pod <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution licencí</a>, která umožňuje ostatním sdílet tuto práci s tím, že přiznají jejího autora a první publikování v tomto časopisu.</li>\n"
+"\t<li>Autoři mohou vstupovat do dalších samostatných smluvních dohod pro neexkluzivní šíření práce ve verzi, ve které byla publikována v časopise (například publikovat ji v knize), avšak s tím, že přiznají její první publikování v tomto časopisu.</li>\n"
+"\t<li>Autorům je dovoleno a doporučováno, aby zpřístupnili svou práci online (například na svých webových stránkách) před a v průběhu redakčního řízení jejich příspěvku, protože takový postup může vést k produktivním výměnám názorů a také dřívější a vyšší citovanosti publikované práce (Viz <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">Efekt otevřeného přístupu</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4> Navrhovaná pravidla pro časopisy, které nabízejí zpožděný otevřený přístup</h4>\n"
+"Autoři, kteří publikují v tomto časopise, souhlasí s následujícími body:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autoři si ponechávají copyright a garantují časopisu právo prvního publikování, práce je po [SPECIFIKUJTE PO JAK DLOUHÉM ČASOVÉM OBDOBÍ] od publikování zároveň licencována pod <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution licencí</a>, která umožňuje ostatním sdílet tuto práci s tím, že přiznají jejího autora a první publikování v tomto časopisu.</li>\n"
+"\t<li>Autoři mohou vstupovat do dalších samostatných smluvních dohod pro neexkluzivní šíření práce ve verzi, ve které byla publikována v časopise (například publikovat ji v knize), avšak s tím, že přiznají její první publikování v tomto časopisu.</li>\n"
+"\t<li>Autorům je dovoleno a doporučováno, aby zpřístupnili svou práci online (například na svých webových stránkách) před a v průběhu redakčního řízení jejich příspěvku, protože takový postup může vést k produktivním výměnám názorů a také dřívější a vyšší citovanosti publikované práce (Viz <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">Efekt otevřeného přístupu</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Kroky: Fronta příspěvků &gt; Recenze příspěvku &gt; Editování příspěvku &gt; Obsah.<br /><br />\n"
+"Zvolte model, podle kterého bude s těmito aspekty procesu editace nakládáno. (Pro stanovení hlavního editora a editorů sekcí přejděte v části Správa časopisu na stránku Editoři.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Aby mohli čtenáři nalézt online verze prací citovaných autory, jsou dostupné následující možnosti.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Přidat čtenářský nástroj</strong><p>Manažer časopisu může do čtenářských nástrojů, které doprovází publikované položky, přidat funkci „Nalézt referenci“, což čtenářům umožní zkopírovat název reference a vyhledat tak v předvolených databázích citovanou práci.</p></li>\n"
+"\t<li><strong>Vložit odkazy do referencí</strong><p>Typograf může přidat odkaz do referencí, které je možné vyhledat online. K tomu použije následující instrukce (lze je upravovat).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Zablokovat tohoto uživatele? Tato akce zabrání uživateli, aby se přihlásil do systému.\n"
+"\n"
+"Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet zablokován."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Promiňte, nad tímto uživatelem nemáte administrátorská práva. Důvodem může být:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Uživatel je administrátorem stránek</li>\n"
+"\t\t\t<li>Uživatel je aktivní v časopisech, které Vy nespravujete</li>\n"
+"\t\t</ul>\n"
+"\tTento úkol musí provést administrátor stránek.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Zvýrazněné položky indikují, že je vyžadována akce editora.</li>\n"
+"\t<li>\"Termín splnění\" je vyplněn v okamžiku, kdy recenzent přijme žádost o recenzi; ukazuje počet týdnů do termínu splnění nebo (-) počet týdnů po termínu.</li>\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Označené položky vyžadují zásah editora, jednotlivá označení znamenají:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Je požadován zásah ve fázi lektorování</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Je požadován zásah ve fázi rozvržení textu</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Je požadován zásah ve fázi korektur textu</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktivní editorské úkoly"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Dokončené editorské úkoly"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Nebyly přiděleny žádné příspěvky."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Opětovným informováním tohoto redaktora znovu zahájíte jeho úkoly. Určitě si přejete to udělat?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Opětovným informováním tohoto autora znovu zahájíte jeho úkoly. Určitě si přejete to udělat?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Opětovným informováním tohoto typografa znovu zahájíte jeho úkoly. Určitě si přejete to udělat?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Opětovným informováním tohoto korektora znovu zahájíte jeho úkoly. Určitě si přejete to udělat?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Odmítnutí"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Odmítnutí recenzenty, zrušení & předchozí kola"
+
+msgid "sectionEditor.regrets"
+msgstr "Odmítnutí"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Zobrazit odmítnutí, zrušení, předchozí kola"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Recenze, kolo {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Rozhodnutí editora, kolo {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Odmítnutí recenzentem & zrušení"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Odmítnutí"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Výsledek"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Zapsat existujícího uživatele jako recenzenta"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Vytvořit nového recenzenta"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktivní editorské úkoly"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Dokončené editorské úkoly"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Žádné aktivní editorské úkoly."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Úkoly pro typografické úpravy"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Nahrát sazebnicový formát"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Nahradit soubor"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Nahrát doplňkový soubor"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Neplatný formát obrázku. Podporované formáty jsou .gif, .jpg a .png."
+
+msgid "reviewer.pendingReviews"
+msgstr "Články čekající na recenzi"
+
+msgid "reviewer.completedReviews"
+msgstr "Hotové"
+
+msgid "reviewer.averageQuality"
+msgstr "Hodnocení"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Soubor k recenzování"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Informovat editora"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Zpracuji recenzi"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Nemohu zpracovat recenzi"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Příspěvek bude zpřístupněn poté, co recenzent odsouhlasí, že zpracuje recenzi."
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Editor příspěvku"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Zde napište nebo sem nakopírujte komentář recenzenta"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Vyplní editor"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Poslat připomínku"
+
+msgid "reviewer.article.automatic"
+msgstr "(Automaticky)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Doporučení"
+
+msgid "reviewer.article.submitReview"
+msgstr "Odeslat recenzi editorovi"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Komentáře"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Nahrané soubory"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Verze nahraná recenzentem"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Pokud chcete soubor pro editora opatřit poznámkami, uložte ho na Váš pevný disk a použijte Procházet/Nahrát.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Požadavky editora"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Vaše odpověď"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Recenze odeslána"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Termín pro recenzi"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Přijmout příspěvek"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Požadovat přepracování"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Znovu předložit k recenzi"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Podat někde jinde"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Odmítnout příspěvek"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Viz komentáře"
+
+msgid "reviewer.article.schedule"
+msgstr "Plánování"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Příspěvek k recenzování"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Plán recenze"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Kroky recenze"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Instrukce pro recenzenta"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Směrnice pro recenzenty poskytují recenzentům kritéria pro zhodnocení vhodnosti příspěvku pro publikaci v časopise a mohou zahrnovat zvláštní pokyny pro přípravu efektivní a užitečné recenze. Při vlastní recenzi mají recenzenti k dispozici dva rámečky pro volný text, jednak \"pro autora a editora\" a za druhé \"pro editora\". Případně může manažer časopisu vytvořit formulář pro recenze v sekci \"Formuláře recenzí\". Ve všech případech budou mít editoři možnost vložit recenzi do korespondence s autorem."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Informovat editora příspěvku"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "zda zpracujete recenzi."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Pokud budete zpracovávat recenzi, držte se níže uvedených Pokynů pro recenzenta."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Pro stažení a zpracování rezenze souborů spojených s tímto příspěvkem klikněte na názvy těchto souborů."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Prohlašte, zda jste nebo nejste ve střetu zájmů ve vztahu k tomuto výzkumu (viz <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\"> Pravidla upravující střet zájmů</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Střet zájmů"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Pro vložení (nebo nakopírování) Vaší recenze tohoto příspěvku klikněte na ikonu."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Navíc můžete nahrát soubory ke konzultaci pro editora a/nebo autora."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Pro dovršení celého procesu vyberte doporučení a odešlete recenzi. Než vyberete doporučení, musíte vložit recenzi nebo nahrát soubor."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Nebylo vybráno žádné doporučení. Před odesláním musíte vybrat doporučení."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Jakmile zaznamenáte rozhodnutí, nebudete již moci v této recenzi provést žádné změny. Jste si jistý, že chcete pokračovat?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Soubor pro redaktora"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Soubor od redaktora"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Soubor od redaktora"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Žádné úkoly pro korektora"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Pro nahrání manuskriptu do tohoto časopisu dokončete následující kroky.</p>\n"
+"<ol>\n"
+"<li>Na této stránce klikněte na Prohlížet (nebo Vybrat soubor), čímž otevřete okno sloužící pro nalezení souboru na harddisku Vašeho počítače.</li>\n"
+"<li>Najděte soubor, který chcete odeslat a označte ho.</li>\n"
+"<li>V okně pro výběr souboru klikněte na Otevřít; tím dojde k umístění jména souboru na tuto stránku.</li>\n"
+"<li>Na této stránce klikněte na Nahrát; tím se soubor z Vašeho počítače nahraje do časopisu a bude přejmenován v souladu s pravidly časopisu.</li>\n"
+"<li>Jakmile byl příspěvek nahrán, klikněte na Uložit a pokračovat dole na této stránce.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "E-mail se žádostí nemůže být odeslán dokud není vložena verze pro recenzi."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "E-mail se žádostí nemůže být odeslán dokud není vybrán soubor pro redigování v Rozhodnutí editora na stránce Recenze."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "E-mail se žádostí nemůže být odeslán dokud není nahrán soubor pro redigování."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Úvodní verze pro redigování"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Redigovaná verze editora"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Redigovaná verze autora"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Finální redigovaná verze"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Redaktorova verze"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Přidělit redaktora"
+
+msgid "submission.copyedit.useFile"
+msgstr "Použít soubor"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Komentář k redigování"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instrukce pro redigování"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Žádný (Nahrajte finální redigovanou verzi jako verzi typografa před tím, než odešlete žádost)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Veřejný identifikátor sazebnice"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Identifikace veřejné sazebnice již existuje."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Přidělit typografa"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Nahradit typografa"
+
+msgid "submission.layout.layoutComments"
+msgstr "Komentář typografa"
+
+msgid "submission.layout.instructions"
+msgstr "Instrukce pro typografické úpravy"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Provázání referencí"
+
+msgid "submission.proofreadingComments"
+msgstr "Komentář korektora"
+
+msgid "submission.proofread.corrections"
+msgstr "Korekční opravy"
+
+msgid "submission.proofread.instructions"
+msgstr "Instrukce pro korektury"
+
+msgid "submission.logType.article"
+msgstr "Článek"
+
+msgid "submission.logType.author"
+msgstr "Autor"
+
+msgid "submission.logType.editor"
+msgstr "Editor"
+
+msgid "submission.logType.review"
+msgstr "Recenze"
+
+msgid "submission.logType.copyedit"
+msgstr "Redigování"
+
+msgid "submission.logType.layout"
+msgstr "Typografie"
+
+msgid "submission.logType.proofread"
+msgstr "Korektury"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Korespondence Editor/Autor"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Komentáře pro redigování"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Tyto komentáře mohou být sdíleny s autorem.<br />\n"
+"(Po uložení je možné přidat další komentáře.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Pro autora a editora"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Pro editora"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Po odeslání poskytnout editovatelnou BCC (skrytou) kopii pro zaslání recenzentům."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Pro autora a editora"
+
+msgid "submission.comments.forEditor"
+msgstr "Pro editora"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Uložit a zaslat e-mailem autorovi"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Uložit a zaslat e-mailem editorovi"
+
+msgid "user.register.noJournals"
+msgstr "Na této stránce nejsou žádné časopisy, do kterých byste se mohl zaregistrovat."
+
+msgid "user.register.privacyStatement"
+msgstr "Prohlášení o soukromí"
+
+msgid "user.register.registrationDisabled"
+msgstr "Tento časopis v současnosti nepřijímá žádné registrace uživatelů."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Heslo, které jste vložil není dostatečně dlouhé."
+
+msgid "user.register.readerDescription"
+msgstr "Informován e-mailem při vydání čísla časopisu."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Informován e-mailem v okamžiku udělení otevřeného přístupu číslu časopisu."
+
+msgid "user.register.authorDescription"
+msgstr "Schopen přispívat do časopisu."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Ochotný zpracovávat recenze k příspěvkům do časopisu."
+
+msgid "user.register.reviewerDescription"
+msgstr "Ochotný zpracovávat recenze k příspěvkům do časopisu. Určit oblast zájmu (významné oblasti a výzkumné metody)."
+
+msgid "user.register.reviewerInterests"
+msgstr "Napište vaše oblasti zájmu pro recenze (předměty zájmu a výzkumné metody):"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Mé předplatné"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Stav předplatného"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Níže jsou zobrazeny aktivní a vypršené předplatné spolu s dnem vypršení. Navíc, následující informace o stavu může být vložena ke každému předplatnému."
+
+msgid "user.subscriptions.status"
+msgstr "Stav"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Popis"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Je třeba zadat další informace před aktivováním předplatného"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Je třeba zkontrolovat předplatné před jeho aktivací"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manuální platba byla započata, ale doposud nebyla obdržena"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "On-line platba byla započata, ale buď byla zrušena, nebo nebyla dokončena"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Individuální předplatné"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Institucionální předplatné"
+
+msgid "user.subscriptions.renew"
+msgstr "Obnovit"
+
+msgid "user.subscriptions.purchase"
+msgstr "Koupit"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Zakoupit nové předplatné"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Zakoupit individuální předplatné"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Zakoupit institucionální předplatné"
+
+msgid "user.subscriptions.expires"
+msgstr "Vyprší dne {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Vypršelo dne {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Zobrazit dostupné typy předplatného"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Typy předplatného"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Členství"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Zvolený typ předplatného vyžaduje informace o členství."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Zvolte, prosím, platný typ předplatného."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Tento uživatelský účet má již individuální předplatné."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Je třeba zadat informace o členství pro vybraný typ předplatného."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Jméno organizace"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Je vyžadováno zadání jména organizace."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Poštovní adresa"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Doména"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Pokud zde vložíte jméno domény, rozsah IP je volitelný.<br />Platné hodnoty jsou jména domén (např. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Zvolený typ předplatného vyžaduje jméno domény a/nebo rozsah IP pro ověření předplatného."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Vložte, prosím, platný název domény."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Rozsah IP adres"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Pokud je zde vložen rozsah IP adres, je jméno domény volitelné.<br />Platné hodnoty zahrnují jednotlivou IP adresu (např. 142.58.103.1), IP rozsah (např. 142.58.103.1 - 142.58.103.4), IP rozsah vyjádřený divokou kartou '*' (např. 142.58.*.*), a IP rozsah s CIDR (např. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Vložte, prosím, platný rozsah IP adres."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Smazat"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Přidat"
+
+msgid "search.browseAuthorIndex"
+msgstr "Procházet index autorů"
+
+msgid "search.searchFor"
+msgstr "Vyhledávat v článcích"
+
+msgid "search.withinJournal"
+msgstr "V rámci"
+
+msgid "search.allJournals"
+msgstr "Všechny časopisy"
+
+msgid "search.authorIndex"
+msgstr "Procházet index autorů"
+
+msgid "search.authorDetails"
+msgstr "Detaily autora"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Tipy pro vyhledávání: <ul>\n"
+"<li>Nezáleží na velikosti písmen vyhledávaného výrazu</li>\n"
+"<li>Běžná slova jsou ignorována</li>\n"
+"<li>Ve výchozím nastavení jsou vraceny pouze články obsahující <em>všechny</em> termíny dotazu (tzn. <em>AND</em> je aplikováno)</li>\n"
+"<li>Kombinujte více slov pomocí <em>OR</em> pro nalezení článků obsahujících některý z termínů; např. <em>vzdělávání OR výzkum</em></li>\n"
+"<li>Pro vytvoření komplexnějších dotazů použijte závorky; např. <em>archiv ((časopis OR konference) NOT disertace)</em></li>\n"
+"<li>Vyhledejte přesnou frázi vložením hledaného výrazu do uvozovek; např. <em>\"open access publikování\"</em></li>\n"
+"<li>Vylučte slovo tím, že před něj vložíte <strong>-</strong> nebo <em>NOT</em>; např. <em>online -politika</em> nebo <em>online NOT politika</em></li>\n"
+"<li>Použijte <strong>*</strong> v termínu jako divokou kartu pro nalezení jakékoliv sekvence znaků; např. <em>soci* etika</em> by vrátilo dokumenty obsahující \"sociologický\" nebo \"sociální\"</li>\n"
+"</ul>"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.nonpdf.title"
+msgstr "Stažení článku"
+
+msgid "article.nonpdf.note"
+msgstr "Stahování vybraného souboru by mělo začít automaticky. Pokud nezačne, klikněte na odkaz níže. Vězte, že soubor může vyžadovat pro své zobrazení speciální prohlížeč nebo plugin.<br /><br />Pokud nezačalo stahování automaticky, <a href=\"{$url}\">klikněte zde</a>."
+
+msgid "site.journalsHosted"
+msgstr "Časopisy hostované na této stránce"
+
+msgid "site.journalView"
+msgstr "Zobrazit časopis"
+
+msgid "site.journalRegister"
+msgstr "Registrovat"
+
+msgid "site.journalCurrent"
+msgstr "Aktuální číslo"
+
+msgid "site.noJournals"
+msgstr "Nejsou k dispozici žádné časopisy."
+
+msgid "current.current"
+msgstr "Aktuální"
+
+msgid "current.noCurrentIssue"
+msgstr "Žádné aktuální číslo"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Tento časopis dosud nepublikoval žádná čísla."
+
+msgid "archive.archives"
+msgstr "Archivy"
+
+msgid "archive.browse"
+msgstr "Procházet starší čísla"
+
+msgid "archive.issueUnavailable"
+msgstr "Číslo nedostupné"
+
+msgid "about.statistics"
+msgstr "Statistiky"
+
+msgid "about.history"
+msgstr "Historie časopisu"
+
+msgid "about.editorialTeam"
+msgstr "Editorský tým"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografie"
+
+msgid "about.editorialPolicies"
+msgstr "Ediční pravidla"
+
+msgid "about.focusAndScope"
+msgstr "Zaměření a záběr"
+
+msgid "about.sectionPolicies"
+msgstr "Pravidla sekcí"
+
+msgid "about.submissions"
+msgstr "Příspěvky"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Jít na přihlášení"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "K podání příspěvku je třeba {$login} nebo {$register}"
+
+msgid "about.authorGuidelines"
+msgstr "Pokyny pro autory"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Kontrolní seznam pro přípravu příspěvku"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Jako součást procesu odesílání příspěvku je požadováno, aby autoři zaškrnutím potvrdili, že jejich příspěvek je v souladu se všemi následujícími položkami. Příspěvky, které nebudou v souladu s těmito pravidly, mohou být autorům vráceny."
+
+msgid "about.copyrightNotice"
+msgstr "Oznámení o copyrightu"
+
+msgid "about.privacyStatement"
+msgstr "Prohlášení o soukromí"
+
+msgid "about.authorFees"
+msgstr "Autorské poplatky"
+
+msgid "about.authorFeesMessage"
+msgstr "Tento časopis si účtuje následující autorské poplatky."
+
+msgid "about.peerReviewProcess"
+msgstr "Recenzní řízení"
+
+msgid "about.publicationFrequency"
+msgstr "Frekvence publikování"
+
+msgid "about.openAccessPolicy"
+msgstr "Pravidla otevřeného přístupu"
+
+msgid "about.delayedOpenAccess"
+msgstr "Zpožděný otevřený přístup"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Obsah tohoto čísla bude dostupný ve formátu otevřeného přístupu"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "měsíc(e) poté, co bylo číslo publikováno."
+
+msgid "about.archiving"
+msgstr "Archivování"
+
+msgid "about.subscriptions"
+msgstr "Předplatné"
+
+msgid "about.subscriptions.individual"
+msgstr "Předplatné pro jednotlivce"
+
+msgid "about.subscriptions.institutional"
+msgstr "Předplatné pro organizace"
+
+msgid "about.subscriptionsContact"
+msgstr "Kontakt pro předplatné"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Jméno"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formát"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Trvání"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Cena"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Typy předplatného"
+
+msgid "about.memberships"
+msgstr "Členství"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "O tomto publikačním systému"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS ediční a vydavatelský proces"
+
+msgid "about.aboutOJSJournal"
+msgstr "Tento časopis používá Open Journal Systems {$ojsVersion}, což je open source software pro správu a publikování časopisů vyvinutý, podporovaný a volně šířený v rámci projektu <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> pod GNU General Public licencí."
+
+msgid "about.aboutOJSSite"
+msgstr "Tato stránka používá Open Journal Systems {$ojsVersion}, což je open source software pro správu a publikování časopisů vyvinutý, podporovaný a volně šířený v rámci projektu <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> pod GNU General Public licencí."
+
+msgid "help.ojsHelp"
+msgstr "Nápověda Open Journal Systems"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS Nápověda"
+
+msgid "help.searchReturnResults"
+msgstr "Zpět k výsledkům vyhledávání"
+
+msgid "donations.thankYou"
+msgstr "Děkujeme"
+
+msgid "donations.thankYouMessage"
+msgstr "Děkujeme za Váš příspěvek. Velice si vážíme Vaší pomoci."
+
+msgid "payment.loginRequired"
+msgstr "Pro provedení platby musíte být přihlášený."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Pro přístup k položce je vyžadováno předplatné nebo platba za shlédnutí. Přihlaste se do časopisu, aby mohlo být ověřeno předplatné nebo zaplacen polatek."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Předplatné, nebo placený přístup k číslu je požadováno pro tuto položku. K ověření předplatného, přístup k již zaplacené položce či zakoupení placeného přístupu je třeba se do časopisu přihlásit."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Abyste mohl darovat dar, musíte být přihlášen."
+
+msgid "payment.paid"
+msgstr "Zaplaceno"
+
+msgid "payment.payNow"
+msgstr "Zaplatit nyní"
+
+msgid "payment.waive"
+msgstr "Převést"
+
+msgid "payment.alreadyPaid"
+msgstr "Již zaplaceno"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Zatrhněte toto políčko, pokud jste již odeslal platbu do časopisu, aby se dokončil proces odesílání příspěvku. Dokud nedorazí platba, nebude příspěvek recenzován. Pro zobrazení instrukcí k platbě klikněte na ZAPLATIT NYNÍ."
+
+msgid "payment.paymentReceived"
+msgstr "Platba přijata"
+
+msgid "payment.paymentSent"
+msgstr "Platba již byla odeslána"
+
+msgid "payment.authorFees"
+msgstr "Autorské poplatky"
+
+msgid "payment.type.submission"
+msgstr "Poplatek za příspěvek"
+
+msgid "payment.type.publication"
+msgstr "Poplatek za publikování"
+
+msgid "payment.type.fastTrack"
+msgstr "Poplatek za rychlé zpracování recenze"
+
+msgid "payment.type.membership"
+msgstr "Poplatek za individuální členství"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Zaplatit poplatek za článek"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Zakoupení přístupu k číslu"
+
+msgid "payment.type.subscription"
+msgstr "Předplatné"
+
+msgid "payment.type.donation"
+msgstr "Dary"
+
+msgid "payment.donation.makeDonation"
+msgstr "Darovat"
+
+msgid "payment.submission.paySubmission"
+msgstr "Zaplatit poplatek za příspěvek"
+
+msgid "payment.publication.payPublication"
+msgstr "Zaplatit za publikování"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Poplatek za publikování zaplacen"
+
+msgid "payment.membership.buyMembership"
+msgstr "Koupit individuální členství"
+
+msgid "payment.membership.renewMembership"
+msgstr "Obnovit individuální členství"
+
+msgid "payment.membership.ends"
+msgstr "Končí"
+
+msgid "payment.subscription.purchase"
+msgstr "Zakoupit předplatné"
+
+msgid "payment.subscription.renew"
+msgstr "Obnovit předplatné"
+
+msgid "payment.subscription.expires"
+msgstr "Vyprší"
+
+msgid "installer.appInstallation"
+msgstr "OJS instalace"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS Upgrade"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>Verze OJS {$version}</h4>\n"
+"\n"
+"<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href=\"{$baseUrl}/docs/README\">README</a> soubor dodaný s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href=\"http://forum.pkp.sfu.ca\">support forum</a> nebo navštivte PKP online <a href=\"http://pkp.sfu.ca/bugzilla/\" target=\"_blank\">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href=\"mailto:pkp-support@sfu.ca\">pkp-support@sfu.ca</a>.</p>\n"
+"\n"
+"<h4>Upgrade</h4>\n"
+"\n"
+"<p>Pokud provádíte upgrade existující instalace OJS 2.x, <a href=\"{$upgradeUrl}\">Klikněte zde</a> pro pokračování.</p>\n"
+"\n"
+"<h4>Doporučované požadavky na systém</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; aktuálně používáte PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 nebo <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x or >= 2.0.4x nebo Microsoft IIS 6</li>\n"
+"\t<li>Operační systém: jakýkoliv OS, který podporuje výše uvedený software, včetně <a href=\"http://www.linux.org/\" target=\"_blank\">Linuxu</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.sun.com/\" target=\"_blank\">Solarisu</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Jelikož PKP nemá prostředky, aby otestoval každou možnou kombinaci verze softwaru a platforem, není předpokládána žádná garance plné funkčnosti nebo podpora.</p>\n"
+"\n"
+"<p>Tato nastavení mohou být po instalaci změněna úpravou souboru <tt>config.inc.php</tt> ve výchozím OJS adresáři nebo s využitím webového administračního rozhraní.</p>\n"
+"\n"
+"<h4>Podporované databázové systémy</h4>\n"
+"\n"
+"<p>OJS byl v současnosti testován pouze na MySQL a PostgreSQL, avšak jiné systémy pro správu databází podporované <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> mohou také fungovat (plně nebo částečně). Reporty o kompatibilitě a/nebo opravy kódu (code patches) pro alternativní DBMS lze zaslat OJS týmu.</p>\n"
+"\n"
+"<h4>Kroky předcházející instalaci</h4>\n"
+"\n"
+"<p>1. Následující soubory a adresáře (a jejich obsah) musí být nastaveny na zapsatelné (writable):</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> je zapsatelný (volitelné): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> je zapsatelný: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> je zapsatelný: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> je zapsatelný: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> je zapsatelný: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> je zapsatelný: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Musí být vytvořen adresář pro ukládání nahraných souborů a nastaven jako zapsatelný (viz \"Nastavení souborů\" níže).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>Verze OJS {$version}</h4>\n"
+"\n"
+"<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href=\"{$baseUrl}/docs/README\">README</a> a <a href=\"{$baseUrl}/docs/UPGRADE\">UPGRADE</a> soubory dodané s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href=\"http://forum.pkp.sfu.ca\">support forum</a> nebo navštivte PKP online <a href=\"http://pkp.sfu.ca/bugzilla/\" target=\"_blank\">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href=\"mailto:pkp-support@sfu.ca\">pkp-support@sfu.ca</a>.</p>\n"
+"<p>Je <strong>důrazně doporučeno</strong>, abyste udělali zálohu vaší databáze, adresáře souborů a OJS instalace před tím, než budete pokračovat.</p>\n"
+"<p>Pokud máte zapnutý <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, ujistěte se prosím, že max_execution_time instrukce ve vašem php.ini konfiguračním souboru je nastaven na vysoký limit. Pokud bude tohoto nebo jakéhokoliv dalšího časového limitu (např. \"Timeout\" instrukce u Apache) dosaženo a bude přerušen proces upgradování, budou vyžadovány ruční zásahy.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Pro kompletní podporu Unicode (UTF-8) zvolte UTF-8 pro nastavení všech znakových sad. Vězte, že tato podpora aktuálně vyžaduje MySQL >= 4.1.1 nebo PostgreSQL >= 7.1 databázový server. Vězte prosím také, že plná Unicode podpora vyžaduje PHP >= 4.3.0 kompilované s podporou pro <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> knihovnu (ve výchozím nastavení povoleno ve většině nejnovějších instalací PHP). Pokud Váš server nesplňuje tyto požadavky, můžete se při používání rozšířených znakových sad střetnout s problémy.\n"
+"<br /><br />\n"
+"Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "Váš server v současnosti umožňuje nahrávání souborů: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Váš server v současnosti dovoluje nahrávání souborů o maximální velikosti <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "Výchozí jazyk pro použití tohoto systému. Pokud Vás zajímá podpora jazyků zde neuvedených, prostudujte si dokumentaci k OJS."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Zvolte jakékoliv doplňkové jazyky, které mají být podorovány v tomto systému. Tyto jazyky budou dostupné pro použití v časopisech hostovaných na této stránce. Doplňkové jazyky mohou být také kdykoliv nainstalovány přes webové administrační rozhraní."
+
+msgid "installer.filesDirInstructions"
+msgstr "Zadejte celou cestu k existujícímu adresáři, ve kterém se mají uchovávat nahrané soubory. Tento adresář by neměl být přímo dostupný z webu. <strong>Prosím, před zahájením instalace se ujistěte, že tento adresář existuje a je zapsatelný.</strong> Ve Windows by měla cesta obsahovat dopředná lomítka, např.: \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS vyžaduje přístup k SQL databázi, aby mohl uchovávat svoje data. Viz systémové požadavky výše pro seznam podporovaných databází. Do políček níže uveďte nastavení, které má být použito pro připojení do databáze."
+
+msgid "installer.installApplication"
+msgstr "Instalace Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Upgrade Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Varování:</strong> Pokud instalace selhala v průběhu instalace databáze, budete možná muset odstranit Vaši OJS databázy nebo databázové tabulky před tím, než se pokusíte databázy přeinstalovat."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>DŮLEŽITÉ!</h4>\n"
+"<p>Instalace nemohla automaticky přepsat konfigurační soubor. Než se pokusíte používat systém, otevřete prosím <tt>config.inc.php</tt> ve vhodném textovém editoru a nahraďte jeho obsah obsahem níže uvedeného textového pole.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Instalace OJS byla úspěšně dokončena.</p>\n"
+"<p>Abyste začali používat systém, <a href=\"{$loginUrl}\">přihlaste se</a> pomocí uživatelského jména a hesla, které jste zadali na předchozí stránce.</p>\n"
+"<p>Pokud chcete dostávat informace o novinkách a aktualizacích, <strong>zaregistrujte se prosím na <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Pokud máte otázky nebo komentáře, navštivte prosím <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Upgrade OJS na verzi {$version} byl úspěšně dokončen.</p>\n"
+"<p>Nezapomeňte upravit \"installed\" nastavení ve Vašem config.inc.php konfiguračním souboru zpět na <em>On</em>.</p>\n"
+"<p>Pokud jste se ještě nezaregistroval a přejete si dostávat informace o novinkách a aktualizacích, <strong>zaregistrujte se prosím na <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Pokud máte otázky nebo komentáře, navštivte prosím <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "Nová verze OJS je dostupná! V současné době používáte verzi OJS {$currentVersion}. Nejnovější verze OJS je {$latestVersion}. Navštivte, prosím, <a href=\"http://php.sfu.ca/ojs_download\" target=\"_new\">tuto stránku</a> a stáhněte si nejnovější verzi OJS a přečtěte si pokyny pro upgrade."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "Je dostupná nová verze OJS! Vy používáte následující verzi OJS: {$currentVersion}. Nejnovější verze OJS je: {$latestVersion}. Kontaktujte, prosím, administrátora webu ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) a upozorněte ho na novou verzi OJS. Více informací lze nalézt <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">zde</a>."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} pozměnil článek {$submissionId}. Nové ID souboru je {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} byl odebrán z recenzování příspěvku {$submissionId} v recenzním kole {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo zahájeno."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} byl ohodnocen pro recenzní kolo {$round} příspěvku {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "Termín splnění recenzního kola {$round} příspěvku {$submissionId} recenzenta {$reviewerName} byl nastaven na {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "Doporučení pro recenzní kolo {$round} příspěvku {$submissionId} od recenzenta {$reviewerName} bylo stanoveno."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "Doporučení pro recenzní kolo {$round} příspěvku {$submissionId} bylo stanoveno editorem, {$editorName}, v zastoupení recenzenta {$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "Příspěvek {$submissionId} byl znovu odeslán k recenzi."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} odmítl recenzní kolo {$round} pro příspěvek {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} přijal recenzní kolo {$round} pro příspěvek {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} odmítl recenzní kolo {$round} pro příspěvek {$submissionId} v zastoupení recenzenta {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} přijal recenzní kolo {$round} pro příspěvek {$submissionId} v zastoupení recenzenta {$reviewerName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Editor, {$userName}, nahrál soubor s recenzí pro kolo {$round} příspěvku {$submissionId} v zastoupení recenzenta {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Soubor recenzenta byl nahrán."
+
+msgid "log.editor.decision"
+msgstr "Rozhodnutí editora ({$decision}) pro článek {$submissionId} zaznamenal {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "Redigování příspěvku {$submissionId} zahájil {$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Byl vybrán výchozí soubor pro redigování."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} dokončil úvodní redigování příspěvku {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} dokončil závěrečné redigování příspěvku {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} byl přidělen pro redigování příspěvku {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Redaktorova verze souboru s příspěvkem byla nahrána."
+
+msgid "log.copyedit.authorFile"
+msgstr "Byla nahrána autorem redigovaná verze souboru s příspěvkem."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} byl přidělen jako typograf pro příspěvek {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} byl odebrán z pozice typografa pro příspěvek {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} dokončil typografické úpravy příspěvku {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "Metadata tohoto článku pozměnil {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "Editorova verze souboru s příspěvkem byla nahrána."
+
+msgid "log.editor.archived"
+msgstr "Příspěvek {$submissionId} byl archivován."
+
+msgid "log.editor.restored"
+msgstr "Příspěvek {$submissionId} byl obnoven do fronty."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} byl přidělen jako editor příspěvku {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} přidělil {$proofreaderName} pro zpracování korektur příspěvku {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} odeslal {$submissionId} do plánování."
+
+msgid "log.imported"
+msgstr "{$userName} importoval článek {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Recenzovaný článek"
+
+msgid "notification.type.editing"
+msgstr "Editace událostí"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Byla vložena poznámka k rozhodnutí editora o článku \"{$title}\"."
+
+msgid "notification.type.galleyModified"
+msgstr "Byla změněna sazebnice článku \"{$title}\"."
+
+msgid "notification.type.issuePublished"
+msgstr "Bylo publikováno číslo."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Bylo vytvořeno nové oznámení."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Byl vyplněn recenzní formulář k článku \"{$title}\"."
+
+msgid "notification.type.reviewing"
+msgstr "Události recenzního procesu"
+
+msgid "notification.type.site"
+msgstr "Události stránek"
+
+msgid "notification.type.submissionComment"
+msgstr "Editor vložil poznámku k článku \"{$title}\"."
+
+msgid "notification.type.submissions"
+msgstr "Události příspěvku"
+
+msgid "notification.type.userComment"
+msgstr "Čtenář vložil poznámku k článku \"{$title}\"."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Přístup není povolen! Nebyl/a vám přiřazena úloha lektora tohoto článku."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Snažíte se přistoupit k článku, který není součástí této sekce."
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Špatný příspěvek redaktora, nebo příspěvek redaktora není vyžadován!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Nahraný seznam měn \"{$filename}\" z XML"
+
+msgid "context.current"
+msgstr "Aktuální časopis:"
+
+msgid "context.select"
+msgstr "Zvolit jiný časopis:"
+
+msgid "article.return"
+msgstr "Návrat na podrobnosti článku"
+
+msgid "journal.viewAllIssues"
+msgstr "Zobrazit všechna čísla"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Zahrnout i uživatele bez rolí v tomto časopise."
+
+msgid "user.reviewerPrompt"
+msgstr "Byl byste ochoten/na recenzovat příspěvek do tohoto časopisu?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Ano, požadovat roli {$userGroup}."
+
+msgid "user.register.contextsPrompt"
+msgstr "Které časopisy na tomto webu byste si chtěli zaregistrovat?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Požadovat následující role."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Pokud jste uvedli zájem o roli recenzenta v jakémkoli časopise, zadejte své zájmy."
+
+msgid "user.role.subEditors"
+msgstr "Editoři sekcí"
+
+msgid "user.role.journalAssistant"
+msgstr "Sekretář časopisu"
+
+msgid "user.role.journalAssistants"
+msgstr "Sekretáři časopisů"
+
+msgid "issue.return"
+msgstr "Vrátit se na podrobnosti čísla"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Článek byl podán"
+
+msgid "search.results.orderBy"
+msgstr "Řadit výsledky podle"
+
+msgid "search.results.orderBy.article"
+msgstr "Název článku"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor"
+
+msgid "search.results.orderBy.date"
+msgstr "Datum zveřejnění"
+
+msgid "search.results.orderBy.issue"
+msgstr "Číslo"
+
+msgid "search.results.orderBy.journal"
+msgstr "Název časopisu"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularita (za celou dobu)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularita (za měsíc)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevantnost"
+
+msgid "search.results.orderDir.asc"
+msgstr "Vzestupně"
+
+msgid "search.results.orderDir.desc"
+msgstr "Sestupně"
+
+msgid "search.results.similarDocuments"
+msgstr "podobné dokumenty"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Pluginy pro sazebnice článků"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Pluginy sazebnic článků přidávají podporu pro různé typy sazebnic článků."
+
+msgid "editor.issues.backIssues"
+msgstr "Předchozí čísla"
+
+msgid "editor.issues.futureIssues"
+msgstr "Budoucí čísla"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Tato sazebnice bude dostupná na nové webové stránce."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL pro vzdáleně hostovaný obsah"
+
+msgid "user.register.selectContext"
+msgstr "Vybrat časopis, ve kterém chcete být registrováni:"
+
+msgid "article.pageTitle"
+msgstr "Zobrazit {$title}"
+
+msgid "article.download"
+msgstr "Stáhnout tento PDF soubor"
+
+msgid "archive.archivesPageNumber"
+msgstr "Archivy - strana {$pageNumber}"
+
+msgid "about.contact"
+msgstr "Kontakt"
+
+msgid "about.aboutContext"
+msgstr "O časopise"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Registrovat"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} nebo {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Zaslat nový příspěvek"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "zobrazit vaše rozpracované příspěvky"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Nastavte nebo upravte doporučení recenzenta."
+
+msgid "article.pluginMissing"
+msgstr "<p>Vybraný soubor PDF by se měl načíst zde, pokud má váš webový prohlížeč nainstalovaný plugin pro čtení souborů PDF (například poslední verze <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>). </p>"
+
+msgid "user.authorization.noContext"
+msgstr "Žádný časopis v kontextu!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Je vyžadováno chybné číslo!"
+
+msgid "grid.action.createContext"
+msgstr "Vytvořit nový časopis"
+
+msgid "editor.navigation.issues"
+msgstr "Čísla"
+
+msgid "notification.type.approveSubmission"
+msgstr "Tento příspěvek čeká na schválení, než se objeví v čísle."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Očekává se schválení."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Zaregistrovat se do dalších časopisů"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Schovat další časopisy"
+
+msgid "article.view.interstitial"
+msgstr "Vyberte, prosím, článek na stažení."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Schváleno"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Čeká se na schválení"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Schválení sazebnice"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Schválení této sazebnice pro publikování.<p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Odebrání schválení této sazebnice.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexace \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Tato implementace vyhledávání neumožňuje opakované indexování podle časopisů."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Nastavená cesta k časopisu  \"{$journalPath}\" nelze přiřadit k časopisu."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Metadata čísla byla uložena."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Byl vložen nový článek a je nutné mu přiřadit editora."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Přiřaďte uživatele pro tvorbu sazebnic pomocí \"Přidat odkaz\" v seznamu uživatelů."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Jsou očekávány sazebnice."
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"<h4>Kroky před instalací</h4>\n"
+"<p>1. Následující soubory a adresáře (a jejich obsah) musí být zapisovatelné: </p>\n"
+"<ul>\n"
+"<li><tt>config.inc.php</tt> je zapisovatelný (volitelné): {$writable_config}</li>\n"
+"<li><tt>public/</tt> je zapisovatelný: {$writable_public}</li>\n"
+"<li><tt>cache/</tt> je zapisovatelný: {$writable_cache}</li>\n"
+"<li><tt>cache/t_cache/</tt> je zapisovatelný: {$writable_templates_cache} </ li>\n"
+"<li> <tt>cache/t_compile/</tt> je zapisovatelný: {$writable_templates_compile} </ li>\n"
+"<li> <tt>cache/_db</tt> je zapisovatelný: {$writable_db_cache} </ li>\n"
+"</ul>\n"
+"\n"
+"<P> 2. Adresář pro ukládání nahraných souborů musí být vytvořen a zapisovatelný (viz \"Nastavení souborů\" níže). </p>"
+
+msgid "help.goToEditPage"
+msgstr "Editovat {$sectionTitle}"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Nový článek s názvem \"{$title}\" byl vložen."
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Nemáte aktivní předplatné."
+
+msgid "reader.purchasePrice"
+msgstr "{$price}) ({$currency}"
+
+msgid "payment.type.publication.required"
+msgstr "Je třeba uhradit publikační poplatek."
+
+msgid "payment.requestPublicationFee"
+msgstr "Požadovaný publikační poplatek ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "Byla požadována platba, ale termín požadavku vypršel. Podrobné informace získáte od správce časopisu."
+
+msgid "navigation.subscriptions"
+msgstr "Předplatné"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} převzal redakční proces příspěvku {$submissionId}."
+
+msgid "manager.setup.porticoDescription"
+msgstr "Portico je nezisková služba, která se zasazuje o uchování digitálních publikací, včetně e-časopisů, elektronických knih a digitalizovaných historických sbírek. Pokud podepsal váš časopis smlouvu s Portico, povolte tuto službu zde:"
+
+msgid "log.editor.recommendation"
+msgstr "Doporučení redaktora ({$decision}) pro článek {$submissionId} zaznamenal {$editorName}."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Ano, chci dostávat upozornění na nové články a dostávat nová upozornění v rámci všech časopisů, ke kterým jsem se zaregistroval."
+
+msgid "notification.type.public"
+msgstr "Veřejné oznámení"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Ano, chci být kontaktován s požadavky na recenze příspěvků do tohoto časopisu."

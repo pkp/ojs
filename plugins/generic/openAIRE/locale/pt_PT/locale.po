@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:15+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:15+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.openAIRE.displayName"
+msgstr "OpenAIRE"
+
+msgid "plugins.generic.openAIRE.description"
+msgstr "O plugin OpenAIRE inclui o elemento projectID nos metadados do artigo e estende a interface OAI-PMH para se adequar às Orientações do OpenAIRE 1.1, auxiliando as revistas que usam o OJS a serem compatíveis com o OpenAIRE."
+
+msgid "plugins.generic.openAIRE.projectID"
+msgstr "OpenAIRE Número de Projeto (Project ID)"
+
+msgid "plugins.generic.openAIRE.projectIDValid"
+msgstr "Indique um número de projeto válido (6 números)"
+
+msgid "plugins.generic.openAIRE.projectID.description"
+msgstr "Caso o trabalho aqui apresentado tenha resultado de uma iniciativa Europeia de acordo com a plataforma de metadados <a href=\"https://www.openaire.eu/\" target=\"_blank\">OpenAIRE</a>, por favor inclua o identificador de projeto (ProjectID), um número de seis dígitos que corresponde ao identificador do Contrato de Financiamento."

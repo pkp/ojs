@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:25+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Artikel"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.genres.article"
+msgstr "File Utama Naskah"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Naskah belum pernah diterbitkan sebelumnya, dan tidak sedang dalam pertimbangan untuk diterbitkan di jurnal lain (atau sudah dijelaskan dalam Komentar kepada Editor)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "File naskah dalam format dokumen OpenOffice, Microsoft Word, atau RTF."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Referensi yang dapat diakses online telah dituliskan URL-nya."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Naskah diketik dengan teks 1 spasi; font 12; menggunakan huruf miring, bukan huruf bergaris bawah (kecuali alamat URL); dan semua ilustrasi, gambar, dan tabel diletakkan dalam teks pada tempat yang diharapkan, bukan dikelompokkan tersendiri di akhir naskah."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Pengetikan naskah dan sitasi mengikuti gaya selingkung yang disyaratkan dalam Panduan Penulis"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Nama dan alamat email yang dimasukkan di website ini hanya akan digunakan untuk tujuan yang sudah disebutkan, tidak akan disalahgunakan untuk tujuan lain atau untuk disebarluaskan ke pihak lain.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Jurnal ini menyediakan akses terbuka yang pada prinsipnya membuat riset tersedia secara gratis untuk publik dan akan mensupport pertukaran pengetahuan global terbesar."
+
+msgid "default.contextSettings.forReaders"
+msgstr "Kami mendorong pembaca untuk mendaftarkan diri di layanan notifikasi penerbitan untuk jurnal ini. Gunakan tautan <a href=\"{$indexUrl}{$contextPath}/user/register\">Daftar</a>di bagian atas beranda jurnal. Dengan mendaftar, pembaca akan memperoleh email berisi Daftar Isi tiap ada terbitan jurnal baru. Daftar ini juga membuat jurnal dapat mengetahui tingkat dukungan atau jumlah pembaca. Lihat jurnal <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Pernyataan Privasi</a>, yang meyakinkan pembaca bahwa nama dan alamat email yang didaftarkan tidak akan digunakan untuk tujuan lain."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Tertarik menerbitkan jurnal? Kami merekomendasikan Anda mereview halaman <a href=\"{$indexUrl}{$contextPath}/about\">Tentang Kami </a>untuk kebijakan bagian jurnal serta <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Petunjuk Penulis </a>. Penulis perlu <a href=\"{$indexUrl}{$contextPath}/user/register\">Mendaftar </a>dengan jurnal sebelum menyerahkan atau jika sudah terdaftar <a href=\"{$indexUrl}/index/login\">login</a>dan mulai proses lima langkah."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Kami mendorong pustakawan riset untuk mendaftar jurnal diantara pemegang jurnal eletronik perpustakaan. Begitu juga, ini mungkin berharga bahwa sistem penerbitan sumber terbuka jurnal cocok untuk perpustakaan untuk menjadi tuan rumah untuk anggota fakultas untuk menggunakan jurnal saat mereka terlibat dalam proses editing. (Lihat <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "OJS sistem LOCKSS berfungsi sebagai sistem pengarsipan terdistribusi antar-perpustakaan yang menggunakan sistem ini dengan tujuan membuat arsip permanen (untuk preservasi dan restorasi). <a href=\"http://www.lockss.org/\">Lanjut...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href=\"http://clockss.org/\">More...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Manajer Jurnal"
+
+msgid "default.groups.plural.manager"
+msgstr "Manajer Jurnal"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "Editor Jurnal"
+
+msgid "default.groups.plural.editor"
+msgstr "Editor Jurnal"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Editor Tamu"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Editor Tamu"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor Bagian"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editor Bagian"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Manajer Langganan"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Manajer Langganan"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.genres.researchInstrument"
+msgstr "Instrumen Penelitian"
+
+msgid "default.genres.researchMaterials"
+msgstr "Bahan Penelitian"
+
+msgid "default.genres.researchResults"
+msgstr "Hasil Penelitian"
+
+msgid "default.genres.transcripts"
+msgstr "Transkrip"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Analisis Data"
+
+msgid "default.genres.dataSet"
+msgstr "Data Set"
+
+msgid "default.genres.sourceTexts"
+msgstr "Teks Sumber"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Reviewer"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Reviewer"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"

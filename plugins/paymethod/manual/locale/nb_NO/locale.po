@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:57+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:57+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Manuell betaling av gebyr"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "Redaksjonsleder vil registrere og kvittere for brukernes innbetalinger manuelt (utenfor denne programvaren)."
+
+msgid "plugins.paymethod.manual"
+msgstr "Manuell betaling av gebyr"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Innstillinger for Manuell betaling av gebyr"
+
+msgid "plugins.paymethod.manual.settings.instructions"
+msgstr "Instruks"
+
+msgid "plugins.paymethod.manual.settings.manualInstructions"
+msgstr "Instruks for gebyrinnbetaling for brukere som velger Manuell betaling av gebyr"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Send betalingsvarsel"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Betalingsvarsel"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Betalingsvarsel sendt"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Tittel"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Gebyr"

@@ -1,0 +1,144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Aldizkari ostatatuak"
+
+msgid "admin.settings.redirect"
+msgstr "Aldizkarira birbideratu"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Gune nagusira egindako eskaerak aldizkari honetara birbideratuko dira. Praktikoa da guneak aldizkari bakarra ostatatzen badu, esate baterako."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Hau izango da gunearen eta bertan ostatatutako aldizkarien hizkuntza lehenetsia."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Hizkuntza deskargatzeak huts egin du. Beheko errore-mezuan azaltzen da hutsegitea."
+
+msgid "admin.languages.localeInstalled"
+msgstr "\"{$locale}\" hizkuntza instalatu da."
+
+msgid "admin.languages.download"
+msgstr "Deskargatu hizkuntza-paketea"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Ezin da ireki PKP webguneko hizkuntza-deskriptorea."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Ezin da hizkuntza-pakete berria gehitu localeen erregistro-fitxategian (normalean \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS erabiltzaileen datu-basea"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Gaitu erabiltzaile-profilen sinkronizazioa (autentifikazioko plugin honek onartzen badu). Erabiltzaile-profilen informazioa automatikoki eguneratuko da urruneko iturburutik erabiltzaileak saioa hasten duenean, eta OJSn egiten diren profil-aldaketak (pasahitz-aldaketak barne) automatikoki eguneratuko dira urruneko iturburuan. Aukera hau ez bada gaitzen, OJS profil-informazioa eta urruneko iturburuko profil-informazioa aparte bereizita mantenduko dira."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Gaitu erabiltzailearen pasahitza aldatzea (autentifikazioko plugin honek onartzen badu). Aukera hau gaitzen bada, erabiltzaileek OJS barruan aldatu ahal izango dute pasahitza eta OJSren \"galdutako pasahitza\" eginbidea erabili ahal izango dute pasahitza ahazten zaienean. Aukera hau ez bada gaitzen, funtzio horiek ez dira erabilgarri egongo autentifikazio-iturburu hau daukaten erabiltzaileentzat."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Gaitu erabiltzaileak sortzea (autentifikazioko plugin honek onartzen badu). OJSn autentifikazio-iturburu honekin sortzen diren erabiltzaileak automatikoki gehituko dira urruneko autentifikazio-iturburuan, dagoeneko sortuta ez badaude. Gainera, iturburu hori autentifikazio-iturburu lehenetsia baldin bada, erabiltzaile-erregistratzearen bidez sortutako OJS kontuak ere gehituko dira urruneko autentifikazio-iturburuan."
+
+msgid "admin.systemVersion"
+msgstr "OJS bertsioa"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS konfigurazioa"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt> OJS konfigurazio-ezarpenak."
+
+msgid "admin.journals.journalSettings"
+msgstr "Aldizkariaren ezarpenak"
+
+msgid "admin.journals.noneCreated"
+msgstr "Ez da aldizkaririk sortu."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Ziur zaude betiko ezabatu nahi dituzula aldizkari hau eta bere eduki osoa?"
+
+msgid "admin.contexts.create"
+msgstr "Sortu aldizkaria"
+
+msgid "admin.journals.urlWillBe"
+msgstr "Aldizkariaren URLa {$sampleUrl} izango da."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Bidea zehaztu behar da."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Bide-izenean alfazenbakizko karaktereak, azpimarra eta marratxoak bakarrik onartzen dira, eta lehen karakterea eta azkena alfazenbakizkoak izan behar dira."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Hautatutako bidea beste aldizkari batek erabiltzen du."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Gaitu aldizkari hau publikoki agertzeko gunean."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Aldizkariaren azalpena"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Lehendik dagoen aldizkariaren kokalekua edo berria (adib., \"ojs\")"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Inportatu harpidetzak"
+
+msgid "admin.journals.transcode"
+msgstr "Bihurtu artikuluen metadatuak ISO8859-1etik."
+
+msgid "admin.journals.redirect"
+msgstr "Sortu kodea OJS1 URLak OJS 2 URLetara mapatzeko"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Inportatzeko bidea zehaztu behar da."
+
+msgid "admin.journals.importErrors"
+msgstr "Inportazioak huts egin du."
+
+msgid "admin.mergeUsers"
+msgstr "Batu erabiltzaileak"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Batu erabiltzailea"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Hautatu erabiltzaile bat lehengo erabiltzailearen egiletasuna, edizio-esleipenak, etab. egozteko."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Hautatu erabiltzaile bat beste erabiltzaile-kontu batekin batzeko (adib., bi kontu dituen erabiltzaile bat denean). Lehenengo hautatutako kontua ezabatu egingo da, eta dituen bidalketak, esleipenak, etab. bigarren kontuari egotziko zaizkio."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Inskribatutako erabiltzaile guztiak"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Ziur zaude \"{$oldUsername}\" erabiltzaile-izena duen kontua ezabatu eta \"{$newUsername}\" erabiltzaile-izena duen kontuarekin batu nahi duzula? \"{$oldUsername}\" kontua galdu egingo da. Ekintza hau ezingo da desegin."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Inskribatutako erabiltzailerik ez."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Markatutako localeak osatu gabe egon daitezke."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko."
+
+msgid "admin.journals.createInstructions"
+msgstr "Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta erabiltzailearen izen-ematearekin jarraitzeko."

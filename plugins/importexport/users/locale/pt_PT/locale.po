@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:47+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:47+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Plugin Utilizadores XML"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importar e exportar utilizadores"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Modo de utilização: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ..."
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"Exemplos:\n"
+"\tImport users into myJournal from myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExport all users from myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExport users specified by their ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importar Utilizadores"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Seleccione um ficheiro de dados XML contendo informações sobre o utilizador para importar para esta revista. Consulte a ajuda da revista para obter detalhes sobre o formato deste ficheiro. <br /> <br /> Note que, se o ficheiro importado contiver quaisquer nomes de utilizadores ou endereços de e-mail que já existam no sistema, os dados do utilizador para estes utilizadores não serão importados e quaisquer novos papéis a serem criados serão atribuídos aos utilizadores existentes."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Ficheiro de dados do utilizador"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Enviar um e-mail de notificação para cada utilizador importado contendo o nome de utilizador e a senha."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Continuar importando outros utilizadores se ocorrer um erro."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Os seguintes utilizadores foram importados com sucesso para a revista."
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Ocorreram erros durante a importação"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Confirme que estes são os utilizadores que gostaria de importar para a revista"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Aviso"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Não é possível usar senhas com {$importHash}; O OJS está configurado para usar {$ojsHash}. Se continuar, tem de restabelecer as senhas dos utilizadores importados."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Foi especificado um caminho \"{$journalPath}\" desconhecido da revista."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Exportar Utilizadores"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exportar por Papel"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Exportar Todos"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Ocorreram erros durante a exportação"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Não foi possível gravar no ficheiro \"{$fileName}\"."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "A importação foi concluída com sucesso. Utilizadores com nomes de utilizadores e endereços de e-mail que ainda não estão em uso foram importados, juntamente com os grupos de utilizadores que os acompanham."
+
+msgid "plugins.importexport.users.results"
+msgstr "Resultados"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Faça o upload de um ficheiro em \"Importar\" para continuar."

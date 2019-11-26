@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:42+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:42+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "Vtičnik za mEDRA izvoz/registracijo"
+
+msgid "plugins.importexport.medra.description"
+msgstr "Izvozi metapodatke številke, prispevka in prelomov v Onix za DOI (O4DOI) obliki in registrira DOI-je pri mEDRA registracijski agenciji."
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"\n"
+"\t\tZa registracijo DOI-jev pri mEDRA, sledite navodilom na \n"
+"\t\t<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">mEDRA domači strani</a>, da dobite uporabniško ime in geslo.Če nimate svojega uporabniškega imena in gesla, lahko še vedno izvozite podatke v mEDRA XML (Onix for DOI) obliki, ampak ne morete registrirati DOI-jev pri mEDRA direktno iz OJS. Bodite pozorni, ker geslo ni shranjeno v kriptirani obliki, ampak kot prosto besedilo, zaradi zahtev mEDRA registracijskega servisa.\n"
+"\t"
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Prosimo, nastavite mEDRA izvozni vtičnik:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Uporabniško ime"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Prosimo, vnesite mEDRA uporabniško ime. Uporabniško ime ne sme vsebovati dvopičij."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Ime institucije, ki je registrirana pri mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Prosimo, vnestie ime institucije, ki je registrirana pri mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Oseba, ki jo lahko kontaktira mEDRA v primeru tehničnih vprašanj:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Institucija"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "Prosimo, vnesite institucijo, ki je tehnično odgovorna za DOI izvoz (npr. institucija, pri kateri imate spletni strežnik)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Kontaktna oseba"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Prosimo vnesite kokntaktno osebeo za tehnične stvari."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "Email"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Prosimo, vnesite veljaven email naslov tehnične osebe."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Prosimo, izberite državo, ki bo obveščena kot 'izdajateljska država' pri mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "Prosimo, izberite ali želite izvoziti številko kot <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'dela' or 'manifestacije'</a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "delo"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "manifestacija"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Izvozi številke kot"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "OJS bo avtomatsko opravil registracijo dodeljenih DOI-jev pri mEDRA. Prosimo upoštevajte, da je za to lahko potrebno nekaj časa po tistem, ko objavite novo številko. Lahko preverite vse neregistrirane DOI-je."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "Uporabi mEDRA test API (testno okolje) za registracijo DOI-jev. Ne pozabite odstraniti te možnosti za produkcijo!"
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "NB: DOI-ji dodeljeni prispevkom bodo izvoženi v mEDRA kot <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'dela'</a>. DOI-ji dodeljeni prelomom bodo izvoženi kot <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'manifestacije'</a>."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "Opravilo avtomatske registracije pri mEDRA"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Uporaba: \n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

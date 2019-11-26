@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:06+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:06+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "COUNTER plugin umožňuje zaznamenávání a vytváření zpráv o aktivitě na stránkách."
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER statistiky"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Zpráva časopisu 1 (R3): Požadavek na Full-Text článku po měsících a časopisech"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Zpráva časopisu 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Počet úspěšných požadavků na Full-Text článků po měsících a časopisech (Rok {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Datum spuštění:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Vydavatel"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platforma"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "Print ISSN"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Celkem"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Celkem pro všechny časopisy"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr "Odkazy níže generují zprávy využití pomocí starého pluginu počítání přístupů. Pokud chcete počty generovat pomocí nového OJS počítadla, použijte odkazy výše."

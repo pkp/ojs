@@ -1,0 +1,168 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:25+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Jurnal yang Dikelola"
+
+msgid "admin.settings.redirect"
+msgstr "Pengalihan Jurnal"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini berguna jika hanya ada satu jurnal yang dikelola."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Anda yakin hendak menonaktifkan bahasa ini? Hal ini dapat mempengaruhi semua jurnal yang menggunakannya."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Saat ini tidak dapat mengunduh paket bahasa dari server Public Knowledge Project karena:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Server Anda tidak mengijinkan eksekusi piranti lunak GNU \"tar\".</li>\n"
+"\t\t<li>OJS tidak dapat mengubah file register bahasa, biasanya ada di \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Paket bahasa dapat diunduh secara manual dari <a href=\"http://pkp.sfu.ca\">Situs PKP</a>.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Bahasa utama ini akan menjadi bahasa default situs dan setiap jurnal yang dikelola di situs ini."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Pilih bahasa yang akan didukung situs ini. Bahasa yang dipilih akan dapat digunakan oleh semua jurnal yang dikelola situs ini, dan juga akan tampil dalam menu pilihan bahasa di setiap halaman situs (yang dapat diganti pada halaman spesifik jurnal).  Jika hanya ada satu bahasa, menu pilihan bahasa tidak akan muncul."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Bahasa yang diberi tanda kemungkinan masih belum lengkap."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Apakah Anda yakin ingin membatalkan instalasi bahasa ini? Hal ini akan mempengaruhi jurnal yang sedang menggunakannya."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Pilih bahasa tambahan untuk diinstal dalam sistem ini. Bahasa harus diinstal sebelum dapat digunakan oleh jurnal."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Pengunduhan bahasa gagal. Berikut ini catatan terkait kegagalan unduhan tersebut."
+
+msgid "admin.languages.localeInstalled"
+msgstr "\"{$locale}\" telah diinstal."
+
+msgid "admin.languages.download"
+msgstr "Unduh Bahasa"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Tidak bisa membuka deskriptor bahasa dari website PKP."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Tidak bisa menambah bahasa baru pada file register bahasa, biasanya \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "Database Pengguna OJS"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Aktifkan sinkronisasi profil pengguna (jika didukung oleh plugin otentikasi ini). Informasi profil pengguna akan diperbarui secara otomatis dari sumber luar ketika pengguna login, dan semua perubahan profil (termasuk perubahan kata sandi) yang dibuat dalam OJS secara otomatis akan diperbarui pada sumber otentikasi tersebut. Jika opsi ini tidak diaktifkan, informasi profil OJS akan disimpan secara terpisah dari informasi profil sumber luar tersebut."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Aktifkan modifikasi kata sandi pengguna (jika didukung oleh plugin otentikasi ini). Mengaktifkan opsi ini memungkinkan pengguna mengubah kata sandi mereka melalui OJS dan untuk menggunakan fitur OJS \"kehilangan kata sandi\" untuk mereset kata sandi yang terlupa. Fungsi-fungsi ini tidak akan tersedia bagi pengguna dalam sumber otentikasi ini jika opsi ini tidak diaktifkan."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Aktifkan pembuatan pengguna (jika didukung oleh plugin otentikasi ini). Pengguna yang dibuat di OJS dengan sumber otentikasi ini secara otomatis ditambahkan pada sumber otentikasi luar jika memang belum ada. Jika sumber ini menjadi sumber otentikasi default, akun OJS yang dibuat melalui registrasi pengguna juga akan ditambahkan ke sumber otentikasi tersebut."
+
+msgid "admin.systemVersion"
+msgstr "Versi OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Konfigurasi OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Konfigurasi OJS dari <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr "Secara otomatis Anda akan terdaftar sebagai manajer jurnal ini. Setelah membuat jurnal baru, Anda akan dialihkan ke panduan pengaturan jurnal untuk menyelesaikan pengaturan awal."
+
+msgid "admin.journals.journalSettings"
+msgstr "Pengaturan Jurnal"
+
+msgid "admin.journals.noneCreated"
+msgstr "Belum ada jurnal yang dibuat."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Apakah Anda yakin ingin menghapus jurnal ini dan seluruh isinya secara permanen?"
+
+msgid "admin.contexts.create"
+msgstr "Buat Jurnal"
+
+msgid "admin.journals.urlWillBe"
+msgstr "Kata atau singkatan yang mengidentifikasi jurnal. URL jurnal akan menjadi {$sampleUrl}"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Perlu judul."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Perlu path."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Path hanya dapat berisi karakter alfanumerik, garis bawah, dan tanda hubung, dan harus dimulai dan diakhiri dengan karakter alfanumerik."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Path sudah digunakan oleh jurnal lainnya."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Tampilkan jurnal kepada publik di situs"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Deskripsi Jurnal"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Path jurnal yang sudah ada atau path yang hendak dibuat (contoh: ojs)."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Impor Langganan"
+
+msgid "admin.journals.transcode"
+msgstr "Transcode metadata naskah dari ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Buat kode untuk memetakan URL OJS 1 ke OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Perlu path impor."
+
+msgid "admin.journals.importErrors"
+msgstr "Impor gagal"
+
+msgid "admin.mergeUsers"
+msgstr "Gabungkan Pengguna"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Gabungkan Pengguna"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Pilih pengguna yang akan memperoleh hak kepenulisan pengguna sebelumnya, tugas pengeditan, dll."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Pilih pengguna (atau beberapa pengguna) untuk digabungkan ke akun pengguna lainnya (contoh, ketika seseorang mempunyai dua akun)."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Semua Pengguna"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Apakah Anda hendak menggabungkan akun {$oldAccountCount} ke dalam akun \"{$newUsername}\"? Akun {$oldAccountCount} tidak akan ditampilkan lagi. Tindakan ini ireversibel."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Tidak ada pengguna yang terdaftar."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Pengingat Masa Berakhir Langganan"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Pemberitahuan Open Access"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Pengingat Review"

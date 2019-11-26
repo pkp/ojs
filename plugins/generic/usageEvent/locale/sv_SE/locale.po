@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:32+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:32+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.usageEvent.displayName"
+msgstr "Användningshändelse"
+
+msgid "plugins.generic.usageEvent.description"
+msgstr "Skapar en hook som matar ut användningshändelser i ett definerat format."

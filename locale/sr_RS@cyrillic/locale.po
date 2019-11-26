@@ -1,0 +1,2056 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:33+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:33+00:00\n"
+"Language: \n"
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "navigation.journalHelp"
+msgstr "Помоћ"
+
+msgid "navigation.current"
+msgstr "Тренутни број"
+
+msgid "navigation.otherJournals"
+msgstr "Остали часописи"
+
+msgid "navigation.browseByIssue"
+msgstr "По броју часописа"
+
+msgid "navigation.browseByAuthor"
+msgstr "По аутору"
+
+msgid "navigation.infoForAuthors"
+msgstr "За ауторе"
+
+msgid "navigation.infoForLibrarians"
+msgstr "За библиотекаре"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Информације за ауторе"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Информације за библиотекаре"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Недодељено"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Недодељено"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Прилози у фази уређивања"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Уређује се"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Прилози у фази рецензијe"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Рецензира се"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Архива"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Архива"
+
+msgid "common.queue.long.active"
+msgstr "Активне пријаве"
+
+msgid "common.queue.short.active"
+msgstr "Активно"
+
+msgid "common.queue.long.completed"
+msgstr "Архива"
+
+msgid "common.queue.short.completed"
+msgstr "Архива"
+
+msgid "section.section"
+msgstr "Секција"
+
+msgid "section.sections"
+msgstr "Секције часописа"
+
+msgid "section.title"
+msgstr "Наслов секције"
+
+msgid "section.abbreviation"
+msgstr "Скраћеница"
+
+msgid "section.abbreviation.example"
+msgstr "(Нпр. Чланци=CLA)"
+
+msgid "article.article"
+msgstr "Чланак"
+
+msgid "article.articles"
+msgstr "Чланци"
+
+msgid "common.publication"
+msgstr "Чланак"
+
+msgid "common.publications"
+msgstr "Чланци"
+
+msgid "article.submissionId"
+msgstr "ID поднеска чланка"
+
+msgid "article.title"
+msgstr "Наслов"
+
+msgid "article.authors"
+msgstr "Аутори"
+
+msgid "article.indexingInformation"
+msgstr "Информација о индексирању"
+
+msgid "article.metadata"
+msgstr "Метаподаци"
+
+msgid "article.journalSection"
+msgstr "Рубрика часописа"
+
+msgid "article.file"
+msgstr "Фајл"
+
+msgid "article.suppFile"
+msgstr "Додатни фајл"
+
+msgid "article.suppFiles"
+msgstr "Додатни фајл(ови)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Дод. фајл"
+
+msgid "article.discipline"
+msgstr "Академска дициплина и под-дисциплине"
+
+msgid "article.subject"
+msgstr "Кључне речи"
+
+msgid "article.coverage"
+msgstr "Покривеност"
+
+msgid "article.type"
+msgstr "Тип, метод или приступ"
+
+msgid "article.language"
+msgstr "Језик"
+
+msgid "article.sectionEditor"
+msgstr "УР"
+
+msgid "article.commentsToEditor"
+msgstr "Ауторови коментари"
+
+msgid "article.submission"
+msgstr "Послати чланак"
+
+msgid "article.submissions"
+msgstr "Послати чланци"
+
+msgid "article.abstract"
+msgstr "Сажетак"
+
+msgid "article.details"
+msgstr "Детаљи"
+
+msgid "submission.submissionEditing"
+msgstr "Уређивање пријаве"
+
+msgid "submission.changeSection"
+msgstr "Промени у"
+
+msgid "submission.editorDecision"
+msgstr "Одлука уредника"
+
+msgid "submission.round"
+msgstr "Круг {$round}"
+
+msgid "submission.editorReview"
+msgstr "Рецензија уредника"
+
+msgid "submission.notifyAuthor"
+msgstr "Обавести аутора"
+
+msgid "submission.notifyEditor"
+msgstr "Обавештавање уредника"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Досадашња кореспонденција"
+
+msgid "submission.reviewersVersion"
+msgstr "Рецензентова верзија фајла"
+
+msgid "submission.postReviewVersion"
+msgstr "Рецензирана верзија фајла"
+
+msgid "submission.editorVersion"
+msgstr "Уредникова верзија"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Aуторова прегледана верзија фајлa"
+
+msgid "submission.authorVersion"
+msgstr "Aуторова верзија"
+
+msgid "submission.copyediting"
+msgstr "Коректура"
+
+msgid "submission.copyedit"
+msgstr "Коректура"
+
+msgid "submission.proofreading"
+msgstr "Коректура"
+
+msgid "submission.scheduling"
+msgstr "Распоређивањe"
+
+msgid "submission.scheduledIn"
+msgstr "У плану објављивања за {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(ТБА)"
+
+msgid "submissions.sec"
+msgstr "Секц."
+
+msgid "submissions.step1"
+msgstr "1. корак"
+
+msgid "submissions.step3"
+msgstr "3. корак"
+
+msgid "submissions.queuedReview"
+msgstr "У рецензији"
+
+msgid "submissions.published"
+msgstr "Објављено"
+
+msgid "submissions.initial"
+msgstr "Првобитно"
+
+msgid "submissions.proofread"
+msgstr "Кориговање"
+
+msgid "submissions.initialProof"
+msgstr "Иницијална коректура"
+
+msgid "submissions.postAuthor"
+msgstr "Пост-аутор"
+
+msgid "submissions.reviewRound"
+msgstr "Круг рецензије"
+
+msgid "submissions.proof"
+msgstr "Коректура"
+
+msgid "submissions.editorDecision"
+msgstr "Одлука уредникa"
+
+msgid "submissions.editorRuling"
+msgstr "Одлука уредникa"
+
+msgid "submission.eventLog"
+msgstr "Запис догађаја"
+
+msgid "submissions.copyeditComplete"
+msgstr "Лектура довршена"
+
+msgid "submissions.layoutComplete"
+msgstr "Прелом довршен"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Кориговано"
+
+msgid "journal.currentIssue"
+msgstr "Тренутни број"
+
+msgid "context.contexts"
+msgstr "Часописи"
+
+msgid "journal.path"
+msgstr "Путања"
+
+msgid "context.context"
+msgstr "Часопис"
+
+msgid "user.showAllJournals"
+msgstr "Прикажи моје часописе"
+
+msgid "user.registerForOtherJournals"
+msgstr "Регистрација за остале часописе"
+
+msgid "user.myJournals"
+msgstr "Моји часописи"
+
+msgid "user.role.manager"
+msgstr "Главни уредник"
+
+msgid "user.role.subEditor"
+msgstr "Уредник секције"
+
+msgid "user.role.subscriptionManager"
+msgstr "Менаджер претплата"
+
+msgid "user.role.managers"
+msgstr "Главни уредници"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Менаджери претплата"
+
+msgid "issue.issue"
+msgstr "Bрој часописа"
+
+msgid "issue.issues"
+msgstr "Bројеви часописа"
+
+msgid "issue.title"
+msgstr "Наслов"
+
+msgid "issue.volume"
+msgstr "Година"
+
+msgid "issue.number"
+msgstr "Bрој"
+
+msgid "issue.vol"
+msgstr "Год."
+
+msgid "issue.no"
+msgstr "Бр."
+
+msgid "issue.year"
+msgstr "Година (актуелна)"
+
+msgid "issue.noIssues"
+msgstr "Нема бројева"
+
+msgid "issue.toc"
+msgstr "Садржај"
+
+msgid "issue.abstract"
+msgstr "Aпстракт"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Дешавања приликом предајe"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Рад је стављен у ред чекања у распореду часописа"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Рад је додељен броју часописa"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Чланак објављен"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Пријављена је ауторова ревизија"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Aуторов ревизијски фајл је ажуриран"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Уреднику је додијељена пријава"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Уредник је уклоњен са предатог радa"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Евидентирана је уредничка одлукa"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Aжуриран је уредников фајл"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Пријављени рад је послат у архиву"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Пријављени рад је повучен из архиве"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr ""
+"Лектору\n"
+" је додијељен рад"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Лектор је повучен са пријављеног рада"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Покренута је додела лектуре"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Лекторисани фајл  лектора је ажуриран"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Почетна лектура је готовa"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Завршна лектура је готовa"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Фајл лектуре је ажуриран"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Коректору је додијељен пријављени чланак"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Коректор је повучен са пријављеног раda"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Покренута је додела корекције"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Коригован фајл коректора је ажуриран"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Додела коректуре је готова"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Предати рад је додељен графичком уредникu"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Графички уредник је повучен са предатог рада"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Покренута је додела уређивања прелоma"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Aжурирани преломи"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Завршена је додела уређивања прелома"
+
+msgid "comments.commentsOnArticle"
+msgstr "Коментари на овај чланак"
+
+msgid "comments.authenticated"
+msgstr "од <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>{$userName}"
+
+msgid "admin.settings.oaiRegistrationDescription"
+msgstr ""
+"Како бисте учинили садржај свих часописа објављених у оквиру овог сајта индексираним унутар глобално дистрибуисаног система истраживачких база података, <a href=\"http://pkp.sfu.ca/harvester/add.php\" target=\"_blank\">региструјте</a> URL ове странице на <a href=\"http://pkp.sfu.ca/harvester/\" target=\"_blank\">сакупљачу</a> metapodataka Public Knowledge Project-a. Овај алат сакупља метаподатке из сваког индексираног прилога сваког часописа на овом сајту, омогућавајући прецизно и колективно претраживање истраживачких страница које суделују у <a href=\"http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction\" target=\"_blank\">Open Archives Initiative Protocol for Metadata Harvesting</a>.\n"
+"<br /><br />\n"
+"За регистрацију на PKP сакупљачу <a href=\"http://pkp.sfu.ca/harvester/add.php\" target=\"_blank\">кликните овде</a> и упишите: <span class=\"highlight\">{$siteUrl}</span> унутар <b>Site URL</b>-а и <span class=\"highlight\">{$oaiUrl}</span> унутар <b>Base URL for OAI Archive</b>.\n"
+"<br /><br />\n"
+"Aктивирани OAI протокол може бити искључен на нивоу читавог сајта променом системске конфигурације OJS-a. Будуће верзије OJS-а омогући ће да се OAI суделовање у OAI протоколу може укључити или искључити индивидуално за сваки часопис који се налази на сајту."
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Одређивање примарног извора аутентификације изван OJS-а резултује следећим:</p>\n"
+"<ul>\n"
+" <li>Ако корисник покуша регистровати нови кориснички налог на овом сајту са корисничким именом које постоји на извору аутентификације (али не и у OJS бази података), регистрација је допуштена уколико је приложена лозинка исправна за тај кориснички налог.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>НАПОМЕНА!</h4>\n"
+"<p>Систем не може аутоматски извршити преписивање конфигурационог фајла. Да бисте извршили измене фајл  <tt>config.inc.php</tt> мора имати perm. mod 777.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Управљање претплатама"
+
+msgid "plugins.categories.generic.description"
+msgstr "Генерички додаци служе проширивању функционалности OJS-а на многе начине који нису подржани додацима у другим катерогијама."
+
+msgid "plugins.categories.auth.description"
+msgstr "Ауторизацијски додаци омогућују Open Journal Систему да врши проверу веродостојности корисничких приступа путем спољашњих система  као што је LDAP."
+
+msgid "manager.setup.subjectClassificationDescription"
+msgstr ""
+"[Часопис ће користити предметну класификацију система доступну на мрежи.<br />\n"
+"Наслов класификационог система"
+
+msgid "manager.setup.registerJournalForIndexingDescription"
+msgstr ""
+"Како бисте учинили садржај овог часописа индексираним унутар глобално дистрибуисаног система истраживачких база података, <a href=\"http://pkp.sfu.ca/harvester/add.php\" target=\"_blank\">региструјте</a> URL вашег часописа на <a href=\"http://pkp.sfu.ca/harvester/\" target=\"_blank\">сакупљачу</a> метаподатака Public Knowledge Project-а. Овај алат сакупља метаподатке из сваког индексираног прилога у овом часопису, омогућавајући прецизно и колективно претраживање истраживачких сајтова који суделују у <a href=\"http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction\" target=\"_blank\">Open Archives Initiative Protocol for Metadata Harvesting</a>.\n"
+"<br /><br />\n"
+"Ако је ваш администратор већ регистровао овај сајт код PKP сакупљача, ваш часопис ће бити индексиран аутоматски.\n"
+"<br /><br />\n"
+"За регистрацију на PKP сакупљачу <a href=\"http://pkp.sfu.ca/harvester/add.php\" target=\"_blank\">кликните овде</a> и унесите: <span class=\"highlight\">{$siteUrl}</span> унутар <b>Site URL</b> и <span class=\"highlight\">{$oaiUrl}</span> унутар <b>Base URL for OAI Archive</b>."
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Кораци: Ред чекања пријаве > Рецензија пријаве> Уређивање пријаве > Ред чекања при одређивању рокова > Садржај.<br /><br />\n"
+"Одаберите модел за кориштење ових аспеката лекторскога поступка. (Да бисте одредили главног уредника и уредника секција, идите на Уредници у Уређивачки поступци.)"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Да ли желите да онемогућите овог корисника? Ово ће спречити корисника да се пријави у систем.\n"
+"\n"
+"Опционо можете проследити кориснику разлог зашто сте му онемогућили налог."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Извините, немате административних права над овим корисником. То може бити због:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Корисник је администратор сајта</li>\n"
+"\t\t\t<li> Корисник је активан у часописима којима ви не управљате</li>\n"
+"\t\t</ul>\n"
+"\tОвај задатак мора бити извршен од администратора сајта."
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"<ol>\n"
+"\t<li>Код назначених ставки очекује се уреднички поступак.</li>\n"
+"\t<li>\"Рок\" се активира у тренутку када рецензент прихвати захтев за рецензију и означава број недеља до истека рока за израду рецензије или (-) када је рок рецензије истекао.</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Активна уредничка задужења"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Довршена уредничка задужења"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Нема додељених пријава."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Обавештавање овог лектора ће поновно покренути његову доделу. Да ли сте сигурни да то желите?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Обавештавање овог аутора ће поновно покренути његову доделу. Да ли сте сигурни да то желите?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Обавештавање овог графичког уредника ће поновно покренути његову доделу. Да ли сте сигурни да то желите?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Обавештавање овог коректора ће поновно покренути његову доделу. Да ли сте сигурни да то желите?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Извињење"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} рецензентово извињење, отказивања и претходни круговi"
+
+msgid "sectionEditor.regrets"
+msgstr "Извињења"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Преглед одбијених, отказаних и претходних рецензија"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Стручна рецензија, {$round}. круг"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Уредникова одлука, {$round}. круг"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Рецензентова извињења и отказивања"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Извињење"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Резултат"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Додели постојећег корисника као рецензента"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Направи новог рецензента"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Активна задужења графичког уредника"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Довршена задужења графичког уредника"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Нема активних задужења."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Задужења графичког уређивања"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Поставите формат прелома (приказа)"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Замени фајл"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Додајте допунски фајл"
+
+msgid "reviewer.pendingReviews"
+msgstr "Чланци чија је рецензија у току"
+
+msgid "reviewer.completedReviews"
+msgstr "Завршено"
+
+msgid "reviewer.averageQuality"
+msgstr "Оцена"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Фајл за рецензију"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Обавестите уредника"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Урадићу рецензију"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Нисам у могућности да урадим рецензијu"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Текст пријаве ће бити на располагању када и ако рецензент прихвати понуду израде рецензије."
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Уредник пријава"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Овде укуцајте коментаре за рецензију"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Уреднички унос рецензије"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Пошаљите подсетник"
+
+msgid "reviewer.article.automatic"
+msgstr "(Аутоматски)"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Одаберите препоруку из менија. Препоруку можете одабрати тек након што сте приложили текст рецензије или фај са рецензијом. Тиме завршавате поступак рецензије и више не можете допуњавати рецензију."
+
+msgid "reviewer.article.recommendation"
+msgstr "Препорука"
+
+msgid "reviewer.article.submitReview"
+msgstr "Предајте рецензију уреднику"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Коментари"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Доставјени фајлови"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Верзију је поставио рецензент"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Ако желите обележити фајл за уредника, спремите га на ваш хард диск и користите Преглед/Слање.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Уреднички захев"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Ваш одговор"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Рецензија предата"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Рок за рецензије"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Објавити без измена"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Објавити уз предложене измене"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Вратити на рецензију"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Предложити за објављивање другде"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Текст није за објављивање"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Погледајте коментаре"
+
+msgid "reviewer.article.schedule"
+msgstr "Направите распоред"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Прилог који је потребно рецензирати"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Временски оквир рецензије"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Кораци рецензије"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Смернице за рецензенте"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Нема одабране препоруке. Да бисте предали фајл или рецензију морате одабрати препоруку."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Када сте једном записали одлуку, нећете више моћи направити никакве промене на овој рецензији. Да ли сте сигурни да желите да наставите?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Фајл за лекторисање"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Фајл лектора"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Фајл лектора"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Коректура није додељена"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"<p>Како бисте приложили рукопис, извршите следеће кораке:</p>\n"
+"<ol>\n"
+"<li>Ниже на овој страници, кликните <i>Browse</i> (или <i>Choose File</i>) који отвара прозор <i>Choose File</i> којим можете одабрати фајл на са Вашег рачунара.</li>\n"
+"<li>Лоцирајте фајл који желите да пошаљете и означите га.</li>\n"
+"<li>Кликните <i>Open</i> на прозору <i>Choose File</i>, чиме се име фајла поставља на ову страницu.</li>\n"
+"<li>Kliknite <i>Пошаљи фајл</i> на овој страници, чиме се фајл са рачунара преноси на web сајт часописа и преименује у складу с конвенцијама часописа.</li>\n"
+"<li>Једном када је фајл са текстом приложен, кликните <i>Сачувај и настави</i> на дну ове странице.</li>\n"
+"</ol>\n"
+"\n"
+"Садржај приложеног фајла можете проверити уколико кликнете на његово име. Уместо њега можете доставити нови или ревидирани фајл, чиме ће се избрисати онај који је тренутно постављен."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Имејл захтева не може бити послат док рецензијска верзија није на месту."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "Захтев имејлом не може бити послат док на страници рецензије није одређен фајл за лектуру (под \"одлука аутора\")."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Имејл захтева не може бити послат док се не постави фајл за лекторисање."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Почетна лектура"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Уредничка лектура"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Ауторска лектура"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Коначна лектура"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Лекторисана верзија"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Одредите лектора"
+
+msgid "submission.copyedit.useFile"
+msgstr "Користите фајл"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Коментари лектурe"
+
+msgid "submission.copyedit.instructions"
+msgstr "Упутства за лектуру"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Додели графичком уреднику"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Замените графичког уредника"
+
+msgid "submission.layout.layoutComments"
+msgstr "Коментари прелома"
+
+msgid "submission.layout.instructions"
+msgstr "Упутства за прелом"
+
+msgid "submission.proofreadingComments"
+msgstr "Коректурно читање коментара"
+
+msgid "submission.proofread.corrections"
+msgstr "Попис корекција"
+
+msgid "submission.proofread.instructions"
+msgstr "Упутства за коректуру"
+
+msgid "submission.logType.article"
+msgstr "Чланак"
+
+msgid "submission.logType.author"
+msgstr "Аутор"
+
+msgid "submission.logType.editor"
+msgstr "Уредник"
+
+msgid "submission.logType.review"
+msgstr "Текст рецензије"
+
+msgid "submission.logType.copyedit"
+msgstr "Лектура"
+
+msgid "submission.logType.layout"
+msgstr "Прелом"
+
+msgid "submission.logType.proofread"
+msgstr "Коректура"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Уредник/аутор кореспонденција"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Коментари лектуре"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Ове коментаре ће видети аутор.<br />\n"
+"(Након чувања, даљи коментари могу бити додати.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "За аутора и уредника"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "За уредника"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Након слања, представите рецензентима копију која се може уређивати."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "За аутора и уредника"
+
+msgid "submission.comments.forEditor"
+msgstr "За уредника"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Сачувај и пошаљи имејл аутору"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Сачувај и пошаљи имејл уреднику"
+
+msgid "user.register.noJournals"
+msgstr "Не постоје часописи за које се можете регистровати на овом сајту."
+
+msgid "user.register.privacyStatement"
+msgstr "Изјава о приватности"
+
+msgid "user.register.loginToRegister"
+msgstr "Унесите ваше постојеће корисничко име и лозинку да бисте се регистровали за овај часопис."
+
+msgid "user.register.registrationDisabled"
+msgstr "Овај часопис тренутно не прихвата регистрације корисника."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Лозинка коју сте унели није довољно дуга."
+
+msgid "user.register.readerDescription"
+msgstr "Примајте обавештења путем имејла о изласку нових издања часописа."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Обавештавање путем имејла када број часописа постане део отвореног приступa."
+
+msgid "user.register.authorDescription"
+msgstr "Можете пријављивати прилоге за овај часопис."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Спремни на обављање стручних рецензија пријава за часопису."
+
+msgid "user.register.reviewerDescription"
+msgstr "Вољни сте да пиште стручне рецензије прилога пријављених за овај часопис. Наведите своја подручја интересовања (тематска подручја и истраживачке методе)."
+
+msgid "search.browseAuthorIndex"
+msgstr "Индекс аутора"
+
+msgid "search.searchFor"
+msgstr "Претражите чланке"
+
+msgid "search.withinJournal"
+msgstr "Унутар"
+
+msgid "search.allJournals"
+msgstr "Сви часописи"
+
+msgid "search.authorIndex"
+msgstr "Индекс аутора"
+
+msgid "search.authorDetails"
+msgstr "Детаљи о аутору"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"<h4>Савети за претраживање: </h4><ul>\n"
+"<li>Појмови који се претражују су неосјетљиви на величину слова</li>\n"
+"<li>Као резултат се враћају само чланци који садрже све изразе у упитu</li>\n"
+"<li>Вишеструке речи комбинујте са <i>OR</i> да бисте пронашли чланке који садрже један од појмова; нпр. <i>едукација OR истраживање</i></li>\n"
+"<li>Користите заграде да бисте креирали више сложенијих упита; нпр. <i>архива ((часопис OR конференција) NOT радња)</i></li>\n"
+"<li>Тражите тачну фразу стављајући је у наводнике; нпр. <i>\"научна фантастикa\"</i></li>\n"
+"<li>Искључите реч додавајући јој <b>-</b> или <i>NOT</i>; нпр. <i>онлајн -политика</i> или <i>онлине NOT политика</i></li>\n"
+"<li>Користите <i>*</i> у изразу као заменски знак за било који низ знакова; нпр. <i>соци*</i> пронаћи ће документе који садрже \"социолошка\" или \"социјална\".</li>\n"
+"</ul>"
+
+msgid "article.pdf.title"
+msgstr "Преносни формат документа (PDF)"
+
+msgid "article.nonpdf.title"
+msgstr "Преузимање чланка"
+
+msgid "article.nonpdf.note"
+msgstr "Фајл који сте одабрали требо би аутоматски почети пребацивање на Ваш рачунар. Ако се то не догоди, кликните на линк испод. Овај фајл можда захтева посебни програм или додатак за приказ.<br /><br />Ако се фајл не преузима аутоматски, <a href=\"{$url}\">кликните овде</a>."
+
+msgid "site.journalsHosted"
+msgstr "Часописи хостовани на овом сајту"
+
+msgid "site.journalView"
+msgstr "Преглед часописа"
+
+msgid "site.journalRegister"
+msgstr "Регистрација"
+
+msgid "site.journalCurrent"
+msgstr "Тренутни број часописa"
+
+msgid "current.current"
+msgstr "Тренутни"
+
+msgid "current.noCurrentIssue"
+msgstr "Тренутно нема броја часописа"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Још није изашао ни један број овога часописа."
+
+msgid "archive.archives"
+msgstr "Архива издања"
+
+msgid "archive.browse"
+msgstr "Прегледајте старије бројева часописа"
+
+msgid "archive.issueUnavailable"
+msgstr "Број часописа је недоступан"
+
+msgid "about.statistics"
+msgstr "Статистикe"
+
+msgid "about.editorialTeam"
+msgstr "Часопис уређују"
+
+msgid "about.editorialTeam.biography"
+msgstr "Биографија"
+
+msgid "about.editorialPolicies"
+msgstr "Уређивачка политика"
+
+msgid "about.focusAndScope"
+msgstr "Фокус и подручје деловањa"
+
+msgid "about.sectionPolicies"
+msgstr "Политика секција"
+
+msgid "about.submissions"
+msgstr "Пријаве прилога"
+
+msgid "about.onlineSubmissions"
+msgstr "Онлајн пријаве чланака"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Пријавите се"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login}  или {$register} да пријавите чланак."
+
+msgid "about.authorGuidelines"
+msgstr "Смернице за ауторе"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Услови за предају прилога"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Као део поступка пријаве прилога, аутори су дужни потврдити складност прилога који пријављују са свим следећим ставкама. Ауторима који се не придржавају ових смерница пријаве могу бити враћене."
+
+msgid "about.copyrightNotice"
+msgstr "Ауторска права"
+
+msgid "about.privacyStatement"
+msgstr "Изјава о приватности"
+
+msgid "about.peerReviewProcess"
+msgstr "Рецензентски поступак"
+
+msgid "about.publicationFrequency"
+msgstr "Учесталост издавања"
+
+msgid "about.openAccessPolicy"
+msgstr "Отворени приступ"
+
+msgid "about.delayedOpenAccess"
+msgstr "Одгођени отворени приступ"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Садржај овог часописа бит ће доступан у формату отвореног приступа"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "месец(и) након објављивања броја часописа."
+
+msgid "about.archiving"
+msgstr "Архивирање"
+
+msgid "about.subscriptions"
+msgstr "Претплате"
+
+msgid "about.subscriptionsContact"
+msgstr "Контакт за претплате"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Типови претплата"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "О овом издавачком систему"
+
+msgid "about.aboutOJSJournal"
+msgstr "Овај часопис користи Open Journal Systems {$ojsVersion}, који је open source софтвер намењен уређивању и издавању часописа, развијан,  подржан и бесплатно дистрибуиран од <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>-а под GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "Овај сајт користи Open Journal Systems {$ojsVersion}, који је open source систем за  управљања часописима и програм за издавање, подржан и бесплатно дистрибуиран од <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>-а под GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "Помоћ за кориштење OJS-a"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS помоћ"
+
+msgid "installer.appInstallation"
+msgstr "OJS инсталација"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS надоградња"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS верзија {$version}</h4>\n"
+"\n"
+"<p>Хвала вам на преузимању Public Knowledge Project-овог <strong>Open Journal Systems-a</strong>. Пре поступка, молимо вас да прочитате <a href=\"{$baseUrl}/docs/README.md\">README</a> фајл који долази уз овај програм. За више информација о Public Knowledge Project-у и његовим програмским пројектима, посетите <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP sajt</a>. Ако примите извештај о грешки у програму или тражите техничку подршку за Open Journal Systems, погледајте <a href=\"http://forum.pkp.sfu.ca\">форум за подршку</a> или посетите  PKP-ов онлајн <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">систем за пријављивање грешке</a>. Иако је форум за подршку коришћенија метода контактирања, можете послати и имејл стручном тиму на <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Надоградња</h4>\n"
+"\n"
+"<p>Ако надограђујете постојећу инсталацију OJS 2.x, <a href=\"{$upgradeUrl}\">кликните овде</a> за наставак.</p>\n"
+"\n"
+"<h4>Препоручени услови за систем</h4>\n"
+"\n"
+"<ul>\n"
+" <li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a>\n"
+" >= {$phpRequiredVersion}; тренутно користите PHP {$phpVersion}{$wrongPhpText}</li>\n"
+" <li><a href=\"http://www.mysql.com/\"\n"
+" target=\"_blank\">MySQL</a> >= 4.1 или <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+" <li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x или >= 2.0.4x или Microsoft IIS 6</li>\n"
+" <li>Оперативни систем: било који ОС који подржава горе наведене програме, укључујући <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Будући да PKP нема средстава да тестира сваку могућу комбинацију програмских верзија и платформи, није гарантована потпуна исправност поступка или подршке.</p>\n"
+"\n"
+"<p>Након инсталације ова подешавања се могу променити, уређивањем фајла <tt>config.inc.php</tt> у главном OJS директоријуму или коришћењем администраторског интерфејса.</p>\n"
+"\n"
+"<h4>Подржани системи база података</h4>\n"
+"\n"
+"<p>OJS је тренутно тестиран на MySQL и PostgreSQL, иако други системи за управљање базама података подржани од <a href=\"http://php.weblogs.com/adodb/\" target=\"_blank\">ADOdb</a> могу функционисати (у потпуности или делимично). Функционални извјештаји и/или закрпе кода за алтернативне системе за управљање базама података могу бити послати OJS тиму.</p>\n"
+"\n"
+"<h4>Прединсталациони кораци</h4>\n"
+"\n"
+"<p>1. Следећи фајлови и директоријуми (и њихови садржаји) морају бити омогућени за писање:</p>\n"
+"<ul>\n"
+" <li>U <tt>config.inc.php</tt> је могуће писати (по избору): {$writable_config}</li>\n"
+" <li>U <tt>public/</tt> је могуће писати: {$writable_public}</li>\n"
+" <li>U <tt>cache/</tt> је могуће писати: {$writable_cache}</li>\n"
+" <li>U <tt>cache/t_cache/</tt> је могуће писати: {$writable_templates_cache}</li>\n"
+" <li>U <tt>cache/t_compile/</tt> је могуће писати: {$writable_templates_compile}</li>\n"
+" <li>U <tt>cache/_db</tt> је могуће писати: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Директоријум за чување послатих фајлова мора бити креиран и омогућен за писање (видите испод \"подешавања фајл система\").</p>\n"
+"\n"
+"<h4>Мануелно инсталирање</h4>\n"
+"\n"
+"<p>Izaberite <strong>Manuelnu instalaciju</strong> da bi prikazali SQL izjave potrebne za kreiranje OJS схеме базе података и иницијалних података, тако да инсталација базе података може бити извршена ручно. Та опција је корисна када откривате грешке код инсталационих проблема, делимично на неподржаним платформама. Напомена: овај метод инсталације неће предузети ништа како би креирао базу података или било коју табелу, иако ће конфигурациони фајл свеједно бити записан са испорученим подешавањима базе података.</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS верзија {$version}</h4>\n"
+"\n"
+"<p>Хвала Вам што сте преузели Public Knowledge Project, <strong>Open Journal Systems</strong>. Пре поступка, молимо прочитајте <a href=\"{$baseUrl}/docs/README.md\">README</a> и <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> фајлове укључене у пакету са овим софтвером. За више информација о Public Knowledge Project-у и његовим софтверским пројектима, молимо посетите <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP sajt</a>. Ако имате пријаву о грешци или тражите техничку подршку за OJS, погледајте <a href=\"http://forum.pkp.sfu.ca\">форум подршке</a> или посетите PKP-ов онлајн <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">систем пријаве грешака</a>. Иако је форум подршке преферирана метода контакта, такође можете тиму послати имејл на <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<p><strong>Препоручљиво је</strong> да направите сигурносну копију ваше базе података, директоријума са фајловима и OJS инсталационог директоријума пре наставка.</p>\n"
+"<p>Ако имате покренут <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP сигурносни мод</a>, молимо осигурајте да је max_execution_time директива у вашем php.ini конфигурационом фајлу постављена на висок лимит. Ако је тај или било који други временски лимит (нпр. Apacheva \"timeout\" директива) досегнут и поступак надоградње прекинут, биће потребна ручна интервенција.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"За комплетну Unicode (UTF-8) подршку, одаберите UTF-8 за поставку скупа свих знакова. Узмите у обзир да ова подршка тренутно захтева MySQL >= 4.1.1 ili PostgreSQL >= 7.1 сервер база података. Такође, узмите у обзир да потпуна Unicode подршка захтева PHP >= 4.3.0 израђен с подршком за <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> библиотеку (уобичајено омогућено у већини актуелних PHP инсталација). Можете имати проблема уколико користите проширене скупове знакова ако ваш сервер не подржава ове захтеве.\n"
+"<br /><br />\n"
+"Ваш сервер тренутно подржава mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "Примарни језик за коришћење у овом систему. Молимо погледајте OJS документацију ако сте заинтерсовани за подршку за језике који нису излистани овде."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Одаберите било који додатни језик који желите подржати у овом систему. Ти језици ће бити омогућени за коришћење за часописе који се налазе на сајту. Додатни језици такође могу бити инсталирани у било које време из администраторског интерфејса."
+
+msgid "installer.filesDirInstructions"
+msgstr "Унесите пуно име путање према постојећем директоријуму гдје ће се чувати послати фајлови. Тај директоријум не би смео бити директно доступан преко мреže. <strong>Молимо осигурајте да тај директоријум постоји и да се може писати по њему пре инсталације.</strong> Имена Windows путањи морају користити косе црте унапред, нпр. \"C:/mojicasopisi/fajlovi\"."
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<b>Упозорење:</b> Ако инсталација није успела делимично приликом инсталације базе података мораћете избрисати вашу OJS базу података или табеле базе података пре поновног покушаја инсталације базе података."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ВАЖНО!</h4>\n"
+"<p>Инсталациони програм не може аутоматски писати преко конфигурационог фајла. Пре покушаја коришћења система, молимо отворите <tt>config.inc.php</tt> у одговарајућем едитору текста и замените његов садржај са садржајем текста који се налази у пољу испод.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Инсталација ОЈС-а је успешно довршена.</p>\n"
+"<p>Да бисте започели са коришћењем система, <a href=\"{$loginUrl}\">prijavite se</a>са Вашим корисничким именом и лозинком наведеним на прошлој страници.</p>\n"
+"<p>Ако желите да примате вести и надоградње, <strong>молимо да се региструјете на <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Ако имате питања или коментаре, посетите <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">форум подршке</a>.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Надоградња OJS-а на верзију {$version} је успешно завршенa.</p>\n"
+"<p>Не заборавите поставити \"installed\" подешавање у вашем config.inc.php конфигурационом фајлу на <i>On</i>.</p>\n"
+"<p>Ако се још нисте регистровали, а желите примати вести и надоградње, <strong>молимо Вас да се региструјте на <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Ако имате питања или коментаре, молимо Вас да посетите <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">форум подршке</a>.</p>"
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} је ревидирао свој прилог {$submissionId}. ID новог фајла је {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} је повучен(а) из рецензентског поступка прилога {$submissionId} у {$round}. кругу рецензије."
+
+msgid "log.review.reviewInitiated"
+msgstr "Рецензент {$reviewerName} је покренуо  {$round}. круг рецензије прилога {$submissionId}."
+
+msgid "log.review.reviewCancelled"
+msgstr "Рецензија {$round}. круга рецензента {$reviewerName} за прилог {$submissionId} је поништена."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} је оцењен за {$round}. круг рецензије прилога {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "Крајњи рок за {$round}. круг рецензије за прилог {$submissionId} за рецензента {$reviewerName} је промењен на {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "Рецензент {$reviewerName} је поставио препоруку за {$round}. круг рецензије прилога {$submissionId}."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "{$editorName} је унео у име рецензента {$reviewerName} препоруку за {$round}. круг рецензије за прилог {$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "Прилог {$submissionId} је изнова предат на рецензију."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} је одбио израду {$round}. круга рецензије за прилог {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} је прихватио израду {$round}. круга рецензије за прилог {$submissionId}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} је прихватио {$round}. круг рецензије за прилог {$submissionId} у име {$reviewerName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Urednik {$userName} је у име рецензента {$reviewerName} приложио фајл са рецензијом за {$round}. круг рецензије прилога {$submissionId}."
+
+msgid "log.review.reviewerFile"
+msgstr "Рецензент је послао фајл."
+
+msgid "log.copyedit.initiate"
+msgstr "{$copyeditorName} је започео лектуру прилога {$submissionId}"
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Верзија текста за лектуру је одабрана."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} је завршио почетну лектуру прилога {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} је завршио коначну лектуру прилога {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} је додељена лектура прилога {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Иницијална лектура чланка је сачувана."
+
+msgid "log.copyedit.authorFile"
+msgstr "Ауторска ревизија лектуре је сачувана."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} је додељен као графички уредник за прилог {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} је разрешен улоге графичког уредника за прилог {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} је завршио уређивање прелома за прилог {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName} је модификовао метаподатке овог прилога."
+
+msgid "log.editor.editorFile"
+msgstr "Сачувана је уредничка верзија текста прилога."
+
+msgid "log.editor.archived"
+msgstr "Пријава {$submissionId} је архивирана."
+
+msgid "log.editor.restored"
+msgstr "Пријава {$submissionId} је враћена у уређивачки поступак."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} је додељен као уредник прлога {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "Коректура прилога {$submissionId} додељена је {$proofreaderName} од стране {$assignerName}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} је поставио прилог {$submissionId} у распоред за издавање."
+
+msgid "log.imported"
+msgstr "{$userName} је унео чланак {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Стручно рецензирани чланак"
+
+msgid "common.confirmComplete"
+msgstr "Да ли сте сигурни да желите да означите овај задатак као комплетиран?"
+
+msgid "common.payment"
+msgstr "Плаћање"
+
+msgid "common.payments"
+msgstr "Плаћања"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Упутства за сукоб интереса"
+
+msgid "submission.sent"
+msgstr "Послато"
+
+msgid "reader.subscribersOnly"
+msgstr "Само за претплатнике"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Само претплатници могу приступити овом садржају. За потврду претплатничког статуса, пријавите се у систем."
+
+msgid "reader.openAccess"
+msgstr "Отворен приступ"
+
+msgid "reader.subscriptionAccess"
+msgstr "Претплатнички приступ"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Претплатнички или отворен приступ"
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Преузимање фајла са језицима са Public Knowledge Пројецт сервера тренутно није доступно пошто:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Ваш сервер нема или не дозвољава покретање ГНУ \"tar\" програма</li>\n"
+"\t\t<li>OJS не може модификовати локализациони registry фајл, обично \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Фајл са језицима можете ручно преузети са <a href=\"http://pkp.sfu.ca\">PKP web site</a>.</p>"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Предложене Creative Commons одредбе о ауторским правима</h3>\n"
+"<h4>1. Предлог за часописе који омогућују отворен приступ</h4>\n"
+"Аутори који објављују у овом часопису пристају на следеће услове:\n"
+"<ol type=\"a\">\n"
+"\t<li>Аутори задржавају ауторска права и пружају часопису право првог објављивања рада и лиценцирају га <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/hr/\">Creative Commons именовање лиценцом</a> која омогућује другима да деле рад уз ууслов навођења ауторства и изворног објављивања у овом часопису.</li>\n"
+"\t<li>Аутори могу израдити посебне, уговорне аранжмане за не-ексклузивну дистрибуцију рада објављеног у часопису (нпр. постављање у институционални репозиторијум или објављивање у књизи), уз навођење да је рад првобитно објављен у овом часопису. </li>\n"
+"\t<li>Ауторима је дозвољено да поставе објављени рад он-лине (нпр. у институционалном репозиторијуму или на својим мрежним страницама) пре и током поступка пријаве, с обзиром да такав поступак може водити продуктивној размени идеја, те ранијој и већој цитираности објављеног рада (usp. <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Предлог за часописе који омогућују одгођени отворен приступ</h4>\n"
+"Аутори који објављују у овом часопису пристају на следеће услове:\n"
+"<ol type=\"a\">\n"
+"\t<li>Аутори задржавају ауторска права и пружају часопису право првог објављивања, при чему ће рад [НАВЕДИТЕ ВРЕМЕНСКИ ПЕРИОД] по објављивању бити под лиценцом  <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/hr/\">Creative Commons именовање </a> која омогућује другима да деле рад под условом да наводе ауторство и првобитно објављивање у овом часопису.</li>\n"
+" <li>Аутори могу израдити посебне, уговорне аранжмане за не-ексклузивну дистрибуцију рада објављеног у часопису (нпр. постављање у институционални репозиторијум или објављивање у књизи), уз навођење да је рад првобитно објављен у овом часопису. </li>\n"
+" <li>Ауторима је дозвољено да поставе објављени рад on-line (нпр. у институционалном репозиторијуму или на својим мрежним страницама) пре и током поступка пријаве, с обзиром да такав поступак може водити продуктивној размени идеја, те ранијој и већој цитираности објављеног рада (нпр. <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Како би читаоци лакше приступили мрежно доступним пречицама референци које наводе аутори прилога објављених у часопису, могуће је учинити следеће:</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Додати алате за читање</strong><p>Главни уредник може додати \"Тражење референци\" алатима за читање који су придружени објављеним прилозима. Ово омогућава читаоцима да залепе наслов референце и потраже их у одређеним базама.</p></li>\n"
+"\t<li><strong>Uključiti линкове u popis literature</strong><p>Графички уредник може додати активне линкове у референце чији се садржај може пронаћи на мрежи. При томе се треба водити следећим препорукама (које се могу уређивати).</p></li>\n"
+"</ol>"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Неисправни формат слике. Систем прихвата .gif, .jpg или .png формате."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Обавести уредника"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "да ли ћете преузети рецензију овог прилога."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Уколико сте пристали на израду рецензије, молимо Вас да консултујете смернице за рецензенте које се налазе при дну странице."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Кликните на име фајла како бисте преузели рукопис ове пријаве."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Молимо Вас да се изјасните да ли имате сукоба интереса везаних уз ово истраживање (види <a target=\"_new\"\n"
+" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">смернице о сукобу интереса</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Сукоб  интереса"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Кликните на икону да би унели или копирали текст ваше рецензије везан за ову пријаву."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Такође, можете приложити и фајл за уредника и/или аутора."
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Не постоји (поставите коначну верзију лектуре као верзију за прелом)"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Повезивање референци"
+
+msgid "about.authorFees"
+msgstr "Ауторске надокнаде"
+
+msgid "about.authorFeesMessage"
+msgstr "Часопис наплаћује од аутора следеће радње."
+
+msgid "about.memberships"
+msgstr "Чланство"
+
+msgid "donations.thankYou"
+msgstr "Хвала Вам!"
+
+msgid "donations.thankYouMessage"
+msgstr "Хвала Вам на уплати. Она представља значајан материјални и симболички допринос нашем часопису."
+
+msgid "payment.loginRequired"
+msgstr "Да бисте извршили уплату, морате се прво пријавити у часопис."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Приступ овом чланку захтева претплату или се наплаћује по приступу. Молимо вас пријавите се у часопис како бисте потврдили свој претплатнички статус или извршили уплату."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Да бисте уплатили донацију, морате се прво пријавити у часопис."
+
+msgid "payment.paid"
+msgstr "Уплаћено"
+
+msgid "payment.payNow"
+msgstr "Уплатите сада"
+
+msgid "payment.waive"
+msgstr "Изузеће"
+
+msgid "payment.alreadyPaid"
+msgstr "Већ плаћено"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Одаберите ову опцију како бисте завршили поступак пријаве прилога уколико сте већ извршили своју уплату. Пријава неће бити рецензирана док уплата није извршена. Одаберите УПЛАТИТЕ САДА како бисте приступили упутствима за уплату."
+
+msgid "payment.paymentReceived"
+msgstr "Уплата примљена"
+
+msgid "payment.paymentSent"
+msgstr "Уплата је већ послата"
+
+msgid "payment.type.submission"
+msgstr "Цена пријаве чланка"
+
+msgid "payment.type.publication"
+msgstr "Цена објављивања чланка"
+
+msgid "payment.type.fastTrack"
+msgstr "Цена убрзаног рецензијског поступка"
+
+msgid "payment.type.membership"
+msgstr "Износ индивидуалне чланарине"
+
+msgid "payment.type.subscription"
+msgstr "Износ претплате"
+
+msgid "payment.type.donation"
+msgstr "Донације"
+
+msgid "payment.donation.makeDonation"
+msgstr "Уплатите донацију"
+
+msgid "payment.submission.paySubmission"
+msgstr "Уплатите накнаду за пријаву чланка"
+
+msgid "payment.publication.payPublication"
+msgstr "Уплатите накнаду за објављивање"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Накнада за објављивање уплаћена."
+
+msgid "payment.membership.buyMembership"
+msgstr "Купите индивидуално чланство"
+
+msgid "payment.membership.renewMembership"
+msgstr "Обновите индивидуално чланство"
+
+msgid "payment.membership.ends"
+msgstr "Члан до"
+
+msgid "payment.subscription.renew"
+msgstr "Обновите претплату"
+
+msgid "payment.subscription.expires"
+msgstr "Истиче"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS za čuvanje podataka zahteva pristup SQL bazi. Pregledajte gore navedene sistemske zahteve za popis baza koje OJS подржава. У ниже приложеним пољима наведите параметре који ће се користити за повезивање с базом."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} је одбио/ла {$round} рецензију прилога {$submissionId} у име {$reviewerName}."
+
+msgid "log.editor.decision"
+msgstr "{$editorName} је евидентирао уредничку одлуку ({$decision}) за чланак {$submissionId}."
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Учитана је листа валута \"{$filename}\" из XML-a."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Кликните на икону и испуните образац за реценцзију."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Испуните обавезана поља."
+
+msgid "common.homePageHeader.altText"
+msgstr "Заглавље наслове стране"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Слика насловне стране часописа"
+
+msgid "article.coverPage.altText"
+msgstr "Насловна страна"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Отворен приступ"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Ограничен приступ"
+
+msgid "article.comments.sectionDefault"
+msgstr "Стандардно"
+
+msgid "article.comments.disable"
+msgstr "Онемогући"
+
+msgid "article.comments.enable"
+msgstr "Омогући"
+
+msgid "article.fontSize"
+msgstr "Величине фонта"
+
+msgid "article.fontSize.small.altText"
+msgstr "Мали"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Средњи"
+
+msgid "article.fontSize.large.altText"
+msgstr "Велики"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Ваш кориснички налог тренутно није повезан ни са једним часописом. Молимо одаберите часопис:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Ваш кориснички налог тренутно није повезан ни са једном улогом у овом часопису. Молимо одаберите једно од следећег:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Пријавите предлог"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Пријава чланка: Регистрација аутора тренутно је онемогућена."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Региструјте се као рецензент"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Регистрација као рецензент: Регистрација рецензената тренутно је онемогућена."
+
+msgid "issue.coverPage.altText"
+msgstr "Слика насловне странице броја"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Pроцес уређивања и издавања у OJS-у"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Јавни идентификатор прелома"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Јавни идентификатор прелома већ постоји."
+
+msgid "help.searchReturnResults"
+msgstr "Повратак на резултате претраживања"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Цена приступа појединим чланцима"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "user.manageMySubscriptions"
+msgstr "Управљање мојим претплатама"
+
+msgid "subscriptionTypes.currency"
+msgstr "Валута"
+
+msgid "subscriptionTypes.year"
+msgstr "година"
+
+msgid "subscriptionTypes.years"
+msgstr "године"
+
+msgid "subscriptionTypes.month"
+msgstr "месец"
+
+msgid "subscriptionTypes.months"
+msgstr "месеци"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Не истиче"
+
+msgid "subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Онлајн"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Штампано"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Штампано и онлајн"
+
+msgid "subscriptions.inactive"
+msgstr "Неактивно"
+
+msgid "subscriptions.status"
+msgstr "Статус"
+
+msgid "subscriptions.status.active"
+msgstr "Активно"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Треба информације"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Треба одобрење"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Чека мануелно плаћање"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Чека онлајн плаћањe"
+
+msgid "subscriptions.status.other"
+msgstr "Друго, погледај напомене"
+
+msgid "subscriptions.individualDescription"
+msgstr "Индивидуалне претплате захтевају пријављивање да би им се приступило"
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Институционалне претплате не захтевају пријављивање. Кориснички домен или IP адреса се користи као потврда за приступ садржају претплате."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Напомена:</strong> Институционалне претплате купљене онлајн захтевају одобравање домена и опсега IP адреса пре него претплата постане активна."
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Индивидуалне претплате"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Институционалне претплате"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Типови претплата"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Моје претплате"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Статус претплата"
+
+msgid "user.subscriptions.status"
+msgstr "Статус"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Опис"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Индивидуалне претплате"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Институционалне претплате"
+
+msgid "user.subscriptions.renew"
+msgstr "Обнови"
+
+msgid "user.subscriptions.purchase"
+msgstr "Купи"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Купи нову претплату"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Купи индивидуалну претплатu"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Купи институционалну претплатu"
+
+msgid "user.subscriptions.expires"
+msgstr "Истиче"
+
+msgid "user.subscriptions.expired"
+msgstr "Истекло"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Прегледај доступне типове претплата"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Тип претплате"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Чланство"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Одабрани тип претплате захтева информације о чланству."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Одаберите исправан тип претплате."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Кориснички налог већ има индивидуалну претплату."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Име институције"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Име институције је неопходно."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Адреса поште"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Домен"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Унесите исправан домен."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP опсег"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Унесите исправан IP опсег."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Обриши"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Додај"
+
+msgid "about.history"
+msgstr "Историја часописа"
+
+msgid "about.subscriptions.individual"
+msgstr "Индивидуалне претплате"
+
+msgid "about.subscriptions.institutional"
+msgstr "Институционалне претплате"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Име"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Трајање"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Цена"
+
+msgid "payment.authorFees"
+msgstr "Накнаде за аутора"
+
+msgid "notification.type.galleyModified"
+msgstr "Фајл за приказ је измењен за \"{$param}\"."
+
+msgid "notification.type.issuePublished"
+msgstr "Издање је објављено."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Ново обавештење је направљено."
+
+msgid "notification.type.site"
+msgstr "Догађаји на сајту"
+
+msgid "manager.setup.reviewProcessEmailDescription"
+msgstr "Уредник шаље рецензентима захтев са радом путем имејла. Рецензент обавештава уредника да ли привхвата израду рецензије и сугестије. Уредник уноси податке о одлуци рецензента."
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Упутства за рецензенте ће обезбедити подребне смернице за одлучивање да ли је рад погодан за објављивање у часопису као и посебне инструкције како ефикасно припремити рад за објављивање. Рецензентима су дате две могућности, прва \"за аутора и уредника\" и друга \"за уредника\". Такође, уредник часописа ноже да направи форме за рецензије експерата у оквиру форми рецензија. У сваком случају, уреници могу да обезбеде коресподенцију рецензената и аутора."
+
+msgid "user.register.reviewerInterests"
+msgstr "Идентификујте рецензентове интересе (суштинска подручја и истраживачке методе)."
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Активне и истекле предаје су приказане ниже, заједно са датумима истека. Као додатак, информација се може укључити за сваку предају."
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Потребне су додатне информације пре него што предаја може постати активнa"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Предаја мора бити прегледана пре но што може постати активна"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Мануелно плаћање је започето али средства још нису пристигла"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Онлајн плаћање је започето, али се од њега одустало или није завршено"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Потребне су информације о чланству за одабрани тип претплате."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Ukoliko je domen unet, IP opsezi su opcioni.<br />Ispravne vrednosti su imena domena (npr. ff.uns.ac.rs)"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Одабрани тип претплате захтева да унесете домен и/или IP опсеге ради аутентификације."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Уколико су IP опсези унети, домен је опцион.<br />Исправне вредности укључују IP адресу (нпр. 142.58.103.1), IP опсег (нпр. 142.58.103.1 - 142.58.103.4) IP опсег са \"wildcard\" (нпр.  142.58.*.*) i IP опсег са CIDR (нпр. 142.58.100.0/24)."
+
+msgid "payment.subscription.purchase"
+msgstr "Купи претплату"
+
+msgid "installer.installApplication"
+msgstr "Инсталирај OJS"
+
+msgid "installer.upgradeApplication"
+msgstr "Надогради OJS"
+
+msgid "notification.type.editing"
+msgstr "Догађаји у уредништву"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Остављен је коментар на уредникову одлуку \"{$param}\"."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Рецензија преко рецензентске форме је предата за \"{$param}\"."
+
+msgid "notification.type.reviewing"
+msgstr "Догађаји у читалачком делу"
+
+msgid "notification.type.submissionComment"
+msgstr "Уредник је коментарисао \"{$param}\"."
+
+msgid "notification.type.submissions"
+msgstr "Догађаји у делу за предаје"
+
+msgid "notification.type.userComment"
+msgstr "Читаоц је коментарисао \"{$param}'s\""
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Приступ није дозвољен! Нисте додати као лектор за овај чланаk."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Покушавате да приступите чланку који није у вашој секцији."
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Неисправна лекторска предаја или предаја није захтевана!"
+
+msgid "navigation.categories"
+msgstr "Категорије"
+
+msgid "navigation.categories.browse"
+msgstr "Пронађи"
+
+msgid "user.profile.profileImage"
+msgstr "Слика профила"
+
+msgid "issue.fullIssue"
+msgstr "Пуно издање"
+
+msgid "issue.nonpdf.title"
+msgstr "Преузми издање"
+
+msgid "issue.viewIssue"
+msgstr "Погледај издање"
+
+msgid "site.noJournals"
+msgstr "Нема доступних часописа."
+
+msgid "installer.allowFileUploads"
+msgstr "Ваш сервер подржава постављање датотека: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Ваш сервер тренутно подржава постављање максималну величину датотеке: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Доступна је нова верзија OJS! Тренутно користите OJS {$currentVersion}.\n"
+" Најновија верзија ОЈС је {$latestVersion}. Посетите <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">ову страну</a>да преузмете последњу верзију и да нађете упутство за надоградњу."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "Доступна је нова верзија ОЈС! Тренутно користите OJS {$currentVersion}. Обратите се вашем администратору сајта ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) и обавестите га о новом издању. Више информација можете наћи <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">овде</a>."
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"<ol>\n"
+"\t<li>Наглашене ставке показују да је уредник тражио да се изврше активности као што је доле назначено:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Потребна активност на нивоу припреме пробног отиска</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Потребна активност на нивоу уређивања обликовања</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Потребна активност на нивоу коректурe</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Да би приступили овој ставки потребна је претплата или да купите издање. Пријавите се у часопис да би верификовали претплату, приступили претходним куповинама или купили издање."
+
+msgid "payment.type.purchaseIssue"
+msgstr "Цена куповине издања"
+
+msgid "context.current"
+msgstr "Тренутни чаопис:"
+
+msgid "context.select"
+msgstr "Пребаци се на други часопис:"
+
+msgid "journal.viewAllIssues"
+msgstr "Погледај све бројеве"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Укључи и кориснике без улога у овом часопису."
+
+msgid "editor.navigation.issues"
+msgstr "Бројеви"
+
+msgid "editor.issues.backIssues"
+msgstr "Претходни бројеви"
+
+msgid "editor.issues.futureIssues"
+msgstr "Будући бројеви"
+
+msgid "archive.archivesPageNumber"
+msgstr "Архива - страна {$pageNumber}"
+
+msgid "about.contact"
+msgstr "Контакт"
+
+msgid "about.aboutContext"
+msgstr "О часопису"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Регистрација"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} или {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Направи нову предају"
+
+msgid "user.reviewerPrompt"
+msgstr "Да ли бисте желели да будете рецензент радова који се објављују у овом часопису?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Да, захтевам улогу {$userGroup}."
+
+msgid "user.register.otherContextRoles"
+msgstr "Захтевај следеће улоге."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Уколико сте захтевали да постанете рецензент часописа, молимо Вас да унесете ваше области интересовања."
+
+msgid "user.register.contextsPrompt"
+msgstr "За које часописе на овом сајту желите да се региструјете?"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Сакриј остале часописе"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Региструј се и за остале часописе"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Нови чланак \"{$title}\" је предат."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Подеси или измени препоруку рецензента."
+
+msgid "article.return"
+msgstr "Повратак на детаље чланка"
+
+msgid "user.role.subEditors"
+msgstr "Уредници секција/рубрика"
+
+msgid "user.role.journalAssistant"
+msgstr "Асистент часописа"
+
+msgid "user.role.journalAssistants"
+msgstr "Асистенти часописа"
+
+msgid "user.role.guestEditor"
+msgstr "Гост уредник"
+
+msgid "user.role.guestEditors"
+msgstr "Гост уредници"
+
+msgid "issue.return"
+msgstr "Врати се на детаље броја"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Чланак пријављен"
+
+msgid "search.results.orderBy"
+msgstr "Поредај резултате по"
+
+msgid "search.results.orderBy.article"
+msgstr "Наслов чланка"
+
+msgid "search.results.orderBy.author"
+msgstr "Аутор"
+
+msgid "search.results.orderBy.date"
+msgstr "Дан објављивања"
+
+msgid "search.results.orderBy.issue"
+msgstr "Број"
+
+msgid "search.results.orderBy.journal"
+msgstr "Наслов часописа"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Популарност (сво време)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Популарност (последњи месец)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Релевантност"
+
+msgid "search.results.orderDir.asc"
+msgstr "Растући"
+
+msgid "search.results.orderDir.desc"
+msgstr "Опадајући"
+
+msgid "search.results.similarDocuments"
+msgstr "слични документи"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Додатак за пробне копије чланка"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Додатак за пробне копије чланка даје подршку за приказ разних типова докумената као пробних копија."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Овај пробни отисак ће бити доступан на посебном сајту."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL за садржај на удаљеном серверу"
+
+msgid "user.register.selectContext"
+msgstr "Одаберите часопис у који се желите регистровати:"
+
+msgid "article.pageTitle"
+msgstr "Изглед за {$title}"
+
+msgid "article.download"
+msgstr "Преузми овај PDF фајл"
+
+msgid "article.pluginMissing"
+msgstr "<p>PDF фајл који сте одабрали ће се овде појавити ако ваш интернет прегледач има додатак за читање PDF фјлова (на пример, недавну верзију <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "види преостале пријављене чланке"
+
+msgid "help.goToEditPage"
+msgstr "Уреди {$sectionTitle}"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"<h4>Прединсталацијски кораци</h4>\n"
+"\n"
+"\n"
+"<p>1. Следећи фајлови и директорији  (и њихови садржаји) требају бити уписиви:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> је уписив (optional): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> је уписив: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> је уписив: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> је уписив: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> је уписив: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> је уписив: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Диртекториј који ће садржвати  фајлове постављене на сервер мора бити креиран и уписив (види \"подешавања фајлова\" испод).</p>"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Сачувани метаподаци издања броја."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Нови члнак је пријављен за којег мора бити одређен уредник."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Додели корисника да креира пробне копије користећи Додај линк у листи Учесника."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Очекујемо пробне копије."
+
+msgid "user.authorization.noContext"
+msgstr "Нема часописа у контексту!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Захтевали сте неважећи број!"
+
+msgid "grid.action.createContext"
+msgstr "Креирај нови часопис"
+
+msgid "notification.type.approveSubmission"
+msgstr "Пријављени чланак чека на одобрење пре него се појави у броју."
+
+msgid "article.view.interstitial"
+msgstr "Одаберите фајл чланка за преузимање."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Одобрено"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Чека се одобрење"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Одобрена пробна копија"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Одобри ову пробну копију за објављивање.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Уклони одобрење за ову пробну копију.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Индексирам \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Ова примена претраге не дозвољава поновно индексирање по часопису."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Дата путања часописа \"{$journalPath}\" није могла да се споји са часописом."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Чека се одобрење."
+
+msgid "about.editorialPOLICY"
+msgstr "Уређивачка политика"

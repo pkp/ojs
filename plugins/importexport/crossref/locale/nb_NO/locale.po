@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:36+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Programutvidelse for eksport til CrossRef XML"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Eksporter artikkelmetadata i CrossRef XML-format."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Bruk:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Ingen utgave stemmer med den angitte utgave-ID'en \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Ingen artikkel stemmer med den angitte artikkel-ID'en \"{$articleId}\"."

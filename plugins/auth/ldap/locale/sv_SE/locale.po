@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:38+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:38+00:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Detta plugin möjliggör autentisering och synkronisering av användarkonton mot en extern LDAP-datakälla."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP-inställningar"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Serverns värddatornamn"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "T.ex., \"ldap.example.com\", eller \"ldaps://ldap.example.com\" (för att använda SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Serverport"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Valfritt. Default är 389 (LDAP) eller 636 (LDAP över SSL)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Base DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "T.ex. \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Manager DN"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "T.ex., \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Manager-lösenord"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "Manager DN och -lösenord krävs bara om synkronisering av användarprofil/lösenord eller inställningar för att skapa användare är aktiverade. Om LDAP endast kommer att användas för autenticering kan dessa inställningar bortses från."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Attribut för kontonamn"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Attributet vars värde unikt identifierar ett användarobjekt, som uid, cn eller sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Lösenordskryptering"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Hashformat för lösenord lagras på servern. SSHA rekommenderas."
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL-inställningar (valfritt)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Använd SASL i stället för enkel autentisering"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL-mekanism"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "T.ex., \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Realm"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Begärt autentiserings-id"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL-säkerhetsegenskaper"

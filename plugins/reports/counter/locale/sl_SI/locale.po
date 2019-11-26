@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:10+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:10+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "Vtičnik COUNTER omogoča poročanje o aktivnostih v zvezi z revijo s pomočjo <a href=\"http://www.projectcounter.org\">COUNTER standarda</a>. Sama poročila ne pomenijo, da je revija skladna z zahtevami COUNTER. Kaj je potrebno za zadostitev zahtevam COUNTER, preverite na spletni strani Project COUNTER."
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER poročila"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER verzija"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Stara poročila spletišča"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Parametri za poročilo so bili napačni."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Zahteva za poročilo je neveljavna."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Za poročilo ni bilo najdenih nobenih rezultatov."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Rezultati ne morejo biti prikazani kot XML."
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr "Te povezave generirajo COUNTER poročila na osnovi zastarele verzije 3.0. To vpliva na vse revije na tem spletišču. Uporabite najnovejšo različico, ko bo mogoče."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER poročilo o revijah 1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML verzija"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "COUNTER poročilo o revijah 1 (R3): Dostopi do celotenga besedila prispevkov po mesecih in revijah"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Poročilo o revijah 1 (R3): Dostopi do celotenga besedila prispevkov po mesecih in revijah"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Poročilo o revijah 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Število uspešnih dostopovi do celotenga besedila prispevkov po mesecih in revijah (leto {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Datum proočila:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Izdajatelj"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platforma"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN tiskane izdaje"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "E-ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD skupno"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Skupno za vse revije"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anonimno"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr "Povezave spodaj generirajo zastarela poročila na osnovi podatkov zastarelega vtičnika, ki ne ustreza COUNTER zahtegvam. Če želite pripraviti trenutna COUNTER poročila z uporabo novih OJS COUNTER tipov metrik, uporabite povezave zgoraj."
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Vsi obiskovalci"

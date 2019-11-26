@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:48+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:48+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Users XML dodatak"
+
+msgid "plugins.importexport.users.description"
+msgstr "Uvoz i izvoz korisnika"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Primena: {$scriptName} {$pluginName} [command] ...\n"
+"Naredbe:\n"
+"\timport [xmlFileName] [press_path] [optional flags]\n"
+"\texport [xmlFileName] [press_path]\n"
+"\texport [xmlFileName] [press_path] [role_path1] [role_path2] ...\n"
+"\n"
+"Opcione oznake:\n"
+"\tcontinue_on_error: Ukoliko je zatato, u slučaju greške ne staje sa uvozom korisnika\n"
+"\n"
+"\tsend_notify: Ukoliko je zadato šalje imejl obaveštenje svim korisnicima sa podacima o korisničkom imenu i lozinci\n"
+"\n"
+"Primeri:\n"
+"\tUvozi korisnike u myPress časopis iz myImportFile.xml, nastavljajući u slučaju greške:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myPress continue_on_error\n"
+"\n"
+"\tIzvozi korisnike iz časopisa myPress u fajl myExportFile.xml:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myPress\n"
+"\n"
+"\tIzvozi korisnike registrovane kao recenzente sa njihovim recenzentskim ulogama:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myPress reviewer "
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Uvoz korisnika"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Odaberite XML fajl koji sadrži informacije o korisnicima koje želite uvesti u časopis. Konsultujte pomoć za detale o formatu fajla.<br /><br />Ukoliko fajl sadrži podatke o korisnicima koji već postoje, oni neće biti uneti već će se postojećim korisnicima promeniti/dodeliti uloge iz fajla."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Fajl sa podacima"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Pošalji imejl svakom unetom korisniku sa njegovim korisničkim imenom i lozinkom."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "U slučaju greške nastavi sa uvozom."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Sledeći korisnici su uspešno uvezeni"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Greške prilikom uvoza"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Potvrdite da su ovo korisnici koje želite da uvezete"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "UPOZORENJE"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Nemoguće korišćenje lozinki hešovanih sa {$importHash}; OJS je konfigurisan da koristi {$ojsHash}. Ukoliko nastavite, moraćete resetovati lozinke svih korisnika koje uvezete."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Nepoznata putanja časopisa \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Izvezi korisnike"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Izvezi po ulozi"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Izvezi sve"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Došlo je do grešaka prilikom izvoza"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Nemoguće upisivanje u fajl \"{$fileName}\"."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "Uvoz je uspešno završen. Korisnici sa korisničkim imenima i imejl adresama koje do sada nisu bila u upotrebi su uspešno uvezeni i dodati u odgovarajuće grupe."
+
+msgid "plugins.importexport.users.results"
+msgstr "Rezultati"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Molimo dodajte fajl u opciji \"Uvoz\" za nastavak."

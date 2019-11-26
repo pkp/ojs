@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Artykuły"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "default.genres.article"
+msgstr "Tekst artykułu"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Tekst nie był dotąd nigdzie opublikowany ani nie jest przedmiotem postępowania w innym czasopiśmie."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Tekst zapisany w formacie OpenOffice, Microsoft Word, RTF lub WordPerfect."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Jeżeli jest dostępny należy dostarczyć URL dla pozycji bibliograficznych."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Czy jesteś zaintersowany(a) zgłoszeniem tekstu do tego czasopisma? Rekomendujemy zapoznanie się z zawartością strony <a href=\"{$indexUrl}{$contextPath}/about\">O czasopiśmie</a>, na której zamieszczone są zasady czasopisma oraz <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Instrukcja dla autorów</a>. Autor musi <a href=\"{$indexUrl}{$contextPath}/user/register\">zarejestrować się</a> na stronie czasopisma, zanim rozpocznie proces recenzji lub  <a href=\"{$indexUrl}/index/login\">zalogować się</a>, jeżeli posiada już konto w systemie. Proces zgłoszenia tekstu składa się z pięciu kroków."
+
+msgid "default.groups.name.manager"
+msgstr "Administrator czasopisma"
+
+msgid "default.groups.plural.manager"
+msgstr "Administratorzy czasopisma"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ADMIN"
+
+msgid "default.groups.name.editor"
+msgstr "Redaktor czasopisma"
+
+msgid "default.groups.plural.editor"
+msgstr "Redaktorzy czasopisma"
+
+msgid "default.groups.abbrev.editor"
+msgstr "RED"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Redaktor gościnny"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Redaktorzy gościnni"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "RED G"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Redaktor działu"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Redaktorzy działu"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "RED DZ"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Menadżer subskrypcji"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Menadżerowie subskrypcji"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SUB"
+
+msgid "default.genres.researchInstrument"
+msgstr "Narzędzie badawcze"
+
+msgid "default.genres.researchMaterials"
+msgstr "Materiały"
+
+msgid "default.genres.researchResults"
+msgstr "Wyniki badań"
+
+msgid "default.genres.transcripts"
+msgstr "Transkrypcje"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Analiza danych"
+
+msgid "default.genres.dataSet"
+msgstr "Zestaw danych"
+
+msgid "default.genres.sourceTexts"
+msgstr "Kody źródłowe"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Recenzent"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Recenzenci"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "REC"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"

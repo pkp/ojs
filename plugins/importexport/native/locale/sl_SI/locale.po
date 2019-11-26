@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:44+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:44+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Domači XML vtičnik"
+
+msgid "plugins.importexport.native.description"
+msgstr "Uvozi ali izvozi prispevke in številke v domači OJS XML obliki."
+
+msgid "plugins.importexport.native.import"
+msgstr "Uvoz"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Naloži XML datoteko za uvoz"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Izberi prispevke za izvoz"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Izvozi prispevke"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Izvozi številke"
+
+msgid "plugins.importexport.native.results"
+msgstr "Rezultati"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Prosimo, naložite datoteko pri \"Uvoz\" pred nadaljevanjem."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "Uvoz se je uspešno zaključil. Uvoženo je bilo:"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Uporaba: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path] [user_name] ...\n"
+"\texport [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...\n"
+"\texport [xmlFileName] [journal_path] article [articleId]\n"
+"\texport [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
+"\texport [xmlFileName] [journal_path] issue [issueId]\n"
+"\n"
+"Additional parameters are required for importing data as follows, depending\n"
+"on the root node of the XML document.\n"
+"\n"
+"If the root node is <article> or <articles>, additional parameters are required.\n"
+"The following formats are accepted:\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
+"\tissue_id [issueId] section_abbrev [abbrev]\n"
+""
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Neznana rubrika {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Podani uporabnik, \"{$userName}\", ne obstaja."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr "Naslov rubrike \"{$section1Title}\" in naslov rubrike \"{$section2Title}\" v številki \"{$issueTitle}\" se ujemata z različnima obstoječima rubrikama revije."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr "Naslov rubrike \"{$sectionTitle}\" v številki \"{$issueTitle}\" se ujema z obstoječo rubriko, ampak se drug naslov te rubrike ne ujema z drugim naslovom obstoječe rubrike revije."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr "Okrajšava rubrike \"{$section1Abbrev}\" in okrajšava rubrike \"{$section2Abbrev}\" v številki \"{$issueTitle}\" se ujemata z različnima obstoječima rubrikama revije."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr "Okrajšava rubrike \"{$sectionAbbrev}\" v številki \"{$issueTitle}\" se ujema z obstoječo rubriko, ampak se druga okrajšava te rubrike ne ujema z drugo okrajšavo obstoječe rubrike revije."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "Nobena ali več kot ena številka se ujemata podani identifikaciji \"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr "Obstoječa številka z ID-jem {$issueId} se ujema s podano identifikacijo številke \"{$issueIdentification}\". Ta številka ne bo spremenjena, ampak bodo le dodani prispevki."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "Elemnt za identifikacijo številke manjka za prispevek \"{$articleTitle}\"."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr "Prispevek \"{$articleTitle}\" je vsebovan v številki, ampak nima datuma izdaje."

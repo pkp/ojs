@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:00+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.description"
+msgstr "Este módulo permite la asignación del Identificador de Objeto Digital (Digital Object Identifier, DOI) a publicaciones, artículos y galeradas en OJS."
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr "Configure el módulo de DOI para poder administrar y usar DOIs en OJS:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Contenido de la Revista"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr "Elija los objetos a los cuales los DOIs deben estar asignados."
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr "Seleccione los objetos de publicación que tendrán Identificadores de Objetos Digitales (Digital Object Identifier, DOI) asignados:"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Números"
+
+msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
+msgstr "Artículos"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Galeradas"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "Prefijo DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr "El prefijo DOI lo asignan las agencias registradoras (p. ej., <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) y sigue el formato 10.xxxx (p. ej., 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "El prefijo DOI es obligatorio y sigue el formato 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "Sufijo DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr "El sufijo DOI puede tomar cualquier forma, pero debe ser único entre todos los objetos de publicación con el mismo prefijo DOI asignado:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr "Usa el patrón introducido abajo para generar sufijos DOI. Usa %j para iniciales de revista, %v para el número del volumen, %i para el número de la publicación, %Y para el año, %a para el ID del artículo de OJS, %g para la galerada de OJS, %f para el ID del archivo de OJS, %p para el número de página y %x para \"Indentificador Personalizado\"."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr "Por ejemplo, vol%viss%ipp%p podría crear un DOI tal como 10.1234/vol3iss2pp230"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "para publicaciones"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "para artículos"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "para galeradas"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "Usar patrones por defecto."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i para números<br />%j.v%vi%i.%a para artículos<br />%j.v%vi%i.%a.g%g para galeradas."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Introduzca un sufijo DOI individual para cada elemento publicado. Encontrará un campo DOI adicional en la página de metadatos de cada elemento."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Introduzca el patrón del sufijo DOI para números."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Introduzca el patrón del sufijo DOI para artículos."
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Introduzca el patrón del sufijo DOI para galeradas."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "Reasignar DOIs"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr "¿Está seguro de que quiere borrar todos los DOIs existentes?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Asignar DOIs"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr "Asignar DOIs a los objetos publicados de la revista que no dispongan ya de uno. Esta acción no puede ser usada con la configuración de sufijo individual. Si ha modificado la configuración del DOI (más arriba), por favor, guarde los cambios antes de realizar esta acción. La asignación de DOIs puede llevar mucho tiempo, dependiendo del número de objetos publicados en la revista."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "¿Está seguro de querer asignar DOIs a todos los objetos publicados que no dispongan ya de uno?"
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "número"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "artículo"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "galerada"
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "El DOI no puede ser asignado porque falta el sufijo personalizado."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "El DOI no puede ser asignado porque contiene un patrón irresoluble."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr "Lo que ve es una previsualización del DOI. Seleccione la casilla de verificación y guarde el formulario para que los cambios sean permanentes."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "Se ha asignado un DOI a este {$pubObjectType}."
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "El sufijo DOI proporcionado ya está en uso por otro objeto publicado. Introduzca un sufijo DOI único para cada objeto."
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Borrar DOI"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "¿Está seguro de que quiere eliminar el DOI existente?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Borrar DOIs de Objetos de Publicación"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "¿Está seguro de que quiere eliminar los DOIs existentes de los objetos del número?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr "Use la siguiente opción para borrar los DOIs de todos los objetos (artículos y galeradas) actualmente planificados para esta publicación."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Asignar un DOI {$pubId} a este {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "El DOI no puede ser asignado porque falta el sufijo personalizado."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr "El DOI {$pubId} no puede ser asignado porque contiene un patrón irresoluble."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "El DOI {$pubId} ha sido asignado."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr "Si cambia su configuración, los DOIs que ya han sido asignados no se verán afectados. Si lo desea, cuando guarde la configuración del DOI, use este botón para borrar todos los DOIs existentes y que los nuevos ajustes también tengan efecto sobre los identificadores ya asignados."

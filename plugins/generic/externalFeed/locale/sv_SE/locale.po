@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:05+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:05+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "Externa flöden"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "Block för externa flöden"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "Publicera innehåll från externa Atom/RSS-syndikeringsflöden. Till exempel från en extern WordPress-, Drupal- eller OCS-installation."
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "Inga externa flöden"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "Titel"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "Publicerat"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "Mer ..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "Externa flöden"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "Inställningar"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "För att visa flödesinnehåll i sidomenyns block, gå till <a href=\"{$setupStep56}\" target=\"_blank\">Konfigurationssteg 5.6</a>"
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "Titel"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "Visas på förstasidan"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "Visas på förstasidan"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "Visas inte på förstasidan"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "Visas i block"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "Alla sidor"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "Block på alla sidor"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "Inga block på någon sida"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "Förstasidan"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "Block på förstasidan enbart"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "Inga block enbart på förstasidan"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "Inga externa flöden"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "Skapa ett nytt externt flöde"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "Redigera externt flöde"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "Vill du ta bort det här flödet för gott?"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "Inställningar"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "Anpassa visningen av poster i externa flöden."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "Visning"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "Stilmall för externt flöde"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "En anpassad stilmall kan användas för att ersätta det här pluginets standard-stilmall. Standard-stilmallan kan ses här"
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "Anpassad stilmall"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "Titel"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "Webbplatsens och/eller blockets titel"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "Ange en titel för det här flödet"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "URL"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "Ange en giltig URL för flödet (inklusive http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "URL:en för det externa Atom/RSS-flödet (t.ex. http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "Visa"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "Visa på förstasidan"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "Visa inte i block"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "Visa i block enbart på förstasidan"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "Visa i block på alla sidor"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "Begränsa till"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "poster i flödet"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "Spara och skapa ytterligare flöde"

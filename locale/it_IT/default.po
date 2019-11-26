@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
+"Language: \n"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "La submission non è stata precedentemente pubblicata, né proposta a un'altra rivista (oppure si fornisce una spiegazione all'editor nei commenti)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Il file di submission è in un formato OpenOffice, Microsoft Word, RTF, o WordPerfect."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Il testo ha spaziatura singola; usa un font 12 punti ; impiega il corsivo invece della sottolineatura (eccetto con gli indirizzi URL); e tutte le illustrazioni, figure, e tabelle sono posizionate  all'interno del testo nei punti appropriati, piuttosto che alla fine."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Il testo aderisce alle richieste stilistiche e bibliografiche riassunte nelle <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">linee guida dell'autore</a>, che si trova nella pagina di informazioni sulla rivista."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>I nomi e gli indirizzi email inseriti in questo sito della rivista  saranno utilizzati esclusivamente per gli scopi dichiarati e non verranno resi disponibili per nessun altro uso.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Questa rivista fornisce accesso aperto ai suoi contenuti, ritendendo che rendere le ricerche disponibili liberamente al pubblico migliori lo scambio della conoscenza a livello globale."
+
+msgid "default.contextSettings.forReaders"
+msgstr "Incoraggiamo i lettori a iscriversi al servizio di notifica di questa rivista. Usa il link <a href=\"{$indexUrl}{$contextPath}/user/register\">Registra</a> in alto alla  homepage della rivista. Con questa registrazione il lettore ricever&#x00E0; l'indice per email di ogni nuova uscita della rivista.  Vedi la <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">dichiarazione sulla privacy</a> della rivista che assicura il lettori che il loro nome e indirizzo email non sar&#x00E0; usato per altri fini."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Interessato a proporre contributi a questa rivista? Raccomandiamo di rivedere la pagina <a href=\"{$indexUrl}{$contextPath}/about\">Info</a>, in particolare le politiche delle sezioni della  rivista, e le <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">linee guida per l'autore</a>. Gli autori devono <a href=\"{$indexUrl}{$contextPath}/user/register\">registrarsi</a> per  effettuare la prima submission alla rivista, o se gi&#x00E0; registrato pu&#x00F9; semplicemente fare il <a href=\"{$indexUrl}/index/login\">log in</a> e cominciare il processo guidato in 5 fasi."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Suggeriamo ai bibliotecari di aggiungere questa rivista nel loro sistema di reference linking. Inoltre, segnaliamo che il sistema open source utilizzato per la pubblicazione di questa rivista potrebbe essere proposto anche per la gestione di riviste nelle quali i bibliotecari siano coinvolti (vedi <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a> per ulteriori dettagli)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Questa rivista partecipa a LOCKSS  per creare un sistema di archiviazione distribuito tra biblioteche e permette a queste  di creare archivi permanenti della rivista a scopo di conservazione. <a href=\"http://www.lockss.org/\">Prosegui...</a>"
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Dove possibile, sono stati fornite le URL dei riferimenti"
+
+msgid "section.default.title"
+msgstr "Articoli"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr "Politica di default"
+
+msgid "default.genres.article"
+msgstr "Articolo"
+
+msgid "default.groups.name.manager"
+msgstr "Journal Manager"
+
+msgid "default.groups.plural.manager"
+msgstr "Direttori"
+
+msgid "default.groups.abbrev.manager"
+msgstr "MNGR"
+
+msgid "default.groups.name.editor"
+msgstr "Editor in capo"
+
+msgid "default.groups.plural.editor"
+msgstr "Editors"
+
+msgid "default.groups.abbrev.editor"
+msgstr "EDT"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Guest editor"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Guest editor"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "G_EDT"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor di sezione"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editor di sezione"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Subscription manager"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Subscription manager"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.genres.researchInstrument"
+msgstr "Strumenti di ricerca"
+
+msgid "default.genres.researchMaterials"
+msgstr "Materiali di ricerca"
+
+msgid "default.genres.researchResults"
+msgstr "Risultati di ricerca"
+
+msgid "default.genres.transcripts"
+msgstr "Trascrizioni"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Analisi di dati"
+
+msgid "default.genres.dataSet"
+msgstr "Data set"
+
+msgid "default.genres.sourceTexts"
+msgstr "Fonti bibliografiche"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Revisore esterno"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Revisori esterni"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "REV"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Questa rivista usa il sistema CLOCKSS per creare un sistema di archiviazione distribuito tra le biblioteche partecipanti e permette a queste biblioteche di creare archivi permanebti di riviste per conservazione e ripristinio. Vedi di più sul sito di <a href=\"http://clockss.org/\">CLOCKSS</a>"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$ldelim}$contextUrl{$rdelim}\">{$ldelim}$contextName{$rdelim}</a>"

@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:38+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:38+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "Vtičnik za DataCite izvoz/registracijo"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "Izvozi ali registrira metapodatke številke, prispeveke, prelome in dodatnih datotek v DataCite obliki."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "Pred prvo uporabo prosimo nastavite DataCite vtičnik."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr ""
+"\n"
+"\t\tČe želite registrirati DOI-je pri DataCite, kontaktirajte upravljalskega agenta na <a href=\"http://datacite.org/contact\" target=\"_blank\">DataCite\n"
+"\t\tdomači strani</a>, ki vas bo napotil na vašega lokalnega člana DataCite. Ko boste uredili članstvo v\n"
+"\t\torganizaciji, boste dobili podatke za pripravo javnih identifikatorjev (DOI) in regostracijo pripadajočih metapodatkov. Če nimate svojega uporabniškega imena in gesla, lahko še vedno izvozite podatke v \n"
+"\t\tDataCite XML obliki, ne morete pa registrirati DOI-je pri DataCite direktno iz OJS.\n"
+"\t\tProsimo, da upoštevate, da bo geslo shranjeno kot prosto besedilo, torej nekriptirano, zaradi zahtev \n"
+"\t\tDataCite registracijskega servisa.\n"
+"\t"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Uporabniško ime (simbol)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "Prosimo vnesite uporabniško ime (simbol), ki ste ga dobili od DataCite. Uporabniško ime lahko vsebuje dvopičja."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "OJS bo avtomatsko opravil depozit dodeljenih DOI-jev na DataCite. Prosimo upoštevajte, da je za to lahko potrebno nekaj časa po tistem, ko objavite novo številko. Lahko preverite vse neregistrirane DOI-je"
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "Uporabi DataCite test prefix za DOI registracijo. Ne pozabite odstraniti te možnosti za produkcijo!"
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "Opravilo avtomatske registracije pri DataCite"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Uporaba: \n"
+"{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

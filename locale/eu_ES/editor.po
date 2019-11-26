@@ -1,0 +1,372 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:21+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Editorearen hasierako orria"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Bidalketak eta argitalpena"
+
+msgid "editor.submissionQueue"
+msgstr "Bidalketen ilara"
+
+msgid "editor.submissionArchive"
+msgstr "Bidalketa-artxiboa"
+
+msgid "editor.publishing"
+msgstr "Argitalpena"
+
+msgid "editor.publishedIssues"
+msgstr "Zenbaki argitaratuak"
+
+msgid "editor.allSections"
+msgstr "Atal guztiak"
+
+msgid "editor.allEditors"
+msgstr "Editore guztiak"
+
+msgid "editor.me"
+msgstr "Nire burua"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Ez dago bidalketarik artxiboan."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Bidalketa artxibatuetan egindako aldaketak gorde? Ezabatzeko markatuta dauden bidalketak betiko ezabatuko dira sistematik."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Ziur zaude betiko ezabatu nahi duzula bidalketa hau?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Ziur zaude erabaki hau grabatu nahi duzula?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Bidalketa hau artxibatuko da Egileari jakinarazteko mezu elektronikoa bidaltzen denean edo 'Saltatu mezua' botoia sakatzen denean."
+
+msgid "editor.notifyUsers"
+msgstr "Jakinarazi erabiltzaileei"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Jakinarazi erabiltzaileei..."
+
+msgid "editor.usersNotified"
+msgstr "Jakinarazitako erabiltzaileak"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Bidali mezu hau aldizkariaren erabiltzaile guztiei ({$count} erabiltzaile)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Bidali mezu hau eguneratzeak jaso nahi dituztela adierazi duten erabiltzaile guztiei ({$count} erabiltzaile)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Sartu zenbaki honetako aurkibidea:"
+
+msgid "editor.editorAdministration"
+msgstr "Editore-administrazioa"
+
+msgid "editor.issues.createIssue"
+msgstr "Sortu zenbakia"
+
+msgid "editor.issues.backIssues"
+msgstr "Aurreko zenbakiak"
+
+msgid "editor.issues.futureIssues"
+msgstr "Etorkizuneko zenbakiak"
+
+msgid "editor.issues.currentIssue"
+msgstr "Uneko zenbakia"
+
+msgid "editor.issues.numArticles"
+msgstr "Artikuluak"
+
+msgid "editor.issues.noArticles"
+msgstr "Ez dago artikulurik programatuta zenbaki honetarako."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Ziur zaude betiko ezabatu nahi duzula zenbaki hau?"
+
+msgid "editor.issues.published"
+msgstr "Argitaratuta"
+
+msgid "editor.issues.unpublished"
+msgstr "Argitaratu gabe"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Bolumena zehaztu behar da: zenbaki positiboa izan behar da."
+
+msgid "editor.issues.numberRequired"
+msgstr "Zenbakia zehaztu behar da: zenbaki positiboa izan behar da."
+
+msgid "editor.issues.yearRequired"
+msgstr "Urtea zehaztu behar da: zenbaki positiboa izan behar da."
+
+msgid "editor.issues.titleRequired"
+msgstr "Zenbakiaren titulua adierazi behar da."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Zenbakiaren identifikazioa eman behar da. Hautatu zenbakia identifikatzeko aukeretakoren bat."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Zenbakiaren identifikazioa"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Zenbaki-identifikatzaile publikoa"
+
+msgid "editor.issues.description"
+msgstr "Azalpena"
+
+msgid "editor.issues.accessStatus"
+msgstr "Sarbidea"
+
+msgid "editor.issues.accessDate"
+msgstr "Sarrera libreko data"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Sarrera librea emateko data ez da baliozkoa."
+
+msgid "editor.issues.coverPage"
+msgstr "Azaleko irudia"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(gif, .jpg, edo .png formatuak onartzen dira)"
+
+msgid "editor.issues.uploaded"
+msgstr "Kargatuta"
+
+msgid "editor.issues.remove"
+msgstr "Kendu"
+
+msgid "editor.issues.proofed"
+msgstr "Probak zuzenduta"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Azaleko irudia kendu?"
+
+msgid "editor.issues.invalidCoverPageFormat"
+msgstr "Azaleko orriaren formatua ez da zuzena: .gif, .jpg, edo .png formatuak bakarrik onartzen dira."
+
+msgid "editor.issues.styleFile"
+msgstr "Estilo-orria"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Estilo-orriaren formatua ez da zuzena: Ziurtatu bidalitako fitxategia CSS baliozkoa dela. (Kontuan izan hasieran iruzkinak dituzten estilo-orriak atzera botatzen direla batzuetan)."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Estilo-orria kendu?"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Sortu zenbaki honen azala ondorengo elementuekin."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Erakutsi"
+
+msgid "editor.issues.hideCoverPageArchives"
+msgstr "Ez erakutsi azaleko irudiaren koadro txikia zenbakien zerrendan."
+
+msgid "editor.issues.hideCoverPageCover"
+msgstr "Ez erakutsi azaleko irudia aurkibidearen aurretik."
+
+msgid "editor.issues.openAccess"
+msgstr "Sarrera librea"
+
+msgid "editor.issues.subscription"
+msgstr "Harpidetza"
+
+msgid "editor.issues.identification"
+msgstr "Identifikazioa"
+
+msgid "editor.issues.access"
+msgstr "Sarbidea"
+
+msgid "editor.issues.cover"
+msgstr "Azala"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Artikulu guztiak edizio-ilarara itzuliko dira eta asoziatutako fitxategi guztiak betiko kenduko dira.  Ziur zaude zenbaki hau ezabatu nahi duzula?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Aldizkariak zenbaki-ordena pertsonalizatua erabiltzen du. <a href=\"{$url}\" class=\"action\">Berrezarri balio lehenetsiak</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Zenbakiak atalen ordena pertsonalizatua erabiltzen du. <a href=\"{$url}\" class=\"action\">Berrezarri balio lehenetsiak</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Zenbakiaren datuak"
+
+msgid "editor.issues.saveChanges"
+msgstr "Aurkibidean egindako aldaketak gorde?"
+
+msgid "editor.issues.default"
+msgstr "Lehenetsia"
+
+msgid "editor.issues.order"
+msgstr "Ordena"
+
+msgid "editor.issues.publicId"
+msgstr "Id publikoa"
+
+msgid "editor.issues.publishIssue"
+msgstr "Argitaratu zenbakia"
+
+msgid "editor.issues.previewIssue"
+msgstr "Zenbakiaren aurrebista"
+
+msgid "editor.issues.preview"
+msgstr "(Aurrebista)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Ziur zaude zenbaki berria argitaratu nahi duzula?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Ezin izan da gorde artikulu honen id publikoa:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Ez dago hasitako zenbakirik"
+
+msgid "editor.issues.open"
+msgstr "Irekia"
+
+msgid "editor.issues.pages"
+msgstr "Orrialdeak"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Etorkizuneko zenbakiak"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Aurreko zenbakiak"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Izendatu jatorrizko fitxategia Ebaluazio-bertsio gisa"
+
+msgid "editor.article.decision"
+msgstr "Erabakia"
+
+msgid "editor.submissions.showBy"
+msgstr "Erakutsi"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Bidalia: HH-EE"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Esleipen aktiboak"
+
+msgid "editor.submissions.invite"
+msgstr "Gonbidatu"
+
+msgid "editor.submissions.accept"
+msgstr "Onartu"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Bidalketarik ez"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Azkena"
+
+msgid "editor.submissions.averageTime"
+msgstr "Asteak"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Azkeneko bukatua"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Honi esleitua"
+
+msgid "editor.submissions.inSection"
+msgstr "Atala"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Argitaratzeko programatu:"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Esleitzeko"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Argitalpen-tarifa ordaindu gabe dago. Lana argitaratzeko programatzeko, jakinarazi egileari tarifa ordaindu behar duela, edo salbuetsi ordainketa."
+
+msgid "editor.article.showCoverPage"
+msgstr "Sortu artikulu honen azala ondorengo elementuekin."
+
+msgid "editor.article.hideCoverPageToc"
+msgstr "Ez erakutsi azaleko irudia aurkibidean."
+
+msgid "editor.article.hideCoverPageAbstract"
+msgstr "Ez erakutsi azaleko irudia artikuluaren laburpenaren ikuspegian."
+
+msgid "editor.article.remove"
+msgstr "Kendu"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Aurkezpena zuzentzera bidali baino lehen, erabili “Egileari Jakinarazi” esteka egileari erabakiaren berri emateko eta bidali behar den bertsioa hautatzeko."
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Irakurle guztiak ({$count} erabiltzaileak)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Argitaratutako egile guztiak ({$count} users)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Harpidedun indibidual guztiak ({$count} erabiltzaileak)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Harpidedun instituzional guztiak ({$count} users)"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Gaitu sarrera libre geroratua"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Azaleko irudia"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Gaia desargitaratu"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Ziur al zaude desargitaratu  egin nahi duzula argitaratu dagoen gai hau?"
+
+msgid "editor.reassign"
+msgstr "Berriro esleitu"
+
+msgid "editor.publicIdentificationExists"
+msgstr "'{$publicIdentifier}' identifikatzaile publikoa jadanik erabiltzen da beste helburu batentzat (alea, artikulua, galera proba edo artxibategi osagarri bat). Mesedez, aukeratu identifikatzaile bakarrak zure aldizkariaren barruan."
+
+msgid "editor.issues.galleys"
+msgstr "Alearen galera probak"
+
+msgid "editor.issues.galley"
+msgstr "Alearen galera proba"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Alearen galera proba aztertzea"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Argitaratu galera probak ale osoko edukiekin."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Ez dira argitaratu alearen galera probak."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Beharrezkoa da alearen galera probaren etiketa."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Beharrezkoa da alearen galera probaren kokaleku bat."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Jadanik bada ale publikoaren galera probaren identifikazioa."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Atzera alearen galera probetara"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Ziur al zaude alearen galera proba hau ezabatu nahi duzula?"
+
+msgid "editor.article.coverImage"
+msgstr "Azaleko irudia"

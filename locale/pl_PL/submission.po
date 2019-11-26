@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Zgłoś tekst"
+
+msgid "submission.submit.userGroup"
+msgstr "Zgłoś w mojej roli jako..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Wybierz grupę, w ramach której przesyłasz artykuł."
+
+msgid "submission.upload.selectComponent"
+msgstr "Wybierz element artykułu"
+
+msgid "submission.title"
+msgstr "Tytuł"
+
+msgid "submission.title.tip"
+msgstr "Rodzaj to zazwyczaj 'image', 'text' lub inne rodzaje multimediów włączając w to 'software' lub 'interactive'. Jeżeli nie wiesz jak sklasyfikować rodzaj, zobacz na przykłady dostępne <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">pod tym adresem</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Utwórz nowe zgłoszenie w"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nowe zgłoszenie"
+
+msgid "grid.action.workflow"
+msgstr "Obieg zgłoszenia"
+
+msgid "submission.issueEntry"
+msgstr "Metadane"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Redaktorzy czasopisma zostali poinformowani o Twoim zgłoszeniu. Na Twój adres email zostało również wysłane potwierdzenie. Po przejrzeniu zgłoszenia, redaktor skontaktuje się z Tobą."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Pliki do publikacji są widoczne na stronie numeru"
+
+msgid "grid.action.issueEntry"
+msgstr "Wyświetl metadane zgłoszenia"
+
+msgid "submission.publication"
+msgstr "Publikacja"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Pliki do publikacji \"{$galleyFormatName}\" są dostępne."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Pliki do publikacji \"{$galleyFormatName}\" nie są dostępne."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Publiczne identyfikatory zgłoszenia zaktualizowane."
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Pliki gotowe do publikacji <em>będą dostępne</em> dla czytelników.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Udostępnij pliki gotowe do publikacji"
+
+msgid "submission.galleyFiles"
+msgstr "Pliki do publikacji"
+
+msgid "submission.proofReadingDescription"
+msgstr "Składacz przesyła tutaj pliki gotowe do publikacji. Skorzystaj z <em>Przypisz audytora</em> w celu przypisania autorów i innych do sprawdzenia plików do publikacji."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Zatwierdzanie formatu"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Pliki gotowe do publikacji <em>nie będą dostępne</em> dla czytelników.</p>"
+
+msgid "grid.action.approveProof"
+msgstr "Zatwierdź wersję po korekcie."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Wersja po korekcie została zatwierdzona."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Tytuł i abstrakt"
+
+msgid "submission.submit.upload.description"
+msgstr "Prześlij pliki powiązane z tekstem, włączając w to treść, multimedia, zestawy danych, materiały ilustracyjne, etc."
+
+msgid "submission.pageProofs"
+msgstr "Korekta końcowa"
+
+msgid "submission.confirmSubmit"
+msgstr "Czy na pewno zgłosić ten tekst do czasopisma?"
+
+msgid "workflow.review.externalReview"
+msgstr "Recenzja"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Wyślij do recenzji"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metadane zaktualizowane."
+
+msgid "submission.upload.fileContents"
+msgstr "Element artykułu"
+
+msgid "submission.complete"
+msgstr "Zatwierdzony"
+
+msgid "submission.incomplete"
+msgstr "Oczekuje na zatwierdzenie"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Określ język zgłoszenia."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Lista kontrolna zgłoszenia"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Zapoznaj się z listą kontrolną i upewnij się, że spełniasz wszystkie wymagania przed kontynuowaniem."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Polityka prywatności"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rola współautorów"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Przynajmniej jeden autor jest wymagany."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Imię, nazwisko oraz adres e-mail każdego autora są wymagane."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Podaj tytuł zgłaszanego tekstu."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Podaj abstrakt zgłaszanego tekstu."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Podaj rolę współautorów."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Wybrany format cytowania nie jest dostępny."
+
+msgid "submission.metadataDescription"
+msgstr "Metadane oparte są o Dublin Core - międzynarodowy standard wykorzystywany do opisywania zawartości czasopism."
+
+msgid "section.any"
+msgstr "Dowolny dział"

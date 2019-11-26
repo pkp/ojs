@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:21+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "مقاله ارسالی جدید"
+
+msgid "author.track"
+msgstr "مقالات ارسال شده فعال"
+
+msgid "author.competingInterests"
+msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">سیاست</a> تضاد&nbsp;منافع "
+
+msgid "author.submit.submitArticle"
+msgstr "ارسال مقاله"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "پنج مرحله ارسال مقاله"
+
+msgid "author.submit.startHereTitle"
+msgstr "ارسال مقاله جدید"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">اینجا را کلیک کنید</a> تا به اولین مرحله از مراحل پنج گانه ارسال مقاله بروید."
+
+msgid "author.submit.step1"
+msgstr "مرحله اول: شروع ارسال مقاله"
+
+msgid "author.submit.step2"
+msgstr "مرحله سوم: آپلود فایل مقاله"
+
+msgid "author.submit.step3"
+msgstr "مرحله دوم: وارد کردن فراداده‌ها"
+
+msgid "author.submit.step4"
+msgstr "مرحله چهارم: آپلود فایل‌های مکمل"
+
+msgid "author.submit.step4a"
+msgstr "مرحله چهارم (الف): افزودن یک فایل مکمل"
+
+msgid "author.submit.step5"
+msgstr "مرحله پنجم: تأیید ارسال مقاله"
+
+msgid "author.submit.start"
+msgstr "شروع"
+
+msgid "author.submit.upload"
+msgstr "آپلود مقاله ارسالی"
+
+msgid "author.submit.metadata"
+msgstr "وارد کردن فراداده"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "آپلود فایل‌های مکمل"
+
+msgid "author.submit.confirmation"
+msgstr "تأییدیه"
+
+msgid "author.submit.nextSteps"
+msgstr "مرحله‌ی بعدی"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "می توانید با انتخاب گزینه بایگانی از بخش اصلی ارسال مقاله، این مقاله را در آینده ویرایش کنید."
+
+msgid "author.submit.notAccepting"
+msgstr "این مجله در حال حاضر مقاله نمی‌پذیرد"
+
+msgid "author.submit.requestWaiver"
+msgstr "درخواست تخفیف"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "لطفاً درخواست تخفیف برای این مقاله را در نظر بگیرید"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "لطفاً در قسمت زیر توضیح دهید که چرا می‌بایست به شما تخفیف دهیم"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "در صورت درخواست تخفیف، می‌بایست در محلی که مشخص شده است دلیل خود را ذکر نمایید."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "در دور داوری {$round} "
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "در حال داوری: نیاز به اصلاحات"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "در حال ویرایش: تقاضای ویراستیاری"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "در حال ویرایش: تقاضای بازبینی نهایی"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "آپلود نسخه ویراستاری شده"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "اصلاحات بازبینی نهائی"
+
+msgid "author.submissions.confirmDelete"
+msgstr "آیا می‌خواهید این مقاله ارسالی ناقص را حذف کنید؟"
+
+msgid "author.submissions.viewStatus"
+msgstr "مشاهده وضعیت"
+
+msgid "author.submissions.noSubmissions"
+msgstr "هیچ مقاله ارسالی وجود ندارد"
+
+msgid "author.submit.journalSection"
+msgstr "نوع مقاله"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "نوع مقاله را انتخاب کنید. برای اطلاعات بیشتر درباره انواع مقالات و سیاست‌گذاری‌های مربوطه به صفحه "
+
+msgid "author.submit.verifyChecklist"
+msgstr "قبل از ادامه کار اطمینان حاصل کنید که تمام موارد لازم برای ارسال مقاله که در چک‌لیست آمده است را رعایت کرده‌اید."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "نویسندگان این مقاله موافقت خودشان را با بیانیه حق نشر این مجله اعلام می‌کنند. این بیانیه در صورت چاپ شدن این مقاله در این مجله قابل اعمال است. در قسمت پائین این صفحه می‌توانید نظرات خود را به اطلاع سردبیر برسانید."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "قبل از ادامه ، می‌بایست با بیانیه حق نشر موافقت نمایید."
+
+msgid "submission.submit.coverNote"
+msgstr "اعلام نقطه نظراتتان به سردبیر"
+
+msgid "author.submit.comments"
+msgstr "متن پیام (اختیاری)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "لطفاً نوع مقاله خود را انتخاب کنید"
+
+msgid "author.submit.form.localeRequired"
+msgstr "لطفاً زبان مقاله ارسالی را انتخاب کنید"
+
+msgid "submission.submit.privacyStatement"
+msgstr "بیانیه محرمانگی اطلاعات مجله"
+
+msgid "author.submit.reorderInstructions"
+msgstr "با استفاده از فلش‌ها ترتیب نام نویسندگان را تغییر دهید."
+
+msgid "author.submit.reorder"
+msgstr "تغییر ترتیب نویسنده"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "اطلاعات تماس نویسنده مسئول"
+
+msgid "author.submit.addAuthor"
+msgstr "افزودن نویسنده"
+
+msgid "author.submit.deleteAuthor"
+msgstr "حذف نویسنده"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "واژه‌هایی برای نمایه کردن مقاله، برای جداسازی واژه‌ها از سمی کالون استفاده نمایید (واژه1؛ واژه۲؛ واژه3)"
+
+msgid "author.submit.coverageInstructions"
+msgstr "به پوشش جغرافیائی، تاریخی یا زمانی و یا خصوصیات نمونه‌های تحقیق اشاره دارد."
+
+msgid "author.submit.languageInstructions"
+msgstr "English=en; Persian=fa; Arabic=ar. <a href=\"http://www.loc.gov/standards/iso639-2/langcodes.html\" target=\"_blank\">کدهای دیگر</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "وارد کردن اطلاعات حداقل یک نویسنده الزامی است"
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "وارد کردن نام، نام خانوادگی و ایمیل هر نویسنده الزامی است"
+
+msgid "author.submit.form.titleRequired"
+msgstr "لطفاً عنوان مقاله را وارد کنید."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "لطفاً چکیده مقاله را وارد کنید"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "تعداد کلمات چکیده از سقف مجاز برای این نوع مقاله تجاوز کرده است."
+
+msgid "author.submit.submissionFile"
+msgstr "فایل مقاله ارسالی"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "آپلود فایل مقاله"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "جایگزینی فایل ارسال شده"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "هیچ فایلی برای این مقاله آپلود نشده است."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "آیا می‌خواهید بدون آپلود هیچ فایلی ادامه دهید؟"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "این مرحله اختیاری در روند ارسال مقاله به نویسندگان اجازه می‌دهد تا فایل‌های مکمل را به مقاله ثبت شده به افزایند. این فایل‌های مکمل می‌توانند شامل موارد زیر باشند: راهنمای پژوهش ، فایل داده ، منابعی که لازم است در دسترس خوانندگان قرار گیرد و یا تصاویری که آن‌ها را نمی‌توان در خود متن مقاله گنجاند. فایل‌های الحاقی با هر فرمت می‌توانند باشند و با همین فرمت در دسترس خوانندگان قرار می‌گیرند. در صورتی که محرمانگی داوری مقاله خدشه‌دار نشود بنا به صلاحدید نویسنده و دبیر این فایل‌ها نیز در دسترس داوران قرار می‌گیرد."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "برای آپلود کردن فایل لطفاً بر روی دکمه «ذخیره» کلیک کنید. پس از این عمل فایل‌های دیگری را نیز می‌توانید آپلود کنید"
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "آیا مطمئنید که می‌خواهید بدون آپلود فایل مکمل انتخاب شده، ادامه دهید؟"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "هیچ فایل مکمل به این مقاله ارسالی افزوده نشده است"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "بازگشت به فایل‌های مکمل"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "آیا می‌خواهید این فایل مکمل را حذف کنید؟"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "آپلود فایل مکمل"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "افزودن یک فایل مکمل"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "ویرایش ویژگی‌های فایل مکمل"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "فراداده فایل مکمل"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "برای نمایه کردن این فایل مکمل فراداده‌های زیر را وارد کنید."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "فایل مکمل"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "سازنده یا مالک فایل"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "ابزار پژوهشی"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "مواد پژوهشی"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "نتایج پژوهش"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "رونوشت"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "آنالیز داده"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "مجموعه داده"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "متن منبع"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "توصیف مختصر"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "فایل بدون فراداده در دسترس داوران قرار گیرد تا سیاست داوری محرمانه خدشه‌دار نشود"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "فقط مورد موارد رسماً چاپ شده استفاده شود"
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "تاریخ جمع‌آوری داده‌ها یا تولید ابزار"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "نام مطالعه یا دیگر منبع"
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "غیره"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "فایلی آپلود نشده است"
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "لطفاً عنوان این فایل مکمل را وارد کنید"
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "لطفاً یک موضوع وارد کنید"
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "لطفاً یک توصیف وارد کنید"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "شناسه عمومی تعیین شده برای فایل مکمل تکراری است"
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "شناسه عمومی فایل مکمل"
+
+msgid "author.submit.confirmationDescription"
+msgstr "بر روی «تکمیل ارسال مقاله» کلیک کنید تا مقاله شما به مجله {$journalTitle} ارسال شود. رسید دریافت مقاله از طریق ایمیل به شما ارسال خواهد شد. برای مشاهده وضعیت داوری و انتشار مقاله ارسالی وارد سامانه شوید. از توجه شما به مجله {$journalTitle} متشکریم."
+
+msgid "author.submit.noFiles"
+msgstr "هیچ فایلی به این مقاله ارسالی ضمیمه نشده است"
+
+msgid "author.submit.filesSummary"
+msgstr "لیست فایل‌های آپلود شده"
+
+msgid "author.submit.finishSubmission"
+msgstr "تکمیل ارسال مقاله"
+
+msgid "author.submit.submissionComplete"
+msgstr "ارسال مقاله تکمیل شد. از توجه شما به مجله {$journalTitle} متشکریم."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "آپلود نسخه اصلاحی نویسنده"
+
+msgid "author.article.copyeditedFile"
+msgstr "فایل ویراستاری شده"
+
+msgid "author.article.authorRevisedFile"
+msgstr "فایل نویسنده"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "برای ارسال مقاله داشتن حساب کاربری الزامی است. بدین وسیله تیم سردبیری می‌توانند مقاله ارسالی شما را پیگیری کرده و با شما تماس بگیرند."

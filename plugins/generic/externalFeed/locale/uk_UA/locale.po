@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:05+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:05+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "Зовнішні стрічки"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "Блок зовнішніх стрічок"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "Цей модуль дозволяє публікацію змісту з зовнішніх стрічок веб-синдкації Atom/RSS, наприклад, з зовнішнього сайту WordPress, Drupal або OCS."
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "Немає зовнішніх стрічок"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "Заголовок"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "Надіслано"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "Більше..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "Зовнішні стрічки"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "Налаштування"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "Щоб налаштувати відображення змісту на бічній панелі, перейдіть на <a href=\"{$setupStep56}\" target=\"_blank\">Крок 5.6 Налаштування журналу</a>"
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "Заголовок"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "Відображення на домашній сторінці"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "Відображення на домашній сторінці"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "Немає відображення домашньої сторінки"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "Відображення блоку"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "Всі сторінки"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "Блок на всіх сторінках"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "Немає блоку на всіх сторінках"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "Домашня"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "Блок лише на домашній сторінці"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "Немає блоку лише на домашній"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "Немає зовнішніх стрічок"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "Створити нову зовнішню стрічку"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "Редагувати зовнішню стрічку"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "Ви впевнені, що хочете назавжди видалити цю стрічку?"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "Налаштування"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "Налаштуйте стиль відображення елементів зовнішніх стрічок."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "Відображення"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "Таблиця стилю для зовнішніх стрічок"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "Стандартну таблицю стилю цього модуля можна замінити на власну. Стандартну таблицю стилю можна подивитись тут"
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "Власна таблиця стилю"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "Заголовок"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "Назва для відображення у заголовку домашньої сторінки та/або блоку"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "Будь ласка, вкажіть заголовок для цієї стрічки"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "URL"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "Будь ласка, вкажіть коректну адресу URL стрічки (з префіксом http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "Адреса URL зовнішньої стрічки синдикації Atom/RSS (наприклад, http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "Відображення"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "Відображати на домашній сторінці"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "Не відображати блоком"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "Відображати як блок лише на домашній сторінці"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "Відображати як блок на всіх сторінках"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "Обмежити до"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "елементів стрічки"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "Записати та створити іншу"

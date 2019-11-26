@@ -1,0 +1,182 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:03+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "Vtičnik omogoča dodelitev URN-jev  (Uniform Resource Name) številkam, prispevkom in prelomom v OJS."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "Za upravljanje in uporabo URN-jev prosimo nastavite URN vtičnik:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Vsebina revije"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Prosimo izberite objekte, ki se jim bodo dodelili URN-ji."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Prosimo izberite objekte, ki se jim bodo dodelili URN-ji:"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Številke"
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "Prispevki"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Prelomi"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN predpona"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "URN predpona je fiksen del URN-ja, ki se ne spreminja (npr. \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "URN predpona mora biti oblike \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN pripona"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "URN pripona je poljubne oblike, pomembno je, da je unikatna med vsemi objavljenimi objekti, ki so bili izdani znotraj ene URN predpone:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "Uporabi vpisani vzorec spodaj za kreiranje URN pripone. Uporabite %j za inicilake  revije, %v za številko zvezka, %i za številko revije, %Y za leto, %a za OJS ID prispevka, %g za OJS ID preloma, %f za OJS ID datoteke, %p za številko strani in %x za \"Identifikator po meri\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Na primer, vol%viss%ipp%p lahko kreira naslednjo URN pripono \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "Za številke"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "za prispevke"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "za prelome"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Prosimo, vnesite vzorec za URN pripono za številke."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "Prosimo, vnesite vzorec za URN pripono za prispevke."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Prosimo, vnesite vzorec za URN pripono za prelome."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Uporabi privzete vzorce."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i za številke<br />%j.v%vi%i.%a za prispevke<br />%j.v%vi%i.%a.g%g za prelome."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "Za vsak izdan objekt vnesite svojo URN priponko. Pri metapodatkih vsakega objekta boste našli URN vnosno polje."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Kontrolna številka"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "Kontrolna številka bo avtomatično izračunana in dodana na koncu, kot zadnja števka URN."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Imenski prostor"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Izberite"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "Stalen identifikator imenskega prostora, običajno potreben za registracijo (npr. pri NUK)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL povezava do URN resolverja"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(npr. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Prosimo vnestie URL povezavo do URN resolverja."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Ponastavi URN-je"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"\n"
+"\tČe spremenite URN nastavitve, se že dodeljeni URN-ji ne bodo spremenili. Ko je URN nastavitev shranjena, uporabite ta gumb, da odstranite vse obstoječe URN-je, tako da bodo nove nastavitve vplivale na obstoječe objekte"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Ste prepričani, da želite odstraniti vse obstoječe URN-je?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "številka"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "prispevek"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "prelom"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN-ja ni mogoče dodeliti, ker manjka pripona za identifikator po meri."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN ne more biti dodeljen, ker vsebuje vzorec, ki ga ni mogoče razrešiti."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "Vidite predogled URN-ja. Izberite potrditveno polje in shranite obrazec, da dodelite URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN je dodeljen {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "\tVnešena URN pripona je že uporabljena pri drugem objektu. Prosimo, vnesite unikatno URN pripono za vsak objekt"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Odstrani URN"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Ste prepričani, da želite odstraniti obstoječi URN?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Odstrani URN-je iz vseh objektov te številke"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Ste prepričani, da želite odstraniti obstoječe URN-je objektom iz te številke?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "Spodnjo možnost uporabite, da odstranite URN-je vsem objektom (prispevki in prelomi), ki so trenutno razporejeni v to številko."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Dodaj kontrolno številko"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Dodeli URN {$pubId} objektu {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN-ja ni mogoče dodeliti, ker manjka pripona za identifikator po meri."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$pubId} ne more biti dodeljen, ker vsebuje vzorec, ki ga ni mogoče razrešiti."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} je bil dodeljen."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Manjka kontrolna številka."

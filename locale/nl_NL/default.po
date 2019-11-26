@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:28+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Artikels"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr "Standaard sectiebeleid"
+
+msgid "default.genres.article"
+msgstr "Artikeltekst"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "De inzending is niet eerder gepubliceerd en is ook niet in overweging bij een ander tijdschrift (tenzij een uitleg is gegeven bij Opmerkingen voor de redacteur)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Het ingezonden bestand is in OpenOffice, Microsoft Word, RTF of WordPerfect document bestandsformaat."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Waar beschikbaar zijn URLs voor de referenties toegevoegd"
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "De tekst is enkelvoudig gespatieerd, gebruikt een 12-punts lettergrootte, gebruikt schuingedrukte tekst in plaats van onderstreepte (behalve bij URL adressen) en alle illustraties, figuren en tabellen staan op de juiste plek in de tekst en niet aan het einde."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "De tekst voldoet aan de stilistische en bibliografische eisen zoals geformuleerd in <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Richtlijnen voor auteurs</a>, te vinden bij Over dit tijdschrift."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Namen en e-mailadressen die in dit tijdschrift worden ingevoerd, zullen alleen worden gebruikt voor de in dit tijdschrift genoemde doeleinden. Ze zullen niet worden gebruikt voor andere doeleinden of door andere partijen</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Dit tijdschrift is vrij toegankelijk en gaat uit van het idee dat het vrij en onmiddellijk beschikbaar stellen van wetenschappelijk onderzoek voor het publiek de kennisuitwisseling wereldwijd beter ondersteunt."
+
+msgid "default.contextSettings.forReaders"
+msgstr "We moedigen onze lezers aan om zich aan te melden voor het ontvangen van bericht van publicatie. Gebruik hiervoor de knop <a href=\"{$indexUrl}{$contextPath}/user/register\">Registreren</a> in de balk bovenaan de homepage van het tijdschrift. Na registratie ontvangt u per e-mail de inhoudsopgave van elk nieuw nummer. Daarnaast stelt u het tijdschrift in staat zich te beroepen op een zekere achterban. Zie de <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Privacy verklaring</a> van het tijdschrift waarin de lezers wordt verzekerd dat hun naam en e-mailadres niet voor andere doeleinden zullen worden gebruikt."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Bent u geïnteresseerd in het aanleveren van artikels? Dan raden we u aan de pagina <a href=\"{$indexUrl}{$contextPath}/about\">Over het tijdschrift</a> te bekijken dat informatie biedt over het publicatiebeleid van de verschillende secties. Lees ook vooraf de pagina <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Auteursrichtlijnen<a>. Auteurs moeten zich <a href=\"{$indexUrl}{$contextPath}/user/register\">registreren</a> in het tijdschrift voordat ze artikels kunnen inzenden. Als u al bent ingeschreven hoeft u alleen nog <a href=\"{$indexUrl}{$contextPath}/login\">in te loggen</a> en kunt u beginnen met de vijf stappen procedure. Indien u wel geregistreerd bent als lezer of reviewer maar nog niet als auteur, ga dan naar Mijn profiel in de rechter kolom en voeg de rol van auteur aan uw profiel toe."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "We moedigen bibliothecarissen van onderzoeksbibliotheken aan om dit tijdschrift op te nemen in hun digitale tijdschriftcollectie. Ook wijzen we u erop dat het open source systeem dat dit tijdschrift gebruikt om te publiceren, gehost kan worden door bibliotheken ter ondersteuning van hun bij de redactie van elektronische tijdschriften betrokken faculteitsmedewerkers. (zie <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Dit tijdschrift gebruikt het LOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href=\"http://www.lockss.org/\">Meer...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Dit tijdschrift gebruikt het CLOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href=\"http://clockss.org/\">Meer...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Tijdschriftbeheerder"
+
+msgid "default.groups.plural.manager"
+msgstr "Tijdschriftbeheerders"
+
+msgid "default.groups.abbrev.manager"
+msgstr "TB"
+
+msgid "default.groups.name.editor"
+msgstr "Tijdschriftredacteur"
+
+msgid "default.groups.plural.editor"
+msgstr "Tijdschriftredacteurs"
+
+msgid "default.groups.abbrev.editor"
+msgstr "TR"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Gastredacteur"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Gastredacteurs"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GR"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Sectieredacteur"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Sectieredacteurs"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SR"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Abonnementenbeheerder"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Abonnementenbeheerders"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "AB"
+
+msgid "default.genres.researchInstrument"
+msgstr "Onderzoeksinstrument"
+
+msgid "default.genres.researchMaterials"
+msgstr "Onderzoeksmateriaal"
+
+msgid "default.genres.researchResults"
+msgstr "Onderzoeksresultaten"
+
+msgid "default.genres.transcripts"
+msgstr "Transcripties"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Data-analyse"
+
+msgid "default.genres.dataSet"
+msgstr "Dataverzameling"
+
+msgid "default.genres.sourceTexts"
+msgstr "Brontekst"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Reviewer"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Reviewers"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"

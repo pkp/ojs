@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:36+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Makaleler"
+
+msgid "section.default.abbrev"
+msgstr "MAK"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.genres.article"
+msgstr "Makale Metni"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Gönderilen yazı daha önceden yayınlanmamış ve yayımlanmak üzere herhangi bir dergiye değerlendirilmek üzere sunulmamıştır (Yazar Rehberi'nde detaylı açıklama verimiştir)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Gönderi dosyası OpenOffice, Microsoft Word, RTF veya WordPerfect dokümanı dosyası biçimindedir."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Burada mevcut başvurular için URL'ler sağlanmıştır."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Metin tek satırlı, 10 punto, altı çizilme yerine italik olarak vurgulanmış (geçerli URL adresleri ile) ve tüm şekil, resim ve tablolar sayfa sonu yerien metin içinde uygun noktalara yerleştirilmiştir. Baskı için, resimlerin kaliteli kopyalarını ek dosya olarak gönderiniz. Gönderilen dosyanın boyutu çok fazla olur ise, sistem almayabilir. Böyle durumlarda yazıyı bölüp, diğer bölümleri ek dosya olarak tek, tek gönderebilirsiniz."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Buraya eklenen sitil ve bibliyografk gereksinimler Dergi Hakkında kısmındaki <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Yazar Rehberi</a>'nden görülebilir."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Bu dergi sitesindeki isimler ve elektronik posta adresleri bu derginin belirtilen amaçları doğrultusunda kullanılacaktır. Diğer amaçlar veya başka bir bölüm için kullanılmaycaktır.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Bu dergi açık erişim sağlama politikasını benimsemiştir. Açık erişim bilginin global değişimini artırarak insanlık için yararlı sonuçlar doğurmaktadır."
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"________________________________________________________________________\n"
+"{$journalName}\n"
+"{$indexUrl}{$contextPath}"
+
+msgid "default.contextSettings.forReaders"
+msgstr "Okuyucuların yayın bildirimi servisine kayıt olmaları önerilir. Dergi ana sayfasının üst kısmında yer alan <a href=\"{$indexUrl}{$contextPath}/user/register\">Kayıt</a> bağlantısı aracılığı ile bu işlem gerçekleştirilebilir. Bu kayıtla her yeni sayı yayınlandığında İÇİNDEKİLER sayfası e-posta aracılığı ile okuyucuya iletilir. Derginin <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">güvenlik kurallarına bakınız</a> yazarların kimlik bilgileri ve e-posta adresleri hiç bir şekilde başka amaçlar için kullanılmayacaktır."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Dergimize makale başvurusunda bulunmayı düşünüyorsanız <a href=\"{$indexUrl}{$contextPath}/about\">Dergi Hakkında</a> bağlantısı araılığıyla dergi yayın politikası ve <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Yazar Rehberi</a>'ne ulaşabilirsiniz. Yazarlar dergiye gönderi yapmadan önce <a href=\"{$indexUrl}{$contextPath}/user/register\">register</a> üye olmalıdır. Gönderi işlemi  <a href=\"{$indexUrl}{$contextPath}/login\">Üye Giriş</a> bağlantısı aracılığıyla 5 basamakta yapılır."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Kütüphanelere, bu açık erişimli dergiyi elektronik dergileri içine almaları önerilir. Açık Dergi Sitemleri ile ilgili ayrıntılı bilgi <a href=\"http://pkp.sfu.ca\">Public Knowledge Project</a> bağlantısından elde edilebilir."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Bu dergi, katılan kütüphanelerin koruma ve restorasyon amaçlı dağıtık kalıcı arşivler yaratmasına izin vermek için LOCKSS sistemi kullanmaktadır. <a href=\"http://www.lockss.org/\"> LOCKSS sistemi konusunda daha fazla bilgi almak isterseniz.</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Dergi yöneticisi"
+
+msgid "default.groups.plural.manager"
+msgstr "Dergi yöneticileri"
+
+msgid "default.groups.abbrev.manager"
+msgstr "DY"
+
+msgid "default.groups.name.editor"
+msgstr "Dergi editörü"
+
+msgid "default.groups.plural.editor"
+msgstr "Dergi editörleri"
+
+msgid "default.groups.abbrev.editor"
+msgstr "DE"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Misafir editör"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Misafir editörler"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "ME"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Bölüm editörü"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Bölüm editörleri"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "Böl. Ed."
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Abone Yöneticisi"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Abone Yöneticileri"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "Abone Yöneticisi"
+
+msgid "default.genres.researchInstrument"
+msgstr "Araştırma Enstürmanları"
+
+msgid "default.genres.researchMaterials"
+msgstr "Araştırma Materyalleri"
+
+msgid "default.genres.researchResults"
+msgstr "Araştırma Sonuçları"
+
+msgid "default.genres.transcripts"
+msgstr "Suret"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Veri Analizi"
+
+msgid "default.genres.dataSet"
+msgstr "Veri Seti"
+
+msgid "default.genres.sourceTexts"
+msgstr "Kaynak Metinleri"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Hakem"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Hakemler"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "H"
+
+msgid "default.contextSettings.refLinkInstructions"
+msgstr ""
+"<h4>To Add Reference Linking to the Layout Process</h4>\n"
+"\t<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>\n"
+"\t<h4>A. When the Author Provides a Link with the Reference</h4>\n"
+"\t<ol>\n"
+"\t<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>\n"
+"\t<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>\n"
+"\t</ol>\n"
+"\t<h4>B. Enabling Readers to Search Google Scholar For References</h4>\n"
+"\t<ol>\n"
+"\t\t<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., \"Peace\"—then copy author and title).</li>\n"
+"\t\t<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search.</li>\n"
+"\n"
+"\t<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>\n"
+"\t<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>\n"
+"\t</ol>\n"
+"\t<h4>C. Enabling Readers to Search for References with a DOI</h4>\n"
+"\t<ol>\n"
+"\t<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>\n"
+"\t<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>\n"
+"\t<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>\n"
+"\t<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>\n"
+"\t</ol>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Bu dergi, katılımcı kütüphaneler arasında dağıtılmış bir arşivleme sistemi oluşturmak için CLOCKSS sistemini kullanır ve bu kütüphanelerin, koruma ve geri yükleme amacıyla derginin kalıcı arşivlerini oluşturmasına izin verir. <a href=\"http://clockss.org/\">Daha azla...</a>"

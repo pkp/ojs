@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:10+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:10+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.googleScholar.name"
+msgstr "Plugin för Google Scholar-indexering"
+
+msgid "plugins.generic.googleScholar.description"
+msgstr "Pluginet ger stöd för indexering av publicerat innehåll i Google Scholar."

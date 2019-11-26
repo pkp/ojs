@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:54+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:54+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Plugin de Canal de Divulgação (Feed RSS)"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "Este plugin produz um canal de divulgação RSS/Atom das notícias da revista"
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Configurações"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Exibir links em todas as páginas."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Exibir links somente nas páginas inicial e de notícias."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Exibir links somente na página de notícias."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Limitar canal a"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "notícias mais recentes."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Indique um número positivo válido para a quantidade de notícias."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Logo Atom"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "Logo RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "Logo RSS2"

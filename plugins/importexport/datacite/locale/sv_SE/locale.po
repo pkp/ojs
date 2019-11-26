@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:38+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:38+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "Export/registrerings-plugin för DataCite"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "Exportera eller registera nummers, artiklars, publiceringsversioners och tilläggsfilers metadata i DataCite-format."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "Konfigurera export-pluginet för DataCite innan det används för första gången."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr ""
+"\n"
+"\t\tOm du vill registrera DOI:er via DataCite, kontakta Managing\n"
+"\t\tAgent via <a href=\"http://datacite.org/contact\" target=\"_blank\">DataCites\n"
+"\t\twebbplats</a>, som kommer att hänvisa dig till din lokala DataCite-medlem. \n"
+"\t\tNär du har etablerat en kontakt med medlemsorganisationen\n"
+"\t\tkommer du att få tillgång till DataCites tjänst för nya beständiga identifikatorer (DOI:er)\n"
+"\t\toch registrering av tillhörande metadata. Om du inte har ett eget användarnamn och lösenord\n"
+"\t\tkommer du ändå kunna exportera i DataCites XML-format, men du kan inte \n"
+"\t\tregistera dina DOI:er hos DataCite från OJS.\n"
+"\t\tObservera att lösenordet sparas som ren text, alltså okrypterat, på grund av \n"
+"\t\tDataCites krav för registrering.\n"
+"\t"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Användarnamn (symbol)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "Skriv in användarnamnet (symbol) som du har fått från DataCite. Användarnamnet får inte innehålla kolon."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "OJS deponerar automatiskt tilldelade DOI:er till DataCite. Det kan ta ett kort tag efter publiceringen innan deponeringen behandlas. Du kan kontrollera alla oregistrerade DOI:er."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "Använd DataCites testprefix för DOI-registrering. Glöm inte att ta bort den här inställningen inför produktion."
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "DataCite automatisk registrering"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Användning: \n"
+"{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

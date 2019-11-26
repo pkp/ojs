@@ -1,0 +1,636 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Cruscotto dell'editor"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Proposte e pubblicazioni"
+
+msgid "editor.submissionQueue"
+msgstr "Coda delle proposte"
+
+msgid "editor.submissionArchive"
+msgstr "Archivio delle proposte"
+
+msgid "editor.publishing"
+msgstr "Pubblicazioni"
+
+msgid "editor.publishedIssues"
+msgstr "Numeri pubblicati"
+
+msgid "editor.allSections"
+msgstr "Tutte le sezioni"
+
+msgid "editor.allEditors"
+msgstr "Tutti gli editor"
+
+msgid "editor.me"
+msgstr "me"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Nessuna proposta nell'archivio."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Salva le modifiche effettuate nell'archivio delle proposte? I contributi che hai selezionato saranno cancellati definitivamente dal sistema."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Sei sicuro di cancellare definitivamente questa proposta?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Sei sicuro di registrare questa decisione?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Questa proposta sarà archiviata dopo che la email di notifica all'autore sarà sia inviata o sia che il tasto 'Salta email' sarà cliccato."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Prima di inviare questo contributo per il copyediting, assicurati che una revisione sia disponibile e che l'autore sia stato informato della decisione utilizzando il link Notifica l'autore sopra."
+
+msgid "editor.notifyUsers"
+msgstr "Notifica utenti"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Notificare gli utenti..."
+
+msgid "editor.usersNotified"
+msgstr "Utenti notificati"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Tutti gli utenti della rivista ({$count} utenti)."
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Utenti della rivista che hanno esplicitamente indicato di ricevere gli aggiornamenti ({$count} utenti)."
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Includi il sommario del fascicolo:"
+
+msgid "editor.editorAdministration"
+msgstr "Amministrazione"
+
+msgid "editor.issues.createIssue"
+msgstr "Crea un fascicolo"
+
+msgid "editor.issues.published"
+msgstr "Data di pubblicazione"
+
+msgid "editor.issues.currentIssue"
+msgstr "Fascicolo corrente"
+
+msgid "editor.issues.numArticles"
+msgstr "N° articoli"
+
+msgid "editor.issues.noArticles"
+msgstr "Nessun articolo è attualmente programmato per questo fascicolo."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Sei sicuro di cancellare definitivamente questo fascicolo?"
+
+msgid "editor.issues.unpublished"
+msgstr "Non pubblicati"
+
+msgid "editor.issues.volumeRequired"
+msgstr "È necessario il volume e deve essere un valore numerico, positivo."
+
+msgid "editor.issues.numberRequired"
+msgstr "Inserire il numero (deve essere un valore numerico, positivo)."
+
+msgid "editor.issues.yearRequired"
+msgstr "Inserire l'anno (deve essere un valore numerico, positivo)."
+
+msgid "editor.issues.titleRequired"
+msgstr "È necessario un titolo per il fascicolo."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "È necessario poter numerare il fascicolo. Selezionare almeno una delle opzioni di numerazione."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Numerazione del fascicolo"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Identificativo pubblico del fascicolo"
+
+msgid "editor.issues.description"
+msgstr "Descrizione"
+
+msgid "editor.issues.accessStatus"
+msgstr "Tipo di accesso"
+
+msgid "editor.issues.accessDate"
+msgstr "Data di fine embargo"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Data di accesso non valida."
+
+msgid "editor.issues.coverPage"
+msgstr "Immagine di copertina"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(formati validi: .gif, .jpg, o .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "File"
+
+msgid "editor.issues.remove"
+msgstr "Elimina"
+
+msgid "editor.issues.proofed"
+msgstr "Controllato"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Eliminare l'immagine della copertina?"
+
+msgid "editor.issues.styleFile"
+msgstr "Foglio di stile"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Formato non valido per il foglio di stile. Assicurarsi che il file caricato sia un CSS valido. (da notare che i fogli di stile con commenti all'inizio potrebbero essere respinti.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Eliminare il foglio di stile?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Didascalia della copertina"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Crea una copertina per il fascicolo con i seguenti elementi"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Visualizzazione"
+
+msgid "editor.issues.openAccess"
+msgstr "Accesso aperto"
+
+msgid "editor.issues.subscription"
+msgstr "Abbonamento"
+
+msgid "editor.issues.identification"
+msgstr "Numerazione"
+
+msgid "editor.issues.access"
+msgstr "Accesso"
+
+msgid "editor.issues.cover"
+msgstr "Copertina"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Tutti gli articoli saranno rimessi nella coda di editing e tutti i file associati saranno rimossi in maniera permanente.  Sei sicuro di voler rimuovere questo fascicolo?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Questa rivista utilizza un ordinamento personalizzato dei fascicoli. <a href=\"{$url}\" class=\"action\">Ripristina l'ordinamento di default</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Questo fascicolo utilizza un ordinamento personalizzato degli articoli. <a href=\"{$url}\" class=\"action\">Ripristina l'ordinamento di default</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Dati del fascicolo"
+
+msgid "editor.issues.saveChanges"
+msgstr "Salva le modifiche del sommario?"
+
+msgid "editor.issues.default"
+msgstr "Default"
+
+msgid "editor.issues.order"
+msgstr "Ordine"
+
+msgid "editor.issues.publicId"
+msgstr "Id pubblico"
+
+msgid "editor.issues.publishIssue"
+msgstr "Pubblica il fascicolo"
+
+msgid "editor.issues.previewIssue"
+msgstr "Anteprima del fascicolo"
+
+msgid "editor.issues.preview"
+msgstr "(anteprima)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Sei sicuro di voler pubblicare il nuovo numero?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Impossibile salvare l'id pubblico per l'articolo:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Nessun numero attivo"
+
+msgid "editor.issues.open"
+msgstr "Aperto"
+
+msgid "editor.issues.pages"
+msgstr "Paginazione"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Fascicoli futuri"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Fascicoli pubblicati"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Imposta il file originale come versione di revisione"
+
+msgid "editor.article.uploadReviewVersion"
+msgstr "Carica un file modificato da mandare in revisione"
+
+msgid "editor.article.showSuppFile"
+msgstr "Invia il file ai revisori"
+
+msgid "editor.article.layoutAndProof"
+msgstr "Layout & bozze"
+
+msgid "editor.article.clear"
+msgstr "Rimuovi"
+
+msgid "editor.article.clearReviewer"
+msgstr "Rimuovi revisore"
+
+msgid "editor.article.changeSection"
+msgstr "Cambia sezione"
+
+msgid "editor.article.setDueDate"
+msgstr "Impostare la data di scadenza"
+
+msgid "editor.article.addReviewer"
+msgstr "Aggiungi revisore"
+
+msgid "editor.article.toReviewer"
+msgstr "Al revisore"
+
+msgid "editor.article.notifyReviewer"
+msgstr "Informa il revisore"
+
+msgid "editor.article.initiateReview"
+msgstr "Avvia la revisione"
+
+msgid "editor.article.cancelReview"
+msgstr "Cancella la richiesta"
+
+msgid "editor.article.clearReview"
+msgstr "Rimuovi il revisore"
+
+msgid "editor.article.enterRecommendation"
+msgstr "Inserisci il parere"
+
+msgid "editor.article.enterReviewerRecommendation"
+msgstr "Inserisci il parere del revisore"
+
+msgid "editor.article.recommendation"
+msgstr "Parere"
+
+msgid "editor.article.selectReviewer"
+msgstr "Seleziona un revisore"
+
+msgid "editor.article.replaceReviewer"
+msgstr "Sostituisci il revisore"
+
+msgid "editor.article.editorToEnter"
+msgstr "Editor per le segnalazioni e i commenti ai revisori"
+
+msgid "editor.article.uploadReviewForReviewer"
+msgstr "Caricamento versione revisionata"
+
+msgid "editor.article.peerReviewOptions"
+msgstr "Opzioni di peer review"
+
+msgid "editor.article.decision"
+msgstr "Decisione"
+
+msgid "editor.article.noEditorSelected"
+msgstr "Nessun editor selezionato."
+
+msgid "editor.article.recordDecision"
+msgstr "Registra la decisione"
+
+msgid "editor.article.cannotRecord"
+msgstr "Il section editor non è stato registrato."
+
+msgid "editor.article.reviewersSeeAuthorsVersion"
+msgstr "I revisori possono vedere la versione dell'autore"
+
+msgid "editor.article.designateDueDate"
+msgstr "Cambia la data di scadenza"
+
+msgid "editor.article.designateDueDateDescription"
+msgstr "Inserisci la data o il numero di settimane per la nuova scadenza."
+
+msgid "editor.article.todaysDate"
+msgstr "Data odierna"
+
+msgid "editor.article.requestedByDate"
+msgstr "Nuova scadenza"
+
+msgid "editor.article.dueDateFormat"
+msgstr "Formato: AAAA-MM-GG"
+
+msgid "editor.article.numberOfWeeks"
+msgstr "Numero di settimane"
+
+msgid "editor.article.selectCopyeditor"
+msgstr "Assegna copyeditor"
+
+msgid "editor.article.replaceCopyeditor"
+msgstr "Sostituisci copyeditor"
+
+msgid "editor.article.editorsCopyedit"
+msgstr "Copyedit effettuato dall'editor"
+
+msgid "editor.article.showAuthor"
+msgstr "Permetti agli autori di vedere i file"
+
+msgid "editor.article.showCopyeditor"
+msgstr "Mostra la versione al copyeditor"
+
+msgid "editor.article.rateReviewer"
+msgstr "Valutazione del revisore"
+
+msgid "editor.article.reviewerRating.veryGood"
+msgstr "5 Alto"
+
+msgid "editor.article.reviewerRating.good"
+msgstr "4"
+
+msgid "editor.article.reviewerRating.average"
+msgstr "3 Medio"
+
+msgid "editor.article.reviewerRating.poor"
+msgstr "2"
+
+msgid "editor.article.reviewerRating.veryPoor"
+msgstr "1 Basso"
+
+msgid "editor.article.comments"
+msgstr "Commenti"
+
+msgid "editor.article.commentsRequired"
+msgstr "Il campo per i commenti è necessario."
+
+msgid "editor.article.saveRating"
+msgstr "Salva la valutazione"
+
+msgid "editor.article.noneSelected"
+msgstr "Nessuna selezione effettuata"
+
+msgid "editor.article.authorProofing"
+msgstr "Correzione delle bozze dell'autore"
+
+msgid "editor.article.archiveSubmission"
+msgstr "Archivia la proposta"
+
+msgid "editor.article.restoreToQueue"
+msgstr "Ripristina nella lista attiva"
+
+msgid "editor.article.assignSectionEditor"
+msgstr "Assegna a un section editor"
+
+msgid "editor.article.assignEditor"
+msgstr "Assegna a un editor"
+
+msgid "editor.article.selectEditor"
+msgstr "Aggiungi il {$roleName}"
+
+msgid "editor.article.selectDecision"
+msgstr "Seleziona la decisione"
+
+msgid "editor.article.selectLayoutEditor"
+msgstr "Seleziona l'editor del layout"
+
+msgid "editor.article.replaceLayoutEditor"
+msgstr "Sostituisci l'editor del layout"
+
+msgid "editor.article.reviewSubmission"
+msgstr "Revisione della proposta"
+
+msgid "editor.article.resubmitForReview"
+msgstr "Invia di nuovo il file in revisione"
+
+msgid "editor.article.resubmitFileForPeerReview"
+msgstr "Invia di nuovo in revisione il file selezionato"
+
+msgid "editor.article.sendToCopyedit"
+msgstr "Invia i file al copyediting"
+
+msgid "editor.article.selectProofreader"
+msgstr "Assegna il correttore di bozze"
+
+msgid "editor.article.replaceProofreader"
+msgstr "Sostituisci il correttore di bozze"
+
+msgid "editor.article.authorComments"
+msgstr "Commenti dell'autore"
+
+msgid "editor.article.proofreaderComments"
+msgstr "Commenti del correttore di bozze"
+
+msgid "editor.article.layoutEditorFinal"
+msgstr "Layout Editor Definitivo"
+
+msgid "editor.article.noDate"
+msgstr "(data)"
+
+msgid "editor.submissions.showBy"
+msgstr "Mostra per il"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Inviata MM-GG"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Incarichi attivi"
+
+msgid "editor.submissions.invite"
+msgstr "Invita"
+
+msgid "editor.submissions.accept"
+msgstr "Accetta"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Nessuna proposta"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Più recente"
+
+msgid "editor.submissions.averageTime"
+msgstr "Settimane"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Ultimo completato"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Assegnato a"
+
+msgid "editor.submissions.inSection"
+msgstr "nella sezione"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Metti in coda per la pubblicazione in"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Da assegnare"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Quota di pubblicazione non pagata. Avvertire l'autore per poter pianificare la pubblicazione dell'articolo."
+
+msgid "editor.article.display"
+msgstr "Visualizza"
+
+msgid "editor.article.hideTocAuthorDescription"
+msgstr "Non visualizzare i nomi degli autori nel sommario del fascicolo"
+
+msgid "editor.article.hideTocAuthorDefault"
+msgstr "Default"
+
+msgid "editor.article.hideTocAuthorHide"
+msgstr "Ometti"
+
+msgid "editor.article.hideTocAuthorShow"
+msgstr "Mostra"
+
+msgid "editor.article.cover"
+msgstr "Copertina"
+
+msgid "editor.article.coverImage"
+msgstr "Immagine di copertina"
+
+msgid "editor.article.uploaded"
+msgstr "Caricato"
+
+msgid "editor.article.removeCoverPage"
+msgstr "Rimuovi l'immagine di copertina?"
+
+msgid "editor.article.remove"
+msgstr "Rimuovi"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Accesso aperto con embargo"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Nascondi il fascicolo pubblicato"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Sei sicuro di voler nascondere il fascicolo pubblicato?"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Tutti gli autori ({$count} utenti)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Tutti gli abbonati persona ({$count} utenti)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Tutti gli abbonati enti ({$count} utenti)"
+
+msgid "editor.reassign"
+msgstr "Riassegna"
+
+msgid "editor.publicIdentificationExists"
+msgstr "L'identificatore pubblico  '{$publicIdentifier}' già esiste per un altro oggetto (fascicoli, articolo o file). Definisci identificatori unici nella rivista."
+
+msgid "editor.issues.galleys"
+msgstr "Gabbie del fascicolo"
+
+msgid "editor.issues.galley"
+msgstr "Gabbia del fascicolo"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Vedi la bozza del fascicolo"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Pubblica una gabbia contenente l'intero fascicolo"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Non sono state pubblicate gabbie per questo fascicolo."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Inserire un'etichetta per la gabbia del fascicolo"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Inserire la lingua della gabbia del fascicolo"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Esiste già un identificatore della gabbia del fascicolo"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Torna alle gabbie del fascicolo"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Sei sicuro di cancellare questa gabbia del fascicolo?"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Tutti i lettori ({$count} utenti)"
+
+msgid "editor.issues.editIssue"
+msgstr "Gestione fascicolo: : {$issueIdentification}"
+
+msgid "editor.issues.datePublished"
+msgstr "Data pubblicazione"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "L'immagine di copertina che hai chiesto di cancellare non corrisponde all'immagine di copertina di questo fascicolo. Per favore ricarica la pagina e prova di nuovo."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "L'immagine di copertina che hai chiesto di cancellare non esiste. Potrebbe essere stata cancellata. Prova a ricaricare la pagina."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Formato non valido per l'immagine di copertina. I formati accettati sono  .gif, .jpg, o .png."
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Sei sicuro di voler definire questo fascicolo come quello corrente?"
+
+msgid "editor.issues.identifiers"
+msgstr "Identificativi"
+
+msgid "grid.action.addGalley"
+msgstr "Aggiungi una gabbia"
+
+msgid "grid.action.publish"
+msgstr "Pubblica fascicolo"
+
+msgid "grid.action.addIssue"
+msgstr "Crea un fascicolo"
+
+msgid "grid.action.viewIssue"
+msgstr "Vedi"
+
+msgid "grid.action.previewIssue"
+msgstr "Anteprima"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Crea una gabbia per tutto il fascicolo"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Definisce il fascicolo corrente"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "L'immagine che hai chiesto di cancellare non esiste. Potrebbe essere stata già cancellata. Prova a ricaricare la pagina."
+
+msgid "grid.action.removeArticle"
+msgstr "Rimuovi articolo dal fascicolo"
+
+msgid "editor.article.remove.confirm"
+msgstr "Se sicuro di voler rimuovere l'articolo da questo fascicolo ? L'articolo sarà disponibile per uscire in un altro fascicolo."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Modifica la gabbia per il fascicolo"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Il layout editor prepare questi file per ogni gabbia e li carica agli appropriati <span class=\"pkp_help_title\">Correttori</span> per la correzione delle bozze."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Seleziona le gabbie (file)"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Le versioni finali sono state trasformate dal Copyeditor in versioni definitive e caricate sotto <span class=\"pkp_help_title\">Copyediting</span>."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "L'identificativo pubblico  '{$publicIdentifier}' esiste di già per un'altro oggetto dello stesso genere. Per favore scegli un identificativo univoco per lo stesso tipo di oggetti all'interno della rivista."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Ogni file in qualsiasi punto del precorso di revisione può essere aggiunto alla \"Correzioni di bozze\" selezionando il ceheckbox qui sotto e cliccando 'Cerca': vengono elencati tutti i files disponibili e il file desiderato può essere scelto per l'inclusione."

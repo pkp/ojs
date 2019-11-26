@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:40+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:40+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Модуль «Экспорт в DOAJ»"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Экспортирует журнал для DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Связаться с DOAJ для добавления журнала"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "Если вы хотите зарегистрировать статьи прямо из OJS, пожалуйста, введите ваш ключ API DOAJ. Если у вас нет ключа API DOAJ, вы все равно сможете экспортировать в формат DOAJ XML, но не сможете зарегистрировать ваши статьи с DOAJ напрямую из OJS."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "Ключ API DOAJ"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Вы найдете ключ API на своей странице пользователя DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "OJS будет автоматически депонировать статьи в DOAJ. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки (например, в зависимости от настроек вашего cron). Вы можете проверить все незарегистрированные статьи."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "Использовать тестовый API DOAJ (среда тестирования) для регистрации. Пожалуйста, не забудьте убрать этот параметр для реальной работы."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Задача автоматической регистрации DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Депонирование не удалось! API DOAJ  вернул ошибку : «{$param}»."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Вызов:\n"
+"{$scriptName} {$pluginName} export [ИмяФайлаXML] [путь_журнала] articles IdОбъекта1 [IdОбъекта2] ...\n"
+""

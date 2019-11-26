@@ -1,0 +1,339 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:27+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Nytt manus"
+
+msgid "author.track"
+msgstr "Aktive manus"
+
+msgid "author.submit.submitArticle"
+msgstr "Send inn en artikkel"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Fem trinn for å sende inn et manuskript"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Klikk her</a> for å starte innsendingsprosessen"
+
+msgid "author.submit.step1"
+msgstr "Trinn 1. Start innsending av manuskript"
+
+msgid "author.submit.step2"
+msgstr "Trinn 2. Last opp manuskriptet"
+
+msgid "author.submit.step3"
+msgstr "Trinn 3. Skriv inn manuskriptets metadata"
+
+msgid "author.submit.step4"
+msgstr "Trinn 4. Last opp tilleggsfiler"
+
+msgid "author.submit.step4a"
+msgstr "Trinn 4a. Legg til en tilleggsfil"
+
+msgid "author.submit.step5"
+msgstr "Trinn 5. Bekreft innsendingen"
+
+msgid "author.submit.start"
+msgstr "Start"
+
+msgid "author.submit.upload"
+msgstr "Last opp manuskript"
+
+msgid "author.submit.metadata"
+msgstr "Skriv inn metadata"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Last opp tilleggsfiler"
+
+msgid "author.submit.confirmation"
+msgstr "Bekreftelse"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Du kan fullføre denne innsendingen senere, ved å velge Aktive manus fra forfattersiden din."
+
+msgid "author.submit.notAccepting"
+msgstr "Dette tidsskriftet tar for øyeblikket ikke imot bidrag."
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Last opp manuskript i redigert versjon"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Korrektur"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Er du sikker på at du vil slette denne ufullstendige innsendingen?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Vis status"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Ingen manuskripter."
+
+msgid "author.submit.howToSubmit"
+msgstr "Forfattere skal sende inn bidragene til dette tidsskriftet på nettet, gjennom en femtrinns prosess for opplasting av manuskript og annen relevant informasjon (med mulighet for også å laste opp tilleggsfiler, som for eksempel forskningsdata og -instrument). Hvis det oppstår problemer med denne prosessen, vennligst kontakt teknisk kontaktperson (<a href=\"mailto:{$supportEmail}\">{$supportName}</a>) med e-post, eller på telefon {$supportPhone}, for å få hjelp."
+
+msgid "author.submit.journalSection"
+msgstr "Tidsskriftseksjon"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Velg en passende seksjon for dette manuskriptet (Se Seksjoner og Retningslinjer i <a href=\"{$aboutUrl}\">Om</a> tidsskriftet)."
+
+msgid "submission.submit.selectSection"
+msgstr "Vennligst velg en seksjon ..."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Sjekkliste for klargjøring av manuskript"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Bekreft at manuskriptet du sender inn er klargjort for vurdering hos dette tidsskriftet, ved å krysse av for følgende (øvrige kommentarer til redaktøren kan legges til nedenfor)."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Du må sørge for at alle momentene i sjekklisten for klargjøring av manuskript er utført og krysset av, før du går videre."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Forfatteren aksepterer med dette at vilkårene i denne erklæringen om copyright gjøres gjeldende for dette manuskriptet, hvis og når det publiseres av dette tidsskriftet (øvrige kommentarer til redaktøren kan legges til nedenfor)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Du må bekrefte vilkårene i erklæringen om copyright før du går videre."
+
+msgid "submission.submit.coverNote"
+msgstr "Kommentarer til redaktøren"
+
+msgid "author.submit.comments"
+msgstr "Skriv inn tekst (valgfritt)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Vennligst velg en passende tidsskriftseksjon for dette manuskriptet."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Tidsskriftets erklæring om personopplysninger"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Bruk pilene for å endre rekkefølgen forfatternavnene skal vises i."
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Hovedkontakt for redaksjonell korrespondanse."
+
+msgid "author.submit.addAuthor"
+msgstr "Legg til forfatter"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Slett forfatter"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Velg de begrepene som best beskriver manuskriptets innhold, i samsvar med kategoriene som brukes av dette tidsskriftet, og eksemplene som er gitt av redaktøren. Skill termene med semikolon (term1; term2; term3). Bruk så langt det er mulig kategorier fra offentlige standarder, som for eksempel Universitets- og høgskolerådets \"Oversikt over fagråd og faginndeling.\" (Eksempel: per 1/1 2007 inndeles hovedkategorien Utdanningsvitenskap  i underkategoriene: Allmennpedagogikk, Lærerutdanning, Spesialpedagogikk, Fagdidaktikk, Yrkespedagogikk og yrkesdidaktikk, Førskolelærerpedagogikk, og Andre pedagogiske fag.)"
+
+msgid "author.submit.coverageInstructions"
+msgstr "Viser til dekning i både tid og rom; geografisk, topologisk, kronologisk eller historisk dekning, og/eller karakteristika ved materialet/utvalget."
+
+msgid "author.submit.languageInstructions"
+msgstr "Norsk=no; English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/iso639-2/langcodes.html\" target=\"_blank\">Flere koder</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Minst en forfatter er påkrevet."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Fornavn, etternavn, og e-postadresse for hver forfatter er påkrevet."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Vennligst skriv inn tittelen på artikkelen din."
+
+msgid "author.submit.submissionFile"
+msgstr "Manuskriptfil"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Last opp manuskriptfil"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Erstatt manuskriptfil"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Ingen manuskriptfil lastet opp."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Er du sikker på at du vil fortsette uten å laste opp en manuskriptfil?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Dette valgfrie trinnet i innsendingsprosessen tillater forfattere å legge til filer til manuskriptet, for å styrke verdien av bidraget. Tilleggsfiler kan omfatte (a) forskningsinstrument, (b) datasett (som må være forskningsetisk vurdert og sikret), (c) kilder som ellers ikke ville være tilgjengelig for leserne, eller (d) figurer eller tabeller som ikke lar seg integrere i selve teksten. Disse filene skal også indekseres av forfatteren, slik at deres forhold til manuskriptet er opplyst, og dessuten eierskapet til filen. Tilleggsfiler kan lastes opp i hvilket som helst filformat, og vil bli gjort tilgjengelig for leserene i sitt opprinnelige format. De kan også åpnes for fagkonsulentene, så fremt dette ikke kompromitterer anonym fagfellevurdering."
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Ingen tilleggsfiler er lagt til dette manuskriptet."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Tilbake til tilleggsfiler"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Er du sikker på at du vil slette denne tilleggsfilen?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Last opp tilleggsfil"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Legg til en tilleggsfil"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Rediger en tilleggsfil"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metadata for tilleggsfilen"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "For å indeksere dette tilleggsmaterialet, må du gi følgende metadata for den opplastete tilleggsfilen."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Tilleggsfil"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Filens opphavsrettseier"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Forskningsinstrument"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Forskningsmateriale"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Forskningsresultat"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transkripsjoner"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Analyse"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Datasett"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Kildetekst"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Kort beskrivelse"
+
+msgid "author.submit.suppFile.contributorOrSponsor"
+msgstr "Bidragsyter eller kilde til støtte"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Vis fram filen til fagkonsulenter (uten metadata), siden det ikke vil kompromittere anonym fagfellevurdering."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Bruk bare for formelt publiserte materials."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Dato når data ble samlet inn eller instrument framstilt."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Navn på studiet, prosjektet eller annet utgangspunkt."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Annet: Spesifiser"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Ingen fil er lastet opp."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Vennligst skriv inn tittelen til denne tilleggsfilen."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Vennligst skriv inn et emne."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Vennligst skriv inn en beskrivelse."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Offentlig tilleggsfilidentifikasjon finnes allerede."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Offentlig tilleggsfilidentifikator"
+
+msgid "author.submit.confirmationDescription"
+msgstr "Klikk Bekreft innsending for å sende inn manuskriptet til {$journalTitle}. Du vil motta en e-post som bekrefter innsendingen, og du vil kunne følge manuskriptet gjennom den redaksjonelle prosessen ved å logge inn på tidsskriftets nettsted. Takk for at du vil publisere hos {$journalTitle}."
+
+msgid "author.submit.noFiles"
+msgstr "Ingen filer er vedlagt dette manuskriptet."
+
+msgid "author.submit.filesSummary"
+msgstr "Filopplasting: Oppsummering"
+
+msgid "author.submit.finishSubmission"
+msgstr "Bekreft innsending"
+
+msgid "author.submit.submissionComplete"
+msgstr "Innsendingen er fullført. Takk for at du vil publisere hos {$journalTitle}."
+
+msgid "author.submit.expedite"
+msgstr "Hvis dette manuskriptet er i et format som er klart for publisering uten ytterligere vurdering eller redigering, kan det sendes rett til det siste stadiet i manuskriptarbeidskøen ved å <a href=\"{$expediteUrl}\" class=\"action\">Klikke her</a>. (NB: Bare ansvarlig redaktør har denne valgmuligheten for sin manuskriptbehandling.)"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Last opp forfatterens versjon"
+
+msgid "author.article.copyeditedFile"
+msgstr "Manusredigert fil"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Forfatterfil"
+
+msgid "author.competingInterests"
+msgstr "Interessekonflikter <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Retningslinjer for erklæring om interessekonflikter</a>"
+
+msgid "author.submit.startHereTitle"
+msgstr "Start innsending av et nytt manuskript"
+
+msgid "author.submit.requestWaiver"
+msgstr "Be om gebyrfritak"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Vennligst vurder å gi gebyrfritak for dette manuskriptet"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Vennligst oppgi hvorfor du ber om gebyrfritak i kommentarboksen nedenfor."
+
+msgid "author.submit.howToSubmitNoPhone"
+msgstr "Trenger du hjelp? Kontakt <a href=\"mailto:{$supportEmail}\">{$supportName}</a>"
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Vennligst skriv inn sammendraget til artikkelen din."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Klikk Lagre for å laste opp filen (flere filer kan lastes opp senere)"
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Er du sikke på at du vil fortsette uten å laste opp den tilleggsfilen du har valgt?"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "For å sende inn bidrag til dette tidsskriftet må du ha en brukerkonto her. Ved hjelp av den kan våre redaktører følge opp bidraget du har sendt inn og kontakte deg når redaksjonsprosessen krever det, eller hvis de trenger mer informasjon fra deg."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Om du ber om at forfatterbetalingen skal frafalles, må du oppgi en grunn i feltet."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "I vurderingsrunde {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Under vurdering: Bearbeiding påkrevd"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Under redigering: Manuskriptredigering ønsket"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Under redigering: Korrekturlesing ønsket"
+
+msgid "author.submit.reorder"
+msgstr "Endre rekkefølgen på forfatternavnene"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Du har overskredet maksimalt antall ord i et sammendrag i denne seksjonen."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Vennligst velg innleveringsspråk."

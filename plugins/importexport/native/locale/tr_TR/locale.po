@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:44+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:44+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Native XML Eklentisi"
+
+msgid "plugins.importexport.native.description"
+msgstr "Makaleleri ve sayıları OJS'nin doğal XML formatına içe ve dışa aktarın."
+
+msgid "plugins.importexport.native.import"
+msgstr "İçe Aktar"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "İçe aktarılacak XML dosyası yükle"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Dışa aktarılacak makaleleri seçin"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Makaleleri Dışa Aktar"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Sayıları Dışa Aktar"
+
+msgid "plugins.importexport.native.results"
+msgstr "Sonuçlar"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Devam etmek için lütfen \"İçe Aktar\"ın altında bir dosya yükleyin."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "İçe aktarma başarıyla tamamlandı. Aşağıdaki öğeler içeriye aktarıldı:"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Kullanım: {$scriptName} {$pluginName} [command] ...\n"
+"Komutlar:\n"
+"\timport [xmlFileName] [journal_path] [user_name] ...\n"
+"\texport [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...\n"
+"\texport [xmlFileName] [journal_path] article [articleId]\n"
+"\texport [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
+"\texport [xmlFileName] [journal_path] issue [issueId]\n"
+"\n"
+"XML belgesinin köküne bağlı olarak aşağıdaki gibi verileri almak\n"
+"için ek parametreler gereklidir.\n"
+"\n"
+"Kök düğüm <article> veya <articles> ise, ek parametreler gereklidir.\n"
+"\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
+"\tissue_id [issueId] section_abbrev [abbrev]\n"
+""
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Bilinmeyen bölüm {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Belirtilen kullanıcı \"{$userName}\" mevcut değil."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr "\"{$section1Title}\" bölüm başlığı ve \"{$issueTitle}\" başlıklı sayı \"{$section2Title}\" bölüm başlığı, mevcut farklı dergi bölümleriyle eşleşti."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr "\"{$issueTitle}\" sayısındaki \"{$sectionTitle}\" bölüm başlığı, mevcut bir dergi bölümü ile eşleşti, ancak bu bölümün başka bir başlığı, mevcut dergi bölümünün başka bir başlığıyla eşleşmiyor."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr "\"{$section1Abbrev}\" bölümünün kısa adı ve \"{$issueTitle}\" sayısının \"{$section2Abbrev}\" bölümünün kısa adı, farklı mevcut dergi bölümleriyle eşleşti."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr "\"{$issueTitle}\" sayısındaki  \"{$sectionAbbrev}\" bölümünün kısaltması, mevcut bir dergi bölümü ile eşleşti, ancak bu bölümün başka bir kısaltması, mevcut dergi bölümünün başka bir kısaltmasıyla uyuşmuyor."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "Sayılardan hiçbiri veya birden fazla sayı, belirtilen sayı tanımlaması \"{$issueIdentification}\" ile eşleşmiyor."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr "{$issueId} ID'si ile mevcut sayı, \"{$issueIdentification}\" ID'si ile verilen sayı bilgisiyle eşleşiyor. Bu sayı değiştirilmeyecek, ancak makaleler eklenecektir."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "\"{$articleTitle}\" makalesi için sayı tanımlama öğesi eksik."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr "\"{$articleTitle}\" makalesi bir sayı içende yer alıyor, ancak yayın bir yayın tarihi yok."

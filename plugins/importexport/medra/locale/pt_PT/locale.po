@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:42+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:42+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "Plugin de Exportação/Registo mEDDRA"
+
+msgid "plugins.importexport.medra.description"
+msgstr "Exporta metadados do número, artigo e composição no formato Onix para DOI (O4DOI) e regista DOIs junto da agência de registo mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Configure o plugin de exportação mEDRA:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Utilizador"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Insira o nome de utilizador mEDRA. O nome de utilizador pode não conter dois pontos."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "O nome da instituição registada no mEDDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Por favor, insira a instituição registada no mEDDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Pessoa a contactar pela mEDRA em caso de problemas técnicos:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Instituição"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "Insira a instituição que é tecnicamente responsável pela exportação de DOI (por exemplo, a instituição que hospeda o seu servidor web)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Contacto"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Insira o nome do contato técnico."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "E-mail"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Insira um e-mail válido do contacto técnico."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Seleccione o país para ser indicado como \"país de publicação\" para o mEDDRA."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "Seleccione se pretende exportar números como <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\"> 'trabalhos' ou 'manifestações' </a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "trabalho"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "manifestação"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Os números são exportadas como"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "O OJS registará DOIs atribuídos automaticamente junto do mEDRA. Por favor, note esta acção pode demorar tempo a ser processada. Pode verificar todos os DOIs não registados."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "Use a API de teste mEDRA (ambiente de teste) para registo do DOI. Não esqueça de remover esta opção para a produção."
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "NB: Os DOIs atribuídos a artigos serão exportados para mEDRA como <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\"> 'works'</a>. Os DOIs atribuídos às composições serão exportados como <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\"> 'manifestations'</a>."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "Tarefa de registo automático mEDDRA"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Modo de Utilização: \n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ..."
+
+msgid "plugins.importexport.medra.intro"
+msgstr "Se pretende registar os DOI no sistema mEDRA, siga as indicações referidas no <a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">Sítio do mEDRA (EN)</a> para receber um utilizador e uma senha. Se não tiver o seu próprio utilizador e respetiva senha, poderá, ainda assim, exportar nos formados XML do mEDRA (Onix para DOI) mas não poderá registar os seus DOI no sistema mEDRA a partir do OJS. Note the a senha será armazenada em formato texto, ou seja, não encriptada, dados os requisitos do serviço de registo do mEDRA."

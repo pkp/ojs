@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:35+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:35+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "CrossRef XML -vientilisäosa"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Vie artikkelin metatiedot CrossRef XML -muodossa."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Vaatimukset"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Kaikki lisäosan vaatimukset täyttyvät."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "Julkaisun julkaisijaa ei ole määritetty! Julkaiseva instituutio on lisättävä <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Julkaisun asetukset -sivulla</a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "Julkaisun ISSN-tunnusta ei ole määritetty! ISSN on lisättävä <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Julkaisun asetukset -sivulla</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "DOI-tunnisteiden määrittämisessä käytettäviä artikkeleita ei ole valittu DOI-tunnistelisäosassa, joten tässä lisäosassa ei ole talletus- tai vientimahdollisuutta."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Onnistuneeseen CrossRef-talletukseen vaaditaan seuraavat kohteet."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Tallettajan nimi"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Tallettajan sähköposti"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Anna tallettajan nimi."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Anna tallettajan sähköposti."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "Jos haluat käyttää tätä lisäosaa rekisteröidäksesi DOI-tunnisteita (Digital Object Identifier) suoraan CrossRefin kautta, tarvitset siihen käyttäjätunnuksen ja salasanan (saatavana osoitteesta <a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>). Jos sinulla ei ole omaa käyttäjätunnusta ja salasanaa, voit silti viedä tietoja CrossRef XML -muotoon, mutta et voi rekisteröidä DOI-tunnisteitasi CrossRefin kautta OJS-järjestelmästä käsin."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Käyttäjätunnus"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Anna CrossRefistä saamasi käyttäjätunnus."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "OJS tallettaa määritetyt DOI-tunnisteet automaattisesti CrossRefiin. Huomioithan, että käsittely saattaa kestää hetken julkaisemisen jälkeen. Voit tarkistaa kaikki rekisteröimättömät DOI-tunnisteet."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Käytä CrossRefin testi-API:a (testausympäristö) DOI-tunnisteen talletukseen. Muista poistaa tämä valinta tuotantovaihetta varten."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Huom. Ainoastaan numeroita (ei niiden artikkeleita) voidaan viedä/rekisteröidä tässä."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Epäonnistui"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Aktiivinen"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Merkitty aktiiviseksi"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Talletuksen tila:</p>\n"
+"\t\t<p>\n"
+"\t\t- Ei talletettu: tätä DOI-tunnistetta ei ole yritetty tallentaa.<br />\n"
+"\t\t- Aktiivinen: DOI-tunniste on talletettu ja se resolvoituu oikein.<br />\n"
+"\t\t- Epäonnistui: DOI-tunnisteen talletus epäonnistui.<br />\n"
+"\t\t- Merkitty aktiiviseksi: DOI-tunniste merkittiin manuaalisesti aktiiviseksi.\n"
+"\t\t</p>\n"
+"\t\t<p>Vain viimeisimmän talletusyrityksen tila näytetään.</p>\n"
+"\t\t<p>Jos talletus on epäonnistunut, ratkaise ongelma ja yritä rekisteröidä DOI-tunniste uudelleen.</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Lataa XML"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Merkitse aktiiviseksi"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "CrossRefin automaattinen rekisteröintitehtävä"
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Käyttö: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] artikkelit [articleId1] [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] numero [issueId]\n"
+""
+
+msgid "plugins.importexport.crossref.cliError"
+msgstr "VIRHE:"
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Yksikään numero ei vastannut määritettyä numeron tunnistetta \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Yksikään artikkeli ei vastannut määritettyä artikkelin tunnistetta \"{$articleId}\"."

@@ -1,0 +1,636 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:18+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Domácí stránka editora"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Příspěvky a publikování"
+
+msgid "editor.submissionQueue"
+msgstr "Fronta příspěvků"
+
+msgid "editor.submissionArchive"
+msgstr "Archiv příspěvků"
+
+msgid "editor.publishing"
+msgstr "Publikování"
+
+msgid "editor.publishedIssues"
+msgstr "Publikovaná čísla"
+
+msgid "editor.allSections"
+msgstr "Všechny sekce"
+
+msgid "editor.allEditors"
+msgstr "Všichni editoři"
+
+msgid "editor.me"
+msgstr "Já"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "V archivu nejsou žádné příspěvky."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Uložit změny v archivovaných příspěvcích? Příspěvky označené pro smazání budou trvale odstraněny ze systému."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Jste si jisti, že chcete trvale smazat tento příspěvek?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Jste si jisti, že chcete zaznamenat toto rozhodnutí?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Tento příspěvek bude archivován poté, co bude odeslán e-mail Informovat autora nebo bude kliknuto na tlačítko přeskočit e-mail."
+
+msgid "editor.notifyUsers"
+msgstr "Informovat uživatele"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Probíhá informování uživatelů..."
+
+msgid "editor.usersNotified"
+msgstr "Uživatelé byli informováni"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Poslat tuto zprávu všem uživatelům spojeným s tímto časopisem ({$count} uživatelů)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Poslat tuto zprávu uživatelům spojeným s tímto časopisem, kteří uvedli, že si přejí dostávat nejnovější informace ({$count} uživatelů)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Připojit obsah tohoto čísla:"
+
+msgid "editor.editorAdministration"
+msgstr "Editorská administrace"
+
+msgid "editor.issues.createIssue"
+msgstr "Vytvořit číslo"
+
+msgid "editor.issues.currentIssue"
+msgstr "Aktuální číslo"
+
+msgid "editor.issues.numArticles"
+msgstr "Položky"
+
+msgid "editor.issues.noArticles"
+msgstr "Pro toto číslo nejsou aktuálně naplánovány žádné položky."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Jste si jistý, že chcete trvale smazat toto číslo?"
+
+msgid "editor.issues.published"
+msgstr "Publikováno"
+
+msgid "editor.issues.unpublished"
+msgstr "Nepublikováno"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Je vyžadován ročník. Musí to být kladné číslo."
+
+msgid "editor.issues.numberRequired"
+msgstr "Je vyžadováno číslo. Musí to být kladné číslo."
+
+msgid "editor.issues.yearRequired"
+msgstr "Je vyžadován rok. Musí to být kladné číslo."
+
+msgid "editor.issues.titleRequired"
+msgstr "Je vyžadová název čísla."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Je vyžadována identifikace čísla. Zvolte prosím nejméně jednu z možností identifikace čísla."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identifikace čísla"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Veřejný identifikátor čísla"
+
+msgid "editor.issues.description"
+msgstr "Popis"
+
+msgid "editor.issues.accessStatus"
+msgstr "Stav přístupu"
+
+msgid "editor.issues.accessDate"
+msgstr "Datum otevřeného přístupu"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Datum přístupu není platné."
+
+msgid "editor.issues.coverPage"
+msgstr "Titulní obrázek"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Povolené formáty: .gif, .jpg nebo .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Nahrané"
+
+msgid "editor.issues.remove"
+msgstr "Odstranit"
+
+msgid "editor.issues.proofed"
+msgstr "Schválené"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Odstranit obrázek titulní stránky?"
+
+msgid "editor.issues.styleFile"
+msgstr "Soubor stylu"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Neplatný formát souboru stylu. Přesvědčte se, že odeslaný soubor je platný CSS. (Vězte že soubory stylu s komentářem na začátku mohou být odmítnuty.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Odstranit soubor stylu?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Legenda k titulní stránce"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Vytvořit titulní stránku pro toto číslo s následujícími prvky."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Zobrazit"
+
+msgid "editor.issues.openAccess"
+msgstr "Otevřený přístup"
+
+msgid "editor.issues.subscription"
+msgstr "Předplatné"
+
+msgid "editor.issues.identification"
+msgstr "Identifikace"
+
+msgid "editor.issues.access"
+msgstr "Přístup"
+
+msgid "editor.issues.cover"
+msgstr "Titulní strana"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Všechny články budou navráceny do fronty a všechny asociované soubory budou trvale odstraněny. Jste si jisti, že chcete odstranit toto číslo?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Tento časopis používá přizpůsobené řazení čísel. <a href=\"{$url}\" class=\"action\">Resetovat na výchozí</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Toto číslo používá obvyklé řazení sekcí. <a href=\"{$url}\" class=\"action\">Resetovat na výchozí</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Data čísla"
+
+msgid "editor.issues.saveChanges"
+msgstr "Uložit změny do obsahu?"
+
+msgid "editor.issues.default"
+msgstr "Výchozí"
+
+msgid "editor.issues.order"
+msgstr "Pořadí"
+
+msgid "editor.issues.publicId"
+msgstr "Veřejné ID"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publikovat číslo"
+
+msgid "editor.issues.previewIssue"
+msgstr "Náhled čísla"
+
+msgid "editor.issues.preview"
+msgstr "(Náhled)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Jste si jisti, že chcete publikovat nové číslo?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Nebylo možné uložit veřejné ID pro článek:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Žádná živá čísla"
+
+msgid "editor.issues.open"
+msgstr "Otevřít"
+
+msgid "editor.issues.pages"
+msgstr "Stránky"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Budoucí čísla"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Minulá čísla"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Označit původní soubor za verzi pro recenzi"
+
+msgid "editor.article.uploadReviewVersion"
+msgstr "Nahrát revidovanou verzi pro recenzi"
+
+msgid "editor.article.showSuppFile"
+msgstr "Poskytnout soubor recenzentům"
+
+msgid "editor.article.layoutAndProof"
+msgstr "Vzheld & Korektura"
+
+msgid "editor.article.clear"
+msgstr "Odebrat"
+
+msgid "editor.article.clearReviewer"
+msgstr "Odebrat recenzenta"
+
+msgid "editor.article.changeSection"
+msgstr "Změnit sekci"
+
+msgid "editor.article.setDueDate"
+msgstr "Nastavit termín splnění"
+
+msgid "editor.article.addReviewer"
+msgstr "Přidat recenzenta"
+
+msgid "editor.article.toReviewer"
+msgstr "Pro recenzenta"
+
+msgid "editor.article.notifyReviewer"
+msgstr "Informovat recenzenta"
+
+msgid "editor.article.initiateReview"
+msgstr "Zahájit recenzi"
+
+msgid "editor.article.cancelReview"
+msgstr "Zrušit požadavek"
+
+msgid "editor.article.clearReview"
+msgstr "Odebrat recenzenta"
+
+msgid "editor.article.enterRecommendation"
+msgstr "Vložit doporučení"
+
+msgid "editor.article.enterReviewerRecommendation"
+msgstr "Vložit doporučení recenzenta"
+
+msgid "editor.article.recommendation"
+msgstr "Doporučení"
+
+msgid "editor.article.selectReviewer"
+msgstr "Zvolit recenzenta"
+
+msgid "editor.article.replaceReviewer"
+msgstr "Nahradit recenzenta"
+
+msgid "editor.article.editorToEnter"
+msgstr "Doporučení/komentáře editora pro recenzenta"
+
+msgid "editor.article.uploadReviewForReviewer"
+msgstr "Nahrát posudek"
+
+msgid "editor.article.peerReviewOptions"
+msgstr "Možnosti recenzování"
+
+msgid "editor.article.decision"
+msgstr "Rozhodnutí"
+
+msgid "editor.article.noEditorSelected"
+msgstr "Nebyl zvolen žádný editor."
+
+msgid "editor.article.recordDecision"
+msgstr "Zaznamenat rozhodnutí"
+
+msgid "editor.article.cannotRecord"
+msgstr "Editor sekce nezaznamenán, nebo není k dispozici soubor pro recenzi."
+
+msgid "editor.article.reviewersSeeAuthorsVersion"
+msgstr "Recenzenti vidí autorovu verzi"
+
+msgid "editor.article.designateDueDate"
+msgstr "Stanovit datum termínu splnění"
+
+msgid "editor.article.designateDueDateDescription"
+msgstr "Vložte datum nebo počet týdnů pro nové datum termínu splnění."
+
+msgid "editor.article.todaysDate"
+msgstr "Dnešní datum"
+
+msgid "editor.article.requestedByDate"
+msgstr "Vyžadováno do data"
+
+msgid "editor.article.dueDateFormat"
+msgstr "Formát: RRRR-MM-DD"
+
+msgid "editor.article.numberOfWeeks"
+msgstr "Počet týdnů"
+
+msgid "editor.article.selectCopyeditor"
+msgstr "Přidělit redaktora"
+
+msgid "editor.article.replaceCopyeditor"
+msgstr "Nahradit redaktora"
+
+msgid "editor.article.editorsCopyedit"
+msgstr "Editorovo redigování"
+
+msgid "editor.article.showAuthor"
+msgstr "Umožnit autorovi vidět soubor"
+
+msgid "editor.article.showCopyeditor"
+msgstr "Ukázat verzi redaktorovi"
+
+msgid "editor.article.rateReviewer"
+msgstr "Ohodnocení recenzenta"
+
+msgid "editor.article.reviewerRating.veryGood"
+msgstr "5 vysoké"
+
+msgid "editor.article.reviewerRating.good"
+msgstr "4"
+
+msgid "editor.article.reviewerRating.average"
+msgstr "3"
+
+msgid "editor.article.reviewerRating.poor"
+msgstr "2"
+
+msgid "editor.article.reviewerRating.veryPoor"
+msgstr "1 nízké"
+
+msgid "editor.article.comments"
+msgstr "Komentáře"
+
+msgid "editor.article.commentsRequired"
+msgstr "Je vyžadováno pole pro komentáře."
+
+msgid "editor.article.saveRating"
+msgstr "Uložit hodnocení"
+
+msgid "editor.article.noneSelected"
+msgstr "Nebyl vybrán žádný"
+
+msgid "editor.article.authorProofing"
+msgstr "Kontrola autorem"
+
+msgid "editor.article.restoreToQueue"
+msgstr "Vrátit do seznamu aktivních"
+
+msgid "editor.article.assignSectionEditor"
+msgstr "Přidat editora sekce"
+
+msgid "editor.article.assignEditor"
+msgstr "Přidat editora"
+
+msgid "editor.article.selectEditor"
+msgstr "Zvolit {$roleName}"
+
+msgid "editor.article.selectDecision"
+msgstr "Vybrat rozhodnutí"
+
+msgid "editor.article.selectLayoutEditor"
+msgstr "Zvolit typografa"
+
+msgid "editor.article.replaceLayoutEditor"
+msgstr "Nahradit typografa"
+
+msgid "editor.article.reviewSubmission"
+msgstr "Recenzovat příspěvek"
+
+msgid "editor.article.resubmitForReview"
+msgstr "Znovu odeslat soubor na recenzi"
+
+msgid "editor.article.resubmitFileForPeerReview"
+msgstr "Znovu odeslat zvolený soubor na recenzi"
+
+msgid "editor.article.sendToCopyedit"
+msgstr "Poslat soubor na redigování"
+
+msgid "editor.article.selectProofreader"
+msgstr "Přidělit korektora"
+
+msgid "editor.article.replaceProofreader"
+msgstr "Nahradit korektora"
+
+msgid "editor.article.authorComments"
+msgstr "Komentář autora"
+
+msgid "editor.article.proofreaderComments"
+msgstr "Komentář korektora"
+
+msgid "editor.article.layoutEditorFinal"
+msgstr "Typograf finální"
+
+msgid "editor.article.noDate"
+msgstr "(datum)"
+
+msgid "editor.submissions.showBy"
+msgstr "Ukázat podle"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Odeslání MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktivní úkoly"
+
+msgid "editor.submissions.invite"
+msgstr "Pozvat"
+
+msgid "editor.submissions.accept"
+msgstr "Přijmout"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Žádné příspěvky"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Poslední"
+
+msgid "editor.submissions.averageTime"
+msgstr "Týdny"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Poslední zhotovený"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Přiděleno (komu)"
+
+msgid "editor.submissions.inSection"
+msgstr "V sekci"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Naplánovat k publikování v"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Bude přiděleno"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Publikační poplatek nebyl zaplacen. Aby byla položka naplánována k publikování, informujte autora, aby  zaplatil poplatek nebo se vzdejte poplatku."
+
+msgid "editor.article.display"
+msgstr "Zobrazit"
+
+msgid "editor.article.hideTocAuthorDescription"
+msgstr "Vypustit jména autorů z obsahu čísla"
+
+msgid "editor.article.hideTocAuthorDefault"
+msgstr "Výchozí"
+
+msgid "editor.article.hideTocAuthorHide"
+msgstr "Vypustit"
+
+msgid "editor.article.hideTocAuthorShow"
+msgstr "Zobrazit"
+
+msgid "editor.article.cover"
+msgstr "Obal"
+
+msgid "editor.article.coverImage"
+msgstr "Titulní obrázek"
+
+msgid "editor.article.uploaded"
+msgstr "Nahráno"
+
+msgid "editor.article.removeCoverPage"
+msgstr "Odstranit titulní obrázek?"
+
+msgid "editor.article.remove"
+msgstr "Odstranit"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Povolit zpožděný otevřený přístup"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Zrušit vydání čísla"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Jste si jisti, že chcete zrušit vydání tohoto vydaného čísla?"
+
+msgid "editor.article.archiveSubmission"
+msgstr "Odmítnout a archivovat příspěvek"
+
+msgid "editor.reassign"
+msgstr "Nové přidělení"
+
+msgid "editor.publicIdentificationExists"
+msgstr "Veřejný identifikátor '{$publicIdentifier}' již existuje pro jiný objekt (vydání, článek, sazebnice či doplňkový soubor). Zvolte si, prosím, unikátní edentifikátor v rámci celého časopisu."
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Všem čtenářům ({$count} uživatelů)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Všem autorům článků ({$count} uživatelů)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Všem individuálním předplatitelům ({$count} uživatelů)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Všem institucionálnám předplatitelům ({$count} uživatelů)"
+
+msgid "editor.issues.galleys"
+msgstr "Sazebnice čísla"
+
+msgid "editor.issues.galley"
+msgstr "Sazebnice čísla"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Prohlédnout sazebnici čísla"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Před odesláním příspěvku k redigování, použijte odkaz Upozornit autora, abyste informovali autora o rozhodnutí a vyberte, která verze má být odeslána."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publikovat sazebnice s obsahem celého čísla."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Nebyly publikovány žádné sazebnice čísla."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Je vyžadováno označení sazebnice čísla."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Je vyžadována jazyková lokalizace sazebnice čísla."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Veřejný identifikátor sazebnice čísla již existuje."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Zpět na sazebnice čísla"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Jste si jisti, že chcete smazat tuto sazebnici čísla?"
+
+msgid "editor.issues.editIssue"
+msgstr "Správa čísla: {$issueIdentification}"
+
+msgid "editor.issues.datePublished"
+msgstr "Datum publikace"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Obrázek obálky, který jste požadovali odstranit, neodpovídá obrázku obalu tohoto čísla. Znovu načtěte stránku a zkuste to znovu."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Obrázek obálky čísla, který chcete odstranit, nebyl nalezen. Možná již byl smazán. Zkuste znovu načíst stránku."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Nepřípustný formát obrázku obálky. Přijatelné formáty jsou .gif, .jpg a .png."
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikátory"
+
+msgid "grid.action.addGalley"
+msgstr "Přidat sazebnici"
+
+msgid "grid.action.publish"
+msgstr "Publikovat číslo"
+
+msgid "grid.action.addIssue"
+msgstr "Vytvořit číslo"
+
+msgid "grid.action.viewIssue"
+msgstr "Zobrazit"
+
+msgid "grid.action.previewIssue"
+msgstr "Náhled"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Vytvořit sazebnici čísla"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Obrázek obálky, který chcete smazat, nebyl nalezen. Možná již byl smazána. Zkuste znovu načíst stránku."
+
+msgid "grid.action.removeArticle"
+msgstr "Odebrat článek z čísla"
+
+msgid "editor.article.remove.confirm"
+msgstr "Opravdu chcete odstranit tento článek z čísla? Článek bude k dispozici pro vydání v jiném čísle."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Upravit sazebnici čísla"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Editor rozvržení připravuje tyto soubory pro každou sazebnic a poté je nahrává na příslušné <span class = \"pkp_help_title\">Korektury</ span> pro korekturu."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Vyberte soubory sazebnice"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Konečné návrhy souborů v tomto seznamu jsou převedeny redaktorem do redakčních verzí, nahrany níže pod <span class = \"pkp_help_title\">Redakce</ span>.¨"
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Jakékoli soubory, které již byly nahrány do libovolné etapy podání článku, mohou být přidány do seznamu Korektury zaškrtnutím políčka Zahrnout a klepnutím na tlačítko Hledat: budou uvedeny všechny dostupné soubory a mohou být vybrány k zařazení."
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Jste si jisti, že chcete nastavit toto číslo jako číslo aktuální?"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Nastavte aktuální číslo"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "Veřejný identifikátor '{$publicIdentifier}' již existuje pro jiný objekt stejného typu. Vyberte prosím jedinečné identifikátory pro objekty stejného typu v časopise."

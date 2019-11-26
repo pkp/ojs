@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:48+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:48+00:00\n"
+"Language: \n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Bloque de Suscripción"
+
+msgid "plugins.block.subscription.description"
+msgstr "Este complemento muestra información de la suscripción en la barra lateral."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Suscripción"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Expira"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Acceso provisto por: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Desde la IP: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Suscripciones"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Ingrese en la revista para verificar la suscripción"

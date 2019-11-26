@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:17+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:17+00:00\n"
+"Language: \n"
+
+msgid "plugins.themes.default.name"
+msgstr "النمط الإفتراضي"
+
+msgid "plugins.themes.default.description"
+msgstr "هذا يمثل النمط الإفتراضي للنظام."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "أنماط الطباعة"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "إختر تشكيلة الخطوط التي تناسب هذه المجلة."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr "Noto Sans: خط رقمي محلي مطور من قبل Google لدعم طيف واسع من اللغات."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: أحد أفراد الخط الرقمي المحلي المطور من قبل Google."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr "Noto Serif/Noto Sans: زوج متكامل من خطي serif للعناوين و sans-serif لنص المتن."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr "Noto Sans/Noto Serif: زوج متكامل من خطي sans-serif للعناوين و serif لنص المتن."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: خط sans-serif حديث شائع."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: خط serif واسع الخطوة جيد لقراءة المحتوى من الشاشة."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr "Lora/Open Sans: زوج متكامل من خطي serif للعناوين و sans-serif لنص المتن."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "اللون"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "إختر لوناً للعناوين."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.label"
+msgstr "وصف المجلة"
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "أظهر وصف المجلة على صفحتها الرئيسية."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "خلفية رأس الصفحة"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr "عند تقديم صورة للصفحة الرئيسية، قم بعرضها في خلفية رأس الصفحة بدلاً من موضعها المعتاد في الصفحة الرئيسية."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "إظهار صورة الصفحة الرئيسية بمثابة خلفية لرأس الصفحة."

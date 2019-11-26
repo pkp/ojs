@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:47+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:47+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Dodatak za XML korisnika"
+
+msgid "plugins.importexport.users.description"
+msgstr "Unošenje i iznošenje korisnika."
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Primjena: {$scriptName} {$pluginName} [naredba] ...\n"
+"Naredba:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Unesi korisnike"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Molim odaberite XML datoteku koja sadrži informacije o korisnicima koje želite unijeti u ovaj časopis. Konzultirajte pomoć časopisa za detalje o formatu ove datoteke.<br /><br />Ukoliko unesena datoteka sadrži bilo koja korisnička imena ili adrese e-pošte koje već postoje u sustavu, ti korisnici neće biti uneseni, već će njihove uloge biti dodijeljene onima postojećih korisnika."
+
+msgid "plugins.importexport.users.import.failedToImportUser"
+msgstr "Neuspjelo unošenje korisnika"
+
+msgid "plugins.importexport.users.import.failedToImportRole"
+msgstr "Neuspjelo unošenje uloga korisnika"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Datoteka s podacima o korisnicima"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Pošalji e-poštom svakom unesenom korisniku obavijest koja sadrži njegovo korisničko ime i lozinku."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "U slučaju greške nastavi s unošenjem ostalih korisnika."
+
+msgid "plugins.importexport.users.import.noFileError"
+msgstr "Datoteka nije poslana!"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Sljedeći korisnici su uspješno uneseni u sustav"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Pogreške koje su se pojavile prilikom unošenja"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Molim potvrdite da su ovo korisnici koje želite unijeti u sustav"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Navedena je nepoznata putanja \"{$pressPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Iznesi korisnike"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Iznesi po ulozi"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Iznesi sve"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Pogreške koje su se pojavile prilikom iznošenja"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Nije moguće pisati po datoteci \"{$fileName}\"."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Upozorenje"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Nije moguće koristiti lozinke pohranjene hash funkcijom {$importHash}; OMP je podešen da koristi {$ompHash}. Ukoliko nastavite, morat ćete ponovno postaviti lozinke ovako unesenih korisnika."

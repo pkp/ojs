@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:39+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.block.developedBy.displayName"
+msgstr "بلوک «تهیه توسط»"
+
+msgid "plugins.block.developedBy.description"
+msgstr "این افزونه بلوکی در نوار حاشیه برای نمایش «تهیه توسط\" ایجاد می‌کند"

@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Czasopisma"
+
+msgid "admin.settings.redirect"
+msgstr "Przekieruj na czasopismo"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Żądania wyświetlenia strony głównej będą przekierowane do wybranego czasopisma."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Domyślny język dla strony oraz wszystkich czasopism"
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Wybierz wszystkie języki wspierane w obrębie strony."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Zaznaczone języki mogą nie być przetłumaczone w pełni."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Odinstalować język?."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Wybierz dodatkowe języki do zainstalowania w systemie."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Pobieranie plików lokalizacyjnych nie udało się. Komunikat błędu znajduje się poniżej."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Język \"{$locale}\" został zainstalowany."
+
+msgid "admin.languages.download"
+msgstr "Pobierz tłumaczenie"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Nie można otworzyć pliku opisu dostępnych języków ze strony PKP."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Błąd, nie można dodać nowego języka do lokalnego rejestru."
+
+msgid "admin.auth.ojs"
+msgstr "Baza danych użytkowników OJS"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Włącz synchronizowanie profili użytkowników."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Włącz modyfikację haseł przez użytkowników."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Włącz tworzenie użytkowników."
+
+msgid "admin.systemVersion"
+msgstr "Wersja OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Konfiguracja OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Konfiguracja OJS z pliku <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Ustawienia czasopisma"
+
+msgid "admin.journals.noneCreated"
+msgstr "Żadne czasopisma nie zostały utworzone."
+
+msgid "admin.journals.createInstructions"
+msgstr "Zostaniesz automatycznie przydzielony jako administrator tego czasopisma. Po utworzeniu czasopisma, zaloguj się jako administrator w celu dokończenia procesu konfiguracji."
+
+msgid "admin.journals.urlWillBe"
+msgstr "Krótkie słowo lub akronim identyfikujące czasopismo. Adres będzie miał postać {$sampleUrl}"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Włącz czasopismo aby było widoczne w obrębie całej strony."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Opis czasopisma"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Istniejąca ścieżka czasopisma lub ścieżka do utworzenia (np., \"forum\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importuj subskrypcje"
+
+msgid "admin.journals.transcode"
+msgstr "Transkoduj dane artykułu z ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Utwórz kod aby zmapować adresy OJS 1 na OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Ścieżka importu jest wymagana."
+
+msgid "admin.journals.importErrors"
+msgstr "Błąd, importowanie nie powiodło się"
+
+msgid "admin.mergeUsers"
+msgstr "Scal użytkowników"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Scal użytkownika"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Wybierz użytkownika dla którego mają zostać przydzielone wszystkie atrybuty poprzedniego użytkownika."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Wybierz jedno lub kilka kont użytkowników w celu ich scalenia. (np. w sytuacji kiedy jedna osoba posiada dwa konta). Konto wybrane jako pierwsze zostanie usunięte a jego wszystkie parametry zostaną przydzielone dla nowego użytkownika."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Wszyscy użytkownicy"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Potwierdź połączenie użytkownika {$oldAccountCount} z nowym użytkownikiem \"{$newUsername}\"? Użytkownik {$oldAccountCount} zostanie nieudwracalnie usunięty."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr "Twój system jest skonfigurowany do korzystania z więcej niż jednej metryki. Statystyki zostaną wyświetlone w różnych kontekstach. Niektóre zastosowania danych statystycznych umożliwiają wykorzystanie tylko wybranych metryk. Wybierz metrykę która będzie wykorzystywana domyślnie."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Czy na pewno wyłączyć ten język? Twoja decyzja może mieć wpływ na utworzone czasopisma aktualnie wykorzystujące ten język."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Pobieranie plików języka ze strony PKP jest w tej chwili niemożliwe, ponieważ:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Twój serwer nie pozwala na użycie narzędzia \"tar\".</li>\n"
+"\t\t<li>OJS nie jest w stanie zmodyfikować pliku \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Pliki języka mogą być pobrane ręcznie <a href=\"http://pkp.sfu.ca\">ze strony PKP</a>.</p>"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Brak przypisanych użytkowników"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Powiadomienie o końcu subskrypcji"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Powiadomienie o otwartym dostępie"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Powiadomienie o recenzji"
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Czy na pewno usunąć czasopismo wraz z całą jego zawartością?"
+
+msgid "admin.contexts.create"
+msgstr "Utwórz czasopismo"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Tytuł jest wymagany."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Ścieżka jest wymagana."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Ścieżka może składać się ze znaków alfabetu łacińskiego, podkreśleń oraz myślników. Musi też zaczynać się i kończyć znakiem alfabetu łacińskiego."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Wybrana ścieżka jest już w użyciu przez inne czasopismo."

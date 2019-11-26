@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:56+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:56+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "دفع الرسوم يدوياً"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "سيقوم مدير التحرير أو رئيس التحرير يدوياً بتسجيل استلام مدفوعات المستخدمين (خارج هذا النظام)."
+
+msgid "plugins.paymethod.manual"
+msgstr "دفع الرسوم يدوياً"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "تعليمات الدفع اليدوي"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "أرسل إشعاراً بالدفع"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "إشعار الدفع"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "تم إرسال إشعار الدفع"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "العنوان"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "الرسم"

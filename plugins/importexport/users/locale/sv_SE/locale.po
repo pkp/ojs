@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:48+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:48+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "XML-plugin för användare"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importerar och exporterar användare"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Användning: {$scriptName} {$pluginName} [kommando] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Exampel:\n"
+"\tImportera användare till myJournal från myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExportera alla användare från myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExportera användare specifierade genom deras ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importera användare"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Välj en XML-fil som innehåller användarinformation att importera till den här tidskriften. För att se detaljer för filformatet, se tidskriftens hjälpfunktion.<br /><br />Observera att om importfilen innehåller användarnamn eller e-postadresser som redan finns i systemet kommer data för dessa användare inte att importeras och eventuella nya roller kommer att tilldelas den existerande användaren."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Fil med användardata"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Skicka ett meddelande via e-post till varje importerad användare med användarens amvändarnamn och lösenord."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Fortsätt att importera andra användare om ett fel uppstår."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Följande användare har importerats till systemet"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Ett fel uppstod under importen"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Bekräfta att du vill importera dessa användare till systemet"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Varning"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Kan inte använda lösenord lagrade i {$importHash}; OJS är konfigurerad att använda {$ojsHash}. Om du vill fortsätta behöver du återställa importerade användares lösenord."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "En okänd sökväg till tidskriften, \"{$journalPath}\", angavs."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Exportera användare"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exportera per roll"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Exportera alla"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Ett fel uppstod under exporten"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Kan inte skriva till filen \"{$fileName}\"."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "Importen lyckades. Användare med användarnamn och e-postadresser som inte redan används har importerats, tillsammans med tillhörande användargrupper."
+
+msgid "plugins.importexport.users.results"
+msgstr "Resultat"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Ladda upp en fil under \"Importera\" för att fortsätta."

@@ -1,0 +1,417 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:32+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Domača stran urednika"
+
+msgid "editor.reassign"
+msgstr "Prerazporeditev"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Oddaja in objava prispevkov"
+
+msgid "editor.submissionQueue"
+msgstr "Vrsta oddanih prispevkov"
+
+msgid "editor.submissionArchive"
+msgstr "Arhiv oddanih prispevkov"
+
+msgid "editor.publishing"
+msgstr "Izdajanje"
+
+msgid "editor.publishedIssues"
+msgstr "Izdane številke"
+
+msgid "editor.allSections"
+msgstr "Vse rubrike"
+
+msgid "editor.allEditors"
+msgstr "Vsi uredniki"
+
+msgid "editor.me"
+msgstr "Jaz"
+
+msgid "editor.publicIdentificationExists"
+msgstr "Javni identifikator '{$publicIdentifier}' že obstaja za drug predmet (številka revije, članek, datoteka). Prosimo  izberite unikatne identifikatorje znotraj vaše revije."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "V arhivu ni nobenih oddanih prispevkov."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Shrani spremembe v arhiv oddanih prispevkov?"
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Ste prepričani, da želite za vedno zbrisati ta prispevek?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Ste prepričani, da želite shraniti to odločitev?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Ta prispevek bo arhiviran, ko bo poslana e-pošta z obvestilom avtorju ali po kliku gumba Preskoči e-pošto."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Pred pošiljanjem prispevka v lektoriranje uporabite povezavo \tKorespondenca urednik/avtor in obvestite avtorja o odločitvi in izberite verzijo, ki jo boste poslali."
+
+msgid "editor.notifyUsers"
+msgstr "Obvesti uporabnike"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Pošlji sporočilo vsem registriranim uporabnikom te revije  ({$count} uporabnikov)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Vsi bralci ({$count} uporabnikov)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Vsi objavljeni avtorji ({$count} uporabnikov)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Vsi individualni naročniki ({$count} uporabnikov)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Vsi institucionalni naročniki ({$count} uporabnikov)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Obvesti uporabnike..."
+
+msgid "editor.usersNotified"
+msgstr "Obveščeni uporabniki"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Pošlji to obvestilo vsem uporabnikom revije, ki so se prijavili, da želijo prejemati obvestila ({$count} uporabnikov)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Vključite kazalo iz te številke:"
+
+msgid "editor.editorAdministration"
+msgstr "Uredniška administracija"
+
+msgid "editor.issues.createIssue"
+msgstr "Ustvari novo številko revije"
+
+msgid "editor.issues.editIssue"
+msgstr "Issue Management: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Tekoča številka"
+
+msgid "editor.issues.numArticles"
+msgstr "Število prispevkov"
+
+msgid "editor.issues.noArticles"
+msgstr "Nobenih prispevkov še ni predvidenih za to številko."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Ste prepričani, da želite za vedno zbrisati to številko revije?"
+
+msgid "editor.issues.published"
+msgstr "Izdane"
+
+msgid "editor.issues.unpublished"
+msgstr "Neizdane"
+
+msgid "editor.issues.datePublished"
+msgstr "Datum izdaje"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Letnik je obvezen in mora biti pozitivno število."
+
+msgid "editor.issues.numberRequired"
+msgstr "Številka je obvezna in mora biti pozitivno število."
+
+msgid "editor.issues.yearRequired"
+msgstr "Leto je obvezno in mora biti pozitivno število."
+
+msgid "editor.issues.titleRequired"
+msgstr "Naslov številke je obvezen."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Identifikator številke je obvezen. Prosimo izberite vsaj eno od identifikacijskih možnosti."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identifikacija številke revije"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Javni identifikator številke"
+
+msgid "editor.issues.description"
+msgstr "Opis"
+
+msgid "editor.issues.accessStatus"
+msgstr "Pristopni status"
+
+msgid "editor.issues.accessDate"
+msgstr "Datum prostega dostopa"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Omogoči odprt dostop z zakasnitvijo"
+
+msgid "editor.issues.coverPage"
+msgstr "Slika naslovnice"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Dovoljeni formati: .gif, .jpg in.png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Naloženo"
+
+msgid "editor.issues.remove"
+msgstr "Zbriši"
+
+msgid "editor.issues.proofed"
+msgstr "Korigirano"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Zbriši sliko naslovnice?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Slika naslovnice, ki ste jo želeli izbrisati ne pripada tej reviji. Prosimo ponovno naložite stran in poskusite ponovno."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Slika naslovnice, ki ste jo želeli izbrisati ne obstaja. Morda je bila že izbirsana. Ponovno naložite stran."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Napačen format naslovnice. Dovoljeni formati so .gif, .jpg, or .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Stilska tablica"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Napačen format stilske tablice. Preverite, da boste oddali datoteko, ki bo veljaven CSS. (CSS datoteke, ki imajo na začetku komentar, so lahko zavrnjene.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Stilska tablica"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Naslov naslovnice"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Ustvari naslovnico za to številko s spodnjimi elementi:"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Prikaži"
+
+msgid "editor.issues.openAccess"
+msgstr "Prost dostop"
+
+msgid "editor.issues.subscription"
+msgstr "Naročnine"
+
+msgid "editor.issues.identification"
+msgstr "Identifikacija"
+
+msgid "editor.issues.access"
+msgstr "Dostop"
+
+msgid "editor.issues.cover"
+msgstr "Naslovnica"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Vsi prispevki te številke bodo vrnjeni na začetek urejanja in vse pripadajoče datoteke bodo trajno zbrisani. Ste prepričani, da želite zbrisati to številko revije?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Vrstni red številk te revije se določajo ročno. <a href=\"{$url}\" class=\"action\">Povrni na privzeto</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Vrstni red rubrik te revije se določajo ročno. <a href=\"{$url}\" class=\"action\">Povrni na privzeto</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Podatki o številki"
+
+msgid "editor.issues.saveChanges"
+msgstr "Shrani spremembe v kazalo vsebine?"
+
+msgid "editor.issues.default"
+msgstr "Privzeto"
+
+msgid "editor.issues.order"
+msgstr "Vrstni red"
+
+msgid "editor.issues.publicId"
+msgstr "Javni ID"
+
+msgid "editor.issues.publishIssue"
+msgstr "Objavi to številko revije"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Umakni to številke revije"
+
+msgid "editor.issues.previewIssue"
+msgstr "Predogled te številke revije"
+
+msgid "editor.issues.preview"
+msgstr "(Predogled)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Ste prepričani, da želite objaviti to številko revije?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Ste prepričani, da želite umakniti to številko revije?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Shranjevanje javnega IDja ni bilo mogoče za prispevek:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Ni številk revije"
+
+msgid "editor.issues.open"
+msgstr "Odpri"
+
+msgid "editor.issues.pages"
+msgstr "Strani"
+
+msgid "editor.issues.galleys"
+msgstr "Prelomi številke"
+
+msgid "editor.issues.galley"
+msgstr "Prelom številke"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Pregled preloma številke"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Objavi prelom številke s celotnim kazalom vsebine."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Prelom številke ni objavljen."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Ime preloma številke je obvezen."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Jezik preloma številke je obvezen."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Javna identifikacija preloma številke že obstaja."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Nazaj na prelome številke"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Ste prepričani, da želite zbrisati ta prelom številke?"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikatorji"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Naslednje številke"
+
+msgid "grid.action.addGalley"
+msgstr "Dodaj prelom"
+
+msgid "grid.action.publish"
+msgstr "Objavi Številko"
+
+msgid "grid.action.addIssue"
+msgstr "Ustvari številko"
+
+msgid "grid.action.viewIssue"
+msgstr "Poglej"
+
+msgid "grid.action.previewIssue"
+msgstr "Predogled"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Ustvari prelom številke"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Pretekle številke"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Določi originalno datoteko kot recenzirano verzijo"
+
+msgid "editor.article.decision"
+msgstr "Odločitev"
+
+msgid "editor.submissions.showBy"
+msgstr "Prikaži po"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Oddaj DD.MM"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktivne zadolžitve"
+
+msgid "editor.submissions.invite"
+msgstr "Povabi"
+
+msgid "editor.submissions.accept"
+msgstr "Sprejmi"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Ni prijav"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Zadnji"
+
+msgid "editor.submissions.averageTime"
+msgstr "Tedni"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Zadnje končano"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Dodeljeno"
+
+msgid "editor.submissions.inSection"
+msgstr "V rubriki"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Planiran za objavo v"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "bo splaniran"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Prispevki za objavo niso plačani. Za planiranje objave prispevka obvesti avtorja o zahtevnem plačilu pristojbine ali ga oprosti pristojbine."
+
+msgid "editor.article.coverImage"
+msgstr "Slika naslovnice"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Brisanej slike naslovnice ni uspelo. Morda je bila že izbrisana. Poskusite ponovno naložiti stran."
+
+msgid "grid.action.removeArticle"
+msgstr "Odstrani prispevek iz številke"
+
+msgid "editor.article.remove"
+msgstr "Odstrani"
+
+msgid "editor.article.remove.confirm"
+msgstr "Ste prepričani, da želite odstraniti prispevek iz te številke? Prispevek bo po odstranitvi na voljo za objavo v drugi številki."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Pristopni datum ni veljaven."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Uredi prelom številke"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Grafični urednik pripravi te datoteke za vsak prelom in jih naloži na odgovarjajoči <span class=\"pkp_help_title\">Prelomi</span> za korekturo."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Izberi datoteke preloma"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Končne osnutek datotek pripravi lektor in jih kot lektorirane verzije naloži spodaj pod <span class=\"pkp_help_title\">Lektoriranje</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Katerokoli datoteke, ki so bile naložene v katerikoli fazi, se lahko doda med seznam za korekturo z označitvijo potrditvenega polja spodaj in klikom na Išči: vse datoteke, ki so na voljo, bodo prikazane in jih bo možno izbrati za vključitev."
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Ste prepričani, da želite določiti to številko kot trenutno?"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Določi za trenutno številko"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "Javna oznaka '{$publicIdentifier}'  že obstaja za drug objekt enakega tipa. Prosimo izberite unikatno oznako za objekte istega tipa znotraj vaše revije."

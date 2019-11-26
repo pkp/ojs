@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:09+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:09+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "De COUNTER plugin verzorgt het registreren en <a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a>-conform rapporteren van activiteit op de site."
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER statistieken"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER release"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Oudere website rapporten"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "De rapporteringsparameters zijn ongeldig."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "De aanvraag voor het rapport is ongeldig."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Voor dit rapport werden geen resultaten gevonden."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "De resultaten kunnen niet worden geformatteerd als XML."
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr "Deze links genereren COUNTER-compatibele rapporten op basis van de verouderde Release 3.0. Dit rapport bevat alle tijdschriften op de website. Gebruik in plaats hiervan de laatste Release, indien mogelijk."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER rapport JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML versie"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "COUNTER tijdschriftrapport 1 (R3): aantal aangevraagde full-text artikels per maand en tijdschrift"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Tijdschrift rapport 1 (R3): Full-Text artikels opgevraagd per maand en tijdschrift"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Tijdschriftrapport 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Aantal succesvol opgevraagde fulltext artikels per maand en tijdschrift (jaar {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Gedraaid op datum:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Uitgever"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platform"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "Print ISSN"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD totaal"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Totaal voor alle tijdschriften"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anoniem"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr "De links hieronder genereren rapporten met de oude COUNTER plugin gegevens. Gebruik de links hierboven om  COUNTER rapporten volgens de nieuwe OJS COUNTER methode te  genereren."
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Alle gebruikers"

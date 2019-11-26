@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:43+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:43+00:00\n"
+"Language: \n"
+
+msgid "plugins.block.information.displayName"
+msgstr "Bilgi Bloğu"
+
+msgid "plugins.block.information.description"
+msgstr "Bu eklenti yan taraf bilgi bağlantılarını sağlar."
+
+msgid "plugins.block.information.link"
+msgstr "BİLGİ"

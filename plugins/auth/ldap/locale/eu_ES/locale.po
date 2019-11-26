@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Plugin honek erabiltzaile-kontuak autentifikatu eta balidatzen ditu kanpoko LDAP datu-iturburuekin."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP ezarpenak"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Zerbitzariaren ostalari-izena"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "Adib., \"ldap.example.com\", edo \"ldaps://ldap.example.com\" (SSL erabiltzeko)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Zerbitzari-ataka"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Aukerakoa. Lehenetsia 389 (LDAP) edo 636 (LDAP SSLn)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Oinarrizko DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Adib., \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Kudeatzailearen DN"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Adib., \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Kudeatzailearen pasahitza"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "Erabiltzailearen profila/pasahitza sinkronizazioa edo erabiltzaileak sortzeko aukerak gaituta badaude bakarrik eman beharko dira kudeatzailearen DN eta pasahitza. LDAP autentifikaziorako bakarrik erabiltzen bada, aukera hauek salta daitezke."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Kontu-izenaren atributua"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Erabiltzaile-objektu bat unibokoki identifikatzen duen atributua, esate baterako uid edo cn edo sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Pasahitz-enkriptatzea"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL ezarpenak (aukerakoa)"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL mekanismoa"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Adib., \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Realm"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Baimen ID eskatzen da"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL segurtasun-propietateak"

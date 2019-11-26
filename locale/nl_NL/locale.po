@@ -1,0 +1,2036 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:28+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Huidig tijdschrift:"
+
+msgid "context.select"
+msgstr "Kies een ander tijdschrift:"
+
+msgid "navigation.categories"
+msgstr "Categorieën"
+
+msgid "navigation.categories.browse"
+msgstr "Blader"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Klik op het icoon om het reviewformulier in te vullen."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vul alle verplichte velden in."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Weet u zeker dat u deze taak als voltooid wilt markeren? U kunt dan geen veranderingen meer aanbrengen."
+
+msgid "common.payment"
+msgstr "Betaling"
+
+msgid "common.payments"
+msgstr "Betalingen"
+
+msgid "common.homePageHeader.altText"
+msgstr "Homepage kop"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Tijdschrift homepage afbeelding"
+
+msgid "navigation.journalHelp"
+msgstr "Tijdschrift help"
+
+msgid "navigation.current"
+msgstr "Huidig nummer"
+
+msgid "navigation.otherJournals"
+msgstr "Overige tijdschriften"
+
+msgid "navigation.browseByIssue"
+msgstr "Op nummer"
+
+msgid "navigation.browseByAuthor"
+msgstr "Op auteur"
+
+msgid "navigation.infoForAuthors"
+msgstr "Voor auteurs"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Voor bibliothecarissen"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Richtlijnen voor belangenconflicten"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informatie voor auteurs"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informatie voor bibliothecarissen"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Niet toegekend"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Niet toegekend"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Inzendingen in bewerking"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "In bewerking"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Inzendingen in beoordeling"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "In beoordeling"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archieven"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archieven"
+
+msgid "common.queue.long.active"
+msgstr "Actieve inzendingen"
+
+msgid "common.queue.short.active"
+msgstr "Actief"
+
+msgid "common.queue.long.completed"
+msgstr "Archief"
+
+msgid "common.queue.short.completed"
+msgstr "Archief"
+
+msgid "section.section"
+msgstr "Sectie"
+
+msgid "section.sections"
+msgstr "Tijdschriftsecties"
+
+msgid "section.title"
+msgstr "Sectietitel"
+
+msgid "section.abbreviation"
+msgstr "Afkorting"
+
+msgid "section.abbreviation.example"
+msgstr "(Bijvoorbeeld: Artikels=ART)"
+
+msgid "section.policy"
+msgstr "Sectie beleid"
+
+msgid "article.article"
+msgstr "Artikel"
+
+msgid "article.articles"
+msgstr "Artikels"
+
+msgid "common.publication"
+msgstr "Artikel"
+
+msgid "common.publications"
+msgstr "Artikels"
+
+msgid "article.submissionId"
+msgstr "Inzending ID"
+
+msgid "article.title"
+msgstr "Titel"
+
+msgid "article.authors"
+msgstr "Auteurs"
+
+msgid "article.indexingInformation"
+msgstr "Informatie voor indexering"
+
+msgid "article.metadata"
+msgstr "Metadata"
+
+msgid "article.journalSection"
+msgstr "Tijdschriftsectie"
+
+msgid "article.file"
+msgstr "Bestand"
+
+msgid "article.suppFile"
+msgstr "Aanvullend bestand"
+
+msgid "article.suppFiles"
+msgstr "Aanvullende bestanden"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Aanv. best."
+
+msgid "article.discipline"
+msgstr "Academisch discipline en subdisciplines"
+
+msgid "article.subject"
+msgstr "Trefwoorden"
+
+msgid "article.coverage"
+msgstr "Dekking"
+
+msgid "article.type"
+msgstr "Type, methode of benadering"
+
+msgid "article.language"
+msgstr "Taal"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "Commentaar van de auteur"
+
+msgid "article.submission"
+msgstr "Inzending"
+
+msgid "article.submissions"
+msgstr "Inzendingen"
+
+msgid "article.details"
+msgstr "Details"
+
+msgid "article.abstract"
+msgstr "Samenvatting"
+
+msgid "article.coverPage.altText"
+msgstr "Omslagafbeelding"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Vrije toegang"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Beperkte toegang"
+
+msgid "article.comments.sectionDefault"
+msgstr "Standaard"
+
+msgid "article.comments.disable"
+msgstr "Uitschakelen"
+
+msgid "article.comments.enable"
+msgstr "Inschakelen"
+
+msgid "article.fontSize"
+msgstr "Tekstgrootte"
+
+msgid "article.fontSize.small.altText"
+msgstr "Klein"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Middel"
+
+msgid "article.fontSize.large.altText"
+msgstr "Groot"
+
+msgid "article.return"
+msgstr "Terug naar artikeldetails"
+
+msgid "submission.submissionEditing"
+msgstr "Redactie inzending"
+
+msgid "submission.changeSection"
+msgstr "Verander in"
+
+msgid "submission.sent"
+msgstr "Verstuurd"
+
+msgid "submission.editorDecision"
+msgstr "Beslissing redacteur"
+
+msgid "submission.round"
+msgstr "Ronde {$round}"
+
+msgid "submission.editorReview"
+msgstr "Redacteursreview"
+
+msgid "submission.notifyAuthor"
+msgstr "Bericht aan de auteur"
+
+msgid "submission.notifyEditor"
+msgstr "Bericht aan de redacteur"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Redacteur/Auteur e-mail lijst"
+
+msgid "submission.reviewersVersion"
+msgstr "Door reviewer geannoteerde versie van bestand"
+
+msgid "submission.postReviewVersion"
+msgstr "Versie van het bestand na review"
+
+msgid "submission.editorVersion"
+msgstr "Versie van de redacteur"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Door de auteur gereviseerde versie van het bestand"
+
+msgid "submission.authorVersion"
+msgstr "Versie van de auteur"
+
+msgid "submission.copyediting"
+msgstr "Tekstredactie"
+
+msgid "submission.copyedit"
+msgstr "Tekstredactie"
+
+msgid "submission.proofreading"
+msgstr "Proeflezen"
+
+msgid "submission.scheduling"
+msgstr "Inplannen"
+
+msgid "submission.scheduledIn"
+msgstr "Ingepland voor publicatie in  {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.sec"
+msgstr "Sec"
+
+msgid "submissions.step1"
+msgstr "Step 1"
+
+msgid "submissions.step3"
+msgstr "Stap 3"
+
+msgid "submissions.queuedReview"
+msgstr "In afwachting van review"
+
+msgid "submissions.published"
+msgstr "Gepubliceerd"
+
+msgid "submissions.initial"
+msgstr "Initieel"
+
+msgid "submissions.proofread"
+msgstr "Proefgelezen"
+
+msgid "submissions.initialProof"
+msgstr "Initiële proef"
+
+msgid "submissions.postAuthor"
+msgstr "Na de auteur"
+
+msgid "submissions.reviewRound"
+msgstr "Reviewronde"
+
+msgid "submissions.proof"
+msgstr "Proef"
+
+msgid "submissions.editorDecision"
+msgstr "Beslissing redacteur"
+
+msgid "submissions.editorRuling"
+msgstr "Oordeel redacteur"
+
+msgid "submission.eventLog"
+msgstr "Gebeurtenissen logboek"
+
+msgid "submissions.copyeditComplete"
+msgstr "Tekstredactie voltooid"
+
+msgid "submissions.layoutComplete"
+msgstr "Opmaak voltooid"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Proefgelezen"
+
+msgid "journal.currentIssue"
+msgstr "Huidig nummer"
+
+msgid "context.contexts"
+msgstr "Tijdschriften"
+
+msgid "journal.path"
+msgstr "Pad"
+
+msgid "context.context"
+msgstr "Tijdschrift"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Bekijk alle nummers"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Neem gebruikers op zonder rol voor dit tijdschrift."
+
+msgid "user.profile.profileImage"
+msgstr "Profielafbeelding"
+
+msgid "user.showAllJournals"
+msgstr "Toon mijn tijdschriften"
+
+msgid "user.registerForOtherJournals"
+msgstr "Registreren voor andere tijdschriften"
+
+msgid "user.reviewerPrompt"
+msgstr "Zou u inzendingen voor dit tijdschrift willen reviewen?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Ja, vraag de {$userGroup} rol aan."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Ja, ik zou graag worden gecontacteerd om inzendingen voor dit tijdschrift te reviewen."
+
+msgid "user.register.contextsPrompt"
+msgstr "Voor welke tijdschriften zou u zich willen registreren?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Vraag volgende rollen aan."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Als u inzendingen voor een tijdschrift wil reviewen, geef dan a.u.b. uw reviewvoorkeuren aan."
+
+msgid "user.myJournals"
+msgstr "Mijn tijdschriften"
+
+msgid "user.manageMySubscriptions"
+msgstr "Mijn abonnementen beheren"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Uw profiel is niet aan een tijdschrift gekoppeld. Kies een tijdschrift:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Uw profiel heeft geen rollen voor dit tijdschrift. Kies uit de acties hieronder:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Zend een voorstel in"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Zend een artikel in: registratie van auteurs is momenteel uitgeschakeld."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Registreren als reviewer"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Registreren als reviewer: registratie is momenteel uitgeschakeld."
+
+msgid "user.role.manager"
+msgstr "Tijdschriftbeheerder"
+
+msgid "user.role.subEditor"
+msgstr "Sectieredacteur"
+
+msgid "user.role.subscriptionManager"
+msgstr "Abonnementenbeheerder"
+
+msgid "user.role.managers"
+msgstr "Tijdschriftbeheerders"
+
+msgid "user.role.subEditors"
+msgstr "Sectieredacteurs"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Abonnementenbeheerders"
+
+msgid "user.role.journalAssistant"
+msgstr "Tijdschriftassistent"
+
+msgid "user.role.journalAssistants"
+msgstr "Tijschriftassistenten"
+
+msgid "issue.issue"
+msgstr "Nummer"
+
+msgid "issue.issues"
+msgstr "Nummers"
+
+msgid "issue.title"
+msgstr "Titel"
+
+msgid "issue.volume"
+msgstr "Volume"
+
+msgid "issue.number"
+msgstr "Nummer"
+
+msgid "issue.vol"
+msgstr "Vol"
+
+msgid "issue.no"
+msgstr "Nr"
+
+msgid "issue.year"
+msgstr "Jaar"
+
+msgid "issue.noIssues"
+msgstr "Geen nummers"
+
+msgid "issue.toc"
+msgstr "Inhoudsopgave"
+
+msgid "issue.abstract"
+msgstr "Samenvatting"
+
+msgid "issue.coverPage.altText"
+msgstr "Omslag"
+
+msgid "issue.fullIssue"
+msgstr "Heel nummer"
+
+msgid "issue.nonpdf.title"
+msgstr "Nummer downloaden"
+
+msgid "issue.viewIssue"
+msgstr "Bekijk nummer"
+
+msgid "issue.return"
+msgstr "Terug naar details over het nummer"
+
+msgid "subscriptionTypes.currency"
+msgstr "Valuta"
+
+msgid "subscriptionTypes.year"
+msgstr "jaar"
+
+msgid "subscriptionTypes.years"
+msgstr "jaren"
+
+msgid "subscriptionTypes.month"
+msgstr "maand"
+
+msgid "subscriptionTypes.months"
+msgstr "maanden"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Niet-verlopend"
+
+msgid "subscriptionTypes.format"
+msgstr "Formaat"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Gedrukt"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Gedrukt en online"
+
+msgid "subscriptions.inactive"
+msgstr "Inactief"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.status.active"
+msgstr "Actief"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Informatie nodig"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Goedkeuring nodig"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "In afwachting van handmatige betaling"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "In afwachting van online betaling"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "U heeft geen actief abonnement."
+
+msgid "subscriptions.status.other"
+msgstr "Overige, zie opmerkingen"
+
+msgid "subscriptions.individualDescription"
+msgstr "Bij individuele abonnementen is inloggen nodig om teogang te krijgen tot de inhoud."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Voor institutionele abonnementen is inloggen niet nodig.Toegang tot de inhoud wordt geregeld aan de hand van het domein en/of het IP-adres van de gebruiker."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Noot:</strong> Institutionele abonnementen die online gekocht ziijn, worden pas actief na goedkeuring van het domein en de IP-reeksen."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Inzending"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artikel ingezonden"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Inzending in nummer-wachtrij geplaatst."
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Inzending toegekend aan nummer"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artikel gepubliceerd"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Revisie door auteur ingezonden"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Bestand door de auteur gereviseerd"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Redacteur toegekend aan de inzending"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Toekenning redacteur ingetrokken"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Beslissing van de redacteur ingezonden"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Bestand van de redacteur bijgewerkt"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Inzending naar archief verstuurd"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Inzending teruggehaald uit archief"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Tekstredacteur toegekend aan inzending"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Toewijzing tekstredacteur ingetrokken"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Tekstredactie gestart"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Bestand met revisies tekstredacteur bijgewerkt"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Eerste tekstredactie gereed"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Laatste tekstredactier gereed"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Bestand tekstredactie bijgewerkt"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Proeflezer toegekend aan de inzending"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Toekenning proeflezer ingetrokken"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Proeflezen gestart"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Bestand met revisies proeflezer bijgewerkt"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Proeflezen gereed"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Opmaakredacteur toegekend aan de inzending"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Toekenning opmaakredacteur ingetrokken"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Opmaakredactie gestart"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Proefdruk bijgewerkt"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Opmaakredactie gereed"
+
+msgid "reader.subscribersOnly"
+msgstr "Alleen voor abonnees"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Abonnement vereist om toegang te krijgen. Log in om uw abonnement te verifiëren."
+
+msgid "reader.openAccess"
+msgstr "Vrij toegankelijk"
+
+msgid "reader.subscriptionAccess"
+msgstr "Toegankelijk voor abonnees"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Toegankelijk voor abonnees of na betaling"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "Reacties op dit artikel"
+
+msgid "comments.authenticated"
+msgstr "door <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "Sorteer zoekresultaten volgens"
+
+msgid "search.results.orderBy.article"
+msgstr "Artikel titel"
+
+msgid "search.results.orderBy.author"
+msgstr "Auteur"
+
+msgid "search.results.orderBy.date"
+msgstr "Publicatiedatum"
+
+msgid "search.results.orderBy.issue"
+msgstr "Nummer"
+
+msgid "search.results.orderBy.journal"
+msgstr "Tijschrift titel"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Populariteit (algemeen)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Populariteit (voorbije maand)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevantie"
+
+msgid "search.results.orderDir.asc"
+msgstr "Oplopend"
+
+msgid "search.results.orderDir.desc"
+msgstr "Aflopend"
+
+msgid "search.results.similarDocuments"
+msgstr "gelijkaardige documenten"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Een standaard authenticatiesysteem anders dan OJS heeft de volgende effecten:</p>\n"
+"<ul>\n"
+"\t<li>Wanneer een gebruiker een nieuw account probeert te registreren  met een gebruikersnaam die al bestaat in het externe systeem (maar niet in OJS), zal de registratie alleen lukken als het wachtwoord geldig is voor dat account.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>Attentie!</h4>\n"
+"<p>Het systeem kon het instellingenbestand niet overschrijven. Om uw wijzigingen te effectueren moet u <tt>config.inc.php</tt> openen in een geschikte teksteditor en de inhoud van het bestand vervangen door de inhoud van het tekstveld hieronder.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Abonneebeheer"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Individuele abonnementen"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Institutionele abonnementen"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Abonnementsoorten"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Artikelproeven Plugins"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Artikelproeven plugins bieden ondersteuning voor de weergave van verschillende documenttypes als artikelproeven."
+
+msgid "plugins.categories.auth.description"
+msgstr "Authenticatie plugins stellen Open Journal Systems in staat om authenticatie van gebruikers uit te besteden aan andere systemen zoals LDAP servers."
+
+msgid "plugins.categories.generic.description"
+msgstr "Generieke plugins worden gebruikt om Open Journal Systems uit te breiden op manieren die niet ondersteund worden in de andere plugin-categorieën."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Voorgestelde Creative Commons auteursrecht verklaringen</h3>\n"
+"<h4>1. Concept beleid voor Open Access tijdschriften</h4>\n"
+"Auteurs die publiceren bij dit tijdschrift, onderschrijven de volgende voorwaarden:\n"
+"<ol type=\"a\">\n"
+"\t<li>Auteurs behouden de auteursrechten en geven het tijdschrift het recht van eerste publicatie van het werk onder een <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution Licentie</a> die anderen het recht geeft het werk te delen onder vermelding van het auteurschap van het werk en de eerste publicatie in dit tijdschrift.</li>\n"
+"\t<li>Auteurs mogen separate, bijkomende contractuele overeenkomsten aangaan voor het niet-exclusief distribueren van de door het tijdschrift gepubliceerde versie van het werk (bv. plaatsing in een institutionele repository of publicatie in een boek), onder vermelding van de eerste publicatie in dit tijdschrift.</li>\n"
+"\t<li>Auteurs hebben het recht en worden aangemoedigd om hun werk online beschikbaar te stellen (bv. in institutionele repositories of op hun website) voorafgaand aan en gedurende de inzending, aangezien dat kan leiden tot productieve discussies, sneller en meer citaties van het gepubliceerde werk (Zie <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>Concept beleid voor vertraagd Open Access tijdschriften</h4>\n"
+"Auteurs die publiceren bij dit tijdschrift onderschrijven de volgende voorwaarden:\n"
+"<ol type=\"a\">\n"
+"\t<li>Auteurs behouden de auteursrechten en gen het tijdschrift het recht van eerste publicatie, waarna het werk [SPECIFICEER PERIODE] na publicatie beschikbaar komt onder een <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution Licentie</a> die anderen het recht geeft het werk te delen onder vermelding van auteurschap en de eerst publicatie dit tijdschrift.</li>\n"
+"\t<li>Auteurs mogen separate, bijkomende contractuele overeenkomsten aangaan voor het niet-exclusief distribueren van de door het tijdschrift gepubliceerde versie van het werk (bv. plaatsing in een institutionele repository of publicatie in een boek), onder vermelding van de eerste publicatie in dit tijdschrift.</li>\n"
+"\t<li>Auteurs hebben het recht en worden aangemoedigd om hun werk online beschikbaar te stellen (bv. in institutionele repositories of op hun website) voorafgaand aan en gedurende de inzending, aangezien dat kan leiden tot productieve discussies, en eerdere en meer citaties van het gepubliceerde werk (Zie <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Stappen: Wachtrij met inzendingen > Review van de inzending > Redactie van de inzending > Inhoudsopgave.<br /><br />\n"
+"Kies een model voor deze aspecten van het redactieproces. (Voor het aanwijzen van een eindredacteur en sectieredacteurs zie Redacteurs in Tijdschriftbeheer.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Om lezers in staat te stellen online versies te lokaliseren van het werk dat geciteerd wordt door de auteur, zijn de volgende opties beschikbaar.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Voeg een leesgereedschap toe</strong><p>De tijdschriftbeheerder kan \"Vind referenties\" toevoegen aan de leesgereedschappen van de gepubliceerde artikels. Dat geeft lezers de mogelijkheid om te titel van de referentie te plakken om daarmee in voorgeselecteerde bibliografische databases te zoeken naar het geciteerde werk.</p></li>\n"
+"\t<li><strong>Links opnemen in referenties</strong><p>De opmaakredacteur kan een link toevoegen naar referenties die online gevonden kunnen worden door de volgende instructies te volgen (die aangepast kunnen worden).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Deze gebruiker blokkeren?. De gebruiker kan dan niet meer inloggen op het systeem\n"
+"\n"
+"Eventueel kunt u de gebruiker een reden voor het blokkeren geven."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Sorry, u heeft geen adminstratieve rechten voor deze gebruiker. Dit kan zijn omdat:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>De gebruiker een sitebeheerder is</li>\n"
+"\t\t\t<li>De gebruiker actief is in tijdschriften die niet door u beheerd worden</li>\n"
+"\t\t</ul>\n"
+"\tDeze taak moet uitgevoerd worden door een sitebeheerder."
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"<ol>\n"
+"\t<li>Onderdelen worden geaccentueerd als de redacteur actie moet ondernemen.</li>\n"
+"\t<li>\"Verloopt\"  is ingevuld als de reviewer het verzoek tot beoordelen accepteert, het geeft het aantal weken aan voordat de review binnen moet zijn of  (-) het aantal weken dat die overtijd is.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"<ol>\n"
+"\t\t<![CDATA[<ol>\n"
+"\t<li>Gemarkeerde items hebben de aandacht van een redacteur nodig. De markering is als volgt:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Er is actie nodig bij de tekstredactie</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Er is actie nodig bij de opmaakredactie</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Er is actie nodig bij het proeflezen</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Actieve redactietaken"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Voltooide redactietaken"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Geen inzendingen toegekend."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Deze tekstredacteur opieuw berichten zal de taak herstarten. Weet u zeker dat u dit wilt doen?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Deze auteur opieuw berichten zal de taak herstarten. Weet u zeker dat u dit wilt doen?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Deze opmaakredacteur opieuw berichten zal de taak herstarten. Weet u zeker dat u dit wilt doen?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Deze proeflezer opieuw berichten zal de taak herstarten. Weet u zeker dat u dit wilt doen?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Spijtopties"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Reviewer spijtopties, terugtrekkingen & eerdere rondes"
+
+msgid "sectionEditor.regrets"
+msgstr "Spijtopties"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Toon spijtopties, terugtrekkingen, eerdere rondes"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Peer review, ronde {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Redactiebeslissing, ronde {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Reviewers spijtopties en terugtrekkingen"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Spijtoptie"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Resultaat"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Schrijf een bestaande gebruiker in als reviewer"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Nieuwe reviewer aanmaken"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Actieve redactietaken"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Voltooide redactietaken"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Geen actieve redactietaken."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Opmaakredactietaken"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Proef laden"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Vervang bestand"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Aanvullend bestand laden"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Ongeldig afbeeldingsformaat. Toegestaan zijn .gif, .jpg, en .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Deze proef zal beschikbaar zijn op een afzonderlijke website."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL van inhoud die elders wordt aangeboden"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artikels in afwachting van review"
+
+msgid "reviewer.completedReviews"
+msgstr "Gereed"
+
+msgid "reviewer.averageQuality"
+msgstr "Beoordeling"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Bestand moet beoordeeld worden"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Bericht de redacteur"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Zal de review doen"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Kan de review niet doen"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "De inzending wordt beschikbaar gesteld wanneer de reviewer de review accepteert"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Inzendingsredacteur"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Type of plak de reviewcommentaaren hier"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Invullen door de redacteur"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Stuur herinnering"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Aanbeveling"
+
+msgid "reviewer.article.submitReview"
+msgstr "Stuur review naar redacteur"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Comentaar"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Geladen bestanden"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Door de reviewer geladen versie"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Als u het bestand wilt annoteren voor de redacteur, bewaar het op uw harde schijf en gebruik bladeren/laden.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Verzoek van de redacteur"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Uw reactie"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Review ingezonden"
+
+msgid "reviewer.article.schedule.due"
+msgstr "In afwachting van review"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Accepteer inzending"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Revisies benodigd"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Opnieuw indienen voor review"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Elders opnieuw insturen"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Weiger inzending"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Bekijk commentaar"
+
+msgid "reviewer.article.schedule"
+msgstr "Schema"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Te reviewen inzending"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Reviewschema"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Review stappen"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Richtlijnen voor reviewer"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "De richtlijnen voor review geven reviewers criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in het tijdschrift. Ze kunnen instructies bevatten voor het maken een effectief en behulpzaam review. Bij het uitvoeren van een review krijgen reviewers twee tekstvelden, de eerste \"voor redacteur en auteur\" en de tweede \"voor redacteur\". De tijdschriftbeheerder kan ook een reviewformulier aanmaken bij revieuwformulieren, In alle gevallen hebben de redacteurs de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Bericht de redacteur van deze inzending"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "vraagt of u deze review wilt doen."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Als u de review gaat doen, sla dan de richtlijnen voor reviewers hieronder na."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Klik op de bestandsnamen om de bestanden behorend bij deze inzending te downloaden en te beoordelen (op het scherm of door afdrukken)."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Geef aan of u wel of geen strijdige belangen hebt met betrekking tot dit onderzoek (zie <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">SB Beleid</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Strijdige belangen"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Klik op het icoon om uw review van deze inzending in voeren (of te plakken)."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Aanvullend kunt u bestanden laden die de redacteur en/of auteur na kunnen slaan."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Kies een aanbeveling en stuur het review in om het prodes af te ronden. U moet een review invoeren of een bestand laden voor u een aanbeveling kiest."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Selecteer of wijzig een aanbeveling."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Geen aanbeveling geselecteerd. U moet een aanbeveling kiezen om in te kunnen sturen."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Als u een beslissing hebt vastgelegd kunt u de review niet meer veranderen. Weet u zeker dat u door wilt gaan?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Stuur naar tekstredactie"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Bestand voor tekstredacteur"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Bestand voor tekstredacteur"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Geen proefleestaken"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"<p>Doorloop de volgende stappen om een manuscript in het tijdschrift te laden.</p>\n"
+"<ol>\n"
+"<li>Klik Blader (of Kies bestand) op deze pagina, waarna een venster wordt geopend waarmee het bestand op uw computer aangewezen kan worden.</li>\n"
+"<li>Lokaliseer het bestand en selecteer het.</li>\n"
+"<li>Klik Open in het bestandskeuzevenster, waarna de naam van het bestand op deze pagina getoond wordt.</li>\n"
+"<li>Klik Laden op deze pagina, waarna het bestand van uw computer in de website van het tijdschrift wordt geladen. Het bestand krijgt een naam volgens de conventies van het tijdschrift</li>\n"
+"<li>Als de inzending geladen is, klik dan op Bewaren en Doorgaan onderaan de pagina.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "E-mailverzoek kan pas verzonden worden als er een reviewversie is."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "E-mailverzoek kan pas verstuurd worden als het bestand is geselecteerd voor tekstredactie in Beslissing redacteur, Review"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "E-mailverzoek kan pas verstuurd worden als het bestand is geladen voor tekstredactie."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Eerste tekstredactie"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Tekstredactie redacteur"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Tekstredactie auteur"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Laatste tekstredactie"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Tekstredactie versie"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Tekstredacteur toewijzen"
+
+msgid "submission.copyedit.useFile"
+msgstr "Gebruik bestand"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Opmerkingen tekstredactie"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instructies voor tekstredactie"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Geen (laad de laatste tekstredactieversie als opmaakversie voorafgaand aan het versturen van het verzoek)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Publieke identificatie voor "
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Publieke identificatie bestaat al voor proefdruk."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Opmaakredacteur toekennen"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Opmaakredacteur vervangen"
+
+msgid "submission.layout.layoutComments"
+msgstr "Commentaren opmaak"
+
+msgid "submission.layout.instructions"
+msgstr "Opmaakinstructies"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Linken naar referenties"
+
+msgid "submission.proofreadingComments"
+msgstr "Proeflees-commentaren"
+
+msgid "submission.proofread.corrections"
+msgstr "Proeflezen correcties"
+
+msgid "submission.proofread.instructions"
+msgstr "Proeflees-instructies"
+
+msgid "submission.logType.article"
+msgstr "Artikel"
+
+msgid "submission.logType.author"
+msgstr "Auteur"
+
+msgid "submission.logType.editor"
+msgstr "Redacteur"
+
+msgid "submission.logType.review"
+msgstr "Review"
+
+msgid "submission.logType.copyedit"
+msgstr "Tekstredactie"
+
+msgid "submission.logType.layout"
+msgstr "Opmaak"
+
+msgid "submission.logType.proofread"
+msgstr "Proeflezen"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Redacteur/auteur correspondentie"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Tekstredactie commentaren"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Deze commentaren kunnen met de auteur gedeeld worden.<br />\n"
+"(Na opslaan kan meer commentaar toegevoegd worden.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Voor auteur en redacteur"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Voor redacteur"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Toon na het versturen een wijzigbare BCC kopie om naar de reviewers te sturen"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Voor auteur en redacteur"
+
+msgid "submission.comments.forEditor"
+msgstr "Voor redacteur"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Bewaar en e-mail auteur"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Bewaar en e-mail redacteur"
+
+msgid "user.register.selectContext"
+msgstr "Selecteer een tijschrift om u bij te registreren:"
+
+msgid "user.register.noJournals"
+msgstr "Deze site heeft geen tijdschriften waarbij u zich kunt registreren."
+
+msgid "user.register.privacyStatement"
+msgstr "Privacyverklaring"
+
+msgid "user.register.registrationDisabled"
+msgstr "Dit tijdschrift accepteert momenteel geen registraties."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Het ingevoerde wachtwoord is niet lang genoeg."
+
+msgid "user.register.readerDescription"
+msgstr "Verwittigings-e-mail bij de publicatie van een nieuw nummer van het tijdschrift."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Verwittigings-e-mail als een nummer van het tijdschrift open access wordt."
+
+msgid "user.register.authorDescription"
+msgstr "In staat om stukken voor het tijdschrift in te sturen."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Bereid om inzendingen voor het tijdschrift te reviewen."
+
+msgid "user.register.reviewerDescription"
+msgstr "Bereid om inzendingen voor het tijdschrift te reviewen. Identificeer uw interesses (inhoudelijke gebieden en onderzoeksmethoden)."
+
+msgid "user.register.reviewerInterests"
+msgstr "Geef review-interesses (kennisgebieden en onderzoeksmethodes)"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Ja, ik krijg graag meldingen van nieuwe publicaties en aankondigingen voor alle tijschriften waarbij ik ben geregistreerd."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr "Ja, ik geef toestemming om mijn data te verzamelen en op te slaan volgens de <a href=\"{$privacyUrl}\" target=\"_blank\">privacyverklaring</a> van dit tijdschrift."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "U moet instemmen met de privacyverklaring van elk tijdschrift waarvoor u zich registreert."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "U moet instemmen met de privacyverklaring van deze site."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Mijn abonnementen"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Abonnementsstatus"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Actieve en verlopen abonnementen worden hieronder met hun afloopdatum getoond. De volgende aanvullende informatie kan bij de abonnementen opgenomen worden."
+
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Beschrijving"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Er is bijkomende informatie nodig voordat het abonnement geactiveerd kan worden"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Het abonnement moet beoordeeld worden voor het geactiveerd kan worden"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Handmatige betaling is gestart, maar nog niet ontvangen"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Een online betaling is gestart, maar gestopt of niet voltooid"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Individueel abonnement"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Institutionele abonnementen"
+
+msgid "user.subscriptions.renew"
+msgstr "Vernieuwen"
+
+msgid "user.subscriptions.purchase"
+msgstr "Koop"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Koop nieuw abonnement"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Koop individueel abonnement"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Koop institutioneel abonnement"
+
+msgid "user.subscriptions.expires"
+msgstr "Verloopt: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Verlopen: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Bekijk beschikbare abonnementsoorten"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Abonnementsoort"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Lidmaatschap"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "De gekozen abonnementsoort vereist lidmaatschapsinformatie."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Kies een geldige abonnementsoort"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Deze gebruiker heeft al een individueel abonnement."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Lidmaatschapsinformatie indien vereist voor de gekozen abonnementsoort."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Naam van het instituut"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "De naam van het instituut is verplicht"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Postadres"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domein"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Als hier een domeinnaam wordt opgegeven, zijn IP-reeksen optioneel.<br />Geldige waarden zijn domeinnamen (bv. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "De gekozen abonnementsoort vereist een domein en/of IP-reeks voor de authenticatie van het abonenment."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Geef een geldige domeinnaam"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP reeksen"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "als hier IP reeksen opgegeven worden is het domein optioneel.<br />Geldige waarden zijn een IP adres (bv. 142.58.103.1), IP reeks (bv. 142.58.103.1 - 142.58.103.4), een IP reeks met wildcard '*' (bv. 142.58.*.*), en een IP reeks mets CIDR (e.g. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Geef een geldige IP-reeks."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Verwijder"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Voeg toe"
+
+msgid "search.browseAuthorIndex"
+msgstr "Blader door de auteursindex"
+
+msgid "search.searchFor"
+msgstr "Doorzoek artikels op"
+
+msgid "search.withinJournal"
+msgstr "Binnen"
+
+msgid "search.allJournals"
+msgstr "Alle Tijdschriften"
+
+msgid "search.authorIndex"
+msgstr "Blader door de auteursindex"
+
+msgid "search.authorDetails"
+msgstr "Auteursdetails"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"<h4>Zoektips: </h4><ul>\n"
+"<li>Zoektermen zijn niet hoofdlettergevoelig</li>\n"
+"<li>Veelvoorkomende woorden worden genegeerd</li>\n"
+"<li>Standaard worden alleen artikels getoond waarin <em>alle</em> zoektermen voorkomen (<i>EN</i> is impliciet)</li>\n"
+"<li>Combineer woorden met <i>OF</i> om artikels te vinden die één van de termen bevatten, bv. <i>educatie OF onderzoek</i></li>\n"
+"<li>Gebruik haakjes om complexere vragen te maken, bv. <i>archief ((tijdschrift OF conferentie) NIET thesis)</i></li>\n"
+"<li>Zoek naar een exacte frase door die tussen aanhalingstekens te zetten, bv. <i>\"open access publishing\"</i></li>\n"
+"<li>Sluit een woord uit door het vooraf te laten gaan door <b>-</b> of <i>NIET</i>, bv <i>online -politiek</i> of <i>online NIET politiek</i></li>\n"
+"<li>Gebruik <b>*</b> in een zoekterm als joker voor een willekeurige reeks tekens. bv. <i>soci* moraal</i> vindt documenten met  \"sociologisch\" of \"sociaal\"</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "Weergave van {$title}"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Download als PDF file"
+
+msgid "article.pluginMissing"
+msgstr "<p>Het geselecteerde PDF bestand zou hier moeten verschijnen als uw webbrowser een PDF leesplugin heeft (bijvoorbeeld een recente versie van <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Artikel download"
+
+msgid "article.nonpdf.note"
+msgstr "Het bestand dat u gekozen hebt, zou automatisch op uw computer geladen moeten worden. Als dat niet gebeurt, klik op de link hieronder. Het bestand vereist mogelijk een programma of plugin om te bekijken<br /><br />Als de download niet vanzelf start, <a href=\"{$url}\">klik hier</a>."
+
+msgid "site.journalsHosted"
+msgstr "Tijdschriften op deze site"
+
+msgid "site.journalView"
+msgstr "Bekijk tijdschrift"
+
+msgid "site.journalRegister"
+msgstr "Registreren"
+
+msgid "site.journalCurrent"
+msgstr "Huidig nummer"
+
+msgid "site.noJournals"
+msgstr "Er zijn geen tijdschriften beschikbaar"
+
+msgid "current.current"
+msgstr "Huidig"
+
+msgid "current.noCurrentIssue"
+msgstr "Geen huidig nummer"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Dit tijdschrift heeft geen nummers gepubliceerd."
+
+msgid "archive.archives"
+msgstr "Archieven"
+
+msgid "archive.archivesPageNumber"
+msgstr "Archieven - Pagina {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Blader door oudere nummers"
+
+msgid "archive.issueUnavailable"
+msgstr "Nummer niet beschikbaar"
+
+msgid "about.statistics"
+msgstr "Statistieken"
+
+msgid "about.contact"
+msgstr "Contact"
+
+msgid "about.aboutContext"
+msgstr "Over dit tijschrift"
+
+msgid "about.history"
+msgstr "Geschiedenis van het tijdschrift"
+
+msgid "about.editorialTeam"
+msgstr "Redactie"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografie"
+
+msgid "about.editorialPolicies"
+msgstr "Redactioneel beleid"
+
+msgid "about.focusAndScope"
+msgstr "Focus en missie"
+
+msgid "about.sectionPolicies"
+msgstr "Beleid secties"
+
+msgid "about.submissions"
+msgstr "Inzendingen"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Ga naar inloggen"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Registeer"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} of {$register} om een manuscript te kunnen inzenden."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} of {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Maak een nieuwe inzending voor de sectie <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Maak een nieuwe inzending"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Bekijk uw inzendingen die in behandeling zijn"
+
+msgid "about.authorGuidelines"
+msgstr "Richtlijnen voor auteurs"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Checklist ter voorbereiding van inzending"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Als onderdeel van de inzendingsprocedure moeten auteurs verklaren dat hun inzending voldoet aan de volgende richtlijnen. Inzendingen kunnen geretourneerd worden als ze daar niet aan voldoen."
+
+msgid "about.copyrightNotice"
+msgstr "Auteursrecht verklaring"
+
+msgid "about.privacyStatement"
+msgstr "Privacy verklaring"
+
+msgid "about.authorFees"
+msgstr "Kosten auteurs"
+
+msgid "about.authorFeesMessage"
+msgstr "Dit tijdschrift berekent de volgende kosten aan auteurs."
+
+msgid "about.peerReviewProcess"
+msgstr "Peer review procedure"
+
+msgid "about.publicationFrequency"
+msgstr "Verschijningsfrequentie"
+
+msgid "about.openAccessPolicy"
+msgstr "Open Access beleid"
+
+msgid "about.delayedOpenAccess"
+msgstr "Vertraagde Open Access"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "De inhoud van dit tijdschrift zal beschikbaar zijn in een open access formaat"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "maand(en) nadat een nummer gepubliceerd is."
+
+msgid "about.archiving"
+msgstr "Archiveren"
+
+msgid "about.subscriptions"
+msgstr "Abonnementen"
+
+msgid "about.subscriptions.individual"
+msgstr "Individuele abonnementen"
+
+msgid "about.subscriptions.institutional"
+msgstr "Institutionele abonnementen"
+
+msgid "about.subscriptionsContact"
+msgstr "Contact voor abonnementen"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Naam"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formaat"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Duur"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Kosten"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Abonnementstypes"
+
+msgid "about.memberships"
+msgstr "Lidmaatschappen"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Over dit publicatiesysteem"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS Redactie- en publicatieproces"
+
+msgid "about.aboutOJSJournal"
+msgstr "Dit tijdschrift gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> onder de GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "Deze site gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> onder de GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems Help"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS Help"
+
+msgid "help.searchReturnResults"
+msgstr "Terug naar zoekresultaten"
+
+msgid "help.goToEditPage"
+msgstr "Bewerk {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Dank u"
+
+msgid "donations.thankYouMessage"
+msgstr "Dank u voor uw bijdrage. Uw bijdage wordt zeer gewaardeerd."
+
+msgid "payment.loginRequired"
+msgstr "U moet ingelogd zijn om een betaling te kunnen doen."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Abonnement of aankoop van het artikel benodigd voor toegang tot het item. Log in om uw abonnement te controleren, toegang te krijgen tot aankopen of nieuwe aankopen te doen"
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Een abonnement of aankoop van een nummer is nodig om dit item te kunnen bekijken. Om uw abonnement te verifiëren, een eerdere aankoop te bekijken of een nummer te kopen, moet u inloggen."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "U moet ingelogd zijn om een donatie te doen."
+
+msgid "payment.paid"
+msgstr "Betaald"
+
+msgid "payment.payNow"
+msgstr "Betaal nu"
+
+msgid "payment.waive"
+msgstr "Kwijtschelden"
+
+msgid "payment.alreadyPaid"
+msgstr "Reeds betaald"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Selecteer dit vak als uw betaling naar het tijdschrift is verstuurd om de inzendingsprocedure af te ronden. De inzending wordt pas beoordeeld als de betaling is verwerkt. Klik Betaal nu om de betalingsinstructies te bekijken."
+
+msgid "payment.paymentReceived"
+msgstr "Betaling ontvangen"
+
+msgid "payment.paymentSent"
+msgstr "Betaling is verzonden"
+
+msgid "payment.authorFees"
+msgstr "Kosten auteurs"
+
+msgid "payment.type.submission"
+msgstr "Inzendingskosten"
+
+msgid "payment.type.publication"
+msgstr "Publicatiekosten"
+
+msgid "payment.type.publication.required"
+msgstr "De publicatiekosten moeten worden betaald."
+
+msgid "payment.type.fastTrack"
+msgstr "Kosten voor snelle beoordeling"
+
+msgid "payment.type.membership"
+msgstr "Kosten voor individueel lidmaatschap"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Prijs van dit artikel"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Prijs voor het kopen van een nummer"
+
+msgid "payment.type.subscription"
+msgstr "Abonnementskosten"
+
+msgid "payment.type.donation"
+msgstr "Donaties"
+
+msgid "payment.requestPublicationFee"
+msgstr "Publicatiekosten aan ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "Het betalingsverzoek is verlopen. Contacteer de tijdschriftbeheerder voor details."
+
+msgid "payment.donation.makeDonation"
+msgstr "Doe een donatie"
+
+msgid "payment.submission.paySubmission"
+msgstr "Betaal inzendingskosten"
+
+msgid "payment.publication.payPublication"
+msgstr "Betaal om te publiceren"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Publicatiekosten betaald"
+
+msgid "payment.membership.buyMembership"
+msgstr "Koop individueel lidmaatschap"
+
+msgid "payment.membership.renewMembership"
+msgstr "Vernieuw individueel lidmaatschap"
+
+msgid "payment.membership.ends"
+msgstr "Loopt af op"
+
+msgid "payment.subscription.purchase"
+msgstr "Koop abonnement"
+
+msgid "payment.subscription.renew"
+msgstr "Vernieuw abonnement"
+
+msgid "payment.subscription.expires"
+msgstr "Verloopt"
+
+msgid "installer.appInstallation"
+msgstr "OJS Installatie"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS Upgrade"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS Versie {$version}</h4>\n"
+"\n"
+"<p>Dank u voor het downloaden van <strong>Open Journal Systems</strong> van het Public Knowledge Project. Lees voor u verdergaat eerst het <a href=\"{$baseUrl}/docs/README.md\">README</a> bestand van de software. Voor meer informatie over het Public Knowledge Project en zijn software projecten, zie de <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. Als u problemen wilt melden of technische vragen wilt stellen over Open Journal Systems, zie het <a href=\"http://forum.pkp.sfu.ca\">support forum</a> of bezoek PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">probleemrapportage systeem</a>. Hoewel het support forum de voorkeur heeft kun u het team ook e-mailen op <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Upgrade</h4>\n"
+"\n"
+"<p>Wanneer u een upgrade doet van een bestaande installatie van OJS 2.x, <a href=\"{$upgradeUrl}\">klik hier</a> om verder te gaan.</p>\n"
+"\n"
+"<h4>Systeemeisen</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}, u gebruikt nu PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 of <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x or >= 2.0.4x of Microsoft IIS 6</li>\n"
+"\t<li>Operating system: Ieder OS dat de bovengenoemde software onderstent, inclusief <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Aangezien PKP niet de middelen heeft om iedere combinatie van softwareversies en platforms te testen, impliceert dit geen garanties voor correcte werking of ondersteuning.</p>\n"
+"\n"
+"<p>Deze instellingen kunnen na installatie gewijzigd worden door het bestand <tt>config.inc.php</tt> in de  OJS map aan te passen of met de sitebeheer web interface.</p>\n"
+"\n"
+"<h4>Ondersteunde database systemen</h4>\n"
+"\n"
+"<p>OJS is momenteel alleen getest met MySQL en PostgreSQL, hoewel andere database management systemen die ondersteund worden door <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> kunnen werken (geheel of gedeeltelijk). Compatibiliteistrappporen en/of aanpassingen in de code voor alernatieve DBMS-en kunnen naar het OJS team gestuurd worden.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Pre-Installatie Stappen</h4>\n"
+"\n"
+"<p>1. De volgende bestanden en mappen (en hun inhoud) moeten wijzigbaar gemaakt worden:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> is wijzigbaar (optioneel): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> is wijzigbaar: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> is wijzigbaar: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> is wijzigbaar: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> is wijzigbaar: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> is wijzigbaar: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Een map om ingestuurde bestanden op te slaan moet aangemaakt worden en schrijfbaar zijn (Zie \"Bestandsinstellingen\" hieronder).</p>\n"
+"\n"
+"<h4>Handmatige installatie</h4>\n"
+"\n"
+"<p>Kies <strong>Handmatige installatie</strong> om de  SQL commando's te tonen voor het aanmaken van het OJS database schema en de initiële gegevens zodat de database installatie met de hand uitgevoerd kan worden. Deze optie is handig voor het localiseren van installatieproblemen, in het bijzonder op niet-ondersteunde platforms. Merk op dat deze installatie niet probeert om de database of tabellen aan te maken, hoewel het configuratiebestand met de opgegeven database instellingen wel wordt weggeschreven.</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS Versie {$version}</h4>\n"
+"\n"
+"<p>Dank u voor het downloaden van  Public Knowledge Project's <strong>Open Journal Systems</strong>. Lees voor u verdergaat de <a href=\"{$baseUrl}/docs/README.md\">README</a> en <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> bestanden bij deze software. Bezoek voor meer informatie over het Public Knowledge Project en zijn software projecten de <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. Voor het melden van fouten  en het verkrijgen van technische ondersteuning voor Open Journal Systems kunt u terecht op het <a href=\"http://forum.pkp.sfu.ca\">support forum</a> of bezoek PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">fout rapportage systeem</a>. Hoewel het forum de voorkeur heeft kunt u het team ook e-mailen op <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>Het is <strong>sterk aanbevolen</strong> dat u een backup maakt van uw databank, bestanden-map en OJS installatiemap voor u verder gaat.</p>\n"
+"<p>Als u draait in <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, verzeker u er dan van dat de max_execution_timeout in uw php.ini op een hoge waarde staat. Als deze of een andere tijdslimiet (bv. Apache's \"Timeout\" waarde) bereikt wordt en het upgrade proces onderbroken wordt, is handmatige interventie noodzakelijk.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Kies UTF-8 voor alle karakterset-instellingen als u volledige Unicode (UTF-8) ondersteuning wilt. Merk op dat dit momenteel een MySQL >= 4.1.1 of PostgreSQL >= 7.1 database vereist. Merk ook op dat volledige Unicode ondersteuning  PHP >= 4.3.0 gecompileerd met ondersteuning van de <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> bibliotheek vereist (standaard ingeschakeld in de meeste recente PHP installaties). Als uw server niet aan deze eisen voldoet kunnen er problemen ontstaan met het gebruik van uitgebreide karaktersets.\n"
+"<br /><br />\n"
+"Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "Uw server staat momenteel het laden van bestanden toe: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Uw server staat momenteel het laden toe van bestanden met een maximale grootte van: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "De primaire taal voor gebruik in dit systeem. Zie de OJS documentatie voor ondersteuning van hier niet genoemde talen."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Selecteer de bijkomende talen voor gebruik in dit systeem. Deze talen kunnen gebruikt worden door de tijdschriften in deze site. Bijkomende talen kunnen op ieder gewenst moment  geïnstalleerd worden bij sitebeheer."
+
+msgid "installer.filesDirInstructions"
+msgstr "Geef het volledige pad naar een bestaande map waar geladen bestanden bewaard moeten worden. Deze map moet niet direct vanaf het web benaderbaar zijn. <strong>Verzeker u ervan dat de map bestaat en erin geschreven mag worden.</strong> Gebruik voor Windows pad-namen voorwaartse schuine strepen, bv. \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS gebruikt een SQL database voor het opslaan van gegevens. Zie de systeemvereisten hierboven voor de lijst van ondersteunde databases. Geef in de velden hieronder de instellingen om de connectie met de database te maken."
+
+msgid "installer.installApplication"
+msgstr "Installeer Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Upgrade Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<b>Waarschuwing:</b> Als de installatie tijdens de database-installatie misloop moet u de OJS database of de database-tabellen verwijderen voor u de installatie opnieuw probeert te doen."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>Belangrijk!</h4>\n"
+"<p>Het installatieprogramma kon het configuratiebestand niet overschrijven. Open alvorens het systeem te gebruiken <tt>config.inc.php</tt> in een geschikte teksteditor en vervang de inhoud ervan door de inhoud van het tekstveld hieronder.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Installatie van OJS is succesvol afgerond.</p>\n"
+"<p><a href=\"{$loginUrl}\">Log in</a> met de gebruikersnaam en het wachtwoord van de vorige pagina om het systeem in gebruik te nemen.</p>\n"
+"<p>Als u nieuws en updates wilt ontvangen, <strong>registreer u dan op <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Als u vragen of opmerkingen heeft, bezoek dan het <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Opwaarderen van OJS naar versie {$version} is succesvol afgerond.</p>\n"
+"<p>Vergeet niet om de \"installed\" instelling in uw config.inc.php bestand terug te zetten op <i>On</i>.</p>\n"
+"<p>Als u nog niet geregistreerd bent en nieuws en updates wenst te ontvangen, <strong>registreeru dan op <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong>  Als u vragen of opmerkingen heeft, bezoek dan het <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Bezoek <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">deze pagina</a> om de meest recente versie op te halen en voor installatieinstructies."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Neem contact op met uw sitebeheerder ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) om die te wijzen op de nieuwe versie. Meer informatie <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">hier</a>."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} heeft artikel {$submissionId} herzien. Het nieuwe bestands-ID is {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} is teruggetrokken als reviewer van inzending {$submissionId} voor reviewronde {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is gestart."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} is beoordeeld voor reviewronde {$round} van inzeinding {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "De uiterste reviewdatum voor ronde {$round} van inzending {$submissionId} door {$reviewerName} is ingesteld op {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "De aanbeveling voor de review voor ronde {$round} van inzending {$submissionId} door {$reviewerName} is vastgelegd."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "De aanbeveling voor de review voor ronde {$round} van inzending {$submissionId} is vastgelegd door redacteur, {$editorName} namens reviewer {$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "Inzending {$submissionId} is opnieuw ingezonden voor review."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} heeft de review voor ronde {$round} van inzending {$submissionId} geweigerd."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} heeft de review voor ronde {$round} van inzending {$submissionId} geaccepteerd."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} heeft de review voor ronde {$round} van inzending {$submissionId} namens {$reviewerName} geweigerd."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} heeft de review voor ronde  {$round} van inzending {$submissionId} namens {$reviewerName} geaccepteerd."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Redacteur, {$userName}, heeft een reviewbestand geladen voor ronde {$round} van inzending {$submissionId} namens reviewer {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Een reviewbestand is geladen."
+
+msgid "log.editor.decision"
+msgstr "Een redacteursbeslissing ({$decision}) voor artikel {$submissionId} is vastgelegd door {$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr "Een redacteursaanbeveling ({$decision}) voor artikel {$submissionId} is vastgelegd door {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "Tekstredactie voor inzending  {$submissionId} is gestart door {$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Het standaard tekstredactiebestand is gekozen."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} heeft de initiële tekstredactie van inzending {$submissionId} voltooid."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} heeft de definitieve tekstredactie van inzending {$submissionId} voltooid."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} heeft de tekstredactie van inzending {$submissionId} toegewezen gekregen."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Een tekstredacteurs-versie van de inzending is geladen."
+
+msgid "log.copyedit.authorFile"
+msgstr "Een versie van de inzending die door de auteur geredigeerd is, is geladen."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} is als opmaakredacteur toegewezen aan inzending {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} is niet langer de opmaakredacteur van inzending {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} heeft de opmaak van inzending {$submissionId} afgerond."
+
+msgid "log.editor.metadataModified"
+msgstr "De metadata voor deze inzending is gewijzigd door {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "Een redactieversie van de inzending is geladen."
+
+msgid "log.editor.archived"
+msgstr "Inzending {$submissionId} is gearchiveerd."
+
+msgid "log.editor.restored"
+msgstr "Inzending {$submissionId} staat weer in de wachtrij."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} is als redacteur toegekend aan de inzending {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} heeft {$proofreaderName} aangwezen voor het proeflezen van inzending {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} heeft {$submissionId} ingezonden voor inplannen."
+
+msgid "log.imported"
+msgstr "{$userName} heeft artikel {$submissionId} geïmporteerd."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Peer reviewed artikel"
+
+msgid "notification.type.editing"
+msgstr "Redactieberichten"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Er is een nieuw artikel, \"{$title},\" ingediend."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Er is een commentaar achtergelaten op de redacteursbeslissing van \"{$title}\"."
+
+msgid "notification.type.galleyModified"
+msgstr "Een proef van \"{$title}\" gewijzigd."
+
+msgid "notification.type.issuePublished"
+msgstr "Er is een nieuw nummer gepubliceerd"
+
+msgid "notification.type.newAnnouncement"
+msgstr "Er is een nieuw nieuwsbericht gemaakt."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Er is een reviewformulier ingediend voor \"{$title}\"."
+
+msgid "notification.type.reviewing"
+msgstr "Nieuws over reviews"
+
+msgid "notification.type.site"
+msgstr "Nieuws over de site"
+
+msgid "notification.type.submissionComment"
+msgstr "Een redacteur heeft \"{$title}\" van commentaar voorzien."
+
+msgid "notification.type.submissions"
+msgstr "Nieuws over inzendingen"
+
+msgid "notification.type.userComment"
+msgstr "Een lezer heeft een opmerking geplaatst bij \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "Aankondigingen"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Metadata voor het nummer zijn opgeslagen."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Er is een nieuw artikel ingediend waarvoor een redacteur moet worden toegewezen."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Gebruik de link \"Toevoegen\" in de deelnemerslijst om een gebruiker te vragen om proeven te maken."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Awaiting Galleys."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Geen toegang! U bent niet de tekstredacteur voor dit artikel."
+
+msgid "user.authorization.noContext"
+msgstr "Geen tijdschrift beschikbaar!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "U probeert een artikel uit een andere sectie te benaderen"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Ongeldig nummer gevraagd!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Onjuiste tekstredacteur inzending of geen tekstredacteur inzending gevraagd!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Lijst munteenheden \"{$filename}\" uit XML geladen"
+
+msgid "grid.action.createContext"
+msgstr "Maak een nieuw tijdschrift"
+
+msgid "editor.navigation.issues"
+msgstr "Nummers"
+
+msgid "notification.type.approveSubmission"
+msgstr "Deze inzending wacht op goedkeuring voor ze zal verschijnen in het nummer."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "In afwachting van goedkeuring."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Registreer bij andere tijdschriften"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Verberg andere tijdschriften"
+
+msgid "article.view.interstitial"
+msgstr "Kies een bestand van een artikel om te downloaden."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Goedgekeurd"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "In afwachting van goedkeuring"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Goedkeuring van proeven"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Keur deze proef goed voor publicatie.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Maak goedkeuring van deze proef ongedaan.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexering van \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Deze zoekmachine ondersteunt geen herindexering per afzonderlijk tijdschrift."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Er kon geen tijdschrift worden gevonden voor het opgegeven pad \"{$journalPath}\"."
+
+msgid "editor.issues.backIssues"
+msgstr "Vorige nummers"
+
+msgid "editor.issues.futureIssues"
+msgstr "Toekomstige nummers"
+
+msgid "navigation.subscriptions"
+msgstr "Abonnementen"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} heeft de redactie voor het artikel {$submissionId} aanvaard."
+
+msgid "catalog.sortBy"
+msgstr "Artikels sorteren op"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Kies hoe artikels in deze categorie worden geordend."

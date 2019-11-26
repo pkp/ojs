@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:48+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:48+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "XML vtičnik za uporabnike"
+
+msgid "plugins.importexport.users.description"
+msgstr "Izvoz in izvoz uporabnikov"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Uporaba: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Examples:\n"
+"\tImport users into myJournal from myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExport all users from myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExport users specified by their ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Uvozi uporabnike"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Izberi XML datoteko, ki vsebuje podatke o uporabnikih za uvoz v to revijo. Za več informacij formatu poglejte pomoč.<br /><br />V primeru, da datoteka vsebuje uporabniška imena in email naslove, ki že obstjajo, ti uporabniki ne bodo uvoženi, dodane pa jim bodo vloge, ki bi se morale ustvariti."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Datoteka s podatki o uporabnikih"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Pošlji email obvestilo vsakemu uvoženemu uporabniku z uporabniškim imenom in geslom."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "V primeru napake nadaljuj z uvozom ostalih uporabnikov."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Naslednji uporabniki so bili uvoženi v sistem"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Med uvozom so se pojavile napake"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Potrdite, da so to uporabniki, ki jih želite uvoziti v sistem"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Opozorilo"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Gesla, kriptirana z {$importHash} ne morejo biti uporabljena; OJS je nstavljen, da uporablja {$ojsHash}. Če nadaljujete, boste morali ponastaviti vsa gesla uvoženih uporabnikov."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Podana je bila neznana pot revije \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Izvozi uporabnike"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Izvozi po vlogah"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Izvozi vse"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Med izvozom se je pojavila napaka"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "V datoteko \"{$fileName}\" ni bilo možno pisati."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "Uvoz se je uspešno končal. Uporabniki z uporabniškimi imeni in gesli, ki še niso v uporabi, so bili uvoženi, skupaj s pripadajočimi vlogami."
+
+msgid "plugins.importexport.users.results"
+msgstr "Rezultati"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Prosimo, naložite datoteko pod \"Uvoz\" za nadaljevanje."

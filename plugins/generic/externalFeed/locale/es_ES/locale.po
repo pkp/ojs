@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:04+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:04+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "Canales RSS"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "Bloque de Canales RSS"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "Publicar contenidos de fuentes Atom/RSS externas. Por ejemplo, de un WordPress externo, Drupal, o instalación de OCS."
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "No hay RSS externos"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "Título"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "Enviado"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "Más..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "Fuentes RSS"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "Configuraciones"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "Para mostrar el contenido en la barra lateral, ve al <a href=\"{$setupStep56}\" target=\"_blank\">Paso de configuración 5.6</a>"
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "Título"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "Mostrar en la página de inicio"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "Mostrar en la página de inicio"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "No mostrar en la página de inicio"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "Mostrar Bloque"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "Todas las páginas"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "Bloque en todas las páginas"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "No poner bloque en todas las páginas"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "Página de inicio"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "Poner bloque únicamente en la página de inicio"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "No poner bloque únicamente en la página de inicio"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "No hay fuentes RSS externas"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "Crear nueva fuente RSS externa"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "Editar fuente RSS externa"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "¿Está seguro de querer borrar permanentemente esta fuente RSS?"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "Settings"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "Customize the display of external feed items."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "Display"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "External Feed Style Sheet"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "A custom style sheet can be used to replace the default style sheet for this plugin. The default style sheet can be viewed here"
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "Custom style sheet"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "Title"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "The title for homepage and/or block display"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "Please provide a title for this feed"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "URL"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "Please provide a valid feed URL (include http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "The URL of the external Atom/RSS syndication feed (e.g. http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "Display"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "Display on homepage"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "Do not display in block"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "Display in block on homepage only"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "Display in block on all pages"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "Limit to"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "feed items"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "Save and Create Another"

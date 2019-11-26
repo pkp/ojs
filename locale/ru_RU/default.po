@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:31+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Статьи"
+
+msgid "section.default.abbrev"
+msgstr "СТ"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.genres.article"
+msgstr "Текст статьи"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Этот материал ранее не был опубликован, а также не был представлен для рассмотрения и публикации в другом журнале (или дано объяснение этого в Комментариях для редактора)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Файл с материалом представлен в формате документа OpenOffice, Microsoft Word или RTF."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Приведены полные интернет-адреса (URL) для ссылок там, где это возможно."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Текст набран с одинарным межстрочным интервалом; используется кегль шрифта в 12 пунктов; для выделения используется курсив, а не подчеркивание (за исключением URL-адресов); все иллюстрации, графики и таблицы расположены в соответствующих местах в тексте, а не в конце документа."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Текст соответствует стилистическим и библиографческим требованиям, описанным в <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Руководстве для авторов</a>, которое можно найти на странице «О журнале»."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Имена и адреса электронной почты, введенные на сайте этого журнала, будут использованы исключительно для целей, обозначенных этим журналом, и не будут использованы для каких-либо других целей или предоставлены другим лицам и организациям.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Этот журнал предоставляет непосредственный открытый доступ к своему контенту, исходя из следующего принципа: свободный открытый доступ к результатам исследований способствует увеличению глобального обмена знаниями."
+
+msgid "default.contextSettings.forReaders"
+msgstr "Мы приглашаем наших читателей подписаться на уведомления о выходе номеров этого журнала. Используйте ссылку <a href=\"{$indexUrl}{$contextPath}/user/register\">РЕГИСТРАЦИЯ</a> в верхней части главной страницы журнала. Эта регистрация позволит читателю получать на электронную почту содержание каждого нового номера журнала. Этот список также позволяет журналу говорить об определенном уровне поддержки или количестве читателей. Посмотрите также страницу <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Заявление о конфиденциальности</a>, которая позволяет читателям убедиться в том, что их имя и адрес электронной почты не будут использованы для других целей."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Вы хотите отправить материал для публикации в этом журнале? Рекомендуем вам посмотреть раздел <a href=\"{$indexUrl}{$contextPath}/about\">«О журнале»</a>, где вы сможете ознакомиться с правилами разделов журнала, а также с <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Руководством для автора</a>. Авторам нужно <a href=\"{$indexUrl}{$contextPath}/user/register\">зарегистрироваться</a> в журнале перед отправкой материалов, или, если вы уже зарегистрированы, можно просто <a href=\"{$indexUrl}/index/login\">войти</a> со своей учетной записью и начать процесс отправки, состоящий из пяти шагов."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Мы надеемся, что сотрудники библиотек внесут этот журнал в список электронных журналов своей библиотеки. Следует отметить, что открытая издательская система этого журнала также подходит для того, чтобы библиотеки могли разместить собственные электронные журналы, в редактировании которых участвуют преподаватели и научные работники (подробнее можно посмотреть на <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Этот журнал использует систему LOCKSS для создания распределенной архивной системы между участвующими в этой системе библиотеками и разрешает этим библиотекам создавать постоянные архивы журнала в целях сохранения и восстановления. <a href=\"http://www.lockss.org/\">Подробнее...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Этот журнал использует систему CLOCKSS для создания распределенной архивной системы между участвующими в этой системе библиотеками и разрешает этим библиотекам создавать постоянные архивы журнала в целях сохранения и восстановления. <a href=\"http://clockss.org/\">Подробнее...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Управляющий журналом"
+
+msgid "default.groups.plural.manager"
+msgstr "Управляющие журналом"
+
+msgid "default.groups.abbrev.manager"
+msgstr "УпрЖ"
+
+msgid "default.groups.name.editor"
+msgstr "Редактор журнала"
+
+msgid "default.groups.plural.editor"
+msgstr "Редакторы журнала"
+
+msgid "default.groups.abbrev.editor"
+msgstr "РедЖ"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Приглашенный редактор"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Приглашенные редакторыs"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "ПРед"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Редактор раздела"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Редакторы разделов"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "РедР"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Менеджер по подписке"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Менеджеры по подписке"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "МПодп"
+
+msgid "default.genres.researchInstrument"
+msgstr "Инструмент исследования"
+
+msgid "default.genres.researchMaterials"
+msgstr "Материалы исследования"
+
+msgid "default.genres.researchResults"
+msgstr "Результаты исследования"
+
+msgid "default.genres.transcripts"
+msgstr "Транскрипты"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Анализ данных"
+
+msgid "default.genres.dataSet"
+msgstr "Набор данных"
+
+msgid "default.genres.sourceTexts"
+msgstr "Исходные тексты"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Рецензент"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Рецензенты"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Рец"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"

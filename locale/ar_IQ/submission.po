@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:16+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "قدم طلباً للنشر"
+
+msgid "submission.submit.userGroup"
+msgstr "قدم طلباً بصفتي..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "إختر بأية صفة تقوم بتقديم طلبك هذا."
+
+msgid "submission.upload.selectComponent"
+msgstr "إختر مكون المؤلَّف..."
+
+msgid "submission.title"
+msgstr "عنوان المؤلَّف"
+
+msgid "submission.title.tip"
+msgstr "نوع التقديم عادة ما يكون واحداً من: صورة، نص، أو غيرهما من متعددات الوسائط التي بضمنها: البرامجات أو الملفات التفاعلية. لطفاً، إختر ما تجده أنسبها لطلبك. أمثلة ذلك قد تجدها في <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "إبدأ طلباً جديداً في"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "طلب جديد"
+
+msgid "grid.action.workflow"
+msgstr "المخطط الانسيابي للطلب"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "الملخص لا بد أن يكون من {$wordCount} كلمة أو أقل."
+
+msgid "submission.issueEntry"
+msgstr "البيانات الوصفية"
+
+msgid "submission.submit.whatNext.description"
+msgstr "لقد تم إشعار المجلة بشأن طلبك هذا، وقد تمت مراسلتك لتأكيد بياناتك. بمجرد أن يراجع المحرر طلبك، سيقوم بالاتصال بك."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "اللوح الطباعي يظهر في مقدمة العدد"
+
+msgid "grid.action.issueEntry"
+msgstr "راجع البيانات الوصفية لطلب النشر هذا"
+
+msgid "submission.publication"
+msgstr "النشر"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "إن اللوح الطباعي للمؤَّلف \"{$galleyFormatName}\" قد صار جاهزاً."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "اللوح الطباعي للمؤَّلف \"{$galleyFormatName}\" لم يعد جاهزاً."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "قد تم تحديث معرفات النشر لهذا المؤلَّف."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "مصادقة التنسيق"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>هذا اللوح الطباعي <em>لن يعود متاحاً</em> للقراء.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>هذا اللوح الطباعي <em>سيكون متاحاً</em> للقراء.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "إجعل هذا اللوح الطباعي متاحاً"
+
+msgid "submission.galleyFiles"
+msgstr "ملفات اللوح الطباعي"
+
+msgid "submission.proofReadingDescription"
+msgstr "يقوم المصمم الطباعي برفع الملفات الجاهزة المعدة للنشر هنا. استعمل <em>عيِّن مدققاً</em> ليقوم بدعوة المؤلفين وغيرهم للمساهمة في القراءة التصحيحية لتكون الملفات المصححة مرفوعة للمصادقة قبل النشر."
+
+msgid "grid.action.approveProof"
+msgstr "صادق على هذه التصحيحات ليتم تضمينها في اللوح الطباعي."
+
+msgid "grid.action.pageProofApproved"
+msgstr "تمت المصادقة على التصحيحات ليتم تضمينها في اللوح الطباعي."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "العنوان والملخص"
+
+msgid "submission.submit.upload.description"
+msgstr "إرفع الملفات ذات الصلة بطلب النشر هذا، بضمنها الملف الرئيسي للمؤلَّف، ملفات متعددة الوسائط، جداول البيانات، النماذج الفنية... إلخ."
+
+msgid "submission.pageProofs"
+msgstr "القراءة التصحيحية"
+
+msgid "submission.confirmSubmit"
+msgstr "هل أنت متأكد من رغبتك في تقديم طلب النشر هذا إلى المجلة؟"
+
+msgid "workflow.review.externalReview"
+msgstr "التحكيم"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "أرسله للتحكيم"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "قد تم تحديث البيانات الوصفية للعدد."
+
+msgid "submission.upload.fileContents"
+msgstr "مكون المقالة"
+
+msgid "submission.complete"
+msgstr "مصادق عليه"
+
+msgid "submission.incomplete"
+msgstr "ينتظر المصادقة"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "لطفاً، إختر اللغة التي كُتب بها المؤلَّف."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "قائمة إجراءات طلب النشر"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "عليك أن تقرأ المتطلبات أدناه وتعترف بها قبل المتابعة."
+
+msgid "submission.submit.privacyStatement"
+msgstr "بيان الخصوصية"
+
+msgid "submission.submit.contributorRole"
+msgstr "دور المساهمين"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "أذكر مؤلفاً واحداً على الأقل لهذا الطلب."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "الاسم الأول، الاسم الأخير وعنوان البريد الالكتروني لكل مؤلف معلومات مطلوبة حتماً."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "لطفاً، أذكر عنوان مؤلَّفك هذا."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "لطفاً، أعطنا ملخصاً عن المؤلَّف."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "إن ملخصك طويل جداً. لطفاً، حاول إختزاله ليصير ضمن محدد عدد الكلمات الخاص بهذا القسم."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "لطفاً، إختر دور المساهم."
+
+msgid "submission.citationFormat.notFound"
+msgstr "تعذر استرجاع صيغة الاقتباس التي تم طلبها."
+
+msgid "submission.metadataDescription"
+msgstr "هذه المواصفات مستندة إلى جدول البيانات الوصفية Dublin Core، وهو صيغة قياسية عالمية تستعمل لوصف محتويات المجلة."
+
+msgid "section.any"
+msgstr "أي قسم"
+
+msgid "submission.sectionOptions"
+msgstr "خيارات القسم"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} فقرة/فقرات"
+
+msgid "catalog.category.heading"
+msgstr "كل الفقرات"

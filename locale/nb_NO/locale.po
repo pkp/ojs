@@ -1,0 +1,1840 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:27+00:00\n"
+"Language: \n"
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "navigation.journalHelp"
+msgstr "Hjelp"
+
+msgid "navigation.archives"
+msgstr "Arkiv"
+
+msgid "navigation.current"
+msgstr "Nyeste"
+
+msgid "navigation.otherJournals"
+msgstr "Andre tidsskrift"
+
+msgid "navigation.browseByIssue"
+msgstr "i utgaver"
+
+msgid "navigation.browseByAuthor"
+msgstr "i forfattere"
+
+msgid "navigation.infoForAuthors"
+msgstr "For forfattere"
+
+msgid "navigation.infoForLibrarians"
+msgstr "For bibliotekarer"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informasjon for forfattere"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informasjon for bibliotekarer"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Ikke oppnevnt"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Ikke oppnevnt"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Manus redigeres"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Redigeres"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Manus vurderes"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Vurderes"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arkiv"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arkiv"
+
+msgid "common.queue.long.active"
+msgstr "Aktive manus"
+
+msgid "common.queue.short.active"
+msgstr "Aktive"
+
+msgid "common.queue.long.completed"
+msgstr "Arkiver"
+
+msgid "common.queue.short.completed"
+msgstr "Arkiver"
+
+msgid "section.section"
+msgstr "Seksjon"
+
+msgid "section.sections"
+msgstr "Tidsskriftseksjoner"
+
+msgid "section.title"
+msgstr "Seksjonstittel"
+
+msgid "section.abbreviation"
+msgstr "Forkortelse"
+
+msgid "section.abbreviation.example"
+msgstr "(Eksempel: Artikler=ART)"
+
+msgid "article.article"
+msgstr "Artikkel"
+
+msgid "article.articles"
+msgstr "Artikler"
+
+msgid "common.publication"
+msgstr "Artikkel"
+
+msgid "common.publications"
+msgstr "Artikler"
+
+msgid "article.submissionId"
+msgstr "Manus-ID"
+
+msgid "article.title"
+msgstr "Tittel"
+
+msgid "article.authors"
+msgstr "Forfattere"
+
+msgid "article.indexingInformation"
+msgstr "Indekseringsinformasjon"
+
+msgid "article.metadata"
+msgstr "Metadata"
+
+msgid "article.journalSection"
+msgstr "Tidsskriftseksjon"
+
+msgid "article.file"
+msgstr "Fil"
+
+msgid "article.suppFile"
+msgstr "Tilleggsfil"
+
+msgid "article.suppFiles"
+msgstr "Tilleggsfil(er)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Tilleggsfil(er)"
+
+msgid "article.discipline"
+msgstr "Akademisk fag og felt"
+
+msgid "article.subject"
+msgstr "Emneord (Nøkkelord)"
+
+msgid "article.coverage"
+msgstr "Dekning"
+
+msgid "article.type"
+msgstr "Type, metode eller innfallsvinkel"
+
+msgid "article.language"
+msgstr "Språk"
+
+msgid "article.sectionEditor"
+msgstr "Seksjonsred."
+
+msgid "article.commentsToEditor"
+msgstr "Forfatterkommentarer"
+
+msgid "article.submission"
+msgstr "Manuskript"
+
+msgid "article.submissions"
+msgstr "Manuskript"
+
+msgid "article.abstract"
+msgstr "Sammendrag"
+
+msgid "article.details"
+msgstr "Detaljer"
+
+msgid "submission.submissionEditing"
+msgstr "Manuskriptbehandling"
+
+msgid "submission.changeSection"
+msgstr "Endre til"
+
+msgid "submission.editorDecision"
+msgstr "Redaktørens beslutning"
+
+msgid "submission.round"
+msgstr "Runde&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Redaktørens fagvurdering"
+
+msgid "submission.notifyAuthor"
+msgstr "Send beskjed til forfatter"
+
+msgid "submission.notifyEditor"
+msgstr "Send beskjed til redaktør"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Redaktør/Forfatter e-post"
+
+msgid "submission.reviewersVersion"
+msgstr "Fagkonsulentens annoterte filversjon"
+
+msgid "submission.postReviewVersion"
+msgstr "Filversjon etter fagvurdering"
+
+msgid "submission.editorVersion"
+msgstr "Redaktørens versjon"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Forfatterens omarbeidete filversjon"
+
+msgid "submission.authorVersion"
+msgstr "Forfatterens versjon"
+
+msgid "submission.copyediting"
+msgstr "Manusredigering"
+
+msgid "submission.copyedit"
+msgstr "Manusredigering"
+
+msgid "submission.proofreading"
+msgstr "Korrekturlesing"
+
+msgid "submission.scheduling"
+msgstr "Planlegging"
+
+msgid "submission.scheduledIn"
+msgstr "Planlagt publisert i {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(kommer)"
+
+msgid "submissions.sec"
+msgstr "Seksj."
+
+msgid "submissions.step1"
+msgstr "Trinn 1"
+
+msgid "submissions.step3"
+msgstr "Trinn 3"
+
+msgid "submissions.queuedReview"
+msgstr "Planlagt fagvurdert"
+
+msgid "submissions.published"
+msgstr "Publisert"
+
+msgid "submissions.initial"
+msgstr "Første"
+
+msgid "submissions.proofread"
+msgstr "Korrekturlesing"
+
+msgid "submissions.initialProof"
+msgstr "Første korrektur"
+
+msgid "submissions.postAuthor"
+msgstr "Post-forfatter"
+
+msgid "submissions.reviewRound"
+msgstr "Fagvurderingsrunde"
+
+msgid "submissions.proof"
+msgstr "Korrektur"
+
+msgid "submissions.editorDecision"
+msgstr "Redaktørens beslutning"
+
+msgid "submissions.editorRuling"
+msgstr "Redaktørens avgjørelse"
+
+msgid "submission.eventLog"
+msgstr "Hendelseslogg"
+
+msgid "submissions.copyeditComplete"
+msgstr "Manuskript redigert"
+
+msgid "submissions.layoutComplete"
+msgstr "Sider oppsatt"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Korrektur lest"
+
+msgid "journal.currentIssue"
+msgstr "Nyeste utgave"
+
+msgid "context.contexts"
+msgstr "Tidsskrift"
+
+msgid "journal.path"
+msgstr "Filsti"
+
+msgid "context.context"
+msgstr "Tidsskrift"
+
+msgid "user.showAllJournals"
+msgstr "Vis mine tidsskrift"
+
+msgid "user.registerForOtherJournals"
+msgstr "Registrer for andre tidsskrift"
+
+msgid "user.myJournals"
+msgstr "Mine tidsskrift"
+
+msgid "user.role.manager"
+msgstr "Redaksjonsleder"
+
+msgid "user.role.editor"
+msgstr "Ansvarlig redaktør"
+
+msgid "user.role.subEditor"
+msgstr "Seksjonsredaktør"
+
+msgid "user.role.layoutEditor"
+msgstr "Layoutredaktør"
+
+msgid "user.role.copyeditor"
+msgstr "Manusredaktør"
+
+msgid "user.role.proofreader"
+msgstr "Korrekturleser"
+
+msgid "user.role.author"
+msgstr "Forfatter"
+
+msgid "user.role.subscriptionManager"
+msgstr "Abonnementskontakt"
+
+msgid "user.role.managers"
+msgstr "Redaksjonsledere"
+
+msgid "user.role.editors"
+msgstr "Redaktører"
+
+msgid "user.role.subEditors"
+msgstr "Seksjonsredaktører"
+
+msgid "user.role.layoutEditors"
+msgstr "Layoutredaktører"
+
+msgid "user.role.copyeditors"
+msgstr "Manusredaktører"
+
+msgid "user.role.proofreaders"
+msgstr "Korrekturlesere"
+
+msgid "user.role.authors"
+msgstr "Forfattere"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Abonnementskontakter"
+
+msgid "issue.issue"
+msgstr "Utgave"
+
+msgid "issue.issues"
+msgstr "Utgaver"
+
+msgid "issue.title"
+msgstr "Tittel"
+
+msgid "issue.volume"
+msgstr "Volum"
+
+msgid "issue.number"
+msgstr "Nummer"
+
+msgid "issue.vol"
+msgstr "Vol"
+
+msgid "issue.no"
+msgstr "Nr"
+
+msgid "issue.year"
+msgstr "År"
+
+msgid "issue.noIssues"
+msgstr "Ingen utgaver"
+
+msgid "issue.toc"
+msgstr "Innholdsfortegnelse"
+
+msgid "issue.abstract"
+msgstr "Sammendrag"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Manuskripthendelse"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artikkel innsendt"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Manuskript sendt til publiseringsplanen"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Manuskript utvalgt til utgave"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artikkel publisert"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Forfatterrevisjon innsendt"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Forfatter - revisjonsfil oppdatert"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Redaktør oppnevnt for manuskript"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Redaktør avløst fra manuskript"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Redaktørens beslutning innsendt"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Redaktør - fil oppdatert"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Manuskript sendt til arkivet"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Manuskript hentet opp fra arkivet"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Manusredaktør oppnevnt for manuskript"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Manusredaktør avløst fra manuskript"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Manusredigeringsoppdrag igangsatt"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Manusredaktør - revisjonsfil oppdatert"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Første manusredigering ferdigstilt"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Siste manusredigering ferdigstilt"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Manusredigering - fil oppdatert"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Korrekturleser oppnevnt for manuskript"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Korrekturleser avløst fra manuskript"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Korrekturlesingsoppdrag igangsatt"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Korrekturleser - revisjonsfil oppdatert"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Korrekturlesingsoppdrag ferdigstilt"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Layoutredaktør oppnevnt for manuskript"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Layoutredaktør avløst fra manuskript"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Layoutoppdrag igangsatt"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Layout - oppsett oppdatert"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Layoutoppdrag ferdigstilt"
+
+msgid "comments.commentsOnArticle"
+msgstr "Kommentarer til denne artikkelen"
+
+msgid "comments.authenticated"
+msgstr "av <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"Det å spesifisere en annen default valideringskilde enn OJS har følgende virkning:\n"
+"<ul>\n"
+"\t<li>Hvis en bruker forsøker å registrere en ny konto hos dette nettstedet med et brukernavn som finnes på valideringskilden (men ikke i OJS-databasen), vil registreringen bare bli tillatt hvis det angitte passordet er gyldig for den aktuelle brukerkontoen.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>OBS!</div>\n"
+"<p>Systemet kunne ikke automatisk overskrive konfigurasjonsfilen. For å endre konfigurasjonen må du åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram, og erstatte innholdet i den med innholdet i tekstfeltet nedenfor.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Abonnementsadministrasjon"
+
+msgid "plugins.categories.generic.description"
+msgstr "Generiske programutvidelser brukes for å utvide Open Journal Systems på en rekke måter som ikke er støttet av de andre programutvidelseskategoriene."
+
+msgid "plugins.categories.auth.description"
+msgstr "Validerings-programutvidelser tillater Open Journal Systems å delegere brukervalidering til andre systemer, som for eksempel LDAP-servere."
+
+msgid "manager.setup.registerJournalForIndexingDescription"
+msgstr ""
+"For å få innholdet i dette tidsskriftet indeksert i et verdensomspennende system av forskningsdatabaser, les <a href=\"http://www.oclc.org/oaister/contribute.en.html\" target=\"_blank\">the steps to becoming a data contributor</a> og registrer ditt tidsskrift hos det offisielle <a href=\"http://www.openarchives.org/data/registerasprovider.html\" target=\"_blank\">Open Archives registeret</a>.  For å registrere tidsskriftet trenger du base-URLen til ditt arkiv: <span class=\"highlight\">{$oaiUrl}</span>.  Etterpå kan du registrere tidsskriftet i <a href=\"http://gita.grainger.uiuc.edu/registry/\" target=\"_blank\">UIUC OAI-registeret</a> og <a href=\"http://www.oclc.org/oaister\" target=\"_blank\">OAIster</a>.\n"
+"<br /><br />\n"
+"Merk at om nettstedsadministratoren allerede har registrert nettstedet i disse tjenestene blir tidsskriftet automatisk indeksert og du trenger ikke å registrere det.\n"
+"<br /><br />\n"
+"<a href=\"http://pkp.sfu.ca/harvester/add.php\" target=\"_blank\">Klikk her</a> og skriv inn <span class=\"highlight\">{$siteUrl}</span> under <b>Nettsted URL</b>, og <span class=\"highlight\">{$oaiUrl}</span> under <b>Base URL for OAI-arkiv</b>."
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Trinn: Manuskriptarbeidskø &gt; Manuskriptvurdering &gt; Manuskriptbehandling &gt; Innholdsfortegnelse.<br /><br />\n"
+"Velg en modell for håndtering av disse sidene av den redaksjonelle prosessen. (For å oppnevne ansvarlig redaktør og seksjonsredaktører; gå til Redaktører i tidsskriftadministrasjon.)"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Slå av denne brukeren? Dette vil hindre brukeren fra å logge inn på systemet.\n"
+"\n"
+"Du kan velge å gi brukeren en begrunnelse for at kontoen er slått av."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Beklager, du har ikke administrative rettigheter over denne brukeren. Dette kan være fordi:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Brukeren er nettstedsadministrator</li>\n"
+"\t\t\t<li>Brukeren er aktiv i tidsskrift du ikke administrerer</li>\n"
+"\t\t</ul>\n"
+"\tDenne handlingen må utføres av en nettstedsadministrator."
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktive redaksjonelle oppdrag"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Utførte redaksjonelle oppdrag"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Ingen manuskript utpekt."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Ved å varsle denne manusredaktøren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Ved å varsle denne forfatteren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Ved å varsle denne layoutredaktøren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Ved å varsle denne korrekturleseren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Avslag"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Fagkonsulent avslag, avbrutte og tidligere runder"
+
+msgid "sectionEditor.regrets"
+msgstr "Avslag"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Vis avslag, avbrutt, tidligere runder"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Fagfellevurdering, runde {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Redaktørens beslutning, runde {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Fagkonsulent avslag og avbrutte"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Avslag"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Resultat"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Verve eksisterende bruker som fagkonsulent"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Opprett ny fagkonsulent"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktive redaksjonelle oppdrag"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Utførte redaksjonelle oppdrag"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Ingen aktive redaksjonelle oppdrag."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Layoutoppdrag"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Last opp oppsettformat"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Erstatt fil"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Last opp tilleggsfil"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artikler som avventer fagvurdering"
+
+msgid "reviewer.completedReviews"
+msgstr "Ferdig"
+
+msgid "reviewer.averageQuality"
+msgstr "Rangering"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Fil til vurdering"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Send beskjed til redaktøren"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Kommer til å utføre vurderingsoppdraget"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Kan ikke å utføre vurderingsoppdraget"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Filer kan bare vises hvis vurderingsoppdraget er akseptert"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Manuskriptredaktør"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Skriv eller lim inn kommentarer til vurderingsoppdrag her"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Redaktøren fører inn"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Send purring"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Velg en anbefaling og send inn vurderingen for å ferdigstille prosessen. Du må legge inn en vurdering eller laste opp en fil før du velger anbefaling."
+
+msgid "reviewer.article.recommendation"
+msgstr "Anbefaling"
+
+msgid "reviewer.article.submitReview"
+msgstr "Send anbefaling til redaktør"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Kommentarer"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Opplastete filer"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Versjon lastet opp av fagkonsulent"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Hvis du vil skrive merknader til redaktøren direkte i manuskriptfilen, må du først lagre den på din egen maskin, og deretter bruke Finn/Last opp.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Redaktørens bestilling"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Ditt svar"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Fagvurdering: innsendt"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Fagvurdering: ventet-dato"
+
+msgid "reviewer.article.decision.accept"
+msgstr "aksepteres"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "aksepteres, med forbehold om omarbeiding"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "send inn på nytt for ny fagvurdering"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "sendes inn til et annet publiseringssted"
+
+msgid "reviewer.article.decision.decline"
+msgstr "avvises"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "annet: se kommentarer"
+
+msgid "reviewer.article.schedule"
+msgstr "Arbeidsplan"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Manuskriptet som skal vurderes"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Arbeidsplan for fagvurderingen"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Fagvurdering steg for steg"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Instruks for fagkonsulenter"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Ingen anbefaling er valgt. Du må velge en anbefaling å sende inn."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Så snart du har registrert beslutningen, kan du ikke lenger endre den. Er du sikker på at du vil fortsette?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Fil til MR"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Fil til manusredaktør"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Manusredaktør fil"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Ingen korrekturlesingsoppdrag"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"<p>For å laste opp manuskriptet ditt til dette tidsskriftet, må du nå fullføre følgende trinn.</p>\n"
+"<ol>\n"
+"<li>Klikk Finn/Browse (eller Velg Fil) på denne siden, som åpner et Velg Fil-vindu for å finne filen på datamaskinen din.</li>\n"
+"<li>Finn filen du ønsker å sende inn, og marker den.</li>\n"
+"<li>Klikk Åpne i Velg Fil vinduet, og filnavnet blir hentet til denne siden.</li>\n"
+"<li>Klikk Last opp på denne siden, og filen blir lastet opp fra din maskin til tidsskriftet. Filen får automatisk et nytt filnavn i samsvar med tidsskriftets rutiner.</li>\n"
+"<li>Så snart manuskriptfilen er lastet opp, kan du klikke Lagre og Fortsett nederst på denne siden.</li>\n"
+"</ol>\n"
+"\n"
+"Du kan senere åpne filen ved å klikke på filnavnet. En ny eller omarbeidet fil kan også lastes opp senere, men da slettes den nåværende filen. Du kan legge til ytterligere filer ved å bruke Tilleggsfiler (neste trinn). Hvis du får problemer med å laste opp manuskriptet ditt, kontakt <a href=\"mailto:{$supportEmail}\">{$supportName}</a> med e-post eller på telefon {$supportPhone} for å få hjelp."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "E-post med bestilling kan ikke sendes før en fagvurderingsversjon er på plass."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "E-post med bestilling kan ikke sendes før en fil er valgt for manusredigering i redaktørens beslutning på fagvurderingssiden."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "E-post med bestilling kan ikke sendes før en fil er lastet opp for manusredigering."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Første manusredigering"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Redaktørens manusredigering"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Forfatterens manusredigering"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Siste manusredigering"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Manusredaktørens versjon"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Oppnevn manusredaktør"
+
+msgid "submission.copyedit.useFile"
+msgstr "Bruk fil"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Manusredigeringskommentarer"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instruks for manusredigering"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Oppnevn layoutredaktør"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Erstatt layoutredaktør"
+
+msgid "submission.layout.layoutComments"
+msgstr "Layoutkommentarer"
+
+msgid "submission.layout.instructions"
+msgstr "Instruks for layoutredigering"
+
+msgid "submission.proofreadingComments"
+msgstr "Korrekturlesingskommentarer"
+
+msgid "submission.proofread.corrections"
+msgstr "Korrekturlesing: rettelser"
+
+msgid "submission.proofread.instructions"
+msgstr "Instruks for korrekturlesing"
+
+msgid "submission.logType.article"
+msgstr "Artikkel"
+
+msgid "submission.logType.author"
+msgstr "Forfatter"
+
+msgid "submission.logType.editor"
+msgstr "Redaktør"
+
+msgid "submission.logType.review"
+msgstr "Fagvurdering"
+
+msgid "submission.logType.copyedit"
+msgstr "Manusredigering"
+
+msgid "submission.logType.layout"
+msgstr "Layout"
+
+msgid "submission.logType.proofread"
+msgstr "Korrekturlesing"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Redaktør/forfatter-korrespondanse"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Manusredigering kommentarer"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Disse kommentarene kan også vises til forfatteren.<br />\n"
+"(Etter lagring kan du legge til flere kommentarer.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "For forfatter og redaktør"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "For redaktør"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Etter sending, vis fram en redigerbar blindkopiversjon som kan sendes til fagkonsulenter."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "For forfatter og redaktør"
+
+msgid "submission.comments.forEditor"
+msgstr "For redaktør"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Lagre, og e-post til forfatter"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Lagre og send e-post til Redaktør"
+
+msgid "user.login.registerNewAccount"
+msgstr "Har du ikke brukernavn? Registrer deg hos dette nettstedet"
+
+msgid "user.login.resetPasswordInstructions"
+msgstr ""
+"Av sikkerhetsgrunner sender systemet et nytt passord til registrerte brukere, heller enn å gjenta det\n"
+"nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å tilbakestille passordet ditt. En bekreftelse vil bli sendt til denne e-postadressen."
+
+msgid "user.register.selectJournal"
+msgstr "Velg et tidsskrift du vil registrere deg hos"
+
+msgid "user.register.noJournals"
+msgstr "Det finnes ingen tidsskrift å registrere seg hos på dette nettstedet."
+
+msgid "user.register.privacyStatement"
+msgstr "Erklæring om personopplysninger"
+
+msgid "user.register.alreadyRegisteredOtherContext"
+msgstr "<a href=\"{$registerUrl}\">Klikk her</a> hvis du er allerede registrert hos dette eller et annet tidsskrift på dette nettstedet."
+
+msgid "user.register.notAlreadyRegisteredOtherContext"
+msgstr "<a href=\"{$registerUrl}\">Klikk her</a> hvis du <b>ikke</b> allerede er registrert hos dette eller et annet tidsskrift på dette nettstedet."
+
+msgid "user.register.loginToRegister"
+msgstr "Skriv inn det registrerte brukernavnet og passordet ditt for å registrere deg hos dette tidsskriftet også."
+
+msgid "user.register.registrationDisabled"
+msgstr "Dette tidsskriftet tar for øyeblikket ikke i mot brukerregistrering."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Passordet du skrev inn er ikke langt nok."
+
+msgid "user.register.readerDescription"
+msgstr "Be om varsel med e-post når en ny utgave av tidsskriftet publiseres."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Be om varsel med e-post når en utgave av tidsskriftet gis Open Access."
+
+msgid "user.register.authorDescription"
+msgstr "Kan sende inn elementer til tidsskriftet."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Villig til å utføre fagvurdering av manuskript for tidsskriftet."
+
+msgid "user.register.reviewerDescription"
+msgstr "Villig til å utføre fagvurdering av manuskript for tidsskriftet. Oppgi fagvurderingsinteresse (hovedområder og forskningsmetoder)."
+
+msgid "search.browseAuthorIndex"
+msgstr "Finn fram i forfatterregister"
+
+msgid "search.searchFor"
+msgstr "Søk i artikler etter"
+
+msgid "search.withinJournal"
+msgstr "Innen"
+
+msgid "search.allJournals"
+msgstr "Alle tidsskrift"
+
+msgid "search.authorIndex"
+msgstr "Finn fram i forfatterregister"
+
+msgid "search.authorDetails"
+msgstr "Forfatterdetaljer"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Søketips: <ul>\n"
+"<li>Søkeord skiller ikke mellom små og store bokstaver</li>\n"
+"<li>Vanlige ord blir ignorert</li>\n"
+"<li>Ved standard søk blir bare artikler som inneholder <i>alle</i> søkeordene truffet (m.a.o. at søkebegrepet <i>AND</i> er implisitt)</li>\n"
+"<li>Du kan kombinere flere søkeord med <i>OR</i> for å finne artikler som inneholder minst ett av søkeordene; for eksempel <i>utdanning OR forskning</i></li>\n"
+"<li>Bruk parenteser for å lage komplekse søk; for eksempel <i>archive ((tidsskrift OR konferanse) NOT avhandling)</i></li>\n"
+"<li>Søk etter en eksakt frase ved å sette den i anførselstegn; for eksempel <i>\"Open Access publisering\"</i></li>\n"
+"<li>Ekskluder et søkeord med prefikset <b>-</b> eller <i>NOT</i>; f.eks. <i>online -politics</i> eller <i>online NOT politics</i></li>\n"
+"<li>Bruk <b>*</b> i søkeord som jokertegn for å treffe alskens tegn; for eksempel vil <i>soci* morality</i> både treffe dokumenter som inneholder \"sociological\" og \"societal\"</li>\n"
+"</ul>"
+
+msgid "site.journalsHosted"
+msgstr "Tidsskrifter dette nettstedet er vert for"
+
+msgid "site.journalView"
+msgstr "Vis tidsskrift"
+
+msgid "site.journalRegister"
+msgstr "Registrer"
+
+msgid "site.journalCurrent"
+msgstr "Nyeste utgave"
+
+msgid "current.current"
+msgstr "Nyeste"
+
+msgid "current.noCurrentIssue"
+msgstr "Nyeste utgave finnes ikke"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Dette tidsskriftet har ennå ikke publisert noen utgave."
+
+msgid "archive.archives"
+msgstr "Arkiv"
+
+msgid "archive.browse"
+msgstr "Finn fram i eldre utgaver"
+
+msgid "archive.issueUnavailable"
+msgstr "Finner ingen utgave"
+
+msgid "about.statistics"
+msgstr "Statistikk"
+
+msgid "about.journalContact"
+msgstr "Kontaktperson for tidsskriftet"
+
+msgid "about.aboutTheJournal"
+msgstr "Om tidsskriftet"
+
+msgid "about.editorialTeam"
+msgstr "Redaksjon"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografi"
+
+msgid "about.editorialPolicies"
+msgstr "Redaksjonelle retningslinjer"
+
+msgid "about.focusAndScope"
+msgstr "Hovedfokus og spennvidde"
+
+msgid "about.sectionPolicies"
+msgstr "Seksjonsretningslinjer"
+
+msgid "about.submissions"
+msgstr "Manuskript"
+
+msgid "about.sponsors"
+msgstr "Sponsorer"
+
+msgid "about.contributors"
+msgstr "Andre støttespillere"
+
+msgid "about.onlineSubmissions"
+msgstr "Online innsending av manuskript"
+
+msgid "about.onlineSubmissions.haveAccount"
+msgstr "Har du allerede brukernavn/passord til {$journalTitle}?"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Gå til innlogging"
+
+msgid "about.onlineSubmissions.needAccount"
+msgstr "Trenger du brukernavn/passord?"
+
+msgid "about.onlineSubmissions.registration"
+msgstr "Gå til registrering"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Registrering og innlogging er påkrevet for sende inn elementer online og for å følge status for innsendte manuskript."
+
+msgid "about.authorGuidelines"
+msgstr "Forfatterinstruks"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Sjekkliste for klargjøring av manuskript"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Som del av innsendingsprosessen må forfatteren krysse av for at manuskriptet oppfyller følgende krav, og manuskript som ikke oppfyller kravene og følger retningslinjene, kan bli returnert til forfatteren."
+
+msgid "about.copyrightNotice"
+msgstr "Erklæring om copyright"
+
+msgid "about.privacyStatement"
+msgstr "Erklæring om personopplysninger"
+
+msgid "about.peerReviewProcess"
+msgstr "Om fagvurderingsprosessen"
+
+msgid "about.publicationFrequency"
+msgstr "Publiseringsfrekvens"
+
+msgid "about.openAccessPolicy"
+msgstr "Open Access-retningslinjer"
+
+msgid "about.delayedOpenAccess"
+msgstr "Utsatt Open Access"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Innholdet i dette tidsskriftet vil bli tilgjengelig i Open Access format"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "måned(er) etter at en utgave er publisert."
+
+msgid "about.archiving"
+msgstr "Arkivering"
+
+msgid "about.subscriptions"
+msgstr "Abonnement"
+
+msgid "about.subscriptionsContact"
+msgstr "Abonnementskontakt"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Abonnementstyper"
+
+msgid "about.journalSponsorship"
+msgstr "Tidsskriftets sponsorer"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Om dette publiseringssystemet"
+
+msgid "about.aboutOJSJournal"
+msgstr "Dette tidsskriftet bruker Open Journal Systems {$ojsVersion}, som er open source-programvare for tidskriftsadministrasjon og publisering. OJS er utviklet, støttet, og fritt distribuert av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "Dette nettstedet bruker Open Journal Systems {$ojsVersion}, som er open source programvare for tidskriftsadministrasjon og publisering. OJS er utviklet, støttet, og fritt distribuert av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems hjelp"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS hjelp"
+
+msgid "installer.appInstallation"
+msgstr "OJS installasjon"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS oppgradering"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS versjon {$version}</h4>\n"
+"\n"
+"<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href=\"{$baseUrl}/docs/README.md\">README</a> filen som følger med denne programvare. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP nettstedet</a>. Hvis du har feilmeldinger eller trenger svar om teknisk støtte for Open Journal Systems, oppsøk <a href=\"http://forum.pkp.sfu.ca\">støtteforum</a> eller PKPs online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">feilmeldingssystem</a>. Selv om støtteforumet er den kontaktkanalen vi foretrekker, kan du også e-poste teamet: <a href=\"mailto:pkp-support@sfu.ca\">pkp-support@sfu.ca</a>.</p>\n"
+"\n"
+"<h4>Oppgradering</h4>\n"
+"\n"
+"<p>Hvis du oppgraderer en eksisterende installasjon av OJS 2.x, <a href=\"{$upgradeUrl}\">klikk her</a> for å gå videre.</p>\n"
+"\n"
+"<h4>Anbefalte systemkrav</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}, du benytter nå PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 eller <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x eller >= 2.0.4x eller Microsoft IIS 6</li>\n"
+"\t<li>Operativsystem: Alle OS som støtter ovennevnte programvare, herunder <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Ettersom PKP ikke har ressurser til å test alle mulige kombinasjoner av programvareversjoner og -plattformer, kan vi heller ikke garantere korrekt funksjon eller love teknisk støtte.</p>\n"
+"\n"
+"<p>Endringer av disse innstillinger kan gjøres etter installasjon ved å redigere filen <tt>config.inc.php</tt> i OJS' basismappe, eller gjennom grensesnittet for nettstedsadministrasjon.</p>\n"
+"\n"
+"<h4>Støttede databasesystemer</h4>\n"
+"\n"
+"<p>OJS er for øyeblikket bare testet for MySQL og PostgreSQL, selv om andre databaseadministrasjonssystemer støttet av <a href=\"http://php.weblogs.com/adodb/\" target=\"_blank\">ADOdb</a> også kan fungere (helt eller delvis). Kompatibilitetsrapporter og/eller code patcher for alternative DBMSs kan sendes til OJS teamet.</p>\n"
+"\n"
+"<h4>Før installasjon</h4>\n"
+"\n"
+"<p>1. Følgende filer og mapper (og deres innhold) må gjøres overskrivbare:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> er overskrivbar (optional): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> er overskrivbar: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> er overskrivbar: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> er overskrivbar: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> er overskrivbar: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> er overskrivbar: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. En mappe for lagring av opplastete filer må opprettes og gjøres overskrivbar (Se \"Filinnstillinger\" nedenfor).</p>\n"
+"\n"
+"<h4>Manuell installasjon</h4>\n"
+"\n"
+"<p>Velg <strong>Manuell installering</strong> for å vise SQL-setninger  som trengs for å opprette OJS databaseskjema og første data, slik at databaseinstallasjonen kan utføres manuelt. Denne valgmuligheten er nyttig for debugging av installasjonsproblemer, særlig på platformer systemet ikke har støtte for. Merk at denne installasjonsmåten verken vil lage databasen eller tabeller, selv om konfigurasjonsfilen likevel kommer til å bli skrevet med de medfølgende databaseinnstillingene.</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS versjon {$version}</h4>\n"
+"\n"
+"<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href=\"{$baseUrl}/docs/README.md\">README</a>- og <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a>-filene som følger med denne programvaren. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKPs nettsted</a>. Hvis du har feilmeldinger eller spørsmål om teknisk støtte for Open Journal Systems, se OJS' <a href=\"http://forum.pkp.sfu.ca\">støtteforum</a> eller besøk PKPs online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">feilmeldingssystem</a>. Selv om støtteforumet er den foretrukne kontaktkanalen, kan du også e-poste teamet: <a href=\"mailto:pkp-support@sfu.ca\">pkp-support@sfu.ca</a>.</p>\n"
+"<p>Det er <strong>på det sterkeste anbefalt</strong> at du tar backup av database din, filmappen, og OJS installasjonsmappe før du går videre.</p>\n"
+"<p>Hvis du kjører installasjonen i <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, vennligst forsikre deg om at max_execution_time directive i din php.ini konfigurasjonsfil er satt til en høy grense. Hvis denne eller en annen tidsbegrensning (for eks. Apache's \"Timeout\" direktiv) blir overskredet og oppgraderingsprosessen dermed blir avbrutt, vil det bli nødvendig å gripe inn manuelt.</p>"
+
+msgid "installer.localeInstructions"
+msgstr "Primærspråket som skal brukes i dette systemet. Vennligst slå opp i OJS-dokumentasjonen hvis du er interessert i støtte for språk som ikke er oppført her."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Velg øvrige språk som skal støttes i dette systemet. Disse språkene vil bli tilgjengelig til bruk for de tidsskrift nettstedet er vert for. Flere språk kan også installeres når som helst, gjennom grensesnittet for nettstedsadministrasjon."
+
+msgid "installer.filesDirInstructions"
+msgstr "Skriv inn fullstendig sti til en eksisterende mappe hvor opplastede filer skal oppbevares. Denne mappen bør ikke kunne aksesseres direkte fra internett. <strong>Vennligst sikre at denne mappen finnes og er overskrivbar før du installerer.</strong> Windows filstinavn bør bruke vanlig skråstrek (/), for eks. \"C:/myjournal/files\"."
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<b>Advarsel:</b> Hvis installasjonen feilet under databaseinstallasjonen kan du trenge å droppe din OJS-database eller databasetabellene før du forsøker å reinstallere databasen."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>IMPORTANT!</h4>\n"
+"<p>Installasjonen kunne ikke automatisk overskrive konfigurasjonsfilen. Før du forsøker å bruke systemet, vennligst åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram og erstatt innholdet i den med innholdet i tekstfeltet nedenfor.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Installasjonen av OJS er vellykket gjennomført .</p>\n"
+"<p>For å begynne å bruke systemet, <a href=\"{$loginUrl}\">logg inn</a> med brukernavnet og passord skrevet inn på foregående side.</p>\n"
+"<p>Hvis du ønsker å motta nyheter og oppdateringer, <strong>vennligst registrer deg på <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du har spørsmål eller kommentarer, besøk <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">støtteforumet</a>.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Oppgradering av OJS til versjon {$version} ble vellykket gjennomført.</p>\n"
+"<p>Ikke glem å sette \"installed\"-innstillingen i din config.inc.php konfigurasjonsfil tilbake til  <i>På</i>.</p>\n"
+"<p>Om du ikke allerede har registrert deg og ønsker å motta nyheter og oppdateringer, <strong>vennligst registrer deg på<a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du have spørsmål eller kommentarer, vennligst besøk <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">støtteforumet</a>.</p>"
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} har omarbeidet artikkel {$submissionId}. Den nye filens ID er {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} er avløst fra vurdering av manuskriptet {$submissionId} for vurderingsrunde {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "Vurderingsrunde {$round} av manuskriptet {$submissionId} ved {$reviewerName} er igangsatt."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} er rangert for vurderingsrunde {$round} av manuskriptet {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "Ventet-datoen for vurderingsrunde {$round}  av manuskriptet {$submissionId} ved {$reviewerName} er satt til {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} ved {$reviewerName} er satt."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} er satt av redaktøren, {$editorName}, på vegne av fagkonsulenten, {$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "Manuskriptet {$submissionId} er gjeninnsendt for vurdering."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} har avslått runde {$round} vurdering av manuskript {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} har akseptert runde {$round} vurdering av manuskript {$submissionId}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} har akseptert runde {$round} vurdering av manuskript {$submissionId} på vegne av {$reviewerName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Redaktøren, {$userName}, har lastet opp en vurderingsfil for runde {$round} for manuskriptet {$submissionId} på vegne av fagkonsulenten, {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "En fagkonsulentfil er lastet opp."
+
+msgid "log.copyedit.initiate"
+msgstr "Manusredigering av manuskript {$submissionId} er utført av {$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Default manusredigeringsfil er valgt."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} har ferdigstilt første manusredigering av manuskriptet {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} har ferdigstilt siste manusredigering av manuskriptet {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} er oppnevnt for manusredigering av manuskriptet {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "En manusredaktørversjon av manuskriptfilen er lastet opp."
+
+msgid "log.copyedit.authorFile"
+msgstr "En versjon av manuskriptfilen bearbeidet av forfatteren er lastet opp."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} er oppnevnt som layoutredaktør for manuskriptet {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} er avløst som layoutredaktør for manuskriptet {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} har ferdigstilt layoutredigering av manuskriptet {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "Metadata for denne artikkelen ble endret av {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "En redaktørversjon av manuskriptfilen er lastet opp."
+
+msgid "log.editor.archived"
+msgstr "Manuskriptet {$submissionId} er arkivert."
+
+msgid "log.editor.restored"
+msgstr "Manuskriptet {$submissionId} er hentet tilbake til arbeidsplanen."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} er oppnevnt som redaktør for manuskriptet {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} har oppnevnt {$proofreaderName} til å korrigere manuskriptet {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} har sendt inn {$submissionId} for planlegging."
+
+msgid "log.imported"
+msgstr "{$userName} har importert artikkel {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Fagfellevurdert artikkel"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Klikk på ikonet for å fylle ut vurderingsskjemaet."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vær vennlig å fylle inn de påkrevde feltene."
+
+msgid "common.payment"
+msgstr "Betaling"
+
+msgid "common.payments"
+msgstr "Betalinger"
+
+msgid "common.confirmComplete"
+msgstr "Er du sikker på at du vil registrere at du er ferdig med denne oppgaven? Hvis du gjør dette, kan du muligens ikke foreta endringer senere."
+
+msgid "common.homePageHeader.altText"
+msgstr "Tidsskriftets hjemmeside: topptekst"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Tidsskriftets hjemmeside: bilde"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Interessekonflikter: retningslinjer"
+
+msgid "article.coverPage.altText"
+msgstr "Omslagsbilde"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Åpen tilgang (Open Access)"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Begrenset tilgang"
+
+msgid "article.comments.sectionDefault"
+msgstr "Standardvalg"
+
+msgid "article.comments.disable"
+msgstr "Slå av"
+
+msgid "article.comments.enable"
+msgstr "Slå på"
+
+msgid "article.fontSize"
+msgstr "Skriftstørrelse"
+
+msgid "article.fontSize.small.altText"
+msgstr "Liten"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Middelstor"
+
+msgid "article.fontSize.large.altText"
+msgstr "Stor"
+
+msgid "submission.sent"
+msgstr "Sendt"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Brukerkontoen din er ikke knyttet til noe tidsskrift. Vennligst velg tidsskrift:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Brukerkontoen din er ikke knyttet til noen rolle for dette tidsskriftet. Vennligst velg blant disse alternativene:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Send inn et artikkelforslag"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Send inn en artikkel: Forfatterregistreringen er for øyeblikket slått av."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Registrer som fagkonsulent"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Registrer som fagkonsulent: Registrering av fagkonsulenter er for øyeblikket slått av."
+
+msgid "issue.coverPage.altText"
+msgstr "Omslagsside"
+
+msgid "reader.subscribersOnly"
+msgstr "Bare for abonnenter"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Bare abonnenter får tilgang til dette elementet. Logg inn for å bekrefte abonnement."
+
+msgid "reader.openAccess"
+msgstr "Åpen tilgang (Open Access)"
+
+msgid "reader.subscriptionAccess"
+msgstr "Abonnementstilgang"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Abonnements- eller betalingstilgang"
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>For øyeblikket er det dessverre ikke mulig å laste ned pakkene med oversatte lokalfiler fra webserveren hos Public Knowledge Project, fordi:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Din server har ikke eller tillater ikke bruk av GNU \"tar\"-funksjonen</li>\n"
+"\t\t<li>OJS greier ikke å modifisere registerfilen for lokalfiler, som vanligvis heter \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Pakkene med oversatte lokalfiler kan lastes ned manuelt fra <a href=\"http://pkp.sfu.ca\">PKP-nettstedet</a>.</p>"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Forslag til <i>Creative Commons Copyright Notices</i> på engelsk</h3>\n"
+"<h4>1. Forslag til retningslinjer for tidsskrift som tilbyr <i>Open Access</i></h4>\n"
+"Authors who publish with this journal agree to the following terms:\n"
+"<ol type=\"a\">\n"
+"\t<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>\n"
+"\t<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>\n"
+"\t<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>Forslag til retningslinjer for tidsskrift som tilbyr utsatt <i>Open Access</i> (OA etter en karantenetid)</h4>\n"
+"Authors who publish with this journal agree to the following terms:\n"
+"<ol type=\"a\">\n"
+"\t<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>\n"
+"\t <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>\n"
+"\t <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>For at lesere lett skal kunne finne nettpubliserte versjoner av verk forfattere henviser til i artiklene sine, finnes følgende muligheter.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Legg til et Leseverktøy</strong><p>Redaksjonslederen kan legge til verktøyet \"Finn henvisning\" i Leseverktøy som vises i sidespalten ved publiserte artikler. Med dette verktøyet kan leseren lime inn tittelen fra en henvisning for å søke etter verket i egnete søkeverktøy som er valgt på forhånd av tidsskriftet.</p></li>\n"
+"\t<li><strong>Legg inn lenker i henvisningene</strong><p>Layoutredaktøren kan legge inn aktive lenker direkte i artikkelfilens henvisninger ved å følge instruksen nedenfor (som kan redigeres).</p></li>\n"
+"</ol>"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Ugyldig filformat. Tillatte filformat er .gif, .jpg, eller .png."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Send e-post til manuskriptredaktøren"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "om hvorvidt du vil påta deg vurderingsoppdraget."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Hvis du påtar deg vurderingsoppdraget: se 'Instruks for fagkonsulenter' nedenfor."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Klikk på filnavn for å laste ned og vurdere dette innsendte manuskriptet og de eventuelle tilleggsfilene som hører til (på skjerm eller i utskrift)."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Avgi en erklæring om hvorvidt du står i en interessekonflikt med hensyn til denne forskningen (se <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Retningslinjer for Erklæring om interessekonflikter</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Interessekonflikter"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Klikk på ikonet for å skrive eller lime inn fagvurderingen din av dette manuskriptet."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Du kan i tillegg laste opp filer som kan gjøres tilgjengelige for redaktør og/eller forfatter."
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Ingen (last opp en ferdigstilt filversjon til manusredigering før bestillingen sendes)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Offentlig Sideoppsett-identifikator"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Lastet valutalisten \"{$filename}\" fra XML"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Offentlig identifikator for sideoppsettet finnes allerede."
+
+msgid "submission.layout.referenceLinking"
+msgstr "Henvisningslenking"
+
+msgid "about.authorFees"
+msgstr "Forfatterbetaling"
+
+msgid "about.authorFeesMessage"
+msgstr "Dette tidsskriftet krever inn følgende forfatterbetaling."
+
+msgid "about.memberships"
+msgstr "medlemskap"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS' redaksjonelle prosess og publiseringsprosess"
+
+msgid "help.searchReturnResults"
+msgstr "Tilbake til søkeresultat"
+
+msgid "donations.thankYou"
+msgstr "Takk"
+
+msgid "donations.thankYouMessage"
+msgstr "Takk for bidraget ditt: vi setter stor pris på din støtte."
+
+msgid "payment.loginRequired"
+msgstr "Du må være logget inn for å betale."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Abonnement eller artikkelkjøp er påkrevet for å få tilgang til dette elementet. Du må være innlogget for å bekrefte tidligere betaling eller betale artikkelkjøp."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Du må være innlogget for å gi en donasjon."
+
+msgid "payment.paid"
+msgstr "Betalt"
+
+msgid "payment.payNow"
+msgstr "Betal nå"
+
+msgid "payment.waive"
+msgstr "Gi fritak"
+
+msgid "payment.alreadyPaid"
+msgstr "Allerede betalt"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "For å ferdigstille innsendingen kan du krysse av i denne boksen hvis du allerede har sendt betalingen til tidsskriftet. Den redaksjonelle behandlingen av det innsendte manuskriptet settes i gang så snart betalingen er mottatt. Klikk BETAL NÅ ovenfor, for å se betalingsinstruksen."
+
+msgid "payment.paymentReceived"
+msgstr "Betalingen er mottatt"
+
+msgid "payment.paymentSent"
+msgstr "Betalingen er allerede sendt"
+
+msgid "payment.type.submission"
+msgstr "Innsendingsgebyr"
+
+msgid "payment.type.publication"
+msgstr "Publiseringsgebyr"
+
+msgid "payment.type.fastTrack"
+msgstr "Gebyr for ekspress-fagvurdering"
+
+msgid "payment.type.membership"
+msgstr "Individuell medlemsavgift"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Betal artikkelpris"
+
+msgid "payment.type.subscription"
+msgstr "Abonnementsavgift"
+
+msgid "payment.type.donation"
+msgstr "Donasjoner"
+
+msgid "payment.donation.makeDonation"
+msgstr "Gi en donasjon"
+
+msgid "payment.submission.paySubmission"
+msgstr "Betal innsendingsgebyr"
+
+msgid "payment.publication.payPublication"
+msgstr "Betal publiseringsgebyr"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Publiseringsgebyr er betalt"
+
+msgid "payment.membership.buyMembership"
+msgstr "Kjøp individuelt medlemskap"
+
+msgid "payment.membership.renewMembership"
+msgstr "Forny individuelt medlemskap"
+
+msgid "payment.membership.ends"
+msgstr "Avsluttes"
+
+msgid "payment.subscription.renew"
+msgstr "Forny abonnement"
+
+msgid "payment.subscription.expires"
+msgstr "Utløper"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS krever tilgang til en SQL-database for lagring av data. Se listen over databaser som støttes i systemkravene ovenfor. Skriv inn innstillingene som skal brukes for å opprette forbindelsen med databasen i feltene nedenfor."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} har avslått å utføre fagvurdering i {$round}. runde for manuskriptet{$submissionId} på vegne av {$reviewerName}."
+
+msgid "log.editor.decision"
+msgstr "Redaktørbeslutningen ({$decision}) for artikkelen {$submissionId} ble journalført av {$editorName}."
+
+msgid "user.manageMySubscriptions"
+msgstr "Administrer mine abonnementer"
+
+msgid "subscriptionTypes.currency"
+msgstr "Valuta"
+
+msgid "subscriptionTypes.year"
+msgstr "år"
+
+msgid "subscriptionTypes.years"
+msgstr "år"
+
+msgid "subscriptionTypes.month"
+msgstr "måned"
+
+msgid "subscriptionTypes.months"
+msgstr "måneder"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Uten utløpsdato"
+
+msgid "subscriptionTypes.format"
+msgstr "Format"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Trykt"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Trykt og online"
+
+msgid "subscriptions.inactive"
+msgstr "Ikke aktiv"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.status.active"
+msgstr "Aktiv"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Informasjon må oppdateres"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Behøver godkjenning"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Avventer manuell betaling"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Avventer online-betaling"
+
+msgid "subscriptions.status.other"
+msgstr "Annet, se notater"
+
+msgid "subscriptions.individualDescription"
+msgstr "Personlige abonnement krever at man logger inn for å få tilgang til innhold."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Institusjonsabonnement krever ikke innlogging. Brukerens domene og/eller IP-adresse benyttes for å gi tilgang til innhold."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Merk:</strong> Institusjonsabonnementer som er kjøpt online trenger godkjenning av domene og IP-adresseområde før abonnementet aktiveres."
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Personlige abonnementer"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Institusjonelle abonnementer"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Abonnementstyper"
+
+msgid "manager.setup.reviewProcessEmailDescription"
+msgstr "Redaktørene sender fagfellevurderere forespørsel om å være fagfellevurderer med det innsendte manuskriptet vedlagt e-posten. Fagfellevurdererne sender sin aksept eller avslag til redaktørene på e-post, og sine kommentarer og anbefalinger. Redaktørene legger inn fagfellevurderernes aksept eller avslag på forespørselen, og deres vurderinger og anbefalinger på innleveringens vurderingsside for å dokumentere fagfellevurderingsprosessen."
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"<ol>\n"
+"\t<li>Merkede elementer indikerer at noe avventer handling fra redaktøren.</li>\n"
+"\t<li>\"Forventet\" fylles ut når fagfellevurdereren aksepterer oppdraget; det viser antall uker frem til forfallsdato for vurderingen eller (-) antall uker siden vuderingen skulle vært ferdig.</li>\n"
+"</ol>"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Retningslinjene for fagfellevurdering gir fagfellevurdererne kriterier for vurdering av hvorvidt en innlevering er egnet for publisering i tidsskriftet, og kan også inneholde veiledning i å skrive en effektiv og hjelpsom vurdering. Ved gjennomføring av vurderingen får fagfellevurdererne to tekstbokser tilgjengelig, en merket  \"for forfatter og redaktør,\" og den andre merket \"for redaktøren.\" Som et alternativ kan tidsskriftadministratoren lage vurderingsskjema under Vurderingsskjema. Uansett vil redaktøren kunne inkludere fagfellevurderingene i korrespondanse med forfattere."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Mine abonnementer"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Personlige abonnementer"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Institusjonelle abonnementer"
+
+msgid "user.subscriptions.renew"
+msgstr "Forny"
+
+msgid "user.subscriptions.purchase"
+msgstr "Kjøp"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Kjøp nytt abonnement"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Kjøp personlig abonnement"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Kjøp institusjonelt abonnement"
+
+msgid "user.subscriptions.expires"
+msgstr "Utløper"
+
+msgid "user.subscriptions.expired"
+msgstr "Utløp"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Se tilgjengelige abonnementstyper"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Abonnementstype"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Medlemskap"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Valgt abonnementstype krever medlemskapsinformasjon."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Velg en gyldig abonnementstype."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Denne brukerkontoen har allerede et personlig abonnement."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Medlemskapsinformasjon dersom det kreves for den valgte abonnementstypen."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Institusjonsnavn"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Et institusjonsnavn må oppgis."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Postadresse"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domene"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Om et domenenavn oppgis her, er IP-adresseområde valgfritt. <br />Gyldige verdier er domenenavn (f.eks. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Den valgte abonnementstypen krever et domene og/eller et IP-adresseområde for abonnementsautentisering."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Vennligst oppgi et gyldig domene."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP-adresseområde"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "OM IP-adresseområde oppgis her, er domene valgfritt.<br />Gyldige verdier inkluderer en IP-adresse (f.eks. 142.58.103.1), IP-adresseområde (f.eks. 142.58.103.1 - 142.58.103.4), IP-adresseområde med jokertegn '*' (f.eks. 142.58.*.*), og et IP-adresseområde med CIDR (f.eks. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Vennligst oppgi et gyldig IP-adresseområde."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Slett"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Legg til"
+
+msgid "about.history"
+msgstr "Tidsskriftets historie"
+
+msgid "about.subscriptions.individual"
+msgstr "Personlige abonnementer"
+
+msgid "about.subscriptions.institutional"
+msgstr "Institusjonelle abonnementer"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Navn"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Format"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Varighet"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Kostnad"
+
+msgid "payment.subscription.purchase"
+msgstr "Kjøp abonnement"
+
+msgid "installer.installApplication"
+msgstr "Installer Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Oppgrader Open Journal Systems"
+
+msgid "notification.type.editing"
+msgstr "Redigeringshendelser"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Redaktørens beslutning vedrørende \"{$title}\" har blitt kommentert."
+
+msgid "notification.type.galleyModified"
+msgstr "Et sideoppsett til \"{$title}\" har blitt endret."
+
+msgid "notification.type.issuePublished"
+msgstr "Et nummer har blitt publisert."
+
+msgid "notification.type.metadataModified"
+msgstr "\"{$title}'s\" metadata har blitt endret."
+
+msgid "notification.type.newAnnouncement"
+msgstr "En ny kunngjøring har blitt lagt inn."
+
+msgid "notification.type.reviewerComment"
+msgstr "En fagfellevurderer har kommentert \"{$title}\"."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Et vurderingsskjema har blitt sendt inn for \"{$title}\"."
+
+msgid "notification.type.reviewing"
+msgstr "Vurderingshendelser"
+
+msgid "notification.type.site"
+msgstr "Nettstedshendelser"
+
+msgid "notification.type.submissionComment"
+msgstr "En redaktør har kommentert \"{$title}\"."
+
+msgid "notification.type.submissions"
+msgstr "Innleveringshendelser"
+
+msgid "notification.type.userComment"
+msgstr "En leser har kommentert \"{$title}\"."
+
+msgid "user.register.reviewerInterests"
+msgstr "Angi interessante vurderingsområder (hovedområder og forskningsmetoder):"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Abonnementsstatus"
+
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Beskrivelse"
+
+msgid "navigation.categories"
+msgstr "Kategorier"
+
+msgid "issue.fullIssue"
+msgstr "Hele nummeret"
+
+msgid "issue.nonpdf.title"
+msgstr "Last ned nummeret"
+
+msgid "issue.viewIssue"
+msgstr "Vis nummeret"
+
+msgid "issue.viewIssueDescription"
+msgstr "Vis eller last ned hele nummeret"
+
+msgid "site.noJournals"
+msgstr "Det er ingen tidsskrift tilgjengelig."
+
+msgid "payment.authorFees"
+msgstr "Forfatteravgifter"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Du forsøker å få tilgang til en artikkel som ikke er en del av din seksjon."
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Aktive og utløpte abonnementer vises nedenfor sammen med sine utløpsdatoer. I tillegg kan følgende statusinformasjoner også vises med hvert abonnement."
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Det trengs mer informasjon før abonnementet kan aktiviseres."
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Abonnementet må vurderes før det kan aktiviseres."
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manuell betaling er initiert men ennå ikke mottatt"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "En nettbetaling har blitt initiert men har blitt kansellert eller ikke fullført"
+
+msgid "editor.navigation.issues"
+msgstr "Utgaver"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} har forestått redigeringsprosessen for artikkelen {$submissionId}."

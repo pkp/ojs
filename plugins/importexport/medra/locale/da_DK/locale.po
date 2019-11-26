@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:41+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:41+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "mEDRA Eksport/Registrerings-plug-in"
+
+msgid "plugins.importexport.medra.description"
+msgstr "Ekportér metadata fra nummer, artikel og satsskib i Onix til DOI (O4DOI)-format med mEDRA registreringsagentur."
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Brug:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ..."
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"Hvis du vil registrere DOI'er via mEDRA, skal du følge anvisningerne på\n"
+"<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">mEDRA hjemmeside</a>\n"
+"for at modtage et brugernavn og en adgangskode. Hvis du ikke har dit eget brugernavn og\n"
+"password kan du stadig eksportere til mEDRA med XML-formatet (Onix for DOI),\n"
+"men du kan ikke registrere dine DOI'er hos mEDRA inde fra OJS.\n"
+"Vær opmærksom på, at adgangskoden bliver gemt som klartekst, dvs. ikke krypteret, i overensstemmelse med mEDRA registrerings-service-krav."
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Konfigurer mEDRA eksport-plug-in:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Brugernavn"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Indtast dit mEDRA brugernavn. Brugernavnet må muligvis ikke indeholde kolon."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Navnet på den institution, der er registreret hos mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Indtast navnet på den institution, der er registreret hos mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Person, der skal kontaktes af mEDRA i tilfælde af tekniske forespøtgsler:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Institution"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "Indtast navnet på den institution, der er teknisk ansvarlig for DOI-eksport (f.eks. institutionen, der er vært for din webserver)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Kontaktperson"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Indtast en teknisk kontaktperson"
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "E-mail"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Indtast en gyldig e-mail på teknisk kontaktperson"
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Vælg det land, som mEDRA skal angive som 'publikationsland'."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "Vælg om du vil eksportere numre enten som <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'værk' eller 'manifestationer'</a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "værk"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "manifestation"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Nummer-eksport som"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "OJS vil deponere tildelte DOI'er automatisk hos mEDRA. Bemærk, at der kan gå kort tid mellem publicering og endelig færdigbehandling. Alle ikke-registrerede DOI'er kan fremfindes."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "Brug mEDRA test-API (testmiljø) til DOI registrering. Husk at fjerne denne mulighed i forbindelse med produktionen."
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "NB: DOI'er tildelt artikler vil blive eksporteret til mEDRA som <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'værker'</a>. DOI'er tildelt publiceringsfil eksporteres som <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'manifestationer'</a>."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "mEDRA automatisk registreringsopgave"

@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:36+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Vtičnik za CrossRef XML izvoz"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Izvozi metapodatke prispevka v CrossRef XML obliki."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Zahteve"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Vse zahteve vtičnika so izpolnjene."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "Založnik ni nastavljen! Dodati morate založnika na strani<a href=\"{$journalSettingsUrl}\" target=\"_blank\">Nastavitve revije</a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "ISSN revije ni nastavljen! Dodati morate ISSN na strani <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Nastavitve revije</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "Prispevki niso izbrani za dodeljevanje DOI-jev v vtičniku za DOI javni identifikator in zato ni možnosti depozita ali izvoza podatkov v tem vtičniku."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Spodnej postavke so obvezne za uspešen CrossRef depozit."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Ime depozitorja"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Email depozitorja"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Prosimo vnesite ime depozitorja."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Prosimo vnestie email depozitorja."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "Če želite uporabiti ta vtičnik za registracijo DOI-jev direktno pri CrossRef, boste potrebovali uporabniško ime in geslo (na voljo na <a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>). Če nimate svojega uporabniškega imena in gesla, lahko še vedno izvozite podatke v CrossRef XML obliki, ampak ne morete registrirati DOI-jev pri CrossRef direktno iz OJS."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Uporabniško ime"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Prosimo vnesite uporabniško ime, ki ste ga dobili pri CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "OJS bo avtomatsko opravil depozit dodeljenih DOI-jev na CrossRef. Prosimo upoštevajte, da je za to lahko potrebno nekaj časa po tistem, ko objavite novo številko. Lahko preverite vse neregistrirane DOI-je."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Uporabi CrossRef test API (testno okolje) za depozit DOI-jev. Ne pozabite odstraniti te možnosti za produkcijo!"
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Opozorilo: Samo številke (in ne vsebovani prispevki) bodo upoštevane za izvoz/depozit."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Neuspelo"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Aktivno"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Označeno aktivno"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Statusi procesa depozita:</p>\n"
+"\t\t<p>\n"
+"\t\t- Ni depozita: za ta DOI ni bil izveden poskus depozita.<br />\n"
+"\t\t- Oddano: DOI je bil oddan za depozit.<br />\n"
+"\t\t- Depozit uspešen: Depozit DOI-ja je bil uspešen pri Crossref, a morda še ni aktiven.<br />\n"
+"\t\t- Aktiven: Depozit DOI-ja je bil uspešen in se pravilno razrešuje.<br />\n"
+"\t\t- Neuspelo: Depozit DOI-ja je bil neuspešen.<br />\n"
+"\t\t- Označeno aktivno: DOI je bil ročno označen kot aktiven.\n"
+"\t\t</p>\n"
+"\t\t<p>Prikazan je samo status zadnjega poskusa depozita.</p>\n"
+"\t\t<p>Če je bil depozit neuspešen, razrešite problem in ponovno poskusite registrirati DOI.</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Prenesi XML"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Označi aktivno"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Oddaj"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Opravilo avtomatske registracije pri CrossRef"
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Uporaba:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "Oddaja ni bila uspešna! DOI registracijski strežnik je vrnil napako: '{$param}'."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Nobena številka ne odgovarja ID-ju številke \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Noben prispevek ne odgovarja ID-ju prispevka \"{$articleId}\"."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr "Validacija XML. To opcijo uporabite za prenos XML datoteke za ročno DOI registracijo."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr "Registracija je bila uspešna z naslednjim opozorilom: '{$param}'."

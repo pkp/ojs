@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:08+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "サイトの運用状況を記録し、<a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a>準拠の報告書を作成します。"
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER統計"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "雑誌報告書 1 (R3): 月別・雑誌別の雑誌フルテキストへのリクエスト"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "雑誌報告書 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "月別・雑誌別の成功した雑誌フルテキストへのリクエスト数（{$year}年）"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "処理日:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "出版者"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "プラットフォーム"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "印刷版ISSN"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "電子版ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD合計"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "全雑誌の合計"
+
+msgid "plugins.reports.counter.migrate"
+msgstr "ログファイルを移行する。"

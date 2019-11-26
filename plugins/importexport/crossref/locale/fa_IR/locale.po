@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:35+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:35+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "افزونه برون دهی CrossRef XML"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "برون دهی فراداده مقاله ئر فرمت CrossRef XML"
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "نیازمندی ها"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "تمامی نیازمندی های این افزونه برقرار است."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "ناشر مجله مشخص نشده است! شما باید در <a href=\"{$journalSettingsUrl}\" target=\"_blank\">صفحه تنظیمات مجله</a> ناشر آن را اضافه کنید"
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "شاپای مجله مشخص نشده است! شما باید در <a href=\"{$journalSettingsUrl}\" target=\"_blank\">صفحه تنظیمات مجله</a> شاپای آن را اضافه کنید"
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "در افزونه DOI، مقالات برای اختصاص DOI انتخاب نشده است، بنابراین هیچ سپرده یا امکان برون دهی در این افزونه وجود ندارد."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "موارد زیر برای ارتباط با CrossRef مورد نیاز است."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "نام سپرده گذار"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "ایمیل سپرده گذار"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "لطفا نام سپرده گذار را وارد کنید"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "لطفا ایمیل سپرده گذار را وارد کنید"
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "اگر می خواهید از این افزونه برای ثبت مستقیم DOI با CrossRef استفاده کنید، به نام کاربری و رمز عبور (از <a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>) نیاز خواهید داشت. اگر شما نام کاربری و رمز عبور خود را ندارید، همچنان می توانید اطلاعات مجله را به فرمت XML CrossRef برون دهی کنید، اما نمی توانیدشناسه DOI خود از طریق CrossRef ثبت کنید."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "نام کاربری"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "لطفا نام کاربری که از CrossRef دریافت کرده اید وارد کنید"
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "سامانه به طور خودکار شناسه DOI را به CrossRefتحویل می دهد. لطفا توجه داشته باشید که ممکن است پس از انتشار زمان کوتاهی برای پردازش سپری شود. شما می توانید تمام DOI های ثبت نشده را تیک بزنید."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "از API تست CrossRef (محیط آزمایش) برای سپرده DOI استفاده کنید. لطفا فراموش نکنید که این گزینه را در زمان انتشار محتوا حذف کنید."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "توجه: فقط شماره ها (و نه مقالات آنها) برای برون دهی/ثبت در نظر گرفته می شود."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "ناموفق"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "فعال"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "نشانه گذاری شده به عنوان فعال"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"<p>سپرده:</p>\n"
+"<p>\n"
+"-سپرده نشده: هیچ تلاشی برای سپرده گذاری برای این DOI انجام نشده است.<br />\n"
+"-فعال: DOI سپرده شده است و به درستی حل و فصل می شود.<br />\n"
+"-ناموفق: سپرده DOI شکست خورده است.<br />\n"
+"-نشانه گذاری شده به عنوان فعال: DOI به صورت دستی به عنوان فعال شناخته شده است.<br />\n"
+"</p>\n"
+"<p>\n"
+"تنها وضعیت آخرین تلاش سپرده نمایش داده می شود.\n"
+"</p>\n"
+"<p>\n"
+"اگر سپرده شکست خورده باشد، لطفا مشکل را حل کنید و مجددا DOI را ثبت کنید.\n"
+"</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "دانلود XML"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "نشانه گذاری به عنوان فعال"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "وظیفه ثبت خودکار CrossRef"
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr "نحوه استفاده:  {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...  {$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ..."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "هیچ شماره ای با شناسه مقاله \"{$issueId}\" همخوانی ندارد."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "هیچ مقاله ای با شناسه مقاله \"{$articleId}\" همخوانی ندارد."

@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:09+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:09+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "Wtyczka COUNTER pozwala generować raporty o aktywności czasopisma z wykorzystaniem <a href=\"http://www.projectcounter.org\">standardu COUNTER</a>."
+
+msgid "plugins.reports.counter"
+msgstr "Raporty COUNTER"
+
+msgid "plugins.reports.counter.release"
+msgstr "Wersja COUNTER"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Raporty starszej strony"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Parametry raportu były nieprawidłowe."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Żądanie raportu jest nieprawidłowe."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Brak wyników do wyświetlenia w raporcie."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Wyniki nie mogą być zapisane w formacie XML."
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr "Podane linki generują gotowe raporty COUNTER oparte na przestarzałej wersji 3.0. Raport obejmuje wszystkie czasopisma z platformy wydawniczej. Używaj najnowszej wersji jeżeli to tylko możliwe."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER Report JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "Wersja XML"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "COUNTER Journal Report 1 (R3): Zapytania o pełne teksty artykułów w danym miesiącu i czasopiśmie"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Journal Report 1 (R3): Zapytania o pełne teksty artykułów w danym miesiącu i czasopiśmie"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Journal Report 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Liczba zapytań o pełne teksty artykułów na miesiąc i w danym czasopiśmie (Year {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Data uruchomienia:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Wydawca"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platforma"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "Wyświetl ISSN"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD łącznie"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Łącznie dla wszystkich czasopism"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anonimowy"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr "Poniższe linki generują przestarzałe raporty wykorzystując dane ze starej wtyczki, która nie jest gotowym COUNTER. Jeżeli chcesz wygenerować raporty za pomocą aktualnego COUNTER wykorzystaj typ metryki OJS COUNTER, użyj powyższych linków."
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Wszyscy klienci"

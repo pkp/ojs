@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:50+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:50+00:00\n"
+"Language: \n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Plugin Bloco de Subscrição"
+
+msgid "plugins.block.subscription.description"
+msgstr "Este plugin oferece informações sobre a subscrição nas barras laterais."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Subscrição"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Expiração"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Acesso fornecido por: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "IP de proveniência: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Subscrições"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Aceda ao sistema para verificar a sua subscrição"
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "É necessária uma subscrição para aceder a alguns recursos."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Saber Mais"

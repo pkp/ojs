@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:44+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:44+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Модуль «Собственный XML»"
+
+msgid "plugins.importexport.native.description"
+msgstr "Импортирует и экспортирует статьи и выпуски в собственном XML-формате OJS."
+
+msgid "plugins.importexport.native.import"
+msgstr "Импортировать"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Загрузите файл XML для импорта"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Выберите статьи для экспорта"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Экспортировать статьи"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Экспортировать выпуски"
+
+msgid "plugins.importexport.native.results"
+msgstr "Результаты"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Пожалуйста загрузите файл в раздел «Импортировать», чтобы продолжить."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "Импорт успешно завершен. Следующие элементы были импортированы:"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Вызов: {$scriptName} {$pluginName} [команда] ...\n"
+"Команды:\n"
+"\timport [ИмяФайлаXML] [путь_журнала] [имя_пользователя] ...\n"
+"\texport [ИмяФайлаXML] [путь_журнала] articles [IdСтатьи1] [IdСтатьи2] ...\n"
+"\texport [ИмяФайлаXML] [путь_журнала] article [IdСтатьи]\n"
+"\texport [ИмяФайлаXML] [путь_журнала] issues [IdВыпуска1] [IdВыпуска1] ...\n"
+"\texport [ИмяФайлаXML] [путь_журнала] issue [IdВыпуска]\n"
+"\n"
+"Для импорта данных требуются те или иные дополнительные параметры в зависимости \n"
+"от корневого узла XML-документа.\n"
+"\n"
+"Если корневой узел <article> или <articles>, требуются дополнительные параметры.\n"
+"Разрешены следующие форматы:\n"
+"\n"
+"{$scriptName} {$pluginName} import [ИмяФайлаXML] [путь_журнала] [имя_пользователя]\n"
+"\tissue_id [IdВыпуска] section_id [IdРаздела]\n"
+"\n"
+"{$scriptName} {$pluginName} import [ИмяФайлаXML] [путь_журнала] [имя_пользователя]\n"
+"\tissue_id [IdВыпуска] section_name [НазваниеРаздела]\n"
+"\n"
+"{$scriptName} {$pluginName} import [[ИмяФайлаXML] [путь_журнала]\n"
+"\tissue_id [IdВыпуска] section_abbrev [АббревиатураРаздела]\n"
+""
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Неизвестный раздел {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Указанный пользователь, «{$userName}», не существует."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr "Название раздела «{$section1Title}» и название раздела «{$section2Title}» в выпуске «{$issueTitle}» совпали с различными существующими разделами журнала."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr "Название раздела «{$sectionTitle}» в выпуске «{$issueTitle}» совпало с существующим разделом журнала, но другое название этого раздела не совпадает с другим названием существующего раздела журнала."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr "Аббревиатура раздела «{$section1Abbrev}» и аббревиатура раздела «{$section2Abbrev}» в выпуске «{$issueTitle}» совпали с различными существующими разделами журнала."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr "Аббревиатура раздела «{$sectionAbbrev}» в выпуске «{$issueTitle}» совпала с существующим разделом журнала, но другая аббревиатура этого раздела не совпала с другой аббревиатурой существующего раздела журнала."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "Ни одного выпуска или более одного выпуска совпало с указанной идентификацией выпуска «{$issueIdentification}»."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr "Существующий выпуск с идентификатором {$issueId} совпадает с указаной идентификацией выпуска «{$issueIdentification}». Этот выпуск не будет изменен, но статьи будут добавлены."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "Элемент идентификации выпуска отсутствует для статьи «{$articleTitle}»."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr "Статья «{$articleTitle}» есть в выпуске, но для нее не указана дата публикации."

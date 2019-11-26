@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:57+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:57+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Ręczne dokonanie opłaty"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "Menadżer ręcznie zapisze odbiór opłaty wniesionej przez użytkownika (poza oprogramowaniem)."
+
+msgid "plugins.paymethod.manual"
+msgstr "Ręczne dokonanie opłaty"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Wytyczne w zakresie ręcznej płatności"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Wyślij powiadomienie o opłacie"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Powiadomienie o dokonaniu wpłaty"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Powiadomienie o dokonaniu wpłaty wysłane"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Tytuł"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Opłata"

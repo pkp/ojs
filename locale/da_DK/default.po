@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:19+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Artikler"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Manuskriptet er ikke tidligere blevet publiceret, og det er heller ikke sendt til et andet tidsskrift med henblik på at komme i betragtning til at blive publiceret (eller der er angivet en forklaring under kommentarfeltet 'Kommentarer til redaktøren')."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Manuskriptfilen er i et OpenOffice, Microsoft Word- eller RTF- eller dokumentfilformat."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Der er angivet URL-adresser til referencerne, hvor de er tilgængelige."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Teksten er skrevet med enkelt linjeafstand, benytter en 12-punktsskrifttype og anvender kursiv i stedet for understregning (med undtagelse af URL-adresser), og alle illustrationer, figurer og tabeller er placeret i teksten på passende steder i stedet for til sidst."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Teksten opfylder de stilistiske og bibliografiske krav, der er beskrevet under <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\"> Retningslinjer for forfattere </a>, som findes under Om tidsskriftet."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>De navne og adresser, der angives på dette tidsskrifts websted, vil udelukkende blive anvendt til tidsskriftets angivne formål og vil ikke blive gjort tilgængelige til andre formål eller for andre parter.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Dette tidsskrift tilbyder øjeblikkelig Open Access til tidsskriftets indhold på baggrund af princippet om, at gratis offentlig adgang til forskning understøtter en større global udveksling af viden."
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.contextSettings.forReaders"
+msgstr "Vi opfordrer læsere til at tilmelde sig nyhedstjenesten vedrørende publiceringer for dette tidsskrift. Brug linket <a href=\"{$indexUrl}{$contextPath}/user/register\">Registrer</a> øverst på tidsskriftets hjemmeside. Denne registrering medfører, at læseren via e-mail modtager indholdsfortegnelsen for alle nye numre af tidsskriftet. Denne liste giver også tidsskriftet mulighed for at hævde at have et vist supportniveau eller et vist antal læsere. Se tidsskriftets <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Erklæring om beskyttelse af personlige oplysninger</a>, der garanterer læserne, at deres navne og e-mail-adresser ikke benyttes til andre formål."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Er du interesseret i at fremsende et manuskript til dette tidsskrift? Vi anbefaler, at du gennemgår siden <a href=\"{$indexUrl}{$contextPath}/about\">Om tidsskriftet</a>, hvor du kan finde tidsskriftets sektionspolitikker, samt <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Retningslinjer for forfattere</a>. Forfattere skal <a href=\"{$indexUrl}{$contextPath}/user/register\">tilmelde sig</a> tidsskriftet, inden de kan fremsende et manuskript. Hvis de allerede er tilmeldt, kan de blot <a href=\"{$indexUrl}/index/login\">logge på</a> og påbegynde processen, der består af 5 trin."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Vi opfordrer forskningsbibliotekarer til at anføre dette tidsskrift på listen over deres biblioteks beholdning af elektroniske tidsskrifter. Det kan desuden være nyttigt at bemærke, at dette tidsskrifts open source-publiceringssystem er velegnet til biblioteker, som kan være værter for det til deres fakultetsmedlemmer, som kan bruge det til de tidsskrifter, de er ved at redigere (se <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Dette tidsskrift benytter LOCKSS-systemet til at oprette et distribueret arkiveringssystem blandt deltagende biblioteker og tillader disse biblioteker at oprette permanente arkiver af tidsskriftet med henblik på bevaring og genskabelse. <a href=\"http://lockss.stanford.edu/\">Mere...</a>"
+
+msgid "default.genres.article"
+msgstr "Artikeltekst"
+
+msgid "default.genres.researchInstrument"
+msgstr "Forskningsredskab"
+
+msgid "default.genres.researchMaterials"
+msgstr "Forskningsmateriale"
+
+msgid "default.genres.researchResults"
+msgstr "Forskningsresultater"
+
+msgid "default.genres.transcripts"
+msgstr "Transskription"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Dataanalyse"
+
+msgid "default.genres.sourceTexts"
+msgstr "Kildetekster"
+
+msgid "default.genres.dataSet"
+msgstr "Datasæt"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Dette tidsskrift anvender CLOCKSS systemet for at understøtte et udbredt arkiveringssystem blandt deltagende biblioteker og giver disse biblioteker ret til permanent at arkivere tidsskriftet til bevaring og eventuel genoprettelse. <a href=\"http://clockss.org/\">Mere...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Tidsskriftschef"
+
+msgid "default.groups.plural.manager"
+msgstr "Tidsskriftschefer"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "Tidsskriftredaktør"
+
+msgid "default.groups.plural.editor"
+msgstr "Tidsskriftredaktører"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Gæsteredaktør"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Gæsteredaktører"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Sektionsredaktør"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Sektionsredaktører"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Abonnementschef"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Abonnementschefer"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Bedømmer"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Bedømmere"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"

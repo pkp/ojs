@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:36+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Yeni Gönderi"
+
+msgid "author.track"
+msgstr "Aktif Gönderiler"
+
+msgid "author.competingInterests"
+msgstr "Çıkar Çatışması (Competing Interests) <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI Rehberi</a>"
+
+msgid "author.submit.submitArticle"
+msgstr "Makale gönderisi yap"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Gönderi için beş basamak"
+
+msgid "author.submit.startHereTitle"
+msgstr "Yeni Gönderi Başlat"
+
+msgid "author.submit.startHereLink"
+msgstr "Beş adımda makale gönderisinin ilk adımı için <a href=\"{$submitUrl}\" class=\"action\">TIKLAYINIZ</a>."
+
+msgid "author.submit.step1"
+msgstr "1. Adım: Gönderiye Başlama"
+
+msgid "author.submit.step2"
+msgstr "2. Adım: Gönderi Dosyalarını Yükleme"
+
+msgid "author.submit.step3"
+msgstr "3. Adım: Gönderiyle İlgili Üst Veriyi Girme"
+
+msgid "author.submit.step4"
+msgstr "4. Adım: Ek Belge ve Dosyaların Yüklenmesi"
+
+msgid "author.submit.step4a"
+msgstr "4.1. Adım: Ek Dosya Yükleme"
+
+msgid "author.submit.step5"
+msgstr "5. Adım: Gönderi Onayı"
+
+msgid "author.submit.start"
+msgstr "Başla"
+
+msgid "author.submit.upload"
+msgstr "Gönderiyi Yükle"
+
+msgid "author.submit.metadata"
+msgstr "Üst Veri Gir"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Ek Dosyaları Yükle"
+
+msgid "author.submit.confirmation"
+msgstr "Onay"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Bu gönderiyi, yazar sayfasında, Aktif Gönderilerden seçerek daha sonra tamamlayabilirsiniz."
+
+msgid "author.submit.notAccepting"
+msgstr "Dergi şu anda göneri kabul etemiyor."
+
+msgid "author.submit.requestWaiver"
+msgstr "Vazgeç"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Ücretten neden feragat edilmesi gerektiğini bildirmek için lütfen aşağıdaki yorum kutusunu kullanın."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Eğer feragat ediyorsanız verilen boşlukta bir neden belirtmelisiniz."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Değerlendirme Turu: {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Değerlendirmede: Düzeltme İsteği"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Düzeltmede: Sayaf Düzenleme İsteği"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Düzeltmede: Okuma Kontrol İsteği"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Sayfa Düzenleme Sürümünü Yükle"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Düzeltmen Önerileri"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Tamamlanmamış bu gönderiyi silmek istediğinizden emin misiniz?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Durumu Görüntüle"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Gönderi yok."
+
+msgid "author.submit.journalSection"
+msgstr "Dergi Bölümü"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Bu gönderi için uygun bir bölüm seçin (Daha fazla bilgi için dergi <a href=\"{$aboutUrl}\" target=\"_new\">Hakkında</a> başlığı altındaki Bölümler ve Politikalara bakınız)."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Devam etmeden önce başvuru kontrol listesindeki her öğenin tamalanmış olduğundan emin olmalısınız."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Yazarlar bu dergi tarafından yayımlanan gönderiler için Telif Hakkı koşullarını kabul etmiş sayılır. Telif Hakkı koşulları bu gönderi için de geçerli olacaktır (editöre iletmek istediğiniz yorumları aşağıya yazabilirsiniz)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Devam etmeden önce telif hakkı ile ilgili koşulları kabul etmeniz gerekmektedir."
+
+msgid "submission.submit.coverNote"
+msgstr "Editör için notlar"
+
+msgid "author.submit.comments"
+msgstr "Editöre iletmek istediğiniz notları bu alana yazabilirsiniz (isteğe bağlı)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Lütfen bu gönderi için uygun bir dergi bölümü seçiniz."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Lütfen gönderi dilini seçiniz."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Dergi Gizlilik Beyannamesi"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Yayın üzerindeki yazarların sırasnı yeniden düzenle."
+
+msgid "author.submit.reorder"
+msgstr "Yazar isimlerini yeniden sırala"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Editöryal iletişim için birincil irtibat."
+
+msgid "author.submit.addAuthor"
+msgstr "Yazar Ekle"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Yazarı Sil"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Gönderinin dizinlenmesi için anahtar kelime giriniz. Anahtar kelimeler arasında noktalı virgül kullanınız (Örneğin: Anahtar Kelime 1; Anahtar Kelie 2; ...)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Araştırma materyalinin coğrafik konumları, kronolojik ya da tarihsel kapsamı ve/veya karekteristiği."
+
+msgid "author.submit.languageInstructions"
+msgstr "Türkçe = tr; İngilizce = en. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Diğer Kodlar</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "En az bir yazar gerekli."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Her yazarın adı, soyadı ve e-posta adresi gereklidir."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Lütfen makalenizin başlığını giriniz."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Lğtfen maklalenizin özetini giriniz."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Bu bölümün özeti için maksimum kelime sınırını aştınız."
+
+msgid "author.submit.submissionFile"
+msgstr "Gönderi Dosyası"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Gönderi Dosyasını Yükle"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Gönderi dosyasını değiştir"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Gönderi dosyası yüklenmedi."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Başvuru için bir dosya göndermeden devam etmek istiyor musunuz?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Gönderinin bu basamağı ana gönderiye ek olarak verilmesi gereken belge ve dosyaların sisteme yüklenmesini sağlar. <br /><br />İlk olarak dergi \"Yayın Hakkı Devir Formu\" istiyorsa bilgisayarınızdaki yolu gösterdikten sonra \"Dosya Gönder\" butonu aracılığıyla yükleyiniz. Belgenin detayının girilmesi için açılan formu doldurunuz. <br /><br />Başka ek belgeniz yok ise \"Kaydet ve Devam Et\" seçeneğiyle bir sonraki basamağa geçiniz.<br /><br />İkinci olarak eğer var ise ana gönderiye ek olarak sunmak istediğiniz belge dosyaları yükleyiniz (Dosyalar \"doc\", \"docx\", \"xls\", \"xlsx\", \"pdf\" gibi formatlarda olabilir). Bu adımda yüklenecek dosyalar <br /><br />(a) araştırma enstrümanları, <br /><br />(b) data setleri, <br /><br />(c) araştırmacıların erişemeyecekleri kaynaklar, <br /><br />(d) ana kaynağa destek olarak sunulması istenen şekil ve tablolar veya araştırmayı destekleyecek çalışmalardır."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Yüklediğiniz dosyayı kaydetmek için tıklayınız (daha sonra diğer ek dosya yükleyebilirsiniz)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Seçmiş olduğunuz ek dosyayı yüklemeden devam etmek istediğinize emin misiniz?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Bu gönderiye ek dosya yüklemesi yapılmamıştır."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Ek Dosyalara Geri Dön"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Bu ek dosyayı silmek istediğinizden emin misiniz?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Ek dosya yükle"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Ek Dosya Ekle"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Ek Dosya Düzenle"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Ek Dosya Üst Verisi"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "Yüklediğiniz bu ek belge için lütfen aşağıdaki formu doldurunuz. (Eğer belgeniz yayın hakkı devir formu ise (a) \"Başlık\" alanına makalenizin başlığını yazınız, (b) \"Tür\" alanında \"diğer\" seçeneğini seçiniz, (c) \"Kısa Açıklama\" alanına \"Yayın Kakkı Devir Formu\" ifadesini yazınız, (d) \"Yayıncı\" kısmına \"Dergi yayıncısını\" yazınız ve (e) makalenizin dil kodunu \"dil\" alanında belirtiniz.)"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Ek Dosya"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Dosya sahibi"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Araştırma Enstürmanları"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Araştırma Materyalleri"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Araştırma Sonuçları"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Kopya / Suret"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Veri Analizi"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Veri Seti"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Kaynak Metin"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Kısa açıklama"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Kör hakemlikten taviz vermeden dosyayı hakemlerin görmesine izin ver (Üst veri hariç)"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Sadece basılı materyalde kullanınız."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Lütfen verinin toplandığı ya da aracın yapıldığı tarihi belirtiniz."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Çalışmanın adı ya da menşei."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Farklıysa belirtiniz"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Dosya Yüklenmedi"
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Lütfen bu ek dosyanın başlığını giriniz."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Lütfen bir konu giriniz."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Lütfen bir açıklama giriniz."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Açık ek dosya tanımlayıcı zaten var."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Açık ek dosya tanımlayıcı"
+
+msgid "author.submit.confirmationDescription"
+msgstr "{$journalTitle} adlı dergimize makale gönderisini tamamlamak için \"Gönderiyi Bitir\" tuşuna basınız. Dergi editör/editörleri sistem tarafından bir e-posta ile yaptığınız başvuru hakkında otomatik olarak bilgilendirilecektir.  Editör sisteme giriş yapınca editoryal süreçte başvurunuzu görecektir. {$journalTitle} adlı yayına  göstermiş olduğunuz ilgiye teşekkür ederiz."
+
+msgid "author.submit.noFiles"
+msgstr "Başvuruya herhangi bir dosya eklenmemiştir."
+
+msgid "author.submit.filesSummary"
+msgstr "Dosya Özeti"
+
+msgid "author.submit.finishSubmission"
+msgstr "Gönderiyi Bitir"
+
+msgid "author.submit.submissionComplete"
+msgstr "Gönderi tamamlanmıştır. {$journalTitle} adlı dergimize makale gönderdiğiniz için teşekkür ederiz. Makaleniz ile ilgili işlem sürecini kullanıcı adı ve şifrenizle giriş yaparak takip edebilirsiniz."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Yazar Sürümünü Yükle"
+
+msgid "author.article.copyeditedFile"
+msgstr "Sayfa Düzenlemesi Yapılmış Dosya"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Yazar Dosyası"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "Bu dergiye gönderi yapabilmek için bir üyelik gerekiyor. Üyeler, gönderiler ve gönderilerle ilgili durum değişikliklerinde editörlerin değişiklikleri takip etmesini ve yazarlarla iletişim kurmasını sağlar."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Bu yazı için Makale Gönderi Ücreti vazgeçileceğini lütfen göz önüde buludurun."
+
+msgid "author.submit.nextSteps"
+msgstr "Sonraki Adım"

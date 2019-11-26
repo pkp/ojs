@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:23+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Lähetä artikkeli"
+
+msgid "submission.submit.userGroup"
+msgstr "Lähetä roolissani..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Valitse rooli, jossa lähetät tämän artikkelin."
+
+msgid "submission.upload.selectComponent"
+msgstr "Valitse artikkelin osa"
+
+msgid "submission.title"
+msgstr "Artikkelin otsikko"
+
+msgid "submission.title.tip"
+msgstr "Käsikirjoitustiedosto on yleensä muodoltaan \"kuva\", \"teksti\" tai muu multimediamuoto kuten \"ohjelmisto\" tai \"interaktiivinen\".  Valitse käsikirjoituksesi kannalta oleellisin muoto.  Esimerkkejä löytyy osoitteesta <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Aloita uusi käsikirjoituksen lähetys julkaisuun:"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Uusi käsikirjoitus"
+
+msgid "grid.action.workflow"
+msgstr "Käsikirjoituksen työnkulku"
+
+msgid "submission.issueEntry"
+msgstr "Metatiedot"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Julkaisulle on ilmoitettu käsikirjoituksestasi ja sinulle on lähetetty sähköpostitse vahvistus säilytettäväksi. Toimittajan arvioitua käsikirjoituksen sinuun otetaan yhteyttä."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Julkaistava tiedosto näkyy numeron tiedoissa"
+
+msgid "grid.action.issueEntry"
+msgstr "Katsele tämän käsikirjoituksen metatietoja"
+
+msgid "submission.publication"
+msgstr "Julkaiseminen"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Artikkelin julkaistava tiedosto \"{$galleyFormatName}\" on nyt saatavilla."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Artikkelin julkaistava tiedosto \"{$galleyFormatName}\" ei ole enää saatavilla."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Käsikirjoituksen julkiset tunnisteet päivitetty."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Muodon hyväksyntä"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Tätä julkaistavaa tiedostoa <em>ei enää näytetä</em> lukijoille.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Tämä julkaistava tiedosto <em>näytetään</em> lukijoille.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Aseta tämä julkaistava tiedosto saataville"
+
+msgid "submission.galleyFiles"
+msgstr "Julkaistavat tiedostot"
+
+msgid "submission.proofReadingDescription"
+msgstr "Taittaja lataa tuotantovalmiit tiedostot, jotka on tässä kohtaa valmisteltu julkaisemista varten. Käytä <em>Valitse tarkastaja</em>-painiketta valitaksesi kirjoittajia ja muita henkilöitä oikolukemaan julkaistavat tiedostot, jotka on korjattu ja ladattu hyväksyttäväksi ennen julkaisemista."
+
+msgid "grid.action.approveProof"
+msgstr "Hyväksy tämä korjausvedos sisällytettäväksi julkaistaviin tiedostoihin."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Tämä korjausvedos on hyväksytty sisällytettäviksi julkaistaviin tiedostoihin."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Otsikko ja abstrakti"
+
+msgid "submission.submit.upload.description"
+msgstr "Lataa tähän käsikirjoitukseen liittyvät tiedostot, mukaan lukien itse artikkeli, multimediatiedostot, tietoaineistot, kuvamateriaali jne."
+
+msgid "submission.pageProofs"
+msgstr "Oikoluku"
+
+msgid "submission.confirmSubmit"
+msgstr "Oletko varma, että haluat lähettää tämän artikkelin julkaisuun?"
+
+msgid "workflow.review.externalReview"
+msgstr "Arviointi"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Lähetä arvioitavaksi"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Käsikirjoituksen numeron metatiedot päivitettiin."
+
+msgid "submission.upload.fileContents"
+msgstr "Artikkelin osa"
+
+msgid "submission.complete"
+msgstr "Hyväksytty"
+
+msgid "submission.incomplete"
+msgstr "Odottaa hyväksyntää"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Valitse käsikirjoituksen kieli."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Käsikirjoituksen tarkistuslista"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Sinun täytyy lukea ja vahvistaa, että täytät alla mainitut vaatimukset, ennen kuin jatkat."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Tietosuojaseloste"
+
+msgid "submission.submit.contributorRole"
+msgstr "Tekijän rooli"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Vähintään yksi kirjoittaja vaaditaan."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Jokaisen kirjoittajan etunimi, sukunimi ja sähköpostiosoite vaaditaan."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Syötä artikkelisi otsikko."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Syötä artikkelisi abstrakti."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Valitse tekijän rooli."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Pyydettyä viittausmuotoa ei voitu noutaa."
+
+msgid "submission.metadataDescription"
+msgstr "Nämä määritykset perustuvat Dublin Core -metatietosanastostandardiin. Se on kansainvälinen standardi, jolla kuvataan julkaisun sisältöä."
+
+msgid "section.any"
+msgstr "Kaikki osastot"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Abstraktin tulee olla korkeintaan {$wordCount} sanaa."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Abstrakti on liian pitkä. Tarkista pituus ja yritä uudelleen."

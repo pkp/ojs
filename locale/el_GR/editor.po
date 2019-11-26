@@ -1,0 +1,417 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Αρχική σελίδα Επιμελητή περιοδικού"
+
+msgid "editor.reassign"
+msgstr "Aνάθεση εκ νέου"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Υποβολές και δημοσίευση"
+
+msgid "editor.submissionQueue"
+msgstr "Υποβολές σε αναμονή"
+
+msgid "editor.submissionArchive"
+msgstr "Αρχείο υποβολών"
+
+msgid "editor.publishing"
+msgstr "Δημοσίευση"
+
+msgid "editor.publishedIssues"
+msgstr "Δημοσιευμένα τεύχη"
+
+msgid "editor.allSections"
+msgstr "Όλες οι ενότητες"
+
+msgid "editor.allEditors"
+msgstr "Όλοι οι Επιμελητές"
+
+msgid "editor.me"
+msgstr "Εγώ"
+
+msgid "editor.publicIdentificationExists"
+msgstr "Το δημόσιο αναγνωριστικό '{$publicIdentifier}' έχει αποδοθεί ήδη σε άλλο αντικείμενο (τεύχος, άρθρο, τυπογραφικό δοκίμιο ή αρχείο). Παρακαλούμε επιλέγετε μοναδικά αναγνωριστικά εντός του περιοδικού σας."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Δεν υπάρχουν καταχωρήσεις στο αρχείο υποβολών."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Να αποθηκευτούν οι αλλαγές στις αρχειοθετημένες υποβολές; Οι υποβολές που έχουν επισημανθεί για διαγραφή θα διαγραφούν οριστικά από το σύστημα."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Επιβεβαιώνετε την οριστική διαγραφή της συγκεκριμένης υποβολής;"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Επιβεβαιώνετε την καταχώρηση της συγκεκριμένης απόφασης;"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Η υποβολή αυτή θα αρχειοθετηθεί αφού αποσταλεί το μήνυμα \"Ειδοποίηση Συγγραφέα\" ή επιλέξετε \"Παράλειψη μηνύματος\"."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Πριν προωθήσετε μία υποβολή στο στάδιο επιμέλειας, επιλέξτε τον σύνδεσμο \"Ειδοποίηση Συγγραφέα\", καθώς και την έκδοση του άρθρου που θα αποσταλεί προς επιμέλεια."
+
+msgid "editor.notifyUsers"
+msgstr "Ενημέρωση Χρηστών"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Όλοι οι Αναγνώστες ({$count} Χρήστες)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Όλοι οι Συγγραφείς με δημοσιεύσεις ({$count} Χρήστες)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Όλοι οι Χρήστες με συνδρομή ({$count} Χρήστες)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Όλοι οι φορείς με συνδρομή ({$count})"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Ενημέρωση Χρηστών"
+
+msgid "editor.usersNotified"
+msgstr "Οι Χρήστες ενημερώθηκαν."
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Αποστολή του μηνύματος σε όλους τους Χρήστες του περιοδικού ({$count} Χρήστες)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Αποστολή του μηνύματος στους Χρήστες του περιοδικού που έχουν δηλώσει ότι επιθυμούν να λαμβάνουν ενημερώσεις ({$count} Χρήστες)."
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Συμπεριλάβετε τον πίνακα περιεχομένων του τεύχους:"
+
+msgid "editor.editorAdministration"
+msgstr "Διαχείριση Επιμελητή"
+
+msgid "editor.issues.createIssue"
+msgstr "Δημιουργία τεύχους"
+
+msgid "editor.issues.editIssue"
+msgstr "Διαχείριση τεύχους: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Τρέχον τεύχος"
+
+msgid "editor.issues.numArticles"
+msgstr "Άρθρα"
+
+msgid "editor.issues.noArticles"
+msgstr "Επί του παρόντος, δεν υπάρχουν άρθρα προγραμματισμένα για δημοσίευση στο συγκεκριμένο τεύχος."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Επιβεβαιώνετε την οριστική διαγραφή του συγκεκριμένου τεύχους;"
+
+msgid "editor.issues.published"
+msgstr "Δημοσιευμένα"
+
+msgid "editor.issues.unpublished"
+msgstr "Μη δημοσιευμένα"
+
+msgid "editor.issues.datePublished"
+msgstr "Ημερομηνία δημοσίευσης"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Απαιτείται η εισαγωγή τόμου."
+
+msgid "editor.issues.numberRequired"
+msgstr "Απαιτείται εισαγωγή αρίθμησης."
+
+msgid "editor.issues.yearRequired"
+msgstr "Απαιτείται η εισαγωγή έτους."
+
+msgid "editor.issues.titleRequired"
+msgstr "Απαιτείται τίτλος για το τεύχος."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Απαιτείται αναγνωριστικό τεύχους. Παρακαλούμε επιλέξτε τουλάχιστον μία από τις υπάρχουσες επιλογές αναγνωριστικών τεύχους."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Αναγνωριστικό τεύχους"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Δημόσιο αναγνωριστικό τεύχους"
+
+msgid "editor.issues.description"
+msgstr "Περιγραφή"
+
+msgid "editor.issues.accessStatus"
+msgstr "Συνθήκες πρόσβασης"
+
+msgid "editor.issues.accessDate"
+msgstr "Ημερομηνία ενεργοποίησης ανοιχτής πρόσβασης"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Ενεργοποίηση καθυστερημένης ανοικτής πρόσβασης"
+
+msgid "editor.issues.coverPage"
+msgstr "Εικόνα εξωφύλλου"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Επιτρεπόμενοι τύποι αρχείου: .gif, .jpg ή .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Μεταφορτώθηκε"
+
+msgid "editor.issues.remove"
+msgstr "Αφαίρεση"
+
+msgid "editor.issues.proofed"
+msgstr "Διορθωμένο"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Αφαίρεση εικόνας εξωφύλλου;"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Η εικόνα εξωφύλλου που αιτηθήκατε να διαγραφεί δεν ταιριάζει με την εικόνα εξωφύλλου αυτού του τεύχους. Παρακαλούμε επαναφορτώστε τη σελίδα και δοκιμάστε ξανά."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Η εικόνα εξωφύλλου που αιτηθήκατε να διαγραφεί δεν βρέθηκε. Πιθανόν να έχει ήδη διαγραφεί. Παρακαλούμε, δοκιμάστε να επαναφορτώσετε τη σελίδα."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Μη έγκυρος τύπος αρχείου εξωφύλλου. Οι αποδεκτοί τύποι είναι .gif, .jpg ή .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Αρχείο μορφοποίησης"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Μη έγκυρη μορφή αρχείου μορφοποίησης. Βεβαιωθείτε ότι το αρχείο που έχει υποβληθεί είναι ένα έγκυρο CSS αρχείο (λάβετε υπόψη ότι τα αρχεία μορφοποίησης με σχόλια ενδέχεται να απορριφθούν.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Αφαίρεση αρχείου μορφοποίησης;"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Λεζάντα εξωφύλλου"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Δημιουργία εξωφύλλου για το τεύχος αυτό με τα ακόλουθα στοιχεία"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Εμφάνιση"
+
+msgid "editor.issues.openAccess"
+msgstr "Ανοικτή πρόσβαση"
+
+msgid "editor.issues.subscription"
+msgstr "Συνδρομή"
+
+msgid "editor.issues.identification"
+msgstr "Αναγνώριση"
+
+msgid "editor.issues.access"
+msgstr "Πρόσβαση"
+
+msgid "editor.issues.cover"
+msgstr "Εξώφυλλο"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Όλα τα άρθρα θα επιστραφούν στη σειρά αναμονής για επιμέλεια και όλα τα σχετικά αρχεία θα αφαιρεθούν οριστικά. Επιβεβαιώνετε τη διαγραφή αυτού του τεύχους;"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Το περιοδικό αυτό χρησιμοποιεί προσαρμοσμένη διάταξη τευχών. <a href=\"{$url}\" class=\"action\">Επαναφορά στις προεπιλεγμένες ρυθμίσεις</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Το περιοδικό αυτό χρησιμοποιεί προσαρμοσμένη διάταξη ενοτήτων.  <a href=\"{$url}\" class=\"action\">Επαναφορά στις προεπιλεγμένες ρυθμίσεις</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Δεδομένα τεύχους"
+
+msgid "editor.issues.saveChanges"
+msgstr "Να αποθηκευτούν οι αλλαγές στον πίνακα περιεχομένων;"
+
+msgid "editor.issues.default"
+msgstr "Προεπιλεγμένες ρυθμίσεις"
+
+msgid "editor.issues.order"
+msgstr "Διάταξη"
+
+msgid "editor.issues.publicId"
+msgstr "Δημόσιο αναγνωριστικό"
+
+msgid "editor.issues.publishIssue"
+msgstr "Δημοσίευση τεύχους"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Αποδημοσίευση τεύχους"
+
+msgid "editor.issues.previewIssue"
+msgstr "Προεπισκόπηση τεύχους"
+
+msgid "editor.issues.preview"
+msgstr "Προεπισκόπηση"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Επιβεβαιώνετε τη δημοσίευση του νέου τεύχους;"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Επιβεβαιώνετε την αποδημοσίευση του συγκεκριμένου τεύχους;"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Επιβεβαιώνετε τον ορισμό του συγκεκριμένου τεύχους ως τρέχοντος;"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Δεν ήταν δυνατή η αποθήκευση δημόσιου αναγνωριστικού για το άρθρο:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Δεν υπάρχουν ενεργά τεύχη"
+
+msgid "editor.issues.open"
+msgstr "Άνοιγμα"
+
+msgid "editor.issues.pages"
+msgstr "Σελίδες"
+
+msgid "editor.issues.galleys"
+msgstr "Τυπογραφικά δοκίμια τεύχους"
+
+msgid "editor.issues.galley"
+msgstr "Τυπογραφικό δοκίμιο τεύχους"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Προβολή τυπογραφικού δοκιμίου τεύχους"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Δημοσίευση τυπογραφικών δοκιμίων με το περιεχόμενο όλου του τεύχους"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Δεν έχουν δημοσιευτεί τυπογραφικά δοκίμια τεύχους."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Απαιτείται μία ετικέτα του τυπογραφικού δοκιμίου τεύχους."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Απαιτείται η εισαγωγή της γλώσσας του τυπογραφικού δοκιμίου τεύχους."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Το δημόσιο αναγνωριστικό του τυπογραφικού δοκιμίου τεύχους υπάρχει ήδη."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Πίσω στα τυπογραφικά δοκίμια του τεύχους"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Επιβεβαιώνετε τη διαγραφή του τυπογραφικού δοκιμίου αυτού του τεύχους;"
+
+msgid "editor.issues.identifiers"
+msgstr "Αναγνωριστικά"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Μελλοντικά τεύχη"
+
+msgid "grid.action.addGalley"
+msgstr "Προσθήκη τυπογραφικού δοκιμίου"
+
+msgid "grid.action.publish"
+msgstr "Δημοσίευση τεύχους"
+
+msgid "grid.action.addIssue"
+msgstr "Δημιουργία τεύχους"
+
+msgid "grid.action.viewIssue"
+msgstr "Προβολή"
+
+msgid "grid.action.previewIssue"
+msgstr "Προεπισκόπηση"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Δημιουργία τυπογραφικού δοκιμίου τεύχους"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Ορισμός τρέχοντος τεύχους"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Παλαιά τεύχη"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Καθορισμός του πρωτότυπου αρχείου ως έκδοση αξιολόγησης"
+
+msgid "editor.article.decision"
+msgstr "Απόφαση"
+
+msgid "editor.submissions.showBy"
+msgstr "Προβολή κατά"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Υποβολή MM-ΗΗ"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Ενεργές αναθέσεις"
+
+msgid "editor.submissions.invite"
+msgstr "Πρόσκληση"
+
+msgid "editor.submissions.accept"
+msgstr "Αποδοχή"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Δεν υπάρχουν υποβολές"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Πιο πρόσφατη"
+
+msgid "editor.submissions.averageTime"
+msgstr "Εβδομάδες"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Τελευταία ολοκληρωμένη"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Ανάθεση σε"
+
+msgid "editor.submissions.inSection"
+msgstr "Στην ενότητα"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Πρόγραμματισμός δημοσίευσης στο"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Προς ανάθεση"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Η εισφορά για τη δημοσίευση δεν έχει καταβληθεί. Για να προγραμματιστεί η δημοσίευση του άρθρου, ειδοποιήστε τον Συγγραφέα να καταβάλει την εισφορά ή να ζητήσει απαλλαγή από την εισφορά."
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Η εικόνα εξωφύλλου που ζητήσατε να διαγραφεί δε βρέθηκε. Πιθανόν να έχει ήδη διαγραφεί. Δοκιμάστε να επαναφορτώσετε τη σελίδα."
+
+msgid "grid.action.removeArticle"
+msgstr "Αφαίρεση άρθρου από το τεύχος"
+
+msgid "editor.article.remove"
+msgstr "Αφαίρεση"
+
+msgid "editor.article.remove.confirm"
+msgstr "Είστε βέβαιοι ότι επιθυμείτε την αφαίρεση αυτού του άρθρου από το τεύχος; Το άρθρο θα είναι διαθέσιμο για δημοσίευση σε άλλο τεύχος."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Η ημερομηνία πρόσβασης δεν είναι έγκυρη."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Επιμέλεια τυπογραφικού δοκιμίου τεύχους"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Ο Επιμελητής Διάταξης προετοιμάζει τα αρχεία κάθε τυπογραφικού δοκίμιου και κατόπιν τα μεταφορτώνει στις κατάλληλες <span class=\"pkp_help_title\">Διορθώσεις</span> για περαιτέρω επεξεργασία."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Επιλογή των αρχείων του τυπογραφικού δοκιμίου"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Τα τελικά προσχέδια των αρχείων σε αυτόν τον κατάλογο μετατρέπονται από έναν Επιμελητή Κειμένου σε εκδόσεις επιμελημένου κειμένου, που μεταφορτώνονται παρακάτω, στο <span class=\"pkp_help_title\">Επιμέλεια κειμένου</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Αρχεία που έχουν ήδη μεταφορτωθεί σε οποιοδήποτε στάδιο υποβολής μπορούν να προστεθούν στον κατάλογο για διόρθωση τυπογραφικών δοκιμίων, επιλέγοντας το πλαίσιο ελέγχου \"Συμπερίληψη\" παρακάτω και πατώντας Αναζήτηση"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "Το δημόσιο αναγνωριστικό '{$publicIdentifier}' υπάρχει ήδη για ένα άλλο αντικείμενο της ίδιας κατηγορίας. Παρακαλούμε επιλέγετε μοναδικά αναγνωριστικά για τα αντικείμενα της ίδιας κατηγορίας."
+
+msgid "editor.article.coverImage"
+msgstr "Εικόνα εξωφύλλου"
