@@ -249,7 +249,7 @@ class Application extends PKPApplication {
 	 */
 	static function getRoleNames($contextOnly = false, $roleIds = null) {
 		$roleNames = parent::getRoleNames($contextOnly, $roleIds);
-		if (!$roleIds || !in_array(ROLE_ID_SUBSCRIPTION_MANAGER, $roleIds)) {
+		if (!$roleIds || in_array(ROLE_ID_SUBSCRIPTION_MANAGER, $roleIds)) {
 			$roleNames[ROLE_ID_SUBSCRIPTION_MANAGER] = 'user.role.subscriptionManager';
 		}
 		return $roleNames;
