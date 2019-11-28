@@ -42,8 +42,8 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function rebuildSearchIndex() {
-		$articleSearchIndex = Application::getSubmissionSearchIndex();
-		$articleSearchIndex->rebuildIndex();
+		$submissionSearchIndex = Application::getSubmissionSearchIndex();
+		$submissionSearchIndex->rebuildIndex();
 		return true;
 	}
 
