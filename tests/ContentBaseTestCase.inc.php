@@ -26,7 +26,7 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 	 * @return string
 	 */
 	protected function _handleStep1($data) {
-		$section = 'Articles'; // Default
+		$section = 'Preprints'; // Default
 		if (isset($data['section'])) $section = $data['section'];
 
 		// Page 1

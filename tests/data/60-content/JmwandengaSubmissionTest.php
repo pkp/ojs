@@ -35,34 +35,5 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		));
 
 		$this->logOut();
-		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignReviewer('Julie Janssen');
-		$this->assignReviewer('Aisla McCrae');
-		$this->assignReviewer('Adela Gallego');
-		$this->recordEditorialDecision('Accept Submission');
-		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignParticipant('Copyeditor', 'Sarah Vogt');
-		$this->recordEditorialDecision('Send To Production');
-		$this->waitForElementPresent('//a[contains(text(), \'Production\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignParticipant('Layout Editor', 'Stephen Hellier');
-		$this->assignParticipant('Proofreader', 'Sabine Kumar');
-
-		// Create a galley
-		$this->click('//button[@id="publication-button"]');
-		$this->click('//button[@id="galleys-button"]');
-		$this->waitForElementPresent($selector='css=[id^=component-grid-articlegalleys-articlegalleygrid-addGalley-button-]');
-		$this->click($selector);
-		$this->waitForElementPresent('css=[id^=label-]');
-		$this->type('css=[id^=label-]', 'PDF');
-		$this->click('//button[text()=\'Save\']');
-		$this->uploadWizardFile('PDF');
-
-		// Publish in current issue
-		$this->publish('1');
-		$this->isInIssue($title, 'Vol 1 No 2 (2014)');
-
-		$this->logOut();
 	}
 }

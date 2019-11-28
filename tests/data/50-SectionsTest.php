@@ -33,9 +33,9 @@ class SectionsTest extends WebTestCase {
 		// Section settings
 		$actions = new WebDriverActions(self::$driver);
 		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
-			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Journal"]'))
+			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Server"]'))
 			->perform();
-		$this->waitForElementPresent($selector='//button[contains(text(), "Sections")]');
+		$this->waitForElementPresent($selector='//button[contains(text(), "Series")]');
 		$this->click($selector);
 
 		// Edit Section (default "Articles")

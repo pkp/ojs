@@ -39,7 +39,5 @@ class RrossiSubmissionTest extends ContentBaseTestCase {
 		));
 
 		$this->logOut();
-		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->logOut();
 	}
 }
