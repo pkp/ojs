@@ -78,6 +78,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			$sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
 		}
 
+		import('classes.components.forms.publication.JournalEntryForm'); // Constant import
 		$templateMgr->setConstants([
 			'FORM_JOURNAL_ENTRY',
 		]);
