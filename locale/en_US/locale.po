@@ -772,7 +772,7 @@ msgid "installer.installationComplete"
 msgstr ""
 "<p>Installation of PPS has completed successfully.</p>"
 "<p>To begin using the system, <a href=\"{$loginUrl}\">login</a> with the username and password entered on the previous page.</p>"
-"<p>If you wish to be part of the PKP community, you can:</p>
+"<p>If you wish to be part of the PKP community, you can:</p>"
 "<ol>"
 "\t<li>Read the <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP blog</a> and follow the <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS feed</a> for news and updates.</li>"
 "\t<li>Visit the <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a> if you have questions or comments.</li>"
