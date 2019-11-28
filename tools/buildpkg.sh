@@ -27,7 +27,8 @@ BUILD=$PREFIX-$VERSION
 TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
 
 echo -n "Loading the list of exclusions... "
-EXCLUDE=`cat exclude.list`
+TOOLDIR=`dirname "${BASH_SOURCE[0]}"`
+EXCLUDE=`cat ${TOOLDIR}/exclude.list`
 
 cd $TMPDIR
 
