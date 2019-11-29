@@ -174,7 +174,9 @@ class IssueForm extends Form {
 	/**
 	 * Save issue settings.
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
+		parent::execute(...$functionArgs);
+
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 
