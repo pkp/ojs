@@ -44,6 +44,21 @@ msgstr "<p>The names and email addresses entered in this server site will be use
 msgid "default.contextSettings.openAccessPolicy"
 msgstr "This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge."
 
+msgid "default.contextSettings.forReaders"
+msgstr "We encourage readers to sign up for the publishing notification service for this server. Use the <a href=\"{$indexUrl}{$contextPath}/user/register\">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Interested in submitting to this server? We recommend that you review the <a href=\"{$indexUrl}{$contextPath}/about\">About</a> page for the policies, as well as the <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Author Guidelines</a>. Authors need to <a href=\"{$indexUrl}{$contextPath}/user/register\">register</a> prior to submitting or, if already registered, can simply <a href=\"{$indexUrl}/index/login\">log in</a> and begin the process."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "We encourage research librarians to list this server among their library's holdings. As well, it may be worth noting that this server's open source publishing system is suitable for libraries to host for their faculty members to use (see <a href=\"http://pkp.sfu.ca">Public Knowledge Project</a>)."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge."
+
 msgid "default.groups.name.manager"
 msgstr "Server manager"
 
@@ -92,8 +107,8 @@ msgstr "Data Set"
 msgid "default.genres.sourceTexts"
 msgstr "Source Texts"
 
-
 msgid "default.contextSettings.emailSignature"
 msgstr "<br/>"
 "________________________________________________________________________<br/>"
 "<a href=\"{$contextUrl}\">{$contextName}</a>"
+

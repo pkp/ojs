@@ -20,9 +20,6 @@ msgstr "Choose how a default copyright date is selected for an preprint . This d
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Use the preprint's publication date"
 
-msgid "manager.distribution.publication"
-msgstr "Publication"
-
 msgid "manager.distribution.publishingMode"
 msgstr "Publishing Mode"
 
@@ -34,18 +31,6 @@ msgstr "The server will provide open access to its contents."
 
 msgid "manager.distribution.publishingMode.success"
 msgstr "The publishing details have been updated."
-
-msgid "manager.website.archiving"
-msgstr "Archiving"
-
-msgid "manager.emails.confirmResetAll"
-msgstr "Are you sure you want to reset all email templates in this server? You will lose any customizations you have made."
-
-msgid "manager.files.note"
-msgstr "Note: The Files Browser is an advanced feature that allows the files and directories associated with a server to be viewed and manipulated directly."
-
-msgid "manager.journalManagement"
-msgstr "Server Management"
 
 msgid "manager.language.ui"
 msgstr "UI"
@@ -59,65 +44,17 @@ msgstr "Forms"
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "This will replace any locale-specific server settings you had for this locale"
 
-msgid "manager.languages.languageInstructions"
-msgstr "PPS can be made available to users in any of several supported languages. As well, PPS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by PPS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the PPS documentation."
-
-msgid "manager.languages.noneAvailable"
-msgstr "Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this server."
-
-msgid "manager.languages.primaryLocaleInstructions"
-msgstr "This will be the default language for the server site."
-
-msgid "manager.managementPages"
-msgstr "Management Pages"
-
-msgid "manager.people.allEnrolledUsers"
-msgstr "Users Enrolled in this Server"
-
-msgid "manager.people.allJournals"
-msgstr "All Servers"
-
-msgid "manager.people.allSiteUsers"
-msgstr "Enroll a User from this Site in this Server"
-
-msgid "manager.people.showNoRole"
-msgstr "Show users with no role"
-
 msgid "manager.people.allUsers"
 msgstr "All Enrolled Users"
 
 msgid "manager.people.confirmRemove"
 msgstr "Remove this user from this server? This action will unenroll the user from all roles within this server."
 
-msgid "manager.people.emailUsers.selectTemplate"
-msgstr "Select a template"
-
-msgid "manager.people.enrollExistingUser"
-msgstr "Enroll an Existing User"
-
-msgid "manager.people.enrollSyncJournal"
-msgstr "With server"
-
-msgid "manager.people.mergeUsers.from.description"
-msgstr "Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account."
-
-msgid "manager.people.mergeUsers.into.description"
-msgstr "Select a user to whom to attribute the previous users' authorships, editing assignments, etc."
-
-msgid "manager.people.roleEnrollment"
-msgstr "{$role} Enrollment"
-
-msgid "manager.people.syncUserDescription"
-msgstr "Enrollment synchronization will enroll all users enrolled in the specified role in the specified server into the same role in this server. This function allows a common set of users to be synchronized between servers."
-
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Do not require abstracts"
 
 msgid "manager.section.noSectionEditors"
 msgstr "There are no series editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first."
-
-msgid "manager.sections.assigned"
-msgstr "This Series' Editors"
 
 msgid "manager.sections.confirmDelete"
 msgstr "Are you sure you want to permanently delete this series?"
@@ -128,23 +65,11 @@ msgstr "Before this series can be deleted, you must move preprint's published wi
 msgid "manager.sections.create"
 msgstr "Create Series"
 
-msgid "manager.section.sectionEditorInstructions"
-msgstr "Add a Series Editor to this series to have submissions automatically assigned to the Series Editor. Otherwise, Series Editors can be assigned manually, after a submission comes in."
-
 msgid "manager.sections.editorRestriction"
 msgstr "Items can only be submitted by Editors and Series Editors."
 
-msgid "manager.sections.editors"
-msgstr "Series editors"
-
 msgid "manager.sections.form.abbrevRequired"
 msgstr "An abbreviated title is required for the series"
-
-msgid "manager.sections.form.mustAllowPermission"
-msgstr "Please ensure that at least one checkbox is checked for each Series Editor assignment."
-
-msgid "manager.sections.form.titleRequired"
-msgstr "A title is required for the series."
 
 msgid "manager.sections.identifyType"
 msgstr "Identify items published in this series as a(n)"
@@ -152,26 +77,11 @@ msgstr "Identify items published in this series as a(n)"
 msgid "manager.sections.identifyTypeExamples"
 msgstr "(For example etc.)"
 
-msgid "manager.sections.indexed"
-msgstr "Indexed"
-
-msgid "manager.sections.noneCreated"
-msgstr "No series have been created."
-
-msgid "manager.sections.open"
-msgstr "Open Submissions"
-
 msgid "manager.sections.policy"
 msgstr "Series Policy"
 
 msgid "manager.sections.submissionIndexing"
 msgstr "Will not be included in the indexing of the server"
-
-msgid "manager.section.submissionsToThisSection"
-msgstr "Submissions made to this series of the server"
-
-msgid "manager.sections.unassigned"
-msgstr "Available Series Editors"
 
 msgid "manager.sections.wordCount"
 msgstr "Word Count"
@@ -188,47 +98,8 @@ msgstr "Masthead"
 msgid "manager.setup.editorialTeam"
 msgstr "Editorial Team"
 
-msgid "manager.setup.homepageContent"
-msgstr "Server Homepage Content"
-
-msgid "manager.setup.homepageContentDescription"
-msgstr "The server homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown."
-
 msgid "manager.setup.useStyleSheet"
 msgstr "Server style sheet"
-
-msgid "manager.setup.contextName"
-msgstr "Server Name"
-
-msgid "manager.setup.pageHeader"
-msgstr "Server Page Header"
-
-msgid "manager.setup.aboutItemContent"
-msgstr "Content"
-
-msgid "manager.setup.addAboutItem"
-msgstr "Add About Item"
-
-msgid "manager.setup.addChecklistItem"
-msgstr "Add Checklist Item"
-
-msgid "manager.setup.addItem"
-msgstr "Add Item"
-
-msgid "manager.setup.addItemtoAboutJournal"
-msgstr "Add Item to Appear in "About the Server""
-
-msgid "manager.setup.addNavItem"
-msgstr "Add Item"
-
-msgid "manager.setup.addSponsor"
-msgstr "Add Sponsoring Organization"
-
-msgid "manager.setup.alternateHeader"
-msgstr "Alternate Header"
-
-msgid "manager.setup.alternateHeaderDescription"
-msgstr "Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required."
 
 msgid "manager.setup.announcements"
 msgstr "Announcements"
@@ -242,9 +113,6 @@ msgstr "Introduction"
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr "Enter any information you would like to appear on your announcements page."
 
-msgid "manager.setup.appearInAboutJournal"
-msgstr "(To appear in About the Server) "
-
 msgid "manager.setup.authorScreening"
 msgstr "Author screening"
 
@@ -257,45 +125,12 @@ msgstr "Allow all new authors to publish preprints without screening"
 msgid "manager.setup.enableAuthorScreening"
 msgstr "Author has to have two publications in ORCID/Crossref database OR author requires editorial screening before publishing"
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr "Require submitting Authors to file a Competing Interest (CI) statement with their submission."
-
-msgid "manager.setup.history"
-msgstr "Server History"
-
-msgid "manager.setup.historyDescription"
-msgstr "This text will appear in the "About" section of the server website and can be used to describe changes in titles, editorial board, and other items of relevance to the server's publication history."
-
 msgid "manager.setup.contact.success"
 msgstr "The contact details for this server have been updated."
-
-msgid "manager.setup.customizingTheLook"
-msgstr "Step 5. Customizing the Look"
-
-msgid "manager.setup.details"
-msgstr "Details"
-
-msgid "manager.setup.details.description"
-msgstr "Name of server, ISSN, contacts, sponsors, and search engines."
 
 msgid "manager.setup.disableUserRegistration"
 msgstr "The Server Manager will register all user accounts."
 
-
-msgid "manager.setup.discipline"
-msgstr "Academic Discipline and Sub-Disciplines"
-
-msgid "manager.setup.disciplineDescription"
-msgstr "Useful when server crosses disciplinary boundaries and/or authors submit multidisciplinary items."
-
-msgid "manager.setup.disciplineExamples"
-msgstr "(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)"
-
-msgid "manager.setup.disciplineProvideExamples"
-msgstr "Provide examples of relevant academic disciplines for this server"
-
-msgid "manager.setup.editorDecision"
-msgstr "Editor Decision"
 
 msgid "manager.setup.emailBounceAddress"
 msgstr "Bounce Address"
@@ -305,9 +140,6 @@ msgstr "Any undeliverable emails will result in an error message to this address
 
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr "In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the PPS documentation."
-
-msgid "manager.setup.emails"
-msgstr "Email Identification"
 
 msgid "manager.setup.emailSignature"
 msgstr "Signature"
@@ -330,56 +162,8 @@ msgstr "How many announcements to display on the homepage. Leave this empty to d
 msgid "manager.setup.enableUserRegistration"
 msgstr "Visitors can register a user account with the server."
 
-msgid "manager.setup.focusAndScope"
-msgstr "Focus and scope"
-
-msgid "manager.setup.focusAndScope.description"
-msgstr "Describe to authors, readers, and librarians the range of preprint's and other items the server will publish."
-
-msgid "manager.setup.forAuthorsToIndexTheirWork"
-msgstr "For Authors to Index Their Work"
-
-msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
-msgstr "PPS adheres to the <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Server Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work."
-
-msgid "manager.setup.form.issnInvalid"
-msgstr "The specified ISSN is not valid."
-
-msgid "manager.setup.form.contactEmailRequired"
-msgstr "The primary contact email is required."
-
-msgid "manager.setup.form.contactNameRequired"
-msgstr "The primary contact name is required."
-
-msgid "manager.setup.form.journalInitialsRequired"
-msgstr "The server initials are required."
-
-msgid "manager.setup.form.journalTitleRequired"
-msgstr "The server title is required."
-
-msgid "manager.setup.form.supportEmailRequired"
-msgstr "The support email is required."
-
-msgid "manager.setup.form.supportNameRequired"
-msgstr "The support name is required."
-
-msgid "manager.setup.generalInformation"
-msgstr "General Information"
-
-msgid "manager.setup.gettingDownTheDetails"
-msgstr "Step 1. Getting Down the Details"
-
-msgid "manager.setup.guidelines"
-msgstr "Guidelines"
-
-msgid "manager.setup.guidingSubmissions"
-msgstr "Step 3. Guiding Submissions"
-
 msgid "manager.setup.identity"
 msgstr "Server Identity"
-
-msgid "manager.setup.includeCreativeCommons"
-msgstr "For servers that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time."
 
 msgid "manager.setup.information"
 msgstr "Information"
@@ -399,12 +183,6 @@ msgstr "For Readers"
 msgid "manager.setup.information.success"
 msgstr "The information for this server was updated."
 
-msgid "manager.setup.institution"
-msgstr "Institution"
-
-msgid "manager.setup.itemsDescription"
-msgstr "Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page."
-
 msgid "manager.setup.itemsPerPage"
 msgstr "Items per page"
 
@@ -413,9 +191,6 @@ msgstr "Limit the number of items (for example, submissions, users, or editing a
 
 msgid "manager.setup.journalAbbreviation"
 msgstr "Server Abbreviation"
-
-msgid "manager.setup.journalArchiving"
-msgstr "Server Archiving"
 
 msgid "manager.setup.contextSummary"
 msgstr "Server Summary"
@@ -426,56 +201,8 @@ msgstr "About the Server"
 msgid "manager.setup.contextAbout.description"
 msgstr "Include any information about your server which may be of interest to readers or authors. This could include your open access policy, the focus and scope of the server, copyright notice, sponsorship disclosure, history of the server and a privacy statement."
 
-msgid "manager.setup.journalHomepageContent"
-msgstr "Server Homepage Content"
-
-msgid "manager.setup.journalHomepageContentDescription"
-msgstr "By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown."
-
-msgid "manager.setup.journalHomepageHeader"
-msgstr "Server Homepage Header"
-
-msgid "manager.setup.journalHomepageHeader.altText"
-msgstr "Server Homepage Header"
-
-msgid "manager.setup.journalHomepageHeaderDescription"
-msgstr "A graphic version of the server's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears."
-
 msgid "manager.setup.contextInitials"
 msgstr "Server initials"
-
-msgid "manager.setup.journalLayout"
-msgstr "Server Layout"
-
-msgid "manager.setup.journalLayoutDescription"
-msgstr "Choose a server theme and select layout components here. A server stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen)."
-
-msgid "manager.setup.journalLogo"
-msgstr "Server Logo"
-
-msgid "manager.setup.journalLogo.altText"
-msgstr "Server Logo"
-
-msgid "manager.setup.journalPageFooter"
-msgstr "Server Page Footer"
-
-msgid "manager.setup.journalPageFooterDescription"
-msgstr "This is the footer of your server. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page."
-
-msgid "manager.setup.journalPolicies"
-msgstr "Step 2. Server Policies"
-
-msgid "manager.setup.journalSetup"
-msgstr "Server Setup"
-
-msgid "manager.setup.journalSetupUpdated"
-msgstr "Your server setup has been updated."
-
-msgid "manager.setup.journalStyleSheetInvalid"
-msgstr "Invalid server stylesheet format. Accepted format is .css."
-
-msgid "manager.setup.journalTheme"
-msgstr "Server Theme"
 
 msgid "manager.setup.serverThumbnail"
 msgstr "Server thumbnail"
@@ -492,53 +219,14 @@ msgstr "Key Information"
 msgid "manager.setup.keyInfo.description"
 msgstr "Provide a short description of your server and identify editors, managing directors and other members of your editorial team."
 
-msgid "manager.setup.labelName"
-msgstr "Label name"
-
 msgid "manager.setup.lists.success"
 msgstr "The list settings for this server have been updated."
 
 msgid "manager.setup.lists"
 msgstr "Lists"
 
-msgid "manager.setup.management"
-msgstr "Management"
-
-msgid "manager.setup.managementOfBasicEditorialSteps"
-msgstr "Management of Basic Editorial Steps"
-
-msgid "manager.setup.managingPublishingSetup"
-msgstr "Management and Publishing Setup"
-
-msgid "manager.setup.managingTheJournal"
-msgstr "Step 4. Managing the Server"
-
 msgid "manager.setup.masthead.success"
 msgstr "The masthead details for this server have been updated."
-
-msgid "manager.setup.navigationBar"
-msgstr "Navigation Bar"
-
-msgid "manager.setup.navigationBarDescription"
-msgstr "Add or remove additional navigation bar items."
-
-msgid "manager.setup.navItemIsAbsolute"
-msgstr "URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")"
-
-msgid "manager.setup.navItemIsLiteral"
-msgstr "The label value is a literal string (e.g., "Server Setup") rather than a localization message key (e.g., "manager.setup")"
-
-msgid "manager.setup.noImageFileUploaded"
-msgstr "No image file uploaded."
-
-msgid "manager.setup.noStyleSheetUploaded"
-msgstr "No style sheet uploaded."
-
-msgid "manager.setup.note"
-msgstr "Note"
-
-msgid "manager.setup.notifications.submissionAckDisabled"
-msgstr "<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails."
 
 msgid "manager.setup.numPageLinks"
 msgstr "Page links"
@@ -546,44 +234,14 @@ msgstr "Page links"
 msgid "manager.setup.numPageLinks.description"
 msgstr "Limit the number of links to display to subsequent pages in a list."
 
-msgid "manager.setup.pageNumberIdentifier"
-msgstr "Page Number Option"
-
-msgid "manager.setup.policies"
-msgstr "Policies"
-
 msgid "manager.setup.privacyStatement.success"
 msgstr "The privacy statement has been updated."
-
-msgid "manager.setup.proofingInstructions"
-msgstr "Proofing Instructions"
-
-msgid "manager.setup.proofingInstructionsDescription"
-msgstr "The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Series Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Server Manager at any point (in HTML or plain text)."
-
-msgid "manager.setup.publicationSchedule"
-msgstr "Publication Schedule"
-
-msgid "manager.setup.publicationScheduling"
-msgstr "Publication Scheduling"
-
-msgid "manager.setup.publicIdentifier"
-msgstr "Identification of Server Content"
-
-msgid "manager.setup.publishingDescription"
-msgstr "These details may be included in metadata provided to third-party archival bodies."
-
-msgid "manager.setup.referenceLinking"
-msgstr "Reference Linking"
 
 msgid "manager.setup.restrictArticleAccess"
 msgstr "Users must be registered and log in to view open access content."
 
 msgid "manager.setup.restrictSiteAccess"
 msgstr "Users must be registered and log in to view the server site."
-
-msgid "manager.setup.screening"
-msgstr "Screening"
 
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Search Indexing"
@@ -597,24 +255,6 @@ msgstr "Help search engines like Google discover and display your site. You are 
 msgid "manager.setup.searchDescription.description"
 msgstr "Provide a brief description (50-300 characters) of the server which search engines can display when listing the server in search results."
 
-msgid "manager.setup.sectionsAndSectionEditors"
-msgstr "Series and Series Editors"
-
-msgid "manager.setup.sectionsDefaultSectionDescription"
-msgstr "(If series are not added, then items are submitted to the Preprints series by default.)"
-
-msgid "manager.setup.sectionsDescription"
-msgstr "To create or modify series for the server, go to Series Management.<br /><br />Authors on submitting items to the server will designate..."
-
-msgid "manager.setup.selectEditorDescription"
-msgstr "The server editor who will see it through the editorial process."
-
-msgid "manager.setup.selectSectionDescription"
-msgstr "The preprint series for which the item will be considered."
-
-msgid "manager.setup.showGalleyLinksDescription"
-msgstr "Always show galley links and indicate restricted access."
-
 msgid "manager.setup.siteAccess.view"
 msgstr "Site Access"
 
@@ -624,29 +264,8 @@ msgstr "View Preprint Content"
 msgid "manager.setup.sponsoringOrganization"
 msgstr "Sponsoring organization"
 
-msgid "manager.setup.subjectExamples"
-msgstr "(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)"
-
-msgid "manager.setup.subjectKeywordTopic"
-msgstr "Keywords"
-
-msgid "manager.setup.subjectProvideExamples"
-msgstr "Provide examples of keywords or topics as a guide for authors"
-
-msgid "manager.setup.submissionGuidelines"
-msgstr "Submission guidelines"
-
 msgid "manager.setup.submissionPreparationChecklist"
 msgstr "Submission Preparation Checklist"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "On making a submission to the server, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Server. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission."
-
-msgid "manager.setup.submissions"
-msgstr "Submissions"
-
-msgid "manager.setup.submissions.description"
-msgstr "Author guidelines, copyright, and indexing (including registration)."
 
 msgid "manager.setup.enableOai"
 msgstr "Enable OAI"
@@ -654,35 +273,11 @@ msgstr "Enable OAI"
 msgid "manager.setup.enableOai.description"
 msgstr "Provide metadata to third-party indexing services through the <a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
 
-msgid "manager.setup.typeExamples"
-msgstr "(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)"
-
-msgid "manager.setup.typeMethodApproach"
-msgstr "Type (Method/Approach)"
-
-msgid "manager.setup.typeProvideExamples"
-msgstr "Provide examples of relevant research types, methods, and approaches for this field"
-
-msgid "manager.setup.uniqueIdentifier"
-msgstr "Unique Identifier"
-
-msgid "manager.setup.uniqueIdentifierDescription"
-msgstr "Preprints can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI)."
-
 msgid "manager.setup.userAccess.success"
 msgstr "The user access details for this server have been updated."
 
-msgid "manager.setup.useThumbnail"
-msgstr "Thumbnail"
-
-msgid "manager.setup.useImageTitle"
-msgstr "Title image"
-
 msgid "manager.setup.userRegistration"
 msgstr "User Registration"
-
-msgid "manager.setup.useTextTitle"
-msgstr "Title text"
 
 msgid "manager.statistics.defaultMetricDescription"
 msgstr ""
@@ -690,86 +285,23 @@ msgstr ""
 "\t\tThere are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used preprint's or to rank"
 "\t\tsearch results. Please select one of the configured metrics as a default."
 
-msgid "manager.statistics.statistics"
-msgstr "Server Statistics"
-
-msgid "manager.statistics.statistics.articleViews"
-msgstr "Preprint View Counts (for Authors only)"
-
-msgid "manager.statistics.statistics.count.accept"
-msgstr "Accept"
-
-msgid "manager.statistics.statistics.count.decline"
-msgstr "Decline"
-
-msgid "manager.statistics.statistics.count.revise"
-msgstr "Resubmit"
-
-msgid "manager.statistics.statistics.daysToPublication"
-msgstr "Days to publication"
-
-msgid "manager.statistics.statistics.description"
-msgstr "PPS calculates the following statistics for each server."
-
-msgid "manager.statistics.statistics.itemsPublished"
-msgstr "Items published"
-
-msgid "manager.statistics.statistics.makePublic"
-msgstr "Check items to be made available to readers in About the Server."
-
-msgid "manager.statistics.statistics.numSubmissions"
-msgstr "Total submissions"
-
-msgid "manager.statistics.statistics.registeredReaders"
-msgstr "Registered readers"
-
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Registered users"
-
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Preprint file downloads"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstract"
 msgstr "Preprint abstract page views"
 
-msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr "Preprint abstract page views and downloads"
-
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Server main page views"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Narrow results by context."
 
 msgid "manager.statistics.reports.filters.byObject.description"
 msgstr "Narrow results by object type (server, preprint, file types) and/or by one or more object id(s)."
 \t
-msgid "manager.setup.categories"
-msgstr "Categories"
-
-msgid "manager.setup.categories.description"
-msgstr "Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete server set."
-
 msgid "grid.category.path"
 msgstr "Path"
 
-msgid "grid.action.addSection"
-msgstr "Add Series"
-
-msgid "manager.setup.section.description"
-msgstr "Preprints of a server are organized in Series, typically by theme or content type."
-
-msgid "settings.roles.gridDescription"
-msgstr "Roles are groups of users in the server who are given access to different permission levels and associated workflows within the server. There are four different permission levels: Server Managers have access to everything in the server (all content and settings); Series Editors have complete access to all assigned content; Server Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; and Authors can see and interact with a limited amount of information on their own submissions."
-
 msgid "manager.publication.library"
 msgstr "Publisher Library"
-
-msgid "manager.setup.copyrightYearBasis"
-msgstr "Base new preprint's copyright year on"
-
-msgid "manager.setup.copyrightYearBasis.article"
-msgstr "Article: default year will be drawn from the preprint's publication date, as in "publish-as-you-go"."
 
 msgid "manager.setup.resetPermissions"
 msgstr "Reset Preprint Permissions"
@@ -789,9 +321,6 @@ msgstr "Components"
 msgid "grid.genres.title"
 msgstr "Preprint Components"
 
-msgid "grid.genres.description"
-msgstr "These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02)."
-
 msgid "plugins.importexport.common.settings"
 msgstr "Settings"
 
@@ -801,9 +330,6 @@ msgstr "DOI Plugin Settings"
 msgid "plugins.importexport.common.export.articles"
 msgstr "Articles"
 
-msgid "plugins.importexport.common.export.representations"
-msgstr "Galleys"
-
 msgid "plugins.importexport.common.missingRequirements"
 msgstr "Plugin requirements not met"
 
@@ -812,9 +338,6 @@ msgstr "In order to use this plugin please go to the "Public Identifier" plugin 
 
 msgid "plugins.importexport.common.error.pluginNotConfigured"
 msgstr "The plugin is not fully set up."
-
-msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr "No publishing objects are selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin."
 
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Password"
@@ -861,9 +384,6 @@ msgstr "Invalid XML:"
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
 msgstr "The output file {$param} is not writable."
 
-msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "The input file {$param} is not readable."
-
 msgid "plugins.importexport.common.register.error.mdsError"
 msgstr "Registration was not successful! The DOI registration server returned an error: '{$param}'."
 
@@ -881,9 +401,6 @@ msgstr "The specified server path, "{$journalPath}", does not exist."
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "The specified objects could not be found."
-
-msgid "manager.setup.notifications.copyPrimaryContact"
-msgstr "Send a copy to the primary contact, identified in the Server Settings."
 
 msgid "stats.publications.details"
 msgstr "Preprint Details"
@@ -903,5 +420,3 @@ msgstr "{$count} of {$total} preprints"
 msgid "stats.publications.abstracts"
 msgstr "Abstracts"
 
-msgid "stats.publications.galleys"
-msgstr "Files"

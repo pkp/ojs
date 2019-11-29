@@ -41,11 +41,5 @@ msgstr "The server you requested was not found."
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr "You do not have permission to move this email template to another server."
 
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "The payment method you selected is not supported."
-
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr "The publication that you requested is not part of this server."
-
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "The publication that you requested is not part of this submission."
