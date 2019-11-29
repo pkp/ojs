@@ -99,6 +99,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 			$contextId = $submission->getData('contextId');
 		} elseif (in_array($pubObjectType, ['Publication', 'SubmissionFile'])) {
 			$submission = Services::get('submission')->get($pubObject->getData('submissionId'));
+			$publication = Services::get('publication')->get($pubObject->getData('publicationId'));
 			$contextId = $submission->getData('contextId');
 		}
 
@@ -140,6 +141,11 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 					$pubIdSuffix = PKPString::regexp_replace('/%a/', $submission->getId(), $pubIdSuffix);
 				}
 
+				if ($publication) {
+					// %b - publication id
+					$pubIdSuffix = PKPString::regexp_replace('/%b/', $publication->getId(), $pubIdSuffix);
+				}
+
 				if ($representation) {
 					// %g - galley id
 					$pubIdSuffix = PKPString::regexp_replace('/%g/', $representation->getId(), $pubIdSuffix);
@@ -157,6 +163,10 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 				if ($submission) {
 					$pubIdSuffix .= '.' . $submission->getId();
+				}
+
+				if ($publication) {
+					$pubIdSuffix .= '.v' . $publication->getId();
 				}
 
 				if ($representation) {

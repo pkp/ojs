@@ -374,7 +374,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$suffixType = $this->getSetting($form->submissionContext->getId(), 'doiSuffix');
 		$pattern = '';
 		if ($suffixType === 'default') {
-			$pattern = '%j.%a';
+			$pattern = '%j.%a.v%b';
 		} elseif ($suffixType === 'pattern') {
 			$pattern = $this->getSetting($form->submissionContext->getId(), 'doiPublicationSuffixPattern');
 		}
@@ -395,18 +395,15 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				'contextInitials' => $form->submissionContext->getData('acronym', $form->submissionContext->getData('primaryLocale')) ?? '',
 				'separator' => '/',
 				'submissionId' => $form->publication->getData('submissionId'),
+				'publicationId' => $form->publication->getId(),
 				'i18n' => [
 					'assignId' => __('plugins.pubIds.doi.editor.doi.assignDoi'),
 					'clearId' => __('plugins.pubIds.doi.editor.clearObjectsDoi'),
+					'missingParts' => __('plugins.pubIds.doi.editor.missingParts'),
 				]
 			];
 			if ($form->publication->getData('pub-id::publisher-id')) {
 				$fieldData['publisherId'] = $form->publication->getData('pub-id::publisher-id');
-			}
-			if ($suffixType === 'default') {
-				$fieldData['i18n']['missingParts'] = __('plugins.pubIds.doi.editor.missingIssue');
-			} else  {
-				$fieldData['i18n']['missingParts'] = __('plugins.pubIds.doi.editor.missingParts');
 			}
 			$form->addField(new \PKP\components\forms\FieldPubId('pub-id::doi', $fieldData));
 		}
