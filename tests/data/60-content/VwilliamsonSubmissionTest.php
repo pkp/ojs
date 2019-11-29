@@ -40,8 +40,5 @@ class VwilliamsonSubmissionTest extends ContentBaseTestCase {
 		));
 
 		$this->logOut();
-		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->recordEditorialDecision('Decline Submission');
-		$this->logOut();
 	}
 }

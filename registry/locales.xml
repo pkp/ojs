@@ -17,4 +17,5 @@
 
 <locales>
 	<locale key="en_US" complete="true"  name="English" iso639-2b="eng" iso639-3="eng" />
+	<locale key="fr_CA" complete="false" name="Français (Canada)" iso639-2b="fre" iso639-3="fra" />
 </locales>

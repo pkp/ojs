@@ -38,18 +38,5 @@ class LkumiegaSubmissionTest extends ContentBaseTestCase {
 		));
 
 		$this->logOut();
-		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignReviewer('Julie Janssen');
-		$this->assignReviewer('Aisla McCrae');
-		$this->assignReviewer('Adela Gallego');
-		$this->logOut();
-		$this->performReview('jjanssen', null, $title, 'Revisions Required');
-		$this->performReview('amccrae', null, $title, 'Revisions Required');
-		$this->performReview('agallego', null, $title, 'Resubmit for Review');
-		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->recordEditorialDecision('Request Revisions');
-		$this->logOut();
 	}
 }

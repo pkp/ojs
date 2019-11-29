@@ -39,25 +39,5 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 		));
 
 		$this->logOut();
-		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		// Assign a recommendOnly section editor
-		$this->assignParticipant('Section editor', 'Minoti Inoue', true);
-		$this->logOut();
-		// Find the submission as the section editor
-		$username = 'minoue';
-		$password = $username . $username;
-		$this->logIn($username, $password);
-		$xpath = '//div[contains(text(),' . $this->quoteXpath($title) . ')]';
-		$this->waitForElementPresent($xpath);
-		$this->click($xpath);
-		// Recommend
-		$this->recordEditorialRecommendation('Accept Submission');
-		$this->logOut();
-		// Log in as editor and see the existing recommendation
-		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->waitForElementPresent('//div[contains(@class,"pkp_workflow_recommendations") and contains(text(),"Recommendations: Accept Submission")]');
-		$this->logOut();
 	}
 }
