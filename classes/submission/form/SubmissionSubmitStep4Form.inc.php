@@ -32,8 +32,8 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 	 * Save changes to submission.
 	 * @return int the submission ID
 	 */
-	function execute() {
-		parent::execute();
+	function execute(...$functionParams) {
+		parent::execute(...$functionParams);
 
 		$submission = $this->submission;
 
