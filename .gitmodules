@@ -29,3 +29,6 @@
 [submodule "plugins/generic/citationStyleLanguage"]
 	path = plugins/generic/citationStyleLanguage
 	url = https://github.com/pkp/citationStyleLanguage.git
+[submodule "plugins/reports/counter/classes/COUNTER"]
+	path = plugins/reports/counter/classes/COUNTER
+	url = https://github.com/ulsdevteam/COUNTER.git
