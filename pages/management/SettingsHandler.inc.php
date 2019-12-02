@@ -37,6 +37,17 @@ class SettingsHandler extends ManagementHandler {
 	}
 
 	/**
+	 * Add the workflow settings page
+	 *
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function workflow($args, $request) {
+		parent::workflow($args, $request);
+		TemplateManager::getManager($request)->display('management/workflow.tpl');
+	}
+
+	/**
 	 * Add the archive and payments tabs to the distribution settings page
 	 *
 	 * @param $args array
