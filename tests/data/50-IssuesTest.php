@@ -29,11 +29,15 @@ class IssuesTest extends WebTestCase {
 		// Management > Issues
 		$actions = new WebDriverActions(self::$driver);
 		$actions->moveToElement($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
-			->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
+			->perform();
+		$actions = new WebDriverActions(self::$driver);
+		$actions->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
 			->perform();
 		$actions = new WebDriverActions(self::$driver);
 		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Issues"]'))
-			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Future Issues"]'))
+			->perform();
+		$actions = new WebDriverActions(self::$driver);
+		$actions->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Future Issues"]'))
 			->perform();
 
 		// Create issue

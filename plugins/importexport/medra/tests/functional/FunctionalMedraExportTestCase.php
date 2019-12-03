@@ -29,7 +29,7 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	/**
 	 * @see PHPUnit_Framework_TestCase::setUp()
 	 */
-	protected function setUp() {
+	protected function setUp() : void {
 		$this->pluginId = 'medra';
 
 		// Retrieve and check configuration. (We're in a chicken

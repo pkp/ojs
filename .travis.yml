@@ -3,17 +3,21 @@ matrix:
   include:
   # Validation
   - env: TEST=validation
-    php: 7.2
+    php: 7.3
   # PostgreSQL / various PHP
   - env: TEST=pgsql
     php: 7.2
   - env: TEST=pgsql
     php: 7.3
+  - env: TEST=pgsql
+    php: 7.4
   # MySQL / various PHP
   - env: TEST=mysql
     php: 7.2
   - env: TEST=mysql
     php: 7.3
+  - env: TEST=mysql
+    php: 7.4
   # Path info disabled DISABLED pending a fix of pkp/pkp-lib#4414
   # - env: TEST=mysql DISABLE_PATH_INFO=1
   #   php: 7.2
@@ -21,7 +25,6 @@ env:
   global:
   - secure: "nxosaZUBRaYhk8+LHaDnVgMIveiK4zewiXW5Fw5TtB/D6V67oASufil1uhcayyzIBwnrZZmrFPLhXm0Lm1RiQHrsftffcMB5JlWK9R9EyWpyd87ewqWy3kXBAvsXXTU6ihGiaFpklhVCKt7XcDSR8bWEb2NVWrM7JS7dHDKMwaA="
 language: php
-dist: trusty
 python:
   - 3.3 # Required by Javascript linter/builder
 git:
@@ -78,10 +81,9 @@ after_script:
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/post-data-build.sh; fi
 
   # Print logs and outputs for debugging.
-  - tail -n 200 error.log
-  - cat ./lib/pkp/tests/results/error.log
+  - cat error.log
 
 after_failure:
-  - sudo apt-get install sharutils
+  - sudo apt-get install sharutils imagemagick
   - import -window root screenshot.png
   - tar cz screenshot.png | uuencode /dev/stdout

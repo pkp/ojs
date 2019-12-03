@@ -103,7 +103,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	/**
 	 * @see PHPUnit_Framework_TestCase::tearDown()
 	 */
-	protected function tearDown() {
+	protected function tearDown() : void {
 		// Restoring the tables alone will not update the settings cache
 		// so we have to do this manually.
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var journalDao JournalDAO */

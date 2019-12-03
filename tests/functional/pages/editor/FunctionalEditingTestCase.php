@@ -54,16 +54,9 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	}
 
 	/**
-	 * @see WebTestCase::setUp()
-	 */
-	protected function setUp() {
-		parent::setUp();
-	}
-
-	/**
 	 * @see WebTestCase::tearDown()
 	 */
-	protected function tearDown() {
+	protected function tearDown() : void {
 		parent::tearDown();
 
 		// If we generated an article then make sure it's being

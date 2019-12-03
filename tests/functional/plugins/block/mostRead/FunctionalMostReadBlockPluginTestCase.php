@@ -43,7 +43,7 @@ class FunctionalMostReadBlockPluginTest extends WebTestCase {
 	 *
 	 * @see PKPTestCase::setUp()
 	 */
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 		// Enable the "most read articles" plugin.
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */

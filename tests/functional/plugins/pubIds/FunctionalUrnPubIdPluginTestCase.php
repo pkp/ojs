@@ -57,7 +57,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	/**
 	 * @see WebTestCase::setUp()
 	 */
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 
 		// OJS pages and Selenium locators required for test.
@@ -145,7 +145,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	/**
 	 * @see PHPUnit_Framework_TestCase::tearDown()
 	 */
-	protected function tearDown() {
+	protected function tearDown() : void {
 		// Restart the session so that we get access
 		// to Selenium to clean up our configuration.
 		$this->start();

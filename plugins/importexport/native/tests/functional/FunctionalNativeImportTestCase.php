@@ -45,7 +45,7 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 	/**
 	 * @see WebTestCase::setUp()
 	 */
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 		$request = Application::get()->getRequest();
 		if (is_null($request->getRouter())) {

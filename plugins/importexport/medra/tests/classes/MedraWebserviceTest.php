@@ -20,7 +20,7 @@ import('plugins.importexport.medra.classes.MedraWebservice');
 class MedraWebserviceTest extends PKPTestCase {
 	private $ws;
 
-	protected function setUp() {
+	protected function setUp() : void {
 		// Retrieve and check configuration.
 		$medraPassword = Config::getVar('debug', 'webtest_medra_pw');
 		if (empty($medraPassword)) {

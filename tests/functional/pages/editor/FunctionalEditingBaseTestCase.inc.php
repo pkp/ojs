@@ -43,7 +43,7 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 	/**
 	 * @see WebTestCase::setUp()
 	 */
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 		$this->editorBasePath = $this->baseUrl . '/index.php/lucene-test/editor/';
 	}

@@ -63,7 +63,7 @@ class CreateContextTest extends PKPCreateContextTest {
 		$this->click('//button[@id="context-button"]');
 		$this->setInputValue('[name="abbreviation-en_US"]', 'publicknowledge');
 		$this->click('//*[@id="context"]//button[contains(text(),"Save")]');
-		$this->waitForTextPresent($this->contextName['en_US'] . ' was edited successfully.');
+		$this->waitForElementPresent('//div[contains(text(),"' . $this->contextName['en_US'] . ' was edited successfully.")]');
 	}
 
 	/**
@@ -75,11 +75,15 @@ class CreateContextTest extends PKPCreateContextTest {
 		// Settings > Journal > Masthead
 		$actions = new WebDriverActions(self::$driver);
 		$actions->moveToElement($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
-			->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
+			->perform();
+		$actions = new WebDriverActions(self::$driver);
+		$actions->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
 			->perform();
 		$actions = new WebDriverActions(self::$driver);
 		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
-			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Journal"]'))
+			->perform();
+		$actions = new WebDriverActions(self::$driver);
+		$actions->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Journal"]'))
 			->perform();
 		$this->setInputValue('[name="abbreviation-en_US"]', 'J Pub Know');
 		$this->setInputValue('[name="acronym-en_US"]', 'PK');
@@ -98,7 +102,7 @@ class CreateContextTest extends PKPCreateContextTest {
 		$this->setInputValue('[name="printIssn"]', '0378-5955');
 
 		$this->click('//*[@id="masthead"]//button[contains(text(),"Save")]');
-		$this->waitForTextPresent('The masthead details for this journal have been updated.');
+		$this->waitForElementPresent('//div[contains(text(),"The masthead details for this journal have been updated.")]');
 
 		$this->contactSettings();
 	}

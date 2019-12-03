@@ -27,6 +27,8 @@ import('lib.pkp.classes.oai.OAIUtils');
 import('plugins.oaiMetadataFormats.dc.OAIMetadataFormat_DC');
 import('plugins.oaiMetadataFormats.dc.OAIMetadataFormatPlugin_DC');
 
+import('lib.pkp.classes.services.PKPSchemaService'); // Constants
+
 class OAIMetadataFormat_DCTest extends PKPTestCase {
 
 	/**

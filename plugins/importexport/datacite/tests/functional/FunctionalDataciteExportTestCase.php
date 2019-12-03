@@ -32,7 +32,7 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	/**
 	 * @see PHPUnit_Framework_TestCase::setUp()
 	 */
-	protected function setUp() {
+	protected function setUp() : void {
 		$this->pluginId = 'datacite';
 
 		// Retrieve and check configuration. (We're in a chicken
