@@ -13,924 +13,323 @@
 
 <email_texts locale="uk_UA">
 	<email_text key="NOTIFICATION">
-		<subject>Нове повідомлення від сайту {$siteTitle}</subject>
-		<body><![CDATA[Ви маєте нове повідомлення від сайту {$siteTitle}:<br />
-<br />
-{$notificationContents}<br />
-<br />
-Посилання: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається зареєстрованому користувачу, який обрав опцію отримання повідомлень цього типу електронною поштою.</description>
+		<subject>{translate key="emails.notification.subject"}</subject>
+		<body>{translate key="emails.notification.body"}</body>
+		<description>{translate key="emails.notification.description"}</description>
 	</email_text>
 		<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Підтвердження скидання пароля</subject>
-		<body><![CDATA[Ми отримали запит на скидання Вашого пароля для веб-сайту {$siteTitle}.<br />
-<br />
-Якщо Ви не робили цього запиту, будь ласка, проігноруйте цей лист і Ваш пароль не буде змінений. Якщо Ви бажаєте скинути свій пароль, натисніть на посиланні нижче.<br />
-<br />
-Скинути мій пароль: <a href="{$url}">{$url}</a><br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається зареєстрованому користувачу, який вказав, що забув свій пароль і не може увійти до системи. У листі міститься URL, натиснувши на який користувач може скинути свій пароль.</description>
+		<subject>{translate key="emails.passwordResetConfirm.subject"}</subject>
+		<body>{translate key="emails.passwordResetConfirm.body"}</body>
+		<description>{translate key="emails.passwordResetConfirm.description"}</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Зміна пароля</subject>
-		<body><![CDATA[Ваш пароль для доступу до веб-сайту {$siteTitle} був успішно змінений. Будь ласка, збережіть вказані нижче ім'я користувача та пароль, оскільки ці дані будуть Вам необхідні протягом усієї подальшої роботи з цим журналом.<br />
-<br />
-Ваше ім'я користувача: {$username}<br />
-Пароль: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається зареєстрованому користувачу після того, як він успішно скинув свій пароль за допомогою процесу, викладеного у листі PASSWORD_RESET_CONFIRM.</description>
+		<subject>{translate key="emails.passwordReset.subject"}</subject>
+		<body>{translate key="emails.passwordReset.body"}</body>
+		<description>{translate key="emails.passwordReset.description"}</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Реєстрація нового користувача</subject>
-		<body><![CDATA[Дякуємо Вам за реєстрацію користувачем видання {$contextName}. Будь ласка, надійно зберігайте ім'я користувача та пароль, що будуть необхідні Вам упродовж усієї подальшої роботи з цим журналом.<br />
-<br />
-Ім'я користувача: {$username}<br />
-Пароль: {$password}<br />
-<br />
-Дякую,<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається новому зареєстрованому користувачу для того, щоб привітати його з реєстрацією та надіслати йому його ім'я користувача та пароль.</description>
+		<subject>{translate key="emails.userRegister.subject"}</subject>
+		<body>{translate key="emails.userRegister.body"}</body>
+		<description>{translate key="emails.userRegister.description"}</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
-		<subject>Підтвердження облікового запису</subject>
-		<body><![CDATA[{$userFullName}<br />
-<br />
-Ви створили обліковий запис на сайті видання {$contextName}, але перш ніж Ви зможете користуватися ним, необхідно підтвердити вказану під час реєстрації email адресу . Щоб зробити це, перейдіть за вказаним нижче посиланням:<br />
-<br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
-<br />
-Дякую,<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається новому зареєстрованому користувачу для того, щоб привітати його з реєстрацією та надіслати йому його ім'я користувача та пароль.</description>
+		<subject>{translate key="emails.userValidate.subject"}</subject>
+		<body>{translate key="emails.userValidate.body"}</body>
+		<description>{translate key="emails.userValidate.description"}</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Реєстрація рецензента видання {$contextName}</subject>
-		<body><![CDATA[З огляду на Ваш досвід, ми взяли на себе сміливість внести Ваше ім'я до бази даних рецензентів видання {$contextName}. Це не передбачає жодних зобов'язань з Вашого боку, а лише дозволяє нам розглядати Вас як можливого рецензента рукописів, що подаються до нашого журналу. Під час запрошень на проведення рецензування, Ви матимете можливість бачити назву та анотацію рукопису, про який йтиме мова, і, розглянувши цю інформацію, Ви завжди зможете прийняти або відхилити запрошення. Крім того, в будь-який час Ви можете вимагати видалення свого імені з цього списку рецензентів.<br />
-<br />
-Ми надаємо Вам ім'я користувача та пароль, які будуть необхідні Вам упродовж усієї подальшої роботи з журналом через його веб-сайт. Серед іншого, Ви можете оновити свій профіль та вказати власні наукові інтереси.<br />
-<br />
-Ім'я користувача: {$username}<br />
-Пароль: {$password}<br />
-<br />
-Дякую,<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається новому зареєстрованому рецензенту для того, щоб повідомити йому про реєстрацію та надіслати його ім'я користувача та пароль.</description>
+		<subject>{translate key="emails.reviewerRegister.subject"}</subject>
+		<body>{translate key="emails.reviewerRegister.body"}</body>
+		<description>{translate key="emails.reviewerRegister.description"}</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>Опубліковано новий випуск</subject>
-		<body><![CDATA[Читачі:<br />
-<br />
-Новий випуск видання {$contextName} був щойно опублікований за адресою <a href="{$contextUrl}">{$contextUrl}</a>. Запрошуємо переглянути зміст випуску, щоб потім зайти на наш веб-сайт та ознайомитись зі статтями та іншими цікавими Вам матеріалами.<br />
-<br />
-Дякуємо, що продовжуєте цікавитись нашою роботою,<br />
-{$editorialContactSignature}]]></body>
-		<description>Цей лист надсилається зареєстрованим читачам засобами посилання "Сповістити користувачів" у теці редактора. Лист інформує читачів про вихід нового випуску видання та запрошує їх відвідати сайт журналу, скориставшись відповідним URL-посиланням.</description>
+		<subject>{translate key="emails.publishNotify.subject"}</subject>
+		<body>{translate key="emails.publishNotify.body"}</body>
+		<description>{translate key="emails.publishNotify.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Запит на архівування видання {$contextName}</subject>
-		<body><![CDATA[Шановний [Директор університетської бібліотеки]<br />
-<br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; - це журнал, для якого Ваш співробітник [Ім'я співробітника] виконує роль [посада у редакційному штаті]. Наш журнал прагне мати архів, сумісний з LOCKSS (Lots of Copies Keep Stuff Safe) у Вашій бібліотеці та бібліотеках інших університетів.<br />
-<br />
-[Короткий опис журналу]<br />
-<br />
-URL-адреса маніфесту видавця LOCKSS для нашого журналу: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
-<br />
-Ми знаємо, що Ваша бібліотека вже бере участь у проекті LOCKSS. Якщо для реєстрації нашого журналу з Вашою версією LOCKSS потрібні певні додаткові метадані, ми будемо раді надати Вам їх.<br />
-<br />
-Дякую,<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається утримувачу архіву LOCKSS як пропозиція щодо включення цього журналу до існуючого архіву. У листі міститься URL-адреса на прийнятий журналом маніфест видавця LOCKSS.</description>
+		<subject>{translate key="emails.lockssExistingArchive.subject"}</subject>
+		<body>{translate key="emails.lockssExistingArchive.body"}</body>
+		<description>{translate key="emails.lockssExistingArchive.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Запит на архівування видання {$contextName}</subject>
-		<body><![CDATA[Шановний [Директор університетської бібліотеки]<br />
-<br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; - це журнал, для якого Ваш співробітник [Ім'я співробітника] виконує роль [посада у редакційному штаті]. Наш журнал прагне мати архів, сумісний з LOCKSS (Lots of Copies Keep Stuff Safe) у Вашій бібліотеці та бібліотеках інших університетів.<br />
-<br />
-[Короткий опис журналу]<br />
-<br />
-Програма LOCKSS &amp;lt;http://lockss.org/&amp;gt; - це міжнародна ініціатива бібліотек та видавців, яка є прикладом працездатної моделі розподіленого архівного збереження цифрового змісту. Необхідне програмне забезпечення є безкоштовним, воно працює на звичайному персональному комп'ютері; систему дуже легко розгорнути в режимі онлайн; вона потребує мінімальної підтримки та супроводу.<br />
-<br />
-Щоб допомогти архівувати наш журнал, ми запрошуємо Вас стати членом спільноти LOCKSS та приєднатись до ініціативи збирання та збереження наукового змісту, виробленого співробітниками Вашої установи та вченими з усього світу. Для цього, дайте доручення одному з Ваших співробітників, завітати на веб-сайт LOCKSS та отримати інформацію про те, як функціонує система. Я з нетерпінням чекаю Вашої відповіді щодо можливості надання допомоги у питаннях архівування нашого журналу.<br />
-<br />
-Дякую,<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається як пропозиція приєднання адресата до ініціативи LOCKSS та включення цього журналу до архіву. В ньому міститься інформація про ініціативу LOCKSS та шляхи приєднання до неї.</description>
+		<subject>{translate key="emails.lockssNewArchive.subject"}</subject>
+		<body>{translate key="emails.lockssNewArchive.body"}</body>
+		<description>{translate key="emails.lockssNewArchive.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
-		<subject>Подяка за подання рукопису</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Дякуємо, що надіслали рукопис &quot;{$submissionTitle}&quot; для публікації у виданні &quot;{$contextName}&quot;. Електронна система управління журналом, яку ми використовуємо, дозволяє авторам відслідковувати редакційне опрацювання поданих до друку рукописів. Для цього потрібно увійти на веб-сайт журналу зі своїм іменем користувача:<br />
-<br />
-URL рукопису: {$submissionUrl}<br />
-Ім'я користувача: {$authorUsername}<br />
-<br />
-Якщо Ви маєте запитання, будь ласка, звертайтеся до мене. Дякую за вибір цього журналу як місця публікації своєї роботи.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Якщо розсилання таких листів дозволене, цей лист автоматично надсилається автору, коли він або вона завершує процес подання рукопису до журналу. У ньому міститься інформація про відстеження редакційного опрацювання рукопису та подяка автору за подання.</description>
+		<subject>{translate key="emails.submissionAck.subject"}</subject>
+		<body>{translate key="emails.submissionAck.body"}</body>
+		<description>{translate key="emails.submissionAck.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
-		<subject>Коментар на подання</subject>
-		<body><![CDATA[{$name}:<br />
-<br />
-{$commentName} додав коментар до подання &quot;{$submissionTitle}&quot; у журналі &quot;{$contextName}&quot;:<br />
-<br />
-{$comments}]]></body>
-		<description>Цей лист інформує людей, задіяних у процесі редакційного опрацювання подання, про появу нового коментаря.</description>
+		<subject>{translate key="emails.submissionComment.subject"}</subject>
+		<body>{translate key="emails.submissionComment.body"}</body>
+		<description>{translate key="emails.submissionComment.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Рішення щодо "{$submissionTitle}"</subject>
-		<body><![CDATA[Надсилаю Вам як одному з рецензентів подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot; остаточне рішення редакції щодо публікації цього матеріалу. Ще раз дякую за Ваш важливий внесок у цей процес.<br />
- <br />
-{$editorialContactSignature}<br />
-<br />
-{$comments}]]></body>
-		<description>Цей лист інформує рецензентів подання про закінчення процесу рецензування. У ньому міситься інформація про подання, рішення редактора та подяка рецензенту за його внесок.</description>
+		<subject>{translate key="emails.submissionDecisionReviewers.subject"}</subject>
+		<body>{translate key="emails.submissionDecisionReviewers.body"}</body>
+		<description>{translate key="emails.submissionDecisionReviewers.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
-		<subject>Редакційне призначення</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Як редактор розділу Ви були призначені керувати процесом редакційного опрацювання подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.  <br />
-<br />
-URL подання: {$submissionUrl}<br />
-Ім'я користувача: {$editorUsername}<br />
-<br />
-Дякую.]]></body>
-		<description>Цим листом редактор видання повідомляє редактора розділу про доручення йому нагляду за процесом редакційного опрацювання подання. У листі міститься інформація про подання та про те, як отримати доступ до сайту журналу.</description>
+		<subject>{translate key="emails.editorAssign.subject"}</subject>
+		<body>{translate key="emails.editorAssign.body"}</body>
+		<description>{translate key="emails.editorAssign.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
-		<subject>Запит на рецензування статті</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Я вірю, що Ви могли б стати прекрасним рецензентом для рукопису &quot;{$submissionTitle}&quot;, надісланого до видання &quot;{$contextName}&quot;. Нижче подана анотація цієї праці, і, хочу сподіватись, Ви розглянете можливість виконання цієї важливої роботи для нас.<br />
-<br />
-Будь ласка, до {$responseDueDate} зайдіть на сайт журналу, щоб повідомити, чи візьметеся Ви за цю рецензію, а також для того, щоб отримати доступ до подання, записати Вашу рецензію та рекомендацію. Адреса веб-сайту журналу <a href="{$contextUrl}">{$contextUrl}</a><br />
-<br />
-Ми хотіли б мати готову рецензію до {$reviewDueDate}.<br />
-<br />
-Якщо Ви не зберегли імені користувача та пароль для веб-сайту журналу, Ви можете скористатися наступним посиланням для того, щоб скинути свій пароль (після цього пароль та ім'я користувача будуть відправлені Вам електронною поштою). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Дякую, що розглянули цей запит.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Цим листом редактор розділу просить рецензента взятися за виконання рецензії подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування (у іншому випадку див. REVIEW_REQUEST_ATTACHED.)</description>
+		<subject>{translate key="emails.reviewRequestRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
-		<subject>Запит на рецензування статті</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Я вірю, що Ви могли б стати прекрасним рецензентом для рукопису &quot;{$submissionTitle}&quot;, надісланого до видання &quot;{$contextName}&quot;. Нижче подана анотація цієї праці, і, хочу сподіватись, Ви розглянете можливість виконання цієї важливої роботи для нас.<br />
-<br />
-Будь ласка, до {$responseDueDate} зайдіть на сайт журналу, щоб повідомити, чи візьметеся Ви за цю рецензію, а також для того, щоб отримати доступ до подання, записати Вашу рецензію та рекомендацію.<br />
-<br />
-Ми хотіли б мати готову рецензію до {$reviewDueDate}.<br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Дякую, що розглянули цей запит.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Цим листом редактор розділу просить рецензента відрецензувати подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування та включена опція доступу рецензента "єдиним натисканням".</description>
+		<subject>{translate key="emails.reviewRequestRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
-		<subject>Запит на рецензування статті</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Я вірю, що Ви могли б стати прекрасним рецензентом для рукопису &quot;{$submissionTitle}&quot;, надісланого до видання &quot;{$contextName}&quot;. Нижче подана анотація цієї праці, і, хочу сподіватись, Ви розглянете можливість виконання цієї важливої роботи для нас.<br />
-<br />
-Будь ласка, до {$responseDueDate} зайдіть на сайт журналу, щоб повідомити, чи візьметеся Ви за цю рецензію, а також для того, щоб отримати доступ до подання, записати Вашу рецензію та рекомендацію. Адреса веб-сайту журналу <a href="{$contextUrl}">{$contextUrl}</a><br />
-<br />
-Ми хотіли б мати готову рецензію до {$reviewDueDate}.<br />
-<br />
-Якщо Ви не зберегли імені користувача та пароль для веб-сайту журналу, Ви можете скористатися наступним посиланням для того, щоб скинути свій пароль (після цього пароль та ім'я користувача будуть відправлені Вам електронною поштою). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Дякую, що розглянули цей запит.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Цим листом редактор розділу просить рецензента взятися за виконання рецензії подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування (у іншому випадку див. REVIEW_REQUEST_ATTACHED.)</description>
+		<subject>{translate key="emails.reviewRequest.subject"}</subject>
+		<body>{translate key="emails.reviewRequest.body"}</body>
+		<description>{translate key="emails.reviewRequest.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>Запит на рецензування статті</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Я вірю, що Ви могли б стати прекрасним рецензентом для рукопису &quot;{$submissionTitle}&quot;, надісланого до видання &quot;{$contextName}&quot;. Нижче подана анотація цієї праці, і, хочу сподіватись, Ви розглянете можливість виконання цієї важливої роботи для нас.<br />
-<br />
-Будь ласка, до {$responseDueDate} зайдіть на сайт журналу, щоб повідомити, чи візьметеся Ви за цю рецензію, а також для того, щоб отримати доступ до подання, записати Вашу рецензію та рекомендацію.<br />
-<br />
-Ми хотіли б мати готову рецензію до {$reviewDueDate}.<br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Дякую, що розглянули цей запит.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Цим листом редактор розділу просить рецензента відрецензувати подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування та включена опція доступу рецензента "єдиним натисканням".</description>
+		<subject>{translate key="emails.reviewRequestOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
-		<subject>Запит на рецензування статті</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Я вірю, що Ви могли б стати прекрасним рецензентом для рукопису &quot;{$submissionTitle}&quot; та прошу Вас розглянути можливість виконання цієї важливої роботи для нас. Нижче Ви знайдете керівництво для рецензентів, яке використовується нашим журналом. Саме подання я надсилаю у додатку до цього листа. Ваша рецензія разом з Вашою рекомендацією повинна бути надіслана мені до {$reviewDueDate}.<br />
-<br />
-Будь ласка, до {$responseDueDate} повідомте мені листом, чи згодні Ви працювати над цією рецензією.<br />
-<br />
-Дякую, що розглянули цей запит.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-Керівництво для рецензентів<br />
-<br />
-{$reviewGuidelines}<br />
-]]></body>
-		<description>Цим листом редактор розділу просить рецензента відрецензувати подання або відмовитись від цієї роботи. Лист містить файл подання у додатку. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Процес рецензування вкладень до листів (у іншому випадку див. REVIEW_REQUEST.)</description>
+		<subject>{translate key="emails.reviewRequestAttached.subject"}</subject>
+		<body>{translate key="emails.reviewRequestAttached.body"}</body>
+		<description>{translate key="emails.reviewRequestAttached.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
-		<subject>Запит на рецензування скасвано</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Наразі Ми вирішили скасувати наш запит на рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Вибачаємося за всі створені незручності та сподіваємось, що у майбутньому ми зможемо звертатися до Вас за допомогою у рецензуванні статей для цього журналу.<br />
-<br />
-Якщо Ви маєте додаткові запитання, будь ласка, повідомте мені про це.]]></body>
-		<description>Цим листом редактор розділу повідомляє рецензенту, який працює над поданням, про припинення рецензування.</description>
+		<subject>{translate key="emails.reviewCancel.subject"}</subject>
+		<body>{translate key="emails.reviewCancel.body"}</body>
+		<description>{translate key="emails.reviewCancel.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
-		<subject>Погоджуюсь здійснити рецензування</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Я маю можливість та бажання працювати над рецензією подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Дякую за довіру. Я планую закінчити роботу над рецензією не пізніше {$reviewDueDate}.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що він береться працювати над рецензією та здатний завершити цю роботу до вказаної дати.</description>
+		<subject>{translate key="emails.reviewConfirm.subject"}</subject>
+		<body>{translate key="emails.reviewConfirm.body"}</body>
+		<description>{translate key="emails.reviewConfirm.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
-		<subject>Неможливо здійснити рецензування</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Боюся, що зараз я не маю можливості рецензувати подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Дякую за довіру, звертайтеся до мене у майбутньому.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що відмовляється рецензувати.</description>
+		<subject>{translate key="emails.reviewDecline.subject"}</subject>
+		<body>{translate key="emails.reviewDecline.body"}</body>
+		<description>{translate key="emails.reviewDecline.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
-		<subject>Подяка за рецензування статті</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Дякую за закінчення рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ми цінуємо Ваш внесок у контроль якості роботи, поданої нам для публікації.]]></body>
-		<description>Цим листом редактор розділу підтверджує отримання готової рецензії та дякує рецензенту за його внесок.</description>
+		<subject>{translate key="emails.reviewAck.subject"}</subject>
+		<body>{translate key="emails.reviewAck.body"}</body>
+		<description>{translate key="emails.reviewAck.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
-		<subject>Нагадування про рецензування</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Хотів б нагадати Вам про рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ми очікували отримати цю рецензію до {$reviewDueDate}. Будь ласка, надішліть нам її якомога скоріше.<br />
-<br />
-Якщо Ви не зберегли імені користувача та пароль для веб-сайту журналу, Ви можете скористатися наступним посиланням для того, щоб скинути свій пароль (після цього пароль та ім'я користувача будуть відправлені Вам електронною поштою). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Будь ласка, підтвердьте можливість завершити цю важливу для нашого журналу роботу. З нетерпінням очікую Вашої відповіді.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу нагадує рецензенту про настання кінцевої дати рецензування.</description>
+		<subject>{translate key="emails.reviewRemind.subject"}</subject>
+		<body>{translate key="emails.reviewRemind.body"}</body>
+		<description>{translate key="emails.reviewRemind.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
-		<subject>Нагадування про рецензування</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Хотів б нагадати Вам про рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ми очікували отримати цю рецензію до {$reviewDueDate}. Будь ласка, надішліть нам її якомога скоріше.<br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Будь ласка, підтвердьте можливість завершити цю важливу для нашого журналу роботу. З нетерпінням очікую Вашої відповіді.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу нагадує рецензенту про настання кінцевої дати рецензування.</description>
+		<subject>{translate key="emails.reviewRemindOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
-		<subject>Автоматичне нагадування про рецензування</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Нагадуємо Вам про рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ми очікували отримати цю рецензію до {$reviewDueDate}, цей лист був автоматично надісланий Вам, оскільки вказана дата минула. Ми все ще чекаємо на Вашу рецензію і будемо вдячні, якщо Ви завершите та надішлете її якомога скоріше.<br />
-<br />
-Якщо Ви не зберегли імені користувача та пароль для веб-сайту журналу, Ви можете скористатися наступним посиланням для того, щоб скинути свій пароль (після цього пароль та ім'я користувача будуть відправлені Вам електронною поштою). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Будь ласка, підтвердьте можливість завершити цю важливу для нашого журналу роботу. З нетерпінням очікую Вашої відповіді.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цей лист автоматично надсилається рецензенту, коли настає кінцева дата рецензування (див. розділ "Налаштування рецензування" кроку 2 Налаштування журналу) та відключений доступ рецензента "єдиним натисканням". Щоб ця функціональність працювала необхідно включити на налаштувати Scheduled tasks (див. файл конфігурації сайту).</description>
+		<subject>{translate key="emails.reviewRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
-		<subject>Автоматичне нагадування про рецензування</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Нагадуємо Вам про рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ми очікували отримати цю рецензію до {$reviewDueDate}, цей лист був автоматично надісланий Вам, оскільки вказана дата минула. Ми все ще чекаємо на Вашу рецензію і будемо вдячні, якщо Ви завершите та надішлете її якомога скоріше.<br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Будь ласка, підтвердьте можливість завершити цю важливу для нашого журналу роботу. З нетерпінням очікую Вашої відповіді.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цей лист автоматично надсилається рецензенту, коли настає кінцева дата рецензування (див. розділ "Налаштування рецензування" кроку 2 Налаштування журналу) та включений доступ рецензента "єдиним натисканням". Щоб ця функціональність працювала необхідно включити на налаштувати Scheduled tasks (див. файл конфігурації сайту).</description>
+		<subject>{translate key="emails.reviewRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
-		<subject>Рішення редактора</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
-<br />
-Наше рішення:]]></body>
-		<description>Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання.</description>
+		<subject>{translate key="emails.editorDecisionAccept.subject"}</subject>
+		<body>{translate key="emails.editorDecisionAccept.body"}</body>
+		<description>{translate key="emails.editorDecisionAccept.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
-		<subject>Рішення редактора</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
-<br />
-Наше рішення:]]></body>
-		<description>Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання.</description>
+		<subject>{translate key="emails.editorDecisionRevisions.subject"}</subject>
+		<body>{translate key="emails.editorDecisionRevisions.body"}</body>
+		<description>{translate key="emails.editorDecisionRevisions.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
-		<subject>Рішення редактора</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
-<br />
-Наше рішення:]]></body>
-		<description>Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання.</description>
+		<subject>{translate key="emails.editorDecisionResubmit.subject"}</subject>
+		<body>{translate key="emails.editorDecisionResubmit.body"}</body>
+		<description>{translate key="emails.editorDecisionResubmit.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
-		<subject>Рішення редактора</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
-<br />
-Наше рішення:]]></body>
-		<description>Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання.</description>
+		<subject>{translate key="emails.editorDecisionDecline.subject"}</subject>
+		<body>{translate key="emails.editorDecisionDecline.body"}</body>
+		<description>{translate key="emails.editorDecisionDecline.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
-		<subject>Запит на літературне редагування</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Я хотів би попросити Вас здійснити літературне редагування тексту &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;, виконавши наступні кроки:<br />
-1. Натисніть на вказаній нижче адресі URL подання.<br />
-2. Увійдіть на сайт журналу та натисніть на посиланні &quot;Файл&quot; кроку 1.<br />
-3. Ознайомтеся з опублікованими на веб-сайті інструкціями з літературного редагування.<br />
-4. Відкрийте завантажений файл та відредагуйте його, додаючи у текст в разі потреби запити до автора.<br />
-5. Збережіть відредагований файл та вивантажте його на крок 1 літературного редагування.<br />
-6. Повідомте листом редактора про закінчення роботи.<br />
-<br />
-URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Ім'я користувача: {$participantUsername}]]></body>
-		<description>Цим листом редактор розділу просить літературного редактора розпочати процес літературного редагування подання. У листі міститься інформація про подання та про те, як отримати доступ до нього.</description>
+		<subject>{translate key="emails.copyeditRequest.subject"}</subject>
+		<body>{translate key="emails.copyeditRequest.body"}</body>
+		<description>{translate key="emails.copyeditRequest.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Літературне редагування завершено</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Ми відредагували Ваше подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Для того, щоб переглянути запропоновані зміни та відповісти на запити до автора, будь ласка, виконайте наступні дії:<br />
-<br />
-1. Увійдіть на сайт журналу, використовуючи вказаний нижче URL, Ваше ім'я користувача та пароль (у разі потреби, скористайтесь посиланням &quot;Забули пароль?&quot;).<br />
-2. Натисніть на посиланні біля пункту &quot;1. Початкова редакція&quot;, щоб завантажити та відкрити відредаговану версію. <br />
-3. Перегляньте відредаговану версію, зробіть необхідні зміни, використовуючи режим відстеження редакторських правок Microsoft Word та дайте відповіді на запити до автора. <br />
-4. Збережіть файл на локальному комп'ютері, зайдіть на сайт журналу та вивантажте збережений файл у Крок 2 &quot;Авторська редакція&quot;.<br />
-5. Натисніть на зображення поштового конверту під заголовком &quot;закінчення&quot;, щоб надіслати лист редактору.<br />
-<br />
-Зауважте, що це остання можливість внести серйозні зміни до тексту. Пізніше ми запропонуємо Вам переглянути верстку, але тоді можна буде виправляти лише незначні типографічні помилки та форматування.<br />
-<br />
-URL рукопису: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-<br />
-Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання,<br />
-будь ласка, повідомте мені. Дякую за співпрацю з нашим журналом.<br />
-<br />
-{$participantName}]]></body>
+		<subject>{translate key="emails.copyeditComplete.subject"}</subject>
+		<body>{translate key="emails.copyeditComplete.body"}</body>
+		<description>{translate key="emails.copyeditComplete.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Запит на перегляд відредагованого тексту</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Ваше подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot; пройшло перший етап літературного редагування. Тепер Ви можете переглянути відредагований текст, виконавши наступні дії:<br />
-<br />
-1. Натисніть на вказаній нижче адресі URL подання.<br />
-2. Увійдіть на сайт журналу та натисніть на посиланні &quot;Файл&quot; кроку 1.<br />
-3. Відкрийте завантажений файл подання.<br />
-4. Відредагуйте текст, перегляньте запропоновані літературним редактором правки та дайте відповіді на запити до автора.<br />
-5. Зробіть всі необхідні зміни, які додатково можуть покращити текст.<br />
-6. Збережіть відредагований файл та вивантажте його на крок 2.<br />
-7. Натисніть на посиланні &quot;МЕТАДАНІ&quot;, щоб перевірити повноту та точність індексної інформації.<br />
-8. Натисніть на зображення поштового конверту під заголовком &quot;закінчення&quot;, щоб надіслати лист редактору та літературному редактору.<br />
-<br />
-URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-<br />
-Зауважте, що це остання можливість внести серйозні зміни до тексту. На стадії коректури, після створення гранки сатті, можна буде виправляти лише незначні типографічні помилки та форматування.<br />
-<br />
-Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання, будь ласка, повідомте мені. Дякую за співпрацю з нашим журналом.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу просить автора подання переглянути роботу літературного редактора. У листі міститься інформація щодо доступу до рукопису та нагадування про те, що для автора це остання можливість внести суттєві зміни до тексту.</description>
+		<subject>{translate key="emails.copyeditAuthorRequest.subject"}</subject>
+		<body>{translate key="emails.copyeditAuthorRequest.body"}</body>
+		<description>{translate key="emails.copyeditAuthorRequest.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Редакційні правки переглянуті</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Я переглянув редакційну версію рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;, і тепер текст готовий до остаточного раунду літературного редагування та створення верстки.<br />
-<br />
-Дякую за покращення моєї праці,<br />
-{$authorName}]]></body>
-		<description>Цим листом автор повідомляє редактора розділу про закінчення процесу перегляду редакційних правок.</description>
+		<subject>{translate key="emails.copyeditAuthorComplete.subject"}</subject>
+		<body>{translate key="emails.copyeditAuthorComplete.body"}</body>
+		<description>{translate key="emails.copyeditAuthorComplete.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Подяка за перегляд редакційних правок</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Дякуємо, що переглянули редакційні правки Вашого рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Будемо раді опублікувати цю роботу.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу підтверджує автору подання отримання авторської версії рукопису та дякує за його внесок.</description>
+		<subject>{translate key="emails.copyeditAuthorAck.subject"}</subject>
+		<body>{translate key="emails.copyeditAuthorAck.body"}</body>
+		<description>{translate key="emails.copyeditAuthorAck.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Запит на остаточне літературне редагування</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Автор та редактор завершили перегляд редакційної версії подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;. &quot;Чиста копія&quot; тепер потребує підготовки до створення верстки. Для цього необхідно зробити наступні дії:<br />
-1. Натисніть на вказаній нижче адресі URL подання.<br />
-2. Увійдіть на сайт журналу та натисніть на посиланні &quot;Файл&quot; кроку 2.<br />
-3. Відкрийте завантажений файл та зробіть остаточні правки з урахуванням відповідей на запити до автора.<br />
-4. Збережіть чистий файл та вивантажте його на крок 3 літературного редагування.<br />
-5. Натисніть на посиланні &quot;МЕТАДАНІ&quot;, щоб перевірити індексну інформацію (зі збереженням всіх правок).<br />
-6. Натисніть на зображення поштового конверту під заголовком &quot;закінчення&quot;, щоб надіслати лист редактору.<br />
-<br />
-URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Ім'я користувача: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу просить літературного редактора здійснити остаточний раунд літературного редагування подання перед початком процесу верстки.</description>
+		<subject>{translate key="emails.copyeditFinalRequest.subject"}</subject>
+		<body>{translate key="emails.copyeditFinalRequest.body"}</body>
+		<description>{translate key="emails.copyeditFinalRequest.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Остаточне літературне редагування завершено</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Я підготував чисту, відредаговану версію рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Подання готове до початку процесу верстки та створення гранок.<br />
-<br />
-{$participantName}]]></body>
-		<description>Цим листом літературний редактор інформує редактора розділу, що остаточний раунд літературного редагування завершений і подання готове до процесу верстки.</description>
+		<subject>{translate key="emails.copyeditFinalComplete.subject"}</subject>
+		<body>{translate key="emails.copyeditFinalComplete.body"}</body>
+		<description>{translate key="emails.copyeditFinalComplete.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Подяка за остаточне літературне редагування</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Дякую, що завершили літературне редагування рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Підготовка &quot;чистої копії&quot; для верстки - важливий крок редакційного процесу.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу підтверджує закінчення процесу остаточного літературного редагування та дякує літературного редактора за його внесок.</description>
+		<subject>{translate key="emails.copyeditFinalAck.subject"}</subject>
+		<body>{translate key="emails.copyeditFinalAck.body"}</body>
+		<description>{translate key="emails.copyeditFinalAck.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
-		<subject>Запит на верстку</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot; потребує створення верстки. Для цього потрібно виконати наступні дії:<br />
-1. Натисніть на вказаній нижче адресі URL подання.<br />
-2. Увійдіть на сайт журналу та зробіть гранки з файлу версії для верстки, керуючись стандартами журналу.<br />
-3. Натисніть на зображення поштового конверту під заголовком &quot;закінчення&quot;, щоб надіслати лист редактору.<br />
-<br />
-URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL подання:  <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Ім'я користувача: {$participantUsername}<br />
-<br />
-Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.]]></body>
-		<description>Цим листом редактор розділу просить редактора верстки розпочати процес верстки подання. У листі міститься інформація про подання та про те, як отримати доступ до нього.</description>
+		<subject>{translate key="emails.layoutRequest.subject"}</subject>
+		<body>{translate key="emails.layoutRequest.body"}</body>
+		<description>{translate key="emails.layoutRequest.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
-		<subject>Верстка завершена</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Гранки рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot; створені і подання готове до процесу коректури. <br />
-<br />
-Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />
-<br />
-{$participantName}]]></body>
-		<description>Цим листом редактор верстки повідомляє редактора розділу про закінчення процесу верстки.</description>
+		<subject>{translate key="emails.layoutComplete.subject"}</subject>
+		<body>{translate key="emails.layoutComplete.body"}</body>
+		<description>{translate key="emails.layoutComplete.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
-		<subject>Подяка за верстку</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Дякую за підготовку гранок для рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ви зробили важливий внесок у редакційний процес.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу підтверджує редактору верстки, що його робота прийнята, та дякує за його внесок.</description>
+		<subject>{translate key="emails.layoutAck.subject"}</subject>
+		<body>{translate key="emails.layoutAck.body"}</body>
+		<description>{translate key="emails.layoutAck.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Запит на коректуру (Автор)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Ваше подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot; потребує остаточного вичитування. Для цього зробіть наступне:<br />
-1. Натисніть на вказаній нижче адресі URL подання.<br />
-2. Увійдіть на сайт журналу та прочитайте &quot;Інструкції з коректури&quot;<br />
-3. Натисніть на посиланні &quot;Переглянути верстку&quot; у розділі &quot;Верстка&quot; та вичитайте файл гранки.<br />
-4. Вкажіть знайдені помилки (типографічні та форматування) у вікні &quot;Виправлення коректора&quot;.<br />
-5. Збережіть та надішліть виправлення редактору верстки та коректору.<br />
-6. Натисніть на зображення поштового конверту під заголовком &quot;закінчення&quot;, щоб надіслати лист редактору.<br />
-<br />
-URL подання: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу повідомляє автору, що гранка його статті готова до коректури. У листі міститься інформація про статтю та про те, як отримати доступ до нєї.</description>
+		<subject>{translate key="emails.proofreadAuthorRequest.subject"}</subject>
+		<body>{translate key="emails.proofreadAuthorRequest.body"}</body>
+		<description>{translate key="emails.proofreadAuthorRequest.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Коректура завершена (Автор)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Я завершив коректуру гранок свого рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Тепер коректор та редактор верстки можуть зробити остаточні виправлення гранок.<br />
-<br />
-{$authorName}]]></body>
-		<description>Цим листом автор повідомляє коректору та редактору, що він завершив процес авторської коректури, і подробиці знайдених ним помилок можна знайти у коментарях на сайті.</description>
+		<subject>{translate key="emails.proofreadAuthorComplete.subject"}</subject>
+		<body>{translate key="emails.proofreadAuthorComplete.body"}</body>
+		<description>{translate key="emails.proofreadAuthorComplete.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Подяка за коректуру (Автор)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Дякую, що вичитали гранки свого рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Будемо раді опублікувати цю роботу якнайшвидше.<br />
-<br />
-Якщо Ви підписані на наші поштові повідомлення, одразу після публікації випуску Ви отримаєте лист зі сторінкою змісту. Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу підтверджує автору закінчення процесу початкової коректури та дякує за його внесок.</description>
+		<subject>{translate key="emails.proofreadAuthorAck.subject"}</subject>
+		<body>{translate key="emails.proofreadAuthorAck.body"}</body>
+		<description>{translate key="emails.proofreadAuthorAck.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_REQUEST">
-		<subject>Запит на коректуру</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-Подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot; потребує коректури. Для цього зробіть наступне:<br />
-1. Натисніть на вказаній нижче адресі URL подання.<br />
-2. Увійдіть на сайт журналу та прочитайте &quot;Інструкції з коректури&quot;<br />
-3. Натисніть на посиланні &quot;Переглянути верстку&quot; у розділі &quot;Верстка&quot; та вичитайте файл гранки.<br />
-4. Вкажіть знайдені помилки (типографічні та форматування) у вікні &quot;Виправлення коректора&quot;.<br />
-5. Збережіть та надішліть виправлення редактору верстки.<br />
-6. Натисніть на зображення поштового конверту під заголовком &quot;закінчення&quot;, щоб надіслати лист редактору.<br />
-<br />
-URL подання: {$submissionUrl}<br />
-Ім'я користувача: {$proofreaderUsername}<br />
-<br />
-Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу просить коректора вичитати гранки статті. У листі міститься інформація про статтю та про те, як отримати доступ до неї.</description>
+		<subject>{translate key="emails.proofreadRequest.subject"}</subject>
+		<body>{translate key="emails.proofreadRequest.body"}</body>
+		<description>{translate key="emails.proofreadRequest.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_COMPLETE">
-		<subject>Коректура завершена</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Я завершив коректуру гранок рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Тепер редактор верстки може зробити остаточні виправлення гранок.<br />
-<br />
-{$proofreaderName}]]></body>
-		<description>Цим листом коректор повідомляє редактору розділу, що він завершив процес коректури.</description>
+		<subject>{translate key="emails.proofreadComplete.subject"}</subject>
+		<body>{translate key="emails.proofreadComplete.body"}</body>
+		<description>{translate key="emails.proofreadComplete.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_ACK">
-		<subject>Подяка за коректуру</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-Дякую, що вичитали гранки рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ви зробили важливий внесок у редакційний процес цього журналу.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу підтверджує коректору, що його робота прийнята, та дякує за його внесок.</description>
+		<subject>{translate key="emails.proofreadAck.subject"}</subject>
+		<body>{translate key="emails.proofreadAck.body"}</body>
+		<description>{translate key="emails.proofreadAck.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Коректура завершена (Редактор верстки)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Я виправив гранки рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot; у відповідності з коментарями коректора. Тепер цю статтю можна публікувати.<br />
-<br />
-{$participantName}]]></body>
-		<description>Цим листом редактор верстки повідомляє редактору розділу, що стадія коректури завершена та стаття готова до публікації.</description>
+		<subject>{translate key="emails.proofreadLayoutComplete.subject"}</subject>
+		<body>{translate key="emails.proofreadLayoutComplete.body"}</body>
+		<description>{translate key="emails.proofreadLayoutComplete.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Подяка за коректуру (Редактор верстки)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Дякую, що завершили коригування гранок, асоційованих з рукописом &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ви зробили важливу роботу для нашого журналу.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу підтверджує редактору верстки, що створені ним остаточні версії гранок прийняті, та дякує за його внесок.</description>
+		<subject>{translate key="emails.proofreadLayoutAck.subject"}</subject>
+		<body>{translate key="emails.proofreadLayoutAck.body"}</body>
+		<description>{translate key="emails.proofreadLayoutAck.description"}</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
-		<subject>Цікава стаття</subject>
-		<body><![CDATA[Думаю, Вас може зацікавити стаття &quot;{$submissionTitle}&quot; автора {$authorName}, опублікована у Т. {$volume}, № {$number} видання &quot;{$contextName}&quot; за {$year} рік і доступна за адресою <a href="{$articleUrl}">{$articleUrl}</a>.]]></body>
-		<description>Цей шаблон листа надає зареєстрованому читачу можливість надсилати інформацію про статтю будь-яким зацікавленим особам. Ця функціональність доступна засобами панелі "Інструментарій читання"; менеджер журналу повинен дозволити цей інструмент на сторінці "Налаштування інструментів читання".</description>
+		<subject>{translate key="emails.emailLink.subject"}</subject>
+		<body>{translate key="emails.emailLink.body"}</body>
+		<description>{translate key="emails.emailLink.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Повідомлення щодо передплати</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-У нашій системі електронного управління журналом Ви були зареєстровані як передплатник видання &quot;{$contextName}&quot;:<br />
-<br />
-Тип передплати: {$subscriptionType}<br />
-<br />
-Для доступу до передплаченого змісту просто увійдіть у систему з Вашим іменем користувача &quot;{$username}&quot;.<br />
-<br />
-Увійшовши до системи, Ви в будь-який час можете змінити інформацію про себе та пароль для доступу.<br />
-<br />
-Будь ласка, зауважте, якщо ця передплата не індивідуальна, користувачам установи-передплатника не обов'язково бути зареєстрованими у системі, оскільки в цьому випадку запити на доступ до передплатного змісту будуть автентифікуватись автоматично, без імен користувачів та паролів.<br />
-<br />
-Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Цей лист сповіщає зареєстрованого читача про те, що менеджер зареєстрував його як передплатника. У листі міститься URL-адреса журналу та інструкції щодо отримання доступу.</description>
+		<subject>{translate key="emails.subscriptionNotify.subject"}</subject>
+		<body>{translate key="emails.subscriptionNotify.body"}</body>
+		<description>{translate key="emails.subscriptionNotify.description"}</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Випуск з'явився у відритому доступі</subject>
-		<body><![CDATA[Читачі:<br />
-<br />
-Видання &quot;{$contextName}&quot; відкрило доступ до наступного випуску. Запрошуємо переглянути сторінку змісту випуску, а потім відвідати наш веб-сайт (<a href="{$contextUrl}">{$contextUrl}</a>), щоб переглянути статті та інші матеріали, що можуть Вас зацікавити.<br />
-<br />
-Дякуємо, що продовжуєте цікавитись нашою роботою,<br />
-{$editorialContactSignature}]]></body>
-		<description>Цей лист надсилається зареєстрованим читачам, які виявили бажання отримувати поштові повідомлення про появу випусків у відкритому доступі.</description>
+		<subject>{translate key="emails.openAccessNotify.subject"}</subject>
+		<body>{translate key="emails.openAccessNotify.body"}</body>
+		<description>{translate key="emails.openAccessNotify.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Нагадування про закінчення передплати</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-Ваша передплата на видання &quot;{$contextName}&quot; незабаром закінчиться.<br />
-<br />
-{$subscriptionType}<br />
-Дата закінчення: {$expiryDate}<br />
-<br />
-Щоб продовжувати мати доступ до цього журналу, будь ласка, увійдіть на веб-сайт журналу та поновіть свою передплату. Ви можете увійти до системи з Вашим іменем користувача &quot;{$username}&quot;.<br />
-<br />
-Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Цей лист сповіщає передплатника про те, що його передплата незабаром закінчується. У листі міститься URL-адреса журналу та інструкції щодо отримання доступу.</description>
+		<subject>{translate key="emails.subscriptionBeforeExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionBeforeExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionBeforeExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Передплата закінчилась</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-Ваша передплата на видання &quot;{$contextName}&quot; закінчилась.<br />
-<br />
-{$subscriptionType}<br />
-Дата закінчення: {$expiryDate}<br />
-<br />
-Щоб поновити Вашу передплату, будь ласка, завітайте на веб-сайт журналу. Ви можете увійти до системи з Вашим іменем користувача &quot;{$username}&quot;.<br />
-<br />
-Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Цей лист сповіщає передплатника про те, що його передплата закінчилась. У листі міститься URL-адреса журналу та інструкції щодо отримання доступу.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Передплата закінчилась (останнє нагадування)</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-Ваша передплата на видання &quot;{$contextName}&quot; закінчилась.<br />
-Будь ласка, зауважте, що це останнє нагадування, яке ми надсилаємо Вам.<br />
-<br />
-{$subscriptionType}<br />
-Дата закінчення: {$expiryDate}<br />
-<br />
-Щоб поновити Вашу передплату, будь ласка, завітайте на веб-сайт журналу. Ви можете увійти до системи з Вашим іменем користувача &quot;{$username}&quot;.<br />
-<br />
-Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Цей лист сповіщає передплатника про те, що його передплата закінчилась. У листі міститься URL-адреса журналу та інструкції щодо отримання доступу.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiryLast.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiryLast.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiryLast.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>Придбання передплати: Індивідуальна</subject>
-		<body><![CDATA[Була придбана онлайн індивідуальна передплата на видання &quot;{$contextName}&quot;, подробиці нижче.<br />
-<br />
-Тип передплати:<br />
-{$subscriptionType}<br />
-<br />
-Користувач:<br />
-{$userDetails}<br />
-<br />
-Інформація про членство (якщо вказана):<br />
-{$membership}<br />
-<br />
-Щоб переглянути або змінити цю передплату, будь ласка, скористайтеся наступною адресою URL.<br />
-<br />
-URL передплати: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
-]]></body>
-		<description>Цей лист інформує менеджера передплати про те, що в електронному режимі була придбана індивідуальна передплата. У листі міститься основна інформація про придбану передплату та посилання для швидкого доступу до неї.</description>
+		<subject>{translate key="emails.subscriptionPurchaseIndl.subject"}</subject>
+		<body>{translate key="emails.subscriptionPurchaseIndl.body"}</body>
+		<description>{translate key="emails.subscriptionPurchaseIndl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>Придбання передплати: інституційна</subject>
-		<body><![CDATA[&gt;Була придбана онлайн інституційна передплата на видання &quot;{$contextName}&quot;, подробиці нижче. Будь ласка, скористайтеся наданим URL передплати, щоб активувати цю передплату та встановити для неї статус &quot;Активна&quot;.<br />
-<br />
-Тип передплати:<br />
-{$subscriptionType}<br />
-<br />
-Установа:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-Домен (якщо вказаний):<br />
-{$domain}<br />
-<br />
-Діапазон IP-адрес (якщо вказаний):<br />
-{$ipRanges}<br />
-<br />
-Контактна особа:<br />
-{$userDetails}<br />
-<br />
-Інформація про членство (якщо вказана):<br />
-{$membership}<br />
-<br />
-Щоб переглянути або змінити цю передплату, будь ласка, скористайтеся наступною адресою URL.<br />
-<br />
-URL передплати: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
-]]></body>
-		<description>Цей лист інформує менеджера передплати про те, що в електронному режимі установою була придбана інституційна передплата. У листі міститься основна інформація про придбану передплату та посилання для швидкого доступу до неї.</description>
+		<subject>{translate key="emails.subscriptionPurchaseInstl.subject"}</subject>
+		<body>{translate key="emails.subscriptionPurchaseInstl.body"}</body>
+		<description>{translate key="emails.subscriptionPurchaseInstl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
-		<subject>Поновлення передплати: Індивідуальна</subject>
-		<body><![CDATA[Була поновлена в електронному режимі індивідуальна передплата на видання &quot;{$contextName}&quot;, подробиці нижче.<br />
-<br />
-Тип передплати:<br />
-{$subscriptionType}<br />
-<br />
-Користувач:<br />
-{$userDetails}<br />
-<br />
-Інформація про членство (якщо вказана):<br />
-{$membership}<br />
-<br />
-Щоб переглянути або змінити цю передплату, будь ласка, скористайтеся наступною адресою URL.<br />
-<br />
-URL передплати: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
-]]></body>
-		<description>Цей лист інформує менеджера передплати про те, що в електронному режимі була поновлена індивідуальна передплата. У листі міститься основна інформація про поновлену передплату та посилання для швидкого доступу до неї.</description>
+		<subject>{translate key="emails.subscriptionRenewIndl.subject"}</subject>
+		<body>{translate key="emails.subscriptionRenewIndl.body"}</body>
+		<description>{translate key="emails.subscriptionRenewIndl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
-		<subject>Поновлення передплати: Інституційна</subject>
-		<body><![CDATA[Була поновлена в електронному режимі інституційна передплата на видання &quot;{$contextName}&quot;, подробиці нижче.<br />
-<br />
-Тип передплати:<br />
-{$subscriptionType}<br />
-<br />
-Установа:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-Домен (якщо вказаний):<br />
-{$domain}<br />
-<br />
-Діапазон IP-адрес (якщо вказаний):<br />
-{$ipRanges}<br />
-<br />
-Контактна особа:<br />
-{$userDetails}<br />
-<br />
-Інформація про членство (якщо вказана):<br />
-{$membership}<br />
-<br />
-Щоб переглянути або змінити цю передплату, будь ласка, скористайтеся наступною адресою URL.<br />
-<br />
-URL передплати: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
-]]></body>
-		<description>Цей лист інформує менеджера передплати про те, що в електронному режимі установою була поновлена інституційна передплата. У листі міститься основна інформація про поновлену передплату та посилання для швидкого доступу до неї.</description>
+		<subject>{translate key="emails.subscriptionRenewInstl.subject"}</subject>
+		<body>{translate key="emails.subscriptionRenewInstl.body"}</body>
+		<description>{translate key="emails.subscriptionRenewInstl.description"}</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>Редагування посилання</subject>
-		<body><![CDATA[{$authorFirstName},<br />
-<br />
-Не могли б Ви надати нам коректний бібліографічний запис для наступного посилання з Вашої статті &quot;{$submissionTitle}&quot;:<br />
-<br />
-{$rawCitation}<br />
-<br />
-Дякую!<br />
-<br />
-{$userFirstName}<br />
-Літературний редактор видання &quot;{$contextName}&quot;<br />
-]]></body>
-		<description>Цей лист дозволяє літературним редакторам уточнювати у авторів інформацію про пристатейну бібліографію.</description>
+		<subject>{translate key="emails.citationEditorAuthorQuery.subject"}</subject>
+		<body>{translate key="emails.citationEditorAuthorQuery.body"}</body>
+		<description>{translate key="emails.citationEditorAuthorQuery.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Запит на рецензування статті</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Цей лист стосується рукопису &quot;{$submissionTitle}&quot;, що розглядається в журналі {$contextName}.<br />
-<br />
-Згідно рекомендацій попереднього раунду рецензування, автори надіслали виправлену версію своєї роботи. Ми були б вдячні Вам за допомогу в оцінці цього подання.<br />
-<br />
-Будь ласка, зайдіть на сайт журналу до {$responseDueDate}, щоб повідомити, чи візьметеся Ви за цю рецензію, а також для того, щоб отримати доступ до подання, записати Вашу рецензію та рекомендацію. Адреса веб-сайту журналу <a href="{$contextUrl}">{$contextUrl}</a><br />
-<br />
-Ми хотіли б мати готову рецензію до {$reviewDueDate}.<br />
-<br />
-Якщо Ви не зберегли імені користувача та пароль для веб-сайту журналу, Ви можете скористатися наступним посиланням для того, щоб скинути свій пароль (після цього пароль та ім'я користувача будуть відправлені Вам електронною поштою). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Дякую, що розглянули цей запит.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Цим листом редактор розділу просить рецензента взятися за виконання другого раунду рецензування подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування (у іншому випадку див. REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+		<subject>{translate key="emails.reviewRequestSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Запит на рецензування статті</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Цей лист стосується рукопису &quot;{$submissionTitle}&quot;, що розглядається в журналі {$contextName}.<br />
-<br />
-Згідно рекомендацій попереднього раунду рецензування, автори надіслали виправлену версію своєї роботи. Ми були б вдячні Вам за допомогу в оцінці цього подання.<br />
-<br />
-Будь ласка, зайдіть на сайт журналу до {$responseDueDate}, щоб повідомити, чи візьметеся Ви за цю рецензію, а також для того, щоб отримати доступ до подання, записати Вашу рецензію та рекомендацію.<br />
-<br />
-Ми хотіли б мати готову рецензію до {$reviewDueDate}.<br />
-<br />
-URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Дякую, що розглянули цей запит.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Цим листом редактор розділу просить рецензента взятися за виконання другого раунду рецензування подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування та обрана опція спрощеного доступу рецензента до подання.</description>
+		<subject>{translate key="emails.reviewRequestOneclickSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestOneclickSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestOneclickSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Запит на рецензування статті</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Цей лист стосується рукопису &quot;{$submissionTitle}&quot;, що розглядається в журналі {$contextName}.<br />
-<br />
-Згідно рекомендацій попереднього раунду рецензування, автори надіслали виправлену версію своєї роботи. Ми були б вдячні Вам за допомогу в оцінці цього подання.<br />
-<br />
-Нижче подана інструкція для рецензентів. Рукопис, поданий у редакцію авторами, прикріплений до цього листа. Я хотів би отримати лист з Вашою рецензією та рекомендацією до {$reviewDueDate}.<br />
-<br />
-Будь ласка, надішліть мені листом відповідь, чи маєте Ви можливість і бажання працювати над цією рецензію, до {$responseDueDate} .<br />
-<br />
-Дякую, що розглянули цей запит.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-Інструкція для рецензентів<br />
-<br />
-{$reviewGuidelines}]]></body>
-		<description>Цим листом редактор розділу просить рецензента виконати другий раунд рецензування подання або відмовитись від цієї роботи. У додатку до листа міститься рукопис, поданий до редакції. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний доступ рецензента "єдиним натисканням" (у іншому випадку див. REVIEW_REQUEST_SUBSEQUENT.)</description>
+		<subject>{translate key="emails.reviewRequestAttachedSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestAttachedSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestAttachedSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>Перероблена версія вивантажена</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Перероблена версія рукопису &quot;{$submissionTitle}&quot; була вивантажена автором {$authorName}.<br />
-<br />
-URL подання: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цей лист автоматично надсилається призначеному редактору, коли автор вивантажує перероблену версію своєї статті.</description>
+		<subject>{translate key="emails.revisedVersionNotify.subject"}</subject>
+		<body>{translate key="emails.revisedVersionNotify.body"}</body>
+		<description>{translate key="emails.revisedVersionNotify.description"}</description>
 	</email_text>
 </email_texts>

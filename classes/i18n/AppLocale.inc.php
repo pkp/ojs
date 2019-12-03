@@ -181,6 +181,7 @@ class AppLocale extends PKPLocale {
 			LOCALE_COMPONENT_APP_ADMIN => $baseDir . 'admin.po',
 			LOCALE_COMPONENT_APP_DEFAULT => $baseDir . 'default.po',
 			LOCALE_COMPONENT_APP_API => $baseDir . 'api.po',
+			LOCALE_COMPONENT_APP_EMAIL => $baseDir . 'emails.po',
 		);
 	}
 }

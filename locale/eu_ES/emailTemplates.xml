@@ -14,826 +14,288 @@
 
 <email_texts locale="eu_ES">
 	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Pasahitza berrezartzeko berrespena</subject>
-		<body><![CDATA[{$siteTitle} webgunean sartzeko daukazun pasahitza berrezartzeko eskaera jaso dugu.<br />
-<br />
-Eskaera ez bada zuk egindakoa, ez jaramonik egin mezu honi, eta zure pasahitza ez da aldatuko. Pasahitza berrezartzea nahi baduzu, egin klik beheko URLan.<br />
-<br />
-Berrezarri nire pasahitza: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Pasahitza ahaztu duten erabiltzaile erregistratuei edo webgunean sartu ezinda dabiltzanei bidaltzen zaie mezu hau. Pasahitza berrezartzeko URL bat ematen du.</description>
+		<subject>{translate key="emails.passwordResetConfirm.subject"}</subject>
+		<body>{translate key="emails.passwordResetConfirm.body"}</body>
+		<description>{translate key="emails.passwordResetConfirm.description"}</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Pasahitza berrezarrita</subject>
-		<body><![CDATA[{$siteTitle} webgunean sartzeko pasahitza ongi berrezarri da. Ondo gorde erabiltzaile-izen eta pasahitz hauek, aldizkarian sartzeko beharko baitituzu.<br />
-<br />
-Zure erabiltzaile-izena: {$username}<br />
-Pasahitza: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Mezu hau bidaltzen zaie PASSWORD_RESET_CONFIRM mezuan azaldutako prozesuaren bidez pasahitza ondo berrezartzea lortu duten erabiltzaile erregistratuei.</description>
+		<subject>{translate key="emails.passwordReset.subject"}</subject>
+		<body>{translate key="emails.passwordReset.body"}</body>
+		<description>{translate key="emails.passwordReset.description"}</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Aldizkarian erregistratzea</subject>
-		<body><![CDATA[{$userFullName}<br />
-<br />
-{$contextName} aldizkarian erabiltzaile gisa erregistratuta zaude orain. Zure erabiltzaile-izena eta pasahitza mezu honetan ematen dizkizugu; aldizkarian edozein lan egiteko beharko dituzu. Nahi duzunean eska dezakezu zure izena aldizkariaren erabiltzaileen zerrendatik kentzea, nirekin harremanetan jarriz.<br />
-<br />
-Erabiltzaile-izena: {$username}<br />
-Pasahitza: {$password}<br />
-<br />
-Eskerrik asko,<br />
-{$principalContactSignature}]]></body>
-		<description>Erabiltzaile erregistratu berriei bidaltzen zaie mezu hau, sistemarako ongietorria emateko eta erabiltzaile-izena eta pasahitza jakinarazteko.</description>
+		<subject>{translate key="emails.userRegister.subject"}</subject>
+		<body>{translate key="emails.userRegister.body"}</body>
+		<description>{translate key="emails.userRegister.description"}</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
-		<subject>Balidatu zure kontua</subject>
-		<body><![CDATA[{$userFullName}<br />
-<br />
-{$contextName} aldizkarian kontua sortu duzu, baina kontu hori erabiltzen hasteko zure helbide elektronikoa balidatu behar duzu. Horretarako, jarraitu beheko estekari:<br />
-<br />
-{$activateUrl}<br />
-<br />
-Eskerrik asko,<br />
-{$principalContactSignature}]]></body>
-		<description>Erabiltzaile erregistratu berriei bidaltzen zaie mezu hau, sistemarako ongietorria emateko eta erabiltzaile-izena eta pasahitza jakinarazteko.</description>
+		<subject>{translate key="emails.userValidate.subject"}</subject>
+		<body>{translate key="emails.userValidate.body"}</body>
+		<description>{translate key="emails.userValidate.description"}</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>{$contextName} aldizkarian Ebaluatzaile gisa erregistratzea</subject>
-		<body><![CDATA[{$contextName} aldizkarian lantzen dugun jakintza-arloan aditua zarenez, zure izena ebaluatzaileen datu-basean erregistratzeko atrebentzia izan dugu. Horrek ez zaitu ezertara konprometitzen, baina zuregana jotzeko aukera emango digu bidalketaren baten ebaluazioa egiteko prest egongo zinatekeen galdetzeko. Ebaluazioa egiteko gonbitarekin batera, artikuluaren edo paperaren titulua eta laburpena bidaliko dizkizugu, eta beti izango duzu gonbita onartzeko edo ez onartzeko aukera. Edozein unetan eska dezakezu zure izena ebaluatzaileen zerrendatik kentzeko.<br />
-<br />
-Erabiltzaile-izena eta pasahitza eman dizkizugu, aldizkariaren webgunean sartzeko eta gurekin elkarlanean aritzeko. Beharbada zure profila aldatu ahal izango duzu, ebaluazioak egiteko interesak barne.<br />
-<br />
-Erabiltzaile-izena: {$username}<br />
-Pasahitza: {$password}<br />
-<br />
-Eskerrik asko,<br />
-{$principalContactSignature}]]></body>
-		<description>Ebaluatzaile erregistratu berriei bidaltzen zaie mezu hau, sistemarako ongietorria emateko eta erabiltzaile-izena eta pasahitza jakinarazteko.</description>
+		<subject>{translate key="emails.reviewerRegister.subject"}</subject>
+		<body>{translate key="emails.reviewerRegister.body"}</body>
+		<description>{translate key="emails.reviewerRegister.description"}</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>Zenbaki berria argitaratu da</subject>
-		<body><![CDATA[Irakurle:<br />
-<br />
-{$contextName} aldizkariak zenbaki berri bat argitaratu du {$contextUrl} webgunean. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean artikuluak irakurtzera gonbidatzen zaitugu.<br />
-<br />
-Eskerrik asko gure lana interesez jarraitzeagatik,<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau erabiltzaile erregistratuei bidaltzen zaie, Editorearen hasierako orriko "Jakinarazi erabiltzaileei" estekaren bidez. Zenbaki berria atera dela jakinarazten die irakurleei, eta URLa ematen die aldizkaria bisita dezaten.</description>
+		<subject>{translate key="emails.publishNotify.subject"}</subject>
+		<body>{translate key="emails.publishNotify.body"}</body>
+		<description>{translate key="emails.publishNotify.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>{$contextName} aldizkaria artxiboan gehitzeko eskaera</subject>
-		<body><![CDATA[[Unibertsitateko liburuzain] estimatua<br />
-<br />
-{$contextName} aldizkaria &amp;lt;{$contextUrl}&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da.  LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
-<br />
-[Aldizkariaren azalpen laburra]<br />
-<br />
-Hau da gure aldizkariaren LOCKSS Publisher Manifest URLa: {$contextUrl}/gateway/lockss<br />
-<br />
-Jakin dugunez, LOCKSSen partaide zarete dagoeneko. Gure aldizkaria zuen LOCKSS bertsioan erregistratzeko metadatu gehigarriak eskaintzerik izango bagenu, gustu handiz egingo genuke.<br />
-<br />
-Eskerrik asko,<br />
-{$principalContactSignature}]]></body>
-		<description>Mezu honek LOCKSS artxiboa mantentzen duenari eskatzen dio aldizkari hau ere sar dezala artxiboan. Aldizkariaren LOCKSS Publisher Manifest URLa ematen du.</description>
+		<subject>{translate key="emails.lockssExistingArchive.subject"}</subject>
+		<body>{translate key="emails.lockssExistingArchive.body"}</body>
+		<description>{translate key="emails.lockssExistingArchive.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>{$contextName} aldizkaria artxiboan gehitzeko eskaera</subject>
-		<body><![CDATA[[Unibertsitateko liburuzain] estimatua<br />
-<br />
-{$contextName} aldizkaria &amp;lt;{$contextUrl}&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da. LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
-<br />
-[Aldizkariaren azalpen laburra]<br />
-<br />
-LOCKSS programa &amp;lt;http://lockss.org/&amp;gt;, nazioarteko liburutegi/argitaratzaile ekimena, dokumentuak banatuta gordetzeko eta artxibatzeko gordailu egoki baten adibide bikaina da, behean ematen dira xehetasun gehiago. Softwarea ordenagailu pertsonal batean ere erabiltzeko modukoa da, eta doakoa; sistema erraz jartzen da Interneten; oso mantentze-lan gutxi eskatzen du.<br />
-<br />
-Gure aldizkaria artxibatzen laguntzeko, LOCKSS komunitateko kide egiteko gonbita luzatzen dizugu, zuen fakultatean eta munduko beste hainbatetan ekoitzitako tituluak kontserbatzeko. Horretarako, zuen pertsonaleko norbaitek LOCKSS guneko informazioa aztertzea komeniko litzateke, sistemak nola funtzionatzen duen ikusteko. Aldizkari hau artxibatzeko euskarria eskaintzearen bideragarritasuna aztertuko duzuelakoan, zuen berrien zain geratzen gara.<br />
-<br />
-Eskerrik asko,<br />
-{$principalContactSignature}]]></body>
-		<description>Mezu honek hartzailea animatzen du LOCKSS ekimenean parte hartzera eta aldizkaria artxiboan sartzera. LOCKSS ekimenari eta atxikitzeko moduei buruzko informazioa ematen du.</description>
+		<subject>{translate key="emails.lockssNewArchive.subject"}</subject>
+		<body>{translate key="emails.lockssNewArchive.body"}</body>
+		<description>{translate key="emails.lockssNewArchive.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
-		<subject>Bidalketaren hartu-agiria</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Eskerrik asko {$submissionTitle} eskuizkribua {$contextName} aldizkarira bidaltzeagatik. Aldizkaria Interneten kudeatzeko erabiltzen dugun sistemari esker, prozesu editorialean zehar egiten duen ibilbidea jarraitu ahal izango duzu, aldizkariaren webgunean sartuta:<br />
-<br />
-Eskuizkribuaren URLa: {$submissionUrl}<br />
-Erabiltzaile-izena: {$authorUsername}<br />
-<br />
-Galderaren bat baduzu, jar zaitez harremanetan nirekin. Eskerrik asko zure lana bidaltzeko aldizkari hau aintzakotzat hartzeagatik.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Gaituta badago, mezu hau automatikoki bidaltzen zaio egileari, aldizkarira eskuizkribua bidaltzeko prozesua osatzen duenean. Bidalketaren jarraipena egiteko informazioa bidaltzen dio, eta eskerrak ematen dizkio lana bidaltzeagatik.</description>
+		<subject>{translate key="emails.submissionAck.subject"}</subject>
+		<body>{translate key="emails.submissionAck.body"}</body>
+		<description>{translate key="emails.submissionAck.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
-		<subject>Bidalketari buruzko iruzkina</subject>
-		<body><![CDATA[{$name}:<br />
-<br />
-{$commentName}(e)k iruzkin bat gehitu dio {$contextName} aldizkariko &quot;{$submissionTitle}&quot; artikuluari:<br />
-<br />
-{$comments}]]></body>
-		<description>Mezu honek bidalketa baten edizio-prozesuan parte hartzen ari direnei jakinarazten die iruzkin berri bat egin dutela.</description>
+		<subject>{translate key="emails.submissionComment.subject"}</subject>
+		<body>{translate key="emails.submissionComment.body"}</body>
+		<description>{translate key="emails.submissionComment.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>“{$submissionTitle}” artikuluari buruzko erabakia</subject>
-		<body><![CDATA[{$contextName} aldizkariko “{$submissionTitle}” artikuluaren ebaluatzaileetako bat zarenez, egileari bidali diogun ebaluazioa eta erabakia bidaltzen dizkizut. Berriro ere eskerrak eman nahi dizkizugu prozesu honi egin diozun ekarpen garrantzitsuagatik.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-{$comments}]]></body>
-		<description>Mezu honek jakinarazten die ebaluatzaileei ebaluazio-prozesua bukatu dela. Artikuluari eta emandako erabakiari buruzko informazioa ematen du, eta eskerrak ematen dizkie ebaluatzaileei egindako lanagatik.</description>
+		<subject>{translate key="emails.submissionDecisionReviewers.subject"}</subject>
+		<body>{translate key="emails.submissionDecisionReviewers.body"}</body>
+		<description>{translate key="emails.submissionDecisionReviewers.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
-		<subject>Editore-lana esleitzea</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName} aldizkariko “{$submissionTitle}” artikulua esleitu dizugu prozesu editorialean eraman dezazun, Ataleko editore gisa.<br />
-<br />
-Artikuluaren URLa: {$submissionUrl}<br />
-Erabiltzaile-izena: {$editorUsername}<br />
-<br />
-Eskerrik asko.]]></body>
-		<description>Mezu honek Ataleko editore bati jakinarazten dio Editoreak bidalketa baten edizio-prozesua gainbegiratzeko izendatu duela. Artikuluari buruzko informazioa eta aldizkariaren gunean sartzeko datuak ematen ditu.</description>
+		<subject>{translate key="emails.editorAssign.subject"}</subject>
+		<body>{translate key="emails.editorAssign.body"}</body>
+		<description>{translate key="emails.editorAssign.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
-		<subject>Artikulua ebaluatzeko eskaera</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Uste dut ebaluatzaile bikaina izango zinatekeela {$contextName} aldizkarira bidali diguten {$submissionTitle} eskuizkribuari buruzko iritzia emateko. Artikuluaren laburpena behean duzu, eta espero dut aintzakotzat hartu eta pentsatuko duzula guretzat lan garrantzitsu hau egiteko eskaera.<br />
-<br />
-Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko. Webgunea {$contextUrl} da<br />
-<br />
-Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
-<br />
-Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). {$passwordResetUrl}<br />
-<br />
-Artikuluaren URLa: {$submissionReviewUrl}<br />
-<br />
-Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean. (Bestela, ikus REVIEW_REQUEST_ATTACHED).</description>
+		<subject>{translate key="emails.reviewRequestRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
-		<subject>Artikulua ebaluatzeko eskaera</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Uste dut ebaluatzaile bikaina izango zinatekeela {$contextName} aldizkarira bidali diguten {$submissionTitle} eskuizkribuari buruzko iritzia emateko. Artikuluaren laburpena behean duzu, eta espero dut aintzakotzat hartu eta pentsatuko duzula guretzat lan garrantzitsu hau egiteko eskaera.<br />
-<br />
-Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko.<br />
-<br />
-Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
-<br />
-Artikuluaren URLa: {$submissionReviewUrl}<br />
-<br />
-Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean, eta klik bakarreko ebaluatzaile-sarbidea gaitzen denean.</description>
+		<subject>{translate key="emails.reviewRequestRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
-		<subject>Artikulua ebaluatzeko eskaera</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Uste dut ebaluatzaile bikaina izango zinatekeela {$contextName} aldizkarira bidali diguten {$submissionTitle} eskuizkribuari buruzko iritzia emateko. Artikuluaren laburpena behean duzu, eta espero dut aintzakotzat hartu eta pentsatuko duzula guretzat lan garrantzitsu hau egiteko eskaera.<br />
-<br />
-Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko. Webgunea {$contextUrl} da<br />
-<br />
-Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
-<br />
-Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). {$passwordResetUrl}<br />
-<br />
-Artikuluaren URLa: {$submissionReviewUrl}<br />
-<br />
-Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean. (Bestela, ikus REVIEW_REQUEST_ATTACHED).</description>
+		<subject>{translate key="emails.reviewRequest.subject"}</subject>
+		<body>{translate key="emails.reviewRequest.body"}</body>
+		<description>{translate key="emails.reviewRequest.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>Artikulua ebaluatzeko eskaera</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Uste dut ebaluatzaile bikaina izango zinatekeela {$contextName} aldizkarira bidali diguten {$submissionTitle} eskuizkribuari buruzko iritzia emateko. Artikuluaren laburpena behean duzu, eta espero dut aintzakotzat hartu eta pentsatuko duzula guretzat lan garrantzitsu hau egiteko eskaera.<br />
-<br />
-Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko.<br />
-<br />
-Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
-<br />
-Artikuluaren URLa: {$submissionReviewUrl}<br />
-<br />
-Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean, eta klik bakarreko ebaluatzaile-sarbidea gaitzen denean.</description>
+		<subject>{translate key="emails.reviewRequestOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
-		<subject>Artikulua ebaluatzeko eskaera</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Uste dut ebaluatzaile bikaina izango zinatekeela {$submissionTitle} eskuizkribuari buruzko iritzia emateko, eta guretzat lan hori egiteko aukerarik izango ote zenukeen galdetzera natorkizu. Aldizkari honetako Ebaluazioak egiteko gidalerroak behean dituzu, eta artikulua mezu honi erantsita bidaltzen dizut. Artikuluari buruzko ebaluazio-txostena eta zure gomendioa niri bidali beharko zenizkidake posta elektronikoz {$reviewDueDate} aurretik.<br />
-<br />
-Erantzun iezadazu posta elektronikoz, mesedez, {$responseDueDate} aurretik, ebaluazioa egiterik daukazun ala ez.<br />
-<br />
-Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-Ebaluazioa egiteko gidalerroak<br />
-<br />
-{$reviewGuidelines}<br />
-]]></body>
-		<description>Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikulua ere bidaltzen da mezuari erantsita. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean "Eranskina bidali Ebaluazio-prozesuan" hautatzen denean. (Bestela, ikus REVIEW_REQUEST).</description>
+		<subject>{translate key="emails.reviewRequestAttached.subject"}</subject>
+		<body>{translate key="emails.reviewRequestAttached.body"}</body>
+		<description>{translate key="emails.reviewRequestAttached.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
-		<subject>Ebaluazio-eskaera bertan behera uztea</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-{$contextName} aldizkarirako {$submissionTitle} artikulua ebaluatzeko egin genizun eskaera bertan behera uztea erabaki dugu. Sentitzen dugu eta barkamena eskatzen dizugu erabaki honek sor ditzakeen endredoengatik, eta espero dugu aurrerantzean ere gure aldizkariko ebaluatzaileen artean izango zaitugula.<br />
-<br />
-Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.]]></body>
-		<description>Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio artikulu baten ebaluazioa egiten hasita dagoenean, ebaluazioa bertan behera utzi dela jakinarazteko.</description>
+		<subject>{translate key="emails.reviewCancel.subject"}</subject>
+		<body>{translate key="emails.reviewCancel.body"}</body>
+		<description>{translate key="emails.reviewCancel.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
-		<subject>Ebaluazioa egiteko prest</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikulua ebaluatzeko aukera aztertu dut, eta prest nago lan hori egiteko. Eskerrik asko nigan pentsatzeagatik; nire txostena garaiz jasoko duzue, mugaegunerako ({$reviewDueDate}) eginda egongo da, lehenago ez bada.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Mezu hau Ebaluatzaileak Ataleko editoreari bidaltzen dio, ebaluazioa egiteko eskaera onartzen duela eta lana garaiz bukatuko duela esateko.</description>
+		<subject>{translate key="emails.reviewConfirm.subject"}</subject>
+		<body>{translate key="emails.reviewConfirm.body"}</body>
+		<description>{translate key="emails.reviewConfirm.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
-		<subject>Ebaluazioa egin ezina</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Sentitzen dut, baina oraingoan ezingo dut egin {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa. Eskerrik asko nigan pentsatzeagatik, eta espero dut hurrengo batean ere niregana joko duzuela.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Mezu hau Ebaluatzaileak Ataleko editoreari bidaltzen dio, ebaluazioa egiteko eskaerari erantzunez, ezin duela egin esateko.</description>
+		<subject>{translate key="emails.reviewDecline.subject"}</subject>
+		<body>{translate key="emails.reviewDecline.body"}</body>
+		<description>{translate key="emails.reviewDecline.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
-		<subject>Artikuluaren ebaluazioaren hartu-agiria</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa egiteagatik. Zinez estimatzen dugu argitaratzen ditugun lanen kalitatea hobetzeko egiten diguzun ekarpena.]]></body>
-		<description>Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio, ebaluazio-txostena jaso duela esateko eta eskerrak emateko.</description>
+		<subject>{translate key="emails.reviewAck.subject"}</subject>
+		<body>{translate key="emails.reviewAck.body"}</body>
+		<description>{translate key="emails.reviewAck.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
-		<subject>Artikulua ebaluatzeko oroigarria</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa gogorarazteko ohartxo bat baino ez. {$reviewDueDate} egunerako espero genuen zure ebaluazio-txostena, eta prestatuta daukazunean lehenbailehen bidaltzea eskertuko genizuke.<br />
-<br />
-Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). {$passwordResetUrl}<br />
-<br />
-Artikuluaren URLa: {$submissionReviewUrl}<br />
-<br />
-Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio, ebaluazioa egiteko epea pasatu dela gogorarazteko.</description>
+		<subject>{translate key="emails.reviewRemind.subject"}</subject>
+		<body>{translate key="emails.reviewRemind.body"}</body>
+		<description>{translate key="emails.reviewRemind.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
-		<subject>Artikulua ebaluatzeko oroigarria</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa gogorarazteko ohartxo bat baino ez. {$reviewDueDate} egunerako espero genuen zure ebaluazio-txostena, eta prestatuta daukazunean lehenbailehen bidaltzea eskertuko genizuke.<br />
-<br />
-Artikuluaren URLa: {$submissionReviewUrl}<br />
-<br />
-Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio, ebaluazioa egiteko epea pasatu dela gogorarazteko.</description>
+		<subject>{translate key="emails.reviewRemindOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
-		<subject>Artikulua ebaluatzeko oroigarri automatizatua</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa gogorarazteko ohartxo bat baino ez. &quot;{$reviewDueDate}&quot; egunerako espero genuen zure ebaluazio-txostena, eta, epea igaro denez, mezu hau automatikoki sortu eta bidali da. Eskertuko genizuke prestatu orduko bidaliko bazenigu.<br />
-<br />
-Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). {$passwordResetUrl}<br />
-<br />
-Artikuluaren URLa: {$submissionReviewUrl}<br />
-<br />
-Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau automatikoki bidaltzen da ebaluatzaile baten epea amaitu eta erantzun ez duenean (ikus Konfigurazioko 2. urratseko Ebaluazio-aukerak) eta klik bakarreko ebaluatzaile-sarbidea desgaituta dagoenean. Programatutako atazak (scheduled_tasks) gaituta eta konfiguratuta egon behar dute (ikus konfigurazio-fitxategia).</description>
+		<subject>{translate key="emails.reviewRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
-		<subject>Artikulua ebaluatzeko oroigarri automatizatua</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa gogorarazteko ohartxo bat baino ez. &quot;{$reviewDueDate}&quot; egunerako espero genuen zure ebaluazio-txostena, eta, epea igaro denez, mezu hau automatikoki sortu eta bidali da. Eskertuko genizuke prestatu orduko bidaliko bazenigu.<br />
-<br />
-Artikuluaren URLa: {$submissionReviewUrl}<br />
-<br />
-Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau automatikoki bidaltzen da ebaluatzaile baten epea amaitu eta erantzun ez duenean (ikus Konfigurazioko 2. urratseko Ebaluazio-aukerak) eta klik bakarreko ebaluatzaile-sarbidea gaituta dagoenean. Programatutako atazak (scheduled_tasks) gaituta eta konfiguratuta egon behar dute (ikus konfigurazio-fitxategia).</description>
+		<subject>{translate key="emails.reviewRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
-		<subject>Zuzenketa egiteko eskaera</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren zuzenketa egitea eskatu nahi nizuke, urrats hauei jarraituz:<br />
-1. Egin klik behean, Artikuluaren URLan.<br />
-2. Sartu aldizkarian eta egin klik 1. urratsean agertzen den Fitxategian.<br />
-3. Irakurri Zuzenketak egiteko webgunean jarrita dauden instrukzioak.<br />
-4. Ireki deskargatutako fitxategia eta zuzendu, Egile-kontsultak gehituz behar izanez gero.<br />
-5. Gorde zuzendutako fitxategia, eta kargatu Zuzenketako 1. urratsean.<br />
-6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
-<br />
-{$contextName} aldizkariaren URLa: {$contextUrl}<br />
-Artikuluaren URLa: {$submissionUrl}<br />
-Erabiltzaile-izena: {$participantUsername}]]></body>
-		<description>Mezu hau Ataleko editoreak Zuzentzaileari bidaltzen dio, artikuluaren zuzenketa-prozesua egin dezala eskatzeko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
+		<subject>{translate key="emails.copyeditRequest.subject"}</subject>
+		<body>{translate key="emails.copyeditRequest.body"}</body>
+		<description>{translate key="emails.copyeditRequest.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
-		<subject>Galeradak eskatzea</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren galeradak egin behar dira orain, urrats hauei jarraituz:<br />
-1. Egin klik behean, Artikuluaren URLan.<br />
-2. Sartu aldizkarian eta erabili Maketazio-bertsioko fitxategia, aldizkariaren arauen araberako galeradak prestatzeko.<br />
-3. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
-<br />
-{$contextName} aldizkariaren URLa: {$contextUrl}<br />
-Artikuluaren URLa: {$submissionUrl}<br />
-Erabiltzaile-izena: {$participantUsername}<br />
-<br />
-Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.]]></body>
-		<description>Mezu hau Ataleko editoreak Maketatzaileari bidaltzen dio, artikuluaren maketazioa egin dezala eskatzeko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
+		<subject>{translate key="emails.layoutRequest.subject"}</subject>
+		<body>{translate key="emails.layoutRequest.body"}</body>
+		<description>{translate key="emails.layoutRequest.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
-		<subject>Galeradak eginda</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribuaren galeradak eginda daude, proba-zuzenketa hasteko prest.<br />
-<br />
-Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
-<br />
-{$participantName}]]></body>
-		<description>Mezu hau Maketatzaileak Ataleko editoreari bidaltzen dio, maketazioa eginda dagoela jakinarazteko.</description>
+		<subject>{translate key="emails.layoutComplete.subject"}</subject>
+		<body>{translate key="emails.layoutComplete.body"}</body>
+		<description>{translate key="emails.layoutComplete.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
-		<subject>Maketazioaren hartu-agiria</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkribuaren galeradak prestatzeagatik. Ekarpen handia da argitaratze-prozesurako.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Maketatzaileari bidaltzen dio, maketazioa bukatu izanaren berri hartu duela jakinarazteko eta egindako lana eskertzeko.</description>
+		<subject>{translate key="emails.layoutAck.subject"}</subject>
+		<body>{translate key="emails.layoutAck.body"}</body>
+		<description>{translate key="emails.layoutAck.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Probak zuzentzeko eskaera (Egileari)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-{$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikulua proba-zuzenketako fasera heldu da. Hauek dira orain egin beharreko urratsak:<br />
-1. Egin klik behean, Artikuluaren URLan.<br />
-2. Sartu aldizkarian eta ikusi PROBAK ZUZENTZEKO INSTRUKZIOAK<br />
-3. Egin klik Maketazio-orriko IKUSI PROBAn eta zuzendu argitalpen-formaturen bateko (edo guztietako) galeradak.<br />
-4. Sartu proposatutako zuzenketak (tipografia eta formatua) &quot;Proba-zuzenketako zuzenketak&quot;en.<br />
-5. Gorde zuzenketak eta bidali posta elektronikoz Maketatzaileari eta Proba-zuzentzaileari.<br />
-6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
-<br />
-Artikuluaren URLa: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Egileari bidaltzen dio galeradak zuzentzen hasteko prest daudela jakinarazteko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
+		<subject>{translate key="emails.proofreadAuthorRequest.subject"}</subject>
+		<body>{translate key="emails.proofreadAuthorRequest.body"}</body>
+		<description>{translate key="emails.proofreadAuthorRequest.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Proba-zuzenketa eginda (Egileak)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName} aldizkarirako nire &quot;{$submissionTitle}&quot; eskuizkribuaren galeraden proba-zuzenketa egin dut. Galeradak prest daude Proba-zuzentzaileak eta Maketatzaileak azken zuzenketak egin diezazkieten.<br />
-<br />
-{$authorName}]]></body>
-		<description>Mezu hau Egileak Proba-zuzentzaileari eta Editoreari bidaltzen die, bere proba-zuzenketak egin dituela eta xehetasunak artikuluaren oharretan ipini dituela esateko.</description>
+		<subject>{translate key="emails.proofreadAuthorComplete.subject"}</subject>
+		<body>{translate key="emails.proofreadAuthorComplete.body"}</body>
+		<description>{translate key="emails.proofreadAuthorComplete.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Proba-zuzenketaren hartu-agiria (Egileari)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkribuaren galeradak zuzentzeagatik. Laster izango dugu zure lana argitaratuta ikusteko aukera.<br />
-<br />
-Gure jakinarazpen-zerbitzuan izena ematen baduzu, zure lana argitaratzen denean mezu bat bidaliko dizugu Aurkibidearekin. Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Egileari bidaltzen dio, lehen proba-zuzenketa bukatu izanaren berri hartu duela jakinarazteko eta egindako lana eskertzeko.</description>
+		<subject>{translate key="emails.proofreadAuthorAck.subject"}</subject>
+		<body>{translate key="emails.proofreadAuthorAck.body"}</body>
+		<description>{translate key="emails.proofreadAuthorAck.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_REQUEST">
-		<subject>Probak zuzentzeko eskaera</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikulua proba-zuzenketako fasera heldu da. Hauek dira orain egin beharreko urratsak:<br />
-1. Egin klik behean, Artikuluaren URLan.<br />
-2. Sartu aldizkarian eta ikusi PROBAK ZUZENTZEKO INSTRUKZIOAK<br />
-3. Egin klik Maketazio-orriko IKUSI PROBAn eta zuzendu argitalpen-formaturen bateko (edo guztietako) galeradak.<br />
-4. Sartu proposatutako zuzenketak (tipografia eta formatua) &quot;Proba-zuzenketako zuzenketak&quot;en.<br />
-5. Gorde zuzenketak eta bidali posta elektronikoz Maketatzaileari.<br />
-6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
-<br />
-Eskuizkribuaren URLa: {$submissionUrl}<br />
-Erabiltzaile-izena: {$proofreaderUsername}<br />
-<br />
-Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Proba-zuzentzaileari bidaltzen dio, artikulu baten galerada-probak zuzen ditzala eskatzeko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
+		<subject>{translate key="emails.proofreadRequest.subject"}</subject>
+		<body>{translate key="emails.proofreadRequest.body"}</body>
+		<description>{translate key="emails.proofreadRequest.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_COMPLETE">
-		<subject>Proba-zuzenketa eginda</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribuaren galeraden proba-zuzenketa egin dut. Galeradak prest daude Maketatzaileak azken zuzenketak egin ditzan.<br />
-<br />
-{$proofreaderName}]]></body>
-		<description>Mezu hau Proba-zuzentzaileak Ataleko editoreari bidaltzen dio, proba-zuzenketa egin duela jakinarazteko.</description>
+		<subject>{translate key="emails.proofreadComplete.subject"}</subject>
+		<body>{translate key="emails.proofreadComplete.body"}</body>
+		<description>{translate key="emails.proofreadComplete.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_ACK">
-		<subject>Proba-zuzenketaren hartu-agiria</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkribuaren galeradak zuzentzeagatik. Proba-zuzenketa oso garrantzitsua da aldizkariaren kalitatea segurtatzeko.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Proba-zuzentzaileari bidaltzen dio, proba-zuzenketa bukatu izanaren berri hartu duela jakinarazteko eta egindako lana eskertzeko.</description>
+		<subject>{translate key="emails.proofreadAck.subject"}</subject>
+		<body>{translate key="emails.proofreadAck.body"}</body>
+		<description>{translate key="emails.proofreadAck.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Proba-zuzenketa eginda (Maketatzaileak)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName}aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren galeradak zuzenduta daude, proba-zuzenketan egindako proposamenei jarraituz. Lana argitaratzeko prest dago orain.<br />
-<br />
-{$participantName}]]></body>
-		<description>Mezu hau Maketatzaileak Ataleko editoreari bidaltzen dio, proba-zuzenketako azken zuzenketak eginda daudela eta artikulua argitaratzeko prest dagoela jakinarazteko.</description>
+		<subject>{translate key="emails.proofreadLayoutComplete.subject"}</subject>
+		<body>{translate key="emails.proofreadLayoutComplete.body"}</body>
+		<description>{translate key="emails.proofreadLayoutComplete.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Proba-zuzenketaren hartu-agiria (Maketatzaileari)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribuaren proba-zuzenketa burutzeagatik. Proba-zuzenketa oso garrantzitsua da aldizkariaren kalitatea segurtatzeko.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Maketatzaileari bidaltzen dio, proba-zuzenketaren azken fasea bukatu izanaren berri hartu duela jakinarazteko eta egindako lana eskertzeko.</description>
+		<subject>{translate key="emails.proofreadLayoutAck.subject"}</subject>
+		<body>{translate key="emails.proofreadLayoutAck.body"}</body>
+		<description>{translate key="emails.proofreadLayoutAck.description"}</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
-		<subject>Interesgarria izan litekeen artikulu bat</subject>
-		<body><![CDATA[Artikulu hau zuretzat interesgarria izango dela uste dut:<br />
-Titulua: {$submissionTitle}<br />
-Egilea: {$authorName}<br />
-Aldizkaria: {$contextName} bol: {$volume} zk: {$number} ({$year})<br />
-URLa: {$articleUrl}]]></body>
-		<description>Mezu-txantiloi hau irakurle erregistratuek erabil dezakete beste norbaiti artikulu bati buruzko informazioa bidaltzeko, interesatuko zaiolakoan. Irakurtzeko tresnen bidez eskuratzen da txantiloi hau, eta Aldizkariaren kudeatzaileak gaitu behar du Irakurtzeko tresnen administrazio-orrian.</description>
+		<subject>{translate key="emails.emailLink.subject"}</subject>
+		<body>{translate key="emails.emailLink.body"}</body>
+		<description>{translate key="emails.emailLink.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Harpidetzaren jakinarazpena</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-{$contextName} aldizkari elektronikoan erregistratu zara harpidedun gisa, harpidetza mota honekin:<br />
-<br />
-{$subscriptionType}<br />
-<br />
-Harpidedunek bakarrik ikus dezaketen edukia eskuratzeko, sartu sisteman zure erabiltzaile-izenarekin (&quot;{$username}&quot;).<br />
-<br />
-Sisteman sartu ondoren zure profila osatzen duten datuak eta pasahitza aldatu ahal izango dituzu, nahi duzunean.<br />
-<br />
-Kontuan izan, erakunde harpideduna bazara, zure erakundeko erabiltzaileek ez daukatela saioa hasi beharrik, harpidetza bidezko edukia ikusi nahi dutenean sistemak automatikoki autentifikatuko dituelako.<br />
-<br />
-Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Mezu honek irakurle erregistratuari jakinarazten dio Kudeatzaileak harpidetza egin diola. Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu.</description>
+		<subject>{translate key="emails.subscriptionNotify.subject"}</subject>
+		<body>{translate key="emails.subscriptionNotify.body"}</body>
+		<description>{translate key="emails.subscriptionNotify.description"}</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Zenbakia sarrera librekoa da orain</subject>
-		<body><![CDATA[Irakurle:<br />
-<br />
-{$contextName} aldizkariak sarrera libreko egin du ondoren zehazten dugun zenbakia. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean ({$contextUrl}) artikuluak irakurtzera gonbidatzen zaitugu.<br />
-<br />
-Eskerrik asko gure lana interesez jarraitzeagatik,<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau bidaltzen zaie zenbakia sarrera libreko egiten denean jakinarazpena jaso nahi dutela esan duten erabiltzaile erregistratuei.</description>
+		<subject>{translate key="emails.openAccessNotify.subject"}</subject>
+		<body>{translate key="emails.openAccessNotify.body"}</body>
+		<description>{translate key="emails.openAccessNotify.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Harpidetza-amaieraren jakinarazpena</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-{$contextName} aldizkariko harpidetza amaitzera doakizu.<br />
-<br />
-{$subscriptionType}<br />
-Amaiera-data: {$expiryDate}<br />
-<br />
-Aldizkarian sartzen jarraitu ahal izateko, joan aldizkariaren webgunera eta berritu harpidetza, mesedez. Sisteman saioa hasteko zure erabiltzaile-izena, &quot;{$username}&quot;, erabil dezakezu.<br />
-<br />
-Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Mezu honek harpidedunari jakinarazten dio harpidetza amaitzera doakiola. Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu.</description>
+		<subject>{translate key="emails.subscriptionBeforeExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionBeforeExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionBeforeExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Harpidetza amaitu da</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-{$contextName} aldizkariko harpidetza amaitu zaizu.<br />
-<br />
-{$subscriptionType}<br />
-Amaiera-data: {$expiryDate}<br />
-<br />
-Harpidetza berritzeko, zoaz aldizkariaren webgunera, mesedez. Sisteman saioa hasteko zure erabiltzaile-izena, &quot;{$username}&quot;, erabil dezakezu.<br />
-<br />
-Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Mezu honek harpidedunari jakinarazten dio harpidetza amaitu zaiola. Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Harpidetza amaitu da - Azkeneko jakinarazpena</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-{$contextName} aldizkariko harpidetza amaitu zaizu.<br />
-Mesedez, kontuan izan hau dela azkeneko jakinarazpena, ez dizugula berriz gogoraraziko.<br />
-<br />
-{$subscriptionType}<br />
-Amaiera-data: {$expiryDate}<br />
-<br />
-Harpidetza berritzeko, zoaz aldizkariaren webgunera, mesedez. Sisteman saioa hasteko zure erabiltzaile-izena, &quot;{$username}&quot;, erabil dezakezu.<br />
-<br />
-Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Mezu honek harpidedunari jakinarazten dio harpidetza amaitu zaiola. Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiryLast.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiryLast.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiryLast.description"}</description>
 	</email_text>
 	<email_text key="NOTIFICATION">
-		<subject>{$siteTitle} gunearen jakinarazpen berria</subject>
-		<body><![CDATA[{$siteTitle} gunearen jakinarazpen berri bat daukazu:<br />
-<br />
-{$notificationContents}<br />
-<br />
-Esteka: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Mezu hau mota honetako jakinarazpena jasotzea hautatu duten erabiltzaile erregistratuei bidaltzen zaie.</description>
+		<subject>{translate key="emails.notification.subject"}</subject>
+		<body>{translate key="emails.notification.body"}</body>
+		<description>{translate key="emails.notification.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
-		<subject>Editorearen erabakia</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
-<br />
-Gure erabakia:]]></body>
-		<description>Mezu hau Editoreak edo Ataleko editoreak bidaltzen dio Egileari, artikuluari buruz hartu duen erabakia jakinarazteko.</description>
+		<subject>{translate key="emails.editorDecisionAccept.subject"}</subject>
+		<body>{translate key="emails.editorDecisionAccept.body"}</body>
+		<description>{translate key="emails.editorDecisionAccept.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
-		<subject>Editorearen erabakia</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
-<br />
-Gure erabakia:]]></body>
-		<description>Mezu hau Editoreak edo Ataleko editoreak bidaltzen dio Egileari, artikuluari buruz hartu duen erabakia jakinarazteko.</description>
+		<subject>{translate key="emails.editorDecisionRevisions.subject"}</subject>
+		<body>{translate key="emails.editorDecisionRevisions.body"}</body>
+		<description>{translate key="emails.editorDecisionRevisions.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
-		<subject>Editorearen erabakia</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
-<br />
-Gure erabakia:]]></body>
-		<description>Mezu hau Editoreak edo Ataleko editoreak bidaltzen dio Egileari, artikuluari buruz hartu duen erabakia jakinarazteko.</description>
+		<subject>{translate key="emails.editorDecisionResubmit.subject"}</subject>
+		<body>{translate key="emails.editorDecisionResubmit.body"}</body>
+		<description>{translate key="emails.editorDecisionResubmit.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
-		<subject>Editorearen erabakia</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
-<br />
-Gure erabakia:]]></body>
-		<description>Mezu hau Editoreak edo Ataleko editoreak bidaltzen dio Egileari, artikuluari buruz hartu duen erabakia jakinarazteko.</description>
+		<subject>{translate key="emails.editorDecisionDecline.subject"}</subject>
+		<body>{translate key="emails.editorDecisionDecline.body"}</body>
+		<description>{translate key="emails.editorDecisionDecline.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>Harpidetza-erosketa: Indibiduala</subject>
-		<body><![CDATA[{$contextName} aldizkariko harpidetza indibidual bat erosi dute linean, ondoren ematen diren xehetasunekin.<br />
-<br />
-Harpidetza mota:<br />
-{$subscriptionType}<br />
-<br />
-Erabiltzailea:<br />
-{$userDetails}<br />
-<br />
-Kideen informazioa (baldin badago):<br />
-{$membership}<br />
-<br />
-Harpidetza hau ikusi edo editatzeko, erabili ondorengo URLa.<br />
-<br />
-Harpidetza URLa: {$subscriptionUrl}]]></body>
-		<description>Mezu honek Harpidetza-kudeatzaileari jakinarazten dio harpidetza indibidual bat erosi dutela linean. Harpidetza-datuen laburpena ematen du eta erositako harpidetzara bizkor joateko esteka.</description>
+		<subject>{translate key="emails.subscriptionPurchaseIndl.subject"}</subject>
+		<body>{translate key="emails.subscriptionPurchaseIndl.body"}</body>
+		<description>{translate key="emails.subscriptionPurchaseIndl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>Harpidetza-erosketa: Erakundeena</subject>
-		<body><![CDATA[{$contextName} aldizkariko erakunde-harpidetza bat erosi dute linean, ondoren ematen diren xehetasunekin. Harpidetza hori aktibatzeko, erabil ezazu mesedez Harpidetza URLa eta ezarri harpidetzaren egoera 'Aktibo''.<br />
-<br />
-Harpidetza mota:<br />
-{$subscriptionType}<br />
-<br />
-Erakundea:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-Domeinua (eman badute):<br />
-{$domain}<br />
-<br />
-IP barrutiak (eman badituzte):<br />
-{$ipRanges}<br />
-<br />
-Kontaktuko pertsona:<br />
-{$userDetails}<br />
-<br />
-Kideen informazioa (baldin badago):<br />
-{$membership}<br />
-<br />
-Harpidetza hau ikusi edo editatzeko, erabili ondorengo URLa.<br />
-<br />
-Harpidetza URLa: {$subscriptionUrl}]]></body>
-		<description>Mezu honek Harpidetza-kudeatzaileari jakinarazten dio erakunde-harpidetza bat erosi dutela linean. Harpidetza-datuen laburpena ematen du eta erositako harpidetzara bizkor joateko esteka.</description>
+		<subject>{translate key="emails.subscriptionPurchaseInstl.subject"}</subject>
+		<body>{translate key="emails.subscriptionPurchaseInstl.body"}</body>
+		<description>{translate key="emails.subscriptionPurchaseInstl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
-		<subject>Harpidetza-berritzea: Indibiduala</subject>
-		<body><![CDATA[{$contextName} aldizkariko harpidetza indibidual bat berritu dute linean, ondoren ematen diren xehetasunekin.<br />
-<br />
-Harpidetza mota:<br />
-{$subscriptionType}<br />
-<br />
-Erabiltzailea:<br />
-{$userDetails}<br />
-<br />
-Kideen informazioa (baldin badago):<br />
-{$membership}<br />
-<br />
-Harpidetza hau ikusi edo editatzeko, erabili ondorengo URLa.]]></body>
-		<description>Mezu honek Harpidetza-kudeatzaileari jakinarazten dio harpidetza indibidual bat berritu dutela linean. Harpidetza-datuen laburpena ematen du eta berritutako harpidetzara bizkor joateko esteka.</description>
+		<subject>{translate key="emails.subscriptionRenewIndl.subject"}</subject>
+		<body>{translate key="emails.subscriptionRenewIndl.body"}</body>
+		<description>{translate key="emails.subscriptionRenewIndl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
-		<subject>Harpidetza-berritzea: Erakundeena</subject>
-		<body><![CDATA[{$contextName} aldizkariko erakunde-harpidetza bat berritu dute linean, ondoren ematen diren xehetasunekin.<br />
-<br />
-Harpidetza mota:<br />
-{$subscriptionType}<br />
-<br />
-Erakundea:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-Domeinua (eman badute):<br />
-{$domain}<br />
-<br />
-IP barrutiak (eman badituzte):<br />
-{$ipRanges}<br />
-<br />
-Kontaktuko pertsona:<br />
-{$userDetails}<br />
-<br />
-Kideen informazioa (baldin badago):<br />
-{$membership}<br />
-<br />
-Harpidetza hau ikusi edo editatzeko, erabili ondorengo URLa.<br />
-<br />
-Harpidetza URLa: {$subscriptionUrl}]]></body>
-		<description>Mezu honek Harpidetza-kudeatzaileari jakinarazten dio erakunde-harpidetza bat berritu dutela linean. Harpidetza-datuen laburpena ematen du eta berritutako harpidetzara bizkor joateko esteka.</description>
+		<subject>{translate key="emails.subscriptionRenewInstl.subject"}</subject>
+		<body>{translate key="emails.subscriptionRenewInstl.body"}</body>
+		<description>{translate key="emails.subscriptionRenewInstl.description"}</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>Aipuak editatzea</subject>
-		<body><![CDATA[{$authorFirstName} jauna/andrea,<br />
-<br />
-Mesedez, egiaztatu edo emango al zeniguke zure {$submissionTitle} artikuluan agertzen den aipu egokia honako erreferentzia honetarako?<br />
-<br />
-<br />
-{$rawCitation}<br />
-<br />
-<br />
-Eskerrik asko!<br />
-<br />
-<br />
-{$userFirstName}<br />
-Zuzentzailea, {$contextName}]]></body>
-		<description>Mezu elektroniko honekin zuzentzaileek erreferentziei buruzko informazio osagarria eskatzen diete egileei.</description>
+		<subject>{translate key="emails.citationEditorAuthorQuery.subject"}</subject>
+		<body>{translate key="emails.citationEditorAuthorQuery.body"}</body>
+		<description>{translate key="emails.citationEditorAuthorQuery.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Artikulua berrikusteko eskakizuna</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Hau &quot;{$submissionTitle},&quot; eskuizkribuari dagokio, {$contextName} aldizkariak aintzat hartu duena.<br />
-<br />
-Eskuizkribuaren aurreko bertsioaren berrikuspenari jarraituz, egileek orain haien lanaren bertsio berrikusi bat bidali dute. Eskertuko genuke ebaluatzen lagunduko bazenu.<br />
-<br />
-Mesedez, sartu aldizkariaren web orrian {$responseDueDate} datarako, adierazteko berrikuspenaz arduratuko zaren edo ez, baita bidalitakora sartzeko eta zure berrikuspena eta gomendioa grabatzeko ere. Web gunea da: {$contextUrl}<br />
-<br />
-Berrikuspenaren epemuga: {$reviewDueDate}.<br />
-<br />
-Ez baduzu erabiltzailerik eta pasahitzik aldizkariaren web orrirako, lotura hau erabil dezakezu zure pasahitza berrezartzeko (eta posta elektronikoz bidaliko zaizu ondoren, zure erabiltzailearekin batera). {$passwordResetUrl}<br />
-<br />
-URL aurkezpena: {$submissionReviewUrl}<br />
-<br />
-Mila esker eskari hau kontuan hartzeagatik.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Atalen Editoreak Berrikusleari bidalitako mezu honetan berrikusleari eskatzen dio bidalitakoaren bigarren edo hurrengo berrikuspen bat onartu edo baztertu dezala. Bidalitakoari buruzko informazioa ematen du, besteak beste, titulua eta aurkezpena, berrikuspena egiteko muga, eta nola sartu bidalitakora.  Mezu hau erabiltzen da Aldizkariaren Konfigurazioan, 2. urratsean Berrikuspen Estandarraren Prozesua hautatzen denean. (Bestela, ikus BERRIKUSPENA_ESKAKIZUNA_ERANTSIA_ONDORENGOA.)</description>
+		<subject>{translate key="emails.reviewRequestSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Artikulua berrikusteko eskakizuna</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Hau &quot;{$submissionTitle},&quot; eskuizkribuari dagokio, {$contextName} aldizkariak aintzat hartu duena.<br />
-<br />
-Eskuizkribuaren aurreko bertsioaren berrikuspenari jarraituz, egileek orain haien lanaren bertsio berrikusi bat bidali dute. Eskertuko genuke ebaluatzen lagunduko bazenu.<br />
-<br />
-Mesedez, sartu aldizkariaren web orrian {$responseDueDate} datarako, adierazteko berrikuspenaz arduratuko zaren edo ez, baita bidalitakora sartzeko eta zure berrikuspena eta gomendioa grabatzeko ere.<br />
-<br />
-Berrikuspenaren epemuga: {$reviewDueDate}.<br />
-<br />
-URL aurkezpena: {$submissionReviewUrl}<br />
-<br />
-Mila esker eskari hau kontuan hartzeagatik.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Atalen Editoreak Berrikusleari bidalitako mezu honetan berrikusleari eskatzen dio bidalitakoaren bigarren edo hurrengo berrikuspen bat onartu edo baztertu dezala. Bidalitakoari buruzko informazioa ematen du, besteak beste, titulua eta aurkezpena, berrikuspena egiteko muga, eta nola sartu bidalitakora.  Mezu hau erabiltzen da Aldizkariaren Konfigurazioan, 2. urratsean Berrikuspen Estandarraren Prozesua hautatzen denean, eta klik bateko berrikuslearentzako sarbidea gaituko da.</description>
+		<subject>{translate key="emails.reviewRequestOneclickSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestOneclickSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestOneclickSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Artikulua berrikusteko eskakizuna</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Hau &quot;{$submissionTitle},&quot; eskuizkribuari dagokio, {$contextName} aldizkariak aintzat hartu duena.<br />
-<br />
-Eskuizkribuaren aurreko bertsioaren berrikuspenari jarraituz, egileek orain haien lanaren bertsio berrikusi bat bidali dute. Eskertuko genuke ebaluatzen lagunduko bazenu.<br />
-<br />
-Aldizkari honetarako Berrikuspen Gidalerroak behean erantsita daude, eta mezuak bidalketa bat du erantsia. Bidalketaren berrikuspena, zure gomendioarekin batera, bidali niri posta elektronikoz {$reviewDueDate} datarako.<br />
-<br />
-Mesedez, adierazi mezu baten bidez {$responseDueDate} datarako berrikuspena egiteko gai izango zaren eta egingo duzun.<br />
-<br />
-Mila esker eskari hau kontuan hartzeagatik.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-Berrikusi gidalerroak<br />
-<br />
-{$reviewGuidelines}]]></body>
-		<description>Atalen Editoreak Berrikusleari bidalitako mezu honetan berrikusleari eskatzen dio bidalitakoaren bigarren edo hurrengo berrikuspen bat onartu edo baztertu dezala. Bidalitakoari buruzko informazioa ematen du, besteak beste, titulua eta aurkezpena, berrikuspena egiteko muga, eta nola sartu bidalitakora.  Mezu hau erabiltzen da Aldizkariaren Konfigurazioan, 2. urratsean, Berrikuspen Prozesuaren Mezu Erantsia hautatzen denean. (Bestela, ikus BERRIKUSPENA_ESKAKIZUNA_ONDORENGOA.)</description>
+		<subject>{translate key="emails.reviewRequestAttachedSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestAttachedSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestAttachedSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>Bertsio errebisatua gora kargatu da</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-&quot;{$submissionTitle}&quot; artikuluaren bertsio berrikusia gora kargatu du {$authorName} egileak.<br />
-<br />
-URL aurkezpena: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau automatikoki bidaltzen zaio dagokion editoreari, egileak artikulu baten bertsio berrikusia gora kargatzen duenean.</description>
+		<subject>{translate key="emails.revisedVersionNotify.subject"}</subject>
+		<body>{translate key="emails.revisedVersionNotify.body"}</body>
+		<description>{translate key="emails.revisedVersionNotify.description"}</description>
 	</email_text>
 </email_texts>

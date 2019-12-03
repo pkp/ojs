@@ -12,609 +12,223 @@
   -->
 <email_texts locale="ca_ES">
 	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Confirmació per a la reinicialització de la contrasenya</subject>
-		<body><![CDATA[Hem rebut una sol·licitud per a reinicialitzar la vostra contrasenya per al lloc web {$siteTitle}.<br />
-<br />
-Si no sou l'autor d'aquesta sol·licitud, ignoreu aquest missatge de correu electrònic i no es canviarà la vostra contrasenya. Si voleu reinicialitzar la contrasenya, feu clic a l'URL següent.<br />
-<br />
-Reinicialització de la meva contrasenya: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic s'envia a un usuari registrat si ha indicat que no recorda la seva contrasenya o que no pot iniciar la sessió. Inclou un URL per a la reinicialització de la contrasenya.</description>
+		<subject>{translate key="emails.passwordResetConfirm.subject"}</subject>
+		<body>{translate key="emails.passwordResetConfirm.body"}</body>
+		<description>{translate key="emails.passwordResetConfirm.description"}</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Reinicialització de la contrasenya</subject>
-		<body><![CDATA[La vostra contrasenya per al lloc web {$siteTitle} s'ha reinicialitzat correctament. Recordeu aquest nom d'usuari i aquesta contrasenya, ja que els necessitareu per a accedir a la revista i treballar-hi.<br />
-<br />
-Nom d'usuari: {$username}<br />
-Contrasenya: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic s'envia a un usuari registrat per a notificar-li que la seva contrasenya s'ha reinicialitzat amb èxit després d'haver seguit el procés descrit al missatge de correu electrònic PASSWORD_RESET_CONFIRM.</description>
+		<subject>{translate key="emails.passwordReset.subject"}</subject>
+		<body>{translate key="emails.passwordReset.body"}</body>
+		<description>{translate key="emails.passwordReset.description"}</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Registre a la revista</subject>
-		<body><![CDATA[Benvolgut/uda {$userFullName},<br />
-<br />
-Us acabeu de registrar com a usuari de {$contextName}. Aquest missatge de correu electrònic conté el vostre nom d'usuari i la vostra contrasenya. Necessitareu aquestes dades per a accedir al lloc web de la revista i treballar-hi. Recordeu que en qualsevol moment em podeu sol·licitar que us suprimeixi de la llista d'usuaris de la revista.<br />
-<br />
-Nom d'usuari: {$username}<br />
-Contrasenya: {$password}<br />
-<br />
-Moltes gràcies,<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic s'envia a un usuari que s'acaba de registrar a la revista per a donar-li la benvinguda al sistema i fer-li arribar el seu nom d'usuari i la seva contrasenya.</description>
+		<subject>{translate key="emails.userRegister.subject"}</subject>
+		<body>{translate key="emails.userRegister.body"}</body>
+		<description>{translate key="emails.userRegister.description"}</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
-		<subject>Valideu el vostre compte</subject>
-		<body><![CDATA[Benvolgut/uda {$userFullName},<br />
-<br />
-Heu creat un compte d'usuari per a {$contextName}, però abans de poder-lo començar a utilitzar heu de validar el vostre compte de correu electrònic. Per a fer-ho, seguiu l'enllaç següent:<br />
-<br />
-{$activateUrl}<br />
-<br />
-Moltes gràcies,<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic s'envia a un usuari que s'acaba de registrar per a donar-li la benvinguda al sistema i fer-li arribar el seu nom d'usuari i la seva contrasenya.</description>
+		<subject>{translate key="emails.userValidate.subject"}</subject>
+		<body>{translate key="emails.userValidate.body"}</body>
+		<description>{translate key="emails.userValidate.description"}</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Registre com a revisor a {$contextName}</subject>
-		<body><![CDATA[Després d'avaluar el vostre perfil, ens hem pres la llibertat de registrar el vostre nom a la base de dades de revisors per a {$contextName}. El fet de pertànyer a aquesta base de dades no suposa cap compromís per part vostra i, d'altra banda, ens permet fer-vos arribar propostes de revisions. Quan rebeu una proposta de revisió d'un document tindreu l'oportunitat de consultar-ne el títol i el resum, i tant podreu acceptar com rebutjar la invitació. En qualsevol moment podeu sol·licitar que se suprimeixi el vostre nom d'aquesta llista de revisors.<br />
-<br />
-A continuació trobareu el vostre nom d'usuari i la vostra contrasenya. Necessitareu aquestes dades per a entrar al lloc web de la revista i treballar-hi. És possible que, per exemple, vulgueu actualitzar el vostre perfil i incloure-hi els vostres interessos de revisió.<br />
-<br />
-Nom d'usuari: {$username}<br />
-Contrasenya: {$password}<br />
-<br />
-Moltes gràcies,<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic s'envia a un revisor que s'acaba de registrar per a donar-li la benvinguda al sistema i fer-li arribar el seu nom d'usuari i la seva contrasenya.</description>
+		<subject>{translate key="emails.reviewerRegister.subject"}</subject>
+		<body>{translate key="emails.reviewerRegister.body"}</body>
+		<description>{translate key="emails.reviewerRegister.description"}</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>Nou número publicat</subject>
-		<body><![CDATA[Benvolguts lectors,<br />
-<br />
-{$contextName} acaba de publicar el seu darrer número a {$contextUrl}. Us convidem a consultar-ne el sumari i a visitar el nostre lloc web per a accedir als articles i documents que us puguin interessar.<br />
-<br />
-Us agraïm l'interès per la nostra revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic s'envia als lectors registrats mitjançant l'enllaç Notifica als usuaris que hi ha a la pàgina inicial de l'usuari per a l'editor. Notifica als lectors la publicació d'un número nou i els convida a entrar a la revista mitjançant l'enllaç proporcionat.</description>
+		<subject>{translate key="emails.publishNotify.subject"}</subject>
+		<body>{translate key="emails.publishNotify.body"}</body>
+		<description>{translate key="emails.publishNotify.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Sol·licitud d'arxivament per a {$contextName}</subject>
-		<body><![CDATA[Benvolgut/uda [bibliotecari universitari],<br />
-<br />
-{$contextName} &amp;lt;{$contextUrl}&amp;gt; és una revista en què un membre de la vostra facultat o universitat, [nom del membre], participa en qualitat de [nom del rol]. Des d'aquesta revista volem crear un arxiu amb la vostra biblioteca universitària i altres biblioteques, d'acord amb la iniciativa LOCKSS (&amp;lt;i&amp;gt;lots of copies keep stuff safe&amp;lt;/i&amp;gt;).<br />
-<br />
-[Descripció breu de la revista]<br />
-<br />
-L'URL del LOCKSS Publisher Manifest per a la nostra revista és: {$contextUrl}/gateway/lockss<br />
-<br />
-Segons la informació de què disposem, la vostra biblioteca ja participa en la iniciativa LOCKSS. Per tant, no dubteu a sol·licitar-nos totes les metadades addicionals que necessiteu per a registrar aquesta revista a la vostra versió de LOCKSS.<br />
-<br />
-Moltes gràcies,<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic sol·licita al conservador de l'arxiu LOCKSS la inclusió d'aquesta revista en el seu arxiu. Inclou l'URL del LOCKSS Publisher Manifest per a la revista.</description>
+		<subject>{translate key="emails.lockssExistingArchive.subject"}</subject>
+		<body>{translate key="emails.lockssExistingArchive.body"}</body>
+		<description>{translate key="emails.lockssExistingArchive.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Sol·licitud d'arxivament per a {$contextName}</subject>
-		<body><![CDATA[Benvolgut/uda [bibliotecari universitari],<br />
-<br />
-{$contextName} &amp;lt;{$contextUrl}&amp;gt; és una revista en què un membre de la vostra facultat o universitat, [nom del membre], participa en qualitat de [nom del rol]. Des d'aquesta revista volem crear un arxiu amb la vostra biblioteca universitària i altres biblioteques, d'acord amb la iniciativa LOCKSS (&amp;lt;i&amp;gt;lots of copies keep stuff safe&amp;lt;/i&amp;gt;).<br />
-<br />
-[Descripció breu de la revista]<br />
-<br />
-El programa LOCKSS &amp;lt;http://lockss.stanford.edu/&amp;gt;, una iniciativa internacional d'enllaç entre biblioteques i entitats publicadores, representa un exemple viu de conservació distribuïda i repositori d'arxivament. Es tracta d'una aplicació gratuïta executable en qualsevol ordinador personal que podeu gestionar fàcilment i per a la qual es requereix un manteniment mínim.<br />
-<br />
-Per a contribuir a l'arxivament d'aquesta revista, us convido a ser membre de la comunitat LOCKSS i a col·laborar en la recopilació i conservació de títols elaborats a la vostra facultat o universitat i en altres entitats acadèmiques de l'àmbit internacional. Per a fer-ho, us recomano que algun membre del vostre personal visiti el lloc web de LOCKSS per a obtenir informació sobre el funcionament d'aquest sistema. Confio rebre ben aviat la vostra acceptació per a col·laborar en l'arxivament d’aquesta revista.<br />
-<br />
-Moltes gràcies,<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic convida el destinatari a participar en la iniciativa LOCKSS i a incloure aquesta revista en el seu arxiu. Proporciona informació sobre la iniciativa LOCKSS i com s'hi ha de participar.</description>
+		<subject>{translate key="emails.lockssNewArchive.subject"}</subject>
+		<body>{translate key="emails.lockssNewArchive.body"}</body>
+		<description>{translate key="emails.lockssNewArchive.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
-		<subject>Justificant de recepció de la tramesa</subject>
-		<body><![CDATA[Benvolgut/uda {$authorName},<br />
-<br />
-Gràcies per haver tramès el manuscrit &quot;{$submissionTitle}&quot; a {$contextName}. Gràcies al sistema de gestió de revistes en línia que utilitzem, en podreu seguir el progrés durant el procés editorial iniciant la sessió al lloc web de la revista:<br />
-<br />
-URL del manuscrit: {$submissionUrl}<br />
-Nom d'usuari: {$authorUsername}<br />
-<br />
-Si teniu qualsevol dubte o consulta, no dubteu a fer-me-la arribar. Us agraeixo que hàgiu tingut en compte aquesta revista com a mitjà per a difondre la vostra obra.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Si està activat, aquest missatge de correu electrònic s'envia automàticament als autors quan completen el procés de tramesa d'un manuscrit a la revista. Proporciona informació sobre el seguiment de la tramesa durant el procés editorial i agraeix a l'autor la seva contribució a la revista.</description>
+		<subject>{translate key="emails.submissionAck.subject"}</subject>
+		<body>{translate key="emails.submissionAck.body"}</body>
+		<description>{translate key="emails.submissionAck.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
-		<subject>Justificant de recepció de la tramesa</subject>
-		<body><![CDATA[Hola,<br />
-<br />
-{$submitterName} ha tramès el manuscrit «{$submissionTitle}» a {$contextName}. <br />
-<br />
-Si teniu cap pregunta, contacteu amb mi. Gràcies per tenir en compte aquesta publicació per desenvolupar la vostra feina.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest correu electrònic, quan està habilitat, s'envia automàticament als altres autors/ores que no són usuaris/àries a l'OMP especificats durant el procés de tramesa.</description>
+		<subject>{translate key="emails.submissionAckNotUser.subject"}</subject>
+		<body>{translate key="emails.submissionAckNotUser.body"}</body>
+		<description>{translate key="emails.submissionAckNotUser.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
-		<subject>Comentari de la tramesa</subject>
-		<body><![CDATA[Benvolgut/uda {$name},<br />
-<br />
-{$commentName} ha afegit un comentari a la tramesa &quot;{$submissionTitle}&quot; per a la revista {$contextName}:<br />
-<br />
-{$comments}]]></body>
-		<description>Aquest missatge de correu electrònic notifica la publicació d'un nou comentari a les diverses persones involucrades en el procés editorial d'una tramesa.</description>
+		<subject>{translate key="emails.submissionComment.subject"}</subject>
+		<body>{translate key="emails.submissionComment.body"}</body>
+		<description>{translate key="emails.submissionComment.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Decisió sobre "{$submissionTitle}"</subject>
-		<body><![CDATA[Com a membre del grup de revisors de la tramesa &quot;{$submissionTitle}&quot; per a la revista {$contextName}, us faig arribar les revisions i la decisió de l'editor enviats a l'autor d'aquesta obra.<br />
-<br />
-Gràcies una vegada més per la vostra important contribució a aquest procés.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-{$comments}]]></body>
-		<description>Aquest missatge de correu electrònic notifica als revisors d'una tramesa que s'ha completat el procés de revisió. Inclou informació sobre l'article i la decisió presa, i agraeix als revisors la seva contribució.</description>
+		<subject>{translate key="emails.submissionDecisionReviewers.subject"}</subject>
+		<body>{translate key="emails.submissionDecisionReviewers.body"}</body>
+		<description>{translate key="emails.submissionDecisionReviewers.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
-		<subject>Assignació editorial</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-Us ha estat assignada la tramesa &quot;{$submissionTitle}&quot; per a la revista {$contextName} perquè en superviseu el procés editorial en qualitat d'editor de secció.<br />
-<br />
-URL de la tramesa: {$submissionUrl}<br />
-Nom d'usuari: {$editorUsername}<br />
-<br />
-Moltes gràcies.]]></body>
-		<description>Aquest missatge de correu electrònic notifica a l'editor de secció que l'editor li ha assignat la tasca de supervisar el procés editorial d'una tramesa. Proporciona informació sobre la tramesa i indica com s'ha d'accedir al lloc web de la revista.</description>
+		<subject>{translate key="emails.editorAssign.subject"}</subject>
+		<body>{translate key="emails.editorAssign.body"}</body>
+		<description>{translate key="emails.editorAssign.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
-		<subject>Sol·licitud de revisió d'un article</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Considero que el vostre perfil és adequat per a revisar el manuscrit &quot;{$submissionTitle}&quot; tramès a la revista {$contextName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta important tasca.<br />
-<br />
-Us demano que inicieu la sessió a la revista abans del {$responseDueDate} per a indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per a accedir-hi i enregistrar-ne la revisió i recomanació. El lloc web de la revista és {$contextUrl}.<br />
-<br />
-La data límit per a la revisió és el {$reviewDueDate}.<br />
-<br />
-Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). {$passwordResetUrl}<br />
-<br />
-URL de la tramesa: {$submissionReviewUrl}<br />
-<br />
-Gràcies per tenir en compte aquesta sol·licitud.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un possible revisor perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard en el pas 2 de la configuració de la revista (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST_ATTACHED).</description>
+		<subject>{translate key="emails.reviewRequestRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
-		<subject>Sol·licitud de revisió d'un article</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Considero que el vostre perfil és adequat per a revisar el manuscrit &quot;{$submissionTitle}&quot; tramès a la revista {$contextName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta important tasca.<br />
-<br />
-Us demano que inicieu la sessió a la revista abans del {$responseDueDate} per a indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per a accedir-hi i enregistrar-ne la revisió i recomanació.<br />
-<br />
-La data límit per a la revisió és el {$reviewDueDate}.<br />
-<br />
-URL de la tramesa: {$submissionReviewUrl}<br />
-<br />
-Gràcies per tenir en compte aquesta sol·licitud.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un possible revisor perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard en el pas 2 de la configuració de la revista i s'ha habilitat l'accés a la revisió en un clic.</description>
+		<subject>{translate key="emails.reviewRequestRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
-		<subject>Sol·licitud de revisió d'un article</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Considero que el vostre perfil és adequat per a revisar el manuscrit &quot;{$submissionTitle}&quot; tramès a la revista {$contextName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta important tasca.<br />
-<br />
-Us demano que inicieu la sessió a la revista abans del {$responseDueDate} per a indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per a accedir-hi i enregistrar-ne la revisió i recomanació. El lloc web de la revista és {$contextUrl}.<br />
-<br />
-La data límit per a la revisió és el {$reviewDueDate}.<br />
-<br />
-Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). {$passwordResetUrl}<br />
-<br />
-URL de la tramesa: {$submissionReviewUrl}<br />
-<br />
-Gràcies per tenir en compte aquesta sol·licitud.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un possible revisor perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard en el pas 2 de la configuració de la revista (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST_ATTACHED).</description>
+		<subject>{translate key="emails.reviewRequest.subject"}</subject>
+		<body>{translate key="emails.reviewRequest.body"}</body>
+		<description>{translate key="emails.reviewRequest.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>Sol·licitud de revisió d'un article</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Considero que el vostre perfil és adequat per a revisar el manuscrit &quot;{$submissionTitle}&quot; tramès a la revista {$contextName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta important tasca.<br />
-<br />
-Us demano que inicieu la sessió a la revista abans del {$responseDueDate} per a indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per a accedir-hi i enregistrar-ne la revisió i recomanació.<br />
-<br />
-La data límit per a la revisió és el {$reviewDueDate}.<br />
-<br />
-URL de la tramesa: {$submissionReviewUrl}<br />
-<br />
-Gràcies per tenir en compte aquesta sol·licitud.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un possible revisor perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard en el pas 2 de la configuració de la revista i s'ha habilitat l'accés a la revisió en un clic.</description>
+		<subject>{translate key="emails.reviewRequestOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
-		<subject>Sol·licitud de revisió d'un article</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Considero que el vostre perfil és adequat per a revisar el manuscrit &quot;{$submissionTitle}&quot; tramès a la revista {$contextName}, per la qual cosa us demano que valoreu la possibilitat d'encarregar-vos d'aquesta important tasca per a la nostra revista. A continuació trobareu les indicacions per a la revisió d'aquesta revista, així com també la tramesa com a fitxer adjunt. Noteu que m'hauríeu de fer arribar per correu electrònic la revisió de la tramesa i la recomanació corresponent abans del {$reviewDueDate}.<br />
-<br />
-Us demano que respongueu a aquest missatge abans del {$responseDueDate} per a indicar-nos si accepteu encarregar-vos de la revisió.<br />
-<br />
-Gràcies per tenir en compte aquesta sol·licitud.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-Indicacions per a la revisió<br />
-<br />
-{$reviewGuidelines}]]></body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un possible revisor perquè accepti o rebutgi la revisió d'una tramesa. Inclou la tramesa com a fitxer adjunt. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió amb fitxer adjunt en el pas 2 de la configuració de la revista (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST).</description>
+		<subject>{translate key="emails.reviewRequestAttached.subject"}</subject>
+		<body>{translate key="emails.reviewRequestAttached.body"}</body>
+		<description>{translate key="emails.reviewRequestAttached.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
-		<subject>Sol·licitud de revisió cancel·lada</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Hem decidit cancel·lar la nostra sol·licitud perquè reviseu la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Lamentem les molèsties que us pugui causar aquesta decisió i confiem tornar a sol·licitar els vostres serveis de revisió per a aquesta revista en el futur.<br />
-<br />
-Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.]]></body>
-		<description>Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un revisor que estigui revisant una tramesa per a notificar-li que aquesta tasca ha estat cancel·lada.</description>
+		<subject>{translate key="emails.reviewCancel.subject"}</subject>
+		<body>{translate key="emails.reviewCancel.body"}</body>
+		<description>{translate key="emails.reviewCancel.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
-		<subject>Accepto la revisió</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-Accepto revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}, i us agraeixo que m'hàgiu tingut en compte per a aquesta tasca. La meva intenció és tenir-la acabada per a la data de venciment prevista ({$reviewDueDate}), o abans si és possible.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Aquest missatge de correu electrònic té un revisor com a remitent i s'envia a l'editor de secció en resposta a una sol·licitud de revisió per a notificar-li que ha acceptat encarregar-se d'aquesta tasca i que la trametrà abans de la data indicada.</description>
+		<subject>{translate key="emails.reviewConfirm.subject"}</subject>
+		<body>{translate key="emails.reviewConfirm.body"}</body>
+		<description>{translate key="emails.reviewConfirm.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
-		<subject>Rebutjo la revisió</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-Lamento comunicar-vos que en aquesta ocasió no em podré encarregar de la revisió de la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Us agraeixo que m'hàgiu tingut en compte i confio que ens tornem a posar en contacte en una altra ocasió.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Aquest missatge de correu electrònic té un revisor com a remitent i s'envia a l'editor de secció en resposta a una sol·licitud de revisió per a notificar-li que rebutja encarregar-se d'aquesta tasca.</description>
+		<subject>{translate key="emails.reviewDecline.subject"}</subject>
+		<body>{translate key="emails.reviewDecline.body"}</body>
+		<description>{translate key="emails.reviewDecline.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
-		<subject>Justificant de recepció de la revisió de l'article</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Us agraïm que hàgiu revisat la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Valorem la vostra contribució a la qualitat de les obres que publiquem.]]></body>
-		<description>Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia al revisor per a confirmar-li la recepció d'una revisió completada i agrair-li la seva contribució.</description>
+		<subject>{translate key="emails.reviewAck.subject"}</subject>
+		<body>{translate key="emails.reviewAck.body"}</body>
+		<description>{translate key="emails.reviewAck.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
-		<subject>Recordatori de revisió de la tramesa</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Us recordem la nostra petició per a revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i confiem rebre-la tan aviat com la tingueu enllestida.<br />
-<br />
-Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). {$passwordResetUrl}<br />
-<br />
-URL de la tramesa: {$submissionReviewUrl}<br />
-<br />
-Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres ben aviat.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia a un revisor per a recordar-li que ha superat la data de venciment per a lliurar la revisió.</description>
+		<subject>{translate key="emails.reviewRemind.subject"}</subject>
+		<body>{translate key="emails.reviewRemind.body"}</body>
+		<description>{translate key="emails.reviewRemind.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
-		<subject>Recordatori de revisió de la tramesa</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Us recordem la nostra petició per a revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i confiem rebre-la tan aviat com la tingueu enllestida.<br />
-<br />
-URL de la tramesa: {$submissionReviewUrl}<br />
-<br />
-Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres ben aviat.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia a un revisor per a recordar-li que ha superat la data de venciment per a lliurar la revisió.</description>
+		<subject>{translate key="emails.reviewRemindOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
-		<subject>Recordatori automàtic de revisió de la tramesa</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Us recordem la nostra petició per a revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i aquest missatge de correu electrònic s'ha generat i enviat automàticament en haver-se superat aquesta data. Malgrat això, encara confiem rebre la vostra revisió tan aviat com la tingueu enllestida.<br />
-<br />
-Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). {$passwordResetUrl}<br />
-<br />
-URL de la tramesa: {$submissionReviewUrl}<br />
-<br />
-Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres ben aviat.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic s’envia automàticament quan se supera la data de venciment per a una revisió (vegeu les opcions de revisió del pas 2 de la configuració de la revista) i s'ha inhabilitat l'accés per a revisors en un clic. Les tasques planificades han d'estar habilitades i configurades (vegeu el fitxer de configuració del lloc).</description>
+		<subject>{translate key="emails.reviewRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
-		<subject>Recordatori automàtic de revisió de la tramesa</subject>
-		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
-<br />
-Us recordem la nostra petició per a revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i aquest missatge de correu electrònic s'ha generat i enviat automàticament en haver-se superat aquesta data. Malgrat això, encara confiem rebre la vostra revisió tan aviat com la tingueu enllestida.<br />
-<br />
-URL de la tramesa: {$submissionReviewUrl}<br />
-<br />
-Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres  ben aviat.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic s'envia automàticament quan se supera la data de venciment per a una revisió (vegeu les opcions de revisió del pas 2 de la configuració de la revista) i s'ha habilitat l'accés per a revisors en un clic. Les tasques planificades han d'estar habilitades i configurades (vegeu el fitxer de configuració del lloc).</description>
+		<subject>{translate key="emails.reviewRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
-		<subject>Sol·licitud de correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$participantName},<br />
-<br />
-M'agradaria demanar-vos que us encarreguéssiu de la revisió de &quot;{$submissionTitle}&quot; per a {$contextName}. Els passos que hauríeu de seguir són els següents:<br />
-<br />
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.<br />
-2. Inicieu la sessió a la revista i feu clic al fitxer que trobareu en el pas 1.<br />
-3. Consulteu les instruccions per a la correcció que hi ha publicades a la pàgina web.<br />
-4. Obriu el fitxer que heu baixat i corregiu-lo. Hi podeu incloure totes les consultes a l'autor que considereu necessàries.<br />
-5. Deseu el fitxer corregit i pengeu-lo en el pas 1 de la correcció.<br />
-6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
-<br />
-URL de {$contextName}: {$contextUrl}<br />
-URL de la tramesa: {$submissionUrl}<br />
-Nom d'usuari: {$participantUsername}]]></body>
-		<description>Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia al possible corrector d'una tramesa per a sol·licitar-li que comenci el procés de correcció. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
+		<subject>{translate key="emails.copyeditRequest.subject"}</subject>
+		<body>{translate key="emails.copyeditRequest.body"}</body>
+		<description>{translate key="emails.copyeditRequest.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
-		<subject>Sol·licitud de galerades</subject>
-		<body><![CDATA[Benvolgut/uda {$participantName},<br />
-<br />
-Us demanem que us encarregueu de preparar les galerades de la tramesa &quot;{$submissionTitle}&quot; per a {$contextName} seguint els passos següents:<br />
-<br />
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.<br />
-2. Inicieu la sessió a la revista i utilitzeu el fitxer de la versió maquetada per a crear les galerades d'acord amb els estàndards de la revista.<br />
-3. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
-<br />
-URL de {$contextName}: {$contextUrl}<br />
-URL de la tramesa: {$submissionUrl}<br />
-Nom d'usuari: {$participantUsername}<br />
-<br />
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
-<br />
-Gràcies per la vostra contribució a aquesta revista.]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al maquetador per a notificar-li que ha estat assignat per a encarregar-se de la maquetació d'una tramesa. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
+		<subject>{translate key="emails.layoutRequest.subject"}</subject>
+		<body>{translate key="emails.layoutRequest.body"}</body>
+		<description>{translate key="emails.layoutRequest.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
-		<subject>Galerades completades</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-Ja he preparat les galerades del manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Així, doncs, ja estan a punt per a entrar en el procés de correcció de proves.<br />
-<br />
-Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.<br />
-<br />
-{$participantName}]]></body>
-		<description>Aquest missatge té el maquetista com a remitent i s'envia a l'editor de secció per a notificar-li que s'ha completat el procés de maquetació.</description>
+		<subject>{translate key="emails.layoutComplete.subject"}</subject>
+		<body>{translate key="emails.layoutComplete.body"}</body>
+		<description>{translate key="emails.layoutComplete.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_ACK">
-		<subject>Justificant de recepció de les galerades</subject>
-		<body><![CDATA[Benvolgut/uda {$participantName},<br />
-<br />
-Gràcies per haver preparat les galerades del manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Aquesta tasca és una contribució molt important al procés de publicació.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al maquetista per a notificar-li que ha completat el procés de maquetació i agrair-li la seva contribució.</description>
+		<subject>{translate key="emails.layoutAck.subject"}</subject>
+		<body>{translate key="emails.layoutAck.body"}</body>
+		<description>{translate key="emails.layoutAck.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Sol·licitud de correcció de proves (autor)</subject>
-		<body><![CDATA[Benvolgut/uda {$authorName},<br />
-<br />
-Us volem demanar que us encarregueu de la correcció de proves de la vostra tramesa &quot;{$submissionTitle}&quot; per a {$contextName} seguint els passos següents:<br />
-<br />
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.<br />
-2. Inicieu la sessió a la revista i consulteu les INSTRUCCIONS PER A LA CORRECCIÓ DE PROVES.<br />
-3. Feu clic a VISUALITZA LA PROVA a la secció de maquetació i corregiu les galerades en un dels formats utilitzats o en més d'un.<br />
-4. Introduïu les correccions (tipogràfiques i de format) a Correccions de proves.<br />
-5. Deseu les correccions i envieu-les per correu electrònic al maquetista i el corrector de proves.<br />
-6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
-<br />
-URL de la tramesa: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia a l'autor per a notificar-li que les galerades d'un article ja són a punt per a fer-hi la correcció de proves. Proporciona informació sobre l'article i com s'hi ha d'accedir.</description>
+		<subject>{translate key="emails.proofreadAuthorRequest.subject"}</subject>
+		<body>{translate key="emails.proofreadAuthorRequest.body"}</body>
+		<description>{translate key="emails.proofreadAuthorRequest.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Correcció de proves completada (autor)</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-He acabat la correcció de proves de les galerades per al meu manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Així, doncs, les galerades ja són a punt perquè el corrector i el maquetista hi facin les correccions finals.<br />
-<br />
-{$authorName}]]></body>
-		<description>Aquest missatge de correu electrònic té l'autor com a remitent i s'envia al corrector de proves i a l'editor per a notificar-los que s'ha completat la ronda de correcció de proves i que en trobaran més detalls als comentaris de l'article.</description>
+		<subject>{translate key="emails.proofreadAuthorComplete.subject"}</subject>
+		<body>{translate key="emails.proofreadAuthorComplete.body"}</body>
+		<description>{translate key="emails.proofreadAuthorComplete.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Justificant de recepció de la correcció de proves (autor)</subject>
-		<body><![CDATA[Benvolgut/uda {$authorName},<br />
-<br />
-Gràcies per haver fet la correcció de proves per a les galerades del vostre manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Confiem publicar el vostre article ben aviat.<br />
-<br />
-Noteu que si us subscriviu al nostre sistema de notificacions rebreu un missatge de correu electrònic amb el sumari de la revista tan aviat com aquesta es publiqui. Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia a l'autor per a notificar-li que ha completat la ronda inicial de correcció de proves i agrair-li la seva contribució.</description>
+		<subject>{translate key="emails.proofreadAuthorAck.subject"}</subject>
+		<body>{translate key="emails.proofreadAuthorAck.body"}</body>
+		<description>{translate key="emails.proofreadAuthorAck.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_REQUEST">
-		<subject>Sol·licitud de correcció de proves</subject>
-		<body><![CDATA[Benvolgut/uda {$proofreaderName},<br />
-<br />
-Us volem demanar que us encarregueu de la correcció de proves de la tramesa &quot;{$submissionTitle}&quot; per a {$contextName} seguint els passos següents:<br />
-<br />
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.<br />
-2. Inicieu la sessió a la revista i consulteu les INSTRUCCIONS PER A LA CORRECCIÓ DE PROVES.<br />
-3. Feu clic a VISUALITZA LA PROVA a la secció de maquetació i corregiu les galerades en un dels formats utilitzats o en més d'un.<br />
-4. Introduïu les correccions (tipogràfiques i de format) a Correccions de proves.<br />
-5. Deseu les correccions i envieu-les per correu electrònic al maquetista.<br />
-6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
-<br />
-URL del manuscrit: {$submissionUrl}<br />
-Nom d'usuari: {$proofreaderUsername}<br />
-<br />
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
-<br />
-Gràcies per la vostra contribució a aquesta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al corrector de proves per a sol·licitar-li que s'encarregui de la correcció de proves de les galerades per a un article. Proporciona informació sobre l'article i com s'hi accedeix.</description>
+		<subject>{translate key="emails.proofreadRequest.subject"}</subject>
+		<body>{translate key="emails.proofreadRequest.body"}</body>
+		<description>{translate key="emails.proofreadRequest.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_COMPLETE">
-		<subject>Correcció de proves completada</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-He acabat la correcció de proves de les galerades per al manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Així, doncs, les galerades ja són a punt perquè el maquetista hi faci les correccions finals.<br />
-<br />
-{$proofreaderName}]]></body>
-		<description>Aquest missatge de correu electrònic té el corrector de proves com a remitent i s'envia a l'editor de secció per a notificar-li que s'ha completat el procés de correcció de proves.</description>
+		<subject>{translate key="emails.proofreadComplete.subject"}</subject>
+		<body>{translate key="emails.proofreadComplete.body"}</body>
+		<description>{translate key="emails.proofreadComplete.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_ACK">
-		<subject>Justificant de recepció de la correcció de proves</subject>
-		<body><![CDATA[Benvolgut/uda {$proofreaderName},<br />
-<br />
-Gràcies per haver fet la correcció de proves de les galerades per al manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al corrector de proves per a notificar-li que ha completat el procés correcció de proves i agrair-li la seva contribució.</description>
+		<subject>{translate key="emails.proofreadAck.subject"}</subject>
+		<body>{translate key="emails.proofreadAck.body"}</body>
+		<description>{translate key="emails.proofreadAck.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Correcció de proves completada (maquetista)</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-He acabat la correcció posterior a la correcció de proves de les galerades per al manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Així, doncs, aquest article ja es pot publicar.<br />
-<br />
-{$participantName}]]></body>
-		<description>Aquest missatge de correu electrònic té el maquetista com a remitent i s'envia a l'editor de secció per a notificar-li que s'ha completat l'etapa final del procés de correcció de proves i que l'article ja es pot publicar.</description>
+		<subject>{translate key="emails.proofreadLayoutComplete.subject"}</subject>
+		<body>{translate key="emails.proofreadLayoutComplete.body"}</body>
+		<description>{translate key="emails.proofreadLayoutComplete.description"}</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Justificant de recepció de la correcció de proves (maquetista)</subject>
-		<body><![CDATA[Benvolgut/uda {$participantName},<br />
-<br />
-Gràcies per haver completat el procés de correcció de proves per a les galerades associades amb el manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al maquetista per a notificar-li que ha completat l'etapa final de la correcció de proves i agrair-li la seva contribució.</description>
+		<subject>{translate key="emails.proofreadLayoutAck.subject"}</subject>
+		<body>{translate key="emails.proofreadLayoutAck.body"}</body>
+		<description>{translate key="emails.proofreadLayoutAck.description"}</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
-		<subject>Article que us pot interessar</subject>
-		<body><![CDATA[Considero que us pot interessar llegir l'article &quot;{$submissionTitle}&quot; de {$authorName} publicat en el volum {$volume}, número {$number} ({$year}) de {$contextName}. El podeu consultar a &quot;{$articleUrl}&quot;.]]></body>
-		<description>Aquesta plantilla de missatge de correu electrònic ofereix als lectors registrats l'oportunitat d'enviar informació sobre un article a algú que hi pugui estar interessat. Aquesta plantilla està disponible a les eines de lectura si l'administrador de la revista l'ha habilitada a la pàgina d'administració d'aquestes eines.</description>
+		<subject>{translate key="emails.emailLink.subject"}</subject>
+		<body>{translate key="emails.emailLink.body"}</body>
+		<description>{translate key="emails.emailLink.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Notificació de subscripció</subject>
-		<body><![CDATA[Benvolgut/uda {$subscriberName},<br />
-<br />
-Us acabeu de registrar com a subscriptor del nostre sistema de gestió de revistes en línia per a {$contextName} amb la subscripció següent:<br />
-<br />
-{$subscriptionType}<br />
-<br />
-Per a accedir als continguts que només estan disponibles per als subscriptors, inicieu la sessió al sistema amb el vostre nom d'usuari, &quot;{$username}&quot;.<br />
-<br />
-Una vegada dins el sistema podreu canviar la contrasenya i els detalls del vostre perfil en qualsevol moment.<br />
-<br />
-Noteu que si disposeu d'una subscripció institucional, els usuaris membres de la institució no hauran d'iniciar la sessió, ja que el sistema autenticarà automàticament les sol·licituds d'accés al contingut per a subscriptors.<br />
-<br />
-Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic notifica a un lector que l'administrador l'ha subscrit al sistema. Proporciona l'URL de la revista i també instruccions per a accedir-hi.</description>
+		<subject>{translate key="emails.subscriptionNotify.subject"}</subject>
+		<body>{translate key="emails.subscriptionNotify.body"}</body>
+		<description>{translate key="emails.subscriptionNotify.description"}</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Ara el número és d'accés obert</subject>
-		<body><![CDATA[Benvolguts lectors,<br />
-<br />
-{$contextName} acaba de publicar en format d'accés obert el número següent. Us convidem a consultar-ne el sumari adjunt i a visitar el nostre lloc web ({$contextUrl}) per a accedir als articles que us interessin.<br />
-<br />
-Us agraïm el vostre interès per la nostra revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic s'envia als lectors que han sol·licitat rebre una notificació per correu electrònic quan es publiqui un número en format d'accés obert.</description>
+		<subject>{translate key="emails.openAccessNotify.subject"}</subject>
+		<body>{translate key="emails.openAccessNotify.body"}</body>
+		<description>{translate key="emails.openAccessNotify.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Avís de venciment de la subscripció</subject>
-		<body><![CDATA[Benvolgut/uda {$subscriberName},<br />
-<br />
-La vostra subscripció per a {$contextName} és a punt de vèncer.<br />
-<br />
-{$subscriptionType}<br />
-Data de venciment: {$expiryDate}<br />
-<br />
-Per a assegurar-vos que seguireu tenint accés a aquesta revista, entreu al lloc web i renoveu la vostra subscripció. Podeu iniciar la sessió al sistema amb el vostre nom d'usuari, &quot;{$username}&quot;.<br />
-<br />
-Si teniu cap consulta, no dubteu a fer-me-la arribar.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic notifica a un subscriptor que la seva subscripció és a punt de vèncer. Proporciona l'URL de la revista i instruccions per a accedir-hi.</description>
+		<subject>{translate key="emails.subscriptionBeforeExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionBeforeExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionBeforeExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>La subscripció ha vençut</subject>
-		<body><![CDATA[Benvolgut/uda {$subscriberName},<br />
-<br />
-La vostra subscripció per a {$contextName} ha vençut.<br />
-<br />
-{$subscriptionType}<br />
-Data de venciment: {$expiryDate}<br />
-<br />
-Per a renovar la subscripció, aneu al lloc web de la revista. Podeu iniciar la sessió al sistema amb el vostre nom d'usuari, &quot;{$username}&quot;.<br />
-<br />
-Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic notifica a un subscriptor que la seva subscripció ha vençut. Proporciona l'URL de la revista i també instruccions per a accedir-hi.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>La subscripció ha vençut (últim recordatori)</subject>
-		<body><![CDATA[Benvolgut/uda {$subscriberName},<br />
-<br />
-La vostra subscripció per a {$contextName} ha vençut.<br />
-Tingueu en compte que aquest missatge és el darrer recordatori que rebreu.<br />
-<br />
-{$subscriptionType}<br />
-Data de venciment: {$expiryDate}<br />
-<br />
-Per a renovar la subscripció, aneu al lloc web de la revista. Podeu iniciar la sessió al sistema amb el vostre nom d'usuari, &quot;{$username}&quot;.<br />
-<br />
-Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic notifica a un subscriptor que la seva subscripció ha vençut. Proporciona l'URL de la revista i també instruccions per a accedir-hi.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiryLast.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiryLast.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiryLast.description"}</description>
 	</email_text>
 </email_texts>

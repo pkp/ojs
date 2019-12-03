@@ -14,33 +14,13 @@
 
 <email_texts locale="sr_RS@cyrillic">
 	<email_text key="NOTIFICATION">
-		<subject>Imate poruku od {$siteTitle}</subject>
-		<body><![CDATA[Imate poruku od {$siteTitle}:<br />
-<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Ova poruka je poslata registrovanim korisnicima koji su obeležili da žele da primaju poruke putem imejla.</description>
+		<subject>{translate key="emails.notification.subject"}</subject>
+		<body>{translate key="emails.notification.body"}</body>
+		<description>{translate key="emails.notification.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Obaveštenje o pretplati</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-Registrovani ste kao pretplatnik u sistemu {$contextName}, sa sledećim pretplatama:<br />
-<br />
-{$subscriptionType}<br />
-<br />
-Da biste pristupili sadržaju koji je dostupan samo pretplatnicima jednostavno se prijavite u sistem sa Vašim korisničkim imenom &quot;{$username}&quot;.<br />
-<br />
-Kada se prijavite, možete menjati podatke na vašem profilu i lozinku.<br />
-<br />
-Imajte na umu da ukoliko imate institucionalnu pretplatu nema potrebe da se korisnici sa vaše institucije prijavljuju korisničkim imenom i lozinkom pošto će pretplata biti automatski prepoznata od strane sistema.<br />
-<br />
-Ukoliko imate bilo kakvih pitanja slobodno nas kontaktirajte.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Ovaj imejl obaveštava registrovane čitaoce da je urednik napravio nalog za njihovu pretplatu. Imejl poruka sadrži URL časopisa kao i instrukcije za pristup.</description>
+		<subject>{translate key="emails.subscriptionNotify.subject"}</subject>
+		<body>{translate key="emails.subscriptionNotify.body"}</body>
+		<description>{translate key="emails.subscriptionNotify.description"}</description>
 	</email_text>
 </email_texts>
