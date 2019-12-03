@@ -13,757 +13,268 @@
 
 <email_texts locale="ar_IQ">
 	<email_text key="NOTIFICATION">
-		<subject>إشعار جديد من {$siteTitle}</subject>
-		<body><![CDATA[لديك إشعار جديد من {$siteTitle}:<br />
-<br />
-{$notificationContents}<br />
-<br />
-الرابط: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>رسالة البريد الالكتروني هذه مرسلة إلى المستخدمين المسجلين الذين اختاروا استلام إشعار من هذا النوع عبر البريد الالكتروني.</description>
+		<subject>{translate key="emails.notification.subject"}</subject>
+		<body>{translate key="emails.notification.body"}</body>
+		<description>{translate key="emails.notification.description"}</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>تأكيد إعادة تعيين كلمة المرور</subject>
-		<body><![CDATA[لقد تلقينا طلباً لإعادة تعيين كلمة مرورك في الموقع {$siteTitle}.<br />
-<br />
-إن لم تكن أنت شخصياً من أرسل هذا الطلب، لطفاً تجاهل هذه الرسالة لتحتفظ بكلمة مرورك إلى الموقع دون تغيير. لو أردت إعادة تعيين كلمة مرورك، أنقر الرابط أدناه.<br />
-<br />
-أعد تعيين كلمة مروري: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة معنونة إلى المستخدمين المسجلين الذي أبلغوا عن فقدانهم لكلمات مرورهم إلى الموقع، أو الذين تعذر عليهم الولوج لأي سبب آخر. سيحصل هؤلاء على رابط يمكنهم عند النقر عليه إعادة تعيين كلمات مرورهم.</description>
+		<subject>{translate key="emails.passwordResetConfirm.subject"}</subject>
+		<body>{translate key="emails.passwordResetConfirm.body"}</body>
+		<description>{translate key="emails.passwordResetConfirm.description"}</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>إعادة تعيين كلمة المرور</subject>
-		<body><![CDATA[كلمة مرورك أُعيد تعيينها بنجاح لتتمكن من الولوج إلى موقع {$siteTitle}. لطفاً، إحتفظ باسم الدخول وكلمة المرور المبينين أدناه كونهما ضروريان لمتابعة كل أعمالك في موقع المجلة.<br />
-<br />
-اسم الدخول: {$username}<br />
-كلمة المرور: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة معنونة إلى المستخدمين المسجلين الذي تمكنوا من إعادة تعيين كلمات مرورهم بنجاح متبعين الخطوات الموضحة في رسالة إعادة تعيين كلمة المرور.</description>
+		<subject>{translate key="emails.passwordReset.subject"}</subject>
+		<body>{translate key="emails.passwordReset.body"}</body>
+		<description>{translate key="emails.passwordReset.description"}</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>التسجيل في المجلة</subject>
-		<body><![CDATA[{$userFullName}<br />
-<br />
-أنت الآن مسجل كمستخدم ضمن {$contextName}. قمنا بتضمين اسم الدخول وكلمة المرور في هذه الرسالة، كونهما ضروريان لمتابعة كل الأعمال والوظائف في موقع المجلة. يمكنك المطالبة في أي وقت بإزالة اسمك من قائمة المستخدمين المسجلين عبر مراسلتي.<br />
-<br />
-اسم الدخول: {$username}<br />
-كلمة المرور: {$password}<br />
-<br />
-شكراً لك.<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة معنونة إلى المستخدمين المسجلين حديثاً للترحيب بهم في نظام موقع المجلة، ولتزويدهم باسم الدخول وكلمة المرور الخاصين بالموقع.</description>
+		<subject>{translate key="emails.userRegister.subject"}</subject>
+		<body>{translate key="emails.userRegister.body"}</body>
+		<description>{translate key="emails.userRegister.description"}</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
-		<subject>تأكيد صحة حسابك</subject>
-		<body><![CDATA[{$userFullName}<br />
-<br />
-قمت بإنشاء حساب في {$contextName}، لكن قبل شروعك باستعماله، عليك تأكيد عنوان بريدك الالكتروني، وكل ما عليك القيام به الآن، اتباع الرابط أدناه:<br />
-<br />
-{$activateUrl}<br />
-<br />
-شكراً لك.<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة معنونة إلى المستخدمين المسجلين حديثاً لتأكيد صحة عناوينهم البريدية.</description>
+		<subject>{translate key="emails.userValidate.subject"}</subject>
+		<body>{translate key="emails.userValidate.body"}</body>
+		<description>{translate key="emails.userValidate.description"}</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>التسجيل بصفة محكم في {$contextName}</subject>
-		<body><![CDATA[في ضوء ما هو معروف عنك من خبرة، سنحت لنا الظروف بتسجيل اسمك ضمن قاعدة بياناتنا للمحكمين في موقع {$contextName}.  هذا الأمر لا يترتب عليه أي مستوى من الإلتزام من جهتك، بل ببساطة، يمكننا من التواصل معك بشأن إحتمالية تحكيم بعض طلبات النشر التي ترد مجلتنا. فيما لو تمت دعوتك مستقبلاً لغرض التحكيم، ستكون لك فرصة الاطلاع على عنوان المؤلَّف وملخصه (دون معرفة أي شيء يتعلق بالمؤلف نفسه)، وستكون صاحب الرأي بشأن الموافقة على تلك الدعوة أو الاعتذار عنها. فضلاً عن ذلك، بإمكانك دوماً المطالبة برفع اسمك من قائمة المحكمين المعتمدين لدى مجلتنا.<br />
-<br />
-نحن نزودك باسم الدخول وكلمة المرور الخاصين بك، واللذين يتيحان لك القيام بكل الفعاليات المتعلقة بعملك ضمن موقعنا. فقد ترغب، على سبيل المثال، بتحديث بيانات ملفك الشخصي وتضمين المجالات العلمية التي يهمك التحكيم فيها.<br />
-<br />
-اسم الدخول: {$username}<br />
-كلمة المرور: {$password}<br />
-<br />
-شكراً لك.<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة معنونة إلى المحكمين المسجلين حديثاً للترحيب بهم في موقعنا ولتزويدهم بأسماء الدخول وكلمات المرور الخاصين بهم.</description>
+		<subject>{translate key="emails.reviewerRegister.subject"}</subject>
+		<body>{translate key="emails.reviewerRegister.body"}</body>
+		<description>{translate key="emails.reviewerRegister.description"}</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>صدر عدد جديد من المجلة</subject>
-		<body><![CDATA[القراء الأعزة:<br />
-<br />
-{$contextName} أصدرت تواً عددها الأخير في موقعها {$contextUrl}. نحن ندعوكم إلى الاطلاع على جدول محتويات العدد، ومن ثم زيارة موقعنا لمتابعة المقالات العلمية التي تحوز على اهتمامكم.<br />
-<br />
-نشكر لكم إهتمامكم الدائم بنتاجاتنا؛<br />
-{$editorialContactSignature}]]></body>
-		<description>هذه الرسالة معنونة إلى القراء المسجلين عبر خدمة "إشعار القراء" الموجود رابطها في صفحة المحرر الرئيسية. هذه الخدمة تُعلم القراء بصدور العدد الجديد من المجلة وتدعوهم إلى زيارة موقعها على الرابط المرسل لهم.</description>
+		<subject>{translate key="emails.publishNotify.subject"}</subject>
+		<body>{translate key="emails.publishNotify.body"}</body>
+		<description>{translate key="emails.publishNotify.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>طلب أرشفة لمجلة {$contextName}</subject>
-		<body><![CDATA[عزيزنا [أمين مكتبة الجامعة]<br />
-<br />
-{$contextName} &amp;lt;{$contextUrl}&amp;gt;، هي مجلة علمية فيها أحد أعضاء مؤسستك، والمدعو [اسم العضو]، يعمل بصفة [صفة العضو]. وهذه المجلة تتطلع إلى تأسيس أرشيف متوافق مع نوع LOCKSS (Lots of Copies Keep Stuff Safe) مع هذه المكتبة وغيرها من مكتبات الجامعات الأخرى.<br />
-<br />
-[وصف موجز للمجلة]<br />
-<br />
-والرابط الخاص ببيان الناشر المتعلق بأرشيف LOCKSS لمجلتنا هو: {$contextUrl}/gateway/lockss<br />
-<br />
-نحن نتفهم أنك مشترك سابقاً في LOCKSS. إن كان بإمكاننا تزويدك بأي بيانات وصفية إضافية لغرض تسجيل مجلتنا في نسختك من LOCKSS، فإننا سنكون سعداء بتوفيرها لك.<br />
-<br />
-شكراً لك.<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة تطلب من القيِّم على أرشيف LOCKSS ليأخذ بنظر الإعتبار إضافة هذه المجلة إلى أرشيفه. إنها تزوده برابط بيان الناشر المتعلق بأرشيف LOCKSS الخاص بالمجلة.</description>
+		<subject>{translate key="emails.lockssExistingArchive.subject"}</subject>
+		<body>{translate key="emails.lockssExistingArchive.body"}</body>
+		<description>{translate key="emails.lockssExistingArchive.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>إلتماس أرشفة لمجلة {$contextName}</subject>
-		<body><![CDATA[عزيزنا [أمين مكتبة الجامعة<br />
-<br />
-{$contextName} &amp;lt;{$contextUrl}&amp;gt;، هي مجلة علمية فيها أحد أعضاء مؤسستك، والمدعو [اسم العضو]، يعمل بصفة [صفة العضو]. وهذه المجلة تتطلع إلى تأسيس أرشيف متوافق مع نوع LOCKSS (Lots of Copies Keep Stuff Safe) مع هذه المكتبة وغيرها من مكتبات الجامعات الأخرى.<br />
-<br />
-[وصف موجز للمجلة]<br />
-<br />
-إن برنامج LOCKSS &amp;lt;http://lockss.org/&amp;gt; باعتباره أحد الحقوق العالمية للمكتبات والناشرين، هو مثال عملي على مخازن الأرشفة والحفظ المتوزع. المزيد من التفاصيل تتوضح أدناه. هذا البرنامج، الذي يمكن تشغيله على حاسوب شخصي عادي، مجاني، وبالإمكان تفعيله بسهولة على الشبكة العنكبوتية، ولا يتطلب إلا القليل من إجراءات الصيانة والمتابعة.<br />
-<br />
-للمساعدة على أرشفة مجلتنا، ندعوك لتكون أحد أعضاء مجتمع LOCKSS، للتمكن من جمع وحفظ العناوين المقدمة من قبل مؤسستك التعليمية ومن قبل الدارسين عبر العالم. للقيام بذلك، حرض أحداً من منتسبيك لزيارة موقع LOCKSS لتحصل على معلومات عن كيفية عمل هذا النظام. أنا أتطلع شوقاً لأتعرف إمكانيتك على توفير هذا النوع من الدعم لتساعد المجلة على أرشفة محتوياتها.<br />
-<br />
-شكراً لك.<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة تشجع متلقيها على المبادرة إلى اعتماد العمل بنظام LOCKSS وتضمين هذه المجلة في الأرشيف الخاص به. إنها تتضمن معلومات عن تمهيد نظام LOCKSS وكيفية المشاركة فيه.</description>
+		<subject>{translate key="emails.lockssNewArchive.subject"}</subject>
+		<body>{translate key="emails.lockssNewArchive.body"}</body>
+		<description>{translate key="emails.lockssNewArchive.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
-		<subject>إشعار طلب التقديم</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-شكراً على تقديمك المؤلَّف &quot;{$submissionTitle}&quot; إلى {$contextName}. عبر نظام إدارة المجلة هذا الذي نستعمله، سيكون بإمكانك متابعة مراحل معالجة طلبك عبر ولوجك إلى موقع المجلة باستعمال الرابط:<br />
-<br />
-رابط المؤلَّف: {$submissionUrl}<br />
-اسم الدخول: {$authorUsername}<br />
-<br />
-إن كان لديك أي استفسارات، لطفاً تواصل معي. شكراً على اعتبارك هذه المجلة جديرة بعملك.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً للمؤلف بمجرد إكماله خطوات تقديم طلب النشر إلى المجلة. يتعرف من خلالها عن إمكانية متابعة طلبه عبر موقع المجلة كما يشكره على تقديم طلبه لها.</description>
+		<subject>{translate key="emails.submissionAck.subject"}</subject>
+		<body>{translate key="emails.submissionAck.body"}</body>
+		<description>{translate key="emails.submissionAck.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
-		<subject>إشعار طلب التقديم</subject>
-		<body><![CDATA[مرحباً، <br />
-<br />
-إن {$submitterName} قد تقدم بطلب لنشر المؤلَّف &quot;{$submissionTitle}&quot; إلى {$contextName}. <br />
-<br />
-إن كان لديك أي استفسارات، لطفاً تواصل معي. شكراً على اعتبارك هذه المجلة جديرة بعملك.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً إلى المؤلفين الآخرين الذين لا يملكون حسابات في نظام المجلات المفتوحة المعني خلال مرحلة تقديم الطلب.</description>
+		<subject>{translate key="emails.submissionAckNotUser.subject"}</subject>
+		<body>{translate key="emails.submissionAckNotUser.body"}</body>
+		<description>{translate key="emails.submissionAckNotUser.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
-		<subject>تعيين المحرر</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-إن طلب النشر الموسوم &quot;{$submissionTitle},&quot; المقدم إلى {$contextName} قد تمت إحالته إليك لتقوم بإجراءات التحرير المتعلقة به بصفتك أحد أعضاء هيئة التحرير في هذا القسم من المجلة..<br />
-<br />
-رابط الطلب: {$submissionUrl}<br />
-اسم الدخول: {$editorUsername}<br />
-<br />
-شكراً لك.]]></body>
-		<description>هذه الرسالة تبلغ أحد المحررين في قسم ما من المجلة بإحالة مهمة تحرير أحد طلبات التقديم المرسلة إلى ذلك القسم من المجلة إليه، وتقدم له رابط الشروع بالتحرير عبر موقع المجلة.</description>
+		<subject>{translate key="emails.editorAssign.subject"}</subject>
+		<body>{translate key="emails.editorAssign.body"}</body>
+		<description>{translate key="emails.editorAssign.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
-		<subject>إلتماس تحكيم مؤلَّف</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-كلي ثقة بأنك ستكون محكماً متميزاً للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والذي أُرسل طلب لنشره إلى {$contextName}. إن ملخص موضوعه مبين أدناه، وأنا أرجو أنك ستأخذ على عاتقك إنجاز هذه المهمة لمجلتنا.<br />
-<br />
-لطفاً، أدخل إلى موقع المجلة حتى يوم {$responseDueDate} لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: {$contextUrl}<br />
-<br />
-أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
-<br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-نشكر لك اهتمامك بالتماسنا هذا.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>هذه الرسالة يرسلها محرر قسم المجلة إلى أحد المحكمين ليلتمس منه قبول مهمة التحكيم أو رفضها. وهي توفر معلومات متعلقة بطلب النشر من عنوانه وملخصه، فضلاً عن موعد استيجاب التحكيم ورابط الدخول إلى الموقع للاطلاع على الطلب نفسه. هذه الرسالة تستعمل عندما يكون التحكيم في المجلة متبعاً لعملية التحكيم القياسية وذلك عبر تفعيله ضمن (خيارات التحكيم في: الإعدادات، المخطط الانسيابي، التحكيم). (بخلاف ذلك أنظر. REVIEW_REQUEST_ATTACHED.)</description>
+		<subject>{translate key="emails.reviewRequest.subject"}</subject>
+		<body>{translate key="emails.reviewRequest.body"}</body>
+		<description>{translate key="emails.reviewRequest.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
-		<subject>إلتماس تحكيم مؤلَّف</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-هذا تذكير لحضرتكم بشأن إلتماسنا السابق المتعلق بطلب النشر الموسوم &quot;{$submissionTitle},&quot; والمقدم إلى {$contextName}. كنا نأمل أن نحصل منكم على إجابة بموعد أقصاه {$responseDueDate}، وإن هذه الرسالة مصنعة آلياً ومرسلة عند انتهاء هذا الموعد.
-<br />
-كلي ثقة بأنك ستكون محكماً متميزاً للمؤلَّف. إن ملخص موضوعه مبين أدناه، وأنا أرجو أنك ستأخذ على عاتقك إنجاز هذه المهمة لمجلتنا.<br />
-<br />
-لطفاً، أدخل إلى موقع المجلة لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: {$contextUrl}<br />
-<br />
-أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
-<br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-نشكر لك اهتمامك بالتماسنا هذا.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>هذه الرسالة يرسلها النظام آلياً عندما يتباطأ أحد المحكمين عن تقديم إجابة في الموعد المقرر (إنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم) عندما تكون ميزة وصول المحكم بنقرة واحدة معطلة. يجب أن تكون المهام المجدولة ممكنة ومعدة (إنظر ملف إعدادات الموقع).</description>
+		<subject>{translate key="emails.reviewRequestRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>إلتماس تحكيم مؤلَّف</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-كلي ثقة بأنك ستكون محكماً متميزاً للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والذي أُرسل طلب لنشره إلى {$contextName}. إن ملخص موضوعه مبين أدناه، وأنا أرجو أنك ستأخذ على عاتقك إنجاز هذه المهمة لمجلتنا.<br />
-<br />
-لطفاً، أدخل إلى موقع المجلة حتى يوم {$responseDueDate} لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه.<br />
-<br />
-أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-نشكر لك اهتمامك بالتماسنا هذا.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>هذه الرسالة يرسلها محرر قسم المجلة إلى أحد المحكمين ليلتمس منه قبول مهمة التحكيم أو رفضها. وهي توفر معلومات متعلقة بطلب النشر من عنوانه وملخصه، فضلاً عن موعد استيجاب التحكيم ورابط الدخول إلى الموقع للاطلاع على الطلب نفسه. هذه الرسالة تستعمل عندما يكون التحكيم في المجلة متبعاً لعملية التحكيم القياسية وذلك عبر تفعيله ضمن (خيارات التحكيم في: الإعدادات، المخطط الانسيابي، التحكيم)، مع تفعيل الوصول المباشر للمحكم أيضاً.</description>
+		<subject>{translate key="emails.reviewRequestOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
-		<subject>إلتماس تحكيم مؤلَّف</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-هذا تذكير لحضرتكم بشأن إلتماسنا السابق المتعلق بطلب النشر الموسوم &quot;{$submissionTitle},&quot; والمقدم إلى {$contextName}. كنا نأمل أن نحصل منكم على إجابة بموعد أقصاه {$responseDueDate}, وإن هذه الرسالة مصنعة آلياً ومرسلة عند انتهاء هذا الموعد.
-<br />
-كلي ثقة بأنك ستكون محكماً متميزاً للمؤلَّف. إن ملخص موضوعه مبين أدناه، وأنا أرجو أنك ستأخذ على عاتقك إنجاز هذه المهمة لمجلتنا.<br />
-<br />
-لطفاً، أدخل إلى موقع المجلة لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه.<br />
-<br />
-أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-نشكر لك اهتمامك بالتماسنا هذا.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>هذه الرسالة يرسلها النظام آلياً عندما يتباطأ أحد المحكمين عن تقديم إجابة في الموعد المقرر (إنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم) عندما تكون ميزة وصول المحكم بنقرة واحدة ممكنة. يجب أن تكون المهام المجدولة ممكنة ومعدة (إنظر ملف إعدادات الموقع).</description>
+		<subject>{translate key="emails.reviewRequestRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
-		<subject>إلتماس تحكيم مؤلَّف</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-كلي ثقة بأنك ستكون محكماً متميزاً للمؤلَّف, &quot;{$submissionTitle},&quot; وأنا أرجو أنك ستأخذ على عاتقك إنجاز هذه المهمة لمجلتنا. إن دليل عمل المحكم في مجلتنا مضمن في أدنى الرسالة، وإن طلب النشر المذكور مرفق بها. إن تحكيمك لهذا المؤلَّف مع توصياتك بشأنه ينبغي إرسالها لي عبر البريد الالكتروني قبل يوم {$reviewDueDate}.<br />
-<br />
-لطفاً، بين عبر ردك على هذه الرسالة حتى يوم {$responseDueDate} مدى قدرتك وقبولك القيام بهذا التحكيم.<br />
-<br />
-نشكر لك اهتمامك بالتماسنا هذا.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-دليل عمل المحكم<br />
-<br />
-{$reviewGuidelines}<br />
-]]></body>
-		<description>هذه الرسالة يرسلها محرر قسم المجلة إلى أحد المحكمين ليلتمس منه قبول مهمة التحكيم أو رفضها. وهي مرفقة بطلب النشر بشكل ملف. يتم استعمال هذه الرسالة عندما تكون عمية التحكيم مبنية على أساس التراسل عبر البريد الالكتروني خلال تهيئة إعدادات المجلة. (إنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم). (بخلاف ذلك، أنظر REVIEW_REQUEST.)</description>
+		<subject>{translate key="emails.reviewRequestAttached.subject"}</subject>
+		<body>{translate key="emails.reviewRequestAttached.body"}</body>
+		<description>{translate key="emails.reviewRequestAttached.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>إلتماس تحكيم مؤلَّف</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-الأمر يتعلق بالمؤلَّف الموسوم &quot;{$submissionTitle},&quot; الذي هو قيد المعالجة من قبل {$contextName}.<br />
-<br />
-بالنظر إلى التنقيحات المؤشرة على النسخة السابقة من المؤلَّف، قدم المؤلف/المؤلفون الآن نسخة منقحة من أوراقهم. نكون شاكرين لتعاونك معنا في تقييمها.<br />
-<br />
-لطفاً، أدخل إلى موقع المجلة حتى يوم {$responseDueDate} لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: {$contextUrl}<br />
-<br />
-أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
-<br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-نشكر لك اهتمامك بالتماسنا هذا.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى المحكم ليلتمس منه قبول أو رفض مهمة تحكيم المؤلَّف لمرة أخرى. الرسالة تشير إلى عنوان المؤلَّف وملخصه وتاريخ استيجاب التحكيم كما تعطي رابط الوصول إلى المؤلَّف في موقع المجلة نفسه. هذه الرسالة تستعمل عندما يكون التحكيم في المجلة متبعاً لعملية التحكيم القياسية وذلك عبر تفعيله ضمن: الإعدادات، المخطط الانسيابي، التحكيم. (بخلاف ذلك، أنظر REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+		<subject>{translate key="emails.reviewRequestSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>إلتماس تحكيم مؤلَّف</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-الأمر يتعلق بالمؤلَّف الموسوم &quot;{$submissionTitle},&quot; الذي هو قيد المعالجة من قبل {$contextName}.<br />
-<br />
-بالنظر إلى التنقيحات المؤشرة على النسخة السابقة من المؤلَّف، قدم المؤلف/المؤلفون الآن نسخة منقحة من أوراقهم. نكون شاكرين لتعاونك معنا في تقييمها.<br />
-<br />
-لطفاً، أدخل إلى موقع المجلة حتى يوم {$responseDueDate} لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه.<br />
-<br />
-أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-نشكر لك اهتمامك بالتماسنا هذا.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى المحكم ليلتمس منه قبول أو رفض مهمة تحكيم المؤلَّف لمرة أخرى. الرسالة تشير إلى عنوان المؤلَّف وملخصه وتاريخ استيجاب التحكيم كما تعطي رابط الوصول إلى المؤلَّف في موقع المجلة نفسه. هذه الرسالة تستعمل عندما يكون التحكيم في المجلة متبعاً لعملية التحكيم القياسية وذلك عبر تفعيله ضمن: الإعدادات، المخطط الانسيابي، التحكيم، مع تفعيل الوصول المباشر للمحكم أيضاً.</description>
+		<subject>{translate key="emails.reviewRequestOneclickSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestOneclickSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestOneclickSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>إلتماس تحكيم مؤلَّف</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-الأمر يتعلق بالمؤلَّف الموسوم &quot;{$submissionTitle},&quot; الذي هو قيد المعالجة من قبل {$contextName}.<br />
-<br />
-بالنظر إلى التنقيحات المؤشرة على النسخة السابقة من المؤلَّف، قدم المؤلف/المؤلفون الآن نسخة منقحة من أوراقهم. نكون شاكرين لتعاونك معنا في تقييمها.<br />
-<br />
-إن دليل عمل المحكم في مجلتنا مضمن في أدنى الرسالة، وإن طلب النشر المذكور مرفق بها. إن تحكيمك لهذا المؤلَّف مع توصياتك بشأنه ينبغي إرسالها لي عبر البريد الالكتروني قبل يوم {$reviewDueDate}.<br />
-<br />
-لطفاً، بين عبر ردك على هذه الرسالة حتى يوم {$responseDueDate} مدى قدرتك وقبولك القيام بهذا التحكيم.<br />
-<br />
-نشكر لك اهتمامك بالتماسنا هذا.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-دليل عمل المحكم<br />
-<br />
-{$reviewGuidelines}<br />
-]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى المحكم ليلتمس منه قبول أو رفض مهمة تحكيم المؤلَّف لمرة أخرى. وهي مرفقة بطلب النشر بشكل ملف. يتم استعمال هذه الرسالة عندما تكون عمية التحكيم مبنية على أساس التراسل عبر البريد الالكتروني خلال تهيئة إعدادات المجلة ضمن: الإعدادات، المخطط الانسيابي، التحكيم. (بخلاف ذلك، أنظر REVIEW_REQUEST_SUBSEQUENT.)</description>
+		<subject>{translate key="emails.reviewRequestAttachedSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestAttachedSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestAttachedSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
-		<subject>إلغاء إلتماس التحكيم</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-حالياً، قررنا إلغاء إلتماسنا لكم بتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نحن نعتذر عن أي إزعاج قد يسببه ذلك لحضرتكم، ونأمل التواصل معكم مستقبلاً فيما يتعلق بتحكيم طلبات النشر المرسلة إلى هذه المجلة العلمية.<br />
-<br />
-إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي.]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى المحكم الذي بحيازته طلب تقديم قيد المعالجة لإبلاغه بانتفاء الحاجة إلى تقييمه.</description>
+		<subject>{translate key="emails.reviewCancel.subject"}</subject>
+		<body>{translate key="emails.reviewCancel.body"}</body>
+		<description>{translate key="emails.reviewCancel.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REINSTATE">
-		<subject>إعادة التماس التحكيم</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-نرغب بإعادة التماسنا لحضرتكم لتحكيم المؤَّلف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نأمل أن تكونوا قادرين على إبداء العون بشأن عملية التحكيم في هذه المجلة.<br />
-<br />
-إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي.]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى المحكم الذي بحيازته طلب تقديم قيد المعالجة لإبلاغه بأن التماس التحكيم الملغى قد تمت العودة إليه.</description>
+		<subject>{translate key="emails.reviewReinstate.subject"}</subject>
+		<body>{translate key="emails.reviewReinstate.body"}</body>
+		<description>{translate key="emails.reviewReinstate.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
-		<subject>قادر على التحكيم</subject>
-		<body><![CDATA[أعزائي المحررون:<br />
-<br />
-أنا متمكن وراغب بتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. أشكر لكم إعتمادكم عليَّ، وأخطط لإنجاز التحكيم المطلوب حتى يوم استيجابه مني في {$reviewDueDate} إن لم يكن قبله.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>هذه الرسالة يعنونها المحكم إلى محرر القسم استجابة لالتماس سابق أرسله له الأخير. المحكم يبلغ المحرر بقبوله للتحكيم المذكور خلال مدة الاستيجاب المطلوبة منه.</description>
+		<subject>{translate key="emails.reviewConfirm.subject"}</subject>
+		<body>{translate key="emails.reviewConfirm.body"}</body>
+		<description>{translate key="emails.reviewConfirm.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
-		<subject>غير قادر على التحكيم</subject>
-		<body><![CDATA[أعزائي المحررون:<br />
-<br />
-أخشى أنني حالياً غير متفرغ لتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. أشكر لكم إعتمادكم عليَّ وأرجو التواصل معي في وقت آخر.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>هذه الرسالة يعنونها المحكم إلى محرر القسم استجابة لالتماس سابق أرسله له الأخير. المحكم يعتذر فيها عن قبول التحكيم للمؤلَّف المذكور.</description>
+		<subject>{translate key="emails.reviewDecline.subject"}</subject>
+		<body>{translate key="emails.reviewDecline.body"}</body>
+		<description>{translate key="emails.reviewDecline.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
-		<subject>إشعار تحكيم المؤلَّف</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-نشكر إكمالك لتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. إننا نقدر لك مشاركتك في ترصين الأعمال التي تنشرها مجلتنا.]]></body>
-		<description>هذه الرسالة يصدرها محرر القسم لتأكيد استلامه لتقييمات وملاحظات المحكم الكاملة، وليشكره على مساهمته في عملية التحكيم.</description>
+		<subject>{translate key="emails.reviewAck.subject"}</subject>
+		<body>{translate key="emails.reviewAck.body"}</body>
+		<description>{translate key="emails.reviewAck.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
-		<subject>تذكير لتحكيم طلب نشر</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-هذا مجرد تذكير لجنابكم الكريم بشأن تحكيمكم للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نحن نأمل الحصول منكم على هذا التحكيم حتى يوم {$reviewDueDate}، ونرجو أن نتلقاه منكم حالماً تكونوا جاهزين لإرساله.<br />
-<br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>هذه الرسالة يذكر بها محرر القسم محكماً قد استوجب إكمال تقييمه لمؤلَّف ما ولم يرسله/يرفعه إلى المجلة بعد.</description>
+		<subject>{translate key="emails.reviewRemind.subject"}</subject>
+		<body>{translate key="emails.reviewRemind.body"}</body>
+		<description>{translate key="emails.reviewRemind.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
-		<subject>تذكير لتحكيم طلب نشر</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-هذا مجرد تذكير لجنابكم الكريم بشأن تحكيمكم للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}.  نحن نأمل الحصول منكم على هذا التحكيم حتى يوم {$reviewDueDate}، ونرجو أن نتلقاه منكم حالماً تكونوا جاهزين لإرساله.<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>هذه الرسالة يذكر بها محرر القسم محكماً باستيجاب مهلة تقييمه لمؤلَّف ما.</description>
+		<subject>{translate key="emails.reviewRemindOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
-		<subject>تذكير آلي لتحكيم طلب نشر</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-هذا مجرد تذكير لجنابكم الكريم بشأن تحكيمكم للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نحن نأمل الحصول منكم على هذا التحكيم حتى يوم {$reviewDueDate} وهذه الرسالة مولدة آلياً نظراً لتجاوز ذلك التاريخ. مع ذلك، يسرنا أن نتلقاه منكم حالماً تكونوا جاهزين لإرساله.<br />
-<br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>هذه الرسالة يولدها الموقع آلياً عندما يتم تجاوز موعد تسليم التحكيم من قبل أحد المحكمين (أنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم) وعندما يكون خيار الوصول المباشر للمحكم غير مفعل. المهام المجدول يجب أن تكون مفعلة ومهيئة (أنظر ملف تهيئة الموقع.</description>
+		<subject>{translate key="emails.reviewRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
-		<subject>Automated Submission Review Reminder</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-هذا مجرد تذكير لجنابكم الكريم بشأن تحكيمكم للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نحن نأمل الحصول منكم على هذا التحكيم حتى يوم {$reviewDueDate}،وهذه الرسالة مولدة آلياً نظراً لتجاوز ذلك التاريخ. مع ذلك، يسرنا أن نتلقاه منكم حالماً تكونوا جاهزين لإرساله.<br />
-<br />
-رابط الطلب: {$submissionReviewUrl}<br />
-<br />
-لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>هذه الرسالة يولدها الموقع آلياً عندما يتم تجاوز موعد تسليم التحكيم من قبل أحد المحكمين (أنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم) وعندما يكون خيار الوصول المباشر للمحكم مفعل. المهام المجدول يجب أن تكون مفعلة ومهيئة (أنظر ملف تهيئة الموقع.</description>
+		<subject>{translate key="emails.reviewRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
-		<subject>قرار هيئة التحرير</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />
-<br />
-قرارنا هو: قبول طلب النشر]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بقبول هيئة التحرير لطلبه.</description>
+		<subject>{translate key="emails.editorDecisionAccept.subject"}</subject>
+		<body>{translate key="emails.editorDecisionAccept.body"}</body>
+		<description>{translate key="emails.editorDecisionAccept.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
-		<subject>قرار هيئة التحرير</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />
-<br />
-قرارنا هو: إرسال طلبك إلى التحكيم<br />
-<br />
-رابط الطلب: {$submissionUrl}]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بقرار هيئة التحرير بأن طلبه قد أرسل إلى محكم خارجي.</description>
+		<subject>{translate key="emails.editorDecisionSendToExternal.subject"}</subject>
+		<body>{translate key="emails.editorDecisionSendToExternal.body"}</body>
+		<description>{translate key="emails.editorDecisionSendToExternal.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
-		<subject>قرار هيئة التحرير</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-إن متعلقات تحرير مؤلَّفك الموسوم &quot;{$submissionTitle},&quot; قد اكتملت. نحن الآن نرسله إلى مرحلة الإنتاج.<br />
-<br />
-رابط الطلب: {$submissionUrl}]]></body>
-		<description>هذه الرسالة يعنونها مدير التحرير أو محرر القسم إلى المؤلف لإبلاغه بأن عمله قد تم إرساله إلى مرحلة الإنتاج.</description>
+		<subject>{translate key="emails.editorDecisionSendToProduction.subject"}</subject>
+		<body>{translate key="emails.editorDecisionSendToProduction.body"}</body>
+		<description>{translate key="emails.editorDecisionSendToProduction.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
-		<subject>قرار هيئة التحرير</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />
-<br />
-قرارنا هو: بعض التنقيحات مطلوبة]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بأن مؤلفه بحاجة إلى بعض التنقيحات.</description>
+		<subject>{translate key="emails.editorDecisionRevisions.subject"}</subject>
+		<body>{translate key="emails.editorDecisionRevisions.body"}</body>
+		<description>{translate key="emails.editorDecisionRevisions.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
-		<subject>قرار هيئة التحرير</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />
-<br />
-قرارنا هو: إعادة التقديم مجدداً]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه، ملخصه (إعادة تقديم طلب النشر).</description>
+		<subject>{translate key="emails.editorDecisionResubmit.subject"}</subject>
+		<body>{translate key="emails.editorDecisionResubmit.body"}</body>
+		<description>{translate key="emails.editorDecisionResubmit.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
-		<subject>قرار هيئة التحرير</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />
-<br />
-قرارنا هو: الرفض]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه، ملخصه (رفض الطلب).</description>
+		<subject>{translate key="emails.editorDecisionDecline.subject"}</subject>
+		<body>{translate key="emails.editorDecisionDecline.body"}</body>
+		<description>{translate key="emails.editorDecisionDecline.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
-		<subject>توصيات المحرر</subject>
-		<body><![CDATA[{$editors}:<br />
-<br />
-إن التوصيات المتعلقة بطلب النشر في {$contextName}، &quot;{$submissionTitle}&quot; هي: {$recommendation}]]></body>
-		<description>هذه الرسالة يعنونها المحرر المشارك في تقديم التوصيات أو محرر القسم إلى جهة التحرير المعنية باتخاذ القرار لإشعارها بالتوصية النهائية الخاصة بطلب نشر مقدم إلى المجلة.</description>
+		<subject>{translate key="emails.editorRecommendation.subject"}</subject>
+		<body>{translate key="emails.editorRecommendation.body"}</body>
+		<description>{translate key="emails.editorRecommendation.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
-		<subject>إلتماس نسخة التدقيق</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-أود مطالبتك بتوفير نسخة مدققة من المؤلَّف الموسوم &quot;{$submissionTitle}&quot; والمرسل إلى {$contextName} عبر اتباع الخطوات الآتية:<br />
-1. أنقر على رابط طلب النشر أدناه.<br />
-2. إفتح أي ملفات متوافرة ضمن الملفات المسودة وأجر متطلبات التدقيق مضيفاً أي قرارات أو ملاحظات تتعلق بالتدقيق حسب الحاجة.<br />
-3. إحفظ الملفات المدققة، ثم إرفعها إلى لوحة المدققات.<br />
-4. أعلم المحرر بأن جميع الملفات صارت جاهزة، وأن بالإمكان الشروع بعملية الإنتاج.<br />
-<br />
-رابط {$contextName}: {$contextUrl}<br />
-رابط الطلب: {$submissionUrl}<br />
-اسم الدخول: {$participantUsername}]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى مدقق القسم مطالباً إياه بالشروع في عملية معالجة نسخة المؤلَّف قيد المعالجة، وهي توفر له معلومات عن طلب النشر وكيفية الوصول إليه ضمن موقع المجلة.</description>
+		<subject>{translate key="emails.copyeditRequest.subject"}</subject>
+		<body>{translate key="emails.copyeditRequest.body"}</body>
+		<description>{translate key="emails.copyeditRequest.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
-		<subject>إلتماس التنضيد الطباعي</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-إن المؤلَّف الموسوم &quot;{$submissionTitle}&quot; والمرسل إلى {$contextName} يحتاج الآن إلى تهيئة إخراجه الطباعي عبر اتباع الخطوات الآتية:<br />
-1. أنقر على رابط طلب النشر أدناه.<br />
-2. أدخل إلى موقع المجلة واستعمل النسخة المحضرة للمعالجة الطباعية لصناعة اللوح الطباعي المتوافق مع معايير المجلة.<br />
-3. إرفع هذه الألواح إلى قسم ملفات الألواح.<br />
-4. أبلغ المحرر مستعملاً محاورات الإنتاج بأن الألواح الطباعية مرفوعة وجاهزة.<br />
-<br />
-{$contextName} URL: {$contextUrl}<br />
-رابط الطلب: {$submissionUrl}<br />
-اسم الدخول: {$participantUsername}<br />
-<br />
-لو تعذر عليك تولي هذه المهمة حالياً أو كان لديك أية أسئلة، لطفاً لا تترد في مراسلتي. نشكر لك مساهمتك في هذه المجلة.]]></body>
-		<description>هذه الرسالة يعنونها محرر القسم إلى المصمم الطباعي معلماً إياه بتعيينه لمهمة التصميم الطباعي لمؤلَّفٍ معين، وهي توفر له رابط الوصول إلى الملف المعني في موقع المجلة.</description>
+		<subject>{translate key="emails.layoutRequest.subject"}</subject>
+		<body>{translate key="emails.layoutRequest.body"}</body>
+		<description>{translate key="emails.layoutRequest.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
-		<subject>التصميم الطباعي إكتمل</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-الألواح الطباعية قد إكتمل تحضيرها للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName} وصارت جاهزة للمراجعة.<br />
-<br />
-إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي.<br />
-<br />
-{$participantName}]]></body>
-		<description>هذه الرسالة يعنونها المصمم الطباعي إلى محرر القسم يعلمه فيها بأن مهمة التحضير الطباعي لمؤلَّف معين قد إكتملت.</description>
+		<subject>{translate key="emails.layoutComplete.subject"}</subject>
+		<body>{translate key="emails.layoutComplete.body"}</body>
+		<description>{translate key="emails.layoutComplete.description"}</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
-		<subject>مقالة قد تكون مهمة</subject>
-		<body><![CDATA[لقد وجدت أن المقالة العلمية الموسومة &quot;{$submissionTitle}&quot; قد تحوز على إهتمامك، وهي من تأليف {$authorName} ومنشورة في المجلد {$volume}، العدد {$number} لسنة ({$year}) من {$contextName} على الرابط &quot;{$articleUrl}&quot;.]]></body>
-		<description>قالب هذه الرسالة نموذج لما يرسله قارئ مسجل في موقع المجلة إلى أحد معارفه ملفتاً نظره إلى مقالة علمية أو بحث. تلك الخاصية متوافرة عبر أدوات القراءة وينبغي تفعيلها من قبل مدير موقع المجلة في صفحة إدارة أدوات القراءة.</description>
+		<subject>{translate key="emails.emailLink.subject"}</subject>
+		<body>{translate key="emails.emailLink.body"}</body>
+		<description>{translate key="emails.emailLink.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>إشعار الإشتراك</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-لقد حزت على الإشتراك في موقع مجلتنا على الإنترنت والتي تحمل اسم {$contextName}، وإن هذا الإشتراك هو من نوع:<br />
-<br />
-{$subscriptionType}<br />
-<br />
-للوصول إلى المحتوى المخصص للمشتركين حصراً، ببساطة قم بالدخول إلى الموقع مستعملاً اسم الدخول: &quot;{$username}&quot;.<br />
-<br />
-بمجرد دخولك إلى النظام، يمكنك تعديل تفاصيل ملفك التعريفي وكلمة مرورك وفي أي وقت تشاء.<br />
-<br />
-لاحظ لطفاً أنك إن كنت حاصلاً على اشتراك مؤسساتي، فلا داعي لأفراد مؤسستك لتسجيل دخولهم إلى الموقع، طالماً أن محتوى طلبات الإشتراك ستكون عندها مصرحاً لها تلقائياً في النظام.<br />
-<br />
-إن كانت لديك أية استفسارات، فلا تتردد في مراسلتي.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>هذه الرسالة تُعلم قارئاً مسجلاً بأن مدير المجلة قد أنشأ له اشتراكاً، وهي تتضمن رابط المجلة مع تعليمات الوصول إليها.</description>
+		<subject>{translate key="emails.subscriptionNotify.subject"}</subject>
+		<body>{translate key="emails.subscriptionNotify.body"}</body>
+		<description>{translate key="emails.subscriptionNotify.description"}</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>صدور عدد مجاني الآن</subject>
-		<body><![CDATA[قراءنا:<br />
-<br />
-{$contextName} قد أصدرت تواً عدداً مجانياً. نحن ندعوك لمراجعة جدول المحتويات هنا، ومن ثم زيارة موقعنا ({$contextUrl}) لتطلع على المواضيع والفقرات التي تحوز على إهتمامك.<br />
-<br />
-نشكر لكم إهتمامكم الدائم بنتاجاتنا؛<br />
-{$editorialContactSignature}]]></body>
-		<description>هذه الرسالة تُعلم قارئاً مسجلاً بأن مدير المجلة قد أنشأ له اشتراكاً، وهي تتضمن رابط المجلة مع تعليمات الوصول إليها.</description>
+		<subject>{translate key="emails.openAccessNotify.subject"}</subject>
+		<body>{translate key="emails.openAccessNotify.body"}</body>
+		<description>{translate key="emails.openAccessNotify.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>إشعار بانتهاء صلاحية الإشتراك</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-إن إشتراكك في {$contextName} على وشك الإنتهاء.<br />
-<br />
-{$subscriptionType}<br />
-تاريخ إنتهاء صلاحيته: {$expiryDate}<br />
-<br />
-لضمان استمرارية وصولك إلى هذه المجلة، لطفاً أدخل موقعها وجدد إشتراكك. بإمكانك الولوج إلى النظام مستعملاً اسم الدخول: &quot;{$username}&quot;.<br />
-<br />
-إن كانت لديك أية استفسارات، فلا تتردد في مراسلتي.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>هذه الرسالة تُبلغ مشتركاً بأن مدة إشتراكه على وشك النفاد، وهي تقدم له رابط الدخول إلى الموقع مع تعليمات الوصول.</description>
+		<subject>{translate key="emails.subscriptionBeforeExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionBeforeExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionBeforeExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>إنتهت صلاحية الإشتراك</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-إن مدة إشتراكك في {$contextName} قد انتهت.<br />
-<br />
-{$subscriptionType}<br />
-تاريخ إنتهاء صلاحيته: {$expiryDate}<br />
-<br />
-لتجديد إشتراكك، لطفاً أدخل موقع المجلة. بإمكانك الولوج إلى النظام مستعملاً اسم الدخول: &quot;{$username}&quot;.<br />
-<br />
-إن كانت لديك أية استفسارات، فلا تتردد في مراسلتي.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>هذه الرسالة تُعلم مشتركاً بانتهاء فترة إشتراكه في المجلة، وهي تقدم له رابط الدخول إلى الموقع مع تعليمات الوصول.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>إنتهت صلاحية الإشتراك - التذكير الأخير</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-إن مدة إشتراكك في {$contextName} قد انتهت.<br />
-لطفاً، نشيرك إلى أن هذه الرسالة هي بمثابة التذكير الأخير بشأنه.<br />
-<br />
-{$subscriptionType}<br />
-تاريخ إنتهاء صلاحيته: {$expiryDate}<br />
-<br />
-لتجديد إشتراكك، لطفاً أدخل موقع المجلة. بإمكانك الولوج إلى النظام مستعملاً اسم الدخول: &quot;{$username}&quot;.<br />
-<br />
-إن كانت لديك أية استفسارات، فلا تتردد في مراسلتي.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>هذه الرسالة تُعلم مشتركاً بانتهاء فترة إشتراكه في المجلة، وهي تقدم له رابط الدخول إلى الموقع مع تعليمات الوصول.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiryLast.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiryLast.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiryLast.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>شراء إشتراك: منفرد</subject>
-		<body><![CDATA[لقد تم شراء إشتراك منفرد في المجلة {$contextName} عبر الإنترنت وبالتفاصيل أدناه:<br />
-<br />
-نوع الإشنراك:<br />
-{$subscriptionType}<br />
-<br />
-المستخدم:<br />
-{$userDetails}<br />
-<br />
-معلومات العضوية (إن وجدت):<br />
-{$membership}<br />
-<br />
-لعرض أو تعديل هذا الاشتراك، لطفاً استعمل الرابط الآتي:<br />
-<br />
-رابط الاشتراك: {$subscriptionUrl}<br />
-]]></body>
-		<description>هذه الرسالة تُشعر مدير الإشتراكات بشراء إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه.</description>
+		<subject>{translate key="emails.subscriptionPurchaseIndl.subject"}</subject>
+		<body>{translate key="emails.subscriptionPurchaseIndl.body"}</body>
+		<description>{translate key="emails.subscriptionPurchaseIndl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>شراء إشتراك: مؤسساتي</subject>
-		<body><![CDATA[لقد تم شراء إشتراك مؤسساتي في المجلة {$contextName} عبر الإنترنت وبالتفاصيل أدناه، ولتفعيل هذا الإشتراك، لطفاً استعمل رابط الاشتراك وحول حالته إلى فعّال.<br />
-<br />
-نوع الإشنراك:<br />
-{$subscriptionType}<br />
-<br />
-المؤسسة:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-المدى (إن توفر):<br />
-{$domain}<br />
-<br />
-مدى عناوين IP (إن توفرت):<br />
-{$ipRanges}<br />
-<br />
-الشخص المعني:<br />
-{$userDetails}<br />
-<br />
-معلومات العضوية (إن وجدت):<br />
-{$membership}<br />
-<br />
-لعرض أو تعديل هذا الاشتراك، لطفاً استعمل الرابط الآتي:<br />
-<br />
-رابط الاشتراك: {$subscriptionUrl}<br />
-]]></body>
-		<description>هذه الرسالة تُشعر مدير الإشتراكات بشراء إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه.</description>
+		<subject>{translate key="emails.subscriptionPurchaseInstl.subject"}</subject>
+		<body>{translate key="emails.subscriptionPurchaseInstl.body"}</body>
+		<description>{translate key="emails.subscriptionPurchaseInstl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
-		<subject>تجديد إشتراك: منفرد</subject>
-		<body><![CDATA[لقد تم تجديد إشتراك منفرد في المجلة {$contextName} عبر الإنترنت وبالتفاصيل أدناه:<br />
-<br />
-نوع الإشنراك:<br />
-{$subscriptionType}<br />
-<br />
-المستخدم:<br />
-{$userDetails}<br />
-<br />
-معلومات العضوية (إن وجدت):<br />
-{$membership}<br />
-<br />
-لعرض أو تعديل هذا الاشتراك، لطفاً استعمل الرابط الآتي:<br />
-<br />
-رابط الاشتراك: {$subscriptionUrl}<br />
-]]></body>
-		<description>هذه الرسالة تُشعر مدير الإشتراكات بتجديد إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه.</description>
+		<subject>{translate key="emails.subscriptionRenewIndl.subject"}</subject>
+		<body>{translate key="emails.subscriptionRenewIndl.body"}</body>
+		<description>{translate key="emails.subscriptionRenewIndl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
-		<subject>تجديد إشتراك: مؤسساتي</subject>
-		<body><![CDATA[لقد تم تجديد إشتراك مؤسساتي في المجلة {$contextName} عبر الإنترنت وبالتفاصيل أدناه:<br />
-<br />
-نوع الإشنراك:<br />
-{$subscriptionType}<br />
-<br />
-المؤسسة:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-المدى (إن توفر):<br />
-{$domain}<br />
-<br />
-مدى عناوين IP (إن توفرت):<br />
-{$ipRanges}<br />
-<br />
-الشخص المعني:<br />
-{$userDetails}<br />
-<br />
-معلومات العضوية (إن وجدت):<br />
-{$membership}<br />
-<br />
-لعرض أو تعديل هذا الاشتراك، لطفاً استعمل الرابط الآتي:<br />
-<br />
-رابط الاشتراك: {$subscriptionUrl}<br />
-]]></body>
-		<description>هذه الرسالة تُشعر مدير الإشتراكات بتجديد إشتراك مؤسساتي عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه.</description>
+		<subject>{translate key="emails.subscriptionRenewInstl.subject"}</subject>
+		<body>{translate key="emails.subscriptionRenewInstl.body"}</body>
+		<description>{translate key="emails.subscriptionRenewInstl.description"}</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>تحرير إقتباس</subject>
-		<body><![CDATA[{$authorFirstName},<br />
-<br />
-لطفاً، هل بإمكانك التحقق من أو تزويدنا بالشكل الصحيح للاقتباس للمرجع المبين أدناه والمذكور في مؤلَّفك الموسوم {$submissionTitle}:<br />
-<br />
-{$rawCitation}<br />
-<br />
-مع الشكر!<br />
-<br />
-{$userFirstName}<br />
-المدقق، {$contextName}<br />
-]]></body>
-		<description>هذه الرسالة تسمح لمدققي المجلة بالمطالبة بمعلومات إضافية عن المراجع من المؤلفين.</description>
+		<subject>{translate key="emails.citationEditorAuthorQuery.subject"}</subject>
+		<body>{translate key="emails.citationEditorAuthorQuery.body"}</body>
+		<description>{translate key="emails.citationEditorAuthorQuery.description"}</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>تم رفع نسخة منقحة</subject>
-		<body><![CDATA[أعزائي المحررون:<br />
-<br />
-لقد تم رفع نسخة منقحة من المؤلَّف الموسوم &quot;{$submissionTitle}&quot; من قبل المؤلف {$authorName}.<br />
-<br />
-رابط الطلب: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>هذه الرسالة تُرسل تلقائياً إلى المحرر المعني عندما يقوم المؤلف برفع نسخة منقحة من مؤلَّفه إلى الموقعe.</description>
+		<subject>{translate key="emails.revisedVersionNotify.subject"}</subject>
+		<body>{translate key="emails.revisedVersionNotify.body"}</body>
+		<description>{translate key="emails.revisedVersionNotify.description"}</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
-		<subject>رسالة تتعلق بالمجلة {$contextName}</subject>
-		<body><![CDATA[لطفاً أكتب رسالتك هنا.]]></body>
-		<description>هذه الرسالة الإفتراضية (الخالية) التي يستعملها منشئ الرسائل في مركز إشعارات النظام.</description>
+		<subject>{translate key="emails.notificationCenterDefault.subject"}</subject>
+		<body>{translate key="emails.notificationCenterDefault.body"}</body>
+		<description>{translate key="emails.notificationCenterDefault.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
-		<subject>قرار المحرر</subject>
-		<body>
-			<![CDATA[{$authorName}:<br />
-<br />
-لقد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}، &quot;{$submissionTitle}&quot;.<br />
-<br />
-إن قرارنا هو: رفض النشر]]></body>
-		<description>هذه الرسالة تعنون إلى المؤلف إذا رفض المحرر طلبه بشكل مبدئي قبل الدخول في مرحلة التحكيم</description>
+		<subject>{translate key="emails.editorDecisionInitialDecline.subject"}</subject>
+		<body>{translate key="emails.editorDecisionInitialDecline.body"}</body>
+		<description>{translate key="emails.editorDecisionInitialDecline.description"}</description>
 	</email_text>
 </email_texts>

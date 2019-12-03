@@ -13,793 +13,263 @@
 
 <email_texts locale="fi_FI">
 	<email_text key="NOTIFICATION">
-		<subject>Uusi ilmoitus julkaisusta {$siteTitle}</subject>
-		<body><![CDATA[Teille on uusi ilmoitus julkaisusta {$siteTitle}:<br/>
-<br />
-{$notificationContents}<br />
-<br />
-Linkki: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>The email is sent to registered users that have selected to have this type of notification emailed to them.</description>
+		<subject>{translate key="emails.notification.subject"}</subject>
+		<body>{translate key="emails.notification.body"}</body>
+		<description>{translate key="emails.notification.description"}</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Vahvista salasanan vaihtaminen</subject>
-		<body><![CDATA[Olemme vastaanottaneet pyynnön vaihtaa salasananne {$siteTitle} sivustolle.<br />
-<br />
-Jos ette tehnyt tätä pyyntöä,voitte jättää tämän sähköpostin huomiotta. Jos haluatte vaihtaa salasanan, klikatkaa alla olevaa linkkiä.<br />
-<br />
-Vaihda salasana: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
+		<subject>{translate key="emails.passwordResetConfirm.subject"}</subject>
+		<body>{translate key="emails.passwordResetConfirm.body"}</body>
+		<description>{translate key="emails.passwordResetConfirm.description"}</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Salasana vaihdettu</subject>
-		<body><![CDATA[Salasananne {$siteTitle} -sivustolle on vaihdettu onnistuneesti. Säilyttäkää tämä käyttäjätunnus ja salasana, sillä tarvitsette niitä kaikkeen työskentelyyn julkaisun parissa.<br>
-<br />
-Käyttäjätunnuksenne: {$username}<br />
-Salasana: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
+		<subject>{translate key="emails.passwordReset.subject"}</subject>
+		<body>{translate key="emails.passwordReset.body"}</body>
+		<description>{translate key="emails.passwordReset.description"}</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Julkaisuun rekisteröityminen</subject>
-		<body><![CDATA[Hyvä {$userFullName},<br />
-<br />
-Olette nyt rekisteröitynyt julkaisun {$contextName} käyttäjäksi. Tarvitsette alla olevaa käyttäjätunnustanne ja salasanaanne kaikkeen työskentelyyn julkaisun parissa sen sivustolla. Voitte missä vaiheessa tahansa pyytää meitä poistamaan teidät julkaisun käyttäjistä ottamalla yhteyttä minuun.<br />
-<br />
-Käyttäjätunnus: {$username}<br />
-Salasana: {$password}<br />
-<br />
-Ystävällisin terveisin,<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+		<subject>{translate key="emails.userRegister.subject"}</subject>
+		<body>{translate key="emails.userRegister.body"}</body>
+		<description>{translate key="emails.userRegister.description"}</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
-		<subject>Tilin vahvistaminen</subject>
-		<body><![CDATA[Hyvä {$userFullName},<br />
-<br />
-Olette luonut tilin julkaisuun {$contextName}. Ennen kuin voitte alkaa käyttää tiliänne, teidän pitää vahvistaa sähköpostitilinne. Voitte tehdä sen alla olevan linkin kautta:<br />
-<br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
-<br />
-Ystävällisin terveisin,<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+		<subject>{translate key="emails.userValidate.subject"}</subject>
+		<body>{translate key="emails.userValidate.body"}</body>
+		<description>{translate key="emails.userValidate.description"}</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Rekisteröinti arvioijaksi julkaisuun {$contextName}</subject>
-		<body><![CDATA[Asiantuntemuksenne valossa, olemme ottaneet vapauden rekisteröidä teidät julkaisun {$contextName} arvioijatietokantaan. Tämä ei velvoita teitä mihinkään, mutta antaa meille mahdollisuuden ottaa teihin yhteyttä mahdollisen käsikirjoituksen arvioinnin tiimoilta. Arviointikutsun yhteydessä näette arvioitavan työn otsikon ja abstraktin, ja voitte aina joko hyväksyä kutsun tai kieltäytyä siitä. Voitte myös missä tahansa vaiheessa pyytää, että nimenne poistetaan tältä arvioijalistalta.<br />
-<br />
-Annamme teille käyttäjätunnuksen ja salasanan, joita käytetään kaikkeen vuorovaikutukseen julkaisun kanssa sen verkkosivuston kautta. Haluatte ehkä esimerkiksi päivittää profiilinne ja teitä kiinnostavat arviointiaiheet.<br />
-<br />
-Käyttäjätunnus: {$username}<br />
-Salasana: {$password}<br />
-<br />
-Ystävällisin terveisin,<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to a newly registered reviewer to welcome them to the system and provide them with a record of their username and password.</description>
+		<subject>{translate key="emails.reviewerRegister.subject"}</subject>
+		<body>{translate key="emails.reviewerRegister.body"}</body>
+		<description>{translate key="emails.reviewerRegister.description"}</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>Uusi numero julkaistu</subject>
-		<body><![CDATA[Hyvä lukija,<br />
-<br />
-{$contextName} on juuri julkaissut uusimman numeronsa osoitteessa <a href="{$contextUrl}">{$contextUrl}</a>. Voitte tutustua sisällysluetteloon tässä ja sen jälkeen tutustua artikkeleihin ja muihin kiinnostaviin kohteisiin verkkosivustollamme.<br />
-<br />
-Kiitos mielenkiinnostanne työtämme kohtaan.<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
-		<description>This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</description>
+		<subject>{translate key="emails.publishNotify.subject"}</subject>
+		<body>{translate key="emails.publishNotify.body"}</body>
+		<description>{translate key="emails.publishNotify.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Julkaisun {$contextName} arkistointipyyntö</subject>
-		<body><![CDATA[Hyvä [yliopistokirjaston kirjastonhoitajan nimi],<br />
-<br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; on julkaisu, jossa yliopistonne henkilökunnan jäsen, [jäsenen nimi], toimii [toimen nimi, esim.”toimittajana”]. Julkaisun pyrkimyksenä on perustaa LOCKSS:ia (Lots of Copies Keep Stuff Safe) noudattava arkisto tämän ja muiden yliopistojen kirjastojen kanssa.<br />
-<br />
-[Lyhyt kuvaus julkaisusta]<br />
-<br />
-Julkaisumme LOCKSS Publisher Manifest -sivun URL-osoite on: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
-<br />
-Käsittääksemme kirjastonne osallistuu jo LOCKSS:iin. Mikäli tarvitsette lisää metatietoja julkaisumme rekisteröimiseksi LOCKSS-versioonne, annamme mielellämme lisätietoja.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$principalContactSignature}]]></body>
-		<description>This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</description>
+		<subject>{translate key="emails.lockssExistingArchive.subject"}</subject>
+		<body>{translate key="emails.lockssExistingArchive.body"}</body>
+		<description>{translate key="emails.lockssExistingArchive.description"}</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Julkaisun {$contextName} arkistointipyyntö</subject>
-		<body><![CDATA[Hyvä [yliopistokirjaston kirjastonhoitajan nimi],<br />
-<br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; on julkaisu, jossa yliopistonne henkilökunnan jäsen, [jäsenen nimi] toimii [toimen nimi, esim. “toimittajana”]. Julkaisun pyrkimyksenä on perustaa LOCKSS:ia (Lots of Copies Keep Stuff Safe) noudattava arkisto tämän ja muiden yliopistojen kirjastojen kanssa.<br />
-<br />
-[Lyhyt kuvaus julkaisusta]<br />
-<br />
-LOCKSS-ohjelma &amp;lt;http://lockss.org/&amp;gt;, kansainvälinen kirjasto-/julkaisijahanke, on toimiva esimerkki hajautettuun säilytykseen ja arkistointiin perustuvasta tietovarastosta (lisätietoja alla). Ohjelma toimii tavallisella kotitietokoneella ja on ilmainen. Järjestelmä on helposti hankittavissa verkosta ja se vaatii hyvin vähän ylläpitotoimenpiteitä.<br />
-<br />
-Jotta voisitte auttaa julkaisumme arkistoinnissa, sekä auttaa keräämään ja tallentamaan yliopistonne henkilökunnan sekä muiden tutkijoiden julkaisuja, pyydämme teitä liittymään LOCKSS-yhteisön jäseneksi. Toimiaksenne näin, jonkun henkilökunnan jäsenistä tulisi tutustua tämän järjestelmän toimintaan LOCKSS:in sivustolla. Odotan yhteydenottoanne julkaisumme arkistoinnin toteutettavuutta koskien.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$principalContactSignature}]]></body>
-		<description>This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</description>
+		<subject>{translate key="emails.lockssNewArchive.subject"}</subject>
+		<body>{translate key="emails.lockssNewArchive.body"}</body>
+		<description>{translate key="emails.lockssNewArchive.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
-		<subject>Käsikirjoituksesi on vastaanotettu</subject>
-		<body><![CDATA[Hyvä {$authorName},<br />
-<br />
-Kiitos käsikirjoituksen &quot;{$submissionTitle}&quot lähettämisestä julkaisuun {$contextName}. Käyttämämme online-julkaisunhallintajärjestelmän avulla voitte seurata käsikirjoituksen etenemistä toimitusprosessissa kirjautumalla julkaisun verkkosivustolle:<br />
-<br />
-Käsikirjoituksen URL: {$submissionUrl}<br />
-Käyttäjätunnus: {$authorUsername}<br />
-<br />
-Jos teillä on kysyttävää, otattehan yhteyttä minuun. Kiitos, että valitsitte tämän julkaisun työllenne.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
-		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
+		<subject>{translate key="emails.submissionAck.subject"}</subject>
+		<body>{translate key="emails.submissionAck.body"}</body>
+		<description>{translate key="emails.submissionAck.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
-		<subject>Käsikirjoituksesi on vastaanotettu</subject>
-		<body><![CDATA[Hei,<br />
-<br />
-{$submitterName} on lähettänyt julkaisuumme {$contextName} käsikirjoituksen &quot;{$submissionTitle}&quot;.<br />
-<br />
-Jos teillä on kysyttävää, otattehan yhteyttä minuun. Kiitos, että valitsitte tämän julkaisun työllenne.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
-		<description>This email, when enabled, is automatically sent to the other authors who are not users specified during the submission process.</description>
+		<subject>{translate key="emails.submissionAckNotUser.subject"}</subject>
+		<body>{translate key="emails.submissionAckNotUser.body"}</body>
+		<description>{translate key="emails.submissionAckNotUser.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
-		<subject>Toimituksellinen toimeksianto</subject>
-		<body><![CDATA[Hyvä {$editorialContactName},<br />
-<br />
-Käsikirjoitus &quot;{$submissionTitle},&quot; julkaisuun {$contextName} on annettu toimitusprosessin ajaksi teidän vastuullenne osastotoimittajan roolissanne.<br />
-<br />
-Käsikirjoituksen URL: {$submissionUrl}<br />
-Käyttäjätunnus: {$editorUsername}<br />
-<br />
-Ystävällisin terveisin.]]></body>
-		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</description>
+		<subject>{translate key="emails.editorAssign.subject"}</subject>
+		<body>{translate key="emails.editorAssign.body"}</body>
+		<description>{translate key="emails.editorAssign.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
-		<subject>Artikkelin arviointipyyntö</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Uskon, että olisitte sopiva arvioija käsikirjoitukselle &quot;{$submissionTitle},&quot;, joka on lähetetty {$contextName} -julkaisuun. Käsikirjoituksen abstrakti löytyy tämän viestin lopusta. Toivon, että harkitsette tähän meille tärkeään tehtävään ryhtymistä.<br />
-<br />
-Kirjautukaa julkaisun verkkosivustolle {$responseDueDate} mennessä ilmoittaaksenne haluatteko suorittaa arvioinnin vai ette. Teidän on kirjauduttava verkkosivustolle myös, jotta saatte pääsyn käsikirjoitukseen ja voitte tallentaa arviointinne ja suosituksenne. Sivusto on osoitteessa <a href="{$contextUrl}">{$contextUrl}</a><br />
-<br />
-Arvioinnin määräpäivä on {$reviewDueDate}.<br />
-<br />
-Jos ette muista käyttäjätunnustanne ja salasanaanne julkaisun verkkosivustolle, klikatkaa seuraavaa linkkiä vaihtaaksenne salasanan (salasana ja käyttäjätunnus lähetetään teille sähköpostitse). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Kiitos, että harkitsette arvioijaksi ryhtymistä.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review. (Otherwise see REVIEW_REQUEST_ATTACHED.)</description>
+		<subject>{translate key="emails.reviewRequest.subject"}</subject>
+		<body>{translate key="emails.reviewRequest.body"}</body>
+		<description>{translate key="emails.reviewRequest.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
-		<subject>Artikkelin arviointipyyntö</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle} &quot; julkaisulle {$contextName}. Toivoimme saavamme vastauksenne {$responseDueDate} mennessä, ja tämä sähköposti on lähetetty automaattisesti määräajan umpeuduttua.
-<br />
-Uskon, että olisitte sopiva arvioija kyseiselle käsikirjoitukselle. Käsikirjoituksen abstrakti löytyy tämän viestin lopusta. Toivon, että harkitsette tähän meille tärkeään tehtävään ryhtymistä.<br />
-<br />
-Kirjautukaa julkaisun verkkosivustolle ilmoittaaksenne haluatteko suorittaa arvioinnin vai ette. Teidän on kirjauduttava verkkosivustolle myös, jotta saatte pääsyn käsikirjoitukseen ja voitte tallentaa arviointinne ja suosituksenne. Sivusto on <a href="{$contextUrl}">{$contextUrl}</a><br />
-<br />
-Arvioinnin määräpäivä on {$reviewDueDate}.<br />
-<br />
-Jos ette muista käyttäjätunnustanne ja salasanaanne julkaisun verkkosivustolle, klikatkaa seuraavaa linkkiä vaihtaaksenne salasanan (salasana ja käyttäjätunnus lähetetään teille sähköpostitse). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Kiitos, että harkitsette arvioijaksi ryhtymistä.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>This email is automatically sent when a reviewer's confirmation due date elapses (see Review Options under Settings &gt; Workflow &gt; Review) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
+		<subject>{translate key="emails.reviewRequestRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>Artikkelin arviointipyyntö</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Uskon, että olisitte sopiva arvioija käsikirjoitukselle &quot;{$submissionTitle}&quot; joka on lähetetty julkaisuun {$contextName}. Julkaisun abstrakti löytyy tämän viestin lopusta. Toivon, että harkitsette tähän meille tärkeään tehtävään ryhtymistä.<br />
-<br />
-Kirjautukaa julkaisun verkkosivustolle {$responseDueDate} mennessä ilmoittaaksenne haluatteko suorittaa arvioinnin vai ette. Teidän on kirjauduttava verkkosivustolle myös, jotta saatte pääsyn käsikirjoitukseen ja voitte tallentaa arviointinne ja suosituksenne.<br />
-<br />
-Arvioinnin määräpäivä on {$reviewDueDate}.<br />
-<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Kiitos, että harkitsette arvioijaksi ryhtymistä.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review, and one-click reviewer access is enabled.</description>
+		<subject>{translate key="emails.reviewRequestOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
-		<subject>Artikkelin arviointipyyntö</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle}&quot; julkaisulle {$contextName}. Toivoimme saavamme vastauksenne {$responseDueDate} mennessä, ja tämä sähköposti on lähetetty automaattisesti määräajan umpeuduttua.
-<br />
-Uskon, että olisitte sopiva arvioija kyseiselle käsikirjoitukselle. Käsikirjoituksen abstrakti löytyy tämän sähköpostin lopusta. Toivon, että harkitsette tähän meille tärkeään tehtävään ryhtymistä.<br />
-<br />
-Kirjautukaa julkaisun verkkosivustolle ilmoittaaksenne haluatteko suorittaa arvioinnin vai ette. Teidän on kirjauduttava verkkosivustolle myös, jotta saatte pääsyn käsikirjoitukseen ja voitte tallentaa arviointinne ja suosituksenne.<br />
-<br />
-Arvioinnin määräpäivä on {$reviewDueDate}.<br />
-<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Kiitos, että harkitsette arvioijaksi ryhtymistä.<br />
-<br />
-Ystävällisin terveisin<br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>This email is automatically sent when a reviewer's confirmation due date elapses (see Review Options under Settings &gt; Workflow &gt; Review) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
+		<subject>{translate key="emails.reviewRequestRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRequestRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRequestRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
-		<subject>Artikkelin arviointipyyntö</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Uskon, että sopisitte erinomaisesti käsikirjoituksen&quot;{$submissionTitle},&quot; arvioijaksi, ja pyydänkin, että harkitsette ryhtyvänne tähän meille tärkeään tehtävään. Julkaisumme arviointiohjeet löytyvät tämän sähköpostin lopusta ja käsikirjoitus on liitteenä. Arviointinne sekä suosituksenne tulisi lähettää minulle sähköpostitse {$reviewDueDate} mennessä.<br />
-<br />
-Ilmoittakaa pystyttekö ja haluatteko suorittaa arvioinnin vastaamalla tähän viestiin {$responseDueDate} mennessä.<br />
-<br />
-Kiitos, että harkitsette arviointiin ryhtymistä.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-Arviointiohjeet<br />
-<br />
-{$reviewGuidelines}<br />
-]]></body>
-		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review. (Otherwise see REVIEW_REQUEST.)</description>
+		<subject>{translate key="emails.reviewRequestAttached.subject"}</subject>
+		<body>{translate key="emails.reviewRequestAttached.body"}</body>
+		<description>{translate key="emails.reviewRequestAttached.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
-		<subject>Artikkelin arviointipyyntö</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Tämä viesti koskee käsikirjoitusta &quot;{$submissionTitle},&quot; joka on käsiteltävänä julkaisussa {$contextName}.<br />
-<br />
-Käsikirjoituksen aiemman version arvioinnin jälkeen kirjoittaja on nyt lähettänyt korjatun version työstään. Arvostaisimme suuresti, jos voisitte auttaa sen arvioinnissa.<br />
-<br />
-Kirjautukaa julkaisun verkkosivustolle {$responseDueDate} mennessä ilmoittaaksenne haluatteko suorittaa arvioinnin vai ette. Teidän on kirjauduttava verkkosivustolle myös, jotta saatte pääsyn käsikirjoitukseen ja voitte tallentaa arviointinne ja suosituksenne. Verkkosivusto on osoitteessa <a href="{$contextUrl}">{$contextUrl}</a><br />
-<br />
-Arvioinnin määräpäivä on {$reviewDueDate}.<br />
-<br />
-Jos ette muista käyttäjätunnustanne ja salasanaanne julkaisun verkkosivustolle, klikatkaa seuraavaa linkkiä vaihtaaksenne salasananne (salasana ja käyttäjätunnus lähetetään teille sähköpostitse). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Kiitos, että harkitsette arvioijaksi ryhtymistä.<br />
-<br />
-Ystävällisin terveisin, <br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+		<subject>{translate key="emails.reviewRequestSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
-		<subject>Artikkelin arviointipyyntö</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Tämä viesti koskee käsikirjoitusta &quot;{$submissionTitle},&quot; joka on käsiteltävänä julkaisussa {$contextName}.<br />
-<br />
-Käsikirjoituksen aiemman version arvioinnin jälkeen kirjoittaja on nyt lähettänyt korjatun version työstään. Arvostaisimme suuresti, jos voisitte auttaa sen arvioinnissa.<br />
-<br />
-Kirjautukaa julkaisun verkkosivustolle {$responseDueDate} mennessä ilmoittaaksenne haluatteko suorittaa arvioinnin vai ette. Teidän on kirjauduttava verkkosivustolle myös, jotta saatte pääsyn käsikirjoitukseen ja voitte tallentaa arviointinne ja suosituksenne.<br />
-<br />
-Arvioinnin määräpäivä on {$reviewDueDate}.<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Kiitos, että harkitsette arvioijaksi ryhtymistä.<br />
-<br />
-Ystävällisin terveisin, <br />
-{$editorialContactSignature}<br />
-<br />
-&quot;{$submissionTitle}&quot;<br />
-<br />
-{$submissionAbstract}]]></body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review, and one-click reviewer access is enabled.</description>
+		<subject>{translate key="emails.reviewRequestOneclickSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestOneclickSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestOneclickSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
-		<subject>Artikkelin arviointipyyntö</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Tämä viesti koskee käsikirjoitusta &quot;{$submissionTitle},&quot;, joka on käsiteltävänä julkaisussa {$contextName}.<br />
-<br />
-Käsikirjoituksen aiemman version arvioinnin jälkeen kirjoittaja on nyt lähettänyt korjatun version työstään. Arvostaisimme suuresti, jos voisitte auttaa sen arvioinnissa.<br />
-<br />
-Julkaisumme arviointiohjeet löytyvät tämän sähköpostin lopusta ja käsikirjoitus on liitteenä. Arviointinne sekä suosituksenne tulisi lähettää minulle sähköpostitse {$reviewDueDate} mennessä.<br />
-<br />
-Ilmoittakaa pystyttekö ja haluatteko suorittaa arvioinnin vastaamalla tähän viestiin {$responseDueDate} mennessä.<br />
-<br />
-Kiitos, että harkitsette arviointiin ryhtymistä.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-<br />
-<br />
-Arviointiohjeet<br />
-<br />
-{$reviewGuidelines}<br />
-]]></body>
-		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission for a second or greater round of review. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Management &gt; Settings &gt; Workflow &gt; Review. (Otherwise see REVIEW_REQUEST_SUBSEQUENT.)</description>
+		<subject>{translate key="emails.reviewRequestAttachedSubsequent.subject"}</subject>
+		<body>{translate key="emails.reviewRequestAttachedSubsequent.body"}</body>
+		<description>{translate key="emails.reviewRequestAttachedSubsequent.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
-		<subject>Arviointipyynnön peruminen</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Olemme tässä vaiheessa päättäneet perua pyyntömme käsikirjoituksen &quot;{$submissionTitle}&quot; arvioinnista julkaisulle {$contextName}. Pahoittelemme tästä teille mahdollisesti aiheutuvia haittoja, ja toivomme, että voimme tulevaisuudessa pyytää teitä avustamaan julkaisumme arviointiprosessissa.<br />
-<br />
-Mikäli teillä on kysyttävää, otattehan yhteyttä minuun.<br />
-<br />
-Ystävällisin terveisin.]]></body>
-		<description>This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</description>
+		<subject>{translate key="emails.reviewCancel.subject"}</subject>
+		<body>{translate key="emails.reviewCancel.body"}</body>
+		<description>{translate key="emails.reviewCancel.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
-		<subject>Arvioinnin hyväksyminen</subject>
-		<body><![CDATA[Hyvät toimittajat,<br />
-<br />
-Olen halukas arvioimaan käsikirjoituksen &quot;{$submissionTitle}&quot; julkaisulle {$contextName}. Kiitos, että pyysitte minua tähän tehtävään. Suoritan arvioinnin viimeistään sen määräaikaan {$reviewDueDate} mennessä.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.</description>
+		<subject>{translate key="emails.reviewConfirm.subject"}</subject>
+		<body>{translate key="emails.reviewConfirm.body"}</body>
+		<description>{translate key="emails.reviewConfirm.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
-		<subject>Arviointipyynnön hylkääminen</subject>
-		<body><![CDATA[Hyvät toimittajat,<br />
-<br />
-En valitettavasti voi tällä kertaa suorittaa käsikirjoituksen &quot;{$submissionTitle}&quot; arviointia julkaisulle {$contextName}. Kiitos, että pyysitte minua tähän tehtävään. Toivon, että otatte vastaisuudessakin minuun yhteyttä arviointeja koskien.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined.</description>
+		<subject>{translate key="emails.reviewDecline.subject"}</subject>
+		<body>{translate key="emails.reviewDecline.body"}</body>
+		<description>{translate key="emails.reviewDecline.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
-		<subject>Artikkelin arviointi vastaanotettu</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Kiitos käsikirjoituksen &quot;{$submissionTitle}&quot; arvioinnin suorittamisesta julkaisulle {$contextName}. Arvostamme panostanne julkaisemamme työn laadun hyväksi.<br />
-<br />
-Ystävällisin terveisin.]]></body>
-		<description>This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</description>
+		<subject>{translate key="emails.reviewAck.subject"}</subject>
+		<body>{translate key="emails.reviewAck.body"}</body>
+		<description>{translate key="emails.reviewAck.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
-		<subject>Muistutus käsikirjoituksen arvioinnista</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle},&quot; julkaisulle {$contextName}. Toivoimme saavamme arviointinne {$reviewDueDate} mennessä, ja nyt olisimme iloisia, mikäli voisitte lähettää arvioinnin meille heti sen suoritettuanne.<br />
-<br />
-Jos ette muista käyttäjätunnustanne ja salasanaanne julkaisun verkkosivustolle, klikatkaa seuraavaa linkkiä vaihtaaksenne salasanan (salasana ja käyttäjätunnus lähetetään teille sähköpostitse). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Vahvistattehan vielä, voitteko suorittaa tämän arvioinnin.<br />
-<br />
-Yhteydenottoanne odottaen,<br />
-{$editorialContactSignature}]]></body>
-		<description>This email is sent by a Section Editor to remind a reviewer that their review is due.</description>
+		<subject>{translate key="emails.reviewRemind.subject"}</subject>
+		<body>{translate key="emails.reviewRemind.body"}</body>
+		<description>{translate key="emails.reviewRemind.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
-		<subject>Muistutus käsikirjoituksen arvioinnista</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle}&quot; julkaisulle {$contextName}. Toivoimme saavamme arviointinne {$reviewDueDate} mennessä, ja nyt olisimme iloisia, mikäli voisitte lähettää arvioinnin meille heti sen suoritettuanne.<br />
-<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Vahvistattehan vielä, voitteko suorittaa tämän arvioinnin.<br />
-<br />
-Yhteydenottoanne odottaen,<br >
-{$editorialContactSignature}]]></body>
-		<description>This email is sent by a Section Editor to remind a reviewer that their review is due.</description>
+		<subject>{translate key="emails.reviewRemindOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindOneclick.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
-		<subject>Automaattinen muistutus käsikirjoituksen arvioinnista</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle}&quot; julkaisulle {$contextName}. Toivoimme saavamme arviointinne {$reviewDueDate} mennessä, ja tämä sähköposti on lähetetty automaattisesti määräajan umpeuduttua. Olisimme iloisia, mikäli edelleen voisitte lähettää arvioinnin meille heti sen suoritettuanne.<br />
-<br />
-Jos ette muista käyttäjätunnustanne ja salasanaanne julkaisun verkkosivustolle, klikatkaa seuraavaa linkkiä vaihtaaksenne salasanan (salasana ja käyttäjätunnus lähetetään teille sähköpostitse). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
-<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Vahvistattehan vielä voitteko suorittaa tämän arvioinnin.<br />
-<br />
-Yhteydenottoanne odottaen,<br />
-{$editorialContactSignature}]]></body>
-		<description>This email is automatically sent when a reviewer's due date elapses (see Review Options under Settings &gt; Workflow &gt; Review) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
+		<subject>{translate key="emails.reviewRemindAuto.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAuto.body"}</body>
+		<description>{translate key="emails.reviewRemindAuto.description"}</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
-		<subject>Automaattinen muistutus käsikirjoituksen arvioinnista</subject>
-		<body><![CDATA[Hyvä {$reviewerName},<br />
-<br />
-Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle}&quot; julkaisulle {$contextName}. Toivoimme saavamme arviointinne {$reviewDueDate} mennessä, ja tämä sähköposti on lähetetty automaattisesti määräajan umpeuduttua. Olisimme iloisia, mikäli edelleen voisitte lähettää arvioinnin meille heti sen suoritettuanne.<br />
-<br />
-Käsikirjoituksen URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-<br />
-Vahvistattehan vielä, voitteko suorittaa tämän arvioinnin.<br />
-<br />
-Yhteydenottoanne odottaen,<br >
-{$editorialContactSignature}]]></body>
-		<description>This email is automatically sent when a reviewer's due date elapses (see Review Options under Settings &gt; Workflow &gt; Review) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
+		<subject>{translate key="emails.reviewRemindAutoOneclick.subject"}</subject>
+		<body>{translate key="emails.reviewRemindAutoOneclick.body"}</body>
+		<description>{translate key="emails.reviewRemindAutoOneclick.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
-		<subject>Toimittajan päätös</subject>
-		<body><![CDATA[Hyvä {$authorName},<br />
-<br />
-Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
-<br />
-Päätöksemme on: Käsikirjoitus on hyväksytty<br />
-<br />
-Ystävällisin terveisin,]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final "accept submission" decision regarding their submission.</description>
+		<subject>{translate key="emails.editorDecisionAccept.subject"}</subject>
+		<body>{translate key="emails.editorDecisionAccept.body"}</body>
+		<description>{translate key="emails.editorDecisionAccept.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
-		<subject>Toimittajan päätös</subject>
-		<body><![CDATA[Hyvä {$authorName},<br />
-<br />
-Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
-<br />
-Päätöksemme on: Lähetetään arvioitavaksi<br />
-<br />
-Käsikirjoituksen URL: {$submissionUrl}<br />
-<br />
-Ystävällisin terveisin,]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them that their submission is being sent to an external review.</description>
+		<subject>{translate key="emails.editorDecisionSendToExternal.subject"}</subject>
+		<body>{translate key="emails.editorDecisionSendToExternal.body"}</body>
+		<description>{translate key="emails.editorDecisionSendToExternal.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
-		<subject>Toimittajan päätös</subject>
-		<body><![CDATA[Hyvä {$authorName},<br />
-<br />
-Käsikirjoituksenne &quot;{$submissionTitle},&quot; on nyt toimitettu ja lähetämme sen tuotantoon.<br />
-<br />
-Käsikirjoituksen URL: {$submissionUrl}<br />
-<br />
-Ystävällisin terveisin,]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them that their submission is being sent to production.</description>
+		<subject>{translate key="emails.editorDecisionSendToProduction.subject"}</subject>
+		<body>{translate key="emails.editorDecisionSendToProduction.body"}</body>
+		<description>{translate key="emails.editorDecisionSendToProduction.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
-		<subject>Toimittajan päätös</subject>
-		<body><![CDATA[Hyvä {$authorName},<br />
-<br />
-Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
-<br />
-Päätöksemme on: Vaatii korjauksia<br />
-<br />
-Ystävällisin terveisin,]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final "revisions required" decision regarding their submission.</description>
+		<subject>{translate key="emails.editorDecisionRevisions.subject"}</subject>
+		<body>{translate key="emails.editorDecisionRevisions.body"}</body>
+		<description>{translate key="emails.editorDecisionRevisions.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
-		<subject>Toimittajan päätös</subject>
-		<body><![CDATA[Hyvä {$authorName},<br />
-<br />
-Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
-<br />
-Päätöksemme on: Lähetetään uudelleen arvioitavaksi<br />
-<br />
-Ystävällisin terveisin,]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final "resubmit" decision regarding their submission.</description>
+		<subject>{translate key="emails.editorDecisionResubmit.subject"}</subject>
+		<body>{translate key="emails.editorDecisionResubmit.body"}</body>
+		<description>{translate key="emails.editorDecisionResubmit.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
-		<subject>Toimittajan päätös</subject>
-		<body><![CDATA[Hyvä {$authorName},<br />
-<br />
-Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
-<br />
-Päätöksemme on: Käsikirjoitus on hylätty<br />
-<br />
-Ystävällisin terveisin,]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final "decline" decision regarding their submission.</description>
+		<subject>{translate key="emails.editorDecisionDecline.subject"}</subject>
+		<body>{translate key="emails.editorDecisionDecline.body"}</body>
+		<description>{translate key="emails.editorDecisionDecline.description"}</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
-		<subject>Teknistä toimittamista pyydetään</subject>
-		<body><![CDATA[Hyvä {$participantName},<br />
-<br />
-Pyytäisin teitä toimittamaan teknisesti käsikirjoituksen &quot;{$submissionTitle}&quot; julkaisulle {$contextName}, seuraavia vaiheita noudattaen:<br />
-1. Klikatkaa alla olevaa käsikirjoituksen URL-osoitetta.<br />
-2. Avatkaa Luonnostiedostot-otsikon alla olevat tiedostot ja toimittakaa ne teknisesti. Voitte samalla lisätä tekniseen toimittamiseen liittyviä keskusteluja tarpeen mukaan.<br />
-3. Tallentakaa teknisesti toimitetut tiedostot ja ladatkaa ne Teknisesti toimitettu -paneeliin.<br />
-4. Ilmoittakaa toimittajalle, että kaikki tiedostot ovat valmiina, ja että tuotantoprosessi voidaan aloittaa.<br />
-<br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Käsikirjoituksen URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Käyttäjätunnus: {$participantUsername}<br />
-<br />
-Ystävällisin terveisin,]]></body>
-		<description>This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</description>
+		<subject>{translate key="emails.copyeditRequest.subject"}</subject>
+		<body>{translate key="emails.copyeditRequest.body"}</body>
+		<description>{translate key="emails.copyeditRequest.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
-		<subject>Julkaistavia tiedostoja pyydetään</subject>
-		<body><![CDATA[Hyvä {$participantName},<br />
-<br />
-Julkaisuun {$contextName} liittyvä käsikirjoitus &quot;{$submissionTitle}&quot; tulee nyt taittaa julkaistaviksi tiedostoiksi, seuraavia vaiheita noudattaen:<br />
-1. Klikatkaa alla olevaa käsikirjoituksen URL-osoitetta.<br />
-2. Kirjautukaa julkaisuun ja käyttäkää tuotantovalmiita tiedostoja laatiaksenne julkaistavat tiedostot julkaisun standardien mukaisesti.<br />
-3. Ladatkaa valmiit tiedostot Julkaistavat tiedostot -osioon.<br />
-4. Ilmoittakaa toimittajalle Tuotantoon liittyvien keskustelujen kautta, että julkaistavat tiedostot ovat valmiit ja ne on ladattu.<br />
-<br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Käsikirjoituksen URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Käyttäjätunnus: {$participantUsername}<br />
-<br />
-Mikäli ette voi ryhtyä tähän tehtävään juuri nyt, tai  jos teillä on kysyttävää, otattehan minuun yhteyttä. Kiitos panoksestanne tämän julkaisun hyväksi.<br />
-<br />
-Ystävällisin terveisin,]]></body>
-		<description>This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it.</description>
+		<subject>{translate key="emails.layoutRequest.subject"}</subject>
+		<body>{translate key="emails.layoutRequest.body"}</body>
+		<description>{translate key="emails.layoutRequest.description"}</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
-		<subject>Julkaistavat tiedostot valmiita</subject>
-		<body><![CDATA[Hyvä {$editorialContactName},<br />
-<br />
-Julkaisuun {$contextName} liittyvän käsikirjoituksen &quot;{$submissionTitle}&quot; julkaistavat tiedostot on nyt taitettu ja ne ovat valmiit oikolukua varten.<br />
-<br />
-Mikäli teillä on kysyttävää, otattehan minuun yhteyttä.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$participantName}]]></body>
-		<description>This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</description>
+		<subject>{translate key="emails.layoutComplete.subject"}</subject>
+		<body>{translate key="emails.layoutComplete.body"}</body>
+		<description>{translate key="emails.layoutComplete.description"}</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
-		<subject>Mahdollisesti kiinnostava artikkeli</subject>
-		<body><![CDATA[Ajattelin, että sinua saattaisi kiinnostaa {$authorName}n kirjoittama "{$submissionTitle}". Se on julkaistu julkaisussa {$contextName} Vol {$volume} Nro. {$number} ({$year}) ja löytyy osoitteesta "<a href="{$articleUrl}">{$articleUrl}</a>".]]></body>
-		<description>This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</description>
+		<subject>{translate key="emails.emailLink.subject"}</subject>
+		<body>{translate key="emails.emailLink.body"}</body>
+		<description>{translate key="emails.emailLink.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Ilmoitus tilauksesta</subject>
-		<body><![CDATA[Hyvä {$subscriberName},<br />
-<br />
-Teidät on nyt rekisteröity julkaisun {$contextName} tilaajaksi online-julkaisunhallintajärjestelmäämme seuraavin tilaustiedoin:<br>
-<br />
-{$subscriptionType}<br />
-<br />
-Voidaksenne käyttää sisältöä, joka on vain tilaajien saatavilla, kirjautukaa järjestelmään käyttäjätunnuksellanne,&quot;{$username}&quot;.<br />
-<br />
-Kirjauduttuanne sisään järjestelmään voitte muuttaa profiilitietojanne ja salasananne milloin tahansa.<br />
-<br />
-Huomioittehan, että mikäli tilauksenne on instituutiotilaus, käyttäjien ei instituutiossanne tarvitse kirjautua sisään, sillä järjestelmä todentaa tilaussisältöä koskevat pyynnöt automaattisesti.<br />
-<br />
-Jos teillä on kysyttävää, otattehan yhteyttä minuun.<br>
-<br />
-Ystävällisin terveisin,<br />
-{$subscriptionContactSignature}]]></body>
-		<description>This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</description>
+		<subject>{translate key="emails.subscriptionNotify.subject"}</subject>
+		<body>{translate key="emails.subscriptionNotify.body"}</body>
+		<description>{translate key="emails.subscriptionNotify.description"}</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Numero nyt avoimesti saatavilla</subject>
-		<body><![CDATA[Hyvä lukija,<br />
-<br />
-Julkaisun {$contextName} alla oleva numero on nyt avoimesti saatavilla. Voitte tutustua sisällysluetteloon tässä ja sen jälkeen tutustua artikkeleihin ja muihin kiinnostaviin kohteisiin verkkosivustollamme (<a href="{$contextUrl}">{$contextUrl}</a>.<br />
-<br />
-Kiitos mielenkiinnostanne työtämme kohtaan,<br />
-{$editorialContactSignature}]]></body>
-		<description>This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access.</description>
+		<subject>{translate key="emails.openAccessNotify.subject"}</subject>
+		<body>{translate key="emails.openAccessNotify.body"}</body>
+		<description>{translate key="emails.openAccessNotify.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Ilmoitus tilauksen päättymisestä</subject>
-		<body><![CDATA[Hyvä {$subscriberName},<br />
-<br />
-{$contextName} -tilauksenne on päättymässä.<br />
-<br />
-{$subscriptionType}<br />
-Tilauksen päättymispäivämäärä: {$expiryDate}<br />
-<br />
-Varmistaaksenne pääsyn tämän julkaisun sisältöön jatkossakin uusikaa tilauksenne julkaisun verkkosivustolla. Voitte kirjautua järjestelmään käyttäjätunnuksellanne &quot;{$username}&quot;.<br />
-<br />
-Jos teillä on kysyttävää, otattehan yhteyttä minuun.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$subscriptionContactSignature}]]></body>
-		<description>This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access.</description>
+		<subject>{translate key="emails.subscriptionBeforeExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionBeforeExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionBeforeExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Tilauksenne on päättynyt</subject>
-		<body><![CDATA[Hyvä {$subscriberName},<br />
-<br />
-{$contextName} -tilauksenne on päättynyt.<br />
-<br />
-{$subscriptionType}<br />
-Tilauksen päättymispäivämäärä: {$expiryDate}<br />
-<br />
-Voitte uusi tilauksenne julkaisun verkkosivustolla, jossa voitte kirjautua järjestelmään käyttäjätunnuksellanne &quot;{$username}&quot;.<br />
-<br />
-Jos teillä on kysyttävää, otattehan yhteyttä minuun.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$subscriptionContactSignature}]]></body>
-		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiry.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiry.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiry.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Tilauksenne on päättynyt - Viimeinen muistutus</subject>
-		<body><![CDATA[Hyvä {$subscriberName},<br />
-<br />
-{$contextName} -tilauksenne on päättynyt.<br />
-<br />
-Huomaattehan, että tämä on viimeinen teille lähetettävä muistutus.<br />
-<br />
-{$subscriptionType}<br />
-Tilauksen päättymispäivämäärä: {$expiryDate}<br />
-<br />
-Voitte uusi tilauksenne julkaisun verkkosivustolla, jossa voitte kirjautua järjestelmään käyttäjätunnuksellanne &quot;{$username}&quot;.<br />
-<br />
-Jos teillä on kysyttävää, otattehan yhteyttä minuun.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$subscriptionContactSignature}]]></body>
-		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
+		<subject>{translate key="emails.subscriptionAfterExpiryLast.subject"}</subject>
+		<body>{translate key="emails.subscriptionAfterExpiryLast.body"}</body>
+		<description>{translate key="emails.subscriptionAfterExpiryLast.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>Yksittäistilauksen osto</subject>
-		<body><![CDATA[Julkaisun {$contextName} yksittäistilaus on ostettu verkossa. Tilauksen tiedot:<br />
-<br />
-Tilausvaihtoehto:<br />
-{$subscriptionType}<br />
-<br />
-Käyttäjä:<br />
-{$userDetails}<br />
-<br />
-Jäsenyystiedot (jos annettu):<br />
-{$membership}<br />
-<br />
-Käytäthän seuraavaa URL-osoitetta katsoaksesi tai muokataksesi tätä tilausta:<br />
-<br />
-Tilauksen URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
-]]></body>
-		<description>This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
+		<subject>{translate key="emails.subscriptionPurchaseIndl.subject"}</subject>
+		<body>{translate key="emails.subscriptionPurchaseIndl.body"}</body>
+		<description>{translate key="emails.subscriptionPurchaseIndl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>Instituutiotilauksen osto</subject>
-		<body><![CDATA[Julkaisun {$contextName} instituutiotilaus on ostettu verkossa alla olevin tiedoin. Aktivoidaksesi tämän tilauksen käytäthän annettua tilauksen URL-osoitetta ja aseta tilauksen tila aktiiviseksi.<br />
-<br />
-Tilausvaihtoehto:<br />
-{$subscriptionType}<br />
-<br />
-Instituutio:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-Verkkotunnus (domain) (jos annettu):<br />
-{$domain}<br />
-<br />
-IP-osoitealueet (jos annettu):<br />
-{$ipRanges}<br />
-<br />
-Yhteyshenkilö:<br />
-{$userDetails}<br />
-<br />
-Jäsenyystiedot (jos annettu):<br />
-{$membership}<br />
-<br />
-Käytäthän seuraavaa URL-osoitetta katsoaksesi ja muokataksesi tätä tilausta:<br />
-<br />
-Tilauksen URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
-]]></body>
-		<description>This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
+		<subject>{translate key="emails.subscriptionPurchaseInstl.subject"}</subject>
+		<body>{translate key="emails.subscriptionPurchaseInstl.body"}</body>
+		<description>{translate key="emails.subscriptionPurchaseInstl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
-		<subject>Yksittäistilaus uusittu</subject>
-		<body><![CDATA[Julkaisun {$contextName} yksittäistilaus on uusittu verkossa. Tilauksen tiedot:<br />
-<br />
-Tilausvaihtoehto:<br />
-{$subscriptionType}<br />
-<br />
-Käyttäjä:<br />
-{$userDetails}<br />
-<br />
-Jäsenyystiedot (jos saatavilla):<br />
-{$membership}<br />
-<br />
-Käytäthän seuraavaa URL-osoitetta katsoaksesi tai muokataksesi tätä tilausta:<br />
-<br />
-Tilauksen URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
-]]></body>
-		<description>This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
+		<subject>{translate key="emails.subscriptionRenewIndl.subject"}</subject>
+		<body>{translate key="emails.subscriptionRenewIndl.body"}</body>
+		<description>{translate key="emails.subscriptionRenewIndl.description"}</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
-		<subject>Instituutiotilaus uusittu</subject>
-		<body><![CDATA[Julkaisun {$contextName} instituutiotilaus on uusittu verkossa. Tilauksen tiedot:<br />
-<br />
-Tilausvaihtoehto:<br />
-{$subscriptionType}<br />
-<br />
-Instituutio:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-Verkkotunnus (domain) (jos annettu):<br />
-{$domain}<br />
-<br />
-IP-osoitealueet (jos annettu):<br />
-{$ipRanges}<br />
-<br />
-Yhteyshenkilö:<br />
-{$userDetails}<br />
-<br />
-Jäsenyystiedot (jos annettu):<br />
-{$membership}<br />
-<br />
-Käytäthän seuraavaa URL-osoitetta katsoaksesi ja muokataksesi tätä tilausta:<br />
-<br />
-Tilauksen URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
-]]></body>
-		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
+		<subject>{translate key="emails.subscriptionRenewInstl.subject"}</subject>
+		<body>{translate key="emails.subscriptionRenewInstl.body"}</body>
+		<description>{translate key="emails.subscriptionRenewInstl.description"}</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>Viittausten muokkaus</subject>
-		<body><![CDATA[Hyvä {$authorFirstName},<br />
-<br />
-Voisitteko ystävällisesti vahvistaa seuraavan artikkelissanne {$submissionTitle} olevan lähdeviitteen tai antaa oikean viittauksen:<br />
-<br />
-{$rawCitation}<br />
-<br />
-Kiitos!<br />
-<br />
-{$userFirstName}<br />
-Tekninen toimittaja, {$contextName}<br />
-]]></body>
-		<description>This email allows copyeditors to request additional information about references from authors.</description>
+		<subject>{translate key="emails.citationEditorAuthorQuery.subject"}</subject>
+		<body>{translate key="emails.citationEditorAuthorQuery.body"}</body>
+		<description>{translate key="emails.citationEditorAuthorQuery.description"}</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>Korjattu versio on ladattu</subject>
-		<body><![CDATA[Hyvät toimittajat,<br />
-<br />
-{$authorName} on ladannut käsikirjoituksen &quot;{$submissionTitle}&quot; korjatun version.<br />
-<br />
-Käsikirjoituksen URL: {$submissionUrl}<br />
-<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
-		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
+		<subject>{translate key="emails.revisedVersionNotify.subject"}</subject>
+		<body>{translate key="emails.revisedVersionNotify.body"}</body>
+		<description>{translate key="emails.revisedVersionNotify.description"}</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
-		<subject>Viesti julkaisua {$contextName} koskien</subject>
-		<body><![CDATA[Kirjoita viesti]]></body>
-		<description>The default (blank) message used in the Notification Center Message Listbuilder.</description>
+		<subject>{translate key="emails.notificationCenterDefault.subject"}</subject>
+		<body>{translate key="emails.notificationCenterDefault.body"}</body>
+		<description>{translate key="emails.notificationCenterDefault.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
-		<subject>Toimittajan päätös</subject>
-		<body>
-			<![CDATA[Hyvä {$authorName},<br />
-<br />
-Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
-<br />
-Päätöksemme on: Käsikirjoitus on hylätty]]></body>
-		<description>This email is sent to the author if the editor declines their submission initially, before the review stage</description>
+		<subject>{translate key="emails.editorDecisionInitialDecline.subject"}</subject>
+		<body>{translate key="emails.editorDecisionInitialDecline.body"}</body>
+		<description>{translate key="emails.editorDecisionInitialDecline.description"}</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
-		<subject>Toimittajan suositus</subject>
-		<body><![CDATA[{$editors}:<br />
-<br />
-Julkaisun {$contextName} käsikirjoitusta &quot;{$submissionTitle}&quot; koskeva suositus on: {$recommendation}<br />
-<br />
-Ystävällisin terveisin,]]></body>
-		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission.</description>
+		<subject>{translate key="emails.editorRecommendation.subject"}</subject>
+		<body>{translate key="emails.editorRecommendation.body"}</body>
+		<description>{translate key="emails.editorRecommendation.description"}</description>
 	</email_text>
 </email_texts>
