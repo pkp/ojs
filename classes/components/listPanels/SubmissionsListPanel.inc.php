@@ -82,7 +82,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 		return array_map(function($section) {
 			return [
 				'param' => 'sectionIds',
-				'value' => $section['id'],
+				'value' => (int) $section['id'],
 				'title' => $section['title'],
 			];
 		}, $sections);
