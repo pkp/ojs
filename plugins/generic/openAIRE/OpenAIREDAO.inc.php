@@ -22,7 +22,7 @@ class OpenAIREDAO extends OAIDAO {
 	 * Set parent OAI object.
 	 * @param JournalOAI
 	 */
-	function setOAI(&$oai) {
+	function setOAI($oai) {
 		$this->oai = $oai;
 	}
 
