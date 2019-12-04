@@ -40,7 +40,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	 *
 	 * @param array $args {
 	 *		@option int contextId If not supplied, CONTEXT_ID_NONE will be used and
-	 *			no submissions will be returned. To retrieve submissions from all
+	 *			no submissions will be returned. To retrieve issues from all
 	 *			contexts, use CONTEXT_ID_ALL.
 	 * 		@option int volumes
 	 * 		@option int numbers
