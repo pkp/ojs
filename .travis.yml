@@ -6,14 +6,10 @@ matrix:
     php: 7.2
   # PostgreSQL / various PHP
   - env: TEST=pgsql
-    php: 7.1
-  - env: TEST=pgsql
     php: 7.2
   - env: TEST=pgsql
     php: 7.3
   # MySQL / various PHP
-  - env: TEST=mysql
-    php: 7.1
   - env: TEST=mysql
     php: 7.2
   - env: TEST=mysql
