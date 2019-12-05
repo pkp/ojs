@@ -15,8 +15,6 @@ namespace APP\components\forms\context;
 use \PKP\components\forms\context\PKPLicenseForm;
 use \PKP\components\forms\FieldOptions;
 
-define('FORM_LICENSE', 'license');
-
 class LicenseForm extends PKPLicenseForm {
 	/** @copydoc FormComponent::$id */
 	public $id = FORM_LICENSE;

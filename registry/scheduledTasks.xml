@@ -26,4 +26,9 @@
 
 <!DOCTYPE scheduled_tasks SYSTEM "../lib/pkp/dtd/scheduledTasks.dtd">
 
-<scheduled_tasks></scheduled_tasks>
+<scheduled_tasks>
+	<task class="lib.pkp.classes.task.StatisticsReport">
+		<descr>Send automated statistics reports to journal managers and editors.</descr>
+		<frequency day="1"/>
+	</task>
+</scheduled_tasks>
