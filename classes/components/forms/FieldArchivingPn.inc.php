@@ -14,6 +14,9 @@
  *  access the settings, from a form-like view in the distribution settings.
  */
 namespace APP\components\forms;
+
+use PKP\components\forms\FieldOptions;
+
 class FieldArchivingPn extends FieldOptions {
 	/** @copydoc Field::$component */
 	public $component = 'field-archiving-pn';
