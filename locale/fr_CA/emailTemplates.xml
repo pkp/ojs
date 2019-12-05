@@ -13,86 +13,39 @@
 
 <email_texts locale="fr_CA">
 	<email_text key="NOTIFICATION">
-		<subject>Nouvel avis de {$siteTitle}</subject>
-		<body><![CDATA[Vous avez un nouvel avis de {$siteTitle} :<br />
-<br />
-{$notificationContents}<br />
-<br />
-Lien : {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Ce courriel est envoyé aux utilisateurs-trices inscrits-es qui ont choisi de recevoir par courriel ce type d'avis.</description>
+		<subject>{translate key="emails.notification.subject"}</subject>
+		<body>{translate key="emails.notification.body"}</body>
+		<description>{translate key="emails.notification.description"}</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Confirmation de la réinitialisation du mot de passe</subject>
-		<body><![CDATA[Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />
-<br />
-Si vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous souhaitez réinitialiser votre mot de passe, cliquer sur l'URL ci-dessous.<br />
-<br />
-Réinitialisation de mon mot de passe : {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Ce courriel est envoyé à l'utilisateur-trice inscrit-e qui nous signale avoir oublié son mot de passe ou qui est incapable d'ouvrir une session. Il fournit le lien URL à cliquer pour pouvoir réinitialiser son mot de passe.</description>
+		<subject>{translate key="emails.passwordResetConfirm.subject"}</subject>
+		<body>{translate key="emails.passwordResetConfirm.body"}</body>
+		<description>{translate key="emails.passwordResetConfirm.description"}</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Réinitialisation du mot de passe</subject>
-		<body><![CDATA[Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver votre nom d'utilisateur-trice ainsi que votre mot de passe. Vous en aurez besoin pour chacune de vos interactions avec la serveur.<br />
-<br />
-Votre nom d'utilisateur-trice : {$username}<br />
-Mot de passe : {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description><![CDATA[Ce courriel est envoyé à l'utilisateur-trice inscrit-e lorsqu'il a réussi à réinitialiser son mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».]]></description>
+		<subject>{translate key="emails.passwordReset.subject"}</subject>
+		<body>{translate key="emails.passwordReset.body"}</body>
+		<description>{translate key="emails.passwordReset.description"}</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Inscription à la serveur</subject>
-		<body><![CDATA[{$userFullName},<br />
-<br />
-Vous êtes désormais inscrit-e en tant qu'utilisateur-trice pour {$contextName}. Votre nom d'utilisateur-trice et votre mot de passe figurent dans ce courriel, lesquels sont requis pour toute interaction avec la serveur via son site Web. À n'importe quel moment, vous pouvez demander à être retiré-e de la liste des utilisateurs-trices de la serveur en nous contactant.<br />
-<br />
-Nom d'utilisateur-trice : {$username}<br />
-Mot de passe : {$password}<br />
-<br />
-Merci,<br />
-{$principalContactSignature}]]></body>
-		<description>Ce courriel est envoyé à utilisateur-trice nouvellement inscrit-e pour lui souhaiter la bienvenue à la serveur et l'informer de son nom d'utilisateur-trice et de son mot de passe.</description>
+		<subject>{translate key="emails.userRegister.subject"}</subject>
+		<body>{translate key="emails.userRegister.body"}</body>
+		<description>{translate key="emails.userRegister.description"}</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
-		<subject>Valider votre compte</subject>
-		<body><![CDATA[{$userFullName},<br />
-<br />
-Vous avez créé un compte avec {$contextName}. Pour pouvoir commencer à l'utiliser vous devez d'abord valider votre compte de courriel. Pour ce faire, vous n'avez qu'à suivre le lien ci-dessous :<br />
-<br />
-{$activateUrl}<br />
-<br />
-Merci,<br />
-{$principalContactSignature}]]></body>
-		<description>Ce courriel est envoyé à un,une utilisateur-trice nouvellement inscrit-e pour valider son compte de courriel.</description>
+		<subject>{translate key="emails.userValidate.subject"}</subject>
+		<body>{translate key="emails.userValidate.body"}</body>
+		<description>{translate key="emails.userValidate.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
-		<subject>Accusé de réception de la soumission</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-Nous vous remercions d'avoir soumis le manuscrit intitulé « {$submissionTitle} » à la serveur {$contextName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition en accédant au site Web de la serveur :<br />
-<br />
-URL de la soumission : {$submissionUrl}<br />
-Nom d'utilisateur-trice : {$authorUsername}<br />
-<br />
-Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre serveur pour la publication de vos travaux.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Ce courriel, lorsqu'activé, est envoyé automatiquement à un-e auteur-e quand il ou elle a complété le processus de soumission d'un manuscrit à la seveur. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur-e de sa soumission.</description>
+		<subject>{translate key="emails.submissionAck.subject"}</subject>
+		<body>{translate key="emails.submissionAck.body"}</body>
+		<description>{translate key="emails.submissionAck.description"}</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
-		<subject>Accusé de réception de la soumission</subject>
-		<body><![CDATA[Bonjour,<br />
-<br />
-Le manuscrit intitulé , « {$submissionTitle} » , a été soumis par {$submitterName} à {$contextName}.<br />
-<br />
-Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à {$contextName} pour la publication de vos travaux.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Ce courriel, lorsque activé, est envoyé automatiquement aux autres auteur-e-s qui ne sont pas des utilisateurs-trices de PPS signalés-es comme effectuant la soumission.</description>
+		<subject>{translate key="emails.submissionAckNotUser.subject"}</subject>
+		<body>{translate key="emails.submissionAckNotUser.body"}</body>
+		<description>{translate key="emails.submissionAckNotUser.description"}</description>
 	</email_text>
 </email_texts>
 
