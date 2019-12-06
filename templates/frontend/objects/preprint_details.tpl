@@ -355,6 +355,7 @@
 					<div class="sub_item">
 						<div class="label">
 							{translate key="section.section"}
+
 						</div>
 						<div class="value">
 							{$section->getLocalizedTitle()|escape}
@@ -362,6 +363,7 @@
 					</div>
 				{/if}
 			</div>
+
 
 			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
