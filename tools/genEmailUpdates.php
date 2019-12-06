@@ -67,7 +67,6 @@ class genEmailUpdates extends CommandLineTool {
 	function parseEmails($contents) {
 		$parser = new XMLParser();
 		$result = $parser->parseTextStruct($contents, array('email_text', 'subject', 'body'));
-		$parser->destroy();
 		return $result;
 	}
 
