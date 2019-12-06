@@ -49,7 +49,7 @@ class ManageIssuesHandler extends Handler {
 	 */
 	function index($args, $request) {
 		$this->setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
 
 		$templateMgr = TemplateManager::getManager($request);
 		return $templateMgr->display('manageIssues/issues.tpl');
