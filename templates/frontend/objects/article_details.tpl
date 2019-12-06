@@ -225,7 +225,7 @@
 
 			{* Article/Issue cover image *}
 			{if $publication->getLocalizedData('coverImage') || ($issue && $issue->getLocalizedCoverImage())}
-				<section class="item cover_image">
+				<div class="item cover_image">
 					<div class="sub_item">
 						{if $publication->getLocalizedData('coverImage')}
 							{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
@@ -239,12 +239,12 @@
 							</a>
 						{/if}
 					</div>
-				</section>
+				</div>
 			{/if}
 
 			{* Article Galleys *}
 			{if $primaryGalleys}
-				<section class="item galleys">
+				<div class="item galleys">
 					<ul class="value galleys_links">
 						{foreach from=$primaryGalleys item=galley}
 							<li>
@@ -252,10 +252,10 @@
 							</li>
 						{/foreach}
 					</ul>
-				</section>
+				</div>
 			{/if}
 			{if $supplementaryGalleys}
-				<section class="item galleys">
+				<div class="item galleys">
 					<ul class="value supplementary_galleys_links">
 						{foreach from=$supplementaryGalleys item=galley}
 							<li>
@@ -263,11 +263,11 @@
 							</li>
 						{/foreach}
 					</ul>
-				</section>
+				</div>
 			{/if}
 
 			{if $publication->getData('datePublished')}
-			<section class="item published">
+			<div class="item published">
 				<div class="sub_item">
 					<div class="label">
 						{translate key="submissions.published"}
@@ -303,12 +303,12 @@
 						</ul>
 					</div>
 				{/if}
-			</section>
+			</div>
 			{/if}
 
 			{* How to cite *}
 			{if $citation}
-				<section class="item citation">
+				<div class="item citation">
 					<div class="sub_item citation_display">
 						<div class="label">
 							{translate key="submission.howToCite"}
@@ -355,12 +355,12 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
 			{/if}
 
 			{* Issue article appears in *}
 			{if $issue || $section}
-				<section class="item issue">
+				<div class="item issue">
 
 					{if $issue}
 						<div class="sub_item">
@@ -385,7 +385,7 @@
 							</div>
 						</div>
 					{/if}
-				</section>
+				</div>
 			{/if}
 
 			{* PubIds (requires plugins) *}
@@ -395,7 +395,7 @@
 				{/if}
 				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
-					<section class="item pubid">
+					<div class="item pubid">
 						<div class="label">
 							{$pubIdPlugin->getPubIdDisplayType()|escape}
 						</div>
@@ -408,13 +408,13 @@
 								{$pubId|escape}
 							{/if}
 						</div>
-					</section>
+					</div>
 				{/if}
 			{/foreach}
 
 			{* Licensing info *}
 			{if $currentContext->getLocalizedData('licenseTerms') || $publication->getData('licenseUrl')}
-				<section class="item copyright">
+				<div class="item copyright">
 					{if $publication->getData('licenseUrl')}
 						{if $ccLicenseBadge}
 							{if $publication->getLocalizedData('copyrightHolder')}
@@ -432,7 +432,7 @@
 						{/if}
 					{/if}
 					{$currentContext->getLocalizedData('licenseTerms')}
-				</section>
+				</div>
 			{/if}
 
 			{call_hook name="Templates::Article::Details"}
