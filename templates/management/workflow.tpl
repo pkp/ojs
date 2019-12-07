@@ -35,6 +35,12 @@
 						@set="set"
 					/>
 				</tab>
+				<tab id="authorScreening" label="{translate key="manager.setup.authorScreening"}">
+					<pkp-form
+						v-bind="components.{$smarty.const.FORM_SCREENING}"
+						@set="set"
+					/>
+				</tab>
 				{call_hook name="Template::Settings::workflow::submission"}
 			</tabs>
 		</tab>

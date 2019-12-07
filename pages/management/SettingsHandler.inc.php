@@ -37,14 +37,19 @@ class SettingsHandler extends ManagementHandler {
 	}
 
 	/**
+	 * Add the PPS workflow settings page
 	 *
-	 * @return array
+	 * @param $args array
+	 * @param $request Request
 	 */
-	function _setupWorkflowSettingsData($request) {
+	function workflow($args, $request) {
+		parent::workflow($args, $request);
+		$templateMgr = TemplateManager::getManager($request);
 		$context = $request->getContext();
 		$dispatcher = $request->getDispatcher();
 
 		$contextApiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
+		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
 
 		$supportedFormLocales = $context->getSupportedFormLocales();
 		$localeNames = AppLocale::getAllLocales();
@@ -52,20 +57,18 @@ class SettingsHandler extends ManagementHandler {
 			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
 		}, $supportedFormLocales);
 
-		$screeningForm = new \APP\components\forms\context\ScreeningForm($contextApiUrl, $locales, $context);
+		$screeningForm = new \APP\components\forms\context\ScreeningForm($apiUrl, $locales, $context);
 
 		// Add forms to the existing settings data
 		$settingsData = $templateMgr->getTemplateVars('settingsData');
-		$settingsData['components'][$accessForm->id] = $accessForm->getConfig();
-		$settingsData['components'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
-		$settingsData['components'][$archivePnForm->id] = $archivePnForm->getConfig();
-		$settingsData['components']['FORM_SCREENING'] = $screeningForm->getConfig();
-		$templateMgr->assign('settingsData', $settingsData);
+		$settingsData['components'][$screeningForm->id] = $screeningForm->getConfig();
 
-		return array_merge_recursive(parent::_setupWorkflowSettingsData($request), $settingsData);
+		$templateMgr->assign('settingsData', $settingsData);
+		TemplateManager::getManager($request)->display('management/workflow.tpl');
 	}
 
 	/**
+	 * Add PPS distribution settings
 	 *
 	 * @param $args array
 	 * @param $request Request
@@ -74,7 +77,6 @@ class SettingsHandler extends ManagementHandler {
 		parent::distribution($args, $request);
 		$templateMgr = TemplateManager::getManager($request);
 		$context = $request->getContext();
-		$router = $request->getRouter();
 		$dispatcher = $request->getDispatcher();
 
 		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());

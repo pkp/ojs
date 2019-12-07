@@ -114,16 +114,7 @@ msgid "manager.setup.announcementsIntroduction.description"
 msgstr "Enter any information you would like to appear on your announcements page."
 
 msgid "manager.setup.authorScreening"
-msgstr "Author screening"
-
-msgid "manager.setup.authorScreening.success"
-msgstr "Author screening options saved"
-
-msgid "manager.setup.disableAuthorScreening"
-msgstr "Allow all new authors to publish preprints without screening"
-
-msgid "manager.setup.enableAuthorScreening"
-msgstr "Author has to have two publications in ORCID/Crossref database OR author requires editorial screening before publishing"
+msgstr "Author screening plugins"
 
 msgid "manager.setup.contact.success"
 msgstr "The contact details for this server have been updated."

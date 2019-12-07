@@ -34,15 +34,5 @@ class ScreeningForm extends FormComponent {
 	public function __construct($action, $locales, $context) {
 		$this->action = $action;
 		$this->successMessage = __('manager.setup.authorScreening.success');
-
-		$this->addField(new FieldOptions('enableAuthorScreening', [
-				'type' => 'radio',
-				'label' => __('manager.setup.authorScreening'),
-				'value' => (bool) $context->getData('enableAuthorScreening'),
-				'options' => [
-					['value' => false, 'label' => __('manager.setup.disableAuthorScreening')],
-					['value' => true, 'label' => __('manager.setup.enableAuthorScreening')],
-				],
-			]));
 	}
 }
