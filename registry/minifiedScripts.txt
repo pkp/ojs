@@ -117,8 +117,6 @@ lib/pkp/js/controllers/grid/users/stageParticipant/form/AddParticipantFormHandle
 lib/pkp/js/pages/reviewer/ReviewerTabHandler.js
 lib/pkp/js/pages/authorDashboard/SubmissionEmailHandler.js
 js/controllers/grid/articleGalleys/ArticleGalleyGridHandler.js
-js/controllers/grid/issues/BackIssueGridHandler.js
-js/controllers/grid/issues/FutureIssueGridHandler.js
 
 # Our own plug-in (depends on classes)
 lib/pkp/js/lib/jquery/plugins/jquery.pkp.js

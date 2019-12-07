@@ -51,13 +51,8 @@
 			</template>
 		</pkp-header>
 		<tabs>
-			
-			<tab id="workflow" label="{translate key="manager.workflow"}">
-				{include file="controllers/notification/inPlaceNotification.tpl" notificationId="authorDashboardNotification" requestOptions=$authorDashboardNotificationRequestOptions}
-				{include file="controllers/tab/authorDashboard/production.tpl"}
-			</tab>
-
 			<tab id="publication" label="{translate key="submission.publication"}">
+				{include file="controllers/notification/inPlaceNotification.tpl" notificationId="authorDashboardNotification" requestOptions=$authorDashboardNotificationRequestOptions}
 				<div class="pkpPublication" ref="publication" aria-live="polite">
 					<pkp-header class="pkpPublication__header">
 						<span class="pkpPublication__status">
@@ -147,6 +142,11 @@
 						<tab id="galleys" label="{translate key="submission.layout.galleys"}">
 							<div id="representations-grid" ref="representations">
 								<spinner></spinner>
+							</div>
+						</tab>
+						<tab id="queries" label="{translate key="submission.queries.production"}">
+							<div id="queries-grid" ref="queries">
+							{include file="controllers/tab/authorDashboard/production.tpl"}
 							</div>
 						</tab>
 						{call_hook name="Template::Workflow::Publication"}
