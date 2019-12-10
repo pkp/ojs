@@ -393,6 +393,9 @@ msgstr "The specified server path, "{$journalPath}", does not exist."
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "The specified objects could not be found."
 
+msgid "stats.publicationStats"
+msgstr "Preprint Stats"
+
 msgid "stats.publications.details"
 msgstr "Preprint Details"
 
