@@ -78,8 +78,7 @@ class SettingsHandler extends ManagementHandler {
 		// form loads a single field which enables/disables the plugin, and does
 		// not need to be submitted. It's a dirty hack, but we can change this once
 		// an API is in place for plugins and plugin settings.
-		$versionDao = DAORegistry::getDAO('VersionDAO');
-		$isPlnInstalled = $versionDao->getCurrentVersion('plugins.generic', 'pln', true);
+		$plnPlugin = PluginRegistry::getPlugin('plugins.generic', 'pln');
 		$archivePnForm = new \PKP\components\forms\FormComponent('archivePn', 'PUT', 'dummy', 'dummy', $supportedFormLocales);
 		$archivePnForm->addPage([
 				'id' => 'default',
@@ -90,19 +89,13 @@ class SettingsHandler extends ManagementHandler {
 				'pageId' => 'default',
 			]);
 
-		if (!$isPlnInstalled) {
-			$archivePnForm->addField(new \PKP\components\forms\FieldHTML('pn', [
-				'label' => __('manager.setup.plnPluginArchiving'),
-				'description' => __('manager.setup.plnPluginNotInstalled'),
-				'groupId' => 'default',
-			]));
-		} else {
+		if ($plnPlugin) {
 			$plnPlugin = PluginRegistry::getPlugin('generic', 'plnplugin');
 			$pnEnablePluginUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'enable', null, array('plugin' => 'plnplugin', 'category' => 'generic'));
 			$pnDisablePluginUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'disable', null, array('plugin' => 'plnplugin', 'category' => 'generic'));
 			$pnSettingsUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('verb' => 'settings', 'plugin' => 'plnplugin', 'category' => 'generic'));
 
-			$archivePnForm->addField(new \PKP\components\forms\FieldArchivingPn('pn', [
+			$archivePnForm->addField(new \APP\components\forms\FieldArchivingPn('pn', [
 				'label' => __('manager.setup.plnPluginArchiving'),
 				'description' => __('manager.setup.plnDescription'),
 				'terms' => __('manager.setup.plnSettingsDescription'),
@@ -123,6 +116,12 @@ class SettingsHandler extends ManagementHandler {
 					'enablePluginSuccess' => __('common.pluginEnabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
 					'disablePluginSuccess' => __('common.pluginDisabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
 				],
+			]));
+		} else {
+			$archivePnForm->addField(new \PKP\components\forms\FieldHTML('pn', [
+				'label' => __('manager.setup.plnPluginArchiving'),
+				'description' => __('manager.setup.plnPluginNotInstalled'),
+				'groupId' => 'default',
 			]));
 		}
 
