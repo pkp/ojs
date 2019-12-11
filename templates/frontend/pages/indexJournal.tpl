@@ -27,15 +27,17 @@
 
 	{* Journal Description *}
 	{if $activeTheme->getOption('showDescriptionInJournalIndex')}
-		<div id="homepageAbout" class="homepage_about">
+		<section class="homepage_about">
+			<a id="homepageAbout"></a>
 			<h2>{translate key="about.aboutContext"}</h2>
 			{$currentContext->getLocalizedData('description')}
-		</div>
+		</section>
 	{/if}
 
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
-		<div id="homepageAnnouncements" class="cmp_announcements highlight_first">
+		<section class="cmp_announcements highlight_first">
+			<a id="homepageAnnouncements"></a>
 			<h2>
 				{translate key="announcement.announcements"}
 			</h2>
@@ -60,7 +62,7 @@
 				{/if}
 			{/foreach}
 			</div><!-- .more -->
-		</div>
+		</section>
 	{/if}
 
 	{* Additional Homepage Content *}
