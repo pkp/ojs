@@ -10,7 +10,7 @@
  * @class StatsEditorialQueryBuilder
  * @ingroup query_builders
  *
- * @brief Submission list Query builder
+ * @brief Editorial statistics list query builder
  */
 
 namespace APP\Services\QueryBuilders;

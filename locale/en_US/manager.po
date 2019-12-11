@@ -276,6 +276,39 @@ msgstr ""
 "\t\tThere are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used preprint's or to rank"
 "\t\tsearch results. Please select one of the configured metrics as a default."
 
+msgid "manager.statistics.statistics"
+msgstr "Server Statistics"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Preprint View Counts (for Authors only)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Accept"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Decline"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Resubmit"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Days to publication"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Items published"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Check items to be made available to readers in About the Server."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process."
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Total submissions"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Registered readers"
+
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Preprint file downloads"
 

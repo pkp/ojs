@@ -17,13 +17,13 @@ namespace APP\Services;
 
 use \Pimple\Container;
 use \APP\Services\PublicationService;
+use \APP\Services\StatsEditorialService;
 use \APP\Services\StatsService;
 use \APP\Services\UserService;
 use \PKP\Services\PKPAuthorService;
 use \PKP\Services\PKPEmailTemplateService;
 use \PKP\Services\PKPSchemaService;
 use \PKP\Services\PKPSiteService;
-use \PKP\Services\PKPStatsEditorialService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
@@ -93,9 +93,9 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 			return new StatsService();
 		};
 
-		// Publication statistics service
+		// Editorial statistics service
 		$pimple['editorialStats'] = function() {
-			return new PKPStatsEditorialService();
+			return new StatsEditorialService();
 		};
 	}
 }
