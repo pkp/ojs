@@ -1018,9 +1018,6 @@ msgstr "Peer reviewed"
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "Registered readers"
 
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Registered users"
-
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "No. assigned"
 
