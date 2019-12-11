@@ -141,17 +141,17 @@
 
 			{* Keywords *}
 			{if !empty($publication->getLocalizedData('keywords'))}
-			<div class="item keywords">
-				<span class="label">
+			<section class="item keywords">
+				<h2 class="label">
 					{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
 					{translate key="semicolon" label=$translatedKeywords}
-				</span>
+				</h2>
 				<span class="value">
 					{foreach name="keywords" from=$publication->getLocalizedData('keywords') item="keyword"}
 						{$keyword|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}
 					{/foreach}
 				</span>
-			</div>
+			</section>
 			{/if}
 
 			{* Abstract *}
@@ -182,8 +182,8 @@
 					</h2>
 					{foreach from=$publication->getData('authors') item=author}
 						{if $author->getLocalizedData('biography')}
-							<div class="sub_item">
-								<div class="label">
+							<section class="sub_item">
+								<h2 class="label">
 									{if $author->getLocalizedData('affiliation')}
 										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
 										{capture assign="authorAffiliation"}<span class="affiliation">{$author->getLocalizedData('affiliation')|escape}</span>{/capture}
@@ -191,11 +191,11 @@
 									{else}
 										{$author->getFullName()|escape}
 									{/if}
-								</div>
+								</h2>
 								<div class="value">
 									{$author->getLocalizedData('biography')|strip_unsafe_html}
 								</div>
-							</div>
+							</section>
 						{/if}
 					{/foreach}
 				</section>
@@ -268,10 +268,10 @@
 
 			{if $publication->getData('datePublished')}
 			<div class="item published">
-				<div class="sub_item">
-					<div class="label">
+				<section class="sub_item">
+					<h2 class="label">
 						{translate key="submissions.published"}
-					</div>
+					</h2>
 					<div class="value">
 						{* If this is the original version *}
 						{if $firstPublication->getID() === $publication->getId()}
@@ -281,12 +281,12 @@
 							<span>{translate key="submission.updatedOn" datePublished=$firstPublication->getData('datePublished')|date_format:$dateFormatShort dateUpdated=$publication->getData('datePublished')|date_format:$dateFormatShort}</span>
 						{/if}
 					</div>
-				</div>
+				</section>
 				{if count($article->getPublishedPublications()) > 1}
-					<div class="sub_item versions">
-						<div class="label">
+					<section class="sub_item versions">
+						<h2 class="label">
 							{translate key="submission.versions"}
-						</div>
+						</h2>
 						<ul class="value">
 							{foreach from=array_reverse($article->getPublishedPublications()) item=iPublication}
 								{capture assign="name"}{translate key="submission.versionIdentity" datePublished=$iPublication->getData('datePublished')|date_format:$dateFormatShort versionId=$iPublication->getId()}{/capture}
@@ -301,7 +301,7 @@
 								</li>
 							{/foreach}
 						</ul>
-					</div>
+					</section>
 				{/if}
 			</div>
 			{/if}
@@ -309,10 +309,10 @@
 			{* How to cite *}
 			{if $citation}
 				<div class="item citation">
-					<div class="sub_item citation_display">
-						<div class="label">
+					<section class="sub_item citation_display">
+						<h2 class="label">
 							{translate key="submission.howToCite"}
-						</div>
+						</h2>
 						<div class="value">
 							<div id="citationOutput" role="region" aria-live="polite">
 								{$citation}
@@ -354,7 +354,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</section>
 				</div>
 			{/if}
 
@@ -363,27 +363,27 @@
 				<div class="item issue">
 
 					{if $issue}
-						<div class="sub_item">
-							<div class="label">
+						<section class="sub_item">
+							<h2 class="label">
 								{translate key="issue.issue"}
-							</div>
+							</h2>
 							<div class="value">
 								<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
 									{$issue->getIssueIdentification()}
 								</a>
 							</div>
-						</div>
+						</section>
 					{/if}
 
 					{if $section}
-						<div class="sub_item">
-							<div class="label">
+						<section class="sub_item">
+							<h2 class="label">
 								{translate key="section.section"}
-							</div>
+							</h2>
 							<div class="value">
 								{$section->getLocalizedTitle()|escape}
 							</div>
-						</div>
+						</section>
 					{/if}
 				</div>
 			{/if}
@@ -395,10 +395,10 @@
 				{/if}
 				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
-					<div class="item pubid">
-						<div class="label">
+					<section class="item pubid">
+						<h2 class="label">
 							{$pubIdPlugin->getPubIdDisplayType()|escape}
-						</div>
+						</h2>
 						<div class="value">
 							{if $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 								<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}">
@@ -408,7 +408,7 @@
 								{$pubId|escape}
 							{/if}
 						</div>
-					</div>
+					</section>
 				{/if}
 			{/foreach}
 
