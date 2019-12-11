@@ -10,6 +10,10 @@
  */
 .obj_article_details {
 
+	h2 {
+		margin: 0;
+	}
+
 	> .page_title {
 		margin: 0;
 	}
@@ -39,7 +43,15 @@
 	}
 
 	.sub_item {
+
 		margin-bottom: @double;
+
+		.label {
+			margin: 0;
+			font-size: @font-sml;
+			font-weight: @normal;
+			color: @text-light;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -155,7 +167,9 @@
 				border-bottom: none;
 			}
 
-			.label {
+			h2.label {
+				margin: 0;
+				padding: 0;
 				font-family: @font-heading;
 				font-size: @font-sml;
 				font-weight: @normal;
