@@ -10,17 +10,13 @@
  */
 .obj_article_details {
 
-	h2 {
-		margin: 0;
-	}
-
 	> .page_title {
 		margin: 0;
 	}
 
 	> .subtitle {
 		margin: 0;
-		font-size: @font-lead;
+		font-size: @font-base;
 		line-height: @line-lead;
 		font-weight: @normal;
 	}
@@ -43,15 +39,7 @@
 	}
 
 	.sub_item {
-
 		margin-bottom: @double;
-
-		.label {
-			margin: 0;
-			font-size: @font-sml;
-			font-weight: @normal;
-			color: @text-light;
-		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -169,7 +157,6 @@
 
 			h2.label {
 				margin: 0;
-				padding: 0;
 				font-family: @font-heading;
 				font-size: @font-sml;
 				font-weight: @normal;
@@ -300,6 +287,19 @@
 
 		.item {
 			padding: @double;
+
+			.label {
+				margin: 0 0 @double;
+				font-family: @font-heading;
+				font-size: @font-bump;
+				font-weight: @bold;
+
+				&.doi .label,
+				&.keywords .label {
+					display: inline;
+					font-size: @font-base;
+				}
+			}
 		}
 
 		.entry_details {

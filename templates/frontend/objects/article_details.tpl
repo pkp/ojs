@@ -93,7 +93,9 @@
 		<div class="main_entry">
 
 			{if $publication->getData('authors')}
-				<ul class="item authors">
+				<section class="item authors">
+					<h2 class="pkp_screen_reader">{translate key="article.authors"}</h2>
+					<ul class="versions authors">
 					{foreach from=$publication->getData('authors') item=author}
 						<li>
 							<span class="name">
@@ -114,7 +116,8 @@
 							{/if}
 						</li>
 					{/foreach}
-				</ul>
+					</ul>
+				</section>
 			{/if}
 
 			{* DOI (requires plugin) *}
@@ -125,17 +128,17 @@
 				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
-					<div class="item doi">
-						<span class="label">
+					<section class="item doi">
+						<h2 class="label">
 							{capture assign=translatedDOI}{translate key="plugins.pubIds.doi.readerDisplayName"}{/capture}
 							{translate key="semicolon" label=$translatedDOI}
-						</span>
+						</h2>
 						<span class="value">
 							<a href="{$doiUrl}">
 								{$doiUrl}
 							</a>
 						</span>
-					</div>
+					</section>
 				{/if}
 			{/foreach}
 
@@ -183,7 +186,7 @@
 					{foreach from=$publication->getData('authors') item=author}
 						{if $author->getLocalizedData('biography')}
 							<section class="sub_item">
-								<h2 class="label">
+								<h3 class="label">
 									{if $author->getLocalizedData('affiliation')}
 										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
 										{capture assign="authorAffiliation"}<span class="affiliation">{$author->getLocalizedData('affiliation')|escape}</span>{/capture}
@@ -191,7 +194,7 @@
 									{else}
 										{$author->getFullName()|escape}
 									{/if}
-								</h2>
+								</h3>
 								<div class="value">
 									{$author->getLocalizedData('biography')|strip_unsafe_html}
 								</div>
