@@ -3,7 +3,7 @@
 	"info": {
 		"version": "3.2.x",
 		"title": "Open Journal Systems - API Reference",
-		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for documentation on the platform's internals.\n\n**Changes since v3.1.x**\n* The Author property, `isBrowseable`, was renamed to `includeInBrowse`.\n* The Author property, `isPrimaryContact`, was renamed to `primaryContact`.\n* The Submission property, `status`, was changed from an `object` to an `integer`. Please see documentation for more information.",
+		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for documentation on the platform's internals.\n\n**Changes since v3.1.x**\n* The Author property, `isBrowseable`, was renamed to `includeInBrowse`.\n* The Author property, `isPrimaryContact`, was renamed to `primaryContact`.\n* The Submission property, `status`, was changed from an `object` to an `integer`. Please see documentation for more information.\n* The `/submissions/{submissionId}/galleys` endpoint was removed. Galley data is provided with each publication.",
 		"contact": {
 			"name": "Public Knowledge Project",
 			"url": "https://pkp.sfu.ca"
@@ -373,47 +373,6 @@
 					},
 					"403": {
 						"description": "You do not have permission to access this submissions.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"description": "The requested submission could not be found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					}
-				}
-			}
-		},
-		"/submissions/{submissionId}/galleys": {
-			"get": {
-				"tags": [
-					"Submissions"
-				],
-				"summary": "Get a submisssion's galleys.",
-				"description": "* This endpoint will not be available until a submission has reached the Production stage.\n* `_parent` will return the API URL representing the associated submission.\n* `publishedUrl` will point to the frontend galley view (eg - `/article/view/<submission-id>/<galley-id>`).\n* Some of the galley file data will only be present for supplementary and artwork files.",
-				"parameters": [
-					{
-						"name": "submissionId",
-						"in": "path",
-						"descriptions": "Submission ID",
-						"required": true,
-						"type": "integer"
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "List of the submission's galleys.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/Galley"
-							}
-						}
-					},
-					"403": {
-						"description": "You do not have permission to access this submission.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
