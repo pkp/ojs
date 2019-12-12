@@ -1,6 +1,6 @@
 {
 	"title": "Galley",
-	"description": "A galley representing a published file, such as a PDF or XML file.",
+	"description": "A galley representing a published file, such as a PDF or HTML file.",
 	"required": [
 		"fileId",
 		"label",
@@ -10,6 +10,146 @@
 		"fileId": {
 			"type": "integer",
 			"apiSummary": true
+		},
+		"dependentFiles": {
+			"type": "object",
+			"apiSummary": true,
+			"readOnly": true,
+			"properties": {
+				"caption": {
+					"type": "string"
+				},
+				"copyrightOwner": {
+					"type": "string"
+				},
+				"creator": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"credit": {
+					"type": "string"
+				},
+				"dateCreated": {
+					"type": "string"
+				},
+				"description": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"revision": {
+					"type": "integer"
+				},
+				"fileStage": {
+					"type": "integer"
+				},
+				"fileName": {
+					"type": "string"
+				},
+				"genreId": {
+					"type": "integer"
+				},
+				"height": {
+					"type": "string"
+				},
+				"id": {
+					"type": "integer"
+				},
+				"language": {
+					"type": "string"
+				},
+				"physicalHeight": {
+					"type": "string"
+				},
+				"physicalWidth": {
+					"type": "string"
+				},
+				"publisher": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"sponsor": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"source": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"subject": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"terms": {
+					"type": "string"
+				},
+				"width": {
+					"type": "string"
+				}
+			}
+		},
+		"file": {
+			"type": "object",
+			"apiSummary": true,
+			"readOnly": true,
+			"properties": {
+				"caption": {
+					"type": "string"
+				},
+				"copyrightOwner": {
+					"type": "string"
+				},
+				"creator": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"credit": {
+					"type": "string"
+				},
+				"dateCreated": {
+					"type": "string"
+				},
+				"description": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"revision": {
+					"type": "integer"
+				},
+				"fileStage": {
+					"type": "integer"
+				},
+				"fileName": {
+					"type": "string"
+				},
+				"genreId": {
+					"type": "integer"
+				},
+				"height": {
+					"type": "string"
+				},
+				"id": {
+					"type": "integer"
+				},
+				"language": {
+					"type": "string"
+				},
+				"physicalHeight": {
+					"type": "string"
+				},
+				"physicalWidth": {
+					"type": "string"
+				},
+				"publisher": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"sponsor": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"source": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"subject": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"terms": {
+					"type": "string"
+				},
+				"width": {
+					"type": "string"
+				}
+			}
 		},
 		"id": {
 			"type": "integer",
