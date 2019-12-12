@@ -158,10 +158,10 @@
 
 			{* Abstract *}
 			{if $publication->getLocalizedData('abstract')}
-				<div class="item abstract">
-					<h3 class="label">{translate key="common.abstract"}</h3>
+				<section class="item abstract">
+					<h2 class="label">{translate key="common.abstract"}</h2>
 					{$publication->getLocalizedData('abstract')|strip_unsafe_html}
-				</div>
+				</section>
 			{/if}
 
 			{call_hook name="Templates::Preprint::Main"}
@@ -174,14 +174,14 @@
 				{/if}
 			{/foreach}
 			{if $hasBiographies}
-				<div class="item author_bios">
-					<h3 class="label">
+				<section class="item author_bios">
+					<h2 class="label">
 						{if $hasBiographies > 1}
 							{translate key="submission.authorBiographies"}
 						{else}
 							{translate key="submission.authorBiography"}
 						{/if}
-					</h3>
+					</h2>
 					{foreach from=$publication->getData('authors') item=author}
 						{if $author->getLocalizedData('biography')}
 							<section class="sub_item">
@@ -200,15 +200,15 @@
 							</section>
 						{/if}
 					{/foreach}
-				</div>
+				</section>
 			{/if}
 
 			{* References *}
 			{if $parsedCitations || $publication->getData('citationsRaw')}
-				<div class="item references">
-					<h3 class="label">
+				<section class="item references">
+					<h2 class="label">
 						{translate key="submission.citations"}
-					</h3>
+					</h2>
 					<div class="value">
 						{if $parsedCitations}
 							{foreach from=$parsedCitations item="parsedCitation"}
@@ -218,7 +218,7 @@
 							{$publication->getData('citationsRaw')|nl2br}
 						{/if}
 					</div>
-				</div>
+				</section>
 			{/if}
 
 		</div><!-- .main_entry -->
@@ -365,6 +365,7 @@
 					</section>
 				{/if}
 			</div>
+
 			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
 				{if $pubIdPlugin->getPubIdType() == 'doi'}
