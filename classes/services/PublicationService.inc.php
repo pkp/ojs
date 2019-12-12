@@ -49,14 +49,14 @@ class PublicationService extends PKPPublicationService {
 		$values =& $args[0];
 		$publication = $args[1];
 		$props = $args[2];
-		$request = $args[3]['request'];
+		$dependencies = $args[3];
 
 		foreach ($props as $prop) {
 			switch ($prop) {
 				case 'galleys':
 					$values[$prop] = array_map(
-						function($galley) use ($request, $prop) {
-							return Services::get('galley')->getSummaryProperties($galley, ['request' => $request]);
+						function($galley) use ($dependencies) {
+							return Services::get('galley')->getSummaryProperties($galley, $dependencies);
 						},
 						$publication->getData('galleys')
 					);

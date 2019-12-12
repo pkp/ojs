@@ -86,6 +86,7 @@
 				"fr_CA": "Nom de fichier"
 			}
 		},
+		"Publication": "publication",
 		"PublicationStats": {
 			"type": "object",
 			"description": "The total abstract and galley views for a published submission.",

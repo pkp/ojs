@@ -14,7 +14,10 @@
 		"galleys": {
 			"type": "array",
 			"apiSummary": true,
-			"readOnly": true
+			"readOnly": true,
+			"items": {
+				"$ref": "#/definitions/Galley"
+			}
 		},
 		"hideAuthor": {
 			"type": "boolean",

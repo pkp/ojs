@@ -102,108 +102,113 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		$context = $request->getContext();
 		$dispatcher = $request->getDispatcher();
 
+		$publication = !empty($args['publication'])
+			? $args['publication']
+			: $args['publication'] = Services::get('publication')->get($galley->getData('publicationId'));
+
+		$submission = !empty($args['submission'])
+			? $args['submission']
+			: $args['submission'] = Services::get('submission')->get($publication->getData('submissionId'));
+
 		$values = [];
 
 		foreach ($props as $prop) {
 			switch ($prop) {
 				case 'urlPublished':
-					// TODO
-					$values[$prop] = 'http://...';
-					// $values[$prop] = $dispatcher->url(
-					// 	$request,
-					// 	ROUTE_PAGE,
-					// 	$context->getPath(),
-					// 	'article',
-					// 	'view',
-					// 	array($publication->getBestId(), $galley->getBestGalleyId())
-					// );
+					$values[$prop] = $dispatcher->url(
+						$request,
+						ROUTE_PAGE,
+						$context->getPath(),
+						'article',
+						'view',
+						[
+							$submission->getBestId(),
+							'version',
+							$publication->getId(),
+							$galley->getBestGalleyId(),
+						]
+					);
 					break;
-				// case 'file':
-				// 	$values[$prop] = null;
-				// 	$file = $galley->getFile();
-				// 	if (!$file) {
-				// 		break;
-				// 	}
-				// 	$values[$prop] = array(
-				// 		'id' => $file->getFileId(),
-				// 		'fileName' => $file->getOriginalFileName(),
-				// 	);
-				// 	if (is_a($file, 'SubmissionFile')) {
-				// 		$values[$prop]['revision'] = $file->getRevision();
-				// 		$values[$prop]['fileStage'] = $file->getFileStage();
-				// 		$values[$prop]['genreId'] = $file->getGenreId();
-				// 		$values[$prop]['fileName'] = $file->getClientFileName();
-				// 	}
-				// 	if (is_a($file, 'SupplementaryFile')) {
-				// 		$values[$prop]['metadata'] = array(
-				// 			'description' => $file->getDescription(null),
-				// 			'creator' => $file->getCreator(null),
-				// 			'publisher' => $file->getPublisher(null),
-				// 			'source' => $file->getSource(null),
-				// 			'subject' => $file->getSubject(null),
-				// 			'sponsor' => $file->getSponsor(null),
-				// 			'dateCreated' => $file->getDateCreated(),
-				// 			'language' => $file->getLanguage(),
-				// 		);
-				// 	} elseif (is_a($file, 'SubmissionArtworkFile')) {
-				// 		$values[$prop]['metadata'] = array(
-				// 			'caption' => $file->getCaption(),
-				// 			'credit' => $file->getCredit(),
-				// 			'copyrightOwner' => $file->getCopyrightOwner(),
-				// 			'terms' => $file->getPermissionTerms(),
-				// 			'width' => $file->getWidth(),
-				// 			'height' => $file->getHeight(),
-				// 			'physicalWidth' => $file->getPhysicalWidth(300),
-				// 			'physicalHeight' => $file->getPhysicalHeight(300),
-				// 		);
-				// 	}
+				case 'file':
+					$values[$prop] = null;
+					$file = $galley->getFile();
+					if (!$file) {
+						break;
+					}
+					$values[$prop] = array(
+						'id' => $file->getFileId(),
+						'fileName' => $file->getOriginalFileName(),
+					);
+					if (is_a($file, 'SubmissionFile')) {
+						$values[$prop]['revision'] = $file->getRevision();
+						$values[$prop]['fileStage'] = $file->getFileStage();
+						$values[$prop]['genreId'] = $file->getGenreId();
+						$values[$prop]['fileName'] = $file->getClientFileName();
+					}
+					if (is_a($file, 'SupplementaryFile')) {
+						$values[$prop]['metadata'] = array(
+							'description' => $file->getDescription(null),
+							'creator' => $file->getCreator(null),
+							'publisher' => $file->getPublisher(null),
+							'source' => $file->getSource(null),
+							'subject' => $file->getSubject(null),
+							'sponsor' => $file->getSponsor(null),
+							'dateCreated' => $file->getDateCreated(),
+							'language' => $file->getLanguage(),
+						);
+					} elseif (is_a($file, 'SubmissionArtworkFile')) {
+						$values[$prop]['metadata'] = array(
+							'caption' => $file->getCaption(),
+							'credit' => $file->getCredit(),
+							'copyrightOwner' => $file->getCopyrightOwner(),
+							'terms' => $file->getPermissionTerms(),
+							'width' => $file->getWidth(),
+							'height' => $file->getHeight(),
+							'physicalWidth' => $file->getPhysicalWidth(300),
+							'physicalHeight' => $file->getPhysicalHeight(300),
+						);
+					}
 
-				// 	// Look for dependent files
-				// 	if (is_a($file, 'SubmissionFile')) {
-				// 		$values['dependentFiles'] = null;
-				// 		$submissionFileDao = \DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-				// 		$dependentFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $parent->getId(), SUBMISSION_FILE_DEPENDENT);
-				// 		if ($dependentFiles) {
-				// 			$values['dependentFiles'] = [];
-				// 			foreach ($dependentFiles as $dependentFile) {
-				// 				$dependentFileProps = array(
-				// 					'id' => $dependentFile->getFileId(),
-				// 					'fileName' => $dependentFile->getOriginalFileName(),
-				// 				);
-				// 				if (is_a($dependentFile, 'SubmissionFile')) {
-				// 					$dependentFileProps['revision'] = $dependentFile->getRevision();
-				// 					$dependentFileProps['fileStage'] = $dependentFile->getFileStage();
-				// 					$dependentFileProps['genreId'] = $dependentFile->getGenreId();
-				// 					$dependentFileProps['fileName'] = $dependentFile->getClientFileName();
-				// 				}
-				// 				if (is_a($dependentFile, 'SupplementaryFile')) {
-				// 					$dependentFileProps['metadata'] = array(
-				// 						'description' => $dependentFile->getDescription(null),
-				// 						'creator' => $dependentFile->getCreator(null),
-				// 						'publisher' => $dependentFile->getPublisher(null),
-				// 						'source' => $dependentFile->getSource(null),
-				// 						'subject' => $dependentFile->getSubject(null),
-				// 						'sponsor' => $dependentFile->getSponsor(null),
-				// 						'dateCreated' => $dependentFile->getDateCreated(),
-				// 						'language' => $dependentFile->getLanguage(),
-				// 					);
-				// 				} elseif (is_a($dependentFile, 'SubmissionArtworkFile')) {
-				// 					$dependentFileProps['metadata'] = array(
-				// 						'caption' => $dependentFile->getCaption(),
-				// 						'credit' => $dependentFile->getCredit(),
-				// 						'copyrightOwner' => $dependentFile->getCopyrightOwner(),
-				// 						'terms' => $dependentFile->getPermissionTerms(),
-				// 						'width' => $dependentFile->getWidth(),
-				// 						'height' => $dependentFile->getHeight(),
-				// 						'physicalWidth' => $dependentFile->getPhysicalWidth(300),
-				// 						'physicalHeight' => $dependentFile->getPhysicalHeight(300),
-				// 					);
-				// 				}
-				// 				$values['dependentFiles'][] = $dependentFileProps;
-				// 			}
-				// 		}
-				// 	}
-				// 	break;
+					// Look for dependent files
+					if (is_a($file, 'SubmissionFile')) {
+						$values['dependentFiles'] = [];
+						$dependentFiles = \DAORegistry::getDAO('SubmissionFileDAO')->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $submission->getId(), SUBMISSION_FILE_DEPENDENT);
+						if ($dependentFiles) {
+							foreach ($dependentFiles as $dependentFile) {
+								$dependentFileProps = array(
+									'id' => $dependentFile->getFileId(),
+									'fileName' => $dependentFile->getOriginalFileName(),
+								);
+								if (is_a($dependentFile, 'SubmissionFile')) {
+									$dependentFileProps['revision'] = $dependentFile->getRevision();
+									$dependentFileProps['fileStage'] = $dependentFile->getFileStage();
+									$dependentFileProps['genreId'] = $dependentFile->getGenreId();
+									$dependentFileProps['fileName'] = $dependentFile->getClientFileName();
+								}
+								if (is_a($dependentFile, 'SupplementaryFile')) {
+									$dependentFileProps['description'] = $dependentFile->getDescription(null);
+									$dependentFileProps['creator'] = $dependentFile->getCreator(null);
+									$dependentFileProps['publisher'] = $dependentFile->getPublisher(null);
+									$dependentFileProps['source'] = $dependentFile->getSource(null);
+									$dependentFileProps['subject'] = $dependentFile->getSubject(null);
+									$dependentFileProps['sponsor'] = $dependentFile->getSponsor(null);
+									$dependentFileProps['dateCreated'] = $dependentFile->getDateCreated();
+									$dependentFileProps['language'] = $dependentFile->getLanguage();
+								} elseif (is_a($dependentFile, 'SubmissionArtworkFile')) {
+									$dependentFileProps['caption'] = $dependentFile->getCaption();
+									$dependentFileProps['credit'] = $dependentFile->getCredit();
+									$dependentFileProps['copyrightOwner'] = $dependentFile->getCopyrightOwner();
+									$dependentFileProps['terms'] = $dependentFile->getPermissionTerms();
+									$dependentFileProps['width'] = $dependentFile->getWidth();
+									$dependentFileProps['height'] = $dependentFile->getHeight();
+									$dependentFileProps['physicalWidth'] = $dependentFile->getPhysicalWidth(300);
+									$dependentFileProps['physicalHeight'] = $dependentFile->getPhysicalHeight(300);
+								}
+								$values['dependentFiles'][] = $dependentFileProps;
+							}
+						}
+					}
+					break;
 				default:
 					$values[$prop] = $galley->getData($prop);
 					break;
@@ -292,8 +297,6 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	public function add($galley, $request) {
 		$galleyId = DAORegistry::getDAO('ArticleGalleyDAO')->insertObject($galley);
 		$galley = $this->get($galleyId);
-
-		// ...todo: upload file and stuff
 
 		\HookRegistry::call('Galley::add', array($galley, $request));
 
