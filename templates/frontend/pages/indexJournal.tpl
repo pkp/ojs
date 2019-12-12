@@ -28,15 +28,17 @@
 
 	{* Journal Description *}
 	{if $activeTheme->getOption('showDescriptionInJournalIndex')}
-		<div id="homepageAbout" class="homepage_about">
+		<section class="homepage_about">
+			<a id="homepageAbout"></a>
 			<h2>{translate key="about.aboutContext"}</h2>
 			{$currentContext->getLocalizedData('description')}
-		</div>
+		</section>
 	{/if}
 
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
-		<div id="homepageAnnouncements" class="cmp_announcements highlight_first">
+		<section class="cmp_announcements highlight_first">
+			<a id="homepageAnnouncements"></a>
 			<h2>
 				{translate key="announcement.announcements"}
 			</h2>
@@ -61,12 +63,13 @@
 				{/if}
 			{/foreach}
 			</div><!-- .more -->
-		</div>
+		</section>
 	{/if}
 
 	{* Latest issue *}
 	{if $issue}
-		<div id="homepageIssue" class="current_issue">
+		<section class="current_issue">
+			<a id="homepageIssue"></a>
 			<h2>
 				{translate key="journal.currentIssue"}
 			</h2>
@@ -77,7 +80,7 @@
 			<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
 				{translate key="journal.viewAllIssues"}
 			</a>
-		</div>
+		</section>
 	{/if}
 
 	{* Additional Homepage Content *}

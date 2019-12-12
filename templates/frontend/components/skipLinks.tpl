@@ -7,7 +7,8 @@
  *
  * Skip links to aid navigation when tabbing for screen reader accessibility
  *}
-<div class="cmp_skip_to_content">
+
+ <nav class="cmp_skip_to_content">
 	<a href="#pkp_content_main">{translate key="navigation.skip.main"}</a>
 	<a href="#navigationPrimary">{translate key="navigation.skip.nav"}</a>
 	{if !$requestedPage || $requestedPage === 'index'}
@@ -22,4 +23,4 @@
 		{/if}
 	{/if}
 	<a href="#pkp_content_footer">{translate key="navigation.skip.footer"}</a>
-</div>
+</nav>

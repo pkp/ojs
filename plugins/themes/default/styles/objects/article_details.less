@@ -16,7 +16,7 @@
 
 	> .subtitle {
 		margin: 0;
-		font-size: @font-lead;
+		font-size: @font-base;
 		line-height: @line-lead;
 		font-weight: @normal;
 	}
@@ -156,6 +156,7 @@
 			}
 
 			.label {
+				margin: 0;
 				font-family: @font-heading;
 				font-size: @font-sml;
 				font-weight: @normal;
@@ -286,6 +287,19 @@
 
 		.item {
 			padding: @double;
+
+			.label {
+				margin: 0 0 @double;
+				font-family: @font-heading;
+				font-size: @font-bump;
+				font-weight: @bold;
+			}
+
+			&.doi .label,
+			&.keywords .label {
+				display: inline;
+				font-size: @font-base;
+			}
 		}
 
 		.entry_details {

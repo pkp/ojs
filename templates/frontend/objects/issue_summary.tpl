@@ -23,18 +23,20 @@
 		</a>
 	{/if}
 
-	<a class="title" href="{url op="view" path=$issue->getBestIssueId()}">
-		{if $issueTitle}
-			{$issueTitle|escape}
-		{else}
-			{$issueSeries|escape}
+	<h2>
+		<a class="title" href="{url op="view" path=$issue->getBestIssueId()}">
+			{if $issueTitle}
+				{$issueTitle|escape}
+			{else}
+				{$issueSeries|escape}
+			{/if}
+		</a>
+		{if $issueTitle && $issueSeries}
+			<div class="series">
+				{$issueSeries|escape}
+			</div>
 		{/if}
-	</a>
-	{if $issueTitle && $issueSeries}
-		<div class="series">
-			{$issueSeries|escape}
-		</div>
-	{/if}
+	</h2>
 
 	<div class="description">
 		{$issue->getLocalizedDescription()|strip_unsafe_html}
