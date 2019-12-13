@@ -1596,3 +1596,15 @@ msgstr "Os objetos especificados não puderam ser encontrados."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Enviar uma cópia para o contato principal, identificado nas Configurações da Revista."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Plugin PKP PN ativo"
+
+msgid "manager.setup.plnDescription"
+msgstr "A Rede de Preservação do PKP (PKP PN) fornece serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios."
+
+msgid "manager.setup.otherLockss"
+msgstr "Opções Alternativas de Arquivo"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "Rede de Preservação PKP (PKP PN)" 
