@@ -1018,9 +1018,6 @@ msgstr "Peer reviewed"
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "Registered readers"
 
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Registered users"
-
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "No. assigned"
 
@@ -1707,6 +1704,9 @@ msgstr "The specified objects could not be found."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Send a copy to the primary contact, identified in the Journal Settings."
+
+msgid "stats.publicationStats"
+msgstr "Article Stats"
 
 msgid "stats.publications.details"
 msgstr "Article Details"

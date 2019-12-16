@@ -13,7 +13,8 @@ import PkpLoad from '../lib/pkp/js/load.js';
 // Import controllers used by OJS
 import Container from '@/components/Container/Container.vue';
 import SettingsContainer from '@/components/Container/SettingsContainer.vue';
-import StatsContainer from '@/components/Container/StatsContainer.vue';
+import StatsEditorialContainer from '@/components/Container/StatsEditorialContainer.vue';
+import StatsPublicationsContainer from '@/components/Container/StatsPublicationsContainer.vue';
 import WorkflowContainer from '@/components/Container/WorkflowContainerOJS.vue';
 
 // Required by the URN plugin
@@ -24,7 +25,8 @@ window.pkp = Object.assign(PkpLoad, {
 	controllers: {
 		Container,
 		SettingsContainer,
-		StatsContainer,
+		StatsEditorialContainer,
+		StatsPublicationsContainer,
 		WorkflowContainer
 	}
 });

@@ -249,6 +249,8 @@
 		<code function="changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit" />
 		<data file="dbscripts/xml/upgrade/3.2.0_versioning.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_last_activity.xml" />
+		<code function="setStatsEmailSettings" />
+		<code function="installEmailTemplate" key="STATISTICS_REPORT_NOTIFICATION" locales="en_US" />
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 

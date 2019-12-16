@@ -17,6 +17,7 @@ namespace APP\Services;
 
 use \Pimple\Container;
 use \APP\Services\PublicationService;
+use \APP\Services\StatsEditorialService;
 use \APP\Services\StatsService;
 use \APP\Services\UserService;
 use \PKP\Services\PKPAuthorService;
@@ -95,6 +96,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		// Publication statistics service
 		$pimple['stats'] = function() {
 			return new StatsService();
+		};
+
+		// Editorial statistics service
+		$pimple['editorialStats'] = function() {
+			return new StatsEditorialService();
 		};
 	}
 }

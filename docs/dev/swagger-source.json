@@ -1483,6 +1483,131 @@
 				}
 			}
 		},
+		"/stats/editorial": {
+			"get": {
+				"tags": [
+					"Statistics"
+				],
+				"summary": "Get statistics about editorial activity.",
+				"description": "Returns information about editorial activity such as the number of submissions accepted and declined, the number of days to reach editorial decisions, and the acceptance and rejection rates.",
+				"parameters": [
+					{
+						"name": "dateStart",
+						"description": "Return stats after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "sectionIds",
+						"description": "Filter results by submissions to these sections. Separate section IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "An object containing the requested stats. The `name` may change with translation but the `key` will be a reliable, unique identifier for the statistic.",
+						"schema": {
+							"type": "array",
+							"example": [
+								{
+									"key": "submissionsReceived",
+									"name": "Submissions Received",
+									"value": 64
+								},
+								{
+									"key": "submissionsAccepted",
+									"name": "Submissions Accepted",
+									"value": 54
+								},
+								{
+									"key": "submissionsDeclined",
+									"name": "Submissions Declined",
+									"value": 4
+								},
+								{
+									"key": "submissionsDeclinedDeskReject",
+									"name": "Submissions Declined (Desk Reject)",
+									"value": 0
+								},
+								{
+									"key": "submissionsDeclinedPostReview",
+									"name": "Submissions Declined (After Review)",
+									"value": 4
+								},
+								{
+									"key": "submissionsPublished",
+									"name": "Submissions Published",
+									"value": 53
+								},
+								{
+									"key": "daysToDecision",
+									"name": "Days to First Editorial Decision",
+									"value": 42
+								},
+								{
+									"key": "daysToAccept",
+									"name": "Days to Accept",
+									"value": 123
+								},
+								{
+									"key": "daysToReject",
+									"name": "Days to Reject",
+									"value": 322
+								},
+								{
+									"key": "acceptanceRate",
+									"name": "Acceptance Rate",
+									"value": 0.84
+								},
+								{
+									"key": "declineRate",
+									"name": "Rejection Rate",
+									"value": 0.06
+								},
+								{
+									"key": "declinedDeskRate",
+									"name": "Desk Reject Rate",
+									"value": 0
+								},
+								{
+									"key": "declinedReviewRate",
+									"name": "After Review Reject Rate",
+									"value": 0.06
+								}
+							]
+						}
+					},
+					"400": {
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to access editorial statistics for this journal or press.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/stats/publications": {
 			"get": {
 				"tags": [
@@ -1909,6 +2034,106 @@
 					},
 					"404": {
 						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/users": {
+			"get": {
+				"tags": [
+					"Statistics"
+				],
+				"summary": "Get statistics about users.",
+				"description": "Returns a count of the number of user registrations broken down by roles. Please note when using the `registeredBefore` and `registeredAfter` parameters that role counts reflect current user roles. So a user who registered as an author in January, 2019 but was later appointed to subeditor will be counted as a subeditor when the registration date range includes January, 2019.",
+				"parameters": [
+					{
+						"name": "registeredAfter",
+						"description": "Return counts reflecting users who registered after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "registeredBefore",
+						"description": "Return return counts reflecting users who registered before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "status",
+						"description": "Count `active` or `disabled` users. Default: `active`.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "An object containing the requested stats. The `id` relects the `ROLE_ID_*` constant in the application.",
+						"schema": {
+							"type": "array",
+							"example": [
+								{
+									"id": "total",
+									"name": "Total",
+									"value": 304
+								},
+								{
+									"id": 16,
+									"name": "Journal Manager",
+									"value": 4
+								},
+								{
+									"id": 17,
+									"name": "Section Editor",
+									"value": 14
+								},
+								{
+									"id": 4097,
+									"name": "Assistant",
+									"value": 1
+								},
+								{
+									"id": 65536,
+									"name": "Author",
+									"value": 220
+								},
+								{
+									"id": 4096,
+									"name": "Reviewer",
+									"value": 107
+								},
+								{
+									"id": 1048576,
+									"name": "Reader",
+									"value": 207
+								},
+								{
+									"id": 2097152,
+									"name": "Subscription Manager",
+									"value": 0
+								}
+							]
+						}
+					},
+					"400": {
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to access user statistics for this journal or press.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}

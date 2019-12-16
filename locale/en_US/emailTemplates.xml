@@ -277,4 +277,21 @@
 		<body>{translate key="emails.editorDecisionInitialDecline.body"}</body>
 		<description>{translate key="emails.editorDecisionInitialDecline.description"}</description>
 	</email_text>
+	<email_text key="STATISTICS_REPORT_NOTIFICATION">
+		<subject>Editorial activity for {$month}, {$year}</subject>
+		<body><![CDATA[{$name}, <br />
+<br />
+Your journal health report for {$month}, {$year} is now available. Your key stats for this month are below.<br />
+<ul>
+	<li>New submissions this month: {$newSubmissions}</li>
+	<li>Declined submissions this month: {$declinedSubmissions}</li>
+	<li>Accepted submissions this month: {$acceptedSubmissions}</li>
+	<li>Total submissions in the system: {$totalSubmissions}</li>
+</ul>
+Login to the the journal to view more detailed <a href="{$editorialStatsLink}">editorial trends</a> and <a href="{$publicationStatsLink}">published article stats</a>. A full copy of this month's editorial trends is attached.<br />
+<br />
+Sincerely,<br />
+{$principalContactSignature}]]></body>
+		<description>This email is automatically sent monthly to editors and journal managers to provide them a system health overview.</description>
+	</email_text>
 </email_texts>
