@@ -10,7 +10,7 @@
 
  <nav class="cmp_skip_to_content">
 	<a href="#pkp_content_main">{translate key="navigation.skip.main"}</a>
-	<a href="#navigationPrimary">{translate key="navigation.skip.nav"}</a>
+	<a href="#siteNav">{translate key="navigation.skip.nav"}</a>
 	{if !$requestedPage || $requestedPage === 'index'}
 		{if $activeTheme && $activeTheme->getOption('showDescriptionInJournalIndex')}
 			<a href="#homepageAbout">{translate key="navigation.skip.about"}</a>
