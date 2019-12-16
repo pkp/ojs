@@ -3,7 +3,7 @@
 	"info": {
 		"version": "3.2.x",
 		"title": "Open Journal Systems - API Reference",
-		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for documentation on the platform's internals.\n\n**Changes since v3.1.x**\n* The Author property, `isBrowseable`, was renamed to `includeInBrowse`.\n* The Author property, `isPrimaryContact`, was renamed to `primaryContact`.\n* The Submission property, `status`, was changed from an `object` to an `integer`. Please see documentation for more information.\n* The `/submissions/{submissionId}/galleys` endpoint was removed. Galley data is provided with each publication.",
+		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for documentation on the platform's internals.\n\n**Breaking changes since v3.1.x**\n* Major changes have been made to submission data. Submissions now contain one or more `publications`, where title, author and other published data is stored.\n* The Author property, `isBrowseable`, was renamed to `includeInBrowse`.\n* The Author property, `isPrimaryContact`, was renamed to `primaryContact`.\n* The Submission property, `status`, was changed from an `object` to an `integer`. Please see documentation for more information.\n* The `/submissions/{submissionId}/galleys` endpoint was removed. Galley data is provided with each publication.",
 		"contact": {
 			"name": "Public Knowledge Project",
 			"url": "https://pkp.sfu.ca"
@@ -38,6 +38,10 @@
 		{
 			"name": "Statistics",
 			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "Vocabs",
+			"description": "Handle controlled vocabularies like keywords and subjects. Only admins, journal managers, subeditors, assistants and authors can access these endpoints."
 		},
 		{
 			"name": "Temporary Files",
@@ -308,7 +312,14 @@
 					},
 					{
 						"name": "sectionIds",
-						"description": "Filter the results by those assigned to a section.",
+						"description": "Filter the results by those with one or more publications assigned to a section.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "issueIds",
+						"description": "Filter the results by those with one or more publications assigned to an issue.",
 						"in": "query",
 						"required": false,
 						"type": "string"
@@ -339,10 +350,39 @@
 							}
 						}
 					},
-					"400": {
+					"403": {
 						"description": "You do not have permission to access submission assigned to the user requested in the `assignedTo` parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Create a new submission.",
+				"parameters": [
+					{
+						"description": "Details about the submission that should be created.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/SubmissionEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of the submission that was just added.",
+						"schema": {
+							"$ref": "#/definitions/Submission"
+						}
+					},
+					"400": {
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					}
 				}
@@ -366,7 +406,7 @@
 				],
 				"responses": {
 					"200": {
-						"description": "Submission detais.",
+						"description": "Submission details.",
 						"schema": {
 							"$ref": "#/definitions/Submission"
 						}
@@ -379,6 +419,90 @@
 					},
 					"404": {
 						"description": "The requested submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Edit a submission.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "The details about the submission that you want to edit. All params are optional. When a param is omitted, the existing value of that param will not be modified.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/SubmissionEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The submission that was just edited with the new values after the update has occurred.",
+						"schema": {
+							"$ref": "#/definitions/Submission"
+						}
+					},
+					"400": {
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"description": "This error indicates one of the following:\n* You are not allowed to edit a submission from the site-wide endpoint. You must use a context (journal/press) endpoint.\n* You are not allowed to change the context (journal/press) of a submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Delete a submission.",
+				"description": "Only journal managers and subeditors can make a request to this endpoint.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The submission that was just deleted.",
+						"schema": {
+							"$ref": "#/definitions/Submission"
+						}
+					},
+					"403": {
+						"description": "You are not allowed to delete this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The submission could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -454,6 +578,358 @@
 					},
 					"404": {
 						"description": "The requested submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications": {
+			"get": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Get a list of publications for this submission.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "List of publications for this submission.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Publication"
+							}
+						}
+					},
+					"404": {
+						"description": "The requested submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Create a new publication for this submission.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"descriptions": "Publication ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "Details about the publication that should be created.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/PublicationEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of the publication that was just added.",
+						"schema": {
+							"$ref": "#/definitions/Publication"
+						}
+					},
+					"400": {
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}": {
+			"get": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Get a publication.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"descriptions": "Publication ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The publication details",
+						"schema": {
+							"$ref": "#/definitions/Publication"
+						}
+					},
+					"404": {
+						"description": "The requested submission or publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Edit a publication.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"descriptions": "Publication ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "The details about the publication that you want to edit. All params are optional. When a param is omitted, the existing value of that param will not be modified.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/PublicationEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The publication that was just edited with the new values after the update has occurred.",
+						"schema": {
+							"$ref": "#/definitions/Publication"
+						}
+					},
+					"400": {
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"description": "This error indicates one of the following:\n* The publication you want to edit does not belong to this submission.\n* This publication is published and can not be edited. You must create and publish a new version.\n* You do not have permission to edit this publication.\n* You are not allowed to modify the `status` of a publication. You must use the `/submissions/{submissionId}/publications/{publicationId}/publish` and `.../unpublish` endpoints to modify the status of a publication.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Delete a publication.",
+				"description": "Only journal managers and subeditors can make a request to this endpoint.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"descriptions": "Publication ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The publication that was just deleted.",
+						"schema": {
+							"$ref": "#/definitions/Publication"
+						}
+					},
+					"403": {
+						"description": "This may mean one of the following:\n* You are not allowed to delete this publication.\n* The publication does not belong to this submission.\n* This publication is published and can not be deleted.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/version": {
+			"post": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Create a new version of an existing publication.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"descriptions": "Publication ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of the new publication that was created.",
+						"schema": {
+							"$ref": "#/definitions/Publication"
+						}
+					},
+					"403": {
+						"description": "The publication you want to version does not belong to this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/publish": {
+			"put": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Publish a publication.",
+				"description": "If the publication is assigned to an issue that is not yet published, it will be scheduled for publication and the `status` will be set to `STATUS_SCHEDULED`. If the issue is already published, it will be published immediately and the `status` will be set to `STATUS_PUBLISHED`.\n\nThe publication will be validated against any publishing requirements before it is published and a `400` response will be returned if it fails validation.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"descriptions": "Publication ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of the publication that was just published.",
+						"schema": {
+							"$ref": "#/definitions/Publication"
+						}
+					},
+					"400": {
+						"description": "One or more publication requirements have not been met.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"description": "A 403 response means that the publication you want to version does not belong to this submission or that the publication is already published.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/unpublish": {
+			"put": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Unpublish a publication.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"descriptions": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"descriptions": "Publication ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of the publication that was just unpublished.",
+						"schema": {
+							"$ref": "#/definitions/Publication"
+						}
+					},
+					"403": {
+						"description": "A 403 response means that the publication you want to version does not belong to this submission or that the publication is already unpublished.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The publication could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -922,7 +1398,7 @@
 						}
 					},
 					"400": {
-						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
@@ -995,7 +1471,7 @@
 						}
 					},
 					"400": {
-						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
@@ -1115,7 +1591,7 @@
 						}
 					},
 					"400": {
-						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
@@ -1172,7 +1648,7 @@
 						}
 					},
 					"400": {
-						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
@@ -1223,7 +1699,7 @@
 						}
 					},
 					"400": {
-						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
@@ -1336,7 +1812,7 @@
 						}
 					},
 					"400": {
-						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
@@ -1409,7 +1885,7 @@
 						}
 					},
 					"400": {
-						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
@@ -2047,7 +2523,7 @@
 					"Statistics"
 				],
 				"summary": "Get statistics about users.",
-				"description": "Returns a count of the number of user registrations broken down by roles. Please note when using the `registeredBefore` and `registeredAfter` parameters that role counts reflect current user roles. So a user who registered as an author in January, 2019 but was later appointed to subeditor will be counted as a subeditor when the registration date range includes January, 2019.",
+				"description": "Returns a count of the number of user registrations broken down by roles.\n\nPlease note when using the `registeredBefore` and `registeredAfter` parameters that role counts reflect current user roles.\n\nA user who registered as an author in January, 2019 but was later appointed to subeditor will be counted as a subeditor when the registration date range includes January, 2019.",
 				"parameters": [
 					{
 						"name": "registeredAfter",
@@ -2058,7 +2534,7 @@
 					},
 					{
 						"name": "registeredBefore",
-						"description": "Return return counts reflecting users who registered before this date.",
+						"description": "Return counts reflecting users who registered before this date.",
 						"in": "query",
 						"required": false,
 						"type": "string"
@@ -2134,6 +2610,53 @@
 					},
 					"404": {
 						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/vocabs": {
+			"get": {
+				"tags": [
+					"Vocabs"
+				],
+				"summary": "Get the controlled vocab entries available in this journal.",
+				"parameters": [
+					{
+						"name": "vocab",
+						"description": "The type of controlled vocab you want to retrieve entries for. One of `CONTROLLED_VOCAB_*`.",
+						"in": "query",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "locale",
+						"description": "The locale key, such as `en_US`, you want to retrieve entries for. If no `locale` is provided, entries will be provided in the user's current locale or fall back to the journal's primary locale.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of the entries available in this journal.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					"400": {
+						"description": "The `locale` that you requested is not supported in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The journal you requested could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -2218,9 +2741,79 @@
 						"description": "The parameters you submitted"
 					},
 					"400": {
-						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					}
+				}
+			}
+		},
+		"/_uploadPublicFile": {
+			"options": {
+				"tags": [
+					"Backend"
+				],
+				"summary": "Responds with the appopriate headers to indicate file uploads maybe be sent, required by some file upload utilities which send a preflight request.",
+				"responses": {
+					"200": {
+						"description": "An empty response body."
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Backend"
+				],
+				"summary": "Upload a file to the user's public file directory.",
+				"description": "The user's public file directory supports files uploaded through the TinyMCE rich text editor. This is commonly used in context settings but is also available to all registered users through their profile biography.",
+				"parameters": [
+					{
+						"name": "file",
+						"description": "Use the `file` key to upload your file.",
+						"in": "body"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "An object containing the URL to the uploaded file.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"url": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "One of the following errors occurred.\n* No uploaded file could be found.\n* This file type is not supported.\n* The file you uploaded identifies itself as an image but it is not a valid image.\n* The mime-type did not match the file extension.\n* The file is too large.\n* The server configuration could not support this file upload because there is no temporary directory, it doesn't have permission to write to the directory, or a PHP extension stopped the file upload.\n\nThe error message will contain further details.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to upload this public file.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"409": {
+						"description": "The upload failed for an unknown reason.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"413": {
+						"description": "Your user file directory is full.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"500": {
+						"description": "The server is unable to read or write to the public files directory.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
 						}
 					}
 				}
