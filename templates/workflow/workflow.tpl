@@ -137,7 +137,7 @@
 										v-if="canCreateNewVersion"
 										ref="createVersion"
 										label="{translate key="publication.createVersion"}"
-										@click="createVersion"
+										@click="openCreateVersionPrompt"
 									></pkp-button>
 								</template>
 							{/if}
