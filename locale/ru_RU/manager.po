@@ -1016,10 +1016,7 @@ msgid "manager.statistics.statistics.peerReviewed"
 msgstr "Отрецензировано"
 
 msgid "manager.statistics.statistics.registeredReaders"
-msgstr "Зарегистрировано читателей"
-
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Зарегистрировано пользователей"
+msgstr "Зарегистрированные читатели"
 
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Назначено рецензентам"
@@ -1707,6 +1704,9 @@ msgstr "Указанные объекты не удается найти."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Отправить копию основному контактному лицу, указанному в настройках журнала."
+
+msgid "stats.publicationStats"
+msgstr "Статистика по статьям"
 
 msgid "stats.publications.details"
 msgstr "Информация о статье"
