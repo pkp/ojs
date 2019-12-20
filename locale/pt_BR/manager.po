@@ -177,7 +177,7 @@ msgid "manager.people.mergeUsers.into.description"
 msgstr "Escolha um usuário a quem deseja atribuir as submissões e histórico de tarefas do cadastro anterior."
 
 msgid "manager.people.roleEnrollment"
-msgstr "Papel dos usuários"
+msgstr "Papel de {$role}"
 
 msgid "manager.people.syncUserDescription"
 msgstr "A sincronização cadastrará, nesta revista e no mesmo papel, todos os usuários com o papel definido da revista de origem. Esta função permite que um grupo comum de usuários (os avaliadores, por exemplo) seja compartilhado entre revistas."
