@@ -24,7 +24,7 @@ msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "A ação substituirá configurações específicas realizadas posteriormente no idioma selecionado"
 
 msgid "manager.languages.languageInstructions"
-msgstr "O sistema pode ser apresentado nos vários idiomas disponíveis, bem como operar como sistema multilíngüe, proporcionando a opção de troca de idioma em cada página, e permitindo que algumas informações sejam incluídas nos idiomas adicionais habilitados para a revista.<br /><br />Caso o idioma desejado não esteja disponível, solicite ao administrador do portal a sua instalação por meio da sua interface específica de administração do portal. Para informações sobre a instalação de novos idiomas, consulte a documentação do sistema."
+msgstr "O sistema pode ser apresentado nos vários idiomas disponíveis, bem como operar como sistema multilíngüe, proporcionando a opção de troca de idioma em cada página, e permitindo que algumas informações sejam incluídas nos idiomas adicionais habilitados para a revista. Caso o idioma desejado não esteja disponível, solicite ao administrador do portal a sua instalação por meio da sua interface específica de administração do portal. Para informações sobre a instalação de novos idiomas, consulte a documentação do sistema."
 
 msgid "manager.languages.noneAvailable"
 msgstr "Nenhum idioma adicional disponível. Solicite ao administrador do portal a inclusão de idiomas adicionais para esta revista."
@@ -171,7 +171,7 @@ msgid "manager.people.enrollSyncJournal"
 msgstr "na revista"
 
 msgid "manager.people.mergeUsers.from.description"
-msgstr "Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, em vez de acumular funções editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuías ao segundo cadastro escolhido."
+msgstr "Escolha um usuário para mesclar seu cadastro dentro de outra conta (quando um usuário possui duas contas distintas, em vez de acumular funções editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuídas ao segundo cadastro escolhido."
 
 msgid "manager.people.mergeUsers.into.description"
 msgstr "Escolha um usuário a quem deseja atribuir as submissões e histórico de tarefas do cadastro anterior."
@@ -833,18 +833,6 @@ msgstr "Expiração parcial"
 msgid "manager.subscriptionPolicies.expiryPartialDescription"
 msgstr "Leitores mantém acesso apenas a conteúdo publicado anteriormente à expiração. Novas publicação não permitirão acesso ao conteúdo exclusivo a assinantes."
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks1"
-msgstr "Notificar assinantes via e-mail"
-
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks2"
-msgstr "semana(s) depois da expiração da assinatura."
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks1"
-msgstr "Notificar assinantes via e-mail"
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks2"
-msgstr "semana(s) antes da expiração da assinatura."
-
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Lembretes de expiração de assinatura"
 
@@ -1316,6 +1304,9 @@ msgstr "Deseja realmente exluir permanentemente esta seção?"
 msgid "manager.sections.alertDelete"
 msgstr "Antes de pode excluir esta seção, é necessário mover os artigos publicados nela para outras seções."
 
+msgid "manager.setup.resetPermissions"
+msgstr "Redefinir Permissões do Artigo"
+
 msgid "manager.setup.journalThumbnail"
 msgstr "Miniatura da publicação"
 
@@ -1323,8 +1314,7 @@ msgid "manager.setup.useThumbnail"
 msgstr "Miniatura"
 
 msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"O periódico está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos.\n"
+msgstr "O periódico está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos.\n"
 "Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir uma lista ordenada dos artigos mais usados ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão."
 
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
@@ -1345,17 +1335,41 @@ msgstr "Restringir resultados por contexto"
 msgid "manager.statistics.reports.filters.byObject.description"
 msgstr "Restrinja os resultados por tipo de objeto (periódico, edição, artigo, composições finais em pdf, ou outros tipos) e/ou por um ou mais IDs de objeto."
 
-msgid "manager.setup.resetPermissions"
-msgstr "Redefinir Permissões do Artigo"
-
-msgid "manager.setup.copyrightYearBasis"
-msgstr "Basear direitos autorais de novos artigos no ano"
-
 msgid "manager.setup.categories"
 msgstr "Categorias"
 
 msgid "manager.setup.categories.description"
 msgstr "Escolha a categoria mais apropria da lista apresentada. Leitores poderão navegar por categoria a partir do conjunto completo oferecido."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Basear direitos autorais de novos artigos no ano"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Configurações"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Para utilizar este plugin, por favor vá para a categoria de plugins de \"Identificação Pública\", habilite e configure o plug-in DOI e especifique um prefixo DOI válido."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "O plugin não foi completamento configurado."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Senha"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Por favor, note que a senha será guardada como texto simples, isto é, não criptografado."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Registrar"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "O arquivo de saída {$param} não é gravável."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "O registo não foi bem sucedido! O servidor de registro DOI retornou um erro: '{$param}'"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registrado com sucesso!"
 
 msgid "manager.website.archiving"
 msgstr "Arquivamento"
@@ -1384,29 +1398,14 @@ msgstr "Título da Revista"
 msgid "manager.setup.pageHeader"
 msgstr "Cabeçalho"
 
-msgid "manager.setup.includeCreativeCommons"
-msgstr "Para periódicos que oferecem acesso livre imediato ou adiado, inclua uma licença Creative Commons com todo o material na data de publicação."
-
-msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
-msgstr "Habilite a caixa de opção disponível."
-
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths1"
-msgstr "Notificar assinantes via e-mail"
-
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths2"
-msgstr "mês(es) após a expiração da assinatura."
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths1"
-msgstr "Notificar assinantes via e-mail"
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths2"
-msgstr "mês(es) antes da expiração da assinatura."
-
 msgid "manager.setup.focusAndScope.description"
 msgstr "Descreva aos autores, leitores e bibliotecários a gama de artigos e outros itens a revista vai publicar."
 
 msgid "manager.setup.form.issnInvalid"
 msgstr "O ISSN especificado não é válido."
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Para periódicos que oferecem acesso livre imediato ou adiado, inclua uma licença Creative Commons com todo o material na data de publicação."
 
 msgid "manager.setup.contextSummary"
 msgstr "Resumo da Revista"
@@ -1415,7 +1414,7 @@ msgid "manager.setup.contextAbout"
 msgstr "Sobre a Revista"
 
 msgid "manager.setup.contextAbout.description"
-msgstr "Incluea qualquer informação sobre a revista que pode ser de interesse para os leitores, autores ou colaboradores. Isso poderia incluir a sua política de acesso aberto, o foco e o escopo da revista, aviso de direitos autorais, a divulgação de patrocínio, a história da revista, uma declaração de privacidade, e inclusão em qualquer sistema de arquivo LOCKSS ou CLOCKSS."
+msgstr "Inclui qualquer informação sobre a revista que pode ser de interesse para os leitores, autores ou colaboradores. Isso poderia incluir a sua política de acesso aberto, o foco e o escopo da revista, aviso de direitos autorais, a divulgação de patrocínio, a história da revista, uma declaração de privacidade, e inclusão em qualquer sistema de arquivo LOCKSS ou CLOCKSS."
 
 msgid "manager.setup.journalThumbnail.description"
 msgstr "Um pequeno logotipo ou representação da revista que pode ser usado em listas de revistas."
@@ -1423,8 +1422,8 @@ msgstr "Um pequeno logotipo ou representação da revista que pode ser usado em 
 msgid "manager.setup.lockssLicenseDescription"
 msgstr "Uma licença LOCKSS aparecerá na seção Sobre a Revista sob Arquivamento: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\"> Licença  LOCKSS </a>"
 
-msgid "manager.setup.lockssLicenseLabel"
-msgstr "Descrição da Licença LOCKSS"
+msgid "manager.distribution.access"
+msgstr "Acesso"
 
 msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
@@ -1438,29 +1437,11 @@ msgstr "Uma licença CLOCKSS aparecerá na seção Sobre a Revista sob Arquivame
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Descrição da Licença CLOCKSS"
 
-msgid "manager.setup.clockssRegister"
-msgstr "Assine o serviço CLOCKSS visitando <a href=\"http://clockss.org/\" target=\"_blank\"> o site CLOCKSS </a>."
-
-msgid "manager.setup.clockssTitle"
-msgstr "CLOCKSS"
-
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Visualizações do sumário da edição"
 
-msgid "manager.distribution.access"
-msgstr "Acesso"
-
-msgid "manager.settings.journalDescription"
-msgstr "Todas as configurações específicas para a revista (editorial, contato, políticas, diretrizes, filiação e apoio, categorias e séries)."
-
-msgid "manager.settings.publicationDescription"
-msgstr "Todas as configurações específicas para o processo de publicação (configurações gerais, fase de envio do manuscrito, avaliação, estágio editorial, estágio de produção, modelos de email)."
-
-msgid "manager.settings.websiteDescription"
-msgstr "Todas as configurações específicas para as páginas do site público (página inicial, a aparência, idiomas)"
-
-msgid "manager.settings.distributionDescription"
-msgstr "Todas as configurações específicas para o processo de distribuição (notificação, indexação, arquivamento, pagamento, ferramentas de leitura)."
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Habilite a caixa de opção disponível."
 
 msgid "grid.category.path"
 msgstr "Caminho"
@@ -1472,7 +1453,7 @@ msgid "manager.setup.section.description"
 msgstr "Artigos dentro de edições publicadas de uma revista são organizados em seções, agrupadas tipicamente por tema ou tipo de conteúdo (por exemplo, Artigos de Revisão, Pesquisa, etc)."
 
 msgid "settings.roles.gridDescription"
-msgstr "Os papéis são grupos de usuários na revista que têm acesso a diferentes níveis de permissão e fluxos de trabalho associados dentro da revista. Há cinco níveis de permissão diferentes: Gerentes da Revista, que têm acesso a tudo na revista (todos os conteúdos e definições); Editores da Revista, que têm acesso a todo o conteúdo dentro da sua série; Assistentes da Revista, que têm acesso a todas os manuscritos que foram explicitamente atribuídos a eles por um editor; Os Avaliadores, que podem ver e executar as avaliações que lhes foram atribuídas; e Autores, que podem ver e interagir com uma quantidade limitada de informações sobre suas próprias submissões. Além disso, existem cinco estágios diferentes que os papéis podem ter acesso a: Envio, Avaliação Interna, a Avaliação Externa, Editorial e Produção."
+msgstr "Os papéis são grupos de usuários na revista que têm acesso a diferentes níveis de permissão e fluxos de trabalho associados dentro da revista. Há cinco níveis de permissão diferentes: Gerentes da Revista, que têm acesso a tudo na revista (todos os conteúdos e definições); Editores da Revista, que têm acesso a todo o conteúdo dentro da sua série; Assistentes da Revista, que têm acesso a todos os manuscritos que foram explicitamente atribuídos a eles por um editor; Os Avaliadores, que podem ver e executar as avaliações que lhes foram atribuídas; e Autores, que podem ver e interagir com uma quantidade limitada de informações sobre suas próprias submissões. Além disso, existem cinco estágios diferentes que os papéis podem ter acesso a: Envio, Avaliação Interna, a Avaliação Externa, Editorial e Produção."
 
 msgid "manager.publication.library"
 msgstr "Biblioteca da Revista"
@@ -1495,9 +1476,6 @@ msgstr "Componentes do Artigo"
 msgid "grid.genres.description"
 msgstr "Estes componentes são utilizados para fins de atribuição de nomes de arquivo e são apresentados em um menu suspenso no upload dos arquivos. Os gêneros designados ## permitem que o usuário para associar o arquivo com qualquer toda a apresentação 99Z ou um componente específico em número (por exemplo, 02)."
 
-msgid "plugins.importexport.common.settings"
-msgstr "Configurações"
-
 msgid "plugins.importexport.common.settings.DOIPluginSettings"
 msgstr "Configurações do Plugin DOI"
 
@@ -1507,20 +1485,14 @@ msgstr "Artigos"
 msgid "plugins.importexport.common.export.issues"
 msgstr "Edições"
 
+msgid "plugins.importexport.common.export.representations"
+msgstr "Composições Finais"
+
 msgid "plugins.importexport.common.missingRequirements"
 msgstr "Requisitos do plugin não fora atendidos"
 
-msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr "Para utilizar este plugin, por favor vá para a categoria de plugins de \"Identificação Pública\", habilite e configure o plug-in DOI e especifique um prefixo DOI válido."
-
-msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr "O plugin não foi completamento configurado."
-
-msgid "plugins.importexport.common.settings.form.password"
-msgstr "Senha"
-
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Por favor, note que a senha será guardada como texto simples, isto é, não criptografado."
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "Nenhum objeto publicável foi selecionado para receber DOI no plugin corrrespondente, então não há possibilidade de depósito ou exportação neste plugin."
 
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Qualquer Edição"
@@ -1534,6 +1506,9 @@ msgstr "Não Depositado"
 msgid "plugins.importexport.common.status.markedRegistered"
 msgstr "Marcado como registrado"
 
+msgid "plugins.importexport.common.status.registered"
+msgstr "Registrado"
+
 msgid "plugins.importexport.common.action"
 msgstr "Ação"
 
@@ -1543,44 +1518,14 @@ msgstr "Exportar"
 msgid "plugins.importexport.common.action.markRegistered"
 msgstr "Marcar como registrado"
 
-msgid "plugins.importexport.common.action.register"
-msgstr "Registrar"
-
-msgid "plugins.importexport.common.action.checkStatus"
-msgstr "Verificar Status"
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Sem objetos selecionados"
 
 msgid "plugins.importexport.common.error.validation"
 msgstr "Não foi possível converter os objetos selecionados."
 
-msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr "O arquivo de saída {$param} não é gravável."
-
-msgid "plugins.importexport.common.register.error.mdsError"
-msgstr "O registo não foi bem sucedido! O servidor de registro DOI retornou um erro: '{$param}'"
-
-msgid "plugins.importexport.common.register.success"
-msgstr "Registrado com sucesso!"
-
-msgid "plugins.importexport.common.export.representations"
-msgstr "Composições Finais"
-
-msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr "Nenhum objeto publicável foi selecionado para receber DOI no plugin corrrespondente, então não há possibilidade de depósito ou exportação neste plugin."
-
-msgid "plugins.importexport.common.status.registered"
-msgstr "Registrado"
-
-msgid "plugins.importexport.common.validation"
-msgstr "Sem objetos selecionados"
-
 msgid "plugins.importexport.common.invalidXML"
 msgstr "XML inválido:"
-
-msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "O arquivo de entrada {$param} não é legível."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "O prefixo DOI está faltando para a revista com o caminho {$path}."
@@ -1597,14 +1542,110 @@ msgstr "Os objetos especificados não puderam ser encontrados."
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Enviar uma cópia para o contato principal, identificado nas Configurações da Revista."
 
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Descrição da Licença LOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Assine o serviço CLOCKSS visitando <a href=\"http://clockss.org/\" target=\"_blank\"> o site CLOCKSS </a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.paymentTypes"
+msgstr "Formas de Pagamento"
+
 msgid "manager.setup.plnPluginEnable"
 msgstr "Plugin PKP PN ativo"
 
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Deseja realmente apagar esta subscrição?"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Sem objetos selecionados"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "O arquivo de entrada {$param} não é legível."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Ligação para uma página a descrever as subscrições disponíveis."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Ligação para uma página a descrever as subscrições atuais e anteriores do visitante."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Esta ligação só será apresentada quando um visitante estiver autenticado."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Meses"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Semanas"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Confirma a renovação desta subscrição?"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Notificar os subscritores por email após expiração da subscrição"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Notificar os subscritores por email após expiração da subscrição"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Notificar os subscritores por email antes da expiração da subscrição."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Notificar os subscritores por email antes da expiração da subscrição."
+
 msgid "manager.setup.plnDescription"
-msgstr "A Rede de Preservação do PKP (PKP PN) fornece serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios."
+msgstr "A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Clique na ligação Configurações para aceitar os termos de uso para o PKP PN."
 
 msgid "manager.setup.otherLockss"
 msgstr "Opções Alternativas de Arquivo"
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr "Rede de Preservação PKP (PKP PN)" 
+msgstr "Rede de Preservação PKP (PKP PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios O plugin PKP PN para OJS 3 está em desenvolvimento e ficará disponível na galeria de plugins em breve."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks1"
+msgstr "Notificar assinantes via e-mail"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks2"
+msgstr "semana(s) depois da expiração da assinatura."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks1"
+msgstr "Notificar assinantes via e-mail"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks2"
+msgstr "semana(s) antes da expiração da assinatura."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths1"
+msgstr "Notificar assinantes via e-mail"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths2"
+msgstr "mês(es) após a expiração da assinatura."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths1"
+msgstr "Notificar assinantes via e-mail"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths2"
+msgstr "mês(es) antes da expiração da assinatura."
+
+msgid "manager.settings.journalDescription"
+msgstr "Todas as configurações específicas para a revista (editorial, contato, políticas, diretrizes, filiação e apoio, categorias e séries)."
+
+msgid "manager.settings.publicationDescription"
+msgstr "Todas as configurações específicas para o processo de publicação (configurações gerais, fase de envio do manuscrito, avaliação, estágio editorial, estágio de produção, modelos de email)."
+
+msgid "manager.settings.websiteDescription"
+msgstr "Todas as configurações específicas para as páginas do site público (página inicial, a aparência, idiomas)"
+
+msgid "manager.settings.distributionDescription"
+msgstr "Todas as configurações específicas para o processo de distribuição (notificação, indexação, arquivamento, pagamento, ferramentas de leitura)."
+
+msgid "plugins.importexport.common.action.checkStatus"
+msgstr "Verificar Status"
