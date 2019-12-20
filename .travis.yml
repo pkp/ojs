@@ -34,9 +34,13 @@ cache:
   npm: true
   directories:
     - $HOME/.composer/cache
+    - $HOME/.cache
 addons:
+  chrome: beta
   apt:
     update: true
+    packages:
+      - libgconf-2-4
 before_install:
   # Check out submodules (this script checks out developer forks if necessary)
   - ./tools/startSubmodulesTRAVIS.sh
@@ -50,8 +54,6 @@ before_install:
 
       # Prepare the server environment
       ./lib/pkp/tools/travis/prepare-webserver.sh
-      source ./lib/pkp/tools/travis/start-xvfb.sh
-      ./lib/pkp/tools/travis/start-selenium.sh
 
       # Prepare the local codebase
       ./lib/pkp/tools/travis/install-composer-dependencies.sh
@@ -84,6 +86,5 @@ after_script:
   - cat error.log
 
 after_failure:
-  - sudo apt-get install sharutils imagemagick
-  - import -window root screenshot.png
-  - tar cz screenshot.png | uuencode /dev/stdout
+  - sudo apt-get install sharutils
+  - tar cz cypress/screenshots | uuencode /dev/stdout

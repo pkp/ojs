@@ -1,34 +1,21 @@
-<?php
-
 /**
- * @file tests/data/60-content/ImportIssueTest.php
+ * @file cypress/tests/data/60-content/ImportIssue.spec.js
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class ImportIssueTest
- * @ingroup tests_data
- *
- * @brief Data build suite: Import an issue
  */
 
-import('tests.ContentBaseTestCase');
-
-use Facebook\WebDriver\Interactions\WebDriverActions;
-
-class ImportIssueTest extends ContentBaseTestCase {
-	/**
-	 * Import an issue.
-	 */
-	function testImportIssue() {
+describe('Data suite tests', function() {
+	it('Imports an issue from XML', function() {
 		// TODO: Import/export is not yet compatible with versioning.
 		// See: https://github.com/pkp/pkp-lib/issues/4880
 		//
 		// Because of this problem, the publish issue tests (jmwandenga/vkarbasizaed) were
 		// updated to put the articles in Vol. 1 No. 2, instead of Vol. 1 No. 1. This may
 		// need to be corrected after import/export is fixed.
-		$this->markTestSkipped('See https://github.com/pkp/pkp-lib/issues/4880');
+		/*
 
 		$this->logIn('dbarnes');
 
@@ -46,7 +33,6 @@ class ImportIssueTest extends ContentBaseTestCase {
 
 		// Ensure that the import was listed as completed.
 		$this->waitForElementPresent('//*[contains(text(),\'The import completed successfully.\')]//li[contains(text(),\'Vol 1. No 1.\')]');
-
-		$this->logOut();
-	}
-}
+		*/
+	});
+});
