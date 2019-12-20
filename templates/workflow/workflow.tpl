@@ -48,11 +48,13 @@
 					:label="submission.status === getConstant('STATUS_PUBLISHED') ? i18n.view : i18n.preview"
 					:href="submission.urlPublished"
 				></pkp-button>
-				<pkp-button
-					label="{translate key="editor.activityLog"}"
-					ref="activityButton"
-					@click="openActivity"
-				></pkp-button>
+				{if $canAccessEditorialHistory}
+					<pkp-button
+						label="{translate key="editor.activityLog"}"
+						ref="activityButton"
+						@click="openActivity"
+					></pkp-button>
+				{/if}
 				<pkp-button
 					label="{translate key="editor.submissionLibrary"}"
 					ref="library"
@@ -77,7 +79,7 @@
 					{load_url_in_div id="submissionProgressBarDiv" url=$submissionProgressBarUrl}
 				</div>
 			</tab>
-			{if $canEditPublication}
+			{if $canAccessPublication}
 				<tab id="publication" label="{translate key="submission.publication"}">
 					<div class="pkpPublication" ref="publication" aria-live="polite">
 						<pkp-header class="pkpPublication__header">
