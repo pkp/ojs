@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
+"PO-Revision-Date: 2019-12-23 14:34+0000\n"
+"Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/it/>"
+"\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:27+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr "Sei sicuro di voler ripristinare tutti i modelli di email di questa rivista? In questo modo verranno perse tutte le personalizzazioni effettuate."
@@ -1640,3 +1643,42 @@ msgstr "Manda una copia al contatto primario, identificato nelle configurazioni 
 
 msgid "manager.setup.editorialTeam.description"
 msgstr "Elenca editori, direttori, responsabili e altri individui associati con la rivista."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Mostra in Homepage"
+
+msgid "manager.setup.contact.success"
+msgstr "I contatti di questa testata sono stati aggiornati."
+
+msgid "manager.setup.archiving.success"
+msgstr "I dati di archiviazione di questa testata sono stati aggiornati."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introduzione"
+
+msgid "manager.setup.announcements.success"
+msgstr "La configurazione delle notifiche è stata aggiornata."
+
+msgid "manager.payment.success"
+msgstr "Le configurazioni relative ai pagamenti sono state aggiornate."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "I dati di pubblicazione sono stati aggiornati."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Modalità di pubblicazione"
+
+msgid "manager.distribution.publication"
+msgstr "Pubblicazione"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Usa la data di pubblicazione dell'articolo"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Usa la data di pubblicazione del fascicolo"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Seleziona la modalità di assegnazione in automatico della data di copyright. "
+"Questa potrà essere modificata manualmente. Se la testata è a pubblicazione "
+"continua non utilizzare la data di pubblicazione del singolo fascicolo."
