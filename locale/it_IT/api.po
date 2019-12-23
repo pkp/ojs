@@ -2,14 +2,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2019-12-24 15:34+0000\n"
+"Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/api/it/>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Non hai il permesso si vedere i fascicoli non pubblicati."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "La pubblicazione che hai richiesto non è parte di questo articolo."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "La pubblicazione che hai richiesto non è parte di questa testata."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Il metodo di pagamento selezionato non è supportato da questa testata."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Non hai i permessi necessari per trasferire questo template di posta ad "
+"un'altra testata."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "La testata che hai richiesto non è stata trovata."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Non hai i permessi per cancellare questa testata."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Non hai il permesso per modificare questa testata."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Non è possibile modificare questa testata con site-wide API."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Per visualizzare o modificare questa testata è necessario inviare una "
+"richiesta via api o site-wide API."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Non hai i permessi per visualizzare questa testata."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "E' possibile visualizzare solamente testate abilitate."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Per sottomettere o modificare una proposta è necessario inviare una "
+"richiesta al punto API della testata."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Non è possibile cambiare la testata di sottomissione."
