@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2019-12-23 14:34+0000\n"
+"PO-Revision-Date: 2019-12-28 17:34+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/it/>"
 "\n"
@@ -186,7 +186,7 @@ msgid "manager.people.syncUserDescription"
 msgstr "La sincronizzazione iscriverà tutti gli utenti inseriti nel ruolo e nella rivista specificati, all'interno dello stesso ruolo in questa rivista. Questa funzione permette a un insieme comune di utenti  (es. revisori) di essere sincronizzati tra due o più riviste."
 
 msgid "manager.sections.abstractsNotRequired"
-msgstr "Non richiedono abstract."
+msgstr "Abstracts non richiesti"
 
 msgid "manager.sections.assigned"
 msgstr "Editor di questa sezione"
@@ -203,7 +203,9 @@ msgstr ""
 "Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della REVISIONE (peer review) e/o dell'EDITING (copyediting, layout e correzione delle bozze) delle submission di questa sezione. I SE vengono creati cliccando 'Section editor' nel menù dei ruoli nella pagina di gestione della rivista."
 
 msgid "manager.sections.editorRestriction"
-msgstr "Solo editor e section editor possono proporre contributi da pubblicare in questa sezione"
+msgstr ""
+"Solo editor e section editor possono inviare contributi da pubblicare in "
+"questa sezione."
 
 msgid "manager.sections.editors"
 msgstr "Section editor"
@@ -221,7 +223,9 @@ msgid "manager.sections.form.titleRequired"
 msgstr "Inserisci un titolo per questa sezione."
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "Non mostrare il nome degli autori degli articoli pubblicati in questa sezione nel sommario dei fascicoli"
+msgstr ""
+"Non mostrare il nome degli autori degli articoli pubblicati in questa "
+"sezione nell'indice."
 
 msgid "manager.sections.hideTocTitle"
 msgstr "Non mostrare il titolo di questa sezione nel sommario dei fascicoli."
@@ -251,13 +255,13 @@ msgid "manager.sections.reviewed"
 msgstr "Peer Reviewed"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "Fanno parte del contenuto della rivista che non viene indicizzato."
+msgstr "Fanno parte del contenuto della rivista che non viene indicizzato"
 
 msgid "manager.sections.submissionReview"
 msgstr "Non saranno sottoposti a peer-review"
 
 msgid "manager.section.submissionsToThisSection"
-msgstr "I contributi pubblicati in questa sezione della rivista:"
+msgstr "I contributi pubblicati in questa sezione della rivista"
 
 msgid "manager.sections.unassigned"
 msgstr "Section editor disponibili"
@@ -305,7 +309,7 @@ msgid "manager.setup.announcementsIntroduction.description"
 msgstr "Inserisci ogni ulteriore informazione che vuoi mostrare ai lettori nella pagina degli avvisi."
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(compare nella sezione \"Informazioni sulla rivista\")"
+msgstr "(compare nella sezione \"Informazioni sulla rivista\") "
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Richiedi agli autori di inviare una dichiarazione di assenza di conflitto di interessi durante l'invio della proposta."
@@ -368,7 +372,13 @@ msgid "manager.setup.emailBounceAddress.description"
 msgstr "Nel caso l'invio di un messaggio di posta elettronica non dovesse andare a buon fine, verrà inviata una notifica di errore a questo indirizzo."
 
 msgid "manager.setup.emailBounceAddress.disabled"
-msgstr "<strong>Nota:</strong> per attivare questa opzione, l'amministratore del sito deve abilitare l'opzione <tt>allow_envelope_sender</tt>  nel file di configurazione di OJS. Configurazioni aggiuntive del server possono essere necessarie per supportare questa funzione (che potrebbe non essere disponibile su tutti i server), come indicato nella documentazione di OJS."
+msgstr ""
+"Per poter recapitare email non conseguibili ad un bounce address,  "
+"l'amministratore del sito deve abilitare l'opzione "
+"<code>allow_envelope_sender</code>  nel file di configurazione di OJS. "
+"Configurazioni aggiuntive del server possono essere necessarie per "
+"supportare questa funzione (che potrebbe non essere disponibile su tutti i "
+"server), come indicato nella documentazione di OJS."
 
 msgid "manager.setup.emails"
 msgstr "Firma delle email"
@@ -380,7 +390,7 @@ msgid "manager.setup.emailSignature.description"
 msgstr "Le email inviate in automatico dal sistema avranno la seguente firma alla fine del messaggio. Il contenuto di queste email può essere modificato nella sezione di amministrazione della rivista."
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Abilita gli amministratori della rivista ad aggiungere avvisi."
+msgstr "Abilita gli amministratori della rivista ad aggiungere avvisi"
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Gli utenti possono autoregistrarsi alla rivista."
@@ -404,7 +414,7 @@ msgid "manager.setup.form.journalInitialsRequired"
 msgstr "Inserire le iniziali della rivista."
 
 msgid "manager.setup.form.journalTitleRequired"
-msgstr "Inserire il titolo della rivista"
+msgstr "Inserire il titolo della testata."
 
 msgid "manager.setup.form.numReviewersPerSubmission"
 msgstr "È necessario inserire il numero di revisori richiesti per ogni singola proposta."
@@ -431,13 +441,15 @@ msgid "manager.setup.information"
 msgstr "Informazioni"
 
 msgid "manager.setup.information.description"
-msgstr "Una breve descrizione della rivista per i bibliotecari e i potenziali autori e lettori, è disponibile nella sezione \"Informazioni\" del menu laterale."
+msgstr ""
+"Breve descrizione della testata per bibliotecari e potenziali autori e "
+"lettori, disponibile nella sezione \"Informazioni\" del menu laterale."
 
 msgid "manager.setup.information.forAuthors"
 msgstr "Per gli autori"
 
 msgid "manager.setup.information.forLibrarians"
-msgstr "Per i bibliotecari"
+msgstr "Per bibliotecari"
 
 msgid "manager.setup.information.forReaders"
 msgstr "Per i lettori"
@@ -524,7 +536,11 @@ msgid "manager.setup.lists"
 msgstr "Liste"
 
 msgid "manager.setup.lockssEnable"
-msgstr "Abilita  LOCKSS a conservare e distribuire il contenuto della rivista alle biblioteche partecipanti attivando il <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> page. Una licenza LOCKSS apparir&#x00E0; nelle informazioni sulla rivista, sotto Archiviazione:"
+msgstr ""
+"Abilita LOCKSS a conservare e distribuire il contenuto della rivista alle "
+"biblioteche partecipanti attivando il <a href=\"{$lockssUrl}\" target=\""
+"_blank\">Publisher Manifest</a> page. Una licenza LOCKSS apparir&#x00E0; "
+"nelle informazioni sulla rivista, sotto Archiviazione."
 
 msgid "manager.setup.lockssRegister"
 msgstr "Identifica 6-10 biblioteche che registreranno e depositeranno la rivista. Per esempio, guarda alle istituzioni dove lavorano gli editor o i membri della direzione e/o istituzioni che già parteciapno al LOCKSS. Vedi <a href=\"http://www.lockss.org/community/\" target=\"_blank\">le biblioteche partecipanti</a>."
@@ -572,7 +588,10 @@ msgid "manager.setup.note"
 msgstr "Nota"
 
 msgid "manager.setup.notifications.submissionAckDisabled"
-msgstr "<strong>Nota:</strong> L'email di ringraziamento per il completamento della proposta &#x00E8; attualmente disabilitata. Per usare questa funzione, abilita il SUBMISSION_ACK email <a class=\"action\" href=\"{$preparedEmailsUrl}\">Modelli email</a>."
+msgstr ""
+"<strong>Nota:</strong> L'email di conferma di ricezione contributo è "
+"attualmente disabilitata. Per usare questa funzione, abilita la mail \""
+"Submission Ack\" nella sezione Emails."
 
 msgid "manager.setup.numPageLinks"
 msgstr "Link alle pagine"
@@ -599,7 +618,7 @@ msgid "manager.setup.printIssn"
 msgstr "ISSN"
 
 msgid "manager.setup.proofingInstructions"
-msgstr "Istruzioni per la correzione delle bozze."
+msgstr "Istruzioni per la correzione delle bozze"
 
 msgid "manager.setup.proofingInstructionsDescription"
 msgstr "Le istruzioni per la correzione delle bozze saranno rese disponibili ai correttori di bozze, agli autori, ai layout editor e ai section editor durante la fase di Editing delle Submission. Di seguito sono presenti le istruzioni in HTML, che possono essere modificate in qualsiasi momento dall'amministratore (in HTML o in testo semplice)."
@@ -641,7 +660,12 @@ msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "Le email automatiche di sollecito (disponibili nelle email di default di OJS) possono essere inviate ai revisori in due punti (mentre l'editor puù sempre inviare email direttamente al revisore)"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
-msgstr "<strong>Nota:</strong> Per attivare queste opzioni, l'amministratore del sito deve abilitare l'opzione <tt>scheduled_tasks</tt> nel file di configurazione di OJS. COnfigurazioni aggiuntive del server possono essere richieste per supportare questa funzione (che potrebbe non essere possibile su tutti i server), come indicato nella documentazione di OJS."
+msgstr ""
+"Per inviare reminder automatici l'amministratore del sito deve abilitare "
+"l'opzione <tt>scheduled_tasks</tt> nel file di configurazione di OJS. "
+"Configurazioni aggiuntive del server possono essere richieste per supportare "
+"questa funzione (che potrebbe non essere possibile su tutti i server), come "
+"indicato nella documentazione di OJS."
 
 msgid "manager.setup.reviewOptions.blindReview"
 msgstr "Revisione cieca"
@@ -659,7 +683,7 @@ msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Accesso per i revisori"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Abilita l'accesso diretto per i revisori."
+msgstr "Abilita l'accesso diretto per i revisori"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Nota:</strong> Quando questa opzione &#x00E8; abilitata, le URL delle submission nelle email di notifica e promemoria conterranno una chiave d'accesso che scavalca l'usuale processo di login. Usando questo link, i revisori possono fare revisioni senza inserire username e password; mentre debbono comunque  fare il log in per completare gli altri compiti."
@@ -680,7 +704,10 @@ msgid "manager.setup.searchEngineIndexing"
 msgstr "SEO (Ottimizzazione per i motori di ricerca)"
 
 msgid "manager.setup.searchEngineIndexing.description"
-msgstr "Per aumentare la visibilità della rivista nei motori di ricerca, inserisci una breve descrizione e le relative keyword (separate da virgola)."
+msgstr ""
+"Per aumentare la visibilità della rivista nei motori di ricerca, inserisci "
+"una breve descrizione e le relative keyword (separate da virgola) oltre alla "
+"<a href=\"{$sitemapUrl}\" target=\"_blank\">mappa del sito</a>."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Sezioni ed editor di sezione"
@@ -728,7 +755,9 @@ msgid "manager.setup.submissions.description"
 msgstr "Indicazioni per gli autori, copyright e indicizzazione (compresa la registrazione)."
 
 msgid "manager.distribution.publishingMode.subscription"
-msgstr "Gestione degli abbonamenti"
+msgstr ""
+"Questa testata richiede un abbonamento per accedere a tutti o a parte dei "
+"contenuti."
 
 msgid "manager.setup.typeExamples"
 msgstr "(Es. Ricerca storica; Quasi-Sperimentale; Analisi letteraria; Indagine/Intervista)"
@@ -809,10 +838,10 @@ msgid "manager.statistics.statistics.note"
 msgstr "Nota: Le percentuali per le proposte peer reviewed possono non raggiungere il 100%, dato che le proposte inviate nuovamente possono essere state accettate, rifiutate, o essere ancora nel processo editoriale."
 
 msgid "manager.statistics.statistics.numIssues"
-msgstr "Fascicoli pubblicati:"
+msgstr "Uscite pubblicate:"
 
 msgid "manager.statistics.statistics.numSubmissions"
-msgstr "Proposte totali pervenute:"
+msgstr "Contributi totali ricevuti:"
 
 msgid "manager.statistics.statistics.peerReviewed"
 msgstr "Peer reviewed:"
@@ -824,7 +853,7 @@ msgid "manager.statistics.statistics.registeredUsers"
 msgstr "Utenti registrati (comprende lo staff della rivista):"
 
 msgid "manager.statistics.statistics.reviewerCount"
-msgstr "N. assegnato:"
+msgstr "N. di contributi assegnati:"
 
 msgid "manager.statistics.statistics.reviewers"
 msgstr "Revisori:"
@@ -975,8 +1004,8 @@ msgstr "Dominio"
 
 msgid "manager.subscriptions.form.domainInstructions"
 msgstr ""
-"Se avete inserito il dominio, la presenza del range degli indirizzi IP è opzionale.\n"
-"I valori ammessi sono i nomi di dominio (es. www.cilea.it)."
+"Se avete inserito il dominio, la presenza del range degli indirizzi IP è "
+"opzionale. <br /> I valori ammessi sono i nomi di dominio (es. www.cilea.it)."
 
 msgid "manager.subscriptions.form.domainIPRangeRequired"
 msgstr "Il tipo di abbonamento scelto richiede l'autenticazione tramite dominio o range di indirizzi IP."
@@ -1009,7 +1038,7 @@ msgid "manager.subscriptions.form.notifyEmailValid"
 msgstr "Utilizzare le caselle di scelta presenti."
 
 msgid "manager.subscriptions.form.saveAndCreateAnother"
-msgstr "Salva e crea un altro."
+msgstr "Salva e crea nuovo"
 
 msgid "manager.subscriptions.form.subscriptionContactRequired"
 msgstr "Per poter mandare all'utente un messaggio di notifica, durante il setup della rivista deve essere stato precedentemente inserito sia il nome sia l'indirizzo email del contatto per gli abbonamenti."
@@ -1042,7 +1071,7 @@ msgid "manager.subscriptions.membership"
 msgstr "Iscrizione"
 
 msgid "manager.subscriptions.noneCreated"
-msgstr "Non ci sono abbonamenti."
+msgstr "Non ci sono abbonamenti"
 
 msgid "manager.subscriptions.select"
 msgstr "Seleziona"
@@ -1129,13 +1158,14 @@ msgid "manager.subscriptionTypes.form.formatValid"
 msgstr "Selezionate un formato valido per il tipo di abbonamento."
 
 msgid "manager.subscriptionTypes.form.institutional"
-msgstr "Gli abbonati devono essere autentificati tramite dominio o indirizzo IP."
+msgstr "Abbonati istituzionali (autentificati tramite dominio o indirizzo IP)"
 
 msgid "manager.subscriptionTypes.form.institutionalValid"
 msgstr "Utilizzare le caselle di selezione presenti."
 
 msgid "manager.subscriptionTypes.form.membership"
-msgstr "Gli abbonati devono essere membri di un'associazione o di un'organizzazione."
+msgstr ""
+"Gli abbonati devono essere membri di un'associazione o di un'organizzazione"
 
 msgid "manager.subscriptionTypes.form.membershipValid"
 msgstr "Utilizzare le caselle di selezione presenti."
@@ -1147,7 +1177,7 @@ msgid "manager.subscriptionTypes.form.publicValid"
 msgstr "Usare la checkbox."
 
 msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
-msgstr "Salva e crea un altro."
+msgstr "Salva e crea nuovo"
 
 msgid "manager.subscriptionTypes.form.typeName"
 msgstr "Nome"
@@ -1210,7 +1240,7 @@ msgid "manager.subscriptions.form.institutionName"
 msgstr "Nome dell'ente"
 
 msgid "manager.subscriptions.form.institutionNameRequired"
-msgstr "&#200; necessario inserire il nome dell'ente"
+msgstr "Inserire il nome dell'ente."
 
 msgid "manager.subscriptions.form.institutionMailingAddress"
 msgstr "Indirizzo postale"
@@ -1255,7 +1285,8 @@ msgid "manager.subscriptionTypes.form.options"
 msgstr "Opzioni"
 
 msgid "manager.distribution.publishingMode.none"
-msgstr "OJS non viene utilizzato per pubblicare on line i contenuti della rivista"
+msgstr ""
+"OJS non viene utilizzato per pubblicare on line i contenuti della rivista."
 
 msgid "manager.individualSubscriptions"
 msgstr "Abbonamento individuale"
@@ -1267,16 +1298,18 @@ msgid "manager.subscriptions.summary"
 msgstr "Riepilogo degli abbonamenti"
 
 msgid "manager.subscriptions.form.statusValid"
-msgstr "Seleziona uno status valido per l'abbonamento"
+msgstr "Seleziona uno status valido per l'abbonamento."
 
 msgid "manager.subscriptions.form.userProfileInstructions"
-msgstr "Nota: tutte le modifiche apportate sotto sono valide per tutti gli utenti del sistema"
+msgstr ""
+"Nota: tutte le modifiche apportate sotto sono valide per tutti gli utenti "
+"del sistema."
 
 msgid "manager.subscriptions.form.userContact"
 msgstr "Contatti"
 
 msgid "manager.subscriptions.form.userCountryValid"
-msgstr "Seleziona un paese valido"
+msgstr "Seleziona uno stato corretto."
 
 msgid "manager.subscriptions.form.referenceNumber"
 msgstr "N&#186; di riferimento"
@@ -1352,9 +1385,14 @@ msgstr "Cancella i permessi dell'articolo"
 
 msgid "manager.statistics.defaultMetricDescription"
 msgstr ""
-"La rivista è configurata per registrare più di una metrica di utilizzo. Le statistiche di utilizzo verranno visualizzate in diversi contesti.\n"
-"Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca.\n"
-"Selezionare una delle metriche configurate come predefinita."
+"\n"
+"\t\tLa testata è configurata per registrare più di una metrica di utilizzo. "
+"Le statistiche di utilizzo verranno visualizzate in diversi contesti.\n"
+"Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, "
+"ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o "
+"risultati di ricerca.\n"
+"Selezionare una delle metriche configurate come predefinita.\n"
+"\t"
 
 msgid "plugins.importexport.common.settings"
 msgstr "Impostazioni"
@@ -1405,7 +1443,7 @@ msgid "manager.setup.contextAbout.description"
 msgstr "Scopo e ambito della rivista, politiche, informazioni sulla peer review, copyright, archiviazione, sponsor, ecc."
 
 msgid "manager.setup.journalThumbnail.description"
-msgstr "Un piccolo logo da usare negli indici di riviste"
+msgstr "Un piccolo logo da usare negli indici di riviste."
 
 msgid "manager.distribution.access"
 msgstr "Accesso"
@@ -1426,7 +1464,7 @@ msgid "plugins.importexport.common.missingRequirements"
 msgstr "Configurazione incompleta"
 
 msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "La password verrà salvata come testo, non crittografata"
+msgstr "La password verrà salvata come testo, non crittografata."
 
 msgid "plugins.importexport.common.status.any"
 msgstr "Ogni status"
@@ -1453,7 +1491,9 @@ msgid "manager.paymentTypes"
 msgstr "Tipi di pagameti"
 
 msgid "manager.section.noSectionEditors"
-msgstr "Non ci sono editor di sezione ancora. Aggiungi questo ruolo almeno ad un utente con Utenti & Ruoli"
+msgstr ""
+"Non ci sono editor di sezione. Aggiungi questo ruolo almeno ad un utente con "
+">Impostazioni >Utenti e Ruoli."
 
 msgid "manager.setup.homepageContent"
 msgstr "Contenuto Homepage rivista"
@@ -1474,7 +1514,10 @@ msgid "manager.setup.form.issnInvalid"
 msgstr "L'ISSN immesso non è valido."
 
 msgid "manager.setup.includeCreativeCommons"
-msgstr "Per tutti le riviste che offrono gli articoli immediatamente o dopo un certo tempo in open access, includi una licenza Creative Commons per tutto quanto verrà messo a disposizione."
+msgstr ""
+"Per tutti le riviste che offrono gli articoli immediatamente o dopo un certo "
+"tempo in open access, indicare una licenza Creative Commons per tutto quanto "
+"verrà messo a disposizione."
 
 msgid "manager.setup.faviconInvalid"
 msgstr "Invalido formato per la favicon. Formati accettati sono ico, .png, e .gif."
@@ -1492,7 +1535,9 @@ msgid "manager.setup.plnDescription"
 msgstr "Il PKP Preservation Network (PN) fornisce un servizio di preservazione gratuito ad ogni rivista OJS che ha alcuni requisiti di base."
 
 msgid "manager.setup.plnSettingsDescription"
-msgstr "Clicca su link 'Configurazione' per accettare i termini d'uso del PKP PN."
+msgstr ""
+"Clicca su link <button>Configurazione</button> per accettare i termini d'uso "
+"del PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Preservation Network (PN)"
@@ -1501,7 +1546,7 @@ msgid "manager.setup.plnPluginNotInstalled"
 msgstr "Il PKP Preservation Network (PN) fornisce un servizio di preservazione gratuito ad ogni rivista OJS che ha alcuni requisiti di base. Il plugin PKP PN per OJS3 è in corso di sviluppo e sarà disponibile tra i plugin installabili presto."
 
 msgid "manager.setup.otherLockss"
-msgstr "Alternative all'archiviazione."
+msgstr "LOCKSS e CLOCKSS"
 
 msgid "manager.setup.lockssLicenseDescription"
 msgstr "Una licenza LOCKSS apparira nella pagina di About della rivista sotto Archiviazione: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">Licenza LOCKSS</a>"
@@ -1516,7 +1561,10 @@ msgid "manager.setup.clockssEnable"
 msgstr "Abilita CLOCKSS per conservare e distribuire il contenuto delle riviste alle biblioteche che partecipano alla tua  <a href=\"{$clockssUrl}\" target=\"_blank\">rete CLOCKSS</a>."
 
 msgid "manager.setup.clockssLicenseDescription"
-msgstr "Una licenza CLOCKSS apparirà nella pagina diAbout della rivista sotto Archiviazione: a href=\"http://clockss.org/\" target=\"_blank\">Licenza CLOCKSS</a>"
+msgstr ""
+"Una licenza CLOCKSS apparirà nella pagina diAbout della rivista sotto "
+"Archiviazione: <a href=\"http://clockss.org/\" target=\"_blank\">Licenza "
+"CLOCKSS</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Descrizione licenza CLOCKSS"
@@ -1534,7 +1582,7 @@ msgid "manager.setup.porticoTitle"
 msgstr "Portico"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr "Tabella con i dati delle visualizzazioni per pagina."
+msgstr "Visualizzazioni totali dell'indice uscita"
 
 msgid "manager.subscriptionPolicies.xMonths"
 msgstr "{$x} Mesi"
@@ -1549,10 +1597,10 @@ msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
 msgstr "Notifica agli abbonati per mail dopo la scadenza dell'abbonamento."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
-msgstr "Notifica agli abbonati per mail prima della scadenza dell'abbonamento"
+msgstr "Notifica agli abbonati per mail prima della scadenza dell'abbonamento."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
-msgstr "Notifica agli abbonati per mail prima della scadenza dell'abbonamento"
+msgstr "Notifica agli abbonati per mail prima della scadenza dell'abbonamento."
 
 msgid "manager.subscriptions.confirmRenew"
 msgstr "Sei sicuto di rinnovare questo abbonamento?"
@@ -1585,10 +1633,14 @@ msgid "manager.setup.copyrightYearBasis.article"
 msgstr "Articolo: l'anno di default verrà preso dall'anno di pubblicazione, nell'ottica \"pubblica-appena-vai\"."
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr "Fascicolo: l'anno di default verrà preso dall'anno di pubblicazione del fascicolo"
+msgstr ""
+"Uscita: l'anno di default verrà preso dall'anno di pubblicazione del "
+"fascicolo."
 
 msgid "manager.setup.resetPermissions.confirm"
-msgstr "Sei sicuro di voler reimpostare i permessi già assegnati agli articoli?"
+msgstr ""
+"Sei sicuro di voler reimpostare i permessi già assegnati agli articoli? "
+"Questa operazione è definitiva."
 
 msgid "grid.genres.title"
 msgstr "Componenti dell'articolo"
@@ -1603,7 +1655,10 @@ msgid "plugins.importexport.common.export.representations"
 msgstr "Gabbie"
 
 msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr "Nessuno degli oggetti pubblicabili è stato selezionato per l'assegnazione del DOI nel plugin relativo, per tanto non è possibile depositare o esportare con questo plugin"
+msgstr ""
+"Nessuno degli oggetti pubblicabili è stato selezionato per l'assegnazione "
+"del DOI nel plugin relativo, per tanto non è possibile depositare o "
+"esportare con questo plugin."
 
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Qualsiasi fascicolo"
@@ -1615,10 +1670,10 @@ msgid "plugins.importexport.common.validation"
 msgstr "Valida l'XML prima dell'esportazione e della registrazione."
 
 msgid "plugins.importexport.common.error.noObjectsSelected"
-msgstr "Nessun oggetto selezionato"
+msgstr "Nessun oggetto selezionato."
 
 msgid "plugins.importexport.common.error.validation"
-msgstr "Non posso convertire gli oggetti selezionati"
+msgstr "Non è stato possibile convertire gli oggetti selezionati."
 
 msgid "plugins.importexport.common.invalidXML"
 msgstr "XML invalido:"
@@ -1682,3 +1737,128 @@ msgstr ""
 "Seleziona la modalità di assegnazione in automatico della data di copyright. "
 "Questa potrà essere modificata manualmente. Se la testata è a pubblicazione "
 "continua non utilizzare la data di pubblicazione del singolo fascicolo."
+
+msgid "stats.publications.abstracts"
+msgstr "Abstracts"
+
+msgid "stats.publications.galleys"
+msgstr "Files"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} di {$total} articoli"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Visualizzazioni totali dei file fino alla data indicata"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Visualizzazioni totali dell'abstract"
+
+msgid "stats.publications.none"
+msgstr ""
+"Non sono stati trovati articoli in base alle statistiche d'uso impostate."
+
+msgid "stats.publications.details"
+msgstr "Dettagli articolo"
+
+msgid "stats.publicationStats"
+msgstr "Statistiche articolo"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "I permessi relativi agli articoli sono stati ripristinati con successo."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Rimuovere le informazioni di copyright e di licenza da ogni articolo "
+"pubblicato, riportando tutti gli articoli alle impostazioni di default della "
+"testata. Questa operazione rimuoverà definitivamente tutte le informazioni "
+"di copyright e di licenza precedentemente abbinate agli articoli. In alcuni "
+"casi, si potrebbe non avere il permesso di creare nuove modalità di licenza "
+"e di copyright per articoli già pubblicati con altre licenze. Prestare "
+"quindi molta attenzione all'utilizzo di questo strumento. Si invitano gli "
+"utenti a cercare supporto legale esperto in caso di dubbio sulla tipologia "
+"di licenza e di copyright utilizzata per la testata."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Questa tipologia di abbonamento non prevede scadenza; non inserire una data "
+"di fine."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Questa tipologia di abbonamento non prevede scadenza; non inserire una data "
+"di inizio."
+
+msgid "manager.setup.userAccess.success"
+msgstr ""
+"Le informazioni di accesso degli utenti per questa testata sono state "
+"aggiornate."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Invia metadata a servizi di indicizzazione di terze parti tramite  <a href=\""
+"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Abilita OAI"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Visualizza contenuto articolo"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Accesso al sito"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Inserire una breve descrizione della testata (50-300 caratteri) che i motori "
+"di ricerca possono visulizzare nei risultati di ricerca."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr ""
+"Le impostazioni relative all'indicizzazione del motore di ricerca sono state "
+"aggiornate."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Inserire un link sicuro nella mail di invito ai revisori."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Limita l'accesso al file"
+
+msgid "manager.setup.publishing"
+msgstr "Dettagli di pubblicazione"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Le norme sulla privacy sono state aggiornate."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Limita il numero di collegamenti da visualizzare in pagine successive."
+
+msgid "manager.setup.masthead.success"
+msgstr "Le informazioni generali per questa testata sono state aggiornate."
+
+msgid "manager.setup.lists.success"
+msgstr "Le impostazioni per questa testata sono state aggiornate."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Inserire una descrizione della testata e identifica gli Editors, i direttori "
+"responsabili ed altri membri del team editoriale."
+
+msgid "manager.setup.keyInfo"
+msgstr "Informazioni chiave"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Limitare il numero di articoli (ad esempio contributi, utenti o assegnazioni)"
+" da visualizzare in un elenco prima di  visualizzare altri articoli in altra "
+"pagina."
+
+msgid "manager.setup.information.success"
+msgstr "Le informazioni di questa testata sono state aggiornate."
+
+msgid "manager.setup.identity"
+msgstr "ID della testata"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Quanti annunci visualizzare nella homepage. Lasciare questo campo vuoto per "
+"non visualizzarne nessuno."
