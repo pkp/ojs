@@ -18,6 +18,7 @@ use \Application;
 use \Core;
 use \Services;
 use \PKP\Services\PKPPublicationService;
+use \HookRegistry;
 use DAORegistry;
 
 class PublicationService extends PKPPublicationService {
@@ -153,24 +154,13 @@ class PublicationService extends PKPPublicationService {
 		$errors =& $args[0];
 		$publication = $args[1];
 		$submission = $args[2];
-		$currentUser = Application::get()->getRequest()->getUser();
-
-		// If current user is an author
-		$isAuthor = false;
-		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
-		$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
-		while ($assignment = $submitterAssignments->next()) {
-			if ($currentUser->getId() == $assignment->getUserId()) $isAuthor = true;
-		}
-		if ($isAuthor){
-			if (!$this->getCanAuthorPublish()){
-				$errors['authorCheck'] = __('publication.authorCanNotPublish');
-			}
+		if (!$this->canAuthorPublish($submission->getId())){
+			$errors['authorCheck'] = __('author.submit.authorsCanNotPublish');
 		}
 	}
 
 	/**
-	 * Copy OJS-specific objects when a new publication version is created
+	 * Copy PPS-specific objects when a new publication version is created
 	 *
 	 * @param $hookName string
 	 * @param $args array [
@@ -240,17 +230,25 @@ class PublicationService extends PKPPublicationService {
 		}
 	}
 
-	function getCanAuthorPublish() {
-		return true;
-
-		/*
-		Option 1: allow
-		Option 2: plugin error code
-		*/
-		/*
-		default $errors['authorCheck'] = __('publication.authorCanNotPublish');
-		*/
+	/**
+	 * Check if the server allows authors to publish
+	 *
+	 * @param $submissionId string
+	 * @return boolean
+	 *
+	 */
+	public function canAuthorPublish($submissionId) {
+		// By default authors can not publish, but this can be overridden with screening plugins
+		if (HookRegistry::call('Publication::canAuthorPublish', array($this))){
+			// Check if current user is an author
+			$currentUser = Application::get()->getRequest()->getUser();
+			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+			$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submissionId, ROLE_ID_AUTHOR);
+			while ($assignment = $submitterAssignments->next()) {
+				if ($currentUser->getId() == $assignment->getUserId()) return true;
+			}
+		}
+		return false;
 	}
-
 
 }

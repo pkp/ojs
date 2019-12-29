@@ -32,6 +32,43 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	// Public methods
 	//
 	/**
+	 * @copydoc PKPSubmissionHandler::step()
+	 */
+	function step($args, $request) {
+		$step = isset($args[0]) ? (int) $args[0] : 1;
+		if ($step == $this->getStepCount()) {
+			$templateMgr = TemplateManager::getManager($request);
+			$context = $request->getContext();
+			$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+
+			// PPS: Check if author can publish
+			import('classes.core.Services');
+
+			// Author can publish, see if other criteria exists and create an array of errors
+			if (Services::get('publication')->canAuthorPublish($submission->getId())){
+
+				$primaryLocale = $context->getPrimaryLocale();
+				$allowedLocales = $context->getSupportedLocales();
+				$errors = Services::get('publication')->validatePublish($submission->getLatestPublication(), $submission, $allowedLocales, $primaryLocale);
+
+				if (!empty($errors)){
+					$msg .= '<ul class="plain">';
+					foreach ($errors as $error) {
+						$msg .= '<li>' . $error . '</li>';
+					}
+					$msg .= '</ul>';
+					$templateMgr->assign('errors', $msg);
+				}
+			}
+			// Author can not publish
+			else {
+				$templateMgr->assign('authorCanNotPublish', true);
+			}
+		}
+		return parent::step($args, $request);
+	}
+
+	/**
 	 * Retrieves a JSON list of available choices for a tagit metadata input field.
 	 * @param $args array
 	 * @param $request Request

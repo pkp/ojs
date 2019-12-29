@@ -57,5 +57,17 @@ msgid "author.submit.languageInstructions">
 msgstr "English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Additional codes</a>."
 
 msgid "author.submit.form.abstractRequired"
-msgstr "Please enter the abstract of your preprint ."
+msgstr "Please enter the abstract of your preprint."
+
+msgid "author.submit.authorCanNotPublish"
+msgstr "Authors on this server can not publish by themselves. The server has been notified of your submission, and you've been emailed a confirmation for your records. Once the editor has reviewed the submission, they will publish your preprint or contact you."
+
+msgid "author.submit.publishRequirements"
+msgstr "The server has been notified of your submission, and you've been emailed a confirmation for your records. Once the editor has reviewed the submission, they will publish your preprint or contact you. You can also publish by yourself once the following requirements are met:"
+
+msgid "author.submit.authorCanPublish"
+msgstr "The server has been notified of your submission, and you've been emailed a confirmation for your records. <b>All the requirements for publishing have been met and you can proceed to review and publish your preprint</b>."
+
+msgid "author.submit.proceedToPublish"
+msgstr "Proceed to publish"
 

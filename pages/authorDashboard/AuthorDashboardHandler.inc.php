@@ -79,6 +79,11 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 		$workflowData['components']['publicationFormIds'] = [FORM_PUBLISH,
 				FORM_TITLE_ABSTRACT, FORM_JOURNAL_ENTRY];
 		$templateMgr->assign('workflowData', $workflowData);
+		
+		// If authors can publish show publish buttons
+		$canPublish = Services::get('publication')->canAuthorPublish($submission->getId()) ? true : false;
+		$templateMgr->assign('canPublish', $canPublish);
+
 	}
 
 	/**

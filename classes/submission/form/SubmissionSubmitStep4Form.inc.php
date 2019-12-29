@@ -34,7 +34,8 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 	 */
 	function execute(...$functionParams) {
 		parent::execute(...$functionParams);
-
+		$request = Application::get()->getRequest();
+		$context = $request->getContext();
 		$submission = $this->submission;
 
 		// PPS: Move the submission to production stage 
@@ -42,13 +43,13 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 		$submission->setStageId(WORKFLOW_STAGE_ID_PRODUCTION);
 		$submissionDao->updateObject($submission);
 
+		// PPS: Move all discussions to production stage
+
 		// Send author notification email
 		import('classes.mail.ArticleMailTemplate');
 		$mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK', null, null, false);
 		$authorMail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK_NOT_USER', null, null, false);
 
-		$request = Application::get()->getRequest();
-		$context = $request->getContext();
 		$router = $request->getRouter();
 		if ($mail->isEnabled()) {
 			// submission ack emails should be from the contact.

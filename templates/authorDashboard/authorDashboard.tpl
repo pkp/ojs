@@ -87,7 +87,7 @@
 									</ul>
 								</dropdown>
 							</span>
-							{if !$canAccessProduction}
+							{if $canPublish}
 								<template slot="actions">
 									<pkp-button
 										v-if="workingPublication.status === getConstant('STATUS_QUEUED')"

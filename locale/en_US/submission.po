@@ -35,9 +35,6 @@ msgstr "The abstract must be {$wordCount} words or less."
 msgid "submission.submit.noContext"
 msgstr "This submission's journal could not be found."
 
-msgid "submission.submit.whatNext.description"
-msgstr "The server has been notified of your submission, and you've been emailed a confirmation for your records. Once the editor has reviewed the submission, they will contact you."
-
 msgid "submission.galleyFiles"
 msgstr "Galley Files"
 
@@ -106,4 +103,3 @@ msgstr "The journal entry details have been updated."
 
 msgid "publication.publish.confirmation"
 msgstr "All publication requirements have been met. Are you sure you want to publish this?"
-
