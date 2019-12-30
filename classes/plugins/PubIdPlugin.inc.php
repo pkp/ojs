@@ -165,10 +165,6 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 					$pubIdSuffix .= '.' . $submission->getId();
 				}
 
-				if ($publication) {
-					$pubIdSuffix .= '.v' . $publication->getId();
-				}
-
 				if ($representation) {
 					$pubIdSuffix .= '.g' . $representation->getId();
 				}
@@ -177,6 +173,60 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 					$pubIdSuffix .= '.f' . $submissionFile->getFileId();
 				}
 		}
+		if (empty($pubIdSuffix)) return null;
+
+		// Costruct the pub id from prefix and suffix.
+		$pubId = $this->constructPubId($pubIdPrefix, $pubIdSuffix, $contextId);
+
+		return $pubId;
+	}
+
+	/**
+	 * Version a publication pubId
+	 */
+	function versionPubId($pubObject) {
+		$pubObjectType = $this->getPubObjectType($pubObject);
+
+		$submission = Services::get('submission')->get($pubObject->getData('submissionId'));
+		$publication = Services::get('publication')->get($pubObject->getId());
+		$contextId = $submission->getData('contextId');
+
+		// Check the context
+		$context = $this->getContext($contextId);
+		if (!$context) return null;
+		$contextId = $context->getId();
+
+		// Check whether pub ids are enabled for the given object type.
+		$objectTypeEnabled = $this->isObjectTypeEnabled($pubObjectType, $contextId);
+		if (!$objectTypeEnabled) return null;
+
+		// Retrieve the pub id prefix.
+		$pubIdPrefix = $this->getSetting($contextId, $this->getPrefixFieldName());
+		if (empty($pubIdPrefix)) return null;
+
+		// Retrieve the pub id suffix.
+		$suffixPatternsFieldNames = $this->getSuffixPatternsFieldNames();
+
+		$pubIdSuffix = $this->getSetting($contextId, $suffixPatternsFieldNames[$pubObjectType]);
+
+		// %j - journal initials
+		$pubIdSuffix = PKPString::regexp_replace('/%j/', PKPString::strtolower($context->getAcronym($context->getPrimaryLocale())), $pubIdSuffix);
+
+		// %x - custom identifier
+		if ($pubObject->getStoredPubId('publisher-id')) {
+			$pubIdSuffix = PKPString::regexp_replace('/%x/', $pubObject->getStoredPubId('publisher-id'), $pubIdSuffix);
+		}
+
+		// %a - preprint id
+		if ($submission) {
+			$pubIdSuffix = PKPString::regexp_replace('/%a/', $submission->getId(), $pubIdSuffix);
+		}
+
+		// %b - publication id
+		if ($publication) {
+			$pubIdSuffix = PKPString::regexp_replace('/%b/', $publication->getId(), $pubIdSuffix);
+		}
+
 		if (empty($pubIdSuffix)) return null;
 
 		// Costruct the pub id from prefix and suffix.

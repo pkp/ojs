@@ -374,7 +374,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$suffixType = $this->getSetting($form->submissionContext->getId(), 'doiSuffix');
 		$pattern = '';
 		if ($suffixType === 'default') {
-			$pattern = '%j.%a.v%b';
+			$pattern = '%j.%a';
 		} elseif ($suffixType === 'pattern') {
 			$pattern = $this->getSetting($form->submissionContext->getId(), 'doiPublicationSuffixPattern');
 		}

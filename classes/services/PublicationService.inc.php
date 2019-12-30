@@ -19,6 +19,7 @@ use \Core;
 use \Services;
 use \PKP\Services\PKPPublicationService;
 use \HookRegistry;
+use \PluginRegistry;
 use DAORegistry;
 
 class PublicationService extends PKPPublicationService {
@@ -174,6 +175,7 @@ class PublicationService extends PKPPublicationService {
 		$oldPublication = $args[1];
 		$request = $args[2];
 
+		// Duplicate galleys
 		$galleys = $oldPublication->getData('galleys');
 		if (!empty($galleys)) {
 			foreach ($galleys as $galley) {
@@ -185,6 +187,17 @@ class PublicationService extends PKPPublicationService {
 		}
 
 		$newPublication->setData('galleys', $this->get($newPublication->getId())->getData('galleys'));
+
+		// Version DOI if the pattern includes the publication id
+		$context = $request->getContext();
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $context->getId());
+		$doiPubIdPlugin = $pubIdPlugins['doipubidplugin'];
+		if ($doiPubIdPlugin){
+			$pattern = $doiPubIdPlugin->getSetting($context->getId(), 'doiPublicationSuffixPattern');
+			if (strpos($pattern, '%b')) {
+				$newPublication->setData('pub-id::doi', $doiPubIdPlugin->versionPubId($newPublication));
+			}
+		}
 	}
 
 	/**
@@ -238,17 +251,30 @@ class PublicationService extends PKPPublicationService {
 	 *
 	 */
 	public function canAuthorPublish($submissionId) {
-		// By default authors can not publish, but this can be overridden with screening plugins
-		if (HookRegistry::call('Publication::canAuthorPublish', array($this))){
-			// Check if current user is an author
-			$currentUser = Application::get()->getRequest()->getUser();
-			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
-			$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submissionId, ROLE_ID_AUTHOR);
-			while ($assignment = $submitterAssignments->next()) {
-				if ($currentUser->getId() == $assignment->getUserId()) return true;
+
+		// Check if current user is an author
+		$isAuthor = false;
+		$currentUser = Application::get()->getRequest()->getUser();
+		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+		$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submissionId, ROLE_ID_AUTHOR);
+		while ($assignment = $submitterAssignments->next()) {
+			if ($currentUser->getId() == $assignment->getUserId()) {
+				$isAuthor = true;
+			} 
+		}
+
+		// By default authors can not publish, but this can be overridden in screening plugins with the hook Publication::canAuthorPublish
+		if ($isAuthor) {
+			if (HookRegistry::call('Publication::canAuthorPublish', array($this))){
+				return true;
+			} else {
+				return false;
 			}
 		}
-		return false;
+
+		// If the user is not an author, has to be an editor, return true
+		return true;
+		
 	}
 
 }
