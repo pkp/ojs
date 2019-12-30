@@ -25,3 +25,6 @@ msgstr "The public identifier '{$publicIdentifier}' already exists for another o
 
 msgid "editor.article.coverImage"
 msgstr "Cover Image"
+
+msgid "editor.publication.authorPublishRequirements"
+msgstr "The author does not fill the following publishing requirements:"

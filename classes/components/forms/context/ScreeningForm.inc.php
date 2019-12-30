@@ -13,7 +13,7 @@
  */
 namespace APP\components\forms\context;
 use \PKP\components\forms\FormComponent;
-use \PKP\components\forms\FieldOptions;
+use \PKP\components\forms\FieldHTML;
 
 define('FORM_SCREENING', 'screening');
 
@@ -34,5 +34,28 @@ class ScreeningForm extends FormComponent {
 	public function __construct($action, $locales, $context) {
 		$this->action = $action;
 		$this->successMessage = __('manager.setup.authorScreening.success');
+
+		$rules = [];
+		\HookRegistry::call('Settings::Workflow::listScreeningPlugins', array(&$rules));
+		if (!empty($rules)){
+			$screeningPluginRules .= "<table class=\"pkpTable\">\n";
+			foreach ($rules as $rule) {
+				$screeningPluginRules .= "<tr><td>" . $rule . "</td></tr>\n";
+			}
+			$screeningPluginRules .= "</table>\n";
+		}
+
+		$this->addPage([
+				'id' => 'default',
+			]);
+		$this->addGroup([
+				'id' => 'default',
+				'pageId' => 'default',
+			])
+			->addField(new FieldHTML('screening', [
+				'description' => $screeningPluginRules,
+				'groupId' => 'default',
+			]));
 	}
+
 }

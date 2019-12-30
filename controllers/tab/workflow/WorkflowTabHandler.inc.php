@@ -28,22 +28,22 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_PRODUCTION:
-				$dispatcher = $request->getDispatcher();
-				import('lib.pkp.classes.linkAction.request.AjaxModal');
-				$schedulePublicationLinkAction = new LinkAction(
-					'schedulePublication',
-					new AjaxModal(
-						$dispatcher->url(
-							$request, ROUTE_COMPONENT, null,
-							'tab.issueEntry.IssueEntryTabHandler',
-							'publicationMetadata', null,
-							array('submissionId' => $submission->getId(), 'stageId' => $stageId)
-						),
-						__('submission.publication')
-					),
-					__('editor.submission.schedulePublication')
-				);
-				$templateMgr->assign('schedulePublicationLinkAction', $schedulePublicationLinkAction);
+				$errors = [];
+				$context = $request->getContext();
+
+				$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+				$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
+
+				while ($assignment = $submitterAssignments->next()) {
+					\HookRegistry::call('Publication::testAuthorValidatePublish', array(&$errors, $assignment->getUserId(), $context->getId(), $submission->getId()));
+				}
+
+				if (!empty($errors)){
+					foreach ($errors as $error) {
+						$authorPublishRequirements .= $error . "<br />\n";
+					}
+					$templateMgr->assign('authorPublishRequirements', $authorPublishRequirements);
+				}
 				break;
 		}
 		return parent::fetchTab($args, $request);

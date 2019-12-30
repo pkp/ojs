@@ -14,6 +14,13 @@
 <div id="production">
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions refreshOn="stageStatusUpdated"}
 
+	{if $authorPublishRequirements}
+		<div id="authorPublishRequirements" class="pkp_notification">
+			{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=authorPublishRequirements notificationStyleClass="notifyWarning" notificationTitle="editor.publication.authorPublishRequirements"|translate notificationContents="$authorPublishRequirements"}
+
+		</div>
+	{/if}
+
 	<div class="pkp_context_sidebar">
 		<div class="pkp_tab_actions">
 			<ul class="pkp_workflow_decisions">
