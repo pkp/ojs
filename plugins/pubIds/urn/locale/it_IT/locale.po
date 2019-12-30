@@ -2,23 +2,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
+"PO-Revision-Date: 2019-12-28 17:34+0000\n"
+"Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"it/>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:03+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
 
 msgid "plugins.pubIds.urn.description"
-msgstr "Queto plugin permette l'assegnazione di Uniform Resource Names ai fascicoli, agli articoli, ai file / gabbie in OJS"
+msgstr ""
+"Questo plugin permette l'assegnazione di Uniform Resource Names alle uscite, "
+"agli articoli, alle bozze in OJS."
 
 msgid "plugins.pubIds.urn.manager.settings.description"
-msgstr "Per favore configura il plugin URN per gestire e usare gli URN in OJS"
+msgstr "Configurare il plugin URN per gestire e utilizzare gli URN in OJS:"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjects"
 msgstr "Contenuto della rivista"
@@ -30,19 +35,21 @@ msgid "plugins.pubIds.urn.manager.settings.explainURNs"
 msgstr "Per favore seleziona glim oggetti che avranno assegnati gli Uniform Resource Names (URN):"
 
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
-msgstr "Gli URN verranno assegnati ai fascicoli."
+msgstr "Gli URN verranno assegnati alle uscite"
 
 msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
 msgstr "Gli URN verranno assegnati agli articoli."
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
-msgstr "Gli URN verranno assegnati alle gabbie (cioè ai file HTML o PDF degli articoli)."
+msgstr "Gli URN verranno assegnati ai file finali (HTML o PDF degli articoli)"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
 msgstr "Prefisso URN"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
-msgstr "The URN prefix is the fix, never changing part of the URN (e.g. \"urn:nbn:de:0000-\")."
+msgstr ""
+"Il prefisso URN è l'elemento fisso che non cambia mai del URN  (es. \""
+"urn:nbn:de:0000-\")."
 
 msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
 msgstr "Il pattern del prefisso deve essere nella forma \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
@@ -54,7 +61,12 @@ msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
 msgstr "Un suffisso URN può prendere ogni forma ma deve essere univoco tra tutto il pubblicato con lo stesso prefisso URN:"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
-msgstr "Usa la struttura inserita qua sotto per generare i suffisso URN. Usa %j per le iniziali della ribista, %v per il numero voluime, %i per il numero fascicolo, %Y oer l'anno, %a per l' OJS id dell'articolo, %g per l'id OJS della gabbia / file, %f  per l'id OJS del file, %p per il numero di pagina e %x per \"suffisso personalizzato\""
+msgstr ""
+"Usa la struttura inserita qua sotto per generare i suffisso URN. Usa %j per "
+"le iniziali della ribista, %v per il numero voluime, %i per il numero "
+"fascicolo, %Y oer l'anno, %a per l' OJS id dell'articolo, %g per l'id OJS "
+"della gabbia / file, %f  per l'id OJS del file, %p per il numero di pagina e "
+"%x per \"suffisso personalizzato\"."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
 msgstr "Per esempio, vol%vfasc%ipp%p creerebbe un suffisso \"vol3fasc2pp230\"."
@@ -180,3 +192,41 @@ msgstr "L'URN {$pubId} è stato assegnato."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Manca il numero di controllo."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Elemento"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Bozze: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Non è stato assegnato un URN a questo articolo."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN per questo articolo sarà  {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN deve iniziare con {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Non è possibile generare un URN perché manca uno o più elementi del formato "
+"URN. Potrebbe essere necessario assegnare l'articolo ad una uscita, "
+"configurare un ID per il publisher o inserire i numeri di pagina."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"E' possibile generare un URN solo dopo l'inserimento dell'articolo in una "
+"uscita."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Assegnare"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN deve iniziare con {$prefix}."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Inserire il suffisso URN per gli articoli."
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Articoli"

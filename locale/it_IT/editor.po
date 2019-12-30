@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2019-12-28 17:34+0000\n"
+"Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/editor/it/>"
+"\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
 msgstr "Cruscotto dell'editor"
@@ -66,10 +69,13 @@ msgid "editor.usersNotified"
 msgstr "Utenti notificati"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Tutti gli utenti della rivista ({$count} utenti)."
+msgstr ""
+"Invia questo messaggio a tutti gli utenti di questa testata ({$count} utenti)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Utenti della rivista che hanno esplicitamente indicato di ricevere gli aggiornamenti ({$count} utenti)."
+msgstr ""
+"Inviata questo messaggio a tutti gli utenti della testatache hanno "
+"esplicitamente richiesto dii ricevere aggiornamenti ({$count} utenti)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Includi il sommario del fascicolo:"
@@ -162,7 +168,7 @@ msgid "editor.issues.coverPageCaption"
 msgstr "Didascalia della copertina"
 
 msgid "editor.issues.showCoverPage"
-msgstr "Crea una copertina per il fascicolo con i seguenti elementi"
+msgstr "Crea una copertina per l'uscita con i seguenti elementi."
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Visualizzazione"
@@ -477,7 +483,9 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Da assegnare"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "Quota di pubblicazione non pagata. Avvertire l'autore per poter pianificare la pubblicazione dell'articolo."
+msgstr ""
+"Costi di pubblicazione non pagati. Avvertire l'autore per poter pianificare "
+"la pubblicazione dell'articolo."
 
 msgid "editor.article.display"
 msgstr "Visualizza"
@@ -543,19 +551,19 @@ msgid "editor.issues.viewingGalley"
 msgstr "Vedi la bozza del fascicolo"
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Pubblica una gabbia contenente l'intero fascicolo"
+msgstr "Pubblica un file con tutti gli articoli dell'uscita."
 
 msgid "editor.issues.noneIssueGalleys"
 msgstr "Non sono state pubblicate gabbie per questo fascicolo."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "Inserire un'etichetta per la gabbia del fascicolo"
+msgstr "Inserire un'etichetta per il file dell'uscita."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Inserire la lingua della gabbia del fascicolo"
+msgstr "Inserire la lingua del file dell'uscita."
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Esiste già un identificatore della gabbia del fascicolo"
+msgstr "Esiste già un identificatore dei file dell'uscita."
 
 msgid "editor.issues.backToIssueGalleys"
 msgstr "Torna alle gabbie del fascicolo"
@@ -634,3 +642,15 @@ msgstr "L'identificativo pubblico  '{$publicIdentifier}' esiste di già per un'a
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr "Ogni file in qualsiasi punto del precorso di revisione può essere aggiunto alla \"Correzioni di bozze\" selezionando il ceheckbox qui sotto e cliccando 'Cerca': vengono elencati tutti i files disponibili e il file desiderato può essere scelto per l'inclusione."
+
+msgid "editor.article.editMetadata"
+msgstr "Modifica i dati di questa versione"
+
+msgid "editor.article.viewMetadata"
+msgstr "Mostra i metadati di questa versione"
+
+msgid "editor.article.publishVersion"
+msgstr "Pubblica questa versione"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Mostra pubblicazione programmata"

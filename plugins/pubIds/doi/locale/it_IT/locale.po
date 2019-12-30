@@ -2,20 +2,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
+"PO-Revision-Date: 2019-12-28 17:34+0000\n"
+"Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
+"it/>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:01+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
 
 msgid "plugins.pubIds.doi.description"
-msgstr "Questo plugin attiva l'assegnazione dei Digital Object Identifiers a fascicoli, articoli e file in OJS"
+msgstr ""
+"Questo plugin attiva l'assegnazione dei Digital Object Identifiers a uscite, "
+"articoli e file in OJS."
 
 msgid "plugins.pubIds.doi.readerDisplayName"
 msgstr "DOI"
@@ -54,13 +59,17 @@ msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
 msgstr "Suffisso DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
-msgstr "Il suffisso URN può assumere qualsiasi forma, ma deve restare unico per ciascun oggetto pubblicato che abbia lo stesso prefisso."
+msgstr ""
+"Il suffisso DOI può avere qualunque forma, ma deve essere uniforme per tutti "
+"gli elementi  pubblicato con lo stesso prefisso DOI:"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
 msgstr "Usa il pattern inserito sotto per generare suffissi DOI. Usa %j per le iniziali della rivista, %v per il numero del volume, %i per il numero del fascicolo, %Y per l'anno, %a per l'ID OJS degli articoli, %g per gli ID OJS dei file degli articoli, %f per gli ID OJS dei file e %p per il numero di pagina."
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
-msgstr "Per esempio, vol%viss%ipp%p creerà il suffisso \"vol3iss2pp230\"."
+msgstr ""
+"Per esempio, vol%viss%ipp%p creerà un DOI con questo fomato:  10.1234/"
+"vol3iss2pp230"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
 msgstr "per i fascicoli"
@@ -90,7 +99,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequire
 msgstr "Inserisci il pattern del suffisso DOI per i file principali degli articoli."
 
 msgid "plugins.pubIds.doi.manager.settings.doiReassign"
-msgstr "Riassegna i DOI."
+msgstr "Riassegna i DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
 msgstr "Se cambi la tua configurazione dei DOI, i DOI già assegnati non vengono toccati. Una volta che la configurazione dei DOI è stata salvata, usando questo bottone tutti i DOI esistenti vengono cancellati  e cosi le nuove configurazioni interverranno sugli oggetti già esistenti."
@@ -123,7 +132,8 @@ msgid "plugins.pubIds.doi.editor.customSuffixMissing"
 msgstr "Il DOI non può essere assegnato perché il suffisso individuale manca."
 
 msgid "plugins.pubIds.doi.editor.patternNotResolved"
-msgstr "Il DOI non può essere assegnato perché contiene un indirizzo non valido"
+msgstr ""
+"Il DOI non può essere assegnato perché contiene un indirizzo non valido."
 
 msgid "plugins.pubIds.doi.editor.canBeAssigned"
 msgstr "Quello che vedi è un'anticipazione del DOI. Seleziona il checkbox e salva il modulo per assegnare il DOI."
@@ -160,3 +170,38 @@ msgstr "Il DOI {$pubId} non può essere assegnato perchè contiene una forma non
 
 msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
 msgstr "Il DOI {$pubId} è stato assegnato."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Elemento"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "File finale: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Non è stato assegnato al con DOI a questo articolo."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "Il DOI per questo articolo sarà {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "Il DOI deve iniziare con {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Non è possibile generare un nuovo DOI perché manca uno o più elementi. "
+"Potrebbe essere necessario assegnare l'articolo ad una uscita, configurare "
+"l'ID del publisher o assegnare i numeri di pagina."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Non è possibile generare un nuovo DOI fino a quanto l'articolo non è stato "
+"assegnato ad un'uscita."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Assegnare"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "Il DOI deve iniziare con {$prefix}."
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Articoli"

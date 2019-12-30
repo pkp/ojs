@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
+"PO-Revision-Date: 2019-12-24 15:34+0000\n"
+"Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"it/>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:27+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Invia una nuova proposta"
@@ -87,16 +90,19 @@ msgid "grid.action.availableArticleGalley"
 msgstr "Rendi questa gabbia disponibile"
 
 msgid "submission.galleyFiles"
-msgstr "I files della gabbia"
+msgstr "Files di pubblicazione"
 
 msgid "submission.proofReadingDescription"
-msgstr "Il layout editor carica i file production-ready che sono stati preparati per la pubblicazione qui. Usa <em>Assegna valutatore</em> to disignare autori e/o altri a controllare le gabbie, con i file corretti caricati per l'approvazione priam della pubblicazione"
+msgstr ""
+"Il layout editor carica le bozze finali di pubblicazione qui. Utilizza il "
+"link <em>Assegna valutatore</em> per assegnare autori e/o altre persone a "
+"cui affidare il  controllo delle bozze prima della pubblicazione."
 
 msgid "grid.action.approveProof"
-msgstr "Approva questa bozza per l'inclusione nella gabbia"
+msgstr "Approva questa bozza per la pubblicazione."
 
 msgid "grid.action.pageProofApproved"
-msgstr "Questa bozza è stata approvata per l'inclusione nella gabbia"
+msgstr "Questa bozza è stata approvata per la pubblicazione."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Titolo e abstract"
@@ -117,7 +123,7 @@ msgid "submission.incomplete"
 msgstr "In attesa di approvazione"
 
 msgid "submission.submit.form.localeRequired"
-msgstr "Per favore seleziona una lingua per la proposta"
+msgstr "Seleziona una lingua."
 
 msgid "submission.submit.submissionChecklist"
 msgstr "Lista di controllo per le proposte"
@@ -132,19 +138,19 @@ msgid "submission.submit.contributorRole"
 msgstr "Ruolo dei contributori"
 
 msgid "submission.submit.form.authorRequired"
-msgstr "Alemo un autore è richiesto."
+msgstr "E' necessario indicare almeno un autore."
 
 msgid "submission.submit.form.authorRequiredFields"
-msgstr "Il nome, cognome e l'email sono richiesti per ogni autore."
+msgstr "Inserisci nome, cognome e indirizzo email di ciascun autore."
 
 msgid "submission.submit.form.titleRequired"
-msgstr "Per favore insersci il titolo del tuo articolo"
+msgstr "Inserisci il titolo del contributo."
 
 msgid "submission.submit.form.abstractRequired"
 msgstr "Per favore inserisci l'abstract dell'articolo."
 
 msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Per favore selezione il ruolo del contributore."
+msgstr "Selezione il ruolo dell'autore."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Il formato di citazione richiesto non è stato trovato."
@@ -159,4 +165,74 @@ msgid "submission.abstract.wordCount.description"
 msgstr "L'abstract deve essere di {$wordCount} parole o meno."
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr "Il tuo abstract è troppo lungo. Per favore accorcialo sotto il limite di parole indicato per questa sezione."
+msgstr ""
+"L'abstract è troppo lungo. Per favore accorcialo entro il limite di parole "
+"indicato per questa sezione."
+
+msgid "catalog.category.heading"
+msgstr "Tutti gli items"
+
+msgid "submission.submit.noContext"
+msgstr "Non è possibile trovare la testata selezionata per la sottomissione."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Pianificato per la pubblicazione nell'uscita <a href=\"{$issueUrl}\""
+">{$issueName}2</a>."
+
+msgid "publication.publishedIn"
+msgstr "Pubblicato in <a href=\"{$issueUrl}\">{$issueName}2</a>."
+
+msgid "publication.required.issue"
+msgstr ""
+"Questo articolo deve essere assegnato ad un'uscita prima di poter essere "
+"pubblicato."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"I requisiti di pubblicazione sono corretti. Questo articolo sarà pubblicato "
+"immediatamente nell'uscita {$issue}. Sei sicuro di voler pubblicare questo "
+"articolo?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"I requisiti di pubblicazione sono corretti. Questo articolo sarà pubblicato "
+"alla pubblicazione di {$issue}. Sei sicuro di voler pianificare la "
+"pubblicazione di questo articolo?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"I requisiti di pubblicazione sono corretti. Sei sicuro di voler pubblicare "
+"questo articolo?"
+
+msgid "publication.journalEntry.success"
+msgstr "L'annotazione è stata aggiornata."
+
+msgid "publication.journalEntry"
+msgstr "Annotazione"
+
+msgid "publication.invalidIssue"
+msgstr "Non è possibile trovare l'uscita per questo articolo."
+
+msgid "publication.invalidSection"
+msgstr "Non è possibile trovare la sezione per questo articolo."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"La data di pubblicazione verrà assegnata in automatico quando l'uscita sarà "
+"pubblicata. Non inserire una data di pubblicazione a meno che l'articolo non "
+"sia già stato pubblicato ed hai necessità di retrodatarlo."
+
+msgid "galley.publicationNotFound"
+msgstr "Non è possibile trovare l'articolo per questi file di stampa."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"I file di pubblicazione di questo articolo non possono essere modificati "
+"perché è già stato pubblicato."
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} items"
+
+msgid "submission.sectionOptions"
+msgstr "Opzioni di sezione"
