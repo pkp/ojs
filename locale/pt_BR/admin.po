@@ -14,17 +14,39 @@ msgstr ""
 msgid "admin.hostedContexts"
 msgstr "Revistas hospedadas"
 
+msgid "admin.settings.appearance.success"
+msgstr "As configurações de aparência do site foram atualizadas com sucesso."
+
+msgid "admin.settings.config.success"
+msgstr "As configurações do site foram atualizadas com sucesso."
+
+msgid "admin.settings.info.success"
+msgstr "As informações do site foram atualizadas com sucesso."
+
+
 msgid "admin.settings.redirect"
 msgstr "Redirecionamento para revista"
 
 msgid "admin.settings.redirectInstructions"
 msgstr "As solicitações realizadas ao portal serão direcionadas a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista."
 
+msgid "admin.settings.defaultMetricDescription"
+msgstr "O OJS está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos. Há casos onde uma estatística única deve ser usada, como, por exemplo, para exibir listas ordenadas dos artigos mais usados, ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Tem certeza de que deseja desativar este idioma? Isso pode afetar qualquer revistas hospedadas utilizando o idioma."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Este será o idioma padrão para o portal e todas as revistas hospedadas."
 
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Os idiomas selecionados estarão disponíveis para todas as revistas no portal, e constarão da lista de idiomas que aparece em cada página do sistema (esta opção pode ser desativada individualmente por revista). Caso não sejam selecionados vários idiomas, a lista de idiomas não estará disponível e a opção \"configurações de idioma\" não estará disponível para as revistas."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Idiomas marcados podem estar incompletos."
 
 msgid "admin.languages.confirmUninstall"
 msgstr "Deseja realmente remover este idioma? A execução pode afetar revistas hospedas que podem estar utilizando o idioma."
@@ -68,23 +90,23 @@ msgstr "Configuração do OJS"
 msgid "admin.systemConfigurationDescription"
 msgstr "Configurações do OJS no arquivo <tt>config.inc.php</tt>."
 
+msgid "admin.journals.createInstructions"
+msgstr "Seu cadastro como Gerente da Revista será automático. Após a criação de uma revista, acesse-a como gerente e continue com as configurações da revista e cadastro de usuários."
+
 msgid "admin.journals.journalSettings"
 msgstr "Configurações da revista"
 
 msgid "admin.journals.noneCreated"
 msgstr "Nenhuma revista foi criada."
 
-msgid "admin.contexts.confirmDelete"
-msgstr "Deseja realmente excluir permanentemente esta revista e seu conteúdo?"
-
 msgid "admin.contexts.create"
 msgstr "Criar revista"
 
-msgid "admin.journals.createInstructions"
-msgstr "Seu cadastro como Gerente da Revista será automático. Após a criação de uma revista, acesse-a como gerente e continue com as configurações da revista e cadastro de usuários."
-
 msgid "admin.journals.urlWillBe"
 msgstr "Geralmente é usado um acrônimo que identifica o periódico. A URL da revista será: {$sampleUrl}"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "O título é obrigatório"
 
 msgid "admin.contexts.form.pathRequired"
 msgstr "O caminho é obrigatório."
@@ -94,6 +116,12 @@ msgstr "O caminho deve conter apenas caracteres alfanuméricos, sublinhado, híf
 
 msgid "admin.contexts.form.pathExists"
 msgstr "O caminho selecionado já está em uso por outra revista."
+
+msgid "admin.contexts.form.create.success"
+[nova] msgstr "{$name} was created successfully."
+
+msgid "admin.contexts.form.edit.success"
+[nova] msgstr "{$name} was edited successfully."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Permitir Acesso Livre a esta revista no portal"
@@ -140,28 +168,6 @@ msgstr "Deseja realmente mesclar os \"{$oldAccountCount}\" cadastro(s) seleciona
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "Nenhum usuário cadastrado."
 
-msgid "admin.locale.maybeIncomplete"
-msgstr "Idiomas marcados podem estar incompletos."
-
-msgid "admin.settings.defaultMetricDescription"
-msgstr "O OJS está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos. Há casos onde uma estatística única deve ser usada, como, por exemplo, para exibir listas ordenadas dos artigos mais usados, ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão."
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:\n"
-"\t<ul>\n"
-"\t\t<li>Seu servidor não possui ou não permite a execução da ferramenta \"tar\" GNU</li>\n"
-"\t\t<li>O sistema não possui permissão para alterar o arquivo de registro de idiomas, normalmente \"registry/locales.xml\".</li>\n"
-"                <li>O servidor não possui permissões para conexão remota ao servidor do PKP</li>\n"
-"\t</ul>\n"
-"Idiomas estão disponíveis para download manual no <a href=\"http://pkp.sfu.ca\">portal do PKP</a>.</p>"
-
-msgid "admin.contexts.form.titleRequired"
-msgstr "O título é obrigatório"
-
-msgid "admin.languages.confirmDisable"
-msgstr "Tem certeza de que deseja desativar este idioma? Isso pode afetar qualquer revistas hospedadas utilizando o idioma."
-
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Lembrete de Expiração da Assinatura"
 
@@ -170,3 +176,10 @@ msgstr "Notificação de Acesso Aberto"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Lembrete de Avaliação"
+
+msgid "admin.hostedContexts"
+msgstr "Revistas hospedadas"
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Deseja realmente excluir permanentemente esta revista e seu conteúdo?"
+
