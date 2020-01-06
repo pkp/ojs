@@ -118,10 +118,10 @@ msgid "admin.contexts.form.pathExists"
 msgstr "O caminho selecionado já está em uso por outra revista."
 
 msgid "admin.contexts.form.create.success"
-[nova] msgstr "{$name} was created successfully."
+msgstr "{$name} was created successfully."
 
 msgid "admin.contexts.form.edit.success"
-[nova] msgstr "{$name} was edited successfully."
+msgstr "{$name} was edited successfully."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Permitir Acesso Livre a esta revista no portal"
