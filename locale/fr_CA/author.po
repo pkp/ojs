@@ -2,16 +2,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
+"PO-Revision-Date: 2020-01-07 10:19+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
+"author/fr_CA/>\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: fr_CA\n"
-# localization file for fr_CA. Last revision 2019-10-22T10:41:52 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
+# localization file for fr_CA. Last revision 2019-10-22T10:41:52 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 msgid "author.submit"
 msgstr "Nouvelle soumission"
 
@@ -121,7 +125,9 @@ msgid "author.submit.journalSectionDescription"
 msgstr "Les articles doivent être soumis à l'une des rubriques de la revue."
 
 msgid "author.submit.verifyChecklist"
-msgstr "Vous devez vous assurer que tous les éléments de la liste de vérification de la soumission sont satisfaits avant de continuer"
+msgstr ""
+"Vous devez vous assurer que tous les éléments de la liste de vérification de "
+"la soumission sont satisfaits avant de continuer."
 
 msgid "author.submit.copyrightNoticeAgree"
 msgstr "Les auteurs-es acceptent les conditions de l'avis de droit d'auteur, qui s'appliqueront à cette soumission si et quand elle sera publiée par cette revue (des commentaires au,à la rédacteur-trice peuvent être ajoutés ci-dessous)."
@@ -160,13 +166,18 @@ msgid "author.submit.deleteAuthor"
 msgstr "Supprimer un-e auteur-e"
 
 msgid "author.submit.submissionIndexingDescription"
-msgstr "Fournir les termes pour l'indexation de la soumission; séparer les termes par un point-virgule (terme1; terme2; terme3)."
+msgstr ""
+"Fournir les termes pour l'indexation de la soumission ; séparer les termes "
+"par un point-virgule (terme1 ; terme2 ; terme3)."
 
 msgid "author.submit.coverageInstructions"
 msgstr "Se réfère à un lieu géo-spatial, une couverture historique ou chronologique, et/ou à des caractéristiques d'un échantillon de recherche."
 
 msgid "author.submit.languageInstructions"
-msgstr "anglais=en; français=fr; espagnol=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Codes supplémentaires</a>."
+msgstr ""
+"anglais=en ; français=fr ; espagnol=es. <a href=\"http ://www.loc.gov/"
+"standards/iso639-2/php/code_list.php\" target=\"_blank\">Codes "
+"supplémentaires</a>."
 
 msgid "author.submit.form.authorRequired"
 msgstr "Au moins un-e auteur-e est obligatoire."
@@ -292,7 +303,7 @@ msgid "author.suppFile.suppFilePublicIdentificationExists"
 msgstr "L'identification publique du fichier supplémentaire existe déjà."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "Identifiant public du fichier supplémentaire."
+msgstr "Identifiant public du fichier supplémentaire"
 
 msgid "author.submit.confirmationDescription"
 msgstr "Pour soumettre votre manuscrit à la publication {$journalTitle}, cliquer sur Terminer la soumission. Le personne-ressource principale de la soumission recevra un accusé de réception par courriel et sera en mesure de consulter l'avancement du processus éditorial de la soumission en se connectant au site Web de la revue. Merci de votre intérêt à publier dans {$journalTitle}."
@@ -320,4 +331,3 @@ msgstr "Fichier de l'auteur-e"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr "Un compte d'utilisateur-trice est obligatoire afin de soumettre à cette revue. Ceci permet aux rédacteurs-trices de faire le suivi de vos soumissions et d'entrer en contact avec vous lorsque le statut de votre soumission change, ou encore si des informations supplémentaires devaient vous être demandées."
-
