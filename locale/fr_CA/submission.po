@@ -2,16 +2,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
+"PO-Revision-Date: 2020-01-07 10:19+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/fr_CA/>\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: fr_CA\n"
-# localization file for fr_CA. Last revision 2019-10-22T02:40:33 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
+# localization file for fr_CA. Last revision 2019-10-22T02:40:33 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 msgid "submission.submit.title"
 msgstr "Soumettre un article"
 
@@ -52,16 +56,19 @@ msgid "submission.submit.whatNext.description"
 msgstr "La revue a été informée de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers. Un rédacteur communiquera avec vous lorsque votre soumission aura été examinée."
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "Les épreuves se trouvent dans le dossier du numéro."
+msgstr "Les épreuves se trouvent dans le dossier du numéro"
 
 msgid "grid.action.issueEntry"
 msgstr "Voir les métadonnées de la soumission"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Les épreuves de l'article en format \"{$galleyFormatName}\" sont disponibles."
+msgstr ""
+"Les épreuves de l'article en format « {$galleyFormatName} » sont disponibles."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Les épreuves de l'article en format \"{$galleyFormatName}\" ne sont pas disponibles."
+msgstr ""
+"Les épreuves de l'article en format  « {$galleyFormatName} » ne sont pas "
+"disponibles."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Identifiants publics de la soumission mis à jour."
@@ -70,10 +77,14 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Approbation du format"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Ces épreuves <em>ne seront plus mises à la disposition</em> des lecteurs-trices</p>."
+msgstr ""
+"<p>Ces épreuves <em>ne seront plus mises à la disposition</em> des lecteurs-"
+"trices.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Ces épreuves <em>seront mises à la disposition</em> des lecteurs</p>."
+msgstr ""
+"<p>Ces épreuves <em>seront mises à la disposition</em> des lecteurs-"
+"trices.</p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Rendre ces épreuves disponibles"
@@ -82,7 +93,12 @@ msgid "submission.galleyFiles"
 msgstr "Fichiers des épreuves"
 
 msgid "submission.proofReadingDescription"
-msgstr "Le ou la responsable de la mise en page téléverse ici les fichiers qui ont été préparés pour publication. Utiliser « Assigner un-e vérificateur-trice » pour identifier les auteurs-es et autres personnes qui vérifieront les épreuves, à partir des fichiers corrigés téléversés, pour approbation avant la publication."
+msgstr ""
+"Le ou la responsable de la mise en page téléverse ici les fichiers qui ont "
+"été préparés pour publication. Utiliser <em>Assigner un-e vérificateur-"
+"trice</em> pour identifier les auteurs-es et autres personnes qui "
+"vérifieront les épreuves, à partir des fichiers corrigés téléversés, pour "
+"approbation avant la publication."
 
 msgid "grid.action.approveProof"
 msgstr "Approuver cette version pour inclusion dans les épreuves."
@@ -121,7 +137,7 @@ msgid "submission.incomplete"
 msgstr "En attente d'approbation"
 
 msgid "submission.submit.form.localeRequired"
-msgstr "Sélectionner une langue pour la soumission"
+msgstr "Sélectionner une langue pour la soumission."
 
 msgid "submission.submit.submissionChecklist"
 msgstr "Liste de vérification de la soumission"
@@ -178,7 +194,10 @@ msgid "galley.publicationNotFound"
 msgstr "La publication de ces épreuves est introuvable."
 
 msgid "publication.datePublished.description"
-msgstr "La date de publication sera définie automatiquement lors de la publication du numéro. N'entrez pas de date de publication sauf si l'article a déjà été publié ailleurs et que vous devez l'antidater.""
+msgstr ""
+"La date de publication sera définie automatiquement lors de la publication "
+"du numéro. Ne pas entrer de date de publication sauf si l'article a déjà été "
+"publié ailleurs et que vous devez l'antidater."
 
 msgid "publication.invalidSection"
 msgstr "La rubrique de cette publication est introuvable."
@@ -209,5 +228,3 @@ msgstr "Publié dans <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
 msgstr "Publication prévue dans <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-
