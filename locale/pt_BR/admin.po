@@ -23,7 +23,6 @@ msgstr "As configurações do site foram atualizadas com sucesso."
 msgid "admin.settings.info.success"
 msgstr "As informações do site foram atualizadas com sucesso."
 
-
 msgid "admin.settings.redirect"
 msgstr "Redirecionamento para revista"
 
