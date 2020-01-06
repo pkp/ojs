@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:38-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:38-07:00\n"
+"Language: \n"
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Você não pode alterar o diário de um envio."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Você não tem permissão para visualizar edições não publicadas."
+
+msgid "api.submissions.403.contextRequired"
+msgstr "Para fazer ou editar um envio, você deve fazer uma solicitação no terminal da API da revista."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Você pode ver apenas os journals que foram ativados."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Você não tem permissão para visualizar este journal."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr "Você não pode visualizar ou editar este journal, a menos que faça uma solicitação à API do journal ou à API em todo o site."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Você não pode editar este journal a partir da API em todo o site."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Você não tem permissão para editar este journal."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Você não tem permissão para excluir este journal."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "O journal que você solicitou não foi encontrado."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Você não tem permissão para mover este modelo de email para outro journal."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "O método de pagamento que você selecionou não é suportado."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "A publicação que você solicitou não faz parte deste journal."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "A publicação que você solicitou não faz parte desta submissão."
