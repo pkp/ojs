@@ -2,14 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
+"PO-Revision-Date: 2020-01-07 10:19+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-doi/fr_CA/>\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
-"PO-Revision-Date: 2019-09-30T06:56:48-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -30,7 +34,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
 msgstr "Veuillez choisir les objets auxquels des DOIs seront attribués."
 
 msgid "plugins.pubIds.doi.manager.settings.explainDois"
-msgstr "Veuillez choisir les objets publiés auxquels seront attribués des DOI:"
+msgstr "Veuillez choisir les objets publiés auxquels seront attribués des DOI :"
 
 msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
 msgstr "Numéros"
@@ -42,16 +46,21 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "Préfixe DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "Le préfixe DOI est attribué par des agences (tel que <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) et se présente sous la forme de 10.xxxx (e.g. 10.1234):"
+msgstr ""
+"Le préfixe DOI est attribué par des agences (tel que <a href=\""
+"http://www.crossref.org\" target=\"_new\">CrossRef</a>) et se présente sous "
+"la forme de 10.xxxx (e.g. 10.1234) :"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
-msgstr "Le préfixe DOI est obligatoire et doit être de forme 10.xxxx."
+msgstr "Le préfixe DOI est obligatoire et doit être de la forme 10.xxxx."
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
 msgstr "Suffixe DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
-msgstr "Un suffixe DOI s'inscrit de différentes façons mais doit être unique par rapport aux autres \"objets\" publiés qui ont le même préfixe DOI:"
+msgstr ""
+"Un suffixe DOI s'inscrit de différentes façons mais doit être unique par "
+"rapport aux autres \"objets\" publiés qui ont le même préfixe DOI :"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
 msgstr "Utilisez le modèle personnalisé plus bas pour générer les suffixes DOI. Utiliser %j pour les initiales de revue, %v pour la volumaison, %i pour le numéro, %y pour l'année, %a pour le numéro unique de l'article dans OJS, $g pour le numéro de l'épreuve, %f pour le numéro unique du fichier dans OJS, %p pour le numéro de page et %x pour le numéro attribué."
@@ -111,43 +120,50 @@ msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
 msgstr "épreuve"
 
 msgid "plugins.pubIds.doi.editor.customSuffixMissing"
-msgstr "Le DOI ne peut pas être attribué: le suffixe personnalisé est manquant."
+msgstr ""
+"Le DOI ne peut pas être attribué car le suffixe personnalisé est manquant."
 
 msgid "plugins.pubIds.doi.editor.patternNotResolved"
-msgstr "Le DOI ne peut pas être attribué: il contient un modèle non résolvable."
+msgstr ""
+"Le DOI ne peut pas être attribué car il contient un modèle qui ne peut être "
+"résolu."
 
 msgid "plugins.pubIds.doi.editor.canBeAssigned"
-msgstr "Voici une prévisualisation du DOI. Cocher la case et enregistrer pour attribuer le DOI."
+msgstr ""
+"Voici une prévisualisation du DOI. Cocher la case et enregistrer le "
+"formulaire pour attribuer le DOI."
 
 msgid "plugins.pubIds.doi.editor.assigned"
-msgstr "le DOI est attribué à {$pubObjectType}."
+msgstr "Le DOI est attribué à ce(cet) {$pubObjectType}."
 
 msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
 msgstr "Le suffixe de DOI est déjà attribué à un autre item publié. Veuillez entrer un suffixe de DOI unique pour chaque item."
 
 msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
-msgstr "Supprimer le DOI"
+msgstr "Supprimer"
 
 msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
-msgstr "Êtes-vous sûr de vouloir supprimer ce DOI?"
+msgstr "Êtes-vous sûr de vouloir supprimer ce DOI ?"
 
 msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
 msgstr "Supprimer les DOIs des numéros"
 
 msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
-msgstr "Êtes-vous sûr de vouloir supprimer les DOIs des numéros?"
+msgstr "Êtes-vous sûr de vouloir supprimer les DOIs des numéros ?"
 
 msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
 msgstr "Utiliser cette option pour supprimer les DOIs de tous les objets (articles et épreuves) actuellement prévus pour ce numéro."
 
 msgid "plugins.pubIds.doi.editor.assignDoi"
-msgstr "Attribuer ce DOI {$pubId} à ce {$pubObjectType}"
+msgstr "Attribuer ce DOI {$pubId} à ce(cet) {$pubObjectType}"
 
 msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
-msgstr "Le DOI ne peut pas être attribué: le suffixe est manquant."
+msgstr "Le DOI ne peut pas être attribué car le suffixe est manquant."
 
 msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
-msgstr "Le DOI {$pubId} ne peut pas être attribué: il contient un modèle non résolvable."
+msgstr ""
+"Le DOI {$pubId} ne peut pas être attribué car il contient un modèle ne "
+"pouvant être résolu."
 
 msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
 msgstr "Le DOI {$pubId} a été attribué."
@@ -160,3 +176,36 @@ msgstr "Attribuer des DOI à tous les objets de revues publiés pour lesquels au
 
 msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr "Êtes-vous certain de vouloir attribuer des DOIs à tous les objets publiés sans DOI?"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Attribuer"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "Le DOI doit débuter par {$prefix}."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Vous ne pouvez pas générer un DOI car une ou plusieurs parties du modèle DOI "
+"requièrent davantage de données. Vous devrez peut-être affecter la "
+"publication à un numéro, définir un ID d'éditeur ou encore saisir des "
+"numéros de page."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Vous ne pouvez pas générer un DOI tant que cette publication n'a pas été "
+"affectée à un numéro."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Document"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Épreuve : {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Un DOI n'a pas été assigné à cette publication."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "Le DOI pour cette publication sera {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "Le DOI doit débuter par {$doiPrefix}."
