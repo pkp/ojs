@@ -95,11 +95,8 @@ msgstr "The publication for this galley could not be found."
 msgid "publication.invalidSection"
 msgstr "The section for this publication could not be found."
 
-msgid "publication.journalEntry"
-msgstr "Preprint Entry"
-
-msgid "publication.journalEntry.success"
-msgstr "The journal entry details have been updated."
+msgid "publication.issue.success"
+msgstr "The preprint entry details have been updated."
 
 msgid "publication.publish.confirmation"
 msgstr "All publication requirements have been met. Are you sure you want to publish this?"
