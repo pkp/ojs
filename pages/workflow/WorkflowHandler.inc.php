@@ -70,7 +70,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$publicFileManager = new PublicFileManager();
 		$baseUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($submissionContext->getId());
 
-		$journalEntryForm = new APP\components\forms\publication\JournalEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
+		$issueEntryForm = new APP\components\forms\publication\IssueEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
 
 		$sectionWordLimits = [];
 		$sectionIterator = DAORegistry::getDAO('SectionDAO')->getByContextId($submissionContext->getId());
@@ -78,9 +78,9 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			$sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
 		}
 
-		import('classes.components.forms.publication.JournalEntryForm'); // Constant import
+		import('classes.components.forms.publication.IssueEntryForm'); // Constant import
 		$templateMgr->setConstants([
-			'FORM_JOURNAL_ENTRY',
+			'FORM_ISSUE_ENTRY',
 		]);
 
 		$workflowData = $templateMgr->getTemplateVars('workflowData');
@@ -97,8 +97,8 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			}
 		}
 
-		$workflowData['components'][FORM_JOURNAL_ENTRY] = $journalEntryForm->getConfig();
-		$workflowData['publicationFormIds'][] = FORM_JOURNAL_ENTRY;
+		$workflowData['components'][FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
+		$workflowData['publicationFormIds'][] = FORM_ISSUE_ENTRY;
 		$workflowData['issueApiUrl'] = $issueApiUrl;
 		$workflowData['sectionWordLimits'] = $sectionWordLimits;
 		$workflowData['i18n']['schedulePublication'] = __('editor.submission.schedulePublication');

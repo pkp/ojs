@@ -1,12 +1,12 @@
 <?php
 /**
- * @file classes/components/form/publication/JournalEntryForm.inc.php
+ * @file classes/components/form/publication/IssueEntryForm.inc.php
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class JournalEntryForm
+ * @class IssueEntryForm
  * @ingroup classes_controllers_form
  *
  * @brief A preset form for setting a publication's issue, section, categories,
@@ -20,11 +20,11 @@ use \PKP\components\forms\FieldText;
 use \PKP\components\forms\FieldUploadImage;
 use \APP\components\forms\FieldSelectIssue;
 
-define('FORM_JOURNAL_ENTRY', 'journalEntry');
+define('FORM_ISSUE_ENTRY', 'issueEntry');
 
-class JournalEntryForm extends FormComponent {
+class IssueEntryForm extends FormComponent {
 	/** @copydoc FormComponent::$id */
-	public $id = FORM_JOURNAL_ENTRY;
+	public $id = FORM_ISSUE_ENTRY;
 
 	/** @copydoc FormComponent::$method */
 	public $method = 'PUT';
@@ -41,7 +41,7 @@ class JournalEntryForm extends FormComponent {
 	 */
 	public function __construct($action, $locales, $publication, $publicationContext, $baseUrl, $temporaryFileApiUrl) {
 		$this->action = $action;
-		$this->successMessage = __('publication.journalEntry.success');
+		$this->successMessage = __('publication.issue.success');
 		$this->locales = $locales;
 
 		// Issue options
