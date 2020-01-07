@@ -27,7 +27,7 @@
 				{assign var="coverImage" value=$preprint->getCurrentPublication()->getLocalizedData('coverImage')}
 				<img
 					src="{$preprint->getCurrentPublication()->getLocalizedCoverImageUrl($preprint->getData('contextId'))|escape}"
-					alt="{$coverImage.altText|escape|default:'null'}"
+					alt="{$coverImage.altText|escape|default:''}"
 				>
 			</a>
 		</div>

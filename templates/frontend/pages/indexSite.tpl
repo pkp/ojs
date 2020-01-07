@@ -34,7 +34,7 @@
 						{if $thumb}
 							<div class="thumb">
 								<a href="{$url|escape}">
-									<img src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $thumb.altText} alt="{$thumb.altText|escape|default:'null'}"{/if}>
+									<img src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $thumb.altText} alt="{$thumb.altText|escape|default:''}"{/if}>
 								</a>
 							</div>
 						{/if}
