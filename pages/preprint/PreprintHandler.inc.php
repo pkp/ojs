@@ -160,9 +160,6 @@ class PreprintHandler extends Handler {
 		));
 		$this->setupTemplate($request);
 
-		// TODO: this defaults to the current publication but should
-		// retrieve the publication requested from the URL if it is
-		// passed as an arg
 		$templateMgr->assign([
 			'ccLicenseBadge' => Application::get()->getCCLicenseBadge($publication->getData('licenseUrl')),
 			'publication' => $publication,
