@@ -186,6 +186,8 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER);
+
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 

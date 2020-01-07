@@ -481,7 +481,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @copydoc PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER);
 
 		$command = array_shift($args);
 		if (!in_array($command, array('export', 'register'))) {
