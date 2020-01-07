@@ -234,11 +234,11 @@
 							{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
 							<img
 								src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
-								alt="{$coverImage.altText|escape|default:'null'}"
+								alt="{$coverImage.altText|escape|default:''}"
 							>
 						{else}
 							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-								<img src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:'null'}">
+								<img src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}">
 							</a>
 						{/if}
 					</div>

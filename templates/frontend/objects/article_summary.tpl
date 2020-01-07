@@ -27,7 +27,7 @@
 				{assign var="coverImage" value=$article->getCurrentPublication()->getLocalizedData('coverImage')}
 				<img
 					src="{$article->getCurrentPublication()->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
-					alt="{$coverImage.altText|escape|default:'null'}"
+					alt="{$coverImage.altText|escape|default:''}"
 				>
 			</a>
 		</div>
