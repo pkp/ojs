@@ -63,11 +63,19 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		$article =& $args[3];
 
 		if ($galley && $galley->getFileType() == 'text/html') {
+			foreach ($article->getData('publications') as $publication) {
+				if ($publication->getId() === $galley->getData('publicationId')) {
+					$galleyPublication = $publication;
+					break;
+				}
+			}
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign(array(
 				'issue' => $issue,
 				'article' => $article,
 				'galley' => $galley,
+				'isLatestPublication' => $article->getData('currentPublicationId') === $galley->getData('publicationId'),
+				'galleyPublication' => $galleyPublication,
 			));
 			$templateMgr->display($this->getTemplateResource('display.tpl'));
 

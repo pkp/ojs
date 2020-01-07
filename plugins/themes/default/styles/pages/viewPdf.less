@@ -119,4 +119,35 @@
 		padding-top: @line-header;
 		border: none;
 	}
+
+	&.galley_view_with_notice {
+
+		iframe {
+			padding-top: @line-header * 3;
+		}
+	}
+
+	.galley_view_notice {
+		position: absolute;
+		top: @line-header;
+		width: 100%;
+		height: @line-header * 2;
+		background: @no;
+	}
+
+	.galley_view_notice_message {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		transform: translate(-50%, -50%);
+		color: @text-bg-base;
+		font-weight: @bold;
+		text-align: center;
+
+		a {
+			color: @text-bg-base;
+			text-decoration: underline;
+		}
+	}
 }
