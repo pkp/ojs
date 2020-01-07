@@ -31,6 +31,7 @@ class DefaultThemePlugin extends ThemePlugin {
 	 * @return null
 	 */
 	public function init() {
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER);
 
 		// Register theme options
 		$this->addOption('typography', 'FieldOptions', [
@@ -77,7 +78,7 @@ class DefaultThemePlugin extends ThemePlugin {
 		]);
 
 		$this->addOption('showDescriptionInJournalIndex', 'FieldOptions', [
-			'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.label'),
+			'label' => __('manager.setup.contextSummary'),
 				'options' => [
 				[
 					'value' => true,
@@ -197,7 +198,7 @@ class DefaultThemePlugin extends ThemePlugin {
 
 			$publicFileManager = new PublicFileManager();
 			$publicFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
-			
+
 			$homepageImage = $context->getLocalizedData('homepageImage');
 
 			$homepageImageUrl = $publicFilesDir . '/' . $homepageImage['uploadName'];

@@ -50,11 +50,8 @@ msgstr "Colour"
 msgid "plugins.themes.default.option.colour.description"
 msgstr "Choose a colour for the header."
 
-msgid "plugins.themes.default.option.showDescriptionInJournalIndex.label"
-msgstr "Journal Description"
-
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
-msgstr "Show the journal description on the homepage."
+msgstr "Show the journal summary on the homepage."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
 msgstr "Header Background Image"

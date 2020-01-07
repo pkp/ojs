@@ -49,3 +49,6 @@ msgstr "Couleur"
 
 msgid "plugins.themes.default.option.colour.description"
 msgstr "Choisissez la couleur pour l'entête."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Afficher la description de la revue sur la page d'accueil."
