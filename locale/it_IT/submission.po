@@ -205,12 +205,6 @@ msgstr ""
 "I requisiti di pubblicazione sono corretti. Sei sicuro di voler pubblicare "
 "questo articolo?"
 
-msgid "publication.journalEntry.success"
-msgstr "L'annotazione è stata aggiornata."
-
-msgid "publication.journalEntry"
-msgstr "Annotazione"
-
 msgid "publication.invalidIssue"
 msgstr "Non è possibile trovare l'uscita per questo articolo."
 

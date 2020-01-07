@@ -177,8 +177,8 @@
 								<tab id="license" label="{translate key="publication.publicationLicense"}">
 									<pkp-form v-bind="components.{$smarty.const.FORM_PUBLICATION_LICENSE}" @set="set" />
 								</tab>
-								<tab id="issue" label="{translate key="publication.journalEntry"}">
-									<pkp-form v-bind="components.{$smarty.const.FORM_JOURNAL_ENTRY}" @set="set" />
+								<tab id="issue" label="{translate key="issue.issue"}">
+									<pkp-form v-bind="components.{$smarty.const.FORM_ISSUE_ENTRY}" @set="set" />
 								</tab>
 							{/if}
 							{call_hook name="Template::Workflow::Publication"}
