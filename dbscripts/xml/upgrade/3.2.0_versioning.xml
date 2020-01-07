@@ -21,8 +21,8 @@
 		</query>
 		<!-- migrate data to new publications table -->
 		<query>
-			INSERT INTO publications (access_status, date_published, last_modified, locale, section_id, submission_id, status)
-				SELECT COALESCE(ps.access_status, 0), COALESCE(ps.date_published, NULL), s.last_modified, s.locale, s.section_id, s.submission_id, s.status
+			INSERT INTO publications (access_status, date_published, last_modified, locale, section_id, submission_id, status, version)
+				SELECT COALESCE(ps.access_status, 0), COALESCE(ps.date_published, NULL), s.last_modified, s.locale, s.section_id, s.submission_id, s.status, 1
 				FROM temp_submissions as s
 				LEFT JOIN temp_published_submissions as ps
 					ON (s.submission_id = ps.submission_id)
