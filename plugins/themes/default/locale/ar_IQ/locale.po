@@ -50,9 +50,6 @@ msgstr "اللون"
 msgid "plugins.themes.default.option.colour.description"
 msgstr "إختر لوناً للعناوين."
 
-msgid "plugins.themes.default.option.showDescriptionInJournalIndex.label"
-msgstr "وصف المجلة"
-
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "أظهر وصف المجلة على صفحتها الرئيسية."
 

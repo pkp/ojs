@@ -66,6 +66,3 @@ msgstr "Immagine di sfondo della testata"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Visualizza la descrizione della testata nella homepage."
-
-msgid "plugins.themes.default.option.showDescriptionInJournalIndex.label"
-msgstr "Descrizione della testata"

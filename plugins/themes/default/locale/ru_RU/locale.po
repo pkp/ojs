@@ -50,9 +50,6 @@ msgstr "Цвет"
 msgid "plugins.themes.default.option.colour.description"
 msgstr "Выбрать цвет для верхнего колонтитула."
 
-msgid "plugins.themes.default.option.showDescriptionInJournalIndex.label"
-msgstr "Описание журнала"
-
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Показать описание журнала на главной странице."
 
