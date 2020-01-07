@@ -28,6 +28,7 @@ class PublicationDAO extends PKPPublicationDAO {
 		'sectionId' => 'section_id',
 		'submissionId' => 'submission_id',
 		'status' => 'status',
+		'version' => 'version',
 	];
 
 	/**
