@@ -135,7 +135,7 @@ msgid "default.groups.abbrev.externalReviewer"
 msgstr "A"
 
 msgid "default.contextSettings.emailSignature"
-[nova] msgstr ""
+msgstr ""
 
 msgid "section.default.title"
 msgstr "Artigos"
