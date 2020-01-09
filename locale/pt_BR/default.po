@@ -11,11 +11,26 @@ msgstr ""
 "PO-Revision-Date: 2019-09-30T11:58:53-07:00\n"
 "Language: \n"
 
+msgid "section.default.title"
+msgstr "Artigos"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.genres.article"
+msgstr "Texto do Artigo"
+
 msgid "default.contextSettings.checklist.notPreviouslyPublished"
 msgstr "A contribuição é original e inédita, e não está sendo avaliada para publicação por outra revista; caso contrário, deve-se justificar em \"Comentários ao editor\"."
 
 msgid "default.contextSettings.checklist.fileFormat"
 msgstr "O arquivo da submissão está em formato Microsoft Word, OpenOffice ou RTF."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Onde disponível, os URLs para as referências foram fornecidos."
 
 msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr "O texto está em espaço simples; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (exceto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos."
@@ -29,17 +44,17 @@ msgstr "<p>Os nomes e endereços informados nesta revista serão usados exclusiv
 msgid "default.contextSettings.openAccessPolicy"
 msgstr "Esta revista oferece acesso livre imediato ao seu conteúdo, seguindo o princípio de que disponibilizar gratuitamente o conhecimento científico ao público proporciona maior democratização mundial do conhecimento."
 
-msgid "section.default.title"
-msgstr "Artigos"
+msgid "default.contextSettings.forReaders"
+msgstr "Incentivamos os leitores a se inscreverem no serviço de notificação de publicação deste periódico. Use o <a href=\"{$indexUrl}{$contextPath}/user/register\">Register</a> link na parte superior da página inicial do diário. Esse registro fará com que o leitor receba o Índice por e-mail para cada nova edição da revista. Essa lista também permite que o periódico reivindique um certo nível de suporte ou leitores. Veja a <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Declaração de privacidade da revista</a>, que garante aos leitores que seu nome e endereço de email não serão usados ​​para outros fins."
 
-msgid "section.default.abbrev"
-msgstr "ART"
+msgid "default.contextSettings.forAuthors"
+msgstr "Interessado em enviar para esta revista? Recomendamos que você analise a <a href=\"{$indexUrl}{$contextPath}/about\">About the Journal</a> página para as políticas de seção da revista, bem como as <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Diretrizes para autores</a>. Autores precisam <a href=\"{$indexUrl}{$contextPath}/user/register\">registrar-se</a> com a revista antes de enviar ou, se já estiver registrado, pode simplesmente <a href=\"{$indexUrl}/index/login\"> fazer log in</a> e iniciar o processo de cinco etapas."
 
-msgid "section.default.policy"
-msgstr "Política padrão de seção"
+msgid "default.contextSettings.forLibrarians"
+msgstr "Encorajamos bibliotecários de pesquisa a listar este periódico entre os itens de periódicos eletrônicos de sua biblioteca. Além disso, pode ser interessante notar que o sistema de publicação de código aberto desta revista é adequado para as bibliotecas hospedarem seus professores para usarem com os periódicos envolvidos na edição (veja <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
 
-msgid "default.genres.article"
-msgstr "Texto do artigo"
+msgid "default.contextSettings.lockssLicense"
+msgstr "Este periódico utiliza o sistema LOCKSS para criar um sistema de arquivamento distribuído entre as bibliotecas participantes e permite que essas bibliotecas criem arquivos permanentes do periódico para fins de preservação e restauração. <a href=\"http://www.lockss.org/\">More...</a>"
 
 msgid "default.contextSettings.clockssLicense"
 msgstr "Esta revista utiliza o sistema CLOCKSS para criar um sistema de arquivos distribuídos entre bibliotecas participantes e permite que tais bibliotecas mantenham cópias permanentes da revista para propósitos de preservação e recuperação. <a href=\"http://clockss.org/\">Saiba mais...</a>"
@@ -118,3 +133,18 @@ msgstr "Avaliadores"
 
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "A"
+
+msgid "default.contextSettings.emailSignature"
+[nova] msgstr ""
+
+msgid "section.default.title"
+msgstr "Artigos"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr "Política padrão de seção"
+
+msgid "default.genres.article"
+msgstr "Texto do artigo"
