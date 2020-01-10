@@ -867,7 +867,7 @@ msgid "manager.setup.searchEngineIndexing"
 msgstr "Indexação para mecanismos de busca"
 
 msgid "manager.setup.searchEngineIndexing.success"
-[nova] msgstr "The search engine index settings have been updated."
+msgstr "The search engine index settings have been updated."
 
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr "Para auxiliar usuários de mecanismos de busca a descobrir sua revista, inclua uma breve descrição sobre a revista e palavras-chave relevantes (separadas por ponto-e-vírgula \";\")."
