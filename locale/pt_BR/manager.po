@@ -11,6 +11,39 @@ msgstr ""
 "PO-Revision-Date: 2019-09-30T11:58:53-07:00\n"
 "Language: \n"
 
+msgid "manager.distribution.access"
+msgstr "Acesso"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "Escolha como uma data padrão de direitos autorais é selecionada para um artigo. Esse padrão pode ser substituído caso a caso. Se você \"publica conforme avança\", não use a data de publicação da edição."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Use a data de publicação da edição"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Use a data de publicação do artigo"
+
+msgid "manager.distribution.publication"
+msgstr "Publicação"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Modo de publicação"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "O sistema não será usado para publicar o conteúdo da revista online."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "A revista oferecerá acesso livre ao seu conteúdo."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "A revista terá controle de assinaturas para acesso ao seu conteúdo, ou parte dele."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Os detalhes da publicação foram atualizados."
+
+msgid "manager.website.archiving"
+msgstr "Arquivamento"
+
 msgid "manager.emails.confirmResetAll"
 msgstr "Deseja realmente restaurar todos os e-mails para o padrão original para esta revista? Todas as personalizações serão perdidas."
 
@@ -19,6 +52,15 @@ msgstr "Aviso: o navegador de arquivos é uma ferramenta avançada que permite v
 
 msgid "manager.journalManagement"
 msgstr "Administração"
+
+msgid "manager.language.ui"
+msgstr "Interface do usuário"
+
+msgid "manager.language.submissions"
+msgstr "Submissões"
+
+msgid "manager.language.forms"
+msgstr "Formulários"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "A ação substituirá configurações específicas realizadas posteriormente no idioma selecionado"
@@ -92,6 +134,12 @@ msgstr "Opções"
 msgid "manager.payment.options.acceptSubscriptionPayments"
 msgstr "Esta ação ativará pagamento para assinaturas, sendo responsabilidade do gerente de assinaturas definir e gerenciar os tipos, taxas, duração e assinantes."
 
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Deseja realmente apagar esta subscrição?"
+
+msgid "manager.payment.success"
+msgstr "As opções de pagamento foram atualizadas."
+
 msgid "manager.payment.options.enablePayments"
 msgstr "Clique aqui para habilitar o módulo de pagamentos. Em seguida, configure as opções de pagamento através do formulário disponível. Usuários deverão estar cadastrados e logados no sistema para realizar pagamentos."
 
@@ -115,6 +163,9 @@ msgstr "Publicação de artigo"
 
 msgid "manager.payment.options.purchaseArticleFee"
 msgstr "Adquirir artigo"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Adquirir edição"
 
 msgid "manager.payment.options.text"
 msgstr "Descrição do método de pagamento"
@@ -143,6 +194,9 @@ msgstr "As opções definidas (bem como as descrições, que podem ser alteradas
 msgid "manager.payment.records"
 msgstr "Registros"
 
+msgid "manager.paymentTypes"
+msgstr "Formas de Pagamento"
+
 msgid "manager.payment.userName"
 msgstr "Usuário"
 
@@ -154,6 +208,9 @@ msgstr "Todas as revistas"
 
 msgid "manager.people.allSiteUsers"
 msgstr "Cadastrar usuário do portal nesta revista"
+
+msgid "manager.people.showNoRole"
+msgstr "Exibir usuários sem papéis"
 
 msgid "manager.people.allUsers"
 msgstr "Todos os usuários"
@@ -185,8 +242,17 @@ msgstr "A sincronização cadastrará, nesta revista e no mesmo papel, todos os 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Não exigir resumos"
 
+msgid "manager.section.noSectionEditors"
+msgstr "Ainda não existem editores de sessão. Designe este papel a ao menos um usuário por meio de Gerente > Configurações > Usuários e Papéis."
+
 msgid "manager.sections.assigned"
 msgstr "Editores desta seção"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Deseja realmente exluir permanentemente esta seção?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Antes de poder excluir esta seção, é necessário mover os artigos publicados nela para outras seções."
 
 msgid "manager.sections.create"
 msgstr "Incluir seção"
@@ -254,8 +320,35 @@ msgstr "Submissões a esta seção da revista"
 msgid "manager.sections.unassigned"
 msgstr "Editores de seção disponíveis"
 
+msgid "manager.sections.wordCount"
+msgstr "Contar palavras"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Limitar a quantidade de palavras do resumo para esta seção (0 para ilimitado):"
+
 msgid "manager.setup"
 msgstr "Configuração"
+
+msgid "manager.setup.masthead"
+msgstr "Equipe Editorial"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Equipe Editorial"
+
+msgid "manager.setup.homepageContent"
+msgstr "Página Inicial da Revista"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "A página inicial da revista consiste em links de navegação por padrão. Conteúdo adicional pode ser anexado usando uma ou todas as seguintes opções, que aparecerão na ordem mostrada."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Folha de estilos da revista"
+
+msgid "manager.setup.contextName"
+msgstr "Título da Revista"
+
+msgid "manager.setup.pageHeader"
+msgstr "Cabeçalho"
 
 msgid "manager.setup.aboutItemContent"
 msgstr "Conteúdo"
@@ -290,8 +383,11 @@ msgstr "Pode-se incluir um cabeçalho em HTML, para substituir o padrão. Deixar
 msgid "manager.setup.announcements"
 msgstr "Notícias"
 
-msgid "manager.setup.enableAnnouncements.description"
-msgstr "Notícias podem ser publicadas para informar leitores sobre novidades e eventos, disponíveis na página de notícias."
+msgid "manager.setup.announcements.success"
+msgstr "As configurações de anúncios foram atualizadas."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introdução"
 
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr "Digite um texto introdutório, ou qualquer informação desejada, a ser exibida aos leitores na página de notícias."
@@ -299,29 +395,29 @@ msgstr "Digite um texto introdutório, ou qualquer informação desejada, a ser 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Para inclusão na página Sobre a revista)"
 
+msgid "manager.setup.archiving.success"
+msgstr "The archiving details for this journal have been updated."
+
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Exigir dos autores o registro de conflito de interesses (CI) junto com a submissão."
 
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr "Exigir dos avaliadores registro de conflito de interesses com cada avaliação realizada."
 
-msgid "manager.setup.metadata.coverage"
-msgstr "Cobertura"
+msgid "manager.setup.history"
+msgstr "Histórico da revista"
 
-msgid "manager.setup.metadata.coverage.description"
-msgstr "Referente à cobertura geoespacial, cronológica ou histórica, e/ou características da pesquisa."
+msgid "manager.setup.historyDescription"
+msgstr "Este texto aparecerá na seção \"Sobre\" da revista e pode ser usado para detalhar mudanças de título, corpo editorial e outros itens de relevância na história da publicação."
+
+msgid "manager.setup.contact.success"
+msgstr "Os detalhes de contato desta revista foram atualizados."
 
 msgid "manager.setup.currentIssue"
 msgstr "Edição Atual"
 
 msgid "manager.setup.customizingTheLook"
 msgstr "Passo 5. Visual da revista"
-
-msgid "manager.setup.customTags"
-msgstr "Tags META personalizadas"
-
-msgid "manager.setup.customTagsDescription"
-msgstr "Tags META, inseridas no cabeçalho HTML das páginas do sistema."
 
 msgid "manager.setup.details"
 msgstr "Detalhes"
@@ -371,17 +467,32 @@ msgstr "Os e-mails padrão enviados pelo sistema em nome da revista incluirão a
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Habilitar ferramenta de notícias a Editores-Gerentes."
 
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Notícias podem ser publicadas para informar leitores sobre novidades e eventos, disponíveis na página de notícias."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Exibir na página inicial"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "Quantos anúncios serão exibidos na página inicial. Deixe em branco para não exibir nenhum."
+
 msgid "manager.setup.enableUserRegistration"
 msgstr "Usuários visitantes podem se cadastrar na revista, assumindo um ou mais papéis."
 
 msgid "manager.setup.focusAndScope"
 msgstr "Foco e escopo"
 
+msgid "manager.setup.focusAndScope.description"
+msgstr "Descreva aos autores, leitores e bibliotecários a gama de artigos e outros itens a revista vai publicar."
+
 msgid "manager.setup.forAuthorsToIndexTheirWork"
 msgstr "Indexação da submissão"
 
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
 msgstr "O sistema adota o Protocolo para Coleta de Metadados do <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a>, que é um padrão emergente para proporcionar acesso com base na indexação a recursos eletrônicos de pesquisa em escala global. Os autores farão uso de um padrão similar para incluir os metadados da submissão. O Gerente da revista deverá escolher as categorias para indexação e apresentar aos autores exemplos relevantes para auxiliá-los na indexação, separando os termos com ponto-e-vírgula (Ex.: termo1; termo2). Os termos deverão ser apresentados como exemplos ao acessar a página, por meio das expressões \"Ex.\" ou \"Por exemplo,\"."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "O ISSN especificado não é válido."
 
 msgid "manager.setup.form.contactEmailRequired"
 msgstr "O e-mail do contato principal é obrigatório!"
@@ -416,6 +527,12 @@ msgstr "Diretrizes"
 msgid "manager.setup.guidingSubmissions"
 msgstr "Passo 3. Diretrizes para submissão"
 
+msgid "manager.setup.identity"
+msgstr "Identidade da Revista"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Para periódicos que oferecem acesso livre imediato ou adiado, inclua uma licença Creative Commons com todo o material na data de publicação."
+
 msgid "manager.setup.information"
 msgstr "Informação"
 
@@ -430,6 +547,9 @@ msgstr "Para Bibliotecários"
 
 msgid "manager.setup.information.forReaders"
 msgstr "Para Leitores"
+
+msgid "manager.setup.information.success"
+msgstr "As informações desta revista foram atualizadas."
 
 msgid "manager.setup.initialIssue"
 msgstr "Edição inicial"
@@ -446,11 +566,23 @@ msgstr "Podem ser incluídos outros itens na barra de navegação (CAPA, SOBRE, 
 msgid "manager.setup.itemsPerPage"
 msgstr "Itens por página"
 
+msgid "manager.setup.itemsPerPage.description"
+msgstr "Limite o número de itens (por exemplo, envios, usuários ou atribuições de edição) a serem exibidos em uma lista antes de mostrar os itens subsequentes em outra página."
+
 msgid "manager.setup.journalAbbreviation"
 msgstr "Abreviatura"
 
 msgid "manager.setup.journalArchiving"
 msgstr "Arquivamento"
+
+msgid "manager.setup.contextSummary"
+msgstr "Resumo da Revista"
+
+msgid "manager.setup.contextAbout"
+msgstr "Sobre a Revista"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Inclui qualquer informação sobre a revista que pode ser de interesse para os leitores, autores ou colaboradores. Isso poderia incluir a sua política de acesso aberto, o foco e o escopo da revista, aviso de direitos autorais, a divulgação de patrocínio, a história da revista, uma declaração de privacidade, e inclusão em qualquer sistema de arquivo LOCKSS ou CLOCKSS."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "Conteúdo da capa"
@@ -503,20 +635,77 @@ msgstr "Formato de folha de estilo inválido. Formato aceitável é .css."
 msgid "manager.setup.journalTheme"
 msgstr "Tema para o visual"
 
+msgid "manager.setup.journalThumbnail"
+msgstr "Miniatura da publicação"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Um pequeno logotipo ou representação da revista que pode ser usado em listas de revistas."
+
 msgid "manager.setup.contextTitle"
 msgstr "Título"
+
+msgid "manager.setup.keyInfo"
+msgstr "Informação chave"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "Forneça uma breve descrição do seu diário e identifique editores, diretores administrativos e outros membros da sua equipe editorial."
 
 msgid "manager.setup.labelName"
 msgstr "Rótulo"
 
+msgid "manager.setup.lists.success"
+msgstr "As configurações da lista para este diário foram atualizadas."
+
 msgid "manager.setup.lists"
 msgstr "Listas"
 
+msgid "manager.setup.plnPluginEnable"
+msgstr "Plugin PKP PN ativo"
+
+msgid "manager.setup.plnDescription"
+msgstr "A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Clique na ligação Configurações para aceitar os termos de uso para o PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "Rede de Preservação PKP (PKP PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios. O plugin PKP PN para OJS 3 está em desenvolvimento e ficará disponível na galeria de plugins em breve."
+
+msgid "manager.setup.otherLockss"
+msgstr "Opções Alternativas de Arquivo"
+
 msgid "manager.setup.lockssEnable"
-msgstr "Permitir ao LOCKSS armazenar e distribuir o conteúdo da revista a bibliotecas participantes por meio do <a href=\"{$lockssUrl}\" target=\"_blank\">Manifesto de Publicação</a> do LOCKSS. Uma licença LOCKSS aparecerá na página  Sobre a revista na seção Arquivamento:"
+msgstr "Permitir ao LOCKSS armazenar e distribuir o conteúdo da revista a bibliotecas participantes por meio do <a href=\"{$lockssUrl}\" target=\"_blank\">Manifesto de Publicação</a> do LOCKSS. Uma licença LOCKSS aparecerá na página Sobre a Revista na seção Arquivamento:"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "Uma licença LOCKSS aparecerá na seção Sobre a Revista sob Arquivamento: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\"> Licença  LOCKSS </a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Descrição da Licença LOCKSS"
 
 msgid "manager.setup.lockssRegister"
 msgstr "Identifique 6 a 10 bibliotecas que cadastrarão e guardarão o cache da revista. Por exemplo, escolha instituições às quais os editores ou Membros do Comitê já sejam associados, e/ou instituições já participantes do LOCKSS. Visite <a href=\"http://www.lockss.org/community/\" target=\"_blank\">bibliotecas participantes</a>. Utilize o convite preparado para (i) <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">Bibliotecas participantes do LOCKSS</a> ou (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">Bibliotecas NÃO participantes do LOCKSS</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Ativar CLOCKSS para armazenar e distribuir conteúdo da revista em bibliotecas participantes através de um <a href=\"{$clockssUrl}\" target=\"_blank\">Manifesto do Editor</a> page."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "Uma licença CLOCKSS aparecerá na seção Sobre a Revista sob Arquivamento: <a href=\"http://clockss.org/\" target=\"_blank\">Licença CLOCKSS </a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Descrição da Licença CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Assine o serviço CLOCKSS visitando <a href=\"http://clockss.org/\" target=\"_blank\"> o site CLOCKSS </a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
 
 msgid "manager.setup.look"
 msgstr "Visual"
@@ -538,6 +727,9 @@ msgstr "Configurações administrativas e de publicação"
 
 msgid "manager.setup.managingTheJournal"
 msgstr "Passo 4. Administração da revista"
+
+msgid "manager.setup.masthead.success"
+msgstr "Os detalhes do cabeçalho desta revista foram atualizados."
 
 msgid "manager.setup.navigationBar"
 msgstr "Barra de navegação"
@@ -566,14 +758,11 @@ msgstr "<strong>Aviso:</strong> O e-mail de notificação de submissão está de
 msgid "manager.setup.numPageLinks"
 msgstr "Links de paginação"
 
-msgid "manager.setup.publishingMode"
-msgstr "Acesso ao conteúdo"
+msgid "manager.setup.numPageLinks.description"
+msgstr "Limitar o número de links a serem exibidos nas páginas subseqüentes em uma lista."
 
 msgid "manager.setup.onlineIssn"
 msgstr "ISSN Eletrônico"
-
-msgid "manager.distribution.publishingMode.openAccess"
-msgstr "A revista oferecerá acesso livre ao seu conteúdo."
 
 msgid "manager.setup.pageNumberIdentifier"
 msgstr "Opção de número de página"
@@ -586,6 +775,9 @@ msgstr "Foco, avaliação pelos pares, seções, privacidade, acesso, segurança
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN Impresso"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "A declaração de privacidade foi atualizada."
 
 msgid "manager.setup.proofingInstructions"
 msgstr "Instruções para leitura de provas"
@@ -604,6 +796,9 @@ msgstr "Periodicidade de publicação"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "Identificação do conteúdo"
+
+msgid "manager.setup.publishing"
+msgstr "Detalhes da publicação"
 
 msgid "manager.setup.publisher"
 msgstr "Editora"
@@ -641,6 +836,9 @@ msgstr "Prazo padrão permitido para conlusão de uma avaliação"
 msgid "manager.setup.reviewOptions.onQuality"
 msgstr "Editores poderão classificar avaliadores em uma escala de cinco pontos após cada avaliação."
 
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Restringir acesso a arquivos"
+
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr "Avaliadores terão acesso ao documento da submissão somente após indicar disponibilidade para avaliação."
 
@@ -652,6 +850,9 @@ msgstr "Habilitar acesso 1-clique"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Aviso:</strong> O convite ao avaliador conterá uma URL especial que levará os avaliadores diretamente à página de avaliação da submissão em questão (sendo necessário realizar o login para acessar outras páginas). Para garantir a segurança do processo ao usar esta opção, não é permitido ao editor alterar endereços de e-mail ou incluir destinatários de Cópias Carbono (CCs) ou Cópias Ocultas (BCCs) antes de enviar a mensagem aos avaliadores."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Inclua um link seguro no convite por e-mail aos revisores."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Classificação de avaliadores"
@@ -665,8 +866,14 @@ msgstr "Política de avaliação"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Indexação para mecanismos de busca"
 
+msgid "manager.setup.searchEngineIndexing.success"
+[nova] msgstr "The search engine index settings have been updated."
+
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr "Para auxiliar usuários de mecanismos de busca a descobrir sua revista, inclua uma breve descrição sobre a revista e palavras-chave relevantes (separadas por ponto-e-vírgula \";\")."
+
+msgid "manager.setup.searchDescription.description"
+msgstr "Forneça uma breve descrição (50 a 300 caracteres) do diário, que os mecanismos de pesquisa podem exibir ao listar o diário nos resultados da pesquisa."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Seções e editores de seção"
@@ -685,6 +892,12 @@ msgstr "A seção para qual o documento deverá ser considerado."
 
 msgid "manager.setup.showGalleyLinksDescription"
 msgstr "Sempre exibir links para composições e indicar acesso restrito."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Acesso ao Site"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Exibir Conteúdo do Artigo"
 
 msgid "manager.setup.stepsToJournalSite"
 msgstr "Cinco passos para ter uma revista na Web"
@@ -713,8 +926,11 @@ msgstr "Submissões"
 msgid "manager.setup.submissions.description"
 msgstr "Diretrizes para o autor, direito autoral e indexação (incluindo registro)."
 
-msgid "manager.distribution.publishingMode.subscription"
-msgstr "A revista terá controle de assinaturas para acesso ao seu conteúdo, ou parte dele."
+msgid "manager.setup.enableOai"
+msgstr "Habilitar OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr "Forneça metadados para serviços de indexação de terceiros por meio do <a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
 
 msgid "manager.setup.typeExamples"
 msgstr "(Ex.: Pesquisa Histórica; Revisão de Literatura; Pesquisa Empírica de Campo; Entrevista Controlada; Prototipagem)"
@@ -734,6 +950,12 @@ msgstr "Artigos e edições podem receber um código ou texto identificador, emp
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Um comitê editorial/avaliador será utilizado pela revista."
 
+msgid "manager.setup.userAccess.success"
+msgstr "Os detalhes de acesso do usuário para este diário foram atualizados."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Miniatura"
+
 msgid "manager.setup.useImageTitle"
 msgstr "Título em formato de imagem"
 
@@ -742,6 +964,9 @@ msgstr "Cadastro de usuários"
 
 msgid "manager.setup.useTextTitle"
 msgstr "Título em formato de texto"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr "O periódico está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos.\n"
 
 msgid "manager.statistics.statistics"
 msgstr "Estatísticas"
@@ -771,7 +996,7 @@ msgid "manager.statistics.statistics.itemsPublished"
 msgstr "Itens publicados:"
 
 msgid "manager.statistics.statistics.makePublic"
-msgstr "Marcar itens a serem disponibilizados aos leitores em Sobre a revista."
+msgstr "Marcar itens a serem disponibilizados aos leitores em Sobre a Revista."
 
 msgid "manager.statistics.statistics.note"
 msgstr "Aviso: Percentuais para submissões avaliadas por pares podem não somar 100%, já que itens submetidos novamente podem ser aceitos, rejeitados ou ainda estarem em processo de avaliação ou edição."
@@ -787,9 +1012,6 @@ msgstr "Avaliados pelos pares"
 
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "Leitores cadastrados"
-
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Usuários cadastrados"
 
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Total de designados"
@@ -809,11 +1031,35 @@ msgstr "Escolha as seções para calcular as estatísicas de avaliação pelos p
 msgid "manager.statistics.statistics.subscriptions"
 msgstr "Assinaturas"
 
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Download de arquivos do artigo"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Acessos à página de resumo"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Resumos e downloads"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Acessos à capa do periódico"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Visualizações do sumário da edição"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Restringir resultados por contexto"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Restrinja os resultados por tipo de objeto (periódico, edição, artigo, composições finais em pdf, ou outros tipos) e/ou por um ou mais IDs de objeto."
+
 msgid "manager.subscriptionPolicies"
 msgstr "Políticas de assinaturas"
 
 msgid "manager.subscriptionPolicies.delayedOpenAccess"
 msgstr "Acesso Livre adiado"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Habilite a caixa de opção disponível."
 
 msgid "manager.subscriptionPolicies.expiry"
 msgstr "Expiração da assinatura"
@@ -832,6 +1078,24 @@ msgstr "Expiração parcial"
 
 msgid "manager.subscriptionPolicies.expiryPartialDescription"
 msgstr "Leitores mantém acesso apenas a conteúdo publicado anteriormente à expiração. Novas publicação não permitirão acesso ao conteúdo exclusivo a assinantes."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Meses"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Semanas"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Notificar os subscritores por email após expiração da subscrição"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Notificar os subscritores por email após expiração da subscrição"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Notificar os subscritores por email antes da expiração da subscrição."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Notificar os subscritores por email antes da expiração da subscrição."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Lembretes de expiração de assinatura"
@@ -866,6 +1130,30 @@ msgstr "Leitores cadastrados terão a opção de receber o sumário via e-mail q
 msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
 msgstr "<strong>Aviso:</strong> Para ativar esta opção, o administrador do portal deverá habilitar a opção <tt>scheduled_tasks</tt> no arquivo de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para o funcionamento correto da opção (que pode não ser possível em todos os servidores!), como indicado na documentação do sistema."
 
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Notificações de pagamento online"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Notificações automáticas via e-mail (disponíveis para personalização pelo Gerente da Revista na seção E-mails) podem ser enviados ao gerente de assinaturas após a conclusão de pagamentos online."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Notificar o gerente de assinaturas via e-mail após a realização de um pagamento de assinatura individual online."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Notificar o gerente de assinaturas via e-mail após a realização de um pagamento de assinatura institucional online."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Notificar via e-mail o gerente de assinaturas quando ocorrer renovação de assinatura individual."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Notificar via e-mail o gerente de assinaturas quando ocorrer renovação de assinatura institucional."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Aviso:</strong> Assinaturas institucionais adquiridas online exigem aprovação do domínio informado e das faixas de IP, além da ativação da assinatura pelo gerente de assinaturas."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Aviso:</strong> Para habilitar estas opções, o Gerente da Revista deve habilitar o módulo de pagamentos online, incluindo os pagamentos online para assinaturas, em Taxas para leitores."
+
 msgid "manager.subscriptionPolicies.openAccessOptions"
 msgstr "Opções de Acesso Livre para revistas com assinaturas"
 
@@ -882,7 +1170,7 @@ msgid "manager.subscriptionPolicies.subscriptionContact"
 msgstr "Gerente de assinaturas"
 
 msgid "manager.subscriptionPolicies.subscriptionContactDescription"
-msgstr "O contato a seguir será exibido em Assinaturas, na página Sobre a revista."
+msgstr "O contato a seguir será exibido em Assinaturas, na página Sobre a Revista."
 
 msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
 msgstr "Informe um e-mail válido."
@@ -890,14 +1178,29 @@ msgstr "Informe um e-mail válido."
 msgid "manager.subscriptions"
 msgstr "Assinaturas"
 
+msgid "manager.individualSubscriptions"
+msgstr "Individuais"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Institucionais"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Confirma a renovação desta subscrição?"
+
 msgid "manager.subscriptions.confirmDelete"
 msgstr "Deseja realmente excluir esta assinatura?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Visão geral"
 
 msgid "manager.subscriptions.create"
 msgstr "Incluir assinatura"
 
 msgid "manager.subscriptions.createTitle"
 msgstr "Incluir"
+
+msgid "manager.subscriptions.renew"
+msgstr "Renovar"
 
 msgid "manager.subscriptions.dateEnd"
 msgstr "Expiração"
@@ -912,7 +1215,7 @@ msgid "manager.subscriptions.dateStartSearch"
 msgstr "Início"
 
 msgid "manager.subscriptions.domain"
-msgstr "Dominio"
+msgstr "Domínio"
 
 msgid "manager.subscriptions.edit"
 msgstr "Editar assinatura"
@@ -920,14 +1223,29 @@ msgstr "Editar assinatura"
 msgid "manager.subscriptions.editTitle"
 msgstr "Editar"
 
-msgid "manager.subscriptions.form.dateEnd"
-msgstr "Data final"
+msgid "manager.subscriptions.withStatus"
+msgstr "Com situação"
 
-msgid "manager.subscriptions.form.dateEndRequired"
-msgstr "Data final obrigatória."
+msgid "manager.subscriptions.allStatus"
+msgstr "Todas"
 
-msgid "manager.subscriptions.form.dateEndValid"
-msgstr "Escolha uma data final válida."
+msgid "manager.subscriptions.form.status"
+msgstr "Situação"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "A situação da assinatura é obrigatória."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Escolha uma situação válida."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Tipo de assinatura"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "O tipo de assinatura é obrigatório."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Escolha um tipo de assinatura válido."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Data inicial"
@@ -938,8 +1256,71 @@ msgstr "Data inicial obrigatória."
 msgid "manager.subscriptions.form.dateStartValid"
 msgstr "Escolha uma data inicial válida."
 
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Data final"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Data final obrigatória."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Este é um tipo de assinatura não expirável; por favor não especifique uma data de início."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Este é um tipo de assinatura não expirável; por favor não especifique uma data final."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Escolha uma data final válida."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Nota: Todas as alterações abaixo serão aplicadas ao perfil de forma geral no sistema."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Usuário"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Contato"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Usuário obrigatório."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Escolha um usuário válido."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Informe um país válido."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Enviar e-mail com login e detalhes da assinatura."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Utilize a caixa de opção."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Associado"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Código de referência"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Digite as informações de associado, caso seja exigido pelo tipo de assinatura."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "O tipo de assinatura escolhido exige dados de associação a entidade de classe."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Notas"
+
 msgid "manager.subscriptions.form.domain"
 msgstr "Domínio"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Instituição"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "O nome da instituição é obrigatório."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Endereço postal"
 
 msgid "manager.subscriptions.form.domainInstructions"
 msgstr "Digite o domínio caso seja uma assinatura institucional. <br />Caso o domínio seja informado, a faixa de IP é opcional. <br />Somente nomes de domínio são válidos (ex.: lib.sfu.ca)."
@@ -953,26 +1334,20 @@ msgstr "Digite um domínio válido."
 msgid "manager.subscriptions.form.ipRange"
 msgstr "Faixa de IP"
 
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "•"
+
 msgid "manager.subscriptions.form.ipRangeInstructions"
 msgstr "Digite a faixa de IP caso seja uma assinatura institucional. Caso uma faixa de IP seja informada, o domínio é opcional. Valores validos incluem um IP (ex.: 142.58.103.1), uma faixa de IP CIDR (ex.: 142.58.100.0/24), uma faixa de IP (ex.: 142.58.103.1 - 142.58.103.4), uma faixa de IP com coringa '*' (ex.: 142.58.103.*), ou qualquer combinação dessas opções separadas por ponto-e-vírgula (;) (ex.: 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*)"
 
 msgid "manager.subscriptions.form.ipRangeValid"
 msgstr "Digite uma faixa de IP válida."
 
-msgid "manager.subscriptions.form.membership"
-msgstr "Associado"
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Excluir"
 
-msgid "manager.subscriptions.form.membershipInstructions"
-msgstr "Digite as informações de associado caso seja exigido pelo tipo de assinatura."
-
-msgid "manager.subscriptions.form.membershipRequired"
-msgstr "O tipo de assinatura escolhido exige dados do associação a entidade de classe."
-
-msgid "manager.subscriptions.form.notifyEmail"
-msgstr "Enviar e-mail com login e detalhes da assinatura."
-
-msgid "manager.subscriptions.form.notifyEmailValid"
-msgstr "Utilize a caixa de opção."
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Incluir"
 
 msgid "manager.subscriptions.form.saveAndCreateAnother"
 msgstr "Salvar e incluir outra"
@@ -983,23 +1358,8 @@ msgstr "Para enviar uma notificação via e-mail ao usuário, é necessário esp
 msgid "manager.subscriptions.form.subscriptionExists"
 msgstr "O usuário já possui uma assinatura da revista."
 
-msgid "manager.subscriptions.form.typeId"
-msgstr "Tipo de assinatura"
-
-msgid "manager.subscriptions.form.typeIdRequired"
-msgstr "O tipo de assinatura é obrigatório."
-
-msgid "manager.subscriptions.form.typeIdValid"
-msgstr "Escolha um tipo de assinatura válido."
-
-msgid "manager.subscriptions.form.userId"
-msgstr "Usuário"
-
-msgid "manager.subscriptions.form.userIdRequired"
-msgstr "Usuário obrigatório."
-
-msgid "manager.subscriptions.form.userIdValid"
-msgstr "Escolha um usuário válido."
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Um tipo de assinatura deve ser criado antes de criar novas assinaturas."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Faixa de IP"
@@ -1007,14 +1367,26 @@ msgstr "Faixa de IP"
 msgid "manager.subscriptions.membership"
 msgstr "Assinatura"
 
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Código de referência"
+
+msgid "manager.subscriptions.notes"
+msgstr "Notas"
+
 msgid "manager.subscriptions.noneCreated"
 msgstr "Nenhuma assinatura incluída."
 
-msgid "manager.subscriptions.select"
-msgstr "Cadastrar assinante"
+msgid "manager.subscriptions.selectContact"
+msgstr "Escolha o contato para assinantes"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Escolha o usuário"
 
 msgid "manager.subscriptions.selectSubscriber.desc"
 msgstr "Editores-Gerentes, editores, editores de seção, editores de layout, editores de texto e leitores de prova terão automaticamente acesso ao conteúdo para assinantes."
+
+msgid "manager.subscriptions.select"
+msgstr "Cadastrar assinante"
 
 msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
 msgstr "Assinatura incluída com sucesso."
@@ -1025,6 +1397,12 @@ msgstr "Tipo de assinatura"
 msgid "manager.subscriptions.user"
 msgstr "Usuário"
 
+msgid "manager.subscriptions.contact"
+msgstr "Nome do contato"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Instituição"
+
 msgid "manager.subscriptionTypes"
 msgstr "Tipos de assinaturas"
 
@@ -1033,6 +1411,15 @@ msgstr "AVISO! Todas assinaturas deste tipo serão excluídas. Deseja realmente 
 
 msgid "manager.subscriptionTypes.cost"
 msgstr "Valor"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Assinaturas"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individual"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institucional"
 
 msgid "manager.subscriptionTypes.create"
 msgstr "Incluir novo"
@@ -1073,6 +1460,18 @@ msgstr "Escolha uma moeda válida."
 msgid "manager.subscriptionTypes.form.description"
 msgstr "Descrição"
 
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Vencimento"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "meses (ex.: 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Nunca vence"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Utilize as opções oferecidas."
+
 msgid "manager.subscriptionTypes.form.duration"
 msgstr "Vigência"
 
@@ -1094,6 +1493,12 @@ msgstr "Formato obrigatório."
 msgid "manager.subscriptionTypes.form.formatValid"
 msgstr "Escolha um formato válido."
 
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Assinaturas"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individual (usuários validados via login)"
+
 msgid "manager.subscriptionTypes.form.institutional"
 msgstr "Assinantes serão validados por meio de domínio ou autenticação de IP."
 
@@ -1105,6 +1510,9 @@ msgstr "Assinantes deverão ser membros de uma associação, organização ou en
 
 msgid "manager.subscriptionTypes.form.membershipValid"
 msgstr "Utilize a caixa de opção."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Opções"
 
 msgid "manager.subscriptionTypes.form.public"
 msgstr "Tipo de assinatura NÃO será exibido em Assinaturas, na página Sobre a revista."
@@ -1133,315 +1541,20 @@ msgstr "Nenhum tipo de assinatura disponível."
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Tipo de assinatura incluída com sucesso."
 
-msgid "manager.language.ui"
-msgstr "Interface do usuário"
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Ligação para uma página a descrever as subscrições disponíveis."
 
-msgid "manager.language.forms"
-msgstr "Formulários"
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Ligação para uma página a descrever as subscrições atuais e anteriores do visitante."
 
-msgid "manager.people.showNoRole"
-msgstr "Exibir usuários sem papéis"
-
-msgid "manager.sections.wordCount"
-msgstr "Contar palavras"
-
-msgid "manager.sections.wordCountInstructions"
-msgstr "Limitar a quantidade de palavras do resumo para esta seção (0 para ilimitado):"
-
-msgid "manager.setup.history"
-msgstr "Histórico da revista"
-
-msgid "manager.setup.historyDescription"
-msgstr "Este texto aparecerá na seção \"Sobre\" da revista e pode ser usado para detalhar mudanças de título, corpo editorial e outros itens de relevância na história da publicação."
-
-msgid "manager.distribution.publishingMode.none"
-msgstr "O sistema não será usado para publicar o conteúdo da revista online."
-
-msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
-msgstr "Notificações de pagamento online"
-
-msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
-msgstr "Notificações automáticas via e-mail (disponíveis para personalização pelo Gerente da Revista na seção E-mails) podem ser enviados ao gerente de assinaturas após a conclusão de pagamentos online."
-
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
-msgstr "Notificar o gerente de assinaturas via e-mail após a realização de um pagamento de assinatura individual online."
-
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
-msgstr "Notificar o gerente de assinaturas via e-mail após a realização de um pagamento de assinatura institucional online."
-
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
-msgstr "Notificar via e-mail o gerente de assinaturas quando ocorrer renovação de assinatura individual."
-
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
-msgstr "Notificar via e-mail o gerente de assinaturas quando ocorrer renovação de assinatura institucional."
-
-msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
-msgstr "<strong>Aviso:</strong> Assinaturas institucionais adquiridas online exigem aprovação do domínio informado e das faixas de IP, além da ativação da assinatura pelo gerente de assinaturas."
-
-msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
-msgstr "<strong>Aviso:</strong> Para habilitar estas opções, o Gerente da Revista deve habilitar o módulo de pagamentos online, incluindo os pagamentos online para assinaturas, em Taxas para leitores."
-
-msgid "manager.individualSubscriptions"
-msgstr "Individuais"
-
-msgid "manager.institutionalSubscriptions"
-msgstr "Institucionais"
-
-msgid "manager.subscriptions.summary"
-msgstr "Visão geral"
-
-msgid "manager.subscriptions.renew"
-msgstr "Renovar"
-
-msgid "manager.subscriptions.withStatus"
-msgstr "Com situação"
-
-msgid "manager.subscriptions.allStatus"
-msgstr "Todas"
-
-msgid "manager.subscriptions.form.status"
-msgstr "Situação"
-
-msgid "manager.subscriptions.form.statusRequired"
-msgstr "A situação da assinatura é obrigatória."
-
-msgid "manager.subscriptions.form.statusValid"
-msgstr "Escolha uma situação válida."
-
-msgid "manager.subscriptions.form.userProfileInstructions"
-msgstr "Nota: Todas as alterações abaixo serão aplicadas ao perfil de forma geral no sistema."
-
-msgid "manager.subscriptions.form.userContact"
-msgstr "Contato"
-
-msgid "manager.subscriptions.form.userCountryValid"
-msgstr "Informe um país válido."
-
-msgid "manager.subscriptions.form.referenceNumber"
-msgstr "Código de referência"
-
-msgid "manager.subscriptions.form.notes"
-msgstr "Notas"
-
-msgid "manager.subscriptions.form.institutionName"
-msgstr "Instituição"
-
-msgid "manager.subscriptions.form.institutionNameRequired"
-msgstr "O nome da instituição é obrigatório."
-
-msgid "manager.subscriptions.form.institutionMailingAddress"
-msgstr "Endereço postal"
-
-msgid "manager.subscriptions.form.ipRangeItem"
-msgstr "&#8226;"
-
-msgid "manager.subscriptions.form.deleteIpRange"
-msgstr "Excluir"
-
-msgid "manager.subscriptions.form.addIpRange"
-msgstr "Incluir"
-
-msgid "manager.subscriptions.form.typeRequired"
-msgstr "Um tipo de assinatura deve ser criado antes de criar novas assinaturas."
-
-msgid "manager.subscriptions.referenceNumber"
-msgstr "Código de referência"
-
-msgid "manager.subscriptions.notes"
-msgstr "Notas"
-
-msgid "manager.subscriptions.selectContact"
-msgstr "Escolha o contato para assinantes"
-
-msgid "manager.subscriptions.selectUser"
-msgstr "Escolha o usuário"
-
-msgid "manager.subscriptions.contact"
-msgstr "Nome do contato"
-
-msgid "manager.subscriptions.institutionName"
-msgstr "Instituição"
-
-msgid "manager.subscriptionTypes.subscriptions"
-msgstr "Assinaturas"
-
-msgid "manager.subscriptionTypes.individual"
-msgstr "Individual"
-
-msgid "manager.subscriptionTypes.institutional"
-msgstr "Institucional"
-
-msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
-msgstr "Vencimento"
-
-msgid "manager.subscriptionTypes.form.nonExpiring.months"
-msgstr "meses (ex.: 12)"
-
-msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
-msgstr "Nunca vence"
-
-msgid "manager.subscriptionTypes.form.nonExpiringValid"
-msgstr "Utilize as opções oferecidas."
-
-msgid "manager.subscriptionTypes.form.subscriptions"
-msgstr "Assinaturas"
-
-msgid "manager.subscriptionTypes.form.individual"
-msgstr "Individual (usuários validados via login)"
-
-msgid "manager.subscriptionTypes.form.options"
-msgstr "Opções"
-
-msgid "manager.language.submissions"
-msgstr "Submissões"
-
-msgid "manager.payment.options.purchaseIssueFee"
-msgstr "Adquirir edição"
-
-msgid "manager.sections.confirmDelete"
-msgstr "Deseja realmente exluir permanentemente esta seção?"
-
-msgid "manager.sections.alertDelete"
-msgstr "Antes de pode excluir esta seção, é necessário mover os artigos publicados nela para outras seções."
-
-msgid "manager.setup.resetPermissions"
-msgstr "Redefinir Permissões do Artigo"
-
-msgid "manager.setup.journalThumbnail"
-msgstr "Miniatura da publicação"
-
-msgid "manager.setup.useThumbnail"
-msgstr "Miniatura"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr "O periódico está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos.\n"
-"Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir uma lista ordenada dos artigos mais usados ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão."
-
-msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr "Download de arquivos do artigo"
-
-msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr "Acessos à página de resumo"
-
-msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr "Resumos e downloads"
-
-msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
-msgstr "Acessos à capa do periódico"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Restringir resultados por contexto"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Restrinja os resultados por tipo de objeto (periódico, edição, artigo, composições finais em pdf, ou outros tipos) e/ou por um ou mais IDs de objeto."
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Esta ligação só será apresentada quando um visitante estiver autenticado."
 
 msgid "manager.setup.categories"
 msgstr "Categorias"
 
 msgid "manager.setup.categories.description"
 msgstr "Escolha a categoria mais apropria da lista apresentada. Leitores poderão navegar por categoria a partir do conjunto completo oferecido."
-
-msgid "manager.setup.copyrightYearBasis"
-msgstr "Basear direitos autorais de novos artigos no ano"
-
-msgid "plugins.importexport.common.settings"
-msgstr "Configurações"
-
-msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr "Para utilizar este plugin, por favor vá para a categoria de plugins de \"Identificação Pública\", habilite e configure o plug-in DOI e especifique um prefixo DOI válido."
-
-msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr "O plugin não foi completamento configurado."
-
-msgid "plugins.importexport.common.settings.form.password"
-msgstr "Senha"
-
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Por favor, note que a senha será guardada como texto simples, isto é, não criptografado."
-
-msgid "plugins.importexport.common.action.register"
-msgstr "Registrar"
-
-msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr "O arquivo de saída {$param} não é gravável."
-
-msgid "plugins.importexport.common.register.error.mdsError"
-msgstr "O registo não foi bem sucedido! O servidor de registro DOI retornou um erro: '{$param}'"
-
-msgid "plugins.importexport.common.register.success"
-msgstr "Registrado com sucesso!"
-
-msgid "manager.website.archiving"
-msgstr "Arquivamento"
-
-msgid "manager.section.noSectionEditors"
-msgstr "Ainda não existem editores de sessão. Designe este papel a ao menos um usuário por meio de Gerente > Cnfigurações > Usuários e Papéis."
-
-msgid "manager.setup.masthead"
-msgstr "Equipe Editorial"
-
-msgid "manager.setup.editorialTeam"
-msgstr "Equipe Editorial"
-
-msgid "manager.setup.homepageContent"
-msgstr "Página Inicial da Revista"
-
-msgid "manager.setup.homepageContentDescription"
-msgstr "A página inicial da revista consiste em links de navegação por padrão. Conteúdo adicional pode ser anexado usando uma ou todas as seguintes opções, que aparecerão na ordem mostrada."
-
-msgid "manager.setup.useStyleSheet"
-msgstr "Folha de estilos da revista"
-
-msgid "manager.setup.contextName"
-msgstr "Título da Revista"
-
-msgid "manager.setup.pageHeader"
-msgstr "Cabeçalho"
-
-msgid "manager.setup.focusAndScope.description"
-msgstr "Descreva aos autores, leitores e bibliotecários a gama de artigos e outros itens a revista vai publicar."
-
-msgid "manager.setup.form.issnInvalid"
-msgstr "O ISSN especificado não é válido."
-
-msgid "manager.setup.includeCreativeCommons"
-msgstr "Para periódicos que oferecem acesso livre imediato ou adiado, inclua uma licença Creative Commons com todo o material na data de publicação."
-
-msgid "manager.setup.contextSummary"
-msgstr "Resumo da Revista"
-
-msgid "manager.setup.contextAbout"
-msgstr "Sobre a Revista"
-
-msgid "manager.setup.contextAbout.description"
-msgstr "Inclui qualquer informação sobre a revista que pode ser de interesse para os leitores, autores ou colaboradores. Isso poderia incluir a sua política de acesso aberto, o foco e o escopo da revista, aviso de direitos autorais, a divulgação de patrocínio, a história da revista, uma declaração de privacidade, e inclusão em qualquer sistema de arquivo LOCKSS ou CLOCKSS."
-
-msgid "manager.setup.journalThumbnail.description"
-msgstr "Um pequeno logotipo ou representação da revista que pode ser usado em listas de revistas."
-
-msgid "manager.setup.lockssLicenseDescription"
-msgstr "Uma licença LOCKSS aparecerá na seção Sobre a Revista sob Arquivamento: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\"> Licença  LOCKSS </a>"
-
-msgid "manager.distribution.access"
-msgstr "Acesso"
-
-msgid "manager.setup.lockssTitle"
-msgstr "LOCKSS"
-
-msgid "manager.setup.clockssEnable"
-msgstr "Ativar CLOCKSS para armazenar e distribuir conteúdo da revista em bibliotecas participantes através de um <a href=\"{$clockssUrl}\" target=\"_blank\">Manifesto do Editor</a> page."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr "Uma licença CLOCKSS aparecerá na seção Sobre a Revista sob Arquivamento: <a href=\"http://clockss.org/\" target=\"_blank\">Licença CLOCKSS </a>"
-
-msgid "manager.setup.clockssLicenseLabel"
-msgstr "Descrição da Licença CLOCKSS"
-
-msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr "Visualizações do sumário da edição"
-
-msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
-msgstr "Habilite a caixa de opção disponível."
 
 msgid "grid.category.path"
 msgstr "Caminho"
@@ -1458,14 +1571,26 @@ msgstr "Os papéis são grupos de usuários na revista que têm acesso a diferen
 msgid "manager.publication.library"
 msgstr "Biblioteca da Revista"
 
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Basear direitos autorais de novos artigos no ano"
+
 msgid "manager.setup.copyrightYearBasis.article"
 msgstr "Artigo: o ano padrão será definido a partir da data da publicação do artigo, como numa publicação continuada (publish-as-you-go)."
 
 msgid "manager.setup.copyrightYearBasis.issue"
 msgstr "Edição: o ano padrão será definido a partir da data de publicação da edição."
 
+msgid "manager.setup.resetPermissions"
+msgstr "Redefinir Permissões do Artigo"
+
 msgid "manager.setup.resetPermissions.confirm"
 msgstr "Tem certeza de que deseja redefinir os dados de permissões já atribuídos aos artigos?"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "Remova a declaração de direitos autorais e as informações de licença de cada artigo publicado, revertendo-as para as configurações padrão atuais da revista. Isso removerá permanentemente todas as informações anteriores sobre direitos autorais e licenciamento anexadas aos artigos. Em alguns casos, você pode não ter a permissão legal de licenciar novamente o trabalho que foi publicado sob uma licença diferente. Tenha cuidado ao usar esta ferramenta e consulte especialistas jurídicos se não tiver certeza de quais direitos possui sobre os artigos publicados em sua revista."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "As permissões do artigo foram redefinidas com sucesso."
 
 msgid "grid.genres.title.short"
 msgstr "Componentes"
@@ -1475,6 +1600,9 @@ msgstr "Componentes do Artigo"
 
 msgid "grid.genres.description"
 msgstr "Estes componentes são utilizados para fins de atribuição de nomes de arquivo e são apresentados em um menu suspenso no upload dos arquivos. Os gêneros designados ## permitem que o usuário para associar o arquivo com qualquer toda a apresentação 99Z ou um componente específico em número (por exemplo, 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Configurações"
 
 msgid "plugins.importexport.common.settings.DOIPluginSettings"
 msgstr "Configurações do Plugin DOI"
@@ -1489,10 +1617,22 @@ msgid "plugins.importexport.common.export.representations"
 msgstr "Composições Finais"
 
 msgid "plugins.importexport.common.missingRequirements"
-msgstr "Requisitos do plugin não fora atendidos"
+msgstr "Requisitos do plugin não foram atendidos"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Para utilizar este plugin, por favor vá para a categoria de plugins de \"Identificação Pública\", habilite e configure o plug-in DOI e especifique um prefixo DOI válido."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "O plugin não foi completamente configurado."
 
 msgid "plugins.importexport.common.error.noDOIContentObjects"
 msgstr "Nenhum objeto publicável foi selecionado para receber DOI no plugin corrrespondente, então não há possibilidade de depósito ou exportação neste plugin."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Senha"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Por favor, note que a senha será guardada como texto simples, isto é, não criptografado."
 
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Qualquer Edição"
@@ -1518,6 +1658,12 @@ msgstr "Exportar"
 msgid "plugins.importexport.common.action.markRegistered"
 msgstr "Marcar como registrado"
 
+msgid "plugins.importexport.common.action.register"
+msgstr "Registrar"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Sem objetos selecionados"
+
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Sem objetos selecionados"
 
@@ -1526,6 +1672,18 @@ msgstr "Não foi possível converter os objetos selecionados."
 
 msgid "plugins.importexport.common.invalidXML"
 msgstr "XML inválido:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "O arquivo de saída {$param} não é gravável."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "O arquivo de entrada {$param} não é legível."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "O registo não foi bem sucedido! O servidor de registro DOI retornou um erro: '{$param}'"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registrado com sucesso!"
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "O prefixo DOI está faltando para a revista com o caminho {$path}."
@@ -1542,74 +1700,50 @@ msgstr "Os objetos especificados não puderam ser encontrados."
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Enviar uma cópia para o contato principal, identificado nas Configurações da Revista."
 
-msgid "manager.setup.lockssLicenseLabel"
-msgstr "Descrição da Licença LOCKSS"
+msgid "stats.publicationStats"
+msgstr "Estatísticas do Artigo"
 
-msgid "manager.setup.clockssRegister"
-msgstr "Assine o serviço CLOCKSS visitando <a href=\"http://clockss.org/\" target=\"_blank\"> o site CLOCKSS </a>."
+msgid "stats.publications.details"
+msgstr "Detalhes do Artigo"
 
-msgid "manager.setup.clockssTitle"
-msgstr "CLOCKSS"
+msgid "stats.publications.none"
+msgstr "Não foram encontrados artigos com estatísticas de uso correspondentes a esses parâmetros."
 
-msgid "manager.paymentTypes"
-msgstr "Formas de Pagamento"
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Total de visualizações de abstracts por data"
 
-msgid "manager.setup.plnPluginEnable"
-msgstr "Plugin PKP PN ativo"
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Total de visualizações de arquivo por data"
 
-msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "Deseja realmente apagar esta subscrição?"
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} de {$total} artigos"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Sem objetos selecionados"
+msgid "stats.publications.abstracts"
+msgstr "Abstracts"
 
-msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "O arquivo de entrada {$param} não é legível."
+msgid "stats.publications.galleys"
+msgstr "Arquivos"
 
-msgid "manager.navigationMenus.subscriptions.description"
-msgstr "Ligação para uma página a descrever as subscrições disponíveis."
+msgid "manager.setup.metadata.coverage"
+msgstr "Cobertura"
 
-msgid "manager.navigationMenus.mySubscriptions.description"
-msgstr "Ligação para uma página a descrever as subscrições atuais e anteriores do visitante."
+msgid "manager.setup.metadata.coverage.description"
+msgstr "Referente à cobertura geoespacial, cronológica ou histórica, e/ou características da pesquisa."
 
-msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "Esta ligação só será apresentada quando um visitante estiver autenticado."
+msgid "manager.setup.customTags"
+msgstr "Tags META personalizadas"
 
-msgid "manager.subscriptionPolicies.xMonths"
-msgstr "{$x} Meses"
+msgid "manager.setup.customTagsDescription"
+msgstr "Tags META, inseridas no cabeçalho HTML das páginas do sistema."
 
-msgid "manager.subscriptionPolicies.xWeeks"
-msgstr "{$x} Semanas"
+msgid "manager.setup.publishingMode"
+msgstr "Acesso ao conteúdo"
 
-msgid "manager.subscriptions.confirmRenew"
-msgstr "Confirma a renovação desta subscrição?"
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Usuários cadastrados"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Notificar os subscritores por email após expiração da subscrição"
-
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr "Notificar os subscritores por email após expiração da subscrição"
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
-msgstr "Notificar os subscritores por email antes da expiração da subscrição."
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
-msgstr "Notificar os subscritores por email antes da expiração da subscrição."
-
-msgid "manager.setup.plnDescription"
-msgstr "A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios."
-
-msgid "manager.setup.plnSettingsDescription"
-msgstr "Clique na ligação Configurações para aceitar os termos de uso para o PKP PN."
-
-msgid "manager.setup.otherLockss"
-msgstr "Opções Alternativas de Arquivo"
-
-msgid "manager.setup.plnPluginArchiving"
-msgstr "Rede de Preservação PKP (PKP PN)"
-
-msgid "manager.setup.plnPluginNotInstalled"
-msgstr "A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios O plugin PKP PN para OJS 3 está em desenvolvimento e ficará disponível na galeria de plugins em breve."
+msgid "manager.distribution.access"
+msgstr "Acesso"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks1"
 msgstr "Notificar assinantes via e-mail"
@@ -1649,3 +1783,4 @@ msgstr "Todas as configurações específicas para o processo de distribuição 
 
 msgid "plugins.importexport.common.action.checkStatus"
 msgstr "Verificar Status"
+
