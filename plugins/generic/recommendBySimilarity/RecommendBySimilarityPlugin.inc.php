@@ -81,11 +81,18 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		// ... and pagination.
 		$rangeInfo = Handler::getRangeInfo($request, 'articlesBySimilarity');
 		$rangeInfo->setCount(RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT);
-
-		$results = $articleSearch->retrieveResults($request, $journal, $keywords, $error, null, null, $rangeInfo, array($articleId));
-		$smarty->assign('articlesBySimilarity', $results);
-		$smarty->assign('articlesBySimilarityQuery', $query);
-
+		$smarty->assign(array(
+			'articlesBySimilarity' => $articleSearch->retrieveResults(
+					$request,
+					$journal,
+					$keywords,
+					$error,
+					null, null,
+					$rangeInfo,
+					array($articleId)
+			),
+			'articlesBySimilarityQuery' => $query,
+		));
 		$output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
 		return false;
 	}
