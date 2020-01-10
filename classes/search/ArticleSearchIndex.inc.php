@@ -53,8 +53,11 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TITLE, $submission->getFullTitle(null));
 			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_ABSTRACT, $submission->getAbstract(null));
 
-			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_DISCIPLINE, (array) $submission->getDiscipline(null));
-			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_SUBJECT, (array) $submission->getSubject(null));
+			$submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO');
+			self::_updateTextIndex($submissionId, SUBMISSION_SEARCH_DISCIPLINE, array_filter($submissionDisciplineDao->getDisciplines($submissionId, array_keys(\PKPLocale::getAllLocales()))));
+
+			$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+			self::_updateTextIndex($submissionId, SUBMISSION_SEARCH_SUBJECT, array_filter($submissionSubjectDao->getSubjects($submissionId, array_keys(\PKPLocale::getAllLocales()))));
 			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TYPE, $submission->getType(null));
 			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_COVERAGE, (array) $submission->getCoverage(null));
 			// FIXME Index sponsors too?

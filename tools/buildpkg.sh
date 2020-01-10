@@ -38,17 +38,8 @@ lib/pkp/tools/travis									\
 lib/pkp/plugins/*/*/tests								\
 plugins/*/*/tests									\
 plugins/auth/ldap									\
-plugins/generic/announcementFeed							\
-plugins/generic/cookiesAlert								\
-plugins/generic/counter									\
-plugins/generic/customLocale								\
-plugins/generic/externalFeed								\
-plugins/generic/recommendBySimilarity							\
-plugins/generic/translator								\
 plugins/importexport/sample								\
 plugins/importexport/duracloud								\
-plugins/reports/subscriptions								\
-plugins/blocks/relatedItems								\
 tests											\
 lib/pkp/tests										\
 .git											\
