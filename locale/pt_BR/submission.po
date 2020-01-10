@@ -15,13 +15,13 @@ msgid "submission.submit.title"
 msgstr "Submeter um artigo"
 
 msgid "submission.submit.userGroup"
-msgstr "Realizar a submissão como..."
+msgstr "Submeter em meu papel como..."
 
 msgid "submission.submit.userGroupDescription"
-msgstr "Escolha o papel com o qual deseja submeter este manuscrito."
+msgstr "Escolha o papel sob o qual está a submeter este artigo."
 
 msgid "submission.upload.selectComponent"
-msgstr "Selecione o componente do artigo"
+msgstr "Selecionar componente do artigo"
 
 msgid "submission.title"
 msgstr "Título do artigo"
@@ -38,11 +38,17 @@ msgstr "Nova Submissão"
 msgid "grid.action.workflow"
 msgstr "Fluxo de trabalho para a submissão"
 
+msgid "submission.abstract.wordCount.description"
+msgstr "O abstract deve ter {$wordCount} palavras ou menos."
+
+msgid "submission.submit.noContext"
+msgstr "Não foi possível encontrar esse envio."
+
 msgid "submission.issueEntry"
 msgstr "Metadados"
 
 msgid "submission.submit.whatNext.description"
-msgstr "O periódico foi notificado de sua submissão e  um e-mail de confirmação foi enviado para seu registro. Assim que um dos editores revisar sua submissão entrará em contato."
+msgstr "O periódico foi notificado de sua submissão e um e-mail de confirmação foi enviado para seu registro. Assim que um dos editores revisar sua submissão entrará em contato."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Composição aparece na entrada dos fascículos"
@@ -50,14 +56,14 @@ msgstr "Composição aparece na entrada dos fascículos"
 msgid "grid.action.issueEntry"
 msgstr "Visualizar os metadados desta submissão"
 
-msgid "submission.publication"
-msgstr "Publicação"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "A composição do artigo \"{$galleyFormatName}\" está disponível."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
 msgstr "A composição do artigo  \"{$galleyFormatName}\" não está disponível.."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Os identificadores públicos da submissão foram atualizados."
 
 msgid "grid.issueEntry.availableGalley.title"
 msgstr "Formato para aprovação"
@@ -107,9 +113,6 @@ msgstr "A submissão dos metadados foi realizada."
 msgid "submission.upload.fileContents"
 msgstr "Componentes do artigo"
 
-msgid "submission.event.publicIdentifiers"
-msgstr "Os identificadores públicos da submissão foram atualizados."
-
 msgid "submission.complete"
 msgstr "Aprovado"
 
@@ -143,5 +146,81 @@ msgstr "Por favor, indique o título do seu artigo."
 msgid "submission.submit.form.abstractRequired"
 msgstr "Por favor, informe o resumo do seu artigo."
 
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Seu abstract é muito longo. Reduza-o para abaixo do limite de palavras indicado para esta seção."
+
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Por favor, selecione o papel do colaborador."
+
+msgid "submission.citationFormat.notFound"
+msgstr "O formato de citação solicitado não pôde ser recuperado."
+
+msgid "submission.metadataDescription"
+msgstr "Essas especificações são baseadas no conjunto de metadados Dublin Core, um padrão internacional usado para descrever o conteúdo da revista."
+
+msgid "section.any"
+msgstr "Qualquer seção"
+
+msgid "submission.sectionOptions"
+msgstr "Opções da seção"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Itens"
+
+msgid "catalog.category.heading"
+msgstr "Todos os itens"
+
+msgid "galley.editPublishedDisabled"
+msgstr "A versão final desta publicação não pode ser editada porque ela já foi publicada."
+
+msgid "galley.publicationNotFound"
+msgstr "Não foi possível encontrar a publicação desta versão."
+
+msgid "publication.datePublished.description"
+msgstr "A data de publicação será definida automaticamente quando o problema for publicado. Não insira uma data de publicação, a menos que o artigo tenha sido publicado anteriormente em outro local e você precise atualizá-la."
+
+msgid "publication.invalidSection"
+msgstr "Não foi possível encontrar a seção desta publicação."
+
+msgid "publication.invalidIssue"
+msgstr "Não foi possível encontrar o problema desta publicação."
+
+msgid "publication.journalEntry"
+msgstr "Registros da Revista"
+
+msgid "publication.journalEntry.success"
+msgstr "Os detalhes de registro da revista foram atualizados."
+
+msgid "publication.publish.confirmation"
+msgstr "Todos os requisitos de publicação foram atendidos. Tem certeza de que deseja realizar a publicação?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr "Todos os requisitos de publicação foram atendidos. Isto será publicado quando {$issue} for publicado. Tem certeza de que deseja agendar esta publicação?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr "Todos os requisitos de publicação foram atendidos. Isto será publicado imediatamente em {$issue}. Tem certeza de que deseja realizar a publicação?"
+
+msgid "publication.required.issue"
+msgstr "A publicação deve ser atribuída a uma tarefa antes de poder ser publicada." 
+
+msgid "publication.publishedIn"
+msgstr "Publicado em <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Agendado para publicação em <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "submission.submit.title"
+msgstr "Submeter um artigo"
+
+msgid "submission.submit.userGroup"
+msgstr "Realizar a submissão como..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Escolha o papel com o qual deseja submeter este manuscrito."
+
+msgid "submission.upload.selectComponent"
+msgstr "Selecione o componente do artigo"
+
+msgid "submission.publication"
+msgstr "Publicação"
+
