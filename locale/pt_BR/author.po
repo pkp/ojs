@@ -12,16 +12,16 @@ msgstr ""
 "Language: \n"
 
 msgid "author.submit"
-msgstr "Nova submissão"
+msgstr "Nova Submissão"
 
 msgid "author.track"
-msgstr "Submissões ativas"
+msgstr "Submissões Ativas"
 
 msgid "author.competingInterests"
-msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Política de Conflito de Interesses</a>"
+msgstr "Competing interests <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
 
 msgid "author.submit.submitArticle"
-msgstr "Submeter artigo"
+msgstr "Submeter um Artigo"
 
 msgid "author.submit.stepsToSubmit"
 msgstr "5 Passos para a submissão"
@@ -65,6 +65,9 @@ msgstr "Transferência de documentos suplementares"
 msgid "author.submit.confirmation"
 msgstr "Confirmação"
 
+msgid "author.submit.nextSteps"
+msgstr "Próximos Passos"
+
 msgid "submission.submit.cancelSubmission"
 msgstr "A submissão pode ser concluída em uma data posterior, clicando em Submissões Ativas nas opções da sua página de autor."
 
@@ -79,6 +82,21 @@ msgstr "Solicito considerar isenção de Taxa de Submissão para este artigo"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr "Informe no campo de comentários motivos para a isenção de taxa."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Informe a motivação no espaço disponível, caso esteja solicitando isenção de taxa."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Em avaliação: rodada {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Em avaliação: Revisões Requeridas"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Em edição: Edição de Texto solicitada"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Em edição: Leitura de provas solicitada"
 
 msgid "author.submissions.uploadCopyeditedVersion"
 msgstr "Transferir cópia editada"
@@ -95,20 +113,11 @@ msgstr "Verificar situação"
 msgid "author.submissions.noSubmissions"
 msgstr "Nenhuma submissão."
 
-msgid "author.submit.howToSubmit"
-msgstr "Em caso de dificuldades com o processo, entre em contato com <a href=\"mailto:{$supportEmail}\">{$supportName}</a> via e-mail ou pelo telefone {$supportPhone} para suporte."
-
-msgid "author.submit.howToSubmitNoPhone"
-msgstr "Em caso de dificuldades com o processo, entre em contato com <a href=\"mailto:{$supportEmail}\">{$supportName}</a> via e-mail para suporte."
-
 msgid "author.submit.journalSection"
 msgstr "Seção"
 
 msgid "author.submit.journalSectionDescription"
 msgstr "Escolha a seção apropriada para a submissão (leia Seções e Políticas na página <a href=\"{$aboutUrl}\">Sobre</a> a revista)."
-
-msgid "submission.submit.selectSection"
-msgstr "Escolha uma seção..."
 
 msgid "author.submit.verifyChecklist"
 msgstr "Todas as condições devem ser satisfeitas antes de continuar."
@@ -128,11 +137,17 @@ msgstr "Digite o texto (opcional)"
 msgid "author.submit.form.sectionRequired"
 msgstr "Escolha a seção apropriada para a submissão."
 
+msgid "author.submit.form.localeRequired"
+msgstr "Escolha um idioma para a submissão."
+
 msgid "submission.submit.privacyStatement"
 msgstr "Política de Privacidade"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Utilize as setas para alterar a ordem em que os nomes dos autores aparecerão na publicação."
+
+msgid "author.submit.reorder"
+msgstr "Reordenar nome do autor"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Contato principal para correspondência."
@@ -163,6 +178,9 @@ msgstr "Digite o título do documento."
 
 msgid "author.submit.form.abstractRequired"
 msgstr "Informe o resumo do documento"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "O limite de palavras para resumos desta seção foi excedido."
 
 msgid "author.submit.submissionFile"
 msgstr "Arquivo submetido"
@@ -302,29 +320,24 @@ msgstr "Versão do Autor"
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr "É necessário criar um cadastro para submeter documentos à revista. Isto permite aos editores acompanhar a submissão e notificá-lo das mudanças na situação da submissão, ou caso informações adicionais sejam necessárias para dar continuidade ao processo editorial."
 
-msgid "author.submit.mustEnterWaiverReason"
-msgstr "Informe a motivação no espaço disponível, caso esteja solicitando isenção de taxa."
+msgid "author.submit"
+msgstr "Nova submissão"
 
-msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Em avaliação: rodada {$round}"
+msgid "author.track"
+msgstr "Submissões ativas"
 
-msgid "author.submissions.queuedReviewRevisions"
-msgstr "Em avaliação: Revisões Requeridas"
+msgid "author.competingInterests"
+msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Política de Conflito de Interesses</a>"
 
-msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Em edição: Edição de Texto solicitada"
+msgid "author.submit.submitArticle"
+msgstr "Submeter artigo"
 
-msgid "author.submissions.queuedEditingProofread"
-msgstr "Em edição: Leitura de provas solicitada"
+msgid "author.submit.howToSubmit"
+msgstr "Em caso de dificuldades com o processo, entre em contato com <a href=\"mailto:{$supportEmail}\">{$supportName}</a> via e-mail ou pelo telefone {$supportPhone} para suporte."
 
-msgid "author.submit.reorder"
-msgstr "Reordenar nome do autor"
+msgid "author.submit.howToSubmitNoPhone"
+msgstr "Em caso de dificuldades com o processo, entre em contato com <a href=\"mailto:{$supportEmail}\">{$supportName}</a> via e-mail para suporte."
 
-msgid "author.submit.form.wordCountAlert"
-msgstr "O limite de palavras para resumos desta seção foi excedido."
+msgid "submission.submit.selectSection"
+msgstr "Escolha uma seção..."
 
-msgid "author.submit.form.localeRequired"
-msgstr "Escolha um idioma para a submissão."
-
-msgid "author.submit.nextSteps"
-msgstr "Próximos Passos"
