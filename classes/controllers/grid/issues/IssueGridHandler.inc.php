@@ -507,6 +507,7 @@ class IssueGridHandler extends GridHandler {
 			$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
 			$allUsers = $userGroupDao->getUsersByContextId($journalId);
 			while ($user = $allUsers->next()) {
+				if ($user->getDisabled()) continue;
 				$notificationUsers[] = array('id' => $user->getId());
 			}
 			foreach ($notificationUsers as $userRole) {
