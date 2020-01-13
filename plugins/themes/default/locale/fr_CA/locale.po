@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:50-07:00\n"
-"PO-Revision-Date: 2020-01-07 10:19+0000\n"
+"PO-Revision-Date: 2020-01-13 22:20+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -62,7 +62,7 @@ msgid "plugins.themes.default.option.colour.description"
 msgstr "Choisir la couleur de l'en-tête."
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
-msgstr "Afficher la description de la revue sur la page d'accueil."
+msgstr "Afficher le sommaire de la revue sur la page d'accueil."
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.label"
 msgstr "Description de la revue"
@@ -77,4 +77,3 @@ msgstr ""
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
 msgstr "Image d'arrière-plan de l'en-tête"
-
