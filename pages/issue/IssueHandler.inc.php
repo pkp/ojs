@@ -125,8 +125,6 @@ class IssueHandler extends Handler {
 		$count = $context->getData('itemsPerPage') ? $context->getData('itemsPerPage') : Config::getVar('interface', 'items_per_page');
 		$offset = $page > 1 ? ($page - 1) * $count : 0;
 
-		import('classes.core.Services');
-		$issueService = Services::get('issue');
 		$params = array(
 			'contextId' => $context->getId(),
 			'orderBy' => 'seq',
@@ -135,8 +133,8 @@ class IssueHandler extends Handler {
 			'offset' => $offset,
 			'isPublished' => true,
 		);
-		$issues = iterator_to_array($issueService->getMany($params));
-		$total = $issueService->getMax($params);
+		$issues = iterator_to_array(Services::get('issue')->getMany($params));
+		$total = Services::get('issue')->getMax($params);
 
 		$showingStart = $offset + 1;
 		$showingEnd = min($offset + $count, $offset + count($issues));

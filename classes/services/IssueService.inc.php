@@ -36,7 +36,22 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	}
 
 	/**
-	 * Get a collection of issues limited, filtered and sorted by $args
+	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getCount()
+	 */
+	public function getCount($args = []) {
+		return $this->getQueryBuilder($args)->getCount();
+	}
+
+	/**
+	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getIds()
+	 */
+	public function getIds($args = []) {
+		return $this->getQueryBuilder($args)->getIds();
+	}
+
+	/**
+	 * Get a collection of Issue objects limited, filtered
+	 * and sorted by $args
 	 *
 	 * @param array $args {
 	 *		@option int contextId If not supplied, CONTEXT_ID_NONE will be used and
@@ -55,9 +70,12 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	 * @return \Iterator
 	 */
 	public function getMany($args = array()) {
-		$issueListQB = $this->_getQueryBuilder($args);
-		$issueListQO = $issueListQB->get();
+		// Pagination is handled by the DAO, so don't pass count and offset
+		// arguments to the QueryBuilder.
 		$range = $this->getRangeByArgs($args);
+		if (isset($args['count'])) unset($args['count']);
+		if (isset($args['offset'])) unset($args['offset']);
+		$issueListQO = $this->getQueryBuilder($args)->getQuery();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$result = $issueDao->retrieveRange($issueListQO->toSql(), $issueListQO->getBindings(), $range);
 		$queryResults = new DAOResultFactory($result, $issueDao, '_fromRow');
@@ -68,31 +86,23 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	/**
 	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getMax()
 	 */
-	public function getMax($args = array()) {
-		$issueListQB = $this->_getQueryBuilder($args);
-		$countQO = $issueListQB->countOnly()->get();
-		$countRange = new DBResultRange($args['count'], 1);
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$countResult = $issueDao->retrieveRange($countQO->toSql(), $countQO->getBindings(), $countRange);
-		$countQueryResults = new DAOResultFactory($countResult, $issueDao, '_fromRow');
-
-		return (int) $countQueryResults->getCount();
+	public function getMax($args = []) {
+		// Don't accept args to limit the results
+		if (isset($args['count'])) unset($args['count']);
+		if (isset($args['offset'])) unset($args['offset']);
+		return $this->getQueryBuilder($args)->getCount();
 	}
 
 	/**
-	 * Build the issue query object for getMany requests
-	 *
-	 * @see self::getMany()
-	 * @return object Query object
+	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getQueryBuilder()
+	 * @return IssueQueryBuilder
 	 */
-	private function _getQueryBuilder($args = array()) {
+	public function getQueryBuilder($args = []) {
 
 		$defaultArgs = array(
 			'contextId' => CONTEXT_ID_NONE,
 			'orderBy' => 'datePublished',
 			'orderDirection' => 'DESC',
-			'count' => 20,
-			'offset' => 0,
 			'isPublished' => null,
 			'volumes' => null,
 			'numbers' => null,
@@ -109,6 +119,14 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 			->filterByVolumes($args['volumes'])
 			->filterByNumbers($args['numbers'])
 			->filterByYears($args['years']);
+
+			if (isset($args['count'])) {
+				$issueListQB->limitTo($args['count']);
+			}
+
+			if (isset($args['offset'])) {
+				$issueListQB->offsetBy($args['count']);
+			}
 
 		\HookRegistry::call('Issue::getMany::queryBuilder', array($issueListQB, $args));
 
@@ -268,12 +286,11 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 					$issueGalleyDao = \DAORegistry::getDAO('IssueGalleyDAO');
 					$galleys = $issueGalleyDao->getByIssueId($issue->getId());
 					if ($galleys) {
-						$galleyService = \Services::get('galley');
 						$galleyArgs = array_merge($args, array('parent' => $issue));
 						foreach ($galleys as $galley) {
 							$data[] = ($prop === 'galleys')
-								? $galleyService->getFullProperties($galley, $galleyArgs)
-								: $galleyService->getSummaryProperties($galley, $galleyArgs);
+								? \Services::get('galley')->getFullProperties($galley, $galleyArgs)
+								: \Services::get('galley')->getSummaryProperties($galley, $galleyArgs);
 						}
 					}
 					$values['galleys'] = $data;

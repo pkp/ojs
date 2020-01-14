@@ -31,10 +31,10 @@ class SubmissionDAO extends PKPSubmissionDAO {
 	 * @copydoc SchemaDAO::deleteById
 	 */
 	function deleteById($submissionId) {
-		$publicationsIterator = Services::get('publication')->getMany(['submissionIds' => $submissionId]);
+		$publicationIds = Services::get('publication')->getIds(['submissionIds' => $submissionId]);
 
-		foreach ($publicationsIterator as $publication) {
-			$galleys = DAORegistry::getDAO('ArticleGalleyDAO')->getByPublicationId($publication->getId())->toArray();
+		foreach ($publicationIds as $publicationId) {
+			$galleys = DAORegistry::getDAO('ArticleGalleyDAO')->getByPublicationId($publicationId)->toArray();
 			foreach ($galleys as $galley) {
 				DAORegistry::getDAO('ArticleGalleyDAO')->deleteById($galley->getId());
 			}

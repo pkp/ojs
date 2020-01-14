@@ -89,7 +89,6 @@ class IssueHandler extends APIHandler {
 		$request = $this->getRequest();
 		$currentUser = $request->getUser();
 		$context = $request->getContext();
-		$issueService = Services::get('issue');
 
 		if (!$context) {
 			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
@@ -168,19 +167,19 @@ class IssueHandler extends APIHandler {
 		}
 
 		$items = array();
-		$issuesIterator = $issueService->getMany($params);
+		$issuesIterator = Services::get('issue')->getMany($params);
 		if (count($issuesIterator)) {
 			$propertyArgs = array(
 				'request' => $request,
 				'slimRequest' => $slimRequest,
 			);
 			foreach ($issuesIterator as $issue) {
-				$items[] = $issueService->getSummaryProperties($issue, $propertyArgs);
+				$items[] = Services::get('issue')->getSummaryProperties($issue, $propertyArgs);
 			}
 		}
 
 		$data = array(
-			'itemsMax' => $issueService->getMax($params),
+			'itemsMax' => Services::get('issue')->getMax($params),
 			'items' => $items,
 		);
 

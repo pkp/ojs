@@ -17,8 +17,9 @@ namespace APP\Services\QueryBuilders;
 
 use PKP\Services\QueryBuilders\BaseQueryBuilder;
 use Illuminate\Database\Capsule\Manager as Capsule;
+use PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface;
 
-class IssueQueryBuilder extends BaseQueryBuilder {
+class IssueQueryBuilder extends BaseQueryBuilder implements EntityQueryBuilderInterface {
 
 	/** @var int|string|null Context ID or '*' to get from all contexts */
 	protected $contextId = null;
@@ -49,6 +50,12 @@ class IssueQueryBuilder extends BaseQueryBuilder {
 
 	/** @var bool whether to return only a count of results */
 	protected $countOnly = null;
+
+	/** @var int|null whether to limit the number of results returned */
+	protected $limit = null;
+
+	/** @var int whether to offset the number of results returned. Use to return a second page of results. */
+	protected $offset = 0;
 
 	/**
 	 * Set context issues filter
@@ -152,23 +159,55 @@ class IssueQueryBuilder extends BaseQueryBuilder {
 	}
 
 	/**
-	 * Whether to return only a count of results
+	 * Set query limit
 	 *
-	 * @param bool $enable
+	 * @param int $count
 	 *
 	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
-	public function countOnly($enable = true) {
-		$this->countOnly = $enable;
+	public function limitTo($count) {
+		$this->limit = $count;
 		return $this;
 	}
 
 	/**
-	 * Execute query builder
+	 * Set how many results to skip
 	 *
-	 * @return object Query object
+	 * @param int $offset
+	 *
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
-	public function get() {
+	public function offsetBy($offset) {
+		$this->offset = $offset;
+		return $this;
+	}
+
+	/**
+	 * @copydoc PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getCount()
+	 */
+	public function getCount() {
+		return $this
+			->getQuery()
+			->select('i.issue_id')
+			->get()
+			->count();
+	}
+
+	/**
+	 * @copydoc PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getIds()
+	 */
+	public function getIds() {
+		return $this
+			->getQuery()
+			->select('i.issue_id')
+			->pluck('i.issue_id')
+			->toArray();
+	}
+
+	/**
+	 * @copydoc PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getQuery()
+	 */
+	public function getQuery() {
 		$this->columns[] = 'i.*';
 		$q = Capsule::table('issues as i')
 					->leftJoin('issue_settings as is', 'i.issue_id', '=', 'is.issue_id')
@@ -213,11 +252,7 @@ class IssueQueryBuilder extends BaseQueryBuilder {
 		// Allow third-party query statements
 		\HookRegistry::call('Issue::getMany::queryObject', array(&$q, $this));
 
-		if (!empty($this->countOnly)) {
-			$q->select(Capsule::raw('count(*) as issue_count'));
-		} else {
-			$q->select($this->columns);
-		}
+		$q->select($this->columns);
 
 		return $q;
 	}

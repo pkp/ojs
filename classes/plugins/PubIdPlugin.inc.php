@@ -249,7 +249,6 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 * @param $issue Issue
 	 */
 	function clearIssueObjectsPubIds($issue) {
-		$issueId = $issue->getId();
 		$submissionPubIdEnabled = $this->isObjectTypeEnabled('Submission', $issue->getJournalId());
 		$representationPubIdEnabled = $this->isObjectTypeEnabled('Representation', $issue->getJournalId());
 		$filePubIdEnabled = $this->isObjectTypeEnabled('SubmissionFile', $issue->getJournalId());
@@ -261,17 +260,16 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 
-		$submissionsIterator = Services::get('submission')->getMany([
+		$submissionIds = Services::get('submission')->getIds([
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
-			'count' => 5000, // large upper limit
 		]);
-		foreach ($submissionsIterator as $submission) {
+		foreach ($submissionIds as $submissionId) {
 			if ($submissionPubIdEnabled) { // Does this option have to be enabled here for?
-				$submissionDao->deletePubId($submission->getId(), $pubIdType);
+				$submissionDao->deletePubId($submissionId, $pubIdType);
 			}
 			if ($representationPubIdEnabled || $filePubIdEnabled) { // Does this option have to be enabled here for?
-				$representations = $representationDao->getBySubmissionId($submission->getId());
+				$representations = $representationDao->getBySubmissionId($submissionId);
 				while ($representation = $representations->next()) {
 					if ($representationPubIdEnabled) { // Does this option have to be enabled here for?
 						$representationDao->deletePubId($representation->getId(), $pubIdType);
