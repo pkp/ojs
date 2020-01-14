@@ -437,7 +437,6 @@ class IssueGridHandler extends GridHandler {
 		$contextId = $context->getId();
 		$wasPublished = $issue->getPublished();
 
-		$articleSearchIndex = null;
 		if (!$wasPublished) {
 			$confirmationText = __('editor.issues.confirmPublish');
 			import('controllers.grid.pubIds.form.AssignPublicIdentifiersForm');
@@ -493,16 +492,10 @@ class IssueGridHandler extends GridHandler {
 				if ($publication->getData('status') === STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
 					$publication = Services::get('publication')->publish($publication);
 				}
-				if (!$articleSearchIndex) {
-					$articleSearchIndex = Application::getSubmissionSearchIndex();
-				}
-				$articleSearchIndex->submissionMetadataChanged($submission);
 				// delete article tombstone
 				DAORegistry::getDAO('DataObjectTombstoneDAO')->deleteByDataObjectId($submission->getId());
 			}
 		}
-
-		if ($articleSearchIndex) $articleSearchIndex->submissionChangesFinished();
 
 		// Send a notification to associated users if selected and context is publishing content online with OJS
 		if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != PUBLISHING_MODE_NONE) {
