@@ -22,11 +22,9 @@ use \DAORegistry;
 use \DAOResultFactory;
 use \PKP\Services\interfaces\EntityPropertyInterface;
 use \PKP\Services\interfaces\EntityReadInterface;
-use \PKP\Services\traits\EntityReadTrait;
 use \APP\Services\QueryBuilders\IssueQueryBuilder;
 
 class IssueService implements EntityPropertyInterface, EntityReadInterface {
-	use EntityReadTrait;
 
 	/**
 	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::get()
@@ -69,10 +67,14 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	 *
 	 * @return \Iterator
 	 */
-	public function getMany($args = array()) {
+	public function getMany($args = []) {
+		$range = null;
+		if (isset($args['count'])) {
+			import('lib.pkp.classes.db.DBResultRange');
+			$range = new \DBResultRange($args['count'], null, isset($args['offset']) ? $args['offset'] : 0);
+		}
 		// Pagination is handled by the DAO, so don't pass count and offset
 		// arguments to the QueryBuilder.
-		$range = $this->getRangeByArgs($args);
 		if (isset($args['count'])) unset($args['count']);
 		if (isset($args['offset'])) unset($args['offset']);
 		$issueListQO = $this->getQueryBuilder($args)->getQuery();
