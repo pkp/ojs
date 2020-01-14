@@ -15,14 +15,12 @@
 namespace APP\Services\QueryBuilders;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
+use PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface;
 
-class GalleyQueryBuilder extends \PKP\Services\QueryBuilders\BaseQueryBuilder {
+class GalleyQueryBuilder extends \PKP\Services\QueryBuilders\BaseQueryBuilder implements EntityQueryBuilderInterface {
 
 	/** @var array get authors for one or more publications */
 	protected $publicationIds = [];
-
-	/** @var bool whether to return only a count of results */
-	protected $countOnly = null;
 
 	/**
 	 * Set publicationIds filter
@@ -36,22 +34,31 @@ class GalleyQueryBuilder extends \PKP\Services\QueryBuilders\BaseQueryBuilder {
 	}
 
 	/**
-	 * Whether to return only a count of results
-	 *
-	 * @param $enable bool
-	 * @return \APP\Services\QueryBuilders\GalleyQueryBuilder
+	 * @copydoc PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getCount()
 	 */
-	public function countOnly($enable = true) {
-		$this->countOnly = $enable;
-		return $this;
+	public function getCount() {
+		return $this
+			->getQuery()
+			->select('g.galley_id')
+			->get()
+			->count();
 	}
 
 	/**
-	 * Execute query builder
-	 *
-	 * @return object Query object
+	 * @copydoc PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getCount()
 	 */
-	public function get() {
+	public function getIds() {
+		return $this
+			->getQuery()
+			->select('g.galley_id')
+			->pluck('g.galley_id')
+			->toArray();
+	}
+
+	/**
+	 * @copydoc PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getCount()
+	 */
+	public function getQuery() {
 		$this->columns = ['*'];
 		$q = Capsule::table('publication_galleys as g');
 
@@ -62,11 +69,7 @@ class GalleyQueryBuilder extends \PKP\Services\QueryBuilders\BaseQueryBuilder {
 		// Add app-specific query statements
 		\HookRegistry::call('Galley::getMany::queryObject', array(&$q, $this));
 
-		if (!empty($this->countOnly)) {
-			$q->select(Capsule::raw('count(*) as galley_count'));
-		} else {
-			$q->select($this->columns);
-		}
+		$q->select($this->columns);
 
 		return $q;
 	}

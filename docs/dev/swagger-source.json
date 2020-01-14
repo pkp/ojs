@@ -1748,20 +1748,6 @@
 						"in": "query",
 						"required": false,
 						"type": "string"
-					},
-					{
-						"name": "count",
-						"description": "How many results to return in a single request. Default is `30`. Max is `100`.",
-						"in": "query",
-						"required": false,
-						"type": "type"
-					},
-					{
-						"name": "offset",
-						"description": "Offset the results returned. Use this to receive subsequent pages of requests.",
-						"in": "query",
-						"required": false,
-						"type": "integer"
 					}
 				],
 				"responses":  {
