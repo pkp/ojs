@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2020-01-13 22:20+0000\n"
+"PO-Revision-Date: 2020-01-15 02:09+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/admin/sl/>"
 "\n"
@@ -218,3 +218,18 @@ msgstr "Obvestilo o prostem dostopu"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Opomnik za recenzijo"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} je bil uspešno spremenjen."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} je bilo uspešno ustvarjeno."
+
+msgid "admin.settings.info.success"
+msgstr "Informacije o spletni strani so bile uspešno posodobljene."
+
+msgid "admin.settings.config.success"
+msgstr "Nastavitve konfiguracije spletne strani so bile uspešno posodobljene."
+
+msgid "admin.settings.appearance.success"
+msgstr "Nastavitve izgleda spletne strani so bile uspešno posodobljene."
