@@ -23,10 +23,8 @@ use \PKP\Services\interfaces\EntityPropertyInterface;
 use \PKP\Services\interfaces\EntityReadInterface;
 use \PKP\Services\interfaces\EntityWriteInterface;
 use \APP\Services\QueryBuilders\GalleyQueryBuilder;
-use \PKP\Services\traits\EntityReadTrait;
 
 class GalleyService implements EntityReadInterface, EntityWriteInterface, EntityPropertyInterface {
-	use EntityReadTrait;
 
 	/**
 	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::get()
