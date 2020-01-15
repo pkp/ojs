@@ -232,7 +232,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		// If it is the first day of a month but previous month had only
 		// 30 days then simulate 31st day for expiry dates that end on
 		// that day.
-		$shortMonths = array(2,4,6,8,10,12);
+		$shortMonths = array(2,4,6,9,11);
 
 		if (($todayDate['day'] == 1) && in_array(($todayDate['month'] - 1), $shortMonths)) {
 
