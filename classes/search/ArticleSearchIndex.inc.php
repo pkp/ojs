@@ -41,7 +41,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 				array_values((array) $author->getData('givenName')),
 				array_values((array) $author->getData('familyName')),
 				array_values(array_map('strip_tags', (array) $author->getData('affiliation'))),
-				array_values(array_map('strip_tags', (array) $author->getData('biography'))),
+				array_values(array_map('strip_tags', (array) $author->getData('biography')))
 			);
 		}
 
