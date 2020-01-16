@@ -127,13 +127,12 @@ describe('Data suite tests', function() {
 			cy.createUser(user);
 		});
 		cy.logout();
-		users.forEach(user => {
-			if (!('email' in user)) user.email = user.username + '@mailinator.com';
-			if (!('password' in user)) user.password = user.username + user.username;
+		user = users[0];
+		if (!('email' in user)) user.email = user.username + '@mailinator.com';
+		if (!('password' in user)) user.password = user.username + user.username;
 
-			cy.login(user.username);
-			cy.resetPassword(user.username, user.password);
-			cy.logout();
-		});
+		cy.login(user.username);
+		cy.resetPassword(user.username, user.password);
+		cy.logout();
 	});
 })
