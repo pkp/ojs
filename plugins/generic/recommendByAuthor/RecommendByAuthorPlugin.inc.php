@@ -88,7 +88,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		$results = $foundArticles;
 
 		// Order results by metric.
-		$application = Application::getApplication();
+		$application = Application::get();
 		$metricType = $application->getDefaultMetricType();
 		if (empty($metricType)) $smarty->assign('noMetricSelected', true);
 		$column = STATISTICS_DIMENSION_SUBMISSION_ID;

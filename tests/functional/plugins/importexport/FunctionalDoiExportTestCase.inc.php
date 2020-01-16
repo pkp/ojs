@@ -806,7 +806,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		if ($host) $_SERVER['HTTP_HOST'] = $host;
 		$_SERVER['SCRIPT_NAME'] = '/index.php';
 		$_SERVER['PATH_INFO'] = '/test';
-		$application = Application::getApplication();
+		$application = Application::get();
 		$request = $application->getRequest();
 		import('classes.core.PageRouter');
 		$router = new PageRouter();

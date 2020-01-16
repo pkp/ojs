@@ -67,7 +67,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issue = $issueDao->getById($issueId, $contextId);
 				// Link to the issue edit modal
-				$application = Application::getApplication();
+				$application = Application::get();
 				$dispatcher = $application->getDispatcher();
 				import('lib.pkp.classes.linkAction.request.AjaxModal');
 				return array(

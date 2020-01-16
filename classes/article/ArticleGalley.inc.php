@@ -29,7 +29,7 @@ class ArticleGalley extends Representation {
 	 * @return int
 	 */
 	function getViews() {
-		$application = Application::getApplication();
+		$application = Application::get();
 		$fileId = $this->getFileId();
 		if ($fileId) {
 			return $application->getPrimaryMetricByAssoc(ASSOC_TYPE_SUBMISSION_FILE, $fileId);
