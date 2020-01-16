@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
+"PO-Revision-Date: 2020-01-16 15:00+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"es/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Enviar un artículo"
@@ -27,7 +30,13 @@ msgid "submission.title"
 msgstr "Título del artículo"
 
 msgid "submission.title.tip"
-msgstr "La tipología de envíos normalmente consiste en una imagen, texto u otros contenidos multimedia, como software o elementos interactivos. Por favor, elija el que sea más representativo para su envío. Puede encontrar ejemplos en <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>."
+msgstr ""
+"La tipología de envíos normalmente consiste en una imagen, texto u otros "
+"contenidos multimedia, como software o elementos interactivos. Por favor, "
+"elija el que sea más representativo para su envío. Puede encontrar ejemplos "
+"en <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Empezar un nuevo envío en"
@@ -66,10 +75,11 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Aceptación de formato"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Esta galerada <em>ya no estará disponible</em> para los lectores."
+msgstr ""
+"<p>Esta galerada <em>ya no estará disponible</em> para los lectores.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Esta galerada <em>estará disponible</em> para los lectores."
+msgstr "<p>Esta galerada <em>estará disponible</em> para los lectores.</p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Hacer disponible esta galerada"
@@ -160,3 +170,66 @@ msgstr "El resumen debe tener {$wordCount} palabras o menos."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr "El resumen es demasiado largo, debería acortarlo para que se ajuste al límite marcado para esta sección."
+
+msgid "publication.scheduledIn"
+msgstr "Programado para publicarse en <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Publicado en <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr "La publicación debe asignarse a un número antes de poder ser publicada."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Todos los requisitos de publicación se cumplen. Este artículo se publicará "
+"inmediatamente en {$issue}. ¿Está seguro de que quiere publicarlo?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Todos los requisitos de publicación se cumplen. Este artículo se publicará "
+"cuando se publique {$issue}. ¿Está seguro de que quiere programarlo para "
+"esta publicación?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Todos los requisitos de publicación se cumplen. ¿Está seguro de que quiere "
+"publicar?"
+
+msgid "publication.journalEntry.success"
+msgstr "Los detalles de acceso a la revista se han actualizado."
+
+msgid "publication.journalEntry"
+msgstr "Acceso a la revista"
+
+msgid "publication.invalidIssue"
+msgstr "No se pudo encontrar el número de esta publicación."
+
+msgid "publication.invalidSection"
+msgstr "No se pudo encontrar la sección de esta publicación."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"La fecha de publicación se establecerá automáticamente cuando se publique el "
+"número. No introduzca una fecha de publicación a menos que el artículo haya "
+"sido publicado anteriormente en otro lugar y necesite cambiarla."
+
+msgid "galley.publicationNotFound"
+msgstr "No se pudo encontrar la publicación de esta galerada."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Las galeradas de esta publicación no se pueden editar porque ya ha sido "
+"publicada."
+
+msgid "catalog.category.heading"
+msgstr "Todos los ítems"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} ítems"
+
+msgid "submission.sectionOptions"
+msgstr "Opciones de sección"
+
+msgid "submission.submit.noContext"
+msgstr "No se pudo encontrar este envío."
