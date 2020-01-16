@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
+"PO-Revision-Date: 2020-01-16 15:00+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
+"es/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:00+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -160,3 +163,37 @@ msgstr "El DOI {$pubId} ha sido asignado."
 
 msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
 msgstr "Si cambia su configuración, los DOIs que ya han sido asignados no se verán afectados. Si lo desea, cuando guarde la configuración del DOI, use este botón para borrar todos los DOIs existentes y que los nuevos ajustes también tengan efecto sobre los identificadores ya asignados."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Ítem"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Galerada: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "No se ha asignado ningún DOI a esta publicación."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "El DOI de esta publicación será {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "El DOI debe empezar con {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"No puede generar un DOI porque una o más partes del patrón DOI no se "
+"encuentran. Sería necesario asignar la publicación a un número, establecer "
+"un identificador editorial o añadir los números de página."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"No puede generar un DOI hasta que esta publicación sea asignada a un número."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Asignar"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "El DOI debe empezar con {$prefix}."
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Artículos"
