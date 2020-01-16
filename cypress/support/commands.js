@@ -13,7 +13,7 @@ import '../../lib/pkp/cypress/support/commands';
 Cypress.Commands.add('publish', (issueId, issueTitle) => {
 	cy.get('button[id="publication-button"]').click();
 	cy.get('button[id="issue-button"]').click();
-	cy.get('select[id="journalEntry-issueId-control"]').select(issueId);
+	cy.get('select[id="issueEntry-issueId-control"]').select(issueId);
 	cy.get('div[id="issue"] button:contains("Save")').click();
 	cy.get('div:contains("The journal entry details have been updated.")');
 	cy.get('div[id="publication"] button:contains("Schedule For Publication")').click();
