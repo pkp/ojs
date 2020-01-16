@@ -46,7 +46,7 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 		switch ($columnId) {
 			case 'identification':
 				// Link to the issue edit modal
-				$application = Application::getApplication();
+				$application = Application::get();
 				$dispatcher = $application->getDispatcher();
 				import('lib.pkp.classes.linkAction.request.AjaxModal');
 				return array(

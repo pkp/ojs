@@ -45,7 +45,7 @@ class ArticleSearch extends SubmissionSearch {
 		$contextDao = Application::getContextDAO();
 		$contextTitles = array();
 		if ($orderBy == 'popularityAll' || $orderBy == 'popularityMonth') {
-			$application = Application::getApplication();
+			$application = Application::get();
 			$metricType = $application->getDefaultMetricType();
 			if (is_null($metricType)) {
 				// If no default metric has been found then sort by score...
@@ -326,7 +326,7 @@ class ArticleSearch extends SubmissionSearch {
 		);
 
 		// Only show the "popularity" options if we have a default metric.
-		$application = Application::getApplication();
+		$application = Application::get();
 		$metricType = $application->getDefaultMetricType();
 		if (!is_null($metricType)) {
 			$resultSetOrderingOptions['popularityAll'] = __('search.results.orderBy.popularityAll');
