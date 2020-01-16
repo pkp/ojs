@@ -42,5 +42,4 @@
 			$.pkp.controllers.grid.GridHandler);
 
 
-/** @param {jQuery} $ jQuery closure. */
 }(jQuery));
