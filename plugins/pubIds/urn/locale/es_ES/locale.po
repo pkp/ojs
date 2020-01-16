@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
+"PO-Revision-Date: 2020-01-16 15:00+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"es/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:02+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -54,7 +57,12 @@ msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
 msgstr "El sufijo URN pude tomar cualquier forma, pero debe ser único entre todos los objetos publicados bajo un mismo prefijo URN:"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
-msgstr "Indique el patrón que desea emplear para generar sufijos URN. Utilice %j para las iniciales de la revista, %v para el número de volúmen, %i para el número de número, %Y para el año, %a para el ID de artículo, %g para el ID de galerada, %f para el ID de fichero, %p para el número de página y %x para el \"Identificador personalizado\""
+msgstr ""
+"Indique el patrón que desea emplear para generar sufijos URN. Utilice %j "
+"para las iniciales de la revista, %v para el número de volúmen, %i para el "
+"número de número, %Y para el año, %a para el ID de artículo, %g para el ID "
+"de galerada, %f para el ID de fichero, %p para el número de página y %x para "
+"el \"Identificador personalizado\"."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
 msgstr "Por ejemplo, vol%viss%ipp%p crearía el sufijo URN \"vol3iss2pp230\"."
@@ -178,3 +186,41 @@ msgstr "Se ha asignado el URN {$pubId}."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Falta el Número de Comprobación."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Ítem"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Galerada: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "No se ha asignado ningún URN a esta publicación."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "El URN de esta publicación será {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "El URN debe empezar con {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"No puede generar un URN porque una o más partes del patrón URN no se "
+"encuentran. Sería necesario asignar la publicación a un número, establecer "
+"un identificador editorial o añadir los números de página."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"No puede generar un URN hasta que esta publicación haya sido asignada a un "
+"número."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Asignar"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "El URN debe empezar con {$prefix}."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Introduzca el patrón de sufijo URN para artículos."
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Artículos"
