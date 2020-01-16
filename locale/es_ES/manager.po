@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2020-01-11 00:20+0000\n"
+"PO-Revision-Date: 2020-01-16 15:00+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/manager/es/>"
 "\n"
@@ -282,7 +282,9 @@ msgid "manager.sections.wordCount"
 msgstr "N.º de palabras"
 
 msgid "manager.sections.wordCountInstructions"
-msgstr "Limitar el número de palabras del resumen en esta sección; si no desea poner un límite, escriba un 0:"
+msgstr ""
+"Limitar el número de palabras del resumen en esta sección (escriba 0 si no "
+"desea poner un límite)"
 
 msgid "manager.setup"
 msgstr "Configuración"
@@ -327,7 +329,7 @@ msgid "manager.setup.announcementsIntroduction.description"
 msgstr "Introduzca la información adicional que ha de mostrarse en la página Avisos."
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(Para que se muestre en la sección Acerca de la revista)"
+msgstr "(Aparecerá en la sección \"Acerca de la revista\") "
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Pedir a los autores/as que adjunten una declaración de conflicto de intereses a su envío."
@@ -405,7 +407,7 @@ msgid "manager.setup.emailSignature.description"
 msgstr "Las plantillas de correo que el sistema envíe en nombre de la revista llevarán esta firma al final. Es posible editar el cuerpo de estos correos en el apartado Gestión de la revista."
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Permitir que los gestores/as de la revista publiquen avisos."
+msgstr "Habilitar avisos"
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Los visitantes pueden registrar una cuenta de usuario/a en la revista."
@@ -558,7 +560,9 @@ msgid "manager.setup.plnDescription"
 msgstr "La Red de Preservación de PKP (PKP Preservation Network, en inglés) proporciona servicios gratuitos de preservación para cualquier revista OJS que cumpla con los criterios básicos."
 
 msgid "manager.setup.plnSettingsDescription"
-msgstr "Haga clic en el enlace de ajustes para aceptar los términos de uso de PKP PN."
+msgstr ""
+"Mostrar los <button>ajustes de módulo</button> para aceptar los términos de "
+"uso de PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Preservation Network (PN)"
@@ -570,10 +574,18 @@ msgid "manager.setup.otherLockss"
 msgstr "Opciones alternativas de archivo"
 
 msgid "manager.setup.lockssEnable"
-msgstr "Habilite LOCKSS para almacenar y distribuir contenido de la revista en bibliotecas colaboradoras a través de una página del <a href=\"{$lockssUrl}\" target=\"_blank\">Manifiesto editorial</a> LOCKSS. Puede encontrar la licencia de LOCKSS en la sección Archivo de la sección Acerca de la revista:"
+msgstr ""
+"Habilite LOCKSS para almacenar y distribuir contenido de la revista en "
+"bibliotecas colaboradoras a través de una página del <a href=\"{$lockssUrl}\""
+" target=\"_blank\">Manifiesto editorial</a> LOCKSS."
 
 msgid "manager.setup.lockssRegister"
-msgstr "Identifique de 6 a 10 bibliotecas que registrarán y almacenarán temporalmente la revista. Por ejemplo, consulte las instituciones en las que trabajan los editores/as o los miembros del consejo de redacción y/o las instituciones que ya emplean el sistema LOCKSS. Ver <a href=\"http://www.lockss.org/community/\" target=\"_blank\">la comunidad LOCKSS</a>. Use las invitaciones preparadas para (i) <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">bibliotecas que emplean LOCKSS</a> o (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">bibliotecas que aún no emplean LOCKSS</a>."
+msgstr ""
+"Identifique de 6 a 10 bibliotecas que registrarán y almacenarán "
+"temporalmente la revista. Por ejemplo, consulte las instituciones en las que "
+"trabajan los editores/as o los miembros del consejo de redacción y/o las "
+"instituciones que ya emplean el sistema LOCKSS. Consulte <a href=\""
+"http://www.lockss.org/community/\" target=\"_blank\">la comunidad LOCKSS</a>."
 
 msgid "manager.setup.look"
 msgstr "Apariencia"
@@ -618,7 +630,10 @@ msgid "manager.setup.note"
 msgstr "Nota"
 
 msgid "manager.setup.notifications.submissionAckDisabled"
-msgstr "<strong>Nota:</strong> Actualmente, el correo electrónico de confirmación está deshabilitado. Para utilizar esta función, habilite el correo electrónico de CONFIRMACIÓN en <a class=\"action\" href=\"{$preparedEmailsUrl}\">Correos preparados</a>."
+msgstr ""
+"<strong>Nota:</strong> El correo electrónico de confirmación está "
+"actualmente deshabilitado. Para utilizar esta función, habilite el correo "
+"electrónico de CONFIRMACIÓN en el apartado de correos electrónicos."
 
 msgid "manager.setup.numPageLinks"
 msgstr "Enlaces de la página"
@@ -684,7 +699,7 @@ msgid "manager.setup.reviewOptions"
 msgstr "Opciones de revisión"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "Aunque el editor/a pueda contactar directamente con el revisor/a, los mensajes predeterminados de OJS permiten enviar correos electrónicos automáticos a modo de recordatorio a los revisores/as bajo los siguientes supuestos:"
+msgstr "Recordatorios de correo automáticos"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "<strong>Nota:</strong> Para activar estas opciones, el administrador/a del sitio debe habilitar la opción <tt>scheduled_tasks</tt> en el archivo de configuración de OJS. Es posible que se requiera una configuración adicional del servidor para admitir esta función (puede que no todos los servidores la permitan) siguiendo las indicaciones en la documentación del OJS."
@@ -705,7 +720,7 @@ msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Acceso para los revisores/as"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Habilitar el acceso de los revisores/as con un solo clic."
+msgstr "Habilitar el acceso de los revisores/as con un solo clic"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Nota:</strong> La invitación por correo electrónico para revisores/as contendrá una dirección URL especial que dirige a los revisores/as directamente a la página de revisión para el envío (con acceso a cualquier otra página que requiera iniciar sesión). Por razones de seguridad, los editores/as no pueden modificar las direcciones de correo electrónico o añadir direcciones en copia o copia oculta antes de enviar las invitaciones a los revisores/as."
@@ -723,7 +738,10 @@ msgid "manager.setup.searchEngineIndexing"
 msgstr "Indización en buscadores"
 
 msgid "manager.setup.searchEngineIndexing.description"
-msgstr "Para ayudar a los usuarios/as de buscadores a descubrir la revista, proporcione una breve descripción de ésta y las palabras clave que mejor la definan (separadas mediante punto y coma)."
+msgstr ""
+"Ayude a buscadores como Google a descubrir y mostrar su sitio. Para ello le "
+"animamos a enviar su <a href=\"{$sitemapUrl}\" target=\"_blank\">mapa del "
+"sitio</a>."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Secciones y editores/as de secciones"
@@ -1149,7 +1167,7 @@ msgid "manager.subscriptions.form.ipRange"
 msgstr "Rangos de IP"
 
 msgid "manager.subscriptions.form.ipRangeItem"
-msgstr "•"
+msgstr "&#8226;"
 
 msgid "manager.subscriptions.form.ipRangeInstructions"
 msgstr "Si se introducen rangos de IP aquí, el dominio es opcional.<br />Los valores válidos incluyen una dirección IP (p. ej., 142.58.103.1), un rango IP (p. ej., 142.58.103.1 - 142.58.103.4), un rango IP con carácter comodín '*' (p. ej., 142.58.*.*) y rango IP con CIDR (p. ej., 142.58.100.0/24)."
@@ -1470,7 +1488,9 @@ msgid "manager.setup.copyrightYearBasis.issue"
 msgstr "Número: el año por defecto provendrá de la fecha de publicación del número."
 
 msgid "manager.setup.resetPermissions.confirm"
-msgstr "¿Está seguro de que desea reiniciar los datos sobre permisos ya adjuntados a los artículos?"
+msgstr ""
+"¿Está seguro de que desea reiniciar los datos sobre permisos de todos los "
+"artículos? Esta acción no puede deshacerse."
 
 msgid "grid.genres.title.short"
 msgstr "Componentes"
@@ -1599,7 +1619,9 @@ msgid "manager.subscriptionPolicies.xWeeks"
 msgstr "{$x} semanas"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Notificar a los suscriptores por correo electrónico tras la caducidad de la suscripción."
+msgstr ""
+"Notificar a los suscriptores/as por correo electrónico tras la caducidad de "
+"la suscripción"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
 msgstr "Notificar a los suscriptores por correo electrónico tras la caducidad de la suscripción."
@@ -1627,3 +1649,154 @@ msgstr "Utilizar la fecha de publicación del artículo"
 
 msgid "manager.distribution.copyrightYearBasis.issue"
 msgstr "Utilizar la fecha de publicación del número"
+
+msgid "stats.publications.galleys"
+msgstr "Archivos"
+
+msgid "stats.publications.abstracts"
+msgstr "Resúmenes"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} de {$total} artículos"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Visualizaciones totales del archivo por fecha"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Visualizaciones totales del resumen por fecha"
+
+msgid "stats.publications.none"
+msgstr ""
+"No se encontró ningún artículo con estadísticas de uso que coincidan con "
+"estos parámetros."
+
+msgid "stats.publications.details"
+msgstr "Detalles del artículo"
+
+msgid "stats.publicationStats"
+msgstr "Estadísticas del artículo"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Los permisos del artículo fueron reiniciados con éxito."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Este tipo de suscripción no expira; por lo tanto, no especifique una fecha "
+"de finalización."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Este tipo de suscripción no expira; por lo tanto, no especifique una fecha "
+"de inicio."
+
+msgid "manager.setup.userAccess.success"
+msgstr ""
+"Los detalles de acceso del usuario/a a esta revista han sido actualizados."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Proporcione metadatos para servicios de indexación de terceros a través de "
+"la <a href=\"https://www.openarchives.org/\">iniciativa de archivos "
+"abiertos</a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Habilitar OAI"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Ver el contenido del artículo"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Acceso al sitio"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Proporcione una breve descripción de la revista (50-300 caracteres) que los "
+"buscadores puedan mostrar cuando la revista aparezca en los resultados de "
+"búsqueda."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Los ajustes de indexación en buscadores han sido actualizados."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+"Incluir un enlace seguro en el correo electrónico de invitación para los "
+"revisores/as."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Restringir el acceso al archivo"
+
+msgid "manager.setup.publishing"
+msgstr "Detalles de publicación"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "La declaración de privacidad ha sido actualizada."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Limitar el número de enlaces que mostrar en las páginas subsiguientes de una "
+"lista."
+
+msgid "manager.setup.masthead.success"
+msgstr "Los detalles de cabecera de esta revista han sido actualizados."
+
+msgid "manager.setup.lists.success"
+msgstr "Los ajustes de lista de esta revista han sido actualizados."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Proporcione una breve descripción de su revista e identifique a los editores/"
+"as, directores/as de gestión y otros miembros de su equipo editorial."
+
+msgid "manager.setup.keyInfo"
+msgstr "Información clave"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Limitar el número de ítems (por ejemplo, envíos, usuarios/as o asignaciones "
+"de edición) que mostrar en una lista antes de mostrar los ítems "
+"subsiguientes en otra página."
+
+msgid "manager.setup.information.success"
+msgstr "La información de esta revista ha sido actualizada."
+
+msgid "manager.setup.identity"
+msgstr "Identidad de la revista"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Cantidad de avisos que mostrar en la página de inicio. Déjelo vacío para no "
+"mostrar ninguno."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Mostrar en la página de inicio"
+
+msgid "manager.setup.contact.success"
+msgstr "Los detalles de contacto de esta revista han sido actualizados."
+
+msgid "manager.setup.archiving.success"
+msgstr "Los detalles de almacenamiento de esta revista han sido actualizados."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introducción"
+
+msgid "manager.setup.announcements.success"
+msgstr "Los ajustes de avisos han sido actualizados."
+
+msgid "manager.payment.success"
+msgstr "Los detalles de pago han sido actualizados."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Los detalles de publicación han sido actualizados."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Modo de publicación"
+
+msgid "manager.distribution.publication"
+msgstr "Publicación"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Elija la manera en que se selecciona la fecha de copyright predefinida para "
+"un artículo. Esto puede hacerse manualmente para cada caso. Si su modelo se "
+"basa en la publicación artículo a artículo no utilice la fecha de "
+"publicación del número."
