@@ -128,7 +128,7 @@ describe('Data suite tests', function() {
 			cy.createUser(user);
 		});
 		cy.logout();
-		user = users[0];
+		var user = users[0];
 		if (!('email' in user)) user.email = user.username + '@mailinator.com';
 		if (!('password' in user)) user.password = user.username + user.username;
 
