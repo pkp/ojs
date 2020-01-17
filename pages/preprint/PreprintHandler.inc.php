@@ -238,6 +238,7 @@ class PreprintHandler extends Handler {
 			if (!HookRegistry::call('PreprintHandler::view', array(&$request, &$preprint, $publication))) {
 				return $templateMgr->display('frontend/pages/preprint.tpl');
 			}
+
 		} else {
 
 			// Ask robots not to index outdated versions
@@ -346,6 +347,82 @@ class PreprintHandler extends Handler {
 		$submission = $this->preprint;
 		if ($submission->getStatus() == STATUS_PUBLISHED) {
 			return true;
+<<<<<<< HEAD:pages/preprint/PreprintHandler.inc.php
+=======
+		}
+
+		// Make sure the reader has rights to view the article/issue.
+		if ($issue && $issue->getPublished() && $submission->getStatus() == STATUS_PUBLISHED) {
+			$subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
+			$isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission->getId());
+
+			// Check if login is required for viewing.
+			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $context->getData('restrictArticleAccess') && isset($galleyId) && $galleyId) {
+				Validation::redirectLogin();
+			}
+
+			// bypass all validation if subscription based on domain or ip is valid
+			// or if the user is just requesting the abstract
+			if ( (!$isSubscribedDomain && $subscriptionRequired) && (isset($galleyId) && $galleyId) ) {
+
+				// Subscription Access
+				$subscribedUser = $issueAction->subscribedUser($user, $context, $issue->getId(), $submission->getId());
+
+				import('classes.payment.ojs.OJSPaymentManager');
+				$paymentManager = Application::get()->getPaymentManager($context);
+
+				$purchasedIssue = false;
+				if (!$subscribedUser && $paymentManager->purchaseIssueEnabled()) {
+					$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+					$purchasedIssue = $completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId());
+				}
+
+				if (!(!$subscriptionRequired || $submission->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN || $subscribedUser || $purchasedIssue)) {
+
+					if ( $paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled() ) {
+						/* if only pdf files are being restricted, then approve all non-pdf galleys
+						 * and continue checking if it is a pdf galley */
+						if ( $paymentManager->onlyPdfEnabled() ) {
+
+							if ($this->galley && !$this->galley->isPdfGalley() ) {
+								$this->issue = $issue;
+								$this->article = $submission;
+								return true;
+							}
+						}
+
+						if (!Validation::isLoggedIn()) {
+							Validation::redirectLogin('payment.loginRequired.forArticle');
+						}
+
+						/* if the article has been paid for then forget about everything else
+						 * and just let them access the article */
+						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
+						if ($completedPaymentDao->hasPaidPurchaseArticle($userId, $submission->getId())
+							|| (!is_null($dateEndMembership) && $dateEndMembership > time())) {
+							$this->issue = $issue;
+							$this->article = $submission;
+							return true;
+						} elseif ($paymentManager->purchaseArticleEnabled()) {
+							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $submission->getId(), $context->getData('purchaseArticleFee'));
+							$paymentManager->queuePayment($queuedPayment);
+
+							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+							$paymentForm->display($request);
+							exit;
+						}
+					}
+
+					if (!isset($galleyId) || $galleyId) {
+						if (!Validation::isLoggedIn()) {
+							Validation::redirectLogin('reader.subscriptionRequiredLoginText');
+						}
+						$request->redirect(null, 'about', 'subscriptions');
+					}
+				}
+			}
+>>>>>>> 9326a052be... pkp/pkp-lib#4883 Move article access status check to Publication class:pages/article/ArticleHandler.inc.php
 		} else {
 			$request->redirect(null, 'search');
 		}
