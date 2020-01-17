@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
+"PO-Revision-Date: 2020-01-16 15:00+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/locale/es/>"
+"\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "navigation.categories"
 msgstr "Categorías"
@@ -99,7 +102,7 @@ msgid "common.queue.long.active"
 msgstr "Envíos activos"
 
 msgid "common.queue.short.active"
-msgstr " Activo/a"
+msgstr "Activo"
 
 msgid "common.queue.long.completed"
 msgstr "Archivar"
@@ -483,7 +486,7 @@ msgid "subscriptions.status"
 msgstr "Estado"
 
 msgid "subscriptions.status.active"
-msgstr " Activo/a"
+msgstr "Activa"
 
 msgid "subscriptions.status.needsInformation"
 msgstr "Necesita información"
@@ -1151,7 +1154,7 @@ msgid "user.subscriptions.form.ipRange"
 msgstr "Rangos de IP"
 
 msgid "user.subscriptions.form.ipRangeItem"
-msgstr "•"
+msgstr "&#8226;"
 
 msgid "user.subscriptions.form.ipRangeInstructions"
 msgstr "Si se introducen rangos de IP aquí, el dominio es opcional.<br />Los valores válidos incluyen una dirección IP (p. ej., 142.58.103.1), un rango IP (p. ej., 142.58.103.1 - 142.58.103.4), un rango IP con carácter comodín '*' (p. ej., 142.58.*.*) y rango IP con CIDR (p. ej., 142.58.100.0/24)."
@@ -1550,10 +1553,14 @@ msgid "log.review.reviewerFile"
 msgstr "Se subió un archivo de revisión."
 
 msgid "log.editor.decision"
-msgstr "{$editorName} registró una decisión editorial para el artículo {$submissionId}: ({$decision})"
+msgstr ""
+"{$editorName} registró una decisión editorial para el artículo "
+"{$submissionId}: ({$decision})."
 
 msgid "log.editor.recommendation"
-msgstr "{$editorName} registró una recomendación editorial para el artículo {$submissionId}: ({$decision})"
+msgstr ""
+"{$editorName} registró una recomendación editorial para el artículo "
+"{$submissionId}: ({$decision})."
 
 msgid "log.copyedit.initiate"
 msgstr "{$copyeditorName} inició la corrección de originales en el envío {$submissionId}."
@@ -1628,7 +1635,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Se creó un nuevo aviso."
 
 msgid "notification.type.reviewerFormComment"
-msgstr "Se envió una revisión de un formulario de revisión a \"{$title}\"."
+msgstr "Se envió una revisión de un formulario de revisión para \"{$title}\"."
 
 msgid "notification.type.reviewing"
 msgstr "Revisar eventos"
@@ -1637,7 +1644,7 @@ msgid "notification.type.site"
 msgstr "Eventos del sitio"
 
 msgid "notification.type.submissionComment"
-msgstr "Un editor/a hizo un comentario en \"{$title}\"."
+msgstr "Un editor/a ha hecho un comentario en \"{$title}\"."
 
 msgid "notification.type.submissions"
 msgstr "Eventos de los envíos"
@@ -1667,7 +1674,7 @@ msgid "article.return"
 msgstr "Volver a los detalles del artículo"
 
 msgid "user.noRoles.selectUsersWithoutRoles"
-msgstr "Incluir usuarios de esta revista sin roles"
+msgstr "Incluir usuarios/as de esta revista sin roles."
 
 msgid "user.reviewerPrompt"
 msgstr "¿Estaría dispuesto a revisar envíos para esta revista?"
@@ -1910,3 +1917,35 @@ msgstr "Se le ha solicitado un pago pero la petición ha expirado. Contacte con 
 
 msgid "notification.type.public"
 msgstr "Avisos públicos"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Elija la manera de ordenar los artículos en esta categoría."
+
+msgid "catalog.sortBy"
+msgstr "Orden de los artículos"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Debe aceptar la declaración de privacidad de este sitio."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Debe aceptar la declaración de privacidad de todas las revistas en las que "
+"se registre."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Sí, acepto que mis datos sean recopilados y almacenados según la <a href=\""
+"{$privacyUrl}\" target=\"_blank\">declaración de privacidad</a> de esta "
+"revista."
+
+msgid "submission.search"
+msgstr "Búsqueda de artículos"
+
+msgid "section.policy"
+msgstr "Políticas de sección"
+
+msgid "navigation.skip.issue"
+msgstr "Ir al número actual"
+
+msgid "navigation.skip.about"
+msgstr "Ir al apartado \"Acerca de la revista\""
