@@ -41,7 +41,6 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 		'publicationId' => 'publication_id',
 		'seq' => 'seq',
 		'urlRemote' => 'remote_url',
-		'submissionId' => 'submission_id',
 	];
 
 	/**

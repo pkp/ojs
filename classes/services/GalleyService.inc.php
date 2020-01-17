@@ -23,10 +23,8 @@ use \PKP\Services\interfaces\EntityPropertyInterface;
 use \PKP\Services\interfaces\EntityReadInterface;
 use \PKP\Services\interfaces\EntityWriteInterface;
 use \APP\Services\QueryBuilders\GalleyQueryBuilder;
-use \PKP\Services\traits\EntityReadTrait;
 
 class GalleyService implements EntityReadInterface, EntityWriteInterface, EntityPropertyInterface {
-	use EntityReadTrait;
 
 	/**
 	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::get()
@@ -36,21 +34,32 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	}
 
 	/**
-	 * Get galleys
+	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getCount()
+	 */
+	public function getCount($args = []) {
+		return $this->getQueryBuilder($args)->getCount();
+	}
+
+	/**
+	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getIds()
+	 */
+	public function getIds($args = []) {
+		return $this->getQueryBuilder($args)->getIds();
+	}
+
+	/**
+	 * Get a collection of Galley objects limited, filtered
+	 * and sorted by $args
 	 *
 	 * @param array $args {
 	 *    @option int|array publicationIds
-	 *    @option int count
-	 * 	  @option int offset
 	 * }
 	 * @return \Iterator
 	 */
 	public function getMany($args = []) {
-		$galleyQB = $this->_getQueryBuilder($args);
-		$galleyQO = $galleyQB->get();
-		$range = $this->getRangeByArgs($args);
+		$galleyQO = $this->getQueryBuilder($args)->getQuery();
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$result = $galleyDao->retrieveRange($galleyQO->toSql(), $galleyQO->getBindings(), $range);
+		$result = $galleyDao->retrieveRange($galleyQO->toSql(), $galleyQO->getBindings());
 		$queryResults = new DAOResultFactory($result, $galleyDao, '_fromRow');
 
 		return $queryResults->toIterator();
@@ -60,30 +69,16 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getMax()
 	 */
 	public function getMax($args = []) {
-		$galleyQB = $this->_getQueryBuilder($args);
-		$countQO = $galleyQB->countOnly()->get();
-		$countRange = new DBResultRange($args['count'], 1);
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$countResult = $galleyDao->retrieveRange($countQO->toSql(), $countQO->getBindings(), $countRange);
-		$countQueryResults = new DAOResultFactory($countResult, $galleyDao, '_fromRow');
-
-		return (int) $countQueryResults->getCount();
+		// Count/offset is not supported so getMax is always
+		// the same as getCount
+		return $this->getCount();
 	}
 
 	/**
-	 * Build the query object for getting galleys
-	 *
-	 * @see self::getMany()
-	 * @return object Query object
+	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getQueryBuilder()
+	 * @return GalleryQueryBuilder
 	 */
-	private function _getQueryBuilder($args = []) {
-
-		$defaultArgs = [
-			'publicationIds' => null,
-		];
-
-		$args = array_merge($defaultArgs, $args);
-
+	public function getQueryBuilder($args = []) {
 		$galleyQB = new GalleyQueryBuilder();
 		if (!empty($args['publicationIds'])) {
 			$galleyQB->filterByPublicationIds($args['publicationIds']);

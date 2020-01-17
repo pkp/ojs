@@ -16,18 +16,27 @@
 	{* Header wrapper *}
 	<header class="header_view">
 
-		<a href="{url page="article" op="view" path=$article->getBestId()}" class="return">
+		{capture assign="articleUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
+
+		<a href="{$articleUrl}" class="return">
 			<span class="pkp_screen_reader">
 				{translate key="article.return"}
 			</span>
 		</a>
 
-		<a href="{url page="article" op="view" path=$article->getBestId()}" class="title">
+		<a href="{$articleUrl}" class="title">
 			{$article->getLocalizedTitle()|escape}
 		</a>
 	</header>
 
-	<div id="htmlContainer" class="galley_view" style="overflow:visible;-webkit-overflow-scrolling:touch">
+	<div id="htmlContainer" class="galley_view{if !$isLatestPublication} galley_view_with_notice{/if}" style="overflow:visible;-webkit-overflow-scrolling:touch">
+		{if !$isLatestPublication}
+			<div class="galley_view_notice">
+				<div class="galley_view_notice_message" role="alert">
+					{translate key="submission.outdatedVersion" datePublished=$galleyPublication->getData('datePublished') urlRecentVersion=$articleUrl}
+				</div>
+			</div>
+		{/if}
 		<iframe name="htmlFrame" src="{url page="article" op="download" path=$article->getBestId()|to_array:$galley->getBestGalleyId() inline=true}" allowfullscreen webkitallowfullscreen></iframe>
 	</div>
 	{call_hook name="Templates::Common::Footer::PageFooter"}

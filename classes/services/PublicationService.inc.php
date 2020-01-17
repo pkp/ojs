@@ -30,7 +30,7 @@ class PublicationService extends PKPPublicationService {
 		\HookRegistry::register('Publication::validate', [$this, 'validatePublication']);
 		\HookRegistry::register('Publication::validatePublish', [$this, 'validatePublishPublication']);
 		\HookRegistry::register('Publication::version', [$this, 'versionPublication']);
-		\HookRegistry::register('Publication::publish', [$this, 'publishPublication']);
+		\HookRegistry::register('Publication::publish::before', [$this, 'publishPublicationBefore']);
 		\HookRegistry::register('Publication::delete::before', [$this, 'deletePublicationBefore']);
 	}
 
@@ -196,7 +196,7 @@ class PublicationService extends PKPPublicationService {
 	}
 
 	/**
-	 * Modify a publication when it is published
+	 * Modify a publication before it is published
 	 *
 	 * @param $hookName string
 	 * @param $args array [
@@ -204,7 +204,7 @@ class PublicationService extends PKPPublicationService {
 	 *		@option Publication The old version of the publication
 	 * ]
 	 */
-	public function publishPublication($hookName, $args) {
+	public function publishPublicationBefore($hookName, $args) {
 		$newPublication = $args[0];
 		$oldPublication = $args[1];
 
@@ -218,12 +218,6 @@ class PublicationService extends PKPPublicationService {
 				$newPublication->setData('status', STATUS_SCHEDULED);
 			}
 		}
-
-		// Update the metadata in the search index.
-		$submission = Services::get('submission')->get($newPublication->getData('submissionId'));
-		$articleSearchIndex = Application::getSubmissionSearchIndex();
-		$articleSearchIndex->submissionMetadataChanged($submission);
-		$articleSearchIndex->submissionChangesFinished();
 	}
 
 	/**

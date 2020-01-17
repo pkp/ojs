@@ -205,12 +205,6 @@ msgstr "La rubrique de cette publication est introuvable."
 msgid "publication.invalidIssue"
 msgstr "Le numéro de cette publication est introuvable."
 
-msgid "publication.journalEntry"
-msgstr "Enregistrement de revue"
-
-msgid "publication.journalEntry.success"
-msgstr "Les renseignements de l'enregistrement de la revue ont été mis à jour."
-
 msgid "publication.publish.confirmation"
 msgstr "Toutes les exigences de publication ont été remplies. Êtes-vous certain-e de vouloir publier ceci ?"
 

@@ -27,41 +27,36 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			array($submission)
 		);
 
-		// If no search plug-in is activated then fall back to the
-		// default database search implementation.
-		if ($hookResult === false || is_null($hookResult)) {
-			// Build author keywords
-			$authorText = array();
-			foreach ($submission->getCurrentPublication()->getData('authors') as $author) {
-				foreach ((array) $author->getGivenName(null) as $givenName) { // Localized
-					array_push($authorText, $givenName);
-				}
-				foreach ((array) $author->getFamilyName(null) as $familyName) { // Localized
-					array_push($authorText, $familyName);
-				}
-				foreach ((array) $author->getAffiliation(null) as $affiliation) { // Localized
-					array_push($authorText, $affiliation);
-				}
-				foreach ((array) $author->getBiography(null) as $bio) { // Localized
-					array_push($authorText, strip_tags($bio));
-				}
-			}
-
-			// Update search index
-			$submissionId = $submission->getId();
-			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_AUTHOR, $authorText);
-			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TITLE, $submission->getFullTitle(null));
-			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_ABSTRACT, $submission->getAbstract(null));
-
-			$submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO');
-			self::_updateTextIndex($submissionId, SUBMISSION_SEARCH_DISCIPLINE, array_filter($submissionDisciplineDao->getDisciplines($submissionId, array_keys(\PKPLocale::getAllLocales()))));
-
-			$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
-			self::_updateTextIndex($submissionId, SUBMISSION_SEARCH_SUBJECT, array_filter($submissionSubjectDao->getSubjects($submissionId, array_keys(\PKPLocale::getAllLocales()))));
-			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TYPE, $submission->getType(null));
-			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_COVERAGE, (array) $submission->getCoverage(null));
-			// FIXME Index sponsors too?
+		if (!empty($hookResult)) {
+			return;
 		}
+
+		$publication = $submission->getCurrentPublication();
+
+		// Build author keywords
+		$authorText = [];
+		foreach ($publication->getData('authors') as $author) {
+			$authorText = array_merge(
+				$authorText,
+				array_values((array) $author->getData('givenName')),
+				array_values((array) $author->getData('familyName')),
+				array_values(array_map('strip_tags', (array) $author->getData('affiliation'))),
+				array_values(array_map('strip_tags', (array) $author->getData('biography')))
+			);
+		}
+
+		// Update search index
+		import('classes.search.ArticleSearch');
+		$submissionId = $submission->getId();
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_AUTHOR, $authorText);
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TITLE, $publication->getFullTitles());
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_ABSTRACT, $publication->getData('abstract'));
+
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_SUBJECT, (array) $publication->getData('subjects'));
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_DISCIPLINE, (array) $publication->getData('disciplines'));
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TYPE, (array) $publication->getData('type'));
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_COVERAGE, (array) $publication->getData('coverage'));
+		// FIXME Index sponsors too?
 	}
 
 	/**
@@ -120,6 +115,15 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 				$parser->close();
 			}
 		}
+	}
+
+	/**
+	 * Remove indexed file contents for a submission
+	 * @param $submission Submission
+	 */
+	public function clearSubmissionFiles($submission) {
+		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao->deleteSubmissionKeywords($submission->getId(), SUBMISSION_SEARCH_GALLEY_FILE);
 	}
 
 	/**

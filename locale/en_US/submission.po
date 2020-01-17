@@ -185,11 +185,8 @@ msgstr "The section for this publication could not be found."
 msgid "publication.invalidIssue"
 msgstr "The issue for this publication could not be found."
 
-msgid "publication.journalEntry"
-msgstr "Journal Entry"
-
-msgid "publication.journalEntry.success"
-msgstr "The journal entry details have been updated."
+msgid "publication.issue.success"
+msgstr "The publication's issue details have been updated."
 
 msgid "publication.publish.confirmation"
 msgstr "All publication requirements have been met. Are you sure you want to publish this?"
