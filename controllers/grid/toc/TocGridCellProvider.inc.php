@@ -38,7 +38,7 @@ class TocGridCellProvider extends GridCellProvider {
 			case 'title':
 				return array('label' => $element->getLocalizedTitle());
 			case 'access':
-				return array('selected' => $element->getAccessStatus()==ARTICLE_ACCESS_OPEN);
+				return array('selected' => $element->getCurrentPublication()->getData('accessStatus')==ARTICLE_ACCESS_OPEN);
 			default: assert(false);
 		}
 	}
@@ -58,7 +58,7 @@ class TocGridCellProvider extends GridCellProvider {
 							array_merge(
 								array(
 									'articleId' => $article->getId(),
-									'status' => ($article->getAccessStatus() == ARTICLE_ACCESS_OPEN) ? ARTICLE_ACCESS_ISSUE_DEFAULT : ARTICLE_ACCESS_OPEN,
+									'status' => ($article->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN) ? ARTICLE_ACCESS_ISSUE_DEFAULT : ARTICLE_ACCESS_OPEN,
 									'csrfToken' => $request->getSession()->getCSRFToken(),
 								),
 								$row->getRequestArgs()

@@ -261,7 +261,7 @@ class ArticleHandler extends Handler {
 			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			$templateMgr->assign('hasAccess',
 				!$subscriptionRequired ||
-				($article->getAccessStatus() == ARTICLE_ACCESS_OPEN) ||
+				$publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN ||
 				$subscribedUser || $subscribedDomain ||
 				($user && $issue && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId())) ||
 				($user && $completedPaymentDao->hasPaidPurchaseArticle($user->getId(), $article->getId()))
@@ -426,7 +426,7 @@ class ArticleHandler extends Handler {
 					$purchasedIssue = $completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId());
 				}
 
-				if (!(!$subscriptionRequired || $submission->getAccessStatus() == ARTICLE_ACCESS_OPEN || $subscribedUser || $purchasedIssue)) {
+				if (!(!$subscriptionRequired || $submission->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN || $subscribedUser || $purchasedIssue)) {
 
 					if ( $paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled() ) {
 						/* if only pdf files are being restricted, then approve all non-pdf galleys

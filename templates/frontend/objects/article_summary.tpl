@@ -20,8 +20,9 @@
 	{assign var="showAuthor" value=true}
 {/if}
 
+{assign var=publication value=$article->getCurrentPublication()}
 <div class="obj_article_summary">
-	{if $article->getCurrentPublication()->getLocalizedData('coverImage')}
+	{if $publication->getLocalizedData('coverImage')}
 		<div class="cover">
 			<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if} class="file">
 				{assign var="coverImage" value=$article->getCurrentPublication()->getLocalizedData('coverImage')}
@@ -79,7 +80,7 @@
 				{/if}
 				<li>
 					{assign var="hasArticleAccess" value=$hasAccess}
-					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN}
+					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $publication->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN}
 						{assign var="hasArticleAccess" value=1}
 					{/if}
 					{include file="frontend/objects/galley_link.tpl" parent=$article labelledBy="article-{$article->getId()}" hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
