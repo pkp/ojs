@@ -2,14 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
+"PO-Revision-Date: 2020-01-20 16:35+0000\n"
+"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
+"Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/sl/>\n"
+"Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:32+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Oddaj prispevek"
@@ -166,3 +170,59 @@ msgstr "{$numTitles} postavk"
 
 msgid "catalog.category.heading"
 msgstr "Vse postavke"
+
+msgid "publication.scheduledIn"
+msgstr "Načrtovano za objavo v  <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Objavljeno v <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr "Članek mora biti dodeljen v številko revije, preden ga lahko objavite."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Vse zahteve za objavo so izpolnjene. Objavljeno bo takoj v številki {$issue} "
+". Ste prepričani, da želite objaviti?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Vse zahteve za objavo so izpolnjene. Objavljeno bo, ko bo objavljena "
+"številka  {$issue} .  Ste prepričani, da želite načrtovati to objavo?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Vse zahteve za objavo so izpolnjene. Ste prepričani, da želite to objaviti?"
+
+msgid "publication.journalEntry.success"
+msgstr "Vnos v revijo je bil posodobljen."
+
+msgid "publication.journalEntry"
+msgstr "Vnos v revijo"
+
+msgid "publication.invalidIssue"
+msgstr "Številka revije za ta članek ni bila najdena."
+
+msgid "publication.invalidSection"
+msgstr "Rubrika za ta članek ni bila najdena."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Datum objave bo določen avtomatično z datumom izdaje številke revije. Ne "
+"vpisujte datuma izdaje, razen, če članek ni bil že drugje objavljen in "
+"želite določiti datum iz preteklosti."
+
+msgid "galley.publicationNotFound"
+msgstr "Članka za ta prelom ni bilo mogoče najti."
+
+msgid "galley.editPublishedDisabled"
+msgstr "Prelom tega članka ne morete več spreminjati, ker je bil že objavljen."
+
+msgid "submission.sectionOptions"
+msgstr "Nastavitve rubrike"
+
+msgid "submission.submit.noContext"
+msgstr "Revije, ki je bila določena prispevku, ni bila najdena."
+
+msgid "publication.issue.success"
+msgstr "Podroibnosti objave so bile posodobljene."
