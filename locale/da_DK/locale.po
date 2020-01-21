@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
+"PO-Revision-Date: 2020-01-21 18:21+0000\n"
+"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/locale/da/>\n"
+"Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:19+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "common.software"
 msgstr "Open Journal Systems"
@@ -509,8 +511,11 @@ msgstr ""
 
 msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
-"Trin: Manuskriptkø &gt; Manuskriptbedømmelse &gt; Manuskriptredigering &gt; Indholdsfortegnelse.<br /><br />\n"
-"Vælg en model til håndtering af disse aspekter af den redaktionelle proces. (Gå til Redaktører under Administration af tidsskrifter, hvis du vil udpege en chefredaktør og sektionsredaktører)."
+"Trin: Manuskriptkø &gt; Manuskriptbedømmelse &gt; Manuskriptredigering &gt; "
+"Indholdsfortegnelse.<br /><br />\n"
+"Vælg en model til håndtering af disse aspekter af den redaktionelle proces. ("
+"Gå til Redaktører under Administration af tidsskrifter, hvis du vil udpege "
+"en chefredaktør og sektionsredaktører.)"
 
 msgid "manager.setup.referenceLinkingDescription"
 msgstr ""
@@ -676,7 +681,9 @@ msgid "reviewer.article.reviewersAnnotatedVersion"
 msgstr "Version overført af bedømmer"
 
 msgid "reviewer.article.reviewersAnnotatedVersionDescription"
-msgstr "(Hvis du vil anmærke filen til redaktøren, skal du gemme den på harddisken og bruge Gennemse/Overfør)."
+msgstr ""
+"(Hvis du vil anmærke filen til redaktøren, skal du gemme den på harddisken "
+"og bruge Gennemse/Overfør.)"
 
 msgid "reviewer.article.schedule.request"
 msgstr "Redaktørs forespørgsel"
@@ -872,7 +879,7 @@ msgstr "Kommentarer til manuskriptredigering"
 msgid "submission.comments.viewableDescription"
 msgstr ""
 "Disse kommentarer kan deles med forfatteren.<br />\n"
-"(Når de er gemt, er det muligt at tilføje flere kommentarer)."
+"(Når de er gemt, er det muligt at tilføje flere kommentarer.)"
 
 msgid "submission.comments.canShareWithAuthor"
 msgstr "Til forfatter og redaktør"
@@ -1247,7 +1254,10 @@ msgid "installer.databaseSettingsInstructions"
 msgstr "OJS kræver adgang til en SQL-database til lagring af sine data. Se systemkravene ovenfor, hvor du kan finde en liste over understøttede databaser. I felterne nedenfor skal du angive de indstillinger, der skal benyttes til at oprette forbindelse til databasen."
 
 msgid "installer.reinstallAfterDatabaseError"
-msgstr "<b>Advarsel!</b> Hvis installationen mislykkedes midt under databaseinstallationen, bliver du muligvis nødt til at opgive OJS-databasen eller databasetabellerne, inden du forsøger at geninstallere databasen."
+msgstr ""
+"<strong>Advarsel!:</strong> Hvis installationen mislykkedes midt under "
+"databaseinstallationen, bliver du muligvis nødt til at opgive OJS-databasen "
+"eller databasetabellerne, inden du forsøger at geninstallere databasen."
 
 msgid "installer.overwriteConfigFileInstructions"
 msgstr ""
@@ -1549,10 +1559,10 @@ msgid "user.subscriptions.statusDescription"
 msgstr "Beskrivelse"
 
 msgid "user.subscriptions.status.needsInformationDescription"
-msgstr "Der kræves yderligere information, før abonnementet kan aktiveres."
+msgstr "Der kræves yderligere information, før abonnementet kan aktiveres"
 
 msgid "user.subscriptions.status.needsApprovalDescription"
-msgstr "Abonnementet skal gennemgås, før det kan aktiveres."
+msgstr "Abonnementet skal gennemgås, før det kan aktiveres"
 
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
 msgstr "Manuel betaling er blevet iværksat, men endnu ikke modtaget"
@@ -1684,10 +1694,12 @@ msgid "notification.type.editing"
 msgstr "Redigeringshændelser"
 
 msgid "notification.type.editorDecisionComment"
-msgstr "Der er blevet skrevet en kommentar til redaktørens beslutning vedrørende \"{$title}\"."
+msgstr ""
+"Der er blevet skrevet en kommentar til redaktørens beslutning vedrørende \""
+"{$title}.\""
 
 msgid "notification.type.galleyModified"
-msgstr "Der er foretaget en ændring af et publiceringsformatet til \"{$title}\"."
+msgstr "Der er foretaget en ændring af en publiceringsversion til \"{$title}.\""
 
 msgid "notification.type.issuePublished"
 msgstr "Der er blevet udgivet et nummer."
@@ -1696,7 +1708,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Der er blevet oprettet en ny meddelelse."
 
 msgid "notification.type.reviewerFormComment"
-msgstr "Der er blevet indsendt en bedømmelsesformular vedrørende \"{$title}\"."
+msgstr "Der er blevet indsendt en bedømmelsesformular vedrørende \"{$title}.\""
 
 msgid "notification.type.reviewing"
 msgstr "Bedømmelseshændelser"
@@ -1705,13 +1717,13 @@ msgid "notification.type.site"
 msgstr "Websted-hændelser"
 
 msgid "notification.type.submissionComment"
-msgstr "En redaktør har skrevet en kommentar vedrørende \"{$title}\"."
+msgstr "En redaktør har skrevet en kommentar vedrørende \"{$title}.\""
 
 msgid "notification.type.submissions"
 msgstr "Indleveringshændelser"
 
 msgid "notification.type.userComment"
-msgstr "En læser har skrevet en kommentar vedrørende \"{$title}\"."
+msgstr "En læser har skrevet en kommentar vedrørende \"{$title}\""
 
 msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Adgang nægtet! Du er ikke blevet tildelt rollen som manuskriptredaktør på denne artikel."
@@ -1748,7 +1760,7 @@ msgstr ""
 "</ol>"
 
 msgid "site.noJournals"
-msgstr "Der er ingen tilgængelige tidsskrifter"
+msgstr "Der er ingen tilgængelige tidsskrifter."
 
 msgid "user.profile.profileImage"
 msgstr "Profilbillede"
@@ -1805,7 +1817,7 @@ msgid "notification.type.assignProductionUser"
 msgstr "For at indsætte en publiceringsversion tilføjes bruger via linket 'Tilføj' under deltagerlisten."
 
 msgid "notification.type.awaitingRepresentations"
-msgstr "Afventer publiceringsversion"
+msgstr "Afventer publiceringsversion."
 
 msgid "submission.layout.galley.remotelyHostedContent"
 msgstr "Denne publiceringsversion vil være tilgængelig på et separat website."
@@ -1814,7 +1826,7 @@ msgid "submission.layout.galley.remoteURL"
 msgstr "Ekstern URL"
 
 msgid "notification.savedIssueMetadata"
-msgstr "Nummer-metadata gemt"
+msgstr "Nummer-metadata gemt."
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Inkludér brugere uden nogen roller vedrørende dette tidsskrift."
@@ -2036,3 +2048,24 @@ msgstr "Du skal - i forbindelse med registrering - acceptere de pågældende tid
 
 msgid "user.register.form.missingSiteConsent"
 msgstr "Du skal godkende dette websteds erklæring om beskyttelse af personlige oplysninger."
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Vælg hvordan artiklerne ordnes i denne kategori."
+
+msgid "catalog.sortBy"
+msgstr "Artikelrækkefølge"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Foretag en ny indsendelse til <a href=\"{$url}\">{$name}</a>-sektionen."
+
+msgid "submission.search"
+msgstr "Artikelsøg"
+
+msgid "section.policy"
+msgstr "Sektionspolitik"
+
+msgid "navigation.skip.issue"
+msgstr "Spring til nyeste nummer"
+
+msgid "navigation.skip.about"
+msgstr "Spring til om tidsskriftet"
