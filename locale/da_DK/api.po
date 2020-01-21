@@ -2,14 +2,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2020-01-21 18:21+0000\n"
+"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/api/da/>\n"
+"Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:18+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Du har ikke tilladelse til at se ikke publicerede numre."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Den publikation, du søgte, er ikke en del af denne indsendelse."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Den publikation, du søgte, er ikke en del af dette tidsskrift."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Den valgte betalingsmetode understøttes ikke."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Du har ikke tilladelse til at flytte denne e-mail-skabelon til et anden "
+"tidsskrift."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Det tidsskrift, du rekvirerede blev ikke fundet."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Du har ikke tilladelse til at slette dette tidsskrift."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Du har ikke tilladelse til at redigere dette tidsskrift."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Du kan ikke redigere dette tidsskrift via webstedets API."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Du kan ikke se eller redigere dette tidsskrift, medmindre du fremsender en "
+"anmodning til tidsskriftets API eller til hele webstedets API."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Du har ikke tilladelse til at se dette tidsskrift."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Du kan kun se tidsskrifter, der er aktiveret."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"For at foretage eller redigere en indsendelse skal du sende en besked til "
+"tidsskriftets API endpoint."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Du kan ikke ændre en indsendelses tidsskrift."
