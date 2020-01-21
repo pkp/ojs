@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
+"PO-Revision-Date: 2020-01-21 18:21+0000\n"
+"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"da/>\n"
+"Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:02+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -178,3 +181,41 @@ msgstr "URN'en {$pubId} er blevet tildelt."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Tjeknummeret mangler."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Element"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Publiceringsversion: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Der er ikke blevet tildelt en URN til denne publikation."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN'en til denne publikation bliver {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN skal begynde med {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Du kan ikke generere en URN, fordi en eller flere dele af URN-mønsteret "
+"mangler data. Det kan være nødvendigt, at du tildeler publikationen til et "
+"nummer, indsætter et udgiver-ID eller indtaster sidenumre."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Du kan ikke generere en URN, før denne publikation er blevet tildelt et "
+"nummer."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Tildel"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN skal begynde med {$prefix}."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Angiv URN-suffiksmønster for artikler."
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Artikler"
