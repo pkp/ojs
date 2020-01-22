@@ -72,9 +72,9 @@ class SubscriptionForm extends Form {
 
 	/**
 	 * Display the form.
-	 * @param $request PKPRequest
+	 * @copydoc Form::fetch
 	 */
-	public function fetch($request) {
+	public function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
@@ -83,7 +83,7 @@ class SubscriptionForm extends Form {
 			'validStatus' => $this->validStatus,
 			'subscriptionTypes' => $this->subscriptionTypes,
 		));
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
@@ -179,12 +179,14 @@ class SubscriptionForm extends Form {
 	}
 
 	/**
-	 * Save subscription.
+	 * @copydoc Form::execute
 	 */
-	public function execute() {
+	public function execute(...$functionArgs) {
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$subscription =& $this->subscription;
+
+		parent::execute(...$functionArgs);
 
 		$subscription->setJournalId($journal->getId());
 		$subscription->setStatus($this->getData('status'));

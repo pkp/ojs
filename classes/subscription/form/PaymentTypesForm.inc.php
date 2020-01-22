@@ -17,12 +17,12 @@ import('lib.pkp.classes.form.Form');
 
 class PaymentTypesForm extends Form {
 	/** @var array the setting names */
-	var $settings;
+	protected $settings;
 
 	/**
 	 * Constructor
 	 */
-	function __construct() {
+	public function __construct() {
 		parent::__construct('payments/paymentTypesForm.tpl');
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
@@ -54,7 +54,7 @@ class PaymentTypesForm extends Form {
 	/**
 	 * Initialize form data from current group group.
 	 */
-	function initData() {
+	public function initData() {
 		$journal = Application::get()->getRequest()->getContext();
 		foreach (array_keys($this->settings) as $settingName) {
 			$this->setData($settingName, $journal->getData($settingName));
@@ -64,18 +64,21 @@ class PaymentTypesForm extends Form {
 	/**
 	 * Assign form data to user-submitted data.
 	 */
-	function readInputData() {
+	public function readInputData() {
 		$this->readUserVars(array_keys($this->settings));
 	}
 
 	/**
-	 * Save settings
+	 * @copydoc Form::execute
 	 */
-	function execute() {
+	public function execute(...$functionArgs) {
+		parent::execute(...$functionArgs);
 		$journal = Application::get()->getRequest()->getJournal();
 		foreach (array_keys($this->settings) as $settingName) {
-			$journal->updateSetting($settingName, $this->getData($settingName));
+			$journal->setData($settingName, $this->getData($settingName));
 		}
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journalDao->updateObject($journal);
 	}
 }
 

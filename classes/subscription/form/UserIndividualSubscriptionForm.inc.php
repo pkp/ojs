@@ -126,7 +126,7 @@ class UserIndividualSubscriptionForm extends Form {
 	}
 
 	/**
-	 * Create/update individual subscription.
+	 * @copydoc Form::execute
 	 */
 	function execute(...$functionArgs) {
 		$journal = $this->request->getJournal();

@@ -55,20 +55,22 @@ class IssueGalleyForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$journal = $request->getJournal();
 		$templateMgr = TemplateManager::getManager($request);
 
-		$templateMgr->assign('issueId', $this->_issue->getId());
-		if ($this->_issueGalley) {
-			$templateMgr->assign('issueGalleyId', $this->_issueGalley->getId());
-			$templateMgr->assign('issueGalley', $this->_issueGalley);
-		}
-		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
+		$templateMgr->assign(array(
+			'issueId' => $this->_issue->getId(),
+			'supportedLocales' => $journal->getSupportedLocaleNames(),
+		));
+		if ($this->_issueGalley) $templateMgr->assign(array(
+				'issueGalleyId' => $this->_issueGalley->getId(),
+				'issueGalley' => $this->_issueGalley,
+		));
 
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
@@ -124,10 +126,9 @@ class IssueGalleyForm extends Form {
 	}
 
 	/**
-	 * Save changes to the galley.
-	 * @return int the galley ID
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		import('classes.file.IssueFileManager');
 		$issueFileManager = new IssueFileManager($this->_issue->getId());
 
@@ -141,6 +142,8 @@ class IssueGalleyForm extends Form {
 		// If a temporary file ID was specified (i.e. an upload occurred), get the file for later.
 		$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 		$temporaryFile = $temporaryFileDao->getTemporaryFile($this->getData('temporaryFileId'), $user->getId());
+
+		parent::execute(...$functionArgs);
 
 		if ($issueGalley) {
 			// Update an existing galley
@@ -199,5 +202,4 @@ class IssueGalleyForm extends Form {
 		return $this->_issueGalley->getId();
 	}
 }
-
 
