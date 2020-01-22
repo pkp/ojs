@@ -181,7 +181,7 @@ class SubscriptionForm extends Form {
 	/**
 	 * Save subscription.
 	 */
-	public public function execute() {
+	public function execute() {
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$subscription =& $this->subscription;
