@@ -128,7 +128,7 @@ class UserIndividualSubscriptionForm extends Form {
 	/**
 	 * Create/update individual subscription.
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$journal = $this->request->getJournal();
 		$journalId = $journal->getId();
 		$typeId = $this->getData('typeId');
@@ -138,6 +138,8 @@ class UserIndividualSubscriptionForm extends Form {
 		$nonExpiring = $subscriptionType->getNonExpiring();
 		$today = date('Y-m-d');
 		$insert = false;
+
+		parent::execute(...$functionArgs);
 
 		if (!isset($this->subscription)) {
 			$subscription = $individualSubscriptionDao->newDataObject();
