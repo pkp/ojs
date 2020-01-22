@@ -37,7 +37,7 @@ class SubscriptionForm extends Form {
 	 * @param $template string? Template to use for form presentation
 	 * @param $subscriptionId int The subscription ID for this subscription; null for new subscription
 	 */
-	function __construct($template, $subscriptionId = null) {
+	public function __construct($template, $subscriptionId = null) {
 		parent::__construct($template);
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
@@ -74,7 +74,7 @@ class SubscriptionForm extends Form {
 	 * Display the form.
 	 * @param $request PKPRequest
 	 */
-	function fetch($request) {
+	public function fetch($request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
@@ -89,7 +89,7 @@ class SubscriptionForm extends Form {
 	/**
 	 * Initialize form data from current subscription.
 	 */
-	function initData() {
+	public function initData() {
 		if (isset($this->subscription)) {
 			$subscription = $this->subscription;
 			$this->_data = array(
@@ -108,7 +108,7 @@ class SubscriptionForm extends Form {
 	/**
 	 * Assign form data to user-submitted data.
 	 */
-	function readInputData() {
+	public function readInputData() {
 		$this->readUserVars(array('status', 'userId', 'typeId', 'membership', 'referenceNumber', 'notes', 'notifyEmail', 'dateStart', 'dateEnd'));
 
 		// If subscription type requires it, membership is provided
@@ -181,7 +181,7 @@ class SubscriptionForm extends Form {
 	/**
 	 * Save subscription.
 	 */
-	function execute() {
+	public public function execute() {
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$subscription =& $this->subscription;
@@ -206,14 +206,13 @@ class SubscriptionForm extends Form {
 	 * Internal function to prepare notification email
 	 * @param $emailTemplateKey string
 	 */
-	function _prepareNotificationEmail($mailTemplateKey) {
+	protected function _prepareNotificationEmail($mailTemplateKey) {
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$journalName = $journal->getLocalizedTitle();
-		$journalId = $journal->getId();
 		$user = $userDao->getById($this->subscription->getUserId());
 		$subscriptionType = $subscriptionTypeDao->getById($this->subscription->getTypeId());
 

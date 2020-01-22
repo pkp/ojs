@@ -42,7 +42,7 @@ class SubscriptionPolicyForm extends Form {
 	/**
 	 * Constructor
 	 */
-	function __construct() {
+	public function __construct() {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
 		$this->validNumMonthsBeforeExpiry = array(0 => __('common.disabled'));
@@ -89,7 +89,7 @@ class SubscriptionPolicyForm extends Form {
 	 * Fetch the form.
 	 * @param $request PKPRequest
 	 */
-	function fetch($request) {
+	public function fetch($request) {
 		$paymentManager = Application::getPaymentManager($request->getJournal());
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign(array(
@@ -107,7 +107,7 @@ class SubscriptionPolicyForm extends Form {
 	/**
 	 * Initialize form data from current subscription policies.
 	 */
-	function initData() {
+	public function initData() {
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$this->_data = array(
@@ -132,7 +132,7 @@ class SubscriptionPolicyForm extends Form {
 	/**
 	 * Assign form data to user-submitted data.
 	 */
-	function readInputData() {
+	public function readInputData() {
 		$this->readUserVars(array('subscriptionName', 'subscriptionEmail', 'subscriptionPhone', 'subscriptionMailingAddress', 'subscriptionAdditionalInformation', 'enableOpenAccessNotification', 'subscriptionExpiryPartial', 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual', 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional', 'enableSubscriptionOnlinePaymentNotificationRenewIndividual', 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional', 'numMonthsBeforeSubscriptionExpiryReminder', 'numWeeksBeforeSubscriptionExpiryReminder', 'numWeeksAfterSubscriptionExpiryReminder', 'numMonthsAfterSubscriptionExpiryReminder'));
 
 		$this->addCheck(new FormValidatorInSet($this, 'numMonthsBeforeSubscriptionExpiryReminder', 'required', 'manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid', array_keys($this->validNumMonthsBeforeExpiry)));
@@ -145,17 +145,16 @@ class SubscriptionPolicyForm extends Form {
 	 * Get the names of the fields for which localized settings are used
 	 * @return array
 	 */
-	function getLocaleFieldNames() {
+	public function getLocaleFieldNames() {
 		return array('subscriptionAdditionalInformation');
 	}
 
 	/**
 	 * Save subscription policies.
 	 */
-	function execute() {
+	public function execute() {
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
-		$journalId = $journal->getId();
 
 		$journal->setData('subscriptionName', $this->getData('subscriptionName'));
 		$journal->setData('subscriptionEmail', $this->getData('subscriptionEmail'));
