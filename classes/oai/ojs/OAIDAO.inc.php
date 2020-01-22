@@ -25,7 +25,6 @@ class OAIDAO extends PKPOAIDAO {
 	var $articleGalleyDao;
 	var $issueDao;
  	var $authorDao;
- 	var $journalSettingsDao;
 
  	var $journalCache;
 	var $sectionCache;
@@ -41,7 +40,6 @@ class OAIDAO extends PKPOAIDAO {
 		$this->articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->issueDao = DAORegistry::getDAO('IssueDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
-		$this->journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
 		$this->journalCache = array();
 		$this->sectionCache = array();

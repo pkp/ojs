@@ -108,27 +108,24 @@ class SubscriptionPolicyForm extends Form {
 	 * Initialize form data from current subscription policies.
 	 */
 	function initData() {
-		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
-		$journalId = $journal->getId();
-
 		$this->_data = array(
-			'subscriptionName' => $journalSettingsDao->getSetting($journalId, 'subscriptionName'),
-			'subscriptionEmail' => $journalSettingsDao->getSetting($journalId, 'subscriptionEmail'),
-			'subscriptionPhone' => $journalSettingsDao->getSetting($journalId, 'subscriptionPhone'),
-			'subscriptionMailingAddress' => $journalSettingsDao->getSetting($journalId, 'subscriptionMailingAddress'),
-			'subscriptionAdditionalInformation' => $journalSettingsDao->getSetting($journalId, 'subscriptionAdditionalInformation'),
-			'enableOpenAccessNotification' => $journalSettingsDao->getSetting($journalId, 'enableOpenAccessNotification'),
-			'subscriptionExpiryPartial' => $journalSettingsDao->getSetting($journalId, 'subscriptionExpiryPartial'),
-			'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual'),
-			'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional'),
-			'enableSubscriptionOnlinePaymentNotificationRenewIndividual' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationRenewIndividual'),
-			'enableSubscriptionOnlinePaymentNotificationRenewInstitutional' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional'),
-			'numMonthsBeforeSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numMonthsBeforeSubscriptionExpiryReminder'),
-			'numWeeksBeforeSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numWeeksBeforeSubscriptionExpiryReminder'),
-			'numMonthsAfterSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numMonthsAfterSubscriptionExpiryReminder'),
-			'numWeeksAfterSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numWeeksAfterSubscriptionExpiryReminder')
+			'subscriptionName' => $journal->getData('subscriptionName'),
+			'subscriptionEmail' => $journal->getData('subscriptionEmail'),
+			'subscriptionPhone' => $journal->getData('subscriptionPhone'),
+			'subscriptionMailingAddress' => $journal->getData('subscriptionMailingAddress'),
+			'subscriptionAdditionalInformation' => $journal->getData('subscriptionAdditionalInformation'),
+			'enableOpenAccessNotification' => $journal->getData('enableOpenAccessNotification'),
+			'subscriptionExpiryPartial' => $journal->getData('subscriptionExpiryPartial'),
+			'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual' => $journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual'),
+			'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional' => $journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional'),
+			'enableSubscriptionOnlinePaymentNotificationRenewIndividual' => $journal->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual'),
+			'enableSubscriptionOnlinePaymentNotificationRenewInstitutional' => $journal->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional'),
+			'numMonthsBeforeSubscriptionExpiryReminder' => $journal->getData('numMonthsBeforeSubscriptionExpiryReminder'),
+			'numWeeksBeforeSubscriptionExpiryReminder' => $journal->getData('numWeeksBeforeSubscriptionExpiryReminder'),
+			'numMonthsAfterSubscriptionExpiryReminder' => $journal->getData('numMonthsAfterSubscriptionExpiryReminder'),
+			'numWeeksAfterSubscriptionExpiryReminder' => $journal->getData('numWeeksAfterSubscriptionExpiryReminder'),
 		);
 	}
 
@@ -156,25 +153,27 @@ class SubscriptionPolicyForm extends Form {
 	 * Save subscription policies.
 	 */
 	function execute() {
-		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
-		$journalSettingsDao->updateSetting($journalId, 'subscriptionName', $this->getData('subscriptionName'), 'string');
-		$journalSettingsDao->updateSetting($journalId, 'subscriptionEmail', $this->getData('subscriptionEmail'), 'string');
-		$journalSettingsDao->updateSetting($journalId, 'subscriptionPhone', $this->getData('subscriptionPhone'), 'string');
-		$journalSettingsDao->updateSetting($journalId, 'subscriptionMailingAddress', $this->getData('subscriptionMailingAddress'), 'string');
-		$journalSettingsDao->updateSetting($journalId, 'subscriptionAdditionalInformation', $this->getData('subscriptionAdditionalInformation'), 'string', true); // Localized
-		$journalSettingsDao->updateSetting($journalId, 'enableOpenAccessNotification', $this->getData('enableOpenAccessNotification') == null ? 0 : $this->getData('enableOpenAccessNotification'), 'bool');
-		$journalSettingsDao->updateSetting($journalId, 'subscriptionExpiryPartial', $this->getData('subscriptionExpiryPartial') == null ? 0 : $this->getData('subscriptionExpiryPartial'), 'bool');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual', $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual'), 'bool');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional', $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional'), 'bool');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationRenewIndividual', $this->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual'), 'bool');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional', $this->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional'), 'bool');
-		$journalSettingsDao->updateSetting($journalId, 'numMonthsBeforeSubscriptionExpiryReminder', $this->getData('numMonthsBeforeSubscriptionExpiryReminder'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'numWeeksBeforeSubscriptionExpiryReminder', $this->getData('numWeeksBeforeSubscriptionExpiryReminder'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'numMonthsAfterSubscriptionExpiryReminder', $this->getData('numMonthsAfterSubscriptionExpiryReminder'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'numWeeksAfterSubscriptionExpiryReminder', $this->getData('numWeeksAfterSubscriptionExpiryReminder'), 'int');
+		$journal->setData('subscriptionName', $this->getData('subscriptionName'));
+		$journal->setData('subscriptionEmail', $this->getData('subscriptionEmail'));
+		$journal->setData('subscriptionPhone', $this->getData('subscriptionPhone'));
+		$journal->setData('subscriptionMailingAddress', $this->getData('subscriptionMailingAddress'));
+		$journal->setData('subscriptionAdditionalInformation', $this->getData('subscriptionAdditionalInformation')); // Localized
+		$journal->setData('enableOpenAccessNotification', $this->getData('enableOpenAccessNotification') == null ? 0 : $this->getData('enableOpenAccessNotification'));
+		$journal->setData('subscriptionExpiryPartial', $this->getData('subscriptionExpiryPartial') == null ? 0 : $this->getData('subscriptionExpiryPartial'));
+		$journal->setData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual', $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual'));
+		$journal->setData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional', $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional'));
+		$journal->setData('enableSubscriptionOnlinePaymentNotificationRenewIndividual', $this->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual'));
+		$journal->setData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional', $this->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional'));
+		$journal->setData('numMonthsBeforeSubscriptionExpiryReminder', $this->getData('numMonthsBeforeSubscriptionExpiryReminder'));
+		$journal->setData('numWeeksBeforeSubscriptionExpiryReminder', $this->getData('numWeeksBeforeSubscriptionExpiryReminder'));
+		$journal->setData('numMonthsAfterSubscriptionExpiryReminder', $this->getData('numMonthsAfterSubscriptionExpiryReminder'));
+		$journal->setData('numWeeksAfterSubscriptionExpiryReminder', $this->getData('numWeeksAfterSubscriptionExpiryReminder'));
+
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journalDao->updateObject($journal);
 	}
 }

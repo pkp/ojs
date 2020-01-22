@@ -171,9 +171,8 @@ class SubscriptionForm extends Form {
 			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', function() {
 				$request = Application::get()->getRequest();
 				$journal = $request->getJournal();
-				$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-				$subscriptionName = $journalSettingsDao->getSetting($journal->getId(), 'subscriptionName');
-				$subscriptionEmail = $journalSettingsDao->getSetting($journal->getId(), 'subscriptionEmail');
+				$subscriptionName = $journal->getData('subscriptionName');
+				$subscriptionEmail = $journal->getData('subscriptionEmail');
 				return $subscriptionName != '' && $subscriptionEmail != '';
 			}));
 		}
@@ -210,7 +209,6 @@ class SubscriptionForm extends Form {
 	function _prepareNotificationEmail($mailTemplateKey) {
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
@@ -219,10 +217,10 @@ class SubscriptionForm extends Form {
 		$user = $userDao->getById($this->subscription->getUserId());
 		$subscriptionType = $subscriptionTypeDao->getById($this->subscription->getTypeId());
 
-		$subscriptionName = $journalSettingsDao->getSetting($journalId, 'subscriptionName');
-		$subscriptionEmail = $journalSettingsDao->getSetting($journalId, 'subscriptionEmail');
-		$subscriptionPhone = $journalSettingsDao->getSetting($journalId, 'subscriptionPhone');
-		$subscriptionMailingAddress = $journalSettingsDao->getSetting($journalId, 'subscriptionMailingAddress');
+		$subscriptionName = $journal->getData('subscriptionName');
+		$subscriptionEmail = $journal->getData('subscriptionEmail');
+		$subscriptionPhone = $journal->getData('subscriptionPhone');
+		$subscriptionMailingAddress = $journal->getData('subscriptionMailingAddress');
 		$subscriptionContactSignature = $subscriptionName;
 
 		if ($subscriptionMailingAddress != '') {
