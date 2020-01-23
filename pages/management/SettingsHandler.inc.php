@@ -78,7 +78,7 @@ class SettingsHandler extends ManagementHandler {
 		// form loads a single field which enables/disables the plugin, and does
 		// not need to be submitted. It's a dirty hack, but we can change this once
 		// an API is in place for plugins and plugin settings.
-		$plnPlugin = PluginRegistry::getPlugin('plugins.generic', 'pln');
+		$plnPlugin = PluginRegistry::getPlugin('generic', 'plnplugin');
 		$archivePnForm = new \PKP\components\forms\FormComponent('archivePn', 'PUT', 'dummy', 'dummy', $supportedFormLocales);
 		$archivePnForm->addPage([
 				'id' => 'default',
