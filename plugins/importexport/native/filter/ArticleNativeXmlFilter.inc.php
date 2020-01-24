@@ -88,7 +88,40 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		$nativeFilterHelper = new NativeFilterHelper();
 		$coversNode = $nativeFilterHelper->createCoversNode($this, $doc, $submission);
 		if ($coversNode) $submissionNode->appendChild($coversNode);
+
+		$citationsListNode = $this->createCitationsNode($doc, $deployment, $submission);
+		if($citationsListNode !== false){
+			$submissionNode->appendChild($citationsListNode);
+		}
 		return $submissionNode;
+	}
+
+	/**
+	 * Create and return a Citations node.
+	 * @param $doc DOMDocument
+	 * @param $deployment
+	 * @param $submission Submission
+	 * @return DOMElement
+	 */
+	private function createCitationsNode($doc, $deployment, $submission){
+		$citationDao = DAORegistry::getDAO('CitationDAO');
+
+		$citationsList = $doc->createElementNS($deployment->getNamespace(), 'citationsList');
+
+		$submissionCitations = $citationDao->getBySubmissionId($submission->_data['id']);
+		if($submissionCitations->getCount() != 0){
+			while($elementCitation = $submissionCitations->next()){
+				$rawCitation = $elementCitation->getRawCitation();
+				if(!empty($rawCitation)){
+					$citationsNode = $doc->createElementNS($deployment->getNamespace(), 'citations');
+					$citationsNode->setAttribute('idCitation', $elementCitation->getId());
+					$citationsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'citation', htmlspecialchars($rawCitation, ENT_COMPAT, 'UTF-8')));
+					$citationsList->appendChild($citationsNode);
+				}
+			}
+			return $citationsList;
+		}
+		return false;
 	}
 
 }
