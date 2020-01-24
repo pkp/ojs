@@ -44,7 +44,7 @@ class PaymentsGridCellProvider extends GridCellProvider {
 
 		switch ($column->getId()) {
 			case 'name':
-				$userDao = DAORegistry::getDAO('UserDAO');
+				$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 				$user = $userDao->getById($payment->getUserId());
 				return array('label' => $user->getFullName());
 			case 'type':

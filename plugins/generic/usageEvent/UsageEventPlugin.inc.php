@@ -124,7 +124,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					$canonicalUrlParams = array($article->getId(), $galley->getId(), $fileId);
 					$idParams = array('a' . $article->getId(), 'g' . $galley->getId(), 'f' . $fileId);
 					$downloadSuccess = false;
-					$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+					$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 					$pubObject = $submissionFileDao->getLatestRevision($fileId);
 					break;
 				default:

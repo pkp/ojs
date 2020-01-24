@@ -68,7 +68,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 		if ($session->getUserId()) { return false; }
 
 		import('lib.pkp.classes.security.AccessKeyManager');
-		$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO');
+		$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO'); /* @var $reviewerSubmissionDao ReviewerSubmissionDAO */
 		$reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
 
 		// Validate the access key
@@ -83,7 +83,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 		if (!$accessKey) { return false; }
 
 		// Get the reviewer user object
-		$userDao = DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$user = $userDao->getById($accessKey->getUserId());
 		if (!$user) { return false; }
 

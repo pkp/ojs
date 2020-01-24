@@ -115,7 +115,7 @@ class ArticleGalleyForm extends Form {
 		import('classes.file.IssueFileManager');
 
 		$articleGalley = $this->_articleGalley;
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 
 		if ($articleGalley) {
 			$articleGalley->setLabel($this->getData('label'));

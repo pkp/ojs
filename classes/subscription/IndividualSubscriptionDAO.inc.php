@@ -398,7 +398,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
 	function getAll($rangeInfo = null) {
-		$userDao = DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$result = $this->retrieveRange(
 			'SELECT s.*,
 			' . $userDao->getFetchColumns() .'
@@ -432,7 +432,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
 	function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
-		$userDao = DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$params = array_merge($userDao->getFetchParameters(), array((int) $journalId));
 		$result = $this->retrieveRange(
 			'SELECT	s.*,
@@ -515,7 +515,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
 	function getByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
-		$userDao = DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$dateEnd = explode('-', $dateEnd);
 		$params = array_merge(
 			$userDao->getFetchParameters(),

@@ -81,7 +81,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 */
 	public function getContents($templateMgr, $request = null) {
 		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		if ($issueDao->getCurrent($journal->getId(), true)) {
 			return parent::getContents($templateMgr, $request);
 		}

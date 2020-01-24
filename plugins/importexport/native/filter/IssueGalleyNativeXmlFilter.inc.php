@@ -92,7 +92,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	 * @param $issueGalley IssueGalley
 	 */
 	function addFile($doc, $issueGalleyNode, $issueGalley) {
-		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
 		$issueFile = $issueFileDao->getById($issueGalley->getFileId());
 
 		if ($issueFile) {

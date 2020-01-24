@@ -122,14 +122,14 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		$contents = file_get_contents($submissionFile->getFilePath());
 
 		// Replace media file references
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		import('lib.pkp.classes.submission.SubmissionFile'); // Constants
 		$embeddableFiles = array_merge(
 			$submissionFileDao->getLatestRevisions($submissionId, SUBMISSION_FILE_PROOF),
 			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionId, SUBMISSION_FILE_DEPENDENT)
 		);
 		$referredArticle = null;
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 
 		foreach ($embeddableFiles as $embeddableFile) {
 			$params = array();
@@ -176,7 +176,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		$contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
 
 		// Perform variable replacement for journal, issue, site info
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issue = $issueDao->getBySubmissionId($submissionId);
 
 		$journal = $request->getJournal();

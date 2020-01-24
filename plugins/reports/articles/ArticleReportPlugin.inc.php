@@ -63,7 +63,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=articles-' . $acronym . '-' . date('Ymd') . '.csv');
 
-		$articleReportDao = DAORegistry::getDAO('ArticleReportDAO');
+		$articleReportDao = DAORegistry::getDAO('ArticleReportDAO'); /* @var $articleReportDao ArticleReportDAO */
 		list($articlesIterator, $authorsIterator, $editorsIterator, $decisionsIterator) = $articleReportDao->getArticleReport($journal->getId());
 
 		$maxAuthors = $this->getMaxCount($authorsIterator);
@@ -142,10 +142,10 @@ class ArticleReportPlugin extends ReportPlugin {
 		import('classes.submission.Submission'); // Bring in getStatusMap function
 		$statusMap = Article::getStatusMap();
 
-		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
-		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
-		$submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO');
-		$submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO');
+		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionKeywordDao SubmissionKeywordDAO */
+		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /* @var $submissionSubjectDao SubmissionSubjectDAO */
+		$submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /* @var $submissionDisciplineDao SubmissionDisciplineDAO */
+		$submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO'); /* @var $submissionAgencyDao SubmissionAgencyDAO */
 
 		$authorIndex = 0;
 		while ($article = $articlesIterator->next()) {

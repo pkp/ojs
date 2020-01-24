@@ -180,7 +180,7 @@ class OJSPaymentManager extends PaymentManager {
 		$journal = $request->getContext();
 		if ($queuedPayment) switch ($queuedPayment->getType()) {
 			case PAYMENT_TYPE_MEMBERSHIP:
-				$userDao = DAORegistry::getDAO('UserDAO');
+				$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 				$user = $userDao->getById($queuedPayment->getUserId());
 				$dateEnd = $user->getSetting('dateEndMembership', 0);
 				if (!$dateEnd) $dateEnd = 0;
@@ -195,8 +195,8 @@ class OJSPaymentManager extends PaymentManager {
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 				$subscriptionId = $queuedPayment->getAssocId();
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
 					$subscription = $institutionalSubscriptionDao->getById($subscriptionId);
 					$institutional = true;
@@ -242,8 +242,8 @@ class OJSPaymentManager extends PaymentManager {
 				break;
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$subscriptionId = $queuedPayment->getAssocId();
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
 					$subscription = $institutionalSubscriptionDao->getById($subscriptionId);
 					$institutional = true;
@@ -287,11 +287,11 @@ class OJSPaymentManager extends PaymentManager {
 				// Invalid payment type
 				assert(false);
 		}
-		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 		$completedPayment = $this->createCompletedPayment($queuedPayment, $payMethodPluginName, $request->getUser()->getId());
 		$completedPaymentDao->insertObject($completedPayment);
 
-		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
+		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /* @var $queuedPaymentDao QueuedPaymentDAO */
 		$queuedPaymentDao->deleteById($queuedPayment->getId());
 
 		return $returner;
@@ -305,17 +305,17 @@ class OJSPaymentManager extends PaymentManager {
 		switch ($payment->getType()) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
 
 				if ($institutionalSubscriptionDao->subscriptionExists($payment->getAssocId())) {
 					$subscription = $institutionalSubscriptionDao->getById($payment->getAssocId());
 				} else {
-					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
 					$subscription = $individualSubscriptionDao->getById($payment->getAssocId());
 				}
 				if (!$subscription) return __('payment.type.subscription');
 
-				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 				$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 				return __('payment.type.subscription') . ' (' . $subscriptionType->getLocalizedName() . ')';

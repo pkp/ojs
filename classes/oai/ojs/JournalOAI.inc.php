@@ -122,7 +122,7 @@ class JournalOAI extends OAI {
 		$info->earliestDatestamp = $this->dao->getEarliestDatestamp(array($this->journalId));
 
 		$info->toolkitTitle = 'Open Journal Systems';
-		$versionDao = DAORegistry::getDAO('VersionDAO');
+		$versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
 		$currentVersion = $versionDao->getCurrentVersion();
 		$info->toolkitVersion = $currentVersion->getVersionString();
 		$info->toolkitURL = 'http://pkp.sfu.ca/ojs/';

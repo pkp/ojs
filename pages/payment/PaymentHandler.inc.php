@@ -49,7 +49,7 @@ class PaymentHandler extends Handler {
 
 		$paymentManager = Application::getPaymentManager($request->getContext());
 		$templateMgr = TemplateManager::getManager($request);
-		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
+		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /* @var $queuedPaymentDao QueuedPaymentDAO */
 		$queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = array_shift($args));
 		if (!$queuedPayment) {
 			$templateMgr->assign(array(

@@ -74,7 +74,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $assocId int optional
 	 */
 	public function deleteTextIndex($articleId, $type = null, $assocId = null) {
-		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
 		return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
 	}
 
@@ -105,7 +105,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			}
 
 			if (isset($parser) && $parser->open()) {
-				$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+				$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
 				$objectId = $searchDao->insertObject($articleId, $type, $fileId);
 
 				$position = 0;
@@ -122,7 +122,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $submission Submission
 	 */
 	public function clearSubmissionFiles($submission) {
-		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
 		$searchDao->deleteSubmissionKeywords($submission->getId(), SUBMISSION_SEARCH_GALLEY_FILE);
 	}
 
@@ -145,7 +145,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
-			$fileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$fileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $fileDao SubmissionFileDAO */
 			import('lib.pkp.classes.submission.SubmissionFile'); // Constants
 			// Index galley files
 			$files = $fileDao->getLatestRevisions(
@@ -264,12 +264,12 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 			// Clear index
 			if ($log) echo __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
-			$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+			$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
 			$searchDao->clearIndex();
 			if ($log) echo __('search.cli.rebuildIndex.done') . "\n";
 
 			// Build index
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 			$journals = $journalDao->getAll();
 			while ($journal = $journals->next()) {
@@ -303,7 +303,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $position int
 	 */
 	protected function _indexObjectKeywords($objectId, $text, &$position) {
-		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
 		$keywords = $this->filterKeywords($text);
 		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
 			if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
@@ -320,7 +320,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $assocId int optional
 	 */
 	protected function _updateTextIndex($articleId, $type, $text, $assocId = null) {
-		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
+		$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
 		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
 		$position = 0;
 		$this->_indexObjectKeywords($objectId, $text, $position);

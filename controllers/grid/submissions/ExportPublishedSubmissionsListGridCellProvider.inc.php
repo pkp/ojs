@@ -64,7 +64,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 			case 'issue':
 				$contextId = $submission->getContextId();
 				$issueId = $submission->getCurrentPublication()->getData('issueId');
-				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 				$issue = $issueDao->getById($issueId, $contextId);
 				// Link to the issue edit modal
 				$application = Application::get();

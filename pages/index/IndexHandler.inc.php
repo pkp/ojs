@@ -53,7 +53,7 @@ class IndexHandler extends PKPIndexHandler {
 				'journalDescription' => $journal->getLocalizedData('description'),
 			));
 
-			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 			$issue = $issueDao->getCurrent($journal->getId(), true);
 			if (isset($issue) && $journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {
 				import('pages.issue.IssueHandler');
@@ -65,7 +65,7 @@ class IndexHandler extends PKPIndexHandler {
 
 			$templateMgr->display('frontend/pages/indexJournal.tpl');
 		} else {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			$site = $request->getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getById($site->getRedirect())) != null) {

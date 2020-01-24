@@ -191,7 +191,7 @@ class Application extends PKPApplication {
 	 */
 	public static function getPluginSettingsContextColumnName() {
 		if (defined('SESSION_DISABLE_INIT')) {
-			$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
+			$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 			$driver = $pluginSettingsDao->getDriver();
 			switch ($driver) {
 				case 'mysql':

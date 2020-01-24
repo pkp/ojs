@@ -196,7 +196,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 		if ($statusId) {
 			$pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
 		}
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		return $issueDao->getExportable(
 			$context->getId(),
 			$this->_plugin->getPubIdType(),

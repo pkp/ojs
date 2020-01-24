@@ -24,11 +24,11 @@ class ArticleReportDAO extends DAO {
 	function getArticleReport($journalId) {
 		$locale = AppLocale::getLocale();
 
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 		$articlesReturner = $submissionDao->getByContextId($journalId);
 
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
-		$authorDao = DAORegistry::getDAO('AuthorDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 		$articles = $submissionDao->getByContextId($journalId);
 		$authorParams = array_merge(
 			$authorDao->getFetchParameters(),
@@ -43,7 +43,7 @@ class ArticleReportDAO extends DAO {
 				(int) $journalId,
 			)
 		);
-		$userDao = DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$site = Application::get()->getRequest()->getSite();
 		$sitePrimaryLocale = $site->getPrimaryLocale();
 		$authorsReturner = $editorsReturner = $decisionsReturner = array();
@@ -76,7 +76,7 @@ class ArticleReportDAO extends DAO {
 			unset($result);
 
 			// Get all assigned editors and sub-editors
-			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
 			$managerAssignmentFactory = $stageAssignmentDao->getBySubmissionAndRoleId($article->getId(), ROLE_ID_MANAGER);
 			$subEditorAssignmentFactory = $stageAssignmentDao->getBySubmissionAndRoleId($article->getId(), ROLE_ID_SUB_EDITOR);
 			$editorsAssignments = array_merge($managerAssignmentFactory->toArray(), $subEditorAssignmentFactory->toArray());

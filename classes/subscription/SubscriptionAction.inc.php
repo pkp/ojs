@@ -42,10 +42,10 @@ class SubscriptionAction {
 
 		if (empty($subscriptionContactEmail)) return false;
 
-		$userDao = DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$user = $userDao->getById($subscription->getUserId());
 
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId());
 
 		$paramArray = array(

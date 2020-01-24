@@ -103,7 +103,7 @@ class ArticleGalley extends Representation {
 	 */
 	function getFile() {
 		if (!isset($this->_submissionFile)) {
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 			$this->_submissionFile = $submissionFileDao->getLatestRevision($this->getFileId());
 		}
 		return $this->_submissionFile;

@@ -70,7 +70,7 @@ class WebFeedPlugin extends GenericPlugin {
 		if (is_null($currentJournal)) {
 			return;
 		}
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$currentIssue = $issueDao->getCurrent($currentJournal->getId(), true);
 
 		if (!$currentIssue) {

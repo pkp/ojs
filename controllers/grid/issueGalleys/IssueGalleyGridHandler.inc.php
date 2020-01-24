@@ -262,7 +262,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function delete($args, $request) {
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
 		if ($issueGalley && $request->checkCSRF()) {
 			$issueGalleyDao->deleteObject($issueGalley);
@@ -276,7 +276,7 @@ class IssueGalleyGridHandler extends GridHandler {
 	 */
 	protected function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 		return $issueGalleyDao->getByIssueId($issue->getId());
 	}
 }

@@ -196,7 +196,7 @@ class IssueGridHandler extends GridHandler {
 
 		// Check if the passed filename matches the filename for this issue's
 		// cover page.
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issue = $issueDao->getById((int) $args['issueId']);
 		$locale = AppLocale::getLocale();
 		if ($args['coverImage'] != $issue->getCoverImage($locale)) {
@@ -314,7 +314,7 @@ class IssueGridHandler extends GridHandler {
 			}
 		}
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issueDao->deleteObject($issue);
 		if ($issue->getCurrent()) {
 			$issues = $issueDao->getPublishedIssues($journal->getId());
@@ -475,7 +475,7 @@ class IssueGridHandler extends GridHandler {
 
 		HookRegistry::call('IssueGridHandler::publishIssue', array(&$issue));
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issueDao->updateCurrent($contextId,$issue);
 
 		if (!$wasPublished) {
@@ -502,7 +502,7 @@ class IssueGridHandler extends GridHandler {
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationUsers = array();
-			$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+			$userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
 			$allUsers = $userGroupDao->getUsersByContextId($contextId);
 			while ($user = $allUsers->next()) {
 				if ($user->getDisabled()) continue;
@@ -538,7 +538,7 @@ class IssueGridHandler extends GridHandler {
 
 		HookRegistry::call('IssueGridHandler::unpublishIssue', array(&$issue));
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issueDao->updateObject($issue);
 
 		// insert article tombstones for all articles
@@ -575,7 +575,7 @@ class IssueGridHandler extends GridHandler {
 
 		$issue->setCurrent(1);
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issueDao->updateCurrent($journal->getId(), $issue);
 
 		$dispatcher = $request->getDispatcher();

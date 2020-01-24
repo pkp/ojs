@@ -134,7 +134,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		// Get the context.
 		$journal = $request->getContext();
 
-		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
 		$rangeInfo = $this->getGridRangeInfo($request, $this->getId());
 		return $subscriptionDao->getByJournalId($journal->getId(), null, $filter['searchField'], $filter['searchMatch'], $filter['search']?$filter['search']:null, null, null, null, $rangeInfo);
 	}
@@ -194,7 +194,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 
 		// Identify the subscription ID.
 		$subscriptionId = $request->getUserVar('rowId');
-		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
 		$subscriptionDao->deleteById($subscriptionId, $context->getId());
 		return DAO::getDataChangedEvent();
 	}

@@ -42,7 +42,7 @@ class ToolsHandler extends PKPToolsHandler {
 
 		switch ($assocType) {
 			case ASSOC_TYPE_ISSUE:
-				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 				$issue = $issueDao->getById($assocId);
 				if ($issue) {
 					$objectTitle = $issue->getIssueIdentification();

@@ -44,7 +44,7 @@ class SubmissionHandler extends PKPSubmissionHandler {
 		}
 		switch ($request->getUserVar('list')) {
 			case 'languages':
-				$languageDao = DAORegistry::getDAO('LanguageDAO');
+				$languageDao = DAORegistry::getDAO('LanguageDAO'); /* @var $languageDao LanguageDAO */
 				$languages = $languageDao->getLanguages($locale);
 				$matches = array();
 				foreach ($languages as $language) {

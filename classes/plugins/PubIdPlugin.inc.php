@@ -36,7 +36,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 					$submissionEnabled = $this->isObjectTypeEnabled('Submission', $context->getId());
 					$representationEnabled = $this->isObjectTypeEnabled('Representation', $context->getId());
 					if ($issueEnabled) {
-						$issueDao = DAORegistry::getDAO('IssueDAO');
+						$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 						$issues = $issueDao->getPublishedIssues($context->getId());
 						while ($issue = $issues->next()) {
 							$issuePubId = $issue->getStoredPubId($this->getPubIdType());
@@ -255,9 +255,9 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		if (!$submissionPubIdEnabled && !$representationPubIdEnabled && !$filePubIdEnabled) return false;
 
 		$pubIdType = $this->getPubIdType();
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 		$representationDao = Application::getRepresentationDAO();
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 
 		$submissionIds = Services::get('submission')->getIds([

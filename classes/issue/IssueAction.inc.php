@@ -55,7 +55,7 @@ class IssueAction {
 			$journalId = $journal->getId();
 			$userId = $user->getId();
 
-			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
 			$stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR, null, $userId);
 			$stageAssignment = $stageAssignments->next();
 			if ($stageAssignment) return true;
@@ -83,7 +83,7 @@ class IssueAction {
 	 * @return bool
 	 */
 	function subscribedUser($user, $journal, $issueId = null, $articleId = null) {
-		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
 		$submission = Application::getSubmissionDAO()->getById($articleId);
 		$result = false;
 		if (isset($user) && isset($journal)) {
@@ -106,7 +106,7 @@ class IssueAction {
 						}
 					}
 				} else if (isset($issueId)) {
-					$issueDao = DAORegistry::getDAO('IssueDAO');
+					$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 					$issue = $issueDao->getById($issueId);
 					if (isset($issue) && $issue->getPublished()) {
 						import('classes.subscription.SubscriptionDAO');
@@ -128,7 +128,7 @@ class IssueAction {
 	 * @return bool
 	 */
 	function subscribedDomain($request, $journal, $issueId = null, $articleId = null) {
-		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
 		$result = false;
 		if (isset($journal)) {
 			$result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId());
@@ -143,7 +143,7 @@ class IssueAction {
 						$result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $submission->getDatePublished());
 					}
 				} else if (isset($issueId)) {
-					$issueDao = DAORegistry::getDAO('IssueDAO');
+					$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 					$issue = $issueDao->getById($issueId);
 					if (isset($issue) && $issue->getPublished()) {
 						import('classes.subscription.SubscriptionDAO');
@@ -164,7 +164,7 @@ class IssueAction {
 	 * @return bool
 	 */
 	function _roleAllowedPrePublicationAccess($journal, $user) {
-		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$roleDao = DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
 		if ($user && $journal) {
 			$journalId = $journal->getId();
 			$userId = $user->getId();

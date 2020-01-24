@@ -82,7 +82,7 @@ class DRIVERPlugin extends GenericPlugin {
 
 		$records = array();
 		if (isset($set) && $set == 'driver') {
-			$driverDao = DAORegistry::getDAO('DRIVERDAO');
+			$driverDao = DAORegistry::getDAO('DRIVERDAO'); /* @var $driverDao DRIVERDAO */
 			$driverDao->setOAI($journalOAI);
 			if ($hookName == 'JournalOAI::records') {
 				$funcName = '_returnRecordFromRow';
@@ -116,7 +116,7 @@ class DRIVERPlugin extends GenericPlugin {
 		$articleTombstone =& $params[0];
 
 		if ($this->isDRIVERArticle($articleTombstone->getOAISetObjectId(ASSOC_TYPE_JOURNAL), $articleTombstone->getDataObjectId())) {
-			$dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO');
+			$dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO'); /* @var $dataObjectTombstoneSettingsDao DataObjectTombstoneSettingsDAO */
 			$dataObjectTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'driver', true, 'bool');
 		}
 		return false;
@@ -130,8 +130,8 @@ class DRIVERPlugin extends GenericPlugin {
 	function isDRIVERRecord($row) {
 		// if the article is alive
 		if (!isset($row['tombstone_id'])) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
 			$journal = $journalDao->getById($row['journal_id']);
 			$submission = Services::get('submission')->get($row['submission_id']);
@@ -170,7 +170,7 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 			return false;
 		} else {
-			$dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO');
+			$dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO'); /* @var $dataObjectTombstoneSettingsDao DataObjectTombstoneSettingsDAO */
 			return $dataObjectTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
 		}
 	}
@@ -182,8 +182,8 @@ class DRIVERPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function isDRIVERArticle($journalId, $articleId) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
 			$journal = $journalDao->getById($journalId);
 			$submission = Services::get('submission')->get($articleId);

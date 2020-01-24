@@ -402,7 +402,7 @@ abstract class SubscriptionDAO extends DAO {
 	function _renewSubscription($subscription) {
 		if ($subscription->isNonExpiring()) return;
 
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 		$duration = $subscriptionType->getDuration();

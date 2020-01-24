@@ -63,7 +63,7 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager {
 	 * @return boolean
 	 */
 	public function getEditorTakenActionInReviewRound($context, $reviewRound, $decisions = array()) {
-		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
 		$editorDecisions = $editDecisionDao->getEditorDecisions($reviewRound->getSubmissionId(), $reviewRound->getStageId(), $reviewRound->getRound());
 
 		if (empty($decisions)) {

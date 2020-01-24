@@ -37,7 +37,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 			}
 		}
 
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		$subscriptionTypeIterator = $subscriptionTypeDao->getByInstitutional($journalId, true);
 		$this->subscriptionTypes = array();
 		while ($subscriptionType = $subscriptionTypeIterator->next()) {
@@ -51,7 +51,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 
 		// Ensure subscription type is valid
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdValid', function($typeId) use ($journalId) {
-			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 			return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 1);
 		}));
 
@@ -97,7 +97,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		$ipRanges = $this->getData('ipRanges');
 		$ipRangeProvided = !empty(trim($ipRanges));
 
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		$subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
 
 		// If online or print + online, domain or at least one IP range has been provided
@@ -142,7 +142,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		$ipRanges = explode("\r\n", trim($ipRanges));
 		$this->subscription->setIPRanges($ipRanges);
 
-		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
 		if ($insert) {
 			$institutionalSubscriptionDao->insertObject($this->subscription);
 		} else {

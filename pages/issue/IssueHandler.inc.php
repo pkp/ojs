@@ -47,7 +47,7 @@ class IssueHandler extends Handler {
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		if ($galleyId) {
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $galleyDao IssueGalleyDAO */
 			$journal = $request->getJournal();
 			$galley = $galleyDao->getByBestId($galleyId, $issue->getId());
 
@@ -70,7 +70,7 @@ class IssueHandler extends Handler {
 	 */
 	function current($args, $request) {
 		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issue = $issueDao->getCurrent($journal->getId(), true);
 
 		if ($issue != null) {
@@ -235,7 +235,7 @@ class IssueHandler extends Handler {
 						}
 
 						// If the issue galley has been purchased, then allow reader access
-						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
 						if ($completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId()) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
 							return true;
@@ -296,9 +296,9 @@ class IssueHandler extends Handler {
 			'locale' => $locale,
 		));
 
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 
-		$genreDao = DAORegistry::getDAO('GenreDAO');
+		$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
 		$primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
 		$primaryGenreIds = array_map(function($genre) {
 			return $genre->getId();
@@ -358,7 +358,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
 		}
 
-		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 		$templateMgr->assign(array(
 			'hasAccess' => !$subscriptionRequired ||
 				$issue->getAccessStatus() == ISSUE_ACCESS_OPEN ||

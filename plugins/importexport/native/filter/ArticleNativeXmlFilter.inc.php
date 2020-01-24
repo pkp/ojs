@@ -62,7 +62,7 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 
 		// Add the series, if one is designated.
 		if ($sectionId = $submission->getSectionId()) {
-			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 			$section = $sectionDao->getById($sectionId, $submission->getContextId());
 			assert(isset($section));
 			$submissionNode->setAttribute('section_ref', $section->getLocalizedAbbrev());
@@ -75,7 +75,7 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		// if this is a published submission and not part/subelement of an issue element
 		// add issue identification element
 		if ($isPublished && !$deployment->getIssue()) {
-			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 			$issue = $issueDao->getById($publication->getData('issueId'));
 			import('plugins.importexport.native.filter.NativeFilterHelper');
 			$nativeFilterHelper = new NativeFilterHelper();

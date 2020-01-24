@@ -186,7 +186,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @param $issue Issue
 	 */
 	function addArticles($doc, $issueNode, $issue) {
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$nativeExportFilters = $filterDao->getObjectsByGroup('article=>native-xml');
 		assert(count($nativeExportFilters)==1); // Assert only a single serialization filter
 		$exportFilter = array_shift($nativeExportFilters);
@@ -210,13 +210,13 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @param $issue Issue
 	 */
 	function addIssueGalleys($doc, $issueNode, $issue) {
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$nativeExportFilters = $filterDao->getObjectsByGroup('issuegalley=>native-xml');
 		assert(count($nativeExportFilters)==1); // Assert only a single serialization filter
 		$exportFilter = array_shift($nativeExportFilters);
 		$exportFilter->setDeployment($this->getDeployment());
 
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 		$issue = $issueGalleyDao->getByIssueId($issue->getId());
 		$issueGalleysDoc = $exportFilter->execute($issue);
 		if ($issueGalleysDoc->documentElement instanceof DOMElement) {
@@ -232,7 +232,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @param $issue Issue
 	 */
 	function addSections($doc, $issueNode, $issue) {
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$sections = $sectionDao->getByIssueId($issue->getId());
 		$deployment = $this->getDeployment();
 		$journal = $deployment->getContext();

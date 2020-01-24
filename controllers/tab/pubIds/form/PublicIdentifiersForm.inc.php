@@ -34,7 +34,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 		parent::execute();
 		$pubObject = $this->getPubObject();
 		if (is_a($pubObject, 'Issue')) {
-			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 			$issueDao->updateObject($pubObject);
 		}
 	}

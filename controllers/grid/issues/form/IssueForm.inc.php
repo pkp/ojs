@@ -55,7 +55,7 @@ class IssueForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		return $issueDao->getLocaleFieldNames();
 	}
 
@@ -102,7 +102,7 @@ class IssueForm extends Form {
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$request = Application::get()->getRequest();
 			$user = $request->getUser();
-			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 
 			import('classes.file.PublicFileManager');
@@ -180,7 +180,7 @@ class IssueForm extends Form {
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		if ($this->issue) {
 			$isNewIssue = false;
 			$issue = $this->issue;
@@ -228,7 +228,7 @@ class IssueForm extends Form {
 		// Copy an uploaded cover file for the issue, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$user = $request->getUser();
-			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 
 			import('classes.file.PublicFileManager');

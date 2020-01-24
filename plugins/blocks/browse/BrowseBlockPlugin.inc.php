@@ -41,7 +41,7 @@ class BrowseBlockPlugin extends BlockPlugin {
 		if (!$context) {
 			return '';
 		}
-		$categoryDao = DAORegistry::getDAO('CategoryDAO');
+		$categoryDao = DAORegistry::getDAO('CategoryDAO'); /* @var $categoryDao CategoryDAO */
 		$router = $request->getRouter();
 
 		$requestedCategoryPath = null;

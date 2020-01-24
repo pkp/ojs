@@ -478,14 +478,14 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$issueId = $issue->getId();
 
 		// Delete issue-specific ordering if it exists.
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$sectionDao->deleteCustomSectionOrdering($issueId);
 
 		// Delete published issue galleys and issue files
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 		$issueGalleyDao->deleteByIssueId($issueId);
 
-		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
 		$issueFileDao->deleteByIssueId($issueId);
 
 		import('classes.file.IssueFileManager');

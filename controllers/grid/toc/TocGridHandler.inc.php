@@ -180,7 +180,7 @@ class TocGridHandler extends CategoryGridHandler {
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
 	function setDataElementSequence($request, $sectionId, $gridDataElement, $newSequence) {
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		if (!$sectionDao->customSectionOrderingExists($issue->getId())) {
 			$sectionDao->setDefaultCustomSectionOrders($issue->getId());
@@ -231,7 +231,7 @@ class TocGridHandler extends CategoryGridHandler {
 			$sectionId = $submission->getData('sectionId');
 			$submissionsInSections = Services::get('submission')->getInSections($issue->getId());
 			if (!empty($submissionsInSections[$sectionId]) && count($submissionsInSections[$sectionId]) === 1) {
-				$sectionDao = DAORegistry::getDAO('SectionDAO');
+				$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 				$sectionDao->deleteCustomSection($issue->getId(), $sectionId);
 			}
 			$publication = Services::get('publication')->edit(

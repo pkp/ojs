@@ -97,7 +97,7 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 		$reviewer = $this->userDao->getById($row['reviewer_id']);
 
 		// Editor Decisions
-		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
 		$decisions = $editDecisionDao->getEditorDecisions($row['submission_id']);
 		$reviewerSubmission->setDecisions($decisions);
 

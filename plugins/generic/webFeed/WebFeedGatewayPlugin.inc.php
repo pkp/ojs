@@ -88,7 +88,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		if (!$journal) return false;
 
 		// Make sure there's a current issue for this journal
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issue = $issueDao->getCurrent($journal->getId(), true);
 		if (!$issue) return false;
 
@@ -122,7 +122,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 			$submissionsInSections = Services::get('submission')->getInSections($issue->getId());
 		}
 
-		$versionDao = DAORegistry::getDAO('VersionDAO');
+		$versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
 		$version = $versionDao->getCurrentVersion();
 
 		$templateMgr = TemplateManager::getManager($request);

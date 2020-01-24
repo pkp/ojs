@@ -53,7 +53,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		$context = $deployment->getContext();
 		$sectionAbbrev = $node->getAttribute('section_ref');
 		if ($sectionAbbrev !== '') {
-			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 			$section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
 			if (!$section) {
 				$deployment->addError(ASSOC_TYPE_SUBMISSION, NULL, __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
@@ -93,7 +93,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		$deployment = $this->getDeployment();
 		$sectionAbbrev = $node->getAttribute('section_ref');
 		if ($sectionAbbrev !== '') {
-			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 			$section = $sectionDao->getByAbbrev($sectionAbbrev, $submission->getContextId());
 			if (!$section) {
 				$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
@@ -170,7 +170,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		}
 		// Caps on class name for consistency with imports, whose filter
 		// group names are generated implicitly.
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$importFilters = $filterDao->getObjectsByGroup('native-xml=>' . $importClass);
 		$importFilter = array_shift($importFilters);
 		return $importFilter;
@@ -250,7 +250,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 				}
 			}
 		}
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issue = null;
 		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
 		if ($issuesByIdentification->getCount() != 1) {

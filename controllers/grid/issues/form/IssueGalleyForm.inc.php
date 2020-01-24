@@ -137,10 +137,10 @@ class IssueGalleyForm extends Form {
 		$user = $request->getUser();
 
 		$issueGalley = $this->_issueGalley;
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 
 		// If a temporary file ID was specified (i.e. an upload occurred), get the file for later.
-		$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+		$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
 		$temporaryFile = $temporaryFileDao->getTemporaryFile($this->getData('temporaryFileId'), $user->getId());
 
 		parent::execute(...$functionArgs);

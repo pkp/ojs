@@ -127,7 +127,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	function exportSubmissions($submissionIds, $context, $user) {
 		$submissionDao = Application::getSubmissionDAO();
 		$xml = '';
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
 		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
 		$exportFilter = array_shift($pubmedExportFilters);
@@ -157,7 +157,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	 */
 	function exportIssues($issueIds, $context, $user) {
 		$xml = '';
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
 		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
 		$exportFilter = array_shift($pubmedExportFilters);
@@ -186,8 +186,8 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
 		$journal = $journalDao->getByPath($journalPath);
 

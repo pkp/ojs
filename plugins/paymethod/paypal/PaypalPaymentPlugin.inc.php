@@ -146,7 +146,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 	 */
 	function handle($args, $request) {
 		$journal = $request->getJournal();
-		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
+		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /* @var $queuedPaymentDao QueuedPaymentDAO */
 		import('classes.payment.ojs.OJSPaymentManager'); // Class definition required for unserializing
 		try {
 			$queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = $request->getUserVar('queuedPaymentId'));

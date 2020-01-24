@@ -76,7 +76,7 @@ class IssueAccessForm extends Form {
 	function execute() {
 		$journal = Application::get()->getRequest()->getJournal();
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$this->_issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN);
 		if ($openAccessDate = $this->getData('openAccessDate')) $this->_issue->setOpenAccessDate($openAccessDate);
 		else $this->_issue->setOpenAccessDate(null);

@@ -33,7 +33,7 @@ class IssueFileManager extends FileManager {
 	 * @param $issueId int
 	 */
 	function __construct($issueId) {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issue = $issueDao->getById($issueId);
 		assert(isset($issue));
 
@@ -81,7 +81,7 @@ class IssueFileManager extends FileManager {
 	 * @return boolean if successful
 	 */
 	function deleteById($fileId) {
-		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
 		$issueFile = $issueFileDao->getById($fileId);
 
 		if (parent::deleteByPath($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName())) {
@@ -106,7 +106,7 @@ class IssueFileManager extends FileManager {
 	 * @return boolean
 	 */
 	function downloadById($fileId, $inline = false) {
-		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
 		$issueFile = $issueFileDao->getById($fileId);
 
 		if ($issueFile) {
@@ -153,7 +153,7 @@ class IssueFileManager extends FileManager {
 		if (HookRegistry::call('IssueFileManager::fromTemporaryFile', array(&$temporaryFile, &$contentType, &$result))) return $result;
 
 		$issueId = $this->getIssueId();
-		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
 
 		$contentTypePath = $this->contentTypeToPath($contentType);
 		$dir = $this->getFilesDir() . $contentTypePath . '/';

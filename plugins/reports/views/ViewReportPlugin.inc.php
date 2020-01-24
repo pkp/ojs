@@ -66,7 +66,7 @@ class ViewReportPlugin extends ReportPlugin {
 		$articleTitles = array();
 		$articleIssueIdentificationMap = array();
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $context->getId(),
 			'status' => STATUS_PUBLISHED,

@@ -51,8 +51,8 @@ class SectionGridHandler extends SetupGridHandler {
 		$this->setTitle('section.sections');
 
 		// Elements to be displayed in the grid
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$subEditorsDao = DAORegistry::getDAO('SubEditorsDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+		$subEditorsDao = DAORegistry::getDAO('SubEditorsDAO'); /* @var $subEditorsDao SubEditorsDAO */
 		$sectionIterator = $sectionDao->getByJournalId($journal->getId());
 
 		$gridData = array();
@@ -138,7 +138,7 @@ class SectionGridHandler extends SetupGridHandler {
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
 	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$journal = $request->getJournal();
 		$section = $sectionDao->getById($rowId, $journal->getId());
 		$section->setSequence($newSequence);
@@ -205,7 +205,7 @@ class SectionGridHandler extends SetupGridHandler {
 	function deleteSection($args, $request) {
 		$journal = $request->getJournal();
 
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$section = $sectionDao->getById(
 			$request->getUserVar('sectionId'),
 			$journal->getId()
@@ -220,7 +220,7 @@ class SectionGridHandler extends SetupGridHandler {
 		}
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 		$checkSubmissions = $submissionDao->retrieve('SELECT submission_id FROM submissions WHERE section_id = ? AND context_id = ?', array((int) $request->getUserVar('sectionId'), (int) $journal->getId()));
 
 		if ($checkSubmissions->numRows() > 0) {
