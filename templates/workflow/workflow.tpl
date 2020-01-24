@@ -15,7 +15,7 @@
 
 <div class="pkp_page_content">
 	{assign var="uuid" value=""|uniqid|escape}
-	<div id="workflow-{$uuid}" class="pkpWorkflow">
+	<div id="workflow-{$uuid}" class="pkpWorkflow" v-cloak>
 		<pkp-header :is-one-line="true" class="pkpWorkflow__header">
 			<h1 class="pkpWorkflow__identification">
 				<badge
