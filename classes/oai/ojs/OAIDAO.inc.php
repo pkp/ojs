@@ -113,7 +113,7 @@ class OAIDAO extends PKPOAIDAO {
 			$abbrev = $journal->getPath();
 			array_push($sets, new OAISet(urlencode($abbrev), $title, ''));
 
-			$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
+			$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
 			$articleTombstoneSets = $tombstoneDao->getSets(ASSOC_TYPE_JOURNAL, $journal->getId());
 
 			$sections = $this->sectionDao->getByJournalId($journal->getId());

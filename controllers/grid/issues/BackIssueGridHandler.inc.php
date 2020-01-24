@@ -62,7 +62,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
 	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issueDao->moveCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId(), $newSequence);
 	}
 
@@ -70,7 +70,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 	 * @copydoc GridHandler::getDataElementSequence()
 	 */
 	function getDataElementSequence($gridDataElement) {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$customOrder = $issueDao->getCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId());
 		if ($customOrder !== null) return $customOrder;
 
@@ -91,7 +91,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 	 */
 	protected function loadData($request, $filter) {
 		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		return $issueDao->getPublishedIssues($journal->getId());
 	}
 

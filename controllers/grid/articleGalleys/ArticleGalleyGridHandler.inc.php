@@ -163,7 +163,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
 	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galley = $galleyDao->getById($rowId);
 		$galley->setSequence($newSequence);
 		$galleyDao->updateObject($galley);
@@ -201,7 +201,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * @copydoc GridHandler::loadData()
 	 */
 	function loadData($request, $filter = null) {
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		return $galleyDao->getByPublicationId($this->getPublication()->getId());
 	}
 
@@ -288,7 +288,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galley = $this->getGalley();
 		if (!$galley || !$request->checkCSRF()) return new JSONMessage(false);
 
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galleyDao->deleteObject($galley);
 
 		if ($galley->getFileId()) {
@@ -296,7 +296,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$publication = Services::get('publication')->get($galley->getData('publicationId'));
 
 			// Delete dependent files if no other galley uses them
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 			$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galley->getId(), $publication->getData('submissionId'), SUBMISSION_FILE_PROOF);
 			foreach ($galleyFiles as $file) {
 				$sharedFileGalleys = DAORegistry::getDAO('ArticleGalleyDAO')->getByFileId($file->getFileId())->toArray();
@@ -308,12 +308,12 @@ class ArticleGalleyGridHandler extends GridHandler {
 			// Delete main galley file if no other galley uses it
 			$sharedFileGalleys = DAORegistry::getDAO('ArticleGalleyDAO')->getByFileId($galley->getFileId())->toArray();
 			if (empty($sharedFileGalleys)) {
-				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 				$submissionFileDao->deleteAllRevisionsById($galley->getFileId());
 			}
 		}
 
-		$notificationDao = DAORegistry::getDAO('NotificationDAO');
+		$notificationDao = DAORegistry::getDAO('NotificationDAO'); /* @var $notificationDao NotificationDAO */
 		$notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());
 
 		if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||

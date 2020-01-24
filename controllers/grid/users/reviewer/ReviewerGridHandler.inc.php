@@ -34,7 +34,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler {
 			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry');
 			$submission = $this->getSubmission();
-			$userDao = DAORegistry::getDAO('UserDAO');
+			$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 			$reviewer = $userDao->getById($reviewAssignment->getReviewerId());
 			$user = $request->getUser();
 			AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_APP_EDITOR);

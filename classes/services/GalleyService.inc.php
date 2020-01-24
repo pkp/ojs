@@ -58,7 +58,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 */
 	public function getMany($args = []) {
 		$galleyQO = $this->getQueryBuilder($args)->getQuery();
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$result = $galleyDao->retrieveRange($galleyQO->toSql(), $galleyQO->getBindings());
 		$queryResults = new DAOResultFactory($result, $galleyDao, '_fromRow');
 
@@ -302,7 +302,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 * @copydoc \PKP\Services\EntityProperties\EntityWriteInterface::edit()
 	 */
 	public function edit($galley, $params, $request) {
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 
 		$newGalley = $galleyDao->newDataObject();
 		$newGalley->_data = array_merge($galley->_data, $params);
@@ -326,7 +326,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		// Delete related submission files
 		$publication = Services::get('publication')->get($galley->getData('publicationId'));
 
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		import('lib.pkp.classes.submission.SubmissionFile'); // Import constants
 		$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galley->getId(), $publication->getData('submissionId'), SUBMISSION_FILE_PROOF);
 		foreach ($galleyFiles as $file) {

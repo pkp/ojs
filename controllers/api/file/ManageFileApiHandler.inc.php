@@ -131,9 +131,9 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 
 		switch ($submissionFile->getFileStage()) {
 			case SUBMISSION_FILE_PROOF:
-				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 				assert($submissionFile->getAssocType() == ASSOC_TYPE_REPRESENTATION);
-				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 				$allRevisions = $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $submissionFile->getAssocId());
 				$galley = $galleyDao->getById($submissionFile->getAssocId());
 				if ($galley) {

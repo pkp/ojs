@@ -31,8 +31,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 	 * @param $emailKey string Email template key
 	 */
 	protected function sendReminder ($subscription, $journal, $emailKey) {
-		$userDao = DAORegistry::getDAO('UserDAO');
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 
 		$journalName = $journal->getLocalizedName();
 		$user = $userDao->getById($subscription->getUserId());
@@ -100,8 +100,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$expiryDay = $curDay;
 
 				// Retrieve all subscriptions that match expiry date
-				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
 				$individualSubscriptions = $individualSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 				$institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
@@ -125,8 +125,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$expiryMonth = (int)fmod($expiryMonth,12);
 
 				// Retrieve all subscriptions that match expiry date
-				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
 				$individualSubscriptions = $individualSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 				$institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
@@ -156,8 +156,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$expiryDay = $curDay;
 
 				// Retrieve all subscriptions that match expiry date
-				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
 				$individualSubscriptions = $individualSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 				$institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
@@ -194,8 +194,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$expiryYear = $curYear - $afterYears;
 
 				// Retrieve all subscriptions that match expiry date
-				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
 				$individualSubscriptions = $individualSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 				$institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
@@ -215,7 +215,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 	 * @copydoc ScheduledTask::executeActions()
 	 */
 	protected function executeActions() {
-		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journals = $journalDao->getAll(true);
 
 		$todayDate = array(

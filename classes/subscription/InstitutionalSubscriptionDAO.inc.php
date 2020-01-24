@@ -430,7 +430,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
 	function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
-		$userDao = DAORegistry::getDAO('UserDAO');
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$params = array_merge($userDao->getFetchParameters(), array((int) $journalId));
 		$ipRangeSql1 = $ipRangeSql2 = '';
 		$searchSql = $this->_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);

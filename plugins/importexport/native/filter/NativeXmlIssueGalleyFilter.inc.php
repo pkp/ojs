@@ -81,7 +81,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) if (is_a($n, 'DOMElement')) switch($n->tagName) {
 			case 'label': $issueGalley->setLabel($n->textContent); break;
 			case 'issue_file':
-				$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
+				$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
 				$issueFile = $issueFileDao->newDataObject();
 				$issueFile->setIssueId($issue->getId());
 

@@ -65,7 +65,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		// if the issue identification matches an existing issue, flag to process only child objects
 		$issueExists = false;
 		$issue = $this->_issueExists($node);
@@ -213,7 +213,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseIssueGalley($n, $issue) {
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$importFilters = $filterDao->getObjectsByGroup('native-xml=>IssueGalley');
 		assert(count($importFilters)==1); // Assert only a single unserialization filter
 		$importFilter = array_shift($importFilters);
@@ -249,7 +249,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseArticle($n, $issue) {
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$importFilters = $filterDao->getObjectsByGroup('native-xml=>article');
 		assert(count($importFilters)==1); // Assert only a single unserialization filter
 		$importFilter = array_shift($importFilters);
@@ -288,7 +288,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		$context = $deployment->getContext();
 
 		// Create the data object
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$section = $sectionDao->newDataObject();
 		$section->setContextId($context->getId());
 		$section->setReviewFormId($node->getAttribute('review_form_id'));
@@ -416,7 +416,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		$issue = null;
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		foreach ($node->getElementsByTagName('issue_identification') as $n) {
 			$searchIssue = $issueDao->newDataObject();
 			$this->parseIssueIdentification($n, $searchIssue, false);

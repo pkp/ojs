@@ -230,9 +230,9 @@ class ArticleSearch extends SubmissionSearch {
 	 *  issue, journal, section and the issue availability.
 	 */
 	function formatResults($results, $user = null) {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$contextDao = Application::getContextDAO();
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 
 		$publishedSubmissionCache = array();
 		$articleCache = array();
@@ -309,7 +309,7 @@ class ArticleSearch extends SubmissionSearch {
 			$article = Services::get('submission')->get($submissionId);
 			if ($article->getData('status') === STATUS_PUBLISHED) {
 				// Retrieve keywords (if any).
-				$submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+				$submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionSubjectDao SubmissionKeywordDAO */
 				$allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getId(), array(AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale())));
 				foreach ($allSearchTerms as $locale => $localeSearchTerms) {
 					$searchTerms += $localeSearchTerms;

@@ -356,7 +356,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 					$dates[DATACITE_DATE_SUBMITTED] = $submittedDate;
 				}
 				// Accepted date: the last editor accept decision date
-				$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
+				$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
 				$editDecisions = $editDecisionDao->getEditorDecisions($article->getId());
 				foreach (array_reverse($editDecisions) as $editDecision) {
 					if ($editDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {

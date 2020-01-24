@@ -39,7 +39,7 @@ class AuthorDAO extends PKPAuthorDAO {
 
 		$supportedLocales = array();
 		if ($journalId !== null) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			$journal = $journalDao->getById($journalId);
 			$supportedLocales = $journal->getSupportedLocales();
 		} else {

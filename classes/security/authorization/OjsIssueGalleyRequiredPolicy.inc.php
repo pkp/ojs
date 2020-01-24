@@ -37,7 +37,7 @@ class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy {
 
 		// Make sure the issue galley belongs to the journal.
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 		$issueGalley = $issueGalleyDao->getById($issueGalleyId, $issue->getId());
 		if (!is_a($issueGalley, 'IssueGalley')) return AUTHORIZATION_DENY;
 

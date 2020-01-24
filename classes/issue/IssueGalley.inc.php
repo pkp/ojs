@@ -170,7 +170,7 @@ class IssueGalley extends IssueFile {
 	 */
 	function getFile() {
 		if (!isset($this->_issueFile)) {
-			$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
+			$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
 			$this->_issueFile = $issueFileDao->getById($this->getFileId());
 		}
 		return $this->_issueFile;

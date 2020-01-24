@@ -186,7 +186,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$pdfGalleyInArticleLocale = null;
 		// get immediatelly also supplementary files for component list
 		$componentGalleys = array();
-		$genreDao = DAORegistry::getDAO('GenreDAO');
+		$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
 		foreach ($galleys as $galley) {
 			// filter supp files with DOI
 			if (!$galley->getRemoteURL()) {

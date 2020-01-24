@@ -529,7 +529,7 @@ class Issue extends DataObject {
 	 * @return int
 	 */
 	function getNumArticles() {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		return $issueDao->getNumArticles($this->getId());
 	}
 

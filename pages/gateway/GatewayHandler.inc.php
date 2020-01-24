@@ -69,7 +69,7 @@ class GatewayHandler extends Handler {
 
 			$year = $request->getUserVar('year');
 
-			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
 			// FIXME Should probably go in IssueDAO or a subclass
 			if (isset($year)) {
@@ -124,7 +124,7 @@ class GatewayHandler extends Handler {
 			}
 			$templateMgr->assign('locales', $locales);
 		} else {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			$journals = $journalDao->getAll(true);
 			$templateMgr->assign('journals', $journals);
 		}
@@ -151,7 +151,7 @@ class GatewayHandler extends Handler {
 
 			$year = $request->getUserVar('year');
 
-			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
 			// FIXME Should probably go in IssueDAO or a subclass
 			if (isset($year)) {
@@ -211,7 +211,7 @@ class GatewayHandler extends Handler {
 			$templateMgr->assign('locales', $locales);
 
 		} else {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			$journals = $journalDao->getAll(true);
 			$templateMgr->assign('journals', $journals);
 		}

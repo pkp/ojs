@@ -209,7 +209,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	 */
 	function getPublishedIssues($issueIds, $context) {
 		$publishedIssues = array();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		foreach ($issueIds as $issueId) {
 			$publishedIssue = $issueDao->getById($issueId, $context->getId());
 			if ($publishedIssue && $publishedIssue->getStoredPubId('doi')) $publishedIssues[] = $publishedIssue;
@@ -224,7 +224,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	 */
 	function getArticleGalleys($galleyIds) {
 		$galleys = array();
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 		foreach ($galleyIds as $galleyId) {
 			$articleGalley = $articleGalleyDao->getById($galleyId);
 			if ($articleGalley && $articleGalley->getStoredPubId('doi')) $galleys[] = $articleGalley;

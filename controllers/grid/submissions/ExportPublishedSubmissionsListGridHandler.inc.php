@@ -168,7 +168,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler {
 	 */
 	function renderFilter($request, $filterData = array()) {
 		$context = $request->getContext();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issuesIterator = $issueDao->getPublishedIssues($context->getId());
 		$issues = $issuesIterator->toArray();
 		foreach ($issues as $issue) {

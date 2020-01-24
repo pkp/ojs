@@ -282,7 +282,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @param $uattr array
 	 */
 	function userFromAttr(&$user, &$uattr) {
-		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
 		$site = $siteDao->getSite();
 
 		$attr = array_change_key_case($uattr, CASE_LOWER); // Note:  array_change_key_case requires PHP >= 4.2.0
@@ -329,7 +329,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @param $attr array
 	 */
 	function userToAttr(&$user, &$attr) {
-		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
 		$site = $siteDao->getSite();
 		// FIXME empty strings for unset fields?
 		if ($user->getFullName())

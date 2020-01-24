@@ -86,7 +86,7 @@ class ResolverPlugin extends GatewayPlugin {
 				$number = array_shift($args);
 				$page = (int) array_shift($args);
 
-				$issueDao = DAORegistry::getDAO('IssueDAO');
+				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 				$issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), $volume, $number, $year);
 
 				// Ensure only one issue matched, and fetch it.
@@ -128,8 +128,8 @@ class ResolverPlugin extends GatewayPlugin {
 	}
 
 	function exportHoldings() {
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$journals = $journalDao->getAll(true);
 		$request = Application::get()->getRequest();
 		header('content-type: text/plain');

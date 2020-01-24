@@ -51,7 +51,7 @@ class MetricsDAO extends PKPMetricsDAO {
 		if (!$contextId) {
 			switch ($assocType) {
 				case ASSOC_TYPE_ISSUE_GALLEY:
-					$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
+					$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 					$issueGalley = $issueGalleyDao->getById($assocId);
 					if (!$issueGalley) {
 						throw new Exception('Cannot load record: invalid issue galley id.');
@@ -69,7 +69,7 @@ class MetricsDAO extends PKPMetricsDAO {
 						$issueId = $assocObjId;
 					}
 
-					$issueDao = DAORegistry::getDAO('IssueDAO');
+					$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 					$issue = $issueDao->getById($issueId);
 
 					if (!$issue) {

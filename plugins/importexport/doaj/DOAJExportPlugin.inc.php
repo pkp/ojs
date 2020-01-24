@@ -208,7 +208,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	 */
 	function exportJSON($object, $filter, $context) {
 		$json = '';
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$exportFilters = $filterDao->getObjectsByGroup($filter);
 		assert(count($exportFilters) == 1); // Assert only a single serialization filter
 		$exportFilter = array_shift($exportFilters);

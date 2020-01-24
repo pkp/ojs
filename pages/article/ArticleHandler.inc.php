@@ -183,7 +183,7 @@ class ArticleHandler extends Handler {
 		$primaryGalleys = array();
 		$supplementaryGalleys = array();
 		if ($galleys) {
-			$genreDao = DAORegistry::getDAO('GenreDAO');
+			$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
 			$primaryGenres = $genreDao->getPrimaryByContextId($context->getId())->toArray();
 			$primaryGenreIds = array_map(function($genre) {
 				return $genre->getId();
@@ -258,7 +258,7 @@ class ArticleHandler extends Handler {
 			$subscribedUser = $issueAction->subscribedUser($user, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 			$subscribedDomain = $issueAction->subscribedDomain($request, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 
-			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 			$templateMgr->assign('hasAccess',
 				!$subscriptionRequired ||
 				$publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN ||
@@ -320,11 +320,11 @@ class ArticleHandler extends Handler {
 			$dispatcher->handle404();
 		}
 		$suppId = isset($args[1]) ? $args[1] : 0;
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		$submissionFiles = $submissionFileDao->getBySubmissionId($articleId);
 		foreach ($submissionFiles as $submissionFile) {
 			if ($submissionFile->getData('old-supp-id') == $suppId) {
-				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 				$articleGalleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
 				while ($articleGalley = $articleGalleys->next()) {
 					$galleyFile = $articleGalley->getFile();
@@ -422,7 +422,7 @@ class ArticleHandler extends Handler {
 
 				$purchasedIssue = false;
 				if (!$subscribedUser && $paymentManager->purchaseIssueEnabled()) {
-					$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+					$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 					$purchasedIssue = $completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId());
 				}
 
@@ -446,7 +446,7 @@ class ArticleHandler extends Handler {
 
 						/* if the article has been paid for then forget about everything else
 						 * and just let them access the article */
-						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
 						if ($completedPaymentDao->hasPaidPurchaseArticle($userId, $submission->getId())
 							|| (!is_null($dateEndMembership) && $dateEndMembership > time())) {

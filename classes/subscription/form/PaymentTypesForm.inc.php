@@ -77,7 +77,7 @@ class PaymentTypesForm extends Form {
 		foreach (array_keys($this->settings) as $settingName) {
 			$journal->setData($settingName, $this->getData($settingName));
 		}
-		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journalDao->updateObject($journal);
 	}
 }

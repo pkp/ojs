@@ -200,7 +200,7 @@ class IssueHandler extends APIHandler {
 		$request = $this->getRequest();
 		$context = $request->getContext();
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$issue = $issueDao->getCurrent($context->getId());
 
 		if (!$issue) {

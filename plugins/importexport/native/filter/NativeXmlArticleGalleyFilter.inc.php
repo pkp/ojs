@@ -93,7 +93,7 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 
 		if ($addSubmissionFile) {
 			// Update the submission file.
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 			$submissionFile = $submissionFileDao->getRevision($dbFileId, $revisionId);
 			$submissionFile->setAssocType(ASSOC_TYPE_REPRESENTATION);
 			$submissionFile->setAssocId($representation->getId());

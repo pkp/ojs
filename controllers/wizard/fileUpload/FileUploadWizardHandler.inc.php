@@ -31,7 +31,7 @@ class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 		// we don't need to validate in another places.
 		$fileStage = $request->getUserVar('fileStage');
 		if ($fileStage) {
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 			$fileStages = $submissionFileDao->getAllFileStages();
 			if (!in_array($fileStage, $fileStages)) {
 				return false;
@@ -83,7 +83,7 @@ class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 
 		switch ($submissionFile->getFileStage()) {
 			case SUBMISSION_FILE_PROOF:
-				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 				assert($submissionFile->getAssocType() == ASSOC_TYPE_REPRESENTATION);
 				$galley = $galleyDao->getById($submissionFile->getAssocId());
 				if ($galley) {

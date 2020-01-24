@@ -63,8 +63,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 		$doc->preserveWhiteSpace = false;
 		$doc->formatOutput = true;
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journal = null;
 
 		$rootNode = $doc->createElement('ArticleSet');
@@ -121,7 +121,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 			$historyNode = $doc->createElement('History');
 			$historyNode->appendChild($this->generatePubDateDom($doc, $submission->getDateSubmitted(), 'received'));
 
-			$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
+			$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
 			$editDecisions = (array) $editDecisionDao->getEditorDecisions($submission->getId());
 			do {
 				$editorDecision = array_pop($editDecisions);

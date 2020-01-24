@@ -88,7 +88,7 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 			case ASSOC_TYPE_ISSUE:
 				$processedIssuesIds = $this->getProcessedObjectsIds(ASSOC_TYPE_ISSUE);
 				if (!empty($processedIssuesIds)) {
-					$issueDao = DAORegistry::getDAO('IssueDAO');
+					$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 					foreach ($processedIssuesIds as $issueId) {
 						if ($issueId) {
 							$issue = $issueDao->getById($issueId);
@@ -100,7 +100,7 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 			case ASSOC_TYPE_SECTION:
 				$processedSectionIds = $this->getProcessedObjectsIds(ASSOC_TYPE_SECTION);
 				if (!empty($processedSectionIds)) {
-					$sectionDao = DAORegistry::getDAO('SectionDAO');
+					$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 					foreach ($processedSectionIds as $sectionId) {
 						if ($sectionId) {
 							$section = $sectionDao->getById($sectionId);

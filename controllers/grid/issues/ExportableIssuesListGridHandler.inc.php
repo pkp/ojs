@@ -39,7 +39,7 @@ class ExportableIssuesListGridHandler extends IssueGridHandler {
 	 */
 	protected function loadData($request, $filter) {
 		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		return $issueDao->getIssues($journal->getId(), $this->getGridRangeInfo($request, $this->getId()));
 	}
 

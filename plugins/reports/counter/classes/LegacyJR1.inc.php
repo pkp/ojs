@@ -96,7 +96,7 @@ class LegacyJR1 {
 		fputcsv($fp, $cols);
 
 		// Get statistics from the log.
-		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journalIds = $this->_getJournalIds($useLegacyStats);
 		foreach ($journalIds as $journalId) {
 			$journal = $journalDao->getById($journalId);
@@ -161,7 +161,7 @@ class LegacyJR1 {
 	function _assignTemplateCounterXML($request, $templateManager, $begin, $end='', $useLegacyStats) {
 		$journal = $request->getContext();
 
-		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journalIds = $this->_getJournalIds($useLegacyStats);
 
 		$site = $request->getSite();

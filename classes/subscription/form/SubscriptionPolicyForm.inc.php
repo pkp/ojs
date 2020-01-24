@@ -173,7 +173,7 @@ class SubscriptionPolicyForm extends Form {
 
 		parent::execute(...$functionArgs);
 
-		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journalDao->updateObject($journal);
 	}
 }

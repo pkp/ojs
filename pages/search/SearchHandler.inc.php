@@ -191,7 +191,7 @@ class SearchHandler extends Handler {
 		$journal = $request->getJournal();
 		$user = $request->getUser();
 
-		$authorDao = DAORegistry::getDAO('AuthorDAO');
+		$authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 
 		if (isset($args[0]) && $args[0] == 'view') {
 			// View a specific author
@@ -209,9 +209,9 @@ class SearchHandler extends Handler {
 			$sections = array();
 			$issuesUnavailable = array();
 
-			$issueDao = DAORegistry::getDAO('IssueDAO');
-			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 			foreach ($submissions as $article) {
 				$articleId = $article->getId();
@@ -251,7 +251,7 @@ class SearchHandler extends Handler {
 				'authorName' => $authorName
 			));
 
-			$countryDao = DAORegistry::getDAO('CountryDAO');
+			$countryDao = DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
 			$country = $countryDao->getCountry($country);
 			$templateMgr->assign('country', $country);
 

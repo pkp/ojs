@@ -348,7 +348,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 */
 	function exportXML($objects, $filter, $context, $noValidation = null) {
 		$xml = '';
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$exportFilters = $filterDao->getObjectsByGroup($filter);
 		assert(count($exportFilters) == 1); // Assert only a single serialization filter
 		$exportFilter = array_shift($exportFilters);
@@ -493,7 +493,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$contextPath = array_shift($args);
 		$objectType = array_shift($args);
 
-		$contextDao = DAORegistry::getDAO('JournalDAO');
+		$contextDao = DAORegistry::getDAO('JournalDAO'); /* @var $contextDao JournalDAO */
 		$context = $contextDao->getByPath($contextPath);
 		if (!$context) {
 			if ($contextPath != '') {
@@ -616,7 +616,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 */
 	function getPublishedIssues($issueIds, $context) {
 		$publishedIssues = array();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		foreach ($issueIds as $issueId) {
 			$publishedIssue = $issueDao->getById($issueId, $context->getId());
 			if ($publishedIssue) $publishedIssues[] = $publishedIssue;
@@ -631,7 +631,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 */
 	function getArticleGalleys($galleyIds) {
 		$galleys = array();
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 		foreach ($galleyIds as $galleyId) {
 			$articleGalley = $articleGalleyDao->getById($galleyId);
 			if ($articleGalley) $galleys[] = $articleGalley;

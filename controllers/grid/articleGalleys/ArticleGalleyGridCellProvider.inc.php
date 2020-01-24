@@ -79,7 +79,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 				$element = $row->getData();
 				if ($element->getRemoteUrl() != '' || !$element->getFileId()) break;
 
-				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 				import('lib.pkp.classes.submission.SubmissionFile');
 				$submissionFile = $submissionFileDao->getLatestRevision(
 					$element->getFileId(),
