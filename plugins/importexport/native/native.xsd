@@ -26,6 +26,7 @@
 						<element ref="pkp:issue_identification" minOccurs="0" maxOccurs="1" />
 						<element maxOccurs="1" minOccurs="0" name="pages" type="string" />
 						<element ref="pkp:covers" minOccurs="0" maxOccurs="1" />
+						<element minOccurs="0" maxOccurs="1" name="citationsList" />
 					</sequence>
 					<attribute name="section_ref" type="string" use="required" />
 					<attribute name="seq" type="int" />
@@ -45,6 +46,28 @@
 		</complexType>
 	</element>
 	<element name="articles" substitutionGroup="pkp:submissions" />
+
+	<!-- Permit "citationsList" as a root element to keep the filters happy -->
+	<element name="citationsList">
+		<complexType>
+			<sequence>
+				<element name="citationsList" type="string" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<!-- Permit "citations" as a root element to keep the filters happy -->
+	<element name="citations">
+		<complexType>
+			<sequence>
+				<element name="citation" type="string" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="idCitation" type="string" />
+		</complexType>
+	</element>
+
+	<!-- Permit "citation" as a root element to keep the filters happy -->
+	<element name="citation" type="string" />
 
 	<!-- Configure the use of the "article_galley" representation -->
 	<element name="article_galley" substitutionGroup="pkp:representation">
