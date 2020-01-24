@@ -45,7 +45,7 @@ class TemplateManager extends PKPTemplateManager {
 			if ($site->getData('styleSheet')) {
 				$this->addStyleSheet(
 					'siteStylesheet',
-					$request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . $site->getData('styleSheet'),
+					$request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . $site->getData('styleSheet')['uploadName'],
 					array(
 						'priority' => STYLE_SEQUENCE_LATE
 					)
