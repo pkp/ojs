@@ -39,7 +39,7 @@ class Subscription extends DataObject {
 	 * Get the journal ID of the subscription.
 	 * @return int
 	 */
-	function getJournalId() {
+	public function getJournalId() {
 		return $this->getData('journalId');
 	}
 
@@ -47,15 +47,15 @@ class Subscription extends DataObject {
 	 * Set the journal ID of the subscription.
 	 * @param $journalId int
 	 */
-	function setJournalId($journalId) {
-		return $this->setData('journalId', $journalId);
+	public function setJournalId($journalId) {
+		$this->setData('journalId', $journalId);
 	}
 
 	/**
 	 * Get the user ID of the subscription.
 	 * @return int
 	 */
-	function getUserId() {
+	public function getUserId() {
 		return $this->getData('userId');
 	}
 
@@ -63,16 +63,16 @@ class Subscription extends DataObject {
 	 * Set the user ID of the subscription.
 	 * @param $userId int
 	 */
-	function setUserId($userId) {
-		return $this->setData('userId', $userId);
+	public function setUserId($userId) {
+		$this->setData('userId', $userId);
 	}
 
 	/**
 	 * Get the user's full name of the subscription.
 	 * @return string
 	 */
-	function getUserFullName() {
-		$userDao = DAORegistry::getDAO('UserDAO');
+	public function getUserFullName() {
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		return $userDao->getUserFullName($this->getData('userId'));
 	}
 
@@ -80,8 +80,8 @@ class Subscription extends DataObject {
 	 * Get the user's email of the subscription.
 	 * @return string
 	 */
-	function getUserEmail() {
-		$userDao = DAORegistry::getDAO('UserDAO');
+	public function getUserEmail() {
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		return $userDao->getUserEmail($this->getData('userId'));
 	}
 
@@ -89,7 +89,7 @@ class Subscription extends DataObject {
 	 * Get the subscription type ID of the subscription.
 	 * @return int
 	 */
-	function getTypeId() {
+	public function getTypeId() {
 		return $this->getData('typeId');
 	}
 
@@ -97,16 +97,16 @@ class Subscription extends DataObject {
 	 * Set the subscription type ID of the subscription.
 	 * @param $typeId int
 	 */
-	function setTypeId($typeId) {
-		return $this->setData('typeId', $typeId);
+	public function setTypeId($typeId) {
+		$this->setData('typeId', $typeId);
 	}
 
 	/**
 	 * Get the subscription type name of the subscription.
 	 * @return string
 	 */
-	function getSubscriptionTypeName() {
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+	public function getSubscriptionTypeName() {
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		return $subscriptionTypeDao->getSubscriptionTypeName($this->getData('typeId'));
 	}
 
@@ -114,8 +114,8 @@ class Subscription extends DataObject {
 	 * Get the subscription type name of the subscription.
 	 * @return string
 	 */
-	function getSubscriptionTypeSummaryString() {
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+	public function getSubscriptionTypeSummaryString() {
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		$subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
 		return $subscriptionType->getSummaryString();
 	}
@@ -124,8 +124,8 @@ class Subscription extends DataObject {
 	 * Get the subscription type institutional flag for the subscription.
 	 * @return string
 	 */
-	function getSubscriptionTypeInstitutional() {
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+	public function getSubscriptionTypeInstitutional() {
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		return $subscriptionTypeDao->getSubscriptionTypeInstitutional($this->getData('typeId'));
 	}
 
@@ -133,8 +133,8 @@ class Subscription extends DataObject {
 	 * Check whether the subscription type is non-expiring for the subscription.
 	 * @return boolean
 	 */
-	function isNonExpiring() {
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+	public function isNonExpiring() {
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		$subscriptionType = $subscriptionTypeDao->getById($this->getTypeId());
 		return $subscriptionType->getNonExpiring();
 	}
@@ -143,7 +143,7 @@ class Subscription extends DataObject {
 	 * Get subscription start date.
 	 * @return date (YYYY-MM-DD)
 	 */
-	function getDateStart() {
+	public function getDateStart() {
 		return $this->getData('dateStart');
 	}
 
@@ -151,15 +151,15 @@ class Subscription extends DataObject {
 	 * Set subscription start date.
 	 * @param $dateStart date (YYYY-MM-DD)
 	 */
-	function setDateStart($dateStart) {
-		return $this->setData('dateStart', $dateStart);
+	public function setDateStart($dateStart) {
+		$this->setData('dateStart', $dateStart);
 	}
 
 	/**
 	 * Get subscription end date.
 	 * @return date (YYYY-MM-DD)
 	 */
-	function getDateEnd() {
+	public function getDateEnd() {
 		return $this->getData('dateEnd');
 	}
 
@@ -167,31 +167,31 @@ class Subscription extends DataObject {
 	 * Set subscription end date.
 	 * @param $dateEnd date (YYYY-MM-DD)
 	 */
-	function setDateEnd($dateEnd) {
-		return $this->setData('dateEnd', $dateEnd);
+	public function setDateEnd($dateEnd) {
+		$this->setData('dateEnd', $dateEnd);
 	}
 
 	/**
 	 * Get subscription status.
-	 * @return int
+	 * @return int SUBSCRIPTION_STATUS_...
 	 */
-	function getStatus() {
+	public function getStatus() {
 		return $this->getData('status');
 	}
 
 	/**
 	 * Set subscription status.
-	 * @param $status int
+	 * @param $status int SUBSCRIPTION_STATUS_...
 	 */
-	function setStatus($status) {
-		return $this->setData('status', $status);
+	public function setStatus($status) {
+		$this->setData('status', $status);
 	}
 
 	/**
 	 * Get subscription status string.
-	 * @return int
+	 * @return string
 	 */
-	function getStatusString() {
+	public function getStatusString() {
 		switch ($this->getData('status')) {
 			case SUBSCRIPTION_STATUS_ACTIVE:
 				return __('subscriptions.status.active');
@@ -214,7 +214,7 @@ class Subscription extends DataObject {
 	 * Get subscription membership.
 	 * @return string
 	 */
-	function getMembership() {
+	public function getMembership() {
 		return $this->getData('membership');
 	}
 
@@ -222,15 +222,15 @@ class Subscription extends DataObject {
 	 * Set subscription membership.
 	 * @param $membership string
 	 */
-	function setMembership($membership) {
-		return $this->setData('membership', $membership);
+	public function setMembership($membership) {
+		$this->setData('membership', $membership);
 	}
 
 	/**
 	 * Get subscription reference number.
 	 * @return string
 	 */
-	function getReferenceNumber() {
+	public function getReferenceNumber() {
 		return $this->getData('referenceNumber');
 	}
 
@@ -238,15 +238,15 @@ class Subscription extends DataObject {
 	 * Set subscription reference number.
 	 * @param $referenceNumber string
 	 */
-	function setReferenceNumber($referenceNumber) {
-		return $this->setData('referenceNumber', $referenceNumber);
+	public function setReferenceNumber($referenceNumber) {
+		$this->setData('referenceNumber', $referenceNumber);
 	}
 
 	/**
 	 * Get subscription notes.
 	 * @return string
 	 */
-	function getNotes() {
+	public function getNotes() {
 		return $this->getData('notes');
 	}
 
@@ -254,14 +254,15 @@ class Subscription extends DataObject {
 	 * Set subscription notes.
 	 * @param $notes string
 	 */
-	function setNotes($notes) {
-		return $this->setData('notes', $notes);
+	public function setNotes($notes) {
+		$this->setData('notes', $notes);
 	}
 
 	/**
 	 * Check whether subscription is expired
+	 * @return boolean
 	 */
-	function isExpired() {
+	public function isExpired() {
 		if (strtotime($this->getData('dateEnd')) < time()) {
 			return true;
 		} else {
