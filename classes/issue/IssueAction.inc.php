@@ -153,7 +153,7 @@ class IssueAction {
 			}
 		}
 		HookRegistry::call('IssueAction::subscribedDomain', array(&$request, &$journal, &$issueId, &$articleId, &$result));
-		return $result;
+		return (boolean) $result;
 	}
 
 	/**
