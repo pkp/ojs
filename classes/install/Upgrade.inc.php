@@ -2659,7 +2659,7 @@ class Upgrade extends Installer {
 			'data_object_tombstone_settings', 'email_templates_data', 'email_templates_default_data', 'external_feed_settings', 'filter_settings', 'genre_settings', 'group_settings',
 			'issue_galleys', 'issue_galley_settings', 'issue_settings', 'journal_settings', 'library_file_settings', 'metadata_description_settings',
 			'navigation_menu_item_assignment_settings', 'navigation_menu_item_settings', 'notification_settings', 'referral_settings',
-			'review_form_element_settings', 'review_form_settings', 'review_object_metadata_settings', 'review_object_type_settings', 'rt_versions', 'section_settings', 'site_settings',
+			'review_form_element_settings', 'review_form_settings', 'review_object_metadata_settings', 'review_object_type_settings', 'section_settings', 'site_settings',
 			'static_page_settings', 'submissions', 'submission_file_settings', 'submission_galleys', 'submission_galley_settings', 'submission_settings', 'subscription_type_settings',
 			'user_group_settings', 'user_settings',
 		);
