@@ -33,9 +33,9 @@ class IssueAccessForm extends Form {
 	}
 
 	/**
-	 * Fetch the form.
+	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'accessOptions' => array(
@@ -44,7 +44,7 @@ class IssueAccessForm extends Form {
 			),
 			'issueId' => $this->_issue->getId(),
 		));
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**

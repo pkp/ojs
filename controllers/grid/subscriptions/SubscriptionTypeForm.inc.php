@@ -88,17 +88,16 @@ class SubscriptionTypeForm extends Form {
 	}
 
 	/**
-	 * Fetch the form.
-	 * @param $request PKPRequest
+	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'typeId' =>$this->typeId,
 			'validCurrencies' => $this->validCurrencies,
 			'validFormats' => $this->validFormats,
 		));
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
@@ -140,9 +139,9 @@ class SubscriptionTypeForm extends Form {
 	}
 
 	/**
-	 * Save subscription type.
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 
 		if (isset($this->typeId)) {
@@ -165,6 +164,8 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setFormat($this->getData('format'));
 		$subscriptionType->setMembership((int) $this->getData('membership'));
 		$subscriptionType->setDisablePublicDisplay((int) $this->getData('disable_public_display'));
+
+		parent::execute(...$functionArgs);
 
 		// Update or insert subscription type
 		if ($subscriptionType->getId() != null) {

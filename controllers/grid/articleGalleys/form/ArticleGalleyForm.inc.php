@@ -111,7 +111,7 @@ class ArticleGalleyForm extends Form {
 	 * Save changes to the galley.
 	 * @return ArticleGalley The resulting article galley.
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		import('classes.file.IssueFileManager');
 
 		$articleGalley = $this->_articleGalley;
@@ -136,6 +136,8 @@ class ArticleGalleyForm extends Form {
 			$articleGalleyDao->insertObject($articleGalley);
 			$this->_articleGalley = $articleGalley;
 		}
+
+		parent::execute(...$functionArgs);
 
 		return $articleGalley;
 	}

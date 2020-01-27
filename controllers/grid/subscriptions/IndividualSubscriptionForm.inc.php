@@ -67,9 +67,9 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 	}
 
 	/**
-	 * Save individual subscription.
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$insert = false;
 		if (!isset($this->subscription)) {
 			import('classes.subscription.IndividualSubscription');
@@ -77,7 +77,7 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 			$insert = true;
 		}
 
-		parent::execute();
+		parent::execute(...$functionArgs);
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
 
 		if ($insert) {
