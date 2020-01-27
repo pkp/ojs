@@ -13,10 +13,6 @@
 [submodule "docs/manual"]
 	path = docs/manual
 	url = https://github.com/pkp/ojs-user-guide
-[submodule "plugins/generic/lensGalley"]
-	path = plugins/generic/lensGalley
-	url = https://github.com/asmecher/lensGalley
-	branch = i1472-fix
 [submodule "plugins/generic/googleAnalytics"]
 	path = plugins/generic/googleAnalytics
 	url = https://github.com/pkp/googleAnalytics.git
