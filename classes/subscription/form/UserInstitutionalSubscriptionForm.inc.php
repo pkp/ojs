@@ -154,9 +154,9 @@ class UserInstitutionalSubscriptionForm extends Form {
 	}
 
 	/**
-	 * Create institutional subscription.
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$journal = $this->request->getJournal();
 		$journalId = $journal->getId();
 		$typeId = $this->getData('typeId');
@@ -205,5 +205,6 @@ class UserInstitutionalSubscriptionForm extends Form {
 
 		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
 		$paymentForm->display($this->request);
+		parent::execute(...$functionArgs);
 	}
 }

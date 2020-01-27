@@ -122,9 +122,9 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 	}
 
 	/**
-	 * Save institutional subscription. 
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$insert = false;
 		if (!isset($this->subscription)) {
 			import('classes.subscription.InstitutionalSubscription');
@@ -132,7 +132,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 			$insert = true;
 		}
 
-		parent::execute();
+		parent::execute(...$functionArgs);
 
 		$this->subscription->setInstitutionName($this->getData('institutionName'));
 		$this->subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));

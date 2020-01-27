@@ -28,10 +28,10 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 	}
 
 	/**
-	 * Store objects with pub ids.
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
-		parent::execute();
+	function execute(...$functionArgs) {
+		parent::execute(...$functionArgs);
 		$pubObject = $this->getPubObject();
 		if (is_a($pubObject, 'Issue')) {
 			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */

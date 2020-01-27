@@ -69,14 +69,16 @@ class AnnouncementFeedSettingsForm extends Form {
 	}
 
 	/**
-	 * Save settings.
+	 * @copydoc Form::execute()
 	 */
-	public function execute() {
+	public function execute(...$functionArgs) {
 		$plugin = $this->_plugin;
 		$journalId = $this->_journalId;
 
 		$plugin->updateSetting($journalId, 'displayPage', $this->getData('displayPage'));
 		$plugin->updateSetting($journalId, 'recentItems', $this->getData('recentItems'));
+
+		parent::execute(...$functionArgs);
 	}
 
 }

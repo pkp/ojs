@@ -70,10 +70,10 @@ class IssueAccessForm extends Form {
 	}
 
 	/**
-	 * Save issue settings.
+	 * @copydoc Form::execute()
 	 * @return int Issue ID for created/updated issue
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$journal = Application::get()->getRequest()->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
@@ -83,6 +83,7 @@ class IssueAccessForm extends Form {
 
 		HookRegistry::call('IssueAccessForm::execute', array($this, $this->_issue));
 		$issueDao->updateObject($this->_issue);
+		parent::execute(...$functionArgs);
 	}
 }
 

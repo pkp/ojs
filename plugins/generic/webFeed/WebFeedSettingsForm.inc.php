@@ -76,14 +76,16 @@ class WebFeedSettingsForm extends Form {
 	}
 
 	/**
-	 * Save settings.
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$plugin = $this->_plugin;
 		$contextId = $this->_contextId;
 
 		$plugin->updateSetting($contextId, 'displayPage', $this->getData('displayPage'));
 		$plugin->updateSetting($contextId, 'displayItems', $this->getData('displayItems'));
 		$plugin->updateSetting($contextId, 'recentItems', $this->getData('recentItems'));
+
+		parent::execute(...$functionArgs);
 	}
 }

@@ -128,11 +128,12 @@ class MedraSettingsForm extends Form {
 	}
 
 	/**
-	 * Execute the form.
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$plugin = $this->_getPlugin();
 		$contextId = $this->_getContextId();
+		parent::execute(...$functionArgs);
 		foreach($this->getFormFields() as $fieldName => $fieldType) {
 			$plugin->updateSetting($contextId, $fieldName, $this->getData($fieldName), $fieldType);
 		}
