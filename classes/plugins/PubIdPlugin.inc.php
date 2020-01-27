@@ -255,9 +255,6 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		if (!$submissionPubIdEnabled && !$representationPubIdEnabled && !$filePubIdEnabled) return false;
 
 		$pubIdType = $this->getPubIdType();
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-		$representationDao = Application::getRepresentationDAO();
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 
 		$submissionIds = Services::get('submission')->getIds([
@@ -265,23 +262,28 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 			'issueIds' => $issue->getId(),
 		]);
 		foreach ($submissionIds as $submissionId) {
+			$submission = Services::get('submission')->get($submissionId);
 			if ($submissionPubIdEnabled) { // Does this option have to be enabled here for?
-				$submissionDao->deletePubId($submissionId, $pubIdType);
+				foreach ((array) $submission->getData('publications') as $publication) {
+					DAORegistry::getDAO('PublicationDAO')->deletePubId($publication->getId(), $pubIdType);
+				}
 			}
 			if ($representationPubIdEnabled || $filePubIdEnabled) { // Does this option have to be enabled here for?
-				$representations = $representationDao->getBySubmissionId($submissionId);
-				while ($representation = $representations->next()) {
-					if ($representationPubIdEnabled) { // Does this option have to be enabled here for?
-						$representationDao->deletePubId($representation->getId(), $pubIdType);
-					}
-					if ($filePubIdEnabled) { // Does this option have to be enabled here for?
-						$articleProofFiles = $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $representation->getId(), SUBMISSION_FILE_PROOF);
-						foreach ($articleProofFiles as $articleProofFile) {
-							$submissionFileDao->deletePubId($articleProofFile->getFileId(), $pubIdType);
+				foreach ((array) $submission->getData('publications') as $publication) {
+					$representations = Application::getRepresentationDAO()->getByPublicationId($publication->getId(), $submission->getData('contextId'));
+					while ($representation = $representations->next()) {
+						if ($representationPubIdEnabled) { // Does this option have to be enabled here for?
+							Application::getRepresentationDAO()->deletePubId($representation->getId(), $pubIdType);
+						}
+						if ($filePubIdEnabled) { // Does this option have to be enabled here for?
+							$articleProofFiles = DAORegistry::getDAO('SubmissionFileDAO')->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $representation->getId(), SUBMISSION_FILE_PROOF);
+							foreach ($articleProofFiles as $articleProofFile) {
+								DAORegistry::getDAO('SubmissionFileDAO')->deletePubId($articleProofFile->getFileId(), $pubIdType);
+							}
 						}
 					}
+					unset($representations);
 				}
-				unset($representations);
 			}
 		}
 	}
