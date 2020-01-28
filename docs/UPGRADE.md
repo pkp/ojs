@@ -26,6 +26,13 @@ content to the upgrade. Downgrades from 3.x to 2.x will not be supported.
 Note that upgrading from OJS 2.4.x to OJS 3.0 will rearrange your submission
 file storage, so be sure to back it up before running an upgrade.
 
+It is recommended that you execute the upgrade script under the same user
+account that your server uses to execute OJS. If you cannot do this, you will
+need to ensure file permissions in your files directory allow the upgrade
+script to manage files there *before* the upgrade, and then reset file
+permissions *after* the upgrade completes (so that OJS can manage files there
+when invoked normally via the web).
+
 With that noted, follow the OJS 3.0 process described below.
 
 
