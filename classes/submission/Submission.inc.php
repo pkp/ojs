@@ -41,14 +41,15 @@ class Submission extends PKPSubmission {
 	 * Get the value of a license field from the containing context.
 	 * @param $locale string Locale code
 	 * @param $field PERMISSIONS_FIELD_...
-	 * @return string|null
+	 * @param $publication Publication
+	 * @return string|array|null
 	 */
-	function _getContextLicenseFieldValue($locale, $field) {
+	function _getContextLicenseFieldValue($locale, $field, $publication = null) {
 		$context = Services::get('context')->get($this->getData('contextId'));
 		$fieldValue = null; // Scrutinizer
 		switch ($field) {
 			case PERMISSIONS_FIELD_LICENSE_URL:
-				$fieldValue = $context->getData('licenseURL');
+				$fieldValue = $context->getData('licenseUrl');
 				break;
 			case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
 				switch($context->getData('copyrightHolderType')) {
@@ -69,7 +70,9 @@ class Submission extends PKPSubmission {
 				$fieldValue = date('Y');
 
 				// Override based on context settings
-				$publication = $this->getCurrentPublication();
+				if (!$publication) {
+					$publication = $this->getCurrentPublication();
+				}
 				if ($publication) {
 					switch($context->getData('copyrightYearBasis')) {
 						case 'submission':
@@ -94,7 +97,7 @@ class Submission extends PKPSubmission {
 		}
 
 		// Return the fetched license field
-		if ($locale === null || !is_array($fieldValue)) return $fieldValue;
+		if ($locale === null) return $fieldValue;
 		if (isset($fieldValue[$locale])) return $fieldValue[$locale];
 		return null;
 	}
