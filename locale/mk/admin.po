@@ -1,2 +1,252 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-01-28 09:51+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/admin/mk/"
+">\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Сугурен ли сте дека сакате да ги споите избраните {$oldAccountCount} акаунти "
+"во акаунт со корисничко име \"{$newUsername}\"? Избраните {$oldAccountCount} "
+"акаунти нем ада постојат после тоа. Оваа постапка е неповратна."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Избери корисник (или неколку) за да ги споиш во друг кориснички акаунт (не "
+"пример, кога некој има две кориснички имиша). Првоизбраните акаунти на "
+"корисниците ќе бидат избришани од било кој поднесок, назначување и случно и "
+"ќе му бидат доделени на второизбраниот акаунт."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Овозможи создавање корисник (ако е поддржана од овој автентификациски плагин)"
+". Креирањето корисници во OJS со оваа аутентификација автоматски ќе бидат "
+"додадени од далечинскиот аутентификациски извор ако не постои во моментот. "
+"Дополнително, ако овој извор е предодреден извро за аутентификација, OJS "
+"акаунтите преку регистрација на корисниците ќе бидат исто така додадени во "
+"далечинскиот извор."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Овозможи модификација на корисничка лозинка (ако е поддржана од овој "
+"автентификациски плагин). Со овозможување на оваа опција на корисниците им "
+"се овозможува да ја модифицираат својата лозинка во OJS и да ја користат "
+"опцијата „загубена лозинка“ за да ја ресетираат загубената лозинка. Овие "
+"функции нема да им бидат овозможени на корисниците со оваа корисничка "
+"аутентификација, ако оваа опција не е овозможена."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Овозможи синхронизација на кориснички профил (ако е поддржан од овој плагин "
+"за автентификација). Информациите од корисничкиот профил ќе бидат автоматски "
+"обновени од далечинскиот извор кога ќе се логира корисникот, а примените во "
+"профилот (вклучувајќи ги и промените ан лозинката) внесни во OJS ќе бидат "
+"автоматски обновени во далечинскиот извор. Ако оваа опција не е овозможена "
+"во информациите од OJS профилот, тие ќе се чуваат одделно од информациите во "
+"далечинскиот извор."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"Не може да додаде нова локализација од фајлот на локлизациски регистри, "
+"типично \"registry/locales.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Не може да отвори десцриптор на јазик од PKP веб сајтот."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Избери било која дополнителна локализација за инсталињае поддршка во овој "
+"систем. ЛОкализацијата мора да биде инсталирана пред да се користи во "
+"хостираното списание. Види ја OJS документацијата за информациите околу "
+"додавање нови јазици."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Сигурни сте дека сакате да ја одинсталирате локализацијата? Ова може да "
+"влијае врз било кое соисание кое во моментов користи локализација."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Избери ги сите локализации кои го поддржуваат овој сајт. Избраните "
+"локализации ќе бидат користени за сите списанија хостирани на овој сајт и и "
+"ќе се појават на секоја страница (што може да биде препокриено на "
+"специфичните страници од списанието). Доколку не се избрани повеќекратни "
+"локализации, менито за јазици нем ада се појавува и подесувањата за додатни "
+"јазици нема да биде достапно за списанијата."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Симунивање пакет за јазикот од Public Knowledge Project веб серверот не е "
+"во моментов возможно поради:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Вашиот сервер нема или не дозволува извршување на GNU \"tar\" "
+"опција.</li>\n"
+"\t\t<li>OJS не е во состојба да модифицира локален регистерски фајл, типично "
+"\"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Пакетот за јазик може рачно да се симне од <a href=\"http://pkp.sfu.ca\">"
+"PKP веб сајтот</a>.</p>"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Сигурен сте дека сакате да ја оневозможите оваа локализација? Ова може да "
+"влијае врз било кое хостирано списание кое користи ваква локализација."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tВашата OJS инсталација е конфигурирана да снима повеќе од една "
+"корисничка метрика. Корисничката статистика ќе биде прикажана во неколку "
+"контексти.\n"
+"\t\tИма случаи кога мора да се употреби само една статистика, на пример, да "
+"се прикаже листата на најкористени трудови или рангирање \n"
+"\t\tна секој пребаран резултат. Молам одбери една конфигурациска метрика "
+"како предодредена.\n"
+"\t"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Ова ќе биде претпоставен јазик за сајтот и за било кое хостирано списание."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Означените локализации може да не се комплетни."
+
+msgid "admin.languages.downloadFailed"
+msgstr ""
+"Симнувањето локализација не успеа. Долната порака(и) ја опишува грешката."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Инсталирана е \"{$locale}\" локализација."
+
+msgid "admin.languages.download"
+msgstr "Симни локализација"
+
+msgid "admin.auth.ojs"
+msgstr "OJS база на корисници"
+
+msgid "admin.systemVersion"
+msgstr "OJS верзија"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS конфигурација"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS подесување на конфигурацијата од <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Автометаски ќе бидете назначен како менаџер на ова списание. После "
+"креирањето ново списание, ќе бидете пренасочени кон волшебникот за "
+"подасувања, за да го завршите започнатото подесување на списанието."
+
+msgid "admin.journals.journalSettings"
+msgstr "Подесувања на  списание"
+
+msgid "admin.journals.noneCreated"
+msgstr "Не се создадени списанија."
+
+msgid "admin.contexts.create"
+msgstr "Создади списание"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Ова треба да биде еден краток збор или акроним кој ќе го идентифицира "
+"списанието. URL на списанието ќе биде  {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Потребен е наслов."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Потребна е патека."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Патеката може да вклучи само букви, бројки и карактерите _ и -. Таа мора да "
+"почне и да заврши со буква или број."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Внесената патека веќе се користи за друго списание."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} беше креирано успешно."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} беше корегирано успешно."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Овозможи списание јавно да се појави на сајтот"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Опис на списание"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Постоечка патека за списание или патека за креирање (на пример, \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Внеси претплатници"
+
+msgid "admin.journals.transcode"
+msgstr "Транскодирај труд од метаподатоци во ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Создади код за мапирање OJS 1 URL кон OJS 2 URL"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Потребна е патека за импортирање."
+
+msgid "admin.journals.importErrors"
+msgstr "Импортирањето не успеа целосно"
+
+msgid "admin.mergeUsers"
+msgstr "Спои корисници"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Спои корисник"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Избери корисник кон кого се однесува претходното авторство, назначени "
+"уредувања и слично."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Сите внесени корисници"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Нема внесени корисници."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Потсетник за истечување претплата"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Нотификација за Отворен пристап"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Потсетување на рецензентот"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Барањето за главниот сајт ќе бидат пренасочени кон тоа списание. Ова може да "
+"биде корисно, на пример, ако списанието се хостира самостојно."
+
+msgid "admin.settings.redirect"
+msgstr "Пренасочување на списание"
+
+msgid "admin.settings.info.success"
+msgstr "Информациите за сајтот се успешно обновени."
+
+msgid "admin.settings.config.success"
+msgstr "Подесувањата за конфигурација на сајтот се успешно обновени."
+
+msgid "admin.settings.appearance.success"
+msgstr "Подесувањата за приказ на сајтот се успешно обновени."
+
+msgid "admin.hostedContexts"
+msgstr "Хостирани списанија"
