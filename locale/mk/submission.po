@@ -1,2 +1,99 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-01-28 09:51+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/mk/>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+#, fuzzy
+msgid "submission.proofReadingDescription"
+msgstr ""
+"The layout editor uploads the production-ready files that have been prepared "
+"for publication here. Use <em>Assign Auditor</em> to designate authors and "
+"others to proofread the galleys, with corrected files uploaded for approval "
+"prior to publication."
+
+msgid "submission.galleyFiles"
+msgstr "Фајлови од отисок"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Направи го пробниот отисок достапен"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Овој пробен отисок <em>ќе биде достапен</em> за читателите.</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p>Овој пробен отисок <em>нема повеќе да биде достапен</em> за "
+"читателите.</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Одобрување формат"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Обновен е јавниот идентификатор од поднесокот."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Пробниот отисок \"{$galleyFormatName}\" не е достапен."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Пробниот отисок \"{$galleyFormatName}\" е достапен."
+
+msgid "grid.action.issueEntry"
+msgstr "Види ги поднесените метаподатоци"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Пробниот отисок е внесен во бројот"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Списанието е известено за поднесокот и ви е испратен и-мејл за потврда на "
+"записот. Кога уредникот ќе го прегледа поднесокот, тој ќе ве контактира."
+
+msgid "submission.issueEntry"
+msgstr "Метаподатоци"
+
+msgid "submission.submit.noContext"
+msgstr "Поднесеното списание не може да се најде."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Извадокот мора да има  {$wordCount} зборови или помалку."
+
+msgid "grid.action.workflow"
+msgstr "Редослед на поднесување"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Нов поднесок"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Започни нов поднесок во"
+
+msgid "submission.title.tip"
+msgstr ""
+"Видот на поднесување обично е еден од „слика“, „текст“, или други видови "
+"мултимедија вклучувајќи „софтвер“ или „интеракција“. Изберете најсоодветна "
+"за вашиот поднесок. Примери можат да се најдат кај  <a target=\"_blank\" "
+"href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#"
+"type\">http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "Наслов на труд"
+
+msgid "submission.upload.selectComponent"
+msgstr "Избери дел од труд"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Одбери под кој капацитет го поднесувате овој труд."
+
+msgid "submission.submit.userGroup"
+msgstr "Поденси во улога како ..."
+
+msgid "submission.submit.title"
+msgstr "Поденси труд"
