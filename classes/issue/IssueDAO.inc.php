@@ -542,7 +542,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				submissions a
 			LEFT JOIN publications p ON (p.publication_id = a.current_publication_id)
 			LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
-			WHERE	ps.setting_name = ? AND ps.setting_value = i.issue_id AND
+			WHERE	ps.setting_name = ? AND ps.setting_value = CAST(i.issue_id as CHAR) AND
 				a.submission_id = ? AND
 				a.context_id = i.journal_id' .
 				($journalId?' AND i.journal_id = ?':''),
