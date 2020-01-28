@@ -1,2 +1,59 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-01-28 09:51+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/api/mk/>"
+"\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Не може да го гледате или корегирате ова списание доколку не побарате API од "
+"списанието или од странично API."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Не можете да го корегирате ова списание од страничен API."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Немате дозвола да го корегирате ова списание."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Немате дозвола да го бришете ова списание."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Бараното списание не е најдено."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Не е дозволено да го преместите темплејтот на овој и-мајл во друго списание."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Избраниот метод за плаќање не е поддржан."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Публикацијата што ја барате не  е дел од ова списание."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Публикацијата што ја барате не е дел од овој поднесок."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Немате дозвола да го гледате ова списание."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Може да гледате само списанија за кои ви е  овозможено."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"За да се направи или корегира поднесок мора да имате барање до крајната "
+"точка од API на списанието."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Немате дозвола за гледање необјавени броеви."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Не може да се смени списанието за поднесување."
