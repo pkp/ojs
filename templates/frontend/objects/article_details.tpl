@@ -69,7 +69,7 @@
 <article class="obj_article_details">
 
 	{* Notification that this is an old version *}
-	{if $currentPublication->getID() !== $publication->getId()}
+	{if $currentPublication->getId() !== $publication->getId()}
 		<div class="cmp_notification notice">
 			{capture assign="latestVersionUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
 			{translate key="submission.outdatedVersion"

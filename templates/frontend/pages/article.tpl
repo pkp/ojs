@@ -7,7 +7,10 @@
  *
  * @brief Display the page to view an article with all of it's details.
  *
- * @uses $article Article This article
+ * @uses $article Submission This article
+ * @uses $publication Publication The publication being displayed
+ * @uses $firstPublication Publication The first published version of this article
+ * @uses $currentPublication Publication The most recently published version of this article
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
  * @uses $journal Journal The journal currently being viewed.
