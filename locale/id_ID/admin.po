@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
-"PO-Revision-Date: 2020-01-28 09:51+0000\n"
+"PO-Revision-Date: 2020-01-28 23:48+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/admin/id/"
 ">\n"
@@ -189,3 +189,9 @@ msgstr "Pengaturan konfigurasi situs telah berhasil diperbaharui."
 
 msgid "admin.settings.appearance.success"
 msgstr "Pengaturan tampilan situs telah berhasil diperbaharui."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} telah berhasil dibuat."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} telah berhasil dibuat."
