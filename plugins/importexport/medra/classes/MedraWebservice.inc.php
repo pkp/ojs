@@ -108,7 +108,7 @@ class MedraWebservice {
 				'</SOAP-ENV:Body>' .
 			'</SOAP-ENV:Envelope>';
 		
-		//Rebuild the multipart SOAP message for the deposit in CRossref: the action is 'deposit' insteaf of upload
+		//Rebuild the multipart SOAP message for the deposit in CRossref: the action is 'deposit' instead of upload
 		if($action == 'deposit'){
 		    $soapMessage =
 		    '<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" ' .
