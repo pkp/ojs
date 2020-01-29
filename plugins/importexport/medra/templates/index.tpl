@@ -74,6 +74,7 @@
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
+							{fbvElement type="checkbox" id="crEnabled" label="plugins.importexport.common.send.to.crossref" checked=$crEnabled|default:false}
 						{/fbvFormSection}
 						{if !empty($actionNames)}
 							{fbvFormSection}
@@ -106,6 +107,7 @@
 						{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
+							{fbvElement type="checkbox" id="crEnabled" label="plugins.importexport.common.send.to.crossref" checked=$crEnabled|default:false}
 						{/fbvFormSection}
 						{if !empty($actionNames)}
 							{fbvFormSection}
@@ -138,6 +140,7 @@
 						{load_url_in_div id="representationsListGridContainer" url=$representationsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
+							{fbvElement type="checkbox" id="crEnabled" label="plugins.importexport.common.send.to.crossref" checked=$crEnabled|default:false}
 						{/fbvFormSection}
 						{if !empty($actionNames)}
 							{fbvFormSection}
