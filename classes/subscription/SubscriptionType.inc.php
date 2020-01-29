@@ -129,17 +129,12 @@ class SubscriptionType extends DataObject {
 
 	/**
 	 * Get subscription type currency string.
-	 * @return int
+	 * @return string
 	 */
-	function getCurrencyString() {
-		$currencyDao = DAORegistry::getDAO('CurrencyDAO'); /* @var $currencyDao CurrencyDAO */
-		$currency = $currencyDao->getCurrencyByAlphaCode($this->getData('currencyCodeAlpha'));
-
-		if ($currency != null) {
-			return $currency->getName();
-		} else {
-			return 'subscriptionTypes.currency';
-		}
+	public function getCurrencyString() {
+		$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+		$currency = $isoCodes->getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
+		return $currency?$currency->getLocalName():'subscriptionTypes.currency';
 	}
 
 	/**
@@ -147,14 +142,9 @@ class SubscriptionType extends DataObject {
 	 * @return int
 	 */
 	function getCurrencyStringShort() {
-		$currencyDao = DAORegistry::getDAO('CurrencyDAO'); /* @var $currencyDao CurrencyDAO */
-		$currency = $currencyDao->getCurrencyByAlphaCode($this->getData('currencyCodeAlpha'));
-
-		if ($currency != null) {
-			return $currency->getCodeAlpha();
-		} else {
-			return 'subscriptionTypes.currency';
-		}
+		$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+		$currency = $isoCodes->getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
+		return $currency?$currency->getLetterCode():'subscriptionTypes.currency';
 	}
 
 	/**

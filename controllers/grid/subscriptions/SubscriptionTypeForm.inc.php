@@ -43,11 +43,10 @@ class SubscriptionTypeForm extends Form {
 			SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => __('subscriptionTypes.format.printOnline')
 		);
 
-		$currencyDao = DAORegistry::getDAO('CurrencyDAO'); /* @var $currencyDao CurrencyDAO */
-		$currencies = $currencyDao->getCurrencies();
+		$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
 		$this->validCurrencies = array();
-		while (list(, $currency) = each($currencies)) {
-			$this->validCurrencies[$currency->getCodeAlpha()] = $currency->getName() . ' (' . $currency->getCodeAlpha() . ')';
+		foreach ($isoCodes->getCurrencies() as $currency) {
+			$this->validCurrencies[$currency->getLetterCode()] = $currency->getLocalName() . ' (' . $currency->getLetterCode() . ')';
 		}
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
