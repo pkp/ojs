@@ -98,19 +98,20 @@ class ReportGeneratorForm extends Form {
 		if (!is_null($reportTemplateIndex) && isset($reportTemplates[$reportTemplateIndex])) {
 			$reportTemplate = $reportTemplates[$reportTemplateIndex];
 			$reportColumns = $reportTemplate['columns'];
-			if (!is_array($reportColumns)) continue;
+			if (!is_array($reportColumns)) return false;
 
 			$this->setData('columns', $reportColumns);
 			$this->setData('reportTemplate', $reportTemplateIndex);
 			if (isset($reportTemplate['aggregationColumns'])) {
 				$aggreationColumns = $reportTemplate['aggregationColumns'];
-				if (!is_array($aggreationColumns)) continue;
+				if (!is_array($aggreationColumns)) return false;
 
 				$aggreationOptions = $selectedAggregationOptions = array();
 				foreach ($aggreationColumns as $column) {
 					$columnName = StatisticsHelper::getColumnNames($column);
-					if (!$columnName) continue;
-					$aggreationOptions[$column] = $columnName;
+					if ($columnName) {
+						$aggreationOptions[$column] = $columnName;
+					}
 				}
 				$this->setData('aggregationOptions', $aggreationOptions);
 				$this->setData('selectedAggregationOptions', array_intersect($aggreationColumns, $reportColumns));
