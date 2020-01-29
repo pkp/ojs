@@ -180,9 +180,11 @@ class MedraSettingsForm extends Form {
 	 * @return array
 	 */
 	function _getCountries() {
-		$countryDao = DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
-		$countries = $countryDao->getCountries();
-		return $countries;
+		$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+		$countries = array();
+		foreach ($isoCodes->getCountries() as $country) {
+			$countries[$country->getAlpha2()] = $country->getLocalName();
+		}
 	}
 }
 

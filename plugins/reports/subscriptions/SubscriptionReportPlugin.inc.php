@@ -57,10 +57,11 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-		$countryDao = DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
 		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
+		$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+		$countries = $isoCodes->getCountries();
 
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=subscriptions-' . date('Ymd') . '.csv');
@@ -139,7 +140,8 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = PKPString::html2text($user->getMailingAddress());
 						break;
 					case 'country':
-						$columns[$index] = $countryDao->getCountry($user->getCountry());
+						$country = $countries->getByAlpha2($user->getCountry());
+						$columns[$index] = $country?$country->getLocalName():'';
 						break;
 					case 'email':
 						$columns[$index] = $user->getEmail();
@@ -233,7 +235,8 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = PKPString::html2text($user->getMailingAddress());
 						break;
 					case 'country':
-						$columns[$index] = $countryDao->getCountry($user->getCountry());
+						$country = $countries->getByAlpha2($user->getCountry());
+						$columns[$index] = $country?$country->getLocalName():'';
 						break;
 					case 'email':
 						$columns[$index] = $user->getEmail();
