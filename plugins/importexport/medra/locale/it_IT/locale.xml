@@ -42,6 +42,7 @@
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: I DOI assegnati agli articoli verranno esportati in mEDRA come <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'opere'</a>. I DOI assegnati ai file principali degli articoli verranno esportati come <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestazioni'</a>.]]></message>
 
 	<message key="plugins.importexport.medra.senderTask.name">Registrazione automatica DOI mEDRA</message>
+	<message key="plugins.importexport.common.send.to.crossref">Invio a Crossref</message>
 
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Uso: 
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...

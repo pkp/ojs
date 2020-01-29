@@ -65,6 +65,8 @@
 					$(function() {ldelim}
 						// Attach the form handler.
 						$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+						//Initialization of the language with the value of the html file tag
+						$('#language').val($('html')[0].lang);
 					{rdelim});
 				</script>
 				<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
@@ -74,6 +76,10 @@
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
+							// the checkbox that the user have to select to deposit submission either in medra, either in Crossref 
+							{fbvElement type="checkbox" id="crEnabled" label="plugins.importexport.common.send.to.crossref" checked=$crEnabled|default:false}
+							//The input type hidden insert in the form 
+							{fbvElement type="hidden" id="language"}
 						{/fbvFormSection}
 						{if !empty($actionNames)}
 							{fbvFormSection}
@@ -97,6 +103,8 @@
 					$(function() {ldelim}
 						// Attach the form handler.
 						$('#exportIssueXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+						//Initialization of the language with the value of the html file tag
+						$('#language').val($('html')[0].lang);
 					{rdelim});
 				</script>
 				<form id="exportIssueXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
@@ -106,6 +114,10 @@
 						{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
+							// the checkbox that the user have to select to deposit submission either in medra, either in Crossref 
+							{fbvElement type="checkbox" id="crEnabled" label="plugins.importexport.common.send.to.crossref" checked=$crEnabled|default:false}
+							//The input type hidden insert in the form 
+							{fbvElement type="hidden" id="language"}
 						{/fbvFormSection}
 						{if !empty($actionNames)}
 							{fbvFormSection}
@@ -129,6 +141,8 @@
 					$(function() {ldelim}
 						// Attach the form handler.
 						$('#exportRepresentationXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+						//Initialization of the language with the value of the html file tag
+						$('#language').val($('html')[0].lang);
 					{rdelim});
 				</script>
 				<form id="exportRepresentationXmlForm" class="pkp_form" action="{plugin_url path="exportRepresentations"}" method="post">
@@ -138,6 +152,8 @@
 						{load_url_in_div id="representationsListGridContainer" url=$representationsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
+							//The input type hidden insert in the form 
+							{fbvElement type="hidden" id="language"}
 						{/fbvFormSection}
 						{if !empty($actionNames)}
 							{fbvFormSection}

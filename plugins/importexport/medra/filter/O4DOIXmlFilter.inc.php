@@ -43,7 +43,7 @@ define('O4DOI_EPUB_FORMAT_HTML', '01');
 define('O4DOI_EPUB_FORMAT_PDF', '02');
 
 // Date formats
-define('O4DOI_DATE_FORMAT_YYYY', '06');
+define('O4DOI_DATE_FORMAT_YYYY', '05');
 
 // Extent types
 define('O4DOI_EXTENT_TYPE_FILESIZE', '22');
@@ -260,7 +260,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		}
 		// ISSN
 		if (!empty($issn)) {
-			$issn = PKPString::regexp_replace('/[^0-9]/', '', $issn);
+			// $issn = PKPString::regexp_replace('/[^0-9]/', '', $issn); There is no more need to remove character that is NOT in 0-9 
 			$serialVersionNode->appendChild($this->createIdentifierNode($doc, 'Product', O4DOI_ID_TYPE_ISSN, $issn));
 		}
 		// Product Form

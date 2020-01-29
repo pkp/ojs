@@ -354,6 +354,10 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$invertedPersonName = $author->getFullName(false, true);
 		assert(!empty($invertedPersonName));
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonNameInverted', htmlspecialchars($invertedPersonName, ENT_COMPAT, 'UTF-8')));
+		// Key names (mandatory)
+		$keyNames = $author->getFullName(false);
+		assert(!empty($keyNames));
+		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'KeyNames', htmlspecialchars($keyNames, ENT_COMPAT, 'UTF-8')));		
 		// Affiliation
 		$affiliation = $this->getPrimaryTranslation($author->getAffiliation(null), $objectLocalePrecedence);
 		if (!empty($affiliation)) {

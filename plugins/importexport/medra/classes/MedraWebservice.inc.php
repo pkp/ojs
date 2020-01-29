@@ -20,7 +20,9 @@
 import('lib.pkp.classes.xml.XMLNode');
 
 define('MEDRA_WS_ENDPOINT_DEV', 'https://www-medra-dev.medra.org/servlet/ws/medraWS');
+define('MEDRA2CR_WS_ENDPOINT_DEV', 'https://www-medra-dev.medra.org/servlet/ws/CRProxy');
 define('MEDRA_WS_ENDPOINT', 'https://www.medra.org/servlet/ws/medraWS');
+define('MEDRA2CR_WS_ENDPOINT', 'https://www.medra.org/servlet/ws/CRProxy');
 define('MEDRA_WS_RESPONSE_OK', 200);
 
 class MedraWebservice {
@@ -57,6 +59,23 @@ class MedraWebservice {
 		$arg = "<med:contentID href=\"$attachmentId\" />";
 		return $this->_doRequest('upload', $arg, $attachment);
 	}
+	
+	
+	//
+	// Public Web Service Actions deposit to Crossref
+	//
+	/**
+	 * mEDRA deposit operation.
+	 * @param $xml
+	 * @param $language
+	 */
+	function deposit($xml, $language) {
+	    $attachmentId = $this->_getContentId('metadata');
+	    $attachment = array($attachmentId => $xml);
+	    $result = $this->_doRequest('deposit', $language, $attachment);
+	    return $result;
+	}
+	
 
 	/**
 	 * mEDRA viewMetadata operation
@@ -88,6 +107,22 @@ class MedraWebservice {
 					"<med:$action>$arg</med:$action>" .
 				'</SOAP-ENV:Body>' .
 			'</SOAP-ENV:Envelope>';
+		
+		//Rebuild the multipart SOAP message for the deposit in CRossref: the action is 'deposit' insteaf of upload
+		if($action == 'deposit'){
+		    $soapMessage =
+		    '<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" ' .
+		    'xmlns:med="http://www.medra.org">' .
+		      '<SOAP-ENV:Header/>' .
+		      '<SOAP-ENV:Body>' .
+		          "<med:$action>" .
+		              "<med:accessMode>01</med:accessMode>" .
+		              "<med:language>$arg</med:language>" .
+		              "<med:contentID>" . key($attachment) . "</med:contentID>" .
+		          "</med:$action>" .
+		      '</SOAP-ENV:Body>' .
+		    '</SOAP-ENV:Envelope>';
+		}
 
 		$soapMessageId = $this->_getContentId($action);
 		if ($attachment) {
@@ -149,6 +184,11 @@ class MedraWebservice {
 			if (empty($matches)) {
 				if ($attachment) {
 					assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response));
+					if(!assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response))){
+					    $parts = explode("\r\n\r\n", $response);
+					    $result = array_pop($parts);
+					    $result = PKPString::regexp_replace('/>[^>]*$/', '>', $result);
+					}
 				} else {
 					$parts = explode("\r\n\r\n", $response);
 					$result = array_pop($parts);
