@@ -81,12 +81,12 @@ class SubmissionHandler extends PKPSubmissionHandler {
 		}
 		switch ($request->getUserVar('list')) {
 			case 'languages':
-				$languageDao = DAORegistry::getDAO('LanguageDAO');
-				$languages = $languageDao->getLanguages($locale);
+				$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory(\Sokil\IsoCodes\IsoCodesFactory::OPTIMISATION_IO);
 				$matches = array();
-				foreach ($languages as $language) {
-					if (stristr($language->getName(), $term)) $matches[$language->getCode()] = $language->getName();
-				}
+				foreach ($isoCodes->getLanguages() as $language) {
+					if (!$language->getAlpha2() || $language->getType() != 'L' || $language->getScope() != 'I') continue;
+					if (stristr($language->getLocalName(), $term)) $matches[$language->getAlpha3()] = $language->getLocalName();
+				};
 				header('Content-Type: text/json');
 				echo json_encode($matches);
 		}
