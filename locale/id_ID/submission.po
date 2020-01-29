@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
 "PO-Revision-Date: 2020-01-30 08:35+0000\n"
-"Last-Translator: Fransisca H <sisca.ojs@gmail.com>\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/id/>\n"
 "Language: id_ID\n"
@@ -207,3 +207,23 @@ msgstr ""
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Abstrak harus berjumlah {$wordCount} kata atau kurang."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Dijadwalkn untuk diterbitkan dalam <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Diterbitkan dalam <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr ""
+"Publikasi ini harus dimasukkan dalam sebuah nomor terbitan sebelum dapat "
+"dipublikasikan."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Semua persyaratan publikasi telah dipenuhi.  Naskah ini akan segera "
+"diterbitkan dalam {$issue}. Anda yakin ingin menerbitkan ini?"
+
+msgid "submission.submit.noContext"
+msgstr "Submisi jurnal ini tidak dapat ditemukan."
