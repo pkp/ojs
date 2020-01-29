@@ -95,7 +95,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			FROM	authors a
 				JOIN user_groups ug ON (a.user_group_id = ug.user_group_id)
 				JOIN publications p ON (p.publication_id = a.publication_id)
-				JOIN submissions s ON (s.submission_id = p.submission_id AND s.current_publication_id = p.publication_id)
+				JOIN submissions s ON (s.current_publication_id = p.publication_id)
 				LEFT JOIN author_settings agl ON (a.author_id = agl.author_id AND agl.setting_name = ? AND agl.locale = ?)
 				LEFT JOIN author_settings agpl ON (a.author_id = agpl.author_id AND agpl.setting_name = ? AND agpl.locale = p.locale)
 				LEFT JOIN author_settings afl ON (a.author_id = afl.author_id AND afl.setting_name = ? AND afl.locale = ?)
