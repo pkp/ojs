@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-30T11:58:35-07:00\n"
+"PO-Revision-Date: 2020-01-30 08:35+0000\n"
+"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-doi/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-30T11:58:35-07:00\n"
-"PO-Revision-Date: 2019-09-30T11:58:35-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -108,7 +111,11 @@ msgid "plugins.pubIds.doi.readerDisplayName"
 msgstr "DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
-msgstr "Se você alterar sua configuração DOI, os DOIs que já foram atribuídas não serão afetadas. Uma vez que a configuração DOI é salva, use este botão para limpar todas as DOIs existentes para que as novas configurações tenham efeito sobre os objetos existentes. ATENÇÃO, não utilize esse botão para atribuir DOIs a artigos com DOIs já depositados (O mesmo documento não pode ter dois DOI)"
+msgstr ""
+"Se você alterar sua configuração DOI, os DOIs que já foram atribuídas não "
+"serão afetadas. Uma vez que a configuração DOI é salva, use este botão para "
+"limpar todos os DOIs existentes para que as novas configurações tenham "
+"efeito sobre os objetos existentes."
 
 msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
 msgstr "composição final"
@@ -163,3 +170,35 @@ msgstr "Designar DOIs a todos os objetos publicados que ainda não têm DOI desi
 
 msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr "Tem certeza que deseja designar DOIs a todos os objetos publicados que não tem DOIs designados?"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Item"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Composição final: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Um DOI não foi atribuído a esta publicação."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "O DOI para esta publicação será {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "O DOI deve começar com {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Você não pode gerar um DOI porque faltam dados em uma ou mais partes do "
+"padrão DOI. Pode ser necessário atribuir a publicação a um fascículo, "
+"definir um ID de publicador ou inserir números de página."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Você não pode gerar um DOI até que esta publicação tenha sido atribuída a um "
+"fascículo."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Designar"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "O DOI deve começar com {$prefix}."
