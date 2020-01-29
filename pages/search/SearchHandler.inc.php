@@ -202,7 +202,7 @@ class SearchHandler extends Handler {
 			$country = $request->getUserVar('country');
 
 			$authorRecords = iterator_to_array(Services::get('author')->getMany([
-				'contextIds' => $journal?[$journal->getId()]:null,
+				'contextIds' => $journal?[$journal->getId()]:[],
 				'givenName' => $givenName,
 				'familyName' => $familyName,
 				'affiliation' => $affiliation,
