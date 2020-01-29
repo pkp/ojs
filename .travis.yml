@@ -21,9 +21,6 @@ matrix:
   # Path info disabled DISABLED pending a fix of pkp/pkp-lib#4414
   # - env: TEST=mysql DISABLE_PATH_INFO=1
   #   php: 7.2
-env:
-  global:
-  - secure: "nxosaZUBRaYhk8+LHaDnVgMIveiK4zewiXW5Fw5TtB/D6V67oASufil1uhcayyzIBwnrZZmrFPLhXm0Lm1RiQHrsftffcMB5JlWK9R9EyWpyd87ewqWy3kXBAvsXXTU6ihGiaFpklhVCKt7XcDSR8bWEb2NVWrM7JS7dHDKMwaA="
 language: php
 python:
   - 3.3 # Required by Javascript linter/builder
@@ -79,12 +76,9 @@ script:
     fi
 
 after_script:
-  # Upload the completed database to the PKP server for other uses
-  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/post-data-build.sh; fi
-
-  # Print logs and outputs for debugging.
   - cat error.log
 
 after_failure:
   - sudo apt-get install sharutils
   - tar cz cypress/screenshots | uuencode /dev/stdout
+  - cat error.log
