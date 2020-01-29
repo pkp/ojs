@@ -201,7 +201,22 @@ class SearchHandler extends Handler {
 			$affiliation = $request->getUserVar('affiliation');
 			$country = $request->getUserVar('country');
 
-			$submissions = $authorDao->getPublishedArticlesForAuthor($journal?$journal->getId():null, $givenName, $familyName, $affiliation, $country);
+			$authorRecords = iterator_to_array(Services::get('author')->getMany([
+				'contextIds' => $journal?[$journal->getId()]:null,
+				'givenName' => $givenName,
+				'familyName' => $familyName,
+				'affiliation' => $affiliation,
+				'country' => $country,
+			]));
+			$publicationIds = array_map(function($author) {
+				return $author->getData('publicationId');
+			}, $authorRecords);
+			$submissionIds = array_map(function($publicationId) {
+				return Services::get('publication')->get($publicationId)->getData('submissionId');
+			}, array_unique($publicationIds));
+			$submissions = array_map(function($submissionId) {
+				return Services::get('submission')->get($submissionId);
+			}, array_unique($submissionIds));
 
 			// Load information associated with each article.
 			$journals = array();
@@ -238,9 +253,10 @@ class SearchHandler extends Handler {
 				'authorName' => $authorName
 			));
 
-			$countryDao = DAORegistry::getDAO('CountryDAO');
-			$country = $countryDao->getCountry($country);
-			$templateMgr->assign('country', $country);
+			$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+			$countries = $countries = $isoCodes->getCountries();
+			$country = $countries->getByAlpha2($country);
+			$templateMgr->assign('country', $country?$country->getLocalName():'');
 
 			$templateMgr->display('frontend/pages/searchAuthorDetails.tpl');
 		} else {
