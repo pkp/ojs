@@ -33,8 +33,14 @@ class AuthorDAO extends PKPAuthorDAO {
 	 * @return DAOResultFactory Authors ordered by last name, given name
 	 */
 	function getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
-		$params = $this->getFetchParameters();
-		$params[] = 'issueId';
+		$locale = AppLocale::getLocale();
+		$params = array(
+			IDENTITY_SETTING_GIVENNAME, $locale,
+			IDENTITY_SETTING_GIVENNAME,
+			IDENTITY_SETTING_FAMILYNAME, $locale,
+			IDENTITY_SETTING_FAMILYNAME,
+			'issueId',
+		);
 		if (isset($journalId)) $params[] = $journalId;
 
 		$supportedLocales = array();
@@ -83,36 +89,41 @@ class AuthorDAO extends PKPAuthorDAO {
 		}
 
 		$result = $this->retrieveRange(
-			'SELECT a.*, ug.show_title, s.locale,
-				' . $this->getFetchColumns() . '
+			'SELECT a.*, ug.show_title, p.locale,
+				COALESCE(agl.setting_value, agpl.setting_value) AS author_given,
+				CASE WHEN agl.setting_value <> \'\' THEN afl.setting_value ELSE afpl.setting_value END AS author_family
 			FROM	authors a
 				JOIN user_groups ug ON (a.user_group_id = ug.user_group_id)
 				JOIN publications p ON (p.publication_id = a.publication_id)
 				JOIN submissions s ON (s.submission_id = p.submission_id AND s.current_publication_id = p.publication_id)
-				' . $this->getFetchJoins() . '
+				LEFT JOIN author_settings agl ON (a.author_id = agl.author_id AND agl.setting_name = ? AND agl.locale = ?)
+				LEFT JOIN author_settings agpl ON (a.author_id = agpl.author_id AND agpl.setting_name = ? AND agpl.locale = p.locale)
+				LEFT JOIN author_settings afl ON (a.author_id = afl.author_id AND afl.setting_name = ? AND afl.locale = ?)
+				LEFT JOIN author_settings afpl ON (a.author_id = afpl.author_id AND afpl.setting_name = ? AND afpl.locale = p.locale)
 				JOIN (
 					SELECT
 					MIN(aa.author_id) as author_id,
 					CONCAT(
 					' . ($includeEmail ? 'aa.email,' : 'CAST(\'\' AS CHAR),') . '
 					\' \',
-					aa.country,
+					ac.setting_value,
 					\' \'
 					' . $sqlColumnsAuthorSettings . '
 					) as names
 					FROM authors aa
 					JOIN publications pp ON (pp.publication_id = aa.publication_id)
 					LEFT JOIN publication_settings ppss ON (ppss.publication_id = pp.publication_id)
-					JOIN submissions ss ON (ss.submission_id = pp.submission_id AND ss.current_publication_id = pp.current_publication_id AND ss.status = ' . STATUS_PUBLISHED . ')
+					JOIN submissions ss ON (ss.submission_id = pp.submission_id AND ss.current_publication_id = pp.publication_id AND ss.status = ' . STATUS_PUBLISHED . ')
 					JOIN journals j ON (ss.context_id = j.journal_id)
 					JOIN issues i ON (ppss.setting_name = ? AND ppss.setting_value = i.issue_id AND i.published = 1)
+					LEFT JOIN author_settings ac ON (ac.author_id = aa.author_id AND ac.setting_name = \'country\')
 					' . $sqlJoinAuthorSettings . '
 					WHERE j.enabled = 1 AND
 					' . (isset($journalId) ? 'j.journal_id = ?' : '')
 					. $initialSql .'
 					GROUP BY names
 				) as t1 ON (t1.author_id = a.author_id)
-				' . $this->getOrderBy(),
+				ORDER BY author_family, author_given',
 			$params,
 			$rangeInfo
 		);
