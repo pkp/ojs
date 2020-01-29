@@ -2204,8 +2204,11 @@ class Upgrade extends Installer {
 		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO'); /* @var $journalSettingsDao JournalSettingsDAO */
-		$countryDao = DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
-		$countries = $countryDao->getCountries();
+		$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+		$countries = array();
+		foreach ($isoCodes->getCountries() as $country) {
+			$countries[$country->getAlpha2()] = $country->getLocalName();
+		}
 
 		$journals = $journalDao->getAll();
 		while ($journal = $journals->next()) {

@@ -48,8 +48,11 @@ class SubscriptionForm extends Form {
 		import('classes.subscription.SubscriptionDAO');
 		$this->validStatus = SubscriptionDAO::getStatusOptions();
 
-		$countryDao = DAORegistry::getDAO('CountryDAO'); /* @var $countryDao CountryDAO */
-		$this->validCountries =& $countryDao->getCountries();
+		$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+		$this->validCountries = array();
+		foreach ($isoCodes->getCountries() as $country) {
+			$this->validCountries[$country->getAlpha2()] = $country->getLocalName();
+		}
 
 		// User is provided and valid
 		$this->addCheck(new FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
