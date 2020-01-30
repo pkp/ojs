@@ -12,7 +12,7 @@
   -->
  
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="plugins.block.information.displayName">Informacje</message>
-	<message key="plugins.block.information.description">Ta wtyczka wyświetla w bocznej kolumnie łącza do informacji o czasopiśmie.</message>
+	<message key="plugins.block.information.displayName">Element blokowy Informacje</message>
+	<message key="plugins.block.information.description">Wtyczka elementu blokowego dostarczająca linku do strony z informacjami.</message>
 	<message key="plugins.block.information.link">Informacje</message>
 </locale>

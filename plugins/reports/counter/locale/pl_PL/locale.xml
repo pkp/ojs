@@ -30,8 +30,8 @@
 	<message key="plugins.reports.counter.1a.dateRun">Data uruchomienia:</message>
 	<message key="plugins.reports.counter.1a.publisher">Wydawca</message>
 	<message key="plugins.reports.counter.1a.platform">Platforma</message>
-	<message key="plugins.reports.counter.1a.printIssn">Wyświetl ISSN</message>
-	<message key="plugins.reports.counter.1a.onlineIssn">Online ISSN</message>
+	<message key="plugins.reports.counter.1a.printIssn">ISSN</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">ISSN online</message>
 	<message key="plugins.reports.counter.1a.ytdTotal">YTD łącznie</message>
 	<message key="plugins.reports.counter.1a.ytdHtml">YTD HTML</message>
 	<message key="plugins.reports.counter.1a.ytdPdf">YTD PDF</message>

@@ -13,5 +13,5 @@
 
 <locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.developedBy.displayName">Opracowane przez</message>
-	<message key="plugins.block.developedBy.description">Wtyczka dodaje element blokowy zawierający informacje o twórcy systemu.</message>
+	<message key="plugins.block.developedBy.description">Wtyczka elementu blokowego dostarczająca informacji o twórcy systemu.</message>
 </locale>

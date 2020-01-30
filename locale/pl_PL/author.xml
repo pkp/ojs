@@ -12,7 +12,7 @@
   -->
 
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="author.submit">Prześlij tekst do opublikowania</message>
+	<message key="author.submit">Nowe zgłoszenie</message>
 	<message key="author.track">Przesłane teksty</message>
 	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Zbieżne zainteresowania</a>]]></message>
 	<message key="author.submit.submitArticle">Prześlij artykuł</message>
@@ -83,7 +83,7 @@
 	<message key="author.submit.supplementaryFileData">Metadane dla plików pomocniczych</message>
 	<message key="author.submit.supplementaryFileDataDescription">Aby zindeksowac dodakowy materiał, podaj następujące dane dla pomocniczego pliku.</message>
 	<message key="author.submit.supplementaryFileUpload">Plik pomocniczy</message>
-	<message key="author.submit.suppFile.createrOrOwner">Autor pliku</message>
+	<message key="author.submit.suppFile.createrOrOwner">Autor lub właściciel pliku</message>
 	<message key="author.submit.suppFile.researchInstrument">Narzędzie badawcze</message>
 	<message key="author.submit.suppFile.researchMaterials">Materiały badawcze</message>
 	<message key="author.submit.suppFile.researchResults">Rezultaty z badań</message>
@@ -114,7 +114,7 @@
 	<message key="author.submit.authorSubmitLoginMessage">Posiadanie konta użytkownika jest wymagane, aby móc przesłać teksty do publikacji w czasopismie.</message>
 	<message key="author.submit.qualifyForWaiver">Proszę o umorzenie płatności za zgłoszenie tekstu.</message>
 	<message key="author.submit.nextSteps">Następne kroki</message>
-	<message key="submission.submit.cancelSubmission">Możesz dokończyć zgłoszenie później. Niekompletne zgłoszenie znajdziesz w swoim panelu roboczym.</message>
+	<message key="submission.submit.cancelSubmission">Możesz dokończyć zgłoszenie później. Niekompletne zgłoszenia znajdziesz w swoim panelu roboczym.</message>
 	<message key="submission.submit.coverNote">Wiadomość dla redaktora</message>
 	<message key="submission.submit.privacyStatement">Polityka prywatności czasopisma</message>
 </locale>

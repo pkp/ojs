@@ -72,4 +72,8 @@
 	<message key="submission.citationFormat.notFound">Wybrany format cytowania nie jest dostępny.</message>
 	<message key="submission.metadataDescription">Metadane oparte są o Dublin Core - międzynarodowy standard wykorzystywany do opisywania zawartości czasopism.</message>
 	<message key="section.any">Dowolny dział</message>
+	<message key="submission.abstract.wordCount.description">Długość abstraktu nie może przekraczać {$wordCount} wyrazów.</message>
+	<message key="submission.submit.form.wordCountAlert">Abstrakt jest za długi. Skróć go, uwzględniając limit wyrazów określony poniżej dla tego działu.</message>
+	<message key="catalog.browseTitles">{$numTitles} pozycji</message>
+	<message key="catalog.category.heading">Wszystkie pozycje</message>
 </locale>
