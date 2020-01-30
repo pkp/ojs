@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
+"POT-Creation-Date: 2020-01-30T17:55:15+00:00\n"
+"PO-Revision-Date: 2020-01-30T17:55:15+00:00\n"
 "Language: \n"
 
 msgid "editor.home"
@@ -51,10 +51,10 @@ msgid "editor.submissionReview.confirmDecision"
 msgstr "Czy na pewno?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Przesłane teksty zostaną zarchiwizowane po przesłaniu powiadomienia do autora (możesz pominąć przesłanie powiadomienia klikając w \"Pomiń wysłanie wiadomości\"."
+msgstr "Przesłane teksty zostaną zarchiwizowane po przesłaniu powiadomienia do autora, możesz pominąć przesłanie powiadomienia klikając w \"Pomiń wysłanie wiadomości\"."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Zanim prześlesz tekst do Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wyborze wersji do przesłania."
+msgstr "Zanim prześlesz tekst do korekty, powiadom autora o decyzji i wybierz wersję do przekazania korektorowi."
 
 msgid "editor.notifyUsers"
 msgstr "Powiadom użytkowników o nowym numerze"
@@ -162,7 +162,7 @@ msgid "editor.issues.styleFile"
 msgstr "Szablon stylów"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "Niepoprawny format szablonu stylów. Sprawdź czy przesłany plik zawiera szablon stylów CSS."
+msgstr "Niepoprawny format szablonu stylów. Sprawdź, czy przesłany plik zawiera szablon stylów CSS."
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Czy usunąć szablon stylów?"
@@ -596,11 +596,14 @@ msgstr "Podgląd"
 msgid "grid.action.addIssueGalley"
 msgstr "Utwórz plik do publikacji"
 
+msgid "editor.article.schedulePublication"
+msgstr "Zaplanuj do publikacji"
+
 msgid "editor.article.coverImage"
 msgstr "Obraz okładki"
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "Obraz okładki który próbujesz usunąć nie został znaleziony. Mógł zostać usunięty wcześniej. Spróbuj przeładować stronę."
+msgstr "Obraz okładki, który próbujesz usunąć nie został znaleziony. Mógł zostać usunięty wcześniej. Spróbuj przeładować stronę."
 
 msgid "grid.action.removeArticle"
 msgstr "Usuń artykuł z numeru"

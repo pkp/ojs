@@ -7,15 +7,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
+"POT-Creation-Date: 2020-01-30T17:55:22+00:00\n"
+"PO-Revision-Date: 2020-01-30T17:55:22+00:00\n"
 "Language: \n"
-
-msgid "submission.reviewForm"
-msgstr "Formularz recenzji"
-
-msgid "submission.reviewFormResponse"
-msgstr "Formularz recenzji"
 
 msgid "reviewer.article.enterReviewForm"
 msgstr "Kliknij ikonę dymka, aby wypełnić formularz recenzji."
@@ -23,7 +17,7 @@ msgstr "Kliknij ikonę dymka, aby wypełnić formularz recenzji."
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Wypełnij wymagane pola."
 
-msgid "common.software"
+msgid "common.openJournalSystems"
 msgstr "Open Journal Systems"
 
 msgid "common.confirmComplete"
@@ -35,9 +29,6 @@ msgstr "Płatność"
 msgid "common.payments"
 msgstr "Płatności"
 
-msgid "common.pageHeader.altText"
-msgstr "Nagłówek strony"
-
 msgid "common.homePageHeader.altText"
 msgstr "Nagłówek strony głównej"
 
@@ -46,9 +37,6 @@ msgstr "Baner"
 
 msgid "navigation.journalHelp"
 msgstr "Pomoc"
-
-msgid "navigation.archives"
-msgstr "Archiwum"
 
 msgid "navigation.current"
 msgstr "Aktualny numer"
@@ -134,10 +122,10 @@ msgstr "Artykuł"
 msgid "article.articles"
 msgstr "Artykuły"
 
-msgid "common.publication"
+msgid "common.publishedSubmission"
 msgstr "Artykuł"
 
-msgid "common.publications"
+msgid "common.publishedSubmissions"
 msgstr "Artykuły"
 
 msgid "article.submissionId"
@@ -173,23 +161,11 @@ msgstr "Pliki pomocnicze"
 msgid "article.discipline"
 msgstr "Dyscypliny i subdyscypliny naukowe"
 
-msgid "article.subjectClassification"
-msgstr "Klasyfikacja przedmiotu"
-
 msgid "article.subject"
 msgstr "Słowa kluczowe"
 
 msgid "article.coverage"
 msgstr "Zasięg"
-
-msgid "article.coverageGeo"
-msgstr "Zasięg geograficzny"
-
-msgid "article.coverageChron"
-msgstr "Zasięg chronologiczny i historyczny"
-
-msgid "article.coverageSample"
-msgstr "Próba badawcza"
 
 msgid "article.type"
 msgstr "Typ, metoda lub podejście"
@@ -317,6 +293,9 @@ msgstr "Krok 3"
 msgid "submissions.queuedReview"
 msgstr "W recenzji"
 
+msgid "submissions.scheduled"
+msgstr "Zaplanowane"
+
 msgid "submissions.published"
 msgstr "Opublikowane"
 
@@ -359,14 +338,11 @@ msgstr "Zaakceptowane do opublikowania"
 msgid "journal.currentIssue"
 msgstr "Aktualny numer"
 
-msgid "context.contexts"
+msgid "journal.journals"
 msgstr "Czasopisma"
 
 msgid "journal.path"
 msgstr "Ścieżka"
-
-msgid "journal.journal"
-msgstr "Czasopismo"
 
 msgid "journal.issn"
 msgstr "ISSN"
@@ -404,23 +380,8 @@ msgstr "Zarejestruj jako recenzent: Rejestracja recenzentów jest obecnie wyłą
 msgid "user.role.manager"
 msgstr "Administrator czasopisma"
 
-msgid "user.role.editor"
-msgstr "Redaktor czasopisma"
-
 msgid "user.role.subEditor"
 msgstr "Redaktor działu"
-
-msgid "user.role.layoutEditor"
-msgstr "Składacz"
-
-msgid "user.role.copyeditor"
-msgstr "Korektor"
-
-msgid "user.role.proofreader"
-msgstr "Korektor pliku do publikacji"
-
-msgid "user.role.author"
-msgstr "Autor"
 
 msgid "user.role.subscriptionManager"
 msgstr "Administrator subskrypcji"
@@ -428,23 +389,8 @@ msgstr "Administrator subskrypcji"
 msgid "user.role.managers"
 msgstr "Administratorzy czasopisma"
 
-msgid "user.role.editors"
-msgstr "Redaktorzy"
-
 msgid "user.role.subEditors"
 msgstr "Redaktorzy działów"
-
-msgid "user.role.layoutEditors"
-msgstr "Składacze"
-
-msgid "user.role.copyeditors"
-msgstr "Korektorzy"
-
-msgid "user.role.proofreaders"
-msgstr "Korektorzy pliku do publikacji"
-
-msgid "user.role.authors"
-msgstr "Autorzy"
 
 msgid "user.role.subscriptionManagers"
 msgstr "Administratorzy subskrypcji"
@@ -550,9 +496,6 @@ msgstr "<strong>Uwaga:</strong>Przy płatności online za subskrypcję instytucj
 
 msgid "submission.event.general.defaultEvent"
 msgstr "Akcja"
-
-msgid "submission.event.general.articleSubmitted"
-msgstr "Artykuł przesłany"
 
 msgid "submission.event.general.issueScheduled"
 msgstr "Artykuł przesłany do kolejki"
@@ -689,22 +632,13 @@ msgstr "Wtyczka autoryzacji pozwala aby Open Journal System uwierzytelniał uży
 msgid "plugins.categories.generic.description"
 msgstr "Wtyczki ogólne są wykorzystywane do rozszerzania możliwości Open Journal Systems i nie są wspierane przez inne rodzaje wtyczek."
 
-msgid "plugins.categories.implicitAuth"
-msgstr "Implicit Authentication Plugins"
+msgid "manager.setup.lockssDescription"
+msgstr ""
+"LOCKSS jest otwartoźródłowym systemem opracowanym przez Bibliotekę Uniwerytetu Stanford, który umożliwia archiwizowanie wybranych czasopism publikowanych w internecie. Każdy zarchiwizowany artykuł jest wielokrotnie sprawdzany, a jego kopia przywracana w przypadku występienia błędów lub nieciągłości danych.\n"
+"<br /><br />\n"
+"Konfiguracja LOCKSS dla OJS może zostać przeprowadzona zarówno przed jak i po opublikowaniu treści w czasopiśmie. Możesz włączyć system LOCKSS poniżej:"
 
-msgid "plugins.categories.implicitAuth.description"
-msgstr "Implicit Authentication plugins implement support for authenticating users based on http headers."
-
-msgid "plugins.categories.oaiMetadataFormats"
-msgstr "OAI Metadata Format Plugins"
-
-msgid "plugins.categories.oaiMetadataFormats.description"
-msgstr "These format plugins express metadata in OAI communications."
-
-msgid "manager.setup.reviewProcessEmailDescription"
-msgstr "Redaktor przesyła recenzentowi zaproszenie do wykonania recenzji wraz z  załączonym tekstem. W odpowiedzi, recenzent przesyła redaktorowi swoją recenzję oraz rekomendację.  Następnie redaktor wprowadza dane nadesłane przez recenzenta do systemu."
-
-msgid "manager.setup.copyrightNotice.sample"
+msgid "manager.setup.authorCopyrightNotice.sample"
 msgstr ""
 "<h3>Informacje o prawach autorskich zaproponowane przez Creative Commons</h3>\n"
 "<h4>1. Zaproponowana polityka dla czasopisma, które zapewnia otwarty dostęp</h4>\n"
@@ -746,14 +680,6 @@ msgstr ""
 "\t<li>Podświetlone elementy wymagają działań ze strony redaktora.</li>\n"
 "\t<li>\"Czas\" zostaje wyświetlony, gdy recenzent podejmie się pracy nad tekstem. Podana jest liczba tygodni, jakie pozostały do zakończenia recenzji. W przypadku przekroczenia terminu, przy liczbie tygodni widnieć będzie znak \"-\".</li>\n"
 "</ol>"
-
-msgid "editor.article.selectReviewerNotes"
-msgstr ""
-"Nazwa użytkownika jest linkiem do profilu recenzenta.<br/>\n"
-"Ocena jest w skali 5-stopniowej (gdzie 5 oznacza \"doskonały\").<br/>\n"
-"\"Tygodnie\" oznaczają przeciętny czas na ukończenie recenzji.<br/>\n"
-"\"Ostatnie\" oznacza datę ostatnio zaakceptowanej recenzji.<br/>\n"
-"\"Aktywne\" oznacza liczbę recenzji w przygotowaniu."
 
 msgid "sectionEditor.activeEditorialAssignments"
 msgstr "Aktywne prace redakcyjne"
@@ -977,9 +903,6 @@ msgstr "Plik dla korektora"
 msgid "copyeditor.article.copyeditorFile"
 msgstr "Plik składacza"
 
-msgid "copyeditor.article.uploadedFile"
-msgstr "Wyślij plik"
-
 msgid "copyeditor.article.copyeditorFinalFile"
 msgstr "Plik składacza - wersja ukończona"
 
@@ -1113,12 +1036,6 @@ msgstr "Zapisz i wyślij e-mail do autora"
 
 msgid "submission.comments.saveAndEmailEditor"
 msgstr "Zapisz i wyślij e-mail do redaktora czasopisma"
-
-msgid "user.login.registerNewAccount"
-msgstr "Nie jesteś użytkownikiem? Zarejestruj się na stronie"
-
-msgid "user.login.resetPasswordInstructions"
-msgstr "Ze względów bezpieczeństwa, system przesyła nowe hasło.<br /><br />Podaj swój adres e-mail aby otrzymać nowe hasło."
 
 msgid "user.register.noJournals"
 msgstr "Brak czasopism."
@@ -1309,6 +1226,9 @@ msgstr "Zawartość tego czasopisma będzie dostępna na zasadach open access"
 msgid "about.delayedOpenAccessDescription2"
 msgstr "miesięcy od czasu opublikowania numeru."
 
+msgid "about.authorSelfArchive"
+msgstr "Archiwizowanie dla autorów"
+
 msgid "about.archiving"
 msgstr "Archiwizowanie"
 
@@ -1408,8 +1328,11 @@ msgstr "{$reviewerName} został(a) odłączony(a) od recenzji tekstu {$submissio
 msgid "log.review.reviewInitiated"
 msgstr "{$reviewerName} rozpoczął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie."
 
-msgid "log.review.reviewCancelled"
-msgstr "{$reviewerName} anulował(a) recenzję tekstu {$submissionId} w {$round} rundzie."
+msgid "log.review.reviewReinitiated"
+msgstr "{$reviewerName} ponownie rozpoczął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie."
+
+msgid "log.review.reviewCleared"
+msgstr "{$reviewerName} usunął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie."
 
 msgid "log.review.reviewerRated"
 msgstr "Recenzent {$reviewerName} został(a) oceniony(a) po wykonaniu recenzji tekstu {$submissionId} po {$round} rundzie."
@@ -1501,14 +1424,59 @@ msgstr "{$proofreaderName} przesłał(a) tekst {$submissionId} do publikacji."
 msgid "log.imported"
 msgstr "{$userName} ukończył(a) importowanie artykułu {$submissionId}."
 
-msgid "metadata.pkp.peerReviewed"
+msgid "rt.admin.settings"
+msgstr "Opcje narzędzi dla czytelników"
+
+msgid "rt.admin.settings.description"
+msgstr "Opcje narzędzi dla czytelników pojawiają się w ramce obok opublikowanych pozycji w działach czasopisma, które zostały skonfigurowane jako indeksowane. Narzędzia dla czytelników składają się z zestawu opcjonalnych narzędzi wymienionych poznizej."
+
+msgid "rt.admin.settings.enableReadingTools"
+msgstr "Włącz Narzędzia dla czytelników, dla oznaczonych działów czasopisma."
+
+msgid "rt.admin.settings.relatedItems"
+msgstr "Dziedzina"
+
+msgid "rt.admin.settings.relatedItemsLink"
+msgstr "Zobacz <a href=\"{$relatedItemsLink}\" class=\"action\">Ustawienia powiązanych pozycji</a> aby zobaczyć, dodać, poprawić lub usunąć powiązane pozycje dla każdej dziedziny."
+
+msgid "rt.admin.options"
+msgstr "Journal Item Tools"
+
+msgid "rt.admin.relatedItems"
+msgstr "Narzędzia powiązanych pozycji"
+
+msgid "rt.admin.settings.addComment"
+msgstr "Dodaj komentarz (włącza możliwość umieszczania komentarzy przez czytelników, które mogą być usuwane przez Administratora czasopisma)."
+
+msgid "rt.admin.settings.addComment.authenticated"
+msgstr "Użytkownik musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe nie jest dozwolone. "
+
+msgid "rt.admin.settings.addComment.anonymous"
+msgstr "Użytkownik musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe jest dozwolone."
+
+msgid "rt.admin.settings.addComment.unauthenticated"
+msgstr "Użytkownik nie musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe jest dozwolone."
+
+msgid "rt.admin.validateUrls.description"
+msgstr ""
+"Poniżej wyświetlone są prawdopodobnie niepoprawne adresy URL wyszukiwanych stron.<br/>\n"
+"Powinieneś(naś) ręcznie zweryfikować każdy URL i oznaczyć jako poprawny, jako że automatyczne testowanie URL nie zawsze działa w 100%.<br/>\n"
+"Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wymagają opublikowania danych formularza."
+
+msgid "rt.metadata.dublinCore.primaryAuthor"
+msgstr "Autor"
+
+msgid "rt.metadata.pkp.primaryAuthor"
+msgstr "Imię, nazwisko autora, afiliacja, kraj"
+
+msgid "rt.metadata.pkp.peerReviewed"
 msgstr "Recenzowany artykuł"
 
-msgid "notification.mailListDescription"
-msgstr "Podaj adres e-mail aby otrzymywać powiadomienia o aktualizacjach treści."
+msgid "rt.beNotifiedWhen"
+msgstr "Powiadom gdy..."
 
-msgid "notification.notificationsPublicDescription"
-msgstr "Ta strona zawiera informacje o ważnych aktualizacjach treści czasopisma, takich jak nowe numery lub ogłoszenia. Możesz subskrybować powiadomienia za pomocą czytnika RSS (klikając w ikonę), lub   <a href=\"{$emailUrl}\">przez e-mail.</a>"
+msgid "rt.thisJournal"
+msgstr "Wyszukaj w czasopiśmie"
 
 msgid "notification.type.editing"
 msgstr "Edycja wydarzeń"
@@ -1576,65 +1544,8 @@ msgstr "Wyświetl numer"
 msgid "site.noJournals"
 msgstr "Nie ma żadnych czasopism"
 
-msgid "gifts.buyer"
-msgstr "Od"
-
-msgid "gifts.buyerDescription"
-msgstr "Od kogo jest ten podarunek?"
-
-msgid "gifts.recipient"
-msgstr "Dla"
-
-msgid "gifts.recipientDescription"
-msgstr "Dla kogo jest ten podarunek?"
-
-msgid "gifts.thankYou"
-msgstr "Dziękujemy"
-
-msgid "gifts.thankYouMessage"
-msgstr "Twój zakup w formie podarunku został zakończony. Otrzymasz kopię wiadomości e-mail przesłanej do adresata podarunku po zaakceptowaniu płatności."
-
-msgid "gifts.purchaseGiftIndividualSubscription"
-msgstr "Subskrypcja jako podarunek"
-
-msgid "gifts.subscriptionFormIntroduction"
-msgstr "Proszę o wypełnienie formularza. Podane dane kontaktowe zostaną wykorzystane do przesłanie wiadomości e-mail z informacją o podarowanej subskrypcji (otrzymasz kopię tej wiadomości na swoją skrzynkę e-mail)."
-
-msgid "gifts.details"
-msgstr "Szczegóły podarunku"
-
-msgid "gifts.detailsDescription"
-msgstr "Proszę o wybranie poniżej podarunku i włączenie spersonalizowanej wiadomości, która zostanie przesłana na adres e-mail adresata podarunku (otrzymasz kopię tej wiadomości na swoją skrzynkę e-mail)."
-
-msgid "gifts.gift"
-msgstr "Podarunek"
-
-msgid "gifts.noteTitle"
-msgstr "Tytuł"
-
-msgid "gifts.note"
-msgstr "Opis podarunku"
-
-msgid "gifts.localeRequired"
-msgstr "Proszę o wybranie języka dla spersonalizowanej wiadomości."
-
-msgid "gifts.myGifts"
-msgstr "Moje podarunki"
-
-msgid "gifts.manageMyGifts"
-msgstr "Zarządzaj moimi podarunkami"
-
-msgid "gifts.status.notRedeemed"
-msgstr "Dostępny"
-
-msgid "gifts.subscriptions"
-msgstr "Subskrypcje"
-
 msgid "payment.type.purchaseIssue"
 msgstr "Zapłać za dostęp do numeru"
-
-msgid "payment.type.gift.subscription"
-msgstr "Subskrypcja"
 
 msgid "installer.allowFileUploads"
 msgstr "Serwer umożliwia przesyłanie plików: <strong>{$allowFileUploads}</strong>"
@@ -1711,12 +1622,6 @@ msgstr "Asystent czasopisma"
 msgid "user.role.journalAssistants"
 msgstr "Asystenci czasopisma"
 
-msgid "user.role.guestEditor"
-msgstr "Redaktor gościnny"
-
-msgid "user.role.guestEditors"
-msgstr "Redaktorzy gościnni"
-
 msgid "search.results.orderBy"
 msgstr "Porządkuj wyniki wg"
 
@@ -1752,6 +1657,12 @@ msgstr "Malejąco"
 
 msgid "search.results.similarDocuments"
 msgstr "podobne dokumenty"
+
+msgid "manager.setup.clockssDescription"
+msgstr ""
+"Open Journal Systems również wspiera <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) system zapewniający ochronę i stałą archiwizacje czasopisma. CLOCKSS jest oparty na otwartoźródłowym oprogramowaniu LOCKSS, rozwijanym przez Bibliotekę Uniwersytetu Stanforda, który włącza ochronę wybranych stron czasopism poprzez regularne sprawdzanie stron internetowych zarejestrowanych czasopism w zakresie nowo opublikowanych treści i ich archiwizację. Każdy zarchiwizowany artykuł jest wielokrotnie sprawdzany, a jego kopia przywracana w przypadku wystąpienia błędów lub nieciągłości danych.\n"
+"<br /><br />\n"
+"Skonfigurowanie CLOCKSS w Open Journal Systems nie wymaga posiadania opublikowanych treści na stronie czasopisma."
 
 msgid "submission.layout.galley.remotelyHostedContent"
 msgstr "Pliki do publikacji będą dostępne na zewnętrznej stronie internetowej"
@@ -1907,3 +1818,248 @@ msgstr "Subskrypcje"
 
 msgid "log.editor.submissionExpedited"
 msgstr "{$editorName} rozpoczął proces edycji tego artykułu {$submissionId}."
+
+msgid "section.policy"
+msgstr "Zasady działu"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Tak, chcę otrzymywać zapytania w sprawie wykonania recenzji dla tego czasopisma."
+
+msgid "manager.setup.porticoDescription"
+msgstr "Portico jest serwisem not-for-profit powołanym do zachowania cyfrowych publikacji, w tym e-czasopism, e-książek oraz zdigitalizowanych kolekcji materiałów historycznych. Jeżeli twoje czasopismo podpisało umowę z Portico, zaznacz to tutaj:"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Kroki: Kolejka zgłoszenia &gt; Recenzja tekstu &gt; Redakcja tekstu &gt; Spis treści.<br /><br />\n"
+"Wybierz odpowiedni model zarządzania procesem redakcyjnym (Aby oznaczyć administratora czasopisma lub redaktora działu, przejdź do listy redaktorów)."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Tak, chcę otrzymywać informacje o nowych publikacjach oraz ogłoszenia dla wszystkich czasopism zarejestrowanych na tej platformie."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr "Wyrażam zgodę na gromadzenie i przechowywanie moich danych zgodnie z <a href=\"{$privacyUrl}\" target=\"_blank\">polityką prywatności</a>."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "Musisz zgodzić się na zasady polityki prywatności dla każdego czasopisma, z którym jesteś powiązany(a)."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Musisz zgodzić się na zasady polityki prywatności dla tej strony."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Utwórz nowe zgłoszenie do działu <a href=\"{$url}\">{$name}</a>."
+
+msgid "payment.loginRequired"
+msgstr "Musisz zalogować się, aby dokonać płatności."
+
+msgid "installer.localeInstructions"
+msgstr "Podstawowy język wykorzystywany przez OJS. Zapoznaj się z dokumentacją, jeżeli jesteś zainteresowany(a) wspieraniem języka nie zamieszczonego na liście."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Wybierz języki. Te języki będą dostępne do wykorzystania na stronie. Dodatkowe języki mogą być doinstalowane w dowolnym czasie z poziomu interfejsu administratora."
+
+msgid "installer.filesDirInstructions"
+msgstr "Wpisz pełna ścieżkę do istniejącego katalogu na pliki. Ten katalog nie może być publicznie dostępny. <strong>Upewnij się, że katalog istnieje i posiada uprawnienia do zapisu przed instalacją. </strong> Ścieżki w systemie Windows powinny zawierać znaki odwrotnych ukośników (forward slash), np. \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS wymaga dostępu do bazy SQL do przechowywania danych. Zapoznaj się z wymaganiami powyżej. W polach poniżej, wprowadź ustawienia, które zapewnią połączenie z bazą."
+
+msgid "installer.installApplication"
+msgstr "Zainstaluj Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Aktualizuj Open Journal Systems"
+
+msgid "catalog.sortBy"
+msgstr "Kolejność artykułów"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Wybierz kolejność artykułów w tej kategorii."
+
+msgid "rt.context.authorTermsDescription"
+msgstr "W przypadku tekstów, które mają więcej niż jednego autora, pozostaw zaznaczone wszystkie nazwiska, aby wyszukać podobne współautorskie teksty lub zaznacz jedno nazwisko, aby wyszukać teksty tylko dla zaznaczonego autora. Aby dowiedzieć się więcej o przeszukiwanym zasobie, kliknij ABOUT. Zasoby te zostały wybrane ze względu na ich znaczenie i otwarty (bezpłatny) dostęp do całości lub części ich zawartości."
+
+msgid "notification.type.public"
+msgstr "Publiczne ogłoszenia"
+
+msgid "notification.type.publicationScheduled"
+msgstr "Ten tekst został zaplanowany do publikacji."
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Instalacja OJS zakończona sukcesem.</p>\n"
+"<p>Aby zacząć używać system, <a href=\"{$loginUrl}\">zaloguj się</a> używając nazwy użytkownika i hasła wprowadzonego na wcześniejszej stronie.</p>\n"
+"<p>Jeżeli chciałbyś(abyś) stać się częścią społeczności PKP, dołącz:</p>\n"
+"<ol>\n"
+"\t<li>Czytaj <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP blog</a> oraz śledź <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS feed</a> aby zapoznać się z nowościami i otrzymywać aktualizacje.</li>\n"
+"\t<li>Odwiedź <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">forum wsparcia</a> jeżeli masz pytania lub uwagi.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Aktualizacja OJS do wersji {$version} została zakończona sukcesem.</p>\n"
+"<p>Nie zapomnij zmienić ustawień \"installed\" w pliku konfiguracyjnym config.inc.php z powrotem na: <em>On</em>.</p>\n"
+"<p>Jeżeli jeszcze nie zarejestrowałeś(aś) się, a chciałbyś(abyś) uzyskiwać informacje o aktualizacjach, <strong>zarejestruj się na stronie: <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong>Jeżeli masz pytania lub uwagi, odwiedź: <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">forum wsparcia</a>.</p>"
+
+msgid "payment.notFound"
+msgstr "Zażądano wniesienia opłaty, ale żądanie wygasło. Skontaktuj się z administratorem czasopisma, aby uzyskać szczegółowe informacje."
+
+msgid "payment.donation.makeDonation"
+msgstr "Przekaż datek"
+
+msgid "payment.submission.paySubmission"
+msgstr "Wnieś opłatę za zgłoszenie"
+
+msgid "payment.publication.payPublication"
+msgstr "Wnieś opłatę za publikację"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Opłata za publikację wniesiona"
+
+msgid "payment.membership.buyMembership"
+msgstr "Kup indywidualne członkowstwo"
+
+msgid "payment.membership.renewMembership"
+msgstr "Odnów indywidualne członkowstwo"
+
+msgid "payment.membership.ends"
+msgstr "Zakończenie"
+
+msgid "payment.subscription.purchase"
+msgstr "Zakup subskrypcję"
+
+msgid "payment.subscription.renew"
+msgstr "Odnów subskrypcję"
+
+msgid "payment.subscription.expires"
+msgstr "Wygasa"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Uwaga:</strong> Jeżeli instalacja zakończyła się błędem podczas instalacji bazy, konieczne może być usunięcie bazy OJS lub tabeli OJS przed ponowną reinstalacją bazy."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>Ważne!</h4>\n"
+"<p>Instalator nie może automatycznie nadpisać pliku konfiguracyjnego. Przed uruchomieniem systemu otwórz <tt>config.inc.php</tt> w edytorze tekstu a następnie zastąp treść pliku treścią wyświetloną poniżej.</p>"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Wprowadź poprawny zakres IP."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Aby uzyskać dostęp do artykułu, niezbędna jest subskrypcja lub jego zakup. Aby zweryfikować, czy posiadasz subskrypcję lub zakupiłeś(aś) już ten artykuł, zaloguj się na stronie czasopisma."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Aby uzyskać dostęp do numeru, niezbędna jest subskrypcja lub jego zakup. Aby zweryfikować, czy posiadasz subskrypcję lub zakupiłeś(aś) już ten numer, zaloguj się na stronie czasopisma."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Musisz zalogować się w celu przekazania datku."
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Zaznacz to pole, jeżeli wysłałeś(aś) już płatność do czasopisma, w celu zakończenia procesu zgłoszenia. Zgłoszenie nie zostanie przejrzane do momentu otrzymania płatności. Kliknij przycisk PAY NOW znajdujący się powyżej, aby zapoznać się z instrukcją płatności."
+
+msgid "payment.paymentReceived"
+msgstr "Otrzymano płatność"
+
+msgid "payment.paymentSent"
+msgstr "Płatność została wysłana"
+
+msgid "payment.authorFees"
+msgstr "Opłata autora"
+
+msgid "payment.type.publication.required"
+msgstr "Należy wnieść opłatę za publikację."
+
+msgid "payment.type.fastTrack"
+msgstr "Opłata za szybką recenzję"
+
+msgid "payment.type.donation"
+msgstr "Datki"
+
+msgid "payment.requestPublicationFee"
+msgstr "Prośba o wniesienie opłaty za publikację  ({$feeAmount})"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Aktywne i wygasłe subskrypcje są wyświetlane poniżej wg daty wygaśnięcia. Dodatkowo może dostępna być informacja o statusie każdej subskrypcji."
+
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Opis"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Dodatkowe informacje są niezbędne do aktywacji subskrypcji"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Subskrypcja musi być przejrzana przed jej aktywacją"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Ręczna płatność została zainicjowana, ale nie otrzymaliśmy jeszcze przesłanej kwoty"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Płatność online została zainicjowana, ale została anulowana lub nie została ukończona"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Indywidualna subskrypcja"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Instytucjonalna subskrypcja"
+
+msgid "user.subscriptions.renew"
+msgstr "Odnowienie"
+
+msgid "user.subscriptions.purchase"
+msgstr "Zakup"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Kup nową subskrypcję"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Kup indywidualną subskrypcję"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Kup instytucjonalną subskrypcję"
+
+msgid "user.subscriptions.expires"
+msgstr "Wygasa: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Wygasło: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Zobacz dostępne rodzaje subskrypcji"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Wybrane rodzaje subskrypcji wymagają informacji o członkowstwie"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Wybierz właściwy rodzaj subskrypcji"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "To konto użytkownika posiada już indywidualną subskrypcję"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Informacja o członkostwie, jeżeli jest wymagana dla wybranego rodzaju subskrypcji"
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Nazwa instytucji"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Wymagana jest nazwa instytucji."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Adres"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Jeżeli podano domenę, zakres IP jest opcjonalny.<br />Poprawne wartości to nazwy domen (np. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Wybrany rodzaj subskrypcji wymaga podania domeny lub/oraz zakresu IP do autoryzacji subskrypcji."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "zakres IP"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Jeżeli podano zakres IP, domena jest opcjonalna.<br />Poprawne wartości to adres IP (np. 142.58.103.1), zakres IP (np. 142.58.103.1 - 142.58.103.4), zakres IP wraz z '*' (np. 142.58.*.*) oraz zakres IP z CIDR (np. 142.58.100.0/24)."

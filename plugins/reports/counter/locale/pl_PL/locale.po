@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:09+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:09+00:00\n"
+"POT-Creation-Date: 2020-01-30T17:57:12+00:00\n"
+"PO-Revision-Date: 2020-01-30T17:57:12+00:00\n"
 "Language: \n"
 
 msgid "plugins.reports.counter.description"
@@ -66,10 +66,10 @@ msgid "plugins.reports.counter.1a.platform"
 msgstr "Platforma"
 
 msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Wyświetl ISSN"
+msgstr "ISSN"
 
 msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Online ISSN"
+msgstr "ISSN online"
 
 msgid "plugins.reports.counter.1a.ytdTotal"
 msgstr "YTD łącznie"

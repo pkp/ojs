@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
+"POT-Creation-Date: 2020-01-30T17:55:38+00:00\n"
+"PO-Revision-Date: 2020-01-30T17:55:38+00:00\n"
 "Language: \n"
 
 msgid "submission.submit.title"
@@ -50,8 +50,17 @@ msgstr "Pliki do publikacji są widoczne na stronie numeru"
 msgid "grid.action.issueEntry"
 msgstr "Wyświetl metadane zgłoszenia"
 
-msgid "submission.publication"
+msgid "submission.issueEntry.modalTitle"
+msgstr "Metadane zgłoszonego tekstu oraz publikacji"
+
+msgid "submission.issueEntry.submissionMetadata"
+msgstr "Zgłoszenie"
+
+msgid "submission.issueEntry.publicationMetadata"
 msgstr "Publikacja"
+
+msgid "submission.issueEntry.confirm"
+msgstr "Utwórz wpis dla tego artykułu oparty o metadane widoczne poniżej."
 
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Pliki do publikacji \"{$galleyFormatName}\" są dostępne."
@@ -154,3 +163,15 @@ msgstr "Metadane oparte są o Dublin Core - międzynarodowy standard wykorzystyw
 
 msgid "section.any"
 msgstr "Dowolny dział"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Długość abstraktu nie może przekraczać {$wordCount} wyrazów."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Abstrakt jest za długi. Skróć go, uwzględniając limit wyrazów określony poniżej dla tego działu."
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} pozycji"
+
+msgid "catalog.category.heading"
+msgstr "Wszystkie pozycje"
