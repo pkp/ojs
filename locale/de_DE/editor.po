@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
+"PO-Revision-Date: 2020-01-31 16:21+0000\n"
+"Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
+"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/editor/de/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2019-09-27T09:54:42-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
 msgstr "Startseite der Redakteurin/des Redakteurs"
@@ -45,7 +47,7 @@ msgid "editor.publicIdentificationExists"
 msgstr "Die Kennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift."
 
 msgid "editor.submissionArchive.noSubmissions"
-msgstr "Kein Beitrag im Archiv"
+msgstr "Keine Beiträge im Archiv."
 
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Änderungen der archivierten Beiträge speichern? Beiträge, die als zu löschend gekennzeichnet sind, werden dadurch engültig aus dem System gelöscht."
@@ -108,7 +110,8 @@ msgid "editor.issues.numArticles"
 msgstr "Zahl der Beiträge"
 
 msgid "editor.issues.noArticles"
-msgstr "Zur Zeit kein Beitrag zur Veröffentlichung in dieser Ausgabe vorgesehen"
+msgstr ""
+"Zur Zeit ist kein Beitrag zur Veröffentlichung in dieser Ausgabe vorgesehen."
 
 msgid "editor.issues.confirmDelete"
 msgstr "Sind Sie sicher, dass Sie diese Ausgabe endgültig löschen wollen?"
@@ -216,7 +219,10 @@ msgid "editor.issues.cover"
 msgstr "Titelseite"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Sind Sie sicher, dass Sie diese Ausgabe entfernen wollen? Alle Beiträge gehen dadurch zurück in die Liste der zur Veröffentlichung anstehenden Beiträge und alle Zusatzdateien werden endgültig gelöscht."
+msgstr ""
+"Sind Sie sicher, dass Sie diese Ausgabe entfernen wollen? Alle Beiträge "
+"gehen dadurch zurück in die Liste der zur Veröffentlichung anstehenden "
+"Beiträge und alle Zusatzdateien werden endgültig entfernt."
 
 msgid "editor.issues.resetSectionOrder"
 msgstr "Diese Ausgabe hat eine spezielle Rubrikreihenfolge. <a href=\"{$url}\" class=\"action\">Auf den Standard zurücksetzen</a>"
@@ -321,7 +327,7 @@ msgid "grid.action.viewIssue"
 msgstr "Ansehen"
 
 msgid "grid.action.previewIssue"
-msgstr "Preview"
+msgstr "Vorschau"
 
 msgid "grid.action.addIssueGalley"
 msgstr "Ausgabenfahne anlegen"
@@ -415,3 +421,15 @@ msgstr "Die öffentliche Kennung '{$publicIdentifier}' wird bereits für ein Obj
 
 msgid "editor.article.coverImage"
 msgstr "Titelbild"
+
+msgid "editor.article.editMetadata"
+msgstr "Metadaten der Version ändern"
+
+msgid "editor.article.viewMetadata"
+msgstr "Metadaten der Version ansehen"
+
+msgid "editor.article.publishVersion"
+msgstr "Version veröffentlichen"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Zur Veröffentlichung vorgesehene Beiträge anzeigen"
