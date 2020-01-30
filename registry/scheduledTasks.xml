@@ -35,4 +35,8 @@
 		<descr>Send automated statistics reports to journal managers and editors.</descr>
 		<frequency day="1"/>
 	</task>
+	<task class="classes.tasks.SubscriptionExpiryReminder">
+		<descr>Send automated reminders about subscription expiry.</descr>
+		<frequency day="1"/>
+	</task>
 </scheduled_tasks>
