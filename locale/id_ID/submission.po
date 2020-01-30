@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2020-01-30 08:35+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/id/>\n"
+"Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Serahkan Naskah"
@@ -93,13 +96,13 @@ msgid "submission.submit.upload.description"
 msgstr "Unggah file terkait naskah ini, termasuk artikel, multimedia, set data, artwork, dll."
 
 msgid "submission.pageProofs"
-msgstr "Proofreading"
+msgstr "Tinjauan sebelum terbit"
 
 msgid "submission.confirmSubmit"
 msgstr "Anda yakin akan menyerahkan naskah ke jurnal ini?"
 
 msgid "workflow.review.externalReview"
-msgstr "Review"
+msgstr "Ulasan"
 
 msgid "editor.submission.decision.sendExternalReview"
 msgstr "Kirim untuk Review"
@@ -154,3 +157,73 @@ msgstr "Spesifikasi ini dibuat berdasarkan set metadata Dublin Core, suatu stand
 
 msgid "section.any"
 msgstr "Semua Bagian"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Seluruh prasyarat penerbitan telah terpenuhi. Ini akan diterbitkan saat "
+"{$issue} diterbitkan. Apakah Anda yakin ingin menjadwalkan ini untuk "
+"diterbitkan?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Seluruh prasyarat penerbitan telah terpenuhi. Apakah Anda yakin ingin "
+"menerbitkan ini?"
+
+msgid "publication.issue.success"
+msgstr "Rincian volume/isu untuk penerbitan ini telah diperbarui."
+
+msgid "publication.invalidIssue"
+msgstr "Volume/isu untuk penerbitan ini tidak dapat ditemukan."
+
+msgid "publication.invalidSection"
+msgstr "Bagian untuk penerbitan ini tidak dapat ditemukan."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Tanggal publikasi telah diset secara otomatis saat volume/isu diterbitkan. "
+"Jangan memasukkan tanggal publikasi kecuali artikel tersebut telah "
+"diterbitkan di tempat lain dan Anda perlu memajukan tanggalnya."
+
+msgid "galley.publicationNotFound"
+msgstr "Publikasi untuk galley ini tidak dapat ditemukan."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Galley dari publikasi ini tidak dapat disunting karena telah diterbitkan."
+
+msgid "catalog.category.heading"
+msgstr "Semua butir"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} butir"
+
+msgid "submission.sectionOptions"
+msgstr "Pilih Bagian"
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Abstrak Anda terlalu panjang. Mohon dipersingkat menurut batasan kata yang "
+"ditunjukkan untuk bagian ini."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Abstrak harus berjumlah {$wordCount} kata atau kurang."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Dijadwalkn untuk diterbitkan dalam <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Diterbitkan dalam <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr ""
+"Publikasi ini harus dimasukkan dalam sebuah nomor terbitan sebelum dapat "
+"dipublikasikan."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Semua persyaratan publikasi telah dipenuhi.  Naskah ini akan segera "
+"diterbitkan dalam {$issue}. Anda yakin ingin menerbitkan ini?"
+
+msgid "submission.submit.noContext"
+msgstr "Submisi jurnal ini tidak dapat ditemukan."

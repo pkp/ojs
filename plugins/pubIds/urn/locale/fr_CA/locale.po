@@ -2,14 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
+"PO-Revision-Date: 2020-01-28 23:48+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-urn/fr_CA/>\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
-"PO-Revision-Date: 2019-09-30T06:56:48-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -18,16 +22,18 @@ msgid "plugins.pubIds.urn.description"
 msgstr "Ce plugiciel permet l'attribution d'URN (Uniform Resource Names) aux numéros, articles et versions d'articles dans OJS."
 
 msgid "plugins.pubIds.urn.manager.settings.description"
-msgstr "Veuillez configurer le plugiciel URN pour pouvoir gérer et utiliser les URN dans OJS:"
+msgstr ""
+"Veuillez configurer le plugiciel URN pour pouvoir gérer et utiliser les URN "
+"dans OJS :"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjects"
 msgstr "Contenu de la revue"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
-msgstr "Veuillez choisir les objets auxquels des URN doivent être attribués"
+msgstr "Veuillez choisir les objets auxquels des URN doivent être attribués."
 
 msgid "plugins.pubIds.urn.manager.settings.explainURNs"
-msgstr "Sélectionner les objets publiés auxquels des URN seront attribués:"
+msgstr "Sélectionner les objets publiés auxquels des URN seront attribués :"
 
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
 msgstr "Numéros"
@@ -36,28 +42,38 @@ msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
 msgstr "Articles"
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
-msgstr "Fichiers déposés"
+msgstr "Épreuves"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
 msgstr "Préfixe URN"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
-msgstr "Le préfixe URN est la partie fixe, qui ne change jamais (exemple :urn:nbn:de:0000-)."
+msgstr ""
+"Le préfixe URN est la partie fixe, qui ne change jamais (exemple « "
+":urn:nbn:de:0000- »)."
 
 msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
-msgstr "Le préfixe URN doit adopter la forme \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+msgstr "Le préfixe URN doit adopter la forme «urn:»&lt;NID&gt;«:»&lt;NSS&gt;."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
 msgstr "Suffixe URN"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
-msgstr "Un suffixe URN peut prendre n'importe quelle forme, mais il doit être unique parmi tous les objets de publication qui ont le même préfixe URN:"
+msgstr ""
+"Un suffixe URN peut prendre n'importe quelle forme, mais il doit être unique "
+"parmi tous les objets de publication qui ont le même préfixe URN :"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
-msgstr "Utiliser le modèle ci-dessous pour générer des suffixes URN. Utilisez %j pour les initiales de la revue, %v pour le numéro du volume, %i pour le numéro, %Y pour l'année, %a pour l'identifiant OJS de l'article, %g pour l'identifiant OJS de l'épreuve, %f pour l'identifiant OJS du fichier, %p pour le numéro de page et %x pour un \"Identifiant personnalisé\"."
+msgstr ""
+"Utiliser le modèle ci-dessous pour générer des suffixes URN. Utiliser %j "
+"pour les initiales de la revue, %v pour le numéro du volume, %i pour le "
+"numéro, %Y pour l'année, %a pour l'identifiant OJS de l'article, %g pour "
+"l'identifiant OJS de l'épreuve, %f pour l'identifiant OJS du fichier, %p "
+"pour le numéro de page et %x pour un  « Identifiant personnalisé »."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
-msgstr "Par exemple, vol%viss%ipp%p permet de créer le suffixe URN \"vol3iss2pp230\"."
+msgstr ""
+"Par exemple, vol%viss%ipp%p permet de créer le suffixe URN « vol3iss2pp230 »."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
 msgstr "pour les numéros"
@@ -66,7 +82,7 @@ msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
 msgstr "pour les articles"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
-msgstr "pour les galleys"
+msgstr "pour les épreuves"
 
 msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
 msgstr "Veuillez indiquer le modèle de suffixe URN pour les numéros."
@@ -84,7 +100,10 @@ msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
 msgstr "%j.v%vi%i pour les numéros<br />%j.v%vi%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
-msgstr "Entrer un suffixe URN différent pour chaque élément publié. Vous trouverez un champ de saisie URN supplémentaire sur la page de métadonnées de chaque élément."
+msgstr ""
+"Entrer un suffixe URN unique pour chaque élément publié. Vous trouverez un "
+"champ de saisie URN supplémentaire sur la page de métadonnées de chaque "
+"élément."
 
 msgid "plugins.pubIds.urn.manager.settings.checkNo"
 msgstr "Numéro de vérification"
@@ -114,10 +133,14 @@ msgid "plugins.pubIds.urn.manager.settings.urnReassign"
 msgstr "Réassigner les URNs"
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
-msgstr "Si vous modifiez votre configuration URN, les URNs déjà attribués ne seront pas affectés. Une fois la configuration URN enregistrée, utilisez ce bouton pour effacer tous les URN existants afin que les nouveaux paramètres prennent effet avec les objets existants."
+msgstr ""
+"Si vous modifiez votre configuration URN, les URNs déjà attribués ne seront "
+"pas affectés. Une fois la configuration URN enregistrée, utiliser ce bouton "
+"pour effacer tous les URNs existants afin que les nouveaux paramètres "
+"prennent effet avec les objets existants."
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
-msgstr "Êtes-vous sûr de vouloir supprimer tous les URNs existants?"
+msgstr "Êtes-vous certain-e de vouloir supprimer tous les URNs existants ?"
 
 msgid "plugins.pubIds.urn.editor.urn"
 msgstr "URN"
@@ -129,7 +152,7 @@ msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
 msgstr "article"
 
 msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
-msgstr "épreuve"
+msgstr "épreuves"
 
 msgid "plugins.pubIds.urn.editor.customSuffixMissing"
 msgstr "L'URN ne peut pas être attribué car le suffixe personnalisé est manquant."
@@ -138,28 +161,34 @@ msgid "plugins.pubIds.urn.editor.patternNotResolved"
 msgstr "L'URN ne peut pas être attribué car il contient un modèle non résolu."
 
 msgid "plugins.pubIds.urn.editor.canBeAssigned"
-msgstr "Ce que vous voyez est un aperçu de l'URN. Cochez la case et enregistrez le formulaire pour attribuer l'URN."
+msgstr ""
+"Ce que vous voyez est un aperçu de l'URN. Cocher la case et enregistrer le "
+"formulaire pour attribuer l'URN."
 
 msgid "plugins.pubIds.urn.editor.assigned"
-msgstr "L'URN est attribué à {$pubObjectType}."
+msgstr "L'URN est attribué à ce,cette {$pubObjectType}."
 
 msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
 msgstr "Le suffixe URN attribué est déjà utilisé pour un autre élément publié. Veuillez entrer un suffixe URN unique pour chaque élément."
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN"
-msgstr "Supprimer l'URN"
+msgstr "Supprimer"
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
-msgstr "Êtes-vous sûr de vouloir supprimé cet URN?"
+msgstr "Êtes-vous certain-e de vouloir supprimer cet URN ?"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
-msgstr "Supprimer les URNs de ces numéros"
+msgstr "Supprimer les URNs des éléments du numéro"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
-msgstr "Êtes-vous sûr  supprimer les URNs de ces numéros?"
+msgstr ""
+"Êtes-vous certain-e de vouloir supprimer les URNs des éléments du numéro "
+"existant ?"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
-msgstr "Utiliser cette fonction pour supprimer les URNs de tous les objets (articles et épreuves) présentement prévus pour ce numéro."
+msgstr ""
+"Utiliser cette fonction pour supprimer les URNs de tous les éléments ("
+"articles et épreuves) présentement prévus pour ce numéro."
 
 msgid "plugins.pubIds.urn.editor.addCheckNo"
 msgstr "Ajouter un numéro de vérification"
@@ -178,3 +207,36 @@ msgstr "L'URN {$pubId} a été attribué."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Le numéro de vérification est manquant."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Vous ne pouvez pas générer d'URN car une ou plusieurs parties du modèle URN "
+"requièrent davantage de données. Vous devrez peut-être affecter la "
+"publication à un numéro, définir un ID d'éditeur ou encore saisir des "
+"numéros de page."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Vous ne pouvez pas générer un URN tant que cette publication n'a pas été "
+"affectée à un numéro."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "L'URN doit débuter par {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "L'URN pour cette publication sera : {$urn}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Aucun URN n'a été assigné à cette publication."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Épreuves : {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Élément"
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Assigner"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "L'URN doit débuter par {$prefix}."

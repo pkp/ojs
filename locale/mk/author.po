@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-01-28 23:48+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"mk/>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.nextSteps"
+msgstr "Следна стапка"
+
+msgid "author.submit.confirmation"
+msgstr "Потврда"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Внеси дополнителни фајлови"
+
+msgid "author.submit.metadata"
+msgstr "Внеси метаподатоци"
+
+msgid "author.submit.upload"
+msgstr "Внеси поднесок"
+
+msgid "author.submit.start"
+msgstr "Почеток"
+
+msgid "author.submit.startHereTitle"
+msgstr "Започни нов поднесок"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Пет стапки за поднесок"
+
+msgid "author.submit.submitArticle"
+msgstr "Поднеси труд"
+
+msgid "author.track"
+msgstr "Активен поднесок"
+
+msgid "author.submit.noFiles"
+msgstr "Нема прикачено фајлови кон овој поднесок."
+
+msgid "author.submit.filesSummary"
+msgstr "Фајл од извадок"
+
+msgid "author.submit.finishSubmission"
+msgstr "Заврши поднесок"
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Поднесувањето е комплетно. Ви благодариме за интерсот да објавите во  "
+"{$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Внеси авторска верзија"
+
+msgid "author.article.copyeditedFile"
+msgstr "Фајл од уредена копија"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Потребен е кориснички акаунт за да се поднесе труд во ова списание. Тоа "
+"овозможува нашите уредници да го следат поднесокот и да ве контактираат кога "
+"ќе се смени статусот на поднесокот или ако се потребни дополнителни "
+"информации од вас."
+
+msgid "author.article.authorRevisedFile"
+msgstr "Авторски фајл"
+
+msgid "author.submit"
+msgstr "Нов поднесок"

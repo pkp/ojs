@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
+"PO-Revision-Date: 2020-01-30 08:35+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"id/>\n"
+"Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:25+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
 msgstr "Beranda Editor"
@@ -403,3 +406,35 @@ msgstr "Semua file yang telah diunggah di tiap tahap penyerahan dapat ditambahka
 
 msgid "editor.article.coverImage"
 msgstr "Gambar sampul"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Pengidentifikasi publik '{$publicIdentifier}' sudah ada digunakan objek lain "
+"dengan tipe yang sama.  Silakan pilih pengidentifikasi unik untuk objek "
+"dengan tipe yang sama dalam jurnal Anda."
+
+msgid "editor.article.editMetadata"
+msgstr "Edit Versi Metadata"
+
+msgid "editor.article.viewMetadata"
+msgstr "Lihat Versi Metadata"
+
+msgid "editor.article.publishVersion"
+msgstr "Terbitkan Versi"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Tampilkan Terbitan Terjadwal"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Tetapkan Nomor Terbitan Tetkini"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Yakin ingin mengatur nomor ini sebagai terbitan terkini?"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Format halaman depan tidak valid. Format yang diterima adalah .gif, .jpg, "
+"atau .png."
+
+msgid "editor.notifyUsers"
+msgstr "Ingatkan Pengguna"

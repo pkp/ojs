@@ -2,14 +2,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
+"PO-Revision-Date: 2020-01-28 23:47+0000\n"
+"Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
+"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/api/de/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Sie haben keine Berechtigung, unveröffentlichte Ausgaben zu sehen."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Die Publikation, die Sie suchen, ist nicht Teil dieser EInreichung."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Die Publikation, die Sie suchen, ist nicht Teil dieser Zeitschrift."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Die von Ihnen gewählte Zahlungsmethode wird nicht unterstützt."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Sie haben keine Berechtigung diese E-Mail-Vorlage zu einer anderen "
+"Zeitschrift zu verschieben."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Die Zeitschrift, nach der Sie suchen, wurde nicht gefunden."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Sie haben keine Berechtigung diese Zeitschrift zu löschen."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Sie haben keine Berechtigung diese Zeitschrift zu ändern."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Sie können diese Zeitschrift nicht von der site-wide API aus ändern."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Sie können diese Zeitschrift nicht ansehen oder ändern, außer Sie stellen "
+"eine Anfrage an die API der Zeitschrift oder die site-wide API."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Sie haben keine Berechtigung diese Zeitschrift anzusehen."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Sie können nur Zeitschriften ansehen die freigeschaltet sind."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Um eine Einreichung zu erstellen oder zu ändern, müssen Sie eine Anfrage an "
+"den API endpoint der Zeitschrift stellen."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Sie können die Zeitschrift einer Einreichung nicht ändern."

@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2020-01-30 08:35+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"id/>\n"
+"Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.website.archiving"
 msgstr "Pengarsipan"
@@ -36,7 +39,16 @@ msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "Ini akan menggantikan pengaturan jurnal bahasa khusus apapun yang Anda miliki untuk bahasa ini"
 
 msgid "manager.languages.languageInstructions"
-msgstr "OJS dapat digunakan dalam bahasa apa pun yang tersedia (bahasa yang didukung oleh OJS). OJS juga dapat beroperasi sebagai sistem multilingual yang memungkinkan pengguna untuk berpindah dari satu bahasa ke bahasa lain pada halaman yang sama, dan memungkinkan data tertentu untuk dimasukkan ke dalam beberapa bahasa tambahan.<br /><br />Jika bahasa yang didukung oleh OJS tidak terdaftar di bawah ini, tanya Administrator Situs Anda untuk menginstal bahasa pendukung tersebut dari antarmuka administrasi situs. Untuk instruksi penambahan dukungan untuk bahasa baru, berkonsultasilah dengan dokumentasi OJS"
+msgstr ""
+"OJS dapat digunakan oleh pengguna dalam bahasa apa pun yang tersedia (bahasa "
+"yang didukung oleh OJS). OJS juga dapat beroperasi sebagai sistem "
+"multibahasa yang memungkinkan pengguna untuk berpindah dari satu bahasa ke "
+"bahasa lain pada setiap halaman, dan memungkinkan untuk memasukkan data "
+"tertentu ke dalam beberapa bahasa tambahan.<br /><br />Jika bahasa yang "
+"didukung oleh OJS tidak terdaftar di bawah ini, minta Administrator Situs "
+"Anda untuk menginstal bahasa pendukung tersebut dari antarmuka administrasi "
+"situs. Untuk instruksi penambahan dukungan untuk bahasa baru, pelajarilah "
+"dokumentasi OJS"
 
 msgid "manager.languages.noneAvailable"
 msgstr "Maaf, tidak tersedia bahasa tambahan dalam situs ini. Hubungi administrator situs Anda jika Anda ingin menggunakan bahasa pendukung untuk jurnal ini."
@@ -210,7 +222,7 @@ msgid "manager.sections.assigned"
 msgstr "Editor Bagian ini"
 
 msgid "manager.sections.confirmDelete"
-msgstr "Apakah Anda yakin ingin menghapus bagian ini secara permanen? Setelah ini, Anda harus menerbitkan ulang semua artikel di bagian ini."
+msgstr "Apakah Anda yakin ingin menghapus bagian ini secara permanen?"
 
 msgid "manager.sections.alertDelete"
 msgstr "Sebelum bagian ini dapat dihapus, Anda harus memindah artikel yang dipublikasikan di bagian ini ke bagian lain."
@@ -249,7 +261,9 @@ msgid "manager.sections.identifyType"
 msgstr "Identifikasi item yang diterbitkan di bagian ini sebagai sebuah"
 
 msgid "manager.sections.identifyTypeExamples"
-msgstr "Sebagai contoh: \"Artikel yang telah di-peer-review\", \"Review Buku Non-refereed?\", \"komentar yang diundang\", dll."
+msgstr ""
+"(Contohnya: \"Artikel Telaah\", \"Review Buku Non-refereed?\", \"Komentar "
+"Undangan\", dll.)"
 
 msgid "manager.sections.indexed"
 msgstr "Diindeks"
@@ -402,7 +416,7 @@ msgid "manager.setup.disciplineExamples"
 msgstr "(Contoh: Sejarah, Pendidikan, Sosiologi, Psikologi, Ilmu Budaya, hukum)"
 
 msgid "manager.setup.disciplineProvideExamples"
-msgstr "Masukkan disiplin ilmu yang relevan untuk jurnal ini."
+msgstr "Masukkan disiplin ilmu yang relevan dengan jurnal ini."
 
 msgid "manager.setup.displayCurrentIssue"
 msgstr "Tambahkan daftar isi untuk terbitan terkini (jika tersedia)."
@@ -411,13 +425,18 @@ msgid "manager.setup.editorDecision"
 msgstr "Keputusan Editor"
 
 msgid "manager.setup.emailBounceAddress"
-msgstr "Bounce Address"
+msgstr "Tampilkan Alamat"
 
 msgid "manager.setup.emailBounceAddress.description"
 msgstr "Setiap email yang tidak terkirim akan menghasilkan pesan eror ke alamat ini."
 
 msgid "manager.setup.emailBounceAddress.disabled"
-msgstr "<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, administrator situs harus mengaktifkan pilihan <tt>allow_envelope_sender</tt> di file konfigurasi OJS. Konfigurasi server tambahan mungkin diperlukan untuk mendukung fungsi ini (tidak semua server bisa), seperti yang tercantum di dokumentasi OJS."
+msgstr ""
+"Untuk mengirim kembali email yang tak terkirim ke alamat bounce address, "
+"administrator situs harus mengaktifkan pilihan "
+"<code>allow_envelope_sender</code> di file konfigurasi OJS. Konfigurasi "
+"server tambahan mungkin diperlukan, seperti yang tercantum dalam fokumentasi "
+"OJS."
 
 msgid "manager.setup.emails"
 msgstr "Identifikasi Email"
@@ -429,7 +448,7 @@ msgid "manager.setup.emailSignature.description"
 msgstr "Email yang disiapkan dan dikirim oleh sistem atas nama jurnal akan memiliki tandatangan berikut ini di akhir pesan."
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Memungkinkan manajer jurnal untuk menambahkan pengumuman jurnal."
+msgstr "Aktifkan pengumuman"
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Penunjung dapat membuat akun pengguna."
@@ -669,7 +688,10 @@ msgid "manager.setup.note"
 msgstr "Catatan"
 
 msgid "manager.setup.notifications.submissionAckDisabled"
-msgstr "<strong>Catatan:</strong> Email pemberitahuan penyerahan saat ini tidak diaktifkan. Untuk menggunakan fitur ini, aktifkan email SUBMISSION_ACK di menu Email</a>."
+msgstr ""
+"<strong>Catatan:</strong> Email pemberitahuan penyerahan naskah saat ini "
+"tidak diaktifkan. Untuk menggunakan fitur ini, aktifkan email \"Submission "
+"Ack\" di menu Email."
 
 msgid "manager.setup.numPageLinks"
 msgstr "Tautan Halaman"
@@ -738,7 +760,11 @@ msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "Email pengingat otomatis"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
-msgstr "<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, administrator situs harus mengaktifkan pilihan <tt>scheduled_tasks</tt> di file konfigurasi jurnal. Konfigurasi server tambahan mungkin diperlukan untuk mendukung fungsi ini (tidak semua server bisa), seperti ditunjukkan di dokumentasi OJS."
+msgstr ""
+"Untuk mengirim pengingat email otomatis, administrator situs harus "
+"mengaktifkan pilihan <tt>scheduled_tasks</tt> di file konfigurasi jurnal. "
+"Konfigurasi tambahan pada server mungkin diperlukan seperti ditunjukkan pada "
+"dokumentasi OJS."
 
 msgid "manager.setup.reviewOptions.blindReview"
 msgstr "Review Anonim"
@@ -774,7 +800,10 @@ msgid "manager.setup.searchEngineIndexing"
 msgstr "Pengindeksan Mesin Pencari"
 
 msgid "manager.setup.searchEngineIndexing.description"
-msgstr "Untuk membantu pengguna dalam menemukan jurnal pada search engine, masukkan deskripsi singkat tentang kami dan kata kunci yang relevan (dipisahkan oleh titik koma)."
+msgstr ""
+"Bantu mesin pencarian seperti Google untuk menemukan dan menampilkan sitis "
+"Anda. Disarankan untuk mengirimkan <a href=\"{$sitemapUrl}\" target=\""
+"_blank\">sitemap</a> Anda."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Bagian dan Editor Bagian"
@@ -834,7 +863,9 @@ msgid "manager.setup.typeMethodApproach"
 msgstr "Tipe (Metode/Pendekatan)"
 
 msgid "manager.setup.typeProvideExamples"
-msgstr "Masukkan tipe riset yang relevan, metode, dan pendekatan untuk bidang ini."
+msgstr ""
+"Masukkan tipe, metode, dan pendekatan penelitian yang relevan untuk bidang "
+"ini."
 
 msgid "manager.setup.uniqueIdentifier"
 msgstr "Identifier Unik"
@@ -846,7 +877,7 @@ msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Dewan reviewer/editorial akan digunakan oleh jurnal."
 
 msgid "manager.setup.useThumbnail"
-msgstr "Thumbnail"
+msgstr "Pratinjau"
 
 msgid "manager.setup.useImageTitle"
 msgstr "Gambar judul"
@@ -1578,3 +1609,229 @@ msgstr "Objek yang Anda cari tidak dapat ditemukan."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Kirim salinan ke kontak utama yang disebutkan di Pengaturan Jurnal."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Mode Publikasi"
+
+msgid "manager.distribution.publication"
+msgstr "Publikasi"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Gunakan tanggal publikasi artikel"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Gunakan tanggal nomor terbitan"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Batasi jumlah tautan yang tampil di daftar halaman berikutnya."
+
+msgid "manager.setup.masthead.success"
+msgstr "Rincian dewan redaksi jurnal telah diperbaharui."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Aktifkan plugin PKP PN"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Hapus pernyataan hak cipta dan informasi lisensi untuk setiap artikel yang "
+"diterbitkan, kembalikan ke pengaturan bawaan jurnal saat ini.  Proses ini "
+"akan menghapus secara permanen semua informasi hak cipta dan lisensi "
+"terdahulu yang melekat pada artikel.  Pada beberapa kasus, tidak "
+"memungkinkan secara hukum melisensikan ulang artikel yang telah diterbitkan "
+"dengan lisensi yang berbeda. Harap berhati-hati saat menggunakan tool ini "
+"dan berkonsultasi dengan pakar hukum jika Anda ragu hak cipta apa yang Anda "
+"terapkan atas artikel yang diterbitkan dalam jurnal Anda."
+
+msgid "stats.publications.galleys"
+msgstr "File"
+
+msgid "stats.publications.abstracts"
+msgstr "Abstrak"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} dari {$total} artikel"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Total file dilihat berdasarkan tanggal."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Total abstrak dilihat berdasarkan tanggal."
+
+msgid "stats.publications.none"
+msgstr ""
+"Tidak ditemukan artikel dengan statistik pemakaian yang sesuai dengan "
+"parameter ini."
+
+msgid "stats.publications.details"
+msgstr "Rincian Artikel"
+
+msgid "stats.publicationStats"
+msgstr "Statistik Artikel"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "File yang dimasukkan {$param} tidak dapat dibaca."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Validasi XML sebelum proses ekspor dan registrasi."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Ijin artikel berhasil diatur ulang."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Tautan ino hanya akan ditampilkan ketika pengunjung telah logged in."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Tautkan ke halaman yang menerangkan langganan pengunjung sekarang dan "
+"terdahulu."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Tautkan ke halaman yang menguraikan langganan yang Anda tawarkan."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Jenis langganan ini bersifat selamanya, abaikan tanggal berakhir."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Jenis langganan ini bersifat selamanya, abaikan tanggal mulai."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Beritahu pelanggan melalui email sebelum langganan habis."
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Tentukan tanggal hak cipta bawaan untuk artikel. Pengaturan ini dapat "
+"dikesampingkan berdasarkan kasus per kasus. Jika Anda \"menerbitkan apa "
+"adanya\", jangan gunakan tanggal publikasi nomor terbitan."
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Yakin ingin memperbaharui langganan ini?"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Beritahu pelanggan melalui email sebelum masa langganan habis."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Beritahu pelanggan melalui email setelah masa langganan habis."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Beritahu pelanggan melalui email setelah masa langganan habis."
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Pekan"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Bulan"
+
+msgid "manager.setup.userAccess.success"
+msgstr "Rincian akses pengguna jurnal ini telah diperbaharui."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Berikan metadata ke layanan pengindeks pihak ketiga melalui <a href=\""
+"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Aktifkan OAI"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Buka Isi Artikel"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Akses Situs"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Tuliskan gambaran ringkas (50-300 karakter) tentang jurnal yang dapat "
+"ditampilkan oleh mesih pencarian saat mengurutkan jurnal di hasil pencarian."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Pengaturan indeks mesin pencarian telah diperbaharui."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Sertakan tautan aman dalam email undangan kepada reviewer."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Batasi Akses File"
+
+msgid "manager.setup.publishing"
+msgstr "Rincian Terbitan"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Pernyataan privasi telah diperbaharui."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS dan CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) memberikan layanan penyimpanan gratis bagi "
+"setiap jurnal yang memenuhi sejumlah kriteria dasar. Plugin PKP PN untuk OJS "
+"3 sedang dalam tahap pengembangan dan akan tersedia di galeri plugin "
+"secepatnya."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Buka <button>pengaturan plugin</button> untuk menyetujui syarat penggunaan "
+"PKP PN."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Preservation Network (PN) memberikan layanan penyimpanan gratis bagi "
+"setiap jurnal yang memenuhi sejumlah kriteria dasar."
+
+msgid "manager.setup.lists.success"
+msgstr "Pengaturan daftar pada jurnal ini telah diperbaharui."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Tuliskan gambaran singkat tentng jurnal Anda dan sebutkan editor, direktur "
+"pelaksana dan anggota tim redaksi lainnya."
+
+msgid "manager.setup.keyInfo"
+msgstr "Informasi Key"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Batasi jumlah item (contoh, naskah masuk, pengguna, atau tugas penyuntingan) "
+"yang tampil dalam daftar sebelum menampilkan item berikutnya pada halaman "
+"lain."
+
+msgid "manager.setup.information.success"
+msgstr "Informasi tentang jurna ini telah diperbaharui."
+
+msgid "manager.setup.identity"
+msgstr "Identitas Jurnal"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Berapa jumlah pengumuman yang akan ditampilkan di halaman beranda. Kosongkan "
+"bila tidak ingin menampilkan pengumuman."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Tampilkan di Halamam Beranda"
+
+msgid "manager.setup.contact.success"
+msgstr "Rincian narahubung jurna ini telah diperbaharui."
+
+msgid "manager.setup.archiving.success"
+msgstr "Rincian pengarsipan jurnl ini telah diperbaharui."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Pengantar"
+
+msgid "manager.setup.announcements.success"
+msgstr "Pengaturan pengumuman telah diperbaharui."
+
+msgid "manager.paymentTypes"
+msgstr "Jenis Pembayaran"
+
+msgid "manager.payment.success"
+msgstr "Pengaturan pembayaran telah diperbaharui."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Yakin ingin menghapus langganan ini?"
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Ringkasan terbitan telah diperbaharui."
