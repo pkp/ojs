@@ -69,7 +69,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 		import('lib.pkp.classes.mail.MailTemplate');
 		$mail = new MailTemplate($emailKey, $journal->getPrimaryLocale(), $journal, false);
-		$mail->setReplyTo($subscriptionEmail, $subscriptionName);
+		$mail->setReplyTo(null);
+		$mail->setFrom($subscriptionEmail, $subscriptionName);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
 		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
@@ -239,14 +240,14 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			$curDate['day'] = 31;
 			$curDate['month'] = $todayDate['month'] - 1;
 
-			if ($curDate['month'] == 12) {
+			if ($curDate['month'] == 0) {
+				$curDate['month'] = 12;
 				$curDate['year'] = $todayDate['year'] - 1;
 			} else {
 				$curDate['year'] = $todayDate['year'];
 			}
 
 			$journals = $journalDao->getAll(true);
-
 			while ($journal = $journals->next()) {
 				// Send reminders for simulated 31st day of short month
 				$this->sendJournalReminders($journal, $curDate);
@@ -262,7 +263,6 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			$curDate['year'] = $todayDate['year'];
 
 			$journals = $journalDao->getAll(true);
-
 			while ($journal = $journals->next()) {
 				// Send reminders for simulated 30th day of February
 				$this->sendJournalReminders($journal, $curDate);
@@ -281,6 +281,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				}
 			}
 		}
+		return true;
 	}
 }
 

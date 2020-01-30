@@ -31,4 +31,8 @@
 		<descr>Send automated reminders to reviewers to complete their assignments.</descr>
 		<frequency hour="0"/>
 	</task>
+	<task class="classes.tasks.SubscriptionExpiryReminder">
+		<descr>Send automated reminders about subscription expiry.</descr>
+		<frequency day="1"/>
+	</task>
 </scheduled_tasks>
