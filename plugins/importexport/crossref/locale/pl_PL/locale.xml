@@ -48,4 +48,15 @@
 	<message key="plugins.importexport.crossref.register.success">Przesyłanie zakończone sukcesem!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Żaden numer nie pasuje do ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Żaden tekst nie pasuje do ID "{$articleId}".</message>
+	<message key="plugins.importexport.crossref.settings.form.validation">Zatwierdź XML. Wykorzystaj opcje umożliwiające pobranie pliku XML przy manualnej rejestracji DOI.</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[		<pStatus deponowania:</p>
+		<p>
+		- Nie zdeponowano: nie podjęto próby zdeponowania tego DOI.<br />
+		- Aktywne: DOI został poprawnie zdeponowany.<br />
+		- Niepowodzenie: deponowanie DOI zakończyło się niepowodzeniem.<br />
+		- Oznaczono jako aktywne: DOI został manualnie oznaczony jako aktywny.
+		</p>
+		<p>Wyświetlony jest status jedynie status ostatniego deponowania.</p>
+		<p>Jeżeli deponowanie zakończyło się niepowodzeniem, rozwiąż problem i spróbuj ponownie zarejestrować DOI.</p>]]></message>
+	<message key="plugins.importexport.crossref.register.success.warning">Rejestracja zakończona sukcesem, ale pojawiły się następujące ostrzeżenia: '{$param}'.</message>
 </locale>

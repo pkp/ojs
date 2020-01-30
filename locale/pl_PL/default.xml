@@ -14,7 +14,6 @@
 <locale name="pl_PL" full_name="Język Polski">
 	<!-- Section default -->
 	<message key="section.default.title">Artykuły</message>
-	<message key="section.default.abbrev">ART</message>
 	<message key="default.genres.article">Tekst artykułu</message>
 
 	<!--
@@ -129,5 +128,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.forLibrarians">Zachęcamy bibliotekarzy do włączenia strony czasopisma do ich systemów bibliotecznych.</message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Czasopismo to wykorzystuje system LOCKSS do tworzenia rozproszonego systemu archiwizacji pomiędzy uczestniczącymi bibliotekami i pozwala tym bibliotekom tworzyć stałe archiwa czasopisma na potrzeby konserwacji i odnowy. <a href="http://www.lockss.org/">Więcej...</a>]]></message>
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Czasopismo to wykorzystuje system CLOCKSS do tworzenia rozproszonego systemu archiwizacji pomiędzy uczestniczącymi bibliotekami i pozwala tym bibliotekom tworzyć stałe archiwa czasopisma na potrzeby konserwacji i odnowy. <a href="http://clockss.org/">Więcej...</a>]]></message>
-	<message key="section.default.policy">Treść polityki prywatności.</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="default.journalSettings.copyeditInstructions">Instrukcja korekty (copyediting).</message>
 </locale>

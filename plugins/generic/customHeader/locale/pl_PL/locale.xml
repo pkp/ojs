@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.generic.customHeader.displayName">Własne nagłówki</message>
+	<message key="plugins.generic.customHeader.description">Wtyczka umożliwia dodanie kodu w nagłówku strony.</message>
+	<message key="plugins.generic.customHeader.manager.settings.description">Dzięki temu pluginowi nagłówki niestandardowe mogą być dodawane do strony internetowej. Może to być wykorzystane, na przykład, do dodania niestandardowego Javascript.</message>
+	<message key="plugins.generic.customHeader.content">Zawartość nagłówka</message>
+	<message key="plugins.generic.customHeader.footerContent">Zawartość stopki</message>
+</locale>

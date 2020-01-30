@@ -21,7 +21,7 @@ na stronie czasopisma "{$siteTitle}" oczekuje nowe powiadomienie:<br />
 <br />
 WWW: {$url}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$principalContactSignature}<br />]]></body>
 		<description>Wiadomość jest przesyłana do zarejestrowanych użytkowników, którzy zadeklarowali chęć otrzymywania tego typu powiadomień.</description>
 	</email_text>
@@ -64,7 +64,7 @@ czy na pewno zresetować hasło na stronie {$siteTitle}? Jeżeli nie chce Pani/ 
 <br />
 W celu potwierdzenia zmiany hasła należy kliknąć link: {$url}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$principalContactSignature}<br />]]></body>
 		<description>Wiadomość jest przesyłana do zarejestrowanych użytkowników w celu potwierdzenia zresetowania hasła. Załączony jest link do strony resetowania hasła.</description>
 	</email_text>
@@ -77,7 +77,7 @@ zresetowano Pani/Pana hasło na stronie czasopisma {$siteTitle}. Proszę zachowa
 Nazwa użytkownika: {$username} <br />
 Hasło: {$password}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$principalContactSignature}<br />]]></body>
 		<description>Wiadomość jest przesyłana do zarejestrowanych użytkowników po zresetowaniu hasła.</description>
 	</email_text>
@@ -90,7 +90,7 @@ założyła Pani/ założył Pan konto na stronie czasopisma "{$contextName}". A
 Nazwa użytkownika: {$username} <br />
 Hasło: {$password}<br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku <br />
 {$principalContactSignature}<br />]]></body>
 		<description>Wiadomość jest wysyłana do nowych użytkowników systemu. Zawiera powitanie i dane do zalogowania.</description>
 	</email_text>
@@ -101,7 +101,7 @@ Z wyrazami szacunku, <br />
 dla tego adresu e-mail zostało utworzone konto na stronie czasopisma "{$contextName}". W celu potwierdzenia założenia konta należy kliknąć w poniższy link:<br />
 <a href="{$activateUrl}">{$activateUrl}</a><br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku<br />
 {$principalContactSignature}<br />]]></body>
 		<description>Wiadomość jest wysyłana do nowych użytkowników systemu, celem potwierdzenia poprawności adresu e-mail, dla którego zarejestrowano konto.</description>
 	</email_text>
@@ -116,7 +116,7 @@ Poniżej podajemy dane do logowania, niezbędne do pracy na stronie czasopisma. 
 Nazwa użytkownika: {$username} <br />
 Hasło: {$password} <br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku <br />
 {$principalContactSignature}<br />]]></body>
 		<description>Wiadomość jest wysyłana do nowych recenzentów, celem powitania ich i przesłania danych do logowania.</description>
 	</email_text>
@@ -128,7 +128,7 @@ ukazał się nowy numer czasopisma "{$contextName}". Zachęcamy do zapoznania si
 <br />
 Dziękujemy za zainteresowanie działalnością czasopisma,<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość jest wysyłana do zarejestrowanych czytelników. Zawiera informację o nowym numerze czasopisma.</description>
 	</email_text>
@@ -143,7 +143,7 @@ Nazwa użytkownika: {$authorUsername}<br />
 <br />
 W razie dodatkowych pytań proszę o kontakt.<br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku <br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość jest automatycznie wysyłana do autora po zgłoszeniu tekstu do czasopisma.</description>
 	</email_text>
@@ -189,7 +189,7 @@ tekst "{$submissionTitle}" zgłoszony do czasopisma "{$contextName}", został pr
 WWW tekstu: {$submissionUrl}<br />
 Nazwa użytkownika: {$editorUsername}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Powiadomienie wysyłane do redaktora prowadzącego (np. redaktora działu) o przypisaniu go do zgłoszenia.</description>
 	</email_text>
@@ -206,7 +206,7 @@ Termin wykonania recenzji: {$reviewDueDate}.<br />
 Jeżeli nie posiada Pani/ Pan danych niezbędnych do zalogowania się na stronie czasopisma, proszę o przejście na stronę: <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
 WWWW tekstu: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />
 <br />
 "{$submissionTitle}"<br />
@@ -225,7 +225,7 @@ Prosimy o zalogowanie się na stronie czasopisma nie później niż {$responseDu
 Termin przygotowania recenzji: {$reviewDueDate}<br />
 WWW tekstu: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />
 <br />
 {$submissionTitle}<br />
@@ -251,7 +251,7 @@ Jeżeli nie posiada Pani/ Pan danych niezbędnych do zalogowania się na stronie
 <br />
 WWWW tekstu: {$submissionReviewUrl}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />
 <br />
 "{$submissionTitle}"<br />
@@ -272,7 +272,7 @@ Prosimy o zalogowanie się na stronie czasopisma w celu przyjęcia lub odrzuceni
 Termin wykonania recenzji: {$reviewDueDate}.<br />
 <br />
 WWWW tekstu: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />
 <br />
 "{$submissionTitle}"<br />
@@ -288,7 +288,7 @@ redakcja czasopisma zwraca się do Pani/ Pana z prośbą o wykonanie recenzji te
 <br />
 Prosimy o rozważenie naszej prośby i nadesłanie informacji zwrotnej (o jej przyjęciu lub odrzuceniu) do dnia {$responseDueDate}.<br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />
 <br />
 Opis procedury recenzowania<br />
@@ -304,7 +304,7 @@ bardzo nam przykro, ale zostaliśmy zmuszeni do anulowania naszej prośby o wyko
 <br />
 W razie dodatkowych pytań proszę o kontakt.<br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku <br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość wysyłana przez redaktora prowadzącego do recenzenta. Zawiera informacje o anulowaniu prośby o wykonanie recenzji.</description>
 	</email_text>
@@ -314,7 +314,7 @@ Z wyrazami szacunku, <br />
 <br />
 zgadzam się na wykonanie recenzji tekstu "{$submissionTitle}", zgłoszonego do czasopisma "{$contextName}". Recenzja będzie gotowa do dnia {$reviewDueDate}.<br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku <br />
 {$reviewerName}<br />]]></body>
 		<description>Wiadomość wysyłana przez recenzenta do redaktora prowadzącego. Zawiera akceptację prośby o wykonanie recenzji.</description>
 	</email_text>
@@ -324,7 +324,7 @@ Z wyrazami szacunku, <br />
 <br />
 obawiam się, że w podanym czasie nie zdołam wykonać recenzji tekstu "{$submissionTitle}", zgłoszonego do czasopisma "{$contextName}".<br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku<br />
 {$reviewerName}<br />]]></body>
 		<description>Wiadomość wysyłana przez recenzenta do redaktora prowadzącego. Zawiera odrzucenie prośby o wykonanie recenzji.</description>
 	</email_text>
@@ -334,7 +334,7 @@ Z wyrazami szacunku, <br />
 <br />
 dziękujemy za wykonanie recenzji tekstu "{$submissionTitle}", zgłoszonego do czasopisma "{$contextName}". Doceniamy Pani/ Pana wkład w budowanie jakości naszego czasopisma.<br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku <br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ta wiadomość jest przesyłana przez redaktora prowadzącego do recenzenta. Zawiera potwierdzenie otrzymania recenzji i podziękowanie za wykonaną pracę.</description>
 	</email_text>
@@ -348,7 +348,7 @@ Jeżeli nie posiada Pani/ Pan danych niezbędnych do zalogowania na stronie czas
 <br />
 WWW tekstu: {$submissionReviewUrl}<br />
 <br />
-Z wyrazami szacunku, <br />
+Z wyrazami szacunku <br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość wysyłana przez redaktora prowadzącego do recenzenta. Zawiera przypomnienie o terminie wykonania recenzji.</description>
 	</email_text>
@@ -362,7 +362,7 @@ WWW artykułu: {$submissionReviewUrl}<br />
 <br />
 Będziemy wdzięczni za potwierdzenie gotowości do wykonania recenzji.<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}]]></body>
 		<description>Wiadomość wysyłana przez redaktora prowadzącego do recenzenta celem przypomnienia o terminie wykonania recenzji. Wysyłane do recenzenta mającego trudności z obsługą OJS.</description>
 	</email_text>
@@ -380,7 +380,7 @@ WWW tekstu: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
 <br />
 Będziemy wdzięczni za potwierdzenie gotowości do wykonania recenzji.<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość automatycznie wysłana po upłynięciu terminu nadesłania recenzji. Zaplanowane zadania w systemie muszą zostać na nowo skonfigurowane.</description>
 	</email_text>
@@ -394,7 +394,7 @@ WWW tekstu: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
 <br />
 Będziemy wdzięczni za potwierdzenie gotowości do wykonania recenzji.<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość automatycznie wysłana po upłynięciu terminu nadesłania recenzji. Zaplanowane zadania w systemie muszą zostać na nowo skonfigurowane.</description>
 	</email_text>
@@ -406,7 +406,7 @@ podjęllśmy decyzję w sprawie tekstu „{$submissionTitle}", zgłoszonego do c
 <br />
 Decyzja redakcji: Akceptacja zgłoszonego tekstu<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o decyzji w sprawie zgłoszonego tekstu.</description>
 	</email_text>
@@ -418,7 +418,7 @@ podjęllśmy decyzję w sprawie tekstu "{$submissionTitle}", zgłoszonego do cza
 <br />
 Decyzja redakcji: Wymagane poprawki<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera decyzję o "Wymaganych poprawkach" (drobne poprawki) zgłoszonego tekstu.</description>
 	</email_text>
@@ -430,7 +430,7 @@ podjęllśmy decyzję w sprawie tekstu „{$submissionTitle}”, zgłoszonego do
 <br />
 Decyzja redakcji: Wymagane poprawki i ponowna recenzja<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera decyzję o "Wymaganych poprawkach i ponownej recenzji" (gruntowne poprawki) zgłoszonego tekstu.</description>
 	</email_text>
@@ -442,7 +442,7 @@ podjęllśmy decyzję w sprawie tekstu "{$submissionTitle}", zgłoszonego do cza
 <br />
 Decyzja redakcji: Odrzucenie zgłoszonego tekstu<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o odrzuceniu zgłoszonego tekstu.</description>
 	</email_text>
@@ -462,7 +462,7 @@ WWW {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 WWW tekstu: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 Nazwa użytkownika: {$participantUsername}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ta wiadomość jest wysyłana przez redaktora prowadzącego do korektora i zawiera prośbę o wykonanie korekty wraz z informacją o lokalizacji plików do korekty.</description>
 	</email_text>
@@ -630,7 +630,7 @@ Nazwa użytkownika: {$participantUsername}<br />
 <br />
 Jeżeli nie jest możliwe wykonanie składu w podanym terminie proszę o kontakt.<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość jest wysyłana przez redaktora prowadzącego do składacza. Zawiera prośbę o wykonanie składu tekstu.</description>
 	</email_text>
@@ -642,7 +642,7 @@ ukończyłem/am prace nad składem tekstu „{$submissionTitle}” przeznaczoneg
 <br />
 W razie dodatkowych pytań proszę o kontakt.<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$participantName}<br />]]></body>
 		<description>Wiadomość jest wysyłana przez składacza do redaktora prowadzącego. Zawiera informację o ukończeniu składu.</description>
 	</email_text>
@@ -854,7 +854,7 @@ proszę o sprawdzenie lub uzupełnienie następujących opisów bibliograficznyc
 <br />
 {$rawCitation}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 <br />
 {$userFirstName}<br />
 Korektor, „{$contextName}”<br />]]></body>
@@ -875,7 +875,7 @@ Termin wykonania recenzji: {$reviewDueDate}<br />
 Jeżeli nie posiada Pani/ Pan danych niezbędnych do zalogowania na stronie czasopisma, prosimy zresetować hasło przechodząc na stronę: {$passwordResetUrl}<br />
 WWW tekstu: {$submissionReviewUrl}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />
 <br />
 "{$submissionTitle}"<br />
@@ -897,7 +897,7 @@ Termin wykonania recenzji: {$reviewDueDate}<br />
 <br />
 WWW tekstu: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />
 <br />
 "{$submissionTitle}"<br />
@@ -919,7 +919,7 @@ Prosimy o zalogowanie się na stronie czasopisma w celu przyjęcia lub odrzuceni
 <br />
 Termin wykonania recenzji: {$reviewDueDate}.<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość od redaktora prowadzącego do recenzenta. Zawiera prośbę o przygotowanie recenzji tekstu, jego tytuł i abstrakt. Wysyłana, jeżeli recenzent pracować będzie w systemie.</description>
 	</email_text>
@@ -932,7 +932,7 @@ poprawiona wersja "{$submissionTitle}" została przesłana do systemu przez auto
 <br />
 WWW tekstu: {$submissionUrl}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość automatycznie przesyłana do redaktora prowadzącego, po przesłaniu przez autora poprawionej wersji tekstu.</description>
 	</email_text>
@@ -946,7 +946,7 @@ Decyzja redaktora: Przesłane do recenzji<br />
 <br />
 WWW tekstu: {$submissionUrl}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera decyzję o przesłaniu zgłoszonego tekstu do recenzji.</description>
 	</email_text>
@@ -958,7 +958,7 @@ korekta tekstu "{$submissionTitle}". Tekst został przekazany do składu.<br />
 <br />
 WWW tekstu: {$submissionUrl}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o ukończeniu korekty i przekazaniu tekstu do etapu realizacji.</description>
 	</email_text>
@@ -969,6 +969,9 @@ Z wyrazami szacunku,<br />
 użytkownik o nazwie {$submitterName} zgłosił tekst "{$submissionTitle}" do czasopisma "{$contextName}". <br />
 <br />
 W razie dodatkowych pytań proszę o kontakt. Dziękujemy za zgłoszenie.<br />
+<br />
+<br />
+Z wyrazami szacunku<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Jeżeli jest włączona, ta wiadomość jest automatycznie wysyłana do innych autorów, którzy nie posiadają kont w OJS.</description>
@@ -986,7 +989,7 @@ podjęllśmy decyzję w sprawie tekstu "{$submissionTitle}", zgłoszonego do cza
 <br />
 Decyzja redakcji: Odrzucenie zgłoszonego tekstu<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o odrzuceniu zgłoszonego tekstu po ocenie wstępnej (przed procesem recenzji).</description>
 	</email_text>
@@ -996,7 +999,7 @@ Z wyrazami szacunku,<br />
 <br />
 przesyłam rekomendację w sprawie tekstu "{$submissionTitle}", zgłoszonego do czasopisma "{$contextName}": {$recommendation}<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora przypisanego do tekstu do redaktora czasopisma. Zawiera powiadomienie o rekomendacji w sprawie tekstu.</description>
 	</email_text>
@@ -1014,7 +1017,7 @@ Dokumentacja LOCKSS wydawcy naszego czasopisma jest dostępna na stronie: {$cont
 <br />
 Z naszej wiedzy wynika, że jesteście Państwo członkiem LOCKSS. Z przyjemnością dostarczymy dodatkowych metadanych potrzebnych do rejestracji naszego czasopisma w używanej przez Państwa wersji LOCKSS, jeżeli zgodzą się Państwo na zarejestrowanie naszego czasopisma.<br />
 <br />
-Z wyrazami szacunku,<br />
+Z wyrazami szacunku<br />
 {$principalContactSignature}]]></body>
 		<description>Wiadomość z prośbą do opiekuna archiwum LOCKSS o uwzględnienie czasopisma w tym archiwum. Zawiera adres strony internetowej czasopisma oraz dokumentacji LOCKSS wydawcy.</description>
 	</email_text>

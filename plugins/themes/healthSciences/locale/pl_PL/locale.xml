@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.themes.healthSciences.name">Motyw nauk o zdrowiu</message>
+	<message key="plugins.themes.healthSciences.description">Motyw OJS zbudowany z naciskiem na czasopisma z dziedziny nauk o zdrowiu.</message>
+	<message key="plugins.themes.healthSciences.option.colour.label">Kolor główny</message>
+	<message key="plugins.themes.healthSciences.option.colour.description">Wybierz kolor podstawowy dla Twojej marki czasopisma.</message>
+	<message key="plugins.themes.healthSciences.nav.toggle">Przełączanie nawigacji</message>
+	<message key="plugins.themes.healthSciences.language.toggle">Zmień język. Aktualnym językiem jest:</message>
+	<message key="plugins.themes.healthSciences.currentIssuePublished">Opublikowano: {$date}</message>
+	<message key="plugins.themes.healthSciences.issueDescription">Opis numeru</message>
+	<message key="plugins.themes.healthSciences.issuePubId">{$pubIdType}: {$pubId}</message>
+	<message key="plugins.themes.healthSciences.more">{$text}…</message>
+	<message key="plugins.themes.healthSciences.article.authorBio">Biogram</message>
+	<message key="plugins.themes.healthSciences.article.supplementaryFiles">Pliki dodatkowe</message>
+	<message key="plugins.themes.healthSciences.register.haveAccount">Posiadasz już konto?</message>
+	<message key="plugins.themes.healthSciences.register.loginHere">Zaloguj się</message>
+	<message key="plugins.themes.healthSciences.register.noAccount">Nie posiadasz konta?</message>
+	<message key="plugins.themes.healthSciences.register.registerHere">Zarejestruj się</message>
+	<message key="plugins.themes.healthSciences.search.resultsFor"><![CDATA[Wyniki wyszukiwania dla <em>{$query}</em>]]></message>
+	<message key="plugins.themes.healthSciences.search.params">Parametry wyszukiwania</message>
+</locale>

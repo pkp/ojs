@@ -37,10 +37,6 @@
 
 
 	<!--  peer review -->
-	<message key="submission.reviewForm">Formularz recenzji</message>
-	<message key="submission.reviewFormResponse">Formularz recenzji</message>
-
-
 	<message key="reviewer.article.enterReviewForm">Kliknij ikonę dymka, aby wypełnić formularz recenzji.</message>
 	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>
 
@@ -57,7 +53,6 @@
 	<message key="common.confirmComplete">Czy na pewno chcesz oznaczyc zadania jako wykonane? Po oznaczeniu edycja nie będzie dostępna.</message>
 	<message key="common.payment">Płatność</message>
 	<message key="common.payments">Płatności</message>
-	<message key="common.pageHeader.altText">Nagłówek strony</message>
 	<message key="common.homePageHeader.altText">Nagłówek strony głównej</message>
 	<message key="common.journalHomepageImage.altText">Baner</message>
 
@@ -71,7 +66,6 @@
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Pomoc</message>
-	<message key="navigation.archives">Archiwum</message>
 	<message key="navigation.current">Aktualny numer</message>
 	<message key="navigation.otherJournals">Inne czasopisma</message>
 	<message key="navigation.browseByIssue">wg numeru</message>
@@ -126,12 +120,8 @@
 	<message key="article.suppFiles">Pliki pomocnicze</message>
 	<message key="article.suppFilesAbbrev">Pliki pomocnicze</message>
 	<message key="article.discipline">Dyscypliny i subdyscypliny naukowe</message>
-	<message key="article.subjectClassification">Klasyfikacja przedmiotu</message>
 	<message key="article.subject">Słowa kluczowe</message>
 	<message key="article.coverage">Zasięg</message>
-	<message key="article.coverageGeo">Zasięg geograficzny</message>
-	<message key="article.coverageChron">Zasięg chronologiczny i historyczny</message>
-	<message key="article.coverageSample">Próba badawcza</message>
 	<message key="article.type">Typ, metoda lub podejście</message>
 	<message key="article.language">Język</message>
 	<message key="article.sectionEditor">Redaktor działu</message>
@@ -199,7 +189,6 @@
 	<message key="journal.currentIssue">Aktualny numer</message>
 	<message key="journal.journals">Czasopisma</message>
 	<message key="journal.path">Ścieżka</message>
-	<message key="journal.journal">Czasopismo</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
@@ -216,20 +205,10 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Administrator czasopisma</message>
-	<message key="user.role.editor">Redaktor czasopisma</message>
 	<message key="user.role.subEditor">Redaktor działu</message>
-	<message key="user.role.layoutEditor">Składacz</message>
-	<message key="user.role.copyeditor">Korektor</message>
-	<message key="user.role.proofreader">Korektor pliku do publikacji</message>
-	<message key="user.role.author">Autor</message>
 	<message key="user.role.subscriptionManager">Administrator subskrypcji</message>
 	<message key="user.role.managers">Administratorzy czasopisma</message>
-	<message key="user.role.editors">Redaktorzy</message>
 	<message key="user.role.subEditors">Redaktorzy działu</message>
-	<message key="user.role.layoutEditors">Składacze</message>
-	<message key="user.role.copyeditors">Korektorzy</message>
-	<message key="user.role.proofreaders">Korektorzy pliku do publikacji</message>
-	<message key="user.role.authors">Autorzy</message>
 	<message key="user.role.subscriptionManagers">Administratorzy subskrypcji</message>
 
 	<!-- Common Issue Terms -->
@@ -277,7 +256,6 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Akcja</message>
-	<message key="submission.event.general.articleSubmitted">Artykuł przesłany</message>
 	<message key="submission.event.general.issueScheduled">Artykuł przesłany do kolejki</message>
 	<message key="submission.event.general.issueAssigned">Artykuły przypisany do numeru</message>
 	<message key="submission.event.general.articlePublished">Artykuł opublikowany</message>
@@ -359,14 +337,6 @@
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Wtyczka autoryzacji pozwala aby Open Journal System uwierzytelniał użytkowników za pomocą zewnętrznych systemów, takich jak LDAP.</message>
 	<message key="plugins.categories.generic.description">Wtyczki ogólne są wykorzystywane do rozszerzania możliwości Open Journal Systems i nie są wspierane przez inne rodzaje wtyczek.</message>
-	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
-	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
-	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
-	<message key="plugins.categories.oaiMetadataFormats.description">These format plugins express metadata in OAI communications.</message>
-
-
-
-
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
@@ -376,7 +346,6 @@
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.reviewProcessEmailDescription">Redaktor przesyła recenzentowi zaproszenie do wykonania recenzji wraz z  załączonym tekstem. W odpowiedzi, recenzent przesyła redaktorowi swoją recenzję oraz rekomendację.  Następnie redaktor wprowadza dane nadesłane przez recenzenta do systemu.</message>
 	<message key="manager.setup.lockssDescription"><![CDATA[LOCKSS jest otwartoźródłowym systemem opracowanym przez Bibliotekę Uniwerytetu Stanford, który umożliwia archiwizowanie wybranych czasopism publikowanych w internecie. Każdy zarchiwizowany artykuł jest wielokrotnie sprawdzany, a jego kopia przywracana w przypadku występienia błędów lub nieciągłości danych.
 <br /><br />
 Konfiguracja LOCKSS dla OJS może zostać przeprowadzona zarówno przed jak i po opublikowaniu treści w czasopiśmie. Możesz włączyć system LOCKSS poniżej:]]></message>
@@ -455,17 +424,6 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nazwa użytkownika jest linkiem do profilu recenzenta.<br/>
-Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
-"Tygodnie" oznaczają przeciętny czas na ukończenie recenzji.<br/>
-"Ostatnie" oznacza datę ostatnio zaakceptowanej recenzji.<br/>
-"Aktywne" oznacza liczbę recenzji w przygotowaniu.]]></message>
-
-
-
-
-
-
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktywne prace redakcyjne</message>
 	<message key="sectionEditor.completedEditorialAssignments">Ukończone prace redakcyjne</message>
@@ -549,7 +507,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Plik dla korektora</message>
 	<message key="copyeditor.article.copyeditorFile">Plik składacza</message>
-	<message key="copyeditor.article.uploadedFile">Wyślij plik</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Plik składacza - wersja ukończona</message>
 
 	<!-- Proofreader -->
@@ -638,9 +595,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="submission.comments.saveAndEmailEditor">Zapisz i wyślij e-mail do redaktora czasopisma</message>
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Nie jesteś użytkownikiem? Zarejestruj się na stronie</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Ze względów bezpieczeństwa, system przesyła nowe hasło.<br /><br />Podaj swój adres e-mail aby otrzymać nowe hasło.]]></message>
-
 	<!-- Registration -->
 	<message key="user.register.noJournals">Brak czasopism.</message>
 	<message key="user.register.privacyStatement">Polityka prywatności</message>
@@ -784,7 +738,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} został(a) odłączony(a) od recenzji tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} rozpoczął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewReinitiated">{$reviewerName} ponownie rozpoczął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
-	<message key="log.review.reviewCancelled">{$reviewerName} anulował(a) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewCleared">{$reviewerName} usunął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewerRated">Recenzent {$reviewerName} został(a) oceniony(a) po wykonaniu recenzji tekstu {$submissionId} po {$round} rundzie.</message>
 	<message key="log.review.reviewDueDateSet">Termin ukończenia recenzji tekstu {$submissionId} w {$round} rundzie dla recenzenta {$reviewerName} został ustalony na {$dueDate}.</message>
@@ -861,9 +814,6 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Podaj adres e-mail aby otrzymywać powiadomienia o aktualizacjach treści.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Ta strona zawiera informacje o ważnych aktualizacjach treści czasopisma, takich jak nowe numery lub ogłoszenia. Możesz subskrybować powiadomienia za pomocą czytnika RSS (klikając w ikonę), lub   <a href="{$emailUrl}">przez e-mail.</a>]]></message>
-
 	<message key="notification.type.editing">Edycja wydarzeń</message>
 	<message key="notification.type.editorDecisionComment">Dostępne są nowe uwagi do decyzji redaktora dla "{$title}".</message>
 	<message key="notification.type.galleyModified">Plik z publikacją dla "{$title}" został zmodyfikowany.</message>
@@ -896,26 +846,7 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="issue.nonpdf.title">Pobierz numer</message>
 	<message key="issue.viewIssue">Wyświetl numer</message>
 	<message key="site.noJournals">Nie ma żadnych czasopism</message>
-	<message key="gifts.buyer">Od</message>
-	<message key="gifts.buyerDescription">Od kogo jest ten podarunek?</message>
-	<message key="gifts.recipient">Dla</message>
-	<message key="gifts.recipientDescription">Dla kogo jest ten podarunek?</message>
-	<message key="gifts.thankYou">Dziękujemy</message>
-	<message key="gifts.thankYouMessage">Twój zakup w formie podarunku został zakończony. Otrzymasz kopię wiadomości e-mail przesłanej do adresata podarunku po zaakceptowaniu płatności.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Subskrypcja jako podarunek</message>
-	<message key="gifts.subscriptionFormIntroduction">Proszę o wypełnienie formularza. Podane dane kontaktowe zostaną wykorzystane do przesłanie wiadomości e-mail z informacją o podarowanej subskrypcji (otrzymasz kopię tej wiadomości na swoją skrzynkę e-mail).</message>
-	<message key="gifts.details">Szczegóły podarunku</message>
-	<message key="gifts.detailsDescription">Proszę o wybranie poniżej podarunku i włączenie spersonalizowanej wiadomości, która zostanie przesłana na adres e-mail adresata podarunku (otrzymasz kopię tej wiadomości na swoją skrzynkę e-mail).</message>
-	<message key="gifts.gift">Podarunek</message>
-	<message key="gifts.noteTitle">Tytuł</message>
-	<message key="gifts.note">Opis podarunku</message>
-	<message key="gifts.localeRequired">Proszę o wybranie języka dla spersonalizowanej wiadomości.</message>
-	<message key="gifts.myGifts">Moje podarunki</message>
-	<message key="gifts.manageMyGifts">Zarządzaj moimi podarunkami</message>
-	<message key="gifts.status.notRedeemed">Dostępny</message>
-	<message key="gifts.subscriptions">Subskrypcje</message>
 	<message key="payment.type.purchaseIssue">Zapłać za dostęp do numeru</message>
-	<message key="payment.type.gift.subscription">Subskrypcja</message>
 	<message key="installer.allowFileUploads"><![CDATA[Serwer umożliwia przesyłanie plików: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Serwer umożliwia przesyłanie plików o maksymalnym rozmiarze: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Nowa wersja OJS jest dostępna! W tej chwili używasz OJS w wersji {$currentVersion}. Najnowszą wersją jest {$latestVersion}. Przejdź <a href="http://pkp.sfu.ca/ojs_download" target="_new">na stronę </a> w celu pobrania najnowszej wersji.]]></message>
@@ -947,8 +878,6 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="user.role.subEditors">Redaktorzy działów</message>
 	<message key="user.role.journalAssistant">Asystent czasopisma</message>
 	<message key="user.role.journalAssistants">Asystenci czasopisma</message>
-	<message key="user.role.guestEditor">Redaktor gościnny</message>
-	<message key="user.role.guestEditors">Redaktorzy gościnni</message>
 	<message key="search.results.orderBy">Porządkuj wyniki wg</message>
 	<message key="search.results.orderBy.article">Tytułu</message>
 	<message key="search.results.orderBy.author">Autora</message>
@@ -1024,4 +953,124 @@ Skonfigurowanie CLOCKSS w Open Journal Systems nie wymaga posiadania opublikowan
 	<message key="log.editor.recommendation">Rekomendacja ({$decision}) dla tekstu {$submissionId} została utworzona przez {$editorName}.</message>
 	<message key="navigation.subscriptions">Subskrypcje</message>
 	<message key="log.editor.submissionExpedited">{$editorName} rozpoczął proces edycji tego artykułu {$submissionId}.</message>
+	<message key="section.policy">Zasady działu</message>
+	<message key="user.reviewerPrompt.optin">Tak, chcę otrzymywać zapytania w sprawie wykonania recenzji dla tego czasopisma.</message>
+	<message key="manager.setup.porticoDescription">Portico jest serwisem not-for-profit powołanym do zachowania cyfrowych publikacji, w tym e-czasopism, e-książek oraz zdigitalizowanych kolekcji materiałów historycznych. Jeżeli twoje czasopismo podpisało umowę z Portico, zaznacz to tutaj:</message>
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Kroki: Kolejka zgłoszenia &gt; Recenzja tekstu &gt; Redakcja tekstu &gt; Spis treści.<br /><br />
+Wybierz odpowiedni model zarządzania procesem redakcyjnym (Aby oznaczyć administratora czasopisma lub redaktora działu, przejdź do listy redaktorów).]]></message>
+	<message key="user.register.form.emailConsentAllContexts">Tak, chcę otrzymywać informacje o nowych publikacjach oraz ogłoszenia dla wszystkich czasopism zarejestrowanych na tej platformie.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Wyrażam zgodę na gromadzenie i przechowywanie moich danych zgodnie z <a href="{$privacyUrl}" target="_blank">polityką prywatności</a>.]]></message>
+	<message key="user.register.form.missingContextConsent">Musisz zgodzić się na zasady polityki prywatności dla każdego czasopisma, z którym jesteś powiązany(a).</message>
+	<message key="user.register.form.missingSiteConsent">Musisz zgodzić się na zasady polityki prywatności dla tej strony.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Utwórz nowe zgłoszenie do działu <a href="{$url}">{$name}</a>.]]></message>
+	<message key="payment.loginRequired">Musisz zalogować się, aby dokonać płatności.</message>
+	<message key="installer.localeInstructions">Podstawowy język wykorzystywany przez OJS. Zapoznaj się z dokumentacją, jeżeli jesteś zainteresowany(a) wspieraniem języka nie zamieszczonego na liście.</message>
+	<message key="installer.additionalLocalesInstructions">Wybierz języki. Te języki będą dostępne do wykorzystania na stronie. Dodatkowe języki mogą być doinstalowane w dowolnym czasie z poziomu interfejsu administratora.</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Wpisz pełna ścieżkę do istniejącego katalogu na pliki. Ten katalog nie może być publicznie dostępny. <strong>Upewnij się, że katalog istnieje i posiada uprawnienia do zapisu przed instalacją. </strong> Ścieżki w systemie Windows powinny zawierać znaki odwrotnych ukośników (forward slash), np. "C:/myjournal/files".]]></message>
+	<message key="installer.databaseSettingsInstructions">OJS wymaga dostępu do bazy SQL do przechowywania danych. Zapoznaj się z wymaganiami powyżej. W polach poniżej, wprowadź ustawienia, które zapewnią połączenie z bazą.</message>
+	<message key="installer.installApplication">Zainstaluj Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Aktualizuj Open Journal Systems</message>
+	<message key="catalog.sortBy">Kolejność artykułów</message>
+	<message key="catalog.sortBy.categoryDescription">Wybierz kolejność artykułów w tej kategorii.</message>
+	<message key="rt.context.authorTermsDescription">W przypadku tekstów, które mają więcej niż jednego autora, pozostaw zaznaczone wszystkie nazwiska, aby wyszukać podobne współautorskie teksty lub zaznacz jedno nazwisko, aby wyszukać teksty tylko dla zaznaczonego autora. Aby dowiedzieć się więcej o przeszukiwanym zasobie, kliknij ABOUT. Zasoby te zostały wybrane ze względu na ich znaczenie i otwarty (bezpłatny) dostęp do całości lub części ich zawartości.</message>
+	<message key="notification.type.public">Publiczne ogłoszenia</message>
+	<message key="notification.type.publicationScheduled">Ten tekst został zaplanowany do publikacji.</message>
+	<message key="installer.installationComplete"><![CDATA[<p>Instalacja OJS zakończona sukcesem.</p>
+<p>Aby zacząć używać system, <a href="{$loginUrl}">zaloguj się</a> używając nazwy użytkownika i hasła wprowadzonego na wcześniejszej stronie.</p>
+<p>Jeżeli chciałbyś(abyś) stać się częścią społeczności PKP, dołącz:</p>
+<ol>
+	<li>Czytaj <a href="http://pkp.sfu.ca/blog" target="_new">PKP blog</a> oraz śledź <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS feed</a> aby zapoznać się z nowościami i otrzymywać aktualizacje.</li>
+	<li>Odwiedź <a href="http://forum.pkp.sfu.ca" target="_new">forum wsparcia</a> jeżeli masz pytania lub uwagi.</li>
+</ol>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>Aktualizacja OJS do wersji {$version} została zakończona sukcesem.</p>
+<p>Nie zapomnij zmienić ustawień "installed" w pliku konfiguracyjnym config.inc.php z powrotem na: <em>On</em>.</p>
+<p>Jeżeli jeszcze nie zarejestrowałeś(aś) się, a chciałbyś(abyś) uzyskiwać informacje o aktualizacjach, <strong>zarejestruj się na stronie: <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong>Jeżeli masz pytania lub uwagi, odwiedź: <a href="http://forum.pkp.sfu.ca" target="_new">forum wsparcia</a>.</p>]]></message>
+	<message key="payment.notFound">Zażądano wniesienia opłaty, ale żądanie wygasło. Skontaktuj się z administratorem czasopisma, aby uzyskać szczegółowe informacje.</message>
+	<message key="payment.donation.makeDonation">Przekaż datek</message>
+	<message key="payment.submission.paySubmission">Wnieś opłatę za zgłoszenie</message>
+	<message key="payment.publication.payPublication">Wnieś opłatę za publikację</message>
+	<message key="payment.publication.publicationPaid">Opłata za publikację wniesiona</message>
+	<message key="payment.membership.buyMembership">Kup indywidualne członkowstwo</message>
+	<message key="payment.membership.renewMembership">Odnów indywidualne członkowstwo</message>
+	<message key="payment.membership.ends">Zakończenie</message>
+	<message key="payment.subscription.purchase">Zakup subskrypcję</message>
+	<message key="payment.subscription.renew">Odnów subskrypcję</message>
+	<message key="payment.subscription.expires">Wygasa</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
+
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README.md">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> or visit PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+
+<h4>Upgrade</h4>
+
+<p>If you are upgrading an existing installation of OJS, <a href="{$upgradeUrl}">click here</a> to proceed.</p>
+
+<h4>Recommended system requirements</h4>
+
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; you are currently using PHP {$phpVersion}{$wrongPhpText}</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>
+	<li>Operating system: Any OS that supports the above software, including <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+</ul>
+
+<p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>
+
+<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory, or using the site administration web interface.</p>
+
+<h4>Supported database systems</h4>
+
+<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
+]]></message>
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
+
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README.md">README</a> and <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> or visit PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OJS installation directory before proceeding.</p>
+<p>If you are running in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Please note that full Unicode support requires PHP to be compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
+<br /><br />
+Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Uwaga:</strong> Jeżeli instalacja zakończyła się błędem podczas instalacji bazy, konieczne może być usunięcie bazy OJS lub tabeli OJS przed ponowną reinstalacją bazy.]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>Ważne!</h4>
+<p>Instalator nie może automatycznie nadpisać pliku konfiguracyjnego. Przed uruchomieniem systemu otwórz <tt>config.inc.php</tt> w edytorze tekstu a następnie zastąp treść pliku treścią wyświetloną poniżej.</p>]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Wprowadź poprawny zakres IP.</message>
+	<message key="payment.loginRequired.forArticle">Aby uzyskać dostęp do artykułu, niezbędna jest subskrypcja lub jego zakup. Aby zweryfikować, czy posiadasz subskrypcję lub zakupiłeś(aś) już ten artykuł, zaloguj się na stronie czasopisma.</message>
+	<message key="payment.loginRequired.forIssue">Aby uzyskać dostęp do numeru, niezbędna jest subskrypcja lub jego zakup. Aby zweryfikować, czy posiadasz subskrypcję lub zakupiłeś(aś) już ten numer, zaloguj się na stronie czasopisma.</message>
+	<message key="payment.loginRequired.forDonation">Musisz zalogować się w celu przekazania datku.</message>
+	<message key="payment.alreadyPaidMessage">Zaznacz to pole, jeżeli wysłałeś(aś) już płatność do czasopisma, w celu zakończenia procesu zgłoszenia. Zgłoszenie nie zostanie przejrzane do momentu otrzymania płatności. Kliknij przycisk PAY NOW znajdujący się powyżej, aby zapoznać się z instrukcją płatności.</message>
+	<message key="payment.paymentReceived">Otrzymano płatność</message>
+	<message key="payment.paymentSent">Płatność została wysłana</message>
+	<message key="payment.authorFees">Opłata autora</message>
+	<message key="payment.type.publication.required">Należy wnieść opłatę za publikację.</message>
+	<message key="payment.type.fastTrack">Opłata za szybką recenzję</message>
+	<message key="payment.type.donation">Datki</message>
+	<message key="payment.requestPublicationFee">Prośba o wniesienie opłaty za publikację  ({$feeAmount})</message>
+	<message key="user.subscriptions.statusInformation">Aktywne i wygasłe subskrypcje są wyświetlane poniżej wg daty wygaśnięcia. Dodatkowo może dostępna być informacja o statusie każdej subskrypcji.</message>
+	<message key="user.subscriptions.status">Status</message>
+	<message key="user.subscriptions.statusDescription">Opis</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Dodatkowe informacje są niezbędne do aktywacji subskrypcji</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Subskrypcja musi być przejrzana przed jej aktywacją</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Ręczna płatność została zainicjowana, ale nie otrzymaliśmy jeszcze przesłanej kwoty</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Płatność online została zainicjowana, ale została anulowana lub nie została ukończona</message>
+	<message key="user.subscriptions.individualSubscriptions">Indywidualna subskrypcja</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Instytucjonalna subskrypcja</message>
+	<message key="user.subscriptions.renew">Odnowienie</message>
+	<message key="user.subscriptions.purchase">Zakup</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Kup nową subskrypcję</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Kup indywidualną subskrypcję</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Kup instytucjonalną subskrypcję</message>
+	<message key="user.subscriptions.expires">Wygasa: {$date}</message>
+	<message key="user.subscriptions.expired">Wygasło: {$date}</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Zobacz dostępne rodzaje subskrypcji</message>
+	<message key="user.subscriptions.form.membershipRequired">Wybrane rodzaje subskrypcji wymagają informacji o członkowstwie</message>
+	<message key="user.subscriptions.form.typeIdValid">Wybierz właściwy rodzaj subskrypcji</message>
+	<message key="user.subscriptions.form.subscriptionExists">To konto użytkownika posiada już indywidualną subskrypcję</message>
+	<message key="user.subscriptions.form.membershipInstructions">Informacja o członkostwie, jeżeli jest wymagana dla wybranego rodzaju subskrypcji</message>
+	<message key="user.subscriptions.form.institutionName">Nazwa instytucji</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Wymagana jest nazwa instytucji.</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Adres</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Jeżeli podano domenę, zakres IP jest opcjonalny.<br />Poprawne wartości to nazwy domen (np. lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">Wybrany rodzaj subskrypcji wymaga podania domeny lub/oraz zakresu IP do autoryzacji subskrypcji.</message>
+	<message key="user.subscriptions.form.ipRange">zakres IP</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Jeżeli podano zakres IP, domena jest opcjonalna.<br />Poprawne wartości to adres IP (np. 142.58.103.1), zakres IP (np. 142.58.103.1 - 142.58.103.4), zakres IP wraz z '*' (np. 142.58.*.*) oraz zakres IP z CIDR (np. 142.58.100.0/24).]]></message>
 </locale>

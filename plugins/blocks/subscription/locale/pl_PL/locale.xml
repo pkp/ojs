@@ -13,11 +13,13 @@
 
 <locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.subscription.displayName">Subskrypcje</message>
-	<message key="plugins.block.subscription.description">Wtyczka elementu blokowego informacji o subskrypcji.</message>
-	<message key="plugins.block.subscription.blockTitle">Subskrypcje</message>
+	<message key="plugins.block.subscription.description">Wtyczka elementu blokowego dostarczająca informacji o subskrypcji.</message>
+	<message key="plugins.block.subscription.blockTitle">Subskrypcja</message>
 	<message key="plugins.block.subscription.expires">Kończy się</message>
-	<message key="plugins.block.subscription.providedBy">Dostęp zapewnia</message>
-	<message key="plugins.block.subscription.comingFromIP">Z</message>
+	<message key="plugins.block.subscription.providedBy">Dostęp zapewnia: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Z: {$ip}</message>
 	<message key="plugins.block.subscription.about">Subskrypcje</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Zaloguj się w celu sprawdzenia subskrypcji</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Subskrypcja jest wymagana do uzyskania dostępu do wybranych zasobów.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Dowiedz się więcej</message>
 </locale>
