@@ -46,7 +46,8 @@ class AuthorDAO extends PKPAuthorDAO {
 		$supportedLocalesCount = count($supportedLocales);
 		$sqlJoinAuthorSettings = $sqlWhereAffiliation = $sqlWhereCountry = '';
 		$sqlWhereAuthorSettings = '(';
-		foreach ($supportedLocales as $index => $locale) {
+		$index = 0;
+		foreach ($supportedLocales as $locale) {
 			$sqlJoinAuthorSettings .= "
 				LEFT JOIN author_settings asg$index ON (asg$index.author_id  = a.author_id AND asg$index.setting_name = '" . IDENTITY_SETTING_GIVENNAME . "' AND asg$index.locale = '$locale')
 				LEFT JOIN author_settings asf$index ON (asf$index.author_id  = a.author_id AND asf$index.setting_name = '" . IDENTITY_SETTING_FAMILYNAME . "' AND asf$index.locale = '$locale')
@@ -73,7 +74,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			if ($index < $supportedLocalesCount - 1) {
 				$sqlWhereAuthorSettings .= ' OR ';
 			}
-
+			$index++;
 		}
 		$sqlWhereAuthorSettings .= ')';
 
