@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
 "PO-Revision-Date: 2020-01-30 18:29+0000\n"
-"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
+"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "sv/>\n"
 "Language: sv_SE\n"
@@ -219,3 +219,9 @@ msgstr "Publikationen för publiceringsversionen kan inte hittas."
 
 msgid "submission.submit.noContext"
 msgstr "Bidragets tidskrift kan inte hittas."
+
+msgid "catalog.category.heading"
+msgstr "Alla objekt"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Objekt"
