@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
+"PO-Revision-Date: 2020-01-31 16:21+0000\n"
+"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
+"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
+"sv/>\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:01+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -160,3 +163,15 @@ msgstr "DOI:t {$pubId} kan inte tilldelas eftersom det innehåller ett ofullstä
 
 msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
 msgstr "DOI:t {$pubId} har tilldelats."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Objekt"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Tilldela"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI måste börja med {$prefix}."
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Artiklar"
