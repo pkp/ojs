@@ -145,7 +145,8 @@ class AuthorDAO extends PKPAuthorDAO {
 		if (isset($initial)) {
 			$initialSql = ' AND (';
 		}
-		foreach ($supportedLocales as $index => $locale) {
+		$index = 0;
+		foreach ($supportedLocales as $locale) {
 			$localeStr = str_replace('@', '_', $locale);
 			$sqlColumnsAuthorSettings .= ",
 				COALESCE(asg$index.setting_value, ''), ' ',
@@ -171,6 +172,7 @@ class AuthorDAO extends PKPAuthorDAO {
 					}
 				}
 			}
+			$index++;
 		}
 		if (isset($initial)) {
 			$initialSql .= ')';
