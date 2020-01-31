@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
+"PO-Revision-Date: 2020-01-31 16:21+0000\n"
+"Last-Translator: Fransisca H <sisca.ojs@gmail.com>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-doi/id/>\n"
+"Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:00+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -54,7 +57,11 @@ msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
 msgstr "Akhiran DOI dapat dengan format apapun, tetapi harus unik di antara semua objek penerbitan dengan penugasan awalan DOI yang sama:"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
-msgstr "Gunakan pola seperti di bawah untuk menciptakan akhiran DOI. Gunakan %j untuk inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %Y untuk tahun, %a untuk ID artikel OJS, %g untuk ID galley OJS, %f untuk ID file dan %p untuk nomor halaman. "
+msgstr ""
+"Gunakan pola seperti di bawah untuk menciptakan sufiks DOI. Gunakan %j untuk "
+"inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %Y untuk "
+"tahun, %a untuk ID artikel OJS, %g untuk ID galley OJS, %f untuk ID file "
+"OJS, %p untuk nomor halaman dan %x untuk \"identifikasi kustom\"."
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
 msgstr "untuk terbitan"
@@ -103,3 +110,120 @@ msgstr "galley"
 
 msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
 msgstr "Akhiran DOI yang dimasukkan telah digunakan oleh item penerbitan lain. Silahkan masukkan akhiran DOI unik untuk masing-masing item."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Butir"
+
+#, fuzzy
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "DOI belum diberikan untuk publikasi ini."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "DOI untuk publikasi ini adalah {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI harus diawali dengan {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} telah diberikan."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr ""
+"DOI {$pubId} tidak dapat diberikan karena berisi pola yang belum "
+"terselesaikan."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "DOI tidak dapat diberikan karena sufiks kustom tidak ada."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Berikan DOI {$pubId} untuk {$pubObjectType} ini"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Gunakan opsi berikut untuk menghapus DOI dari semua objek (artikel dan "
+"galley) yang saat ini dijadwalkan untuk volume/isu ini."
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Anda yakin ingin menghapus DOI dari objek volume/isu yang ada?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Kosongkan Objek Volume/Isu DOI"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Anda yakin ingin menghapus DOI yang ada?"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Kosongkan"
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "DOI diberikan untuk {$pubObjectType} ini."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr ""
+"Apa yang Anda lihat adalah pratinjau dari DOI. Pilih kotak centang dan "
+"simpan formulir untuk menetapkan DOI."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "DOI tidak dapat diberikan karena berisi pola yang tidak terselesaikan."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Anda tidak dapat membuat DOI karena satu atau lebih bagian dari pola DOI "
+"kehilangan data. Anda mungkin perlu menetapkan publikasi ke volume/isu "
+"tertentu, mengatur ID penerbit atau memasukkan nomor halaman."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Anda tidak dapat membuat DOI sampai publikasi ini ditetapkan ke dalam volume/"
+"isu."
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "DOI tidak dapat diberikan karena sufiks kustom tidak ada."
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "Galley"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Memberikan"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI mesti diawali dengan {$prefix}."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Apakah Anda yakin ingin memberikan DOI ke semua objek yang diterbitkan yang "
+"belum memiliki DOI?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Berikan DOI untuk semua objek jurnal yang  belum diberikan DOI. Tindakan ini "
+"tidak dapat digunakan pada konfigurasi sufiks secara individual. Jika Anda "
+"telah memodifikasi konfigurasi DOI di atas, harap simpan perubahan Anda "
+"sebelum memulai tindakan ini. Pemberian DOI mungkin membutuhkan waktu lama, "
+"tergantung pada jumlah objek yang diterbitkan dalam jurnal."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Berikan DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr ""
+"Jika Anda mengubah konfigurasi DOI Anda, DOI yang telah diberikan tidak akan "
+"terdampak. Setelah konfigurasi DOI disimpan, gunakan tombol ini untuk "
+"menghapus semua DOI yang ada sehingga pengaturan baru akan diberlakukan pada "
+"objek yang ada."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Masukkan sufiks DOI secara individual untuk setiap butir terbitan. Anda akan "
+"menemukan field masukkan tambahan pada halaman meta-data masing-masing butir."
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Artikel"
+
+msgid "plugins.pubIds.doi.description"
+msgstr ""
+"Plugin ini memampukan pemberian Digital Object Identifiers ke terbitan, "
+"artikel dan galley di OJS."
