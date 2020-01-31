@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
+"PO-Revision-Date: 2020-01-31 16:21+0000\n"
+"Last-Translator: Fransisca H <sisca.ojs@gmail.com>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-urn/id/>\n"
+"Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:02+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -21,13 +24,13 @@ msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
 msgstr "Pilih objek URN yang harus ditugaskan."
 
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
-msgstr "URN akan ditugaskan untuk terbitan."
+msgstr "Volume/Isu"
 
 msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
 msgstr "URN akan ditugaskan untuk artikel."
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
-msgstr "URN akan ditugaskan untuk galley (contoh: HTML atau file PDF)."
+msgstr "Galley"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
 msgstr "Awalan URN"
@@ -72,7 +75,7 @@ msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
 msgstr "Cek nomor akan secara otomatis terhitung dan ditambahkan di akhir, sebagai digit terakhir URN."
 
 msgid "plugins.pubIds.urn.manager.settings.namespace"
-msgstr "Namespace"
+msgstr "Ruang nama"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
 msgstr "Pilih"
@@ -97,3 +100,154 @@ msgstr "Akhiran URN yang dimasukkan telah digunakan oleh item penerbitan lain. S
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Cek nomor hilang."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Butir"
+
+#, fuzzy
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "URN belum diberikan untuk publikasi ini."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN untuk publikasi ini adalah {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN harus diawali dengan {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Anda tidak dapat membuat URN karena satu atau lebih bagian dari pola URN "
+"kehilangan data. Anda mungkin perlu menetapkan publikasi ke sebuah volume/"
+"isu tertentu, mengatur ID penerbit atau memasukkan nomor halaman."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Anda tidak dapat membuat URN sampai publikasi ini ditetapkan untuk ke sebuah "
+"volume/isu."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Berikan"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN harus diawali dengan {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} telah diberikan."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr ""
+"URN {$pubId} tidak dapat diberikan karena berisi pola yang tidak "
+"terselesaikan."
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN tidak dapat diberikan karena sufiks kustom tidak ada."
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Berikan URN {$pubId} untuk {$pubObjectType} ini"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Tambahkan Nomor Cek"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Gunakan opsi berikut untuk menghapus URN dari semua objek (artikel dan "
+"galley) yang saat ini dijadwalkan untuk volume/isu ini."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Apakah Anda yakin ingin menghapus URN dari objek volume/isu yang ada?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Kosongkan Objek Volume/Isu URN"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Anda yakin ingin menghapus URN yang ada?"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Kosongkan"
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN ditugaskan untuk {$pubObjectType} ini."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Apa yang Anda lihat adalah pratinjau URN. Pilih kotak centang dan simpan "
+"formulir untuk menetapkan URN."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN tidak dapat diberikan karena berisi pola yang tidak terselesaikan."
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN tidak dapat diberikan karena sufiks kustom tidak ada."
+
+#, fuzzy
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "galley"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "artikel"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "isu"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Jika Anda mengubah konfigurasi URN Anda, URN yang telah ditetapkan tidak "
+"akan terpengaruh. Setelah konfigurasi URN disimpan, gunakan tombol ini untuk "
+"menghapus semua URN yang ada sehingga pengaturan baru akan berlaku pada "
+"objek yang ada."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Harap masukkan URL penyelesai."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(misalnya http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL Penyelesai"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Masukkan sufiks URN individual untuk setiap butir terbitan. Anda akan "
+"menemukan field masukkan URN tambahan pada  setiap butir halaman metadata."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i untuk volume/isu<br />%j.v%vi%i.%a untuk artikel<br "
+"/>%j.v%vi%i.%a.g%g untuk galleys."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Silakan masukkan pola sufiks URN untuk artikel."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Gunakan pola yang dimasukkan di bawah ini untuk menghasilkan sufiks URN. "
+"Gunakan %j untuk inisial jurnal, %v untuk nomor volume, %i untuk nomor "
+"edisi, %Y untuk tahun, %a untuk ID artikel OJS, %g untuk ID galley OJS, %f "
+"untuk ID file OJS , %p untuk nomor halaman dan %x untuk \"Pengidentifikasi "
+"Kustom\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"Sufiks URN dapat berupa apa saja, tetapi harus unik di antara semua objek "
+"penerbitan dengan prefiks URN yang sama:"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Artikel"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"Silakan pilih objek penerbitan yang akan diberikan Uniform Resource Names "
+"(URN):"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"Harap konfigurasikan plugin URN untuk dapat mengelola dan menggunakan URN di "
+"OJS:"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"Plugin ini memungkinkan pemberian Uniform Resource Names untuk volume/isu, "
+"artikel, dan galley di OJS."

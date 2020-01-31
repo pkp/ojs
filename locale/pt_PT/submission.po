@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
+"PO-Revision-Date: 2020-01-31 16:21+0000\n"
+"Last-Translator: Carla Marques <carla.marques@sdum.uminho.pt>\n"
+"Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
+"ojs/submission/pt_PT/>\n"
+"Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:30+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Submeter Artigo"
@@ -160,3 +163,61 @@ msgstr "O seu resumo é demasiado longo. Por favor encurte-o de modo a conter me
 
 msgid "submission.abstract.wordCount.description"
 msgstr "O resumo deverá ter no máximo {$wordCount} palavras."
+
+msgid "publication.scheduledIn"
+msgstr "Agendado para publicação em <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Publicado em <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr "A publicação deve ser agendada num número antes de ser publicada."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Todos os requisitos de publicação foram cumpridos. Irá ser publicado "
+"imediatamente no {$issue}. Deseja realmente publicar?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Todos os requisitos de publicação foram cumpridos. Irá ser publicado quando "
+"o {$issue} for publicado. Deseja realmente agendar para publicação?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Todos os requisitos da publicação foram cumpridos. Deseja realmente publicar?"
+
+msgid "publication.issue.success"
+msgstr "Os detalhes do volume da publicação foram atualizados."
+
+msgid "publication.invalidIssue"
+msgstr "O volume desta publicação não foi encontrada."
+
+msgid "publication.invalidSection"
+msgstr "A secção desta publicação não foi encontrada."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"A data de publicação será configurada automaticamente quando o volume for "
+"publicado. Não insira a data de publicação a menos que o artigo tenha sido "
+"publicado anteriormente noutro local e necessite de colocar data anterior."
+
+msgid "galley.publicationNotFound"
+msgstr "A publicação deste ficheiro final não foi encontrada."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Os ficheiros finais de publicação não podem ser editados porque já foram "
+"publicados."
+
+msgid "catalog.category.heading"
+msgstr "Todos os Itens"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Itens"
+
+msgid "submission.sectionOptions"
+msgstr "Opções da Secção"
+
+msgid "submission.submit.noContext"
+msgstr "Esta submissão à revista não foi encontrada."
