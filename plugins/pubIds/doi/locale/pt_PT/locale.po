@@ -190,3 +190,9 @@ msgstr "O DOI deve iniciar com {$prefix}."
 
 msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Artigos"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Item"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Ficheiro pronto para publicação: {$galleyLabel}"
