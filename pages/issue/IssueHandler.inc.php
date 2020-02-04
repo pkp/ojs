@@ -309,19 +309,21 @@ class IssueHandler extends Handler {
 			'contextId' => $journal->getId(),
 			'issueIds' => [$issue->getId()],
 			'status' => STATUS_PUBLISHED,
+			'orderBy' => 'seq',
+			'orderDirection' => 'ASC',
 		]));
 
+		$sections = Application::get()->getSectionDao()->getByIssueId($issue->getId());
 		$issueSubmissionsInSection = [];
+		foreach ($sections as $section) {
+			$issueSubmissionsInSection[$section->getId()] = [
+				'title' => $section->getLocalizedTitle(),
+				'articles' => [],
+			];
+		}
 		foreach ($issueSubmissions as $submission) {
 			if (!$sectionId = $submission->getCurrentPublication()->getData('sectionId')) {
 				continue;
-			}
-			if (!array_key_exists($sectionId, $issueSubmissionsInSection)) {
-				$section = DAORegistry::getDAO('SectionDAO')->getById($sectionId);
-				$issueSubmissionsInSection[$sectionId] = [
-					'title' => $section->getLocalizedTitle(),
-					'articles' => [],
-				];
 			}
 			$issueSubmissionsInSection[$sectionId]['articles'][] = $submission;
 		}

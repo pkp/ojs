@@ -26,6 +26,7 @@ class PublicationDAO extends PKPPublicationDAO {
 		'locale' => 'locale',
 		'primaryContactId' => 'primary_contact_id',
 		'sectionId' => 'section_id',
+		'seq' => 'seq',
 		'submissionId' => 'submission_id',
 		'status' => 'status',
 		'version' => 'version',

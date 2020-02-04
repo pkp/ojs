@@ -29,7 +29,7 @@ class TocGridHandler extends CategoryGridHandler {
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence', 'removeArticle', 'setAccessStatus')
 		);
-		$this->submissionBySectionId = array();
+		$this->submissionsBySectionId = array();
 	}
 
 
@@ -94,7 +94,7 @@ class TocGridHandler extends CategoryGridHandler {
 	 * @copydoc GridHandler::initFeatures()
 	 */
 	function initFeatures($request, $args) {
-		return array(new OrderCategoryGridItemsFeature(ORDER_CATEGORY_GRID_CATEGORIES_AND_ROWS));
+		return array(new OrderCategoryGridItemsFeature(ORDER_CATEGORY_GRID_CATEGORIES_AND_ROWS, true, $this));
 	}
 
 	/**
@@ -145,16 +145,17 @@ class TocGridHandler extends CategoryGridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
 		$submissionsInSections = Services::get('submission')->getInSections($request->getContext()->getId(), $issue->getId());
-		$sections = [];
 		foreach ($submissionsInSections as $sectionId => $articles) {
-			if (!isset($sections[$sectionId])) {
-				$sections[$sectionId] = Application::get()->getSectionDao()->getById($sectionId);
-			}
 			foreach($articles['articles'] as $article) {
 				$this->submissionsBySectionId[$sectionId][$article->getId()] = $article;
 			}
 		}
-		return $sections;
+		$sections = Application::get()->getSectionDao()->getByIssueId($issue->getId());
+		$arrayKeySections = [];
+		foreach ($sections as $section) {
+			$arrayKeySections[$section->getId()] = $section;
+		}
+		return $arrayKeySections;
 	}
 
 	/**
@@ -165,11 +166,11 @@ class TocGridHandler extends CategoryGridHandler {
 	function getDataElementSequence($object) {
 		if (is_a($object, 'Submission')) {
 			return $object->getCurrentPublication()->getData('seq');
-		} else {
+		} else { // section
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-			$customOrdering = DAORegistry::getDAO('SectionDAO')->getCustomSectionOrder($issue->getId(), $section->getId());
+			$customOrdering = DAORegistry::getDAO('SectionDAO')->getCustomSectionOrder($issue->getId(), $object->getId());
 			if ($customOrdering === null) { // No custom ordering specified; use default section ordering
-				return $section->getSequence();
+				return $object->getSequence();
 			} else { // Custom ordering specified.
 				return $customOrdering;
 			}

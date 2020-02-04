@@ -150,12 +150,15 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	 */
 	public function getInSections($issueId, $contextId) {
 
-		$submissions = iterator_to_array($this->getMany(['contextId' => $contextId, 'issueIds' => $issueId]));
-		usort($submissions, function($a, $b) {
-			return $a->getCurrentPublication()->getData('seq') <= $b->getCurrentPublication()->getData('seq');
-		});
-
+		$submissions = iterator_to_array($this->getMany([
+			'contextId' => $contextId,
+			'issueIds' => $issueId,
+			'status' => [STATUS_PUBLISHED, STATUS_SCHEDULED],
+			'orderBy' => 'seq',
+			'orderDirection' => 'ASC',
+		]));
 		$bySections = [];
+
 		foreach ($submissions as $submission) {
 			$sectionId = $submission->getCurrentPublication()->getData('sectionId');
 			if (empty($bySections[$sectionId])) {
