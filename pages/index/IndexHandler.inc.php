@@ -74,7 +74,7 @@ class IndexHandler extends PKPIndexHandler {
 
 			$templateMgr->display('frontend/pages/indexJournal.tpl');
 		} else {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			$site = $request->getSite();
 
 			if ($site->getRedirect() && ($journal = $journalDao->getById($site->getRedirect())) != null) {

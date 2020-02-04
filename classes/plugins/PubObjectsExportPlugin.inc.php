@@ -334,7 +334,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 */
 	function exportXML($objects, $filter, $context, $noValidation = null) {
 		$xml = '';
-		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$exportFilters = $filterDao->getObjectsByGroup($filter);
 		assert(count($exportFilters) == 1); // Assert only a single serialization filter
 		$exportFilter = array_shift($exportFilters);

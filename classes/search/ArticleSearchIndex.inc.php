@@ -269,7 +269,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			if ($log) echo __('search.cli.rebuildIndex.done') . "\n";
 
 			// Build index
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 			$journals = $journalDao->getAll();
 			while ($journal = $journals->next()) {

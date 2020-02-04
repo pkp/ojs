@@ -207,8 +207,8 @@ class SearchHandler extends Handler {
 			$journals = array();
 			$sections = array();
 
-			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 			foreach ($submissions as $article) {
 				$articleId = $article->getId();

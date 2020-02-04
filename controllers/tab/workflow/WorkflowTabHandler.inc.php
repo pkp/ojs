@@ -31,7 +31,7 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 				$errors = [];
 				$context = $request->getContext();
 
-				$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+				$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
 				$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
 
 				while ($assignment = $submitterAssignments->next()) {

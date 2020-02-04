@@ -43,7 +43,7 @@ class SectionForm extends PKPSectionForm {
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$sectionId = $this->getSectionId();
 		if ($sectionId) {
 			$section = $sectionDao->getById($sectionId, $journal->getId());
@@ -104,7 +104,7 @@ class SectionForm extends PKPSectionForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		return $sectionDao->getLocaleFieldNames();
 	}
 
@@ -113,7 +113,7 @@ class SectionForm extends PKPSectionForm {
 	 * @return mixed
 	 */
 	function execute(...$functionArgs) {
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$journal = Application::get()->getRequest()->getJournal();
 
 		// Get or create the section object

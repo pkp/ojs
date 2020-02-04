@@ -230,7 +230,7 @@ class ArticleSearch extends SubmissionSearch {
 	 */
 	function formatResults($results, $user = null) {
 		$contextDao = Application::getContextDAO();
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 
 		$publishedSubmissionCache = array();
 		$articleCache = array();

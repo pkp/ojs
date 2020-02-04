@@ -22,7 +22,7 @@ class ArticleTombstoneManager {
 	}
 
 	function insertArticleTombstone(&$article, &$journal) {
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
 		// delete article tombstone -- to ensure that there aren't more than one tombstone for this article
 		$tombstoneDao->deleteByDataObjectId($article->getId());

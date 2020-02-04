@@ -249,7 +249,7 @@ class PublicationService extends PKPPublicationService {
 		// Check if current user is an author
 		$isAuthor = false;
 		$currentUser = Application::get()->getRequest()->getUser();
-		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
 		$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submissionId, ROLE_ID_AUTHOR);
 		while ($assignment = $submitterAssignments->next()) {
 			if ($currentUser->getId() == $assignment->getUserId()) {

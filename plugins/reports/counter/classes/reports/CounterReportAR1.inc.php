@@ -131,7 +131,7 @@ class CounterReportAR1 extends CounterReport {
 		}
 		$title = $article->getLocalizedTitle();
 		$journalId = $article->getContextId();
-		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journal = $journalDao->getById($journalId);
 		if (!$journal) {
 			return false;
