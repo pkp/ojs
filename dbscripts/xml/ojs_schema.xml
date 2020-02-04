@@ -507,6 +507,10 @@
 		<field name="locale" type="C2" size="14"/>
 		<field name="primary_contact_id" type="I8" />
 		<field name="section_id" type="I8" />
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
 		<field name="submission_id" type="I8">
 			<NOTNULL />
 		</field>
