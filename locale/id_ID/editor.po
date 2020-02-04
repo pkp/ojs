@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
-"PO-Revision-Date: 2020-01-30 08:35+0000\n"
-"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"PO-Revision-Date: 2020-02-04 12:33+0000\n"
+"Last-Translator: Fransisca H <sisca.ojs@gmail.com>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "id/>\n"
 "Language: id_ID\n"
@@ -51,10 +51,12 @@ msgid "editor.submissionArchive.noSubmissions"
 msgstr "Tidak ada naskah dalam arsip."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "Simpan perubahan pada arsip penyerahan naskah? Naskah yang telah dihapus akan terhapus secara permanen dari sistem."
+msgstr ""
+"Simpan perubahan pada arsip penyerahan naskah? Naskah yang mau dihapus akan "
+"terhapus dari sistem secara permanen."
 
 msgid "editor.submissionArchive.confirmDelete"
-msgstr "Apakah Anda yakin ingin menghapus naskah ini secara permanen?"
+msgstr "Anda yakin ingin menghapus naskah ini secara permanen?"
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Apakah Anda ingin merekam keputusan ini?"
@@ -105,10 +107,10 @@ msgid "editor.issues.currentIssue"
 msgstr "Terbitan Terkini"
 
 msgid "editor.issues.numArticles"
-msgstr "Item"
+msgstr "Butir"
 
 msgid "editor.issues.noArticles"
-msgstr "Saat ini tidak ada item yang dijadwalkan untuk terbitan ini."
+msgstr "Saat ini tidak ada yang dijadwalkan untuk terbitan ini."
 
 msgid "editor.issues.confirmDelete"
 msgstr "Apakah Anda yakin ingin menghapus terbitan ini secara permanen?"
@@ -135,13 +137,15 @@ msgid "editor.issues.titleRequired"
 msgstr "Masukkan Judul untuk terbitan ini."
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "Dibutuhkan identifikasi isu. Silahkan pilih setidaknya salah satu dari opsi identifikasi isu."
+msgstr ""
+"Dibutuhkan identifikasi terbitan. Silakan pilih setidaknya satu dari opsi "
+"identifikasi terbitan."
 
 msgid "editor.issues.issueIdentification"
-msgstr "Identifikasi Isu"
+msgstr "Identifikasi Terbitan"
 
 msgid "editor.issues.publicIssueIdentifier"
-msgstr "Pengidentifikasi isu umum"
+msgstr "Pengidentifikasi terbitan umum"
 
 msgid "editor.issues.description"
 msgstr "Deskripsi"
@@ -150,10 +154,10 @@ msgid "editor.issues.accessStatus"
 msgstr "Status Akses"
 
 msgid "editor.issues.accessDate"
-msgstr "Tanggal Open Access"
+msgstr "Tanggal akses terbuka"
 
 msgid "editor.issues.enableOpenAccessDate"
-msgstr "Mengaktifkan Delayed Open Access"
+msgstr "Mengaktifkan penundaan akses terbuka"
 
 msgid "editor.issues.coverPage"
 msgstr "Gambar Sampul"
@@ -183,13 +187,15 @@ msgid "editor.issues.invalidCoverPageFormat"
 msgstr "Format gambar sampul invalid. Format yang diterima adalah .gif, .jpg, atau .png."
 
 msgid "editor.issues.styleFile"
-msgstr "Stylesheet"
+msgstr "Lembargaya"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "Format Stylesheet tidak berlaku. Pastikan file yang diserahkan adalah CSS. (Komentar dalam stylesheet akan diabaikan.)"
+msgstr ""
+"Format lembargaya tidak berlaku. Pastikan file yang diserahkan adalah CSS. ("
+"Komentar dalam lembargaya akan diabaikan.)"
 
 msgid "editor.issues.removeStyleFile"
-msgstr "Hapus Stylesheet?"
+msgstr "Hapus lembargaya?"
 
 msgid "editor.issues.coverPageCaption"
 msgstr "Judul gambar sampul"
@@ -201,7 +207,7 @@ msgid "editor.issues.coverPageDisplay"
 msgstr "Tampilkan"
 
 msgid "editor.issues.openAccess"
-msgstr "Open access"
+msgstr "Akses terbuka"
 
 msgid "editor.issues.subscription"
 msgstr "Langganan"
@@ -219,7 +225,9 @@ msgid "editor.issues.confirmIssueDelete"
 msgstr "Semua artikel akan kembali pada antrian pengeditan dan file-file yang terkait akan dihapus secara permanen. Apakah Anda yakin ingin menghapus terbitan ini?"
 
 msgid "editor.issues.resetIssueOrder"
-msgstr "Jurnal ini menggunakan pengaturan terbitan custom. <a href=\"{$url}\" class=\"action\">Kembali ke default</a>"
+msgstr ""
+"Jurnal ini menggunakan pengaturan terbitan kustom. <a href=\"{$url}\" class="
+"\"action\">Kembali ke default</a>"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr "Jurnal ini menggunakan pengaturan bagian custom. <a href=\"{$url}\" class=\"action\">Kembali ke default</a>"
@@ -270,43 +278,43 @@ msgid "editor.issues.pages"
 msgstr "Halaman"
 
 msgid "editor.issues.galleys"
-msgstr "Galley Terbitan"
+msgstr "Galai Terbitan"
 
 msgid "editor.issues.galley"
-msgstr "Galley Terbitan"
+msgstr "Galai Terbitan"
 
 msgid "editor.issues.viewingGalley"
-msgstr "Melihat Galley Terbitan"
+msgstr "Melihat Galai Terbitan"
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Terbitkan galley dengan seluruh isi terbitan utuh."
+msgstr "Terbitkan galai dengan seluruh isi terbitan utuh."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Tidak ada galley yang diterbitkan."
+msgstr "Tidak ada galai yang diterbitkan."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "Label galley terbitan harus ada."
+msgstr "Label galai terbitan harus ada."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Bahasa galley terbitan harus ada."
+msgstr "Bahasa galai terbitan harus ada."
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Indentifikasi publik galley terbitan sudah ada."
+msgstr "Identifikasi galai terbitan publik sudah ada."
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "Kembali ke galley terbitan"
+msgstr "Kembali ke galai terbitan"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "Anda yakin hendak menghapus galley terbitan ini?"
+msgstr "Anda yakin hendak menghapus galai terbitan ini?"
 
 msgid "editor.issues.identifiers"
-msgstr "Identifier"
+msgstr "Pengidentifikasi"
 
 msgid "editor.navigation.futureIssues"
 msgstr "Terbitan Akan Datang"
 
 msgid "grid.action.addGalley"
-msgstr "Tambah galley"
+msgstr "Tambah galai"
 
 msgid "grid.action.publish"
 msgstr "Terbitkan"
@@ -321,7 +329,7 @@ msgid "grid.action.previewIssue"
 msgstr "Pratinjau"
 
 msgid "grid.action.addIssueGalley"
-msgstr "Buat Galley Terbitan"
+msgstr "Buat Galai Terbitan"
 
 msgid "editor.navigation.issueArchive"
 msgstr "Terbitan Terdahulu"
@@ -333,10 +341,10 @@ msgid "editor.article.decision"
 msgstr "Keputusan"
 
 msgid "editor.submissions.showBy"
-msgstr "Tunjukkan berdasar"
+msgstr "Tampilkan berdasarkan"
 
 msgid "editor.submissions.submitMMDD"
-msgstr "Submit MM-DD"
+msgstr "Serahkan MM-DD"
 
 msgid "editor.submissions.activeAssignments"
 msgstr "Tugas Aktif"
@@ -357,7 +365,7 @@ msgid "editor.submissions.averageTime"
 msgstr "Minggu"
 
 msgid "editor.submissions.lastCompleted"
-msgstr "Lengkap yang Lalu"
+msgstr "Terakhir Lengkap"
 
 msgid "editor.submissions.assignedTo"
 msgstr "Ditugaskan ke"
@@ -384,33 +392,44 @@ msgid "editor.article.remove"
 msgstr "Hapus"
 
 msgid "editor.article.remove.confirm"
-msgstr "Anda yakin hendak menghapus naskah ini dari terbitan? Naskah akan dapat dijadwalkan di edisi terbitan lain."
+msgstr ""
+"Anda yakin hendak menghapus naskah ini dari terbitan? Naskah tersebut dapat "
+"dijadwalkan pada terbitan lain."
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "Tanggal akses tidak valid."
 
 msgid "editor.issues.editIssueGalley"
-msgstr "Edit Galley Terbitan"
+msgstr "Edit Galai Terbitan"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "Layout editor mempersiapkan file untuk tiap galley dan mengunggah <span class=\"pkp_help_title\">proof</span> untuk proofreading."
+msgstr ""
+"Editor tata letak mempersiapkan file untuk setiap galai dan mengunggah <span "
+"class=\"pkp_help_title\">proof</span> untuk proofreading."
 
 msgid "editor.submission.selectGalleyFiles"
-msgstr "Pilih File Galley"
+msgstr "Pilih File Galai"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "File draft final di daftar ini telah diubah oleh Copyeditor menjadi versi pasca-copyedit, telah diunggah berikut ini di bawah <span class=\"pkp_help_title\">Copyediting</span>."
+msgstr ""
+"File draf final di daftar ini telah diubah oleh Copyeditor menjadi versi "
+"pasca-copyedit, diunggah di bawah ini <span class=\"pkp_help_title\""
+">Copyediting</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Semua file yang telah diunggah di tiap tahap penyerahan dapat ditambahkan ke daftar Proofreading dengan menandai check box Include berikut dan klik Cari: semua file yang ada akan ditampilkan dan dapat dipilih untuk diikutsertakan."
+msgstr ""
+"Semua file yang telah diunggah di tiap tahap penyerahan dapat ditambahkan ke "
+"daftar Proofreading dengan menandai kotak centang Sertaan di bawah ini dan "
+"klik Cari: semua file yang ada akan ditampilkan dan dapat dipilih untuk "
+"diikutsertakan."
 
 msgid "editor.article.coverImage"
 msgstr "Gambar sampul"
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"Pengidentifikasi publik '{$publicIdentifier}' sudah ada digunakan objek lain "
-"dengan tipe yang sama.  Silakan pilih pengidentifikasi unik untuk objek "
+"Pengidentifikasi publik '{$publicIdentifier}' sudah ada untuk objek lain "
+"dengan tipe yang sama. Silakan pilih pengidentifikasi unik untuk objek "
 "dengan tipe yang sama dalam jurnal Anda."
 
 msgid "editor.article.editMetadata"
@@ -426,10 +445,10 @@ msgid "editor.article.showPublicationVersion"
 msgstr "Tampilkan Terbitan Terjadwal"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "Tetapkan Nomor Terbitan Tetkini"
+msgstr "Tetapkan Nomor Terbitan Terkini"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Yakin ingin mengatur nomor ini sebagai terbitan terkini?"
+msgstr "Anda yakin ingin mengatur nomor ini sebagai terbitan terkini?"
 
 msgid "editor.issues.invalidCoverImageFormat"
 msgstr ""
@@ -437,4 +456,4 @@ msgstr ""
 "atau .png."
 
 msgid "editor.notifyUsers"
-msgstr "Ingatkan Pengguna"
+msgstr "Beritahu Pengguna"
