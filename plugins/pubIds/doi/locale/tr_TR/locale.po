@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
+"PO-Revision-Date: 2020-02-01 18:35+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
+"tr/>\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:01+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -160,3 +163,36 @@ msgstr "DOI {$pubId}, çözümlenmemiş bir şablon içerdiğinden atanamaz."
 
 msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
 msgstr "DOI {$pubId} atanmıştır."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Öğe"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Dizgi: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Bu yayın için bir DOI numarası atanmadı."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "Bu yayının DOI numarası {$doi} olarak ayarlanacak."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI {$doiPrefix} öneki ile başlamalıdır."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"DOI şablonunun bir veya daha fazla bölümünde eksik veri olduğu için DOI "
+"oluşturamazsınız. Yayını bir sayıya atamanız, yayıncı ID numarasını "
+"ayarlamanız veya sayfa numarasını girmeniz gereklidir."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr "Bu yayın bir sayıya atanmadan DOI oluşturamazsınız."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Ata"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI {$prefix} öneki ile başlamalıdır."
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Makaleler"

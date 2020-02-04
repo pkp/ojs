@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-01-13 22:44+0000\n"
+"PO-Revision-Date: 2020-02-04 12:33+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -14,7 +14,7 @@ msgstr ""
 
 msgid "plugins.block.browse.description"
 msgstr ""
-"Ce plugiciel fournit des outils de navigation (parcourir) dans la barre "
+"Ce plugiciel fournit des outils de navigation (Parcourir) dans la barre "
 "latérale."
 
 msgid "plugins.block.browse.category"
