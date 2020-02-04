@@ -1,2 +1,61 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-02-05 23:35+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/api/id/>"
+"\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Publikasi yang Anda cari bukan bagian dari naskah ini."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Publikasi yang Anda minta bukan bagian dari jurnal ini."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Metode pembayaran yang Anda pilih tidak didukung."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Anda tidak memiliki hak untuk memindahkan template email ini ke jurnal lain."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Jurnal yang Anda cari tidak ditemukan."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Anda tidak memiliki hak untuk menghapus jurnal ini."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Anda tidak memiliki hak untuk mengedit jurnal ini."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Anda tidak dapat mengedit jurnal ini dari sisi API situs."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Anda tidak dapat melihat atau mengedit jurnal ini kecuali jika Anda meminta "
+"API jurnal atau API seluruh situs."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Anda tidak memiliki izin untuk melihat jurnal ini."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Anda hanya dapat melihat jurnal yang telah diaktifkan."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Untuk mengirim atau mengedit naskah, Anda harus membuat permintaan bagian "
+"akhir API jurnal."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr ""
+"Anda tidak memiliki hak untuk melihat nomor terbitan yang tidak "
+"dipublikasikan."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Anda tidak dapat mengubah naskah jurnal yang masuk."
