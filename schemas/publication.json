@@ -30,13 +30,6 @@
 		"sectionId": {
 			"type": "integer",
 			"apiSummary": true
-		},
-		"seq": {
-			"type": "integer",
-			"default": 0,
-			"validation": [
-				"nullable"
-			]
 		}
 	}
 }
