@@ -75,7 +75,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				if ($form->validate()) {
 					$form->execute();
 					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS);
-					return new JSONMessage();
+					return new JSONMessage(true);
 				} else {
 					return new JSONMessage(true, $form->fetch($request));
 				}
