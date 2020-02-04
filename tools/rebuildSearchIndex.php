@@ -43,7 +43,7 @@ class rebuildSearchIndex extends CommandLineTool {
 		$journal = null;
 		if (count($this->argv)) {
 			$journalPath = array_shift($this->argv);
-			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 			$journal = $journalDao->getByPath($journalPath);
 			if (!$journal) {
 				die (__('search.cli.rebuildIndex.unknownJournal', array('journalPath' => $journalPath)). "\n");
