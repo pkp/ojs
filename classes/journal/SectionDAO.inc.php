@@ -360,6 +360,9 @@ class SectionDAO extends PKPSectionDAO {
 		foreach ($submissionsIterator as $submission) {
 			$sectionIds[] = $submission->getCurrentPublication()->getData('sectionId');
 		}
+		if (empty($sectionIds)) {
+			return [];
+		}
 		$sectionIds = array_unique($sectionIds);
 		$result = $this->retrieve(
 			'SELECT s.*, COALESCE(o.seq, s.seq) AS section_seq
