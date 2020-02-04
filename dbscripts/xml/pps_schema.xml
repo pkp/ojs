@@ -306,6 +306,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/><!-- STATUS_QUEUED -->
 		</field>
+		<field name="version" type="I8" />
 		<descr>Publications</descr>
 		<index name="publications_submission_id">
 			<col>submission_id</col>
