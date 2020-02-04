@@ -45,12 +45,29 @@ class IndexHandler extends PKPIndexHandler {
 		$router = $request->getRouter();
 		$templateMgr = TemplateManager::getManager($request);
 		if ($journal) {
+
+			// Categories
+			$categoryDao = DAORegistry::getDAO('CategoryDAO');
+			$categories = $categoryDao->getByContextId($journal->getId());
+
+			// Latest preprints
+			import('classes.submission.Submission');
+			$submissionService = Services::get('submission');
+			$params = array(
+				'contextId' => $journal->getId(),
+				'count' => '10',
+				'status' => STATUS_PUBLISHED,
+			);
+			$publishedSubmissions = $submissionService->getMany($params);
+
 			// Assign header and content for home page
 			$templateMgr->assign(array(
 				'additionalHomeContent' => $journal->getLocalizedData('additionalHomeContent'),
 				'homepageImage' => $journal->getLocalizedData('homepageImage'),
 				'homepageImageAltText' => $journal->getLocalizedData('homepageImageAltText'),
 				'journalDescription' => $journal->getLocalizedData('description'),
+				'categories' => $categories,
+				'publishedSubmissions' => $publishedSubmissions,
 			));
 
 			$this->_setupAnnouncements($journal, $templateMgr);

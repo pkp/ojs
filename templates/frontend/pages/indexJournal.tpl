@@ -23,7 +23,22 @@
 
 	{if !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
 		<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImageAltText|escape}">
-	{/if}
+	{/if}	
+
+	{* Search and category listing *}
+	{include file="frontend/components/archiveHeader.tpl"}
+
+	{* Latest preprints *}
+	<section class="homepage_latest_preprints">
+		<h2>{translate key="index.latestPreprints"}</h2>
+		<ul class="cmp_article_list articles">
+			{foreach from=$publishedSubmissions item="preprint"}
+				<li>
+					{include file="frontend/objects/preprint_summary.tpl"}
+				</li>
+			{/foreach}
+		</ul>
+	</section>
 
 	{* Journal Description *}
 	{if $activeTheme->getOption('showDescriptionInJournalIndex')}

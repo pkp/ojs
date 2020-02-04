@@ -29,6 +29,9 @@
 		{$pageTitle|escape}
 	</h1>
 
+	{* Search and category listing *}
+	{include file="frontend/components/archiveHeader.tpl"}
+
 	{* No preprints have been published *}
 	{if empty($publishedSubmissions)}
 		<p>{translate key="archive.noSubmissions"}</p>

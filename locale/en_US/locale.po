@@ -151,6 +151,9 @@ msgstr "You must consent to the privacy statement for any server with which you 
 msgid "user.register.form.missingSiteConsent"
 msgstr "You must consent to this site's privacy statement."
 
+msgid "index.latestPreprints"
+msgstr "Latest preprints"
+
 msgid "search.searchFor"
 msgstr "Search preprint's for"
 
