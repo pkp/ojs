@@ -32,6 +32,7 @@ describe('Subscription tests', function() {
 		cy.get('div:contains("The payment settings have been updated.")');
 
 		// Access settings
+		cy.waitJQuery();
 		cy.get('button#access-button').click();
 		cy.get('label:contains("The journal will require subscriptions") input').click();
 		cy.get('div#access button:contains("Save")').click();
