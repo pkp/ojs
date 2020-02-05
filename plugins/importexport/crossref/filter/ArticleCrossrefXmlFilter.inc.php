@@ -169,10 +169,10 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		}
 
 		// license
-		if ($publication->getData('licenseURL')) {
+		if ($publication->getData('licenseUrl')) {
 			$licenseNode = $doc->createElementNS($deployment->getAINamespace(), 'ai:program');
 			$licenseNode->setAttribute('name', 'AccessIndicators');
-			$licenseNode->appendChild($node = $doc->createElementNS($deployment->getAINamespace(), 'ai:license_ref', htmlspecialchars($publication->getData('licenseURL'), ENT_COMPAT, 'UTF-8')));
+			$licenseNode->appendChild($node = $doc->createElementNS($deployment->getAINamespace(), 'ai:license_ref', htmlspecialchars($publication->getData('licenseUrl'), ENT_COMPAT, 'UTF-8')));
 			$journalArticleNode->appendChild($licenseNode);
 		}
 
