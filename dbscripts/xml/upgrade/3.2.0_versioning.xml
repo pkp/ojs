@@ -22,7 +22,7 @@
 		<!-- migrate data to new publications table -->
 		<query>
 			INSERT INTO publications (access_status, date_published, last_modified, locale, section_id, seq, submission_id, status, version)
-				SELECT COALESCE(ps.access_status, 0), COALESCE(ps.date_published, NULL), s.last_modified, s.locale, s.section_id, ps.seq, s.submission_id, s.status, 1
+				SELECT COALESCE(ps.access_status, 0), COALESCE(ps.date_published, NULL), s.last_modified, s.locale, s.section_id, COALESCE(ps.seq, 0), s.submission_id, s.status, 1
 				FROM temp_submissions as s
 				LEFT JOIN temp_published_submissions as ps
 					ON (s.submission_id = ps.submission_id)
@@ -103,18 +103,10 @@
 				WHERE ts.hide_author IS NOT NULL
 		</query>
 
-		<!-- migrate issue_id, seq from published_submissions to publication settings -->
+		<!-- migrate issue_id from published_submissions to publication settings -->
 		<query>
 			INSERT INTO publication_settings(publication_id, setting_name, setting_value)
 				SELECT s.current_publication_id, 'issueId', ps.issue_id
-				FROM temp_published_submissions as ps
-				LEFT JOIN submissions as s
-					ON ps.submission_id = s.submission_id
-				WHERE s.current_publication_id IS NOT NULL
-		</query>
-		<query>
-			INSERT INTO publication_settings(publication_id, setting_name, setting_value)
-				SELECT s.current_publication_id, 'seq', ps.seq
 				FROM temp_published_submissions as ps
 				LEFT JOIN submissions as s
 					ON ps.submission_id = s.submission_id

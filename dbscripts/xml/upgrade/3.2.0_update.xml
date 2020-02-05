@@ -18,5 +18,8 @@
 	<sql><!-- pkp/pkp-lib#4573 Enable OAI interface by default -->
 		<query>INSERT INTO journal_settings (setting_name, setting_value, journal_id) SELECT 'enableOai', '1', j.journal_id FROM journals j WHERE NOT EXISTS (SELECT js.setting_name FROM journal_settings js WHERE js.setting_name = 'enableOai' AND js.journal_id = j.journal_id)</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#5445 Use new setting name for LicenseUrl -->
+		<query>UPDATE journal_settings SET setting_name="licenseUrl" WHERE setting_name="licenseURL"</query>
+	</sql>
 </data>
 
