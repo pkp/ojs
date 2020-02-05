@@ -10,5 +10,5 @@
   * Email templates XML file.
   -->
 <emails>
-	<email key="PAYPAL_INVESTIGATE_PAYMENT" can_edit="1" can_disable="0"/>
+	<email key="PAYPAL_INVESTIGATE_PAYMENT" can_edit="1" can_disable="0" subject="emails.paypalInvestigatePayment.subject" description="emails.paypalInvestigatePayment.description" body="emails.paypalInvestigatePayment.body"/>
 </emails>
