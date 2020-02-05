@@ -10,5 +10,5 @@
   * Email templates XML file.
   -->
 <emails>
-	<email key="MANUAL_PAYMENT_NOTIFICATION" can_edit="1" can_disable="0"/>
+	<email key="MANUAL_PAYMENT_NOTIFICATION" can_edit="1" can_disable="0" subject="emails.manualPaymentNotification.subject" description="emails.manualPaymentNotification.description" body="emails.manualPaymentNotification.body"/>
 </emails>
