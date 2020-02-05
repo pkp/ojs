@@ -144,7 +144,7 @@ class TocGridHandler extends CategoryGridHandler {
 	protected function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
-		$submissionsInSections = Services::get('submission')->getInSections($request->getContext()->getId(), $issue->getId());
+		$submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $request->getContext()->getId());
 		foreach ($submissionsInSections as $sectionId => $articles) {
 			foreach($articles['articles'] as $article) {
 				$this->submissionsBySectionId[$sectionId][$article->getId()] = $article;
