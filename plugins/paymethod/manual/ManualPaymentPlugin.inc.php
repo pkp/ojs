@@ -176,11 +176,4 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	function getInstallEmailTemplatesFile() {
 		return ($this->getPluginPath() . DIRECTORY_SEPARATOR . 'emailTemplates.xml');
 	}
-
-	/**
-	 * @copydoc Plugin::getInstallEmailTemplateDataFile
-	 */
-	function getInstallEmailTemplateDataFile() {
-		return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
-	}
 }
