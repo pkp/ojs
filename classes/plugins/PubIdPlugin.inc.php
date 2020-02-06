@@ -32,22 +32,24 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 				$suffixFieldName = $this->getSuffixFieldName();
 				$suffixGenerationStrategy = $this->getSetting($context->getId(), $suffixFieldName);
 				if ($suffixGenerationStrategy != 'customId') {
-					$submissionEnabled = $this->isObjectTypeEnabled('Submission', $context->getId());
+					$submissionEnabled = $this->isObjectTypeEnabled('Publication', $context->getId());
 					$representationEnabled = $this->isObjectTypeEnabled('Representation', $context->getId());
 					if ($submissionEnabled || $representationEnabled) {
-						$submissionDao = Application::getSubmissionDAO();
+						$publicationDao = DAORegistry::getDAO('PublicationDAO'); /* @var $publicationDao PublicationDAO */
 						$representationDao = Application::getRepresentationDAO();
-						$submissions = Services::getMany([
+						$submissions = Services::get('submission')->getMany([
 							'contextId' => $context->getId(),
 							'status' => STATUS_PUBLISHED,
 							'count' => 5000, // large upper limit
 						]);
 						foreach ($submissions as $submission) {
 							if ($submissionEnabled) {
-								$submissionPubId = $submission->getStoredPubId($this->getPubIdType());
-								if (empty($submissionPubId)) {
-									$submissionPubId = $this->getPubId($submission);
-									$submissionDao->changePubId($submission->getId(), $this->getPubIdType(), $submissionPubId);
+								foreach ($submission->getData('publications') as $publication) {
+									$publicationPubId = $publication->getStoredPubId($this->getPubIdType());
+									if (empty($publicationPubId)) {
+										$publicationPubId = $this->getPubId($publication);
+										$publicationDao->insertPubId($publication->getId(), $this->getPubIdType(), $publicationPubId);
+									}
 								}
 							}
 							if ($representationEnabled) {
