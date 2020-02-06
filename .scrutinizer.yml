@@ -2,9 +2,9 @@ before_commands:
   - 'git submodule update --init --recursive'
 filter:
   excluded_paths:
-    - 'tests/*'
+    - 'tests/'
   dependency_paths:
-    - 'lib/pkp/lib/*'
+    - 'lib/pkp/lib/'
 tools:
   php_sim:
     enabled: true
