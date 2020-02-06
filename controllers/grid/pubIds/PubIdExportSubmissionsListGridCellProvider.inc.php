@@ -34,7 +34,14 @@ class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissi
 
 		switch ($columnId) {
 			case 'pubId':
-				return array('label' => $submission->getStoredPubId($this->_plugin->getPubIdType()));
+				$storedPubIds = [];
+				foreach ($submission->getData('publications') as $publication) {
+					if ($publication->getStoredPubId($this->_plugin->getPubIdType())) {
+						$storedPubIds[] = $publication->getStoredPubId($this->_plugin->getPubIdType());
+					}
+				}
+				$storedPubIds = array_unique($storedPubIds);
+				return array('label' => implode(" ", $storedPubIds));
 		}
 		return parent::getTemplateVarsFromRowColumn($row, $column);
 	}

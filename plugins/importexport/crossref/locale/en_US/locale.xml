@@ -13,7 +13,7 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
-	<message key="plugins.importexport.crossref.description">Export article metadata in CrossRef XML format.</message>
+	<message key="plugins.importexport.crossref.description">Export preprint metadata in CrossRef XML format.</message>
 	<!-- settings -->
 	<message key="plugins.importexport.crossref.requirements">Requirements</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">All plugin requirements are satisfied.</message>

@@ -352,7 +352,7 @@ msgid "plugins.importexport.common.settings.DOIPluginSettings"
 msgstr "DOI Plugin Settings"
 
 msgid "plugins.importexport.common.export.articles"
-msgstr "Articles"
+msgstr "Preprints"
 
 msgid "plugins.importexport.common.missingRequirements"
 msgstr "Plugin requirements not met"

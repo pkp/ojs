@@ -79,16 +79,6 @@ class Submission extends PKPSubmission {
 							// override to the submission's year if published as you go
 							$fieldValue = date('Y', strtotime($publication->getData('datePublished')));
 							break;
-						case 'issue':
-							if ($publication->getData('issueId')) {
-								// override to the issue's year if published as issue-based
-								$issueDao =& DAORegistry::getDAO('IssueDAO');
-								$issue = $issueDao->getBySubmissionId($this->getId());
-								if ($issue && $issue->getDatePublished()) {
-									$fieldValue = date('Y', strtotime($issue->getDatePublished()));
-								}
-							}
-							break;
 						default: assert(false);
 					}
 				}

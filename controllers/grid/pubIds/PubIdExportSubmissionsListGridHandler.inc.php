@@ -22,7 +22,7 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
 	 */
 	protected function loadData($request, $filter) {
 		$context = $request->getContext();
-		list($search, $column, $issueId, $statusId) = $this->getFilterValues($filter);
+		list($search, $column, $statusId) = $this->getFilterValues($filter);
 		$title = $author = null;
 		if ($column == 'title') {
 			$title = $search;
@@ -38,7 +38,6 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
 			$this->_plugin->getPubIdType(),
 			$title,
 			$author,
-			$issueId,
 			$pubIdStatusSettingName,
 			$statusId,
 			$this->getGridRangeInfo($request, $this->getId())

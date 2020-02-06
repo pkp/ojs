@@ -146,7 +146,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				if (!empty($selectedSubmissions)) {
 					$objects = $this->getPublishedSubmissions($selectedSubmissions, $context);
 					$filter = $this->getSubmissionFilter();
-					$objectsFileNamePart = 'articles';
+					$objectsFileNamePart = 'preprints';
 				} elseif (!empty($selectedRepresentations)) {
 					$objects = $this->getArticleGalleys($selectedRepresentations);
 					$filter = $this->getRepresentationFilter();
@@ -401,6 +401,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$additionalFields =& $args[1];
 		assert(is_array($additionalFields));
 		$additionalFields[] = $this->getDepositStatusSettingName();
+		error_log(print_r("getAdditionalFieldNames - PubObjectsExportPlugin"));
+		error_log(print_r($additionalFields, true));
 	}
 
 	/**
@@ -507,7 +509,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			case 'articles':
 				$objects = $this->getPublishedSubmissions($args, $context);
 				$filter = $this->getSubmissionFilter();
-				$objectsFileNamePart = 'articles';
+				$objectsFileNamePart = 'preprints';
 				break;
 			case 'galleys':
 				$objects = $this->getArticleGalleys($args);

@@ -101,17 +101,6 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 		);
 		$this->addColumn(
 			new GridColumn(
-				'issue',
-				'issue.issue',
-				null,
-				null,
-				$cellProvider,
-				array('alignment' => COLUMN_ALIGNMENT_LEFT,
-					'width' => 20)
-			)
-		);
-		$this->addColumn(
-			new GridColumn(
 				'galley',
 				'submission.layout.galleyLabel',
 				null,
@@ -192,21 +181,12 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 	 */
 	function renderFilter($request, $filterData = array()) {
 		$context = $request->getContext();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issuesIterator = $issueDao->getPublishedIssues($context->getId());
-		$issues = $issuesIterator->toArray();
-		foreach ($issues as $issue) {
-			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
-		}
-		$issueOptions[0] = __('plugins.importexport.common.filter.issue');
-		ksort($issueOptions);
 		$statusNames = $this->_plugin->getStatusNames();
 		$filterColumns = $this->getFilterColumns();
 		$allFilterData = array_merge(
 			$filterData,
 			array(
 				'columns' => $filterColumns,
-				'issues' => $issueOptions,
 				'status' => $statusNames,
 				'gridId' => $this->getId(),
 			));
@@ -219,12 +199,10 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 	function getFilterSelectionData($request) {
 		$search = (string) $request->getUserVar('search');
 		$column = (string) $request->getUserVar('column');
-		$issueId = (int) $request->getUserVar('issueId');
 		$statusId = (string) $request->getUserVar('statusId');
 		return array(
 			'search' => $search,
 			'column' => $column,
-			'issueId' => $issueId,
 			'statusId' => $statusId,
 		);
 	}
@@ -235,7 +213,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 	protected function loadData($request, $filter) {
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$context = $request->getContext();
-		list($search, $column, $issueId, $statusId) = $this->getFilterValues($filter);
+		list($search, $column, $statusId) = $this->getFilterValues($filter);
 		$title = $author = null;
 		if ($column == 'title') {
 			$title = $search;
@@ -251,7 +229,6 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 			$this->_plugin->getPubIdType(),
 			$title,
 			$author,
-			$issueId,
 			$pubIdStatusSettingName,
 			$statusId,
 			$this->getGridRangeInfo($request, $this->getId())
@@ -289,17 +266,12 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 		} else {
 			$column = null;
 		}
-		if (isset($filter['issueId']) && $filter['issueId']) {
-			$issueId = $filter['issueId'];
-		} else {
-			$issueId = null;
-		}
 		if (isset($filter['statusId']) && $filter['statusId'] != EXPORT_STATUS_ANY) {
 			$statusId = $filter['statusId'];
 		} else {
 			$statusId = null;
 		}
-		return array($search, $column, $issueId, $statusId);
+		return array($search, $column, $statusId);
 	}
 
 }

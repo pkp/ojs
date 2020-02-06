@@ -138,7 +138,6 @@ class SubmissionHandler extends PKPSubmissionHandler {
 			'addPublication',
 			'versionPublication',
 			'editPublication',
-			'checkPublishRequirements',
 			'publishPublication',
 			'unpublishPublication',
 			'deletePublication',
@@ -151,7 +150,6 @@ class SubmissionHandler extends PKPSubmissionHandler {
 		$requiresPublicationWriteAccess = [
 			'addPublication',
 			'editPublication',
-			'checkPublishRequirements',
 		];
 		if (in_array($routeName, $requiresPublicationWriteAccess)) {
 			import('lib.pkp.classes.security.authorization.PublicationWritePolicy');

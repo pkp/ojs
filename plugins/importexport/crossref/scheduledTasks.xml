@@ -16,8 +16,5 @@
 <!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
 
 <scheduled_tasks>
-	<task class="plugins.importexport.crossref.CrossrefInfoSender">
-		<descr>Deposit Crossref DOIs and update statuses.</descr>
-		<frequency minute="0"/>
-	</task>
+
 </scheduled_tasks>

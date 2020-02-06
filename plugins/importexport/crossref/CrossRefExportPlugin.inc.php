@@ -36,6 +36,22 @@ define('CROSSREF_DEPOSIT_STATUS', 'depositStatus');
 class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 	/**
+	 * @copydoc Plugin::register()
+	 */
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
+		if ($success) {
+
+
+			// FIXME: this is not working, because we are not within a lazy load plugin. It could be that the whole plugin has to be moved to generic class first...
+
+
+			\HookRegistry::register('Publication::publish', [$this, 'depositOnPublish']);
+		}
+		return $success;
+	}
+
+	/**
 	 * @copydoc Plugin::getName()
 	 */
 	function getName() {
@@ -60,7 +76,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @copydoc PubObjectsExportPlugin::getSubmissionFilter()
 	 */
 	function getSubmissionFilter() {
-		return 'article=>crossref-xml';
+		return 'preprint=>crossref-xml';
 	}
 
 	/**
@@ -80,6 +96,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	function getStatusActions($pubObject) {
 		$request = Application::get()->getRequest();
 		$dispatcher = $request->getDispatcher();
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		return array(
 			CROSSREF_STATUS_FAILED =>
 				new LinkAction(
@@ -89,7 +106,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 							$request, ROUTE_COMPONENT, null,
 							'grid.settings.plugins.settingsPluginGridHandler',
 							'manage', null, array('plugin' => 'CrossRefExportPlugin', 'category' => 'importexport', 'verb' => 'statusMessage',
-							'batchId' => $pubObject->getData($this->getDepositBatchIdSettingName()), 'articleId' => $pubObject->getId())
+							'batchId' => $pubObject->getData($this->getDepositBatchIdSettingName()), 'submissionId' => $pubObject->getId())
 						),
 						__('plugins.importexport.crossref.status.failed'),
 						'failureMessage'
@@ -105,9 +122,9 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	function getStatusMessage($request) {
 		// if the failure occured on request and the message was saved
 		// return that message
-		$articleId = $request->getUserVar('articleId');
+		$submissionId = $request->getUserVar('submissionId');
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
-		$article = $submissionDao->getByid($articleId);
+		$article = $submissionDao->getById($submissionId);
 		$failedMsg = $article->getData($this->getFailedMsgSettingName());
 		if (!empty($failedMsg)) {
 			return $failedMsg;
@@ -160,7 +177,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 	/**
 	 * Hook callback that returns the deposit setting's names,
-	 * to consider them by article or issue update.
+	 * to consider them by article update.
 	 *
 	 * @copydoc PubObjectsExportPlugin::getAdditionalFieldNames()
 	 */
@@ -272,6 +289,74 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
+	 * Deposit DOIs on publish
+	 *
+	 * @param $hookName string
+	 * @param $args array [
+	 *		@option Publication The new version of the publication
+	 *		@option Publication The old version of the publication
+	 * ]
+	 */
+	function depositOnPublish($hookName, $args) {
+		error_log("depositOnPublish");
+		$newPublication = $args[0];
+		$objects[] = Services::get('submission')->get($newPublication->getData('submissionId'));
+		$request = Application::get()->getRequest();
+		$context = $request->getContext();
+		$filter = $this->getSubmissionFilter();
+		$objectsFileNamePart = 'preprints';
+		$noValidation = null;
+
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
+		$resultErrors = array();
+		$errorsOccured = false;
+
+		foreach ($objects as $object) {
+			$exportXml = $this->exportXML(array($object), $filter, $context, $noValidation);
+			$objectsFileNamePart = $objectsFileNamePart . '-' . $object->getId();
+			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+			$fileManager->writeFile($exportFileName, $exportXml);
+			$result = $this->depositXML($object, $context, $exportFileName);
+			if (!$result) {
+				$errorsOccured = true;
+			}
+			if (is_array($result)) {
+				$resultErrors[] = $result;
+			}
+			$fileManager->deleteByPath($exportFileName);
+		}
+		// send notifications
+		if (empty($resultErrors)) {
+			if ($errorsOccured) {
+				$this->_sendNotification(
+					$request->getUser(),
+					'plugins.importexport.crossref.register.error.mdsError',
+					NOTIFICATION_TYPE_ERROR
+				);
+			} else {
+				$this->_sendNotification(
+					$request->getUser(),
+					$this->getDepositSuccessNotificationMessageKey(),
+					NOTIFICATION_TYPE_SUCCESS
+				);
+			}
+		} else {
+			foreach($resultErrors as $errors) {
+				foreach ($errors as $error) {
+					assert(is_array($error) && count($error) >= 1);
+					$this->_sendNotification(
+						$request->getUser(),
+						$error[0],
+						NOTIFICATION_TYPE_ERROR,
+						(isset($error[1]) ? $error[1] : null)
+					);
+				}
+			}
+		}
+	}
+
+	/**
 	 * @see PubObjectsExportPlugin::depositXML()
 	 *
 	 * @param $objects Submission
@@ -372,7 +457,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @param $failedMsg string (opitonal)
 	 */
 	function updateDepositStatus($context, $object, $status, $batchId, $failedMsg = null) {
-		assert(is_a($object, 'Submission') or is_a($object, 'Issue'));
+		assert(is_a($object, 'Publication'));
 		// remove the old failure message, if exists
 		$object->setData($this->getFailedMsgSettingName(), null);
 		$object->setData($this->getDepositStatusSettingName(), $status);
@@ -488,6 +573,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 				break;
 		}
 	}
+
 }
 
 
