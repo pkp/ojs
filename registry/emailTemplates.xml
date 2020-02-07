@@ -10,18 +10,17 @@
   * Email templates XML file.
   -->
 <emails>
-	<email key="NOTIFICATION" can_edit="1" can_disable="0"/>
-	<email key="NOTIFICATION_CENTER_DEFAULT" can_edit="1" can_disable="0"/>
-	<email key="PASSWORD_RESET_CONFIRM" can_edit="1" can_disable="0"/>
-	<email key="PASSWORD_RESET" can_edit="1" can_disable="0"/>
-	<email key="USER_REGISTER" can_edit="1" can_disable="0"/>
-	<email key="USER_VALIDATE" can_edit="1" can_disable="0"/>
-	<email key="PUBLISH_NOTIFY" can_edit="1" can_disable="0"/>
-	<email key="SUBMISSION_ACK" can_edit="1" can_disable="1" to_role_id="65536"/>
-	<email key="SUBMISSION_ACK_NOT_USER" can_edit="1" can_disable="1" to_role_id="65536"/>
-	<email key="EDITOR_ASSIGN" can_edit="1" can_disable="1" from_role_id="16" to_role_id="16"/>
-	<email key="EDITOR_DECISION_ACCEPT" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536"/>
-	<email key="EDITOR_DECISION_DECLINE" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536"/>
-	<email key="EMAIL_LINK" can_edit="1" can_disable="0" from_role_id="1048576"/>
-	<email key="STATISTICS_REPORT_NOTIFICATION" can_edit="1" can_disable="0" from_role_id="16" to_role_id="17"/>
+	<email key="NOTIFICATION" can_edit="1" can_disable="0" subject="emails.notification.subject" description="emails.notification.description" body="emails.notification.body"/>
+	<email key="NOTIFICATION_CENTER_DEFAULT" can_edit="1" can_disable="0" subject="emails.notificationCenterDefault.subject" description="emails.notificationCenterDefault.description" body="emails.notificationCenterDefault.body"/>
+	<email key="PASSWORD_RESET_CONFIRM" can_edit="1" can_disable="0" subject="emails.passwordResetConfirm.subject" description="emails.passwordResetConfirm.description" body="emails.passwordResetConfirm.body"/>
+	<email key="PASSWORD_RESET" can_edit="1" can_disable="0" subject="emails.passwordReset.subject" description="emails.passwordReset.description" body="emails.passwordReset.body"/>
+	<email key="USER_REGISTER" can_edit="1" can_disable="0" subject="emails.userRegister.subject" description="emails.userRegister.description" body="emails.userRegister.body"/>
+	<email key="USER_VALIDATE" can_edit="1" can_disable="0" subject="emails.userValidate.subject" description="emails.userValidate.description" body="emails.userValidate.body"/>
+	<email key="PUBLISH_NOTIFY" can_edit="1" can_disable="0" subject="emails.publishNotify.subject" description="emails.publishNotify.description" body="emails.publishNotify.body"/>
+	<email key="SUBMISSION_ACK" can_edit="1" can_disable="1" to_role_id="65536" subject="emails.submissionAck.subject" description="emails.submissionAck.description" body="emails.submissionAck.body"/>
+	<email key="SUBMISSION_ACK_NOT_USER" can_edit="1" can_disable="1" to_role_id="65536" subject="emails.submissionAckNotUser.subject" description="emails.submissionAckNotUser.description" body="emails.submissionAckNotUser.body"/>
+	<email key="EDITOR_ASSIGN" can_edit="1" can_disable="1" from_role_id="16" to_role_id="16" subject="emails.editorAssign.subject" description="emails.editorAssign.description" body="emails.editorAssign.body"/>
+	<email key="EDITOR_DECISION_ACCEPT" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536" subject="emails.editorDecisionAccept.subject" description="emails.editorDecisionAccept.description" body="emails.editorDecisionAccept.body"/>
+	<email key="EDITOR_DECISION_DECLINE" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536" subject="emails.editorDecisionDecline.subject" description="emails.editorDecisionDecline.description" body="emails.editorDecisionDecline.body"/>
+	<email key="STATISTICS_REPORT_NOTIFICATION" can_edit="1" can_disable="0" from_role_id="16" to_role_id="17" subject="emails.statisticsReportNotification.subject" description="emails.statisticsReportNotification.subject" body="emails.statisticsReportNotification.subject"/>
 </emails>
