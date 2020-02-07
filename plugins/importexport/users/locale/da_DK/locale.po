@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:47+00:00\n"
-"PO-Revision-Date: 2020-02-04 12:33+0000\n"
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-users/da/>\n"
@@ -15,10 +15,10 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.importexport.users.displayName"
-msgstr "Bruger XML Plug-in"
+msgstr "Bruger XML Plugin"
 
 msgid "plugins.importexport.users.description"
-msgstr "Importer og eksporter brugere"
+msgstr "Importér og eksportér brugere"
 
 msgid "plugins.importexport.users.cliUsage"
 msgstr ""
@@ -42,13 +42,13 @@ msgstr ""
 "\t{$scriptName} {$pluginName} eksporter myExportFile.xml myJournal 1 2\n"
 
 msgid "plugins.importexport.users.import.importUsers"
-msgstr "Importer brugere"
+msgstr "Importér brugere"
 
 msgid "plugins.importexport.users.import.instructions"
 msgstr "Vælg en XML-datafil, der indeholder brugeroplysninger, som skal importeres til dette tidsskrift. Se 'Hjælp' mht. detaljer om formatet på denne fil.<br /><br />Bemærk, at hvis den importerede fil indeholder brugernavne eller e-mail-adresser, der allerede findes i systemet, importeres brugerdataene til disse brugere ikke, og eventuelt nye roller, der skal oprettes, vil blive tildelt de eksisterende brugere."
 
 msgid "plugins.importexport.users.import.dataFile"
-msgstr "Bruger-datafil"
+msgstr "Brugerdatafil"
 
 msgid "plugins.importexport.users.import.sendNotify"
 msgstr "Send en e-mail til hver importeret bruger, der indeholder brugerens brugernavn og adgangskode."
@@ -75,13 +75,13 @@ msgid "plugins.importexport.users.unknownPress"
 msgstr "En ukendt tidsskriftsti \"{$journalPath}\" blev specificeret."
 
 msgid "plugins.importexport.users.export.exportUsers"
-msgstr "Eksporter brugere"
+msgstr "Eksportér brugere"
 
 msgid "plugins.importexport.users.export.exportByRole"
-msgstr "Eksporter ud fra rolle"
+msgstr "Eksportér ud fra rolle"
 
 msgid "plugins.importexport.users.export.exportAllUsers"
-msgstr "Eksporter alle"
+msgstr "Eksportér alle"
 
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Der opstod fejl under eksporten"
