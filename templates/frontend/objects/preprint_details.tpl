@@ -78,6 +78,8 @@
 		</div>
 	{/if}
 
+	{* Crossref requirements: The landing page must be labeled as not formally published (e.g. “preprint”, “unpublished manuscript”). This label must appear above the scroll. *}
+	<span class="preprint_label">{translate key="common.publication"}</span>
 	<h1 class="page_title">
 		{$publication->getLocalizedTitle()|escape}
 	</h1>
