@@ -1,6 +1,6 @@
-# Open Preprint Server
+# Open Preprint Systems
 
-> Open Preprint Server (OPS) has been developed by the Public Knowledge Project. For general information about OPS and other open research systems, visit the [PKP web site][pkp].
+> Open Preprint Systems (OPS) has been developed by the Public Knowledge Project. For general information about OPS and other open research systems, visit the [PKP web site][pkp].
 
 ## Using Git development source
 

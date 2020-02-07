@@ -139,13 +139,12 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	 * This method replaces PublishedSubmissionDAO::getPublishedSubmissionsInSections()
 	 * which was removed with v3.2.
 	 *
-	 * @param int $issueId
 	 * @param int $contextId
 	 * @return array submissions keyed to a section with some section details
 	 */
-	public function getInSections($issueId, $contextId) {
+	public function getInSections($contextId) {
 
-		$submissions = iterator_to_array($this->getMany(['contextId' => $contextId, 'issueIds' => $issueId]));
+		$submissions = iterator_to_array($this->getMany(['contextId' => $contextId]));
 		usort($submissions, function($a, $b) {
 			return $a->getCurrentPublication()->getData('seq') <= $b->getCurrentPublication()->getData('seq');
 		});

@@ -16,8 +16,6 @@
 
 import('lib.pkp.classes.statistics.PKPStatisticsHelper');
 
-define('STATISTICS_DIMENSION_ISSUE_ID', STATISTICS_DIMENSION_ASSOC_OBJECT_ID);
-
 class StatisticsHelper extends PKPStatisticsHelper {
 
 	/**
@@ -37,16 +35,6 @@ class StatisticsHelper extends PKPStatisticsHelper {
 	}
 
 	/**
-	 * @see PKPStatisticsHelper::getReportColumnsArray()
-	 */
-	protected function getReportColumnsArray() {
-		return array_merge(
-			parent::getReportColumnsArray(),
-			array(STATISTICS_DIMENSION_ISSUE_ID => __('issue.issue'))
-		);
-	}
-
-	/**
 	 * @see PKPStatisticsHelper::getReportObjectTypesArray()
 	 */
 	protected function getReportObjectTypesArray() {
@@ -55,8 +43,6 @@ class StatisticsHelper extends PKPStatisticsHelper {
 		$objectTypes = $objectTypes + array(
 				ASSOC_TYPE_JOURNAL => __('context.context'),
 				ASSOC_TYPE_SECTION => __('section.section'),
-				ASSOC_TYPE_ISSUE => __('issue.issue'),
-				ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
 				ASSOC_TYPE_SUBMISSION => __('common.publication'),
 				ASSOC_TYPE_SUBMISSION_FILE => __('submission.galleyFiles')
 		);

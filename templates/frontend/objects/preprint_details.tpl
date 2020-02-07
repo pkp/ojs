@@ -53,7 +53,6 @@
  * @uses $publication Publication The publication being displayed
  * @uses $firstPublication Publication The first published version of this article
  * @uses $currentPublication Publication The most recently published version of this article
- * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this preprint is assigned to
  * @uses $primaryGalleys array List of preprint galleys that are not supplementary or dependent
  * @uses $supplementaryGalleys array List of preprint galleys that are supplementary

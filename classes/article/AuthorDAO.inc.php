@@ -39,7 +39,6 @@ class AuthorDAO extends PKPAuthorDAO {
 			IDENTITY_SETTING_GIVENNAME,
 			IDENTITY_SETTING_FAMILYNAME, $locale,
 			IDENTITY_SETTING_FAMILYNAME,
-			'issueId',
 		);
 		if (isset($journalId)) $params[] = $journalId;
 
@@ -117,7 +116,6 @@ class AuthorDAO extends PKPAuthorDAO {
 					LEFT JOIN publication_settings ppss ON (ppss.publication_id = pp.publication_id)
 					JOIN submissions ss ON (ss.submission_id = pp.submission_id AND ss.current_publication_id = pp.publication_id AND ss.status = ' . STATUS_PUBLISHED . ')
 					JOIN journals j ON (ss.context_id = j.journal_id)
-					JOIN issues i ON (ppss.setting_name = ? AND ppss.setting_value = i.issue_id AND i.published = 1)
 					LEFT JOIN author_settings ac ON (ac.author_id = aa.author_id AND ac.setting_name = \'country\')
 					' . $sqlJoinAuthorSettings . '
 					WHERE j.enabled = 1 AND

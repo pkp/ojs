@@ -26,7 +26,6 @@ define ('AUTHOR_TOC_HIDE', 1);
 define ('AUTHOR_TOC_SHOW', 2);
 
 // Article access constants -- see Publication::getData('accessStatus')
-define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);
 define('ARTICLE_ACCESS_OPEN', 1);
 
 import('lib.pkp.classes.submission.PKPSubmission');
@@ -284,7 +283,7 @@ class Submission extends PKPSubmission {
 	}
 
 	/**
-	 * Return option selection indicating if author should be hidden in issue ToC.
+	 * Return option selection indicating if author should be hidden.
 	 * @return int AUTHOR_TOC_...
 	 * @deprecated 3.2.0.0
 	 */

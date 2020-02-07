@@ -9,7 +9,7 @@
  *  in a list of galleys.
  *
  * @uses $galley Galley
- * @uses $parent Issue|Article Object which these galleys are attached to
+ * @uses $parent Article Object which these galleys are attached to
  * @uses $publication Publication Optionally the publication (version) to which this galley is attached
  * @uses $isSupplementary bool Is this a supplementary file?
  * @uses $hasAccess bool Can this user access galleys for this context?

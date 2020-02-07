@@ -21,14 +21,8 @@ switch ($op) {
 	// Misc.
 	//
 	case 'index':
-	case 'subscriptions':
 	case 'setLocale':
 	case 'authorizationDenied':
-	case 'purchaseSubscription':
-	case 'payPurchaseSubscription':
-	case 'completePurchaseSubscription':
-	case 'payRenewSubscription':
-	case 'payMembership':
 	case 'toggleHelp':
 	case 'getInterests':
 		define('HANDLER_CLASS', 'UserHandler');

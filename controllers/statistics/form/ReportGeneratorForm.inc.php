@@ -22,7 +22,7 @@ class ReportGeneratorForm extends PKPReportGeneratorForm {
 	 * @see PKPReportGeneratorForm::getFileAssocTypes()
 	 */
 	function getFileAssocTypes() {
-		return array(ASSOC_TYPE_SUBMISSION_FILE, ASSOC_TYPE_ISSUE_GALLEY);
+		return array(ASSOC_TYPE_SUBMISSION_FILE);
 	}
 }
 

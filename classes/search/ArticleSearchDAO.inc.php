@@ -94,7 +94,6 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			$returner[$row['submission_id']] = array(
 				'count' => $row['count'],
 				'journal_id' => $row['journal_id'],
-				'issuePublicationDate' => $this->datetimeFromDB($row['i_pub']),
 				'publicationDate' => $this->datetimeFromDB($row['s_pub'])
 			);
 			$result->MoveNext();

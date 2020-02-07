@@ -40,7 +40,7 @@ class ArticleGalleyForm extends Form {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
-		$this->addCheck(new FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
+		$this->addCheck(new FormValidator($this, 'label', 'required', 'editor.submissions.galleyLabelRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 
@@ -51,7 +51,7 @@ class ArticleGalleyForm extends Form {
 				$this,
 				'galleyLocale',
 				'required',
-				'editor.issues.galleyLocaleRequired'
+				'editor.submissions.galleyLocaleRequired'
 			),
 			function($galleyLocale) use ($journal) {
 				return in_array($galleyLocale, $journal->getSupportedSubmissionLocaleNames());

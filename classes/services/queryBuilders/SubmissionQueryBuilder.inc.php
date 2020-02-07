@@ -19,26 +19,8 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 class SubmissionQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionQueryBuilder {
 
-	/** @var int|array Issue ID(s) */
-	protected $issueIds = null;
-
 	/** @var int|array Section ID(s) */
 	protected $sectionIds = null;
-
-	/**
-	 * Set issue filter
-	 *
-	 * @param int|array $issueIds
-	 *
-	 * @return \APP\Services\QueryBuilders\SubmissionQueryBuilder
-	 */
-	public function filterByIssues($issueIds) {
-		if (!is_null($issueIds) && !is_array($issueIds)) {
-			$issueIds = [$issueIds];
-		}
-		$this->issueIds = $issueIds;
-		return $this;
-	}
 
 	/**
 	 * Set section filter
@@ -62,16 +44,6 @@ class SubmissionQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionQu
 	 * @return object Query object
 	 */
 	public function appGet($q) {
-
-		if (!empty($this->issueIds)) {
-			$issueIds = $this->issueIds;
-			$q->leftJoin('publications as issue_p', 'issue_p.submission_id', '=', 's.submission_id')
-				->leftJoin('publication_settings as issue_ps','issue_p.publication_id','=','issue_ps.publication_id')
-				->where(function($q) use ($issueIds) {
-					$q->where('issue_ps.setting_name', '=', 'issueId');
-					$q->whereIn('issue_ps.setting_value', $issueIds);
-				});
-		}
 
 		if (!empty($this->sectionIds)) {
 			$sectionIds = $this->sectionIds;

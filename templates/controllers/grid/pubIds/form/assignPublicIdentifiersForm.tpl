@@ -16,16 +16,8 @@
 			{rdelim}
 		);
 	{rdelim});
-</script>
-{if $pubObject instanceof Issue}
-	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url component="grid.issues.FutureIssueGridHandler" op="publishIssue" escape=false}">
-		<input type="hidden" name="issueId" value="{$pubObject->getId()|escape}" />
-		<input type="hidden" name="confirmed" value=true />
-		{assign var=hideCancel value=false}
-		{fbvFormSection for="sendIssueNotification" list="true"}
-			{fbvElement type="checkbox" name="sendIssueNotification" id="sendIssueNotification" checked=true label="notification.sendNotificationConfirmation" inline=true}
-		{/fbvFormSection}		
-{elseif $pubObject instanceof Article}
+</script>		
+{if $pubObject instanceof Article}
 	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" op="assignPubIds" escape=false}">
 		<input type="hidden" name="submissionId" value="{$pubObject->getId()|escape}" />
 		<input type="hidden" name="stageId" value="{$formParams.stageId|escape}" />

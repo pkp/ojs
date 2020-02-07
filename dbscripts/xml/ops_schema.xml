@@ -158,25 +158,6 @@
 		</index>
 	</table>
 
-	<table name="custom_section_orders">
-		<field name="issue_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="section_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="seq" type="F">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<descr>Custom sequencing information for journal sections by issue, when available.</descr>
-		<index name="custom_section_orders_pkey">
-			<col>issue_id</col>
-			<col>section_id</col>
-			<UNIQUE/>
-		</index>
-	</table>
-
 	<!--
       *
       * TABLE submission_tombstones

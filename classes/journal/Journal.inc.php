@@ -22,7 +22,6 @@
 
 
 define('PUBLISHING_MODE_OPEN', 0);
-define('PUBLISHING_MODE_SUBSCRIPTION', 1);
 define('PUBLISHING_MODE_NONE', 2);
 
 import('lib.pkp.classes.context.Context');

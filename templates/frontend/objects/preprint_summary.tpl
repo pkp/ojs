@@ -9,7 +9,7 @@
  *
  * @uses $preprint Preprint The preprint
  * @uses $hasAccess bool Can this user access galleys for this context? The
- *       context may be an issue or an preprint
+ *       context is a preprint.
  * @uses $showDatePublished bool Show the date this preprint was published?
  * @uses $hideGalleys bool Hide the preprint galleys for this preprint?
  * @uses $primaryGenreIds array List of file genre ids for primary file types

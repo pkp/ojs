@@ -45,7 +45,6 @@ class OpsServerMustPublishPolicy extends AuthorizationPolicy {
 				ROLE_ID_SITE_ADMIN,
 				ROLE_ID_ASSISTANT,
 				ROLE_ID_SUB_EDITOR,
-				ROLE_ID_SUBSCRIPTION_MANAGER,
 			)
 		))>0) {
 			return AUTHORIZATION_PERMIT;

@@ -18,7 +18,7 @@ msgid "context.select"
 msgstr "Switch to another server:"
 
 msgid "common.software"
-msgstr "Open Preprint Server"
+msgstr "Open Preprint Systems"
 
 msgid "navigation.browseByAuthor"
 msgstr "By Author"
@@ -230,10 +230,10 @@ msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OPS Editorial and Publishing Process"
 
 msgid "about.aboutOJSJournal"
-msgstr "This server uses Open Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+msgstr "This server uses Open Preprint Systems {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
 
 msgid "about.aboutOJSSite"
-msgstr "This site uses Open Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+msgstr "This site uses Open Preprint Systems {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
 
 msgid "help.goToEditPage"
 msgstr "Edit {$sectionTitle}"
@@ -243,7 +243,7 @@ msgstr "OPS Installation"
 
 msgid "installer.installationInstructions"
 msgstr "<h4>OPS Version {$version}</h4>"
-"<p>Thank you for downloading the Public Knowledge Project's <strong>Open Preprint Server</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Open Preprint Server, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
+"<p>Thank you for downloading the Public Knowledge Project's <strong>Open Preprint Systems</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Open Preprint Systems, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
 "<h4>Upgrade</h4>"
 "<p>If you are upgrading an existing installation of OPS, <a href=\"{$upgradeUrl}\">click here</a> to proceed.</p>"
 "<h4>Recommended system requirements</h4>"
@@ -275,7 +275,7 @@ msgstr ""
 msgid "installer.upgradeInstructions"
 msgstr ""
 "<h4>OPS Version {$version}</h4>"
-<p>Thank you for downloading the Public Knowledge Project's <strong>Open Preprint Server</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> and <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Open Preprint Server, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Preprint Systems</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> and <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Open Preprint Systems, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
 "<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OPS installation directory before proceeding.</p>"
 "<p>If you are running in <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>"
 
@@ -303,10 +303,10 @@ msgid "installer.databaseSettingsInstructions"
 msgstr "OPS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database."
 
 msgid "installer.installApplication"
-msgstr "Install Open Preprint Server"
+msgstr "Install Open Preprint Systems"
 
 msgid "installer.upgradeApplication"
-msgstr "Upgrade Open Preprint Server"
+msgstr "Upgrade Open Preprint Systems"
 
 msgid "installer.overwriteConfigFileInstructions"
 msgstr "<h4>IMPORTANT!</h4>

@@ -9,9 +9,7 @@
  * @class PublishForm
  * @ingroup classes_controllers_form
  *
- * @brief A preset form for confirming a publication's issue before publishing.
- *   It may also be used for scheduling a publication in an issue for later
- *   publication.
+ * @brief A preset form for publishing a publication
  */
 namespace APP\components\forms\publication;
 use \PKP\components\forms\FormComponent;
@@ -46,17 +44,6 @@ class PublishForm extends FormComponent {
 		if (empty($requirementErrors)) {
 			$msg = __('publication.publish.confirmation');
 			$submitLabel = __('publication.publish');
-			if ($publication->getData('issueId')) {
-				$issue = \Services::get('issue')->get($publication->getData('issueId'));
-				if ($issue) {
-					if ($issue->getData('published')) {
-						$msg = __('publication.publish.confirmation.backIssue', ['issue' => $issue->getIssueIdentification()]);
-					} else {
-						$msg = __('publication.publish.confirmation.futureIssue', ['issue' => $issue->getIssueIdentification()]);
-						$submitLabel = __('editor.submission.schedulePublication');
-					}
-				}
-			}
 			$this->addPage([
 				'id' => 'default',
 				'submitButton' => [

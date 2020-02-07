@@ -23,8 +23,6 @@ define('ASSOC_TYPE_ARTICLE',		ASSOC_TYPE_SUBMISSION); // DEPRECATED but needed b
 define('ASSOC_TYPE_GALLEY',		ASSOC_TYPE_REPRESENTATION);
 
 define('ASSOC_TYPE_JOURNAL',		0x0000100);
-define('ASSOC_TYPE_ISSUE',		0x0000103);
-define('ASSOC_TYPE_ISSUE_GALLEY',	0x0000105);
 
 define('CONTEXT_JOURNAL', 1);
 
@@ -233,17 +231,6 @@ class Application extends PKPApplication {
 	 */
 	public static function getFileDirectories() {
 		return array('context' => '/journals/', 'submission' => '/articles/');
-	}
-
-	/**
-	 * @copydoc PKPApplication::getRoleNames()
-	 */
-	public static function getRoleNames($contextOnly = false, $roleIds = null) {
-		$roleNames = parent::getRoleNames($contextOnly, $roleIds);
-		if (!$roleIds || in_array(ROLE_ID_SUBSCRIPTION_MANAGER, $roleIds)) {
-			$roleNames[ROLE_ID_SUBSCRIPTION_MANAGER] = 'user.role.subscriptionManager';
-		}
-		return $roleNames;
 	}
 
 }
