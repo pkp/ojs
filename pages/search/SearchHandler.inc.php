@@ -22,8 +22,8 @@ class SearchHandler extends Handler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('classes.security.authorization.PpsServerMustPublishPolicy');
-		if ($request->getContext()) $this->addPolicy(new PpsServerMustPublishPolicy($request));
+		import('classes.security.authorization.OpsServerMustPublishPolicy');
+		if ($request->getContext()) $this->addPolicy(new OpsServerMustPublishPolicy($request));
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}

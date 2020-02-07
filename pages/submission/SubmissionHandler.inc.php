@@ -41,10 +41,9 @@ class SubmissionHandler extends PKPSubmissionHandler {
 			$context = $request->getContext();
 			$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
-			// PPS: Check if author can publish
+			// OPS: Check if author can publish
+			// OPS: Author can publish, see if other criteria exists and create an array of errors
 			import('classes.core.Services');
-
-			// Author can publish, see if other criteria exists and create an array of errors
 			if (Services::get('publication')->canAuthorPublish($submission->getId())){
 
 				$primaryLocale = $context->getPrimaryLocale();
@@ -60,7 +59,7 @@ class SubmissionHandler extends PKPSubmissionHandler {
 					$templateMgr->assign('errors', $msg);
 				}
 			}
-			// Author can not publish
+			// OPS: Author can not publish
 			else {
 				$templateMgr->assign('authorCanNotPublish', true);
 			}

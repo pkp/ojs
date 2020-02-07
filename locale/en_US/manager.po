@@ -24,7 +24,7 @@ msgid "manager.distribution.publishingMode"
 msgstr "Publishing Mode"
 
 msgid "manager.distribution.publishingMode.none"
-msgstr "PPS will not be used to publish the server's contents online."
+msgstr "OPS will not be used to publish the server's contents online."
 
 msgid "manager.distribution.publishingMode.openAccess"
 msgstr "The server will provide open access to its contents."
@@ -130,7 +130,7 @@ msgid "manager.setup.emailBounceAddress.description"
 msgstr "Any undeliverable emails will result in an error message to this address."
 
 msgid "manager.setup.emailBounceAddress.disabled"
-msgstr "In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the PPS documentation."
+msgstr "In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OPS documentation."
 
 msgid "manager.setup.emailSignature"
 msgstr "Signature"

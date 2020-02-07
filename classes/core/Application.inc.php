@@ -31,7 +31,7 @@ define('CONTEXT_JOURNAL', 1);
 define('LANGUAGE_PACK_DESCRIPTOR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/locales.xml');
 define('LANGUAGE_PACK_TAR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/%s.tar.gz');
 
-define('METRIC_TYPE_COUNTER', 'pps::counter');
+define('METRIC_TYPE_COUNTER', 'ops::counter');
 
 class Application extends PKPApplication {
 	/**
@@ -58,7 +58,7 @@ class Application extends PKPApplication {
 	 * @return string
 	 */
 	public static function getName() {
-		return 'pps';
+		return 'ops';
 	}
 
 	/**
@@ -214,7 +214,7 @@ class Application extends PKPApplication {
 	 * @return array
 	 */
 	public static function getApplicationStages() {
-		// Only one stage in PPS
+		// Only one stage in OPS
 		return array(
 				WORKFLOW_STAGE_ID_PRODUCTION
 		);

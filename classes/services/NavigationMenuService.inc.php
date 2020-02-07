@@ -15,7 +15,7 @@
 
 namespace APP\Services;
 
-/** types for all pps default navigationMenuItems */
+/** types for all ops default navigationMenuItems */
 define('NMI_TYPE_ARCHIVES',	'NMI_TYPE_ARCHIVES');
 
 class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
@@ -39,14 +39,14 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 
 		\AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_EDITOR);
 
-		$ppsTypes = array(
+		$opsTypes = array(
 			NMI_TYPE_ARCHIVES => array(
 				'title' => __('navigation.archives'),
 				'description' => __('manager.navigationMenus.archives.description'),
 			),
 		);
 
-		$types = array_merge($types, $ppsTypes);
+		$types = array_merge($types, $opsTypes);
 	}
 
 	/**

@@ -126,4 +126,4 @@ msgstr ""
 "{$editorialContactSignature}"
 
 msgid "emails.submissionAckNotUser.description"
-msgstr "Ce courriel, lorsque activé, est envoyé automatiquement aux autres auteur-e-s qui ne sont pas des utilisateurs-trices de PPS signalés-es comme effectuant la soumission."
+msgstr "Ce courriel, lorsque activé, est envoyé automatiquement aux autres auteur-e-s qui ne sont pas des utilisateurs-trices de OPS signalés-es comme effectuant la soumission."

@@ -37,7 +37,7 @@ class SettingsHandler extends ManagementHandler {
 	}
 
 	/**
-	 * Add the PPS workflow settings page
+	 * Add the OPS workflow settings page
 	 *
 	 * @param $args array
 	 * @param $request Request
@@ -68,7 +68,7 @@ class SettingsHandler extends ManagementHandler {
 	}
 
 	/**
-	 * Add PPS distribution settings
+	 * Add OPS distribution settings
 	 *
 	 * @param $args array
 	 * @param $request Request

@@ -1,6 +1,6 @@
-# Preprint Server
+# Open Preprint Server
 
-> Preprint Server (PPS) has been developed by the Public Knowledge Project. For general information about PPS and other open research systems, visit the [PKP web site][pkp].
+> Open Preprint Server (OPS) has been developed by the Public Knowledge Project. For general information about OPS and other open research systems, visit the [PKP web site][pkp].
 
 ## Using Git development source
 
@@ -34,7 +34,7 @@ This software is released under the the [GNU General Public License][gpl-licence
 See the file [COPYING][gpl-licence] included with this distribution for the terms
 of this license.
 
-Third parties are welcome to modify and redistribute PPS in entirety or parts
+Third parties are welcome to modify and redistribute OPS in entirety or parts
 according to the terms of this license. PKP also welcomes patches for
 improvements or bug fixes to the software.
 

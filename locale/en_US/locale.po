@@ -18,7 +18,7 @@ msgid "context.select"
 msgstr "Switch to another server:"
 
 msgid "common.software"
-msgstr "Preprint Server"
+msgstr "Open Preprint Server"
 
 msgid "navigation.browseByAuthor"
 msgstr "By Author"
@@ -227,25 +227,25 @@ msgid "about.aboutThisPublishingSystem"
 msgstr "About this Publishing System"
 
 msgid "about.aboutThisPublishingSystem.altText"
-msgstr "PPS Editorial and Publishing Process"
+msgstr "OPS Editorial and Publishing Process"
 
 msgid "about.aboutOJSJournal"
-msgstr "This server uses Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+msgstr "This server uses Open Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
 
 msgid "about.aboutOJSSite"
-msgstr "This site uses Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+msgstr "This site uses Open Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
 
 msgid "help.goToEditPage"
 msgstr "Edit {$sectionTitle}"
 
 msgid "installer.appInstallation"
-msgstr "PPS Installation"
+msgstr "OPS Installation"
 
 msgid "installer.installationInstructions"
-msgstr "<h4>PPS Version {$version}</h4>"
-"<p>Thank you for downloading the Public Knowledge Project's <strong>Preprint Server</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Preprint Server, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
+msgstr "<h4>OPS Version {$version}</h4>"
+"<p>Thank you for downloading the Public Knowledge Project's <strong>Open Preprint Server</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Open Preprint Server, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
 "<h4>Upgrade</h4>"
-"<p>If you are upgrading an existing installation of PPS, <a href=\"{$upgradeUrl}\">click here</a> to proceed.</p>"
+"<p>If you are upgrading an existing installation of OPS, <a href=\"{$upgradeUrl}\">click here</a> to proceed.</p>"
 "<h4>Recommended system requirements</h4>"
 "<ul>"
 "\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; you are currently using PHP {$phpVersion}{$wrongPhpText}</li>"
@@ -254,9 +254,9 @@ msgstr "<h4>PPS Version {$version}</h4>"
 "\t<li>Operating system: Any OS that supports the above software, including <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>"
 "</ul>"
 "<p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>"
-"<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base PPS directory, or using the site administration web interface.</p>"
+"<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OPS directory, or using the site administration web interface.</p>"
 "<h4>Supported database systems</h4>"
-"<p>PPS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the PPS team.</p>"
+"<p>OPS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OPS team.</p>"
 
 msgid "installer.preInstallationInstructions"
 msgstr ""
@@ -274,9 +274,9 @@ msgstr ""
 
 msgid "installer.upgradeInstructions"
 msgstr ""
-"<h4>PPS Version {$version}</h4>"
-<p>Thank you for downloading the Public Knowledge Project's <strong>Preprint Server</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> and <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Preprint Server, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
-"<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and PPS installation directory before proceeding.</p>"
+"<h4>OPS Version {$version}</h4>"
+<p>Thank you for downloading the Public Knowledge Project's <strong>Open Preprint Server</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> and <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Open Preprint Server, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
+"<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OPS installation directory before proceeding.</p>"
 "<p>If you are running in <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>"
 
 msgid "installer.localeSettingsInstructions"
@@ -291,7 +291,7 @@ msgid "installer.maxFileUploadSize"
 msgstr "Your server currently allows a maximum file upload size of: <strong>{$maxFileUploadSize}</strong>"
 
 msgid "installer.localeInstructions"
-msgstr "The primary language to use for this system. Please consult the PPS documentation if you are interested in support for languages not listed here."
+msgstr "The primary language to use for this system. Please consult the OPS documentation if you are interested in support for languages not listed here."
 
 msgid "installer.additionalLocalesInstructions"
 msgstr "Select any additional languages to support in this system. These languages will be available for use by servers hosted on the site. Additional languages can also be installed at any time from the site administration interface."
@@ -300,13 +300,13 @@ msgid "installer.filesDirInstructions"
 msgstr "Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files"."
 
 msgid "installer.databaseSettingsInstructions"
-msgstr "PPS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database."
+msgstr "OPS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database."
 
 msgid "installer.installApplication"
-msgstr "Install Preprint Server"
+msgstr "Install Open Preprint Server"
 
 msgid "installer.upgradeApplication"
-msgstr "Upgrade Preprint Server"
+msgstr "Upgrade Open Preprint Server"
 
 msgid "installer.overwriteConfigFileInstructions"
 msgstr "<h4>IMPORTANT!</h4>
@@ -314,7 +314,7 @@ msgstr "<h4>IMPORTANT!</h4>
 
 msgid "installer.installationComplete"
 msgstr ""
-"<p>Installation of PPS has completed successfully.</p>"
+"<p>Installation of OPS has completed successfully.</p>"
 "<p>To begin using the system, <a href=\"{$loginUrl}\">login</a> with the username and password entered on the previous page.</p>"
 "<p>If you wish to be part of the PKP community, you can:</p>"
 "<ol>"
@@ -323,15 +323,15 @@ msgstr ""
 "</ol>"
 
 msgid "installer.upgradeComplete"
-msgstr "<p>Upgrade of PPS to version {$version} has completed successfully.</p>"
+msgstr "<p>Upgrade of OPS to version {$version} has completed successfully.</p>"
 "<p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <em>On</em>.</p>"
 "<p>If you have questions or comments, please visit the <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
 
 msgid "site.upgradeAvailable.admin"
-msgstr "There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please visit <a href=\"http://pkp.sfu.ca/pps_download\" target=\"_new\">this page</a> to download the most recent version and find upgrade instructions."
+msgstr "There is a new version of OPS available! You are currently using OPS {$currentVersion}. The most recent version is OPS {$latestVersion}. Please visit <a href=\"http://pkp.sfu.ca/ops_download\" target=\"_new\">this page</a> to download the most recent version and find upgrade instructions."
 
 msgid "site.upgradeAvailable.manager"
-msgstr "There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please contact your Site Administrator ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) to notify them of this new release. More information can be found <a href=\"http://pkp.sfu.ca/pps_download\" target=\"_new\">here</a>."
+msgstr "There is a new version of OPS available! You are currently using OPS {$currentVersion}. The most recent version is OPS {$latestVersion}. Please contact your Site Administrator ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) to notify them of this new release. More information can be found <a href=\"http://pkp.sfu.ca/ops_download\" target=\"_new\">here</a>."
 
 msgid "log.editor.decision"
 msgstr "An editor decision ({$decision}) for preprint {$submissionId} was recorded by {$editorName}."

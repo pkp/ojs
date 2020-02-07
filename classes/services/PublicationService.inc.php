@@ -161,7 +161,7 @@ class PublicationService extends PKPPublicationService {
 	}
 
 	/**
-	 * Copy PPS-specific objects when a new publication version is created
+	 * Copy OPS-specific objects when a new publication version is created
 	 *
 	 * @param $hookName string
 	 * @param $args array [
@@ -198,6 +198,7 @@ class PublicationService extends PKPPublicationService {
 				$newPublication->setData('pub-id::doi', $doiPubIdPlugin->versionPubId($newPublication));
 			}
 		}
+
 	}
 
 	/**

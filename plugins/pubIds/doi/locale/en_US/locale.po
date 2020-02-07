@@ -15,13 +15,13 @@ msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
 
 msgid "plugins.pubIds.doi.description"
-msgstr "This plugin enables the assignment of the Digital Object Identifiers to preprints and galleys in PPS."
+msgstr "This plugin enables the assignment of the Digital Object Identifiers to preprints and galleys in OPS."
 
 msgid "plugins.pubIds.doi.readerDisplayName"
 msgstr "DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.description"
-msgstr "Please configure the DOI plugin to be able to manage and use DOIs in PPS:"
+msgstr "Please configure the DOI plugin to be able to manage and use DOIs in OPS:"
 
 msgid "plugins.pubIds.doi.manager.settings.doiObjects"
 msgstr "Server Content"
@@ -54,7 +54,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
 msgstr "A DOI suffix can take any form, but must be unique among all publishing objects with the same DOI prefix assigned:"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
-msgstr "Use the pattern entered below to generate DOI suffixes. Use %j for server initials %a for the PPS preprint ID, %g for the PPS galley ID, %f for the PPS file ID and %x for \"Custom Identifier\"."
+msgstr "Use the pattern entered below to generate DOI suffixes. Use %j for server initials %a for the OPS preprint ID, %g for the OPS galley ID, %f for the OPS file ID and %x for \"Custom Identifier\"."
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
 msgstr "For example, %j.%a could create a DOI such as 10.1234/server_initials.12345"

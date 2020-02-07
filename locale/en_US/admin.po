@@ -37,7 +37,7 @@ msgstr ""
 "<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>"
 "\t<ul>"
 "\t\t<li>Your server does not have or allow execution of the GNU \"tar\" utility.</li>"
-"\t\t<li>PPS is unable to modify the locale registry file, typically \"registry/locales.xml\".</li>"
+"\t\t<li>OPS is unable to modify the locale registry file, typically \"registry/locales.xml\".</li>"
 "\t</ul>"
 "<p>Language packs can be manually downloaded from the <a href=\"http://pkp.sfu.ca\">PKP web site</a>.</p>"
 
@@ -48,7 +48,7 @@ msgid "admin.languages.confirmUninstall"
 msgstr "Are you sure you want to uninstall this locale? This may affect any hosted servers currently using the locale."
 
 msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted servers. See the PPS documentation for information on adding support for new languages."
+msgstr "Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted servers. See the OPS documentation for information on adding support for new languages."
 
 msgid "admin.languages.localeInstalled"
 msgstr "The "{$locale}" locale has been installed."
@@ -63,7 +63,7 @@ msgid "admin.languages.download.cannotModifyRegistry"
 msgstr "Cannot add the new locale to the locale registry file, typically "registry/locales.xml"."
 
 msgid "admin.systemConfiguration"
-msgstr "PPS Configuration"
+msgstr "OPS Configuration"
 
 msgid "admin.contexts.create"
 msgstr "Create Server"

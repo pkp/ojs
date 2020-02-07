@@ -37,8 +37,8 @@
 	<schema file="lib/pkp/xml/schema/libraryFiles.xml" />
 	<schema file="lib/pkp/xml/schema/navigationMenus.xml" />
 
-	<!-- PPS schema -->
-	<schema file="dbscripts/xml/pps_schema.xml" />
+	<!-- OPS schema -->
+	<schema file="dbscripts/xml/ops_schema.xml" />
 
 	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
 	<data file="dbscripts/xml/indexes.xml" />

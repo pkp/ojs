@@ -46,7 +46,7 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 			$request,
 			ROUTE_COMPONENT,
 			null,
-			'modals.publish.PPSPublishHandler',
+			'modals.publish.OPSPublishHandler',
 			'publish',
 			null,
 			[

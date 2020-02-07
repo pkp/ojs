@@ -141,7 +141,7 @@ msgstr ""
 "{$editorialContactSignature}"
 
 msgid "emails.submissionAckNotUser.description"
-msgstr "This email, when enabled, is automatically sent to the other authors who are not users within PPS specified during the submission process."
+msgstr "This email, when enabled, is automatically sent to the other authors who are not users within OPS specified during the submission process."
 
 msgid "emails.editorAssign.subject"
 msgstr "Editorial Assignment"

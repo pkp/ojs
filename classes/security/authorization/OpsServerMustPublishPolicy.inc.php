@@ -1,12 +1,12 @@
 <?php
 /**
- * @file classes/security/authorization/PpsServerMustPublishPolicy.inc.php
+ * @file classes/security/authorization/OpsServerMustPublishPolicy.inc.php
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class PpsServerMustPublishPolicy
+ * @class OpsServerMustPublishPolicy
  * @ingroup security_authorization
  *
  * @brief Access policy to limit access to servers that do not publish online.
@@ -15,7 +15,7 @@
 import('lib.pkp.classes.security.authorization.PolicySet');
 import('lib.pkp.classes.security.authorization.AuthorizationPolicy');
 
-class PpsServerMustPublishPolicy extends AuthorizationPolicy {
+class OpsServerMustPublishPolicy extends AuthorizationPolicy {
 
 	var $_context;
 
