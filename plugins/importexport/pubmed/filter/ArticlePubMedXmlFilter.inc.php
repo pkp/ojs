@@ -82,26 +82,27 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 
 			$locale = $publication->getData('locale');
 			if ($locale == 'en_US') {
-				$articleNode->appendChild($doc->createElement('ArticleTitle', $publication->getLocalizedTitle($locale)));
+				$articleNode->appendChild($doc->createElement('ArticleTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale)));
 			} else {
-				$articleNode->appendChild($doc->createElement('VernacularTitle', $publication->getLocalizedTitle($locale)));
+				$articleNode->appendChild($doc->createElement('VernacularTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale)));
 			}
 
 			$startPage = $publication->getStartingPage();
 			$endPage = $publication->getEndingPage();
 			if (isset($startPage) && $startPage !== '') {
 				// We have a page range or e-location id
-				$articleNode->appendChild($doc->createElement('FirstPage', $startPage));
-				$articleNode->appendChild($doc->createElement('LastPage', $endPage));
+				$articleNode->appendChild($doc->createElement('FirstPage'))->appendChild($doc->createTextNode($startPage));
+				$articleNode->appendChild($doc->createElement('LastPage'))->appendChild($doc->createTextNode($endPage));
 			}
 
 			if ($doi = $publication->getStoredPubId('doi')) {
-				$doiNode = $doc->createElement('ELocationID', $doi);
+				$doiNode = $doc->createElement('ELocationID');
+				$doiNode->appendChild($doc->createTextNode($doi));
 				$doiNode->setAttribute('EIdType', 'doi');
 				$articleNode->appendChild($doiNode);
 			}
 
-			$articleNode->appendChild($doc->createElement('Language', AppLocale::get3LetterFrom2LetterIsoLanguage(substr($locale, 0, 2))));
+			$articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(AppLocale::get3LetterFrom2LetterIsoLanguage(substr($locale, 0, 2))));
 
 			$authorListNode = $doc->createElement('AuthorList');
 			foreach ((array) $publication->getData('authors') as $author) {
@@ -111,7 +112,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 
 			if ($publication->getStoredPubId('publisher-id')) {
 				$articleIdListNode = $doc->createElement('ArticleIdList');
-				$articleIdNode = $doc->createElement('ArticleId', $publication->getStoredPubId('publisher-id'));
+				$articleIdNode = $doc->createElement('ArticleId');
+				$articleIdNode->appendChild($doc->createTextNode($publication->getStoredPubId('publisher-id')));
 				$articleIdNode->setAttribute('IdType', 'pii');
 				$articleIdListNode->appendChild($articleIdNode);
 				$articleNode->appendChild($articleIdListNode);
@@ -135,7 +137,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 			// FIXME: Revision dates
 
 			if ($abstract = PKPString::html2text($publication->getLocalizedData('abstract', $locale))) {
-				$articleNode->appendChild($doc->createElement('Abstract', $abstract));
+				$articleNode->appendChild($doc->createElement('Abstract'))->appendChild($doc->createTextNode($abstract));
 			}
 
 			$rootNode->appendChild($articleNode);
@@ -154,10 +156,12 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	function createJournalNode($doc, $journal, $issue, $submission) {
 		$journalNode = $doc->createElement('Journal');
 
-		$publisherNameNode = $doc->createElement('PublisherName', $journal->getData('publisherInstitution'));
+		$publisherNameNode = $doc->createElement('PublisherName');
+		$publisherNameNode->appendChild($doc->createTextNode($journal->getData('publisherInstitution')));
 		$journalNode->appendChild($publisherNameNode);
 
-		$journalTitleNode = $doc->createElement('JournalTitle', $journal->getName($journal->getPrimaryLocale()));
+		$journalTitleNode = $doc->createElement('JournalTitle');
+		$journalTitleNode->appendChild($doc->createTextNode($journal->getName($journal->getPrimaryLocale())));
 		$journalNode->appendChild($journalTitleNode);
 
 		// check various ISSN fields to create the ISSN tag
@@ -167,8 +171,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 		else $issn = '';
 		if ($issn != '') $journalNode->appendChild($doc->createElement('Issn', $issn));
 
-		if ($issue && $issue->getShowVolume()) $journalNode->appendChild($doc->createElement('Volume', $issue->getVolume()));
-		if ($issue && $issue->getShowNumber()) $journalNode->appendChild($doc->createElement('Issue', $issue->getNumber()));
+		if ($issue && $issue->getShowVolume()) $journalNode->appendChild($doc->createElement('Volume'))->appendChild($doc->createTextNode($issue->getVolume()));
+		if ($issue && $issue->getShowNumber()) $journalNode->appendChild($doc->createElement('Issue'))->appendChild($doc->createTextNode($issue->getNumber()));
 
 		$datePublished = null;
 		if ($submission) $datePublished = $submission->getCurrentPublication()->getData('datePublished');
@@ -195,12 +199,12 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 		if (empty($author->getLocalizedFamilyName())) {
 			$authorElement->appendChild($node = $doc->createElement('FirstName'));
 			$node->setAttribute('EmptyYN', 'Y');
-			$authorElement->appendChild($doc->createElement('LastName', ucfirst($author->getLocalizedGivenName())));
+			$authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedGivenName())));
 		} else {
-			$authorElement->appendChild($doc->createElement('FirstName', ucfirst($author->getLocalizedGivenName())));
-			$authorElement->appendChild($doc->createElement('LastName', ucfirst($author->getLocalizedFamilyName())));
+			$authorElement->appendChild($doc->createElement('FirstName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedGivenName())));
+			$authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedFamilyName())));
 		}
-		$authorElement->appendChild($doc->createElement('Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail()));
+		$authorElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($author->getLocalizedAffiliation() . '. ' . $author->getEmail()));
 
 		return $authorElement;
 	}
