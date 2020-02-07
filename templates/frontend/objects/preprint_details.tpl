@@ -135,7 +135,7 @@
 				{if $pubIdPlugin->getPubIdType() != 'doi'}
 					{continue}
 				{/if}
-				{assign var=pubId value=$preprint->getStoredPubId($pubIdPlugin->getPubIdType())}
+				{assign var=pubId value=$publication->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 					<section class="item doi">
