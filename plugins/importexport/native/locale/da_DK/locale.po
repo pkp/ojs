@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:43+00:00\n"
-"PO-Revision-Date: 2020-02-04 12:33+0000\n"
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/da/>\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.importexport.native.displayName"
-msgstr "Native XML-plug-in"
+msgstr "Native XML-plugin"
 
 msgid "plugins.importexport.native.description"
-msgstr "Importer og eksporter artikler og numre i OJS' eget XML-format."
+msgstr "Importér og eksportér artikler og numre i OJS' eget XML-format."
 
 msgid "plugins.importexport.native.import"
-msgstr "Importer"
+msgstr "Importér"
 
 msgid "plugins.importexport.native.import.instructions"
 msgstr "Upload XML-fil til import"
@@ -30,10 +30,10 @@ msgid "plugins.importexport.native.exportSubmissionsSelect"
 msgstr "Udvælg artikler til eksport"
 
 msgid "plugins.importexport.native.exportSubmissions"
-msgstr "Eksporter artikler"
+msgstr "Eksportér artikler"
 
 msgid "plugins.importexport.native.exportIssues"
-msgstr "Eksporter numre"
+msgstr "Eksportér numre"
 
 msgid "plugins.importexport.native.results"
 msgstr "Resultater"
@@ -102,7 +102,7 @@ msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
 msgstr "Eksisterende nummer med id {$issueId} matcher den givne nummer-identifikation \"{$issueIdentification}\". Dette nummer vil ikke blive ændret, men artikler vil blive tilføjet."
 
 msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
-msgstr "Artiklen \"{$articleTitle}\" mangler nummer-identifikation.."
+msgstr "Artiklen \"{$articleTitle}\" mangler nummer-identifikation."
 
 msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr "Artiklen \"{$articleTitle}\" er indeholdt i et nummer, men har ingen publiceringsdato."
