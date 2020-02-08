@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
-"PO-Revision-Date: 2020-01-21 18:21+0000\n"
+"PO-Revision-Date: 2020-02-08 17:55+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
 "da/>\n"
@@ -18,13 +18,17 @@ msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
 
 msgid "plugins.pubIds.doi.description"
-msgstr "Denne plug-in gør det muligt at tildele DOI’er (Digital Object Identifiers) til numre, artikler, satsskibe og supplerende filer i OJS."
+msgstr ""
+"Denne plugin gør det muligt at tildele DOI’er (Digital Object Identifiers) "
+"til numre, artikler, satsskibe og supplerende filer i OJS."
 
 msgid "plugins.pubIds.doi.readerDisplayName"
 msgstr "DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.description"
-msgstr "Konfigurér dette DOI plug-in, så det bliver muligt at administrere og bruge DOI’er i OJS:"
+msgstr ""
+"Konfigurér dette DOI plugin, så det bliver muligt at administrere og bruge "
+"DOI’er i OJS:"
 
 msgid "plugins.pubIds.doi.manager.settings.doiObjects"
 msgstr "Tidsskriftsindhold"
@@ -42,7 +46,7 @@ msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
 msgstr "Artikler"
 
 msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
-msgstr "Satsskibe"
+msgstr "Publiceringsversioner"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "DOI-præfiks"
@@ -72,13 +76,15 @@ msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
 msgstr "til artikler"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
-msgstr "til satsskibe"
+msgstr "til publiceringsversioner"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
 msgstr "Anvend standardformaterne."
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i til numre<br />%j.v%vi%i.%a til artikler<br />%j.v%vi%i.%a.g%g ftil satsskibe."
+msgstr ""
+"%j.v%vi%i til numre<br />%j.v%vi%i.%a til artikler<br />%j.v%vi%i.%a.g%g til "
+"publiceringsversioner."
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
 msgstr "Indskriv et særskilt DOI-suffiks for hvert publiceret element. Der findes et ekstra DOI-felt på hvert elements metadataside."
@@ -90,7 +96,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
 msgstr "Indsæt DOI-suffiks-formatet til artikler."
 
 msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
-msgstr "Indsæt DOI-suffiks-formatet til satsskibe."
+msgstr "Indsæt DOI-suffiks-formatet til publiceringsversioner."
 
 msgid "plugins.pubIds.doi.manager.settings.doiReassign"
 msgstr "Tildel nye DOI'er"
@@ -111,7 +117,7 @@ msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
 msgstr "artikel"
 
 msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
-msgstr "satsskib (publiceringsklar fil)"
+msgstr "publiceringsversion"
 
 msgid "plugins.pubIds.doi.editor.customSuffixMissing"
 msgstr "DOI kan ikke tilføjes, da det brugerdefinerede suffiks mangler."
@@ -126,10 +132,12 @@ msgid "plugins.pubIds.doi.editor.assigned"
 msgstr "DOI er tilføjet {$pubObjectType}."
 
 msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
-msgstr "Det angivne DOI-suffiks er allere i brug i forbindelse med et andet publiceret element. Vælg et unikt DOI-suffiks for hvert element."
+msgstr ""
+"Det angivne DOI-suffiks er allerede i brug i forbindelse med et andet "
+"publiceret element. Vælg et unikt DOI-suffiks for hvert element."
 
 msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
-msgstr "Fjern DOI"
+msgstr "Fjern"
 
 msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
 msgstr "Er du sikker på, at du vil slette det eksisterende DOI?"
@@ -141,7 +149,9 @@ msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
 msgstr "Er du sikker på, at du vil slette det eksisterende nummer-objekt-DOI?"
 
 msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
-msgstr "Brug den følgende mulighed til at fjerne DOI'er fra alle objekter (artikler og satsskibe) i det planlagte indhold for dette nummer."
+msgstr ""
+"Brug den følgende mulighed til at fjerne DOI'er fra alle objekter (artikler "
+"og publiceringsversioner) i det planlagte indhold for dette nummer."
 
 msgid "plugins.pubIds.doi.editor.assignDoi"
 msgstr "Tilføj DOI {$pubId} til {$pubObjectType}"
@@ -153,7 +163,7 @@ msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
 msgstr "DOI {$pubId} kan ikke tilføjes, da det indeholder et ikke-kendt format."
 
 msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
-msgstr "DOI {$pubId} er belvet tilføjet."
+msgstr "DOI {$pubId} er blevet tilføjet."
 
 msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
 msgstr "Tildel DOI'er"
@@ -191,7 +201,7 @@ msgstr ""
 "nummer."
 
 msgid "plugins.pubIds.doi.editor.doi.assignDoi"
-msgstr "Udpeg"
+msgstr "Tildel"
 
 msgid "plugins.pubIds.doi.editor.doi.description"
 msgstr "DOI skal begynde med {$prefix}."

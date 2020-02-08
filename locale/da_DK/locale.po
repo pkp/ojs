@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2020-02-03 14:15+0000\n"
+"PO-Revision-Date: 2020-02-08 17:55+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/locale/da/>\n"
 "Language: da_DK\n"
@@ -95,7 +95,7 @@ msgid "section.section"
 msgstr "Sektion"
 
 msgid "section.sections"
-msgstr "Tidsskriftssektioner"
+msgstr "Sektioner"
 
 msgid "section.title"
 msgstr "Sektionstitel"
@@ -119,7 +119,7 @@ msgid "common.publications"
 msgstr "Artikler"
 
 msgid "article.submissionId"
-msgstr "Manuskript-id"
+msgstr "Indsendelses-id"
 
 msgid "article.title"
 msgstr "Titel"
@@ -149,7 +149,7 @@ msgid "article.suppFilesAbbrev"
 msgstr "Supp. filer"
 
 msgid "article.discipline"
-msgstr "Akademisk fagområde og underfagområder"
+msgstr "Akademisk fagområde og underdiscipliner"
 
 msgid "article.subject"
 msgstr "Nøgleord"
@@ -170,10 +170,10 @@ msgid "article.commentsToEditor"
 msgstr "Kommentarer fra forfatter"
 
 msgid "article.submission"
-msgstr "Manuskript"
+msgstr "Indsendelse"
 
 msgid "article.submissions"
-msgstr "Manuskripter"
+msgstr "Indsendelser"
 
 msgid "article.abstract"
 msgstr "Resumé"
@@ -182,7 +182,7 @@ msgid "article.details"
 msgstr "Detaljer"
 
 msgid "submission.submissionEditing"
-msgstr "Redigering af manuskript"
+msgstr "Redigering af indsendelse"
 
 msgid "submission.changeSection"
 msgstr "Skift til"
@@ -209,7 +209,7 @@ msgid "submission.editorAuthorRecord"
 msgstr "E-mail-post for redaktør/forfatter"
 
 msgid "submission.reviewersVersion"
-msgstr "Bedømmers anmærkede filversion"
+msgstr "Bedømmers annoterede filversion"
 
 msgid "submission.postReviewVersion"
 msgstr "Filversion efter bedømmelse"
@@ -338,7 +338,7 @@ msgid "issue.title"
 msgstr "Titel"
 
 msgid "issue.volume"
-msgstr "Årgang"
+msgstr "Årgang/bind"
 
 msgid "issue.number"
 msgstr "Nummer"
@@ -365,19 +365,19 @@ msgid "submission.event.general.defaultEvent"
 msgstr "Manuskripthændelse"
 
 msgid "submission.event.general.issueScheduled"
-msgstr "Manuskriptet er sendt til køen for nummerplanlægning"
+msgstr "Indsendelsen er sendt til køen for nummerplanlægning"
 
 msgid "submission.event.general.issueAssigned"
-msgstr "Manuskriptet er tildelt nummer"
+msgstr "Indsendelsen er blevet tilknyttet nummer"
 
 msgid "submission.event.general.articlePublished"
 msgstr "Artiklen er publiceret"
 
 msgid "submission.event.author.authorRevision"
-msgstr "Forfatterrevideringen er fremsendt"
+msgstr "Forfatterrevision er fremsendt"
 
 msgid "submission.event.general.authorRevision"
-msgstr "Forfatters revideringsfil er opdateret"
+msgstr "Forfatters revisionsfil er opdateret"
 
 msgid "submission.event.editor.editorAssigned"
 msgstr "Redaktøren er tildelt manuskriptet"
@@ -392,10 +392,10 @@ msgid "submission.event.editor.editorFile"
 msgstr "Redaktørfilen er opdateret"
 
 msgid "submission.event.editor.submissionArchived"
-msgstr "Manuskriptet er sendt til arkivet"
+msgstr "Indsendelsen er sendt til arkivet"
 
 msgid "submission.event.editor.submissionRestored"
-msgstr "Manuskriptet er gendannet fra arkivet"
+msgstr "Indsendelsen er gendannet fra arkivet"
 
 msgid "submission.event.copyedit.copyeditorAssigned"
 msgstr "Manuskriptredaktøren er tildelt manuskriptet"
@@ -407,7 +407,7 @@ msgid "submission.event.copyedit.copyeditInitiated"
 msgstr "Manuskriptredigeringsopgaven er startet"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Manuskriptredaktørens revideringsfil er opdateret"
+msgstr "Manuskriptredaktørens revisionsfil er opdateret"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
 msgstr "Første manuskriptredigering er fuldført"
@@ -428,7 +428,7 @@ msgid "submission.event.proofread.proofreadInitiated"
 msgstr "Korrekturlæsningsopgaven er startet"
 
 msgid "submission.event.proofread.proofreadRevision"
-msgstr "Korrekturlæserens revideringsfil er opdateret"
+msgstr "Korrekturlæserens revisionsfil er opdateret"
 
 msgid "submission.event.proofread.proofreadCompleted"
 msgstr "Korrekturlæsningsopgaven er fuldført"
@@ -485,10 +485,14 @@ msgid "subscriptionManager.subscriptionManagement"
 msgstr "Administration af abonnementer"
 
 msgid "plugins.categories.generic.description"
-msgstr "Generiske plug-ins bruges til at udvide Open Journal Systems på en række forskellige måder, der ikke understøttes af de andre plug-in-kategorier."
+msgstr ""
+"Generiske plugins bruges til at udvide Open Journal Systems på en række "
+"forskellige måder, der ikke understøttes af de andre plugin-kategorier."
 
 msgid "plugins.categories.auth.description"
-msgstr "Plug-ins til autorisationer gør det muligt for Open Journal Systems at delegere brugergodkendelsesopgaver til andre systemer, f.eks. LDAP-servere."
+msgstr ""
+"Plugins til autorisationer gør det muligt for Open Journal Systems at "
+"delegere brugergodkendelsesopgaver til andre systemer, f.eks. LDAP-servere."
 
 msgid "manager.setup.copyrightNotice.sample"
 msgstr ""
@@ -643,7 +647,7 @@ msgid "layoutEditor.galley.uploadSuppFile"
 msgstr "Overfør supplerende fil"
 
 msgid "submission.layout.imageInvalid"
-msgstr "Ugyldigt billedformat. De accepterede formater er .jpg og .png."
+msgstr "Ugyldigt billedformat. De accepterede formater er .gif, .jpg og .png."
 
 msgid "reviewer.pendingReviews"
 msgstr "Artikler, der afventer bedømmelse"
@@ -701,7 +705,7 @@ msgstr "Version overført af bedømmer"
 
 msgid "reviewer.article.reviewersAnnotatedVersionDescription"
 msgstr ""
-"(Hvis du vil anmærke filen til redaktøren, skal du gemme den på harddisken "
+"(Hvis du vil annotere filen til redaktøren, skal du gemme den på harddisken "
 "og bruge Gennemse/Overfør.)"
 
 msgid "reviewer.article.schedule.request"
@@ -756,13 +760,17 @@ msgid "reviewer.article.notifyEditorB"
 msgstr "om du vil påtage dig bedømmelsen."
 
 msgid "reviewer.article.consultGuidelines"
-msgstr "Se Retningslinjer for bedømmere nedenfor, hvis du vil foretage bedømmelsen."
+msgstr ""
+"Se 'Retningslinjer for bedømmere' nedenfor, hvis du vil foretage bedømmelsen."
 
 msgid "reviewer.article.downloadSubmission"
 msgstr "Klik på filnavnene for at hente og bedømme (på skærmen eller på udskrift) de filer, der er tilknyttet det pågældende manuskript."
 
 msgid "reviewer.article.enterCompetingInterests"
-msgstr "Meddel, om du har konkurrerende interesser med hensyn til denne forskning (se <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+msgstr ""
+"Meddél, om du har konkurrerende interesser med hensyn til denne forskning ("
+"se <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
 msgid "reviewer.competingInterests"
 msgstr "Konkurrerende interesser"
@@ -950,10 +958,12 @@ msgid "user.register.authorDescription"
 msgstr "I stand til at fremsende elementer til tidsskriftet."
 
 msgid "user.register.reviewerDescriptionNoInterests"
-msgstr "Villig til at foretage peer review af manuskripter til tidsskriftet."
+msgstr ""
+"Villig til at foretage fagfællebedømmelse af manuskripter til tidsskriftet."
 
 msgid "user.register.reviewerDescription"
-msgstr "Villig til at foretage peer review af manuskripter til tidsskriftet. Identificer bedømmelsesinteresser (selvstændige områder og forskningsmetoder)."
+msgstr ""
+"Villig til at foretage fagfællebedømmelse af manuskripter til tidsskriftet."
 
 msgid "search.browseAuthorIndex"
 msgstr "Gennemse forfatterindeks"
@@ -1019,7 +1029,7 @@ msgid "current.current"
 msgstr "Nyeste"
 
 msgid "current.noCurrentIssue"
-msgstr "Inget nyeste nummer"
+msgstr "Intet aktuelt nummer"
 
 msgid "current.noCurrentIssueDesc"
 msgstr "Dette tidsskrift har ikke publiceret nogle numre."
@@ -1052,10 +1062,10 @@ msgid "about.sectionPolicies"
 msgstr "Sektionspolitikker"
 
 msgid "about.submissions"
-msgstr "Manuskripter"
+msgstr "Indsendelser"
 
 msgid "about.onlineSubmissions.login"
-msgstr "Gå til logon"
+msgstr "Login"
 
 msgid "about.onlineSubmissions.registrationRequired"
 msgstr "Du skal {$login} eller {$register} for at kunne foretage en indsendelse."
@@ -1064,10 +1074,13 @@ msgid "about.authorGuidelines"
 msgstr "Retningslinjer for forfattere"
 
 msgid "about.submissionPreparationChecklist"
-msgstr "Tjekliste til forberedelse af manuskript"
+msgstr "Tjekliste til forberedelse af indsendelse"
 
 msgid "about.submissionPreparationChecklist.description"
-msgstr "Som en del af manuskriptprocessen skal forfattere afkrydse, at deres manuskript overholder alle følgende elementer, og manuskripter kan returneres til forfattere, der ikke overholder disse retningslinjer."
+msgstr ""
+"Som en del af indsendelsesprocessen skal forfattere afkrydse, at deres "
+"indsendelse overholder alle følgende elementer, og manuskripter kan "
+"returneres til forfattere, der ikke overholder disse retningslinjer."
 
 msgid "about.copyrightNotice"
 msgstr "Oplysninger om ophavsret"
@@ -1082,7 +1095,7 @@ msgid "about.authorFeesMessage"
 msgstr "Dette tidsskrift opkræver følgende forfattergebyrer."
 
 msgid "about.peerReviewProcess"
-msgstr "Peer review-proces"
+msgstr "Fagfællebedømmelses-proces"
 
 msgid "about.publicationFrequency"
 msgstr "Publiceringshyppighed"
@@ -1127,7 +1140,7 @@ msgid "help.ojsHelp"
 msgstr "Open Journal Systems Hjælp"
 
 msgid "help.ojsHelpAbbrev"
-msgstr "OJS Hjælp"
+msgstr "OJS hjælp"
 
 msgid "donations.thankYou"
 msgstr "Tak"
@@ -1454,7 +1467,7 @@ msgid "log.imported"
 msgstr "{$userName} har importeret artiklen {$submissionId}."
 
 msgid "metadata.pkp.peerReviewed"
-msgstr "Artikel undergået peer review"
+msgstr "Fagfællebedømt artikel"
 
 msgid "debug.notes.currencyListLoad"
 msgstr "Valutalisten \"{$filename}\" er indlæst fra XML"
@@ -1484,10 +1497,10 @@ msgid "article.comments.sectionDefault"
 msgstr "Standard"
 
 msgid "article.comments.disable"
-msgstr "Deaktiver"
+msgstr "Deaktivér"
 
 msgid "article.comments.enable"
-msgstr "Aktiver"
+msgstr "Aktivér"
 
 msgid "article.fontSize"
 msgstr "Skriftstørrelse"
@@ -1514,10 +1527,11 @@ msgid "user.noRoles.submitArticleRegClosed"
 msgstr "Indsend en artikel: Forfatter-registrering er i øjeblikket deaktiveret."
 
 msgid "user.noRoles.regReviewer"
-msgstr "Registrer som reviewer"
+msgstr "Registrér som bedømmer"
 
 msgid "user.noRoles.regReviewerClosed"
-msgstr "Registrer som reviewer: Reviewer-registrering er i øjeblikket deaktiveret."
+msgstr ""
+"Registrér som bedømmer: Bedømmer-registrering er i øjeblikket deaktiveret."
 
 msgid "issue.coverPage.altText"
 msgstr "Forside"
@@ -1538,7 +1552,7 @@ msgid "payment.type.purchaseArticle"
 msgstr "Gebyr for køb af artikel"
 
 msgid "journal.issn"
-msgstr "ISSN-nummer"
+msgstr "ISSN"
 
 msgid "user.manageMySubscriptions"
 msgstr "Administrer mine abonnementer"
@@ -1646,7 +1660,9 @@ msgid "user.subscriptions.status.awaitingManualPaymentDescription"
 msgstr "Manuel betaling er blevet iværksat, men endnu ikke modtaget"
 
 msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
-msgstr "Online betaling er blevet iværksæt, men er blevet annulleret eller er ikke gennemført"
+msgstr ""
+"Online betaling er blevet iværksat, men er blevet annulleret eller er ikke "
+"gennemført"
 
 msgid "user.subscriptions.individualSubscriptions"
 msgstr "Individuelt abonnement"
@@ -1724,7 +1740,11 @@ msgid "user.subscriptions.form.ipRangeItem"
 msgstr "&#8226;"
 
 msgid "user.subscriptions.form.ipRangeInstructions"
-msgstr "Hvis der indtastes IP-områder her, er det valgfrit at indtaste domæne.<br />Gyldige værdier er en IP-addresse (fx 142.58.103.1), et IP-område (fx 142.58.103.1-142.58.103.4), et IP-område med wildcard '*' (fx 142.58.*.*) og et IP-område med CIDR (fx 142.58.100.0/24)."
+msgstr ""
+"Hvis der indtastes IP-områder her, er det valgfrit at indtaste domæne.<br />"
+"Gyldige værdier er en IP-addresse (fx 142.58.103.1), et IP-område (fx "
+"142.58.103.1 - 142.58.103.4), et IP-område med wildcard '*' (fx 142.58.*.*) "
+"og et IP-område med CIDR (fx 142.58.100.0/24)."
 
 msgid "user.subscriptions.form.ipRangeValid"
 msgstr "Indtast et gyldigt IP-område."
@@ -1766,7 +1786,7 @@ msgid "installer.installApplication"
 msgstr "Installer Open Journal Systems"
 
 msgid "installer.upgradeApplication"
-msgstr "Opgrader Open Journal Systems"
+msgstr "Opgradér Open Journal Systems"
 
 msgid "notification.type.editing"
 msgstr "Redigeringshændelser"
@@ -1911,7 +1931,7 @@ msgid "notification.savedIssueMetadata"
 msgstr "Nummer-metadata gemt."
 
 msgid "user.noRoles.selectUsersWithoutRoles"
-msgstr "Inkludér brugere uden nogen roller vedrørende dette tidsskrift."
+msgstr "Inkludér brugere uden nogen roller i dette tidsskrift."
 
 msgid "user.role.subEditors"
 msgstr "Sektionsredaktører"
@@ -1989,10 +2009,12 @@ msgid "search.results.similarDocuments"
 msgstr "tilsvarende dokumenter"
 
 msgid "plugins.categories.viewableFiles"
-msgstr "'Article Galley Plugins'"
+msgstr "Article Galley Plugins"
 
 msgid "plugins.categories.viewableFiles.description"
-msgstr "'Article Galley Plugins' understøtter fremvisningen af forskellige dokumenttyper som publiceringsversion af artiklen."
+msgstr ""
+"Article Galley Plugins understøtter fremvisningen af forskellige "
+"dokumenttyper som publiceringsversion af artiklen."
 
 msgid "reviewer.article.selectRecommendation.byEditor"
 msgstr "Indsæt eller tilret bedømmer-indstillingen."
@@ -2037,7 +2059,7 @@ msgid "user.profile.form.showOtherContexts"
 msgstr "Registrér hos andre tidsskrifter"
 
 msgid "user.profile.form.hideOtherContexts"
-msgstr "Skjul ander tidsskrifter"
+msgstr "Skjul andre tidsskrifter"
 
 msgid "notification.type.approveSubmission"
 msgstr "Denne indsendelse afventer godkendelse inden den vises i nummeret."
