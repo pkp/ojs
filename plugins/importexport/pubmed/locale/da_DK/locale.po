@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:45+00:00\n"
-"PO-Revision-Date: 2020-02-04 12:33+0000\n"
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/da/>\n"
@@ -15,22 +15,23 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.importexport.pubmed.displayName"
-msgstr "PubMed XML Eksport-plug-in"
+msgstr "PubMed XML Eksport-plugin"
 
 msgid "plugins.importexport.pubmed.description"
-msgstr "Eksporter artikel-metadata i PubMed XML format til indekssering i MEDLINE."
+msgstr ""
+"Eksportér artikel-metadata i PubMed XML format til indekssering i MEDLINE."
 
 msgid "plugins.importexport.pubmed.export"
-msgstr "Eksporter data"
+msgstr "Eksportér data"
 
 msgid "plugins.importexport.pubmed.export.issues"
-msgstr "Eksporter numre"
+msgstr "Eksportér numre"
 
 msgid "plugins.importexport.pubmed.export.selectIssue"
 msgstr "Vælg et nummer til eksport."
 
 msgid "plugins.importexport.pubmed.export.articles"
-msgstr "Eksporter artikler"
+msgstr "Eksportér artikler"
 
 msgid "plugins.importexport.pubmed.export.selectArticle"
 msgstr "Vælg artikler til eksport."

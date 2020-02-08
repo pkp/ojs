@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
-"PO-Revision-Date: 2020-01-21 18:21+0000\n"
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/da/"
 ">\n"
@@ -18,19 +18,21 @@ msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
 
 msgid "plugins.auth.ldap.description"
-msgstr "Dette plugin tillader godkendelse og synkronisering af brugerkonti mod en ekstern LDAP datakilde."
+msgstr ""
+"Denne plugin tillader godkendelse og synkronisering af brugerkonti mod en "
+"ekstern LDAP datakilde."
 
 msgid "plugins.auth.ldap.settings"
-msgstr "LDAP Indstillinger"
+msgstr "LDAP-indstillinger"
 
 msgid "plugins.auth.ldap.settings.hostname"
-msgstr "Server hostname"
+msgstr "Server-hostname"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
 msgstr "F.eks. \"ldap.example.com\", eller \"ldaps://ldap.example.com\" (for at bruge SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
-msgstr "Server port"
+msgstr "Serverport"
 
 msgid "plugins.auth.ldap.settings.port.description"
 msgstr "Valgfri. Defaults til 389 (LDAP) eller 636 (LDAP over SSL)"
@@ -54,7 +56,7 @@ msgid "plugins.auth.ldap.settings.managerpwd.description"
 msgstr "Manager DN og password kræves kun hvis brugerprofilen/password-synkronisering eller mulighed for brugeroprettelse er aktiveret. Hvis LDAP udelukkende bruges til godkendelse, kan disse muligheder udelades."
 
 msgid "plugins.auth.ldap.settings.uid"
-msgstr "Kontonavn attribut"
+msgstr "Kontonavnsattribut"
 
 msgid "plugins.auth.ldap.settings.uid.description"
 msgstr "Det attribut, hvis værdi fungerer som unik identifikation af et brugerobjekt, såsom uid eller cn eller sAMAccountName."

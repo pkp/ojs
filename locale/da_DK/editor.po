@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2020-01-28 09:51+0000\n"
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/editor/da/>\n"
 "Language: da_DK\n"
@@ -17,13 +17,13 @@ msgid "editor.home"
 msgstr "Startside for redaktør"
 
 msgid "editor.submissionsAndPublishing"
-msgstr "Manuskripter og publicering"
+msgstr "Indsendelser og publicering"
 
 msgid "editor.submissionQueue"
-msgstr "Manuskriptkø"
+msgstr "Indsendelseskø"
 
 msgid "editor.submissionArchive"
-msgstr "Manuskriptarkiv"
+msgstr "Indsendelsesarkiv"
 
 msgid "editor.publishing"
 msgstr "Publicering"
@@ -41,19 +41,23 @@ msgid "editor.me"
 msgstr "Mig"
 
 msgid "editor.submissionArchive.noSubmissions"
-msgstr "Der findes ingen manuskripter i arkivet."
+msgstr "Der findes ingen indsendelser i arkivet."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "Vil du gemme ændringerne til de arkiverede manuskripter? Manuskripter, der er markeret til sletning, slettes permanent fra systemet."
+msgstr ""
+"Vil du gemme ændringerne til de arkiverede indsendelser? Indsendelser, der "
+"er markeret til sletning, slettes permanent fra systemet."
 
 msgid "editor.submissionArchive.confirmDelete"
-msgstr "Er du sikker på, at du vil slette dette manuskript permanent?"
+msgstr "Er du sikker på, at du vil slette denne indsendelse permanent?"
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Er du sikker på, at du vil registrere denne beslutning?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Manuskriptet arkiveres, når du har sendt e-mailen 'Underret forfatter', eller når du har trykket på knappen 'Spring e-mail over'."
+msgstr ""
+"Indsendelsen arkiveres, når du har sendt e-mailen 'Underret forfatter', "
+"eller når du har trykket på knappen 'Spring e-mail over'."
 
 msgid "editor.notifyUsers"
 msgstr "Underret brugere"
@@ -68,7 +72,9 @@ msgid "editor.notifyUsers.allUsers"
 msgstr "Send denne meddelelse til alle brugere, der er tilknyttet dette tidsskrift ({$count} brugere)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Send denne meddelelse til de brugere, der er tilknyttet dette tidsskrift, og der har indikeret, at de ønsker at modtage opdateringer ({$count} brugere)"
+msgstr ""
+"Send denne meddelelse til de brugere, der er tilknyttet dette tidsskrift, og "
+"som har indikeret, at de ønsker at modtage opdateringer ({$count} brugere)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Medtag indholdsfortegnelsen fra dette nummer:"
@@ -83,10 +89,10 @@ msgid "editor.issues.currentIssue"
 msgstr "Aktuelt nummer"
 
 msgid "editor.issues.numArticles"
-msgstr "Artikler"
+msgstr "Elementer"
 
 msgid "editor.issues.noArticles"
-msgstr "Der er i øjeblikket ikke planlagt nogen artikler til dette nummer."
+msgstr "Der er i øjeblikket ikke planlagt noget materiale til dette nummer."
 
 msgid "editor.issues.confirmDelete"
 msgstr "Er du sikker på, at du vil slette dette nummer permanent?"
@@ -98,7 +104,7 @@ msgid "editor.issues.unpublished"
 msgstr "Ikke-publiceret"
 
 msgid "editor.issues.volumeRequired"
-msgstr "Årgang er påkrævet og skal være en positiv, numerisk værdi."
+msgstr "Årgang/bind er påkrævet og skal være en positiv, numerisk værdi."
 
 msgid "editor.issues.numberRequired"
 msgstr "Nummer er påkrævet og skal være en positiv, numerisk værdi."
@@ -134,7 +140,7 @@ msgid "editor.issues.coverPage"
 msgstr "Forsidebillede"
 
 msgid "editor.issues.coverPageInstructions"
-msgstr "(Tilladte formater: .jpg eller .png )"
+msgstr "(Tilladte formater: .gif, .jpg eller .png )"
 
 msgid "editor.issues.uploaded"
 msgstr "Overført"
@@ -149,22 +155,22 @@ msgid "editor.issues.removeCoverPage"
 msgstr "Vil du fjerne forsidebilledet?"
 
 msgid "editor.issues.styleFile"
-msgstr "Typografiark"
+msgstr "Stylesheet"
 
 msgid "editor.issues.invalidStyleFormat"
 msgstr ""
-"Ugyldigt stylesheet-firmat. Kontroller, at den fremsendte fil er en gyldig "
+"Ugyldigt stylesheet-format. Kontrollér, at den fremsendte fil er en gyldig "
 "CSS. (Vær opmærksom på, at stylesheets med kommentarer i begyndelsen kan "
 "blive afvist.)"
 
 msgid "editor.issues.removeStyleFile"
-msgstr "Vil du fjerne typografiarket?"
+msgstr "Vil du fjerne  stylesheetet?"
 
 msgid "editor.issues.coverPageCaption"
 msgstr "Billedtekst til forside"
 
 msgid "editor.issues.showCoverPage"
-msgstr "Opret en forside til dette nummer med følgende artikler."
+msgstr "Opret en forside til dette nummer med følgende materialer."
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Vis"
@@ -206,7 +212,7 @@ msgid "editor.issues.order"
 msgstr "Rækkefølge"
 
 msgid "editor.issues.publicId"
-msgstr "Offentligt id"
+msgstr "Public id"
 
 msgid "editor.issues.publishIssue"
 msgstr "Publicer nummer"
@@ -215,13 +221,13 @@ msgid "editor.issues.previewIssue"
 msgstr "Vis nummer"
 
 msgid "editor.issues.preview"
-msgstr "(Eksempel)"
+msgstr "Preview"
 
 msgid "editor.issues.confirmPublish"
 msgstr "Er du sikker på, at du vil publicere det nye nummer?"
 
 msgid "editor.issues.publicArticleIdExists"
-msgstr "Det er ikke muligt at gemme offentligt id til artikel:"
+msgstr "Det er ikke muligt at gemme public id til artikel:"
 
 msgid "editor.issues.noLiveIssues"
 msgstr "Ingen Live-numre"
@@ -239,7 +245,7 @@ msgid "editor.navigation.issueArchive"
 msgstr "Tidligere numre"
 
 msgid "editor.article.designateReviewVersion"
-msgstr "Angiv den oprindelige fil som Bedømmelsesversion"
+msgstr "Angiv den oprindelige fil som 'bedømmelsesversion'"
 
 msgid "editor.article.decision"
 msgstr "Beslutning"
@@ -254,13 +260,13 @@ msgid "editor.submissions.activeAssignments"
 msgstr "Aktive tildelinger"
 
 msgid "editor.submissions.invite"
-msgstr "Inviter"
+msgstr "Invitér"
 
 msgid "editor.submissions.accept"
-msgstr "Accepter"
+msgstr "Acceptér"
 
 msgid "editor.submissions.noSubmissions"
-msgstr "Ingen manuskripter"
+msgstr "Ingen indsendelser"
 
 msgid "editor.submissions.lastAssigned"
 msgstr "Senest"
@@ -290,7 +296,10 @@ msgid "editor.article.remove"
 msgstr "Fjern"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Inden du sender et indleveret manuskript til manuskriptredigering, skal du bruge linket 'Underret forfatter' til at informere forfatteren om beslutningen og vælge den version, der skal sendes."
+msgstr ""
+"Inden du sender en indsendelse til manuskriptredigering, skal du bruge "
+"linket 'Underret forfatter' til at informere forfatteren om beslutningen og "
+"vælge den version, der skal sendes."
 
 msgid "editor.notifyUsers.allReaders"
 msgstr "Alle læsere ({$count} brugere)"
@@ -311,7 +320,7 @@ msgid "editor.issues.unpublishIssue"
 msgstr "Træk udgivet nummer tilbage"
 
 msgid "editor.issues.confirmUnpublish"
-msgstr "Er du sikker på, at du vil trække dette udgivne nummer tilbage?"
+msgstr "Er du sikker på, at du vil trække dette publicerede nummer tilbage?"
 
 msgid "editor.issues.galleys"
 msgstr "Hele numre"
@@ -422,7 +431,7 @@ msgid "editor.article.coverImage"
 msgstr "Forsidebillede"
 
 msgid "editor.article.editMetadata"
-msgstr "Redigér udgave-netadata"
+msgstr "Redigér udgave-metadata"
 
 msgid "editor.article.viewMetadata"
 msgstr "Se udgave-metadata"
