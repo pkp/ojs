@@ -1,9 +1,9 @@
 {**
  * @file plugins/pubIds/doi/templates/doiAssignCheckBox.tpl
  *
- * Copyright (c) 2014-2019 Simon Fraser University
- * Copyright (c) 2003-2019 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Displayed only if the DOI can be assigned.
  * Assign DOI form check box included in doiSuffixEdit.tpl and doiAssign.tpl.
