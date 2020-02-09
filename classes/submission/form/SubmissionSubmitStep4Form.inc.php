@@ -47,6 +47,7 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 
 		// Send author notification email
 		import('classes.mail.ArticleMailTemplate');
+
 		$mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK', null, null, false);
 		$authorMail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK_NOT_USER', null, null, false);
 
@@ -80,10 +81,33 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 			}
 			$mail->bccAssignedSubEditors($submission->getId(), WORKFLOW_STAGE_ID_PRODUCTION);
 
+			// OPS: Check if author can publish and let her know in the email
+			$canAuthorPublish = "";
+			import('classes.core.Services');
+			if (Services::get('publication')->canAuthorPublish($submission->getId())){
+				$primaryLocale = $context->getPrimaryLocale();
+				$allowedLocales = $context->getSupportedLocales();
+				$errors = Services::get('publication')->validatePublish($submission->getLatestPublication(), $submission, $allowedLocales, $primaryLocale);
+				if (!empty($errors)){
+					$listErrors .= '<ul class="plain">';
+					foreach ($errors as $error) {
+						$listErrors .= '<li>' . $error . '</li>';
+					}
+					$listErrors .= '</ul>';
+					$canAuthorPublish = __('author.submit.publishRequirements') . $listErrors;
+				}
+			} else {
+				$canAuthorPublish = __('author.submit.authorCanNotPublish');
+			}
+			if ($canAuthorPublish == ""){
+				$canAuthorPublish = __('author.submit.authorCanPublish');
+			}
+
 			$mail->assignParams(array(
 				'authorName' => $user->getFullName(),
 				'authorUsername' => $user->getUsername(),
 				'editorialContactSignature' => $context->getData('contactName'),
+				'canAuthorPublish' => $canAuthorPublish,
 				'submissionUrl' => $router->url($request, null, 'authorDashboard', 'submission', $submission->getId()),
 			));
 
