@@ -78,7 +78,7 @@
 		</div>
 	{/if}
 
-	{* Notification of the preprint status *}
+	{* Crossref requirements: The landing page must link to the AM/VOR when it is made available. The link must be appropriately labeled (e.g. “Now published in <Journal Name>”) and appear above the scroll. *}
 	{if $preprintStatus}
 		<div class="cmp_notification notice">
 			{translate key="preprint.statusMessage"}

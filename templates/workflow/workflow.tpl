@@ -141,6 +141,11 @@
 										label="{translate key="publication.createVersion"}"
 										@click="openCreateVersionPrompt"
 									></pkp-button>
+									<pkp-button
+										ref="relations"
+										label="{translate key="preprint.relations"}"
+										@click="openPublish"
+									></pkp-button>
 								</template>
 							{/if}
 						</pkp-header>
@@ -179,7 +184,7 @@
 								<tab id="license" label="{translate key="publication.publicationLicense"}">
 									<pkp-form v-bind="components.{$smarty.const.FORM_PUBLICATION_LICENSE}" @set="set" />
 								</tab>
-								<tab id="issue" label="{translate key="publication.entry"}">
+								<tab id="entry" label="{translate key="preprint.entry"}">
 									<pkp-form v-bind="components.{$smarty.const.FORM_ISSUE_ENTRY}" @set="set" />
 								</tab>
 							{/if}
