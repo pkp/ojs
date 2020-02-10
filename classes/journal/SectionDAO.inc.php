@@ -209,7 +209,18 @@ class SectionDAO extends PKPSectionDAO {
 	function getLocaleFieldNames() {
 		return array_merge(
 			parent::getLocaleFieldNames(),
-			array('abbrev', 'identifyType')
+			array('abbrev', 'identifyType', 'description')
+		);
+	}
+
+	/**
+	 * Get the list of fields for which data can not be localized.
+	 * @return array
+	 */
+	function getAdditionalFieldNames() {
+		return array_merge(
+			parent::getAdditionalFieldNames(),
+			array('path')
 		);
 	}
 

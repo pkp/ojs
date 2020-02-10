@@ -52,6 +52,7 @@ class ContextService extends \PKP\Services\PKPContextService {
 		$section = new \Section();
 		$section->setTitle(__('section.default.title'), $context->getPrimaryLocale());
 		$section->setAbbrev(__('section.default.abbrev'), $context->getPrimaryLocale());
+		$section->setPath(__('section.default.path'), $context->getPrimaryLocale());
 		$section->setMetaIndexed(true);
 		$section->setMetaReviewed(true);
 		$section->setPolicy(__('section.default.policy'), $context->getPrimaryLocale());

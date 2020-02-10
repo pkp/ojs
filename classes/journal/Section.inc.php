@@ -26,6 +26,13 @@ class Section extends PKPSection {
 		return $this->getLocalizedData('abbrev');
 	}
 
+	/**
+	 * Get localized description of section.
+	 * @return string
+	 */
+	function getLocalizedDescription() {
+		return $this->getLocalizedData('description');
+	}
 
 	//
 	// Get/set methods
@@ -63,6 +70,41 @@ class Section extends PKPSection {
 	 */
 	function setAbbrev($abbrev, $locale) {
 		return $this->setData('abbrev', $abbrev, $locale);
+	}
+
+	/**
+	 * Get section path.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getPath() {
+		return $this->getData('path');
+	}
+
+	/**
+	 * Set section path.
+	 * @param $path string
+	 */
+	function setPath($path) {
+		return $this->setData('path', $path);
+	}
+
+	/**
+	 * Get description of section.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getDescription($locale) {
+		return $this->getData('description', $locale);
+	}
+
+	/**
+	 * Set description of section.
+	 * @param $description string
+	 * @param $locale string
+	 */
+	function setDescription($description, $locale) {
+		$this->setData('description', $description, $locale);
 	}
 
 	/**

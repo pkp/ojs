@@ -71,6 +71,9 @@ msgstr "Items can only be submitted by Editors and Series Editors."
 msgid "manager.sections.form.abbrevRequired"
 msgstr "An abbreviated title is required for the series"
 
+msgid "manager.setup.form.section.pathRequired"
+msgstr "An URL path is required for the series"
+
 msgid "manager.sections.identifyType"
 msgstr "Identify items published in this series as a(n)"
 

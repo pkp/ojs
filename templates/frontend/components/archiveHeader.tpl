@@ -17,7 +17,7 @@
 	<ul>
 		{if $series && $series->getCount()}
 			{iterate from=series item=serie}
-				<li class="category_{$serie->getId()}{if $serie->getParentId()} is_sub{/if}">
+				<li class="series_{$serie->getId()}">
 					<a href="{url router=$smarty.const.ROUTE_PAGE page="series" op="view" path=$serie->getPath()|escape}">
 						{$serie->getLocalizedTitle()|escape}
 					</a>

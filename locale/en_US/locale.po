@@ -47,6 +47,15 @@ msgstr "Abbreviation"
 msgid "section.policy"
 msgstr "Series Policy"
 
+msgid "section.description"
+msgstr "Series archive Description"
+
+msgid "section.pathDescription"
+msgstr "Series URL Path. Use hyphens (-) instead of spaces. Example: cultural-history."
+
+msgid "section.emptySection"
+msgstr "Nothing has been published in this series yet."
+
 msgid "common.publication"
 msgstr "Preprint"
 

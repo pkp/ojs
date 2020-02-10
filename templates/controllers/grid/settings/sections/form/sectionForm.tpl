@@ -31,6 +31,14 @@
 			{fbvElement type="text" multilingual=true id="abbrev" label="section.abbreviation" value=$abbrev maxlength="80" size=$fbvStyles.size.SMALL inline=true required=true}
 		{/fbvFormSection}
 
+		{fbvFormSection}
+			{fbvElement type="text" id="path" required=true value=$path label="section.pathDescription"}
+		{/fbvFormSection}
+
+		{fbvFormSection title="section.description"}
+			{fbvElement type="textarea" multilingual=true id="description" value=$description rich=true}
+		{/fbvFormSection}
+
 		{fbvFormSection title="manager.sections.policy" for="policy"}
 			{fbvElement type="textarea" multilingual=true id="policy" value=$policy rich=true}
 		{/fbvFormSection}
@@ -49,8 +57,6 @@
 			{fbvElement type="checkbox" id="abstractsNotRequired" checked=$abstractsNotRequired label="manager.sections.abstractsNotRequired"}
 			{fbvElement type="checkbox" id="metaIndexed" checked=$metaIndexed label="manager.sections.submissionIndexing"}
 			{fbvElement type="checkbox" id="editorRestriction" checked=$editorRestriction label="manager.sections.editorRestriction"}
-			{fbvElement type="checkbox" id="hideTitle" checked=$hideTitle label="manager.sections.hideTocTitle"}
-			{fbvElement type="checkbox" id="hideAuthor" checked=$hideAuthor label="manager.sections.hideTocAuthor"}
 		{/fbvFormSection}
 
 		{fbvFormSection for="identifyType" title="manager.sections.identifyType"}

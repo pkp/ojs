@@ -14,6 +14,10 @@
 			"$ref": "#/definitions/LocaleObject",
 			"apiSummary": true
 		},
+		"path": {
+			"type": "string",
+			"apiSummary": true
+		},
 		"seq": {
 			"type": "integer",
 			"apiSummary": true

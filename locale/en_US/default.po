@@ -17,6 +17,9 @@ msgstr "Preprints"
 msgid "section.default.abbrev"
 msgstr "PRE"
 
+msgid "section.default.path"
+msgstr "preprints"
+
 msgid "section.default.policy"
 msgstr ""
 

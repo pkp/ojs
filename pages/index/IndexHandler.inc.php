@@ -47,7 +47,7 @@ class IndexHandler extends PKPIndexHandler {
 		if ($journal) {
 
 			// OPS: Series
-			$sectionDao = DAORegistry::getDAO('CategoryDAO');
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$series = $sectionDao->getByContextId($journal->getId());
 
 			// Latest preprints
