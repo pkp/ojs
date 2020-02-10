@@ -45,4 +45,10 @@
 			) IS NULL
 		</query>
 	</sql>
+	<!-- Modify citations table to refer to publications #5465-->
+	<sql>
+		<rename table="citations" column="submission_id" to="publication_id" />
+		<dropindex table="citations" index="citations_submission" />
+		<dropindex table="citations" index="citations_submission_seq" />
+	</sql>
 </data>
