@@ -27,8 +27,6 @@
 		{/if}
 	</p>
 
-	<img src="{$baseUrl}/{$pubProcessFile}" alt="{translate key="about.aboutThisPublishingSystem.altText"}">
-
 </div><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}
