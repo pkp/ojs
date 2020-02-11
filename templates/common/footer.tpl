@@ -8,7 +8,7 @@
  * Backend site footer.
  *
  *}
-{assign var=brandImage value="templates/images/ojs_brand.png"}
+{assign var=brandImage value="templates/images/ops_brand.png"}
 {assign var=packageKey value="common.software"}
-{assign var=pkpLink value="http://pkp.sfu.ca/ojs"}
+{assign var=pkpLink value="https://pkp.sfu.ca/ops"}
 {include file="core:common/footer.tpl"}

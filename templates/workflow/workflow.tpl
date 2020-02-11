@@ -141,11 +141,6 @@
 										label="{translate key="publication.createVersion"}"
 										@click="openCreateVersionPrompt"
 									></pkp-button>
-									<pkp-button
-										ref="relations"
-										label="{translate key="preprint.relations"}"
-										@click="openRelations"
-									></pkp-button>
 								</template>
 							{/if}
 						</pkp-header>
