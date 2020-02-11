@@ -15,6 +15,7 @@
 namespace APP\Services;
 
 use \Application;
+use \AppLocale;
 use \Core;
 use \Services;
 use \PKP\Services\PKPPublicationService;
@@ -114,6 +115,7 @@ class PublicationService extends PKPPublicationService {
 						if (!isset($errors['abstract'])) {
 							$errors['abstract'] = [];
 						};
+						AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
 						$errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
 					}
 				}

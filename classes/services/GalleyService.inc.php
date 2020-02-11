@@ -252,15 +252,15 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 			]
 		);
 
-		// Check required fields if we're adding the object
-		if ($action === VALIDATE_ACTION_ADD) {
-			\ValidatorFactory::required(
-				$validator,
-				$schemaService->getRequiredProps(SCHEMA_GALLEY),
-				$schemaService->getMultilingualProps(SCHEMA_GALLEY),
-				$primaryLocale
-			);
-		}
+		// Check required fields
+		\ValidatorFactory::required(
+			$validator,
+			$action,
+			$schemaService->getRequiredProps(SCHEMA_GALLEY),
+			$schemaService->getMultilingualProps(SCHEMA_GALLEY),
+			$allowedLocales,
+			$primaryLocale
+		);
 
 		// Check for input from disallowed locales
 		\ValidatorFactory::allowedLocales($validator, $schemaService->getMultilingualProps(SCHEMA_GALLEY), $allowedLocales);
