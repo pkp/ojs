@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2020-01-30 18:29+0000\n"
+"PO-Revision-Date: 2020-02-12 08:11+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "sv/>\n"
@@ -169,19 +169,15 @@ msgstr ""
 "Alla publiceringskrav är uppfyllda. Bidraget kommer att publiceras "
 "omedelbart i {$issue}. Vill publicera det?"
 
-#, fuzzy
 msgid "publication.scheduledIn"
 msgstr "Planeras för publicering i <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-#, fuzzy
 msgid "publication.publishedIn"
 msgstr "Publicerad i <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-#, fuzzy
 msgid "publication.issue.success"
 msgstr "Publikationens nummer information har uppdaterats."
 
-#, fuzzy
 msgid "publication.required.issue"
 msgstr "Bidraget måste tilldelas ett nummer innan det kan publiceras."
 
