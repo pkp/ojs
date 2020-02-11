@@ -144,7 +144,7 @@
 									<pkp-button
 										ref="relations"
 										label="{translate key="preprint.relations"}"
-										@click="openPublish"
+										@click="openRelations"
 									></pkp-button>
 								</template>
 							{/if}
