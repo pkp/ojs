@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
+"PO-Revision-Date: 2020-02-12 15:35+0000\n"
+"Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
+"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"de/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
-"PO-Revision-Date: 2019-09-30T06:56:48-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -30,13 +33,13 @@ msgid "plugins.pubIds.urn.manager.settings.explainURNs"
 msgstr "Bitte wählen Sie die Publikationsobjekte, denen Uniform Resource Names (URN) zugewiesen werden:"
 
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
-msgstr "URN werden Ausgaben zugewiesen werden."
+msgstr "Ausgaben"
 
 msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
-msgstr "URN werden Artikeln zugewiesen werden."
+msgstr "Artikel"
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
-msgstr "URN werden Fahnen (z.B. HTML- oder PDF-Dateien) zugewiesen werden."
+msgstr "Fahnen"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
 msgstr "URN-Präfix"
@@ -165,7 +168,7 @@ msgid "plugins.pubIds.urn.editor.addCheckNo"
 msgstr "Prüfziffer hinzufügen"
 
 msgid "plugins.pubIds.urn.editor.assignURN"
-msgstr "URN {$pubId} zu diesem Objekt vom Typ {$pubObjectType} zuweisen?"
+msgstr "URN {$pubId} zu diesem Objekt vom Typ {$pubObjectType} zuweisen"
 
 msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
 msgstr "Es kann kein URN zugewiesen werden, weil der angepasste Suffix fehlt."
@@ -178,3 +181,35 @@ msgstr "URN {$pubId} wurde zugewiesen."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Die Prüfziffer fehlt."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Element"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Fahne: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Dieser Publikation wurde keine URN zugeordnet."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "Die URN für diese Veröffentlichung wird {$urn} sein."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "Die URN muss mit {$urnPrefix} beginnen."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Sie können keine URN generieren, denn einem oder mehreren Teilen der URN "
+"fehlen Daten. Sie müssen die Veröffentlichung einer Ausgabe zuweisen, eine "
+"Verlags ID angeben oder Seitenzahlen eintragen."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Sie können keine URN generieren, solange der Beitrag keiner Ausgabe "
+"zugewiesen ist."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Zuweisen"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "Die URN muss mit {$prefix} beginnen."
