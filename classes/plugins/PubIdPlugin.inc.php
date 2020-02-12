@@ -176,8 +176,8 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 				$suffixPatternsFieldNames = $this->getSuffixPatternsFieldNames();
 				$pubIdSuffix = $this->getSetting($contextId, $suffixPatternsFieldNames[$pubObjectType]);
 
-				// %j - journal initials
-				$pubIdSuffix = PKPString::regexp_replace('/%j/', PKPString::strtolower($context->getAcronym($context->getPrimaryLocale())), $pubIdSuffix);
+				// %j - journal initials, remove special characters and uncapitalize
+				$pubIdSuffix = PKPString::regexp_replace('/%j/', PKPString::regexp_replace('/[^A-Za-z0-9]/', '', PKPString::strtolower($context->getAcronym($context->getPrimaryLocale()))), $pubIdSuffix);
 
 				// %x - custom identifier
 				if ($pubObject->getStoredPubId('publisher-id')) {
@@ -215,7 +215,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 				break;
 
 			default:
-				$pubIdSuffix = PKPString::strtolower($context->getAcronym($context->getPrimaryLocale()));
+				$pubIdSuffix = PKPString::regexp_replace('/[^A-Za-z0-9]/', '', PKPString::strtolower($context->getAcronym($context->getPrimaryLocale())));
 
 				if ($issue) {
 					$pubIdSuffix .= '.v' . $issue->getVolume() . 'i' . $issue->getNumber();
