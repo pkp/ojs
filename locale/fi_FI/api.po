@@ -2,14 +2,59 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
+"PO-Revision-Date: 2020-02-13 21:14+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/api/fi/>\n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Sinulla ei ole lupaa katsoa julkaisemattomia numeroita."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Pyytämäsi käsikirjoitusversio ei kuulu tähän käsikirjoitukseen."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Pyytämäsi käsikirjoitusversio ei kuulu tähän julkaisuun."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Valitsemaasi maksuvaihtoehto ei tueta."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Sinulla ei ole lupaa siirtää tätä sähköpostipohjaa toiseen julkaisuun."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Etsimääsi julkaisua ei löytynyt."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Sinulla ei ole lupaa poistaa tätä julkaisua."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Sinulla ei ole lupaa muokata tätä julkaisua."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Julkaisua ei voi muokata sivuston rajapinnasta käsin."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Et voi katsoa tai muokata tätä julkaisua, jos et tee pyyntöä julkaisun tai "
+"sivuston rajapintaan."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Sinulla ei ole lupaa katsoa tätä julkaisua."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Voit katsoa vain julkisia julkaisuja."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Käsikirjoituksen luomiseksi tai muokkaamiseksi pitää tehdä kysely julkaisun "
+"rajapintaan."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Et voi vaihtaa käsikirjoitukseen liittyvää julkaisua."
