@@ -1,2 +1,22 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-02-12 15:36+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-doi/hu/>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "A DOI {$pubId} hozzárendelés megtörtént."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr ""
+"A DOI {$pubId} nem hozzárendelhető, mert feloldhatatlan mintát tartalmaz."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "A DOI nem hozzárendelhető, mert az egyéni utótag hiányzik."

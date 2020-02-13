@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
+"PO-Revision-Date: 2020-02-13 01:10+0000\n"
+"Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
+"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"de/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2019-09-27T09:54:42-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Einen Artikel einreichen"
@@ -69,7 +72,8 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Freigabe des Formats"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Diese Fahne wird <em>nicht mehr verfügbar sein</em> für Leser/innen."
+msgstr ""
+"<p>Diese Fahne wird <em>nicht mehr verfügbar sein</em> für Leser/innen.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
 msgstr "<p>Diese Fahne wird für Leser/innen <em>verfügbar gemacht</em>.</p>"
@@ -81,7 +85,11 @@ msgid "submission.galleyFiles"
 msgstr "Fahnendateien"
 
 msgid "submission.proofReadingDescription"
-msgstr "Der oder die Layouter/in lädt die herstellungsfertigen Dateien hier hoch. Benutzen Sie em>Auditor/in hinzufügen</em>, um Autor/innen und andere zum Korrekturlesen der Fahnen einzuplanen. Korrigierte Dateien werden vor Veröffentlichung zur Freigabe hochgeladen."
+msgstr ""
+"Der oder die Layouter/in lädt die herstellungsfertigen Dateien hier hoch. "
+"Benutzen Sie <em>Auditor/in hinzufügen</em>, um Autor/innen und andere zum "
+"Korrekturlesen der Fahnen einzuplanen. Korrigierte Dateien werden vor "
+"Veröffentlichung zur Freigabe hochgeladen."
 
 msgid "grid.action.approveProof"
 msgstr "Diese Korrektur für die Aufnahme in die Fahne freigeben."
@@ -160,3 +168,67 @@ msgstr "Diese Spezifikationen basieren auf dem Dublin-Core-Metadaten-Schema, ein
 
 msgid "section.any"
 msgstr "Alle Rubriken"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Die Fahnen dieser Publikation können nicht bearbeitet werden, weil sie "
+"bereits veröffentlicht wurde."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Vorgesehen zur  Veröffentlichung in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Veröffentlicht in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr ""
+"Der Beitrag muss einer Ausgabe zugeordnet werden, bevor er veröffentlicht "
+"werden kann."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Alle Bedingungen für die Veröffentlichung sind erfüllt. Dies wird sofort in "
+"{$issue} veröffentlicht. Sind Sie sicher, dass Sie dies veröffentlichen "
+"wollen?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Alle Bedingungen für die Veröffentlichung sind erfüllt. Dies wird "
+"veröffentlicht, wenn {$issue} veröffentlicht wird. Sind Sie sicher, dass Sie "
+"dies zur Veröffentlichung einplanen wollen?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Alle Bedingungen für die Veröffentichung sind erfüllt. Sind Sie sicher, dass "
+"Sie dies veröffentlichen wollen?"
+
+msgid "publication.issue.success"
+msgstr "Die Details der Ausgabe dieser Veröffentlichung wurden aktualisiert."
+
+msgid "publication.invalidIssue"
+msgstr "Die Ausgabe für diese Veröffentlichung konnte nicht gefunden werden."
+
+msgid "publication.invalidSection"
+msgstr "Die Rubrik für diese Veröffentlichung konnte nicht gefunden werden."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Das Veröffentlichungsdatum wird automatisch gesetzt, wenn die Ausgabe "
+"veröffentlicht wird. Geben Sie kein Veröffentlichungsdatum ein, außer der "
+"Artikel wurde zuvor woanders publiziert und Sie wollen ihn rückdatieren."
+
+msgid "galley.publicationNotFound"
+msgstr "Die Veröffentlichung zu dieser Fahne konnte nicht gefunden werden."
+
+msgid "catalog.category.heading"
+msgstr "Alle Elemente"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Elemente"
+
+msgid "submission.sectionOptions"
+msgstr "Rubrikenoptionen"
+
+msgid "submission.submit.noContext"
+msgstr "Die Zeitschrift für diese Einreichung konnte nicht gefunden werden."

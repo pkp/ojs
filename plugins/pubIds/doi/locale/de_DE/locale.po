@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
+"PO-Revision-Date: 2020-02-12 15:35+0000\n"
+"Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
+"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
+"de/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
-"PO-Revision-Date: 2019-09-30T06:56:48-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -150,7 +153,7 @@ msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
 msgstr "Nutzen Sie die folgende Option, um die DOI aller Objekte (Artikel und Fahnen), die momentan dieser Ausgabe zugeordnet sind, zu entfernen."
 
 msgid "plugins.pubIds.doi.editor.assignDoi"
-msgstr "DOI {$pubId} zu diesem Objekt vom Typ {$pubObjectType} zuweisen?"
+msgstr "DOI {$pubId} zu diesem Objekt vom Typ {$pubObjectType} zuweisen"
 
 msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
 msgstr "Es kann kein DOI zugewiesen werden, weil der angepasste Suffix fehlt."
@@ -160,3 +163,35 @@ msgstr "DOI {$pubId} kann nicht zugewiesen werden, weil ein ungültiges Muster v
 
 msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
 msgstr "DOI {$pubId} wurde zugewiesen."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Element"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Fahne: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Dieser Publikation wurde keine DOI zugeordnet."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "Die DOI für diese Veröffentlichung wird {$doi} sein."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "Die DOI muss mit {$doiprefix} beginnen."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Sie können keine DOI generieren, denn einem oder mehreren Teilen der URN "
+"fehlen Daten. Sie müssen die Veröffentlichung einer Ausgabe zuweisen, eine "
+"Verlags ID angeben oder Seitenzahlen eintragen."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Sie können keine DOI generieren, solange der Beitrag keiner Ausgabe "
+"zugewiesen ist."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Zuweisen"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "Die DOI muss mit {$prefix} beginnen."
