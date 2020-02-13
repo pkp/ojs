@@ -38,12 +38,6 @@ msgstr "The text is single-spaced; uses a 12-point font; employs italics, rather
 msgid "default.contextSettings.checklist.bibliographicRequirements"
 msgstr "The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines."
 
-msgid "default.contextSettings.privacyStatement"
-msgstr "<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>"
-
-msgid "default.contextSettings.openAccessPolicy"
-msgstr "This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge."
-
 msgid "default.contextSettings.forReaders"
 msgstr "We encourage readers to sign up for the publishing notification service for this server. Use the <a href=\"{$indexUrl}{$contextPath}/user/register\">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes."
 
