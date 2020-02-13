@@ -84,6 +84,11 @@ class IssueEntryForm extends FormComponent {
 					'url' => $temporaryFileApiUrl,
 				],
 			]))
+			->addField(new FieldText('urlPath', [
+				'label' => __('publication.urlPath'),
+				'description' => __('publication.urlPath.description'),
+				'value' => $publication->getData('urlPath'),
+			]))
 			->addField(new FieldText('datePublished', [
 				'label' => __('publication.datePublished'),
 				'description' => __('publication.datePublished.description'),

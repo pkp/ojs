@@ -61,40 +61,26 @@ class PreprintHandler extends Handler {
 	function initialize($request, $args = array()) {
 		$urlPath = empty($args) ? 0 : array_shift($args);
 
-		// Look for a publication with a publisher-id that matches the url path
-		$publicationsIterator = Services::get('publication')->getMany([
-			'contextIds' => $request->getContext()->getId(),
-			'publisherIds' => $urlPath,
-		]);
-		$publicationWithMatchingUrl = null;
-		if (count($publicationsIterator)) {
-			$publicationWithMatchingUrl = $publicationsIterator->current();
-			$submissionId = $publicationWithMatchingUrl->getData('submissionId');
-		} elseif (ctype_digit($urlPath)) {
-			$submissionId = $urlPath;
-		}
+		// Get the submission that matches the requested urlPath
+		$submission = Services::get('submission')->getByUrlPath($urlPath, $request->getContext()->getId());		
 
-		if (!isset($submissionId)) {
-			$request->getDispatcher()->handle404();
+		if (!$submission && ctype_digit($urlPath)) {
+			$submission = Services::get('submission')->get($urlPath);
 		}
-
-		$submission = Services::get('submission')->get($submissionId);
 
 		if (!$submission) {
 			$request->getDispatcher()->handle404();
 		}
 
-		// If we retrieved the submission from the publisher-id and it no longer
-		// matches the publisher-id of the current publication, redirect to the
-		// URL for the current publication
-		if ($urlPath && $publicationWithMatchingUrl &&
-				$submission->getCurrentPublication()->getData('pub-id::publisher-id') !== $publicationWithMatchingUrl->getData('pub-id::publisher-id')) {
-			$newUrlPath = $submission->getCurrentPublication()->getData('pub-id::publisher-id');
-			if (!$newUrlPath) {
-				$newUrlPath = $submission->getId();
+		// If the urlPath does not match the urlPath of the current
+		// publication, redirect to the current URL
+		$currentUrlPath = $submission->getCurrentPublication()->getData('urlPath');
+		if ($currentUrlPath !== $urlPath) {
+			if (!$currentUrlPath) {
+				$currentUrlPath = $submission->getId();		
 			}
 			$newArgs = $args;
-			$newArgs[0] = $newUrlPath;
+			$newArgs[0] = $currentUrlPath;
 			$request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), $newArgs);
 		}
 
@@ -119,8 +105,25 @@ class PreprintHandler extends Handler {
 		}
 
 		if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
-			$this->galley = DAORegistry::getDAO('ArticleGalleyDAO')->getByBestGalleyId($galleyId, $this->publication->getId());
+			$galleys = (array) $this->publication->getData('galleys');
+			foreach ($galleys as $galley) {
+				if ($galley->getBestGalleyId() === $galleyId) {
+					$this->galley = $galley;
+					break;
+				}
+			}
+			// Redirect to the most recent version of the submission if the request
+			// points to an outdated galley but doesn't use the specific versioned
+			// URL. This can happen when a galley's urlPath is changed between versions.
 			if (!$this->galley) {
+				$publications = $submission->getPublishedPublications();
+				foreach ($publications as $publication) {
+					foreach ((array) $publication->getData('galleys') as $galley) {
+						if ($galley->getBestGalleyId() === $galleyId) {
+							$request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$submission->getBestId()]);
+						}
+					}
+				}
 				$request->getDispatcher()->handle404();
 			}
 		}
@@ -149,6 +152,7 @@ class PreprintHandler extends Handler {
 		$user = $request->getUser();
 		$preprint = $this->preprint;
 		$publication = $this->publication;
+
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'preprint' => $preprint,
@@ -162,7 +166,6 @@ class PreprintHandler extends Handler {
 
 		$templateMgr->assign([
 			'ccLicenseBadge' => Application::get()->getCCLicenseBadge($publication->getData('licenseUrl')),
-			'publication' => $publication,
 			'section' => DAORegistry::getDAO('SectionDAO')->getById($publication->getData('sectionId')),
 		]);
 

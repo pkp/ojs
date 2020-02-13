@@ -352,6 +352,18 @@ class ArticleGalleyGridHandler extends GridHandler {
 			'publicationId' => $this->getPublication()->getId(),
 			'representationId' => $galley->getId(),
 		));
+		$publisherIdEnabled = in_array('galley', (array) $request->getContext()->getData('enablePublisherId'));
+		$pubIdsEnabled = false;
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $request->getContext()->getId());
+		foreach ($pubIdPlugins as $pubIdPlugin) {
+			if ($pubIdPlugin->isObjectTypeEnabled('Representation', $request->getContext()->getId())) {
+				$pubIdsEnabled = true;
+				break;
+			}
+		}
+		if ($publisherIdEnabled || $pubIdsEnabled) {
+			$templateMgr->assign('enableIdentifiers', true);
+		}
 		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/articleGalleys/editFormat.tpl'));
 	}
 
@@ -405,7 +417,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 
 			return DAO::getDataChangedEvent($galley->getId());
 		}
-		return new JSONMessage(true, $galleyForm->fetch());
+		return new JSONMessage(true, $galleyForm->fetch($request));
 	}
 
 	/**
