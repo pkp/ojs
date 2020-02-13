@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/id/>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "Mulai pencarian similarity tingkat lanjut"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Anda juga bisa {$advancedSearchLink} untuk artikel ini."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Artikel Serupa"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Plugin ini menambahkan daftar artikel serupa pada halaman abstrak artikel."
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Rekomendasi Artikel Serupa"

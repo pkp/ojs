@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-08 17:55+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-medra/id/>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.medra.description"
+msgstr ""
+"Ekspor metadata issue, artikel, galley di Onix untuk format DOI (O4DOI) dan "
+"daftarkan DOI pada agen pendaftaran mEDRA ."
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "Plugin Ekspor/Registrasi mEDRA"
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"\n"
+"\t\tJika ingin mendaftar DOI di mEDRA, ikuti petunjuk pada\n"
+"\t\t<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">halaman "
+"beranda mEDRA</a>\n"
+"\t\tuntuk mendapatkan username dan password. Bila tidak punya akun, \n"
+"\t\tkamu tetap bisa mengekspor ke dalam format XML mEDRA (Onix untuk DOI)\n"
+"\t\ttapi kamu tidak bisa meregister DOI di mEDRA melalui aplikasi OJS. \n"
+"\t\tPerlu diketahui bahwa password akan disimpan sebagai teks biasa, "
+"misalnya, tidak dienkripsi, karena\n"
+"\t\tpersyaratan layanan registrasi mEDRA.\n"
+"\t"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Penggunaan: \n"
+"{$scriptName} {$pluginName} mengkespor [xmlFileName] [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} meregister [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "Tugas registrasi otomatis mEDRA"
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr ""
+"Catatan: DOI yang didaftarkan untuk artikel akan diekspor ke mEDRA sebagai <"
+"a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\""
+">'karya'</a>. DOI yang diberikan untuk galley akan diekspor sebagai <a href="
+"\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\""
+">'manifestasi'</a>."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr ""
+"Gunakan API test mEDRA (lingkungan uji coba) untuk registrasi DOI. Jangan "
+"lupa menghapus pilihan ini untuk tahap produksi."
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS akan mendaftarkan DOI secara otomatis ke mEDRA. Perlu diketahui bahwa "
+"proses ini memakan waktu setelah publikasi diproses (misalnya, bergantung "
+"pada cronjob Anda). Kamu bisa  periksa semua DOI yang belum diregister."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Ekspor issue sebagai"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "manifestasi"
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "Karya"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr ""
+"Tentukan Anda ingin mengekspor issue sebagai <a href=\"http://www.medra.org/"
+"en/metadata_td.htm\" target=\"_blank\">'karya' atau 'manifestasi'</a>."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Pilih negara yang akan dihubungi sebagai 'negara penerbit' ke mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Masukkan surel narahubung yang benar."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "Surel"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Masukkan narahubung teknis."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Narahubung"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr ""
+"Masukkan institusi yang bertugas untuk mengekspor DOI (misalnya, institusi "
+"yang meng-hosting web server Anda)."
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Institusi"
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Pihak yang akan dihubungi oleh mEDRA jika ada pertanyaan teknis:"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Masukkan nama institusi yang didaftarkan ke mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Nama institusi yang didaftarkan ke mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr ""
+"Masukkan username mEDRA Anda. Username tidak boleh mengandung titik dua (:)."
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Username"
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Aturlah plugin ekspor mEDRA:"

@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/id/>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Unggahlah file pada \"Impor\" untuk melanjutkan."
+
+msgid "plugins.importexport.users.results"
+msgstr "Hasil"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Impot berhasil. Pengguna dengan usernames dan alamat email yang belum "
+"digunakan telah diimpor, bersama dengan grup pengguna."
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Tidak dapat membuat file \"{$fileName}\"."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Terjadi galat selama proses ekspor"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Ekspor Semua"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Ekspor Berdasarkan Peran"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Ekspor Pengguna"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Alamat jurnal \"{$journalPath}\" tidak dikenali."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Tidak bisa menggunakan password hashed dengan {$importHash}; OJS disetting "
+"untuk memakai {$ojsHash}. Jika tetap lanjut, Anda peelu mereset password "
+"pengguna yang diimpor."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Peringatan"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Konfirmasi jika pengguna ini ingin Anda impor ke dalam sistem"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Terjadi galat dalam mengimpor"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Pengguna berikut ini berhasil diimpor ke dalam sistem"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Lanjutkan mengimpor pengguna lain jika terjadi kegagalan."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Kirim email pemberitahuan kepada setiap pengguna yang diimpor yabg "
+"mengandung username dan password."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "File data pengguna"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Pilih file data XML yang berisi informasi pengguna untuk diimpor ke dalam "
+"jurnal ini. Baca bantuan jurnal untuk selengkapnya dalam format yang "
+"dimaksud.<br /><br />Perku diketahui bahwa file yang diimpor mengandung "
+"username atau alamat email yang ada dalam sistem, data pengguna tersebut "
+"tidak akan diimpor dan setiap peran baru yang akan diberikan akan ditetapkan "
+"pda pengguna yang ada."
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Impor Pengguna"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Contoh:\n"
+"\tImpor pengguna ke myJournal dari myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} impor myImportFile.xml myJournal\n"
+"\n"
+"\tEkspor semua pengguna dari myJournal:\n"
+"\t{$scriptName} {$pluginName} ekspor myExportFile.xml myJournal\n"
+"\n"
+"\tEkspor pengguna berdasarkan ID:\n"
+"\t{$scriptName} {$pluginName} ekspor myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Penggunaan: {$scriptName} {$pluginName} [command] ...\n"
+"Perintah:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.description"
+msgstr "Impor dan ekspor pengguna"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Plugin XML Pengguna"

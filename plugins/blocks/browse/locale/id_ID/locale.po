@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-browse/id/>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.browse.category"
+msgstr "Kategori"
+
+msgid "plugins.block.browse.description"
+msgstr "Plugin ini menampilkan perangkat \"pencarian\"."
+
+msgid "plugins.block.browse.displayName"
+msgstr "Blok Pencarian"
+
+msgid "plugins.block.browse"
+msgstr "Cari"

@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-01-28 09:51+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/id/>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Tampilkan gambar beranda sebagai latar header."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Jika gambar halaman beranda sudah diunggah, tampilkan sebagai latar header "
+"bukan sebagaimana umumnya di halaman beranda."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Gambar Latar Header"
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Menampilkan riwayat jurnal pada halaman beranda."
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Pilih warna untuk bagian header."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Warna"
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: Gabungan yang saling melengkapi di mana heading menggunakan "
+"serif dan isi teks menggunakan sans-serif."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr ""
+"Lora: Jenis huruf serif yang banyak diakai dan cocok buat membaca daring."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Jenis huruf sans-serif yang populer dan modern."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: Gabungan yang saling melengkapi di mana heading "
+"menggunakan ssans-serif dan isi teks menggunakan serif."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: Gabungan yang saling melengkapi di mana heading "
+"menggunakan serif dan isi teks menggunakan sans-serif."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Sebuah varian Serif dari huruf digital asli Google."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Sebuah huruf digital yang dirancang oleh Google untuk mendukung "
+"semua bahasa."
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Silakan pilih kombinasi huruf sesuai dengan jurnal Anda."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Tipografi"
+
+msgid "plugins.themes.default.description"
+msgstr "Tema ini menggunakan tema bawaan."
+
+msgid "plugins.themes.default.name"
+msgstr "Tema Bawaan"
