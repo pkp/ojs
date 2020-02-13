@@ -55,22 +55,25 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 							'count' => 5000, // large upper limit
 						]);
 						foreach ($submissions as $submission) {
+							$publications = $submission->getData('publications');
 							if ($submissionEnabled) {
-								foreach ($submission->getData('publications') as $publication) {
+								foreach ($publications as $publication) {
 									$publicationPubId = $publication->getStoredPubId($this->getPubIdType());
 									if (empty($publicationPubId)) {
 										$publicationPubId = $this->getPubId($publication);
-										$publicationDao->insertPubId($publication->getId(), $this->getPubIdType(), $publicationPubId);
+										$publicationDao->changePubId($publication->getId(), $this->getPubIdType(), $publicationPubId);
 									}
 								}
 							}
 							if ($representationEnabled) {
-								$representations = $representationDao->getBySubmissionId($submission->getid(), $context->getId());
-								while ($representation = $representations->next()) {
-									$representationPubId = $representation->getStoredPubId($this->getPubIdType());
-									if (empty($representationPubId)) {
-										$representationPubId = $this->getPubId($representation);
-										$representationDao->changePubId($representation->getId(), $this->getPubIdType(), $representationPubId);
+								foreach ($publications as $publication) {
+									$representations = $representationDao->getByPublicationId($publication->getId(), $context->getId());
+									while ($representation = $representations->next()) {
+										$representationPubId = $representation->getStoredPubId($this->getPubIdType());
+										if (empty($representationPubId)) {
+											$representationPubId = $this->getPubId($representation);
+											$representationDao->changePubId($representation->getId(), $this->getPubIdType(), $representationPubId);
+										}
 									}
 								}
 							}
