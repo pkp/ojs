@@ -187,6 +187,14 @@
 			"description": "In what order this galley should appear in lists of galleys for this publication.",
 			"apiSummary": true
 		},
+		"urlPath": {
+			"type": "string",
+			"description": "An optional path to use in the URL instead of the ID.",
+			"validation": [
+				"nullable",
+				"regex:/^[-_a-z0-9]*$/"
+			]
+		},
 		"urlRemote": {
 			"type": "string",
 			"description": "An optional URL where the galley can be viewed or downloaded.",

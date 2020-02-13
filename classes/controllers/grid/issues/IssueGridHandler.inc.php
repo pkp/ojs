@@ -142,6 +142,11 @@ class IssueGridHandler extends GridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$templateMgr = TemplateManager::getManager($request);
 		if ($issue) $templateMgr->assign('issueId', $issue->getId());
+		$publisherIdEnabled = in_array('issue', (array) $request->getContext()->getData('enablePublisherId'));
+		$pubIdPlugins = PluginRegistry::getPlugins('pubIds');
+		if ($publisherIdEnabled || count($pubIdPlugins)) {
+			$templateMgr->assign('enableIdentifiers', true);
+		}
 		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issue.tpl'));
 	}
 

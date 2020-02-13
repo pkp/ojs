@@ -1043,9 +1043,6 @@ msgstr "دستورالعمل ویراستاری"
 msgid "submission.layout.noLayoutFile"
 msgstr "هیچ (لطفا ابتدا آخرین نسخه ویراستاری شده را به عنوان نسخه صفحه‌آرا آپلود کنید تا بتوانید در خواست صفحه‌آرائی ارسال کنید)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "شناسه عمومی کلیشه چاپی"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "این شناسه عمومی کلیشه چاپی قبلا بکار رفته است"
 

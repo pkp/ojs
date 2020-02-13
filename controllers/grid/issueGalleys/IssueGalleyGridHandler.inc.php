@@ -150,7 +150,7 @@ class IssueGalleyGridHandler extends GridHandler {
 		$this->addColumn(
 			new GridColumn(
 				'publicGalleyId',
-				'submission.layout.publicGalleyId',
+				'submission.publisherId',
 				null,
 				null,
 				$issueGalleyGridCellProvider

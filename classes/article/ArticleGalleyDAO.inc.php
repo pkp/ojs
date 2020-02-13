@@ -40,6 +40,7 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 		'label' => 'label',
 		'publicationId' => 'publication_id',
 		'seq' => 'seq',
+		'urlPath' => 'url_path',
 		'urlRemote' => 'remote_url',
 	];
 
@@ -168,16 +169,38 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
-	 * Retrieve publication galley by public galley id or, failing that,
-	 * internal galley ID; public galley ID takes precedence.
+	 * Retrieve publication galley by urlPath or, failing that,
+	 * internal galley ID; urlPath takes precedence.
 	 * @param $galleyId string
 	 * @param $publicationId int
 	 * @return ArticleGalley object
 	 */
 	function getByBestGalleyId($galleyId, $publicationId) {
-		$galley = null;
-		if ($galleyId != '') $galley = $this->getGalleyByPubId('publisher-id', $galleyId, $publicationId);
-		if (!isset($galley) && ctype_digit("$galleyId")) $galley = $this->getById((int) $galleyId);
+		$params = [
+			(int) $publicationId,
+			$galleyId,
+		];
+
+		$result = $this->retrieve(
+			'SELECT sf.*, g.*
+			FROM publication_galleys g
+			INNER JOIN publications p ON (g.publication_id = p.publication_id)
+			LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
+			LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
+			WHERE g.publication_id = ?
+				AND g.url_path = ?
+				AND nsf.file_id IS NULL
+			ORDER BY g.seq',
+			$params
+		);
+
+		if ($result->RecordCount() != 0) {
+			$galley = $this->_fromRow($result->GetRowAssoc(false));
+		} elseif (ctype_digit($galleyId)) {
+			$galley = $this->getById($galleyId);
+		}
+		$result->Close();
+
 		return $galley;
 	}
 

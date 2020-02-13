@@ -1114,9 +1114,6 @@ msgstr "Lektorat - Richtlinien"
 msgid "submission.layout.noLayoutFile"
 msgstr "Keine (Laden Sie die endgültige Lektoratsversion als Layoutversion hoch, bevor Sie eine Anfrage stellen.)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Eindeutige Kennung der Fahne"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Eindeutige Kennung existiert bereits."
 

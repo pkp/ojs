@@ -943,9 +943,6 @@ msgstr "Instrucciones de corrección de originales"
 msgid "submission.layout.noLayoutFile"
 msgstr "Ninguno (cargue la versión final de la corrección de originales como Versión maquetada antes de enviar la solicitud)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Identificador público de galerada"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "El identificador público de galerada ya existe."
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.2.0_stylesheet.xml
+  *
+  * Copyright (c) 2013-2020 Simon Fraser University
+  * Copyright (c) 2003-2020 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * Create new url_path values from pub-id::publisher-id values. #5430
+  *
+  -->
+
+<data>
+	<sql>
+		<query>
+			UPDATE publications as p
+			SET url_path = (
+				SELECT ps.setting_value
+				FROM publication_settings as ps
+				WHERE ps.publication_id = p.publication_id
+					AND ps.setting_name = 'pub-id::publisher-id'
+			)
+		</query>
+		<query>
+			UPDATE issues as i
+			SET url_path = (
+				SELECT ist.setting_value
+				FROM issue_settings as ist
+				WHERE ist.issue_id = i.issue_id
+					AND ist.setting_name = 'pub-id::publisher-id'
+			)
+		</query>
+		<query>
+			UPDATE issue_galleys as ig
+			SET url_path = (
+				SELECT igs.setting_value
+				FROM issue_galley_settings as igs
+				WHERE igs.galley_id = ig.galley_id
+					AND igs.setting_name = 'pub-id::publisher-id'
+			)
+		</query>
+		<query>
+			UPDATE publication_galleys as g
+			SET url_path = (
+				SELECT gs.setting_value
+				FROM publication_galley_settings as gs
+				WHERE gs.galley_id = g.galley_id
+					AND gs.setting_name = 'pub-id::publisher-id'
+			)
+		</query>
+	</sql>
+</data>

@@ -1468,9 +1468,6 @@ msgstr "Slika naslovnice broja"
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Proces uređivanja i izdavanja u OJS-u"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Javni identifikator prijeloma"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Javni identifikator prijeloma već postoji."
 

@@ -1415,9 +1415,6 @@ msgstr "Du kan i tillegg laste opp filer som kan gjøres tilgjengelige for redak
 msgid "submission.layout.noLayoutFile"
 msgstr "Ingen (last opp en ferdigstilt filversjon til manusredigering før bestillingen sendes)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Offentlig Sideoppsett-identifikator"
-
 msgid "debug.notes.currencyListLoad"
 msgstr "Lastet valutalisten \"{$filename}\" fra XML"
 

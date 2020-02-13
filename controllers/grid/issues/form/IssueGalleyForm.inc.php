@@ -36,6 +36,7 @@ class IssueGalleyForm extends Form {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		$this->addCheck(new FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
+		$this->addCheck(new FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 
@@ -64,11 +65,12 @@ class IssueGalleyForm extends Form {
 		$templateMgr->assign(array(
 			'issueId' => $this->_issue->getId(),
 			'supportedLocales' => $journal->getSupportedLocaleNames(),
+			'enablePublisherId' => in_array('issueGalley', (array) $request->getContext()->getData('enablePublisherId')),
 		));
 		if ($this->_issueGalley) $templateMgr->assign(array(
 				'issueGalleyId' => $this->_issueGalley->getId(),
 				'issueGalley' => $this->_issueGalley,
-		));
+			));
 
 		return parent::fetch($request, $template, $display);
 	}
@@ -93,6 +95,21 @@ class IssueGalleyForm extends Form {
 			}
 		}
 
+		if ($this->getData('urlPath')) {
+			if (ctype_digit($this->getData('urlPath'))) {
+				$this->addError('urlPath', __('publication.urlPath.numberInvalid'));
+				$this->addErrorField('urlPath');
+			} else {
+				$issueGalley = DAORegistry::getDAO('IssueGalleyDAO')->getByBestId($this->getData('urlPath'), $this->_issue->getId());
+				if ($issueGalley &&
+					(!$this->_issueGalley || $this->_issueGalley->getId() !== $issueGalley->getId())
+				) {
+					$this->addError('urlPath', __('publication.urlPath.duplicate'));
+					$this->addErrorField('urlPath');
+				}
+			}
+		}
+
 		return parent::validate($callHooks);
 	}
 
@@ -104,7 +121,8 @@ class IssueGalleyForm extends Form {
 			$this->_data = array(
 				'label' => $this->_issueGalley->getLabel(),
 				'publicGalleyId' => $this->_issueGalley->getStoredPubId('publisher-id'),
-				'galleyLocale' => $this->_issueGalley->getLocale()
+				'galleyLocale' => $this->_issueGalley->getLocale(),
+				'urlPath' => $this->_issueGalley->getData('urlPath'),
 			);
 		} else {
 			$this->_data = array();
@@ -120,7 +138,8 @@ class IssueGalleyForm extends Form {
 				'label',
 				'publicGalleyId',
 				'galleyLocale',
-				'temporaryFileId'
+				'temporaryFileId',
+				'urlPath',
 			)
 		);
 	}
@@ -160,6 +179,7 @@ class IssueGalleyForm extends Form {
 			$issueGalley->setLabel($this->getData('label'));
 			$issueGalley->setStoredPubId('publisher-id', $this->getData('publicGalleyId'));
 			$issueGalley->setLocale($this->getData('galleyLocale'));
+			$issueGalley->setData('urlPath', $this->getData('urlPath'));
 
 			// Update galley in the db
 			$issueGalleyDao->updateObject($issueGalley);
@@ -170,6 +190,7 @@ class IssueGalleyForm extends Form {
 			$issueGalley = $issueGalleyDao->newDataObject();
 			$issueGalley->setIssueId($this->_issue->getId());
 			$issueGalley->setFileId($issueGalleyFile->getId());
+			$issueGalley->setData('urlPath', $this->getData('urlPath'));
 
 			if ($this->getData('label') == null) {
 				// Generate initial label based on file type

@@ -154,14 +154,12 @@ class IssueGalley extends IssueFile {
 	}
 
 	/**
-	 * Return the "best" issue galley ID -- If a public isue galley ID is set,
+	 * Return the "best" issue galley ID -- If a urlPath is set,
 	 * use it; otherwise use the internal article Id.
 	 * @return string
 	 */
 	function getBestGalleyId() {
-		$publicGalleyId = $this->getStoredPubId('publisher-id');
-		if (!empty($publicGalleyId)) return $publicGalleyId;
-		return $this->getId();
+		return $this->getData('urlPath') ?? $this->getId();
 	}
 
 	/**

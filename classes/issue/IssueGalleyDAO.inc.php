@@ -159,16 +159,41 @@ class IssueGalleyDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve issue galley by public galley id or, failing that,
-	 * internal galley ID; public galley ID takes precedence.
+	 * Retrieve issue galley by urlPath or, failing that,
+	 * internal galley ID; urlPath takes precedence.
 	 * @param $galleyId string
 	 * @param $issueId int
-	 * @return ArticleGalley object
+	 * @return IssueGalley object
 	 */
 	function getByBestId($galleyId, $issueId) {
-		if ($galleyId != '') $galley = $this->getByPubId('publisher-id', $galleyId, $issueId);
-		if (!isset($galley) && ctype_digit("$galleyId")) $galley = $this->getById((int) $galleyId, $issueId);
-		return $galley;
+		$result = $this->retrieve(
+			'SELECT
+				g.*,
+				f.file_name,
+				f.original_file_name,
+				f.file_type,
+				f.file_size,
+				f.content_type,
+				f.date_uploaded,
+				f.date_modified
+			FROM issue_galleys g
+				LEFT JOIN issue_files f ON (g.file_id = f.file_id)
+			WHERE	g.url_path = ? AND
+				g.issue_id = ?',
+			[
+				$galleyId,
+				(int) $issueId,
+			]
+		);
+
+		if ($result->RecordCount() != 0) {
+			$issueGalley = $this->_fromRow($result->GetRowAssoc(false));
+		} else {
+			$issueGalley = $this->getById($galleyId, $issueId);
+		}
+		$result->Close();
+
+		return $issueGalley;
 	}
 
 	/**
@@ -223,6 +248,7 @@ class IssueGalleyDAO extends DAO {
 		$galley->setFileId($row['file_id']);
 		$galley->setLabel($row['label']);
 		$galley->setSequence($row['seq']);
+		$galley->setData('urlPath', $row['url_path']);
 
 		// IssueFile set methods
 		$galley->setServerFileName($row['file_name']);
@@ -251,15 +277,17 @@ class IssueGalleyDAO extends DAO {
 				file_id,
 				label,
 				locale,
-				seq)
+				seq,
+				url_path)
 				VALUES
-				(?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?)',
 			array(
 				(int) $galley->getIssueId(),
 				(int) $galley->getFileId(),
 				$galley->getLabel(),
 				$galley->getLocale(),
-				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getIssueId()) : $galley->getSequence()
+				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getIssueId()) : $galley->getSequence(),
+				$galley->getData('urlPath'),
 			)
 		);
 		$galley->setId($this->getInsertId());
@@ -281,13 +309,15 @@ class IssueGalleyDAO extends DAO {
 					file_id = ?,
 					label = ?,
 					locale = ?,
-					seq = ?
+					seq = ?,
+					url_path = ?
 				WHERE galley_id = ?',
 			array(
 				(int) $galley->getFileId(),
 				$galley->getLabel(),
 				$galley->getLocale(),
 				$galley->getSequence(),
+				$galley->getData('urlPath'),
 				(int) $galley->getId()
 			)
 		);

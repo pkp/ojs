@@ -1118,9 +1118,6 @@ msgstr "تعليمات التدقيق"
 msgid "submission.layout.noLayoutFile"
 msgstr "لا ملف (إرفع نسخة التدقيق النهائية بمثابة نسخة التصميم الطباعي قبيل إرسال الالتماس)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "معرَّف لوح الطباعة العام"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "معرَّف الطباعة العام موجود سلفاً"
 

@@ -1114,9 +1114,6 @@ msgstr "Οδηγίες επιμέλειας κειμένου"
 msgid "submission.layout.noLayoutFile"
 msgstr "Κανένα (Μεταφορτώστε την τελική έκδοση του επιμελημένου κειμένου ως έκδοση σελιδοποίησης πριν την αποστολή αιτήματος σελιδοποίησης)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Δημόσιο αναγνωριστικό τυπογραφικού δοκιμίου"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Το δημόσιο αναγνωριστικό του τυπογραφικού δοκιμίου υπάρχει ήδη."
 

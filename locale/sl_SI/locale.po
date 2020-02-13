@@ -1118,9 +1118,6 @@ msgstr "Navodila za lektoriranje"
 msgid "submission.layout.noLayoutFile"
 msgstr "Nobena (Pred pošiljanjem naložite končno lektorirano verzijo kot verzijo za grafično oblikovanje)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Identifikator javnega preloma"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Identifikator javnega preloma že obstaja."
 

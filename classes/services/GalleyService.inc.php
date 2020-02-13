@@ -249,6 +249,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 			$schemaService->getValidationRules(SCHEMA_GALLEY, $allowedLocales),
 			[
 				'locale.regex' => __('validator.localeKey'),
+				'urlPath.regex' => __('validator.alpha_dash'),
 			]
 		);
 

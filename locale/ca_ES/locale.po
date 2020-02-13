@@ -940,9 +940,6 @@ msgstr "Instruccions per a la correcció d'originals"
 msgid "submission.layout.noLayoutFile"
 msgstr "Cap (carrega la versió corregida final com a versió maquetada abans d’enviar la sol·licitud)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Identificador de galerades públiques"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "La identificació de galerades públiques ja existeix."
 

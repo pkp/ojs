@@ -1193,9 +1193,6 @@ msgstr "Diretrizes para Edição de Texto"
 msgid "submission.layout.noLayoutFile"
 msgstr "Nenhum (Enviar versão final da edição de texto como Versão de Prova antes de enviar a solicitação)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Identificador Público de Composição"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Identificador público de composição já existe."
 

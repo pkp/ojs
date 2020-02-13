@@ -38,11 +38,16 @@
 		{fbvFormSection title="submission.layout.galleyLabel" required="true"}
 			{fbvElement type="text" value=$label id="label" required="true"}
 		{/fbvFormSection}
-			{fbvFormSection title="submission.layout.publicGalleyId"}
+		{if $enablePublisherId}
+			{fbvFormSection title="submission.publisherId"}
 				{fbvElement type="text" value=$publicGalleyId id="publicGalleyId"}
 			{/fbvFormSection}
+		{/if}
 		{fbvFormSection title="common.language" required="true"}
 			{fbvElement type="select" id="galleyLocale" from=$supportedLocales selected=$galleyLocale|default:$formLocale translate=false required="true"}
+		{/fbvFormSection}
+		{fbvFormSection title="publication.urlPath"}
+			{fbvElement type="text" label="publication.urlPath.description" value=$urlPath id="urlPath" size=$fbvStyles.size.MEDIUM inline=true}
 		{/fbvFormSection}
 	{/fbvFormArea}
 
