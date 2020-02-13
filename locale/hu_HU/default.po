@@ -1,15 +1,291 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-04 12:57+0000\n"
-"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
-"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/default/"
-"hu/>\n"
-"Language: hu_HU\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:04:23+00:00\n"
+"Language: \n"
 
 msgid "section.default.title"
+msgstr "Cikkek"
+
+msgid "section.default.abbrev"
+msgstr "CIKK"
+
+msgid "section.default.policy"
 msgstr ""
+
+msgid "default.genres.article"
+msgstr "Cikk szövegtartalma"
+
+msgid "default.journalSettings.checklist.notPreviouslyPublished"
+msgstr "A beküldött anyag nem lett korábban publikálva, és megelőzően egy másik folyóiratnál sem lett lektorálva (bővebb magyarázatot lásd a Megjegyzések a szerkesztőnek résznél)."
+
+msgid "default.journalSettings.checklist.fileFormat"
+msgstr "A benyújtott fájl OpenOffice, Microsoft Word, RTF, dokumentum fájlformátum."
+
+msgid "default.journalSettings.checklist.addressesLinked"
+msgstr "Ahol lehetséges, ott megadott DOI-s vagy URL-es hivatkozásokat."
+
+msgid "default.journalSettings.checklist.submissionAppearance"
+msgstr "A szöveg egyes sorközzel; 12 pontos betűmérettel; használjon dőlt formázást az aláhúzott kiemelés helyett (kivéve az URL címek); és minden illusztráció, ábra és táblázat a helyére kerüljön és ne a szöveg végére."
+
+msgid "default.journalSettings.checklist.bibliographicRequirements"
+msgstr "A szöveg betartja azokat a stiláris és bibliográfiai követelményeket, amelyek a Szerzői útmutatóban szerepelnek."
+
+msgid "default.journalSettings.privacyStatement"
+msgstr "A folyóiratnál megadott nevek és email címek kizárólag annál a folyóiratnál lesznek felhasználva, más célokra, harmadik félnek nem kerül átadásra."
+
+msgid "default.journalSettings.openAccessPolicy"
+msgstr "Ez a folyóirat azonnal szabad hozzáférést enged a tartalmakhoz, követve azt az alapelvet, hogy a kutatás legyen szabadon elérhető, támogatva a tudás globális terjedését."
+
+msgid "default.journalSettings.authorSelfArchivePolicy"
+msgstr "Ez a folyóirat engedi sőt bíztatja a szerzőket, hogy a cikkeiket megjelenés előtt és/vagy után helyezzék el a saját weboldalukon vagy intézményi repozitóriumokban, mialatt a megfelelő bibliográfiai adatokkal bekerül a cikk a folyóirathoz."
+
+msgid "default.journalSettings.copyeditInstructions"
+msgstr ""
+"A technikai szerkesztési szakasz célja, hogy segítse a munkafolyamatot, a nyilvánosságot, nyelvtant, megfogalmazást és a cikk megformázását. Ennél a pontnál van a szerzőnek az utolsó lehetősége belejavítani a műbe, mert a szerkesztői folyamat következő lépése már csak tipográfiai és formázási korrekciót tartalmaz. \n"
+"\n"
+"A fájl, ami szerkesztve lesz, Word vagy .rtf formátumú, ezért egyszerűen úgy kell szerkeszteni, mint szövegszerkesztési dokumentumot. Kétféle szerkesztési forma javasolt. Az egyik a Word Korrektúra funkciója, ami követi a változásokat, ennek feltétele, hogy mind a technikai szerkesztő, mind a szerkesztő, mind a szerző használja ezt a szoftvert. A második lehetőség szoftverfüggetlen, a Harvard Educational Review engedélyével használható. A folyóirat szerkesztő módosíthatja ezeket az utasításokat, így javaslatok is küldhetők, amelyekkel javítható a folyóirat szerkesztési folyamata.\n"
+"\t\n"
+"<h4>Technikai szerkesztő rendszerek</h4>\n"
+"\n"
+"<strong>1. Microsoft Word korrektúra szolgáltatása</strong>\n"
+"\n"
+"A programban az Eszközök menü alatt található ez a funkció, aminek a segítségével a szerkesztési beszúrások  és javítások (eltérő színnel látszódnak), a törlésnél (színesen áthúzva vagy a lap szélén törlés jelzéssel) különféle jelzésekkel látszanak. A technikai szerkesztő kérdéseket tehet fel a szerzőnek (Szerzői kérdések) és a szerkesztőnek (Szerkesztői kérdések), ha ezeket szögeletes zárójelek közé teszi. A szerkesztett változat feltöltésre kerül, amiről a szerkesztő értesítést kap. A szerkesztő átnézi a szöveget és értesíti a szerzőt.\n"
+"\n"
+"A szerkesztőnek és a szerzőnek is jóvá kell hagynia a változtatásokat, ha azokkal egyetértenek. Ha később még szükség van változtatni, akkor a szerkesztő és a szerző is változtathat a korábbi javításokon, ahogy új szöveget is beszúrhat, vagy további részeket is törölhet bárhol a szövegben. A szerzőnek és a szerkesztőnek is válaszolnia kell a hozzájuk intézett kérdésekre, a válaszokat a szögletes zárójelbe kell betenniük.\n"
+"\n"
+"Amikor a szöveget mind a szerző, mind a szerkesztő átnézte, a végső javításokat a technikai szerkesztő fogadja el és adja át a tördelés számára.\n"
+"\n"
+"<strong>2. Harvard Educational Review</strong>\n"
+"\n"
+"<strong>Leírás a kézirat elektronikus szerkesztéséhez</strong>\n"
+"\n"
+"Kérem, kövesse az alábbi szabályokat a kézirat elektronikus szerkesztéséhez:\n"
+"\n"
+"<strong>Reagálás a javasolt módosításokra.</strong>\n"
+"&nbsp; Az egyes javasolt változtatások elfogadásával a szöveg félkövér formázása megszűnik &nbsp; Azoknál javaslatoknál, amelyeket nem fogad el, újra megjelenik az eredeti szöveg és <strong>félkövér</strong> lesz.\n"
+"\n"
+"<strong>Kiegészítések és törlések végrehajtása.</strong>\n"
+"&nbsp; A kiegészített új szövegeket <strong>félkövérrel</strong> jelölje.\n"
+"&nbsp; Cserélje le a törölt szöveget ezzel: <strong>[törölt szöveg]</strong>.\n"
+"&nbsp; Ha egy vagy több mondatot töröl, lássa el megjegyzéssel pl. <strong>[törölve 2 mondat]</strong>.\n"
+"\n"
+"<strong>Válasz a Szerzőnek feltett kérdésekre (QAs).</strong>\n"
+"&nbsp; Az összes Szerzői kérdést változtatás nélkül félkövér formázással tartsa meg. Ne törölje ezeket.\n"
+"&nbsp; Válaszként fűzzön hozzá megjegyzést. A megjegyzések elkülönítésére használja:\n"
+"<strong>[Megjegyzés:]</strong>\n"
+"&nbsp; pl. <strong>[Megjegyzés: javaslatának megfelelően bővítjük a módszerrel kapcsolatos vitát]</strong>.\n"
+"\n"
+"<strong>Megjegyzések készítése.</strong>\n"
+"&nbsp; Használjon megjegyzéseket, hogy elmagyarázza a szervezeti változtatásokat vagy a főbb szakértői véleményeket\n"
+"&nbsp; pl. <strong>[Megjegyzés: A felső bekezdés áthelyezésre került az 5. oldalról a 7. oldalra].</strong>\n"
+"&nbsp; Megjegyzés: Amikor egy oldalszámra hivatkozik, akkor használja a kézirat nyomtatott verziójának a számozását, amit megkapott. Ez azért fontos, mert a szerkesztési folyamat alatt megváltozhat az elektronikus példány oldalszámozása.\n"
+"\n"
+"<h4>Az ábra egy elektronikusan szerkesztett példánynál</h4>\n"
+"\n"
+"<ol>\n"
+"<li><strong>A technikai szerkesztés megkezdése.</strong>A folyóirat technikai szerkesztője szerkeszteni fogja a szöveget, hogy segítse a szakértői munkafolyamatot, a nyilvánosságot, nyelvtant, megfogalmazást és a cikk megformázását, ahogyan a szerzőnek feltett kérdések is szükségesek. Ha ez az első szerkesztés készen van, a technikai szerkesztő feltölti az átnézett változatot a folyóirat weboldalára és értesíti a szerzőt, hogy a kézirata szerkesztett változatát átnézheti.</li>\n"
+"<li><strong>Szerzői felülvizsgálat.</strong> Mielőtt drámai változtatásokat eszközölne a kézirat szerkezetén, a szerzőnek ellenőriznie kell azt a szerkesztőkkel közösen, akikkel együtt dolgozott az anyagon. A szerzőknek el kell fogadni/elutasítania minden módosítást, ami a kezdeti technikai szerkesztés óta keletkezett, adott esetben válaszolnia kell minden szerzői kérdésre is. Amikor végez az átnézéssel, akkor a szerzőnek át kell neveznie a fájlt pl. AuthorNameQA.doc névről AuthorNameQAR.doc névre (pl. erről LeeQA.doc erre LeeQAR.doc) és fel kell töltenie az átnézett dokumentumot a folyóirat oldalára.</li>\n"
+"<li><strong>Végső technikai szerkesztés.</strong> A folyóirat technikai szerkesztője fogja a végső változtatásokat elfogadni és elkészíteni a végső kéziratot. Amikor kész, a technikai szerkesztő feltölti a dokumentumot a folyóirat oldalára és értesíti a tördelőszerkesztőt, hogy készítse el a formázást.</li>\n"
+"</ol>"
+
+msgid "default.journalSettings.refLinkInstructions"
+msgstr ""
+"<h4>Hivatkozások beillesztése a tördelési folyamatnál</h4>\n"
+"\t<p>Amikor a cikk konvertálásra kerül HTML vagy PDF formátumba, meg kell arról bizonyosodni, hogy az összes hyperhivatkozás aktív és működik.</p>\n"
+"\t<h4>A. Amikor a szerző ad hivatkozási linket</h4>\n"
+"\t<ol>\n"
+"\t<li>Amikor a cikk még szövegszerkesztési fázisban van (pl. Word), akkor egy TÉTEL MEGTEKINTÉSE kifejezést kell a hivatkozás végéhez hozzáadni, ami egy URL.</li>\n"
+"\t<li>Alakítsa hyperlinkké a kifejezést, amihez használja a Word Hyperlink beszúrása eszközt, hogy előálljon a fentebb említett URL.</li>\n"
+"\t</ol>\n"
+"\t<h4>B. Engedélyezze a Google Scholar olvasói eszközt a hivatkozásokhoz</h4>\n"
+"\t<ol>\n"
+"\t\t<li>Amikor a cikk még szövegszerkesztési fázisban van (pl. Word), másolja a hivatkozások címeit a Hivatkozások listába (ha úgy tűnik, hogy túl gyakori a cím - pl. Béke - akkor használja a szerzőt és a címet).</li>\n"
+"\t\t<li>Illessze be a hivatkozás listát a %22-höz, helyezzen a + jelet mindegyik szó közé: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22</li>\n"
+"\n"
+"\t<li>Adja hozzá a GS SEARCH kifejezést mindegyik cikk hivatkozás listájához.</li>\n"
+"\t<li>Alakítsa hyperlinkké a kifejezést, amihez használja a Word Hyperlink beszúrása eszközt, hogy előálljon a fentebb említett #2-es számú URL.</li>\n"
+"\t</ol>\n"
+"\t<h4>C. Engedélyezze az olvasóknak a DOI azonosító alapján történő hivatkozás keresést</h4>\n"
+"\t<ol>\n"
+"\t<li>Amikor a cikk még Word-ben van, másoljon a hivatkozások közül egy tételt a CrossRef Szöveges keresőbe http://www.crossref.org/freeTextQuery/.</li>\n"
+"\t<li>Illessze be kapott DOI-kat a következő URL-be (= és & között): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>\n"
+"\t<li>A cikk mindegyik hivatkozásának a végére illessze be a CrossRef kifejezést.</li>\n"
+"\t<li>Alakítsa hyperlinkké a kifejezést, amihez használja a Word Hyperlink beszúrása eszközt, hogy előálljon a fentebb említett #2-es számú URL.</li>\n"
+"\t</ol>"
+
+msgid "default.journalSettings.proofingInstructions"
+msgstr ""
+"<p>A korrektúrázási szakasz célja, hogy az esetlegesen még meglévő helyesírási, nyelvi és formázási hibák kiszűrhetők legyenek a megjelenési nézetben. További jelentős változtatás nem lehet ebben a szakaszban, hacsak nem egyezteti le a rovatszerkesztővel. A tördeltben kattintson a korrektúra megtekintésére, hogy láthassa a cikk HTML, PDF vagy más elérhető megjelenítendő formátumát.</p>\n"
+"\t<h4>A helyesírási és nyelvtani hibák</h4>\n"
+"\n"
+"\t<p>Másolja a problémás szót vagy szócsoportot és illessze be a Korrektúra javítások részbe a szerkesztő számára a következő \"MÓDOSÍTÁS\" leírással:</p>\n"
+"\n"
+"\t<pre>1. MÓDOSÍTÁS...\n"
+"\tthen the others\n"
+"\tERRE...\n"
+"\tthan the others</pre>\n"
+"\t<br />\n"
+"\t<pre>2. MÓDOSÍTÁS...\n"
+"\tMalinowsky\n"
+"\tERRE...\n"
+"\tMalinowski</pre>\n"
+"\t<br />\n"
+"\n"
+"\t<h4>A formázási hibák</h4>\n"
+"\n"
+"\t<p>Jelölje a helyét és mutassa be a probléma természetét a Korrektúra javítások részbe, miután begépelre, hogy \"FORMÁZÁS\", a következők szerint:</p>\n"
+"\t<br />\n"
+"\t<pre>3. FORMÁZÁS\n"
+"\tA számok a 3-as táblázat 3. oszlopában nem megfelelően igazodnak.</pre>\n"
+"\t<br />\n"
+"\t<pre>4. FORMÁZÁS\n"
+"\tA bekezdés, ami úgy kezdődik, hogy \"This last topic...\" nincs behúzva.</pre>"
+
+msgid "default.journalSettings.forReaders"
+msgstr "Arra ösztönözzük az olvasóinkat, hogy iratkozzanak fel a folyóirat publikálási értesítő szolgáltatására. Használja a <a href=\"{$indexUrl}/{$journalPath}/user/register\">Regisztráció</a> a folyóirat főoldalának tetején található linket. Ezzel a feliratkozással az olvasó minden új szám tartalomjegyzékét megkapja emailben. Ez a lista arra is jó, hogy a folyóirat egy bizonyos szintű támogatást szerezzen vagy olvasóközönséget toborozzon. Lásd a folyóirat <a href=\"{$indexUrl}/{$journalPath}/about/submissions#privacyStatement\">Adatvédelmi nyilatkozatát</a>, amely biztosítja az olvasókat, hogy a nevük és email címük más célokra nem lesznek felhasználva."
+
+msgid "default.journalSettings.forAuthors"
+msgstr "Érdeklődik a folyóiratnél történő közlés iránt? Javasoljuk, hogy nézze át a <a href=\"{$indexUrl}/{$journalPath}/about\">Információk a folyóiratról</a> oldalt a folyóirat közzétételi politikájának megismeréséhez, valamint a <a href=\"{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines\">Szerzői útmutatót</a>. A szerzőknek szükséges <a href=\"{$indexUrl}/{$journalPath}/user/register\">regisztrálni</a> ahhoz a folyóirathoz, ahol elsődlegesen szeretnének cikket közölni vagy, ha már regisztráltak, akkor egyszerűen <a href=\"{$indexUrl}/index/login\">lépjenek be</a> és kezdjék el az 5 lépéses folyamatot."
+
+msgid "default.journalSettings.forLibrarians"
+msgstr "Azt javasoljuk, hogy a kutató könyvtárak gyűjtsék egybe a könyvtárban található elektronikus folyóiratokat. Valamint érdemes megjegyezni, hogy ez a folyóiratok nyílt forráskódú publikációs rendszere, amely alkalmas a könyvtárak számára, hogy a tagjai akár résztvegyenek a folyóiratok szerkesztésében is (lásd <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.journalSettings.lockssLicense"
+msgstr "This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href=\"http://www.lockss.org/\">More...</a>"
+
+msgid "default.journalSettings.clockssLicense"
+msgstr "Ez a folyóirat a LOCKSS rendszert használja, az elosztott archíválás érdekében, ezzel lehetővé válik, hogy a könyvtárak tartósan megőrizzék az anyagaikat, a későbbi esetleges helyreállítás céljából.<a href=\"http://www.lockss.org/\">Tovább...</a>"
+
+msgid "default.journalSettings.publicationFee"
+msgstr "Cikk publikáció"
+
+msgid "default.journalSettings.purchaseArticleFee"
+msgstr "Cikk vásárlás"
+
+msgid "default.journalSettings.purchaseIssueFee"
+msgstr "Folyóiratszám vásárlása"
+
+msgid "default.journalSettings.membershipFee"
+msgstr "Egyesületi tagság"
+
+msgid "default.journalSettings.submissionFee"
+msgstr "Cikk beküldés"
+
+msgid "default.journalSettings.submissionFeeDescription"
+msgstr "A szerzőknek ki kell fizetniük a cikk beküldési díjakat, ami része a benyújtási folyamat lektorálási költségeinek."
+
+msgid "default.journalSettings.fastTrackFee"
+msgstr "Gyors lektorálás"
+
+msgid "default.journalSettings.fastTrackFeeDescription"
+msgstr "Ennek a díjnak a megfizetésével garantált, hogy a szakmai lektorálás, a szerkesztői döntés, a szerző értesítése a kézirattal kapcsolatban megtörténik 4 héten belül."
+
+msgid "default.journalSettings.publicationFeeDescription"
+msgstr "Ha az anyag megjelenésre alkalmas, kapni fog egy jelzést, hogy fizessen be a cikk publikációs díjat, ami fedezi a publikációs költségeket."
+
+msgid "default.journalSettings.waiverPolicy"
+msgstr "Ha nincs anyagi fedezete a díjak kifizetésére, akkor lehetősége van lemondani azokat. Mi nem akarjuk a díjakkal megakadályozni egy arra érdemes munka megjelenését."
+
+msgid "default.journalSettings.purchaseArticleFeeDescription"
+msgstr "A költség kifizetésével megtekintheti, letöltheti és kinyomtathatja a cikket."
+
+msgid "default.journalSettings.purchaseIssueFeeDescription"
+msgstr "A költség kifizetésével megtekintheti, letöltheti és kinyomtathatja a folyóiratszámot."
+
+msgid "default.journalSettings.membershipFeeDescription"
+msgstr "Ennek a díjnak a megfizetésével egy évre tagja lesz az egyesületnek, és szabadon hozzáférhet a folyóirathoz."
+
+msgid "default.journalSettings.donationFee"
+msgstr "Adományok a folyóiratnak"
+
+msgid "default.journalSettings.donationFeeDescription"
+msgstr "Minden adományt hálásan fogadunk, ami segítség, hogy a szerkesztők továbbra is a legjobb tudásuk szerint biztosítsák a folyóirat színvonalát az olvasóknak."
+
+msgid "default.groups.name.manager"
+msgstr "Folyóirat menedzser"
+
+msgid "default.groups.plural.manager"
+msgstr "Folyóirat menedzserek"
+
+msgid "default.groups.abbrev.manager"
+msgstr "FMen"
+
+msgid "default.groups.name.editor"
+msgstr "Folyóirat szerkesztő"
+
+msgid "default.groups.plural.editor"
+msgstr "Folyóirat szerkesztők"
+
+msgid "default.groups.abbrev.editor"
+msgstr "FSZ"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Vendégszerkesztő"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Vendég szerkesztők"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "VSZ"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Rovatszerkesztő"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Rovatszerkesztők"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "RovSzerk"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Előfizetés Menedzser"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Előfizetés Menedzserek"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "ElMen"
+
+msgid "default.genres.researchInstrument"
+msgstr "Kutatási eszköz"
+
+msgid "default.genres.researchMaterials"
+msgstr "Kutatási anyagok"
+
+msgid "default.genres.researchResults"
+msgstr "Kutatási eredmények"
+
+msgid "default.genres.transcripts"
+msgstr "Átiratok"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Adatelemzés"
+
+msgid "default.genres.dataSet"
+msgstr "Adathalmaz"
+
+msgid "default.genres.sourceTexts"
+msgstr "Forrásszöveg"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Szakmai Lektor"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Szakmai Lektorok"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "SZL"
+
+msgid "default.journalSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$ldelim}$contextUrl{$rdelim}\">{$ldelim}$contextName{$rdelim}</a>"

@@ -1,2 +1,100 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:07:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "mEDRA Export/Regisztrációs Plugin"
+
+msgid "plugins.importexport.medra.description"
+msgstr "Folyóiratszám, cikk, preprint metaadat export Onix for DOI (O4DOI) formátumban és a DOI-k regisztrációja a mEDRA regisztrációs ügynökséggel."
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"\n"
+"\t\tIf you want to register DOIs with mEDRA, please follow the directions on the\n"
+"\t\t<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">mEDRA homepage</a>\n"
+"\t\tto receive a username and password. If you do not have your own username and\n"
+"\t\tpassword you'll still be able to export into the mEDRA XML format (Onix for DOI)\n"
+"\t\tbut you cannot register your DOIs with mEDRA from within OJS. \n"
+"\t\tPlease note that the password will be saved as plain text, i.e. not encrypted, due\n"
+"\t\tto the mEDRA registration service requirements.\n"
+"\t"
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Kérjük, állítsa be a mEDRA export plugint:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Felhasználónév"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Kérjük, írja be a mEDRA felhasználónevét. A felhasználónév nem tartalmazhat kettőspontot."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "A mEDRÁ-nál regisztrált intézmény neve"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Kérjük, írja be az intézményt, amely a mEDRÁ-nál regisztrált."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Személy, akivel a mEDRA felveheti a kapcsolatot technikai kérdések esetén:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Intézmény"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "Kérjük, írja be az intézményt, amely technikailag felelős a DOI exportért (pl. az intézmény, amely a webszervert hosztolja)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Kapcsolattartó"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Kérjük, írjon be egy technikai kapcsolattartót."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "E-mail"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Kérjük, írjon be az érvényes e-mail címét a technikai kapcsolattartó személynek."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Kérjük, hogy válassza ki azt az országot, amely a \"publikálási ország\" lesz a mEDRA számára."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "Kérjük, hogy válassza ki, hogyan akar folyóiratszámot exportálni mint <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'munkák' or 'kinyilvánítások'</a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "munka"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "kinyilvánítás"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Folyóiratszámok exportja, mint"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "Az OJS regisztrálni fogja a hozzárendelt DOI-kat automatikusan a mEDRÁ-nál. Felhívjuk figyelmét, hogy ennek feldolgozása egy kis ideig eltarthat a közzététel után. Ellenőrizheti az összes nem regisztrált DOI-t."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "Használja a mEDRA test API-t (testing environment) a DOI regisztrációhoz. Ne felejtse el ezt a beállítást kikapcsolni a megjelentetéshez."
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "NB: DOIs assigned to articles will be exported to mEDRA as <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'works'</a>. DOIs assigned to galleys will be exported as <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'manifestations'</a>."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "mEDRA automatikus regisztrálási feladat"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Használat: \n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

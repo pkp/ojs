@@ -1,2 +1,180 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:07:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "Ez a plugin lehetővé teszi az Egységes Erőforrás-névek (Uniform Resource Names) hozzárendelését folyóiratszámokhoz, cikkekhez, preprintekhez az OJS-ben."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "Kérjük, állítsa be az URN plugint URN-ek kezelésére és használatára OJS-ben:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Folyóirat tartalom"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Kérjük, hogy válassza ki azokat az objektumokat, amelyekhez URN-eket szeretne rendelni!"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Kérjük, hogy válassza ki azokat az megjelentetési objektumokat, amelyekhez  Uniform Resource Names (URN)-eket fog rendelni:"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Folyóiratszámok"
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "Cikkek"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Preprintek"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN Előtag"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "Az URN prefix is the fix, never changing part of Az URN (e.g. \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "Az URN prefix pattern must be in the form \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN Utótag"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "Az URN utótag bármilyen formátumú lehet, de egyedinek kell lennie minden publikálási objektum esetében, amely ugyanahhoz a URN előtaghoz tartozik:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "Használja az alább begépelt mintát URN utótag generálásához. Használja a %j -t a folyóirat kezdőbetűkhöz, %v -t a évfolyamszámhoz, %i -t a folyóiratszámhoz, %Y -t az évhez, %a -t az OJS cikkazonosítóhoz, %g -t az OJS preprint azonosítóhoz, %f -t OJS fájlazonosítóhoz, %p -t az oldalszámhoz and %x -et, mint egyéni azonosítót."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Például, vol%viss%ipp%p ilyen URN utótagot eredményez \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "folyóiratszámok számára"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "cikkek számára"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "preprintek számára"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Gépeljen be URN utótag mintát folyóiratszámok számára."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "Gépeljen be URN utótag mintát cikkek számára."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Gépeljen be URN utótag mintát preprintek számára."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Használjon alapértelmezett mintákat."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i folyóiratszámoknak<br />%j.v%vi%i.%a cikkeknek<br />%j.v%vi%i.%a.g%g preprinteknek."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "Adjon meg egy egyedi URN-utótagot minden megjelent tételhez. Minden egyes elem metaadat-oldalán további URN beviteli mezőt talál."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Ellenörzőszám"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "Az ellenörzőszám automatikusan lesz kiszámolva és végére illesztve, mint az URN utolsó számjegye."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Névtér"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Válassz"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "Az állandó azonosító névtér általában a regisztrációhoz szükséges (pl. Deutsche Nationalbibliothek-nél)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Feloldó URL"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(pl. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Kérjük, írja be a feloldó URL-t."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr " URN-ek újrakiosztása"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "Ha megváltoztatja az URN konfigurációját, a már kioszott URN-ekre nem lesz hatással. Miután az URN konfiguráció mentésre került, ezzel a gombbal törölheti az összes létező URN-t, hogy az új beállítások érvénybe lépjenek a meglévő objektumokkal."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Biztos benne, hogy törli az összes létező URN-t?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "folyóiratszám"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "cikk"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "preprint"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "Az URN nem hozzárendelhető, mert az egyéni utótag hiányzik."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "Az URN nem hozzárendelhető, mert feloldhatatlan mintát tartalmaz."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "Amit lát az az URN előnézete. Jelölje be a jelölőnégyzetet és mentse el az URN kiosztási űrlapot."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "Az URN  ehhez van hozzárendelve {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "A megadott URN utótag már használatban van egy másik megjelent elemnél. Kérjük, hogy minden egyes elemhez egyedi URN utótagot írjon be!"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "URN törlése"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Biztos, hogy törölni akarja a létező URN-t?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Folyóiratszám URN-k törlése"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Biztos, hogy törölni akarja a létező folyóiratszám URN-eket?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "Használja a következő beállítási lehetőséget az összes URN típus törléséhez (cikkek és preprintek), amely most ehhez a számhoz van rendelve."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Ellenörzőszám hozzáadása"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "URN hozzárendelése {$pubId} ehhez {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "Az URN nem rendelhető hozzá, mert az egyéni utótag hiányzik."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "Az URN {$pubId} nem hozzárendelhető, mert feloldhatatlan mintát tartalmaz."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "Az URN {$pubId} hozzárendelés megtörtént."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Az ellenörzőszám hiányzik."

@@ -1,2 +1,321 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:04:23+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Új beküldés"
+
+msgid "author.track"
+msgstr "Aktív beküldések"
+
+msgid "author.competingInterests"
+msgstr "Összeférhetetlenség <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Politika</a>"
+
+msgid "author.submit.submitArticle"
+msgstr "Egy cikk beküldése"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "5 lépés a beküldéshez"
+
+msgid "author.submit.startHereTitle"
+msgstr "Új beküldés megkezdése"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Kattintson ide</a>, hogy eljusson az 5 lépéses benyújtási folyamat első lépéséhez."
+
+msgid "author.submit.step1"
+msgstr "1. lépés Beküldés megkezdése"
+
+msgid "author.submit.step2"
+msgstr "2. lépés A beküldendő anyag feltöltése"
+
+msgid "author.submit.step3"
+msgstr "3. lépés A beküldött anyag metaadatainak megadása"
+
+msgid "author.submit.step4"
+msgstr "4. lépés Kiegészítő fájlok feltöltése"
+
+msgid "author.submit.step4a"
+msgstr "4a. lépés Kiegészítő fájl hozzáadása"
+
+msgid "author.submit.step5"
+msgstr "5. lépés A beküldés jóváhagyása"
+
+msgid "author.submit.start"
+msgstr "Kezdés"
+
+msgid "author.submit.upload"
+msgstr "Beküldendő anyag feltöltése"
+
+msgid "author.submit.metadata"
+msgstr "Metaadatok megadása"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Kiegészítő fájlok feltöltése"
+
+msgid "author.submit.confirmation"
+msgstr "Megerősítés"
+
+msgid "author.submit.nextSteps"
+msgstr "Következő lépés"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Később is jóváhagyhatja a beküldést, ha kiválasztja az aktív beküldéseket  a szerzői főoldalról."
+
+msgid "author.submit.notAccepting"
+msgstr "Ez a folyóirat jelenleg nem fogad beküldéseket"
+
+msgid "author.submit.requestWaiver"
+msgstr "Lemondás kérése"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Kérjük, vegye figyelembe, hogy ezzel lemond a cikkért járó honoráriumról."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Kérjük, a megjegyzés mezőbe indokolja a lemondást."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Ha a kérelmező egyben a lemondó is, akkor indokolnia kell lemondást a megadott helyen."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "A szakmai lektorálási kör {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Szakmai lektorálás alatt: Átnézés kérése"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Szerkesztésnél: Nyelvi lektorálás kérése"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Szerkesztésnél: Korrektúra kérése"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Beszerkesztett változat feltöltése"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Korrektúrázási javítások"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Valóban törölni akarja ezt a befejezetlen beküldést?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Státusz megtekintése"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Nincs beküldés."
+
+msgid "author.submit.journalSection"
+msgstr "Folyóiratrovat"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "A cikkeket a folyóirat valamelyik rovatához kell beküldeni."
+
+msgid "author.submit.verifyChecklist"
+msgstr "A folytatás előtt meg kell bizonyosodnia arról, hogy az ellenőrzési lista minden tétele elfogadott."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "A szerzőknek el kell fogadniuk a szerzői jogi közleményeket, amely erre a benyújtott anyagra vonatkozik, ha és amikor a folyóiratban publikálásra kerül (a szerkesztőnek szánt megjegyzéseket később lehet hozzátenni)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Mielőtt folytatná el kell fogadnia a szerzői jogi közleményeket."
+
+msgid "submission.submit.coverNote"
+msgstr "A szerkesztőnek szánt megjegyzések"
+
+msgid "author.submit.comments"
+msgstr "Szöveg megadása (nem kötelező)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Kérjük, válassza ki, hogy melyik folyóiratterülethez nyújtja be az anyagot."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Kérjük, válassza ki a benyújtás nyelvét."
+
+msgid "submission.submit.privacyStatement"
+msgstr "A folyóirat adatvédelmi nyilatkozata"
+
+msgid "author.submit.reorderInstructions"
+msgstr "A szerzők újrarendezése, hogy megfelelő sorrendben jelenjenek meg a publikációnál."
+
+msgid "author.submit.reorder"
+msgstr "A szerzők nevének újrarendezése"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "A fő kapcsolattartó a szerkesztőségi levelezésnél."
+
+msgid "author.submit.addAuthor"
+msgstr "Szerző hozzáadása"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Szerző törlése"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Kifejezések megadása a benyújtott anyag indexeléséhez; a kifejezéseket pontosvesszővel válassza el (kifejezés1; kifejezés2; kifejezés3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Utal egy földrajzi helyre, időrendi vagy történelmi lefedettségre, és/vagy kutatási terület példára."
+
+msgid "author.submit.languageInstructions"
+msgstr "English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">További kódok</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Legalább egy szerzőt meg kell adni."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Minden szerzőnél kötelező a vezetéknév, keresztnév és az e-mail cím."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Kérjük, adja meg a cikk címét."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Kérjük, adja meg a cikkének az absztraktját."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Ebben a szakaszban túllépte az absztrakt maximális szó határt."
+
+msgid "author.submit.submissionFile"
+msgstr "Fájlbeküldés"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr ">Beküldendő anyag feltöltése"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "A beküldött fájl cseréje"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Nincs beküldött fájl."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Biztosan folytatni akarja beküldött anyag feltöltése nélkül?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Nem kötelező, hogy kiegészítő fájlt töltsön a cikkéhez. A fájloknak, amelyek bármilyen formátumban lehetnek, tartalmazniuk kell (a) kutatási eszközöket, (b) adathalmazokat, amelyeknek meg kell felelniük a vizsgált kutatási terület etikai elbírálási szempontjainak (c) azokat a forrásokat, amelyeket egyébként az olvasók nem látnak, (d) ábrákat és táblázatokat, amelyek nem integrálhatók magába a szövegbe, vagy más anyagokat, amelyek hozzájárultak a munka elkészültéhez."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Kattintson a Mentésre a fájl feltöltéséhez (miután a hozzáadott fájl megjelent)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Biztosan folytatni akarja a kiválasztott kiegészítő fájlok feltöltése nélkül?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Nincs kiegészítő fájl hozzáadva ehhez a beküldéshez."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Vissza a kiegészítő fájlhoz"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Biztos benne, hogy törölni akarja ezt a kiegészítő fájlt?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Kiegészítő fájl feltöltése"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Kiegészítő fájl hozzáadása"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Kiegészítő fájl szerkesztése"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Kiegészítő fájl metaadat"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "A kiegészítő anyag indexeléséhez a továbbiakban adjon meg metaadatot a feltöltött kiegészítő fájlhoz."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Kiegészítő fájl"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "A fájl készítője (vagy tulajdonosa)"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Kutatási eszköz"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Kutatási anyagok"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Kutatási eredmények"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Átiratok"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Adat elemzések"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Adatkészlet"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Forrásszöveg"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Rövid leírás"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Fájl átadása lektorálásra (metaadat nélkül), ez nem veszélyezteti a kettős vak lektorálást."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Csak formálisan közzétett anyagokkal való használatra."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Dátum, amikor az adatot gyűjtötték vagy az eszköz létrejött."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "A tanulmány neve vagy egyéb eredet."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Egyéb részletek"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Nincs fájl feltöltve."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Kérjük, adja meg a kiegészítő fájl címét."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Kérjük, adjon meg tárgyat."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Kérjük, adjon meg leírást."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Nyilvános kiegészítő fájl azonosító már létezik."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Nyilvános kiegészítő fájl azonosító"
+
+msgid "author.submit.confirmationDescription"
+msgstr "A kézirat {$journalTitle} elküldéséhez kattintson a Beküldés befejezése gombra. A benyújtás fő kapcsolattartója kap egy e-mailt, amelyben a benyújtott anyag aktuális állapotának megtekintéséhez talál linket, így bejelentkezés után folyamatosan nyomonkövethető a lektorálási és szerkesztői folyamat. Köszönjük, hogy érdeklődik a {$journalTitle} folyóiratunknál való publikálás iránt."
+
+msgid "author.submit.noFiles"
+msgstr "Ehhez a benyújtáshoz nem csatolt fájlt."
+
+msgid "author.submit.filesSummary"
+msgstr "Fájl összesítő."
+
+msgid "author.submit.finishSubmission"
+msgstr "Benyújtás befejezése"
+
+msgid "author.submit.submissionComplete"
+msgstr "A benyújtás kész. Köszönjük, hogy érdeklődik a {$journalTitle} folyóiratunknál való publikálás iránt."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Szerzői változat feltöltése"
+
+msgid "author.article.copyeditedFile"
+msgstr "Technikailag szerkesztett fájl"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Szerzői fájl"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "A folyóirathoz történő beküldéshez felhasználói fiókra van szükség. Ez lehetővé teszi a szerkesztőinknek, hogy a beküldött anyagot nyomonkövessék és kapcsolatba lépjenek Önnel, ha a beküldött anyag státusza megváltozik, vagy ha további információra van szükség Öntől."

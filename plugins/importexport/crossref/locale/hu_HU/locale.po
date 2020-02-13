@@ -1,2 +1,139 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:07:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "CrossRef XML Export Plugin"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Cikk metaadat export CrossRef XML formátumban."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Követelmények"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Minden plugin követelmény teljesült."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "Egy folyóiratkiadó nem volt beállítva! Muszáj hozzáadnia egy kiadó intézményt ezen az oldalon <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Folyóirat beállítási oldal</a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "Egy folyóirat ISSN nem lett beállítva! Muszáj hozzáadnia egy ISSN-t ezen az oldalon <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Folyóirat beállítási oldal</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "Folyóiratcikkek Articles are not selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "The following items are required for a successful CrossRef deposit."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Beküldő (Depositor) neve"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Beküldő (Depositor) e-mail"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Kérjük, írja be a beküldő nevét!"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Kérjük, írja be a beküldő e-mail címét!"
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "Ha használni szeretné ezt a bővítményt a Digital Object Identifiers (DOI-k) regisztrálásához közvetlenül a CrossRef-nél, akkor felhasználónévre és jelszóra lesz szüksége (elérhető a <a href=\"http://www.crossref.org\" target=\"_blank\"> CrossRef </a>). Ha nem rendelkezik saját felhasználónevével és jelszóval, akkor továbbra is exportálhatja a CrossRef XML formátumba, de nem tudja regisztrálni a DOI-t a CrossRef-rel a OJS-n belül."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Felhasználónév"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Kérjük, írja be a CrossRef-től kapott felhasználónevét!"
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "A OJS automatikusan beküldi a hozzárendelt DOI-kat a CrossRef-nek. Felhívjuk figyelmét, hogy a közzététel után a feldolgozáshoz egy kis idő szükséges. Ellenőrizheti az összes regisztrálatlan DOI-t."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Használja a CrossRef teszt API-t (tesztkörnyezet) a DOI beküldéshez. Kérjük, ne felejtse el kikapcsolni ezt a beállítást a megjelentetéskor."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Megjegyzés: Csak folyóiratszámok (és nem azok cikkei) lesznek figyelembevéve az export/regisztráció során."
+
+msgid "plugins.importexport.crossref.status.submitted"
+msgstr "Beküldött"
+
+msgid "plugins.importexport.crossref.status.completed"
+msgstr "Eltárolt"
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Sikertelen"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Aktív"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Aktívnak jelölt"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p> Betöltés állapota: </p>\n"
+"<p>\n"
+"- Nem depozitált: erre a DOI-ra nem történt letétbe helyezés. <br />\n"
+"- Beküldött: ezt a DOI-t benyújtották a depozitálásra. <br />\n"
+"- Depozitált: a DOI-t betöltötték a Crossref-be, de lehet, hogy még nem aktív. <br />\n"
+"- Aktív: a DOI letétbe helyezve, és működik a feloldása is.<br />\n"
+"- Sikertelen: a DOI betöltés sikertelen. <br />\n"
+"- Aktívnak jelölt: a DOI-t manuálisan aktívnak jelölték.\n"
+"</ P>\n"
+"<p> Csak az utolsó betöltési kísérlet állapota jelenik meg. </p>\n"
+"<p> Ha egy betöltés sikertelen, kérjük, oldja meg a problémát, és próbálja meg ismét regisztrálni a DOI-t.</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "XML letöltés"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Aktívnak jelöl"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Beküld"
+
+msgid "plugins.importexport.crossref.action.checkStatus"
+msgstr "Státusz ellenőrzése"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "CrossRef automatikus regisztrációs feladat"
+
+msgid "plugins.importexport.crossref.notification.failed"
+msgstr "Egy DOI-t nem sikerült regisztrálni. Menjen az Eszöközök > Import/Export > CrossRef XML Export Plugin-hoz a sikertelen betöltések megtekintéséhez."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Használat:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "A beküldés sikertelen lett! A DOI regisztrációs szerver egy hibát adott vissza: '{$param}'."
+
+msgid "plugins.importexport.crossref.register.success"
+msgstr "Beküldés sikeres!"
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Nincs a megadott számazonosítóval \"{$issueId}\" egyező folyóiratszám"
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Egyik cikk sem egyezik a megadott cikkazonosítóval \"{$articleId}\"."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr "Érvényesítse az XML-t. Használja ezt az opciót az XML letöltéshez és kézzel történő DOI regisztráláshoz.   "
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr "Sikeres regisztráció, de az alábbi figyelmeztető üzenettel: '{$param}'."

@@ -1,2 +1,93 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:07:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "A COUNTER bővítmény lehetővé teszi a folyóirat tevékenységének jelentését a <a href=\"http://www.projectcounter.org\"> COUNTER szabvány </a> használatával. Ezek a jelentések önmagukban nem teszik a folyóiratot COUNTER kompatibilissé. A COUNTER megfelelőségének megismeréséhez nézze át a követelményeket a Project COUNTER webhelyén."
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER jelentések"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER Kiadás"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Régebbi oldaljelentések"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "A jelentés paraméterek érvénytelenek voltak."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "A jelentés kérés érvénytelen."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Nem találhatóak eredmények a jelentéshez"
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Az eredményeket nem lehet XML-ként formázni."
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr "Ezek a linkek COUNTER-kész jelentéseket generálnak az elavult Release 3.0 alapján. Ez a jelentés kiterjed az összes folyóiratra a webhelyen. Használja a legfrissebb kiadást, ha lehetséges."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER Jelentés JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML verzió"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "COUNTER Folyóiratjelentés 1 (R3): Teljes szöveges cikk-kérés hónap és folyóirat szerint"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Folyóiratjelentés 1 (R3): Teljes szöveges cikk-kérés hónap és folyóirat szerint"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Folyóiratjelentés 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "A sikeres teljes szövegű cikk-kérések száma hónap és folyóirat szerint (év {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Dátum futtatás:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Kiadó"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platform"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "Nyomtatott ISSN"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Teljes"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Összes minden folyóirat esetében"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "névtelen"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr "Az alábbi linkek elavult jelentéseket generálnak a régi pluginadatok felhasználásával, amelyek nem COUNTER-készek. Ha a jelenlegi COUNTER jelentéseket szeretne generálni az új OJS COUNTER mérőszám használatával, használja a fenti linkeket."
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "All Customers"

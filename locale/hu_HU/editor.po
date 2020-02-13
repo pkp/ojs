@@ -1,2 +1,642 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:04:23+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Szerkesztői Főoldal"
+
+msgid "editor.reassign"
+msgstr "Hozzárendelés"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Beadványok és megjelentetés"
+
+msgid "editor.submissionQueue"
+msgstr "Benyújtási sor"
+
+msgid "editor.submissionArchive"
+msgstr "Benyújtottak archívuma"
+
+msgid "editor.publishing"
+msgstr "Megjelentetés"
+
+msgid "editor.publishedIssues"
+msgstr "Megjelent számok"
+
+msgid "editor.allSections"
+msgstr "Minden rovat"
+
+msgid "editor.allEditors"
+msgstr "Minden szerkesztő"
+
+msgid "editor.me"
+msgstr "Nekem"
+
+msgid "editor.publicIdentificationExists"
+msgstr "A nyilvános azonosító '{$publicIdentifier}' már foglalt egy másik objektumnál (folyóirat szám, cikk, megjelenítő vagy kiegészítő fájl). Kérem, válasszon egy egyedi azonosítót a folyóiraton belül."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Nincs beküldött anyag az archívumban"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Mentse a változtatásokat az archívált beadványnál? A törlésre kijelölt beadványok véglegesen törlődnek a rendszerből."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Biztos benne, hogy véglegesen törli az anyagot a rendszerből?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Biztos, hogy rögzíteni akarja ezt a döntést?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Ez az anyag archíválva lesz miután megnyomja a Szerzőnek értesítés küldése vagy a Levélküldés kihagyása gombot."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Mielőtt technikai szerkesztésre küldi az anyagot, használja a Szerző figyelmeztetése linket, hogy értesítse a döntésről és válassza ki a cikk megfelelő verzióját."
+
+msgid "editor.submissionReview.sendToCopyediting"
+msgstr "Technikai szerkesztésre küldés"
+
+msgid "editor.notifyUsers"
+msgstr "Felhasználók értesítése"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Küldje el ezt az üzenetet valamennyi felhasználónak, akik össze vannak rendelve ezzel a folyóirattal ({$count} felhasználó)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Minden olvasó ({$count} felhasználó)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Minden publikáló szerző ({$count} felhasználó)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Minden egyéni előfizető ({$count} felhasználó)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Minden intézményi előfizető ({$count} felhasználó)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Felhasználók értesítése..."
+
+msgid "editor.usersNotified"
+msgstr "Értesített felhasználók"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Küldje el ezt az üzenetet azoknak a felhasználóknak, akik össze van rendelve ezzel a folyóirattal és jelezték, hogy a frissítésekről értesítést kérnek ({$count} felhasználó)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Tartalmazza a folyóirat szám tartalomjegyzékét:"
+
+msgid "editor.editorAdministration"
+msgstr "Szerkesztő adminisztrátor"
+
+msgid "editor.issues.createIssue"
+msgstr "Szám létrehozása"
+
+msgid "editor.issues.editIssue"
+msgstr "Folyóiratszám menedzselése: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Aktuális szám"
+
+msgid "editor.issues.numArticles"
+msgstr "Cikkek"
+
+msgid "editor.issues.noArticles"
+msgstr "Nincsenek várakozó tételek ehhez a számhoz."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Biztos benne, hogy véglegesen törli az anyagot a rendszerből?"
+
+msgid "editor.issues.published"
+msgstr "Megjelentetett"
+
+msgid "editor.issues.unpublished"
+msgstr "Nem megjelentetett"
+
+msgid "editor.issues.datePublished"
+msgstr "Megjelentetés dátuma"
+
+msgid "editor.issues.volumeRequired"
+msgstr "A kötetszámnak pozitív számnak kell lennie."
+
+msgid "editor.issues.numberRequired"
+msgstr "A számnak pozitív számnak kell lennie."
+
+msgid "editor.issues.yearRequired"
+msgstr "Az évnek pozitív számnak kell lennie."
+
+msgid "editor.issues.titleRequired"
+msgstr "A cím kötelező a folyóiratszámhoz"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Szám azonosító kötelező. Kérem, válasszon legalább egyet a folyóiratszám azonosítási lehetőségek közül."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Szám azonosító"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Nyilvános szám azonosító"
+
+msgid "editor.issues.description"
+msgstr "Leírás"
+
+msgid "editor.issues.accessStatus"
+msgstr "Hozzáférési státusz"
+
+msgid "editor.issues.accessDate"
+msgstr "Nyílt hozzáférés dátuma"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Engedélyezi a késleltetett nyílt hozzáférést"
+
+msgid "editor.issues.coverPage"
+msgstr "Borítókép"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Engedélyezett formátumok: .gif, .jpg, vagy .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Feltöltött"
+
+msgid "editor.issues.remove"
+msgstr "Eltávolított"
+
+msgid "editor.issues.proofed"
+msgstr "Korrektúrázott"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Eltávolítja az oldal borító képet?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Az a borítókép, amit törölni szeretne már nem felel meg a folyóiratszám borítóképének. Kérjük, frissítse az oldalt és próbálja újra."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Az a borítókép, amit törölni szeretne nem található. Lehetséges, hogy már törölt. Próbálja meg az oldalt újratölteni."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Érvénytelen oldalborító formátum. Elfogadott formátumok .gif, .jpg, vagy .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Stíluslap"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Érvénytelen stíluslap formátum. Győződjön meg arról, hogy a beküldött fájl érvényes CSS. (Figyeljen, hogy a stíluslapokat az elején elhelyezett megjegyzésekkel el lehet utasítani.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Eltávolítja a stíluslapot?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Borító felirat"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Borító készítése ehhez a folyóiratszámhoz a következő elemek felhasználásával."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Megjelenítés"
+
+msgid "editor.issues.openAccess"
+msgstr "Nyílt hozzáférésű"
+
+msgid "editor.issues.subscription"
+msgstr "Előfizetés"
+
+msgid "editor.issues.identification"
+msgstr "Azonosító"
+
+msgid "editor.issues.access"
+msgstr "Hozzáférés"
+
+msgid "editor.issues.cover"
+msgstr "Borító"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Az összes cikk visszakerült a szerkesztési sorba és minden kapcsolódó fájl véglegesen törlésre került. Biztos benne, hogy eltávolítja ezt a számot?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Ez a folyóirat egyedi számsorrendet alkalmaz. <a href=\"{$url}\" class=\"action\">Az alapértelmezettek visszaállítása</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Ez a szám egyedi rovatsorrendet alkalmaz. <a href=\"{$url}\" class=\"action\">Az alapértelmezettek visszaállítása</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Folyóiratszám adat"
+
+msgid "editor.issues.saveChanges"
+msgstr "Elmenti a tartalomjegyzék változtatásait"
+
+msgid "editor.issues.default"
+msgstr "Alapértelmezett"
+
+msgid "editor.issues.order"
+msgstr "Sorrend"
+
+msgid "editor.issues.publicId"
+msgstr "Nyilvános Id"
+
+msgid "editor.issues.publishIssue"
+msgstr "Szám publikálása"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Publikálás visszavonása"
+
+msgid "editor.issues.previewIssue"
+msgstr "Bemutató szám"
+
+msgid "editor.issues.preview"
+msgstr "Bemutató"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Biztos benne, hogy megjelenteti az új számot?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Biztos benne, hogy visszavonja a publikált szám publikus státuszát?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Nem lehet elmenteni a cikk nyilvános azonosítóját:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Nem élő számok"
+
+msgid "editor.issues.open"
+msgstr "Nyitott"
+
+msgid "editor.issues.pages"
+msgstr "Oldalak"
+
+msgid "editor.issues.galleys"
+msgstr "Szám formátum megjelenítők"
+
+msgid "editor.issues.galley"
+msgstr "Szám formátum megjelenítő"
+
+msgid "editor.issues.viewingGalley"
+msgstr "A folyóiratszám megjelenítő megtekintése"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "A megjelenített formátumok az egész szám tartalmával."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Nincs publikált formázott folyóiratszám megjelenítő."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Szükséges egy szám formátum címke."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Egy formázott szám elhelyezése szükséges."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Ez a megjelenítő azonosító már foglalt."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Vissza a folyóiratszám megjelenítőhöz"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Biztos benne, hogy törölni akarja ezt a folyóiratszám megjelenítőt"
+
+msgid "editor.issues.identifiers"
+msgstr "Azonosítók"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Jövőbeni számok"
+
+msgid "grid.action.addGalley"
+msgstr "Megjelenítő létrehozása"
+
+msgid "grid.action.publish"
+msgstr "Szám publikálása"
+
+msgid "grid.action.addIssue"
+msgstr "Szám létrehozása"
+
+msgid "grid.action.viewIssue"
+msgstr "Megtekintés"
+
+msgid "grid.action.previewIssue"
+msgstr "Előnézet"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Szám megjelenítő létrehozása"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Korábbi számok"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Az eredeti fájl kijelölése korábbi verziónak"
+
+msgid "editor.article.uploadReviewVersion"
+msgstr "Átdolgozott változat feltöltése lektorálási verziónak"
+
+msgid "editor.article.showSuppFile"
+msgstr "Fájl benyújtása szakmai lektoroknak"
+
+msgid "editor.article.layoutAndProof"
+msgstr "Elrendezés & Korrektúrázás"
+
+msgid "editor.article.clear"
+msgstr "Törlés"
+
+msgid "editor.article.clearReviewer"
+msgstr "Szakmai lektor törlése"
+
+msgid "editor.article.changeSection"
+msgstr "Rovat módosítás"
+
+msgid "editor.article.setDueDate"
+msgstr "Esedékesség dátumának beállítása"
+
+msgid "editor.article.addReviewer"
+msgstr "Szakmai lektor hozzáadása"
+
+msgid "editor.article.toReviewer"
+msgstr "a Szakmai lektornak"
+
+msgid "editor.article.notifyReviewer"
+msgstr "Szakmai lektor értesítése"
+
+msgid "editor.article.initiateReview"
+msgstr "Szakmai lektorálás elkezdése"
+
+msgid "editor.article.cancelReview"
+msgstr "Kérés visszavonása"
+
+msgid "editor.article.clearReview"
+msgstr "Szakmai lektor törlése"
+
+msgid "editor.article.enterRecommendation"
+msgstr "Javaslat írása"
+
+msgid "editor.article.enterReviewerRecommendation"
+msgstr "Szakmai lektori javaslat írása"
+
+msgid "editor.article.recommendation"
+msgstr "Javaslat"
+
+msgid "editor.article.selectReviewer"
+msgstr "Szakmai lektor választása"
+
+msgid "editor.article.replaceReviewer"
+msgstr "Szakmai lektor lecserélése"
+
+msgid "editor.article.editorToEnter"
+msgstr "Szerkesztői javaslat/megjegyzés a lektori véleményhez"
+
+msgid "editor.article.uploadReviewForReviewer"
+msgstr "Szakmai lektorálás feltöltése"
+
+msgid "editor.article.peerReviewOptions"
+msgstr "Lektorálási lehetőségek"
+
+msgid "editor.article.decision"
+msgstr "Döntés"
+
+msgid "editor.article.noEditorSelected"
+msgstr "Nincs szerkesztő kiválasztva."
+
+msgid "editor.article.recordDecision"
+msgstr "Döntés rögzítése"
+
+msgid "editor.article.cannotRecord"
+msgstr "A rovatszerkesztő még nem rögzítette, vagy nincs benyújtott lektorált fájl."
+
+msgid "editor.article.reviewersSeeAuthorsVersion"
+msgstr "A szakmai lektorok láthatják a szerzői verziót"
+
+msgid "editor.article.designateDueDate"
+msgstr "Esedékesség dátumának beállítása"
+
+msgid "editor.article.designateDueDateDescription"
+msgstr "Dátum vagy a hetek számának megadása esedékességként."
+
+msgid "editor.article.todaysDate"
+msgstr "Mai dátum"
+
+msgid "editor.article.requestedByDate"
+msgstr "Az időpont szerint kért"
+
+msgid "editor.article.dueDateFormat"
+msgstr "Formátum: YYYY-MM-DD"
+
+msgid "editor.article.numberOfWeeks"
+msgstr "Hetek száma"
+
+msgid "editor.article.selectCopyeditor"
+msgstr "Technikai szerkesztő hozzárendelése"
+
+msgid "editor.article.replaceCopyeditor"
+msgstr "Technikai szerkesztő lecserélése"
+
+msgid "editor.article.editorsCopyedit"
+msgstr "Technikai szerkesztés"
+
+msgid "editor.article.showAuthor"
+msgstr "A fájl megtekintésének engedélyezése a szerző számára"
+
+msgid "editor.article.showCopyeditor"
+msgstr "Mutassa a technikailag szerkesztett verziót"
+
+msgid "editor.article.rateReviewer"
+msgstr "Szakértői értékelés"
+
+msgid "editor.article.reviewerRating.veryGood"
+msgstr "5 Magas"
+
+msgid "editor.article.reviewerRating.good"
+msgstr "4"
+
+msgid "editor.article.reviewerRating.average"
+msgstr "3"
+
+msgid "editor.article.reviewerRating.poor"
+msgstr "2"
+
+msgid "editor.article.reviewerRating.veryPoor"
+msgstr "1 Alacsony"
+
+msgid "editor.article.comments"
+msgstr "Megjegyzések"
+
+msgid "editor.article.commentsRequired"
+msgstr "A megjegyzés mező kötelező."
+
+msgid "editor.article.saveRating"
+msgstr "Értékelés mentése"
+
+msgid "editor.article.noneSelected"
+msgstr "Nincs kiválasztva"
+
+msgid "editor.article.authorProofing"
+msgstr "Szerzői korrektúrázás"
+
+msgid "editor.article.archiveSubmission"
+msgstr "A benyújtott anyag elutasítása és archíválása"
+
+msgid "editor.article.restoreToQueue"
+msgstr "Visszaállítás az aktív listára"
+
+msgid "editor.article.assignSectionEditor"
+msgstr "Rovatszerkesztő hozzáadása"
+
+msgid "editor.article.assignEditor"
+msgstr "Szerkesztő hozzáadása"
+
+msgid "editor.article.selectEditor"
+msgstr "Válasszon {$roleName}"
+
+msgid "editor.article.selectDecision"
+msgstr "Válasszon döntést"
+
+msgid "editor.article.selectLayoutEditor"
+msgstr "Tördelő szerkesztő kiválasztása"
+
+msgid "editor.article.replaceLayoutEditor"
+msgstr "Tördelő szerkesztő lecserélése"
+
+msgid "editor.article.reviewSubmission"
+msgstr "Beküldött anyag szakmai lektorálása"
+
+msgid "editor.article.resubmitForReview"
+msgstr "Fájl újraküldése szakmai lektorálásra"
+
+msgid "editor.article.resubmitFileForPeerReview"
+msgstr "Kiválasztott fájl újraküldése szakmai lektorálásra"
+
+msgid "editor.article.sendToCopyedit"
+msgstr "Fájl küldése technikai szerkesztésre"
+
+msgid "editor.article.selectProofreader"
+msgstr "Korrektúrázó kijelölése"
+
+msgid "editor.article.replaceProofreader"
+msgstr "Korrektúrázó lecserélése"
+
+msgid "editor.article.authorComments"
+msgstr "Szerzői megjegyzések"
+
+msgid "editor.article.proofreaderComments"
+msgstr "Korrektúrázó megjegyzései"
+
+msgid "editor.article.layoutEditorFinal"
+msgstr "Tördelő szerkesztő utolsó"
+
+msgid "editor.article.noDate"
+msgstr "(dátum)"
+
+msgid "editor.submissions.showBy"
+msgstr "Mutassa az alábbi szerint"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "MM-DD jóváhagyása"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktív hozzárendelések"
+
+msgid "editor.submissions.invite"
+msgstr "Meghívás"
+
+msgid "editor.submissions.accept"
+msgstr "Elfogadás"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Nincs beküldött anyag"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Legutolsó"
+
+msgid "editor.submissions.averageTime"
+msgstr "Hetek"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Legutolsó teljes"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Hozzárendelés ehhez"
+
+msgid "editor.submissions.inSection"
+msgstr "Rovatban"
+
+msgid "editor.article.schedulePublication"
+msgstr "A publikálás ütemezése"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "A publikálás ütemezése"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Hozzá lesz rendelve"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "A publikációs költség nincs kifizetve. A tételek publikálási ütemezéséhez értesítse a szerzőt, hogy fizesse ki a publikálási díjat, vagy mondjon le róla."
+
+msgid "editor.article.display"
+msgstr "Megjelenítés"
+
+msgid "editor.article.hideTocAuthorDescription"
+msgstr "Szerző nevének kihagyása a tartalomjegyzékből"
+
+msgid "editor.article.hideTocAuthorDefault"
+msgstr "Alapértelmezett"
+
+msgid "editor.article.hideTocAuthorHide"
+msgstr "Kihagyás"
+
+msgid "editor.article.hideTocAuthorShow"
+msgstr "Mutat"
+
+msgid "editor.article.cover"
+msgstr "Borító"
+
+msgid "editor.article.coverImage"
+msgstr "Borítókép"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Az a borítókép, amit törölni szeretne nem található. Lehetséges, hogy már törölt. Próbálja meg az oldalt újratölteni."
+
+msgid "editor.article.uploaded"
+msgstr "Feltöltött"
+
+msgid "editor.article.removeCoverPage"
+msgstr "Eltávolítja a borítóképet?"
+
+msgid "grid.action.removeArticle"
+msgstr "Eltávolítja a cikket a folyóiratszámból?"
+
+msgid "editor.article.remove"
+msgstr "Eltávolítás"
+
+msgid "editor.article.remove.confirm"
+msgstr "Biztosan törölni akarja a cikket a folyóiratszámból? A cikk előkészítés alatt állhat egy másik számnál is."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "A hozzáférési dátum nem érvényes."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "A szám megjelenítésének szerkesztése"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "A tördelőszerkesztő készíti elő a megjelentetési formátumot, majd feltölti a megfelelő <span class=\"pkp_help_title\">változatokat</span> korrektúrázásra."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Korrektúrázott fájl kiválasztása"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "A végleges kézirat fájlokat ebből a listából a technikai szerkesztő alakítja át technikailag szerkesztett változatúvá és feltölti a <span class=\"pkp_help_title\">technikai szerkesztés</span> alá."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Bármelyik feltöltött fájl hozzáadható a korrektúrázási listához az alul található négyzet jelölésével és a Keresés gomb megnyomásával: minden elérhető fájl kilistázásra kerül és kiválasztható."
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Biztos benne, hogy ezt a számot aktuálisként jelöli?"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Aktuális szám beállítása"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "A nyilvános azonosító '{$publicIdentifier}' már létezik egy másik azonos típusú objektumhoz rendelve.  Kérjük, hogy válasszon egy másik egyedi azonosítót ilyen típusú objektumhoz a folyóiraton belül."

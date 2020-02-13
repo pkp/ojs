@@ -1,2 +1,2289 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:04:23+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Aktuális folyóirat:"
+
+msgid "context.select"
+msgstr "Váltás másik folyóiratra:"
+
+msgid "navigation.categories"
+msgstr "Kategóriák"
+
+msgid "navigation.categories.browse"
+msgstr "Böngészés"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Kattintson az ikonra, hogy kitölthesse a lektorálási űrlapot."
+
+msgid "reviewer.article.reviewFormResponse.form.responseRequired"
+msgstr "Kérem, a kötelező mezőket töltse ki."
+
+msgid "common.openJournalSystems"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Biztos benne, hogy szeretné ezt a feladatot befejezettnek jelölni? Utána nem tudja megváltoztatni."
+
+msgid "common.payment"
+msgstr "Fizetés"
+
+msgid "common.payments"
+msgstr "Kifizetések"
+
+msgid "common.homePageHeader.altText"
+msgstr "Weboldal fejléc"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Folyóiratoldal kép"
+
+msgid "navigation.journalHelp"
+msgstr "Folyóirat súgó"
+
+msgid "navigation.current"
+msgstr "Aktuális"
+
+msgid "navigation.otherJournals"
+msgstr "További folyóiratok"
+
+msgid "navigation.browseByIssue"
+msgstr "Számok szerint"
+
+msgid "navigation.browseByAuthor"
+msgstr "Szerző szerint"
+
+msgid "navigation.infoForAuthors"
+msgstr "Szerzőknek"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Könyvtárosoknak"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Összeférhetetlenségi irányelvek"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Információ Szerzőknek"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Információ Könyvtárosoknak"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Nem hozzárendelt"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Nem hozzárendelt"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "A beküldött anyag szerkesztés alatt"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Szerkesztés alatt"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "A beküldött anyag szakmai lektorálás alatt"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Szakmai lektorálás alatt"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archívumok"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archívumok"
+
+msgid "common.queue.long.active"
+msgstr "Aktív"
+
+msgid "common.queue.short.active"
+msgstr "Aktív"
+
+msgid "common.queue.long.completed"
+msgstr "Archív"
+
+msgid "common.queue.short.completed"
+msgstr "Archív"
+
+msgid "section.section"
+msgstr "Rovat"
+
+msgid "section.sections"
+msgstr "Rovatok"
+
+msgid "section.title"
+msgstr "Rovatcím"
+
+msgid "section.abbreviation"
+msgstr "Rövidítés"
+
+msgid "section.abbreviation.example"
+msgstr "(Például, Articles=ART)"
+
+msgid "article.article"
+msgstr "Cikk"
+
+msgid "article.articles"
+msgstr "Cikkek"
+
+msgid "article.submissionId"
+msgstr "Beküldött anyag ID"
+
+msgid "article.title"
+msgstr "Cím"
+
+msgid "article.authors"
+msgstr "Szerzők"
+
+msgid "article.indexingInformation"
+msgstr "Indexelési információ"
+
+msgid "article.metadata"
+msgstr "Metaadat"
+
+msgid "article.journalSection"
+msgstr "Folyóiratrovat"
+
+msgid "article.file"
+msgstr "Fájl"
+
+msgid "article.suppFile"
+msgstr "Kiegészítő fájl"
+
+msgid "article.suppFiles"
+msgstr "Kiegészítő fájl(ok)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Kieg. fájlok"
+
+msgid "article.discipline"
+msgstr "Tudományterület és tudományágak"
+
+msgid "article.subject"
+msgstr "Kulcsszavak"
+
+msgid "article.coverage"
+msgstr "Lefedettség"
+
+msgid "article.type"
+msgstr "Típus, eljárás vagy megközelítés"
+
+msgid "article.language"
+msgstr "Nyelv"
+
+msgid "article.sectionEditor"
+msgstr "RSZ"
+
+msgid "article.commentsToEditor"
+msgstr "Szerzői megjegyzések"
+
+msgid "article.submission"
+msgstr "Beküldött anyag"
+
+msgid "article.submissions"
+msgstr "Beküldött anyagok"
+
+msgid "article.details"
+msgstr "Részletek"
+
+msgid "article.abstract"
+msgstr "Absztrakt"
+
+msgid "article.coverPage.altText"
+msgstr "Borítókép"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Nyílt hozzáférés"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Korlátozott hozzáférés"
+
+msgid "article.comments.sectionDefault"
+msgstr "Alapértelmezett"
+
+msgid "article.comments.disable"
+msgstr "Letilt"
+
+msgid "article.comments.enable"
+msgstr "Engedélyez"
+
+msgid "article.fontSize"
+msgstr "Betűméret"
+
+msgid "article.fontSize.small.altText"
+msgstr "Kicsi"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Közepes"
+
+msgid "article.fontSize.large.altText"
+msgstr "Nagy"
+
+msgid "article.return"
+msgstr "Vissza a cikk részleteihez"
+
+msgid "submission.submissionEditing"
+msgstr "A beküldött anyag szerkesztése"
+
+msgid "submission.changeSection"
+msgstr "Változtatás erre"
+
+msgid "submission.sent"
+msgstr "Küldés"
+
+msgid "submission.editorDecision"
+msgstr "Szerkesztői döntés"
+
+msgid "submission.round"
+msgstr "Forduló&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Szerkesztői lektorálás"
+
+msgid "submission.notifyAuthor"
+msgstr "Szerző értesítése"
+
+msgid "submission.notifyEditor"
+msgstr "Szerkesztő értesítése"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Szerkesztő/Szerző Email Record"
+
+msgid "submission.reviewersVersion"
+msgstr "Szakmai lektor megjegyzésekkel ellátott fájl"
+
+msgid "submission.postReviewVersion"
+msgstr "A fájl utó-lektorálási példánya"
+
+msgid "submission.editorVersion"
+msgstr "Szerkesztői változat"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "A Szerző átdolgozott változata"
+
+msgid "submission.authorVersion"
+msgstr "Szerzői változat"
+
+msgid "submission.copyediting"
+msgstr "Technikai szerkesztés"
+
+msgid "submission.copyedit"
+msgstr "Technikai szerkesztés"
+
+msgid "submission.proofreading"
+msgstr "Korrektúrázás"
+
+msgid "submission.scheduling"
+msgstr "Ütemezés"
+
+msgid "submission.scheduledIn"
+msgstr "Ütemezett pubikációk {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.sec"
+msgstr "Sec_Másodperc"
+
+msgid "submissions.step1"
+msgstr "1. lépés"
+
+msgid "submissions.step3"
+msgstr "3. lépés"
+
+msgid "submissions.queuedReview"
+msgstr "Szakmai lektorálás alatt"
+
+msgid "submissions.scheduled"
+msgstr "Ütemezett"
+
+msgid "submissions.published"
+msgstr "Megjelent"
+
+msgid "submissions.initial"
+msgstr "Kezdő"
+
+msgid "submissions.proofread"
+msgstr "Korrektor"
+
+msgid "submissions.initialProof"
+msgstr "Kezdő korrektúrázás"
+
+msgid "submissions.postAuthor"
+msgstr "Útószerzői"
+
+msgid "submissions.reviewRound"
+msgstr "Szakmai lektorálási kör"
+
+msgid "submissions.proof"
+msgstr "Korrektúrázás"
+
+msgid "submissions.editorDecision"
+msgstr "Szerkesztői döntés"
+
+msgid "submissions.editorRuling"
+msgstr "Szerkesztői szabályozás"
+
+msgid "submission.eventLog"
+msgstr "Eseménynapló"
+
+msgid "submissions.copyeditComplete"
+msgstr "Technikailag szerkesztett"
+
+msgid "submissions.layoutComplete"
+msgstr "Tördelt"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Korrektúrázó"
+
+msgid "journal.currentIssue"
+msgstr "Aktuális szám"
+
+msgid "journal.journals"
+msgstr "Folyóiratok"
+
+msgid "journal.path"
+msgstr "Útvonal"
+
+msgid "context.context"
+msgstr "Folyóirat"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Az összes folyóiratszám megtekintése"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Tartalmazza azokat a felhasználókat, akiknek nincs a folyóiratnál szerepkörük."
+
+msgid "user.profile.profileImage"
+msgstr "Profil kép"
+
+msgid "user.showAllJournals"
+msgstr "Folyóirataim megjelenítése"
+
+msgid "user.registerForOtherJournals"
+msgstr "Regisztrálás további folyóiratokra"
+
+msgid "user.reviewerPrompt"
+msgstr "Alkalmanként vállalná a folyóirathoz benyújtott kéziratok szakmai lektorálását?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Igen, {$userGroup} szerepkörrel is regisztrálok."
+
+msgid "user.register.contextsPrompt"
+msgstr "Melyik folyóiratokhoz szeretne regisztrálni?"
+
+msgid "user.register.otherContextRoles"
+msgstr "A következő szerepkörök igénylése"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Ha bármelyik folyóiratnál szeretne szakmai lektor lenni, akkor adja meg az szakterületeit."
+
+msgid "user.myJournals"
+msgstr "Folyóirataim"
+
+msgid "user.manageMySubscriptions"
+msgstr "Előfizetéseim kezelése"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "A fiókja jelenleg egy folyóirathoz sincs hozzárendelve. Kérem, válasszon folyóiratot:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "A fiókja egy szerepkörhöz sincs hozzárendelve ennél a folyóiratnál. Kérem, válasszon az alábbi lehetőségek közül:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Javaslat beküldése"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Cikk beküldése: a szerzői regisztráció jelenleg nem elérhető."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Regisztrálás Szakmai lektorként"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Regisztrálás szakmai lektorként: a lektori regisztráció jelenleg nem elérhető."
+
+msgid "user.role.manager"
+msgstr "Folyóirat menedzser"
+
+msgid "user.role.sectionEditor"
+msgstr "Rovatszerkesztő"
+
+msgid "user.role.subscriptionManager"
+msgstr "Előfizetés menedzser"
+
+msgid "user.role.managers"
+msgstr "Folyóirat menedzserek"
+
+msgid "user.role.subEditors"
+msgstr "Rovatszerkesztők"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Előfizetés menedzserek"
+
+msgid "user.role.journalAssistant"
+msgstr "Folyóirat asszisztens"
+
+msgid "user.role.journalAssistants"
+msgstr "Folyóirat asszisztensek"
+
+msgid "issue.issue"
+msgstr "Folyóirat szám"
+
+msgid "issue.issues"
+msgstr "Folyóirat számok"
+
+msgid "issue.title"
+msgstr "Cím "
+
+msgid "issue.volume"
+msgstr "Évfolyam"
+
+msgid "issue.number"
+msgstr "Szám"
+
+msgid "issue.vol"
+msgstr "Évf."
+
+msgid "issue.no"
+msgstr "szám"
+
+msgid "issue.year"
+msgstr "Év"
+
+msgid "issue.noIssues"
+msgstr "Nincs folyóiratszám"
+
+msgid "issue.toc"
+msgstr "Tartalomjegyzék"
+
+msgid "issue.abstract"
+msgstr "Absztrakt"
+
+msgid "issue.coverPage.altText"
+msgstr "Borítóoldal"
+
+msgid "issue.fullIssue"
+msgstr "Teljes szám"
+
+msgid "issue.nonpdf.title"
+msgstr "Folyóiratszám letöltése"
+
+msgid "issue.viewIssue"
+msgstr "Folyóiratszám megtekintése"
+
+msgid "issue.return"
+msgstr "Vissza a folyóiratszám részleteihez"
+
+msgid "subscriptionTypes.currency"
+msgstr "Pénznem"
+
+msgid "subscriptionTypes.year"
+msgstr "év"
+
+msgid "subscriptionTypes.years"
+msgstr "évek"
+
+msgid "subscriptionTypes.month"
+msgstr "hónap"
+
+msgid "subscriptionTypes.months"
+msgstr "hónapok"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Nem lejáró"
+
+msgid "subscriptionTypes.format"
+msgstr "Formátum"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Nyomtatott"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Nyomtatott és Online"
+
+msgid "subscriptions.inactive"
+msgstr "Inaktív"
+
+msgid "subscriptions.status"
+msgstr "Státusz"
+
+msgid "subscriptions.status.active"
+msgstr "Aktív"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Információ szükséges"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Jóváhagyás szükséges"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Készpénzes fizetésre várakozás"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Online fizetésre várakozás"
+
+msgid "subscriptions.status.other"
+msgstr "Egyéb, lásd a jegyzeteket"
+
+msgid "subscriptions.individualDescription"
+msgstr "Egyéni előfizetőknek be kell jelentkezni, hogy elérhessék az előfizetéshez kötött tartalmakat."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Intézményi előfizetőknek nem kell bejelentkezniük. A felhasználó domain és/vagy IP cím használhatjuk az előfizetéshez kötött tartalom eléréséhez."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Megjegyzés:</strong> Az intézményi előfizetéseknél a domain és IP tartományokat előzetesen jóvá kell hagyni."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Benyújtási esemény"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Benyújtott cikk"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "A beküldött anyag ütemezési sorba állítása megtörtént"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "A beküldött anyag folyóiratszámhoz rendelése megtörtént"
+
+msgid "submission.event.general.articlePublished"
+msgstr "A cikk publikálva"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Szerzői javított változat beküldve"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Szerzői javított fájl frissítve"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Szerkesztő hozzárendelése a beküldött anyaghoz"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Szerkesztői hozzárendelés törlése"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Szerkesztői döntés beküldve"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Szerkesztői fájl frissítve"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Az anyag archívumba helyezése"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Az anyag archívumból visszaállítása"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Technikai szerkesztő hozzárendelése a beküldött anyaghoz"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Technikai szerkesztő hozzárendelés törlése"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Technikai szerkesztés elkezdve"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Beszerkesztett fájl frissítve"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "A megkezdett technikai szerkesztés elkészült"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "A végső technikai szerkesztés elkészült"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Szerkesztett fájl frissítve"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Korrektúrázó hozzárendelése a beküldött anyaghoz"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Korrektúrázó hozzárendelésének megszüntetése"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Korrektúrázás megkezdve"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Korrektúrázott fájl frissítve"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Korrektúrázás elkészült"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Tördelő hozzárendelése a beküldött anyaghoz"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Tördelő hozzárendelésének megszüntetése"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Tördelési munka elkezdve"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Tördelt fájl frissítve"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Tördelés elkészült"
+
+msgid "reader.subscribersOnly"
+msgstr "Csak előfizetőknek"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Előfizetés szükséges a hozzáféréshez. Az előfizetés ellenőrzéséhez, jelentkezzen be az oldalra."
+
+msgid "reader.openAccess"
+msgstr "Nyílt hozzáférés"
+
+msgid "reader.subscriptionAccess"
+msgstr "Előfizetés igénylése"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Előfizetés igénylése vagy fizetés"
+
+msgid "comments.commentsOnArticle"
+msgstr "Megjegyzések ehhez a cikkhez"
+
+msgid "comments.authenticated"
+msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a> által"
+
+msgid "search.results.orderBy"
+msgstr "Az eredmények rendezése az alábbi szerint"
+
+msgid "search.results.orderBy.article"
+msgstr "Cikk címe"
+
+msgid "search.results.orderBy.author"
+msgstr "Szerző"
+
+msgid "search.results.orderBy.date"
+msgstr "Publikálás dátuma"
+
+msgid "search.results.orderBy.issue"
+msgstr "Szám"
+
+msgid "search.results.orderBy.journal"
+msgstr "Folyóirat címe"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Népszerűség (mindenkori)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Népszerűség (az elmúlt hónap)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevancia"
+
+msgid "search.results.orderDir.asc"
+msgstr "Emelkedő sorrend"
+
+msgid "search.results.orderDir.desc"
+msgstr "Csökkenő sorrend"
+
+msgid "search.results.similarDocuments"
+msgstr "hasonló dokumentumok"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Az alapértelmezett hitelesítési forrás eltér az OJS-től a következőkben:</p>\n"
+"<ul>\n"
+"\t<li>Ha a felhasználó megpróbál regisztrálni egy új fiókot ezen az oldalon egy olyan felhasználói névvel, ami már létezik más hitelesítési forrásban (nem az OJS adatbázisban), a regisztráció csak akkor lesz elfogadott, ha a fiókhoz tartozó jelszót adja meg.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>MEGJEGYZÉS!</h4>\n"
+"<p>A rendszer nem tudja automatikusan felülírni a konfigurációs állományt. A változtatások elfogadásához meg kell nyitni a <tt>config.inc.php</tt> fájlt egy szerkesztőben és lecserélni a lentebb látható szövegre.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Előfizetés adminisztráció"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Egyéni előfizetők"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Intézményi előfizetők"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Előfizetési típusok"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Cikk kefelenyomat bővítmény"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "A cikk kefelenyomat bővítmény támogatást nyújt, hogy a különféle típusú dokumentumokat mint kefelnyomatot jelenítse meg a rendszer."
+
+msgid "plugins.categories.auth.description"
+msgstr "A hitelesítési bővítmény lehetővé teszi, hogy a hitelesítési feladatokat ne az OJS, hanem más rendszer végezze, pl. LDAP szerverek."
+
+msgid "plugins.categories.citationFormats.description"
+msgstr "Az idézet formátum bővítménnyel a felhasználók különféle formátumú cikk idézettséghez férhetnek hozzá."
+
+msgid "plugins.categories.generic.description"
+msgstr "Az általános pluginok, amelyek nem tartoznak más plugin kategóriába, bővítik az OJS-t lehetőségeit."
+
+msgid "manager.setup.lockssDescription"
+msgstr ""
+"Az Open Journal Systems támogatja a <a href=\"http://www.lockss.org/\" target=\"_blank\">LOCKSS</a> (Lots of Copies Keep Stuff Safe) rendszert, hogy biztosított legyen az állandó archiválása a folyóiratnak. A LOCKSS nyílt forráskódú szoftver, amit a Stanford egyetem könyvtárában fejlesztenek, hogy a könyvtárak megőrizhessék a webes folyóirataikat az új tartalmak és az archívumok megfelelő visszakereshetőségéért. Mindegyik archívum folyamatosan összevetésre kerül a többi könyvtár tárhelyével, és, ha a tartalom elavult vagy elveszett, akkor egy másik tárhelyről vagy folyóiratból az pótolható.\n"
+"<br /><br />\n"
+"A LOCKSS támogatás beállításához nem szükséges más, mint helyet adni a teljes publikálási folyamat után, amelyhez az alábbi két lépést kell követni:"
+
+msgid "manager.setup.clockssDescription"
+msgstr ""
+"Open Journal Systems támogatja a <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) rendszert, hogy biztosított legyen az állandó archiválása a folyóiratnak. A CLOCKSS nyílt forráskódú szoftver, amit a Stanford egyetem könyvtárában fejlesztenek, hogy a könyvtárak megőrizhessék a webes folyóirataikat az új tartalmak és az archívumok megfelelő visszakereshetőségéért. Mindegyik archívum folyamatosan összevetésre kerül a többi könyvtár tárhelyével, és, ha a tartalom elavult vagy elveszett, akkor egy másik tárhelyről vagy folyóiratból az pótolható.\n"
+"<br /><br />\n"
+"A CLOCKSS támogatás beállításához nem szükséges más, mint helyet adni a teljes publikálási folyamat után."
+
+msgid "manager.setup.authorCopyrightNotice.sample"
+msgstr ""
+"<h3>Javasolt szerzői jogi közlemények</h3>\n"
+"<h4>1. Javasolt irányelvek azoknak a folyóiratoknak, akik nyílt hozzáférést kínálnak</h4>\n"
+"Azoknak a szerzőknek, akik ebben a folyóiratban publikálnak, el kell fogadniuk a következő irányelveket:\n"
+"<ol type=\"a\">\n"
+"\t<li>A Szerzők, akik szerzői díjat tartanak fenn és engedélyezik az első közlést a folyóiratnak és egyidejűleg a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> licenc jogokat is tartja, amivel engedélyezi másoknak a megosztást azzal a kitétellel, hogy a szerzőséget fel kell tüntetni és az első közlését ennek a folyóiratnak.</li>\n"
+"\t<li>A szerzők a munkájukra a folyóirat kiadókkal külön megállapodásokat köthetnek nem kizárólagos megjelenésre (pl. intézményi repozitóriumban elhelyezhető vagy könyvben publikálható), annak feltüntetése mellett, hogy az első publikálás ebben a folyóiratban történt meg.</li>\n"
+"\t<li>A szerzőknek engedélyezett és javasolt a munkájukat online megjelentetni (pl. intézményi repozitóriumokban vagy a saját honlapjukon) a megjelenés előtt és alatt is, mivel ez elősegíti az információcsere hatékonyságát, ahogy a munkára való nagyobb hivatkozást is. (lásd <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">A nyílt hozzáférés hatásai</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Javasolt irányelvek azoknak a folyóiratoknak, amelyek késleltetetten kínálnak nyílt hozzáférést.</h4>\n"
+"Azoknak a szerzőknek, akik ebben a folyóiratban publikálnak, el kell fogadniuk a következő irányelveket:\n"
+"<ol type=\"a\">\n"
+"\t<li>A Szerzők, akik szerzői díjat tartanak fenn és engedélyezik az első közlést a folyóiratnak, [MEGHATÁROZOTT IDŐ] után pedig a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> jogokat is tartja, amely lehetővé teszi mások számára is a hozzáférést, a mű eredeti közlésének helyét feltüntetve.</li>\n"
+"\t <li>A szerzők külön megállapodást köthetnek a cikk nem kizárólagos forgalmazására (pl. intézményi repozitóriumi elhelyezésre vagy könyvben publikálásra), annak feltüntetése mellett, hogy az első publikálás ebben a folyóiratban történt meg.</li>\n"
+"\t <li>A szerzőknek engedélyezett és javasolt a munkájukat online megjelentetni (pl. intézményi repozitóriumokban vagy a saját honlapjukon)  a megjelenés előtt és alatt is, mivel ez elősegíti az információcsere hatékonyságát, ahogy a munkára való nagyobb hivatkozást is. (lásd <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">A nyílt hozzáférés hatásai</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.citations.enable"
+msgstr "A hivatkozás jelölő segéd engedélyezése"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Lépések: Benyújtások &gt; Benyújtott tétel szakmai lektorlálása &gt; Benyújtott tétel szerkesztése &gt; Tartalomjegyzék<br /><br />\n"
+"Válasszon egy modellt a szerkesztési folyamat ezen szempontjainak a kezelésére. (Felelős szerkesztő és Rovatszerkesztő kijelöléséhez menjen a  Szerkesztők részbe a Folyóirat adminisztráción belül.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Ahhoz, hogy az olvasók megtalálják a szerző által idézett művek online változatait, a következő lehetőségek állnak rendelkésre.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Egy Olvasói Eszköz hozzáadása</strong><p>A folyóirat menedzser hozzáadhat egy \"Hivatkozások keresése\" eszközt az Olvasói eszközökhöz, hogy a publikált cikkek hivatkozásait, amelyek az olvasóknak is elérhetőek megkereshessék az idézetek tudományos adatbázisaiban.</p></li>\n"
+"\t<li><strong>Link beágyazása a hivatkozásokba</strong><p>A Tördelőszerkesztő egy linket tehet a hivatkozásba, amellyel az elérhető online, használatához kövesse az alábbi instrukciókat (ez szerkeszthető).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Inaktívvá teszi a felhasználót? Ezzel megakadályozza, hogy az a felhasználó bejelentkezhessen a rendszerbe.\n"
+"\n"
+"Arra is lehetősége van, hogy megindokolja a felhasználónak a fiók letiltását."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Elnézést, de nincs joga módosítani a felhasználót. Ez a következő okok miatt lehet:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>A felhasználó az oldal adminisztrátora</li>\n"
+"\t\t\t<li>A felhasználó jelenleg aktív a folyóiratnál, nem módosíthatja</li>\n"
+"\t\t</ul>\n"
+"\tEzt a feladatot egy adminisztrátor tudja elvégezni.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>A kijelölt tételek szerkesztői beavatkozást igényelnek az alábbiak szerint:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Egy Szakmai lektor hozzárendelése megtörtént, de email értesítést nem kapott</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Minden Szakmai lektor elküldte a véleményét, de nincs rögzített döntés</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">A Szerző feltöltött egy átdolgozott kéziratot</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">A Szakmai lektornak lejárt az ideje, hogy visszajelezzen a lektori felkérésre</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">A Szakmai lektornak lejárt a lektorálási ideje</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>A \"Határidő\" ki van töltve amikor a szakmai lektor elfogadja a lektori felkérést; ez a lektorálási határidő leteltéig a hátralévő hetek számát mutatja meg vagy (-) a már lejárt hetek számát.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>A kijelölt tételek szerkesztői beavatkozást igényelnek az alábbiak szerint:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Beavatkozás szükséges a technikai szerkesztés fázisban</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">beavatkozás szükséges a tördelési fázisban</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Beavatkozás szükséges a korrektúrázási fázisban</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "editor.article.selectReviewerNotes"
+msgstr ""
+"A szakmai lektor profil oldal link elnevezései.<br/>\n"
+"Értékelések 5-ig (Kiváló).<br/>\n"
+"A hetek egy átlagos időtartamot jeleznek, amennyi idő kell egy lektorálás elkészüléséig.<br/>\n"
+"A legutolsó dátuma a legújabb elfogadott lektori véleménynek.<br/>\n"
+"Aktívan azt jelzi, hogy hány anyag van éppen szakmai lektorálás alatt, vagy folyamatban."
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktív szerkesztői hozzárendelések"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Befejezett szerkesztői hozzárendelések"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Nincs hozzárendelt anyag."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Értesíti ezt a technikai szerkesztőt, hogy a hozzárendelést újraindítja. Biztosan elvégzi ezt a műveletet?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Értesíti ezt a szerzőt, hogy a hozzárendelést újraindítja. Biztosan elvégzi ezt a műveletet?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Értesíti ezt a tördelőszerkesztőt, hogy a hozzárendelést még egyszer elindítja. Biztosan elvégzi ezt a műveletet?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Értesíti ezt a korrektort, hogy a hozzárendelést újraindítja. Biztosan elvégzi ezt a műveletet?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Visszautasítások"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} szakmai lektor visszautasítások, Törlések & Előző fordulók"
+
+msgid "sectionEditor.regrets"
+msgstr "Visszautasítások"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Visszautasítások, Törlések Előző fordulók megtekintése"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Szakmai lektorálás, Forduló {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Szerkesztői döntések, Forduló {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Szakmai lektori visszautasítások & Törlések"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Visszautasítás"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Eredmény"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Egy meglévő felhasználónak szakmai lektor szerepkör kiosztása"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Új szakmai lektor létrehozása"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktív szerkesztői hozzárendelések"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Befejezett szerkesztői hozzárendelések"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Nincs hozzárendelt anyag."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Tördelő szerkesztői hozzárendelések"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Tördelt változat feltöltése"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Fájl lecserélése"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Kiegészítő fájl feltöltése"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Nem megfelelő kép formátum. Az elfogadott formátum a .gif, .jpg, és .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Ez a megjelenített formátum egy külön weboldalon lesz elérhető."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "A távoli hozzáférésű tartalmak URL címe"
+
+msgid "reviewer.pendingReviews"
+msgstr "Ellenőrzésre váró cikkek"
+
+msgid "reviewer.completedReviews"
+msgstr "Kész"
+
+msgid "reviewer.averageQuality"
+msgstr "Értékelés"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Szakmai lektorálásra szánt fájl"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "A Szerkesztő értesítése"
+
+msgid "reviewer.article.canDoReview"
+msgstr "A szakmai lektorálást vállalom"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "A szakmai lektorálást nem tudom vállalni"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Amennyiben a szakmai lektor elfogadja a lektori felkérést, akkor elérhetővé válik a lektorálandó anyag"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Benyújtott anyag szerkesztője"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Gépelje vagy illessze be a lektorálási megjegyzéseit ide"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Szerkesztői beírás"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Emlékeztető elküldése"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Javaslat"
+
+msgid "reviewer.article.submitReview"
+msgstr "Szakmai lektorálás küldése a szerkesztőnek"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Megjegyzések"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Feltöltött fájlok"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Szakmai lektor által feltöltött verzió"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Ha a szerkesztőnek jegyzetet szeretne hozzáfűzni a fájlhoz, akkor mentse el a saját merevlemezére majd töltse fel újra.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Szerkesztői kérések"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Az ön válasza"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Beküldött szakmai lektorálás"
+
+msgid "reviewer.article.schedule.due"
+msgstr "lektorálási határidő"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Változtatás nélkül"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Kisebb átdolgozás szükséges"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Nagyobb átdolgozás szükséges"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Egyéb folyóirat javasolt"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Megjelentetés nem javasolt"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Lásd a megjegyzéseket"
+
+msgid "reviewer.article.schedule"
+msgstr "Ütemezés"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Benyújtott anyag felülvizsgálatra"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Szakmai lektorálási ütemezés"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Lektorálási lépések"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Szakmai lektorálási útmutató"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "A szakmai lektorálási útmutató leírja a szakmai lektornak a lektorálási szempontokat, a folyóiratban publikálásra alkalmas anyag kritériumait, egyéb olyan különleges utasításokat, amelyek segítik a szakértői munkát. A lektorálási folyamatban a lektorok számára két szöveges mező áll rendelkésre, az első a \"szerzőnek és a szerkesztőnek\" a második \"a szerkesztőnek\". Alternatív megoldásként a folyóirat menedzser létrehozhat egy lektorálási űrlapot a lektorálási űrlapok részben. Minden esetben a szerkesztőknek a a lektorálási véleményeket egyeztetni kell a szerzőkkel."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Az anyag szerkesztőjének értesítése"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "arról, hogy vállalja a lektorálást."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Ha elkezdi a szakmai lektorálást olvassa át az alábbi lektorálási útmutatót."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Kattintson a fájlok nevére, hogy letölthesse és ellenőrizhesse (a képernyőn, vagy kinyomtatva) a benyújtott anyaghoz kapcsolódó fájlt."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Nyilatkozzon, hogy önnél nem áll fenn összeférhetetlenség ezzel a kutatással kapcsolatban (lásd <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Összeférhetetlenség"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Kattintson az ikonra, hogy begépelhesse (vagy beillessze) ehhez az anyaghoz a szakértői véleményét."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Ezen felül feltölthet fájlokat a szerkesztőnek és/vagy a szerzőnek konzultálásra."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "A lektorálási folyamat befejezéseként a tanulmány megjelentetésére vonatkozó összefoglaló véleményét itt adhatja meg. Előtte kérjük ne feledje részletes véleményét vagy a lektorálási ablakban megadni vagy feltölteni."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Beállíthatja vagy módosíthatja a szakmai lektor ajánlását."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Nincs még ajánlás kiválasztva. Ki kell választania egyet."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Ha egyszer már megadott egy lektorálási döntést, azt később nem bírálhatja felül. Biztosan folytatja?"
+
+msgid "reviewer.article.ensuringBlindReview"
+msgstr "Anonim szakmai lektorálás biztosítása"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Fájl ide TechSzerk"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Technikai szerkesztési fájl"
+
+msgid "copyeditor.article.uploadedFile"
+msgstr "Feltöltött fájl"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Technikai szerkesztési fájl"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Nincsenek korrektúrázási hozzárendelések"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Kézirat feltöltéséhez a folyóiratnál a következő lépéseket kell elvégeznie.</p>\n"
+"<ol>\n"
+"<li>Ezen az oldalon kattintson a Böngészésre (vagy a Fájl választásra), amely megnyitja a fájlböngésző ablakot a merevlemezen található helyi fájlokkal.</li>\n"
+"<li>Keresse meg és jelölje ki azt a fájlt, amit szeretne feltölteni.</li>\n"
+"<li>Kattintson a Megnyitásra a fájlböngésző ablakban, ezzel behelyezi a fájl nevét erre az oldalra.</li>\n"
+"<li>Kattintson a Feltöltésre, amely feltölti a fájlt számítógépéről a folyóirat weboldalára és átnevezi a folyóirat szabályainak megfelelően.</li>\n"
+"<li>Ha az anyag feltöltésre került, akkor kattintson a Mentés és Folytatás gombra a lap alján.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "A kért email nem küldhető el, amíg a lektorált verzió érvényben van."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "A kért email nem küldhető el, amíg a fájl technikai szerkesztés alatt van a szerkesztői döntés, Szakmai lektorálás oldalon."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "A kért email nem küldhető el, amíg a fájl technikai szerkesztésre van feltöltve."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Technikai szerkesztés kezdete"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Szerkesztői technikai szerkesztés"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Szerzői technikai szerkesztés"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Végső technikai szerkesztés"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Tech szerk verzió"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Technikai szerkesztő hozzárendelése"
+
+msgid "submission.copyedit.useFile"
+msgstr "Fájl használata"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Technikai szerkesztési megjegyzések"
+
+msgid "submission.copyedit.instructions"
+msgstr "Technikai szerkesztési javaslatok"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Nem (Az utolsó lektori változatot töltse fel mielőtt felkérést küld tördelésre.)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Nyilvános tördelt változat azonosító (tartalmaznia kell betűt is)"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "A nyilvános tördelt változat azonosítása már megtörtént."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Tördelő hozzárendelése"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Tördelő szerkesztő lecserélése"
+
+msgid "submission.layout.layoutComments"
+msgstr "Elrendezési megjegyzések"
+
+msgid "submission.layout.instructions"
+msgstr "Elrendezési javaslatok"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Hivatkozás linkelés"
+
+msgid "submission.proofreadingComments"
+msgstr "Korrektori megjegyzések"
+
+msgid "submission.proofread.corrections"
+msgstr "Korrektori javítások"
+
+msgid "submission.proofread.instructions"
+msgstr "Korrektori javaslatok"
+
+msgid "submission.logType.article"
+msgstr "Cikk"
+
+msgid "submission.logType.author"
+msgstr "Szerző"
+
+msgid "submission.logType.editor"
+msgstr "Szerkesztő"
+
+msgid "submission.logType.review"
+msgstr "Szakmai lektor"
+
+msgid "submission.logType.copyedit"
+msgstr "Technikai szerkesztő"
+
+msgid "submission.logType.layout"
+msgstr "Tördelő"
+
+msgid "submission.logType.proofread"
+msgstr "Korrektúra"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Szerkesztő/Szerző levelezés"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Technikai szerkesztő megjegyzés(ek)"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Ezek a megjegyzések a szerzőkkel megosztásra kerülnek.<br />\n"
+"(Mentés után további megjegyzést lehet hozzáadni.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Szerzőnek és szerkesztőnek"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Szerkesztőnek"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Elküldés után egy szerkeszthető BCC másolat küldhető a szakmai lektoroknak."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Szerzőnek és szerkesztőnek"
+
+msgid "submission.comments.forEditor"
+msgstr "Szerkesztőnek"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Mentés és küldés a Szerzőnek"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Mentés és küldés a Szerkesztőnek"
+
+msgid "user.register.selectContext"
+msgstr "Folyóirat kiválasztása regisztrációhoz:"
+
+msgid "user.register.noJournals"
+msgstr "Nincs folyóirat, amellyel regisztrálni tudna az oldalra."
+
+msgid "user.register.privacyStatement"
+msgstr "Adatvédelmi nyilatkozat"
+
+msgid "user.register.registrationDisabled"
+msgstr "Ez a folyóirat jelenleg nem fogad felhasználói regisztrációt."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "A megadott jelszó nem elég hosszú."
+
+msgid "user.register.readerDescription"
+msgstr "Emailben értesítjük, ha a folyóirat egy számában megjelenik egy cikk."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Emailben értesítjük, ha a folyóirat egy száma nyílt hozzáférésű lesz."
+
+msgid "user.register.authorDescription"
+msgstr "Tételeket küldhet be a folyóirat."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Vállalja a folyóirathoz beküldött anyagok szakmai lektorálásának irányítását"
+
+msgid "user.register.reviewerDescription"
+msgstr "Vállalja a folyóirathoz beküldött anyagok szakmai lektorálásának irányítását"
+
+msgid "user.register.reviewerInterests"
+msgstr "Határozza meg a lektor érdeklődési területeit (tartalmi területeket és kutatási módszereket):"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Előfizetéseim"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Előfizetési státusz"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Alább láthatók az aktív és lejárt előfizetések a lejárati dátumukkal. Továbbá az alábbi státusz információk lehetnek feltüntetve az előfizetéseknél."
+
+msgid "user.subscriptions.status"
+msgstr "Státusz"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Leírás"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Az előfizetés aktiválása előtt további információra van szükség."
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Az előfizetés aktiválása előtt felül kell vizsgálni."
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Egy készpénzes fizetés elindult, de még nem érkezett meg."
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Egy online fizetés indult, de törlésre került, vagy nem befejezett"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Egyéni előfizető"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Intézményi előfizetők"
+
+msgid "user.subscriptions.renew"
+msgstr "Megújítás"
+
+msgid "user.subscriptions.purchase"
+msgstr "Vásárlás"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Új előfizetés vásárlása"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Egyéni előfizetés vásárlása"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Intézményi előfizetés vásárlása"
+
+msgid "user.subscriptions.expires"
+msgstr "Lejárat {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Lejárt {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Elérhető előfizetési típusok megtekintése"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Előfizetési típus"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Tagság"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "A kiválasztott előfizetési típus tagsági információkat kér."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Kérem, válasszon érvényes előfizetési típust."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Ennek a felhasználói azonosítónak már van egyéni előfizetése."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "A tagsági adatok, ha szükséges az előfizetés típusához."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Intézmény neve"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Szükséges egy intézménynév"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Levelezési cím"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domain"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Ha megadta a domaint, akkor az IP tartomány már nem kötelező. <br />A domain névnek érvényesnek kell lennie (pl. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "A kiválasztott előfizetési típus domain és/vagy IP tartományt kér az előfizető azonosításához."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Kérem, érvényes domain nevet adjon meg."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP tartományok"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Ha megadta az IP tartományt, akkor a domain már nem kötelező.<br />Az IP tartománynak érvényes értéket kell tartalmaznia (pl. 142.58.103.1), IP tartomány (e.g. 142.58.103.1 - 142.58.103.4), IP tartomány helyettesítő karakterrel '*' (pl. 142.58.*.*), és egy IP tartomány CIDR-el (pl. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Kérem, érvényes IP tartományt adjon meg."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Törlés"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Hozzáadás"
+
+msgid "search.browseAuthorIndex"
+msgstr "Tallózás a szerzői indexben"
+
+msgid "search.searchFor"
+msgstr "Cikkek keresése"
+
+msgid "search.withinJournal"
+msgstr "Folyóiraton belül"
+
+msgid "search.allJournals"
+msgstr "Minden folyóirat"
+
+msgid "search.authorIndex"
+msgstr "Tallózás a szerzői indexben"
+
+msgid "search.authorDetails"
+msgstr "Szerző részletek"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Keresési tippek: <ul>\n"
+"<li>A keresési kifejezések kis- és nagybetű érzékenyek</li>\n"
+"<li>A gyakran használt kifejezések figyelmen kívül maradnak</li>\n"
+"<li>Alapértelmezésként a találati halmaz cikkei tartalmaznak <em>minden</em> kifejezést a keresés sorrendjében (pl. <em>AND/ÉS</em> kifejezéssel)</li>\n"
+"<li>Kombinálhatók a kifejezések a <em>OR/VAGY</em> kifejezéssel, hogy megtalálja azokat a cikkeket, amelyek valamelyik kifejezést tartalmazzák; pl. <em>oktatás VAGY kutatás</em></li>\n"
+"<li>A bonyolultabb lekérdezésekhez használjon zárójeleket; pl. <em>archív ((folyóirat OR konferencia) NOT disszertáció)</em></li>\n"
+"<li>Pontos kifejezésre idézőjelekben keressen; pl. <em>\"nyílt hozzáférésű publikációk\"</em></li>\n"
+"<li>Szó kizárását az alábbiakkal teheti meg <strong>-</strong> vagy <em>NOT</em>; pl. <em>online -politika</em> vagy <em>online NOT politika</em></li>\n"
+"<li>Használjon <strong>*</strong> helyettesítő karakterként a kifejezésekben, hogy bármilyen karaktersort lefedjen a kifejezésben; pl. <em>szoci* erkölcs</em> megtalálja azokat a kifejezéseket, mint pl. szociológia vagy szociometria</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "{$title} megtekintése"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Ennek a PDF fájlnak a letöltése"
+
+msgid "article.pluginMissing"
+msgstr "<p>A kiválasztott PDF fájlnak ide kell betöltődnie, ha a böngészőben telepítve van a PDF olvasó bővítmény (például, egy aktuális verziója az <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Cikk letöltés"
+
+msgid "article.nonpdf.note"
+msgstr "A kiválasztott fájl automatikusan le fog töltődni. Ha nem, akkor kattintson az alábbi linkre. Megjegyzendő, hogy ez a fájl speciális megjelenítőt vagy plugint igényel a megtekintéshez. <br /><br />Ha a fájl nem töltődik le automatikusan, akkor <a href=\"{$url}\">kattintson ide</a>."
+
+msgid "site.journalsHosted"
+msgstr "Az oldalon tárolt folyóiratok"
+
+msgid "site.journalView"
+msgstr "Folyóirat megtekintése"
+
+msgid "site.journalRegister"
+msgstr "Regisztráció"
+
+msgid "site.journalCurrent"
+msgstr "Aktuális szám"
+
+msgid "site.noJournals"
+msgstr "Nincs elérhető folyóirat."
+
+msgid "current.current"
+msgstr "Aktuális"
+
+msgid "current.noCurrentIssue"
+msgstr "Nincs aktuális szám"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Ez a folyóirat még nem publikált egy számot sem."
+
+msgid "archive.archives"
+msgstr "Archívum"
+
+msgid "archive.archivesPageNumber"
+msgstr "Archívum - Oldal {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Böngészés a korábbi számok között"
+
+msgid "archive.issueUnavailable"
+msgstr "A szám elérhetetlen"
+
+msgid "about.statistics"
+msgstr "Statisztikák"
+
+msgid "about.contact"
+msgstr "Kapcsolat"
+
+msgid "about.aboutContext"
+msgstr "Információk"
+
+msgid "about.history"
+msgstr "A folyóirat története"
+
+msgid "about.editorialTeam"
+msgstr "Szerkesztőbizottság"
+
+msgid "about.editorialTeam.biography"
+msgstr "Életrajz"
+
+msgid "about.editorialPolicies"
+msgstr "Szerkesztői politikák"
+
+msgid "about.focusAndScope"
+msgstr "Fókuszpont és szakterület"
+
+msgid "about.sectionPolicies"
+msgstr "Section Policies"
+
+msgid "about.submissions"
+msgstr "Beküldések"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Bejelentkezés"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Regisztráció"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} vagy {$register} a beküldéshez."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} vagy {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Új beküldés készítése"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "a függőben lévő beküldéseinek megtekintése"
+
+msgid "about.authorGuidelines"
+msgstr "Szerzői útmutatók"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Ellenőrzőlista a benyújtás előkészítéséhez"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "A benyújtási folyamat része, hogy a szerzők ellenőrizzék le a benyújtandó anyaguk mindenben megfelel az alábbi listában szereplő elvárásoknak, és azokat a beadványokat, amelyek nem tartják be a az útmutatóban leírtakat, azokat vissza lehet küldeni a szerzőnek."
+
+msgid "about.copyrightNotice"
+msgstr "Szerzői jogi közlemény"
+
+msgid "about.privacyStatement"
+msgstr "Adatvédelmi nyilatkozat"
+
+msgid "about.authorFees"
+msgstr "Szerzői díjak"
+
+msgid "about.authorFeesMessage"
+msgstr "Ez a folyóirat az alábbi szerzői díjakkal dolgozik."
+
+msgid "about.peerReviewProcess"
+msgstr "lektorálási eljárás"
+
+msgid "about.publicationFrequency"
+msgstr "Közzétételi gyakoriság"
+
+msgid "about.openAccessPolicy"
+msgstr "Nyílt hozzáférés politika"
+
+msgid "about.delayedOpenAccess"
+msgstr "Késleltetett nyílt hozzáférés"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Ennek a folyóiratnak a tartalmai nyílt hozzáférés keretében jelennek meg"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "hónap(ok) a szám megjelenése után."
+
+msgid "about.authorSelfArchive"
+msgstr "Szerzői ön-archiválás"
+
+msgid "about.archiving"
+msgstr "Archiválás"
+
+msgid "about.subscriptions"
+msgstr "Előfizetések"
+
+msgid "about.subscriptions.individual"
+msgstr "Egyéni előfizetők"
+
+msgid "about.subscriptions.institutional"
+msgstr "Intézményi előfizetők"
+
+msgid "about.subscriptionsContact"
+msgstr "Előfizetők elérhetőségei"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Név"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formátum"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Időtartam"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Költség"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Előfizetési típusok"
+
+msgid "about.memberships"
+msgstr "Tagság"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "A kiadói rendszerről"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS szerkesztői és kiadási folyamat"
+
+msgid "about.aboutOJSJournal"
+msgstr "Ez a folyóirat Open Journal Systems {$ojsVersion} verziót használ, amely egy nyílt forráskódú folyóirat menedzselő és kiadói szoftver, a <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> által támogatott és szabadon terjeszthető a GNU General Public License alatt."
+
+msgid "about.aboutOJSSite"
+msgstr "Ez az oldal Open Journal Systems {$ojsVersion} verziót, amely egy nyílt forráskódú folyóirat menedzselő és kiadói szoftver, a <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> által támogatott és szabadon terjeszthető a GNU General Public License alatt."
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems Súgó"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS Súgó"
+
+msgid "help.searchReturnResults"
+msgstr "Vissza a keresési eredményekhez"
+
+msgid "help.goToEditPage"
+msgstr "Szerkesztés {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Köszönet"
+
+msgid "donations.thankYouMessage"
+msgstr "Köszönjük a hozzájárulását, amelyet nagyra értékünk."
+
+msgid "gifts.buyer"
+msgstr "Ajándékozó"
+
+msgid "gifts.buyerDescription"
+msgstr "Kitől érkezik az ajándék?"
+
+msgid "gifts.recipient"
+msgstr "Címzett"
+
+msgid "gifts.recipientDescription"
+msgstr "Kinek megy az ajándék?"
+
+msgid "gifts.thankYou"
+msgstr "Köszönet"
+
+msgid "gifts.thankYouMessage"
+msgstr "Az ajándék vásárlása befejeződött. Kapni fog egy másolatot az ajándék emailből, miután megtörtént a fizetés feldolgozása."
+
+msgid "gifts.purchaseGiftIndividualSubscription"
+msgstr "Ajándék előfizetés"
+
+msgid "gifts.subscriptionFormIntroduction"
+msgstr "Kérem, töltse ki az alábbi űrlapot. A megadott elérhetőségi adatai és az ajándékhoz küldött üzenete megfog jelenni a címzettnek küldött levélben, hogy informálja az ajándékot küldő személyéről (egy másolatot ön is fog kapni ebből a levélből)."
+
+msgid "gifts.details"
+msgstr "Az ajándék részletei"
+
+msgid "gifts.detailsDescription"
+msgstr "Kérem, válassza ki alább az ajándékot és adjon hozzá egy személyes üzenetet, amit emailben küld el a rendszer a címzettnek (egy másolatot ön is fog kapni ebből a levélből)."
+
+msgid "gifts.gift"
+msgstr "Ajándék"
+
+msgid "gifts.noteTitle"
+msgstr "Cím"
+
+msgid "gifts.note"
+msgstr "Ajándék üzenet"
+
+msgid "gifts.noteTitleRequired"
+msgstr "Kérem, adjon egy címet a személyes üzenetéhez."
+
+msgid "gifts.noteRequired"
+msgstr "Kérem, adja meg a személyes üzenetet."
+
+msgid "gifts.localeRequired"
+msgstr "Kérem, válasszon egy nyelvet a személyes üzenethez."
+
+msgid "gifts.myGifts"
+msgstr "Ajándékaim"
+
+msgid "gifts.manageMyGifts"
+msgstr "Ajándékaim kezelése"
+
+msgid "gifts.redeemGift"
+msgstr "Ajándék beváltása"
+
+msgid "gifts.status.notRedeemed"
+msgstr "Elérhető"
+
+msgid "gifts.status.redeemed"
+msgstr "Beváltott"
+
+msgid "gifts.status.redeemGift"
+msgstr "Ajándék beváltása"
+
+msgid "gifts.subscriptions"
+msgstr "Előfizetések"
+
+msgid "gifts.subscriptionsDescription"
+msgstr "Egy ajándék előfizetés beváltásával a meglévő előfizetése fog lecserélődni (ha van önnek ilyen). Az előfizetés a beváltás napján  kezdődik és az előfizetés típusától függően lesz érvényes."
+
+msgid "gifts.purchaseGiftSubscription"
+msgstr "Előfizetés ajándékba adása"
+
+msgid "gifts.giftSubscriptionsAvailable"
+msgstr "Ajándék előfizetések is elérhetőek. Az ajándék előfizetés bármikor beváltható és nagyszerű módja a folyóirat támogatásának."
+
+msgid "gifts.noSubscriptions"
+msgstr "Nincsenek ajándék előfizetések"
+
+msgid "gifts.giftRedeemed"
+msgstr "Az ajándék sikeresen beváltásra került."
+
+msgid "gifts.noGiftToRedeem"
+msgstr "Ezt az ajándékot nem lehet beváltani."
+
+msgid "gifts.giftAlreadyRedeemed"
+msgstr "Ez az ajándék már beváltásra került."
+
+msgid "gifts.giftNotValid"
+msgstr "Ez az ajándék nem érvényes és nem lehet beváltani."
+
+msgid "gifts.subscriptionTypeNotValid"
+msgstr "Ez az elfizetés típus az ajándékhoz nem érvényes. Kérem, lépjen kapcsolatba az előfizetés menedzserrel."
+
+msgid "gifts.subscriptionNonExpiring"
+msgstr "Az ajándék nem váltható be, mert már van egy érvényes előfizetése ennél a folyóiratnál."
+
+msgid "payment.loginRequired"
+msgstr "Be kell jelentkeznie a fizetéshez."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Az előfizetés vagy a cikk vásárlásához el kell érnie azt az elemet. Az előfizetése ellenőrzéséhez vagy a korábbi előfizetés vagy cikk vásárlásainak megtekintéséhez be kell jelentkeznie."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Előfizetés vagy folyóiratszám vásárlásához el kell érnie a tételt. Az előfizetése ellenőrzéséhez vagy a korábbi előfizetés vagy cikk vásárlásainak megtekintéséhez be kell jelentkeznie."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Adományozáshoz be kell jelentkeznie."
+
+msgid "payment.paid"
+msgstr "Fizetett"
+
+msgid "payment.payNow"
+msgstr "Fizetés most"
+
+msgid "payment.waive"
+msgstr "Lemond"
+
+msgid "payment.alreadyPaid"
+msgstr "Már fizetett"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Jelölje be ezt a négyzetet, hogyha már elküldte az összeget a folyóiratnak, hogy befejezhesse a folyamatot. Amíg nem érkezik meg az összeg, addig nem kerül megújításra az előfizetése. Kattintson a FIZETÉS MOST lehetőségre, a fizetési utasítások felett."
+
+msgid "payment.paymentReceived"
+msgstr "Befizetés megérkezett"
+
+msgid "payment.paymentSent"
+msgstr "A befizetés már elküldvePayment has already been sent"
+
+msgid "payment.authorFees"
+msgstr "Szerzői díjak"
+
+msgid "payment.type.submission"
+msgstr "Benyújtási díj"
+
+msgid "payment.type.publication"
+msgstr "Publikációs díj"
+
+msgid "payment.type.fastTrack"
+msgstr "Gyorsított lektorálási díj"
+
+msgid "payment.type.membership"
+msgstr "Egyéni tagsági díj"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Cikk vásárlási díj"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Folyóiratszám vásárlási díj"
+
+msgid "payment.type.subscription"
+msgstr "Előfizetési díj"
+
+msgid "payment.type.donation"
+msgstr "Adományok"
+
+msgid "payment.type.gift"
+msgstr "Ajándék"
+
+msgid "payment.type.gift.subscription"
+msgstr "Előfizetés"
+
+msgid "payment.donation.makeDonation"
+msgstr "Adományozás"
+
+msgid "payment.submission.paySubmission"
+msgstr "Benyújítási díj fizetése"
+
+msgid "payment.fastTrack.payFastTrack"
+msgstr "Fizetés a gyorsított lektorálásért"
+
+msgid "payment.fastTrack.inFastTrack"
+msgstr "Gyorsított lektorálás alatt"
+
+msgid "payment.publication.payPublication"
+msgstr "Fizetés a megjelentésért"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Közzétételi díj kifizetve"
+
+msgid "payment.membership.buyMembership"
+msgstr "Egyéni tagság vásárlása"
+
+msgid "payment.membership.renewMembership"
+msgstr "Egyéni tagság megújítása"
+
+msgid "payment.membership.ends"
+msgstr "Tagság vége"
+
+msgid "payment.subscription.purchase"
+msgstr "Előfizetés vásárlás"
+
+msgid "payment.subscription.renew"
+msgstr "Előfizetés megújítása"
+
+msgid "payment.subscription.expires"
+msgstr "Lejár"
+
+msgid "installer.appInstallation"
+msgstr "OJS Installáció"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS Frissítés"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS verzió {$version}</h4>\n"
+"\n"
+"<p>Köszönjük, hogy letöltötte a Public Knowledge Project's <strong>Open Journal Systems</strong> szoftverét. Mielőtt használatba venné, kérjük olvassa át az <a href=\"{$baseUrl}/docs/README\">OLVASS EL</a> fájlt, amit tartalmaz ez a szoftver. A Public Knowledge Project-ről és szoftvereiről bővebb információkért látogasson el a <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP weboldalára</a>. Ha hibát szeretne bejelenteni, vagy technikai támogatásra van szüksége az Open Journal System szoftverrel kapcsolatban, akkor látogasson el a  <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">támogatói fórumra</a> vagy látogassa meg a PKP online felületét<a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">hiba bejelentő rendszer</a>. Bár a támogatói fórum a legjobb módja, hogy kapcsolatba lépjen velünk, de írhat emailt is a <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a> címre.</p>\n"
+"\n"
+"<h4>Frissítés</h4>\n"
+"\n"
+"<p>Ha frissítenie kell egy meglévő telepített OJS verziót, <a href=\"{$upgradeUrl}\">kattintson  ide</a> a folyamat elvégzéséhez.</p>\n"
+"\n"
+"<h4>Ajánlott rendszer követelmények</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; jelenleg az alábbi verziót használja {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 vagy <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5 (beleértve a PostgreSQL 8.x)</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x or >= 2.0.4x vagy Microsoft IIS 6</li>\n"
+"\t<li>Operációs rendszer: Bármelyik operációs rendszer alkalmas, ami támogatja a fenti szoftvereket, beleértve a <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Mivel a PKP nem renkelkezik annyi erőforrással, hogy teszteljen minden szoftververziót és platformot, így nincs garancia a megfelelő működésre, vagy támogatásra.</p>\n"
+"\n"
+"<p>Ezeknek a beállításoknak a megváltoztatásához szerkesztenie kell a <tt>config.inc.php</tt> fájlt az alap OJS könyvtárban, vagy használja a weben a beállítások oldalt.</p>\n"
+"\n"
+"<h4>Támogatott adatbázisrendszerek</h4>\n"
+"\n"
+"<p>OJS jelenleg MySQL és PostgreSQL alatt tesztelt, bár más támogatott adatbáziskezelő rendszerek is <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> működhetnek (teljesen vagy részben). A kompatibilitási jelentés és/vagy alternatív adatbázirendszerek elküldhetők az OJS csapatnak.</p>\n"
+""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Telepítés előtti lépések</h4>\n"
+"\n"
+"<p>1. A következő fájloknak és könyvtáraknak (valamint azok tartalmainak) írhatóaknak kell lenniük:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> írható (választható): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> írható: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> írható: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> írható: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> írható: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> írható: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Annak a könyvtárnak, ahova a fájlok kerülnek szintén írhatónak kell lennie (lásd \"Fájlok rendszere\" alább).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS verzió {$version}</h4>\n"
+"\n"
+"<p>Köszönjük, hogy letöltötte a Public Knowledge Project's <strong>Open Journal Systems</strong> szoftverét Mielőtt használatba venné, kérjük olvassa át az <a href=\"{$baseUrl}/docs/README\">OLVASS EL</a> és <a href=\"{$baseUrl}/docs/UPGRADE\">FRISSÍTÉS</a> fájlokat, amiket tartalmaz ez a szoftver. A Public Knowledge Project-ről és szoftvereiről bővebb információkért látogasson el a <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP weboldalára</a>. Ha hibát szeretne bejelenteni, vagy technikai támogatásra van szüksége az Open Journal System szoftverrel kapcsolatban, akkor látogasson el a  <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">támogatói fórumra</a> vagy látogassa meg a PKP online felületét<a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">hiba bejelentő rendszer</a>. Bár a támogatói fórum a legjobb módja, hogy kapcsolatba lépjen velünk, de írhat emailt is a <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a> címre.</p>\n"
+"<p>Az <strong>erősen ajánlott</strong>, hogy mentse az adatbázist, a feltöltött fájlokat, és az OJS install könyvtárat mielőtt végrehajtja a folyamatot.</p>\n"
+"<p>Ha futtatja a rendszert <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Biztonsági módban</a>, kérem, győződjön meg arról, hogy a max_execution_time directive a php.ini konfigurációs fájlban magas értékre állította. Ha ez vagy más időlimit (pl. Apache's \"Timeout\" directive) túllépés következik be és a frissítési folyamat leáll, akkor manuális beavatkozás szükséges.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"A tejes Unicode (UTF-8) támogatáshoz, válassza az UTF-8 az összes karakter beállításához. Ehhez szükséges a MySQL  >= 4.1.1 vagy PostgreSQL >= 7.1 adatbázis szerver. Érdemes tudni, hogy a teljes Unicode támogatás a következőt is igényli PHP >= 4.3.0 az <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> könyvtár alkalmazással fordított (a legtöbb telepített PHP verzióban megtalálható). Problémát okozhat a bővített karakterkezelés, ha a szervere nem felel meg ezeknek a követelményeknek.<br /><br />\n"
+"A szervere jelenleg támogatja az mbstring-et: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "A szerveren engedélyezett a fájl feltöltés: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "A szerveren engedélyezett maximálisan feltölthető fájlméret: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "A rendszer által használt elsődleges nyelv. Kérem, nézze meg az OJS dokumentációt, ha olyan nyelvek is érdeklik, amelyek nem szerepelnek az alábbi listában."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Válasszon a rendszer által támogatott további nyelvek közül. Ezek a nyelvek elérhetőek lesznek a rendszerben megtalálható folyóiratoknál. Bármikor további nyelvek is telepíthetőek az adminisztrációs oldalon."
+
+msgid "installer.filesDirInstructions"
+msgstr "Adja meg a teljes elérési útvonalát annak a létező könyvtárnak, ahol a feltöltött fájlokat fogja tárolni. Ezt a könyvtárat nem szabad közvetlenül a webről elérni. <strong>Mielőtt telepít kérem, győződjön meg arról, hogy létezik a könyvtár és írható.</strong> A Windows útvonal nevében használjon perjeleket, pl. \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "Az OJS hozzáférést kér az SQL adatbázishoz, hogy tárolja az adatot. A rendszerkövetelményeket lásd a támogatott adatbázisok listája felett. Az alábbi mezőkben megadhatja azokat az információkat, amelyek szükségesek a kapcsolódáshoz."
+
+msgid "installer.installApplication"
+msgstr "Open Journal Systems telepítése"
+
+msgid "installer.upgradeApplication"
+msgstr "Open Journal Systems frissítése"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Figyelem:</strong> Ha a telepítés félbeszakad, akkor manuálisan kell a létrehozott adatbázist vagy adatbázis táblákat kitörölnie mielőtt újratelepítené az adatbázist."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>FONTOS!</h4>\n"
+"<p>Az installáló nem tudta automatikusan felülírni a konfigurációs fájlt. Mielőtt használná a rendszert, kérem nyissa meg a <tt>config.inc.php</tt> fájlt egy alkalmas karakteres szerkesztőben és cserélje le a tartalmát az alábbira.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Az OJS telepítése sikeresen megtörtént.</p>\n"
+"<p>A rendszer használatának megkezdéséhez, <a href=\"{$loginUrl}\">login</a> lépjen be a az előző oldalon a felhasználónevével és jelszavával.</p>\n"
+"<p>Ha szeretne tagja lenni a PKP közösségnek, akkor:</p>\n"
+"<ol>\n"
+"\t<li>Olvassa a <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP blog</a> és kövesse az <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS feed</a> hírekért és frissítésekért.</li>\n"
+"\t<li>Látogassa meg a <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">támogatói fórumot</a> ha kérdése vagy észrevétele lenne.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Az OJS frissítése a következő verzióra {$version} sikeresen lezajlott.</p>\r\n"
+"<p>Ne felejtse el beállítani a telepített verzió beállításait a config.inc.php konfigurációs fájljában ha visszalép<em>ide</em>.</p>\r\n"
+"<p>Ha még nem regisztrált és szeretne értesítéseket kapni a hírekről és a frissítésekről, akkor kérjük, regisztráljon a <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> oldalon.</strong> Ha kérdése, vagy észrevétele van, akkor látogasson el a <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">támogatói fórumra</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "Új OJS verzió érhető el! Az aktuálisan használt OJS verzió {$currentVersion}. A legújabb OJS verzió {$latestVersion}. Kérjük látogasson el <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">erre az oldalra</a>, hogy le tudja tölteni az aktuális verziót és megkapja a frissítési utasításokat."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "Új OJS verzió érhető el! Az aktuálisan használt OJS verzió {$currentVersion}. A legújabb OJS verzió {$latestVersion}. Kérjük, lépjen kapcsolatba az oldal adminisztrátorával ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>), hogy figyelmeztesse az új verzióra. További információt talál <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">itt</a>."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} felülvizsgálta a cikket {$submissionId}. Az új fájl ID a {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} hozzárendelése megszűnt a lektorált beadvány {$submissionId} felülvizsgálati fordulójánál {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "A beadvány {$round} fordulós lektorálása {$reviewerName} által {$submissionId} azonosítóval megkezdődött."
+
+msgid "log.review.reviewReinitiated"
+msgstr "A beadvány {$round} fordulós lektorálása {$reviewerName} által {$submissionId} újraindult."
+
+msgid "log.review.reviewCancelled"
+msgstr "A beadvány {$round} fordulós lektorálása {$reviewerName} által {$submissionId} visszavonásra került."
+
+msgid "log.review.reviewCleared"
+msgstr "A beadvány {$round} fordulós lektorálása {$reviewerName} által {$submissionId} törlésre került."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} értékelte a {$round} lektorálási fordulóban a {$submissionId} beadványt."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "{$reviewerName} beállította a {$dueDate} dátumot induló dátumnak a {$submissionId} beadvány {$round} fordulós lektorálásához."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "{$reviewerName} megadta az ajánlását a {$submissionId} beadvány {$round} fordulós lektorálásához."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "A {$reviewerName} a szakmai lektor nevében a {$editorName} szerkesztő beállította a {$submissionId} beadvány {$round} fordulós szakmai lektorálásához az ajánlást."
+
+msgid "log.review.resubmit"
+msgstr "{$submissionId} cikk újra el lett küldve szakmai lektorálásra."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} szakmai lektor a {$round} lektorálási körben elutasította a {$submissionId} cikket."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} szakmai lektor a {$round} lektorálási körben elfogadta a {$submissionId} cikket."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} felhasználó a {$round} lektorálási körben elutasította a {$submissionId} cikket a {$reviewerName} szakmai lektor nevében."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} felhasználó a {$round} lektorálási körben elfogadta a {$submissionId} cikket a {$reviewerName} szakmai lektor nevében.."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "A {$userName} szerkesztő, feltöltött egy lektorált\tfájlt a {$submissionId} cikk {$round} lektorálási köréhez a {$reviewerName} szakmai lektor nevében."
+
+msgid "log.review.reviewerFile"
+msgstr "Egy szakmai lektorálási fájl feltöltésre került."
+
+msgid "log.editor.decision"
+msgstr "Egy szerkesztői döntés ({$decision}) a {$submissionId} cikkhez a {$editorName} szerkesztő által betöltésre került."
+
+msgid "log.copyedit.initiate"
+msgstr "A {$submissionId} cikk technikai szerkesztése {$copyeditorName} technikai szerkesztő által elindításra került."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Az alapértelmezett technikai szerkesztői fájl kiválasztása megtörtént."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} technikai szerkesztő befejezte a kezdeti technikai szerkesztést a {$submissionId} cikken."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} technikai szerkesztő befejezte a végső technikai szerkesztést a {$submissionId} cikken."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} technikai szerkesztőhöz a {$submissionId} cikk hozzárendelésre került."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "A cikk technikai szerkesztésen átesett verziója feltöltésre került."
+
+msgid "log.copyedit.authorFile"
+msgstr "A szerző által technikai szerkesztésen átesett fájlváltozata feltöltésre került."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} szerkesztő tördelőszerkesztőként hozzárendelésre került a {$submissionId} cikkhez."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} szerkesztő tördelőszerkesztői hozzárendelése megszűnt a {$submissionId} cikknél."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} szerkesztő befejezte a {$submissionId} cikk tördelését."
+
+msgid "log.editor.metadataModified"
+msgstr "A cikk metaadatát módosította a {$editorName} szerkesztő."
+
+msgid "log.editor.editorFile"
+msgstr "A beküldött anyag egy szerkesztői változata feltöltésre került."
+
+msgid "log.editor.archived"
+msgstr "A cikk {$submissionId} archiválásra került."
+
+msgid "log.editor.restored"
+msgstr "A cikk {$submissionId} visszaállításra került az aktívak közé."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} szerkesztő hozzárendelésre került a {$submissionId} cikkhez."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} hozzárendelte a {$proofreaderName} felhasználót, hogy végezze el a {$submissionId} cikk korrektúrázását."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName}korrektúrázó ütemezésre küldte a {$submissionId} cikket."
+
+msgid "log.imported"
+msgstr "{$userName} felhasználó importálta a {$submissionId} cikket."
+
+msgid "rt.admin.settings"
+msgstr "Olvasói eszközök beállításai"
+
+msgid "rt.admin.settings.description"
+msgstr "Az olvasói eszközök az indexelt folyóiratrovatokban publikált tételek mellett jelennek meg. Az olvasói eszközök egy sor beállítási lehetőséget kínálnak a publikált tételekhez, alább felsorolva számos olyan eszköz, amely hozzáférést biztosít a cikkekhez, mezőkhöz és a tudományterületekhez."
+
+msgid "rt.admin.settings.enableReadingTools"
+msgstr "Olvasói eszközök engedélyezése a kijelölt folyóirat rovatokban."
+
+msgid "rt.admin.settings.relatedItems"
+msgstr "Mező"
+
+msgid "rt.admin.settings.relatedItemsLink"
+msgstr "Lásd <a href=\"{$relatedItemsLink}\" class=\"action\">a kapcsolódó tételek beállításait</a> a megtekintéshez, hozzáadáshoz, javításhoz vagy a kapcsolódó tétel valamennyi mezőjének törléséhez."
+
+msgid "rt.admin.options"
+msgstr "Folyóirat tétel eszközök"
+
+msgid "rt.admin.relatedItems"
+msgstr "Kapcsolódó tétel eszközök"
+
+msgid "rt.admin.settings.addComment"
+msgstr "Megjegyzés hozzáadása (engedélyezze az olvasók számára a megjegyzések hozzáadását, a folyóirat menedzser képes törölni azokat)."
+
+msgid "rt.admin.settings.addComment.authenticated"
+msgstr "A felhasználóknak regisztrálniuk kell és be kell jelentkezniük a posztoláshoz, az anoním poszt nem engedélyezett."
+
+msgid "rt.admin.settings.addComment.anonymous"
+msgstr "A felhasználóknak regisztrálniuk kell és be kell jelentkezniük a posztoláshoz, az anoním poszt engedélyezett."
+
+msgid "rt.admin.settings.addComment.unauthenticated"
+msgstr "A felhasználóknak nem kell regisztrálniuk és bejelentkezniük a posztoláshoz, az anoním poszt engedélyezett."
+
+msgid "rt.admin.validateUrls.description"
+msgstr ""
+"Lehetséges, hogy érvénytelen URL jelent meg az alábbi keresési oldalakon.<br/>\n"
+"Manuálisan tudja az érvénytelen URL-ket megjelölni, ez a teszt nem 100%-ig megbízható.<br/>\n"
+"Az érvényesítés meghiúsulhat posztolt adatokból jövő URL-ek esetében."
+
+msgid "rt.metadata.dublinCore.primaryAuthor"
+msgstr "Készítő"
+
+msgid "rt.metadata.pkp.primaryAuthor"
+msgstr "A szerző neve, affiliáció, ország"
+
+msgid "rt.metadata.pkp.peerReviewed"
+msgstr "Lektorált cikk"
+
+msgid "rt.beNotifiedWhen"
+msgstr "Értesítés kell, ha..."
+
+msgid "rt.thisJournal"
+msgstr "Folyóirat keresés"
+
+msgid "rt.context.authorTermsDescription"
+msgstr "Azoknál az elemeknél, ahol több, mint egy szerző szerepel, hagyja meg a szerzőket, mint társszerzők vagy egyszerre egy nevet keressen, akkor jelölje, hogy csak egy név. Bővebben a forráskeresésről kattintson az Információk oldalra. Ezek a források azért kerültek kiválasztásra, mert relevánsak és részben vagy egészében szabad hozzáférésűek."
+
+msgid "notification.mailListDescription"
+msgstr "Adja meg az email címét, hogy azonnal értesítést kaphasson, ha fontos új tartalom jelenik meg a folyóiratnál."
+
+msgid "notification.notificationsPublicDescription"
+msgstr "Ez az oldal a folyóiratban történt fontos frissítéseket mutatja, úgymint a folyóirat számok vagy közlemények. RSS csatornán keresztül feliratkozhat ezekre az értesítésekre (kattintson a jobb oldali képekre), vagy   <a href=\"{$emailUrl}\">emailben.</a>"
+
+msgid "notification.type.articleSubmitted"
+msgstr "Egy új cikk került beküldésre a következő címmel \"{$title}\"."
+
+msgid "notification.type.editing"
+msgstr "Események szerkesztése"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Egy új cikk, \"{$title},\" címmel került feltöltésre."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Megjegyzés érkezett a \"{$title}\" című cikk szerkesztői döntéséhez."
+
+msgid "notification.type.galleyModified"
+msgstr "\"{$title}\" című cikk megjelentetési formátuma megváltozott."
+
+msgid "notification.type.issuePublished"
+msgstr "Egy folyóiratszám publikálásra került."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Egy új közlemény készült."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "\"{$title}\" című cikkhez szakmai lektorálási űrlapot küldtek be."
+
+msgid "notification.type.reviewing"
+msgstr "Szakmai lektorálási események"
+
+msgid "notification.type.site"
+msgstr "Oldal események"
+
+msgid "notification.type.submissionComment"
+msgstr "\"{$title}\" című cikkhez egy szerkesztő megjegyzést adott hozzá."
+
+msgid "notification.type.submissions"
+msgstr "Beküldési események"
+
+msgid "notification.type.userComment"
+msgstr "\"{$title}\" című cikkhez egy olvasó megjegyzést adott hozzá."
+
+msgid "notification.savedIssueMetadata"
+msgstr "A szám publikálási metaadatai mentésre kerültek."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Új cikket töltöttek fel, amely szerkesztő hozzárendelésére vár."
+
+msgid "notification.type.assignProductionUser"
+msgstr "A megjelentetési formátum létrehozásához felhasználó hozzárendelése, használja a Hozzáadás linket a Felhasználói listában."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Várakozó kefelenyomatok"
+
+msgid "notification.type.publicationScheduled"
+msgstr "Ez a kézirat közzétételre beütemezve."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Hozzáférés megtagadva! Ön nincs technikai szerkesztőként hozzárendelve ehhez a cikkhez."
+
+msgid "user.authorization.noContext"
+msgstr "Ebben a szövegkörnyezetben nem található folyóirat!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Olyan cikkhez próbál hozzáférni, ami nem része az Ön rovatának."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Érvénytelen folyóiratszám kérése!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Érvénytelen technikai szerkesztés beküldése vagy nem történt meg a technikai szerkesztő példányányának kérése!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Pénznem lista betöltése \"{$filename}\" XML-ből"
+
+msgid "grid.action.createContext"
+msgstr "Új folyóirat készítése"
+
+msgid "editor.navigation.issues"
+msgstr "Folyóiratszámok"
+
+msgid "notification.type.approveSubmission"
+msgstr "Ez a cikk jelenleg jóváhagyásra vár, mielőtt megjelenik a folyóiratszámban."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Jóváhagyásra vár"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Regisztráció további folyóiratokhoz."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "A többi folyóirat elrejtése"
+
+msgid "article.view.interstitial"
+msgstr "Kérjük, válasszon egy cikkfájlt a letöltéshez"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Jóváhagyott"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Jóváhagyásra vár"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Megjelenési formátum jóváhagyása"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Hagyja jóvá ezt a kefelenyomatot megjelentetésre.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Jóváhagyás eltávolítása ennél a kefelenyomatnál.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "\"{$journalName}\" folyóirat indexelése"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "A keresés végrehajtása nem teszi lehetővé a folyóiratonkénti újraindexelést."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "A megadott folyóirat elérési útvonal \"{$journalPath}\" nem meghatározott a folyóiratnál."
+
+msgid "editor.issues.backIssues"
+msgstr "Korábbi számok"
+
+msgid "editor.issues.futureIssues"
+msgstr "Tervezett számok"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Kérjük, töltse ki a kötelező mezőket!"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "payment.requestPublicationFee"
+msgstr "Megjelentetetési díj szükséges ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "Befizetés lett kérve, de a határidő lejárt. Lépjen kapcsolatba a Szerkesztővel a részletekkel kapcsolatban."
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Önnek nincs érvényes előfizetése."
+
+msgid "payment.type.publication.required"
+msgstr "A publikációs díj befizetése esedékes."
+
+msgid "navigation.subscriptions"
+msgstr "Előfizetések"
+
+msgid "log.editor.recommendation"
+msgstr "Egy szerkesztői javaslat ({$decision}) erre a cikkre {$submissionId} rögzítve lett általa {$editorName}."
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} átvette a szerkesztési folyamatot ennél a cikknél {$submissionId}."
+
+msgid "user.role.subEditor"
+msgstr "Rovatszerkesztő"
+
+msgid "common.publishedSubmissions"
+msgstr "Cikkek"
+
+msgid "catalog.sortBy"
+msgstr "Cikkek sorrendje"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Cikkek rendezése ebben a kategóriában az alábbiak szerint:"
+
+msgid "section.policy"
+msgstr "Rovat irányelvek"
+
+msgid "common.publishedSubmission"
+msgstr "Cikk"
+
+msgid "notification.type.public"
+msgstr "Nyilvános értesítések"
+
+msgid ""
+msgstr ""
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Küldj be új anyagot a <a href=\"{$url}\">{$name}</a> rovatba."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Szeretnék lektorálási felkéréseket kapni ennél a folyóiratnál. "
+
+msgid "manager.setup.porticoDescription"
+msgstr "A Portico egy non profit, digitális publikációk megörzésébez elkötelezett szolgáltatás.  Ha folyóirata szerződésben áll a Portico-val, engedélyezze itt: "
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Igen, szeretném ha értesítenének az összes olyan folyóirattól amiknél regisztráltam, ha új publikáció történik vagy közlményt tesznek közzé."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr "Igen, beleegyezem adataim gyűjtéséhez és tárolásához a folyóirat <a href=\"{$privacyUrl}\" target=\"_blank\">adatkezelési nyilatkozata szerint</a>."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "El kell fogadnia a folyóiratok adatkezelési nyilatkozatát, melyekhez regisztrál. "
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "El kell fogadnia a folyóirat adatkezelési nyilatkozatát. "
+
+msgid "notification.type.editorialReport"
+msgstr "Statisztikai jelentés összesítője."
+
+msgid "notification.type.editorialReport.contents"
+msgstr "Folyóirata mérőszámai megtekinthetők a szerkesztői riportban."

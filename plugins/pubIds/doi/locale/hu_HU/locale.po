@@ -1,22 +1,162 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-12 15:36+0000\n"
-"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
-"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
-"pubIds-doi/hu/>\n"
-"Language: hu_HU\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:07:39+00:00\n"
+"Language: \n"
 
-msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
-msgstr "A DOI {$pubId} hozzárendelés megtörtént."
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI"
 
-msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
-msgstr ""
-"A DOI {$pubId} nem hozzárendelhető, mert feloldhatatlan mintát tartalmaz."
+msgid "plugins.pubIds.doi.description"
+msgstr "Ez a plugin lehetővé teszi Digitális Objektumazonosító (DOI) hozzárendelését folyóiratszámokhoz, cikkekhez, preprintekhez az OJS-ben."
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr "Kérjük, állítsa be a DOI plugint DOI-k kezelésére és használatára OJS-ben:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Folyóirat tartalom"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr "Kérjük, hogy válassza ki azokat az objektumokat, amelyekhez DOI-kat szeretne rendelni!"
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr "Kérjük, hogy válassza ki azokat az megjelentetési objektumokat, amelyekhez DOI-kat fog rendelni:"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Számok"
+
+msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
+msgstr "Cikkek"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Preprintek"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "DOI Előtag"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr "A DOI előtagot regisztrációs ügynökségek (pl. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) osztják ki, ebben a formátumban 10.xxxx (például 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "A DOI előtag kötelező és így kell kinéznie: 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "DOI utótag"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr "A DOI utótag bármilyen formátumú lehet, de egyedinek kell lennie minden publikálási objektum esetében, amely ugyanahhoz a DOI előtaghoz tartozik:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr "Használja az alább begépelt mintát DOI utótag generálásához. Használja a %j -t a folyóirat kezdőbetűkhöz, %v -t a évfolyamszámhoz, %i -t a folyóiratszámhoz, %Y -t az évhez, %a -t az OJS cikkazonosítóhoz, %g -t az OJS preprint azonosítóhoz, %f -t OJS fájlazonosítóhoz, %p -t az oldalszámhoz and %x -et, mint egyéni azonosítót."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr "Például, vol%viss%ipp%p ilyen DOI-t eredményez: 10.1234/vol3iss2pp230"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "folyóiratszámoknak"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "cikkeknek"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "preprinteknek"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "Használja az alapértelmezett mintákat."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i folyóiratszámoknak<br />%j.v%vi%i.%a cikkeknek<br />%j.v%vi%i.%a.g%g for preprinteknek."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Adjon meg egy egyedi DOI-utótagot minden megjelent tételhez. Minden egyes elem metaadat-oldalán további DOI beviteli mezőt talál."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Kérjük, írja be a DOI utótag mintát a folyóiratszámokhoz."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Kérjük, írja be a DOI utótag mintát a cikkekhez."
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Kérjük, írja be a DOI utótag mintát a preprintekhez."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "DOI-k újrakiosztása"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr "Ha megváltoztatja a DOI konfigurációját, a már kioszott DOI-kra nem lesznek hatással. Miután a DOI konfiguráció mentésre került, ezzel a gombbal törölheti az összes létező DOI-t, hogy az új beállítások érvénybe lépjenek a meglévő objektumokkal."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr "Biztos benne, hogy törli az összes létező DOI-t?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "DOI-k kiosztása"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr "A DOI-k hozzárendelése minden olyan közzétett folyóirat-objektumhoz, amelyekhez nincs hozzárendelve a DOI. Ez a művelet nem használható az egyéni utótagok konfigurációjával. Ha módosította a fent leírt DOI konfigurációt, kérjük, mentse el a módosításokat mielőtt elkezdené ezt a műveletet. A DOI-k hozzárendelése hosszú időt vehet igénybe, attól függően, hogy a folyóirat publikálta-e a tárgyakat."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "Biztos benne, hogy minden olyan megjelent objektumhoz DOI-t szeretne rendelni, amelynek eddig még nem volt?"
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "folyóiratszám"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "cikk"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "preprint"
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "A DOI nem hozzárendelhető, mert az egyéni utótag hiányzik"
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "A DOI nem hozzárendelhető, mert feloldhatatlan mintát tartalmaz."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr "Amit lát az a DOI előnézete. Jelölje be a jelölőnégyzetet és mentse el az DOI kiosztási űrlapot."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "Ehhez a {$pubObjectType}hez már van hozzárendelt DOI."
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "A megadott DOI utótag már használatban van egy másik megjelent elemnél. Kérjük, hogy minden egyes elemhez egyedi DOI utótagot írjon be!"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "DOI törlése"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Biztos, hogy törölni akarja a létező DOI-t?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Folyóiratszám DOI-k törlése"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Biztos, hogy törölni akarja a létező folyóiratszám DOI-kat?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr "Használja a következő beállítási lehetőséget az összes DOI típus törléséhez (cikkek és preprintek), amely most ehhez a számhoz van rendelve."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "DOI hozzárendelése {$pubId} ehhez {$pubObjectType}"
 
 msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
 msgstr "A DOI nem hozzárendelhető, mert az egyéni utótag hiányzik."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr "A DOI {$pubId} nem hozzárendelhető, mert feloldhatatlan mintát tartalmaz."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "A DOI {$pubId} hozzárendelés megtörtént."

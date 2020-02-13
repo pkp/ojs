@@ -1,2 +1,39 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:07:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Kézi díjfizetés"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "A menedzser kézzel rögzíti a felhasználó befizetési nyugtáját e szoftvertől függetlenül."
+
+msgid "plugins.paymethod.manual"
+msgstr "Kézi díjfizetés"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Kézi díjfizetés utasítások"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Fizetési értesítés küldése"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Fizetési értesítés"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Fizetési értesítés elküldve"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Cím"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Díj"

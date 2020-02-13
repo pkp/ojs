@@ -1,2 +1,1823 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:04:23+00:00\n"
+"Language: \n"
+
+msgid "manager.website.archiving"
+msgstr "Archiválás"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Biztos, hogy minden e-mail sablont törölni akar ebben a folyóiratban? Minden korábban készített egyéni beállítást elveszít."
+
+msgid "manager.files.note"
+msgstr "Figyelem: A fájl böngésző egy kiegészítő lehetőség, amellyel a folyóirat fájl- és könyvtárstruktúrája megtekinthető és közvetlenül szerkeszthető."
+
+msgid "manager.journalManagement"
+msgstr "Folyóirat menedzselés"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "Beküldések"
+
+msgid "manager.language.forms"
+msgstr "Űrlapok"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Ez lecseréli az összes hely-specifikus nyelvi beállításokat, amit használt eddig."
+
+msgid "manager.languages.languageInstructions"
+msgstr "Az OJS több támogatott nyelven is elérhető a felhasználók számára. Ahogyan az OJS többnyelvű rendszer is lehet, lehetőséget adva a felhasználóknak, hogy maguk válasszák ki az egyes oldalakon használt nyelvet, és bizonyos adatokat a többi elérhető nyelv valamelyikén adhassák meg.<br /><br/>Ha egy OJS által támogatott nyelv nem található meg a listában, akkor kérje meg az oldal adminisztrátorát, hogy telepítse fel a nyelvet az adminisztrációs oldalon. Új nyelv telepítésének leírása megtalálható az OJS dokumentációban."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Elnézést, de nem érhetők el további nyelvek. Vegye fel a kapcsolatot az oldal adminisztrátorával, ha a folyóiratot egyéb nyelveken szeretné használni."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Ez a folyóirat alapértelmezett nyelve."
+
+msgid "manager.managementPages"
+msgstr "Szerkesztési oldalak"
+
+msgid "manager.payment.action"
+msgstr "Tevékenység"
+
+msgid "manager.payment.addPayment"
+msgstr "Fizetés hozzáadása"
+
+msgid "manager.payment.amount"
+msgstr "Összeg"
+
+msgid "manager.payment.authorFees"
+msgstr "Szerzői díjak"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "A kiválasztott opciók a leírásokkal és fizetendőkkel (amelyek alább szerkeszthetők), a feltöltési eljárás 1. lépésében és a Folyóiratról részben a Feltöltések alatt fognak megjelenni, és minden olyan ponton, ahol fizetni kell."
+
+msgid "manager.payment.currency"
+msgstr "Pénznem"
+
+msgid "manager.payment.currencymessage"
+msgstr "Az OJS nem hajt végre valutaátváltásokat. Amennyiben elfogadja az előfizetési díjat, akkor az itt látható valamelyik pénznemben kell kifizetnie azt."
+
+msgid "manager.payment.description"
+msgstr "Leírás"
+
+msgid "manager.payment.details"
+msgstr "Részletek"
+
+msgid "manager.payment.editSubscription"
+msgstr "Előfizetés szerkesztése"
+
+msgid "manager.payment.enable"
+msgstr "Engedélyezett"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Fizetési módok"
+
+msgid "manager.payment.form.numeric"
+msgstr "Minden költségnek pozitív számnak kell lennie (tizedespontok engedélyezettek)"
+
+msgid "manager.payment.giftFees"
+msgstr "Ajándék előfizetések"
+
+msgid "manager.payment.giftFeesDescription"
+msgstr "Egy ajándék előfizetési link fog megjelenni a Folyóiratról szóló rész Előfizetések oldalán és az Előfizetések oldalsó blokkban."
+
+msgid "manager.payment.generalFees"
+msgstr "Általános költségek"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Az Egyesületi Tagság megjelenik a Folyóiratról oldal Irányelvek részében, és egy támogatói link a jobb oldali blokk keresés funkciója felett."
+
+msgid "manager.payment.generalOptions"
+msgstr "Általános beállítások"
+
+msgid "manager.payment.noPayments"
+msgstr "Nincsenek fizetett tételek"
+
+msgid "manager.payment.notFound"
+msgstr "Nem található"
+
+msgid "manager.payment.options"
+msgstr "Beállítások"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "Ez aktiválja az előfizetői kifizetéseket, ahol a típusokat, költséget, időtartamot és előfizetéseket tudja a folyóirat (előfizetői) menedzsere beállítani."
+
+msgid "manager.payment.options.acceptGiftSubscriptionPayments"
+msgstr "Ez aktiválja az ajándék előfizetéseket, engedélyezi a folyóirat olvasóknak, hogy ajándék előfizetéseket vásároljanak más előfizetőknek."
+
+msgid "manager.payment.options.donationFee"
+msgstr "Folyóirat támogatások"
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Kattintson ide a fizetési modul engedélyezéséhez. Az alábbi űrlap kitöltésével konfigurálni kell a kifizetéseket. Megjegyzés: a felhasználóknak be kell jelentkezniük, hogy fizetési tranzakciókat intézhessenek."
+
+msgid "manager.payment.options.fastTrackFee"
+msgstr "Gyors-nyomonkövethető lektorálás"
+
+msgid "manager.payment.options.fee"
+msgstr "Összeg"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Díj leírás"
+
+msgid "manager.payment.options.feeName"
+msgstr "Díj neve"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Egyesületi Tagság"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "A számok és a cikkek PDF változatához való hozzáférés korlátozása."
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Cikk közzététele"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Cikk vásárlása"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Folyóiratszám vásárlása"
+
+msgid "manager.payment.options.submissionFee"
+msgstr "Cikk beküldés"
+
+msgid "manager.payment.options.text"
+msgstr "A fizetési mód leírása"
+
+msgid "manager.payment.options.waiverPolicy"
+msgstr "Lemondási irányelv"
+
+msgid "manager.payment.paymentId"
+msgstr "Fizetési ID"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Fizetési mód"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "Ezen a képernyőn a fizetési módokat állíthatja be."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Díj fizetési módok"
+
+msgid "manager.payment.paymentType"
+msgstr "Fizetési típus"
+
+msgid "manager.payment.readerFees"
+msgstr "Olvasói díjak"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "A kiválasztott opciók a leírásokkal és fizetendőkkel (amelyek alább szerkeszthetők), a Folyóiratról szóló részben az Irányelvek alatt fognak megjelenni, és minden olyan ponton, ahol fizetni kell."
+
+msgid "manager.payment.records"
+msgstr "Nyilvántartás"
+
+msgid "manager.payments"
+msgstr "Fizetések"
+
+msgid "manager.payment.userName"
+msgstr "Fizetési ID"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "A folyóirathoz rendelt felhasználók"
+
+msgid "manager.people.allJournals"
+msgstr "Minden folyóirat"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Folyóirathoz rendelés az oldal felhasználói közül"
+
+msgid "manager.people.showNoRole"
+msgstr "A szerepkör nélküli felhasználók mutatása"
+
+msgid "manager.people.allUsers"
+msgstr "Az összes szerepkörrel rendelkező felhasználó"
+
+msgid "manager.people.confirmRemove"
+msgstr "Eltávolítja a felhasználót a folyóiratból? Ez a tevékenység a felhasználónak ennél a folyóiratnál lévő valamennyi szerepkörét eltávolítja."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Sablon választása"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Meglévő felhasználó felvétele"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Folyóirattal"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Válasszon egy (vagy több) felhasználót más felhasználói fiókokkal való összefűzéshez (pl. amikor valakinek két fiókja van). Az először kiválasztott fiók(ok) törlésre kerülnek, és valamennyi feltöltése, feladatai stb. a második fiókhoz rendelődnek."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Válasszon egy felhasználót, akire ráruházza az előző felhasználó szerzőségét, szerkesztési feladatait stb."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} felvétel"
+
+msgid "manager.people.syncUserDescription"
+msgstr "A beiratkozási szinkronizálás minden felhasználót, aki egy adott szerepkörrel rendelkezik egy adott folyóiratnál átmásol ebbe a folyóiratba. Ez a funkció lehetővé teszi a felhasználók szerepkörrel (pl. lektorok) történő másolását a folyóiratok között."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Az absztrakt nem kötelező"
+
+msgid "manager.section.noSectionEditors"
+msgstr "Nincs még rovatszerkesztő.  Először legalább egy ilyen szerepkörű felhasználót adjon hozzá az Adminisztráció > Beállítások > Felhasználók &amp; Szerepkörök oldalon."
+
+msgid "manager.sections.assigned"
+msgstr "Ennek a rovatnak a szerkesztői"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Biztos benne, hogy törölni akarja ezt a rovatot?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Mielőtt ezt a rovatot törli, át kell mozgatnia a benne lévő cikkeket egy másik rovatba."
+
+msgid "manager.sections.create"
+msgstr "Rovat létrehozása"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Rovatszerkesztő hozzáadása ehhez a rovathoz, aki a feltöltött anyagokhoz automatikusan hozzárendekődik. (Egyébként a rovatszerkesztőket manuálisan is hozzá lehet rendelni, miután az anyag beérkezik.) Ha hozzáadta, a rovatszerkesztő automatikusan jogosult lesz áttekinteni a rovathoz beküldött anyag lektorálását (szakértői értékelés) és/vagy a szerkesztését (beszerkesztés, tördelő szerkesztés, korrektúrázás). A rovatszerkesztő létrehozásához kattintson a Folyóirat szerkesztésén belül a Szerepkörök részben a Rovatszerkesztő linkre."
+
+msgid "manager.sections.editorRestriction"
+msgstr "A tételeket csak a szerkesztő vagy a rovatszerkesztő küldheti be."
+
+msgid "manager.sections.editors"
+msgstr "Rovatszerkesztő"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "A rovathoz szükséges egy rövidített címet megadni"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Kérem, győzödjön meg arról, hogy a rovatszerkesztői hozzárendelésnél mindenhol legalább egy jelölőnégyzetet kipipált."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Kérem, győzödjön meg arról, hogy érvényes lektorálási űrlapot választott ki."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "A rovathoz szükséges egy cím."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Kihagyja a rovat szerzőinek neveit a szám tartalomjegyzékéből."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Kihagyja a rovat címét a szám tartalomjegyzékéből."
+
+msgid "manager.sections.identifyType"
+msgstr "Tételek azonosítása ebben a rovatban, mint"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(Például \"Szakértő által átnézett cikk\", \"Nem referált könyvismertetés\", \"Meghívott kommentátor\", stb.)"
+
+msgid "manager.sections.indexed"
+msgstr "Indexelt"
+
+msgid "manager.sections.noneCreated"
+msgstr "Nincs létrehozott rovat"
+
+msgid "manager.sections.open"
+msgstr "Nyitott beadványok"
+
+msgid "manager.sections.policy"
+msgstr "Rovat irányelvek"
+
+msgid "manager.sections.readingTools"
+msgstr "Olvasói eszközök"
+
+msgid "manager.sections.reviewed"
+msgstr "Szakértő által értékelt"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Nem fog szerepelni a folyóirat indexelésében"
+
+msgid "manager.sections.submissionReview"
+msgstr "Nem kerül szakértői értékelésre"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "A beküldések a folyóirat ezen rovatához kerülnek"
+
+msgid "manager.sections.unassigned"
+msgstr "Elérhető rovatszerkesztők"
+
+msgid "manager.sections.wordCount"
+msgstr "Szó számláló"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Az absztrakt szavainak száma ebben a rovatban (0 ha nincs limit):"
+
+msgid "manager.setup"
+msgstr "Folyóirat beállítások"
+
+msgid "manager.setup.masthead"
+msgstr "Impresszum"
+
+msgid "manager.setup.masthead.description"
+msgstr "A folyóirathoz rendelt szerkesztők, vezetőszerkesztők és egyéb személyek."
+
+msgid "manager.setup.homepageContent"
+msgstr "Folyóirat főoldal tartalom"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "A folyóirat főoldala alapértelmezés szerint navigációs linkekből áll. További honlaptartalmat is hozzáadhat, ha használ az alábbi lehetőségek közül egyet vagy többet, amely a megadott sorrendben fog megjelenni."
+
+msgid "manager.setup.layout"
+msgstr "Lap elrendezés"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Folyóirat stíluslap"
+
+msgid "manager.setup.contextName"
+msgstr "Folyóiratnév"
+
+msgid "manager.setup.pageHeader"
+msgstr "Folyóiratoldal fejléc"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Tartalom"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Elem hozzáadása"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Tétel hozzáadása az ellenőrzőlistához"
+
+msgid "manager.setup.addItem"
+msgstr "Tétel hozzáadása"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Tétel hozzáadása az \"Információk\" részhez"
+
+msgid "manager.setup.addNavItem"
+msgstr "Tétel hozzáadása"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Új adatbázis link hozzáadása"
+
+msgid "manager.setup.addSponsor"
+msgstr "Szponzoráló szervezet hozzáadása"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Alternatív fejléc"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Alternatív a cím és a logó helyett, a fejléc HTML verzióját a szöveges mezőbe tudja illeszteni. Ha erre nincs szükség, akkor hagyja üresen a szöveges mezőt."
+
+msgid "manager.setup.announcements"
+msgstr "Értesítések"
+
+msgid "manager.setup.announcementsDescription"
+msgstr "Az értesítések tájékoztatják a folyóirat olvasóit a hírekről és az eseményekről. Ezek az információk az Értesítések oldalon fog megjelenni."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "További információ"
+
+msgid "manager.setup.announcementsIntroductionDescription"
+msgstr "Adjon meg további információkat, amelyek az olvasók számára a közlemények oldalon fognak megjelenni."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Megjelenés az Információk részben) "
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "A cikket beadó szerzők felszólítása az összeférhetetlenségi nyilatkozat benyújtására."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "A szakmai lektorok felszólítása, hogy minden egyes lektori vélemén mellé csatoljanak összeférhetetlenségi nyilatkozatot."
+
+msgid "manager.setup.history"
+msgstr "Folyóirat történet"
+
+msgid "manager.setup.historyDescription"
+msgstr "Ez a szöveg megjelenik a Folyóiratról szóló részben a folyóirat oldalán, és leírja a folyóirat címében, szerkesztőségében és egyéb területein bekövetkezett változásokat, amelyek relevánsak a folyóirat megjelenésének történetében."
+
+msgid "manager.setup.copyeditInstructions"
+msgstr "Technikai szerkesztői előírások"
+
+msgid "manager.setup.copyeditInstructionsDescription"
+msgstr "A szerkesztési előírások a technikai szerkesztőknek, szerzőknek és rovatszerkesztőknek lesznek elérhetőek a szerkesztési szakaszban. Alább HTML-ben egy alapértelmezett előírás látható, amelyet a folyóirat szerkesztője módosíthat, vagy lecserélhet (HTML vagy formázatlan szövegre)."
+
+msgid "manager.setup.copyrightNotice"
+msgstr "Copyright figyelmeztetés"
+
+msgid "manager.setup.coverage"
+msgstr "Lefedettség"
+
+msgid "manager.setup.coverageDescription"
+msgstr "Adjon meg földrajzi helyet, időrendi vagy történeti lefedettséget, és/vagy a kutatási terület jellemzőit."
+
+msgid "manager.setup.currentIssue"
+msgstr "Aktuális szám"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "5. lépés A kinézet testreszabása"
+
+msgid "manager.setup.customTags"
+msgstr "Címkék alakítása"
+
+msgid "manager.setup.customTagsDescription"
+msgstr "A HTML fejléc címkék alakítása, amely minden oldal fejlécébe bekerülnek (pl. META információk)"
+
+msgid "manager.setup.details"
+msgstr "Részletek"
+
+msgid "manager.setup.details.description"
+msgstr "A folyóirat neve, ISSN, kapcsolattartók, támogatók, és keresőmotorok."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "A Folyóirat Menedzser regisztrálja az összes felhasználót. A Szerkesztők vagy Rovatszerkesztők tudnak Szakmai lektorokat regisztrálni."
+
+msgid "manager.setup.discipline"
+msgstr "Tudományterület és Tudományágak"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Hasznos, ha a folyóirat keresztezi a tudományterületeket és/vagy a szerzők több szakterületet érintő cikket küldenek be."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(Pl., Történelem; Oktatás; Szociológia; Pszichológia; Kulturális terület; Jog)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Adjon példákat a folyóirat releváns tudományterületeire"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Tartalomjegyzék készítése az aktuális számhoz (ha az elérhető)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Szerkesztői döntés"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Email cím a visszapattanó leveleknek"
+
+msgid "manager.setup.emailBounceAddressDescription"
+msgstr "A kézbesíthetetlen levelek esetében hibaüzenetet megy erre a címre."
+
+msgid "manager.setup.emailBounceAddressDisabled"
+msgstr "<strong>Megjegyzés:</strong> Ennek a lehetőségnek az aktiválásához, az oldal adminisztrátornak engedélyeznie kell a <tt>allow_envelope_sender</tt> opciót az OJS konfigurációs fájlban. További szerver beállítások szükségesek, hogy ez a funkció támogatott legyen (amelyik nem érhető el minden szerveren), ahogy az az OJS dokumentációban is szerepel."
+
+msgid "manager.setup.emails"
+msgstr "Email azonosító"
+
+msgid "manager.setup.emailSignature"
+msgstr "Aláírás"
+
+msgid "manager.setup.emailSignatureDescription"
+msgstr "Az elkészült emailek, amiket a rendszer a folyóirat nevében küld ki, a következő aláírással szerepelnek. A levél szövegét a Folyóirat Menedzser szerkesztheti."
+
+msgid "manager.setup.enableAnnouncements"
+msgstr "A Folyóirat Menedzser készíthet folyóirat közleményeket."
+
+msgid "manager.setup.enableAnnouncementsHomepage1"
+msgstr "Megjelenítés"
+
+msgid "manager.setup.enableAnnouncementsHomepage2"
+msgstr "a legutóbbi közleményeket a folyóirat honlapján."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "A látogatók regisztrálhatnak a folyóirathoz."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Fókusz és hatókör"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Írja le a szerzőknek, olvasóknak és a könyvtárosoknak a folyóiratnál publikált cikkek témaköreit és egyéb információkat."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Szerzőknek a munkájuk indexeléséhez"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "Az OJS ragaszkodik az <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> szabványhoz a metaadatok gyűjtésénél, amely globális szinten egy innovatív szabvány és jól indexelt hozzáférést nyújt a elektronikus kutatási forrásokhoz. A szerzők hasonló sablont használnak a a benyújtott anyagaik metaadataihoz. A folyóirat menedzser kiválaszthatja az indexelési kategóriákat és releváns példákat nyújthat a szerzőknek, amely segíti indexelni a munkáikat."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "A megadott ISSN nem érvényes."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "A fő kapcsolattartó email cím kötelező."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "A fő kapcsolattartó neve kötelező."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "A folyóirat rövidítés kötelező."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Folyóirat címe kötelező."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Cikkenként a szakmai lektorok számának megadása kötelező."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Támogatói email megadása kötelező."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "A támogató nevének megadása kötelező."
+
+msgid "manager.setup.generalInformation"
+msgstr "Általános információk"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "1. lépés A részletek lekérése"
+
+msgid "manager.setup.guidelines"
+msgstr "Útmutatók"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "3. lépés A beküldött anyagok irányítása"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Azok a folyóiratok, amelyek azonnal vagy késleltetve szabadon hozzáférhetővé teszik a cikkeiket, a megfelelő időben megjelenítenek egy Creative Commons licenct minden publikált munkához."
+
+msgid "manager.setup.information"
+msgstr "Információ"
+
+msgid "manager.setup.information.description"
+msgstr "A folyóirat rövid leírása a könyvtárosok és leendő szerzők, olvasók számára. Ez az oldalsávban lesz elérhető, ahol a hozzáadott Információ blokk megjelenik."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Szerzőknek"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Könyvtárosoknak"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Olvasóknak"
+
+msgid "manager.setup.initialIssue"
+msgstr "Bevezető szám"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "A kiválasztott formátumtól függ az OJS-ben publikált első folyóirat szám, évfolyam és/vagy év azonosítása:"
+
+msgid "manager.setup.institution"
+msgstr "Intézmény"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Elemeket adhatunk a navigációs sáv jelenlegi menüpontjaihoz (Főoldal, Információ, Felhasználói főoldal, stb.), ami az oldalak tetején jelenik meg."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Oldalankénti tételek száma"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "A folyóirat rövidítése"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Folyóirat archiválás"
+
+msgid "manager.setup.journalSummary"
+msgstr "Összefoglaló a folyóiratról"
+
+msgid "manager.setup.journalSummary.description"
+msgstr "Egy rövid leírás a folyóiratáról, ami a folyóiratok listájánál fog megjelenni."
+
+msgid "manager.setup.journalAbout"
+msgstr "Folyóiratról"
+
+msgid "manager.setup.journalAbout.description"
+msgstr "Bármilyen információt tartalmazhat a folyóiratáról, amely érdekelheti az olvasókat, szerzőket és a szakmai lektorokat. Tartalmazhatja a szabad hozzáférés politikájukat, a folyóirat fókuszpontjait, témaköreit, szerzői jogi megjegyzéseket, szponzori információkat, a folyóirat történetét, adatvédelmi irányelvet, valamint belefoglalhatók a LOCKSS vagy CLOCKSS archíválási rendszerekkel kapcsolatos információk."
+
+msgid "manager.setup.favicon"
+msgstr "Folyóirat Favicon"
+
+msgid "manager.setup.faviconDescription"
+msgstr "Favicon hozzáadása a folyóirathoz, ami a böngésző felső navigációs sávjában fog megjelenni, amikor a látogatók behívják az oldalt."
+
+msgid "manager.setup.faviconInvalid"
+msgstr "Nem megfelelő favicon formátum. Az elfogadott formátum az .ico, .png, .gif."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "A folyóirat weboldalának tartalma"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "Alapértelmezés szerint a főoldal navigációs linkekből áll. További oldalakat lehet hozzácsatolni, ha használja az alábbi lehetőségek közül egyet vagy az összeset, ezek a megadott sorrendben fognak megjelenni. Megjegyzendő, hogy az aktuális szám mindig az Aktuális link alatt érhető el a Navigációs sávon."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Folyóirat főoldal fejléc"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Folyóirat főoldal fejléc"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "Feltölthető a folyóirat címének és logójának grafikus változata (mint pl. .gif, .jpg, vagy .png fájl), ami lecseréli a szöveges változatot."
+
+msgid "manager.setup.journalInitials"
+msgstr "A folyóirat kezdőbetűi"
+
+msgid "manager.setup.journalLayout"
+msgstr "A folyóirat elrendezése"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Válasszon egy folyóirat sablont, és válasszon hozzá megjelenési elemeket. Egyedi folyóirat stíluslapot is feltölthet, amelyikkel felülírható a rendszerszintű stíluslap és a sablon stíluslap (ha megtörtént a sablon választás)."
+
+msgid "manager.setup.journalLogo"
+msgstr "Folyóirat Logó"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Folyóirat Logó"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Folyóirat oldal lábléc"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "Ez a folyóirat lábléce. A lábléc megváltoztatásához, vagy frissítéséhez, illesszen be egy HTML kódot az alábbi szöveges mezőbe. Például egy másik navigációs sáv vagy egy számláló stb. A lábléc minden oldalon megjelenik."
+
+msgid "manager.setup.journalPolicies"
+msgstr "2. lépés Folyóirat politika"
+
+msgid "manager.setup.journalSetup"
+msgstr "Folyóirat beállítás"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "A folyóirat beállítások frissültek."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Érvénytelen folyóirat stíluslap formátum. Az elfogadott formátum a .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Folyóirat sablon"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Folyóirat bélyegkép"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Egy kis logó, ami jellemző a folyóiratra és a folyóiratok listájában fog megjelenni."
+
+msgid "manager.setup.journalThumbnail.altText"
+msgstr "Alternatív szöveg a bélyegképhez"
+
+msgid "manager.setup.journalTitle"
+msgstr "Folyóirat cím"
+
+msgid "manager.setup.labelName"
+msgstr "Címke neve"
+
+msgid "manager.setup.layoutInstructions"
+msgstr "Tördelési utasítások"
+
+msgid "manager.setup.layoutInstructionsDescription"
+msgstr "Az alábbiakban szöveges vagy HTML formájú tördelési utasításokat lehet adni a folyóirat publikációinak formázásához. Ez a Tördelőszerkesztő és Rovatszerkesztő számára lesz elérhető a cikkek szerkesztési oldalain. (Mint minden folyóiratnak lehetősége van saját fájlformátumot, bibliográfiai szabványokat, stíluslapot, stb. használni, alapértelmezett utasításszöveg itt nincs.)"
+
+msgid "manager.setup.layoutTemplates"
+msgstr "Megjelenési sablonok"
+
+msgid "manager.setup.layoutTemplatesDescription"
+msgstr "Sablonok feltöltésére is van lehetőség, amik minden szabványos folyóiratelemnél megjelennek (pl. cikk, tanulmány, stb.) használható ehhez bármilyen fájlformátum (pl. pdf, doc, stb.) az annotációkhoz speciális betűtípus, méret, margó stb. adható, támpontként a Tördelőszerkesztőknek és Korrektúrázóknak."
+
+msgid "manager.setup.layoutTemplates.file"
+msgstr "Sablon fájl"
+
+msgid "manager.setup.layoutTemplates.title"
+msgstr "Cím"
+
+msgid "manager.setup.lists"
+msgstr "Listák"
+
+msgid "manager.setup.listsDescription"
+msgstr "Adja meg az egy oldalon megjeleníthető tételek (például beküldött cikkek, felhasználók vagy szerkesztett cikkek) számát és azoknak az oldalaknak a számát, amelyek linkként jelenjenek meg minden oldalon."
+
+msgid "manager.setup.enableArchive"
+msgstr "Archiválás engedélyezése"
+
+msgid "manager.setup.lockssEnable"
+msgstr "A LOCKSS rendszer engedélyezése, hogy a folyóirat tartalmak letárolásra és megosztásra kerüljenek a kapcsolódó könyvtárakkal a LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> oldalon."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "A LOCKSS lincensz az Információk oldal Archiválás részében fog megjelenni: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS Licenc leírás"
+
+msgid "manager.setup.lockssRegister"
+msgstr "6-10 könyvtár fog regisztrálni és tárolni a folyóiratot. Például forduljon azokhoz az intézményekhez, ahol a szerkesztők vagy bizottsági tagok dolgoznak és/vagy már tagjai a LOCKSS hálózatnak. Lásd <a href=\"http://www.lockss.org/community/\" target=\"_blank\">a LOCKSS közösség</a>et."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "A CLOCKSS rendszer engedélyezése, hogy a folyóirat tartalmak letárolásra és megosztásra kerüljenek a kapcsolódó könyvtárakkal a CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> oldalon."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "A CLOCKSS licenc a folyóirat információs oldalán fog megjelenni az archiválásnál: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS Licenc</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS Licenc Leírás"
+
+msgid "manager.setup.clockssRegister"
+msgstr "A CLOCKSS szolgáltatásba való regisztrációhoz látogasson el a <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS weboldalra</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.Issn"
+msgstr "ISSN"
+
+msgid "manager.setup.look"
+msgstr "A megjelenés"
+
+msgid "manager.setup.look.description"
+msgstr "Honlap fejléc, tartalom, folyóirat fejléc, lábléc, navigációs sáv és stíluslap."
+
+msgid "manager.setup.management"
+msgstr "Menedzsment"
+
+msgid "manager.setup.management.description"
+msgstr "Hozzáférés és biztonság, ütemezés, közlemények, lektorálás, tördelés és korrektúrázás."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Az alapvető szerkesztési lépések menedzselése."
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Menedzsment és kiadói beállítások"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "4. lépés A folyóirat kezelése"
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigációs sáv"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "További navigációs elemek hozzáadása vagy eltávolítása."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "Az URL az abszolút URL (pl. \"http://www.example.com\") nem pedig egy relatív útvonal az oldalhoz (pl. \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "A címke felirat egy szöveg (pl. \"Folyóirat beállítás\") nem pedig egy kód (pl. \"manager.setup\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Nincs képfájl feltöltve."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Nincs stíluslap feltöltve."
+
+msgid "manager.setup.note"
+msgstr "Megjegyzés"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Megjegyzés:</strong> A beküldésről az értesítés jelenleg ki van kapcsolva. A szolgáltatás használatához engedélyezze a \"Beküldési értesítő\" email az emailek között."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Oldal linkek"
+
+msgid "manager.setup.onlineAccessManagement"
+msgstr "Hozzáférés a folyóirat tartalmához"
+
+msgid "manager.setup.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "manager.setup.openAccess"
+msgstr "A folyóirat nyílt hozzáféréssel rendelkezésre bocsátja a tartalmait."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Oldal szám beállítások"
+
+msgid "manager.setup.policies"
+msgstr "Policies"
+
+msgid "manager.setup.policies.description"
+msgstr "Fókusz, szakértői értékelés, rovatok, titoktartás, adatvédelem, valamint egyéb információ a tételről."
+
+msgid "manager.setup.printIssn"
+msgstr "Nyomtatott ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Korrektúrázási útmutatók"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "A korrektúrázási útmutatók a Korrektúrázóknak, Szerzőknek, Tördelő szerkesztőknek és Rovatszerkesztőknek érhető el a beküldött anyagok szerkesztési felületén. Az alábbiakban egy alapértelmezett útmutató látható HTML formátumban, amelyik átszerkeszthető vagy bármikor lecserélheti a folyóirat menedzser (HTML vagy egyszerű szöveg formátumban)."
+
+msgid "manager.setup.provideRefLinkInstructions"
+msgstr "Adjon útmutatásokat a Tördelő szerkesztők számára."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "A kiadvány ütemezése"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "A folyóirat cikkeket közzé lehet tenni együttesen vagy részenként is egyéni tartalomjegyzékkel. Másrészt az egyes cikkeket akkor is közzé lehet tenni, amikor készen vannak, ilyenkor egyesével kell hozzáadni az aktuális szám tartalomjegyzékéhez. Az olvasók a folyóirat Információk oldalán kaphatnak tájékoztatás a folyóirat publikálási gyakoriságáról."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Publikálási ütemezés"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Folyóirat tartalom azonosítása"
+
+msgid "manager.setup.publisher"
+msgstr "Kiadó"
+
+msgid "manager.setup.publisherDescription"
+msgstr "A folyóiratot megjelentető szervezet neve, része lehet a harmadik archiváló szervezet számára átadott metaadatoknak"
+
+msgid "manager.setup.referenceLinking"
+msgstr "Hivatkozás linkelés"
+
+msgid "manager.setup.refLinkInstructions.description"
+msgstr "Tördelési útmutató a hivatkozás linkeléshez"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "A felhasználóknak regisztrálniuk kell és be kell jelentkezniük a szabad hozzáférésű tartalmak megtekintéséhez."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "A felhasználóknak regisztrálniuk kell és be kell jelentkezniük a folyóirat oldalának megtekintéséhez."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Szakmai lektorálási útmutató"
+
+msgid "manager.setup.reviewGuidelinesDescription"
+msgstr "A Szakmai lektorálási útmutató a lektorok számára ad szempontokat, a beküldött anyag publikálásra alkalmasságával kapcsolatban, olyan útmutató, ami elősegíti a hatékony lektorálási folyamatot. A lektoroknak lehetőségük van a szerzőnek és a szerkesztőnek megjegyzéseket tenni, valamint külön csak a szerkesztőnek."
+
+msgid "manager.setup.reviewOptions"
+msgstr "Lektori beállítások"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Automatikus email értesítő"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "Ezeknek a lehetőségeknek az aktiváláshoz az oldal adminisztrátornak engedélyeznie kell a <tt>scheduled_tasks</tt> lehetőséget az OJS konfigurációs fájljában. További szerver beállítások szükségesek, hogy ez a funkció támogatott legyen (amelyik nem érhető el minden szerveren), ahogy az az OJS dokumentációban is szerepel."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Vak lektorálás"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Lektorálásra adott határidő (hét)"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "A szerkesztők egy ötpontos skálán fogják értékelni a szakmai lektorokat minden elvégzett lektorálás után."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "A Szakmai lektorok csak akkor férhetnek hozzá a beküldött cikkhez, ha elfogadták a lektori munkára való felkérést."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Szakmai lektor hozzáférése"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Az egy kattintásos lektori hozzáférés engedélyezése"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "<strong>Megjegyzés:</strong> a Szakmai lektorok emailes meghívása tartalmaz egy speciális URL-t, ami közvetlenül elirányítja a szakmai lektorokat a beküldött cikk lektorálási oldalára (bármilyen más oldalon, ha szükséges be kell jelentkezni). Biztonsági okokból ennél az opciónál a Szerkesztők nem módosíthatják az email címzést nem adhatnak hozzá másolati vagy titkos másolati címzettet, csak a szakmai lektoroknak lehet ezt a levelet elküldeni."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Lektori értékelés"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Lektori emlékeztetők"
+
+msgid "manager.setup.reviewOptions.showEnsuringLink"
+msgstr "Link a <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Vak lektorálás biztosítása</a> oldalakhoz, ahol a szerzők és a lektorok tartalmakat töltenek fel."
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Szakmai lektorálás irányelvei"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Keresőmotor indexelés"
+
+msgid "manager.setup.searchEngineIndexingDescription"
+msgstr "Egy rövid leírás a folyóiratról, amelyet a kereső motorok jelenítenek meg, amikor a folyóirat megjelenik a találati listában."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Rovatok és Rovatszerkesztők"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Amennyiben nem készült rovat, akkor az elkészült írások alapértelmezés szerint a Cikkek rovatba kerülnek.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "Menjen a Rovat beállítások részhez, a folyóirat rovat készítéséhez vagy módosításához (pl. Cikkek, Tanulmányok, stb.).<br /><br />A Szerző a cikk benyújtásakor kijelöli..."
+
+msgid "manager.setup.securitySettings"
+msgstr "Hozzáférési és Biztonsági beállítások"
+
+msgid "manager.setup.securitySettingsDescription"
+msgstr "Az OJS számos olyan biztonsággal kapcsolatos lehetőséget kínál, amivel szabályozni lehet a folyóirat tartalmakat, és további információkkal támogatja a beküldött cikkek ellenőrzését."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "A folyóirat szerkesztő, aki végigköveti a szerkesztési folyamatot."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Az a folyóirat rovat, amelybe a tétel bekerül."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Mindig mutassa a megjelenítő linkeket és jelezze a korlátozott hozzáférést."
+
+msgid "manager.setup.siteAccess"
+msgstr "További oldalak és cikk hozzáférési korlátozások"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "5 lépés a folyóirat weboldalhoz"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(Pl. Fotószintézis; Fekete Lyukak; négyszín-tétel problematikája; Bayes-tétel)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Kulcsszavak"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Adjon példákat a kulcsszavakra vagy témákra, ami segíti a szerzőket."
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Cikkbeküldési útmutató"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "A benyújtás előkészítésének ellenőrzőlistája"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "Folyóirathoz történő beküldésnél még a beküldés előtt a szerzőnek először egy ellenőrzést kell elvégeznie, hogy a benyújtási követelmények minden pontjának megfelel a cikk. Az ellenőrzőlista a szerzői útmutatóban is rendelkezésre áll az Információk alatt. A listát alább lehet szerkeszteni, de a szerzőnek minden tételnél tennie kell egy pipát, mielőtt a folytathatja a beküldést."
+
+msgid "manager.setup.submissions"
+msgstr "Beküldések"
+
+msgid "manager.setup.submissions.description"
+msgstr "Szerzői útmutató, copyright, és indexelés (beleértve a regisztrációt)."
+
+msgid "manager.setup.subscription"
+msgstr "Előfizetés szükséges a folyóiratnál néhány vagy az összes tartalom megtekintéséhez."
+
+msgid "manager.setup.subscriptionDescription"
+msgstr "Az előfizetésekért felelős vezető kijelölheti, hogy ki fér hozzá az előfizetés modulhoz, beleértve a nyílt hozzáférés, archíváló és email értesítési lehetőségekhez."
+
+msgid "manager.setup.noPublishing"
+msgstr "Az OJS nem teszi közzé a folyóirat tartalmát az interneten."
+
+msgid "manager.setup.typeExamples"
+msgstr "(Pl. Történelmi vizsgálat;  Kvázi-kísérlet; Irodalmi elemzés; Felmérés/Interjú)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Típus (Módszer/Megközelítés)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Példák a terület megfelelő kutatási típusaihoz, módszereihez, megközelítéseihez."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Egyedi Azonosító"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "A cikkek és a számok azonosítására használható olyan rendszer, amely számokkal vagy betűkkel azonosítja a tételeket, mint például a Digitális Objektum Azonosító (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "A folyóiratnál lesz szerkesztő/lektori bízottság."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Bélyegkép"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Cím kép"
+
+msgid "manager.setup.useJournalStyleSheet"
+msgstr "Folyóirat stíluslap"
+
+msgid "manager.setup.userRegistration"
+msgstr "Felhasználó regisztráció"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Cím szöveg"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tA folyóirat a jelenlegi konfiguráció szerint egy vagy több használati statisztikát képes tárolni. A használati statisztikák különböző környezetekben jelennek meg.\n"
+"\t\tVannak esetek, amikor egy egyedülálló statisztikát kell használni, pl. egy rendezetlen lista a leggyakrabban olvasott cikkekről vagy rangsorolni a keresési eredményeket.\n"
+"\t\tKérem, válasszon az alapértelmezett statisztikák közül.\n"
+"\t"
+
+msgid "manager.statistics.statistics"
+msgstr "Folyóirat statisztikák"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Cikk megtekintések száma (csak a szerzőknek)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Elfogadás"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Elutasítás"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Újraküldés"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Napok a lektori véleményig"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Napok a publikálásig"
+
+msgid "manager.statistics.statistics.description"
+msgstr "Az OJS kiszámítja minden folyóirathoz a következő statisztikát. A \"napok a lektorálásig\" kiszámítja, hogy a benyújtás napjához képest (vagy a lektorált verzió megjelöléséhez képest) az első szerkesztői döntésig mennyi idő telik el, míg a \"napok a publikálásig\" megnézi, hogy az elfogadott cikk eredeti feltöltésétől számítva a publikálásáig mennyi idő tellik el."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Publikált tételek"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Jelölje azokat a tételeket, amelyek elérhetőek legyenek az Információk oldalon."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Megjegyzés: A lektorált tételek, mint az újra beadandó, elfogadott, elutasított vagy még folyamatban lévők száma nem adja ki a 100%-ot."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Publikált számok"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Az összes beküldött anyag"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Lektorált"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Registered readers"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Regisztrált olvasók"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "A kiosztottak száma"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Szakmai lektorok"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Szerkesztői pontszám"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Az lektoráltak száma"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Válassza ki a rovatokat, a folyóirat lektorálási statisztika kiszámolásához."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Előfizetések"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Cikk fájl letöltések"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Cikk absztrakt oldalmegtekintés"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Cikk absztrakt oldal nézetek és letöltés"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Folyóiratszám fájl letöltések"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "A folyóiratszám tartalomjegyzék-oldal megtekintés"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "A szövegkörnyezettel közeli találatok (folyóirat számok és/vagy cikk)."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Az objektum típushoz közeli találatok (folyóirat, szám, cikk, fájl típusok) és/vagy egy vagy több objektum azonosító(k)."
+
+msgid "manager.subscriptionPolicies"
+msgstr "Előfizetési irányelvek"
+
+msgid "manager.subscriptionPolicies.authorSelfArchive"
+msgstr "Szerzői archiválási politika"
+
+msgid "manager.subscriptionPolicies.authorSelfArchiveDescription"
+msgstr "A következő szerzői archiválási irányelv meg fog jelenni az Információk oldal Irányelvek részében."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Késleltetett Nyílt Hozzáférés"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccessDescription"
+msgstr "A késleltetett nyílt hozzáférés mellett a szerkesztők továbbra is képesek lesznek egy-egy számot azonnal bárki számára hozzáférhetővé tenni."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccessDescription1"
+msgstr "A folyóirat korábbi számai nyílt hozzáférésűek lesznek"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccessDescription2"
+msgstr "hónap(ok) miután publikálásra kerül egy szám."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccessDurationValid"
+msgstr "Kérjük válasszon egy érvényes lejárati hosszúságot."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccessPolicyDescription"
+msgstr "A következő késleltetett nyílt hozzáférési irányelvek kikerülnek az Információk oldal Irányelvek részében."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Kérjük, használja a jelölőnégyzetet."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Előfizetési érvényesség"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "Amikor az előfizetés lejár, akkor az olvasók hozzáférését a tartalmakhoz le kell tiltani vagy továbbra is megtarthatja a hozzáférését a tartalmakhoz, csak jelezni kell, hogy mikor járt le az előfizetés."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Teljes lejárat"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Az olvasók az előfizetés lejárta után nem férhetnek hozzá a tartalmakhoz."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Részleges lejárat"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Az olvasók nem férhetnek hozzá az aktuális publikált tartalmakhoz, de a korábban megjelenteket elérhetik a lejárat dátumáig."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths1"
+msgstr "Előfizetők értesítése emailben"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths2"
+msgstr "hónap(ok) az előfizetés lejárta után."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks1"
+msgstr "Notify subscribers by email"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks2"
+msgstr "hét/hetek az előfizetés lejárta után."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths1"
+msgstr "Az előfizetők értesítése emailben"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths2"
+msgstr "hónap(ok) az előfizetés lejárta előtt."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks1"
+msgstr "Az előfizetők értesítése emailben"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks2"
+msgstr "hét/hetek az előfizetés lejárta előtt."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Lejáró előfizetésről emlékeztető"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Automatikus email emlékeztető (a Folyóirat Menedzserek szerkeszthetik OJS emaileket) küldhető az előfizetőknek, az előfizetésük lejárata előtt és után is."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Megjegyzés:</strong> Ennek a lehetőségnek az aktiválásához, az oldal adminisztrátornak engedélyeznie kell a <tt>scheduled_tasks</tt> opciót az OJS konfigurációs fájlban. További szerver beállítások szükségesek, hogy ez a funkció támogatott legyen (amelyik nem érhető el minden szerveren), ahogy az az OJS dokumentációban is szerepel."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Válasszon ki egyet a következő közül:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTML formázás használható a szöveges mezőben (betűtípus, szín, stb.), sortörés az alábbi kóddal <tt>&lt;br&gt;</tt>; a HTML a Firefox böngészőkben működik."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Kérjük, válasszon érvényes hónapszámot, az előfizetés lejárata után."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Kérjük, válasszon érvényes hónapszámot, az előfizetés lejárata előtt."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Kérjük, válassza meg a hetek számát, az előfizetés lejárata után."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Kérjük, válassza meg a hetek számát, az előfizetés lejárata előtt."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "A regisztrált olvasóknak lehetőségük van emailben megkapni a nyilvánosan megjelent folyóiratszámok tartalomjegyzékét."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Megjegyzés:</strong> Ennek a lehetőségnek az aktiválásához, az oldal adminisztrátornak engedélyeznie kell a <tt>scheduled_tasks</tt> opciót az OJS konfigurációs fájlban. További szerver beállítások szükségesek, hogy ez a funkció támogatott legyen (amelyik nem érhető el minden szerveren), ahogy az az OJS dokumentációban is szerepel."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Online Fizetési Értesítések"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Automatikus email értesítések (a Folyóirat Menedzserek szerkeszthetik OJS emaileket) küldhető az Előfizetés Menedzsernek, amikor az előfizetés online kifizetése megtörtént."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Az Előfizetés Menedzser értesítése emailben, egy egyéni előfizető online vásárlása után."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Az Előfizetés Menedzser értesítése emailben, egy intézményi  előfizető online vásárlása után."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Az Előfizetés Menedzser értesítése emailben, egy egyéni előfizető előfizetési megújítása után."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Az Előfizetés Menedzser értesítése emailben, egy egyéni előfizető előfizetésének megújítása előtt."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Megjegyzés:</strong> Intézményi előfizetőknél az Előfizetés Menedzser hagyja jóvá az online előfizetést, a hozzáféréshez beállítja a domain és IP tartományt."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Megjegyzés:</strong> Ezekhez az opciókhoz a Folyóirat Menedzsernek engedélyeznie kell az online fizetési modult, beleértve az előfizetők online fizetési lehetőségét az Olvasói díjak alatt."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "A folyóirat előfizetők számára nyílt hozzáférés beállítása"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Az előfizetéses folyóiratok nyújthatnak \"késleltetett nyílt hozzáférés\" szolgáltatást a publikált tartalmaikhoz, ahogyan engedélyezhetik a \"szerzői archiválás\" funkciót is (mindkettő növeli az olvasóközönséget és a tartalom idézettséget)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Subscription Information"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Az Előfizetési típusok és díjfizetési struktúra automatikusan bekerül az Információk oldal Előfizetések részbe, az Előfizetés Menedzser nevével és elérhetőségével. Az előfizetésekről további információkat is itt adhatunk meg, úgymint fizetési módok, a fejlődő országok előfizetőinek a támogatásával kapcsolatos információkat."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Előfizetői Menedzser"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Az Információk oldal Előfizetések részében a kapcsolattartók listája."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Kérem, adjon meg egy érvényes email címet."
+
+msgid "manager.subscriptionPolicies.subscriptionPoliciesSaved"
+msgstr "Az Előfizetési Irányelvek frissítése megtörtént."
+
+msgid "manager.subscriptions"
+msgstr "Előfizetések"
+
+msgid "manager.individualSubscriptions"
+msgstr "Egyedi Előfizetések"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Intézményi Előfizetések"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Biztos benne, hogy törölni akarja ezt az előfizetést?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Előfizetési összefoglaló"
+
+msgid "manager.subscriptions.create"
+msgstr "Új előfizetés készítése"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Létrehozás"
+
+msgid "manager.subscriptions.renew"
+msgstr "Megújítás"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Vége"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Végdátum"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Kezdete"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Kezdeti dátum"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domain"
+
+msgid "manager.subscriptions.edit"
+msgstr "Előfizetés szerkesztése"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Szerkesztés"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Státusszal"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Összes"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Státusz"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Szükséges egy előfizetési státusz."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Kérem, válasszon egy érvényes előfizetési státuszt."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Előfizetési típus"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Szükséges egy előfizetési típus."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Kérem, válasszon egy érvényes előfizetési típust."
+
+msgid "manager.subscriptions.form.dateRemindedBefore"
+msgstr "Lejárat előtti emlékeztető küldése"
+
+msgid "manager.subscriptions.form.dateRemindedAfter"
+msgstr "Lejárat utáni emlékeztető küldése"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Indulási dátum"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Szükséges egy előfizetés indulási dátum megadása"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Kérem, válasszon egy érvényes előfizetés indulási dátumot."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Végdátum"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Szükséges egy előfizetés végdátum megadása"
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Kérem, válasszon egy érvényes előfizetési végdátumot."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Megjegyzés: Az alábbi változtatások a felhasználó rendszerszintű profiljára vannak hatással."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Felhasználó"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Kapcsolat"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Szükséges egy felhasználó."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Kérem, válasszon egy érvényes felhasználót."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Kérem, válasszon egy érvényes országot."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Email küldése a felhasználónak a felhasználónevével és az előfizetéssel kapcsolatos részletekkel."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Kérem, használja a jelölőnégyzetet."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Tagság"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Referenciaszám"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Adja meg a tagsági információkat, ha az előfizetési típusnál szükséges, hogy az előfizető tagja legyen valamilyen szövetségnek vagy szervezetnek."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "A kiválasztott előfizetői típus tagsági adatokat kér."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Megjegyzések"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domain"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Intézmény neve"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Szükséges az intézmény neve."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Levelezési cím"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Ha megadta a domain nevet, akkor az IP tartomány már nem szükséges.<br />Érvényes formátumú domain nevek (pl. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "A választott előfizetési típushoz meg kell adni domain és/vagy IP tartományt az előfizető azonosításához."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Kérem, adjon meg egy érvényes domaint."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP tartomány"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Ha megadta az IP tartományt, akkor a domain név nem szükséges.<br />Érvényes formátumú IP cím (pl. 142.58.103.1), IP tartomány (pl. 142.58.103.1 - 142.58.103.4), IP tartomány helyettesítő karakterrel '*' (pl. 142.58.*.*), és egy IP tartomány CIDR-rel (pl. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Kérem, adjon meg egy érvényes IP tartományt."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Törlés"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Hozzáadás"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Mentés és új készítése"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Annak érdekében, hogy a felhasználónak email értesítést tudjon küldeni, az előfizetésért felelős kapcsolattartó nevét és email címét meg kell adnia a folyóirat beállításoknál."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Ez a felhasználó már rendelkezik egy folyóirat előfizetéssel."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Készíteni kell egy előfizetési típust, mielőtt létrehoz egy új előfizetőt."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP tartomány"
+
+msgid "manager.subscriptions.membership"
+msgstr "Tagság"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Referenciaszám"
+
+msgid "manager.subscriptions.notes"
+msgstr "Megjegyzések"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Nincsenek előfizetések"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Válasszon előfizetői kapcsolattartót"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Válasszon felhasználót"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Előfizetési hozzáférési jogosultságokat automatikusan megkapják a folyóirat Folyóirat Menedzsere, Szerkesztője, Rovatszerkesztője, Tördelője, Lektora és Korrektúrázója."
+
+msgid "manager.subscriptions.select"
+msgstr "Válasszon"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Az előfizetés sikeresen létrejött"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Előfizetési típus"
+
+msgid "manager.subscriptions.user"
+msgstr "Felhasználó"
+
+msgid "manager.subscriptions.contact"
+msgstr "Kapcsolattartó neve"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Intézmény neve"
+
+msgid "manager.subscriptionTypes"
+msgstr "Előfizetési típusok"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Figyelem! Ez alatt az előfizetés típus alatt minden előfizetés törlésre kerül. Biztos benne, hogy folytatja és törli az előfizetés típust?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Költségek"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Előfizetések"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Egyéni előfizető"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Intézmény"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Új előfizetés típus létrehozása"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Létrehozás"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Időtartam"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Előfizetés típus szerkesztése"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Szerkesztés"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Költség"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Adjon meg egy szám értéket (pl. 40 vagy 40.00) pénznem nélkül (pl. Ft)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "A költségnek pozitív egész számnak kell lennie."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Költség megadása kötelező."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Pénznem"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Pénznem megadása kötelező."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Kérem, válasszon egy érvényes pénznemet"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Leírás"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Lejár ...után"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "hónap(ok) (pl. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Soha nem jár le"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Kérem, használja az alábbi lehetőségeket."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Időtartam"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Az előfizetés időtartam hátralévő hónapjainak száma (pl. 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Az időtartamnak pozitív, egész számnak kell lennie."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Szükséges egy időtartam."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Formátum"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Egy előfizetés típus formátum megadása szükséges."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Kérem, érvényes előfizetés típus formátumot válasszon."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Előfizetések"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Egyéni előfizetők (érvényes bejelentkezési fiókkal rendelkező felhasználók)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Intézményi (érvényesített domain vagy IP címmel rendelkező felhasználók)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Kérem, használja az alábbi lehetőségeket."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Az előfizetéshez szükséges tagsági információ.<br />(pl. egy szövetségnél, szervezetnél, konzorciumnál stb.)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Kérem, használja a jelölőnégyzetet."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Lehetőségek"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Ne tegye ezt az előfizetés típust publikussá vagy láthatóvá<br />(pl. az Információk oldal Előfizetés részében)."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Kérem, használja a jelölőnégyzetet."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Mentés és új készítése"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "A típus neve"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Ilyen nevű előfizetés típus már létezik."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Szükséges egy előfizetés típus név."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Előfizetés típus"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Nincs létrehozott előfizetés típus."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Az előfizetés típus sikeresen létrejött."
+
+msgid "manager.distribution.access"
+msgstr "Hozzáférés"
+
+msgid "manager.setup.categories"
+msgstr "Kategóriák"
+
+msgid "manager.setup.categories.description"
+msgstr "Válassza ki a fenti listából a legjellemzőbb kategóriát. Az olvasók kategóriák szerint böngészhetnek a teljes folyóiraton belül."
+
+msgid "grid.category.path"
+msgstr "Útvonal"
+
+msgid "grid.action.addSection"
+msgstr "Rovat hozzáadása"
+
+msgid "manager.setup.section.description"
+msgstr "A cikkek a folyóirat publikált számain belül rovatokba sorolódnak jellemzően a témájuk vagy tartalmuk szerint (pl. Tanulmányok, Kutatások stb.)."
+
+msgid "settings.roles.gridDescription"
+msgstr "A szerepkörök a felhasználók csoportjai a folyóiratnál, akik különféle jogosultsági szinteken és munkafolyamatokhoz kapnak hozzáférést a folyóiraton belül. A rendszer 5 jogosultsági szintet különböztet meg: Folyóirat menedzser, aki mindenhez hozzáférést kap a folyóiraton belül (minden tartalomhoz és beállításhoz); Rovatszerkesztő, akinek minden hozzárendelt cikkhez teljes hozzáférése van; Folyóirat asszisztensek, akiknek korlátozott hozzáférésük van azoknál a cikkeknél, amelyeknél a szerkesztő jogosultságot ad számukra; Szakmai lektorok, akik a cikkhez hozzáférést kapnak, hogy elvégezhessék a szakértői munkát; és a Szerzők, akik korlátozottan de információkat láthatnak a beküldött cikkeikkel kapcsolatban. Továbbá 5 különböző szakaszban van szerepkör hozzárendelés: Beküldött cikk, Belső lektorálás, Lektori vélemény, Szerkesztés és Megjelentetés."
+
+msgid "manager.publication.library"
+msgstr "Megjelentetési dokumentumok"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Az új cikkek copyright évén alapul"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Cikk: az alapértelmezett év a cikk megjelentetésének éve, mint a \"publish-as-you-go\"."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Folyóiratszám: az alapértelmezett év a folyóirat megjelentetésének éve."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Cikk engedélyek visszaállítása"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Biztos benne, hogy visszaállít minden engedélyt, amit korábban a cikkhez rendelt?"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "Szerzői jogi irányelv és licence információ tartósan rögzítésre kerül a publikált tartalmakba, biztosítva ezzel, hogy a folyóirat politika megváltozása esetén se változannak ezek az adatok. A korábban már cikkhez csatolt és eltárolt engedély információ visszaállításához használja az alábbi gombot."
+
+msgid "grid.genres.title.short"
+msgstr "Komponensek"
+
+msgid "grid.genres.title"
+msgstr "Cikk komponensek"
+
+msgid "grid.genres.description"
+msgstr "Ezek a komponensek fájl elnevezési célokat szolgálnak és elérhetők a fájlfeltöltés legördülő menüben. A kijelölt műfajok ## segítségével a felhasználó hozzárendelheti a fájlt, akár az egész beadványt 99Z vagy csak egy részkomponenst a számok segítségével (pl., 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Beállítások"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI Bővítmény beállítások"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Cikkek"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Folyóiratszámok"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Megjelentetési formátumok"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "A bővítmény követelmények nem teljesülnek"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Annak érdekében, hogy használhassa ezt a bővítményt, kérjük menjen a \"Nyilvános azonosító\" bővítmény kategóriához, és engedélyezze, valamint konfigurálja be a DOI bővítményt és adjon meg egy érvényes DOI előtagot."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "A bővítmény nincs teljesen beállítva."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "Nincs kiválasztva publikált tartalom a DOI hozzárendeléshez a DOI bővítményben, így nem használható a bővítmény."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Jelszó"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Felhívjuk a figyelmét, hogy a jelszó sima szövegként lesz mentve, azaz nem lesz titkosítva."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Bármelyik folyóiratszám"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Bármelyik státusz"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Nem tárolt"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Marked registered"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Regisztrált"
+
+msgid "plugins.importexport.common.action"
+msgstr "Esemény"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Export"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Mark registered"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Register"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Nincs kiválasztva objektum."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "A kiválasztott objektumot nem lehet konvertálni."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Érvénytelen XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "A kimeneti fájl {$param} nem írható."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "A regisztráció nem volt sikeres! A DOI regisztrációs szerver hibát jelez: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "A regisztráció sikeres!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Hiányzik a folyóirathoz a DOI előtag az útvonallal {$path}."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "HIBA:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "A megadott folyóirat , \"{$journalPath}\", nem létezik."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "A megadott objektum nem található."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Másolat küldése a fő kapcsolattartónak, akit megadtak a folyóirat beállításokban."
+
+msgid ""
+msgstr ""
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "A beviteli fájl {$param} nem olvasható."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Biztosan törölni szeretné ezt a beküldést?"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Érvényesítse az XML-t mielőtt exportálja és regisztrálja!"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Link a kiajánlott előfizetések leírásának oldalához."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Link a felhasználó jelenlegi és korábbi előfizeti oldalához."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Ez a link csak akkor jelenik meg, amikor a látogató bejelentkezett."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Hónap(ok)"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Hét"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Értesítse az előfizetőket e-mailben az előfizetés lejárta után."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Értesítse az előfizetőket e-mailben az előfizetés lejárta után."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Értesítse az előfizetőket e-mailben az előfizetés lejárta előtt."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Értesítse az előfizetőket e-mailben az előfizetés lejárta előtt."
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Biztosan meg akarja újítani ezt az előfizetést?"
+
+msgid "manager.paymentTypes"
+msgstr "Fizetési típusok"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Szerkesztőség"
+
+msgid "manager.setup.editorialTeam.description"
+msgstr "Lista a szerkesztőkről, ügyvezetőkről és egyéb személyekről akik a folyóirathoz köthetők."
+
+msgid "stats.publishedSubmissions.details"
+msgstr "Cikk részletek"
+
+msgid "manager.setup.enableOai"
+msgstr "OAI hozzáférés engedélyezése a tartalomhoz "
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "A PKP Preservation Network (PN) ingyenes megőrzési szolgáltatást biztosít bármely OJS folyóiratnak, amely megfelel a legalapvetőbb kritériumoknak. A PKP Preservation Network még jelenleg fejelesztés alatt áll és hamarosan elérhetővé válik a kiegészők tárházában. "
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN plugin bekapcsolva"
+
+msgid "manager.setup.plnDescription"
+msgstr "A PKP Preservation Network (PN) díjmentes megőrzési szolgáltatást biztosít bármely olyan OJS folyóiratnak, amely az alapvető kritériumoknak megfelel. "
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Kattintson a beállítások hivatkozásra a PKP PN használati feltételeinek elfogadásához. "
+
+msgid "manager.setup.otherLockss"
+msgstr "Egyéb archiválási lehetőségek"
+
+msgid "manager.setup.porticoEnable"
+msgstr "Engedélyezze, hogy a Portio folyóirat tartalmat tároljon és osszon meg más Portio partner könyvtárral.   "
+
+msgid "manager.setup.porticoTitle"
+msgstr "Portico"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Ez az előfizetés típus nem jár le; kérjük kezdő dátumot ne adjon meg. "
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Ez az előfizetés típus nem jár le; kérjük végdátumot ne adjon meg. "
+
+msgid "stats.publishedSubmissions.none"
+msgstr "Nem találtunk cikket."
+
+msgid "stats.publishedSubmissions.totalAbstractViews.timeSegment"
+msgstr "Minden folyóirat teljes absztrakt megtekintése dátum szerint"
