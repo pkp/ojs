@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-02-11 14:09+0000\n"
+"PO-Revision-Date: 2020-02-13 21:14+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/editor/tr/>"
 "\n"
@@ -418,3 +418,18 @@ msgstr "Kapak Görseli"
 
 msgid "editor.article.showPublicationVersion"
 msgstr "Planlanmış Yayını Göster"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"'{$PublicIdentifier}' genel tanımlayıcısı aynı türden başka bir öğe için "
+"zaten kullanımda. Lütfen derginiz içerisinde aynı türden öğeler için "
+"benzersiz tanımlayıcılar seçin."
+
+msgid "editor.article.editMetadata"
+msgstr "Sürüm Üst Verisini Güncelle"
+
+msgid "editor.article.viewMetadata"
+msgstr "Sürüm Üst Verisini Göster"
+
+msgid "editor.article.publishVersion"
+msgstr "Yayın Sürümü"
