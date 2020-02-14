@@ -191,6 +191,8 @@ class SectionGridHandler extends SetupGridHandler {
 
 		if ($sectionForm->validate()) {
 			$sectionForm->execute();
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification($request->getUser()->getId());
 			return DAO::getDataChangedEvent($sectionForm->getSectionId());
 		}
 		return new JSONMessage(false);
