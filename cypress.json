@@ -1,0 +1,22 @@
+{
+	"env": {
+		"contextTitles": {
+			"en_US": "Public Knowledge Preprint Server",
+			"fr_CA": "Serveur de prépublication de la connaissance du public"
+		},
+		"contextDescriptions": {
+			"en_US": "The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.",
+			"fr_CA": "Le Serveur de prépublication de la connaissance du public est une service trimestrielle évaluée par les pairs sur le thème de l'accès du public à la science."
+		},
+		"contextAcronyms": {
+			"en_US": "PKP"
+		},
+		"defaultGenre": "Preprint Text"
+	},
+	"integrationFolder": "cypress/tests",
+	"pluginsFile": "lib/pkp/cypress/plugins/index.js",
+	"watchForFileChanges": false,
+	"defaultCommandTimeout": 10000,
+	"video": false,
+	"numTestsKeptInMemory": 0
+}
