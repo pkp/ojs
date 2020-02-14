@@ -11,7 +11,7 @@
 	<a href="#pkp_content_main">{translate key="navigation.skip.main"}</a>
 	<a href="#siteNav">{translate key="navigation.skip.nav"}</a>
 	{if !$requestedPage || $requestedPage === 'index'}
-		{if $activeTheme && $activeTheme->getOption('showDescriptionInJournalIndex')}
+		{if $activeTheme && $activeTheme->getOption('showDescriptionInServerIndex')}
 			<a href="#homepageAbout">{translate key="navigation.skip.about"}</a>
 		{/if}
 		{if $numAnnouncementsHomepage && $announcements|@count}
