@@ -29,6 +29,7 @@ cache:
   directories:
     - $HOME/.composer/cache
 addons:
+  chrome: beta
   apt:
     update: true
 before_install:
