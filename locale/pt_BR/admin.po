@@ -1,2 +1,100 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-02-16 01:35+0000\n"
+"Last-Translator: Lilian Nassi Calo <calolilian@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ops/"
+"admin/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.settings.config.success"
+msgstr "As configurações do site foram atualizadas com sucesso."
+
+msgid "admin.settings.appearance.success"
+msgstr "As configurações de aparência do site foram atualizadas com sucesso."
+
+msgid "admin.settings.info.success"
+msgstr "As informações do site foram atualizadas com sucesso."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descrição do servidor"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$ name} foi editado com sucesso."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$ name} foi criado com sucesso."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "O caminho que você forneceu já está sendo usado por outro servidor."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"O caminho pode incluir apenas letras, números e os caracteres _ e -. Ele "
+"deve começar e terminar com uma letra ou número."
+
+msgid "admin.contexts.create"
+msgstr "Criar Servidor"
+
+msgid "admin.systemConfiguration"
+msgstr "Configuração do OPS"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"Não é possível adicionar o novo código do idioma ao arquivo de registro do "
+"código do idioma, normalmente \"registry/locales.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Não é possível abrir o descritor de idioma do site PKP."
+
+msgid "admin.languages.download"
+msgstr "Faça o download do Locale"
+
+msgid "admin.languages.localeInstalled"
+msgstr "A localidade \"{$ locale}\" foi instalada."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Selecione quaisquer códigos de idioma adicionais para instalar o suporte "
+"neste sistema. As localidades devem ser instaladas antes de poder ser usadas "
+"pelos servidores hospedados. Consulte a documentação do OPS para obter "
+"informação sobre como adicionar suporte para novos idiomas."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Está certo de que deseja desinstalar este código de idioma? Isso pode afetar "
+"qualquer servidor hospedado atualmente usando o código do idioma."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "As localidades marcadas podem estar incompletas."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>O download de pacotes de idiomas do servidor da web Public Knowledge "
+"Project não está disponível no momento porque</p><ul><li>Seu servidor não "
+"possui ou não permite a execução do utilitário \"tar\" do GNU</li><li>O OPS "
+"não pode modificar o arquivo de registro de localidade, normalmente \""
+"registry/ locales.xml\".</li></ul><p>Os pacotes de idiomas podem ser "
+"baixados manualmente do \n"
+"<a href=\"http://pkp.sfu.ca\">site web do PKP</a>.</p>"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Está seguro de que deseja desativar este código de idioma? Isso pode afetar "
+"qualquer servidor hospedado atualmente usando o código do idioma."
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Solicitações para o site principal serão redirecionadas para este servidor. "
+"Isso pode ser útil se o site estiver hospedando apenas um único servidor, "
+"por exemplo."
+
+msgid "admin.settings.redirect"
+msgstr "Redirecionamento de servidor"
+
+msgid "admin.hostedContexts"
+msgstr "Servidores hospedados"
