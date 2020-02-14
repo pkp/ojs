@@ -29,6 +29,7 @@ describe('Data suite tests', function() {
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
 		cy.get('input[id^="title-en_US-"]').type('Reviews', {delay: 0});
 		cy.get('input[id^="abbrev-en_US-"]').type('REV', {delay: 0});
+		cy.get('input[id^="path-"]').type('reviews', {delay: 0});
 		cy.get('input[id^="identifyType-en_US-"]').type('Review Article', {delay: 0});
 		cy.get('input[id=abstractsNotRequired]').click();
 		cy.get('div.pkpListPanelItem').contains('Minoti Inoue').click();

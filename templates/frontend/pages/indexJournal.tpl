@@ -40,8 +40,8 @@
 		</ul>
 	</section>
 
-	{* Journal Description *}
-	{if $activeTheme->getOption('showDescriptionInJournalIndex')}
+	{* Server Description *}
+	{if $activeTheme->getOption('showDescriptionInServerIndex')}
 		<section class="homepage_about">
 			<a id="homepageAbout"></a>
 			<h2>{translate key="about.aboutContext"}</h2>
