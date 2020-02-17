@@ -40,7 +40,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	/**
 	 * @see PKPTestCase::setUp()
 	 */
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 		HookRegistry::rememberCalledHooks();
 	}
