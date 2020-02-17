@@ -28,6 +28,21 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 	}
 
 	/**
+	 * @copydoc Form::fetch()
+	 */
+	function fetch($request, $template = null, $display = false) {
+		$templateMgr = TemplateManager::getManager($request);
+		$enablePublisherId = $request->getContext()->getData('enablePublisherId');
+		$templateMgr->assign([
+			'enablePublisherId' => (is_a($this->getPubObject(), 'ArticleGalley') && in_array('galley', $enablePublisherId)) ||
+					(is_a($this->getPubObject(), 'Issue') && in_array('issue', $enablePublisherId)) ||
+					(is_a($this->getPubObject(), 'IssueGalley') && in_array('issueGalley', $enablePublisherId)),
+		]);
+
+		return parent::fetch($request, $template, $display);
+	}
+
+	/**
 	 * @copydoc Form::execute()
 	 */
 	function execute(...$functionArgs) {

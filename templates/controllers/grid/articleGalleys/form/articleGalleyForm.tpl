@@ -37,7 +37,7 @@
 				{fbvElement type="text" id="urlRemote" label="submission.layout.galley.remoteURL" value=$urlRemote}
 			</div>
 		{/fbvFormSection}
-		{fbvFormSection title="publication.urlPath"}
+		{fbvFormSection id="urlPathSection" title="publication.urlPath"}
 			{fbvElement type="text" label="publication.urlPath.description" value=$urlPath id="urlPath" size=$fbvStyles.size.MEDIUM inline=true}
 		{/fbvFormSection}
 	{/fbvFormArea}
