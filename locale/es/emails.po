@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-16 01:36+0000\n"
+"PO-Revision-Date: 2020-02-18 17:36+0000\n"
 "Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/emails/es/>"
 "\n"
@@ -22,15 +22,13 @@ msgstr ""
 msgid "emails.submissionAck.subject"
 msgstr "Acuse de recibo"
 
-#, fuzzy
 msgid "emails.publishNotify.description"
 msgstr ""
 "Este correo electrónico se envía a los lectores registrados a través del "
-"enlace \"Notificar a los usuarios\" en la página de inicio del usuario del "
-"editor. Notifica a los lectores de un nuevo preprint y los invita a visitar "
-"el servidor en una URL suministrada."
+"enlace \"Notificar a los usuarios\" en la página de usuario del editor. "
+"Notifica a los lectores de un nuevo preprint y los invita a visitar el "
+"servidor en una URL suministrada."
 
-#, fuzzy
 msgid "emails.publishNotify.body"
 msgstr ""
 "Lectores: <br />\n"
@@ -40,7 +38,6 @@ msgstr ""
 "Gracias por el continuo interés en nuestro trabajo, <br />\n"
 "{$editorialContactSignature}"
 
-#, fuzzy
 msgid "emails.publishNotify.subject"
 msgstr "Nuevo preprint publicado"
 
@@ -87,9 +84,8 @@ msgstr ""
 "Gracias <br />\n"
 "{$principalContactSignature}"
 
-#, fuzzy
 msgid "emails.userRegister.subject"
-msgstr "Registro del servidor"
+msgstr "Registro en el servidor"
 
 msgid "emails.passwordReset.description"
 msgstr ""
