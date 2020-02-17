@@ -238,12 +238,12 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 
 		if ($result->RecordCount() != 0) {
 			$issue = $this->_returnIssueFromRow($result->GetRowAssoc(false));
-		} elseif (ctype_digit($issueId)) {
+		} elseif (is_int($issueId) || ctype_digit($issueId)) {
 			$issue = $this->getById($issueId);
 		}
 		$result->Close();
 
-		return $issue;
+		return $issue ?? null;
 	}
 
 	/**

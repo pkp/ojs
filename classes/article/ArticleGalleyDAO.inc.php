@@ -196,12 +196,12 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 
 		if ($result->RecordCount() != 0) {
 			$galley = $this->_fromRow($result->GetRowAssoc(false));
-		} elseif (ctype_digit($galleyId)) {
+		} elseif (is_int($galleyId) || ctype_digit($galleyId)) {
 			$galley = $this->getById($galleyId);
 		}
 		$result->Close();
 
-		return $galley;
+		return $galley ?? null;
 	}
 
 	/**
