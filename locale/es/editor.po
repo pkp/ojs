@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-16 01:36+0000\n"
+"PO-Revision-Date: 2020-02-18 17:36+0000\n"
 "Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/editor/es/>"
 "\n"
@@ -11,11 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "editor.publicIdentificationExists"
 msgstr ""
 "El identificador público '{$publicIdentifier}' ya existe para otro objeto ("
-"preimpresión, galera o archivo). Elija identificadores únicos dentro de su "
+"preimpresión, galerada o archivo). Elija identificadores únicos dentro de su "
 "servidor."
 
 msgid "editor.publication.authorPublishRequirements"
@@ -37,6 +36,5 @@ msgstr ""
 "verificación incluir a continuación haciendo clic en Buscar: todos los "
 "archivos disponibles se enumerarán y se pueden elegir para su inclusión."
 
-#, fuzzy
 msgid "grid.action.addGalley"
-msgstr "Añadir galera"
+msgstr "Añadir galerada"
