@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
+"PO-Revision-Date: 2020-02-14 20:38+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/locale/hu/"
+">\n"
+"Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-13T21:04:23+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "context.current"
 msgstr "Aktuális folyóirat:"
@@ -2097,10 +2100,10 @@ msgid "notification.type.submissionSubmitted"
 msgstr "Egy új cikk, \"{$title},\" címmel került feltöltésre."
 
 msgid "notification.type.editorDecisionComment"
-msgstr "Megjegyzés érkezett a \"{$title}\" című cikk szerkesztői döntéséhez."
+msgstr "Megjegyzés érkezett a(z) \"{$title}\" című cikk szerkesztői döntéséhez."
 
 msgid "notification.type.galleyModified"
-msgstr "\"{$title}\" című cikk megjelentetési formátuma megváltozott."
+msgstr "A(z) \"{$title}\" című cikk megjelentetési formátuma megváltozott."
 
 msgid "notification.type.issuePublished"
 msgstr "Egy folyóiratszám publikálásra került."
@@ -2109,7 +2112,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Egy új közlemény készült."
 
 msgid "notification.type.reviewerFormComment"
-msgstr "\"{$title}\" című cikkhez szakmai lektorálási űrlapot küldtek be."
+msgstr "A(z) \"{$title}\" című cikkhez szakmai lektorálási űrlapot küldtek be."
 
 msgid "notification.type.reviewing"
 msgstr "Szakmai lektorálási események"
@@ -2118,13 +2121,13 @@ msgid "notification.type.site"
 msgstr "Oldal események"
 
 msgid "notification.type.submissionComment"
-msgstr "\"{$title}\" című cikkhez egy szerkesztő megjegyzést adott hozzá."
+msgstr "A(z) \"{$title}\" című cikkhez egy szerkesztő megjegyzést adott hozzá."
 
 msgid "notification.type.submissions"
 msgstr "Beküldési események"
 
 msgid "notification.type.userComment"
-msgstr "\"{$title}\" című cikkhez egy olvasó megjegyzést adott hozzá."
+msgstr "A(z) \"{$title}\" című cikkhez egy olvasó megjegyzést adott hozzá."
 
 msgid "notification.savedIssueMetadata"
 msgstr "A szám publikálási metaadatai mentésre kerültek."
@@ -2136,7 +2139,7 @@ msgid "notification.type.assignProductionUser"
 msgstr "A megjelentetési formátum létrehozásához felhasználó hozzárendelése, használja a Hozzáadás linket a Felhasználói listában."
 
 msgid "notification.type.awaitingRepresentations"
-msgstr "Várakozó kefelenyomatok"
+msgstr "Várakozó kefelenyomatok."
 
 msgid "notification.type.publicationScheduled"
 msgstr "Ez a kézirat közzétételre beütemezve."
@@ -2211,7 +2214,7 @@ msgid "editor.issues.futureIssues"
 msgstr "Tervezett számok"
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
-msgstr "Kérjük, töltse ki a kötelező mezőket!"
+msgstr "Kérjük, töltse ki a kötelező mezőket."
 
 msgid "reader.purchasePrice"
 msgstr "({$currency} {$price})"
@@ -2258,8 +2261,6 @@ msgstr "Cikk"
 msgid "notification.type.public"
 msgstr "Nyilvános értesítések"
 
-msgid ""
-msgstr ""
 
 msgid "about.onlineSubmissions.submitToSection"
 msgstr "Küldj be új anyagot a <a href=\"{$url}\">{$name}</a> rovatba."
@@ -2287,3 +2288,24 @@ msgstr "Statisztikai jelentés összesítője."
 
 msgid "notification.type.editorialReport.contents"
 msgstr "Folyóirata mérőszámai megtekinthetők a szerkesztői riportban."
+
+msgid "context.contexts"
+msgstr "Folyóiratok"
+
+msgid "submission.search"
+msgstr "Cikk keresése"
+
+msgid "common.publications"
+msgstr "cikkek"
+
+msgid "common.publication"
+msgstr "Cikk"
+
+msgid "navigation.skip.issue"
+msgstr "Ugorjon az aktuális számra"
+
+msgid "navigation.skip.about"
+msgstr "Ugorjon a folyóiratról részhez"
+
+msgid "common.software"
+msgstr "Open Journal Systems"

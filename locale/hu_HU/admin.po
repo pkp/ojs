@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
+"PO-Revision-Date: 2020-02-14 20:38+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/admin/hu/>"
+"\n"
+"Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-13T21:04:23+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "admin.hostedJournals"
 msgstr "Tárolt folyóiratok"
@@ -130,7 +133,9 @@ msgid "admin.contexts.create"
 msgstr "Folyóirat létrehozása"
 
 msgid "admin.journals.urlWillBe"
-msgstr "Ez egy rövid szó vagy rövidítés legyen, ami azonosítja a folyóiratot. A folyóirat URL címe ez lesz: {$sampleUrl}"
+msgstr ""
+"Ez egy rövid szó vagy rövidítés legyen, ami azonosítja a folyóiratot. A "
+"folyóirat URL címe ez lesz: {$sampleUrl}."
 
 msgid "admin.contexts.form.titleRequired"
 msgstr "A cím kötelező."
@@ -233,3 +238,32 @@ msgstr "Open Access Értesítés"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Lektori emlékeztető"
+
+msgid "admin.hostedContexts"
+msgstr "Az oldalon elérhető folyóiratok"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"A főoldal ehhez a folyóirathoz irányít át. A funkció akkor lehet praktikus, "
+"ha az oldalon csak egy folyóirat érhető el."
+
+msgid "admin.settings.info.success"
+msgstr "Az oldal információ sikeresen módosítva."
+
+msgid "admin.settings.config.success"
+msgstr "Az oldal konfigurációs beállításai sikeresen módosítva."
+
+msgid "admin.settings.appearance.success"
+msgstr "Az oldal megjelenítési beállításai sikeresen módosítva."
+
+msgid "admin.settings.redirect"
+msgstr "Folyóirat átirányítás"
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} sikeresen létrehozva."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} sikeresen szerkesztve."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Folyóirat leírás"
