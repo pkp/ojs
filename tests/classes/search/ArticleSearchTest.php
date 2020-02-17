@@ -46,7 +46,7 @@ class ArticleSearchTest extends PKPTestCase {
 	/**
 	 * @see PKPTestCase::setUp()
 	 */
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 		HookRegistry::rememberCalledHooks();
 
@@ -67,7 +67,7 @@ class ArticleSearchTest extends PKPTestCase {
 	/**
 	 * @see PKPTestCase::tearDown()
 	 */
-	protected function tearDown() {
+	protected function tearDown() : void {
 		HookRegistry::resetCalledHooks();
 		parent::tearDown();
 	}
@@ -207,7 +207,7 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	public function callbackGetArticle($articleId, $journalId = null, $useCache = false) {
 		// Create an article instance with the correct id.
-		$article = new Article();
+		$article = new Submission();
 		$article->setId($articleId);
 		return $article;
 	}
@@ -256,7 +256,7 @@ class ArticleSearchTest extends PKPTestCase {
 			->getMock();
 
 		// Mock an article.
-		$article = new Article();
+		$article = new Submission();
 
 		// Mock the getArticle() method.
 		$submissionDao->expects($this->any())
