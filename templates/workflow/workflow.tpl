@@ -141,6 +141,33 @@
 										label="{translate key="publication.createVersion"}"
 										@click="openCreateVersionPrompt"
 									></pkp-button>
+									<dropdown
+										class="pkpWorkflow__identificationWorkType"
+										label="{translate key="publication.relation"}"
+										submenu-label="{translate key="publication.relation.change"}"
+									>
+										<form id="relationForm" @submit.prevent="submitRelationForm" action="#" method="post">
+										<ul>
+											<li>
+												<input type="radio" name="relation" id="relation0" value="0" /><label for="relation0"> {translate key="publication.relation.preprint"}</label><br />
+											</li>
+											<li>
+												<input type="radio" name="relation" id="relation1" value="1" /><label for="relation1"> {translate key="publication.relation.submitted"}</label><br />
+											</li>
+											<li>
+												<input type="radio" name="relation" id="relation2" value="2" /><label for="relation2"> {translate key="publication.relation.published"}</label><br />
+											</li>
+											<li>
+												<hr />
+												<input type="text" name="publishedDoi" id="publishedDoi" value="" /><label for="publishedDoi">{translate key="publication.relation.publishedDoi"}</label><br />
+											</li>
+											<li>
+
+												<button type="submit" class="button">Save</button>
+											</li>
+										</ul>
+										</form>
+									</dropdown>								
 								</template>
 							{/if}
 						</pkp-header>

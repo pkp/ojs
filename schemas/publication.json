@@ -30,6 +30,24 @@
 		"sectionId": {
 			"type": "integer",
 			"apiSummary": true
+		},
+		"relationStatus": {
+			"type": "integer",
+			"description": "Whether this preprint is submitted or published in a journal.",
+			"apiSummary": true,
+			"default": 1,
+			"validation": [
+				"in:1,2,3"
+			]
+		},
+		"vorDoi": {
+			"type": "string",
+			"description": "The DOI of the VOR version.",
+			"apiSummary": true,
+			"default": 0,
+			"validation": [
+				"nullable"
+			]
 		}
 	}
 }

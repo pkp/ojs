@@ -15,7 +15,7 @@ import Container from '@/components/Container/Container.vue';
 import SettingsContainer from '@/components/Container/SettingsContainer.vue';
 import StatsEditorialContainer from '@/components/Container/StatsEditorialContainer.vue';
 import StatsPublicationsContainer from '@/components/Container/StatsPublicationsContainer.vue';
-import WorkflowContainer from '@/components/Container/WorkflowContainerOJS.vue';
+import WorkflowContainer from '@/components/Container/WorkflowContainerOPS.vue';
 
 // Required by the URN plugin
 import FieldText from '@/components/Form/fields/FieldText.vue';

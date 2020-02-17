@@ -241,6 +241,20 @@ class PublicationService extends PKPPublicationService {
 	}
 
 	/**
+	 * Set preprint relations
+	 *
+	 * @param Publication $publication The publication to copy
+	 * @param Request
+	 * @return Publication The new publication
+	 */
+	public function relate($publication, $params) {
+		$publication->setData('relationStatus', $params['relation']);
+		$publication->setData('vorDoi', $params['publishedDoi']);
+		DAORegistry::getDAO('PublicationDAO')->updateObject($publication);
+		return $publication;
+	}
+
+	/**
 	 * Check if the server allows authors to publish
 	 *
 	 * @param $submissionId string

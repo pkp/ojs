@@ -101,6 +101,11 @@ class SubmissionHandler extends PKPSubmissionHandler {
 					'handler' => [$this, 'unpublishPublication'],
 					'roles' => [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR],
 				],
+				[
+					'pattern' => $this->getEndpointPattern() . '/{submissionId}/publications/{publicationId}/relate',
+					'handler' => [$this, 'relatePublication'],
+					'roles' => [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR],
+				],
 			],
 			'DELETE' => [
 				[
@@ -141,6 +146,7 @@ class SubmissionHandler extends PKPSubmissionHandler {
 			'publishPublication',
 			'unpublishPublication',
 			'deletePublication',
+			'relatePublication',
 		];
 		if (in_array($routeName, $requiresSubmissionAccess)) {
 			import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
@@ -161,6 +167,7 @@ class SubmissionHandler extends PKPSubmissionHandler {
 			'publishPublication',
 			'unpublishPublication',
 			'deletePublication',
+			'relatePublication',
 		];
 		if (in_array($routeName, $requiresProductionStageAccess)) {
 			// Can the user access this stage?
@@ -172,6 +179,40 @@ class SubmissionHandler extends PKPSubmissionHandler {
 		}
 
 		return APIHandler::authorize($request, $args, $roleAssignments);
+	}
+
+	/**
+	 * Create relations for publications
+	 *
+	 * @param $slimRequest Request Slim request object
+	 * @param $response Response object
+	 * @param array $args arguments
+	 * @return Response
+	 */
+	public function relatePublication($slimRequest, $response, $args) {
+		$request = $this->getRequest();
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$publication = Services::get('publication')->get((int) $args['publicationId']);
+
+		if (!$publication) {
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+		}
+
+		if ($submission->getId() !== $publication->getData('submissionId')) {
+			return $response->withStatus(403)->withJsonError('api.publications.403.submissionsDidNotMatch');
+		}
+
+		$publication = Services::get('publication')->relate($publication, $slimRequest->getParams());
+
+		$publicationProps = Services::get('publication')->getFullProperties(
+			$publication,
+			[
+				'request' => $request,
+				'userGroups' => DAORegistry::getDAO('UserGroupDAO')->getByContextId($submission->getData('contextId'))->toArray(),
+			]
+		);
+
+		return $response->withJson($publicationProps, 200);
 	}
 
 }
