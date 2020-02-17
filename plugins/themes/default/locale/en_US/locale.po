@@ -21,7 +21,7 @@ msgid "plugins.themes.default.option.typography.label"
 msgstr "Typography"
 
 msgid "plugins.themes.default.option.typography.description"
-msgstr "Choose a font combination that suits this journal."
+msgstr "Choose a font combination that suits this server."
 
 msgid "plugins.themes.default.option.typography.notoSans"
 msgstr "Noto Sans: A digital-native font designed by Google for extensive language support."
@@ -50,8 +50,8 @@ msgstr "Colour"
 msgid "plugins.themes.default.option.colour.description"
 msgstr "Choose a colour for the header."
 
-msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
-msgstr "Show the journal summary on the homepage."
+msgid "plugins.themes.default.option.showDescriptionInServerIndex.option"
+msgstr "Show the server summary on the homepage."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
 msgstr "Header Background Image"

@@ -77,12 +77,12 @@ class DefaultThemePlugin extends ThemePlugin {
 			'default' => '#1E6292',
 		]);
 
-		$this->addOption('showDescriptionInJournalIndex', 'FieldOptions', [
+		$this->addOption('showDescriptionInServerIndex', 'FieldOptions', [
 			'label' => __('manager.setup.contextSummary'),
 				'options' => [
 				[
 					'value' => true,
-					'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.option'),
+					'label' => __('plugins.themes.default.option.showDescriptionInServerIndex.option'),
 				],
 			],
 			'default' => false,
