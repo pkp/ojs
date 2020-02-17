@@ -215,7 +215,7 @@ class OAIDAO extends PKPOAIDAO {
 				JOIN sections s ON (s.section_id = p.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
 				JOIN journal_settings jsoai ON (jsoai.journal_id = j.journal_id AND jsoai.setting_name=? AND jsoai.setting_value=\'1\')
-			WHERE	p.date_published AND j.enabled = 1 AND a.status <> ?
+			WHERE	p.date_published IS NOT NULL AND j.enabled = 1 AND a.status <> ?
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND p.section_id = ?':'') . '
 				' . ($from?' AND a.last_modified >= ' . $this->datetimeToDB($from):'') . '
