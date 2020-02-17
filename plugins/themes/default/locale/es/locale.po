@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-16 01:36+0000\n"
+"PO-Revision-Date: 2020-02-18 17:36+0000\n"
 "Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/"
 "themes-default/es/>\n"
@@ -61,7 +61,7 @@ msgstr ""
 "soporte de idiomas."
 
 msgid "plugins.themes.default.option.typography.description"
-msgstr "Elija una combinación de fuentes que se adapte a esta revista."
+msgstr "Elija una combinación de fuentes que se adapte a este servidor."
 
 msgid "plugins.themes.default.option.typography.label"
 msgstr "Tipografía"
@@ -71,3 +71,6 @@ msgstr "Este tema implementa el tema predeterminado."
 
 msgid "plugins.themes.default.name"
 msgstr "Tema predeterminado"
+
+msgid "plugins.themes.default.option.showDescriptionInServerIndex.option"
+msgstr "Mostrar el resumen del servidor en la página de inicio."
