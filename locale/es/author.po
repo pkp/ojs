@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-16 01:36+0000\n"
+"PO-Revision-Date: 2020-02-18 17:36+0000\n"
 "Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/author/es/>"
 "\n"
@@ -36,9 +36,8 @@ msgstr ""
 "correo electrónico para sus registros. Una vez que el editor haya revisado "
 "el envío, publicará su preimpresión o se comunicará con usted."
 
-#, fuzzy
 msgid "author.submit.form.abstractRequired"
-msgstr "Ingrese el resumen de su preprint"
+msgstr "Ingrese el resumen de su preprint."
 
 msgid "author.submit.languageInstructions"
 msgstr ""
@@ -48,17 +47,14 @@ msgstr ""
 msgid "author.submit.form.sectionRequired"
 msgstr "Seleccione una serie de servidores adecuada para este envío."
 
-#, fuzzy
 msgid "submission.submit.coverNote"
 msgstr "Comentarios para el Editor"
 
-#, fuzzy
 msgid "author.submit.journalSectionDescription"
 msgstr "Los preprints deben enviarse a una de las series del servidor."
 
-#, fuzzy
 msgid "author.submit.journalSection"
-msgstr "Serie de servidor"
+msgstr "Serie del servidor"
 
 msgid "author.submit.notAccepting"
 msgstr "Este servidor no acepta envíos en este momento."
