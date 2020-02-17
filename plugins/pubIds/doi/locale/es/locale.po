@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-17 14:36+0000\n"
+"PO-Revision-Date: 2020-02-18 17:36+0000\n"
 "Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/pubids-doi/"
 "es/>\n"
@@ -115,7 +115,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiReassign"
 msgstr "Reasignar DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
-msgstr "Ingrese el patrón de sufijo DOI para galeras."
+msgstr "Ingrese el patrón de sufijo DOI para galeradas."
 
 msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
 msgstr "Ingrese el patrón de sufijo DOI para los preprints."
@@ -132,7 +132,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
 msgstr "Use patrones predeterminados."
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
-msgstr "para galeras"
+msgstr "para galeradas"
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
 msgstr "para preprints"
@@ -169,7 +169,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "Prefijo DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
-msgstr "Galeras"
+msgstr "Galeradas"
 
 msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Preprints"
@@ -182,7 +182,6 @@ msgstr ""
 msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
 msgstr "Elija los objetos a los que se deben asignar los DOI."
 
-#, fuzzy
 msgid "plugins.pubIds.doi.manager.settings.doiObjects"
 msgstr "Contenido del servidor"
 
@@ -195,7 +194,7 @@ msgstr "DOI"
 msgid "plugins.pubIds.doi.description"
 msgstr ""
 "Este complemento permite la asignación de identificadores de objetos "
-"digitales a preprints y galeras en OPS."
+"digitales a preprints y galeradas en OPS."
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
