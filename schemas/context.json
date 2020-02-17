@@ -17,6 +17,15 @@
 				"nullable"
 			]
 		},
+		"enablePublisherId": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"validation": [
+					"in:publication,galley,issue,issueGalley"
+				]
+			}
+		},
 		"serverThumbnail": {
 			"type": "object",
 			"multilingual": true,
