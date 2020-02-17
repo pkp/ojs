@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-17 14:36+0000\n"
+"PO-Revision-Date: 2020-02-18 17:36+0000\n"
 "Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/submission/"
 "es/>\n"
@@ -38,11 +38,11 @@ msgid "publication.invalidSection"
 msgstr "No se pudo encontrar la sección de esta publicación."
 
 msgid "galley.publicationNotFound"
-msgstr "La publicación de esta galera no se pudo encontrar."
+msgstr "La publicación de esta galerada no se pudo encontrar."
 
 msgid "galley.editPublishedDisabled"
 msgstr ""
-"Las galeras de esta publicación no se pueden editar porque ya se ha "
+"Las galeradas de esta publicación no se pueden editar porque ya se ha "
 "publicado."
 
 msgid "catalog.category.heading"
@@ -97,7 +97,7 @@ msgid "submission.confirmSubmit"
 msgstr "¿Está seguro de que desea enviar este preprint al servidor?"
 
 msgid "submission.galleyFiles"
-msgstr "Archivos de galera"
+msgstr "Archivos de galerada"
 
 msgid "submission.submit.noContext"
 msgstr "No se pudo encontrar la revista de este envío."
