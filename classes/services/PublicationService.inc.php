@@ -248,8 +248,8 @@ class PublicationService extends PKPPublicationService {
 	 * @return Publication The new publication
 	 */
 	public function relate($publication, $params) {
-		$publication->setData('relationStatus', $params['relation']);
-		$publication->setData('vorDoi', $params['publishedDoi']);
+		$publication->setData('relationStatus', $params['relationStatus']);
+		$publication->setData('vorDoi', $params['vorDoi']);
 		DAORegistry::getDAO('PublicationDAO')->updateObject($publication);
 		return $publication;
 	}
@@ -284,8 +284,30 @@ class PublicationService extends PKPPublicationService {
 		}
 
 		// If the user is not an author, has to be an editor, return true
-		return true;
-		
+		return true;	
 	}
 
+	/**
+	 * Get the preprint relation options
+	 *
+	 * @return json
+	 *
+	 */
+	public function getRelationOptions() {
+		$relationOptions = array(
+								array(
+									"value"=>1, 
+									"label"=>__('publication.relation.none')
+								),
+								array(
+									"value"=>2, 
+									"label"=>__('publication.relation.submitted')
+								),
+								array(
+									"value"=>3, 
+									"label"=>__('publication.relation.published')
+								)
+							);
+		return $relationOptions;	
+	}
 }

@@ -64,24 +64,29 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		$latestPublicationApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
 		$temporaryFileApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'temporaryFiles');
-		$issueApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getData('urlPath'), 'issues/__issueId__');
+		$relatePublicationApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId()) . '/relate';
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 		$baseUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($submissionContext->getId());
 
 		$issueEntryForm = new APP\components\forms\publication\IssueEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
+		$relationForm = new APP\components\forms\publication\RelationForm($relatePublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
+
+		import('classes.components.forms.publication.IssueEntryForm'); // Constant import
+		$templateMgr->setConstants([
+			'FORM_ISSUE_ENTRY',
+		]);
+		import('classes.components.forms.publication.RelationForm'); // Constant import
+		$templateMgr->setConstants([
+			'FORM_ID_RELATION',
+		]);
 
 		$sectionWordLimits = [];
 		$sectionIterator = DAORegistry::getDAO('SectionDAO')->getByContextId($submissionContext->getId());
 		while ($section = $sectionIterator->next()) {
 			$sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
 		}
-
-		import('classes.components.forms.publication.IssueEntryForm'); // Constant import
-		$templateMgr->setConstants([
-			'FORM_ISSUE_ENTRY',
-		]);
 
 		$workflowData = $templateMgr->getTemplateVars('workflowData');
 
@@ -99,7 +104,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		$workflowData['components'][FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
 		$workflowData['publicationFormIds'][] = FORM_ISSUE_ENTRY;
-		$workflowData['issueApiUrl'] = $issueApiUrl;
+		$workflowData['components'][FORM_ID_RELATION] = $relationForm->getConfig();
 		$workflowData['sectionWordLimits'] = $sectionWordLimits;
 		$workflowData['i18n']['schedulePublication'] = __('editor.submission.schedulePublication');
 		$workflowData['i18n']['setRelationSuccess'] = __('publication.relation.success');

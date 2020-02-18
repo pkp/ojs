@@ -104,8 +104,26 @@ msgstr "The preprint entry details have been updated."
 msgid "publication.datePublished.description"
 msgstr "The publication date will be set automatically when the preprint is published. Do not enter a publication date unless you need to backdate it."
 
-msgid "preprint.relations"
+msgid "publication.relation"
 msgstr "Relations"
+
+msgid "publication.relation.success"
+msgstr "Publication relations saved succesfully"
+
+msgid "publication.relation.label"
+msgstr "Submitted for Publication"
+
+msgid "publication.relation.none"
+msgstr "Has not been submitted for publication"
+
+msgid "publication.relation.submitted"
+msgstr "Has been submitted for publication in journal"
+
+msgid "publication.relation.published"
+msgstr "Has been published in a journal"
+
+msgid "publication.relation.vorDoi"
+msgstr "DOI of the published article"
 
 msgid "publication.publish.confirmation"
 msgstr "All publication requirements have been met. Are you sure you want to publish this?"
