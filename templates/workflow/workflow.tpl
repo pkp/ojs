@@ -146,7 +146,7 @@
 										label="{translate key="publication.relation"}"
 										submenu-label="{translate key="publication.relation.change"}"
 									>
-										<form id="relationForm" @submit.prevent="submitRelationForm" action="#" method="post">
+										<form id="relationForm" @submit.prevent="setRelation" action="#" method="post">
 										<ul>
 											<li>
 												<input type="radio" name="relation" id="relation0" value="0" /><label for="relation0"> {translate key="publication.relation.preprint"}</label><br />
