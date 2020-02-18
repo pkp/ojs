@@ -38,7 +38,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$mockedDaos = parent::getMockedDAOs();
 		$mockedDaos += array(
 			'ArticleSearchDAO', 'SubmissionDAO',
-			'IssueDAO', 'JournalDAO', 'SectionDAO'
+			'JournalDAO', 'SectionDAO'
 		);
 		return $mockedDaos;
 	}
@@ -53,7 +53,6 @@ class ArticleSearchTest extends PKPTestCase {
 		// Prepare the mock environment for this test.
 		$this->registerMockArticleSearchDAO();
 		$this->registerMockSubmissionDAO();
-		$this->registerMockIssueDAO();
 		$this->registerMockJournalDAO();
 		$this->registerMockSectionDAO();
 
@@ -100,9 +99,6 @@ class ArticleSearchTest extends PKPTestCase {
 		self::assertEquals(SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE, $firstResult['article']->getId());
 		self::assertEquals('', $error);
 
-		// Make sure that articles from unpublished issues will
-		// be filtered out.
-		$this->registerMockIssueDAO(false);
 		$this->registerMockArticleSearchDAO(); // This is necessary to instantiate a fresh iterator.
 		$keywords = array(null => 'test');
 		$searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
@@ -231,7 +227,6 @@ class ArticleSearchTest extends PKPTestCase {
 			SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE => array(
 				'count' => 3,
 				'journal_id' => 2,
-				'issuePublicationDate' => '2013-05-01 20:30:00',
 				'publicationDate' => '2013-05-01 20:30:00'
 			)
 		);
@@ -265,29 +260,6 @@ class ArticleSearchTest extends PKPTestCase {
 
 		// Register the mock DAO.
 		DAORegistry::registerDAO('SubmissionDAO', $submissionDao);
-	}
-
-	/**
-	 * Mock and register an IssueDAO as a test
-	 * back end for the ArticleSearch class.
-	 */
-	private function registerMockIssueDAO($published = true) {
-		// Mock an IssueDAO.
-		$issueDAO = $this->getMockBuilder(IssueDAO::class)
-			->setMethods(array('getById'))
-			->getMock();
-
-		// Mock an issue.
-		$issue = $issueDAO->newDataObject();
-		$issue->setPublished($published);
-
-		// Mock the getById() method.
-		$issueDAO->expects($this->any())
-		         ->method('getById')
-		         ->will($this->returnValue($issue));
-
-		// Register the mock DAO.
-		DAORegistry::registerDAO('IssueDAO', $issueDAO);
 	}
 
 	/**
