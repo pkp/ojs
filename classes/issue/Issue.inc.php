@@ -539,7 +539,9 @@ class Issue extends DataObject {
 	 * @return string
 	 */
 	function getBestIssueId() {
-		return $this->getData('urlPath') ?? $this->getId();
+		return $this->getData('urlPath')
+			? $this->getData('urlPath')
+			: $this->getId();
 	}
 
 	/**

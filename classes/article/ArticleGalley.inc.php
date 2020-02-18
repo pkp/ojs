@@ -76,7 +76,9 @@ class ArticleGalley extends Representation {
 	 * @return string
 	 */
 	function getBestGalleyId() {
-		return $this->getData('urlPath') ?? $this->getId();
+		return $this->getData('urlPath')
+			? $this->getData('urlPath')
+			: $this->getId();
 	}
 
 	/**

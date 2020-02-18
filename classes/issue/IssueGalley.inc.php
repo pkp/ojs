@@ -159,7 +159,9 @@ class IssueGalley extends IssueFile {
 	 * @return string
 	 */
 	function getBestGalleyId() {
-		return $this->getData('urlPath') ?? $this->getId();
+		return $this->getData('urlPath')
+			? $this->getData('urlPath')
+			: $this->getId();
 	}
 
 	/**
