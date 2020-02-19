@@ -90,7 +90,7 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		if ($coversNode) $submissionNode->appendChild($coversNode);
 
 		$citationsListNode = $this->createCitationsNode($doc, $deployment, $submission);
-		if($citationsListNode !== false){
+		if ($citationsListNode !== false) {
 			$submissionNode->appendChild($citationsListNode);
 		}
 		return $submissionNode;
@@ -103,13 +103,13 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 	 * @param $submission Submission
 	 * @return DOMElement
 	 */
-	private function createCitationsNode($doc, $deployment, $submission){
+	private function createCitationsNode($doc, $deployment, $submission) {
 		$citationDao = DAORegistry::getDAO('CitationDAO');
 
 		$nodeCitations = $doc->createElementNS($deployment->getNamespace(), 'citations');
 		$submissionCitations = $citationDao->getBySubmissionId($submission->_data['id']);
-		if($submissionCitations->getCount() != 0){
-			while($elementCitation = $submissionCitations->next()){
+		if ($submissionCitations->getCount() != 0) {
+			while ($elementCitation = $submissionCitations->next()) {
 				$rawCitation = $elementCitation->getRawCitation();
 				$nodeCitations->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'citation', htmlspecialchars($rawCitation, ENT_COMPAT, 'UTF-8')));
 			}
