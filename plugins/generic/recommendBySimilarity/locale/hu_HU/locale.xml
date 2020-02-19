@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/recommendBySimilarity/locale/hu_HU/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="hu_HU" full_name="Magyar">
+	<message key="plugins.generic.recommendBySimilarity.displayName">Recommend Similar Articles</message>
+	<message key="plugins.generic.recommendBySimilarity.description">This plugin adds a list of similar articles to the article abstract page.</message>
+
+	<message key="plugins.generic.recommendBySimilarity.heading">Similar Articles</message>
+	<message key="plugins.generic.recommendBySimilarity.advancedSearchIntro">You may also {$advancedSearchLink} for this article.</message>
+	<message key="plugins.generic.recommendBySimilarity.advancedSearch">start an advanced similarity search</message>
+</locale>

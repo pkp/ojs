@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/hu_HU/admin.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="hu_HU" full_name="Magyar">
+	<message key="admin.hostedJournals">Tárolt folyóiratok</message>
+	<message key="admin.settings.journalRedirect">Folyóirat átirányítás</message>
+	<message key="admin.settings.options">Opciók</message>
+	<message key="admin.settings.journalRedirectInstructions">A főoldal át lesz irányítva erre a folyóiratra. Ez akkor hasznos ha az oldal pl. csak egy folyóiratot tartalmaz.</message>
+	<message key="admin.settings.noJournalRedirect">Ne irányítson át</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</message>
+	<message key="admin.languages.confirmDisable">Biztos benne, hogy kikapcsolja ezt a nyelvet? Ez érintheti a tárolt folyóiratokat, amelyek ezt a nyelvet használják.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Jelenleg nem lehetséges nyevi csomagok letöltése a Public Knowledge Project web szerverről, mert:</p>
+	<ul>
+		<li>Az Ön szervere nem tudja vagy engedélyezi a "tar" eszköz használatát.</li>
+		<li>Az OJS nem tudja módosítani a nyelvregisztrációs fájlt, általában "registry/locales.xml".</li>
+	</ul>
+<p>Nyelvi csomagokat innen lehet letölteni: <a href="http://pkp.sfu.ca">PKP weboldal</a>.</p>]]></message>
+
+	<message key="admin.languages.primaryLocaleInstructions">Ez a weblap és a tárolt folyóiratok alapértelmezett nyelve.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Válassza ki az összes az oldal által támogatott nyelvet. A kiválasztott nyelvek elérhetőek lesznek minden az oldalon tárolt folyóirat számlára, és kiválaszhatóak lesznek a nyelvek menüben minden oldalon (ez felülbírálató a folyóiratok egyéni beállításaiban). Ha nincs több nyelv kiválasztva, a nyelvek menü nem fog megjelenni és nem lesznek elérhetőek a többnyelvi beállítások sem a folyóiratok számlra.</message>
+	<message key="admin.locale.maybeIncomplete">A kiválasztott nyelvek esetleg hiányosak lehetnek.</message>
+	<message key="admin.languages.confirmUninstall">Biztos benne, hogy törli ezt a nyelvet? Ez érintheti a tárolt folyóiratokat, amelyek ezt a nyelvet használják.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</message>
+	<message key="admin.languages.downloadFailed">The locale download failed. The error message(s) below describe the failure.</message>
+	<message key="admin.languages.localeInstalled">The "{$locale}" locale has been installed.</message>
+	<message key="admin.languages.download">Download Locale</message>
+	<message key="admin.languages.download.cannotOpen">Cannot open language descriptor from PKP web site.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">OJS User Database</message>
+	<message key="admin.auth.enableSyncProfiles">Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information.</message>
+	<message key="admin.auth.enableSyncPasswords">Enable user password modification (if supported by this authentication plugin). Enabling this option allows users to modify their password from within OJS and to use the OJS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</message>
+	<message key="admin.auth.enableCreateUsers">Enable user creation (if supported by this authentication plugin). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source.</message>
+	<message key="admin.systemVersion">OJS Version</message>
+	<message key="admin.systemConfiguration">OJS Configuration</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</message>
+	<message key="admin.journals.journalSettings">Journal Settings</message>
+	<message key="admin.journals.noneCreated">No journals have been created.</message>
+	<message key="admin.contexts.create">Create Journal</message>
+	<message key="admin.journals.urlWillBe">This should be a single short word or acronym that identifies the journal. The journal's URL will be {$sampleUrl}.</message>
+	<message key="admin.contexts.form.titleRequired">A cím szükséges.</message>
+	<message key="admin.contexts.form.pathRequired">Az útvonal szükséges.</message>
+	<message key="admin.contexts.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
+	<message key="admin.contexts.form.pathExists">A kiválasztott útvonalat már egy másik folyóirat használja.</message>
+	<message key="admin.journals.enableJournalInstructions">Nyilvánossá teszi ezt a folyóiratot az oldalon</message>
+	<message key="admin.journals.journalDescription">Folyóirat leírása</message>
+	<message key="admin.journal.pathImportInstructions">Existing journal path or path to create (e.g., "ojs").</message>
+	<message key="admin.journals.importSubscriptions">Regisztrációk importálása</message>
+	<message key="admin.journals.transcode">Transcode article metadata from ISO8859-1</message>
+	<message key="admin.journals.redirect">Generate code to map OJS 1 URLs to OJS 2 URLs</message>
+	<message key="admin.journals.form.importPathRequired">The import path is required.</message>
+	<message key="admin.journals.importErrors">Importing failed to complete successfully</message>
+	<message key="admin.mergeUsers">Felhasználók összefésülése</message>
+	<message key="admin.mergeUsers.mergeUser">Felhasználó összefésülése</message>
+	<message key="admin.mergeUsers.into.description">Select a user to whom to attribute the previous user's authorships, editing assignments, etc.</message>
+	<message key="admin.mergeUsers.from.description">Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</message>
+	<message key="admin.mergeUsers.allUsers">Minden regisztrált felhasználó</message>
+	<message key="admin.mergeUsers.confirm">Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username "{$newUsername}"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Nincsenek regisztrált felhasználók.</message>
+
+	<!-- Categories -->
+	<message key="admin.categories">Categories</message>
+	<message key="admin.categories.enable.description">The Site Administrator may choose to define a set of categories here to help organize large sets of journals. Journal Managers may then choose several of these categories for each journal, and readers can browse journal collections by category.</message>
+	<message key="admin.categories.disableCategories">Do not organise journals into categories.</message>
+	<message key="admin.categories.enableCategories">Permit Journal Managers to organize journals into categories.</message>
+	<message key="admin.categories.editTitle">Kategória szerkesztése</message>
+	<message key="admin.categories.createTitle">Kategória létrehozása</message>
+	<message key="admin.categories.create">Új kategória létrehozása</message>
+	<message key="admin.categories.noneCreated">Nem lettek létrehozva kategóriák.</message>
+	<message key="admin.categories.confirmDelete">Biztos ki szeretné törölni ezt a kategóriát?</message>
+	<message key="admin.categories.name">Név</message>
+	<message key="admin.categories.nameRequired">A kategória neve szükséges.</message>
+	<message key="admin.presses.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Subscription Expiry Reminder</message>
+	<message key="admin.scheduledTask.openAccessNotification">Open Access Notification</message>
+	<message key="admin.scheduledTask.reviewReminder">Review Reminder</message>
+</locale>
