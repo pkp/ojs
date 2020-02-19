@@ -45,7 +45,7 @@ class RelationForm extends FormComponent {
 		$this->addField(new FieldOptions('relationStatus', [
 					'label' => __('publication.relation.label'),
 					'type' => 'radio',
-					'value' => $publication->getData('relationStatus'),
+					'value' => (int) $publication->getData('relationStatus'),
 					'options' => $relationOptions,
 				]))
 				->addField(new FieldText('vorDoi', [

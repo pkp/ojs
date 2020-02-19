@@ -296,16 +296,16 @@ class PublicationService extends PKPPublicationService {
 	public function getRelationOptions() {
 		$relationOptions = array(
 								array(
-									"value"=>1, 
-									"label"=>__('publication.relation.none')
+									"value" => 1, 
+									"label" => __('publication.relation.none')
 								),
 								array(
-									"value"=>2, 
-									"label"=>__('publication.relation.submitted')
+									"value" => 2, 
+									"label" => __('publication.relation.submitted')
 								),
 								array(
-									"value"=>3, 
-									"label"=>__('publication.relation.published')
+									"value" => 3, 
+									"label" => __('publication.relation.published')
 								)
 							);
 		return $relationOptions;	
