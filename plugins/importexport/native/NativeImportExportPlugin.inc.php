@@ -219,7 +219,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @param $user User|null
 	 * @return string XML contents representing the supplied submission IDs.
 	 */
-	function exportSubmissions($submissionIds, $context, $user) {
+	function exportSubmissions($submissionIds, $context, $user, $opts) {
 		$submissionDao = Application::getSubmissionDAO();
 		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO');
@@ -233,6 +233,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			if ($submission) $submissions[] = $submission;
 		}
 		libxml_use_internal_errors(true);
+		$exportFilter->setOpts($opts);
 		$submissionXml = $exportFilter->execute($submissions, true);
 		$xml = $submissionXml->saveXml();
 		$errors = array_filter(libxml_get_errors(), function($a) {
@@ -306,6 +307,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
+		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls']);
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
@@ -432,7 +434,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						file_put_contents($xmlFile, $this->exportSubmissions(
 							$args,
 							$journal,
-							null
+							null,
+							$opts
 						));
 						return;
 					case 'issue':
@@ -449,6 +452,38 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$this->usage($scriptName);
 	}
 
+	/**
+	 * Pull out getopt style long options.
+	 * @param &$args array
+	 * #param $optCodes array
+	 */
+	function parseOpts(&$args, $optCodes) {
+		$newArgs = [];
+		$opts = [];
+		$sticky = null;
+		foreach ($args as $arg) {
+			if ($sticky) {
+				$opts[$sticky] = $arg;
+				$sticky = null;
+				continue;
+			}
+			if (!starts_with($arg, '--')) {
+				$newArgs[] = $arg;
+				continue;
+			}
+			$opt = substr($arg, 2);
+			if (in_array($opt, $optCodes)) {
+				$opts[$opt] = true;
+				continue;
+			}
+			if (in_array($opt . ":", $optCodes)) {
+				$sticky = $opt;
+				continue;
+			}
+		}
+		$args = $newArgs;
+		return $opts;
+	}
 }
 
 ?>
