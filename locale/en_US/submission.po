@@ -114,13 +114,13 @@ msgid "publication.relation.label"
 msgstr "Submitted for Publication"
 
 msgid "publication.relation.none"
-msgstr "Has not been submitted for publication"
+msgstr "Preprint has not been submitted for publication"
 
 msgid "publication.relation.submitted"
-msgstr "Has been submitted for publication in journal"
+msgstr "Preprint has been submitted for publication in journal"
 
 msgid "publication.relation.published"
-msgstr "Has been published in a journal"
+msgstr "Preprint has been published in a journal as an article"
 
 msgid "publication.relation.vorDoi"
 msgstr "DOI of the published article"

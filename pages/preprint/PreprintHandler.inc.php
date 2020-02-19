@@ -359,6 +359,6 @@ class PreprintHandler extends Handler {
 	 */
 	function setupTemplate($request) {
 		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION);
 	}
 }

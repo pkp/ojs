@@ -78,10 +78,22 @@
 		</div>
 	{/if}
 
-	{* Crossref requirements: The landing page must link to the AM/VOR when it is made available. The link must be appropriately labeled (e.g. “Now published in <Journal Name>”) and appear above the scroll. *}
-	{if $preprintStatus}
+	{* Crossref requirements: The landing page must link to the AM/VOR when it is made available.*}
+	{if $publication->getData('relationStatus') == '2' || $publication->getData('relationStatus') == '3'}
 		<div class="cmp_notification notice">
-			{translate key="preprint.statusMessage"}
+			{if $publication->getData('relationStatus') == '3'}
+				{translate key="publication.relation.published"}
+				{if $publication->getData('vorDoi')}
+					<br />{translate key="publication.relation.vorDoi"} 
+					<span class="value">
+						<a href="{$publication->getData('vorDoi')|escape}">
+							{$publication->getData('vorDoi')|escape}
+						</a>
+					</span>
+				{/if}
+			{else}
+				{translate key="publication.relation.submitted"}
+			{/if}
 		</div>
 	{/if}
 

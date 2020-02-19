@@ -51,6 +51,7 @@ class RelationForm extends FormComponent {
 				->addField(new FieldText('vorDoi', [
 					'label' => __('publication.relation.vorDoi'),
 					'value' => $publication->getData('vorDoi'),
+					'size' => 'large',
 				]));
 	}
 }
