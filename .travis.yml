@@ -18,7 +18,6 @@ matrix:
   # - env: TEST=mysql DISABLE_PATH_INFO=1
   #   php: 7.2
 language: php
-dist: trusty
 python:
   - 3.3 # Required by Javascript linter/builder
 git:
@@ -29,6 +28,7 @@ cache:
   directories:
     - $HOME/.composer/cache
 addons:
+  chrome: beta
   apt:
     update: true
 before_install:
