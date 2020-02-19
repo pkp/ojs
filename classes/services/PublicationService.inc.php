@@ -294,20 +294,19 @@ class PublicationService extends PKPPublicationService {
 	 *
 	 */
 	public function getRelationOptions() {
-		$relationOptions = array(
-								array(
-									"value" => 1, 
-									"label" => __('publication.relation.none')
-								),
-								array(
-									"value" => 2, 
-									"label" => __('publication.relation.submitted')
-								),
-								array(
-									"value" => 3, 
-									"label" => __('publication.relation.published')
-								)
-							);
-		return $relationOptions;	
+		return array(
+					array(
+						"value" => PUBLICATION_RELATION_NONE, 
+						"label" => __('publication.relation.none')
+					),
+					array(
+						"value" => PUBLICATION_RELATION_SUBMITTED, 
+						"label" => __('publication.relation.submitted')
+					),
+					array(
+						"value" => PUBLICATION_RELATION_PUBLISHED, 
+						"label" => __('publication.relation.published')
+					)
+		);	
 	}
 }

@@ -79,12 +79,13 @@
 	{/if}
 
 	{* Crossref requirements: The landing page must link to the AM/VOR when it is made available.*}
-	{if $publication->getData('relationStatus') == '2' || $publication->getData('relationStatus') == '3'}
+	{if $publication->getData('relationStatus') == PUBLICATION_RELATION_SUBMITTED || $publication->getData('relationStatus') == PUBLICATION_RELATION_PUBLISHED}
 		<div class="cmp_notification notice">
-			{if $publication->getData('relationStatus') == '3'}
+			{if $publication->getData('relationStatus') == PUBLICATION_RELATION_PUBLISHED}
 				{translate key="publication.relation.published"}
 				{if $publication->getData('vorDoi')}
-					<br />{translate key="publication.relation.vorDoi"} 
+					<br />
+					{translate key="publication.relation.vorDoi"} 
 					<span class="value">
 						<a href="{$publication->getData('vorDoi')|escape}">
 							{$publication->getData('vorDoi')|escape}

@@ -15,6 +15,10 @@
  */
 import('lib.pkp.classes.publication.PKPPublication');
 
+define('PUBLICATION_RELATION_NONE', 1);
+define('PUBLICATION_RELATION_SUBMITTED', 2);
+define('PUBLICATION_RELATION_PUBLISHED', 3);
+
 class Publication extends PKPPublication {
 
 	/**

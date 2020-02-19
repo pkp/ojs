@@ -52,6 +52,7 @@ class RelationForm extends FormComponent {
 					'label' => __('publication.relation.vorDoi'),
 					'value' => $publication->getData('vorDoi'),
 					'size' => 'large',
+					'showWhen' => ['relationStatus', PUBLICATION_RELATION_PUBLISHED],
 				]));
 	}
 }
