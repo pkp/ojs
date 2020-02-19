@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-20 01:21+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-urn/hu/>\n"
+"Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
-"PO-Revision-Date: 2020-02-13T21:07:39+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -24,7 +27,9 @@ msgid "plugins.pubIds.urn.manager.settings.urnObjects"
 msgstr "Folyóirat tartalom"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
-msgstr "Kérjük, hogy válassza ki azokat az objektumokat, amelyekhez URN-eket szeretne rendelni!"
+msgstr ""
+"Kérjük, hogy válassza ki azokat az objektumokat, amelyekhez URN-eket "
+"szeretne rendelni."
 
 msgid "plugins.pubIds.urn.manager.settings.explainURNs"
 msgstr "Kérjük, hogy válassza ki azokat az megjelentetési objektumokat, amelyekhez  Uniform Resource Names (URN)-eket fog rendelni:"
@@ -111,7 +116,7 @@ msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
 msgstr "Kérjük, írja be a feloldó URL-t."
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign"
-msgstr " URN-ek újrakiosztása"
+msgstr "URN-ek újrakiosztása"
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
 msgstr "Ha megváltoztatja az URN konfigurációját, a már kioszott URN-ekre nem lesz hatással. Miután az URN konfiguráció mentésre került, ezzel a gombbal törölheti az összes létező URN-t, hogy az új beállítások érvénybe lépjenek a meglévő objektumokkal."
@@ -144,7 +149,9 @@ msgid "plugins.pubIds.urn.editor.assigned"
 msgstr "Az URN  ehhez van hozzárendelve {$pubObjectType}."
 
 msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
-msgstr "A megadott URN utótag már használatban van egy másik megjelent elemnél. Kérjük, hogy minden egyes elemhez egyedi URN utótagot írjon be!"
+msgstr ""
+"A megadott URN utótag már használatban van egy másik megjelent elemnél. "
+"Kérjük, hogy minden egyes elemhez egyedi URN utótagot írjon be."
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN"
 msgstr "URN törlése"
@@ -178,3 +185,37 @@ msgstr "Az URN {$pubId} hozzárendelés megtörtént."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Az ellenörzőszám hiányzik."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Tétel"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Megjelenítő: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Nem lett URN hozzárendelve ehhez a publikációhoz."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "Az URN ehhez a publikációhoz az alábbi lesz: {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "Az URN-nek az alábbival kell kezdődnie: {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr "URN nem generálható, mert az URN minta hiányos."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Nem generálhat URN-t amíg a publikáció nem lett folyóiratszámhoz rendelve."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Kioszt"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "Az URN-nek az alábbival kell kezdődnie:  {$prefix}."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Kérjük adja meg az URN utótag mintát ehhez a cikkhez."
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Cikkek"
