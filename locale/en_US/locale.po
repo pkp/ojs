@@ -1121,9 +1121,6 @@ msgstr "Copyedit Instructions"
 msgid "submission.layout.noLayoutFile"
 msgstr "None (Upload final copyedit version as Layout Version prior to sending request)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Public Galley Identifier"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Public galley identification already exists."
 

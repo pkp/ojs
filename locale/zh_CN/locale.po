@@ -945,9 +945,6 @@ msgstr "文字编辑指南"
 msgid "submission.layout.noLayoutFile"
 msgstr "无（在发送请求之前上传最后的文字编辑版本作为排版版本）"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "公共草稿标识符"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "公共草稿标识符已经存在"
 

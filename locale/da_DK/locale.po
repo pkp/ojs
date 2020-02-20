@@ -1566,9 +1566,6 @@ msgstr ""
 msgid "issue.coverPage.altText"
 msgstr "Forside"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Offentlig identifikationsmarkør af publiceringsformat"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Offentlig publiceringsformat-identifikation eksisterer allerede."
 

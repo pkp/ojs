@@ -1114,9 +1114,6 @@ msgstr "Instruktioner för manusredigering"
 msgid "submission.layout.noLayoutFile"
 msgstr "Saknas (Ladda upp slutgiltig manusredigerings-version som Layoutversion innan du skickar förfrågan)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Publik identifikator för publiceringsversion"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Publik identifikator för publiceringsversion finns redan."
 

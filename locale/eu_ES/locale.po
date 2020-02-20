@@ -924,9 +924,6 @@ msgstr "Zuzenketak egiteko instrukzioak"
 msgid "submission.layout.noLayoutFile"
 msgstr "Bat ere ez (eskaera bidali aurretik, kargatu azken zuzenketa-bertsioa Maketazio-bertsio gisa)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Galerada-identifikatzaile publikoa"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Galerada-identifikazio publikoa badago lehendik."
 

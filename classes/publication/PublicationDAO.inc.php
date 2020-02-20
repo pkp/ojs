@@ -29,6 +29,7 @@ class PublicationDAO extends PKPPublicationDAO {
 		'seq' => 'seq',
 		'submissionId' => 'submission_id',
 		'status' => 'status',
+		'urlPath' => 'url_path',
 		'version' => 'version',
 	];
 

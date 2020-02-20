@@ -1101,9 +1101,6 @@ msgstr "Instructies voor tekstredactie"
 msgid "submission.layout.noLayoutFile"
 msgstr "Geen (laad de laatste tekstredactieversie als opmaakversie voorafgaand aan het versturen van het verzoek)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Publieke identificatie voor "
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Publieke identificatie bestaat al voor proefdruk."
 

@@ -217,17 +217,33 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
-	 * Retrieve Issue by "best" issue id -- public ID if it exists,
+	 * Retrieve Issue by "best" issue id -- urlPath if it exists,
 	 * falling back on the internal issue ID otherwise.
 	 * @param $issueId string
-	 * @param $journalId int optional
+	 * @param $contextId int optional
 	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function getByBestId($issueId, $journalId = null, $useCache = false) {
-		$issue = $this->getByPubId('publisher-id', $issueId, $journalId, $useCache);
-		if (!isset($issue) && ctype_digit("$issueId")) $issue = $this->getById((int) $issueId, $journalId, $useCache);
-		return $issue;
+	function getByBestId($issueId, $contextId = null, $useCache = false) {
+		$params = [
+			$issueId
+		];
+		if ($contextId) $params[] = (int) $contextId;
+
+		$result = $this->retrieve(
+			'SELECT i.* FROM issues i WHERE url_path = ?'
+			. ($contextId?' AND journal_id = ?':''),
+			$params
+		);
+
+		if ($result->RecordCount() != 0) {
+			$issue = $this->_returnIssueFromRow($result->GetRowAssoc(false));
+		} elseif (is_int($issueId) || ctype_digit($issueId)) {
+			$issue = $this->getById($issueId);
+		}
+		$result->Close();
+
+		return $issue ?? null;
 	}
 
 	/**
@@ -299,6 +315,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$issue->setShowNumber($row['show_number']);
 		$issue->setShowYear($row['show_year']);
 		$issue->setShowTitle($row['show_title']);
+		$issue->setData('urlPath', $row['url_path']);
 
 		$this->getDataObjectSettings('issue_settings', 'issue_id', $row['issue_id'], $issue);
 
@@ -355,9 +372,9 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	function insertObject($issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title)
+				(journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title, url_path)
 				VALUES
-				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, %s, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, %s, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				(int) $issue->getJournalId(),
@@ -371,6 +388,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				(int) $issue->getShowNumber(),
 				(int) $issue->getShowYear(),
 				(int) $issue->getShowTitle(),
+				$issue->getData('urlPath'),
 			)
 		);
 
@@ -433,7 +451,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 					show_volume = ?,
 					show_number = ?,
 					show_year = ?,
-					show_title = ?
+					show_title = ?,
+					url_path = ?
 				WHERE issue_id = ?',
 			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
@@ -448,7 +467,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				(int) $issue->getShowNumber(),
 				(int) $issue->getShowYear(),
 				(int) $issue->getShowTitle(),
-				(int) $issue->getId()
+				$issue->getData('urlPath'),
+				(int) $issue->getId(),
 			)
 		);
 

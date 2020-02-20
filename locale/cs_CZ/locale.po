@@ -1004,9 +1004,6 @@ msgstr "Instrukce pro redigování"
 msgid "submission.layout.noLayoutFile"
 msgstr "Žádný (Nahrajte finální redigovanou verzi jako verzi typografa před tím, než odešlete žádost)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Veřejný identifikátor sazebnice"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Identifikace veřejné sazebnice již existuje."
 

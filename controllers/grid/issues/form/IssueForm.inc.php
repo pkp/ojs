@@ -45,6 +45,7 @@ class IssueForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'showTitle', 'optional', 'editor.issues.titleRequired', function($showTitle) use ($form) {
 			return !$showTitle || implode('', $form->getData('title'))!='' ? true : false;
 		}));
+		$this->addCheck(new FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 		$this->issue = $issue;
@@ -112,6 +113,22 @@ class IssueForm extends Form {
 			}
 		}
 
+		// Check if urlPath is already being used
+		if ($this->getData('urlPath')) {
+			if (ctype_digit($this->getData('urlPath'))) {
+				$this->addError('urlPath', __('publication.urlPath.numberInvalid'));
+				$this->addErrorField('urlPath');
+			} else {
+				$issue = DAORegistry::getDAO('IssueDAO')->getByBestId($this->getData('urlPath'), Application::get()->getRequest()->getContext()->getId());
+				if ($issue &&
+					(!$this->issue || $this->issue->getId() !== $issue->getId())
+				) {
+					$this->addError('urlPath', __('publication.urlPath.duplicate'));
+					$this->addErrorField('urlPath');
+				}
+			}
+		}
+
 		return parent::validate($callHooks);
 	}
 
@@ -134,6 +151,7 @@ class IssueForm extends Form {
 				'showTitle' => $this->issue->getShowTitle(),
 				'coverImage' => $this->issue->getCoverImage($locale),
 				'coverImageAltText' => $this->issue->getCoverImageAltText($locale),
+				'urlPath' => $this->issue->getData('urlPath'),
 			);
 			parent::initData();
 		} else {
@@ -163,6 +181,7 @@ class IssueForm extends Form {
 			'temporaryFileId',
 			'coverImageAltText',
 			'datePublished',
+			'urlPath',
 		));
 
 		$form = $this;
@@ -215,6 +234,7 @@ class IssueForm extends Form {
 		$issue->setShowNumber($this->getData('showNumber'));
 		$issue->setShowYear($this->getData('showYear'));
 		$issue->setShowTitle($this->getData('showTitle'));
+		$issue->setData('urlPath', $this->getData('urlPath'));
 
 		// If it is a new issue, first insert it, then update the cover
 		// because the cover name needs an issue id.

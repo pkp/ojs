@@ -1151,9 +1151,6 @@ msgstr "Instructions de révision"
 msgid "submission.layout.noLayoutFile"
 msgstr "Aucun (téléverser la version de révision finale comme version de mise en page avant d'envoyer une demande)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Identifiant des épreuve publiques"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "L'identifiant des épreuves publiques existe déjà."
 

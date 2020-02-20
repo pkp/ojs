@@ -1004,9 +1004,6 @@ msgstr "Istruzioni per il copyedit"
 msgid "submission.layout.noLayoutFile"
 msgstr "Nessuno (Carica la versione finale del copyedit come Layout Version prima di inviare la richiesta)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Identificatore pubblico della gabbia"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "L'dentificatore pubblico della gabbia esiste già."
 

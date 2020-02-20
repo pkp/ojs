@@ -18,7 +18,9 @@
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="issueToc" issueId=$issueId}">{translate key="issue.toc"}</a></li>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="editIssueData" issueId=$issueId}">{translate key="editor.issues.issueData"}</a></li>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="issueGalleys" issueId=$issueId}">{translate key="editor.issues.galleys"}</a></li>
-		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="identifiers" issueId=$issueId}">{translate key="editor.issues.identifiers"}</a></li>
+		{if $enableIdentifiers}
+			<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="identifiers" issueId=$issueId}">{translate key="editor.issues.identifiers"}</a></li>
+		{/if}
 		{if $currentJournal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION}
 			<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="access" issueId=$issueId}">{translate key="editor.issues.access"}</a></li>
 		{/if}

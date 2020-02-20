@@ -103,6 +103,10 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
+	{fbvFormSection title="publication.urlPath"}
+		{fbvElement type="text" label="publication.urlPath.description" value=$urlPath id="urlPath" size=$fbvStyles.size.MEDIUM inline=true}
+	{/fbvFormSection}
+
 	{foreach from=$pubIdPlugins item=pubIdPlugin}
 		{assign var=pubIdMetadataFile value=$pubIdPlugin->getPubIdMetadataFile()}
 		{include file="$pubIdMetadataFile" pubObject=$issue}

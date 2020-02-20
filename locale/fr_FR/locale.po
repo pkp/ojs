@@ -1467,9 +1467,6 @@ msgstr "Retourner aux résultats de recherche"
 msgid "reviewer.article.enterReviewForm"
 msgstr "Cliquez sur l'icône pour compléter le formulaire d'évaluation."
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Identifiant de l'épreuve publique"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "l'identifiant de l'épreuve publique existe déjà."
 

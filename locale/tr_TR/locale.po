@@ -962,9 +962,6 @@ msgstr "Sayfa Düzeni Yorumları"
 msgid "submission.copyedit.instructions"
 msgstr "Sayfa Düzeni Yönergesi"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Genel Dizigi Belirleyici"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Yerel dizigi kimliği zaten var."
 

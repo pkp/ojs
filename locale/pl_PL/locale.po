@@ -959,9 +959,6 @@ msgstr "Instrukcje do korekty"
 msgid "submission.layout.noLayoutFile"
 msgstr "Brak (wyślij ukończoną wersję po korekcie przed wysłaniem prośby do składacza)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Identyfikator pliku do publikacji"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Podany identyfikator pliku do publikacji już istnieje."
 

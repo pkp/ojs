@@ -41,6 +41,7 @@ class ArticleGalleyForm extends Form {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		$this->addCheck(new FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
+		$this->addCheck(new FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 
@@ -80,6 +81,30 @@ class ArticleGalleyForm extends Form {
 	}
 
 	/**
+	 * @copydoc Form::validate
+	 */
+	function validate($callHooks = true) {
+
+		// Check if urlPath is already being used
+		if ($this->getData('urlPath')) {
+			if (ctype_digit($this->getData('urlPath'))) {
+				$this->addError('urlPath', __('publication.urlPath.numberInvalid'));
+				$this->addErrorField('urlPath');
+			} else {
+				$articleGalley = Application::get()->getRepresentationDAO()->getByBestGalleyId($this->getData('urlPath'), $this->_publication->getId());
+				if ($articleGalley &&
+					(!$this->_articleGalley || $this->_articleGalley->getId() !== $articleGalley->getId())
+				) {
+					$this->addError('urlPath', __('publication.urlPath.duplicate'));
+					$this->addErrorField('urlPath');
+				}
+			}
+		}
+
+		return parent::validate($callHooks);
+	}
+
+	/**
 	 * Initialize form data from current galley (if applicable).
 	 */
 	function initData() {
@@ -87,6 +112,7 @@ class ArticleGalleyForm extends Form {
 			$this->_data = array(
 				'label' => $this->_articleGalley->getLabel(),
 				'galleyLocale' => $this->_articleGalley->getLocale(),
+				'urlPath' => $this->_articleGalley->getData('urlPath'),
 				'urlRemote' => $this->_articleGalley->getData('urlRemote'),
 			);
 		} else {
@@ -102,6 +128,7 @@ class ArticleGalleyForm extends Form {
 			array(
 				'label',
 				'galleyLocale',
+				'urlPath',
 				'urlRemote',
 			)
 		);
@@ -120,6 +147,7 @@ class ArticleGalleyForm extends Form {
 		if ($articleGalley) {
 			$articleGalley->setLabel($this->getData('label'));
 			$articleGalley->setLocale($this->getData('galleyLocale'));
+			$articleGalley->setData('urlPath', $this->getData('urlPath'));
 			$articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
 			// Update galley in the db
@@ -130,6 +158,7 @@ class ArticleGalleyForm extends Form {
 			$articleGalley->setData('publicationId', $this->_publication->getId());
 			$articleGalley->setLabel($this->getData('label'));
 			$articleGalley->setLocale($this->getData('galleyLocale'));
+			$articleGalley->setData('urlPath', $this->getData('urlPath'));
 			$articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
 			// Insert new galley into the db

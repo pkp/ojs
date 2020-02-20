@@ -1105,9 +1105,6 @@ msgstr "Instruksi Copyediting"
 msgid "submission.layout.noLayoutFile"
 msgstr "Tidak ada (Unggah versi copyedit akhir sebagai Versi Layout sebelum mengirim permintaan)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Indentifier Galley Publik"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Identifikasi galley umum sudah ada."
 

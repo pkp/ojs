@@ -539,9 +539,9 @@ class Issue extends DataObject {
 	 * @return string
 	 */
 	function getBestIssueId() {
-		$publicIssueId = $this->getStoredPubId('publisher-id');
-		if (!empty($publicIssueId)) return $publicIssueId;
-		return $this->getId();
+		return $this->getData('urlPath')
+			? $this->getData('urlPath')
+			: $this->getId();
 	}
 
 	/**

@@ -1097,9 +1097,6 @@ msgstr "Teknisen toimittamisen ohjeet"
 msgid "submission.layout.noLayoutFile"
 msgstr "Ei mitään (Lataa lopullinen teknisesti toimitettu versio taittoversioksi ennen pyynnön lähettämistä)"
 
-msgid "submission.layout.publicGalleyId"
-msgstr "Julkaistavan tiedoston julkinen tunniste"
-
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Julkaistavan tiedoston julkinen tunnistetieto on jo olemassa."
 

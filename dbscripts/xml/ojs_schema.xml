@@ -208,9 +208,13 @@
 		</field>
 		<field name="style_file_name" type="C2" size="90"/>
 		<field name="original_style_file_name" type="C2" size="255"/>
+		<field name="url_path" type="C2" size="32" />
 		<descr>Journal issues.</descr>
 		<index name="issues_journal_id">
 			<col>journal_id</col>
+		</index>
+		<index name="issues_url_path">
+			<col>url_path</col>
 		</index>
 	</table>
 
@@ -268,9 +272,13 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="url_path" type="C2" size="32" />
 		<descr>Issue galleys.</descr>
 		<index name="issue_galleys_issue_id">
 			<col>issue_id</col>
+		</index>
+		<index name="issue_galleys_url_path">
+			<col>url_path</col>
 		</index>
 	</table>
 
@@ -518,6 +526,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/><!-- STATUS_QUEUED -->
 		</field>
+		<field name="url_path" type="C2" size="32" />
 		<field name="version" type="I8" />
 		<descr>Publications</descr>
 		<index name="publications_submission_id">
@@ -525,6 +534,9 @@
 		</index>
 		<index name="publications_section_id">
 			<col>section_id</col>
+		</index>
+		<index name="publications_url_path">
+			<col>url_path</col>
 		</index>
 	</table>
 
@@ -582,9 +594,13 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="url_path" type="C2" size="32" />
 		<descr>Publication galleys</descr>
 		<index name="publication_galleys_publication_id">
 			<col>publication_id</col>
+		</index>
+		<index name="publication_galleys_url_path">
+			<col>url_path</col>
 		</index>
 	</table>
 

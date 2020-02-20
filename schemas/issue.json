@@ -98,6 +98,14 @@
 			"multilingual": "true",
 			"apiSummary": true
 		},
+		"urlPath": {
+			"type": "string",
+			"description": "An optional path to use in the URL instead of the ID.",
+			"validation": [
+				"nullable",
+				"regex:/^[-_a-z0-9]*$/"
+			]
+		},
 		"volume": {
 			"type": "integer",
 			"apiSummary": true

@@ -51,6 +51,15 @@
 				"nullable"
 			]
 		},
+		"enablePublisherId": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"validation": [
+					"in:publication,galley,issue,issueGalley"
+				]
+			}
+		},
 		"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual": {
 			"type": "boolean",
 			"validation": [
