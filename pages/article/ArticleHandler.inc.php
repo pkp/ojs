@@ -77,11 +77,8 @@ class ArticleHandler extends Handler {
 
 		// If the urlPath does not match the urlPath of the current
 		// publication, redirect to the current URL
-		$currentUrlPath = $submission->getCurrentPublication()->getData('urlPath');
-		if ($currentUrlPath !== $urlPath) {
-			if (!$currentUrlPath) {
-				$currentUrlPath = $submission->getId();
-			}
+		$currentUrlPath = $submission->getBestId();
+		if ($currentUrlPath && $currentUrlPath != $urlPath) {
 			$newArgs = $args;
 			$newArgs[0] = $currentUrlPath;
 			$request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), $newArgs);
@@ -110,7 +107,7 @@ class ArticleHandler extends Handler {
 		if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
 			$galleys = (array) $this->publication->getData('galleys');
 			foreach ($galleys as $galley) {
-				if ($galley->getBestGalleyId() === $galleyId) {
+				if ($galley->getBestGalleyId() == $galleyId) {
 					$this->galley = $galley;
 					break;
 				}
@@ -122,7 +119,7 @@ class ArticleHandler extends Handler {
 				$publications = $submission->getPublishedPublications();
 				foreach ($publications as $publication) {
 					foreach ((array) $publication->getData('galleys') as $galley) {
-						if ($galley->getBestGalleyId() === $galleyId) {
+						if ($galley->getBestGalleyId() == $galleyId) {
 							$request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$submission->getBestId()]);
 						}
 					}
