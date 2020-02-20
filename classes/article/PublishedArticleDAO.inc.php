@@ -290,6 +290,15 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
+	 * Get the published article by submission ID.
+	 * @param $submissionId int
+	 * @param $contextId int optional
+	 */
+	function getBySubmissionId($submissionId, $contextId = null) {
+		return $this->getByArticleId($submissionId, $journalId);
+	}
+
+	/**
 	 * Retrieve published article by article id
 	 * @param $articleId int
 	 * @param $journalId int optional
