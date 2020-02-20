@@ -33,6 +33,7 @@ class IssueForm extends Form {
 
 		$form = $this;
 		$this->addCheck(new FormValidatorRegExp($this, 'volume', 'optional', 'editor.issues.volumeRequired', '/^[0-9]+$/i'));
+		$this->addCheck(new FormValidatorRegExp($this, 'number', 'optional', 'editor.issues.numberRequired', '/^[0-9]+$/i'));
 		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'optional', 'editor.issues.volumeRequired', function($showVolume) use ($form) {
 			return !$showVolume || $form->getData('volume') ? true : false;
 		}));
