@@ -84,7 +84,8 @@ class IssueAction {
 	 */
 	function subscribedUser($user, $journal, $issueId = null, $articleId = null) {
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
-		$submission = Application::getSubmissionDAO()->getById($articleId);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$submission = $submissionDao->getById($articleId);
 		$result = false;
 		if (isset($user) && isset($journal)) {
 			if ($submission && $this->allowedPrePublicationAccess($journal, $submission, $user)) {

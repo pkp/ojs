@@ -148,6 +148,7 @@ class Application extends PKPApplication {
 
 	/**
 	 * Get the submission DAO.
+	 * @deprecated Just get the DAO directly.
 	 * @return SubmissionDAO
 	 */
 	public static function getSubmissionDAO() {

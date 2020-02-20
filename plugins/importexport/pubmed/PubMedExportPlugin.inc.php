@@ -125,7 +125,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	}
 
 	function exportSubmissions($submissionIds, $context, $user) {
-		$submissionDao = Application::getSubmissionDAO();
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');

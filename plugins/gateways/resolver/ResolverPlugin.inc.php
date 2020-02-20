@@ -63,7 +63,8 @@ class ResolverPlugin extends GatewayPlugin {
 		switch ($scheme) {
 			case 'doi':
 				$doi = implode('/', $args);
-				$article = Application::get()->getSubmissionDAO()->getByPubId('doi', $doi, $request->getJournal());
+				$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+				$article = $submissionDao->getByPubId('doi', $doi, $request->getJournal());
 				if($article) {
 					$request->redirect(null, 'article', 'view', $article->getBestId());
 				}

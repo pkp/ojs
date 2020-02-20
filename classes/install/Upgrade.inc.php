@@ -424,7 +424,7 @@ class Upgrade extends Installer {
 			}
 
 			// Now, migrate stage assignments. This code is based on the default stage assignments outlined in registry/userGroups.xml
-			$submissionDao = Application::getSubmissionDAO();
+			$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
 			$submissionResult = $submissionDao->retrieve('SELECT article_id, user_id FROM articles_migration WHERE journal_id = ?', array($journal->getId()));
 			$authorGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_AUTHOR);
@@ -1700,7 +1700,7 @@ class Upgrade extends Installer {
 	 * @return boolean True indicates success.
 	 */
 	function convertCommentsToEditor() {
-		$submissionDao = Application::getSubmissionDAO();
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 		$stageAssignmetDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmetDao StageAssignmentDAO */
 		$queryDao = DAORegistry::getDAO('QueryDAO'); /* @var $queryDao QueryDAO */
 		$noteDao = DAORegistry::getDAO('NoteDAO'); /* @var $noteDao NoteDAO */
@@ -2323,7 +2323,7 @@ class Upgrade extends Installer {
 	 */
 	function repairImageAssociations() {
 		$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
-		$submissionDao = Application::getSubmissionDAO();
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		$result = $submissionFileDao->retrieve('SELECT df.file_id AS dependent_file_id, gf.file_id AS galley_file_id FROM submission_files df, submission_files gf, submission_html_galley_images i, submission_galleys g WHERE i.galley_id = g.galley_id AND g.file_id = gf.file_id AND i.file_id = df.file_id');
 		while (!$result->EOF) {
@@ -3011,7 +3011,8 @@ class Upgrade extends Installer {
 	function migrateSubmissionCoverImages() {
 		$coverImagesBySubmission = [];
 
-		$result = Application::getSubmissionDAO()->retrieve(
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$result = $submissionDao->retrieve(
 			'SELECT * from submission_settings WHERE setting_name="coverImage" OR setting_name="coverImageAltText"'
 		);
 		while (!$result->EOF) {
@@ -3031,7 +3032,7 @@ class Upgrade extends Installer {
 		$result->Close();
 
 		foreach ($coverImagesBySubmission as $submissionId => $coverImagesBySubmission) {
-			Application::getSubmissionDAO()->update(
+			$submissionDao->update(
 				'UPDATE submission_settings
 					SET setting_value = ?
 					WHERE submission_id = ? AND setting_name = ?',
