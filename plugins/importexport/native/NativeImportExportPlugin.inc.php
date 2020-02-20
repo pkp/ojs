@@ -231,7 +231,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 */
 	function exportSubmissions($submissionIds, $context, $user) {
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$nativeExportFilters = $filterDao->getObjectsByGroup('article=>native-xml');
 		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
@@ -263,7 +262,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 */
 	function exportIssues($issueIds, $context, $user) {
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$nativeExportFilters = $filterDao->getObjectsByGroup('issue=>native-xml');
 		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
