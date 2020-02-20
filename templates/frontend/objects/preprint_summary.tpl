@@ -43,23 +43,23 @@
 			{/if}
 		</a>
 	</div>
-
-	{if $showAuthor || $preprint->getPages() || ($preprint->getDatePublished() && $showDatePublished)}
 	<div class="meta">
 		{if $showAuthor}
 		<div class="authors">
 			{$preprint->getAuthorString()|escape}
 		</div>
 		{/if}
-
-		{if $showDatePublished && $preprint->getDatePublished()}
+		{if $preprint->getDatePublished()}
 			<div class="published">
-				{$preprint->getDatePublished()|date_format:$dateFormatShort}
+				{translate key="submission.dates" submitted=$preprint->getDateSubmitted()|date_format:$dateFormatShort published=$preprint->getDatePublished()|date_format:$dateFormatShort}
 			</div>
 		{/if}
-
-	</div>
-	{/if}
+		{if count($preprint->getPublishedPublications()) > 1}
+			<div class="versions">
+				{translate key="submission.numberOfVersions" numberOfVersions=count($preprint->getPublishedPublications())}
+			</div>
+		{/if}
+	</div>	
 
 	{if !$hideGalleys}
 		<ul class="galleys_links">
@@ -72,10 +72,11 @@
 				{/if}
 				<li>
 					{assign var="hasPreprintAccess" value=$hasAccess}
-					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $preprint->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN}
+					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN}
 						{assign var="hasPreprintAccess" value=1}
 					{/if}
 					{include file="frontend/objects/galley_link.tpl" parent=$preprint labelledBy="preprint-{$preprint->getId()}" hasAccess=$hasPreprintAccess}
+					{translate key="publication.galley.downloads" downloads=$galley->getViews()}
 				</li>
 			{/foreach}
 		</ul>

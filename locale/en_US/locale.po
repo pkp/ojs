@@ -80,6 +80,15 @@ msgstr "Published"
 msgid "submission.search"
 msgstr "Preprint Search"
 
+msgid "submission.numberOfVersions"
+msgstr "There are {$numberOfVersions} versions of this preprint"
+
+msgid "submission.dates"
+msgstr "Submitted {$submitted} - Published {$published}"
+
+msgid "publication.galley.downloads"
+msgstr "Downloads {$downloads}"
+
 msgid "context.contexts"
 msgstr "Servers"
 
