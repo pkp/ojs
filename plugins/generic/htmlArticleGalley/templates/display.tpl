@@ -33,7 +33,7 @@
 		{if !$isLatestPublication}
 			<div class="galley_view_notice">
 				<div class="galley_view_notice_message" role="alert">
-					{translate key="submission.outdatedVersion" datePublished=$galleyPublication->getData('datePublished') urlRecentVersion=$articleUrl}
+					{translate key="submission.outdatedVersion" datePublished=$galleyPublication->getData('datePublished')|date_format:$dateFormatLong urlRecentVersion=$articleUrl}
 				</div>
 			</div>
 		{/if}

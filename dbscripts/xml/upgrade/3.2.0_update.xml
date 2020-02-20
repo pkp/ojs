@@ -21,5 +21,16 @@
 	<sql><!-- pkp/pkp-lib#5445 Use new setting name for LicenseUrl -->
 		<query>UPDATE journal_settings SET setting_name="licenseUrl" WHERE setting_name="licenseURL"</query>
 	</sql>
+	<sql><!-- Migrate immersion theme settings stored as context settings to plugin settings -->
+		<query>
+			INSERT INTO plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type)
+				SELECT 'immersionthemeplugin', js.journal_id, js.setting_name, js.setting_value, 'string'
+				FROM journal_settings as js
+				WHERE js.setting_name='immersionAnnouncementsColor';
+		</query>
+		<query>
+			DELETE FROM journal_settings WHERE setting_name="immersionAnnouncementsColor";
+		</query>
+	</sql>
 </data>
 
