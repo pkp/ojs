@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-14 20:38+0000\n"
+"PO-Revision-Date: 2020-02-20 01:21+0000\n"
 "Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/api/hu/>\n"
 "Language: hu_HU\n"
@@ -27,3 +27,36 @@ msgstr "Csak engedélyezett folyóiratokat tekinthet meg."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "A beküldéshez tartozó folyóiratot nem változtathatja meg."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Ennek a folyóiratnak a megtekintéséhez vagy módosításához API igénylés "
+"szükséges."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Az elérni kívánt publikáció nem része ennek a beküldésnek."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Az elérni kívánt publiáció nem szerepel ebben a folyóiratban."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "A kiválasztott fizetési módszer nem támogatott."
+
+msgid "api.contexts.403.requiresContext"
+msgstr ""
+"Ezt a folyóiratot nem tudod szerkeszteni a teljes oldalra vonatkozó API-n "
+"keresztül."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Beküldés létrehozásához vagy szerkesztéshez igényt szükséges kezdeméynezni  "
+"a folyóirat API végpontjához."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Nincs jogosultsága megtekinteni ezt a folyóiratot."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Nincs jogosultsága törölni ezt a folyóiratot."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Nincs jogosultsága szerkeszteni ezt a folyóiratot."
