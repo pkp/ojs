@@ -2,47 +2,50 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:04:55+00:00\n"
+"PO-Revision-Date: 2020-02-21 11:36+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/tr/>\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:04:55+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:04:55+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.generic.announcementfeed.displayName"
 msgstr "Duyuru Besleme Eklentisi"
 
 msgid "plugins.generic.announcementfeed.description"
-msgstr "Bu eklenti dergi duyuruları için RSS / Atom web sendikasyon beslemeleri üretir."
+msgstr "Bu eklenti dergi duyuruları için RSS/Atom web akış beslemeleri üretir."
 
 msgid "plugins.generic.announcementfeed.settings"
 msgstr "Ayarlar"
 
 msgid "plugins.generic.announcementfeed.settings.all"
-msgstr "Tüm dergi sayfalarında bağlantı beslemelerini görüntüle."
+msgstr "Besleme bağlantılarını tüm dergi sayfalarında göster."
 
 msgid "plugins.generic.announcementfeed.settings.homepage"
-msgstr "Sadece anasayfa ve duyuru sayfasında besleme bağlantılarını görüntle."
+msgstr "Besleme bağlantılarını yalnızca anasayfa ve duyuru sayfasında göster."
 
 msgid "plugins.generic.announcementfeed.settings.announcement"
-msgstr "Sadece duyuru sayfada besleme bağlantısı görüntüle."
+msgstr "Besleme bağlantılarını yalnızca duyuru sayfasında göster."
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
-msgstr "Besleme bağlantısı sınırla"
+msgstr "Besleme bağlantısı sayısı"
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
 msgstr "en son duyurular."
 
 msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
-msgstr "En son duyurular için pozitif bir tamsayı giriniz."
+msgstr "Lütfen en son duyurular için pozitif bir tamsayı giriniz."
 
 msgid "plugins.generic.announcementfeed.atom.altText"
-msgstr "Atom logosu"
+msgstr "Atom logo"
 
 msgid "plugins.generic.announcementfeed.rss1.altText"
-msgstr "RSS1 logosu"
+msgstr "RSS1 logo"
 
 msgid "plugins.generic.announcementfeed.rss2.altText"
 msgstr "RSS2 logosu"
