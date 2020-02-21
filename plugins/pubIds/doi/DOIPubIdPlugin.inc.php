@@ -27,6 +27,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		if ($success && $this->getEnabled($mainContextId)) {
 			HookRegistry::register('CitationStyleLanguage::citation', array($this, 'getCitationData'));
 			HookRegistry::register('Schema::get::publication', array($this, 'addToSchema'));
+			HookRegistry::register('Schema::get::submission', array($this, 'addToSubmissionSchema'));
 			HookRegistry::register('Publication::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::validate', array($this, 'validatePublicationDoi'));
@@ -262,6 +263,22 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$schema->properties->{'pub-id::doi'} = json_decode('{
 			"type": "string",
 			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		}');
+	}
+
+	/**
+	 * Add properties to the submission schemas
+	 *
+	 * @param $hookName string `Schema::get::publication`
+	 * @param $schema object Publication schema
+	 */
+	public function addToSubmissionSchema($hookName, $schema) {
+		$schema->properties->{'crossref::status'} = json_decode('{
+			"type": "string",
+		"apiSummary": true,
 			"validation": [
 				"nullable"
 			]

@@ -283,6 +283,27 @@ class Submission extends PKPSubmission {
 	}
 
 	/**
+	 * Get total galley views for the preprint
+	 * @param $primaryGenreIds array
+	 * @return int
+	 */
+	function getTotalGalleyViews() {
+		$application = Application::get();
+		$publications = $this->getPublishedPublications();
+		$views = 0;
+
+		foreach ($publications as $publication) {
+			foreach ((array) $publication->getData('galleys') as $galley) {
+				$file = $galley->getFile();
+ 				if (!$galley->getRemoteUrl() && $file) {
+ 					$views = $views + $application->getPrimaryMetricByAssoc(ASSOC_TYPE_SUBMISSION_FILE, $file->getId());
+ 				}
+			}
+		}
+		return $views;
+	}
+
+	/**
 	 * Return option selection indicating if author should be hidden.
 	 * @return int AUTHOR_TOC_...
 	 * @deprecated 3.2.0.0

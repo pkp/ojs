@@ -48,6 +48,7 @@
 		<div class="authors">
 			{$preprint->getAuthorString()|escape}
 		</div>
+		{translate key="publication.galley.downloads" downloads=$preprint->getTotalGalleyViews($primaryGenreIds)}
 		{/if}
 		{if $preprint->getDatePublished()}
 			<div class="published">
@@ -76,7 +77,6 @@
 						{assign var="hasPreprintAccess" value=1}
 					{/if}
 					{include file="frontend/objects/galley_link.tpl" parent=$preprint labelledBy="preprint-{$preprint->getId()}" hasAccess=$hasPreprintAccess}
-					{translate key="publication.galley.downloads" downloads=$galley->getViews()}
 				</li>
 			{/foreach}
 		</ul>
