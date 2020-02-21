@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-16 01:35+0000\n"
+"Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/admin/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.languages.download"
+msgstr "Descargar configuración local"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Las configuraciones regionales marcadas pueden estar incompletas."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descripción del servidor"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} se editó con éxito."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} se creó con éxito."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "La ruta que proporcionó ya está en uso por otro servidor."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"La ruta solo puede incluir letras, números y los caracteres _ y -. Debe "
+"comenzar y terminar con una letra o número."
+
+msgid "admin.contexts.create"
+msgstr "Crear Servidor"
+
+msgid "admin.systemConfiguration"
+msgstr "Configuración OPS"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"No se puede agregar la nueva configuración regional al archivo de registro "
+"de configuración regional, generalmente \"Registry/locales.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "No se puede abrir el descriptor de idioma desde el sitio web PKP."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Se ha instalado la configuración regional \"{$locale}\"."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Seleccione las configuraciones regionales adicionales para instalar el "
+"soporte en este sistema. Las configuraciones regionales deben instalarse "
+"antes de que puedan ser utilizadas por los servidores alojados. Consulte la "
+"documentación de OPS para obtener información sobre cómo agregar soporte "
+"para nuevos idiomas."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"¿Seguro que quiere desinstalar esta configuración regional? Esto puede "
+"afectar a los servidores alojados que actualmente usan la configuración "
+"regional."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>La descarga de paquetes de idiomas del servidor web del Proyecto de "
+"Conocimiento Público no está disponible actualmente porque:</p> <ul> <li>Su "
+"servidor no tiene ni permite la ejecución de la utilidad GNU \"tar\".</li> < "
+"li>OPS no puede modificar el archivo de registro de configuración regional, "
+"normalmente \"Registry/locales.xml\".</li> </ul> <p>Los paquetes de idioma "
+"se pueden descargar manualmente desde<a href=\"http://pkp.sfu.ca\">PKP web "
+"site</a>.</p>"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"¿Seguro que quiere deshabilitar esta configuración regional? Esto puede "
+"afectar a los servidores alojados que actualmente usan la configuración "
+"regional."
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Las solicitudes al sitio principal serán redirigidas a este servidor. Esto "
+"puede ser útil si el sitio aloja un solo servidor, por ejemplo."
+
+msgid "admin.settings.redirect"
+msgstr "Redireccionamiento del servidor"
+
+msgid "admin.settings.info.success"
+msgstr "La información del sitio ha sido actualizada con éxito."
+
+msgid "admin.settings.config.success"
+msgstr ""
+"La configuración de apariencia del sitio se ha actualizado correctamente."
+
+msgid "admin.settings.appearance.success"
+msgstr ""
+"La configuración de apariencia del sitio se ha actualizado correctamente."
+
+msgid "admin.hostedContexts"
+msgstr "Servidores alojados"

@@ -1,0 +1,393 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-19 19:36+0000\n"
+"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/manager/es/>"
+"\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"Restrinja los resultados por tipo de objeto (servidor, preimpresión, tipos "
+"de archivo) y/o por uno o más identificadores de objeto."
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Vistas de la página principal del servidor"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Vistas de página de resumen de preprints"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Descargas de archivos de preprints"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Lectores registrados"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Envíos totales"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Nota: Los porcentajes para los envíos revisados por pares pueden no sumar el "
+"100%, ya que los artículos reenviados se aceptan, rechazan o aún están en "
+"proceso."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Verifique los elementos que estarán disponibles para los lectores en Acerca "
+"del servidor."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Artículos publicados"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Días hasta la publicación"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Reenviar"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Disminución"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Aceptar"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Conteo de vistas de preprint (solo para autores)"
+
+msgid "manager.statistics.statistics"
+msgstr "Estadísticas del servidor"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\t\tSu servidor está configurado para registrar más de una métrica de uso. "
+"Las estadísticas de uso se mostrarán en varios contextos. \n"
+"Hay casos en los que se debe utilizar una única estadística de uso, por ej. "
+"para mostrar una lista ordenada de las preprints más utilizados o para "
+"clasificar \n"
+"los resultados de la búsqueda. Seleccione una de las métricas configuradas "
+"como predeterminada."
+
+msgid "manager.setup.userRegistration"
+msgstr "registro de usuario"
+
+msgid "manager.setup.userAccess.success"
+msgstr ""
+"Los detalles de acceso de usuario para este servidor se han actualizado."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Proporcione metadatos a servicios de indexación de terceros a través de <a "
+"href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Habilitar OAI"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Lista de verificación de preparación de envío"
+
+msgid "manager.setup.sponsoringOrganization"
+msgstr "Organización patrocinadora"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Ver contenido de preprint"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Acceso al sitio"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Proporcione una breve descripción (50-300 caracteres) del servidor para que "
+"los motores de búsqueda pueden mostrar al incluir el servidor en los "
+"resultados de búsqueda."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Ayuda a los motores de búsqueda como Google a descubrir y mostrar tu sitio. "
+"Le recomendamos que envíe su <a href=\"{$sitemapUrl}\" target=\"_blank\">"
+"mapa del sitio</a>."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "La configuración del índice del motor de búsqueda se ha actualizado."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Indización de búsqueda"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Los usuarios deben estar registrados e iniciar sesión para ver el contenido "
+"de acceso abierto."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Los usuarios deben estar registrados e iniciar sesión para ver el contenido "
+"de acceso abierto."
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "La declaración de privacidad ha sido actualizada."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Limite el número de enlaces para mostrar en las páginas siguientes de una "
+"lista."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Enlaces de página"
+
+msgid "manager.setup.masthead.success"
+msgstr "Los detalles de la cabecera de este servidor se han actualizado."
+
+msgid "manager.setup.masthead"
+msgstr "Cabecera"
+
+msgid "manager.setup.lists"
+msgstr "Listas"
+
+msgid "manager.setup.lists.success"
+msgstr "La configuración de la lista para este servidor se ha actualizado."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Proporcione una breve descripción de su servidor e identifique a los "
+"editores, directores generales y otros miembros de su equipo editorial."
+
+msgid "manager.setup.keyInfo"
+msgstr "Información clave"
+
+msgid "manager.setup.contextTitle"
+msgstr "Título del servidor"
+
+msgid "manager.setup.serverThumbnail.description"
+msgstr ""
+"Un pequeño logotipo o representación del servidor que se puede usar en "
+"listas de servidores."
+
+msgid "manager.setup.serverThumbnail"
+msgstr "Miniatura del servidor"
+
+msgid "manager.setup.contextInitials"
+msgstr "Iniciales del servidor"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Incluya cualquier información sobre su servidor que pueda ser de interés "
+"para lectores o autores. Esto podría incluir su política de acceso abierto, "
+"el enfoque y el alcance del servidor, el aviso de derechos de autor, la "
+"divulgación del patrocinio, el historial del servidor y una declaración de "
+"privacidad."
+
+msgid "manager.setup.contextAbout"
+msgstr "Sobre el servidor"
+
+msgid "manager.setup.contextSummary"
+msgstr "Resumen del servidor"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Abreviatura del servidor"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Limite el número de elementos (por ejemplo, envíos, usuarios o tareas de "
+"edición) para mostrar en una lista antes de mostrar elementos posteriores en "
+"otra página."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Artículos por página"
+
+msgid "manager.setup.information.success"
+msgstr "La información para este servidor fue actualizada."
+
+msgid "manager.setup.information.forReaders"
+msgstr "Para los lectores"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Para bibliotecarios"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Para los autores"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Breves descripciones del servidor para bibliotecarios y futuros autores y "
+"lectores. Estas están disponibles en la barra lateral del sitio cuando se "
+"agrega el bloque de información."
+
+msgid "manager.setup.information"
+msgstr "Información"
+
+msgid "manager.setup.identity"
+msgstr "Identidad del servidor"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Los visitantes pueden registrar una cuenta de usuario con el servidor."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Cuántos anuncios mostrar en la página de inicio. Deje esto vacío para no "
+"mostrar ninguno."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Mostrar en la página de inicio"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Se pueden publicar anuncios para informar a los lectores sobre noticias y "
+"eventos del servidor. Los anuncios publicados aparecerán en la página de "
+"Anuncios."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Habilitar anuncios"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Los correos electrónicos preparados que envía el sistema en nombre del "
+"servidor tendrán la siguiente firma agregada al final."
+
+msgid "manager.setup.emailSignature"
+msgstr "Firma"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Para enviar correos electrónicos que no se pueden entregar a una dirección "
+"de devolución, el administrador del sitio debe habilitar la opción "
+"<code>allow_envelope_sender</code> en el archivo de configuración del sitio. "
+"La configuración del servidor puede ser necesaria, como se indica en la "
+"documentación de OPS."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Cualquier correo electrónico que no se pueda entregar dará como resultado un "
+"mensaje de error a esta dirección."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Dirección de rebote"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "El Administrador del servidor registrará todas las cuentas de usuario."
+
+msgid "manager.setup.contact.success"
+msgstr "Los datos de contacto de este servidor se han actualizado."
+
+msgid "manager.setup.authorScreening"
+msgstr "Complementos de selección del autor"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Ingrese cualquier información que le gustaría que aparezca en su página de "
+"anuncios."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introducción"
+
+msgid "manager.setup.announcements.success"
+msgstr "La configuración de anuncios ha sido actualizada."
+
+msgid "manager.setup.announcements"
+msgstr "Anuncios"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Hoja de estilo del servidor"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Equipo editorial"
+
+msgid "manager.setup"
+msgstr "Configuración del servidor"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Límite de recuentos de palabras del resumen para esta serie (0 sin límite)"
+
+msgid "manager.sections.wordCount"
+msgstr "Recuento de palabras"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "No se incluirá en la indexación del servidor"
+
+msgid "manager.sections.policy"
+msgstr "Política de serie"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(Por ejemplo, etc.)"
+
+msgid "manager.sections.identifyType"
+msgstr "Identifique los artículos publicados en esta serie como un"
+
+msgid "manager.setup.form.section.pathRequired"
+msgstr "Se requiere una ruta URL para la serie"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Se requiere un título abreviado para la serie"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Los artículos solo pueden ser enviados por Editores y Editores de Series."
+
+msgid "manager.sections.create"
+msgstr "Crear serie"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Antes de que se pueda eliminar esta serie, debe mover los preprints "
+"publicados como parte de ella a otras series."
+
+msgid "manager.sections.confirmDelete"
+msgstr "¿Seguro que quiere eliminar esta serie de forma permanente?"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Aún no hay editores de series. Agregue este rol al menos a un usuario a "
+"través de Administración > Configuración > Usuarios y Roles primero."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "No requiere resúmenes"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"¿Eliminar este usuario de este servidor? Esta acción anulará la inscripción "
+"del usuario de todos los roles dentro de este servidor."
+
+msgid "manager.people.allUsers"
+msgstr "Todos los usuarios inscritos"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Esto reemplazará cualquier configuración de servidor específica local que "
+"haya tenido para esta localidad"
+
+msgid "manager.language.forms"
+msgstr "Formularios"
+
+msgid "manager.language.submissions"
+msgstr "Envíos"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Los detalles de publicación han sido actualizados."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "El servidor proporcionará acceso abierto a sus contenidos."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OPS no se utilizará para publicar los contenidos del servidor en línea."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Modo de publicación"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Use la fecha de publicación del preprint"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Elija cómo se selecciona una fecha de copyright predeterminada para un "
+"preprint. Este valor predeterminado se puede anular caso por caso."
+
+msgid "manager.distribution.access"
+msgstr "Acceso"

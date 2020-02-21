@@ -1,0 +1,146 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-17 14:36+0000\n"
+"Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/default/es/>"
+"\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Alentamos a los bibliotecarios de investigación a enumerar este servidor "
+"entre las existencias de su biblioteca. Además, vale la pena señalar que el "
+"sistema de publicación de código abierto de este servidor es adecuado para "
+"que las bibliotecas alojen a los miembros de su facultad (ver <a href=\""
+"http://pkp.sfu.ca\"> Proyecto de conocimiento público </a>)."
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/"
+">________________________________________________________________________<br/"
+"><a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.genres.sourceTexts"
+msgstr "Textos fuente"
+
+msgid "default.genres.dataSet"
+msgstr "Conjunto de datos"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Análisis de los datos"
+
+msgid "default.genres.transcripts"
+msgstr "Transcripciones"
+
+msgid "default.genres.researchResults"
+msgstr "Resultados de la investigacion"
+
+msgid "default.genres.researchMaterials"
+msgstr "Materiales de investigación"
+
+msgid "default.genres.researchInstrument"
+msgstr "Instrumento de investigación"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editores de series"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor de series"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.plural.editor"
+msgstr "Editores del servidor"
+
+msgid "default.groups.name.editor"
+msgstr "Editor de servidores"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.plural.manager"
+msgstr "Administradores de servidores"
+
+msgid "default.groups.name.manager"
+msgstr "Administrador de servidores"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Este servidor proporciona acceso abierto inmediato a su contenido bajo el "
+"principio de que hacer que la investigación esté disponible gratuitamente "
+"para el público apoya un mayor intercambio global de conocimiento."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Los nombres y las direcciones de correo electrónico ingresados en este "
+"sitio del servidor se utilizarán exclusivamente para los fines establecidos "
+"por este servidor y no estarán disponibles para ningún otro propósito ni "
+"para ninguna otra parte.</p>"
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"¿Interesado en enviar a este servidor? Recomendamos que revise la página <a "
+"href=\"{$indexUrl}{$contextPath}/about\">Acerca de</a> para conocer las "
+"políticas, así como la <a href=\"{$indexUrl}{$contextPath}/about/submissions#"
+"authorGuidelines\">Directrices del autor</a>. Los autores deben <a href=\""
+"{$indexUrl}{$contextPath}/user/register\"> registrarse</a> antes de enviar "
+"o, si ya está registrado, pueden simplemente <a href=\"{$ indexUrl}/index/"
+"log in\">iniciar sesión </a> y comenzar el proceso."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Alentamos a los lectores a registrarse en el servicio de notificaciones de "
+"publicación para este servidor. Utilice el enlace <a href=\""
+"{$indexUrl}{$contextPath}/user/register\"> Registrarse </a> en la parte "
+"superior de la página de inicio. Esta lista también permite al servidor "
+"reclamar un cierto nivel de soporte o lectores. Consulte la <a href=\""
+"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\"> Declaración "
+"de privacidad </a>, que garantiza a los lectores que su nombre y dirección "
+"de correo electrónico no se utilizarán para otros fines."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+"El texto se adhiere a los requisitos estilísticos y bibliográficos descritos "
+"en las Directrices del autor."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"El texto es de espacio simple; usa una fuente de 12 puntos; emplea cursiva, "
+"en lugar de subrayar (excepto con direcciones URL); y todas las "
+"ilustraciones, figuras y tablas se colocan dentro del texto en los puntos "
+"apropiados, en lugar de al final."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Donde esté disponible, se proporcionaron las URL de las referencias."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"El archivo de envío está en formato de archivo de documento OpenOffice, "
+"Microsoft Word o RTF."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"El envío no ha sido publicado previamente, ni está ante otro servidor para "
+"su consideración (o se ha proporcionado una explicación en Comentarios al "
+"Editor)."
+
+msgid "default.genres.article"
+msgstr "texto preprint"
+
+msgid "section.default.path"
+msgstr "preprints"
+
+msgid "section.default.abbrev"
+msgstr "PRE"
+
+msgid "section.default.title"
+msgstr "Preprints"

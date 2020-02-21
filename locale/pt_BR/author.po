@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-16 01:35+0000\n"
+"Last-Translator: Lilian Nassi Calo <calolilian@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ops/"
+"author/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.proceedToPublish"
+msgstr "Prossiga para publicação"
+
+msgid "author.submit.authorCanPublish"
+msgstr ""
+"O servidor foi notificado sobre sua submissão e você recebeu uma confirmação "
+"por e-mail. <b>Todos os requisitos para publicação foram atendidos e você "
+"pode continuar a revisar e publicar seu preprint</b>."
+
+msgid "author.submit.publishRequirements"
+msgstr ""
+"O servidor foi notificado sobre sua submissão e você recebeu uma confirmação "
+"por e-mail. Depois que o editor revisar sua submissão, ele publicará seu "
+"preprint ou entrará em contato com você. Você também pode publicar por si só "
+"quando os seguintes requisitos forem atendidos:"
+
+msgid "author.submit.authorCanNotPublish"
+msgstr ""
+"Os autores  não podem publicar por si mesmos neste servidor. O servidor foi "
+"notificado sobre sua submissão e você recebeu uma confirmação por e-mail. "
+"Depois que o editor revisar a submissão, ele publicará seu preprint ou "
+"entrará em contato com você."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Por favor, ingresse o resumo de seu preprint."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Inglês+en; Francês=fr; Spanish=es.<a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\"> Códigos adicionais</a>."
+
+msgid "author.submit.form.sectionRequired"
+msgstr ""
+"Por favor, selecione uma série de servidores apropriada para esta submissão."
+
+msgid "submission.submit.coverNote"
+msgstr "Comentários para o Editor"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Preprints devem ser enviados para um das séries do servidores."
+
+msgid "author.submit.journalSection"
+msgstr "Série de servidores"
+
+msgid "author.submit.notAccepting"
+msgstr "Este servidor não está aceitando submissões no momento."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Você pode concluir este envio posteriormente, selecionando Envios Ativos na "
+"página inicial do Autor."
+
+msgid "author.submit.nextSteps"
+msgstr "Próximas etapas"
+
+msgid "author.submit.confirmation"
+msgstr "Confirmação"
+
+msgid "author.submit.metadata"
+msgstr "Ingressar Metadados"
+
+msgid "author.submit.upload"
+msgstr "Enviar Submissão"
+
+msgid "author.submit.start"
+msgstr "Início"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Clique aqui</a>para ir para a "
+"primeira etapa do processo de envio em cinco etapas."
+
+msgid "author.competingInterests"
+msgstr ""
+"Interesses concorrentes<a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Política de IC</a>"
+
+msgid "author.submit"
+msgstr "Nova Submissão"

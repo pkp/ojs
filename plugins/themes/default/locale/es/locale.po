@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-18 17:36+0000\n"
+"Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/"
+"themes-default/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Muestra la imagen de la página de inicio como fondo del encabezado."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Cuando se haya cargado una imagen de la página de inicio, muéstrela en el "
+"fondo del encabezado en lugar de su posición habitual en la página de inicio."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Imagen de fondo del encabezado"
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Mostrar el resumen de la revista en la página de inicio."
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Elige un color para el encabezado."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Color"
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: una combinación complementaria con encabezados serif y texto "
+"de cuerpo sans-serif."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: una fuente serif de amplio espectro buena para leer en línea."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: una fuente popular sans-serif moderna."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: una combinación complementaria con encabezados sans-"
+"serif y texto de cuerpo serif."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: una combinación complementaria con encabezados serif y "
+"texto de cuerpo sans-serif."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: una variante serif de la fuente digital nativa de Google."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: una fuente nativa digital diseñada por Google para un amplio "
+"soporte de idiomas."
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Elija una combinación de fuentes que se adapte a este servidor."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Tipografía"
+
+msgid "plugins.themes.default.description"
+msgstr "Este tema implementa el tema predeterminado."
+
+msgid "plugins.themes.default.name"
+msgstr "Tema predeterminado"
+
+msgid "plugins.themes.default.option.showDescriptionInServerIndex.option"
+msgstr "Mostrar el resumen del servidor en la página de inicio."

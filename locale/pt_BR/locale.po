@@ -1,0 +1,328 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-18 17:36+0000\n"
+"Last-Translator: Lilian Nassi Calo <calolilian@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ops/"
+"locale/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OPS Versão {$version}</h4><p>Obrigada por baixar o Open Preprint Systems "
+"<strong>do Public Knowledge Project </strong>. Antes de continuar, por favor "
+"leia <a href=\"{$baseUrl}/docs/README.md\">README</a> o arquivo incluído com "
+"este programa. Para mais informação sobre o Public Knowledge Project e seus "
+"projetos de programas, visite o site <a href=\"http://pkp.sfu.ca/\" target=\""
+"_blank\"> site PKP </a>. Se você tiver relatórios de falhas ou consultas de "
+"suporte técnico sobre Open Preprint Systems, veja o <a href=\""
+"http://forum.pkp.sfu.ca\" target=\"_blank\"> fórum de suporte </a> ou visite "
+"o PKP online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\""
+"_blank\"> sistema de registro de falhas</a>. Embora o fórum de suporte seja "
+"o método preferido de contato, você também pode enviar um e-mail para a "
+"equipe para <a href=\"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>.</p><h4>Upgrade</h4><p>Se você estiver "
+"atualizando uma instalação existente do OPS, <a href=\"{$upgradeUrl}\">"
+"clique aqui</a> para continuar.</p><h4>Requisitos de sistema recomendados<a "
+"href=\"http://www.postgresql.org/\" target=\"_blank\"></h4><ul>\t<li><a href="
+"\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; "
+"você está usando atualmente PHP {$phpVersion}{$wrongPhpText}</li>\t<li><a "
+"href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 ou <a href="
+"\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x ou >= 2.0.4x ou Microsoft IIS 6</li>\t<li>Sistema operacional: "
+"Qualquer SO que suporta o programa acima, inclusive <a href=\""
+"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\""
+"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle."
+"com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" "
+"target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\""
+">Windows</a></li></ul><p>Como o PKP não possui recursos para testar todas as "
+"combinações possíveis de versões e plataformas de software, não há garantia "
+"de operação ou suporte corretos.</p><p>Alterações nessas configurações podem "
+"ser feitas após a instalação, editando o arquivo <tt>config.inc.php</tt> no "
+"diretório OPS base ou usando a interface da web de administração do "
+"site.</p><h4>Sistemas de base de dados suportados</h4><p>OPS atualmente só "
+"foi testado em MySQL e PostgreSQL, embora outros sistemas de gerenciamento "
+"de base de dados suportados pelo <a href=\"http://adodb.sourceforge.net/\" "
+"target=\"_blank\">ADOdb</a> pode funcionar (total ou parcialmente). "
+"Relatórios de compatibilidade e/ou patches de código para DBMSs alternativos "
+"podem ser enviados à equipe do OPS.</p>"
+
+msgid "installer.appInstallation"
+msgstr "Instalação de OPS"
+
+msgid "help.goToEditPage"
+msgstr "Editar{$sectionTitle}"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Este site utiliza Open Preprint Systems {$ojsVersion}, que é um software de "
+"gerenciamento e publicação de servidor de código aberto desenvolvido, "
+"apoiado e distribuído gratuitamente pelo <a href=\"http://pkp.sfu.ca/\">"
+"Public Knowledge Project</a> sob Licença Pública Geral GNU."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Este servidor utiliza Open Preprint Systems {$ojsVersion}, que é um software "
+"de gerenciamento e publicação de servidor de código aberto desenvolvido, "
+"apoiado e distribuído gratuitamente pelo <a href=\"http://pkp.sfu.ca/\">"
+"Public Knowledge Project</a> sob Licença Pública Geral GNU."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Editorial e Processo de Publicação OPS"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Sobre este Sistema de Publicação"
+
+msgid "about.privacyStatement"
+msgstr "Declaração de Privacidade"
+
+msgid "about.copyrightNotice"
+msgstr "Aviso de Direitos Autorais"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Como parte do processo de submissão, os autores devem verificar a "
+"conformidade da submissão com todos os itens a seguir e as submissões "
+"poderão ser devolvidas aos autores que não seguirem estas diretrizes."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Checklist para Preparação da Submissão"
+
+msgid "about.authorGuidelines"
+msgstr "Instruções aos Autores"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Visualize sua submissão pendente"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Faça uma nova submissão"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Faça uma nova submissão para a <a href=\"{$url}\">{$name}</a> série."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} ou {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} ou {$register} para fazer uma submissão."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Registro"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Autenticação"
+
+msgid "about.submissions"
+msgstr "Submissões"
+
+msgid "about.editorialTeam"
+msgstr "Equipe Editorial"
+
+msgid "about.aboutContext"
+msgstr "Sobre o Servidor"
+
+msgid "about.contact"
+msgstr "Contato"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arquivos - Página{$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Arquivos"
+
+msgid "site.noJournals"
+msgstr "Não há servidores disponíveis."
+
+msgid "site.journalView"
+msgstr "Exibir Servidor"
+
+msgid "search.authorDetails"
+msgstr "Detalhes do Autor"
+
+msgid "search.authorIndex"
+msgstr "Buscar no Índice de Autor"
+
+msgid "search.searchFor"
+msgstr "Buscar preprints por"
+
+msgid "index.latestPreprints"
+msgstr "Preprints mais recentes"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Você deve consentir com a declaração de privacidade deste site."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Você deve consentir com a declaração de privacidade de qualquer servidor no "
+"qual esteja se registrando."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Sim, concordo em ter meus dados coletados e armazenados de acordo com as "
+"instruções deste servidor. <a href=\"{$privacyUrl}\" target=\"_blank\">"
+"declaração de privacidade</a>."
+
+msgid "user.register.registrationDisabled"
+msgstr "Atualmente, este servidor não está aceitando registros de usuários."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Esta prova gráfica estará disponível em um site separado."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Desculpe, você não possui direitos administrativos sobre este usuário. Isso "
+"pode ser porque:  <ul> <li>O usuário é um administrador do site </li>  <li>O "
+"usuário está ativo em servidores que você não gerencia </li>\t </ul>\tEsta "
+"tarefa deve ser executada por um administrador do site."
+
+msgid "search.results.orderDir.desc"
+msgstr "Descendente"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascendente"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevância"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularidade (Último Mês)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularidade (Todo o Tempo)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Título do Servidor"
+
+msgid "search.results.orderBy.date"
+msgstr "Data de Publicação"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor"
+
+msgid "search.results.orderBy.article"
+msgstr "Título do Preprint"
+
+msgid "search.results.orderBy"
+msgstr "Ordenar os resultados por"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Preprint submetido"
+
+msgid "user.role.subEditors"
+msgstr "Editores das Séries"
+
+msgid "user.role.subEditor"
+msgstr "Editor da Série"
+
+msgid "user.role.manager"
+msgstr "Administrador do Servidor"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Se você solicitou ser um revisor, insira os temas de seu interesse."
+
+msgid "user.register.otherContextRoles"
+msgstr "Solicite as seguintes funções."
+
+msgid "user.register.contextsPrompt"
+msgstr "Em quais servidores deste site você gostaria de se registrar?"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Incluir usuários sem funções neste servidor."
+
+msgid "context.context"
+msgstr "Servidor"
+
+msgid "context.contexts"
+msgstr "Servidores"
+
+msgid "submission.search"
+msgstr "Busca de Preprint"
+
+msgid "submissions.published"
+msgstr "Publicado"
+
+msgid "submissions.sec"
+msgstr "secundário"
+
+msgid "article.abstract"
+msgstr "Resumo"
+
+msgid "article.details"
+msgstr "Detalhes"
+
+msgid "publication.version"
+msgstr "Versão"
+
+msgid "common.publications"
+msgstr "Preprints"
+
+msgid "common.publication"
+msgstr "Preprint"
+
+msgid "section.emptySection"
+msgstr "Nada foi publicado ainda nesta série."
+
+msgid "section.pathDescription"
+msgstr ""
+"Caminho da URL da série. Use hifens (-) em vez de espaços. Exemplo: história-"
+"cultural."
+
+msgid "section.description"
+msgstr "Descrição do arquivo da série"
+
+msgid "section.policy"
+msgstr "Política da Série"
+
+msgid "section.abbreviation"
+msgstr "Abreviação"
+
+msgid "section.title"
+msgstr "Título da Série"
+
+msgid "section.sections"
+msgstr "Série"
+
+msgid "section.section"
+msgstr "Série"
+
+msgid "common.queue.long.active"
+msgstr "Ativo"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Não designado"
+
+msgid "navigation.skip.about"
+msgstr "Ir para sobre o servidor"
+
+msgid "navigation.browseByAuthor"
+msgstr "Pelo Autor"
+
+msgid "common.software"
+msgstr "Sistemas Abertos de Preprints"
+
+msgid "context.select"
+msgstr "Alternar para outro servidor:"
+
+msgid "context.current"
+msgstr "Servidor Atual:"
+
+msgid "installer.upgradeInstructions"
+msgstr "<h4>OPS Versão {$version}</h4>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"<h4>Etapas de pré-instalação</h4><p>1. Os seguintes arquivos e diretórios (e "
+"seu conteúdo) devem ser gravados:</p><ul>\t<li><tt>config.inc.php</tt> é "
+"gravável (opcional): {$writable_config}</li>\t<li><tt>public/</tt> é "
+"gravável: {$writable_public}</li>\t<li><tt>cache/</tt> é gravável: "
+"{$writable_cache}</li>\t<li><tt>cache/t_cache/</tt> é gravável: "
+"{$writable_templates_cache}</li>\t<li><tt>cache/t_compile/</tt> é gravável: "
+"{$writable_templates_compile}</li>\t<li><tt>cache/_db</tt> é gravável: "
+"{$writable_db_cache}</li></ul><p>2. Um diretório para armazenar arquivos "
+"enviados deve ser criado e tornado gravável (veja \"Configurações de "
+"arquivo\" abaixo).</p>"

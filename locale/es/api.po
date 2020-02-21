@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-16 01:35+0000\n"
+"Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/api/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "La publicación que solicitó no forma parte de este envío."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"No tiene permiso para mover esta plantilla de correo electrónico a otro "
+"servidor."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "No se encontró el servidor que solicitó."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "No tiene permiso para eliminar este servidor."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "No tiene permiso para editar este servidor."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "No puede editar este servidor desde la API de todo el sitio."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"No puede ver o editar este servidor a menos que realice una solicitud a la "
+"API del servidor o la API de todo el sitio."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "No tiene permiso para ver este servidor."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Solo puede ver los servidores que se han habilitado."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Para realizar o editar un envío, debe realizar una solicitud al punto final "
+"de la API del servidor."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "No puede cambiar el servidor de un envío."

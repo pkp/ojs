@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-18 17:36+0000\n"
+"Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/author/es/>"
+"\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.proceedToPublish"
+msgstr "Proceder a publicar"
+
+msgid "author.submit.authorCanPublish"
+msgstr ""
+"El servidor ha sido notificado de su envío y se le ha enviado una "
+"confirmación por correo electrónico para sus registros. <b>Se han cumplido "
+"todos los requisitos para la publicación y puede proceder a revisar y "
+"publicar su preprint</b>."
+
+msgid "author.submit.publishRequirements"
+msgstr ""
+"El servidor ha sido notificado de su envío y se le ha enviado una "
+"confirmación por correo electrónico para sus registros. Una vez que el "
+"editor haya revisado el envío, publicará su preimpresión o se comunicará con "
+"usted. También puede publicar usted mismo una vez que se cumplan los "
+"siguientes requisitos:"
+
+msgid "author.submit.authorCanNotPublish"
+msgstr ""
+"Los autores en este servidor no pueden publicar por sí mismos. El servidor "
+"ha sido notificado de su envío y se le ha enviado una confirmación por "
+"correo electrónico para sus registros. Una vez que el editor haya revisado "
+"el envío, publicará su preimpresión o se comunicará con usted."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Ingrese el resumen de su preprint."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Inglés=en; Francés=fr; Español=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Códigos adicionales</a>."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Seleccione una serie de servidores adecuada para este envío."
+
+msgid "submission.submit.coverNote"
+msgstr "Comentarios para el Editor"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Los preprints deben enviarse a una de las series del servidor."
+
+msgid "author.submit.journalSection"
+msgstr "Serie del servidor"
+
+msgid "author.submit.notAccepting"
+msgstr "Este servidor no acepta envíos en este momento."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Puede completar este envío en una fecha posterior seleccionando Envíos "
+"activos en la página principal del Autor."
+
+msgid "author.submit.nextSteps"
+msgstr "Próximos pasos"
+
+msgid "author.submit.confirmation"
+msgstr "Confirmación"
+
+msgid "author.submit.metadata"
+msgstr "Ingrese metadatos"
+
+msgid "author.submit.upload"
+msgstr "Subir envío"
+
+msgid "author.submit.start"
+msgstr "Comienzo"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\"> Haga clic aquí</a> para ir al "
+"paso uno del proceso de envío de cinco pasos."
+
+msgid "author.competingInterests"
+msgstr ""
+"Conflicto de intereses <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\"> Política de CI</a>"
+
+msgid "author.submit"
+msgstr "Nuevo envío"
