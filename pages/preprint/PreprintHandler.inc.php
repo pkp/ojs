@@ -62,7 +62,7 @@ class PreprintHandler extends Handler {
 		$urlPath = empty($args) ? 0 : array_shift($args);
 
 		// Get the submission that matches the requested urlPath
-		$submission = Services::get('submission')->getByUrlPath($urlPath, $request->getContext()->getId());		
+		$submission = Services::get('submission')->getByUrlPath($urlPath, $request->getContext()->getId());
 
 		if (!$submission && ctype_digit($urlPath)) {
 			$submission = Services::get('submission')->get($urlPath);
@@ -74,11 +74,8 @@ class PreprintHandler extends Handler {
 
 		// If the urlPath does not match the urlPath of the current
 		// publication, redirect to the current URL
-		$currentUrlPath = $submission->getCurrentPublication()->getData('urlPath');
-		if ($currentUrlPath !== $urlPath) {
-			if (!$currentUrlPath) {
-				$currentUrlPath = $submission->getId();		
-			}
+		$currentUrlPath = $submission->getBestId();
+		if ($currentUrlPath && $currentUrlPath != $urlPath) {
 			$newArgs = $args;
 			$newArgs[0] = $currentUrlPath;
 			$request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), $newArgs);
@@ -107,7 +104,7 @@ class PreprintHandler extends Handler {
 		if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
 			$galleys = (array) $this->publication->getData('galleys');
 			foreach ($galleys as $galley) {
-				if ($galley->getBestGalleyId() === $galleyId) {
+				if ($galley->getBestGalleyId() == $galleyId) {
 					$this->galley = $galley;
 					break;
 				}
@@ -119,7 +116,7 @@ class PreprintHandler extends Handler {
 				$publications = $submission->getPublishedPublications();
 				foreach ($publications as $publication) {
 					foreach ((array) $publication->getData('galleys') as $galley) {
-						if ($galley->getBestGalleyId() === $galleyId) {
+						if ($galley->getBestGalleyId() == $galleyId) {
 							$request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$submission->getBestId()]);
 						}
 					}
@@ -127,7 +124,6 @@ class PreprintHandler extends Handler {
 				$request->getDispatcher()->handle404();
 			}
 		}
-
 	}
 
 	/**
