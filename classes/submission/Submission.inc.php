@@ -284,7 +284,6 @@ class Submission extends PKPSubmission {
 
 	/**
 	 * Get total galley views for the preprint
-	 * @param $primaryGenreIds array
 	 * @return int
 	 */
 	function getTotalGalleyViews() {
