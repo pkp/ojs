@@ -101,7 +101,7 @@ class JournalDAO extends ContextDAO {
 			$assocType = ASSOC_TYPE_ANY, $assocId = 0, $forSameType = false) {
 
 		$pubObjectDaos = array(
-			ASSOC_TYPE_SUBMISSION => Application::getSubmissionDAO(),
+			ASSOC_TYPE_SUBMISSION => DAORegistry::getDAO('SubmissionDAO'),
 			ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
 			ASSOC_TYPE_SUBMISSION_FILE => DAORegistry::getDAO('SubmissionFileDAO')
 		);

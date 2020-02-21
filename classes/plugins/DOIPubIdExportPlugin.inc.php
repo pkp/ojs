@@ -126,7 +126,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	 */
 	function getUnregisteredArticles($context) {
 		// Retrieve all published submissions that have not yet been registered.
-		$articles = Application::getSubmissionDAO()->getExportable(
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$articles = $submissionDao->getExportable(
 			$context->getId(),
 			$this->getPubIdType(),
 			null,
