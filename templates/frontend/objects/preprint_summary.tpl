@@ -48,13 +48,15 @@
 		<div class="authors">
 			{$preprint->getAuthorString()|escape}
 		</div>
-		{translate key="publication.galley.downloads" downloads=$preprint->getTotalGalleyViews($primaryGenreIds)}
 		{/if}
 		{if $preprint->getDatePublished()}
 			<div class="published">
 				{translate key="submission.dates" submitted=$preprint->getDateSubmitted()|date_format:$dateFormatShort published=$preprint->getDatePublished()|date_format:$dateFormatShort}
 			</div>
 		{/if}
+		<div class="downloads">
+			{translate key="publication.galley.downloads" downloads=$preprint->getTotalGalleyViews($primaryGenreIds)}
+		</div>
 		{if count($preprint->getPublishedPublications()) > 1}
 			<div class="versions">
 				{translate key="submission.numberOfVersions" numberOfVersions=count($preprint->getPublishedPublications())}
