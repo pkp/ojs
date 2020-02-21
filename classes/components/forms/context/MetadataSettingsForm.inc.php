@@ -35,14 +35,6 @@ class MetadataSettingsForm extends PKPMetadataSettingsForm {
 					'value' => 'galley',
 					'label' => __('submission.publisherId.enable', ['objects' => __('submission.layout.galleys')]),
 				],
-				[
-					'value' => 'issue',
-					'label' => __('submission.publisherId.enable', ['objects' => __('issue.issues')]),
-				],
-				[
-					'value' => 'issueGalley',
-					'label' => __('submission.publisherId.enable', ['objects' => __('editor.issues.galleys')]),
-				],
 			],
 			'value' => $context->getData('enablePublisherId') ? $context->getData('enablePublisherId') : [],
 		]));
