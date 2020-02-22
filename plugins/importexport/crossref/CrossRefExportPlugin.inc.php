@@ -36,22 +36,6 @@ define('CROSSREF_DEPOSIT_STATUS', 'depositStatus');
 class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 	/**
-	 * @copydoc Plugin::register()
-	 */
-	function register($category, $path, $mainContextId = null) {
-		$success = parent::register($category, $path, $mainContextId);
-		if ($success) {
-
-
-			// FIXME: this is not working, because we are not within a lazy load plugin. It could be that the whole plugin has to be moved to generic class first...
-
-
-			\HookRegistry::register('Publication::publish', [$this, 'depositOnPublish']);
-		}
-		return $success;
-	}
-
-	/**
 	 * @copydoc Plugin::getName()
 	 */
 	function getName() {
@@ -457,7 +441,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @param $failedMsg string (opitonal)
 	 */
 	function updateDepositStatus($context, $object, $status, $batchId, $failedMsg = null) {
-		assert(is_a($object, 'Publication'));
+		assert(is_a($object, 'Submission'));
 		// remove the old failure message, if exists
 		$object->setData($this->getFailedMsgSettingName(), null);
 		$object->setData($this->getDepositStatusSettingName(), $status);

@@ -188,7 +188,7 @@ class PreprintCrossrefXmlFilter extends NativeExportFilter {
 		}
 
 		// DOI data
-		$postedContentNode->appendChild($this->createDOIDataNode($doc, $publication->getStoredPubId('doi'), $request->url($context->getPath(), 'preprint', 'view', [$submission->getBestId(), 'version', $publication->getId()], null, null, true)));
+		$postedContentNode->appendChild($this->createDOIDataNode($doc, $publication->getStoredPubId('doi'), $request->getDispatcher()->url($request, ROUTE_PAGE, null, 'preprint', 'view', [$submission->getBestId(), 'version', $publication->getId()], null, null, true)));
 
 		return $postedContentNode;
 	}
@@ -224,7 +224,7 @@ class PreprintCrossrefXmlFilter extends NativeExportFilter {
 		$deployment = $this->getDeployment();
 		$doiDataNode = $doc->createElementNS($deployment->getNamespace(), 'doi_data');
 		$doiDataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'doi', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
-		$doiDataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', $url));
+		$doiDataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', htmlspecialchars($url, ENT_COMPAT, 'UTF-8')));
 		return $doiDataNode;
 	}
 

@@ -12,7 +12,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup plugins_importexport_crossref
- * @brief Wrapper for CrossRef export plugin.
+ * @brief Wrapper for CrossRef plugin.
  *
  */
 

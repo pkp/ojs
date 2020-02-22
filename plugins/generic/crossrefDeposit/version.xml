@@ -2,7 +2,7 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * plugins/importexport/crossref/version.xml
+  * plugins/generic/crossrefDeposit/version.xml
   *
   * Copyright (c) 2014-2020 Simon Fraser University
   * Copyright (c) 2003-2020 John Willinsky
@@ -11,8 +11,10 @@
   * Plugin version information.
   -->
 <version>
-	<application>crossref</application>
-	<type>plugins.importexport</type>
-	<release>2.2.0.0</release>
-	<date>2020-02-20</date>
+	<application>crossrefDeposit</application>
+	<type>plugins.generic</type>
+	<release>1.0.0.0</release>
+	<date>2020-02-21</date>
+	<lazy-load>1</lazy-load>
+	<class>CrossrefDepositPlugin</class>
 </version>
