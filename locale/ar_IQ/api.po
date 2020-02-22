@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:16+00:00\n"
+"Language: \n"
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "لا يمكنك تعديل المجلة التي وجهت إليها طلب تقديمك."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "ليست لديك الصلاحية لمعاينة الأعداد غير المنشورة."
+
+msgid "api.submissions.403.contextRequired"
+msgstr "لإنشاء طلب تقديم أو تعديله، عليك إيصال طلب إلى وجهة برمجة التطبيق الخاص بالمجلة."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "يمكنك معاينة المجلات التي تم تمكينها فقط."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "ليست لديك صلاحية معاينة هذه المجلة."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr "لا يمكنك معاينة هذه المجلة أو تعديلها ما لم تلتمس ذلك عبر واجهة برمجة التطبيق الخاصة بالمجلة أو تلك الخاصة بعموم الموقع."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "لا يمكنك تعديل هذه المجلة مستعملاً واجهة برمجة التطبيق الخاصة بعموم الموقع."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "ليست لديك صلاحية تعديل هذه المجلة."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "ليست لديك صلاحية حذف هذه المجلة."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "تعذر العثور على المجلة التي طلبتها."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "ليست لديك صلاحية نقل قالب المراسلة هذا إلى مجلة أخرى."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "طريقة التسديد التي اخترتها غير مدعومة."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "المنشور الذي طلبته ليس جزءاً من هذه المجلة."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "المنشور الذي طلبته ليس جزءاً من طلب التقديم هذا."
