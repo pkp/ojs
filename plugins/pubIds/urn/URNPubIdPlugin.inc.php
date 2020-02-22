@@ -25,12 +25,10 @@ class URNPubIdPlugin extends PubIdPlugin {
 		$success = parent::register($category, $path, $mainContextId);
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
 		if ($success && $this->getEnabled($mainContextId)) {
-			HookRegistry::register('Schema::get::publication', array($this, 'addToPublicationSchema'));
 			HookRegistry::register('Publication::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Publication::validate', array($this, 'validatePublicationUrn'));
-			HookRegistry::register('Schema::get::galley', array($this, 'addToGalleySchema'));
 			HookRegistry::register('Galley::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Galley::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Galley::getProperties::values', array($this, 'modifyObjectPropertyValues'));
@@ -246,45 +244,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 */
 	function getNotUniqueErrorMsg() {
 		return __('plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique');
-	}
-
-	/**
-	 * Add properties to the publication schema
-	 *
-	 * @param $hookName string `Schema::get::publication`
-	 * @param $schema object Publication schema
-	 */
-	public function addToPublicationSchema($hookName, $schema) {
-		$schema->properties->{'pub-id::other::urn'} = json_decode('{
-			"type": "string",
-			"apiSummary": true,
-			"validation": [
-				"nullable"
-			]
-		}');
-	}
-
-	/**
-	 * Add properties to the galley schema
-	 *
-	 * @param $hookName string `Schema::get::galley`
-	 * @param $schema object Publication schema
-	 */
-	public function addToGalleySchema($hookName, $schema) {
-		$schema->properties->{'pub-id::other::urn'} = json_decode('{
-			"type": "string",
-			"apiSummary": true,
-			"validation": [
-				"nullable"
-			]
-		}');
-		$schema->properties->{'urnSuffix'} = json_decode('{
-			"type": "string",
-			"apiSummary": true,
-			"validation": [
-				"nullable"
-			]
-		}');
 	}
 
 	/**

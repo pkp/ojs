@@ -13,7 +13,6 @@
  * @brief DOI plugin class
  */
 
-
 import('classes.plugins.PubIdPlugin');
 
 class DOIPubIdPlugin extends PubIdPlugin {
@@ -26,13 +25,11 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
 		if ($success && $this->getEnabled($mainContextId)) {
 			HookRegistry::register('CitationStyleLanguage::citation', array($this, 'getCitationData'));
-			HookRegistry::register('Schema::get::publication', array($this, 'addToSchema'));
 			HookRegistry::register('Publication::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::validate', array($this, 'validatePublicationDoi'));
 			HookRegistry::register('Issue::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Issue::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
-			HookRegistry::register('Schema::get::galley', array($this, 'addToSchema'));
 			HookRegistry::register('Galley::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Galley::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::getProperties::values', array($this, 'modifyObjectPropertyValues'));
@@ -277,22 +274,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$replace = array ('%25', '%22', '%23', '%20', '%3c', '%3e', '%7b');
 		$pubId = str_replace($search, $replace, $pubId);
 		return $pubId;
-	}
-
-	/**
-	 * Add properties to the publication and galley schemas
-	 *
-	 * @param $hookName string `Schema::get::publication`
-	 * @param $schema object Publication schema
-	 */
-	public function addToSchema($hookName, $schema) {
-		$schema->properties->{'pub-id::doi'} = json_decode('{
-			"type": "string",
-			"apiSummary": true,
-			"validation": [
-				"nullable"
-			]
-		}');
 	}
 
 	/**
