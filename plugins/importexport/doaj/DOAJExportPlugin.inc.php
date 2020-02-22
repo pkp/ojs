@@ -24,7 +24,6 @@ define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/v1/');
 define('DOAJ_API_OPERATION', 'articles');
 
 class DOAJExportPlugin extends PubObjectsExportPlugin {
-
 	/**
 	 * @copydoc Plugin::getName()
 	 */
@@ -149,7 +148,6 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 		}
 		curl_close($curlCh);
 		return $result;
-
 	}
 
 	/**
@@ -207,18 +205,13 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	 * @return string JSON variable.
 	 */
 	function exportJSON($object, $filter, $context) {
-		$json = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$exportFilters = $filterDao->getObjectsByGroup($filter);
 		assert(count($exportFilters) == 1); // Assert only a single serialization filter
 		$exportFilter = array_shift($exportFilters);
 		$exportDeployment = $this->_instantiateExportDeployment($context);
 		$exportFilter->setDeployment($exportDeployment);
-		$json = $exportFilter->execute($object, true);
-		return $json;
+		return $exportFilter->execute($object, true);
 	}
-
-
 }
-
 
