@@ -369,40 +369,64 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * Update the given object.
 	 * @param $object Submission|ArticleGalley
 	 */
-	function updateObject($object) {
+	protected function updateObject($object) {
 		// Register a hook for the required additional
 		// object fields. We do this on a temporary
 		// basis as the hook adds a performance overhead
 		// and the field will "stealthily" survive even
 		// when the DAO does not know about it.
 		$dao = $object->getDAO();
-		$this->registerDaoHook(get_class($dao));
+		$this->registerDaoHook($dao);
 		$dao->updateObject($object);
 	}
 
 	/**
 	 * Register the hook that adds an
 	 * additional field name to objects.
-	 * @param $daoName string
+	 * @param $dao DAO
 	 */
-	function registerDaoHook($daoName) {
-		HookRegistry::register(strtolower_codesafe($daoName) . '::getAdditionalFieldNames', array(&$this, 'getAdditionalFieldNames'));
+	protected function registerDaoHook($dao) {
+		if ($dao instanceof SchemaDAO) {
+			// Schema-backed DAOs need the schema extended.
+			HookRegistry::register('Schema::get::' . $dao->schemaName, array($this, 'addToSchema'));
+		} else {
+			// Non-schema-backed DAOs use the getAdditionalFieldNames hook.
+			HookRegistry::register(strtolower_codesafe(get_class($dao)) . '::getAdditionalFieldNames', array(&$this, 'getAdditionalFieldNames'));
+		}
 	}
 
 	/**
-	 * Hook callback that returns the setting's name prefixed with
-	 * the plug-in's id to avoid name collisions.
-	 * @see DAO::getAdditionalFieldNames()
+	 * Add properties for this type of public identifier to the entity's list for
+	 * storage in the database.
+	 * This is used for SchemaDAO-backed entities only.
+	 * @see PubObjectsExportPlugin::getAdditionalFieldNames()
+	 * @param $hookName string `Schema::get::publication`
+	 * @param $params array
+	 */
+	public function addToSchema($hookName, $params) {
+		$schema =& $params[0];
+		$schema->properties->{$this->getDepositStatusSettingName()} = (object) [
+			'type' => 'string',
+			'apiSummary' => true,
+			'validation' => ['nullable'],
+		];
+		return false;
+	}
+
+	/**
+	 * Add properties for this type of public identifier to the entity's list for
+	 * storage in the database.
+	 * This is used for non-SchemaDAO-backed entities only.
+	 * @see PubObjectsExportPlugin::addToSchema()
 	 * @param $hookName string
-	 * @param $args array
+	 * @param $params array
 	 */
 	function getAdditionalFieldNames($hookName, $args) {
 		assert(count($args) == 2);
 		$additionalFields =& $args[1];
 		assert(is_array($additionalFields));
 		$additionalFields[] = $this->getDepositStatusSettingName();
-		error_log(print_r("getAdditionalFieldNames - PubObjectsExportPlugin"));
-		error_log(print_r($additionalFields, true));
+		return false;
 	}
 
 	/**
