@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
+"PO-Revision-Date: 2020-02-24 10:36+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"tr/>\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:36+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.submissionChecklist"
 msgstr "Yazar Onay Butonları"
@@ -21,22 +24,22 @@ msgid "submission.upload.fileContents"
 msgstr "Yüklenecek Dosya İçeriği"
 
 msgid "submission.upload.selectComponent"
-msgstr "Lütfen Seçiniz..."
+msgstr "Makale bileşeni seç"
 
 msgid "submission.submit.title"
-msgstr "Bir Makale Girişi Yapınız."
+msgstr "Makale Gönder"
 
 msgid "submission.title"
 msgstr "Makale Başlığı"
 
 msgid "grid.action.workflow"
-msgstr "Gönderi İş Akışı"
+msgstr "Gönderi Süreç Akışı"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "Yeni Yazı Girişi"
+msgstr "Yeni Gönderi"
 
 msgid "submission.issueEntry"
-msgstr "Metadata"
+msgstr "Üst Veri"
 
 msgid "submission.submit.userGroup"
 msgstr "... olarak gönder."
@@ -48,46 +51,55 @@ msgid "submission.publication"
 msgstr "Yayın"
 
 msgid "submission.submit.userGroupDescription"
-msgstr "Bu makaleyi gönderdiğiniz kapasiteyi seçin."
+msgstr "Bu makaleyi gönderdiğiniz rolü seçin."
 
 msgid "submission.title.tip"
-msgstr "Gönderi türü genellikle 'görüntü', 'metin' veya 'yazılım' veya 'etkileşimli' dahil olmak üzere diğer çoklu ortam türlerinden biridir. Lütfen gönderinizle ilgili olanı seçin. Örnekler şu adreste bulunabilir: <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+msgstr ""
+"Gönderi türü genellikle 'görüntü', 'metin' veya 'yazılım' veya 'interaktif' "
+"dahil olmak üzere diğer çoklu ortam türlerinden biridir. Lütfen gönderinizle "
+"ilgili olanı seçin. Örnekler şu adreste bulunabilir: <a target=\"_blank\" "
+"href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#"
+"type\">http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Yeni Bir Gönderi Başlat"
 
 msgid "submission.abstract.wordCount.description"
-msgstr "Özet,  {$wordCount} kelime veya daha az olmalıdır."
+msgstr "Öz, {$wordCount} kelime veya daha az olmalıdır."
 
 msgid "submission.submit.whatNext.description"
-msgstr "Dergiye yaptığınız gönderi bildirildi ve kayıtlarınız için bir onay e-postası gönderildi. Editör gönderiyi inceledikten sonra sizinle iletişim kuracak."
+msgstr ""
+"Gönderiniz dergi yöneticilerine bildirildi, size de kayıtlarınızı "
+"doğrulamanız için bir e-posta gönderildi. Editör başvuruyu inceledikten "
+"sonra sizinle iletişime geçilecek."
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "Dizgi girişinde sorun görünüyor"
+msgstr "Sayı içeriğinde görünen dizgi"
 
 msgid "grid.action.issueEntry"
 msgstr "Bu gönderinin üst verilerini görüntüle"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Makale \"{$galleyFormatName}\" kullanılabilir hale getirilmiştir."
+msgstr "Makale dizgisi \"{$galleyFormatName}\" erişilebilir hale getirildi."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "\"{$galleyFormatName}\" makalesi kullanılmamaktadır."
+msgstr "Makale dizgisi \"{$galleyFormatName}\" erişimden kaldırıldı."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Gönderinin genel tanımlayıcıları güncellendi."
 
 msgid "grid.issueEntry.availableGalley.title"
-msgstr "Biçim Onayı"
+msgstr "Format Onayı"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Bu dizgi, okuyuculara <em>artık sağlanamaz</em>.</p>"
+msgstr "<p>Bu dizgiye, okuyucular tarafından <em>erişilemez</em> .</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Bu dizgi, okuyuculara için <em>erişilebilir olacak</em>.</p>"
+msgstr "<p>Bu dizgi, okuyucular için <em>erişilebilir olacak</em>.</p>"
 
 msgid "grid.action.availableArticleGalley"
-msgstr "Bu dizigiyi kullanılabilir yap"
+msgstr "Bu dizgiyi erişilebilir yap"
 
 msgid "submission.galleyFiles"
 msgstr "Dizgi Dosyaları"
@@ -163,3 +175,6 @@ msgstr "Bu özellikler, dergi içeriğini tanımlamak için kullanılan uluslara
 
 msgid "section.any"
 msgstr "Herhangi Bir Bölüm"
+
+msgid "submission.submit.noContext"
+msgstr "Gönderinin bulunduğu dergi bulunamadı."
