@@ -97,16 +97,11 @@ class IssueEntryForm extends FormComponent {
 
 		// Categories
 		$categoryOptions = [];
-		$result = \DAORegistry::getDAO('CategoryDAO')->getByContextId($publicationContext->getId())->toArray();
-		foreach ($result as $category) {
+		$categories = \DAORegistry::getDAO('CategoryDAO')->getByContextId($publicationContext->getId())->toAssociativeArray();
+		foreach ($categories as $category) {
 			$label = $category->getLocalizedTitle();
 			if ($category->getParentId()) {
-				$parentCategories = $result;
-				foreach ($parentCategories as $parentCategory) {
-					if ($parentCategory->getId() === $category->getParentId()) {
-						$label = $parentCategory->getLocalizedTitle() . ' > ' . $label;
-					}
-				}
+				$label = $categories[$category->getParentId()]->getLocalizedTitle() . ' > ' . $label;
 			}
 			$categoryOptions[] = [
 				'value' => (int) $category->getId(),
