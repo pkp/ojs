@@ -1018,9 +1018,6 @@ msgstr "محكمة"
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "القراء المسجلون"
 
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "المستخدمون المسجلون"
-
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "عدد المعينين"
 
@@ -1707,6 +1704,9 @@ msgstr "المكونات المحددة تعذر العثور عليها."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "أرسل نسخة إلى عنوان الاتصال الرئيسي، المعرَّف ضمن إعدادات المجلة."
+
+msgid "stats.publicationStats"
+msgstr "حالة المقالة"
 
 msgid "stats.publications.details"
 msgstr "تفاصيل المقالة"

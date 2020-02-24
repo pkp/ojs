@@ -11,8 +11,14 @@ msgstr ""
 "PO-Revision-Date: 2019-11-19T10:49:16+00:00\n"
 "Language: \n"
 
+msgid "api.submissions.403.cantChangeContext"
+msgstr "لا يمكنك تعديل المجلة التي وجهت إليها طلب تقديمك."
+
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "ليست لديك الصلاحية لمعاينة الأعداد غير المنشورة."
+
+msgid "api.submissions.403.contextRequired"
+msgstr "لإنشاء طلب تقديم أو تعديله، عليك إيصال طلب إلى وجهة برمجة التطبيق الخاص بالمجلة."
 
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "يمكنك معاينة المجلات التي تم تمكينها فقط."
@@ -40,3 +46,9 @@ msgstr "ليست لديك صلاحية نقل قالب المراسلة هذا �
 
 msgid "api._payments.400.invalidPaymentMethod"
 msgstr "طريقة التسديد التي اخترتها غير مدعومة."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "المنشور الذي طلبته ليس جزءاً من هذه المجلة."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "المنشور الذي طلبته ليس جزءاً من طلب التقديم هذا."

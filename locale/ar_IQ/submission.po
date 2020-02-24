@@ -41,6 +41,9 @@ msgstr "المخطط الانسيابي للطلب"
 msgid "submission.abstract.wordCount.description"
 msgstr "الملخص لا بد أن يكون من {$wordCount} كلمة أو أقل."
 
+msgid "submission.submit.noContext"
+msgstr "تعذر العثور على المجلة الموجه إليها طلب التقديم هذا."
+
 msgid "submission.issueEntry"
 msgstr "البيانات الوصفية"
 
@@ -52,9 +55,6 @@ msgstr "اللوح الطباعي يظهر في مقدمة العدد"
 
 msgid "grid.action.issueEntry"
 msgstr "راجع البيانات الوصفية لطلب النشر هذا"
-
-msgid "submission.publication"
-msgstr "النشر"
 
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "إن اللوح الطباعي للمؤَّلف \"{$galleyFormatName}\" قد صار جاهزاً."
@@ -169,3 +169,39 @@ msgstr "{$numTitles} فقرة/فقرات"
 
 msgid "catalog.category.heading"
 msgstr "كل الفقرات"
+
+msgid "galley.editPublishedDisabled"
+msgstr "تعذر تعديل الألواح الطباعية لهذه المقالة لأنها سبق وأن تم نشرها."
+
+msgid "galley.publicationNotFound"
+msgstr "تعذر العثور على المنشور المتعلق بهذه الألواح الطباعية."
+
+msgid "publication.datePublished.description"
+msgstr "سيتم ضبط تأريخ النشر تلقائياً عند إطلاق العدد. لا تقم بإدخال تأريخ للنشر إلا إذا كانت المقالة سبق وأن نُشرت في موضع آخر وتريد توثيق تأريخ نشرها الحقيقي."
+
+msgid "publication.invalidSection"
+msgstr "تعذر العثور على القسم المتعلق بهذا المنشور."
+
+msgid "publication.invalidIssue"
+msgstr "تعذر العثور على العدد المتعلق بهذا المنشور."
+
+msgid "publication.issue.success"
+msgstr "تفاصيل نشر العدد قد تم تحديثها."
+
+msgid "publication.publish.confirmation"
+msgstr "كل متطلبات النشر ملباة. هل أنت متأكد من رغبتك في النشر؟"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr "كل متطلبات النشر ملباة. سيتم النشر عند إطلاق {$issue}. هل أنت متأكد من رغبتك في جدولة هذه الفقرة للنشر؟"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr "كل متطلبات النشر ملباة. سيتم النشر حالاً ضمن {$issue}. هل أنت متأكد من رغبتك في النشر؟"
+
+msgid "publication.required.issue"
+msgstr "لا بد من تعيين هذه المقالة إلى عدد ما قبل نشرها."
+
+msgid "publication.publishedIn"
+msgstr "منشور في <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "مجدول للنشر في <a href=\"{$issueUrl}\">{$issueName}</a>."
