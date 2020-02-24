@@ -32,6 +32,13 @@
 				>
 					{translate key="publication.status.scheduled"}
 				</badge>
+				<badge
+					v-else-if="submission.status === getConstant('STATUS_DECLINED')"
+					class="pkpWorkflow__identificationStatus"
+					:is-warnable="true"
+				>
+					{translate key="common.declined"}
+				</badge>
 				<span class="pkpWorkflow__identificationId">{{ submission.id }}</span>
 				<span class="pkpWorkflow__identificationDivider">/</span>
 				<span class="pkpWorkflow__identificationAuthor">
