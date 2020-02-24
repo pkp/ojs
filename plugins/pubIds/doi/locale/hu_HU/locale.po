@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
-"PO-Revision-Date: 2020-02-20 01:21+0000\n"
+"PO-Revision-Date: 2020-02-21 11:36+0000\n"
 "Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "pubIds-doi/hu/>\n"
@@ -30,7 +30,9 @@ msgid "plugins.pubIds.doi.manager.settings.doiObjects"
 msgstr "Folyóirat tartalom"
 
 msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
-msgstr "Kérjük, hogy válassza ki azokat az objektumokat, amelyekhez DOI-kat szeretne rendelni!"
+msgstr ""
+"Kérjük, hogy válassza ki azokat az objektumokat, amelyekhez DOI-kat szeretne "
+"rendelni."
 
 msgid "plugins.pubIds.doi.manager.settings.explainDois"
 msgstr "Kérjük, hogy válassza ki azokat az megjelentetési objektumokat, amelyekhez DOI-kat fog rendelni:"
@@ -123,7 +125,7 @@ msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
 msgstr "preprint"
 
 msgid "plugins.pubIds.doi.editor.customSuffixMissing"
-msgstr "A DOI nem hozzárendelhető, mert az egyéni utótag hiányzik"
+msgstr "A DOI nem hozzárendelhető, mert az egyéni utótag hiányzik."
 
 msgid "plugins.pubIds.doi.editor.patternNotResolved"
 msgstr "A DOI nem hozzárendelhető, mert feloldhatatlan mintát tartalmaz."
@@ -135,7 +137,9 @@ msgid "plugins.pubIds.doi.editor.assigned"
 msgstr "Ehhez a {$pubObjectType}hez már van hozzárendelt DOI."
 
 msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
-msgstr "A megadott DOI utótag már használatban van egy másik megjelent elemnél. Kérjük, hogy minden egyes elemhez egyedi DOI utótagot írjon be!"
+msgstr ""
+"A megadott DOI utótag már használatban van egy másik megjelent elemnél. "
+"Kérjük, hogy minden egyes elemhez egyedi DOI utótagot írjon be."
 
 msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
 msgstr "DOI törlése"
@@ -172,3 +176,15 @@ msgstr "A DOI-nak az alábbival kell kezdődnie: {$prefix}."
 
 msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Cikkek"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Tétel"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Ehhez a cikkhez nem lett DOI hozzárendelve."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "A cikk DOI azonosítója az alábbi lesz: {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "A DOI-nak {$doiPrefix}-val/vel kell kezdődnie."

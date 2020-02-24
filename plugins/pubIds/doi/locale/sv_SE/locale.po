@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
-"PO-Revision-Date: 2020-01-31 16:21+0000\n"
+"PO-Revision-Date: 2020-02-24 16:56+0000\n"
 "Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
 "sv/>\n"
@@ -175,3 +175,24 @@ msgstr "DOI måste börja med {$prefix}."
 
 msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Artiklar"
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Du kan inte generera ett DOI eftersom en eller flera delar av DOI-mönstret "
+"saknas. Du kanske behöver tilldela bidraget ett nummer, ange ett utgivar-ID "
+"eller lägga till sidnummer."
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Publiceringsversion: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "DOI har inte tilldelats publikationen."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "DOI för publikationen kommer att vara {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI måste börja med {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr "Du kan inte generera ett DOI innan bidraget har tilldelats ett nummer."
