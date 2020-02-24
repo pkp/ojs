@@ -230,7 +230,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @param $opts array
 	 * @return string XML contents representing the supplied submission IDs.
 	 */
-<<<<<<< HEAD
 	function exportSubmissions($submissionIds, $context, $user, $opts = array()) {
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
