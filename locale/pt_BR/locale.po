@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-18 17:36+0000\n"
+"PO-Revision-Date: 2020-02-25 07:54+0000\n"
 "Last-Translator: Lilian Nassi Calo <calolilian@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ops/"
 "locale/pt_BR/>\n"
@@ -171,7 +171,7 @@ msgid "user.register.registrationDisabled"
 msgstr "Atualmente, este servidor não está aceitando registros de usuários."
 
 msgid "submission.layout.galley.remotelyHostedContent"
-msgstr "Esta prova gráfica estará disponível em um site separado."
+msgstr "Esta composição final estará disponível em um site separado."
 
 msgid "manager.people.noAdministrativeRights"
 msgstr ""
@@ -193,7 +193,7 @@ msgid "search.results.orderBy.popularityMonth"
 msgstr "Popularidade (Último Mês)"
 
 msgid "search.results.orderBy.popularityAll"
-msgstr "Popularidade (Todo o Tempo)"
+msgstr "Popularidade (de todos os tempos)"
 
 msgid "search.results.orderBy.journal"
 msgstr "Título do Servidor"
@@ -326,3 +326,12 @@ msgstr ""
 "{$writable_db_cache}</li></ul><p>2. Um diretório para armazenar arquivos "
 "enviados deve ser criado e tornado gravável (veja \"Configurações de "
 "arquivo\" abaixo).</p>"
+
+msgid "submission.dates"
+msgstr "Submetido {$submitted} - Publicado {$published}"
+
+msgid "publication.galley.downloads"
+msgstr "Downloads {$downloads}"
+
+msgid "submission.numberOfVersions"
+msgstr "Existem {$numberOfVersions} versões deste preprint"
