@@ -120,7 +120,7 @@
 									class="pkpWorkflow__relation"
 									label="{translate key="publication.relation"}"
 								>
-									<pkp-form class="relateForm" v-bind="components.{$smarty.const.FORM_ID_RELATION}" @set="set">
+									<pkp-form class="pkpWorkflow__relateForm" v-bind="components.{$smarty.const.FORM_ID_RELATION}" @set="set">
 								</dropdown>
 							</span>
 							{if $canPublish}
