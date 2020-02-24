@@ -1,2 +1,142 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-02-25 07:54+0000\n"
+"Last-Translator: Lilian Nassi Calo <calolilian@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ops/"
+"submission/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Todos os requisitos de publicação foram cumpridos. Está seguro de que deseja "
+"publicar este?"
+
+msgid "publication.relation.vorDoi"
+msgstr "DOI do artigo publicado"
+
+msgid "publication.relation.published"
+msgstr "O preprint foi publicado em um periódico como um artigo"
+
+msgid "publication.relation.submitted"
+msgstr "O preprint não foi submetido para publicação em um periódico"
+
+msgid "publication.relation.none"
+msgstr "O preprint não foi submetido para publicação"
+
+msgid "publication.relation.label"
+msgstr "Submetido para publicação"
+
+msgid "publication.relation.success"
+msgstr "Relações de publicação salvas com sucesso"
+
+msgid "publication.relation"
+msgstr "Relações"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"A data de publicação será definida automaticamente quando o preprint for "
+"publicado. Não insira uma data de publicação, a menos que necessite "
+"antedatá-la."
+
+msgid "publication.issue.success"
+msgstr "Os detalhes da inserção de preprint foram atualizados."
+
+msgid "preprint.entry"
+msgstr "Inserção de preprint"
+
+msgid "publication.invalidSection"
+msgstr "A seção desta publicação não pode ser encontrada."
+
+msgid "galley.publicationNotFound"
+msgstr "A publicação da composição final não pode ser encontrada."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"As composições finais desta publicação não podem ser editadas porque já "
+"foram publicadas."
+
+msgid "catalog.category.heading"
+msgstr "Todos os itens"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Itens"
+
+msgid "submission.sectionOptions"
+msgstr "Opções de série"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Estas especificações estão baseadas no conjunto de metadatos Dublin Core, um "
+"padrão internacional utilizado para descrever o conteúdo do servidor."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selecione a função do colaborador."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Seu resumo é muito longo. Reduza-o para abaixo do limite de número de "
+"palavras indicado para esta série."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Por favor, insira o resumo de seu preprint."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Por favor, insira o título de seu preprint."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Ao menos um autor é requerido."
+
+msgid "submission.submit.contributorRole"
+msgstr "Função do colaborador"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Você deve ler e concordar que completou os requisitos abaixo antes de "
+"proceder."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Lista de verificação da submissão"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Por favor selecione o idioma da submissão."
+
+msgid "submission.complete"
+msgstr "Aprovado"
+
+msgid "submission.upload.fileContents"
+msgstr "Componente de preprint"
+
+msgid "submission.confirmSubmit"
+msgstr "Está seguro de que deseja submeter este preprint ao servidor?"
+
+msgid "submission.galleyFiles"
+msgstr "Composição final"
+
+msgid "submission.submit.noContext"
+msgstr "O periódico de submissão não foi encontrado."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "O resumo deve ter {$wordCount} palavras ou menos."
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nova submissão"
+
+msgid "submission.title"
+msgstr "Título do preprint"
+
+msgid "submission.upload.selectComponent"
+msgstr "Selecionar o componente de preprint"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Escolha a capacidade sob a qual você está submetendo este preprint."
+
+msgid "submission.submit.userGroup"
+msgstr "Submeto na minha função de..."
+
+msgid "submission.submit.title"
+msgstr "Submeter um preprint"
