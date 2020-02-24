@@ -206,5 +206,13 @@
 			inGroup="native-xml=>ArticleGalley"
 			class="plugins.importexport.native.filter.NativeXmlArticleGalleyFilter"
 			isTemplate="0" />
+		<filter
+			inGroup="publication=>native-xml"
+			class="plugins.importexport.native.filter.PublicationNativeXmlFilter"
+			isTemplate="0" />
+		<filter
+			inGroup="native-xml=>publication"
+			class="plugins.importexport.native.filter.NativeXmlPublicationFilter"
+			isTemplate="0" />
 	</filters>
 </filterConfig>

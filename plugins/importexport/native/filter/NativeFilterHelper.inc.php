@@ -52,24 +52,39 @@ class NativeFilterHelper {
 	 * Create and return an object covers node.
 	 * @param $filter NativeExportFilter
 	 * @param $doc DOMDocument
-	 * @param $object Issue|Article
+	 * @param $object Issue|Publication
 	 * @return DOMElement
 	 */
 	function createCoversNode($filter, $doc, $object) {
 		$deployment = $filter->getDeployment();
 		$coversNode = null;
-		$coverImages = $object->getCoverImage(null);
+		$coverImages = $object->getData('coverImage');
 		if (!empty($coverImages)) {
 			$coversNode = $doc->createElementNS($deployment->getNamespace(), 'covers');
 			foreach ($coverImages as $locale => $coverImage) {
+				$coverImageName = $coverImage['uploadName'];
+
 				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
 				$coverNode->setAttribute('locale', $locale);
-				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
-				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($object->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImageName, ENT_COMPAT, 'UTF-8')));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($object->getLocalizedData('coverImageAltText', $locale), ENT_COMPAT, 'UTF-8')));
 
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
-				$filePath = $publicFileManager->getContextFilesPath($object->getData('contextId')) . '/' . $coverImage;
+
+				$contextId = null;
+
+				if (is_a($object, 'Publication')) {
+					/** @var $submissionService APP\Services\SubmissionService */
+					$submissionService = Services::get('submission');
+					$submission = $submissionService->get($object->getData('submissionId'));
+
+					$contextId = $submission->getData('contextId');
+				} else if (is_a($object, 'Issue')) {
+					$contextId = $object->getData('contextId');
+				}
+				
+				$filePath = $publicFileManager->getContextFilesPath($contextId) . '/' . $coverImageName;
 				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 				$embedNode->setAttribute('encoding', 'base64');
 				$coverNode->appendChild($embedNode);
@@ -83,8 +98,8 @@ class NativeFilterHelper {
 	 * Parse out the object covers.
 	 * @param $filter NativeExportFilter
 	 * @param $node DOMElement
-	 * @param $object Issue|Article
-	 * @param $assocType ASSOC_TYPE_ISSUE | ASSOC_TYPE_SUBMISSION
+	 * @param $object Issue|Publication
+	 * @param $assocType ASSOC_TYPE_ISSUE | ASSOC_TYPE_SUBMISSION | ASSOC_TYPE_PUBLICATION
 	 */
 	function parseCovers($filter, $node, $object, $assocType) {
 		$deployment = $filter->getDeployment();
@@ -116,12 +131,12 @@ class NativeFilterHelper {
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
-					case 'cover_image': $object->setCoverImage($n->textContent, $locale); break;
-					case 'cover_image_alt_text': $object->setCoverImageAltText($n->textContent, $locale); break;
+					case 'cover_image': $object->setData('coverImage', $n->textContent, $locale); break;
+					case 'cover_image_alt_text': $object->setData('coverImageAltText', $n->textContent, $locale); break;
 					case 'embed':
 						import('classes.file.PublicFileManager');
 						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getCoverImage($locale);
+						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getData('coverImage', $locale);
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
 					default:

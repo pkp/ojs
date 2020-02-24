@@ -49,19 +49,28 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 * @param $node DOMElement
 	 */
 	function handleElement($node) {
-		$deployment = $this->getDeployment();
-		$context = $deployment->getContext();
-		$sectionAbbrev = $node->getAttribute('section_ref');
-		if ($sectionAbbrev !== '') {
-			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-			$section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
-			if (!$section) {
-				$deployment->addError(ASSOC_TYPE_SUBMISSION, NULL, __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
-			} else {
-				return parent::handleElement($node);
-			}
-		}
+		return parent::handleElement($node);
 	}
+
+	// /**
+	//  * Handle an Article import.
+	//  * The Article must have a valid section in order to be imported
+	//  * @param $node DOMElement
+	//  */
+	// function handleElement($node) {
+	// 	$deployment = $this->getDeployment();
+	// 	$context = $deployment->getContext();
+	// 	$sectionAbbrev = $node->getAttribute('section_ref');
+	// 	if ($sectionAbbrev !== '') {
+	// 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+	// 		$section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
+	// 		if (!$section) {
+	// 			$deployment->addError(ASSOC_TYPE_SUBMISSION, NULL, __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
+	// 		} else {
+	// 			return parent::handleElement($node);
+	// 		}
+	// 	}
+	// }
 
 	/**
 	 * @see Filter::process()
@@ -71,6 +80,9 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	function &process(&$document) {
 		$importedObjects =& parent::process($document);
 
+		$deployment = $this->getDeployment();
+		$submission = $deployment->getSubmission();
+		
 		// Index imported content
 		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		foreach ($importedObjects as $submission) {
@@ -78,6 +90,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			$articleSearchIndex->submissionMetadataChanged($submission);
 			$articleSearchIndex->submissionFilesChanged($submission);
 		}
+
 		$articleSearchIndex->submissionChangesFinished();
 
 		return $importedObjects;
@@ -90,25 +103,25 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 * @return Submission
 	 */
 	function populateObject($submission, $node) {
-		$deployment = $this->getDeployment();
-		$sectionAbbrev = $node->getAttribute('section_ref');
-		if ($sectionAbbrev !== '') {
-			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-			$section = $sectionDao->getByAbbrev($sectionAbbrev, $submission->getContextId());
-			if (!$section) {
-				$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
-			} else {
-				$submission->setSectionId($section->getId());
-			}
-		}
-		// check if article is related to an issue, but has no published date
-		$datePublished = $node->getAttribute('date_published');
-		$issue = $deployment->getIssue();
-		$issue_identification = $node->getElementsByTagName('issue_identification');
-		if (!$datePublished && ($issue || $issue_identification->length)) {
-			$titleNodes = $node->getElementsByTagName('title');
-			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
-		}
+		// $deployment = $this->getDeployment();
+		// $sectionAbbrev = $node->getAttribute('section_ref');
+		// if ($sectionAbbrev !== '') {
+		// 	$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+		// 	$section = $sectionDao->getByAbbrev($sectionAbbrev, $submission->getContextId());
+		// 	if (!$section) {
+		// 		$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
+		// 	} else {
+		// 		$submission->setSectionId($section->getId());
+		// 	}
+		// }
+		// // check if article is related to an issue, but has no published date
+		// $datePublished = $node->getAttribute('date_published');
+		// $issue = $deployment->getIssue();
+		// $issue_identification = $node->getElementsByTagName('issue_identification');
+		// if (!$datePublished && ($issue || $issue_identification->length)) {
+		// 	$titleNodes = $node->getElementsByTagName('title');
+		// 	$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
+		// }
 
 		return parent::populateObject($submission, $node);
 	}
@@ -124,20 +137,20 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			case 'supplementary_file':
 				$this->parseSubmissionFile($n, $submission);
 				break;
-			case 'article_galley':
-				$this->parseArticleGalley($n, $submission);
-				break;
-			case 'issue_identification':
-				// do nothing, because this is done in populatePublishedSubmission
-				break;
-			case 'pages':
-				$submission->setPages($n->textContent);
-				break;
-			case 'covers':
-				import('plugins.importexport.native.filter.NativeFilterHelper');
-				$nativeFilterHelper = new NativeFilterHelper();
-				$nativeFilterHelper->parseCovers($this, $n, $submission, ASSOC_TYPE_SUBMISSION);
-				break;
+			// case 'article_galley':
+			// 	$this->parseArticleGalley($n, $submission);
+			// 	break;
+			// case 'issue_identification':
+			// 	// do nothing, because this is done in populatePublishedSubmission
+			// 	break;
+			// case 'pages':
+			// 	$submission->setPages($n->textContent);
+			// 	break;
+			// case 'covers':
+			// 	import('plugins.importexport.native.filter.NativeFilterHelper');
+			// 	$nativeFilterHelper = new NativeFilterHelper();
+			// 	$nativeFilterHelper->parseCovers($this, $n, $submission, ASSOC_TYPE_SUBMISSION);
+			// 	break;
 			default:
 				parent::handleChildElement($n, $submission);
 		}
@@ -161,8 +174,11 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			case 'supplementary_file':
 				$importClass='SupplementaryFile';
 				break;
-			case 'article_galley':
-				$importClass='ArticleGalley';
+			// case 'article_galley':
+			// 	$importClass='ArticleGalley';
+			// 	break;
+			case 'publication':
+				$importClass='Publication';
 				break;
 			default:
 				$importClass=null; // Suppress scrutinizer warn
@@ -176,88 +192,88 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		return $importFilter;
 	}
 
-	/**
-	 * Parse an article galley and add it to the submission.
-	 * @param $n DOMElement
-	 * @param $submission Submission
-	 */
-	function parseArticleGalley($n, $submission) {
-		$importFilter = $this->getImportFilter($n->tagName);
-		assert(isset($importFilter)); // There should be a filter
+	// /**
+	//  * Parse an article galley and add it to the submission.
+	//  * @param $n DOMElement
+	//  * @param $submission Submission
+	//  */
+	// function parseArticleGalley($n, $submission) {
+	// 	$importFilter = $this->getImportFilter($n->tagName);
+	// 	assert(isset($importFilter)); // There should be a filter
 
-		$importFilter->setDeployment($this->getDeployment());
-		$articleGalleyDoc = new DOMDocument();
-		$articleGalleyDoc->appendChild($articleGalleyDoc->importNode($n, true));
-		return $importFilter->execute($articleGalleyDoc);
-	}
+	// 	$importFilter->setDeployment($this->getDeployment());
+	// 	$articleGalleyDoc = new DOMDocument();
+	// 	$articleGalleyDoc->appendChild($articleGalleyDoc->importNode($n, true));
+	// 	return $importFilter->execute($articleGalleyDoc);
+	// }
 
-	/**
-	 * Class-specific methods for published submissions.
-	 * @param PublishedSubmission $submission
-	 * @param DOMElement $node
-	 * @return PublishedSubmission
-	 */
-	function populatePublishedSubmission($submission, $node) {
-		$deployment = $this->getDeployment();
-		$issue = $deployment->getIssue();
-		if (empty($issue)) {
-			$issueIdentificationNodes = $node->getElementsByTagName('issue_identification');
+	// /**
+	//  * Class-specific methods for published submissions.
+	//  * @param PublishedSubmission $submission
+	//  * @param DOMElement $node
+	//  * @return PublishedSubmission
+	//  */
+	// function populatePublishedSubmission($submission, $node) {
+	// 	$deployment = $this->getDeployment();
+	// 	$issue = $deployment->getIssue();
+	// 	if (empty($issue)) {
+	// 		$issueIdentificationNodes = $node->getElementsByTagName('issue_identification');
 
-			if ($issueIdentificationNodes->length != 1) {
-				$titleNodes = $node->getElementsByTagName('title');
-				$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
-			} else {
-				$issueIdentificationNode = $issueIdentificationNodes->item(0);
-				$issue = $this->parseIssueIdentification($issueIdentificationNode);
-			}
-		}
-		$submission->setSequence($node->getAttribute('seq'));
-		$submission->setAccessStatus($node->getAttribute('access_status'));
-		if ($issue) $submission->setIssueId($issue->getId());
-		return $submission;
-	}
+	// 		if ($issueIdentificationNodes->length != 1) {
+	// 			$titleNodes = $node->getElementsByTagName('title');
+	// 			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
+	// 		} else {
+	// 			$issueIdentificationNode = $issueIdentificationNodes->item(0);
+	// 			$issue = $this->parseIssueIdentification($issueIdentificationNode);
+	// 		}
+	// 	}
+	// 	$submission->setSequence($node->getAttribute('seq'));
+	// 	$submission->setAccessStatus($node->getAttribute('access_status'));
+	// 	if ($issue) $submission->setIssueId($issue->getId());
+	// 	return $submission;
+	// }
 
-	/**
-	 * Get the issue from the given identification.
-	 * @param $node DOMElement
-	 * @return Issue
-	 */
-	function parseIssueIdentification($node) {
-		$deployment = $this->getDeployment();
-		$context = $deployment->getContext();
-		$submission = $deployment->getSubmission();
-		$vol = $num = $year = null;
-		$titles = array();
-		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
-			if (is_a($n, 'DOMElement')) {
-				switch ($n->tagName) {
-					case 'volume':
-						$vol = $n->textContent;
-						break;
-					case 'number':
-						$num = $n->textContent;
-						break;
-					case 'year':
-						$year = $n->textContent;
-						break;
-					case 'title':
-						list($locale, $value) = $this->parseLocalizedContent($n);
-						if (empty($locale)) $locale = $context->getPrimaryLocale();
-						$titles[$locale] = $value;
-						break;
-					default:
-						$deployment->addWarning(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
-				}
-			}
-		}
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issue = null;
-		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
-		if ($issuesByIdentification->getCount() != 1) {
-			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => $node->ownerDocument->saveXML($node))));
-		} else {
-			$issue = $issuesByIdentification->next();
-		}
-		return $issue;
-	}
+	// /**
+	//  * Get the issue from the given identification.
+	//  * @param $node DOMElement
+	//  * @return Issue
+	//  */
+	// function parseIssueIdentification($node) {
+	// 	$deployment = $this->getDeployment();
+	// 	$context = $deployment->getContext();
+	// 	$submission = $deployment->getSubmission();
+	// 	$vol = $num = $year = null;
+	// 	$titles = array();
+	// 	for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+	// 		if (is_a($n, 'DOMElement')) {
+	// 			switch ($n->tagName) {
+	// 				case 'volume':
+	// 					$vol = $n->textContent;
+	// 					break;
+	// 				case 'number':
+	// 					$num = $n->textContent;
+	// 					break;
+	// 				case 'year':
+	// 					$year = $n->textContent;
+	// 					break;
+	// 				case 'title':
+	// 					list($locale, $value) = $this->parseLocalizedContent($n);
+	// 					if (empty($locale)) $locale = $context->getPrimaryLocale();
+	// 					$titles[$locale] = $value;
+	// 					break;
+	// 				default:
+	// 					$deployment->addWarning(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
+	// 			}
+	// 		}
+	// 	}
+	// 	$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+	// 	$issue = null;
+	// 	$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
+	// 	if ($issuesByIdentification->getCount() != 1) {
+	// 		$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => $node->ownerDocument->saveXML($node))));
+	// 	} else {
+	// 		$issue = $issuesByIdentification->next();
+	// 	}
+	// 	return $issue;
+	// }
 }

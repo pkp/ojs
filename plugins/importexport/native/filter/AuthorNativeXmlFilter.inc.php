@@ -22,6 +22,8 @@ class AuthorNativeXmlFilter extends PKPAuthorNativeXmlFilter {
 	 */
 	function __construct($filterGroup) {
 		parent::__construct($filterGroup);
+
+		$this->getNoValidation(true);
 	}
 
 
