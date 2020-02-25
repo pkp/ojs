@@ -202,6 +202,10 @@ class SubmissionHandler extends PKPSubmissionHandler {
 			return $response->withStatus(403)->withJsonError('api.publications.403.submissionsDidNotMatch');
 		}
 
+		if (!Services::get('publication')->canAuthorPublish($submission->getId())) {
+			return $response->withStatus(403)->withJsonError('api.publications.403.authorCantPublish');
+		}
+
 		$publication = Services::get('publication')->relate($publication, $slimRequest->getParams());
 
 		$publicationProps = Services::get('publication')->getFullProperties(

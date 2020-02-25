@@ -122,6 +122,7 @@
 									</ul>
 								</dropdown>
 							</span>
+							{if $canPublish}
 							<span class="pkpPublication__relation">
 								<dropdown
 									class="pkpWorkflow__relation"
@@ -130,6 +131,7 @@
 									<pkp-form class="pkpWorkflow__relateForm" v-bind="components.{$smarty.const.FORM_ID_RELATION}" @set="set">
 								</dropdown>
 							</span>
+							{/if}
 							{if $canPublish}
 								<template slot="actions">
 									<pkp-button
