@@ -51,12 +51,25 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @copydoc Plugin::register()
 	 */
 	function register($category, $path, $mainContextId = null) {
-		$success = parent::register($category, $path, $mainContextId);
-		if ($success) {
-			$this->addLocaleData();
-			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
+		if (!parent::register($category, $path, $mainContextId)) return false;
+
+		$this->addLocaleData();
+		HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
+		foreach ($this->_getDAOs() as $dao) {
+			if ($dao instanceof SchemaDAO) {
+				$schema = Services::get('schema')->get($dao->schemaName);
+				foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
+					$schema->properties->{$fieldName} = (object) [
+						'type' => 'string',
+						'apiSummary' => true,
+						'validation' => ['nullable'],
+					];
+				}
+			} else {
+				HookRegistry::register(strtolower_codesafe(get_class($dao)) . '::getAdditionalFieldNames', array(&$this, 'getAdditionalFieldNames'));
+			}
 		}
-		return $success;
+		return true;
 	}
 
 	/**
@@ -375,41 +388,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		// and the field will "stealthily" survive even
 		// when the DAO does not know about it.
 		$dao = $object->getDAO();
-		$this->registerDaoHook($dao);
 		$dao->updateObject($object);
-	}
-
-	/**
-	 * Register the hook that adds an
-	 * additional field name to objects.
-	 * @param $dao DAO
-	 */
-	protected function registerDaoHook($dao) {
-		if ($dao instanceof SchemaDAO) {
-			// Schema-backed DAOs need the schema extended.
-			HookRegistry::register('Schema::get::' . $dao->schemaName, array($this, 'addToSchema'));
-		} else {
-			// Non-schema-backed DAOs use the getAdditionalFieldNames hook.
-			HookRegistry::register(strtolower_codesafe(get_class($dao)) . '::getAdditionalFieldNames', array(&$this, 'getAdditionalFieldNames'));
-		}
-	}
-
-	/**
-	 * Add properties for this type of public identifier to the entity's list for
-	 * storage in the database.
-	 * This is used for SchemaDAO-backed entities only.
-	 * @see PubObjectsExportPlugin::getAdditionalFieldNames()
-	 * @param $hookName string `Schema::get::publication`
-	 * @param $params array
-	 */
-	public function addToSchema($hookName, $params) {
-		$schema =& $params[0];
-		$schema->properties->{$this->getDepositStatusSettingName()} = (object) [
-			'type' => 'string',
-			'apiSummary' => true,
-			'validation' => ['nullable'],
-		];
-		return false;
 	}
 
 	/**
@@ -424,8 +403,18 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		assert(count($args) == 2);
 		$additionalFields =& $args[1];
 		assert(is_array($additionalFields));
-		$additionalFields[] = $this->getDepositStatusSettingName();
+		foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
+			$additionalFields[] = $fieldName;
+		}
 		return false;
+	}
+
+	/**
+	 * Get a list of additional setting names that should be stored with the objects.
+	 * @return array
+	 */
+	protected function _getObjectAdditionalSettings() {
+		return array($this->getDepositStatusSettingName());
 	}
 
 	/**
@@ -679,6 +668,19 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		return $settingsForm;
 	}
 
+	/**
+	 * Get the DAOs for objects that need to be augmented with additional settings.
+	 * @return array
+	 */
+	protected function _getDAOs() {
+		return array(
+			DAORegistry::getDAO('PublicationDAO'),
+			DAORegistry::getDAO('SubmissionDAO'),
+			Application::getRepresentationDAO(),
+			DAORegistry::getDAO('SubmissionFileDAO'),
+			DAORegistry::getDAO('IssueDAO'),
+		);
+	}
 }
 
 

@@ -22,8 +22,6 @@ define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
 define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
 
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
-
-
 	/**
 	 * @copydoc ImportExportPlugin::display()
 	 */
@@ -105,18 +103,13 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Hook callback that returns the
-	 * "registeredDoi" setting's name prefixed with
-	 * the plug-in's id to avoid name collisions.
-	 * @see DAO::getAdditionalFieldNames()
-	 * @param $hookName string
-	 * @param $args array
+	 * Get a list of additional setting names that should be stored with the objects.
+	 * @return array
 	 */
-	function getAdditionalFieldNames($hookName, $args) {
-		parent::getAdditionalFieldNames($hookName, $args);
-		$additionalFields =& $args[1];
-		assert(is_array($additionalFields));
-		$additionalFields[] = $this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI;
+	protected function _getObjectAdditionalSettings() {
+		return array_merge(parent::_getObjectAdditionalSettings(), array(
+			$this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI
+		));
 	}
 
 	/**
@@ -190,7 +183,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 		}
 		return $galleys;
 	}
-
 }
 
 
