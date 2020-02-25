@@ -38,6 +38,12 @@ msgstr "Preprints"
 msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
 msgstr "Galleys"
 
+msgid "plugins.pubIds.doi.manager.settings.publicationDoiAutoAssign"
+msgstr "Automatic assignment"
+
+msgid "plugins.pubIds.doi.manager.settings.explainpublicationDoiAutoAssign"
+msgstr "Automatically assign DOI for the following objects when created:"
+
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "DOI Prefix"
 

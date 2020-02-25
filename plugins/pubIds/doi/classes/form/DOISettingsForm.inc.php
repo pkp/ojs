@@ -143,6 +143,7 @@ class DOISettingsForm extends Form {
 		return array(
 			'enablePublicationDoi' => 'bool',
 			'enableRepresentationDoi' => 'bool',
+			'enablePublicationDoiAutoAssign' => 'bool',
 			'doiPrefix' => 'string',
 			'doiSuffix' => 'string',
 			'doiPublicationSuffixPattern' => 'string',

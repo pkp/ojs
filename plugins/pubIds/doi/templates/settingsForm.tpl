@@ -28,6 +28,12 @@
 			{fbvElement type="checkbox" id="enableRepresentationDoi" label="plugins.pubIds.doi.manager.settings.enableRepresentationDoi" maxlength="40" checked=$enableRepresentationDoi|compare:true}
 		{/fbvFormSection}
 	{/fbvFormArea}
+	{fbvFormArea id="doiAutoAssignFormArea" title="plugins.pubIds.doi.manager.settings.publicationDoiAutoAssign"}
+		<p class="pkp_help">{translate key="plugins.pubIds.doi.manager.settings.explainpublicationDoiAutoAssign"}</p>
+		{fbvFormSection list="true"}
+			{fbvElement type="checkbox" id="enablePublicationDoiAutoAssign" label="plugins.pubIds.doi.manager.settings.enablePublicationDoi" maxlength="40" checked=$enablePublicationDoiAutoAssign|compare:true}
+		{/fbvFormSection}
+	{/fbvFormArea}
 	{fbvFormArea id="doiPrefixFormArea" title="plugins.pubIds.doi.manager.settings.doiPrefix"}
 		{fbvFormSection}
 			<p class="pkp_help">{translate key="plugins.pubIds.doi.manager.settings.doiPrefix.description"}</p>

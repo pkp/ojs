@@ -32,6 +32,7 @@ class PublicationService extends PKPPublicationService {
 		\HookRegistry::register('Publication::getProperties', [$this, 'getPublicationProperties']);
 		\HookRegistry::register('Publication::validate', [$this, 'validatePublication']);
 		\HookRegistry::register('Publication::validatePublish', [$this, 'validatePublishPublication']);
+		\HookRegistry::register('Publication::add', [$this, 'addPublication']);
 		\HookRegistry::register('Publication::version', [$this, 'versionPublication']);
 		\HookRegistry::register('Publication::publish::before', [$this, 'publishPublicationBefore']);
 		\HookRegistry::register('Publication::delete::before', [$this, 'deletePublicationBefore']);
@@ -159,6 +160,28 @@ class PublicationService extends PKPPublicationService {
 		$submission = $args[2];
 		if (!$this->canAuthorPublish($submission->getId())){
 			$errors['authorCheck'] = __('author.submit.authorsCanNotPublish');
+		}
+	}
+
+	/**
+	 * Set OPS-specific objects when a new publication is created
+	 *
+	 * @param $hookName string
+	 * @param $args array [
+	 *		@option Publication The new publication
+	 *		@option Request
+	 * ]
+	 */
+	public function addPublication($hookName, $args) {
+		$publication = $args[0];
+		$request = $args[1];
+
+		// Assign DOI if automatic assigment is enabled
+		$context = $request->getContext();
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $context->getId());
+		$doiPubIdPlugin = $pubIdPlugins['doipubidplugin'];
+		if ($doiPubIdPlugin && $doiPubIdPlugin->getSetting($context->getId(), 'enablePublicationDoiAutoAssign')){
+				$publication->setData('pub-id::doi', $doiPubIdPlugin->getPubId($publication));
 		}
 	}
 

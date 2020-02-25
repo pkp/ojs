@@ -287,7 +287,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/><!-- STATUS_QUEUED -->
 		</field>
-		<field name="url_path" type="C2" size="32" />
+		<field name="url_path" type="C2" size="64" />
 		<field name="version" type="I8" />
 		<descr>Publications</descr>
 		<index name="publications_submission_id">
@@ -355,7 +355,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="url_path" type="C2" size="32" />
+		<field name="url_path" type="C2" size="64" />
 		<descr>Publication galleys</descr>
 		<index name="publication_galleys_publication_id">
 			<col>publication_id</col>
