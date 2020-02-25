@@ -347,7 +347,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $noValidation boolean If set to true no XML validation will be done
 	 */
 	function exportXML($objects, $filter, $context, $noValidation = null) {
-		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$exportFilters = $filterDao->getObjectsByGroup($filter);
 		assert(count($exportFilters) == 1); // Assert only a single serialization filter

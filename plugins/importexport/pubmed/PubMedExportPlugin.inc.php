@@ -126,7 +126,6 @@ class PubMedExportPlugin extends ImportExportPlugin {
 
 	function exportSubmissions($submissionIds, $context, $user) {
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
 		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
@@ -156,7 +155,6 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	 * @return string XML contents representing the supplied issue IDs.
 	 */
 	function exportIssues($issueIds, $context, $user) {
-		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
 		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
 		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
