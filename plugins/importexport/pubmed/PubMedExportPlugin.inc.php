@@ -133,7 +133,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		$submissions = array();
 		foreach ($submissionIds as $submissionId) {
 			$submission = $submissionDao->getById($submissionId);
-			if ($submission && $submission->getContextId() == $context->getId()) $submissions[] = $submission;
+			if ($submission && $submission->getData('contextId') == $context->getId()) $submissions[] = $submission;
 		}
 		libxml_use_internal_errors(true);
 		$submissionXml = $exportFilter->execute($submissions, true);
