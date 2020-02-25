@@ -102,11 +102,15 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 			$publication = Services::get('publication')->get($pubObject->getData('publicationId'));
 			$submission = Services::get('submission')->get($publication->getData('submissionId'));
 			$contextId = $submission->getData('contextId');
-		} elseif (in_array($pubObjectType, ['Publication', 'SubmissionFile'])) {
+		} elseif ($pubObjectType === 'Publication') {
 			$submission = Services::get('submission')->get($pubObject->getData('submissionId'));
-			$publication = Services::get('publication')->get($submission->getLatestPublication()->getId());
+			$publication = Services::get('publication')->get($pubObject->getId());
+			$contextId = $submission->getData('contextId');
+		} elseif ($pubObjectType === 'SubmissionFile') {
+			$submission = Services::get('submission')->get($pubObject->getData('submissionId'));
 			$contextId = $submission->getData('contextId');
 		}
+
 
 		// Check the context
 		$context = $this->getContext($contextId);
