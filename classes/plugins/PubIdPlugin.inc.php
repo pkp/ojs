@@ -297,9 +297,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getDAOs()
 	 */
 	function getDAOs() {
-		return array_merge(parent::getDAOs(), array('Issue' => DAORegistry::getDAO('IssueDAO')));
+		return array_merge(parent::getDAOs(), array(DAORegistry::getDAO('IssueDAO')));
 	}
-
 }
-
 
