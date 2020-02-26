@@ -10,7 +10,7 @@
  * @class PublicationNativeXmlFilter
  * @ingroup plugins_importexport_native
  *
- * @brief Class that converts a Article to a Native XML document.
+ * @brief Class that converts a Publication to a Native XML document.
  */
 
 import('lib.pkp.plugins.importexport.native.filter.PKPPublicationNativeXmlFilter');
@@ -35,23 +35,25 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter {
 		return 'plugins.importexport.native.filter.PublicationNativeXmlFilter';
 	}
 
+	
+
 
 	//
 	// Implement abstract methods from SubmissionNativeXmlFilter
 	//
-	// /**
-	//  * Get the representation export filter group name
-	//  * @return string
-	//  */
-	// function getRepresentationExportFilterGroupName() {
-	// 	return 'article-galley=>native-xml';
-	// }
+	/**
+	 * Get the representation export filter group name
+	 * @return string
+	 */
+	function getRepresentationExportFilterGroupName() {
+		return 'article-galley=>native-xml';
+	}
 
 	//
-	// Submission conversion functions
+	// Publication conversion functions
 	//
 	/**
-	 * Create and return a submission node.
+	 * Create and return a publication node.
 	 * @param $doc DOMDocument
 	 * @param $entity Publication
 	 * @return DOMElement
@@ -93,5 +95,4 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter {
 
 		return $entityNode;
 	}
-
 }

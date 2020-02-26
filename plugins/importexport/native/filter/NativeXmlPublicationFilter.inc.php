@@ -121,10 +121,6 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	 */
 	function handleChildElement($n, $publication) {
 		switch ($n->tagName) {
-			// case 'artwork_file':
-			// case 'supplementary_file':
-			// 	$this->parseSubmissionFile($n, $publication);
-			// 	break;
 			case 'article_galley':
 				$this->parseArticleGalley($n, $publication);
 				break;
@@ -153,15 +149,6 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 		$deployment = $this->getDeployment();
 		$submission = $deployment->getSubmission();
 		switch ($elementName) {
-			case 'submission_file':
-				$importClass='SubmissionFile';
-				break;
-			case 'artwork_file':
-				$importClass='SubmissionArtworkFile';
-				break;
-			case 'supplementary_file':
-				$importClass='SupplementaryFile';
-				break;
 			case 'article_galley':
 				$importClass='ArticleGalley';
 				break;
@@ -178,7 +165,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	}
 
 	/**
-	 * Parse an article galley and add it to the submission.
+	 * Parse an article galley and add it to the publication.
 	 * @param $n DOMElement
 	 * @param $publication Publication
 	 */
@@ -193,12 +180,12 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	}
 
 	/**
-	 * Class-specific methods for published submissions.
+	 * Class-specific methods for published publication.
 	 * @param $publication Publication
 	 * @param DOMElement $node
 	 * @return Publication
 	 */
-	function populatePublishedSubmission($publication, $node) {
+	function populatePublishedPublication($publication, $node) {
 		$deployment = $this->getDeployment();
 		$issue = $deployment->getIssue();
 		if (empty($issue)) {
@@ -260,6 +247,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 		} else {
 			$issue = $issuesByIdentification->next();
 		}
+		
 		return $issue;
 	}
 }

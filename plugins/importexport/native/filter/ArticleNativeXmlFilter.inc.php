@@ -60,34 +60,6 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		$deployment = $this->getDeployment();
 		$submissionNode = parent::createSubmissionNode($doc, $submission);
 
-		// Add the series, if one is designated.
-		// if ($sectionId = $submission->getSectionId()) {
-		// 	$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-		// 	$section = $sectionDao->getById($sectionId, $submission->getContextId());
-		// 	assert(isset($section));
-		// 	$submissionNode->setAttribute('section_ref', $section->getLocalizedAbbrev());
-		// }
-
-		// $publication = $submission->getCurrentPublication();
-		// $isPublished = $publication->getData('status') === STATUS_PUBLISHED;
-		// $isPublished ? $submissionNode->setAttribute('seq', (int) $publication->getData('seq')) : $submissionNode->setAttribute('seq', '0');
-		// $isPublished ? $submissionNode->setAttribute('access_status', $publication->getData('accessStatus')) : $submissionNode->setAttribute('access_status', '0');
-		// // if this is a published submission and not part/subelement of an issue element
-		// // add issue identification element
-		// if ($isPublished && !$deployment->getIssue()) {
-		// 	$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		// 	$issue = $issueDao->getById($publication->getData('issueId'));
-		// 	import('plugins.importexport.native.filter.NativeFilterHelper');
-		// 	$nativeFilterHelper = new NativeFilterHelper();
-		// 	$submissionNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
-		// }
-		// $pages = $submission->getPages();
-		// if (!empty($pages)) $submissionNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'pages', htmlspecialchars($pages, ENT_COMPAT, 'UTF-8')));
-		// // cover images
-		// import('plugins.importexport.native.filter.NativeFilterHelper');
-		// $nativeFilterHelper = new NativeFilterHelper();
-		// $coversNode = $nativeFilterHelper->createCoversNode($this, $doc, $submission);
-		// if ($coversNode) $submissionNode->appendChild($coversNode);
 		return $submissionNode;
 	}
 
