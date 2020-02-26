@@ -149,7 +149,7 @@ class PublicationService extends PKPPublicationService {
 					if (empty($props['abstract'][$localeKey])) {
 						continue;
 					}
-					$wordCount = preg_split('/\s+/', trim(str_replace('&nbsp;', ' ', strip_tags($props['abstract'][$localeKey]))));
+					$wordCount = count(preg_split('/\s+/', trim(str_replace('&nbsp;', ' ', strip_tags($props['abstract'][$localeKey])))));
 					$wordCountLimit = $section->getData('wordCount');
 					if ($wordCountLimit && $wordCount > $wordCountLimit) {
 						if (!isset($errors['abstract'])) {
