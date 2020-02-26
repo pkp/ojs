@@ -52,10 +52,10 @@ class NativeFilterHelper {
 	 * Create and return an object covers node.
 	 * @param $filter NativeExportFilter
 	 * @param $doc DOMDocument
-	 * @param $object Issue|Publication
+	 * @param $object Publication
 	 * @return DOMElement
 	 */
-	function createCoversNode($filter, $doc, $object) {
+	function createPublicationCoversNode($filter, $doc, $object) {
 		$deployment = $filter->getDeployment();
 
 		$context = $deployment->getContext();
@@ -88,13 +88,43 @@ class NativeFilterHelper {
 	}
 
 	/**
+	 * Create and return an object covers node.
+	 * @param $filter NativeExportFilter
+	 * @param $doc DOMDocument
+	 * @param $object Issue
+	 * @return DOMElement
+	 */
+	function createCoversNode($filter, $doc, $object) {
+		$deployment = $filter->getDeployment();
+		$coversNode = null;
+		$coverImages = $object->getCoverImage(null);
+		if (!empty($coverImages)) {
+			$coversNode = $doc->createElementNS($deployment->getNamespace(), 'covers');
+			foreach ($coverImages as $locale => $coverImage) {
+				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
+				$coverNode->setAttribute('locale', $locale);
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($object->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
+
+				import('classes.file.PublicFileManager');
+				$publicFileManager = new PublicFileManager();
+				$filePath = $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImage;
+				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
+				$embedNode->setAttribute('encoding', 'base64');
+				$coverNode->appendChild($embedNode);
+				$coversNode->appendChild($coverNode);
+			}
+		}
+		return $coversNode;
+	}
+
+	/**
 	 * Parse out the object covers.
 	 * @param $filter NativeExportFilter
 	 * @param $node DOMElement
-	 * @param $object Issue|Publication
-	 * @param $assocType ASSOC_TYPE_ISSUE | ASSOC_TYPE_SUBMISSION | ASSOC_TYPE_PUBLICATION
+	 * @param $object Publication
 	 */
-	function parseCovers($filter, $node, $object, $assocType) {
+	function parsePublicationCovers($filter, $node, $object) {
 		$deployment = $filter->getDeployment();
 
 		$coverImages = array();
@@ -103,11 +133,11 @@ class NativeFilterHelper {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
 					case 'cover':
-						$coverImage = $this->parseCover($filter, $n, $object, $assocType);
+						$coverImage = $this->parsePublicationCover($filter, $n, $object);
 						$coverImages[key($coverImage)] = reset($coverImage);
 						break;
 					default:
-						$deployment->addWarning($assocType, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
+						$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
 				}
 			}
 		}
@@ -116,13 +146,33 @@ class NativeFilterHelper {
 	}
 
 	/**
+	 * Parse out the object covers.
+	 * @param $filter NativeExportFilter
+	 * @param $node DOMElement
+	 * @param $object Issue
+	 */
+	function parseCovers($filter, $node, $object) {
+		$deployment = $filter->getDeployment();
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				switch ($n->tagName) {
+					case 'cover':
+						$this->parseCover($filter, $n, $object);
+						break;
+					default:
+						$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
+				}
+			}
+		}
+	}
+
+	/**
 	 * Parse out the cover and store it in the object.
 	 * @param $filter NativeExportFilter
 	 * @param $node DOMElement
-	 * @param $object Issue|Article
-	 * @param $assocType ASSOC_TYPE_ISSUE | ASSOC_TYPE_SUBMISSION
+	 * @param $object Publication
 	 */
-	function parseCover($filter, $node, $object, $assocType) {
+	function parsePublicationCover($filter, $node, $object) {
 		$deployment = $filter->getDeployment();
 
 		$context = $deployment->getContext();
@@ -149,7 +199,7 @@ class NativeFilterHelper {
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
 					default:
-						$deployment->addWarning($assocType, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
+						$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
 				}
 			}
 		}
@@ -157,6 +207,35 @@ class NativeFilterHelper {
 		$coverImagelocale[$locale] = $coverImage;
 
 		return $coverImagelocale;
+	}
+
+	/**
+	 * Parse out the cover and store it in the object.
+	 * @param $filter NativeExportFilter
+	 * @param $node DOMElement
+	 * @param $object Issue
+	 */
+	function parseCover($filter, $node, $object) {
+		$deployment = $filter->getDeployment();
+		$context = $deployment->getContext();
+		$locale = $node->getAttribute('locale');
+		if (empty($locale)) $locale = $context->getPrimaryLocale();
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				switch ($n->tagName) {
+					case 'cover_image': $object->setCoverImage($n->textContent, $locale); break;
+					case 'cover_image_alt_text': $object->setCoverImageAltText($n->textContent, $locale); break;
+					case 'embed':
+						import('classes.file.PublicFileManager');
+						$publicFileManager = new PublicFileManager();
+						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getCoverImage($locale);
+						file_put_contents($filePath, base64_decode($n->textContent));
+						break;
+					default:
+						$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
+				}
+			}
+		}
 	}
 
 }

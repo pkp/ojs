@@ -79,6 +79,9 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 
 		// Handle metadata in subelements.
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) if (is_a($n, 'DOMElement')) switch($n->tagName) {
+			case 'id':
+				$this->parseIdentifier($n, $issueGalley);
+				break;
 			case 'label': $issueGalley->setLabel($n->textContent); break;
 			case 'issue_file':
 				$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
@@ -107,6 +110,27 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 
 		$issueGalleyDao->insertObject($issueGalley);
 		return $issueGalley;
+	}
+
+	/**
+	 * Parse an identifier node and set up the galley object accordingly
+	 * @param $element DOMElement
+	 * @param $issue Issue
+	 */
+	function parseIdentifier($element, $issue) {
+		$deployment = $this->getDeployment();
+		$advice = $element->getAttribute('advice');
+		switch ($element->getAttribute('type')) {
+			case 'internal':
+				// "update" advice not supported yet.
+				assert(!$advice || $advice == 'ignore');
+				break;
+			case 'public':
+				if ($advice == 'update') {
+					$issue->setStoredPubId('publisher-id', $element->textContent);
+				}
+				break;
+		}
 	}
 }
 

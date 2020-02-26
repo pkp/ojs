@@ -89,6 +89,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$issueNode->setAttribute('published', $issue->getPublished());
 		$issueNode->setAttribute('current', $issue->getCurrent());
 		$issueNode->setAttribute('access_status', $issue->getAccessStatus());
+		$issueNode->setAttribute('url_path', $issue->getData('urlPath'));
 
 		$this->createLocalizedNodes($doc, $issueNode, 'description', $issue->getDescription(null));
 		import('plugins.importexport.native.filter.NativeFilterHelper');
@@ -110,7 +111,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	}
 
 	/**
-	 * Create and add identifier nodes to a submission node.
+	 * Create and add identifier nodes to an issue node.
 	 * @param $doc DOMDocument
 	 * @param $issueNode DOMElement
 	 * @param $issue Issue
@@ -194,6 +195,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$exportFilter->setIncludeSubmissionsNode(true);
 
 		$submissionsIterator = Services::get('submission')->getMany([
+			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
 		]);
 		$articlesDoc = $exportFilter->execute(iterator_to_array($submissionsIterator));

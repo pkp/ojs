@@ -78,6 +78,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			$issue->setPublished($node->getAttribute('published'));
 			$issue->setCurrent($node->getAttribute('current'));
 			$issue->setAccessStatus($node->getAttribute('access_status'));
+			$issue->setData('urlPath', $node->getAttribute('url_path'));
 			if ($issue) $issueDao->updateCurrent($context->getId());
 			$issueDao->insertObject($issue);
 			$deployment->addProcessedObjectId(ASSOC_TYPE_ISSUE, $issue->getId());

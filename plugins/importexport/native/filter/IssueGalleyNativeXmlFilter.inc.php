@@ -80,6 +80,8 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 		$issueGalleyNode->setAttribute('locale', $issueGalley->getLocale());
 		$issueGalleyNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'label', htmlspecialchars($issueGalley->getLabel(), ENT_COMPAT, 'UTF-8')));
 
+		$this->addIdentifiers($doc, $issueGalleyNode, $issueGalley);
+
 		$this->addFile($doc, $issueGalleyNode, $issueGalley);
 
 		return $issueGalleyNode;
@@ -115,6 +117,28 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$issueFileNode->appendChild($embedNode);
 
 			$issueGalleyNode->appendChild($issueFileNode);
+		}
+	}
+
+	/**
+	 * Create and add identifier nodes to an issue galley node.
+	 * @param $doc DOMDocument
+	 * @param $issueGalleyNode DOMElement
+	 * @param $issueGalley IssueGalley
+	 */
+	function addIdentifiers($doc, $issueGalleyNode, $issueGalley) {
+		$deployment = $this->getDeployment();
+
+		// Add internal ID
+		$issueGalleyNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $issueGalley->getId()));
+		$node->setAttribute('type', 'internal');
+		$node->setAttribute('advice', 'ignore');
+
+		// Add public ID
+		if ($pubId = $issueGalley->getStoredPubId('publisher-id')) {
+			$issueGalleyNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', htmlspecialchars($pubId, ENT_COMPAT, 'UTF-8')));
+			$node->setAttribute('type', 'public');
+			$node->setAttribute('advice', 'update');
 		}
 	}
 }

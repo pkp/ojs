@@ -71,15 +71,6 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	function &process(&$document) {
 		$importedObjects =& parent::process($document);
 
-		// Index imported content
-		// $articleSearchIndex = Application::getSubmissionSearchIndex();
-		// foreach ($importedObjects as $submission) {
-		// 	assert(is_a($submission, 'Submission'));
-		// 	$articleSearchIndex->submissionMetadataChanged($submission);
-		// 	$articleSearchIndex->submissionFilesChanged($submission);
-		// }
-		// $articleSearchIndex->submissionChangesFinished();
-
 		return $importedObjects;
 	}
 
@@ -136,7 +127,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 			case 'covers':
 				import('plugins.importexport.native.filter.NativeFilterHelper');
 				$nativeFilterHelper = new NativeFilterHelper();
-				$nativeFilterHelper->parseCovers($this, $n, $publication, ASSOC_TYPE_PUBLICATION);
+				$nativeFilterHelper->parsePublicationCovers($this, $n, $publication);
 				break;
 			default:
 				parent::handleChildElement($n, $publication);

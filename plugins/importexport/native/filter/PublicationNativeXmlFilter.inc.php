@@ -90,7 +90,7 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter {
 		// cover images
 		import('plugins.importexport.native.filter.NativeFilterHelper');
 		$nativeFilterHelper = new NativeFilterHelper();
-		$coversNode = $nativeFilterHelper->createCoversNode($this, $doc, $entity);
+		$coversNode = $nativeFilterHelper->createPublicationCoversNode($this, $doc, $entity);
 		if ($coversNode) $entityNode->appendChild($coversNode);
 
 		return $entityNode;
