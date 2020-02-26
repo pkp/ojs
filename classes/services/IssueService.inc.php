@@ -288,7 +288,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 					$issueGalleyDao = \DAORegistry::getDAO('IssueGalleyDAO');
 					$galleys = $issueGalleyDao->getByIssueId($issue->getId());
 					if ($galleys) {
-						$galleyArgs = array_merge($args, array('parent' => $issue));
+						$galleyArgs = array_merge($args, array('issue' => $issue));
 						foreach ($galleys as $galley) {
 							$data[] = ($prop === 'galleys')
 								? \Services::get('galley')->getFullProperties($galley, $galleyArgs)
