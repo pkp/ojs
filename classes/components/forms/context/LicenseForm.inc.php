@@ -9,7 +9,7 @@
  * @class LicenseForm
  * @ingroup classes_controllers_form
  *
- * @brief Add OJS-specific details to the license settings forms
+ * @brief Add OPS-specific details to the license settings forms
  */
 namespace APP\components\forms\context;
 use \PKP\components\forms\context\PKPLicenseForm;
