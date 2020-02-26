@@ -97,32 +97,49 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		$context = $request->getContext();
 		$dispatcher = $request->getDispatcher();
 
-		$publication = !empty($args['publication'])
-			? $args['publication']
-			: $args['publication'] = Services::get('publication')->get($galley->getData('publicationId'));
+		if (is_a($galley, 'ArticleGalley')) {
+			$publication = !empty($args['publication'])
+				? $args['publication']
+				: $args['publication'] = Services::get('publication')->get($galley->getData('publicationId'));
 
-		$submission = !empty($args['submission'])
-			? $args['submission']
-			: $args['submission'] = Services::get('submission')->get($publication->getData('submissionId'));
+			$submission = !empty($args['submission'])
+				? $args['submission']
+				: $args['submission'] = Services::get('submission')->get($publication->getData('submissionId'));
+		}
+
 
 		$values = [];
 
 		foreach ($props as $prop) {
 			switch ($prop) {
 				case 'urlPublished':
-					$values[$prop] = $dispatcher->url(
-						$request,
-						ROUTE_PAGE,
-						$context->getPath(),
-						'article',
-						'view',
-						[
-							$submission->getBestId(),
-							'version',
-							$publication->getId(),
-							$galley->getBestGalleyId(),
-						]
-					);
+					if (is_a($galley, 'IssueGalley')) {
+						$values[$prop] = $dispatcher->url(
+							$request,
+							ROUTE_PAGE,
+							$context->getPath(),
+							'issue',
+							'view',
+							[
+								$galley->getIssueId(),
+								$galley->getId()
+							]
+						);
+					} else {
+						$values[$prop] = $dispatcher->url(
+							$request,
+							ROUTE_PAGE,
+							$context->getPath(),
+							'article',
+							'view',
+							[
+								$submission->getBestId(),
+								'version',
+								$publication->getId(),
+								$galley->getBestGalleyId(),
+							]
+						);
+					}
 					break;
 				case 'file':
 					$values[$prop] = null;
@@ -131,14 +148,16 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 						break;
 					}
 					$values[$prop] = array(
-						'id' => $file->getFileId(),
 						'fileName' => $file->getOriginalFileName(),
 					);
 					if (is_a($file, 'SubmissionFile')) {
+						$values[$prop]['id'] = $file->getFileId();
 						$values[$prop]['revision'] = $file->getRevision();
 						$values[$prop]['fileStage'] = $file->getFileStage();
 						$values[$prop]['genreId'] = $file->getGenreId();
 						$values[$prop]['fileName'] = $file->getClientFileName();
+					} elseif (is_a($file, 'IssueFile')) {
+						$values[$prop]['id'] = $file->getId();
 					}
 					if (is_a($file, 'SupplementaryFile')) {
 						$values[$prop]['metadata'] = array(
