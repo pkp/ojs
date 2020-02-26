@@ -92,6 +92,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	function populateObject($publication, $node) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
+
 		$sectionAbbrev = $node->getAttribute('section_ref');
 		if ($sectionAbbrev !== '') {
 			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
@@ -103,13 +104,15 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 			}
 		}
 		// check if article is related to an issue, but has no published date
-		$datePublished = $node->getAttribute('date_published');
-		$issue = $deployment->getIssue();
-		$issue_identification = $node->getElementsByTagName('issue_identification');
-		if (!$datePublished && ($issue || $issue_identification->length)) {
-			$titleNodes = $node->getElementsByTagName('title');
-			$deployment->addError(ASSOC_TYPE_SUBMISSION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
-		}
+		// $datePublished = $node->getAttribute('date_published');
+		// $issue = $deployment->getIssue();
+		// $issue_identification = $node->getElementsByTagName('issue_identification');
+		// if (!$datePublished && ($issue || $issue_identification->length)) {
+		// 	$titleNodes = $node->getElementsByTagName('title');
+		// 	$deployment->addError(ASSOC_TYPE_SUBMISSION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
+		// }
+
+		$this->populatePublishedPublication($publication, $node);
 
 		return parent::populateObject($publication, $node);
 	}
@@ -187,7 +190,10 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	 */
 	function populatePublishedPublication($publication, $node) {
 		$deployment = $this->getDeployment();
+
+		$context = $deployment->getContext();
 		$issue = $deployment->getIssue();
+
 		if (empty($issue)) {
 			$issueIdentificationNodes = $node->getElementsByTagName('issue_identification');
 
@@ -199,10 +205,11 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 				$issue = $this->parseIssueIdentification($publication, $issueIdentificationNode);
 			}
 		}
-		$publication->setSequence($node->getAttribute('seq'));
-		$publication->setAccessStatus($node->getAttribute('access_status'));
-		if ($issue) $publication->setIssueId($issue->getId());
 		
+		if ($issue) {
+			$publication->setData('issueId', $issue->getId());
+		}
+			
 		return $publication;
 	}
 
@@ -239,13 +246,34 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 				}
 			}
 		}
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /** @var $issueDao IssueDAO */
 		$issue = null;
 		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
 		if ($issuesByIdentification->getCount() != 1) {
 			$deployment->addError(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => $node->ownerDocument->saveXML($node))));
 		} else {
 			$issue = $issuesByIdentification->next();
+		}
+
+		if (!isset($issue)) {
+			$issue = $issueDao->newDataObject();
+
+			$issue->setVolume($vol);
+			$issue->setNumber($num);
+			$issue->setYear($year);
+			$issue->setShowVolume(1);
+			$issue->setShowNumber(1);
+			$issue->setShowYear(1);
+			$issue->setShowTitle(0);
+			$issue->setCurrent(0);
+			$issue->setPublished(0);
+			$issue->setAccessStatus(0);
+			$issue->setJournalId($context->getId());
+			$issue->setTitle($titles, null);
+
+			$issueId = $issueDao->insertObject($issue);
+
+			$issue->setId($issueId);
 		}
 		
 		return $issue;

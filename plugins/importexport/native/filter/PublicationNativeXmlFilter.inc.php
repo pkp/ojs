@@ -76,8 +76,8 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter {
 
 		// if this is a published submission and not part/subelement of an issue element
 		// add issue identification element
-		if ($isPublished && !$deployment->getIssue()) {
-			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+		if ($entity->getData('issueId') && !$deployment->getIssue()) {
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /** @var $issueDao IssueDAO */
 			$issue = $issueDao->getById($entity->getData('issueId'));
 			import('plugins.importexport.native.filter.NativeFilterHelper');
 			$nativeFilterHelper = new NativeFilterHelper();

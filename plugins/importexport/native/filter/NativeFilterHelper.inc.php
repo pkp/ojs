@@ -57,6 +57,9 @@ class NativeFilterHelper {
 	 */
 	function createCoversNode($filter, $doc, $object) {
 		$deployment = $filter->getDeployment();
+
+		$context = $deployment->getContext();
+
 		$coversNode = null;
 		$coverImages = $object->getData('coverImage');
 		if (!empty($coverImages)) {
@@ -67,22 +70,12 @@ class NativeFilterHelper {
 				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
 				$coverNode->setAttribute('locale', $locale);
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImageName, ENT_COMPAT, 'UTF-8')));
-				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($object->getLocalizedData('coverImageAltText', $locale), ENT_COMPAT, 'UTF-8')));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($coverImage['altText'], ENT_COMPAT, 'UTF-8')));
 
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
 
-				$contextId = null;
-
-				if (is_a($object, 'Publication')) {
-					/** @var $submissionService APP\Services\SubmissionService */
-					$submissionService = Services::get('submission');
-					$submission = $submissionService->get($object->getData('submissionId'));
-
-					$contextId = $submission->getData('contextId');
-				} else if (is_a($object, 'Issue')) {
-					$contextId = $object->getData('contextId');
-				}
+				$contextId = $context->getId();
 				
 				$filePath = $publicFileManager->getContextFilesPath($contextId) . '/' . $coverImageName;
 				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
@@ -103,17 +96,23 @@ class NativeFilterHelper {
 	 */
 	function parseCovers($filter, $node, $object, $assocType) {
 		$deployment = $filter->getDeployment();
+
+		$coverImages = array();
+
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
 					case 'cover':
-						$this->parseCover($filter, $n, $object, $assocType);
+						$coverImage = $this->parseCover($filter, $n, $object, $assocType);
+						$coverImages[key($coverImage)] = reset($coverImage);
 						break;
 					default:
 						$deployment->addWarning($assocType, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
 				}
 			}
 		}
+
+		$object->setData('coverImage', $coverImages);
 	}
 
 	/**
@@ -125,18 +124,28 @@ class NativeFilterHelper {
 	 */
 	function parseCover($filter, $node, $object, $assocType) {
 		$deployment = $filter->getDeployment();
+
 		$context = $deployment->getContext();
+
 		$locale = $node->getAttribute('locale');
 		if (empty($locale)) $locale = $context->getPrimaryLocale();
+
+		$coverImagelocale = array();
+		$coverImage = array();
+
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
-					case 'cover_image': $object->setData('coverImage', $n->textContent, $locale); break;
-					case 'cover_image_alt_text': $object->setData('coverImageAltText', $n->textContent, $locale); break;
+					case 'cover_image': 
+						$coverImage['uploadName'] = $n->textContent; 
+						break;
+					case 'cover_image_alt_text':
+						$coverImage['altText'] = $n->textContent; 
+						break;
 					case 'embed':
 						import('classes.file.PublicFileManager');
 						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getData('coverImage', $locale);
+						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $coverImage['uploadName'];
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
 					default:
@@ -144,6 +153,10 @@ class NativeFilterHelper {
 				}
 			}
 		}
+
+		$coverImagelocale[$locale] = $coverImage;
+
+		return $coverImagelocale;
 	}
 
 }
