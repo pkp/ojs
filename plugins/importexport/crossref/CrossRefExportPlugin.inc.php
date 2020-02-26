@@ -159,17 +159,14 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * Hook callback that returns the deposit setting's names,
-	 * to consider them by article or issue update.
-	 *
-	 * @copydoc PubObjectsExportPlugin::getAdditionalFieldNames()
+	 * Get a list of additional setting names that should be stored with the objects.
+	 * @return array
 	 */
-	function getAdditionalFieldNames($hookName, $args) {
-		parent::getAdditionalFieldNames($hookName, $args);
-		$additionalFields =& $args[1];
-		assert(is_array($additionalFields));
-		$additionalFields[] = $this->getDepositBatchIdSettingName();
-		$additionalFields[] = $this->getFailedMsgSettingName();
+	protected function _getObjectAdditionalSettings() {
+		return array_merge(parent::_getObjectAdditionalSettings(), array(
+			$this->getDepositBatchIdSettingName(),
+			$this->getFailedMsgSettingName(),
+		));
 	}
 
 	/**
