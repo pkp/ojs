@@ -1,2 +1,145 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-02-25 07:54+0000\n"
+"Last-Translator: Lilian Nassi Calo <calolilian@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ops/"
+"default/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/"
+">________________________________________________________________________<br/"
+"><a href=\"{$contextUrl}\">\n"
+"{$contextName}</a>"
+
+msgid "default.genres.sourceTexts"
+msgstr "Textos fonte"
+
+msgid "default.genres.dataSet"
+msgstr "Conjunto de dados"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Análise de dados"
+
+msgid "default.genres.transcripts"
+msgstr "Transcrições"
+
+msgid "default.genres.researchResults"
+msgstr "Resultado de pesquisa"
+
+msgid "default.genres.researchMaterials"
+msgstr "Material de Pesquisa"
+
+msgid "default.genres.researchInstrument"
+msgstr "Instrumento de Pesquisa"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editores de serie"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor de serie"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.plural.editor"
+msgstr "Editores do servidor"
+
+msgid "default.groups.name.editor"
+msgstr "Editor de servidores"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.plural.manager"
+msgstr "Administradores de servidores"
+
+msgid "default.groups.name.manager"
+msgstr "Administrador de servidores"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Este servidor fornece acesso aberto imediato ao seu conteúdo, sob o "
+"princípio de que a disponibilização aberta e gratuita da pesquisa ao público "
+"apóia um maior intercâmbio global de conhecimento."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Os nomes e e-mails inseridos no site deste servidor serão utilizados "
+"exclusivamente para  as finalidades estabelecidas por este servidor e não "
+"estarão disponíveis para nenhum outro propósito nem para nenhuma outra "
+"parte.</p>"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Encorajamos aos bibliotecários de pesquisa a incluir este servidor entre "
+"aqueles existentes em suas biblioteca. Além disso, vale a pena assinalar que "
+"o sistema de publicação de código aberto deste servidor é adequado para que "
+"as bibliotecas hospedem os membros de sua faculdade (ver <a href=\""
+"http://pkp.sfu.ca\">Public Knowledge Project</a>)."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Interessado em submeter a este servidor? Recomendamos que revise a página <a "
+"href=\"{$indexUrl}{$contextPath}/about\">Sobre</a> para conhecer as "
+"políticas, assim como as <a href=\"{$indexUrl}{$contextPath}/about/"
+"submissions#authorGuidelines\">Diretrizes do Autor</a>. Os autores devem <a "
+"href=\"{$indexUrl}{$contextPath}/user/register\"> se registrar</a> antes de "
+"submeter ou, se já estão registrados, podem simplesmente <a href=\"{$ "
+"indexUrl}/index/log in\"> logar </a> e começar o processo."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Encorajamos os leitores a se registrar no serviço de notificação de "
+"publicação deste servidor. Utilize o link <a href=\""
+"{$indexUrl}{$contextPath}/user/register\"> Registre-se </a> no link na parte "
+"superior da página de inicio. Esta lista também permite ao servidor reclamar "
+"um certo nível de suporte ou leitores. Consulte a <a href=\""
+"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\"> Declaração "
+"de privacidade </a>, que garante aos leitores que seu nome e e-mail não "
+"serão utilizados para outras finalidades."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+"O texto segue os requisitos estilísticos e bibliográficos descritos nas "
+"Diretrizes do Autor."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"O texto está em espaço simples; use uma fonte 12 pontos; use itálico, em vez "
+"de sublinhado (exceto com URLs); e todas as ilustrações, figuras e tabelas "
+"são colocadas no texto nos pontos apropriados, ao invés de no final."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Onde disponíveis, as URLs das referências foram fornecidas."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"O arquivo da submissão está em formato de arquivo de documento OpenOffice, "
+"Microsoft Word ou RTF."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"A submissão não foi publicado anteriormente, nem está em sendo considerada "
+"em outro servidor (ou uma explicação foi fornecida em Comentários ao Editor)."
+
+msgid "default.genres.article"
+msgstr "Texto de preprint"
+
+msgid "section.default.path"
+msgstr "preprints"
+
+msgid "section.default.abbrev"
+msgstr "PRE"
+
+msgid "section.default.title"
+msgstr "Preprints"

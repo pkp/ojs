@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-26 08:36+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ops/admin/id/"
+">\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} berhasil dibuat."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Deskripsi server"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} berhasil disunting."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Path yang dimasukkan sudah digunakan oleh server lain."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Path hanya boleh berisi huruf, angka dan karakter _ dan - serta harus "
+"diawali dan diakhiri dengan huruf atau angka."
+
+msgid "admin.contexts.create"
+msgstr "Buat Server"
+
+msgid "admin.systemConfiguration"
+msgstr "Konfigurasi OPS"
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Mengunduh paket bahasa dari server web Public Knowledge Project saat ini "
+"tidak tersedia karena:</p>\t<ul>\t\t<li>Server Anda tidak memiliki atau "
+"mengizinkan eksekusi utilitas \"tar\" GNU.</li>\t\t<li>OPS tidak dapat "
+"memodifikasi file registri lokal, biasanya \"registry/locales.xml\".</li>\t"
+"</ul><p>Paket bahasa dapat diunduh secara manual dari <a href =\""
+"http://pkp.sfu.ca\">situs web PKP</a>.</p>"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"Tidak dapat menambahkan bahasa baru ke file registri bahasa, biasanya \""
+"registry/locales.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Tidak dapat membuka deskriptor bahasa dari situs web PKP."
+
+msgid "admin.languages.download"
+msgstr "Unduh Bahasa"
+
+msgid "admin.languages.localeInstalled"
+msgstr "Bahasa \"{$locale}\" telah diinstal."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Pilih bahasa tambahan yang ingin dipasang yang mendukung sistem ini. Bahasa "
+"harus diinstal sebelum dapat digunakan oleh server yang dihosting. Lihat "
+"dokumentasi OPS untuk informasi tentang menambahkan dukungan untuk bahasa "
+"baru."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Yakin ingin menghapus bahasa ini? Ini dapat mempengaruhi server yang sedang "
+"menggunakan bahasa ini."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Bahasa yang ditandai kemungkinan belum lengkap."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Yakin ingin menonaktifkan bahasa ini? Ini akan mempengaruhi server yang "
+"sedang menggunakan bahasa tersebut."
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Permintaan pada situs utama akan dialihkan ke server ini. Hal ini akan "
+"bergunakan, sebagai contoh, jika situs hanya menyewa satu server."
+
+msgid "admin.settings.redirect"
+msgstr "Pengarahan Server"
+
+msgid "admin.settings.info.success"
+msgstr "Informasi situs telah berhasil diperbaharui."
+
+msgid "admin.settings.config.success"
+msgstr "Pengaturan konfigurasi situs telah berhasil diperbaharui."
+
+msgid "admin.settings.appearance.success"
+msgstr "Pengaturan tampilan situs telah berhasil diperbaharui."
+
+msgid "admin.hostedContexts"
+msgstr "Rumah Server"
