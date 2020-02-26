@@ -124,6 +124,20 @@
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
 			outputType="class::classes.article.ArticleGalley[]" />
+		<!-- Publication native XML input -->
+		<filterGroup
+			symbolic="publication=>native-xml"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="class::classes.publication.Publication"
+			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
+		<!-- Publication native XML input -->
+		<filterGroup
+			symbolic="native-xml=>Publication"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="xml::schema(plugins/importexport/native/native.xsd)"
+			outputType="class::classes.publication.Publication" />
 	</filterGroups>
 	<filters>
 		<!-- Native XML article output -->
@@ -211,7 +225,7 @@
 			class="plugins.importexport.native.filter.PublicationNativeXmlFilter"
 			isTemplate="0" />
 		<filter
-			inGroup="native-xml=>publication"
+			inGroup="native-xml=>Publication"
 			class="plugins.importexport.native.filter.NativeXmlPublicationFilter"
 			isTemplate="0" />
 	</filters>
