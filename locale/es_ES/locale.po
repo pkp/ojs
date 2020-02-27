@@ -263,9 +263,6 @@ msgstr "Búsqueda de preprint"
 msgid "submissions.published"
 msgstr "Publicado"
 
-msgid "submissions.sec"
-msgstr "Sec"
-
 msgid "article.abstract"
 msgstr "Resumen"
 

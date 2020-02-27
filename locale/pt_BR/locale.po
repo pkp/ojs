@@ -246,9 +246,6 @@ msgstr "Busca de Preprint"
 msgid "submissions.published"
 msgstr "Publicado"
 
-msgid "submissions.sec"
-msgstr "secundário"
-
 msgid "article.abstract"
 msgstr "Resumo"
 

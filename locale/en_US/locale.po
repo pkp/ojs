@@ -74,9 +74,6 @@ msgstr "Details"
 msgid "article.abstract"
 msgstr "Abstract"
 
-msgid "submissions.sec"
-msgstr "Sec"
-
 msgid "submissions.published"
 msgstr "Published"
 
