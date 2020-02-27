@@ -296,9 +296,6 @@ msgstr "زمان‌بندی شده برای انتشار در  {$issueName}"
 msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
 
-msgid "submissions.sec"
-msgstr "نوع"
-
 msgid "submissions.step1"
 msgstr "مرحله 1"
 

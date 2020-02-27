@@ -290,9 +290,6 @@ msgstr "Programmato per la pubblicazione in {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
 
-msgid "submissions.sec"
-msgstr "Sez"
-
 msgid "submissions.step1"
 msgstr "Step 1"
 

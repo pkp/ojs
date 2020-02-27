@@ -281,9 +281,6 @@ msgstr "Zaplanowane do publikacji w {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(do uzgodnienia)"
 
-msgid "submissions.sec"
-msgstr "Dział"
-
 msgid "submissions.step1"
 msgstr "Krok 1"
 

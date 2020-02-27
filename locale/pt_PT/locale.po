@@ -236,9 +236,6 @@ msgstr "Layout concluído"
 msgid "submissions.proofreadingComplete"
 msgstr "Leitura de Provas realizada"
 
-msgid "submissions.sec"
-msgstr "Secção"
-
 msgid "submissions.step1"
 msgstr "Passo 1"
 

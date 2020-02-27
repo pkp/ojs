@@ -293,9 +293,6 @@ msgstr "Ütemezett pubikációk {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
 
-msgid "submissions.sec"
-msgstr "Sec_Másodperc"
-
 msgid "submissions.step1"
 msgstr "1. lépés"
 

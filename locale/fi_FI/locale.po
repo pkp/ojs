@@ -293,9 +293,6 @@ msgstr "Ajoitettu julkaistavaksi numerossa {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(ilmoitetaan myöhemmin)"
 
-msgid "submissions.sec"
-msgstr "Os."
-
 msgid "submissions.step1"
 msgstr "Vaihe 1"
 

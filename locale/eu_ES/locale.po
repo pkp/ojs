@@ -281,9 +281,6 @@ msgstr "{$issueName} zenbakian argitaratzeko programatua."
 msgid "submission.scheduledIn.tba"
 msgstr "(Adieraziko den)"
 
-msgid "submissions.sec"
-msgstr "Atl"
-
 msgid "submissions.step1"
 msgstr "1. urratsa"
 

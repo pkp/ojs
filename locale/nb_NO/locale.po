@@ -227,9 +227,6 @@ msgstr "Planlagt publisert i {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(kommer)"
 
-msgid "submissions.sec"
-msgstr "Seksj."
-
 msgid "submissions.step1"
 msgstr "Trinn 1"
 

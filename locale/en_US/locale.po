@@ -305,9 +305,6 @@ msgstr "Scheduled for publication in {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
 
-msgid "submissions.sec"
-msgstr "Sec"
-
 msgid "submissions.step1"
 msgstr "Step 1"
 

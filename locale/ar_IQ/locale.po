@@ -305,9 +305,6 @@ msgstr "مجدول للنشر في {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
 
-msgid "submissions.sec"
-msgstr "قسم"
-
 msgid "submissions.step1"
 msgstr "الخطوة 1"
 

@@ -308,9 +308,6 @@ msgstr "Agendado para publicação na edição {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(A designar)"
 
-msgid "submissions.sec"
-msgstr "Seção"
-
 msgid "submissions.step1"
 msgstr "Passo 1"
 

@@ -310,9 +310,6 @@ msgstr "Publication planifiée dans la revue {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(À confirmer)"
 
-msgid "submissions.sec"
-msgstr "Rubr"
-
 msgid "submissions.step1"
 msgstr "Étape 1"
 

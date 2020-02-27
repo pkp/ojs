@@ -290,9 +290,6 @@ msgstr "Listo para publicar en {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(Anuncio pendiente)"
 
-msgid "submissions.sec"
-msgstr "Secc"
-
 msgid "submissions.step1"
 msgstr "Paso 1"
 

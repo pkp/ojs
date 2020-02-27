@@ -305,9 +305,6 @@ msgstr "Запланировано к публикации в выпуске «{
 msgid "submission.scheduledIn.tba"
 msgstr "Будет назначено позже"
 
-msgid "submissions.sec"
-msgstr "Раздел"
-
 msgid "submissions.step1"
 msgstr "Шаг 1"
 

@@ -272,9 +272,6 @@ msgstr "在出版计划的 {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
 
-msgid "submissions.sec"
-msgstr "Sec"
-
 msgid "submissions.step1"
 msgstr "步骤一"
 

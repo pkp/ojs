@@ -299,9 +299,6 @@ msgstr "{$issueName} sayısında yayınlanacak."
 msgid "submission.scheduledIn.tba"
 msgstr "(Bildirilecek)"
 
-msgid "submissions.sec"
-msgstr "Böl."
-
 msgid "submissions.step1"
 msgstr "Adım 1"
 

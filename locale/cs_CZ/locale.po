@@ -287,9 +287,6 @@ msgstr "Naplánována publikace v {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(Bude oznámeno)"
 
-msgid "submissions.sec"
-msgstr "Sec"
-
 msgid "submissions.step1"
 msgstr "Krok 1"
 

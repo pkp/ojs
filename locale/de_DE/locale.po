@@ -301,9 +301,6 @@ msgstr "Veröffentlichung geplant für {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(Ankündigung folgt)"
 
-msgid "submissions.sec"
-msgstr "Rub."
-
 msgid "submissions.step1"
 msgstr "1. Schritt"
 

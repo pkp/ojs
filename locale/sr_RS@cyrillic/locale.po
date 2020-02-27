@@ -224,9 +224,6 @@ msgstr "У плану објављивања за {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(ТБА)"
 
-msgid "submissions.sec"
-msgstr "Секц."
-
 msgid "submissions.step1"
 msgstr "1. корак"
 

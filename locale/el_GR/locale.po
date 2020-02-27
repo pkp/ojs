@@ -296,9 +296,6 @@ msgstr "Προγραμματισμός για δημοσίευση στο {$issu
 msgid "submission.scheduledIn.tba"
 msgstr "Δεν έχει προγραμματισθεί"
 
-msgid "submissions.sec"
-msgstr "Sec"
-
 msgid "submissions.step1"
 msgstr "Βήμα 1"
 

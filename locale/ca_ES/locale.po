@@ -287,9 +287,6 @@ msgstr "Planificada per a la publicació a {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(per anunciar)"
 
-msgid "submissions.sec"
-msgstr "Sec."
-
 msgid "submissions.step1"
 msgstr "Pas 1"
 

@@ -299,9 +299,6 @@ msgstr "Dijadwalkan untuk diterbitkan di {$issueName}."
 msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
 
-msgid "submissions.sec"
-msgstr "Bag"
-
 msgid "submissions.step1"
 msgstr "Langkah 1"
 
