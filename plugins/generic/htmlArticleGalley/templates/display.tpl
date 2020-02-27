@@ -44,7 +44,7 @@
 				{url page="article" op="download" path=$article->getBestId()|to_array:$galley->getBestGalleyId() inline=true}
 			{/capture}
 		{/if}
-		<iframe name="htmlFrame" src="{$htmlUrl}" allowfullscreen webkitallowfullscreen></iframe>
+		<iframe name="htmlFrame" src="{$htmlUrl}" title="{translate key="submission.representationOfTitle" representation=$galley->getLabel() title=$galleyPublication->getLocalizedFullTitle()|escape}" allowfullscreen webkitallowfullscreen></iframe>
 	</div>
 	{call_hook name="Templates::Common::Footer::PageFooter"}
 </body>
