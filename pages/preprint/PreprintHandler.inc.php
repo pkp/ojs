@@ -31,6 +31,9 @@ class PreprintHandler extends Handler {
 	/** galley associated with the request **/
 	var $galley;
 
+	/** fileId associated with the request **/
+	var $fileId;
+
 
 	/**
 	 * @copydoc PKPHandler::authorize()
@@ -123,6 +126,11 @@ class PreprintHandler extends Handler {
 				}
 				$request->getDispatcher()->handle404();
 			}
+
+			// Store the file id if it exists
+			if (!empty($args)) {
+				$this->fileId = array_shift($args);
+			}
 		}
 	}
 
@@ -132,18 +140,6 @@ class PreprintHandler extends Handler {
 	 * @param $request Request
 	 */
 	function view($args, $request) {
-		$preprintId = array_shift($args);
-		$subPath = array_shift($args);
-
-		if ($subPath === 'version') {
-			$publicationId = array_shift($args);
-			$galleyId = array_shift($args);
-			$fileId = array_shift($args);
-		} else {
-			$galleyId = $subPath;
-			$fileId = array_shift($args);
-		}
-
 		$context = $request->getContext();
 		$user = $request->getUser();
 		$preprint = $this->preprint;
@@ -156,7 +152,7 @@ class PreprintHandler extends Handler {
 			'firstPublication' => reset($preprint->getData('publications')),
 			'currentPublication' => $preprint->getCurrentPublication(),
 			'galley' => $this->galley,
-			'fileId' => $fileId,
+			'fileId' => $this->fileId,
 		));
 		$this->setupTemplate($request);
 
@@ -246,8 +242,21 @@ class PreprintHandler extends Handler {
 			}
 
 			// Galley: Prepare the galley file download.
-			if (!HookRegistry::call('PreprintHandler::view::galley', array(&$request, &$this->galley, &$preprint, $publication))) {
-				$request->redirect(null, null, 'download', array($preprint->getId(), $this->galley->getId()));
+			if (!HookRegistry::call('PreprintHandler::view::galley', array(&$request, &$issue, &$this->galley, &$preprint, $publication))) {
+				if ($this->publication->getId() !== $this->preprint->getCurrentPublication()->getId()) {
+					$redirectArgs = [
+						$preprint->getBestId(),
+						'version',
+						$publication->getId(),
+						$this->galley->getBestGalleyId()
+					];
+				} else {
+					$redirectArgs = [
+						$preprint->getId(),
+						$this->galley->getBestGalleyId()
+					];
+				}
+				$request->redirect(null, null, 'download', $redirectArgs);
 			}
 		}
 	}
@@ -305,19 +314,14 @@ class PreprintHandler extends Handler {
 	 * @param PKPRequest $request
 	 */
 	function download($args, $request) {
-		$preprintId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		$fileId = isset($args[2]) ? (int) $args[2] : 0;
-
 		if (!isset($this->galley)) $request->getDispatcher()->handle404();
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
-		else if ($this->userCanViewGalley($request, $preprintId, $galleyId)) {
-			if (!$fileId) {
+		else if ($this->userCanViewGalley($request, $this->preprint->getId(), $this->galley->getId())) {
+			if (!$this->fileId) {
 				$submissionFile = $this->galley->getFile();
 				if ($submissionFile) {
-					$fileId = $submissionFile->getFileId();
+					$this->fileId = $submissionFile->getFileId();
 					// The file manager expects the real preprint id.  Extract it from the submission file.
-					$preprintId = $submissionFile->getSubmissionId();
 				} else { // no proof files assigned to this galley!
 					header('HTTP/1.0 403 Forbidden');
 					echo '403 Forbidden<br>';
@@ -325,10 +329,10 @@ class PreprintHandler extends Handler {
 				}
 			}
 
-			if (!HookRegistry::call('PreprintHandler::download', array($this->preprint, &$this->galley, &$fileId))) {
+			if (!HookRegistry::call('PreprintHandler::download', array($this->preprint, &$this->galley, &$this->fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
 				$submissionFileManager = new SubmissionFileManager($this->preprint->getContextId(), $this->preprint->getId());
-				$submissionFileManager->downloadById($fileId, null, $request->getUserVar('inline')?true:false);
+				$submissionFileManager->downloadById($this->fileId, null, $request->getUserVar('inline')?true:false);
 			}
 		} else {
 			header('HTTP/1.0 403 Forbidden');
