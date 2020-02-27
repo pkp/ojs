@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-27 15:39+0000\n"
+"PO-Revision-Date: 2020-02-27 15:44+0000\n"
 "Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "hu/>\n"
@@ -1732,7 +1732,6 @@ msgstr "A megadott objektum nem található."
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Másolat küldése a fő kapcsolattartónak, akit megadtak a folyóirat beállításokban."
 
-
 msgid "plugins.importexport.common.export.error.inputFileNotReadable"
 msgstr "A beviteli fájl {$param} nem olvasható."
 
@@ -1936,3 +1935,11 @@ msgstr "Cikk"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Használja a cikk megjelenésének dátumát"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Ezek az adatok szerepelhetnek harmadik archiváló félnek átadott "
+"metaadatokban."
+
+msgid "manager.setup.publishing"
+msgstr "Megjelenítési részletek"
