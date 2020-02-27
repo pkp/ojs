@@ -2,13 +2,287 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-13T08:00:00+02:00\n"
+"PO-Revision-Date: 2020-02-27 19:02+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ops/"
+"locale/fr_CA/>\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-13T08:00:00+02:00\n"
-"PO-Revision-Date: 2019-11-13T08:00:00+02:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
+msgid "about.aboutOJSSite"
+msgstr ""
+"Ce site utilise Open Preprint Systems {$ojsVersion}, un logiciel de gestion "
+"et d'édition de serveurs à code source libre développé, pris en charge et "
+"distribué librement par le <a href=\"http://pkp.sfu.ca/\">Public Knowledge "
+"Project</a> sous la license publique générale GNU."
 
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "L'identification publique de cette épreuve existe déjà."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Ce serveur utilise Open Preprint Systems {$ojsVersion}, un logiciel de "
+"gestion et d'édition de serveurs à code source libre développé, pris en "
+"charge et distribué librement par le <a href=\"http://pkp.sfu.ca/\">Public "
+"Knowledge Project</a> sous la license publique générale GNU."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Processus d'édition et de publication d'OPS"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "À propos de ce système de publication"
+
+msgid "about.privacyStatement"
+msgstr "Déclaration de confidentialité"
+
+msgid "about.copyrightNotice"
+msgstr "Mention de droit d'auteur"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Les auteurs-es doivent s'assurer de la conformité de leur soumission avec "
+"l'ensemble des éléments suivants. Les soumissions non conformes pourraient "
+"être retournées aux auteurs-es."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Liste de vérification de la soumission"
+
+msgid "about.authorGuidelines"
+msgstr "Directives aux auteurs-es"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Voir vos soumissions en attente"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Faire une nouvelle soumission"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr ""
+"Faire une nouvelle soumission à la série <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} ou {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} ou {$register} pour pouvoir faire une soumission."
+
+msgid "about.onlineSubmissions.register"
+msgstr "S'inscrire"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Ouvrir une session"
+
+msgid "about.submissions"
+msgstr "Soumissions"
+
+msgid "about.editorialTeam"
+msgstr "Équipe éditoriale"
+
+msgid "about.aboutContext"
+msgstr "À propos du serveur"
+
+msgid "about.contact"
+msgstr "Personne-ressource"
+
+msgid "archive.archivesPageNumber"
+msgstr "Archives - Page {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Archives"
+
+msgid "site.noJournals"
+msgstr "Aucun serveur n'est disponible."
+
+msgid "site.journalView"
+msgstr "Afficher le serveur"
+
+msgid "search.authorDetails"
+msgstr "Renseignements sur l'auteur-e"
+
+msgid "search.authorIndex"
+msgstr "Parcourir l'index des auteurs-es"
+
+#, fuzzy
+msgid "search.searchFor"
+msgstr "Rechercher des prépublications pour"
+
+msgid "index.latestPreprints"
+msgstr "Dernière(s) prépublication(s)"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Vous devez accepter la déclaration de confidentialité de ce site."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Vous devez accepter la déclaration de confidentialité de tout serveur auquel "
+"vous vous inscrivez."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Oui, j'accepte que mes données soient collectées et stockées conformément à "
+"la <a href=\"{$privacyUrl}\" target=\"_blank\">déclaration de "
+"confidentialité</a> de ce serveur."
+
+msgid "user.register.registrationDisabled"
+msgstr ""
+"Ce serveur n'accepte pas les inscriptions d'utilisateurs-trices pour le "
+"moment."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Cette épreuve sera disponible sur un site web distinct."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Malheureusement, vous ne pouvez gérer les droits de cet utilisateur-trice. "
+"Ça peut être à cause des raisons suivantes :\n"
+"\t\t<ul>\n"
+"\t\t\t<li>L'utilisateur-trice est un-e administrateur-trice de site</li>\n"
+"\t\t\t<li>L'utilisateur-trice est actif-ve dans des serveurs que vous ne "
+"gérez pas</li>\n"
+"\t\t</ul>\n"
+"\tCette tâche doit être effectuée par un-e administrateur-trice de site."
+
+msgid "search.results.orderDir.desc"
+msgstr "Descendant"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascendant"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Pertinence"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularité (Mois dernier)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularité (de tous les temps)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Titre du serveur"
+
+msgid "search.results.orderBy.date"
+msgstr "Date de publication"
+
+msgid "search.results.orderBy.author"
+msgstr "Auteur-e"
+
+msgid "search.results.orderBy.article"
+msgstr "Titre de la prépublication"
+
+msgid "search.results.orderBy"
+msgstr "Trier les résultats par"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Prépublication soumise"
+
+msgid "user.role.subEditors"
+msgstr "Éditeurs-trices de série"
+
+msgid "user.role.subEditor"
+msgstr "Éditeur-trice de série"
+
+msgid "user.role.manager"
+msgstr "Administrateur-trice du serveur"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Si vous avez demandé d'être évaluateur-trice, veuillez indiquer vos champs "
+"d'intérêts."
+
+msgid "user.register.otherContextRoles"
+msgstr "Demander les rôles suivants."
+
+msgid "user.register.contextsPrompt"
+msgstr "Avec quel(s) serveur(s) de ce site souhaitez-vous vous inscrire ?"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Inclure les utilisateurs-trices sans rôle sur ce serveur."
+
+msgid "context.context"
+msgstr "Serveur"
+
+msgid "context.contexts"
+msgstr "Serveurs"
+
+msgid "publication.galley.downloads"
+msgstr "Téléchargement(s) {$downloads}"
+
+msgid "submission.dates"
+msgstr "Soumis-e {$submitted} - Publié-e {$published}"
+
+msgid "submission.numberOfVersions"
+msgstr "Il existe {$numberOfVersions} version(s) de cette prépublication"
+
+msgid "submission.search"
+msgstr "Recherche de prépublications"
+
+msgid "submissions.published"
+msgstr "Publié-e"
+
+msgid "article.abstract"
+msgstr "Résumé"
+
+msgid "article.details"
+msgstr "Renseignements"
+
+msgid "publication.version"
+msgstr "Version {$version}"
+
+msgid "common.publications"
+msgstr "Prépublications"
+
+msgid "common.publication"
+msgstr "Prépublication"
+
+msgid "section.emptySection"
+msgstr "Rien n'a encore été publié dans cette série."
+
+msgid "section.pathDescription"
+msgstr ""
+"Chemin d'accès URL de la série. Utiliser des tirets (-) au lieu d'espaces. "
+"Exemple : histoire-culturelle."
+
+msgid "section.description"
+msgstr "Description de l'archive de la série"
+
+msgid "section.policy"
+msgstr "Politique de la série"
+
+msgid "section.abbreviation"
+msgstr "Abréviation"
+
+msgid "section.title"
+msgstr "Titre de la série"
+
+msgid "section.sections"
+msgstr "Série(s)"
+
+msgid "section.section"
+msgstr "Série"
+
+msgid "common.queue.long.active"
+msgstr "Actif-ve"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Non assigné-e"
+
+msgid "navigation.skip.about"
+msgstr "Passer à « À propos du serveur »"
+
+msgid "navigation.browseByAuthor"
+msgstr "Par auteur-e"
+
+msgid "common.software"
+msgstr "Open Preprint Systems"
+
+msgid "context.select"
+msgstr "Passer à un autre serveur :"
+
+msgid "context.current"
+msgstr "Serveur actuel :"
