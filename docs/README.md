@@ -16,7 +16,7 @@ PKP web site at <http://pkp.sfu.ca/>.
 
 ## License
 
-OJS is licensed under the GNU General Public License v2. See the file
+OJS is licensed under the GNU General Public License v3. See the file
 [docs/COPYING](COPYING) for the complete terms of this license.
 
 Third parties are welcome to modify and redistribute OJS in entirety or parts
