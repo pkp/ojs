@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-27 19:51+0000\n"
+"PO-Revision-Date: 2020-02-28 19:34+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ops/"
@@ -24,3 +24,75 @@ msgstr ""
 
 msgid "author.submit"
 msgstr "Nouvelle soumission"
+
+msgid "author.submit.proceedToPublish"
+msgstr "Procéder à la publication"
+
+msgid "author.submit.authorCanPublish"
+msgstr ""
+"Le serveur a été informé de votre soumission et vous avez reçu une "
+"confirmation par courriel pour votre dossier. <b>Toutes les exigences de "
+"publication ont été remplies et vous pouvez passer à la révision et la "
+"publication de votre prépublication</b>."
+
+msgid "author.submit.publishRequirements"
+msgstr ""
+"Le serveur a été informé de votre soumission et vous avez reçu une "
+"confirmation par courriel pour votre dossier. Une fois que le,la rédacteur-"
+"trice aura examiné la soumission, il ou elle publiera votre prépublication "
+"ou vous contactera. Vous pouvez également publier par vous-même une fois les "
+"conditions suivantes remplies :"
+
+msgid "author.submit.authorCanNotPublish"
+msgstr ""
+"Sur ce serveur les auteurs-es ne peuvent pas publier par eux-mêmes et elles-"
+"mêmes. Le serveur a été informé de votre soumission et vous avez reçu une "
+"confirmation par courriel pour votre dossier. Une fois que le,la rédacteur-"
+"trice aura examiné la soumission, il ou elle publiera votre prépublication "
+"ou vous contactera."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Veuillez saisir le résumé de votre prépublication."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"anglais=en ; français=fr ; espagnol=es. <a href=\"http ://www.loc.gov/"
+"standards/iso639-2/php/code_list.php\" target=\"_blank\">Codes "
+"supplémentaires</a>."
+
+msgid "author.submit.form.sectionRequired"
+msgstr ""
+"Veuillez sélectionner une série du serveur appropriée pour cette soumission."
+
+msgid "submission.submit.coverNote"
+msgstr "Commentaires pour le,la rédacteur-trice"
+
+msgid "author.submit.journalSectionDescription"
+msgstr ""
+"Les prépublications doivent être soumises à l'une des séries du serveur."
+
+msgid "author.submit.journalSection"
+msgstr "Séries du serveur"
+
+msgid "author.submit.notAccepting"
+msgstr "Ce serveur n'accepte pas de soumissions pour le moment."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Vous pouvez compléter cette soumission ultérieurement en la sélectionnant "
+"dans le menu des soumissions actives de l'auteur-e."
+
+msgid "author.submit.nextSteps"
+msgstr "Étapes suivantes"
+
+msgid "author.submit.confirmation"
+msgstr "Confirmer"
+
+msgid "author.submit.metadata"
+msgstr "Saisir les métadonnées de la soumission"
+
+msgid "author.submit.upload"
+msgstr "Téléverser la soumission"
+
+msgid "author.submit.start"
+msgstr "Débuter"
