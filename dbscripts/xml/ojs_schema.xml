@@ -64,6 +64,7 @@
 			<NOTNULL/>
 		</field>
 		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6"/>
 		<descr>Journal settings.</descr>
 		<index name="journal_settings_journal_id">
 			<col>journal_id</col>

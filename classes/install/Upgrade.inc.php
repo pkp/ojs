@@ -2180,7 +2180,7 @@ class Upgrade extends Installer {
 					}
 				}
 			}
-			$journalSettingsDao->updateSetting($journal->getId(), 'about', $aboutJournal, true);
+			$journalSettingsDao->updateSetting($journal->getId(), 'about', $aboutJournal, 'string', true);
 			unset($journal);
 		}
 		return true;
@@ -2311,7 +2311,7 @@ class Upgrade extends Installer {
 					}
 				}
 			}
-			$journalSettingsDao->updateSetting($journal->getId(), 'editorialTeam', $masthead, true);
+			$journalSettingsDao->updateSetting($journal->getId(), 'editorialTeam', $masthead, 'string', true);
 			unset($journal);
 		}
 		return true;
@@ -2713,7 +2713,7 @@ class Upgrade extends Installer {
 			}
 			$arraySettingValue['uploadName'] = $newUploadName;
 			$newArraySettingValue[$newLocale] = $arraySettingValue;
-			$journalSettingsDao->updateSetting($row['journal_id'], $row['setting_name'], $newArraySettingValue, true);
+			$journalSettingsDao->updateSetting($row['journal_id'], $row['setting_name'], $newArraySettingValue, 'object', true);
 			$settingValueResult->MoveNext();
 		}
 		$settingValueResult->Close();
