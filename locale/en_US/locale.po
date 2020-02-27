@@ -176,7 +176,7 @@ msgid "index.latestPreprints"
 msgstr "Latest preprints"
 
 msgid "search.searchFor"
-msgstr "Search preprint's for"
+msgstr "Search preprints for"
 
 msgid "search.authorIndex"
 msgstr "Browse Author Index"
@@ -412,4 +412,4 @@ msgid "catalog.sortBy"
 msgstr "Order of preprints"
 
 msgid "catalog.sortBy.categoryDescription"
-msgstr "Choose how to order preprint's in this category."
+msgstr "Choose how to order preprints in this category."

@@ -60,7 +60,7 @@ msgid "manager.sections.confirmDelete"
 msgstr "Are you sure you want to permanently delete this series?"
 
 msgid "manager.sections.alertDelete"
-msgstr "Before this series can be deleted, you must move preprint's published within it into other series."
+msgstr "Before this series can be deleted, you must move preprints published within it into other series."
 
 msgid "manager.sections.create"
 msgstr "Create Series"
@@ -276,7 +276,7 @@ msgstr "User Registration"
 msgid "manager.statistics.defaultMetricDescription"
 msgstr ""
 "\t\tYour server is configured to record more than one usage metric. Usage statistics will be displayed in several contexts."
-"\t\tThere are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used preprint's or to rank"
+"\t\tThere are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used preprints or to rank"
 "\t\tsearch results. Please select one of the configured metrics as a default."
 
 msgid "manager.statistics.statistics"
@@ -337,7 +337,7 @@ msgid "manager.setup.resetPermissions.confirm"
 msgstr "Are you sure you wish to reset permissions data for all preprints? This action can not be undone."
 
 msgid "manager.setup.resetPermissions.description"
-msgstr "Remove the copyright statement and license information for every published preprint, reverting them to the server's current default settings. This will permanently remove all prior copyright and licensing information attached to preprints. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the preprint's published in your server."
+msgstr "Remove the copyright statement and license information for every published preprint, reverting them to the server's current default settings. This will permanently remove all prior copyright and licensing information attached to preprints. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the preprints published in your server."
 
 msgid "manager.setup.resetPermissions.success"
 msgstr "Preprint permissions were successfully reset."
@@ -436,7 +436,7 @@ msgid "stats.publications.details"
 msgstr "Preprint Details"
 
 msgid "stats.publications.none"
-msgstr "No preprint's were found with usage statistics matching these parameters."
+msgstr "No preprints were found with usage statistics matching these parameters."
 
 msgid "stats.publications.totalAbstractViews.timelineInterval"
 msgstr "Total abstract views by date"
