@@ -1,25 +1,25 @@
 	===================================
-	=== Open Journal Systems
+	=== Open Preprint Systems
 	=== The Public Knowledge Project
-	=== Version: 3.2.0
-	=== GIT tag: ojs-3_2_0-0
-	=== Release date: 
+	=== Version: 3.2.0 beta
+	=== GIT tag: ops-3_2_0-0
+	=== Release date: February 28, 2020
 	===================================
 
 
 ## About
 
-Open Journal Systems (OJS) has been developed by the Public Knowledge Project.
-For general information about OJS and other open research systems, visit the
+Open Preprint Systems (OPS) has been developed by the Public Knowledge Project.
+For general information about OPS and other open research systems, visit the
 PKP web site at <http://pkp.sfu.ca/>.
 
 
 ## License
 
-OJS is licensed under the GNU General Public License v2. See the file
+OPS is licensed under the GNU General Public License v3. See the file
 [docs/COPYING](COPYING) for the complete terms of this license.
 
-Third parties are welcome to modify and redistribute OJS in entirety or parts
+Third parties are welcome to modify and redistribute OPS in entirety or parts
 according to the terms of this license. PKP also welcomes patches for
 improvements or bug fixes to the software.
 
@@ -36,7 +36,7 @@ Recommended server requirements:
 
 As PKP does not have the resources to test every possible combination of
 software versions and platforms, no guarantee of correct operation or support
-is implied. We welcome feedback from users who have deployed OJS on systems
+is implied. We welcome feedback from users who have deployed OPS on systems
 other than those listed above.
 
 
@@ -44,18 +44,18 @@ other than those listed above.
 
 A secure deployment can be best achieved by using the following policies:
 
-* Dedicate a database to OJS; use unique credentials to access it.
+* Dedicate a database to OPS; use unique credentials to access it.
 	Configure this database to perform automated backups on a regular
 	basis. Perform a manual backup when upgrading or performing
 	maintenance.
 
-* Configure OJS (`config.inc.php`) to use SHA1 hashing rather than MD5.
+* Configure OPS (`config.inc.php`) to use SHA1 hashing rather than MD5.
 
-* Configure OJS (`config.inc.php`) to use force_ssl_login so that
+* Configure OPS (`config.inc.php`) to use force_ssl_login so that
 	authenticated users communicate with the server via HTTPS.
 
-* Install OJS so that the files directory is NOT a subdirectory of
-	the OJS installation and cannot be accessed directly via the web
+* Install OPS so that the files directory is NOT a subdirectory of
+	the OPS installation and cannot be accessed directly via the web
 	server. Restrict file permissions as much as possible. Automated
 	backups of this directory should be roughly synchronized with
 	database backups.
@@ -63,12 +63,12 @@ A secure deployment can be best achieved by using the following policies:
 
 ## Installation
 
-Please review this document and the [RELEASE](RELEASE) document prior to installing OJS.
+Please review this document and the [RELEASE](RELEASE) document prior to installing OPS.
 If you encounter problems, please also see the [FAQ](FAQ) document in this directory.
 
-To install OJS:
+To install OPS:
 
-1. Extract the OJS archive to the desired location in your web
+1. Extract the OPS archive to the desired location in your web
 	 documents directory.
 
 2. Make the following files and directories (and their contents)
@@ -89,11 +89,11 @@ To install OJS:
 	 directory be placed in a non-web-accessible location (or otherwise
 	 protected from direct access, such as via .htaccess rules).
 	 
-4. Open a web browser to http://yourdomain.com/path/to/ojs/ and
+4. Open a web browser to http://yourdomain.com/path/to/ops/ and
 	 follow the on-screen installation instructions.
 	 
 	 Alternatively, the command-line installer can be used instead by
-	 running the command `php tools/install.php` from your OJS directory.
+	 running the command `php tools/install.php` from your OPS directory.
 	 (Note: with the CLI installer you may need to chown/chmod the public
 	 and uploaded files directories after installation, if the Apache
 	 user is different from the user running the tool.)
@@ -105,14 +105,9 @@ To install OJS:
 		 server configuration questions.
 
 
-## Upgrading
-
-See [docs/UPGRADE.md](UPGRADE.md) for information on upgrading from previous OJS releases.
-
-
 ## Localization
 
-To add support for other languages, the following sets of XML files must be
+To add support for other languages, the following sets of PO files must be
 localized and placed in an appropriately named directory (using ISO locale 
 codes, e.g. `fr_FR`, is recommended):
 
@@ -131,23 +126,22 @@ they can be installed in the system through the site administration web
 interface.
 	
 Translations can be contributed back to PKP for distribution with future
-releases of OJS.
+releases of OPS.
 
 
 ## Scheduled Tasks
 
-OJS supports a mechanism to execute a variety of tasks at scheduled times
-(such as automatic sending of reminder notification emails).
+OPS supports a mechanism to execute a variety of tasks at scheduled times.
 
 To enable support for using scheduled tasks, edit your `config.inc.php` and
 set the `scheduled_tasks` setting to `On`, and set up your operating system to
 periodically execute (as the same user your webserver is running under) the
-PHP script found at `tools/runScheduledTasks.php` in your OJS directory:
+PHP script found at `tools/runScheduledTasks.php` in your OPS directory:
 
 On *nix operating systems, this can be done by adding a simple cron task:
 ```
 # crontab -e www
-0 * * * *	php /path/to/ojs/tools/runScheduledTasks.php
+0 * * * *	php /path/to/ops/tools/runScheduledTasks.php
 ```
 In this example the script would be executed every hour.
 
@@ -156,7 +150,7 @@ On Windows XP systems, this can be done by using the Windows Task Scheduler:
 2) Right-click within the Scheduled Tasks window and choose:
 	New > Scheduled Task
 3) Under the Task tab, in the Run field, enter:
-	php c:\path\to\ojs\tools\runScheduledTasks.php
+	php c:\path\to\ops\tools\runScheduledTasks.php
 4) You will also be asked to specify the folder to start this task in
 	 (which will usually be the folder that PHP was installed into) and
 	 the user under which the task will be executed as.
@@ -174,9 +168,9 @@ interpreter installed on your server.
 ## Third-party Libraries
 
 * See [lib/pkp/lib/libraries.txt](../lib/pkp/lib/libraries.txt) for a list of third-party libraries
-	used by OJS.
+	used by OPS.
 
-* OJS supports the legacy GeoLiteCite database to approximate geolocation
+* OPS supports the legacy GeoLiteCite database to approximate geolocation
 	information for usage statistics. If you would like to use this optional
 	functionality, you can download the database from MaxMind at:
 	http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
