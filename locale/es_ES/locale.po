@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-19 19:36+0000\n"
-"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"PO-Revision-Date: 2020-02-27 19:02+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/locale/es/>"
 "\n"
 "Language: es_ES\n"
@@ -324,3 +324,15 @@ msgstr "Cambie a otro servidor:"
 
 msgid "context.current"
 msgstr "Servidor actual:"
+
+msgid "publication.galley.downloads"
+msgstr "Descargados {$downloads}"
+
+msgid "submission.dates"
+msgstr "Enviados {$submitted} - Publicados {$published}"
+
+msgid "submission.numberOfVersions"
+msgstr "Hay {$numberOfVersions} versiones de este preprint"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "La identificación pública de la galerada ya existe."
