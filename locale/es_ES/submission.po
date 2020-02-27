@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-18 17:36+0000\n"
-"Last-Translator: ernesto spinak <spinaker@montevideo.com.uy>\n"
+"PO-Revision-Date: 2020-02-27 19:02+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ops/submission/"
 "es/>\n"
 "Language: es_ES\n"
@@ -122,3 +122,24 @@ msgstr "Envío en mi rol de ..."
 
 msgid "submission.submit.title"
 msgstr "Enviar un preprint"
+
+msgid "publication.relation.vorDoi"
+msgstr "DOI del artículo publicado"
+
+msgid "publication.relation.published"
+msgstr "El preprint ha sido publicado como artículo en una revista"
+
+msgid "publication.relation.submitted"
+msgstr "El preprint ha sido enviado para publicación en revista"
+
+msgid "publication.relation.none"
+msgstr "El preprint no ha sido enviado para publicación"
+
+msgid "publication.relation.label"
+msgstr "Enviado para publicación"
+
+msgid "publication.relation.success"
+msgstr "Relaciones de publicación guardadas correctamente"
+
+msgid "publication.relation"
+msgstr "Relaciones"
