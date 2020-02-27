@@ -1,2 +1,277 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-02-28 19:34+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ops/"
+"manager/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Limiter le nombre de liens à afficher sur les pages subséquentes de la liste."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Page de liens"
+
+msgid "manager.setup.masthead.success"
+msgstr "Les renseignements du bloc générique de ce serveur ont été mis à jour."
+
+msgid "manager.setup.lists"
+msgstr "Listes"
+
+msgid "manager.setup.lists.success"
+msgstr "Les paramètres de listes pour ce serveur ont été mis à jour."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Fournir une brève description de votre serveur et présenter les rédacteurs-"
+"trices, les directeurs-trices ainsi que les autres membres de votre équipe "
+"éditoriale."
+
+msgid "manager.setup.keyInfo"
+msgstr "Renseignements de base"
+
+msgid "manager.setup.contextTitle"
+msgstr "Titre du serveur"
+
+msgid "manager.setup.serverThumbnail.description"
+msgstr ""
+"Un logo ou une petite image du serveur, laquelle peut être utilisée dans des "
+"listes de serveurs."
+
+msgid "manager.setup.serverThumbnail"
+msgstr "Vignette du serveur"
+
+msgid "manager.setup.contextInitials"
+msgstr "Initiales du serveur"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Inclure tout renseignement sur votre serveur qui serait d'intérêt pour les "
+"lecteurs-trices et auteurs-es. Cela peut comprendre votre politique de libre "
+"accès, l'énoncé de mission du serveur, l'avis de droit d'auteur, la "
+"divulgation de commandites, l'historique du serveur, ainsi qu'une "
+"déclaration de confidentialité."
+
+msgid "manager.setup.contextAbout"
+msgstr "À propos du serveur"
+
+msgid "manager.setup.contextSummary"
+msgstr "Résumé du serveur"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Titre court du serveur"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Vous pouvez limiter le nombre d'éléments (par exemple : soumissions, "
+"utilisateurs-trices, ou assignations) à afficher dans une liste avant "
+"d'afficher, dans une autre page, les éléments subséquents."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Éléments par page"
+
+msgid "manager.setup.information.success"
+msgstr "Les informations pour ce serveur ont été mises à jour."
+
+msgid "manager.setup.information.forReaders"
+msgstr "Pour les lecteurs-trices"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Pour les bibliothécaires"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Pour les auteurs-es"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Une brève description du serveur pour les bibliothécaires, les auteurs-es et "
+"lecteurs-trices potentiels-elles est disponible dans la section « "
+"Renseignements », lorsqu'ajoutée au menu latéral."
+
+msgid "manager.setup.information"
+msgstr "Information"
+
+msgid "manager.setup.identity"
+msgstr "Identité du serveur"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr ""
+"Les utilisateurs-trices peuvent s'inscrire eux-mêmes et elles-mêmes au "
+"serveur."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Préciser combien d'annonces doivent être affichées sur la page d'accueil. "
+"Laissez ce champ vide pour n'en afficher aucune."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Afficher sur la page d'accueil"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Des annonces peuvent être publiées pour informer les lecteurs-trices au "
+"sujet des activités et événements du serveur. Les annonces publiées "
+"s'afficheront sur la page « Annonces »."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Activer les annonces"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"La signature suivante sera ajoutée à la fin de chaque courriel prédéfini "
+"envoyé par le système au nom du serveur."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Afin d'envoyer des courriels non livrés à une adresse de rebond, l"
+"'administrateur-trice du site Web doit activer l'option "
+"<code>allow_envelope_sender</code> dans le fichier de configuration. Une "
+"configuration particulière du serveur pourrait être requise, tel qu'indiqué "
+"dans la documentation d'OPS."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Tout courriel non remis entraînera un message d'erreur envoyé à cette "
+"adresse."
+
+msgid "manager.setup.emailSignature"
+msgstr "Signature"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"L'administrateur-trice se chargera d'inscrire tous et toutes les "
+"utilisateurs-trices."
+
+msgid "manager.setup.contact.success"
+msgstr ""
+"Les renseignements de la personne-ressource pour ce serveur ont été mis à "
+"jour."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Ajouter toute information additionnelle qui devrait être affichée aux "
+"lecteurs-trices sur la page des Annonces."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introduction"
+
+msgid "manager.setup.announcements.success"
+msgstr "Les paramètres des annonces ont été mis à jour."
+
+msgid "manager.setup.announcements"
+msgstr "Annonces"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Feuille de styles de la série"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Équipe éditoriale"
+
+msgid "manager.setup.masthead"
+msgstr "Bloc générique"
+
+msgid "manager.setup"
+msgstr "Paramètres du serveur"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Limiter le nombre de mots du résumé pour cette série (0 pour aucune limite)"
+
+msgid "manager.sections.wordCount"
+msgstr "Décompte de mots"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Ne sera pas inclus dans l'indexation du serveur"
+
+msgid "manager.sections.policy"
+msgstr "Politique de la série"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(Par exemple etc.)"
+
+msgid "manager.sections.identifyType"
+msgstr "Identifier les prépublications publiées dans cette série en tant que"
+
+msgid "manager.setup.form.section.pathRequired"
+msgstr "Un chemin d'accès URL est requis pour cette série"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Aucun-e rédacteur-trice de série n'a encore été désigné-e. Ajouter ce rôle à "
+"au moins un-e utilisateur-trice via « Administration > Paramètres > Rôles et "
+"utilisateurs-trices »."
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Supprimer cet ou cette utilisateur-trice de ce serveur ? Cette action "
+"désinscrira l'utilisateur-trice de tous les rôles dans ce serveur."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Mode de publication"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Utiliser la date de publication de la prépublication"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Un titre abrégé est obligatoire pour la série"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Les prépublications ne peuvent être soumises que par les rédacteurs-trices "
+"et les rédacteurs-trices de séries."
+
+msgid "manager.sections.create"
+msgstr "Créer une série"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Pour pouvoir supprimer cette série, vous devez d'abord déplacer les "
+"prépublications qui y sont publiées dans d'autres séries."
+
+msgid "manager.sections.confirmDelete"
+msgstr ""
+"Êtes-vous certain-e de vouloir supprimer cette série de façon permanente ?"
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Ne pas exiger de résumé"
+
+msgid "manager.people.allUsers"
+msgstr "Tous,toutes les utilisateurs-trices enregistrés-es"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Ceci remplacera n'importe quel paramètre de langue spécifique à un serveur "
+"que vous aviez pour cette langue"
+
+msgid "manager.language.forms"
+msgstr "Formulaires"
+
+msgid "manager.language.submissions"
+msgstr "Soumissions"
+
+msgid "manager.language.ui"
+msgstr "Interface usager"
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Les renseignements de publication ont été mis à jour."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Le serveur offrira son contenu en libre accès."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OPS ne sera pas utilisé pour publier en ligne le contenu du serveur."
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Préciser comment la date de copyright par défaut est sélectionnée pour une "
+"prépublication. Cette valeur par défaut peut être remplacée au cas par cas."
+
+msgid "manager.distribution.access"
+msgstr "Accès"
