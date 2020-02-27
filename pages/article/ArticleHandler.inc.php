@@ -34,6 +34,9 @@ class ArticleHandler extends Handler {
 	/** galley associated with the request **/
 	var $galley;
 
+	/** fileId associated with the request **/
+	var $fileId;
+
 
 	/**
 	 * @copydoc PKPHandler::authorize()
@@ -126,6 +129,11 @@ class ArticleHandler extends Handler {
 				}
 				$request->getDispatcher()->handle404();
 			}
+
+			// Store the file id if it exists
+			if (!empty($args)) {
+				$this->fileId = array_shift($args);
+			}
 		}
 
 		if ($this->publication->getData('issueId')) {
@@ -139,18 +147,6 @@ class ArticleHandler extends Handler {
 	 * @param $request Request
 	 */
 	function view($args, $request) {
-		$articleId = array_shift($args);
-		$subPath = array_shift($args);
-
-		if ($subPath === 'version') {
-			$publicationId = array_shift($args);
-			$galleyId = array_shift($args);
-			$fileId = array_shift($args);
-		} else {
-			$galleyId = $subPath;
-			$fileId = array_shift($args);
-		}
-
 		$context = $request->getContext();
 		$user = $request->getUser();
 		$issue = $this->issue;
@@ -164,7 +160,7 @@ class ArticleHandler extends Handler {
 			'firstPublication' => reset($article->getData('publications')),
 			'currentPublication' => $article->getCurrentPublication(),
 			'galley' => $this->galley,
-			'fileId' => $fileId,
+			'fileId' => $this->fileId,
 		));
 		$this->setupTemplate($request);
 
@@ -287,7 +283,20 @@ class ArticleHandler extends Handler {
 
 			// Galley: Prepare the galley file download.
 			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$this->galley, &$article, $publication))) {
-				$request->redirect(null, null, 'download', array($article->getId(), $this->galley->getId()));
+				if ($this->publication->getId() !== $this->article->getCurrentPublication()->getId()) {
+					$redirectArgs = [
+						$article->getBestId(),
+						'version',
+						$publication->getId(),
+						$this->galley->getBestGalleyId()
+					];
+				} else {
+					$redirectArgs = [
+						$article->getId(),
+						$this->galley->getBestGalleyId()
+					];
+				}
+				$request->redirect(null, null, 'download', $redirectArgs);
 			}
 		}
 	}
@@ -345,19 +354,15 @@ class ArticleHandler extends Handler {
 	 * @param PKPRequest $request
 	 */
 	function download($args, $request) {
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 
 		if (!isset($this->galley)) $request->getDispatcher()->handle404();
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
-		else if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
-			if (!$fileId) {
+		else if ($this->userCanViewGalley($request, $this->article->getId(), $this->galley->getId())) {
+			if (!$this->fileId) {
 				$submissionFile = $this->galley->getFile();
 				if ($submissionFile) {
-					$fileId = $submissionFile->getFileId();
+					$this->fileId = $submissionFile->getFileId();
 					// The file manager expects the real article id.  Extract it from the submission file.
-					$articleId = $submissionFile->getSubmissionId();
 				} else { // no proof files assigned to this galley!
 					header('HTTP/1.0 403 Forbidden');
 					echo '403 Forbidden<br>';
@@ -365,10 +370,10 @@ class ArticleHandler extends Handler {
 				}
 			}
 
-			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$fileId))) {
+			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$this->fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
 				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
-				$submissionFileManager->downloadById($fileId, null, $request->getUserVar('inline')?true:false);
+				$submissionFileManager->downloadById($this->fileId, null, $request->getUserVar('inline')?true:false);
 			}
 		} else {
 			header('HTTP/1.0 403 Forbidden');
