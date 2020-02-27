@@ -51,8 +51,9 @@
 			</h1>
 			<template slot="actions">
 				<pkp-button
+					v-if="submission.status === getConstant('STATUS_PUBLISHED')"
 					element="a"
-					:label="submission.status === getConstant('STATUS_PUBLISHED') ? i18n.view : i18n.preview"
+					:label="i18n.view"
 					:href="submission.urlPublished"
 				></pkp-button>
 				{if $canAccessEditorialHistory}

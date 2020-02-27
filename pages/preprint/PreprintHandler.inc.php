@@ -71,7 +71,7 @@ class PreprintHandler extends Handler {
 			$submission = Services::get('submission')->get($urlPath);
 		}
 
-		if (!$submission) {
+		if (!$submission || $submission->getData('status') !== STATUS_PUBLISHED) {
 			$request->getDispatcher()->handle404();
 		}
 
