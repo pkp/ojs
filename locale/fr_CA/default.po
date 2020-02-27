@@ -1,2 +1,39 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-02-28 19:34+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ops/"
+"default/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Lorsque possible, les URL des références ont été fournies."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"Le fichier de la soumission est dans un des formats de fichier suivants : "
+"OpenOffice, Microsoft Word, RTF ou WordPerfect."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"La soumission n'a pas déjà été publiée et n'est pas considérée actuellement "
+"par un autre serveur. Si ce n'est pas le cas, fournir une explication dans "
+"le champ « Commentaires au,à la rédacteur-trice »."
+
+msgid "default.genres.article"
+msgstr "Texte de la prépublication"
+
+msgid "section.default.path"
+msgstr "prépublications"
+
+msgid "section.default.abbrev"
+msgstr "PRE"
+
+msgid "section.default.title"
+msgstr "Prépublications"
