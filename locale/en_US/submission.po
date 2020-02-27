@@ -36,7 +36,7 @@ msgid "submission.abstract.wordCount.description"
 msgstr "The abstract must be {$wordCount} words or less."
 
 msgid "submission.submit.noContext"
-msgstr "This submission's journal could not be found."
+msgstr "This submission's server could not be found."
 
 msgid "submission.galleyFiles"
 msgstr "Galley Files"
