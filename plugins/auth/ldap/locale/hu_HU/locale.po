@@ -1,2 +1,94 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-02-27 15:39+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
+"hu/>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL biztonsági jellemzők"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Kért hitelesítési ID"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Realm"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Például, \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL mechanizmus"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Használjon SASL-t az egyszerű hitelesítés helyett"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL beállítások (opcionális)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "A kiszolgálón tárolt jelszavak hash formátuma. SSHA ajánlott."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Jelszó titkosítása"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"Az attribútum, amelynek értéke egyedileg azonosítja a felhasználói "
+"objektumot, például az uid vagy cn vagy a sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Fióknév attribútum"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"A manager DN-re és jelszóra csak akkor van szükség, ha a felhasználói profil "
+"/ jelszó szinkronizálása vagy a felhasználói létrehozási lehetőségek "
+"engedélyezve vannak. Ha az LDAP-t kizárólag hitelesítésre fogják használni, "
+"akkor ezeket a lehetőségeket ki lehet hagyni."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Manager jelszó"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Például, \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Manager DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Például, \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Alap DN"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Opcionális. Alapértelmezett: 389 (LDAP) vagy 636 (LDAP over SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Szerver port"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"Például, \"ldap.example.com\", vagy \"ldaps://ldap.example.com\" (SSL "
+"használatához)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Szerver hostneve"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP beállítások"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Ez a beépülő modul lehetővé teszi a felhasználói fiókok hitelesítését és "
+"szinkronizálását, szemben egy külső LDAP adatforrással."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"

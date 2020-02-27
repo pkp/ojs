@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-14 20:38+0000\n"
+"PO-Revision-Date: 2020-02-27 15:39+0000\n"
 "Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/hu/>\n"
@@ -174,7 +174,7 @@ msgid "submission.abstract.wordCount.description"
 msgstr "Az absztrakt legyen {$wordCount} szó vagy kevesebb."
 
 msgid "catalog.browseTitles"
-msgstr "{$numTitles} elem"
+msgstr "{$numTitles} elemek"
 
 msgid "catalog.category.heading"
 msgstr "Összes elem"
@@ -184,3 +184,49 @@ msgstr "Rovat opciók"
 
 msgid "submission.submit.noContext"
 msgstr "Nem található az ehhez a beküldéshez tartozó folyóirat."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"A megjelentetési dátum automatikusan beállítára kerül a szám publikálásakor. "
+"Ne adjon meg megjelentetési dátumot, hacsak nem a cikk már megjelent máshol "
+"korábban és visszadátumozása szükséges."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Megjelentetésre ütmezve a <a href=\"{$issueUrl}\">{$issueName}</a>-ban/ben."
+
+msgid "publication.publishedIn"
+msgstr "Megjelentetve a <a href=\"{$issueUrl}\">{$issueName}</a>-ban/ben."
+
+msgid "publication.required.issue"
+msgstr "A cikket számhoz kell rendelni mielőtt megjeleníthető."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Minden publikálási feltétel teljesült és a {$issue}-ben/ben kerül "
+"megjelentetésre. Biztosan publikálni szeretné?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Minden publikálási feltétel teljesült és a {$issue}-val/vel együtt kerül "
+"majd publikálásra. Biztosan publikálásra szeretné ütemezni?"
+
+msgid "publication.publish.confirmation"
+msgstr "Minden publikálási feltétel teljesült. Biztosan publikálni szeretné?"
+
+msgid "publication.issue.success"
+msgstr "A cikk rovat információi frissítésre kerültek."
+
+msgid "publication.invalidIssue"
+msgstr "A szám ehhez a cikkhez nem található."
+
+msgid "publication.invalidSection"
+msgstr "A rovat ehhez a cikkhez nem található."
+
+msgid "galley.publicationNotFound"
+msgstr "Ennek a posztprintnek a cikke nem található."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Ennek a cikknek a posztprintje nem szerkeszthető, mert már publikálásra "
+"került."

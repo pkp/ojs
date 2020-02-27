@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
+"PO-Revision-Date: 2020-02-27 16:42+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"hu/>\n"
+"Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-13T21:04:23+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.website.archiving"
 msgstr "Archiválás"
@@ -453,7 +456,7 @@ msgid "manager.setup.editorDecision"
 msgstr "Szerkesztői döntés"
 
 msgid "manager.setup.emailBounceAddress"
-msgstr "Email cím a visszapattanó leveleknek"
+msgstr "Visszapattanó levelek kézbesítési címe"
 
 msgid "manager.setup.emailBounceAddressDescription"
 msgstr "A kézbesíthetetlen levelek esetében hibaüzenetet megy erre a címre."
@@ -594,7 +597,11 @@ msgid "manager.setup.journalHomepageContent"
 msgstr "A folyóirat weboldalának tartalma"
 
 msgid "manager.setup.journalHomepageContentDescription"
-msgstr "Alapértelmezés szerint a főoldal navigációs linkekből áll. További oldalakat lehet hozzácsatolni, ha használja az alábbi lehetőségek közül egyet vagy az összeset, ezek a megadott sorrendben fognak megjelenni. Megjegyzendő, hogy az aktuális szám mindig az Aktuális link alatt érhető el a Navigációs sávon."
+msgstr ""
+"Alapértelmezés szerint a főoldal navigációs linkekből áll. További oldalakat "
+"lehet hozzácsatolni ha használ az alábbi lehetőségek közül egyet vagy az "
+"összeset. Ezek a megadott sorrendben fognak megjelenni. Megjegyzendő, hogy "
+"az aktuális szám mindig az Aktuális link alatt érhető el a Navigációs sávon."
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "Folyóirat főoldal fejléc"
@@ -1729,9 +1736,6 @@ msgstr "A megadott objektum nem található."
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Másolat küldése a fő kapcsolattartónak, akit megadtak a folyóirat beállításokban."
 
-msgid ""
-msgstr ""
-
 msgid "plugins.importexport.common.export.error.inputFileNotReadable"
 msgstr "A beviteli fájl {$param} nem olvasható."
 
@@ -1796,7 +1800,9 @@ msgid "manager.setup.plnPluginEnable"
 msgstr "PKP PN plugin bekapcsolva"
 
 msgid "manager.setup.plnDescription"
-msgstr "A PKP Preservation Network (PN) díjmentes megőrzési szolgáltatást biztosít bármely olyan OJS folyóiratnak, amely az alapvető kritériumoknak megfelel. "
+msgstr ""
+"A PKP Preservation Network (PN) díjmentes megőrzési szolgáltatást biztosít "
+"bármely olyan OJS folyóiratnak, amely az alapvető kritériumoknak megfelel."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr "Kattintson a beállítások hivatkozásra a PKP PN használati feltételeinek elfogadásához. "
@@ -1821,3 +1827,188 @@ msgstr "Nem találtunk cikket."
 
 msgid "stats.publishedSubmissions.totalAbstractViews.timeSegment"
 msgstr "Minden folyóirat teljes absztrakt megtekintése dátum szerint"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Az adatvédelmi nyilatkozat frissült."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Korlátozza a linkek számát, melyek a lista következő oldalain jelenjenek meg."
+
+msgid "manager.setup.masthead.success"
+msgstr "A folyóirat címsorának részletei frissültek."
+
+msgid "manager.setup.lists.success"
+msgstr "A folyóirat listabeállításai frissültek."
+
+msgid "manager.setup.keyInfo"
+msgstr "Kulcs információ"
+
+msgid "manager.setup.contextTitle"
+msgstr "Folyóirat címe"
+
+msgid "manager.setup.contextInitials"
+msgstr "Folyóirat kezdőbetűi"
+
+msgid "manager.setup.contextAbout"
+msgstr "A folyóiratról"
+
+msgid "manager.setup.contextSummary"
+msgstr "Folyóirat összefoglaló"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Korlátozza az egy oldalon megjelenő elemek számát (például beküldések, "
+"felhasználók vagy szerkesztési feladatok). A soron következők már másik "
+"oldalon jelennek meg."
+
+msgid "manager.setup.information.success"
+msgstr "A folyóirat adatait frissítettük."
+
+msgid "manager.setup.identity"
+msgstr "Journal Identity"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Az  alapértelmezett e-mailekbe, melyeket a rendszer a folyóirat nevében "
+"küld, az alábbi aláírás kerül."
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Bejelentéseket tehetünk közzé az olvasók tájékoztatására a folyóirat "
+"híreiről és eseményeiről. A közzétett bejelentések a Bejelentések oldalon "
+"jelennek meg."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"A főoldalon megjelenítendő bejelentések száma. Hagyja üresen, ha nem "
+"szeretne megjeleníteni."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Megjelenítés a főoldalon"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Bejelentések bekapcsolása"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "A nem kézbesíthető e-mailek hibaüzenetet generálnak."
+
+msgid "manager.setup.contact.success"
+msgstr "A folyóirat kapcsolat felvétel részletei frissültek."
+
+msgid "manager.setup.archiving.success"
+msgstr "A folyóirat archiválási részletei frissültek."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Adja meg az összes információt, amelyet meg szeretne jeleníteni a "
+"bejelentések oldalon."
+
+msgid "manager.setup.announcements.success"
+msgstr "A bejelentések beállításai frissültek."
+
+msgid "manager.payment.success"
+msgstr "A fizetési beállítások frissültek."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Használja a szám megjelenésének dátumát"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Válassza ki, hogyan kerüljön az alapértelmezett szerzői jogi dátum "
+"meghatározásra egy cikknél. Az alapértelmezés esetileg felülírható.  Ha \""
+"véletlenszerűen jelenít meg\", ne használja a szám közzétételének dátumát."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "A megjelentetési részletek frissültek."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"A folyóiratnál előfizetésekre lesz szükség a tartalom részének vagy "
+"egészének eléréséhez."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "A folyóirat nyílt hozzáférést biztosít a tartalmához."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "A folyóirat tartalmának online közzétételére az OJS nem lesz használva."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Megjelentetési mód"
+
+msgid "manager.distribution.publication"
+msgstr "Cikk"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Használja a cikk megjelenésének dátumát"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Ezek az adatok szerepelhetnek harmadik archiváló félnek átadott "
+"metaadatokban."
+
+msgid "manager.setup.publishing"
+msgstr "Megjelenítési részletek"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Oldal hozzáférés"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Segítsen a keresőmotoroknak, mint a Google, fedezni és megjeleníteni "
+"oldalát. Arra biztatjuk, hogy adja meg <a href=\"{$sitemapUrl}\" target=\""
+"_blank\">oldaltérképét</a>."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Biztonságos link elhelyezése a szakmai lektorok email értesítőjébe."
+
+msgid "stats.publications.galleys"
+msgstr "Fájlok"
+
+msgid "stats.publications.abstracts"
+msgstr "Absztraktok"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} a(z) {$total} cikkből"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Összes absztrakt megtekintés dátum szerint"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Összes állomány megtekintés dátum szerint"
+
+msgid "stats.publications.details"
+msgstr "Cikk részletek"
+
+msgid "stats.publicationStats"
+msgstr "Cikk statisztikák"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Cikk engedélyek visszaállítása megtörtént."
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Cikk tartalmának megtekintése"
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "A keresőmotor indexelési beállítások frissítve."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"A Szakmai lektorok csak akkor férhetnek hozzá a beküldött cikkhez, ha "
+"elfogadták a lektori munkára való felkérést."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Ennek a lehetőségnek az aktiválásához, az oldal adminisztrátornak "
+"engedélyeznie kell a <code>allow_envelope_sender</code> opciót az OJS "
+"konfigurációs fájlban. További szerver beállítások szükségesek lehetnek, "
+"ahogy az az OJS dokumentációban is szerepel."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Bármilyen információt tartalmazhat a folyóiratáról, amely érdekelheti az "
+"olvasókat, szerzőket és a szakmai lektorokat. Tartalmazhatja a szabad "
+"hozzáférés politikájukat, a folyóirat fókuszpontjait, témaköreit, szerzői "
+"jogi megjegyzéseket, szponzori információkat, a folyóirat történetét, "
+"adatvédelmi irányelvet, valamint belefoglalhatók a LOCKSS vagy CLOCKSS "
+"archíválási rendszerekkel kapcsolatos információk."
