@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-20 09:44+0000\n"
+"PO-Revision-Date: 2020-02-27 15:39+0000\n"
 "Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/locale/hu/"
 ">\n"
@@ -384,7 +384,7 @@ msgid "user.register.contextsPrompt"
 msgstr "Melyik folyóiratokhoz szeretne regisztrálni?"
 
 msgid "user.register.otherContextRoles"
-msgstr "A következő szerepkörök igénylése"
+msgstr "A következő szerepkörök igénylése."
 
 msgid "user.register.noContextReviewerInterests"
 msgstr "Ha bármelyik folyóiratnál szeretne szakmai lektor lenni, akkor adja meg az szakterületeit."
@@ -444,7 +444,7 @@ msgid "issue.issues"
 msgstr "Folyóirat számok"
 
 msgid "issue.title"
-msgstr "Cím "
+msgstr "Cím"
 
 msgid "issue.volume"
 msgstr "Évfolyam"
@@ -1237,10 +1237,12 @@ msgid "user.register.authorDescription"
 msgstr "Tételeket küldhet be a folyóirat."
 
 msgid "user.register.reviewerDescriptionNoInterests"
-msgstr "Vállalja a folyóirathoz beküldött anyagok szakmai lektorálásának irányítását"
+msgstr ""
+"Vállalja a folyóirathoz beküldött anyagok szakmai lektorálásának irányítását."
 
 msgid "user.register.reviewerDescription"
-msgstr "Vállalja a folyóirathoz beküldött anyagok szakmai lektorálásának irányítását"
+msgstr ""
+"Vállalja a folyóirathoz beküldött anyagok szakmai lektorálásának irányítását."
 
 msgid "user.register.reviewerInterests"
 msgstr "Határozza meg a lektor érdeklődési területeit (tartalmi területeket és kutatási módszereket):"
@@ -1261,13 +1263,13 @@ msgid "user.subscriptions.statusDescription"
 msgstr "Leírás"
 
 msgid "user.subscriptions.status.needsInformationDescription"
-msgstr "Az előfizetés aktiválása előtt további információra van szükség."
+msgstr "Az előfizetés aktiválása előtt további információra van szükség"
 
 msgid "user.subscriptions.status.needsApprovalDescription"
-msgstr "Az előfizetés aktiválása előtt felül kell vizsgálni."
+msgstr "Az előfizetést aktiválása előtt felül kell vizsgálni"
 
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
-msgstr "Egy készpénzes fizetés elindult, de még nem érkezett meg."
+msgstr "Egy készpénzes fizetés elindult, de még nem érkezett meg"
 
 msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
 msgstr "Egy online fizetés indult, de törlésre került, vagy nem befejezett"
@@ -1324,13 +1326,13 @@ msgid "user.subscriptions.form.institutionName"
 msgstr "Intézmény neve"
 
 msgid "user.subscriptions.form.institutionNameRequired"
-msgstr "Szükséges egy intézménynév"
+msgstr "Intézmény neve kötelező."
 
 msgid "user.subscriptions.form.institutionMailingAddress"
 msgstr "Levelezési cím"
 
 msgid "user.subscriptions.form.domain"
-msgstr "Domain"
+msgstr "Tartomány"
 
 msgid "user.subscriptions.form.domainInstructions"
 msgstr "Ha megadta a domaint, akkor az IP tartomány már nem kötelező. <br />A domain névnek érvényesnek kell lennie (pl. lib.sfu.ca)."
@@ -1469,7 +1471,7 @@ msgid "about.focusAndScope"
 msgstr "Fókuszpont és szakterület"
 
 msgid "about.sectionPolicies"
-msgstr "Section Policies"
+msgstr "Rovat irányelvek"
 
 msgid "about.submissions"
 msgstr "Beküldések"
@@ -1906,9 +1908,15 @@ msgstr ""
 
 msgid "installer.upgradeComplete"
 msgstr ""
-"<p>Az OJS frissítése a következő verzióra {$version} sikeresen lezajlott.</p>\r\n"
-"<p>Ne felejtse el beállítani a telepített verzió beállításait a config.inc.php konfigurációs fájljában ha visszalép<em>ide</em>.</p>\r\n"
-"<p>Ha még nem regisztrált és szeretne értesítéseket kapni a hírekről és a frissítésekről, akkor kérjük, regisztráljon a <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> oldalon.</strong> Ha kérdése, vagy észrevétele van, akkor látogasson el a <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">támogatói fórumra</a>.</p>"
+"<p>Az OJS frissítése a következő verzióra {$version} sikeresen lezajlott.</p>"
+"\n"
+"<p>Ne felejtse el beállítani a telepített verzió beállításait a "
+"config.inc.php konfigurációs fájljában ha visszalép<em>ide</em>.</p>\n"
+"<p>Ha még nem regisztrált és szeretne értesítéseket kapni a hírekről és a "
+"frissítésekről, akkor kérjük, regisztráljon a <a href=\"http://pkp.sfu.ca/"
+"ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> "
+"oldalon.</strong> Ha kérdése, vagy észrevétele van, akkor látogasson el a <a "
+"href=\"http://forum.pkp.sfu.ca\" target=\"_new\">támogatói fórumra</a>.</p>"
 
 msgid "site.upgradeAvailable.admin"
 msgstr "Új OJS verzió érhető el! Az aktuálisan használt OJS verzió {$currentVersion}. A legújabb OJS verzió {$latestVersion}. Kérjük látogasson el <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">erre az oldalra</a>, hogy le tudja tölteni az aktuális verziót és megkapja a frissítési utasításokat."
@@ -2169,16 +2177,16 @@ msgid "notification.type.approveSubmission"
 msgstr "Ez a cikk jelenleg jóváhagyásra vár, mielőtt megjelenik a folyóiratszámban."
 
 msgid "notification.type.approveSubmissionTitle"
-msgstr "Jóváhagyásra vár"
+msgstr "Jóváhagyásra vár."
 
 msgid "user.profile.form.showOtherContexts"
-msgstr "Regisztráció további folyóiratokhoz."
+msgstr "Regisztráció további folyóiratokhoz"
 
 msgid "user.profile.form.hideOtherContexts"
 msgstr "A többi folyóirat elrejtése"
 
 msgid "article.view.interstitial"
-msgstr "Kérjük, válasszon egy cikkfájlt a letöltéshez"
+msgstr "Kérjük a letöltéshez válasszon egy cikk-fájlt."
 
 msgid "grid.catalogEntry.availableRepresentation.approved"
 msgstr "Jóváhagyott"
@@ -2247,7 +2255,7 @@ msgid "catalog.sortBy"
 msgstr "Cikkek sorrendje"
 
 msgid "catalog.sortBy.categoryDescription"
-msgstr "Cikkek rendezése ebben a kategóriában az alábbiak szerint:"
+msgstr "Cikkek rendezési módja ebben a kategóriában az alábbiak szerint."
 
 msgid "section.policy"
 msgstr "Rovat irányelvek"
@@ -2262,7 +2270,7 @@ msgid "about.onlineSubmissions.submitToSection"
 msgstr "Küldj be új anyagot a <a href=\"{$url}\">{$name}</a> rovatba."
 
 msgid "user.reviewerPrompt.optin"
-msgstr "Szeretnék lektorálási felkéréseket kapni ennél a folyóiratnál. "
+msgstr "Szeretnék lektorálási felkéréseket kapni ennél a folyóiratnál."
 
 msgid "manager.setup.porticoDescription"
 msgstr "A Portico egy non profit, digitális publikációk megörzésébez elkötelezett szolgáltatás.  Ha folyóirata szerződésben áll a Portico-val, engedélyezze itt: "
@@ -2274,10 +2282,12 @@ msgid "user.register.form.privacyConsentThisContext"
 msgstr "Igen, beleegyezem adataim gyűjtéséhez és tárolásához a folyóirat <a href=\"{$privacyUrl}\" target=\"_blank\">adatkezelési nyilatkozata szerint</a>."
 
 msgid "user.register.form.missingContextConsent"
-msgstr "El kell fogadnia a folyóiratok adatkezelési nyilatkozatát, melyekhez regisztrál. "
+msgstr ""
+"El kell fogadnia a folyóiratok adatkezelési nyilatkozatát, melyekhez "
+"regisztrál."
 
 msgid "user.register.form.missingSiteConsent"
-msgstr "El kell fogadnia a folyóirat adatkezelési nyilatkozatát. "
+msgstr "El kell fogadnia a folyóirat adatkezelési nyilatkozatát."
 
 msgid "notification.type.editorialReport"
 msgstr "Statisztikai jelentés összesítője."
@@ -2352,3 +2362,6 @@ msgstr ""
 "\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect of Open "
 "Access</a>).</li>\n"
 "</ol>"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Lektorált cikk"
