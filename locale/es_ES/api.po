@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
+"PO-Revision-Date: 2020-02-27 15:39+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/api/es/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "api.400.paramNotSupported"
 msgstr "El parámetro {$param} no está soportado."
@@ -55,3 +57,51 @@ msgstr "Su solicitud no fue válida. La fecha de inicio no puede ser posterior a
 
 msgid "api.stats.400.wrongTimeSegmentDaily"
 msgstr "Su solicitud no fue válida. El segmento de tiempo \"diario\" sólo puede utilizarse junto a un rango de fechas (fecha de inicio y fecha de finalización) dentro de los últimos 90 días."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "La publicación que ha solicitado no forma parte de este envío."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "La publicación que ha solicitado no forma parte de esta revista."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "El método de pago que ha seleccionado no está soportado."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"No tiene permiso para mover esta plantilla de correo electrónico a otra "
+"revista."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "No se encontró la revista solicitada."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "No tiene permiso para eliminar esta revista."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "No tiene permiso para editar esta revista."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "No puede editar esta revista desde la API de todo el sitio."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"No puede ver o editar esta revista a menos que haga una solicitud al API de "
+"la revista o al API de todo el sitio."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "No tiene permiso para ver esta revista."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Solo puede ver revistas que hayan sido habilitadas."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Para hacer o editar un envío debe realizar una solicitud al terminal API de "
+"la revista."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "No tiene permiso para ver los números retirados de publicación."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "No puede cambiar la revista de un envío."
