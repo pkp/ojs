@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-27 15:44+0000\n"
+"PO-Revision-Date: 2020-02-27 16:42+0000\n"
 "Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "hu/>\n"
@@ -597,7 +597,11 @@ msgid "manager.setup.journalHomepageContent"
 msgstr "A folyóirat weboldalának tartalma"
 
 msgid "manager.setup.journalHomepageContentDescription"
-msgstr "Alapértelmezés szerint a főoldal navigációs linkekből áll. További oldalakat lehet hozzácsatolni, ha használja az alábbi lehetőségek közül egyet vagy az összeset, ezek a megadott sorrendben fognak megjelenni. Megjegyzendő, hogy az aktuális szám mindig az Aktuális link alatt érhető el a Navigációs sávon."
+msgstr ""
+"Alapértelmezés szerint a főoldal navigációs linkekből áll. További oldalakat "
+"lehet hozzácsatolni ha használ az alábbi lehetőségek közül egyet vagy az "
+"összeset. Ezek a megadott sorrendben fognak megjelenni. Megjegyzendő, hogy "
+"az aktuális szám mindig az Aktuális link alatt érhető el a Navigációs sávon."
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "Folyóirat főoldal fejléc"
@@ -1796,7 +1800,9 @@ msgid "manager.setup.plnPluginEnable"
 msgstr "PKP PN plugin bekapcsolva"
 
 msgid "manager.setup.plnDescription"
-msgstr "A PKP Preservation Network (PN) díjmentes megőrzési szolgáltatást biztosít bármely olyan OJS folyóiratnak, amely az alapvető kritériumoknak megfelel. "
+msgstr ""
+"A PKP Preservation Network (PN) díjmentes megőrzési szolgáltatást biztosít "
+"bármely olyan OJS folyóiratnak, amely az alapvető kritériumoknak megfelel."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr "Kattintson a beállítások hivatkozásra a PKP PN használati feltételeinek elfogadásához. "
@@ -1943,3 +1949,66 @@ msgstr ""
 
 msgid "manager.setup.publishing"
 msgstr "Megjelenítési részletek"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Oldal hozzáférés"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Segítsen a keresőmotoroknak, mint a Google, fedezni és megjeleníteni "
+"oldalát. Arra biztatjuk, hogy adja meg <a href=\"{$sitemapUrl}\" target=\""
+"_blank\">oldaltérképét</a>."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Biztonságos link elhelyezése a szakmai lektorok email értesítőjébe."
+
+msgid "stats.publications.galleys"
+msgstr "Fájlok"
+
+msgid "stats.publications.abstracts"
+msgstr "Absztraktok"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} a(z) {$total} cikkből"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Összes absztrakt megtekintés dátum szerint"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Összes állomány megtekintés dátum szerint"
+
+msgid "stats.publications.details"
+msgstr "Cikk részletek"
+
+msgid "stats.publicationStats"
+msgstr "Cikk statisztikák"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Cikk engedélyek visszaállítása megtörtént."
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Cikk tartalmának megtekintése"
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "A keresőmotor indexelési beállítások frissítve."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"A Szakmai lektorok csak akkor férhetnek hozzá a beküldött cikkhez, ha "
+"elfogadták a lektori munkára való felkérést."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Ennek a lehetőségnek az aktiválásához, az oldal adminisztrátornak "
+"engedélyeznie kell a <code>allow_envelope_sender</code> opciót az OJS "
+"konfigurációs fájlban. További szerver beállítások szükségesek lehetnek, "
+"ahogy az az OJS dokumentációban is szerepel."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Bármilyen információt tartalmazhat a folyóiratáról, amely érdekelheti az "
+"olvasókat, szerzőket és a szakmai lektorokat. Tartalmazhatja a szabad "
+"hozzáférés politikájukat, a folyóirat fókuszpontjait, témaköreit, szerzői "
+"jogi megjegyzéseket, szponzori információkat, a folyóirat történetét, "
+"adatvédelmi irányelvet, valamint belefoglalhatók a LOCKSS vagy CLOCKSS "
+"archíválási rendszerekkel kapcsolatos információk."
