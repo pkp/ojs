@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2020-01-31 16:21+0000\n"
+"PO-Revision-Date: 2020-02-28 19:36+0000\n"
 "Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/de/>"
 "\n"
@@ -765,7 +765,9 @@ msgid "manager.setup.publisher"
 msgstr "Verlag, Organisation"
 
 msgid "manager.setup.publishingDescription"
-msgstr "Der Name der Organisation, die die Zeitschrift herausgibt, erscheint unter \"Über uns\"."
+msgstr ""
+"Diese Details werden in den Metadaten bereitgestellt, die von Dritten "
+"ausgelesen werden können."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Verlinkung von Literaturverweisen"
@@ -1664,3 +1666,51 @@ msgstr "Die angegebenen Objekte konnten nicht gefunden werden."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Eine Kopie an den in den Einstellungen der Zeitschrift festgelegten Hauptkontakt senden."
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr ""
+"Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels "
+"abgeleitet, wie bei \"publish-as-you-go\"."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr ""
+"Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe "
+"abgeleitet"
+
+msgid "manager.setup.information.success"
+msgstr "Die Information zu diesem Journal wurden aktualisiert."
+
+msgid "manager.setup.identity"
+msgstr "Zeitschriftenidentität"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Anzahl der Mitteilungen, die auf der Homepage angezeigt werden sollen. "
+"Lassen Sie dieses Feld leer, wenn keine angezeigt werden sollen."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Auf der Homepage anzeigen"
+
+msgid "manager.setup.contact.success"
+msgstr "Die Kontaktdaten für diese Zeitschrift wurden aktualisiert."
+
+msgid "manager.setup.archiving.success"
+msgstr "Die Archivierungsdetails dieser Zeitschrift wurden aktualisiert."
+
+msgid "manager.setup.announcements.success"
+msgstr "Die Mitteilungseinstellungen wurden aktualisiert."
+
+msgid "manager.payment.success"
+msgstr "Die Zahlungseinstellungen wurden aktualisiert."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Die Veröffentlichungsdetails wurden aktualisiert."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Zusätzliche Informationen"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Veröffentlichungsart"
+
+msgid "manager.distribution.publication"
+msgstr "Veröffentlichung"
