@@ -242,7 +242,7 @@ class PreprintHandler extends Handler {
 			}
 
 			// Galley: Prepare the galley file download.
-			if (!HookRegistry::call('PreprintHandler::view::galley', array(&$request, &$issue, &$this->galley, &$preprint, $publication))) {
+			if (!HookRegistry::call('PreprintHandler::view::galley', array(&$request, &$this->galley, &$preprint, $publication))) {
 				if ($this->publication->getId() !== $this->preprint->getCurrentPublication()->getId()) {
 					$redirectArgs = [
 						$preprint->getBestId(),
