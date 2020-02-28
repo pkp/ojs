@@ -1,8 +1,8 @@
-OJS Release Procedure
+OPS Release Procedure
 ---------------------
 
 The following steps (subject to change) are typically performed to prepare a new
-OJS release:
+OPS release:
 
 
 1. Ensure that the "complete" flags in registry/locales.xml are accurate. Use
@@ -50,21 +50,21 @@ OJS release:
 
 
 5. After committing any pending modifications, tag the release in git (both the
-OJS codebase and the PKP library to be distributed with it). DO NOT FORGET TO
+OPS codebase and the PKP library to be distributed with it). DO NOT FORGET TO
 COMMIT THE lib/pkp HASH FIRST.
 
 WARNING: If the release is to have minified JS, set the default in
 config.TEMPLATE.inc.php and compile and commit the latest JS before tagging!
 
     cd lib/pkp
-    git tag ojs-<MAJOR>_<MINOR>_<REVISION>-<BUILD>
+    git tag ops-<MAJOR>_<MINOR>_<REVISION>-<BUILD>
     git push --tags
     cd ../..
-    git tag ojs-<MAJOR>_<MINOR>_<REVISION>-<BUILD>
+    git tag ops-<MAJOR>_<MINOR>_<REVISION>-<BUILD>
     git push --tags
 
 
-6. Build the OJS package and patch files:
+6. Build the OPS package and patch files:
 
 WARNING: If working on a stable branch, the latest `js/build.js` file will be
 compiled when `tools/buildpkg.sh` is run. Remove js/build.js from the .gitignore
@@ -72,22 +72,22 @@ file and commit it to the new stable branch.
 
     sh tools/buildpkg.sh <VERSION> <TAG>-<BRANCH> <PATCH_DIR>
 
-    (<PATCH_DIR> is the path to a directory containing previous OJS release
+    (<PATCH_DIR> is the path to a directory containing previous OPS release
      packages against which to build patches)
 
 
 7. Place the new package, patches, version descriptor, and Doxygen docs on the
-   OJS web site:
+   OPS web site:
 
-    http://pkp.sfu.ca/ojs/download/
-    http://pkp.sfu.ca/ojs/download/patch/
-    http://pkp.sfu.ca/ojs/xml/ojs-version.xml
-    http://pkp.sfu.ca/ojs/doxygen
+    http://pkp.sfu.ca/ops/download/
+    http://pkp.sfu.ca/ops/download/patch/
+    http://pkp.sfu.ca/ops/xml/ops-version.xml
+    http://pkp.sfu.ca/ops/doxygen
 
 8. Place the release notes, upgrade instructions, readme, and any relevant DTDs
-   on the OJS website:
+   on the OPS website:
 
-	http://pkp.sfu.ca/ojs/README-<VERSION>
-	http://pkp.sfu.ca/ojs/RELEASE-<VERSION>
-	http://pkp.sfu.ca/ojs/UPGRADE-<VERSION>
-	http://pkp.sfu.ca/ojs/dtds
+	http://pkp.sfu.ca/ops/README-<VERSION>
+	http://pkp.sfu.ca/ops/RELEASE-<VERSION>
+	http://pkp.sfu.ca/ops/UPGRADE-<VERSION>
+	http://pkp.sfu.ca/ops/dtds
