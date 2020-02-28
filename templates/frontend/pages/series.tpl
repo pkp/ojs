@@ -25,9 +25,15 @@
 		{$section->getLocalizedTitle()|escape}
 	</h1>
 
-	<div class="section_description">
-		{$section->getLocalizedDescription()|strip_unsafe_html}
+	{* Description *}
+	{assign var="description" value=$section->getLocalizedDescription()|strip_unsafe_html}
+	<div class="about_section {if $description} has_description{/if}">
+		<div class="description">
+			{$description|strip_unsafe_html}
+		</div>
 	</div>
+
+
 
 	{if $preprints|@count}
 		<ul class="cmp_article_list">

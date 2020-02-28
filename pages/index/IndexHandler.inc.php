@@ -67,6 +67,7 @@ class IndexHandler extends PKPIndexHandler {
 				'homepageImageAltText' => $journal->getLocalizedData('homepageImageAltText'),
 				'journalDescription' => $journal->getLocalizedData('description'),
 				'series' => $series,
+				'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
 				'publishedSubmissions' => $publishedSubmissions,
 			));
 

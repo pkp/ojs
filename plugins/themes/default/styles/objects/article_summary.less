@@ -24,8 +24,8 @@
 
 	> .title {
 		font-family: @font-heading;
-		font-size: @font-base;
-		line-height: @line-base;
+		font-size: @font-bump;
+		line-height: @line-bump;
 		font-weight: @bold;
 
 		a {
@@ -36,7 +36,7 @@
 	.subtitle {
 		display: block;
 		margin-top: 0.25em;
-		margin-bottom: 0.5em;
+		margin-bottom: 0.25em;
 		font-weight: @normal;
 		color: @text-light;
 	}
@@ -48,9 +48,29 @@
 		line-height: @double;
 	}
 
-	.pages,
-	.published {
+	.authors{
+		font-size: @font-base;
+	}
+
+	.published, .downloads, .versions, .keywords {
 		color: @text-light;
+	}
+
+	.keyword_links {
+		&:extend(.pkp_unstyled_list);
+
+		li {
+			display: inline-block;
+			margin-right: 0.5em;
+			padding: 2px 4px 2px 4px;
+			border: 1px solid @text-light;
+			border-radius: @radius;
+			line-height: @double;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 
 	.galleys_links {
@@ -59,7 +79,7 @@
 
 		li {
 			display: inline-block;
-			margin-right: 1em;
+			margin-right: 0.5em;
 
 			&:last-child {
 				margin-right: 0;
@@ -73,15 +93,8 @@
 			padding-right: 5em;
 		}
 
-		.pages {
-			position: absolute;
-			top: 0;
-			right: 0;
-			line-height: @line-lead;
-		}
-
 		.cover {
-			float: left;
+			float: right;
 			width: 25%;
 			height: auto;
 			max-height: none;

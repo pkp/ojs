@@ -56,9 +56,9 @@ class ArchiveHandler extends Handler {
 		$templateMgr = TemplateManager::getManager($request);
 		$context = $request->getContext();
 
-		// Get categories
-		$categoryDao = DAORegistry::getDAO('CategoryDAO');
-		$categories = $categoryDao->getByContextId($context->getId());
+		// OPS: Series
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$series = $sectionDao->getByContextId($context->getId());
 
 		$count = $context->getData('itemsPerPage') ? $context->getData('itemsPerPage') : Config::getVar('interface', 'items_per_page');
 		$offset = $page > 1 ? ($page - 1) * $count : 0;
@@ -80,8 +80,9 @@ class ArchiveHandler extends Handler {
 		$prevPage = $showingStart > 1 ? $page - 1 : null;
 
 		$templateMgr->assign(array(
-			'categories' => $categories,
+			'series' => $series,
 			'publishedSubmissions' => $publishedSubmissions,
+			'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
 			'showingStart' => $showingStart,
 			'showingEnd' => $showingEnd,
 			'total' => $total,

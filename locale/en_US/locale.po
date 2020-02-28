@@ -81,13 +81,13 @@ msgid "submission.search"
 msgstr "Preprint Search"
 
 msgid "submission.numberOfVersions"
-msgstr "There are {$numberOfVersions} versions of this preprint"
+msgstr "Versions: {$numberOfVersions}"
 
 msgid "submission.dates"
 msgstr "Submitted {$submitted} - Published {$published}"
 
 msgid "publication.galley.downloads"
-msgstr "Downloads {$downloads}"
+msgstr "Downloads: {$downloads}"
 
 msgid "context.contexts"
 msgstr "Servers"

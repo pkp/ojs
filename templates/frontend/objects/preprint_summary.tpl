@@ -44,23 +44,57 @@
 		</a>
 	</div>
 	<div class="meta">
+
 		{if $showAuthor}
 		<div class="authors">
 			{$preprint->getAuthorString()|escape}
 		</div>
 		{/if}
+
+		{* DOI (requires plugin) *}
+		{foreach from=$pubIdPlugins item=pubIdPlugin}
+			{if $pubIdPlugin->getPubIdType() != 'doi'}
+				{continue}
+			{/if}
+			{assign var=pubId value=$preprint->getCurrentPublication()->getStoredPubId($pubIdPlugin->getPubIdType())}
+			{if $pubId}
+				{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+				<div class="doi">
+						{capture assign=translatedDOI}{translate key="plugins.pubIds.doi.readerDisplayName"}{/capture}
+						{translate key="semicolon" label=$translatedDOI}
+					<span class="value">
+						<a href="{$doiUrl}">
+							{$doiUrl}
+						</a>
+					</span>
+				</div>
+			{/if}
+		{/foreach}
+
 		{if $preprint->getDatePublished()}
 			<div class="published">
 				{translate key="submission.dates" submitted=$preprint->getDateSubmitted()|date_format:$dateFormatShort published=$preprint->getDatePublished()|date_format:$dateFormatShort}
 			</div>
 		{/if}
+
 		<div class="downloads">
 			{translate key="publication.galley.downloads" downloads=$preprint->getTotalGalleyViews($primaryGenreIds)}
 		</div>
+
 		{if count($preprint->getPublishedPublications()) > 1}
 			<div class="versions">
 				{translate key="submission.numberOfVersions" numberOfVersions=count($preprint->getPublishedPublications())}
 			</div>
+		{/if}
+
+		{if !empty($preprint->getCurrentPublication()->getLocalizedData('keywords'))}
+		<div class="keywords">
+			<ul class="keyword_links">
+				{foreach name="keywords" from=$preprint->getCurrentPublication()->getLocalizedData('keywords') item="keyword"}
+					<li>{$keyword|escape}</li>
+				{/foreach}
+			</ul>
+		</div>
 		{/if}
 	</div>	
 

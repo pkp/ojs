@@ -7,6 +7,8 @@
  *
  * Archive header containing a search form and a category listing
  *}
+
+ <section class="archiveHeader">
 	{* Search *}
 	<section class="archiveHeader_search">
 		{include file="frontend/components/searchForm_archive.tpl" className="pkp_search_desktop"}
@@ -14,7 +16,7 @@
 
 	{* Series listing *}
 	<section class="archiveHeader_series">
-	<ul>
+	<ul class="series_listing">
 		{if $series && $series->getCount()}
 			{iterate from=series item=serie}
 				<li class="series_{$serie->getPath()|escape}">
@@ -26,3 +28,4 @@
 		{/if}
 	</ul>
 	</section>
+</section>
