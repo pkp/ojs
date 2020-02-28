@@ -145,7 +145,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 				if (!$processOnlyChildren) {
 					import('plugins.importexport.native.filter.NativeFilterHelper');
 					$nativeFilterHelper = new NativeFilterHelper();
-					$nativeFilterHelper->parseCovers($this, $n, $issue, ASSOC_TYPE_ISSUE);
+					$nativeFilterHelper->parseIssueCovers($this, $n, $issue, ASSOC_TYPE_ISSUE);
 				}
 				break;
 			case 'issue_identification':

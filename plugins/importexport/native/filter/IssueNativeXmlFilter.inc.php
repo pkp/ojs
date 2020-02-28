@@ -101,7 +101,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		// cover images
 		import('plugins.importexport.native.filter.NativeFilterHelper');
 		$nativeFilterHelper = new NativeFilterHelper();
-		$coversNode = $nativeFilterHelper->createCoversNode($this, $doc, $issue);
+		$coversNode = $nativeFilterHelper->createIssueCoversNode($this, $doc, $issue);
 		if ($coversNode) $issueNode->appendChild($coversNode);
 
 		$this->addIssueGalleys($doc, $issueNode, $issue);

@@ -94,7 +94,7 @@ class NativeFilterHelper {
 	 * @param $object Issue
 	 * @return DOMElement
 	 */
-	function createCoversNode($filter, $doc, $object) {
+	function createIssueCoversNode($filter, $doc, $object) {
 		$deployment = $filter->getDeployment();
 		$coversNode = null;
 		$coverImages = $object->getCoverImage(null);
@@ -151,13 +151,13 @@ class NativeFilterHelper {
 	 * @param $node DOMElement
 	 * @param $object Issue
 	 */
-	function parseCovers($filter, $node, $object) {
+	function parseIssueCovers($filter, $node, $object) {
 		$deployment = $filter->getDeployment();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
 					case 'cover':
-						$this->parseCover($filter, $n, $object);
+						$this->parseIssueCover($filter, $n, $object);
 						break;
 					default:
 						$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
@@ -215,7 +215,7 @@ class NativeFilterHelper {
 	 * @param $node DOMElement
 	 * @param $object Issue
 	 */
-	function parseCover($filter, $node, $object) {
+	function parseIssueCover($filter, $node, $object) {
 		$deployment = $filter->getDeployment();
 		$context = $deployment->getContext();
 		$locale = $node->getAttribute('locale');

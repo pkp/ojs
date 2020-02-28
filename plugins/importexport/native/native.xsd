@@ -22,14 +22,6 @@
 		<complexType>
 			<complexContent>
 				<extension base="pkp:submission">
-					<sequence>
-						<element ref="pkp:issue_identification" minOccurs="0" maxOccurs="1" />
-						<element maxOccurs="1" minOccurs="0" name="pages" type="string" />
-						<element ref="pkp:covers" minOccurs="0" maxOccurs="1" />
-					</sequence>
-					<attribute name="section_ref" type="string" use="required" />
-					<attribute name="seq" type="int" />
-					<attribute name="access_status" type="int" />
 					<attribute name="stage" use="required">
 						<simpleType>
 							<restriction base="string">
@@ -45,6 +37,24 @@
 		</complexType>
 	</element>
 	<element name="articles" substitutionGroup="pkp:submissions" />
+
+	<element name="publication" substitutionGroup="pkp:pkppublication">
+		<complexType>
+			<complexContent>
+				<extension base="pkp:pkppublication">
+					<sequence>
+						<element ref="pkp:issue_identification" minOccurs="0" maxOccurs="1" />
+						<element maxOccurs="1" minOccurs="0" name="pages" type="string" />
+						<element ref="pkp:covers" minOccurs="0" maxOccurs="1" />
+						<element maxOccurs="1" minOccurs="0" name="issueId" type="int" />
+					</sequence>
+					<attribute name="section_ref" type="string" use="required" />
+					<attribute name="seq" type="int" />
+					<attribute name="access_status" type="int" />
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
 
 	<!-- Configure the use of the "article_galley" representation -->
 	<element name="article_galley" substitutionGroup="pkp:representation">
@@ -127,6 +137,7 @@
 		<attribute name="published" type="int" use="optional" />
 		<attribute name="current" type="int" use="optional" />
 		<attribute name="access_status" type="int" use="optional" />
+		<attribute name="url_path" type="string" use="optional" />
 	</complexType>
 
 	<element name="issue_identification">
@@ -143,6 +154,7 @@
 	<complexType name="issue_galley">
 		<sequence>
 			<element name="label" type="string" minOccurs="1" maxOccurs="1" />
+			<element ref="pkp:id" minOccurs="0" maxOccurs="unbounded" />
 			<element ref="pkp:issue_file" minOccurs="0" maxOccurs="1" />
 		</sequence>
 		<attribute name="locale" type="string" />

@@ -44,15 +44,6 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
-	 * Handle an Article import.
-	 * The Article must have a valid section in order to be imported
-	 * @param $node DOMElement
-	 */
-	function handleElement($node) {
-		return parent::handleElement($node);
-	}
-
-	/**
 	 * @see Filter::process()
 	 * @param $document DOMDocument|string
 	 * @return array Array of imported documents

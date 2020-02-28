@@ -35,18 +35,6 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		return 'plugins.importexport.native.filter.ArticleNativeXmlFilter';
 	}
 
-
-	//
-	// Implement abstract methods from SubmissionNativeXmlFilter
-	//
-	// /**
-	//  * Get the representation export filter group name
-	//  * @return string
-	//  */
-	// function getRepresentationExportFilterGroupName() {
-	// 	return 'article-galley=>native-xml';
-	// }
-
 	//
 	// Submission conversion functions
 	//

@@ -16,15 +16,6 @@
 import('lib.pkp.plugins.importexport.native.filter.NativeXmlPKPPublicationFilter');
 
 class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
-	/**
-	 * Constructor
-	 * @param $filterGroup FilterGroup
-	 */
-	function __construct($filterGroup) {
-		parent::__construct($filterGroup);
-	}
-
-
 	//
 	// Implement template methods from PersistableFilter
 	//
@@ -33,14 +24,6 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	 */
 	function getClassName() {
 		return 'plugins.importexport.native.filter.NativeXmlPublicationFilter';
-	}
-
-	/**
-	 * Get the method name for inserting a published submission.
-	 * @return string
-	 */
-	function getPublishedSubmissionInsertMethod() {
-		return 'insertObject';
 	}
 
 	/**
@@ -64,17 +47,6 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	}
 
 	/**
-	 * @see Filter::process()
-	 * @param $document DOMDocument|string
-	 * @return array Array of imported documents
-	 */
-	function &process(&$document) {
-		$importedObjects =& parent::process($document);
-
-		return $importedObjects;
-	}
-
-	/**
 	 * Populate the submission object from the node, checking first for a valid section and published_date/issue relationship
 	 * @param $publication Publication
 	 * @param $node DOMElement
@@ -94,14 +66,14 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 				$publication->setData('sectionId', $section->getId());
 			}
 		}
-		// check if article is related to an issue, but has no published date
-		// $datePublished = $node->getAttribute('date_published');
-		// $issue = $deployment->getIssue();
-		// $issue_identification = $node->getElementsByTagName('issue_identification');
-		// if (!$datePublished && ($issue || $issue_identification->length)) {
-		// 	$titleNodes = $node->getElementsByTagName('title');
-		// 	$deployment->addError(ASSOC_TYPE_SUBMISSION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
-		// }
+		// check if publication is related to an issue, but has no published date
+		$datePublished = $node->getAttribute('date_published');
+		$issue = $deployment->getIssue();
+		$issue_identification = $node->getElementsByTagName('issue_identification');
+		if (!$datePublished && ($issue || $issue_identification->length)) {
+			$titleNodes = $node->getElementsByTagName('title');
+			$deployment->addError(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('publicationTitle' => $titleNodes->item(0)->textContent)));
+		}
 
 		$this->populatePublishedPublication($publication, $node);
 
@@ -212,7 +184,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	function parseIssueIdentification($publication, $node) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
-		// $submission = $deployment->getSubmission();
+
 		$vol = $num = $year = null;
 		$titles = array();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
