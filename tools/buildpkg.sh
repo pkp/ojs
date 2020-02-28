@@ -26,13 +26,11 @@ PREFIX=ojs
 BUILD=$PREFIX-$VERSION
 TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
 
-EXCLUDE="dbscripts/xml/data/locale/en_US/sample.xml					\
-dbscripts/xml/data/sample.xml								\
-docs/dev										\
+EXCLUDE="docs/dev									\
 tests											\
 tools/buildpkg.sh									\
-tools/genLocaleReport.sh								\
-tools/genTestLocale.php									\
+cypress											\
+lib/pkp/cypress										\
 tools/test										\
 lib/pkp/tools/travis									\
 lib/pkp/plugins/*/*/tests								\
@@ -40,7 +38,6 @@ plugins/*/*/tests									\
 plugins/auth/ldap									\
 plugins/importexport/sample								\
 plugins/importexport/duracloud								\
-tests											\
 lib/pkp/tests										\
 .git											\
 .openshift										\
@@ -84,9 +81,9 @@ lib/pkp/lib/vendor/phpmailer/phpmailer/test/						\
 node_modules										\
 .editorconfig										\
 babel.config.js										\
-package-lock.json										\
+package-lock.json									\
 package.json										\
-vue.config.js									\
+vue.config.js										\
 lib/ui-library"
 
 
