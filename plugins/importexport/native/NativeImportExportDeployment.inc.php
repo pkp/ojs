@@ -49,22 +49,6 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 	}
 
 	/**
-	 * Get the publication node name
-	 * @return string
-	 */
-	function getPublicationNodeName() {
-		return 'publication';
-	}
-
-	/**
-	 * Get the publications node name
-	 * @return string
-	 */
-	function getPublicationsNodeName() {
-		return 'publications';
-	}
-
-	/**
 	 * Get the representation node name
 	 */
 	function getRepresentationNodeName() {
