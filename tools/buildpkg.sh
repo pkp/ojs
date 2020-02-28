@@ -68,6 +68,7 @@ lib/pkp/lib/vendor/symfony/translation/Tests/						\
 lib/pkp/lib/vendor/symfony/process/Tests/						\
 lib/pkp/lib/vendor/pimple/pimple/src/Pimple/Tests/					\
 lib/pkp/lib/vendor/robloach/component-installer/tests/ComponentInstaller/Test/		\
+lib/pkp/lib/vendor/michelf/php-markdown/test
 plugins/generic/citationStyleLanguage/lib/vendor/satooshi/php-coveralls/tests/		\
 plugins/generic/citationStyleLanguage/lib/vendor/guzzle/guzzle/tests/			\
 plugins/generic/citationStyleLanguage/lib/vendor/seboettg/collection/tests/		\
