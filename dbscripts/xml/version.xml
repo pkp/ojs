@@ -15,7 +15,7 @@
 	<type>core</type>
 	<release>3.2.0.0</release>
 	<tag>ops-3_2_0-0</tag>
-	<date>2020-02-07</date>
+	<date>2020-02-28</date>
 	<info>http://pkp.sfu.ca/ops/</info>
 	<package>http://pkp.sfu.ca/ops/download/ops-3.2.0.tar.gz</package>
 </version>

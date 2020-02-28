@@ -4,8 +4,8 @@
 
 The PKP team is happy to accept patches in the PKP Community Forum at
 http://forum.pkp.sfu.ca or Github at https://www.github.com/pkp. If you
-would like to have your patch included in the OJS codebase, we suggest
-discussing it with the OJS team before implementation to ensure that it suits
+would like to have your patch included in the OPS codebase, we suggest
+discussing it with the OPS team before implementation to ensure that it suits
 upcoming development plans.
 
 For code that is intended for inclusion in the main codebase:
@@ -18,16 +18,16 @@ For code that is intended for inclusion in the main codebase:
 * The feature should be suitable for situations where very distinct journals are
   hosted within the same deployment; i.e. settings should generally be journal-
   level, not system-level.
-* The design patterns used in OJS should be understood and adhered to.
+* The design patterns used in OPS should be understood and adhered to.
 * Localization standards should be maintained.
 * Database IDs should be checked as in the current codebase.
 * XSS (cross-site scripting) attacks should be checked as in the current
   codebase.
 * Contributors are responsible for writing code compatible with the primary
   platforms listed in README.
-* OJS management features should be kept in mind, such as upgrade and
+* OPS management features should be kept in mind, such as upgrade and
   installation; database schema information should be maintained in the
-  `dbscripts/xml/ojs_schema.xml` file for OJS-specific functionality and in
+  `dbscripts/xml/ops_schema.xml` file for OPS-specific functionality and in
   `lib/pkp/xml/schema` for functionality that can be shared across PKP apps; etc.
 * The development team is happy to review contributed patches, but we have a
   limited amount of time to spend integrating patches with the codebase or
@@ -36,10 +36,10 @@ For code that is intended for inclusion in the main codebase:
 
 For contributions that are distributed separately as patches or plugins:
 * If contributors haven't met all the conditions above, they are welcome to
-  distribute additional features as patches or plugins. However, the OJS team
+  distribute additional features as patches or plugins. However, the OPS team
   won't be able to provide support in this case.
 * If the option is available, coding a feature as a plugin is the preferred
-  method. The OJS team is continuing to refine the plugin infrastructure and
+  method. The OPS team is continuing to refine the plugin infrastructure and
   welcomes discussion with plugin developers.
 
 
@@ -163,7 +163,7 @@ For contributions that are distributed separately as patches or plugins:
   that does get used (e.g., by filing a bug report).
 
 
-## OJS Conventions
+## OPS Conventions
 
 ### git
 
@@ -173,8 +173,8 @@ For contributions that are distributed separately as patches or plugins:
 * Whenever possible, git commit log messages should be prefixed with
   `pkp/pkp-lib#ISSUENUM` to reference a git issue; see
   https://github.com/pkp/pkp-lib#issues.
-* Please consult http://pkp.sfu.ca/wiki/index.php/HOW-TO_check_out_PKP_applications_from_git
-  for instructions on setting up a development environment.
+* Please consult the README document for instructions on setting up a
+  development environment.
 
 
 ### File Header
@@ -249,7 +249,7 @@ For contributions that are distributed separately as patches or plugins:
 
 ### Localization
 
-* i18n strings are defined in locale/<locale_key>/locale.xml.
+* i18n strings are defined in locale/<locale_key>/locale.po.
 * Key names should be in the form "sectionname(.subsectionname)*.name".
   E.g., "manager.setup.contextTitle"
 * Use {translate key="my.key.name"} in templates to translate i18n keys.
@@ -288,5 +288,4 @@ Note that these should apply to parameters supplied to {translate key="..."} and
 
 * Use `$request->redirectUrl($url)`, or better yet, `$request->redirect(...)` for
   HTTP redirects instead of `header('Location: ...');`
-* For additional coding convention information, see the OJS Design Document
-  at http://pkp.sfu.ca/ojs/OJSTechnicalReference.pdf.
+* For additional information, see https://docs.pkp.sfu.ca/dev/.
