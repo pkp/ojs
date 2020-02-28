@@ -237,21 +237,29 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
 		$exportFilter = array_shift($nativeExportFilters);
 		$exportFilter->setDeployment(new NativeImportExportDeployment($context, $user));
+
 		$submissions = array();
 		foreach ($submissionIds as $submissionId) {
-			$submission = $submissionDao->getById($submissionId, $context->getId());
+			/** @var $submissionService APP\Services\SubmissionService */
+			$submissionService = Services::get('submission');
+			$submission = $submissionService->get($submissionId);
+
 			if ($submission) $submissions[] = $submission;
 		}
+
 		libxml_use_internal_errors(true);
 		$exportFilter->setOpts($opts);
 		$submissionXml = $exportFilter->execute($submissions, true);
 		$xml = $submissionXml->saveXml();
+
 		$errors = array_filter(libxml_get_errors(), function($a) {
 			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
 		});
+
 		if (!empty($errors)) {
 			$this->displayXMLValidationErrors($errors, $xml);
 		}
+		
 		return $xml;
 	}
 

@@ -78,6 +78,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			$issue->setPublished($node->getAttribute('published'));
 			$issue->setCurrent($node->getAttribute('current'));
 			$issue->setAccessStatus($node->getAttribute('access_status'));
+			$issue->setData('urlPath', $node->getAttribute('url_path'));
 			if ($issue) $issueDao->updateCurrent($context->getId());
 			$issueDao->insertObject($issue);
 			$deployment->addProcessedObjectId(ASSOC_TYPE_ISSUE, $issue->getId());
@@ -144,7 +145,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 				if (!$processOnlyChildren) {
 					import('plugins.importexport.native.filter.NativeFilterHelper');
 					$nativeFilterHelper = new NativeFilterHelper();
-					$nativeFilterHelper->parseCovers($this, $n, $issue, ASSOC_TYPE_ISSUE);
+					$nativeFilterHelper->parseIssueCovers($this, $n, $issue, ASSOC_TYPE_ISSUE);
 				}
 				break;
 			case 'issue_identification':
