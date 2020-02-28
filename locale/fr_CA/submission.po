@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-28 19:34+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ops/"
+"submission/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+#, fuzzy
+msgid "submission.submit.noContext"
+msgstr "La revue de cette soumission est introuvable."
+
+msgid "publication.relation.label"
+msgstr "Soumis-e pour publication"
+
+msgid "publication.relation"
+msgstr "Relations"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"La date de publication sera définie automatiquement lors de la publication "
+"de la prépublication. Ne pas entrer de date de publication sauf si vous "
+"devez l'antidater."
+
+msgid "publication.issue.success"
+msgstr "Les renseignements de l'entrée de la prépublication ont été mis à jour."
+
+msgid "preprint.entry"
+msgstr "Entrée de la prépublication"
+
+msgid "galley.publicationNotFound"
+msgstr "La publication de ces épreuves est introuvable."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Les épreuves de cette publication ne peuvent pas être modifiées car elles "
+"ont déjà été publiées."
+
+msgid "catalog.category.heading"
+msgstr "Tous les titres"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} titres"
+
+msgid "submission.sectionOptions"
+msgstr "Options de la série"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Ces spécifications sont basées sur le schéma de métadonnées du Dublin Core, "
+"une norme internationale utilisée pour décrire les contenus d'un serveur."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Sélectionner le rôle du,de la contributeur-trice."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée "
+"pour cette série."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Veuillez entrer le résumé de votre prépublication."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Veuillez inscrire le titre de votre prépublication."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Au moins un-e auteur-e est requis-e."
+
+msgid "submission.submit.contributorRole"
+msgstr "Rôle du,de la contributeur-trice"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Vous devez lire et reconnaître que vous remplissez les conditions ci-dessous "
+"avant de pouvoir poursuivre."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Liste de vérification de la soumission"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Sélectionner une langue de soumission."
+
+msgid "submission.complete"
+msgstr "Approuvé-e"
+
+msgid "submission.upload.fileContents"
+msgstr "Élément de la prépublication"
+
+msgid "submission.confirmSubmit"
+msgstr ""
+"Êtes-vous certain-e de vouloir soumettre cette prépublication au serveur ?"
+
+msgid "submission.galleyFiles"
+msgstr "Fichiers des épreuves"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Le résumé doit contenir {$wordCount} mots ou moins."
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nouvelle soumission"
+
+msgid "submission.title"
+msgstr "Titre de la prépublication"
+
+msgid "submission.upload.selectComponent"
+msgstr "Sélectionner l'élément de la prépublication"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Choisir le rôle sous lequel vous soumettez votre article."
+
+msgid "submission.submit.userGroup"
+msgstr "Soumettre en tant que (rôle)..."
+
+msgid "submission.submit.title"
+msgstr "Soumettre une prépublication"

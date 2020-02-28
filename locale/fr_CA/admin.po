@@ -1,0 +1,104 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-27 19:51+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ops/"
+"admin/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Description du serveur"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} a bien été modifié-e."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} a bien été créé-e."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Le chemin d'accès sélectionné est déjà utilisé par un autre serveur."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Le chemin d'accès ne peut contenir que des caractères alphanumériques, des "
+"caractères de soulignement, ou des tirets, et doit commencer et finir par un "
+"caractère alphanumérique."
+
+msgid "admin.contexts.create"
+msgstr "Créer un serveur"
+
+msgid "admin.systemConfiguration"
+msgstr "Configuration d'OPS"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"Impossible d'ajouter la nouvelle langue au fichier de registre de langues, "
+"généralement \"registry/locales.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Impossible d'ouvrir le descripteur de langue depuis le site Web de PKP."
+
+msgid "admin.languages.download"
+msgstr "Télécharger la langue"
+
+msgid "admin.languages.localeInstalled"
+msgstr "La langue \"{$locale}\" a été installée."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Sélectionner toute langue supplémentaire pour la prise en charge sur ce "
+"système. Les langues doivent être installées avant qu'elles ne puissent être "
+"utilisées par les serveurs hébergés. Voir la documentation d'OPS pour plus "
+"de renseignements sur la prise en charge de nouvelles langues."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Êtes-vous sûr de vouloir désinstaller cette langue ? Ceci affectera tout "
+"serveur hébergé utilisant actuellement cette langue."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Les langues sélectionnées peuvent être incomplètes."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Le téléchargement de fichiers de langue depuis le serveur web du Public "
+"Knowledge Project n'est pas disponible actuellement car : </p>\n"
+"<ul>\n"
+"<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire GNU  «"
+" tar ». </li>\n"
+"<li>OPS est incapable de modifier le fichier de registre de langues, "
+"généralement « registry/locales.xml ». </li>\n"
+"</ul>\n"
+"<p>Les fichiers de langue peuvent être téléchargés manuellement depuis le <a "
+"href=\"http://pkp.sfu.ca\">site Web PKP </a>.</p>"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Êtes-vous certain-e de vouloir désactiver cette langue ? Ceci affectera tout "
+"serveur hébergé utilisant actuellement cette langue."
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Les demandes faites au site principal seront réacheminées vers ce serveur. "
+"Cela peut être utile si le site n'héberge, par exemple, qu'un seul serveur."
+
+msgid "admin.settings.redirect"
+msgstr "Réacheminement vers le serveur"
+
+msgid "admin.settings.info.success"
+msgstr "Les informations du site ont bien été mises à jour."
+
+msgid "admin.settings.config.success"
+msgstr "Les paramètres de configuration du site ont bien été mis à jour."
+
+msgid "admin.settings.appearance.success"
+msgstr "Les paramètres d'apparence du site ont bien été mis à jour."
+
+msgid "admin.hostedContexts"
+msgstr "Serveurs hébergés"
