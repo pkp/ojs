@@ -74,11 +74,9 @@ A: OJS is known to work reasonably well with PHP's safe mode restrictions
    3) Will OJS work in a Microsoft IIS environment, or on other non-Apache web
       servers?
 
-A: OJS 2.0.2 and newer have been tested on Microsoft Windows Server 2003 with
-   IIS 6.0; earlier versions of OJS will need to be upgraded before they will
-   function. PHP 5.x is required because of an issue with the
-   $_SERVER[PATH_INFO] variable. We welcome feedback from users who have
-   successfully installed and used OJS in other server environments.
+A: OJS is not specifically tested with IIS but is reported to work. Generally
+   speaking, OJS is agnostic towards web server software as long as a standard
+   CGI-like environment is available.
 
    -----------------------------------------------------------------------------
 
@@ -118,21 +116,7 @@ A: To move an OJS system from one server to another, you will need to:
 Common Technical Issues
 =======================
 
-   1) When I try to access my OJS site this error message is displayed:
-      "Warning: Smarty error: problem creating directory '/./templates' in
-      ./lib/smarty/Smarty.class.php"
-
-A: This can occur if a higher level directory has execute permission but not
-   read permission. In these situations, the __FILE__ value in an included file
-   appears to be relative to the location of the including file. This issue can
-   be resolved by ensuring all parent directories are both readable and
-   executable.
-
-   See also this PHP bug report: <http://bugs.php.net/bug.php?id=16231>.
-
-   -----------------------------------------------------------------------------
-
-   2) Uploads of large files fail inexplicably.
+   1) Uploads of large files fail inexplicably.
  
 A: This can be caused by certain Apache or PHP settings.
 
@@ -147,7 +131,7 @@ A: This can be caused by certain Apache or PHP settings.
 
    -----------------------------------------------------------------------------
 
-   3) Emails sent out by the system are never received.
+   2) Emails sent out by the system are never received.
 
 A: By default, OJS sends mail through PHP's built-in mail() facility.
 
@@ -166,7 +150,7 @@ A: By default, OJS sends mail through PHP's built-in mail() facility.
 
    -----------------------------------------------------------------------------
 
-   4) I am using Apache 2.0.x, and OJS pages fail to load, producing an error
+   3) I am using Apache 2.0.x, and OJS pages fail to load, producing an error
       like "File does not exist: .../index.php/index/...".
 
 A: With some versions or configurations of Apache 2.0.x, it may be necessarily
@@ -178,20 +162,7 @@ A: With some versions or configurations of Apache 2.0.x, it may be necessarily
 
    -----------------------------------------------------------------------------
 
-   5) OJS installation fails with the MySQL error "Client does not support
-      authentication protocol requested by server; consider upgrading MySQL
-      client".
-
-A: This problem is caused by a change in the MySQL authentication protocol in
-   MySQL 4.1, and can occur if your system is using an older MySQL client
-   library with a newer MySQL server.
-
-   See http://dev.mysql.com/doc/mysql/en/Old_client.html for suggested
-   approaches to resolve this issue.
-
-   -----------------------------------------------------------------------------
-
-   6) "Warning: ini_set(): A session is active. You cannot change the session
+   4) "Warning: ini_set(): A session is active. You cannot change the session
        module's ini settings at this time" messages appear when I load OJS.
 
 A: Check if session.auto_start is enabled in your php.ini configuration. OJS
@@ -200,7 +171,7 @@ A: Check if session.auto_start is enabled in your php.ini configuration. OJS
 
    -----------------------------------------------------------------------------
 
-   7) The installation form loads successfully, but after clicking the button
+   5) The installation form loads successfully, but after clicking the button
        to install, a blank page appears and the database was not created.
 
 A: This may indicate that your server does not have the selected PHP database
@@ -231,7 +202,7 @@ Advanced OJS Configuration
 A: To control the address to which a bounced emails will be sent, you need to
    set the envelope sender address. Enable the "allow_envelope_sender" option
    in the [email] section of the OJS 2.x configuration file; when this option
-   is enabled, a "Bounce Address" field appears on Page 2 of the Journal Setup.
+   is enabled, a "Bounce Address" field appears in Setup.
 
    Note that this option may require changes to the server's mail server
    configuration so that the user the web server runs as (e.g. "www-data") is
