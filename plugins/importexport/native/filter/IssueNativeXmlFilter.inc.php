@@ -198,7 +198,8 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
 		]);
-		$articlesDoc = $exportFilter->execute(iterator_to_array($submissionsIterator));
+		$submissionsArray = iterator_to_array($submissionsIterator);
+		$articlesDoc = $exportFilter->execute($submissionsArray);
 		if ($articlesDoc->documentElement instanceof DOMElement) {
 			$clone = $doc->importNode($articlesDoc->documentElement, true);
 			$issueNode->appendChild($clone);
