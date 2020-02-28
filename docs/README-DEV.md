@@ -173,8 +173,8 @@ For contributions that are distributed separately as patches or plugins:
 * Whenever possible, git commit log messages should be prefixed with
   `pkp/pkp-lib#ISSUENUM` to reference a git issue; see
   https://github.com/pkp/pkp-lib#issues.
-* Please consult http://pkp.sfu.ca/wiki/index.php/HOW-TO_check_out_PKP_applications_from_git
-  for instructions on setting up a development environment.
+* Please consult the README document for instructions on setting up a
+  development environment.
 
 
 ### File Header
@@ -249,7 +249,7 @@ For contributions that are distributed separately as patches or plugins:
 
 ### Localization
 
-* i18n strings are defined in locale/<locale_key>/locale.xml.
+* i18n strings are defined in locale/<locale_key>/locale.po.
 * Key names should be in the form "sectionname(.subsectionname)*.name".
   E.g., "manager.setup.contextTitle"
 * Use {translate key="my.key.name"} in templates to translate i18n keys.
@@ -288,5 +288,4 @@ Note that these should apply to parameters supplied to {translate key="..."} and
 
 * Use `$request->redirectUrl($url)`, or better yet, `$request->redirect(...)` for
   HTTP redirects instead of `header('Location: ...');`
-* For additional coding convention information, see the OJS Design Document
-  at http://pkp.sfu.ca/ojs/OJSTechnicalReference.pdf.
+* For additional information, see https://docs.pkp.sfu.ca/dev/.
