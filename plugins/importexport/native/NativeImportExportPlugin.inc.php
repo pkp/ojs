@@ -252,7 +252,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @param $user User
 	 * @return string XML contents representing the supplied issue IDs.
 	 */
-	function exportIssues($issueIds, $context, $user) {
+	function exportIssues($issueIds, $context, $user, $opts = array()) {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO');
@@ -266,6 +266,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			if ($issue) $issues[] = $issue;
 		}
 		libxml_use_internal_errors(true);
+		$exportFilter->setOpts($opts);
 		$issueXml = $exportFilter->execute($issues, true);
 		$xml = $issueXml->saveXml();
 		$errors = array_filter(libxml_get_errors(), function($a) {
@@ -443,7 +444,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						file_put_contents($xmlFile, $this->exportIssues(
 							$args,
 							$journal,
-							null
+							null,
+							$opts
 						));
 						return;
 				}
