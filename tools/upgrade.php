@@ -15,22 +15,9 @@
  * Note: Some functions require fopen wrappers to be enabled.
  */
 
-
 require(dirname(__FILE__) . '/bootstrap.inc.php');
-
 import('lib.pkp.classes.cliTool.UpgradeTool');
 
-class OJSUpgradeTool extends UpgradeTool {
-	/**
-	 * Constructor.
-	 * @param $argv array command-line arguments
-	 */
-	function __construct($argv = array()) {
-		parent::__construct($argv);
-	}
-}
-
-$tool = new OJSUpgradeTool(isset($argv) ? $argv : array());
+$tool = new UpgradeTool(isset($argv) ? $argv : array());
 $tool->execute();
-
 
