@@ -32,5 +32,19 @@
 			DELETE FROM journal_settings WHERE setting_name="immersionAnnouncementsColor";
 		</query>
 	</sql>
+	<!-- Migrate email templates from email_templates_data to email_templates_settings -->
+	<sql>
+		<query>
+			INSERT INTO email_templates_settings (email_id, locale, setting_value, setting_name)
+			SELECT email_id, locale, subject, 'subject'
+			FROM email_templates_data
+		</query>
+		<query>
+			INSERT INTO email_templates_settings (email_id, locale, setting_value, setting_name)
+			SELECT email_id, locale, body, 'body'
+			FROM email_templates_data
+		</query>
+		<drop table="email_templates_data" />
+	</sql>
 </data>
 

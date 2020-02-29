@@ -39,26 +39,6 @@
 			)
 		</query>
 		<query>
-			CREATE TABLE email_templates_settings (
-				email_id INT,
-				locale VARCHAR(14) NOT NULL DEFAULT '',
-				setting_name VARCHAR(255) NOT NULL,
-				setting_value text NULL,
-				PRIMARY KEY (email_id,locale,setting_name)
-			)
-		</query>
-		<query>
-			INSERT INTO email_templates_settings (email_id, locale, setting_value, setting_name)
-			SELECT email_id, locale, subject, 'subject'
-			FROM email_templates_data
-		</query>
-		<query>
-			INSERT INTO email_templates_settings (email_id, locale, setting_value, setting_name)
-			SELECT email_id, locale, body, 'body'
-			FROM email_templates_data
-		</query>
-		<drop table="email_templates_data" />
-		<query>
 			ALTER TABLE email_templates
 			ADD context_id BIGINT
 		</query>
