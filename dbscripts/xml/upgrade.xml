@@ -139,7 +139,6 @@
 		<code function="convertSupplementaryFiles" />
 		<code function="provideSupplementaryFilesForReview" />
 		<code function="setFileUploader" />
-		<code function="setFileName" />
 		<data file="dbscripts/xml/upgrade/3.0.1_update.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
@@ -156,7 +155,6 @@
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
 		<code function="setFileUploader" />
-		<code function="setFileName" />
 		<data file="dbscripts/xml/upgrade/3.0.1_update.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
@@ -256,6 +254,11 @@
 		<code function="fixLibraryFiles" />
 		<code function="installEmailTemplate" key="STATISTICS_REPORT_NOTIFICATION" locales="en_US" />
 		<note file="docs/release-notes/README-3.2.0" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.0.0.9">
+		<!-- This appears intentionally late to give time for the versioning introduction. -->
+		<code function="setFileName" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
