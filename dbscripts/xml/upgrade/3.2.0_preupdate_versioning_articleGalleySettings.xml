@@ -16,6 +16,6 @@
 	<sql>
 		<query>UPDATE article_galley_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>CREATE TABLE submission_galley_settings AS SELECT * FROM article_galley_settings WHERE setting_name &lt;&gt; 'excludeDoi' AND setting_name &lt;&gt; 'excludeURN'</query>
-		<query>DROP TABLE article_galley_settings</query>
+		<drop table="article_galley_settings"/>
 	</sql>
 </data>

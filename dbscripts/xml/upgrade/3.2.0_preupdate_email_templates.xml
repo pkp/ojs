@@ -57,9 +57,7 @@
 			SELECT email_id, locale, body, 'body'
 			FROM email_templates_data
 		</query>
-		<query>
-			DROP TABLE email_templates_data
-		</query>
+		<drop table="email_templates_data" />
 		<query>
 			ALTER TABLE email_templates
 			ADD context_id BIGINT
@@ -68,11 +66,8 @@
 			UPDATE email_templates SET context_id = assoc_id
 			WHERE assoc_type=256 AND assoc_id IS NOT NULL
 		</query>
-		<query>
-			ALTER TABLE email_templates
-			DROP INDEX email_templates_assoc,
-			DROP INDEX email_templates_email_key
-		</query>
+		<dropindex table="email_templates" index="email_templates_assoc" />
+		<dropindex table="email_templates" index="email_templates_email_key" />
 		<query>
 			ALTER TABLE email_templates
 			DROP COLUMN assoc_type,

@@ -22,6 +22,6 @@
 		</query>
 	</sql>
 	<sql>
-		<query>DROP TABLE submission_categories</query>
+		<drop table="submission_categories" />
 	</sql>
 </data>
