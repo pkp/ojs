@@ -17,9 +17,7 @@
 	<sql>
 		<query>CREATE TABLE temp_authors AS SELECT * FROM authors</query>
 		<query>CREATE TABLE temp_submissions AS SELECT * FROM submissions</query>
-		<query>CREATE TABLE temp_submission_categories AS SELECT * FROM submission_categories</query>
 		<query>CREATE TABLE temp_submission_galleys AS SELECT * FROM submission_galleys</query>
-		<query>CREATE TABLE temp_submission_galley_settings AS SELECT * FROM submission_galley_settings</query>
 		<query>CREATE TABLE temp_published_submissions AS SELECT * FROM published_submissions</query>
 		<query>CREATE TABLE temp_citations AS SELECT * FROM citations</query>
 	</sql>

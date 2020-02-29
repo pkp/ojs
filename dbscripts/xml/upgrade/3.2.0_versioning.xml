@@ -137,16 +137,6 @@
 			)
 		</query>
 
-		<!-- connect categories to publications -->
-		<query>
-			INSERT INTO publication_categories(publication_id, category_id)
-				SELECT s.current_publication_id, tsc.category_id
-				FROM temp_submission_categories as tsc
-				LEFT JOIN submissions as s
-					ON s.submission_id = tsc.submission_id
-				WHERE s.current_publication_id IS NOT NULL
-		</query>
-
 		<!-- move submission_galleys to publication_galleys -->
 		<query>
 			INSERT INTO publication_galleys(galley_id, locale, publication_id, label, file_id, seq, remote_url, is_approved)
@@ -157,7 +147,7 @@
 		<query>
 			INSERT INTO publication_galley_settings(galley_id, locale, setting_name, setting_value)
 				SELECT tsgs.galley_id, tsgs.locale, tsgs.setting_name, tsgs.setting_value
-				FROM temp_submission_galley_settings as tsgs
+				FROM submission_galley_settings as tsgs
 				WHERE tsgs.galley_id IS NOT NULL
 		</query>
 
@@ -210,15 +200,12 @@
 		</query>
 
 		<!-- remove deprecated and temporary tables. should be last commands -->
-		<query>DROP TABLE submission_categories</query>
 		<query>DROP TABLE submission_galleys</query>
 		<query>DROP TABLE submission_galley_settings</query>
 		<query>DROP TABLE published_submissions</query>
 		<query>DROP TABLE temp_authors</query>
 		<query>DROP TABLE temp_submissions</query>
-		<query>DROP TABLE temp_submission_categories</query>
 		<query>DROP TABLE temp_submission_galleys</query>
-		<query>DROP TABLE temp_submission_galley_settings</query>
 		<query>DROP TABLE temp_published_submissions</query>
 		<query>DROP TABLE temp_citations</query>
 	</sql>

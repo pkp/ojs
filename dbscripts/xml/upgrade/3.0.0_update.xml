@@ -127,7 +127,6 @@
 		<query>UPDATE submissions SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE submission_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE submission_galleys SET locale='nb_NO' WHERE locale='no_NO'</query>
-		<query>UPDATE submission_galley_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE subscription_type_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 	</sql>
 	<sql><!-- Bug #8397 -->

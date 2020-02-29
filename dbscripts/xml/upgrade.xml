@@ -58,6 +58,7 @@
 	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
 		<code function="migrateSubmissionCoverImages" />
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_versioning_articleGalleySettings.xml" condition="return $installer->tableExists('article_galley_settings');"/>
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_last_activity.xml" />
 	</upgrade>
@@ -248,6 +249,7 @@
 		<code function="installEmailTemplate" key="REVIEW_REINSTATE" locales="en_US" />
 		<code function="changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit" />
 		<data file="dbscripts/xml/upgrade/3.2.0_versioning.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_versioning_submissionCategories.xml" condition="return $installer->tableExists('submission_categories');" />
 		<data file="dbscripts/xml/upgrade/3.2.0_last_activity.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_url_path.xml" />
 		<code function="setStatsEmailSettings" />

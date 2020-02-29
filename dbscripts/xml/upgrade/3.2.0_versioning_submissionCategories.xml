@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+ * dbscripts/xml/upgrade/3.2.0_versioning_submissionCategories.xml
+ *
+ * Copyright (c) 2013-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * Adapt submission_categories data for publication_categories.
+ *
+ -->
+<data>
+	<sql>
+		<query>
+			INSERT INTO publication_categories(publication_id, category_id)
+			SELECT s.current_publication_id, sc.category_id
+			FROM submission_categories as sc
+			LEFT JOIN submissions as s ON s.submission_id = sc.submission_id
+			WHERE s.current_publication_id IS NOT NULL
+		</query>
+	</sql>
+	<sql>
+		<query>DROP TABLE submission_categories</query>
+	</sql>
+</data>
