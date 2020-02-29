@@ -177,14 +177,6 @@ class Upgrade extends Installer {
 				}
 				$settingResult->Close();
 
-				$languageResult = $submissionDao->retrieve('SELECT language FROM submissions WHERE submission_id = ?', array((int)$articleId));
-				$languageRow = $languageResult->getRowAssoc(false);
-				// language is NOT localized originally.
-				$language = $languageRow['language'];
-				$languageResult->Close();
-				// test for locales for each field since locales may have been modified since
-				// the article was last edited.
-
 				$disciplines = $subjects = $keywords = $agencies = array();
 
 				if (array_key_exists('discipline', $settings)) {
@@ -240,14 +232,6 @@ class Upgrade extends Installer {
 					unset($agencies);
 				}
 
-				$languages = array();
-				foreach ($supportedLocales as &$locale) {
-					$languages[$locale] = preg_split('/\s+/', $language);
-					$languages[$locale] = array_map('trim', $languages[$locale]);
-				}
-				$submissionLanguageDao->insertLanguages($languages, $articleId, false);
-				unset($languages);
-				unset($language);
 				unset($settings);
 				$result->MoveNext();
 			}
