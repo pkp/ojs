@@ -444,6 +444,9 @@
 			<KEY />
 			<AUTOINCREMENT />
 		</field>
+		<field name="locale" type="C2" size="14">
+			<!-- DEPRECATED: Held over for the OJS 2.x to 3. upgrade process pkp/pkp-lib#3572 -->
+		</field>
 		<field name="context_id" type="I8">
 			<NOTNULL />
 		</field>
