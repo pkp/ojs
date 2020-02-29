@@ -450,6 +450,9 @@
 		<field name="context_id" type="I8">
 			<NOTNULL />
 		</field>
+		<field name="section_id" type="I8">
+			<!-- DEPRECATED: Held over for OJS 3.2 upgrade -->
+		</field>
 		<field name="current_publication_id" type="I8" />
 		<field name="date_last_activity" type="T"/>
 		<field name="date_submitted" type="T"/>
