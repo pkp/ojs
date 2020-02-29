@@ -140,7 +140,7 @@
 		<!-- move submission_galleys to publication_galleys -->
 		<query>
 			INSERT INTO publication_galleys(galley_id, locale, publication_id, label, file_id, seq, remote_url, is_approved)
-				SELECT tsg.galley_id, tsg.locale, s.current_publication_id, tsg.label, tsg.file_id, tsg.seq, tsg.remote_url, tsg.is_approved
+				SELECT tsg.galley_id, tsg.locale, s.current_publication_id, tsg.label, tsg.file_id, tsg.seq, tsg.remote_url, 1
 				FROM submissions as s, temp_submission_galleys as tsg
 				WHERE s.submission_id = tsg.submission_id
 		</query>
