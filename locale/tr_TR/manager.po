@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-02-27 15:39+0000\n"
+"PO-Revision-Date: 2020-03-01 03:42+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
 "\n"
@@ -18,7 +18,9 @@ msgid "manager.emails.confirmResetAll"
 msgstr "Bu dergide yer alan bütün e-posta şablonlarını varsayılan biçime döndürmek istediğinizden emin misiniz? Bu işlemi yaparsanız, özelleştirdiğiniz tüm şablonları kaybedeceksiniz!"
 
 msgid "manager.files.note"
-msgstr "Not: Dosya tarayıcı dergi ile ilişkilendirilmiş dosyalar ve dizinlerin doğrudan görülür ve yönetilebilir olmasını sağlayan, gelişmiş bir özelliktir."
+msgstr ""
+"Not: Dosya Tarayıcı dergi ile ilişkilendirilmiş dosyalar ve dizinlerin "
+"doğrudan görülür ve yönetilebilir olmasını sağlayan, gelişmiş bir özelliktir."
 
 msgid "manager.journalManagement"
 msgstr "Dergi Yönetimi"
@@ -33,22 +35,32 @@ msgid "manager.language.forms"
 msgstr "Formlar"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
-msgstr "Belirtmiş olduğunuz dil herhangi bir dile özgü dergi ayarlarını değiştirecektir."
+msgstr ""
+"Bu, bu dil için yapmış olduğunuz dile özgü dergi ayarlarını değiştirecek."
 
+#, fuzzy
 msgid "manager.languages.languageInstructions"
-msgstr "ADS desteklenen dillerden herhangi biriyle kullanılabilir. ADS çok dilli bir sistem yapısına sahiptir ve her sayfada diller arasında geçiş yapabilme özelliği ile kullanıcıların istedikleri dilde veri girmesini sağlar.<br /><br />ADS tarafından desteklenen bir dil aşağıdaki listede yoksa, site yönetim arayüzünden dili yüklemek için site yöneticinize başvurun. Yeni dil desteği eklemek için ilgili talimatlar ve ADS belgelerine bakınız."
+msgstr ""
+"ADS desteklenen dillerden herhangi biriyle kullanılabilir. ADS çok dilli bir "
+"sistem yapısına sahiptir ve her sayfada diller arasında geçiş yapabilme "
+"özelliği ile kullanıcıların istedikleri dilde veri girmesini sağlar.<br /><"
+"br />ADS tarafından desteklenen bir dil aşağıdaki listede yoksa, site "
+"yönetim arayüzünden dili yüklemek için site yöneticinize başvurun. Yeni dil "
+"desteği eklemek için ilgili talimatlar ve ADS belgelerine bakınız."
 
 msgid "manager.languages.noneAvailable"
-msgstr "Üzgünüz, başka bir ek dil kullanılamaz. Bu dergide ek bir dil kullanmak istiyorsanız site yöneticinize başvurunuz."
+msgstr ""
+"Üzgünüz, kullanılabilir bir ek dil bulunmuyor. Bu dergide ek bir dil "
+"kullanmak istiyorsanız site yöneticiniz ile iletişime geçiniz."
 
 msgid "manager.languages.primaryLocaleInstructions"
-msgstr "Bu dergi sitesi için varsayılan dil olacaktır."
+msgstr "Bu, dergi sitesi için varsayılan dil olacak."
 
 msgid "manager.managementPages"
 msgstr "Yönetim Sayfaları"
 
 msgid "manager.payment.action"
-msgstr "Eylem"
+msgstr "İşlem"
 
 msgid "manager.payment.addPayment"
 msgstr "Ödeme Ekle"
@@ -60,13 +72,17 @@ msgid "manager.payment.authorFees"
 msgstr "Yazar Ücretleri"
 
 msgid "manager.payment.authorFeesDescription"
-msgstr "Hakkında başlığı altında, dergiye yapılan gönderilerdeki açıklamalar boyunca işaretli seçenekler ve ücretler (aşağıda düzenlenebilir) ödemenin nerede yapılacağı işaret edildiği gibi gönderi sürecinin 1. Adımında görülür."
+msgstr ""
+"Yazar işlem ücretlerini etkinleştirmek için ücret tutarlarını aşağıya girin."
 
 msgid "manager.payment.currencymessage"
-msgstr "ADS herhangi bir para birimi dönüşümünü gerçekleştirmez. Abonelik için ödemeleri kabul ederseniz, abonelik parasının burada belirtilenle eşleştiğinden emin olmalısınız."
+msgstr ""
+"OJS herhangi bir para birimi dönüştürme işlemi yapmaz. Abonelik ödemelerini "
+"kabul ediyorsanız, abonelik para biriminin burada belirtilenle eşleştiğinden "
+"emin olmalısınız."
 
 msgid "manager.payment.description"
-msgstr "Tanım"
+msgstr "Açıklama"
 
 msgid "manager.payment.details"
 msgstr "Detaylar"
@@ -78,16 +94,20 @@ msgid "manager.payment.enable"
 msgstr "Etkinleştir"
 
 msgid "manager.payment.feePaymentOptions"
-msgstr "Ödeme Seçenekleri"
+msgstr "Ücret Ödeme Seçenekleri"
 
 msgid "manager.payment.form.numeric"
-msgstr "Tüm tutarlar pozitif numerik değerde olmalıdır (ondalık sayılar kabul edilir)."
+msgstr ""
+"Tüm tutarlar pozitif sayısal değerler şeklinde olmalıdır (ondalık sayılar "
+"kabul edilir)."
 
 msgid "manager.payment.generalFees"
 msgstr "Genel Ücretler"
 
 msgid "manager.payment.generalFeesDescription"
-msgstr "Dernek üyelikleri, Dergi Hakkında sayfasında Politikalar altında ve bağış linkleri sağ taraf çerçevede arama seçeneği üzerinde görülür."
+msgstr ""
+"Dernek Üyeliği, Dergi Hakkında sayfasında Politikalar altında, bağış "
+"linkleri de sağ taraf çerçevede arama seçeneği üzerinde görülür."
 
 msgid "manager.payment.generalOptions"
 msgstr "Genel Seçenekler"
@@ -102,16 +122,20 @@ msgid "manager.payment.options"
 msgstr "Seçenekler"
 
 msgid "manager.payment.options.acceptSubscriptionPayments"
-msgstr "Bu abonelikler için ödemeyi aktif hale getirir. Abone Yöneticisi tarafından tür, maliyet süre ve abnelikler yönetilir."
+msgstr ""
+"Bu, abonelikler için ödemeleri etkinleştirir. Türler, maliyet, süre ve "
+"abonelikler Dergi (Abonelik) Yöneticisi tarafından yönetilir."
 
 msgid "manager.payment.options.enablePayments"
-msgstr "Ödeme modülünü etkinleştirmek için buraya tıklayınız. Aşağıdaki formu doldurmak için ödeme ayarları konfigürasyonunu yapmalısınız. Not: Kullanıcılar ödeme yapabilmek için giriş yapmak zorundadırlar."
+msgstr ""
+"Bu dergi için ödemeler etkinleştirilecektir. Kullanıcıların ödeme yapmak "
+"için giriş yapmaları gerekeceğini unutmayın."
 
 msgid "manager.payment.options.fee"
 msgstr "Ücret"
 
 msgid "manager.payment.options.feeDescription"
-msgstr "Ücret Tanımlama"
+msgstr "Ücret Açıklaması"
 
 msgid "manager.payment.options.feeName"
 msgstr "Ücret Adı"
@@ -120,10 +144,10 @@ msgid "manager.payment.options.membershipFee"
 msgstr "Dernek Üyeliği"
 
 msgid "manager.payment.options.onlypdf"
-msgstr "Makale ve sayılarıdaki PDF sürüme sınırlandırılmış erişim"
+msgstr "Makale ve sayılardaki PDF dosyalara yalnızca sınırlı erişim"
 
 msgid "manager.payment.options.publicationFee"
-msgstr "Makale Yayını"
+msgstr "Makale İşleme Ücreti"
 
 msgid "manager.payment.options.purchaseArticleFee"
 msgstr "Makale Satın Al"
@@ -135,13 +159,15 @@ msgid "manager.payment.paymentId"
 msgstr "Ödeme Numarası"
 
 msgid "manager.payment.paymentMethod"
-msgstr "Ödeme Yönetmi"
+msgstr "Ödeme Yöntemi"
 
 msgid "manager.payment.paymentMethod.description"
-msgstr "Bu ekrandan aşağıdaki ödeme metodu eklentilerinden birinin konfigürasyonunu yapmalısınız."
+msgstr ""
+"Bu ekrandan aşağıdaki Ödeme Yöntemi Eklentilerinden herhangi birini "
+"yapılandırabilirsiniz."
 
 msgid "manager.payment.paymentMethods"
-msgstr "Ücret Ödeme Yönetemleri"
+msgstr "Ücret Ödeme Yöntemleri"
 
 msgid "manager.payment.paymentType"
 msgstr "Ödeme Türü"
@@ -150,7 +176,10 @@ msgid "manager.payment.readerFees"
 msgstr "Okuyucu Ücretleri"
 
 msgid "manager.payment.readerFeesDescription"
-msgstr "Hakkında başlığı altındaki politikalarda açıklamalar boyunca işaretli seçenekler ve ücretler (aşağıda düzenlenebilir) ödemenin nerede yapılacağı işaret edildiği gibi görülür."
+msgstr ""
+"Seçilen seçenekler, açıklamaları ve ücretleri (aşağıda düzenlenebilir) ile "
+"birlikte Dergi Hakkında bölümünde Politikalar altında ve ödemenin gerekli "
+"olduğu yerlerde görünecektir."
 
 msgid "manager.payment.records"
 msgstr "Kayıtlar"
@@ -159,19 +188,19 @@ msgid "manager.payment.userName"
 msgstr "Ödeme Numarası"
 
 msgid "manager.people.allEnrolledUsers"
-msgstr "Bu Dergideki Kayıtlı Kullanıcılar"
+msgstr "Bu Dergide Kayıtlı Kullanıcılar"
 
 msgid "manager.people.allJournals"
 msgstr "Tüm Dergiler"
 
 msgid "manager.people.allSiteUsers"
-msgstr "Bu Dergide Kullanıcı Yetkilendir"
+msgstr "Bu Dergiye Siteden Bir Kullanıcı Kaydet"
 
 msgid "manager.people.showNoRole"
-msgstr "Rolü Olmayan Kullanıcıları Göster"
+msgstr "Rolü olmayan kullanıcıları göster"
 
 msgid "manager.people.allUsers"
-msgstr "Tüm Aktif Kullanıcılar"
+msgstr "Kayıtlı Tüm Kullanıcılar"
 
 msgid "manager.people.confirmRemove"
 msgstr "Bu kullanıcıyı bu dergiden çıkar. Bu işlem kullanıcının bu dergideki tüm görevlerini iptal edecektir."
@@ -180,28 +209,40 @@ msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Şablon seç"
 
 msgid "manager.people.enrollExistingUser"
-msgstr "Tüm Kayıtlı Kullancılar"
+msgstr "Mevcut Bir Kullanıcıyı Kaydet"
 
 msgid "manager.people.enrollSyncJournal"
 msgstr "Dergi ile"
 
+#, fuzzy
 msgid "manager.people.mergeUsers.from.description"
-msgstr "Başka bir kullanıcı hesabı ile birleştirmek için bir ya da  birden çok kullanıcı seç (Örneğin; iki kullanıcı hesabı olan kişiler için). Birincil olarak seçilen hesap silinecek ve kullanıcının gönderileri, görevleri, atamaları gibi tüm kayıtları ikinci seçilen hesaba aktarılacaktır."
+msgstr ""
+"Başka bir kullanıcı hesabıyla birleştirmek için bir kullanıcı (veya "
+"kullanıcılar) seçin (ör. bir kişinin iki kullanıcı hesabı varsa). İlk "
+"seçilen kullanıcı(lar) silinecek ve gönderiler, atamalar vb. özellikler "
+"ikinci seçilen kullanıcı hesabına aktarılacaktır."
 
+#, fuzzy
 msgid "manager.people.mergeUsers.into.description"
-msgstr "Önceki seçtiğiniz kullanıcının yazarlık, atama gibi görvlerinin bağlanacağı bir kullanıcı seçiniz."
+msgstr ""
+"Önceki kullanıcının yazarlıkları, editörlük atamaları vb. özelliklerin "
+"ilişkilendirileceği bir kullanıcı seçin."
 
 msgid "manager.people.roleEnrollment"
 msgstr "{$role} Kayıt"
 
+#, fuzzy
 msgid "manager.people.syncUserDescription"
-msgstr "Eşzamanlı kayıt belirli dergide belirli rol şeklinde kaydolmuş tüm kullanıcıları bu dergide kaydeder. Bu fonksiyon ortak kullanıcı gruplarını (Örneğin; Hakemler) dergiler arasında senkronize eder."
+msgstr ""
+"Eşzamanlı kayıt belirli dergide belirli rol şeklinde kaydolmuş tüm "
+"kullanıcıları bu dergide kaydeder. Bu fonksiyon ortak kullanıcı gruplarını "
+"(Örneğin; Hakemler) dergiler arasında senkronize eder."
 
 msgid "manager.sections.assigned"
 msgstr "Bu Bölümün Editörleri"
 
 msgid "manager.sections.abstractsNotRequired"
-msgstr "Abstrakt zorunlu değil"
+msgstr "Öz zorunlu değil"
 
 msgid "manager.sections.confirmDelete"
 msgstr "Bu bölümü kalıcı olarak silmek istediğinizden emin misiniz?"
@@ -209,38 +250,52 @@ msgstr "Bu bölümü kalıcı olarak silmek istediğinizden emin misiniz?"
 msgid "manager.sections.create"
 msgstr "Bölüm Oluştur"
 
+#, fuzzy
 msgid "manager.section.sectionEditorInstructions"
-msgstr "Bölüm editörlerinin gönderilere otomatik olarak atanması için bu bölüme bir bölüm editörü ekleyiniz. (Öte yandan, bir gönderi geldikten sonra bölüm editörleri manuel olarak da atanabilir.) Eğer eklendiyse bir bölüm editörü bu bölümün gönderilerini gözden geçirmeye (hakemlik) ve düzenlemeye (sayfa düzeni, mizanpaj ve tashih) otomatik olarak atanır. Bölüm editörleri Dergi Yönetimi kısmındaki Roller altında Bölüm Editörleri tıklanarak oluşturulur."
+msgstr ""
+"Bölüm editörlerinin gönderilere otomatik olarak atanması için bu bölüme bir "
+"bölüm editörü ekleyiniz. (Öte yandan, bir gönderi geldikten sonra bölüm "
+"editörleri manuel olarak da atanabilir.) Eğer eklendiyse bir bölüm editörü "
+"bu bölümün gönderilerini gözden geçirmeye (hakemlik) ve düzenlemeye (sayfa "
+"düzeni, mizanpaj ve tashih) otomatik olarak atanır. Bölüm editörleri Dergi "
+"Yönetimi kısmındaki Roller altında Bölüm Editörleri tıklanarak oluşturulur."
 
 msgid "manager.sections.editorRestriction"
-msgstr "Öğeler sadece editörler ve bölüm editörleri tarafından gönderilerbilir."
+msgstr ""
+"İçerik yalnızca editörler ve bölüm editörleri tarafından gönderilebilir."
 
 msgid "manager.sections.editors"
 msgstr "Bölüm Editörleri"
 
 msgid "manager.sections.form.abbrevRequired"
-msgstr "Bölüm için kısaltılmış bir başlık gerekir"
+msgstr "Bölüm için kısaltılmış bir başlık zorunludur"
 
+#, fuzzy
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "Her bir Bölüm Editörü atamasının işaretlenmesi için en az bir işaret kutusu olduğundan emin olun."
+msgstr ""
+"Her bir Bölüm Editörü atamasının işaretlenmesi için en az bir işaret kutusu "
+"olduğundan emin olun."
 
 msgid "manager.sections.form.reviewFormId"
-msgstr "Lütfen geçerli bir inceleme formu seçtiğinizden emin olun."
+msgstr "Lütfen geçerli bir değerlendirme formu seçtiğinizden emin olun."
 
 msgid "manager.sections.form.titleRequired"
-msgstr "Bölüm için başlık gerekiyor."
+msgstr "Bölüm için başlık zorunludur."
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "Sayının içindekiler sayfasında bölüm öğeleri için yazar adlarını ele."
+msgstr "Bu bölümde, sayının içindekiler tablosundan yazar isimlerini gösterme."
 
 msgid "manager.sections.hideTocTitle"
-msgstr "Bu bölümün başlığını sayının içindekiler tablosundan çıkar."
+msgstr "Bu bölümün başlığını sayının içindekiler tablosunda gösterme."
 
+#, fuzzy
 msgid "manager.sections.identifyType"
 msgstr "Bu bölümde yayınlanan öğelerin belirlenmesinde kullanılacak tanım:"
 
 msgid "manager.sections.identifyTypeExamples"
-msgstr "(Örneğin,  \"Hakemlik Sürecinden Geçmiş Makale\", \"Hakemlik Sürecinden Geçmemiş Kitap Değerlendirmesi\", \"Davetli makale\", v.b.)"
+msgstr ""
+"(Örneğin,  \"Hakemlik Değerlendirmesinden Geçmiş Makale\", \"Hakemlik "
+"Değerlendirmesinden Geçmemiş Kitap İncelemesi\", \"Çağrılı Yorum\", vb.)"
 
 msgid "manager.sections.indexed"
 msgstr "Dizinlenmiş"
@@ -248,6 +303,7 @@ msgstr "Dizinlenmiş"
 msgid "manager.sections.noneCreated"
 msgstr "Herhangi bir bölüm oluşturulmadı."
 
+#, fuzzy
 msgid "manager.sections.open"
 msgstr "Açık Başvurular"
 
@@ -258,34 +314,34 @@ msgid "manager.sections.readingTools"
 msgstr "Okuma Araçları"
 
 msgid "manager.sections.reviewed"
-msgstr "Hakam Değerlendirmesinden Geçmiş"
+msgstr "Hakem Değerlendirmesinden Geçmiş"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "Bu bölümdeki maddeler derginin dizin içeriğine dahil edilmeyecektir."
+msgstr "Bu bölümdeki içerik derginin dizin içeriğine dahil edilmeyecektir."
 
 msgid "manager.sections.submissionReview"
 msgstr "Hakem değerlendirmesinden geçmeyecek"
 
 msgid "manager.section.submissionsToThisSection"
-msgstr "Dergini bu bölümüne yapılan başvurular"
+msgstr "Derginin bu bölümüne yapılan başvurular"
 
 msgid "manager.sections.unassigned"
 msgstr "Atanabilecek Bölüm Editörleri"
 
 msgid "manager.sections.wordCount"
-msgstr "Kelime Say"
+msgstr "Kelime Sayısı"
 
 msgid "manager.sections.wordCountInstructions"
-msgstr "Bu bölümde özet (abstrakt) için kelime limiti (limitsiz: 0)"
+msgstr "Bu bölümde öz (abstract) için kelime sayısı (limitsiz: 0)"
 
 msgid "manager.setup"
-msgstr "Ayar"
+msgstr "Dergi Ayarları"
 
 msgid "manager.setup.aboutItemContent"
 msgstr "İçerik"
 
 msgid "manager.setup.addAboutItem"
-msgstr "Ek Öğe"
+msgstr "Hakkında Öğesi Ekle"
 
 msgid "manager.setup.addChecklistItem"
 msgstr "Kontrol Listesi Öğesi Ekle"
@@ -294,7 +350,7 @@ msgid "manager.setup.addItem"
 msgstr "Öğe Ekle"
 
 msgid "manager.setup.addItemtoAboutJournal"
-msgstr "\"Dergi Hakkında\" Kısmında Görüntülenmesi İçin Öğe Ekle"
+msgstr "\"Dergi Hakkında\" Sayfasında Görüntülenecek Öğe Ekle"
 
 msgid "manager.setup.addNavItem"
 msgstr "Öğe Ekle"
@@ -308,8 +364,11 @@ msgstr "Sponsor Kurum Ekle"
 msgid "manager.setup.alternateHeader"
 msgstr "Alternatif Başlık"
 
+#, fuzzy
 msgid "manager.setup.alternateHeaderDescription"
-msgstr "Alternatif olarak, başlık ve logo yerine, başlık HTML biçiminde hazırlanarak bu alana eklenebilir, gerekli değil ise bu alanı boş bırakınız."
+msgstr ""
+"Alternatif olarak, başlık ve logo yerine, başlık HTML biçiminde hazırlanarak "
+"bu alana eklenebilir, gerekli değil ise bu alanı boş bırakınız."
 
 msgid "manager.setup.announcements"
 msgstr "Duyurular"
@@ -318,22 +377,27 @@ msgid "manager.setup.enableAnnouncements.description"
 msgstr "Duyurular dergi okuyucularına haber veya gelişmeleri iletmek için yayımlanır. Yayınlananlar  duyurular sayfasında görüntülenir."
 
 msgid "manager.setup.announcementsIntroduction.description"
-msgstr "Duyuru sayfasında okuyuculara gösterilmek üzere ek bilgi gir."
+msgstr "Duyuru sayfasında gösterilecek ek bilgi gir."
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(Dergi Hakkında sayfasında görülmek üzere)"
+msgstr "(Dergi Hakkında sayfasında gösterilecek) "
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Yazarların gönderileriyle birlikte bir Çıkar Çatışması bildirimi dosyası göndermeleri gereklidir."
 
 msgid "manager.setup.competingInterests.requireReviewers"
-msgstr "Hakemlerin her bir değerlendirme gönderisi için Çıkar Çatışması bildirimi dosyası göndermeleri gereklidir."
+msgstr ""
+"Yazarların değerlendirmeleriyle birlikte bir Çıkar Çatışması bildirimi "
+"dosyası göndermeleri gereklidir."
 
 msgid "manager.setup.history"
 msgstr "Dergi Geçmişi"
 
+#, fuzzy
 msgid "manager.setup.historyDescription"
-msgstr "Buraya yazılan metin dergi web sayfasının \"Hakkında\" kısmında görüntülenir. Dergi geçmişi ve yayın kuruluna yönelik bilgiler verilir."
+msgstr ""
+"Buraya yazılan metin dergi web sayfasının \"Hakkında\" kısmında "
+"görüntülenir. Dergi geçmişi ve yayın kuruluna yönelik bilgiler verilir."
 
 msgid "manager.setup.metadata.coverage"
 msgstr "Kapsam"
@@ -345,7 +409,7 @@ msgid "manager.setup.currentIssue"
 msgstr "Son Sayı"
 
 msgid "manager.setup.customizingTheLook"
-msgstr "5. Basamak: Görünümün Özelleştirilmesi"
+msgstr "5. Adım: Görünümü Özelleştir"
 
 msgid "manager.setup.customTags"
 msgstr "Özel etiketler"
@@ -354,7 +418,7 @@ msgid "manager.setup.customTagsDescription"
 msgstr "Özel HTML başlık etiketleri her sayfanın başlığına etiketlenir. (Örneğin Üst Veri etiketleri)."
 
 msgid "manager.setup.details"
-msgstr "Ayrıntılar"
+msgstr "Detaylar"
 
 msgid "manager.setup.details.description"
 msgstr "Derginin Adı, ISSN, iletişim, sponsorlar ve arama motorları."
@@ -365,11 +429,14 @@ msgstr "Dergi Yöneticisi tüm kullanıcıları, editörler veya bölüm editör
 msgid "manager.setup.discipline"
 msgstr "Akademik Disiplinler ve Alt Disiplinler"
 
+#, fuzzy
 msgid "manager.setup.disciplineDescription"
-msgstr "Eğer dergi akademik alanların bir kaçını kapsıyor veya yazarlar çalışmalarını akademik alanlara göre gönderiyorlar ise kullanışlıdır."
+msgstr ""
+"Eğer dergi akademik alanların bir kaçını kapsıyor veya yazarlar "
+"çalışmalarını akademik alanlara göre gönderiyorlar ise kullanışlıdır."
 
 msgid "manager.setup.disciplineExamples"
-msgstr "(Örneğin, Tarih; Eğitim; Sosyoloji; Psikoloji; Kültürel Çalışmalar; Hukuk)"
+msgstr "(Ör. Tarih; Eğitim; Sosyoloji; Psikoloji; Kültürel Çalışmalar; Hukuk)"
 
 msgid "manager.setup.disciplineProvideExamples"
 msgstr "Bu dergi için uygun akademik disiplin örnekleri ver."
@@ -384,10 +451,16 @@ msgid "manager.setup.emailBounceAddress"
 msgstr "Yanıt vermeyen e-posta adresi"
 
 msgid "manager.setup.emailBounceAddress.description"
-msgstr "İletilemeyen her posta bu adreste hata mesajı olarak sonuçlanacaktır."
+msgstr "Teslim edilemeyen e-postalar bu adrese bir hata mesajı olarak gönderir."
 
+#, fuzzy
 msgid "manager.setup.emailBounceAddress.disabled"
-msgstr "<strong>Not:</strong> Bu seçeneği etkinleştirmek için ADS konfigürasyon dosyasında <tt>allow_envelope_sender</tt> seçeneği etkin olmalıdır. Bu işlevin kullanılabilmesi için sunucu (tüm sunucularda çalışmayabilir) ayarlarında da değişiklik yapılması gerekir. Daha fazla bilgi için ADS belgelerine bakınız."
+msgstr ""
+"<strong>Not:</strong> Bu seçeneği etkinleştirmek için ADS konfigürasyon "
+"dosyasında <tt>allow_envelope_sender</tt> seçeneği etkin olmalıdır. Bu "
+"işlevin kullanılabilmesi için sunucu (tüm sunucularda çalışmayabilir) "
+"ayarlarında da değişiklik yapılması gerekir. Daha fazla bilgi için ADS "
+"belgelerine bakınız."
 
 msgid "manager.setup.emails"
 msgstr "E-posta Tanımlama"
@@ -600,7 +673,7 @@ msgid "manager.setup.onlineIssn"
 msgstr "eISSN"
 
 msgid "manager.distribution.publishingMode.openAccess"
-msgstr "Dergi açık erişime izin verir."
+msgstr "Dergi, içeriğini açık erişim sunacak."
 
 msgid "manager.setup.pageNumberIdentifier"
 msgstr "Sayfa Numarası Seçenekleri"
@@ -744,10 +817,11 @@ msgid "manager.setup.submissions.description"
 msgstr "Yazar rehberleri, telif hakkı ve dizinleme (kayıt dahil)."
 
 msgid "manager.distribution.publishingMode.subscription"
-msgstr "Dergi içeriğinin tümüne veya bir bölümüne erişim için abonelik gerekir."
+msgstr ""
+"Dergi, içeriğinin tümü veya bir kısmına erişmek için abonelik gerektirecek."
 
 msgid "manager.distribution.publishingMode.none"
-msgstr "ADS derginin online içeriğini yayımlamak için kullanılmaz."
+msgstr "OJS derginin içeriğini online yayımlamak için kullanılmayacak."
 
 msgid "manager.setup.typeExamples"
 msgstr "(Örneğin: Tarihsel Sorgu; Yarı Deneysel; Edebi Analiz; Araştırma/Görüşme)"
@@ -1299,7 +1373,9 @@ msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Abonelik türü başarıyla oluşturuldu."
 
 msgid "manager.sections.alertDelete"
-msgstr "Bu bölümü silmeden önce yayımlanmış makaleleri diğer bölümlere taşımalısınız."
+msgstr ""
+"Bu bölümü silmeden önce, bu bölümde yayımlanmış makaleleri diğer bölümlere "
+"taşımalısınız."
 
 msgid "manager.setup.categories.description"
 msgstr "Yukarıda listelenen kümelerden uygun kategorileri seçiniz. Okuyucular tamamlanmış dergi kümelerinden kategoriye göre listeleme yapabilirler."
@@ -1365,13 +1441,16 @@ msgid "manager.paymentTypes"
 msgstr "Ödeme Türleri"
 
 msgid "manager.section.noSectionEditors"
-msgstr "Henüz bölüm editörü yok. İlk önce Yönetim > Ayarlar > Kullanıcılar Rolleri &amp; ile en az bir kullanıcıya bu rolü ekleyin."
+msgstr ""
+"Henüz bölüm editörü atanmamış. Bölüm editörü atamak için öncelikle Yönetim > "
+"Ayarlar > Kullanıcılar  &amp; Roller yolunu takip ederek bu role az bir "
+"kullanıcı ekleyin."
 
 msgid "manager.setup.masthead"
 msgstr "Yönetici Listesi"
 
 msgid "manager.setup.editorialTeam"
-msgstr "Kişiler ve Kurullar"
+msgstr "Editör Kurulları"
 
 msgid "manager.setup.editorialTeam.description"
 msgstr "Yöneticiler, editörler ve dergiyle ilişkili diğer kişileri listeleyin."
@@ -1379,14 +1458,18 @@ msgstr "Yöneticiler, editörler ve dergiyle ilişkili diğer kişileri listeley
 msgid "manager.setup.homepageContent"
 msgstr "Dergi Ana Sayfa İçeriği"
 
+#, fuzzy
 msgid "manager.setup.homepageContentDescription"
-msgstr "Derginin ana sayfası varsayılan olarak gezinme bağlantılarından oluşur. Ek ana sayfa içeriği, gösterilen sıraya göre görünecek olan aşağıdaki seçeneklerden biri veya tümü kullanılarak eklenebilir."
+msgstr ""
+"Derginin ana sayfası varsayılan olarak gezinme bağlantılarından oluşur. Ek "
+"ana sayfa içeriği, gösterilen sıraya göre görünecek olan aşağıdaki "
+"seçeneklerden biri veya tümü kullanılarak eklenebilir."
 
 msgid "manager.setup.layout"
 msgstr "Dergi Düzeni"
 
 msgid "manager.setup.useStyleSheet"
-msgstr "Dergi biçim sayfası"
+msgstr "Dergi sitil dosyası"
 
 msgid "manager.setup.contextName"
 msgstr "Dergi Adı"
@@ -1650,3 +1733,34 @@ msgstr "Portico"
 
 msgid "manager.setup.Issn"
 msgstr "ISSN"
+
+msgid "manager.setup.contact.success"
+msgstr "Bu dergi için iletişim detayları güncellendi."
+
+msgid "manager.setup.archiving.success"
+msgstr "Bu dergi için arşivleme detayları güncellendi."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Giriş"
+
+msgid "manager.setup.announcements.success"
+msgstr "Duyuru ayarları güncellendi."
+
+msgid "manager.payment.success"
+msgstr "Ödeme ayarları güncellendi."
+
+msgid "manager.website.archiving"
+msgstr "Arşivleme"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Makalenin yayınlanma tarihini kullan"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Sayının yayınlanma tarihini kullan"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Bir makale için varsayılan telif hakkı tarihinin nasıl belirleneceğini "
+"seçin. Bu varsayılan, duruma göre geçersiz kılınabilir. Eğer makaleleri \""
+"kabul edildikçe yayınlıyorsanız\", telif hakkı yılı olarak sayının "
+"yayınlanma tarihini kullanmayın."
