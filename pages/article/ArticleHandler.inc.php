@@ -284,19 +284,19 @@ class ArticleHandler extends Handler {
 			// Galley: Prepare the galley file download.
 			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$this->galley, &$article, $publication))) {
 				if ($this->publication->getId() !== $this->article->getCurrentPublication()->getId()) {
-					$redirectArgs = [
+					$redirectPath = [
 						$article->getBestId(),
 						'version',
 						$publication->getId(),
 						$this->galley->getBestGalleyId()
 					];
 				} else {
-					$redirectArgs = [
-						$article->getId(),
+					$redirectPath = [
+						$article->getBestId(),
 						$this->galley->getBestGalleyId()
 					];
 				}
-				$request->redirect(null, null, 'download', $redirectArgs);
+				$request->redirect(null, null, 'download', $redirectPath);
 			}
 		}
 	}
