@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-03-01 03:42+0000\n"
+"PO-Revision-Date: 2020-03-02 18:15+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
 "\n"
@@ -317,7 +317,7 @@ msgid "manager.sections.reviewed"
 msgstr "Hakem Değerlendirmesinden Geçmiş"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "Bu bölümdeki içerik derginin dizin içeriğine dahil edilmeyecektir."
+msgstr "Bu bölümdeki içerik derginin dizinlenen içeriğine dahil edilmeyecektir."
 
 msgid "manager.sections.submissionReview"
 msgstr "Hakem değerlendirmesinden geçmeyecek"
@@ -374,7 +374,9 @@ msgid "manager.setup.announcements"
 msgstr "Duyurular"
 
 msgid "manager.setup.enableAnnouncements.description"
-msgstr "Duyurular dergi okuyucularına haber veya gelişmeleri iletmek için yayımlanır. Yayınlananlar  duyurular sayfasında görüntülenir."
+msgstr ""
+"Duyurular, okuyuculara haber veya etkinlikleri bildirmek için "
+"yayınlanabilir. Yayınlanmış duyurular, Duyurular sayfasında görüntülenir."
 
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr "Duyuru sayfasında gösterilecek ek bilgi gir."
@@ -472,10 +474,10 @@ msgid "manager.setup.emailSignature.description"
 msgstr "Dergi adına hazırlanmış ve sistem tarafından gönderilen e-postalara eklenen imzadır. Hazır e-posta metinleri Dergi Yönetimi sayfası altındadır."
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Dergi yöneticilerinin dergilerine duyuru eklemelerini etkinleştir."
+msgstr "Duyuruları Etkinleştir"
 
 msgid "manager.setup.enableUserRegistration"
-msgstr "Kullanıcılar aşağıda belirtilen bir veya birden çok rol ile dergiye kendileri üye olabilirler."
+msgstr "Ziyaretçiler dergiye kullanıcı olarak kayıt olabilir."
 
 msgid "manager.setup.focusAndScope"
 msgstr "Odak ve kapsam"
@@ -483,29 +485,39 @@ msgstr "Odak ve kapsam"
 msgid "manager.setup.forAuthorsToIndexTheirWork"
 msgstr "Çalışmalarını Dizinlemek İsteyen Yazarlar için"
 
+#, fuzzy
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
-msgstr "Açık Dergi Sistemleri, dünya çapında elektronik araştırma kaynaklarına ulaşma amacı ile standart oluşturan <a href=\"http://www.openarchives.org/\" target=\"_blank\">Açık Arşiv Girişimi</a>nin Üst Veri Harmanlama Protokolünü destekler. Yazarlar makale başvuruları için veri sağlamak amacıyla benzer bir şablon kullanacaklardır. Dergi yöneticisi indeksleme için ve mevcut yazarlar ilgili örneklerle birlikte dizinlenmiş çalışmalarını bulmak için noktalı virgülle ayrılmış terim (Örneğin, terim1; terim2) kategorileri seçmelidir. Girişler “ör” veya “örneğin” kullanılarak örneklerdeki gibi yapılmalıdır."
+msgstr ""
+"Açık Dergi Sistemleri, dünya çapında elektronik araştırma kaynaklarına "
+"ulaşma amacı ile standart oluşturan <a href=\"http://www.openarchives.org/\" "
+"target=\"_blank\">Açık Arşiv Girişimi</a>nin Üst Veri Harmanlama Protokolünü "
+"destekler. Yazarlar makale başvuruları için veri sağlamak amacıyla benzer "
+"bir şablon kullanacaklardır. Dergi yöneticisi indeksleme için ve mevcut "
+"yazarlar ilgili örneklerle birlikte dizinlenmiş çalışmalarını bulmak için "
+"noktalı virgülle ayrılmış terim (Örneğin, terim1; terim2) kategorileri "
+"seçmelidir. Girişler “ör” veya “örneğin” kullanılarak örneklerdeki gibi "
+"yapılmalıdır."
 
 msgid "manager.setup.form.contactEmailRequired"
-msgstr "Birincil bağlantı e-postası gereklidir."
+msgstr "Temel iletişim e-posta adresi gereklidir."
 
 msgid "manager.setup.form.contactNameRequired"
-msgstr "Birincil bağlantı ismi gereklidir."
+msgstr "Temel iletişim ismi gereklidir."
 
 msgid "manager.setup.form.journalInitialsRequired"
-msgstr "Derginin başharfleri gereklidir."
+msgstr "Derginin baş harfleri gereklidir."
 
 msgid "manager.setup.form.journalTitleRequired"
 msgstr "Dergi ismi gereklidir."
 
 msgid "manager.setup.form.numReviewersPerSubmission"
-msgstr "Her gönderi için hakem sayısı gereklidir."
+msgstr "Gönderi başına atanacak hakem sayısı gereklidir."
 
 msgid "manager.setup.form.supportEmailRequired"
-msgstr "Destek e-posta gereklidir."
+msgstr "Destek e-posta adresi gereklidir."
 
 msgid "manager.setup.form.supportNameRequired"
-msgstr "Destek isim gereklidir."
+msgstr "Destek ismi gereklidir."
 
 msgid "manager.setup.generalInformation"
 msgstr "Genel Bilgi"
@@ -522,8 +534,11 @@ msgstr "Adım 3: Gönderi Rehberi"
 msgid "manager.setup.information"
 msgstr "Bilgi"
 
+#, fuzzy
 msgid "manager.setup.information.description"
-msgstr "Kütüphaneciler, potansiyel yazarlar ve okuyucular için derginin kısa açıklamsı yan taraftaki \"Bilgi\" kısmında yer almaktadır."
+msgstr ""
+"Kütüphaneciler, potansiyel yazarlar ve okuyucular için derginin kısa "
+"açıklamsı yan taraftaki \"Bilgi\" kısmında yer almaktadır."
 
 msgid "manager.setup.information.forAuthors"
 msgstr "Yazarlar İçin"
@@ -537,29 +552,40 @@ msgstr "Okuyucular İçin"
 msgid "manager.setup.initialIssue"
 msgstr "İlk sayı"
 
+#, fuzzy
 msgid "manager.setup.initialIssueDescription"
-msgstr "Seçilen biçime uygun olarak ADS ile yayınlanacak ilk sayının, sayı, cilt, yıl gibi özellikleri:"
+msgstr ""
+"Seçilen biçime uygun olarak ADS ile yayınlanacak ilk sayının, sayı, cilt, "
+"yıl gibi özellikleri:"
 
 msgid "manager.setup.institution"
 msgstr "Kurum"
 
+#, fuzzy
 msgid "manager.setup.itemsDescription"
-msgstr "Sayfa üstünde oluşan Yönlendirme çubuğuna başka maddeler eklenebilir (Giriş Sayfası, Hakkında, Kullanıcı, Kullanıcı Ana Sayfası, v.b.)."
+msgstr ""
+"Sayfa üstünde oluşan Yönlendirme çubuğuna başka maddeler eklenebilir (Giriş "
+"Sayfası, Hakkında, Kullanıcı, Kullanıcı Ana Sayfası, v.b.)."
 
 msgid "manager.setup.itemsPerPage"
-msgstr "Sayfa başına madde"
+msgstr "Sayfa başına gösterilecek öğe"
 
 msgid "manager.setup.journalAbbreviation"
 msgstr "Dergi Kısaltması"
 
 msgid "manager.setup.journalArchiving"
-msgstr "Dergi Arşivi"
+msgstr "Dergi Arşivleme"
 
 msgid "manager.setup.journalHomepageContent"
-msgstr "Dergi Sayfa Sayfa İçeriği"
+msgstr "Dergi Anasayfa İçeriği"
 
+#, fuzzy
 msgid "manager.setup.journalHomepageContentDescription"
-msgstr "Giriş sayfası var sayılan yönlendirme bağlantılarından oluşur. Aşağıdaki seçenekler kullanılarak, aşağıdaki sıra ile görülmek üzere giriş sayfasına eklenebilirler. Son  sayı yönlendirme bağlantılarında \"Son Sayı\" olarak sürekli yer alır."
+msgstr ""
+"Giriş sayfası var sayılan yönlendirme bağlantılarından oluşur. Aşağıdaki "
+"seçenekler kullanılarak, aşağıdaki sıra ile görülmek üzere giriş sayfasına "
+"eklenebilirler. Son  sayı yönlendirme bağlantılarında \"Son Sayı\" olarak "
+"sürekli yer alır."
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "Dergi Ana Sayfa Başlığı"
@@ -567,17 +593,25 @@ msgstr "Dergi Ana Sayfa Başlığı"
 msgid "manager.setup.journalHomepageHeader.altText"
 msgstr "Dergi Ana Sayfa Başlığı"
 
+#, fuzzy
 msgid "manager.setup.journalHomepageHeaderDescription"
-msgstr "Dergi başlığının grafik bir biçimi (Örneğin: jpg, png veya gif) ve dergi logosu ana sayfa için yüklenebilir. Yükleme yapıldığında yazı biçimindeki başlığın yeri alır."
+msgstr ""
+"Dergi başlığının grafik bir biçimi (Örneğin: jpg, png veya gif) ve dergi "
+"logosu ana sayfa için yüklenebilir. Yükleme yapıldığında yazı biçimindeki "
+"başlığın yeri alır."
 
 msgid "manager.setup.contextInitials"
 msgstr "Dergi baş harfleri"
 
 msgid "manager.setup.journalLayout"
-msgstr "Dergi Mizanpajı"
+msgstr "Dergi Arayüzü"
 
+#, fuzzy
 msgid "manager.setup.journalLayoutDescription"
-msgstr "Bir dergi teması seçiniz ve düzen parçalarını yerleştiriniz. Bir dergi biçimi aynı zamanda sistem çapında biçim ve tema biçimini (bir tema seçilmiş ise) geçersiz kılmak için kullanılabilir."
+msgstr ""
+"Bir dergi teması seçiniz ve düzen parçalarını yerleştiriniz. Bir dergi "
+"biçimi aynı zamanda sistem çapında biçim ve tema biçimini (bir tema seçilmiş "
+"ise) geçersiz kılmak için kullanılabilir."
 
 msgid "manager.setup.journalTheme"
 msgstr "Dergi Teması"
@@ -588,8 +622,12 @@ msgstr "Dergi Logosu"
 msgid "manager.setup.journalPageFooter"
 msgstr "Dergi Sayfa Altlığı"
 
+#, fuzzy
 msgid "manager.setup.journalPageFooterDescription"
-msgstr "Dergi Sayfalarının alt bölümünde görülemesini istediğiniz bağlantıları HTML biçiminde bu alana yazınız (Örneğin; yönlendirme, sayaç, reklam v.b.). Altlık her sayfada görüntülenecektir."
+msgstr ""
+"Dergi Sayfalarının alt bölümünde görülemesini istediğiniz bağlantıları HTML "
+"biçiminde bu alana yazınız (Örneğin; yönlendirme, sayaç, reklam v.b.). "
+"Altlık her sayfada görüntülenecektir."
 
 msgid "manager.setup.journalPolicies"
 msgstr "Adım 2. Dergi Politikaları"
@@ -598,7 +636,7 @@ msgid "manager.setup.journalSetup"
 msgstr "Dergi Yapılandırma"
 
 msgid "manager.setup.journalSetupUpdated"
-msgstr "Derginizin yapıladırması güncellenmiştir."
+msgstr "Derginizin yapılandırması güncellendi."
 
 msgid "manager.setup.journalStyleSheetInvalid"
 msgstr "Biçimlendirme sayfası için geçersiz dosya biçimi. Desteklenen dosya biçimi .css dir."
@@ -1483,8 +1521,11 @@ msgstr "Yazarlar, okuyucular ve kütüphanecilere derginin yayınlayacağı maka
 msgid "manager.setup.form.issnInvalid"
 msgstr "Belirtilen ISSN geçerli değil."
 
+#, fuzzy
 msgid "manager.setup.includeCreativeCommons"
-msgstr "Anında veya gecikmeli olarak açık erişim sunan dergiler için, yayınlanan tüm çalışmalarla birlikte uygun zamanda bir Creative Commons lisansı ekleyin."
+msgstr ""
+"Anında veya gecikmeli olarak açık erişim sunan dergiler için, yayınlanan tüm "
+"çalışmalarla birlikte uygun zamanda bir Creative Commons lisansı ekleyin."
 
 msgid "manager.setup.contextSummary"
 msgstr "Dergi Özeti"
@@ -1495,8 +1536,14 @@ msgstr "Derginizin dergiler listesinde gösterilebilecek kısa bir açıklaması
 msgid "manager.setup.contextAbout"
 msgstr "Dergi Hakkında"
 
+#, fuzzy
 msgid "manager.setup.contextAbout.description"
-msgstr "Derginiz hakkında okuyuculara, yazarlara veya hakemlere ilgilerini çekebilecek her türlü bilgiyi ekleyin. Bu, açık erişim politikanızı, derginin odak ve kapsamını, telif hakkı bildirimini, sponsorluk ifşasını, derginin tarihini, bir gizlilik bildirimini ve herhangi bir LOCKSS veya CLOCKSS arşivleme sistemine dahil edilmesini içerebilir."
+msgstr ""
+"Derginiz hakkında okuyuculara, yazarlara veya hakemlere ilgilerini "
+"çekebilecek her türlü bilgiyi ekleyin. Bu, açık erişim politikanızı, "
+"derginin odak ve kapsamını, telif hakkı bildirimini, sponsorluk ifşasını, "
+"derginin tarihini, bir gizlilik bildirimini ve herhangi bir LOCKSS veya "
+"CLOCKSS arşivleme sistemine dahil edilmesini içerebilir."
 
 msgid "manager.setup.favicon"
 msgstr "Dergi Favori İkonu"
@@ -1507,6 +1554,7 @@ msgstr "Kullanıcılar sitenizi ziyaret ettiğinde gezinme çubuğunun yanında 
 msgid "manager.setup.faviconInvalid"
 msgstr "Geçersiz favicon biçimi. Kabul edilebilir biçimler:  .ico, .png ve .gif."
 
+#, fuzzy
 msgid "manager.setup.journalThumbnail.description"
 msgstr "Dergi listelerinde kullanılabilen küçük bir logo veya derginin temsili."
 
@@ -1764,3 +1812,20 @@ msgstr ""
 "seçin. Bu varsayılan, duruma göre geçersiz kılınabilir. Eğer makaleleri \""
 "kabul edildikçe yayınlıyorsanız\", telif hakkı yılı olarak sayının "
 "yayınlanma tarihini kullanmayın."
+
+msgid "manager.setup.keyInfo"
+msgstr "Temel Bilgi"
+
+msgid "manager.setup.information.success"
+msgstr "Bu derginin \"Bilgi\"si güncellendi."
+
+msgid "manager.setup.identity"
+msgstr "Dergi Kimliği"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Anasayfada gösterilecek duyuru sayısı. Hiç göstermek istemiyorsanız boş "
+"bırakabilirsiniz."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Anasayfada Göster"
