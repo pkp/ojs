@@ -38,6 +38,9 @@
 	</element>
 	<element name="articles" substitutionGroup="pkp:submissions" />
 
+	<!-- Permit "citation" as a root element to keep the filters happy -->
+	<element name="citation" type="string" />
+
 	<element name="publication" substitutionGroup="pkp:pkppublication">
 		<complexType>
 			<complexContent>
@@ -47,6 +50,7 @@
 						<element maxOccurs="1" minOccurs="0" name="pages" type="string" />
 						<element ref="pkp:covers" minOccurs="0" maxOccurs="1" />
 						<element maxOccurs="1" minOccurs="0" name="issueId" type="int" />
+						<element ref="pkp:citations" minOccurs="0" maxOccurs="unbounded"/>
 					</sequence>
 					<attribute name="section_ref" type="string" use="required" />
 					<attribute name="seq" type="int" />
