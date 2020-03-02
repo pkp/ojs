@@ -53,7 +53,7 @@ class NativeFilterHelper {
 	 * @param $filter NativeExportFilter
 	 * @param $doc DOMDocument
 	 * @param $object Publication
-	 * @return DOMElement
+	 * @return DOMElement?
 	 */
 	function createPublicationCoversNode($filter, $doc, $object) {
 		$deployment = $filter->getDeployment();
