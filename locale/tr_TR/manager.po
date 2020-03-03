@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-03-02 18:15+0000\n"
+"PO-Revision-Date: 2020-03-04 01:29+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
 "\n"
@@ -636,7 +636,7 @@ msgid "manager.setup.journalSetup"
 msgstr "Dergi Yapılandırma"
 
 msgid "manager.setup.journalSetupUpdated"
-msgstr "Derginizin yapılandırması güncellendi."
+msgstr "Derginizin yapılandırma ayarları güncellendi."
 
 msgid "manager.setup.journalStyleSheetInvalid"
 msgstr "Biçimlendirme sayfası için geçersiz dosya biçimi. Desteklenen dosya biçimi .css dir."
@@ -650,17 +650,34 @@ msgstr "Etiket adı"
 msgid "manager.setup.lists"
 msgstr "Listeler"
 
+#, fuzzy
 msgid "manager.setup.lockssEnable"
-msgstr "LOCKSS aracılığı ile katılımcı kütüphanelerde dergi içeriğini depolamak, dağıtmak ve <a href=\"{$lockssUrl}\" target=\"_blank\">Yayıncı Manifestosu</a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS lisansı \"Dergi Hakkında\" sayfasında görünecektir:"
+msgstr ""
+"LOCKSS aracılığı ile katılımcı kütüphanelerde dergi içeriğini depolamak, "
+"dağıtmak ve <a href=\"{$lockssUrl}\" target=\"_blank\">Yayıncı "
+"Manifestosu</a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS "
+"lisansı \"Dergi Hakkında\" sayfasında görünecektir:"
 
+#, fuzzy
 msgid "manager.setup.lockssRegister"
-msgstr "Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. <a href=\"http://lockss.org/lockss/Libraries\" target=\"_blank\">Katılan kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">LOCKSS da görev alan kütüphaneler</a> veya (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet yazıları için tıklayın."
+msgstr ""
+"Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, "
+"editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. "
+"<a href=\"http://lockss.org/lockss/Libraries\" target=\"_blank\">Katılan "
+"kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href=\""
+"{$lockssExistingArchiveUrl}\" target=\"_blank\">LOCKSS da görev alan "
+"kütüphaneler</a> veya (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\""
+"_blank\">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet "
+"yazıları için tıklayın."
 
 msgid "manager.setup.look"
-msgstr "Görünüş"
+msgstr "Görünüm"
 
+#, fuzzy
 msgid "manager.setup.look.description"
-msgstr "Ana sayfa başlığı, içerik, dergi başlığı, altlık, yönlendirme çubuğu ve biçim sayfası."
+msgstr ""
+"Ana sayfa başlığı, içerik, dergi başlığı, altlık, yönlendirme çubuğu ve "
+"biçim sayfası."
 
 msgid "manager.setup.management"
 msgstr "Yönetim"
@@ -1565,37 +1582,56 @@ msgid "manager.setup.enableArchive"
 msgstr "Arşivi Etkinleştir"
 
 msgid "manager.setup.plnPluginEnable"
-msgstr "PKP PN eklentisi etkinleştirildi"
+msgstr "PKP PN eklentisini etkinleştir"
 
 msgid "manager.setup.plnDescription"
-msgstr "PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS dergisi için ücretsiz koruma hizmeti sunmaktadır."
+msgstr ""
+"PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan OJS dergileri için "
+"ücretsiz koruma hizmeti sunmaktadır."
 
 msgid "manager.setup.plnSettingsDescription"
-msgstr "PKP PN için kullanım şartlarını kabul etmek için Ayarlar bağlantısına tıklayın."
+msgstr ""
+"PKP PN kullanım şartlarını kabul etmek için <nutton>eklenti ayarları</button>"
+"nı görüntüle."
 
 msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Koruma Ağı (PN)"
 
+#, fuzzy
 msgid "manager.setup.plnPluginNotInstalled"
-msgstr "PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS dergisi için ücretsiz koruma hizmeti sunmaktadır. OJS 3 için PKP PN eklentisi şu anda geliştiriliyor ve eklenti galerisinde yakında sunulacak."
+msgstr ""
+"PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS "
+"dergisi için ücretsiz koruma hizmeti sunmaktadır. OJS 3 için PKP PN "
+"eklentisi şu anda geliştiriliyor ve eklenti galerisinde yakında sunulacak."
 
 msgid "manager.setup.otherLockss"
-msgstr "Alternatif Arşivleme Seçenekleri"
+msgstr "LOCKSS ve CLOCKSS"
 
+#, fuzzy
 msgid "manager.setup.lockssLicenseDescription"
-msgstr "CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS Lisansı</a>"
+msgstr ""
+"CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <"
+"a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\""
+"_blank\">LOCKSS Lisansı</a>"
 
 msgid "manager.setup.lockssLicenseLabel"
-msgstr "LOCKSS Lisansı Açıklaması"
+msgstr "LOCKSS Lisans Açıklaması"
 
 msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
 
+#, fuzzy
 msgid "manager.setup.clockssEnable"
-msgstr "Bir CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> sayfası aracılığıyla katılımcı kütüphanelerde dergi içeriğini depolamak ve dağıtmak için CLOCKSS uygulamasını etkinleştirin."
+msgstr ""
+"Bir CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a> sayfası aracılığıyla katılımcı kütüphanelerde dergi içeriğini "
+"depolamak ve dağıtmak için CLOCKSS uygulamasını etkinleştirin."
 
+#, fuzzy
 msgid "manager.setup.clockssLicenseDescription"
-msgstr "CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS Lisansı</a>"
+msgstr ""
+"CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <"
+"a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS Lisansı</a>"
 
 msgid "manager.statistics.defaultMetricDescription"
 msgstr ""
@@ -1765,10 +1801,13 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Dergi ayarları'nda tanımlanan birincil kişiye bir kopya gönderin."
 
 msgid "manager.setup.clockssLicenseLabel"
-msgstr "CLOCKSS Lisansı Açıklaması"
+msgstr "CLOCKSS Lisans Açıklaması"
 
+#, fuzzy
 msgid "manager.setup.clockssRegister"
-msgstr "<a href=\"http://clockss.org/\" target=\"_blank\"> CLOCKSS Web Sitesini</a> ziyaret ederek CLOCKSS hizmetine kaydolun."
+msgstr ""
+"<a href=\"http://clockss.org/\" target=\"_blank\"> CLOCKSS Web Sitesini</a> "
+"ziyaret ederek CLOCKSS hizmetine kaydolun."
 
 msgid "manager.setup.clockssTitle"
 msgstr "CLOCKSS"
@@ -1829,3 +1868,15 @@ msgstr ""
 
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Anasayfada Göster"
+
+msgid "manager.setup.lists.success"
+msgstr "Derginin liste ayarları güncellendi."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Yayınlama detayları güncellendi."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Yayınlama Şekli"
+
+msgid "manager.distribution.publication"
+msgstr "Yayınlama"
