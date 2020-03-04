@@ -22,7 +22,7 @@ msgid "section.default.abbrev"
 msgstr "СТ"
 
 msgid "section.default.policy"
-msgstr "Политика раздела"
+msgstr "Политика раздела по умолчанию"
 
 msgid "default.genres.article"
 msgstr "Текст статьи"
