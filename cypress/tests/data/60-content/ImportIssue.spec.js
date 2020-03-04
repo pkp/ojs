@@ -12,7 +12,7 @@ describe('Data suite tests', function() {
 		// TODO: Import/export is not yet compatible with versioning.
 		// See: https://github.com/pkp/pkp-lib/issues/4880
 		//
-		// Because of this problem, the publish issue tests (jmwandenga/vkarbasizaed) were
+		// Because of this problem, the publish issue tests (amwandenga/vkarbasizaed) were
 		// updated to put the articles in Vol. 1 No. 2, instead of Vol. 1 No. 1. This may
 		// need to be corrected after import/export is fixed.
 		/*
