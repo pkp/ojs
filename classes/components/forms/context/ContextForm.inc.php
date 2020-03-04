@@ -14,6 +14,7 @@
 namespace APP\components\forms\context;
 use \PKP\components\forms\context\PKPContextForm;
 use \PKP\components\forms\FieldText;
+use \PKP\components\forms\FieldOptions;
 
 class ContextForm extends PKPContextForm {
 
@@ -27,6 +28,13 @@ class ContextForm extends PKPContextForm {
 				'label' => __('manager.setup.journalAbbreviation'),
 				'isMultilingual' => true,
 				'value' => $context ? $context->getData('abbreviation') : null,
-			]), [FIELD_POSITION_AFTER, 'acronym']);
+			]), [FIELD_POSITION_AFTER, 'acronym'])
+			->addField(new FieldOptions('enabled', [
+				'label' => __('common.enable'),
+				'options' => [
+					['value' => true, 'label' => __('admin.journals.enableJournalInstructions')],
+				],
+				'value' => $context ? (bool) $context->getData('enabled') : false,
+			]));
 	}
 }
