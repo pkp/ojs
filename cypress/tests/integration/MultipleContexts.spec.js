@@ -15,7 +15,7 @@ describe('Sites with more than one context', function() {
 		cy.get('.show_extras').click();
 		cy.get('#contextGridContainer a').contains('Edit').eq(0).click();
 		cy.wait(1000);
-		cy.get('input[name="enabled"]').uncheck();
+		cy.get('span').contains('Enable this journal').siblings('input').uncheck();
 		cy.get('button').contains('Save').click();
 		cy.contains('Journal of Public Knowledge was edited successfully.');
 		cy.logout();
@@ -26,7 +26,7 @@ describe('Sites with more than one context', function() {
 		cy.get('.show_extras').click();
 		cy.get('#contextGridContainer a').contains('Edit').eq(0).click();
 		cy.wait(1000);
-		cy.get('input[name="enabled"]').check();
+		cy.get('span').contains('Enable this journal').siblings('input').check();
 		cy.get('button').contains('Save').click();
 		cy.contains('Journal of Public Knowledge was edited successfully.');
 	});
