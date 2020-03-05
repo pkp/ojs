@@ -114,6 +114,8 @@
 	<message key="manager.setup.disciplineProvideExamples">Podaj przykłady dziedzin naukowych dla tego czasopisma.</message>
 	<message key="manager.setup.displayCurrentIssue">Dodaj spis treści dla aktualnego numeru (jeśli jest dostępny).</message>
 	<message key="manager.setup.editorDecision">Decyzja redaktora</message>
+	<message key="manager.setup.editorialTeam">Redakcja czasopisma</message>
+	<message key="manager.setup.editorialTeam.description">Lista redaktorów i innych osób zaangażowanych w wydawanie czasopisma.</message>
 	<message key="manager.setup.emailBounceAddress">Adres zwrotny</message>
 	<message key="manager.setup.emailBounceAddressDescription">Wszystkie wiadomości e-mail niedostarczone do adresatów zostaną zwrócone na podany e-mail.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Uwaga:</strong> Aby skorzystać z tej funkcjonalności, administrator systemu musi włączyć funkcję <tt>allow_envelope_sender</tt> w pliku konfiguracyjnym OJS.]]></message>
