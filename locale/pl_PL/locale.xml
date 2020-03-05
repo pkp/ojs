@@ -39,6 +39,8 @@
 	<!--  peer review -->
 	<message key="reviewer.article.enterReviewForm">Kliknij ikonę dymka, aby wypełnić formularz recenzji.</message>
 	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>
+	<message key="submission.reviewForm">Formularz recenzji</message>
+	<message key="submission.reviewFormResponse">Formularz recenzji</message>	
 
 	<!-- review forms end -->
 
@@ -53,6 +55,7 @@
 	<message key="common.confirmComplete">Czy na pewno chcesz oznaczyc zadania jako wykonane? Po oznaczeniu edycja nie będzie dostępna.</message>
 	<message key="common.payment">Płatność</message>
 	<message key="common.payments">Płatności</message>
+	<message key="common.pageHeader.altText">Nagłówek strony</message>
 	<message key="common.homePageHeader.altText">Nagłówek strony głównej</message>
 	<message key="common.journalHomepageImage.altText">Baner</message>
 
@@ -66,6 +69,7 @@
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Pomoc</message>
+	<message key="navigation.archives">Archiwum</message>
 	<message key="navigation.current">Aktualny numer</message>
 	<message key="navigation.otherJournals">Inne czasopisma</message>
 	<message key="navigation.browseByIssue">wg numeru</message>
@@ -120,8 +124,12 @@
 	<message key="article.suppFiles">Pliki pomocnicze</message>
 	<message key="article.suppFilesAbbrev">Pliki pomocnicze</message>
 	<message key="article.discipline">Dyscypliny i subdyscypliny naukowe</message>
+	<message key="article.subjectClassification">Klasyfikacja przedmiotu</message>
 	<message key="article.subject">Słowa kluczowe</message>
 	<message key="article.coverage">Zasięg</message>
+	<message key="article.coverageGeo">Zasięg geograficzny</message>
+	<message key="article.coverageChron">Zasięg chronologiczny i historyczny</message>
+	<message key="article.coverageSample">Próba badawcza</message>
 	<message key="article.type">Typ, metoda lub podejście</message>
 	<message key="article.language">Język</message>
 	<message key="article.sectionEditor">Redaktor działu</message>
@@ -189,6 +197,7 @@
 	<message key="journal.currentIssue">Aktualny numer</message>
 	<message key="journal.journals">Czasopisma</message>
 	<message key="journal.path">Ścieżka</message>
+	<message key="journal.journal">Czasopismo</message>
 	<message key="journal.issn">ISSN</message>
 
 	<!-- User -->
@@ -205,10 +214,20 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Administrator czasopisma</message>
+	<message key="user.role.editor">Redaktor czasopisma</message>
 	<message key="user.role.subEditor">Redaktor działu</message>
+	<message key="user.role.layoutEditor">Specjalista DTP</message>
+	<message key="user.role.copyeditor">Korektor</message>
+	<message key="user.role.proofreader">Korektor pliku do publikacji</message>
+	<message key="user.role.author">Autor</message>
 	<message key="user.role.subscriptionManager">Administrator subskrypcji</message>
 	<message key="user.role.managers">Administratorzy czasopisma</message>
+	<message key="user.role.editors">Redaktorzy</message>
 	<message key="user.role.subEditors">Redaktorzy działu</message>
+	<message key="user.role.layoutEditors">Specjaliści DTP</message>
+	<message key="user.role.copyeditors">Korektorzy</message>
+	<message key="user.role.proofreaders">Korektorzy pliku do publikacji</message>
+	<message key="user.role.authors">Autorzy</message>
 	<message key="user.role.subscriptionManagers">Administratorzy subskrypcji</message>
 
 	<!-- Common Issue Terms -->
@@ -256,6 +275,7 @@
 	 *
 	-->
 	<message key="submission.event.general.defaultEvent">Akcja</message>
+	<message key="submission.event.general.articleSubmitted">Artykuł przesłany</message>
 	<message key="submission.event.general.issueScheduled">Artykuł przesłany do kolejki</message>
 	<message key="submission.event.general.issueAssigned">Artykuły przypisany do numeru</message>
 	<message key="submission.event.general.articlePublished">Artykuł opublikowany</message>
@@ -346,6 +366,7 @@
 	<!-- Setup Step 2 -->
 
 
+	<message key="manager.setup.reviewProcessEmailDescription">Redaktor przesyła recenzentowi zaproszenie do wykonania recenzji wraz z  załączonym tekstem. W odpowiedzi, recenzent przesyła redaktorowi swoją recenzję oraz rekomendację.  Następnie redaktor wprowadza dane nadesłane przez recenzenta do systemu.</message>
 	<message key="manager.setup.lockssDescription"><![CDATA[LOCKSS jest otwartoźródłowym systemem opracowanym przez Bibliotekę Uniwerytetu Stanford, który umożliwia archiwizowanie wybranych czasopism publikowanych w internecie. Każdy zarchiwizowany artykuł jest wielokrotnie sprawdzany, a jego kopia przywracana w przypadku występienia błędów lub nieciągłości danych.
 <br /><br />
 Konfiguracja LOCKSS dla OJS może zostać przeprowadzona zarówno przed jak i po opublikowaniu treści w czasopiśmie. Możesz włączyć system LOCKSS poniżej:]]></message>
@@ -424,6 +445,8 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Nazwa użytkownika jest linkiem do profilu recenzenta.<br/>
+	Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>"Tygodnie" oznaczają przeciętny czas na ukończenie recenzji.<br/>"Ostatnie" oznacza datę ostatnio zaakceptowanej recenzji.<br/>"Aktywne" oznacza liczbę recenzji w przygotowaniu.]]></message>
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktywne prace redakcyjne</message>
 	<message key="sectionEditor.completedEditorialAssignments">Ukończone prace redakcyjne</message>
@@ -507,6 +530,7 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Plik dla korektora</message>
 	<message key="copyeditor.article.copyeditorFile">Plik składacza</message>
+	<message key="copyeditor.article.uploadedFile">Wyślij plik</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Plik składacza - wersja ukończona</message>
 
 	<!-- Proofreader -->
@@ -595,6 +619,8 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<message key="submission.comments.saveAndEmailEditor">Zapisz i wyślij e-mail do redaktora czasopisma</message>
 
 	<!-- Login -->
+	<message key="user.login.registerNewAccount">Nie jesteś użytkownikiem? Zarejestruj się na stronie</message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Ze względów bezpieczeństwa, system przesyła nowe hasło.<br /><br />Podaj swój adres e-mail aby otrzymać nowe hasło.]]></message>
 	<!-- Registration -->
 	<message key="user.register.noJournals">Brak czasopism.</message>
 	<message key="user.register.privacyStatement">Polityka prywatności</message>
@@ -738,6 +764,7 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<message key="log.review.reviewerUnassigned">{$reviewerName} został(a) odłączony(a) od recenzji tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} rozpoczął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewReinitiated">{$reviewerName} ponownie rozpoczął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
+	<message key="log.review.reviewCancelled">{$reviewerName} anulował(a) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewCleared">{$reviewerName} usunął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewerRated">Recenzent {$reviewerName} został(a) oceniony(a) po wykonaniu recenzji tekstu {$submissionId} po {$round} rundzie.</message>
 	<message key="log.review.reviewDueDateSet">Termin ukończenia recenzji tekstu {$submissionId} w {$round} rundzie dla recenzenta {$reviewerName} został ustalony na {$dueDate}.</message>
@@ -814,6 +841,9 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 
 
 	<!-- Notification Types -->
+	<message key="notification.mailListDescription">Podaj adres e-mail aby otrzymywać powiadomienia o aktualizacjach treści.</message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[Ta strona zawiera informacje o ważnych aktualizacjach treści czasopisma, takich jak nowe numery lub ogłoszenia. Możesz subskrybować powiadomienia za pomocą czytnika RSS (klikając w ikonę), lub   <a href="{$emailUrl}">przez e-mail.</a>]]></message>
+	<message key="notification.type.articleSubmitted">Nowy artykuł, "{$title}", został wysłany.</message>
 	<message key="notification.type.editing">Edycja wydarzeń</message>
 	<message key="notification.type.editorDecisionComment">Dostępne są nowe uwagi do decyzji redaktora dla "{$title}".</message>
 	<message key="notification.type.galleyModified">Plik z publikacją dla "{$title}" został zmodyfikowany.</message>
@@ -871,13 +901,15 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="plugins.categories.viewableFiles">Wtyczki widoku plików z artykułami</message>
 	<message key="plugins.categories.viewableFiles.description">Wtyczki widoku pliku z artykułami wspierają różne formaty plików w zakresie sposobów wyświetlania.</message>
 	<message key="user.reviewerPrompt">Czy byłbyś skłonny(a) recenzować teksty zgłaszane do tego czasopisma?</message>
-	<message key="user.reviewerPrompt.userGroup">Tak, wyślij prośbę o nadanie roli: {$userGroup}.</message>
+	<message key="user.reviewerPrompt.userGroup">Tak, jestem skłonny dokonywać recenzji zgłaszanych tekstów w zakresie moich zainteresowań i oprócz roli autor chcę mieć możliwość działania w roli: {$userGroup}.</message>
 	<message key="user.register.contextsPrompt">Do których czasopism na tej stronie chciałbyś(abyś) się zarejestrować?</message>
 	<message key="user.register.otherContextRoles">Wyślij zapytanie o nadanie uprawnień.</message>
 	<message key="user.register.noContextReviewerInterests">Jeśli wysłałeś(aś) prośbę o możliwość recenzowania artykułów zgłoszonych do dowolnego czasopisma, podaj swoje zainteresowania.</message>
 	<message key="user.role.subEditors">Redaktorzy działów</message>
 	<message key="user.role.journalAssistant">Asystent czasopisma</message>
 	<message key="user.role.journalAssistants">Asystenci czasopisma</message>
+	<message key="user.role.guestEditor">Redaktor gościnny</message>
+	<message key="user.role.guestEditors">Redaktorzy gościnni</message>
 	<message key="search.results.orderBy">Porządkuj wyniki wg</message>
 	<message key="search.results.orderBy.article">Tytułu</message>
 	<message key="search.results.orderBy.author">Autora</message>
