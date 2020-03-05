@@ -20,6 +20,7 @@ describe('Data suite tests', function() {
 		cy.get('a[class=show_extras]').click();
 		cy.get('a[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
+		cy.get('input[id^="wordCount-"]').type('500');
 		cy.get('div.pkpListPanelItem').contains('David Buskins').click();
 		cy.get('div.pkpListPanelItem').contains('Stephanie Berardo').click();
 		cy.get('form[id=sectionForm]').contains('Save').click();
