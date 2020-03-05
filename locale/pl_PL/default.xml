@@ -13,9 +13,10 @@
 
 <locale name="pl_PL" full_name="Język Polski">
 	<!-- Section default -->
-	<message key="section.default.title">Artykuły</message>
 	<message key="default.genres.article">Tekst artykułu</message>
-
+	<message key="section.default.title">Artykuły</message>
+	<message key="section.default.abbrev">ART</message>
+	
 	<!--
 	 *
 	 * DEFAULT - Default settings for setup items.
