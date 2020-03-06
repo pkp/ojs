@@ -470,6 +470,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	/**
 	 * Pull out getopt style long options.
+	 * WARNING: This method is checked for by name in DepositPackage in the PLN plugin
+	 * to determine if options are supported!
 	 * @param &$args array
 	 * #param $optCodes array
 	 */
