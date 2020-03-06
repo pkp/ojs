@@ -43,6 +43,14 @@
 
 	<message key="plugins.importexport.medra.senderTask.name">Registrazione automatica DOI mEDRA</message>
 	<message key="plugins.importexport.common.send.to.crossref">Invio a Crossref</message>
+	
+	<message key="plugins.importexport.medra.crossref.error.cause">Motivo: file non valido rispetto ai requisiti di mEDRA e/o Crossref.</message>
+	<message key="plugins.importexport.medra.crossref.error.number">Numero di errori</message>
+	<message key="plugins.importexport.medra.crossref.error.details">I seguenti requisiti non sono stati rispettati</message>
+	
+	<message key="plugins.importexport.medra.crossref.error.code">CODICE</message>
+	<message key="plugins.importexport.medra.crossref.error.element">ELEMENTO</message>
+	<message key="plugins.importexport.medra.crossref.error.description">DESCRIZIONE</message>
 
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Uso: 
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...

@@ -105,13 +105,17 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		assert($xml !== false && !empty($xml));
 		
 		// Select the language
+		$language = 'en_US';
+		foreach($objects as $object) {
+		    $language = $object->getLocale();
+		}
 		$lang = 'eng';
-		if(substr($this->_request->getUserVar('language'), 0, 2) == 'it'){
+		if(substr($language, 0, 2) == 'it'){
 		    $lang = 'ita';
-		} else if(substr($this->_request->getUserVar('language'), 0, 2) == 'de'){
+		} else if(substr($language, 0, 2) == 'de'){
 		    $lang = 'ger';
 		}
-
+		
 		// Instantiate the mEDRA web service wrapper.
 		$ws = new MedraWebservice($endpoint, $username, $password);
 		// Register the XML with mEDRA.
@@ -131,74 +135,42 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		    if(!assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $result))){
 		        $doc = new DOMDocument();
 		        $doc->loadXML($result);
+		        $templateMgr = TemplateManager::getManager($this->_request);
+		        $numberError = '';
 		        
-		        $charset = Config::getVar('i18n', 'client_charset');
-		        header('Content-type: text/html; charset=' . $charset);
-		        echo '<html><body>';
-		        echo '<h2>' . __('plugins.importexport.common.validationErrors') . '</h2>';
 		        if($doc->getElementsByTagName('statusCode')->item(0)->textContent == 'FAILED'){
 		            $numberError = $doc->getElementsByTagName('errorsNumber')->item(0)->textContent;
-		            if($numberError > 0){
-		                if($lang == 'it'){
-		                    echo '<div> mEDRA - Messaggio di errore. </div> <br/>';
-		                    echo '<div> Motivo: file non valido rispetto ai requisiti di mEDRA e/o Crossref. </div> <br/>';
-		                    echo '<div> Numero di errori: ' . $numberError . '</div> <br/>';
-		                    echo '<div> Non sono stati rispettati i seguenti requisiti: </div> <br/>';
-		                } else {
-		                    echo '<div> mEDRA - Error Message. </div> <br/>';
-		                    echo '<div> Cause: file not valid in respect to the mEDRA and/or Crossref requirements. </div> <br/>';
-		                    echo '<div> The following requirements have not been met: </div> <br/>';
-		                    echo '<div> Number of errors: ' . $numberError . '</div> <br/>';
-		                }
-		                echo "<table style='border-collapse:collapse; font-size:18;'>";
-		                
-		                echo "<tr>";
-		                
-		                if(substr($this->_request->getUserVar('language'), 0, 2) == 'it'){
-		                    echo "<td style='border:1px solid black; font-size:18; font-weight:bold; padding:10px;'>CODICE</td>";
-		                    echo "<td style='border:1px solid black; font-size:18; font-weight:bold; padding:10px;'>ELEMENTO</td>";
-		                    echo "<td style='border:1px solid black; font-size:18; font-weight:bold; padding:10px;'>DESCRIZIONE</td>";
-		                } else {
-		                    echo "<td style='border:1px solid black; font-size:18; font-weight:bold; padding:10px;'>CODE</td>";
-		                    echo "<td style='border:1px solid black; font-size:18; font-weight:bold; padding:10px;'>ELEMENT</td>";
-		                    echo "<td style='border:1px solid black; font-size:18; font-weight:bold; padding:10px;'>DESCRIPTION</td>";
-		                }
-		                
-		                echo '</tr>';
-		            }
-		            
 		            $nodeList = $doc->getElementsByTagName('error');
-		            $length = $nodeList->length;
-		            for ($i = 0; $i < $length; $i++) {
-		                
-		                $doc->getElementsByTagName('code')->item($i)->textContent;
-		                if($i % 2 == 0){
-		                    echo "<tr style='background-color: #ABCDEF;'>";
-		                } else {
-		                    echo "<tr style='background-color: #BDB9AA;'>";
+		            
+		            $headlines = array();
+		            
+		            foreach($nodeList as $node) {
+		                $headline = array();
+		                if($node->childNodes->length) {
+		                    foreach($node->childNodes as $i) {
+		                        $headline[$i->nodeName] = $i->nodeValue;
+		                    }
 		                }
 		                
-		                echo "<td style='border:1px solid black; font-size:18; padding:10px;'>" .
-		  		                '<a style="text-decoration:none;" href="' . substr($endpoint, 0, strrpos($endpoint, "servlet")) . 'en/crossrefErrorList.htm#' . $doc->getElementsByTagName('code')->item($i)->textContent . '">' .
-		  		                $doc->getElementsByTagName('code')->item($i)->textContent  .
-		  		                '</a>' .
-		  		                '</td>';
-		  		                echo "<td style='border:1px solid black; font-size:18; padding:10px;'>" . $doc->getElementsByTagName('reference')->item($i)->textContent  . '</td>';
-		  		                echo "<td style='border:1px solid black; font-size:18; padding:10px;'>" . $doc->getElementsByTagName('description')->item($i)->textContent  . '</td>';
-		  		                echo '</tr>';
-		  		                
+		                $headlines[] = $headline;
 		            }
 		            
-		            if($numberError > 0){
-		                echo '</table>';
-		            }
+		            $templateMgr->assign(
+		                'headlines', $headlines
+		            );
 		            
 		        }
 		        
-		        libxml_clear_errors();
-		        echo '<h3>' . __('plugins.importexport.common.invalidXML') . '</h3>';
-		        echo '<p><pre>' . htmlspecialchars($xml) . '</pre></p>';
-		        echo '</body></html>';
+		        $templateMgr->assign(
+		            'htmlspecialchars', htmlspecialchars($xml)
+		        );
+		        
+		        $templateMgr->assign(
+		            'numberError', $numberError
+		        );
+		        
+		        $templateMgr->display($this->getTemplateResource('crDepositErrors.tpl'));
+		        
 		    } else
 		        if (is_string($result)) {
 		            
