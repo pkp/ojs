@@ -180,6 +180,12 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		$deployment->setIssue($issue);
 
 		$journalIssueNode = $doc->createElementNS($deployment->getNamespace(), 'journal_issue');
+		
+		if ($issue->getLocalizedTitle() ) {
+			$journalTitlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
+			$journalTitlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($issue->getLocalizedTitle(), ENT_COMPAT, 'UTF-8')));
+			$journalIssueNode->appendChild($journalTitlesNode);
+		}
 		if ($issue->getDatePublished()) {
 			$journalIssueNode->appendChild($this->createPublicationDateNode($doc, $issue->getDatePublished()));
 		}
