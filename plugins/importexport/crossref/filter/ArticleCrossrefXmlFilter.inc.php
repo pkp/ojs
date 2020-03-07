@@ -90,7 +90,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 
 		$journalArticleNode = $doc->createElementNS($deployment->getNamespace(), 'journal_article');
 		$journalArticleNode->setAttribute('publication_type', 'full_text');
-		$journalArticleNode->setAttribute('metadata_distribution_opts', 'any');
+// DEPRECATED in current scheme 4.4.2:	$journalArticleNode->setAttribute('metadata_distribution_opts', 'any');
 
 
 		// title
