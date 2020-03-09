@@ -247,21 +247,24 @@ describe('Data suite tests', function() {
 		cy.contains('Add Contributor');
 		cy.get('#contributors-grid .show_extras').eq(0).click();
 		cy.get('[id*="editAuthor-button"]').eq(0).click();
-		cy.wait(1000); // Wait for the form to settle
+		cy.wait(1500); // Wait for the form to settle
 		cy.get('[name="familyName[en_US]"]').type(' Version 2', {delay: 0});
 		cy.get('[id^="submitFormButton"]').contains('Save').click();
 		cy.contains('Author edited.');
+		cy.wait(1500); // Wait for the grid to reload
 		cy.get('[id*="authorgrid-row"] span').contains('Alan Mwandenga Version 2');
 
 		// Edit Galley
 		cy.get('#galleys-button').click();
 		cy.contains('Add galley');
+		cy.wait(500);
 		cy.get('#representations-grid .show_extras').click();
+		cy.wait(500);
 		cy.get('[id*="editGalley-button"]').click();
 		cy.get('#editArticleGalleyMetadataTabs [name="label"]').type(' Version 2');
 		cy.get('#editArticleGalleyMetadataTabs [name="urlPath"]').type('pdf');
 		cy.get('#articleGalleyForm button').contains('Save').click();
-		cy.wait(1000);
+		cy.wait(1500);
 		cy.get('#representations-grid [id*="downloadFile-button"').contains('PDF Version 2');
 
 		// Edit url path
