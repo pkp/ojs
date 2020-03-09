@@ -284,7 +284,7 @@ describe('Data suite tests', function() {
 		cy.contains('Alan Mwandenga Version 2');
 		cy.checkViewableGalley('PDF Version 2');
 		cy.contains('The Signalling Theory Dividends Version 2').click();
-		cy.get('.versions li').eq(1).find('a').click();
+		cy.get('.versions a').contains('(1)').click();
 		cy.contains('This is an outdated version');
 		cy.checkViewableGalley('PDF');
 		cy.contains('This is an outdated version');
