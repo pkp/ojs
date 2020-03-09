@@ -12,8 +12,14 @@ describe('Data suite tests', function() {
 	let submission;
 
 	before(function() {
-		cy.readFile('cypress/fixtures/submissions/mwandenga.json')
-			.then(mwandenga => submission = mwandenga);
+		submission = {
+			id: 0,
+			section: 'Articles',
+			prefix: '',
+			title: 'Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence',
+			subtitle: '',
+			abstract: 'The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.'
+		};
 	});
 
 	it('Create a submission', function() {
@@ -71,10 +77,10 @@ describe('Data suite tests', function() {
 
 		// Metadata
 		cy.get('#metadata-button').click();
-		cy.get('#metadata-keywords-control-en_US').type('pr', {delay: 0});
-		cy.wait(500);
-		cy.get('li').contains('Professional Development').click({force: true});
-		cy.get('#metadata-keywords-control-en_US').type('social{downarrow}{downarrow}{enter}', {delay: 0});
+		cy.get('#metadata-keywords-control-en_US').type('Professional Development{enter}', {delay: 0});
+		cy.wait(100);
+		cy.get('#metadata-keywords-control-en_US').type('Social Transformation{enter}', {delay: 0});
+		cy.wait(100);
 		cy.get('#metadata button').contains('Save').click();
 
 		cy.contains('The metadata have been updated.');

@@ -28,10 +28,23 @@ describe('Data suite tests', function() {
 			]
 		});
 		cy.logout();
-		
+
 		cy.findSubmissionAsEditor('dbarnes', null, title);
 		cy.sendToReview();
 		cy.assignParticipant('Section editor', 'Minoti Inoue', true);
+
+		// Select pre-existing keywords
+		cy.get('#publication-button').click();
+		cy.get('#metadata-button').click();
+		cy.get('#metadata-keywords-control-en_US').type('pr', {delay: 0});
+		cy.wait(500);
+		cy.get('li').contains('Professional Development').click({force: true});
+		cy.get('#metadata-keywords-control-en_US').type('social{downarrow}{downarrow}{enter}', {delay: 0});
+		cy.get('#metadata button').contains('Save').click();
+		cy.contains('The metadata have been updated.');
+		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
+		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
+
 		cy.logout();
 
 		cy.login('minoue');
