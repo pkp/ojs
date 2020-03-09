@@ -247,6 +247,7 @@ describe('Data suite tests', function() {
 		cy.contains('Add Contributor');
 		cy.get('#contributors-grid .show_extras').eq(0).click();
 		cy.get('[id*="editAuthor-button"]').eq(0).click();
+		cy.wait(1000); // Wait for the form to settle
 		cy.get('[name="familyName[en_US]"]').type(' Version 2', {delay: 0});
 		cy.get('[id^="submitFormButton"]').contains('Save').click();
 		cy.contains('Author edited.');
