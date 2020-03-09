@@ -107,6 +107,7 @@ describe('Data suite tests', function() {
 		cy.contains('The publication\'s issue details have been updated.');
 
 		// Contributors
+		cy.wait(1500);
 		cy.get('#contributors-button').click();
 		cy.get('[id*="authorgrid-addAuthor-button"]').click();
 		cy.wait(250);
@@ -146,6 +147,7 @@ describe('Data suite tests', function() {
 		cy.get('#publication-button').click();
 		cy.get('#titleAbstract button').contains('Save').should('be.disabled');
 
+		cy.wait(1500);
 		cy.get('#contributors-button').click();
 		cy.get('[id*="authorgrid-addAuthor-button"]').should('not.exist');
 		cy.get('[id*="editAuthor-button"]').should('not.exist');
@@ -243,6 +245,7 @@ describe('Data suite tests', function() {
 		cy.contains('The title and abstract have been updated.');
 
 		// Edit Contributor
+		cy.wait(1500);
 		cy.get('#contributors-button').click();
 		cy.contains('Add Contributor');
 		cy.get('#contributors-grid .show_extras').eq(0).click();
@@ -320,7 +323,6 @@ describe('Data suite tests', function() {
 		cy.get('#publication-button').click();
 		cy.get('.pkpPublication .pkpHeader__actions button:contains("Publish")').should('not.exist');
 		cy.get('.pkpPublication .pkpHeader__actions button:contains("Create Version")').should('not.exist');
-		cy.wait(1000);
 		cy.contains('All Versions').click();
 		cy.get('.pkpPublication__versions .pkpDropdown__action').eq(0).click();
 		cy.contains('This version has been published and can not be edited.');
