@@ -257,9 +257,7 @@ describe('Data suite tests', function() {
 		// Edit Galley
 		cy.get('#galleys-button').click();
 		cy.contains('Add galley');
-		cy.wait(500);
 		cy.get('#representations-grid .show_extras').click();
-		cy.wait(500);
 		cy.get('[id*="editGalley-button"]').click();
 		cy.get('#editArticleGalleyMetadataTabs [name="label"]').type(' Version 2');
 		cy.get('#editArticleGalleyMetadataTabs [name="urlPath"]').type('pdf');
@@ -322,6 +320,7 @@ describe('Data suite tests', function() {
 		cy.get('#publication-button').click();
 		cy.get('.pkpPublication .pkpHeader__actions button:contains("Publish")').should('not.exist');
 		cy.get('.pkpPublication .pkpHeader__actions button:contains("Create Version")').should('not.exist');
+		cy.wait(1000);
 		cy.contains('All Versions').click();
 		cy.get('.pkpPublication__versions .pkpDropdown__action').eq(0).click();
 		cy.contains('This version has been published and can not be edited.');
