@@ -2979,7 +2979,7 @@ class Upgrade extends Installer {
 			case 'postgres9':
 				$stageAssignmentDao->update('UPDATE stage_assignments SET can_change_metadata=1 FROM stage_assignments sa JOIN user_groups ug ON (sa.user_group_id = ug.user_group_id) WHERE ug.role_id IN ' . $roleString);
 				break;
-			default: fatalError("Unknown database type $driver!");
+			default: fatalError("Unknown database type!");
 			}
 
 		return true;
