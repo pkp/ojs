@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
+"PO-Revision-Date: 2020-03-09 13:16+0000\n"
+"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
+"ojs/manager/zh_Hans/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2019-11-04T08:59:12-08:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr "您确定您要重设这份期刊中所有的电子邮件模板为预设值？您将会失去您曾自订过的所有配置。"
@@ -1335,3 +1338,154 @@ msgstr "注册失败！DOI注册服务器返回一个错误：'{$param}'。"
 
 msgid "plugins.importexport.common.register.success"
 msgstr "注册成功！"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS许可证说明"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS许可证将显示在“关于期刊”的“归档”下：<a href=\"http://www.lockss.org/community/"
+"publishers-titles-gln/\" target=\"_blank\">LOCKSS许可证</a>"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS 和 CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "PKP存储网络（PN）为符合一些基本标准的任何OJS期刊提供免费的存储服务。 OJS 3的PKP PN插件目前正在开发中，即将在插件库中可用。"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP存储网络（PN）"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "查看<button>插件设置</button>以接受PKP PN的使用条款。"
+
+msgid "manager.setup.plnDescription"
+msgstr "PKP存储网络（PN）为满足一些基本条件的任何OJS期刊提供免费的存储服务。"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "启用PKP PN插件"
+
+msgid "manager.setup.lists.success"
+msgstr "该期刊的列表设置已更新。"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "提供您的期刊的简短说明，并确定编辑，执行董事和编辑团队的其他成员。"
+
+msgid "manager.setup.keyInfo"
+msgstr "关键信息"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "可以在期刊列表中使用的代表期刊的图示或小徽标。"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"包括读者，作者或审阅者可能感兴趣的有关期刊的任何信息。 "
+"这可能包括您的开放访问政策，期刊的重点和范围，版权声明，赞助商披露，期刊的历史记录，隐私声明以及在任何LOCKSS或CLOCKSS档案系统中包括的内容。"
+
+msgid "manager.setup.contextAbout"
+msgstr "关于期刊"
+
+msgid "manager.setup.contextSummary"
+msgstr "期刊摘要"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr "在另一个页面中显示后续项目之前，请限制要在列表中显示的项目（例如投稿，用户或编辑分配）的数量。"
+
+msgid "manager.setup.information.success"
+msgstr "该期刊的信息已更新。"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "对于提供立即或延迟开放访问的期刊，请在适当的时间随附所有已发表作品的 知识共享(Creative Commons) 许可。"
+
+msgid "manager.setup.identity"
+msgstr "期刊标识"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "指定的ISSN无效。"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "向作者，读者和图书馆员描述期刊将发表的文章和其他类目的范围。"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "主页将显示的公告数目。 将此留空以不显示任何内容。"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "在首页上显示"
+
+msgid "manager.setup.contact.success"
+msgstr "该期刊的联系方式已更新。"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "简介"
+
+msgid "manager.setup.announcements.success"
+msgstr "公告设置已更新。"
+
+msgid "manager.setup.pageHeader"
+msgstr "期刊页面头部"
+
+msgid "manager.setup.contextName"
+msgstr "期刊名称"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "期刊样式表"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "期刊首页默认包含导航链接。 可以使用以下一个或所有选项来附加其他首页内容，这些选项将按所示顺序显示。"
+
+msgid "manager.setup.homepageContent"
+msgstr "期刊首页内容"
+
+msgid "manager.setup.editorialTeam"
+msgstr "编辑团队"
+
+msgid "manager.setup.masthead"
+msgstr "刊头"
+
+msgid "manager.section.noSectionEditors"
+msgstr "还没有栏目编辑。 请通过 管理 > 设置 > 用户&amp;角色 将此角色添加到至少一个用户。"
+
+msgid "manager.paymentTypes"
+msgstr "付款方式"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "选定的选项以及它们的描述和费用（可在下面进行编辑），将显示在“政策”下的“关于期刊”中以及需要付款的地方。"
+
+msgid "manager.payment.success"
+msgstr "支付设置已更新。"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "您确定要删除此订阅吗？"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "这将激活订阅的支付功能，其中类型，成本，期限和订阅由期刊（订阅）管理器管理。"
+
+msgid "manager.website.archiving"
+msgstr "存档"
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "发布详细信息已更新。"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS 将不会用于在线发布该期刊的内容。"
+
+msgid "manager.distribution.publishingMode"
+msgstr "发布方式"
+
+msgid "manager.distribution.publication"
+msgstr "发布"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "使用文章的发布日期"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "使用刊期的发布日期"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "选择文章如何设置默认的版权日期。 可以逐个覆盖此默认值。 如果您“随时发布”，请不要使用此刊期的发布日期。"
+
+msgid "manager.distribution.access"
+msgstr "存取"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-03-04 01:29+0000\n"
+"PO-Revision-Date: 2020-03-04 15:55+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
 "\n"
@@ -683,13 +683,15 @@ msgid "manager.setup.management"
 msgstr "Yönetim"
 
 msgid "manager.setup.management.description"
-msgstr "Erişim ve güvenlik, program, duyurular, son kopya, mizanpaj ve düzeltme."
+msgstr ""
+"Erişim ve güvenlik, yayın planlama, duyurular, düzeltme, mizanpaj ve son "
+"okuma."
 
 msgid "manager.setup.managementOfBasicEditorialSteps"
-msgstr "Temel Editöryal Basamakların Yönetimi"
+msgstr "Temel Süreç Adımları Yönetimi"
 
 msgid "manager.setup.managingPublishingSetup"
-msgstr "Yönetim ve Yayıncılık Ayarı"
+msgstr "Yönetim ve Yayınlama Yapılandırması"
 
 msgid "manager.setup.managingTheJournal"
 msgstr "4. Basamak: Dergi Yönetimi"
@@ -698,25 +700,34 @@ msgid "manager.setup.navigationBar"
 msgstr "Yönlendirme Çubuğu"
 
 msgid "manager.setup.navigationBarDescription"
-msgstr "Yönlendirme Çubuğuna madde ekle veya çıkar."
+msgstr "Yönlendirme çubuğuna öğe ekle veya kaldır."
 
 msgid "manager.setup.navItemIsAbsolute"
-msgstr "Bağlantı adresleri tam olmalıdır (örneğin: \"http://www.example.com\"), siteye göreceli bağlantı kullanılmamalıdır (örneğin \"/manager/setup\")"
+msgstr ""
+"Bağlantı adresleri tam olmalıdır (Ör. \"http://www.example.com\"), siteye "
+"göreceli bağlantı kullanılmamalıdır (Ör. \"/manager/setup\")"
 
 msgid "manager.setup.navItemIsLiteral"
-msgstr "Etiketler okunacak biçimde olmalı (örneğin: \"Dergi Yönetimi\"), yerel mesajı kullanılmamalı (örneğin: \"yönetim.ayar\")"
+msgstr ""
+"Etiket değerleri okunacak biçimde olmalı (Ör. \"Dergi Yönetimi\"), "
+"yerelleştirme anahtarı şeklinde kullanılmamalı (Ör. \"manager.setup\")"
 
 msgid "manager.setup.noImageFileUploaded"
-msgstr "Görsel dosyası yüklenmedi."
+msgstr "Resim dosyası yüklenmedi."
 
 msgid "manager.setup.noStyleSheetUploaded"
-msgstr "Biçimlendirme sayfası yüklenmedi"
+msgstr "Biçimlendirme sitili yüklenmedi"
 
 msgid "manager.setup.note"
 msgstr "Not"
 
+#, fuzzy
 msgid "manager.setup.notifications.submissionAckDisabled"
-msgstr "<strong>Not:</strong> Otomatik başvuru e-posta gönderme seçeneği başlangıçta pasifleştirildi. Açmak için <a class=\"action\" href=\"{$preparedEmailsUrl}\">Hazır E-Posta Mesajları</a> sayfasında \"SUBMISSION_ACK\" olarak tanımlanan mesajı etkinleştirin."
+msgstr ""
+"<strong>Not:</strong> Otomatik başvuru e-posta gönderme seçeneği başlangıçta "
+"pasifleştirildi. Açmak için <a class=\"action\" href=\"{$preparedEmailsUrl}\""
+">Hazır E-Posta Mesajları</a> sayfasında \"SUBMISSION_ACK\" olarak tanımlanan "
+"mesajı etkinleştirin."
 
 msgid "manager.setup.numPageLinks"
 msgstr "Sayfa bağlantıları"
@@ -725,34 +736,48 @@ msgid "manager.setup.publishingMode"
 msgstr "Dergi İçeriğine Erişim"
 
 msgid "manager.setup.onlineIssn"
-msgstr "eISSN"
+msgstr "e-ISSN"
 
 msgid "manager.distribution.publishingMode.openAccess"
 msgstr "Dergi, içeriğini açık erişim sunacak."
 
 msgid "manager.setup.pageNumberIdentifier"
-msgstr "Sayfa Numarası Seçenekleri"
+msgstr "Sayfa Numarası Ayarı"
 
 msgid "manager.setup.policies"
 msgstr "Politikalar"
 
+#, fuzzy
 msgid "manager.setup.policies.description"
-msgstr "Odak, hakem değerlendirmesi, bölümler, gizlilik, güvenlik ve erişim öğeler hakkında ekler."
+msgstr ""
+"Odak, hakem değerlendirmesi, bölümler, gizlilik, güvenlik ve erişim öğeler "
+"hakkında ekler."
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN"
 
+#, fuzzy
 msgid "manager.setup.proofingInstructions"
-msgstr "Düzenleme Yönergesi"
+msgstr "Son Okuma Yönergesi"
 
+#, fuzzy
 msgid "manager.setup.proofingInstructionsDescription"
-msgstr "Düzenleme yönergesi düzenlenme basamağında mizanpajcılara, yazarlara ve bölüm editörlerine açık tutulur. Aşağıda, dergi yöneticisi tarafından istenildiğinde değiştirilebilecek, ön tanımlı (HTML veya düz metin) bir düzenleme verilmiştir."
+msgstr ""
+"Düzenleme yönergesi düzenlenme basamağında mizanpajcılara, yazarlara ve "
+"bölüm editörlerine açık tutulur. Aşağıda, dergi yöneticisi tarafından "
+"istenildiğinde değiştirilebilecek, ön tanımlı (HTML veya düz metin) bir "
+"düzenleme verilmiştir."
 
 msgid "manager.setup.publicationSchedule"
 msgstr "Yayın Planlaması"
 
+#, fuzzy
 msgid "manager.setup.publicationScheduleDescription"
-msgstr "Makaleler, kendi içindekiler tablosu olan bir sayıda toplanarak  yayınlanabilir. Ayrıca hazır olan makale son sayının içindekiler tablosuna eklenerek yayınlanabilir. Dergi Hakkında bölümünde okuyucularınıza hangi sistemin kullanıldığı ve ne sıklıkta yeni sayı yayınlandığını belirtiniz."
+msgstr ""
+"Makaleler, kendi içindekiler tablosu olan bir sayıda toplanarak  "
+"yayınlanabilir. Ayrıca hazır olan makale son sayının içindekiler tablosuna "
+"eklenerek yayınlanabilir. Dergi Hakkında bölümünde okuyucularınıza hangi "
+"sistemin kullanıldığı ve ne sıklıkta yeni sayı yayınlandığını belirtiniz."
 
 msgid "manager.setup.publicationScheduling"
 msgstr "Yayın Planlaması"
@@ -763,17 +788,23 @@ msgstr "Dergi İçeriğinin Tanımlanması"
 msgid "manager.setup.publisher"
 msgstr "Yayıncı"
 
+#, fuzzy
 msgid "manager.setup.publishingDescription"
 msgstr "Dergi yayıncısının adı Dergi Hakkında kısmında görüntülenir."
 
+#, fuzzy
 msgid "manager.setup.referenceLinking"
 msgstr "Referans Bağlama"
 
 msgid "manager.setup.restrictArticleAccess"
-msgstr "Kullanıcılar açık erişim içeriğini görüntüleyebilmek için kayıt yaparak giriş yapmak zorundadır."
+msgstr ""
+"Kullanıcıların açık erişim içeriğini görüntüleyebilmeleri için kullanıcı "
+"kayıt olarak giriş yapmaları zorunludur."
 
 msgid "manager.setup.restrictSiteAccess"
-msgstr "Kullanıcılar dergi sitesini görüntüleyebilmek için kayıt yaparak giriş yapmak zorundadır."
+msgstr ""
+"Kullanıcıların dergi sitesini görüntüleyebilmeleri için kayıt olarak giriş "
+"yapmaları zorunludur."
 
 msgid "manager.setup.reviewGuidelines"
 msgstr "Değerlendirme Rehberi"
@@ -782,37 +813,53 @@ msgid "manager.setup.reviewOptions"
 msgstr "Değerlendirme Seçenekleri"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "Hakemlere iki durumda uyarı için otomatik e-posta gönderilecektir (editör istediği her zaman gönderebilir)"
+msgstr "Otomatik Hatırlatma e-Postaları"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
-msgstr "<strong>Not:</strong> Bu özelliğin çalışabilmesi için site yöneticisinin ADS kurulum dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi gerekir. Bu iş için sunucuda da ayarlar yapmak gerekebilir ve her sunucuda bu işlev çalışmayabilir. (Daha fazla bilgi için ADS belgelerine bakınız)."
+msgstr ""
+"<strong>Not:</strong> Bu özelliğin çalışabilmesi için site yöneticisinin ADS "
+"kurulum dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi "
+"gerekir. Bu iş için sunucuda da ayarlar yapmak gerekebilir ve her sunucuda "
+"bu işlev çalışmayabilir. (Daha fazla bilgi için ADS belgelerine bakınız)."
 
 msgid "manager.setup.reviewOptions.blindReview"
 msgstr "Kör Hakemlik"
 
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
-msgstr "Değerlendirme için tipik olarak kabul edilen süre"
+msgstr "Hakem değerlendirmesini tamamlamak için verilen süre"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.onQuality"
-msgstr "Editörler her bir hakem incelemesinden sonra hakemler için 1-5 puan arasında kalite ölçeğine göre değerlendirme yapabilir."
+msgstr ""
+"Editörler her bir hakem incelemesinden sonra hakemler için 1-5 puan arasında "
+"kalite ölçeğine göre değerlendirme yapabilir."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
-msgstr "Hakemler değerlendirme isteğini kabul ettikten sonra değerlendirme dosyasına giriş yapabilirler."
+msgstr ""
+"Hakemler değerlendirme talebini kabul edene kadar gönderi dosyasına erişim "
+"yapamazlar."
 
 msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Hakem Erişimi"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Tek tıkla hakem erişimini etkinleştir."
+msgstr "Tek Tıkla Hakem Erişimi"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>Not:</strong> Hakemlere gönderilen e-posta, hakemlerin davet edildiği değerlendirme gönderisine doğrudan erişebilmesi için özel bir URL adresi içerir (oturum açılması gereken diğer sayfalar ile birlikte).  Bu seçenek, güvenlik nedenleriyle editörlerin CCs veya BCCs adresleri eklemelerine izin vermez."
+msgstr ""
+"<strong>Not:</strong> Hakemlere gönderilen e-posta, hakemlerin davet "
+"edildiği değerlendirme gönderisine doğrudan erişebilmesi için özel bir URL "
+"adresi içerir (oturum açılması gereken diğer sayfalar ile birlikte).  Bu "
+"seçenek, güvenlik nedenleriyle editörlerin CCs veya BCCs adresleri "
+"eklemelerine izin vermez."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Hakem Puanlama"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
-msgstr "Hakem Hatırlatmaları"
+msgstr "Hakem Hatırlatıcıları"
 
 msgid "manager.setup.reviewOptions.showEnsuringLink"
 msgstr "Yazarlara ve hakemlere dosya yükleme sayfalarında <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Kör Hakemlik Güvencesi</a> için bağlantılar sağlayın."
@@ -823,24 +870,37 @@ msgstr "Değerlendirme Politikası"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Arama Motoru Dizinlemesi"
 
+#, fuzzy
 msgid "manager.setup.searchEngineIndexing.description"
-msgstr "Kullanıcılara yardımcı olmak üzere arama motorlarının dergiyi dizinlemesi için dergiyle ilgili anahtar kelimeleri (noktalı virgülle ayırarak) yazabilirsiniz. Ör. İktisat; İşletme; Finans."
+msgstr ""
+"Kullanıcılara yardımcı olmak üzere arama motorlarının dergiyi dizinlemesi "
+"için dergiyle ilgili anahtar kelimeleri (noktalı virgülle ayırarak) "
+"yazabilirsiniz. Ör. İktisat; İşletme; Finans."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Bölümler ve Bölüm Editörleri"
 
 msgid "manager.setup.sectionsDefaultSectionDescription"
-msgstr "(Eğer bölüm eklenmemişse, öğeler Makaleler bölümüne varsayılan olarak gönderilir.)"
+msgstr ""
+"(Eğer bölüm eklenmemişse, başvurular varsayılan olarak Makaleler bölümüne  "
+"gönderilir.)"
 
+#, fuzzy
 msgid "manager.setup.sectionsDescription"
-msgstr "Dergi için bölümler oluşturmak veya değiştirmek (Örneğin; Makaleler, Kitap Değerlendirmeleri, v.b.) için Bölüm Yönetimine gidin. <br /><br /> Yazarlar dergiye gönderi yaparken seçim yapacaklardır..."
+msgstr ""
+"Dergi için bölümler oluşturmak veya değiştirmek (Örneğin; Makaleler, Kitap "
+"Değerlendirmeleri, v.b.) için Bölüm Yönetimine gidin. <br /><br /> Yazarlar "
+"dergiye gönderi yaparken seçim yapacaklardır..."
 
+#, fuzzy
 msgid "manager.setup.selectEditorDescription"
 msgstr "Dergi editörü bunu editoryal süreç olarak görecektir."
 
+#, fuzzy
 msgid "manager.setup.selectSectionDescription"
 msgstr "Dergi bölümü göz önüne alınacaktır."
 
+#, fuzzy
 msgid "manager.setup.showGalleyLinksDescription"
 msgstr "Daima dizgi bağantısını göster ve sınırlı erişimi belirt."
 
@@ -848,25 +908,32 @@ msgid "manager.setup.stepsToJournalSite"
 msgstr "Bir Dergi Web Sitesi İçin Beş Adım"
 
 msgid "manager.setup.subjectExamples"
-msgstr "(Örneğin: Fotosentez; Kara Delikler; Dört Renkli Harita Sorunu; Bayes Kuramı)"
+msgstr ""
+"(Ör. Fotosentez; Kara Delikler; Dört Renkli Harita Sorunu; Bayes Kuramı)"
 
 msgid "manager.setup.subjectKeywordTopic"
 msgstr "Anahtar Kelimeler"
 
 msgid "manager.setup.subjectProvideExamples"
-msgstr "Yazarlar için anahtar kelime veya konu örnekleri verin."
+msgstr "Yazarlar için anahtar kelime veya konu başlığı örnekleri verin"
 
 msgid "manager.setup.submissionGuidelines"
-msgstr "Gönderi Rehberleri"
+msgstr "Gönderi Rehberi"
 
 msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Başvuru Hazırlık Kontrol Listesi"
+msgstr "Gönderi Hazırlık Kontrol Listesi"
 
+#, fuzzy
 msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Dergiye makale başvurusu yaparken, yazarlar önce Başvuru Hazırlık Kontrol Listesini kontrol etmelidirler. Kontrol listesi \"Dergi Hakkında\" altındaki \"Yazar Rehberi\" bölümündedir. Liste aşağıda düzenlenebilir, ama listedeki bütün öğelerin bir sonraki basamağa geçebilmek için yazarlar tarafından işaretlenmesi gerekmektedir."
+msgstr ""
+"Dergiye makale başvurusu yaparken, yazarlar önce Başvuru Hazırlık Kontrol "
+"Listesini kontrol etmelidirler. Kontrol listesi \"Dergi Hakkında\" altındaki "
+"\"Yazar Rehberi\" bölümündedir. Liste aşağıda düzenlenebilir, ama listedeki "
+"bütün öğelerin bir sonraki basamağa geçebilmek için yazarlar tarafından "
+"işaretlenmesi gerekmektedir."
 
 msgid "manager.setup.submissions"
-msgstr "Başvurular"
+msgstr "Gönderiler"
 
 msgid "manager.setup.submissions.description"
 msgstr "Yazar rehberleri, telif hakkı ve dizinleme (kayıt dahil)."
@@ -879,20 +946,25 @@ msgid "manager.distribution.publishingMode.none"
 msgstr "OJS derginin içeriğini online yayımlamak için kullanılmayacak."
 
 msgid "manager.setup.typeExamples"
-msgstr "(Örneğin: Tarihsel Sorgu; Yarı Deneysel; Edebi Analiz; Araştırma/Görüşme)"
+msgstr "(Ör. Tarihi İnceleme; Yarı Deneysel; Literatür Analizi; Anket/Mülakat)"
 
 msgid "manager.setup.typeMethodApproach"
 msgstr "Tür (Yöntem/Yaklaşım)"
 
 msgid "manager.setup.typeProvideExamples"
-msgstr "Bu alan için araştırma türleri, yöntemleri ve yaklaşımlarıyla ilgili örnekler sağlayınız."
+msgstr ""
+"Bu alan için araştırma türleri, yöntemleri ve yaklaşımlarıyla ilgili "
+"örnekler verin"
 
 msgid "manager.setup.uniqueIdentifier"
-msgstr "Tek Biçim Tanımlayıcı"
+msgstr "Benzersiz Tanımlayıcı"
 
 msgid "manager.setup.uniqueIdentifierDescription"
-msgstr "Makaleler ve sayılar bir tanımlama numarası veya sözcüğü ile etiketlenirler. Digital Object Identifier (DOI) Sistemi önerilen sistemdir."
+msgstr ""
+"Makaleler ve sayılar, Dijital Nesne Tanımlama Sistemi (DOI) gibi bir kayıt "
+"sistemi kullanılarak bir kimlik numarası veya dizeyle etiketlenebilir."
 
+#, fuzzy
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Bir editöryal/değerlendirme kurulu dergi tarafından kullanılacaktır."
 
@@ -900,7 +972,7 @@ msgid "manager.setup.useImageTitle"
 msgstr "Başlık görseli"
 
 msgid "manager.setup.userRegistration"
-msgstr "Üye Kayıdı"
+msgstr "Kullanıcı Kayıdı"
 
 msgid "manager.setup.useTextTitle"
 msgstr "Başlık metni"
@@ -909,43 +981,50 @@ msgid "manager.statistics.statistics"
 msgstr "Dergi İstatistikleri"
 
 msgid "manager.statistics.statistics.articleViews"
-msgstr "Makale görüntüleme sayısı (sadece yazarlar için)"
+msgstr "Makale Görüntüleme Sayısı (sadece yazarlar için)"
 
 msgid "manager.statistics.statistics.count.accept"
-msgstr "Kabul (%):"
+msgstr "Kabul"
 
 msgid "manager.statistics.statistics.count.decline"
-msgstr "Red (%):"
+msgstr "Red"
 
 msgid "manager.statistics.statistics.count.revise"
-msgstr "Geliştirilmiş gönderi (%):"
+msgstr "Yeniden Gönder"
 
 msgid "manager.statistics.statistics.daysPerReview"
-msgstr "Değerlendime süresi (Gün):"
+msgstr "Değerlendime süresi"
 
 msgid "manager.statistics.statistics.daysToPublication"
-msgstr "Yayına kadar geçen süre (Gün):"
+msgstr "Yayına kadar geçen süre"
 
+#, fuzzy
 msgid "manager.statistics.statistics.description"
-msgstr "ADS yazılımı her degi için şu istatistikleri hesaplar. “Değerlendirme süresi” başvuru zamanından son editör kararı verilene kadar geçen gün sayısıdır. “Yayınlama süresi” ise başvurudan yayına dek geçen toplam süredir."
+msgstr ""
+"ADS yazılımı her degi için şu istatistikleri hesaplar. “Değerlendirme süresi”"
+" başvuru zamanından son editör kararı verilene kadar geçen gün sayısıdır. “"
+"Yayınlama süresi” ise başvurudan yayına dek geçen toplam süredir."
 
 msgid "manager.statistics.statistics.itemsPublished"
-msgstr "Yayınlanmış öğerler:"
+msgstr "Yayınlanmış öğeler"
 
 msgid "manager.statistics.statistics.makePublic"
-msgstr "Dergi hakkında kısmında okuyucuların görmesini istediklerinizi seçiniz."
+msgstr "Dergi hakkında kısmında okuyucuların görmesini istediklerinizi seçin."
 
+#, fuzzy
 msgid "manager.statistics.statistics.note"
-msgstr "Not: Değerlendirme sonuçlarının toplamı %100 olmayabilir, çünkü halen değerlendirmede olanlar da vardır."
+msgstr ""
+"Not: Değerlendirme sonuçlarının toplamı %100 olmayabilir, çünkü halen "
+"değerlendirmede olanlar da vardır."
 
 msgid "manager.statistics.statistics.numIssues"
-msgstr "Yayınlanmış sayılar:"
+msgstr "Yayınlanmış sayılar"
 
 msgid "manager.statistics.statistics.numSubmissions"
-msgstr "Toplam başvuru sayısı:"
+msgstr "Toplam başvuru sayısı"
 
 msgid "manager.statistics.statistics.peerReviewed"
-msgstr "Dğerlendirmeden geçmiş:"
+msgstr "Dğerlendirmeden geçmiş"
 
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "Kayıtlı okuyucular"
@@ -954,46 +1033,61 @@ msgid "manager.statistics.statistics.registeredUsers"
 msgstr "Kayıtlı kullanıcılar:"
 
 msgid "manager.statistics.statistics.reviewerCount"
-msgstr "Görevlendirme Sayısı:"
+msgstr "Atama sayısı"
 
 msgid "manager.statistics.statistics.reviewers"
-msgstr "Hakemler:"
+msgstr "Hakemler"
 
 msgid "manager.statistics.statistics.reviewerScore"
-msgstr "Editör Puanı:"
+msgstr "Editör puanı"
 
 msgid "manager.statistics.statistics.reviewsPerReviewer"
-msgstr "Değerlendirme Sayısı:"
+msgstr "Değerlendirme sayısı"
 
+#, fuzzy
 msgid "manager.statistics.statistics.selectSections"
-msgstr "Bu dergide hakem değerlendirme istatistiklerinin yapılmasını istediğiniz bölümlerini seçiniz."
+msgstr ""
+"Bu dergide hakem değerlendirme istatistiklerinin yapılmasını istediğiniz "
+"bölümlerini seçiniz."
 
 msgid "manager.statistics.statistics.subscriptions"
-msgstr "Abonelik:"
+msgstr "Aboneler"
 
 msgid "manager.subscriptionPolicies"
 msgstr "Abonelik Politikası"
 
 msgid "manager.subscriptionPolicies.delayedOpenAccess"
-msgstr "Gecikmiş Açık Erişim"
+msgstr "Gecikmeli Açık Erişim"
 
 msgid "manager.subscriptionPolicies.expiry"
-msgstr "Abonelik Sonu"
+msgstr "Abonelik Bitişi"
 
+#, fuzzy
 msgid "manager.subscriptionPolicies.expiryDescription"
-msgstr "Abonelik bitiminden sonra, okuyucunun tüm abonelik içeriğine erişim reddedilebilir ancak abonelik sonuna kadar yayınlanan içeriğe erişimi korunabilir."
+msgstr ""
+"Abonelik bitiminden sonra, okuyucunun tüm abonelik içeriğine erişim "
+"reddedilebilir ancak abonelik sonuna kadar yayınlanan içeriğe erişimi "
+"korunabilir."
 
+#, fuzzy
 msgid "manager.subscriptionPolicies.expiryFull"
 msgstr "Tümünü Sonladır"
 
+#, fuzzy
 msgid "manager.subscriptionPolicies.expiryFullDescription"
-msgstr "Abonelik bitiminden sonra okuyucuların tüm abonelik içeriğine erişimini engelle."
+msgstr ""
+"Abonelik bitiminden sonra okuyucuların tüm abonelik içeriğine erişimini "
+"engelle."
 
+#, fuzzy
 msgid "manager.subscriptionPolicies.expiryPartial"
 msgstr "Kısmen Sonlandır"
 
+#, fuzzy
 msgid "manager.subscriptionPolicies.expiryPartialDescription"
-msgstr "Okuyucuların son yayınlanan abonelik içeriğine erişimi engelle ancak abonelik sonuna kadar yayınlanan içeriğe erişimini koru."
+msgstr ""
+"Okuyucuların son yayınlanan abonelik içeriğine erişimi engelle ancak "
+"abonelik sonuna kadar yayınlanan içeriğe erişimini koru."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Abonelik Sonu Uyarısı"
@@ -1453,20 +1547,24 @@ msgstr "Lütfen verilen seçenekleri kullanınız."
 msgid "manager.setup.categories"
 msgstr "Kategoriler"
 
+#, fuzzy
 msgid "manager.statistics.reports.filters.byContext.description"
 msgstr "Sonuçları (sayı ve/veya makale) bağlamıyla daralt."
 
+#, fuzzy
 msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Sonuçları nesne türüne (dergi, sayı, makale, pdf dizgisi, diğer dizgiler) ve/veya bir veya daha fazla nesne ID'sine göre daralt."
+msgstr ""
+"Sonuçları nesne türüne (dergi, sayı, makale, pdf dizgisi, diğer dizgiler) ve/"
+"veya bir veya daha fazla nesne ID'sine göre daralt."
 
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr "İndirilen makale dosyaları"
+msgstr "Makale dosyası indirmeleri"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr "Makale özet sayfası gösterimi"
+msgstr "Makale özet sayfası gösterimleri"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr "Makale özeti ve indirmeleri"
+msgstr "Makale özeti görüntüleme ve indirmeleri"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Dergi ana sayfa görüntülemeleri"
@@ -1633,28 +1731,37 @@ msgstr ""
 "CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <"
 "a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS Lisansı</a>"
 
+#, fuzzy
 msgid "manager.statistics.defaultMetricDescription"
 msgstr ""
-"Derginiz, birden fazla kullanım metriği kaydetmek için yapılandırıldı. Kullanım istatistikleri birkaç bağlamda görüntülenecektir.\n"
-"\t\tTek kullanımlık istatistiğin kullanılması gereken durumlar vardır. Örn. En çok kullanılan makalelerin sıralı bir listesini görüntülemek veya arama sonuçlarını sıralamak için. Lütfen yapılandırılmış metriklerden birini varsayılan olarak seçin."
+"\n"
+"\t\tDerginiz, birden fazla kullanım metriği kaydetmek için yapılandırıldı. "
+"Kullanım istatistikleri birkaç bağlamda görüntülenecektir.\n"
+"\t\tTek kullanımlık istatistiğin kullanılması gereken durumlar vardır. Örn. "
+"En çok kullanılan makalelerin sıralı bir listesini görüntülemek veya arama "
+"sonuçlarını sıralamak için. Lütfen yapılandırılmış metriklerden birini "
+"varsayılan olarak seçin.\n"
+"\t"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr "İçindekiler sayfası görünümleri tablosu"
+msgstr "İçindekiler sayfası görüntülemeleri"
 
 msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
 msgstr "Lütfen verilen onay kutusunu kullanın."
 
 msgid "manager.subscriptionPolicies.xMonths"
-msgstr "{$x} Aylar"
+msgstr "{$x} Ay"
 
 msgid "manager.subscriptionPolicies.xWeeks"
-msgstr "{$x} Haftalar"
+msgstr "{$x} Hafta"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Aboneleri abonelik süresinin sona ermesinden sonra e-posta ile bilgilendir."
+msgstr ""
+"Abonelik süresinin sona ermesinden sonra aboneleri e-posta ile bilgilendir"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr "Aboneleri abonelik süresinin sona ermesinden sonra e-posta ile bilgilendir."
+msgstr ""
+"Abonelik süresinin sona ermesinden sonra aboneleri e-posta ile bilgilendir."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
 msgstr "Aboneleri abonelik süresinin bitiminden önce e-posta ile bilgilendir."
@@ -1880,3 +1987,36 @@ msgstr "Yayınlama Şekli"
 
 msgid "manager.distribution.publication"
 msgstr "Yayınlama"
+
+msgid "manager.setup.userAccess.success"
+msgstr "Dergi kullanıcı erişim ayarları güncellendi."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Üçüncü taraf dizinleme servisleri için <a href=\"https://www.openarchives."
+"org/\">Open Archives Initiative (OAI)</a> ile üst veri sunun."
+
+msgid "manager.setup.enableOai"
+msgstr "OAI Etkinleştir"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Makale İçeriğini Göster"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Site Erişimi"
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Arama motoru dizinlemesi ayarları güncellendi."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+"Hakemlere gönderilen davet e-postasına güvenli bir erişim bağlantısı ekle."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Dosya Erişimini Kısıtla"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Gizlilik bildirimi güncellendi."
+
+msgid "manager.setup.masthead.success"
+msgstr "Derginin editör kurulları güncellendi."

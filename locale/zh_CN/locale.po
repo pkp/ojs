@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
+"PO-Revision-Date: 2020-03-09 13:16+0000\n"
+"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
+"ojs/locale/zh_Hans/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2019-11-04T08:59:12-08:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "reviewer.article.enterReviewForm"
 msgstr "点击图标以填写审查表。"
@@ -1741,3 +1744,72 @@ msgstr "无效的排版编辑提交或没有要求的排版编辑提交！"
 
 msgid "user.profile.profileImage"
 msgstr "个人照片"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "您没有有效的订阅。"
+
+msgid "issue.return"
+msgstr "返回到刊期详细信息"
+
+msgid "user.role.journalAssistants"
+msgstr "期刊助理"
+
+msgid "user.role.journalAssistant"
+msgstr "期刊助理"
+
+msgid "user.role.subEditors"
+msgstr "栏目编辑"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "如果您请求成为期刊的审稿人，请输入您的主题兴趣。"
+
+msgid "user.register.otherContextRoles"
+msgstr "请求以下角色。"
+
+msgid "user.register.contextsPrompt"
+msgstr "您想在该网站上注册哪些期刊？"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "是的，我希望收到有关审阅该期刊投稿的请求。"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "是的，请求 {$userGroup} 角色。"
+
+msgid "user.reviewerPrompt"
+msgstr "您愿意审查该期刊的投稿吗？"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "包含在该期刊中没有角色的用户。"
+
+msgid "journal.viewAllIssues"
+msgstr "显示所有刊期"
+
+msgid "submission.search"
+msgstr "文章搜索"
+
+msgid "article.return"
+msgstr "返回到文章详细信息"
+
+msgid "article.fontSize.large.altText"
+msgstr "大"
+
+msgid "article.fontSize.medium.altText"
+msgstr "中"
+
+msgid "article.fontSize.small.altText"
+msgstr "小"
+
+msgid "section.policy"
+msgstr "栏目政策"
+
+msgid "navigation.skip.issue"
+msgstr "转到当前刊期"
+
+msgid "navigation.skip.about"
+msgstr "转到期刊介绍"
+
+msgid "context.select"
+msgstr "切换到另一个期刊："
+
+msgid "context.current"
+msgstr "当前期刊："

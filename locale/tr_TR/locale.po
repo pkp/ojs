@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-02-13 21:14+0000\n"
+"PO-Revision-Date: 2020-03-06 07:53+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/locale/tr/>"
 "\n"
@@ -1257,19 +1257,19 @@ msgid "archive.issueUnavailable"
 msgstr "Sayı Erişilebilir Değil"
 
 msgid "about.aboutContext"
-msgstr "İçerik Hakkında"
+msgstr "Dergi Hakkında"
 
 msgid "about.statistics"
 msgstr "İstatistikler"
 
 msgid "about.history"
-msgstr "Dergi Geçmişi"
+msgstr "Dergi Tarihçesi"
 
 msgid "about.editorialTeam"
-msgstr "Kişiler ve Kurullar"
+msgstr "Editör Kurulu"
 
 msgid "about.editorialTeam.biography"
-msgstr "Öz Geçmiş"
+msgstr "Özgeçmiş"
 
 msgid "about.editorialPolicies"
 msgstr "Yayın Politikası"

@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
+"PO-Revision-Date: 2020-03-06 07:53+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"ca/>\n"
+"Language: ca_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:17+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Enviar un article"
@@ -154,3 +157,70 @@ msgstr "Aquestes especificacions estan basades en el conjunt de metadades Dublin
 
 msgid "section.any"
 msgstr "Qualsevol secció"
+
+msgid "publication.scheduledIn"
+msgstr "Programat per publicar-se a <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Publicat a <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr "La publicació ha d'assignar-se a un número abans de poder publicar-se."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Tots els requisits de publicació es compleixen. Això es publicarà "
+"immediatament a {$issue}. Esteu segurs que voleu publicar-ho?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Tots els requisits de publicació es compleixen. Això es publicarà quan es "
+"publiqui {$issue}. Esteu segurs que voleu programar-ho per a publicació?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Tots els requisits de publicació es compleixen. Esteu segurs que voleu "
+"publicar-ho?"
+
+msgid "publication.issue.success"
+msgstr "Els detalls de publicació del número s'han actualitzat."
+
+msgid "publication.invalidIssue"
+msgstr "No s'ha pogut trobar el número per a aquesta publicació."
+
+msgid "publication.invalidSection"
+msgstr "No s'ha pogut trobar la secció per a aquesta publicació."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"La data de publicació s'establirà automàticament quan es publiqui el número. "
+"No introduïu una data de publicació a menys que l'article hagi estat "
+"publicat prèviament en un altre lloc i necessiteu canviar-la."
+
+msgid "galley.publicationNotFound"
+msgstr "No s'ha pogut trobar la publicació per a aquesta galerada."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Les galerades d'aquesta publicació no poden editar-se perquè ja s'ha "
+"publicat."
+
+msgid "catalog.category.heading"
+msgstr "Tots els elements"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} elements"
+
+msgid "submission.sectionOptions"
+msgstr "Opcions de secció"
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"El resum és massa llarg. Ajusteu-lo segons el límit de paraules per a "
+"aquesta secció indicat a sota."
+
+msgid "submission.submit.noContext"
+msgstr "No s'ha pogut trobar aquesta tramesa."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "El resum ha de tenir {$wordCount} paraules o menys."

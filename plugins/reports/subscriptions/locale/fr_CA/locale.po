@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-03-10 18:58+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "Plages d'adresses IP"
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Adresse postale de l'établissement"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Ce plugiciel met en place un rapport CSV qui contient une liste des "
+"abonnements ainsi que leurs renseignements."
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Rapport d'abonnements"

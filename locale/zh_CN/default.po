@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
+"PO-Revision-Date: 2020-03-09 13:16+0000\n"
+"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
+"ojs/default/zh_Hans/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2019-11-04T08:59:12-08:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "section.default.title"
 msgstr "论文"
@@ -18,7 +21,7 @@ msgid "section.default.abbrev"
 msgstr "ART"
 
 msgid "section.default.policy"
-msgstr ""
+msgstr "栏目默认策略"
 
 msgid "default.contextSettings.checklist.notPreviouslyPublished"
 msgstr "该投稿还未被发表过，也没有被其他杂志接受(或者在评论中有一个解释已经提供给编辑）."
@@ -64,3 +67,80 @@ msgid "default.contextSettings.lockssLicense"
 msgstr ""
 "\n"
 "\t\t这份期刊使用LOCKSS系统建立一份在参与之图书馆之间流通的存档系统，并且允许那些图书馆基于保存和储藏的目的，建立本期刊的永久性存档文件<a href=\"http://lockss.stanford.edu/\">更多信息...</a>"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "审稿人"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "审稿人"
+
+msgid "default.genres.sourceTexts"
+msgstr "源文本"
+
+msgid "default.genres.dataSet"
+msgstr "数据集"
+
+msgid "default.genres.dataAnalysis"
+msgstr "数据分析"
+
+msgid "default.genres.researchResults"
+msgstr "科研结果"
+
+msgid "default.genres.researchMaterials"
+msgstr "科研资料"
+
+msgid "default.genres.researchInstrument"
+msgstr "科研仪器"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "订阅管理员"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "订阅管理员"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "栏目编辑"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "栏目编辑"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "客座编辑"
+
+msgid "default.groups.name.guestEditor"
+msgstr "客座编辑"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.plural.editor"
+msgstr "期刊编辑"
+
+msgid "default.groups.name.editor"
+msgstr "期刊编辑"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.plural.manager"
+msgstr "期刊管理员"
+
+msgid "default.groups.name.manager"
+msgstr "期刊管理员"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"该期刊利用CLOCKSS系统在参与的图书馆之间创建分布式存档系统，并允许这些图书馆创建期刊的永久档案，以进行保存和恢复。 <a href=\""
+"http://clockss.org/\">更多... </a>"

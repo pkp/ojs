@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
+"PO-Revision-Date: 2020-03-06 07:53+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/locale/ca/>"
+"\n"
+"Language: ca_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:17+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "navigation.categories"
 msgstr "Categories"
@@ -162,7 +165,7 @@ msgid "article.suppFiles"
 msgstr "Fitxer(s) addicional(s)"
 
 msgid "article.suppFilesAbbrev"
-msgstr "Fitxers add."
+msgstr "Arxius add."
 
 msgid "article.discipline"
 msgstr "Disciplines i subdisciplines acadèmiques"
@@ -1664,7 +1667,7 @@ msgid "journal.viewAllIssues"
 msgstr "Veure tots els números"
 
 msgid "user.noRoles.selectUsersWithoutRoles"
-msgstr "Incloure usuaris/àries sense rols en aquesta revista"
+msgstr "Incloure usuaris/àries sense rols en aquesta revista."
 
 msgid "user.reviewerPrompt"
 msgstr "Voldria revisar trameses per a aquesta revista?"
@@ -1871,3 +1874,80 @@ msgstr "Cap revista en aquest context!"
 
 msgid "user.authorization.invalidIssue"
 msgstr "Sol·licitud de número invàlida!"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Escolliu la manera d'ordenar els articles en aquesta categoria."
+
+msgid "catalog.sortBy"
+msgstr "Ordre dels articles"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} es farà càrrec del procés d'edició de l'article "
+"{$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Subscripcions"
+
+msgid "notification.type.public"
+msgstr "Avisos públics"
+
+msgid "log.editor.recommendation"
+msgstr ""
+"{$editorName} ha registrat una recomanació editorial per a l'article "
+"{$submissionId}: ({$decision})."
+
+msgid "payment.notFound"
+msgstr ""
+"S'ha sol·licitat un pagament, però la petició ha caducat. Contacteu amb l'"
+"administrador/a de la revista per obtenir més detalls."
+
+msgid "payment.requestPublicationFee"
+msgstr "Sol·licitar la taxa de publicació ({$feeAmount})"
+
+msgid "payment.type.publication.required"
+msgstr "La taxa de publicació està pendent de pagament."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Fer una tramesa nova a la secció <a href=\"{$url}\">{$name}</a>."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Heu d'acceptar la declaració de privacitat d'aquest lloc."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Heu d'acceptar la declaració de privacitat de totes les revistes en què us "
+"registreu."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Sí, accepto que les meves dades siguin recopilades i emmagatzemades d'acord "
+"amb la <a href=\"{$privacyUrl}\" target=\"_blank\">declaració de "
+"privacitat</a> d'aquesta revista."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Sí, m'agradaria que em notifiquessin les noves publicacions i avisos de "
+"totes les revistes en què m'he registrat."
+
+msgid "subscriptions.status.noSubscription"
+msgstr "No teniu una subscripció activa."
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Sí, m'agradaria que em contactessin per revisar articles d'aquesta revista."
+
+msgid "submission.search"
+msgstr "Cerca d'article"
+
+msgid "section.policy"
+msgstr "Política de secció"
+
+msgid "navigation.skip.issue"
+msgstr "Passar al número actual"
+
+msgid "navigation.skip.about"
+msgstr "Passar a l'apartat \"Sobre la revista\""

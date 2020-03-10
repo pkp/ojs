@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-08 03:27+0000\n"
-"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"PO-Revision-Date: 2020-03-06 07:53+0000\n"
+"Last-Translator: Fransisca H <sisca.ojs@gmail.com>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-driver/id/>\n"
 "Language: id_ID\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 msgid "plugins.generic.driver.description"
 msgstr ""
-"Plugin DRIVER melengkapi antarmuja OAI-PMH berdasarkan Pedoman DRIVER 2.0, "
+"Plugin DRIVER melengkapi antarmuka OAI-PMH berdasarkan Pedoman DRIVER 2.0, "
 "yang membantu jurnal mengikuti ketentuan DRIVER."
 
 msgid "plugins.generic.driver.displayName"
