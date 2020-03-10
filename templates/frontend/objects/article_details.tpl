@@ -95,7 +95,7 @@
 			{if $publication->getData('authors')}
 				<section class="item authors">
 					<h2 class="pkp_screen_reader">{translate key="article.authors"}</h2>
-					<ul class="versions authors">
+					<ul class="authors">
 					{foreach from=$publication->getData('authors') item=author}
 						<li>
 							<span class="name">

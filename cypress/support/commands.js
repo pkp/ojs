@@ -27,3 +27,12 @@ Cypress.Commands.add('isInIssue', (submissionTitle, issueTitle) => {
 	cy.get('a:contains("' + issueTitle + '")').click();
 	cy.get('a:contains("' + submissionTitle + '")');
 });
+
+Cypress.Commands.add('checkViewableGalley', (galleyTitle) => {
+	cy.get('[class^="obj_galley_link"]').contains(galleyTitle).click();
+	cy.get('iframe')
+		.should('have.attr', 'src')
+		.then((src) => {
+			cy.request(src);
+		});
+});
