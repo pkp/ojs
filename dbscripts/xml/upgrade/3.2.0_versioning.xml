@@ -16,9 +16,9 @@
 <data>
 	<sql>
 		<!-- change date_published from datetime to date before migrating -->
-		<query>
-			ALTER TABLE temp_published_submissions MODIFY COLUMN date_published date NULL
-		</query>
+		<query driver="mysqli">ALTER TABLE temp_published_submissions MODIFY COLUMN date_published DATE NULL</query>
+		<query driver="mysql">ALTER TABLE temp_published_submissions MODIFY COLUMN date_published DATE NULL</query>
+		<query driver="postgres7">ALTER TABLE temp_published_submissions ALTER COLUMN date_published TYPE DATE</query>
 		<!-- migrate data to new publications table -->
 		<query>
 			INSERT INTO publications (access_status, date_published, last_modified, locale, section_id, seq, submission_id, status, version)
@@ -114,6 +114,7 @@
 		</query>
 
 		<!-- move some author data to settings table -->
+		<query driver="postgres7">ALTER TABLE author_settings ALTER COLUMN setting_type DROP NOT NULL</query>
 		<query>
 			INSERT INTO author_settings(author_id, setting_name, setting_value)
 			SELECT ta.author_id, 'country', ta.country
@@ -126,7 +127,23 @@
 			WHERE ta.url IS NOT NULL
 		</query>
 		<!-- connect authors to publications -->
-		<query>
+		<query driver="postgres7">
+			UPDATE authors
+			SET publication_id = s.current_publication_id
+			FROM submissions s, temp_authors ta
+			WHERE authors.author_id = ta.author_id AND s.submission_id = ta.submission_id
+		</query>
+		<query driver="mysql">
+			UPDATE authors as a
+			SET a.publication_id = (
+				SELECT s.current_publication_id
+				FROM submissions as s
+				LEFT JOIN temp_authors as ta
+					ON s.submission_id = ta.submission_id
+				WHERE a.author_id = ta.author_id
+			)
+		</query>
+		<query driver="mysqli">
 			UPDATE authors as a
 			SET a.publication_id = (
 				SELECT s.current_publication_id
@@ -152,7 +169,19 @@
 		</query>
 
 		<!-- connect controlled vocab metadata to publications, 1048585 = ASSOC_TYPE_SUBMISSION, 1048588 = ASSOC_TYPE_PUBLICATION -->
-		<query>
+		<query driver="postgres7">
+			UPDATE controlled_vocabs
+			SET assoc_type = 1048588, assoc_id = s.current_publication_id
+			FROM submissions s
+			WHERE assoc_type = 1048585 AND assoc_id = s.submission_id
+		</query>
+		<query driver="mysql">
+			UPDATE controlled_vocabs AS cv,
+				submissions AS s
+			SET cv.assoc_type = 1048588, cv.assoc_id = s.current_publication_id
+			WHERE cv.assoc_type = 1048585 AND s.submission_id = cv.assoc_id
+		</query>
+		<query driver="mysqli">
 			UPDATE controlled_vocabs AS cv,
 				submissions AS s
 			SET cv.assoc_type = 1048588, cv.assoc_id = s.current_publication_id
@@ -160,7 +189,24 @@
 		</query>
 
 		<!-- connect citations to publications -->
-		<query>
+		<query driver="postgres7">
+			UPDATE citations
+			SET publication_id = s.current_publication_id
+			FROM submissions s
+			LEFT JOIN temp_citations as tc ON (s.submission_id = tc.submission_id)
+			WHERE citations.citation_id = tc.citation_id
+		</query>
+		<query driver="mysqli">
+			UPDATE citations as c
+			SET c.publication_id = (
+				SELECT s.current_publication_id
+				FROM submissions as s
+				LEFT JOIN temp_citations as tc
+					ON s.submission_id = tc.submission_id
+				WHERE c.citation_id = tc.citation_id
+			)
+		</query>
+		<query driver="mysql">
 			UPDATE citations as c
 			SET c.publication_id = (
 				SELECT s.current_publication_id
@@ -174,29 +220,29 @@
 		<!-- update the DOI setting names -->
 		<query>
 			UPDATE plugin_settings
-			SET setting_name="doiPublicationSuffixPattern"
-			WHERE setting_name="doiSubmissionSuffixPattern"
-				AND plugin_name="doipubidplugin"
+			SET setting_name='doiPublicationSuffixPattern'
+			WHERE setting_name='doiSubmissionSuffixPattern'
+				AND plugin_name='doipubidplugin'
 		</query>
 		<query>
 			UPDATE plugin_settings
-			SET setting_name="enablePublicationDoi"
-			WHERE setting_name="enableSubmissionDoi"
-				AND plugin_name="doipubidplugin"
+			SET setting_name='enablePublicationDoi'
+			WHERE setting_name='enableSubmissionDoi'
+				AND plugin_name='doipubidplugin'
 		</query>
 
 		<!-- update the URN setting names -->
 		<query>
 			UPDATE plugin_settings
-			SET setting_name="urnPublicationSuffixPattern"
-			WHERE setting_name="urnSubmissionSuffixPattern"
-				AND plugin_name="urnpubidplugin"
+			SET setting_name='urnPublicationSuffixPattern'
+			WHERE setting_name='urnSubmissionSuffixPattern'
+				AND plugin_name='urnpubidplugin'
 		</query>
 		<query>
 			UPDATE plugin_settings
-			SET setting_name="enablePublicationURN"
-			WHERE setting_name="enableSubmissionURN"
-				AND plugin_name="urnpubidplugin"
+			SET setting_name='enablePublicationURN'
+			WHERE setting_name='enableSubmissionURN'
+				AND plugin_name='urnpubidplugin'
 		</query>
 
 		<!-- remove deprecated and temporary tables. should be last commands -->

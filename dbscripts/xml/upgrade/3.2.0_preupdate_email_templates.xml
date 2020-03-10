@@ -28,16 +28,11 @@
 			ALTER TABLE email_templates_data
 			ADD email_id BIGINT
 		</query>
-		<query>
-			UPDATE email_templates_data as etd
-			SET etd.email_id = (
-				SELECT et.email_id
-				FROM email_templates as et
-				WHERE etd.email_key = et.email_key
-					AND etd.assoc_type = et.assoc_type
-					AND etd.assoc_id = et.assoc_id
-			)
-		</query>
+
+		<query driver="mysql">UPDATE email_templates_data etd LEFT JOIN email_templates et ON (etd.email_key = et.email_key AND etd.assoc_type = et.assoc_type AND etd.assoc_id = et.assoc_id) SET etd.email_id = et.email_id</query>
+		<query driver="mysqli">UPDATE email_templates_data etd LEFT JOIN email_templates et ON (etd.email_key = et.email_key AND etd.assoc_type = et.assoc_type AND etd.assoc_id = et.assoc_id) SET etd.email_id = et.email_id</query>
+		<query driver="postgres7">UPDATE email_templates_data SET email_id=email_templates.email_id FROM email_templates WHERE email_templates_data.email_key = email_templates.email_key AND email_templates_data.assoc_type = email_templates.assoc_type AND email_templates_data.assoc_id = email_templates.assoc_id</query>
+
 		<query>
 			ALTER TABLE email_templates
 			ADD context_id BIGINT

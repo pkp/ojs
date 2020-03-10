@@ -31,17 +31,9 @@
 		status value is incorrect for any submissions.
 	-->
 	<sql>
-		<query>
-			UPDATE submissions s
-			SET s.status=1
-			WHERE s.status=3
-			AND (
-				SELECT COALESCE(ps.submission_id, NULL)
-				FROM published_submissions ps
-				WHERE ps.submission_id = s.submission_id
-				AND s.status = 3
-			) IS NULL
-		</query>
+		<query driver="postgres7">UPDATE submissions SET status=1 FROM	submissions AS s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) WHERE s.status=3 AND ps.submission_id IS NULL</query>
+		<query driver="mysql">UPDATE submissions s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) SET s.status=1 WHERE s.status=3 AND ps.submission_id IS NULL</query>
+		<query driver="mysqli">UPDATE submissions s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) SET s.status=1 WHERE s.status=3 AND ps.submission_id IS NULL</query>
 	</sql>
 	<!-- Modify citations table to refer to publications #5465-->
 	<sql>
