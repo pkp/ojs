@@ -16,7 +16,7 @@ describe('Data suite tests', function() {
 		// updated to put the articles in Vol. 1 No. 2, instead of Vol. 1 No. 1. This may
 		// need to be corrected after import/export is fixed.
 		var username = 'admin';
-		cy.login(username, 'adminadmin');
+		cy.login(username, 'admin');
 
 		cy.get('li.profile a:contains("' + username + '")').click();
 		cy.get('li.profile a:contains("Dashboard")').click();
