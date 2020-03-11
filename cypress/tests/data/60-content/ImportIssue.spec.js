@@ -15,24 +15,31 @@ describe('Data suite tests', function() {
 		// Because of this problem, the publish issue tests (amwandenga/vkarbasizaed) were
 		// updated to put the articles in Vol. 1 No. 2, instead of Vol. 1 No. 1. This may
 		// need to be corrected after import/export is fixed.
-		/*
+		var username = 'admin';
+		cy.login(username, 'admin');
 
-		$this->logIn('dbarnes');
+		cy.get('li.profile a:contains("' + username + '")').click();
+		cy.get('li.profile a:contains("Dashboard")').click();
 
-		$actions = new WebDriverActions(self::$driver);
-		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Tools"]'))
-			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Import/Export"]'))
-			->perform();
+		cy.get('ul#navigationPrimary a:contains("Tools")').trigger('mouseover');
+		cy.get('ul#navigationPrimary a:contains("Import/Export")').click();
 
-		$this->waitForElementPresent($selector='//a[text()=\'Native XML Plugin\']');
-		$this->click($selector);
+		cy.get('a:contains("Native XML Plugin")').click();
 
-		$this->uploadFile(dirname(__FILE__) . '/issue.xml');
-		$this->waitForElementPresent($selector='//input[@name=\'temporaryFileId\' and string-length(@value)>0]');
-		$this->click('//form[@id=\'importXmlForm\']//button[starts-with(@id,\'submitFormButton-\')]');
+		cy.wait(250);
+		cy.fixture('export-issues.xml', 'utf8').then(fileContent => {
+			cy.get('input[type=file]').upload(
+				{fileContent, 'fileName': 'uploadedFile.xml', 'mimeType': 'text/xml', 'encoding': 'utf8'},
+			);
+		});
+		
+		cy.get('input[name="temporaryFileId"][value!=""]', {timeout:20000});
 
-		// Ensure that the import was listed as completed.
-		$this->waitForElementPresent('//*[contains(text(),\'The import completed successfully.\')]//li[contains(text(),\'Vol 1. No 1.\')]');
-		*/
+		cy.get('form#importXmlForm button[type="submit"]').click();
+
+		cy.contains('.pkp_structure_page', 'The import completed successfully.', {timeout:20000});
+		cy.contains('.pkp_structure_page', 'Vol. 1 No. 1 (2020): test 1', {timeout:20000});
+		cy.contains('.pkp_structure_page', 'Vol. 1 No. 2 (2020): Test Issue 2', {timeout:20000});
+		
 	});
 });
