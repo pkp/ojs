@@ -9,7 +9,7 @@
  *
  *}
 <div class="pkp_block block_web_feed">
-	<span class="title">{translate key="journal.currentIssue"}</span>
+	<h2 class="title">{translate key="journal.currentIssue"}</h2>
 	<div class="content">
 		<ul>
 			<li>
