@@ -8,7 +8,7 @@
  * Common site sidebar menu -- "Developed By" block.
  *}
 <div class="pkp_block block_developed_by">
-	<h2 class="title">
+	<h2 class="pkp_screen_reader">
 		{translate key="plugins.block.developedBy.blockTitle"}
 	</h2>
 
