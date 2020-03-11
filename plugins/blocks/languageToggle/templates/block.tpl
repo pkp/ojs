@@ -9,9 +9,9 @@
  *}
 {if $enableLanguageToggle}
 <div class="pkp_block block_language">
-	<span class="title">
+	<h2 class="title">
 		{translate key="common.language"}
-	</span>
+	</h2>
 
 	<div class="content">
 		<ul>

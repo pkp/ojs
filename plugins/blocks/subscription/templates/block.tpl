@@ -13,7 +13,7 @@
 	{assign var=subscriptionStatus value=$individualSubscription->getStatus()}
 {/if}
 <div class="pkp_block block_subscription">
-	<span class="title">{translate key="plugins.block.subscription.blockTitle"}</span>
+	<h2 class="title">{translate key="plugins.block.subscription.blockTitle"}</h2>
 	<div class="content">
 		{if $institutionalSubscription}
 			<p>

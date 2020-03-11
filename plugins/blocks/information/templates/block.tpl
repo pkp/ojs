@@ -10,7 +10,7 @@
  *}
 {if !empty($forReaders) || !empty($forAuthors) || !empty($forLibrarians)}
 <div class="pkp_block block_information">
-	<span class="title">{translate key="plugins.block.information.link"}</span>
+	<h2 class="title">{translate key="plugins.block.information.link"}</h2>
 	<div class="content">
 		<ul>
 			{if !empty($forReaders)}
