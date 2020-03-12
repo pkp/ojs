@@ -201,7 +201,7 @@
 								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
 							{/iterate}
 						{elseif $article->getCitations()}
-							{$article->getCitations()|strip_unsafe_html|nl2br}
+							{$article->getCitations()|escape|nl2br}
 						{/if}
 					</div>
 				</div>
