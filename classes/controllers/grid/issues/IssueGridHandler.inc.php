@@ -492,13 +492,14 @@ class IssueGridHandler extends GridHandler {
 				'status' => STATUS_SCHEDULED,
 				'count' => 5000, // large upper limit
 			]);
+			$dataObjectTombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $dataObjectTombstoneDao DataObjectTombstoneDAO */
 			foreach ($submissionsIterator as $submission) {
 				$publication = $submission->getLatestPublication();
 				if ($publication->getData('status') === STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
 					$publication = Services::get('publication')->publish($publication);
 				}
 				// delete article tombstone
-				DAORegistry::getDAO('DataObjectTombstoneDAO')->deleteByDataObjectId($submission->getId());
+				$dataObjectTombstoneDao->deleteByDataObjectId($submission->getId());
 			}
 		}
 

@@ -100,7 +100,8 @@ class IssueGalleyForm extends Form {
 				$this->addError('urlPath', __('publication.urlPath.numberInvalid'));
 				$this->addErrorField('urlPath');
 			} else {
-				$issueGalley = DAORegistry::getDAO('IssueGalleyDAO')->getByBestId($this->getData('urlPath'), $this->_issue->getId());
+				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+				$issueGalley = $issueGalleyDao->getByBestId($this->getData('urlPath'), $this->_issue->getId());
 				if ($issueGalley &&
 					(!$this->_issueGalley || $this->_issueGalley->getId() !== $issueGalley->getId())
 				) {

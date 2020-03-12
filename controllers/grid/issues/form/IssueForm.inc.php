@@ -119,7 +119,8 @@ class IssueForm extends Form {
 				$this->addError('urlPath', __('publication.urlPath.numberInvalid'));
 				$this->addErrorField('urlPath');
 			} else {
-				$issue = DAORegistry::getDAO('IssueDAO')->getByBestId($this->getData('urlPath'), Application::get()->getRequest()->getContext()->getId());
+				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+				$issue = $issueDao->getByBestId($this->getData('urlPath'), Application::get()->getRequest()->getContext()->getId());
 				if ($issue &&
 					(!$this->issue || $this->issue->getId() !== $issue->getId())
 				) {

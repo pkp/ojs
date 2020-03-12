@@ -102,10 +102,11 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::checkDuplicate()
 	 */
 	function checkDuplicate($pubId, $pubObjectType, $excludeId, $contextId) {
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		foreach ($this->getPubObjectTypes() as $type) {
 			if ($type === 'Issue') {
 				$excludeTypeId = $type === $pubObjectType ? $excludeId : null;
-				if (DAORegistry::getDAO('IssueDAO')->pubIdExists($type, $pubId, $excludeTypeId, $contextId)) {
+				if ($issueDao->pubIdExists($type, $pubId, $excludeTypeId, $contextId)) {
 					return false;
 				}
 			}
@@ -266,11 +267,13 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
 		]);
+		$publicationDao = DAORegistry::getDAO('PublicationDAO'); /* @var $publicationDao PublicationDAO */
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		foreach ($submissionIds as $submissionId) {
 			$submission = Services::get('submission')->get($submissionId);
 			if ($submissionPubIdEnabled) { // Does this option have to be enabled here for?
 				foreach ((array) $submission->getData('publications') as $publication) {
-					DAORegistry::getDAO('PublicationDAO')->deletePubId($publication->getId(), $pubIdType);
+					$publicationDao->deletePubId($publication->getId(), $pubIdType);
 				}
 			}
 			if ($representationPubIdEnabled || $filePubIdEnabled) { // Does this option have to be enabled here for?
@@ -281,9 +284,9 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 							Application::getRepresentationDAO()->deletePubId($representation->getId(), $pubIdType);
 						}
 						if ($filePubIdEnabled) { // Does this option have to be enabled here for?
-							$articleProofFiles = DAORegistry::getDAO('SubmissionFileDAO')->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $representation->getId(), SUBMISSION_FILE_PROOF);
+							$articleProofFiles = $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $representation->getId(), SUBMISSION_FILE_PROOF);
 							foreach ($articleProofFiles as $articleProofFile) {
-								DAORegistry::getDAO('SubmissionFileDAO')->deletePubId($articleProofFile->getFileId(), $pubIdType);
+								$submissionFileDao->deletePubId($articleProofFile->getFileId(), $pubIdType);
 							}
 						}
 					}

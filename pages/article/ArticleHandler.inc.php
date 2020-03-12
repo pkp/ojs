@@ -137,7 +137,8 @@ class ArticleHandler extends Handler {
 		}
 
 		if ($this->publication->getData('issueId')) {
-			$this->issue = DAORegistry::getDAO('IssueDAO')->getById($this->publication->getData('issueId'), $submission->getData('contextId'), true);
+			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+			$this->issue = $issueDao->getById($this->publication->getData('issueId'), $submission->getData('contextId'), true);
 		}
 	}
 
@@ -164,10 +165,11 @@ class ArticleHandler extends Handler {
 		));
 		$this->setupTemplate($request);
 
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$templateMgr->assign([
 			'ccLicenseBadge' => Application::get()->getCCLicenseBadge($publication->getData('licenseUrl')),
 			'publication' => $publication,
-			'section' => DAORegistry::getDAO('SectionDAO')->getById($publication->getData('sectionId')),
+			'section' => $sectionDao->getById($publication->getData('sectionId')),
 		]);
 
 		if ($this->galley && !$this->userCanViewGalley($request, $article->getId(), $this->galley->getId())) {
@@ -209,7 +211,8 @@ class ArticleHandler extends Handler {
 
 		// Citations
 		if ($publication->getData('citationsRaw')) {
-			$parsedCitations = DAORegistry::getDAO('CitationDAO')->getByPublicationId($publication->getId());
+			$citationDao = DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
+			$parsedCitations = $citationDao->getByPublicationId($publication->getId());
 			$templateMgr->assign([
 				'parsedCitations' => $parsedCitations->toArray(),
 			]);

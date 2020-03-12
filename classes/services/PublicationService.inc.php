@@ -118,7 +118,8 @@ class PublicationService extends PKPPublicationService {
 		// Get the section so we can validate section abstract requirements
 		if (!$section && isset($props['id'])) {
 			$publication = Services::get('publication')->get($props['id']);
-			$section = DAORegistry::getDAO('SectionDAO')->getById($publication->getData('sectionId'));
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+			$section = $sectionDao->getById($publication->getData('sectionId'));
 		}
 
 		if ($section) {

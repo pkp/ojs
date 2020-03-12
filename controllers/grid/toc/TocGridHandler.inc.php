@@ -168,7 +168,8 @@ class TocGridHandler extends CategoryGridHandler {
 			return $object->getCurrentPublication()->getData('seq');
 		} else { // section
 			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-			$customOrdering = DAORegistry::getDAO('SectionDAO')->getCustomSectionOrder($issue->getId(), $object->getId());
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+			$customOrdering = $sectionDao->getCustomSectionOrder($issue->getId(), $object->getId());
 			if ($customOrdering === null) { // No custom ordering specified; use default section ordering
 				return $object->getSequence();
 			} else { // Custom ordering specified.

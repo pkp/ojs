@@ -73,7 +73,8 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$issueEntryForm = new APP\components\forms\publication\IssueEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
 
 		$sectionWordLimits = [];
-		$sectionIterator = DAORegistry::getDAO('SectionDAO')->getByContextId($submissionContext->getId());
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+		$sectionIterator = $sectionDao->getByContextId($submissionContext->getId());
 		while ($section = $sectionIterator->next()) {
 			$sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
 		}

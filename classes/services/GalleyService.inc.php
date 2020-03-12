@@ -30,7 +30,8 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::get()
 	 */
 	public function get($galleyId) {
-		return DAORegistry::getDAO('ArticleGalleyDAO')->getById($galleyId);
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+		return $articleGalleyDao->getById($galleyId);
 	}
 
 	/**
@@ -186,7 +187,8 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 					// Look for dependent files
 					if (is_a($file, 'SubmissionFile')) {
 						$values['dependentFiles'] = [];
-						$dependentFiles = \DAORegistry::getDAO('SubmissionFileDAO')->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $submission->getId(), SUBMISSION_FILE_DEPENDENT);
+						$submissionFileDao = \DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
+						$dependentFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $submission->getId(), SUBMISSION_FILE_DEPENDENT);
 						if ($dependentFiles) {
 							foreach ($dependentFiles as $dependentFile) {
 								$dependentFileProps = array(
@@ -310,7 +312,8 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 * @copydoc \PKP\Services\EntityProperties\EntityWriteInterface::add()
 	 */
 	public function add($galley, $request) {
-		$galleyId = DAORegistry::getDAO('ArticleGalleyDAO')->insertObject($galley);
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+		$galleyId = $articleGalleyDao->insertObject($galley);
 		$galley = $this->get($galleyId);
 
 		\HookRegistry::call('Galley::add', array($galley, $request));
@@ -341,7 +344,8 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	public function delete($galley) {
 		\HookRegistry::call('Galley::delete::before', [$galley]);
 
-		DAORegistry::getDAO('ArticleGalleyDAO')->deleteObject($galley);
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+		$articleGalleyDao->deleteObject($galley);
 
 		// Delete related submission files
 		$publication = Services::get('publication')->get($galley->getData('publicationId'));

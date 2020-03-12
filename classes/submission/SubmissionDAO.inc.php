@@ -32,15 +32,17 @@ class SubmissionDAO extends PKPSubmissionDAO {
 	 */
 	function deleteById($submissionId) {
 		$publicationIds = Services::get('publication')->getIds(['submissionIds' => $submissionId]);
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 
 		foreach ($publicationIds as $publicationId) {
-			$galleys = DAORegistry::getDAO('ArticleGalleyDAO')->getByPublicationId($publicationId)->toArray();
+			$galleys = $articleGalleyDao->getByPublicationId($publicationId)->toArray();
 			foreach ($galleys as $galley) {
-				DAORegistry::getDAO('ArticleGalleyDAO')->deleteById($galley->getId());
+				$articleGalleyDao->deleteById($galley->getId());
 			}
 		}
 
-		DAORegistry::getDAO('ArticleSearchDAO')->deleteSubmissionKeywords($submissionId);
+		$articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $articleSearchDao ArticleSearchDAO */
+		$articleSearchDao->deleteSubmissionKeywords($submissionId);
 
 		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		$articleSearchIndex->articleDeleted($submissionId);

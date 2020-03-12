@@ -297,16 +297,17 @@ class ArticleGalleyGridHandler extends GridHandler {
 
 			// Delete dependent files if no other galley uses them
 			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
+			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 			$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galley->getId(), $publication->getData('submissionId'), SUBMISSION_FILE_PROOF);
 			foreach ($galleyFiles as $file) {
-				$sharedFileGalleys = DAORegistry::getDAO('ArticleGalleyDAO')->getByFileId($file->getFileId())->toArray();
+				$sharedFileGalleys = $articleGalleyDao->getByFileId($file->getFileId())->toArray();
 				if (empty($sharedFileGalleys)) {
 					$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), SUBMISSION_FILE_DEPENDENT);
 				}
 			}
 
 			// Delete main galley file if no other galley uses it
-			$sharedFileGalleys = DAORegistry::getDAO('ArticleGalleyDAO')->getByFileId($galley->getFileId())->toArray();
+			$sharedFileGalleys = $articleGalleyDao->getByFileId($galley->getFileId())->toArray();
 			if (empty($sharedFileGalleys)) {
 				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 				$submissionFileDao->deleteAllRevisionsById($galley->getFileId());

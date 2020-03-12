@@ -30,7 +30,8 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::get()
 	 */
 	public function get($issueId) {
-		return DAORegistry::getDAO('IssueDAO')->getById($issueId);
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+		return $issueDao->getById($issueId);
 	}
 
 	/**
