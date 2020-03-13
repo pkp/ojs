@@ -166,7 +166,9 @@ describe('Data suite tests', function() {
 		cy.get('[name="canChangeMetadata"]').check();
 		cy.get('[id^="submitFormButton"]').contains('OK').click();
 		cy.contains('The stage assignment has been changed.');
+		cy.wait(1000);
 		cy.logout();
+		cy.wait(1000);
 
 		cy.login('amwandenga');
 		cy.visit('/index.php/publicknowledge/authorDashboard/submission/' + submission.id);
@@ -199,6 +201,7 @@ describe('Data suite tests', function() {
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
 		cy.get('.pkp_modal button').contains('OK').click();
+		cy.wait(1000);
 		cy.visit('/index.php/publicknowledge/issue/current');
 		cy.contains('Signalling Theory Dividends').should('not.exist');
 		cy.request({

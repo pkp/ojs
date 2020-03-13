@@ -13,6 +13,7 @@ import '../../lib/pkp/cypress/support/commands';
 Cypress.Commands.add('publish', (issueId, issueTitle) => {
 	cy.get('button[id="publication-button"]').click();
 	cy.get('button[id="issue-button"]').click();
+	cy.wait(2000); // Wait for form to settle
 	cy.get('select[id="issueEntry-issueId-control"]').select(issueId);
 	cy.get('div[id="issue"] button:contains("Save")').click();
 	cy.get('div:contains("The publication\'s issue details have been updated.")');
