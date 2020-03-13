@@ -304,6 +304,7 @@ describe('Data suite tests', function() {
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
 		cy.get('.pkp_modal button').contains('OK').click();
+		cy.wait(1000);
 		cy.get('.pkpWorkflow a').contains('View').click();
 		cy.contains('The Signalling Theory Dividends Version 2').should('not.exist');
 		cy.get('.versions').should('not.exist');
