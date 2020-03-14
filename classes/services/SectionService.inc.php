@@ -28,7 +28,7 @@ class SectionService implements EntityPropertyInterface {
 	 * @return array
 	 */
 	public function getSectionList($contextId) {
-		$sectionDao = \DAORegistry::getDAO('SectionDAO');
+		$sectionDao = \DAORegistry::getDAO('SectionDAO'); /* $sectionDao SectionDAO */
 		$sectionIterator = $sectionDao->getByContextId($contextId);
 
 		$sections = array();
@@ -110,7 +110,7 @@ class SectionService implements EntityPropertyInterface {
 	 * @return Section
 	 */
 	public function addSection($section, $context) {
-		$sectionDao = \DAORegistry::getDAO('SectionDAO');
+		$sectionDao = \DAORegistry::getDAO('SectionDAO'); /* $sectionDao SectionDAO */
 
 		// Don't allow sections to be added to any other context
 		$section->setJournalId($context->getId());
