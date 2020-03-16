@@ -149,7 +149,7 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	 * @return array submissions keyed to a section with some section details
 	 */
 	public function getInSections($issueId, $contextId) {
-
+		import('lib.pkp.classes.core.PKPApplication'); // STATUS_...
 		$submissions = iterator_to_array($this->getMany([
 			'contextId' => $contextId,
 			'issueIds' => $issueId,
