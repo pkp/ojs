@@ -204,7 +204,7 @@
 				LEFT JOIN temp_citations as tc
 					ON s.submission_id = tc.submission_id
 				WHERE c.citation_id = tc.citation_id
-			)
+			) ORDER BY c.publication_id ASC
 		</query>
 		<query driver="mysql">
 			UPDATE citations as c
@@ -214,7 +214,7 @@
 				LEFT JOIN temp_citations as tc
 					ON s.submission_id = tc.submission_id
 				WHERE c.citation_id = tc.citation_id
-			)
+			) ORDER BY c.publication_id ASC
 		</query>
 
 		<!-- update the DOI setting names -->
