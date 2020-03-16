@@ -21,11 +21,6 @@ class ArticleReportPlugin extends ReportPlugin {
 	 */
 	function register($category, $path, $mainContextId = null) {
 		$success = parent::register($category, $path, $mainContextId);
-		if ($success && Config::getVar('general', 'installed')) {
-			$this->import('ArticleReportDAO');
-			$articleReportDAO = new ArticleReportDAO();
-			DAORegistry::registerDAO('ArticleReportDAO', $articleReportDAO);
-		}
 		$this->addLocaleData();
 		return $success;
 	}
@@ -60,232 +55,221 @@ class ArticleReportPlugin extends ReportPlugin {
 		$journal = $request->getJournal();
 		$acronym = PKPString::regexp_replace("/[^A-Za-z0-9 ]/", '', $journal->getLocalizedAcronym());
 
+		// Prepare for UTF8-encoded CSV output.
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=articles-' . $acronym . '-' . date('Ymd') . '.csv');
-
-		$articleReportDao = DAORegistry::getDAO('ArticleReportDAO'); /* @var $articleReportDao ArticleReportDAO */
-		list($articlesIterator, $authorsIterator, $editorsIterator, $decisionsIterator) = $articleReportDao->getArticleReport($journal->getId());
-
-		$maxAuthors = $this->getMaxCount($authorsIterator);
-		$maxEditors = $this->getMaxCount($editorsIterator);
-		$maxDecisions = 0;
-		foreach ($decisionsIterator as $decisionsIteratorForArticle) {
-			$maxDecisionsForArticle = $this->getMaxCount($decisionsIteratorForArticle);
-			if ($maxDecisionsForArticle > $maxDecisions) $maxDecisions = $maxDecisionsForArticle;
-		}
-
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
-
-		import('classes.submission.Submission');
-
-		$columns = array(
-			'submission_id' => __('article.submissionId'),
-			'title' => __('article.title'),
-			'abstract' => __('article.abstract')
-		);
-
-		for ($a = 1; $a <= $maxAuthors; $a++) {
-			$columns = array_merge($columns, array(
-				'author_given' . $a => __('user.givenName') . " (" . __('user.role.author') . " $a)",
-				'author_family' . $a => __('user.familyName') . " (" . __('user.role.author') . " $a)",
-				'orcid' . $a => __('user.orcid') . " (" . __('user.role.author') . " $a)",
-				'country' . $a => __('common.country') . " (" . __('user.role.author') . " $a)",
-				'affiliation' . $a => __('user.affiliation') . " (" . __('user.role.author') . " $a)",
-				'email' . $a => __('user.email') . " (" . __('user.role.author') . " $a)",
-				'url' . $a => __('user.url') . " (" . __('user.role.author') . " $a)",
-				'biography' . $a => __('user.biography') . " (" . __('user.role.author') . " $a)"
-			));
-		}
-
-		$columns = array_merge($columns, array(
-			'section_title' => __('section.title'),
-			'language' => __('common.language'),
-			'coverage' => __('rt.metadata.dublinCore.coverage'),
-			'rights' => __('rt.metadata.dublinCore.rights'),
-			'source' => __('rt.metadata.dublinCore.source'),
-			'subjects' => __('rt.metadata.dublinCore.subject'),
-			'type' => __('rt.metadata.dublinCore.type'),
-			'disciplines' => __('rt.metadata.pkp.discipline'),
-			'keywords' => __('rt.metadata.pkp.subject'),
-			'agencies' => __('submission.supportingAgencies'),
-			'status' => __('common.status'),
-			'url' => __('common.url'),
-			'doi' => __('metadata.property.displayName.doi'),
-			'date_submitted' => __('common.dateSubmitted'),
-			'last_modified' => __('submission.lastModified'),
-		));
-
-		for ($e = 1; $e <= $maxEditors; $e++) {
-			$columns = array_merge($columns, array(
-					'editor_given' . $e => __('user.givenName') . " (" . __('user.role.editor') . " $e)",
-					'editor_family' . $e => __('user.familyName') . " (" . __('user.role.editor') . " $e)",
-					'editor_orcid' . $e => __('user.orcid') . " (" . __('user.role.editor') . " $e)",
-					'editor_email' . $e => __('user.email') . " (" . __('user.role.editor') . " $e)",
-					//'editor_country' . $e => __('common.country') . " (" . __('user.role.editor') . " $e)",
-					//'editor_affiliation' . $e => __('user.affiliation') . " (" . __('user.role.editor') . " $e)",
-					//'editor_url' . $e => __('user.url') . " (" . __('user.role.editor') . " $e)",
-					//'editor_biography' . $e => __('user.biography') . " (" . __('user.role.editor') . " $e)"
-			));
-			for ($d = 1; $d <= $maxDecisions; $d++) {
-				$columns = array_merge($columns, array(
-						'editor_decision' . $e . $d => __('submission.editorDecision') . " $d " . " (" . __('user.role.editor') . " $e)",
-						'editor_decision_date' . $e . $d => __('common.dateDecided') . " $d " . " (" . __('user.role.editor') . " $e)"
-				));
-			}
-		}
-
 		$fp = fopen('php://output', 'wt');
-		//Add BOM (byte order mark) to fix UTF-8 in Excel
+		// Add BOM (byte order mark) to fix UTF-8 in Excel
 		fprintf($fp, chr(0xEF).chr(0xBB).chr(0xBF));
-		fputcsv($fp, array_values($columns));
 
-		import('classes.submission.Submission'); // Bring in getStatusMap function
-		$statusMap = Article::getStatusMap();
-
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
+		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionKeywordDao SubmissionKeywordDAO */
 		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /* @var $submissionSubjectDao SubmissionSubjectDAO */
 		$submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /* @var $submissionDisciplineDao SubmissionDisciplineDAO */
 		$submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO'); /* @var $submissionAgencyDao SubmissionAgencyDAO */
 
-		$authorIndex = 0;
-		while ($article = $articlesIterator->next()) {
-			if ($article->getSubmissionProgress()) continue; // Incomplete submission
-			$authors = $this->mergeAuthors($authorsIterator[$article->getId()]->toArray());
-			$editors = array();
-			if (array_key_exists($article->getId(), $editorsIterator)) {
-				$decisionsIteratorForArticle = null;
-				if (array_key_exists($article->getId(), $decisionsIterator)) $decisionsIteratorForArticle = $decisionsIterator[$article->getId()];
-				$editors = $this->mergeEditors($editorsIterator[$article->getId()]->toArray(), $decisionsIteratorForArticle);
+		$editorUserGroupIds = array_map(function($userGroup) {
+			return $userGroup->getId();
+		}, array_filter($userGroupDao->getByContextId($journal->getId())->toArray(), function($userGroup) {
+			return in_array($userGroup->getRoleId(), [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR]);
+		}));
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
+
+		// Load the data from the database and store it in an array.
+		// (This must be stored before display because we won't know the data
+		// dimensions until it has all been loaded.)
+		$results = $sectionTitles = [];
+		$submissions = $submissionDao->getByContextId($journal->getId());
+		$maxAuthors = $maxEditors = $maxDecisions = 0;
+		while ($submission = $submissions->next()) {
+			$publication = $submission->getCurrentPublication();
+			$maxAuthors = max($maxAuthors, count($publication->getData('authors')));
+			$editDecisions = $editDecisionDao->getEditorDecisions($submission->getId());
+			$statusMap = $submission->getStatusMap();
+
+			// Count the highest number of decisions per editor.
+			$editDecisionsPerEditor = [];
+			foreach ($editDecisions as $editDecision) {
+				$editorId = $editDecision['editorId'];
+				$editDecisionsPerEditor[$editorId] = ($editDecisionsPerEditor[$editorId] ?? 0) + 1;
+				$maxDecisions = max($maxDecisions, $editDecisionsPerEditor[$editorId]);
 			}
 
-			foreach ($columns as $index => $junk) switch(true) {
-				case $index == 'status':
-					if ($article->getStatus() == STATUS_QUEUED) {
-						$columns[$index] = $this->getStageLabel($article->getStageId());
-					} else {
-						$columns[$index] = __($statusMap[$article->getStatus()]);
+			// Load editor and decision information
+			$stageAssignmentsFactory = $stageAssignmentDao->getBySubmissionAndStageId($submission->getId());
+			$editors = $editorsById = [];
+			while ($stageAssignment = $stageAssignmentsFactory->next()) {
+				$userId = $stageAssignment->getUserId();
+				if (!in_array($stageAssignment->getUserGroupId(), $editorUserGroupIds)) continue;
+				if (isset($editors[$userId])) continue;
+				if (!isset($editorsById[$userId])) {
+					$editor = $userDao->getById($userId);
+					$editorsById[$userId] = [
+						$editor->getLocalizedGivenName(),
+						$editor->getLocalizedFamilyName(),
+						$editor->getData('orcid'),
+						$editor->getEmail(),
+					];
+				}
+				$editors[$userId] = $editorsById[$userId];
+				$maxEditors = max($maxEditors, count($editors));
+			}
+
+			// Load section title information
+			$sectionId = $publication->getData('sectionId');
+			if (!isset($sectionTitles[$sectionId])) {
+				$section = $sectionDao->getById($sectionId);
+				$sectionTitles[$sectionId] = $section->getLocalizedTitle();
+			}
+
+			// Store the submission results
+			$results[] = [
+				'submissionId' => $submission->getId(),
+				'title' => $publication->getLocalizedTitle(),
+				'abstract' => html_entity_decode(strip_tags($publication->getLocalizedData('abstract'))),
+				'authors' => array_map(function($author) {
+					return [
+						$author->getLocalizedGivenName(),
+						$author->getLocalizedFamilyName(),
+						$author->getData('orcid'),
+						$author->getData('country'),
+						$author->getLocalizedData('affiliation'),
+						$author->getData('email'),
+						$author->getData('url'),
+						html_entity_decode(strip_tags($author->getLocalizedData('biography'))),
+					];
+				}, $publication->getData('authors')),
+				'sectionTitle' => $sectionTitles[$sectionId],
+				'language' => $publication->getData('locale'),
+				'coverage' => $publication->getLocalizedData('coverage'),
+				'rights' => $publication->getLocalizedData('rights'),
+				'source' => $publication->getLocalizedData('source'),
+				'subjects' => join(', ', $submissionSubjectDao->getSubjects($submission->getCurrentPublication()->getId(), array($submission->getLocale()))[$submission->getLocale()]??[]),
+				'type' => $publication->getLocalizedData('type'),
+				'disciplines' => join(', ', $submissionDisciplineDao->getDisciplines($submission->getCurrentPublication()->getId(), array($submission->getLocale()))[$submission->getLocale()]??[]),
+				'keywords' => join(', ', $submissionKeywordDao->getKeywords($submission->getCurrentPublication()->getId(), array($submission->getLocale()))[$submission->getLocale()]??[]),
+				'agencies' => join(', ', $submissionAgencyDao->getAgencies($submission->getCurrentPublication()->getId(), array($submission->getLocale()))[$submission->getLocale()]??[]),
+				'status' => $submission->getStatus() == STATUS_QUEUED ? $this->getStageLabel($submission->getStageId()) : __($statusMap[$submission->getStatus()]),
+				'url' => $request->url(null, 'workflow', 'access', $submission->getId()),
+				'doi' => $submission->getStoredPubId('doi'),
+				'dateSubmitted' => $submission->getDateSubmitted(),
+				'lastModified' => $submission->getLastModified(),
+				'editors' => $editors,
+				'decisions' => $editDecisions,
+			];
+		}
+
+		// Build and display the column headers.
+		$columns = [
+			__('article.submissionId'),
+			__('article.title'),
+			__('article.abstract')
+		];
+
+		$authorColumnCount = $editorColumnCount = $decisionColumnCount = 0;
+		for ($a=1; $a<=$maxAuthors; $a++) {
+			$columns = array_merge($columns, $authorColumns = [
+				__('user.givenName') . " (" . __('user.role.author') . " $a)",
+				__('user.familyName') . " (" . __('user.role.author') . " $a)",
+				__('user.orcid') . " (" . __('user.role.author') . " $a)",
+				__('common.country') . " (" . __('user.role.author') . " $a)",
+				__('user.affiliation') . " (" . __('user.role.author') . " $a)",
+				__('user.email') . " (" . __('user.role.author') . " $a)",
+				__('user.url') . " (" . __('user.role.author') . " $a)",
+				__('user.biography') . " (" . __('user.role.author') . " $a)"
+			]);
+			$authorColumnCount = count($authorColumns);
+		}
+
+		$columns = array_merge($columns, [
+			__('section.title'),
+			__('common.language'),
+			__('article.coverage'),
+			__('submission.rights'),
+			__('submission.source'),
+			__('common.subjects'),
+			__('common.type'),
+			__('search.discipline'),
+			__('common.keywords'),
+			__('submission.supportingAgencies'),
+			__('common.status'),
+			__('common.url'),
+			__('metadata.property.displayName.doi'),
+			__('common.dateSubmitted'),
+			__('submission.lastModified'),
+		]);
+
+		for ($e = 1; $e <= $maxEditors; $e++) {
+			$columns = array_merge($columns, $editorColumns = [
+				__('user.givenName') . " (" . __('user.role.editor') . " $e)",
+				__('user.familyName') . " (" . __('user.role.editor') . " $e)",
+				__('user.orcid') . " (" . __('user.role.editor') . " $e)",
+				__('user.email') . " (" . __('user.role.editor') . " $e)",
+			]);
+			$editorColumnCount = count($editorColumns);
+			for ($d = 1; $d <= $maxDecisions; $d++) {
+				$columns = array_merge($columns, $decisionColumns = [
+					__('submission.editorDecision') . " $d " . " (" . __('user.role.editor') . " $e)",
+					__('common.dateDecided') . " $d " . " (" . __('user.role.editor') . " $e)"
+				]);
+				$decisionColumnCount = count($decisionColumns);
+			}
+		}
+		fputcsv($fp, array_values($columns));
+
+		// Display the data rows.
+		foreach ($results as $result) {
+			$row = [];
+			foreach ($result as $column => $value) switch ($column) {
+				case 'authors':
+					for ($i=0; $i<$maxAuthors; $i++) {
+						$row = array_merge($row, $value[$i] ?? array_fill(0, $authorColumnCount, ''));
 					}
 					break;
-				case $index == 'abstract':
-					$columns[$index] = html_entity_decode(strip_tags($article->getLocalizedAbstract()));
+				case 'editors':
+					$editorIds = array_keys($value);
+					$editorEntries = array_values($value);
+					for ($i=0; $i<$maxEditors; $i++) {
+						$submissionHasThisEditor = isset($editorEntries[$i]);
+						$row = array_merge($row, $submissionHasThisEditor ? $editorEntries[$i] : array_fill(0, $editorColumnCount, ''));
+						for ($j=0; $j<$maxDecisions; $j++) {
+							if (!$submissionHasThisEditor) {
+								$row = array_merge($row, array_fill(0, $decisionColumnCount, ''));
+								continue;
+							}
+
+							$editorId = $editorIds[$i];
+							$latestDecision = $latestDecisionDate = '';
+							$decisionCounter = 0;
+							foreach ($result['decisions'] as $decision) {
+								if ($decision['editorId'] != $editorId) continue;
+								if ($j != $decisionCounter++) continue;
+								$latestDecision = $this->getDecisionMessage($decision['decision']);
+								$latestDecisionDate = $decision['dateDecided'];
+							}
+							$row = array_merge($row, [$latestDecision, $latestDecisionDate]);
+						}
+					}
 					break;
-				case strstr($index, 'biography') !== false:
-					// "Convert" HTML to text for export
-					$columns[$index] = isset($authors[$index])?html_entity_decode(strip_tags($authors[$index])):'';
-					break;
-				case $index == 'url':
-					$columns[$index] = $request->url(null, 'workflow', 'access', $article->getId());
-					break;
-				case $index == 'doi':
-					$columns[$index] = $article->getStoredPubId('doi');
-					break;
-				case $index == 'submission_id': $columns[$index] = $article->getId(); break;
-				case $index == 'title': $columns[$index] = $article->getLocalizedTitle(); break;
-				case $index == 'section_title': $columns[$index] = $article->getSectionTitle(); break;
-				case $index == 'language': $columns[$index] = $article->getLanguage(); break;
-				case $index == 'coverage': $columns[$index] = $article->getLocalizedCoverage(); break;
-				case $index == 'rights': $columns[$index] = $article->getRights($article->getLocale()); break;
-				case $index == 'source': $columns[$index] = $article->getSource($article->getLocale()); break;
-				case $index == 'type': $columns[$index] = $article->getLocalizedType(); break;
-				case $index == 'subjects':
-					$subjects = $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), array($article->getLocale()));
-					$columns[$index] = join(', ', $subjects[$article->getLocale()]);
-					break;
-				case $index == 'disciplines':
-					$disciplines = $submissionDisciplineDao->getDisciplines($article->getCurrentPublication()->getId(), array($article->getLocale()));
-					$columns[$index] = join(', ', $disciplines[$article->getLocale()]);
-					break;
-				case $index == 'keywords':
-					$keywords = $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), array($article->getLocale()));
-					$columns[$index] = join(', ', $keywords[$article->getLocale()]);
-					break;
-				case $index == 'agencies':
-					$agencies = $submissionAgencyDao->getAgencies($article->getCurrentPublication()->getId(), array($article->getLocale()));
-					$columns[$index] = join(', ', $agencies[$article->getLocale()]);
-					break;
-				case $index == 'date_submitted': $columns[$index] = $article->getDateSubmitted(); break;
-				case $index == 'last_modified': $columns[$index] = $article->getLastModified(); break;
-				case isset($authors[$index]): $columns[$index] = $authors[$index]; break;
-				case isset($editors[$index]): $columns[$index] = $editors[$index]; break;
-				default: $columns[$index] = '';
+				case 'decisions':
+					break; // Handled in the 'editors' case
+				default: $row[] = $value; // Other columns can be sent as they are.
 			}
-			fputcsv($fp, $columns);
-			$authorIndex++;
+			fputcsv($fp, $row);
 		}
 
 		fclose($fp);
 	}
 
 	/**
-	 * Get the highest authors and editors count for any article (to determine how many columns to set)
-	 * @param $iterator DBRowIterator
-	 * @return int
-	 */
-	function getMaxCount($iterator) {
-		$maxCount = 0;
-		foreach ($iterator as $iteratorItem) {
-			$maxCount = $iteratorItem->getCount() > $maxCount ? $iteratorItem->getCount() : $maxCount;
-		}
-		return $maxCount;
-	}
-
-	/**
-	 * Flatten an array of author information into one array and append author sequence to each key
-	 * @param $authors array
-	 * @return array
-	 */
-	function mergeAuthors($authors) {
-		$returner = array();
-		$seq = 0;
-		foreach($authors as $author) {
-			$seq++;
-
-			$returner['author_given' . $seq] = isset($author['author_given']) ? $author['author_given'] : '';
-			$returner['author_family' . $seq] = isset($author['author_family']) ? $author['author_family'] : '';
-			$returner['email' . $seq] = isset($author['email']) ? $author['email'] : '';
-			$returner['affiliation' . $seq] = isset($author['affiliation']) ? $author['affiliation'] : '';
-			$returner['country' . $seq] = isset($author['country']) ? $author['country'] : '';
-			$returner['url' . $seq] = isset($author['url']) ? $author['url'] : '';
-			$returner['biography' . $seq] = isset($author['biography']) ? $author['biography'] : '';
-			$returner['orcid' . $seq] = isset($author['orcid']) ? $author['orcid'] : '';
-		}
-		return $returner;
-	}
-
-	/**
-	 * Flatten an array of editor information into one array and append author sequence to each key
-	 * @param $editors array
-	 * @param $decisionsIterator array (editor ID => decisions iterator)
-	 * @return array
-	 */
-	function mergeEditors($editors, $decisionsIterator = null) {
-		$returner = array();
-		$eSeq = $dSeq = 0;
-		foreach($editors as $editor) {
-			$eSeq++;
-			$returner['editor_given' . $eSeq] = isset($editor['user_given']) ? $editor['user_given'] : '';
-			$returner['editor_family' . $eSeq] = isset($editor['user_family']) ? $editor['user_family'] : '';
-			$returner['editor_orcid' . $eSeq] = isset($editor['orcid']) ? $editor['orcid'] : '';
-			$returner['editor_email' . $eSeq] = isset($editor['email']) ? $editor['email'] : '';
-			//$returner['editor_affiliation' . $eSeq] = isset($editor['affiliation']) ? $editor['affiliation'] : '';
-			//$returner['editor_country' . $eSeq] = isset($editor['country']) ? $editor['country'] : '';
-			//$returner['editor_url' . $eSeq] = isset($editor['url']) ? $editor['url'] : '';
-			//$returner['editor_biography' . $eSeq] = isset($editor['biography']) ? $editor['biography'] : '';
-			if ($decisionsIterator && array_key_exists($editor['editor_id'], $decisionsIterator)) {
-				$decisions = $decisionsIterator[$editor['editor_id']]->toArray();
-				foreach ($decisions as $decision) {
-					$dSeq++;
-					$returner['editor_decision' . $eSeq . $dSeq] = isset($decision['decision']) ? $this->getDecisionMessage($decision['decision']) : '';
-					$returner['editor_decision_date' . $eSeq . $dSeq] = isset($decision['date_decided']) ? $decision['date_decided'] : '';
-				}
-			}
-		}
-		return $returner;
-	}
-
-	/**
 	 * Get stage label
-	 * @param $stageId int
+	 * @param $stageId int WORKFLOW_STAGE_ID_...
 	 * @return string
 	 */
 	function getStageLabel($stageId) {
@@ -304,7 +288,7 @@ class ArticleReportPlugin extends ReportPlugin {
 
 	/**
 	 * Get decision message
-	 * @param $decision int
+	 * @param $decision int SUBMISSION_EDITOR_DECISION_... or SUBMISSION_EDITOR_RECOMMEND_...
 	 * @return string
 	 */
 	function getDecisionMessage($decision) {
@@ -336,6 +320,5 @@ class ArticleReportPlugin extends ReportPlugin {
 				return '';
 		}
 	}
-
 }
 
