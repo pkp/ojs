@@ -34,7 +34,11 @@
 			{$currentContext->getLocalizedData('description')}
 		</section>
 	{/if}
-
+	{if $journalDescription}
+		<div class="journal-description">
+			{$journalDescription}
+		</div>
+	{/if}
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
 		<section class="cmp_announcements highlight_first">
