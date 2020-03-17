@@ -1413,19 +1413,24 @@ class Upgrade extends Installer {
 				}
 
 				if ($article->getStatus() == STATUS_PUBLISHED) {
-					$articleGalley = $articleGalleyDao->newDataObject();
-					$articleGalley->setFileId($submissionFile->getFileId());
-					$articleGalley->setSubmissionId($article->getId());
-					$articleGalley->setLabel($submissionFile->getName($article->getLocale()));
-					$articleGalley->setLocale($article->getLocale());
-					$articleGalleyDao->insertObject($articleGalley);
+					// Converted from DAO call to raw SQL because submission_id is no longer available post-schema sync.
+					$articleGalleyDao->update(
+						'INSERT INTO submission_galleys (locale, submission_id, file_id, label) VALUES (?, ?, ?, ?)',
+						array(
+							$article->getLocale(),
+							$article->getId(),
+							$submissionFile->getFileId(),
+							$submissionFile->getName($article->getLocale())
+						)
+					);
+					$galleyId = $articleGalleyDao->getInsertId();
 
 					// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
 					foreach ($extraGalleySettings as $name => $value) {
 						$submissionFileDao->update(
 							'INSERT INTO submission_galley_settings (galley_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
 							array(
-								$articleGalley->getId(),
+								$galleyId,
 								$name,
 								$value,
 								'string'
