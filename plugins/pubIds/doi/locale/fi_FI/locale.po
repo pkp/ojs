@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
+"PO-Revision-Date: 2020-03-18 07:36+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
+"fi/>\n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:00+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -160,3 +163,36 @@ msgstr "Liitä DOI-tunnisteet <i>kaikkiin</i> julkaistuihin objekteihin (tavalli
 
 msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr "Oletko varma, että haluat liittää DOI-tunnisteet kaikkiin julkaistuihin objekteihin, joilla ei vielä ole tunnistetta?"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Kohde"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Julkaistava tiedosto: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Tälle käsikirjoitusversiolle ei ole annettu DOI-tunnusta."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "Tämän artikkelin DOI tulee olemaan {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI-tunnuksen alun pitää olla {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Et voi luoda DOI-tunnusta, koska jokin tunnuksen loppuosan vaatimista "
+"muuttujista puuttuu. Sinun pitää mahdollisesti liittää artikkeli numeroon, "
+"asettaa artikkelille ID-tunnus tai antaa sivunumerot."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr "Et voi luoda DOI-tunnusta ennen kuin artikkeli on liitetty numeroon."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Aseta"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI-tunnuksen alun pitää olla {$prefix}."
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Artikkelit"
