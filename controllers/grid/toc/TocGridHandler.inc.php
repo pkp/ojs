@@ -143,8 +143,8 @@ class TocGridHandler extends CategoryGridHandler {
 	 */
 	protected function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-
-		$submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $request->getContext()->getId());
+		import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_...
+		$submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $request->getContext()->getId(), [STATUS_PUBLISHED, STATUS_SCHEDULED, STATUS_QUEUED]);
 		foreach ($submissionsInSections as $sectionId => $articles) {
 			foreach($articles['articles'] as $article) {
 				$this->submissionsBySectionId[$sectionId][$article->getId()] = $article;
