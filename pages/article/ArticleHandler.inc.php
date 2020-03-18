@@ -107,6 +107,10 @@ class ArticleHandler extends Handler {
 			$galleyId = $subPath;
 		}
 
+		if ($this->publication->getData('status') !== STATUS_PUBLISHED) {
+			$request->getDispatcher()->handle404();
+		}
+
 		if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
 			$galleys = (array) $this->publication->getData('galleys');
 			foreach ($galleys as $galley) {
@@ -366,11 +370,11 @@ class ArticleHandler extends Handler {
 				if ($submissionFile) {
 					$this->fileId = $submissionFile->getFileId();
 					// The file manager expects the real article id.  Extract it from the submission file.
-				} else { // no proof files assigned to this galley!
-					header('HTTP/1.0 403 Forbidden');
-					echo '403 Forbidden<br>';
-					return;
 				}
+			}
+
+			if (!$this->fileId || $this->fileId != $this->galley->getFileId()) {
+				$request->getDispatcher()->handle404();
 			}
 
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$this->fileId))) {
