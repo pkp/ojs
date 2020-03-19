@@ -9,7 +9,7 @@
 
 describe('Sites with more than one context', function() {
 
-	it('Tests disabled context is not pubicly visible', function() {
+	it('Tests disabled context is not publicly visible', function() {
 		cy.login('admin', 'admin');
 		cy.visit('/index.php/publicknowledge/admin/contexts');
 		cy.get('.show_extras').click();
