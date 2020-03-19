@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
+"PO-Revision-Date: 2020-03-18 07:36+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/manager/fi/>"
+"\n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:23+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.website.archiving"
 msgstr "Arkistointi"
@@ -420,7 +423,12 @@ msgid "manager.setup.emailBounceAddress.description"
 msgstr "Tähän osoitteeseen lähetetään virheilmoitus aina, kun sähköpostia ei voida toimittaa perille."
 
 msgid "manager.setup.emailBounceAddress.disabled"
-msgstr "<strong>Huom.</strong> Aktivoidakseen tämän valinnan sivuston ylläpitäjän täytyy ottaa käyttöön <tt>allow_envelope_sender</tt> -valinta OJS:n määritystiedostossa. Palvelimen lisämäärityksiä saatetaan edellyttää tämän toiminnon tukemiseksi (joka ei välttämättä ole mahdollista kaikilla palvelimilla), kuten OJS:n käyttöohjeissa mainitaan."
+msgstr ""
+"<strong>Huom.</strong> Aktivoidakseen tämän valinnan sivuston ylläpitäjän "
+"täytyy ottaa käyttöön <code>allow_envelope_sender</code> -valinta OJS:n "
+"määritystiedostossa. Palvelimen lisämäärityksiä saatetaan edellyttää tämän "
+"toiminnon tukemiseksi (joka ei välttämättä ole mahdollista kaikilla "
+"palvelimilla), kuten OJS:n käyttöohjeissa mainitaan."
 
 msgid "manager.setup.emails"
 msgstr "Sähköpostitunnistautuminen"
@@ -432,7 +440,7 @@ msgid "manager.setup.emailSignature.description"
 msgstr "Valmiisiin sähköposteihin, jotka järjestelmä lähettää julkaisun puolesta, lisätään seuraava allekirjoitus."
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Salli julkaisun hallinnoijien lisätä julkaisuun liittyviä ilmoituksia."
+msgstr "Ota ilmoitukset käyttöön"
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Vierailijat voivat rekisteröidä käyttäjätilin julkaisuun."
@@ -759,7 +767,9 @@ msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Arvioijan pääsy käsikirjoitukseen"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Salli arvioijalle pääsy yhdellä klikkauksella."
+msgstr ""
+"Ota käyttöön automaattisesti arvioijan sisäänkirjaavat linkit "
+"arviointipyynnöissä"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Huom.</strong> Arvioijille lähetettävässä sähköpostikutsussa on erityinen URL-osoite, jonka kautta arvioijat pääsevät suoraan käsikirjoituksen arviointisivulle (muille sivuille pääsy vaatii sisäänkirjautumista). Tietoturvasyistä tämän valinnan kohdalla toimittajat eivät voi muokata sähköpostiosoitteita tai lisätä kopioita tai piilokopioita ennen viestin lähettämistä."
@@ -780,7 +790,10 @@ msgid "manager.setup.searchEngineIndexing"
 msgstr "Hakukoneindeksointi"
 
 msgid "manager.setup.searchEngineIndexing.description"
-msgstr "Anna julkaisusta lyhyt kuvaus, jonka hakukoneet voivat näyttää listatessaan julkaisun hakutuloksissa."
+msgstr ""
+"Auta Googlea ja muita hakukoneita löytämään sivustosi. Suosittelemme sinua "
+"lähettämään <a href=\"{$sitemapUrl}\" target=\"_blank\">sivustokarttasi</a> "
+"hakukoneille tiedoksi."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Osastot ja osastotoimittajat"
@@ -866,9 +879,13 @@ msgstr "Otsikon teksti"
 msgid "manager.statistics.defaultMetricDescription"
 msgstr ""
 "\n"
-"Julkaisusi on määritetty tallentamaan useita käytön mittareita. Käyttötilastot näkyvät useassa yhteydessä.\n"
-"\t\tJoissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. silloin, kun näytetään käytetyimpien artikkeleiden järjestetty lista ja asetettaessa hakutuloksia paremmuusjärjestykseen. Valitse yksi määritetyistä mittareista oletusarvoksi.\n"
-""
+"\t\tJulkaisusi on määritetty tallentamaan useita käytön mittareita. "
+"Käyttötilastot näkyvät useassa yhteydessä.\n"
+"\t\tJoissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. "
+"silloin, kun näytetään käytetyimpien artikkeleiden\n"
+"\t\tjärjestetty lista ja asetettaessa hakutuloksia paremmuusjärjestykseen. "
+"Valitse yksi määritetyistä mittareista oletusarvoksi.\n"
+"\t"
 
 msgid "manager.statistics.statistics"
 msgstr "Julkaisun tilastot"
@@ -1462,7 +1479,9 @@ msgid "manager.setup.resetPermissions"
 msgstr "Palauta artikkelin käyttöoikeudet oletusarvoisiksi"
 
 msgid "manager.setup.resetPermissions.confirm"
-msgstr "Haluatko varmasti palauttaa oletusarvoisiksi käyttöoikeustiedot, jotka on jo liitetty artikkeleihin?"
+msgstr ""
+"Haluatko varmasti palauttaa oletusarvoisiksi lupatiedot, jotka on jo "
+"liitetty artikkeleihin? Toimintoa ei voi perua."
 
 msgid "grid.genres.title.short"
 msgstr "Osat"
@@ -1570,7 +1589,7 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Lähetä kopio pääasialliselle yhteyshenkilölle, joka on määritelty julkaisun asetuksissa."
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt."
+msgstr "Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
 msgstr "Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt."
@@ -1606,7 +1625,8 @@ msgid "manager.setup.plnDescription"
 msgstr "PKP Preservation Network (PN) tarjoaa ilmaisen pitkäaikaissäilytyspalvelun mille tahansa kriteerit täyttävälle OJS-lehdelle."
 
 msgid "manager.setup.plnSettingsDescription"
-msgstr "Hyväksy PKP PN -palvelun ehdot painamalla asetukset-linkkiä."
+msgstr ""
+"Hyväksy PKP PN -palvelun ehdot painamalla <button>asetukset</button>-linkkiä."
 
 msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Preservation Network (PN)"
@@ -1616,3 +1636,153 @@ msgstr "PKP Preservation Network (PN) tarjoaa ilmaisen pitkäaikaissäilytyspalv
 
 msgid "manager.setup.otherLockss"
 msgstr "Muut arkistointivalinnat"
+
+msgid "stats.publications.galleys"
+msgstr "Tiedostot"
+
+msgid "stats.publications.abstracts"
+msgstr "Abstraktit"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} / {$total} artikkelia"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Tiedostojen latausmäärät ajankohdan mukaan"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Abstraktien katselukerrat ajankohdan mukaan"
+
+msgid "stats.publications.none"
+msgstr "Annetuilla hakumääreillä ei löytynyt artikkeleita."
+
+msgid "stats.publications.details"
+msgstr "Artikkelin tiedot"
+
+msgid "stats.publicationStats"
+msgstr "Artikkelitilastot"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Artikkeleiden lupatiedot tyhjennettiin onnistuneesti."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Poista tekijänoikeutta ja lisenssiä koskevat tiedot kaikista julkaistuista "
+"artikkeleista. Toiminto poistaa tiedot pysyvästi. Huomaa, että sinulla ei "
+"ole välttämättä oikeutta muuttaa vanhan artikkelin lisenssiä tai "
+"tekijänoikeutta kysymättä tekijältä. Käytä tätä toimintoa harkiten."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Tämä on pysyvästi voimassa oleva tilaustyyppi. Älä anna lopetusajankohtaa."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Tämä on pysyvästi voimassa oleva tilaustyyppi. Älä anna aloitusajankohtaa."
+
+msgid "manager.setup.userAccess.success"
+msgstr "Käyttäjien pääsyä koskevat asetukset on päivitetty."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Tarjoa julkaisun kuvailutietoja kolmansille osapuolille <a href=\""
+"https://www.openarchives.org/\">Open Archives Initiative</a> -standardin "
+"mukaisen rajapinnan kautta."
+
+msgid "manager.setup.enableOai"
+msgstr "Ota OAI-rajapinta käyttöön"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Näytä julkaistut artikkelit"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Pääsy verkkosivulle"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Anna lyhyt (50-300 merkkiä) kuvaus, jonka hakukoneet voivat näyttää "
+"hakutuloksissaan."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Hakukoneindeksointia koskevat asetukset on päivitetty."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Lisää turvallinen linkki arvioijille lähtevään kutsuun."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Rajoita pääsyä tiedostoihin"
+
+msgid "manager.setup.publishing"
+msgstr "Julkaisua koskevat tiedot"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Tietosuojaselostetta koskevat asetukset on päivitetty."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Rajoita listauksessa näkyvien sivulinkkien määrää."
+
+msgid "manager.setup.masthead.success"
+msgstr "Tunnuslaatikkoa koskevat asetukset on päivitetty."
+
+msgid "manager.setup.lists.success"
+msgstr "Listauksia koskevat asetukset on päivitetty."
+
+msgid "manager.setup.keyInfo.description"
+msgstr "Anna julkaisun lyhyt kuvaus ja esittele toimituskunnan jäsenet."
+
+msgid "manager.setup.keyInfo"
+msgstr "Avaintiedot"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Rajoita niiden kohteiden (käsikirjoitus, käyttäjä jne.) lukumäärä, jotka "
+"näytetään yhdellä sivulla."
+
+msgid "manager.setup.information.success"
+msgstr "Julkaisun tietoja koskevat asetukset on päivitetty."
+
+msgid "manager.setup.identity"
+msgstr "Julkaisun tiedot"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Montako ilmoitusta näytetään kotisivulla? Jätä tyhjäksi jos et halu näyttää "
+"yhtään."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Näytä kotisivulla"
+
+msgid "manager.setup.contact.success"
+msgstr "Yhteystietoja koskevat asetukset on päivitetty."
+
+msgid "manager.setup.archiving.success"
+msgstr "Arkistointia koskevat asetukset on päivitetty."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Esittely"
+
+msgid "manager.setup.announcements.success"
+msgstr "Ilmoituksia koskevat asetukset on päivitetty."
+
+msgid "manager.payment.success"
+msgstr "Maksuja koskevat asetukset on päivitetty."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Julkaisemista koskevat tiedot on tallennettu."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Julkaisun sisällön saatavuus"
+
+msgid "manager.distribution.publication"
+msgstr "Käsikirjoitusversio"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Käytä artikkelin julkaisuajankohtaa"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Käytä numeron julkaisuajankohtaa"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Valitse miten tekijänoikeuden ajoitus tapahtuu oletuksena artikkeleissa. "
+"Tämä oletus voidaan ohittaa artikkelikohtaisesti. Mikäli et julkaise koko "
+"numeroa kerralla, älä valitse numeron julkaisuajankohtaa tähän asetukseen."

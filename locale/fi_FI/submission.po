@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
+"PO-Revision-Date: 2020-03-18 07:36+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"fi/>\n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:23+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Lähetä artikkeli"
@@ -30,7 +33,7 @@ msgid "submission.title.tip"
 msgstr "Käsikirjoitustiedosto on yleensä muodoltaan \"kuva\", \"teksti\" tai muu multimediamuoto kuten \"ohjelmisto\" tai \"interaktiivinen\".  Valitse käsikirjoituksesi kannalta oleellisin muoto.  Esimerkkejä löytyy osoitteesta <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "Aloita uusi käsikirjoituksen lähetys julkaisuun:"
+msgstr "Aloita uusi käsikirjoituksen lähetys julkaisuun"
 
 msgid "submission.submit.newSubmissionSingle"
 msgstr "Uusi käsikirjoitus"
@@ -160,3 +163,62 @@ msgstr "Abstraktin tulee olla korkeintaan {$wordCount} sanaa."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr "Abstrakti on liian pitkä. Tarkista pituus ja yritä uudelleen."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Ajoitettu julkaistavaksi numerossa <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Julkaistu numerossa <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr "Artikkeli pitää lisätä numeroon ennen kuin sen voi julkaista."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Kaikki julkaisuvaatimukset täyttyvät. Tämä julkaistaan välittömästi "
+"numerossa {$issue}. Oletko varma, että haluat julkaista tämän?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Kaikki julkaisuvaatimukset täyttyvät. Tämä julkaistaan, kun numero {$issue} "
+"julkaistaan. Oletko varma, että haluat ajoittaa tämän julkaistavaksi?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Kaikki julkaisuvaatimukset täyttyvät. Haluatko varmasti julkaista tämän?"
+
+msgid "publication.issue.success"
+msgstr "Käsikirjoitusversion numeron tiedot on päivitetty."
+
+msgid "publication.invalidIssue"
+msgstr "Käsikirjoitusversion numeroa ei löytynyt."
+
+msgid "publication.invalidSection"
+msgstr "Käsikirjoitusversion osastoa ei löytynyt."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Julkaisuajankohta asetetaan automaattisesti, kun numero julkaistaan. Älä "
+"anna julkaisuajankohtaa, ellei sinun pidä tarkoituksella antaa artikkelille "
+"varhaisempaa julkaisupäivää."
+
+msgid "galley.publicationNotFound"
+msgstr "Julkaistavaa tiedostoa vastaavaa käsikirjoitusversiota ei löytynyt."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Julkaistavia tiedostoja ei voi muokata, koska tämä käsikirjoituksen versio "
+"on jo julkaistu."
+
+msgid "catalog.category.heading"
+msgstr "Kaikki nimikkeet"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} nimikettä"
+
+msgid "submission.sectionOptions"
+msgstr "Osaston valinnat"
+
+msgid "submission.submit.noContext"
+msgstr "Käsikirjoitusta vastaavaa julkaisua ei löytynyt."
