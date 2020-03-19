@@ -54,11 +54,11 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			$submissionContext = Services::get('context')->get($submission->getContextId());
 		}
 
-		$supportedFormLocales = $submissionContext->getSupportedFormLocales();
+		$supportedSubmissionLocales = $submissionContext->getSupportedSubmissionLocales();
 		$localeNames = AppLocale::getAllLocales();
 		$locales = array_map(function($localeKey) use ($localeNames) {
 			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
-		}, $supportedFormLocales);
+		}, $supportedSubmissionLocales);
 
 		$latestPublication = $submission->getLatestPublication();
 

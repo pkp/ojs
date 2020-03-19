@@ -64,7 +64,7 @@ class SectionService implements EntityPropertyInterface {
 			}
 		}
 
-		$locales = $args['request']->getContext()->getSupportedLocales();
+		$locales = $args['request']->getContext()->getSupportedFormLocales();
 		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $locales);
 
 		\HookRegistry::call('Section::getProperties::values', array(&$values, $section, $props, $args));

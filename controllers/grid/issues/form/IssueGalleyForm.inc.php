@@ -45,7 +45,7 @@ class IssueGalleyForm extends Form {
 		$this->addCheck(new FormValidatorCustom(
 			$this, 'galleyLocale', 'required', 'editor.issues.galleyLocaleRequired',
 			function($galleyLocale) use ($journal) {
-				return in_array($galleyLocale, $journal->getSupportedLocales());
+				return in_array($galleyLocale, $journal->getSupportedFormLocales());
 			}
 		));
 
