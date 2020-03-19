@@ -146,15 +146,14 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	 *
 	 * @param int $issueId
 	 * @param int $contextId
-	 * @param $status array Set of STATUS_... constants submissions must fall within
 	 * @return array submissions keyed to a section with some section details
 	 */
-	public function getInSections($issueId, $contextId, $status = null) {
+	public function getInSections($issueId, $contextId) {
 		import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_...
 		$submissions = $this->getMany([
 			'contextId' => $contextId,
 			'issueIds' => $issueId,
-			'status' => $status ?? [STATUS_PUBLISHED, STATUS_SCHEDULED],
+			'status' => [STATUS_PUBLISHED, STATUS_SCHEDULED],
 			'orderBy' => 'seq',
 			'orderDirection' => 'ASC',
 		]);
