@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-20T15:57:55+00:00\n"
+"PO-Revision-Date: 2020-03-20T15:57:55+00:00\n"
+"Language: \n"
+
+msgid "plugins.block.developedBy.displayName"
+msgstr "«Utviklet av» blokk"
+
+msgid "plugins.block.developedBy.description"
+msgstr "Dette programtillegget lager en lenke merket «Utviklet av» i sidemenyen."
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Abonnent-programtillegg"
+
+msgid "plugins.block.subscription.description"
+msgstr "Dette programtillegget gir sidemenyen abonnementsinformasjon."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Abonnement"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Utløper"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Tilgang gitt av: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Tilgang fra: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Abonnementer"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Logg inn for tilgang til abonnementressurser."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Det kreves abonnement for å få tilgang til noen ressurser."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Lær mer"
