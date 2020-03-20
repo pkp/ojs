@@ -1,5 +1,38 @@
-OJS 3.2.0 Release Notes
-Git tag: 3_2_0-0
+OJS 3.2.0-1 Release Notes
+Git tag: 3_2_0-1
+
+Release date: March 20, 2020
+============================
+
+Bug Fixes (-1 build)
+--------------------
+	#5652: Clean up status code in QuickSubmit form
+	#5646: Call to undefined method AuthorDAO::getBySubmissionId()
+	#5600: pkp-native.xml uses publication element instead of pkppublication
+	#5643: Error in journal settings form when locale active in Form but not UI
+	#5536: Plugins/themes to package and release before 3.2
+	#5636: Handler adjustments for new versions
+	#5635: Manager's Table of Contents grid does not list unpublished submissions
+	#5634: Resolve OJS 2.x to 3.2 upgrade issues
+	#5605: Top right link to profile is invisible (text in white, over a white background)
+	#5632: [OMP] Chapter PDF will not display
+	#5628: Supporting Agencies field does not display in submission metadata form
+	#5626: Upgrade error: Duplicate entry 'xxx-yyy' for key 'citations_publication_seq'
+	#5621: Article report plugin references missing function
+	#5623: Raw citations should be escaped on the front-end
+	#5597: Native import/export plugin adds a blank citation when importing submissions with citations
+	#5602: JournalManager/Author metadata edit error: "Please enter the references."
+	#5589: [OJS] PostgreSQL can not recognize update SQL queries
+	#5612: Generate site minimum-length password
+	#5267: Automatic password generation doesn't respect site minimum password length
+	#5591: Author lists are not sorted by sequence
+	#5584: Enable/disable journal setting not available in 3.2.0
+	#5571: Cannot Display Sidebar in ojs 3.2.0.0
+	#5582: PHP error "Can’t inherit abstract function SchemaDAO::newDataObject()"
+	#5576: Can't upload image in user profile bio
+	#5570: Fix Lens galley plugin
+	#4195: references native import
+	#5575: Can't download supplementary galleys when publication has urlPath
 
 Release date: February 28, 2020
 ===============================
