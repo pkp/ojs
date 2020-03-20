@@ -231,7 +231,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 			}
 		}
 
-		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $context->getSupportedLocales());
+		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $context->getSupportedSubmissionLocales());
 
 		\HookRegistry::call('Galley::getProperties::values', array(&$values, $galley, $props, $args));
 

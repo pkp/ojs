@@ -301,7 +301,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 			}
 		}
 
-		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_ISSUE, $values, $context->getSupportedLocales());
+		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_ISSUE, $values, $context->getSupportedFormLocales());
 
 		\HookRegistry::call('Issue::getProperties::values', array(&$values, $issue, $props, $args));
 
