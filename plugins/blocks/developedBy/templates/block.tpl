@@ -8,6 +8,10 @@
  * Common site sidebar menu -- "Developed By" block.
  *}
 <div class="pkp_block block_developed_by">
+	<h2 class="pkp_screen_reader">
+		{translate key="plugins.block.developedBy.blockTitle"}
+	</h2>
+
 	<div class="content">
 		<a href="http://pkp.sfu.ca/ojs/">
 			{translate key="common.software"}
