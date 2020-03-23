@@ -1977,7 +1977,7 @@
 				],
 				"responses": {
 					"200": {
-						"description": "An object containing the requested stats. The `name` may change with translation but the `key` will be a reliable, unique identifier for the statistic.",
+						"description": "An array containing the requested stats. The `name` may change with translation but the `key` will be a reliable, unique identifier for the statistic.",
 						"schema": {
 							"type": "array",
 							"example": [
@@ -2053,6 +2053,52 @@
 						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to access editorial statistics for this journal or press.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/editorial/averages": {
+			"get": {
+				"tags": [
+					"Statistics"
+				],
+				"summary": "Get yearly averages of editorial activity.",
+				"description": "Returns yearly averages of editorial activity. To ensure averages are calculated fairly, partial years are not included in the averages. For example, if the first submission was received in October 2017 and the last submission was received in the current calendar year, only submissions from 2018 up until the end of the previous calendar year will be used to calculate the average.",
+				"parameters": [
+					{
+						"name": "sectionIds",
+						"description": "Filter results by submissions to these sections. Separate section IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "An object containing the requested averages. Each property matches one of the properties from `/stats/editorial`. The value `-1` may be returned for a property if an average can not be calculated. This can occur if there is not a full calendar year of activity to average.",
+						"schema": {
+							"type": "array",
+							"example": {
+								"submissionsReceived": 32,
+								"submissionsAccepted": 32,
+								"submissionsDeclined": 32,
+								"submissionsDeclinedDeskReject": 32,
+								"submissionsDeclinedPostReview": 32,
+								"submissionsPublished": 32
+							}
 						}
 					},
 					"403": {
