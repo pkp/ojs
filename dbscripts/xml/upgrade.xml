@@ -256,6 +256,10 @@
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.2.0.9">
+		<data file="dbscripts/xml/upgrade/3.2.1_lazy_load_themes.xml" />
+	</upgrade>
+
 	<upgrade minversion="2.4.0.0" maxversion="3.0.0.9">
 		<!-- This appears intentionally late to give time for the versioning introduction. -->
 		<code function="setFileName" />
