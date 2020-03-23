@@ -47,3 +47,6 @@
 [submodule "plugins/blocks/browse"]
 	path = plugins/blocks/browse
 	url = https://github.com/pkp/browse
+[submodule "plugins/generic/googleScholar"]
+	path = plugins/generic/googleScholar
+	url = https://github.com/pkp/googleScholar
