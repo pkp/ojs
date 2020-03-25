@@ -23,7 +23,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 		parent::__construct();
 		$this->addRoleAssignment(
 			ROLE_ID_REVIEWER, array(
-				'submission', 'step', 'saveStep', 'saveForm',
+				'submission', 'step', 'saveStep',
 				'showDeclineReview', 'saveDeclineReview', 'downloadFile'
 			)
 		);

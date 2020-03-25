@@ -24,7 +24,6 @@ switch ($op) {
 	case 'submission':
 	case 'step':
 	case 'saveStep':
-	case 'saveForm':
 	case 'showDeclineReview':
 	case 'saveDeclineReview':
 		define('HANDLER_CLASS', 'ReviewerHandler');
