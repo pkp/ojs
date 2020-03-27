@@ -13,8 +13,8 @@
 <version>
 	<application>googleScholar</application>
 	<type>plugins.generic</type>
-	<release>1.0.0.0</release>
-	<date>2016-09-23</date>
+	<release>1.1.0.0</release>
+	<date>2020-03-23</date>
 	<lazy-load>1</lazy-load>
 	<class>GoogleScholarPlugin</class>
 </version>
