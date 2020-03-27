@@ -1566,7 +1566,7 @@ msgid "about.memberships"
 msgstr "Членства"
 
 msgid "about.aboutThisPublishingSystem"
-msgstr "Об этой издательской системе"
+msgstr "Больше информации об этой издательской системе, платформе и рабочем процессе от OJS/PKP."
 
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Редакционный и издательский процесс OJS"

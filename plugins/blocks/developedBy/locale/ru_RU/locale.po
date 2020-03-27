@@ -16,3 +16,6 @@ msgstr "Блок «Разработано»"
 
 msgid "plugins.block.developedBy.description"
 msgstr "Добавляет ссылку «Разработано» на боковую панель."
+
+msgid "plugins.block.developedBy.blockTitle"
+msgstr "Разработано"
