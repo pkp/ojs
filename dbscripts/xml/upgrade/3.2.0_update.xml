@@ -52,5 +52,9 @@
 		<query>UPDATE filter_groups SET input_type = 'class::classes.submission.Submission' WHERE input_type = 'class::classes.article.Article'</query>
 		<query>UPDATE filter_groups SET output_type = 'class::classes.submission.Submission' WHERE output_type = 'class::classes.article.Article'</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#5681: Filters need updating for shift to Submissions instead of Articles -->
+		<query>UPDATE filter_groups SET input_type = 'class::classes.submission.Submission[]' WHERE input_type = 'class::classes.article.Article[]'</query>
+		<query>UPDATE filter_groups SET output_type = 'class::classes.submission.Submission[]' WHERE output_type = 'class::classes.article.Article[]'</query>
+	</sql>
 </data>
 
