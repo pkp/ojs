@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema 
+<xs:schema
+  version = "1.3"
   xmlns:xs ="http://www.w3.org/2001/XMLSchema"
-  xmlns:iso_639-2b="http://www.doaj.org/schemas/iso_639-2b/1.0">
+  xmlns:iso_639-2b="http://www.doaj.org/schemas/iso_639-2b/1.1">
 
- <xs:import namespace="http://www.doaj.org/schemas/iso_639-2b/1.0" 
+ <xs:import namespace="http://www.doaj.org/schemas/iso_639-2b/1.1"
        schemaLocation="http://www.doaj.org/static/doaj/iso_639-2b.xsd">
 
   <xs:annotation>
@@ -92,15 +93,19 @@
    <xs:element name="authors" minOccurs="0" maxOccurs="1">
     <xs:complexType>
      <xs:sequence>
-      <xs:element name="author" 
-                  minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="author" minOccurs="0" maxOccurs="unbounded">
        <xs:complexType>
         <xs:sequence>
          <xs:element name="name" type="xs:string" />
-         <xs:element name="email" type="xs:string"
-                     minOccurs="0" />
-         <xs:element name="affiliationId" 
-                     minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="email" type="xs:string" minOccurs="0" />
+         <xs:element name="affiliationId" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="orcid_id" minOccurs="0" maxOccurs="1">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:pattern value="https://orcid\.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-\d{3}[\dX]"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:element>
         </xs:sequence>
        </xs:complexType>
       </xs:element>
@@ -133,14 +138,14 @@
      </xs:simpleContent>
     </xs:complexType>
    </xs:element>
- 
+
    <xs:element name="fullTextUrl">
-    <xs:complexType> 
-     <xs:simpleContent>
-      <xs:extension base="xs:anyURI">
-       <xs:attribute name="format" />  
-      </xs:extension>
-     </xs:simpleContent>
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="fullUrl">
+                <xs:attribute name="format" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
     </xs:complexType>
    </xs:element>
  
@@ -158,4 +163,10 @@
 
   </xs:sequence>
  </xs:complexType>
+ <xs:simpleType name="fullUrl">
+   <xs:restriction base="xs:anyURI">
+    <xs:pattern value="https?://([^/:]+\.[\p{L}]{2,10}|([0-9]{1,3}\.){3}[0-9]{1,3})(:[0-9]+)?(.*)?"/>
+   </xs:restriction>
+  </xs:simpleType>
+
 </xs:schema>
