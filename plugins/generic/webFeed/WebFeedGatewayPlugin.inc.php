@@ -119,7 +119,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 				$submissionsInSections[]['articles'][] = $submission;
 			}
 		} else {
-			$submissionsInSections = Services::get('submission')->getInSections($issue->getId());
+			$submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $journal->getId());
 		}
 
 		$versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
