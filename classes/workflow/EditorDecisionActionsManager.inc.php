@@ -23,6 +23,7 @@ define('SUBMISSION_EDITOR_DECISION_DECLINE', 4);
 // Review stage decisions actions.
 define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', 2);
 define('SUBMISSION_EDITOR_DECISION_RESUBMIT', 3);
+define('SUBMISSION_EDITOR_DECISION_NEW_ROUND', 16);
 
 // Editorial stage decision actions.
 define('SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION', 7);
@@ -101,6 +102,10 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager {
 				SUBMISSION_EDITOR_DECISION_RESUBMIT => array(
 					'name' => 'resubmit',
 					'title' => 'editor.submission.decision.resubmit',
+				),
+				SUBMISSION_EDITOR_DECISION_NEW_ROUND => array(
+					'name' => 'newround',
+					'title' => 'editor.submission.decision.newRound',
 				),
 				SUBMISSION_EDITOR_DECISION_ACCEPT => array(
 					'operation' => 'promoteInReview',

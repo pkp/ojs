@@ -69,7 +69,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 			assert(false);
 		}
 
-		return $this->_saveEditorDecision($args, $request, 'NewReviewRoundForm', $redirectOp, SUBMISSION_EDITOR_DECISION_RESUBMIT);
+		return $this->_saveEditorDecision($args, $request, 'NewReviewRoundForm', $redirectOp, SUBMISSION_EDITOR_DECISION_NEW_ROUND);
 	}
 
 
@@ -117,6 +117,8 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 				return NOTIFICATION_TYPE_EDITOR_DECISION_PENDING_REVISIONS;
 			case SUBMISSION_EDITOR_DECISION_RESUBMIT:
 				return NOTIFICATION_TYPE_EDITOR_DECISION_RESUBMIT;
+			case SUBMISSION_EDITOR_DECISION_NEW_ROUND:
+				return NOTIFICATION_TYPE_EDITOR_DECISION_NEW_ROUND;
 			case SUBMISSION_EDITOR_DECISION_DECLINE:
 			case SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE:
 				return NOTIFICATION_TYPE_EDITOR_DECISION_DECLINE;
