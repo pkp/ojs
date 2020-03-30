@@ -62,6 +62,9 @@ class UserService extends \PKP\Services\PKPUserService {
 		if (!empty($requestArgs['assignedToSection'])) {
 			$userQueryBuilder->assignedToSection($requestArgs['assignedToSection']);
 		}
+		if (!empty($requestArgs['assignedToCategory'])) {
+			$userQueryBuilder->assignedToCategory($requestArgs['assignedToCategory']);
+		}
 	}
 
 	/**
