@@ -22,6 +22,9 @@ class UserQueryBuilder extends \PKP\Services\QueryBuilders\PKPUserQueryBuilder {
 	/** @var int Assigned as editor to this section id */
 	protected $assignedToSectionId = null;
 
+	/** @var int Assigned as editor to this category id */
+	protected $assignedToCategoryId = null;
+
 	/**
 	 * Limit results to users assigned as editors to this section
 	 *
@@ -31,6 +34,18 @@ class UserQueryBuilder extends \PKP\Services\QueryBuilders\PKPUserQueryBuilder {
 	 */
 	public function assignedToSection($sectionId) {
 		$this->assignedToSectionId = $sectionId;
+		return $this;
+	}
+
+	/**
+	 * Limit results to users assigned as editors to this category
+	 *
+	 * @param $categoryId int
+	 *
+	 * @return \PKP\Services\QueryBuilders\UserQueryBuilder
+	 */
+	public function assignedToCategory($categoryId) {
+		$this->assignedToCategoryId = $categoryId;
 		return $this;
 	}
 
@@ -49,6 +64,17 @@ class UserQueryBuilder extends \PKP\Services\QueryBuilders\PKPUserQueryBuilder {
 				$table->on('u.user_id', '=', 'ssg.user_id');
 				$table->on('ssg.assoc_type', '=', Capsule::raw((int) ASSOC_TYPE_SECTION));
 				$table->on('ssg.assoc_id', '=', Capsule::raw((int) $sectionId));
+			});
+
+			$q->whereNotNull('ssg.assoc_id');
+		}
+		if (!is_null($this->assignedToCategoryId)) {
+			$categoryId = $this->assignedToCategoryId;
+
+			$q->leftJoin('subeditor_submission_group as ssg', function($table) use ($categoryId) {
+				$table->on('u.user_id', '=', 'ssg.user_id');
+				$table->on('ssg.assoc_type', '=', Capsule::raw((int) ASSOC_TYPE_CATEGORY));
+				$table->on('ssg.assoc_id', '=', Capsule::raw((int) $categoryId));
 			});
 
 			$q->whereNotNull('ssg.assoc_id');
