@@ -1073,19 +1073,24 @@ class Upgrade extends Installer {
 				}
 				$remoteSuppFileSettingsResult->Close();
 
-				$articleGalley = $articleGalleyDao->newDataObject();
-				$articleGalley->setSubmissionId($article->getId());
-				$articleGalley->setLabel($remoteSuppFileTitle[$article->getLocale()]);
-				$articleGalley->setRemoteURL($row['remote_url']);
-				$articleGalley->setLocale($article->getLocale());
-				$articleGalleyDao->insertObject($articleGalley);
+				// Converted from DAO call to raw SQL because submission_id is no longer available post-schema sync.
+				$articleGalleyDao->update(
+					'INSERT INTO submission_galleys (locale, submission_id, remote_url, label) VALUES (?, ?, ?, ?)',
+					array(
+						$article->getLocale(),
+						$article->getId(),
+						$row['remote_url'],
+						$remoteSuppFileTitle[$article->getLocale()],
+					)
+				);
+				$galleyId = $articleGalleyDao->getInsertId();
 
 				// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
 				foreach ($extraRemoteGalleySettings as $name => $value) {
 					$submissionFileDao->update(
 						'INSERT INTO submission_galley_settings (galley_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
 						array(
-							$articleGalley->getId(),
+							$galleyId,
 							$name,
 							$value,
 							'string'
