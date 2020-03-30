@@ -45,12 +45,13 @@ class UserQueryBuilder extends \PKP\Services\QueryBuilders\PKPUserQueryBuilder {
 		if (!is_null($this->assignedToSectionId)) {
 			$sectionId = $this->assignedToSectionId;
 
-			$q->leftJoin('section_editors as se', function($table) use ($sectionId) {
-				$table->on('u.user_id', '=', 'se.user_id');
-				$table->on('se.section_id', '=', Capsule::raw((int) $sectionId));
+			$q->leftJoin('subeditor_submission_group as ssg', function($table) use ($sectionId) {
+				$table->on('u.user_id', '=', 'ssg.user_id');
+				$table->on('ssg.assoc_type', '=', Capsule::raw((int) ASSOC_TYPE_SECTION));
+				$table->on('ssg.assoc_id', '=', Capsule::raw((int) $sectionId));
 			});
 
-			$q->whereNotNull('se.section_id');
+			$q->whereNotNull('ssg.assoc_id');
 		}
 
 		return $q;
