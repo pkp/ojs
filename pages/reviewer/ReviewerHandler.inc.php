@@ -109,7 +109,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 	        	return new PKPReviewerReviewStep2Form($request, $reviewerSubmission, $reviewAssignment);
 	        case 3: 
 	        	import("classes.submission.reviewer.form.ReviewerReviewStep3Form");
-	        	return new PKPReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
+	        	return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
 	    }
 	}
 
