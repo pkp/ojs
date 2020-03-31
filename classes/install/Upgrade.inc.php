@@ -1462,22 +1462,27 @@ class Upgrade extends Installer {
 			$suppFilesResult->MoveNext();
 			$reviewRounds = $reviewRoundDao->getBySubmissionId($suppFilesRow['article_id'], WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
 			// If a review round exists
-			// copy the supp file to the submissin review stage, add it to each existing review round, and as a review round file
+			// copy the supp file to the submission review stage, add it to each existing review round, and as a review round file
 			if ($reviewRounds->getCount() != 0) {
 				$submissionFileManager = new SubmissionFileManager($suppFilesRow['context_id'], $suppFilesRow['article_id']);
 				// Retrieve the supp file last revision number, although they probably only have revision 1.
 				$revisionNumber = $submissionFileDao->getLatestRevisionNumber($suppFilesRow['file_id']);
-				// copy the supp file to the submissin review stage
-				list($newFileId, $newRevision) = $submissionFileManager->copyFileToFileStage($suppFilesRow['file_id'], $revisionNumber, SUBMISSION_FILE_REVIEW_FILE, null, true);
-				while ($reviewRound = $reviewRounds->next()) {
-					// add it to the review round
-					$submissionFileDao->assignRevisionToReviewRound($newFileId, $newRevision, $reviewRound);
-					// Get all review assignments
-					$reviewAssignments = $reviewAssignmentDao->getBySubmissionId($suppFilesRow['article_id'], $reviewRound->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
-					foreach ($reviewAssignments as $reviewAssignment) {
-						// add it to the review files
-						$reviewFilesDao->grant($reviewAssignment->getId(), $newFileId);
+				// copy the supp file to the submission review stage
+				$fileDetails = $submissionFileManager->copyFileToFileStage($suppFilesRow['file_id'], $revisionNumber, SUBMISSION_FILE_REVIEW_FILE, null, true);
+				if ($fileDetails) {
+					list($newFileId, $newRevision) = $fileDetails;
+					while ($reviewRound = $reviewRounds->next()) {
+						// add it to the review round
+						$submissionFileDao->assignRevisionToReviewRound($newFileId, $newRevision, $reviewRound);
+						// Get all review assignments
+						$reviewAssignments = $reviewAssignmentDao->getBySubmissionId($suppFilesRow['article_id'], $reviewRound->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
+						foreach ($reviewAssignments as $reviewAssignment) {
+							// add it to the review files
+							$reviewFilesDao->grant($reviewAssignment->getId(), $newFileId);
+						}
 					}
+				} else {
+					error_log('WARNING: Unable to copy article_suppementary_files entry with file_id ' . $suppFilesRow['file_id'] . ' to review stage! Skipping this file.');
 				}
 			}
 		}
