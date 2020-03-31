@@ -101,16 +101,11 @@ class ReviewerHandler extends PKPReviewerHandler {
 	 */
 	public function getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment) {
 	    switch ($step) {
-	        case 1:
-	        	import("lib.pkp.classes.submission.reviewer.form.PKPReviewerReviewStep1Form"); 
-	        	return new PKPReviewerReviewStep1Form($request, $reviewerSubmission, $reviewAssignment);
-	        case 2: 
-	        	import("lib.pkp.classes.submission.reviewer.form.PKPReviewerReviewStep2Form");
-	        	return new PKPReviewerReviewStep2Form($request, $reviewerSubmission, $reviewAssignment);
 	        case 3: 
 	        	import("classes.submission.reviewer.form.ReviewerReviewStep3Form");
 	        	return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
 	    }
+	    return parent::getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment);
 	}
 
 }
