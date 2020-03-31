@@ -436,76 +436,6 @@
 
 	<!--
 	  *
-	  * TABLE submissions
-	  *
-	  -->
-	<table name="submissions">
-		<field name="submission_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT />
-		</field>
-		<field name="locale" type="C2" size="14">
-			<!-- DEPRECATED: Held over for the OJS 2.x to 3. upgrade process pkp/pkp-lib#3572 -->
-		</field>
-		<field name="context_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="section_id" type="I8">
-			<!-- DEPRECATED: Held over for OJS 3.2 upgrade -->
-		</field>
-		<field name="current_publication_id" type="I8" />
-		<field name="date_last_activity" type="T"/>
-		<field name="date_submitted" type="T"/>
-		<field name="last_modified" type="T"/>
-		<field name="stage_id" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="1"/><!-- WORKFLOW_STAGE_ID_SUBMISSION -->
-		</field>
-		<field name="status" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="1"/><!-- STATUS_QUEUED -->
-		</field>
-		<field name="submission_progress" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="1"/>
-		</field>
-		<descr>Submissions</descr>
-		<index name="submissions_context_id">
-			<col>context_id</col>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE submission_settings
-	  *
-	  -->
-	<table name="submission_settings">
-		<field name="submission_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="locale" type="C2" size="14">
-			<NOTNULL />
-			<DEFAULT VALUE=""/>
-		</field>
-		<field name="setting_name" type="C2" size="255">
-			<NOTNULL />
-		</field>
-		<field name="setting_value" type="X"/>
-		<descr>Submission metadata</descr>
-		<index name="submission_settings_submission_id">
-			<col>submission_id</col>
-		</index>
-		<index name="submission_settings_pkey">
-			<col>submission_id</col>
-			<col>locale</col>
-			<col>setting_name</col>
-			<UNIQUE/>
-		</index>
-	</table>
-
-	<!--
-	  *
 	  * TABLE publications
 	  *
 	  -->
@@ -544,35 +474,6 @@
 		</index>
 		<index name="publications_url_path">
 			<col>url_path</col>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE publication_settings
-	  *
-	  -->
-	<table name="publication_settings">
-		<field name="publication_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="locale" type="C2" size="14">
-			<NOTNULL />
-			<DEFAULT VALUE=""/>
-		</field>
-		<field name="setting_name" type="C2" size="255">
-			<NOTNULL />
-		</field>
-		<field name="setting_value" type="X"/>
-		<descr>publication metadata</descr>
-		<index name="publication_settings_publication_id">
-			<col>publication_id</col>
-		</index>
-		<index name="publication_settings_pkey">
-			<col>publication_id</col>
-			<col>locale</col>
-			<col>setting_name</col>
-			<UNIQUE/>
 		</index>
 	</table>
 
@@ -637,76 +538,6 @@
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>
-		</index>
-	</table>
-
-	<!--
-	 *
-	 * TABLE submission_search_keyword_list
-	 *
-	 -->
-	<table name="submission_search_keyword_list">
-		<field name="keyword_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="keyword_text" type="C2" size="60">
-			<NOTNULL/>
-		</field>
-		<descr>List of all keywords.</descr>
-		<index name="submission_search_keyword_text">
-			<col>keyword_text</col>
-			<UNIQUE/>
-		</index>
-	</table>
-
-	<!--
-	 *
-	 * TABLE submission_search_objects
-	 *
-	 -->
-	<table name="submission_search_objects">
-		<field name="object_id" type="I8">
-			<KEY />
-			<AUTOINCREMENT/>
-		</field>
-		<field name="submission_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="type" type="I4">
-			<NOTNULL />
-			<descr>Type of item. E.g., abstract, fulltext, etc.</descr>
-		</field>
-		<field name="assoc_id" type="I8">
-			<descr>Optional ID of an associated record (e.g., a file_id)</descr>
-		</field>
-		<descr>Indexed objects.</descr>
-	</table>
-
-	<!--
-	 *
-	 * TABLE submission_search_object_keywords
-	 *
-	 -->
-	<table name="submission_search_object_keywords">
-		<field name="object_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="keyword_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="pos" type="I4">
-			<NOTNULL />
-			<descr>Word position of the keyword in the object.</descr>
-		</field>
-		<descr>Keyword occurrences for each indexed object.</descr>
-		<index name="submission_search_object_keywords_keyword_id">
-			<col>keyword_id</col>
-		</index>
-		<index name="submission_search_object_keywords_pkey">
-			<col>object_id</col>
-			<col>pos</col>
-			<UNIQUE />
 		</index>
 	</table>
 
