@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2020-04-03 05:38+0000\n"
+"Last-Translator: Michal Jelínek <jelinek@synetix.cz>\n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/submission/cs/"
+">\n"
+"Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:18+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Odeslat článek"
@@ -160,3 +163,59 @@ msgstr "Abstrakt musí obsahovat maximálně {$wordCount} slov."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr "Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu stanoveného pro tuto sekci."
+
+msgid "galley.publicationNotFound"
+msgstr "Publikace pro tuto sazebnici nebyla nalezena."
+
+msgid "galley.editPublishedDisabled"
+msgstr "Sazebnice této publikace nelze upravovat, protože již byly publikovány."
+
+msgid "publication.scheduledIn"
+msgstr "Naplánováno zveřejnění v <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Publikováno v <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr "Před zveřejněním musí být publikace přiřazena k číslu."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Všechny požadavky na zveřejnění byly splněny. Toto bude okamžitě zveřejněno "
+"v {$issue}. Opravdu si přejete publikovat?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Všechny požadavky na zveřejnění byly splněny. Při publikování bude "
+"zveřejněno: {$issue}. Opravdu si přejete naplánovat zveřejnění?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Všechny požadavky na zveřejnění byly splněny. Opravdu si přejete publikovat?"
+
+msgid "publication.issue.success"
+msgstr "Podrobnosti o problému publikací byly aktualizovány."
+
+msgid "publication.invalidIssue"
+msgstr "Problém pro tuto publikaci nebyl nalezen."
+
+msgid "publication.invalidSection"
+msgstr "Sekce pro tuto publikaci nebyla nalezena."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Datum vydání bude stanoveno automaticky při zveřejnění čísla. Nezadávejte "
+"datum publikace, pokud nebyl článek dříve publikován jinde a potřebujete jej "
+"antedatovat."
+
+msgid "catalog.category.heading"
+msgstr "Všechny položky"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} položek"
+
+msgid "submission.sectionOptions"
+msgstr "Možnosti sekce"
+
+msgid "submission.submit.noContext"
+msgstr "Časopis tohoto příspěvku nebyl nalezen."
