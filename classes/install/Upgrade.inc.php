@@ -2949,12 +2949,12 @@ class Upgrade extends Installer {
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$contextDao->update('
-				INSERT INTO ' . $contextDao->settingsTableName . ' SET
-					' . $contextDao->primaryKeyColumn . ' = ?,
-					locale = ?,
-					setting_name = ?,
-					setting_value = ?
-				',
+				INSERT INTO ' . $contextDao->settingsTableName . ' (
+					' . $contextDao->primaryKeyColumn . ',
+					locale,
+					setting_name,
+					setting_value
+				) VALUES (?, ?, ?, ?)',
 				[
 					$row[$contextDao->primaryKeyColumn],
 					$row['locale'],
