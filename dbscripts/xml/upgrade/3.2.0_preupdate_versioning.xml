@@ -16,10 +16,17 @@
 <data>
 	<sql>
 		<query>CREATE TABLE temp_authors AS SELECT * FROM authors</query>
+		<query>CREATE INDEX temp_authors_s_id ON temp_authors (submission_id)</query>
+		<query>CREATE INDEX temp_authors_a_s_id ON temp_authors (author_id, submission_id)</query>
 		<query>CREATE TABLE temp_submissions AS SELECT * FROM submissions</query>
+		<query>CREATE INDEX temp_submissions_s_id ON temp_submissions (submission_id)</query>
 		<query>CREATE TABLE temp_submission_galleys AS SELECT * FROM submission_galleys</query>
+		<query>CREATE INDEX temp_submission_galleys_s_id ON temp_submission_galleys (submission_id)</query>
 		<query>CREATE TABLE temp_published_submissions AS SELECT * FROM published_submissions</query>
+		<query>CREATE INDEX temp_published_submissions_s_id ON temp_published_submissions (submission_id)</query>
 		<query>CREATE TABLE temp_citations AS SELECT * FROM citations</query>
+		<query>CREATE INDEX temp_citations_s_id ON temp_citations (submission_id)</query>
+		<query>CREATE INDEX temp_citations_c_s_id ON temp_citations (citation_id, submission_id)</query>
 	</sql>
 	<!--
 		Identify any submissions with STATUS_PUBLISHED that are missing a corresponding entry

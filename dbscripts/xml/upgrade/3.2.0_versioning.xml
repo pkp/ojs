@@ -193,7 +193,7 @@
 			UPDATE citations
 			SET publication_id = s.current_publication_id
 			FROM submissions s
-			LEFT JOIN temp_citations as tc ON (s.submission_id = tc.submission_id)
+			JOIN temp_citations as tc ON (s.submission_id = tc.submission_id)
 			WHERE citations.citation_id = tc.citation_id
 		</query>
 		<query driver="mysqli">
@@ -201,8 +201,7 @@
 			SET c.publication_id = (
 				SELECT s.current_publication_id
 				FROM submissions as s
-				LEFT JOIN temp_citations as tc
-					ON s.submission_id = tc.submission_id
+				JOIN temp_citations as tc ON s.submission_id = tc.submission_id
 				WHERE c.citation_id = tc.citation_id
 			) ORDER BY c.publication_id ASC
 		</query>
@@ -211,8 +210,7 @@
 			SET c.publication_id = (
 				SELECT s.current_publication_id
 				FROM submissions as s
-				LEFT JOIN temp_citations as tc
-					ON s.submission_id = tc.submission_id
+				JOIN temp_citations as tc ON s.submission_id = tc.submission_id
 				WHERE c.citation_id = tc.citation_id
 			) ORDER BY c.publication_id ASC
 		</query>
