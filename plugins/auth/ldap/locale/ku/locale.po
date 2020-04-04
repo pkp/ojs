@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-04 17:46+0000\n"
+"PO-Revision-Date: 2020-04-05 14:49+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "ku/>\n"
@@ -87,8 +87,5 @@ msgstr "ڕێکخستنەکانی SASL (ئارەزومەندانە)"
 msgid "plugins.auth.ldap.settings.pwhash.description"
 msgstr "شێوازی تۆمارکردنی ژمارە نهێنییەکان لە سێرڤەردا. SSHA پێشنیاز کراوە."
 
-#, fuzzy
 msgid "plugins.auth.ldap.settings.uid.description"
-msgstr ""
-"السمة التي تحدد قيمتها بشكل فريد أحد مكونات المستخدم، مثل: رمزه التعريفي أو "
-"cn یان sAMAccountName."
+msgstr "ئەو شتانەی کە ئامانجی بەکارهێنەر دیار دەکەن  cn یان sAMAccountName."
