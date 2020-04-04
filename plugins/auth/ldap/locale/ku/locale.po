@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-04 10:47+0000\n"
+"PO-Revision-Date: 2020-04-04 17:46+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "ku/>\n"
@@ -62,3 +62,33 @@ msgid "plugins.auth.ldap.description"
 msgstr ""
 "ئەم زیادکردنە پاڵپشتی و هەماهەنگسازی بە بەکارهێنەر دەبەخشێت لە دژی هەر "
 "سەرچاوەیەکی دەرەکیی LDAP."
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "تایبەتمەندییەکانی پارێزراوی SASL"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "ناسنامەی خاوەندارێتی داواکراو"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "قەڵەمڕەو"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "وەک: \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "میکانیزمی SASL"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "SASL لە جیاتی سیستەمە سادەترەکان بەکار بهێنە"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "ڕێکخستنەکانی SASL (ئارەزومەندانە)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "شێوازی تۆمارکردنی ژمارە نهێنییەکان لە سێرڤەردا. SSHA پێشنیاز کراوە."
+
+#, fuzzy
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"السمة التي تحدد قيمتها بشكل فريد أحد مكونات المستخدم، مثل: رمزه التعريفي أو "
+"cn یان sAMAccountName."
