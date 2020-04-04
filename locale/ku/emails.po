@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "emails.passwordResetConfirm.subject"
-msgstr "دڵنیابوونەوەی دانانەوەی تێپەڕەوشە"
+msgstr "دڵنیابوونەوەی لە دانانەوەی تێپەڕەوشە"
 
 msgid "emails.notification.body"
 msgstr ""
