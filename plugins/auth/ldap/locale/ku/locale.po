@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-04 02:13+0000\n"
+"PO-Revision-Date: 2020-04-04 10:47+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "ku/>\n"
@@ -13,3 +13,52 @@ msgstr ""
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "بەڕەمزکردنی ژمارەی نهێنی"
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "نیشانەی ناوی تۆمار"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"ناوی بواری بەڕێوەبەر و ژمارەی نهێنی داواکارون تەنیا ئەگەر پڕۆفایلی کەسی و "
+"ژمارەی نهێنیی بەکارهێنەر چالاک کرابن. ئەگەر LDAP بەکار بهێندرێت بۆ "
+"هەڵسەنگاندن، دەکرێت ئەم بژاردانە پشتگوێ بخرێن."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "ژمارەی نهێنیی بەڕێوەبەر"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "وەک: \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "ناوی بواری بەڕێوەبەر"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "وەک: \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "ناوی بواری سەرەکی"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "ئارەزومەندانە. حاڵەتی دامەزراو 389 (LDAP) یان 636 (LDAP عبر SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "دەرچەی سێرڤەر"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"وەک: \"ldap.example.com\"، أو \"ldaps://ldap.example.com\" (بۆ "
+"بەکارهێنانیSSL)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "ناوی سێرڤەری میوان"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "ڕێکخستنی LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"ئەم زیادکردنە پاڵپشتی و هەماهەنگسازی بە بەکارهێنەر دەبەخشێت لە دژی هەر "
+"سەرچاوەیەکی دەرەکیی LDAP."
