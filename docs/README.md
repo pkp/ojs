@@ -51,7 +51,7 @@ A secure deployment can be best achieved by using the following policies:
 
 * Configure OJS (`config.inc.php`) to use SHA1 hashing rather than MD5.
 
-* Configure OJS (`config.inc.php`) to use force_ssl_login so that
+* Configure OJS (`config.inc.php`) to use force_login_ssl so that
 	authenticated users communicate with the server via HTTPS.
 
 * Install OJS so that the files directory is NOT a subdirectory of
