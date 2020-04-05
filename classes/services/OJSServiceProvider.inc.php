@@ -19,7 +19,7 @@ use \Pimple\Container;
 use \APP\Services\PublicationService;
 use \APP\Services\StatsEditorialService;
 use \APP\Services\StatsService;
-use \APP\Services\PKPUserService;
+use \PKP\Services\PKPUserService;
 use \PKP\Services\PKPAuthorService;
 use \PKP\Services\PKPEmailTemplateService;
 use \PKP\Services\PKPSchemaService;
