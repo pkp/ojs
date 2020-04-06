@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-05 14:49+0000\n"
-"Last-Translator: Muhammed K. Saedgul <muhammed.barzinji@koyauniversity.org>\n"
+"PO-Revision-Date: 2020-04-07 02:31+0000\n"
+"Last-Translator: Karwan Juma Raheem <karwan.raheem@charmouniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/emails/ku/>"
 "\n"
 "Language: ku\n"
@@ -75,3 +75,22 @@ msgstr ""
 
 msgid "emails.passwordReset.subject"
 msgstr "دووبارە رێكخستنەوەى  وشەى نهێنى"
+
+msgid "emails.lockssExistingArchive.subject"
+msgstr "ئه‌رشیفكردنی داواكاری بۆ ناوی ده‌ق"
+
+msgid "emails.reviewerRegister.subject"
+msgstr "تۆماركردن وه‌كو پێداچوونه‌وه‌ له‌گه‌ڵ  ناوی ده‌ق"
+
+msgid "emails.userValidate.description"
+msgstr ""
+"ئه‌م ئیمێڵه‌ بۆ به‌كارهێنه‌ره‌ نوێیه‌كان نێردراوه‌ بۆ پشتڕاستكردنه‌وه‌ی "
+"هه‌ژماره‌كانیان"
+
+msgid "emails.userValidate.subject"
+msgstr "هه‌ژماره‌كه‌ت پشتڕاست بكه‌ره‌وه‌"
+
+msgid "emails.userRegister.description"
+msgstr ""
+"ئه‌م ئیمێڵه‌ نێردراوه‌ بۆ به‌كارهێنه‌ره‌ نوێیه‌كان بۆ به‌خێرهاتنیان بۆناو "
+"سیسته‌مه‌كه‌ و پێدانی تۆماری ناوی به‌كارهێنه‌ر و ژماره‌ی نهێنی."
