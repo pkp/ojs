@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-06 13:08+0000\n"
+"PO-Revision-Date: 2020-04-07 02:31+0000\n"
 "Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/editor/ku/>"
 "\n"
@@ -124,3 +124,164 @@ msgstr ""
 "ناسێنەری گشتی {ناسێنەری گشتی} پێشوەختە بوونی هەیە بۆ بابەتێکی تر (ژمارەی "
 "گۆڤار، توێژینەوە، دۆسیە یان فایل). تکایە نەسێنەرە ناوەزەکان هەڵبژێرە لە ناو "
 "گۆڤارەکەت."
+
+msgid "editor.issues.previewIssue"
+msgstr "پیشاندانی پێشەکی ژمارەی گۆڤار"
+
+msgid "editor.issues.preview"
+msgstr "پیشاندانی پێشەکی"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "بڵاونەکردنەوەی ژمارەی گۆڤار"
+
+msgid "editor.issues.publishIssue"
+msgstr "بڵاوکردنەوەی ژمارەی گۆڤار"
+
+msgid "editor.issues.publicId"
+msgstr "ناسنامەی گشتی"
+
+msgid "editor.issues.order"
+msgstr "رێخستن/ ڕیزکردن"
+
+msgid "editor.issues.default"
+msgstr "بنەڕەت"
+
+msgid "editor.issues.saveChanges"
+msgstr "گۆڕانکارییەکانی خشتەی ناوەڕۆک پاشەکەوت دەکەی؟"
+
+msgid "editor.issues.issueData"
+msgstr "داتای ژمارەی گۆڤار"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"ئەم ژمارەیە ڕێکخستنی بەشی نەریتی بەکاردەهێنێت.<a href=\"{$url}\" class=\""
+"action\">دووبارە ڕێکخستنەوە بۆ باری بنەڕەتی</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"ئەم گۆڤارە  ڕێکخستنی ژمارەی ئاسایی و نەریتی بەکاردەهێنێت. <a href=\"{$url}\" "
+"پۆل=\"کردار\">دووبارە ڕێکخستەوە بۆ باری بنەڕەتی</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"هەموو توێژینەوەکان دەگەڕێندرێنەوە بۆ ڕیزی پیداچوونەوە و هەڵەچنی، و هەموو "
+"فایلە پەیوەندیدارەکان بە یەکجاری دەسڕێنەوە. ئایە تۆ دڵنیایی دەتەوێت ئەم "
+"ژمارەیە بسڕیەوە؟"
+
+msgid "editor.issues.showCoverPage"
+msgstr "بەرگێک دروستبکە بۆ ئەم ژمارەیە بەم بەشانەی خوارەوە."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "پەڕەشێوازەکە دەسڕیەوە؟"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"ڕێکخستنی پەڕەشێوازی نادروست. دڵنیابە لەوەی کە فایلە نێردراوەکە فایلێکی "
+"دروستی سی ئێس ئێسە (پەڕەشێوازی یەک لە دوای یەکە)."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"فۆڕماتی وێنەی بەرگەکە نادروستە.فۆڕماتە پەسەندکراوەکان ئەمانەن: gif, jpg, png."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"ئەو وێنە بەرگەی کە تۆ داواتکردووە بیسڕیەوە نادۆزرێتەوە. لەوانەیە پێشتر "
+"سڕابێتەوە. هەوڵبدە دووپارە لاپەرەکە باربکەیتەوە."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"وێنەی بەرگەکە کە تۆ داواتکردووە بیسڕیەوە ناگونجێت لە گەڵ وێنەی بەرگی ئەم "
+"ژمارە گۆڤارە. تکایە دووبارە هەوڵبدە لاپەڕەکە باربکەیەوە."
+
+msgid "editor.issues.removeCoverPage"
+msgstr "وێنەی بەرگەکە دەسڕیەوە؟"
+
+msgid "editor.issues.proofed"
+msgstr "(هەڵەچنکراوە)"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "شێوە (فۆڕمات)ە ڕێگە پێدراوەکان: .gif, jpg, org png)"
+
+msgid "editor.issues.coverPage"
+msgstr "وێنەی بەرگ"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "دەستپێگەیشتنی کراوەی دواخراو چالاک بکە"
+
+msgid "editor.issues.accessDate"
+msgstr "ڕێکەوتی دەستپیگەیشتنی کراوە"
+
+msgid "editor.issues.accessStatus"
+msgstr "پێگەی دەستپێگەیشتن"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "ناسێنەری ژمارەی گشتی"
+
+msgid "editor.issues.issueIdentification"
+msgstr "ژمارەی پێناس"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"ژمارەی پێناس پێویستە هەبێت. تکایە بە لایەنی کەمەوە یەکێک لە بژاردەکانی "
+"ژمارەی پێناس هەڵبژێرە."
+
+msgid "editor.issues.titleRequired"
+msgstr "تاونیشان پێویستە بۆ ژمارەی گۆڤارەکە."
+
+msgid "editor.issues.yearRequired"
+msgstr "ساڵ پێویستە هەبێت و دەبێت بەهای ژمارەیی ئەرێنی بێت."
+
+msgid "editor.issues.numberRequired"
+msgstr ".ژمارە پێویستە و دەبێت بەهای ژمارەیی ئەرێنی بێت"
+
+msgid "editor.issues.volumeRequired"
+msgstr ".ژمارەی بەرگ پێویستە و دەبێت بەهای ژمارەیی ئەرێنی بێت"
+
+msgid "editor.issues.confirmDelete"
+msgstr "ئایا تۆ دڵنیایی کە دەتەوێت ئەم ژمارەیە بە یەکجاری بسڕیەوە؟"
+
+msgid "editor.issues.noArticles"
+msgstr "هیچ بابەتێک لە ئێستادا کاتی بۆ دانەندراوە  بۆ ئەم ژمارەیە"
+
+msgid "editor.editorAdministration"
+msgstr "بەڕێوەبەرایەتی سەرنوسەر"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "خشتەی بابەتەکان لەم ژمارەیە لەخۆبگرە )(دابنێ):"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"ئەم نامەیە بنێرە بۆ  بەکارهێنەرانی پەیوەست بەم گۆڤارە، کە ئاماژەیان بەوە "
+"داوە  حەزدەکەن زانیاری نوێ و هەنووکەیییان پێبگات (بەکارهێنەرە "
+"{هەژمارکراوەکان{(."
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+".{{ئەم نامەیە بنێرە بۆ هەموو ئەو بەکارهینەرانەی کە پەیوەندیدارن بەم گۆڤارە ("
+"بەکارهێنەرە {هەژمارکراوەکان"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr ""
+".({هەموو هاوبەش و بەشداربووە ڕێکخراوەییەکان (بەکارهێنەرە {هەژمارکراوەکان"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"پێش ئەوەی بابەتەکەت بنێری بۆ بژارکردن و هەڵەچنی،  بەستەری نوسەری "
+"ئاگادارکردنەوە بەکاربهێنە بۆ ئاگادارکردنەوەی نوسەری بڕیار بەدەست و ئەو  "
+"دانەیە هەڵبژێرە کە دەبێت بنێردرێت."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+".بازدانی ئیمەیڵ دادەگیرێت(Skip Email) ئەم بابەتە نێردراوە ئەرشیف دەکرێت لە "
+"دوای ئەوەی ئیمەیڵی نوسەری ئاگادارکردنەوە  دەنێردرێت یاخود دوگمەی"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "ئایا تۆ دڵنیای کە دەتەوێت ئەم بڕیارە تۆمار بکەی؟"
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "ئایا تۆ دڵنیای کە دەتەوێت ئەم بابەتە نێردراوە بە یەکجاری بسڕیەوە؟"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+".گۆڕانکاری لە بابەتە نیردراوە ئەرشیفکراوەکاندا دەکەی؟ بابەتە نیردراوەکان کە "
+"بۆ سڕینەوە دەستنیشانکراون بەیەکجاری دەسڕێنەوە لە سیستەمەکەدا"
