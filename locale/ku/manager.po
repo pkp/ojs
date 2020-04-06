@@ -1,2 +1,156 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-04-07 02:31+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/ku/>"
+"\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.payment.options"
+msgstr "بژاردەکان"
+
+msgid "manager.payment.notFound"
+msgstr "نەدۆزرایەوە"
+
+msgid "manager.payment.noPayments"
+msgstr "خۆڕایی"
+
+msgid "manager.payment.generalOptions"
+msgstr "بژاردە گشتییەکان"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"بون بە ئەندام لە بەشی زانیارییەکانی گۆڤار پیشان دەدرێت و شێوازی بەخشین لە "
+"سەروی بەشی گەڕان لە بەشی ڕاست ڕون کراوەتەوە."
+
+msgid "manager.payment.generalFees"
+msgstr "تێچوی گشتی"
+
+msgid "manager.payment.form.numeric"
+msgstr "هەمو تێچووەکان دەبێت بە ژمارەیی بن (فاریزەش ڕێگا پێدراوە)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "بژاردەی شێوازی پارەدان"
+
+msgid "manager.payment.enable"
+msgstr "چالاککردن"
+
+msgid "manager.payment.editSubscription"
+msgstr "گۆڕینی ئیشتراککردن"
+
+msgid "manager.payment.details"
+msgstr "وردەکارییەکان"
+
+msgid "manager.payment.description"
+msgstr "ناساندن"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"سیستەمی گۆڤاری کراوە شوێنی پارە گۆڕینەوە نییە. ئەگەر تۆ داوای پارە دەکەیت بۆ "
+"ئیشتیراککردن، تۆ دەبێت جۆرێکی پارە دیاری بکەیت کە لەگەڵ ئێرە بگونجیت."
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "بڕی تێچو لە خوارەوە بنوسە بۆ ئەوەی توێژەر ئەو بڕە پارەیە بدات."
+
+msgid "manager.payment.authorFees"
+msgstr "تێچوی توێژەر"
+
+msgid "manager.payment.amount"
+msgstr "بڕ"
+
+msgid "manager.payment.addPayment"
+msgstr "پارە زیاد بکە"
+
+msgid "manager.payment.action"
+msgstr "کردار"
+
+msgid "manager.managementPages"
+msgstr "پەڕەکانی بەڕێوەبردن"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "ئەمە زمانی سەرەکیی ئەم گۆڤارە دەبێت."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"ببورە، زمانی دیکە بەردەست نییە. پەیوەندیی بە بەڕێوەبەری پێگەکەوە بکە بۆ "
+"زیادکردنی زمانی نوێ."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"سیستەمی گۆڤاری کراوە بە چەند زمانێک بەردەستە و بەکارهێنەر دەتوانێت ئاڵوگۆڕی "
+"لە نێوان زمانەکاندا بکات لە هەر پەڕەیەکدا، هەروەها ڕێگا بە هەندێک داتای "
+"دیاریکراو دەدات بۆ ئەوەی بە چەند زمانێک داخل بکرێن. <br /><br/> ئەگەر زمانێک "
+"لە لایەن سیستەمی گۆڤاری کراوە لە خوارەوە بەردەست نەبو، داوا لە بەڕێوەبەری "
+"پەڕەکەت بکە بۆ ئەوەی پاکێتی زمانەکە داببەزێنێت. بۆ پیشاندانی ڕێگەی زیادکردنی "
+"زمانی نوێ، سود لە دۆکیومێنتەکانی سیستەمی گۆڤاری کراوە ببینە."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "ئەمە گۆڕانکاری لە ڕێکخستنی هەر گۆڤارێکدا دەکات کە تۆ لێرەدا هەتە"
+
+msgid "manager.language.forms"
+msgstr "فۆڕمەکان"
+
+msgid "manager.language.submissions"
+msgstr "پێشکەشکردنەکان"
+
+msgid "manager.language.ui"
+msgstr "ڕوکاری بەکارهێنەر"
+
+msgid "manager.journalManagement"
+msgstr "بەڕێوەبردنی گۆڤار"
+
+msgid "manager.files.note"
+msgstr ""
+"تێبینی: براوزەری فایلەکان تایبەتمەندییەکی پێشکەوتووە کە ڕێگا بە بەکارهێنەر "
+"دەدار بۆ ئەوەی فایلە پەیوەندیدارەکان ببیندرێن و بە شێوەیەکی ڕاستەوخۆ کۆنتڕۆڵ "
+"بکرێن."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"ئایا تۆ دڵنیایت لە هەڵوەشاندنەوەی تێمپلەیتی هەمو ئیمەیڵەکانی ئەم گۆڤارە؟ بەم "
+"هەنگاوە تۆ هەر تایبەتمەندییەکی ئەو بووارە لەدەست دەدەیت."
+
+msgid "manager.website.archiving"
+msgstr "ئەرشیفکردن"
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "زانیارییەکانی بڵاوکردنەوە گۆڕانکارییان تێدا کرا."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"گۆڤارەکە داوای ئیشتیراککردن دەکات بۆ دەستپێگەیشتن بە هەندێک لە بەرهەمەکانی."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "گۆڤارەکە سیستەمی کراوە بۆ ناوەرۆکەکەی پێشکەش دەکات."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+"سیستەمی گۆڤاری کراوە بۆ بڵاوکردنەوەی ناوەرۆکی گۆڤار لەسەر ئەنتەرنێت بەکار "
+"نایەت."
+
+msgid "manager.distribution.publishingMode"
+msgstr "باری بڵاوکردنەوە"
+
+msgid "manager.distribution.publication"
+msgstr "بڵاوکردنەوە"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "ڕێککەوتی بڵاوکردنەوەی توێژینەوەکە بەکار بهێنە"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "ڕێککەوتی بڵاوکردنەوەی ژمارەکە بەکار بهێنە"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"ئەوە دیاری بکە کە چۆن مافی خاوەندارێتیی بنەڕەتی دیاری کراوە بۆ توێژینەوەکان. "
+"ئەم ستانداردە دەکرێت بە گوێرەی توێژینەوەکان بگۆڕدرێت. ئەگەر ڕێگای "
+"بڵاوکردنەوەی راستەوخۆت بەکار هێنا، تکایە ڕێککەوتی بڵاوکردنەوەی ژمارەکە بەکار "
+"مەهێنە."
+
+msgid "manager.distribution.access"
+msgstr "دەستپێگەیشتن"
