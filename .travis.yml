@@ -55,6 +55,9 @@ before_install:
       # Prepare the local codebase
       ./lib/pkp/tools/travis/install-composer-dependencies.sh
       npm install && npm run build
+      cd plugins/generic
+      git clone https://github.com/pkp/missingLocaleException.git
+      cd ../..
     else
       # Prepare for validation tests.
       ./lib/pkp/tools/travis/install-linter.sh
