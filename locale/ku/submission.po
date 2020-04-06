@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-04 17:46+0000\n"
-"Last-Translator: Haval Abdulkarim <haval.abdulkarim@gmail.com>\n"
+"PO-Revision-Date: 2020-04-07 02:31+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ku/>\n"
 "Language: ku\n"
@@ -70,3 +70,145 @@ msgstr "ناردن بە ڕۆڵی من وەک..."
 
 msgid "submission.submit.title"
 msgstr "ناردنی وتارێك"
+
+msgid "publication.scheduledIn"
+msgstr "بڵاو دەکرێتەوە لە <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "بڵاو کرایەوە لە <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr ""
+"ئەم توێژینەوەیە دەبێت بە یەکێک لە ژمارەکانی گۆڤارەوە گرێ بدرێت پێش ئەوەی "
+"بڵاو بکرێتەوە."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"هەمو پێویستییەکانی بڵاوکردنەوە ئامادەن. ئەمە لەگەڵ ژمارەی {$issue} بڵاو "
+"دەبێتەوە. ئایا تۆ دڵنیایت لە بڵاوکردنەوەی ئەمە؟"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"هەمو پێویستییەکانی بڵاوکردنەوە ئامادەن. ئەمە لەگەڵ ژمارەی {$issue} بڵاو "
+"دەبیتەوە. ئایا تۆ دڵنیایت لە بڵاوکردنەوەی ئەمە لە کاتی دیاریکراودا؟"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"هەمو پێویستییەکانی بڵاوکردنەوە ئامادەن. ئایا تۆ دەتەوێت ئەمە بڵاو بکەیتەوە؟"
+
+msgid "publication.issue.success"
+msgstr "زانیارییەکانی ئەم بڵاوکراوەیە نوێ کرانەوە."
+
+msgid "publication.invalidIssue"
+msgstr "ئەم ژمارەیەی ئەم بڵاوکراوەیە نەدۆزرایەوە."
+
+msgid "publication.invalidSection"
+msgstr "بەشی ئەم بڵاوکراوەیە نەدۆزرایەوە."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"ڕێککەوتنی بڵاوکردنەوەکە بە شێوەی تۆماتیکی و لەگەڵ بڵاوکردنەوەی ئەژمارەکە "
+"دادەنرێت. تکایە، ڕێککەوتی بڵاوکردنەوە داخل مەکە، تەنیا لە حاڵەتێکدا نەبێت کە "
+"ئامانج لێی نوێکردنەوەی توێژینەوەیەکە کە پێشتر بڵاو کراوەتەوە."
+
+msgid "galley.publicationNotFound"
+msgstr "ئەم بڵاوکراوەیە نەدۆزرایەوە."
+
+msgid "galley.editPublishedDisabled"
+msgstr "نوسخەی ئەم توێژینەوەیە دەستکاری ناکرێت، چونکە بڵاو کراوەتەوە."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"ئەم تایبەتمەندییانە بە زانیاریی ناسێنەری دوبلن پشتڕاست کراونەتەوە، کە ئەمە "
+"شێوازی ستانداردی نێودەوڵەتییە بۆ ناوەرۆکی گۆڤار."
+
+msgid "submission.citationFormat.notFound"
+msgstr "شێوازی ڕێکخستنی گوتراوەکانت ڕێگە پێ نەدراوە."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "تکایە ڕۆڵەکە دیاری بکە."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "پوختەی توێژینەوەکەت زۆرە، تکایە ژمارەی وشەکان کەم بکەوە."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "تکایە، پوختەی توێژینەوەکەت لێرە بنوسە."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "تکایە ناونیشانی توێژینەوەکەت بنوسە."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "ناوی یەکەم، ناسناو و ئیمەیڵی هەر توێژەرێک داواکراوە."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "لانیکەم توێژەرێک داوا کراوە."
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"پێویستە تۆ داواکارییەکانی خوارەوە بخوێنیتەوە و قبوڵییان بکەیت پێش ئەوەی "
+"زیاتر بچیتە پێشەوە."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "لیستی پێشکەشکراوەکان"
+
+msgid "submission.incomplete"
+msgstr "چاوەڕوانی قبوڵکردن"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "ئەژماری زانیاریی ناسێنەری ئەم پێشکەشکردنە بار کرا."
+
+msgid "submission.confirmSubmit"
+msgstr "ئایا تۆ دڵنیایت لە پێشکەشکردنی توێژینەوەکەت؟"
+
+msgid "grid.action.pageProofApproved"
+msgstr ".ئەم بەڵگانە پشتڕاست کرانەوە لە نوسخەی چاپدا"
+
+msgid "grid.action.approveProof"
+msgstr "ئەم زانیارییانە لە نوسخەی چاپ پشتڕاست بکەوە."
+
+msgid "submission.galleyFiles"
+msgstr "تابلۆکان"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "ئەم تابلۆیە بخە بەردەست"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>ئەم تابلۆیە <em>بەردەستە</em> بۆ خوێنەران.</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>ئەم تابلۆیە <em>هیچی دیکە بەردەست نییە</em> بۆ خوێنەران.</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "قبوڵکردنی ڕێکخستنەکە"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "ناسێنەرە گشتییەکانی پێشکەشکردنەکە نوێ کرانەوە."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "تابلۆی توێژینەوەکە \"{$galleyFormatName}\" ئامادە نییە."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "تابلۆی توێژینەوەکە \"{$galleyFormatName}\" ئامادەیە."
+
+msgid "grid.action.issueEntry"
+msgstr "زانیاریی ناسێنەری ئەم پێشکەشکردنە ببینە"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "ئەو تابلۆیەی لە پێشەکی چاپەکەدا دەردەکەوێت"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"گۆڤار لە پێشکەشکردنەکەت ئاگادار کرایەوە، ئەم ئیمەیڵەت بۆ دڵنیایی بۆ نێردرا. "
+"کاتێک سەرنوسەر توێژینەوەکەتی هەڵ سەنگاند، پەیوەندیت پێوە دەکاتەوە."
+
+msgid "submission.submit.noContext"
+msgstr "ئەم گۆڤارە پێشکەشکراوە نەدۆزرایەوە."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "کورتەی توێژینەوەکە نابێت لە  {$wordCount} وشە زیاتر بێت."
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "توێژینەوەیەکی نوێ پێشکەش بکە لە"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "ئەو ڕۆڵە هەڵبژێرە کە تۆ ئەم توێژینەوەی پێ پێشکەش دەکەیت."
