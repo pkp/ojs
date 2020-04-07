@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-07 02:31+0000\n"
-"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
+"PO-Revision-Date: 2020-04-07 15:52+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/default/ku/>"
 "\n"
 "Language: ku\n"
@@ -97,3 +97,96 @@ msgstr ""
 "هێڵ بەژێرداهێنان (جگە لە ناونیشانی بەستەر و وێبسایتەکان): و هەموو وێنەکان، "
 "ژمارەکان و خشتەکات لە ناو دەقەکەدا  لە شوێنی گونجاو دادەندرێن، نەک لە "
 "کۆتاییدا."
+
+#, fuzzy
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.genres.transcripts"
+msgstr "ڤەگۆتن"
+
+msgid "default.genres.researchResults"
+msgstr "ئەنجامەکانی توێژینەوەی زانستی"
+
+msgid "default.genres.researchMaterials"
+msgstr "ماتێریاڵی توێژینەوەی زانستی"
+
+msgid "default.genres.researchInstrument"
+msgstr "کەرەستەکانی توێژینەوەی زانستی"
+
+#, fuzzy
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+#, fuzzy
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "سەرنوسەرەکانی بەشەکان"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "سەرنوسەری بەش"
+
+#, fuzzy
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "سەرنوسەرە میوانەکان"
+
+msgid "default.groups.name.guestEditor"
+msgstr "سەرنوسەری میوان"
+
+#, fuzzy
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.editor"
+msgstr "سەرنوسەری گۆڤار"
+
+#, fuzzy
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"ئەم گۆڤارە سیستەمی CLOCKSS  بەکار دەهێنێت بۆ ئاسانکاری ئەو کەسانەی لە "
+"کتێبخانەکان کار دەکەن و دەتوانن ئەرشیفی بەردەوامی خۆیان دروست بکەن CLOCKSS . "
+"<a href=\"http://clockss.org/\">بۆ زانیاریی زیاتر...</a>"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"ئەم گۆڤارە سیستەمی LOCKSS  بەکار دەهێنێت بۆ ئەرشیفکردن و ڕێگا بە ئەو کەسانە "
+"دەدات کە لە کتێبخانەکاندا کار دەکەن ئەرشیفی تایبەتیی خۆیان دروست بکەن . <a "
+"href=\"http://www.lockss.org/\">بۆ زانیاریی زیاتر...</a>"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"ئێمە هانی کتێبخانەکان دەدەین بۆ ئەوەی گۆڤارەکەمان لە لیستە ئەلیکترۆنییەکانی "
+"خۆیان دابنێن. ئەمەش هیچ جۆرە تێچوێک ناخاتە سەر ئەستۆی ئەوان، لە کاتێکدا "
+"سیستەمی بڵاوکردنەوەی کراوە گونجاوە بۆ ئەوەی ئەندامانی فاکەڵتی تێیدا بەشدار "
+"ببن(see <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"ئایا دەتەوێت لەم گۆڤارە توێژینەوەکەت بڵاو بکەیتەوە؟ پێشنیاز دەکەین بۆ ئەوەی "
+"سەیری پەڕەی  <a href=\"{$indexUrl}{$contextPath}/about\">بکەیت دەربارەی "
+"گۆڤار</a> و ئەمەش بۆ زانینی سیاسەتەکانی گۆڤارەکە، هەروەها <a href=\""
+"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">ڕێنمایی "
+"توێژەران</a>. توێژەران پێویستە کە <a href=\"{$indexUrl}{$contextPath}/user/"
+"register\">خۆیان تۆمار بکەن</a> پێش ئەوەی دەست بە پێشکەشکردنی "
+"توێژینەوەکانیان بکەن، ئەگەر خۆت تۆمار کردووە، <a href=\"{$indexUrl}/index/"
+"login\">لێرەوە داخلی ئەژمارە کەسییەکەت ببە</a> دەست بە پێشکەشکردنی "
+"توێژینەوەکەت بکە."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"ئێمە هانی خوێنەران دەدەین کە ئاگادارکردنەوە چالاک بکەن بۆ ئەوەی لە کاتی "
+"بڵاوکردنەوەی نوێ بە ئیمەیڵ ئاگادار بکرێنەوە. ئەم لینکە بەکار بهێنن <a href=\""
+"{$indexUrl}{$contextPath}/user/register\"> تۆماری </a>لە سەرەوەی پەڕەی "
+"سەرەکیی گۆڤارەکە. ئەم تۆمارە وا دەکات کە تۆی خوێنەر ناوەرۆکی بڵاوکراوە "
+"نوێیەکانت بە ئیمەیڵ پێ بگات. ئەم لیستە ڕێگا بە گۆڤاریش دەدات کە هاوکاری "
+"هەندێک لە خوێنەران بکات. لێرەوە سەیری تایبەتێتییەکانی گۆڤار بکە <a href=\""
+"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">، </a> دڵنیا "
+"دەکاتەوە کە ئیمەیڵ و زانیارییەکانیان بۆ هیچ مەبەستێکی دیکە بەکار نایەت."
