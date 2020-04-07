@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-04 17:46+0000\n"
-"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"PO-Revision-Date: 2020-04-07 12:00+0000\n"
+"Last-Translator: avin a hama <avinasoshama@gmail.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/author/ku/>"
 "\n"
 "Language: ku\n"
@@ -252,7 +252,9 @@ msgstr ""
 "پێش ئەوەی بچیتە قۆناغی دواتر، دەبێت دڵنیا ببیتەوە کە هەمو یەکەکان بەردەستن."
 
 msgid "author.submit.journalSectionDescription"
-msgstr "توێژینەوەکە دەبێت بۆ یەکێک لە بەشەکانی گۆڤارەکە پێشکەش بکرێت."
+msgstr ""
+"(بەشێکی گونجاو بۆ پێشکەشکردنەکەت هەڵبژێرە(تەماشای بەش و رێنماییەکانی "
+"بڵاوکردنەوە بکە"
 
 msgid "author.submit.journalSection"
 msgstr "بەشی گۆڤار"
@@ -264,33 +266,34 @@ msgid "author.submissions.viewStatus"
 msgstr "پیشاندانی بارودۆخ"
 
 msgid "author.submissions.confirmDelete"
-msgstr "ئایا تۆ دڵنیایت لە سڕینەوەی ئەم پێشکەشکردنە ناتەواوە؟"
+msgstr ""
+"ئایا تۆ دڵنیایت لە سڕینەوەی ئەم پێشکەشکردنە سەرەڕای ئەوەی تەواونەکراوە ؟"
 
 msgid "author.submissions.proofreadingCorrections"
-msgstr "ڕاستکردنەوەی زمانی"
+msgstr "راستکردنەوەی رێزمانی و رێنوس"
 
 msgid "author.submissions.uploadCopyeditedVersion"
 msgstr "بارکردنی نوسخەیەک کە گۆڕانکاری تێدا بکرێت"
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr "لە هەڵسەنگاندن دایە: هەڵسەنگاندنی زمانی داواکراوە"
+msgstr "لە چاککردن دایە؛ پێویست بە راستکردنەوەی رێنوس و رێزمان دەکات"
 
 msgid "author.submissions.queuedEditingCopyedit"
 msgstr "لە دەستکاریکردن دایە: نوسخەی چاککراو داواکراوە"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "لە قۆناغی هەڵسەنگاندن دایە: پێداچونەوە داواکراوە"
+msgstr "لە قۆناغی هەڵسەنگاندن دایە: پێداچونەوەی پێویستە"
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "قۆناغی هەڵسەنگاندن، قۆناغی{$round}"
+msgstr "لە قۆناغی هەڵسەنگاندن دایە"
 
 msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
 "ئەگەر تۆ داوای گێڕانەوەی بڕی پارەی تێچون دەکەیت، دەبێت هۆکاری داواکارییەکەت "
-"بە ڕونی بنوسیت."
+"بە ڕوونی بنوسیت."
 
 msgid "author.submit.addReasonsForWaiver"
-msgstr "تکایە لە خوارەوە تێچێنی خۆت بنوسە کە بۆچی ئەم تێچووە دەبێت بگێڕدرێتەوە."
+msgstr "تکایە لە خوارەوە تێبینی خۆت بنوسە کە بۆچی ئەم تێچووە دەبێت بگێڕدرێتەوە."
 
 msgid "author.submit.qualifyForWaiver"
 msgstr "تکایە بڕیار لەسەر گێڕانەوەی تێچوی ئەم توێژینەوەیە بدە"
@@ -303,8 +306,8 @@ msgstr "ئەم گۆڤارە لە ئێستادا توێژینەوەی نوێ وە
 
 msgid "submission.submit.cancelSubmission"
 msgstr ""
-".تۆ دەتوانیت دواتر پێشکەشکردنەکەت تەواو بکەیت بە دیاریکردنی پێشکەشکردنی "
-"چالاک لە پەڕەی سەرەکیی توێژەر"
+". دەتوانیت دواتر پێشکەشکردنەکەت تەواو بکەیت بە دیاریکردنی (پێشکەشکردنی چالاک)"
+" لە پەڕەی سەرەکیی توێژەر"
 
 msgid "author.submit.nextSteps"
 msgstr "هەنگاوی دواتر"
@@ -365,4 +368,4 @@ msgid "author.track"
 msgstr "چالاککردنی توێژینەوە نێردراوەکان"
 
 msgid "author.submit"
-msgstr "بڵاوکردنەوەی توێژینەوەیەکی نوێ"
+msgstr "داواکاری بڵاوکردنەوەی نوێ"
