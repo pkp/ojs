@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-07 02:31+0000\n"
-"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
+"PO-Revision-Date: 2020-04-07 15:52+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/editor/ku/>"
 "\n"
 "Language: ku\n"
@@ -285,3 +285,194 @@ msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 ".گۆڕانکاری لە بابەتە نیردراوە ئەرشیفکراوەکاندا دەکەی؟ بابەتە نیردراوەکان کە "
 "بۆ سڕینەوە دەستنیشانکراون بەیەکجاری دەسڕێنەوە لە سیستەمەکەدا"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"ناسێنەری گشتیی '{$publicIdentifier}' بەردەستە بۆ مەبەستێکی دیکە لە هەمان "
+"شێواز. تکایە ناسێنەری دەگمەن هەڵبژێرە بۆ هەر مەبەستێک لە چوارچێوەی گۆڤاردا."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"هەر فایلێک کە پێشتر بار کراوە لە ڕێگەی ئەم بۆکسەوە دەکرێت بنێردرێت بۆ "
+"هەڵسەنگاندنی زمانی: هەمو ئەو فایلانەی دەچنە ناو لیستەکەوە هەڵبژێردراون."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"وەشانەکانی کۆتایی لەلایەن سەرنوسەرەوە دادەبەزێندرێن لە ژێر, uploaded below "
+"under <span class=\"pkp_help_title\">فایلی پەسەندکراوی</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "فایلی تابلۆ دیاری بکە"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"سەرنوسەر ئەم فایلانە بۆ هەر نوسخەیەک دیاری دەکات و دواتر لە شوێنی گونجاوی <"
+"span class=\"pkp_help_title\">بەڵگەکان</span> هەڵسەنگاندنی زمانی بڵاوی "
+"دەکاتەوە."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "تابلۆی ئەم ژمارەیە دەستکاری بکە"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "ڕێککەوتی دەستپێڕاگەیشتن بەردەست نییە."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"ئایا تۆ دڵنیایت لە سڕینەوەی ئەم توێژینەوەیە لەم ژمارەیە؟ توێژینەوەکە لە "
+"ژمارەیەکی دیکەدا بەردەست دەبێت."
+
+msgid "editor.article.remove"
+msgstr "بیسڕەوە"
+
+msgid "grid.action.removeArticle"
+msgstr "ئەم توێژینەوەیە لەم ژمارەیە بسڕەوە"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"وێنەی سەر بەرگ کە تۆ دەتەوێ بیسڕیتەوە، نەدۆزرایەوە. لەوانەیە پێشتر "
+"سڕابێتەوە. تکایە پەڕەکە نوێ بکەوە."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"تێچوی توێژینەوەکە نەدراوە. بۆ ئەوەی توێژینەوەکە دابنێیتەوە کە بڵاو ببێتەوە، "
+"توێژەر ئاگادار بکەوە بۆ ئەوەی تێچووەکەی بدات."
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "بۆ ئەوەی ئەرکدار بکرێت"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "پلان بۆ بڵاوکردنەوەی ئەمە دابنێ لە ڕێککەوتی"
+
+msgid "editor.article.editMetadata"
+msgstr "زانیاریی ناسێنەری ئەم وەشانە دەستکاری بکە"
+
+msgid "editor.article.viewMetadata"
+msgstr "زانیاریی ناسێنەری ئەم وەشانە پیشان بدە"
+
+msgid "editor.article.publishVersion"
+msgstr "ئەم وەشانە بڵاو بکەوە"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "پیشاندانی بڵاوکردنەوەکانی داهاتو"
+
+msgid "editor.submissions.inSection"
+msgstr "لەم بەشە"
+
+msgid "editor.submissions.assignedTo"
+msgstr "ئەرکدار کراوە بۆ"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "دواهەمین تەواوکراو"
+
+msgid "editor.submissions.averageTime"
+msgstr "هەفتەکان"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "دواهەمین"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "هیچ پێشکەشکردنێک نییە"
+
+msgid "editor.submissions.accept"
+msgstr "قبوڵ بکە"
+
+msgid "editor.submissions.invite"
+msgstr "بانگێشت بکە"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "ئەرکە چالاکەکان"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "MM-DD پێشکەش بکە"
+
+msgid "editor.submissions.showBy"
+msgstr "پیشانی بدە لە ڕێگای"
+
+msgid "editor.article.decision"
+msgstr "بڕیار"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "فایلە رەسەنەکان وەک وەشانی پێداچونەوە دیزاین بکە"
+
+msgid "editor.navigation.issueArchive"
+msgstr "ژمارەکانی پێشوتر"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "دوایین ژمارەی گۆڤار ڕێک بخە"
+
+msgid "grid.action.addIssueGalley"
+msgstr "تابلۆی ئەم ژمارەیە دروست بکە"
+
+msgid "grid.action.previewIssue"
+msgstr "پیشاندانی پێشوەختە"
+
+msgid "grid.action.viewIssue"
+msgstr "پیشان بدە"
+
+msgid "grid.action.addIssue"
+msgstr "ژمارەیەکی گۆڤار دروست بکە"
+
+msgid "grid.action.publish"
+msgstr "ئەم ژمارەیە بڵاو بکەوە"
+
+msgid "grid.action.addGalley"
+msgstr "تابلۆیەک زیاد بکە"
+
+msgid "editor.navigation.futureIssues"
+msgstr "ژمارەکانی داهاتو"
+
+msgid "editor.issues.identifiers"
+msgstr "ناسێنەرەکان"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "ئایا تۆ دڵنیایت لە سڕینەوەی تابلۆی ئەم ژمارەیە؟"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "بگەڕێوە بۆ تابلۆی ژمارەکان"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "پێناسەی تابلۆی گشتیی ئەم ژمارەیە هەیە."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "شوێنی تابلۆی ئەم ژمارەیە داواکراوە."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "ناونانی تابلۆی ئەم ژمارەیە داواکراوە."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "تابلۆی هیچ ژمارەیەک بڵاو نەکراوەتەوە."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "تابلۆی ئەم ژمارەیە بە تەواوی ناوەرۆکەکەیەوە بڵاو بکەوە."
+
+msgid "editor.issues.viewingGalley"
+msgstr "پیشاندانی تابلۆی ژمارە"
+
+msgid "editor.issues.galley"
+msgstr "تابلۆی ژمارە"
+
+msgid "editor.issues.galleys"
+msgstr "تابلۆی ئەم ژمارەیە"
+
+msgid "editor.issues.pages"
+msgstr "پەڕەکان"
+
+msgid "editor.issues.open"
+msgstr "بیکەوە"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "هیچ ژمارەیەکی گۆڤار بەردەست نییە"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "ناسنامەی گشتی بۆ ئەم توێژینەوەیە خەزن ناکرێت:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "ئایا تۆ دڵنیایت لە دیاریکردنی ئەم ژمارەیە وەک دوا ژمارە؟"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr ""
+"ئایا تۆ دڵنیایت لە پەشیمانبونەوە و شاردنەوەی ئەو ژمارەیەی کە پێشتر بڵاوت "
+"کردووەتەوە؟"
+
+msgid "editor.issues.confirmPublish"
+msgstr "ئایا تۆ لە بڵاوکردنەوەی ژمارەیەکی نوێی گۆڤار دڵنیایت؟"
