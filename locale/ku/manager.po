@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2020-04-07 02:31+0000\n"
-"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Last-Translator: Hawkar Aziz Mustafa <hawkar.musstafa@gmail.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/ku/>"
 "\n"
 "Language: ku\n"
@@ -154,3 +154,25 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "دەستپێگەیشتن"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "باسکردنی تەوای بڕی پارە"
+
+msgid "manager.payment.options.fee"
+msgstr "بڕی پارە"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"دەتوانرێت پارە بدرت بۆ ئەو گۆڤارە. تێبینی: ئەو بەکارهێنەرە داوای لێدەکرێیت "
+"کە بچێتە ناو هەژمارەکەیەوە بۆ ئەوەی پارەکە بدات."
+
+msgid "manager.payment.success"
+msgstr "ڕێکخستنەکان پارەدان تازەکراوەتەوە."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "ئایە تۆ دڵنیایت کە دەتەوێت لەبەشداریکردن ڕەشبکرێیتەوە؟"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"ئەوە پارەدان بۆ جالاک کردنی بەشداربوون ئەنجامدەدات، کە نوسین، تێچوو ماوە و "
+"بەشداربوون بەڕێوەدەبرێت لە لایەن بەڕێوەبەرری بەشداربوانەوە."
