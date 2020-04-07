@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-07 02:31+0000\n"
+"PO-Revision-Date: 2020-04-07 02:52+0000\n"
 "Last-Translator: Hawkar Aziz Mustafa <hawkar.musstafa@gmail.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/ku/>"
 "\n"
@@ -176,3 +176,58 @@ msgid "manager.payment.options.acceptSubscriptionPayments"
 msgstr ""
 "ئەوە پارەدان بۆ جالاک کردنی بەشداربوون ئەنجامدەدات، کە نوسین، تێچوو ماوە و "
 "بەشداربوون بەڕێوەدەبرێت لە لایەن بەڕێوەبەرری بەشداربوانەوە."
+
+msgid "manager.people.allUsers"
+msgstr "هەموو بەکارهێنەرانی تۆمار کراو"
+
+msgid "manager.people.showNoRole"
+msgstr "بەکارهێنەران نمشان بدە بە بێ ئەرکەکانیان"
+
+msgid "manager.people.allSiteUsers"
+msgstr "بەکارهێنەرێک تۆماربکە لەو  وێبسیتە لە ناو ئەو گۆڤارە"
+
+msgid "manager.people.allJournals"
+msgstr "هەموو گۆڤارەکان"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "بەکارهێنەرانی خۆیان تۆمارکردوە لەو گۆڤارە"
+
+msgid "manager.payment.userName"
+msgstr "ناسنامەی پارەدان"
+
+msgid "manager.paymentTypes"
+msgstr "جۆرەکانی پارەدان"
+
+msgid "manager.payment.readerFees"
+msgstr "بڕی پارەی خوێنەر"
+
+msgid "manager.payment.paymentType"
+msgstr "جۆری پارەدان"
+
+#, fuzzy
+msgid "manager.payment.paymentMethods"
+msgstr "ڕێگای  پارەدانی  بڕی پارە"
+
+msgid "manager.payment.paymentMethod"
+msgstr "ڕێگاکانی پارەدان"
+
+#, fuzzy
+msgid "manager.payment.paymentId"
+msgstr "ناسنامەی پارەدان"
+
+msgid "manager.payment.options.text"
+msgstr "باسکردنی ڕێگاکانی  پارەدان"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "کڕینی تەوای ژمارەی گۆڤارەکە"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "کڕینی توێژینەوە"
+
+#, fuzzy
+msgid "manager.payment.options.publicationFee"
+msgstr "پارەی پرۆسێسکردنی توێژینەوە"
+
+#, fuzzy
+msgid "manager.payment.options.membershipFee"
+msgstr "پارەدانی ئەندامبونی کۆمەڵە"
