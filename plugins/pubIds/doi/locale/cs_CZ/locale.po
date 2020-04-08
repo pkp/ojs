@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
+"PO-Revision-Date: 2020-04-03 16:13+0000\n"
+"Last-Translator: Michal Jelínek <jelinek@synetix.cz>\n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/cs/"
+">\n"
+"Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:00+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -90,7 +93,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequire
 msgstr "Zadejte, prosím, vzor DOI suffixu pro sazebnice."
 
 msgid "plugins.pubIds.doi.manager.settings.doiReassign"
-msgstr "Znovu přidělit DOI."
+msgstr "Znovu přidělit DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
 msgstr "Změníte-li konfiguraci DOI, DOI, které již byly přiřazeny, nebudou ovlivněny. Jakmile je konfigurace DOI uložena, použijte toto tlačítko pro vymazání všech stávajících DOI tak, aby se nová nastavení projevila i u stávajících objektů."
@@ -160,3 +163,37 @@ msgstr "Přiřadit DOI všem objektům všech publikovaných časopisů, které 
 
 msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr "Jste si jisti, že chcete přidělit DOI všem publikovaným objektům, které doposud neměly přiděleno DOI?"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Položka"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Sazebnice: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Do této publikace nebyl přiřazen DOI."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "DOI pro tuto publikaci bude {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI musí začínat {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Nelze vygenerovat DOI, protože v jedné nebo více částech DOI vzoru chybí "
+"data. Možná budete muset publikaci přiřadit problém, nastavit ID vydavatele "
+"nebo zadat čísla stránek."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Dokud nebude tato publikace přiřazena k číslu, nemůžete vygenerovat DOI."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Přiřadit"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI musí začínat {$prefix}."
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Články"
