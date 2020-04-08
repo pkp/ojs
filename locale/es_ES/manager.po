@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2020-02-06 19:21+0000\n"
+"PO-Revision-Date: 2020-04-02 04:15+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/manager/es/>"
 "\n"
@@ -558,10 +558,12 @@ msgid "manager.setup.lists"
 msgstr "Listas"
 
 msgid "manager.setup.plnPluginEnable"
-msgstr "Módulo PKP PN activado"
+msgstr "Habilitar el módulo PKP PN"
 
 msgid "manager.setup.plnDescription"
-msgstr "La Red de Preservación de PKP (PKP Preservation Network, en inglés) proporciona servicios gratuitos de preservación para cualquier revista OJS que cumpla con los criterios básicos."
+msgstr ""
+"PKP Preservation Network (PN) proporciona servicios gratuitos de "
+"preservación para cualquier revista OJS que cumpla con unas normas básicas."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
@@ -572,10 +574,14 @@ msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
-msgstr "PKP Preservation Network (PN) proporciona servicios gratuitos de preservación para cualquier revista OJS que cumpla con los criterios básicos. El módulo PKP PN para OJS 3 está actualmente en desarrollo y estará disponible el la garería de módulos pronto."
+msgstr ""
+"PKP Preservation Network (PN) proporciona servicios gratuitos de "
+"preservación para cualquier revista OJS que cumpla con unas normas básicas. "
+"El módulo PKP PN para OJS 3 está actualmente en desarrollo y estará "
+"disponible en la galería de módulos pronto."
 
 msgid "manager.setup.otherLockss"
-msgstr "Opciones alternativas de archivo"
+msgstr "LOCKSS y CLOCKSS"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
@@ -729,7 +735,7 @@ msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Acceso para los revisores/as"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Habilitar el acceso de los revisores/as con un solo clic"
+msgstr "Acceso para revisores/as con un solo clic"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Nota:</strong> La invitación por correo electrónico para revisores/as contendrá una dirección URL especial que dirige a los revisores/as directamente a la página de revisión para el envío (con acceso a cualquier otra página que requiera iniciar sesión). Por razones de seguridad, los editores/as no pueden modificar las direcciones de correo electrónico o añadir direcciones en copia o copia oculta antes de enviar las invitaciones a los revisores/as."
@@ -1035,7 +1041,7 @@ msgid "manager.institutionalSubscriptions"
 msgstr "Suscripciones institucionales"
 
 msgid "manager.subscriptions.confirmDelete"
-msgstr "¿Está seguro/a de que desea eliminar esta suscripción?"
+msgstr "¿Seguro que desea eliminar esta suscripción?"
 
 msgid "manager.subscriptions.summary"
 msgstr "Resumen de suscripciones"
@@ -1347,7 +1353,9 @@ msgid "manager.subscriptionTypes.form.institutionalValid"
 msgstr "Utilice las opciones proporcionadas."
 
 msgid "manager.subscriptionTypes.form.membership"
-msgstr "Las suscripciones requieren información sobre la afiliación<br />(p. ej., de una asociación, organización, sociedad mercantil, etc.)"
+msgstr ""
+"Las suscripciones requieren información sobre la afiliación (p. ej., una "
+"asociación, una organización, una sociedad mercantil, etc.)"
 
 msgid "manager.subscriptionTypes.form.membershipValid"
 msgstr "Utilice las casillas de verificación proporcionadas."
@@ -1498,8 +1506,8 @@ msgstr "Número: el año por defecto provendrá de la fecha de publicación del 
 
 msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
-"¿Está seguro de que desea reiniciar los datos sobre permisos de todos los "
-"artículos? Esta acción no puede deshacerse."
+"¿Seguro que desea reiniciar los datos sobre permisos de todos los artículos? "
+"Esta acción no puede deshacerse."
 
 msgid "grid.genres.title.short"
 msgstr "Componentes"
@@ -1610,7 +1618,7 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Enviar una copia al contacto principal identificado en los ajustes de la revista."
 
 msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "¿Está seguro de que desea eliminar la suscripción?"
+msgstr "¿Seguro que desea eliminar esta suscripción?"
 
 msgid "manager.paymentTypes"
 msgstr "Tipos de pago"
@@ -1642,7 +1650,7 @@ msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
 msgstr "Notificar a los suscriptores por correo electrónico antes de la caducidad de la suscripción."
 
 msgid "manager.subscriptions.confirmRenew"
-msgstr "¿Está seguro de que desea renovar la suscripción?"
+msgstr "¿Seguro que desea renovar la suscripción?"
 
 msgid "manager.navigationMenus.subscriptions.description"
 msgstr "Enlazar con una página que describa las suscripciones disponibles."
