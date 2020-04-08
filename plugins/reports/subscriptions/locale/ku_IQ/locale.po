@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-08 11:27+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/ku_IQ/>\n"
+"Language: ku_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "مەوداکانی IP"
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "ناونیشانی پۆستی ڕێکخراوەکە"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "ڕاپۆرتی بەشداریکردن"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"ئەم گرێدانە ڕاپۆرتێک بە شێوەی CSV دەخاتە بەردەست کە لیستی ناوی ئەو کەسانەی "
+"ئیشتراکیان کردووە و زانیارییەکانیانی تێدایە."
