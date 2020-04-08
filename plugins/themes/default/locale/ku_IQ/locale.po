@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-05 14:49+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/ku/>\n"
+"Language: ku_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "وێنەی پاشبنەمای سەرپەڕە"
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "پوختەی گۆڤار لە پەڕی سەرەکی پیشان بدە."
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "ڕەنگ هەڵبژێرە بۆ سەرپەڕە."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "ڕەنگ"
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "چاپکاری"
+
+msgid "plugins.themes.default.name"
+msgstr "ڕووکاری بنەڕەتی"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "وێنەی پەڕەی سەرەکی لە پاشبنەمای سەرپەڕە پیشان بدە."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"کاتێک وێنەی پەڕەی سەرەکی بار کرا، لە پاشبنەمای سەرپەڕە دەردەکەوێت لە جیاتی "
+"جێگای خۆی لە پەڕەی سەرەکی."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: شێوەی تەواوی فۆنتی serif بۆ سەرە بابەتەکان sans-serif بۆ ناو "
+"دەق."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: فۆنتی serif بۆ خوێندنەوە لە ئۆنلاین گونجاوە."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: فۆنتی sans-serif نوێ و بەربڵاو."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: فۆنتی تەواوی  sans-serif بۆ سەرە بابەتەکان و serif ناو "
+"دەقەکان."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: شێوازی تەواوی فۆنتی serif بۆ سەرە بابەتەکان و sans-"
+"serif ناو دەقەکان."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr ".Noto Serif: یەکێک لە فۆنتە ڕەسەنەکانی گوگڵ"
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: فۆنتی دیجیتاڵیی ڕەسەن کە لە لایەن گوگڵەوە دیزاین کراوە بە مەبەستی "
+"پاڵپشتیی چڕی زمان."
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "فۆنتێک هەڵبژێرە کە لەگەڵ ئەم گۆڤارە بگونجێت."
+
+msgid "plugins.themes.default.description"
+msgstr "ئەمە ڕوکاری بنەڕەتییە."

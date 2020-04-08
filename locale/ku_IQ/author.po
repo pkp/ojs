@@ -1,0 +1,371 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-07 12:00+0000\n"
+"Last-Translator: avin a hama <avinasoshama@gmail.com>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/author/ku/>"
+"\n"
+"Language: ku_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"ئەژمارێکی کەسی پێویستە بۆ ئەوەی ڕەشنوسی توێژینەوەکەت بۆ ئەم گۆڤارە بنێریت. "
+"ئەمە ڕێگا بە سەرنوسەرەکانمان دەدات کە ڕەشنوسەکە ببینن و پەیوەندیت پێوە بکەن "
+"کاتێک گۆڕانکاری ڕو دەدات یان زانیاری زیاتریان پێوست دەبێت."
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"بۆ ناردنی ڕەشنوسەکەت بۆ{$journalTitle} کلیک لەسەر (ناردنی توێژینەوە) بکە. "
+"لایەنی سەرەکیی پەیوەندیدار بە شێوەی ئیمەیڵ داواکرییەکەیان بەدەست دەگات، تۆ "
+"دەتوانی زانیاری لەسەر قۆناغەکانی بڵاوکردنەوەی توێژینەوەکە بزانین بە "
+"سەردانیکردنی پێگەی ئەلیکترۆنیی گۆڤار. سوپاس بۆ ناردنی توێژینەوەکەت بۆ "
+"{$journalTitle}."
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"فایلەکە بنێرە بۆ هەڵسەنگێنەران (بەبێ زانیارییە کەسییەکان)، ئەگەر ئەمە "
+"پێچەوانەی یاساکانی هەڵسەنگاندنی نهێنی نییە."
+
+msgid "author.article.authorRevisedFile"
+msgstr "فایلی نوسەر"
+
+msgid "author.article.copyeditedFile"
+msgstr "فایلی پەسەندکراوی سەرنوسەر"
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "ناسێنەری فایلی پاشکۆی گشتی"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "پێناسەی فایلی پاشکۆی گشتی بەردەستە."
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"بۆ پێنوێنی ئەم پاشکۆیانە، ئەم زانیارییە ناسێنەرانەی خوارەوە بۆ فایلە پاشکۆکە "
+"زیاد بکە."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "نوسخەی نوسەر بار بکە"
+
+msgid "author.submit.submissionComplete"
+msgstr "توێژینەوەکەت پێشکەش کرا. سوپاس بۆ هەڵبژاردنی گۆڤاری  {$journalTitle}."
+
+msgid "author.submit.finishSubmission"
+msgstr "پێشکەش بکە"
+
+msgid "author.submit.filesSummary"
+msgstr "پوختەی فایلە پێشکەشکراوەکان"
+
+msgid "author.submit.noFiles"
+msgstr "هیچ فایلێک بۆ ئەم پێشکەشکردنە بار نەکراوە."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "تکایە ناساندنێک بنوسە."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "تکایە، ناونیشانی بابەتەکە بنوسە."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "تکایە ناونیشانی ئەم فایلە پاشکۆیە بنوسە."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "هیچ فایلێک بار نەکراوە."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "یەکێکی دیکە دیاری بکە"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr ".ناوی توێژینەوە یان سەچاوەی شتێکی دیکە"
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "ڕێککەوتی کۆکردنەوەی داتا یان دروستکردنی کەرەستەی توێژینەوە."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr ".تەنیا بۆ بەکارهێنان لەگەڵ ئەو شتانەی کە بە فەرمی بڵاو کراونەتەوە"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "ناساندنێکی کورت"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "سەرچاوەی دەق"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "سێتی داتاکان"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "شیکردنەوەی داتا"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "دەقەکان"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "ئەنجامەکانی توێژینەوەکە"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "کەلوپەلی توێژینەوە"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "کەرەستەی توێژینەوە"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "دروستکەر (یان خاوەن)ی فایلەکە"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "فایلی پاشکۆ"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "فایلی پاشکۆی زانیارییەکان"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "گۆڕینی فایلی پاشکۆ"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "فایلێکی پاشکۆ زیاد بکە"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "بارکردنی فایلی پاشکۆ"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "ئایا تۆ لە سڕینەوەی فایلی پاشکۆ دڵنیایت؟"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "گەڕانەوە بۆ فایلە پاشکۆکان"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "هیچ فایلێکی پاشکۆ بۆ ئەم توێژینەوەیە زیاد نەکراوە."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"ئایا تۆ دڵنیایت لە بەردەوامبون بێ ئەوەی فایلی پاشکۆ بار بکەیت کە دیاریت "
+"کردووە؟"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"کلیک لەسەر پاراستن بکە بۆ بارکردنی فایلەکە (دوای ئەمە فایلەکانی دیکەش دەکرێت "
+"بار بکرێن)."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"ئەم هەنگاوە ئارەزومەندانەیە کە ڕێگا بە زیادکردنی فایلی پاشکۆ دەدات. فایلەکان "
+"دەکرێت بە فۆڕماتی جیاواز بن، بۆ نمونە کەرەستەی توێژینەوە، سێتی داتا، کە "
+"دەبێت لەگەڵ ئەخلاقی توێژینەوە بگونجێت، ئەو سەرچاوانەی کە ئەگەر بەم شێوەیە "
+"نەبێت بەردەست نابن بۆ خوێنەر، خشتە و وێنەی کە ناکرێت هاوپێچی ناو دەقی "
+"توێژینەوەکە بکرین، یان هەر فایلێکی دیکەی پەیوەندیدار بە توێژینەوەکە."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr ""
+"ئایا تۆ دڵنیایت لە بەردەوامبون بەبێ ئەوەی فایلی توێژینەوەکەت پێشکەش بکەیت؟"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "هیچ فایلێک بۆ پێشکەشکردن بار نەکراوە."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "گۆڕینی فایلی پێشکەشکردن"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "بارکردنی فایل بۆ پێشکەشکردن"
+
+msgid "author.submit.submissionFile"
+msgstr "فایلی پێشکەشکردن"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ".ژمارەی وشەکانت زیاترە لە ژمارەی دیاریکراو"
+
+msgid "author.submit.form.abstractRequired"
+msgstr ".تکایە پوختەی توێژینەوەکەت لێرە بنوسە"
+
+msgid "author.submit.form.titleRequired"
+msgstr "تکایە ناونیشانی توێژینەوەکەت لێرە بنوسە."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr ""
+"زانیارییەکان: (ناوی یەکەم، ناسناو یان ناوی باپیر ئەگەر نییە، ئیمەیڵ) لە هەمو "
+"توێژەرێک داواکراوە."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+".ئاماژەکردن بە پێگە جوگرافی و ڕوداوە مێژوییەکان و/یان تایبەتمەندییەکانی "
+"نمونەی توێژینەوە"
+
+msgid "author.submit.form.authorRequired"
+msgstr "لانیکەم دەبێت ناوی توێژەرێک بنوسرێت."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">هێمای زمانەکانی دیکە</a>."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"پابەندی زیاد بکە بۆ ناوەرۆکی توێژینەوەکە، پابەنبونەکان بە فاریزە لەیەکتر جیا "
+"بکەوە (بە ڕێنوسی زمانی ئینگلیزی تکایە) بەم شێوەیە دەردەکەوێت: (پابەندبونی1; "
+"پابەندبونی2; پابەندبونی3)."
+
+msgid "author.submit.deleteAuthor"
+msgstr "توێژەرێک  بسڕەوە"
+
+msgid "author.submit.addAuthor"
+msgstr "توێژەرێک زیاد بکە"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr ".پەیوەندیگرتن لەگەڵ سەرنوسەر"
+
+msgid "author.submit.reorder"
+msgstr "ڕیزبەندیی ناوی توێژەرەکان"
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"ڕیزبەندیی توێژەرەکان دیاری بکە بۆ ئەوەی لە کاتی بڵاوکردنەوە بەمجۆرە "
+"دەربکەوێت کە خۆت ئارەزوی دەکەیت."
+
+msgid "submission.submit.privacyStatement"
+msgstr "تایبەتمەندییەکانی گۆڤارەکە"
+
+msgid "author.submit.form.localeRequired"
+msgstr "تکایە یەکێک لە زمانەکان دیاری بکە بۆ پێشکەشکردن."
+
+msgid "author.submit.form.sectionRequired"
+msgstr ""
+"تکایە ئەو بەشەی گۆڤارەکە دیاری بکە کە لەگەڵ پێشکەشکردنەکەی تۆدا دەگونجێت."
+
+msgid "author.submit.comments"
+msgstr "شتێک بنوسە (ئارەزومەندانەیە)"
+
+msgid "submission.submit.coverNote"
+msgstr "تێبینییەکانت بۆ سەرنوسەر"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"دەبیت تۆ ڕازی ببیت بە مەرجەکانی خاوەندارێتی پێش ئەوەی بچیتە قۆناغی دواتر."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"توێژەران ڕازین بە مەرجەکانی خاوەندارێتی، کە ئەم توێژینەوەیەش دەگرێتەوە لە "
+"کاتی پێشکەشکردن یان بڵاوبونەوە لە گۆڤاردا (دەتوانیت لە خوارەوە تێچێن بۆ "
+"سەرنوسەری گۆڤار بنوسیت)."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"پێش ئەوەی بچیتە قۆناغی دواتر، دەبێت دڵنیا ببیتەوە کە هەمو یەکەکان بەردەستن."
+
+msgid "author.submit.journalSectionDescription"
+msgstr ""
+"(بەشێکی گونجاو بۆ پێشکەشکردنەکەت هەڵبژێرە(تەماشای بەش و رێنماییەکانی "
+"بڵاوکردنەوە بکە"
+
+msgid "author.submit.journalSection"
+msgstr "بەشی گۆڤار"
+
+msgid "author.submissions.noSubmissions"
+msgstr ".هیچ پێشکەشکردنێکت نییە"
+
+msgid "author.submissions.viewStatus"
+msgstr "پیشاندانی بارودۆخ"
+
+msgid "author.submissions.confirmDelete"
+msgstr ""
+"ئایا تۆ دڵنیایت لە سڕینەوەی ئەم پێشکەشکردنە سەرەڕای ئەوەی تەواونەکراوە ؟"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "راستکردنەوەی رێزمانی و رێنوس"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "بارکردنی نوسخەیەک کە گۆڕانکاری تێدا بکرێت"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "لە چاککردن دایە؛ پێویست بە راستکردنەوەی رێنوس و رێزمان دەکات"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "لە دەستکاریکردن دایە: نوسخەی چاککراو داواکراوە"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "لە قۆناغی هەڵسەنگاندن دایە: پێداچونەوەی پێویستە"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "لە قۆناغی هەڵسەنگاندن دایە"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"ئەگەر تۆ داوای گێڕانەوەی بڕی پارەی تێچون دەکەیت، دەبێت هۆکاری داواکارییەکەت "
+"بە ڕوونی بنوسیت."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "تکایە لە خوارەوە تێبینی خۆت بنوسە کە بۆچی ئەم تێچووە دەبێت بگێڕدرێتەوە."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "تکایە بڕیار لەسەر گێڕانەوەی تێچوی ئەم توێژینەوەیە بدە"
+
+msgid "author.submit.requestWaiver"
+msgstr "داواکاریی پاشگەزبونەوە"
+
+msgid "author.submit.notAccepting"
+msgstr "ئەم گۆڤارە لە ئێستادا توێژینەوەی نوێ وەرناگرێت."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+". دەتوانیت دواتر پێشکەشکردنەکەت تەواو بکەیت بە دیاریکردنی (پێشکەشکردنی چالاک)"
+" لە پەڕەی سەرەکیی توێژەر"
+
+msgid "author.submit.nextSteps"
+msgstr "هەنگاوی دواتر"
+
+msgid "author.submit.confirmation"
+msgstr "پشتڕاستکردنەوە"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "فایلە تەواوکارییەکان بار بکە"
+
+msgid "author.submit.metadata"
+msgstr "زانیارییەکان داخل بکە"
+
+msgid "author.submit.upload"
+msgstr "فایلە داواکراوەکان بار بکە"
+
+msgid "author.submit.start"
+msgstr "دەستپێکردن"
+
+msgid "author.submit.step5"
+msgstr "هەنگاوی پێنجەم: دڵنیابونەوە لە پێشکەشکردنەکەت"
+
+msgid "author.submit.step4a"
+msgstr "هەنگاوی چوارەم: فایلێکی تەواوکاری زیاد بکە"
+
+msgid "author.submit.step4"
+msgstr "هەنگاوی چوارەم: فایلە تەواوکارییەکان بار بکە"
+
+msgid "author.submit.step3"
+msgstr "هەنگاوی سێیەم: زانیارییەکانت داخل بکە"
+
+msgid "author.submit.step2"
+msgstr "هەنگاوی دووەم: بارکردنی فایلەکان"
+
+msgid "author.submit.step1"
+msgstr "هەنگاوی یەکەم: دەستپێکردنی پێشکەشکردن"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">کلیک لێرە بکە</a> بۆ دەستپێکردنی "
+"هەنگاوی یەکەم."
+
+msgid "author.submit.startHereTitle"
+msgstr "داواکارییەکی نوێ بۆ پێشکەشکردنی توێژینەوەیەک دەست پێ بکە"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "پێنج هەنگاو بۆ پێشکەشکردنی توێژینەوە"
+
+msgid "author.submit.submitArticle"
+msgstr "توێژینەوەیەک پێشکەش بکە"
+
+msgid "author.competingInterests"
+msgstr ""
+"<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}"
+"\">سیاسەتی بەڕێوەبردن</a> بەرژەوەندییەکان&nbsp;پێشبڕکێ"
+
+msgid "author.track"
+msgstr "چالاککردنی توێژینەوە نێردراوەکان"
+
+msgid "author.submit"
+msgstr "داواکاری بڵاوکردنەوەی نوێ"
