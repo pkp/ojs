@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-08 22:43+0000\n"
-"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
+"PO-Revision-Date: 2020-04-09 18:10+0000\n"
+"Last-Translator: Muhammed K. Saedgul <muhammed.barzinji@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -204,33 +204,29 @@ msgstr "بڕی پارەی خوێنەر"
 msgid "manager.payment.paymentType"
 msgstr "جۆری پارەدان"
 
-#, fuzzy
 msgid "manager.payment.paymentMethods"
-msgstr "ڕێگای  پارەدانی  بڕی پارە"
+msgstr "شێوازەكانى پارەدان"
 
 msgid "manager.payment.paymentMethod"
 msgstr "ڕێگاکانی پارەدان"
 
-#, fuzzy
 msgid "manager.payment.paymentId"
-msgstr "ناسنامەی پارەدان"
+msgstr "ژمارەى پارەدان"
 
 msgid "manager.payment.options.text"
-msgstr "باسکردنی ڕێگاکانی  پارەدان"
+msgstr "روونكردنەوەى ڕێگاکانی  پارەدان"
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr "کڕینی تەوای ژمارەی گۆڤارەکە"
+msgstr "تەواوى ئەم ژمارەيە بكڕە"
 
 msgid "manager.payment.options.purchaseArticleFee"
-msgstr "کڕینی توێژینەوە"
+msgstr "وتارێك بكڕە"
 
-#, fuzzy
 msgid "manager.payment.options.publicationFee"
-msgstr "پارەی پرۆسێسکردنی توێژینەوە"
+msgstr "تێچووى پرۆسێسکردنی توێژینەوە"
 
-#, fuzzy
 msgid "manager.payment.options.membershipFee"
-msgstr "پارەدانی ئەندامبونی کۆمەڵە"
+msgstr "ئەندامبون"
 
 msgid "manager.setup.emailBounceAddress.description"
 msgstr ""
@@ -528,7 +524,7 @@ msgid "manager.payment.paymentMethod.description"
 msgstr "تۆ دەتوانیت هەر کام لەم شێوازی پارەدانانەی کە هەن ساز بدەیت."
 
 msgid "manager.payment.options.onlypdf"
-msgstr "تەنیا دەستپێگەیشتنی وەشانی PDF ڕێگە پێ دراوە."
+msgstr "تەنها ڕێگەپێدانى سنووردار بۆ گەيشتن بە PDF ى گوتار و لاپەڕەكانى"
 
 msgid "manager.payment.options.feeName"
 msgstr "ناوی پارەدان"
