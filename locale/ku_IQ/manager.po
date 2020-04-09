@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-09 18:10+0000\n"
-"Last-Translator: Muhammed K. Saedgul <muhammed.barzinji@koyauniversity.org>\n"
+"PO-Revision-Date: 2020-04-10 23:37+0000\n"
+"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -696,3 +696,37 @@ msgstr "واژۆ"
 
 msgid "manager.setup.emails"
 msgstr "پێناسی ئیمەیڵ"
+
+msgid "manager.setup.journalLayout"
+msgstr "نەخشەی گۆڤارەکە"
+
+msgid "manager.setup.contextInitials"
+msgstr "کورتکراوەی ناوی گۆڤارەکە"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"وەشانێکی وێنەیی  لۆگۆ و ناونیشانی گۆڤارەکە (وەکو فایلێکی جی ئای ئێف، جی پی "
+"جەی، پی ئێن جەی) دەتواندرێت باربکرێت لە پەڕەی سەرەکی، کە جێگای وەشانی دەقەکە "
+"دەگرێتەوە ئەگەر بەدەربکەێت."
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "سەرپەڕی پەڕەی سەرەکی گۆڤار"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "سەرپەڕی پەڕەی سەرەکی گۆڤار"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"بە شێوەیەکی ئاسایی، پەڕەی سەرەکی پێکدێت لە بەستەرەکانی ڕێنیشاندەر. ناوەڕۆکی "
+"زیادەی پەڕی سەرەکی دەتواندرێت زیادبکرێت بە بەکارهێنانی یەکێک یان هەموو "
+"بژاردەکانی خوارەوە، کە بەو شێوە ڕیزبەندییە دەردەکەون کە خراوەتە ڕوو. ئەوە "
+"بزانە کە ژمارەی ئێستای گۆڤارەکە هەمیشە بەردەستە لە ڕێگای بەستەری ئێستا لە "
+"شریتی ڕێنیشاندەر."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"بۆ ناردنی ئیمێڵە نەگەیشتووەکان بۆ ناونیشانیك کە ئیمێڵکانی بە هۆی هەڵەوە "
+"گەڕاوەتەوە، بەڕێوەبەری سایتەکە پێویستە بژاردەی  "
+"<code>allow_envelope_sender</code> چالاک بکات لە فایلی رێکخستنی سایتەکە. "
+"رێکخستنی ڕاژە (سیرڤەر) پێویستە، هەروەک لە بەڵگەنامەکانی سیستەمی گۆڤاری "
+"کراوەدا ئاماژەی پێدراوە."
