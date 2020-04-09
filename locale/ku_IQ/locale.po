@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-08 22:43+0000\n"
+"PO-Revision-Date: 2020-04-09 18:10+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ku_IQ/>\n"
@@ -1078,3 +1078,182 @@ msgid "common.confirmComplete"
 msgstr ""
 "ئایا تۆ دڵنیایت لە هەڵبژاردنی ئەم ئەرکە وەک ئەرکێکی تەواوکراو؟ لەوانەیە "
 "دواتر نەتوانیت گۆڕانکاری تێدا بکەیت."
+
+msgid "about.editorialTeam.biography"
+msgstr "ژیاننامە"
+
+msgid "about.editorialTeam"
+msgstr "دەستەی سەرنوسەران"
+
+msgid "about.history"
+msgstr "مێژوی گۆڤارەکە"
+
+msgid "about.aboutContext"
+msgstr "دەربارەی گۆڤارەکە"
+
+msgid "about.contact"
+msgstr "پەیوەندی"
+
+msgid "about.statistics"
+msgstr "ئامارەکان"
+
+msgid "archive.issueUnavailable"
+msgstr "ئەم ژمارەیە بەردەست نییە"
+
+msgid "archive.browse"
+msgstr "پیشاندانی ژمارەکانی پێشتر"
+
+msgid "archive.archivesPageNumber"
+msgstr "ئەرشیفەکان - پەڕە {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "ئەرشیف"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "ئەم گۆڤارە هیچ ژمارەیەکی لێ بڵاو نەکراوەتەوە."
+
+msgid "current.noCurrentIssue"
+msgstr "دواهەمین ژمارە بەردەست نییە"
+
+msgid "current.current"
+msgstr "ئەژماری ئێستا"
+
+msgid "site.noJournals"
+msgstr "هیچ گۆڤارێک بەردەست نییە."
+
+msgid "site.journalCurrent"
+msgstr "دواهەمین ژمارە"
+
+msgid "site.journalRegister"
+msgstr "تۆمارکردن"
+
+msgid "site.journalView"
+msgstr "پیشاندانی گۆڤار"
+
+msgid "site.journalsHosted"
+msgstr "گۆڤارەکان لەم پەڕەیەدا میوانداری کراون"
+
+msgid "article.nonpdf.title"
+msgstr "دابەزاندنی توێژینەوە"
+
+msgid "article.download"
+msgstr "دابەزاندنی ئەم فایلە PDFە"
+
+msgid "article.pdf.title"
+msgstr "PDF"
+
+msgid "article.pageTitle"
+msgstr "بینینی  {$title}"
+
+msgid "search.authorDetails"
+msgstr "زانیارییەکانی توێژەر"
+
+msgid "search.authorIndex"
+msgstr "پیشاندانی پێنوێنی نوسەر"
+
+msgid "search.allJournals"
+msgstr "هەمو گۆڤارەکان"
+
+msgid "search.withinJournal"
+msgstr "لەناو"
+
+msgid "search.searchFor"
+msgstr "گەڕان بۆ توێژینەوەکان لە"
+
+msgid "search.browseAuthorIndex"
+msgstr "پیشاندانی پێنوێنی نوسەر"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "زیادکردن"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "سڕینەوە"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "تکایە دۆمەینێکی بەردەست داخل بکە."
+
+msgid "user.subscriptions.form.domain"
+msgstr "دۆمەین"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "ناونیشانی پۆستی"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "ناوی دەزگا داوا کراوە."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "ناوی دەزگا"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "ئەم ئەژمارە بەشداریکردنی هەیە."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "تکایە جۆرێکی بەشداریکردنی بەردەست هەڵبژێرە."
+
+msgid "user.subscriptions.form.membership"
+msgstr "ئەندامبون"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "جۆرەکانی بەشداریکردن"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "پیشاندانی شێوازەکانی بەشداریکردن"
+
+msgid "user.subscriptions.expired"
+msgstr "لە {$date} بەسەر چو"
+
+msgid "user.subscriptions.expires"
+msgstr "لە {$date} بەسەر دەچێت"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "کڕینی بەشداریکردنی دەزگایی"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "بەشداریکردنی کەسی بکڕە"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "کڕینی بەشداریکردنی نوێ"
+
+msgid "user.subscriptions.purchase"
+msgstr "کڕین"
+
+msgid "user.subscriptions.renew"
+msgstr "نوێکردنەوە"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "بەشداریکردنی دەزگاکان"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "بەشداریکردنی کەسی"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "ناساندن"
+
+msgid "user.subscriptions.status"
+msgstr "حاڵەت"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "حاڵەتی بەشداریکردنەکان"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "بەشداریکردنەکانم"
+
+msgid "user.register.authorDescription"
+msgstr "تۆ دەتوانی فایلەکانت بۆ گۆڤارەکە بنێریت."
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "ناسێنەری تابلۆی گشتی بەردەستە."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"ئیمەیڵی ئاگادارکردنەوە نانێردرێت هەتا فایلەکە بۆ وردبینی و بڕیاری سەرنوسەر و "
+"پەڕەی هەڵسەنگاندن نەنێردرێت."
+
+msgid "reviewer.article.enterReviewA"
+msgstr "کلیک لەسەر ئەم ئایکۆنە بکە بۆ نوسینی هەڵسەنگاندنەکەت."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "لەسەر ناوی فایلەکان کلیک بکە بۆ بینین و دابەزاندنیان."
