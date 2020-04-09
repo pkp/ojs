@@ -18,14 +18,6 @@ import('lib.pkp.classes.submission.PKPSubmissionMetadataFormImplementation');
 
 class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImplementation {
 	/**
-	 * Constructor.
-	 * @param $parentForm Form A form that can use this form.
-	 */
-	function __construct($parentForm = null) {
-		parent::__construct($parentForm);
-	}
-
-	/**
 	 * @copydoc PKPSubmissionMetadataFormImplementation::_getAbstractsRequired
 	 */
 	function _getAbstractsRequired($submission) {
