@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-09 18:10+0000\n"
+"PO-Revision-Date: 2020-04-10 23:37+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ku_IQ/>\n"
@@ -1257,3 +1257,158 @@ msgstr "کلیک لەسەر ئەم ئایکۆنە بکە بۆ نوسینی هە�
 
 msgid "reviewer.article.downloadSubmission"
 msgstr "لەسەر ناوی فایلەکان کلیک بکە بۆ بینین و دابەزاندنیان."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} یان {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} یان{$register} بۆ پێشکەشکردنی توێژینەو."
+
+msgid "about.onlineSubmissions.register"
+msgstr "خۆتۆمارکردن"
+
+msgid "about.onlineSubmissions.login"
+msgstr "داخلبون"
+
+msgid "about.submissions"
+msgstr "پێشکەشکردنەکان"
+
+msgid "about.sectionPolicies"
+msgstr "سیاسەتەکانی ئەم بەشە"
+
+msgid "about.focusAndScope"
+msgstr "سەرنج و بوواری کارکردن"
+
+msgid "log.editor.archived"
+msgstr "ئەم پێشکەشکردنە {$submissionId} ئەرشیف کرا."
+
+msgid "log.editor.editorFile"
+msgstr "وەشانی سەرنوسەر بۆ ئەم پێشکەشکردنە بار کرا."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "فایلی وردبینی بنەڕەتی هەڵبژێردرا."
+
+msgid "log.review.reviewerFile"
+msgstr "فایلی هەڵسەنگێنەر بار کرا."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} چاوی بە توێژینەوەی {$submissionId}دا خشاندەوە. ناسنامەی فایلە "
+"نوێیەکە: {$fileId}."
+
+msgid "installer.upgradeApplication"
+msgstr "نوێکردنەوەی سیستەمی گۆڤاری کراوە"
+
+msgid "installer.installApplication"
+msgstr "دابەزاندن و ڕێکخستنی سیستەمی گۆڤاری کراوە"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"سێرڤەرەکەت ڕێگا بە بارکردنی زۆرترین قەبارەی فایلی لەم شێوەیە دەدات:  "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"سێرڤەرەکەت لە ئێستادا ڕێگا بە بارکردنی فایل دەدات: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.ojsUpgrade"
+msgstr "نوێکردنەوەی سیستەمی گۆڤاری کراوە"
+
+msgid "installer.appInstallation"
+msgstr "دانان و ڕێکخستنی سیستەمی گۆڤاری کراوە"
+
+msgid "payment.subscription.expires"
+msgstr "بەسەر چووە"
+
+msgid "payment.subscription.renew"
+msgstr "نوێکردنەوەی بەشداریکردن"
+
+msgid "payment.subscription.purchase"
+msgstr "بەشدار ببە"
+
+msgid "payment.membership.ends"
+msgstr "کۆتایی هات"
+
+msgid "payment.membership.renewMembership"
+msgstr "نوێکردنەوەی بەشداریکردنی کەسی"
+
+msgid "payment.membership.buyMembership"
+msgstr "کڕینی بەشداریکردنی تاکە کەسی"
+
+msgid "payment.publication.publicationPaid"
+msgstr "پارەی بڵاکردنەوە درا"
+
+msgid "catalog.sortBy"
+msgstr "ڕیزکردنی توێژینەوەکان"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} هەڵسەنگاندنی بۆ {$submissionId} کردووە."
+
+msgid "navigation.subscriptions"
+msgstr "بەشداریکردنەکان"
+
+msgid "editor.issues.futureIssues"
+msgstr "ژمارەکانی داهاتو"
+
+msgid "editor.issues.backIssues"
+msgstr "ژمارەکانی پێشتر"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "ناوەرۆکی \"{$journalName}\""
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>قبوڵکردنی ئەم تابلۆیە لا ببە.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>ئەم تابلۆیە بۆ بڵاوکردنەوە قبوڵ بکە.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "قبوڵکردنی تابلۆ"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "چاوەڕێی قبوڵ کردنە"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "قبوڵ کرا"
+
+msgid "article.view.interstitial"
+msgstr "تکایە توێژینەوەیەک دیاری بکە بۆ ئەوەی داونلۆدی بکەیت."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "گۆڤارەکانی دیکە بشارەوە"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "خۆت لەگەڵ گۆڤاری دیکە تۆمار بکە"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "چاوەڕێی قبوڵ کردنە."
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"ئەم توێژینەوەیە لە چاوەڕوانیی قبوڵکردن دایە پێش ئەوەی لە ژمارەی گۆڤاردا "
+"بەدیار بکەوێت."
+
+msgid "editor.navigation.issues"
+msgstr "ژمارەکان"
+
+msgid "grid.action.createContext"
+msgstr "دروستکردنی گۆڤارێکی نوێ"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "وردبینی بەردەست نییە یان داوا نەکراوە!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "ئەم ژمارەیە بەردەست نییە!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "تۆ دەتەوێت توێژینەوەیەک بەدەست بخەیت کە بەشێک نییە لەم بەشە."
+
+msgid "user.authorization.noContext"
+msgstr "هیچ گۆڤارێک لەم سیاقە!"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "هەڵبژاردنی شێوازی ڕیزکردنی توێژینەوەکان."
+
+msgid "about.editorialPolicies"
+msgstr "سیاسەتەکانی گۆڤار"
