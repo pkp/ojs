@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2020-04-10 23:37+0000\n"
-"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
+"Last-Translator: Haval Abdulkarim <haval.abdulkarim@gmail.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -730,3 +730,27 @@ msgstr ""
 "<code>allow_envelope_sender</code> چالاک بکات لە فایلی رێکخستنی سایتەکە. "
 "رێکخستنی ڕاژە (سیرڤەر) پێویستە، هەروەک لە بەڵگەنامەکانی سیستەمی گۆڤاری "
 "کراوەدا ئاماژەی پێدراوە."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "وێنۆچکەی گۆڤار"
+
+msgid "manager.setup.journalTheme"
+msgstr "ڕوکاری گۆڤار"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "دامەزراندنی گۆڤارەکەت تازەکرایەوە."
+
+msgid "manager.setup.journalSetup"
+msgstr "دامەزراندنی گۆڤار"
+
+msgid "manager.setup.journalPolicies"
+msgstr "هەنگاوی ٢. ڕێوشوێنەکانی گۆڤار"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "پێپەڕەی پەڕی گۆڤار"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "لۆگۆی گۆڤار"
+
+msgid "manager.setup.journalLogo"
+msgstr "لۆگۆی گۆڤار"
