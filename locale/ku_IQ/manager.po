@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2020-04-10 23:37+0000\n"
-"Last-Translator: Haval Abdulkarim <haval.abdulkarim@gmail.com>\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -754,3 +754,54 @@ msgstr "لۆگۆی گۆڤار"
 
 msgid "manager.setup.journalLogo"
 msgstr "لۆگۆی گۆڤار"
+
+msgid "manager.setup.navigationBar"
+msgstr "شریتی ڕێنیشاندەر"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "هەنگاوی چوارەم: بەڕێوەبردنی گۆڤارەکە"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "ڕێکخستنی بەڕێوەبردن و بڵاوکردنەوە"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "بەڕێوەبردنی هەنگاوە بنەڕەتییەکانی سەرنوسەر"
+
+msgid "manager.setup.management"
+msgstr "بەڕێوەبردن"
+
+msgid "manager.setup.look"
+msgstr "شێوازی دەرکەوتن"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "ناساندنی ڕێگەپێدانی CLOCKSS"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "ناساندنی ڕێگەپێدانی LOCKSS"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS و CLOCKSS"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "تۆڕی پاراستنی پڕۆژەی زانیاریی گشتی (PN)"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "گرێدانی پڕۆژەی زانیاریی گشتی چالاک بکە"
+
+msgid "manager.setup.lists"
+msgstr "لیستەکان"
+
+msgid "manager.setup.lists.success"
+msgstr "لیستی ڕێکخستنەکانی ئەم گۆڤارە نوێ کرانەوە."
+
+msgid "manager.setup.keyInfo"
+msgstr "زانیارییە سەرەکییەکان"
+
+msgid "manager.setup.contextTitle"
+msgstr "ناونیشانی گۆڤار"
