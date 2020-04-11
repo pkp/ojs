@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-11 18:40+0000\n"
+"PO-Revision-Date: 2020-04-12 19:37+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/ku_IQ/>\n"
@@ -23,8 +23,8 @@ msgstr ""
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
-"ناونیشانی بەشەکە  \"{$section1Title}\" و ناونیشانی بەشەکە \"{$section2Title}"
-"\" لە \"{$issueTitle}\" لەگەڵ گۆڤارێکی دیکە هاوشێوەیە."
+"ناونیشانی بەشی\"{$section1Title}\" و ناونیشانی بەشی\"{$section2Title}\" لە \""
+"{$issueTitle}\" لەگەڵ بەشێکی دیکەی گۆڤارەکە هاوشێوەیە."
 
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "بەکارهێنەری دیاریکراو: \"{$userName}\"بەردەست نییە."
@@ -89,3 +89,25 @@ msgstr ""
 
 msgid "plugins.importexport.native.displayName"
 msgstr "گرێدانی XMLی ڕەسەن"
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"توێژینەوەی \"{$articleTitle}\" لەگەڵ ژمارەیەکی گۆڤارە بەڵام ڕێککەوتی "
+"بڵاوکردنەوەی لەسەر نییە."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "ناسێنەری ئەم ژمارەیە لە توێژینەوەی \"{$articleTitle}\"یدا ونە."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"ژمارەیەکی گۆڤار ئەم پێناسەی هەڵگرتووە {$issueId} کە هاوشێوەیە لەگەڵ ژمارەی \""
+"{$issueIdentification}\". ئەم ژمارەیە گۆڕانکاری تێدا نەکراوە، بەڵام ئەم "
+"توێژینەوانەی بۆ زیاد دەبێت."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "هیچ کام لە ژمارەکان هاوشێوەییان نییە \"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"کورتکراوەی بەشی\"{$sectionAbbrev}\" لە ژمارەی \"{$issueTitle}\" هاوشێوەی "
+"یەکێک لە ژمارەکانە، بەڵام ئەوەی دیکە هاوشێوەیی تێدا نییە."
