@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-11 16:20+0000\n"
-"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"PO-Revision-Date: 2020-04-12 19:37+0000\n"
+"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -774,13 +774,13 @@ msgid "manager.setup.look"
 msgstr "شێوازی دەرکەوتن"
 
 msgid "manager.setup.clockssTitle"
-msgstr "CLOCKSS"
+msgstr "بەشی کڵۆکس"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "ناساندنی ڕێگەپێدانی CLOCKSS"
 
 msgid "manager.setup.lockssTitle"
-msgstr "LOCKSS"
+msgstr "بەشی لۆکس"
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "ناساندنی ڕێگەپێدانی LOCKSS"
@@ -853,3 +853,86 @@ msgid "manager.setup.journalLayoutDescription"
 msgstr ""
 "ڕوکارێک بۆ گۆڤارەکەت هەڵبژێرە. هەروەها، دەتوانیت شێوازێکی تایبەت بۆ "
 "گۆڤارەکەت بار بکەیت."
+
+msgid "manager.setup.policies"
+msgstr "سیاسەتەکان (ڕێو و شوێنەکان)"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "بژاردەی ژمارەی لاپەڕ"
+
+msgid "manager.setup.onlineIssn"
+msgstr "زنجیرە ژمارەی ستانداردی نێودەوڵەتی سەرهێڵ"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"ژمارەی بەستەرەکان سنوردار بکە لە پیشاندانیان لە لاپەڕە یەک لەدوای یەکەکان لە "
+"لیستێکدا."
+
+msgid "manager.setup.numPageLinks"
+msgstr "بەستەرەکانی لاپەڕە"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong> تێبینی</strong> ناردنی ئیمێڵی سوپاسگوزاری لە ئێستادا ناکارایە. بۆ "
+"ئەکارهێنانی ئەم تایبەتمەندییە، بەشی \"پێشکەشکردنی سوپاسگوزاری\" چالاک بکەلە "
+"ناو ئیمێڵەکان."
+
+msgid "manager.setup.note"
+msgstr "سەرەنج، تێبینی"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "پەڕەی ڕێنامییەکانی شێوازی نوسین بارنەکراوە."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "هیچ فایلێکی وێنە بار نەکراوە."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"بەهای پێناسی ناو و ناونیشان بریتییە لە زنجیرەیەکی وشەیی(بۆ نمونە، \"ڕێکخستنی "
+"گۆڤار\") نەک کلیلی نامەی شوێن دیاریکردن (بۆ نمونە، \"بەڕێوەبەر.ڕێکخستن\")"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"(\"/manager/setup\" ،نەک ڕێگایەکی نزیک بێت بۆ ساییتەکە ( بۆ نمونە  ( \""
+"http://www.example.com\" یو ئاڕ ئێڵەکە تەواوە (بۆ نمونە"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "بەشە زیادەکانی شریتی ڕێنیشاندەر زیاد بکە یان بیانسڕەوە."
+
+msgid "manager.setup.masthead.success"
+msgstr "وردەکارییەکانی سەرپەڕی ئەم گۆڤارە نوێ کراوەتەوە."
+
+msgid "manager.setup.management.description"
+msgstr ""
+"مافی چوونە ژوورەوە و  پاراستن، دانانی خشتەی کات، ڕاگەیێندراوەکان، "
+"پێداچوونەوە و هەڵەچنکردن، ڕێکخستن، و ڕاستکرندەوەی هەڵەکان."
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"ناوی خۆت تۆمار بکە بۆ بەشی خزمەتگوزاری کڵۆکس لە ڕیگای سەردانکردنی <a href=\""
+"http://clockss.org/\" target=\"_blank\">وێبسایتی کڵۆکس </a>."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"مۆڵەتی کڵۆکس بەشی (دەربارەی گۆڤارەکە) لە ژێر بەشی ئەرشیفکردن:<a href=\""
+"http://clockss.org/\" target=\"_blank\"> مۆڵەتی کڵۆکس</a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"بەشی کلۆکس چالاک بکە تۆ هەڵگرتن و دابەشکردنی ناوەڕۆکی گۆڤار لە کتێبخانە "
+"بەشداربووەکاندا لە ڕێگای لیستی دەزگای بڵاوکردنەوەی کلۆکس <a href=\""
+"{$clockssUrl}\" target=\"_blank\"> پەڕی</a>."
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"ناوی ٦-١٠ کتێبخانە بێنە و دیاریان بکە کە گۆڤارەکە تۆماردەکەن و لای خۆیان "
+"زانیارییەکانی هەڵدەگرن. بۆ نمونە، ڕوو لەو دامەزراوەنە بکە کە سەرنوسەرەکان "
+"یان ئەندامانی ئەنجومەنی گۆڤارەکە کاری تێدا دەکەن و/یان ئەو دامەزراوانەی کە "
+"لە پێشدا بەشدارن ئەرشیفی لۆکس. سەیری <a href=\"http://www.lockss.org/"
+"community/\" target=\"_blank\"> کۆمەڵەی لۆکس بکە</a>."
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"بەشی لۆکس چالاک بکە تۆ هەڵگرتن و دابەشکردنی ناوەڕۆکی گۆڤار لە کتێبخانە "
+"بەشداربووەکان لە ڕێگای لیستی دەزگای بڵاوکردنەوەی لۆکس. <a href=\"{$lockssUrl}"
+"\" target=\"_blank\">"
