@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-10 23:37+0000\n"
+"PO-Revision-Date: 2020-04-12 19:37+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "ku_IQ/>\n"
@@ -111,3 +111,140 @@ msgstr ""
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN ناوی سەرچاوە یەکپۆشەکان"
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"تۆ ناتوانیت ناوی سەرچاوە یەکپۆشەکان دیاری بکەیت لەبەر کەمیی زانیاری. تۆ "
+"دەتوانیت ئەم بڵاوکراوەیە بە ژمارەیەکەوە ببەستیت ناسنامە و ژمارەی لاپەڕەکانی "
+"دیاری بکەیت."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr ""
+"ناوی سەرچاوە یەکپۆشەکانی {$pubId} ئەرکدار ناکرێت لەبەر ئەوەی کێشەیەکی هەیە."
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "ئەم ناوی سەرچاوە یەکپۆشە ئەرکدار ناکرێت چونکە پاشگری بۆ دانەندراوە."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"ئەم بژاردەی خوارەوە هەڵبژێرە بۆ سڕینەوەی ناوی سەرچاوە یەکپۆشەکان کە لە "
+"ئێستادا بۆ ئەم ژمارەیە دیاری کراوە."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "ئایا تۆ دڵنیایت لە سڕینەوەی ناوی سەرچاوە یەکپۆشە بەردەستەکان؟"
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"ئەو پاشگرەی دیاریت کردووە بۆ بڵاوکراوەیەکی دیکە دیاری کراوە. تکایە پاشگری "
+"جیاواز و ناوی سەرچاوە یەکپۆشەکان بۆ هەر دانەیەک بەکار بهێنە."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"ئەمە پیشاندانی سەرەتاییە، ئەم بۆکسە دیاری بکە بۆ ئەرکدارکردنی تەواوەتی ناوی "
+"سەرچاوە یەکپۆشەکان."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"ئەگەر ڕێکخستنەکانی ناوی سەرچاوە یەکپۆشەکان بگۆڕدرێن، ناوی سەرچاوە "
+"یەکپۆشەکانی کە ئەرکدار کراون ناگۆڕێن. کاتێک گۆڕانکارییەکە خەزن بو، کلیک بکە "
+"بۆ سڕینەوەی هەمو ناوی سەرچاوە یەکپۆشە بەردەستەکان، بەمجۆرە ڕێکخستنە نوێیەکە "
+"جێیان دەگرێتەوە."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "دانە"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "تابلۆ: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "ناوی سەرچاوە یەکپۆشەکان بۆ ئەم بڵاوکراوەیە دیاری نەکراوە."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "ناوی سەرچاوە یەکپۆشەکانی ئەم بڵاوکراوەیە {$urn} دەبێت."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "ناوی سەرچاوە یەکپۆشەکان دەبێت بە {$urnPrefix} دەست پێ بکات."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"تۆ ناتوانیت ناوی سەرچاوە یەکپۆشەکان بۆ ئەم توێژینەوەیە دیاری بکەیت هەتا بە "
+"ژمارەیەکەوە گرێ نەدرێت."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "ئەرکداری بکە"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "ناوی سەرچاوە یەکپۆشەکان دەبێت بە {$prefix} دەست پێ بکات."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "ژمارەی وردبینی ونە."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "ناوی سەرچاوە یەکپۆشەکان بۆ {$pubId}  ئەرکدار کرا."
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "ناوی سەرچاوە یەکپۆشەکان {$pubId} دیاری بکە بۆ{$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "ژمارەی وردبینی زیاد بکە"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "ناوی سەرچاوە یەکپۆشەکان لەم ژمارەیەدا بسڕەوە"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "ئایا لە سڕینەوەی ناوی سەرچاوە یەکپۆشەکان دڵنیایت؟"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "سڕینەوەی ناوی سەرچاوە یەکپۆشەکان"
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "ناوی سەرچاوە یەکپۆشەکان بۆ {$pubObjectType} ئەرکدار کرا."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "ناوی سەرچاوە یەکپۆشەکە ئەرکدار ناکرێت لەبەر ئەوەی کێشەی تێدایە."
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "ناوی سەرچاوە یەکپۆشەکە ئەرکدار ناکرێت لەبەر ئەوەی پاشگرەکەی ونە."
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "تابلۆ"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "توێژینەوە"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "ژمارە"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN ناوی سەرچاوە یەکپۆشەکان"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "ئایا تۆ لە سڕینەوەی هەمو ناوی سەرچاوە یەکپۆشەکان دڵنیایت؟"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "ناوی سەرچاوە یەکپۆشەکان ئەرکدار بکەوە"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "تکایە چارەسەرکەری لینک داخل بکە."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(وەک http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "چارەسەرکەری لینک"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"ناسێنەری شوێنی ناو بۆ تۆمارکردن پێویستە  (بۆ نمونە Deutsche "
+"Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "هەڵبژێرە"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "بۆشایی ناو"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"ژمارەی وردبینی بە شێوەیەکی تۆماتیک لە کۆتاییدا زیاد دەبێت، لە کۆتایی ناوی "
+"سەرچاوە یەکپۆشەکان."
