@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-10 23:37+0000\n"
+"PO-Revision-Date: 2020-04-11 16:20+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
@@ -805,3 +805,51 @@ msgstr "زانیارییە سەرەکییەکان"
 
 msgid "manager.setup.contextTitle"
 msgstr "ناونیشانی گۆڤار"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"سەرپەڕەی پەڕەی سەرەکی، ناوەرۆک، سەرپەڕەی گۆڤار، پێپەڕە، ڕێنیشاندەر و شێواز."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"ڕێپێدانی LOCKSSلە بەشی دەربارەی گۆڤاردا ئاماژەی بۆ کراوە  <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"LOCKSS ڕێپێدانی</a>"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"پڕۆژەی زانیاریی گشتی خزمەتگوزاریی خۆڕایی پێشکەشی هەر گۆڤارێکی سیستەمی گۆڤاری "
+"کراوە دەکات ئەگەر بنەما سەرەکییەکانی تێدا بێت.ئەمەش بەم زووانە و لە وەشانی "
+"سێیەمدا ئامادە دەبێت."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"<button>پیشان بدە</button> ڕێکخستنە گرێدراوەکان بۆ بنەمای بەکارهێنانیپڕۆژەی "
+"زانیاریی گشتی."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"پڕۆژەی زانیاریی گشتی خزمەتگوزاریی خۆڕایی پێشکەشی هەر گۆڤارێکی سیستەمی گۆڤاری "
+"کراوە دەکات ئەگەر بنەما سەرەکییەکانی تێدا بێت."
+
+msgid "manager.setup.labelName"
+msgstr "ناوە ناسێنەرەکە"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "کورتەیەک دەربارەی گۆڤارەکە و سەرنوسەر و بەڕێوەبەرەکانی بنوسە."
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "لۆگۆیەکی بچوک کە دەبیتە ناسێنەری گۆڤارەکە."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "ئەم ڕێکخستنە ڕێگە پێ نەدراوە و css. ڕێگای پێ دەدرێت."
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"ئەمە پێپەڕەی گۆڤارەکەتە. بۆ گۆڕین و نوێکردنەوەی پێپەڕەی گۆڤارەکەت، کۆدی HTML "
+"لەم تێکستبۆکسەی خوارەوە داخل بکە."
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"ڕوکارێک بۆ گۆڤارەکەت هەڵبژێرە. هەروەها، دەتوانیت شێوازێکی تایبەت بۆ "
+"گۆڤارەکەت بار بکەیت."
