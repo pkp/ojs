@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-10 23:37+0000\n"
+"PO-Revision-Date: 2020-04-12 19:37+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ku_IQ/>\n"
@@ -1412,3 +1412,20 @@ msgstr "هەڵبژاردنی شێوازی ڕیزکردنی توێژینەوەک�
 
 msgid "about.editorialPolicies"
 msgstr "سیاسەتەکانی گۆڤار"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>تێبینی!</h4>\n"
+"<p>سیستەمەکە ناتوانێت بە شێوەی تۆماتیکی فایلی ڕێکخستنەکان بگۆڕێت. بۆ گۆڕینی "
+"ڕێکخستنەکان ئێرە بکەوە<tt>config.inc.php</tt>لەم ڕێگەیەوە دەتوانیت بەرنامەی "
+"تایبەت بۆ گۆڕانکاری بەکار بهێنیت لەم خانەیەی خوارەوە</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>دیاریکردنی سەرچاوەیەکی دیکە جگە لە سیستەمی گۆڤاری کراوە ئەم کاریگەرییەی "
+"دەبێت:</p>\n"
+"<ul>\n"
+"\t<li>ئەگەر بەکارهێنەر هەوڵی تۆمارکردنی ئەژمارێک بە ناوێکی بەردەست بدات، جگە "
+"لە ئەژمارەکانی سیستەمی گۆڤاری کراوە، ڕێگەی پێ دەدرێت بە وشەی نهێنیی "
+"تایبەتەوە</li>\n"
+"</ul>"
