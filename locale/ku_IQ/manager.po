@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-12 19:37+0000\n"
+"PO-Revision-Date: 2020-04-14 11:50+0000\n"
 "Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
@@ -936,3 +936,115 @@ msgstr ""
 "بەشی لۆکس چالاک بکە تۆ هەڵگرتن و دابەشکردنی ناوەڕۆکی گۆڤار لە کتێبخانە "
 "بەشداربووەکان لە ڕێگای لیستی دەزگای بڵاوکردنەوەی لۆکس. <a href=\"{$lockssUrl}"
 "\" target=\"_blank\">"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "بەستەرێکی پارێزراو  دابنێ لە ناو ئیمێڵی داوەتنامە بۆ هەڵسەنگێنەران."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"هەڵسەنگێنەران دەتوانن بەستەرێکی پارێزراو بنێرن بە ئیمێڵێکی داوەتنامە، کە "
+"ڕێگەیان پێدەدات دەستیانبگات بە پێداچوونەوە بەبێ چوونەژوورەوە  بە ناوی "
+"بەکارهینەر و وشەی نهێنی. بەڵام بۆ دەستگەیشتن بە لاپەڕەکانی تر پێویستیان بە "
+"چوونەژوورەوە هەیە بە ناوی بەکارهینەر و وشەی نهێنی."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "مافی دەستپێگەیشتنی هەڵسەنگێنەر بە یەک کرتە(کلیک)"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "مافی دەستپێگەیشتنی هەڵسەنگێنەر"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"هەڵسەنگێنەران مافی دەستپێگەیشتن بە فایلی پێشکەشکردنیان پێنادرێت هەتا "
+"ڕەزامەند نەبن بە پێداچوونەوەی."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "فاییلی دەستپێگەیشتن جڵەو و سنورداری بکە"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"سەرنوسەرەکان هەڵسەنگێنەرەکان هەڵدەسەنگێنن لە سەر پێورێکی پێنج خاڵی لە دوای "
+"هەر هەڵسەنگاندنێک."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "ئەو هەفتانەی کە ڕێگەپێدراوە بۆ تەواوکردنی پێداچوونەوە"
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "هەڵسەنگاندنی کوێرانە"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"بۆ ناردنی بیرخەرەوەی خۆدکاری ئیمێڵەکان، بەرێوەبەری سایتەکە دەبێت بژاردەی  "
+"<tt>ئەرکەکانی_کات بۆ داندراوەکان</tt> چالاک بکرێت لە فاییلی رێخستنی سیستەمی "
+"گۆڤاری کراوە . رێخستنی سیرڤەری زیاتر  ڕەنگە پێویست بکات هەروەک لە "
+"بەڵگەنامەکانی سیستەمی گۆڤاری کراوەدا ئاماژەی پێکراوە."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "بیرخەرەوەی خودکاری ئیمێڵەکان"
+
+msgid "manager.setup.reviewOptions"
+msgstr "بژاردەکانی هەڵسەنگاندن"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "ڕێساکانی هەڵسەنگاندن"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"بەکارهێنەرەکان دەبێت تۆمارکراوبن و بچنە ژوورەوە بۆ بینینی سایتی گۆڤارەکە."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"بەکار‌هێنەرکان دەبێت تۆمارکراوبن و بچنە ژوورەوە بۆ بینینی ناوەڕۆکی  "
+"دەستپێگەیشتنی کراوە."
+
+msgid "manager.setup.referenceLinking"
+msgstr "بەستنەوەی سەرچاوەکان"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"ئەم وردەکارییانە لەوانەیە لە ناو زانیاری ناسێنەردا هەبن کە دراون بە "
+"لایەنەکانی سێیەمی ئەرشیفکردن."
+
+msgid "manager.setup.publisher"
+msgstr "دەزگای بڵاوکردنەوە"
+
+msgid "manager.setup.publishing"
+msgstr "وردەکارییەکانی بڵاوکردنەوە"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "پێناسی ناوەڕۆکی گۆڤارەکە"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "دانانی خشتەی کاتی بڵاوکردنەوە"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"بڕگەکانی گۆڤارەکە دەتواندرێت بە کۆمەڵ بڵاوبکرێنەوە، وەک بەشێک لە ژمارەیەک لە "
+"لە خشتەی ناوەڕۆکەکان. لە بەرامبەردا، تاکە بڕگە و بابەتەکان دەتواندرێت "
+"بڵاوبکرێنەوە هەر کە ئامادەبوون، بە زیادکردنیان بۆ بەرگی ئێستای خشتەی "
+"ناوەڕۆکەکان. خوێنەرەکان لە بەشی دەربارەی گۆڤارەکە ڕوونکردنەوەیەکیان پێبدە "
+"سەبارەت بەو سیستەمەی کە ئەم گۆڤارە بەکاریدەهێنێت هەروەها چەندجار "
+"بڵاوبوونەوەی چاوەڕوانکراوی گۆڤارەکە."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "خشتەی کاتی بڵاوکردنەوە"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"ڕێنماییەکانی هەڵەبڕکردن بەردەست دەکرێن بۆ هەڵەگرەکان، نوسەرەکان، "
+"سەرنوسەرەکانی ڕێکخستن، سەرنوسەرەکانی بەش لە قۆناغی پیشکەشکردن و ئامادەکردن "
+"بۆ چاپ و بڵاوکردنەوە."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "ڕێنماییەکانی هەڵبڕکردن"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "بەیاننامەی تایبەتێتی نوێکراوەتەوە."
+
+msgid "manager.setup.printIssn"
+msgstr "زنجیرەی ژمارەی ستانداردی نێوەدەوڵەتی چاپبکە"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"سەرنجدان، هەڵسەنگاندنی کاری هاوڕێیەک، بەشەکان، نهێنی، ئاسایش، و برگە "
+"زیادەکانی تر."
