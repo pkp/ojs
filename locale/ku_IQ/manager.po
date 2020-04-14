@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2020-04-14 20:44+0000\n"
-"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -1311,3 +1311,85 @@ msgstr "تەسکردنەوەی ئەنجامەکان لە ڕێگای دەق ( ژ�
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "پیشاندانی لاپەڕەی خشتەی ناوەڕۆکەکانی ژمارەکە"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "ئاگادارکردنەوەی پارەدانی ئۆنلاین"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"خوێنەرە تۆمارکراوەکان دەرفەتی ئەوەیان هەیە کە ناوەرۆکی ژمارەی گۆڤاریان پێ "
+"بگات دوای ئەوەی دەستپێڕاگەیشتنی دەکرێتەوە."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "تکایە بەهایەکی مانادار بۆ ژمارەی هەفتەکانی پێش بەشداریکردن دیاری بکە."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "تکایە بەهایەکی مانادار بۆ ژمارەی هەفتەکانی دوای بەشداریکردن دیاری بکە."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "تکایە بەهایەکی مانادار بۆ ژمارەی مانگەکانی پێش بەشداریکردن دیاری بکە."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "تکایە بەهایەکی مانادار بۆ ژمارەی مانگەکانی دوای بەشداریکردن دیاری بکە."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"دەکرێت HTML لە جێگای نوسین بەکار بێت و وەک  <tt>&lt;br&gt;</tt>; دەگەڕێتەوە؛ "
+"HTML تەنیا لەسەر فایەرفۆکس کار دەکات."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "یەکێک لەمانەی خوارەوە دیاری بکە:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>تێبینی:</strong> بۆ کاراکردنی ئەم بژاردانە، بەڕێوەبەری پەڕەکە دەبێت "
+"<tt> چالاک بکات و </tt> کات دابنێتەوە لە سیستەمەکەدا. تایبەتمەندیی زیاتر "
+"لەوانەیە پێویستی بە شتی زیاتر بێت هەر وەک لە لایەن سیستەمی گۆڤاری کراوە "
+"ئاماژەی بۆ کراوە."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"ئیمەیڵی بەبیرخستنەوەی تۆماتیکی (لە لایەن بەڕێوەبەرانی گۆڤارەوە گۆڕانکاری "
+"تێدا دەکرێت) دەکرێت بۆ بەشداربووان بنێردرێت پێش یان دوای بەسەرچونی "
+"بەشداریکردنیان."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "بەبیرهێنانەوەی بەسەرچونی بەشداریکردن"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "بەشداربووان بە ئیمەیڵ ئاگادار بکەوە پێش بەسەرچونی بەشداریکردنیان."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "بەشداربووان بە ئیمەیڵ ئاگادار بکەوە پێش بەسەرچونی بەشداریکردنیان."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "بەشداربووان بە ئیمەیڵ ئاگادار بکەوە دوای بەسەرچونی بەشداریکردنیان."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "بەشداربووان بە ئیمەیڵ ئاگادار بکەوە دوای بەسەرچونی بەشداریکردنیان"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} هەفتە"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} مانگ"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"خوێنەران ناتوانن بابەتەکانی دوای کۆتاییهاتنی بەشداریکردنیان ببینن، بەڵام "
+"دەتوانن ئەو بابەتانە ببینن کە پێش کۆتاییهاتنی بەشداریکردنیان بڵاو کراونەتەوە."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "بەسەرچونی بەشێک"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "خوێنەران ناتوانن بابەتەکان ببینن دوای کۆتاییهاتنی بەشداریکردنیان."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "بەرچونی تەواو"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"لەگەڵ کۆتاییهاتنی بەشداریکردن، خوێنەران لەوانەیە هیچی دیکە نەتوانن بابەتەکان "
+"ببینن یان لەوانەیە ئەو بابەتانە ببینن کە پێش کۆتاییهاتنی بەشداریکردنیان بڵاو "
+"کراونەتەوە."
