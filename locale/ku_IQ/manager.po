@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2020-04-14 11:50+0000\n"
-"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -1048,3 +1048,61 @@ msgid "manager.setup.policies.description"
 msgstr ""
 "سەرنجدان، هەڵسەنگاندنی کاری هاوڕێیەک، بەشەکان، نهێنی، ئاسایش، و برگە "
 "زیادەکانی تر."
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "پێنج هەنگاو بۆ پەڕەی گۆڤار"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "ناوەرۆکی توێژینەوەکە پیشان بدە"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "دەستپێڕاگەیشتنی پەڕە"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "هەمیشە لینکی تابلۆکان پیشان بدە بەڵام بە دەستپێڕاگەیشتنی داخراو."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "بەشی گۆڤاری پەیوەندیدار بە توێژینەوەکە."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "سەرنوسەری گۆڤار لە چوارچێوەی پرۆسەی هەڵسەنگاندندا ئەمە دەبینێت."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"بۆ دروستکردن یان ڕێکخستنەوەی بەشەکانی گۆڤار (بۆ نمونە توێژینەوەکان، "
+"هەڵسەنگاندنەکانی کتێب...هتد) بڕۆ بۆ بەڕێوەبردنی بەش.<br /><br /> توێژەرانی "
+"کە توێژینەوەکانیان دەنێرن خۆیان دیزاینەکە دەکەن..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(ئەگەر بەشەکان زیاد نەکرابن، ئەوا دانەکان بە شێوەیەکی تۆماتیکی پێشکەشی بەشی "
+"توێژینەوەکان دەکرێن)"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "بەشەکان و سەرنوسەری بەشەکان"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"کورتەیەک دەربارەی گۆڤارەکەت (٥٠-٣٠٠ پیت) بنوسە بۆ ئەوەی لە کاتی دۆزینەوەی "
+"ناوی گۆڤارەکەت لە گەڕانەکان ئەم کورتەیەش دەربکەوێت."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"یارمەتی پەڕەی گەڕانەکانی وەک گوگڵ بدە بۆ ئەوەی پەڕەکەی تۆ بدۆزنەوە. تۆ هان "
+"دەدەین بۆ ئەوەی  <a href=\"{$sitemapUrl}\" target=\"_blank\">sitemap</a> "
+"پێشکەش بکەیت."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "ڕێکخستنەکانی پێنوێنی گەڕان نوێ کرانەوە."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "پێنوێنی گەڕان"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "سیاسەتی هەڵسەنگاندن"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "بەبیرهێنانەوەی هەڵسەنگێنەر"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "هەڵسەنگاندنی هەڵسەنگێنەر"
