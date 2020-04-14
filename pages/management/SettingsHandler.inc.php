@@ -111,11 +111,8 @@ class SettingsHandler extends ManagementHandler {
 				'settingsUrl' => $pnSettingsUrl,
 				'csrfToken' => $request->getSession()->getCSRFToken(),
 				'groupId' => 'default',
-				'i18n' => [
-					'enablePluginError' => __('api.submissions.unknownError'),
-					'enablePluginSuccess' => __('common.pluginEnabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
-					'disablePluginSuccess' => __('common.pluginDisabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
-				],
+				'enablePluginSuccess' => __('common.pluginEnabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
+				'disablePluginSuccess' => __('common.pluginDisabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
 			]));
 		} else {
 			$archivePnForm->addField(new \PKP\components\forms\FieldHTML('pn', [

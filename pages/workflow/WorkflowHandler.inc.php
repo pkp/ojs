@@ -102,7 +102,6 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$workflowData['publicationFormIds'][] = FORM_ISSUE_ENTRY;
 		$workflowData['issueApiUrl'] = $issueApiUrl;
 		$workflowData['sectionWordLimits'] = $sectionWordLimits;
-		$workflowData['i18n']['schedulePublication'] = __('editor.submission.schedulePublication');
 
 		$templateMgr->assign('workflowData', $workflowData);
 	}

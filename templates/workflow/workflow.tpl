@@ -53,21 +53,24 @@
 				<pkp-button
 					v-if="submission.status === getConstant('STATUS_PUBLISHED')"
 					element="a"
-					:label="i18n.view"
 					:href="submission.urlPublished"
-				></pkp-button>
+				>
+					{{ __('common.view') }}
+				</pkp-button>
 				{if $canAccessEditorialHistory}
 					<pkp-button
-						label="{translate key="editor.activityLog"}"
 						ref="activityButton"
 						@click="openActivity"
-					></pkp-button>
+					>
+						{translate key="editor.activityLog"}
+					</pkp-button>
 				{/if}
 				<pkp-button
-					label="{translate key="editor.submissionLibrary"}"
 					ref="library"
 					@click="openLibrary"
-				></pkp-button>
+				>
+					{translate key="editor.submissionLibrary"}
+				</pkp-button>
 			</template>
 		</pkp-header>
 		<tabs default-tab="workflow">
@@ -90,16 +93,16 @@
 			{if $canAccessPublication}
 				<tab id="publication" label="{translate key="submission.publication"}">
 					<div class="pkpPublication" ref="publication" aria-live="polite">
-						<pkp-header class="pkpPublication__header">
+						<pkp-header class="pkpPublication__header" :is-one-line="false">
 							<span class="pkpPublication__status">
-								<strong>{{ i18n.status }}</strong>
+								<strong>{{ statusLabel }}</strong>
 								<span v-if="workingPublication.status === getConstant('STATUS_QUEUED') && workingPublication.id === currentPublication.id" class="pkpPublication__statusUnpublished">{translate key="publication.status.unscheduled"}</span>
 								<span v-else-if="workingPublication.status === getConstant('STATUS_SCHEDULED')">{translate key="publication.status.scheduled"}</span>
 								<span v-else-if="workingPublication.status === getConstant('STATUS_PUBLISHED')" class="pkpPublication__statusPublished">{translate key="publication.status.published"}</span>
 								<span v-else class="pkpPublication__statusUnpublished">{translate key="publication.status.unpublished"}</span>
 							</span>
 							<span v-if="publicationList.length > 1" class="pkpPublication__version">
-								<strong tabindex="0">{{ i18n.version }}</strong> {{ workingPublication.version }}
+								<strong tabindex="0">{{ versionLabel }}</strong> {{ workingPublication.version }}
 								<dropdown
 									class="pkpPublication__versions"
 									label="{translate key="publication.version.all"}"
@@ -128,27 +131,31 @@
 									<pkp-button
 										v-if="workingPublication.status === getConstant('STATUS_QUEUED')"
 										ref="publish"
-										:label="submission.status === getConstant('STATUS_PUBLISHED') ? i18n.publish : i18n.schedulePublication"
 										@click="openPublish"
-									></pkp-button>
+									>
+										{{ submission.status === getConstant('STATUS_PUBLISHED') ? publishLabel : schedulePublicationLabel }}
+									</pkp-button>
 									<pkp-button
 										v-else-if="workingPublication.status === getConstant('STATUS_SCHEDULED')"
-										label="{translate key="publication.unschedule"}"
 										:is-warnable="true"
 										@click="openUnpublish"
-									></pkp-button>
+									>
+										{translate key="publication.unschedule"}
+									</pkp-button>
 									<pkp-button
 										v-else-if="workingPublication.status === getConstant('STATUS_PUBLISHED')"
-										label="{translate key="publication.unpublish"}"
 										:is-warnable="true"
 										@click="openUnpublish"
-									></pkp-button>
+									>
+										{translate key="publication.unpublish"}
+									</pkp-button>
 									<pkp-button
 										v-if="canCreateNewVersion"
 										ref="createVersion"
-										label="{translate key="publication.createVersion"}"
 										@click="openCreateVersionPrompt"
-									></pkp-button>
+									>
+										{translate key="publication.createVersion"}
+									</pkp-button>
 								</template>
 							{/if}
 						</pkp-header>
@@ -158,7 +165,7 @@
 						>
 							{translate key="publication.editDisabled"}
 						</div>
-						<tabs class="pkpPublication__tabs" :is-side-tabs="true" :label="publicationTabsLabel">
+						<tabs class="pkpPublication__tabs" :is-side-tabs="true" :label="currentPublicationTabsLabel">
 							<tab id="titleAbstract" label="{translate key="publication.titleAbstract"}">
 								<pkp-form v-bind="components.{$smarty.const.FORM_TITLE_ABSTRACT}" @set="set" />
 							</tab>
