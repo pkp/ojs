@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-14 13:48+0000\n"
+"PO-Revision-Date: 2020-04-14 20:44+0000\n"
 "Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
@@ -1288,3 +1288,26 @@ msgid "manager.setup.subjectExamples"
 msgstr ""
 "(نمونە، کرداری ڕۆشنەپێکهاتن، کونەڕەشەکان، کێشەی نەخشەی چوار ڕەنگ؛ تیۆری "
 "بایسی)"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "بەسەرچوونی بەشداریکردن"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "تکایە ئەو چوارگۆشە بچووکە بەکاربهێنە کە بەدەستکراوە."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "دەستپێڕاگەیشتنی کراوەی دواخراو"
+
+msgid "manager.subscriptionPolicies"
+msgstr "سیاسەتەکانی بەشداریکردن"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"ئەنجامەکان تەسک بکەوە لە ڕێگای جۆری بابەتەکە ( گۆڤار، ژمارە، توێژینەوە، جۆری "
+"فایلەکان) و/یان لە ڕێگای پێناسێک یان زیاتری بابەتەکە."
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "تەسکردنەوەی ئەنجامەکان لە ڕێگای دەق ( ژمارەکان و/ یان توێژینەوەکان)."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "پیشاندانی لاپەڕەی خشتەی ناوەڕۆکەکانی ژمارەکە"
