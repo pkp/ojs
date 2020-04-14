@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-14 11:50+0000\n"
-"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"PO-Revision-Date: 2020-04-14 13:48+0000\n"
+"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -1059,7 +1059,7 @@ msgid "manager.setup.siteAccess.view"
 msgstr "دەستپێڕاگەیشتنی پەڕە"
 
 msgid "manager.setup.showGalleyLinksDescription"
-msgstr "هەمیشە لینکی تابلۆکان پیشان بدە بەڵام بە دەستپێڕاگەیشتنی داخراو."
+msgstr "هەمیشە بەستەری تابلۆکان پیشان بدە بەڵام بە دەستپێڕاگەیشتنی داخراو."
 
 msgid "manager.setup.selectSectionDescription"
 msgstr "بەشی گۆڤاری پەیوەندیدار بە توێژینەوەکە."
@@ -1088,9 +1088,9 @@ msgstr ""
 
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
-"یارمەتی پەڕەی گەڕانەکانی وەک گوگڵ بدە بۆ ئەوەی پەڕەکەی تۆ بدۆزنەوە. تۆ هان "
-"دەدەین بۆ ئەوەی  <a href=\"{$sitemapUrl}\" target=\"_blank\">sitemap</a> "
-"پێشکەش بکەیت."
+"یارمەتی پەڕەی گەڕانەکانی وەک گوگڵ بدە بۆ ئەوەی ساییتەکەی تۆ  پیشانبدات و "
+"بدۆزێتەوە. تۆ هاندەدەین بۆ ئەوەی نەخشتەی ساییتەکەت <a href=\"{$sitemapUrl}\" "
+"target=\"_blank\">sitemap</a> پێشکەش بکەیت."
 
 msgid "manager.setup.searchEngineIndexing.success"
 msgstr "ڕێکخستنەکانی پێنوێنی گەڕان نوێ کرانەوە."
@@ -1102,7 +1102,189 @@ msgid "manager.setup.reviewPolicy"
 msgstr "سیاسەتی هەڵسەنگاندن"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
-msgstr "بەبیرهێنانەوەی هەڵسەنگێنەر"
+msgstr "بیرخەرەوەی هەڵسەنگێنەر"
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
-msgstr "هەڵسەنگاندنی هەڵسەنگێنەر"
+msgstr "هەڵسەنگاندنی هەڵسەنگێنەرەکان"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "پیشاندانی لاپەڕەی سەرەکی گۆڤار"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "لاپەڕەی پیشاندان و دابەزاندنی پوختەی توێژینەوەکان"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "لاپەڕەی پیشاندانی پوختەی توێژینەوە"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "دابەزاندنی فایلی توێژینەوەکان"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "بەشداریکردنەکان"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"ئەو بەشانە هەڵبژێرە کە هی ژماردنی ئاماری هەڵسەنگاندنەکانی هاوکارانی ئەم  "
+"گۆڤارەن."
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "ژمارەی هەڵسەنگاندن"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "خاڵ (نمرە)ی سەرنوسەر"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "هەڵسەنگێنەرەکان"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "ژمارەی تەرخانکراو"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "خوێنەرە تۆمارکراوەکان"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "هەڵسەنگێندراو لە لایەن هاوکارێکەوە"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "تێکڕای پیشکەشکردنەکان"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "ژمارە بڵاوکراوەکان"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"تێبینی: ڕێژە سەدییەکان بۆ ئەوە توێژینەوانەی پێشکەشکراون و لەلایەن "
+"هاوڕێیانەوە هەڵسەنگاندنیان بۆ کراوە رەنگە زیاد نەبن بۆ لە ١٠٠%، چونکە ئەو "
+"توێژینەوانەی دووبارە پێشکەشکراون یان ئەوەتا پەسەندکراون یان ڕەتکراونەتەوە، "
+"یاخود هێشتا لە پڕۆسەدان."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"سەیری بڕگەکان بکە بۆ ئەوەی بەردەست بن بۆ خوێنەران لە بەشی 'دەربارەی گۆڤار'."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "بڵاوکراوەکان"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"سیستەمی گۆڤاری کراوە بۆ هەر گۆڤارێک ئەم ئامارانەی دێن هەژماردەکات. \"ڕۆژەکان "
+"بۆ پێداچوونەوە\" دەژمێردرێن لە ڕۆژی پێشکەشکردنەوە (یان دیاریکردنی وەشانی "
+"پێداچوونەوە) هەتا بڕیاری سەرەتایی سەرنوسەر، لە کاتێکدا \"ڕۆژەکان بۆ "
+"بڵاوکردنەوە\" لەو کاتەوە دەژمێردرێن کە پێشکەشکردنەکان پەسەندکراون لە "
+"سەرچاوەی بارکردنەوە هەتا بڵاوکردنەوەی."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "ڕۆژەکانی بۆ بڵاوکردنەوە"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "ڕۆژەکانی پێداچوونەوە"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "دووبارە پێشکەشی بکە"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "ڕەتی بکەوە"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "پەسەندی بکە"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "خستنەڕووی ژمارەدنی وشەکانی توێژینەوە (تەنها بۆ نوسەران)"
+
+msgid "manager.statistics.statistics"
+msgstr "ئاماری گۆڤار"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tگۆڤارەکەتان ڕێکخراوە بۆ ئەوەی زیاتر لە سیستەمێکی مەتری تۆمار بکات. "
+"بەکارهێنای ژمێریاری لە چەندین چوارچێوەی دەقدا پێشاندەدرێت.\n"
+"چەندین دۆخ هەیە کە یەک بەکارهێنانی ژمێریاری دەبیت بەکاربهێندرێت، بۆ نمونە بۆ "
+"پیشاندانی لیستێکی ڕیزکراو لەو توێژینەوانەی کە زۆرترین بەکارهێندراون یان بۆ "
+"ڕیکخستنی پێگەی \n"
+"ئەنجامەکانی گەڕان. تکایە یەکێک لە سیستەمە مەترییە ڕیزکراوەکان هەڵبژێرە بە "
+"شێوەیەکی ئاسایی.\n"
+"\t"
+
+msgid "manager.setup.useTextTitle"
+msgstr "دەقی ناونیشان"
+
+msgid "manager.setup.userRegistration"
+msgstr "تۆمارکردنی بەکارهێنەر"
+
+msgid "manager.setup.useImageTitle"
+msgstr "وێنەی ناونیشان"
+
+msgid "manager.setup.useThumbnail"
+msgstr "وێنۆچکە"
+
+msgid "manager.setup.userAccess.success"
+msgstr ""
+"وەردەکارییەکانی مافی دەستپیڕاگەیشتنی بەکارهێنەر بۆ ئەم گۆڤارە نوێکراوەتەوە."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "ئەنجومەنی سەرنوسەران/ پێداچوونەوە لە لایەن گۆڤارەکەوە بەکاردەهێندرێت."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"توێژینەوەکان و ژمارەکانی گۆڤارەکە دەتواندرێت ژمارە یان زنجیرە پێناسێکیان "
+"لێبدرێت، بۆ بەگەڕخستنی سیستەمی تۆمارکردن وەکو سیستەمی ناسێنەری کەرستەی "
+"دیجیتاڵی ناسراو بە (دی ئۆ ئای)."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "ناسێنەری ناوازە (تایبەتی)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"نمونەی جۆرەکانی توێژینەوە، میتۆدەکان، و ڕێبازەکانی پەیوەندیدار بەو بوارە "
+"پێشکەش بکە"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "میتۆد/ ڕێباز) چاپ بکە)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"( نمونە، لێپرسینەوەی مێژوویی؛ نیمچە تاقیکاری زانستی؛ شیکاری وێژەیی؛ ڕاپرسی/ "
+"چاوپێکەوتن)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"زانیاری ناسێنەر بدە بە خزمەت گوزارییەکانی پێرستکردنی لایەنی سێیەم لە ڕێگای <"
+"a href=\"https://www.openarchives.org/\">  دەستپێشخەری ئەرشیفە کراوەکان </a>."
+
+msgid "manager.setup.enableOai"
+msgstr "بە شی ڕێکخستنی پێرستی ڕێزکراو ' ئۆ ئەی ئای' چالاک بکە"
+
+msgid "manager.setup.submissions.description"
+msgstr "ڕێساکانی نوسەر، مافی لەبەرگرتنەوە، پێرستکردن ( بە تۆمارکردنیشەوە)."
+
+msgid "manager.setup.submissions"
+msgstr "پێشکەشکردنەکان"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"لە کاتی پێشکەشکردنی بابەت بە گۆڤارەکە، نوسەرەکان سەرەتا داوایان لێدەکرێت کە "
+"سەیری دانە بە دانەی بڕگەکانی  لیستی پێداچوونەوە بە ئامادەکاری  بۆ پێشکەشکردن "
+"بکەن بە بۆ ئەوەی تەواو بکرێن، پێش ناردن. هەروەها لیستی پێداچوونەوە لە بەشی "
+"ڕێساکانی نوسەر دەردەکەوێت، لە ژێر بەشی 'دەربارەی گۆڤار'. لیستەکە دەکرێت "
+"دەستکاری بکرێت لە خوارەوە، بەڵام هەموو بڕگەکانی ناو لیستەکە پێویستە نیشانەی "
+"تەواوبوونیان لێبدرێت پێش ئەوەی نوسەرەکە بتوانێت بەردەوام بێت لە سەر "
+"پێشکەشکردنی بابەتەکەی/ توێژینەوەکەی."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "لیستی پێداچوونەوە بە ئامادەکاری بۆ پێشکەشکردن"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "ڕێساکانی پێشکەشکردن"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr ""
+"نمونەی کلیلە وشەکان یان سەرەبابەتەکان پێشکەشبکە وەک ڕێنیشاندەرێک بۆ نوسەرەکان"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "کلیلە وشەکان (وشە سەرەکییەکان)"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(نمونە، کرداری ڕۆشنەپێکهاتن، کونەڕەشەکان، کێشەی نەخشەی چوار ڕەنگ؛ تیۆری "
+"بایسی)"
