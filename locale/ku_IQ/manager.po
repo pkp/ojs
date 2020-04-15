@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-15 15:31+0000\n"
+"PO-Revision-Date: 2020-04-15 16:26+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
@@ -1499,3 +1499,98 @@ msgstr ""
 "<tt> چالاک بکات و </tt> کات دابنێتەوە لە سیستەمەکەدا. تایبەتمەندیی زیاتر "
 "لەوانەیە پێویستی بە شتی زیاتر بێت هەر وەک لە لایەن سیستەمی گۆڤاری کراوە "
 "ئاماژەی بۆ کراوە."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "ژمارەی سەرچاوە"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "ئەندامبون"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "تکایە ئەو چوارگۆشە بچووکە بەکاربهێنە کە بەدەستکراوە."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"ئیمەیڵێک بۆ بەکارهێنەر بنێرە کە ناوی بەکارهێنەر و زانیارییەکانی بەشداریکردنی "
+"تێدا بێت."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "تکایە وڵاتێکی دروست دیاری بکە."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "تکایە بەکارهێنەرێکی دروست دیاری بکە."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "بەکارهێنەرێک داواکراوە."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "پەیوەندی"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "بەکارهێنەر"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "تێبینی: هەمو گۆڕانکارییەکانی خوارەوە لە هەژماری کەسیدا کراون."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "تکایە کۆتا ڕێککەوتی بەشداریکردن هەڵبژێرە."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "ئەم جۆرە بەشداریکردنە بەسەر ناچێت؛ تکایە کۆتا ڕۆژ دیاری مەکە."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "ئەم جۆرە بەشداریکردنە بەسەر ناچێت؛ تکایە ڕۆژی دەستپێک دیاری مەکە."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "کۆتا ڕۆژی بەشداریکردن داوا کراوە."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "کۆتا ڕۆژ"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "تکایە دەستپێکی ڕێککەوتی بەشداریکردن هەڵبژێرە."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "ڕێککەوتی دەستپێکی بەشداریکردن داوا کراوە."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "ڕێککەوتی دەستپێک"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "تکایە جۆرێکی بەشداریکردنی بەردەست هەڵبژێرە."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "جۆری بەشداریکردن داوا کراوە."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "جۆرەکانی بەشداریکردن"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "تکایە جۆرێکی بەشداریکردنی بەردەست هەڵبژێرە."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "بارودۆخی بەشداریکردن داوا کراوە."
+
+msgid "manager.subscriptions.form.status"
+msgstr "بارودۆخ"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "هەمو"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "لەگەڵ بارودۆخ"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "گۆڕانکاری"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"ئەم زانیارییانەی پەیوەندیکردن لە پەڕەی بەشداریکردندا بەردەست دەبێت بۆ ئەوە "
+"خوازیاران لە کاتی پێویستدا پەیوەندی بکەن."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"جۆرەکانی بەشداریکردن و نرخەکانیان لە پەڕەی بەشداریکردندا پیشان دەدرێن، لەگەڵ "
+"ناوی بەڕێوەبەری بەشداریکردن و زانیارییەکانی. زانیاریی زیادە دەربارەی "
+"بەشداریکردن، بۆ نمونە شێوازی پارەدان لە وڵاتە تازە پێگەیشتووەکان، دەکرێت "
+"لێرە زیاد بکرێت."
