@@ -18,8 +18,6 @@ import ('classes.journal.Section');
 import ('lib.pkp.classes.context.PKPSectionDAO');
 
 class SectionDAO extends PKPSectionDAO {
-	var $cache;
-
 	/**
 	 * Get the name of the section table in the database
 	 *
@@ -38,35 +36,13 @@ class SectionDAO extends PKPSectionDAO {
 		return 'journal_id';
 	}
 
-	function _cacheMiss($cache, $id) {
-		$section = $this->getById($id, null, false);
-		$cache->setCache($id, $section);
-		return $section;
-	}
-
-	function &_getCache() {
-		if (!isset($this->cache)) {
-			$cacheManager = CacheManager::getManager();
-			$this->cache = $cacheManager->getObjectCache('sections', 0, array($this, '_cacheMiss'));
-		}
-		return $this->cache;
-	}
-
 	/**
 	 * Retrieve a section by ID.
 	 * @param $sectionId int
 	 * @param $journalId int Journal ID optional
-	 * @param $useCache boolean optional
 	 * @return Section
 	 */
-	function getById($sectionId, $journalId = null, $useCache = false) {
-		if ($useCache) {
-			$cache = $this->_getCache();
-			$returner = $cache->get($sectionId);
-			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
-			return $returner;
-		}
-
+	function getById($sectionId, $journalId = null) {
 		$sql = 'SELECT * FROM sections WHERE section_id = ?';
 		$params = array((int) $sectionId);
 		if ($journalId !== null) {

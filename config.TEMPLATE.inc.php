@@ -145,17 +145,6 @@ debug = Off
 
 [cache]
 
-; Choose the type of object data caching to use. Options are:
-; - memcache: Use the memcache server configured below
-; - xcache: Use the xcache variable store
-; - apc: Use the APC variable store
-; - none: Use no caching.
-object_cache = none
-
-; Enable memcache support
-memcache_hostname = localhost
-memcache_port = 11211
-
 ; For site visitors who are not logged in, many pages are often entirely
 ; static (e.g. About, the home page, etc). If the option below is enabled,
 ; these pages will be cached in local flat files for the number of hours
