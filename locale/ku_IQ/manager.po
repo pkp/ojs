@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-14 20:44+0000\n"
+"PO-Revision-Date: 2020-04-15 15:31+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
@@ -1393,3 +1393,109 @@ msgstr ""
 "لەگەڵ کۆتاییهاتنی بەشداریکردن، خوێنەران لەوانەیە هیچی دیکە نەتوانن بابەتەکان "
 "ببینن یان لەوانەیە ئەو بابەتانە ببینن کە پێش کۆتاییهاتنی بەشداریکردنیان بڵاو "
 "کراونەتەوە."
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"بەشداریکردن لە گۆڤارەکان دەکرێت ''دەستپێڕاگەیشتنی دواخراو'' دابین بکەن بۆ "
+"بابەتەکانیان، هەروەها ڕێگا بە ''ئەرشیفکردنی کەسیی توێژەر'' دەدەن (هەر دو "
+"ئەمانە ژمارەی خوێنەر و گوتراوەکان زیاد دەکەن)."
+
+msgid "manager.subscriptions.edit"
+msgstr "دەستکاریکردنی بەشداریکردن"
+
+msgid "manager.subscriptions.domain"
+msgstr "دۆمەین"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "ڕێککەوتی دەستپێک"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "دەستپێک"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "کۆتا ڕۆژ"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "کۆتایی"
+
+msgid "manager.subscriptions.renew"
+msgstr "نوێ بکەوە"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "دروست بکە"
+
+msgid "manager.subscriptions.create"
+msgstr "بەشداریکردنێکی نوێ دروست بکە"
+
+msgid "manager.subscriptions.summary"
+msgstr "کورتەی بەشداریکردنەکان"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "ئایا تۆ لە سڕینەوەی ئەم بەشداریکردنە دڵنیایت؟"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "ئایا تۆ لە نوێکردنەوەی ئەم بەشداریکردنە دڵنیایت؟"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "بەشداریکردنە دەزگاییەکان"
+
+msgid "manager.individualSubscriptions"
+msgstr "بەشداریکردنە کەسییەکان"
+
+msgid "manager.subscriptions"
+msgstr "بەشداربووەکان"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "تکایە ئیمەیڵێکی کارا داخل بکە."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "بەڕێوەبەری بەشداربووان"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "زانیاریی بەشداریکردن"
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "بژاردەی دەستپێڕاگەیشتنی کراوە بۆ بەشداریکردن لە گۆڤارەکاندا"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>تێبینی:</strong> بۆ کاراکردنی بژاردەکان، بەڕێوەبەری گۆڤار دەبێت "
+"پارەدانی ئۆنلاین کارا بکات."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>تێبینی:</strong> بەشداریکردنی دەزگاکان کە لە ئۆنلاین داوا دەکرێت و "
+"پێویستی بە قبوڵکردنی دۆمەین و ئایپییەکەیان هەیە."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"بەڕێوەبەری بەشداریکردن بە ئیمەیڵ ئاگادار بکەوە بۆ دەربارەی نوێکردنەوەی "
+"ئۆنلاینی بەشداریکردنی دەزگایی."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"بەڕێوەبەری بەشداریکردن بە ئیمەیڵ ئاگادار بکەوە بۆ دەربارەی نوێکردنەوەی "
+"ئۆنلاینی بەشداریکردنی کەسی."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"بەڕێوەبەری بەشداریکردن بە ئیمەیڵ ئاگادار بکەوە بۆ دەربارەی کڕینی ئۆنلاینی "
+"بەشداریکردنی دەزگایی (پێشنیاز کراوە)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"بەڕێوەبەری بەشداریکردن بە ئیمەیڵ ئاگادار بکەوە بۆ دەربارەی کڕینی ئۆنلاینی "
+"بەشداریکردنی کەسی."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"ئاگادارکردنەوەی تۆماتیکی بە ئیمەیڵ  (لە لایەن بەڕێوەبەری گۆڤارەوە دەکرێت "
+"گۆڕانکاری تءدا بکرێت) دەکریت بۆ بەڕێوەبەری بەشداریکردن بنێردرێت بە گوێرەی "
+"بەدەستگەیشتنی پارەدانە ئۆنلاینەکان."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>تێبینی:</strong> بۆ کاراکردنی ئەم بژاردانە، بەڕێوەبەری پەڕەکە دەبێت "
+"<tt> چالاک بکات و </tt> کات دابنێتەوە لە سیستەمەکەدا. تایبەتمەندیی زیاتر "
+"لەوانەیە پێویستی بە شتی زیاتر بێت هەر وەک لە لایەن سیستەمی گۆڤاری کراوە "
+"ئاماژەی بۆ کراوە."
