@@ -47,11 +47,7 @@ session_lifetime = 30
 scheduled_tasks = Off
 
 ; Site time zone
-; Please refer to lib/pkp/registry/timeZones.xml for a full list of supported
-; time zones.
-; I.e.:
-; <entry key="Europe/Amsterdam" name="Amsterdam" />
-; time_zone="Amsterdam"
+; Please refer to https://www.php.net/manual/en/timezones.php for a full list.
 time_zone = "UTC"
 
 ; Short and long date formats
