@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-15 16:26+0000\n"
+"PO-Revision-Date: 2020-04-15 20:44+0000\n"
 "Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ku_IQ/>\n"
@@ -1594,3 +1594,222 @@ msgstr ""
 "ناوی بەڕێوەبەری بەشداریکردن و زانیارییەکانی. زانیاریی زیادە دەربارەی "
 "بەشداریکردن، بۆ نمونە شێوازی پارەدان لە وڵاتە تازە پێگەیشتووەکان، دەکرێت "
 "لێرە زیاد بکرێت."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "بژاردەکان"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "تکایە ئەو چوارگۆشە بچووکە بەکاربهێنە کە بەدەستکراوە."
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "تکایە ئەم بژاردە بەردەستانە بەکار بهێنە."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "دەزگایی (بەکارهێنەران بە دۆمەین یان IP پشتڕاست دەکرێنەوە)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "کەسی (ئەو کەسانە بە داخلبونی هەژمارەکەیان پشتڕاست دەکرێنەوە)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "بەشداربووەکان"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "تکایە جۆرێکی دروستی ڕێکخستنی بەشداریکردن دیاری بکە."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "جۆری ڕێکخستنی بەشداریکردن داوا کراوە."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "ڕێکخستن"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "ماوە داوا کراوە."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "ماوەکە دەبێت واقیعی بێت."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "ماوەی بەشداریکردن بە مانگ بۆ نمونە (12)."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "ماوە"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "تکایە ئەم بژاردە بەردەستانە هەڵبژێرە."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "هەرگیز بەسەر ناچێت"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "مانگەکان بۆ نمونە (12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "بەسەر دەچێت لە دوای"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "ناساندن"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "تکایە دراوێکی دروست داخل بکە."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "دراوێک داوا کراوە."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "دراو"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "نرخ داوا کراوە."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "نرخەکە دەبێت نرخێکی واقیعی بێت."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "ژمارە داخل بکە (وەک، 40 یان 40.00) نەک هێمای وەک ($)."
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "نرخ"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "گۆڕانکاری"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "جۆری بەشداریکردن دەستکاری بکە"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "ماوە"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "دروست بکە"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "جۆرە بەشداریکردنێکی نوێ دروست بکە"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "دەزگایی"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "کەسی"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "بەشداربووەکان"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "نرخ"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"ئاگادارکردنەوە! هەمو بەشداربووەکانی ئەم جۆرە بەشداریکردنە دەسڕێنەوە. ئایا تۆ "
+"دڵنیایت لە بەردەوامیت و سڕینەوەی ئەم جۆرەی بەشداریکردن؟"
+
+msgid "manager.subscriptionTypes"
+msgstr "جۆری بەشداریکردنەکان"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "ناوی دەزگا"
+
+msgid "manager.subscriptions.contact"
+msgstr "ناوی کەسی پەیوەندیدار"
+
+msgid "manager.subscriptions.user"
+msgstr "بەکارهێنەر"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "جۆری بەشداریکردن"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "بەشداریکردنەکە بەسەرکەوتویی دروست کرا."
+
+msgid "manager.subscriptions.select"
+msgstr "دیاری بکە"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "بەکارهێنەر دیاری بکە"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "پەیوەندیکردن بە بەشداربووەوە دیاری بکە"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "هیچ بەشداربویەک نییە"
+
+msgid "manager.subscriptions.notes"
+msgstr "تێبینییەکان"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "ژمارەی سەرچاوە"
+
+msgid "manager.subscriptions.membership"
+msgstr "ئەندامبون"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "مەودای IP"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "جۆری بەشداریکردن دەبێت پێش بەشداریکردنی نوێ دروست بکرێت."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "ئەم بەکارهێنەرە بەشداریکردنی ئەم گۆڤارەی هەیە."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"بۆ ئەوەی ئیمەیڵی ئاگادارکردنەوە بۆ بەشداربو بچێت، دەبێت ناو و ئیمەیڵ لە "
+"ڕێکخستنەکانی گۆڤار داخل کرابێت."
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "خەزنی بکە دانەیەکی دیکە دروست بکە"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "زیادکردن"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "سڕینەوە"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "تکایە مەودای IP ی دروست داخل بکە."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"ئەگەر مەودای IP  لێرە لێ بدرێت، دۆمەین ئارەزومەندانەیە.<br />بەهای بەردەست و "
+"ناونیشانی IP  (e.g. 142.58.103.1), مەودای IP  (e.g. 142.58.103.1 - "
+"142.58.103.4), مەودای IP  لەگەڵ wildcard '*' (e.g. 142.58.*.*), و مەودای IP  "
+"لەگەڵ CIDR (e.g. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "مەودای IP"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "تکایە دۆمەینێکی دروست داخل بکە."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "ئەم بەشداریکردنە پێویستی بە دۆمەین و مەودای IP یە بۆ ئەوەی قبوڵ بکرێت."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"ئەگەر دۆمەینێک لێرە داخل بکرێت، مەودای IP ئارەزومەندانەیە. <br />بەهای دروست "
+"ناوی دۆمەینەکانە (بۆ نمونە lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "ناونیشانی پۆستی"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "ناوی دەزگا داوا کراوە."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "ناوی دەزگا"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "دۆمەین"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "تێبینییەکان"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "ئەم جۆرەی بەشداریکردن پێویستی بە زانیاریی ئەندامبونە."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"زانیارییەکانی ئەندامبون داخل بکە ئەگەر جۆری بەشداریکردنەکە پێویستی بە "
+"زانیارییەکی پەیوەندیدار بە ڕێکخراوێک هەبو."
