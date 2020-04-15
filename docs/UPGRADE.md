@@ -95,8 +95,8 @@ them on top of the new release. This may cause merge conflicts which have to
 be resolved in the usual way, e.g. using a merge tool like kdiff3.
 
 "TAG" should be replaced with the git tag corresponding to the new release.
-OJS release version tags are of the form "ojs-MAJOR_MINOR_REVSION-BUILD".
-For example, the tag for the initial release of OJS 3.0.0 is "ojs-3_0_0-0".
+OJS release version tags are of the form "MAJOR_MINOR_REVSION-BUILD".
+For example, the tag for the initial release of OJS 3.2.0 is "3_2_0-0".
 
 Consult the [README](README.md) of the latest OJS package or the OJS web site for the
 tag corresponding to the latest available OJS release.
