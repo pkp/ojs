@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-08 22:43+0000\n"
-"Last-Translator: Hawkar Aziz Mustafa <hawkar.musstafa@gmail.com>\n"
+"PO-Revision-Date: 2020-04-10 23:37+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "catalog.category.heading"
-msgstr "هەموو دانەکان"
+msgstr "هەمو دانەکان"
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} دانە"
@@ -30,46 +30,46 @@ msgid "submission.submit.privacyStatement"
 msgstr "دەستەواژەی تایبەتێتی"
 
 msgid "submission.submit.form.localeRequired"
-msgstr "تکایە ژمانی ناردن دیاری بکە."
+msgstr "تکایە زمانی ناردنی توێژینەوەکەت دیاری بکە."
 
 msgid "submission.complete"
-msgstr "پەسەندکراو"
+msgstr "پەسەند کرا"
 
 msgid "submission.upload.fileContents"
-msgstr "پێکهاتەی وتار"
+msgstr "پێکهاتەی توێژینەوە"
 
 msgid "editor.submission.decision.sendExternalReview"
-msgstr "ناردن بۆ پێداچوونەوە"
+msgstr "ناردن بۆ هەڵسەنگاندن"
 
 msgid "workflow.review.externalReview"
-msgstr "پێداچوونەوە"
+msgstr "هەڵسەنگاندن"
 
 msgid "submission.pageProofs"
-msgstr "هەڵەگریی"
+msgstr "هەڵسەنگاندنی زمانی"
 
 msgid "submission.submit.titleAndSummary"
 msgstr "ناونیشان و پوختە"
 
 msgid "submission.issueEntry"
-msgstr "مێتاداتا"
+msgstr "زانیاریی ناسێنەر"
 
 msgid "grid.action.workflow"
-msgstr "ڕێڕەوی کاری ناردن"
+msgstr "ڕێڕەوی پێشکەشکردنی توێژینەوە"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "ناردنی نوێ"
+msgstr "پێشکەشکردنی توێژینەوەی نوێ"
 
 msgid "submission.title"
-msgstr "ناونیشانی وتار"
+msgstr "ناونیشانی توێژینەوە"
 
 msgid "submission.upload.selectComponent"
-msgstr "دیاریکردنی پێکهاتەی وتار"
+msgstr "پێکهاتەی توێژینەوەکەت دیاری بکە"
 
 msgid "submission.submit.userGroup"
-msgstr "ناردن بە ڕۆڵی من وەک..."
+msgstr "توێژینەوەکە پێشکەش بکە بە ڕۆڵی…"
 
 msgid "submission.submit.title"
-msgstr "ناردنی وتارێك"
+msgstr "توێژینەوەیەک پێشکەش بکە"
 
 msgid "publication.scheduledIn"
 msgstr "بڵاو دەکرێتەوە لە <a href=\"{$issueUrl}\">{$issueName}</a>."
@@ -84,12 +84,12 @@ msgstr ""
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
-"هەمو پێویستییەکانی بڵاوکردنەوە ئامادەن. ئەمە لەگەڵ ژمارەی {$issue} بڵاو "
+"هەمو پێویستییەکانی بڵاوکردنەوە ئامادەن. ئەمە لەگەڵ ژمارەی {$issue} دا بڵاو "
 "دەبێتەوە. ئایا تۆ دڵنیایت لە بڵاوکردنەوەی ئەمە؟"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"هەمو پێویستییەکانی بڵاوکردنەوە ئامادەن. ئەمە لەگەڵ ژمارەی {$issue} بڵاو "
+"هەمو پێویستییەکانی بڵاوکردنەوە ئامادەن. ئەمە لەگەڵ ژمارەی {$issue}دا بڵاو "
 "دەبیتەوە. ئایا تۆ دڵنیایت لە بڵاوکردنەوەی ئەمە لە کاتی دیاریکراودا؟"
 
 msgid "publication.publish.confirmation"
@@ -100,7 +100,7 @@ msgid "publication.issue.success"
 msgstr "زانیارییەکانی ئەم بڵاوکراوەیە نوێ کرانەوە."
 
 msgid "publication.invalidIssue"
-msgstr "ئەم ژمارەیەی ئەم بڵاوکراوەیە نەدۆزرایەوە."
+msgstr "ژمارەیەی ئەم بڵاوکراوەیە نەدۆزرایەوە."
 
 msgid "publication.invalidSection"
 msgstr "بەشی ئەم بڵاوکراوەیە نەدۆزرایەوە."
@@ -126,19 +126,19 @@ msgid "submission.citationFormat.notFound"
 msgstr "شێوازی ڕێکخستنی گوتراوەکانت ڕێگە پێ نەدراوە."
 
 msgid "submission.submit.form.contributorRoleRequired"
-msgstr "تکایە ڕۆڵەکە دیاری بکە."
+msgstr "تکایە ڕۆڵی هاوبەشەکەت دیاری بکە."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr "پوختەی توێژینەوەکەت زۆرە، تکایە ژمارەی وشەکان کەم بکەوە."
 
 msgid "submission.submit.form.abstractRequired"
-msgstr "تکایە، پوختەی توێژینەوەکەت لێرە بنوسە."
+msgstr "تکایە پوختەی توێژینەوەکەت لێرە بنوسە."
 
 msgid "submission.submit.form.titleRequired"
 msgstr "تکایە ناونیشانی توێژینەوەکەت بنوسە."
 
 msgid "submission.submit.form.authorRequiredFields"
-msgstr "ناوی یەکەم، ناسناو و ئیمەیڵی هەر توێژەرێک داواکراوە."
+msgstr "ناوی یەکەم، ناسناو و ئیمەیڵی هەر توێژەرێک داوا کراوە."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "لانیکەم توێژەرێک داوا کراوە."
@@ -152,7 +152,7 @@ msgid "submission.submit.submissionChecklist"
 msgstr "لیستی پێشکەشکراوەکان"
 
 msgid "submission.incomplete"
-msgstr "چاوەڕوانی قبوڵکردن"
+msgstr "لە چاوەڕوانیی پەسەندکردن دایە"
 
 msgid "submission.event.issueMetadataUpdated"
 msgstr "ئەژماری زانیاریی ناسێنەری ئەم پێشکەشکردنە بار کرا."
@@ -161,10 +161,10 @@ msgid "submission.confirmSubmit"
 msgstr "ئایا تۆ دڵنیایت لە پێشکەشکردنی توێژینەوەکەت؟"
 
 msgid "grid.action.pageProofApproved"
-msgstr ".ئەم بەڵگەیە پشتڕاست کریەوە بۆ هەڵگرتنی لە گالەری."
+msgstr ".ئەم بەڵگەیە پشتڕاست کرایەوە بۆ هەڵگرتنی لە تابلۆی چاپدا."
 
 msgid "grid.action.approveProof"
-msgstr "ئەم زانیارییانە لە نوسخەی چاپ پشتڕاست بکەوە."
+msgstr "ئەم زانیارییانە لە تابلۆی چاپ پشتڕاست بکەوە."
 
 msgid "submission.galleyFiles"
 msgstr "تابلۆکان"
@@ -194,7 +194,7 @@ msgid "grid.action.issueEntry"
 msgstr "زانیاریی ناسێنەری ئەم پێشکەشکردنە ببینە"
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "ئەو تابلۆیەی لە پێشەکی چاپەکەدا دەردەکەوێت"
+msgstr "ئەو تابلۆیەی لە پێشەکی ژمارەکەدا دەردەکەوێت"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
@@ -202,7 +202,7 @@ msgstr ""
 "کاتێک سەرنوسەر توێژینەوەکەتی هەڵ سەنگاند، پەیوەندیت پێوە دەکاتەوە."
 
 msgid "submission.submit.noContext"
-msgstr "ئەم گۆڤارە پێشکەشکراوە نەدۆزرایەوە."
+msgstr "ئەو گۆڤارەی کە توێژینەوەکەت پێشکەش کردووە، نەدۆزرایەوە."
 
 msgid "submission.abstract.wordCount.description"
 msgstr "کورتەی توێژینەوەکە نابێت لە  {$wordCount} وشە زیاتر بێت."
@@ -215,16 +215,19 @@ msgstr "ئەو ڕۆڵە هەڵبژێرە کە تۆ ئەم توێژینەوەی �
 
 msgid "submission.submit.upload.description"
 msgstr ""
-"ئەو فایلانە دابنێ و زیادیان بکەکە پەیوەستن بە پێشکەشکردنەکەوە، لەگەڵ "
-"توێژینەوەکە، ، مولتیمیدیا، زانیاری ڕێکخراو، کاری هونەری و هی تر."
+"ئەو فایلانە دابنێ و زیادیان بکە، کە پەیوەستن بە پێشکەشکردنەکەوە، لەگەڵ "
+"توێژینەوەکە، ، مەلتیمیدیا، زانیاریی ڕێکخراو، کاری هونەری و هی دیکە."
 
-#, fuzzy
 msgid "submission.title.tip"
 msgstr ""
-"زۆربەی جار جۆری پێشکەشکردنەکەیەکێک لەمانەیە بۆ نمونە وێنە، دەق، یان هەر جۆر "
-"فایلێکی تربێت کە لە جۆری بەرنامەی سۆفت وێر یان ئینتەرئکتیڤ، تکایە  یەکێک "
-"لەوانە هەڵبژێرە بۆ خۆت پێشکەشکردنەکەت \n"
-"گونجاوە. نمونەکان دەتوانرێت لەم بەستەر  بدۆزرێتە \n"
-"<a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
-"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
-"usageguide/generic.shtml#type2</a>"
+"جۆری بڵاوکراوەکان یەکێک لەمانە دەبێت؛ وێنە، دەق، مەڵتیمیدیا لە نمونەی "
+"پڕۆگرامەکان'.… تکایە گونجاوترین بۆ پێشکەشکردنەکەت هەڵبژێرە.… نمونەکان لێرەوە "
+"دەدۆزرێنەوە:Examples may be found at <a target=\"_blank\" href=\""
+"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"سەرنوسەر فایلی ئامادەکراوی بۆ بڵاوکردنەوە و بڵاوکردنەوە لێرە ئامادە کردووە. "
+"<em> کەسێک</em> دیاری بکە بۆ ئەوەی کاری هەڵسەنگاندنی زمانی و تابلۆ و فایلە "
+"ڕێکخراوەکان پێش بڵاوکردنەوە بار بکات."
