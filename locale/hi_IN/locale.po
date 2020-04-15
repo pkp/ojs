@@ -1,0 +1,637 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-15 09:20-0700\n"
+"PO-Revision-Date: 2020-04-15 09:20-0700\n"
+"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/locale/hi_HI"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.4.0\n"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "context.current"
+msgstr "वर्तमान जर्नल:"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "context.select"
+msgstr "किसी अन्य जर्नल पर जाएं:"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "reviewer.article.enterReviewForm"
+msgstr "समीक्षा फ़ॉर्म भरने के लिए आइकन पर क्लिक करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "कृपया आवश्यक क्षेत्र भरें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "common.confirmComplete"
+msgstr "क्या आप वाकई इस कार्य को पूरा करना चाहते हैं? आप बाद में बदलाव करने में सक्षम नहीं हो सकते हैं।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "navigation.journalHelp"
+msgstr "जर्नल मदद"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "navigation.otherJournals"
+msgstr "अन्य जर्नल्स"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "सौंपे नहीं गए"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "सौंपे नहीं गए"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "common.queue.long.submissionsArchives"
+msgstr "पुरालेख"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "common.queue.short.submissionsArchives"
+msgstr "पुरालेख"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) startpunc: Different punctuation at the start
+msgid "section.abbreviation.example"
+msgstr "(उदाहरण के लिए, लेख = एआरटी)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.submissionId"
+msgstr "सबमिशन आईडी"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.indexingInformation"
+msgstr "अनुक्रमण जानकारी"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.journalSection"
+msgstr "जर्नल अनुभाग"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.suppFile"
+msgstr "अनुपूरक फ़ाइल"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) simpleplurals: The original uses plural(s)
+msgid "article.suppFiles"
+msgstr "अनुपूरक फ़ाइल (s)"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startcaps: Different capitalization at the start
+msgid "article.suppFilesAbbrev"
+msgstr "Supp. फाइलें"
+
+# (pofilter) short: The translation is much shorter than the original
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "article.sectionEditor"
+msgstr "SE"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "article.accessLogoOpen.altText"
+msgstr "Open Access"
+
+# (pofilter) short: The translation is much shorter than the original
+# (pofilter) simplecaps: Different capitalization
+msgid "article.comments.sectionDefault"
+msgstr "चूक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.fontSize"
+msgstr "फ़ॉन्ट आकार"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.submissionEditing"
+msgstr "सबमिशन एडिटिंग"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.changeSection"
+msgstr "में बदलो"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.editorDecision"
+msgstr "संपादक का निर्णय"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$round}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submission.round"
+msgstr "Round&nbsp;{$round}"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.editorReview"
+msgstr "संपादक की समीक्षा"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.notifyAuthor"
+msgstr "लेखक को सूचित करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.notifyEditor"
+msgstr "संपादक को सूचित करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.reviewersVersion"
+msgstr "समीक्षक की फ़ाइल का एनोटेटेड संस्करण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.editorVersion"
+msgstr "संपादक संस्करण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.authorVersion"
+msgstr "लेखक संस्करण"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submission.copyedit"
+msgstr "Copyedit"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$issueName}
+# (pofilter) startpunc: Different punctuation at the start
+msgid "submission.scheduledIn"
+msgstr "{$issueName} में प्रकाशन के लिए निर्धारित ।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) startpunc: Different punctuation at the start
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.queuedReview"
+msgstr "समीक्षा में"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.initialProof"
+msgstr "प्रारंभिक प्रमाण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.postAuthor"
+msgstr "पोस्ट-लेखक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.reviewRound"
+msgstr "समीक्षा दौर"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.editorDecision"
+msgstr "संपादक का निर्णय"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.editorRuling"
+msgstr "संपादक शासन"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.eventLog"
+msgstr "इवेंट लोग"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.copyeditComplete"
+msgstr "कॉपी संपादित"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.layoutComplete"
+msgstr "लेआउट संपादित किया गया"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submissions.proofreadingComplete"
+msgstr "Proofread"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "journal.currentIssue"
+msgstr "वर्तमान अंक"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "context.context"
+msgstr "जर्नल "
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "journal.issn"
+msgstr "ISSN"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "इस जर्नल में बिना किसी भूमिका वाले उपयोगकर्ताओं को शामिल करें।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.profile.profileImage"
+msgstr "प्रोफ़ाइल छवि"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "user.reviewerPrompt"
+msgstr "क्या आप इस जर्नल को प्रस्तुतियाँ देने के लिए तैयार हैं?"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ userGroup}
+msgid "user.reviewerPrompt.userGroup"
+msgstr "हां, {$ userGroup} भूमिका का अनुरोध करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "user.reviewerPrompt.optin"
+msgstr "हां, मैं इस जर्नल को प्रस्तुतियाँ की समीक्षा करने के अनुरोधों के साथ संपर्क करना चाहूंगा।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "user.register.contextsPrompt"
+msgstr "इस साइट पर कौन सी जर्नल्स आप के साथ पंजीकृत करना चाहेंगे?"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.register.otherContextRoles"
+msgstr "निम्नलिखित भूमिकाओं का अनुरोध करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.register.noContextReviewerInterests"
+msgstr "यदि आपने किसी भी जर्नल में एक समीक्षक बनने का अनुरोध किया है, तो कृपया अपने विषय के हितों को दर्ज करें।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.myJournals"
+msgstr "मेरी जर्नल्स"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "user.noRoles.chooseJournal"
+msgstr "आपका खाता वर्तमान में किसी भी जर्नल से संबद्ध नहीं है। कृपया एक जर्नल चुनें:"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "user.noRoles.noRolesForJournal"
+msgstr "आपके खाते में वर्तमान में इस जर्नल के लिए कोई भूमिका नहीं है। कृपया नीचे दिए गए कार्यों में से चुनें:"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "एक लेख सबमिट करें: लेखक पंजीकरण वर्तमान में अक्षम है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.noRoles.regReviewerClosed"
+msgstr "एक समीक्षक के रूप में पंजीकरण करें: वर्तमान में समीक्षक पंजीकरण अक्षम है।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.subEditor"
+msgstr "अनुभाग संपादक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.subscriptionManager"
+msgstr "सदस्यता प्रबंधक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.subEditors"
+msgstr "अनुभाग संपादक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.subscriptionManagers"
+msgstr "सदस्यता प्रबंधक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.journalAssistant"
+msgstr "जर्नल असिस्टेंट"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.journalAssistants"
+msgstr "जर्नल असिस्टेंट"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "issue.vol"
+msgstr "Vol."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "issue.no"
+msgstr "No."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "issue.noIssues"
+msgstr "कोई अंक नहीं"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "issue.fullIssue"
+msgstr "पूर्ण अंक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "issue.viewIssue"
+msgstr "अंक देखें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.currency"
+msgstr "मुद्रा"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.year"
+msgstr "साल"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.years"
+msgstr "साल"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.month"
+msgstr "महीना"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.months"
+msgstr "महीना"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.format"
+msgstr "स्वरूप"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.format.online"
+msgstr "ऑनलाइन"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.format.print"
+msgstr "प्रिंट"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.status.needsInformation"
+msgstr "जानकारी चाहिए"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.status.needsApproval"
+msgstr "मंजूरी की जरूरत है"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.status.noSubscription"
+msgstr "आपके पास सक्रिय सदस्यता नहीं है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.individualDescription"
+msgstr "व्यक्तिगत सदस्यता के लिए सदस्यता सामग्री तक पहुंचने के लिए लॉगिन की आवश्यकता होती है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.institutionalDescription"
+msgstr "संस्थागत सदस्यता के लिए लॉगिन की आवश्यकता नहीं है। उपयोगकर्ता के डोमेन और / या आईपी पते का उपयोग सदस्यता सामग्री तक पहुंच प्रदान करने के लिए किया जाता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) xmltags: Added XML tags
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>नोट:</strong> ऑनलाइन खरीदे गए संस्थागत सदस्यता को सदस्यता सक्रिय होने से पहले डोमेन और आईपी श्रेणियों के अनुमोदन की आवश्यकता होती है।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.defaultEvent"
+msgstr "सबमिशन इवेंट"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.submissionSubmitted"
+msgstr "लेख प्रस्तुत किया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.issueScheduled"
+msgstr "शेड्यूलिंग कतार जारी करने के लिए सबमिशन भेजा गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.issueAssigned"
+msgstr "सबमिशन जारी करने के लिए अंक सौंपा गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.articlePublished"
+msgstr "लेख प्रकाशित हुआ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.author.authorRevision"
+msgstr "लेखक संशोधन प्रस्तुत किया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.authorRevision"
+msgstr "लेखक संशोधन फ़ाइल अपडेट की गई"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.editor.editorAssigned"
+msgstr "संपादक को सबमिशन सौंपा"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor unassigned from submission"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.editor.editorDecision"
+msgstr "संपादक का सबमिशन निर्णय "
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.editor.editorFile"
+msgstr "संपादक फ़ाइल अपडेट की गई"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submission.event.editor.submissionArchived"
+msgstr "Submission sent to archive"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.editor.submissionRestored"
+msgstr "सबमिशन पुरालेख से पुनर्स्थापित किया गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "प्रतिलिपि सबमिशन करने वाले को सौंपी गई"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "प्रतिलिपि सबमिशन करने से अनसुना कर दिया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "प्रतिलिपि कार्य आरंभ किया गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "प्रतिलिपि संशोधन फ़ाइल अपडेट की गई"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "प्रूफ़रीडर सबमिशन करने के लिए सौंपा"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "प्रूफ़रीडर सबमिशन करने से अप्रभावित है"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "प्रूफ़रीडर असाइनमेंट शुरू किया गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "प्रूफ़रीडर संशोधन फ़ाइल अपडेट की गई"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "प्रूफ़रीडर असाइनमेंट पूरा हुआ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.layout.layoutInitiated"
+msgstr "लेआउट असाइनमेंट शुरू किया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.layout.layoutComplete"
+msgstr "लेआउट असाइनमेंट पूरा हुआ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "reader.subscribersOnly"
+msgstr "केवल सदस्य"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "आइटम का उपयोग करने के लिए आवश्यक सदस्यता। सदस्यता सत्यापित करने के लिए, जर्नल में लॉग इन करें।"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "reader.openAccess"
+msgstr "Open Access"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "reader.subscriptionAccess"
+msgstr "सदस्यता की आवश्यकता है"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$price}, {$currency}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$publicProfileUrl}, {$userName}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) xmltags: Added XML tags
+msgid "comments.authenticated"
+msgstr "by <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy"
+msgstr "द्वारा आदेश परिणाम"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.article"
+msgstr "लेख का शीर्षक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.author"
+msgstr "लेखक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.date"
+msgstr "प्रकाशन तिथि"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.issue"
+msgstr "अंक "
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.journal"
+msgstr "जर्नल शीर्षक"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "search.results.orderBy.popularityAll"
+msgstr "लोकप्रियता (सभी समय)"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "search.results.orderBy.popularityMonth"
+msgstr "लोकप्रियता (अंतिम माह)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.relevance"
+msgstr "प्रासंगिकता"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderDir.asc"
+msgstr "आरोही"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderDir.desc"
+msgstr "अवरोही"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.similarDocuments"
+msgstr "इसी तरह के दस्तावेज"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) tabs: Different tabs
+# (pofilter) xmltags: Added XML tags
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>OJS के अलावा एक डिफ़ॉल्ट प्रमाणीकरण स्रोत को निर्दिष्ट करने के निम्नलिखित प्रभाव हैं:</p>\n"
+"<ul>\n"
+"\t<li>यदि कोई उपयोगकर्ता प्रमाणीकरण साइट पर मौजूद उपयोगकर्ता नाम (लेकिन OJS डेटाबेस में नहीं) के साथ इस साइट के साथ एक नया खाता पंजीकृत करने का प्रयास करता है, तो पंजीकरण प्रयास केवल तभी अनुमति दी जाती है जब आपूर्ति की गई पासवर्ड उस उपयोगकर्ता खाते के लिए मान्य हो।</li>\n"
+"</ul>"
+
+# (pofilter) newlines: Different line endings
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) xmltags: Added XML tags
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>नोट!</h4>\n"
+"<p>सिस्टम कॉन्फ़िगरेशन फ़ाइल को स्वचालित रूप से अधिलेखित नहीं कर सकता है। अपने कॉन्फ़िगरेशन परिवर्तनों को लागू करने के लिए आपको उपयुक्त टेक्स्ट एडिटर में <tt> config.inc.php </ tt> खोलना होगा और इसकी सामग्री को नीचे दिए गए टेक्स्ट फ़ील्ड की सामग्री से बदलना होगा।</p>"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.categories.viewableFiles"
+msgstr "लेख गैली प्लगइन्स"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.categories.viewableFiles.description"
+msgstr "लेख गैली प्लगइन्स अलग-अलग दस्तावेज़ प्रकार को लेख गैलिस के रूप में प्रदर्शित करने के लिए समर्थन जोड़ते हैं।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.categories.auth.description"
+msgstr "प्राधिकरण प्लगइन्स ओपन जर्नल सिस्टम को उपयोगकर्ता प्रमाणीकरण कार्यों को अन्य प्रणालियों, जैसे LDAP सर्वरों को सौंपने की अनुमति देता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "plugins.categories.generic.description"
+msgstr "जेनेरिक प्लगइन्स का उपयोग ओपन जर्नल सिस्टम को विभिन्न तरीकों से विस्तारित करने के लिए किया जाता है जो अन्य प्लगइन श्रेणियों द्वारा समर्थित नहीं हैं।"
+
+# (pofilter) brackets: Added '[', ']', '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('target=\'_new\'', 'href=\'http://creativecommons.org/licenses/by/3.0/\'>', '\', '\', '\', '\')
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 6
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) singlequoting: Different quotation marks
+# (pofilter) tabs: Different tabs
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>प्रस्तावित क्रिएटिव कॉमन्स कॉपीराइट नोटिस</h3>\n"
+"<h4>1. ओपन एक्सेस की पेशकश करने वाली जर्नल्स के लिए प्रस्तावित नीति</h4>\n"
+"इस जर्नल के साथ प्रकाशित करने वाले लेखक निम्नलिखित शर्तों से सहमत हैं:\n"
+"<ol type=\"a\">\n"
+"\t<li>लेखक कॉपीराइट को बनाए रखते हैं और एक <a लक्ष्य के तहत लाइसेंस प्राप्त काम के साथ पहले प्रकाशन का अधिकार देते हैं। <a target=\'_new\' href=\'http://creativecommons.org/licenses/by/3.0/\'> क्रिएटिव कॉमन्स एट्रिब्यूशन लाइसेंस</a> जो दूसरों को इस पत्रिका में काम के लेखकों की स्वीकृति और प्रारंभिक प्रकाशन के साथ काम साझा करने की अनुमति देता है।</li>\n"
+"\t<li>लेखक कार्य के जर्नल के प्रकाशित संस्करण के गैर-अनन्य वितरण के लिए अलग, अतिरिक्त संविदात्मक व्यवस्था में प्रवेश करने में सक्षम हैं (उदाहरण के लिए, इसे एक संस्थागत रिपॉजिटरी में पोस्ट करें या इसे एक पुस्तक में प्रकाशित करें), इस जर्नल में अपने प्रारंभिक प्रकाशन की पावती के साथ ।</li>\n"
+"\t<li>लेखकों को अपना काम ऑनलाइन (जैसे संस्थागत रिपॉजिटरी में या अपनी वेबसाइट पर) पोस्ट करने से पहले और जमा करने की प्रक्रिया के दौरान अनुमत और प्रोत्साहित किया जाता है, क्योंकि इससे उत्पादक एक्सचेंजों के साथ-साथ पहले से प्रकाशित काम का अधिक से अधिक उद्धरण हो सकता है। (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. जर्नल्स के लिए प्रस्तावित नीति जो विलंबित ओपन एक्सेस प्रदान करती है</h4>\n"
+"इस जर्नल के साथ प्रकाशित करने वाले लेखक निम्नलिखित शर्तों से सहमत हैं:\n"
+"<ol type=\"a\">\n"
+"\t<li>लेखक कॉपीराइट को बनाए रखते हैं और पहले प्रकाशन का अधिकार देते हैं, काम के साथ [विशेष समय का प्रकाशन] प्रकाशन के बाद एक साथ एक <a लक्ष्य = \ _ \ _ नए \ "href = \" http://creativecommons.org/licenses/ के तहत लाइसेंस प्राप्त होता है। द्वारा / 3.0 / \ "> क्रिएटिव कॉमन्स एट्रिब्यूशन लाइसेंस </a> जो दूसरों को इस पत्रिका में काम के लेखक की स्वीकृति और प्रारंभिक प्रकाशन के साथ काम साझा करने की अनुमति देता है।</li>\n"
+"\t <li>लेखक कार्य के जर्नल के प्रकाशित संस्करण के गैर-अनन्य वितरण के लिए अलग, अतिरिक्त संविदात्मक व्यवस्था में प्रवेश करने में सक्षम हैं (उदाहरण के लिए, इसे एक संस्थागत रिपॉजिटरी में पोस्ट करें या इसे एक पुस्तक में प्रकाशित करें), इस पत्रिका में अपने प्रारंभिक प्रकाशन की स्वीकृति के साथ ।"
