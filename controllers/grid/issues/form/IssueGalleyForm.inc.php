@@ -86,7 +86,7 @@ class IssueGalleyForm extends Form {
 
 		$publicGalleyId = $this->getData('publicGalleyId');
 		if ($publicGalleyId) {
-			if (ctype_digit($publicGalleyId)) {
+			if (ctype_digit((string) $publicGalleyId)) {
 				$this->addError('publicGalleyId', __('editor.publicIdentificationNumericNotAllowed', array('publicIdentifier' => $publicGalleyId)));
 				$this->addErrorField('publicGalleyId');
 			} elseif ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley?$this->_issueGalley->getId():null, true)) {
@@ -96,7 +96,7 @@ class IssueGalleyForm extends Form {
 		}
 
 		if ($this->getData('urlPath')) {
-			if (ctype_digit($this->getData('urlPath'))) {
+			if (ctype_digit((string) $this->getData('urlPath'))) {
 				$this->addError('urlPath', __('publication.urlPath.numberInvalid'));
 				$this->addErrorField('urlPath');
 			} else {
