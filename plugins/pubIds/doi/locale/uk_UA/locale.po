@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
-"PO-Revision-Date: 2020-04-18 20:21+0000\n"
+"PO-Revision-Date: 2020-04-20 07:02+0000\n"
 "Last-Translator: Fylypovych Georgii <red.ukr@gmail.com>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
 "pubIds-doi/uk/>\n"
@@ -158,3 +158,51 @@ msgstr "DOI {$pubId} був призначений."
 
 msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Статті"
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Ви не можете згенерувати DOI, оскільки для однієї чи декількох частин "
+"шаблону DOI не вистачає даних. Вам необхідно призначити публікацію до "
+"випуску, вказати ID видавця, та вказати сторінки."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Ви впевнені, що хочете призначити DOI усім опублікованим об'єктам, яким DOI "
+"не було призначено?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Призначити DOI  усім опублікованим об'єктам журналу, яким не було призначено "
+"DOI. Ця опція недоступна з налаштуваннями індивідуального суфікса. Якщо ви "
+"змінювали налаштування DOI, будь ласка, збережіть ваші налаштування перед "
+"запуском даної процедури. Залежно від кількості опублікованих об'єктів в "
+"журналі призначення DOI може зайняти багато часу."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Елемент"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Гранка: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "DOI не було призначено цій публікації."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "DOI для цієї публікацїі буде {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI має починатися з {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Ви не можете згенерувати DOI, доки ця публікація не буде призначена в "
+"конкретний номер."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Призначити"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI має починатися з {$prefix}."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Призначити DOI"
