@@ -8,7 +8,7 @@
  * Skip links to aid navigation when tabbing for screen reader accessibility
  *}
 
- <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+ <nav class="cmp_skip_to_content" aria-label="{translate key="navigation.skip.description"}">
 	<a href="#pkp_content_main">{translate key="navigation.skip.main"}</a>
 	<a href="#siteNav">{translate key="navigation.skip.nav"}</a>
 	{if !$requestedPage || $requestedPage === 'index'}
