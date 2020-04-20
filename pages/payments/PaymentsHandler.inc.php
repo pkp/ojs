@@ -16,6 +16,10 @@
 import('classes.handler.Handler');
 
 class PaymentsHandler extends Handler {
+
+	/** @copydoc PKPHandler::_isBackendPage */
+	var $_isBackendPage = true;
+
 	/**
 	 * Constructor.
 	 */

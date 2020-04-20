@@ -123,11 +123,11 @@ class SettingsHandler extends ManagementHandler {
 		}
 
 		// Add forms to the existing settings data
-		$settingsData = $templateMgr->getTemplateVars('settingsData');
-		$settingsData['components'][$accessForm->id] = $accessForm->getConfig();
-		$settingsData['components'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
-		$settingsData['components'][$archivePnForm->id] = $archivePnForm->getConfig();
-		$templateMgr->assign('settingsData', $settingsData);
+		$components = $templateMgr->getState('components');
+		$components[$accessForm->id] = $accessForm->getConfig();
+		$components[$archivingLockssForm->id] = $archivingLockssForm->getConfig();
+		$components[$archivePnForm->id] = $archivePnForm->getConfig();
+		$templateMgr->setState(['components' => $components]);
 
 		// Hook into the settings templates to add the appropriate tabs
 		HookRegistry::register('Template::Settings::distribution', function($hookName, $args) {
