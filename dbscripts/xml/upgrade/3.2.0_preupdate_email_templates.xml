@@ -2,17 +2,17 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-	* dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml
-	*
-	* Copyright (c) 2013-2020 Simon Fraser University
-	* Copyright (c) 2003-2020 John Willinsky
-	* Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
-	*
-	* Update the email templates tables to remove unused columns, add a new
-	* email_id column and primary key, and update outdated role ids for the
-	* default templates.
-	*
-	-->
+ * dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml
+ *
+ * Copyright (c) 2013-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * Update the email templates tables to remove unused columns, add a new
+ * email_id column and primary key, and update outdated role ids for the
+ * default templates.
+ *
+ -->
 
 <data>
 	<sql><!-- pkp/pkp-lib#4988 Fix obsolete submissionLayoutUrl email variable -->
@@ -24,53 +24,23 @@
 		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$editorialContactSignature}', '') WHERE email_key IN ('EDITOR_ASSIGN', 'REVIEW_CANCEL', 'REVIEW_ACK', 'EDITOR_DECISION_ACCEPT', 'EDITOR_DECISION_SEND_TO_EXTERNAL', 'EDITOR_DECISION_SEND_TO_PRODUCTION', 'EDITOR_DECISION_REVISIONS', 'EDITOR_DECISION_RESUBMIT', 'EDITOR_DECISION_DECLINE', 'EDITOR_DECISION_INITIAL_DECLINE', 'EDITOR_RECOMMENDATION', 'COPYEDIT_REQUEST', 'LAYOUT_REQUEST', 'PROOFREAD_LAYOUT_REQUEST')</query>
 	</sql>
 	<sql>
-		<query>
-			ALTER TABLE email_templates_data
-			ADD email_id BIGINT
-		</query>
+		<query>ALTER TABLE email_templates_data ADD email_id BIGINT</query>
 
-		<query driver="mysql">UPDATE email_templates_data etd LEFT JOIN email_templates et ON (etd.email_key = et.email_key AND etd.assoc_type = et.assoc_type AND etd.assoc_id = et.assoc_id) SET etd.email_id = et.email_id</query>
-		<query driver="mysqli">UPDATE email_templates_data etd LEFT JOIN email_templates et ON (etd.email_key = et.email_key AND etd.assoc_type = et.assoc_type AND etd.assoc_id = et.assoc_id) SET etd.email_id = et.email_id</query>
-		<query driver="postgres7">UPDATE email_templates_data SET email_id=email_templates.email_id FROM email_templates WHERE email_templates_data.email_key = email_templates.email_key AND email_templates_data.assoc_type = email_templates.assoc_type AND email_templates_data.assoc_id = email_templates.assoc_id</query>
+		<query driver="mysql,mysqli">UPDATE email_templates_data etd LEFT JOIN email_templates et ON (etd.email_key = et.email_key AND etd.assoc_type = et.assoc_type AND etd.assoc_id = et.assoc_id) SET etd.email_id = et.email_id</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">UPDATE email_templates_data SET email_id=email_templates.email_id FROM email_templates WHERE email_templates_data.email_key = email_templates.email_key AND email_templates_data.assoc_type = email_templates.assoc_type AND email_templates_data.assoc_id = email_templates.assoc_id</query>
 
-		<query>
-			ALTER TABLE email_templates
-			ADD context_id BIGINT
-		</query>
-		<query>
-			UPDATE email_templates SET context_id = assoc_id
-			WHERE assoc_type=256 AND assoc_id IS NOT NULL
-		</query>
+		<query>ALTER TABLE email_templates ADD context_id BIGINT</query>
+		<query>UPDATE email_templates SET context_id = assoc_id WHERE assoc_type=256 AND assoc_id IS NOT NULL</query>
 		<dropindex table="email_templates" index="email_templates_assoc" />
 		<dropindex table="email_templates" index="email_templates_email_key" />
-		<query>
-			ALTER TABLE email_templates
-			DROP COLUMN assoc_type,
-			DROP COLUMN assoc_id
-		</query>
+		<query>ALTER TABLE email_templates DROP COLUMN assoc_type, DROP COLUMN assoc_id</query>
 		<!-- 16 = ROLE_ID_MANAGER, 17 = ROLE_ID_SUB_EDITOR, 256 and 512 = unused role ids -->
-		<query>
-			UPDATE email_templates_default
-			SET from_role_id=16
-			WHERE from_role_id=17 OR from_role_id=256 OR from_role_id=512
-		</query>
+		<query>UPDATE email_templates_default SET from_role_id=16 WHERE from_role_id=17 OR from_role_id=256 OR from_role_id=512</query>
 		<!-- 16 = ROLE_ID_MANAGER, 17 = ROLE_ID_SUB_EDITOR, 256 and 512 = unused role ids -->
-		<query>
-			UPDATE email_templates_default
-			SET to_role_id=16
-			WHERE to_role_id=17 OR to_role_id=256 OR to_role_id=512
-		</query>
+		<query>UPDATE email_templates_default SET to_role_id=16 WHERE to_role_id=17 OR to_role_id=256 OR to_role_id=512</query>
 		<!-- 4097 = ROLE_ID_ASSISTANT, 768 and 8192 = unused role ids -->
-		<query>
-			UPDATE email_templates_default
-			SET from_role_id=4097
-			WHERE from_role_id=768 OR from_role_id=8192
-		</query>
+		<query>UPDATE email_templates_default SET from_role_id=4097 WHERE from_role_id=768 OR from_role_id=8192</query>
 		<!-- 4097 = ROLE_ID_ASSISTANT, 768 and 8192 = unused role ids -->
-		<query>
-			UPDATE email_templates_default
-			SET to_role_id=4097
-			WHERE to_role_id=768 OR to_role_id=8192
-		</query>
+		<query>UPDATE email_templates_default SET to_role_id=4097 WHERE to_role_id=768 OR to_role_id=8192</query>
 	</sql>
 </data>

@@ -13,9 +13,8 @@
 <data>
 	<sql>
 		<!-- issue #2506: repair migrated files genre ids -->
-		<query driver="mysql">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE sf.genre_id = 1 AND g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
-		<query driver="mysqli">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE sf.genre_id = 1 AND g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
-		<query driver="postgres7">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s WHERE submission_files.genre_id = 1 AND g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id</query>
+		<query driver="mysql,mysqli">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE sf.genre_id = 1 AND g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s WHERE submission_files.genre_id = 1 AND g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id</query>
 	</sql>
 	<sql><!-- pkp/pkp-lib#2543 -->
 		<query>UPDATE filter_groups SET input_type = 'class::classes.submission.Submission' WHERE symbolic = 'article=>doaj-json'</query>
