@@ -2,16 +2,16 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-	* dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml
-	*
-	* Copyright (c) 2013-2020 Simon Fraser University
-	* Copyright (c) 2003-2020 John Willinsky
-	* Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
-	*
-	* Copy submission data to temporary tables so it can be updated
-	* after the publication table modifications are made.
-	*
-	-->
+ * dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml
+ *
+ * Copyright (c) 2013-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * Copy submission data to temporary tables so it can be updated
+ * after the publication table modifications are made.
+ *
+ -->
 
 <data>
 	<sql>
@@ -38,9 +38,8 @@
 		status value is incorrect for any submissions.
 	-->
 	<sql>
-		<query driver="postgres7">UPDATE submissions SET status=1 FROM	submissions AS s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) WHERE s.status=3 AND ps.submission_id IS NULL</query>
-		<query driver="mysql">UPDATE submissions s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) SET s.status=1 WHERE s.status=3 AND ps.submission_id IS NULL</query>
-		<query driver="mysqli">UPDATE submissions s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) SET s.status=1 WHERE s.status=3 AND ps.submission_id IS NULL</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">UPDATE submissions SET status=1 FROM	submissions AS s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) WHERE s.status=3 AND ps.submission_id IS NULL</query>
+		<query driver="mysql,mysqli">UPDATE submissions s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) SET s.status=1 WHERE s.status=3 AND ps.submission_id IS NULL</query>
 	</sql>
 	<!-- Modify citations table to refer to publications #5465-->
 	<sql>
