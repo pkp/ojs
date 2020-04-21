@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-03-09 13:16+0000\n"
+"PO-Revision-Date: 2020-04-21 19:24+0000\n"
 "Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hans/>\n"
@@ -18,7 +18,7 @@ msgid "reviewer.article.enterReviewForm"
 msgstr "点击图标以填写审查表。"
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
-msgstr "请填写必添项目"
+msgstr "请填写必填项目。"
 
 msgid "common.software"
 msgstr "开放期刊系统"
@@ -360,13 +360,13 @@ msgid "user.noRoles.submitArticle"
 msgstr "提交提案"
 
 msgid "user.noRoles.submitArticleRegClosed"
-msgstr "投稿：作者注册当前处于关闭状态"
+msgstr "投稿：作者注册当前处于关闭状态。"
 
 msgid "user.noRoles.regReviewer"
 msgstr "注册为审稿人"
 
 msgid "user.noRoles.regReviewerClosed"
-msgstr "注册为审稿人: 注册审稿人当前处于关闭状态"
+msgstr "注册为审稿人: 注册审稿人当前处于关闭状态。"
 
 msgid "user.role.manager"
 msgstr "期刊管理员"
@@ -650,13 +650,13 @@ msgstr "停用这个用户帐号？这会让这个用户无法再登入这个系
 
 msgid "manager.people.noAdministrativeRights"
 msgstr ""
-"\n"
-"\t\t对不起，您对这个用户没有管理权限，这可能是因为：\n"
-"\t\t<ul>\n"
-"\t\t\t<li>这个用户是一个网站管理员</li>\n"
-"\t\t\t<li>这个用户是在您没有管理权限的期刊上活动</li>\n"
-"\t\t</ul>\n"
-"\t\t所要进行的动作，必须由网站管理员来完成。"
+"对不起，您对这个用户没有管理权限，这可能是因为：\n"
+"  <ul>\n"
+"   <li>这个用户是一个网站管理员</li>\n"
+"   <li>这个用户是在您没有管理权限的期刊上活动</li>\n"
+"  </ul>\n"
+" 所要进行的动作，必须由网站管理员来完成。\n"
+"\t"
 
 msgid "editor.submissionReview.notes"
 msgstr ""
@@ -672,7 +672,7 @@ msgid "sectionEditor.completedEditorialAssignments"
 msgstr "完成的编辑指派"
 
 msgid "sectionEditor.noneAssigned"
-msgstr "无投稿指派"
+msgstr "无投稿指派。"
 
 msgid "sectionEditor.copyedit.confirmRenotify"
 msgstr "再次通知这个文字编辑会重新指派他们的编辑任务。您确定您想要这么做？"
@@ -726,7 +726,7 @@ msgid "layoutEditor.completedEditorialAssignments"
 msgstr "完成的编辑任务"
 
 msgid "layoutEditor.noActiveAssignments"
-msgstr "无活动的编辑任务"
+msgstr "无活动的编辑任务。"
 
 msgid "layoutEditor.layoutEditingAssignments"
 msgstr "排版编辑任务"
@@ -858,7 +858,7 @@ msgid "reviewer.article.consultGuidelines"
 msgstr "如果你要做审稿，参阅如下审稿准则."
 
 msgid "reviewer.article.downloadSubmission"
-msgstr "通过点击文件名称下载稿件，并审阅与稿件相关的文件"
+msgstr "通过点击文件名称下载稿件，并审阅与稿件相关的文件。"
 
 msgid "reviewer.article.enterCompetingInterests"
 msgstr "声明您是否有这方面的研究利益冲突 (参阅 <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;方针</a>)."
@@ -1813,3 +1813,48 @@ msgstr "切换到另一个期刊："
 
 msgid "context.current"
 msgstr "当前期刊："
+
+msgid "search.results.similarDocuments"
+msgstr "相似文档"
+
+msgid "search.results.orderDir.desc"
+msgstr "降序"
+
+msgid "search.results.orderDir.asc"
+msgstr "升序"
+
+msgid "search.results.orderBy.relevance"
+msgstr "关联"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "受欢迎度（上一个月）"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "受欢迎程度（所有时间）"
+
+msgid "search.results.orderBy.journal"
+msgstr "期刊标题"
+
+msgid "search.results.orderBy.issue"
+msgstr "期"
+
+msgid "search.results.orderBy.date"
+msgstr "发布日期"
+
+msgid "search.results.orderBy.author"
+msgstr "作者"
+
+msgid "search.results.orderBy.article"
+msgstr "文章标题"
+
+msgid "search.results.orderBy"
+msgstr "对结果排序"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "文章已提交"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>注意</strong>：在线购买的机构订阅必须先获得域名和IP范围的批准，然后才能激活订阅。"
