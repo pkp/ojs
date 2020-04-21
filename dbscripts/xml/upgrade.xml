@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="3.2.0.1">
+<install version="3.2.1.0">
 	<code function="checkPhpVersion" />
 
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
@@ -256,14 +256,14 @@
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="3.2.0.9">
-		<data file="dbscripts/xml/upgrade/3.2.1_update.xml" />
-		<note file="docs/release-notes/README-3.2.1" />
-	</upgrade>
-
 	<upgrade minversion="2.4.0.0" maxversion="3.0.0.9">
 		<!-- This appears intentionally late to give time for the versioning introduction. -->
 		<code function="setFileName" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.2.0.9">
+		<data file="dbscripts/xml/upgrade/3.2.1_update.xml" />
+		<note file="docs/release-notes/README-3.2.1" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
