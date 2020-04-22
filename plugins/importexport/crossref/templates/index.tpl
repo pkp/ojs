@@ -87,8 +87,8 @@
 				}			
 			</script>
 			<p>
-				<input class="pkp_button" type="button" onclick='selectAll()' value="Select All"/>
-				<input class="pkp_button" type="button" onclick='UnSelectAll()' value="Unselect All"/>
+				<input class="pkp_button" type="button" onclick='selectAll()' value="{translate key="common.selectAll"}"/>
+				<input class="pkp_button" type="button" onclick='UnSelectAll()' value="{translate key="common.selectNone"}"/>
 			</p>
 			<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
 				{csrf}
