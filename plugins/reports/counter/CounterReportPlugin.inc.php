@@ -207,6 +207,7 @@ class CounterReportPlugin extends ReportPlugin {
 		// legacy reports are site-wide, so only site admins have access
 		$templateManager->assign('showLegacy', Validation::isSiteAdmin());
 		if (!empty($legacyYears)) $templateManager->assign('legacyYears', $legacyYears);
+		$templateManager->assign('pageTitle', __('plugins.reports.counter'));
 		$templateManager->display($this->getTemplateResource('index.tpl'));
 	}
 

@@ -46,9 +46,6 @@ msgstr "Su solicitud no pudo ser completada ya que le falta información requeri
 msgid "api.submissions.400.invalidIssueIdentifiers"
 msgstr "El volumen, número o año requerido no es válido."
 
-msgid "api.submissions.unknownError"
-msgstr "Un error inesperado ha ocurrido. Por favor recargue la página e intente nuevamente."
-
 msgid "api.stats.400.wrongDateFormat"
 msgstr "Su solicitud no fue válida. La fecha debe tener el formato YYYY-MM-DD."
 

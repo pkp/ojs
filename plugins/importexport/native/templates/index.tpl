@@ -7,10 +7,12 @@
  *
  * List of operations this plugin can perform
  *}
-{strip}
-{assign var="pageTitle" value="plugins.importexport.native.displayName"}
-{include file="common/header.tpl"}
-{/strip}
+{extends file="layouts/backend.tpl"}
+
+{block name="page"}
+	<h1 class="app__pageHeading">
+		{$pageTitle|escape}
+	</h1>
 
 <script type="text/javascript">
 	// Attach the JS file tab handler.
@@ -100,4 +102,4 @@
 	</div>
 </div>
 
-{include file="common/footer.tpl"}
+{/block}

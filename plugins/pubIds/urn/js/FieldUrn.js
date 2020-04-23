@@ -16,7 +16,7 @@ var template = pkp.Vue.compile('<div class="pkpFormField pkpFormField--text pkpF
 '				:label="label"' +
 '				:localeLabel="localeLabel"' +
 '				:isRequired="isRequired"' +
-'				:requiredLabel="i18n.required"' +
+'				:requiredLabel="__('common.required')"' +
 '				:multilingualLabel="multilingualLabel"' +
 '			/>' +
 '			<div' +

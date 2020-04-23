@@ -7,24 +7,10 @@
  *
  * Display the author dashboard.
  *}
-{strip}
-	{assign var=primaryAuthor value=$submission->getPrimaryAuthor()}
-	{if !$primaryAuthor}
-		{assign var=authors value=$submission->getAuthors()}
-		{assign var=primaryAuthor value=$authors[0]}
-	{/if}
-	{assign var=submissionTitleSafe value=$submission->getLocalizedTitle()|strip_unsafe_html}
-	{if $primaryAuthor}
-		{assign var="pageTitleTranslated" value=$primaryAuthor->getFullName()|concat:", ":$submissionTitleSafe}
-	{else}
-		{assign var="pageTitleTranslated" value=$submissionTitleSafe}
-	{/if}
-	{include file="common/header.tpl" suppressPageTitle=true}
-{/strip}
+{extends file="layouts/backend.tpl"}
 
-<div class="pkp_page_content">
-	{assign var="uuid" value=""|uniqid|escape}
-	<div id="workflow-{$uuid}" class="pkpWorkflow">
+{block name="page"}
+	<div class="pkpWorkflow">
 		<pkp-header :is-one-line="true" class="pkpWorkflow__header">
 			<h1 class="pkpWorkflow__identification">
 				<span class="pkpWorkflow__identificationId">{{ submission.id }}</span>
@@ -40,14 +26,16 @@
 			<template slot="actions">
 				<pkp-button
 					v-if="uploadFileUrl"
-					:label="i18n.uploadFile"
 					ref="uploadFileButton"
 					@click="openFileUpload"
-				></pkp-button>
+				>
+					{translate key="common.upload.addFile"}
+				</pkp-button>
 				<pkp-button
-					label="{translate key="editor.submissionLibrary"}"
 					@click="openLibrary"
-				></pkp-button>
+				>
+					{translate key="editor.submissionLibrary"}
+				</pkp-button>
 			</template>
 		</pkp-header>
 		<tabs>
@@ -95,14 +83,14 @@
 				<div class="pkpPublication" ref="publication" aria-live="polite">
 					<pkp-header class="pkpPublication__header">
 						<span class="pkpPublication__status">
-							<strong>{{ i18n.status }}</strong>
+							<strong>{{ i18n.statusLabel }}</strong>
 							<span v-if="workingPublication.status === getConstant('STATUS_QUEUED') && workingPublication.id === currentPublication.id" class="pkpPublication__statusUnpublished">{translate key="publication.status.unscheduled"}</span>
 							<span v-else-if="workingPublication.status === getConstant('STATUS_SCHEDULED')">{translate key="publication.status.scheduled"}</span>
 							<span v-else-if="workingPublication.status === getConstant('STATUS_PUBLISHED')" class="pkpPublication__statusPublished">{translate key="publication.status.published"}</span>
 							<span v-else class="pkpPublication__statusUnpublished">{translate key="publication.status.unpublished"}</span>
 						</span>
 							<span v-if="publicationList.length > 1" class="pkpPublication__version">
-								<strong tabindex="0">{{ i18n.version }}</strong> {{ workingPublication.id }}
+								<strong tabindex="0">{{ versionLabel }}</strong> {{ workingPublication.id }}
 								<dropdown
 									class="pkpPublication__versions"
 									label="{translate key="publication.version.all"}"
@@ -133,7 +121,7 @@
 					>
 						{translate key="publication.editDisabled"}
 					</div>
-					<tabs :is-side-tabs="true" class="pkpPublication__tabs" :label="publicationTabsLabel">
+					<tabs :is-side-tabs="true" class="pkpPublication__tabs" :label="currentPublicationTabsLabel">
 						<tab id="titleAbstract" label="{translate key="publication.titleAbstract"}">
 							<pkp-form v-bind="components.{$smarty.const.FORM_TITLE_ABSTRACT}" @set="set" />
 						</tab>
@@ -165,9 +153,4 @@
 			{call_hook name="Template::Workflow"}
 		</tabs>
 	</div>
-	<script type="text/javascript">
-		pkp.registry.init('workflow-{$uuid}', 'WorkflowContainer', {$workflowData|json_encode});
-	</script>
-</div>
-
-{include file="common/footer.tpl"}
+{/block}

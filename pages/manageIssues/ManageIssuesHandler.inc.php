@@ -19,6 +19,9 @@ class ManageIssuesHandler extends Handler {
 	/** issue associated with the request **/
 	var $issue;
 
+	/** @copydoc PKPHandler::_isBackendPage */
+	var $_isBackendPage = true;
+
 	/**
 	 * Constructor
 	 */
@@ -27,7 +30,7 @@ class ManageIssuesHandler extends Handler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'index', 'issuesTabs'
+				'index',
 			)
 		);
 	}
@@ -52,22 +55,10 @@ class ManageIssuesHandler extends Handler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
 
 		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign([
+			'pageTitle' => __('editor.navigation.issues')
+		]);
 		return $templateMgr->display('manageIssues/issues.tpl');
-	}
-
-	/**
-	 * Returns the issues tabs in the form of a JSON Message.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function issuesTabs($args, $request) {
-		$this->setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-
-		$templateMgr = TemplateManager::getManager($request);
-
-		return $templateMgr->fetchJson('manageIssues/issuesTabs.tpl');
 	}
 }
 
