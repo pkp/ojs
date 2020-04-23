@@ -53,6 +53,7 @@ class SubscriptionForm extends Form {
 		foreach ($isoCodes->getCountries() as $country) {
 			$this->validCountries[$country->getAlpha2()] = $country->getLocalName();
 		}
+		asort($this->validCountries);
 
 		// User is provided and valid
 		$this->addCheck(new FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
