@@ -48,7 +48,7 @@ class SubscriptionTypeForm extends Form {
 		foreach ($isoCodes->getCurrencies() as $currency) {
 			$this->validCurrencies[$currency->getLetterCode()] = $currency->getLocalName() . ' (' . $currency->getLetterCode() . ')';
 		}
-		asort($this->validCountries);
+		asort($this->validCurrencies);
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
 
