@@ -71,28 +71,28 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
-				$exportSubmissionsListPanel = new \PKP\components\listPanels\PKPSelectSubmissionsListPanel(
-					'exportSubmissionsListPanel',
-					__('plugins.importexport.native.exportSubmissionsSelect'),
-					[
-						'apiUrl' => $request->getDispatcher()->url(
-							$request,
-							ROUTE_API,
-							$context->getPath(),
-							'_submissions'
-						),
-						'canSelect' => true,
-						'canSelectAll' => true,
-						'count' => 100,
-						'lazyLoad' => true,
-						'selectorName' => 'selectedSubmissions[]',
-					]
-				);
-				$templateMgr->assign('exportSubmissionsListData', [
-					'components' => [
-						'exportSubmissionsListPanel' => $exportSubmissionsListPanel->getConfig()
-					]
-				]);
+				// $exportSubmissionsListPanel = new \PKP\components\listPanels\PKPSelectSubmissionsListPanel(
+				// 	'exportSubmissionsListPanel',
+				// 	__('plugins.importexport.native.exportSubmissionsSelect'),
+				// 	[
+				// 		'apiUrl' => $request->getDispatcher()->url(
+				// 			$request,
+				// 			ROUTE_API,
+				// 			$context->getPath(),
+				// 			'_submissions'
+				// 		),
+				// 		'canSelect' => true,
+				// 		'canSelectAll' => true,
+				// 		'count' => 100,
+				// 		'lazyLoad' => true,
+				// 		'selectorName' => 'selectedSubmissions[]',
+				// 	]
+				// );
+				// $templateMgr->assign('exportSubmissionsListData', [
+				// 	'components' => [
+				// 		'exportSubmissionsListPanel' => $exportSubmissionsListPanel->getConfig()
+				// 	]
+				// ]);
 				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 			case 'uploadImportXML':
@@ -259,7 +259,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		if (!empty($errors)) {
 			$this->displayXMLValidationErrors($errors, $xml);
 		}
-		
+
 		return $xml;
 	}
 

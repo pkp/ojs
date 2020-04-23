@@ -40,6 +40,9 @@ class PaymentsHandler extends Handler {
 		$this->setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign([
+			'pageTitle' => __('manager.subscriptions'),
+		]);
 		$templateMgr->display('payments/index.tpl');
 	}
 

@@ -27,6 +27,11 @@ class TemplateManager extends PKPTemplateManager {
 	function initialize($request) {
 		parent::initialize($request);
 
+		// Pass app-specific details to template
+		$this->assign(array(
+			'brandImage' => 'templates/images/ojs_brand.png',
+		));
+
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/**
 			 * Kludge to make sure no code that tries to connect to
@@ -51,12 +56,6 @@ class TemplateManager extends PKPTemplateManager {
 					)
 				);
 			}
-
-			// Pass app-specific details to template
-			$this->assign(array(
-				'brandImage' => 'templates/images/ojs_brand.png',
-				'packageKey' => 'common.software',
-			));
 
 			// Get a count of unread tasks.
 			if ($user = $request->getUser()) {

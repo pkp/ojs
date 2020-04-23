@@ -7,20 +7,23 @@
  *
  * The issue management page.
  *}
-{assign var="pageTitle" value="editor.navigation.issues"}
-{include file="common/header.tpl"}
+{extends file="layouts/backend.tpl"}
 
-<tabs>
-	<tab id="future" label="{translate key="editor.navigation.futureIssues"}">
-		{help file="issue-management" class="pkp_help_tab"}
-		{capture assign=futureIssuesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.FutureIssueGridHandler" op="fetchGrid" escape=false}{/capture}
-		{load_url_in_div id="futureIssuesGridContainer" url=$futureIssuesGridUrl}
-	</tab>
-	<tab id="back" label="{translate key="editor.navigation.issueArchive"}">
-		{help file="issue-management" class="pkp_help_tab"}
-		{capture assign=backIssuesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.BackIssueGridHandler" op="fetchGrid" escape=false}{/capture}
-		{load_url_in_div id="backIssuesGridContainer" url=$backIssuesGridUrl}
-	</tab>
-</tabs>
+{block name="page"}
+	<h1 class="app__pageHeading">
+		{translate key="editor.navigation.issues"}
+	</h1>
 
-{include file="common/footer.tpl"}
+	<tabs>
+		<tab id="future" label="{translate key="editor.navigation.futureIssues"}">
+			{help file="issue-management" class="pkp_help_tab"}
+			{capture assign=futureIssuesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.FutureIssueGridHandler" op="fetchGrid" escape=false}{/capture}
+			{load_url_in_div id="futureIssuesGridContainer" url=$futureIssuesGridUrl}
+		</tab>
+		<tab id="back" label="{translate key="editor.navigation.issueArchive"}">
+			{help file="issue-management" class="pkp_help_tab"}
+			{capture assign=backIssuesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.BackIssueGridHandler" op="fetchGrid" escape=false}{/capture}
+			{load_url_in_div id="backIssuesGridContainer" url=$backIssuesGridUrl}
+		</tab>
+	</tabs>
+{/block}

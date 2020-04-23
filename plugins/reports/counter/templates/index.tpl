@@ -7,10 +7,12 @@
  *
  * Counter plugin index
  *}
-{strip}
-{assign var="pageTitle" value="plugins.reports.counter"}
-{include file="common/header.tpl"}
-{/strip}
+{extends file="layouts/backend.tpl"}
+
+{block name="page"}
+	<h1 class="app__pageHeading">
+		{translate key="plugins.reports.counter"}
+	</h1>
 
 <div id="counterPlugin" class="pkp_page_content pkp_page_counter_plugin">
 <p>{translate key="plugins.reports.counter.description"}</p>
@@ -41,4 +43,4 @@
 {/if}
 </div>
 
-{include file="common/footer.tpl"}
+{/block}

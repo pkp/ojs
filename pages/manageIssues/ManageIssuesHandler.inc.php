@@ -55,6 +55,9 @@ class ManageIssuesHandler extends Handler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
 
 		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign([
+			'pageTitle' => __('editor.navigation.issues')
+		]);
 		return $templateMgr->display('manageIssues/issues.tpl');
 	}
 }

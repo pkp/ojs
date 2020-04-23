@@ -7,24 +7,10 @@
  *
  * Display the author dashboard.
  *}
-{strip}
-	{assign var=primaryAuthor value=$submission->getPrimaryAuthor()}
-	{if !$primaryAuthor}
-		{assign var=authors value=$submission->getAuthors()}
-		{assign var=primaryAuthor value=$authors[0]}
-	{/if}
-	{assign var=submissionTitleSafe value=$submission->getLocalizedTitle()|strip_unsafe_html}
-	{if $primaryAuthor}
-		{assign var="pageTitleTranslated" value=$primaryAuthor->getFullName()|concat:", ":$submissionTitleSafe}
-	{else}
-		{assign var="pageTitleTranslated" value=$submissionTitleSafe}
-	{/if}
-	{include file="common/header.tpl" suppressPageTitle=true}
-{/strip}
+{extends file="layouts/backend.tpl"}
 
-<div class="pkp_page_content">
-	{assign var="uuid" value=""|uniqid|escape}
-	<div id="workflow-{$uuid}" class="pkpWorkflow">
+{block name="page"}
+	<div class="pkpWorkflow">
 		<pkp-header :is-one-line="true" class="pkpWorkflow__header">
 			<h1 class="pkpWorkflow__identification">
 				<span class="pkpWorkflow__identificationId">{{ submission.id }}</span>
@@ -167,9 +153,4 @@
 			{call_hook name="Template::Workflow"}
 		</tabs>
 	</div>
-	<script type="text/javascript">
-		pkp.registry.init('workflow-{$uuid}', 'WorkflowContainer', {$workflowData|json_encode});
-	</script>
-</div>
-
-{include file="common/footer.tpl"}
+{/block}
