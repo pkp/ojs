@@ -318,7 +318,8 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 ; smtp_password = password
 
 ; Enable suppressing verification of SMTP certificate in PHPMailer
-: smtp_suppress_cert_check = On
+; Note: this is not recommended per PHPMailer documentation
+; smtp_suppress_cert_check = On
 
 ; Allow envelope sender to be specified
 ; (may not be possible with some server configurations)
