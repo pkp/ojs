@@ -3,14 +3,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-15 09:20-0700\n"
-"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
-"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/author/hi_HI"
+"PO-Revision-Date: 2020-04-25 02:54+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/author/hi/>\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.4.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$competingInterestGuidelinesUrl}
@@ -332,3 +333,99 @@ msgstr "कॉपीएडिट की गई फ़ाइल"
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr "इस जर्नल को सबमिट करने के लिए एक उपयोगकर्ता खाते की आवश्यकता होती है। यह हमारे संपादकों को आपकी प्रस्तुतियाँ ट्रैक करने की अनुमति देता है और आपके सबमिट करने की स्थिति बदलने पर, या यदि आपसे अतिरिक्त जानकारी की आवश्यकता होती है, तो आपसे संपर्क कर सकता है।"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "लेखक संस्करण अपलोड करें"
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "सार्वजनिक पूरक फ़ाइल पहचानकर्ता"
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "अन्य विशिष्ट निर्देश करना"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "संक्षिप्त विवरण"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "पाठ स्रोत"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "डेटा सेट"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "डेटा विश्लेषण"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "शोध का परिणाम"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "शोध सामग्री"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "शोध उपकरण"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "अनुपूरक फ़ाइल"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "अनुपूरक फ़ाइल मेटाडेटा"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "एक अनुपूरक फ़ाइल संपादित करें"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "एक अनुपूरक फ़ाइल जोड़ें"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "अनुपूरक फ़ाइल अपलोड करें"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "अनुपूरक फ़ाइलों पर वापस"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "सबमिट फ़ाइल बदलें"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "सबमिशन फ़ाइल अपलोड करें"
+
+msgid "author.submit.reorder"
+msgstr "लेखक का नाम पुन: व्यवस्थित करें"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "कॉपीएडिट संस्करण अपलोड करें"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "संपादन में: कॉपीएडिट अनुरोधित"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "संपादन में: अपेक्षित अनुरोध"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "समीक्षा में: संशोधन आवश्यक है"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "कृपया इस लेख के लिए लेख प्रस्तुत करने की फीस माफ करने पर विचार करें"
+
+msgid "author.submit.confirmation"
+msgstr "पुष्टीकरण"
+
+msgid "author.submit.metadata"
+msgstr "मेटाडेटा दर्ज करें"
+
+msgid "author.submit.upload"
+msgstr "सबमिशन अपलोड करें"
+
+msgid "author.submit.start"
+msgstr "शुरू"
+
+msgid "author.submit.startHereTitle"
+msgstr "एक नया सबमिशन शुरू करें"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "सबमिट करने के लिए पाँच चरण"
+
+msgid "author.track"
+msgstr "सक्रिय सबमिशन"
+
+msgid "author.submit"
+msgstr "नई सबमिशन"
