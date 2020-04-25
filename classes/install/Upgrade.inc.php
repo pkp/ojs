@@ -186,7 +186,7 @@ class Upgrade extends Installer {
 							$disciplines[$locale] = preg_split('/[,;:]/', $settings['discipline'][$locale]);
 							$disciplines[$locale] = array_map('trim', $disciplines[$locale]);
 						}
-						$submissionDisciplineDao->insertDisciplines($disciplines, $articleId, false);
+						$submissionDisciplineDao->insertDisciplines($disciplines, $articleId, false, ASSOC_TYPE_SUBMISSION);
 					}
 					unset($disciplineLocales);
 					unset($disciplines);
@@ -199,7 +199,7 @@ class Upgrade extends Installer {
 							$subjects[$locale] = preg_split('/[,;:]/', $settings['subjectClass'][$locale]);
 							$subjects[$locale] = array_map('trim', $subjects[$locale]);
 						}
-						$submissionSubjectDao->insertSubjects($subjects, $articleId, false);
+						$submissionSubjectDao->insertSubjects($subjects, $articleId, false, ASSOC_TYPE_SUBMISSION);
 					}
 					unset($subjectLocales);
 					unset($subjects);
@@ -212,7 +212,7 @@ class Upgrade extends Installer {
 							$keywords[$locale] = preg_split('/[,;:]/', $settings['subject'][$locale]);
 							$keywords[$locale] = array_map('trim', $keywords[$locale]);
 						}
-						$submissionKeywordDao->insertKeywords($keywords, $articleId, false);
+						$submissionKeywordDao->insertKeywords($keywords, $articleId, false, ASSOC_TYPE_SUBMISSION);
 					}
 					unset($keywordLocales);
 					unset($keywords);
@@ -226,7 +226,7 @@ class Upgrade extends Installer {
 							$agencies[$locale] = preg_split('/[,;:]/', $settings['sponsor'][$locale]);
 							$agencies[$locale] = array_map('trim', $agencies[$locale]);
 						}
-						$submissionAgencyDao->insertAgencies($agencies, $articleId, false);
+						$submissionAgencyDao->insertAgencies($agencies, $articleId, false, ASSOC_TYPE_SUBMISSION);
 					}
 					unset($sponsorLocales);
 					unset($agencies);
