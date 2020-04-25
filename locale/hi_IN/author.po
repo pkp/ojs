@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-25 02:54+0000\n"
+"PO-Revision-Date: 2020-04-25 18:16+0000\n"
 "Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
 "Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/author/hi/>\n"
 "Language: hi_IN\n"
@@ -67,7 +67,9 @@ msgstr "अगला कदम"
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
 msgid "submission.submit.cancelSubmission"
-msgstr "आप लेखक घर से सक्रिय सबमिशन का चयन करके इसे बाद की तारीख में पूरा कर सकते हैं।"
+msgstr ""
+"आप लेखक के घर से सक्रिय सबमिशन का चयन करके इसे बाद की तारीख में पूरा कर सकते "
+"हैं।"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
@@ -80,7 +82,8 @@ msgstr "माफी का अनुरोध करें"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "author.submit.addReasonsForWaiver"
-msgstr "फीस कम होने का संकेत देने के लिए कृपया नीचे दिए गए टिप्पणी बॉक्स का उपयोग करें।"
+msgstr ""
+"कृपया नीचे दिए गए टिप्पणी बॉक्स का उपयोग करें कि फीस क्यों माफ की जानी चाहिए।"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "author.submit.mustEnterWaiverReason"
@@ -173,7 +176,9 @@ msgstr "लेखक को हटा दें"
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
 msgid "author.submit.submissionIndexingDescription"
-msgstr "सबमिशन को अनुक्रमित करने के लिए शर्तें प्रदान करें; एक अर्ध-कोलन (term1; term2; term3) के साथ अलग शर्तें ।"
+msgstr ""
+"सबमिशन को अनुक्रमित करने के लिए शर्तें प्रदान करें; एक सेमि-कोलन (term1; "
+"term2; term3) के साथ अलग शर्तें ।"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
@@ -404,7 +409,7 @@ msgid "author.submissions.queuedReviewRevisions"
 msgstr "समीक्षा में: संशोधन आवश्यक है"
 
 msgid "author.submit.qualifyForWaiver"
-msgstr "कृपया इस लेख के लिए लेख प्रस्तुत करने की फीस माफ करने पर विचार करें"
+msgstr "कृपया इस लेख के लिए लेख सबमिशन की फीस माफ करने पर विचार करें"
 
 msgid "author.submit.confirmation"
 msgstr "पुष्टीकरण"
@@ -429,3 +434,6 @@ msgstr "सक्रिय सबमिशन"
 
 msgid "author.submit"
 msgstr "नई सबमिशन"
+
+msgid "author.article.authorRevisedFile"
+msgstr "लेखक फ़ाइल"
