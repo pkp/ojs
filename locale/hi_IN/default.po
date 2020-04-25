@@ -3,14 +3,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-15 09:20-0700\n"
-"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
-"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/default/hi_HI"
+"PO-Revision-Date: 2020-04-25 18:16+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/default/hi/>\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.4.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 # (pofilter) endwhitespace: Different whitespace at the end
 msgid "section.default.title"
@@ -195,3 +196,21 @@ msgstr ""
 "<br/>\n"
 "________________________________________________________________________<br/>\n"
 "<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.genres.transcripts"
+msgstr "प्रतिलिपि"
+
+msgid "default.groups.plural.editor"
+msgstr "जर्नल के संपादक"
+
+msgid "default.groups.name.manager"
+msgstr "जर्नल प्रबंधक"
+
+msgid "default.genres.article"
+msgstr "लेख पाठ"
+
+msgid "section.default.policy"
+msgstr "खंड डिफ़ॉल्ट नीति"
+
+msgid "section.default.abbrev"
+msgstr "कला"
