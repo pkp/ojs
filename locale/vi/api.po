@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/api/vi/>"
+"\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Ấn phẩm mà bạn yêu cầu không phải là một phần của bài nộp này."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Ấn phẩm mà bạn yêu cầu không phải là một phần của tạp chí này."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Phương thức thanh toán bạn chọn không được hỗ trợ."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Bạn không có quyền di chuyển mẫu email này sang một tạp chí khác."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Tạp chí bạn yêu cầu không được tìm thấy."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Bạn không có quyền xóa tạp chí này."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Bạn không có quyền chỉnh sửa tạp chí này."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Bạn không thể chỉnh sửa tạp chí này từ API toàn trang web."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Bạn không thể xem hoặc chỉnh sửa tạp chí này trừ khi bạn yêu cầu API của tạp "
+"chí hoặc API trên toàn trang web."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Bạn không có quyền xem tạp chí này."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Bạn chỉ có thể xem các tạp chí đã được kích hoạt."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Để thực hiện hoặc chỉnh sửa nội dung bài nộp, bạn phải gửi yêu cầu đến điểm "
+"cuối API của tạp chí."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Bạn không có quyền xem các số chưa được công bố."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Bạn không thể thay đổi tạp chí của một bài nộp."

@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-02-24 10:36+0000\n"
-"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"PO-Revision-Date: 2020-04-21 19:24+0000\n"
+"Last-Translator: Sönmez Çelik <snmzclk@gmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "tr/>\n"
 "Language: tr_TR\n"
@@ -105,7 +105,11 @@ msgid "submission.galleyFiles"
 msgstr "Dizgi Dosyaları"
 
 msgid "submission.proofReadingDescription"
-msgstr "Sayfa düzenleyici, burada yayınlanmak üzere hazırlanmış olan biçimli dosyaları yükler. Yayından önce onay için yüklenen düzeltilmiş dosyalar ile, dizgiyi prova etmek için yazarları ve diğer kişileri atamak için \"Atama Denetçisi\"ni kullanın."
+msgstr ""
+"Sayfa düzenleyici, burada yayınlanmak üzere hazırlanmış olan biçimli "
+"dosyaları yükler. Yayından önce onay için yüklenen düzeltilmiş dosyalar ile, "
+"dizgiyi prova etmek için yazarları ve diğer kişileri atamak için <em>Atama "
+"Denetçisi</em>ni kullanın."
 
 msgid "grid.action.approveProof"
 msgstr "Dizgiye dahil edilmek için bu düzenlemeyi onayla."
@@ -178,3 +182,58 @@ msgstr "Herhangi Bir Bölüm"
 
 msgid "submission.submit.noContext"
 msgstr "Gönderinin bulunduğu dergi bulunamadı."
+
+msgid "publication.invalidIssue"
+msgstr "Bu yayın için sayı bulunamadı."
+
+msgid "publication.invalidSection"
+msgstr "Bu yayının için bölüm bulunamadı."
+
+msgid "galley.publicationNotFound"
+msgstr "Bu dizgi için yayın bulunamadı."
+
+msgid "galley.editPublishedDisabled"
+msgstr "Bu yayının dizgileri zaten yayınlandığı için düzenlenemez."
+
+msgid "catalog.category.heading"
+msgstr "Tüm Öğeler"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Öğeleri"
+
+msgid "submission.sectionOptions"
+msgstr "Bölüm Seçenekleri"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Sayı yayınlandığında yayın tarihi otomatik olarak ayarlanacaktır. Makale "
+"daha önce başka bir yerde yayınlanmadıysa ve onu geri yüklemeniz gerekmediği "
+"sürece bir yayın tarihi girmeyin."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"<a href=\"{$issueUrl}\">{$issueName}</a> içinde yayınlanmak üzere planlandı."
+
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> içinde yayınlandı."
+
+msgid "publication.required.issue"
+msgstr "Yayının yayınlanabilmesi için bir sayıya atanması gerekir."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Tüm yayın gereksinimleri karşılanmıştır. Bu derhal {$issue} dergisinde "
+"yayınlanacak. Bunu yayınlamak istediğinizden emin misiniz?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Tüm yayın gereksinimleri karşılanmıştır. Bu, {$issue} yayınlandığında "
+"yayınlanacak. Bunu yayınlanmak üzere planlamak istediğinizden emin misiniz?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Tüm yayın gereksinimleri karşılanmıştır. Bunu yayınlamak istediğinizden emin "
+"misiniz?"
+
+msgid "publication.issue.success"
+msgstr "Yayının sayı ayrıntıları güncellendi."

@@ -2,20 +2,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:11+00:00\n"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/vi/>\n"
+"Language: vi_VN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:11+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:11+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.reports.counter.description"
-msgstr "The COUNTER plugin allows recording and <a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a> reporting on site activity."
+msgstr ""
+"Plugin COUNTER cho phép báo cáo về hoạt động của tạp chí, sử dụng <a href=\""
+"http://www.projectcounter.org\">COUNTER standard</a>. Các báo cáo này không "
+"làm cho một tạp chí tuân thủ COUNTER. Để cung cấp tuân thủ COUNTER, hãy xem "
+"xét các yêu cầu tại trang web Project COUNTER."
 
 msgid "plugins.reports.counter"
-msgstr "COUNTER Statistics"
+msgstr "Báo cáo COUNTER"
 
 msgid "plugins.reports.counter.clearLog"
 msgstr "Clear Log"
@@ -57,31 +64,33 @@ msgid "plugins.reports.counter.entry.value"
 msgstr "Value"
 
 msgid "plugins.reports.counter.1a.title"
-msgstr "Journal Report 1 (R3): Full-Text Article Requests by Month and Journal"
+msgstr "Báo cáo Tạp chí 1 (R3): Yêu cầu toàn văn bài viết theo tháng và tạp chí"
 
 msgid "plugins.reports.counter.1a.title1"
-msgstr "Journal Report 1 (R3)"
+msgstr "Báo cáo Tạp chí 1 (R3)"
 
 msgid "plugins.reports.counter.1a.title2"
-msgstr "Number of Successful Full-Text Article Requests by Month and Journal (Year {$year})"
+msgstr ""
+"Số lượng yêu cầu bài viết toàn văn thành công theo tháng và tạp chí (Năm "
+"{$year})"
 
 msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Date run:"
+msgstr "Ngày chạy:"
 
 msgid "plugins.reports.counter.1a.publisher"
-msgstr "Publisher"
+msgstr "Nhà xuất bản"
 
 msgid "plugins.reports.counter.1a.platform"
-msgstr "Platform"
+msgstr "Nền tảng"
 
 msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Print ISSN"
+msgstr "ISSN in"
 
 msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Online ISSN"
+msgstr "ISSN trực tuyến"
 
 msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "YTD Total"
+msgstr "Tổng YTD"
 
 msgid "plugins.reports.counter.1a.ytdHtml"
 msgstr "YTD HTML"
@@ -90,4 +99,51 @@ msgid "plugins.reports.counter.1a.ytdPdf"
 msgstr "YTD PDF"
 
 msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Total for all journals"
+msgstr "Tổng cộng cho tất cả các tạp chí"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Tất cả các khách hàng"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "vô danh"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Các liên kết bên dưới tạo các báo cáo lỗi thời bằng cách sử dụng dữ liệu "
+"plugin cũ, chưa sẵn sàng. Nếu bạn muốn tạo các báo cáo COUNTER hiện tại bằng "
+"cách sử dụng loại số liệu OJS COUNTER mới, hãy sử dụng các liên kết ở trên."
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER Báo cáo Tạp chí 1 (R3): Yêu cầu toàn văn bài viết theo tháng và tạp "
+"chí"
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Không tìm thấy kết quả nào cho báo cáo này."
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "Phiên bản XML"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Báo cáo thống kê  JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Các liên kết này tạo ra các Báo Cáo đã sẵn sàng dựa trên Phiên bản 3.0 đã "
+"lỗi thời. Báo cáo này dùng cho tất cả các tạp chí trên trang web. Sử dụng "
+"Bản phát hành mới nhất thay thế, khi có thể."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Kết quả có thể không được định dạng là XML."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Yêu cầu báo cáo không hợp lệ."
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Các tham số báo cáo không hợp lệ."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Các báo cáo trang cũ"
+
+msgid "plugins.reports.counter.release"
+msgstr "Giấy phép COUNTER"

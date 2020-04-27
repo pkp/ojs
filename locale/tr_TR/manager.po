@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-03-04 15:55+0000\n"
-"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"PO-Revision-Date: 2020-04-21 19:47+0000\n"
+"Last-Translator: Sönmez Çelik <snmzclk@gmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
 "\n"
 "Language: tr_TR\n"
@@ -15,7 +15,10 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.emails.confirmResetAll"
-msgstr "Bu dergide yer alan bütün e-posta şablonlarını varsayılan biçime döndürmek istediğinizden emin misiniz? Bu işlemi yaparsanız, özelleştirdiğiniz tüm şablonları kaybedeceksiniz!"
+msgstr ""
+"Bu dergide yer alan bütün e-posta şablonlarını varsayılan biçime döndürmek "
+"istediğinizden emin misiniz? Bu işlemi yaparsanız, özelleştirdiğiniz tüm "
+"şablonları kaybedeceksiniz."
 
 msgid "manager.files.note"
 msgstr ""
@@ -36,7 +39,7 @@ msgstr "Formlar"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr ""
-"Bu, bu dil için yapmış olduğunuz dile özgü dergi ayarlarını değiştirecek."
+"İşlem, bu dil için yapmış olduğunuz dile özgü dergi ayarlarını değiştirecek"
 
 #, fuzzy
 msgid "manager.languages.languageInstructions"
@@ -99,7 +102,7 @@ msgstr "Ücret Ödeme Seçenekleri"
 msgid "manager.payment.form.numeric"
 msgstr ""
 "Tüm tutarlar pozitif sayısal değerler şeklinde olmalıdır (ondalık sayılar "
-"kabul edilir)."
+"kabul edilir)"
 
 msgid "manager.payment.generalFees"
 msgstr "Genel Ücretler"
@@ -317,7 +320,7 @@ msgid "manager.sections.reviewed"
 msgstr "Hakem Değerlendirmesinden Geçmiş"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "Bu bölümdeki içerik derginin dizinlenen içeriğine dahil edilmeyecektir."
+msgstr "Bu bölümdeki içerik derginin dizinlenen içeriğine dahil edilmeyecektir"
 
 msgid "manager.sections.submissionReview"
 msgstr "Hakem değerlendirmesinden geçmeyecek"
@@ -441,7 +444,7 @@ msgid "manager.setup.disciplineExamples"
 msgstr "(Ör. Tarih; Eğitim; Sosyoloji; Psikoloji; Kültürel Çalışmalar; Hukuk)"
 
 msgid "manager.setup.disciplineProvideExamples"
-msgstr "Bu dergi için uygun akademik disiplin örnekleri ver."
+msgstr "Bu dergi için uygun akademik disiplin örnekleri ver"
 
 msgid "manager.setup.displayCurrentIssue"
 msgstr "Son sayının içindekiler bölümünü ekle (mevcut ise)."
@@ -716,7 +719,7 @@ msgid "manager.setup.noImageFileUploaded"
 msgstr "Resim dosyası yüklenmedi."
 
 msgid "manager.setup.noStyleSheetUploaded"
-msgstr "Biçimlendirme sitili yüklenmedi"
+msgstr "Biçimlendirme sitili yüklenmedi."
 
 msgid "manager.setup.note"
 msgstr "Not"
@@ -756,9 +759,8 @@ msgstr ""
 msgid "manager.setup.printIssn"
 msgstr "ISSN"
 
-#, fuzzy
 msgid "manager.setup.proofingInstructions"
-msgstr "Son Okuma Yönergesi"
+msgstr "Okuma Yönergesi"
 
 #, fuzzy
 msgid "manager.setup.proofingInstructionsDescription"
@@ -788,9 +790,10 @@ msgstr "Dergi İçeriğinin Tanımlanması"
 msgid "manager.setup.publisher"
 msgstr "Yayıncı"
 
-#, fuzzy
 msgid "manager.setup.publishingDescription"
-msgstr "Dergi yayıncısının adı Dergi Hakkında kısmında görüntülenir."
+msgstr ""
+"Bu ayrıntılar, üçüncü taraf arşiv organlarına sağlanan üstverilere dahil "
+"edilebilir."
 
 #, fuzzy
 msgid "manager.setup.referenceLinking"
@@ -1321,7 +1324,13 @@ msgid "manager.subscriptions.form.ipRange"
 msgstr "IP aralığı"
 
 msgid "manager.subscriptions.form.ipRangeInstructions"
-msgstr "Eğer buraya bir IP aralığı girilirse, alan adı girilmeyebilir. Bir IP aralığı için geçerli değerler: IP adresi (Örneğin; 142.58.103.1), IP aralığı (Örneğin; 142.58.103.1 - 142.58.103.4), '*' işareti içeren bir IP aralığı (Örneğin; 142.58.103.*), veya bunların ';' işareti ile ile ayrılmış herhangi bir kombisayonu olabilir (Örneğin; 142.58.103.* - 142.58.107.* ; 142.58.108.1 ; 142.58.106.*)."
+msgstr ""
+"Eğer buraya bir IP aralığı girilirse, alan adı girilmeyebilir. <br />Bir IP "
+"aralığı için geçerli değerler: IP adresi (Örneğin; 142.58.103.1), IP aralığı "
+"(Örneğin; 142.58.103.1 - 142.58.103.4), '*' işareti içeren bir IP aralığı "
+"(Örneğin; 142.58.103.*), veya bunların ';' işareti ile ile ayrılmış herhangi "
+"bir kombisayonu olabilir (Örneğin; 142.58.103.* - 142.58.107.* ; "
+"142.58.108.1 ; 142.58.106.*)."
 
 msgid "manager.subscriptions.form.ipRangeValid"
 msgstr "Lütfen geçerli bir IP aralığı giriniz."
@@ -1483,7 +1492,7 @@ msgid "manager.subscriptionTypes.form.individual"
 msgstr "Bireysel (kullanıcı girişiyle doğrulanır)"
 
 msgid "manager.subscriptionTypes.form.institutional"
-msgstr "Aboneler kullanım alanı ya da IP doğruluğu aracılığı ile onaylamalıdır."
+msgstr "Kurumsal (kullanıcılar alan adı veya IP adresi ile doğrulanır)"
 
 msgid "manager.subscriptionTypes.form.membership"
 msgstr "Üyelik bilgisi için abonelik gerekli. <br />(Örneğin; dernek, organizasyon, konsorsiyum, v.b.)"
@@ -1689,7 +1698,7 @@ msgstr ""
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
-"PKP PN kullanım şartlarını kabul etmek için <nutton>eklenti ayarları</button>"
+"PKP PN kullanım şartlarını kabul etmek için <button>eklenti ayarları</button>"
 "nı görüntüle."
 
 msgid "manager.setup.plnPluginArchiving"
@@ -1806,7 +1815,9 @@ msgid "manager.setup.copyrightYearBasis.issue"
 msgstr "Sayı: Varsayılan yıl, sayının yayınlanma tarihinden itibaren çizilecektir."
 
 msgid "manager.setup.resetPermissions.confirm"
-msgstr "Makalelere zaten eklenmiş izin verilerini sıfırlamak istediğinizden emin misiniz?"
+msgstr ""
+"Tüm makaleler için izin verilerini sıfırlamak istediğinizden emin misiniz? "
+"Bu işlem geri alınamaz."
 
 msgid "manager.setup.resetPermissions.description"
 msgstr "Telif hakkı bildirimi ve lisans bilgileri, yayınlanan içeriklere kalıcı olarak eklenecek ve yeni gönderilere yönelik politikaları değiştirerek bu verilerin değişmeyeceğinden emin olun. Yayımlanmış içeriklere zaten eklenmiş kayıtlı izinleri sıfırlamak için aşağıdaki düğmeyi kullanın."
@@ -2020,3 +2031,65 @@ msgstr "Gizlilik bildirimi güncellendi."
 
 msgid "manager.setup.masthead.success"
 msgstr "Derginin editör kurulları güncellendi."
+
+msgid "stats.publications.galleys"
+msgstr "Dosyalar"
+
+msgid "stats.publications.abstracts"
+msgstr "Özetler"
+
+msgid "stats.publications.countOfTotal"
+msgstr "Makaleler {$count} / {$total}"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Tarihe göre toplam dosya görüntüleme sayısı"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Tarihe göre toplam özet görüntüleme"
+
+msgid "stats.publications.none"
+msgstr ""
+"Bu parametrelerle eşleşen kullanım istatistiklerine sahip makale bulunamadı."
+
+msgid "stats.publications.details"
+msgstr "Makale Ayrıntıları"
+
+msgid "stats.publicationStats"
+msgstr "Makale İstatistikleri"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Makale izinleri başarıyla sıfırlandı."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Bu, süresi dolmayan bir abonelik türüdür; lütfen bir bitiş tarihi "
+"belirtmeyin."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Bu, süresi dolmayan bir abonelik türüdür; lütfen bir başlangıç tarihi "
+"belirtmeyin."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Arama sonuçlarında listelenirken arama motorlarının görüntüleyebileceği "
+"sonuçlar hakkında kısa bir açıklama (50-300 karakter) girin."
+
+msgid "manager.setup.publishing"
+msgstr "Yayın Ayrıntıları"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Görüntülenecek bağlantı sayısını bir listedeki sonraki sayfalarla "
+"sınırlandırın."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Derginizin kısa bir açıklamasını yapın ve editörleri, yönetim direktörlerini "
+"ve editör ekibinizin diğer üyelerini belirleyin."
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Başka bir sayfada, sonraki öğeleri göstermeden önce listede görüntülenecek "
+"öğe sayısını (örneğin, gönderiler, kullanıcılar veya düzenleme atamaları) "
+"sınırlayın."
