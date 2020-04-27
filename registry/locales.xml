@@ -45,5 +45,6 @@
 	<locale key="sv_SE" complete="true" name="Svenska" iso639-2b="swe" iso639-3="swe" />
 	<locale key="tr_TR" complete="true" name="Türkçe" iso639-2b="tur" iso639-3="tur" />
 	<locale key="uk_UA" complete="true" name="Українська" iso639-2b="ukr" iso639-3="ukr" />
+	<locale key="vi_VN" complete="false" name="Tiếng Việt" iso639-2b="vie" iso639-3="vie" />
 	<locale key="zh_CN" complete="false" name="简体中文" iso639-2b="chi" iso639-3="zho" />
 </locales>
