@@ -3,14 +3,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-15 09:20-0700\n"
-"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
-"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/locale/hi_HI"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/locale/hi/>\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.4.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "context.current"
@@ -98,12 +99,12 @@ msgstr "SE"
 
 # (pofilter) startcaps: Different capitalization at the start
 msgid "article.accessLogoOpen.altText"
-msgstr "Open Access"
+msgstr "ओपन एक्सेस"
 
 # (pofilter) short: The translation is much shorter than the original
 # (pofilter) simplecaps: Different capitalization
 msgid "article.comments.sectionDefault"
-msgstr "चूक"
+msgstr "डिफॉल्ट"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "article.fontSize"
@@ -155,7 +156,7 @@ msgstr "लेखक संस्करण"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 msgid "submission.copyedit"
-msgstr "Copyedit"
+msgstr "प्रतिलिपि संपादन करना"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
@@ -635,3 +636,210 @@ msgstr ""
 "<ol type=\"a\">\n"
 "\t<li>लेखक कॉपीराइट को बनाए रखते हैं और पहले प्रकाशन का अधिकार देते हैं, काम के साथ [विशेष समय का प्रकाशन] प्रकाशन के बाद एक साथ एक <a लक्ष्य = \ _ \ _ नए \ "href = \" http://creativecommons.org/licenses/ के तहत लाइसेंस प्राप्त होता है। द्वारा / 3.0 / \ "> क्रिएटिव कॉमन्स एट्रिब्यूशन लाइसेंस </a> जो दूसरों को इस पत्रिका में काम के लेखक की स्वीकृति और प्रारंभिक प्रकाशन के साथ काम साझा करने की अनुमति देता है।</li>\n"
 "\t <li>लेखक कार्य के जर्नल के प्रकाशित संस्करण के गैर-अनन्य वितरण के लिए अलग, अतिरिक्त संविदात्मक व्यवस्था में प्रवेश करने में सक्षम हैं (उदाहरण के लिए, इसे एक संस्थागत रिपॉजिटरी में पोस्ट करें या इसे एक पुस्तक में प्रकाशित करें), इस पत्रिका में अपने प्रारंभिक प्रकाशन की स्वीकृति के साथ ।"
+
+msgid "article.comments.enable"
+msgstr "सक्षम"
+
+msgid "article.comments.disable"
+msgstr "अक्षम"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "उपयोग प्रतिबंधित"
+
+msgid "article.coverPage.altText"
+msgstr "आवरण छवि"
+
+msgid "article.abstract"
+msgstr "सार"
+
+msgid "article.details"
+msgstr "विवरण"
+
+msgid "article.submissions"
+msgstr "सबमिशन्स"
+
+msgid "article.submission"
+msgstr "सबमिशन"
+
+msgid "article.commentsToEditor"
+msgstr "लेखक की टिप्पणी"
+
+msgid "article.language"
+msgstr "भाषा"
+
+msgid "article.type"
+msgstr "प्रकार, विधि या दृष्टिकोण"
+
+msgid "article.coverage"
+msgstr "कवरेज"
+
+msgid "article.subject"
+msgstr "संकेत शब्द"
+
+msgid "article.discipline"
+msgstr "शैक्षणिक अनुशासन और उप-विषयों"
+
+msgid "article.file"
+msgstr "फ़ाइल"
+
+msgid "article.metadata"
+msgstr "मेटाडाटा"
+
+msgid "article.authors"
+msgstr "लेखक"
+
+msgid "article.title"
+msgstr "शीर्षक"
+
+msgid "common.publications"
+msgstr "लेखों"
+
+msgid "common.publication"
+msgstr "लेख"
+
+msgid "article.articles"
+msgstr "लेखों"
+
+msgid "article.article"
+msgstr "लेख"
+
+msgid "section.policy"
+msgstr "खंड नीति"
+
+msgid "section.abbreviation"
+msgstr "संक्षिप्तीकरण"
+
+msgid "section.title"
+msgstr "खंड शीर्षक"
+
+msgid "section.sections"
+msgstr "खंड"
+
+msgid "section.section"
+msgstr "खंड"
+
+msgid "common.queue.short.completed"
+msgstr "पुरालेख"
+
+msgid "common.queue.long.completed"
+msgstr "पुरालेख"
+
+msgid "common.queue.short.active"
+msgstr "सक्रिय"
+
+msgid "common.queue.long.active"
+msgstr "सक्रिय"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "समीक्षा में"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "सबमिशन में समीक्षा"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "संपादन में"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "सबमिशन में संपादन"
+
+msgid "navigation.skip.issue"
+msgstr "वर्तमान अंक पर छोड़ें"
+
+msgid "navigation.skip.about"
+msgstr "जर्नल के बारे में छोड़ें"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "लाइब्रेरियन के लिए सूचना"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "लेखकों के लिए सूचना"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "प्रतिस्पर्धा संबंधी दिशानिर्देश"
+
+msgid "navigation.infoForLibrarians"
+msgstr "लाइब्रेरियन के लिए"
+
+msgid "navigation.infoForAuthors"
+msgstr "लेखकों के लिए"
+
+msgid "navigation.browseByAuthor"
+msgstr "लेखक द्वारा"
+
+msgid "navigation.browseByIssue"
+msgstr "अंक द्वारा"
+
+msgid "navigation.current"
+msgstr "वर्तमान"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "जर्नल मुखपृष्ठ छवि"
+
+msgid "common.homePageHeader.altText"
+msgstr "मुख पृष्ठ का शीर्ष लेख"
+
+msgid "common.payments"
+msgstr "भुगतान"
+
+msgid "common.payment"
+msgstr "भुगतान"
+
+msgid "common.software"
+msgstr "ओपन जर्नल सिस्टम"
+
+msgid "navigation.categories.browse"
+msgstr "ब्राउज़"
+
+msgid "navigation.categories"
+msgstr "श्रेणियाँ"
+
+msgid "submissions.proof"
+msgstr "प्रमाण"
+
+msgid "submissions.proofread"
+msgstr "प्रूफ़ संशोधित करना"
+
+msgid "submissions.initial"
+msgstr "प्रारंभिक"
+
+msgid "submissions.published"
+msgstr "प्रकाशित"
+
+msgid "submissions.step3"
+msgstr "चरण 3"
+
+msgid "submissions.step1"
+msgstr "चरण 1"
+
+msgid "submission.scheduling"
+msgstr "निर्धारण"
+
+msgid "submission.proofreading"
+msgstr "प्रूफ़रीडिंग"
+
+msgid "submission.copyediting"
+msgstr "प्रतिलिपि संपादन"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "लेखक का फ़ाइल का संशोधित संस्करण"
+
+msgid "submission.postReviewVersion"
+msgstr "फ़ाइल की समीक्षा के बाद का संस्करण"
+
+msgid "submission.editorAuthorRecord"
+msgstr "संपादक / लेखक ईमेल रिकॉर्ड"
+
+msgid "submission.sent"
+msgstr "भेज दिया"
+
+msgid "article.return"
+msgstr "लेख विवरण पर लौटें"
+
+msgid "article.fontSize.large.altText"
+msgstr "बड़ा"
+
+msgid "article.fontSize.medium.altText"
+msgstr "मध्यम"
+
+msgid "article.fontSize.small.altText"
+msgstr "छोटा"

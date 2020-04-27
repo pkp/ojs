@@ -3,14 +3,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-15 09:20-0700\n"
-"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
-"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/admin/hi_HI"
+"PO-Revision-Date: 2020-04-23 16:22+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/admin/hi/>\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.4.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "admin.hostedContexts"
@@ -278,3 +279,33 @@ msgstr "क्या आप सुनिश्चित हैं कि आप 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "कोई नामांकित उपयोगकर्ता नहीं।"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "रिमाइंडर की समीक्षा करें"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "ओपन एक्सेस अधिसूचना"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "सदस्यता समाप्ति की रिमाइंडर"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "सभी नामांकित उपयोगकर्ता"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "उपयोगकर्ता को मर्ज करें"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "आयात पथ आवश्यक है"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "इस पत्रिका को साइट पर सार्वजनिक रूप से प्रदर्शित करने के लिए सक्षम करें"
+
+msgid "admin.contexts.create"
+msgstr "जर्नल बनाएँ"
+
+msgid "admin.languages.download"
+msgstr "डाउनलोड लोकेल"
+
+msgid "admin.settings.redirect"
+msgstr "जर्नल रीडायरेक्ट"

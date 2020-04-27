@@ -3,20 +3,21 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-15 09:20-0700\n"
-"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
-"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/api/hi_HI"
+"PO-Revision-Date: 2020-04-25 18:16+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/api/hi/>\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.4.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 # (pofilter) doublespacing: Different use of double spaces
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
 msgid "api.submissions.403.cantChangeContext"
-msgstr "आप सबमिशन की जर्नल  नहीं बदल सकते."
+msgstr "आप सबमिशन की जर्नल नहीं बदल सकते."
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
@@ -34,7 +35,7 @@ msgstr "सबमिशन बनाने या संपादित कर�
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
 msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "आप केवल उन  जर्नल को देख सकते हैं जिन्हें सक्षम किया गया है."
+msgstr "आप केवल उन जर्नल को देख सकते हैं जिन्हें सक्षम किया गया है."
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers

@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Hiển thị hình ảnh trang chủ làm nền tiêu đề."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Khi hình ảnh trang chủ đã được tải lên, hãy hiển thị nó trong nền của tiêu "
+"đề thay vì vị trí thông thường trên trang chủ."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Hình nền tiêu đề"
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Hiển thị tóm tắt tạp chí trên trang chủ."
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Chọn một màu cho tiêu đề."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Màu sắc"
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: Một cặp miễn phí với các tiêu đề serif và thân văn bản sans-"
+"serif."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Một phông chữ serif cài đặt bề rộng tốt để đọc trực tuyến."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Một phông chữ sans-serif hiện đại phổ biến."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: Một cặp bổ sung với các tiêu đề sans-serif và thân văn "
+"bản serif."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: Một cặp bổ sung với các tiêu đề serif và thân văn bản "
+"sans-serif."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr ""
+"Noto Serif: Một biến thể serif của phông chữ gốc kỹ thuật số của Google."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Phông chữ gốc kỹ thuật số được Google thiết kế để hỗ trợ ngôn ngữ "
+"rộng rãi."
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Chọn một sự kết hợp phông chữ phù hợp với tạp chí này."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Kiểu chữ"
+
+msgid "plugins.themes.default.description"
+msgstr "Chủ đề này thực hiện các chủ đề mặc định."
+
+msgid "plugins.themes.default.name"
+msgstr "Chủ đề mặc định"

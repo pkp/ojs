@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-information/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.information.link"
+msgstr "Thông tin"
+
+msgid "plugins.block.information.description"
+msgstr "Plugin này cung cấp link thông tin ở thanh bên."
+
+msgid "plugins.block.information.displayName"
+msgstr "Khối thông tin"

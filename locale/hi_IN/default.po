@@ -3,18 +3,19 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-15 09:20-0700\n"
-"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
-"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/default/hi_HI"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/default/hi/>\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.4.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 # (pofilter) endwhitespace: Different whitespace at the end
 msgid "section.default.title"
-msgstr "आलेख "
+msgstr "लेख"
 
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
@@ -89,7 +90,7 @@ msgstr "यह जर्नल प्रतिभागी पुस्तका
 
 # (pofilter) endwhitespace: Different whitespace at the end
 msgid "default.groups.plural.manager"
-msgstr "जर्नल प्रबंधक "
+msgstr "जर्नल प्रबंधकों"
 
 # (pofilter) short: The translation is much shorter than the original
 # (pofilter) simplecaps: Different capitalization
@@ -100,7 +101,7 @@ msgstr "JM"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 msgid "default.groups.name.editor"
-msgstr "Journal editor"
+msgstr "जर्नल के संपादक"
 
 # (pofilter) short: The translation is much shorter than the original
 # (pofilter) simplecaps: Different capitalization
@@ -141,7 +142,7 @@ msgstr "सदस्यता प्रबंधक"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "default.groups.plural.subscriptionManager"
-msgstr "सदस्यता प्रबंधक"
+msgstr "सदस्यता प्रबंधकों"
 
 # (pofilter) short: The translation is much shorter than the original
 # (pofilter) simplecaps: Different capitalization
@@ -163,7 +164,7 @@ msgstr "शोध परिणाम"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "default.genres.dataAnalysis"
-msgstr "डाटा एनालिसिस"
+msgstr "डेटा विश्लेषण"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "default.genres.dataSet"
@@ -179,7 +180,7 @@ msgstr "समीक्षक"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "default.groups.plural.externalReviewer"
-msgstr "समीक्षक"
+msgstr "समीक्षको"
 
 # (pofilter) short: The translation is much shorter than the original
 msgid "default.groups.abbrev.externalReviewer"
@@ -195,3 +196,21 @@ msgstr ""
 "<br/>\n"
 "________________________________________________________________________<br/>\n"
 "<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.genres.transcripts"
+msgstr "प्रतिलिपि"
+
+msgid "default.groups.plural.editor"
+msgstr "जर्नल के संपादकों"
+
+msgid "default.groups.name.manager"
+msgstr "जर्नल प्रबंधक"
+
+msgid "default.genres.article"
+msgstr "लेख पाठ"
+
+msgid "section.default.policy"
+msgstr "खंड डिफ़ॉल्ट नीति"
+
+msgid "section.default.abbrev"
+msgstr "कला"
