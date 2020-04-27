@@ -1,2 +1,111 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Biên tập viên trình bày sẽ chuẩn bị các tập tin này cho mỗi bản in thử và "
+"sau đó tải lên <span class=\"pkp_help_title\">Bản in thử</span> để hiệu đính."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Chọn tập tin chính thức"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Các tập tin nháp cuối cùng trong danh sách này được một Biên tập viên chuyển "
+"đổi thành các phiên bản được sao chép, được tải lên bên dưới <span class=\""
+"pkp_help_title\">Biên tập</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Bất kỳ tập tin nào đã được tải lên bất kỳ giai đoạn gửi nào đều có thể được "
+"thêm vào danh sách Đọc lại bằng cách chọn checkbox Bao gồm bên dưới và nhấp "
+"vào Tìm kiếm: tất cả các tập tin có sẵn sẽ được liệt kê và có thể được chọn "
+"để đưa vào."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Mã định danh công khai '{$publicIdentifier}' đã tồn tại cho một đối tượng "
+"khác cùng loại. Vui lòng chọn định danh duy nhất cho các đối tượng cùng loại "
+"trong tạp chí của bạn."
+
+msgid "editor.article.coverImage"
+msgstr "Ảnh bìa"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Tất cả các tác giả đã xuất bản ({$count} người dùng)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Tất cả người đọc ({$count} người dùng)"
+
+msgid "editor.notifyUsers"
+msgstr "Thông báo cho người dùng"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Trước khi gửi một bài gửi tới Biên tập, hãy sử dụng liên kết Thông báo cho "
+"Tác giả để thông báo cho tác giả về quyết định và chọn phiên bản sẽ được gửi."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Nội dung bài gửi này sẽ được lưu trữ sau khi email thông báo của tác giả "
+"được gửi hoặc nhấn nút Bỏ qua Email."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Bạn có chắc chắn muốn ghi lại quyết định này?"
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Bạn có chắc chắn muốn xóa vĩnh viễn bài này?"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Có lưu thay đổi để bài gửi được lưu trữ? Bài gửi được đánh dấu để xóa sẽ bị "
+"xóa vĩnh viễn khỏi hệ thống."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Không có bài gửi nào trong lưu trữ."
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Mã định danh công khai '{$publicIdentifier}' đã tồn tại cho một đối tượng "
+"khác (số, bài viết, in thử hoặc tập tin). Vui lòng chọn định danh duy nhất "
+"trong tạp chí của bạn."
+
+msgid "editor.me"
+msgstr "Tôi"
+
+msgid "editor.allEditors"
+msgstr "Tất cả các biên tập viên"
+
+msgid "editor.allSections"
+msgstr "Tất cả các chuyên mục"
+
+msgid "editor.publishedIssues"
+msgstr "Các số đã xuất bản"
+
+msgid "editor.publishing"
+msgstr "Xuất bản"
+
+msgid "editor.submissionArchive"
+msgstr "Lưu trữ bài gửi"
+
+msgid "editor.submissionQueue"
+msgstr "Các bài gửi đang đợi"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Bài gửi và xuất bản"
+
+msgid "editor.reassign"
+msgstr "Phân công lại"
+
+msgid "editor.home"
+msgstr "Trang chủ của biên tập viên"
