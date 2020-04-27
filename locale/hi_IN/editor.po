@@ -3,14 +3,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-15 09:20-0700\n"
-"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
-"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/editor/hi_HI"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/editor/hi/>\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.4.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "editor.submissionQueue"
@@ -22,7 +23,7 @@ msgstr "सबमिशन पुरालेख"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "editor.publishedIssues"
-msgstr "प्रकाशित मुद्दे"
+msgstr "प्रकाशित अंक"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "editor.allSections"
@@ -182,11 +183,11 @@ msgstr "पहुंच की स्थिति"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "editor.issues.accessDate"
-msgstr "अभिगमन तिथि खोलें"
+msgstr "ओपन एक्सेस तिथि"
 
 # (pofilter) startcaps: Different capitalization at the start
 msgid "editor.issues.enableOpenAccessDate"
-msgstr "Enable delayed open access"
+msgstr "विलंबित ओपन एक्सेस सक्षम करें"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "editor.issues.coverPage"
@@ -231,7 +232,7 @@ msgstr "स्टाइलशीट निकालें?"
 
 # (pofilter) endwhitespace: Different whitespace at the end
 msgid "editor.issues.coverPageCaption"
-msgstr "शीर्षक आवरण "
+msgstr "शीर्षक आवरण"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "editor.issues.showCoverPage"
@@ -278,12 +279,12 @@ msgstr "प्रकाशित अंक"
 # (pofilter) endwhitespace: Different whitespace at the end
 # (pofilter) simplecaps: Different capitalization
 msgid "editor.issues.unpublishIssue"
-msgstr "अप्रकाशित अंक "
+msgstr "अप्रकाशित अंक"
 
 # (pofilter) endwhitespace: Different whitespace at the end
 # (pofilter) simplecaps: Different capitalization
 msgid "editor.issues.previewIssue"
-msgstr "पूर्वावलोकन अंक "
+msgstr "पूर्वावलोकन अंक"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
@@ -453,3 +454,123 @@ msgstr "सार्वजनिक पहचानकर्ता '{$ publicIde
 # (pofilter) simplecaps: Different capitalization
 msgid "editor.article.coverImage"
 msgstr "आवरण छवि"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "गैली फाइलें चुनें"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "अंक गैली संपादित करें"
+
+msgid "editor.article.remove"
+msgstr "हटाना"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "एसाइन्ड किए जाने को"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "में प्रकाशन के लिए अनुसूची"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "अनुसूचित प्रकाशन दिखाएं"
+
+msgid "editor.submissions.accept"
+msgstr "स्वीकार करना"
+
+msgid "editor.submissions.invite"
+msgstr "आमंत्रण"
+
+msgid "editor.article.decision"
+msgstr "निर्णय"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "मूल फ़ाइल को समीक्षा संस्करण के रूप में नामित करें"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "वर्तमान अंक सेट करें"
+
+msgid "grid.action.addIssueGalley"
+msgstr "अंक गैली बनाएँ"
+
+msgid "grid.action.publish"
+msgstr "प्रकाशित अंक"
+
+msgid "editor.issues.identifiers"
+msgstr "पहचानकर्ता"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "अंक गैलिस के लिए वापस"
+
+msgid "editor.issues.galley"
+msgstr "अंक गैली"
+
+msgid "editor.issues.galleys"
+msgstr "अंक गैलिस"
+
+msgid "editor.issues.pages"
+msgstr "पृष्ठ"
+
+msgid "editor.issues.open"
+msgstr "खुला हुआ"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "कोई लाइव अंक नहीं"
+
+msgid "editor.issues.preview"
+msgstr "पूर्वावलोकन"
+
+msgid "editor.issues.order"
+msgstr "क्रम"
+
+msgid "editor.issues.default"
+msgstr "डिफ़ॉल्ट"
+
+msgid "editor.issues.cover"
+msgstr "आवरण"
+
+msgid "editor.issues.access"
+msgstr "पहुंच"
+
+msgid "editor.issues.identification"
+msgstr "पहचान"
+
+msgid "editor.issues.subscription"
+msgstr "अंशदान"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "प्रदर्शन"
+
+msgid "editor.issues.proofed"
+msgstr "प्रूफ"
+
+msgid "editor.issues.remove"
+msgstr "हटाना"
+
+msgid "editor.issues.uploaded"
+msgstr "अपलोड किए गए"
+
+msgid "editor.issues.description"
+msgstr "विवरण"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "सार्वजनिक अंक पहचानकर्ता"
+
+msgid "editor.issues.unpublished"
+msgstr "अप्रकाशित"
+
+msgid "editor.issues.published"
+msgstr "प्रकाशित"
+
+msgid "editor.me"
+msgstr "मुझे"
+
+msgid "editor.publishing"
+msgstr "प्रकाशन"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "सबमिशन्स और प्रकाशन"
+
+msgid "editor.reassign"
+msgstr "पुनः असाइन"
+
+msgid "editor.home"
+msgstr "संपादक का घर"
