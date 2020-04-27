@@ -31,7 +31,7 @@
 		{if $issueCover}
 			<a class="cover" href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
 				{capture assign="defaultAltText"}
-					{translate key="issue.title" title=$issue->getLocalizedTitle()|escape}
+					{translate key="issue.localTitle" title=$issue->getLocalizedTitle()|escape}
 				{/capture}
 				<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">
 			</a>
