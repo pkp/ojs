@@ -172,13 +172,17 @@
 		</query>
 
 		<!-- connect citations to publications -->
+		<!-- To avoid collisions per pkp/pkp-lib#5795, first flip to negative, then clean up. -->
 		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">
 			UPDATE citations
-			SET publication_id = s.current_publication_id
+			SET publication_id = -s.current_publication_id
 			FROM submissions s
 			LEFT JOIN temp_citations as tc ON (s.submission_id = tc.submission_id)
 			WHERE citations.citation_id = tc.citation_id
 		</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9"><![CDATA[
+			UPDATE citations SET publication_id = -publication_id WHERE publication_id < 0
+		]]></query>
 		<query driver="mysql,mysqli">
 			UPDATE citations as c
 			SET c.publication_id = (
