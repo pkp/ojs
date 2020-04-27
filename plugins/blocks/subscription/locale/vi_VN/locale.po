@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:04:50+00:00\n"
-"PO-Revision-Date: 2020-04-26 08:53+0000\n"
-"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-subscription/vi/>\n"
 "Language: vi_VN\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.block.subscription.displayName"
-msgstr "Thông tin về đặt tạp chí"
+msgstr "Khối đăng ký thuê bao"
 
 msgid "plugins.block.subscription.description"
-msgstr "Công cụ này cung cấp thông tin về đặt tạp chí ở cột bên."
+msgstr "Plugin này cung cấp thông tin thuê bao về đặt tạp chí ở cột bên."
 
 msgid "plugins.block.subscription.blockTitle"
-msgstr "Đặt tạp chí"
+msgstr "Đăng ký thuê bao"
 
 msgid "plugins.block.subscription.expires"
 msgstr "Hết hạn"
@@ -33,16 +33,16 @@ msgid "plugins.block.subscription.providedByInstitution"
 msgstr "Bạn được cơ quan cấp quyền truy cập"
 
 msgid "plugins.block.subscription.comingFromIP"
-msgstr "Từ địa chỉ IP: {$ip}"
+msgstr "Truy cập từ : {$ip}"
 
 msgid "plugins.block.subscription.subscriptionRequired.learnMore"
-msgstr "Tìm hiểu thêm"
+msgstr "Tìm hiểu thêm"
 
 msgid "plugins.block.subscription.subscriptionRequired"
-msgstr "Để truy cập một số tài nguyên bắt bắt buộc phải đăng ký"
+msgstr "Đăng ký thuê bao là cần thiết để truy cập một số tài nguyên."
 
 msgid "plugins.block.subscription.loginToVerifySubscription"
-msgstr "Đăng nhập để truy cập tài nguyên với thuê bao"
+msgstr "Đăng nhập để truy cập tài nguyên đối với thuê bao."
 
 msgid "plugins.block.subscription.about"
-msgstr "Đăng ký"
+msgstr "Đăng ký thuê bao"
