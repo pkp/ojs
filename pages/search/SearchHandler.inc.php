@@ -211,9 +211,10 @@ class SearchHandler extends Handler {
 			$publicationIds = array_map(function($author) {
 				return $author->getData('publicationId');
 			}, $authorRecords);
-			$submissionIds = array_map(function($publicationId) {
-				return Services::get('publication')->get($publicationId)->getData('submissionId');
-			}, array_unique($publicationIds));
+			$submissionIds = array_filter(array_map(function($publicationId) {
+				$publication = Services::get('publication')->get($publicationId);
+				return $publication->getData('status') == STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
+			}, array_unique($publicationIds)));
 			$submissions = array_map(function($submissionId) {
 				return Services::get('submission')->get($submissionId);
 			}, array_unique($submissionIds));
