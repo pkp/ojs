@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-25 18:16+0000\n"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
 "Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
 "Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/locale/hi/>\n"
 "Language: hi_IN\n"
@@ -156,7 +156,7 @@ msgstr "लेखक संस्करण"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 msgid "submission.copyedit"
-msgstr "Copyedit"
+msgstr "प्रतिलिपि संपादन करना"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
@@ -792,3 +792,54 @@ msgstr "ब्राउज़"
 
 msgid "navigation.categories"
 msgstr "श्रेणियाँ"
+
+msgid "submissions.proof"
+msgstr "प्रमाण"
+
+msgid "submissions.proofread"
+msgstr "प्रूफ़ संशोधित करना"
+
+msgid "submissions.initial"
+msgstr "प्रारंभिक"
+
+msgid "submissions.published"
+msgstr "प्रकाशित"
+
+msgid "submissions.step3"
+msgstr "चरण 3"
+
+msgid "submissions.step1"
+msgstr "चरण 1"
+
+msgid "submission.scheduling"
+msgstr "निर्धारण"
+
+msgid "submission.proofreading"
+msgstr "प्रूफ़रीडिंग"
+
+msgid "submission.copyediting"
+msgstr "प्रतिलिपि संपादन"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "लेखक का फ़ाइल का संशोधित संस्करण"
+
+msgid "submission.postReviewVersion"
+msgstr "फ़ाइल की समीक्षा के बाद का संस्करण"
+
+msgid "submission.editorAuthorRecord"
+msgstr "संपादक / लेखक ईमेल रिकॉर्ड"
+
+msgid "submission.sent"
+msgstr "भेज दिया"
+
+msgid "article.return"
+msgstr "लेख विवरण पर लौटें"
+
+msgid "article.fontSize.large.altText"
+msgstr "बड़ा"
+
+msgid "article.fontSize.medium.altText"
+msgstr "मध्यम"
+
+msgid "article.fontSize.small.altText"
+msgstr "छोटा"
