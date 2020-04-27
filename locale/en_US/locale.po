@@ -461,8 +461,8 @@ msgstr "Issues"
 msgid "issue.title"
 msgstr "Title"
 
-msgid "issue.viewIssueWithTitle"
-msgstr "View {$title}"
+msgid "issue.viewIssueIdentification"
+msgstr "View {$identification}"
 
 msgid "issue.volume"
 msgstr "Volume"
