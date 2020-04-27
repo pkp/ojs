@@ -1,2 +1,94 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"auth-ldap/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Thuộc tính bảo mật của SASL"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "ID ủy quyền được yêu cầu"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Lĩnh vực"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Ví dụ: \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Cơ chế SASL"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Sử dụng SASL thay vì xác thực đơn giản"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Cài đặt SASL (tùy chọn)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+"Định dạng băm cho mật khẩu được lưu trữ đến máy chủ. SSHA được khuyến nghị."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Mã hóa mật khẩu"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"Thuộc tính có giá trị xác định duy nhất một đối tượng người dùng, chẳng hạn "
+"như uid hoặc cn hoặc sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Thuộc tính tên tài khoản"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"Người quản lý DN và mật khẩu chỉ được yêu cầu nếu bật tùy chọn đồng bộ hóa/"
+"mật khẩu người dùng hoặc tùy chọn tạo người dùng. Nếu LDAP sẽ chỉ được sử "
+"dụng để xác thực thì các tùy chọn này có thể được bỏ qua."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Mật khẩu quản lý"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Ví dụ: \"cn = Người quản lý, dc = ví dụ, dc = com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Quản lý DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Ví dụ: \"ou = người, dc = ví dụ, dc = com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Cơ sở DN"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Không bắt buộc. Mặc định là 389 (LDAP) hoặc 636 (LDAP qua SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Cổng máy chủ"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"Ví dụ: \"ldap.example.com\" hoặc \"ldaps: //ldap.example.com\" (để sử dụng "
+"SSL)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Tên máy chủ"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Cài đặt LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Plugin này cho phép xác thực và đồng bộ hóa tài khoản người dùng với nguồn "
+"dữ liệu LDAP bên ngoài."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
