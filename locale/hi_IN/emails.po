@@ -3,14 +3,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-15 09:20-0700\n"
-"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
-"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/emails/hi_HI"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/emails/hi/>\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.4.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$siteTitle}
@@ -87,7 +88,7 @@ msgstr "PASSWORD_RESET_CONFIRM ईमेल में वर्णित प्�
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 msgid "emails.userRegister.subject"
-msgstr "Journal Registration"
+msgstr "जर्नल पंजीकरण"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
@@ -175,7 +176,7 @@ msgstr "यह ईमेल एक नए पंजीकृत समीक्�
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 msgid "emails.publishNotify.subject"
-msgstr "New Issue Published"
+msgstr "नया अंक प्रकाशित"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) doublespacing: Different use of double spaces
@@ -268,7 +269,7 @@ msgstr "यह ईमेल प्राप्तकर्ता को LOCKSS �
 
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.submissionAck.subject"
-msgstr "सबमिशन पावती"
+msgstr "सबमिशन स्वीकृति"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
@@ -344,7 +345,10 @@ msgstr ""
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.editorAssign.description"
-msgstr "यह ईमेल एक सेक्शन एडिटर को सूचित करता है कि एडिटर ने उन्हें संपादन प्रक्रिया के माध्यम से सबमिशन की देखरेख का काम सौंपा है। यह सबमिशन और जर्नल साइट को एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
+msgstr ""
+"यह ईमेल एक अनुभाग संपादक को सूचित करता है कि संपादक ने उन्हें संपादन "
+"प्रक्रिया के माध्यम से सबमिशन की देखरेख का काम सौंपा है। यह सबमिशन और जर्नल "
+"साइट को एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
 
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.reviewRequest.subject"
@@ -385,7 +389,13 @@ msgstr ""
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.reviewRequest.description"
-msgstr "सेक्शन एडिटर से लेकर समीक्षक तक का यह ईमेल अनुरोध करता है कि समीक्षक किसी सबमिशन की समीक्षा करने के कार्य को स्वीकार या अस्वीकार करता है। यह प्रस्तुत करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया का चयन किया जाता है. (Otherwise see REVIEW_REQUEST_ATTACHED.)"
+msgstr ""
+"अनुभाग संपादक से लेकर समीक्षक तक का यह ईमेल अनुरोध करता है कि समीक्षक किसी "
+"सबमिशन की समीक्षा करने के कार्य को स्वीकार या अस्वीकार करता है। यह प्रस्तुत "
+"करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत "
+"तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया "
+"जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया "
+"का चयन किया जाता है. (Otherwise see REVIEW_REQUEST_ATTACHED.)"
 
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
@@ -1025,7 +1035,10 @@ msgstr ""
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.copyeditRequest.description"
-msgstr "यह ईमेल एक सेक्शन एडिटर द्वारा सबमिशन की कॉपीडिटर को सबमिट करने के लिए भेजा जाता है ताकि वे कॉपी करने की प्रक्रिया शुरू कर सकें। यह सबमिशन और इसे एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
+msgstr ""
+"यह ईमेल एक सेक्शन एडिटर द्वारा सबमिशन की कॉपीडिटर को सबमिट करने के लिए भेजा "
+"जाता है ताकि वे कॉपीएडिटिंग  करने की प्रक्रिया शुरू कर सकें। यह सबमिशन और इसे"
+" एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
 
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.layoutRequest.subject"
@@ -1144,7 +1157,7 @@ msgstr "यह ईमेल एक पंजीकृत पाठक को स
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 msgid "emails.openAccessNotify.subject"
-msgstr "Issue Now Open Access"
+msgstr "अंक अब ओपन एक्सेस"
 
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
@@ -1164,7 +1177,9 @@ msgstr ""
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "emails.openAccessNotify.description"
-msgstr "यह ईमेल उन पंजीकृत पाठकों को भेजा जाता है, जिन्होंने किसी मुद्दे पर खुली पहुंच बनने पर अधिसूचना ईमेल प्राप्त करने का अनुरोध किया है."
+msgstr ""
+"यह ईमेल उन पंजीकृत पाठकों को भेजा जाता है, जिन्होंने किसी अंक पर खुली पहुंच "
+"बनने पर अधिसूचना ईमेल प्राप्त करने का अनुरोध किया है."
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
@@ -1455,3 +1470,100 @@ msgstr ""
 "\n"
 "\t\t\t{$authorName}:<br />\n"
 "<br />\n"
+
+msgid "emails.statisticsReportNotification.description"
+msgstr ""
+"यह ईमेल स्वचालित रूप से संपादकों और पत्रिका प्रबंधकों को मासिक रूप से भेजा "
+"जाता है ताकि उन्हें एक प्रणाली स्वास्थ्य अवलोकन प्रदान किया जा सके।"
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr "{$ माह}, {$ वर्ष} के लिए संपादकीय गतिविधि"
+
+msgid "emails.editorDecisionInitialDecline.description"
+msgstr ""
+"यह ईमेल लेखक को भेजा जाता है अगर संपादक समीक्षा के चरण से पहले शुरू में अपने "
+"प्रस्तुतिकरण को कम कर देता है"
+
+msgid "emails.editorDecisionInitialDecline.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr "संशोधित संस्करण अपलोड किया गया"
+
+msgid "emails.citationEditorAuthorQuery.subject"
+msgstr "प्रशस्ति संपादन"
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr "सदस्यता नवीनीकरण: व्यक्तिगत"
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr "सदस्यता नवीनीकरण: व्यक्तिगत"
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr "सदस्यता खरीद: व्यक्तिगत"
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr "सदस्यता खरीद: व्यक्तिगत"
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr "सदस्यता समाप्त - अंतिम अनुस्मारक"
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr "सदस्यता समाप्त हो गई"
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr "सदस्यता समाप्ति की सूचना"
+
+msgid "emails.editorDecisionDecline.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionResubmit.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionRevisions.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionSendToProduction.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionSendToExternal.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionAccept.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.reviewRemindAutoOneclick.subject"
+msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
+
+msgid "emails.reviewRemindAuto.subject"
+msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
+
+msgid "emails.reviewRemindOneclick.subject"
+msgstr "सबमिशन समीक्षा रिमाइंडर"
+
+msgid "emails.reviewRequestAttachedSubsequent.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestOneclickSubsequent.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestAttached.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestRemindAutoOneclick.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestOneclick.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestRemindAuto.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.submissionAckNotUser.subject"
+msgstr "सबमिशन स्वीकृति"
+
+msgid "emails.passwordResetConfirm.subject"
+msgstr "पासवर्ड रीसेट पुष्टि"
