@@ -461,6 +461,9 @@ msgstr "Выпуски"
 msgid "issue.title"
 msgstr "Название"
 
+msgid "issue.viewIssueIdentification"
+msgstr "Показать {$identification}"
+
 msgid "issue.volume"
 msgstr "Том"
 
