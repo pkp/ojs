@@ -124,6 +124,6 @@
 	<message key="author.submit.expedite"><![CDATA[If this submission is in a format that is ready to be published without further review, editing, or layout work, it can be placed directly in the last stage of the Editing queue by <a href="{$expediteUrl}" class="action">Clicking here</a>. (Note: Only journal editors have this option for their submissions.)]]></message>
 	<message key="author.article.uploadAuthorVersion">Upload Author Version</message>
 	<message key="author.article.copyeditedFile">Copyedited File</message>
-	<message key="author.article.authorRevisedFile">Author File</message>
+	<message key="author.article.authorRevisedFile">Author File<br />(Note: only the latest file uploaded will be made available for reviewers; in case you have  multiple files, please pack them as a single zip file.)</message>
 	<message key="author.submit.authorSubmitLoginMessage">A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</message>
 </locale>
