@@ -38,7 +38,6 @@ class PublishForm extends FormComponent {
 	 */
 	public function __construct($action, $publication, $requirementErrors) {
 		$this->action = $action;
-		$this->successMessage = __('publication.publish.success');
 		$this->errors = $requirementErrors;
 		$this->publication = $publication;
 

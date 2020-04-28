@@ -222,8 +222,3 @@ msgstr "Publié dans <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
 msgstr "Publication prévue dans <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.issue.success"
-msgstr ""
-"Les renseignements relatifs au numéro de cette publication ont été mis à "
-"jour."

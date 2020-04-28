@@ -16,7 +16,7 @@ Cypress.Commands.add('publish', (issueId, issueTitle) => {
 	cy.wait(2000); // Wait for form to settle
 	cy.get('select[id="issueEntry-issueId-control"]').select(issueId);
 	cy.get('div[id="issue"] button:contains("Save")').click();
-	cy.get('div:contains("The publication\'s issue details have been updated.")');
+	cy.get('#issue [role="status"]').contains('Saved');
 	cy.get('div[id="publication"] button:contains("Schedule For Publication")').click();
 	cy.get('div:contains("All publication requirements have been met. This will be published immediately in ' + issueTitle + '. Are you sure you want to publish this?")');
 	cy.get('div.pkpWorkflow__publishModal button:contains("Publish")').click();

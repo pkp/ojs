@@ -174,12 +174,6 @@ msgstr ""
 msgid "admin.contexts.form.pathExists"
 msgstr "Внесената патека веќе се користи за друго списание."
 
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} беше креирано успешно."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} беше корегирано успешно."
-
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Овозможи списание јавно да се појави на сајтот"
 
@@ -238,15 +232,6 @@ msgstr ""
 
 msgid "admin.settings.redirect"
 msgstr "Пренасочување на списание"
-
-msgid "admin.settings.info.success"
-msgstr "Информациите за сајтот се успешно обновени."
-
-msgid "admin.settings.config.success"
-msgstr "Подесувањата за конфигурација на сајтот се успешно обновени."
-
-msgid "admin.settings.appearance.success"
-msgstr "Подесувањата за приказ на сајтот се успешно обновени."
 
 msgid "admin.hostedContexts"
 msgstr "Хостирани списанија"

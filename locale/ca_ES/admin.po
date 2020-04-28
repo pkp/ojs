@@ -182,21 +182,3 @@ msgstr "Recordatori de revisió"
 
 msgid "admin.contexts.form.titleRequired"
 msgstr "Es necessita un títol."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} ha estat editat correctament."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} ha estat creat correctament."
-
-msgid "admin.settings.info.success"
-msgstr "La informació del lloc ha estat actualitzada correctament."
-
-msgid "admin.settings.config.success"
-msgstr ""
-"Les preferències de configuració del lloc han estat actualitzades "
-"correctament."
-
-msgid "admin.settings.appearance.success"
-msgstr ""
-"Les preferències d'aparença del lloc han estat actualitzades correctament."

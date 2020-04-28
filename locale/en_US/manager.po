@@ -38,9 +38,6 @@ msgstr "The journal will provide open access to its contents."
 msgid "manager.distribution.publishingMode.subscription"
 msgstr "The journal will require subscriptions to access some or all of its contents."
 
-msgid "manager.distribution.publishingMode.success"
-msgstr "The publishing details have been updated."
-
 msgid "manager.website.archiving"
 msgstr "Archiving"
 
@@ -136,9 +133,6 @@ msgstr "This will activate payments for Subscriptions, where types, cost, durati
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Are you sure you wish to delete this subscription?"
-
-msgid "manager.payment.success"
-msgstr "The payment settings have been updated."
 
 msgid "manager.payment.options.enablePayments"
 msgstr "Payments will be enabled for this journal. Note that users will be required to log in to make payments."
@@ -383,9 +377,6 @@ msgstr "Alternately, instead of title and logo, an HTML version of the header ca
 msgid "manager.setup.announcements"
 msgstr "Announcements"
 
-msgid "manager.setup.announcements.success"
-msgstr "The announcements settings have been updated."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Introduction"
 
@@ -394,9 +385,6 @@ msgstr "Enter any information you would like to appear on your announcements pag
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(To appear in About the Journal) "
-
-msgid "manager.setup.archiving.success"
-msgstr "The archiving details for this journal have been updated."
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Require submitting Authors to file a Competing Interest (CI) statement with their submission."
@@ -409,9 +397,6 @@ msgstr "Journal History"
 
 msgid "manager.setup.historyDescription"
 msgstr "This text will appear in the \"About\" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history."
-
-msgid "manager.setup.contact.success"
-msgstr "The contact details for this journal have been updated."
 
 msgid "manager.setup.currentIssue"
 msgstr "Current issue"
@@ -548,9 +533,6 @@ msgstr "For Librarians"
 msgid "manager.setup.information.forReaders"
 msgstr "For Readers"
 
-msgid "manager.setup.information.success"
-msgstr "The information for this journal was updated."
-
 msgid "manager.setup.initialIssue"
 msgstr "Initial issue"
 
@@ -653,9 +635,6 @@ msgstr "Provide a short description of your journal and identify editors, managi
 msgid "manager.setup.labelName"
 msgstr "Label name"
 
-msgid "manager.setup.lists.success"
-msgstr "The list settings for this journal have been updated."
-
 msgid "manager.setup.lists"
 msgstr "Lists"
 
@@ -728,9 +707,6 @@ msgstr "Management and Publishing Setup"
 msgid "manager.setup.managingTheJournal"
 msgstr "Step 4. Managing the Journal"
 
-msgid "manager.setup.masthead.success"
-msgstr "The masthead details for this journal have been updated."
-
 msgid "manager.setup.navigationBar"
 msgstr "Navigation Bar"
 
@@ -775,9 +751,6 @@ msgstr "Focus, peer review, sections, privacy, security, and additional about it
 
 msgid "manager.setup.printIssn"
 msgstr "Print ISSN"
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "The privacy statement has been updated."
 
 msgid "manager.setup.proofingInstructions"
 msgstr "Proofing Instructions"
@@ -866,9 +839,6 @@ msgstr "Review Policy"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Search Indexing"
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "The search engine index settings have been updated."
-
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr "Help search engines like Google discover and display your site. You are encouraged to submit your <a href=\"{$sitemapUrl}\" target=\"_blank\">sitemap</a>."
 
@@ -949,9 +919,6 @@ msgstr "Articles and issues can be tagged with an identification number or strin
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "An editorial/review board will be used by the journal."
-
-msgid "manager.setup.userAccess.success"
-msgstr "The user access details for this journal have been updated."
 
 msgid "manager.setup.useThumbnail"
 msgstr "Thumbnail"

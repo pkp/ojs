@@ -1630,9 +1630,6 @@ msgstr "Gunakan tanggal nomor terbitan"
 msgid "manager.setup.numPageLinks.description"
 msgstr "Batasi jumlah tautan yang tampil di daftar halaman berikutnya."
 
-msgid "manager.setup.masthead.success"
-msgstr "Rincian dewan redaksi jurnal telah diperbaharui."
-
 msgid "manager.setup.plnPluginEnable"
 msgstr "Aktifkan plugin PKP PN"
 
@@ -1729,9 +1726,6 @@ msgstr "{$x} Pekan"
 msgid "manager.subscriptionPolicies.xMonths"
 msgstr "{$x} Bulan"
 
-msgid "manager.setup.userAccess.success"
-msgstr "Rincian akses pengguna jurnal ini telah diperbaharui."
-
 msgid "manager.setup.enableOai.description"
 msgstr ""
 "Berikan metadata ke layanan pengindeks pihak ketiga melalui <a href=\""
@@ -1751,9 +1745,6 @@ msgstr ""
 "Tuliskan gambaran ringkas (50-300 karakter) tentang jurnal yang dapat "
 "ditampilkan oleh mesih pencarian saat mengurutkan jurnal di hasil pencarian."
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "Pengaturan indeks mesin pencarian telah diperbaharui."
-
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Sertakan tautan aman dalam email undangan kepada reviewer."
 
@@ -1762,9 +1753,6 @@ msgstr "Batasi Akses File"
 
 msgid "manager.setup.publishing"
 msgstr "Rincian Terbitan"
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "Pernyataan privasi telah diperbaharui."
 
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS dan CLOCKSS"
@@ -1786,9 +1774,6 @@ msgstr ""
 "PKP Preservation Network (PN) memberikan layanan penyimpanan gratis bagi "
 "setiap jurnal yang memenuhi sejumlah kriteria dasar."
 
-msgid "manager.setup.lists.success"
-msgstr "Pengaturan daftar pada jurnal ini telah diperbaharui."
-
 msgid "manager.setup.keyInfo.description"
 msgstr ""
 "Tuliskan gambaran singkat tentng jurnal Anda dan sebutkan editor, direktur "
@@ -1803,9 +1788,6 @@ msgstr ""
 "yang tampil dalam daftar sebelum menampilkan item berikutnya pada halaman "
 "lain."
 
-msgid "manager.setup.information.success"
-msgstr "Informasi tentang jurna ini telah diperbaharui."
-
 msgid "manager.setup.identity"
 msgstr "Identitas Jurnal"
 
@@ -1817,26 +1799,11 @@ msgstr ""
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Tampilkan di Halamam Beranda"
 
-msgid "manager.setup.contact.success"
-msgstr "Rincian narahubung jurna ini telah diperbaharui."
-
-msgid "manager.setup.archiving.success"
-msgstr "Rincian pengarsipan jurnl ini telah diperbaharui."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Pengantar"
-
-msgid "manager.setup.announcements.success"
-msgstr "Pengaturan pengumuman telah diperbaharui."
 
 msgid "manager.paymentTypes"
 msgstr "Jenis Pembayaran"
 
-msgid "manager.payment.success"
-msgstr "Pengaturan pembayaran telah diperbaharui."
-
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Yakin ingin menghapus langganan ini?"
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Ringkasan terbitan telah diperbaharui."

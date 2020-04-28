@@ -38,9 +38,6 @@ msgstr "Het tijdschrift biedt vrije toegang (open access) tot de inhoud."
 msgid "manager.distribution.publishingMode.subscription"
 msgstr "Het tijdschrift vereist een abonnement om toegang tot een deel van of al het materiaal te krijgen."
 
-msgid "manager.distribution.publishingMode.success"
-msgstr "De publicatiewijze werd aangepast."
-
 msgid "manager.website.archiving"
 msgstr "Archivering"
 
@@ -136,9 +133,6 @@ msgstr "Dit zal betaling voor abonnementen activeren. De types, kosten, duur en 
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Weet u zeker dat u dit abonnement wil verwijderen?"
-
-msgid "manager.payment.success"
-msgstr "De betalingsinstellingen zijn bijgewerkt."
 
 msgid "manager.payment.options.enablePayments"
 msgstr "Klik hier om de betalingsmodule in te schakelen.  U moet de betalingsinstellingen configureren door het formulier hieronder in te vullen. Merk op dat gebruikers in moeten loggen om betalingen te kunnen doen."
@@ -383,9 +377,6 @@ msgstr "Als alternatief voor titel en logo kan in het tekstvak hieronder een HTM
 msgid "manager.setup.announcements"
 msgstr "Nieuwsberichten"
 
-msgid "manager.setup.announcements.success"
-msgstr "De instellingen voor nieuwsberichten zijn bijgewerkt."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Bijkomende informatie"
 
@@ -394,9 +385,6 @@ msgstr "Andere informatie die op de Nieuwsberichten pagina getoond moet worden a
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Om op te nemen in Over dit Tijdschrift)"
-
-msgid "manager.setup.archiving.success"
-msgstr "De instellingen voor archivering van dit tijdschrift zijn bijgewerkt."
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Verplicht auteurs een verklaring omtrent  strijdige belangen in te dienen met hun inzending."
@@ -409,9 +397,6 @@ msgstr "Geschiedenis van het tijdschrift"
 
 msgid "manager.setup.historyDescription"
 msgstr "Deze tekst verschijnt in de \"Over\" sectie van de website van het tijdschrift en kan gebruikt worden om de veranderingen in het tijdschrift, de redactie en andere relevante historische feiten te beschrijven."
-
-msgid "manager.setup.contact.success"
-msgstr "De contactgegevens voor dit tijdschrift zijn bijgewerkt."
 
 msgid "manager.setup.currentIssue"
 msgstr "Huidig nummer"
@@ -536,9 +521,6 @@ msgstr "Voor bibliothecarissen"
 msgid "manager.setup.information.forReaders"
 msgstr "Voor lezers"
 
-msgid "manager.setup.information.success"
-msgstr "De gegevens voor dit tijdschrift zijn bijgewerkt."
-
 msgid "manager.setup.initialIssue"
 msgstr "Eerste nummer"
 
@@ -641,9 +623,6 @@ msgstr "Geef een korte beschrijving van het tijdschrift en een overzicht van red
 msgid "manager.setup.labelName"
 msgstr "Label naam"
 
-msgid "manager.setup.lists.success"
-msgstr "De lijst-instellingen voor dit tijdschrift zijn bijgewerkt."
-
 msgid "manager.setup.lists"
 msgstr "Lijsten"
 
@@ -716,9 +695,6 @@ msgstr "Beheer en publicatie inrichten"
 msgid "manager.setup.managingTheJournal"
 msgstr "Stap 4. Beheren van het tijdschrift"
 
-msgid "manager.setup.masthead.success"
-msgstr "Het impressum voor dit tijdschrift is bijgewerkt."
-
 msgid "manager.setup.navigationBar"
 msgstr "Navigatiebalk"
 
@@ -763,9 +739,6 @@ msgstr "Focus, peer review, secties, privacy, beveiliging en andere gegevens ove
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN gedrukte versie"
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "De privacy verklaring is bijgewerkt."
 
 msgid "manager.setup.proofingInstructions"
 msgstr "Instructies voor proeflezen"
@@ -854,9 +827,6 @@ msgstr "Beleid voor reviews"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Zoek-indexering"
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "De indexeringsinstellingen voor de zoekmachine zijn bijgewerkt."
-
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr "Geef hier trefwoorden (gescheiden door puntkommas) en een korte omschrijving van het tijdschrift om de gebruikers van zoekmachines te helpen bij het vinden van het tijdschrift."
 
@@ -937,9 +907,6 @@ msgstr "Artikels en nummers kunnen gelabeld worden met een identificatienummer o
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Dit tijdschrift zal een redactie/review team gebruiken."
-
-msgid "manager.setup.userAccess.success"
-msgstr "De toegangsrechten voor dit tijdschrift zijn bijgewerkt."
 
 msgid "manager.setup.useThumbnail"
 msgstr "Miniatuur"

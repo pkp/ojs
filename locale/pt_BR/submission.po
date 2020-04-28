@@ -229,6 +229,3 @@ msgstr "Selecione o componente do artigo"
 
 msgid "submission.publication"
 msgstr "Publicação"
-
-msgid "publication.issue.success"
-msgstr "Os detalhes do fascículo desta publicação foram atualizados."

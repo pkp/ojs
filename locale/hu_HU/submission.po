@@ -214,9 +214,6 @@ msgstr ""
 msgid "publication.publish.confirmation"
 msgstr "Minden publikálási feltétel teljesült. Biztosan publikálni szeretné?"
 
-msgid "publication.issue.success"
-msgstr "A cikk rovat információi frissítésre kerültek."
-
 msgid "publication.invalidIssue"
 msgstr "A szám ehhez a cikkhez nem található."
 

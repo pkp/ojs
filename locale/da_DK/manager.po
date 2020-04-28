@@ -1780,9 +1780,6 @@ msgstr "Dette er en abonnementstype, der ikke udløber; angiv ikke en startdato.
 msgid "manager.setup.userRegistration"
 msgstr "Brugerregistrering"
 
-msgid "manager.setup.userAccess.success"
-msgstr "Oplysninger om brugeradgang til dette tidsskrift er blevet opdateret."
-
 msgid "manager.setup.enableOai.description"
 msgstr ""
 "Levér metadata til tredjeparts indekseringstjenester gennem <a href=\""
@@ -1802,10 +1799,6 @@ msgstr ""
 "Giv en kort beskrivelse (50-300 tegn) af tidsskriftet, som søgemaskinerne "
 "kan fremhæve, når tidsskriftet vises blandt søgeresultaterne."
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr ""
-"Indstillingerne i forbindelse med søgemaskineindekset er blevet opdateret."
-
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Inkludér et sikkert link i e-mail-invitationen til bedømmere."
 
@@ -1815,19 +1808,10 @@ msgstr "Begræns filadgang"
 msgid "manager.setup.publishing"
 msgstr "Publiceringsoplysninger"
 
-msgid "manager.setup.privacyStatement.success"
-msgstr "Erklæring om beskyttelse af personlige oplysninger er blevet opdateret."
-
 msgid "manager.setup.numPageLinks.description"
 msgstr ""
 "Begræns antallet af links, der skal vises til efterfølgende sider på en "
 "liste."
-
-msgid "manager.setup.masthead.success"
-msgstr "Dette tidsskrifts kolofonoplysninger er blevet opdateret."
-
-msgid "manager.setup.lists.success"
-msgstr "Dette tidsskrifts listeindstillingerne er blevet opdateret."
 
 msgid "manager.setup.keyInfo.description"
 msgstr ""
@@ -1843,9 +1827,6 @@ msgstr ""
 "redigeringsopgaver), der skal vises på en liste, før de efterfølgende poster "
 "vises på en anden side."
 
-msgid "manager.setup.information.success"
-msgstr "Oplysningerne i forbindelse med dette tidsskrift blev opdateret."
-
 msgid "manager.setup.identity"
 msgstr "Tidsskriftsidentitet"
 
@@ -1857,23 +1838,8 @@ msgstr ""
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Vis på hjemmeside"
 
-msgid "manager.setup.contact.success"
-msgstr "Dette tidsskrifts kontaktoplysninger er blevet opdateret."
-
-msgid "manager.setup.archiving.success"
-msgstr "Dette tidsskrifts arkiveringsoplysninger er blevet opdateret."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Introduktion"
-
-msgid "manager.setup.announcements.success"
-msgstr "Indstillingerne i forbindelse med meddelelser er blevet opdateret."
-
-msgid "manager.payment.success"
-msgstr "Betalingsindstillingerne er blevet opdateret."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Publiceringsoplysningerne er blevet opdateret."
 
 msgid "manager.distribution.publishingMode"
 msgstr "Publiceringsform"

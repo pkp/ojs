@@ -1659,47 +1659,20 @@ msgstr "{$count} av {$total} artiklar"
 msgid "manager.setup.enableOai"
 msgstr "Aktivera OAI"
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "Inställningarna för sökmotorns index har uppdaterats."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Publiceringsinformationen har uppdaterats."
-
 msgid "manager.setup.publishing"
 msgstr "Publiceringsinformation"
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "Integritetspolicyn har uppdaterats."
 
 msgid "manager.setup.numPageLinks.description"
 msgstr "Begränsa antalet länkar som visas på varje sida."
 
-msgid "manager.setup.masthead.success"
-msgstr "Tidskriftens redaktionsruta har uppdaterats."
-
 msgid "manager.setup.look"
 msgstr "Utseende"
-
-msgid "manager.setup.information.success"
-msgstr "Tidskriftsinformationen har uppdaterats."
 
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Visas på Förstasidan"
 
-msgid "manager.setup.contact.success"
-msgstr "Kontaktuppgifterna för tidskriften har uppdaterats."
-
-msgid "manager.setup.archiving.success"
-msgstr "Arkiveringsinställningarna för tidskriften har uppdaterats."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Introduktion"
-
-msgid "manager.setup.announcements.success"
-msgstr "Inställningarna för meddelanden har uppdaterats."
-
-msgid "manager.payment.success"
-msgstr "Inställningarna för betalning har uppdaterats."
 
 msgid "manager.distribution.publishingMode"
 msgstr "Publiceringsläge"
@@ -1744,9 +1717,6 @@ msgstr "Det här är en tillsvidareprenumeration; ange inget slutdatum."
 msgid "manager.subscriptions.form.dateStartEmpty"
 msgstr "Det här är en tillsvidareprenumeration; ange inget startdatum."
 
-msgid "manager.setup.userAccess.success"
-msgstr "Informationen om tidskriftens användares behörighet har uppdaterats."
-
 msgid "manager.setup.enableOai.description"
 msgstr ""
 "Gör metadata tillgängligt för indexering av tredje part genom <a href=\""
@@ -1768,9 +1738,6 @@ msgstr "Inkludera en säker länk i e-postinbjudan till granskarna."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Begränsa tillgången till filen"
-
-msgid "manager.setup.lists.success"
-msgstr "Listinställningarna för tidskriften har uppdaterats."
 
 msgid "manager.setup.keyInfo.description"
 msgstr ""

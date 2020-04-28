@@ -230,6 +230,3 @@ msgstr "{$numTitles} items"
 
 msgid "submission.sectionOptions"
 msgstr "Opzioni di sezione"
-
-msgid "publication.issue.success"
-msgstr "I dettagli di pubblicazione del fascicolo sono stati aggiornati."

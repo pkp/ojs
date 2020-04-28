@@ -182,9 +182,6 @@ msgstr ""
 "Tots els requisits de publicació es compleixen. Esteu segurs que voleu "
 "publicar-ho?"
 
-msgid "publication.issue.success"
-msgstr "Els detalls de publicació del número s'han actualitzat."
-
 msgid "publication.invalidIssue"
 msgstr "No s'ha pogut trobar el número per a aquesta publicació."
 

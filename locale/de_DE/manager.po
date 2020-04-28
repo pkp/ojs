@@ -1677,9 +1677,6 @@ msgstr ""
 "Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe "
 "abgeleitet"
 
-msgid "manager.setup.information.success"
-msgstr "Die Information zu diesem Journal wurden aktualisiert."
-
 msgid "manager.setup.identity"
 msgstr "Zeitschriftenidentität"
 
@@ -1690,21 +1687,6 @@ msgstr ""
 
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Auf der Homepage anzeigen"
-
-msgid "manager.setup.contact.success"
-msgstr "Die Kontaktdaten für diese Zeitschrift wurden aktualisiert."
-
-msgid "manager.setup.archiving.success"
-msgstr "Die Archivierungsdetails dieser Zeitschrift wurden aktualisiert."
-
-msgid "manager.setup.announcements.success"
-msgstr "Die Mitteilungseinstellungen wurden aktualisiert."
-
-msgid "manager.payment.success"
-msgstr "Die Zahlungseinstellungen wurden aktualisiert."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Die Veröffentlichungsdetails wurden aktualisiert."
 
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Zusätzliche Informationen"

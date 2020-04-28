@@ -187,9 +187,6 @@ msgid "publication.publish.confirmation"
 msgstr ""
 "Todos os requisitos da publicação foram cumpridos. Deseja realmente publicar?"
 
-msgid "publication.issue.success"
-msgstr "Os detalhes do volume da publicação foram atualizados."
-
 msgid "publication.invalidIssue"
 msgstr "O volume desta publicação não foi encontrada."
 

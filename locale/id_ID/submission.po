@@ -184,9 +184,6 @@ msgstr ""
 "Seluruh prasyarat penerbitan telah terpenuhi. Anda yakin ingin menerbitkan "
 "ini?"
 
-msgid "publication.issue.success"
-msgstr "Rincian terbitan untuk penerbitan ini telah diperbarui."
-
 msgid "publication.invalidIssue"
 msgstr "Terbitan untuk penerbitan ini tidak dapat ditemukan."
 

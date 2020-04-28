@@ -41,9 +41,6 @@ msgstr "A revista oferecerá acesso livre ao seu conteúdo."
 msgid "manager.distribution.publishingMode.subscription"
 msgstr "A revista terá controle de assinaturas para acesso ao seu conteúdo, ou parte dele."
 
-msgid "manager.distribution.publishingMode.success"
-msgstr "Os detalhes da publicação foram atualizados."
-
 msgid "manager.website.archiving"
 msgstr "Arquivamento"
 
@@ -147,9 +144,6 @@ msgstr "Esta ação ativará pagamento para assinaturas, sendo responsabilidade 
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Deseja realmente apagar esta subscrição?"
-
-msgid "manager.payment.success"
-msgstr "As opções de pagamento foram atualizadas."
 
 msgid "manager.payment.options.enablePayments"
 msgstr "Clique aqui para habilitar o módulo de pagamentos. Em seguida, configure as opções de pagamento através do formulário disponível. Usuários deverão estar cadastrados e logados no sistema para realizar pagamentos."
@@ -397,9 +391,6 @@ msgstr "Pode-se incluir um cabeçalho em HTML, para substituir o padrão. Deixar
 msgid "manager.setup.announcements"
 msgstr "Notícias"
 
-msgid "manager.setup.announcements.success"
-msgstr "As configurações de anúncios foram atualizadas."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Introdução"
 
@@ -408,9 +399,6 @@ msgstr "Digite um texto introdutório, ou qualquer informação desejada, a ser 
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Para inclusão na página Sobre a Revista) "
-
-msgid "manager.setup.archiving.success"
-msgstr "Os detalhes de arquivamento deste periódico foram atualizados."
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Exigir dos autores o registro de conflito de interesses (CI) junto com a submissão."
@@ -423,9 +411,6 @@ msgstr "Histórico da revista"
 
 msgid "manager.setup.historyDescription"
 msgstr "Este texto aparecerá na seção \"Sobre\" da revista e pode ser usado para detalhar mudanças de título, corpo editorial e outros itens de relevância na história da publicação."
-
-msgid "manager.setup.contact.success"
-msgstr "Os detalhes de contato desta revista foram atualizados."
 
 msgid "manager.setup.currentIssue"
 msgstr "Edição Atual"
@@ -567,9 +552,6 @@ msgstr "Para Bibliotecários"
 msgid "manager.setup.information.forReaders"
 msgstr "Para Leitores"
 
-msgid "manager.setup.information.success"
-msgstr "As informações desta revista foram atualizadas."
-
 msgid "manager.setup.initialIssue"
 msgstr "Edição inicial"
 
@@ -672,9 +654,6 @@ msgstr "Forneça uma breve descrição do seu diário e identifique editores, di
 msgid "manager.setup.labelName"
 msgstr "Rótulo"
 
-msgid "manager.setup.lists.success"
-msgstr "As configurações da lista para este diário foram atualizadas."
-
 msgid "manager.setup.lists"
 msgstr "Listas"
 
@@ -757,9 +736,6 @@ msgstr "Configurações administrativas e de publicação"
 msgid "manager.setup.managingTheJournal"
 msgstr "Passo 4. Administração da revista"
 
-msgid "manager.setup.masthead.success"
-msgstr "Os detalhes do cabeçalho desta revista foram atualizados."
-
 msgid "manager.setup.navigationBar"
 msgstr "Barra de navegação"
 
@@ -807,9 +783,6 @@ msgstr "Foco, avaliação pelos pares, seções, privacidade, acesso, segurança
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN Impresso"
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "A declaração de privacidade foi atualizada."
 
 msgid "manager.setup.proofingInstructions"
 msgstr "Instruções para leitura de provas"
@@ -902,9 +875,6 @@ msgstr "Política de avaliação"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Indexação para mecanismos de busca"
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "As configurações de índice de mecanismo de pesquisa foram atualizadas."
-
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
 "Ajude os mecanismos de pesquisa como o Google a descobrir e exibir seu site. "
@@ -991,9 +961,6 @@ msgstr "Artigos e edições podem receber um código ou texto identificador, emp
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Um comitê editorial/avaliador será utilizado pela revista."
-
-msgid "manager.setup.userAccess.success"
-msgstr "Os detalhes de acesso do usuário para este diário foram atualizados."
 
 msgid "manager.setup.useThumbnail"
 msgstr "Miniatura"

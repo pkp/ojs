@@ -7,6 +7,8 @@
  *
  */
 
+import { getNewLibraryCopy } from "cypress/types/bluebird";
+
 describe('Data suite tests', function() {
 	it('Creates a context', function() {
 		cy.login('admin', 'admin');
@@ -52,7 +54,7 @@ describe('Data suite tests', function() {
 
 		cy.get('button[id="appearance-button"]').click();
 		cy.get('div[id=appearance]').find('button').contains('Save').click();
-		cy.contains('The theme has been updated.');
+		cy.get('#appearance [role="status"]').contains('Saved');
 
 		cy.get('button[id="languages-button"]').click();
 		cy.get('input[id^=select-cell-fr_CA-submissionLocale]').click();
@@ -71,7 +73,7 @@ describe('Data suite tests', function() {
 		cy.get('button[id="context-button"]').click();
 		cy.get('input[name="abbreviation-en_US"]').type('publicknowledge', {delay: 0});
 		cy.get('div[id=context]').find('button').contains('Save').click();
-		cy.contains('was edited successfully');
+		cy.get('#context [role="status"]').contains('Saved');
 	});
 
 	it('Tests context settings form', function() {
@@ -97,7 +99,7 @@ describe('Data suite tests', function() {
 		cy.get('input[name="printIssn"]').clear().type('0378-5955', {delay: 0});
 
 		cy.get('div[id=masthead]').find('button').contains('Save').click();
-		cy.contains('The masthead details for this journal have been updated.');
+		cy.get('#masthead [role="status"]').contains('Saved');
 	});
 
 	it('Tests contact settings form', function() {
@@ -130,6 +132,6 @@ describe('Data suite tests', function() {
 		cy.get('input[name=contactEmail').clear().type('rvaca@mailinator.com', {delay: 0});
 		cy.get('input[name=supportEmail').clear().type('rvaca@mailinator.com', {delay: 0});
 		cy.get('div[id=contact').find('button').contains('Save').click();
-		cy.contains('The contact details for this');
+		cy.get('#contact [role="status"]').contains('Saved');
 	});
 })
