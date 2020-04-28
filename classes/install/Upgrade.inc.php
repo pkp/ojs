@@ -232,7 +232,18 @@ class Upgrade extends Installer {
 					unset($agencies);
 				}
 
-				unset($settings);
+				// Localize the languages setting (which previously wasn't localized).
+				$languageResult = $submissionDao->retrieve('SELECT language FROM articles_migration WHERE article_id = ?', array((int)$articleId));
+				$languageRow = $languageResult->getRowAssoc(false);
+				$language = $languageRow['language'];
+				$languageResult->Close();
+				$languages = array();
+				foreach ($supportedLocales as &$locale) {
+					$languages[$locale] = preg_split('/[\s+;,]+/', $language);
+					$languages[$locale] = array_map('trim', $languages[$locale]);
+				}
+				$submissionLanguageDao->insertLanguages($languages, $articleId, false, ASSOC_TYPE_SUBMISSION);
+
 				$result->MoveNext();
 			}
 			$result->Close();
