@@ -182,7 +182,7 @@
 	<message key="submission.editorAuthorRecord">Editor/Author Email Record</message>
 	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
 	<message key="submission.postReviewVersion">Post-review version of file</message>
-	<message key="submission.editorVersion">Editor Version</message>
+	<message key="submission.editorVersion">Editor Version<br />(Note: only the latest file uploaded will be made available for reviewers; in case you have multiple files, please pack them as a single zip file.)</message>
 	<message key="submission.authorsRevisedVersion">Author's revised version of file</message>
 	<message key="submission.authorVersion">Author Version</message>
 	<message key="submission.copyediting">Copyediting</message>
