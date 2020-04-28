@@ -186,6 +186,7 @@ class MedraSettingsForm extends Form {
 			$countries[$country->getAlpha2()] = $country->getLocalName();
 		}
 		asort($countries);
+		return $countries;
 	}
 }
 
