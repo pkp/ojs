@@ -162,6 +162,14 @@ debug = Off
 web_cache = Off
 web_cache_hours = 1
 
+; Object cache driver (see https://www.stashphp.com/Drivers.html)
+; Uses Stash\Driver\Ephemeral by default.
+; object_cache_driver = Stash\Driver\Memcache
+
+; Some Stash object cache drivers require additional options. These can be
+; provided here in JSON format.
+; object_cache_options = {}
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Localization Settings ;
