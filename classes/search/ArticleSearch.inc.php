@@ -275,7 +275,7 @@ class ArticleSearch extends SubmissionSearch {
 				}
 
 				// Only display articles from published issues.
-				if (!$issueCache[$issueId]->getPublished()) continue;
+				if (!isset($issueCache[$issueId]) || !$issueCache[$issueId]->getPublished()) continue;
 
 				// Store the retrieved objects in the result array.
 				$returner[] = array(
