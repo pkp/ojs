@@ -24,7 +24,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 	 * @param $keywordId int
 	 * @return array of results (associative arrays)
 	 */
-	function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
+	public function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
 		import('lib.pkp.classes.db.DBRowIterator');
 		if (empty($phrase)) {
 			$results = false;
