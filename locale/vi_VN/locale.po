@@ -1,2 +1,624 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-05-01 00:25+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Biên tập viên bản thảo đã không được phân công bài gửi"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Biên tập viên bản thảo đã được phân công bài gửi"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Bài gửi đã được khôi phục từ lưu trữ"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Bài gửi đã được chuyển sang lưu trữ"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Tập tin của biên tập viên đã cập nhật"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Quyết định của Ban biên tập đã được gửi"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Bài gửi không được phân công cho biên tập viên"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Bài gửi đã được phân công cho biên tập viên"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Tập tin sửa chữa của tác giả đã được cập nhật"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Bản sửa chữa của tác giả đã được gửi"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Bài báo đã được xuất bản"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Bài gửi được xếp vào số"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Bài gửi đã được xếp vào chờ xuất bản"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Bài báo đã gửi"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Sự kiện của bài gửi"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Lưu ý:</strong> Thuê bao tổ chức mua trực tuyến yêu cầu phê duyệt "
+"phạm vi tên miền và IP trước khi thuê bao được kích hoạt."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Thuê bao tổ chức không yêu cầu đăng nhập. Tên miền và/hoặc địa chỉ IP của "
+"người dùng được sử dụng để cung cấp quyền truy cập vào nội dung thuê bao."
+
+msgid "subscriptions.individualDescription"
+msgstr "Các thuê bao cá nhân yêu cầu đăng nhập để truy cập nội dung thuê bao."
+
+msgid "subscriptions.status.other"
+msgstr "Khác, xem ghi chú"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Bạn không có đăng ký hoạt động."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Đang chờ thanh toán trực tuyến"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Đang chờ thanh toán thủ công"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Cần phê duyệt"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Cần thông tin"
+
+msgid "subscriptions.status.active"
+msgstr "Hoạt động"
+
+msgid "subscriptions.status"
+msgstr "Tình trạng"
+
+msgid "subscriptions.inactive"
+msgstr "Không hoạt động"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "In và trực tuyến"
+
+msgid "subscriptionTypes.format.print"
+msgstr "In"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Trực tuyến"
+
+msgid "subscriptionTypes.format"
+msgstr "Định dạng"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Không hết hạn"
+
+msgid "subscriptionTypes.month"
+msgstr "tháng"
+
+msgid "subscriptionTypes.years"
+msgstr "các năm"
+
+msgid "subscriptionTypes.year"
+msgstr "năm"
+
+msgid "subscriptionTypes.currency"
+msgstr "Tiền tệ"
+
+msgid "issue.return"
+msgstr "Trở lại chi tiết số"
+
+msgid "issue.viewIssue"
+msgstr "Xem số"
+
+msgid "issue.nonpdf.title"
+msgstr "Tải xuống số"
+
+msgid "issue.fullIssue"
+msgstr "Số đầy đủ"
+
+msgid "issue.coverPage.altText"
+msgstr "Trang bìa"
+
+msgid "issue.abstract"
+msgstr "Tóm tắt"
+
+msgid "issue.toc"
+msgstr "Mục lục"
+
+msgid "issue.noIssues"
+msgstr "Không có số nào"
+
+msgid "issue.year"
+msgstr "Năm"
+
+msgid "issue.no"
+msgstr "S."
+
+msgid "issue.vol"
+msgstr "T."
+
+msgid "issue.number"
+msgstr "Số"
+
+msgid "issue.volume"
+msgstr "Tập"
+
+msgid "issue.title"
+msgstr "Tiêu đề"
+
+msgid "issue.issues"
+msgstr "Các số"
+
+msgid "issue.issue"
+msgstr "Số"
+
+msgid "user.role.journalAssistants"
+msgstr "Các thư ký tạp chí"
+
+msgid "user.role.journalAssistant"
+msgstr "Thư ký tạp chí"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Các quản lý thuê bao"
+
+msgid "user.role.subEditors"
+msgstr "Các biên tập viên chuyên mục"
+
+msgid "user.role.managers"
+msgstr "Các quản lý tạp chí"
+
+msgid "user.role.subscriptionManager"
+msgstr "Quản lý thuê bao"
+
+msgid "user.role.subEditor"
+msgstr "Biên tập viên chuyên mục"
+
+msgid "user.role.manager"
+msgstr "Quản lý tạp chí"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Đăng ký làm Người phản biện: Đăng ký người phản biện hiện đang bị vô hiệu "
+"hóa."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Đăng ký làm một Người phản biện"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Gửi một bài báo: Đăng ký tác giả hiện đang bị vô hiệu hóa."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Gửi một đề xuất"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Tài khoản của bạn hiện không có bất kỳ vai trò nào cho tạp chí này. Vui lòng "
+"chọn từ các hành động dưới đây:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Tài khoản của bạn hiện không được liên kết với bất kỳ tạp chí nào. Vui lòng "
+"chọn một tạp chí:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Quản lý thuê bao của tôi"
+
+msgid "user.myJournals"
+msgstr "Các tạp chí của tôi"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Nếu bạn yêu cầu trở thành người phản biện trên bất kỳ tạp chí nào, vui lòng "
+"nhập hướng nghiên cứu mà bạn quan tâm."
+
+msgid "user.register.otherContextRoles"
+msgstr "Yêu cầu các vai trò sau."
+
+msgid "user.register.contextsPrompt"
+msgstr "Những tạp chí trên trang web này bạn muốn đăng ký?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Có, tôi muốn được liên hệ với các yêu cầu để làm phản biện cho tạp chí này."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Có, yêu cầu vai trò {$userGroup}."
+
+msgid "user.reviewerPrompt"
+msgstr "Bạn có sẵn sàng để làm phản biện cho tạp chí này?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Đăng ký tạp chí khác"
+
+msgid "user.showAllJournals"
+msgstr "Hiển thị tạp chí của tôi"
+
+msgid "user.profile.profileImage"
+msgstr "Ảnh hồ sơ"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Bao gồm người dùng không có vai trò trong tạp chí này."
+
+msgid "journal.viewAllIssues"
+msgstr "Xem tất cả các số"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Tạp chí"
+
+msgid "journal.path"
+msgstr "Phần"
+
+msgid "context.contexts"
+msgstr "Các tạp chí"
+
+msgid "journal.currentIssue"
+msgstr "Số hiện tại"
+
+msgid "submission.search"
+msgstr "Tìm kiếm bài báo"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Đã hiệu đính"
+
+msgid "submissions.layoutComplete"
+msgstr "Đã trình bày"
+
+msgid "submissions.copyeditComplete"
+msgstr "Đã biên tập"
+
+msgid "submission.eventLog"
+msgstr "Nhật ký sự kiện"
+
+msgid "submissions.editorRuling"
+msgstr "Biên tập viên quản trị"
+
+msgid "submissions.editorDecision"
+msgstr "Quyết định của Ban biên tập"
+
+msgid "submissions.proof"
+msgstr "Bản in thử"
+
+msgid "submissions.reviewRound"
+msgstr "Vòng đánh giá"
+
+msgid "submissions.postAuthor"
+msgstr "Post-Author"
+
+msgid "submissions.initialProof"
+msgstr "Bản in thử ban đầu"
+
+msgid "submissions.proofread"
+msgstr "Đọc hiệu đính"
+
+msgid "submissions.initial"
+msgstr "Ban đầu"
+
+msgid "submissions.published"
+msgstr "Đã xuất bản"
+
+msgid "submissions.queuedReview"
+msgstr "Phản biện"
+
+msgid "submissions.step3"
+msgstr "Bước 3"
+
+msgid "submissions.step1"
+msgstr "Bước 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submission.scheduledIn"
+msgstr "Đã lên lịch xuất bản trong {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Lên lịch"
+
+msgid "submission.proofreading"
+msgstr "Đọc hiệu đính"
+
+msgid "submission.copyedit"
+msgstr "biên tập"
+
+msgid "submission.copyediting"
+msgstr "Biên tập"
+
+msgid "submission.authorVersion"
+msgstr "Phiên bản của tác giả"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Phiên bản sửa chữa của tác giả của tập tin"
+
+msgid "submission.editorVersion"
+msgstr "Phiên bản cho biên tập viên"
+
+msgid "submission.postReviewVersion"
+msgstr "Phiên bản sau rà soát của tập tin"
+
+msgid "submission.reviewersVersion"
+msgstr "Phiên bản chú thích của người phản người của tập tin"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Bản ghi Email của Biên tập viên/Tác giả"
+
+msgid "submission.notifyEditor"
+msgstr "Thông báo cho Biên tập viên"
+
+msgid "submission.notifyAuthor"
+msgstr "Thông báo cho tác giả"
+
+msgid "submission.editorReview"
+msgstr "Đánh giá của Biên tập viên"
+
+msgid "submission.round"
+msgstr "Vòng&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Quyết định của ban biên tập"
+
+msgid "submission.sent"
+msgstr "Đã gửi"
+
+msgid "submission.changeSection"
+msgstr "Thay đổi thành"
+
+msgid "submission.submissionEditing"
+msgstr "Chỉnh sửa bài nộp"
+
+msgid "article.return"
+msgstr "Quay trở lại chi tiết bài báo"
+
+msgid "article.fontSize.large.altText"
+msgstr "Lớn"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Trung bình"
+
+msgid "article.fontSize.small.altText"
+msgstr "Nhỏ"
+
+msgid "article.fontSize"
+msgstr "Cỡ chữ"
+
+msgid "article.comments.enable"
+msgstr "Kích hoạt"
+
+msgid "article.comments.disable"
+msgstr "Vô hiệu hóa"
+
+msgid "article.comments.sectionDefault"
+msgstr "Mặc định"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Giới hạn truy cập"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Truy cập mở"
+
+msgid "article.coverPage.altText"
+msgstr "Ảnh đại diện"
+
+msgid "article.abstract"
+msgstr "Tóm tắt"
+
+msgid "article.details"
+msgstr "Chi tiết"
+
+msgid "article.submissions"
+msgstr "Các bài gửi"
+
+msgid "article.submission"
+msgstr "Bài gửi"
+
+msgid "article.commentsToEditor"
+msgstr "Ý kiến tác giả"
+
+msgid "article.type"
+msgstr "Loại, phương pháp hoặc cách tiếp cận"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Ngôn ngữ"
+
+msgid "article.coverage"
+msgstr "Hỗ trợ"
+
+msgid "article.discipline"
+msgstr "Ngành và các phân ngành học thuật"
+
+msgid "common.queue.short.completed"
+msgstr "Lưu trữ"
+
+msgid "article.subject"
+msgstr "Từ khóa"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Tập tin BS"
+
+msgid "article.suppFiles"
+msgstr "(Các) Tập tin bổ sung"
+
+msgid "article.suppFile"
+msgstr "Tập tin bổ sung"
+
+msgid "article.file"
+msgstr "Tập tin"
+
+msgid "article.journalSection"
+msgstr "Chuyên mục của tạp chí"
+
+msgid "article.metadata"
+msgstr "Siêu dữ liệu"
+
+msgid "article.indexingInformation"
+msgstr "Thông tin chỉ mục"
+
+msgid "article.authors"
+msgstr "Các tác giả"
+
+msgid "article.title"
+msgstr "Tiêu đề"
+
+msgid "article.submissionId"
+msgstr "ID bài gửi"
+
+msgid "common.publications"
+msgstr "Các bài báo"
+
+msgid "common.publication"
+msgstr "Bài báo"
+
+msgid "article.articles"
+msgstr "Các bài báo"
+
+msgid "article.article"
+msgstr "Bài báo"
+
+msgid "section.policy"
+msgstr "Chính sách của chuyên mục"
+
+msgid "section.abbreviation.example"
+msgstr "(Ví dụ: Bài báo=ART)"
+
+msgid "section.abbreviation"
+msgstr "Viết tắt"
+
+msgid "section.title"
+msgstr "Tiêu đề chuyên mục"
+
+msgid "section.sections"
+msgstr "Các chuyên mục"
+
+msgid "section.section"
+msgstr "Chuyên mục"
+
+msgid "common.queue.long.completed"
+msgstr "Lưu trữ"
+
+msgid "common.queue.short.active"
+msgstr "Hoạt động"
+
+msgid "common.queue.long.active"
+msgstr "Hoạt động"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Lưu trữ"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Lưu trữ"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Phản biện"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Các bài gửi trong mục Phản biện"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Biên tập"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Các bài gửi trong mục Biên tập"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Chưa phân công"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Chưa phân công"
+
+msgid "navigation.skip.issue"
+msgstr "Bỏ qua số hiện tại"
+
+msgid "navigation.skip.about"
+msgstr "Bỏ qua về tạp chí"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Thông tin cho Thủ thư"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Thông tin cho Tác giả"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Nguyên tắc lợi ích cạnh tranh"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Dành cho Thủ thư"
+
+msgid "navigation.infoForAuthors"
+msgstr "Dành cho Tác giả"
+
+msgid "navigation.browseByAuthor"
+msgstr "Bởi Tác giả"
+
+msgid "navigation.browseByIssue"
+msgstr "Bởi số"
+
+msgid "navigation.otherJournals"
+msgstr "Các tạp chí khác"
+
+msgid "navigation.current"
+msgstr "Số hiện tại"
+
+msgid "navigation.journalHelp"
+msgstr "Trợ giúp của tạp chí"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Hình ảnh trang chủ tạp chí"
+
+msgid "common.homePageHeader.altText"
+msgstr "Phần đầu trang chủ"
+
+msgid "common.payments"
+msgstr "Thanh toán"
+
+msgid "common.payment"
+msgstr "Thanh toán"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Bạn có chắc chắn muốn đánh dấu nhiệm vụ này là hoàn thành? Bạn không thể "
+"thay đổi sau đó."
+
+msgid "common.software"
+msgstr "Hệ thống tạp chí mở"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vui lòng điền vào các trường bắt buộc."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Nhấn vào biểu tượng để điền vào phiếu đánh giá."
+
+msgid "navigation.categories.browse"
+msgstr "Duyệt"
+
+msgid "navigation.categories"
+msgstr "Thể loại"
+
+msgid "context.select"
+msgstr "Chuyển sang một tạp chí khác:"
+
+msgid "context.current"
+msgstr "Tạp chí hiện tại:"
