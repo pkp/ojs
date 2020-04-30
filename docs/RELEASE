@@ -1,14 +1,42 @@
-OJS 3.2.0-2 Release Notes
-Git tag: 3_2_0-2
+OJS 3.2.0-3 Release Notes
+Git tag: 3_2_0-3
 
-Release date: April 9, 2020
+Release date: April 30, 2020
 ===========================
+
+Bug Fixes (-3 build)
+--------------------
+	#5588: Author list: author name is empty if not included in submission's metadata
+	#5753: Submission checklist "edit" link leads to 404
+	#5407: Use v-cloak to hide unstyled content flash before Vue kicks in
+	#5712: [OPS] Number of Active queue doesn't match actual queue
+	#5769: Fatal error when generating custom report
+	#5795: Duplicate key value violates unique constraint in citations on upgrade with PostgreSQL
+	#5762: Error when viewing a PDF issue galley
+	#5793: SearchHandler::authors() can encounter fatal error with unpublished publications
+	#5786: [OPS] "Comments to the Moderator" not showing to Moderators
+	#5778: Homepage image alt text doesn't show up
+	#5787: OJS 2.x to 3.2.0 (prior to 3.2.0-3) migration scrambles keyword, discipline, supporting agency, subject article metadata
+	#2689: Changing date formats in config.inc.php can lead to misparsed dates
+	#5760: [pkp-lib] #2689 Respect date formats when editing reviewer form
+	#5690: Error saving in management/settings/website
+	#5776: Sort country lists by country name, not code
+	#5683: Fatal error in RecommendByAuthor plugin
+	#5763: Driver settings of postgres, postgres6, and postgres9 result in missed upgrade steps
+	#5761: citationStyleLanguage refers to nonexistent Request::handle404
+	#5741: PostgreSQL "operator does not exist"
+	#5735: Resolve SQL errors with picky PostgreSQL servers
+	#5734: Component URL camelize/uncamelize functions do not use codesafe uc/lc functions
+	#5725: Notification query getByUserId often run with no indexes used
+	#5732 #5749: Cannot delete Journal sections
+	#5731: Autoloader does not use codesafe upper/lower functions
+	#5718: Supporting Agencies field does not appear in submission process
 
 Bug Fixes (-2 build)
 --------------------
 	#5675: Resolve various import/export issues
-	#5685: Fatal error in usageStats plugin calling for PublishedMonograph Bug
-	#5663: Can't upload cover image in Quick Submit with v3.2 Bug
+	#5685: Fatal error in usageStats plugin calling for PublishedMonograph
+	#5663: Can't upload cover image in Quick Submit with v3.2
 	#5710: Escape journal title field on display
 	#5701: Upgrade error using PostgreSQL in createLicenseTerms
 	#5636: Handler adjustments for new versions
@@ -16,18 +44,18 @@ Bug Fixes (-2 build)
 	#5688: Upgrade fails from OJS 2.x with remote galleys
 	#5689: Make failures in provideSupplementaryFilesForReview more friendly
 	#5657: MEDRA export plugin: Wrong link in XML tag <DOIWebsiteLink> for issues
-	#5680: PHP Fatal error in WebFeedPlugin Bug
-	#5643: Error in journal settings form when locale active in Form but not UI Bug
+	#5680: PHP Fatal error in WebFeedPlugin
+	#5643: Error in journal settings form when locale active in Form but not UI
 	#5682: DOAJ XML exports fail to validate
 	#5681: CrossRef exports are empty after upgrade
 	#4474: Review method fallback should be double blind instead of blind
 	#5666: Edit User, the password may not blank ??
 	#5671: Installing all locales leads to an error message
 	#5674: Fatal error in user import/export plugin
-	#5573: OJS 3.2.0 - OAI ListRecords causes PHP Fatal Error Bug
-	#5438: Submission sequence no longer appears to be supported Critical Issue
-	#5659: Save button disabled after unpublishing a version Bug
-	#5661: In some cases discussions grid not loading for reviewers, 3.2 master Critical Issue
+	#5573: OJS 3.2.0 - OAI ListRecords causes PHP Fatal Error
+	#5438: Submission sequence no longer appears to be supported
+	#5659: Save button disabled after unpublishing a version
+	#5661: In some cases discussions grid not loading for reviewers
 
 Bug Fixes (-1 build)
 --------------------
