@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"PO-Revision-Date: 2020-05-01 00:25+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/vi_VN/>\n"
@@ -13,3 +13,104 @@ msgstr ""
 
 msgid "plugins.importexport.native.displayName"
 msgstr "Plugin XML gốc"
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"Bài báo \"{$articleTitle}\" được chứa trong một số, nhưng không có ngày xuất "
+"bản."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "Phần tử nhận dạng số bị thiếu cho bài báo \"{$articleTitle}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"số hiện tại với id {$issueId} phù hợp với nhận dạng số đã cho \""
+"{$issueIdentification}\".  Số này sẽ không được sửa đổi, nhưng bài báo sẽ "
+"được thêm vào."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"Không có hoặc nhiều hơn một số khớp với nhận dạng số đã cho \""
+"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"Viết tắt của chuyên mục \"{$sectionAbbrev}\" trong số \"{$issueTitle}\"phù "
+"hợp với các chuyên mục hiện có, nhưng một viết tắt khác của chuyên mục này "
+"không khớp với viết tắt của các chuyên mục tạp chí hiện có."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"Viết tắt của chuyên mục \"{$section1Abbrev}\" và viết tắt của chuyên mục \""
+"{$section2Abbrev}\" của số \"{$issueTitle}\" phù hợp với sự  khác nhau với "
+"các chuyên mục tạp chí hiện có."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+"Tiêu đề của chuyên mục \"{$sectionTitle}\" trong số \"{$issueTitle}\" phù "
+"hợp với các chuyên mục hiện có, nhưng một tiêu đề khác của chuyên mục này "
+"không khớp với tiêu đề khác của các chuyên mục tạp chí hiện có."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr ""
+"Tiêu đề của chuyên mục \"{$section1Title}\" và tiêu đề của chuyên mục \""
+"{$section2Title}\" trong số \"{$issueTitle}\" phù hợp với sự  khác nhau với "
+"các chuyên mục tạp chí hiện có."
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Người dùng được chỉ định, \"{$userName}\", không tồn tại."
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Chuyên mục không xác định {$param}"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Usage: {$scriptName} {$pluginName} [command] ...\n"
+"Các lệnh:\n"
+"\tnhập [xmlFileName] [journal_path] [user_name] ...\n"
+"\txuất [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...\n"
+"\txuất [xmlFileName] [journal_path] article [articleId]\n"
+"\txuất [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
+"\txuất [xmlFileName] [journal_path] issue [issueId]\n"
+"\n"
+"Các tham số bổ sung được yêu cầu để nhập dữ liệu như sau, tùy thuộc\n"
+"vào nút gốc của tài liệu XML.\n"
+"\n"
+"Nếu nút gốc là <article> hoặc <articles>, tham số bổ sung được yêu cầu.\n"
+"Các định dạng sau được chấp nhận:\n"
+"\n"
+"{$scriptName} {$pluginName} nhập [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} nhập [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} nhập [xmlFileName] [journal_path]\n"
+"\tissue_id [issueId] section_abbrev [abbrev]\n"
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "Việc nhập thành công. Các mặt mục sau đây đã được nhập:"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Vui lòng tải lên một tập tin trong \"Nhập\" để tiếp tục."
+
+msgid "plugins.importexport.native.results"
+msgstr "Kết quả"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Xuất các số"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Xuất các bài báo"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Chọn bài báo để xuất"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Tải lên tệp XML để nhập"
+
+msgid "plugins.importexport.native.import"
+msgstr "Nhập"
+
+msgid "plugins.importexport.native.description"
+msgstr "Nhập và xuất các bài báo và các số theo định dạng XML gốc của OJS."
