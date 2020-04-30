@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"PO-Revision-Date: 2020-04-30 14:45+0000\n"
 "Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
 "Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/locale/hi/>\n"
 "Language: hi_IN\n"
@@ -1619,3 +1619,38 @@ msgstr "जर्नल्स"
 
 msgid "submission.search"
 msgstr "लेख खोज"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "जोड़ना"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "हटाएं"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "कृपया एक मान्य IP श्रेणी दर्ज करें।"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"यदि आईपी रेंज यहां दर्ज की जाती है, तो डोमेन वैकल्पिक है। <br /> मान्य मानों "
+"में एक आईपी पता (जैसे 142.58.103.1), आईपी रेंज (जैसे 142.58.103.1 - "
+"142.58.103.4), वाइल्डकार्ड के साथ आईपी रेंज शामिल है * '( उदा। 142.58। *। *)"
+", और सीआईडीआर के साथ एक आईपी रेंज (जैसे 142.58.100.0/24)।"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "आईपी रेंज"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "कृपया एक मान्य डोमेन दर्ज करें।"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"चयनित सदस्यता प्रकार को सदस्यता प्रमाणीकरण के लिए एक डोमेन और / या एक आईपी "
+"रेंज की आवश्यकता होती है।"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"यदि एक डोमेन यहां दर्ज किया गया है, तो आईपी रेंज वैकल्पिक हैं। <br /> वैध मा"
+"न डोमेन नाम हैं (उदा। Lib.sfu.ca)।"
