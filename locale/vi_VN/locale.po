@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-01 07:37+0000\n"
+"PO-Revision-Date: 2020-05-02 02:10+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
@@ -625,3 +625,203 @@ msgstr "Tạp chí hiện tại:"
 
 msgid "subscriptionTypes.months"
 msgstr "theo tháng"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Đề xuất thông báo Bản quyền Creative Commons</h3>\n"
+"<h4>1. Chính sách đề xuất cho các tạp chí cung cấp quyền truy cập mở</h4>\n"
+"Các tác giả xuất bản với tạp chí này đồng ý với các điều khoản sau:\n"
+"<ol type=\"a\">\n"
+"\t<li>Các tác giả giữ bản quyền và cấp cho tạp chí quyền xuất bản đầu tiên "
+"với bài báo được cấp phép đồng thời theo <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Giấy phép cấp cho Creative "
+"Commons</a> cho phép người khác chia sẻ bài báo với sự thừa nhận về quyền "
+"tác giả và ấn phẩm ban đầu của bài báo trên tạp chí này.</li>\n"
+"\t<li>Các tác giả có thể tham gia vào các thỏa thuận hợp đồng bổ sung riêng "
+"cho việc phân phối không độc quyền phiên bản bài báo đã xuất bản của tạp chí "
+"(ví dụ: đăng nó lên kho lưu trữ của tổ chức hoặc xuất bản trong sách), với "
+"sự thừa nhận về ấn phẩm ban đầu của nó tạp chí này</li>\n"
+"\t<li>Các tác giả được phép và khuyến khích đăng tác phẩm của họ trực tuyến ("
+"ví dụ: trong kho lưu trữ của tổ chức hoặc trên trang web của họ) trước và "
+"trong quá trình gửi, vì nó có thể dẫn đến trao đổi năng suất cao, cũng như "
+"trích dẫn sớm hơn và lớn hơn của bài báo được xuất bản (Xem <a target=\""
+"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">Hiuej quả "
+"của truy cập mở</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Chính sách đề xuất cho các tạp chí cung cấp quyền truy cập mở bị trì "
+"hoãn</h4>\n"
+"Các tác giả xuất bản với tạp chí này đồng ý với các điều khoản sau đây:\n"
+"<ol type=\"a\">\n"
+"\t<li>Các tác giả giữ bản quyền và cấp cho tạp chí quyền xuất bản đầu tiên, "
+"với bài báo [SPECIFY PERIOD OF TIME] sau khi xuất bản đồng thời được cấp "
+"phép theo <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3."
+"0/\">Creative Commons Attribution License</a> cho phép người khác chia sẻ "
+"bài báo với sự thừa nhận về quyền tác giả và ấn phẩm ban đầu của bài báo "
+"trên tạp chí này.</li>\n"
+"\t <li>Các tác giả có thể tham gia vào các thỏa thuận hợp đồng bổ sung riêng "
+"cho việc phân phối không độc quyền phiên bản của bài báo đã xuất bản của tạp "
+"chí (ví dụ: đăng nó lên kho lưu trữ của tổ chức hoặc xuất bản trong sách), "
+"với sự thừa nhận về ấn phẩm ban đầu của nó tạp chí này</li>\n"
+"\t <li>Các tác giả được phép và khuyến khích đăng bài báo của họ trực tuyến ("
+"ví dụ: trong kho lưu trữ của tổ chức hoặc trên trang web của họ) trước và "
+"trong quá trình gửi, vì nó có thể dẫn đến trao đổi năng suất cao, cũng như "
+"trích dẫn sớm hơn và lớn hơn của tác phẩm được xuất bản (Xem <a target=\""
+"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect "
+"of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Các plugin chung được sử dụng để mở rộng Hệ thống Tạp chí Mở theo nhiều cách "
+"không được các loại plugin khác hỗ trợ."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Plugin ủy quyền cho phép Open Journal Systems ủy quyền các tác vụ xác thực "
+"người dùng cho các hệ thống khác, chẳng hạn như máy chủ LDAP."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Plugin bản in bài báo thêm hỗ trợ để hiển thị các loại tài liệu khác nhau "
+"như là các bản in bài báo."
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Plugin bản in bài báo"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Kiểu thuê bao"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Thuê bao tổ chức"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Thuê bao cá nhân"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Quản lý thuê bao"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOTE!</h4>\n"
+"<p>Hệ thống không thể tự động ghi đè tập tin cấu hình. Để áp dụng thay đổi "
+"cấu hình của bạn, bạn phải mở <tt>config.inc.php</tt> trong một trình soạn "
+"thảo văn bản phù hợp và thay thế nội dung của nó bằng nội dung của trường "
+"văn bản bên dưới.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Chỉ định nguồn xác thực mặc định khác với OJS có các hiệu ứng sau:</p>\n"
+"<ul>\n"
+"\t<li>Nếu người dùng cố gắng đăng ký tài khoản mới với trang web này với tên "
+"người dùng tồn tại trên nguồn xác thực (nhưng không phải trong cơ sở dữ liệu "
+"OJS), nỗ lực đăng ký chỉ được phép nếu mật khẩu được cung cấp hợp lệ cho tài "
+"khoản người dùng đó.</li>\n"
+"</ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "tài liệu tương tự"
+
+msgid "search.results.orderDir.desc"
+msgstr "Giảm dần"
+
+msgid "search.results.orderDir.asc"
+msgstr "Tăng dần"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Sự liên quan"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Mức độ phổ biến (Tháng trước)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Mức độ phổ biến (Mọi lúc)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Tiêu đề tạp chí"
+
+msgid "search.results.orderBy.issue"
+msgstr "Số"
+
+msgid "search.results.orderBy.date"
+msgstr "Ngày xuất bản"
+
+msgid "search.results.orderBy.author"
+msgstr "Tác giả"
+
+msgid "search.results.orderBy.article"
+msgstr "Tiều đề bài báo"
+
+msgid "search.results.orderBy"
+msgstr "Kết quả sắp xếp theo"
+
+msgid "comments.authenticated"
+msgstr "bởi <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "Bình luận về bài báo này"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Yêu cầu đăng ký thuê bao hoặc miễn phí"
+
+msgid "reader.subscriptionAccess"
+msgstr "Yêu cầu đăng ký thuê bao"
+
+msgid "reader.openAccess"
+msgstr "Truy cập mở"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Yêu cầu đăng ký thuê bao để truy cập mục. Để xác minh thuê bao, đăng nhập "
+"vào tạp chí."
+
+msgid "reader.subscribersOnly"
+msgstr "Chỉ những thuê bao"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Biên tập trình bày được phân công đã hoàn thành"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Bản in đã được cập nhật"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Biên tập trình bày bắt đầu"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Biên tập viên trình bày đã được ngừng phân công"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Biên tập viên trình bày đã được phân"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Hiệu đính được phân công đã hoàn thành"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Bản sửa hiệu đính đã được cập nhật"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Hiệu đính đã bắt đầu"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Người hiệu đính được ngừng phân công"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Người hiệu đính đã được phân công"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Tập tin bản thảo biên tập đã được cập nhật"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Biên tập bản thảo cuối cùng đã được hoàn thành"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Biên tập bản thảo ban đầu đã được hoàn thành"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Bản sửa của biên tập viên bản thảo đã được cập nhật"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Biên tập viên bản thảo được bắt đầu phân công"
