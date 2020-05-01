@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-04-21 19:47+0000\n"
-"Last-Translator: Sönmez Çelik <snmzclk@gmail.com>\n"
+"PO-Revision-Date: 2020-04-29 19:12+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
 "\n"
 "Language: tr_TR\n"
@@ -41,7 +41,6 @@ msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr ""
 "İşlem, bu dil için yapmış olduğunuz dile özgü dergi ayarlarını değiştirecek"
 
-#, fuzzy
 msgid "manager.languages.languageInstructions"
 msgstr ""
 "ADS desteklenen dillerden herhangi biriyle kullanılabilir. ADS çok dilli bir "
@@ -217,7 +216,6 @@ msgstr "Mevcut Bir Kullanıcıyı Kaydet"
 msgid "manager.people.enrollSyncJournal"
 msgstr "Dergi ile"
 
-#, fuzzy
 msgid "manager.people.mergeUsers.from.description"
 msgstr ""
 "Başka bir kullanıcı hesabıyla birleştirmek için bir kullanıcı (veya "
@@ -225,7 +223,6 @@ msgstr ""
 "seçilen kullanıcı(lar) silinecek ve gönderiler, atamalar vb. özellikler "
 "ikinci seçilen kullanıcı hesabına aktarılacaktır."
 
-#, fuzzy
 msgid "manager.people.mergeUsers.into.description"
 msgstr ""
 "Önceki kullanıcının yazarlıkları, editörlük atamaları vb. özelliklerin "
@@ -234,7 +231,6 @@ msgstr ""
 msgid "manager.people.roleEnrollment"
 msgstr "{$role} Kayıt"
 
-#, fuzzy
 msgid "manager.people.syncUserDescription"
 msgstr ""
 "Eşzamanlı kayıt belirli dergide belirli rol şeklinde kaydolmuş tüm "
@@ -253,7 +249,6 @@ msgstr "Bu bölümü kalıcı olarak silmek istediğinizden emin misiniz?"
 msgid "manager.sections.create"
 msgstr "Bölüm Oluştur"
 
-#, fuzzy
 msgid "manager.section.sectionEditorInstructions"
 msgstr ""
 "Bölüm editörlerinin gönderilere otomatik olarak atanması için bu bölüme bir "
@@ -273,7 +268,6 @@ msgstr "Bölüm Editörleri"
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Bölüm için kısaltılmış bir başlık zorunludur"
 
-#, fuzzy
 msgid "manager.sections.form.mustAllowPermission"
 msgstr ""
 "Her bir Bölüm Editörü atamasının işaretlenmesi için en az bir işaret kutusu "
@@ -291,9 +285,8 @@ msgstr "Bu bölümde, sayının içindekiler tablosundan yazar isimlerini göste
 msgid "manager.sections.hideTocTitle"
 msgstr "Bu bölümün başlığını sayının içindekiler tablosunda gösterme."
 
-#, fuzzy
 msgid "manager.sections.identifyType"
-msgstr "Bu bölümde yayınlanan öğelerin belirlenmesinde kullanılacak tanım:"
+msgstr "Bu bölümde yayınlanan ögelerin belirlenmesinde kullanılacak tanım"
 
 msgid "manager.sections.identifyTypeExamples"
 msgstr ""
@@ -306,9 +299,8 @@ msgstr "Dizinlenmiş"
 msgid "manager.sections.noneCreated"
 msgstr "Herhangi bir bölüm oluşturulmadı."
 
-#, fuzzy
 msgid "manager.sections.open"
-msgstr "Açık Başvurular"
+msgstr "Başvuru Açık"
 
 msgid "manager.sections.policy"
 msgstr "Bölüm Politikası"
@@ -350,10 +342,10 @@ msgid "manager.setup.addChecklistItem"
 msgstr "Kontrol Listesi Öğesi Ekle"
 
 msgid "manager.setup.addItem"
-msgstr "Öğe Ekle"
+msgstr "Öge Ekle"
 
 msgid "manager.setup.addItemtoAboutJournal"
-msgstr "\"Dergi Hakkında\" Sayfasında Görüntülenecek Öğe Ekle"
+msgstr "\"Dergi Hakkında\" Sayfasında Görüntülenecek Öge Ekle"
 
 msgid "manager.setup.addNavItem"
 msgstr "Öğe Ekle"
@@ -367,11 +359,10 @@ msgstr "Sponsor Kurum Ekle"
 msgid "manager.setup.alternateHeader"
 msgstr "Alternatif Başlık"
 
-#, fuzzy
 msgid "manager.setup.alternateHeaderDescription"
 msgstr ""
 "Alternatif olarak, başlık ve logo yerine, başlık HTML biçiminde hazırlanarak "
-"bu alana eklenebilir, gerekli değil ise bu alanı boş bırakınız."
+"bu alana eklenebilir. Gerekli değilse bu alanı boş bırakınız."
 
 msgid "manager.setup.announcements"
 msgstr "Duyurular"
@@ -398,7 +389,6 @@ msgstr ""
 msgid "manager.setup.history"
 msgstr "Dergi Geçmişi"
 
-#, fuzzy
 msgid "manager.setup.historyDescription"
 msgstr ""
 "Buraya yazılan metin dergi web sayfasının \"Hakkında\" kısmında "
@@ -434,7 +424,6 @@ msgstr "Dergi Yöneticisi tüm kullanıcıları, editörler veya bölüm editör
 msgid "manager.setup.discipline"
 msgstr "Akademik Disiplinler ve Alt Disiplinler"
 
-#, fuzzy
 msgid "manager.setup.disciplineDescription"
 msgstr ""
 "Eğer dergi akademik alanların bir kaçını kapsıyor veya yazarlar "
@@ -458,14 +447,12 @@ msgstr "Yanıt vermeyen e-posta adresi"
 msgid "manager.setup.emailBounceAddress.description"
 msgstr "Teslim edilemeyen e-postalar bu adrese bir hata mesajı olarak gönderir."
 
-#, fuzzy
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
 "<strong>Not:</strong> Bu seçeneği etkinleştirmek için ADS konfigürasyon "
-"dosyasında <tt>allow_envelope_sender</tt> seçeneği etkin olmalıdır. Bu "
+"dosyasında <code>allow_envelope_sender</code> seçeneği etkin olmalıdır. Bu "
 "işlevin kullanılabilmesi için sunucu (tüm sunucularda çalışmayabilir) "
-"ayarlarında da değişiklik yapılması gerekir. Daha fazla bilgi için ADS "
-"belgelerine bakınız."
+"ayarlarında da değişiklik yapılması gerekir."
 
 msgid "manager.setup.emails"
 msgstr "E-posta Tanımlama"
@@ -488,7 +475,6 @@ msgstr "Odak ve kapsam"
 msgid "manager.setup.forAuthorsToIndexTheirWork"
 msgstr "Çalışmalarını Dizinlemek İsteyen Yazarlar için"
 
-#, fuzzy
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
 msgstr ""
 "Açık Dergi Sistemleri, dünya çapında elektronik araştırma kaynaklarına "
@@ -537,7 +523,6 @@ msgstr "Adım 3: Gönderi Rehberi"
 msgid "manager.setup.information"
 msgstr "Bilgi"
 
-#, fuzzy
 msgid "manager.setup.information.description"
 msgstr ""
 "Kütüphaneciler, potansiyel yazarlar ve okuyucular için derginin kısa "
@@ -555,7 +540,6 @@ msgstr "Okuyucular İçin"
 msgid "manager.setup.initialIssue"
 msgstr "İlk sayı"
 
-#, fuzzy
 msgid "manager.setup.initialIssueDescription"
 msgstr ""
 "Seçilen biçime uygun olarak ADS ile yayınlanacak ilk sayının, sayı, cilt, "
@@ -564,7 +548,6 @@ msgstr ""
 msgid "manager.setup.institution"
 msgstr "Kurum"
 
-#, fuzzy
 msgid "manager.setup.itemsDescription"
 msgstr ""
 "Sayfa üstünde oluşan Yönlendirme çubuğuna başka maddeler eklenebilir (Giriş "
@@ -582,7 +565,6 @@ msgstr "Dergi Arşivleme"
 msgid "manager.setup.journalHomepageContent"
 msgstr "Dergi Anasayfa İçeriği"
 
-#, fuzzy
 msgid "manager.setup.journalHomepageContentDescription"
 msgstr ""
 "Giriş sayfası var sayılan yönlendirme bağlantılarından oluşur. Aşağıdaki "
@@ -596,7 +578,6 @@ msgstr "Dergi Ana Sayfa Başlığı"
 msgid "manager.setup.journalHomepageHeader.altText"
 msgstr "Dergi Ana Sayfa Başlığı"
 
-#, fuzzy
 msgid "manager.setup.journalHomepageHeaderDescription"
 msgstr ""
 "Dergi başlığının grafik bir biçimi (Örneğin: jpg, png veya gif) ve dergi "
@@ -609,7 +590,6 @@ msgstr "Dergi baş harfleri"
 msgid "manager.setup.journalLayout"
 msgstr "Dergi Arayüzü"
 
-#, fuzzy
 msgid "manager.setup.journalLayoutDescription"
 msgstr ""
 "Bir dergi teması seçiniz ve düzen parçalarını yerleştiriniz. Bir dergi "
@@ -625,7 +605,6 @@ msgstr "Dergi Logosu"
 msgid "manager.setup.journalPageFooter"
 msgstr "Dergi Sayfa Altlığı"
 
-#, fuzzy
 msgid "manager.setup.journalPageFooterDescription"
 msgstr ""
 "Dergi Sayfalarının alt bölümünde görülemesini istediğiniz bağlantıları HTML "
@@ -653,15 +632,13 @@ msgstr "Etiket adı"
 msgid "manager.setup.lists"
 msgstr "Listeler"
 
-#, fuzzy
 msgid "manager.setup.lockssEnable"
 msgstr ""
 "LOCKSS aracılığı ile katılımcı kütüphanelerde dergi içeriğini depolamak, "
 "dağıtmak ve <a href=\"{$lockssUrl}\" target=\"_blank\">Yayıncı "
 "Manifestosu</a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS "
-"lisansı \"Dergi Hakkında\" sayfasında görünecektir:"
+"lisansı \"Dergi Hakkında\" sayfasında görünecektir."
 
-#, fuzzy
 msgid "manager.setup.lockssRegister"
 msgstr ""
 "Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, "
@@ -676,7 +653,6 @@ msgstr ""
 msgid "manager.setup.look"
 msgstr "Görünüm"
 
-#, fuzzy
 msgid "manager.setup.look.description"
 msgstr ""
 "Ana sayfa başlığı, içerik, dergi başlığı, altlık, yönlendirme çubuğu ve "
@@ -724,7 +700,6 @@ msgstr "Biçimlendirme sitili yüklenmedi."
 msgid "manager.setup.note"
 msgstr "Not"
 
-#, fuzzy
 msgid "manager.setup.notifications.submissionAckDisabled"
 msgstr ""
 "<strong>Not:</strong> Otomatik başvuru e-posta gönderme seçeneği başlangıçta "
@@ -750,7 +725,6 @@ msgstr "Sayfa Numarası Ayarı"
 msgid "manager.setup.policies"
 msgstr "Politikalar"
 
-#, fuzzy
 msgid "manager.setup.policies.description"
 msgstr ""
 "Odak, hakem değerlendirmesi, bölümler, gizlilik, güvenlik ve erişim öğeler "
@@ -762,7 +736,6 @@ msgstr "ISSN"
 msgid "manager.setup.proofingInstructions"
 msgstr "Okuma Yönergesi"
 
-#, fuzzy
 msgid "manager.setup.proofingInstructionsDescription"
 msgstr ""
 "Düzenleme yönergesi düzenlenme basamağında mizanpajcılara, yazarlara ve "
@@ -773,7 +746,6 @@ msgstr ""
 msgid "manager.setup.publicationSchedule"
 msgstr "Yayın Planlaması"
 
-#, fuzzy
 msgid "manager.setup.publicationScheduleDescription"
 msgstr ""
 "Makaleler, kendi içindekiler tablosu olan bir sayıda toplanarak  "
@@ -795,9 +767,8 @@ msgstr ""
 "Bu ayrıntılar, üçüncü taraf arşiv organlarına sağlanan üstverilere dahil "
 "edilebilir."
 
-#, fuzzy
 msgid "manager.setup.referenceLinking"
-msgstr "Referans Bağlama"
+msgstr "Referans Linkleme"
 
 msgid "manager.setup.restrictArticleAccess"
 msgstr ""
@@ -818,13 +789,12 @@ msgstr "Değerlendirme Seçenekleri"
 msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "Otomatik Hatırlatma e-Postaları"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
 "<strong>Not:</strong> Bu özelliğin çalışabilmesi için site yöneticisinin ADS "
 "kurulum dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi "
 "gerekir. Bu iş için sunucuda da ayarlar yapmak gerekebilir ve her sunucuda "
-"bu işlev çalışmayabilir. (Daha fazla bilgi için ADS belgelerine bakınız)."
+"bu işlev çalışmayabilir. Daha fazla bilgi için ADS rehberlerine bakınız."
 
 msgid "manager.setup.reviewOptions.blindReview"
 msgstr "Kör Hakemlik"
@@ -832,7 +802,6 @@ msgstr "Kör Hakemlik"
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Hakem değerlendirmesini tamamlamak için verilen süre"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.onQuality"
 msgstr ""
 "Editörler her bir hakem incelemesinden sonra hakemler için 1-5 puan arasında "
@@ -849,7 +818,6 @@ msgstr "Hakem Erişimi"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Tek Tıkla Hakem Erişimi"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "<strong>Not:</strong> Hakemlere gönderilen e-posta, hakemlerin davet "
@@ -873,12 +841,11 @@ msgstr "Değerlendirme Politikası"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Arama Motoru Dizinlemesi"
 
-#, fuzzy
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
-"Kullanıcılara yardımcı olmak üzere arama motorlarının dergiyi dizinlemesi "
-"için dergiyle ilgili anahtar kelimeleri (noktalı virgülle ayırarak) "
-"yazabilirsiniz. Ör. İktisat; İşletme; Finans."
+"Google gibi arama motorlarının siteyi dizinlemesine yardımcı olun. "
+"Derginizin <a href=\"{$sitemapUrl}\" target=\"_blank\">site haritasını</a> "
+"arama dizinlerine yüklebilirsiniz."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Bölümler ve Bölüm Editörleri"
@@ -888,22 +855,18 @@ msgstr ""
 "(Eğer bölüm eklenmemişse, başvurular varsayılan olarak Makaleler bölümüne  "
 "gönderilir.)"
 
-#, fuzzy
 msgid "manager.setup.sectionsDescription"
 msgstr ""
 "Dergi için bölümler oluşturmak veya değiştirmek (Örneğin; Makaleler, Kitap "
 "Değerlendirmeleri, v.b.) için Bölüm Yönetimine gidin. <br /><br /> Yazarlar "
 "dergiye gönderi yaparken seçim yapacaklardır..."
 
-#, fuzzy
 msgid "manager.setup.selectEditorDescription"
 msgstr "Dergi editörü bunu editoryal süreç olarak görecektir."
 
-#, fuzzy
 msgid "manager.setup.selectSectionDescription"
 msgstr "Dergi bölümü göz önüne alınacaktır."
 
-#, fuzzy
 msgid "manager.setup.showGalleyLinksDescription"
 msgstr "Daima dizgi bağantısını göster ve sınırlı erişimi belirt."
 
@@ -926,7 +889,6 @@ msgstr "Gönderi Rehberi"
 msgid "manager.setup.submissionPreparationChecklist"
 msgstr "Gönderi Hazırlık Kontrol Listesi"
 
-#, fuzzy
 msgid "manager.setup.submissionPreparationChecklistDescription"
 msgstr ""
 "Dergiye makale başvurusu yaparken, yazarlar önce Başvuru Hazırlık Kontrol "
@@ -967,7 +929,6 @@ msgstr ""
 "Makaleler ve sayılar, Dijital Nesne Tanımlama Sistemi (DOI) gibi bir kayıt "
 "sistemi kullanılarak bir kimlik numarası veya dizeyle etiketlenebilir."
 
-#, fuzzy
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Bir editöryal/değerlendirme kurulu dergi tarafından kullanılacaktır."
 
@@ -1001,7 +962,6 @@ msgstr "Değerlendime süresi"
 msgid "manager.statistics.statistics.daysToPublication"
 msgstr "Yayına kadar geçen süre"
 
-#, fuzzy
 msgid "manager.statistics.statistics.description"
 msgstr ""
 "ADS yazılımı her degi için şu istatistikleri hesaplar. “Değerlendirme süresi”"
@@ -1014,7 +974,6 @@ msgstr "Yayınlanmış öğeler"
 msgid "manager.statistics.statistics.makePublic"
 msgstr "Dergi hakkında kısmında okuyucuların görmesini istediklerinizi seçin."
 
-#, fuzzy
 msgid "manager.statistics.statistics.note"
 msgstr ""
 "Not: Değerlendirme sonuçlarının toplamı %100 olmayabilir, çünkü halen "
@@ -1047,7 +1006,6 @@ msgstr "Editör puanı"
 msgid "manager.statistics.statistics.reviewsPerReviewer"
 msgstr "Değerlendirme sayısı"
 
-#, fuzzy
 msgid "manager.statistics.statistics.selectSections"
 msgstr ""
 "Bu dergide hakem değerlendirme istatistiklerinin yapılmasını istediğiniz "
@@ -1065,28 +1023,23 @@ msgstr "Gecikmeli Açık Erişim"
 msgid "manager.subscriptionPolicies.expiry"
 msgstr "Abonelik Bitişi"
 
-#, fuzzy
 msgid "manager.subscriptionPolicies.expiryDescription"
 msgstr ""
 "Abonelik bitiminden sonra, okuyucunun tüm abonelik içeriğine erişim "
 "reddedilebilir ancak abonelik sonuna kadar yayınlanan içeriğe erişimi "
 "korunabilir."
 
-#, fuzzy
 msgid "manager.subscriptionPolicies.expiryFull"
 msgstr "Tümünü Sonladır"
 
-#, fuzzy
 msgid "manager.subscriptionPolicies.expiryFullDescription"
 msgstr ""
 "Abonelik bitiminden sonra okuyucuların tüm abonelik içeriğine erişimini "
 "engelle."
 
-#, fuzzy
 msgid "manager.subscriptionPolicies.expiryPartial"
 msgstr "Kısmen Sonlandır"
 
-#, fuzzy
 msgid "manager.subscriptionPolicies.expiryPartialDescription"
 msgstr ""
 "Okuyucuların son yayınlanan abonelik içeriğine erişimi engelle ancak "
@@ -1556,11 +1509,9 @@ msgstr "Lütfen verilen seçenekleri kullanınız."
 msgid "manager.setup.categories"
 msgstr "Kategoriler"
 
-#, fuzzy
 msgid "manager.statistics.reports.filters.byContext.description"
 msgstr "Sonuçları (sayı ve/veya makale) bağlamıyla daralt."
 
-#, fuzzy
 msgid "manager.statistics.reports.filters.byObject.description"
 msgstr ""
 "Sonuçları nesne türüne (dergi, sayı, makale, pdf dizgisi, diğer dizgiler) ve/"
@@ -1620,7 +1571,6 @@ msgstr "Yöneticiler, editörler ve dergiyle ilişkili diğer kişileri listeley
 msgid "manager.setup.homepageContent"
 msgstr "Dergi Ana Sayfa İçeriği"
 
-#, fuzzy
 msgid "manager.setup.homepageContentDescription"
 msgstr ""
 "Derginin ana sayfası varsayılan olarak gezinme bağlantılarından oluşur. Ek "
@@ -1645,7 +1595,6 @@ msgstr "Yazarlar, okuyucular ve kütüphanecilere derginin yayınlayacağı maka
 msgid "manager.setup.form.issnInvalid"
 msgstr "Belirtilen ISSN geçerli değil."
 
-#, fuzzy
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
 "Anında veya gecikmeli olarak açık erişim sunan dergiler için, yayınlanan tüm "
@@ -1660,7 +1609,6 @@ msgstr "Derginizin dergiler listesinde gösterilebilecek kısa bir açıklaması
 msgid "manager.setup.contextAbout"
 msgstr "Dergi Hakkında"
 
-#, fuzzy
 msgid "manager.setup.contextAbout.description"
 msgstr ""
 "Derginiz hakkında okuyuculara, yazarlara veya hakemlere ilgilerini "
@@ -1678,7 +1626,6 @@ msgstr "Kullanıcılar sitenizi ziyaret ettiğinde gezinme çubuğunun yanında 
 msgid "manager.setup.faviconInvalid"
 msgstr "Geçersiz favicon biçimi. Kabul edilebilir biçimler:  .ico, .png ve .gif."
 
-#, fuzzy
 msgid "manager.setup.journalThumbnail.description"
 msgstr "Dergi listelerinde kullanılabilen küçük bir logo veya derginin temsili."
 
@@ -1704,7 +1651,6 @@ msgstr ""
 msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Koruma Ağı (PN)"
 
-#, fuzzy
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
 "PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS "
@@ -1714,7 +1660,6 @@ msgstr ""
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS ve CLOCKSS"
 
-#, fuzzy
 msgid "manager.setup.lockssLicenseDescription"
 msgstr ""
 "CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <"
@@ -1727,27 +1672,24 @@ msgstr "LOCKSS Lisans Açıklaması"
 msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
 
-#, fuzzy
 msgid "manager.setup.clockssEnable"
 msgstr ""
 "Bir CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher "
 "Manifest</a> sayfası aracılığıyla katılımcı kütüphanelerde dergi içeriğini "
 "depolamak ve dağıtmak için CLOCKSS uygulamasını etkinleştirin."
 
-#, fuzzy
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
 "CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <"
 "a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS Lisansı</a>"
 
-#, fuzzy
 msgid "manager.statistics.defaultMetricDescription"
 msgstr ""
 "\n"
 "\t\tDerginiz, birden fazla kullanım metriği kaydetmek için yapılandırıldı. "
 "Kullanım istatistikleri birkaç bağlamda görüntülenecektir.\n"
-"\t\tTek kullanımlık istatistiğin kullanılması gereken durumlar vardır. Örn. "
-"En çok kullanılan makalelerin sıralı bir listesini görüntülemek veya arama "
+"Tek kullanımlık istatistiğin kullanılması gereken durumlar vardır. Örn. En "
+"çok kullanılan makalelerin sıralı bir listesini görüntülemek veya arama "
 "sonuçlarını sıralamak için. Lütfen yapılandırılmış metriklerden birini "
 "varsayılan olarak seçin.\n"
 "\t"
@@ -1921,7 +1863,6 @@ msgstr "Dergi ayarları'nda tanımlanan birincil kişiye bir kopya gönderin."
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS Lisans Açıklaması"
 
-#, fuzzy
 msgid "manager.setup.clockssRegister"
 msgstr ""
 "<a href=\"http://clockss.org/\" target=\"_blank\"> CLOCKSS Web Sitesini</a> "

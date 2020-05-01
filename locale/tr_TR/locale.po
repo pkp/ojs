@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-04-21 11:52+0000\n"
-"Last-Translator: Sönmez Çelik <snmzclk@gmail.com>\n"
+"PO-Revision-Date: 2020-04-29 19:12+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/locale/tr/>"
 "\n"
 "Language: tr_TR\n"
@@ -813,7 +813,7 @@ msgid "reviewer.article.reviewerComments"
 msgstr "Yorumlar"
 
 msgid "reviewer.article.uploadedFile"
-msgstr "Yüklenmiş dosyalar:"
+msgstr "Yüklenmiş dosyalar"
 
 msgid "reviewer.article.reviewersAnnotatedVersion"
 msgstr "Hakem tarafından yüklenen sürüm"
@@ -913,14 +913,20 @@ msgstr "Düzeltmen Ataması Yapılmamış"
 
 msgid "author.submit.uploadInstructions"
 msgstr ""
-"<p>Dergiye makale göndermek için aşağıdaki basamakları tamamlayınız.</p>\n"
 "\n"
+"<p>Dergiye makale göndermek için aşağıdaki basamakları tamamlayınız.</p>\n"
 "<ol>\n"
-"<li>Bu sayfada dosya seçimi penceresini açarak kendi bilgisayarınızın sabit sürücüsünde bulunan dosyayı bulmanıza yarayacak Gözat/Browse'a  tıklayınız. </li>\n"
+"<li>Bu sayfada dosya seçimi penceresini açarak kendi bilgisayarınızın sabit "
+"sürücüsünde bulunan dosyayı bulmanıza yarayacak Gözat/Browse'a  tıklayınız. "
+"</li>\n"
 "<li>Başvuru dosyanızın yerini belirleyip işaretleyiniz.</li>\n"
-"<li>Dosya seçimi penceresinde Aç/Open'a tıklayınız, bu işlem dosya yolunu sayfa üzerine yerleştirecektir. </li>\n"
-"<li>Dosya Gönder butonunu tıklayarak, dosyayı kendi bilgisayarınızdan derginin internet sitesine yükleyiniz, dosyanızın adı dergi kurallarına uygun olarak değiştirilecektir.</li>\n"
-"<li>Başvuru yüklendikten sonar, sayfanın alt kısmında yer alan Kaydet ve Devam et'e tıklayınız.</li>\n"
+"<li>Dosya seçimi penceresinde Aç/Open'a tıklayınız, bu işlem dosya yolunu "
+"sayfa üzerine yerleştirecektir. </li>\n"
+"<li>Dosya Gönder butonunu tıklayarak, dosyayı kendi bilgisayarınızdan "
+"derginin internet sitesine yükleyiniz, dosyanızın adı dergi kurallarına "
+"uygun olarak değiştirilecektir.</li>\n"
+"<li>Başvuru yüklendikten sonar, sayfanın alt kısmında yer alan Kaydet ve "
+"Devam et'e tıklayınız.</li>\n"
 "</ol>"
 
 msgid "submission.review.mustUploadFileForReview"
@@ -999,7 +1005,7 @@ msgid "submission.logType.editor"
 msgstr "Editör"
 
 msgid "submission.logType.review"
-msgstr "Görüşlerinizi yazmak için simgeye tıklayınız:"
+msgstr "Görüşlerinizi yazmak için simgeye tıklayınız"
 
 msgid "submission.logType.copyedit"
 msgstr "Sayfa Düzeni"
@@ -1163,7 +1169,9 @@ msgid "user.subscriptions.form.domainInstructions"
 msgstr "Buraya bir alan adı girilecekse, IP aralığı isteğe bağlıdır. <br />Geçerli alan isimleri (ör. kutuphane.dogus.edu.tr)."
 
 msgid "user.subscriptions.form.domainIPRangeRequired"
-msgstr "The selected subscription type requires a domain and/or an IP range for subscription authentication."
+msgstr ""
+"Seçilen abonelik türü, abonelik kimlik doğrulaması için bir etki alanı ve / "
+"veya bir IP aralığı gerektirir."
 
 msgid "user.subscriptions.form.domainValid"
 msgstr "Lütfen geçerli bir alan adı giriniz."
@@ -1175,7 +1183,11 @@ msgid "user.subscriptions.form.ipRangeItem"
 msgstr "&#8226;"
 
 msgid "user.subscriptions.form.ipRangeInstructions"
-msgstr "If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24)."
+msgstr ""
+"Buraya IP aralıkları girilirse, etki alanı isteğe bağlıdır.<br />Geçerli "
+"değerler arasında bir IP adresi (ör. 142.58.103.1), IP aralığı (ör. "
+"142.58.103.1 - 142.58.103.4), '*' joker karakterli IP aralığı (ör. 142.58. *"
+". *) Ve CIDR içeren bir IP aralığı (ör. 142.58.100.0/24)."
 
 msgid "user.subscriptions.form.ipRangeValid"
 msgstr "Lütfen geçerli bir IP adresi giriniz."
@@ -1370,7 +1382,7 @@ msgid "about.memberships"
 msgstr "Üyelikler"
 
 msgid "about.aboutThisPublishingSystem"
-msgstr "ADS Hakkında"
+msgstr "Yayıncılık Sistemi Hakkında"
 
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "ADS Editöryal ve Yayımlama Süreci"
@@ -1483,7 +1495,6 @@ msgstr "OJS Kurulumu"
 msgid "installer.ojsUpgrade"
 msgstr "OJS Yükseltme"
 
-#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS Sürüm {$version}</h4>\n"
@@ -1542,7 +1553,6 @@ msgstr ""
 "full or partially). Compatibility reports and/or code patches for "
 "alternative DBMSs can be sent to the OJS team.</p>\n"
 
-#, fuzzy
 msgid "installer.upgradeInstructions"
 msgstr ""
 "<h4>ADS Sürümü {$version}</h4>\n"
@@ -1569,7 +1579,6 @@ msgstr ""
 "ulaşıldığında güncelleme sürecine ara verilir ve tamamlamak için manuel "
 "girişim gerekir.</p>"
 
-#, fuzzy
 msgid "installer.localeSettingsInstructions"
 msgstr ""
 "Tam evrensel kod (Unicode UTF-8) desteği için tüm karakter seti ayarlarını "
@@ -1589,14 +1598,12 @@ msgstr ""
 "Bu sistem için kullanılacak birincil dil. Burada belirtilmeyen diller için "
 "destek almak istiyorsanız lütfen OJS yardım dökümanlarına bakın."
 
-#, fuzzy
 msgid "installer.additionalLocalesInstructions"
 msgstr ""
 "Bu sistemi desteklemek için ekli herhangi bir dili seçebilirsiniz. Bu "
 "diller, bu sitede yer verilen dergiler tarafından kullanıma hazır olacaktır. "
 "Başka diller site yönetim arayüzünden herhangi bir zamanda yüklenebilir."
 
-#, fuzzy
 msgid "installer.filesDirInstructions"
 msgstr ""
 "Yüklenen dosyaların tutulacağı bir dizinin tam erişim yolunu yazınız. Bu "
@@ -1605,7 +1612,6 @@ msgstr ""
 "İşletim sistemi Windows ise örnekteki gibi bir yol kullanın. Örneğin: \"C:/"
 "edergi/dosyalar\"."
 
-#, fuzzy
 msgid "installer.databaseSettingsInstructions"
 msgstr ""
 "ADS verileri depolamak için bir SQL veri tabanı erişimi gerektirir. "
@@ -1619,14 +1625,12 @@ msgstr "Açık Dergi Sistemlerini Kur"
 msgid "installer.upgradeApplication"
 msgstr "Açık Dergi Sistemlerini Yükselt"
 
-#, fuzzy
 msgid "installer.reinstallAfterDatabaseError"
 msgstr ""
 "<strong>Uyarı:</strong>Eğer yükleme, veri tabanının yüklenmesi yoluyla "
 "başarısız olmuşsa, yeniden yüklemeyi denemeden önce ADS veri tabanını veya "
 "veri tabanı tablolarını düşürmeniz (drop) gerekebilir."
 
-#, fuzzy
 msgid "installer.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>ÖNEMLİ!</h4>\n"
@@ -1635,7 +1639,6 @@ msgstr ""
 "editöründe açınız ve içeriklerini aşağıdaki metin alanının içeriklerine "
 "uygun olarak değiştirin.</p>"
 
-#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>ADS yüklemesi başarıyla tamamlandı.</p>\n"
@@ -1656,7 +1659,6 @@ msgstr ""
 "<p>Soru ve yorumlarınız için lütfen <a href=\"http://pkp.sfu.ca/support/"
 "forum\" target=\"_new\">destek forumunu</a> kullanınız.</p>"
 
-#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>ADS'nin sürüm {$version}  güncellenmesi başarıyla tamamlandı.</p>\n"
@@ -1699,7 +1701,9 @@ msgid "log.review.reviewAccepted"
 msgstr "{$reviewerName} {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesinde makaleyi kabul etti."
 
 msgid "log.review.reviewDeclinedByProxy"
-msgstr "{$userName} has declined the round {$round} review for submission {$submissionId} on behalf of {$reviewerName}."
+msgstr ""
+"{$userName} kullanıcı adlı {$reviewerName} isimli hakem {$submissionId} "
+"numaralı makalenin {$round}. tur değerlendirme talebini reddetti."
 
 msgid "log.review.reviewAcceptedByProxy"
 msgstr "{$userName} {$submissionId} ile tanımlı başvurunun {$round} nolu değerlendirmesini {$reviewerName} adına kabul etti."
@@ -1839,7 +1843,12 @@ msgstr ""
 "<strong>{$maxFileUploadSize}</strong>"
 
 msgid "site.upgradeAvailable.admin"
-msgstr "ADS'nin kullanılabilir yeni bir sürümü var! Şu halde ADS'nin {$currentVersion} sürümünü kullanıyorsunuz.  {$latestVersion} ADS'nin daha güncel sürümüdür. Güncel sürümü indirmek  ve güncelleme talimatları bulmak için lütfen <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">bu sayfa</a/yı ziyaret ediniz."
+msgstr ""
+"ADS'nin kullanılabilir yeni bir sürümü var! Şu halde ADS'nin "
+"{$currentVersion} sürümünü kullanıyorsunuz.  {$latestVersion} ADS'nin daha "
+"güncel sürümüdür. Güncel sürümü indirmek  ve güncelleme talimatları bulmak "
+"için lütfen <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">bu "
+"sayfayı</a> ziyaret ediniz."
 
 msgid "site.upgradeAvailable.manager"
 msgstr "ADS'nin kullanılabilir yeni bir sürümü var! Şu halde ADS'nin {$currentVersion} sürümünü kullanıyorsunuz.  {$latestVersion} ADS'nin daha güncel sürümüdür. Yeni sürümü bildirmek için Site Yöneticiniz ({$siteAdminName} <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) ile irtibate geçiniz. Daha fazla bilgi edinmek için <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">buraya</a> tıklayınız."
@@ -2158,7 +2167,6 @@ msgstr "Evet, kaydettiğim tüm dergiler için yeni yayınlar ve duyurulardan ha
 msgid "notification.type.public"
 msgstr "Genel Duyurular"
 
-#, fuzzy
 msgid "manager.setup.copyrightNotice.sample"
 msgstr ""
 "<h3>Proposed Creative Commons Copyright Notices</h3>\n"
@@ -2217,3 +2225,24 @@ msgstr "Güncel sayıyı atla"
 
 msgid "navigation.skip.about"
 msgstr "Dergi hakkında kısmını atla"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Bu kategorideki makalelerin nasıl sıralanacağını seçin."
+
+msgid "catalog.sortBy"
+msgstr "Makaleleri Sırala"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "<a href=\"{$url}\">{$name}</a> bölümü için Makale Gönder ."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Bu sitenin gizlilik bildirimini kabul etmelisiniz."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Kayıt olduğunuz tüm dergiler için gizlilik bildirimini kabul etmelisiniz."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Evet, derginin<a href=\"{$privacyUrl}\" target=\"_blank\">gizlilik "
+"sözleşmesini</a> kabul ediyorum."

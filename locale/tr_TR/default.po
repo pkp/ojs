@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-04-21 11:52+0000\n"
-"Last-Translator: Sönmez Çelik <snmzclk@gmail.com>\n"
+"PO-Revision-Date: 2020-04-29 19:12+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/default/tr/>"
 "\n"
 "Language: tr_TR\n"
@@ -47,7 +47,6 @@ msgstr "<p>Bu dergi sitesindeki isimler ve elektronik posta adresleri bu dergini
 msgid "default.contextSettings.openAccessPolicy"
 msgstr "Bu dergi açık erişim sağlama politikasını benimsemiştir. Açık erişim bilginin global değişimini artırarak insanlık için yararlı sonuçlar doğurmaktadır."
 
-#, fuzzy
 msgid "default.contextSettings.emailSignature"
 msgstr ""
 "<br/>\n"
