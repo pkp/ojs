@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-01 20:28+0000\n"
+"PO-Revision-Date: 2020-05-02 02:10+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
@@ -87,7 +87,7 @@ msgid "manager.managementPages"
 msgstr "Các trang quản lý"
 
 msgid "manager.language.forms"
-msgstr "Kiểu"
+msgstr "Hình thức"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr ""
@@ -95,7 +95,7 @@ msgstr ""
 "ngôn ngữ này"
 
 msgid "manager.language.submissions"
-msgstr "Bài nộp"
+msgstr "Bài gửi"
 
 msgid "manager.language.ui"
 msgstr "UI"
@@ -112,19 +112,21 @@ msgid "manager.website.archiving"
 msgstr "Lưu trữ"
 
 msgid "manager.distribution.publishingMode.success"
-msgstr "Chị tiết về nhà xuất bản đã được cập nhật."
+msgstr "Chi tiết về nhà xuất bản vừa được cấp nhật."
 
 msgid "manager.distribution.publishingMode.subscription"
-msgstr "Tạp chí sẽ yêu cầu đăng ký để truy cập một phần hoặc toàn bộ nội dung."
+msgstr ""
+"Tạp chí sẽ yêu cầu đăng ký thuê bao để truy cập một phần hoặc toàn bộ nội "
+"dung của tạp chí."
 
 msgid "manager.distribution.publishingMode.openAccess"
-msgstr "Cung cấp truy cập mở nội dung tạp chí."
+msgstr "Tạp chí sẽ cung cấp nội dung truy cập mở."
 
 msgid "manager.distribution.publishingMode.none"
-msgstr "Không sử dụng OJS trong xuất bản trực tuyến nội dung tạp chí."
+msgstr "OJS sẽ không được sử dụng để xuất bản trực tuyến nội dung của tạp chí."
 
 msgid "manager.distribution.publishingMode"
-msgstr "Chế độ xuất bản"
+msgstr "Kiểu xuất bản"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr "Tiếng Việt (vi_VN)"
