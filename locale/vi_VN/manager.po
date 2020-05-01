@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2020-05-01 20:28+0000\n"
-"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -125,3 +125,6 @@ msgstr "Không sử dụng OJS trong xuất bản trực tuyến nội dung tạ
 
 msgid "manager.distribution.publishingMode"
 msgstr "Chế độ xuất bản"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "Tiếng Việt (vi_VN)"
