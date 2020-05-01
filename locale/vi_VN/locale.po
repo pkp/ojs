@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-01 00:25+0000\n"
+"PO-Revision-Date: 2020-05-01 07:37+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
@@ -622,3 +622,6 @@ msgstr "Chuyển sang một tạp chí khác:"
 
 msgid "context.current"
 msgstr "Tạp chí hiện tại:"
+
+msgid "subscriptionTypes.months"
+msgstr "theo tháng"
