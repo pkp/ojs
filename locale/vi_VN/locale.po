@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-02 02:10+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2020-05-02 18:24+0000\n"
+"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -825,3 +825,214 @@ msgstr "Bản sửa của biên tập viên bản thảo đã được cập nh�
 
 msgid "submission.event.copyedit.copyeditInitiated"
 msgstr "Biên tập viên bản thảo được bắt đầu phân công"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Tập tin bản thảo chỉ được cung cấp khi và chỉ khi người phản biện đồng ý "
+"thực hiện phản biện"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Không thể thực hiện phản biện"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Đồng ý phản biện"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Thông báo cho Biên tập viên"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Tập tin để phản biện"
+
+msgid "reviewer.averageQuality"
+msgstr "Xếp hạng"
+
+msgid "reviewer.completedReviews"
+msgstr "Hoàn thành phản biện"
+
+msgid "reviewer.pendingReviews"
+msgstr "Bài viết đang chờ phản biện"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL của nội dung lưu trữ từ xa"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Bản in này sẽ có sẵn tại một trang web riêng."
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"Định dạng hình ảnh không hợp lệ. Các định dạng được chấp nhận là .gif, .jpg "
+"và .png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Tải lên tập tin phụ trợ"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Thay thế tập tin"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Tài lên định dạng bản in"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Phân công trình bày bản thảo"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Phân công biên tập không được kích hoạt"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Phân công Biên tập hoàn thành"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Kích hoạt Phân công Biên tập"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Tạo Phản biện mới"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Đăng ký Người dùng hiện tại làm Người phản biện"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Kết quả"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Từ chối"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Từ chối & Huỷ phản biện"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Quyết định của biên tập viên, Vòng {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Phản biện kín, Vòng {$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Xem Từ chối, Huỷ đề nghị, Các vòng phản biện trước"
+
+msgid "sectionEditor.regrets"
+msgstr "Từ chối"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} Từ chối phản biện, Hủy đề nghị & Các vòng phản biện trước"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Từ chối"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Thông báo cho biên tập viên soát lỗi thêm một lần nữa sẽ khởi động lại nhiệm "
+"vụ của họ. Bạn có chắc chắn muốn làm điều này?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Thông báo cho biên tập viên trình bày thêm một lần nữa sẽ khởi động lại "
+"nhiệm vụ của họ. Bạn có chắc chắn muốn làm điều này?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Thông báo cho tác giả này một lần nữa sẽ khởi động lại nhiệm vụ của họ. Bạn "
+"có chắc chắn muốn làm điều này?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Thông báo giao biên tập bản thảo một lần nữa sẽ khởi động lại nhiệm vụ của "
+"biên tập viên bản thảo. Bạn có chắc chắn muốn làm điều này?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Không bài gửi nào được giao"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Hoàn thành giao phản biện"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Kích hoạt giao phản biện"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t <li> Các mục được tô sáng cho biết hành động được yêu cầu bởi một biên "
+"tập viên, được gắn nhãn như sau:\n"
+"\t\t <ul>\n"
+"\t\t\t<li class = \"highlightCopyediting\"> Cần có hành động trong giai đoạn "
+"biên tập bản thảo </ li>\n"
+"\t\t\t<li class = \"highlightLayoutEditing\"> Cần có một hành động trong "
+"giai đoạn chỉnh sửa bố cục </ li>\n"
+"\t\t\t<li class = \"higlightProofreading\"> Cần có hành động trong giai đoạn "
+"hiệu đính </ li>\n"
+"\t\t</ ul>\n"
+"\t</ li>\n"
+"\t</ ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+" <li> Các mục được tô sáng cho biết hành động được yêu cầu bởi một biên tập "
+"viên, được gắn nhãn như sau:\n"
+"  <ul>\n"
+"   <li class = \"highlightReviewerNotNotified\"> Người phản biện đã được chỉ "
+"định nhưng không được thông báo qua email </li>\n"
+"   <li class = \"highlightNoDecision\"> Tất cả những người phản biện đã phản "
+"hồi với các nhận xét của họ, nhưng không có quyết định nào được ghi lại \n"
+"   </li>\n"
+"   <li class = \"highlightRevisedCopyUploaded\"> Tác giả đã tải lên phiên "
+"bản sửa đổi </li>\n"
+"   <li class = \"highlightReviewerConf ConfirmationOverdue\"> Người phản "
+"biện đã quá hạn để xác nhận lời mời phản biện </li>\n"
+"   <li class = \"highlightReviewerCompletionOverdue\"> Người phản biện đã "
+"quá hạn để hoàn thành phản biện </li>\n"
+"  </ul>\n"
+" </li>\n"
+" <li> \"Thời hạn\" được điền khi người phản biện chấp nhận yêu cầu phản biện;"
+" nó hiển thị số tuần để phản biện đáo hạn hoặc (-) tuần đã quá hạn.    \n"
+" </li>\n"
+" \n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Xin lỗi, bạn không có quyền quản trị đối với người dùng này. Điều này có thể "
+"là do:\n"
+"  <ul>\n"
+"   <li> Người dùng là quản trị viên trang </li>\n"
+"   <li> Người dùng đang hoạt động trong các tạp chí bạn không quản lý </li>\t"
+"\n"
+"  </ul>  \n"
+" Nhiệm vụ này phải được thực hiện bởi Quản trị trang web.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Vô hiệu hóa người dùng này? Điều này sẽ ngăn người dùng đăng nhập vào hệ "
+"thống.\n"
+"\n"
+"Bạn có thể tùy chọn cung cấp cho người dùng một lý do cho việc vô hiệu hóa "
+"tài khoản của họ."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p> Để cho phép người đọc định vị các phiên bản trực tuyến của tác phẩm được "
+"trích dẫn bởi một tác giả, các tùy chọn sau khả dụng. </p>\n"
+"\n"
+"<ol>\n"
+"<li> <strong> Thêm công cụ đọc </strong> <p> Trình Quản lý tạp chí cho phép "
+"thêm \"Tìm tài liệu tham khảo\" vào Công cụ đọc đi kèm với các số đã xuất "
+"bản, cho phép người đọc dán tiêu đề của tài liệu tham khảo và sau đó tìm "
+"kiếm cơ sở dữ liệu học thuật được chọn trước cho công việc được trích dẫn. "
+"</p> </li>\n"
+"\n"
+"<li> <strong> Nhúng nhữngliên kết trong các Tài liệu tham khảo </strong> <p> "
+"Trình chỉnh sửa bố cục có thể thêm liên kết đến các tài liệu tham khảo mà "
+"chúng có thể tìm thấy trực tuyến bằng cách sử dụng các hướng dẫn sau (chúng "
+"có thể chỉnh sửa được). </p> </li>\n"
+"\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Các bước: Bài mới gửi &gt; Bài đang Phản biện &gt; Bài đang biên tập &gt; "
+"Mục lục. <br /> <br />\n"
+"Chọn một mô hình để xử lý các khía cạnh của quá trình biên tập. (Để chỉ định "
+"một Biên tập viên Quản lý và Biên tập viên Chuyên mục, hãy chuyển đến mục "
+"Biên tập trong Quản lý Tạp chí.)"
