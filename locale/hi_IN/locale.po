@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-30 14:45+0000\n"
+"PO-Revision-Date: 2020-05-02 18:24+0000\n"
 "Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
 "Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/locale/hi/>\n"
 "Language: hi_IN\n"
@@ -1654,3 +1654,599 @@ msgid "user.subscriptions.form.domainInstructions"
 msgstr ""
 "यदि एक डोमेन यहां दर्ज किया गया है, तो आईपी रेंज वैकल्पिक हैं। <br /> वैध मा"
 "न डोमेन नाम हैं (उदा। Lib.sfu.ca)।"
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"OJS का एक नया संस्करण उपलब्ध है! आप वर्तमान में OJS {$ currentVersion} का "
+"उपयोग कर रहे हैं। सबसे हालिया संस्करण OJS {$ latestVersion} है। इस नई रिलीज़ "
+"की सूचना देने के लिए कृपया अपने साइट एडमिनिस्ट्रेटर ({$ siteAdminName}, <a "
+"href=\"mailto:elling>siteAdminEmail?hl=hi </a>} {$ siteAdminEmail} </a> से "
+"संपर्क करें। अधिक जानकारी <a href=\"http://pkp.sfu.ca/ojs_download\" target="
+"\"_new\"> यहां </a> देखी जा सकती है।"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"OJS का एक नया संस्करण उपलब्ध है! आप वर्तमान में OJS {$ currentVersion} का "
+"उपयोग कर रहे हैं। सबसे हालिया संस्करण OJS {$ latestVersion} है। हाल के संस्"
+"करण को डाउनलोड करने और अपग्रेड निर्देश खोजने के लिए कृपया <a href=\""
+"http://pkp.sfu.ca/ojs_download\" target=\"_new\"> इस पृष्ठ </a> पर जाएं।"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p> OJS के संस्करण {$ संस्करण} का उन्नयन सफलतापूर्वक पूरा हो गया है। </ p>\n"
+"<p> अपने config.inc.php कॉन्फ़िगरेशन फ़ाइल में \"स्थापित\" सेटिंग को वापस "
+"<em> चालू / एम> </ p> पर सेट करना न भूलें।\n"
+"<p> यदि आपने पहले से पंजीकरण नहीं किया है और समाचार और अपडेट प्राप्त करना "
+"चाहते हैं, तो <strong> कृपया <a href=\"http://pkp.sfu.ca/ojs/register\" "
+"target=\"_new\"> http पर पंजीकरण करें : //pkp.sfu.ca/ojs/register </a> </ "
+"strong> यदि आपका कोई प्रश्न या टिप्पणी है, तो कृपया <a href = \""
+"http://forum.pkp.sfu.ca\" लक्ष्य = पर जाएं। \"_new\"> समर्थन मंच </a>। </ p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p> OJS की स्थापना सफलतापूर्वक पूर्ण हो गई है। </ p>\n"
+"<p> सिस्टम का उपयोग शुरू करने के लिए, पिछले पृष्ठ पर दर्ज किए गए उपयोगकर्ता "
+"नाम और पासवर्ड के साथ <a href=\"lights$loginUrlarios\"> लॉगिन </a> करें। </ "
+"p>\n"
+"<p> यदि आप PKP समुदाय का हिस्सा बनना चाहते हैं, तो आप: </ p> कर सकते हैं\n"
+"<Ol>\n"
+"\t<li>Read the <a href='http://pkp.sfu.ca/blog' target='_new'>PKP blog</a> "
+"and follow the <a href='http://pkp.sfu.ca/blog/feed' target='_new'>RSS "
+"feed</a> समाचार और अपडेट के लिए </li>\n"
+"यदि आपके कोई प्रश्न या टिप्पणी हैं तो <a href=\"http://forum.pkp.sfu.ca\" "
+"target=\"_new\"> समर्थन मंच </a> पर जाएं। </ li>\n"
+"</ Ol>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<H4> महत्वपूर्ण! </ H4>\n"
+"<p> इंस्टॉलर स्वतः कॉन्फ़िगरेशन फ़ाइल को अधिलेखित नहीं कर सकता है। सिस्टम का "
+"उपयोग करने का प्रयास करने से पहले, कृपया उपयुक्त टेक्स्ट एडिटर में <tt> "
+"config.inc.php </ tt> खोलें और इसकी सामग्री को नीचे दिए गए टेक्स्ट फ़ील्ड की "
+"सामग्री से बदलें। </ p>"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong> चेतावनी: </ strong> यदि डेटाबेस इंस्टॉलेशन के माध्यम से इंस्टॉलेशन "
+"विफल हो गया है, तो आपको डेटाबेस को फिर से स्थापित करने का प्रयास करने से पहले"
+" अपने ओजेएस डेटाबेस या डेटाबेस टेबल को छोड़ने की आवश्यकता हो सकती है।"
+
+msgid "installer.upgradeApplication"
+msgstr "ओपन जर्नल सिस्टम को अपग्रेड करें"
+
+msgid "installer.installApplication"
+msgstr "ओपन जर्नल सिस्टम स्थापित करें"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS को अपने डेटा को संग्रहीत करने के लिए SQL डेटाबेस तक पहुँच की आवश्यकता "
+"होती है। समर्थित डेटाबेस की सूची के लिए ऊपर दी गई सिस्टम आवश्यकताएँ देखें। "
+"नीचे दिए गए फ़ील्ड में, डेटाबेस से कनेक्ट करने के लिए उपयोग की जाने वाली "
+"सेटिंग्स प्रदान करें।"
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"एक मौजूदा निर्देशिका में पूर्ण पथनाम दर्ज करें जहाँ अपलोड की गई फ़ाइलों को "
+"रखा जाना है। यह निर्देशिका सीधे वेब-सुलभ नहीं होनी चाहिए। <strong> कृपया "
+"सुनिश्चित करें कि यह निर्देशिका मौजूद है और स्थापना से पहले लिखने योग्य है। "
+"</ strong> विंडोज पथ के नामों को आगे के स्लैश का उपयोग करना चाहिए, उदा। \"C:/"
+"myjournal/files\"."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"इस प्रणाली में समर्थन के लिए किसी भी अतिरिक्त भाषाओं का चयन करें। ये भाषाएं "
+"साइट पर होस्ट की गई जर्नल्स द्वारा उपयोग के लिए उपलब्ध होंगी। साइट प्रशासन "
+"इंटरफ़ेस से किसी भी समय अतिरिक्त भाषाएं भी स्थापित की जा सकती हैं।"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"इस प्रणाली के लिए उपयोग करने वाली प्राथमिक भाषा। यदि आप यहाँ सूचीबद्ध नहीं की"
+" गई भाषाओं के समर्थन में रुचि रखते हैं, तो कृपया OJS प्रलेखन से परामर्श करें।"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"आपका सर्वर वर्तमान में अधिकतम फ़ाइल अपलोड आकार की अनुमति देता है: <strong> {$"
+" maxFileUploadSize} </ strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"आपका सर्वर वर्तमान में फ़ाइल अपलोड की अनुमति देता है: <strong> {$ "
+"allowFileUploads} </ strong>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"पूर्ण यूनिकोड (UTF-8) समर्थन के लिए, सभी वर्ण सेट सेटिंग्स के लिए UTF-8 का "
+"चयन करें। कृपया ध्यान दें कि पूर्ण यूनिकोड समर्थन के लिए PHP को <a href=\""
+"http://www.php.net/mbstring\" target=\"_blank\"> mbstring </a> लाइब्रेरी के "
+"समर्थन के साथ संकलित करने की आवश्यकता है (अधिकांश में डिफ़ॉल्ट रूप से सक्षम) "
+"हाल ही में PHP स्थापना)। यदि आपका सर्वर इन आवश्यकताओं को पूरा नहीं करता है, "
+"तो आप विस्तारित वर्ण सेट का उपयोग कर समस्याओं का अनुभव कर सकते हैं।\n"
+"<br /> <br />\n"
+"आपका सर्वर वर्तमान में mbstring का समर्थन करता है: <strong> {$ "
+"supportMBString} </ strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4> OJS संस्करण {$ संस्करण} </ h4>\n"
+"\n"
+"<p> सार्वजनिक ज्ञान परियोजना के <strong> ओपन जर्नल सिस्टम </ strong> डाउनलोड "
+"करने के लिए धन्यवाद। आगे बढ़ने से पहले, कृपया <a href=\" जटिलताओं$"
+"baseUrlarios/docs/README.md\"> README </a> को पढ़ें और <a href=\"elines$"
+"baseUrlarios/docs/UPGRADE.md\"> UPGPADE </ a > इस सॉफ्टवेयर के साथ शामिल "
+"फाइलें। लोक ज्ञान परियोजना और इसकी सॉफ्टवेयर परियोजनाओं के बारे में अधिक "
+"जानकारी के लिए, कृपया <a href=\"http://pkp.sfu.ca/\" target=\"_blank\"> PKP "
+"वेब साइट </a> पर जाएं। यदि आपके पास ओपन जर्नल सिस्टम के बारे में बग रिपोर्ट "
+"या तकनीकी सहायता संबंधी पूछताछ है, तो <a href=\"http://forum.pkp.sfu.ca\" "
+"target=\"_blank\"> सहायता फ़ोरम </a> देखें या PKP के ऑनलाइन पर जाएं < a href "
+"= \"https://github.com/pkp/pkp-lib#issues\" target = \"_ blank\"> बग "
+"रिपोर्टिंग सिस्टम </a>। यद्यपि समर्थन मंच संपर्क का पसंदीदा तरीका है, आप टीम "
+"को <a href=\"mailto:pkp.contact@gmail.com\"> pkp.contact@gmail.com </a> </ p>"
+" पर भी ईमेल कर सकते हैं।\n"
+"<p> यह <strong> दृढ़ता से अनुशंसित </ strong> है कि आप आगे बढ़ने से पहले अपने"
+" डेटाबेस, फ़ाइलें निर्देशिका और OJS स्थापना निर्देशिका का बैकअप लें। </ p>\n"
+"<p> यदि आप <a href=\"http://www.php.net/features.safe-mode\" target=\""
+"_blank\"> PHP सुरक्षित मोड </a> में चल रहे हैं, तो कृपया सुनिश्चित करें कि "
+"max_execution_time निर्देश में आपकी php.ini कॉन्फ़िगरेशन फ़ाइल एक उच्च सीमा "
+"पर सेट है। यदि यह या कोई अन्य समय सीमा (उदा। अपाचे का \"टाइमआउट\" निर्देश) "
+"पहुंच गया है और अपग्रेड प्रक्रिया बाधित है, तो मैनुअल हस्तक्षेप की आवश्यकता "
+"होगी। </ p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4> पूर्व-स्थापना चरण </ h4>\n"
+"\n"
+"\n"
+"<P> 1। निम्न फ़ाइलों और निर्देशिकाओं (और उनकी सामग्री) को योग्य बनाया जाना "
+"चाहिए: </ p>\n"
+"<Ul>\n"
+"<li> <tt> config.inc.php </ tt> लेखन योग्य (वैकल्पिक) है: {$ writable_config}"
+" </ li>\n"
+"<li> <tt> सार्वजनिक / </ tt> लेखन योग्य है: {$ writable_public} </ li>\n"
+"<li> <tt> cache / </ tt> लेखन योग्य है: {$ writable_cache} </ li>\n"
+"<li> <tt> cache / t_cache / </ tt> लेखन योग्य है: {$ "
+"writable_templates_cache} </ li>\n"
+"<li> <tt> cache / t_compile / </ tt> लेखन योग्य है: {$ "
+"writable_templates_compile} </ li>\n"
+"<li> <tt> cache / _db </ tt> लेखन योग्य है: {$ writable_db_cache} </ li>\n"
+"</ Ul>\n"
+"\n"
+"<P> 2। अपलोड की गई फ़ाइलों को संग्रहीत करने के लिए एक निर्देशिका बनाई जानी "
+"चाहिए और उन्हें उपयुक्त बनाया जा सकता है (नीचे \"फ़ाइल सेटिंग्स\" देखें)। </ "
+"p>"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4> OJS संस्करण {$ संस्करण} </ h4>\n"
+"\n"
+"<p> सार्वजनिक ज्ञान परियोजना के <strong> ओपन जर्नल सिस्टम </ strong> डाउनलोड "
+"करने के लिए धन्यवाद। आगे बढ़ने से पहले, कृपया इस सॉफ़्टवेयर के साथ शामिल <a "
+"href=\"elines$baseUrlarios/docs/README.md\"> README </a> फ़ाइल पढ़ें। लोक "
+"ज्ञान परियोजना और इसकी सॉफ्टवेयर परियोजनाओं के बारे में अधिक जानकारी के लिए, "
+"कृपया <a href=\"http://pkp.sfu.ca/\" target=\"_blank\"> PKP वेब साइट </a> पर "
+"जाएं। यदि आपके पास ओपन जर्नल सिस्टम के बारे में बग रिपोर्ट या तकनीकी सहायता "
+"संबंधी पूछताछ है, तो <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\"> "
+"सहायता फ़ोरम </a> देखें या PKP के ऑनलाइन पर जाएं < a href = \"https://github."
+"com/pkp/pkp-lib#issues\" target = \"_ blank\"> बग रिपोर्टिंग सिस्टम </a>। "
+"यद्यपि समर्थन मंच संपर्क का पसंदीदा तरीका है, आप टीम को <a href=\""
+"mailto:pkp.contact@gmail.com\"> pkp.contact@gmail.com </a> </ p> पर भी ईमेल "
+"कर सकते हैं।\n"
+"\n"
+"<H4> अपग्रेड </ h4>\n"
+"\n"
+"<p> यदि आप OJS की मौजूदा स्थापना को अपग्रेड कर रहे हैं, तो आगे बढ़ने के लिए <"
+"a href=\"elines$upgradUrlarios\"> क्लिक करें </a>। </ p>\n"
+"\n"
+"<h4> अनुशंसित सिस्टम आवश्यकताएँ </ h4>\n"
+"\n"
+"<Ul>\n"
+"<li> <a href=\"http://www.php.net/\" target=\"_blank\"> PHP </a>> = {$ "
+"phpRequiredVersion}; आप वर्तमान में PHP {$ phpVersion} {$ wrongPhpText} </ "
+"li> का उपयोग कर रहे हैं\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >="
+" 9.1.5</li>\n"
+"<li> <a href=\"http://httpd.apache.org/\" target=\"_blank\"> Apache </a>> = "
+"1.3.2x या> = 2.0.4x या Microsoft IIS 6 </ li>\n"
+"<li> ऑपरेटिंग सिस्टम: उपरोक्त OS का समर्थन करने वाला कोई भी OS, जिसमें <a "
+"href=\"http://www.linux.org/\" target=\"_blank\"> Linux </a>, <a href = \""
+"http: //www.bsd.org/ \"लक्ष्य =\" _ रिक्त \"> बीएसडी </a>, <a href=\""
+"http://www.oracle.com/sun/\" target=\"_blank\"> Solaris </a> , <a href=\""
+"http://www.apple.com/\" target=\"_blank\"> Mac OS X </a>, <a href=\""
+"http://www.microsoft.com/\"> Windows < / a> </ li>\n"
+"</ Ul>\n"
+"\n"
+"<p> जैसा कि PKP के पास सॉफ़्टवेयर संस्करणों और प्लेटफार्मों के हर संभव संयो"
+"जन का परीक्षण करने के लिए संसाधन नहीं हैं, सही संचालन या गारंटी की कोई गारंटी"
+" निहित नहीं है। </ p>\n"
+"\n"
+"<p> आधार OJS निर्देशिका में फ़ाइल <tt> config.inc.php </ tt> का संपादन करके, "
+"या साइट प्रशासन वेब इंटरफ़ेस का उपयोग करके इन सेटिंग्स में परिवर्तन किया जा "
+"सकता है। </ p>\n"
+"\n"
+"<h4> समर्थित डेटाबेस सिस्टम </ h4>\n"
+"\n"
+"<p> OJS का वर्तमान में केवल MySQL और PostgreSQL पर परीक्षण किया गया है, "
+"हालाँकि अन्य डेटाबेस प्रबंधन सिस्टम <a href=\"http://adodb.sourceforge.net/\""
+" target=\"_blank\"> ADOdb पर काम कर सकते हैं। (पूर्ण या आंशिक रूप से)। "
+"वैकल्पिक DBMS के लिए संगतता रिपोर्ट और / या कोड पैच OJS टीम को भेजे जा सकते "
+"हैं। </ p>\n"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS अपग्रेड"
+
+msgid "installer.appInstallation"
+msgstr "OJS स्थापना"
+
+msgid "payment.subscription.expires"
+msgstr "समय-सीमा समाप्त"
+
+msgid "payment.subscription.renew"
+msgstr "सदस्यता का नवीनीकरण"
+
+msgid "payment.subscription.purchase"
+msgstr "सदस्यता ख़रीदे"
+
+msgid "payment.membership.ends"
+msgstr "समाप्त होता है"
+
+msgid "payment.membership.renewMembership"
+msgstr "व्यक्तिगत सदस्यता को नवीनीकृत करें"
+
+msgid "payment.membership.buyMembership"
+msgstr "व्यक्तिगत सदस्यता खरीदें"
+
+msgid "payment.publication.publicationPaid"
+msgstr "प्रकाशन शुल्क अदा किया"
+
+msgid "payment.publication.payPublication"
+msgstr "प्रकाशित करने के लिए भुगतान करें"
+
+msgid "payment.submission.paySubmission"
+msgstr "सबमिशन फीस का भुगतान करें"
+
+msgid "payment.donation.makeDonation"
+msgstr "एक दान करें"
+
+msgid "payment.notFound"
+msgstr ""
+"भुगतान का अनुरोध किया गया है, लेकिन अनुरोध समाप्त हो गया है। विवरण के लिए जर्"
+"नल मैनेजर से संपर्क करें।"
+
+msgid "payment.requestPublicationFee"
+msgstr "अनुरोध प्रकाशन शुल्क ({$ feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "दान"
+
+msgid "payment.type.subscription"
+msgstr "सदस्यता शुल्क"
+
+msgid "payment.type.purchaseIssue"
+msgstr "अंक शुल्क खरीदें"
+
+msgid "payment.type.purchaseArticle"
+msgstr "लेख शुल्क खरीदें"
+
+msgid "payment.type.membership"
+msgstr "व्यक्तिगत सदस्यता शुल्क"
+
+msgid "payment.type.fastTrack"
+msgstr "फास्ट ट्रैक समीक्षा शुल्क"
+
+msgid "payment.type.publication.required"
+msgstr "प्रकाशन शुल्क भुगतान के लिए देय है।"
+
+msgid "payment.type.publication"
+msgstr "प्रकाशन शुल्क"
+
+msgid "payment.type.submission"
+msgstr "सबमिशन फीस"
+
+msgid "payment.authorFees"
+msgstr "लेखक शुल्क"
+
+msgid "payment.paymentSent"
+msgstr "भुगतान पहले ही भेज दिया गया है"
+
+msgid "payment.paymentReceived"
+msgstr "भुगतान प्राप्त"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"यदि आपने सबमिशन प्रक्रिया पूरी करने के लिए अपना भुगतान जर्नल को भेज दिया है, "
+"तो इस बॉक्स का चयन करें। भुगतान आने तक सबमिशन की समीक्षा नहीं की जाएगी। भुगता"
+"न निर्देशों को देखने के लिए ऊपर दिए गए भुगतान पर क्लिक करें।"
+
+msgid "payment.alreadyPaid"
+msgstr "पहले से भुगतान किया हुआ"
+
+msgid "payment.waive"
+msgstr "माफ"
+
+msgid "payment.payNow"
+msgstr "अब भुगतान करें"
+
+msgid "payment.paid"
+msgstr "भुगतान किया है"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "डोनेशन करने के लिए आपको लॉग इन होना चाहिए।"
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"आइटम तक पहुंचने के लिए सदस्यता या जारी खरीद की आवश्यकता है। सदस्यता की पुष्टि"
+" करने के लिए, पिछली खरीद या खरीद के अंक पर पहुंचें, जर्नल में लॉग इन करें।"
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"आइटम का उपयोग करने के लिए सदस्यता या लेख खरीद आवश्यक है। सदस्यता को सत्यापित "
+"करने के लिए, पिछली खरीद या लेख खरीदने के लिए, जर्नल में लॉग इन करें।"
+
+msgid "payment.loginRequired"
+msgstr "भुगतान करने के लिए आपको लॉग इन होना चाहिए।"
+
+msgid "donations.thankYouMessage"
+msgstr "योगदान देने के लिए धन्यवाद।आपके योगदान को बहुत सराहा गया है।"
+
+msgid "donations.thankYou"
+msgstr "धन्यवाद"
+
+msgid "help.goToEditPage"
+msgstr "{$ SectionTitle} संपादित करें"
+
+msgid "help.searchReturnResults"
+msgstr "खोज परिणामों पर वापस लौटें"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS मदद"
+
+msgid "help.ojsHelp"
+msgstr "ओपन जर्नल प्रणाली मदद"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"यह साइट ओपन जर्नल सिस्टम {$ ojsVersion} का उपयोग करती है, जो ओपन सोर्स जर्नल "
+"प्रबंधन और प्रकाशन सॉफ्टवेयर विकसित, समर्थित और स्वतंत्र रूप से <a href=\""
+"http://pkp.sfu.ca/\"> सार्वजनिक ज्ञान परियोजना <द्वारा वितरित किया जाता है "
+"जीएनयू जनरल पब्लिक लाइसेंस के तहत ।</a>"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"यह जर्नल ओपन जर्नल सिस्टम {$ ojsVersion} का उपयोग करती है, जो ओपन सोर्स जर्"
+"नल प्रबंधन और प्रकाशन सॉफ्टवेयर विकसित, समर्थित और स्वतंत्र रूप से <a href=\""
+"http://pkp.sfu.ca/\"> सार्वजनिक ज्ञान परियोजना <द्वारा वितरित किया जाता है "
+"जीएनयू जनरल पब्लिक लाइसेंस के तहत  </a>।"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS संपादकीय और प्रकाशन प्रक्रिया"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "इस प्रकाशन प्रणाली के बारे में"
+
+msgid "about.memberships"
+msgstr "सदस्यता"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "सदस्यता प्रकार"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "लागत"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "अवधि"
+
+msgid "about.subscriptionTypes.format"
+msgstr "प्रारूप"
+
+msgid "about.subscriptionTypes.name"
+msgstr "नाम"
+
+msgid "about.subscriptionsContact"
+msgstr "सदस्यता संपर्क करें"
+
+msgid "about.subscriptions.institutional"
+msgstr "संस्थागत सदस्यता"
+
+msgid "about.subscriptions.individual"
+msgstr "व्यक्तिगत सदस्यताएँ"
+
+msgid "about.subscriptions"
+msgstr "सदस्यता"
+
+msgid "about.archiving"
+msgstr "संग्रह"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "एक अंक प्रकाशित होने के बाद महीना।"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "इस जर्नल की सामग्री एक ओपन एक्सेस प्रारूप में उपलब्ध होगी"
+
+msgid "about.delayedOpenAccess"
+msgstr "विलंबित ओपन एक्सेस"
+
+msgid "about.openAccessPolicy"
+msgstr "ओपन एक्सेस नीति"
+
+msgid "about.publicationFrequency"
+msgstr "प्रकाशन की आवृत्ति"
+
+msgid "about.peerReviewProcess"
+msgstr "पीर रिव्यु प्रक्रिया"
+
+msgid "about.authorFeesMessage"
+msgstr "यह जर्नल निम्नलिखित लेखक की फीस लेती है।"
+
+msgid "about.authorFees"
+msgstr "लेखक शुल्क"
+
+msgid "about.privacyStatement"
+msgstr "गोपनीयता वाले कथन"
+
+msgid "about.copyrightNotice"
+msgstr "सर्वाधिकार सूचना"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"प्रस्तुत करने की प्रक्रिया के हिस्से के रूप में, लेखकों को निम्नलिखित सभी "
+"वस्तुओं के साथ अपने सबमिशन के अनुपालन की जांच करना आवश्यक है, और सबमिशन्स उन "
+"लेखकों को वापस की जा सकती हैं जो इन दिशानिर्देशों का पालन नहीं करते हैं।"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "सबमिशन तैयारी चेकलिस्ट"
+
+msgid "about.authorGuidelines"
+msgstr "लेखक दिशानिर्देश"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "अपना अपूर्ण सबमिशन्स देखें"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "एक नया सबमिशन करें"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "<a href=\"{$url}\">{$name}</a> अनुभाग में एक नया सबमिशन करें।"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$ newSubmission} या {$ viewSubmissions}।"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "सबमिशन करने के लिए {$ login} या {$ register}।"
+
+msgid "about.onlineSubmissions.register"
+msgstr "रजिस्टर करें"
+
+msgid "about.onlineSubmissions.login"
+msgstr "लॉग इन करें"
+
+msgid "about.submissions"
+msgstr "सबमिशन्स"
+
+msgid "about.sectionPolicies"
+msgstr "अनुभाग नीतियाँ"
+
+msgid "about.focusAndScope"
+msgstr "फोकस और स्कोप"
+
+msgid "about.editorialPolicies"
+msgstr "संपादकीय नीतियां"
+
+msgid "about.editorialTeam.biography"
+msgstr "जीवनी"
+
+msgid "about.editorialTeam"
+msgstr "संपादकीय टीम"
+
+msgid "about.history"
+msgstr "जर्नल इतिहास"
+
+msgid "about.aboutContext"
+msgstr "जर्नल के बारे में"
+
+msgid "about.contact"
+msgstr "संपर्क करें"
+
+msgid "about.statistics"
+msgstr "सांख्यिकी"
+
+msgid "archive.issueUnavailable"
+msgstr "अंक अनुपलब्ध"
+
+msgid "archive.browse"
+msgstr "पुराने अंको के माध्यम से ब्राउज़ करें"
+
+msgid "archive.archivesPageNumber"
+msgstr "पुरालेखागार - पृष्ठ {$ pageNumber}"
+
+msgid "archive.archives"
+msgstr "पुरालेखागार"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "इस जर्नल्स ने किसी भी अंक को प्रकाशित नहीं किया है।"
+
+msgid "current.noCurrentIssue"
+msgstr "कोई वर्तमान अंक नहीं"
+
+msgid "current.current"
+msgstr "वर्तमान"
+
+msgid "site.noJournals"
+msgstr "कोई जर्नल्स उपलब्ध नहीं है।"
+
+msgid "site.journalCurrent"
+msgstr "नया अंक"
+
+msgid "site.journalRegister"
+msgstr "रजिस्टर करें"
+
+msgid "site.journalView"
+msgstr "जर्नल देखें"
+
+msgid "site.journalsHosted"
+msgstr "इस साइट पर आयोजित जर्नल्स"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"आपके द्वारा चुनी गई फ़ाइल को स्वचालित रूप से डाउनलोड करना शुरू करना चाहिए। "
+"यदि ऐसा नहीं होता है, तो नीचे दिए गए लिंक पर क्लिक करें। ध्यान दें कि इस फ़ा"
+"इल को देखने के लिए एक विशेष दर्शक या प्लग इन की आवश्यकता हो सकती है। <br /> <"
+"br /> यदि फ़ाइल स्वचालित रूप से डाउनलोड नहीं होती है, तो <a href=\"elling>"
+"urlenders\"> यहां क्लिक करें </a>।"
+
+msgid "article.nonpdf.title"
+msgstr "लेख डाउनलोड करें"
+
+msgid "article.pluginMissing"
+msgstr ""
+"यदि आपके वेब ब्राउज़र में पीडीएफ रीडर प्लगइन स्थापित है (उदाहरण के लिए, <a "
+"href=\"https://get.adobe.com/reader/\"> Adobe Acrobat Reader</a>).</p> का एक "
+"हालिया संस्करण), तो आपके द्वारा चयनित PDF फ़ाइल यहां लोड होनी चाहिए।"
+
+msgid "article.download"
+msgstr "इस पीडीएफ फाइल को डाउनलोड करें"
+
+msgid "article.pdf.title"
+msgstr "पोर्टेबल दस्तावेज़ प्रारूप (पीडीएफ)"
+
+msgid "article.pageTitle"
+msgstr "{$ title} देखें"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"खोज सुझाव: <ul>\n"
+"<li> खोज शब्द केस-असंवेदनशील हैं </ li>\n"
+"<li> सामान्य शब्दों को अनदेखा किया जाता है </ li>\n"
+"<li> डिफ़ॉल्ट रूप से  क्वीरी में केवल <em> सभी </ em> शब्द वाले लेख वापस आ "
+"जाते हैं (यानी, <em> और </ em> निहित है) </ li>\n"
+"<li> या तो शब्द युक्त लेख खोजने के लिए <em> या </ em> के साथ कई शब्दों को "
+"मिलाएं; जैसे, <em> शिक्षा या अनुसंधान </ em> </ li>\n"
+"<li> अधिक जटिल प्रश्न बनाने के लिए कोष्ठक का उपयोग करें; जैसे, <em> संग्रह "
+"((पत्रिका या सम्मेलन) नहीं शोध) </ em> </ li>\n"
+"<li> इसे उद्धरणों में डालकर एक सटीक वाक्यांश खोजें; जैसे, <em> \"ओपन एक्सेस "
+"प्रकाशन\" </ em> </ li>\n"
+"<li> किसी शब्द को <strong> - </ strong> या <em> न </ em> के साथ उपसर्ग करके "
+"बाहर निकालें; जैसे <em> ऑनलाइन-राजनीति </ em> या <em> ऑनलाइन राजनीति नहीं </ "
+"em> </ li>\n"
+"<li> वर्णों के किसी भी क्रम से मेल खाने के लिए वाइल्डकार्ड के रूप में एक शब्"
+"द में <strong> * </ strong> का उपयोग करें; जैसे, <em> soci * नैतिकता </ em> "
+"\"समाजशास्त्रीय\" या \"सामाजिक\" </ li> युक्त दस्तावेज़ों से मेल खाएगा।\n"
+"</ Ul>"
+
+msgid "search.authorDetails"
+msgstr "लेखक का विवरण"
+
+msgid "search.authorIndex"
+msgstr "लेखक सूचकांक ब्राउज़ करें"
+
+msgid "search.allJournals"
+msgstr "सभी जर्नल"
+
+msgid "search.withinJournal"
+msgstr "अंदर"
+
+msgid "search.searchFor"
+msgstr "के लिए लेख खोजें"
+
+msgid "search.browseAuthorIndex"
+msgstr "लेखक सूचकांक ब्राउज़ करें"
