@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-02 02:10+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2020-05-02 16:34+0000\n"
+"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -130,3 +130,115 @@ msgstr "Kiểu xuất bản"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr "Tiếng Việt (vi_VN)"
+
+msgid "manager.people.showNoRole"
+msgstr "Hiển thị những người dùng không có vai trò"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Đăng ký người dùng từ trang web này trong Tạp chí này"
+
+msgid "manager.people.allJournals"
+msgstr "Tất cả tạp chí"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Người dùng đã đăng ký trong Tạp chí này"
+
+msgid "manager.payment.userName"
+msgstr "ID thanh toán"
+
+msgid "manager.paymentTypes"
+msgstr "Phương thức thanh toán"
+
+msgid "manager.payment.records"
+msgstr "Hồ sơ thanh toán"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Các tùy chọn được chọn, cùng với các mô tả và phí của chúng (có thể được "
+"chỉnh sửa bên dưới), sẽ xuất hiện trong Giới thiệu về Tạp chí theo Chính "
+"sách, cũng như tại các điểm cần thanh toán."
+
+msgid "manager.payment.readerFees"
+msgstr "Phí bạn đọc"
+
+msgid "manager.payment.paymentType"
+msgstr "Hình thức thanh thoán"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Phương thức thanh toán phí"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Bạn có thể định cấu hình bất kỳ Plugin Phương thức thanh toán nào sau đây từ "
+"màn hình này."
+
+msgid "manager.payment.paymentMethod"
+msgstr "Phương thức thanh toán"
+
+msgid "manager.payment.paymentId"
+msgstr "ID thanh toán"
+
+msgid "manager.payment.options.text"
+msgstr "Môt tả phương thức thanh toán"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Mua số xuất bản"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Mua bài báo"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Điều khoản xử lý phí"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Chỉ hạn chế quyền truy cập vào phiên bản PDF của các số và các bài viết"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Thành viên hiệp hội"
+
+msgid "manager.payment.options.feeName"
+msgstr "Tên lệ phí"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Mô tả phí"
+
+msgid "manager.payment.options.fee"
+msgstr "Lệ phí"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Thanh toán sẽ được kích hoạt cho tạp chí này. Lưu ý rằng người dùng sẽ được "
+"yêu cầu đăng nhập để thực hiện thanh toán."
+
+msgid "manager.payment.success"
+msgstr "Các cài đặt thanh toán đã được cập nhật."
+
+msgid "manager.payment.description"
+msgstr "Mô tả"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Đây sẽ là ngôn ngữ mặc định cho trang web tạp chí"
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Xin lỗi, không có ngôn ngữ bổ sung có sẵn. Liên hệ với quản trị viên trang "
+"web của bạn nếu bạn muốn sử dụng ngôn ngữ bổ sung với tạp chí này."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS có thể được cung cấp cho người dùng bằng bất kỳ ngôn ngữ nào được hỗ "
+"trợ. Đồng thời, OJS có thể hoạt động như một hệ thống đa ngôn ngữ, cung cấp "
+"cho người dùng khả năng chuyển đổi giữa các ngôn ngữ trên mỗi trang và cho "
+"phép một số dữ liệu nhất định được nhập bằng một số ngôn ngữ bổ sung. <br/> <"
+"br/> Nếu một ngôn ngữ được OJS hỗ trợ không được liệt kê dưới đây, hãy yêu "
+"cầu quản trị viên trang web của bạn cài đặt ngôn ngữ từ giao diện quản trị "
+"trang. Để được hướng dẫn về việc thêm hỗ trợ cho các ngôn ngữ mới, vui lòng "
+"tham khảo tài liệu OJS."
+
+msgid "manager.files.note"
+msgstr ""
+"Lưu ý: Trình duyệt tập tin là một tính năng nâng cao cho phép các tập tin và "
+"thư mục được liên kết với tạp chí được xem và thao tác trực tiếp."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Sử dụng ngày của số xuất bản"
