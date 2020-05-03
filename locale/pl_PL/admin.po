@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
+"PO-Revision-Date: 2020-05-03 12:02+0000\n"
+"Last-Translator: Dorota Siwecka <dorota.k.siwecka@gmail.com>\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/admin/pl/>\n"
+"Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "admin.hostedContexts"
 msgstr "Czasopisma"
@@ -21,7 +24,7 @@ msgid "admin.settings.redirectInstructions"
 msgstr "Żądania wyświetlenia strony głównej będą przekierowane do wybranego czasopisma."
 
 msgid "admin.languages.primaryLocaleInstructions"
-msgstr "Domyślny język dla strony oraz wszystkich czasopism"
+msgstr "Domyślny język dla strony oraz wszystkich czasopism."
 
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Wybierz wszystkie języki wspierane w obrębie strony."
@@ -81,10 +84,12 @@ msgid "admin.journals.createInstructions"
 msgstr "Zostaniesz automatycznie przydzielony jako administrator tego czasopisma. Po utworzeniu czasopisma, zaloguj się jako administrator w celu dokończenia procesu konfiguracji."
 
 msgid "admin.journals.urlWillBe"
-msgstr "Krótkie słowo lub akronim identyfikujące czasopismo. Adres będzie miał postać {$sampleUrl}"
+msgstr ""
+"Krótkie słowo lub akronim identyfikujące czasopismo. Adres będzie miał "
+"postać {$sampleUrl}."
 
 msgid "admin.journals.enableJournalInstructions"
-msgstr "Włącz czasopismo aby było widoczne w obrębie całej strony."
+msgstr "Włącz czasopismo aby było widoczne w obrębie całej strony"
 
 msgid "admin.contexts.contextDescription"
 msgstr "Opis czasopisma"
@@ -141,7 +146,7 @@ msgstr ""
 "<p>Pliki języka mogą być pobrane ręcznie <a href=\"http://pkp.sfu.ca\">ze strony PKP</a>.</p>"
 
 msgid "admin.mergeUsers.noneEnrolled"
-msgstr "Brak przypisanych użytkowników"
+msgstr "Brak przypisanych użytkowników."
 
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Powiadomienie o końcu subskrypcji"
@@ -169,3 +174,19 @@ msgstr "Ścieżka może składać się ze znaków alfabetu łacińskiego, podkre
 
 msgid "admin.contexts.form.pathExists"
 msgstr "Wybrana ścieżka jest już w użyciu przez inne czasopismo."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "Pomyślnie  edytowano {$name}."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} utworzono pomyślnie."
+
+msgid "admin.settings.info.success"
+msgstr "Informacje o stronie zostały pomyślnie zaktualizowane."
+
+msgid "admin.settings.config.success"
+msgstr ""
+"Ustawienia konfiguracji strony internetowej zostały pomyślnie zaktualizowane."
+
+msgid "admin.settings.appearance.success"
+msgstr "Ustawienia wyglądu strony zostały pomyślnie zaktualizowane."
