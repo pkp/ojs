@@ -315,7 +315,7 @@ class IssueGridHandler extends GridHandler {
 			}
 			$publications = (array) $submission->getData('publications');
 			foreach ($publications as $publication) {
-				$publication = Services::get('publication')->edit($publication, ['issueId' => '']);
+				$publication = Services::get('publication')->edit($publication, ['issueId' => ''], $request);
 			}
 		}
 
