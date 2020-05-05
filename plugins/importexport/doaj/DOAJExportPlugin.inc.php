@@ -107,14 +107,8 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	 */
 	function depositXML($objects, $context, $jsonString) {
 
-		$curlCh = curl_init();
-		if ($httpProxyHost = Config::getVar('proxy', 'http_host')) {
-			curl_setopt($curlCh, CURLOPT_PROXY, $httpProxyHost);
-			curl_setopt($curlCh, CURLOPT_PROXYPORT, Config::getVar('proxy', 'http_port', '80'));
-			if ($username = Config::getVar('proxy', 'username')) {
-				curl_setopt($curlCh, CURLOPT_PROXYUSERPWD, $username . ':' . Config::getVar('proxy', 'password'));
-			}
-		}
+		import('lib.pkp.classes.helpers.PKPCurlHelper');
+		$curlCh = PKPCurlHelper::getCurlObject();
 
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curlCh, CURLOPT_POST, true);
