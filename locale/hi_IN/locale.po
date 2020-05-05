@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-05-04 06:21+0000\n"
+"PO-Revision-Date: 2020-05-05 16:49+0000\n"
 "Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
 "Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/locale/hi/>\n"
 "Language: hi_IN\n"
@@ -2270,3 +2270,243 @@ msgid "log.author.documentRevised"
 msgstr ""
 "{$ authorName} ने लेख {$ submissionId} संशोधित किया है। नई फ़ाइल आईडी {$ "
 "fileId} है।"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "इस श्रेणी में लेख क्रम करने का तरीका चुनें।"
+
+msgid "catalog.sortBy"
+msgstr "लेखों का क्रम"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$ editorName} ने लेख के लिए संपादन प्रक्रिया ली है {$ submissionId}।"
+
+msgid "navigation.subscriptions"
+msgstr "सदस्यता"
+
+msgid "editor.issues.futureIssues"
+msgstr "भविष्य के अंक"
+
+msgid "editor.issues.backIssues"
+msgstr "पिछले अंक"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"दिए गए जर्नल पथ \"{$ journalPath}\" को किसी जर्नल से हल नहीं किया जा सकता है।"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "यह खोज कार्यान्वयन प्रति-पत्रिका पुन: अनुक्रमण की अनुमति नहीं देता है।"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "अनुक्रमण \"{$ journalName}\""
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p> इस गैली का अनुमोदन हटाएँ। </ p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p> प्रकाशन के लिए इस गैली को स्वीकृत करें। </ p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "गैली अनुमोदन"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "अनुमोदन का इंतजार।"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "स्वीकृत"
+
+msgid "article.view.interstitial"
+msgstr "कृपया डाउनलोड करने के लिए एक लेख फ़ाइल चुनें।"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "अन्य जर्नल्स को छिपाएं"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "अन्य जर्नल्स के साथ रजिस्टर करें"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "अनुमोदन का इंतजार।"
+
+msgid "notification.type.approveSubmission"
+msgstr "यह सबमिशन जारी होने से पहले इस अंक में मंजूरी का इंतजार कर रहा है।"
+
+msgid "editor.navigation.issues"
+msgstr "अंक"
+
+msgid "grid.action.createContext"
+msgstr "एक नया जर्नल बनाएँ"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "एक्सएमएल से लोड मुद्रा सूची \"{$ filename}\""
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"अमान्य प्रतिलिपि संपादक सबमिशन या कोई प्रतिलिपि संपादक सबमिशन करने का अनुरोध "
+"नहीं किया गया है!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "अनुरोधित अवैध अंक!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr ""
+"आप एक लेख का उपयोग करने की कोशिश कर रहे हैं जो आपके अनुभाग का हिस्सा नहीं है।"
+
+msgid "user.authorization.noContext"
+msgstr "संदर्भ में कोई जर्नल नहीं!"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"पहुंच अस्वीकृत! आपको इस लेख में प्रतिलिपि संपादक के रूप में असाइन नहीं किया "
+"गया है।"
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "गैलिस का इंतजार।"
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"प्रतिभागियों की सूची में असाइन लिंक का उपयोग करके एक उपयोगकर्ता को गैलिस "
+"बनाने के लिए असाइन करें।"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "एक नया लेख प्रस्तुत किया गया है जिसमें एक संपादक को सौंपा जाना चाहिए।"
+
+msgid "notification.savedIssueMetadata"
+msgstr "अंक प्रकाशन मेटाडेटा सहेजा गया।"
+
+msgid "notification.type.public"
+msgstr "सार्वजनिक घोषणाएँ"
+
+msgid "notification.type.userComment"
+msgstr "एक पाठक ने \"{$ title}\" पर एक टिप्पणी की है"
+
+msgid "notification.type.submissions"
+msgstr "सबमिशन आयोजन"
+
+msgid "notification.type.submissionComment"
+msgstr "एक संपादक ने \"{$ title}\" पर एक टिप्पणी की है।"
+
+msgid "notification.type.site"
+msgstr "साइट आयोजन"
+
+msgid "notification.type.reviewing"
+msgstr "आयोजन की समीक्षा करना"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "\"{$ title}\" के लिए एक समीक्षा फ़ॉर्म समीक्षा प्रस्तुत की गई है।"
+
+msgid "notification.type.newAnnouncement"
+msgstr "एक नई घोषणा की गई है।"
+
+msgid "notification.type.issuePublished"
+msgstr "एक अंक प्रकाशित किया गया है।"
+
+msgid "notification.type.galleyModified"
+msgstr "\"{$ title}\" के लिए एक गैली को संशोधित किया गया है।"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "\"{$ title}\" के लिए संपादक के निर्णय पर एक टिप्पणी छोड़ दी गई है।"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "एक नया लेख, \"{$ title}\" प्रस्तुत किया गया है।"
+
+msgid "notification.type.editing"
+msgstr "संपादन कार्यक्रम"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "सहकर्मी-समीक्षा लेख"
+
+msgid "log.imported"
+msgstr "{$userName} ने लेख {$submissionId} आयात किया है।"
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} शेड्यूलिंग के लिए {$submissionId} जमा किया है।"
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$ assignerName} ने {$ proofreaderName} को प्रूफ़रीड सबमिशन {$ submissionId} "
+"करने के लिए असाइन किया है।"
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$ EditorName} को सबमिशन करने के लिए {$ submissionId} संपादक के रूप में सौंपा"
+" गया है।"
+
+msgid "log.editor.archived"
+msgstr "सबमिशन {$ submissionId} को संग्रहीत किया गया है।"
+
+msgid "log.editor.editorFile"
+msgstr "सबमिशन फ़ाइल का एक संपादक संस्करण अपलोड किया गया है।"
+
+msgid "log.editor.metadataModified"
+msgstr "इस लेख के मेटाडेटा को {$ editorName} द्वारा संशोधित किया गया था।"
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} सबमिशन {$submissionId} करने के लिए लेआउट संपादन पूरा कर लिया "
+"है।"
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$ editorName} को सबमिशन {$ submissionId} लेआउट संपादक के रूप में निर्दिष्ट "
+"नहीं किया गया है।"
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$ editorName} को सबमिशन {$ submissionId} लेआउट संपादक के रूप में सौंपा गया "
+"है।"
+
+msgid "log.copyedit.authorFile"
+msgstr ""
+"लेखक द्वारा प्रतिलिपि संपादित की गई सबमिशन फ़ाइल का एक संस्करण अपलोड किया गया"
+" है।"
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "सबमिशन फ़ाइल का एक प्रतिलिपि संस्करण अपलोड किया गया है।"
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} ने सबमिशन {$submissionId} की फाइनल प्रतिलिपि संपादित कर ली "
+"है।"
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$ copyeditorName} ने सबमिशन की प्रारंभिक प्रतिलिपि तैयार कर ली है {$ "
+"submissionId}।"
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "डिफ़ॉल्ट प्रतिलिपि फ़ाइल को चुना गया है।"
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"{$ submissionId} पर सबमिशन करने की प्रतिलिपि {$ copyeditorName} द्वारा शुरू "
+"की गई है।"
+
+msgid "log.editor.recommendation"
+msgstr ""
+"लेख {$ submissionId} के लिए एक संपादक की सिफारिश ({$ decision}) {$ "
+"EditorName} द्वारा दर्ज की गई थी।"
+
+msgid "log.editor.decision"
+msgstr ""
+"लेख {$submissionId} के लिए एक संपादक निर्णय ({$decision}) {$editorName} "
+"द्वारा दर्ज किया गया था।"
+
+msgid "log.review.reviewerFile"
+msgstr "एक समीक्षक फ़ाइल अपलोड की गई है।"
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$ reviewerName} ने सबमिशन {$ submissionId} के लिए राउंड {$ round} रिव्यू को "
+"अस्वीकार कर दिया है।"
+
+msgid "log.review.resubmit"
+msgstr "सबमिशन {$submissionId} को समीक्षा के लिए पुन प्रस्तुत किया गया है।"
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"{$round} सबमिशन {$submissionId} की समीक्षा {$reviewerName} द्वारा की गई बैठक "
+"के लिए सिफारिश तय कर दी गई है।"
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"{$round} सबमिशन {$submissionId} की समीक्षा {$reviewerName} द्वारा {$dueDate} "
+"के लिए नियत तिथि निर्धारित की गई है।"
