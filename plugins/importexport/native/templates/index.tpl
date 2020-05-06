@@ -68,19 +68,43 @@
 		<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
 			{csrf}
 			{fbvFormArea id="submissionsXmlForm"}
+				<submissions-list-panel
+					v-bind="components.submissions"
+					@set="set"
+				>
+
+					<template v-slot:item="{ldelim}item{rdelim}">
+						<div class="listPanel__itemSummary">
+							<label>
+								<input
+									type="checkbox"
+									name="selectedSubmissions[]"
+									:value="item.id"
+									v-model="selectedSubmissions"
+								/>
+								<span class="listPanel__itemSubTitle">
+									{{ localize(item.publications.find(p => p.id == item.currentPublicationId).fullTitle) }}
+								</span>
+							</label>
+							<pkp-button element="a" :href="item.urlWorkflow" style="margin-left: auto;">
+								{{ __('common.view') }}
+							</pkp-button>
+						</div>
+					</template>
+				</submissions-list-panel>
 				{fbvFormSection}
-					{assign var="uuid" value=""|uniqid|escape}
-					<div id="export-submissions-{$uuid}">
-						<select-submissions-list-panel
-							v-bind="components.exportSubmissionsListPanel"
-							@set="set"
-						/>
-					</div>
-					<script type="text/javascript">
-						pkp.registry.init('export-submissions-{$uuid}', 'Container', {$exportSubmissionsListData|json_encode});
-					</script>
+					<pkp-button :disabled="!components.submissions.itemsMax" @click="toggleSelectAll">
+						<template v-if="components.submissions.itemsMax && selectedSubmissions.length >= components.submissions.itemsMax">
+							{translate key="common.selectNone"}
+						</template>
+						<template v-else>
+							{translate key="common.selectAll"}
+						</template>
+					</pkp-button>
+					<pkp-button type="submit" id="submitFormButton" @click="$('#exportSubmissionXmlForm').submit()">
+						{translate key="plugins.importexport.native.exportSubmissions"}
+					</pkp-button>
 				{/fbvFormSection}
-				{fbvFormButtons submitText="plugins.importexport.native.exportSubmissions" hideCancel="true"}
 			{/fbvFormArea}
 		</form>
 	</div>

@@ -71,28 +71,28 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
-				// $exportSubmissionsListPanel = new \PKP\components\listPanels\PKPSelectSubmissionsListPanel(
-				// 	'exportSubmissionsListPanel',
-				// 	__('plugins.importexport.native.exportSubmissionsSelect'),
-				// 	[
-				// 		'apiUrl' => $request->getDispatcher()->url(
-				// 			$request,
-				// 			ROUTE_API,
-				// 			$context->getPath(),
-				// 			'_submissions'
-				// 		),
-				// 		'canSelect' => true,
-				// 		'canSelectAll' => true,
-				// 		'count' => 100,
-				// 		'lazyLoad' => true,
-				// 		'selectorName' => 'selectedSubmissions[]',
-				// 	]
-				// );
-				// $templateMgr->assign('exportSubmissionsListData', [
-				// 	'components' => [
-				// 		'exportSubmissionsListPanel' => $exportSubmissionsListPanel->getConfig()
-				// 	]
-				// ]);
+				$apiUrl = $request->getDispatcher()->url($request, ROUTE_API, $context->getPath(), 'submissions');
+				$submissionsListPanel = new \APP\components\listPanels\SubmissionsListPanel(
+					'submissions',
+					__('common.publications'),
+					[
+						'apiUrl' => $apiUrl,
+						'count' => 100,
+						'getParams' => new stdClass(),
+						'lazyLoad' => true,
+					]
+				);
+				$submissionsConfig = $submissionsListPanel->getConfig();
+				$submissionsConfig['addUrl'] = '';
+				$submissionsConfig['filters'] = array_slice($submissionsConfig['filters'], 1);
+				$templateMgr->setState([
+					'components' => [
+						'submissions' => $submissionsConfig,
+					],
+				]);
+				$templateMgr->assign([
+					'pageComponent' => 'ImportExportContainer',
+				]);
 				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 			case 'uploadImportXML':
