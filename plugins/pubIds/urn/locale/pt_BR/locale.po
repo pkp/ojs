@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:35-07:00\n"
-"PO-Revision-Date: 2020-05-06 23:48+0000\n"
+"PO-Revision-Date: 2020-05-07 02:13+0000\n"
 "Last-Translator: Felipe Geremia Nievinski <fgnievinski@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "pubIds-urn/pt_BR/>\n"
@@ -18,19 +18,19 @@ msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjects"
-msgstr "Conteúdo"
+msgstr "Conteúdo do Periódico"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
 msgstr "Escolha a quais objetos serão atribuídos URNs."
 
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
-msgstr "URNs serão atribuídos a edições."
+msgstr "Edições"
 
 msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
 msgstr "URNs serão atribuídos a artigos"
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
-msgstr "URNs serão atribuídos a composições (ex.: arquivos HTML e/ou PDF)."
+msgstr "Composições"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
 msgstr "Prefixo URN"
@@ -112,14 +112,13 @@ msgstr ""
 "(URN) atribuídos:"
 
 msgid "plugins.pubIds.urn.manager.settings.description"
-msgstr "Configure o plugin URN para poder gerenciar e usar URNs no OJS:"
+msgstr "Favor configurar o plugin URN para poder gerenciar e usar URNs no OJS:"
 
 msgid "plugins.pubIds.urn.description"
 msgstr ""
-"Este plugin permite a atribuição dos Nomes de Recursos Uniformes aos "
-"fascículos, artigos e composições finais no OJS."
+"Este plugin permite a atribuição dos Nomes Uniformes de Recursos a edições, "
+"artigos e composições finais no OJS."
 
-#, fuzzy
 msgid "plugins.pubIds.urn.editor.preview.objects"
 msgstr "Item"
 
@@ -206,7 +205,7 @@ msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
 msgstr "(por exemplo, http://nbn-resolving.de/)"
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver"
-msgstr "Resolver URL"
+msgstr "URL do Resolvedor"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
 msgstr ""
