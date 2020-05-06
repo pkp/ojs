@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:35-07:00\n"
-"PO-Revision-Date: 2020-01-30 08:35+0000\n"
-"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"PO-Revision-Date: 2020-05-06 23:48+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "pubIds-urn/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -118,3 +118,113 @@ msgid "plugins.pubIds.urn.description"
 msgstr ""
 "Este plugin permite a atribuição dos Nomes de Recursos Uniformes aos "
 "fascículos, artigos e composições finais no OJS."
+
+#, fuzzy
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Item"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Composição: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Um URN não foi atribuído a esta publicação."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "O URN para esta publicação será {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "O URN deve começar com {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Você não pode gerar um URN porque uma ou mais partes do padrão URN estão com "
+"dados ausentes. Pode ser necessário atribuir a publicação a uma edição, "
+"definir um ID de editor ou inserir números de páginas."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Você não pode gerar um URN até que esta publicação tenha sido atribuída a "
+"uma edição."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Atribuir"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "O URN deve começar com {$ prefix}."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "O URN {$ pubId} foi atribuído."
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr ""
+"O URN não pode ser atribuído, porque está faltando o sufixo customizado."
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Atribua o URN {$pubId} a este {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Use a opção a seguir para limpar URNs de todos os objetos (artigos e "
+"composições) atualmente agendados para essa edição."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr ""
+"Tem certeza de que deseja excluir os URNs de objetos de edição existentes?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Limpar URNs de objetos de edição"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Tem certeza de que deseja excluir o URN existente?"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Limpar"
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"O sufixo URN fornecido já está em uso para outro item publicado. Digite um "
+"sufixo URN exclusivo para cada item."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "O URN é atribuído a este {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"O que você vê é uma prévia do URN. Marque a caixa de seleção e salve o "
+"formulário para atribuir o URN."
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "composição final"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "artigo"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "edição"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(por exemplo, http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Resolver URL"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Insira um sufixo URN individual para cada item publicado. Você encontrará um "
+"campo de entrada URN adicional de cada item na página de metadados."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i para edições <br />%j.v%vi%i.%a para artigos <br />%j.v%vi%i.%a.g%"
+"g para composições finais."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Use os padrões predefinidos."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Use o padrão digitado abaixo para gerar sufixos URN. Use %j para as iniciais "
+"da revista, %v para o número do volume, %i para o número da edição, %Y para "
+"o ano,  a para o ID do artigo do OJS, %g para o ID da composição final, %f "
+"para o ID do arquivo do OJS , %p para o número da página e %x para \""
+"Identificador personalizado\"."
