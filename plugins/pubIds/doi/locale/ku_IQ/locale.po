@@ -1,0 +1,246 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-15 15:31+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
+"ku_IQ/>\n"
+"Language: ku_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "دانە"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "تابلۆ: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ ئەم بڵاوکراوەیە جێگیر نەکراوە."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "ناسێنەری سەرچاوە دیجیتاڵییەکانی ئەم بڵاوکراوەیە {$doi} دەبێت."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "ناسێنەری سەرچاوە دیجیتاڵییەکان دەبێت بە {$doiPrefix} دەست پێ بکات."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ {$pubId} ئەرکدار کرا."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr ""
+"ناسێنەری سەرچاوە دیجیتاڵییەکانی {$pubId} جێگیر نابێت چونکە کێشەی تێدایە."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr ""
+"ناسێنەری سەرچاوە دیجیتاڵییەکان جێگیر نابێت چونکە پاشگری تایبەتی بۆ "
+"دانەندراوە."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr ""
+"ئەرکدارکردنی ناسێنەری سەرچاوە دیجیتاڵییەکان {$pubId} بۆ {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"ئەم بژاردەیە بۆ سڕینەوەی ناسێنەری سەرچاوە دیجیتاڵییەکان بەکار بهێنە کە لە "
+"ئێستادا ئەرکدار کراون بۆ بڵاوکردنەوە."
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "ئایا تۆ دڵنیایت لە سڕینەوەی ناسێنەری سەرچاوە دیجیتاڵییەکان؟"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ ئەم ژمارەیە بسڕەوە"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "ئایا تۆ لە سڕینەوەی ناسێنەری سەرچاوە دیجیتاڵییەکان دڵنیایت؟"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "سڕینەوەی ناسێنەری سەرچاوە دیجیتاڵییەکان"
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"پاشگری ئەم ناسێنەری سەرچاوە دیجیتاڵییە بۆ بڵاوکراوەیەکی دیکە بەکار هاتووە. "
+"تکایە پاشگری جیاواز بۆ هەر بڵاوکراوەیەک بەکار بهێنە."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ {$pubObjectType} ئەرکدار کراوە."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr ""
+"تۆ چی دەبینیت لە پیشاندانی پێشوەختەی ناسێنەری سەرچاوە دیجیتاڵییەکان. یەکێک "
+"لە بۆکسەکان دیاری بکە و فۆڕمەکە خەزن بکە بۆ ئەرکدارکردنی ناسێنەری سەرچاوە "
+"دیجیتاڵییەکان."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "ناسێنەری سەرچاوە دیجیتاڵییەکان گرێ نادرێت چونکە کێشەی تێدا هەیە."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"تۆ ناتوانیت ناسێنەری سەرچاوە دیجیتاڵییەکان بەدەست بهێنیت لەبەر ئەوەی بەشێک "
+"یان زیاتری ناسێنەری سەرچاوە دیجیتاڵییەکان ونە. لەوانەیە وا پێویست بکات کە تۆ "
+"بڵاوکراوەکە بە ژمارەیەکی گۆڤارەوە گرێ بدەیت، یان ناسنامەی بڵاوکراوەکە دیاری "
+"بکەیت یان ژمارەی پەڕەکان داخل بکەیت."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"تۆ ناتوانیت ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ ئەم توێژینەوەیە دیاری بکەیت، "
+"هەتا توێژینەوەکە بە یەکێک لە ژمارەکانی گۆڤارەوە گرێ نەدرێت."
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr ""
+"ناسێنەری سەرچاوە دیجیتاڵییەکان جێگیر نابێت چونکە پاشگرەکەی بۆ دیاری نەکراوە."
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "تابلۆ"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "توێژینەوە"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "ژمارە"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "ئەرکدارکردن"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "ناسێنەری سەرچاوە دیجیتاڵییەکان دەبێت بە {$prefix}دەست پێ بکات."
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "ناسێنەری سەرچاوە دیجیتاڵییەکان DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"ئایا تۆ دڵنیایت لە ئەرکدارکردنی ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ هەمو ئەو "
+"بڵاوکراوانەی کە ئەو ژمارەیەیان نییە؟"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ هەمو بابەتە بڵاوکراوەکانی گۆڤار ئەرکدار "
+"بکە. ئەم کردارە تەنیا بە پاشگر جێبەجێ ناکرێت. ئەگەر تۆ ناسێنەری سەرچاوە "
+"دیجیتاڵییەکانت لە سەرەوە دەستکاری کردووە، تکایە گۆڕانکارییەکان خەزن بکە پێش "
+"دەستپێکردنی ئەم هەنگاوە. ئەرکدارکردنی ناسێنەری سەرچاوە دیجیتاڵییەکان "
+"لەوانەیە کاتی زۆر بخایەنێت، کە پەیوەستە بە ژمارەی بابەتە بڵاوکراوەکانی "
+"گۆڤارەوە."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "ئەرکدارکردنی ناسێنەری سەرچاوە دیجیتاڵییەکان"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr ""
+"ئایا تۆ دڵنیایت لە سڕینەوەی هەمو ناسێنەری سەرچاوە دیجیتاڵییە بەردەستەکان؟"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr ""
+"ئەگەر ڕێکخستنەکانی ناوی سەرچاوە دیجیتاڵییەکان بگۆڕدرێن، ناوی سەرچاوە "
+"دیجیتاڵییەکان کە ئەرکدار کراون ناگۆڕێن. کاتێک گۆڕانکارییەکە خەزن بو، کلیک "
+"بکە بۆ سڕینەوەی هەمو ناوی سەرچاوە دیجیتاڵییە بەردەستەکان، بەمجۆرە ڕێکخستنە "
+"نوێیەکە جێیان دەگرێتەوە."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "دوبارە ئەرکدارکردنەوەی ناسێنەری سەرچاوە دیجیتاڵییەکان"
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "تکایە پاشگری ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ تابلۆکان زیاد بکە."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "تکایە پاشگری ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ توێژینەوەکان داخل بکە."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr ""
+"تکایە پاشگری ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ ژمارەکانی گۆڤار داخل بکە."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"تکایە پاشگری DOI بۆ هەر بڵاوکراوەیەک داخل بکە. تۆ شوێنی داخلکردنەکە لە پەیجی "
+"زانیاریی ناسێنەری هەر دانەیەکدا دەدۆزیتەوە."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i بۆ ژمارەکان<br />%j.v%vi%i.%a بۆ توێژینەوەکان<br />%j.v%vi%i.%a.g%"
+"g بۆ تابلۆکان."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "ڕێکخستنە بنەڕەتییەکان بەکار بهێنە."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "بۆ تابلۆکان"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "بۆ توێژینەوەکان"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "بۆ ژمارەکان"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"بۆ نمونە،  vol%viss%ipp%p دەتوانیت ناسێنەری سەرچاوە دیجیتاڵییەکان دروست "
+"بکەیت وەک 10.1234/vol3iss2pp230"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"ئەو شێوازەی خوارەوە بەکار بهێنە بۆ زیادکردنی پاشگری DOI. بۆ دەستپێک %j بەکار "
+"بهێنە، %v بۆ ژمارەی وەرزیی گۆڤار، %i بۆ ژمارەی گۆڤار، %Y بۆ ساڵ، %a بۆ "
+"ناسنامەی توێژینەوەکە لە سیستەمی گۆڤاری کراوەدا، %g بۆ تابلۆی توێژینەوەکە لە "
+"سیستەمی گۆڤاری کراوەدا، %f بۆ ناسنامەی سیستەمی گۆڤاری کراوەی توێژینەوەکە، %p "
+"بۆ ژمارەی لاپەڕە و %x بۆ ناسێنەری ڕاسپێردراو."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr ""
+"پاشگری ناسێنەری سەرچاوە دیجیتاڵییەکان دەکرێت بە هەر جۆرێک ڕیز بکرێت، بەڵام "
+"نابێت هاوشێوەی بڵاوکراوەکانی دیکە بێت و دەبێت هەمان شت بێت لەگەڵ پێشگری "
+"ئەرکدارکراوی ناسێنەری سەرچاوە دیجیتاڵییەکان:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "پاشگری ناسێنەری سەرچاوە دیجیتاڵییەکان"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr ""
+"پێشگری ناسێنەری سەرچاوە دیجیتاڵییەکان دەبێت هەبێت و بەم شێوەیە بێت 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr ""
+"پێشگری ناسێنەری سەرچاوە دیجیتاڵییەکان لە لایەن ئاژانسە تۆمارکراوەکان ئەرکدار "
+"کراوە (بۆ نمونە. <a href=\"http://www.crossref.org\" target=\"_new\""
+">Crossref</a>) ئەمەش بەم جۆرە ڕێکخستنەیە 10.xxxx (وەک 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "پێشگری ناسێنەری سەرچاوە دیجیتاڵییەکان"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "تابلۆکان"
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "توێژینەوەکان"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "ژمارەکان"
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr ""
+"تکایە ئەو بڵاوکراوانە دیاری بکە کە ناسێنەری سەرچاوە دیجیتاڵییەکانیان بۆ "
+"دیاری کراوە:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"تکایە ئەو ناسێنەری سەرچاوە دیجیتاڵییانە دیاری بکە کە دەبێت بۆی ئەرکدار بکرێن."
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "ناوەرۆکی گۆڤار"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr ""
+"تکایە ناسێنەری سەرچاوە دیجیتاڵییەکان کارا بکە بۆ ئەوەی بتوانیت لە سیستەمی "
+"گۆڤاری کراوەدا بەکاری بهێنیت:"
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI ناسێنەری سەرچاوە دیجیتاڵییەکان"
+
+msgid "plugins.pubIds.doi.description"
+msgstr ""
+"ئەم گرێدانە ناسێنەری سەرچاوە دیجیتاڵییەکان بۆ کێشەکان، توێژینەوەکان و "
+"تابلۆکان لە سیستەمی گۆڤاری کراوەدا ئەرکدار دەکات."
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI ناسێنەری سەرچاوە دیجیتاڵییەکان"

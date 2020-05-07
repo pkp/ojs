@@ -186,7 +186,7 @@ class Upgrade extends Installer {
 							$disciplines[$locale] = preg_split('/[,;:]/', $settings['discipline'][$locale]);
 							$disciplines[$locale] = array_map('trim', $disciplines[$locale]);
 						}
-						$submissionDisciplineDao->insertDisciplines($disciplines, $articleId, false);
+						$submissionDisciplineDao->insertDisciplines($disciplines, $articleId, false, ASSOC_TYPE_SUBMISSION);
 					}
 					unset($disciplineLocales);
 					unset($disciplines);
@@ -199,7 +199,7 @@ class Upgrade extends Installer {
 							$subjects[$locale] = preg_split('/[,;:]/', $settings['subjectClass'][$locale]);
 							$subjects[$locale] = array_map('trim', $subjects[$locale]);
 						}
-						$submissionSubjectDao->insertSubjects($subjects, $articleId, false);
+						$submissionSubjectDao->insertSubjects($subjects, $articleId, false, ASSOC_TYPE_SUBMISSION);
 					}
 					unset($subjectLocales);
 					unset($subjects);
@@ -212,7 +212,7 @@ class Upgrade extends Installer {
 							$keywords[$locale] = preg_split('/[,;:]/', $settings['subject'][$locale]);
 							$keywords[$locale] = array_map('trim', $keywords[$locale]);
 						}
-						$submissionKeywordDao->insertKeywords($keywords, $articleId, false);
+						$submissionKeywordDao->insertKeywords($keywords, $articleId, false, ASSOC_TYPE_SUBMISSION);
 					}
 					unset($keywordLocales);
 					unset($keywords);
@@ -226,13 +226,24 @@ class Upgrade extends Installer {
 							$agencies[$locale] = preg_split('/[,;:]/', $settings['sponsor'][$locale]);
 							$agencies[$locale] = array_map('trim', $agencies[$locale]);
 						}
-						$submissionAgencyDao->insertAgencies($agencies, $articleId, false);
+						$submissionAgencyDao->insertAgencies($agencies, $articleId, false, ASSOC_TYPE_SUBMISSION);
 					}
 					unset($sponsorLocales);
 					unset($agencies);
 				}
 
-				unset($settings);
+				// Localize the languages setting (which previously wasn't localized).
+				$languageResult = $submissionDao->retrieve('SELECT language FROM articles_migration WHERE article_id = ?', array((int)$articleId));
+				$languageRow = $languageResult->getRowAssoc(false);
+				$language = $languageRow['language'];
+				$languageResult->Close();
+				$languages = array();
+				foreach ($supportedLocales as &$locale) {
+					$languages[$locale] = preg_split('/[\s+;,]+/', $language);
+					$languages[$locale] = array_map('trim', $languages[$locale]);
+				}
+				$submissionLanguageDao->insertLanguages($languages, $articleId, false, ASSOC_TYPE_SUBMISSION);
+
 				$result->MoveNext();
 			}
 			$result->Close();
@@ -1073,19 +1084,24 @@ class Upgrade extends Installer {
 				}
 				$remoteSuppFileSettingsResult->Close();
 
-				$articleGalley = $articleGalleyDao->newDataObject();
-				$articleGalley->setSubmissionId($article->getId());
-				$articleGalley->setLabel($remoteSuppFileTitle[$article->getLocale()]);
-				$articleGalley->setRemoteURL($row['remote_url']);
-				$articleGalley->setLocale($article->getLocale());
-				$articleGalleyDao->insertObject($articleGalley);
+				// Converted from DAO call to raw SQL because submission_id is no longer available post-schema sync.
+				$articleGalleyDao->update(
+					'INSERT INTO submission_galleys (locale, submission_id, remote_url, label) VALUES (?, ?, ?, ?)',
+					array(
+						$article->getLocale(),
+						$article->getId(),
+						$row['remote_url'],
+						$remoteSuppFileTitle[$article->getLocale()],
+					)
+				);
+				$galleyId = $articleGalleyDao->getInsertId();
 
 				// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
 				foreach ($extraRemoteGalleySettings as $name => $value) {
 					$submissionFileDao->update(
 						'INSERT INTO submission_galley_settings (galley_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
 						array(
-							$articleGalley->getId(),
+							$galleyId,
 							$name,
 							$value,
 							'string'
@@ -1462,22 +1478,27 @@ class Upgrade extends Installer {
 			$suppFilesResult->MoveNext();
 			$reviewRounds = $reviewRoundDao->getBySubmissionId($suppFilesRow['article_id'], WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
 			// If a review round exists
-			// copy the supp file to the submissin review stage, add it to each existing review round, and as a review round file
+			// copy the supp file to the submission review stage, add it to each existing review round, and as a review round file
 			if ($reviewRounds->getCount() != 0) {
 				$submissionFileManager = new SubmissionFileManager($suppFilesRow['context_id'], $suppFilesRow['article_id']);
 				// Retrieve the supp file last revision number, although they probably only have revision 1.
 				$revisionNumber = $submissionFileDao->getLatestRevisionNumber($suppFilesRow['file_id']);
-				// copy the supp file to the submissin review stage
-				list($newFileId, $newRevision) = $submissionFileManager->copyFileToFileStage($suppFilesRow['file_id'], $revisionNumber, SUBMISSION_FILE_REVIEW_FILE, null, true);
-				while ($reviewRound = $reviewRounds->next()) {
-					// add it to the review round
-					$submissionFileDao->assignRevisionToReviewRound($newFileId, $newRevision, $reviewRound);
-					// Get all review assignments
-					$reviewAssignments = $reviewAssignmentDao->getBySubmissionId($suppFilesRow['article_id'], $reviewRound->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
-					foreach ($reviewAssignments as $reviewAssignment) {
-						// add it to the review files
-						$reviewFilesDao->grant($reviewAssignment->getId(), $newFileId);
+				// copy the supp file to the submission review stage
+				$fileDetails = $submissionFileManager->copyFileToFileStage($suppFilesRow['file_id'], $revisionNumber, SUBMISSION_FILE_REVIEW_FILE, null, true);
+				if ($fileDetails) {
+					list($newFileId, $newRevision) = $fileDetails;
+					while ($reviewRound = $reviewRounds->next()) {
+						// add it to the review round
+						$submissionFileDao->assignRevisionToReviewRound($newFileId, $newRevision, $reviewRound);
+						// Get all review assignments
+						$reviewAssignments = $reviewAssignmentDao->getBySubmissionId($suppFilesRow['article_id'], $reviewRound->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
+						foreach ($reviewAssignments as $reviewAssignment) {
+							// add it to the review files
+							$reviewFilesDao->grant($reviewAssignment->getId(), $newFileId);
+						}
 					}
+				} else {
+					error_log('WARNING: Unable to copy article_suppementary_files entry with file_id ' . $suppFilesRow['file_id'] . ' to review stage! Skipping this file.');
 				}
 			}
 		}
@@ -2939,12 +2960,12 @@ class Upgrade extends Installer {
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$contextDao->update('
-				INSERT INTO ' . $contextDao->settingsTableName . ' SET
-					' . $contextDao->primaryKeyColumn . ' = ?,
-					locale = ?,
-					setting_name = ?,
-					setting_value = ?
-				',
+				INSERT INTO ' . $contextDao->settingsTableName . ' (
+					' . $contextDao->primaryKeyColumn . ',
+					locale,
+					setting_name,
+					setting_value
+				) VALUES (?, ?, ?, ?)',
 				[
 					$row[$contextDao->primaryKeyColumn],
 					$row['locale'],

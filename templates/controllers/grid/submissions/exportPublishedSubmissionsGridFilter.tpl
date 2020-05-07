@@ -21,7 +21,7 @@
 	{fbvFormArea id="submissionSearchFormArea"|concat:$filterData.gridId}
 		{fbvFormSection}
 			{fbvElement type="select" name="column" id="column"|concat:$filterData.gridId from=$filterData.columns selected=$filterSelectionData.column size=$fbvStyles.size.SMALL translate=false inline="true"}
-			{fbvElement type="text" name="search" id="search"|concat:$filterData.gridId value=$filterSelectionData.search size=$fbvStyles.size.MEDIUM inline="true"}
+			{fbvElement type="search" name="search" id="search"|concat:$filterData.gridId value=$filterSelectionData.search size=$fbvStyles.size.MEDIUM inline="true"}
 		{/fbvFormSection}
 		{fbvFormSection}
 			{fbvElement type="select" name="issueId" id="issueId"|concat:$filterData.gridId from=$filterData.issues selected=$filterSelectionData.issueId size=$fbvStyles.size.SMALL translate=false inline="true"}

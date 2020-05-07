@@ -1,0 +1,250 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/admin/vi/"
+">\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Nhắc nhở phản biện"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Thông báo truy cập mở"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Nhắc nhở hết hạn đăng ký thuê bao"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Không có người dùng đăng ký."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Bạn có chắc chắn muốn hợp nhất (các) tài khoản {$oldAccountCount} đã chọn "
+"vào tài khoản với tên người dùng \"{$newUsername}\" không? Các tài khoản "
+"{$oldAccountCount} đã chọn sẽ không tồn tại sau đó. Hành động này là không "
+"thể đảo ngược."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Tất cả người dùng đã đăng ký"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Chọn một người dùng (hoặc một số) để hợp nhất vào một tài khoản người dùng "
+"khác (ví dụ: khi ai đó có hai tài khoản người dùng). (Các) tài khoản được "
+"chọn trước sẽ bị xóa và mọi nội dung bài nộp, phân quyền, v.v. sẽ được quy "
+"cho tài khoản thứ hai."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Chọn một người dùng có thuộc tính tác giả, biên tập viên của người dùng "
+"trước đó,  v.v."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Hợp nhất người dùng"
+
+msgid "admin.mergeUsers"
+msgstr "Hợp nhất người dùng"
+
+msgid "admin.journals.importErrors"
+msgstr "Nhập đã không hoàn thành thành công"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Đường dẫn nhập dữ liệu là bắt buộc."
+
+msgid "admin.journals.redirect"
+msgstr "Tạo mã để dẫn các URL OJS 1 thành các URL OJS 2"
+
+msgid "admin.journals.transcode"
+msgstr "Siêu dữ liệu bài viết mã hóa từ ISO8859-1"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Nhập thuê bao đăng ký"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Đường dẫn tạp chí hiện tại hoặc đường dẫn để tạo (ví dụ: \"ojs\")."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Mô tả tạp chí"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Cho phép tạp chí này xuất hiện công khai trên trang web"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} đã được chỉnh sửa thành công."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} đã được tạo thành công."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Đường dẫn bạn cung cấp đã được sử dụng bởi một tạp chí khác."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Đường dẫn chỉ có thể bao gồm chữ cái, số và ký tự _ và -. Nó phải bắt đầu và "
+"kết thúc bằng một chữ cái hoặc số."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Một đường dẫn là bắt buộc."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Một tiêu đề là bắt buộc."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Đây phải là một từ ngắn hoặc từ viết tắt xác định tạp chí. URL của tạp chí "
+"sẽ là {$sampleUrl}."
+
+msgid "admin.contexts.create"
+msgstr "Tạo tạp chí"
+
+msgid "admin.journals.noneCreated"
+msgstr "Không có tạp chí nào được tạo."
+
+msgid "admin.journals.journalSettings"
+msgstr "Cài đặt tạp chí"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Bạn sẽ tự động được cấp quyền là người quản lý của tạp chí này. Sau khi tạo "
+"một tạp chí mới, bạn sẽ được chuyển hướng đến trình hướng dẫn cài đặt của "
+"nó, để hoàn tất thiết lập tạp chí ban đầu."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Cài đặt cấu hình OJS từ <tt>config.inc.php</tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "Cấu hình OJS"
+
+msgid "admin.systemVersion"
+msgstr "Phiên bản OJS"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Cho phép tạo người dùng (nếu được hỗ trợ bởi plugin xác thực này). Người "
+"dùng được tạo trong OJS với nguồn xác thực này sẽ được tự động thêm vào "
+"nguồn xác thực từ xa nếu họ chưa tồn tại. Ngoài ra, nếu nguồn này là nguồn "
+"xác thực mặc định, tài khoản OJS được tạo thông qua đăng ký người dùng cũng "
+"sẽ được thêm vào nguồn xác thực từ xa."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Cho phép sửa đổi mật khẩu người dùng (nếu được hỗ trợ bởi plugin xác thực "
+"này). Bật tùy chọn này cho phép người dùng sửa đổi mật khẩu của họ từ trong "
+"OJS và sử dụng tính năng \"mất mật khẩu\" của OJS để đặt lại mật khẩu đã "
+"quên. Các chức năng này sẽ không khả dụng đối với người dùng có nguồn xác "
+"thực này nếu tùy chọn này không được bật."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Cho phép đồng bộ hóa hồ sơ người dùng (nếu được hỗ trợ bởi plugin xác thực "
+"này). Thông tin hồ sơ người dùng sẽ được cập nhật tự động từ nguồn từ xa khi "
+"người dùng đăng nhập và thay đổi hồ sơ (bao gồm thay đổi mật khẩu) được thực "
+"hiện trong OJS sẽ được cập nhật tự động trên nguồn từ xa. Nếu tùy chọn này "
+"không được bật, thông tin hồ sơ OJS sẽ được giữ tách biệt với thông tin hồ "
+"sơ nguồn từ xa."
+
+msgid "admin.auth.ojs"
+msgstr "Cơ sở dữ liệu người dùng OJS"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"Không thể thêm ngôn ngữ mới vào tệp đăng ký ngôn ngữ, điển hình là \"registr/"
+"local.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Không thể mô tả ngôn ngữ mở từ trang web PKP."
+
+msgid "admin.languages.download"
+msgstr "Tải xuống ngôn ngữ"
+
+msgid "admin.languages.localeInstalled"
+msgstr "Ngôn ngữ \"{$locale}\" đã được cài đặt."
+
+msgid "admin.languages.downloadFailed"
+msgstr ""
+"Việc tải xuống ngôn ngữ không thành công. (Các) thông báo lỗi dưới đây mô tả "
+"sự thất bại này."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Chọn bất kỳ ngôn ngữ bổ sung để cài đặt hỗ trợ trong hệ thống này. Ngôn ngữ "
+"phải được cài đặt trước khi chúng có thể được sử dụng bởi các tạp chí được "
+"lưu trữ. Xem tài liệu OJS để biết thông tin về việc thêm hỗ trợ cho các ngôn "
+"ngữ mới."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Bạn có chắc chắn muốn gỡ cài đặt ngôn ngữ này? Điều này có thể ảnh hưởng đến "
+"bất kỳ tạp chí được lưu trữ hiện đang sử dụng ngôn ngữ này."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Tải xuống gói ngôn ngữ từ máy chủ web Dự án Tri thức Công đồng hiện không "
+"khả dụng vì:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Máy chủ của bạn không có hoặc cho phép thực thi tiện ích GNU \"tar\""
+".</li>\n"
+"\t\t<li>OJS không thể sửa đổi tệp đăng ký ngôn ngữ, điển hình là \"registry/"
+"local.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Có thể tải xuống các gói ngôn ngữ theo cách thủ công từ <a href=\""
+"http://pkp.sfu.ca\">PKP web site</a>.</p>"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Ngôn ngữ được đánh dấu có thể không đầy đủ."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Chọn tất cả các ngôn ngữ để hỗ trợ trên trang web. Các ngôn ngữ được chọn sẽ "
+"có sẵn để sử dụng bởi tất cả các tạp chí được lưu trữ trên trang web và cũng "
+"xuất hiện trong menu chọn ngôn ngữ để xuất hiện trên mỗi trang của trang (có "
+"thể được ghi đè trên các trang dành riêng cho tạp chí). Nếu nhiều ngôn ngữ "
+"không được chọn, menu chuyển đổi ngôn ngữ sẽ không xuất hiện và cài đặt ngôn "
+"ngữ mở rộng sẽ không có sẵn cho các tạp chí."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Đây sẽ là ngôn ngữ mặc định cho trang web và bất kỳ tạp chí được lưu trữ nào."
+
+msgid "admin.settings.config.success"
+msgstr "Các cài đặt cấu hình trang web đã được cập nhật thành công."
+
+msgid "admin.settings.appearance.success"
+msgstr "Các cài đặt đã được cập nhật thành công."
+
+msgid "admin.hostedContexts"
+msgstr "Các tạp chí lưu trữ"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Bạn có chắc chắn muốn tắt ngôn ngữ này? Điều này có thể ảnh hưởng đến bất kỳ "
+"tạp chí hiện đang sử dụng ngôn ngữ này."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\tCài đặt OJS của bạn được cấu hình để ghi lại nhiều hơn một số liệu sử "
+"dụng. Thống kê sử dụng sẽ được hiển thị trong một số bối cảnh.\n"
+"\tCó những trường hợp phải sử dụng một thống kê sử dụng duy nhất, ví dụ: để "
+"hiển thị một danh sách theo thứ tự các bài viết được sử dụng nhiều nhất hoặc "
+"để xếp hạng\n"
+"\tkết quả tìm kiếm. Vui lòng chọn một trong các số liệu được cấu hình làm "
+"mặc định.\n"
+"\t"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Yêu cầu đến trang web chính sẽ được chuyển hướng đến tạp chí này. Điều này "
+"có thể hữu ích nếu trang web chỉ có một tạp chí duy nhất."
+
+msgid "admin.settings.redirect"
+msgstr "Chuyển hướng tạp chí"
+
+msgid "admin.settings.info.success"
+msgstr "Thông tin trang web đã được cập nhật thành công."

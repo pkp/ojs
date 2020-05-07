@@ -2,23 +2,22 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-	* dbscripts/xml/upgrade/3.2.0_versioning.xml
-	*
-	* Copyright (c) 2013-2020 Simon Fraser University
-	* Copyright (c) 2003-2020 John Willinsky
-	* Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
-	*
-	* Copy submission data to temporary tables so it can be updated
-	* after the publication table modifications are made.
-	*
-	-->
+ * dbscripts/xml/upgrade/3.2.0_versioning.xml
+ *
+ * Copyright (c) 2013-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * Copy submission data to temporary tables so it can be updated
+ * after the publication table modifications are made.
+ *
+ -->
 
 <data>
 	<sql>
 		<!-- change date_published from datetime to date before migrating -->
-		<query driver="mysqli">ALTER TABLE temp_published_submissions MODIFY COLUMN date_published DATE NULL</query>
-		<query driver="mysql">ALTER TABLE temp_published_submissions MODIFY COLUMN date_published DATE NULL</query>
-		<query driver="postgres7">ALTER TABLE temp_published_submissions ALTER COLUMN date_published TYPE DATE</query>
+		<query driver="mysql,mysqli">ALTER TABLE temp_published_submissions MODIFY COLUMN date_published DATE NULL</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">ALTER TABLE temp_published_submissions ALTER COLUMN date_published TYPE DATE</query>
 		<!-- migrate data to new publications table -->
 		<query>
 			INSERT INTO publications (access_status, date_published, last_modified, locale, section_id, seq, submission_id, status, version)
@@ -114,7 +113,7 @@
 		</query>
 
 		<!-- move some author data to settings table -->
-		<query driver="postgres7">ALTER TABLE author_settings ALTER COLUMN setting_type DROP NOT NULL</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">ALTER TABLE author_settings ALTER COLUMN setting_type DROP NOT NULL</query>
 		<query>
 			INSERT INTO author_settings(author_id, setting_name, setting_value)
 			SELECT ta.author_id, 'country', ta.country
@@ -127,23 +126,13 @@
 			WHERE ta.url IS NOT NULL
 		</query>
 		<!-- connect authors to publications -->
-		<query driver="postgres7">
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">
 			UPDATE authors
 			SET publication_id = s.current_publication_id
 			FROM submissions s, temp_authors ta
 			WHERE authors.author_id = ta.author_id AND s.submission_id = ta.submission_id
 		</query>
-		<query driver="mysql">
-			UPDATE authors as a
-			SET a.publication_id = (
-				SELECT s.current_publication_id
-				FROM submissions as s
-				LEFT JOIN temp_authors as ta
-					ON s.submission_id = ta.submission_id
-				WHERE a.author_id = ta.author_id
-			)
-		</query>
-		<query driver="mysqli">
+		<query driver="mysql,mysqli">
 			UPDATE authors as a
 			SET a.publication_id = (
 				SELECT s.current_publication_id
@@ -169,19 +158,13 @@
 		</query>
 
 		<!-- connect controlled vocab metadata to publications, 1048585 = ASSOC_TYPE_SUBMISSION, 1048588 = ASSOC_TYPE_PUBLICATION -->
-		<query driver="postgres7">
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">
 			UPDATE controlled_vocabs
 			SET assoc_type = 1048588, assoc_id = s.current_publication_id
 			FROM submissions s
 			WHERE assoc_type = 1048585 AND assoc_id = s.submission_id
 		</query>
-		<query driver="mysql">
-			UPDATE controlled_vocabs AS cv,
-				submissions AS s
-			SET cv.assoc_type = 1048588, cv.assoc_id = s.current_publication_id
-			WHERE cv.assoc_type = 1048585 AND s.submission_id = cv.assoc_id
-		</query>
-		<query driver="mysqli">
+		<query driver="mysql,mysqli">
 			UPDATE controlled_vocabs AS cv,
 				submissions AS s
 			SET cv.assoc_type = 1048588, cv.assoc_id = s.current_publication_id
@@ -189,30 +172,23 @@
 		</query>
 
 		<!-- connect citations to publications -->
-		<query driver="postgres7">
+		<!-- To avoid collisions per pkp/pkp-lib#5795, first flip to negative, then clean up. -->
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">
 			UPDATE citations
-			SET publication_id = s.current_publication_id
+			SET publication_id = -s.current_publication_id
 			FROM submissions s
-			LEFT JOIN temp_citations as tc ON (s.submission_id = tc.submission_id)
+			JOIN temp_citations as tc ON (s.submission_id = tc.submission_id)
 			WHERE citations.citation_id = tc.citation_id
 		</query>
-		<query driver="mysqli">
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9"><![CDATA[
+			UPDATE citations SET publication_id = -publication_id WHERE publication_id < 0
+		]]></query>
+		<query driver="mysql,mysqli">
 			UPDATE citations as c
 			SET c.publication_id = (
 				SELECT s.current_publication_id
 				FROM submissions as s
-				LEFT JOIN temp_citations as tc
-					ON s.submission_id = tc.submission_id
-				WHERE c.citation_id = tc.citation_id
-			) ORDER BY c.publication_id ASC
-		</query>
-		<query driver="mysql">
-			UPDATE citations as c
-			SET c.publication_id = (
-				SELECT s.current_publication_id
-				FROM submissions as s
-				LEFT JOIN temp_citations as tc
-					ON s.submission_id = tc.submission_id
+				JOIN temp_citations as tc ON s.submission_id = tc.submission_id
 				WHERE c.citation_id = tc.citation_id
 			) ORDER BY c.publication_id ASC
 		</query>

@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-articles/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "Không có quyết định"
+
+msgid "plugins.reports.articles.description"
+msgstr ""
+"Plugin này thực hiện báo cáo CSV chứa danh sách các bài báo và thông tin của "
+"nó."
+
+msgid "plugins.reports.articles.displayName"
+msgstr "Báo cáo các bài báo"

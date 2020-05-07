@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-14 13:48+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/admin/ku_IQ/"
+">\n"
+"Language: ku_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "بەبیرهێنانەوەی هەڵسەنگاندن"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "ئاگادارکردنەوەی ئەکسێسی کراوە"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "بەبیرهێنانەوەی کاتی بەسەرچونی ئیشتیراک"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "هیچ بەکارهێنەرێک تۆمار نەکراوە."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"ئایا تۆ دڵنیایت لەوەی کە ئەم ئەژمارانە بەیەکەوە دەلکێنیت کە ژمارەیان "
+"{$oldAccountCount}یە و دەیانخەیتە سەر \"{$newUsername}\"? ئەژمارە "
+"دیاریکراوەکان {$oldAccountCount} دەسڕێنەوە. ئەم کردارە گەڕانەوەی تێدا نابێت."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "هەمو بەکارهێنەران تۆمار کراون"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"بەکارهێنەرێک یان زیاتر زیاد بکە بۆ ئەوەی لەگەڵ بەکارهێنەرێکی دیکە لێکیان "
+"بدەیت (بۆ نمونە کاتێک کەسێک دو ئەکاونتی هەبێت). ئەو ئەکاونتانەی کە یەکەمجار "
+"دەستنیشان دەکرێن دەسڕێنەوە و هەر پێشکەشکردێک، ئەرکێک و شتێکی دیکە "
+"دەگوازرێتەوە بۆ ئەکاونتی دووەم."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"بەکارهێنەرێک دیاری بکە بۆ ئەوەی توانای ئەوەی بدەیتێ کە گۆڕانکاری لە "
+"خاوەندارێتی گۆڕانکارییەکانی دیکەدا بکات."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "دو ناوی هەمان بەکارهێنەر بەیەکەوە بلکێنە"
+
+msgid "admin.mergeUsers"
+msgstr "دو ناوی هەمان بەکارهێنەر بەیەکەوە بلکێنە"
+
+msgid "admin.journals.importErrors"
+msgstr "داخلکردنەکە بە ناتەواوی مایەوە"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "ڕێچکەی داخلبون داوا کراوە."
+
+msgid "admin.journals.redirect"
+msgstr "کۆدێک داوا بکە بۆ لینکی وەشانی یەکەم و دووەمی سیستەمی گۆڤاری کراوە"
+
+msgid "admin.journals.transcode"
+msgstr "کۆدی گۆڕاوی توێژینەوە لە مێتاداتا لە ISO8859-1 ەوە"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "ئەو کەسانە زیاد بکە کە ئیشتیراکیان هەیە"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "ڕێچکەی ئێستا و ڕێچکەی نوێ، بۆ نمونە (\"ojs\")."
+
+msgid "admin.contexts.contextDescription"
+msgstr "ناساندنی گۆڤار"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "بینینی ئەم گۆڤارە بۆ هەمووان چالاک بکە"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} بەسەرکەوتویی گۆڕدرا."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} بە سەرکەوتویی دروست کرا."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "ڕێچکەکەی تۆ پێشنیازت کردووە لە لایەن گۆڤارێکی دیکەوە گیراوە."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"ڕێچکەکە تەنیا پیت، ژمارە، کاراکتەر، خەتی ژێرەوە و سەرەوە لەخۆ دەگرێت. دەبێت "
+"دەستپێک و کۆتاییەکەی بە ژمارە یان پیت بێت."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "ڕێچکەیەک داواکراوە."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "ناونیشانێک داواکراوە."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"ئەمە دەبێت تاکە وشەیەکی کورت یان وشەیەکی کورتکراوە بێت کە گۆڤارەکەی پێ "
+"دەناسرێتەوە.لینکی گۆڤارەکە ئەمە دەبێت {$sampleUrl}."
+
+msgid "admin.contexts.create"
+msgstr "گۆڤارێک دروست بکە"
+
+msgid "admin.journals.noneCreated"
+msgstr "هیچ گۆڤارێک تۆمار نەکراوە."
+
+msgid "admin.journals.journalSettings"
+msgstr "ڕێکخستنی گۆڤار"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"تۆ بە شێوەیەکی تۆماتیکی وەک بەڕێوەبەری ئەم گۆڤارە تۆمار دەکرییت. دوای "
+"تۆمارکردنی گۆڤارێکی نوێ، سیستەمی ڕێکخستن چالاک دەبێت."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "فۆڕمی ڕێکخستنی هەیکەلی سیستەمی گۆڤاری کراوە <tt>config.inc.php</tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "هەیکەلی سیستەمی گۆڤاری کراوە"
+
+msgid "admin.systemVersion"
+msgstr "ژمارەی وەشانی سیستەمەکە"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"زیادکردنی بەکارهێنەری نوێ چالاک بکە (ئەگەر ئەمە وەزیفەیەکی ئیزافی بێت). ئەو "
+"بەکارهێنەرانەی بە سیستەمی گۆڤاری کراوە زیاد کراون بە شێوەیەکی تۆماتیکی زیاد "
+"دەبن. بەگشتی، ئەگەر ئەم سەرچاوەیە سەرچاوەی سەرەکی بێت، ئەو بەکارهێنەرانەی "
+"خۆیان خۆیان تۆمار دەکەن، ئەوانیش بۆ سیستەمە زیاد دەبن."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"ڕێکخستنەوەی ژمارەی نهێنی کارا بکە (ئەگەر ئەمە هاوکارێکی ئیزافییە). کردنەوەی "
+"ئەم بژاردەیە هەلی ئەوە دەدات بە بەکارهێنەر کە ژمارەی نهێنییەکەیان بگۆڕن "
+"لەناو سیستەمی گۆڤاری کراوەدا و کێشەی ونبونی ژمارە نهێنییەکەیان چارەسەر بکەن. "
+"ئەم ڕێکخستنە بەردەست نابێت بۆ بەکارهێنەران ئەگەر کارا نەکرابێت."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"هەماهەنگسازیی پڕۆفایلی بەکارهێنەر چالاک بکە (ئەگەر ئەم ئەرکە زیادکراوە "
+"یارمەتیدەرە). پڕۆفایلی بەکارهێنەر بە شێوەیەکی تۆماتیکی لە لایەن سەرچاوە "
+"دەرەکییەکەوە نوێ دەکرێتەوە کاتێک بەکارهێنەر داخل دەبێت، پڕۆفایلەکە دەگۆڕدرێت "
+"(بە ژمارەی نهێنیشەوە) لە کۆی سیستەمەکەدا. ئەگەر ئەم بژاردەیە بەردەست نەبو، "
+"زانیارییەکانی بەکارهێنەر بە زانیاریی سەرچاوە دەرەکییەکەوە گرێ نادرێت و "
+"سەربەخۆ دەبێت."
+
+msgid "admin.auth.ojs"
+msgstr "داتابەیسی سیستەمەکە"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"زمانی نوێ بۆ لیستی زمانە چالاکەکان زیاد ناکرێت، ئەمە لە چوارچێوەی فایلە "
+"خەزنکراوەکانە:  \"registry/locales.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "پێناسەی زمانەکە لە سیستەمەکەدا ناکرێتەوە."
+
+msgid "admin.languages.download"
+msgstr "دابەزاندنی زمان"
+
+msgid "admin.languages.localeInstalled"
+msgstr "زمانەکە\"{$locale}\" بەسەرکەوتویی دابەزێندرا."
+
+msgid "admin.languages.downloadFailed"
+msgstr "دابەزاندنی زمانەکە شکستی هێنا. لە خوارەوە هۆکاری شکستەکە ڕون کراوەتەوە."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"هەر فایلێکی دیکەی زیادە دەستنیشان بکە بۆ دابەزاندنی پاڵپشتی بۆ سیستەمەکە. "
+"فایلەکان پێویستە پێش ئەوەی لە لایەن گۆڤارە میوانەکانەوە بەکار بهێندرێن، "
+"دابەزێندرابن."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"ئایا تۆ دڵنیایت لە سڕینەوەی ئەم زمانە لە پێگەکەتدا؟ ئەمە لەوانەیە کاریگەری "
+"لەسەر گۆڤارەکانی دیکەش بکات کە هەمان سیستەمی ناوخۆیی بەکار دێنن."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "زمانە دیاریکراوەکان لەوانەیە تەواونەکراو بن."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"هەمو فایلە لۆکاڵییەکان دیاری بکە بۆ پاڵپشتیی پێگەکە. فایلە دیاریکراوەکان لە "
+"لایەن هەمو گۆڤارە میوانەکانەوە بۆ بەکارهێنان بەردەست دەبن و لە ئەژماری "
+"دیاریکردنی زمانەکان لە هەمو پێگەکاندا دەردەکەون (کە دەکرێت گۆڕانکارییان تێدا "
+"بکرێت تەنیا لە هەندێک پەڕەی دیاریکراو). ئەگەر چەند فایلێکی لۆکاڵی دیاری "
+"نەکران، ئەژماری زمان دەرناکەوێت و ڕێکخستنە هاوکارەکان لە گۆڤارەکاندا بەردەست "
+"نابن."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "ئەمە زمانی سەرەکییە بۆ هەر گۆڤارێکی میوان."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p> دابەزاندنی پاکێتە زمانییەکەنا لە پڕۆژەی زانیاریی گشتی سەر تۆڕ لە ئێستادا "
+"بەردەست نییە </p>\n"
+"\t<ul>\n"
+"\t\t<li>سێرڤەرەکەت ڕێگا بە ئامرازی دەستکاریکردن نادات یان نییەتی \"tar\""
+".</li>\n"
+"\t\t<li>بەگشتی سیستەمی گۆڤارە کراوەکان ڕێگا بە گۆڕانکاری لە تۆمارەکان نادات "
+"\"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>پاکێتە زمانییەکان دەکرێت لێرەوە داببەزێندرێن <a href=\"http://pkp.sfu.ca\""
+">پێگەی پڕۆژەی زانیاریی گشتی</a>.</p>"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"ئایا تۆ دڵنیایت کە دەتەوێت ئەم زمانە بسڕیتەوە؟ ئەم کردارە لەوانەیە کاریگەری "
+"لەسەر هەر گۆڤارێکی میوان دروست بکات کە لە ئێستادا ئەم زمانە بەکار دێنێت."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\t……لەم سیستەمەدا دەتوانرێت زیاتر لە پێوەرێک بەکار بێت و پێوەری بەکارهاتو "
+"بە شێوەی جیاواز دەردەکەوێت\n"
+"لە هەندێک حاڵەتدا تەنیا یەک پێوەری ژمێریاری دەبێت بەکار بێت، بۆ نمونە؛ "
+"پیشاندانی خشتەی داواکراو بۆ توێژینەوە زۆر بەکارهاتووەکان یان بۆ ڕیزبەندیی\n"
+"ئەنجامی گەڕانەکان. تکایە یەکێک لە پێوەرەکان وەک پێوەری خۆت دیاری بکە\n"
+"\t"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"داواکارییەکان بۆ پێگەی سەرەکی دەنێردرێنەوە بۆ ئەم گۆڤارە. هەر بۆیە لەوانەیە "
+"وا باشتر بێت، کە پێگەکە تەنیا یەک گۆڤار لەخۆ بگرێت."
+
+msgid "admin.settings.redirect"
+msgstr "گەڕانەوە بۆ گۆڤار"
+
+msgid "admin.settings.info.success"
+msgstr "زانیاریی پێگەکە بەسەرکەوتویی گۆڕدران."
+
+msgid "admin.settings.config.success"
+msgstr "ڕێکخستنەکانی پێگەکە بە سەرکەوتویی گۆڕدران."
+
+msgid "admin.settings.appearance.success"
+msgstr "ڕێکخستنە پیشاندراوەکان بە سەرکەوتویی گۆڕدران."
+
+msgid "admin.hostedContexts"
+msgstr "گۆڤاری میوان"

@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-04 02:13+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/api/ku/>\n"
+"Language: ku_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "ئەو بڵاوکراوەی کە تۆ داوات کردووە بەشێک نییە لەم پێشکەشکردنە."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "ئەو توێژینەوەی کە تۆ داوای دەکەیت لەم گۆڤارە بڵاو نەکراوەتەوە."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "ئەو شێوازەی کە تۆ دیاریت کردووە بۆ پارەدان، ڕێگەپێدراو نییە."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "تۆ ڕێگەپێدانت نییە بۆ گواستنەوەی لیستی ئەم ئیمەیڵانە بۆ گۆڤارێکی دیکە."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "ئەو گۆڤارەی کە تۆ بۆی گەڕایت نەدۆزرایەوە."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "تۆ ڕێگەپێدانی سڕینەوەی ئەم گۆڤارەت نییە."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "تۆ ڕێگەپێدانی گۆڕانکاریت لەم گۆڤارەدا نییە."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "تۆ ناتوانیت گۆڕانکاری لەم گۆڤارەدا بکەیت."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"تۆ ناتوانیت ئەم گۆڤارە ببینیت یان گۆڕانکاری تێدا بکەیت هەتا تۆ داواکاری "
+"تایبەت لە گۆڤارەکە نەکەیت."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "تۆ ڕێگەپێدراو نیت بۆ بینینی ئەم گۆڤارە."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "تۆ تەنیا دەتوانیت ئەو گۆڤارانە ببینیت کە بڵاو کراونەتەوە."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"بۆ پێشکەشکردن یان دەستکاریکردنی پێشکەشکردنەکەت تۆ دەبێت داواکاریی پێشکەشی "
+"گۆڤار بکەیت."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "تۆ ڕێگەپێدراو نیت بۆ بینینی ئەو ژمارانەی بڵاو نەکراونەتەوە."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "تۆ ناتوانیت ئەو گۆڤارە بگۆڕیت کە پێشکەشت کردووە."

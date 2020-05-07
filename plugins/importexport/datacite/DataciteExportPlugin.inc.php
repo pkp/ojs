@@ -206,15 +206,11 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 		}
 		$url = $this->_getObjectUrl($request, $context, $object);
 		assert(!empty($url));
+
 		// Prepare HTTP session.
-		$curlCh = curl_init();
-		if ($httpProxyHost = Config::getVar('proxy', 'http_host')) {
-			curl_setopt($curlCh, CURLOPT_PROXY, $httpProxyHost);
-			curl_setopt($curlCh, CURLOPT_PROXYPORT, Config::getVar('proxy', 'http_port', '80'));
-			if ($username = Config::getVar('proxy', 'username')) {
-				curl_setopt($curlCh, CURLOPT_PROXYUSERPWD, $username . ':' . Config::getVar('proxy', 'password'));
-			}
-		}
+		import('lib.pkp.classes.helpers.PKPCurlHelper');
+		$curlCh = PKPCurlHelper::getCurlObject();
+
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curlCh, CURLOPT_POST, true);
 		// Set up basic authentication.
@@ -222,8 +218,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 		$password = $this->getSetting($context->getId(), 'password');
 		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
-		// Set up SSL.
-		curl_setopt($curlCh, CURLOPT_SSL_VERIFYPEER, false);
 		// Transmit meta-data.
 		assert(is_readable($filename));
 		$payload = file_get_contents($filename);

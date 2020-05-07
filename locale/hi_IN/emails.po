@@ -1,0 +1,1569 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-15 09:20-0700\n"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/emails/hi/>\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$siteTitle}
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.notification.subject"
+msgstr "से नई अधिसूचना {$siteTitle}"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$siteTitle}, {$url}, {$notificationContents}, {$principalContactSignature}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) xmltags: Added XML tags
+msgid "emails.notification.body"
+msgstr ""
+"आपके पास एक नई सूचना है {$siteTitle}:<br />\n"
+"<br />\n"
+"{$notificationContents}<br />\n"
+"<br />\n"
+"Link: {$url}<br />\n"
+"<br />\n"
+"{$principalContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.notification.description"
+msgstr "ईमेल उन पंजीकृत उपयोगकर्ताओं को भेजा जाता है जिन्होंने इस प्रकार की अधिसूचना को ईमेल करने के लिए चुना है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ siteTitle}, {$url}, {$principalContactSignature}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) xmltags: Added XML tags
+msgid "emails.passwordResetConfirm.body"
+msgstr ""
+"हमें {$ siteTitle} वेब साइट के लिए आपका पासवर्ड रीसेट करने का अनुरोध मिला है.<br />\n"
+"<br />\n"
+"यदि आपने यह अनुरोध नहीं किया है, तो कृपया इस ईमेल को अनदेखा करें और आपका पासवर्ड परिवर्तित नहीं किया जाएगा। यदि आप अपना पासवर्ड रीसेट करना चाहते हैं, तो नीचे दिए गए URL पर क्लिक करें.<br />\n"
+"<br />\n"
+"Reset my password: {$url}<br />\n"
+"<br />\n"
+"{$principalContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.passwordResetConfirm.description"
+msgstr "यह ईमेल एक पंजीकृत उपयोगकर्ता को भेजा जाता है जब वे इंगित करते हैं कि वे अपना पासवर्ड भूल गए हैं या लॉगिन करने में असमर्थ हैं। यह एक URL प्रदान करता है जिसका वे अपना पासवर्ड रीसेट करने के लिए अनुसरण कर सकते हैं."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.passwordReset.subject"
+msgstr "पासवर्ड रीसेट"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ siteTitle}, {$password}, {$principalContactSignature}, {$username}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) xmltags: Added XML tags
+msgid "emails.passwordReset.body"
+msgstr ""
+"आपका पासवर्ड सफलतापूर्वक {$ siteTitle} वेब साइट के साथ उपयोग के लिए रीसेट कर दिया गया है। कृपया इस उपयोगकर्ता नाम और पासवर्ड को बनाए रखें, क्योंकि यह जर्नल के साथ काम करने के लिए आवश्यक है.<br />\n"
+"<br />\n"
+"Your username: {$username}<br />\n"
+"Password: {$password}<br />\n"
+"<br />\n"
+"{$principalContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "emails.passwordReset.description"
+msgstr "PASSWORD_RESET_CONFIRM ईमेल में वर्णित प्रक्रिया का पालन करते हुए यह ईमेल एक पंजीकृत उपयोगकर्ता को भेजा जाता है जब उन्होंने अपना पासवर्ड सफलतापूर्वक रीसेट कर दिया हो."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "emails.userRegister.subject"
+msgstr "जर्नल पंजीकरण"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$principalContactSignature}, {$userFullName}, {$contextName}, {$password}, {$username}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.userRegister.body"
+msgstr ""
+"{$userFullName}<br />\n"
+"<br />\n"
+"अब आपको {$contextName} वाले उपयोगकर्ता के रूप में पंजीकृत किया गया है। हमने इस ईमेल में आपके उपयोगकर्ता नाम और पासवर्ड को शामिल किया है, जो इस वेबसाइट के माध्यम से इस जर्नल के साथ काम करने के लिए आवश्यक हैं। किसी भी बिंदु पर, आप मुझसे संपर्क करके जर्नल की उपयोगकर्ताओं की सूची से निकाले जाने के लिए कह सकते हैं.<br />\n"
+"<br />\n"
+"Username: {$username}<br />\n"
+"Password: {$password}<br />\n"
+"<br />\n"
+"Thank you,<br />\n"
+"{$principalContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.userRegister.description"
+msgstr "यह ईमेल एक नए पंजीकृत उपयोगकर्ता को सिस्टम में उनका स्वागत करने और उन्हें उनके उपयोगकर्ता नाम और पासवर्ड के रिकॉर्ड के साथ प्रदान करने के लिए भेजा जाता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.userValidate.subject"
+msgstr "अपना खाता मान्य करें"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$activateUrl}, {$principalContactSignature}, {$userFullName}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.userValidate.body"
+msgstr ""
+"{$userFullName}<br />\n"
+"<br />\n"
+"आपने {$contextName} के साथ एक खाता बनाया है, लेकिन इससे पहले कि आप इसका उपयोग शुरू कर सकें, आपको अपने ईमेल खाते को मान्य करना होगा। ऐसा करने के लिए, बस नीचे दिए गए लिंक का पालन करें:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Thank you,<br />\n"
+"{$principalContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.userValidate.description"
+msgstr "यह ईमेल एक नए पंजीकृत उपयोगकर्ता को उनके ईमेल खाते को मान्य करने के लिए भेजा जाता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextName}
+# (pofilter) startpunc: Different punctuation at the start
+msgid "emails.reviewerRegister.subject"
+msgstr "{$contextName}के साथ समीक्षक के रूप में पंजीकरण"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$password}, {$principalContactSignature}, {$contextName}, {$username}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewerRegister.body"
+msgstr ""
+"आपकी विशेषज्ञता के प्रकाश में, हमने {$contextName} के लिए समीक्षक डेटाबेस में आपका नाम दर्ज करने की स्वतंत्रता ले ली है। यह आपकी ओर से किसी भी प्रकार की प्रतिबद्धता को पूरा नहीं करता है, लेकिन संभवतया समीक्षा के लिए प्रस्तुत करने के लिए बस हमें आपसे संपर्क करने में सक्षम बनाता है। समीक्षा के लिए आमंत्रित किए जाने पर, आपके पास प्रश्न में कागज का शीर्षक और सार देखने का अवसर होगा, और आप हमेशा आमंत्रण को स्वीकार या अस्वीकार करने की स्थिति में होंगे। आप किसी भी बिंदु पर इस समीक्षक सूची से अपना नाम हटाने के लिए कह सकते हैं.<br />\n"
+"<br />\n"
+"हम आपको एक उपयोगकर्ता नाम और पासवर्ड प्रदान कर रहे हैं, जो अपनी वेबसाइट के माध्यम से जर्नल के साथ सभी बातचीत में उपयोग किया जाता है। उदाहरण के लिए, आप अपनी समीक्षा हितों सहित अपनी प्रोफ़ाइल को अपडेट कर सकते हैं.<br />\n"
+"<br />\n"
+"Username: {$username}<br />\n"
+"Password: {$password}<br />\n"
+"<br />\n"
+"Thank you,<br />\n"
+"{$principalContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewerRegister.description"
+msgstr "यह ईमेल एक नए पंजीकृत समीक्षक को सिस्टम में उनका स्वागत करने और उनके उपयोगकर्ता नाम और पासवर्ड के रिकॉर्ड के साथ प्रदान करने के लिए भेजा जाता है."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "emails.publishNotify.subject"
+msgstr "नया अंक प्रकाशित"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextUrl}, {$editorialContactSignature}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.publishNotify.body"
+msgstr ""
+"Readers:<br />\n"
+"<br />\n"
+"{$contextName} ने अभी हाल ही में  {$contextUrl} पर अपना नवीनतम अंक प्रकाशित किया है। हम आपको यहां सामग्री की समीक्षा करने के लिए आमंत्रित करते हैं और फिर लेख और रुचि की वस्तुओं की समीक्षा करने के लिए हमारी वेब साइट पर जाते हैं.<br />\n"
+"<br />\n"
+"हमारे काम में निरंतर रुचि के लिए धन्यवाद,<br />\n"
+"{$editorialContactSignature}"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.publishNotify.description"
+msgstr "यह ईमेल पंजीकृत पाठकों को संपादक के उपयोगकर्ता के घर में "उपयोगकर्ता सूचित करें" लिंक के माध्यम से भेजा जाता है। यह एक नए मुद्दे के पाठकों को सूचित करता है और उन्हें एक आपूर्ति किए गए URL पर जर्नल देखने के लिए आमंत्रित करता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextName}
+msgid "emails.lockssExistingArchive.subject"
+msgstr "के लिए अनुरोध प्राप्त करना {$contextName}"
+
+# (pofilter) brackets: Added '[', ']', '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextUrl}, {$principalContactSignature}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.lockssExistingArchive.body"
+msgstr ""
+"Dear [University Librarian]<br />\n"
+"<br />\n"
+"{$contextName} &amp;lt;{$contextUrl}&amp;gt;, एक जर्नल है जिसके लिए आपके संकाय का एक सदस्य, [सदस्य का नाम], [स्थिति का शीर्षक] के रूप में कार्य करता है। जर्नल इस और अन्य विश्वविद्यालय पुस्तकालयों के साथ एक LOCKSS (लोट्स ऑफ कपीज कीप स्टफ सेफ) स्थापित करने की मांग कर रहा है।<br />\n"
+"<br />\n"
+"[जर्नल का संक्षिप्त विवरण]<br />\n"
+"<br />\n"
+"हमारी जर्नल के लिए LOCKSS प्रकाशक घोषणापत्र का URL है:{$contextUrl}/gateway/lockss<br />\n"
+"<br />\n"
+"हम समझते हैं कि आप पहले से ही LOCKSS में भाग ले रहे हैं। यदि हम LOCKSS के अपने संस्करण के साथ हमारी जर्नल को पंजीकृत करने के प्रयोजनों के लिए कोई अतिरिक्त मेटाडेटा प्रदान कर सकते हैं, तो हमें यह प्रदान करके खुशी होगी.<br />\n"
+"<br />\n"
+"Thank you,<br />\n"
+"{$principalContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.lockssExistingArchive.description"
+msgstr "यह ईमेल LOCKSS संग्रह के रक्षक को इस जर्नल में उनके संग्रह में शामिल करने पर विचार करने का अनुरोध करता है। यह जर्नल के LOCKSS प्रकाशक घोषणापत्र को URL प्रदान करता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextName}
+msgid "emails.lockssNewArchive.subject"
+msgstr "के लिए अनुरोध प्राप्त करना {$contextName}"
+
+# (pofilter) brackets: Added '[', ']', '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextUrl}, {$principalContactSignature}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "emails.lockssNewArchive.body"
+msgstr ""
+"प्रिय [विश्वविद्यालय पुस्तकालय]<br />\n"
+"<br />\n"
+"{$contextName} &amp;lt;{$contextUrl}&amp;gt;, एक ऐसी जर्नल है जिसके लिए आपके संकाय का एक सदस्य, [सदस्य का नाम] [स्थिति का शीर्षक] के रूप में कार्य करता है। जर्नल इस और अन्य विश्वविद्यालय पुस्तकालयों के साथ एक LOCKSS (बहुत सारी सामग्री सुरक्षित रखें) को सुरक्षित रखने की मांग कर रहा है.<br />\n"
+"<br />\n"
+"[Brief description of journal]<br />\n"
+"<br />\n"
+"The LOCKSS Program &amp;lt;http://lockss.org/&amp;gt;, एक अंतरराष्ट्रीय पुस्तकालय / प्रकाशक पहल, एक वितरित संरक्षण और संग्रह भंडार का एक कार्य उदाहरण है, अतिरिक्त विवरण नीचे हैं। सॉफ्टवेयर, जो एक साधारण व्यक्तिगत कंप्यूटर पर चलता है, मुफ्त है; प्रणाली को आसानी से ऑन-लाइन लाया जाता है; बहुत कम चल रहे रखरखाव की आवश्यकता है.<br />\n"
+"<br />\n"
+"हमारी जर्नल के संग्रह में सहायता करने के लिए, हम आपको अपने संकाय द्वारा और दुनिया भर के अन्य विद्वानों द्वारा उत्पादित शीर्षकों को इकट्ठा करने और संरक्षित करने में मदद करने के लिए, LOCKSS समुदाय का सदस्य बनने के लिए आमंत्रित करते हैं। ऐसा करने के लिए, कृपया यह जानने के लिए कि यह सिस्टम कैसे संचालित होता है, जानकारी के लिए कृपया अपने कर्मचारियों पर किसी LOCKSS साइट पर जाएं। मैं इस जर्नल के लिए इस संग्रह का समर्थन प्रदान करने की व्यवहार्यता पर आपकी ओर से सुनने के लिए उत्सुक हूं.<br />\n"
+"<br />\n"
+"Thank you,<br />\n"
+"{$principalContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.lockssNewArchive.description"
+msgstr "यह ईमेल प्राप्तकर्ता को LOCKSS पहल में भाग लेने और संग्रह में इस जर्नल को शामिल करने के लिए प्रोत्साहित करता है। यह LOCKSS पहल और शामिल होने के तरीकों के बारे में जानकारी प्रदान करता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.submissionAck.subject"
+msgstr "सबमिशन स्वीकृति"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$editorialContactSignature}, {$submissionTitle}, {$contextName}, {$authorName}, {$submissionUrl}, {$authorUsername}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.submissionAck.body"
+msgstr ""
+"{$authorName}:<br />\n"
+"<br />\n"
+"पांडुलिपि प्रस्तुत करने के लिए धन्यवाद, &quot;{$submissionTitle}&quot; to {$contextName}. जिस ऑनलाइन जर्नल प्रबंधन प्रणाली का हम उपयोग कर रहे हैं, आप जर्नल साइट पर लॉग इन करके संपादकीय प्रक्रिया के माध्यम से इसकी प्रगति को ट्रैक कर पाएंगे।:<br />\n"
+"<br />\n"
+"Submission URL: {$submissionUrl}<br />\n"
+"Username: {$authorUsername}<br />\n"
+"<br />\n"
+"यदि आपके पास किसी तरह का प्रश्न है, तो कृपया मुझ से सम्पर्क करें। अपने काम के लिए इस जर्नल को एक स्थान के रूप में विचार करने के लिए धन्यवाद.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.submissionAck.description"
+msgstr "सक्षम होने पर, यह ईमेल स्वचालित रूप से एक लेखक को भेजा जाता है, जब वह जर्नल को पांडुलिपि प्रस्तुत करने की प्रक्रिया को पूरा करता है। यह प्रक्रिया के माध्यम से सबमिशन पर नज़र रखने के बारे में जानकारी प्रदान करता है और प्रस्तुत करने के लिए लेखक को धन्यवाद देता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$submitterName}, {$editorialContactSignature}, {$submissionTitle}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.submissionAckNotUser.body"
+msgstr ""
+"Hello,<br />\n"
+"<br />\n"
+"{$submitterName} ने पांडुलिपि जमा की है, &quot;{$submissionTitle}&quot; to {$contextName}. <br />\n"
+"<br />\n"
+"यदि आपके पास किसी तरह का प्रश्न है, तो कृपया मुझ से सम्पर्क करें। अपने काम के लिए इस जर्नल को एक स्थान के रूप में विचार करने के लिए धन्यवाद.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.submissionAckNotUser.description"
+msgstr "यह ईमेल, जब सक्षम किया जाता है, तो स्वचालित रूप से अन्य लेखकों को भेजा जाता है जो प्रस्तुत प्रक्रिया के दौरान निर्दिष्ट OJS के भीतर उपयोगकर्ता नहीं हैं."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.editorAssign.subject"
+msgstr "संपादकीय असाइनमेंट"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$editorUsername}, {$submissionTitle}, {$contextName}, {$editorialContactName}, {$submissionUrl}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.editorAssign.body"
+msgstr ""
+"{$editorialContactName}:<br />\n"
+"<br />\n"
+"प्रस्तुत, &quot;{$submissionTitle},&quot; to {$contextName} आपको सेक्शन एडिटर के रूप में अपनी भूमिका में संपादकीय प्रक्रिया के माध्यम से देखने का काम सौंपा गया है.<br />\n"
+"<br />\n"
+"Submission URL: {$submissionUrl}<br />\n"
+"Username: {$editorUsername}<br />\n"
+"<br />\n"
+"Thank you."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.editorAssign.description"
+msgstr ""
+"यह ईमेल एक अनुभाग संपादक को सूचित करता है कि संपादक ने उन्हें संपादन "
+"प्रक्रिया के माध्यम से सबमिशन की देखरेख का काम सौंपा है। यह सबमिशन और जर्नल "
+"साइट को एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewRequest.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextUrl}, {$editorialContactSignature}, {$submissionTitle}, {$reviewDueDate}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}, {$responseDueDate}, {$passwordResetUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRequest.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"मुझे विश्वास है कि आप पांडुलिपि के एक उत्कृष्ट समीक्षक के रूप में काम करेंगे, &quot;{$submissionTitle},&quot; जिसे {$contextName}को सबमिट किया गया है। सबमिशन का सार नीचे दिया गया है, और मुझे आशा है कि आप हमारे लिए इस महत्वपूर्ण कार्य को करने पर विचार करेंगे.<br />\n"
+"<br />\n"
+"कृपया जर्नल वेब साइट पर लॉग इन करें {$responseDueDate} यह इंगित करने के लिए कि क्या आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन तक पहुँचने के लिए और अपनी समीक्षा और अनुशंसा दर्ज करने के लिए। वेब साइट है {$contextUrl}<br />\n"
+"<br />\n"
+"The review itself is due {$reviewDueDate}.<br />\n"
+"<br />\n"
+"यदि आपके पास जर्नल की वेब साइट के लिए आपका उपयोगकर्ता नाम और पासवर्ड नहीं है, तो आप अपना पासवर्ड रीसेट करने के लिए इस लिंक का उपयोग कर सकते हैं (जो तब आपके उपयोगकर्ता नाम के साथ आपको ईमेल किया जाएगा). {$passwordResetUrl}<br />\n"
+"<br />\n"
+"Submission URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"इस अनुरोध पर विचार करने के लिए धन्यवाद.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}<br />\n"
+"<br />\n"
+"&quot;{$submissionTitle}&quot;<br />\n"
+"<br />\n"
+"{$submissionAbstract}"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewRequest.description"
+msgstr ""
+"अनुभाग संपादक से लेकर समीक्षक तक का यह ईमेल अनुरोध करता है कि समीक्षक किसी "
+"सबमिशन की समीक्षा करने के कार्य को स्वीकार या अस्वीकार करता है। यह प्रस्तुत "
+"करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत "
+"तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया "
+"जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया "
+"का चयन किया जाता है. (Otherwise see REVIEW_REQUEST_ATTACHED.)"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$contextUrl}, {$editorialContactSignature}, {$submissionTitle}, {$reviewDueDate}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}, {$passwordResetUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 6
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRequestRemindAuto.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;{$submissionTitle},&quot; for {$contextName}. हम {$ responseDueDate} द्वारा आपकी प्रतिक्रिया की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और उस तारीख को पारित करने के साथ भेजा गया है.\n"
+"<br />\n"
+"मुझे विश्वास है कि आप पांडुलिपि के एक उत्कृष्ट समीक्षक के रूप में काम करेंगे। सबमिशन का सार नीचे दिया गया है, और मुझे आशा है कि आप हमारे लिए इस महत्वपूर्ण कार्य को करने पर विचार करेंगे.<br />\n"
+"<br />\n"
+"कृपया यह दर्शाने के लिए जर्नल वेब साइट पर लॉग इन करें कि क्या आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन तक पहुँचने के लिए और अपनी समीक्षा और सिफारिश रिकॉर्ड करने के लिए। वेब साइट है {$contextUrl}<br />\n"
+"<br />\n"
+"समीक्षा स्वयं होने वाली है {$reviewDueDate}.<br />\n"
+"<br />\n"
+"यदि आपके पास जर्नल की वेब साइट के लिए आपका उपयोगकर्ता नाम और पासवर्ड नहीं है, तो आप अपना पासवर्ड रीसेट करने के लिए इस लिंक का उपयोग कर सकते हैं (जो तब आपके उपयोगकर्ता नाम के साथ आपको ईमेल किया जाएगा). {$passwordResetUrl}<br />\n"
+"<br />\n"
+"Submission URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"इस अनुरोध पर विचार करने के लिए धन्यवाद.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}<br />\n"
+"<br />\n"
+"&quot;{$submissionTitle}&quot;<br />\n"
+"<br />\n"
+"{$submissionAbstract}"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.reviewRequestRemindAuto.description"
+msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब किसी समीक्षक की पुष्टि की नियत तिथि समाप्त हो जाती है (सेटिंग्स> वर्कफ़्लो> समीक्षा के तहत समीक्षा विकल्प देखें) और एक-क्लिक समीक्षक पहुंच अक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRequestOneclick.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"मुझे विश्वास है कि आप पांडुलिपि के एक उत्कृष्ट समीक्षक के रूप में काम करेंगे, &quot;{$submissionTitle},&quot; जिसे  {$contextName}को सबमिट किया गया है। सबमिशन का सार नीचे दिया गया है, और मुझे आशा है कि आप हमारे लिए इस महत्वपूर्ण कार्य को करने पर विचार करेंगे.<br />\n"
+"<br />\n"
+"कृपया यह दिखाने के लिए कि क्या आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन एक्सेस करने और अपनी समीक्षा और अनुशंसा दर्ज करने के लिए कृपया {$ responseDueDate} जर्नल में लॉग इन करें।.<br />\n"
+"<br />\n"
+"The review itself is due {$reviewDueDate}.<br />\n"
+"<br />\n"
+"Submission URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"इस अनुरोध पर विचार करने के लिए धन्यवाद.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}<br />\n"
+"<br />\n"
+"&quot;{$submissionTitle}&quot;<br />\n"
+"<br />\n"
+"{$submissionAbstract}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "emails.reviewRequestOneclick.description"
+msgstr "सेक्शन एडिटर से लेकर समीक्षक तक का यह ईमेल अनुरोध करता है कि समीक्षक किसी सबमिशन की समीक्षा करने के कार्य को स्वीकार या अस्वीकार करता है। यह प्रस्तुत करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया जाता है जब प्रबंधन> सेटिंग> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया का चयन किया जाता है, और एक-क्लिक समीक्षक पहुंच सक्षम होती है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRequestRemindAutoOneclick.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;{$submissionTitle},&quot; for {$contextName}. हम {$ responseDueDate} द्वारा आपकी प्रतिक्रिया की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और उस तारीख को पारित करने के साथ भेजा गया है.\n"
+"<br />\n"
+"मुझे विश्वास है कि आप पांडुलिपि के एक उत्कृष्ट समीक्षक के रूप में काम करेंगे। सबमिशन का सार नीचे दिया गया है, और मुझे आशा है कि आप हमारे लिए इस महत्वपूर्ण कार्य को करने पर विचार करेंगे.<br />\n"
+"<br />\n"
+"कृपया यह दर्शाने के लिए जर्नल वेब साइट पर लॉग इन करें कि आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन एक्सेस करने और अपनी समीक्षा और सिफारिश रिकॉर्ड करने के लिए.<br />\n"
+"<br />\n"
+"The review itself is due {$reviewDueDate}.<br />\n"
+"<br />\n"
+"Submission URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"Thank you for considering this request.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}<br />\n"
+"<br />\n"
+"&quot;{$submissionTitle}&quot;<br />\n"
+"<br />\n"
+"{$submissionAbstract}"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.reviewRequestRemindAutoOneclick.description"
+msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब किसी समीक्षक की पुष्टि की नियत तिथि समाप्त हो जाती है (सेटिंग्स के अंतर्गत समीक्षा विकल्प देखें> वर्कफ़्लो> समीक्षा) और एक-क्लिक समीक्षक पहुंच सक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$reviewerName}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$reviewGuidelines}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRequestAttached.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"मुझे विश्वास है कि आप पांडुलिपि के एक उत्कृष्ट समीक्षक के रूप में काम करेंगे, &quot;{$submissionTitle},&quot; और मैं पूछ रहा हूं कि आप हमारे लिए इस महत्वपूर्ण कार्य को करने पर विचार कर रहे हैं। इस जर्नल के लिए समीक्षा दिशानिर्देश नीचे संलग्न हैं, और प्रस्तुत इस ईमेल से जुड़ा हुआ है। प्रस्तुत करने की आपकी समीक्षा, आपकी सिफारिश के साथ, मेरे द्वारा ईमेल की जानी चाहिए {$reviewDueDate}.<br />\n"
+"<br />\n"
+"कृपया {$ responseDueDate} द्वारा वापसी ईमेल में इंगित करें कि क्या आप समीक्षा करने में सक्षम और इच्छुक हैं।<br />\n"
+"<br />\n"
+"इस अनुरोध पर विचार करने के लिए धन्यवाद।<br />\n"
+"<br />\n"
+"{$editorialContactSignature}<br />\n"
+"<br />\n"
+"<br />\n"
+"Review Guidelines<br />\n"
+"<br />\n"
+"{$reviewGuidelines}<br />\n"
+""
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+msgid "emails.reviewRequestAttached.description"
+msgstr "यह ईमेल अनुभाग संपादक द्वारा एक समीक्षक को यह अनुरोध करने के लिए भेजा जाता है कि वे सबमिशन की समीक्षा करने के कार्य को स्वीकार या अस्वीकार करें। इसमें अनुलग्नक के रूप में सबमिशन शामिल है। इस संदेश का उपयोग तब किया जाता है जब ईमेल> अनुलग्नक समीक्षा प्रक्रिया प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में चुनी जाती है। (अन्यथा REVIEW_REQUEST देखें।)"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$contextUrl}, {$editorialContactSignature}, {$submissionTitle}, {$reviewDueDate}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}, {$passwordResetUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRequestSubsequent.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"यह पांडुलिपि का संबंध है &quot;{$submissionTitle},&quot; जो विचाराधीन है {$contextName}.<br />\n"
+"<br />\n"
+"पांडुलिपि के पिछले संस्करण की समीक्षा के बाद, लेखकों ने अब अपने पेपर का एक संशोधित संस्करण प्रस्तुत किया है। यदि आप इसका मूल्यांकन करने में मदद कर सकते हैं तो हम इसकी सराहना करेंगे.<br />\n"
+"<br />\n"
+"कृपया यह दिखाने के लिए कि क्या आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन एक्सेस करने और अपनी समीक्षा और अनुशंसा दर्ज करने के लिए कृपया {$ responseDueDate} द्वारा जर्नल वेब साइट पर लॉग इन करें। वेब साइट है {$contextUrl}<br />\n"
+"<br />\n"
+"समीक्षा स्वयं होने वाली है{$reviewDueDate}.<br />\n"
+"<br />\n"
+"यदि आपके पास जर्नल की वेब साइट के लिए आपका उपयोगकर्ता नाम और पासवर्ड नहीं है, तो आप अपना पासवर्ड रीसेट करने के लिए इस लिंक का उपयोग कर सकते हैं (जो तब आपके उपयोगकर्ता नाम के साथ आपको ईमेल किया जाएगा). {$passwordResetUrl}<br />\n"
+"<br />\n"
+"सबमिशन URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"इस अनुरोध पर विचार करने के लिए धन्यवाद।<br />\n"
+"<br />\n"
+"{$editorialContactSignature}<br />\n"
+"<br />\n"
+"&quot;{$submissionTitle}&quot;<br />\n"
+"<br />\n"
+"{$submissionAbstract}"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+msgid "emails.reviewRequestSubsequent.description"
+msgstr "सेक्शन एडिटर से समीक्षक के लिए यह ईमेल अनुरोध करता है कि समीक्षक समीक्षा प्रस्तुत करने या समीक्षा के दूसरे या अधिक दौर के लिए कार्य को स्वीकार या अस्वीकार कर देता है। यह प्रस्तुत करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया का चयन किया जाता है। (अन्यथा REVIEW_REQUEST_ATTACHED_SUBSEQUENT देखें.)"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRequestOneclickSubsequent.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"यह पांडुलिपि का संबंध है &quot;{$submissionTitle},&quot; जो विचाराधीन है {$contextName}.<br />\n"
+"<br />\n"
+"पांडुलिपि के पिछले संस्करण की समीक्षा के बाद, लेखकों ने अब अपने पेपर का एक संशोधित संस्करण प्रस्तुत किया है। यदि आप इसका मूल्यांकन करने में मदद कर सकते हैं तो हम इसकी सराहना करेंगे.<br />\n"
+"<br />\n"
+"कृपया यह दिखाने के लिए कि क्या आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन एक्सेस करने और अपनी समीक्षा और अनुशंसा दर्ज करने के लिए कृपया {$ responseDueDate} जर्नल में लॉग इन करें।.<br />\n"
+"<br />\n"
+"समीक्षा स्वयं होने वाली है {$reviewDueDate}.<br />\n"
+"<br />\n"
+"सबमिशन URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"इस अनुरोध पर विचार करने के लिए धन्यवाद।<br />\n"
+"<br />\n"
+"{$editorialContactSignature}<br />\n"
+"<br />\n"
+"&quot;{$submissionTitle}&quot;<br />\n"
+"<br />\n"
+"{$submissionAbstract}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "emails.reviewRequestOneclickSubsequent.description"
+msgstr "सेक्शन एडिटर से समीक्षक के लिए यह ईमेल अनुरोध करता है कि समीक्षक समीक्षा प्रस्तुत करने या समीक्षा के दूसरे या अधिक दौर के लिए कार्य को स्वीकार या अस्वीकार कर देता है। यह प्रस्तुत करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया जाता है जब प्रबंधन> सेटिंग> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया का चयन किया जाता है, और एक-क्लिक समीक्षक पहुंच सक्षम होती है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$contextName}, {$reviewGuidelines}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRequestAttachedSubsequent.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"यह पांडुलिपि का संबंध है &quot;{$submissionTitle},&quot; जो विचाराधीन है {$contextName}.<br />\n"
+"<br />\n"
+"पांडुलिपि के पिछले संस्करण की समीक्षा के बाद, लेखकों ने अब अपने पेपर का एक संशोधित संस्करण प्रस्तुत किया है। यदि आप इसका मूल्यांकन करने में मदद कर सकते हैं तो हम इसकी सराहना करेंगे.<br />\n"
+"<br />\n"
+"इस जर्नल के लिए समीक्षा दिशानिर्देश नीचे संलग्न हैं, और प्रस्तुत इस ईमेल से जुड़ा हुआ है। आपकी अनुशंसा के साथ, आपकी सबमिट की समीक्षा, {$ reviewDueDate} द्वारा मुझे ईमेल की जानी चाहिए.<br />\n"
+"<br />\n"
+"कृपया {$ responseDueDate} द्वारा वापसी ईमेल में इंगित करें कि क्या आप समीक्षा करने में सक्षम और इच्छुक हैं.<br />\n"
+"<br />\n"
+"इस अनुरोध पर विचार करने के लिए धन्यवाद।<br />\n"
+"<br />\n"
+"{$editorialContactSignature}<br />\n"
+"<br />\n"
+"<br />\n"
+"Review Guidelines<br />\n"
+"<br />\n"
+"{$reviewGuidelines}<br />\n"
+""
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+msgid "emails.reviewRequestAttachedSubsequent.description"
+msgstr "यह ईमेल अनुभाग संपादक द्वारा एक समीक्षक को यह अनुरोध करने के लिए भेजा जाता है कि वे समीक्षा के दूसरे या अधिक दौर के लिए प्रस्तुत समीक्षा के कार्य को स्वीकार या अस्वीकार करें। इसमें अनुलग्नक के रूप में सबमिशन शामिल है। इस संदेश का उपयोग तब किया जाता है जब ईमेल> अनुलग्नक समीक्षा प्रक्रिया प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में चुनी जाती है। (अन्यथा REVIEW_REQUEST_SUBSEQUENT देखें।)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewCancel.subject"
+msgstr "समीक्षा रद्द करने का अनुरोध"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$submissionTitle}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewCancel.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"हमने इस बिंदु पर निर्णय लिया है कि आप सबमिशन की समीक्षा करने के लिए हमारा अनुरोध रद्द कर दें, &quot;{$submissionTitle},&quot; for {$contextName}. हम आपसे किसी भी असुविधा के लिए क्षमा चाहते हैं और यह आशा करते हैं कि हम भविष्य में इस पत्रिका की समीक्षा प्रक्रिया में सहायता करने के लिए आपको कॉल कर सकेंगे।.<br />\n"
+"<br />\n"
+"यदि आपके पास किसी तरह का प्रश्न है, तो कृपया मुझ से सम्पर्क करें."
+
+# (pofilter) doublewords: The word 'समीक्षा' is repeated
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewCancel.description"
+msgstr "यह ईमेल अनुभाग संपादक द्वारा एक समीक्षक को भेजा जाता है, जिनके पास प्रगति की समीक्षा समीक्षा है ताकि उन्हें सूचित किया जा सके कि समीक्षा रद्द कर दी गई है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewReinstate.subject"
+msgstr "पुनर्स्थापना के लिए अनुरोध"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$submissionTitle}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewReinstate.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"हम आपके द्वारा प्रस्तुत समीक्षा की समीक्षा करने के लिए आपके अनुरोध को पुनः स्थापित करना चाहेंगे, &quot;{$submissionTitle},&quot; for {$contextName}. हमें उम्मीद है कि आप इस पत्रिका की समीक्षा प्रक्रिया में सहायता कर पाएंगे.<br />\n"
+"<br />\n"
+"यदि आपके पास किसी तरह का प्रश्न है, तो कृपया मुझ से सम्पर्क करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewReinstate.description"
+msgstr "यह ईमेल सेक्शन एडिटर द्वारा एक समीक्षक को भेजा जाता है, जिसके पास प्रगति की समीक्षा में यह सूचित करने के लिए कि रद्द की गई समीक्षा को फिर से बहाल कर दिया गया है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewConfirm.subject"
+msgstr "समीक्षा करने में सक्षम"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$submissionTitle}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewConfirm.body"
+msgstr ""
+"Editors:<br />\n"
+"<br />\n"
+"मैं सबमिशन की समीक्षा करने में सक्षम और तैयार हूं, &quot;{$submissionTitle},&quot; for {$contextName}. मेरे बारे में सोचने के लिए धन्यवाद, और मेरी योजना इसकी नियत तारीख, {$ reviewDueDate} से पूरी होने की है, अगर पहले नहीं.<br />\n"
+"<br />\n"
+"{$reviewerName}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewConfirm.description"
+msgstr "यह ईमेल अनुभाग संपादक को समीक्षक द्वारा समीक्षा संपादक के अनुरोध के जवाब में भेजा जाता है कि समीक्षा अनुरोध स्वीकार कर लिया गया है और निर्दिष्ट तिथि तक पूरा हो जाएगा।."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewDecline.subject"
+msgstr "समीक्षा करने में असमर्थ"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$submissionTitle}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewDecline.body"
+msgstr ""
+"Editors:<br />\n"
+"<br />\n"
+"मुझे डर है कि इस समय मैं सबमिशन की समीक्षा करने में असमर्थ हूं, &quot;{$submissionTitle},&quot; for {$contextName}. मुझे सोचने के लिए धन्यवाद, और एक और समय मुझे कॉल करने के लिए स्वतंत्र महसूस हो रहा है.<br />\n"
+"<br />\n"
+"{$reviewerName}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewDecline.description"
+msgstr "यह ईमेल समीक्षक द्वारा संपादक को खंड संपादक को सूचित करने के लिए समीक्षा अनुरोध के जवाब में भेजा जाता है कि समीक्षा अनुरोध अस्वीकार कर दिया गया है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewAck.subject"
+msgstr "लेख समीक्षा आभार"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$submissionTitle}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewAck.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"सबमिशन की समीक्षा को पूरा करने के लिए धन्यवाद, &quot;{$submissionTitle},&quot; for {$contextName}. हम आपके द्वारा प्रकाशित किए जाने वाले कार्य की गुणवत्ता में आपके योगदान की सराहना करते हैं."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewAck.description"
+msgstr "यह ईमेल एक अनुभाग संपादक द्वारा एक पूर्ण समीक्षा की प्राप्ति की पुष्टि करने के लिए भेजा जाता है और समीक्षक को उनके योगदान के लिए धन्यवाद देता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewRemind.subject"
+msgstr "सबमिशन रिव्यू रिमाइंडर"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}, {$ PasswordResetUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRemind.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस समीक्षा की उम्मीद कर रहे थे, और जैसे ही आप इसे तैयार करने वाले हैं, इसे प्राप्त करके प्रसन्न होंगे.<br />\n"
+"<br />\n"
+"यदि आपके पास जर्नल की वेब साइट के लिए आपका उपयोगकर्ता नाम और पासवर्ड नहीं है, तो आप अपना पासवर्ड रीसेट करने के लिए इस लिंक का उपयोग कर सकते हैं (जो तब आपके उपयोगकर्ता नाम के साथ आपको ईमेल किया जाएगा)। {$ PasswordResetUrl}<br />\n"
+"<br />\n"
+"Submission URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"कृपया जर्नल के काम में इस महत्वपूर्ण योगदान को पूरा करने की अपनी क्षमता की पुष्टि करें। तुम्हारे उत्तर की प्रतीक्षा है मुझे.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.reviewRemind.description"
+msgstr "यह ईमेल एक अनुभाग संपादक द्वारा एक समीक्षक को याद दिलाने के लिए भेजा जाता है कि उनकी समीक्षा होने वाली है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRemindOneclick.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस समीक्षा की उम्मीद कर रहे थे, और जैसे ही आप इसे तैयार करने वाले हैं, इसे प्राप्त करके प्रसन्न होंगे.<br />\n"
+"<br />\n"
+"Submission URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"कृपया जर्नल के काम में इस महत्वपूर्ण योगदान को पूरा करने की अपनी क्षमता की पुष्टि करें। तुम्हारे उत्तर की प्रतीक्षा है मुझे.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.reviewRemindOneclick.description"
+msgstr "यह ईमेल एक अनुभाग संपादक द्वारा एक समीक्षक को याद दिलाने के लिए भेजा जाता है कि उनकी समीक्षा होने वाली है."
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}, {$ PasswordResetUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRemindAuto.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस समीक्षा की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और उस तारीख को पारित करने के साथ भेजा गया है। जैसे ही आप इसे तैयार करने में सक्षम होंगे, हम इसे प्राप्त करके प्रसन्न होंगे.<br />\n"
+"<br />\n"
+"यदि आपके पास जर्नल की वेब साइट के लिए आपका उपयोगकर्ता नाम और पासवर्ड नहीं है, तो आप अपना पासवर्ड रीसेट करने के लिए इस लिंक का उपयोग कर सकते हैं (जो तब आपके उपयोगकर्ता नाम के साथ आपको ईमेल किया जाएगा)। {$ PasswordResetUrl}<br />\n"
+"<br />\n"
+"Submission URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"कृपया जर्नल के काम में इस महत्वपूर्ण योगदान को पूरा करने की अपनी क्षमता की पुष्टि करें। तुम्हारे उत्तर की प्रतीक्षा है मुझे.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.reviewRemindAuto.description"
+msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब एक समीक्षक की नियत तिथि समाप्त हो जाती है (सेटिंग्स> वर्कफ़्लो> समीक्षा के तहत समीक्षा विकल्प देखें) और एक-क्लिक समीक्षक पहुंच अक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.reviewRemindAutoOneclick.body"
+msgstr ""
+"{$reviewerName}:<br />\n"
+"<br />\n"
+"प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस समीक्षा की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और उस तारीख को पारित करने के साथ भेजा गया है। जैसे ही आप इसे तैयार करने में सक्षम होंगे, हम इसे प्राप्त करके प्रसन्न होंगे.<br />\n"
+"<br />\n"
+"Submission URL: {$submissionReviewUrl}<br />\n"
+"<br />\n"
+"कृपया पत्रिका के काम में इस महत्वपूर्ण योगदान को पूरा करने की अपनी क्षमता की पुष्टि करें। तुम्हारे उत्तर की प्रतीक्षा है मुझे.<br />\n"
+"<br />\n"
+"{$editorialContactSignature}"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.reviewRemindAutoOneclick.description"
+msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब एक समीक्षक की नियत तिथि समाप्त हो जाती है (सेटिंग्स> वर्कफ़्लो> समीक्षा के तहत समीक्षा विकल्प देखें) और एक-क्लिक समीक्षक पहुंच सक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authorName}, {$submissionTitle}, {$contextName}
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.editorDecisionAccept.body"
+msgstr ""
+"{$authorName}:<br />\n"
+"<br />\n"
+"हम आपके सबमिशन के बारे में निर्णय ले चुके हैं to {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
+"<br />\n"
+"हमारा निर्णय है: सबमिशन को स्वीकार करना"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.editorDecisionAccept.description"
+msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें अंतिम रूप से "सबमिशन स्वीकार" करने का निर्णय देता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$submissionTitle}, {$submissionUrl}, {$authorName}, {$contextName}
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.editorDecisionSendToExternal.body"
+msgstr ""
+"{$authorName}:<br />\n"
+"<br />\n"
+"हम आपके सबमिशन के बारे में निर्णय ले चुके हैं to {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
+"<br />\n"
+"Our decision is to: Send to Review<br />\n"
+"<br />\n"
+"Submission URL: {$submissionUrl}"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.editorDecisionSendToExternal.description"
+msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें सूचित करता है कि उनका प्रस्तुतिकरण बाहरी समीक्षा के लिए भेजा जा रहा है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authorName}, {$submissionTitle}, {$submissionUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.editorDecisionSendToProduction.body"
+msgstr ""
+"{$authorName}:<br />\n"
+"<br />\n"
+"आपके सबमिशन का संपादन, &quot;{$submissionTitle},&quot; पूरा है। अब हम इसे उत्पादन के लिए भेज रहे हैं.<br />\n"
+"<br />\n"
+"Submission URL: {$submissionUrl}"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.editorDecisionSendToProduction.description"
+msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें सूचित करता है कि उनका सबमिशन उत्पादन के लिए भेजा जा रहा है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authorName}, {$submissionTitle}, {$contextName}
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.editorDecisionRevisions.body"
+msgstr ""
+"{$authorName}:<br />\n"
+"<br />\n"
+"आपके द्वारा सबमिट किए जाने के संबंध में हम एक निर्णय पर पहुंच गए हैं {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
+"<br />\n"
+"Our decision is: Revisions Required"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+msgid "emails.editorDecisionRevisions.description"
+msgstr "लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें अंतिम रूप देने के बारे में सूचित करता है, जो उनके प्रस्तुतिकरण के संबंध में आवश्यक \ "संशोधन” है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authorName}, {$submissionTitle}, {$contextName}
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.editorDecisionResubmit.body"
+msgstr ""
+"{$authorName}:<br />\n"
+"<br />\n"
+"आपके द्वारा सबमिट किए जाने के संबंध में हम एक निर्णय पर पहुंच गए हैं {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
+"<br />\n"
+"हमारा निर्णय है: समीक्षा के लिए पुन: सबमिट करें"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+msgid "emails.editorDecisionResubmit.description"
+msgstr "लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें उनके जमा करने के बारे में अंतिम \ "पुनर्निमित \" निर्णय के बारे में सूचित करता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authorName}, {$submissionTitle}, {$contextName}
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.editorDecisionDecline.body"
+msgstr ""
+"{$authorName}:<br />\n"
+"<br />\n"
+"आपके द्वारा सबमिट किए जाने के संबंध में हम एक निर्णय पर पहुंच गए हैं {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
+"<br />\n"
+"हमारा निर्णय है: सबमिशन को अस्वीकार करना"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+msgid "emails.editorDecisionDecline.description"
+msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें उनके जमा करने के बारे में अंतिम \ "गिरावट \" निर्णय के बारे में सूचित करता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.editorRecommendation.subject"
+msgstr "संपादक की सिफारिश"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$editors}, {$submissionTitle}, {$recommendation}, {$contextName}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.editorRecommendation.body"
+msgstr ""
+"{$editors}:<br />\n"
+"<br />\n"
+"को प्रस्तुत करने के संबंध में सिफारिश {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.editorRecommendation.description"
+msgstr "एडिटिंग या सेक्शन एडिटर्स की सिफारिश करने वाले एडिटर या सेक्शन एडिटर की सिफारिश से यह ईमेल उन्हें सबमिट करने से संबंधित अंतिम सिफारिश के बारे में सूचित करता है।."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.copyeditRequest.subject"
+msgstr "प्रतिलिपि अनुरोध"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$participantUsername}, {$contextUrl}, {$submissionTitle}, {$contextName}, {$participantName}, {$submissionUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) simpleplurals: The original uses plural(s)
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.copyeditRequest.body"
+msgstr ""
+"{$participantName}:<br />\n"
+"<br />\n"
+"I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot; for {$contextName} by following these steps.<br />\n"
+"1. नीचे दिए गए सबमिशन यूआरएल पर क्लिक करें.<br />\n"
+"2. ड्राफ्ट फ़ाइलों के तहत उपलब्ध किसी भी फाइल को खोलें और आवश्यकतानुसार अपनी कॉपी की गई चर्चाओं को जोड़ते हुए, अपनी प्रतिलिपि बनाएँ.<br />\n"
+"3. Save copyedited file(s), and upload to Copyedited panel.<br />\n"
+"4. संपादक को सूचित करें कि सभी फाइलें तैयार हो गई हैं, और यह कि उत्पादन प्रक्रिया शुरू हो सकती है.<br />\n"
+"<br />\n"
+"{$contextName} URL: {$contextUrl}<br />\n"
+"Submission URL: {$submissionUrl}<br />\n"
+"Username: {$participantUsername}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.copyeditRequest.description"
+msgstr ""
+"यह ईमेल एक सेक्शन एडिटर द्वारा सबमिशन की कॉपीडिटर को सबमिट करने के लिए भेजा "
+"जाता है ताकि वे कॉपीएडिटिंग  करने की प्रक्रिया शुरू कर सकें। यह सबमिशन और इसे"
+" एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.layoutRequest.subject"
+msgstr "अनुरोध गैलीज़"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$participantUsername}, {$contextUrl}, {$submissionTitle}, {$contextName}, {$participantName}, {$submissionUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 6
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.layoutRequest.body"
+msgstr ""
+"{$participantName}:<br />\n"
+"<br />\n"
+"The submission &quot;{$submissionTitle}&quot; to {$contextName} अब इन चरणों का पालन करके गैलियों की जरूरत है.<br />\n"
+"1. नीचे दिए गए सबमिशन यूआरएल पर क्लिक करें.<br />\n"
+"2. जर्नल में लॉग इन करें और जर्नल के मानकों के अनुसार गैलिलियों को बनाने के लिए प्रोडक्शन रेडी फाइलों का उपयोग करें.<br />\n"
+"3. गैलीज़ को गैली फ़ाइल्स अनुभाग में अपलोड करें.<br />\n"
+"4. प्रोडक्शन डिस्कशन का उपयोग करके संपादक को सूचित करें कि गैलिसियां अपलोड और तैयार हैं.<br />\n"
+"<br />\n"
+"{$contextName} URL: {$contextUrl}<br />\n"
+"Submission URL: {$submissionUrl}<br />\n"
+"Username: {$participantUsername}<br />\n"
+"<br />\n"
+"यदि आप इस समय यह कार्य करने में असमर्थ हैं या कोई प्रश्न हैं, तो कृपया मुझसे संपर्क करें। इस जर्नल में आपके योगदान के लिए धन्यवाद."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.layoutRequest.description"
+msgstr "अनुभाग संपादक से लेआउट संपादक का यह ईमेल उन्हें सूचित करता है कि उन्हें एक सबमिशन पर लेआउट एडिटिंग का कार्य सौंपा गया है। यह सबमिशन और इसे एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.layoutComplete.subject"
+msgstr "गैलीज़ पूर्ण"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$participantName}, {$submissionTitle}, {$contextName}, {$editorialContactName}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.layoutComplete.body"
+msgstr ""
+"{$editorialContactName}:<br />\n"
+"<br />\n"
+"पांडुलिपि के लिए अब गैलीज़  तैयार की गई हैं, &quot;{$submissionTitle},&quot; for {$contextName} and are ready for proofreading.<br />\n"
+"<br />\n"
+"यदि आपके पास किसी तरह का प्रश्न है, तो कृपया मुझ से सम्पर्क करें.<br />\n"
+"<br />\n"
+"{$participantName}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.layoutComplete.description"
+msgstr "लेआउट संपादक से अनुभाग संपादक का यह ईमेल उन्हें सूचित करता है कि लेआउट प्रक्रिया पूरी हो गई है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.emailLink.subject"
+msgstr "संभावित ब्याज का आलेख"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$number}, {$submissionTitle}, {$contextName}, {$volume}, {$articleUrl}, {$authorName}, {$year}
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.emailLink.body"
+msgstr "सोचा कि आपको देखने में दिलचस्पी हो सकती है &quot;{$submissionTitle}&quot; by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$contextName} at &quot;{$articleUrl}&quot;."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.emailLink.description"
+msgstr "यह ईमेल टेम्प्लेट एक पंजीकृत पाठक को एक लेख के बारे में जानकारी भेजने का अवसर प्रदान करता है, जिसे कोई दिलचस्पी हो। यह रीडिंग टूल्स के माध्यम से उपलब्ध है और जर्नल मैनेजर द्वारा रीडिंग टूल्स एडमिनिस्ट्रेशन पेज में सक्षम होना चाहिए."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.subscriptionNotify.subject"
+msgstr "सदस्यता अधिसूचना"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$subscriberName}, {$subscriptionContactSignature}, {$contextName}, {$subscriptionType}, {$username}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.subscriptionNotify.body"
+msgstr ""
+"{$subscriberName}:<br />\n"
+"<br />\n"
+"अब आप हमारी ऑनलाइन जर्नल मैनेजमेंट सिस्टम में {$contextName} के लिए एक सब्सक्राइबर के रूप में पंजीकृत हो गए हैं, निम्नलिखित सदस्यता के साथ:<br />\n"
+"<br />\n"
+"{$subscriptionType}<br />\n"
+"<br />\n"
+"केवल ग्राहकों के लिए उपलब्ध सामग्री तक पहुँचने के लिए, सिस्टम में अपने यूज़रनेम के साथ लॉग इन करें, &quot;{$username}&quot;.<br />\n"
+"<br />\n"
+"एक बार जब आप सिस्टम में लॉग इन कर लेते हैं तो आप किसी भी बिंदु पर अपना प्रोफ़ाइल विवरण और पासवर्ड बदल सकते हैं.<br />\n"
+"<br />\n"
+"कृपया ध्यान दें कि यदि आपके पास एक संस्थागत सदस्यता है, तो आपके संस्थान में उपयोगकर्ताओं को लॉग इन करने की कोई आवश्यकता नहीं है, क्योंकि सदस्यता सामग्री के लिए अनुरोध स्वचालित रूप से सिस्टम द्वारा प्रमाणित किया जाएगा।.<br />\n"
+"<br />\n"
+"यदि आपके कोई प्रश्न हैं, तो कृपया मुझसे बेझिझक संपर्क करें.<br />\n"
+"<br />\n"
+"{$subscriptionContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "emails.subscriptionNotify.description"
+msgstr "यह ईमेल एक पंजीकृत पाठक को सूचित करता है कि प्रबंधक ने उनके लिए एक सदस्यता बनाई है। यह एक्सेस के लिए निर्देशों के साथ जर्नल का URL प्रदान करता है."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "emails.openAccessNotify.subject"
+msgstr "अंक अब ओपन एक्सेस"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextUrl}, {$editorialContactSignature}, {$contextName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.openAccessNotify.body"
+msgstr ""
+"Readers:<br />\n"
+"<br />\n"
+"{$contextName} निम्नलिखित मुद्दे पर सिर्फ एक ओपन एक्सेस फॉर्मेट में उपलब्ध कराया गया है। हम आपको यहां सामग्री की तालिका की समीक्षा करने के लिए आमंत्रित करते हैं और फिर लेख और रुचि की वस्तुओं की समीक्षा करने के लिए हमारी वेब साइट ({$contextUrl}) पर जाएं।.<br />\n"
+"<br />\n"
+"हमारे काम में निरंतर रुचि के लिए धन्यवाद,<br />\n"
+"{$editorialContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.openAccessNotify.description"
+msgstr ""
+"यह ईमेल उन पंजीकृत पाठकों को भेजा जाता है, जिन्होंने किसी अंक पर खुली पहुंच "
+"बनने पर अधिसूचना ईमेल प्राप्त करने का अनुरोध किया है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$subscriberName}, {$subscriptionContactSignature}, {$contextName}, {$expiryDate}, {$subscriptionType}, {$username}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.subscriptionBeforeExpiry.body"
+msgstr ""
+"{$subscriberName}:<br />\n"
+"<br />\n"
+"आपकी {$contextName} सदस्यता समाप्त होने वाली है.<br />\n"
+"<br />\n"
+"{$subscriptionType}<br />\n"
+"Expiry date: {$expiryDate}<br />\n"
+"<br />\n"
+"इस पत्रिका तक अपनी पहुंच की निरंतरता सुनिश्चित करने के लिए, कृपया वेबसाइट पर जाएं और अपनी सदस्यता को नवीनीकृत करें। आप अपने उपयोगकर्ता नाम के साथ सिस्टम में लॉग इन करने में सक्षम हैं, &quot;{$username}&quot;.<br />\n"
+"<br />\n"
+"यदि आपके कोई प्रश्न हैं, तो कृपया मुझसे बेझिझक संपर्क करें.<br />\n"
+"<br />\n"
+"{$subscriptionContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.subscriptionBeforeExpiry.description"
+msgstr "यह ईमेल एक ग्राहक को सूचित करता है कि उनकी सदस्यता जल्द ही समाप्त हो जाएगी। यह एक्सेस के लिए निर्देशों के साथ जर्नल का URL प्रदान करता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$subscriberName}, {$subscriptionContactSignature}, {$contextName}, {$expiryDate}, {$subscriptionType}, {$username}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.subscriptionAfterExpiry.body"
+msgstr ""
+"{$subscriberName}:<br />\n"
+"<br />\n"
+"आपकी {$contextName} सदस्यता समाप्त हो गई है.<br />\n"
+"<br />\n"
+"{$subscriptionType}<br />\n"
+"Expiry date: {$expiryDate}<br />\n"
+"<br />\n"
+"अपनी सदस्यता को नवीनीकृत करने के लिए, कृपया जर्नल वेबसाइट पर जाएं। आप अपने उपयोगकर्ता नाम के साथ सिस्टम में लॉग इन करने में सक्षम हैं, &quot;{$username}&quot;.<br />\n"
+"<br />\n"
+"यदि आपके कोई प्रश्न हैं, तो कृपया मुझसे बेझिझक संपर्क करें.<br />\n"
+"<br />\n"
+"{$subscriptionContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.subscriptionAfterExpiry.description"
+msgstr "यह ईमेल एक ग्राहक को सूचित करता है कि उनकी सदस्यता समाप्त हो गई है। यह एक्सेस के लिए निर्देशों के साथ जर्नल का URL प्रदान करता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$subscriberName}, {$subscriptionContactSignature}, {$contextName}, {$expiryDate}, {$subscriptionType}, {$username}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.subscriptionAfterExpiryLast.body"
+msgstr ""
+"{$subscriberName}:<br />\n"
+"<br />\n"
+"आपकी {$contextName} सदस्यता समाप्त हो गई है.<br />\n"
+"कृपया ध्यान दें कि यह अंतिम अनुस्मारक है जिसे आपको ईमेल किया जाएगा.<br />\n"
+"<br />\n"
+"{$subscriptionType}<br />\n"
+"Expiry date: {$expiryDate}<br />\n"
+"<br />\n"
+"अपनी सदस्यता को नवीनीकृत करने के लिए, कृपया जर्नल वेबसाइट पर जाएं। आप अपने उपयोगकर्ता नाम के साथ सिस्टम में लॉग इन करने में सक्षम हैं, &quot;{$username}&quot;.<br />\n"
+"<br />\n"
+"यदि आपके कोई प्रश्न हैं, तो कृपया मुझसे बेझिझक संपर्क करें.<br />\n"
+"<br />\n"
+"{$subscriptionContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.subscriptionAfterExpiryLast.description"
+msgstr "यह ईमेल एक ग्राहक को सूचित करता है कि उनकी सदस्यता समाप्त हो गई है। यह एक्सेस के लिए निर्देशों के साथ जर्नल का URL प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$userDetails}, {$subscriptionUrl}, {$membership}, {$subscriptionType}, {$ contextName}
+# (pofilter) xmltags: Added XML tags
+msgid "emails.subscriptionPurchaseIndl.body"
+msgstr ""
+"निम्नलिखित विवरण के साथ {$ contextName} के लिए एक व्यक्तिगत सदस्यता ऑनलाइन खरीदी गई है।<br />\n"
+"<br />\n"
+"Subscription Type:<br />\n"
+"{$subscriptionType}<br />\n"
+"<br />\n"
+"User:<br />\n"
+"{$userDetails}<br />\n"
+"<br />\n"
+"सदस्यता जानकारी (यदि प्रदान की गई है):<br />\n"
+"{$membership}<br />\n"
+"<br />\n"
+"इस सदस्यता को देखने या संपादित करने के लिए, कृपया निम्न URL का उपयोग करें.<br />\n"
+"<br />\n"
+"Subscription URL: {$subscriptionUrl}<br />\n"
+""
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.subscriptionPurchaseIndl.description"
+msgstr "यह ईमेल सदस्यता प्रबंधक को सूचित करता है कि एक व्यक्तिगत सदस्यता ऑनलाइन खरीदी गई है। यह सदस्यता के बारे में सारांश जानकारी और खरीदी गई सदस्यता के लिए त्वरित पहुंच लिंक प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$userDetails}, {$subscriptionUrl}, {$domain}, {$institutionMailingAddress}, {$institutionName}, {$ipRanges}, {$membership}, {$contextName}, {$subscriptionType}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) singlequoting: Different quotation marks
+# (pofilter) xmltags: Added XML tags
+msgid "emails.subscriptionPurchaseInstl.body"
+msgstr ""
+"निम्नलिखित विवरण के साथ {$contextName} के लिए एक संस्थागत सदस्यता ऑनलाइन खरीदी गई है। इस सदस्यता को सक्रिय करने के लिए, कृपया दिए गए सदस्यता URL का उपयोग करें और सदस्यता की स्थिति को 'सक्रिय' पर सेट करें.<br />\n"
+"<br />\n"
+"Subscription Type:<br />\n"
+"{$subscriptionType}<br />\n"
+"<br />\n"
+"Institution:<br />\n"
+"{$institutionName}<br />\n"
+"{$institutionMailingAddress}<br />\n"
+"<br />\n"
+"Domain (if provided):<br />\n"
+"{$domain}<br />\n"
+"<br />\n"
+"IP Ranges (if provided):<br />\n"
+"{$ipRanges}<br />\n"
+"<br />\n"
+"Contact Person:<br />\n"
+"{$userDetails}<br />\n"
+"<br />\n"
+"सदस्यता जानकारी (यदि प्रदान की गई है):<br />\n"
+"{$membership}<br />\n"
+"<br />\n"
+"इस सदस्यता को देखने या संपादित करने के लिए, कृपया निम्न URL का उपयोग करें.<br />\n"
+"<br />\n"
+"सदस्यता URL: {$subscriptionUrl}<br />\n"
+""
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.subscriptionPurchaseInstl.description"
+msgstr "यह ईमेल सदस्यता प्रबंधक को सूचित करता है कि एक संस्थागत सदस्यता ऑनलाइन खरीदी गई है। यह सदस्यता के बारे में सारांश जानकारी और खरीदी गई सदस्यता के लिए त्वरित पहुंच लिंक प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$userDetails}, {$subscriptionUrl}, {$membership}, {$contextName}, {$subscriptionType}
+# (pofilter) xmltags: Added XML tags
+msgid "emails.subscriptionRenewIndl.body"
+msgstr ""
+"निम्नलिखित विवरण के साथ {$contextName} के लिए एक व्यक्तिगत सदस्यता ऑनलाइन नवीनीकृत की गई है.<br />\n"
+"<br />\n"
+"Subscription Type:<br />\n"
+"{$subscriptionType}<br />\n"
+"<br />\n"
+"User:<br />\n"
+"{$userDetails}<br />\n"
+"<br />\n"
+"सदस्यता जानकारी (यदि प्रदान की गई है):<br />\n"
+"{$membership}<br />\n"
+"<br />\n"
+"इस सदस्यता को देखने या संपादित करने के लिए, कृपया निम्न URL का उपयोग करें.<br />\n"
+"<br />\n"
+"सदस्यता URL: {$subscriptionUrl}<br />\n"
+""
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.subscriptionRenewIndl.description"
+msgstr "यह ईमेल सदस्यता प्रबंधक को सूचित करता है कि एक व्यक्तिगत सदस्यता ऑनलाइन नवीनीकृत हो गई है। यह सदस्यता के बारे में सारांश जानकारी और नवीनीकृत सदस्यता के लिए एक त्वरित पहुँच लिंक प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$userDetails}, {$subscriptionUrl}, {$domain}, {$institutionMailingAddress}, {$institutionName}, {$ipRanges}, {$membership}, {$contextName}, {$subscriptionType}
+# (pofilter) xmltags: Added XML tags
+msgid "emails.subscriptionRenewInstl.body"
+msgstr ""
+"निम्नलिखित विवरण के साथ {$contextName} के लिए एक संस्थागत सदस्यता ऑनलाइन नवीनीकृत की गई है.<br />\n"
+"<br />\n"
+"Subscription Type:<br />\n"
+"{$subscriptionType}<br />\n"
+"<br />\n"
+"Institution:<br />\n"
+"{$institutionName}<br />\n"
+"{$institutionMailingAddress}<br />\n"
+"<br />\n"
+"डोमेन (यदि प्रदान किया गया है):<br />\n"
+"{$domain}<br />\n"
+"<br />\n"
+"आईपी रेंज (यदि प्रदान की गई है):<br />\n"
+"{$ipRanges}<br />\n"
+"<br />\n"
+"संपर्क व्यक्ति:<br />\n"
+"{$userDetails}<br />\n"
+"<br />\n"
+"सदस्यता जानकारी (यदि प्रदान की गई है):<br />\n"
+"{$membership}<br />\n"
+"<br />\n"
+"इस सदस्यता को देखने या संपादित करने के लिए, कृपया निम्न URL का उपयोग करें.<br />\n"
+"<br />\n"
+"सदस्यता URL: {$subscriptionUrl}<br />\n"
+""
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "emails.subscriptionRenewInstl.description"
+msgstr "यह ईमेल सदस्यता प्रबंधक को सूचित करता है कि एक संस्थागत सदस्यता ऑनलाइन नवीनीकृत की गई है। यह सदस्यता के बारे में सारांश जानकारी और नवीनीकृत सदस्यता के लिए एक त्वरित पहुँच लिंक प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$rawCitation}, {$authorFirstName}, {$submissionTitle}, {$contextName}, {$userFirstName}
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+msgid "emails.citationEditorAuthorQuery.body"
+msgstr ""
+"{$authorFirstName},<br />\n"
+"<br />\n"
+"क्या आप कृपया अपने लेख, {$submissionTitle} से निम्न संदर्भ के लिए उचित उद्धरण के साथ हमें सत्यापित या प्रदान कर सकते हैं।:<br />\n"
+"<br />\n"
+"{$rawCitation}<br />\n"
+"<br />\n"
+"धन्यवाद!<br />\n"
+"<br />\n"
+"{$userFirstName}<br />\n"
+"कॉपी संपादक, {$contextName}<br />\n"
+""
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.citationEditorAuthorQuery.description"
+msgstr "यह ईमेल लेखकों से संदर्भों के बारे में अतिरिक्त जानकारी का अनुरोध करने के लिए प्रतिलिपिलेखकों को अनुमति देता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ authorName}, {$editorialContactSignature}, {$submissionTitle}, {$submissionUrl}
+# (pofilter) xmltags: Added XML tags
+msgid "emails.revisedVersionNotify.body"
+msgstr ""
+"संपादकों:<br />\n"
+"<br />\n"
+"का संशोधित संस्करण &quot;{$submissionTitle}&quot; लेखक द्वारा अपलोड किया गया है {$ authorName}.<br />\n"
+"<br />\n"
+"सबमिशन URL: {$submissionUrl}<br />\n"
+"<br />\n"
+"{$editorialContactSignature}"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.revisedVersionNotify.description"
+msgstr "यह ईमेल स्वचालित रूप से असाइन किए गए संपादक को भेजा जाता है जब लेखक किसी लेख का संशोधित संस्करण अपलोड करता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextName}
+# (pofilter) startpunc: Different punctuation at the start
+msgid "emails.notificationCenterDefault.subject"
+msgstr "{$contextName} के बारे में एक संदेश"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.notificationCenterDefault.body"
+msgstr "कृपया अपना संदेश लिखें."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "emails.notificationCenterDefault.description"
+msgstr "सूचना केंद्र मैसेज लिस्टबिल्डर में प्रयुक्त डिफ़ॉल्ट (रिक्त) संदेश."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) startwhitespace: Different whitespace at the start
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authorName}
+# (pofilter) tabs: Different tabs
+# (pofilter) xmltags: Added XML tags
+msgid "emails.editorDecisionInitialDecline.body"
+msgstr ""
+"\n"
+"\t\t\t{$authorName}:<br />\n"
+"<br />\n"
+
+msgid "emails.statisticsReportNotification.description"
+msgstr ""
+"यह ईमेल स्वचालित रूप से संपादकों और पत्रिका प्रबंधकों को मासिक रूप से भेजा "
+"जाता है ताकि उन्हें एक प्रणाली स्वास्थ्य अवलोकन प्रदान किया जा सके।"
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr "{$ माह}, {$ वर्ष} के लिए संपादकीय गतिविधि"
+
+msgid "emails.editorDecisionInitialDecline.description"
+msgstr ""
+"यह ईमेल लेखक को भेजा जाता है अगर संपादक समीक्षा के चरण से पहले शुरू में अपने "
+"प्रस्तुतिकरण को कम कर देता है"
+
+msgid "emails.editorDecisionInitialDecline.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr "संशोधित संस्करण अपलोड किया गया"
+
+msgid "emails.citationEditorAuthorQuery.subject"
+msgstr "प्रशस्ति संपादन"
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr "सदस्यता नवीनीकरण: व्यक्तिगत"
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr "सदस्यता नवीनीकरण: व्यक्तिगत"
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr "सदस्यता खरीद: व्यक्तिगत"
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr "सदस्यता खरीद: व्यक्तिगत"
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr "सदस्यता समाप्त - अंतिम अनुस्मारक"
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr "सदस्यता समाप्त हो गई"
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr "सदस्यता समाप्ति की सूचना"
+
+msgid "emails.editorDecisionDecline.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionResubmit.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionRevisions.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionSendToProduction.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionSendToExternal.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.editorDecisionAccept.subject"
+msgstr "संपादक का निर्णय"
+
+msgid "emails.reviewRemindAutoOneclick.subject"
+msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
+
+msgid "emails.reviewRemindAuto.subject"
+msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
+
+msgid "emails.reviewRemindOneclick.subject"
+msgstr "सबमिशन समीक्षा रिमाइंडर"
+
+msgid "emails.reviewRequestAttachedSubsequent.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestOneclickSubsequent.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestAttached.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestRemindAutoOneclick.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestOneclick.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.reviewRequestRemindAuto.subject"
+msgstr "लेख समीक्षा का अनुरोध"
+
+msgid "emails.submissionAckNotUser.subject"
+msgstr "सबमिशन स्वीकृति"
+
+msgid "emails.passwordResetConfirm.subject"
+msgstr "पासवर्ड रीसेट पुष्टि"

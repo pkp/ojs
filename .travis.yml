@@ -81,4 +81,3 @@ after_script:
 after_failure:
   - sudo apt-get install sharutils
   - tar cz cypress/screenshots | uuencode /dev/stdout
-  - cat error.log

@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-15 09:20-0700\n"
+"PO-Revision-Date: 2020-04-25 18:16+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/api/hi/>\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api.submissions.403.cantChangeContext"
+msgstr "आप सबमिशन की जर्नल नहीं बदल सकते."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+# (pofilter) simplecaps: Different capitalization
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "आपके पास अप्रकाशित अंको को देखने की अनुमति नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+# (pofilter) simplecaps: Different capitalization
+msgid "api.submissions.403.contextRequired"
+msgstr "सबमिशन बनाने या संपादित करने के लिए आपको जर्नल के एपीआई एंडपॉइंट का अनुरोध करना चाहिए."
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "आप केवल उन जर्नल को देख सकते हैं जिन्हें सक्षम किया गया है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+# (pofilter) simplecaps: Different capitalization
+msgid "api.contexts.403.notAllowed"
+msgstr "आपको इस जर्नल को देखने की अनुमति नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr "जब तक आप जर्नल के एपीआई या साइट-वाइड एपीआई के लिए अनुरोध नहीं करते, आप इस जर्नल को देख या संपादित नहीं कर सकते."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+# (pofilter) simplecaps: Different capitalization
+msgid "api.contexts.403.requiresContext"
+msgstr "आप इस जर्नल को साइट-वाइड एपीआई से संपादित नहीं कर सकते."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "आपको इस जर्नल को संपादित करने की अनुमति नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "आपके पास इस जर्नल को हटाने की अनुमति नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api.contexts.404.contextNotFound"
+msgstr "आपके द्वारा अनुरोधित जर्नल नहीं मिली."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "आपके पास इस ईमेल टेम्प्लेट को किसी अन्य जर्नल में ले जाने की अनुमति नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "आपके द्वारा चयनित भुगतान विधि समर्थित नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "आपके द्वारा अनुरोधित प्रकाशन इस जर्नल का हिस्सा नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) numbers: Different numbers
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "आपके द्वारा अनुरोधित प्रकाशन इस सबमिशन का हिस्सा नहीं है."

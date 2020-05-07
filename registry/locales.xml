@@ -32,6 +32,7 @@
 	<locale key="hr_HR" complete="false" name="Hrvatski" iso639-2b="hrv" iso639-3="hrv" />
 	<locale key="id_ID" complete="true" name="Bahasa Indonesia" iso639-2b="ind" iso639-3="ind" />
 	<locale key="it_IT" complete="true" name="Italiano" iso639-2b="ita" iso639-3="ita" />
+	<locale key="ku_IQ" complete="false" name="Kurdish" iso639-2b="ckb" iso639-3="ckb" direction="rtl" />
 	<locale key="nb_NO" complete="false" name="Norsk Bokmål" iso639-2b="nor" iso639-3="nor" />
 	<locale key="nl_NL" complete="true" name="Nederlands" iso639-2b="dut" iso639-3="nld" />
 	<locale key="pl_PL" complete="false" name="Język Polski" iso639-2b="pol" iso639-3="pol" />
@@ -44,5 +45,6 @@
 	<locale key="sv_SE" complete="true" name="Svenska" iso639-2b="swe" iso639-3="swe" />
 	<locale key="tr_TR" complete="true" name="Türkçe" iso639-2b="tur" iso639-3="tur" />
 	<locale key="uk_UA" complete="true" name="Українська" iso639-2b="ukr" iso639-3="ukr" />
+	<locale key="vi_VN" complete="false" name="Tiếng Việt" iso639-2b="vie" iso639-3="vie" />
 	<locale key="zh_CN" complete="false" name="简体中文" iso639-2b="chi" iso639-3="zho" />
 </locales>

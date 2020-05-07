@@ -1,0 +1,311 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-15 09:20-0700\n"
+"PO-Revision-Date: 2020-04-23 16:22+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/admin/hi/>\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.hostedContexts"
+msgstr "होस्ट किए गए जर्नल्स"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "admin.settings.appearance.success"
+msgstr "साइट उपस्थिति सेटिंग्स को सफलतापूर्वक अपडेट कर दिया गया है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "admin.settings.config.success"
+msgstr "साइट कॉन्फ़िगरेशन सेटिंग्स को सफलतापूर्वक अपडेट किया गया है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "admin.settings.info.success"
+msgstr "साइट की जानकारी को सफलतापूर्वक अपडेट कर दिया गया है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.settings.redirectInstructions"
+msgstr "मुख्य साइट के अनुरोधों को इस जर्नल में पुनर्निर्देशित किया जाएगा। यह उपयोगी हो सकता है यदि साइट केवल एक ही जर्नल की होस्टिंग कर रही है, उदाहरण के लिए।"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) startwhitespace: Different whitespace at the start
+# (pofilter) newlines: Different line endings
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
+# (pofilter) tabs: Different tabs
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tआपका OJS इंस्टॉलेशन एक से अधिक उपयोग मीट्रिक रिकॉर्ड करने के लिए कॉन्फ़िगर किया गया है। उपयोग के आँकड़े कई संदर्भों में प्रदर्शित किए जाएंगे।\n"
+"\t\tऐसे मामले हैं जहां एकल उपयोग सांख्यिकीय का उपयोग किया जाना चाहिए, उदा। सबसे अधिक उपयोग किए जाने वाले लेखों या रैंक करने के लिए एक आदेशित सूची प्रदर्शित करना\n"
+"\t\tखोज परिणाम। कृपया डिफ़ॉल्ट के रूप में कॉन्फ़िगर किए गए मीट्रिक में से एक का चयन करें।\n"
+"\t"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.languages.confirmDisable"
+msgstr "क्या आप वाकई इस लोकेल को अक्षम करना चाहते हैं? यह वर्तमान में लोकेल का उपयोग करके किसी भी होस्ट की गई जर्नल्स को प्रभावित कर सकता है।"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) tabs: Different tabs
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>सार्वजनिक ज्ञान परियोजना वेब सर्वर से भाषा पैक डाउनलोड करना वर्तमान में उपलब्ध नहीं है क्योंकि:</p>\n"
+"\t<ul>\n"
+"\t\t<li>आपके सर्वर में GNU का निष्पादन या अनुमति नहीं है \"tar\" utility.</li>\n"
+"\t\t<li>OJS आमतौर पर स्थानीय रजिस्ट्री फ़ाइल को संशोधित करने में असमर्थ है \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>भाषा पैक मैन्युअल रूप से वेबसाइट से डाउनलोड किया जा सकता है <a href=\"http://pkp.sfu.ca\">PKP web site</a>.</p>"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "यह साइट और किसी भी होस्ट की गई जर्नल्स के लिए डिफ़ॉल्ट भाषा होगी।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "साइट पर समर्थन के लिए सभी लोकेल का चयन करें। चयनित लोकेल  साइट पर होस्ट की गई सभी जर्नल्स द्वारा उपयोग के लिए उपलब्ध होंगे, और प्रत्येक साइट पृष्ठ पर प्रकट होने के लिए भाषा चयन मेनू में भी दिखाई देंगे (जो कि जर्नल-विशिष्ट पृष्ठों पर ओवरराइड किया जा सकता है)। यदि कई स्थानों का चयन नहीं किया जाता है, तो भाषा टॉगल मेनू दिखाई नहीं देगा और विस्तारित भाषा सेटिंग्स जर्नल्स को उपलब्ध नहीं होंगी।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.locale.maybeIncomplete"
+msgstr "चिह्नित लोकेल अपूर्ण हो सकते हैं।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.languages.confirmUninstall"
+msgstr "क्या आप वाकई इस लोकेल को अनइंस्टॉल करना चाहते हैं? यह वर्तमान में लोकेल का उपयोग करके किसी भी होस्ट की गई जर्नल्स को प्रभावित कर सकता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "इस प्रणाली में समर्थन स्थापित करने के लिए किसी भी अतिरिक्त लोकेल का चयन करें। होस्टेड जर्नल द्वारा उपयोग किए जाने से पहले लोकेल स्थापित किए जाने चाहिए। नई भाषाओं के लिए समर्थन जोड़ने की जानकारी के लिए OJS प्रलेखन देखें।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.languages.downloadFailed"
+msgstr "लोकेल डाउनलोड विफल रहा। नीचे त्रुटि संदेश (एस) विफलता का वर्णन करते हैं।"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$locale}
+# (pofilter) startcaps: Different capitalization at the start
+msgid "admin.languages.localeInstalled"
+msgstr "The \"{$locale}\" लोकेल स्थापित किया गया है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.languages.download.cannotOpen"
+msgstr "पीकेपी वेब साइट से लैंग्वेज डिस्क्रिप्टर नहीं खोल सकते।"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "आम तौर पर लोकल रजिस्ट्री फ़ाइल में नया लोकेल नहीं जोड़ा जा सकता है\"registry/locales.xml\"."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "admin.auth.ojs"
+msgstr "OJS उपयोगकर्ता डेटाबेस"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "admin.auth.enableSyncProfiles"
+msgstr "उपयोगकर्ता प्रोफ़ाइल सिंक्रनाइज़ेशन सक्षम करें (यदि यह प्रमाणीकरण प्लगइन द्वारा समर्थित है)। उपयोगकर्ता प्रोफ़ाइल जानकारी स्वचालित रूप से दूरस्थ स्रोत से अपडेट की जाएगी जब कोई उपयोगकर्ता लॉग इन करता है, और OJS के भीतर किए गए प्रोफ़ाइल परिवर्तन (पासवर्ड परिवर्तन सहित) स्वचालित रूप से दूरस्थ स्रोत पर अपडेट हो जाएंगे। यदि यह विकल्प सक्षम नहीं है, तो OJS प्रोफ़ाइल जानकारी को दूरस्थ स्रोत प्रोफ़ाइल जानकारी से अलग रखा जाएगा।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "admin.auth.enableSyncPasswords"
+msgstr "उपयोगकर्ता पासवर्ड संशोधन सक्षम करें (यदि यह प्रमाणीकरण प्लगइन द्वारा समर्थित है)। इस विकल्प को सक्षम करने से उपयोगकर्ता OJS के भीतर से अपना पासवर्ड संशोधित कर सकते हैं और एक भूल गए पासवर्ड को रीसेट करने के लिए  \"lost password\" सुविधा का उपयोग कर सकते हैं। यदि यह विकल्प सक्षम नहीं है, तो ये फ़ंक्शन इस प्रमाणीकरण स्रोत वाले उपयोगकर्ताओं के लिए अनुपलब्ध होंगे।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "admin.auth.enableCreateUsers"
+msgstr "उपयोगकर्ता निर्माण सक्षम करें (यदि यह प्रमाणीकरण प्लगइन द्वारा समर्थित है)। इस प्रमाणीकरण स्रोत के साथ OJS के भीतर बनाए गए उपयोगकर्ता स्वचालित रूप से दूरस्थ प्रमाणीकरण स्रोत में जोड़े जाएंगे यदि वे पहले से मौजूद नहीं हैं। इसके अतिरिक्त, यदि यह स्रोत डिफ़ॉल्ट प्रमाणीकरण स्रोत है, तो उपयोगकर्ता पंजीकरण के माध्यम से बनाए गए OJS खातों को दूरस्थ प्रमाणीकरण स्रोत में भी जोड़ा जाएगा।"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "admin.systemVersion"
+msgstr "OJS संस्करण"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "admin.systemConfiguration"
+msgstr "OJS कॉन्फ़िगरेशन"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS कॉन्फ़िगरेशन सेटिंग्स से<tt>config.inc.php</tt>."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.journals.createInstructions"
+msgstr "आप स्वचालित रूप से इस जर्नल के प्रबंधक के रूप में नामांकित हो जाएंगे। एक नई जर्नल बनाने के बाद, आपको प्रारंभिक जर्नल सेटअप को पूरा करने के लिए, इसकी सेटिंग विज़ार्ड पर पुनर्निर्देशित किया जाएगा।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.journals.journalSettings"
+msgstr "जर्नल सेटिंग्स"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.journals.noneCreated"
+msgstr "कोई जर्नल नहीं बनाई गई है।"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$sampleUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "admin.journals.urlWillBe"
+msgstr "यह एक एकल छोटा शब्द या संक्षिप्त नाम होना चाहिए जो जर्नल की पहचान करता है। जर्नल का URL होगा{$sampleUrl}."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.contexts.form.titleRequired"
+msgstr "शीर्षक आवश्यक है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.contexts.form.pathRequired"
+msgstr "एक पथ की आवश्यकता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "पथ में केवल अक्षर, संख्या और अक्षर _ और - शामिल हो सकते हैं। यह एक पत्र या संख्या के साथ शुरू और समाप्त होना चाहिए।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.contexts.form.pathExists"
+msgstr "आपके द्वारा प्रदान किया गया पथ पहले से ही किसी अन्य जर्नल द्वारा उपयोग में है।"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$name}
+# (pofilter) startpunc: Different punctuation at the start
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} सफलतापूर्वक बनाया गया था।"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$name}
+# (pofilter) startpunc: Different punctuation at the start
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} सफलतापूर्वक संपादित किया गया था।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.contexts.contextDescription"
+msgstr "जर्नल विवरण"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+msgid "admin.journal.pathImportInstructions"
+msgstr "मौजूदा जर्नल पथ या पथ बनाने के लिए (जैसे, \ "ojs \")।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.journals.importSubscriptions"
+msgstr "आयात सदस्यता"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "admin.journals.transcode"
+msgstr "ISO8859-1 से ट्रांसकोड लेख मेटाडेटा"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "admin.journals.redirect"
+msgstr "OJS 1 URL को OJS 2 URL में मैप करने के लिए कोड जनरेट करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.journals.importErrors"
+msgstr "आयात सफलतापूर्वक पूरा करने में विफल रहा"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.mergeUsers"
+msgstr "उपयोगकर्ताओं को मर्ज करें"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.mergeUsers.into.description"
+msgstr "एक उपयोगकर्ता का चयन करें, जिसे पिछले उपयोगकर्ता के प्राधिकरण, संपादन कार्य आदि का श्रेय दिया जाए।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.mergeUsers.from.description"
+msgstr "किसी अन्य उपयोगकर्ता खाते में विलय करने के लिए एक उपयोगकर्ता (या कई) का चयन करें (जैसे, जब किसी के पास दो उपयोगकर्ता खाते हों)। पहले चुने गए खाते (खातों) को हटा दिया जाएगा और किसी भी प्रस्तुतियाँ, असाइनमेंट आदि को दूसरे खाते के लिए जिम्मेदार ठहराया जाएगा।"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$oldAccountCount}, {$newUsername}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) singlequoting: Different quotation marks
+msgid "admin.mergeUsers.confirm"
+msgstr "क्या आप सुनिश्चित हैं कि आप चयनित {$oldAccountCount} खाते (एस) को उपयोगकर्ता नाम '{$newUsername} ' के साथ खाते में विलय करना चाहते हैं? चयनित {$oldAccountCount} खाते बाद में मौजूद नहीं होंगे। यह क्रिया प्रतिवर्ती नहीं है ।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "कोई नामांकित उपयोगकर्ता नहीं।"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "रिमाइंडर की समीक्षा करें"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "ओपन एक्सेस अधिसूचना"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "सदस्यता समाप्ति की रिमाइंडर"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "सभी नामांकित उपयोगकर्ता"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "उपयोगकर्ता को मर्ज करें"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "आयात पथ आवश्यक है"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "इस पत्रिका को साइट पर सार्वजनिक रूप से प्रदर्शित करने के लिए सक्षम करें"
+
+msgid "admin.contexts.create"
+msgstr "जर्नल बनाएँ"
+
+msgid "admin.languages.download"
+msgstr "डाउनलोड लोकेल"
+
+msgid "admin.settings.redirect"
+msgstr "जर्नल रीडायरेक्ट"

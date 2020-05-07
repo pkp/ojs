@@ -1,0 +1,439 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-15 09:20-0700\n"
+"PO-Revision-Date: 2020-04-25 18:16+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/author/hi/>\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$competingInterestGuidelinesUrl}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "author.competingInterests"
+msgstr "Competing&nbsp;interests <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.submitArticle"
+msgstr "लेख प्रस्तुत करें"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$submitUrl}
+# (pofilter) xmltags: Added XML tags
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Click here</a> to go to step one of the five-step submission process."
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "author.submit.step1"
+msgstr "चरण 1. सबमिशन शुरू करना"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "author.submit.step2"
+msgstr "चरण 2. सबमिशन अपलोड करना"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "author.submit.step3"
+msgstr "चरण 3. सबमिशन के मेटाडेटा में प्रवेश करना"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "author.submit.step4"
+msgstr "चरण 4. अनुपूरक फाइलें अपलोड करना"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "author.submit.step4a"
+msgstr "चरण 4 ए। एक अनुपूरक फ़ाइल जोड़ें"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "author.submit.step5"
+msgstr "चरण 5. प्रस्तुत करने की पुष्टि करना"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.supplementaryFiles"
+msgstr "अनुपूरक फाइलें अपलोड करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.nextSteps"
+msgstr "अगला कदम"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"आप लेखक के घर से सक्रिय सबमिशन का चयन करके इसे बाद की तारीख में पूरा कर सकते "
+"हैं।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.notAccepting"
+msgstr "यह जर्नल इस समय प्रस्तुतियाँ स्वीकार नहीं कर रही है।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.requestWaiver"
+msgstr "माफी का अनुरोध करें"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"कृपया नीचे दिए गए टिप्पणी बॉक्स का उपयोग करें कि फीस क्यों माफ की जानी चाहिए।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "यदि आप छूट के लिए आवेदन कर रहे हैं, तो आपको प्रदान की गई जगह में एक कारण दर्ज करना होगा।"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$round}
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "समीक्षा दौर में {$round}"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submissions.proofreadingCorrections"
+msgstr "प्रूफरीडिंग सुधार"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submissions.confirmDelete"
+msgstr "क्या आप वाकई इस अधूरे सबमिशन को हटाना चाहते हैं?"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submissions.viewStatus"
+msgstr "स्थिति देखें"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submissions.noSubmissions"
+msgstr "कोई सबमिशन नहीं।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.journalSection"
+msgstr "जर्नल अनुभाग"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.journalSectionDescription"
+msgstr "लेख को जर्नल के किसी एक भाग में प्रस्तुत किया जाना चाहिए।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.verifyChecklist"
+msgstr "आपको यह सुनिश्चित करना होगा कि प्रस्तुत सूची में सभी आइटम जारी रखने से पहले संतुष्ट हैं।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "लेखक इस कॉपीराइट नोटिस की शर्तों से सहमत हैं, जो इस सबमिशन पर लागू होगा यदि यह इस जर्नल द्वारा प्रकाशित किया जाता है (संपादक के लिए टिप्पणी नीचे जोड़ा जा सकता है)।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "जारी रखने से पहले आपको कॉपीराइट नोटिस की शर्तों से सहमत होना चाहिए।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.submit.coverNote"
+msgstr "संपादक के लिए टिप्पणियाँ"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "author.submit.comments"
+msgstr "पाठ दर्ज करें (वैकल्पिक)"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.form.sectionRequired"
+msgstr "कृपया इस सबमिशन के लिए एक उपयुक्त जर्नल सेक्शन चुनें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.form.localeRequired"
+msgstr "कृपया एक सबमिशन भाषा चुनें।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.submit.privacyStatement"
+msgstr "जर्नल की गोपनीयता कथन"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.reorderInstructions"
+msgstr "लेखक को उस क्रम में प्रकट होने के लिए, जिसे वे प्रकाशन में सूचीबद्ध करेंगे।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.selectPrincipalContact"
+msgstr "संपादकीय पत्राचार के लिए प्रमुख संपर्क ।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.addAuthor"
+msgstr "लेखक को जोड़ें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.deleteAuthor"
+msgstr "लेखक को हटा दें"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"सबमिशन को अनुक्रमित करने के लिए शर्तें प्रदान करें; एक सेमि-कोलन (term1; "
+"term2; term3) के साथ अलग शर्तें ।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.coverageInstructions"
+msgstr "भू-स्थानिक, कालानुक्रमिक या ऐतिहासिक कवरेज, और / या अनुसंधान नमूने की विशेषताओं को संदर्भित करता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "author.submit.languageInstructions"
+msgstr "English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Additional codes</a>."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.form.authorRequired"
+msgstr "कम से कम एक लेखक की आवश्यकता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.form.authorRequiredFields"
+msgstr "प्रत्येक लेखक का पहला नाम, अंतिम नाम और ईमेल पता आवश्यक है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.form.titleRequired"
+msgstr "कृपया अपने लेख का शीर्षक दर्ज करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.form.abstractRequired"
+msgstr "कृपया अपने लेख का सार दर्ज करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.form.wordCountAlert"
+msgstr "आपने इस अनुभाग के ट्रैक में सार के लिए अधिकतम शब्द सीमा को पार कर लिया है।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.submissionFile"
+msgstr "सबमिशन फ़ाइल"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.noSubmissionFile"
+msgstr "कोई सबमिशन फ़ाइल अपलोड नहीं की गई।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.noSubmissionConfirm"
+msgstr "क्या आप वाकई सबमिशन फ़ाइल अपलोड किए बिना जारी रखना चाहते हैं?"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "यह वैकल्पिक चरण अनुपूरक फ़ाइलों को एक सबमिशन में जोड़ने की अनुमति देता है। फाइलें, जो किसी भी प्रारूप में हो सकती हैं, उनमें (ए) अनुसंधान उपकरण, (बी) डेटा सेट शामिल हो सकते हैं, जो अध्ययन के अनुसंधान नैतिकता समीक्षा की शर्तों का अनुपालन करते हैं, (सी) स्रोत जो अन्यथा पाठकों के लिए अनुपलब्ध होंगे, (डी) ) आंकड़े और तालिकाओं को पाठ में ही एकीकृत नहीं किया जा सकता है, या अन्य सामग्री जो काम के योगदान को जोड़ते हैं।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "फ़ाइल अपलोड करने के लिए सेव पर क्लिक करें (जिसके बाद अतिरिक्त फाइलें अपलोड की जा सकती हैं)।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "क्या आप वाकई आपके द्वारा चुनी गई पूरक फ़ाइल को अपलोड किए बिना जारी रखना चाहते हैं?"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.noSupplementaryFiles"
+msgstr "इस सबमिशन में कोई पूरक फाइल नहीं जोड़ी गई है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "क्या आप वाकई इस पूरक फ़ाइल को हटाना चाहते हैं?"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "इस पूरक सामग्री को अनुक्रमित करने के लिए, अपलोड की गई अनुपूरक फ़ाइल के लिए निम्नलिखित मेटाडेटा प्रदान करें।"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "फ़ाइल का निर्माता (या स्वामी)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.suppFile.transcripts"
+msgstr "प्रतिलिपि"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "समीक्षकों के लिए फ़ाइल (मेटाडेटा के बिना) प्रस्तुत करें, क्योंकि यह नेत्रहीन समीक्षा से समझौता नहीं करेगा।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "केवल औपचारिक रूप से प्रकाशित सामग्रियों के साथ उपयोग करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.suppFile.dateDescription"
+msgstr "दिनांक जब डेटा एकत्र किया गया था या उपकरण बनाया गया था।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "अध्ययन का नाम या मूल के अन्य बिंदु।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.suppFile.noFile"
+msgstr "कोई फ़ाइल अपलोड नहीं की गई।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "कृपया इस पूरक फ़ाइल का शीर्षक दर्ज करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "कृपया एक विषय दर्ज करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "कृपया विवरण दर्ज करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "सार्वजनिक पूरक फ़ाइल पहचान पहले से ही मौजूद है।"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ JournalTitle}, {$ journalTitle}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.confirmationDescription"
+msgstr "अपनी पांडुलिपि को {$ journalTitle} सबमिट करने के लिए, सबमिशन समाप्त पर क्लिक करें। सबमिशन के प्रमुख संपर्क को ईमेल द्वारा एक स्वीकृति प्राप्त होगी और जर्नल वेब साइट पर लॉग इन करके संपादकीय प्रक्रिया के माध्यम से प्रस्तुत करने की प्रगति को देखने में सक्षम होगा। {$ JournalTitle} के साथ प्रकाशन में आपकी रुचि के लिए धन्यवाद।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.noFiles"
+msgstr "कोई फ़ाइल इस सबमिशन से जुड़ी नहीं है।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.filesSummary"
+msgstr "फ़ाइल सारांश"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.finishSubmission"
+msgstr "सबमिशन खत्म करो"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ JournalTitle}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "author.submit.submissionComplete"
+msgstr "सबमिशन पूर्ण। {$ JournalTitle} के साथ प्रकाशन में आपकी रुचि के लिए धन्यवाद।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "author.article.copyeditedFile"
+msgstr "कॉपीएडिट की गई फ़ाइल"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "इस जर्नल को सबमिट करने के लिए एक उपयोगकर्ता खाते की आवश्यकता होती है। यह हमारे संपादकों को आपकी प्रस्तुतियाँ ट्रैक करने की अनुमति देता है और आपके सबमिट करने की स्थिति बदलने पर, या यदि आपसे अतिरिक्त जानकारी की आवश्यकता होती है, तो आपसे संपर्क कर सकता है।"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "लेखक संस्करण अपलोड करें"
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "सार्वजनिक पूरक फ़ाइल पहचानकर्ता"
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "अन्य विशिष्ट निर्देश करना"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "संक्षिप्त विवरण"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "पाठ स्रोत"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "डेटा सेट"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "डेटा विश्लेषण"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "शोध का परिणाम"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "शोध सामग्री"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "शोध उपकरण"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "अनुपूरक फ़ाइल"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "अनुपूरक फ़ाइल मेटाडेटा"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "एक अनुपूरक फ़ाइल संपादित करें"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "एक अनुपूरक फ़ाइल जोड़ें"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "अनुपूरक फ़ाइल अपलोड करें"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "अनुपूरक फ़ाइलों पर वापस"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "सबमिट फ़ाइल बदलें"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "सबमिशन फ़ाइल अपलोड करें"
+
+msgid "author.submit.reorder"
+msgstr "लेखक का नाम पुन: व्यवस्थित करें"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "कॉपीएडिट संस्करण अपलोड करें"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "संपादन में: कॉपीएडिट अनुरोधित"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "संपादन में: अपेक्षित अनुरोध"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "समीक्षा में: संशोधन आवश्यक है"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "कृपया इस लेख के लिए लेख सबमिशन की फीस माफ करने पर विचार करें"
+
+msgid "author.submit.confirmation"
+msgstr "पुष्टीकरण"
+
+msgid "author.submit.metadata"
+msgstr "मेटाडेटा दर्ज करें"
+
+msgid "author.submit.upload"
+msgstr "सबमिशन अपलोड करें"
+
+msgid "author.submit.start"
+msgstr "शुरू"
+
+msgid "author.submit.startHereTitle"
+msgstr "एक नया सबमिशन शुरू करें"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "सबमिट करने के लिए पाँच चरण"
+
+msgid "author.track"
+msgstr "सक्रिय सबमिशन"
+
+msgid "author.submit"
+msgstr "नई सबमिशन"
+
+msgid "author.article.authorRevisedFile"
+msgstr "लेखक फ़ाइल"

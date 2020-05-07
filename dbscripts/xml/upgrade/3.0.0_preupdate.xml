@@ -30,7 +30,7 @@
 
 	<!-- Articles migration -->
 	<sql>
-		<query>CREATE TABLE articles_migration AS (SELECT journal_id, article_id, user_id, submission_file_id, revised_file_id, review_file_id, editor_file_id FROM articles)</query>
+		<query>CREATE TABLE articles_migration AS (SELECT journal_id, article_id, user_id, submission_file_id, revised_file_id, review_file_id, editor_file_id, language FROM articles)</query>
 	</sql>
 
 	<!-- Article files migration -->

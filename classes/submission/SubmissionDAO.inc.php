@@ -73,7 +73,7 @@ class SubmissionDAO extends PKPSubmissionDAO {
 	 */
 	function removeSubmissionsFromSection($sectionId) {
 		$this->update(
-			'DELETE FROM publication_settings WHERE setting_name = "sectionId" AND setting_value = ?', (int) $sectionId
+			'DELETE FROM publication_settings WHERE setting_name = \'sectionId\' AND setting_value = ?', (int) $sectionId
 		);
 
 		$this->flushCache();

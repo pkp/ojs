@@ -1,0 +1,2015 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-15 09:20-0700\n"
+"PO-Revision-Date: 2020-04-15 09:20-0700\n"
+"Last-Translator: Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi (India) <http://translate.pkp.sfu.ca/projects/ojs/manager/hi_HI"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.4.0\n"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "चुनें कि एक आलेख के लिए डिफ़ॉल्ट कॉपीराइट तिथि कैसे चुनी जाती है। इस डिफ़ॉल्ट को केस-दर-मामला आधार पर ओवरराइड किया जा सकता है। यदि आप \ "जैसे ही आप जाते हैं, प्रकाशित करते हैं", मुद्दे की प्रकाशन तिथि का उपयोग न करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.distribution.publishingMode"
+msgstr "प्रकाशन मोड"
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.distribution.publishingMode.none"
+msgstr "ओजेएस का उपयोग जर्नल  की सामग्री को ऑनलाइन प्रकाशित करने के लिए नहीं किया जाएगा."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "The journal will provide open access to its contents."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "जर्नल को इसके कुछ या सभी सामग्रियों तक पहुंचने के लिए सदस्यता की आवश्यकता होगी."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.distribution.publishingMode.success"
+msgstr "प्रकाशन का विवरण अपडेट कर दिया गया है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.emails.confirmResetAll"
+msgstr "क्या आप वाकई इस जर्नल के सभी ईमेल टेम्प्लेट रीसेट करना चाहते हैं? आपके द्वारा किए गए किसी भी अनुकूलन को खो देंगे."
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.files.note"
+msgstr "सूचना:  फाइल ब्राउज़र एक उन्नत सुविधा है जो किसी पत्रिका से जुड़ी फाइलों और निर्देशिकाओं को सीधे देखने और हेरफेर करने की अनुमति देता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.journalManagement"
+msgstr "जर्नल प्रबंधन"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.language.ui"
+msgstr "UI"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) xmltags: Added XML tags
+msgid "manager.languages.languageInstructions"
+msgstr "ओजस को कई समर्थित भाषाओं में उपयोगकर्ताओं के लिए उपलब्ध कराया जा सकता है। साथ ही, ओजस एक बहुभाषी प्रणाली के रूप में काम कर सकता है, जो उपयोगकर्ताओं को प्रत्येक पृष्ठ पर भाषाओं के बीच टॉगल करने की क्षमता प्रदान करता है, और कुछ डेटा को कई अतिरिक्त भाषाओं में दर्ज करने की अनुमति देता है। <br /> <br/> यदि कोई भाषा ओजस द्वारा समर्थित है। नीचे सूचीबद्ध नहीं है, साइट व्यवस्थापक इंटरफ़ेस से भाषा स्थापित करने के लिए अपने साइट व्यवस्थापक से पूछें। नई भाषाओं के लिए समर्थन जोड़ने के निर्देशों के लिए, कृपया ओजस प्रलेखन से परामर्श करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.languages.noneAvailable"
+msgstr "क्षमा करें, कोई अतिरिक्त भाषा उपलब्ध नहीं है। यदि आप इस पत्रिका के साथ अतिरिक्त भाषाओं का उपयोग करना चाहते हैं, तो अपने साइट व्यवस्थापक से संपर्क करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "यह जर्नल साइट के लिए डिफ़ॉल्ट भाषा होगी."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.managementPages"
+msgstr "प्रबंधन पृष्ठ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.addPayment"
+msgstr "भुगतान जोड़ें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.authorFees"
+msgstr "लेखक शुल्क"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.payment.authorFeesDescription"
+msgstr "लेखक प्रोसेसिंग शुल्क सक्षम करने के लिए नीचे शुल्क राशि दर्ज करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.payment.currencymessage"
+msgstr "ओजस कोई मुद्रा रूपांतरण नहीं करता है। यदि सदस्यता के लिए भुगतान स्वीकार करते हैं, तो आपको यह सुनिश्चित करना चाहिए कि सदस्यता मुद्रा यहां निर्दिष्ट एक से मेल खाती है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.editSubscription"
+msgstr "सदस्यता संपादित करें"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "manager.payment.form.numeric"
+msgstr "सभी लागतों को सकारात्मक संख्यात्मक मान होना चाहिए (दशमलव अंक की अनुमति है)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.generalFees"
+msgstr "सामान्य शुल्क"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.payment.generalFeesDescription"
+msgstr "एसोसिएशन सदस्यता नीतियों के तहत जर्नल के बारे में दिखाई देगा, और दान लिंक दाहिने हाथ के फ्रेम में खोज समारोह के ऊपर दिखाई देगा."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.generalOptions"
+msgstr "सामान्य विकल्प"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.noPayments"
+msgstr "कोई भुगतान नहीं"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.notFound"
+msgstr "नहीं मिला"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "यह सब्सक्रिप्शन के लिए भुगतानों को सक्रिय करेगा, जहाँ प्रकार, लागत, अवधि और सदस्यता जर्नल (सदस्यता) प्रबंधक द्वारा प्रबंधित किए जाते हैं."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "क्या आप वाकई इस सदस्यता को हटाना चाहते हैं?"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.payment.success"
+msgstr "भुगतान सेटिंग अपडेट कर दी गई हैं."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.options.enablePayments"
+msgstr "इस पत्रिका के लिए भुगतान सक्षम हो जाएंगे। ध्यान दें कि भुगतान करने के लिए उपयोगकर्ताओं को लॉग इन करना आवश्यक होगा."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.options.feeDescription"
+msgstr "शुल्क विवरण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.options.feeName"
+msgstr "शुल्क का नाम"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.options.membershipFee"
+msgstr "एसोसिएशन की सदस्यता"
+
+# (pofilter) doublespacing: Different use of double spaces
+msgid "manager.payment.options.onlypdf"
+msgstr "केवल अंक  और आलेखों  के पीडीएफ संस्करण तक पहुंच को प्रतिबंधित करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.options.publicationFee"
+msgstr "आलेख प्रसंस्करण शुल्क"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "खरीद अंक "
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.paymentId"
+msgstr "भुगतान आईडी"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.paymentMethod"
+msgstr "भुगतान का तरीका"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.paymentMethod.description"
+msgstr "आप इस स्क्रीन से निम्न भुगतान विधि प्लगइन्स में से कोई भी कॉन्फ़िगर कर सकते हैं."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.paymentMethods"
+msgstr "शुल्क भुगतान के तरीके"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.paymentType"
+msgstr "भुगतान के प्रकार"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.readerFees"
+msgstr "पाठक शुल्क"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.payment.readerFeesDescription"
+msgstr "चयनित विकल्प, उनके विवरण और शुल्क (जो नीचे संपादित किए जा सकते हैं) के साथ,  जर्नल के बारे में नीतियों के तहत दिखाई देंगे, साथ ही उन बिंदुओं पर भी जहां भुगतान आवश्यक है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.paymentTypes"
+msgstr "भुगतान प्रकार"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.payment.userName"
+msgstr "भुगतान आईडी"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.people.allJournals"
+msgstr "सभी पत्रिकाओं"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.people.allUsers"
+msgstr "सभी नामांकित उपयोगकर्ता"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.people.confirmRemove"
+msgstr "इस उपयोगकर्ता को इस पत्रिका से निकालें? यह क्रिया उपयोगकर्ता को इस पत्रिका के भीतर सभी भूमिकाओं से हटा देगी."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.people.mergeUsers.from.description"
+msgstr "किसी अन्य उपयोगकर्ता खाते में विलय करने के लिए एक उपयोगकर्ता (या कई) का चयन करें (जैसे, जब किसी के पास दो उपयोगकर्ता खाते हों)। पहले चुने गए खाते (खातों) को हटा दिया जाएगा और किसी भी प्रस्तुतियाँ, असाइनमेंट आदि को दूसरे खाते के लिए जिम्मेदार ठहराया जाएगा."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.people.mergeUsers.into.description"
+msgstr "एक उपयोगकर्ता का चयन करें, जिसे पिछले उपयोगकर्ताओं के प्राधिकरण, संपादन असाइनमेंट आदि का श्रेय दिया जाता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$role}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} नामांकन"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.people.syncUserDescription"
+msgstr "नामांकन सिंक्रनाइज़ेशन निर्दिष्ट पत्रिका में निर्दिष्ट सभी उपयोगकर्ताओं को इस पत्रिका में एक ही भूमिका में नामांकित करेगा। यह फ़ंक्शन उपयोगकर्ताओं (जैसे, समीक्षक) के एक सामान्य समूह को पत्रिकाओं के बीच सिंक्रनाइज़ करने की अनुमति देता है."
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.section.noSectionEditors"
+msgstr "अभी तक कोई अनुभाग संपादक नहीं हैं ।  मैनेजमेंट > सेटिंग > यूजर्स रोल्स फर्स्ट के जरिए कम से कम एक यूजर को इस रोल को जोड़ें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.sections.confirmDelete"
+msgstr "क्या आप वाकई इस अनुभाग को स्थायी रूप से हटाना चाहते हैं??"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.sections.alertDelete"
+msgstr "इस खंड को हटाए जाने से पहले, आपको इसके भीतर प्रकाशित लेखों को अन्य अनुभागों में स्थानांतरित करना होगा."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+msgid "manager.section.sectionEditorInstructions"
+msgstr "इस अनुभाग में एक अनुभाग संपादक जोड़ें, प्रस्तुतियाँ स्वचालित रूप से अनुभाग संपादक को सौंपी गई हैं। (अन्यथा, प्रस्तुत करने के बाद अनुभाग संपादकों को मैन्युअल रूप से सौंपा जा सकता है।) यदि जोड़ा जाता है, तो जोड़ा जाता है, एक खंड संपादक स्वचालित रूप से प्रस्तुतियाँ की समीक्षा (सहकर्मी समीक्षा) और / या संपादन (नकल, लेआउट और प्रूफरीडिंग) की देखरेख करने के लिए सौंपा जा सकता है। यह अनुभाग। जर्नल मैनेजमेंट में Roles के तहत सेक्शन एडिटर पर क्लिक करके सेक्शन एडिटर बनाए जाते हैं."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.sections.editorRestriction"
+msgstr "आइटम केवल संपादकों और अनुभाग संपादकों द्वारा प्रस्तुत किए जा सकते हैं."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.sections.form.abbrevRequired"
+msgstr "अनुभाग के लिए संक्षिप्त शीर्षक आवश्यक है"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "कृपया सुनिश्चित करें कि प्रत्येक अनुभाग संपादक असाइनमेंट के लिए कम से कम एक चेकबॉक्स चेक किया गया है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.sections.form.reviewFormId"
+msgstr "कृपया सुनिश्चित करें कि आपने एक वैध समीक्षा फ़ॉर्म चुना है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.sections.form.titleRequired"
+msgstr "अनुभाग के लिए एक शीर्षक आवश्यक है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.sections.hideTocAuthor"
+msgstr "विषय वस्तुओं की तालिका से अंको के अनुभाग आइटम के लिए लेखक का नाम छोड़ दें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.sections.hideTocTitle"
+msgstr "सामग्री की तालिका अंको से इस अनुभाग का शीर्षक लें।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.sections.identifyType"
+msgstr "इस खंड में प्रकाशित वस्तुओं को पहचानें (n)"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) startpunc: Different punctuation at the start
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(For example, \"Peer-reviewed Article\", \"Non-refereed Book Review\", \"Invited Commentary\", etc.)"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.sections.noneCreated"
+msgstr "कोई खंड नहीं बनाया गया है."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.sections.open"
+msgstr "Open Submissions"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.sections.readingTools"
+msgstr "Reading Tools"
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.sections.submissionIndexing"
+msgstr "जर्नल  के अनुक्रमण में शामिल नहीं किया जाएगा"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.sections.submissionReview"
+msgstr "Will not be peer-reviewed"
+
+# (pofilter) doublespacing: Different use of double spaces
+msgid "manager.section.submissionsToThisSection"
+msgstr "जर्नल  के इस अनुभाग के लिए प्रस्तुतियाँ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.sections.wordCount"
+msgstr "शब्द गणना"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "manager.sections.wordCountInstructions"
+msgstr "इस सेक्शन के लिए सीमित सार शब्द मायने रखता है (बिना सीमा के 0)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.editorialTeam"
+msgstr "संपादकीय टीम"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.homepageContent"
+msgstr "जर्नल मुखपृष्ठ सामग्री"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.homepageContentDescription"
+msgstr "जर्नल होमपेज में डिफ़ॉल्ट रूप से नेविगेशन लिंक होते हैं। अतिरिक्त होमपेज सामग्री को निम्नलिखित विकल्पों में से एक या सभी विकल्पों का उपयोग करके जोड़ा जा सकता है, जो दिखाए गए क्रम में दिखाई देगा."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.contextName"
+msgstr "जर्नल का नाम"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.pageHeader"
+msgstr "जर्नल पेज हैडर"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.addItem"
+msgstr "आइटम जोड़ें"
+
+# (pofilter) startwhitespace: Different whitespace at the start
+# (pofilter) doublequoting: Different quotation marks
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr " प्रदर्शित होने के लिए आइटम जोड़ें \"जर्नल के बारे में\""
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.addSponsor"
+msgstr "प्रायोजन संगठन जोड़ें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.alternateHeader"
+msgstr "वैकल्पिक हैडर"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "वैकल्पिक रूप से, शीर्षक और लोगो के बजाय, शीर्ष लेख का एक HTML संस्करण नीचे पाठ बॉक्स में डाला जा सकता है। यदि आवश्यक न हो तो टेक्स्टबॉक्स खाली छोड़ दें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.announcements.success"
+msgstr "घोषणाओं की सेटिंग को अपडेट कर दिया गया है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.announcementsIntroduction"
+msgstr "परिचय"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "कोई भी जानकारी दर्ज करें जिसे आप अपने घोषणा पृष्ठ पर दिखाना चाहते हैं."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) startpunc: Different punctuation at the start
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(जर्नल के बारे में प्रकट करने के लिए) "
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.archiving.success"
+msgstr "इस जर्नल  के संग्रह विवरण को अपडेट कर दिया गया है."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "अपने जमा करने के साथ एक प्रतियोगी ब्याज (CI) बयान दर्ज करने के लिए लेखकों को प्रस्तुत करने की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "समीक्षकों को अपने द्वारा प्रस्तुत प्रत्येक सहकर्मी समीक्षा के साथ एक सीआई बयान दर्ज करने की आवश्यकता होती है."
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+msgid "manager.setup.historyDescription"
+msgstr "यह पाठ जर्नल वेबसाइट के \ "About \" अनुभाग में दिखाई देगा और इसका उपयोग शीर्षक, संपादकीय बोर्ड और जर्नल के प्रकाशन इतिहास की प्रासंगिकता के अन्य मदों में परिवर्तन का वर्णन करने के लिए किया जा सकता है।."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.contact.success"
+msgstr "इस जर्नल के लिए संपर्क विवरण अपडेट किया गया है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.currentIssue"
+msgstr "वर्तमान अंक "
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.customizingTheLook"
+msgstr "Step 5. Customizing the Look"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.details.description"
+msgstr "जर्नल का नाम, ISSN, संपर्क, प्रायोजक, और खोज इंजन."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.disableUserRegistration"
+msgstr "जर्नल प्रबंधक सभी उपयोगकर्ता खातों को पंजीकृत करेगा। संपादक या अनुभाग संपादक समीक्षकों के लिए उपयोगकर्ता खाते पंजीकृत कर सकते हैं."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.disciplineDescription"
+msgstr "उपयोगी जब जर्नल अनुशासनात्मक सीमाओं को पार करती है और / या लेखक बहुआयामी आइटम प्रस्तुत करते हैं."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) startpunc: Different punctuation at the start
+msgid "manager.setup.disciplineExamples"
+msgstr "(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.displayCurrentIssue"
+msgstr "वर्तमान अंक के लिए सामग्री की तालिका जोड़ें (यदि उपलब्ध हो)."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.editorDecision"
+msgstr "संपादक का निर्णय"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "कोई भी अपरिवर्तनीय ईमेल इस पते पर एक त्रुटि संदेश देगा."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "किसी ईमेल पते पर अपरिवर्तनीय ईमेल भेजने के लिए, साइट व्यवस्थापक को साइट कॉन्फ़िगरेशन फ़ाइल में <code> allow_envelope_sender </ code> विकल्प को सक्षम करना होगा। सर्वर कॉन्फ़िगरेशन की आवश्यकता हो सकती है, जैसा कि ओजेएस प्रलेखन में संकेत दिया गया है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.emailSignature"
+msgstr "हस्ताक्षर"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.emailSignature.description"
+msgstr "जर्नल की ओर से सिस्टम द्वारा भेजे गए तैयार ईमेल में अंत में जोड़े गए निम्नलिखित हस्ताक्षर होंगे."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "घोषणाएँ सक्षम करें"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "जर्नल समाचार और घटनाओं के पाठकों को सूचित करने के लिए घोषणाएँ प्रकाशित की जा सकती हैं। प्रकाशित घोषणाएं घोषणा पृष्ठ पर दिखाई देंगी."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "मुखपृष्ठ पर प्रदर्शित करने के लिए कितनी घोषणाएँ हैं। कोई भी प्रदर्शित करने के लिए इसे खाली छोड़ दें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.enableUserRegistration"
+msgstr "आगंतुक जर्नल के साथ एक उपयोगकर्ता खाता पंजीकृत कर सकते हैं।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.focusAndScope.description"
+msgstr "लेखकों, पाठकों, और लाइब्रेरियन को लेख और अन्य वस्तुओं की रेंज का वर्णन करेंगे जो जर्नल प्रकाशित करेगी."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS adheres to the <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open अभिलेखीय पहल </a> मेटाडेटा कटाई के लिए प्रोटोकॉल, जो वैश्विक स्तर पर इलेक्ट्रॉनिक अनुसंधान संसाधनों तक अच्छी तरह से अनुक्रमित पहुंच प्रदान करने के लिए उभरता हुआ मानक है। लेखक अपनी प्रस्तुति के लिए मेटाडेटा प्रदान करने के लिए एक समान टेम्पलेट का उपयोग करेंगे। जर्नल प्रबंधक को अनुक्रमणिका के लिए श्रेणियों का चयन करना चाहिए और लेखकों को प्रासंगिक उदाहरणों के साथ प्रस्तुत करना चाहिए ताकि वे अपने काम को अनुक्रमित करने में सहायता कर सकें."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.form.issnInvalid"
+msgstr "निर्दिष्ट ISSN मान्य नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "प्राथमिक संपर्क ईमेल की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.form.contactNameRequired"
+msgstr "प्राथमिक संपर्क नाम की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "जर्नल इनिशियल्स की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "जर्नल शीर्षक आवश्यक है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "प्रति प्रस्तुत समीक्षकों की संख्या की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "समर्थन ईमेल की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.form.supportNameRequired"
+msgstr "समर्थन नाम की आवश्यकता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.generalInformation"
+msgstr "सामान्य जानकारी"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "चरण 1. विवरण नीचे हो रही है"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.guidingSubmissions"
+msgstr "चरण 3. मार्गदर्शक प्रस्तुतियाँ"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.includeCreativeCommons"
+msgstr "तत्काल या विलंबित खुली पहुंच प्रदान करने वाली पत्रिकाओं के लिए, उचित समय पर सभी प्रकाशित कार्यों के साथ एक क्रिएटिव कॉमन्स लाइसेंस शामिल करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.information.description"
+msgstr "लाइब्रेरियन और भावी लेखकों और पाठकों के लिए जर्नल का संक्षिप्त विवरण। जब सूचना ब्लॉक जोड़ा गया है तो ये साइट के साइडबार में उपलब्ध कराए गए हैं."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.information.forAuthors"
+msgstr "लेखकों के लिए"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.information.forLibrarians"
+msgstr "लाइब्रेरियन के लिए"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.information.forReaders"
+msgstr "पाठकों के लिए"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.information.success"
+msgstr "इस जर्नल की जानकारी अपडेट की गई थी."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.initialIssue"
+msgstr "प्रारम्भिक अंक "
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.initialIssueDescription"
+msgstr "चयनित प्रारूप के आधार पर, ओजस  के साथ प्रकाशित होने वाले पहले अंक की समस्या, मात्रा और / या वर्ष की पहचान करें:"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.itemsDescription"
+msgstr "नेविगेशन बार आइटम को वर्तमान सेट (होम, अबाउट, यूजर होम, आदि) में जोड़ा जा सकता है जो पृष्ठ के शीर्ष पर दिखाई देते हैं."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.itemsPerPage.description"
+msgstr "किसी पृष्ठ में बाद के आइटम दिखाने से पहले सूची में दिखाने के लिए मदों की संख्या (उदाहरण के लिए, प्रस्तुतियाँ, उपयोगकर्ता या संपादन कार्य) को सीमित करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.journalAbbreviation"
+msgstr "जर्नल संक्षेप"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.journalArchiving"
+msgstr "जर्नल संग्रह"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.contextSummary"
+msgstr "जर्नल सारांश"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.contextAbout"
+msgstr "जर्नल के बारे में"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.contextAbout.description"
+msgstr "अपनी जर्नल के बारे में कोई भी जानकारी शामिल करें जो पाठकों, लेखकों या समीक्षकों के लिए रूचिकर हो सकती है। इसमें आपकी खुली पहुंच नीति, जर्नल का फोकस और दायरा, कॉपीराइट नोटिस, प्रायोजन प्रकटीकरण, जर्नल का इतिहास, एक गोपनीयता कथन, और किसी भी LOCKSS या CLOCKSS अभिलेखीय प्रणाली में शामिल करना शामिल हो सकता है।."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "डिफ़ॉल्ट रूप से, मुखपृष्ठ में नेविगेशन लिंक होते हैं। अतिरिक्त होमपेज सामग्री को निम्नलिखित विकल्पों में से एक या सभी विकल्पों का उपयोग करके जोड़ा जा सकता है, जो दिखाए गए क्रम में दिखाई देगा। ध्यान दें कि नेविगेशन बार में करंट लिंक के माध्यम से करंट इश्यू हमेशा उपलब्ध रहता है."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "जर्नल के शीर्षक और लोगो का एक ग्राफिक संस्करण (.gif, .jpg, या .png फ़ाइल के रूप में) को मुखपृष्ठ के लिए अपलोड किया जा सकता है, जो अन्यथा दिखाई देने वाले पाठ संस्करण को बदल देगा."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.contextInitials"
+msgstr "जर्नल इनिशियल्स"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.journalLayout"
+msgstr "जर्नल लेआउट"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.journalLayoutDescription"
+msgstr "यहां जर्नल थीम चुनें और लेआउट घटकों का चयन करें। एक जर्नल स्टाइलशीट भी अपलोड की जा सकती है, जिसका उपयोग सिस्टम-वाइड स्टाइलशीट और थीम स्टाइलशीट (यदि कोई विषय चुना जाता है) में स्टाइल डेटा को ओवरराइड करने के लिए किया जा सकता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.journalLogo"
+msgstr "जर्नल लोगो"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "यह आपकी जर्नल का पाद लेख है। पाद लेख को बदलने या अद्यतन करने के लिए, नीचे दिए गए पाठ बॉक्स में HTML कोड पेस्ट करें। उदाहरण एक अन्य नेविगेशन बार, एक काउंटर आदि हो सकते हैं। यह पाद लेख प्रत्येक पृष्ठ पर दिखाई देगा।"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.journalPolicies"
+msgstr "चरण 2. जर्नल नीतियां"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.journalSetup"
+msgstr "जर्नल सेटअप"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.journalSetupUpdated"
+msgstr "आपका जर्नल सेटअप अपडेट कर दिया गया है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "अमान्य जर्नल स्टाइलशीट प्रारूप। स्वीकृत प्रारूप .css है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.journalTheme"
+msgstr "जर्नल थीम"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.journalThumbnail"
+msgstr "जर्नल थंबनेल"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.journalThumbnail.description"
+msgstr "जर्नल का एक छोटा लोगो या प्रतिनिधित्व जो पत्रिकाओं की सूचियों में इस्तेमाल किया जा सकता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.contextTitle"
+msgstr "जर्नल का शीर्षक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.keyInfo"
+msgstr "महत्वपूर्ण जानकारी"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.keyInfo.description"
+msgstr "अपनी जर्नल का संक्षिप्त विवरण प्रदान करें और संपादकों, प्रबंध निदेशकों और अपनी संपादकीय टीम के अन्य सदस्यों की पहचान करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.labelName"
+msgstr "लेबल का नाम"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.lists.success"
+msgstr "इस जर्नल की सूची सेटिंग को अपडेट कर दिया गया है."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN प्लग इन को सक्षम करें"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.plnDescription"
+msgstr "PKP परिरक्षण नेटवर्क (PN) किसी भी ओजस  जर्नल के लिए मुफ्त संरक्षण सेवाएं प्रदान करता है जो कुछ बुनियादी मानदंडों को पूरा करता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.plnSettingsDescription"
+msgstr "PKP PN के लिए उपयोग की शर्तों को स्वीकार करने के लिए <बटन> प्लगइन सेटिंग्स </ बटन> देखें।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP संरक्षण नेटवर्क (PN)"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "PKP परिरक्षण नेटवर्क (PN) किसी भी ओजस  जर्नल के लिए मुफ्त संरक्षण सेवाएं प्रदान करता है जो कुछ बुनियादी मानदंडों को पूरा करता है। ओजेएस 3 के लिए पीकेपी पीएन प्लगइन वर्तमान में विकास में है और जल्द ही प्लगइन गैलरी में उपलब्ध होगा."
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS और  CLOCKSS"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.lockssEnable"
+msgstr "LOCKSS <a href=\"<$lockssUrlarios\" target=\"_blank\"> प्रकाशक मैनिफेस्ट </a> पृष्ठ के माध्यम से प्रतिभागी पुस्तकालयों में जर्नल सामग्री को संग्रहीत करने और वितरित करने के लिए LOCKSS को सक्षम करें।"
+
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "एक LOCKSS लाइसेंस जर्नल के बारे में अभिलेखागार में दिखाई देगा:<a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS License</a>"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS लाइसेंस का विवरण"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.lockssRegister"
+msgstr "6-10 पुस्तकालयों की पहचान करें जो जर्नल को पंजीकृत और कैश करेंगे। उदाहरण के लिए, उन संस्थानों की ओर रुख करें जहां संपादक या बोर्ड के सदस्य काम करते हैं और / या संस्थान पहले से ही LOCKSS में भाग ले रहे हैं। देखे <a href=\"http://www.lockss.org/community/\" target=\"_blank\">LOCKSS समुदाय</a>."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$clockssUrl}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.clockssEnable"
+msgstr "CLOCKSS के माध्यम से प्रतिभागी पुस्तकालयों में जर्नल सामग्री को संग्रहीत और वितरित करने के लिए CLOCKSS सक्षम करें <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> page."
+
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "एक CLOCKSS जर्नल लाइसेंस के तहत जर्नल के बारे में दिखाई देगा: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS लाइसेंस का विवरण"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.clockssRegister"
+msgstr "पर जाकर CLOCKSS सेवा के लिए साइन अप करें<a href=\"http://clockss.org/\" target=\"_blank\">the CLOCKSS website</a>."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.look"
+msgstr "The Look"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.look.description"
+msgstr "होमपेज हेडर, कंटेंट, जर्नल हेडर, फुटर, नेविगेशन बार और स्टाइल शीट."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.management.description"
+msgstr "पहुंच और सुरक्षा, शेड्यूलिंग, घोषणाएं, कॉपी करना, लेआउट और प्रूफरीडिंग."
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.managingTheJournal"
+msgstr "चरण 4. जर्नल का प्रबंधन"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.masthead.success"
+msgstr "इस जर्नल के लिए मास्टहेड विवरण अपडेट किया गया है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.navigationBar"
+msgstr "नेविगेशन बार"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.navigationBarDescription"
+msgstr "अतिरिक्त नेविगेशन बार आइटम जोड़ें या निकालें."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) urls: Different URLs
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL साइट के सापेक्ष पथ के बजाय एक पूर्ण URL (उदा।, \ "Http: //www.example.com \") है (जैसे,\"/manager/setup\"")"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\', '\')
+msgid "manager.setup.navItemIsLiteral"
+msgstr "लेबल मान एक स्थानीयकरण संदेश कुंजी के बजाय एक शाब्दिक स्ट्रिंग (उदा।, \ "जर्नल सेटअप \") है (जैसे, \ "manager.setup \"")"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.noImageFileUploaded"
+msgstr "कोई छवि फ़ाइल अपलोड नहीं की गई."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "कोई शैली पत्रक अपलोड नहीं किया गया."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "manager.setup.note"
+msgstr "सुचना "
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the \"Submission Ack\" email in Emails."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.numPageLinks.description"
+msgstr "किसी सूची में बाद के पृष्ठों को प्रदर्शित करने के लिए लिंक की संख्या को सीमित करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.onlineIssn"
+msgstr "ऑनलाइन ISSN"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.policies.description"
+msgstr "फोकस, सहकर्मी की समीक्षा, अनुभाग, गोपनीयता, सुरक्षा, और वस्तुओं के बारे में अतिरिक्त."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.printIssn"
+msgstr "ISSN प्रिंट करें"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.privacyStatement.success"
+msgstr "गोपनीयता कथन को अपडेट कर दिया गया है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.proofingInstructions"
+msgstr "प्रूफिंग निर्देश"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "फरीडिंग निर्देश प्रूफ़रीडर्स, ऑथर्स, लेआउट एडिटर्स और सब-एडिटर्स को सबमिशन एडिशन स्टेज में उपलब्ध कराया जाएगा। नीचे HTML में निर्देशों का एक डिफ़ॉल्ट सेट है, जिसे किसी भी बिंदु पर (HTML या सादे पाठ में) जर्नल मैनेजर द्वारा संपादित या प्रतिस्थापित किया जा सकता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.publicationSchedule"
+msgstr "प्रकाशन अनुसूची"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "जर्नल की वस्तुओं को सामूहिक रूप से प्रकाशित किया जा सकता है, अपने स्वयं के टेबल के मुद्दे के साथ। वैकल्पिक रूप से, व्यक्तिगत आइटम को तैयार होते ही प्रकाशित किया जा सकता है, उन्हें सामग्री के \ "वर्तमान \" वॉल्यूम तालिका में जोड़कर। पाठकों के बारे में, जर्नल में, सिस्टम के बारे में एक बयान के साथ यह पत्रिका उपयोग करेगी और प्रकाशन की इसकी अपेक्षित आवृत्ति."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.publicationScheduling"
+msgstr "प्रकाशन शेड्यूलिंग"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.publicIdentifier"
+msgstr "जर्नल कंटेंट की पहचान"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.publishingDescription"
+msgstr "ये विवरण तृतीय-पक्ष अभिलेखीय निकायों को प्रदान किए गए मेटाडेटा में शामिल किए जा सकते हैं."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.referenceLinking"
+msgstr "संदर्भ लिंकिंग"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.restrictArticleAccess"
+msgstr "खुली पहुंच सामग्री देखने के लिए उपयोगकर्ताओं को पंजीकृत होना चाहिए और लॉग इन करना चाहिए."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.restrictSiteAccess"
+msgstr "उपयोगकर्ता को पंजीकृत होना चाहिए और जर्नल साइट देखने के लिए लॉग इन करना होगा."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.reviewGuidelines"
+msgstr "दिशानिर्देशों की समीक्षा करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.reviewOptions"
+msgstr "विकल्प की समीक्षा करें"
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "स्वचालित ईमेल अनुस्मारक भेजने के लिए, साइट व्यवस्थापक को ओजस  कॉन्फ़िगरेशन फ़ाइल में <tt> शेड्यूल_टैस्क </ tt> विकल्प को सक्षम करना होगा। अतिरिक्त सर्वर कॉन्फ़िगरेशन की आवश्यकता हो सकती है जैसा कि ओजेएस प्रलेखन में संकेत दिया गया है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "संपादक प्रत्येक समीक्षा के बाद समीक्षकों को पांच-बिंदु गुणवत्ता पैमाने पर रेट करेंगे."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "समीक्षकों को सबमिशन फ़ाइल तक पहुंच नहीं दी जाएगी, जब तक कि वे इसकी समीक्षा करने के लिए सहमत न हों."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "ईमेल आमंत्रण में समीक्षकों को एक सुरक्षित लिंक भेजा जा सकता है, जो उन्हें लॉगिन किए बिना समीक्षा का उपयोग करने की अनुमति देगा। अन्य पृष्ठों तक पहुंच के लिए उन्हें लॉग इन करने की आवश्यकता होती है।."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "समीक्षकों को ईमेल आमंत्रण में एक सुरक्षित लिंक शामिल करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.reviewPolicy"
+msgstr "समीक्षा नीति"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "manager.setup.searchEngineIndexing"
+msgstr "इंडेक्स खोज "
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "खोज इंजन इंडेक्स सेटिंग्स को अपडेट कर दिया गया है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$sitemapUrl}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Help search engines like Google discover and display your site. You are encouraged to submit your <a href=\"{$sitemapUrl}\" target=\"_blank\">sitemap</a>."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.searchDescription.description"
+msgstr "जर्नल  का संक्षिप्त विवरण (50-300 अक्षर) प्रदान करें जो खोज परिणामों में जर्नल  को सूचीबद्ध करते समय खोज इंजन प्रदर्शित कर सकते हैं."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) startpunc: Different punctuation at the start
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(यदि अनुभाग नहीं जोड़े जाते हैं, तो आइटम डिफ़ॉल्ट रूप से आलेख  अनुभाग में सबमिट किए जाते हैं.)"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.sectionsDescription"
+msgstr "जर्नल के लिए अनुभाग बनाने या संशोधित करने के लिए (जैसे, लेख, पुस्तक समीक्षा आदि), अनुभाग प्रबंधन पर जाएं। <br /> <br /> जर्नल को आइटम प्रस्तुत करने वाले लेखक नामित करेंगे।..."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.selectEditorDescription"
+msgstr "जर्नल संपादक जो संपादकीय प्रक्रिया के माध्यम से इसे देखेगा."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.selectSectionDescription"
+msgstr "जर्नल अनुभाग जिसके लिए आइटम पर विचार किया जाएगा."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "हमेशा गैली लिंक दिखाएं और प्रतिबंधित पहुंच का संकेत दें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.siteAccess.view"
+msgstr "साइट का उपयोग"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) startpunc: Different punctuation at the start
+msgid "manager.setup.subjectExamples"
+msgstr "(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.submissionGuidelines"
+msgstr "जमा करने के निर्देश"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "जर्नल को प्रस्तुत करने पर, लेखकों को सबसे पहले सबमिशन तैयारी चेकलिस्ट पर प्रत्येक आइटम को पूरा करने से पहले जांचने के लिए कहा जाता है। चेकलिस्ट लेखक दिशानिर्देशों में, जर्नल के बारे में भी दिखाई देती है। सूची को नीचे संपादित किया जा सकता है, लेकिन सूची में सभी वस्तुओं को एक चेकमार्क की आवश्यकता होगी, इससे पहले कि लेखक उनके प्रस्तुतिकरण के साथ आगे बढ़ सकें."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.submissions.description"
+msgstr "लेखक के दिशानिर्देश, कॉपीराइट और अनुक्रमण (पंजीकरण सहित)."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.setup.enableOai"
+msgstr "Enable OAI"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.enableOai.description"
+msgstr "Provide metadata to third-party indexing services through the <a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) startpunc: Different punctuation at the start
+msgid "manager.setup.typeExamples"
+msgstr "(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "manager.setup.typeMethodApproach"
+msgstr "प्रकार (विधि / दृष्टिकोण)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.uniqueIdentifier"
+msgstr "अद्वितीय पहचानकर्ता"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "आलेख  और अंक  को एक पहचान संख्या या स्ट्रिंग के साथ टैग किया जा सकता है, एक पंजीकरण प्रणाली को नियोजित करता है जैसे कि डिजिटल वस्तु पहचानकर्ता प्रणाली (DOI)."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "जर्नल द्वारा एक संपादकीय / समीक्षा बोर्ड का उपयोग किया जाएगा."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.userAccess.success"
+msgstr "इस जर्नल के लिए उपयोगकर्ता पहुँच विवरण अपडेट किया गया है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.useThumbnail"
+msgstr "थंबनेल"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.userRegistration"
+msgstr "उपयोगकर्ता का पंजीकरण"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) startwhitespace: Different whitespace at the start
+# (pofilter) newlines: Different line endings
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
+# (pofilter) tabs: Different tabs
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tआपकी जर्नल एक से अधिक उपयोग मीट्रिक रिकॉर्ड करने के लिए कॉन्फ़िगर की गई है। उपयोग के आँकड़े कई संदर्भों में प्रदर्शित किए जाएंगे.\n"
+"\t\tऐसे मामले हैं जहां एकल उपयोग सांख्यिकीय का उपयोग किया जाना चाहिए, उदा। सबसे अधिक उपयोग किए जाने वाले लेखों या रैंक करने के लिए एक आदेशित सूची प्रदर्शित करना\n"
+"\t\tखोज परिणाम. कृपया डिफ़ॉल्ट के रूप में कॉन्फ़िगर किए गए मीट्रिक में से एक का चयन करें.\n"
+"\t"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.statistics.articleViews"
+msgstr "आलेख  देखें मायने रखता है (केवल लेखकों के लिए)"
+
+# (pofilter) short: The translation is much shorter than the original
+msgid "manager.statistics.statistics.count.decline"
+msgstr "पतन"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.statistics.statistics.description"
+msgstr "ओजस  प्रत्येक पत्रिका के लिए निम्नलिखित आँकड़ों की गणना करता है। प्रारंभिक संपादक निर्णय के लिए "समीक्षा के दिनों (या समीक्षा संस्करण के पदनाम) से गणना की जाती है, जबकि प्रारंभिक प्रकाशन के लिए" "प्रकाशित करने के लिए दिन" को उसके मूल अपलोडिंग से उसके प्रकाशन के लिए मापा जाता है।."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "प्रकाशित आइटम"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.statistics.makePublic"
+msgstr "पाठकों के बारे में जर्नल में उपलब्ध कराई जाने वाली वस्तुओं की जाँच करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.statistics.statistics.note"
+msgstr "नोट: सहकर्मी द्वारा प्रस्तुत सबमिशन के लिए प्रतिशत में 100% तक की वृद्धि नहीं हो सकती है, क्योंकि पुनः जारी किए गए आइटम या तो स्वीकार किए जाते हैं, अस्वीकार किए जाते हैं, या अभी भी प्रक्रिया में हैं।."
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.statistics.numIssues"
+msgstr "अंक  प्रकाशित हुए"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "कुल प्रस्तुतियाँ"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Peer reviewed"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "पंजीकृत पाठक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "संख्या सौंपा गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "संपादक स्कोर"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.statistics.selectSections"
+msgstr "इस पत्रिका के सहकर्मी-समीक्षित आँकड़ों की गणना के लिए वर्गों का चयन करें."
+
+# (pofilter) doublespacing: Different use of double spaces
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "आलेख  फ़ाइल डाउनलोड"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "संदर्भ (अंको  और / या आलेख) द्वारा संकीर्ण परिणाम."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) simpleplurals: The original uses plural(s)
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "ऑब्जेक्ट प्रकार (जर्नल, अंक, आलेख, फ़ाइल प्रकार) और / या एक या अधिक ऑब्जेक्ट द्वारा संकीर्ण परिणाम id(s)."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionPolicies"
+msgstr "सदस्यता नीतियाँ"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "कृपया दिए गए चेकबॉक्स का उपयोग करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "सदस्यता समाप्ति"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "सदस्यता समाप्त होने पर, पाठकों को सभी सदस्यता सामग्री तक पहुंच से वंचित किया जा सकता है या सदस्यता समाप्ति तिथि से पहले प्रकाशित सदस्यता सामग्री तक पहुंच बनाए रखना जारी रख सकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "पाठकों को सदस्यता समाप्ति पर सभी सदस्यता सामग्री तक पहुंच से वंचित कर दिया जाता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "पाठकों को हाल ही में प्रकाशित सदस्यता सामग्री तक पहुंच से वंचित रखा गया है, लेकिन सदस्यता समाप्ति की तारीख से पहले प्रकाशित सदस्यता सामग्री तक पहुंच बनाए रखें."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$x}
+# (pofilter) startpunc: Different punctuation at the start
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} महीने"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$x}
+# (pofilter) startpunc: Different punctuation at the start
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} सप्ताह"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "सदस्यता समाप्ति के बाद ईमेल द्वारा ग्राहकों को सूचित करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "सदस्यता समाप्ति से पहले ईमेल द्वारा ग्राहकों को सूचित करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "सदस्यता समाप्ति से पहले ईमेल द्वारा ग्राहकों को सूचित करें."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "स्वचालित ईमेल अनुस्मारक (ओजस  के ईमेल में जर्नल मैनेजर्स द्वारा संपादन के लिए उपलब्ध) एक सदस्यता समाप्त होने से पहले और बाद दोनों में ग्राहकों को भेजा जा सकता है."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) xmltags: Added XML tags
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Note:</strong> इन विकल्पों को सक्रिय करने के लिए, साइट व्यवस्थापक को ओजस कॉन्फ़िगरेशन फ़ाइल में <tt> Sched_tasks </ tt> विकल्प को सक्षम करना होगा। इस कार्यक्षमता का समर्थन करने के लिए अतिरिक्त सर्वर कॉन्फ़िगरेशन की आवश्यकता हो सकती है (जो सभी सर्वरों पर संभव नहीं हो सकता है), जैसा कि ओजेएस प्रलेखन में संकेत दिया गया है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "निम्न में से कोई एक चुनें:"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) xmltags: Added XML tags
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTML can be used in textarea (for font size, color, etc.), with \"returns\" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "कृपया सदस्यता समाप्त होने के बाद महीनों की संख्या के लिए एक वैध मूल्य चुनें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "कृपया सदस्यता समाप्ति से पहले महीनों की संख्या के लिए एक वैध मूल्य चुनें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "सदस्यता समाप्ति के बाद हफ्तों की संख्या के लिए कृपया एक वैध मूल्य चुनें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "कृपया सदस्यता समाप्ति से पहले हफ्तों की संख्या के लिए एक वैध मूल्य चुनें."
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "पंजीकृत पाठकों के पास ईमेल द्वारा सामग्री की तालिका प्राप्त करने का विकल्प होगा जब कोई अंक  खुली पहुंच बन जाएगा."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) xmltags: Added XML tags
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Note:</strong> इस विकल्प को सक्रिय करने के लिए, साइट व्यवस्थापक को OJS कॉन्फ़िगरेशन फ़ाइल में <tt> Sched_tasks </ tt> विकल्प को सक्षम करना होगा। इस कार्यक्षमता का समर्थन करने के लिए अतिरिक्त सर्वर कॉन्फ़िगरेशन की आवश्यकता हो सकती है (जो सभी सर्वरों पर संभव नहीं हो सकता है), जैसा कि ओजेएस प्रलेखन में संकेत दिया गया है."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "स्वचालित ईमेल सूचनाएं (ओजस  के ईमेल में जर्नल मैनेजर्स द्वारा संपादन के लिए उपलब्ध) सदस्यता ऑनलाइन भुगतान के पूरा होने पर सदस्यता प्रबंधक को भेजी जा सकती हैं."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "एक व्यक्तिगत सदस्यता की ऑनलाइन खरीद पर ईमेल द्वारा सदस्यता प्रबंधक को सूचित करें."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "संस्थागत सदस्यता की ऑनलाइन खरीद पर ईमेल द्वारा सदस्यता प्रबंधक को सूचित करें (अनुशंसित)."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "व्यक्तिगत सदस्यता के ऑनलाइन नवीनीकरण पर ईमेल द्वारा सदस्यता प्रबंधक को सूचित करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "एक संस्थागत सदस्यता के ऑनलाइन नवीनीकरण पर ईमेल द्वारा सदस्यता प्रबंधक को सूचित करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) xmltags: Added XML tags
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Note:</strong> ऑनलाइन खरीदे गए संस्थागत सदस्यता को प्रदान किए गए डोमेन और आईपी रेंज की स्वीकृति और सदस्यता प्रबंधक द्वारा सदस्यता की सक्रियता की आवश्यकता होती है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) xmltags: Added XML tags
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Note:</strong> इन विकल्पों को सक्षम करने के लिए, जर्नल प्रबंधक को ऑनलाइन भुगतान मॉड्यूल को सक्षम करना होगा, जिसमें रीडर शुल्क के तहत सदस्यता के लिए ऑनलाइन भुगतान भी शामिल है."
+
+# (pofilter) doublespacing: Different use of double spaces
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "सदस्यता जॉर्नलो  के लिए ओपन एक्सेस विकल्प"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\', '\')
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "सदस्यता जर्नल उनकी प्रकाशित सामग्री को \ "विलंबित खुली पहुंच \" प्रदान कर सकते हैं, साथ ही साथ परमिट "" लेखक आत्म-संग्रह \ "(दोनों जो पाठक और सामग्री के उद्धरण को बढ़ाते हैं)."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "सदस्यता प्रकार और शुल्क संरचना सदस्यता पृष्ठ पर प्रदर्शित होगी, सदस्यता प्रबंधक के नाम और संपर्क जानकारी के साथ। सब्सक्रिप्शन के बारे में अतिरिक्त जानकारी, जैसे कि विकासशील देशों में ग्राहकों के लिए भुगतान या समर्थन के तरीके, को यहां जोड़ा जा सकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "ये संपर्क विवरण ग्राहकी से संबंधित पूछताछ वाले ग्राहकों के लिए सदस्यता पृष्ठ पर सूचीबद्ध होंगे."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "कृपया अपना मान्य ईमेल लिखें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.individualSubscriptions"
+msgstr "व्यक्तिगत सदस्यताएँ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.institutionalSubscriptions"
+msgstr "संस्थागत सदस्यता"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.confirmRenew"
+msgstr "क्या आप वाकई इस सदस्यता को नवीनीकृत करना चाहते हैं?"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.confirmDelete"
+msgstr "क्या आप वाकई इस सदस्यता को हटाना चाहते हैं?"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.createTitle"
+msgstr "सृजन करे "
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.dateEnd"
+msgstr "समाप्त"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.dateStart"
+msgstr "शुरू"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.editTitle"
+msgstr "संपादित करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.withStatus"
+msgstr "हैसियत से"
+
+# (pofilter) short: The translation is much shorter than the original
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.allStatus"
+msgstr "सब"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "सदस्यता की स्थिति की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.statusValid"
+msgstr "कृपया एक मान्य सदस्यता स्थिति चुनें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.typeId"
+msgstr "सदस्यता प्रकार"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "एक सदस्यता प्रकार की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "कृपया एक वैध सदस्यता प्रकार चुनें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.dateStart"
+msgstr "शुरू तिथि"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "सदस्यता प्रारंभ तिथि आवश्यक है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "कृपया एक वैध सदस्यता आरंभ तिथि चुनें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "अंतिम तिथि"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "एक सदस्यता समाप्ति तिथि आवश्यक है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "यह एक नॉन-एक्सपायरिंग सब्सक्रिप्शन प्रकार है; कृपया प्रारंभ तिथि निर्दिष्ट न करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "यह एक नॉन-एक्सपायरिंग सब्सक्रिप्शन प्रकार है; कृपया अंतिम तिथि निर्दिष्ट न करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "कृपया एक वैध सदस्यता समाप्ति तिथि चुनें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "नोट: नीचे दिए गए सभी परिवर्तन उपयोगकर्ता के सिस्टम-वाइड प्रोफाइल के हैं."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.userId"
+msgstr "उपयोगकर्ता"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.userContact"
+msgstr "संपर्क करें"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "एक उपयोगकर्ता की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "कृपया एक वैध उपयोगकर्ता चुनें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "कृपया एक वैध देश चुनें."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "उपयोगकर्ता को उनके उपयोगकर्ता नाम और सदस्यता विवरण के साथ एक ईमेल भेजेंs."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "कृपया दिए गए चेकबॉक्स का उपयोग करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "संदर्भ संख्या"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "सदस्यता प्रकार दर्ज करें यदि सदस्यता प्रकार की आवश्यकता है कि ग्राहक संघ या संगठन के हैं."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "चयनित सदस्यता प्रकार को सदस्यता जानकारी की आवश्यकता होती है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.institutionName"
+msgstr "संस्था का नाम"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "एक संस्था का नाम आवश्यक है."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) xmltags: Added XML tags
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "यदि एक डोमेन यहां दर्ज किया गया है, तो आईपी रेंज वैकल्पिक हैं.<br />Valid values are domain names (e.g. lib.sfu.ca)."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "चयनित सदस्यता प्रकार को सदस्यता प्रमाणीकरण के लिए एक डोमेन और / या एक आईपी रेंज की आवश्यकता होती है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.domainValid"
+msgstr "कृपया एक मान्य डोमेन दर्ज करें."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP ranges"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+# (pofilter) singlequoting: Different quotation marks
+# (pofilter) xmltags: Added XML tags
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "यदि आईपी रेंज यहां दर्ज की जाती है, तो डोमेन वैकल्पिक है। <br /> मान्य मानों में एक आईपी पता (जैसे 142.58.103.1), आईपी रेंज (जैसे 142.58.103.1 - 142.58.103.4), वाइल्डकार्ड के साथ आईपी रेंज शामिल है * '( उदा। 142.58। *। *), और सीआईडीआर के साथ एक आईपी रेंज (जैसे 142.58.100.0/24)।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "कृपया एक मान्य IP श्रेणी दर्ज करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "उपयोगकर्ता को एक अधिसूचना ईमेल भेजने के लिए, जर्नल सेटअप में सदस्यता संपर्क नाम और ईमेल पता निर्दिष्ट किया जाना चाहिए."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "इस उपयोगकर्ता के पास इस पत्रिका के लिए पहले से ही एक सदस्यता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "नई सदस्यता बनाने से पहले एक सदस्यता प्रकार बनाया जाना चाहिए."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.ipRange"
+msgstr "आईपी रेंज"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.referenceNumber"
+msgstr "संदर्भ संख्या"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.noneCreated"
+msgstr "कोई सदस्यता नहीं"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.selectContact"
+msgstr "सदस्यता संपर्क का चयन करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.selectUser"
+msgstr "उपयोगकर्ता का चयन करें"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "सदस्यता का उपयोग विशेषाधिकार स्वचालित रूप से पत्रिका के जर्नल मैनेजर्स, एडिटर्स, सेक्शन एडिटर्स, लेआउट एडिटर्स, कॉपीडिटर और प्रूफरीडर्स को दिया जाता है।."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "manager.subscriptions.select"
+msgstr "चयन करे "
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "सदस्यता सफलतापूर्वक बनाई गई."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.subscriptionType"
+msgstr "सदस्यता प्रकार"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptions.institutionName"
+msgstr "संस्था का नाम"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes"
+msgstr "सदस्यता प्रकार"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "चेतावनी! इस सदस्यता प्रकार के साथ सभी सदस्यताएं भी हटा दी जाएंगी। क्या आप वाकई इस सदस्यता प्रकार को जारी रखना और हटाना चाहते हैं?"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.cost"
+msgstr "लागत"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "सदस्यता"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.individual"
+msgstr "व्यक्ति"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.institutional"
+msgstr "संस्थागत"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.create"
+msgstr "नई सदस्यता प्रकार बनाएँ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.duration"
+msgstr "अवधि"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.edit"
+msgstr "सदस्यता प्रकार संपादित करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "लागत"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "सांख्यिक मान (जैसे 40 या 40.00) बिना प्रतीक के दर्ज करें (e.g., $)."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "लागत एक सकारात्मक, संख्यात्मक मान होना चाहिए."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "एक लागत की आवश्यकता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "मुद्रा"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "एक मुद्रा की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "कृपया एक वैध मुद्रा चुनें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.description"
+msgstr "विवरण"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "महीने (e.g. 12)"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "कृपया दिए गए विकल्पों का उपयोग करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "अवधि"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "सदस्यता की संख्या महीनों तक रहती है (e.g. 12)."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "अवधि एक सकारात्मक, संख्यात्मक मान होना चाहिए."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "एक अवधि की आवश्यकता है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.format"
+msgstr "स्वरूप"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "एक सदस्यता प्रकार प्रारूप की आवश्यकता है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "कृपया एक मान्य सदस्यता प्रकार प्रारूप का चयन करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "सदस्यता"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "व्यक्तिगत (उपयोगकर्ता लॉगिन के माध्यम से मान्य हैं)"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "संस्थागत (उपयोगकर्ता डोमेन या आईपी पते के माध्यम से मान्य हैं)"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "कृपया दिए गए विकल्पों का उपयोग करें."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "सदस्यता के लिए सदस्यता की जानकारी की आवश्यकता होती है (जैसे कि किसी संघ, संगठन, संघ, आदि का)"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "कृपया दिए गए चेकबॉक्स का उपयोग करें."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.options"
+msgstr "विकल्प"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.form.public"
+msgstr "इस सदस्यता प्रकार को सार्वजनिक रूप से वेबसाइट पर उपलब्ध या दृश्यमान न बनाएं."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "कृपया दिए गए चेकबॉक्स का उपयोग करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "इस नाम के साथ एक सदस्यता प्रकार पहले से मौजूद है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "सदस्यता प्रकार नाम आवश्यक है."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.subscriptionTypes.name"
+msgstr "सदस्यता प्रकार"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "कोई सदस्यता प्रकार नहीं बनाए गए हैं."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "सदस्यता प्रकार सफलतापूर्वक बनाया गया."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "आपके द्वारा प्रस्तावित सदस्यता का वर्णन करने वाले पृष्ठ से लिंक करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "आगंतुक की वर्तमान और पिछली सदस्यता का वर्णन करने वाले पृष्ठ से लिंक करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "यह लिंक केवल तब प्रदर्शित किया जाएगा जब कोई आगंतुक लॉग इन हो."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "manager.setup.categories.description"
+msgstr "ऊपर सूचीबद्ध सेट से सबसे उपयुक्त श्रेणियां चुनें। पाठक पूर्ण पत्रिका सेट से श्रेणी के अनुसार ब्राउज़ कर पाएंगे."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "grid.action.addSection"
+msgstr "अनुभाग जोड़ें"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.section.description"
+msgstr "एक पत्रिका के प्रकाशित मुद्दों के भीतर लेख अनुभागों में आयोजित किए जाते हैं, आमतौर पर विषय या सामग्री प्रकार (जैसे समीक्षा लेख, शोध, आदि) द्वारा।."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublewords: The word 'समीक्षा,' is repeated
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) simplecaps: Different capitalization
+msgid "settings.roles.gridDescription"
+msgstr "रोल्स जर्नल में उपयोगकर्ताओं के समूह हैं, जिन्हें विभिन्न अनुमति स्तरों और जर्नल के भीतर संबद्ध वर्कफ़्लोज़ तक पहुंच दी जाती है। पांच अलग-अलग अनुमति स्तर हैं: जर्नल प्रबंधकों के पास पत्रिका में सब कुछ (सभी सामग्री और सेटिंग्स) तक पहुंच है; अनुभाग संपादकों को सभी असाइन की गई सामग्री तक पूरी पहुंच है; जर्नल असिस्टेंट के पास उन सभी सबमिशन तक सीमित पहुंच होती है जो उन्हें संपादक द्वारा स्पष्ट रूप से सौंपे गए हैं; समीक्षक उन सबमिशनों को देख और प्रदर्शन कर सकते हैं जिन्हें उन्हें समीक्षा के लिए सौंपा गया है; और लेखक अपने स्वयं के सबमिशन पर सीमित जानकारी के साथ देख और बातचीत कर सकते हैं। इसके अतिरिक्त, पांच अलग-अलग चरण असाइनमेंट हैं जिनकी भूमिकाओं तक पहुंच दी जा सकती है: प्रस्तुत करना, आंतरिक समीक्षा, समीक्षा, संपादकीय, और उत्पादन."
+
+# (pofilter) untranslated: Checks whether a string has been translated at all.
+# 
+# This check is really only useful if you want to extract untranslated
+# strings so that they can be translated independently of the main work.
+msgid "manager.setup.copyrightYearBasis"
+msgstr ""
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "आलेख : डिफ़ॉल्ट वर्ष को लेख की प्रकाशन तिथि से तैयार किया जाएगा \"publish-as-you-go\"."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "अंक: डिफॉल्ट ईयर इश्यू की प्रकाशन तिथि से तैयार किया जाएगा."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.resetPermissions"
+msgstr "आलेख अनुमतियाँ रीसेट करें"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "क्या आप वाकई सभी लेखों के लिए अनुमतियाँ डेटा रीसेट करना चाहते हैं? यह कार्य दोबारा से नहीं हो सकता."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.resetPermissions.description"
+msgstr "प्रत्येक प्रकाशित लेख के लिए कॉपीराइट स्टेटमेंट और लाइसेंस की जानकारी निकालें, उन्हें जर्नल की वर्तमान डिफ़ॉल्ट सेटिंग्स पर वापस लाएं। यह लेखों से जुड़ी सभी पूर्व कॉपीराइट और लाइसेंसिंग जानकारी को स्थायी रूप से हटा देगा। कुछ मामलों में, आपको कानूनी रूप से एक अलग लाइसेंस के तहत प्रकाशित किए गए काम को फिर से लाइसेंस देने की अनुमति नहीं दी जा सकती है। कृपया इस टूल का उपयोग करते समय सावधानी बरतें और कानूनी विशेषज्ञता से परामर्श करें यदि आप अनिश्चित हैं कि आप अपनी पत्रिका में प्रकाशित लेखों पर क्या अधिकार रखते हैं."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "manager.setup.resetPermissions.success"
+msgstr "आलेख अनुमतियाँ सफलतापूर्वक रीसेट कर दी गईं."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "grid.genres.description"
+msgstr "इन घटकों का उपयोग फ़ाइल-नामकरण उद्देश्यों के लिए किया जाता है और फ़ाइलों को अपलोड करने पर एक पुल-डाउन मेनू में प्रस्तुत किया जाता है। ## निर्दिष्ट शैलियों में उपयोगकर्ता को पूरे सबमिशन 99Z या संख्या के अनुसार किसी विशेष घटक के साथ फाइल को जोड़ने की अनुमति मिलती है (e.g., 02)."
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI प्लगइन सेटिंग्स"
+
+# (pofilter) short: The translation is much shorter than the original
+msgid "plugins.importexport.common.export.articles"
+msgstr "आलेख"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) short: The translation is much shorter than the original
+msgid "plugins.importexport.common.export.issues"
+msgstr "अंक "
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "plugins.importexport.common.export.representations"
+msgstr "Galleys"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "प्लगइन आवश्यकताओं को पूरा नहीं किया"
+
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "इस प्लगइन का उपयोग करने के लिए कृपया "सार्वजनिक पहचानकर्ता" प्लगइन श्रेणी पर जाएं, DOI प्लगइन को सक्षम और कॉन्फ़िगर करें और वहां एक मान्य DOI उपसर्ग निर्दिष्ट करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "प्लगइन पूरी तरह से सेट नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "कोई प्रकाशन ऑब्जेक्ट्स को DOI सार्वजनिक पहचानकर्ता प्लगइन में DOI असाइनमेंट के लिए नहीं चुना जाता है, इसलिए इस प्लगइन में कोई जमा या निर्यात संभावना नहीं है."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "कृपया ध्यान दें कि पासवर्ड सादे पाठ के रूप में सहेजा जाएगा, अर्थात् एन्क्रिप्टेड नहीं."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "plugins.importexport.common.filter.issue"
+msgstr "कोई अंक "
+
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "जमा नहीं"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "दर्ज की गई"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "मार्क पंजीकृत है"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.importexport.common.validation"
+msgstr "निर्यात और पंजीकरण से पहले XML सत्यापित करें."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "कोई ऑब्जेक्ट नहीं चुना गया."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "plugins.importexport.common.error.validation"
+msgstr "चयनित वस्तुओं को परिवर्तित नहीं किया जा सका."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.importexport.common.invalidXML"
+msgstr "अमान्य XML:"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ param}
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "आउटपुट फ़ाइल {$ param} लेखन योग्य नहीं है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ param}
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "इनपुट फ़ाइल {$ param} पठनीय नहीं है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$param}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) singlequoting: Different quotation marks
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "पंजीकरण सफल नहीं था! DOI पंजीकरण सर्वर ने एक त्रुटि लौटा दी: '{$param}'."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "plugins.importexport.common.register.success"
+msgstr "पंजीकरण सफल!"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$path}
+# (pofilter) startcaps: Different capitalization at the start
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "DOI उपसर्ग पथ के साथ पत्रिका के लिए गायब है {$path}."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.importexport.common.cliError"
+msgstr "त्रुटि:"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$journalPath}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "The specified journal path, \"{$journalPath}\", does not exist."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "निर्दिष्ट ऑब्जेक्ट नहीं मिले."
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "जर्नल सेटिंग्स में पहचाने गए प्राथमिक संपर्क के लिए एक प्रति भेजें."
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) simplecaps: Different capitalization
+msgid "stats.publicationStats"
+msgstr "आलेख  आँकड़े"
+
+# (pofilter) doublespacing: Different use of double spaces
+msgid "stats.publications.details"
+msgstr "आलेख  विवरण"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "stats.publications.none"
+msgstr "इन मापदंडों से मेल खाने वाले उपयोग के आंकड़ों के साथ कोई लेख नहीं मिला."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$total}, {$count}
+# (pofilter) startpunc: Different punctuation at the start
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} of {$total} articles"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) doublespacing: Different use of double spaces
+msgid "stats.publications.abstracts"
+msgstr "सार  "

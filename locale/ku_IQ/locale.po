@@ -1,0 +1,2353 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-14 13:48+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"ku_IQ/>\n"
+"Language: ku_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "common.software"
+msgstr "سیستەمی گۆڤاری کراوە"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "تکایە هەمو بۆشاییە داواکراوەکان پڕ بکەوە."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "کلیک لەسەر ئەم ئایکۆنە بکە بۆ پڕکردنەوەی فۆڕمی هەڵسەنگاندن."
+
+msgid "navigation.categories.browse"
+msgstr "گەڕان"
+
+msgid "navigation.categories"
+msgstr "هاوپۆلەکان"
+
+msgid "context.select"
+msgstr "بچۆ گۆڤارێکی دیکە:"
+
+msgid "context.current"
+msgstr "گۆڤاری ئێستا"
+
+msgid "user.register.readerDescription"
+msgstr "بە ئیمەیڵ لە ژمارەی نوێی گۆڤار ئاگادار کراوەتەوە."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "ئەو وشە نهێنییەی کە تۆ داخلت کردووە کەمە."
+
+msgid "user.register.registrationDisabled"
+msgstr "ئەم گۆڤارە لە ئێستادا تۆمارکردنی ڕاگرتووە."
+
+msgid "user.register.privacyStatement"
+msgstr "دەستەواژەی تایبەتێتییەکان"
+
+msgid "user.register.noJournals"
+msgstr "هیچ گۆڤارێک بەردەست نییە، دەکرێت لەم پەڕەیە خۆت تۆمار بکەیت."
+
+msgid "user.register.selectContext"
+msgstr "ئەو گۆڤارە دیاری بکە کە خۆتی تێدا تۆمار دەکەیت:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "خەزنی بکە و ئیمەیڵ بۆ سەرنوسەر بنێرە"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "خەزنی بکە و ئیمەیڵ بۆ توێژەر بنێرە"
+
+msgid "submission.comments.forEditor"
+msgstr "بۆ سەرنوسەر"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "بۆ توێژەر و سەرنوسەر"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "بۆ سەرنوسەر"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "بۆ توێژەر و سەرنوسەر"
+
+msgid "submission.comments.copyeditComments"
+msgstr "تێچێنەکانی وردبینی"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "پەیامنێری سەرنوسەر/ توێژەر"
+
+msgid "submission.logType.proofread"
+msgstr "هەڵسەنگێنەری زمانی"
+
+msgid "submission.logType.layout"
+msgstr "نەخشەساز"
+
+msgid "submission.logType.copyedit"
+msgstr "وردبینی"
+
+msgid "submission.logType.review"
+msgstr "هەڵسەنگاندن"
+
+msgid "submission.logType.editor"
+msgstr "سەرنوسەر"
+
+msgid "submission.logType.author"
+msgstr "توێژەر"
+
+msgid "submission.logType.article"
+msgstr "توێژەر"
+
+msgid "submission.proofread.instructions"
+msgstr "ڕێنماییەکانی هەڵسەنگێنەری زمانی"
+
+msgid "submission.proofread.corrections"
+msgstr "چاککردنەوەکانی هەڵسەنگێنەری زمانی"
+
+msgid "submission.proofreadingComments"
+msgstr "تێچێنەکانی هەڵسەنگێنەری زمانی"
+
+msgid "submission.layout.referenceLinking"
+msgstr "لینکی سەرچاوەکان"
+
+msgid "submission.layout.instructions"
+msgstr "ڕێنماییەکانی نەخشەساز"
+
+msgid "submission.layout.layoutComments"
+msgstr "تێچێنی نەخشەساز"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "گۆڕینی نەخشەساز"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "ئەرکدارکردنی نەخشەساز"
+
+msgid "submission.copyedit.instructions"
+msgstr "ڕێنماییەکانی وردبین"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "تێچێنی وردبین"
+
+msgid "submission.copyedit.useFile"
+msgstr "ئەم فایلە بەکار بهێنە"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "وردبینێک دیاری بکە"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "نوسخەی وردبینی"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "وردبینیی کۆتایی"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "وردبینیی توێژەر"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "وردبینیی سەرنوسەر"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "وردبینیی سەرەتایی"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "ئیمەیڵی داواکاری نانێردرێت هەتا فایلی وردبینی بار نەکرێت."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "ئیمەیڵی داواکاری نانێردرێت هەتا وەشانی هەڵسەنگێنەر بەردەست نەبێت."
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "هیچ ئەرکێکی هەڵسەنگاندنی زمانی بەردەست نییە"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "فایلی وردبینی"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "فایلی وردبینی"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "فایلێک بۆ وردبینیکردن"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"هیچ پێشنیازێک دەستنیشان نەکراوە. تۆ دەبێت پێشنیازێک دەستنیشان بکەیت بۆ "
+"پێشکەشکردن."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "ڕێکخستنەوەی پێشنیازەکانی هەڵسەنگێنەر."
+
+msgid "reviewer.competingInterests"
+msgstr "بەرژەوەندییە ڕکابەرەکان"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "ئەگەر تۆ هەڵسەنگاندنەکە دەکەیت، ڕێنماییەکانی هەڵسەنگاندن بخوێنەوە."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "ئەگەر تۆ هەڵسەنگاندنەکە ئەنجام دەدەیت."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "ئاگادارکردنەوەی سەرنوسەر لە پێشکەشکردنەکە"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "ڕێنماییەکانی هەڵسەنگێنەر"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "هەنگاوەکانی هەڵسەنگاندن"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "هەڵسەنگاندنی خشتەی کار"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "پێشکەشکردن بۆ هەڵسەنگاندن"
+
+msgid "reviewer.article.schedule"
+msgstr "خشتەی کار"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "تێچێنەکان ببینە"
+
+msgid "reviewer.article.decision.decline"
+msgstr "پێشکەشکردنەکە بکشێنەوە"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "لە جێگایەکی دیکە پێشکەشی بکە"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "پێشکەشکردنەکە دوبارە بۆ هەڵسەنگاندن بنێرە"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "چاوپێداخشانەوە داواکراوە"
+
+msgid "reviewer.article.decision.accept"
+msgstr "پێشکەشکردنەکە قبوڵ بکە"
+
+msgid "reviewer.article.schedule.due"
+msgstr "کاتی هەڵسەنگاندن"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "هەڵسەنگاندنەکە پێشکەش کرا"
+
+msgid "reviewer.article.schedule.response"
+msgstr "وەڵامی تۆ"
+
+msgid "reviewer.article.schedule.request"
+msgstr "داواکاریی سەرنوسەر"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "وەشانەکە لە لایەن هەڵسەنگێنەرەوە بار کرا"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "بارکردنی فایل"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "تێچێنەکان"
+
+msgid "reviewer.article.submitReview"
+msgstr "هەڵسەنگاندن بۆ سەرنوسەر بنێرە"
+
+msgid "reviewer.article.recommendation"
+msgstr "پێشنیاز"
+
+msgid "reviewer.article.automatic"
+msgstr "تۆماتیکی"
+
+msgid "reviewer.article.sendReminder"
+msgstr "بەبیرهێنانەوە بنێرە"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "چونەژورەوەی سەرنوسەر"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "سەرنجەکانت بە تێچێن بنوسە"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "سەرنوسەری پێشکەشکردن"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"پێشکەشکردنەکە بەردەست دەبێت، کاتێک هەڵسەنگێنەر بە هەڵسەنگاندنەکە ڕازی ببێت"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "ناتوانم هەڵسەنگاندنەکە بکەم"
+
+msgid "reviewer.article.canDoReview"
+msgstr "هەڵسەنگاندنەکە ئەنجام دەدەم"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "سەرنوسەر ئاگادار بکەوە"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "فایل بۆ هەڵسەنگاندن"
+
+msgid "reviewer.averageQuality"
+msgstr "پلەپێدان"
+
+msgid "reviewer.completedReviews"
+msgstr "ئەنجام درا"
+
+msgid "reviewer.pendingReviews"
+msgstr "ئەو توێژینەوانەی لە قۆناغی هەڵسەنگان دان"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "لینک یان میوانی دەرەکیی ناوەرۆک"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "تابلۆکە لە پەڕەیەکی دیکە بەردەست دەبێت."
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"ئەم شێوازەی وێنە ڕێگا پێ نەدراوە. شێوازە ڕێگاپێدراوەکان ئەمانەن  .gif, .jpg, "
+"and .png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "بارکردنی فایلی پاشکۆ"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "فایلەکە بگۆڕە"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "بارکردنی ڕێکخستنی تابلۆ"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "ئەرکەکانی نەخشەساز"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "سەرنوسەر لە ئێستادا هیچ ئەرکی چالاکی نییە."
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "ئەرکە تەواوکراوەکانی سەرنوسەر"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "ئەرکە چالاکەکانی سەرنوسەر"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "هەڵسەنگێنەرێکی نوێ تۆمار بکە"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "خاوەنی ئەژمارێک وەک هەڵسەنگێنەر تۆمار بکە"
+
+msgid "sectionEditor.regrets.result"
+msgstr "ئەنجام"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "داوای لێبوردن"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "داوای لێبوردنی هەڵسەنگێنەر& پەشیمان بونەوەکان"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "بڕیاری سەرنوسەر، خولی {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "هەڵسەنگاندنی نهێنی، خولی {$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "پیشاندانی داوای لێبوردنەکان، پەشیمانبونەوەکان و خولەکانی پێشتر"
+
+msgid "sectionEditor.regrets"
+msgstr "داوای لێبوردنەکان"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} داوای لێبوردنی هەڵسەنگێنەران، پەشیمانبونەوەکان & خولەکانی "
+"پێشتر"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "داوای لێبوردنەکان"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "هیچ پێشکەشکردنێکی نوێ نییە"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "ئەرکە تەواوبووەکانی سەرنوسەر"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "ئەرکە چالاکەکانی سەرنوسەر"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "ژمارەی بینینەکان (هەمو کاتێک)"
+
+msgid "search.results.orderBy.journal"
+msgstr "ناونیشانی گۆڤار"
+
+msgid "search.results.orderBy.issue"
+msgstr "ژمارە"
+
+msgid "search.results.orderBy.date"
+msgstr "ڕێککەوتی بڵاوکردنەوە"
+
+msgid "search.results.orderBy.author"
+msgstr "توێژەر"
+
+msgid "search.results.orderBy.article"
+msgstr "ناونیشانی توێژینەوە"
+
+msgid "search.results.orderBy"
+msgstr "ئەنجامەکان ڕێک بخە بە گوێرەی"
+
+msgid "comments.authenticated"
+msgstr ""
+"لە لایەن<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "تێچێنەکان دەربارەی ئەم توێژینەوەیە"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "پارەدان یان بەشداریکردن داوا کراوە"
+
+msgid "reader.subscriptionAccess"
+msgstr "پێشکەشکردن داوا کراوە"
+
+msgid "reader.openAccess"
+msgstr "سیستەمی کراوە"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"بۆ دەستپێگەیشتن دەبێت بەشدار بوبیت. بۆ دڵنیابونەوە لە بەشداریکردنت داخلی "
+"هەژمارەکەت ببە."
+
+msgid "reader.subscribersOnly"
+msgstr "تەنیا بەشداربووان"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "ئەرکی نەخشەساز تەواو بو"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "تابلۆی نەخشەساز نوێ کرایەوە"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "ئەرکی نەخشەساز دەستی پێ کرد"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "نەخشەسازی چاپ ئەرکدار نەکراوە"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "نەخشەسازی چاپ ئەرکردار کرا"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "ئەرکی هەڵسەنگێنەری زمانی تەواو بو"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "پێداچونەوەکانی هەڵسەنگێنەری زمانی نوێ کرانەوە"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "ئەرکی هەڵسەنگێنەری زمانی دەستی پێ کرد"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "هەڵسەنگێنەری زمانی بۆ پێشکەشکردنەکە زیاد نەکراوە"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "هەڵسەنگێنەری زمانی بۆ پێشکەشکردنەکە زیاد کرا"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "فایلی وردبینیکراو نوێ کرایەوە"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "وردبینی کۆتایی تەواو کرا"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "وردبینی سەرەتایی تەواو کرا"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "پێداچونەوەکانی وردبین نوێ کرایەوە"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "ئەرکی وردبینیکەر دەستی پێکرد"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "وردبینیکەر بۆ پێشکەشکردنەکە دیاری نەکراوە"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "وردبینیکەر بۆ پێشکەشکردنەکە دیاری کرا"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "پێشکەشکردنەکە دوبارە خەزن کرایەوە لە ئەرشیفەوە"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "پێشکەشکردنەکە نێردرا بۆ بەشی ئەرشیف"
+
+msgid "submission.event.editor.editorFile"
+msgstr "فایلی سەرنوسەر نوێ کرایەوە"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "بڕیاری سەرنوسەر پێشکەش کرا"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "سەرنوسەر بۆ پێشکەشکردنەکە دیاری نەکراوە"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "سەرنوسەرێک بۆ پێشکەشکردنەکە دیاری کرا"
+
+msgid "submission.event.general.authorRevision"
+msgstr "فایلی پێداچونەوەی توێژەر نوێ کرایەوە"
+
+msgid "submission.event.author.authorRevision"
+msgstr "پێداچونەوەی توێژەر پێشکەش کرا"
+
+msgid "submission.event.general.articlePublished"
+msgstr "توێژینەوەکە بڵاو کرایەوە"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "پێشکەشکردنەکە ئەرکدار کرا بۆ ژمارەی"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "پێشکەشکردنەکە بۆ ڕیزبەندیی بڵاوکردنەوە دەنێردرێت"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "ڕەشنوسی توێژینەوەکەت پێشکەش کرا"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "حاڵەتی پێشکەشکردن"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>تێبینی:</strong> بەشداریکردنی دەزگاکان لە ئۆنلاین داوادەکرێت و "
+"پێویستی بە قبوڵکردنی دۆمەین و ئایپییەکەیان هەیە پێشئەوەی بەشدارییەکەیان "
+"چالاک ببێت."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"ئەو دەزگایانەی بەشداریکردنیان هەیە پێویستییان بە داخلبون نییە. دۆمەین یان "
+"ئایپی ئەدرەسی بەکارهێنەر بەسە بۆ ئەوەی بەکارهێنەر سودمەند ببێت."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"ئەوانەی بەشداریکردنیان هەیە، دەبێت داخلی ئەژمارەکانیان ببن بۆ ئەوەی "
+"ناوەرۆکەکان ببینن."
+
+msgid "subscriptions.status.other"
+msgstr "دیکە، تێبینییەکان ببینە"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "لە ئێستادا تۆ بەشداریکردنت نییە."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "لە چاوەڕوانی پارەدانی ئۆنلاین"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "گرێدانی تابلۆی توێژینەوەکان"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "جۆری بەشداریکردنەکان"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "بەشداریکردنی دەزگایی"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "بەشداریکردنی کەسی"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "بەڕێوەبەری بەشداریکردن"
+
+msgid "search.results.similarDocuments"
+msgstr "فایلە هاوشێوەکان"
+
+msgid "search.results.orderDir.desc"
+msgstr "دابەزین"
+
+msgid "search.results.orderDir.asc"
+msgstr "بەرزبونەوە"
+
+msgid "search.results.orderBy.relevance"
+msgstr "پەیوەندیدار"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "ئاستی بینین (لە مانگی ڕابردودا)"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "چاوەڕێی پارەدانی ساڵانەیە"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "تەسدیقکردن داوا کراوە"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "زانیاری داواکراوە"
+
+msgid "subscriptions.status.active"
+msgstr "چالاک"
+
+msgid "subscriptions.status"
+msgstr "بارودۆخ"
+
+msgid "subscriptions.inactive"
+msgstr "ناچالاک"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "چاپ و ئۆنلاین"
+
+msgid "subscriptionTypes.format.print"
+msgstr "چاپ"
+
+msgid "subscriptionTypes.format.online"
+msgstr "ئۆنلاین"
+
+msgid "subscriptionTypes.format"
+msgstr "ڕێکخستن"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "بەسەرنەچو"
+
+msgid "subscriptionTypes.months"
+msgstr "مانگەکان"
+
+msgid "subscriptionTypes.month"
+msgstr "مانگ"
+
+msgid "subscriptionTypes.years"
+msgstr "ساڵەکان"
+
+msgid "subscriptionTypes.year"
+msgstr "ساڵ"
+
+msgid "subscriptionTypes.currency"
+msgstr "دراو"
+
+msgid "issue.return"
+msgstr "گەڕانەوە بۆ زانیارییەکان دەربارەی ئەم ژمارەیە"
+
+msgid "issue.viewIssue"
+msgstr "بینینی ئەم ژمارەیە"
+
+msgid "issue.nonpdf.title"
+msgstr "دابەزاندنی ئەم ژمارەیە"
+
+msgid "issue.fullIssue"
+msgstr "ژمارەی تەواو"
+
+msgid "issue.coverPage.altText"
+msgstr "پەڕەی بەرگ"
+
+msgid "issue.abstract"
+msgstr "پوختە"
+
+msgid "issue.toc"
+msgstr "ناوەرۆک"
+
+msgid "issue.noIssues"
+msgstr "هیچ ژمارەیەک بەردەست نییە"
+
+msgid "issue.year"
+msgstr "ساڵ"
+
+msgid "issue.no"
+msgstr "ژمارە"
+
+msgid "issue.vol"
+msgstr "بەرگ"
+
+msgid "issue.number"
+msgstr "ژمارە"
+
+msgid "issue.volume"
+msgstr "بەرگ"
+
+msgid "issue.title"
+msgstr "ناونیشان"
+
+msgid "issue.issues"
+msgstr "ژمارەکان"
+
+msgid "issue.issue"
+msgstr "ژمارە"
+
+msgid "user.role.journalAssistants"
+msgstr "هاوکارەکانی گۆڤار"
+
+msgid "user.role.journalAssistant"
+msgstr "هاوکاری گۆڤار"
+
+msgid "user.role.subscriptionManagers"
+msgstr "بەڕێوەبەرانی بەشداریکردنەکان"
+
+msgid "user.role.subEditors"
+msgstr "سەرنوسەرانی بەشەکان"
+
+msgid "user.role.managers"
+msgstr "بەڕێوەبەرانی گۆڤار"
+
+msgid "user.role.subscriptionManager"
+msgstr "بەڕێوەبەری بەشداریکردنەکان"
+
+msgid "user.role.subEditor"
+msgstr "سەرنوسەری بەش"
+
+msgid "user.role.manager"
+msgstr "بەڕێوەبەری گۆڤار"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"وەک هەڵسەنگێنەر خۆت تۆمار بکە: لە ئێستادا خۆتۆمارکردن وەک هەڵسەنگێنەر چالاک "
+"نییە."
+
+msgid "user.noRoles.regReviewer"
+msgstr "وەک هەڵسەنگێنەر خۆت تۆمار بکە"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr ""
+"توێژینەوەیەک پێشکەش بکە: تۆمارکردنی ئەژماری کەسی لە ئێستادا بەردەست نییە."
+
+msgid "user.noRoles.submitArticle"
+msgstr "پڕۆپۆزەڵێک پێشکەش بکە"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"ئەژمارە کەسییەکەت هیچ ڕۆڵێکی لەم گۆڤارەدا پێ نەدراوە. تکایە یەکێک لەوانەی "
+"خوارەوە هەڵ بژێرە:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "ئەژمارە کەسییەکەت گرێدراوی هیچ گۆڤارێک نییە. تکایە گۆڤارێک هەڵبژێرە:"
+
+msgid "user.manageMySubscriptions"
+msgstr "ڕێکخستنی بەشداریکردنەکانم"
+
+msgid "user.myJournals"
+msgstr "گۆڤارەکانم"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"ئەگەر تۆ دەخوازیت لە یەکێک لە گۆڤارەکان ببیت بە هەڵسەنگێنەر، تکایە پسپۆڕی "
+"خۆت بنوسە."
+
+msgid "user.register.otherContextRoles"
+msgstr "ئەم ڕۆڵانەی خوارەوە لە ئەستۆ دەگرم."
+
+msgid "user.register.contextsPrompt"
+msgstr "دەتەوێت خۆت لە کام گۆڤار تۆمار بکەیت؟"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"بەڵێ، من دەمەوێت کە وەک هەڵسەنگێنەرێک لە لایەن گۆڤارەوە پەیوەندیم پێوە بکریت."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "بەڵێ، ڕۆڵی  {$userGroup} لە ئەستۆ دەگرم."
+
+msgid "user.reviewerPrompt"
+msgstr "ئایا تۆ دەتەوێت وەک هەڵسەنگێنەری ئەم گۆڤارە کار بکەیت؟"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "user.registerForOtherJournals"
+msgstr "لە گۆڤاری دیکە تۆمار بکە"
+
+msgid "user.showAllJournals"
+msgstr "گۆڤارەکانم پیشان بدە"
+
+msgid "user.profile.profileImage"
+msgstr "وێنەی پڕۆفایل"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "بەکارهێنەر زیاد بکە بە بێ دیاریکردنی ڕۆڵەکەی."
+
+msgid "journal.viewAllIssues"
+msgstr "بینینی هەمو ژمارەکانی گۆڤار"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "گۆڤار"
+
+msgid "journal.path"
+msgstr "ڕێچکە"
+
+msgid "context.contexts"
+msgstr "گۆڤارەکان"
+
+msgid "journal.currentIssue"
+msgstr "دواهەمین ژمارە"
+
+msgid "submission.search"
+msgstr "گەڕان بۆ توێژینەوە"
+
+msgid "submissions.proofreadingComplete"
+msgstr "هەڵسەنگاندنی زمانی"
+
+msgid "submissions.layoutComplete"
+msgstr "ڕوکاری چاککراوە"
+
+msgid "submissions.copyeditComplete"
+msgstr "چاککراوە"
+
+msgid "submission.eventLog"
+msgstr "تۆماری ڕوداوەکان"
+
+msgid "submissions.editorRuling"
+msgstr "بڕیاری سەرنوسەر"
+
+msgid "submissions.editorDecision"
+msgstr "بڕیاری سەرنوسەر"
+
+msgid "submissions.proof"
+msgstr "چاککردنەوە"
+
+msgid "submissions.reviewRound"
+msgstr "خولی هەڵسەنگاندن"
+
+msgid "submissions.postAuthor"
+msgstr "دوای توێژەر"
+
+msgid "submissions.initialProof"
+msgstr "چاککردنەوەی دەستپێکی"
+
+msgid "submissions.proofread"
+msgstr "هەڵسەنگاندنی زمانی بۆ بکە"
+
+msgid "submissions.initial"
+msgstr "دەستپێک"
+
+msgid "submissions.published"
+msgstr "بڵاو کرایەوە"
+
+msgid "submissions.queuedReview"
+msgstr "لە هەڵسەنگاندن دایە"
+
+msgid "submissions.step3"
+msgstr "هەنگاوی سێیەم"
+
+msgid "submissions.step1"
+msgstr "هەنگاوی یەکەم"
+
+msgid "submission.scheduledIn"
+msgstr "داندراوە بۆ بڵاوکردنەوە لە {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "کات دانانەوە"
+
+msgid "submission.proofreading"
+msgstr "هەڵسەنگاندنی زمانی"
+
+msgid "submission.copyedit"
+msgstr "نوسخەی دەستکاریکردن"
+
+msgid "submission.copyediting"
+msgstr "نوسخەی دەستکاریکردن"
+
+msgid "submission.authorVersion"
+msgstr "وەشانی توێژەر"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "فایلی چاککراو لە لایەن توێژەرەوە"
+
+msgid "submission.editorVersion"
+msgstr "وەشانی سەرنوسەر"
+
+msgid "submission.postReviewVersion"
+msgstr "وەشانی دوای هەڵسەنگاندن"
+
+msgid "submission.reviewersVersion"
+msgstr "تێبینییەکانی هەڵسەنگێنەر"
+
+msgid "submission.editorAuthorRecord"
+msgstr "تۆماری ئیمەیڵی سەرنوسەر/توێژەر"
+
+msgid "submission.notifyEditor"
+msgstr "سەرنوسەر ئاگادار بکەوە"
+
+msgid "submission.notifyAuthor"
+msgstr "توێژەر ئاگادار بکەوە"
+
+msgid "submission.editorReview"
+msgstr "هەڵسەنگاندنی سەرنوسەر"
+
+msgid "submission.round"
+msgstr "خولی &nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "بڕیاری سەرنوسەر"
+
+msgid "submission.sent"
+msgstr "نێردرا"
+
+msgid "submission.changeSection"
+msgstr "بگۆڕە بۆ"
+
+msgid "submission.submissionEditing"
+msgstr "دەستکاریکردنی پێشکەشکردنەکە"
+
+msgid "article.return"
+msgstr "بگەڕێوە سەر زانیارییەکانی توێژینەوەکە"
+
+msgid "article.fontSize.large.altText"
+msgstr "گەورە"
+
+msgid "article.fontSize.medium.altText"
+msgstr "مامناوەند"
+
+msgid "article.fontSize.small.altText"
+msgstr "بچوک"
+
+msgid "article.fontSize"
+msgstr "قەبارەی فۆنت"
+
+msgid "article.comments.enable"
+msgstr "چالاککردن"
+
+msgid "article.comments.disable"
+msgstr "لەکارخستن"
+
+msgid "article.comments.sectionDefault"
+msgstr "بنەڕەتی"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "دەستپێڕاگەیشتنی سنوردار"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "دەستپێڕاگەیشتنی کراوە"
+
+msgid "article.coverPage.altText"
+msgstr "وێنەی بەرگ"
+
+msgid "article.abstract"
+msgstr "پوختە"
+
+msgid "article.details"
+msgstr "وردەکارییەکان"
+
+msgid "article.submissions"
+msgstr "پێشکەشکردنەکان"
+
+msgid "article.submission"
+msgstr "پێشکەشکردن"
+
+msgid "article.commentsToEditor"
+msgstr "تێچێنەکانی توێژەر"
+
+msgid "article.language"
+msgstr "زمان"
+
+msgid "article.type"
+msgstr "جۆر، میتۆد، ڕێباز"
+
+msgid "article.coverage"
+msgstr "سەرنج"
+
+msgid "article.subject"
+msgstr "کلیلە وشەکان"
+
+msgid "article.discipline"
+msgstr "پسپۆڕییە گشتییەکان و پسپۆڕییە وردەکان"
+
+msgid "article.suppFilesAbbrev"
+msgstr "فایلە پاشکۆکان"
+
+msgid "article.suppFiles"
+msgstr "فایل/فایلەکانی پاشکۆ"
+
+msgid "article.suppFile"
+msgstr "فایلی پاشکۆ"
+
+msgid "article.file"
+msgstr "فایل"
+
+msgid "article.journalSection"
+msgstr "بەشی گۆڤار"
+
+msgid "article.metadata"
+msgstr "زانیاریی ناسێنەر"
+
+msgid "article.indexingInformation"
+msgstr "زانیاریی ناوەرۆک"
+
+msgid "article.authors"
+msgstr "توێژەران"
+
+msgid "article.title"
+msgstr "ناونیشان"
+
+msgid "article.submissionId"
+msgstr "ناسنامەی توێژینەوە پێشکەشکراو"
+
+msgid "common.publications"
+msgstr "توێژینەوەکان"
+
+msgid "common.publication"
+msgstr "توێژینەوە"
+
+msgid "article.articles"
+msgstr "توێژینەوەکان"
+
+msgid "article.article"
+msgstr "توێژینەوە"
+
+msgid "section.policy"
+msgstr "سیاسەتی بەش"
+
+msgid "section.abbreviation.example"
+msgstr "(نمونە، توێژینەوەکان = ART)"
+
+msgid "section.abbreviation"
+msgstr "کورتکراوەکان"
+
+msgid "section.title"
+msgstr "ناونیشانی بەش"
+
+msgid "section.sections"
+msgstr "بەشەکان"
+
+msgid "section.section"
+msgstr "بەش"
+
+msgid "common.queue.short.completed"
+msgstr "ئەرشیف"
+
+msgid "common.queue.long.completed"
+msgstr "ئەرشیف"
+
+msgid "common.queue.short.active"
+msgstr "چالاک"
+
+msgid "common.queue.long.active"
+msgstr "پێشکەشکردنە چالاکەکان"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "ئەرشیفەکان"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "ئەرشیفەکان"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "لە هەڵسەنگاندندا"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "پێشکەشکراوەکان لە هەڵسەنگاندن دا"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "چاککردنی دوای هەڵسەنگاندن"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "پێشکەشکردنەکان لە چاککردنی دوای هەڵسەنگاندن"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "بێ ئەرک کردن"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "بێ ئەرک کردن"
+
+msgid "navigation.skip.issue"
+msgstr "بچۆ بەشی دواهەمین ژمارە"
+
+msgid "navigation.skip.about"
+msgstr "بچۆ بەشی دەربارەی گۆڤار"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "زانیاری بۆ کەسانی کتێبخانەکان"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "زانیاری بۆ توێژەران"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "ڕێنمایی سودمەندبونی ڕکابەر"
+
+msgid "navigation.infoForLibrarians"
+msgstr "بۆ کەسانێک کە لە کتێبخانە کار دەکەن"
+
+msgid "navigation.infoForAuthors"
+msgstr "بۆ توێژەران"
+
+msgid "navigation.browseByAuthor"
+msgstr "بەگوێرەی توێژەر"
+
+msgid "navigation.browseByIssue"
+msgstr "بە گوێرەی ژمارە"
+
+msgid "navigation.otherJournals"
+msgstr "گۆڤارەکانی دیکە"
+
+msgid "navigation.current"
+msgstr "دواهەمین ژمارە"
+
+msgid "navigation.journalHelp"
+msgstr "یارمەتی"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "وێنەی پەڕەی سەرەکیی گۆڤار"
+
+msgid "common.homePageHeader.altText"
+msgstr "سەرپەڕەی سەرەکی"
+
+msgid "common.payments"
+msgstr "پارە دراوەکان"
+
+msgid "common.payment"
+msgstr "پارەدان"
+
+msgid "common.confirmComplete"
+msgstr ""
+"ئایا تۆ دڵنیایت لە هەڵبژاردنی ئەم ئەرکە وەک ئەرکێکی تەواوکراو؟ لەوانەیە "
+"دواتر نەتوانیت گۆڕانکاری تێدا بکەیت."
+
+msgid "about.editorialTeam.biography"
+msgstr "ژیاننامە"
+
+msgid "about.editorialTeam"
+msgstr "دەستەی سەرنوسەران"
+
+msgid "about.history"
+msgstr "مێژوی گۆڤارەکە"
+
+msgid "about.aboutContext"
+msgstr "دەربارەی گۆڤارەکە"
+
+msgid "about.contact"
+msgstr "پەیوەندی"
+
+msgid "about.statistics"
+msgstr "ئامارەکان"
+
+msgid "archive.issueUnavailable"
+msgstr "ئەم ژمارەیە بەردەست نییە"
+
+msgid "archive.browse"
+msgstr "پیشاندانی ژمارەکانی پێشتر"
+
+msgid "archive.archivesPageNumber"
+msgstr "ئەرشیفەکان - پەڕە {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "ئەرشیف"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "ئەم گۆڤارە هیچ ژمارەیەکی لێ بڵاو نەکراوەتەوە."
+
+msgid "current.noCurrentIssue"
+msgstr "دواهەمین ژمارە بەردەست نییە"
+
+msgid "current.current"
+msgstr "ئەژماری ئێستا"
+
+msgid "site.noJournals"
+msgstr "هیچ گۆڤارێک بەردەست نییە."
+
+msgid "site.journalCurrent"
+msgstr "دواهەمین ژمارە"
+
+msgid "site.journalRegister"
+msgstr "تۆمارکردن"
+
+msgid "site.journalView"
+msgstr "پیشاندانی گۆڤار"
+
+msgid "site.journalsHosted"
+msgstr "گۆڤارەکان لەم پەڕەیەدا میوانداری کراون"
+
+msgid "article.nonpdf.title"
+msgstr "دابەزاندنی توێژینەوە"
+
+msgid "article.download"
+msgstr "دابەزاندنی ئەم فایلە PDFە"
+
+msgid "article.pdf.title"
+msgstr "PDF"
+
+msgid "article.pageTitle"
+msgstr "بینینی  {$title}"
+
+msgid "search.authorDetails"
+msgstr "زانیارییەکانی توێژەر"
+
+msgid "search.authorIndex"
+msgstr "پیشاندانی پێنوێنی نوسەر"
+
+msgid "search.allJournals"
+msgstr "هەمو گۆڤارەکان"
+
+msgid "search.withinJournal"
+msgstr "لەناو"
+
+msgid "search.searchFor"
+msgstr "گەڕان بۆ توێژینەوەکان لە"
+
+msgid "search.browseAuthorIndex"
+msgstr "پیشاندانی پێنوێنی نوسەر"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "زیادکردن"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "سڕینەوە"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "تکایە دۆمەینێکی بەردەست داخل بکە."
+
+msgid "user.subscriptions.form.domain"
+msgstr "دۆمەین"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "ناونیشانی پۆستی"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "ناوی دەزگا داوا کراوە."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "ناوی دەزگا"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "ئەم ئەژمارە بەشداریکردنی هەیە."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "تکایە جۆرێکی بەشداریکردنی بەردەست هەڵبژێرە."
+
+msgid "user.subscriptions.form.membership"
+msgstr "ئەندامبون"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "جۆرەکانی بەشداریکردن"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "پیشاندانی شێوازەکانی بەشداریکردن"
+
+msgid "user.subscriptions.expired"
+msgstr "لە {$date} بەسەر چو"
+
+msgid "user.subscriptions.expires"
+msgstr "لە {$date} بەسەر دەچێت"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "کڕینی بەشداریکردنی دەزگایی"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "بەشداریکردنی کەسی بکڕە"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "کڕینی بەشداریکردنی نوێ"
+
+msgid "user.subscriptions.purchase"
+msgstr "کڕین"
+
+msgid "user.subscriptions.renew"
+msgstr "نوێکردنەوە"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "بەشداریکردنی دەزگاکان"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "بەشداریکردنی کەسی"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "ناساندن"
+
+msgid "user.subscriptions.status"
+msgstr "حاڵەت"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "حاڵەتی بەشداریکردنەکان"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "بەشداریکردنەکانم"
+
+msgid "user.register.authorDescription"
+msgstr "تۆ دەتوانی فایلەکانت بۆ گۆڤارەکە بنێریت."
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "ناسێنەری تابلۆی گشتی بەردەستە."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"ئیمەیڵی ئاگادارکردنەوە نانێردرێت هەتا فایلەکە بۆ وردبینی و بڕیاری سەرنوسەر و "
+"پەڕەی هەڵسەنگاندن نەنێردرێت."
+
+msgid "reviewer.article.enterReviewA"
+msgstr "کلیک لەسەر ئەم ئایکۆنە بکە بۆ نوسینی هەڵسەنگاندنەکەت."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "لەسەر ناوی فایلەکان کلیک بکە بۆ بینین و دابەزاندنیان."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} یان {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} یان{$register} بۆ پێشکەشکردنی توێژینەو."
+
+msgid "about.onlineSubmissions.register"
+msgstr "خۆتۆمارکردن"
+
+msgid "about.onlineSubmissions.login"
+msgstr "داخلبون"
+
+msgid "about.submissions"
+msgstr "پێشکەشکردنەکان"
+
+msgid "about.sectionPolicies"
+msgstr "سیاسەتەکانی ئەم بەشە"
+
+msgid "about.focusAndScope"
+msgstr "سەرنج و بوواری کارکردن"
+
+msgid "log.editor.archived"
+msgstr "ئەم پێشکەشکردنە {$submissionId} ئەرشیف کرا."
+
+msgid "log.editor.editorFile"
+msgstr "وەشانی سەرنوسەر بۆ ئەم پێشکەشکردنە بار کرا."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "فایلی وردبینی بنەڕەتی هەڵبژێردرا."
+
+msgid "log.review.reviewerFile"
+msgstr "فایلی هەڵسەنگێنەر بار کرا."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} چاوی بە توێژینەوەی {$submissionId}دا خشاندەوە. ناسنامەی فایلە "
+"نوێیەکە: {$fileId}."
+
+msgid "installer.upgradeApplication"
+msgstr "نوێکردنەوەی سیستەمی گۆڤاری کراوە"
+
+msgid "installer.installApplication"
+msgstr "دابەزاندن و ڕێکخستنی سیستەمی گۆڤاری کراوە"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"سێرڤەرەکەت ڕێگا بە بارکردنی زۆرترین قەبارەی فایلی لەم شێوەیە دەدات:  "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"سێرڤەرەکەت لە ئێستادا ڕێگا بە بارکردنی فایل دەدات: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.ojsUpgrade"
+msgstr "نوێکردنەوەی سیستەمی گۆڤاری کراوە"
+
+msgid "installer.appInstallation"
+msgstr "دانان و ڕێکخستنی سیستەمی گۆڤاری کراوە"
+
+msgid "payment.subscription.expires"
+msgstr "بەسەر چووە"
+
+msgid "payment.subscription.renew"
+msgstr "نوێکردنەوەی بەشداریکردن"
+
+msgid "payment.subscription.purchase"
+msgstr "بەشدار ببە"
+
+msgid "payment.membership.ends"
+msgstr "کۆتایی هات"
+
+msgid "payment.membership.renewMembership"
+msgstr "نوێکردنەوەی بەشداریکردنی کەسی"
+
+msgid "payment.membership.buyMembership"
+msgstr "کڕینی بەشداریکردنی تاکە کەسی"
+
+msgid "payment.publication.publicationPaid"
+msgstr "پارەی بڵاکردنەوە درا"
+
+msgid "catalog.sortBy"
+msgstr "ڕیزکردنی توێژینەوەکان"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} هەڵسەنگاندنی بۆ {$submissionId} کردووە."
+
+msgid "navigation.subscriptions"
+msgstr "بەشداریکردنەکان"
+
+msgid "editor.issues.futureIssues"
+msgstr "ژمارەکانی داهاتو"
+
+msgid "editor.issues.backIssues"
+msgstr "ژمارەکانی پێشتر"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "ناوەرۆکی \"{$journalName}\""
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>قبوڵکردنی ئەم تابلۆیە لا ببە.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>ئەم تابلۆیە بۆ بڵاوکردنەوە قبوڵ بکە.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "قبوڵکردنی تابلۆ"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "چاوەڕێی قبوڵ کردنە"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "قبوڵ کرا"
+
+msgid "article.view.interstitial"
+msgstr "تکایە توێژینەوەیەک دیاری بکە بۆ ئەوەی داونلۆدی بکەیت."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "گۆڤارەکانی دیکە بشارەوە"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "خۆت لەگەڵ گۆڤاری دیکە تۆمار بکە"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "چاوەڕێی قبوڵ کردنە."
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"ئەم توێژینەوەیە لە چاوەڕوانیی قبوڵکردن دایە پێش ئەوەی لە ژمارەی گۆڤاردا "
+"بەدیار بکەوێت."
+
+msgid "editor.navigation.issues"
+msgstr "ژمارەکان"
+
+msgid "grid.action.createContext"
+msgstr "دروستکردنی گۆڤارێکی نوێ"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "وردبینی بەردەست نییە یان داوا نەکراوە!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "ئەم ژمارەیە بەردەست نییە!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "تۆ دەتەوێت توێژینەوەیەک بەدەست بخەیت کە بەشێک نییە لەم بەشە."
+
+msgid "user.authorization.noContext"
+msgstr "هیچ گۆڤارێک لەم سیاقە!"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "هەڵبژاردنی شێوازی ڕیزکردنی توێژینەوەکان."
+
+msgid "about.editorialPolicies"
+msgstr "سیاسەتەکانی گۆڤار"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>تێبینی!</h4>\n"
+"<p>سیستەمەکە ناتوانێت بە شێوەی تۆماتیکی فایلی ڕێکخستنەکان بگۆڕێت. بۆ گۆڕینی "
+"ڕێکخستنەکان ئێرە بکەوە<tt>config.inc.php</tt>لەم ڕێگەیەوە دەتوانیت بەرنامەی "
+"تایبەت بۆ گۆڕانکاری بەکار بهێنیت لەم خانەیەی خوارەوە</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>دیاریکردنی سەرچاوەیەکی دیکە جگە لە سیستەمی گۆڤاری کراوە ئەم کاریگەرییەی "
+"دەبێت:</p>\n"
+"<ul>\n"
+"\t<li>ئەگەر بەکارهێنەر هەوڵی تۆمارکردنی ئەژمارێک بە ناوێکی بەردەست بدات، جگە "
+"لە ئەژمارەکانی سیستەمی گۆڤاری کراوە، ڕێگەی پێ دەدرێت بە وشەی نهێنیی "
+"تایبەتەوە</li>\n"
+"</ul>"
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"وەشانێکی نوێی سیستەمی گۆڤاری کراوە بەردەستە! تۆ ئێستا وەشانی "
+"{$currentVersion} بەکار دەهێنیت. نوێترین وەشانی سیستەمی گۆڤاری کراوە "
+"{$latestVersion}یە. تکایە پەیوەندی بە بەڕێوەبەری پەڕەکەتەوە بکە "
+"({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\""
+">{$siteAdminEmail}</a>) بۆ ئاگادارکردنەوەیان لە دواهەمین وەشان.دەتوانیت "
+"لێرەوە زانیاریی زیاتر بخوێنیتەوە<a href=\"http://pkp.sfu.ca/ojs_download\" "
+"target=\"_new\">here</a>."
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>جێگیرکردنی سیستەمی گۆڤاری کراوە بە سەرکەوتویی تەواو بو.</p>\n"
+"<p>بۆ کارپێکردنی سیستەمەکە، <a href=\"{$loginUrl}\">داخل ببە</a> بە "
+"بەکارهێنانی هەژمار و وشەی تێپەڕ لە پەڕەی پێشتر.</p>\n"
+"<p>هەروەها دەتوانیت ببیت بە ئەندامی سیستەمی گۆڤاری کراوە:</p>\n"
+"<ol>\n"
+"\t<li>خوێندنەوە<a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">پڕۆژەی "
+"زانیاری گشتی</a> و بەدواداچون <a href=\"http://pkp.sfu.ca/blog/feed\" target="
+"\"_new\">هەواڵ </a> بۆ زانیاری و نوێکردنەوەکان.</li>\n"
+"\t<li>سەردانی ئەم لینکە بکە <a href=\"http://forum.pkp.sfu.ca\" target=\""
+"_new\">گروپی هاوکاری</a> ئەگەر هەر پرسیارێکت هەبو.</li>\n"
+"</ol>"
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"تەواوی pathname  داخل بکە بۆ سەر فایلی بارکراوی پارێزراو. ئەمە دەبێت لەسەر "
+"تۆڕ بەردەست بێت.<strong>لطفاً، تحقق من وجود حافظة الملفات هذه وأنها قابلة "
+"للتعديل قبل التنصيب.</strong> مسارات نظام التشغيل Windows تتطلب استعمال "
+"forward slashes، مثلاً: \"C:/myjournal/files\"."
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"بۆ دەستگەیشتن بە  Unicode (UTF-8)، دەستنیشان بکە UTF-8 لجميع إعدادات ترميز "
+"الحروف. لاحظ أن هذا الدعم يتطلب حالياً أن تكون قواعد البيانات بخوادم MySQL >="
+" 4.1.1 أو PostgreSQL >= 7.1 . فضلاً عن كون الدعم الكامل لترميز Unicode يتطلب "
+"PHP >= 4.3.0 مجتمعاً مع دعم مكتبة <a href=\"http://www.php.net/mbstring\" "
+"target=\"_blank\">mbstring</a> (ممكنة إفتراضياً في معظم تنصيبات PHP الحالية)"
+". قد تواجه صعوبات عند استعمال مجموعات الحروف الإضافية فيما لو كان الملقم "
+"الذي تستعمله لا يلبي تلك المتطلبات.\n"
+"<br /><br />\n"
+"ملقمك حالياً يدعم mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>وەشانی سیستەمی گۆڤاری کراوە {$version}</h4>\n"
+"\n"
+"<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة "
+"العامة. قبل المتابعة، لطفاً إقرأ <a href=\"{$baseUrl}/docs/README.md\">ملف "
+"إقرأني</a> و <a href=\"{$baseUrl}/docs/UPGRADE.md\">ملف الترقية</a>المضمنين "
+"في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، "
+"لطفاً اتبع الرابط <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">موقع "
+"PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام "
+"المجلات المفتوحة، أنظر <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">"
+"منتدى الدعم</a> أو زر موقع PKP's online <a href=\"https://github.com/pkp/pkp-"
+"lib#issues\" target=\"_blank\">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى "
+"الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة "
+"فريق العمل على <a href=\"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>.</p>\n"
+"<p>إنه من <strong>الموصى به بشدة</strong> أن تقوم بالخزن الإحتياطي لقاعدة "
+"بيانات النظام وحافظة ملفات التحميل وحافظة ملفات تنصيب النظام قبل المتابعة "
+"بعملية الترقية.</p>\n"
+"<p>إن كنت تقوم بالتشغيل عبر <a href=\"http://www.php.net/features.safe-mode\""
+" target=\"_blank\">PHP Safe Mode</a>، لطفاً، تأكد من أن max_execution_time "
+"directive المتوضع في الملف التعريفي php.ini مضبوط على high limit. إن كان "
+"الأمر غير ذلك (فإن مؤشرApache's \"Timeout\") سيصل حده الأقصى، وعملية الترقية "
+"ستتم مقاطعتها، ولذلك ستتطلب التدخل اليدوي.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>هەنگاوەکانی پێش دابەزاندن و ڕێکخستن</h4>\n"
+"\n"
+"\n"
+"<p>1.ئەو فایلانەی خوارەوە دەبێت بە جۆرێک بن کە دەستکاری بکرێن:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> دەستکاری دەکرێت (بژاردە): "
+"{$writable_config}</li>\n"
+"\t<li><tt>public/</tt> دەستکاری دەکرێت: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> دەستکاری دەکرێت: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> دەستکاری دەکریت: "
+"{$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> دەستکاری دەکرێت: "
+"{$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> دەستکاری دەکرێت: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. ئەو فایلانەی بار دەکرین دەبێت دەستکاری بکڕین (\"ڕێکخستنی فایلەکان\" لە "
+"خوارەوە ببینە).</p>"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "ئەم ڕێچکەیەی گۆڤار \"{$journalPath}\"بەردەست نییە."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "ئەم گەڕانە ڕێگە بە دوبارە پێنوێنیکردن نادات بە گوێرەی گۆڤار."
+
+msgid "debug.notes.currencyListLoad"
+msgstr "لیستی دراوەکان  \"{$filename}\" لە XML"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"دەستپێڕاگەیشتن ڕێگە پێ نەدراوە! تۆ وەک وردبینی ئەم توێژینەوەیە دەستنیشان "
+"نەکراویت."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "تابلۆکانی لە چاوەڕوانیکردن دان."
+
+msgid "notification.type.assignProductionUser"
+msgstr "بەکارهێنەرێک بۆ دروستکردنی تابلۆکان ئەرکدار بکە لە ڕێگەی ئەم لینکەوە."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr ""
+"ڕەشنوسی توێژینەوەیەکی نوێ پێشکەش کرا و دەبێت سەرنوسەرێکی بۆ دیاری بکرێت."
+
+msgid "notification.savedIssueMetadata"
+msgstr "زانیارییە ناسێنەرەکان بۆ بڵاوکردنەوەی ئەم ژمارەیە خەزن کران."
+
+msgid "notification.type.public"
+msgstr "ڕاگەیاندنە گشتییەکان"
+
+msgid "notification.type.userComment"
+msgstr "خوێنەرێک تێچێنێکی دەربارەی \"{$title}\" نوسیوە"
+
+msgid "notification.type.submissions"
+msgstr "ڕوداوەکانی پێشکەشکردن"
+
+msgid "notification.type.submissionComment"
+msgstr "سەرنوسەر تێچێنێکی دەربارەی \"{$title}.\" نوسیوە"
+
+msgid "notification.type.site"
+msgstr "ڕوداوەکانی پەڕە"
+
+msgid "notification.type.reviewing"
+msgstr "ڕوداوەکانی هەڵسەنگاندن"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "فۆڕمی هەڵسەنگاندنی \"{$title}.\" پێشکەش کرا"
+
+msgid "notification.type.newAnnouncement"
+msgstr "ڕاگەیاندنێکی نوێ دروست کرا."
+
+msgid "notification.type.issuePublished"
+msgstr "گۆڤار ژمارەیەکی نوێی بڵاو کردەوە."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "تێچێنێک بۆ سەرنوسەر دەربارەی بڕیاردان لە \"{$title}.\" جێ هێڵدراوە"
+
+msgid "notification.type.galleyModified"
+msgstr "تابلۆی \"{$title}.\" نوێ کرایەوە"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "توێژینەوەیەکی نوێ بە ناوی \"{$title}\"، پێشکەش کرا."
+
+msgid "notification.type.editing"
+msgstr "گۆڕانەکان"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "توێژینەوەی هەڵسەنگێندراو"
+
+msgid "log.imported"
+msgstr "{$userName} توێژینەوەی {$submissionId} هاوردە کرد."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName}پێشکەش کرا {$submissionId} بۆ."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} دیاری کرا {$proofreaderName} بۆ هەڵسەنگاندنیی زمانیی "
+"{$submissionId}."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} وەک سەرنوسەری توێژینەوەی {$submissionId} دیاری کرا."
+
+msgid "log.editor.restored"
+msgstr "توێژینەوەی {$submissionId} لە ڕیزبەندی داندرا."
+
+msgid "log.editor.metadataModified"
+msgstr "زانیارییە ناسێنەرەکانی  {$editorName} گۆڕدران."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} کاری نەخشەسازیی {$submissionId} تەواو کرد."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} لە نەخشەسازیکردنی {$submissionId} بەخشرا."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} وەک نەخشازی توێژینەوەی {$submissionId} ئەرکدار کرا."
+
+msgid "log.copyedit.authorFile"
+msgstr "وەشانی وردبینیکراو لە لایەن توێژەرەوە بار کرا."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "نوسخەی وردبینیکراو بار کرا."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} دیاری کرا بۆ وردبینیکردن لە {$submissionId}."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} وردبینی سەرەتایی تەواو کرد بۆ توێژینەوەی {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} وردبینی کۆتایی تەواو کرد بۆ توێژینەوەی {$submissionId}."
+
+msgid "log.copyedit.initiate"
+msgstr "وردبینی یان پێشکەشکردنی {$submissionId} لە لایەن{$copyeditorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"پێشنیازی سەرنوسەر: ({$decision}) بۆ {$submissionId} تۆمار کردا لە لایەن "
+"{$editorName}."
+
+msgid "log.editor.decision"
+msgstr ""
+"ئەم بڕیارە تۆمار کرا: ({$decision}) بۆ هەڵسەنگاندنی{$submissionId} لە لایەن "
+"{$editorName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"سەرنوسەر{$userName}،فایلەکەی بار کرد لە خولی {$round} بۆ هەڵسەنگاندنی "
+"{$submissionId} لە جیاتی {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName}ڕەزامەندی دەربڕی لە خولی {$round} بۆ هەڵسەنگاندنی {$submissionId}"
+"  لە جیاتی {$reviewerName}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName}بەخشرا لە خولی {$round} بۆ هەڵسەنگاندنی {$submissionId}  لە جیاتی "
+"{$reviewerName}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"هەڵسەنگێنەر{$reviewerName} خولی {$round} پەسەند کرد بۆ هەڵسەنگاندنی "
+"{$submissionId}."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"هەڵسەنگێنەر{$reviewerName}بەخشرا لە خولی {$round} بۆ هەڵسەنگاندنی "
+"{$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "توێژینەوەی {$submissionId} دوبارە نێردرایەوە بۆ هەڵسەنگاندن."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"پێشنیاز بۆ خولی {$round} هەڵسەنگاندنی {$submissionId} لە لایەن {$editorName}،"
+" لە جیاتی {$reviewerName}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"پێشنیاز بۆ خولی {$round}هەڵسەنگاندنی {$submissionId} لە لایەن "
+"{$reviewerName}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"دوا وادە بۆ خولی {$round} هەڵسەنگاندنی {$submissionId} لە لایەن "
+"{$reviewerName}ئەمەیە: {$dueDate}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} هەڵسەنگێندرا لە خولی هەڵسەنگاندنی {$round} هەڵسەنگاندنی "
+"{$submissionId}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"خولی هەڵسەنگاندنی {$round} لە لایەن {$reviewerName} بۆ "
+"توێژینەوەی{$submissionId} دەستی پێ کرد."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName}ئەرکەکەی لێ وەرگیرایەوە بۆ هەڵسەنگاندنی  {$submissionId} لە "
+"چوارچێوەی خولی {$round} هەڵسەنگاندندا."
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"وەشانی نوێ لە سیستەمی گۆڤاری کراوەدا کەوتە کار! تۆ لە ئێستادا وەشانی  "
+"{$currentVersion} بەکار دەهێنیت. ئەمە {$latestVersion} دوا وەشانی سیستەمی "
+"گۆڤاری کراوەیە. تکایە سەردانی ئەم لینکە بکە  <a href=\"http://pkp.sfu.ca/"
+"ojs_download\" target=\"_new\">ئەم پەڕەیە</a> بۆ تۆمارکردنی نوێترین وەشان و "
+"دۆزینەوەی ڕێنماییەکانی نوێکردنەوەی وەشانەکەت."
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>نوێکردنەوەی وەشانی سیستەمی گۆڤاری کراوە {$version} بە سەرکەوتویی تەواو "
+"بو.</p>\n"
+"<p>لە بیری مەکە کە ڕێکخستنە نوێیەکە لە \"installed\" کارا بکەیت "
+"config.inc.php لە <em>بۆ </em>.</p>\n"
+"<p>ئەگەر تۆ تۆمار نیت و دەتەوێت هەواڵ و نوێکردنەوەکانت بەدەست بگات <strong>"
+"تکایە لێرە خۆت تۆمار بکە <a href=\"http://pkp.sfu.ca/ojs/register\" target=\""
+"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> ئەگەر پرسیارت هەیە کلیک "
+"لێرە بکە <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">گروپی "
+"هاوکاری</a>.</p>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>گرنگ!</h4>\n"
+"<p>بەرنامەی دابەزاندندەکە ناتوانێت گۆڕانکاری لە فایلەکان بە تۆماتیکی بکات، "
+"پێش کارپێکردنی سیستەمەکە ئەم سیستەمە کارا بکە، تکایە ئەمە بکەوە "
+"<tt>config.inc.php</tt> بە هەر بەرنامەیەکی تایبەت بە گۆڕینی تێکست دەتوانیت "
+"گۆڕانکاری لە تێکستەکاندا بکەیت.</p>"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>ئاگادارکردنەوە:</strong> ئەگەر دابەزاندنی ڕێکخستنی داتابەیسەکان "
+"شکستی هێنا، تۆ دەبێت بیسڕیتەوە و دوبارە دایبەزێنیتەوە."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"سیستەمی گۆڤاری کراوە دەخوازێت کە دەستی بە داتابەیسی SQL بگات بۆ ئەوەی "
+"زانیارییەکان خەزن بکرێن. تکایە، سەیری ڕێنماییەکانی سیستەمەکە دەربارەی "
+"داتابەیسە گونجاوەکان بکە. لە خوارەوە ڕێکخستنی گرێدانی سیستەمەکە بە "
+"داتابەیسەکان بەردەستە."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"دەتوانیت زمانێک دیاری بکەیت و پاڵپشتی بکەیت. ئەم زمانانە بەردەست دەبن بۆ "
+"ئەوەی لە لایەن گۆڤارە میوانەکانەوە بەکار بهێندرێن. زمانە بەردەستەکان دەکرێت "
+"لە هەر کاتێکدا بۆ سیستەمەکە داببەزێندرێن."
+
+msgid "installer.localeInstructions"
+msgstr ""
+"زمانی سەرەکی بۆ بەکارهێنانی سیستەمەکە. تکایە ڕاوێژ بە بەڕێوەبەرانی سیستەمی "
+"گۆڤاری کراوە بکە بۆ زیادکردنی زمانێک کە لە لیستەکەدا نییە و تۆ دەتەوێت "
+"پاڵپشتی بکەیت."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS وەشانی{$version}</h4>\n"
+"\n"
+"<p>سوپاس بۆ دابەزاندنی پڕۆژەی زانیاریی گشتی<strong>سیستەمەکانی گۆڤاری "
+"کراوە</strong>. تکایە ئەمە بخوێنەوە پێش چونەپێشی زیاتر <a href=\"{$baseUrl}/"
+"docs/README.md\">README</a> فایلەکە بە پڕۆگرمێک هاوپێچ کراوە. بۆ زانیاریی "
+"زیاتر دەربارەی پڕۆژەی زانیاریی گشتی و سیستەمی گۆڤاری کراوە سەردانی ئەم لینکە "
+"بکە <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>.ئەگەر "
+"کێشەیەک لە سیستەمەکەدا هەیە، تکایە لێرەوە ئاگادارمان بکەوە <a href=\""
+"http://forum.pkp.sfu.ca\" target=\"_blank\">گروپی یارمەتیدەر</a> یان سەردانی "
+"پڕۆژەی زانیاریی گشتی بکە <a href=\"https://github.com/pkp/pkp-lib#issues\" "
+"target=\"_blank\">سیستەمی ئاگادارکردنەوە لە کێشەکان</a>. هەرچەندە، وەرگرتنی "
+"یارمەتی لە گروپی یارمەتیدەرەوە گونجاوترە، بەڵام تۆ دەتوانی لە ڕێگای ئەم "
+"ئیمەیڵەشەوە لەگەڵمان لە پەیوەندیدا بیت <a href=\"mailto:pkp.contact@gmail."
+"com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>نوێ کردنەوە</h4>\n"
+"\n"
+"<p>ئەگەر تۆ وەشانی سیستەمی گۆڤاری کراوە نوێ دەکەیتەوە <a href=\"{$upgradeUrl}"
+"\">click here</a> to proceed.</p>\n"
+"\n"
+"<h4>مەرجەکانی سیستەمەکە</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; ئەگەر تۆ PHP بەکار دەهێنیت "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >="
+" 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Operating system: هەر سیستەمێک کە سۆفتوێری سەرەوە لەخۆ دەگرێت، بە "
+"ئەمانەشەوە؛ <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <"
+"a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\""
+"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\""
+"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\""
+"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>پڕۆژەی زانیاریی گشتی تێستی پێشوەختەی نییە، بۆیە لەوانەیە هەڵە لە دواتردا "
+"بدۆزرێتەوە</p>\n"
+"\n"
+"<p>گۆڕانکارییەکان دەکرێت دوای دابەزاندنی فایلی ڕێکخستن بکرێن "
+"<tt>config.inc.php</tt>بەگوێرەی فەرهەنگی سیستەمی گۆڤاری کراوە</p>\n"
+"\n"
+"<h4>سیستەمەکانی داتابەیس کە گونجاون</h4>\n"
+"\n"
+"<p>سیستەمی گۆڤاری کراوە تەنیا لەسەر MySQL و PostgreSQL تێست کراوە، هەرچەندە "
+"سیستەمی داتابەیسەکانی دیکە پاڵپشتن بە <a href=\"http://adodb.sourceforge.net/"
+"\" target=\"_blank\">ADOdb</a> کار دەکات لە (بە تەواوی یان بەش بەش). ڕاپۆرتی "
+"تەواو یان کۆدی ئەڵتەرناتیڤی DBMSs دەکرێت بۆ سیستەمی گۆڤاری کراوە "
+"بنێردرێن.</p>\n"
+
+msgid "payment.publication.payPublication"
+msgstr "پارەی بڵاوکردنەوە بدە"
+
+msgid "payment.submission.paySubmission"
+msgstr "پارەی پێشکەشکردن بدە"
+
+msgid "payment.donation.makeDonation"
+msgstr "پارە ببەخشە"
+
+msgid "payment.notFound"
+msgstr ""
+"پارەدان داوا کراوە، بەڵام داواکردنەکە بەسەر چووە. پەیوەندی بە سەرنوسەرەوە "
+"بکە بۆ زانیاری زیاتر."
+
+msgid "payment.requestPublicationFee"
+msgstr "داوای پارەدانی بڵاوکردنەوە بکە ({$feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "بەخشینەکان"
+
+msgid "payment.type.subscription"
+msgstr "نرخی بەشداریکردن"
+
+msgid "payment.type.purchaseIssue"
+msgstr "پارەدانی نرخی ژمارەیەکی گۆڤار"
+
+msgid "payment.type.purchaseArticle"
+msgstr "پارەدانی نرخی توێژینەوە"
+
+msgid "payment.type.membership"
+msgstr "نرخی ئەندامبونی کەسی"
+
+msgid "payment.type.fastTrack"
+msgstr "دانی پارەی هەڵسەنگاندن بە شێوەی خێرا"
+
+msgid "payment.type.publication.required"
+msgstr "کاتی پێدانی پارەی بلاوکردنەوەیە."
+
+msgid "payment.type.publication"
+msgstr "پارەدانی بڵاوکردنەوە"
+
+msgid "payment.type.submission"
+msgstr "پارەدانی پێشکەشکردن"
+
+msgid "payment.authorFees"
+msgstr "پارەدانی توێژەر"
+
+msgid "payment.paymentSent"
+msgstr "پارەکە پێشتر دراوە"
+
+msgid "payment.paymentReceived"
+msgstr "پارەکە گەیشت"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"ئەم بۆکسە دابگرە ئەگەر دەتەوێت پرۆسەکە تەواو بکەیت و تۆ پارەکەت داوە. "
+"پێشکەشکردنەکەت هەڵسەنگاندنی بۆ ناکرێت هەتا پارە نەدەیت. کلیک لەسەر (ئێستا "
+"پارە بدە) بکە بۆ بینینی ڕێنماییەکانی پارەدان."
+
+msgid "payment.alreadyPaid"
+msgstr "پارەکە دراوە"
+
+msgid "payment.waive"
+msgstr "پاشگەزبونەوە"
+
+msgid "payment.payNow"
+msgstr "ئێستا پارە بدە"
+
+msgid "payment.paid"
+msgstr "پارەکە دراوە"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "بۆ ئەوەی پارە ببەخشیت، دەبێت داخیلی هەژمارەکەت بوبیت."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"بەشداریکردن یان داواکردنی توێژینەوە پێویستی بە دەستپێڕاگەیشتن هەیە. بۆ "
+"دڵنیاکردنەوەی بەشداریکردنەکەت، داواکردنەکانی یان ژمارەی پێشتری گۆڤار ببینە و "
+"داخلی هەژمارەکەت ببە."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"بەشداریکردن یان داواکردنی توێژینەوە پێویستی بە دەستپێڕاگەیشتن هەیە. بۆ "
+"دڵنیاکردنەوەی بەشداریکردنەکەت، داواکردنەکانی یان توێژینەوەکانی پێشترت ببینە "
+"و داخلی هەژمارەکەت ببە."
+
+msgid "payment.loginRequired"
+msgstr "دەبێت داخیلی هەژمارەکەت بوبیت بۆ پارەدان."
+
+msgid "donations.thankYouMessage"
+msgstr "سوپاس بۆ بەشداریتان. هاوکاریتان جێگای ڕێز و پێزانینە."
+
+msgid "donations.thankYou"
+msgstr "سوپاس بۆ هاوکاریتان"
+
+msgid "help.goToEditPage"
+msgstr "{$sectionTitle} بگۆڕە"
+
+msgid "help.searchReturnResults"
+msgstr "گەڕانەوە بۆ ئەنجامەکانی گەڕانەکە"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "یارمەتیی OJS"
+
+msgid "help.ojsHelp"
+msgstr "یارمەتیی سیستەمی گۆڤاری کراوە"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"ئەم پەڕەیە سیستەمی گۆڤاری کراوە بەکار دەهێنێت {$ojsVersion}ئەمە سیستەمێکی "
+"کراوەیە بۆ بڵاوکردنەوە و گەشەی پێ دراوە لە لایەن <a href=\"http://pkp.sfu.ca/"
+"\">پڕۆژەی زانیاریی گشتی</a> بە ڕێگەپێدانی GNU General Public License."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"ئەم گۆڤارە سیستەمی گۆڤاری کراوە پەیڕەو دەکات {$ojsVersion}،کە ئەمە "
+"توێژینەوەکان بە خۆڕایی و بە سیستەمی کراوە دەخاتە بەردەست <a href=\""
+"http://pkp.sfu.ca/\">پڕۆژەی زانیاری گشتی</a> بە ڕێگەپێدانی GNU General "
+"Public License."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "پرۆسەی هەڵسەنگاندن و بڵاوکردنەوەی سیستەمی گۆڤاری کراوە"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "دەربارەی سیستەمی ئەم  بڵاوکردنەوەیە"
+
+msgid "about.memberships"
+msgstr "ئەندامبون"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "جۆرەکانی بەشداریکردن"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "نرخ"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "ماوە"
+
+msgid "about.subscriptionTypes.format"
+msgstr "ڕێکخستن"
+
+msgid "about.subscriptionTypes.name"
+msgstr "ناو"
+
+msgid "about.subscriptionsContact"
+msgstr "ناوەرۆکی بەشداریکردنەکان"
+
+msgid "about.subscriptions.institutional"
+msgstr "بەشداریکردنی دەزگاکان"
+
+msgid "about.subscriptions.individual"
+msgstr "بەشداریکردنی کەسی"
+
+msgid "about.subscriptions"
+msgstr "بەشداریکردن"
+
+msgid "about.archiving"
+msgstr "ئەرشیفکردن"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "ماوەی دوای بڵاوکردنەوەکە بە مانگ."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "ناوەرۆکی ئەم گۆڤارە بە سیستەمی کراوە بەردەست دەبێت"
+
+msgid "about.delayedOpenAccess"
+msgstr "دەستپێڕاگەیشتنی کراوەی دواخراو"
+
+msgid "about.openAccessPolicy"
+msgstr "سیاسەتی دەستپێڕاگەیشتنی کراوە"
+
+msgid "about.publicationFrequency"
+msgstr "ڕێژەی بڵاوکردنەوە"
+
+msgid "about.peerReviewProcess"
+msgstr "پرۆسەی هەڵسەنگاندنی نهێنی"
+
+msgid "about.authorFeesMessage"
+msgstr "ئەم گۆڤارە ئەم بڕە پارەیە لە توێژەران وەردەگرێت."
+
+msgid "about.authorFees"
+msgstr "پارەدانی توێژەر"
+
+msgid "about.privacyStatement"
+msgstr "دەستەواژەی تایبەتمەندێتی"
+
+msgid "about.copyrightNotice"
+msgstr "ڕێنماییەکانی مافی خاوەندارێتی"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"وەک بەشێک لە پرۆسەی پێشکەشکردن، توێژەران دەبێت وردبینی لە "
+"پێشکەشکردنەکانیاندا بکەن. چونکە پێشکەشکردنەکە لەوانەیە بۆ توێژەر "
+"بگەڕێندرێتەوە لە ئەگەری کەموکوڕی و جێبەجێنەکردنی ڕێنماییەکان."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "داواکارییەکان بۆ پێشکەشکردن"
+
+msgid "about.authorGuidelines"
+msgstr "ڕێنمایی بۆ توێژەر"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "پیشاندانی توێژینەوە پێشکەشکراوەکانت"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "پێشکەشکردنی توێژینەوەی نوێ"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "توێژینەوەیەکی نوێ پێشکەش بکە <a href=\"{$url}\">{$name}</a>."
+
+msgid "article.nonpdf.note"
+msgstr ""
+"ئەو فایلەی تۆ دیاریت کردووە بە شێوەیەکی تۆماتیکی دادەبەزێت. ئەگەر دانەبەزی، "
+"کلیک لەم لینکەی خوارەوە بکە. ئاگاداری ئەوە بە کە کردنەوەی فایلەکە لەوانەیە "
+"پێویستی بە پڕۆگرامی تایبەت ببێت.<br /><br /> ئەگەر بە شێوەیەکی تۆماتیکی "
+"دانەبەزی،<a href=\"{$url}\"> کلیک لێرە بکە؛</a>."
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>فایلی PDF  دەبێت لێرە داببەزێندرێت (بۆ نمونە؛ وەشانی نوێی خوێنەری PDF  <a "
+"href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"ڕێنماییەکانی گەڕان<ul>\n"
+"<li>گەڕانەکان بۆ کەپیتەڵ و سمۆڵ هەستیارن</li>\n"
+"<li>وشە دوبارەکان پشتگوێ دەخرێن</li>\n"
+"<li>تەنیا ئەو توێژینەوانەی کە <em>all</em>یان تێدایە دەدۆزرێنەوە (i.e., "
+"<em>AND</em> is implied)</li>\n"
+"<li>وشە دوبارەکان لەگەڵ <em>OR</em> بۆ دۆزینەوەی ئەو جۆرە وشانە، بۆ نمونە؛ "
+"<em>education OR research</em></li>\n"
+"<li>کەوانە بەکار بهێنە بۆ گەڕانی وردتر بۆ نمونە؛ <em>archive ((توێژینەوەی "
+"گۆڤار یان کۆنفرانس) ئەمانە نا )</em></li>\n"
+"<li>بۆ دەستەواژەی ورد بگەڕێ بە خستنە ناو دو کەوانەوە بەم جۆرە؛, <em>\""
+"بڵاوکراوەکانی سیستەمی کراوە\"</em></li>\n"
+"<li>ئەو وشانە بخە دەرەوەی گەڕان بەم شێوەیە؛  <strong>-</strong> or "
+"<em>NOT</em>; e.g. <em>online -politics</em> یان<em>online NOT "
+"politics</em></li>\n"
+"<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of "
+"characters; e.g., <em>soci* morality</em> would match documents containing \""
+"sociological\" or \"societal\"</li>\n"
+"</ul>"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "تکایە مەودای IP ی دروست داخل بکە."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"ئەگەر مەودای IP  لێرە لێ بدرێت، دۆمەین ئارەزومەندانەیە.<br />بەهای بەردەست و "
+"ناونیشانی IP  (e.g. 142.58.103.1), مەودای IP  (e.g. 142.58.103.1 - "
+"142.58.103.4), مەودای IP  لەگەڵ wildcard '*' (e.g. 142.58.*.*), و مەودای IP  "
+"لەگەڵ CIDR (e.g. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "مەودای IP"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "ئەم بەشداریکردنە پێویستی بە دۆمەین و مەودای IP یە بۆ ئەوەی قبوڵ بکرێت."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"ئەگەر دۆمەینێک لێرە داخل بکرێت، مەودای IP ئارەزومەندانەیە. <br />بەهای دروست "
+"ناوی دۆمەینەکانە (بۆ نمونە lib.sfu.ca)."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "زانیاریی ئەندامبون بۆ دیاریکردنی جۆری بەشداریکردن داواکراوە."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "ئەم جۆرەی بەشداریکردن پێویستی بە زانیاریی ئەندامبونە."
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr ""
+"پارەدانی ئۆنلاین بەردەستە بەڵام لەوانەیە هەڵوەشابێتەوە یان تەواو نەکرابێت"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "پارەدانی دەستی بەردەستە بەڵام هەتا ئێستا نەگەیشتووە"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "بەشداریکردن دەبێت هەڵسەنگاندنی بۆ بکرێت پێش ئەوەی چالاک بکرێت"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "زانیارییە گشتییەکان پێویستن پێش ئەوەی بەشداریکردنەکە چالاک بکرێت"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"بەشداریکردنە چالاک و بەسەرچووەکان لەگەڵ ڕۆژی بەسەرچونیان لە خوارەوە پیشان "
+"دراون. ئەم زانیارییانەی خوارەوە لەوانەیە هاوپێچی هەر بەشداریکردنێک بکرێن."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "تۆ دەبێت بە دەستەواژەکانی تایبەتێتی ئەم پەڕەیە ڕازی ببیت."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"تۆ دەبێت بە بنەماکانی تایبەتمەندێتی هەر گۆڤارێک ڕازی بیت کە خۆتی تێدا تۆمار "
+"دەکەیت."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"بەڵێ، من ڕازیم بە کۆکردنەوەی داتاکانم بەگوێرەی سیستەمی ئەم گۆڤارە<a href=\""
+"{$privacyUrl}\" target=\"_blank\"> دەستەواژەی تایبەتێتی</a>."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"بەڵێ، من دەمەوێت لە بڵاوکراوە نوێیەکان ئاگادار بکرێمەوە بۆ هەمو ئەو "
+"گۆڤارانەی کە تێیاندا تۆمار کراوم."
+
+msgid "user.register.reviewerInterests"
+msgstr "بوارەکانی هەڵسەنگاندن دیاری بکە (پسپۆڕی ورد و میتۆدی توێژینەوە):"
+
+msgid "user.register.reviewerDescription"
+msgstr "ئارەزوی ئەنجامدانی هەڵسەنگاندنی نهێنی بۆ پێشکەشکراوەکانی ئەم پەڕەیە."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "ئارەزوی ئەنجامدانی هەڵسەنگاندنی نهێنی بۆ پێشکەشکراوەکانی ئەم گۆڤارە."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"بە ئیمەیڵ ئاگاداری بنێرە کاتێک ژمارەی گۆڤارەکە بە شێوەی کراوە بەردەست بو."
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"دوای ناردن، نوسخەیەک بنێرە بۆ هەڵسەنگێنەران کە بتواندرێت دەستکاری بکرێت."
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"ئەم تێچێنانە دەکرێت لەگەڵ توێژەردا هاوبەشی پێ بکرێت.<br />\n"
+"(دوای خەزنکردن، تێچێنی زیاتریش دەکرێت زیاد بکرێن)"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"هیچ فایلێک بەردەست نییە (فایلی وردبینکراو وەک فایلی ئامادە بۆ نەخشەسازی بار "
+"بکە پێش ناردنی داواکاری)"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>بۆ پێشکەشکردنی ڕەشنوسی توێژینەوەکەت لەم گۆڤارە، ئەم هەنگاوانە بنێ:</p>\n"
+"<ol>\n"
+"<li>لێرەوە فایلەکەت هەڵبژێرە کە دەتبات بۆ ناو فایلەکانی کۆمپیتەرەکەت و "
+"لەوێوە دەبێت باری بکەیت.</li>\n"
+"<li>ئەو فایلە دیاری بکە کە دەتەوێت پێشکەشی بکەیت.</li>\n"
+"<li>کلیک لەسەر بەشی کردنەوە بکە کە ناوی فایلەکە لەم پەڕەیە دیاری دەکات</li>\n"
+"<li>کلیک لەسەر بارکردن بکە کە فایلەکە لەناو کۆمپیتەرەکەوە بۆ ناو سیستەمەکە "
+"بار دەکات</li>\n"
+"<li>کاتێک ڕەشنوسی توێژینەوەکە بار کرا، کلیک لەسەر خەزنکردن و بەردەوامبون "
+"بکە.</li>\n"
+"</ol>"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"کاتێک تۆ بڕیارەکەت تۆمار کرد، هیچی دیکە ناتوانیت گۆڕانکاری تێدا بکەیت. ئایا "
+"تۆ دڵنیایت کە دەتەوێت بەردەوام بیت؟"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"پێشنیازەکان دیاری بکە و هەڵسەنگاندنەکە پێشکەش بکە بۆ تەواوکردنی پرۆسەکە. تۆ "
+"دەبێت هەڵسەنگاندنەکەت بنوسیت یان بە فایلێک باری بکەیت پێش دیاریکردنی "
+"پێشنیازەکان."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"بەگشتی، تۆ دەتوانیت فایل بۆ سەرنوسەر یان توێژەر یان هەردوکیان بەیەکەوە بار "
+"بکەیت."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"ئەوە دیاری بکە کە ئایا تۆ هاوبەشی و ڕکەبەریت لەگەڵ ئەم توێژینەوەیە هەیە "
+"یاخود نا(see <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"ڕێنماییەکانی هەڵسەنگاندن ڕێنمایی شێوازی هەڵسەنگاندن بە هەڵسەنگێنەران دەدات و "
+"لەوانەیە ڕێنمایی تایبەت بۆ خستنەڕوی هەڵسەنگاندنێکی کاریگەر لەخۆ بگرێت. لە "
+"کاتی هەڵسەنگاندندا هەڵسەنگێنەران دو بژاردەیان هەیە. یەکەمیان: بۆ سەرنوسەر و "
+"توێژەر و دووەمیان بۆ سەرنوسەر. یان وەک ئەڵتەرناتیڤ، بەڕێوەبەری گۆڤار "
+"دەتوانێت فۆڕمی هەڵسەنگاندن دروست بکات. لە هەمو حاڵەتێکدا سەرنوسەر بژاردەی "
+"ئەوەی هەیە کە هەڵسەنگێنەر و توێژەر بەیەکدی بگەیەنێت."
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(ئەگەر دەتەوێت ئەم فایلە بۆ سەرنوسەر بنێریت، لە کۆمپیتەرەکەتدا خەزنی بکە و "
+"دوبارە باری بکەوە)"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"ئاگادارکردنەوەی دوبارەی ئەم هەڵسەنگێنەری زمانییە دوبارە کات بۆ هەڵسەنگاندنی "
+"زمانی تەرخان دەکاتەوە. ئایا تۆ دڵنیایت لەمە؟"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"ئاگادارکردنەوەی دوبارەی ئەم نەخشەسازە دوبارە کات بۆ نەخشەسازی تەرخان "
+"دەکاتەوە. ئایا تۆ دڵنیایت لەمە؟"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"ئاگادارکردنەوەی دوبارەی ئەم توێژەرە دوبارە کات تەرخان دەکاتەوە. ئایا تۆ "
+"دڵنیایت لەمە؟"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"ئاگادارکردنەوەی دوبارەی ئەم وردبینە دوبارە کات بۆ وردبینی تەرخان دەکاتەوە. "
+"ئایا تۆ دڵنیایت لەمە؟"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>دانە دەستنیشانکراوەکان پێویستییان بە دەستکاریکردنی سەرنوسەر هەیە وەک "
+"پیشان دراوە\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">کردارێک لە دەمی وردبینیدا "
+"پێویستە</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">کردارێک لە نەخشەسازیدا "
+"پێویستە</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">کردارێک لە هەڵسەنگاندنی زمانیدا "
+"پێویستە</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>ئەو دانانەی کە دیاری کراون پێویستییان بە دەستکاری سەرنوسەر هەیە بەم "
+"شیوەیەی خوارەوە:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">هەڵسەنگێنەر دیاری کراوە "
+"بەڵام بە ئیمەیڵ ئاگادار نەکراوەتەوە</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">هەمو هەڵسەنگاندنەکان بە تێبینییەوە "
+"گەڕاونەتەوە بەڵام بڕیاری کۆتایی دەربارەی توێژینەوەکە تۆمار نەکراوە</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">توێژەر تێبینیی "
+"هەڵسەنگێنەرانی چاک کردووە و فایلە نوێیەکەی بار کردووە</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">هەڵسەنگێنەر لە کاتی "
+"دیاریکراودا هەڵسەنگاندنەکەی قبوڵ نەکردووە</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">هەڵسەنگێنەر لە کاتی "
+"دیاریکراودا هەڵسەنگاندنەکەی تەواو نەکردووە</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"دەرفەت\" دەستنیشان دەکرێت کاتێک هەڵسەنگێنەر بە هەڵسەنگاندنەکە ڕازی "
+"دەبێت؛ ئەمە دەرفەتی بەردەستی هەڵسەنگێنەر لە ڕوی کاتەوە بۆ هەڵسەنگاندنەکەی "
+"دیاری دەکات (-) هەفتە بۆ هەڵسەنگاندنەکە</li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"ببورە، تۆ مافی دەستکاریکردنی ئەم بەکارهێنەرەت نییە، ئەمە لەبەر ئەوەی:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>ئەم بەکارهێنەرە بەڕێوەبەری پەڕەکەیە</li>\n"
+"\t\t\t<li>ئەم بەکارهێنەرە لە گۆڤارێکدا چالاکە کە تۆ بەڕێوەی نابەیت</li>\n"
+"\t\t</ul>\n"
+"\tئەمە تەنیا بۆ بەڕێوەبەری پەڕەکە ڕێگەپێدراوە.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"ئایا دەتەوێت ئەم بەکارهێنەرە ناچالاک بکەیت؟ ئەمە ڕێگا لە بەکارهێنەرەکە "
+"دەگرێت بۆ ئەوەی داخلی سیستەمەکە ببێت.\n"
+"\n"
+"تۆ دەتوانیت هۆکاری ناچالاککردنەکەش بنوسیت ئەگەر بتەوێت."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>بۆ کاراکردنی ئەوەی کە خوێنەران ژمارەی بەکارهێنەکانی ئەم توێژینەوەیە لە "
+"لایەن توێژەرێکی دیکە بزانن، ئەم بژاردانە بەردەستن</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>زیادکردنی کەرەستەی خوێندنەوە</strong><p>بەڕێوەبەری گۆڤار "
+"دەتوانێت\"دۆزینەوەی لیستی سەرچاوەکان\" کارا بکات بۆ ئەوەی ئەو هەلە بدات بە "
+"خوێنەران.</p></li>\n"
+"\t<li><strong>لینکی هاوپێچکراوی سەرچاوەکان</strong><p>سەرنوسەر دەتوانێت "
+"لینکەکان زیاد بکات (دەتواندرێت گۆڕانکاریشیان تێدا بکرێت).</p></li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"هەنگاوەکان: ڕیزبەندیی بڵاوکردنەوە&gt; هەڵسەنگاندنی توێژینەوەکان &gt; "
+"گۆڕانکاریکردن لە توێژینەوەکان &gt; لیستی ناوەرۆک. <br /><br />\n"
+"مۆدێلێک بۆ ئەم کارانە دیاری بکە لە کاتی پرۆسەی هەڵسەنگاندندا. بۆ دیزاینکردنی "
+"کاری سەرنوسەری و سەرنوسەری بەشەکان، بڕۆ سەر پەڕەی سەرنوسەران لە پەڕەی "
+"بەڕێوەبەرانی گۆڤار.)"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>ڕێنماییەکانی ڕێگرتن لە دزیی زانستی</h3>\n"
+"<h4>یەکەم: ڕێنمایی بۆ ئەو گۆڤارانەی کە سیستەمی کراوە بەکار دەهێنن</h4>\n"
+"ئەو توێژەرانەی کە توێژینەوەکانیان لێرە بڵاو دەکەنەوە، بەم مەرجانە ڕازین:\n"
+"<ol type=\"a\">\n"
+"\t<li>توێژەرەکان پابەندن بە ڕێنماییەکان و مافی بڵاوکردنەوەی توێژینەوەکانیان "
+"بۆ یەکەم جار دەدەن بە گۆڤار بە گوێرەی <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution "
+"License</a> کە ڕێگە بە ئەوانی دیکە دەدات بۆ بەکارهێنانی توێژینەوەکە بە مەرجی "
+"ناوهێنان</li>\n"
+"\t<li>بەڵام دەکرێت توێژەران حاڵەتی تایبەتییان پێ بدرێت (بۆ نمونە دوبارە "
+"بڵاوکردنەوەی توێژینەوەکانیان لە کتێبێکدا)، بەڵام بە ناوهێنانی گۆڤار وەک "
+"یەکەم شوێنی بلاوکردنەوەکە</li>\n"
+"\t<li>توێژەران ڕێگەپێدراون و هان دەدرێن بۆ ئەوەی کارەکانیان لەسەر تۆڕی "
+"ئەنتەرنێتدا بڵاو بکەنەوە (بۆ نمونە لە وێبسایتی دەزگاکانیان یان هی خۆیان) "
+"ئەمەش لەوانەیە هۆکاری بەکارهێنانی توێژینەوەکەیان بێت لە لایەن توێژەرانی "
+"دیکەوە و زیادکردنی گوتراوەکانیان (See <a target=\"_new\" href=\""
+"http://opcit.eprints.org/oacitation-biblio.html\">کاریگەریی سیستەمی کراوە "
+"</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>دووەم: ڕێنمایی بۆ ئەو گۆڤارانەی کە سیستەمی کراوەی دواخراو بەکار "
+"دەهێنن</h4>\n"
+"ئەو توێژەرانەی لێرە توێژینەوەکانیان بڵاو دەکەنەوە بەم مەرجانە ڕازین:\n"
+"<ol type=\"a\">\n"
+"\t<li>توێژەران مافی بڵاوکردنەوەی یەکەمجار بە گۆڤار دەبەخشن بۆ [کاتێکی "
+"دیاریکراو] و دوای بڵاوکردنەوە پابەندن بە ڕێنماییەکانی<a target=\"_new\" href="
+"\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution "
+"License</a> کە ڕێگا بە توێژەرانی دیکە بۆ بەکارهێنانی کارەکانیان و ناوهێنانی "
+"گۆڤار وەک یەکەم جێگای بڵاوکردنەوە دەدات.</li>\n"
+"\t <li>توێژەران لەوانەیە حاڵەتی تایبەتیان پێ بدرێت بۆ بڵاوکردنەوەی "
+"کارەکانیان لە جێگای دیکە  (بۆ نمونە لە دەزگاکانیان یان کتێبدا)، بەڵام بە "
+"ناوهێنانی گۆڤار وەک یەکەم سەرچاوەی بڵاوکردنەوە.</li>\n"
+"\t <li>توێژەران ڕێگەپێدراون بۆ بڵاوکردنەوەی کارەکانیان لەسەر تۆڕی ئەنتەرنێت ("
+"بۆ نمونە وێبسایتی خۆیان یان دەزگاکانیان) ئەمەش لەوانەیە هۆکاری بەکارهێنانی "
+"توێژینەوەکەیان بێت لە لایەن توێژەرانی دیکەوە و زیادکردنی گوتراوەکانیان (See <"
+"a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"> "
+"کاریگەریی سیستەمی کراوە</a>).</li>\n"
+"</ol>"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"گرێدانە گشتییەکان بۆ فراوانکردنی سیستەمی گۆڤاری کراوە بەکار دێت بە ڕێگای "
+"جیاواز و بۆ پاڵپشتیکردنی ئەو گرێدانانەی کە بێ پاڵپشتین."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"گرێدانی خاوەندارێتی ڕێگا بە سیستەمی گۆڤاری کراوە دەدات کە خاوەندارێتی لە "
+"سیستەمەکانی دیکەشدا بکات، بۆ نمونە سێرڤەری LDAP."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"گرێدانی تابلۆی توێژینەوەکان و پاڵپشتیکردنی توێژینەوە جۆراوجۆرەکان وەک تابلۆی "
+"توێژینەوە زیاد دەکات."

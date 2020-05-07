@@ -69,7 +69,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 		assert(is_a($issue, 'Issue'));
 
 		// Create the data object
-		$issueGalleyDao  = DAORegistry::getDAO('IssueGalleyDAO');
+		$issueGalleyDao  = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 		$issueGalley = $issueGalleyDao->newDataObject();
 		$issueGalley->setIssueId($issue->getId());
 		$locale = $node->getAttribute('locale');

@@ -100,7 +100,7 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		// DOI (mandatory)
 		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 		// DOI URL (mandatory)
-		$url = $router->url($request, $context->getPath(), 'article', 'view', $pubObject->getBestIssueId(), null, null, true);
+		$url = $router->url($request, $context->getPath(), 'issue', 'view', $pubObject->getBestIssueId(), null, null, true);
 		if ($plugin->isTestMode($context)) {
 			// Change server domain for testing.
 			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);

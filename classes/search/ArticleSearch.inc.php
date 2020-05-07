@@ -21,7 +21,7 @@ class ArticleSearch extends SubmissionSearch {
 	/**
 	 * See SubmissionSearch::getSparseArray()
 	 */
-	function getSparseArray($unorderedResults, $orderBy, $orderDir, $exclude) {
+	public function getSparseArray($unorderedResults, $orderBy, $orderDir, $exclude) {
 		// Calculate a well-ordered (unique) score.
 		$resultCount = count($unorderedResults);
 		$i = 0;
@@ -144,7 +144,7 @@ class ArticleSearch extends SubmissionSearch {
 	 * @param $request Request
 	 * @return array All search filters (empty and active)
 	 */
-	function getSearchFilters($request) {
+	public function getSearchFilters($request) {
 		$searchFilters = array(
 			'query' => $request->getUserVar('query'),
 			'searchJournal' => $request->getUserVar('searchJournal'),
@@ -206,7 +206,7 @@ class ArticleSearch extends SubmissionSearch {
 	 *  ArticleSearch::getSearchFilters()
 	 * @return array Keyword array as required by SubmissionSearch::retrieveResults()
 	 */
-	function getKeywordsFromSearchFilters($searchFilters) {
+	public function getKeywordsFromSearchFilters($searchFilters) {
 		$indexFieldMap = $this->getIndexFieldMap();
 		$indexFieldMap[SUBMISSION_SEARCH_INDEX_TERMS] = 'indexTerms';
 		$keywords = array();
@@ -229,7 +229,7 @@ class ArticleSearch extends SubmissionSearch {
 	 * @return array An array with the articles, published submissions,
 	 *  issue, journal, section and the issue availability.
 	 */
-	function formatResults($results, $user = null) {
+	public function formatResults($results, $user = null) {
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 		$contextDao = Application::getContextDAO();
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
@@ -275,7 +275,7 @@ class ArticleSearch extends SubmissionSearch {
 				}
 
 				// Only display articles from published issues.
-				if (!$issueCache[$issueId]->getPublished()) continue;
+				if (!isset($issueCache[$issueId]) || !$issueCache[$issueId]->getPublished()) continue;
 
 				// Store the retrieved objects in the result array.
 				$returner[] = array(
@@ -297,7 +297,7 @@ class ArticleSearch extends SubmissionSearch {
 	 * @return null|array An array of string keywords or null
 	 * if some kind of error occurred.
 	 */
-	function getSimilarityTerms($submissionId) {
+	public function getSimilarityTerms($submissionId) {
 		// Check whether a search plugin provides terms for a similarity search.
 		$searchTerms = array();
 		$result = HookRegistry::call('ArticleSearch::getSimilarityTerms', array($submissionId, &$searchTerms));
@@ -320,7 +320,7 @@ class ArticleSearch extends SubmissionSearch {
 		return $searchTerms;
 	}
 
-	function getIndexFieldMap() {
+	public function getIndexFieldMap() {
 		return array(
 			SUBMISSION_SEARCH_AUTHOR => 'authors',
 			SUBMISSION_SEARCH_TITLE => 'title',
@@ -336,7 +336,7 @@ class ArticleSearch extends SubmissionSearch {
 	/**
 	 * See SubmissionSearch::getResultSetOrderingOptions()
 	 */
-	function getResultSetOrderingOptions($request) {
+	public function getResultSetOrderingOptions($request) {
 		$resultSetOrderingOptions = array(
 			'score' => __('search.results.orderBy.relevance'),
 			'authors' => __('search.results.orderBy.author'),
@@ -371,7 +371,7 @@ class ArticleSearch extends SubmissionSearch {
 	/**
 	 * See SubmissionSearch::getDefaultOrderDir()
 	 */
-	function getDefaultOrderDir($orderBy) {
+	public function getDefaultOrderDir($orderBy) {
 		$orderDir = 'asc';
 		if (in_array($orderBy, array('score', 'publicationDate', 'issuePublicationDate', 'popularityAll', 'popularityMonth'))) {
 			$orderDir = 'desc';

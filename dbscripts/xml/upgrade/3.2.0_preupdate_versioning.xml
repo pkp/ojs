@@ -2,24 +2,31 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-	* dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml
-	*
-	* Copyright (c) 2013-2020 Simon Fraser University
-	* Copyright (c) 2003-2020 John Willinsky
-	* Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
-	*
-	* Copy submission data to temporary tables so it can be updated
-	* after the publication table modifications are made.
-	*
-	-->
+ * dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml
+ *
+ * Copyright (c) 2013-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * Copy submission data to temporary tables so it can be updated
+ * after the publication table modifications are made.
+ *
+ -->
 
 <data>
 	<sql>
 		<query>CREATE TABLE temp_authors AS SELECT * FROM authors</query>
+		<query>CREATE INDEX temp_authors_s_id ON temp_authors (submission_id)</query>
+		<query>CREATE INDEX temp_authors_a_s_id ON temp_authors (author_id, submission_id)</query>
 		<query>CREATE TABLE temp_submissions AS SELECT * FROM submissions</query>
+		<query>CREATE INDEX temp_submissions_s_id ON temp_submissions (submission_id)</query>
 		<query>CREATE TABLE temp_submission_galleys AS SELECT * FROM submission_galleys</query>
+		<query>CREATE INDEX temp_submission_galleys_s_id ON temp_submission_galleys (submission_id)</query>
 		<query>CREATE TABLE temp_published_submissions AS SELECT * FROM published_submissions</query>
+		<query>CREATE INDEX temp_published_submissions_s_id ON temp_published_submissions (submission_id)</query>
 		<query>CREATE TABLE temp_citations AS SELECT * FROM citations</query>
+		<query>CREATE INDEX temp_citations_s_id ON temp_citations (submission_id)</query>
+		<query>CREATE INDEX temp_citations_c_s_id ON temp_citations (citation_id, submission_id)</query>
 	</sql>
 	<!--
 		Identify any submissions with STATUS_PUBLISHED that are missing a corresponding entry
@@ -31,9 +38,8 @@
 		status value is incorrect for any submissions.
 	-->
 	<sql>
-		<query driver="postgres7">UPDATE submissions SET status=1 FROM	submissions AS s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) WHERE s.status=3 AND ps.submission_id IS NULL</query>
-		<query driver="mysql">UPDATE submissions s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) SET s.status=1 WHERE s.status=3 AND ps.submission_id IS NULL</query>
-		<query driver="mysqli">UPDATE submissions s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) SET s.status=1 WHERE s.status=3 AND ps.submission_id IS NULL</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">UPDATE submissions SET status=1 FROM	submissions AS s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) WHERE s.status=3 AND ps.submission_id IS NULL</query>
+		<query driver="mysql,mysqli">UPDATE submissions s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) SET s.status=1 WHERE s.status=3 AND ps.submission_id IS NULL</query>
 	</sql>
 	<!-- Modify citations table to refer to publications #5465-->
 	<sql>

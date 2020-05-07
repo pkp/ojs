@@ -1,0 +1,576 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-15 09:20-0700\n"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/editor/hi/>\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissionQueue"
+msgstr "सबमिशन पंक्ति"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissionArchive"
+msgstr "सबमिशन पुरालेख"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.publishedIssues"
+msgstr "प्रकाशित अंक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.allSections"
+msgstr "सभी वर्गों"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.allEditors"
+msgstr "सभी संपादकों"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ publicIdentifier}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) singlequoting: Different quotation marks
+msgid "editor.publicIdentificationExists"
+msgstr "सार्वजनिक पहचानकर्ता '{$ publicIdentifier}' किसी अन्य ऑब्जेक्ट (अंक, आलेख, गैली या फ़ाइल) के लिए पहले से मौजूद है। कृपया अपनी जर्नल के भीतर विशिष्ट पहचानकर्ता चुनें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "पुरालेख में कोई सबमिशन नहीं।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "editor.submissionArchive.saveChanges"
+msgstr "संग्रहीत प्रस्तुतियाँ में परिवर्तन सहेजें? विलोपन के लिए चिह्नित सबमिशन को सिस्टम से स्थायी रूप से हटा दिया जाएगा।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "क्या आप वाकई इस सबमिशन को स्थायी रूप से हटाना चाहते हैं?"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.submissionReview.confirmDecision"
+msgstr "क्या आप वाकई इस निर्णय को रिकॉर्ड करना चाहते हैं?"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "नोटिफ़ाइ लेखक के ईमेल भेजने के बाद या उसके स्किप ईमेल बटन को दबाए जाने के बाद यह सबमिशन संग्रहीत किया जाएगा।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) startcaps: Different capitalization at the start
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.notifyUsers"
+msgstr "उपयोगकर्ताओं को सूचित करें"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$count}
+msgid "editor.notifyUsers.allReaders"
+msgstr "सभी पाठक ({$count} उपयोगकर्ता)"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ count}
+msgid "editor.notifyUsers.allAuthors"
+msgstr "सभी प्रकाशित लेखक ({$ count} उपयोगकर्ता)"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$count}
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "सभी व्यक्तिगत ग्राहक ({$count} उपयोगकर्ता)"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$count}
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "सभी संस्थागत ग्राहक ({$count} उपयोगकर्ता)"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.notifyUsers.inProgress"
+msgstr "उपयोगकर्ताओं को सूचित किया जा रहा है ..."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.usersNotified"
+msgstr "उपयोगकर्ताओं को सूचित किया"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ count}
+msgid "editor.notifyUsers.allUsers"
+msgstr "इस जर्नल से जुड़े सभी उपयोगकर्ताओं को यह संदेश भेजें ({$ count} उपयोगकर्ता)"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ count}
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "इस जर्नल से जुड़े उपयोगकर्ताओं को यह संदेश भेजें जिन्होंने संकेत दिया है कि वे अपडेट प्राप्त करना चाहते हैं ({$ count} उपयोगकर्ता)"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.notifyUsers.includeToc"
+msgstr "अंक से सामग्री की तालिका को शामिल करें:"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.editorAdministration"
+msgstr "संपादक प्रशासन"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.createIssue"
+msgstr "अंक बनाएँ"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$issueIdentification}
+msgid "editor.issues.editIssue"
+msgstr "अंक प्रबंधन: {$issueIdentification}"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.currentIssue"
+msgstr "वर्तमान अंक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.numArticles"
+msgstr "आइटम"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.noArticles"
+msgstr "कोई आइटम वर्तमान में इस अंक के लिए निर्धारित नहीं हैं।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.confirmDelete"
+msgstr "क्या आप वाकई इस अंक को स्थायी रूप से हटाना चाहते हैं?"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.datePublished"
+msgstr "प्रकाशित तिथि"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.volumeRequired"
+msgstr "वॉल्यूम आवश्यक है और एक सकारात्मक, संख्यात्मक मान होना चाहिए।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.numberRequired"
+msgstr "संख्या की आवश्यकता है और एक सकारात्मक, संख्यात्मक मान होना चाहिए।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.yearRequired"
+msgstr "वर्ष की आवश्यकता है और एक सकारात्मक, संख्यात्मक मान होना चाहिए।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.titleRequired"
+msgstr "अंक के लिए शीर्षक आवश्यक है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "अंक पहचान आवश्यक है। कृपया कम से कम अंक पहचान विकल्पों में से एक का चयन करें।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.issueIdentification"
+msgstr "अंक जारी करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.accessStatus"
+msgstr "पहुंच की स्थिति"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.accessDate"
+msgstr "ओपन एक्सेस तिथि"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "विलंबित ओपन एक्सेस सक्षम करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.coverPage"
+msgstr "आवरण छवि"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) startpunc: Different punctuation at the start
+msgid "editor.issues.coverPageInstructions"
+msgstr "(अनुमत प्रारूप: .gif, .jpg, या .png)"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.removeCoverPage"
+msgstr "आवरण पृष्ठ छवि निकालें?"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "आपने जिस आवरण छवि को हटाने का अनुरोध किया था, वह इस अंक के लिए आवरण छवि से मेल नहीं खाती थी। कृपया पेज लोड करें और पुन: प्रयास करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "आपके द्वारा हटाने का अनुरोध किया गया आवरण छवि नहीं मिल सका है, हो सकता है कि इसे पहले ही हटा दिया जा चुका हो। पृष्ठ को फिर से लोड करने का प्रयास करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "अमान्य आवरण पृष्ठ प्रारूप। स्वीकृत प्रारूप हैं .gif, .jpg, या .png।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.styleFile"
+msgstr "स्टाइलशीट"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "editor.issues.invalidStyleFormat"
+msgstr "अमान्य स्टाइलशीट प्रारूप। सुनिश्चित करें कि प्रस्तुत फ़ाइल एक वैध सीएसएस है। (ध्यान दें कि शुरुआत में टिप्पणियों के साथ स्टाइलशीट को अस्वीकार कर दिया जा सकता है।)"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.removeStyleFile"
+msgstr "स्टाइलशीट निकालें?"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "editor.issues.coverPageCaption"
+msgstr "शीर्षक आवरण"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.showCoverPage"
+msgstr "निम्नलिखित तत्वों के साथ इस अंक के लिए एक आवरण बनाएँ।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.openAccess"
+msgstr "ओपन एक्सेस"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "editor.issues.confirmIssueDelete"
+msgstr "सभी लेख संपादन कतार में वापस आ जाएंगे और सभी संबद्ध फाइलें स्थायी रूप से हटा दी जाएंगी। क्या आप वाकई इस अंक को दूर करना चाहते हैं?"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$url}
+# (pofilter) xmltags: Added XML tags
+msgid "editor.issues.resetIssueOrder"
+msgstr "यह जर्नल कस्टम अंक ऑर्डरिंग का उपयोग करती है।<a href=\"{$url}\" class=\"action\">डिफ़ॉल्ट पर पुनः सेट करें</a>"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$url}
+# (pofilter) xmltags: Added XML tags
+msgid "editor.issues.resetSectionOrder"
+msgstr "यह अंक कस्टम अनुभाग ऑर्डरिंग का उपयोग करती है।<a href=\"{$url}\" class=\"action\">डिफ़ॉल्ट पर पुनः सेट करें</a>"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.issueData"
+msgstr "अंक डेटा"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.saveChanges"
+msgstr "सामग्री की तालिका में परिवर्तन सहेजें?"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.publicId"
+msgstr "सार्वजनिक आईडी"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.publishIssue"
+msgstr "प्रकाशित अंक"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.unpublishIssue"
+msgstr "अप्रकाशित अंक"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.previewIssue"
+msgstr "पूर्वावलोकन अंक"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.confirmPublish"
+msgstr "क्या आप वाकई नया अंक प्रकाशित करना चाहते हैं?"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.confirmUnpublish"
+msgstr "क्या आप वाकई इस प्रकाशित अंक को अप्रकाशित करना चाहते हैं?"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "क्या आप वाकई इस अंक को वर्तमान के रूप में सेट करना चाहते हैं?"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.publicArticleIdExists"
+msgstr "लेख के लिए सार्वजनिक आईडी सहेजने में असमर्थ:"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.issues.viewingGalley"
+msgstr "अंक गैली देखना"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.issueGalleysDescription"
+msgstr "संपूर्ण अंक सामग्री के साथ गैली प्रकाशित करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.noneIssueGalleys"
+msgstr "कोई भी अंक गैली प्रकाशित नहीं की गई है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.galleyLabelRequired"
+msgstr "एक अंक गैली लेबल की आवश्यकता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "एक अंक गैली लोकेल की आवश्यकता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "सार्वजनिक अंक गैली पहचान पहले से मौजूद है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "क्या आप वाकई इस अंक गैली को हटाना चाहते हैं?"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.navigation.futureIssues"
+msgstr "भविष्य के अंक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "grid.action.addGalley"
+msgstr "गैली जोड़ें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "grid.action.addIssue"
+msgstr "अंक बनाएँ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "grid.action.viewIssue"
+msgstr "अवलोकन करना"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "grid.action.previewIssue"
+msgstr "पूर्वावलोकन"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.navigation.issueArchive"
+msgstr "पिछले अंक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissions.showBy"
+msgstr "करके दिखाओ"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "editor.submissions.submitMMDD"
+msgstr "MM-DD सबमिट करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissions.activeAssignments"
+msgstr "सक्रिय असाइनमेंट"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissions.noSubmissions"
+msgstr "कोई सबमिशन नहीं"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissions.lastAssigned"
+msgstr "नवीनतम"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissions.averageTime"
+msgstr "सप्ताह"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissions.lastCompleted"
+msgstr "अंतिम पूर्ण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissions.assignedTo"
+msgstr "को सौंपना"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.submissions.inSection"
+msgstr "अनुभाग में"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.article.publishVersion"
+msgstr "संस्करण प्रकाशित करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.article.viewMetadata"
+msgstr "संस्करण मेटाडेटा देखें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.article.editMetadata"
+msgstr "संस्करण मेटाडेटा संपादित करें"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "प्रकाशन शुल्क का भुगतान नहीं किया गया। प्रकाशन के लिए आइटम अनुसूची करने के लिए शुल्क या छूट शुल्क का भुगतान करने के लिए लेखक को सूचित करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "आपके द्वारा हटाने का अनुरोध किया गया आवरण छवि नहीं मिल सका है, हो सकता है कि इसे पहले ही हटा दिया जा चुका हो। पृष्ठ को फिर से लोड करने का प्रयास करें।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "grid.action.removeArticle"
+msgstr "अंक से अनुच्छेद निकालें"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "editor.article.remove.confirm"
+msgstr "क्या आप वाकई इस लेख को अंक से निकालना चाहते हैं? आलेख किसी अन्य अंक में शेड्यूल करने के लिए उपलब्ध होगा।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.issues.invalidAccessDate"
+msgstr "अभिगमन तिथि मान्य नहीं है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+# (pofilter) xmltags: Added XML tags
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "लेआउट संपादक प्रत्येक गैली के लिए इन फाइलों को तैयार करता है और फिर प्रूफरीडिंग के लिए उपयुक्त <span class = \ "pkp_help_title \"> Proofs </ span> पर अपलोड करता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+# (pofilter) xmltags: Added XML tags
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "इस सूची की अंतिम ड्राफ्ट फाइलें कॉपीराइटर द्वारा कॉपी किए गए संस्करणों में तब्दील हो जाती हैं, जिसे नीचे <span class = \ "pkp_help_title \"> Copyediting </ span> के तहत अपलोड किया जाता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "जो भी फाइलें पहले से ही किसी भी सबमिशन स्टेज पर अपलोड की गई हैं, उन्हें नीचे दिए गए चेकबॉक्स को चेक करके और खोज पर क्लिक करके प्रूफ़रीडिंग लिस्टिंग में जोड़ा जा सकता है: सभी उपलब्ध फ़ाइलों को सूचीबद्ध किया जाएगा और उन्हें शामिल किए जाने के लिए चुना जा सकता है।"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ publicIdentifier}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) singlequoting: Different quotation marks
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "सार्वजनिक पहचानकर्ता '{$ publicIdentifier}' पहले से ही उसी प्रकार की किसी अन्य वस्तु के लिए मौजूद है। कृपया अपनी जर्नल में उसी प्रकार की वस्तुओं के लिए विशिष्ट पहचानकर्ता चुनें।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "editor.article.coverImage"
+msgstr "आवरण छवि"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "गैली फाइलें चुनें"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "अंक गैली संपादित करें"
+
+msgid "editor.article.remove"
+msgstr "हटाना"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "एसाइन्ड किए जाने को"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "में प्रकाशन के लिए अनुसूची"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "अनुसूचित प्रकाशन दिखाएं"
+
+msgid "editor.submissions.accept"
+msgstr "स्वीकार करना"
+
+msgid "editor.submissions.invite"
+msgstr "आमंत्रण"
+
+msgid "editor.article.decision"
+msgstr "निर्णय"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "मूल फ़ाइल को समीक्षा संस्करण के रूप में नामित करें"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "वर्तमान अंक सेट करें"
+
+msgid "grid.action.addIssueGalley"
+msgstr "अंक गैली बनाएँ"
+
+msgid "grid.action.publish"
+msgstr "प्रकाशित अंक"
+
+msgid "editor.issues.identifiers"
+msgstr "पहचानकर्ता"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "अंक गैलिस के लिए वापस"
+
+msgid "editor.issues.galley"
+msgstr "अंक गैली"
+
+msgid "editor.issues.galleys"
+msgstr "अंक गैलिस"
+
+msgid "editor.issues.pages"
+msgstr "पृष्ठ"
+
+msgid "editor.issues.open"
+msgstr "खुला हुआ"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "कोई लाइव अंक नहीं"
+
+msgid "editor.issues.preview"
+msgstr "पूर्वावलोकन"
+
+msgid "editor.issues.order"
+msgstr "क्रम"
+
+msgid "editor.issues.default"
+msgstr "डिफ़ॉल्ट"
+
+msgid "editor.issues.cover"
+msgstr "आवरण"
+
+msgid "editor.issues.access"
+msgstr "पहुंच"
+
+msgid "editor.issues.identification"
+msgstr "पहचान"
+
+msgid "editor.issues.subscription"
+msgstr "अंशदान"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "प्रदर्शन"
+
+msgid "editor.issues.proofed"
+msgstr "प्रूफ"
+
+msgid "editor.issues.remove"
+msgstr "हटाना"
+
+msgid "editor.issues.uploaded"
+msgstr "अपलोड किए गए"
+
+msgid "editor.issues.description"
+msgstr "विवरण"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "सार्वजनिक अंक पहचानकर्ता"
+
+msgid "editor.issues.unpublished"
+msgstr "अप्रकाशित"
+
+msgid "editor.issues.published"
+msgstr "प्रकाशित"
+
+msgid "editor.me"
+msgstr "मुझे"
+
+msgid "editor.publishing"
+msgstr "प्रकाशन"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "सबमिशन्स और प्रकाशन"
+
+msgid "editor.reassign"
+msgstr "पुनः असाइन"
+
+msgid "editor.home"
+msgstr "संपादक का घर"

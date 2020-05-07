@@ -23,7 +23,9 @@
 	{call_hook name="Templates::Index::journal"}
 
 	{if !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
-		<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImageAltText|escape}">
+		<div class="homepage_image">
+			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}"{if $homepageImage.altText} alt="{$homepageImage.altText|escape}"{/if}>
+		</div>
 	{/if}
 
 	{* Journal Description *}

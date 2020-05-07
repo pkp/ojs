@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-medra/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS sẽ tự động đăng ký DOIs được gán cho mEDRA. Xin lưu ý rằng việc này có "
+"thể mất một khoảng thời gian ngắn sau khi xuất bản để xử lý (ví dụ: tùy "
+"thuộc vào cấu hình cronjob của bạn). Bạn có thể kiểm tra tất cả các DOI chưa "
+"đăng ký."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr ""
+"Sử dụng API thử nghiệm mEDRA (môi trường thử nghiệm) để đăng ký DOI. Xin "
+"đừng quên loại bỏ tùy chọn này khi xuất bản."
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr ""
+"NB: DOIs được gán cho các bài viết sẽ được xuất sang mEDRA như <a href=\""
+"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'works'</a>. "
+"DOIs assigned to galleys will be exported as <a href=\"http://www.medra.org/"
+"en/metadata_td.htm\" target=\"_blank\">'manifestations'</a>."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "nhiệm vụ đăng ký tự động mEDRA"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Usage: \n"
+"{$scriptName} {$pluginName} xuất [xmlFileName] [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} đăng ký [journal_path] {issues|articles|galleys} "
+"objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Các số xuất như"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "Manifestation"
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "Work"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr ""
+"Vui lòng chọn xem bạn có muốn xuất các số như <a href=\"http://www.medra.org/"
+"en/metadata_td.htm\" target=\"_blank\">'works' or 'manifestations'</a>."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr ""
+"Vui lòng chọn quốc gia để được thông báo là 'quốc gia xuất bản' cho mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Vui lòng nhập email liên hệ kỹ thuật hợp lệ."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "E-mail"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Vui lòng nhập một người liên hệ kỹ thuật."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Người liên hệ"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr ""
+"Vui lòng nhập tổ chức chịu trách nhiệm về mặt kỹ thuật cho xuất DOI (ví dụ: "
+"tổ chức lưu trữ máy chủ web của bạn)."
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Tổ chức"
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Người được mEDRA liên hệ trong trường hợp có thắc mắc về kỹ thuật:"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Vui lòng nhập tổ chức được đăng ký tại mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Tên của tổ chức đăng ký tại mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr ""
+"Vui lòng nhập username mEDRA của bạn. Username có thể không chứa dấu hai "
+"chấm."
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Tên người dùng (username)"
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Vui lòng cấu hình plugin xuất mEDRA:"
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"\n"
+"\t\tNếu bạn muốn đăng ký DOIs với mEDRA, vui lòng làm theo hướng dẫn trên\n"
+"\t\t<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">Trang "
+"chủ mEDRA</a>\n"
+"\t\tđể nhận username và mật khẩu. Nếu bạn không có username và mật khẩu của "
+"riêng bạn\n"
+"\t\tbạn vẫn có thể xuất sang định dạng mEDRA XML (Onix cho DOI)\n"
+"\t\tnhưng bạn không thể đăng ký DOIs của mình với mEDRA từ trong OJS.\n"
+"\t\tXin lưu ý rằng mật khẩu sẽ được lưu dưới dạng văn bản thuần, tức là "
+"không được mã hóa, do\n"
+"\t\tcác yêu cầu dịch vụ đăng ký mEDRA.\n"
+"\t"
+
+msgid "plugins.importexport.medra.description"
+msgstr ""
+"Xuất số, siêu dữ liệu bài báo và bản in ở định dạng Onix cho định dạng DOI "
+"(O4DOI) và đăng ký DOIs với cơ quan đăng ký mEDRA."
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "Plugin đăng ký/xuất mEDRA"

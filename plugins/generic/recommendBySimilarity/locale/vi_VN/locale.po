@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "bắt đầu một tìm kiếm tương tự nâng cao"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Bạn cũng có thể {$advancedSearchLink} cho bài báo này."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Các bài báo tương tự"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Plugin này thêm một danh sách các bài báo tương tự vào trang tóm tắt bài "
+"viết."
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Đề xuất các bài báo tương tự"

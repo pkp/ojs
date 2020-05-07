@@ -2,14 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:04+00:00\n"
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Fylypovych Georgii <red.ukr@gmail.com>\n"
+"Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-urn/uk_UA/>\n"
+"Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:04+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:04+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -114,7 +118,11 @@ msgid "plugins.pubIds.urn.manager.settings.urnReassign"
 msgstr "Перевантажити URN"
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
-msgstr "Якщо ви зміните свою URN-конфігурацію, то вона не стосуватиметься URN, які вже були призначені. Після збереження конфігурації URN використовуйте цю кнопку, щоб видалити усі існуючі DOI для того, щоб нові налаштування вплинули на існуючі об'єкти."
+msgstr ""
+"Якщо ви зміните свою URN-конфігурацію, то вона не стосуватиметься URN, які "
+"вже були призначені. Після збереження конфігурації URN використовуйте цю "
+"кнопку, щоб видалити усі існуючі URN для того, щоб нові налаштування "
+"вплинули на існуючі об'єкти."
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
 msgstr "Ви впевнені, що хочете видалити усі існуючі URN?"
@@ -178,3 +186,41 @@ msgstr "URN {$pubId} був призначений."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Відсутнє контрольне число."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Елемент"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Гранка: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "URN не було  призначено для цієї публікації."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN для цієї публікації буде {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN має починатися з {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Ви не можете згенерувати URN, так як для однієї чи декількох частин шаблону "
+"URN не вистачає даних. Вам необхідно призначити публікацію в конкретний "
+"випуск, задати ID видавця або ввести номера сторінок."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Ви не зможете згенерувати URN, доки ця публікація не призначена до "
+"конкретного випуску."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Призначити"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN повинен починатися з {$prefix}."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Будь ласка, введіть шаблон суфікса URN для статей."
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Статті"

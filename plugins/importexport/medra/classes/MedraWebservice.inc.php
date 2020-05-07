@@ -105,16 +105,15 @@ class MedraWebservice {
 		}
 
 		// Prepare HTTP session.
-		$curlCh = curl_init ();
+		import('lib.pkp.classes.helpers.PKPCurlHelper');
+		$curlCh = PKPCurlHelper::getCurlObject();
+
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curlCh, CURLOPT_POST, true);
 
 		// Set up basic authentication.
 		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 		curl_setopt($curlCh, CURLOPT_USERPWD, $this->_auth);
-
-		// Set up SSL.
-		curl_setopt($curlCh, CURLOPT_SSL_VERIFYPEER, false);
 
 		// Make SOAP request.
 		curl_setopt($curlCh, CURLOPT_URL, $this->_endpoint);

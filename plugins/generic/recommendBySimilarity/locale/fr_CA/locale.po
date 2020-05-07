@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-03-31 16:08+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "Lancer une recherche avancée d’articles similaires"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Vous pouvez également {$advancedSearchLink} à cet article."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Articles similaires"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Ce plugiciel ajoute une liste d’articles similaires sur la page du résumé de "
+"l'article."
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Articles similaires recommandés"

@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "Logo RSS2"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "Logo RSS1"
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Logo Atom"
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Vui lòng nhập một số nguyên dương cho các thông báo gần đây."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "thông báo gần đây nhất."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Giới hạn"
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Chỉ hiển thị các liên kết nguồn cấp dữ liệu trên trang thông báo."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr ""
+"Chỉ hiển thị các liên kết nguồn cấp dữ liệu trên trang chủ và trang thông "
+"báo."
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Hiển thị liên kết nguồn cấp dữ liệu trên tất cả các trang tạp chí."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Cài đặt"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Plugin này tạo nguồn cấp dữ liệu cung cấp web RSS/Atom cho các thông báo tạp "
+"chí."
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Plugin thông báo"

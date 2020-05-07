@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-15 15:31+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/ku_IQ/>\n"
+"Language: ku_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "هەمو کڕیارەکان"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "ناوی نەناسراو"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "کۆ بۆ هەمو گۆڤارەکان"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "کۆی YTD"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSNی ئۆنلاین"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSNی چاپ"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "پلاتفۆڕم"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "بڵاوکەرەوە"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "ڕێککەوتی دەستپێکردن:"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"ژمارەی داواکراوە سەرکەوتووەکانی تەواوی دەق بەگوێرەی مانگ و گۆڤار (بۆ "
+"ساڵی{$year})"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "ڕاپۆرتی گۆڤار  1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "وەشانی XML"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "ڕاپۆرتیCOUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "ئەنجامەکان وەک XML ڕێک ناخرێن."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "هیچ ئەنجامێکی ئەم ڕاپۆرتە نەدۆزرایەوە."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "داواکارییەکە نادروستە."
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "ڕاپۆرتە نادروستەکان."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "ڕاپۆرتە کۆنەکانی پێگەکە"
+
+msgid "plugins.reports.counter.release"
+msgstr "وەشاندنی COUNTER"
+
+msgid "plugins.reports.counter"
+msgstr "ڕاپۆرتەکانی COUNTER"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"لینکەکانی خوارەوە ڕاپۆرتی تەواو دەربارەی گرێدانی داتا کۆنەکان دەخەنە ڕو، کە "
+"COUNTER-ready نین. ئەگەر دەتەوێت ڕاپۆرتی COUNTER بە بەکارهێنانی سیستەمی "
+"گۆڤاری کراوە و جۆری پێوەرەکان بەدەست بگات، لینکەکانی سەرەوە بەکار بهێنە."
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "ڕاپۆرتی گۆڤاری 1 (R3):  توێژینەوەی تەواو بە مانگ و گۆڤارەوە داوا کراوە"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"ڕاپۆرتی گۆڤار لە COUNTER 1 (R3):توێژینەوەی تەواو بە مانگ و گۆڤارەوە داوا "
+"کراوە"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"ئەم لینکانە ڕاپۆرتی COUNTERی ئامادە دەخنە بەردەست کە پاڵپشتن بە وەشانی ٣.٠ "
+"ئەم ڕاپۆرتانە هەمو گۆڤارەکانی سەر ئەم وێبسایتە دەگرێتەوە. دواهەمین وەشان "
+"بەکار بهێنە، لە هەر کاتێکدا بەردەست بو."
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"گرێدانی COUNTER  ڕاپۆرت دەربارەی چالاکییەکانی گۆڤار دەخاتە ڕو. بەکارهێنانی "
+"ستانداردی <a href=\"http://www.projectcounter.org\">COUNTER </a>. ئەم "
+"ڕاپۆرتانە بەتەنیا COUNTER ی گۆڤار تەواو ناکەن. بۆ خستنەڕوی گوێڕایەڵی COUNTER،"
+" بە پێداویستییەکانی پڕۆژەکەدا بچۆرەوە."

@@ -22,7 +22,7 @@
 		{fbvFormSection title="common.search" for="search"}
 			{fbvElement type="select" id="searchField" from=$filterData.fieldOptions selected=$filterSelectionData.searchField inline=true size=$fbvStyles.size.SMALL}
 			{fbvElement type="select" id="searchMatch" from=$filterData.matchOptions selected=$filterSelectionData.searchMatch inline=true size=$fbvStyles.size.SMALL}
-			{fbvElement type="text" name="search" id="search" value=$filterSelectionData.search size=$fbvStyles.size.LARGE inline="true"}
+			{fbvElement type="search" name="search" id="search" value=$filterSelectionData.search size=$fbvStyles.size.LARGE inline="true"}
 		{/fbvFormSection}
 		{fbvFormButtons hideCancel=true submitText="common.search"}
 	{/fbvFormArea}

@@ -1,0 +1,476 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Biên tập viên trình bày sẽ chuẩn bị các tập tin này cho mỗi bản in thử và "
+"sau đó tải lên <span class=\"pkp_help_title\">Bản in thử</span> để hiệu đính."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Chọn tập tin chính thức"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Các tập tin nháp cuối cùng trong danh sách này được một Biên tập viên chuyển "
+"đổi thành các phiên bản được sao chép, được tải lên bên dưới <span class=\""
+"pkp_help_title\">Biên tập</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Bất kỳ tập tin nào đã được tải lên bất kỳ giai đoạn gửi nào đều có thể được "
+"thêm vào danh sách Đọc lại bằng cách chọn checkbox Bao gồm bên dưới và nhấp "
+"vào Tìm kiếm: tất cả các tập tin có sẵn sẽ được liệt kê và có thể được chọn "
+"để đưa vào."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Mã định danh công khai '{$publicIdentifier}' đã tồn tại cho một đối tượng "
+"khác cùng loại. Vui lòng chọn định danh duy nhất cho các đối tượng cùng loại "
+"trong tạp chí của bạn."
+
+msgid "editor.article.coverImage"
+msgstr "Ảnh bìa"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Tất cả các tác giả đã xuất bản ({$count} người dùng)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Tất cả người đọc ({$count} người dùng)"
+
+msgid "editor.notifyUsers"
+msgstr "Thông báo cho người dùng"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Trước khi gửi một bài gửi tới Biên tập, hãy sử dụng liên kết Thông báo cho "
+"Tác giả để thông báo cho tác giả về quyết định và chọn phiên bản sẽ được gửi."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Nội dung bài gửi này sẽ được lưu trữ sau khi email thông báo của tác giả "
+"được gửi hoặc nhấn nút Bỏ qua Email."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Bạn có chắc chắn muốn ghi lại quyết định này?"
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Bạn có chắc chắn muốn xóa vĩnh viễn bài này?"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Có lưu thay đổi để bài gửi được lưu trữ? Bài gửi được đánh dấu để xóa sẽ bị "
+"xóa vĩnh viễn khỏi hệ thống."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Không có bài gửi nào trong lưu trữ."
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Mã định danh công khai '{$publicIdentifier}' đã tồn tại cho một đối tượng "
+"khác (số, bài viết, in thử hoặc tập tin). Vui lòng chọn định danh duy nhất "
+"trong tạp chí của bạn."
+
+msgid "editor.me"
+msgstr "Tôi"
+
+msgid "editor.allEditors"
+msgstr "Tất cả các biên tập viên"
+
+msgid "editor.allSections"
+msgstr "Tất cả các chuyên mục"
+
+msgid "editor.publishedIssues"
+msgstr "Các số đã xuất bản"
+
+msgid "editor.publishing"
+msgstr "Xuất bản"
+
+msgid "editor.submissionArchive"
+msgstr "Lưu trữ bài gửi"
+
+msgid "editor.submissionQueue"
+msgstr "Các bài gửi đang đợi"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Bài gửi và xuất bản"
+
+msgid "editor.reassign"
+msgstr "Phân công lại"
+
+msgid "editor.home"
+msgstr "Trang chủ của biên tập viên"
+
+msgid "editor.issues.styleFile"
+msgstr "Style sheet"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Chỉnh sửa bản in thử của số"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Ngày truy cập không hợp lệ."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Bạn có chắc bạn muốn loại bỏ bài viết này khỏi số này? Bài báo sẽ có sẵn để "
+"lên lịch trình xuất bản trong một số khác."
+
+msgid "editor.article.remove"
+msgstr "Loại bỏ"
+
+msgid "grid.action.removeArticle"
+msgstr "Loại bỏ bài viết khỏi số"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Không thể tìm thấy ảnh bìa bạn yêu cầu xóa. Nó có thể đã bị xóa. Hãy thử tải "
+"lại trang."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Phí xuất bản không được thanh toán. Thông báo cho tác giả lịch trình xuất "
+"bản để trả lệ phí hoặc miễn lệ phí."
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Được phân công"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Lịch trình xuất bản trong"
+
+msgid "editor.article.editMetadata"
+msgstr "Chỉnh sửa phiên bản của siêu dữ liệu"
+
+msgid "editor.article.viewMetadata"
+msgstr "Xem phiên bản của siêu dữ liệu"
+
+msgid "editor.article.publishVersion"
+msgstr "Phiên bản xuất bản"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Hiển thị lịch xuất bản"
+
+msgid "editor.submissions.inSection"
+msgstr "Trong chuyên mục"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Phân công cho"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Hoàn thành lần cuối"
+
+msgid "editor.submissions.averageTime"
+msgstr "Tuần"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Mới nhất"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Không có bài gửi"
+
+msgid "editor.submissions.accept"
+msgstr "Đồng ý"
+
+msgid "editor.submissions.invite"
+msgstr "Mời"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Hoạt động phân công"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Gửi MM-DD"
+
+msgid "editor.submissions.showBy"
+msgstr "Hiển thị bởi"
+
+msgid "editor.article.decision"
+msgstr "Quyết định"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Chỉ định tập tin gốc là phiên bản trong quá trình phản biện"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Số đã xuất bản"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Đặt làm số mới nhất"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Tạo bản in thử của số"
+
+msgid "grid.action.previewIssue"
+msgstr "Xem trước"
+
+msgid "grid.action.viewIssue"
+msgstr "Xem"
+
+msgid "grid.action.addIssue"
+msgstr "Tạo số mới"
+
+msgid "grid.action.publish"
+msgstr "Xuất bản số"
+
+msgid "grid.action.addGalley"
+msgstr "Thêm bản in thử"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Số chuẩn bị xuất bản"
+
+msgid "editor.issues.identifiers"
+msgstr "Định danh"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Bạn có chắc chắn muốn xóa bản in thử của số này không?"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Không có bản in thử được xuất bản."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Định danh bản in thử công khai của số đã tồn tại."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Trở lại bản in thử của số"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Một ngôn ngữ cho bản in thử của số là bắt buộc."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Một nhãn bản in thử của số là bắt buộc."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Xuất bản bản in thử với toàn bộ nội dung của số."
+
+msgid "editor.issues.viewingGalley"
+msgstr "Xem bản in thử của số"
+
+msgid "editor.issues.galley"
+msgstr "Bản in thử của số"
+
+msgid "editor.issues.galleys"
+msgstr "Các bản in thử của số"
+
+msgid "editor.issues.pages"
+msgstr "Số trang"
+
+msgid "editor.issues.open"
+msgstr "Mở"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Không có số trực tiếp"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Không thể lưu id công khai cho bài viết:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Bạn có chắc chắn muốn đặt số này như là số mới nhất?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Bạn có chắc chắn muốn hủy xuất bản số được xuất bản này?"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Bạn có chắc chắn muốn xuất bản số mới?"
+
+msgid "editor.issues.preview"
+msgstr "Xem trước"
+
+msgid "editor.issues.previewIssue"
+msgstr "Xem trước"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Hủy xuất bản"
+
+msgid "editor.issues.publishIssue"
+msgstr "Xuất bản"
+
+msgid "editor.issues.publicId"
+msgstr "Id công khai"
+
+msgid "editor.issues.order"
+msgstr "Thứ tự"
+
+msgid "editor.issues.default"
+msgstr "Mặc định"
+
+msgid "editor.issues.saveChanges"
+msgstr "Lưu thay đổi vào mục lục?"
+
+msgid "editor.issues.issueData"
+msgstr "Dữ liệu số"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Số này sử dụng thứ tự chuyên mục tùy chỉnh. <a href=\"{$url}\" class=\""
+"action\">Đặt lại về mặc định</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Tạp chí này sử dụng thứ tự số tùy chỉnh. <a href=\"{$url}\" class=\"action\">"
+"Đặt lại về mặc định</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Tất cả các bài viết sẽ được đưa trở lại hàng đợi và tất cả các tập tin liên "
+"quan sẽ bị xóa vĩnh viễn. Bạn có chắc chắn muốn loại bỏ số này?"
+
+msgid "editor.issues.cover"
+msgstr "Ảnh bìa"
+
+msgid "editor.issues.access"
+msgstr "Truy cập"
+
+msgid "editor.issues.identification"
+msgstr "Định danh"
+
+msgid "editor.issues.subscription"
+msgstr "Đăng ký thuê bao"
+
+msgid "editor.issues.openAccess"
+msgstr "Truy cập mở"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Hiển thị"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Tạo một ảnh bìa cho số này với các yếu tố sau."
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Chú thích ảnh bìa"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Xóa stylesheet?"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Định dạng trang bìa không hợp lệ. Các định dạng được chấp nhận là .gif, .jpg "
+"hoặc .png."
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Định dạng stylsheet không hợp lệ. Đảm bảo rằng tập tin đã gửi là CSS hợp lệ. "
+"(Lưu ý rằng các stylesheets có nhận xét ở đầu có thể bị từ chối.)"
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Không thể tìm thấy ảnh bìa bạn yêu cầu xóa. Nó có thể đã bị xóa. Hãy thử tải "
+"lại trang."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Ảnh bìa bạn yêu cầu xóa không khớp với ảnh bìa cho số này. Hãy tải lại trang "
+"và thử lại."
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Xóa hình ảnh trang bìa?"
+
+msgid "editor.issues.proofed"
+msgstr "Đã kiểm chứng"
+
+msgid "editor.issues.remove"
+msgstr "Loại bỏ"
+
+msgid "editor.issues.uploaded"
+msgstr "Tải lên"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Các định dạng được phép: .gif, .jpg hoặc .png)"
+
+msgid "editor.issues.coverPage"
+msgstr "Ảnh bìa"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Cho phép truy cập mở bị trì hoãn"
+
+msgid "editor.issues.accessDate"
+msgstr "Ngày truy cập mở"
+
+msgid "editor.issues.accessStatus"
+msgstr "Truy cập trạng thái"
+
+msgid "editor.issues.description"
+msgstr "Mô tả"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Đạnh danh số xuất bản"
+
+msgid "editor.issues.issueIdentification"
+msgstr "Định danh số"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Định danh số là bắt buộc. Vui lòng chọn ít nhất một trong các tùy chọn định "
+"danh số."
+
+msgid "editor.issues.titleRequired"
+msgstr "Tiêu đề là bắt buộc cho số."
+
+msgid "editor.issues.yearRequired"
+msgstr "Năm là bắt buộc và phải là một số giá trị dương."
+
+msgid "editor.issues.numberRequired"
+msgstr "Số được yêu cầu và phải là một số giá trị dương."
+
+msgid "editor.issues.volumeRequired"
+msgstr "Số tập được yêu cầu và phải là một số giá trị dương."
+
+msgid "editor.issues.datePublished"
+msgstr "Ngày xuất bản"
+
+msgid "editor.issues.unpublished"
+msgstr "Chưa xuất bản"
+
+msgid "editor.issues.published"
+msgstr "Đã xuất bản"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Bạn có chắc chắn muốn xóa vĩnh viễn số này?"
+
+msgid "editor.issues.noArticles"
+msgstr "Không có mục nào hiện đang được lên kế hoạch cho số này."
+
+msgid "editor.issues.numArticles"
+msgstr "Mục"
+
+msgid "editor.issues.currentIssue"
+msgstr "Số hiện tại"
+
+msgid "editor.issues.editIssue"
+msgstr "Quản lý các số: {$issueIdentification}"
+
+msgid "editor.issues.createIssue"
+msgstr "Tạo số mới"
+
+msgid "editor.editorAdministration"
+msgstr "Biên tập viên quản trị"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Bao gồm mục lục từ số này:"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Gửi tin nhắn này đến những người dùng được liên kết với tạp chí này, những "
+"người đã cho biết rằng họ muốn nhận được cập nhật ({$count} người dùng)"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Gửi tin nhắn này đến tất cả người dùng được liên kết với tạp chí này "
+"({$count}  người dùng)"
+
+msgid "editor.usersNotified"
+msgstr "Người dùng đã thông báo"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Thông báo cho người dùng..."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Tất cả người đăng ký thuê bao theo tổ chức ({$count} người dùng)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Tất cả người đăng ký thuê bao cá nhân ({$count} người dùng)"

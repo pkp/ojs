@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.2.1_update.xml
+  *
+  * Copyright (c) 2013-2020 Simon Fraser University
+  * Copyright (c) 2003-2020 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * Update queries for OJS 3.2.1.
+  -->
+
+<data>
+	<sql><!-- pkp/pkp-lib#5617 Make all theme plugins lazy load plugins -->
+		<query>UPDATE versions SET lazy_load = 1 WHERE product_type = 'plugins.themes'</query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#5573: Filters need updating for shift to Submissions instead of Articles -->
+		<query>UPDATE filter_groups SET input_type = 'class::classes.submission.Submission' WHERE input_type = 'class::classes.article.Article'</query>
+		<query>UPDATE filter_groups SET output_type = 'class::classes.submission.Submission' WHERE output_type = 'class::classes.article.Article'</query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#5681: Filters need updating for shift to Submissions instead of Articles -->
+		<query>UPDATE filter_groups SET input_type = 'class::classes.submission.Submission[]' WHERE input_type = 'class::classes.article.Article[]'</query>
+		<query>UPDATE filter_groups SET output_type = 'class::classes.submission.Submission[]' WHERE output_type = 'class::classes.article.Article[]'</query>
+	</sql>
+</data>

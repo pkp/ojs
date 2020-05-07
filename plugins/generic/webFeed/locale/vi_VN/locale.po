@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-webFeed/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "Logo RSS2"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "Logo RSS1"
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Atom logo"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Vui lòng nhập một số nguyên dương cho các mục được xuất bản gần đây."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Số mục cần hiển thị"
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Hiển thị một số lượng cố định của các mục gần đây nhất."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Hiển thị các mục trong số được công bố hiện tại."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Hiển thị liên kết nguồn cấp web trên tất cả các trang tạp chí."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+"Chỉ hiển thị các liên kết nguồn cấp web trên trang chủ và các số phát hành."
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Chỉ hiển thị các liên kết nguồn cấp web trên các số."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Cài đặt"
+
+msgid "plugins.generic.webfeed.description"
+msgstr ""
+"Plugin này tạo ra nguồn cấp dữ liệu cung cấp web RSS/Atom cho số hiện tại."
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Plugin nguồn cấp web"

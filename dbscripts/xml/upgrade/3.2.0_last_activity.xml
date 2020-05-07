@@ -20,5 +20,6 @@
 				SELECT date_status_modified FROM temp_last_activity_submissions tlas WHERE tlas.submission_id = s.submission_id
 			)
 		</query>
+		<drop table="temp_last_activity_submissions" />
 	</sql>
 </data>

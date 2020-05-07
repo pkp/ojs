@@ -95,6 +95,19 @@ class ReviewerHandler extends PKPReviewerHandler {
 			$this->user = $user;
 		}
 	}
+
+	/**
+	 * @copydoc PKPReviewerHandler::getReviewForm()
+	 */
+	public function getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment) {
+	    switch ($step) {
+	        case 3: 
+	        	import("classes.submission.reviewer.form.ReviewerReviewStep3Form");
+	        	return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
+	    }
+	    return parent::getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment);
+	}
+
 }
 
 

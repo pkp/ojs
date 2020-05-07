@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-12 19:37+0000\n"
+"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-native/ku_IQ/>\n"
+"Language: ku_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"کورتکراوەی بەشی \"{$section1Abbrev}\" و کورتکراوەی بەشی \"{$section2Abbrev}\""
+" لە ژمارەی  \"{$issueTitle}\" هاوشێوەی بەشەکانی دیکەن لەم گۆڤارەدا."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+"ناونیشانی بەشی  \"{$section1Title}\"  لە \"{$issueTitle}\" لەگەڵ بەشێکی "
+"دیکەی گۆڤارێکە هاوشێوەیە، بەڵام ناونیشانی بەشەکەی دیکە هاوشێوەیی تێدا نییە."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr ""
+"ناونیشانی بەشی\"{$section1Title}\" و ناونیشانی بەشی\"{$section2Title}\" لە \""
+"{$issueTitle}\" لەگەڵ بەشێکی دیکەی گۆڤارەکە هاوشێوەیە."
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "بەکارهێنەری دیاریکراو: \"{$userName}\"بەردەست نییە."
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "بەشێکی نەناسراو {$param}"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"بەکارهێنان: {$scriptName} {$pluginName} [command] ...\n"
+"فەرمانەکان:\n"
+"\timport [xmlFileName] [journal_path] [user_name] ...\n"
+"\texport [xmlFileName] [journal_path] articles [articleId1] [articleId2] ..."
+"\n"
+"\texport [xmlFileName] [journal_path] article [articleId]\n"
+"\texport [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
+"\texport [xmlFileName] [journal_path] issue [issueId]\n"
+"\n"
+"هۆکارە داواکراوەکانی زیادکردن بۆ هێنانی زانیاری\n"
+"بە پشتبەستن بە XML \n"
+"\n"
+"ئەگەر <article> یان <articles> سەرچاوە بون زانیاری زیاتر داوا کراوە\n"
+"ئەم ڕێکخستنانە قبوڵ کران:\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
+"\tissue_id [issueId] section_abbrev [abbrev]\n"
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "هاوردەکردنەکە سەرکەوتو بو. ئەم دانانە هاوردە کران:"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "تکایە فایلێک لە ژێر ''هاوردەکردن'' بار بکە بۆ بەردەوامبون."
+
+msgid "plugins.importexport.native.results"
+msgstr "ئەنجامەکان"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "هەناردەکردنی ژمارەکانی گۆڤار"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "هەناردەکردنی توێژینەوەکان"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "ئەو توێژینەوانە دیاری بکە کە دەتەوێت هەناردەیان بکەیت"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "بارکردنی XML بۆ هاوردەکردن"
+
+msgid "plugins.importexport.native.import"
+msgstr "هاوردەکردن"
+
+msgid "plugins.importexport.native.description"
+msgstr ""
+"هاوردەکردن و هەناردەکردنی توێژینەوە و ژمارەی گۆڤارەکان لە سیستەمی گۆڤاری "
+"کراوە بە ڕێکخستنی XML."
+
+msgid "plugins.importexport.native.displayName"
+msgstr "گرێدانی XMLی ڕەسەن"
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"توێژینەوەی \"{$articleTitle}\" لەگەڵ ژمارەیەکی گۆڤارە بەڵام ڕێککەوتی "
+"بڵاوکردنەوەی لەسەر نییە."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "ناسێنەری ئەم ژمارەیە لە توێژینەوەی \"{$articleTitle}\"یدا ونە."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"ژمارەیەکی گۆڤار ئەم پێناسەی هەڵگرتووە {$issueId} کە هاوشێوەیە لەگەڵ ژمارەی \""
+"{$issueIdentification}\". ئەم ژمارەیە گۆڕانکاری تێدا نەکراوە، بەڵام ئەم "
+"توێژینەوانەی بۆ زیاد دەبێت."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "هیچ کام لە ژمارەکان هاوشێوەییان نییە \"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"کورتکراوەی بەشی\"{$sectionAbbrev}\" لە ژمارەی \"{$issueTitle}\" هاوشێوەی "
+"یەکێک لە ژمارەکانە، بەڵام ئەوەی دیکە هاوشێوەیی تێدا نییە."

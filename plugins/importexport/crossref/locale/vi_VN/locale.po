@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-crossref/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Tên người dùng (username)"
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr ""
+"Không có bài báo nào khớp với ID bài báo được chỉ định \"{$articleId}\"."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Không cósố  nào khớp với ID số được chỉ định \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr "Đăng ký thành công nhưng cảnh báo sau đã xảy ra: '{$ param}'."
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "Đăng ký không hoàn toàn thành công! Máy chủ đăng ký DOI trả về một lỗi."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Usage:\n"
+"{$scriptName} {$pluginName} xuất [xmlFileName] [journal_path] bài báo "
+"objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} đăng ký [journal_path] bài báo objectId1 "
+"[objectId2] ...\n"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Nhiệm vụ đăng ký tự động CrossRef"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Đánh dấu hoạt động"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Tải xuống XML"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Tình trạng gửi DOI:</p>\n"
+"\t\t<p>\n"
+"\t\t- Không được gửi DOI: không có nỗ lực gửi DOI nào được thực hiện cho DOI "
+"này.<br />\n"
+"\t\t- Hoạt động: DOI đã được gửi và đang giải quyết chính xác.<br />\n"
+"\t\t- Thất bại: gửi DOI đã thất bại.<br />\n"
+"\t\t- Đã đánh dấu hoạt động: DOI được đánh dấu thủ công là hoạt động.\n"
+"\t\t</p>\n"
+"\t\t<p>Chỉ trạng thái của lần gửi DOI cuối cùng được hiển thị.</p>\n"
+"\t\t<p>Nếu một gửi DOI không thành công, vui lòng giải quyết vấn đề và thử "
+"đăng ký lại DOI.</p>"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Gửi DOI"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Đã đánh dấu hoạt động"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Hoạt động"
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Thất bại"
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr ""
+"Lưu ý: Chỉ các số (và không phải bài báo của nó) sẽ được xem xét để xuất/"
+"đăng ký tại đây."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr ""
+"Xác thực XML. Sử dụng tùy chọn này để tải xuống XML cho đăng ký DOI thủ công."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr ""
+"Sử dụng API thử nghiệm CrossRef (môi trường thử nghiệm) cho ủy thác gửi DOI. "
+"Xin đừng quên loại bỏ tùy chọn này khi thực hiện xuất bản chính thức."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS sẽ tự động gửi DOI được chỉ định cho CrossRef. Xin lưu ý rằng việc này "
+"có thể mất một khoảng thời gian ngắn sau khi xuất bản để xử lý (ví dụ: tùy "
+"thuộc vào cấu hình cronjob của bạn). Bạn có thể kiểm tra tất cả các DOI chưa "
+"đăng ký."
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Vui lòng nhập username bạn nhận được từ CrossRef."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr ""
+"Nếu bạn muốn sử dụng plugin này để đăng ký trực tiếp Nhận dạng đối tượng kỹ "
+"thuật số (DOIs) với CrossRef, bạn sẽ cần username và mật khẩu (có sẵn từ <a "
+"href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>) để làm như "
+"vậy. Nếu bạn không có username và mật khẩu của riêng mình, bạn vẫn có thể "
+"xuất sang định dạng CrossRef XML, nhưng bạn không thể đăng ký DOI của mình "
+"với CrossRef từ trong OJS."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Vui lòng nhập email người gửi."
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Vui lòng nhập tên người gửi."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Email người gửi"
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Tên người gửi"
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Các mục sau đây là bắt buộc để gửi DOI cho CrossRef thành công."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr ""
+"Các bài báo không được chọn để gán DOI trong plugin định danh công khai DOI, "
+"do đó không có khả năng gửi hoặc xuất trong plugin này."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr ""
+"Một ISSN của tạp chí chưa được cấu hình! Bạn phải thêm ISSN trên <a href=\""
+"{$journalSettingsUrl}\" target=\"_blank\">Trang cài đặt tạp chí</a>."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr ""
+"Một nhà xuất bản tạp chí chưa được cấu hình! Bạn phải thêm một tổ chức nhà "
+"xuất bản trên <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Trang cài "
+"đặt tạp chí</a>."
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Tất cả các yêu cầu plugin được thỏa mãn."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Yêu cầu"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Xuất siêu dữ liệu bài báo ở định dạng CrossRef XML."
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Plugin xuất CrossRef XML"

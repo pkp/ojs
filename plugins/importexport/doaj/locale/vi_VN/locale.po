@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Usage:\n"
+"{$scriptName} {$pluginName} xuất [xmlFileName] [journal_path] các bài báo "
+"objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Gửi không thành công! API DOAJ đã trả về lỗi: '{$param}'."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Nhiệm vụ đăng ký tự động DOAJ"
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"Sử dụng API kiểm tra DOAJ (môi trường thử nghiệm) để đăng ký. Xin đừng quên "
+"loại bỏ tùy chọn này khi xuất bản."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS sẽ gửi bài viết tự động cho DOAJ. Xin lưu ý rằng việc này có thể mất một "
+"khoảng thời gian ngắn sau khi xuất bản để xử lý (ví dụ: tùy thuộc vào cấu "
+"hình cronjob của bạn). Bạn có thể kiểm tra tất cả các bài viết chưa đăng ký."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Bạn sẽ tìm thấy khóa API của mình trên trang người dùng DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "Khóa API DOAJ"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr ""
+"Nếu bạn muốn đăng ký các bài báo từ trong OJS, vui lòng nhập Khóa API DOAJ "
+"của bạn. Khác, bạn vẫn có thể xuất thành định dạng XML DOAJ nhưng bạn không "
+"thể đăng ký các bài viết của mình với DOAJ từ trong OJS."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Liên hệ với DOAJ để đưa vào"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Tạp chí xuất cho DOAJ."
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Plugin xuất DOAJ"

@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"gateways-resolver/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.gateways.resolver.exportHoldings"
+msgstr "Holdings xuất"
+
+msgid "plugins.gateways.resolver.errors.errorMessage"
+msgstr ""
+"Không thể giải quyết một thực thể bằng cách sử dụng thông tin trích dẫn được "
+"chỉ định. Hãy đảm bảo rằng các thông tin trích dẫn là toàn diện và đề cập "
+"đến một thực thể trong việc triển khai này của OJS."
+
+msgid "plugins.gateways.resolver.description"
+msgstr "Plugin này giải quyết các số và bài viết dựa trên thông tin trích dẫn."
+
+msgid "plugins.gateways.resolver.displayName"
+msgstr "Plugin giải quyết"

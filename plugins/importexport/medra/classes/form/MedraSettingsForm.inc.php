@@ -185,6 +185,8 @@ class MedraSettingsForm extends Form {
 		foreach ($isoCodes->getCountries() as $country) {
 			$countries[$country->getAlpha2()] = $country->getLocalName();
 		}
+		asort($countries);
+		return $countries;
 	}
 }
 

@@ -1,0 +1,1656 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-15 09:20-0700\n"
+"PO-Revision-Date: 2020-04-30 14:45+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/locale/hi/>\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "context.current"
+msgstr "वर्तमान जर्नल:"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "context.select"
+msgstr "किसी अन्य जर्नल पर जाएं:"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "reviewer.article.enterReviewForm"
+msgstr "समीक्षा फ़ॉर्म भरने के लिए आइकन पर क्लिक करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "कृपया आवश्यक क्षेत्र भरें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "common.confirmComplete"
+msgstr "क्या आप वाकई इस कार्य को पूरा करना चाहते हैं? आप बाद में बदलाव करने में सक्षम नहीं हो सकते हैं।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "navigation.journalHelp"
+msgstr "जर्नल मदद"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "navigation.otherJournals"
+msgstr "अन्य जर्नल्स"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "सौंपे नहीं गए"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "सौंपे नहीं गए"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "common.queue.long.submissionsArchives"
+msgstr "पुरालेख"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "common.queue.short.submissionsArchives"
+msgstr "पुरालेख"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) startpunc: Different punctuation at the start
+msgid "section.abbreviation.example"
+msgstr "(उदाहरण के लिए, लेख = एआरटी)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.submissionId"
+msgstr "सबमिशन आईडी"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.indexingInformation"
+msgstr "अनुक्रमण जानकारी"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.journalSection"
+msgstr "जर्नल अनुभाग"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.suppFile"
+msgstr "अनुपूरक फ़ाइल"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) simpleplurals: The original uses plural(s)
+msgid "article.suppFiles"
+msgstr "अनुपूरक फ़ाइल (s)"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startcaps: Different capitalization at the start
+msgid "article.suppFilesAbbrev"
+msgstr "Supp. फाइलें"
+
+# (pofilter) short: The translation is much shorter than the original
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "article.sectionEditor"
+msgstr "SE"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "article.accessLogoOpen.altText"
+msgstr "ओपन एक्सेस"
+
+# (pofilter) short: The translation is much shorter than the original
+# (pofilter) simplecaps: Different capitalization
+msgid "article.comments.sectionDefault"
+msgstr "डिफॉल्ट"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "article.fontSize"
+msgstr "फ़ॉन्ट आकार"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.submissionEditing"
+msgstr "सबमिशन एडिटिंग"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.changeSection"
+msgstr "में बदलो"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.editorDecision"
+msgstr "संपादक का निर्णय"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$round}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submission.round"
+msgstr "Round&nbsp;{$round}"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.editorReview"
+msgstr "संपादक की समीक्षा"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.notifyAuthor"
+msgstr "लेखक को सूचित करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.notifyEditor"
+msgstr "संपादक को सूचित करें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.reviewersVersion"
+msgstr "समीक्षक की फ़ाइल का एनोटेटेड संस्करण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.editorVersion"
+msgstr "संपादक संस्करण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.authorVersion"
+msgstr "लेखक संस्करण"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submission.copyedit"
+msgstr "प्रतिलिपि संपादन करना"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$issueName}
+# (pofilter) startpunc: Different punctuation at the start
+msgid "submission.scheduledIn"
+msgstr "{$issueName} में प्रकाशन के लिए निर्धारित ।"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) startpunc: Different punctuation at the start
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.queuedReview"
+msgstr "समीक्षा में"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.initialProof"
+msgstr "प्रारंभिक प्रमाण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.postAuthor"
+msgstr "पोस्ट-लेखक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.reviewRound"
+msgstr "समीक्षा दौर"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.editorDecision"
+msgstr "संपादक का निर्णय"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.editorRuling"
+msgstr "संपादक शासन"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.eventLog"
+msgstr "इवेंट लोग"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.copyeditComplete"
+msgstr "कॉपी संपादित"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submissions.layoutComplete"
+msgstr "लेआउट संपादित किया गया"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submissions.proofreadingComplete"
+msgstr "प्रूफ़रीड"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "journal.currentIssue"
+msgstr "वर्तमान अंक"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "context.context"
+msgstr "जर्नल"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "journal.issn"
+msgstr "ISSN"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "इस जर्नल में बिना किसी भूमिका वाले उपयोगकर्ताओं को शामिल करें।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.profile.profileImage"
+msgstr "प्रोफ़ाइल छवि"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "user.reviewerPrompt"
+msgstr "क्या आप इस जर्नल को सबमिशन्स देने के लिए तैयार हैं?"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ userGroup}
+msgid "user.reviewerPrompt.userGroup"
+msgstr "हां, {$ userGroup} भूमिका का अनुरोध करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"हां, मैं इस जर्नल को सबमिशन्स की समीक्षा करने के अनुरोधों के साथ संपर्क करना "
+"चाहूंगा।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "user.register.contextsPrompt"
+msgstr "इस साइट पर कौन सी जर्नल्स आप के साथ पंजीकृत करना चाहेंगे?"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.register.otherContextRoles"
+msgstr "निम्नलिखित भूमिकाओं का अनुरोध करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.register.noContextReviewerInterests"
+msgstr "यदि आपने किसी भी जर्नल में एक समीक्षक बनने का अनुरोध किया है, तो कृपया अपने विषय के हितों को दर्ज करें।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.myJournals"
+msgstr "मेरी जर्नल्स"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "user.noRoles.chooseJournal"
+msgstr "आपका खाता वर्तमान में किसी भी जर्नल से संबद्ध नहीं है। कृपया एक जर्नल चुनें:"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "user.noRoles.noRolesForJournal"
+msgstr "आपके खाते में वर्तमान में इस जर्नल के लिए कोई भूमिका नहीं है। कृपया नीचे दिए गए कार्यों में से चुनें:"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "एक लेख सबमिट करें: लेखक पंजीकरण वर्तमान में अक्षम है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "user.noRoles.regReviewerClosed"
+msgstr "एक समीक्षक के रूप में पंजीकरण करें: वर्तमान में समीक्षक पंजीकरण अक्षम है।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.subEditor"
+msgstr "अनुभाग संपादक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.subscriptionManager"
+msgstr "सदस्यता प्रबंधक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.subEditors"
+msgstr "अनुभाग संपादक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.subscriptionManagers"
+msgstr "सदस्यता प्रबंधक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.journalAssistant"
+msgstr "जर्नल सहायक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "user.role.journalAssistants"
+msgstr "जर्नल सहायकों"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "issue.vol"
+msgstr "Vol."
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "issue.no"
+msgstr "No."
+
+# (pofilter) simplecaps: Different capitalization
+msgid "issue.noIssues"
+msgstr "कोई अंक नहीं"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "issue.fullIssue"
+msgstr "पूर्ण अंक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "issue.viewIssue"
+msgstr "अंक देखें"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.currency"
+msgstr "मुद्रा"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.year"
+msgstr "साल"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.years"
+msgstr "साल"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.month"
+msgstr "महीना"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.months"
+msgstr "महीना"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.format"
+msgstr "स्वरूप"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.format.online"
+msgstr "ऑनलाइन"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptionTypes.format.print"
+msgstr "प्रिंट"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.status.needsInformation"
+msgstr "जानकारी चाहिए"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.status.needsApproval"
+msgstr "मंजूरी की जरूरत है"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.status.noSubscription"
+msgstr "आपके पास सक्रिय सदस्यता नहीं है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.individualDescription"
+msgstr "व्यक्तिगत सदस्यता के लिए सदस्यता सामग्री तक पहुंचने के लिए लॉगिन की आवश्यकता होती है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "subscriptions.institutionalDescription"
+msgstr "संस्थागत सदस्यता के लिए लॉगिन की आवश्यकता नहीं है। उपयोगकर्ता के डोमेन और / या आईपी पते का उपयोग सदस्यता सामग्री तक पहुंच प्रदान करने के लिए किया जाता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) xmltags: Added XML tags
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>नोट:</strong> ऑनलाइन खरीदे गए संस्थागत सदस्यता को सदस्यता सक्रिय होने से पहले डोमेन और आईपी श्रेणियों के अनुमोदन की आवश्यकता होती है।"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.defaultEvent"
+msgstr "सबमिशन इवेंट"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.submissionSubmitted"
+msgstr "लेख प्रस्तुत किया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.issueScheduled"
+msgstr "शेड्यूलिंग कतार जारी करने के लिए सबमिशन भेजा गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.issueAssigned"
+msgstr "सबमिशन जारी करने के लिए अंक सौंपा गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.articlePublished"
+msgstr "लेख प्रकाशित हुआ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.author.authorRevision"
+msgstr "लेखक संशोधन प्रस्तुत किया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.general.authorRevision"
+msgstr "लेखक संशोधन फ़ाइल अपडेट की गई"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.editor.editorAssigned"
+msgstr "संपादक को सबमिशन सौंपा"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submission.event.editor.editorUnassigned"
+msgstr "संपादक सबमिशन करने से निर्दिष्ट नहीं किए गए"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.editor.editorDecision"
+msgstr "संपादक का सबमिशन निर्णय"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.editor.editorFile"
+msgstr "संपादक फ़ाइल अपडेट की गई"
+
+# (pofilter) startcaps: Different capitalization at the start
+msgid "submission.event.editor.submissionArchived"
+msgstr "सबमिशन पुरालेख के लिए भेजा"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.editor.submissionRestored"
+msgstr "सबमिशन पुरालेख से पुनर्स्थापित किया गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "प्रतिलिपि सबमिशन करने वाले को सौंपी गई"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "प्रतिलिपि सबमिशन करने से अनसुना कर दिया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "प्रतिलिपि कार्य आरंभ किया गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "प्रतिलिपि संशोधन फ़ाइल अपडेट की गई"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "प्रूफ़रीडर सबमिशन करने के लिए सौंपा"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "प्रूफ़रीडर सबमिशन करने से अप्रभावित है"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "प्रूफ़रीडर असाइनमेंट शुरू किया गया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "प्रूफ़रीडर संशोधन फ़ाइल अपडेट की गई"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "प्रूफ़रीडर असाइनमेंट पूरा हुआ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.layout.layoutInitiated"
+msgstr "लेआउट असाइनमेंट शुरू किया"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.event.layout.layoutComplete"
+msgstr "लेआउट असाइनमेंट पूरा हुआ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "reader.subscribersOnly"
+msgstr "केवल सदस्य"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "आइटम का उपयोग करने के लिए आवश्यक सदस्यता। सदस्यता सत्यापित करने के लिए, जर्नल में लॉग इन करें।"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "reader.openAccess"
+msgstr "ओपन एक्सेस"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "reader.subscriptionAccess"
+msgstr "सदस्यता की आवश्यकता है"
+
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$price}, {$currency}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startpunc: Different punctuation at the start
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$publicProfileUrl}, {$userName}
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) xmltags: Added XML tags
+msgid "comments.authenticated"
+msgstr "by <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy"
+msgstr "द्वारा आदेश परिणाम"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.article"
+msgstr "लेख का शीर्षक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.author"
+msgstr "लेखक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.date"
+msgstr "प्रकाशन तिथि"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.issue"
+msgstr "अंक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.journal"
+msgstr "जर्नल शीर्षक"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "search.results.orderBy.popularityAll"
+msgstr "लोकप्रियता (सभी समय)"
+
+# (pofilter) brackets: Added '(', ')'
+msgid "search.results.orderBy.popularityMonth"
+msgstr "लोकप्रियता (अंतिम माह)"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderBy.relevance"
+msgstr "प्रासंगिकता"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderDir.asc"
+msgstr "आरोही"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.orderDir.desc"
+msgstr "अवरोही"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "search.results.similarDocuments"
+msgstr "इसी तरह के दस्तावेज"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) tabs: Different tabs
+# (pofilter) xmltags: Added XML tags
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>OJS के अलावा एक डिफ़ॉल्ट प्रमाणीकरण स्रोत को निर्दिष्ट करने के निम्नलिखित प्रभाव हैं:</p>\n"
+"<ul>\n"
+"\t<li>यदि कोई उपयोगकर्ता प्रमाणीकरण साइट पर मौजूद उपयोगकर्ता नाम (लेकिन OJS डेटाबेस में नहीं) के साथ इस साइट के साथ एक नया खाता पंजीकृत करने का प्रयास करता है, तो पंजीकरण प्रयास केवल तभी अनुमति दी जाती है जब आपूर्ति की गई पासवर्ड उस उपयोगकर्ता खाते के लिए मान्य हो।</li>\n"
+"</ul>"
+
+# (pofilter) newlines: Different line endings
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) xmltags: Added XML tags
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>नोट!</h4>\n"
+"<p>सिस्टम कॉन्फ़िगरेशन फ़ाइल को स्वचालित रूप से अधिलेखित नहीं कर सकता है। अपने कॉन्फ़िगरेशन परिवर्तनों को लागू करने के लिए आपको उपयुक्त टेक्स्ट एडिटर में <tt> config.inc.php </ tt> खोलना होगा और इसकी सामग्री को नीचे दिए गए टेक्स्ट फ़ील्ड की सामग्री से बदलना होगा।</p>"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.categories.viewableFiles"
+msgstr "लेख गैली प्लगइन्स"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.categories.viewableFiles.description"
+msgstr "लेख गैली प्लगइन्स अलग-अलग दस्तावेज़ प्रकार को लेख गैलिस के रूप में प्रदर्शित करने के लिए समर्थन जोड़ते हैं।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "plugins.categories.auth.description"
+msgstr "प्राधिकरण प्लगइन्स ओपन जर्नल सिस्टम को उपयोगकर्ता प्रमाणीकरण कार्यों को अन्य प्रणालियों, जैसे LDAP सर्वरों को सौंपने की अनुमति देता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "plugins.categories.generic.description"
+msgstr "जेनेरिक प्लगइन्स का उपयोग ओपन जर्नल सिस्टम को विभिन्न तरीकों से विस्तारित करने के लिए किया जाता है जो अन्य प्लगइन श्रेणियों द्वारा समर्थित नहीं हैं।"
+
+# (pofilter) brackets: Added '[', ']', '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('target=\'_new\'', 'href=\'http://creativecommons.org/licenses/by/3.0/\'>', '\', '\', '\', '\')
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 6
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) singlequoting: Different quotation marks
+# (pofilter) tabs: Different tabs
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>प्रस्तावित क्रिएटिव कॉमन्स कॉपीराइट नोटिस</h3>\n"
+"<h4>1. ओपन एक्सेस की पेशकश करने वाली जर्नल्स के लिए प्रस्तावित नीति</h4>\n"
+"इस जर्नल के साथ प्रकाशित करने वाले लेखक निम्नलिखित शर्तों से सहमत हैं:\n"
+"<ol type=\"a\">\n"
+"\t<li>लेखक कॉपीराइट को बनाए रखते हैं और एक <a लक्ष्य के तहत लाइसेंस प्राप्त काम के साथ पहले प्रकाशन का अधिकार देते हैं। <a target=\'_new\' href=\'http://creativecommons.org/licenses/by/3.0/\'> क्रिएटिव कॉमन्स एट्रिब्यूशन लाइसेंस</a> जो दूसरों को इस पत्रिका में काम के लेखकों की स्वीकृति और प्रारंभिक प्रकाशन के साथ काम साझा करने की अनुमति देता है।</li>\n"
+"\t<li>लेखक कार्य के जर्नल के प्रकाशित संस्करण के गैर-अनन्य वितरण के लिए अलग, अतिरिक्त संविदात्मक व्यवस्था में प्रवेश करने में सक्षम हैं (उदाहरण के लिए, इसे एक संस्थागत रिपॉजिटरी में पोस्ट करें या इसे एक पुस्तक में प्रकाशित करें), इस जर्नल में अपने प्रारंभिक प्रकाशन की पावती के साथ ।</li>\n"
+"\t<li>लेखकों को अपना काम ऑनलाइन (जैसे संस्थागत रिपॉजिटरी में या अपनी वेबसाइट पर) पोस्ट करने से पहले और जमा करने की प्रक्रिया के दौरान अनुमत और प्रोत्साहित किया जाता है, क्योंकि इससे उत्पादक एक्सचेंजों के साथ-साथ पहले से प्रकाशित काम का अधिक से अधिक उद्धरण हो सकता है। (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. जर्नल्स के लिए प्रस्तावित नीति जो विलंबित ओपन एक्सेस प्रदान करती है</h4>\n"
+"इस जर्नल के साथ प्रकाशित करने वाले लेखक निम्नलिखित शर्तों से सहमत हैं:\n"
+"<ol type=\"a\">\n"
+"\t<li>लेखक कॉपीराइट को बनाए रखते हैं और पहले प्रकाशन का अधिकार देते हैं, काम के साथ [विशेष समय का प्रकाशन] प्रकाशन के बाद एक साथ एक <a लक्ष्य = \ _ \ _ नए \ "href = \" http://creativecommons.org/licenses/ के तहत लाइसेंस प्राप्त होता है। द्वारा / 3.0 / \ "> क्रिएटिव कॉमन्स एट्रिब्यूशन लाइसेंस </a> जो दूसरों को इस पत्रिका में काम के लेखक की स्वीकृति और प्रारंभिक प्रकाशन के साथ काम साझा करने की अनुमति देता है।</li>\n"
+"\t <li>लेखक कार्य के जर्नल के प्रकाशित संस्करण के गैर-अनन्य वितरण के लिए अलग, अतिरिक्त संविदात्मक व्यवस्था में प्रवेश करने में सक्षम हैं (उदाहरण के लिए, इसे एक संस्थागत रिपॉजिटरी में पोस्ट करें या इसे एक पुस्तक में प्रकाशित करें), इस पत्रिका में अपने प्रारंभिक प्रकाशन की स्वीकृति के साथ ।"
+
+msgid "article.comments.enable"
+msgstr "सक्षम"
+
+msgid "article.comments.disable"
+msgstr "अक्षम"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "उपयोग प्रतिबंधित"
+
+msgid "article.coverPage.altText"
+msgstr "आवरण छवि"
+
+msgid "article.abstract"
+msgstr "सार"
+
+msgid "article.details"
+msgstr "विवरण"
+
+msgid "article.submissions"
+msgstr "सबमिशन्स"
+
+msgid "article.submission"
+msgstr "सबमिशन"
+
+msgid "article.commentsToEditor"
+msgstr "लेखक की टिप्पणी"
+
+msgid "article.language"
+msgstr "भाषा"
+
+msgid "article.type"
+msgstr "प्रकार, विधि या दृष्टिकोण"
+
+msgid "article.coverage"
+msgstr "कवरेज"
+
+msgid "article.subject"
+msgstr "संकेत शब्द"
+
+msgid "article.discipline"
+msgstr "शैक्षणिक अनुशासन और उप-विषयों"
+
+msgid "article.file"
+msgstr "फ़ाइल"
+
+msgid "article.metadata"
+msgstr "मेटाडाटा"
+
+msgid "article.authors"
+msgstr "लेखक"
+
+msgid "article.title"
+msgstr "शीर्षक"
+
+msgid "common.publications"
+msgstr "लेखों"
+
+msgid "common.publication"
+msgstr "लेख"
+
+msgid "article.articles"
+msgstr "लेखों"
+
+msgid "article.article"
+msgstr "लेख"
+
+msgid "section.policy"
+msgstr "खंड नीति"
+
+msgid "section.abbreviation"
+msgstr "संक्षिप्तीकरण"
+
+msgid "section.title"
+msgstr "खंड शीर्षक"
+
+msgid "section.sections"
+msgstr "खंड"
+
+msgid "section.section"
+msgstr "खंड"
+
+msgid "common.queue.short.completed"
+msgstr "पुरालेख"
+
+msgid "common.queue.long.completed"
+msgstr "पुरालेख"
+
+msgid "common.queue.short.active"
+msgstr "सक्रिय"
+
+msgid "common.queue.long.active"
+msgstr "सक्रिय"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "समीक्षा में"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "सबमिशन में समीक्षा"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "संपादन में"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "सबमिशन में संपादन"
+
+msgid "navigation.skip.issue"
+msgstr "वर्तमान अंक पर छोड़ें"
+
+msgid "navigation.skip.about"
+msgstr "जर्नल के बारे में छोड़ें"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "लाइब्रेरियन के लिए सूचना"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "लेखकों के लिए सूचना"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "प्रतिस्पर्धा संबंधी दिशानिर्देश"
+
+msgid "navigation.infoForLibrarians"
+msgstr "लाइब्रेरियन के लिए"
+
+msgid "navigation.infoForAuthors"
+msgstr "लेखकों के लिए"
+
+msgid "navigation.browseByAuthor"
+msgstr "लेखक द्वारा"
+
+msgid "navigation.browseByIssue"
+msgstr "अंक द्वारा"
+
+msgid "navigation.current"
+msgstr "वर्तमान"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "जर्नल मुखपृष्ठ छवि"
+
+msgid "common.homePageHeader.altText"
+msgstr "मुख पृष्ठ का शीर्ष लेख"
+
+msgid "common.payments"
+msgstr "भुगतान"
+
+msgid "common.payment"
+msgstr "भुगतान"
+
+msgid "common.software"
+msgstr "ओपन जर्नल सिस्टम"
+
+msgid "navigation.categories.browse"
+msgstr "ब्राउज़"
+
+msgid "navigation.categories"
+msgstr "श्रेणियाँ"
+
+msgid "submissions.proof"
+msgstr "प्रमाण"
+
+msgid "submissions.proofread"
+msgstr "प्रूफ़ संशोधित करना"
+
+msgid "submissions.initial"
+msgstr "प्रारंभिक"
+
+msgid "submissions.published"
+msgstr "प्रकाशित"
+
+msgid "submissions.step3"
+msgstr "चरण 3"
+
+msgid "submissions.step1"
+msgstr "चरण 1"
+
+msgid "submission.scheduling"
+msgstr "निर्धारण"
+
+msgid "submission.proofreading"
+msgstr "प्रूफ़रीडिंग"
+
+msgid "submission.copyediting"
+msgstr "प्रतिलिपि संपादन"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "लेखक का फ़ाइल का संशोधित संस्करण"
+
+msgid "submission.postReviewVersion"
+msgstr "फ़ाइल की समीक्षा के बाद का संस्करण"
+
+msgid "submission.editorAuthorRecord"
+msgstr "संपादक / लेखक ईमेल रिकॉर्ड"
+
+msgid "submission.sent"
+msgstr "भेज दिया"
+
+msgid "article.return"
+msgstr "लेख विवरण पर लौटें"
+
+msgid "article.fontSize.large.altText"
+msgstr "बड़ा"
+
+msgid "article.fontSize.medium.altText"
+msgstr "मध्यम"
+
+msgid "article.fontSize.small.altText"
+msgstr "छोटा"
+
+msgid "user.subscriptions.form.domain"
+msgstr "डोमेन"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "डाक पता"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "एक संस्था का नाम आवश्यक है।"
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "संस्था का नाम"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "मेम्बरशिप जानकारी यदि चयनित सदस्यता प्रकार के लिए आवश्यक है।"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "इस उपयोगकर्ता खाते में पहले से ही एक व्यक्तिगत सदस्यता है।"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "कृपया एक वैध सदस्यता प्रकार चुनें।"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "चयनित सदस्यता प्रकार को मेम्बरशिप जानकारी की आवश्यकता होती है।"
+
+msgid "user.subscriptions.form.membership"
+msgstr "सदस्यता"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "सदस्यता प्रकार"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "उपलब्ध सदस्यता प्रकार देखें"
+
+msgid "user.subscriptions.expired"
+msgstr "समय सीमा समाप्त: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "समय समाप्ति: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "क्रय संस्थागत सदस्यता"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "व्यक्तिगत सदस्यता खरीदें"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "नई सदस्यता खरीदें"
+
+msgid "user.subscriptions.purchase"
+msgstr "खरीद"
+
+msgid "user.subscriptions.renew"
+msgstr "नवीकरण"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "संस्थागत सदस्यता"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "व्यक्तिगत सदस्यता"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "एक ऑनलाइन भुगतान शुरू किया गया है लेकिन रद्द या पूरा नहीं हुआ है"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "मैनुअल भुगतान शुरू किया गया है लेकिन अभी तक नहीं मिला है"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "सक्रिय होने से पहले सदस्यता की समीक्षा की जानी चाहिए"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "सदस्यता को सक्रिय करने से पहले अतिरिक्त जानकारी की आवश्यकता है"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "विवरण"
+
+msgid "user.subscriptions.status"
+msgstr "स्थिति"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"सक्रिय और समय सीमा समाप्त सदस्यता उनकी समाप्ति तिथि के साथ प्रदर्शित की जाती "
+"है। इसके अलावा, प्रत्येक सदस्यता के साथ निम्न स्थिति की जानकारी शामिल की जा "
+"सकती है।"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "सदस्यता स्थिति"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "मेरी सदस्यता"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "आपको इस साइट के गोपनीयता कथन के लिए सहमति देनी होगी।"
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"आप जिस भी जर्नल के लिए पंजीकरण कर रहे हैं, उसके लिए आपको गोपनीयता कथन पर "
+"सहमति देनी चाहिए।"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"हां, मैं अपने डेटा को इस जर्नल के <a href=\"{$privacyUrl}\" target=\"_blank\""
+"> गोपनीयता कथन </a> के अनुसार संग्रहीत करने के लिए सहमत हूं।"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"हां, मैं उन सभी जर्नल्स के लिए नए प्रकाशनों और घोषणाओं को अधिसूचित करना "
+"चाहूंगा जिनके साथ मैंने पंजीकरण किया था।"
+
+msgid "user.register.reviewerInterests"
+msgstr "समीक्षा संबंधी रुचियों (मूल क्षेत्रों और शोध विधियों) की पहचान करें:"
+
+msgid "user.register.reviewerDescription"
+msgstr "साइट के लिए सबमिशन की सहकर्मी समीक्षा करने की इच्छा करना।"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "जर्नल को सबमिशन की सहकर्मी समीक्षा करने के लिए तैयार।"
+
+msgid "user.register.authorDescription"
+msgstr "जर्नल को आइटम प्रस्तुत करने में सक्षम।"
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"जब जर्नल के किसी अंक को ओपन एक्सेस किया जाता है तो ईमेल द्वारा सूचित किया "
+"जाता है।"
+
+msgid "user.register.readerDescription"
+msgstr "जर्नल के एक अंक के प्रकाशन पर ईमेल द्वारा सूचित किया गया।"
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "आपके द्वारा दर्ज किया गया पासवर्ड लंबा नहीं है।"
+
+msgid "user.register.registrationDisabled"
+msgstr "यह जर्नल वर्तमान में उपयोगकर्ता पंजीकरण स्वीकार नहीं कर रही है।"
+
+msgid "user.register.privacyStatement"
+msgstr "गोपनीयता वाले कथन"
+
+msgid "user.register.noJournals"
+msgstr "इस साइट पर आपके द्वारा पंजीकृत कोई जर्नल्स नहीं है।"
+
+msgid "user.register.selectContext"
+msgstr "इसके साथ पंजीकरण करने के लिए एक जर्नल चुनें:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "सहेजें और ईमेल संपादक"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "सहेजें और ईमेल लेखक"
+
+msgid "submission.comments.forEditor"
+msgstr "संपादक के लिए"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "लेखक और संपादक के लिए"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"भेजने के बाद, समीक्षकों को भेजने के लिए एक संपादन योग्य बीसीसी प्रति प्रस्तु"
+"त करें।"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "संपादक के लिए"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "लेखक और संपादक के लिए"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"इन टिप्पणियों को लेखक के साथ साझा किया जा सकता है। <br />\n"
+"(सहेजने के बाद, और टिप्पणियां जोड़ी जा सकती हैं।)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "प्रतिलिपि टिप्पणियां"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "संपादक / लेखक पत्राचार"
+
+msgid "submission.logType.proofread"
+msgstr "प्रूफ्रीड"
+
+msgid "submission.logType.layout"
+msgstr "लेआउट"
+
+msgid "submission.logType.copyedit"
+msgstr "प्रतिलिपि"
+
+msgid "submission.logType.review"
+msgstr "समीक्षा"
+
+msgid "submission.logType.editor"
+msgstr "संपादक"
+
+msgid "submission.logType.author"
+msgstr "लेखक"
+
+msgid "submission.logType.article"
+msgstr "लेख"
+
+msgid "submission.proofread.instructions"
+msgstr "प्रूफिंग निर्देश"
+
+msgid "submission.proofread.corrections"
+msgstr "प्रूफरीडिंग सुधार"
+
+msgid "submission.proofreadingComments"
+msgstr "प्रूफरीडिंग टिप्पणियाँ"
+
+msgid "submission.layout.referenceLinking"
+msgstr "संदर्भ लिंकिंग"
+
+msgid "submission.layout.instructions"
+msgstr "लेआउट निर्देश"
+
+msgid "submission.layout.layoutComments"
+msgstr "लेआउट टिप्पणियाँ"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "लेआउट संपादक को बदलें"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "लेआउट संपादक असाइन करें"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "सार्वजनिक गैली पहचान पहले से मौजूद है।"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"कोई भी (अनुरोध भेजने से पहले लेआउट संस्करण के रूप में अंतिम प्रतिलिपि किए गए "
+"संस्करण को अपलोड करें)"
+
+msgid "submission.copyedit.instructions"
+msgstr "प्रतिलिपि के निर्देश"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "प्रतिलिपि टिप्पणियां"
+
+msgid "submission.copyedit.useFile"
+msgstr "फ़ाइल का उपयोग करें"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "कॉपी संपादक असाइन करें"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "सी / ई संस्करण"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "अंतिम प्रतिलिपि"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "लेखक प्रतिलिपि"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "संपादक की प्रतिलिपि"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "प्रारंभिक प्रतिलिपि"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"जब तक फ़ाइल को कॉपीएडिटिंग करने के लिए अपलोड नहीं किया जाता है तब तक अनुरोध "
+"ईमेल नहीं भेजा जा सकता है।"
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"संपादक निर्णय, समीक्षा पृष्ठ में कॉपीएडिटिंग करने के लिए फ़ाइल का चयन होने "
+"तक अनुरोध ईमेल नहीं भेजा जा सकता है।"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"अनुरोध ईमेल तब तक नहीं भेजा जा सकता है जब तक कि समीक्षा संस्करण नहीं है।"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p> इस जर्नल को एक पांडुलिपि अपलोड करने के लिए, निम्नलिखित चरणों को पूरा "
+"करें। </ p>\n"
+"<Ol>\n"
+"<li> इस पृष्ठ पर, ब्राउज़ करें (या फ़ाइल चुनें) पर क्लिक करें जो आपके कंप्यू"
+"टर की हार्ड फ़ाइल पर फ़ाइल खोजने के लिए एक फ़ाइल चुनें विंडो को खोलता है। </ "
+"li>\n"
+"<li> उस फ़ाइल का पता लगाएँ जिसे आप सबमिट करना चाहते हैं और उसे हाइलाइट करें। "
+"</ li>\n"
+"<li> फ़ाइल पृष्ठ चुनें पर क्लिक करें, जो इस पृष्ठ पर फ़ाइल का नाम रखता है। </"
+" li>\n"
+"<li> इस पृष्ठ पर अपलोड पर क्लिक करें, जो फ़ाइल को कंप्यूटर से जर्नल की वेब सा"
+"इट पर अपलोड करता है और जर्नल के सम्मेलनों के बाद इसका नाम बदल देता है। </ li>"
+"\n"
+"<li> सबमिट करने के बाद, इस पृष्ठ के निचले भाग पर सहेजें और जारी रखें पर क्लि"
+"क करें। </ li>\n"
+"</ Ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "कोई प्रूफरीडिंग असाइनमेंट नहीं"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "कॉपी संपादक फ़ाइल"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "कॉपी संपादक फ़ाइल"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "फ़ाइल को C / E के लिए"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"एक बार निर्णय लेने के बाद आप इस समीक्षा में बदलाव नहीं कर पाएंगे। पुष्टि करें"
+" कि आप आगे जारी रखना चाहते हैं?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"कोई सिफारिश नहीं चुना गया था। सबमिट करने के लिए आपको एक सिफारिश का चयन करना "
+"होगा।"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "समीक्षक की अनुशंसा को सेट या समायोजित करें।"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"एक सिफारिश का चयन करें और प्रक्रिया को पूरा करने के लिए समीक्षा सबमिट करें। "
+"सिफारिश का चयन करने से पहले आपको एक समीक्षा दर्ज करनी चाहिए या एक फ़ाइल अपलो"
+"ड करनी चाहिए।"
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"इसके अलावा, आप संपादक और / या लेखक के परामर्श के लिए फाइलें अपलोड कर सकते "
+"हैं।"
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"इस सबमिशन की अपनी समीक्षा दर्ज करने (या पेस्ट) करने के लिए आइकन पर क्लिक "
+"करें।"
+
+msgid "reviewer.competingInterests"
+msgstr "प्रतिस्पर्धी रुचियां"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"घोषणा करें कि आपके पास इस शोध के संबंध में प्रतिस्पर्धी रुचियां हैं या नहीं "
+"(देखें <a target='_new' class='action' "
+"href='{$competingInterestGuidelinesUrl}'>CI Policy</a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"डाउनलोड करने और समीक्षा करने के लिए फ़ाइल नामों पर क्लिक करें (स्क्रीन पर या "
+"प्रिंटिंग करके) इस सबमिशन से जुड़ी फाइलें।"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"यदि आप समीक्षा करने जा रहे हैं, तो नीचे समीक्षक दिशानिर्देशों से परामर्श "
+"करें।"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "के रूप में है कि क्या आप समीक्षा शुरू करेंगे ।"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "सबमिशन संपादक को सूचित करें"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"समीक्षा दिशानिर्देश समीक्षाकर्ताओं को जर्नल में प्रकाशन के लिए प्रस्तुत करने "
+"की उपयुक्तता को निर्धारित करने के लिए मानदंड प्रदान करेंगे, और एक प्रभावी और "
+"उपयोगी समीक्षा तैयार करने के लिए कोई विशेष निर्देश शामिल कर सकते हैं। समीक्षा"
+" का संचालन करने में, समीक्षकों को दो खुले पाठ बक्से के साथ प्रस्तुत किया जाता"
+" है, पहला \"लेखक और संपादक के लिए,\" और दूसरा \"संपादक के लिए।\" वैकल्पिक रू"
+"प से, जर्नल प्रबंधक समीक्षा प्रपत्र के तहत एक सहकर्मी समीक्षा प्रपत्र बना "
+"सकता है। सभी मामलों में, संपादकों के पास लेखक के अनुरूप समीक्षाओं को शामिल "
+"करने का विकल्प होगा।"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "समीक्षक दिशानिर्देश"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "स्टेप्स की समीक्षा करें"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "अनुसूची की समीक्षा करें"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "सबमिशन किया जाना है"
+
+msgid "reviewer.article.schedule"
+msgstr "अनुसूची"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "टिप्पणी देखो"
+
+msgid "reviewer.article.decision.decline"
+msgstr "सबमिशन घटाना"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "कहीं और फिर से जमा करें"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "समीक्षा के लिए पुनः सबमिट करें"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "संशोधन आवश्यक है"
+
+msgid "reviewer.article.decision.accept"
+msgstr "सबमिशन स्वीकार करें"
+
+msgid "reviewer.article.schedule.due"
+msgstr "देय की समीक्षा करें"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "सबमिशन की समीक्षा करें"
+
+msgid "reviewer.article.schedule.response"
+msgstr "तुम्हारा जवाब"
+
+msgid "reviewer.article.schedule.request"
+msgstr "संपादक का अनुरोध"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(यदि आप संपादक के लिए फ़ाइल को एनोटेट करना चाहते हैं, तो अपनी हार्ड ड्राइव "
+"पर सेव करें और ब्राउज़ / अपलोड का उपयोग करें।)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "संस्करण समीक्षक द्वारा अपलोड किया गया"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "अपलोड की गई फाइलें"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "टिप्पणियाँ"
+
+msgid "reviewer.article.submitReview"
+msgstr "संपादक को समीक्षा भेजें"
+
+msgid "reviewer.article.recommendation"
+msgstr "सिफ़ारिश करना"
+
+msgid "reviewer.article.automatic"
+msgstr "(स्वत:)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "याद दिलाना"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "प्रवेश करने के लिए संपादक"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "यहां समीक्षा टिप्पणियों में टाइप या पेस्ट करें"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "सबमिशन संपादक"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"सबमिशन उपलब्ध कराया जाएगा, यदि और जब समीक्षक समीक्षा करने के लिए सहमत हो"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "समीक्षा करने में असमर्थ"
+
+msgid "reviewer.article.canDoReview"
+msgstr "समीक्षा करेंगे"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "संपादक को सूचित करें"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "फाइल की समीक्षा की जाएगी"
+
+msgid "reviewer.averageQuality"
+msgstr "रेटिंग"
+
+msgid "reviewer.completedReviews"
+msgstr "किया हुआ"
+
+msgid "reviewer.pendingReviews"
+msgstr "लेख लंबित समीक्षा"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "दूरस्थ रूप से होस्ट की गई सामग्री का URL"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "यह गैली एक अलग वेबसाइट पर उपलब्ध होगी।"
+
+msgid "submission.layout.imageInvalid"
+msgstr "अमान्य छवि प्रारूप। स्वीकृत प्रारूप हैं .gif, .jpg और .png।"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "अनुपूरक फ़ाइल अपलोड करें"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "फ़ाइल बदलें"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "गैली प्रारूप अपलोड करें"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "लेआउट संपादन असाइनमेंट"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "कोई सक्रिय संपादकीय असाइनमेंट नहीं।"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "सम्पूर्ण संपादकीय असाइनमेंट"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "सक्रिय संपादकीय असाइनमेंट"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "नया समीक्षक बनाएँ"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "समीक्षक के रूप में एक मौजूदा उपयोगकर्ता का नामांकन करें"
+
+msgid "sectionEditor.regrets.result"
+msgstr "परिणाम"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "पछतावा"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "समीक्षक पछतावा और रद्द करना"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "संपादक का निर्णय, दौर {$ round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "सहकर्मी की समीक्षा, दौर {$ round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "पछतावा, रद्द, पिछले सीमा देखें"
+
+msgid "sectionEditor.regrets"
+msgstr "पछतावा"
+
+msgid "sectionEditor.regrets.title"
+msgstr "{{$ सबमिशन}} समीक्षक पछतावा, रद्द करना और पहले की सीमा"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "पछतावा"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"इस प्रूफ़रीडर को फिर से सूचित करने से उनका असाइनमेंट फिर से शुरू हो जाएगा। "
+"क्या आप वाकई ऐसा करने की इच्छा रखते हैं?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"इस लेआउट एडिटर को फिर से सूचित करने से उनका असाइनमेंट फिर से शुरू हो जाएगा। "
+"क्या आप वाकई ऐसा करने की इच्छा रखते हैं?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"इस लेखक को फिर से सूचित करना की उनके असाइनमेंट को फिर से शुरू करे। क्या आप वा"
+"कई ऐसा करने की इच्छा रखते हैं?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"इस कॉपी एडिटर को फिर से सूचित करने से उनका असाइनमेंट फिर से शुरू हो जाएगा। "
+"क्या आप वाकई ऐसा करने की इच्छा रखते हैं?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "कोई सबमिशन नहीं सौंपा गया।"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "सम्पूर्ण संपादकीय असाइनमेंट"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "सक्रिय संपादकीय असाइनमेंट"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<Ol>\n"
+"<li> हाइलाइट किए गए आइटम इंगित करते हैं कि एक संपादक को कार्रवाई की आवश्यकता "
+"है, इस प्रकार लेबल किया गया है:\n"
+"<Ul>\n"
+"<li class = \"highlightCopyediting\"> कॉपीएडिटिंग किए गए चरण में एक क्रिया "
+"आवश्यक है </ li>\n"
+"<li class = \"highlightLayoutEditing\"> लेआउट संपादन चरण </ li> में एक क्रिया"
+" आवश्यक है\n"
+"<li class = \"higlightProofreading\"> प्रूफरीडिंग चरण में एक क्रिया आवश्यक है"
+" </ li>\n"
+"</ Ul>\n"
+"</ Li>\n"
+"</ Ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<Ol>\n"
+"<li> हाइलाइट किए गए आइटम इंगित करते हैं कि एक संपादक को कार्रवाई की आवश्यकता "
+"है, इस प्रकार लेबल किया गया है:\n"
+"<Ul>\n"
+"<li class = \"highlightReviewerNotNotified\"> एक समीक्षक को ईमेल द्वारा "
+"अधिसूचित किया गया है लेकिन उसे अधिसूचित नहीं किया गया है </ li>\n"
+"<li class = \"highlightNoDecision\"> सभी समीक्षक अपनी टिप्पणियों के साथ वापस "
+"आ गए हैं, लेकिन कोई भी निर्णय दर्ज नहीं किया गया है </ li>\n"
+"<li class = \"highlightRevisedCopyUploaded\"> लेखक ने एक संशोधित पांडुलिपि "
+"अपलोड की है </ li>\n"
+"<li class = \"highlightReviewerConfirmationOverdue\"> सहकर्मी समीक्षा आमंत्"
+"रण की पुष्टि करने के लिए समीक्षक अतिदेय है </ li>\n"
+"<li class = \"highlightReviewerCompletionOverdue\"> समीक्षक समीक्षा पूर्ण "
+"करने के लिए अतिदेय है </ li>\n"
+"</ Ul>\n"
+"</ Li>\n"
+"<li> \"ड्यू\" तब भरा जाता है जब समीक्षक समीक्षा का अनुरोध स्वीकार करता है; "
+"यह सप्ताह की संख्या को निर्धारित तिथि या (-) सप्ताह में प्रदर्शित करता है कि "
+"यह अतिदेय है। </ li>\n"
+"</ Ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"क्षमा करें, आपके पास इस उपयोगकर्ता पर प्रशासनिक अधिकार नहीं हैं। यह हो सकता "
+"है क्योंकि:\n"
+"<Ul>\n"
+"<li> उपयोगकर्ता एक साइट व्यवस्थापक है </ li>\n"
+"<li> उपयोगकर्ता उन पत्रिकाओं में सक्रिय है जिन्हें आप </ li> प्रबंधित नहीं "
+"करते हैं\n"
+"</ Ul>\n"
+"यह कार्य किसी साइट व्यवस्थापक द्वारा किया जाना चाहिए।\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"इस उपयोगकर्ता को अक्षम करें? यह उपयोगकर्ता को सिस्टम में लॉग इन करने से "
+"रोकेगा।\n"
+"\n"
+"आप वैकल्पिक रूप से उपयोगकर्ता को उनके खाते को अक्षम करने का कारण प्रदान कर "
+"सकते हैं।"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p> किसी लेखक द्वारा उद्धृत कार्य के ऑनलाइन संस्करणों का पता लगाने के लिए "
+"पाठकों को सक्षम करने के लिए, निम्नलिखित विकल्प उपलब्ध हैं। </ p>\n"
+"\n"
+"<Ol>\n"
+"<li> <strong> एक रीडिंग टूल जोड़ें </ strong> <p> जर्नल मैनेजर प्रकाशित टूल "
+"के साथ पढ़ने वाले टूल में \"संदर्भ खोजें\" जोड़ सकते हैं, जो पाठकों को संदर्"
+"भ का शीर्षक पेस्ट करने और फिर पूर्व-चयनित विद्वानों को खोजने में सक्षम बनाता "
+"है उद्धृत कार्य के लिए डेटाबेस। </ p> </ li>\n"
+"<li> <strong> संदर्भ में लिंक एम्बेड करें </ strong> <p> लेआउट संपादक उन "
+"संदर्भों के लिए एक लिंक जोड़ सकता है जो निम्नलिखित निर्देशों का उपयोग करके "
+"ऑनलाइन पाया जा सकता है (जिसे संपादित किया जा सकता है)। </ p> </ li>\n"
+"</ Ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"स्टेप्स: सबमिशन क्यू &gt; सबमिशन रिव्यू &gt; सबमिशन एडिटिंग &gt; विषय-तालिका "
+"। <br/><br/> संपादकीय प्रक्रिया के इन पहलुओं को संभालने के लिए एक मॉडल का "
+"चयन करें । (एक प्रबंध संपादक और अनुभाग संपादकों को नामित करने के लिए, जर्नल "
+"प्रबंधन में संपादकों के पास जाएं।)"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "सदस्यता प्रकार"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "संस्थागत सदस्यता"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "व्यक्तिगत सदस्यताएँ"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "सदस्यता प्रबंधन"
+
+msgid "comments.commentsOnArticle"
+msgstr "इस लेख पर टिप्पणियाँ"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "सदस्यता या शुल्क की आवश्यकता है"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "लेआउट गैली अपडेट किया गया"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "लेआउट संपादक सबमिशन करने से अप्रकाशित है"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "लेआउट संपादक सबमिशन करने के लिए सौंपा"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "प्रतिलिपि फ़ाइल अपडेट की गई"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "अंतिम  प्रतिलिपि पूर्ण हुई"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "प्रारंभिक प्रतिलिपि पूरी हुई"
+
+msgid "subscriptions.status.other"
+msgstr "अन्य, नोट्स देखें"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "ऑनलाइन भुगतान की प्रतीक्षा है"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "मैनुअल भुगतान की प्रतीक्षा है"
+
+msgid "subscriptions.status.active"
+msgstr "सक्रिय"
+
+msgid "subscriptions.status"
+msgstr "स्थिति"
+
+msgid "subscriptions.inactive"
+msgstr "निष्क्रिय"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "प्रिंट और ऑनलाइन"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "गैर समाप्त"
+
+msgid "issue.return"
+msgstr "अंक विवरण पर लौटें"
+
+msgid "issue.nonpdf.title"
+msgstr "अंक डाउनलोड"
+
+msgid "issue.coverPage.altText"
+msgstr "आवरण पृष्ठ"
+
+msgid "issue.abstract"
+msgstr "सार"
+
+msgid "issue.toc"
+msgstr "सामग्री की तालिका"
+
+msgid "issue.year"
+msgstr "वर्ष"
+
+msgid "issue.number"
+msgstr "संख्या"
+
+msgid "issue.volume"
+msgstr "वाल्यूम"
+
+msgid "issue.title"
+msgstr "शीर्षक"
+
+msgid "issue.issues"
+msgstr "अंक"
+
+msgid "issue.issue"
+msgstr "अंक"
+
+msgid "user.role.managers"
+msgstr "जर्नल प्रबंधकों"
+
+msgid "user.role.manager"
+msgstr "जर्नल प्रबंधक"
+
+msgid "user.noRoles.regReviewer"
+msgstr "एक समीक्षक के रूप में पंजीकृत करें"
+
+msgid "user.noRoles.submitArticle"
+msgstr "प्रस्ताव प्रस्तुत करें"
+
+msgid "user.manageMySubscriptions"
+msgstr "मेरी सदस्यता प्रबंधित करें"
+
+msgid "user.registerForOtherJournals"
+msgstr "अन्य जर्नल्स के लिए पंजीकरण करें"
+
+msgid "user.showAllJournals"
+msgstr "मेरी जर्नल्स दिखाएँ"
+
+msgid "journal.viewAllIssues"
+msgstr "सभी अंक देखें"
+
+msgid "journal.path"
+msgstr "पथ"
+
+msgid "context.contexts"
+msgstr "जर्नल्स"
+
+msgid "submission.search"
+msgstr "लेख खोज"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "जोड़ना"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "हटाएं"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "कृपया एक मान्य IP श्रेणी दर्ज करें।"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"यदि आईपी रेंज यहां दर्ज की जाती है, तो डोमेन वैकल्पिक है। <br /> मान्य मानों "
+"में एक आईपी पता (जैसे 142.58.103.1), आईपी रेंज (जैसे 142.58.103.1 - "
+"142.58.103.4), वाइल्डकार्ड के साथ आईपी रेंज शामिल है * '( उदा। 142.58। *। *)"
+", और सीआईडीआर के साथ एक आईपी रेंज (जैसे 142.58.100.0/24)।"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "आईपी रेंज"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "कृपया एक मान्य डोमेन दर्ज करें।"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"चयनित सदस्यता प्रकार को सदस्यता प्रमाणीकरण के लिए एक डोमेन और / या एक आईपी "
+"रेंज की आवश्यकता होती है।"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"यदि एक डोमेन यहां दर्ज किया गया है, तो आईपी रेंज वैकल्पिक हैं। <br /> वैध मा"
+"न डोमेन नाम हैं (उदा। Lib.sfu.ca)।"

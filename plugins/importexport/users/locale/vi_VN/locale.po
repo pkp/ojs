@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-05-01 00:25+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Xuất tất cả"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Xuất theo vai trò"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Xuất người dùng"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Vui lòng tải lên một tập tin trong \"Nhập\" để tiếp tục."
+
+msgid "plugins.importexport.users.results"
+msgstr "Kết quả"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Việc nhập thành công. Người dùng có username và địa chỉ email chưa được sử "
+"dụng đã được nhập cùng với các nhóm người dùng đi kèm."
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Không thể ghi vào tập tin \"{$fileName}\"."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Xuất dữ liệu người dùng"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr ""
+"Một đường dẫn tạp chí không xác định \"{$journalPath}\" đã được chỉ định."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Không thể sử dụng mật khẩu được băm với {$importHash}; OJS được định cấu "
+"hình để sử dụng {$ojsHash}. Nếu bạn tiếp tục, bạn sẽ cần đặt lại mật khẩu "
+"của người dùng đã nhập."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Cảnh báo"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Xác nhận rằng đây là những người dùng bạn muốn nhập vào hệ thống"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Xảy ra lỗi trong quá trình nhập"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Những người dùng sau đã được nhập thành công vào hệ thống"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Tiếp tục nhập người dùng khác nếu xảy ra lỗi."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Gửi email thông báo cho mỗi người dùng được nhập có chứa username và mật "
+"khẩu của người dùng."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Tập tin dữ liệu người dùng"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Chọn tập tin dữ liệu XML chứa thông tin người dùng để nhập vào tạp chí này. "
+"Xem trợ giúp tạp chí để biết chi tiết về định dạng của tập tin này. <br /> <"
+"br /> Lưu ý rằng nếu tập tin đã nhập chứa bất kỳ username hoặc địa chỉ email "
+"nào đã tồn tại trong hệ thống, dữ liệu người dùng cho những người dùng đó sẽ "
+"không được nhập và bất kỳ vai trò mới nào sẽ được tạo sẽ được gán cho người "
+"dùng hiện tại."
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Nhập người dùng"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Ví dụ:\n"
+"\tNhập người dùng vào myJournal từ myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} nhập myImportFile.xml myJournal\n"
+"\n"
+"\tXuất tất cả người dùng từ myJournal:\n"
+"\t{$scriptName} {$pluginName} xuất myExportFile.xml myJournal\n"
+"\n"
+"\tXuất người dùng được chỉ định bởi ID của họ:\n"
+"\t{$scriptName} {$pluginName} xuất myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Usage: {$scriptName} {$pluginName} [command] ...\n"
+"Các lệnh:\n"
+"\tnhập [xmlFileName] [journal_path]\n"
+"\txuất [xmlFileName] [journal_path]\n"
+"\txuất [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.description"
+msgstr "Nhập và xuất người dùng"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Plugin XML người dùng"
