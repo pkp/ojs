@@ -331,7 +331,8 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 */
 	protected function checkDoiRegistration($doi, $sampleFile, $expectedTargetUrl) {
 		// Prepare HTTP session.
-		$curlCh = curl_init ();
+		import('lib.pkp.classes.helpers.PKPCurlHelper');
+		$curlCh = PKPCurlHelper::getCurlObject();
 
 		// Set up basic authentication.
 		$login = 'TIB.OJSTEST:' . $this->dcPassword;
@@ -340,7 +341,6 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 
 		// Request the DOI's URL over SSL.
 		$apiUrl = "https://mds.datacite.org/%action/$doi?testMode=true";
-		curl_setopt($curlCh, CURLOPT_SSL_VERIFYPEER, false);
 
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
 		try {
