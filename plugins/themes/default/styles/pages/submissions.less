@@ -23,10 +23,6 @@
 		li {
 			position: relative;
 			border-bottom: none;
-
-			&:before {
-				.fa();
-			}
 		}
 	}
 
@@ -45,8 +41,7 @@
 		li {
 			padding: @double;
 
-			&:before {
-				content: @fa-var-check;
+			.fa {
 				top: 50%;
 				left: @half;
 				-webkit-transform: translate(-50%, -50%);
@@ -65,8 +60,7 @@
 
 		.submission_sections {
 			li {
-				&:before {
-					content: @fa-var-chevron-right;
+				.fa {
 					top: 22px;
 					left: @double - 3;
 				}
@@ -83,7 +77,7 @@
 				padding: @double @double @double (@double * 2);
 				border-bottom: @bg-border;
 				
-				&:before {
+				.fa {
 					left: @double;
 				}
 			}
