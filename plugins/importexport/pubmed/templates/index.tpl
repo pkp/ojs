@@ -69,7 +69,7 @@
 								{translate key="common.selectAll"}
 							</template>
 						</pkp-button>
-						<pkp-button type="submit" id="submitFormButton" @click="$('#exportSubmissionXmlForm').submit()">
+						<pkp-button @click="submit('#exportSubmissionXmlForm')">
 							{translate key="plugins.importexport.native.exportSubmissions"}
 						</pkp-button>
 					{/fbvFormSection}
