@@ -406,9 +406,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 				'label' => __('plugins.pubIds.urn.displayName'),
 				'description' => __('plugins.pubIds.urn.editor.urn.description', ['prefix' => $prefix]),
 				'value' => $form->publication->getData('pub-id::other::urn'),
-				'i18n' => [
-					'addCheckNumber' => __('plugins.pubIds.urn.editor.addCheckNo'),
-				],
 			]));
 		}
 	}
