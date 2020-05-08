@@ -19,7 +19,7 @@ import('lib.pkp.classes.payment.CompletedPayment');
 
 class OJSCompletedPaymentDAO extends DAO {
 	/**
-	 * Retrieve a ComplatedPayment by its ID.
+	 * Retrieve a CompletedPayment by its ID.
 	 * @param $completedPaymentId int
 	 * @param $contextId int optional
 	 * @return CompletedPayment
@@ -189,9 +189,10 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve an array of payments for a particular user ID.
-	 * @param $userId int
-	 * @return array Matching payments
+	 * Retrieve CompletedPayments by user ID
+	 * @param $userId int User ID
+	 * @param $rangeInfo DBResultRange Optional
+	 * @return object DAOResultFactory containing matching CompletedPayment objects
 	 */
 	function getByUserId($userId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -200,13 +201,7 @@ class OJSCompletedPaymentDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$payment = $this->_fromRow($result->fields);
-			$returner[$payment->getId()] = $payment;
-			$result->MoveNext();
-		}
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
