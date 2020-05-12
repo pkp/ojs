@@ -492,12 +492,18 @@ class IssueGridHandler extends GridHandler {
 				'status' => STATUS_SCHEDULED,
 				'count' => 5000, // large upper limit
 			]);
-			$dataObjectTombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $dataObjectTombstoneDao DataObjectTombstoneDAO */
-			foreach ($submissionsIterator as $submission) {
-				$publication = $submission->getLatestPublication();
-				if ($publication->getData('status') === STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
-					$publication = Services::get('publication')->publish($publication);
+			
+			$dataObjectTombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var $dataObjectTombstoneDao DataObjectTombstoneDAO */
+
+			foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
+				$publications = $submission->getData('publications');
+
+				foreach ($publications as $publication) { /** @var Publication $publication */
+					if ($publication->getData('status') === STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
+						$publication = Services::get('publication')->publish($publication);
+					}
 				}
+
 				// delete article tombstone
 				$dataObjectTombstoneDao->deleteByDataObjectId($submission->getId());
 			}
@@ -556,9 +562,17 @@ class IssueGridHandler extends GridHandler {
 			'issueIds' => $issue->getId(),
 			'count' => 5000, // large upper limit
 		]);
-		foreach ($submissionsIterator as $submission) {
+
+		foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
 			$articleTombstoneManager->insertArticleTombstone($submission, $journal);
-			$submission = Services::get('submission')->edit($submission, ['status' => STATUS_QUEUED], $request);
+
+			$publications = $submission->getData('publications');
+			foreach ($publications as $publication) { /** @var Publication $publication */
+				if ($publication->getData('status') === STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
+					$publication = Services::get('publication')->unpublish($publication);
+					$publication = Services::get('publication')->publish($publication);
+				}
+			}
 		}
 
 		$dispatcher = $request->getDispatcher();
