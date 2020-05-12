@@ -17,29 +17,29 @@
 	<code function="createDatabase"/>
 
 	<!-- PKP schema components -->
-	<schema class="lib.pkp.classes.migration.AnnouncementsMigration" />
-	<schema class="lib.pkp.classes.migration.CategoriesMigration" />
-	<schema class="lib.pkp.classes.migration.CommonMigration" />
-	<schema class="lib.pkp.classes.migration.ControlledVocabMigration" />
-	<schema class="lib.pkp.classes.migration.GenresMigration" />
-	<schema class="lib.pkp.classes.migration.LibraryFilesMigration" />
-	<schema class="lib.pkp.classes.migration.LogMigration" />
-	<schema class="lib.pkp.classes.migration.MetadataMigration" />
-	<schema class="lib.pkp.classes.migration.MetricsMigration" />
-	<schema class="lib.pkp.classes.migration.NavigationMenusMigration" />
-	<schema class="lib.pkp.classes.migration.NotesMigration" />
-	<schema class="lib.pkp.classes.migration.ReviewFormsMigration" />
-	<schema class="lib.pkp.classes.migration.ReviewsMigration" />
-	<schema class="lib.pkp.classes.migration.RolesAndUserGroupsMigration" />
-	<schema class="lib.pkp.classes.migration.ScheduledTasksMigration" />
-	<schema class="lib.pkp.classes.migration.SubmissionFilesMigration" />
-	<schema class="lib.pkp.classes.migration.SubmissionsMigration" />
-	<schema class="lib.pkp.classes.migration.TemporaryFilesMigration" />
-	<schema class="lib.pkp.classes.migration.TombstoneMigration" />
-	<schema class="lib.pkp.classes.migration.ViewsMigration" />
+	<migration class="lib.pkp.classes.migration.AnnouncementsMigration" />
+	<migration class="lib.pkp.classes.migration.CategoriesMigration" />
+	<migration class="lib.pkp.classes.migration.CommonMigration" />
+	<migration class="lib.pkp.classes.migration.ControlledVocabMigration" />
+	<migration class="lib.pkp.classes.migration.GenresMigration" />
+	<migration class="lib.pkp.classes.migration.LibraryFilesMigration" />
+	<migration class="lib.pkp.classes.migration.LogMigration" />
+	<migration class="lib.pkp.classes.migration.MetadataMigration" />
+	<migration class="lib.pkp.classes.migration.MetricsMigration" />
+	<migration class="lib.pkp.classes.migration.NavigationMenusMigration" />
+	<migration class="lib.pkp.classes.migration.NotesMigration" />
+	<migration class="lib.pkp.classes.migration.ReviewFormsMigration" />
+	<migration class="lib.pkp.classes.migration.ReviewsMigration" />
+	<migration class="lib.pkp.classes.migration.RolesAndUserGroupsMigration" />
+	<migration class="lib.pkp.classes.migration.ScheduledTasksMigration" />
+	<migration class="lib.pkp.classes.migration.SubmissionFilesMigration" />
+	<migration class="lib.pkp.classes.migration.SubmissionsMigration" />
+	<migration class="lib.pkp.classes.migration.TemporaryFilesMigration" />
+	<migration class="lib.pkp.classes.migration.TombstoneMigration" />
+	<migration class="lib.pkp.classes.migration.ViewsMigration" />
 
 	<!-- OJS schema -->
-	<schema class="classes.migration.OJSMigration" />
+	<migration class="classes.migration.OJSMigration" />
 
 	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
 	<data file="dbscripts/xml/indexes.xml" />
