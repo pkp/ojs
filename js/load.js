@@ -13,6 +13,7 @@ import PkpLoad from '../lib/pkp/js/load.js';
 // Import controllers used by OJS
 import Container from '@/components/Container/Container.vue';
 import PageContainer from '@/components/Container/PageContainer.vue';
+import AddContextContainer from '@/components/Container/AddContextContainer.vue';
 import AdminPageContainer from '@/components/Container/AdminPageContainer.vue';
 import ImportExportContainer from '@/components/Container/ImportExportContainer.vue';
 import SettingsContainer from '@/components/Container/SettingsContainer.vue';
@@ -28,6 +29,7 @@ window.pkp = Object.assign(PkpLoad, {
 	controllers: {
 		Container,
 		PageContainer,
+		AddContextContainer,
 		AdminPageContainer,
 		ImportExportContainer,
 		SettingsContainer,
