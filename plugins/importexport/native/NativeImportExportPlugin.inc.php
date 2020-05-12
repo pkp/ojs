@@ -91,7 +91,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					],
 				]);
 				$templateMgr->assign([
-					'pageComponent' => 'ImportExportContainer',
+					'pageComponent' => 'ImportExportPage',
 				]);
 				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
