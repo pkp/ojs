@@ -83,7 +83,7 @@ class Upgrade extends Installer {
 
 			// Delete the files in the files_dir:
 			$submissionFileManager = new SubmissionFileManager($journalId, $articleId);
-			$basePath = $submissionFileManager->getBasePath() . '/';
+			$basePath = $submissionFileManager->getBasePath();
 			// Get all file revisions
 			$fileResult = $submissionDao->retrieve('SELECT file_id, revision, file_name FROM article_files WHERE file_id = ?', array($fileId));
 			while (!$fileResult->EOF) {
@@ -932,7 +932,7 @@ class Upgrade extends Installer {
 				$submissionFiles = $submissionFileDao->getBySubmissionId($submission->getId());
 				foreach ($submissionFiles as $submissionFile) {
 					$generatedFilename = $submissionFile->getServerFileName();
-					$basePath = $submissionFileManager->getBasePath() . '/';
+					$basePath = $submissionFileManager->getBasePath();
 					$globPattern = $ojs2FileNames[$submissionFile->getFileId()][$submissionFile->getRevision()];
 
 					$pattern1 = glob($basePath . '*/*/' . $globPattern);
@@ -2494,7 +2494,7 @@ class Upgrade extends Installer {
 			$submissions = $submissionDao->getByContextId($context->getId());
 			while ($submission = $submissions->next()) {
 				$submissionFileManager = new SubmissionFileManager($context->getId(), $submission->getId());
-				$basePath = $submissionFileManager->getBasePath() . '/';
+				$basePath = $submissionFileManager->getBasePath();
 				$submissionFiles = $submissionFileDao->getBySubmissionId($submission->getId());
 				foreach ($submissionFiles as $submissionFile) {
 					// Ignore files with style genre -- if they exist, they are corrected manually i.e.
@@ -2555,7 +2555,7 @@ class Upgrade extends Installer {
 				// Get the old file path (after the 3.0.x migration, i.e. from OJS 2.4.x)
 				// and the correct file path
 				$submissionFileManager = new SubmissionFileManager($journal->getId(), $row['submission_id']);
-				$basePath = $submissionFileManager->getBasePath() . '/';
+				$basePath = $submissionFileManager->getBasePath();
 				$sourceFilename = $basePath . 'public' . '/' . $wrongServerName;
 				$targetFilename = $basePath . 'submission/proof' . '/' . $newServerName;
 				// Move the file
@@ -2596,7 +2596,7 @@ class Upgrade extends Installer {
 			$row = $result->GetRowAssoc(false);
 			$submissionFileRevision = $submissionFileDao->getRevision($row['file_id'], $row['revision']);
 			$submissionFileManager = new SubmissionFileManager($row['context_id'], $submissionFileRevision->getSubmissionId());
-			$basePath = $submissionFileManager->getBasePath() . '/';
+			$basePath = $submissionFileManager->getBasePath();
 			$generatedOldFilename = $submissionFileRevision->getServerFileName();
 			$oldFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedOldFilename;
 			$submissionFileRevision->setFileStage(SUBMISSION_FILE_PROOF);
