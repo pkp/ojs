@@ -235,12 +235,10 @@ class PublicationService extends PKPPublicationService {
 		// In OJS, a publication may be scheduled in a future issue. In such cases,
 		// the datePublished should remain empty and the status should be set to
 		// scheduled.
-		if (!$oldPublication->getData('datePublished')) {
-			$issue = Services::get('issue')->get($newPublication->getData('issueId'));
-			if ($issue && !$issue->getData('published')) {
-				$newPublication->setData('datePublished', '');
-				$newPublication->setData('status', STATUS_SCHEDULED);
-			}
+		$issue = Services::get('issue')->get($newPublication->getData('issueId'));
+		if ($issue && !$issue->getData('published')) {
+			$newPublication->setData('datePublished', '');
+			$newPublication->setData('status', STATUS_SCHEDULED);
 		}
 	}
 
