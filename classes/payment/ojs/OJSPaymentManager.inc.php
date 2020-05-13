@@ -43,7 +43,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @param $type int PAYMENT_TYPE_...
 	 * @param $userId int ID of user responsible for payment
 	 * @param $assocId int ID of associated entity
-	 * @param $amount numeric Amount of currency $currencyCode
+	 * @param $amount float Amount of currency $currencyCode
 	 * @param $currencyCode string optional ISO 4217 currency code
 	 * @return QueuedPayment
 	 */
@@ -156,7 +156,7 @@ class OJSPaymentManager extends PaymentManager {
 
 	/**
 	 * Get the payment plugin.
-	 * @return PaymentPlugin
+	 * @return PaymethodPlugin
 	 */
 	function getPaymentPlugin() {
 		$paymentMethodPluginName = $this->_context->getData('paymentPluginName');

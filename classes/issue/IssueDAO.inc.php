@@ -150,7 +150,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @param $volume int
 	 * @param $number int
 	 * @param $year int
-	 * @return Iterator object
+	 * @return DAOResultFactory object
 	 */
 	function getPublishedIssuesByNumber($journalId, $volume = null, $number = null, $year = null) {
 		$sql = 'SELECT i.* FROM issues i WHERE i.published = 1 AND i.journal_id = ?';

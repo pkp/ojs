@@ -26,7 +26,7 @@ class PublishForm extends FormComponent {
 	/** @copydoc FormComponent::$method */
 	public $method = 'PUT';
 
-	/** @var Publication */
+	/** @var \Publication */
 	public $publication;
 
 	/**

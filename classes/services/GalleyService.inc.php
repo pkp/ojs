@@ -77,7 +77,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 
 	/**
 	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getQueryBuilder()
-	 * @return GalleryQueryBuilder
+	 * @return GalleyQueryBuilder
 	 */
 	public function getQueryBuilder($args = []) {
 		$galleyQB = new GalleyQueryBuilder();

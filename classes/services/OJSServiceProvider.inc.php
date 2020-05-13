@@ -29,7 +29,7 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
 	/**
 	 * Registers services
-	 * @param Pimple\Container $pimple
+	 * @param \Pimple\Container $pimple
 	 */
 	public function register(Container $pimple) {
 
