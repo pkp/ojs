@@ -30,10 +30,10 @@
 			<script type="text/javascript">
 				$(function() {ldelim}
 					// Attach the form handler.
-					$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+					$('#exportXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 				{rdelim});
 			</script>
-			<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
+			<form id="exportXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
 				{csrf}
 				{fbvFormArea id="submissionsXmlForm"}
 					<submissions-list-panel
@@ -69,7 +69,7 @@
 								{translate key="common.selectAll"}
 							</template>
 						</pkp-button>
-						<pkp-button @click="submit('#exportSubmissionXmlForm')">
+						<pkp-button @click="submit('#exportXmlForm')">
 							{translate key="plugins.importexport.native.exportSubmissions"}
 						</pkp-button>
 					{/fbvFormSection}
