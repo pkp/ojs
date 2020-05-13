@@ -86,13 +86,11 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 			}, array_unique($publicationIds));
 			$foundArticles = array_unique(array_merge($foundArticles, $submissionIds));
 		}
-		$results = array_filter($foundArticles);
 
-		// Exclude current submission from results.
-		$keyToDelete = array_search($displayedArticle->getId(), $results);
-		if ($keyToDelete !== false) {
-			unset($results[$keyToDelete]);
-		}
+		$results = array_filter($foundArticles, function($value) use ($displayedArticle) {
+			if ($value !== $displayedArticle->getId()) return $value;
+			return null;
+		});
 
 		// Order results by metric.
 		$application = Application::get();
