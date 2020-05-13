@@ -203,9 +203,6 @@ msgstr ""
 "Alle Bedingungen für die Veröffentichung sind erfüllt. Sind Sie sicher, dass "
 "Sie dies veröffentlichen wollen?"
 
-msgid "publication.issue.success"
-msgstr "Die Details der Ausgabe dieser Veröffentlichung wurden aktualisiert."
-
 msgid "publication.invalidIssue"
 msgstr "Die Ausgabe für diese Veröffentlichung konnte nicht gefunden werden."
 

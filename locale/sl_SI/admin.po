@@ -218,18 +218,3 @@ msgstr "Obvestilo o prostem dostopu"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Opomnik za recenzijo"
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} je bil uspešno spremenjen."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} je bilo uspešno ustvarjeno."
-
-msgid "admin.settings.info.success"
-msgstr "Informacije o spletni strani so bile uspešno posodobljene."
-
-msgid "admin.settings.config.success"
-msgstr "Nastavitve konfiguracije spletne strani so bile uspešno posodobljene."
-
-msgid "admin.settings.appearance.success"
-msgstr "Nastavitve izgleda spletne strani so bile uspešno posodobljene."

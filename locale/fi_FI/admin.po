@@ -178,18 +178,3 @@ msgstr "Open Access -ilmoitus"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Muistutus arvioinnista"
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name}-julkaisua muokattiin onnistuneesti."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} luotiin onnistuneesti."
-
-msgid "admin.settings.info.success"
-msgstr "Sivuston tiedot päivitetty."
-
-msgid "admin.settings.config.success"
-msgstr "Sivuston asetukset päivitetty."
-
-msgid "admin.settings.appearance.success"
-msgstr "Sivuston ulkoasun asetukset päivitetty."

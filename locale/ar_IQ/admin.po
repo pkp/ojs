@@ -14,15 +14,6 @@ msgstr ""
 msgid "admin.hostedContexts"
 msgstr "المجلات المستضافة"
 
-msgid "admin.settings.appearance.success"
-msgstr "إعدادات مظهر الموقع تغيرت بنجاح."
-
-msgid "admin.settings.config.success"
-msgstr "إعدادات الموقع تغيرت بنجاح."
-
-msgid "admin.settings.info.success"
-msgstr "معلومات تعريف الموقع تغيرت بنجاح."
-
 msgid "admin.settings.redirect"
 msgstr "إعادة توجيه موقع المجلة"
 
@@ -126,12 +117,6 @@ msgstr "تسمية المسار متوقع لها أن تتكون من سلسل�
 
 msgid "admin.contexts.form.pathExists"
 msgstr "المسار الذي أدخلته سبق وأن استُعمل لمجلة أخرى"
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} قد تم إنشاؤها بنجاح."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} قد تم تعديلها بنجاح."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "إسمح لهذه المجلة بالظهور علانية في الموقع"

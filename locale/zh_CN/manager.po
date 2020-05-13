@@ -1368,9 +1368,6 @@ msgstr "PKP存储网络（PN）为满足一些基本条件的任何OJS期刊提�
 msgid "manager.setup.plnPluginEnable"
 msgstr "启用PKP PN插件"
 
-msgid "manager.setup.lists.success"
-msgstr "该期刊的列表设置已更新。"
-
 msgid "manager.setup.keyInfo.description"
 msgstr "提供您的期刊的简短说明，并确定编辑，执行董事和编辑团队的其他成员。"
 
@@ -1394,9 +1391,6 @@ msgstr "期刊摘要"
 msgid "manager.setup.itemsPerPage.description"
 msgstr "在另一个页面中显示后续项目之前，请限制要在列表中显示的项目（例如投稿，用户或编辑分配）的数量。"
 
-msgid "manager.setup.information.success"
-msgstr "该期刊的信息已更新。"
-
 msgid "manager.setup.includeCreativeCommons"
 msgstr "对于提供立即或延迟开放访问的期刊，请在适当的时间随附所有已发表作品的 知识共享(Creative Commons) 许可。"
 
@@ -1415,14 +1409,8 @@ msgstr "主页将显示的公告数目。 将此留空以不显示任何内容�
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "在首页上显示"
 
-msgid "manager.setup.contact.success"
-msgstr "该期刊的联系方式已更新。"
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "简介"
-
-msgid "manager.setup.announcements.success"
-msgstr "公告设置已更新。"
 
 msgid "manager.setup.pageHeader"
 msgstr "期刊页面头部"
@@ -1454,9 +1442,6 @@ msgstr "付款方式"
 msgid "manager.payment.readerFeesDescription"
 msgstr "选定的选项以及它们的描述和费用（可在下面进行编辑），将显示在“政策”下的“关于期刊”中以及需要付款的地方。"
 
-msgid "manager.payment.success"
-msgstr "支付设置已更新。"
-
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "您确定要删除此订阅吗？"
 
@@ -1465,9 +1450,6 @@ msgstr "这将激活订阅的支付功能，其中类型，成本，期限和订
 
 msgid "manager.website.archiving"
 msgstr "存档"
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "发布详细信息已更新。"
 
 msgid "manager.distribution.publishingMode.none"
 msgstr "OJS 将不会用于在线发布该期刊的内容。"

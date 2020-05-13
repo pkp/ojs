@@ -200,18 +200,3 @@ msgstr "Notifica Open Access"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Sollecito per il revisore"
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} è stato aggiornato."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} è stato generato correttamente."
-
-msgid "admin.settings.info.success"
-msgstr "Le informazioni sul sito sono state aggiornate."
-
-msgid "admin.settings.config.success"
-msgstr "Le configurazioni del sito sono state aggiornate."
-
-msgid "admin.settings.appearance.success"
-msgstr "Le configurazioni grafiche del sito sono state aggiornate."

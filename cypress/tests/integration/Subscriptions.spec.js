@@ -29,14 +29,14 @@ describe('Subscription tests', function() {
 		cy.get('select#paymentSettings-currency-control').select('Canadian Dollar');
 		cy.get('textarea#paymentSettings-manualInstructions-control').type('In order to complete your payment, please...', {delay: 0});
 		cy.get('div#payments button:contains("Save")').click();
-		cy.get('div:contains("The payment settings have been updated.")');
+		cy.get('#payments [role="status"]').contains('Saved');
 
 		// Access settings
 		cy.waitJQuery();
 		cy.get('button#access-button').click();
 		cy.get('label:contains("The journal will require subscriptions") input').click();
 		cy.get('div#access button:contains("Save")').click();
-		cy.get('div:contains("The publishing details have been updated.")');
+		cy.get('#access [role="status"]').contains('Saved');
 
 		// FIXME: The payment menu should now be visible, but it's not. (pkp/pkp-lib#5408)
 		cy.reload();

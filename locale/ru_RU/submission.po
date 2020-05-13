@@ -185,9 +185,6 @@ msgstr "Раздел для этой публикации не удаётся н
 msgid "publication.invalidIssue"
 msgstr "Выпуск для этой публикации не удаётся найти."
 
-msgid "publication.issue.success"
-msgstr "информация о выпуске этой публикации была обновлена."
-
 msgid "publication.publish.confirmation"
 msgstr "Все требования к публикации были выполнены. Вы уверены, что хотите опубликовать этот материал?"
 

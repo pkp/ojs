@@ -28,6 +28,7 @@ class FieldUrn extends FieldText {
 	public function getConfig() {
 		$config = parent::getConfig();
 		$config['urnPrefix'] = $this->urnPrefix;
+		$config['addCheckNumberLabel'] = __('plugins.pubIds.urn.editor.addCheckNo');
 
 		return $config;
 	}

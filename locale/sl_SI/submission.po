@@ -223,6 +223,3 @@ msgstr "Nastavitve rubrike"
 
 msgid "submission.submit.noContext"
 msgstr "Revije, ki je bila določena prispevku, ni bila najdena."
-
-msgid "publication.issue.success"
-msgstr "Podroibnosti objave so bile posodobljene."

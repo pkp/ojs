@@ -28,6 +28,6 @@ describe('Sites with more than one context', function() {
 		cy.wait(1000);
 		cy.get('span').contains('Enable this journal').siblings('input').check();
 		cy.get('button').contains('Save').click();
-		cy.contains('Journal of Public Knowledge was edited successfully.');
+		cy.get('#editContext [role="status"]').contains('Saved');
 	});
 });

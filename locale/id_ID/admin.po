@@ -205,18 +205,3 @@ msgstr ""
 "digunakan atau untuk mengurutkan\n"
 "\t\thasil pencarian. Silakan pilih salah satu jenis metrik sebagai bawaan.\n"
 "\t"
-
-msgid "admin.settings.info.success"
-msgstr "Informasi situs telah berhasil diperbarui."
-
-msgid "admin.settings.config.success"
-msgstr "Pengaturan konfigurasi situs telah berhasil diperbarui."
-
-msgid "admin.settings.appearance.success"
-msgstr "Pengaturan tampilan situs telah berhasil diperbarui."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} telah berhasil disunting."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} telah berhasil dibuat."
