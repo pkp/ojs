@@ -84,9 +84,13 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 				$publication = Services::get('publication')->get($publicationId);
 				return $publication->getData('status') == STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
 			}, array_unique($publicationIds));
-			$foundArticles = array_merge($foundArticles, array_unique($submissionIds));
+			$foundArticles = array_unique(array_merge($foundArticles, $submissionIds));
 		}
-		$results = array_filter($foundArticles);
+
+		$results = array_filter($foundArticles, function($value) use ($displayedArticle) {
+			if ($value !== $displayedArticle->getId()) return $value;
+			return null;
+		});
 
 		// Order results by metric.
 		$application = Application::get();
