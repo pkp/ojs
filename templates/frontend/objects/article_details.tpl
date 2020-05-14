@@ -260,7 +260,7 @@
 			{/if}
 			{if $supplementaryGalleys}
 				<div class="item galleys">
-					<h2 class="pkp_screen_reader">Other Files</h2>
+					<h3 class="pkp_screen_reader">Additional Files</h3>
 					<ul class="value supplementary_galleys_links">
 						{foreach from=$supplementaryGalleys item=galley}
 							<li>
