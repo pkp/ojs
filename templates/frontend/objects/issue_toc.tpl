@@ -15,7 +15,11 @@
  * @uses $publishedSubmissions array Lists of articles published in this issue
  *   sorted by section.
  * @uses $primaryGenreIds array List of file genre ids for primary file types
+ * @uses $heading string HTML heading element, default: h2
  *}
+{if !$heading}
+	{assign var="heading" value="h2"}
+{/if}
 <div class="obj_issue_toc">
 
 	{* Indicate if this is only a preview *}
@@ -82,9 +86,9 @@
 	{* Full-issue galleys *}
 	{if $issueGalleys}
 		<div class="galleys">
-			<h2 id="issueTocGalleyLabel">
+			<{$heading} id="issueTocGalleyLabel">
 				{translate key="issue.fullIssue"}
-			</h2>
+			</{$heading}>
 			<ul class="galleys_links">
 				{foreach from=$issueGalleys item=galley}
 					<li>
@@ -101,9 +105,9 @@
 		<div class="section">
 		{if $section.articles}
 			{if $section.title}
-				<h2>
+				<{$heading}>
 					{$section.title|escape}
-				</h2>
+				</{$heading}>
 			{/if}
 			<ul class="cmp_article_list articles">
 				{foreach from=$section.articles item=article}
