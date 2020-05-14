@@ -25,13 +25,13 @@
     "vuedraggable": "^2.23.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.2",
-    "@vue/cli-plugin-eslint": "^4.1.2",
-    "@vue/cli-service": "^4.1.2",
+    "@foreachbe/cypress-tinymce": "^1.0.0",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.3",
-    "@foreachbe/cypress-tinymce": "^1.0.0",
-    "cypress": "^3.8.1",
+    "cypress": "^4.5.0",
     "cypress-failed-log": "^2.5.1",
     "cypress-file-upload": "^3.5.1",
     "cypress-wait-until": "^1.6.1",
