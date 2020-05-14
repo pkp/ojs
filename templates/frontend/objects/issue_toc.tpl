@@ -20,6 +20,14 @@
 {if !$heading}
 	{assign var="heading" value="h2"}
 {/if}
+{assign var="articleHeading" value="h3"}
+{if $heading == "h3"}
+	{assign var="articleHeading" value="h4"}
+{elseif $heading == "h4"}
+	{assign var="articleHeading" value="h5"}
+{elseif $heading == "h5"}
+	{assign var="articleHeading" value="h6"}
+{/if}
 <div class="obj_issue_toc">
 
 	{* Indicate if this is only a preview *}
@@ -112,7 +120,7 @@
 			<ul class="cmp_article_list articles">
 				{foreach from=$section.articles item=article}
 					<li>
-						{include file="frontend/objects/article_summary.tpl" heading="h3"}
+						{include file="frontend/objects/article_summary.tpl" heading=$articleHeading}
 					</li>
 				{/foreach}
 			</ul>
