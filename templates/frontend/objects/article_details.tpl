@@ -248,7 +248,9 @@
 			{* Article Galleys *}
 			{if $primaryGalleys}
 				<div class="item galleys">
-					<h2 class="pkp_screen_reader">Downloads</h2>
+					<h2 class="pkp_screen_reader">
+						{translate key="submission.downloads"}
+					</h2>
 					<ul class="value galleys_links">
 						{foreach from=$primaryGalleys item=galley}
 							<li>
@@ -260,7 +262,9 @@
 			{/if}
 			{if $supplementaryGalleys}
 				<div class="item galleys">
-					<h3 class="pkp_screen_reader">Additional Files</h3>
+					<h3 class="pkp_screen_reader">
+						{translate key="submission.additionalFiles"}
+					</h3>
 					<ul class="value supplementary_galleys_links">
 						{foreach from=$supplementaryGalleys item=galley}
 							<li>
