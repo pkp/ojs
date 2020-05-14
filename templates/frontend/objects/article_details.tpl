@@ -248,7 +248,7 @@
 			{* Article Galleys *}
 			{if $primaryGalleys}
 				<div class="item galleys">
-					<h2 class="pkp_screen_reader">Download</h2>
+					<h2 class="pkp_screen_reader">Downloads</h2>
 					<ul class="value galleys_links">
 						{foreach from=$primaryGalleys item=galley}
 							<li>
