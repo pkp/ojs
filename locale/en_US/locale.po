@@ -908,12 +908,6 @@ msgstr "Replace File"
 msgid "layoutEditor.galley.uploadSuppFile"
 msgstr "Upload supplementary file"
 
-msgid "submission.downloads"
-msgstr "Downloads"
-
-msgid "submission.additionalFiles"
-msgstr "Additional Files"
-
 msgid "submission.layout.imageInvalid"
 msgstr "Invalid image format. Accepted formats are .gif, .jpg, and .png."
 
