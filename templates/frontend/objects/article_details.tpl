@@ -248,6 +248,9 @@
 			{* Article Galleys *}
 			{if $primaryGalleys}
 				<div class="item galleys">
+					<h2 class="pkp_screen_reader">
+						{translate key="submission.downloads"}
+					</h2>
 					<ul class="value galleys_links">
 						{foreach from=$primaryGalleys item=galley}
 							<li>
@@ -259,6 +262,9 @@
 			{/if}
 			{if $supplementaryGalleys}
 				<div class="item galleys">
+					<h3 class="pkp_screen_reader">
+						{translate key="submission.additionalFiles"}
+					</h3>
 					<ul class="value supplementary_galleys_links">
 						{foreach from=$supplementaryGalleys item=galley}
 							<li>
@@ -418,6 +424,9 @@
 			{* Licensing info *}
 			{if $currentContext->getLocalizedData('licenseTerms') || $publication->getData('licenseUrl')}
 				<div class="item copyright">
+					<h2 class="label">
+						{translate key="submission.license"}
+					</h2>
 					{if $publication->getData('licenseUrl')}
 						{if $ccLicenseBadge}
 							{if $publication->getLocalizedData('copyrightHolder')}
