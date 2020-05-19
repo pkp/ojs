@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2020-05-15 08:54+0000\n"
-"Last-Translator: Sebastian Wolf <bibliothekswelt@htmlwolf.de>\n"
+"PO-Revision-Date: 2020-05-19 15:11+0000\n"
+"Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/locale/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -1197,7 +1197,6 @@ msgstr "Eine Zeitschrift auswählen, bei der Sie sich registrieren möchten:"
 msgid "user.register.noJournals"
 msgstr "Auf dieser Seite gibt es keine Zeitschriften, bei denen Sie sich eintragen könnten."
 
-#, fuzzy
 msgid "user.register.privacyStatement"
 msgstr "Schutz personenbezogener Daten"
 
@@ -1510,7 +1509,6 @@ msgstr "Als Teil des Einreichungsverfahren werden die Autor/innen gebeten, anhan
 msgid "about.copyrightNotice"
 msgstr "Copyright-Vermerk"
 
-#, fuzzy
 msgid "about.privacyStatement"
 msgstr "Schutz personenbezogener Daten"
 
