@@ -129,7 +129,7 @@
 										v-if="workingPublication.status === getConstant('STATUS_QUEUED')"
 										ref="publish"
 										:label="submission.status === getConstant('STATUS_PUBLISHED') ? i18n.publish : i18n.schedulePublication"
-										@click="openPublish"
+										@click="workingPublication.issueId ? openPublish() : openAssignToIssue()"
 									></pkp-button>
 									<pkp-button
 										v-else-if="workingPublication.status === getConstant('STATUS_SCHEDULED')"

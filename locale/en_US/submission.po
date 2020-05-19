@@ -205,3 +205,12 @@ msgstr "Published in <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
 msgstr "Scheduled for publication in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "This has not been scheduled for publication in an issue."
+
+msgid "publication.scheduleInissue"
+msgstr "Assign to Issue"
+
+msgid "publication.selectIssue"
+msgstr "Select an issue to schedule for publication"
