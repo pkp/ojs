@@ -9,8 +9,7 @@
  * @class AssignToIssueForm
  * @ingroup classes_controllers_form
  *
- * @brief A preset form for setting a publication's issue, section, categories,
- *  pages, etc.
+ * @brief A preset form for setting a publication's issue.
  */
 namespace APP\components\forms\publication;
 use \PKP\components\forms\FormComponent;
