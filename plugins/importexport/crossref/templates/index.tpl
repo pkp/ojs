@@ -70,7 +70,18 @@
 					// Attach the form handler.
 					$('#exportSubmissionXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
 				{rdelim});
+				function toggleSelectAll(state) {
+					var items = document.getElementsByName('selectedSubmissions[]');
+					for (var i = 0; i < items.length; i++) {
+						if (items[i].type == 'checkbox')
+							items[i].checked = state;
+					}
+				}
 			</script>
+			<p>
+				<button class="pkp_button" onclick="toggleSelectAll(true)" value="{translate key="common.selectAll"}"/>
+				<button class="pkp_button" onclick="toggleSelectAll(false)" value="{translate key="common.selectNone"}"/>
+			</p>
 			<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
 				{csrf}
 				<input type="hidden" name="tab" value="exportSubmissions-tab" />
