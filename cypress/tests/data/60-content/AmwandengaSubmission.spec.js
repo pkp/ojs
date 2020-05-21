@@ -251,8 +251,8 @@ describe('Data suite tests', function() {
 		cy.wait(1500);
 		cy.get('#contributors-button').click();
 		cy.contains('Add Contributor');
-		cy.get('#contributors-grid .show_extras').eq(0).click();
-		cy.get('[id*="editAuthor-button"]').eq(0).click();
+		cy.get('#contributors-grid #component-grid-users-author-authorgrid-row-3 .show_extras').click();
+		cy.get('#component-grid-users-author-authorgrid-row-3-control-row [id*="editAuthor-button"]').click();
 		cy.wait(1500); // Wait for the form to settle
 		cy.get('[name="familyName[en_US]"]').type(' Version 2', {delay: 0});
 		cy.get('[id^="submitFormButton"]').contains('Save').click();

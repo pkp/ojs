@@ -79,9 +79,12 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			$sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
 		}
 
-		import('classes.components.forms.publication.IssueEntryForm'); // Constant import
+		import('classes.components.forms.publication.AssignToIssueForm');
+		import('classes.components.forms.publication.PublishForm');
 		$templateMgr->setConstants([
+			'FORM_ASSIGN_TO_ISSUE',
 			'FORM_ISSUE_ENTRY',
+			'FORM_PUBLISH',
 		]);
 
 		$workflowData = $templateMgr->getTemplateVars('workflowData');
@@ -98,11 +101,26 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			}
 		}
 
+		$assignToIssueUrl = $request->getDispatcher()->url(
+			$request,
+			ROUTE_COMPONENT,
+			null,
+			'modals.publish.AssignToIssueHandler',
+			'assign',
+			null,
+			[
+				'submissionId' => $submission->getId(),
+				'publicationId' => '__publicationId__',
+			]
+		);
+
 		$workflowData['components'][FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
 		$workflowData['publicationFormIds'][] = FORM_ISSUE_ENTRY;
+		$workflowData['assignToIssueUrl'] = $assignToIssueUrl;
 		$workflowData['issueApiUrl'] = $issueApiUrl;
 		$workflowData['sectionWordLimits'] = $sectionWordLimits;
 		$workflowData['i18n']['schedulePublication'] = __('editor.submission.schedulePublication');
+		$workflowData['selectIssueLabel'] = __('publication.selectIssue');
 
 		$templateMgr->assign('workflowData', $workflowData);
 	}
