@@ -162,6 +162,22 @@ class DefaultThemePlugin extends ThemePlugin {
 					'//fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic',
 					array('baseUrl' => '')
 				);
+
+				// Load special character sets when needed
+				$languageCode = substr(AppLocale::getLocale(), 0, 2);
+				switch ($languageCode) {
+					case 'ar':
+					case 'fa':
+					case 'ku':
+						$this->addStyle(
+							'fontNotoSansKufiArabic',
+							'//fonts.googleapis.com/earlyaccess/notokufiarabic.css',
+							array(
+								'baseUrl' => '',
+							)
+						);
+						break;
+				}
 			}
 		}
 
