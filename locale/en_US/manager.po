@@ -311,6 +311,18 @@ msgstr "Peer Reviewed"
 msgid "manager.sections.submissionIndexing"
 msgstr "Will not be included in the indexing of the journal"
 
+msgid "manager.sections.archiveSection"
+msgstr "Archive section (disables new submissions)"
+
+msgid "manager.sections.confirmArchive"
+msgstr "Are you sure you wish to archive this section? "
+
+msgid "manager.sections.confirmDearchive"
+msgstr "Are you sure you wish to dearchive this section? "
+
+msgid "manager.sections.archived.error"
+msgstr "Please ensure that at least one section archived checkbox is unchecked"
+
 msgid "manager.sections.submissionReview"
 msgstr "Will not be peer-reviewed"
 
