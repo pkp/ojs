@@ -27,9 +27,9 @@ class SectionService implements EntityPropertyInterface {
 	 *
 	 * @return array
 	 */
-	public function getSectionList($contextId) {
+	public function getSectionList($contextId, $notArchivedOnly = false) {
 		$sectionDao = \DAORegistry::getDAO('SectionDAO'); /* $sectionDao SectionDAO */
-		$sectionIterator = $sectionDao->getByContextId($contextId);
+		$sectionIterator = $sectionDao->getByContextId($contextId, null, false, $notArchivedOnly);
 
 		$sections = array();
 		while ($section = $sectionIterator->next()) {

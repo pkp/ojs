@@ -186,4 +186,21 @@ class Section extends PKPSection {
 	function setHideAuthor($hideAuthor) {
 		return $this->setData('hideAuthor', $hideAuthor);
 	}
+
+	/**
+	 * Return boolean indicating if section should be archived.
+	 * @return int
+	 */
+	function getArchived() {
+		return $this->getData('archived');
+	}
+
+	/**
+	 * Set if section should be archived.
+	 * @param $archived int
+	 */
+	function setArchived($archived) {
+		$this->setData('archived', $archived);
+	}
+
 }

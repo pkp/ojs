@@ -55,6 +55,7 @@ class SectionForm extends PKPSectionForm {
 				'title' => $section->getTitle(null), // Localized
 				'abbrev' => $section->getAbbrev(null), // Localized
 				'reviewFormId' => $section->getReviewFormId(),
+				'archived' => $section->getArchived(), // #2066: Inverted
 				'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
 				'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
 				'abstractsNotRequired' => $section->getAbstractsNotRequired(),
@@ -107,7 +108,7 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
+		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'archived', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
 	}
 
 	/**
@@ -125,7 +126,8 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function execute(...$functionArgs) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-		$journal = Application::get()->getRequest()->getJournal();
+		$request = Application::get()->getRequest();
+		$journal = $request->getJournal();
 
 		// Get or create the section object
 		if ($this->getSectionId()) {
@@ -142,6 +144,7 @@ class SectionForm extends PKPSectionForm {
 		$reviewFormId = $this->getData('reviewFormId');
 		if ($reviewFormId === '') $reviewFormId = null;
 		$section->setReviewFormId($reviewFormId);
+		$section->setArchived($this->getData('archived') ? 1 : 0); // #2066: Inverted
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
 		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
 		$section->setAbstractsNotRequired($this->getData('abstractsNotRequired') ? 1 : 0);
@@ -151,6 +154,17 @@ class SectionForm extends PKPSectionForm {
 		$section->setHideAuthor($this->getData('hideAuthor') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
+
+		// Prevent archiving all sections
+		$sectionIterator = $sectionDao->getByContextId($journal->getId(),null,false,true);
+
+		if ($sectionIterator->getCount() <= 1 && $section->getArchived()) {
+			$section->setArchived(0);
+			// Create the notification.
+			$notificationMgr = new NotificationManager();
+			$user = $request->getUser();
+			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.archived.error')));
+		}
 
 		// Insert or update the section in the DB
 		if ($this->getSectionId()) {
@@ -164,6 +178,6 @@ class SectionForm extends PKPSectionForm {
 		// Update section editors
 		$this->_saveSubEditors($journal->getId());
 
-		return parent::execute(...$functionArgs);
+		return parent::execute(...$functionArgs);			
 	}
 }

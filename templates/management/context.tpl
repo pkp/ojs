@@ -16,6 +16,13 @@
 	</div>
 {/if}
 
+{if !$submissionsEnabled}
+	<div class="pkp_notification">
+		{capture assign="notificationContents"}{translate key="manager.setup.allowSubmissions.enableSubmissions.notAccepting" }{/capture}
+		{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId="submissionsEnabledWarning-"|uniqid notificationStyleClass="notifyWarning" notificationTitle="common.warning"|translate notificationContents=$notificationContents}
+	</div>
+{/if}
+
 {assign var="uuid" value=""|uniqid|escape}
 <div id="settings-context-{$uuid}">
 	<tabs>

@@ -9,6 +9,8 @@
  *}
 {if $sectionOptions|@count == 1}
 	 {translate key="author.submit.notAccepting"}
+{elseif !$submissionsEnabled}
+	{translate key="manager.setup.allowSubmissions.enableSubmissions.notAccepting"}
 {else}
 	{capture assign="additionalFormContent2"}
 		{if $sectionOptions|@count == 2}

@@ -35,8 +35,12 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 
 		// Get section options for this context
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-		$sectionOptions = array('0' => '') + $sectionDao->getTitlesByContextId($this->context->getId(), !$canSubmitAll);
+		$sectionOptions = array('0' => '') + $sectionDao->getTitlesByContextId($this->context->getId(), !$canSubmitAll, true);
+		$context = $request->getContext();
+		$submissionsEnabled = $context->getData('enableSubmissions');
+
 		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('submissionsEnabled', $submissionsEnabled);
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 		$templateMgr->assign('sectionId', $request->getUserVar('sectionId'));
 

@@ -20,14 +20,14 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	/**
 	 * @copydoc PKPSubmissionsListPanel::getConfig()
 	 */
-	public function getConfig() {
+	public function getConfig($notArchivedOnly = false) {
 		$config = parent::getConfig();
 
 		$request = \Application::get()->getRequest();
 		if ($request->getContext()) {
 			$config['filters'][] = [
 				'heading' => __('section.sections'),
-				'filters' => self::getSectionFilters(),
+				'filters' => self::getSectionFilters($notArchivedOnly),
 			];
 		}
 
@@ -69,7 +69,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	 *
 	 * @return array
 	 */
-	static function getSectionFilters() {
+	static function getSectionFilters($notArchivedOnly) {
 		$request = \Application::get()->getRequest();
 		$context = $request->getContext();
 
@@ -77,7 +77,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 			return [];
 		}
 
-		$sections = \Services::get('section')->getSectionList($context->getId());
+		$sections = \Services::get('section')->getSectionList($context->getId(), $notArchivedOnly);
 
 		return array_map(function($section) {
 			return [

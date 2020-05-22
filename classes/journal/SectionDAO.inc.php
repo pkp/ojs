@@ -193,6 +193,7 @@ class SectionDAO extends PKPSectionDAO {
 		$section->setAbstractsNotRequired($row['abstracts_not_required']);
 		$section->setHideTitle($row['hide_title']);
 		$section->setHideAuthor($row['hide_author']);
+		$section->setArchived($row['archived']);
 		$section->setAbstractWordCount($row['abstract_word_count']);
 
 		$this->getDataObjectSettings('section_settings', 'section_id', $row['section_id'], $section);
@@ -269,6 +270,7 @@ class SectionDAO extends PKPSectionDAO {
 					editor_restricted = ?,
 					hide_title = ?,
 					hide_author = ?,
+					archived = ?,
 					abstract_word_count = ?
 				WHERE section_id = ?',
 			array(
@@ -280,6 +282,7 @@ class SectionDAO extends PKPSectionDAO {
 				(int)$section->getEditorRestricted(),
 				(int)$section->getHideTitle(),
 				(int)$section->getHideAuthor(),
+				(int)$section->getArchived(),
 				$this->nullOrInt($section->getAbstractWordCount()),
 				(int)$section->getId()
 			)
@@ -400,15 +403,35 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $rangeInfo DBResultRange optional
 	 * @param $submittableOnly boolean optional. Whether to return only sections
 	 *  that can be submitted to by anyone.
+	 * @param $noneArchivedOnly boolean optional. Whether to return only sections
+	 *  that are not archived.
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
-	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false) {
+	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false, $noneArchivedOnly = false) {
 		$result = $this->retrieveRange(
-			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ' ORDER BY seq',
+			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ($noneArchivedOnly ? ' AND archived = 0' : '') . ' ORDER BY seq',
 			(int) $journalId, $rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
+	}
+
+	/**
+	 * Retrieve the IDs and titles of the sections for a context in an associative array.
+	 * @param $contextId int context ID
+	 * @param $submittableOnly boolean optional. Whether to return only sections
+	 *  that can be submitted to by anyone.
+	 * @param $noneArchivedOnly boolean optional. Whether to return only sections 
+	 *  that are not archived.
+	 * @return array
+	 */
+	function getTitlesByContextId($contextId, $submittableOnly = false, $noneArchivedOnly = false) {
+		$sections = array();
+		$sectionsIterator = $this->getByContextId($contextId, null, $submittableOnly, $noneArchivedOnly);
+		while ($section = $sectionsIterator->next()) {
+			$sections[$section->getId()] = $section->getLocalizedTitle();
+		}
+		return $sections;
 	}
 
 	/**

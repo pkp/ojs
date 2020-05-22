@@ -24,7 +24,7 @@ class SectionGridHandler extends SetupGridHandler {
 		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
-			array('fetchGrid', 'fetchRow', 'addSection', 'editSection', 'updateSection', 'deleteSection', 'saveSequence')
+			array('fetchGrid', 'fetchRow', 'addSection', 'editSection', 'updateSection', 'deleteSection', 'saveSequence', 'archiveSection','dearchiveSection')
 		);
 	}
 
@@ -73,6 +73,7 @@ class SectionGridHandler extends SetupGridHandler {
 			$gridData[$sectionId] = array(
 				'title' => $section->getLocalizedTitle(),
 				'editors' => $editorsString,
+				'archived' => $section->getArchived(),
 				'seq' => $section->getSequence()
 			);
 		}
@@ -98,14 +99,33 @@ class SectionGridHandler extends SetupGridHandler {
 			)
 		);
 
-		// Columns
+		//
+		// Grid columns.
+		//
+		import('controllers.grid.settings.sections.SectionGridCellProvider');
+		$sectionGridCellProvider = new SectionGridCellProvider();
+
+		// Section name
 		$this->addColumn(
 			new GridColumn(
 				'title',
 				'common.title'
 			)
 		);
+		// Section 'editors'
 		$this->addColumn(new GridColumn('editors', 'user.role.editors'));
+		//Section 'archived'
+		$this->addColumn(
+			new GridColumn(
+				'archived',
+				'manager.sections.archived',
+				null,
+				'controllers/grid/common/cell/selectStatusCell.tpl',
+				$sectionGridCellProvider,
+				array('alignment' => COLUMN_ALIGNMENT_CENTER,
+						'width' => 10)
+			)
+		);
 	}
 
 	//
@@ -233,6 +253,83 @@ class SectionGridHandler extends SetupGridHandler {
 		return DAO::getDataChangedEvent($section->getId());
 
 	}
+
+	/**
+	 * Archive a section.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function archiveSection($args, $request) {
+		// Identify the current section
+		$sectionId = (int) $request->getUserVar('sectionKey');
+
+		// Identify the context id.
+		$context = $request->getContext();
+
+		// Get section object
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+		// Prevent archiving all sections
+		$sectionIterator = $sectionDao->getByContextId($context->getId(),null,false,true);
+
+		if ($sectionIterator->getCount() > 1) {
+			$section = $sectionDao->getById($sectionId, $context->getId());
+
+			if ($request->checkCSRF() && isset($section) && !$section->getArchived()) {
+				$section->setArchived(1);
+				$sectionDao->updateObject($section);
+
+				// Create the notification.
+				$notificationMgr = new NotificationManager();
+				$user = $request->getUser();
+				$notificationMgr->createTrivialNotification($user->getId());
+
+				return DAO::getDataChangedEvent($sectionId);
+			}
+		} else {
+			// Create the notification.
+			$notificationMgr = new NotificationManager();
+			$user = $request->getUser();
+			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.archived.error')));
+			return DAO::getDataChangedEvent($sectionId);
+		}
+
+		return new JSONMessage(false);
+	}
+
+	/**
+	 * De archive a section.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function dearchiveSection($args, $request) {
+
+		// Identify the current section
+		$sectionId = (int) $request->getUserVar('sectionKey');
+
+		// Identify the context id.
+		$context = $request->getContext();
+
+		// Get section object
+		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+		$section = $sectionDao->getById($sectionId, $context->getId());
+
+		if ($request->checkCSRF() && isset($section) && $section->getArchived()) {
+			$section->setArchived(0);
+			$sectionDao->updateObject($section);
+
+			// Create the notification.
+			$notificationMgr = new NotificationManager();
+			$user = $request->getUser();
+			$notificationMgr->createTrivialNotification($user->getId());
+
+			return DAO::getDataChangedEvent($sectionId);
+		}
+
+		return new JSONMessage(false);
+	}
+
 }
 
 
