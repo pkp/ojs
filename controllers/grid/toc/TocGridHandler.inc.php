@@ -224,23 +224,28 @@ class TocGridHandler extends CategoryGridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
-		if ($submission && $submission->getData('issueId') == $issue->getId() && $request->checkCSRF()) {
-			if ($issue->getPublished()) {
+		if ($submission && $request->checkCSRF()) {
+			if ($issue->getPublished() && $submission->getCurrentPublication()->getData('issueId') == $issue->getId()) {
 				$articleTombstoneManager->insertArticleTombstone($submission, $journal);
 			}
-			$submission = Services::get('submission')->edit($submission, ['status' => STATUS_QUEUED], $request);
+			foreach ((array) $submission->getData('publications') as $publication) {
+				if ($publication->getData('issueId') === (int) $issue->getId()
+						&& in_array($publication->getData('status'), [STATUS_SCHEDULED, STATUS_PUBLISHED])) {
+					$publication = Services::get('publication')->unpublish($publication);
+					$publication = Services::get('publication')->edit(
+						$publication,
+						['seq' => ''],
+						$request
+					);
+				}
+			}
 			// If the article is the only one in the section, delete the section from custom issue ordering
-			$sectionId = $submission->getData('sectionId');
-			$submissionsInSections = Services::get('submission')->getInSections($issue->getId());
+			$sectionId = $submission->getCurrentPublication()->getData('sectionId');
+			$submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $issue->getJournalId());
 			if (!empty($submissionsInSections[$sectionId]) && count($submissionsInSections[$sectionId]) === 1) {
 				$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 				$sectionDao->deleteCustomSection($issue->getId(), $sectionId);
 			}
-			$publication = Services::get('publication')->edit(
-				$submission->getCurrentPublication(),
-				['seq' => ''],
-				$request
-			);
 			return DAO::getDataChangedEvent();
 		}
 
