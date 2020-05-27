@@ -351,10 +351,16 @@ class SectionDAO extends PKPSectionDAO {
 	 * @return array
 	 */
 	function getByIssueId($issueId) {
+		import ('classes.submission.Submission'); // import STATUS_* constants
 		$issue = Services::get('issue')->get($issueId);
+		$allowedStatuses = [STATUS_PUBLISHED];
+		if (!$issue->getPublished()) {
+			$allowedStatuses[] = STATUS_SCHEDULED;
+		}
 		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issueId,
+			'status' => $allowedStatuses,
 		]);
 		$sectionIds = [];
 		foreach ($submissionsIterator as $submission) {
