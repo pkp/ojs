@@ -4,7 +4,7 @@
  */
 
 /**
- * @file api/v1/uploadPublicFile/index.php
+ * @file api/v1/_uploadPublicFile/index.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
