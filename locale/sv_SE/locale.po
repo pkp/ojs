@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2020-02-24 16:56+0000\n"
-"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
+"PO-Revision-Date: 2020-05-19 15:11+0000\n"
+"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/locale/sv/>"
 "\n"
 "Language: sv_SE\n"
@@ -2037,3 +2037,35 @@ msgstr "Sektionspolicy"
 
 msgid "navigation.skip.issue"
 msgstr "Gå till senaste numret"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Välj hur artiklar ska ordnas i denna kategori."
+
+msgid "catalog.sortBy"
+msgstr "Artikelordning"
+
+msgid "notification.type.public"
+msgstr "Allmänna meddelanden"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr ""
+"Skicka in ett nytt bidrag till sektionen <a href=\"{$url}\">{$name}</a> ."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Du måste godkänna webbplatsens integritetspolicy."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Du måste godkänna integritetspolicyn för att registrera dig hos en tidskrift."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Jag samtycker till att persondata samlas in och lagras i enlighet med "
+"tidskriftens <a href=\"{$privacyUrl}\" target=\"_blank\""
+">integritetspolicy</a>."
+
+msgid "submission.search"
+msgstr "Sök efter artikel"
+
+msgid "navigation.skip.about"
+msgstr "Gå till \"Om tidskriften\""
