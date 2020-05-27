@@ -678,8 +678,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				FROM submissions s
 				LEFT JOIN publications p ON (p.publication_id = s.current_publication_id)
 				LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
-				WHERE ps.setting_name = ? AND ps.setting_value = ?',
-			['issueId', (int) $issueId]
+				WHERE ps.setting_name = ? AND ps.setting_value = ? AND (s.status = ? or s.status = ?) ',
+			['issueId', (int) $issueId, (int) STATUS_SCHEDULED, (int) STATUS_PUBLISHED]
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
 		$result->Close();

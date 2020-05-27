@@ -308,7 +308,7 @@ class IssueHandler extends Handler {
 		$issueSubmissions = iterator_to_array(Services::get('submission')->getMany([
 			'contextId' => $journal->getId(),
 			'issueIds' => [$issue->getId()],
-			'status' => STATUS_PUBLISHED,
+			'status' => [STATUS_PUBLISHED, STATUS_SCHEDULED],
 			'orderBy' => 'seq',
 			'orderDirection' => 'ASC',
 		]));
