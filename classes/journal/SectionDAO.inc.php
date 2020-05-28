@@ -294,7 +294,7 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	function deleteById($sectionId, $contextId = null) {
 		$subEditorsDao = DAORegistry::getDAO('SubEditorsDAO'); /* @var $subEditorsDao SubEditorsDAO */
-		$subEditorsDao->deleteBySectionId($sectionId, $contextId);
+		$subEditorsDao->deleteBySubmissionGroupId($sectionId, ASSOC_TYPE_SECTION, $contextId);
 
 		// Remove articles from this section
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
@@ -307,7 +307,7 @@ class SectionDAO extends PKPSectionDAO {
 
 	/**
 	 * Delete sections by journal ID
-	 * NOTE: This does not delete dependent entries EXCEPT from section_editors. It is intended
+	 * NOTE: This does not delete dependent entries EXCEPT from subeditor_submission_group. It is intended
 	 * to be called only when deleting a journal.
 	 * @param $journalId int Journal ID
 	 */
@@ -325,7 +325,8 @@ class SectionDAO extends PKPSectionDAO {
 		$returner = array();
 
 		$result = $this->retrieve(
-			'SELECT s.*, se.user_id AS editor_id FROM section_editors se, sections s WHERE se.section_id = s.section_id AND s.journal_id = se.context_id AND s.journal_id = ?',
+			'SELECT s.*, se.user_id AS editor_id FROM subeditor_submission_group ssg, sections s WHERE ssg.assoc_id = s.section_id AND ssg.assoc_type = ? AND s.journal_id = ssg.context_id AND s.journal_id = ?',
+			(int) ASSOC_TYPE_SECTION,
 			(int) $journalId
 		);
 

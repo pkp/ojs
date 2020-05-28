@@ -58,7 +58,7 @@ class SectionGridHandler extends SetupGridHandler {
 		$gridData = array();
 		while ($section = $sectionIterator->next()) {
 			// Get the section editors data for the row
-			$assignedSubEditors = $subEditorsDao->getBySectionId($section->getId(), $journal->getId());
+			$assignedSubEditors = $subEditorsDao->getBySubmissionGroupId($section->getId(), ASSOC_TYPE_SECTION, $journal->getId());
 			if(empty($assignedSubEditors)) {
 				$editorsString = __('common.none');
 			} else {
