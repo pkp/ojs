@@ -73,7 +73,7 @@ class SectionGridHandler extends SetupGridHandler {
 			$gridData[$sectionId] = array(
 				'title' => $section->getLocalizedTitle(),
 				'editors' => $editorsString,
-				'archived' => $section->getArchived(),
+				'archived' => $section->getIsArchived(),
 				'seq' => $section->getSequence()
 			);
 		}
@@ -275,8 +275,8 @@ class SectionGridHandler extends SetupGridHandler {
 		if ($sectionIterator->getCount() > 1) {
 			$section = $sectionDao->getById($sectionId, $context->getId());
 
-			if ($request->checkCSRF() && isset($section) && !$section->getArchived()) {
-				$section->setArchived(1);
+			if ($request->checkCSRF() && isset($section) && !$section->getIsArchived()) {
+				$section->setIsArchived(1);
 				$sectionDao->updateObject($section);
 
 				// Create the notification.
@@ -315,8 +315,8 @@ class SectionGridHandler extends SetupGridHandler {
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$section = $sectionDao->getById($sectionId, $context->getId());
 
-		if ($request->checkCSRF() && isset($section) && $section->getArchived()) {
-			$section->setArchived(0);
+		if ($request->checkCSRF() && isset($section) && $section->getIsArchived()) {
+			$section->setIsArchived(0);
 			$sectionDao->updateObject($section);
 
 			// Create the notification.

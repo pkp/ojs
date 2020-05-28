@@ -193,7 +193,7 @@ class SectionDAO extends PKPSectionDAO {
 		$section->setAbstractsNotRequired($row['abstracts_not_required']);
 		$section->setHideTitle($row['hide_title']);
 		$section->setHideAuthor($row['hide_author']);
-		$section->setArchived($row['archived']);
+		$section->setIsArchived($row['is_archived']);
 		$section->setAbstractWordCount($row['abstract_word_count']);
 
 		$this->getDataObjectSettings('section_settings', 'section_id', $row['section_id'], $section);
@@ -270,7 +270,7 @@ class SectionDAO extends PKPSectionDAO {
 					editor_restricted = ?,
 					hide_title = ?,
 					hide_author = ?,
-					archived = ?,
+					is_archived = ?,
 					abstract_word_count = ?
 				WHERE section_id = ?',
 			array(
@@ -282,7 +282,7 @@ class SectionDAO extends PKPSectionDAO {
 				(int)$section->getEditorRestricted(),
 				(int)$section->getHideTitle(),
 				(int)$section->getHideAuthor(),
-				(int)$section->getArchived(),
+				(int)$section->getIsArchived(),
 				$this->nullOrInt($section->getAbstractWordCount()),
 				(int)$section->getId()
 			)
@@ -409,7 +409,7 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false, $noneArchivedOnly = false) {
 		$result = $this->retrieveRange(
-			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ($noneArchivedOnly ? ' AND archived = 0' : '') . ' ORDER BY seq',
+			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ($noneArchivedOnly ? ' AND is_archived = 0' : '') . ' ORDER BY seq',
 			(int) $journalId, $rangeInfo
 		);
 

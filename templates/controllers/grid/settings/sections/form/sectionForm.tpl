@@ -52,7 +52,7 @@
 
 	{fbvFormArea id="indexingInfo" title="submission.sectionOptions"}
 		{fbvFormSection list=true}
-			{fbvElement type="checkbox" id="archived" checked=$archived label="manager.sections.archiveSection"}
+			{fbvElement type="checkbox" id="isArchived" checked=$isArchived label="manager.sections.archiveSection"}
 			{fbvElement type="checkbox" id="metaReviewed" checked=$metaReviewed label="manager.sections.submissionReview"}
 			{fbvElement type="checkbox" id="abstractsNotRequired" checked=$abstractsNotRequired label="manager.sections.abstractsNotRequired"}
 			{fbvElement type="checkbox" id="metaIndexed" checked=$metaIndexed label="manager.sections.submissionIndexing"}

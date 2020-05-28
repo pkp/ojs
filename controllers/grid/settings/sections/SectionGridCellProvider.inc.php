@@ -46,7 +46,7 @@ class SectionGridCellProvider extends GridCellProvider {
 				import('lib.pkp.classes.linkAction.LinkAction');
 
 				if ($element['archived']) return array(new LinkAction(
-					'deactivateSection',
+					'dearchiveSection',
 					new RemoteActionConfirmationModal(
 						$request->getSession(),
 						__('manager.sections.confirmDearchive'),
@@ -62,7 +62,7 @@ class SectionGridCellProvider extends GridCellProvider {
 					)
 				));
 				else return array(new LinkAction(
-					'activateSection',
+					'archiveSection',
 					new RemoteActionConfirmationModal(
 						$request->getSession(),
 						__('manager.sections.confirmArchive'),
@@ -81,3 +81,5 @@ class SectionGridCellProvider extends GridCellProvider {
 		return parent::getCellActions($request, $row, $column, $position);
 	}
 }
+
+

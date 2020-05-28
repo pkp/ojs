@@ -55,7 +55,7 @@ class SectionForm extends PKPSectionForm {
 				'title' => $section->getTitle(null), // Localized
 				'abbrev' => $section->getAbbrev(null), // Localized
 				'reviewFormId' => $section->getReviewFormId(),
-				'archived' => $section->getArchived(), // #2066: Inverted
+				'isArchived' => $section->getIsArchived(), // #2066: Inverted
 				'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
 				'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
 				'abstractsNotRequired' => $section->getAbstractsNotRequired(),
@@ -108,7 +108,7 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'archived', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
+		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'isArchived', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
 	}
 
 	/**
@@ -144,7 +144,7 @@ class SectionForm extends PKPSectionForm {
 		$reviewFormId = $this->getData('reviewFormId');
 		if ($reviewFormId === '') $reviewFormId = null;
 		$section->setReviewFormId($reviewFormId);
-		$section->setArchived($this->getData('archived') ? 1 : 0); // #2066: Inverted
+		$section->setIsArchived($this->getData('isArchived') ? 1 : 0);
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
 		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
 		$section->setAbstractsNotRequired($this->getData('abstractsNotRequired') ? 1 : 0);
@@ -158,8 +158,8 @@ class SectionForm extends PKPSectionForm {
 		// Prevent archiving all sections
 		$sectionIterator = $sectionDao->getByContextId($journal->getId(),null,false,true);
 
-		if ($sectionIterator->getCount() <= 1 && $section->getArchived()) {
-			$section->setArchived(0);
+		if ($sectionIterator->getCount() <= 1 && $section->getIsArchived()) {
+			$section->setIsArchived(0);
 			// Create the notification.
 			$notificationMgr = new NotificationManager();
 			$user = $request->getUser();

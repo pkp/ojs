@@ -191,16 +191,16 @@ class Section extends PKPSection {
 	 * Return boolean indicating if section should be archived.
 	 * @return int
 	 */
-	function getArchived() {
-		return $this->getData('archived');
+	function getIsArchived() {
+		return $this->getData('isArchived');
 	}
 
 	/**
 	 * Set if section should be archived.
 	 * @param $archived int
 	 */
-	function setArchived($archived) {
-		$this->setData('archived', $archived);
+	function setIsArchived($isArchived) {
+		$this->setData('isArchived', $isArchived);
 	}
 
 }
