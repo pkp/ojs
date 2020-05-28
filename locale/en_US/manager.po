@@ -311,6 +311,9 @@ msgstr "Peer Reviewed"
 msgid "manager.sections.submissionIndexing"
 msgstr "Will not be included in the indexing of the journal"
 
+msgid "manager.sections.archived"
+msgstr "Archived"
+
 msgid "manager.sections.archiveSection"
 msgstr "Archive section (disables new submissions)"
 
