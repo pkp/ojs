@@ -54,6 +54,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		if (!parent::register($category, $path, $mainContextId)) return false;
 
 		$this->addLocaleData();
+
 		HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 		foreach ($this->_getDAOs() as $dao) {
 			if ($dao instanceof SchemaDAO) {
@@ -70,6 +71,15 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			}
 		}
 		return true;
+	}
+
+	/**
+	 * @copydoc Plugin::additionalPKPLocales
+	 */
+	function additionalPKPLocales() {
+		return array(
+			LOCALE_COMPONENT_APP_MANAGER
+		);
 	}
 
 	/**

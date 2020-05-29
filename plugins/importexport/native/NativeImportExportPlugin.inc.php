@@ -59,6 +59,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		return 'native';
 	}
 
+	function additionalPKPLocales() {
+		return array(
+			LOCALE_COMPONENT_APP_MANAGER, 
+			LOCALE_COMPONENT_PKP_MANAGER, 
+			LOCALE_COMPONENT_PKP_SUBMISSION
+		);
+	}
+
 	/**
 	 * Display the plugin.
 	 * @param $args array
@@ -329,8 +337,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
-
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */

@@ -25,6 +25,15 @@ class UserImportExportPlugin extends PKPUserImportExportPlugin {
 	}
 
 	/**
+	 * @copydoc Plugin::additionalPKPLocales()
+	 */
+	function additionalPKPLocales() {
+		return array(
+			LOCALE_COMPONENT_APP_MANAGER
+		);
+	}
+
+	/**
 	 * @copydoc PKPImportExportPlugin::usage
 	 */
 	function usage($scriptName) {
@@ -45,8 +54,6 @@ class UserImportExportPlugin extends PKPUserImportExportPlugin {
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
-
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
