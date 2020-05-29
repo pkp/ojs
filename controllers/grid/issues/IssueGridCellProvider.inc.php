@@ -63,7 +63,7 @@ class IssueGridCellProvider extends GridCellProvider {
 	 * @return array
 	 */
 	function getTemplateVarsFromRowColumn($row, $column) {
-		$issue = $row->getData();
+		$issue = $row->getData(); /** @var Issue $issue */
 		$columnId = $column->getId();
 		assert (is_a($issue, 'Issue'));
 		assert(!empty($columnId));

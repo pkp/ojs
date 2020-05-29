@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-01 00:25+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2020-05-02 18:24+0000\n"
+"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -622,3 +622,417 @@ msgstr "Chuyển sang một tạp chí khác:"
 
 msgid "context.current"
 msgstr "Tạp chí hiện tại:"
+
+msgid "subscriptionTypes.months"
+msgstr "theo tháng"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Đề xuất thông báo Bản quyền Creative Commons</h3>\n"
+"<h4>1. Chính sách đề xuất cho các tạp chí cung cấp quyền truy cập mở</h4>\n"
+"Các tác giả xuất bản với tạp chí này đồng ý với các điều khoản sau:\n"
+"<ol type=\"a\">\n"
+"\t<li>Các tác giả giữ bản quyền và cấp cho tạp chí quyền xuất bản đầu tiên "
+"với bài báo được cấp phép đồng thời theo <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Giấy phép cấp cho Creative "
+"Commons</a> cho phép người khác chia sẻ bài báo với sự thừa nhận về quyền "
+"tác giả và ấn phẩm ban đầu của bài báo trên tạp chí này.</li>\n"
+"\t<li>Các tác giả có thể tham gia vào các thỏa thuận hợp đồng bổ sung riêng "
+"cho việc phân phối không độc quyền phiên bản bài báo đã xuất bản của tạp chí "
+"(ví dụ: đăng nó lên kho lưu trữ của tổ chức hoặc xuất bản trong sách), với "
+"sự thừa nhận về ấn phẩm ban đầu của nó tạp chí này</li>\n"
+"\t<li>Các tác giả được phép và khuyến khích đăng tác phẩm của họ trực tuyến ("
+"ví dụ: trong kho lưu trữ của tổ chức hoặc trên trang web của họ) trước và "
+"trong quá trình gửi, vì nó có thể dẫn đến trao đổi năng suất cao, cũng như "
+"trích dẫn sớm hơn và lớn hơn của bài báo được xuất bản (Xem <a target=\""
+"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">Hiuej quả "
+"của truy cập mở</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Chính sách đề xuất cho các tạp chí cung cấp quyền truy cập mở bị trì "
+"hoãn</h4>\n"
+"Các tác giả xuất bản với tạp chí này đồng ý với các điều khoản sau đây:\n"
+"<ol type=\"a\">\n"
+"\t<li>Các tác giả giữ bản quyền và cấp cho tạp chí quyền xuất bản đầu tiên, "
+"với bài báo [SPECIFY PERIOD OF TIME] sau khi xuất bản đồng thời được cấp "
+"phép theo <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3."
+"0/\">Creative Commons Attribution License</a> cho phép người khác chia sẻ "
+"bài báo với sự thừa nhận về quyền tác giả và ấn phẩm ban đầu của bài báo "
+"trên tạp chí này.</li>\n"
+"\t <li>Các tác giả có thể tham gia vào các thỏa thuận hợp đồng bổ sung riêng "
+"cho việc phân phối không độc quyền phiên bản của bài báo đã xuất bản của tạp "
+"chí (ví dụ: đăng nó lên kho lưu trữ của tổ chức hoặc xuất bản trong sách), "
+"với sự thừa nhận về ấn phẩm ban đầu của nó tạp chí này</li>\n"
+"\t <li>Các tác giả được phép và khuyến khích đăng bài báo của họ trực tuyến ("
+"ví dụ: trong kho lưu trữ của tổ chức hoặc trên trang web của họ) trước và "
+"trong quá trình gửi, vì nó có thể dẫn đến trao đổi năng suất cao, cũng như "
+"trích dẫn sớm hơn và lớn hơn của tác phẩm được xuất bản (Xem <a target=\""
+"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect "
+"of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Các plugin chung được sử dụng để mở rộng Hệ thống Tạp chí Mở theo nhiều cách "
+"không được các loại plugin khác hỗ trợ."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Plugin ủy quyền cho phép Open Journal Systems ủy quyền các tác vụ xác thực "
+"người dùng cho các hệ thống khác, chẳng hạn như máy chủ LDAP."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Plugin bản in bài báo thêm hỗ trợ để hiển thị các loại tài liệu khác nhau "
+"như là các bản in bài báo."
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Plugin bản in bài báo"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Kiểu thuê bao"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Thuê bao tổ chức"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Thuê bao cá nhân"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Quản lý thuê bao"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOTE!</h4>\n"
+"<p>Hệ thống không thể tự động ghi đè tập tin cấu hình. Để áp dụng thay đổi "
+"cấu hình của bạn, bạn phải mở <tt>config.inc.php</tt> trong một trình soạn "
+"thảo văn bản phù hợp và thay thế nội dung của nó bằng nội dung của trường "
+"văn bản bên dưới.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Chỉ định nguồn xác thực mặc định khác với OJS có các hiệu ứng sau:</p>\n"
+"<ul>\n"
+"\t<li>Nếu người dùng cố gắng đăng ký tài khoản mới với trang web này với tên "
+"người dùng tồn tại trên nguồn xác thực (nhưng không phải trong cơ sở dữ liệu "
+"OJS), nỗ lực đăng ký chỉ được phép nếu mật khẩu được cung cấp hợp lệ cho tài "
+"khoản người dùng đó.</li>\n"
+"</ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "tài liệu tương tự"
+
+msgid "search.results.orderDir.desc"
+msgstr "Giảm dần"
+
+msgid "search.results.orderDir.asc"
+msgstr "Tăng dần"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Sự liên quan"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Mức độ phổ biến (Tháng trước)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Mức độ phổ biến (Mọi lúc)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Tiêu đề tạp chí"
+
+msgid "search.results.orderBy.issue"
+msgstr "Số"
+
+msgid "search.results.orderBy.date"
+msgstr "Ngày xuất bản"
+
+msgid "search.results.orderBy.author"
+msgstr "Tác giả"
+
+msgid "search.results.orderBy.article"
+msgstr "Tiều đề bài báo"
+
+msgid "search.results.orderBy"
+msgstr "Kết quả sắp xếp theo"
+
+msgid "comments.authenticated"
+msgstr "bởi <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "Bình luận về bài báo này"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Yêu cầu đăng ký thuê bao hoặc miễn phí"
+
+msgid "reader.subscriptionAccess"
+msgstr "Yêu cầu đăng ký thuê bao"
+
+msgid "reader.openAccess"
+msgstr "Truy cập mở"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Yêu cầu đăng ký thuê bao để truy cập mục. Để xác minh thuê bao, đăng nhập "
+"vào tạp chí."
+
+msgid "reader.subscribersOnly"
+msgstr "Chỉ những thuê bao"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Biên tập trình bày được phân công đã hoàn thành"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Bản in đã được cập nhật"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Biên tập trình bày bắt đầu"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Biên tập viên trình bày đã được ngừng phân công"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Biên tập viên trình bày đã được phân"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Hiệu đính được phân công đã hoàn thành"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Bản sửa hiệu đính đã được cập nhật"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Hiệu đính đã bắt đầu"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Người hiệu đính được ngừng phân công"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Người hiệu đính đã được phân công"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Tập tin bản thảo biên tập đã được cập nhật"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Biên tập bản thảo cuối cùng đã được hoàn thành"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Biên tập bản thảo ban đầu đã được hoàn thành"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Bản sửa của biên tập viên bản thảo đã được cập nhật"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Biên tập viên bản thảo được bắt đầu phân công"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Tập tin bản thảo chỉ được cung cấp khi và chỉ khi người phản biện đồng ý "
+"thực hiện phản biện"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Không thể thực hiện phản biện"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Đồng ý phản biện"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Thông báo cho Biên tập viên"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Tập tin để phản biện"
+
+msgid "reviewer.averageQuality"
+msgstr "Xếp hạng"
+
+msgid "reviewer.completedReviews"
+msgstr "Hoàn thành phản biện"
+
+msgid "reviewer.pendingReviews"
+msgstr "Bài viết đang chờ phản biện"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL của nội dung lưu trữ từ xa"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Bản in này sẽ có sẵn tại một trang web riêng."
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"Định dạng hình ảnh không hợp lệ. Các định dạng được chấp nhận là .gif, .jpg "
+"và .png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Tải lên tập tin phụ trợ"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Thay thế tập tin"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Tài lên định dạng bản in"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Phân công trình bày bản thảo"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Phân công biên tập không được kích hoạt"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Phân công Biên tập hoàn thành"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Kích hoạt Phân công Biên tập"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Tạo Phản biện mới"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Đăng ký Người dùng hiện tại làm Người phản biện"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Kết quả"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Từ chối"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Từ chối & Huỷ phản biện"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Quyết định của biên tập viên, Vòng {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Phản biện kín, Vòng {$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Xem Từ chối, Huỷ đề nghị, Các vòng phản biện trước"
+
+msgid "sectionEditor.regrets"
+msgstr "Từ chối"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} Từ chối phản biện, Hủy đề nghị & Các vòng phản biện trước"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Từ chối"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Thông báo cho biên tập viên soát lỗi thêm một lần nữa sẽ khởi động lại nhiệm "
+"vụ của họ. Bạn có chắc chắn muốn làm điều này?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Thông báo cho biên tập viên trình bày thêm một lần nữa sẽ khởi động lại "
+"nhiệm vụ của họ. Bạn có chắc chắn muốn làm điều này?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Thông báo cho tác giả này một lần nữa sẽ khởi động lại nhiệm vụ của họ. Bạn "
+"có chắc chắn muốn làm điều này?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Thông báo giao biên tập bản thảo một lần nữa sẽ khởi động lại nhiệm vụ của "
+"biên tập viên bản thảo. Bạn có chắc chắn muốn làm điều này?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Không bài gửi nào được giao"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Hoàn thành giao phản biện"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Kích hoạt giao phản biện"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t <li> Các mục được tô sáng cho biết hành động được yêu cầu bởi một biên "
+"tập viên, được gắn nhãn như sau:\n"
+"\t\t <ul>\n"
+"\t\t\t<li class = \"highlightCopyediting\"> Cần có hành động trong giai đoạn "
+"biên tập bản thảo </ li>\n"
+"\t\t\t<li class = \"highlightLayoutEditing\"> Cần có một hành động trong "
+"giai đoạn chỉnh sửa bố cục </ li>\n"
+"\t\t\t<li class = \"higlightProofreading\"> Cần có hành động trong giai đoạn "
+"hiệu đính </ li>\n"
+"\t\t</ ul>\n"
+"\t</ li>\n"
+"\t</ ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+" <li> Các mục được tô sáng cho biết hành động được yêu cầu bởi một biên tập "
+"viên, được gắn nhãn như sau:\n"
+"  <ul>\n"
+"   <li class = \"highlightReviewerNotNotified\"> Người phản biện đã được chỉ "
+"định nhưng không được thông báo qua email </li>\n"
+"   <li class = \"highlightNoDecision\"> Tất cả những người phản biện đã phản "
+"hồi với các nhận xét của họ, nhưng không có quyết định nào được ghi lại \n"
+"   </li>\n"
+"   <li class = \"highlightRevisedCopyUploaded\"> Tác giả đã tải lên phiên "
+"bản sửa đổi </li>\n"
+"   <li class = \"highlightReviewerConf ConfirmationOverdue\"> Người phản "
+"biện đã quá hạn để xác nhận lời mời phản biện </li>\n"
+"   <li class = \"highlightReviewerCompletionOverdue\"> Người phản biện đã "
+"quá hạn để hoàn thành phản biện </li>\n"
+"  </ul>\n"
+" </li>\n"
+" <li> \"Thời hạn\" được điền khi người phản biện chấp nhận yêu cầu phản biện;"
+" nó hiển thị số tuần để phản biện đáo hạn hoặc (-) tuần đã quá hạn.    \n"
+" </li>\n"
+" \n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Xin lỗi, bạn không có quyền quản trị đối với người dùng này. Điều này có thể "
+"là do:\n"
+"  <ul>\n"
+"   <li> Người dùng là quản trị viên trang </li>\n"
+"   <li> Người dùng đang hoạt động trong các tạp chí bạn không quản lý </li>\t"
+"\n"
+"  </ul>  \n"
+" Nhiệm vụ này phải được thực hiện bởi Quản trị trang web.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Vô hiệu hóa người dùng này? Điều này sẽ ngăn người dùng đăng nhập vào hệ "
+"thống.\n"
+"\n"
+"Bạn có thể tùy chọn cung cấp cho người dùng một lý do cho việc vô hiệu hóa "
+"tài khoản của họ."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p> Để cho phép người đọc định vị các phiên bản trực tuyến của tác phẩm được "
+"trích dẫn bởi một tác giả, các tùy chọn sau khả dụng. </p>\n"
+"\n"
+"<ol>\n"
+"<li> <strong> Thêm công cụ đọc </strong> <p> Trình Quản lý tạp chí cho phép "
+"thêm \"Tìm tài liệu tham khảo\" vào Công cụ đọc đi kèm với các số đã xuất "
+"bản, cho phép người đọc dán tiêu đề của tài liệu tham khảo và sau đó tìm "
+"kiếm cơ sở dữ liệu học thuật được chọn trước cho công việc được trích dẫn. "
+"</p> </li>\n"
+"\n"
+"<li> <strong> Nhúng nhữngliên kết trong các Tài liệu tham khảo </strong> <p> "
+"Trình chỉnh sửa bố cục có thể thêm liên kết đến các tài liệu tham khảo mà "
+"chúng có thể tìm thấy trực tuyến bằng cách sử dụng các hướng dẫn sau (chúng "
+"có thể chỉnh sửa được). </p> </li>\n"
+"\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Các bước: Bài mới gửi &gt; Bài đang Phản biện &gt; Bài đang biên tập &gt; "
+"Mục lục. <br /> <br />\n"
+"Chọn một mô hình để xử lý các khía cạnh của quá trình biên tập. (Để chỉ định "
+"một Biên tập viên Quản lý và Biên tập viên Chuyên mục, hãy chuyển đến mục "
+"Biên tập trong Quản lý Tạp chí.)"

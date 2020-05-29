@@ -490,14 +490,19 @@ class IssueGridHandler extends GridHandler {
 				'contextId' => $issue->getJournalId(),
 				'issueIds' => $issue->getId(),
 				'status' => STATUS_SCHEDULED,
-				'count' => 5000, // large upper limit
 			]);
-			$dataObjectTombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $dataObjectTombstoneDao DataObjectTombstoneDAO */
-			foreach ($submissionsIterator as $submission) {
-				$publication = $submission->getLatestPublication();
-				if ($publication->getData('status') === STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
-					$publication = Services::get('publication')->publish($publication);
+			
+			$dataObjectTombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var $dataObjectTombstoneDao DataObjectTombstoneDAO */
+
+			foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
+				$publications = $submission->getData('publications');
+
+				foreach ($publications as $publication) { /** @var Publication $publication */
+					if ($publication->getData('status') === STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
+						$publication = Services::get('publication')->publish($publication);
+					}
 				}
+
 				// delete article tombstone
 				$dataObjectTombstoneDao->deleteByDataObjectId($submission->getId());
 			}
@@ -554,11 +559,21 @@ class IssueGridHandler extends GridHandler {
 		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
-			'count' => 5000, // large upper limit
 		]);
-		foreach ($submissionsIterator as $submission) {
+
+		foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
 			$articleTombstoneManager->insertArticleTombstone($submission, $journal);
-			$submission = Services::get('submission')->edit($submission, ['status' => STATUS_QUEUED], $request);
+
+			$publications = $submission->getData('publications');
+			foreach ($publications as $publication) { /** @var Publication $publication */
+				if ($publication->getData('status') === STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
+					// Republish the publication in the issue, now that it's status has changed,
+					// to ensure the publication's status is restored to STATUS_SCHEDULED
+					// rather than STATUS_QUEUED
+					$publication = Services::get('publication')->unpublish($publication);
+					$publication = Services::get('publication')->publish($publication);
+				}
+			}
 		}
 
 		$dispatcher = $request->getDispatcher();
