@@ -53,7 +53,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	function register($category, $path, $mainContextId = null) {
 		if (!parent::register($category, $path, $mainContextId)) return false;
 
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 		$this->addLocaleData();
+		
 		HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 		foreach ($this->_getDAOs() as $dao) {
 			if ($dao instanceof SchemaDAO) {
