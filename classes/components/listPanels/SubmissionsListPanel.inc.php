@@ -69,7 +69,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	 *
 	 * @return array
 	 */
-	static function getSectionFilters($notArchivedOnly) {
+	static function getSectionFilters($notArchivedOnly = false) {
 		$request = \Application::get()->getRequest();
 		$context = $request->getContext();
 
