@@ -163,7 +163,7 @@ class SectionForm extends PKPSectionForm {
 			// Create the notification.
 			$notificationMgr = new NotificationManager();
 			$user = $request->getUser();
-			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.archived.error')));
+			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.disableSubmissions.error')));
 		}
 
 		// Insert or update the section in the DB

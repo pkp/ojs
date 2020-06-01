@@ -49,7 +49,7 @@ class SectionGridCellProvider extends GridCellProvider {
 					'dearchiveSection',
 					new RemoteActionConfirmationModal(
 						$request->getSession(),
-						__('manager.sections.confirmDearchive'),
+						__('manager.sections.confirmEnableSubmissions'),
 						null,
 						$router->url(
 							$request,
@@ -65,7 +65,7 @@ class SectionGridCellProvider extends GridCellProvider {
 					'archiveSection',
 					new RemoteActionConfirmationModal(
 						$request->getSession(),
-						__('manager.sections.confirmArchive'),
+						__('manager.sections.confirmDisableSubmissions'),
 						null,
 						$router->url(
 							$request,

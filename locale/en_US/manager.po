@@ -266,20 +266,20 @@ msgstr "Items can only be submitted by Editors and Section Editors."
 msgid "manager.sections.editors"
 msgstr "Section editors"
 
-msgid "manager.sections.archived"
-msgstr "Archived"
+msgid "manager.sections.submissionsDisabled"
+msgstr "Submissions disabled"
 
-msgid "manager.sections.archiveSection"
-msgstr "Archive section (disables new submissions)"
+msgid "manager.sections.form.submissionsDisabled"
+msgstr "New submissions disabled"
 
-msgid "manager.sections.confirmArchive"
-msgstr "Are you sure you wish to archive this section? "
+msgid "manager.sections.confirmDisableSubmissions"
+msgstr "Are you sure you wish to disable submissions for this section?"
 
-msgid "manager.sections.confirmDearchive"
-msgstr "Are you sure you wish to dearchive this section? "
+msgid "manager.sections.confirmEnableSubmissions"
+msgstr "Are you sure you wish to enable submissions for this section? "
 
-msgid "manager.sections.archived.error"
-msgstr "Please ensure that at least one section archived checkbox is unchecked"
+msgid "manager.sections.disableSubmissions.error"
+msgstr "Please ensure that at least one checkbox is left unchecked. To disable all journal submissions, visit the workflow settings page."
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "An abbreviated title is required for the section"

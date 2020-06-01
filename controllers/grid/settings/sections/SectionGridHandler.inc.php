@@ -118,12 +118,12 @@ class SectionGridHandler extends SetupGridHandler {
 		$this->addColumn(
 			new GridColumn(
 				'archived',
-				'manager.sections.archived',
+				'manager.sections.submissionsDisabled',
 				null,
 				'controllers/grid/common/cell/selectStatusCell.tpl',
 				$sectionGridCellProvider,
 				array('alignment' => COLUMN_ALIGNMENT_CENTER,
-						'width' => 10)
+						'width' => 20)
 			)
 		);
 	}
@@ -290,7 +290,7 @@ class SectionGridHandler extends SetupGridHandler {
 			// Create the notification.
 			$notificationMgr = new NotificationManager();
 			$user = $request->getUser();
-			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.archived.error')));
+			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.disableSubmissions.error')));
 			return DAO::getDataChangedEvent($sectionId);
 		}
 
