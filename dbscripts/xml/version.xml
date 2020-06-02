@@ -15,7 +15,7 @@
 	<type>core</type>
 	<release>3.2.1.0</release>
 	<tag>3_2_1-0</tag>
-	<date>2020-03-20</date>
+	<date>2020-06-15</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
 	<package>http://pkp.sfu.ca/ojs/download/ojs-3.2.1.tar.gz</package>
 </version>
