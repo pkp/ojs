@@ -119,6 +119,9 @@ msgstr "Архив"
 msgid "common.queue.short.completed"
 msgstr "Архив"
 
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Назначенные редакторы"
+
 msgid "section.section"
 msgstr "Раздел"
 
