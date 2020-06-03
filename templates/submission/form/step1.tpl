@@ -7,10 +7,10 @@
  *
  * Step 1 of author monograph submission.
  *}
-{if $sectionOptions|@count == 1}
-	 {translate key="author.submit.notAccepting"}
-{elseif !$submissionsEnabled}
+{if !$submissionsEnabled}
 	{translate key="manager.setup.allowSubmissions.enableSubmissions.notAccepting"}
+{elseif $sectionOptions|@count == 1}
+	 {translate key="author.submit.notAccepting"}
 {else}
 	{capture assign="additionalFormContent2"}
 		{if $sectionOptions|@count == 2}

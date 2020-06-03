@@ -55,7 +55,7 @@ class SectionForm extends PKPSectionForm {
 				'title' => $section->getTitle(null), // Localized
 				'abbrev' => $section->getAbbrev(null), // Localized
 				'reviewFormId' => $section->getReviewFormId(),
-				'isArchived' => $section->getIsArchived(), // #2066: Inverted
+				'isInactive' => $section->getIsInactive(), // #2066: Inverted
 				'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
 				'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
 				'abstractsNotRequired' => $section->getAbstractsNotRequired(),
@@ -108,7 +108,7 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'isArchived', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
+		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'isInactive', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
 	}
 
 	/**
@@ -144,7 +144,7 @@ class SectionForm extends PKPSectionForm {
 		$reviewFormId = $this->getData('reviewFormId');
 		if ($reviewFormId === '') $reviewFormId = null;
 		$section->setReviewFormId($reviewFormId);
-		$section->setIsArchived($this->getData('isArchived') ? 1 : 0);
+		$section->setIsInactive($this->getData('isInactive') ? 1 : 0);
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
 		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
 		$section->setAbstractsNotRequired($this->getData('abstractsNotRequired') ? 1 : 0);
@@ -155,15 +155,15 @@ class SectionForm extends PKPSectionForm {
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 
-		// Prevent archiving all sections
+		// Prevent deactivating all sections
 		$sectionIterator = $sectionDao->getByContextId($journal->getId(),null,false,true);
 
-		if ($sectionIterator->getCount() <= 1 && $section->getIsArchived()) {
-			$section->setIsArchived(0);
+		if ($sectionIterator->getCount() <= 1 && $section->getIsInactive()) {
+			$section->setIsInactive(0);
 			// Create the notification.
 			$notificationMgr = new NotificationManager();
 			$user = $request->getUser();
-			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.disableSubmissions.error')));
+			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.confirmDeactivateSection.error')));
 		}
 
 		// Insert or update the section in the DB

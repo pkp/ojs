@@ -28,8 +28,8 @@ class SectionGridCellProvider extends GridCellProvider {
 		$columnId = $column->getId();
 		assert(is_a($element, 'Section') && !empty($columnId));
 		switch ($columnId) {
-			case 'archived':
-				return array('selected' => $element['archived']);
+			case 'inactive':
+				return array('selected' => $element['inactive']);
 		}
 		return parent::getTemplateVarsFromRowColumn($row, $column);
 	}
@@ -39,39 +39,39 @@ class SectionGridCellProvider extends GridCellProvider {
 	 */
 	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
 		switch ($column->getId()) {
-			case 'archived':
+			case 'inactive':
 				$element = $row->getData(); /* @var $element DataObject */
 
 				$router = $request->getRouter();
 				import('lib.pkp.classes.linkAction.LinkAction');
 
-				if ($element['archived']) return array(new LinkAction(
-					'dearchiveSection',
+				if ($element['inactive']) return array(new LinkAction(
+					'activateSection',
 					new RemoteActionConfirmationModal(
 						$request->getSession(),
-						__('manager.sections.confirmEnableSubmissions'),
+						__('manager.sections.confirmActivateSection'),
 						null,
 						$router->url(
 							$request,
 							null,
 							'grid.settings.sections.SectionGridHandler',
-							'dearchiveSection',
+							'activateSection',
 							null,
 							array('sectionKey' => $row->getId())
 						)
 					)
 				));
 				else return array(new LinkAction(
-					'archiveSection',
+					'deactivateSection',
 					new RemoteActionConfirmationModal(
 						$request->getSession(),
-						__('manager.sections.confirmDisableSubmissions'),
+						__('manager.sections.confirmDeactivateSection'),
 						null,
 						$router->url(
 							$request,
 							null,
 							'grid.settings.sections.SectionGridHandler',
-							'archiveSection',
+							'deactivateSection',
 							null,
 							array('sectionKey' => $row->getId())
 						)

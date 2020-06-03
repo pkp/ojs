@@ -266,19 +266,19 @@ msgstr "Items can only be submitted by Editors and Section Editors."
 msgid "manager.sections.editors"
 msgstr "Section editors"
 
-msgid "manager.sections.submissionsDisabled"
-msgstr "Submissions disabled"
+msgid "manager.sections.inactive"
+msgstr "Inactive"
 
-msgid "manager.sections.form.submissionsDisabled"
-msgstr "New submissions disabled"
+msgid "manager.sections.form.deactivateSection"
+msgstr "Deactivate section (disables new submissions)"
 
-msgid "manager.sections.confirmDisableSubmissions"
-msgstr "Are you sure you wish to disable submissions for this section?"
+msgid "manager.sections.confirmDeactivateSection"
+msgstr "Are you sure you wish to deactivate this section?"
 
-msgid "manager.sections.confirmEnableSubmissions"
-msgstr "Are you sure you wish to enable submissions for this section? "
+msgid "manager.sections.confirmActivateSection"
+msgstr "Are you sure you wish to activate this section?"
 
-msgid "manager.sections.disableSubmissions.error"
+msgid "manager.sections.confirmDeactivateSection.error"
 msgstr "Please ensure that at least one checkbox is left unchecked. To disable all journal submissions, visit the workflow settings page."
 
 msgid "manager.sections.form.abbrevRequired"

@@ -120,7 +120,7 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="abstract_word_count" type="I8" />
-		<field name="is_archived" type="I1">
+		<field name="is_inactive" type="I1">
 +			<NOTNULL/>
 +			<DEFAULT VALUE="0"/>
 +		</field>

@@ -193,7 +193,7 @@ class SectionDAO extends PKPSectionDAO {
 		$section->setAbstractsNotRequired($row['abstracts_not_required']);
 		$section->setHideTitle($row['hide_title']);
 		$section->setHideAuthor($row['hide_author']);
-		$section->setIsArchived($row['is_archived']);
+		$section->setIsInactive($row['is_inactive']);
 		$section->setAbstractWordCount($row['abstract_word_count']);
 
 		$this->getDataObjectSettings('section_settings', 'section_id', $row['section_id'], $section);
@@ -270,7 +270,7 @@ class SectionDAO extends PKPSectionDAO {
 					editor_restricted = ?,
 					hide_title = ?,
 					hide_author = ?,
-					is_archived = ?,
+					is_inactive = ?,
 					abstract_word_count = ?
 				WHERE section_id = ?',
 			array(
@@ -282,7 +282,7 @@ class SectionDAO extends PKPSectionDAO {
 				(int)$section->getEditorRestricted(),
 				(int)$section->getHideTitle(),
 				(int)$section->getHideAuthor(),
-				(int)$section->getIsArchived(),
+				(int)$section->getIsInactive(),
 				$this->nullOrInt($section->getAbstractWordCount()),
 				(int)$section->getId()
 			)
@@ -403,13 +403,13 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $rangeInfo DBResultRange optional
 	 * @param $submittableOnly boolean optional. Whether to return only sections
 	 *  that can be submitted to by anyone.
-	 * @param $noneArchivedOnly boolean optional. Whether to return only sections
-	 *  that are not archived.
+	 * @param $activeOnly boolean optional. Whether to return only sections
+	 *  that are active.
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
-	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false, $noneArchivedOnly = false) {
+	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false, $activeOnly = false) {
 		$result = $this->retrieveRange(
-			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ($noneArchivedOnly ? ' AND is_archived = 0' : '') . ' ORDER BY seq',
+			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ($activeOnly ? ' AND is_inactive = 0' : '') . ' ORDER BY seq',
 			(int) $journalId, $rangeInfo
 		);
 
@@ -421,13 +421,13 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $contextId int context ID
 	 * @param $submittableOnly boolean optional. Whether to return only sections
 	 *  that can be submitted to by anyone.
-	 * @param $noneArchivedOnly boolean optional. Whether to return only sections 
-	 *  that are not archived.
+	 * @param $activeOnly boolean optional. Whether to return only sections 
+	 *  that are active.
 	 * @return array
 	 */
-	function getTitlesByContextId($contextId, $submittableOnly = false, $noneArchivedOnly = false) {
+	function getTitlesByContextId($contextId, $submittableOnly = false, $activeOnly = false) {
 		$sections = array();
-		$sectionsIterator = $this->getByContextId($contextId, null, $submittableOnly, $noneArchivedOnly);
+		$sectionsIterator = $this->getByContextId($contextId, null, $submittableOnly, $activeOnly);
 		while ($section = $sectionsIterator->next()) {
 			$sections[$section->getId()] = $section->getLocalizedTitle();
 		}

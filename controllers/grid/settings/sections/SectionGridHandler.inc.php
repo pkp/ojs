@@ -24,7 +24,7 @@ class SectionGridHandler extends SetupGridHandler {
 		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
-			array('fetchGrid', 'fetchRow', 'addSection', 'editSection', 'updateSection', 'deleteSection', 'saveSequence', 'archiveSection','dearchiveSection')
+			array('fetchGrid', 'fetchRow', 'addSection', 'editSection', 'updateSection', 'deleteSection', 'saveSequence', 'deactivateSection','activateSection')
 		);
 	}
 
@@ -73,7 +73,7 @@ class SectionGridHandler extends SetupGridHandler {
 			$gridData[$sectionId] = array(
 				'title' => $section->getLocalizedTitle(),
 				'editors' => $editorsString,
-				'archived' => $section->getIsArchived(),
+				'inactive' => $section->getIsInactive(),
 				'seq' => $section->getSequence()
 			);
 		}
@@ -114,11 +114,11 @@ class SectionGridHandler extends SetupGridHandler {
 		);
 		// Section 'editors'
 		$this->addColumn(new GridColumn('editors', 'user.role.editors'));
-		//Section 'archived'
+		//Section 'inactive'
 		$this->addColumn(
 			new GridColumn(
-				'archived',
-				'manager.sections.submissionsDisabled',
+				'inactive',
+				'manager.sections.inactive',
 				null,
 				'controllers/grid/common/cell/selectStatusCell.tpl',
 				$sectionGridCellProvider,
@@ -255,12 +255,12 @@ class SectionGridHandler extends SetupGridHandler {
 	}
 
 	/**
-	 * Archive a section.
+	 * Deactivate a section.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
-	function archiveSection($args, $request) {
+	function deactivateSection($args, $request) {
 		// Identify the current section
 		$sectionId = (int) $request->getUserVar('sectionKey');
 
@@ -269,14 +269,14 @@ class SectionGridHandler extends SetupGridHandler {
 
 		// Get section object
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-		// Prevent archiving all sections
+		// Prevent deactivating all sections
 		$sectionIterator = $sectionDao->getByContextId($context->getId(),null,false,true);
 
 		if ($sectionIterator->getCount() > 1) {
 			$section = $sectionDao->getById($sectionId, $context->getId());
 
-			if ($request->checkCSRF() && isset($section) && !$section->getIsArchived()) {
-				$section->setIsArchived(1);
+			if ($request->checkCSRF() && isset($section) && !$section->getIsInactive()) {
+				$section->setIsInactive(1);
 				$sectionDao->updateObject($section);
 
 				// Create the notification.
@@ -290,7 +290,7 @@ class SectionGridHandler extends SetupGridHandler {
 			// Create the notification.
 			$notificationMgr = new NotificationManager();
 			$user = $request->getUser();
-			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.disableSubmissions.error')));
+			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.confirmDeactivateSection.error')));
 			return DAO::getDataChangedEvent($sectionId);
 		}
 
@@ -298,12 +298,12 @@ class SectionGridHandler extends SetupGridHandler {
 	}
 
 	/**
-	 * De archive a section.
+	 * Activate a section.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
-	function dearchiveSection($args, $request) {
+	function activateSection($args, $request) {
 
 		// Identify the current section
 		$sectionId = (int) $request->getUserVar('sectionKey');
@@ -315,8 +315,8 @@ class SectionGridHandler extends SetupGridHandler {
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$section = $sectionDao->getById($sectionId, $context->getId());
 
-		if ($request->checkCSRF() && isset($section) && $section->getIsArchived()) {
-			$section->setIsArchived(0);
+		if ($request->checkCSRF() && isset($section) && $section->getIsInactive()) {
+			$section->setIsInactive(0);
 			$sectionDao->updateObject($section);
 
 			// Create the notification.
