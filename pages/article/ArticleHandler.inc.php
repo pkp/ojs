@@ -82,8 +82,7 @@ class ArticleHandler extends Handler {
 		// publication, redirect to the current URL
 		$currentUrlPath = $submission->getBestId();
 		if ($currentUrlPath && $currentUrlPath != $urlPath) {
-			$newArgs = $args;
-			$newArgs[0] = $currentUrlPath;
+			$newArgs = array_merge([$currentUrlPath], $args);
 			$request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), $newArgs);
 		}
 
