@@ -1050,3 +1050,17 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.description"
 msgstr "Это письмо каждый месяц автоматически отправляется редакторам и управляющим журнала, чтобы у них было представление о работе системы."
+
+msgid "emails.announcement.subject"
+msgstr "{$title}"
+
+msgid "emails.announcement.body"
+msgstr ""
+"<b>{$title}</b><br />\n"
+"<br />\n"
+"{$summary}<br />\n"
+"<br />\n"
+"Посетите наш веб-сайт, чтобы прочитать <a href=\"{$url}\">объявление полностью</a>."
+
+msgid "emails.announcement.description"
+msgstr "Это письмо отправляется при создании нового объявления."
