@@ -20,7 +20,7 @@
 		<dropindex table="section_editors" index="section_editors_user_id" />
 		<rename table="section_editors" to="subeditor_submission_group" />
 		<rename table="subeditor_submission_group" column="section_id" to="assoc_id" />
-		<query>ALTER TABLE subeditor_submission_group ADD assoc_type BIGINT<query>
+		<query>ALTER TABLE subeditor_submission_group ADD assoc_type BIGINT</query>
 		<query>UPDATE subeditor_submission_group SET assoc_type = 530</query><!-- ASSOC_TYPE_SECTION -->
 	</sql>
 </data>
