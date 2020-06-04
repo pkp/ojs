@@ -11,7 +11,7 @@
 
 {block name="page"}
 	<div class="pkpWorkflow">
-		<pkp-header :is-one-line="true" class="pkpWorkflow__header">
+		<pkp-header class="pkpWorkflow__header">
 			<h1 class="pkpWorkflow__identification">
 				<span class="pkpWorkflow__identificationId">{{ submission.id }}</span>
 				<span class="pkpWorkflow__identificationDivider">/</span>
@@ -81,7 +81,7 @@
 			</tab>
 			<tab id="publication" label="{translate key="submission.publication"}">
 				<div class="pkpPublication" ref="publication" aria-live="polite">
-					<pkp-header class="pkpPublication__header">
+					<pkp-header class="pkpPublication__header" :is-one-line="false">
 						<span class="pkpPublication__status">
 							<strong>{{ statusLabel }}</strong>
 							<span v-if="workingPublication.status === getConstant('STATUS_QUEUED') && workingPublication.id === currentPublication.id" class="pkpPublication__statusUnpublished">{translate key="publication.status.unscheduled"}</span>
