@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-04 19:54+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "iniciar uma pesquisa avançada por similaridade"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Você também pode {$advancedSearchLink} para este artigo."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Artigos Semelhantes"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Este plugin adiciona uma lista de artigos semelhantes à página de resumo do "
+"artigo."
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Recomendar artigos semelhantes"
