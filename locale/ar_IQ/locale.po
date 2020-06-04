@@ -119,6 +119,9 @@ msgstr "الحفظ"
 msgid "common.queue.short.completed"
 msgstr "الحفظ"
 
+msgid "submissionGroup.assignedSubEditors"
+msgstr "المحررون المعينون"
+
 msgid "section.section"
 msgstr "القسم"
 
@@ -460,6 +463,9 @@ msgstr "إصدارات"
 
 msgid "issue.title"
 msgstr "العنوان"
+
+msgid "issue.viewIssueIdentification"
+msgstr "معاينة {$identification}"
 
 msgid "issue.volume"
 msgstr "المجلد"
@@ -1569,7 +1575,7 @@ msgid "about.memberships"
 msgstr "العضوية"
 
 msgid "about.aboutThisPublishingSystem"
-msgstr "عن نظام النشر هذا"
+msgstr "المزيد من المعلومات عن نظام النشر هذا، ومنصته ومراحل عمله من مشروع المعرفة العامة"
 
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "عملية التحرير والنشر لنظام المجلات المفتوحة"
