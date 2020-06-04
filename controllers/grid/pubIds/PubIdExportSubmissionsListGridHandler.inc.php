@@ -33,7 +33,7 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
 		if ($statusId) {
 			$pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
 		}
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /** @var $submissionDao SubmissionDAO */
 		return $submissionDao->getExportable(
 			$context->getId(),
 			$this->_plugin->getPubIdType(),

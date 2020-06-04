@@ -57,8 +57,6 @@ class SubmissionQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionQu
 
 	/**
 	 * Execute additional actions for app-specific query objects
-	 *
-	 * @param object Query object
 	 * @return object Query object
 	 */
 	public function appGet($q) {

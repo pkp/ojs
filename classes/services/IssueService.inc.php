@@ -98,7 +98,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 
 	/**
 	 * @copydoc \PKP\Services\interfaces\EntityReadInterface::getQueryBuilder()
-	 * @return IssueQueryBuilder
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
 	public function getQueryBuilder($args = []) {
 

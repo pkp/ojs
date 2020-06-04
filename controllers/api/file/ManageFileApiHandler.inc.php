@@ -138,7 +138,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 				$galley = $galleyDao->getById($submissionFile->getAssocId());
 				if ($galley) {
 					if (count($allRevisions) <= 1) {
-						$galley->setFileId(NULL);
+						$galley->_data['fileId'] = null; // Work around pkp/pkp-lib#5740
 						$galleyDao->updateObject($galley);
 					}
 				}

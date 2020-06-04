@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2020-01-30 08:35+0000\n"
-"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"PO-Revision-Date: 2020-05-07 02:13+0000\n"
+"Last-Translator: Felipe Geremia Nievinski <fgnievinski@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -27,43 +27,51 @@ msgid "editor.submissionQueue"
 msgstr "Fila de envio"
 
 msgid "editor.submissionArchive"
-msgstr "Arquivo de submissões"
+msgstr "Acervo de Submissões"
 
 msgid "editor.publishing"
 msgstr "Publicação"
 
 msgid "editor.publishedIssues"
-msgstr "Edições publicadas"
+msgstr "Edições Publicadas"
 
 msgid "editor.allSections"
-msgstr "Todas as seções"
+msgstr "Todas as Seções"
 
 msgid "editor.allEditors"
-msgstr "Todos os editores"
+msgstr "Todos os Editores"
 
 msgid "editor.me"
 msgstr "Mim"
 
 msgid "editor.publicIdentificationExists"
-msgstr "O identificador público '{$publicIdentifier}' já existe para outro objeto (edição, artigo, composição final ou arquivo suplementar). Escolha um identificar único dentre os disponíveis em sua publicação."
+msgstr ""
+"O identificador público '{$publicIdentifier}' já existe para outro objeto ("
+"edição, artigo, composição final ou arquivo suplementar). Escolha um "
+"identificar único dentre os disponíveis em seu periódico."
 
 msgid "editor.submissionArchive.noSubmissions"
-msgstr "Nenhuma submissão no arquivo."
+msgstr "Nenhuma submissão no acervo."
 
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Salvar alterações a submissões arquivadas? Submissões marcadas para exclusão serão excluídas permanentemente do sistema."
 
 msgid "editor.submissionArchive.confirmDelete"
-msgstr "Deseja realmente excluir esta submissão?"
+msgstr "Você tem certeza que deseja excluir esta submissão?"
 
 msgid "editor.submissionReview.confirmDecision"
-msgstr "Deseja realmente registrar a decisão?"
+msgstr "Você tem certeza que deseja registrar esta decisão?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Esta submissão será arquivada após a mensagem de Notificar Autor ser enviada ou pressionado o botão \"Não enviar e-mail\"."
+msgstr ""
+"Esta submissão será arquivada após a mensagem de Notificar Autor ser enviada "
+"ou pressionado o botão \"Não Enviar E-mail\"."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Antes de enviar a submissão para a edição de texto, use o link 'Notificar autor' para informá-lo da decisão e escolher a versão do documento a ser enviada."
+msgstr ""
+"Antes de enviar a submissão para a correção de texto, use o link 'Notificar "
+"Autor' para informá-lo da decisão e escolher a versão do documento a ser "
+"enviada."
 
 msgid "editor.notifyUsers"
 msgstr "Notificar Usuários"
@@ -84,7 +92,7 @@ msgid "editor.notifyUsers.inProgress"
 msgstr "Notificando usuários..."
 
 msgid "editor.usersNotified"
-msgstr "Usários notificados"
+msgstr "Usuários Notificados"
 
 msgid "editor.notifyUsers.allUsers"
 msgstr "Enviar esta mensagem a todos os usuários associados a esta revista ({$count} usuários)"
@@ -441,7 +449,7 @@ msgid "editor.submissionsAndPublishing"
 msgstr "Submissões e Publicações"
 
 msgid "editor.submissionQueue"
-msgstr "Fila de submissões"
+msgstr "Fila de Submissões"
 
 msgid "editor.issues.invalidCoverPageFormat"
 msgstr "Formato inválido. Formatos aceitáveis são .gif, .jpg ou .png. Verifique as configurações de MimeType do servidor e permissões de pastas."

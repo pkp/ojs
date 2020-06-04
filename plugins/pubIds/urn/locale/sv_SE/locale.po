@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
-"PO-Revision-Date: 2020-01-24 16:03+0000\n"
-"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
+"PO-Revision-Date: 2020-05-19 15:11+0000\n"
+"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "sv/>\n"
 "Language: sv_SE\n"
@@ -187,3 +187,34 @@ msgstr "Ange ett URN-suffixmönster för artiklar."
 
 msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
 msgstr "Artiklar"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Objekt"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Publiceringsversion: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Ett URN har inte tilldelats publikationen."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN för publikationen kommer att bli {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN måste börja med {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Du kan inte generera ett URN eftersom en eller flera delar av URN:et saknar "
+"data. Du kan behöva tilldela bidraget ett nummer,  välja ett utgivar-ID "
+"eller ange sidnummer."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Du kan inte generera ett URN innan bidraget har tilldelats till ett nummer."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Tilldela"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN måste börja med {$prefix}."

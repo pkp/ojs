@@ -83,8 +83,10 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		$request = Application::get()->getRequest();
+
 		$publication = $submission->getCurrentPublication();
 		$locale = $publication->getData('locale');
+
 		// Issue shoulld be set by now
 		$issue = $deployment->getIssue();
 
@@ -95,7 +97,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 
 		// title
 		$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
-		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($submission->getTitle($submission->getLocale()), ENT_COMPAT, 'UTF-8')));
+		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($submission->getData('title', $locale), ENT_COMPAT, 'UTF-8')));
 		if ($subtitle = $publication->getData('subtitle', $locale)) $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subtitle', htmlspecialchars($subtitle, ENT_COMPAT, 'UTF-8')));
 		$journalArticleNode->appendChild($titlesNode);
 
@@ -103,23 +105,55 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$contributorsNode = $doc->createElementNS($deployment->getNamespace(), 'contributors');
 		$authors = $publication->getData('authors');
 		$isFirst = true;
-		foreach ($authors as $author) {
+		foreach ($authors as $author) { /** @var $author Author */
 			$personNameNode = $doc->createElementNS($deployment->getNamespace(), 'person_name');
 			$personNameNode->setAttribute('contributor_role', 'author');
+
 			if ($isFirst) {
 				$personNameNode->setAttribute('sequence', 'first');
 			} else {
 				$personNameNode->setAttribute('sequence', 'additional');
 			}
-			if (empty($author->getLocalizedFamilyName())) {
-				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getFullName(false)), ENT_COMPAT, 'UTF-8')));
+
+			$familyNames = $author->getFamilyName(null);
+			$givenNames = $author->getGivenName(null);
+
+			// Check if both givenName and familyName is set for the submission language.
+			if (isset($familyNames[$locale]) && isset($givenNames[$locale])) {
+				$personNameNode->setAttribute('language', PKPLocale::getIso1FromLocale($locale));
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($givenNames[$locale]), ENT_COMPAT, 'UTF-8')));
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($familyNames[$locale]), ENT_COMPAT, 'UTF-8')));
+
+				$hasAltName = false;
+				foreach($familyNames as $otherLocal => $familyName) {
+					if ($otherLocal != $locale && isset($familyName) && !empty($familyName)) {
+						if (!$hasAltName) {
+							$altNameNode = $doc->createElementNS($deployment->getNamespace(), 'alt-name');
+							$personNameNode->appendChild($altNameNode);
+
+							$hasAltName = true;
+						}
+
+						$nameNode = $doc->createElementNS($deployment->getNamespace(), 'name');
+						$nameNode->setAttribute('language', PKPLocale::getIso1FromLocale($otherLocal));
+
+						$nameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($familyName), ENT_COMPAT, 'UTF-8')));
+						if (isset($givenNames[$otherLocal]) && !empty($givenNames[$otherLocal])) {
+							$nameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($givenNames[$otherLocal]), ENT_COMPAT, 'UTF-8')));
+						}
+
+						$altNameNode->appendChild($nameNode);
+					}
+				}
+
 			} else {
-				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($author->getLocalizedGivenName()), ENT_COMPAT, 'UTF-8')));
-				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getLocalizedFamilyName()), ENT_COMPAT, 'UTF-8')));
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getFullName(false)), ENT_COMPAT, 'UTF-8')));
 			}
+
 			if ($author->getData('orcid')) {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
 			}
+			
 			$contributorsNode->appendChild($personNameNode);
 			$isFirst = false;
 		}
@@ -326,8 +360,6 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		}
 		return $componentListNode;
 	}
-
-
 }
 
 

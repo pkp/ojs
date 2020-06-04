@@ -15,7 +15,19 @@
  * @uses $publishedSubmissions array Lists of articles published in this issue
  *   sorted by section.
  * @uses $primaryGenreIds array List of file genre ids for primary file types
+ * @uses $heading string HTML heading element, default: h2
  *}
+{if !$heading}
+	{assign var="heading" value="h2"}
+{/if}
+{assign var="articleHeading" value="h3"}
+{if $heading == "h3"}
+	{assign var="articleHeading" value="h4"}
+{elseif $heading == "h4"}
+	{assign var="articleHeading" value="h5"}
+{elseif $heading == "h5"}
+	{assign var="articleHeading" value="h6"}
+{/if}
 <div class="obj_issue_toc">
 
 	{* Indicate if this is only a preview *}
@@ -82,9 +94,9 @@
 	{* Full-issue galleys *}
 	{if $issueGalleys}
 		<div class="galleys">
-			<h2 id="issueTocGalleyLabel">
+			<{$heading} id="issueTocGalleyLabel">
 				{translate key="issue.fullIssue"}
-			</h2>
+			</{$heading}>
 			<ul class="galleys_links">
 				{foreach from=$issueGalleys item=galley}
 					<li>
@@ -101,14 +113,14 @@
 		<div class="section">
 		{if $section.articles}
 			{if $section.title}
-				<h2>
+				<{$heading}>
 					{$section.title|escape}
-				</h2>
+				</{$heading}>
 			{/if}
 			<ul class="cmp_article_list articles">
 				{foreach from=$section.articles item=article}
 					<li>
-						{include file="frontend/objects/article_summary.tpl" heading="h3"}
+						{include file="frontend/objects/article_summary.tpl" heading=$articleHeading}
 					</li>
 				{/foreach}
 			</ul>

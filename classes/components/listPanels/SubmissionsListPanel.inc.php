@@ -25,10 +25,11 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 
 		$request = \Application::get()->getRequest();
 		if ($request->getContext()) {
-			$config['filters'][] = [
+			// Add section filters above last activity filter
+			array_splice($config['filters'], 2, 0, [[
 				'heading' => __('section.sections'),
 				'filters' => self::getSectionFilters($activeOnly),
-			];
+			]]);
 		}
 
 		return $config;

@@ -304,11 +304,17 @@ class IssueHandler extends Handler {
 			return $genre->getId();
 		}, $primaryGenres);
 
+		// Show scheduled submissions if this is a preview
 		import('classes.submission.Submission'); // import STATUS_ constants
+		$allowedStatuses = [STATUS_PUBLISHED];
+		if (!$issue->getPublished()) {
+			$allowedStatuses[] = STATUS_SCHEDULED;
+		}
+
 		$issueSubmissions = iterator_to_array(Services::get('submission')->getMany([
 			'contextId' => $journal->getId(),
 			'issueIds' => [$issue->getId()],
-			'status' => STATUS_PUBLISHED,
+			'status' => $allowedStatuses,
 			'orderBy' => 'seq',
 			'orderDirection' => 'ASC',
 		]));

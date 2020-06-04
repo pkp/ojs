@@ -43,7 +43,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @param $type int PAYMENT_TYPE_...
 	 * @param $userId int ID of user responsible for payment
 	 * @param $assocId int ID of associated entity
-	 * @param $amount numeric Amount of currency $currencyCode
+	 * @param $amount float Amount of currency $currencyCode
 	 * @param $currencyCode string optional ISO 4217 currency code
 	 * @return QueuedPayment
 	 */
@@ -64,6 +64,7 @@ class OJSPaymentManager extends PaymentManager {
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'current'));
+				break;
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'user', 'subscriptions'));
 				break;
@@ -156,7 +157,7 @@ class OJSPaymentManager extends PaymentManager {
 
 	/**
 	 * Get the payment plugin.
-	 * @return PaymentPlugin
+	 * @return PaymethodPlugin
 	 */
 	function getPaymentPlugin() {
 		$paymentMethodPluginName = $this->_context->getData('paymentPluginName');

@@ -63,6 +63,10 @@
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_last_activity.xml" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.2.0.9">
+		<data file="dbscripts/xml/upgrade/3.2.1_preupdate_subeditor_categories.xml" />
+	</upgrade>
+
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/log.xml" />
@@ -263,6 +267,7 @@
 
 	<upgrade minversion="2.4.0.0" maxversion="3.2.0.9">
 		<data file="dbscripts/xml/upgrade/3.2.1_update.xml" />
+		<code function="installEmailTemplate" key="ANNOUNCEMENT" locales="en_US" />
 		<note file="docs/release-notes/README-3.2.1" />
 	</upgrade>
 

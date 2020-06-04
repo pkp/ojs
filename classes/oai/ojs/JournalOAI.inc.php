@@ -67,7 +67,7 @@ class JournalOAI extends OAI {
 	/**
 	 * Convert OAI identifier to article ID.
 	 * @param $identifier string
-	 * @return int
+	 * @return int|false
 	 */
 	function identifierToArticleId($identifier) {
 		$prefix = 'oai:' . $this->config->repositoryId . ':' . 'article/';
@@ -80,7 +80,7 @@ class JournalOAI extends OAI {
 
 	/**
 	 * Get the journal ID and section ID corresponding to a set specifier.
-	 * @return int
+	 * @return array
 	 */
 	function setSpecToSectionId($setSpec, $journalId = null) {
 		$tmpArray = preg_split('/:/', $setSpec);

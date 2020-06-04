@@ -38,7 +38,9 @@ class FieldSelectIssue extends FieldSelect {
 		);
 
 		$config['publishedNoticeBase'] = __('publication.publishedIn', ['issueUrl' => $issueUrlPlaceholder]);
+		$config['scheduleLabel'] = __('publication.scheduleInissue');
 		$config['scheduledNoticeBase'] = __('publication.scheduledIn', ['issueUrl' => $issueUrlPlaceholder]);
+		$config['unscheduledNotice'] = __('publication.unscheduledIn');
 		$config['unscheduleLabel'] = __('publication.unschedule');
 
 		return $config;

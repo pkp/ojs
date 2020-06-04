@@ -29,7 +29,7 @@ class AuthorDAO extends PKPAuthorDAO {
 	 * @param $journalId int Optional journal ID to restrict results to
 	 * @param $initial An initial a family name must begin with, "-" for authors with no family names
 	 * @param $rangeInfo Range information
-	 * @param $includeEmail Whether or not to include the email in the select distinct
+	 * @param $includeEmail boolean Whether or not to include the email in the select distinct
 	 * @return DAOResultFactory Authors ordered by last name, given name
 	 */
 	function getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
