@@ -59,14 +59,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 		foreach ($this->_getDAOs() as $dao) {
 			if ($dao instanceof SchemaDAO) {
-				$schema = Services::get('schema')->get($dao->schemaName);
-				foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
-					$schema->properties->{$fieldName} = (object) [
-						'type' => 'string',
-						'apiSummary' => true,
-						'validation' => ['nullable'],
-					];
-				}
+				HookRegistry::register('Schema::get::' . $dao->schemaName, array($this, 'addToSchema'));
 			} else {
 				HookRegistry::register(strtolower_codesafe(get_class($dao)) . '::getAdditionalFieldNames', array(&$this, 'getAdditionalFieldNames'));
 			}
@@ -422,6 +415,28 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
 			$additionalFields[] = $fieldName;
 		}
+		
+		return false;
+	}
+
+	/**
+	 * Add properties for this type of public identifier to the entity's list for
+	 * storage in the database.
+	 * This is used for SchemaDAO-backed entities only.
+	 * @see PKPPubIdPlugin::getAdditionalFieldNames()
+	 * @param $hookName string `Schema::get::publication`
+	 * @param $params array
+	 */
+	public function addToSchema($hookName, $params) {
+		$schema =& $params[0];
+		foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
+			$schema->properties->{$fieldName} = (object) [
+				'type' => 'string',
+				'apiSummary' => true,
+				'validation' => ['nullable'],
+			];
+		}
+
 		return false;
 	}
 
