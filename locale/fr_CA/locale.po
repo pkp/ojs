@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2020-05-08 01:16+0000\n"
+"PO-Revision-Date: 2020-06-04 19:54+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -1613,7 +1613,8 @@ msgid "about.memberships"
 msgstr "Adhésions"
 
 msgid "about.aboutThisPublishingSystem"
-msgstr "À propos de ce système de publication"
+msgstr ""
+"À propos de ce système de publication, plateforme et processus par OJS/PKP."
 
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Processus d'édition et de publication d'OJS"
@@ -2141,3 +2142,9 @@ msgstr "Ordre des articles"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "Veuillez choisir comment ordonner les articles de cette catégorie."
+
+msgid "issue.viewIssueIdentification"
+msgstr "Afficher {$identification}"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Rédacteurs-trices assignés-ées"
