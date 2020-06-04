@@ -7,8 +7,6 @@
  *
  */
 
-import { getNewLibraryCopy } from "cypress/types/bluebird";
-
 describe('Data suite tests', function() {
 	it('Creates a context', function() {
 		cy.login('admin', 'admin');
