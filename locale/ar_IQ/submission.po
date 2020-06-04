@@ -197,6 +197,9 @@ msgstr "كل متطلبات النشر ملباة. سيتم النشر عند إ
 msgid "publication.publish.confirmation.backIssue"
 msgstr "كل متطلبات النشر ملباة. سيتم النشر حالاً ضمن {$issue}. هل أنت متأكد من رغبتك في النشر؟"
 
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr "كل متطلبات النشر ملباة. سيتم النشر حالاً لأن تأريخ النشر قد سبق تعيينه ليكون في {$datePublished}. هل أنت متأكد من رغبتك في النشر؟"
+
 msgid "publication.required.issue"
 msgstr "لا بد من تعيين هذه المقالة إلى عدد ما قبل نشرها."
 
@@ -205,3 +208,12 @@ msgstr "منشور في <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
 msgstr "مجدول للنشر في <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "لم تسبق جدولته للنشر ضمن أي عدد بعد."
+
+msgid "publication.scheduleInissue"
+msgstr "التعيين للنشر ضمن عدد"
+
+msgid "publication.selectIssue"
+msgstr "إختر أحد الأعداد لجدولته للنشر"

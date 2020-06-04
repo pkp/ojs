@@ -16,3 +16,6 @@ msgstr "كتلة \"مطور من قبل\""
 
 msgid "plugins.block.developedBy.description"
 msgstr "هذه الإضافة تقدم رابط الشريط الجانبي \"مطور من قبل\"."
+
+msgid "plugins.block.developedBy.blockTitle"
+msgstr "مطور من قبل"
