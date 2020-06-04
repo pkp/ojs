@@ -46,4 +46,4 @@
 			{load_url_in_div id="categoriesContainer" url=$categoriesUrl}
 		</tab>
 	</tabs>
-{/block}}
+{/block}
