@@ -177,7 +177,7 @@
 		<note file="docs/release-notes/README-3.2.1" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.9.9.9"><!-- was to 3.2.9.9 -->
+	<upgrade minversion="3.0.0.0" maxversion="3.2.9.9">
 		<migration class="lib.pkp.classes.migration.upgrade.v3_3_0UpgradeMigration" />
 		<note file="docs/release-notes/README-3.3.0" />
 	</upgrade>
