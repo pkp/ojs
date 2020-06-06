@@ -105,6 +105,11 @@ class OJSMigration extends Migration {
 			$table->index(['issue_id'], 'issue_settings_issue_id');
 			$table->unique(['issue_id', 'locale', 'setting_name'], 'issue_settings_pkey');
 		});
+		// Add partial index (DBMS-specific)
+		switch (Capsule::connection()->getDriverName()) {
+			case 'mysql': Capsule::connection()->unprepared('CREATE INDEX issue_settings_name_value ON issue_settings (setting_name(50), setting_value(150))'); break;
+			case 'pgsql': Capsule::connection()->unprepared("CREATE INDEX issue_settings_name_value ON issue_settings (setting_name, setting_value) WHERE setting_name IN ('medra::registeredDoi', 'datacite::registeredDoi')"); break;
+		}
 
 		// Issue galleys.
 		Capsule::schema()->create('issue_galleys', function (Blueprint $table) {
@@ -217,6 +222,11 @@ class OJSMigration extends Migration {
 			$table->index(['galley_id'], 'publication_galley_settings_galley_id');
 			$table->unique(['galley_id', 'locale', 'setting_name'], 'publication_galley_settings_pkey');
 		});
+		// Add partial index (DBMS-specific)
+		switch (Capsule::connection()->getDriverName()) {
+			case 'mysql': Capsule::connection()->unprepared('CREATE INDEX publication_galley_settings_name_value ON publication_galley_settings (setting_name(50), setting_value(150))'); break;
+			case 'pgsql': Capsule::connection()->unprepared("CREATE INDEX publication_galley_settings_name_value ON publication_galley_settings (setting_name, setting_value)"); break;
+		}
 
 		// Subscription types.
 		Capsule::schema()->create('subscription_types', function (Blueprint $table) {
@@ -303,5 +313,34 @@ class OJSMigration extends Migration {
 			$table->string('payment_method_plugin_name', 80)->nullable();
 		});
 
+	}
+
+	/**
+	 * Reverse the migration.
+	 * @return void
+	 */
+	public function down() {
+		Capsule::schema()->drop('completed_payments');
+		Capsule::schema()->drop('queued_payments');
+		Capsule::schema()->drop('institutional_subscription_ip');
+		Capsule::schema()->drop('institutional_subscriptions');
+		Capsule::schema()->drop('subscriptions');
+		Capsule::schema()->drop('subscription_type_settings');
+		Capsule::schema()->drop('subscription_types');
+		Capsule::schema()->drop('publication_galley_settings');
+		Capsule::schema()->drop('publication_galleys');
+		Capsule::schema()->drop('publications');
+		Capsule::schema()->drop('submission_tombstones');
+		Capsule::schema()->drop('custom_section_orders');
+		Capsule::schema()->drop('custom_issue_orders');
+		Capsule::schema()->drop('issue_files');
+		Capsule::schema()->drop('issue_galley_settings');
+		Capsule::schema()->drop('issue_galleys');
+		Capsule::schema()->drop('issue_settings');
+		Capsule::schema()->drop('issues');
+		Capsule::schema()->drop('section_settings');
+		Capsule::schema()->drop('sections');
+		Capsule::schema()->drop('journal_settings');
+		Capsule::schema()->drop('journals');
 	}
 }

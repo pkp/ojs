@@ -41,9 +41,6 @@
 	<!-- OJS schema -->
 	<migration class="classes.migration.OJSMigration" />
 
-	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
-	<data file="dbscripts/xml/indexes.xml" />
-
 	<!-- Other install tasks -->
 	<code function="createData"/>
 	<code function="createConfig"/>

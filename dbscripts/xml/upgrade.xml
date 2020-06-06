@@ -50,9 +50,6 @@
 		<data file="dbscripts/xml/upgrade/3.2.1_preupdate_subeditor_categories.xml" />
 	</upgrade>
 
-	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
-	<data file="dbscripts/xml/indexes.xml" />
-
 	<!-- Install default NavigationMenus -->
 	<code function="installDefaultNavigationMenus" />
 	<code function="migrateStaticPagesToNavigationMenuItems" />
