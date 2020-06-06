@@ -765,7 +765,7 @@ class Upgrade extends Installer {
 			$row = $result->GetRowAssoc(false);
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['dependent_file_id']);
 			foreach ((array) $submissionFiles as $submissionFile) {
-				if ($submissionFile->getFileStage() != SUBMISSION_FILE_PUBLIC) continue;
+				if ($submissionFile->getFileStage() != 1) continue; // SUBMISSION_FILE_PUBLIC
 
 				$submission = $submissionDao->getById($submissionFile->getSubmissionId());
 				$imageGenre = $genreDao->getByKey('IMAGE', $submission->getContextId());
