@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-02 18:24+0000\n"
-"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
+"PO-Revision-Date: 2020-06-07 15:39+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -1036,3 +1036,138 @@ msgstr ""
 "Chọn một mô hình để xử lý các khía cạnh của quá trình biên tập. (Để chỉ định "
 "một Biên tập viên Quản lý và Biên tập viên Chuyên mục, hãy chuyển đến mục "
 "Biên tập trong Quản lý Tạp chí.)"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Chọn một đề xuất và gửi đánh giá để hoàn thành quá trình. Bạn phải nhập đánh "
+"giá hoặc tải lên một tập tin trước khi chọn một đề xuất."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Ngoài ra, bạn có thể tải lên các tệp cho biên tập viên hoặc tác giả tham "
+"khảo."
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Nhấp vào biểu tượng để nhập (hoặc dán) đánh giá của bạn về bài gửi này."
+
+msgid "reviewer.competingInterests"
+msgstr "Xung đột lợi ích"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Tuyên bố liệu bạn có lợi ích cạnh tranh hay không liên quan đến nghiên cứu "
+"này (xem <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Nhấp vào tên tệp để tải xuống và xem lại (trên màn hình hoặc bằng cách in) "
+"các tệp được liên kết với nội dung này."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Nếu bạn định thực hiện đánh giá, hãy tham khảo Hướng dẫn người phản biện ở "
+"bên dưới."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "như bạn sẽ thực hiện đánh giá."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Thông báo cho biên tập viên của bài gửi"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Hướng dẫn nhận xét sẽ cung cấp cho người phản biện các tiêu chí để đánh giá "
+"sự phù hợp của bài gửi để xuất bản trên tạp chí và có thể bao gồm bất kỳ "
+"hướng dẫn đặc biệt nào để chuẩn bị đánh giá hiệu quả và hữu ích. Khi tiến "
+"hành đánh giá, người phản biện được trình bày với hai box văn bản mở, box "
+"đầu tiên \"cho tác giả và biên tập viên\" và thứ hai \"cho biên tập viên\". "
+"Ngoài ra,  Người quản lý Tạp chí có thể tạo phiếu nhận xét trong Biểu mẫu "
+"đánh giá. Trong mọi trường hợp, các biên tập viên sẽ có tùy chọn bao gồm các "
+"đánh giá tương ứng với tác giả."
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Hướng dẫn cho người phản biện"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Các bước đánh giá"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Thời hạn đánh giá"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Bài gửi đã được đánh giá"
+
+msgid "reviewer.article.schedule"
+msgstr "Thời hạn"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Xem bình luận"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Từ chối bài gửi"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Gửi bài cho tạp chí khác"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Gửi lại để đánh giá tiếp"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Yêu cầu sửa chữa"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Chấp nhận bài gửi"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Thời hạn đánh giá"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Bài đánh giá đã được gửi"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Phản hồi của bạn"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Yêu cầu của biên tập viên"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Nếu bạn muốn chú thích tập tin, đối với biên tập viên, hãy lưu vào ổ cứng "
+"của bạn và sử dụng Duyệt/Tải lên.)"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Các tập tin đã tải lên"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Phiên bản được tải lên bởi người phản biện"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Bình luận"
+
+msgid "reviewer.article.submitReview"
+msgstr "Gửi bài đánh giá cho biên tập viên"
+
+msgid "reviewer.article.recommendation"
+msgstr "Khuyến nghị"
+
+msgid "reviewer.article.automatic"
+msgstr "(Tự động)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Gửi nhắc nhở"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor To Enter"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Nhập hoặc dán trong nhận xét đánh giá ở đây"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Biên tập viên bài gửi"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Xem {$identification}"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Biên tập viên được phân công"
