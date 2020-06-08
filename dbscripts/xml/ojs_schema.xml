@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+  * ojs_schema.xml
+  *
+  * Copyright (c) 2014-2020 Simon Fraser University
+  * Copyright (c) 2003-2020 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * OJS database schema in XML.
+  *
+  -->
+
+<schema version="0.2">
+
+	<!--
+	  *
+	  * TABLE journals
+	  *
+	  -->
+	<table name="journals">
+		<field name="journal_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="path" type="C2" size="32">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+			<descr>Used to order lists of journals</descr>
+		</field>
+		<field name="primary_locale" type="C2" size="14">
+			<NOTNULL/>
+		</field>
+		<field name="enabled" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+			<descr>Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)</descr>
+		</field>
+		<descr>Journals and basic journal settings.</descr>
+		<index name="journals_path">
+			<col>path</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE journal_settings
+	  *
+	  -->
+	<table name="journal_settings">
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="14">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6"/>
+		<descr>Journal settings.</descr>
+		<index name="journal_settings_journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="journal_settings_pkey">
+			<col>journal_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE sections
+	  *
+	  -->
+	<table name="sections">
+		<field name="section_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="review_form_id" type="I8" />
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="editor_restricted" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="meta_indexed" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="meta_reviewed" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="abstracts_not_required" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="hide_title" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="hide_author" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="abstract_word_count" type="I8" />
+		<descr>Journal sections.</descr>
+		<index name="sections_journal_id">
+			<col>journal_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE section_settings
+	  *
+	  -->
+	<table name="section_settings">
+		<field name="section_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="14">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Section-specific settings</descr>
+		<index name="section_settings_section_id">
+			<col>section_id</col>
+		</index>
+		<index name="section_settings_pkey">
+			<col>section_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE issues
+	  *
+	  -->
+	<table name="issues">
+		<field name="issue_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="volume" type="I2"/>
+		<field name="number" type="C2" size="40" />
+		<field name="year" type="I2"/>
+		<field name="published" type="I1">
+			<NOTNULL />
+			<DEFAULT VALUE="0" />
+		</field>
+		<field name="current" type="I1">
+			<NOTNULL />
+			<DEFAULT VALUE="0" />
+		</field>
+		<field name="date_published" type="T" />
+		<field name="date_notified" type="T" />
+		<field name="last_modified" type="T" />
+		<field name="access_status" type="I1">
+			<NOTNULL />
+			<DEFAULT VALUE="1" />
+		</field>
+		<field name="open_access_date" type="T" />
+		<field name="show_volume" type="I1">
+			<NOTNULL />
+			<DEFAULT VALUE="0" />
+		</field>
+		<field name="show_number" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="show_year" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="show_title" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="style_file_name" type="C2" size="90"/>
+		<field name="original_style_file_name" type="C2" size="255"/>
+		<field name="url_path" type="C2" size="64" />
+		<descr>Journal issues.</descr>
+		<index name="issues_journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="issues_url_path">
+			<col>url_path</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE issue_settings
+	  *
+	  -->
+	<table name="issue_settings">
+		<field name="issue_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="14">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Locale-specific issue data</descr>
+		<index name="issue_settings_issue_id">
+			<col>issue_id</col>
+		</index>
+		<index name="issue_settings_pkey">
+			<col>issue_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE issue_galleys
+	  *
+	  -->
+	<table name="issue_galleys">
+		<field name="galley_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="locale" type="C2" size="14"/>
+		<field name="issue_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="file_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="label" type="C2" size="32"/>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="url_path" type="C2" size="64" />
+		<descr>Issue galleys.</descr>
+		<index name="issue_galleys_issue_id">
+			<col>issue_id</col>
+		</index>
+		<index name="issue_galleys_url_path">
+			<col>url_path</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE issue_galley_settings
+	  *
+	  -->
+	<table name="issue_galley_settings">
+		<field name="galley_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="14">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Issue galley metadata.</descr>
+		<index name="issue_galley_settings_galley_id">
+			<col>galley_id</col>
+		</index>
+		<index name="issue_galley_settings_pkey">
+			<col>galley_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE issue_files
+	  *
+	  -->
+	<table name="issue_files">
+		<field name="file_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="issue_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="file_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="file_type" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="file_size" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="content_type" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="original_file_name" type="C2" size="127"/>
+		<field name="date_uploaded" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_modified" type="T">
+			<NOTNULL/>
+		</field>
+		<index name="issue_files_issue_id">
+			<col>issue_id</col>
+		</index>
+	</table>
+
+	<!--
+	  * TABLE custom_issue_orders
+	  *
+	  -->
+	<table name="custom_issue_orders">
+		<field name="issue_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>Custom sequencing information for journal issues, when available</descr>
+		<index name="custom_issue_orders_pkey">
+			<col>issue_id</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<table name="custom_section_orders">
+		<field name="issue_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="section_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>Custom sequencing information for journal sections by issue, when available.</descr>
+		<index name="custom_section_orders_pkey">
+			<col>issue_id</col>
+			<col>section_id</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+      *
+      * TABLE submission_tombstones
+      *
+      -->
+    <table name="submission_tombstones">
+        <field name="tombstone_id" type="I8">
+            <KEY />
+            <AUTOINCREMENT />
+        </field>
+        <field name="submission_id" type="I8">
+            <NOTNULL />
+        </field>
+        <field name="date_deleted" type="T">
+            <NOTNULL />
+        </field>
+        <field name="journal_id" type="I8">
+            <NOTNULL />
+        </field>
+        <field name="section_id" type="I8">
+            <NOTNULL />
+        </field>
+        <field name="set_spec" type="C2" size="255">
+            <NOTNULL />
+        </field>
+        <field name="set_name" type="C2" size="255">
+            <NOTNULL />
+        </field>
+        <field name="oai_identifier" type="C2" size="255">
+            <NOTNULL />
+        </field>
+        <descr>Archived, removed from TOC, unscheduled or unpublished journal articles.</descr>
+		<index name="submission_tombstones_journal_id">
+			<col>journal_id</col>
+		</index>
+		<index name="submission_tombstones_submission_id">
+			<col>submission_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE publications
+	  *
+	  -->
+	<table name="publications">
+		<field name="publication_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="access_status" type="I8">
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="date_published" type="D"/>
+		<field name="last_modified" type="T"/>
+		<field name="locale" type="C2" size="14"/>
+		<field name="primary_contact_id" type="I8" />
+		<field name="section_id" type="I8" />
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="submission_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="status" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/><!-- STATUS_QUEUED -->
+		</field>
+		<field name="url_path" type="C2" size="64" />
+		<field name="version" type="I8" />
+		<descr>Publications</descr>
+		<index name="publications_submission_id">
+			<col>submission_id</col>
+		</index>
+		<index name="publications_section_id">
+			<col>section_id</col>
+		</index>
+		<index name="publications_url_path">
+			<col>url_path</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE publication_galleys
+	  *
+	  -->
+	<table name="publication_galleys">
+		<field name="galley_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="locale" type="C2" size="14"/>
+		<field name="publication_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="label" type="C2" size="255"/>
+		<field name="file_id" type="I8"/>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="remote_url" type="C2" size="2047"/>
+		<field name="is_approved" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="url_path" type="C2" size="64" />
+		<descr>Publication galleys</descr>
+		<index name="publication_galleys_publication_id">
+			<col>publication_id</col>
+		</index>
+		<index name="publication_galleys_url_path">
+			<col>url_path</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE publication_galley_settings
+	  *
+	  -->
+	<table name="publication_galley_settings">
+		<field name="galley_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="14">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<descr>Galley metadata.</descr>
+		<index name="publication_galley_settings_galley_id">
+			<col>galley_id</col>
+		</index>
+		<index name="publication_galley_settings_pkey">
+			<col>galley_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	 *
+	 * TABLE subscription_types
+	 *
+	 -->
+	<table name="subscription_types">
+		<field name="type_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="cost" type="F">
+			<NOTNULL/>
+		</field>
+		<field name="currency_code_alpha" type="C2" size="3">
+			<NOTNULL/>
+		</field>
+		<field name="non_expiring" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="duration" type="I2">
+		</field>
+		<field name="format" type="I2">
+			<NOTNULL/>
+		</field>
+		<field name="institutional" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="membership" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="disable_public_display" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+		</field>
+		<descr>Subscription types.</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE subscription_type_settings
+	  *
+	  -->
+	<table name="subscription_type_settings">
+		<field name="type_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="14">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Locale-specific subscription type data</descr>
+		<index name="subscription_type_settings_type_id">
+			<col>type_id</col>
+		</index>
+		<index name="subscription_type_settings_pkey">
+			<col>type_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	 *
+	 * TABLE subscriptions
+	 *
+	 -->
+	<table name="subscriptions">
+		<field name="subscription_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="type_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_start" type="D">
+		</field>
+		<field name="date_end" type="T">
+		</field>
+		<field name="status" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="membership" type="C2" size="40"/>
+		<field name="reference_number" type="C2" size="40"/>
+		<field name="notes" type="X"/>
+		<descr>Journal subscriptions.</descr>
+	</table>
+
+	<!--
+	 *
+	 * TABLE institutional_subscriptions
+	 *
+	 -->
+	<table name="institutional_subscriptions">
+		<field name="institutional_subscription_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="subscription_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="institution_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="mailing_address" type="C2" size="255"/>
+		<field name="domain" type="C2" size="255"/>
+		<descr>Journal institutional subscriptions.</descr>
+		<index name="institutional_subscriptions_subscription_id">
+			<col>subscription_id</col>
+		</index>
+		<index name="institutional_subscriptions_domain">
+			<col>domain</col>
+		</index>
+	</table>
+
+	<!--
+	 *
+	 * TABLE institutional_subscription_ip
+	 *
+	 -->
+	<table name="institutional_subscription_ip">
+		<field name="institutional_subscription_ip_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="subscription_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="ip_string" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="ip_start" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="ip_end" type="I8">
+		</field>
+		<descr>Journal institutional subscription IPs and IP ranges.</descr>
+		<index name="institutional_subscription_ip_subscription_id">
+			<col>subscription_id</col>
+		</index>
+		<index name="institutional_subscription_ip_start">
+			<col>ip_start</col>
+		</index>
+		<index name="institutional_subscription_ip_end">
+			<col>ip_end</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE queued_payments
+	  *
+	  -->
+	<table name="queued_payments">
+		<field name="queued_payment_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="date_created" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_modified" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="expiry_date" type="D" />
+		<field name="payment_data" type="X" />
+		<descr>Logs queued (unfulfilled) payments.</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE completed_payments
+	  *
+	  -->
+	<table name="completed_payments">
+		<field name="completed_payment_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="timestamp" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="payment_type" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8" />
+		<field name="assoc_id" type="I8" />
+		<field name="amount" type="F">
+			<NOTNULL/>
+		</field>
+		<field name="currency_code_alpha" type="C2" size="3" />
+		<field name="payment_method_plugin_name" type="C2" size="80" />
+		<descr>Logs completed (fulfilled) payments.</descr>
+	</table>
+</schema>
