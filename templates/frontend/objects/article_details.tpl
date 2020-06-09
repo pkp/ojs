@@ -55,6 +55,7 @@
  * @uses $currentPublication Publication The most recently published version of this article
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
+ * @uses $categories Category The category this article is assigned to
  * @uses $primaryGalleys array List of article galleys that are not supplementary or dependent
  * @uses $supplementaryGalleys array List of article galleys that are supplementary
  * @uses $keywords array List of keywords assigned to this article
@@ -368,7 +369,7 @@
 			{/if}
 
 			{* Issue article appears in *}
-			{if $issue || $section}
+			{if $issue || $section || $categories}
 				<div class="item issue">
 
 					{if $issue}
@@ -391,6 +392,21 @@
 							</h2>
 							<div class="value">
 								{$section->getLocalizedTitle()|escape}
+							</div>
+						</section>
+					{/if}
+
+					{if $categories}
+						<section class="sub_item">
+							<h2 class="label">
+								{translate key="category.category"}
+							</h2>
+							<div class="value">
+								<ul>
+									{foreach from=$categories item=category}
+										<li><a href="{url router=$smarty.const.ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
+									{/foreach}
+								</ul>
 							</div>
 						</section>
 					{/if}
