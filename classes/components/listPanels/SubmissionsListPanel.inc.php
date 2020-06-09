@@ -28,7 +28,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 			// Add section filters above last activity filter
 			array_splice($config['filters'], 2, 0, [[
 				'heading' => __('section.sections'),
-				'filters' => self::getSectionFilters(),
+				'filters' => self::getSectionFilters($activeOnly),
 			]]);
 		}
 
