@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-05-08 01:16+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/ca_ES/>\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "iniciar una cerca avançada per similitud"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "També podeu {$advancedSearchLink} per a aquest article."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Articles similars"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Aquest mòdul afegeix un llistat d'articles similars en la pàgina de resum de "
+"l'article."
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Recomanar articles similars"

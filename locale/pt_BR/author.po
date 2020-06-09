@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2020-03-12 11:36+0000\n"
-"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"PO-Revision-Date: 2020-05-07 02:13+0000\n"
+"Last-Translator: Felipe Geremia Nievinski <fgnievinski@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -27,16 +27,16 @@ msgid "author.submit.submitArticle"
 msgstr "Submeter um Artigo"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "5 Passos para a submissão"
+msgstr "Cinco Passos para a Submissão"
 
 msgid "author.submit.startHereTitle"
-msgstr "Iniciar nova submissão"
+msgstr "Iniciar Nova Submissão"
 
 msgid "author.submit.startHereLink"
 msgstr "<a href=\"{$submitUrl}\" class=\"action\">Clique aqui</a> para iniciar os cinco passos do processo de submissão."
 
 msgid "author.submit.step1"
-msgstr "Passo 1. Iniciar submissão"
+msgstr "Passo 1. Iniciar Submissão"
 
 msgid "author.submit.step2"
 msgstr "Passo 2. Transferência do manuscrito"
@@ -324,16 +324,16 @@ msgid "author.submit.authorSubmitLoginMessage"
 msgstr "É necessário criar um cadastro para submeter documentos à revista. Isto permite aos editores acompanhar a submissão e notificá-lo das mudanças na situação da submissão, ou caso informações adicionais sejam necessárias para dar continuidade ao processo editorial."
 
 msgid "author.submit"
-msgstr "Nova submissão"
+msgstr "Nova Submissão"
 
 msgid "author.track"
-msgstr "Submissões ativas"
+msgstr "Submissões Ativas"
 
 msgid "author.competingInterests"
 msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Política de Conflito de Interesses</a>"
 
 msgid "author.submit.submitArticle"
-msgstr "Submeter artigo"
+msgstr "Submeter Artigo"
 
 msgid "author.submit.howToSubmit"
 msgstr "Em caso de dificuldades com o processo, entre em contato com <a href=\"mailto:{$supportEmail}\">{$supportName}</a> via e-mail ou pelo telefone {$supportPhone} para suporte."

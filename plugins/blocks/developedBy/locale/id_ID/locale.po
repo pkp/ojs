@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-06 12:18+0000\n"
-"Last-Translator: Fransisca H <sisca.ojs@gmail.com>\n"
+"PO-Revision-Date: 2020-06-04 19:54+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-developedBy/id/>\n"
 "Language: id_ID\n"
@@ -16,3 +16,6 @@ msgstr "Plugin ini menyediakan tautan \"Dikembangkan Oleh\" ke bagian sidebar."
 
 msgid "plugins.block.developedBy.displayName"
 msgstr "Blok \"Dikembangkan Oleh\""
+
+msgid "plugins.block.developedBy.blockTitle"
+msgstr "Dikembangkan Oleh"

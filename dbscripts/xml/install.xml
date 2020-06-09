@@ -10,39 +10,36 @@
   * Installation descriptor file.
   -->
 
-<install version="3.2.1.0">
+<install version="3.3.0.0">
 	<code function="checkPhpVersion" />
 
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 
 	<!-- PKP schema components -->
-	<schema file="lib/pkp/xml/schema/common.xml" />
-	<schema file="lib/pkp/xml/schema/log.xml" />
-	<schema file="lib/pkp/xml/schema/controlledVocab.xml" />
-	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
-	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
-	<schema file="lib/pkp/xml/schema/announcements.xml" />
-	<schema file="lib/pkp/xml/schema/reviews.xml" />
-	<schema file="lib/pkp/xml/schema/reviewForms.xml" />
-	<schema file="lib/pkp/xml/schema/submissions.xml" />
-	<schema file="lib/pkp/xml/schema/submissionFiles.xml" />
-	<schema file="lib/pkp/xml/schema/categories.xml" />
-	<schema file="lib/pkp/xml/schema/notes.xml" />
-	<schema file="lib/pkp/xml/schema/views.xml" />
-	<schema file="lib/pkp/xml/schema/metadata.xml" />
-	<schema file="lib/pkp/xml/schema/genres.xml" />
-	<schema file="lib/pkp/xml/schema/tombstone.xml" />
-	<schema file="lib/pkp/xml/schema/rolesAndUserGroups.xml" />
-	<schema file="lib/pkp/xml/schema/metrics.xml" />
-	<schema file="lib/pkp/xml/schema/libraryFiles.xml" />
-	<schema file="lib/pkp/xml/schema/navigationMenus.xml" />
+	<migration class="lib.pkp.classes.migration.AnnouncementsMigration" />
+	<migration class="lib.pkp.classes.migration.CategoriesMigration" />
+	<migration class="lib.pkp.classes.migration.CommonMigration" />
+	<migration class="lib.pkp.classes.migration.ControlledVocabMigration" />
+	<migration class="lib.pkp.classes.migration.GenresMigration" />
+	<migration class="lib.pkp.classes.migration.LibraryFilesMigration" />
+	<migration class="lib.pkp.classes.migration.LogMigration" />
+	<migration class="lib.pkp.classes.migration.MetadataMigration" />
+	<migration class="lib.pkp.classes.migration.MetricsMigration" />
+	<migration class="lib.pkp.classes.migration.NavigationMenusMigration" />
+	<migration class="lib.pkp.classes.migration.NotesMigration" />
+	<migration class="lib.pkp.classes.migration.ReviewFormsMigration" />
+	<migration class="lib.pkp.classes.migration.ReviewsMigration" />
+	<migration class="lib.pkp.classes.migration.RolesAndUserGroupsMigration" />
+	<migration class="lib.pkp.classes.migration.ScheduledTasksMigration" />
+	<migration class="lib.pkp.classes.migration.SubmissionFilesMigration" />
+	<migration class="lib.pkp.classes.migration.SubmissionsMigration" />
+	<migration class="lib.pkp.classes.migration.TemporaryFilesMigration" />
+	<migration class="lib.pkp.classes.migration.TombstoneMigration" />
+	<migration class="lib.pkp.classes.migration.ViewsMigration" />
 
 	<!-- OJS schema -->
-	<schema file="dbscripts/xml/ojs_schema.xml" />
-
-	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
-	<data file="dbscripts/xml/indexes.xml" />
+	<migration class="classes.migration.OJSMigration" />
 
 	<!-- Other install tasks -->
 	<code function="createData"/>

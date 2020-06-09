@@ -102,7 +102,7 @@ class IssueFileManager extends FileManager {
 	/**
 	 * Download a file.
 	 * @param $fileId int the file id of the file to download
-	 * @param $inline print file as inline instead of attachment, optional
+	 * @param $inline boolean print file as inline instead of attachment, optional
 	 * @return boolean
 	 */
 	function downloadById($fileId, $inline = false) {

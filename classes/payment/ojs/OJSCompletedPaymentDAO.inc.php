@@ -19,7 +19,7 @@ import('lib.pkp.classes.payment.CompletedPayment');
 
 class OJSCompletedPaymentDAO extends DAO {
 	/**
-	 * Retrieve a ComplatedPayment by its ID.
+	 * Retrieve a CompletedPayment by its ID.
 	 * @param $completedPaymentId int
 	 * @param $contextId int optional
 	 * @return CompletedPayment
@@ -35,7 +35,7 @@ class OJSCompletedPaymentDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnPaymentFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
 
 		$result->Close();

@@ -19,7 +19,7 @@ use \Pimple\Container;
 use \APP\Services\PublicationService;
 use \APP\Services\StatsEditorialService;
 use \APP\Services\StatsService;
-use \APP\Services\UserService;
+use \PKP\Services\PKPUserService;
 use \PKP\Services\PKPAuthorService;
 use \PKP\Services\PKPEmailTemplateService;
 use \PKP\Services\PKPSchemaService;
@@ -29,7 +29,7 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
 	/**
 	 * Registers services
-	 * @param Pimple\Container $pimple
+	 * @param \Pimple\Container $pimple
 	 */
 	public function register(Container $pimple) {
 
@@ -70,7 +70,7 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
 		// User service
 		$pimple['user'] = function() {
-			return new UserService();
+			return new PKPUserService();
 		};
 
 		// Context service

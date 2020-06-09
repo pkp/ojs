@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-27 23:09+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2020-05-02 16:34+0000\n"
+"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"vi/>\n"
-"Language: vi\n"
+"vi_VN/>\n"
+"Language: vi_VN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,3 +13,232 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "Truy cập"
+
+msgid "manager.distribution.publication"
+msgstr "Xuất bản"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Bạn có chắc chắn muốn xóa thuê bao này?"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Điều này sẽ kích hoạt thanh toán cho Thuê bao, trong đó kiểu thuê bao, chi "
+"phí, thời lượng và đăng ký thuế bao được quản lý bởi Người quản lý Thuế bao "
+"Tạp chí."
+
+msgid "manager.payment.options"
+msgstr "Lựa chọn"
+
+msgid "manager.payment.notFound"
+msgstr "Không tìm thấy"
+
+msgid "manager.payment.noPayments"
+msgstr "Không thanh toán"
+
+msgid "manager.payment.generalOptions"
+msgstr "Các tùy chọn chung"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"Tư cách thành viên Hiệp hội sẽ xuất hiện trong Giới thiệu về Tạp chí theo "
+"Chính sách và liên kết quyên góp sẽ xuất hiện phía trên chức năng tìm kiếm "
+"trong khung bên phải."
+
+msgid "manager.payment.generalFees"
+msgstr "Phí chung"
+
+msgid "manager.payment.form.numeric"
+msgstr "Tất cả các gia trị phải là số dương (cho phép nhập số thập phân)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Lựa chọn phí thanh toán"
+
+msgid "manager.payment.enable"
+msgstr "Kích hoạt"
+
+msgid "manager.payment.editSubscription"
+msgstr "Chỉnh sửa Thuê bao"
+
+msgid "manager.payment.details"
+msgstr "Chị tiết"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS không thực hiện bất kỳ chuyển đổi tiền tệ. Nếu chấp nhận thanh toán cho "
+"đăng ký, bạn phải đảm bảo rằng loại tiền đăng ký khớp với loại tiền được chỉ "
+"định ở đây."
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Nhập số tiền lệ phí dưới đây để cho phép tác giả nộp tiền."
+
+msgid "manager.payment.action"
+msgstr "Hoạt động"
+
+msgid "manager.payment.authorFees"
+msgstr "Lê phí đăng bài"
+
+msgid "manager.payment.amount"
+msgstr "Tổng số"
+
+msgid "manager.payment.addPayment"
+msgstr "Thêm thành toán"
+
+msgid "manager.managementPages"
+msgstr "Các trang quản lý"
+
+msgid "manager.language.forms"
+msgstr "Hình thức"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Nó sẽ thay thế bất kỳ những cái đặt cục bộ bộ bởi những cái đặt mặc định cho "
+"ngôn ngữ này"
+
+msgid "manager.language.submissions"
+msgstr "Bài gửi"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.journalManagement"
+msgstr "Quản lý tạp chí"
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Bạn có chắc chắn muốn đặt lại các mẫu email trong tạp chị này? Bạn sẽ mất "
+"hết những chỉnh sửa đã thiết lập."
+
+msgid "manager.website.archiving"
+msgstr "Lưu trữ"
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Chi tiết về nhà xuất bản vừa được cấp nhật."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Tạp chí sẽ yêu cầu đăng ký thuê bao để truy cập một phần hoặc toàn bộ nội "
+"dung của tạp chí."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Tạp chí sẽ cung cấp nội dung truy cập mở."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS sẽ không được sử dụng để xuất bản trực tuyến nội dung của tạp chí."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Kiểu xuất bản"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "Tiếng Việt (vi_VN)"
+
+msgid "manager.people.showNoRole"
+msgstr "Hiển thị những người dùng không có vai trò"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Đăng ký người dùng từ trang web này trong Tạp chí này"
+
+msgid "manager.people.allJournals"
+msgstr "Tất cả tạp chí"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Người dùng đã đăng ký trong Tạp chí này"
+
+msgid "manager.payment.userName"
+msgstr "ID thanh toán"
+
+msgid "manager.paymentTypes"
+msgstr "Phương thức thanh toán"
+
+msgid "manager.payment.records"
+msgstr "Hồ sơ thanh toán"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Các tùy chọn được chọn, cùng với các mô tả và phí của chúng (có thể được "
+"chỉnh sửa bên dưới), sẽ xuất hiện trong Giới thiệu về Tạp chí theo Chính "
+"sách, cũng như tại các điểm cần thanh toán."
+
+msgid "manager.payment.readerFees"
+msgstr "Phí bạn đọc"
+
+msgid "manager.payment.paymentType"
+msgstr "Hình thức thanh thoán"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Phương thức thanh toán phí"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Bạn có thể định cấu hình bất kỳ Plugin Phương thức thanh toán nào sau đây từ "
+"màn hình này."
+
+msgid "manager.payment.paymentMethod"
+msgstr "Phương thức thanh toán"
+
+msgid "manager.payment.paymentId"
+msgstr "ID thanh toán"
+
+msgid "manager.payment.options.text"
+msgstr "Môt tả phương thức thanh toán"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Mua số xuất bản"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Mua bài báo"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Điều khoản xử lý phí"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Chỉ hạn chế quyền truy cập vào phiên bản PDF của các số và các bài viết"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Thành viên hiệp hội"
+
+msgid "manager.payment.options.feeName"
+msgstr "Tên lệ phí"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Mô tả phí"
+
+msgid "manager.payment.options.fee"
+msgstr "Lệ phí"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Thanh toán sẽ được kích hoạt cho tạp chí này. Lưu ý rằng người dùng sẽ được "
+"yêu cầu đăng nhập để thực hiện thanh toán."
+
+msgid "manager.payment.success"
+msgstr "Các cài đặt thanh toán đã được cập nhật."
+
+msgid "manager.payment.description"
+msgstr "Mô tả"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Đây sẽ là ngôn ngữ mặc định cho trang web tạp chí"
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Xin lỗi, không có ngôn ngữ bổ sung có sẵn. Liên hệ với quản trị viên trang "
+"web của bạn nếu bạn muốn sử dụng ngôn ngữ bổ sung với tạp chí này."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS có thể được cung cấp cho người dùng bằng bất kỳ ngôn ngữ nào được hỗ "
+"trợ. Đồng thời, OJS có thể hoạt động như một hệ thống đa ngôn ngữ, cung cấp "
+"cho người dùng khả năng chuyển đổi giữa các ngôn ngữ trên mỗi trang và cho "
+"phép một số dữ liệu nhất định được nhập bằng một số ngôn ngữ bổ sung. <br/> <"
+"br/> Nếu một ngôn ngữ được OJS hỗ trợ không được liệt kê dưới đây, hãy yêu "
+"cầu quản trị viên trang web của bạn cài đặt ngôn ngữ từ giao diện quản trị "
+"trang. Để được hướng dẫn về việc thêm hỗ trợ cho các ngôn ngữ mới, vui lòng "
+"tham khảo tài liệu OJS."
+
+msgid "manager.files.note"
+msgstr ""
+"Lưu ý: Trình duyệt tập tin là một tính năng nâng cao cho phép các tập tin và "
+"thư mục được liên kết với tạp chí được xem và thao tác trực tiếp."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Sử dụng ngày của số xuất bản"

@@ -15,11 +15,10 @@
 
 namespace APP\Services\QueryBuilders;
 
-use PKP\Services\QueryBuilders\BaseQueryBuilder;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface;
 
-class IssueQueryBuilder extends BaseQueryBuilder implements EntityQueryBuilderInterface {
+class IssueQueryBuilder implements EntityQueryBuilderInterface {
 
 	/** @var int|string|null Context ID or '*' to get from all contexts */
 	protected $contextId = null;

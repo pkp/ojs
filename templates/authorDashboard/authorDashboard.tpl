@@ -150,11 +150,13 @@
 						<tab v-if="supportsReferences" id="citations" label="{translate key="submission.citations"}">
 							<pkp-form v-bind="components.{$smarty.const.FORM_CITATIONS}" @set="set" />
 						</tab>
-						<tab id="galleys" label="{translate key="submission.layout.galleys"}">
-							<div id="representations-grid" ref="representations">
-								<spinner></spinner>
-							</div>
-						</tab>
+						{if $canAccessProductionStage}
+							<tab id="galleys" label="{translate key="submission.layout.galleys"}">
+								<div id="representations-grid" ref="representations">
+									<spinner></spinner>
+								</div>
+							</tab>
+						{/if}
 						{call_hook name="Template::Workflow::Publication"}
 					</tabs>
 					<span class="pkpPublication__mask" :class="publicationMaskClasses">

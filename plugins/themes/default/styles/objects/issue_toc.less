@@ -10,14 +10,6 @@
  */
 .obj_issue_toc {
 
-	h3 {
-		display: inline-block;
-		margin-top: @double * 2;
-		border-bottom: 2px solid @text;
-		font-size: @font-base;
-		line-height: @double - 2; // Adjust for border
-	}
-
 	.cover {
 		display: block;
 		margin-bottom: @double;
@@ -111,7 +103,8 @@
 				border-top: @bg-border;
 			}
 
-			h2 {
+			> h2,
+			> h3 {
 				display: inline-block;
 				position: relative;
 				left: -15px;
@@ -120,6 +113,7 @@
 				background: @lift;
 				font-size: @font-bump;
 				font-weight: @normal;
+				line-height: @triple;
 				color: @text-light;
 			}
 		}

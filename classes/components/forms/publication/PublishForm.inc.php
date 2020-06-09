@@ -26,7 +26,7 @@ class PublishForm extends FormComponent {
 	/** @copydoc FormComponent::$method */
 	public $method = 'PUT';
 
-	/** @var Publication */
+	/** @var \Publication */
 	public $publication;
 
 	/**
@@ -56,6 +56,19 @@ class PublishForm extends FormComponent {
 						$submitLabel = __('editor.submission.schedulePublication');
 					}
 				}
+			}
+			// If a publication date has already been set and the date has passed this will
+			// be published immediately regardless of the issue assignment
+			if ($publication->getData('datePublished') && $publication->getData('datePublished') <= \Core::getCurrentDate()) {
+				$timestamp = strtotime($publication->getData('datePublished'));
+				$dateFormatLong = \Config::getVar('general', 'date_format_long');
+				$msg = __(
+					'publication.publish.confirmation.datePublishedInPast',
+					[
+						'datePublished' => strftime($dateFormatLong, $timestamp),
+					]
+				);
+				$submitLabel = __('publication.publish');
 			}
 			$this->addPage([
 				'id' => 'default',
