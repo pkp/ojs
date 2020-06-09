@@ -20,10 +20,9 @@ describe('Data suite tests', function() {
 
 		cy.get('li.profile a:contains("' + username + '")').click();
 		cy.get('li.profile a:contains("Dashboard")').click();
-
-		cy.get('ul#navigationPrimary a:contains("Tools")').trigger('mouseover');
-		cy.get('ul#navigationPrimary a:contains("Import/Export")').click();
-
+		cy.get('.app__nav a').contains('Tools').click();
+		// The a:contains(...) syntax ensures that it will wait for the
+		// tab to load. Do not convert to cy.get('a').contains('Native XML Plugin')
 		cy.get('a:contains("Native XML Plugin")').click();
 
 		cy.wait(250);
@@ -32,14 +31,14 @@ describe('Data suite tests', function() {
 				{fileContent, 'fileName': 'uploadedFile.xml', 'mimeType': 'text/xml', 'encoding': 'utf8'},
 			);
 		});
-		
+
 		cy.get('input[name="temporaryFileId"][value!=""]', {timeout:20000});
 
 		cy.get('form#importXmlForm button[type="submit"]').click();
 
-		cy.contains('.pkp_structure_page', 'The import completed successfully.', {timeout:20000});
-		cy.contains('.pkp_structure_page', 'Vol. 1 No. 1 (2020): test 1', {timeout:20000});
-		cy.contains('.pkp_structure_page', 'Vol. 1 No. 2 (2020): Test Issue 2', {timeout:20000});
-		
+		cy.contains('The import completed successfully.', {timeout:20000});
+		cy.contains('Vol. 1 No. 1 (2020): test 1', {timeout:20000});
+		cy.contains('Vol. 1 No. 2 (2020): Test Issue 2', {timeout:20000});
+
 	});
 });

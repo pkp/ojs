@@ -19,7 +19,6 @@ describe('Subscription tests', function() {
 
 	it('Configures subscriptions', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
-		cy.get('a:contains("Settings")').click();
 		cy.get('a:contains("Distribution")').click();
 
 		// Payment settings
@@ -42,7 +41,7 @@ describe('Subscription tests', function() {
 		cy.reload();
 
 		// Configure an issue for subscription.
-		cy.get('a[name="issues"]').click();
+		cy.get('.app__nav a:contains("Issues")').click();
 		cy.get('a:contains("Back Issues")').click();
 		cy.get('a:contains("Vol. 1 No. 2 (2014)")').click();
 		cy.get('div.pkp_modal_panel a:contains("Access")').click();
@@ -51,7 +50,7 @@ describe('Subscription tests', function() {
 		cy.get('div:contains("Your changes have been saved.")');
 
 		// Set up subscription policies
-		cy.get('ul#navigationPrimary >> a[name="payments"]').click();
+		cy.get('.app__nav a:contains("Payments")').click();
 		cy.get('a[name=subscriptionPolicies]').click();
 		cy.get('input[id^="subscriptionName-"]').type('Sebastiano Mortensen', {delay: 0});
 		cy.get('input[id^="subscriptionEmail-"]').type('smortensen@mailinator.com', {delay: 0});
@@ -71,7 +70,7 @@ describe('Subscription tests', function() {
 
 	it('Checks editorial access to subscription-based content', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
-		cy.get('a:contains("View Site")').click();
+		cy.visit('');
 		cy.get('a:contains("Archives")').click();
 		cy.get('a:contains("Vol. 1 No. 2 (2014)")').click();
 		cy.get('a.obj_galley_link').should('have.class', 'restricted');
@@ -83,8 +82,7 @@ describe('Subscription tests', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
 
 		// Create a reader user for the subscription
-		cy.get('a:contains("Users & Roles")').click();
-		cy.get('a').contains(new RegExp('^Users$')).click();
+		cy.get('.app__nav a:contains("Users & Roles")').click();
 		cy.createUser({
 			'username': 'reader',
 			'givenName': 'Rea',
@@ -98,6 +96,7 @@ describe('Subscription tests', function() {
 
 		// See if the newly-subscribed user has a subscription
 		cy.login('reader', null, 'publicknowledge');
+		cy.visit('');
 		cy.get('a:contains("Archives")').click();
 		cy.get('a:contains("Vol. 1 No. 2 (2014)")').click();
 		cy.get('a.obj_galley_link').should('have.class', 'restricted');
@@ -109,7 +108,7 @@ describe('Subscription tests', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
 
 		// Set up an individual subscription type
-		cy.get('ul#navigationPrimary >> a[name="payments"]').click();
+		cy.get('.app__nav a:contains("Payments")').click();
 		cy.get('a[name="subscriptionTypes"]').click();
 		cy.get('a:contains("Create New Subscription Type")').click();
 		cy.wait(1000); // Form initialization problem
@@ -142,6 +141,7 @@ describe('Subscription tests', function() {
 
 		// See if the newly-subscribed user has a subscription
 		cy.login('reader', null, 'publicknowledge');
+		cy.visit('');
 		cy.get('a:contains("Archives")').click();
 		cy.get('a:contains("Vol. 1 No. 2 (2014)")').click();
 		cy.get('a.obj_galley_link').should('not.have.class', 'restricted');

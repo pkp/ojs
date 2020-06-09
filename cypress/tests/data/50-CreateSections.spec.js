@@ -12,8 +12,7 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('a').contains('Settings').click();
-		cy.get('a').contains('Journal').click();
+		cy.get('.app__nav a').contains('Journal').click();
 		cy.get('button[id="sections-button"]').click();
 
 		// Edit Articles section to add section editors

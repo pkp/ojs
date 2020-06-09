@@ -9,7 +9,6 @@
 
 describe('Data suite tests', function() {
 	it('Create a submission', function() {
-		var title = 'Hansen & Pinto: Reason Reclaimed';
 		cy.register({
 			'username': 'fpaglieri',
 			'givenName': 'Fabio',
@@ -20,12 +19,12 @@ describe('Data suite tests', function() {
 
 		cy.createSubmission({
 			'section': 'Reviews',
-			title,
+			'title': 'Hansen & Pinto: Reason Reclaimed',
 			'abstract': 'None.',
 		});
 
 		cy.logout();
-		cy.findSubmissionAsEditor('dbarnes', null, title);
+		cy.findSubmissionAsEditor('dbarnes', null, 'Paglieri');
 		cy.sendToReview();
 		cy.assignReviewer('Julie Janssen');
 		cy.assignReviewer('Adela Gallego');

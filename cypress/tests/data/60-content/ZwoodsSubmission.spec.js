@@ -9,7 +9,6 @@
 
 describe('Data suite tests', function() {
 	it('Create a submission', function() {
-		var title = 'Finocchiaro: Arguments About Arguments';
 		cy.register({
 			'username': 'zwoods',
 			'givenName': 'Zita',
@@ -20,12 +19,12 @@ describe('Data suite tests', function() {
 
 		cy.createSubmission({
 			'section': 'Reviews',
-			title,
+			'title': 'Finocchiaro: Arguments About Arguments',
 			'abstract': 'None.'
 		});
 
 		cy.logout();
-		cy.findSubmissionAsEditor('dbarnes', null, title);
+		cy.findSubmissionAsEditor('dbarnes', null, 'Woods');
 		cy.sendToReview();
 		cy.assignReviewer('Paul Hudson');
 		cy.assignReviewer('Aisla McCrae');

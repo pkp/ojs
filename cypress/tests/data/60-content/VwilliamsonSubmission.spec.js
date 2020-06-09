@@ -9,7 +9,6 @@
 
 describe('Data suite tests', function() {
 	it('Create a submission', function() {
-		var title = 'Self-Organization in Multi-Level Institutions in Networked Environments';
 		cy.register({
 			'username': 'vwilliamson',
 			'givenName': 'Valerie',
@@ -20,7 +19,7 @@ describe('Data suite tests', function() {
 
 		cy.createSubmission({
 			'section': 'Articles',
-			title,
+			'title': 'Self-Organization in Multi-Level Institutions in Networked Environments',
 			'abstract': 'We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.',
 			'keywords': [
 				'Self-Organization',
@@ -30,7 +29,7 @@ describe('Data suite tests', function() {
 		});
 
 		cy.logout();
-		cy.findSubmissionAsEditor('dbarnes', null, title);
+		cy.findSubmissionAsEditor('dbarnes', null, 'Williamson');
 		cy.recordEditorialDecision('Decline Submission');
 	});
 });

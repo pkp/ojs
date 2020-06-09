@@ -45,7 +45,7 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('a').contains('Administration').click();
+		cy.get('.app__nav a').contains('Administration').click();
 		cy.get('a').contains('Hosted Journals').click();
 		cy.get('a[class=show_extras]').click();
 		cy.contains('Settings wizard').click();
@@ -78,8 +78,7 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('a').contains('Settings').click();
-		cy.get('a').contains('Journal').click();
+		cy.get('.app__nav a').contains('Journal').click();
 
 		cy.get('input[name="abbreviation-en_US"]').type('J Pub Know', {delay: 0});
 		cy.get('input[name="acronym-en_US"]').type(Cypress.env('contextAcronyms')['en_US'], {delay: 0});
@@ -104,8 +103,7 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('a').contains('Settings').click();
-		cy.get('a').contains('Journal').click();
+		cy.get('.app__nav a').contains('Journal').click();
 		cy.get('button[id="contact-button"]').click();
 
 		// Submit the form with required fields missing.

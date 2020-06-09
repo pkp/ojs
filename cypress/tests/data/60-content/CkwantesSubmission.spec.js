@@ -9,7 +9,6 @@
 
 describe('Data suite tests', function() {
 	it('Create a submission', function() {
-		var title = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
 		cy.register({
 			'username': 'ckwantes',
 			'givenName': 'Catherine',
@@ -19,7 +18,7 @@ describe('Data suite tests', function() {
 		});
 
 		cy.createSubmission({
-			title,
+			'title': 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence',
 			'section': 'Articles',
 			'abstract': 'Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.',
 			'keywords': [
@@ -28,8 +27,8 @@ describe('Data suite tests', function() {
 			]
 		});
 		cy.logout();
-		
-		cy.findSubmissionAsEditor('dbarnes', null, title);
+
+		cy.findSubmissionAsEditor('dbarnes', null, 'Kwantes');
 		cy.sendToReview();
 		cy.assignReviewer('Aisla McCrae');
 		cy.assignReviewer('Adela Gallego');

@@ -13,7 +13,6 @@ describe('Data suite tests', function() {
 		cy.get('a:contains("admin"):visible').click();
 		cy.get('a:contains("Dashboard")').click();
 		cy.get('a:contains("Users & Roles")').click();
-		cy.get('a').contains(new RegExp('^Users$')).click();
 
 		var users = [
 			{
