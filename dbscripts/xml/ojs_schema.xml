@@ -9,7 +9,7 @@
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * OJS database schema in XML.
-  *
+  * XML-BASED DESCRIPTORS ARE DEPRECATED AND SHOULD NOT BE EDITED.
   -->
 
 <schema version="0.2">

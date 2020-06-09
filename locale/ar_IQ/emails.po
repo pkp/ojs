@@ -1050,3 +1050,17 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.description"
 msgstr "هذه الرسالة تُرسل شهرياً إلى مدراء التحرير ورؤسائه لتزويدهم بنظرة عامة على حالة النظام."
+
+msgid "emails.announcement.subject"
+msgstr "{$title}"
+
+msgid "emails.announcement.body"
+msgstr ""
+"<b>{$title}</b><br />\n"
+"<br />\n"
+"{$summary}<br />\n"
+"<br />\n"
+"قم بزيارة موقعنا للاطلاع على <a href=\"{$url}\">الإعلان بشكله الكامل</a>."
+
+msgid "emails.announcement.description"
+msgstr "هذه الرسالة تُرسل إلى المشتركين في الموقع عند إنشاء إعلان جديد."
