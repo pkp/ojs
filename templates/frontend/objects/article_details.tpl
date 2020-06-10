@@ -67,6 +67,9 @@
  *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
  *}
+ {if !$heading}
+ 	{assign var="heading" value="h3"}
+ {/if}
 <article class="obj_article_details">
 
 	{* Notification that this is an old version *}
@@ -402,7 +405,7 @@
 								{translate key="category.category"}
 							</h2>
 							<div class="value">
-								<ul>
+								<ul class="categories">
 									{foreach from=$categories item=category}
 										<li><a href="{url router=$smarty.const.ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
 									{/foreach}

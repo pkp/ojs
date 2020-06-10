@@ -175,7 +175,7 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign([
 			'ccLicenseBadge' => Application::get()->getCCLicenseBadge($publication->getData('licenseUrl')),
 			'publication' => $publication,
-			'section' => $sectionDao->getById($publication->getData('sectionId'))
+			'section' => $sectionDao->getById($publication->getData('sectionId')),
 		]);
 
 		if ($this->galley && !$this->userCanViewGalley($request, $article->getId(), $this->galley->getId())) {
@@ -183,14 +183,9 @@ class ArticleHandler extends Handler {
 		}
 
 		$categoryDao = DAORegistry::getDAO('CategoryDAO'); /* @var $categoryDao CategoryDAO */
-		$publication->setData('categoryIds', array_map(
-			function($category) {
-				return (int) $category->getId();
-			},
-			$templateMgr->assign([
-				'categories' =>	$categoryDao->getByPublicationId($publication->getId())->toArray()
-			])
-		));
+		$templateMgr->assign([
+			'categories' =>	$categoryDao->getByPublicationId($publication->getId())->toArray()
+		]);
 
 		// Get galleys sorted into primary and supplementary groups
 		$galleys = $publication->getData('galleys');
