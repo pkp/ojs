@@ -486,10 +486,8 @@ xslt_command = ""
 ; will take effect.
 
 ; The HTTP proxy configuration to use
-; http_host = localhost
-; http_port = 80
-; proxy_username = username
-; proxy_password = password
+; http_proxy = "http://username:password@192.168.1.1:8080"
+; https_proxy = "https://username:password@192.168.1.1:8080"
 
 
 ;;;;;;;;;;;;;;;;;;
