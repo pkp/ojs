@@ -482,9 +482,6 @@ xslt_command = ""
 
 [proxy]
 
-; Note that allow_url_fopen must be set to Off before these proxy settings
-; will take effect.
-
 ; The HTTP proxy configuration to use
 ; http_proxy = "http://username:password@192.168.1.1:8080"
 ; https_proxy = "https://username:password@192.168.1.1:8080"
