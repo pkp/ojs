@@ -87,15 +87,16 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			'FORM_PUBLISH',
 		]);
 
-		$workflowData = $templateMgr->getTemplateVars('workflowData');
+		$components = $templateMgr->getState('components');
+		$components[FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
 
 		// Add the word limit to the existing title/abstract form
-		if (!empty($workflowData['components'][FORM_TITLE_ABSTRACT]) &&
+		if (!empty($components[FORM_TITLE_ABSTRACT]) &&
 				array_key_exists($submission->getLatestPublication()->getData('sectionId'), $sectionWordLimits)) {
 			$limit = (int) $sectionWordLimits[$submission->getLatestPublication()->getData('sectionId')];
-			foreach ($workflowData['components'][FORM_TITLE_ABSTRACT]['fields'] as $key => $field) {
+			foreach ($components[FORM_TITLE_ABSTRACT]['fields'] as $key => $field) {
 				if ($field['name'] === 'abstract') {
-					$workflowData['components'][FORM_TITLE_ABSTRACT]['fields'][$key]['wordLimit'] = $limit;
+					$components[FORM_TITLE_ABSTRACT]['fields'][$key]['wordLimit'] = $limit;
 					break;
 				}
 			}
@@ -114,15 +115,17 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			]
 		);
 
-		$workflowData['components'][FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
-		$workflowData['publicationFormIds'][] = FORM_ISSUE_ENTRY;
-		$workflowData['assignToIssueUrl'] = $assignToIssueUrl;
-		$workflowData['issueApiUrl'] = $issueApiUrl;
-		$workflowData['sectionWordLimits'] = $sectionWordLimits;
-		$workflowData['i18n']['schedulePublication'] = __('editor.submission.schedulePublication');
-		$workflowData['selectIssueLabel'] = __('publication.selectIssue');
+		$publicationFormIds = $templateMgr->getState('publicationFormIds');
+		$publicationFormIds[] = FORM_ISSUE_ENTRY;
 
-		$templateMgr->assign('workflowData', $workflowData);
+		$templateMgr->setState([
+			'assignToIssueUrl' => $assignToIssueUrl,
+			'components' => $components,
+			'publicationFormIds' => $publicationFormIds,
+			'issueApiUrl' => $issueApiUrl,
+			'sectionWordLimits' => $sectionWordLimits,
+			'selectIssueLabel' => __('publication.selectIssue'),
+		]);
 	}
 
 

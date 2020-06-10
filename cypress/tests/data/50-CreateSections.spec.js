@@ -12,8 +12,7 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('a').contains('Settings').click();
-		cy.get('a').contains('Journal').click();
+		cy.get('.app__nav a').contains('Journal').click();
 		cy.get('button[id="sections-button"]').click();
 
 		// Edit Articles section to add section editors
@@ -21,8 +20,8 @@ describe('Data suite tests', function() {
 		cy.get('a[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
 		cy.get('input[id^="wordCount-"]').type('500');
-		cy.get('div.pkpListPanelItem').contains('David Buskins').click();
-		cy.get('div.pkpListPanelItem').contains('Stephanie Berardo').click();
+		cy.get('label').contains('David Buskins').click();
+		cy.get('label').contains('Stephanie Berardo').click();
 		cy.get('form[id=sectionForm]').contains('Save').click();
 
 		// Create a Reviews section
@@ -32,7 +31,7 @@ describe('Data suite tests', function() {
 		cy.get('input[id^="abbrev-en_US-"]').type('REV', {delay: 0});
 		cy.get('input[id^="identifyType-en_US-"]').type('Review Article', {delay: 0});
 		cy.get('input[id=abstractsNotRequired]').click();
-		cy.get('div.pkpListPanelItem').contains('Minoti Inoue').click();
+		cy.get('label').contains('Minoti Inoue').click();
 		cy.get('form[id=sectionForm]').contains('Save').click();
 	});
 })

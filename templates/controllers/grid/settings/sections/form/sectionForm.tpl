@@ -65,18 +65,11 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{if $hasSubEditors}
-		{fbvFormSection}
-			{assign var="uuid" value=""|uniqid|escape}
-			<div id="subeditors-{$uuid}">
-				<list-panel
-					v-bind="components.subeditors"
-					@set="set"
-				/>
-			</div>
-			<script type="text/javascript">
-				pkp.registry.init('subeditors-{$uuid}', 'Container', {$subEditorsListData|json_encode});
-			</script>
+	{if count($subeditors)}
+		{fbvFormSection list=true title="user.role.subEditors"}
+			{foreach from=$subeditors item="subeditor" key="id"}
+				{fbvElement type="checkbox" id="subEditors[]" value=$id checked=in_array($id, $assignedSubeditors) label=$subeditor translate=false}
+			{/foreach}
 		{/fbvFormSection}
 	{/if}
 

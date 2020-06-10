@@ -62,26 +62,27 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
-				$exportSubmissionsListPanel = new \PKP\components\listPanels\PKPSelectSubmissionsListPanel(
-					'exportSubmissionsListPanel',
-					__('plugins.importexport.native.exportSubmissionsSelect'),
+				$apiUrl = $request->getDispatcher()->url($request, ROUTE_API, $context->getPath(), 'submissions');
+				$submissionsListPanel = new \APP\components\listPanels\SubmissionsListPanel(
+					'submissions',
+					__('common.publications'),
 					[
-						'apiUrl' => $request->getDispatcher()->url(
-							$request,
-							ROUTE_API,
-							$context->getPath(),
-							'_submissions'
-						),
-						'canSelect' => true,
-						'canSelectAll' => true,
+						'apiUrl' => $apiUrl,
+						'count' => 100,
+						'getParams' => new stdClass(),
 						'lazyLoad' => true,
-						'selectorName' => 'selectedSubmissions[]',
 					]
 				);
-				$templateMgr->assign('exportSubmissionsListData', [
+				$submissionsConfig = $submissionsListPanel->getConfig();
+				$submissionsConfig['addUrl'] = '';
+				$submissionsConfig['filters'] = array_slice($submissionsConfig['filters'], 1);
+				$templateMgr->setState([
 					'components' => [
-						'exportSubmissionsListPanel' => $exportSubmissionsListPanel->getConfig()
-					]
+						'submissions' => $submissionsConfig,
+					],
+				]);
+				$templateMgr->assign([
+					'pageComponent' => 'ImportExportPage',
 				]);
 				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;

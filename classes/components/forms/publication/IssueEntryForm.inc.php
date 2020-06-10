@@ -41,7 +41,6 @@ class IssueEntryForm extends FormComponent {
 	 */
 	public function __construct($action, $locales, $publication, $publicationContext, $baseUrl, $temporaryFileApiUrl) {
 		$this->action = $action;
-		$this->successMessage = __('publication.issue.success');
 		$this->locales = $locales;
 
 		// Issue options

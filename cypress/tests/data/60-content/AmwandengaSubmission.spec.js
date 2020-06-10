@@ -34,7 +34,7 @@ describe('Data suite tests', function() {
 		cy.createSubmission(submission);
 
 		cy.logout();
-		cy.findSubmissionAsEditor('dbarnes', null, submission.title);
+		cy.findSubmissionAsEditor('dbarnes', null, 'Mwandenga');
 		cy.sendToReview();
 		cy.assignReviewer('Julie Janssen');
 		cy.assignReviewer('Aisla McCrae');
@@ -72,8 +72,7 @@ describe('Data suite tests', function() {
 		cy.get('#titleAbstract-abstract-control-en_US').click(); // Ensure blur event is fired
 		cy.get('input[name=subtitle-en_US]').click();
 		cy.get('#titleAbstract button').contains('Save').click();
-
-		cy.contains('The title and abstract have been updated.');
+		cy.get('#titleAbstract [role="status"]').contains('Saved');
 
 		// Metadata
 		cy.get('#metadata-button').click();
@@ -82,15 +81,15 @@ describe('Data suite tests', function() {
 		cy.get('#metadata-keywords-control-en_US').type('Social Transformation{enter}', {delay: 0});
 		cy.wait(100);
 		cy.get('#metadata button').contains('Save').click();
+		cy.get('#metadata [role="status"]').contains('Saved');
 
-		cy.contains('The metadata have been updated.');
 		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
 		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
 
 		// Permissions & Disclosure
 		cy.get('#license-button').click();
 		cy.get('#license button').contains('Save').click();
-		cy.contains('The copyright and license information have been updated.');
+		cy.get('#license [role="status"]').contains('Saved');
 
 		// Issue
 		cy.get('#issue-button').click();
@@ -101,10 +100,9 @@ describe('Data suite tests', function() {
 		cy.get('#issue button').contains('Save').click();
 
 		cy.get('#issue [id*="urlPath-error"]').contains('This may only contain letters, numbers, dashes and underscores.');
-		cy.get('#issue [name="urlPath"]').type('mwandenga-signalling-theory');
+		cy.get('#issue [name="urlPath"]').clear().type('mwandenga-signalling-theory');
 		cy.get('#issue button').contains('Save').click();
-
-		cy.contains('The publication\'s issue details have been updated.');
+		cy.get('#issue [role="status"]').contains('Saved');
 
 		// Contributors
 		cy.wait(1500);
@@ -143,7 +141,7 @@ describe('Data suite tests', function() {
 	it('Author can not edit publication details', function() {
 		cy.login('amwandenga');
 		cy.visit('/index.php/publicknowledge/submissions');
-		cy.contains('Signalling Theory Dividends').parent().parent().click();
+		cy.contains('View Mwandenga').click({force: true});
 		cy.get('#publication-button').click();
 		cy.get('#titleAbstract button').contains('Save').should('be.disabled');
 
@@ -172,10 +170,9 @@ describe('Data suite tests', function() {
 
 		cy.login('amwandenga');
 		cy.visit('/index.php/publicknowledge/authorDashboard/submission/' + submission.id);
-		cy.contains('Signalling Theory Dividends').parent().parent().click();
 		cy.get('#publication-button').click();
 		cy.get('#titleAbstract button').contains('Save').click();
-		cy.contains('The title and abstract have been updated.');
+		cy.get('#titleAbstract [role="status"]').contains('Saved');
 	});
 
 	it('Publish submission', function() {
@@ -200,7 +197,7 @@ describe('Data suite tests', function() {
 		cy.get('#publication-button').click();
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
-		cy.get('.pkp_modal button').contains('OK').click();
+		cy.get('.modal button').contains('Unpublish').click();
 		cy.wait(1000);
 		cy.visit('/index.php/publicknowledge/issue/current');
 		cy.contains('Signalling Theory Dividends').should('not.exist');
@@ -245,7 +242,7 @@ describe('Data suite tests', function() {
 		// Edit unpublished version's title
 		cy.get('input[name=title-en_US').type(' Version 2', {delay: 0});
 		cy.get('#titleAbstract button').contains('Save').click();
-		cy.contains('The title and abstract have been updated.');
+		cy.get('#titleAbstract [role="status"]').contains('Saved');
 
 		// Edit Contributor
 		cy.wait(1500);
@@ -273,8 +270,9 @@ describe('Data suite tests', function() {
 
 		// Edit url path
 		cy.get('#issue-button').click();
-		cy.get('#issue [name="urlPath"]').type('mwandenga');
+		cy.get('#issue [name="urlPath"]').clear().type('mwandenga');
 		cy.get('#issue button').contains('Save').click();
+		cy.get('#issue [role="status"]').contains('Saved');
 
 		// Publish version
 		cy.get('#publication button').contains('Publish').click();
@@ -303,9 +301,9 @@ describe('Data suite tests', function() {
 		cy.get('#publication-button').click();
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
-		cy.get('.pkp_modal button').contains('OK').click();
+		cy.get('.modal button').contains('Unpublish').click();
 		cy.wait(1000);
-		cy.get('.pkpWorkflow a').contains('View').click();
+		cy.get('.pkpWorkflow__header a').contains('View').click();
 		cy.contains('The Signalling Theory Dividends Version 2').should('not.exist');
 		cy.get('.versions').should('not.exist');
 	});

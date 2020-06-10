@@ -188,9 +188,6 @@ msgid "publication.publish.confirmation"
 msgstr ""
 "Kaikki julkaisuvaatimukset täyttyvät. Haluatko varmasti julkaista tämän?"
 
-msgid "publication.issue.success"
-msgstr "Käsikirjoitusversion numeron tiedot on päivitetty."
-
 msgid "publication.invalidIssue"
 msgstr "Käsikirjoitusversion numeroa ei löytynyt."
 

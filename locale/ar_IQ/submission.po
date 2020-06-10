@@ -185,9 +185,6 @@ msgstr "تعذر العثور على القسم المتعلق بهذا المن
 msgid "publication.invalidIssue"
 msgstr "تعذر العثور على العدد المتعلق بهذا المنشور."
 
-msgid "publication.issue.success"
-msgstr "تفاصيل نشر العدد قد تم تحديثها."
-
 msgid "publication.publish.confirmation"
 msgstr "كل متطلبات النشر ملباة. هل أنت متأكد من رغبتك في النشر؟"
 

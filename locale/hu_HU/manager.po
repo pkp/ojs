@@ -1842,18 +1842,9 @@ msgstr "Nem találtunk cikket."
 msgid "stats.publishedSubmissions.totalAbstractViews.timeSegment"
 msgstr "Minden folyóirat teljes absztrakt megtekintése dátum szerint"
 
-msgid "manager.setup.privacyStatement.success"
-msgstr "Az adatvédelmi nyilatkozat frissült."
-
 msgid "manager.setup.numPageLinks.description"
 msgstr ""
 "Korlátozza a linkek számát, melyek a lista következő oldalain jelenjenek meg."
-
-msgid "manager.setup.masthead.success"
-msgstr "A folyóirat címsorának részletei frissültek."
-
-msgid "manager.setup.lists.success"
-msgstr "A folyóirat listabeállításai frissültek."
 
 msgid "manager.setup.keyInfo"
 msgstr "Kulcs információ"
@@ -1875,9 +1866,6 @@ msgstr ""
 "Korlátozza az egy oldalon megjelenő elemek számát (például beküldések, "
 "felhasználók vagy szerkesztési feladatok). A soron következők már másik "
 "oldalon jelennek meg."
-
-msgid "manager.setup.information.success"
-msgstr "A folyóirat adatait frissítettük."
 
 msgid "manager.setup.identity"
 msgstr "Journal Identity"
@@ -1907,22 +1895,10 @@ msgstr "Bejelentések bekapcsolása"
 msgid "manager.setup.emailBounceAddress.description"
 msgstr "A nem kézbesíthető e-mailek hibaüzenetet generálnak."
 
-msgid "manager.setup.contact.success"
-msgstr "A folyóirat kapcsolat felvétel részletei frissültek."
-
-msgid "manager.setup.archiving.success"
-msgstr "A folyóirat archiválási részletei frissültek."
-
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr ""
 "Adja meg az összes információt, amelyet meg szeretne jeleníteni a "
 "bejelentések oldalon."
-
-msgid "manager.setup.announcements.success"
-msgstr "A bejelentések beállításai frissültek."
-
-msgid "manager.payment.success"
-msgstr "A fizetési beállítások frissültek."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
 msgstr "Használja a szám megjelenésének dátumát"
@@ -1932,9 +1908,6 @@ msgstr ""
 "Válassza ki, hogyan kerüljön az alapértelmezett szerzői jogi dátum "
 "meghatározásra egy cikknél. Az alapértelmezés esetileg felülírható.  Ha \""
 "véletlenszerűen jelenít meg\", ne használja a szám közzétételének dátumát."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "A megjelentetési részletek frissültek."
 
 msgid "manager.distribution.publishingMode.subscription"
 msgstr ""
@@ -2003,9 +1976,6 @@ msgstr "Cikk engedélyek visszaállítása megtörtént."
 msgid "manager.setup.siteAccess.viewContent"
 msgstr "Cikk tartalmának megtekintése"
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "A keresőmotor indexelési beállítások frissítve."
-
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr ""
 "A Szakmai lektorok csak akkor férhetnek hozzá a beküldött cikkhez, ha "
@@ -2031,9 +2001,6 @@ msgid "stats.publications.none"
 msgstr ""
 "A paramétereknek megfelelő használati statisztikák szerinti cikkeket  nem "
 "találtunk."
-
-msgid "manager.setup.userAccess.success"
-msgstr "A Folyóirat felhasználói hozzáférési adatai frissültek."
 
 msgid "manager.setup.enableOai.description"
 msgstr ""

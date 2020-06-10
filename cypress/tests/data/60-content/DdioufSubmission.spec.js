@@ -9,7 +9,6 @@
 
 describe('Data suite tests', function() {
 	it('Create a submission', function() {
-		var title = 'Genetic transformation of forest trees';
 		cy.register({
 			'username': 'ddiouf',
 			'givenName': 'Diaga',
@@ -20,12 +19,12 @@ describe('Data suite tests', function() {
 
 		cy.createSubmission({
 			'section': 'Articles',
-			title,
+			'title': 'Genetic transformation of forest trees',
 			'abstract': 'In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.',
 		});
 
 		cy.logout();
-		cy.findSubmissionAsEditor('dbarnes', null, title);
+		cy.findSubmissionAsEditor('dbarnes', null, 'Diouf');
 		cy.sendToReview();
 		cy.assignReviewer('Paul Hudson');
 		cy.assignReviewer('Adela Gallego');

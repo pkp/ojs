@@ -16,7 +16,6 @@ Cypress.Commands.add('publish', (issueId, issueTitle) => {
 	cy.wait(1000);
 	cy.get('select[id="assignToIssue-issueId-control"]').select(issueId);
 	cy.get('div[id^="assign-"] button:contains("Save")').click();
-	cy.get('div:contains("The publication\'s issue details have been updated.")');
 	cy.get('div:contains("All publication requirements have been met. This will be published immediately in ' + issueTitle + '. Are you sure you want to publish this?")');
 	cy.get('div.pkpWorkflow__publishModal button:contains("Publish")').click();
 });

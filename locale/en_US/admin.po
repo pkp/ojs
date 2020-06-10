@@ -14,15 +14,6 @@ msgstr ""
 msgid "admin.hostedContexts"
 msgstr "Hosted Journals"
 
-msgid "admin.settings.appearance.success"
-msgstr "The site appearance settings have been successfully updated."
-
-msgid "admin.settings.config.success"
-msgstr "The site configuration settings have been successfully updated."
-
-msgid "admin.settings.info.success"
-msgstr "The site information has been successfully updated."
-
 msgid "admin.settings.redirect"
 msgstr "Journal redirect"
 
@@ -126,12 +117,6 @@ msgstr "The path can only include letters, numbers and the characters _ and -. I
 
 msgid "admin.contexts.form.pathExists"
 msgstr "The path you provided is already in use by another journal."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} was created successfully."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} was edited successfully."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Enable this journal to appear publicly on the site"

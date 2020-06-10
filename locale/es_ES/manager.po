@@ -1706,10 +1706,6 @@ msgstr ""
 "Este tipo de suscripción no expira; por lo tanto, no especifique una fecha "
 "de inicio."
 
-msgid "manager.setup.userAccess.success"
-msgstr ""
-"Los detalles de acceso del usuario/a a esta revista han sido actualizados."
-
 msgid "manager.setup.enableOai.description"
 msgstr ""
 "Proporcione metadatos para servicios de indexación de terceros a través de "
@@ -1731,9 +1727,6 @@ msgstr ""
 "buscadores puedan mostrar cuando la revista aparezca en los resultados de "
 "búsqueda."
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "Los ajustes de indexación en buscadores han sido actualizados."
-
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr ""
 "Incluir un enlace seguro en el correo electrónico de invitación para los "
@@ -1745,19 +1738,10 @@ msgstr "Restringir el acceso al archivo"
 msgid "manager.setup.publishing"
 msgstr "Detalles de publicación"
 
-msgid "manager.setup.privacyStatement.success"
-msgstr "La declaración de privacidad ha sido actualizada."
-
 msgid "manager.setup.numPageLinks.description"
 msgstr ""
 "Limitar el número de enlaces que mostrar en las páginas subsiguientes de una "
 "lista."
-
-msgid "manager.setup.masthead.success"
-msgstr "Los detalles de cabecera de esta revista han sido actualizados."
-
-msgid "manager.setup.lists.success"
-msgstr "Los ajustes de lista de esta revista han sido actualizados."
 
 msgid "manager.setup.keyInfo.description"
 msgstr ""
@@ -1773,9 +1757,6 @@ msgstr ""
 "de edición) que mostrar en una lista antes de mostrar los ítems "
 "subsiguientes en otra página."
 
-msgid "manager.setup.information.success"
-msgstr "La información de esta revista ha sido actualizada."
-
 msgid "manager.setup.identity"
 msgstr "Identidad de la revista"
 
@@ -1787,23 +1768,8 @@ msgstr ""
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Mostrar en la página de inicio"
 
-msgid "manager.setup.contact.success"
-msgstr "Los detalles de contacto de esta revista han sido actualizados."
-
-msgid "manager.setup.archiving.success"
-msgstr "Los detalles de almacenamiento de esta revista han sido actualizados."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Introducción"
-
-msgid "manager.setup.announcements.success"
-msgstr "Los ajustes de avisos han sido actualizados."
-
-msgid "manager.payment.success"
-msgstr "Los detalles de pago han sido actualizados."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Los detalles de publicación han sido actualizados."
 
 msgid "manager.distribution.publishingMode"
 msgstr "Modo de publicación"

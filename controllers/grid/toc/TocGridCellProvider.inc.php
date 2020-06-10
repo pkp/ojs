@@ -47,6 +47,7 @@ class TocGridCellProvider extends GridCellProvider {
 	 * @copydoc GridCellProvider::getCellActions()
 	 */
 	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
+		import('lib.pkp.classes.linkAction.request.AjaxAction');
 		switch ($column->getId()) {
 			case 'access':
 				$article = $row->getData(); /* @var $article Submission */

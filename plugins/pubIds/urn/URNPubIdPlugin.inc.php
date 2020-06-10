@@ -371,10 +371,8 @@ class URNPubIdPlugin extends PubIdPlugin {
 				'pattern' => $pattern,
 				'contextInitials' => $form->submissionContext->getData('acronym', $form->submissionContext->getData('primaryLocale')) ?? '',
 				'submissionId' => $form->publication->getData('submissionId'),
-				'i18n' => [
-					'assignId' => __('plugins.pubIds.urn.editor.urn.assignUrn'),
-					'clearId' => __('plugins.pubIds.urn.editor.clearObjectsURN'),
-				]
+				'assignId' => __('plugins.pubIds.urn.editor.urn.assignUrn'),
+				'clearId' => __('plugins.pubIds.urn.editor.clearObjectsURN'),
 			];
 			if ($form->publication->getData('pub-id::publisher-id')) {
 				$fieldData['publisherId'] = $form->publication->getData('pub-id::publisher-id');
@@ -391,9 +389,9 @@ class URNPubIdPlugin extends PubIdPlugin {
 				}
 			}
 			if ($suffixType === 'default') {
-				$fieldData['i18n']['missingParts'] = __('plugins.pubIds.urn.editor.missingIssue');
+				$fieldData['missingPartsLabel'] = __('plugins.pubIds.urn.editor.missingIssue');
 			} else  {
-				$fieldData['i18n']['missingParts'] = __('plugins.pubIds.urn.editor.missingParts');
+				$fieldData['missingPartsLabel'] = __('plugins.pubIds.urn.editor.missingParts');
 			}
 			$form->addField(new \PKP\components\forms\FieldPubId('pub-id::other::urn', $fieldData));
 
@@ -408,9 +406,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 				'label' => __('plugins.pubIds.urn.displayName'),
 				'description' => __('plugins.pubIds.urn.editor.urn.description', ['prefix' => $prefix]),
 				'value' => $form->publication->getData('pub-id::other::urn'),
-				'i18n' => [
-					'addCheckNumber' => __('plugins.pubIds.urn.editor.addCheckNo'),
-				],
 			]));
 		}
 	}

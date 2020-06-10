@@ -7,17 +7,19 @@
  *
  * The journal settings page.
  *}
-{include file="common/header.tpl" pageTitle="manager.setup"}
+{extends file="layouts/backend.tpl"}
 
-{if $newVersionAvailable}
-	<div class="pkp_notification">
-		{capture assign="notificationContents"}{translate key="site.upgradeAvailable.manager" currentVersion=$currentVersion latestVersion=$latestVersion siteAdminName=$siteAdmin->getFullName() siteAdminEmail=$siteAdmin->getEmail()}{/capture}
-		{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId="upgradeWarning-"|uniqid notificationStyleClass="notifyWarning" notificationTitle="common.warning"|translate notificationContents=$notificationContents}
-	</div>
-{/if}
+{block name="page"}
+	<h1 class="app__pageHeading">
+		{translate key="manager.setup"}
+	</h1>
 
-{assign var="uuid" value=""|uniqid|escape}
-<div id="settings-context-{$uuid}">
+	{if $newVersionAvailable}
+		<notification>
+			{translate key="site.upgradeAvailable.manager" currentVersion=$currentVersion latestVersion=$latestVersion siteAdminName=$siteAdmin->getFullName() siteAdminEmail=$siteAdmin->getEmail()}
+		</notification>
+	{/if}
+
 	<tabs>
 		<tab id="masthead" label="{translate key="manager.setup.masthead"}">
 			{help file="settings/journal-settings" class="pkp_help_tab"}
@@ -44,9 +46,4 @@
 			{load_url_in_div id="categoriesContainer" url=$categoriesUrl}
 		</tab>
 	</tabs>
-</div>
-<script type="text/javascript">
-	pkp.registry.init('settings-context-{$uuid}', 'SettingsContainer', {$settingsData|json_encode});
-</script>
-
-{include file="common/footer.tpl"}
+{/block}

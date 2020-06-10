@@ -175,9 +175,6 @@ msgstr "Planeras för publicering i <a href=\"{$issueUrl}\">{$issueName}</a>."
 msgid "publication.publishedIn"
 msgstr "Publicerad i <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-msgid "publication.issue.success"
-msgstr "Information om publikationens nummer har uppdaterats."
-
 msgid "publication.required.issue"
 msgstr "Bidraget måste tilldelas ett nummer innan det kan publiceras."
 

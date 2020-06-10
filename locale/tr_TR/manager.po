@@ -1880,20 +1880,8 @@ msgstr "Portico"
 msgid "manager.setup.Issn"
 msgstr "ISSN"
 
-msgid "manager.setup.contact.success"
-msgstr "Bu dergi için iletişim detayları güncellendi."
-
-msgid "manager.setup.archiving.success"
-msgstr "Bu dergi için arşivleme detayları güncellendi."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Giriş"
-
-msgid "manager.setup.announcements.success"
-msgstr "Duyuru ayarları güncellendi."
-
-msgid "manager.payment.success"
-msgstr "Ödeme ayarları güncellendi."
 
 msgid "manager.website.archiving"
 msgstr "Arşivleme"
@@ -1914,9 +1902,6 @@ msgstr ""
 msgid "manager.setup.keyInfo"
 msgstr "Temel Bilgi"
 
-msgid "manager.setup.information.success"
-msgstr "Bu derginin \"Bilgi\"si güncellendi."
-
 msgid "manager.setup.identity"
 msgstr "Dergi Kimliği"
 
@@ -1928,20 +1913,11 @@ msgstr ""
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Anasayfada Göster"
 
-msgid "manager.setup.lists.success"
-msgstr "Derginin liste ayarları güncellendi."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Yayınlama detayları güncellendi."
-
 msgid "manager.distribution.publishingMode"
 msgstr "Yayınlama Şekli"
 
 msgid "manager.distribution.publication"
 msgstr "Yayınlama"
-
-msgid "manager.setup.userAccess.success"
-msgstr "Dergi kullanıcı erişim ayarları güncellendi."
 
 msgid "manager.setup.enableOai.description"
 msgstr ""
@@ -1956,9 +1932,6 @@ msgstr "Makale İçeriğini Göster"
 
 msgid "manager.setup.siteAccess.view"
 msgstr "Site Erişimi"
-
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "Arama motoru dizinlemesi ayarları güncellendi."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr ""

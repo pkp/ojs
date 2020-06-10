@@ -17,15 +17,6 @@ msgstr ""
 msgid "admin.hostedContexts"
 msgstr "Revistas hospedadas"
 
-msgid "admin.settings.appearance.success"
-msgstr "As configurações de aparência do site foram atualizadas com sucesso."
-
-msgid "admin.settings.config.success"
-msgstr "As configurações do site foram atualizadas com sucesso."
-
-msgid "admin.settings.info.success"
-msgstr "As informações do site foram atualizadas com sucesso."
-
 msgid "admin.settings.redirect"
 msgstr "Redirecionamento para revista"
 
@@ -137,12 +128,6 @@ msgstr "O caminho deve conter apenas caracteres alfanuméricos, sublinhado, híf
 
 msgid "admin.contexts.form.pathExists"
 msgstr "O caminho selecionado já está em uso por outra revista."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} foi criado com sucesso."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} foi editado com sucesso."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Permitir Acesso Livre a esta revista no portal"

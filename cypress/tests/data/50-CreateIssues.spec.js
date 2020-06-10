@@ -12,8 +12,7 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('a').contains('Issues').click();
-		cy.get('a').contains('Future Issues').click();
+		cy.get('.app__nav a').contains('Issues').click();
 		cy.get('a[id^=component-grid-issues-futureissuegrid-addIssue-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
 		cy.get('input[name="volume"]').type('1', {delay: 0});

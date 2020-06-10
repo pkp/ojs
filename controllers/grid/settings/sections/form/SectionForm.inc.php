@@ -64,7 +64,11 @@ class SectionForm extends PKPSectionForm {
 				'hideAuthor' => $section->getHideAuthor(),
 				'policy' => $section->getPolicy(null), // Localized
 				'wordCount' => $section->getAbstractWordCount(),
-				'subEditors' => $this->_getAssignedSubEditorIds($sectionId, $journal->getId()),
+				'assignedSubeditors' => Services::get('user')->getIds([
+					'contextId' => Application::get()->getRequest()->getContext()->getId(),
+					'roleIds' => ROLE_ID_SUB_EDITOR,
+					'assignedToSection' => (int) $this->getSectionId(),
+				]),
 			));
 		}
 
@@ -87,17 +91,6 @@ class SectionForm extends PKPSectionForm {
 			$reviewFormOptions[$reviewForm->getId()] = $reviewForm->getLocalizedTitle();
 		}
 		$templateMgr->assign('reviewFormOptions', $reviewFormOptions);
-
-		// Section/Series Editors
-		$subEditorsListPanel = $this->_getSubEditorsListPanel($journal->getId(), $request);
-		$templateMgr->assign(array(
-			'hasSubEditors' => !empty($subEditorsListPanel->items),
-			'subEditorsListData' => [
-				'components' => [
-					'subeditors' => $subEditorsListPanel->getConfig(),
-				]
-			]
-		));
 
 		return parent::fetch($request, $template, $display);
 	}
@@ -160,9 +153,6 @@ class SectionForm extends PKPSectionForm {
 			$this->setSectionId($sectionDao->insertObject($section));
 			$sectionDao->resequenceSections($journal->getId());
 		}
-
-		// Update section editors
-		$this->_saveSubEditors($journal->getId());
 
 		return parent::execute(...$functionArgs);
 	}

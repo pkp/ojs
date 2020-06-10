@@ -233,6 +233,3 @@ msgstr "Opciones de sección"
 
 msgid "submission.submit.noContext"
 msgstr "No se pudo encontrar este envío."
-
-msgid "publication.issue.success"
-msgstr "Los detalles de publicación del número han sido actualizados."

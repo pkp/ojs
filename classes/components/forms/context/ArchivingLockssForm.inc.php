@@ -35,7 +35,6 @@ class ArchivingLockssForm extends FormComponent {
 	 */
 	public function __construct($action, $locales, $context, $lockssUrl, $clockssUrl) {
 		$this->action = $action;
-		$this->successMessage = __('manager.setup.archiving.success');
 		$this->locales = $locales;
 
 		$this->addField(new FieldOptions('enableLockss', [

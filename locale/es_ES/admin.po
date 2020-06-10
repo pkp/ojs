@@ -176,19 +176,3 @@ msgstr "Notificación de acceso abierto"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Recordatorio de revisión"
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} se ha creado con éxito."
-
-msgid "admin.settings.info.success"
-msgstr "La información del sitio ha sido actualizada con éxito."
-
-msgid "admin.settings.config.success"
-msgstr ""
-"Los ajustes de configuración del sitio se han actualizado correctamente."
-
-msgid "admin.settings.appearance.success"
-msgstr "Los ajustes de apariencia del sitio se han actualizado correctamente."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} se ha editado con éxito."

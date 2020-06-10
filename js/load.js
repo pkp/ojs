@@ -12,10 +12,14 @@ import PkpLoad from '../lib/pkp/js/load.js';
 
 // Import controllers used by OJS
 import Container from '@/components/Container/Container.vue';
-import SettingsContainer from '@/components/Container/SettingsContainer.vue';
-import StatsEditorialContainer from '@/components/Container/StatsEditorialContainer.vue';
-import StatsPublicationsContainer from '@/components/Container/StatsPublicationsContainer.vue';
-import WorkflowContainer from '@/components/Container/WorkflowContainerOJS.vue';
+import Page from '@/components/Container/Page.vue';
+import AddContextContainer from '@/components/Container/AddContextContainer.vue';
+import AdminPage from '@/components/Container/AdminPage.vue';
+import ImportExportPage from '@/components/Container/ImportExportPage.vue';
+import SettingsPage from '@/components/Container/SettingsPage.vue';
+import StatsEditorialPage from '@/components/Container/StatsEditorialPage.vue';
+import StatsPublicationsPage from '@/components/Container/StatsPublicationsPage.vue';
+import WorkflowPage from '@/components/Container/WorkflowPageOJS.vue';
 
 // Required by the URN plugin
 import FieldText from '@/components/Form/fields/FieldText.vue';
@@ -24,10 +28,14 @@ import FieldText from '@/components/Form/fields/FieldText.vue';
 window.pkp = Object.assign(PkpLoad, {
 	controllers: {
 		Container,
-		SettingsContainer,
-		StatsEditorialContainer,
-		StatsPublicationsContainer,
-		WorkflowContainer
+		Page,
+		AddContextContainer,
+		AdminPage,
+		ImportExportPage,
+		SettingsPage,
+		StatsEditorialPage,
+		StatsPublicationsPage,
+		WorkflowPage
 	}
 });
 

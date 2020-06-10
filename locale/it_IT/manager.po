@@ -1702,23 +1702,8 @@ msgstr "Elenca editori, direttori, responsabili e altri individui associati con 
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Mostra in Homepage"
 
-msgid "manager.setup.contact.success"
-msgstr "I contatti di questa testata sono stati aggiornati."
-
-msgid "manager.setup.archiving.success"
-msgstr "I dati di archiviazione di questa testata sono stati aggiornati."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Introduzione"
-
-msgid "manager.setup.announcements.success"
-msgstr "La configurazione delle notifiche è stata aggiornata."
-
-msgid "manager.payment.success"
-msgstr "Le configurazioni relative ai pagamenti sono state aggiornate."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "I dati di pubblicazione sono stati aggiornati."
 
 msgid "manager.distribution.publishingMode"
 msgstr "Modalità di pubblicazione"
@@ -1788,11 +1773,6 @@ msgstr ""
 "Questa tipologia di abbonamento non prevede scadenza; non inserire una data "
 "di inizio."
 
-msgid "manager.setup.userAccess.success"
-msgstr ""
-"Le informazioni di accesso degli utenti per questa testata sono state "
-"aggiornate."
-
 msgid "manager.setup.enableOai.description"
 msgstr ""
 "Invia metadata a servizi di indicizzazione di terze parti tramite  <a href=\""
@@ -1812,11 +1792,6 @@ msgstr ""
 "Inserire una breve descrizione della testata (50-300 caratteri) che i motori "
 "di ricerca possono visulizzare nei risultati di ricerca."
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr ""
-"Le impostazioni relative all'indicizzazione del motore di ricerca sono state "
-"aggiornate."
-
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Inserire un link sicuro nella mail di invito ai revisori."
 
@@ -1826,17 +1801,8 @@ msgstr "Limita l'accesso al file"
 msgid "manager.setup.publishing"
 msgstr "Dettagli di pubblicazione"
 
-msgid "manager.setup.privacyStatement.success"
-msgstr "Le norme sulla privacy sono state aggiornate."
-
 msgid "manager.setup.numPageLinks.description"
 msgstr "Limita il numero di collegamenti da visualizzare in pagine successive."
-
-msgid "manager.setup.masthead.success"
-msgstr "Le informazioni generali per questa testata sono state aggiornate."
-
-msgid "manager.setup.lists.success"
-msgstr "Le impostazioni per questa testata sono state aggiornate."
 
 msgid "manager.setup.keyInfo.description"
 msgstr ""
@@ -1851,9 +1817,6 @@ msgstr ""
 "Limitare il numero di articoli (ad esempio contributi, utenti o assegnazioni)"
 " da visualizzare in un elenco prima di  visualizzare altri articoli in altra "
 "pagina."
-
-msgid "manager.setup.information.success"
-msgstr "Le informazioni di questa testata sono state aggiornate."
 
 msgid "manager.setup.identity"
 msgstr "ID della testata"

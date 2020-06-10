@@ -19,11 +19,12 @@ use \Pimple\Container;
 use \APP\Services\PublicationService;
 use \APP\Services\StatsEditorialService;
 use \APP\Services\StatsService;
-use \PKP\Services\PKPUserService;
+use \PKP\Services\PKPAnnouncementService;
 use \PKP\Services\PKPAuthorService;
 use \PKP\Services\PKPEmailTemplateService;
 use \PKP\Services\PKPSchemaService;
 use \PKP\Services\PKPSiteService;
+use \PKP\Services\PKPUserService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
@@ -32,6 +33,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 	 * @param \Pimple\Container $pimple
 	 */
 	public function register(Container $pimple) {
+
+		// Announcement service
+		$pimple['announcement'] = function() {
+			return new PKPAnnouncementService();
+		};
 
 		// Author service
 		$pimple['author'] = function() {

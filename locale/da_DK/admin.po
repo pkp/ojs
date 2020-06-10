@@ -219,18 +219,3 @@ msgstr ""
 "\t</ul>\n"
 "<p>Sprogpakker kan downloades manuelt fra <a href=\"http://pkp.sfu.ca\"> "
 "PKPs websted </a>.</p>"
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} er blevet oprettet."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} er blevet oprettet."
-
-msgid "admin.settings.info.success"
-msgstr "Webstedsinformationerne er blevet opdateret."
-
-msgid "admin.settings.config.success"
-msgstr "Indstillingerne for webstedskonfiguration er blevet opdateret."
-
-msgid "admin.settings.appearance.success"
-msgstr "Indstillingerne for webstedsudseendet er blevet opdateret."

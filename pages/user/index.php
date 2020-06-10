@@ -29,7 +29,6 @@ switch ($op) {
 	case 'completePurchaseSubscription':
 	case 'payRenewSubscription':
 	case 'payMembership':
-	case 'toggleHelp':
 	case 'getInterests':
 		define('HANDLER_CLASS', 'UserHandler');
 		import('pages.user.UserHandler');

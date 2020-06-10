@@ -1679,9 +1679,6 @@ msgid "manager.subscriptions.form.dateStartEmpty"
 msgstr ""
 "Tämä on pysyvästi voimassa oleva tilaustyyppi. Älä anna aloitusajankohtaa."
 
-msgid "manager.setup.userAccess.success"
-msgstr "Käyttäjien pääsyä koskevat asetukset on päivitetty."
-
 msgid "manager.setup.enableOai.description"
 msgstr ""
 "Tarjoa julkaisun kuvailutietoja kolmansille osapuolille <a href=\""
@@ -1702,9 +1699,6 @@ msgstr ""
 "Anna lyhyt (50-300 merkkiä) kuvaus, jonka hakukoneet voivat näyttää "
 "hakutuloksissaan."
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "Hakukoneindeksointia koskevat asetukset on päivitetty."
-
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Lisää turvallinen linkki arvioijille lähtevään kutsuun."
 
@@ -1714,17 +1708,8 @@ msgstr "Rajoita pääsyä tiedostoihin"
 msgid "manager.setup.publishing"
 msgstr "Julkaisua koskevat tiedot"
 
-msgid "manager.setup.privacyStatement.success"
-msgstr "Tietosuojaselostetta koskevat asetukset on päivitetty."
-
 msgid "manager.setup.numPageLinks.description"
 msgstr "Rajoita listauksessa näkyvien sivulinkkien määrää."
-
-msgid "manager.setup.masthead.success"
-msgstr "Tunnuslaatikkoa koskevat asetukset on päivitetty."
-
-msgid "manager.setup.lists.success"
-msgstr "Listauksia koskevat asetukset on päivitetty."
 
 msgid "manager.setup.keyInfo.description"
 msgstr "Anna julkaisun lyhyt kuvaus ja esittele toimituskunnan jäsenet."
@@ -1737,9 +1722,6 @@ msgstr ""
 "Rajoita niiden kohteiden (käsikirjoitus, käyttäjä jne.) lukumäärä, jotka "
 "näytetään yhdellä sivulla."
 
-msgid "manager.setup.information.success"
-msgstr "Julkaisun tietoja koskevat asetukset on päivitetty."
-
 msgid "manager.setup.identity"
 msgstr "Julkaisun tiedot"
 
@@ -1751,23 +1733,8 @@ msgstr ""
 msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Näytä kotisivulla"
 
-msgid "manager.setup.contact.success"
-msgstr "Yhteystietoja koskevat asetukset on päivitetty."
-
-msgid "manager.setup.archiving.success"
-msgstr "Arkistointia koskevat asetukset on päivitetty."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Esittely"
-
-msgid "manager.setup.announcements.success"
-msgstr "Ilmoituksia koskevat asetukset on päivitetty."
-
-msgid "manager.payment.success"
-msgstr "Maksuja koskevat asetukset on päivitetty."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Julkaisemista koskevat tiedot on tallennettu."
 
 msgid "manager.distribution.publishingMode"
 msgstr "Julkaisun sisällön saatavuus"

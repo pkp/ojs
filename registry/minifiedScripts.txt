@@ -20,9 +20,6 @@ lib/pkp/js/lib/jquery/plugins/jquery.cookie.js
 lib/pkp/js/lib/jquery/plugins/jquery.equalizer.js
 lib/pkp/js/lib/jquery/plugins/jquery.selectBox.min.js
 
-# Underscore library
-lib/pkp/js/lib/underscore/underscore.js
-
 # Our own classes (depend on plug-ins)
 lib/pkp/js/classes/Helper.js
 lib/pkp/js/classes/ObjectProxy.js
@@ -51,7 +48,6 @@ lib/pkp/js/controllers/SiteHandler.js
 lib/pkp/js/controllers/UrlInDivHandler.js
 lib/pkp/js/controllers/EditorialActionsHandler.js
 lib/pkp/js/controllers/ExtrasOnDemandHandler.js
-lib/pkp/js/controllers/PageHandler.js
 lib/pkp/js/controllers/TabHandler.js
 lib/pkp/js/controllers/MenuHandler.js
 lib/pkp/js/controllers/UploaderHandler.js

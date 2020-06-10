@@ -38,9 +38,6 @@ msgstr "المجلة تتيح الوصول المفتوح إلى محتويات�
 msgid "manager.distribution.publishingMode.subscription"
 msgstr "الوصول إلى بعض أو كل محتويات المجلة يتطلب الاشتراك فيها."
 
-msgid "manager.distribution.publishingMode.success"
-msgstr "تفاصيل النشر قد تم تعديلها."
-
 msgid "manager.website.archiving"
 msgstr "الحفظ"
 
@@ -136,9 +133,6 @@ msgstr "هذا الأمر سيُمكن تسديد الاشتراكات حيث س
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "هل أنت متأكد من رغبتك في حذف هذا الاشتراك؟"
-
-msgid "manager.payment.success"
-msgstr "إعدادات التسديد تغيرت بنجاح."
 
 msgid "manager.payment.options.enablePayments"
 msgstr "سيتم تمكين وحدة التسديد لهذه المجلة. لاحظ أن المستخدمين عليهم الدخول إلى الموقع للقيام بتسديد المال."
@@ -383,9 +377,6 @@ msgstr "عوضاً عن ذلك، بدلاً من العنوان والشعار،
 msgid "manager.setup.announcements"
 msgstr "الإعلانات"
 
-msgid "manager.setup.announcements.success"
-msgstr "إعدادات الإعلانات تغيرت بنجاح."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "المقدمة"
 
@@ -394,9 +385,6 @@ msgstr "أدخل أي معلومات إضافية ينبغي عرضها للقر
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(لتظهر في \"عن المجلة\")"
-
-msgid "manager.setup.archiving.success"
-msgstr "تفاصيل أرشفة هذه المجلة تغيرت بنجاح."
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "يتطلب تقديم المؤلفين لبيان المصالح المتضاربة (CI) مع طلبات النشر الخاصة بهم."
@@ -409,9 +397,6 @@ msgstr "تأريخ المجلة"
 
 msgid "manager.setup.historyDescription"
 msgstr "هذا النص سيظهر ضمن (عن المجلة) ويمكن أن يستعمل لمنح فكرة عن التعديلات التي حصلت في مناصب طاقم المجلة ورئاسة تحريرها أو أي فقرات أخرى ذات علاقة بتأريخ النشر في المجلة."
-
-msgid "manager.setup.contact.success"
-msgstr "تفاصيل عنوان الاتصال بهذه المجلة تغيرت بنجاح."
 
 msgid "manager.setup.currentIssue"
 msgstr "الإصدار الحالي"
@@ -548,9 +533,6 @@ msgstr "لأمناء المكتبات"
 msgid "manager.setup.information.forReaders"
 msgstr "للقراء"
 
-msgid "manager.setup.information.success"
-msgstr "معلومات هذه المجلة تغيرت بنجاح."
-
 msgid "manager.setup.initialIssue"
 msgstr "الإصدار الأول"
 
@@ -653,9 +635,6 @@ msgstr "أعط وصفاً موجزاً عن المجلة مع التعريف ب�
 msgid "manager.setup.labelName"
 msgstr "اسم الملصق"
 
-msgid "manager.setup.lists.success"
-msgstr "إعدادات القوائم لهذه المجلة تغيرت بنجاح."
-
 msgid "manager.setup.lists"
 msgstr "القوائم"
 
@@ -728,9 +707,6 @@ msgstr "تهيئة الإدارة والنشر"
 msgid "manager.setup.managingTheJournal"
 msgstr "الخطوة 4. إدارة المجلة"
 
-msgid "manager.setup.masthead.success"
-msgstr "تفاصيل دفة القيادة لهذه المجلة تغيرت بنجاح."
-
 msgid "manager.setup.navigationBar"
 msgstr "شريط التنقل"
 
@@ -775,9 +751,6 @@ msgstr "التركيز، التحكيم المناظر، الأقسام، الخ
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN الطباعي"
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "بيان الخصوصية تم تعديله بنجاح."
 
 msgid "manager.setup.proofingInstructions"
 msgstr "إرشادات القراءة التصحيحية"
@@ -866,9 +839,6 @@ msgstr "سياسة التحكيم"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "فهرسة محركات البحث"
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "إعدادات فهرسة محركات البحث تغيرت بنجاح."
-
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr "لمساعدة محركات البحث مثل Google في العثور على هذه المجلة وعرض محتوياتها، نحثك على تقديم <a href=\"{$sitemapUrl}\" target=\"_blank\">خريطة الموقع</a> لمجلتك."
 
@@ -949,9 +919,6 @@ msgstr "يمكن للمؤلفات والإصدارات أن تكون معلَّ�
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "هيئة التحرير/التحكيم المعتمدة لدى المجلة."
-
-msgid "manager.setup.userAccess.success"
-msgstr "تفاصيل وصول المستخدمين لهذه المجلة تغيرت بنجاح."
 
 msgid "manager.setup.useThumbnail"
 msgstr "الصورة المصغرة"
