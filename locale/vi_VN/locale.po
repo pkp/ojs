@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-07 15:39+0000\n"
+"PO-Revision-Date: 2020-06-11 02:04+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
@@ -1171,3 +1171,44 @@ msgstr "Xem {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Biên tập viên được phân công"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>To upload a manuscript to this journal, complete the following steps.</p>"
+"\n"
+"<ol>\n"
+"<li>On this page, click Browse (or Choose File) which opens a Choose File "
+"window for locating the file on the hard drive of your computer.</li>\n"
+"<li>Locate the file you wish to submit and highlight it.</li>\n"
+"<li>Click Open on the Choose File window, which places the name of the file "
+"on this page.</li>\n"
+"<li>Click Upload on this page, which uploads the file from the computer to "
+"the journal's web site and renames it following the journal's "
+"conventions.</li>\n"
+"<li>Once the submission is uploaded, click Save and Continue at the bottom "
+"of this page.</li>\n"
+"</ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Chưa có bản hiệu định nào"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Tập tin của Biên tập viên bản thảo"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Tập tin của Biên tập viên bản thảo"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Gửi tới C/E"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Khi bạn đã ghi lại quyết định, bạn sẽ không thể thay đổi đánh giá này nữa. "
+"Bạn có chắc muốn tiếp tục không?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Không có khuyến nghị được chọn. Bạn phải chọn một đề nghị để gửi."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Đặt hoặc điều chỉnh đề xuất của người phản biện."
