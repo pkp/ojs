@@ -42,7 +42,7 @@ describe('Subscription tests', function() {
 
 		// Configure an issue for subscription.
 		cy.get('.app__nav a:contains("Issues")').click();
-		cy.get('a:contains("Back Issues")').click();
+		cy.get('button:contains("Back Issues")').click();
 		cy.get('a:contains("Vol. 1 No. 2 (2014)")').click();
 		cy.get('div.pkp_modal_panel a:contains("Access")').click();
 		cy.get('select#accessStatus').select('Subscription');
