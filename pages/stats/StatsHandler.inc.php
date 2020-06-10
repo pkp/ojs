@@ -48,6 +48,8 @@ class StatsHandler extends PKPStatsHandler {
 			'heading' => __('section.sections'),
 			'filters' => APP\components\listPanels\SubmissionsListPanel::getSectionFilters(),
 		];
-		$templateMgr->setState($filters);
+		$templateMgr->setState([
+			'filters' => $filters
+		]);
 	}
 }
