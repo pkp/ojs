@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:34+00:00\n"
-"PO-Revision-Date: 2020-01-31 17:46+0000\n"
+"PO-Revision-Date: 2020-06-09 19:36+0000\n"
 "Last-Translator: Carla Marques <carla.marques@sdum.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/generic-webFeed/pt_PT/>\n"
@@ -18,7 +18,7 @@ msgid "plugins.generic.webfeed.displayName"
 msgstr "Plugin Canal de Divulgação RSS"
 
 msgid "plugins.generic.webfeed.description"
-msgstr "Este plugin produz canais de divulgação RSS/Atom para a edição actual."
+msgstr "Este plugin produz canais de divulgação RSS/Atom para a edição atual."
 
 msgid "plugins.generic.webfeed.settings"
 msgstr "Configurações"
@@ -30,16 +30,17 @@ msgid "plugins.generic.webfeed.settings.all"
 msgstr "Exibir canais em todas as páginas da revista."
 
 msgid "plugins.generic.webfeed.settings.currentIssue"
-msgstr "Exibir itens da edição actual."
+msgstr "Exibir itens da edição atual."
 
 msgid "plugins.generic.webfeed.settings.recentArticles"
 msgstr "Número de itens a exibir"
 
 msgid "plugins.generic.webfeed.settings.recentItemsRequired"
-msgstr "Indique um inteiro positivo para o número de artigos mais recentes."
+msgstr ""
+"Indique um número inteiro positivo para o número de artigos mais recentes."
 
 msgid "plugins.generic.webfeed.settings.homepage"
-msgstr "Exibir links de canais apenas nas páginas inicial e das edições."
+msgstr "Exibir links de canais apenas nas páginas de início e das edições."
 
 msgid "plugins.generic.webfeed.atom.altText"
 msgstr "Logo Atom"
