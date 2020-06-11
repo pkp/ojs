@@ -11,6 +11,9 @@ msgstr ""
 "PO-Revision-Date: 2019-11-19T10:49:31+00:00\n"
 "Language: \n"
 
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Объявление, которое вы запросили, не является частью данного журнала."
+
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Вы не можете изменить журнал для материала."
 
