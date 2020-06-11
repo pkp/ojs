@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-06-11 02:04+0000\n"
+"PO-Revision-Date: 2020-06-11 14:08+0000\n"
 "Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hans/>\n"
@@ -1321,7 +1321,7 @@ msgid "about.memberships"
 msgstr "会员资格"
 
 msgid "about.aboutThisPublishingSystem"
-msgstr "关于这个期刊系统"
+msgstr "有关此发布系统平台和工作流的更多信息由 OJS / PKP 提供。"
 
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS编审与出版流程"
@@ -1885,3 +1885,141 @@ msgstr "稿件插件库用来为稿件的各种文档显示提供支持插件。
 
 msgid "plugins.categories.viewableFiles"
 msgstr "稿件插件库"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "选择此目录稿件排序方式。"
+
+msgid "catalog.sortBy"
+msgstr "稿件顺序"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$ editorName}已完成文章{$ submissionId}的编辑。"
+
+msgid "editor.issues.futureIssues"
+msgstr "待出版期次"
+
+msgid "editor.issues.backIssues"
+msgstr "往期"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "等待审核"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "通过"
+
+msgid "article.view.interstitial"
+msgstr "请选择一篇论文文件下载。"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "隐藏其他期刊"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "注册其他期刊"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "正在等待审核。"
+
+msgid "notification.type.approveSubmission"
+msgstr "此稿件目前正在等待审核，审核通过后才会出现在当前期次中。"
+
+msgid "editor.navigation.issues"
+msgstr "期次"
+
+msgid "grid.action.createContext"
+msgstr "创建一种期刊"
+
+msgid "user.authorization.invalidIssue"
+msgstr "请求期次无效！"
+
+msgid "user.authorization.noContext"
+msgstr "上下文中没有期刊！"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "已提交新文章，需要为其分配评审编辑。"
+
+msgid "notification.savedIssueMetadata"
+msgstr "当期发布元数据已保存。"
+
+msgid "notification.type.public"
+msgstr "公告"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "提交了新稿件 “ {$ title}” 。"
+
+msgid "log.editor.recommendation"
+msgstr "{$ editorName} 撰写了文章 {$ submissionId} 的推荐语（{$ decision}）。"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>预安装步骤</h4>\n"
+"\n"
+"\n"
+"<p>1. 下列文件和目录（包括内容）必须可写：</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt>可写 (可选): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> 可写: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> 可写: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> 可写: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> 可写: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> 可写: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. 必须预先设定文件上传目录，并且可写 (查看下面的\"文件设定\").</p>"
+
+msgid "payment.notFound"
+msgstr "已申请付款，但申请已过期。有关详细信息，请联系期刊管理员。"
+
+msgid "payment.requestPublicationFee"
+msgstr "需要出版费（{$ feeAmount}）"
+
+msgid "payment.type.publication.required"
+msgstr "需要支付出版费。"
+
+msgid "help.goToEditPage"
+msgstr "编辑 {$sectionTitle}"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "查看您的审核中的稿件"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "提交新稿件"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "向<a href=\"{$url}\"> {$ name} </a>栏目提交新稿件。"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} 或 {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.register"
+msgstr "注册"
+
+msgid "about.aboutContext"
+msgstr "关于期刊"
+
+msgid "about.contact"
+msgstr "联系"
+
+msgid "archive.archivesPageNumber"
+msgstr "归档 - 第 {$pageNumber} 页"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>如果您的Web浏览器安装了PDF阅读器插件（例如， 最新版本的 <a href=\"https://get.adobe.com/reader/\">"
+"Adobe Acrobat Reader</a>），则您应该在此处看到加载的您选择的PDF文件。</p>"
+
+msgid "article.download"
+msgstr "下载 PDF 格式文件"
+
+msgid "article.pageTitle"
+msgstr "翻阅 {$title}"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "您必须同意本网站的隐私声明。"
+
+msgid "user.register.form.missingContextConsent"
+msgstr "您必须同意正在注册的任何期刊的隐私声明。"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"是的，我同意根据该期刊的<a href=\"{$privacyUrl}\" target=\"_blank\">隐私声明</a>收集和存储我的数据信息。"
