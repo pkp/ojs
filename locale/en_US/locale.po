@@ -389,6 +389,12 @@ msgstr "Show My Journals"
 msgid "user.registerForOtherJournals"
 msgstr "Register for Other Journals"
 
+msgid "user.email"
+msgstr "Email address"
+
+msgid "user.userCredentials"
+msgstr "Username and Password credentials"
+
 msgid "user.reviewerPrompt"
 msgstr "Would you be willing to review submissions to this journal?"
 
