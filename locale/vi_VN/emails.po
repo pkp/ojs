@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"PO-Revision-Date: 2020-06-07 15:39+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "vi_VN/>\n"
@@ -1386,3 +1386,18 @@ msgstr ""
 
 msgid "emails.notification.subject"
 msgstr "Thông báo mới từ {$siteTitle}"
+
+msgid "emails.announcement.description"
+msgstr "Email này được gửi khi một thông báo mới được tạo."
+
+msgid "emails.announcement.body"
+msgstr ""
+"<b>{$title}</b><br />\n"
+"<br />\n"
+"{$summary}<br />\n"
+"<br />\n"
+"Ghé thăm trang web của chúng tôi để đọc <a href=\"{$url}\">thông báo đầy "
+"đủ</a>."
+
+msgid "emails.announcement.subject"
+msgstr "{$title}"

@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-03-09 13:16+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2020-06-11 02:04+0000\n"
+"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -591,7 +591,7 @@ msgid "manager.setup.publishingMode"
 msgstr "线上阅读管理"
 
 msgid "manager.setup.onlineIssn"
-msgstr "eISSN"
+msgstr "在线 ISSN"
 
 msgid "manager.distribution.publishingMode.openAccess"
 msgstr "期刊内容将开放阅读。"
@@ -600,22 +600,24 @@ msgid "manager.setup.pageNumberIdentifier"
 msgstr "页码选项"
 
 msgid "manager.setup.policies"
-msgstr "方针"
+msgstr "策略"
 
 msgid "manager.setup.policies.description"
 msgstr "焦点、审稿、栏目、隐私、安全性和其它说明。"
 
 msgid "manager.setup.printIssn"
-msgstr "ISSN"
+msgstr "在版 ISSN"
 
 msgid "manager.setup.proofingInstructions"
-msgstr "校对指引"
+msgstr "校对说明"
 
 msgid "manager.setup.proofingInstructionsDescription"
-msgstr "「校对指引」会在「投稿编辑」页面显示给校对者、作者、版面编辑与栏目编辑看到。下面是一组预设的HTML格式之指引，期刊管理员可以在任何阶段进行编辑或替换。（以纯文字或HTML的方式）"
+msgstr ""
+"「校对说明」会在「投稿编辑」页面显示给校对者、作者、版面编辑与栏目编辑看。下面是一组预设的HTML格式说明，期刊管理员可以随时编辑或替换（以纯文字或HTM"
+"L形式皆可）。"
 
 msgid "manager.setup.publicationSchedule"
-msgstr "出版时程"
+msgstr "出版流程"
 
 msgid "manager.setup.publicationScheduleDescription"
 msgstr "期刊的各个项目能够一起出版，作为一期目录的一部份内容。否则，个别的项目能够在一准备好的时候，透过将它们加入到当期(或当卷)的「目录」中，迳行出版。请在「期刊介绍」中提供读者一个关于这份期刊会使用的系统以及其出刊频率的说明。"
@@ -636,10 +638,10 @@ msgid "manager.setup.referenceLinking"
 msgstr "参考文献链接"
 
 msgid "manager.setup.restrictArticleAccess"
-msgstr "用户必须登入才可以浏览已经出版论文的全文。"
+msgstr "用户必须登录才可以浏览已经出版论文的全文。"
 
 msgid "manager.setup.restrictSiteAccess"
-msgstr "用户必须登入才能浏览这个网站。"
+msgstr "用户必须登录才能浏览这个网站。"
 
 msgid "manager.setup.reviewGuidelines"
 msgstr "审稿须知"
@@ -651,7 +653,9 @@ msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "自动电子邮件备忘录 (可从 OJS 的预设电子邮件取得) 可以在两个时间点送给审稿人 (而编辑也随时可以直接电邮审稿人)"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
-msgstr "<strong>注意：</strong>要启用这些选项，这个网站的管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> 选项。（可能无法在所有的服务器上面执行），就在上面指出的OJS文件当中"
+msgstr ""
+"要使用邮件自动提醒功能，管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> 选项。另外，OJS "
+"文档中对于服务器的配置会对此选项有所关联。"
 
 msgid "manager.setup.reviewOptions.blindReview"
 msgstr "盲审"
@@ -669,7 +673,7 @@ msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "审稿人阅读选项"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "启用审稿人「一点即入」模式。"
+msgstr "「一点审稿」模式"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>注意：</strong> 这封给审稿人的电子邮件邀请函会包涵一个特殊的网址链接，邀请审稿人直接进入稿件的「审稿」页面（同时可以存取其他需要登入身份的页面）。基于与这个选项相关的安全性理由，编辑在寄出给审稿人的邀请函之前，不能变更电子邮件或者增加副本(CCs)或密件副本(BCCs)。"
@@ -687,7 +691,9 @@ msgid "manager.setup.searchEngineIndexing"
 msgstr "搜寻引擎索引"
 
 msgid "manager.setup.searchEngineIndexing.description"
-msgstr "为协助用户使用搜寻引擎来了解这份期刊，请提供一份简短的期刊说明与相关关键字（以分号(;)加以区隔）。"
+msgstr ""
+"协助搜索引擎（如Google）来发现和展示您的站点。鼓励您提交您的 <a href=\"{$sitemapUrl}\" target=\"_blank\""
+">站点地图</a>。"
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "栏目和栏目编辑"
@@ -699,7 +705,7 @@ msgid "manager.setup.sectionsDescription"
 msgstr "进入「栏目管理」以建立或修改本期刊的文章栏目（例如论文、书评等等）。<br /><br />在投稿给本期刊之后，作者将会指派其文章为..."
 
 msgid "manager.setup.selectEditorDescription"
-msgstr "将会全程监控处理过程的期刊编辑"
+msgstr "期刊编辑将会全程监控期刊编辑过程。"
 
 msgid "manager.setup.selectSectionDescription"
 msgstr "将会考虑纳入此项目的期刊栏目。"
@@ -717,7 +723,7 @@ msgid "manager.setup.subjectKeywordTopic"
 msgstr "关键字"
 
 msgid "manager.setup.subjectProvideExamples"
-msgstr "提供关键字或者主旨的范例，以引导作者。"
+msgstr "提供用来指导作者提取关键字或主题的示例"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "投稿须知"
@@ -738,10 +744,10 @@ msgid "manager.distribution.publishingMode.subscription"
 msgstr ">这份期刊需要订阅之后才能阅读某些或所有的内容。"
 
 msgid "manager.setup.typeExamples"
-msgstr "(例如，历史研究、准实验、文学分析、调查＼访谈等等)"
+msgstr "(例如，历史研究、类实验、文学分析、调查/访谈等等)"
 
 msgid "manager.setup.typeMethodApproach"
-msgstr "类型（方法＼研究取向）"
+msgstr "类型（方法/研究取向）"
 
 msgid "manager.setup.typeProvideExamples"
 msgstr "在本栏中提供相关的研究类型、方法和研究取向作为范例"
@@ -771,10 +777,10 @@ msgid "manager.statistics.statistics.articleViews"
 msgstr "文章阅读统计(for Authors only)"
 
 msgid "manager.statistics.statistics.count.accept"
-msgstr "接受刊出"
+msgstr "同意发表"
 
 msgid "manager.statistics.statistics.count.decline"
-msgstr "回绝刊出"
+msgstr "拒绝发表"
 
 msgid "manager.statistics.statistics.count.revise"
 msgstr "重新投稿"
@@ -837,7 +843,7 @@ msgid "manager.subscriptionPolicies.delayedOpenAccess"
 msgstr "稍后开放阅读"
 
 msgid "manager.subscriptionPolicies.expiry"
-msgstr "订阅到期"
+msgstr "订阅过期"
 
 msgid "manager.subscriptionPolicies.expiryDescription"
 msgstr "订阅期满后，读者可能会被拒绝进入所有订阅内容或可继续保留访问前发表的订阅内容到订阅的终止日期。"
@@ -870,10 +876,12 @@ msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "订阅期满提醒函"
 
 msgid "manager.subscriptionPolicies.expiryRemindersDescription"
-msgstr "可以在订阅期满之前和之后寄发自动电子邮件提醒函（期刊管理员可在OJS的预备电子邮件中编辑）"
+msgstr "可以在订阅期满之前和之后自动发送电子邮件提醒函（期刊管理员可在OJS的预备电子邮件中编辑）。"
 
 msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
-msgstr "<strong>注意：</strong>要启用这些选项，这个网站的管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> 选项。（可能无法在所有的服务器上面执行），就在上面指出的OJS文件当中"
+msgstr ""
+"<strong>注意：</strong>要启用这些选项，这个网站的管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> "
+"选项。有些服务器会要求使用此项功能（可能无法在所有的服务器上面执行）配合上面提到的 OJS 文档。"
 
 msgid "manager.subscriptionPolicies.expirySelectOne"
 msgstr "选择下列之一："
@@ -894,7 +902,9 @@ msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
 msgstr "已注册之读者将可以选择在一期期刊开放阅读之时，透过电子邮件收到目录通知。"
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
-msgstr "<strong>注意：</strong>要启用这些选项，这个网站的管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> 选项。（可能无法在所有的服务器上面执行），就在上面指出的OJS文件当中"
+msgstr ""
+"<strong>注意：</strong>要启用这些选项，这个网站的管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> "
+"选项。（可能无法在所有的服务器上面执行），就在上面指出的OJS文件当中。"
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
 msgstr "在线支付通知"
@@ -1299,15 +1309,18 @@ msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "期刊主要页面访问量"
 
 msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "通过上下文（期次/或者文章）缩小结果范围"
+msgstr "通过上下文（期次 和/或 文章）缩小结果范围。"
 
 msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "通过目标类型（期刊，期次，pdf格式样稿，其他样稿）/或者一个或多个目标id（s）缩小结果范围"
+msgstr "通过目标类型（期刊，期次，样稿，样稿格式）和/或 一个或多个目标id缩小结果范围。"
 
 msgid "manager.statistics.defaultMetricDescription"
 msgstr ""
-"您的期刊使用多个度量标准。 这些度量标准的使用统计将在许多上下文中出现。\n"
-"在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。请选择其中一个度量标准作为默认值。"
+"\n"
+"\t\t您的期刊目前有多种统计衡量标准。使用情况统计会在多处显示相关情况。\n"
+"\t\t很多情况更适合使用单一标准。例如显示期刊文章的利用率或者检索情况\n"
+"\t\t排名。请选择一种衡量标准作为默认标准。\n"
+"\t"
 
 msgid "manager.setup.copyrightYearBasis"
 msgstr "根据新期刊的版权"
@@ -1471,3 +1484,95 @@ msgstr "选择文章如何设置默认的版权日期。 可以逐个覆盖此�
 
 msgid "manager.distribution.access"
 msgstr "存取"
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "请为订阅期限选择一个有效值（周数）。"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "订阅过期前通过邮件提醒订阅者。"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "订阅过期前通过邮件提醒订阅者。"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "订阅过期后通过邮件提醒订阅者。"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "订阅过期后通过邮件提醒订阅者"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} 周"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} 个月"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "请使用提供的多选框。"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "期刊目录页访问量"
+
+msgid "manager.setup.userAccess.success"
+msgstr "用户访问此期刊日志已更新。"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"通过 <a href=\"https://www.openarchives.org/\">Open Archives Initiative</a> "
+"为第三方索引服务提供元数据。"
+
+msgid "manager.setup.enableOai"
+msgstr "启用 OAI"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "查看文章内容"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "站点访问"
+
+msgid "manager.setup.searchDescription.description"
+msgstr "提供一份用来协助搜索引擎在其检索结果中展示您的期刊的简介（25至150字）。"
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "搜索引擎索引设置已更新。"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "在发给审稿人的邮件中嵌入安全链接。"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "限定文件存取"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "限定后续页面链接显示数目。"
+
+msgid "manager.setup.publishing"
+msgstr "出版细节"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "隐私声明已更新。"
+
+msgid "manager.setup.masthead.success"
+msgstr "此期刊的刊头信息已经更新。"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"通过访问 <a href=\"http://clockss.org/\" target=\"_blank\"> CLOCKSS 网站</a> 注册 "
+"CLOCKSS 服务。"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS 协议描述"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS 协议将出现在归档： <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS "
+"协议</a> 下的关于期刊中。"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"启用 CLOCKSS ，通过 CLOCKSS 的<a href=\"{$clockssUrl}\" target=\"_blank\">出版者清单</a>"
+" 存储和发布期刊内容到特定的文档库中。"
+
+msgid "manager.setup.archiving.success"
+msgstr "此期刊的归档细节已经更新。"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2020-01-20 16:35+0000\n"
+"PO-Revision-Date: 2020-06-08 11:54+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "it/>\n"
@@ -230,3 +230,23 @@ msgstr "{$numTitles} items"
 
 msgid "submission.sectionOptions"
 msgstr "Opzioni di sezione"
+
+msgid "publication.issue.success"
+msgstr "I dettagli di pubblicazione del fascicolo sono stati aggiornati."
+
+msgid "publication.selectIssue"
+msgstr "Seleziona l'uscita per la quale pianificare la pubblicazione"
+
+msgid "publication.scheduleInissue"
+msgstr "Assegna ad un'uscita"
+
+msgid "publication.unscheduledIn"
+msgstr ""
+"Questo articolo non è stato pianificato per la pubblicazione in nessuna "
+"uscita."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Tutti i requisiti di pubblicazioni sono completati. Questo articolo verrà "
+"pubblicato immediatamente in quanto la data di pubblicazione è stata fissata "
+"per il {$datePublished}. Confermi la pubblicazione?"

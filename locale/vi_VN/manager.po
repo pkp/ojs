@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-02 16:34+0000\n"
-"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
+"PO-Revision-Date: 2020-06-07 15:39+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -242,3 +242,6 @@ msgstr ""
 
 msgid "manager.distribution.copyrightYearBasis.issue"
 msgstr "Sử dụng ngày của số xuất bản"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Sử dụng ngày xuất bản của bài viết"
