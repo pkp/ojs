@@ -408,10 +408,8 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				'contextInitials' => PKPString::regexp_replace('/[^A-Za-z0-9]/', '', PKPString::strtolower($form->submissionContext->getData('acronym', $form->submissionContext->getData('primaryLocale')))) ?? '',
 				'separator' => '/',
 				'submissionId' => $form->publication->getData('submissionId'),
-				'i18n' => [
-					'assignId' => __('plugins.pubIds.doi.editor.doi.assignDoi'),
-					'clearId' => __('plugins.pubIds.doi.editor.clearObjectsDoi'),
-				]
+				'assignIdLabel' => __('plugins.pubIds.doi.editor.doi.assignDoi'),
+				'clearIdLabel' => __('plugins.pubIds.doi.editor.clearObjectsDoi'),
 			];
 			if ($form->publication->getData('pub-id::publisher-id')) {
 				$fieldData['publisherId'] = $form->publication->getData('pub-id::publisher-id');
@@ -428,9 +426,9 @@ class DOIPubIdPlugin extends PubIdPlugin {
 				}
 			}
 			if ($suffixType === 'default') {
-				$fieldData['i18n']['missingParts'] = __('plugins.pubIds.doi.editor.missingIssue');
+				$fieldData['missingPartsLabel'] = __('plugins.pubIds.doi.editor.missingIssue');
 			} else  {
-				$fieldData['i18n']['missingParts'] = __('plugins.pubIds.doi.editor.missingParts');
+				$fieldData['missingPartsLabel'] = __('plugins.pubIds.doi.editor.missingParts');
 			}
 			$form->addField(new \PKP\components\forms\FieldPubId('pub-id::doi', $fieldData));
 		}

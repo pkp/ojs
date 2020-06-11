@@ -1,14 +1,18 @@
 OJS 3.3.0 Release Notes
 Git tag: 3_3_0-0
 
-Release date: 
+Release date:
 ============================
 
-Bug Fixes (-1 build)
---------------------
+Configuration Changes
+---------------------
 
-Release date: February 28, 2020
-===============================
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
+- The proxy configuration settings have changed. Please review the [proxy]
+  section in config.TEMPLATE.inc.php and adapt your settings in config.inc.php
+  as needed.
 
 New Features
 ------------

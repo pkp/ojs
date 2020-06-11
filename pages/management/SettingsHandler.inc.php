@@ -119,11 +119,8 @@ class SettingsHandler extends ManagementHandler {
 				'settingsUrl' => $pnSettingsUrl,
 				'csrfToken' => $request->getSession()->getCSRFToken(),
 				'groupId' => 'default',
-				'i18n' => [
-					'enablePluginError' => __('api.submissions.unknownError'),
-					'enablePluginSuccess' => __('common.pluginEnabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
-					'disablePluginSuccess' => __('common.pluginDisabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
-				],
+				'enablePluginSuccess' => __('common.pluginEnabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
+				'disablePluginSuccess' => __('common.pluginDisabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
 			]));
 		} else {
 			$archivePnForm->addField(new \PKP\components\forms\FieldHTML('pn', [
@@ -138,11 +135,11 @@ class SettingsHandler extends ManagementHandler {
 		$templateMgr->assign('submissionsEnabled', $submissionsEnabled);
 
 		// Add forms to the existing settings data
-		$settingsData = $templateMgr->getTemplateVars('settingsData');
-		$settingsData['components'][$accessForm->id] = $accessForm->getConfig();
-		$settingsData['components'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
-		$settingsData['components'][$archivePnForm->id] = $archivePnForm->getConfig();
-		$templateMgr->assign('settingsData', $settingsData);
+		$components = $templateMgr->getState('components');
+		$components[$accessForm->id] = $accessForm->getConfig();
+		$components[$archivingLockssForm->id] = $archivingLockssForm->getConfig();
+		$components[$archivePnForm->id] = $archivePnForm->getConfig();
+		$templateMgr->setState(['components' => $components]);
 
 		// Hook into the settings templates to add the appropriate tabs
 		HookRegistry::register('Template::Settings::distribution', function($hookName, $args) {

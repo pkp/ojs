@@ -248,6 +248,9 @@ msgstr "Large"
 msgid "article.return"
 msgstr "Return to Article Details"
 
+msgid "category.category"
+msgstr "Categories"
+
 msgid "submission.submissionEditing"
 msgstr "Submission Editing"
 

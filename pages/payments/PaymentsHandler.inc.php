@@ -16,6 +16,10 @@
 import('classes.handler.Handler');
 
 class PaymentsHandler extends Handler {
+
+	/** @copydoc PKPHandler::_isBackendPage */
+	var $_isBackendPage = true;
+
 	/**
 	 * Constructor.
 	 */
@@ -36,6 +40,9 @@ class PaymentsHandler extends Handler {
 		$this->setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign([
+			'pageTitle' => __('manager.subscriptions'),
+		]);
 		$templateMgr->display('payments/index.tpl');
 	}
 

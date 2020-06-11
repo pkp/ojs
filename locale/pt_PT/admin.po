@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2020-06-03 18:03+0000\n"
+"PO-Revision-Date: 2020-06-08 11:54+0000\n"
 "Last-Translator: Carla Marques <carla.marques@sdum.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/admin/pt_PT/>\n"
@@ -154,9 +154,9 @@ msgstr "Todos os utilizadores"
 
 msgid "admin.mergeUsers.confirm"
 msgstr ""
-"Deseja realmente juntar o registo do utilizador \"{$oldAccountCount}\" no "
+"Deseja realmente juntar o registo do utilizador \"{$oldAccountCount}\" com o "
 "registo do utilizador \"{$newUsername}\"? O registo de \"{$oldAccountCount}\""
-" será eliminado permanentemente. Esta acção é irreversível."
+" será eliminado permanentemente. Esta ação é irreversível."
 
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "Nenhum utilizador registado."
@@ -205,18 +205,3 @@ msgstr "Notificação de Acesso Aberto"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Lembrete de Revisão"
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} foi editado com sucesso."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} foi criado com sucesso."
-
-msgid "admin.settings.info.success"
-msgstr "As informações do site foram atualizadas com sucesso."
-
-msgid "admin.settings.config.success"
-msgstr "As configurações do site foram atualizadas com sucesso."
-
-msgid "admin.settings.appearance.success"
-msgstr "As configurações de aparência do site foram atualizadas com sucesso."

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2020-01-07 10:19+0000\n"
+"PO-Revision-Date: 2020-06-09 19:36+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -46,9 +46,6 @@ msgstr "La revue offrira son contenu en libre accès."
 
 msgid "manager.distribution.publishingMode.subscription"
 msgstr "La revue exigera un abonnement pour accéder à une partie ou à l'intégralité de son contenu."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Les informations de publication ont été mises à jour."
 
 msgid "manager.website.archiving"
 msgstr "Archivage"
@@ -147,9 +144,6 @@ msgstr "Cela activera l'application des paiements d'abonnements où les types, f
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Êtes-vous certain-e de vouloir supprimer cet abonnement ?"
-
-msgid "manager.payment.success"
-msgstr "Les paramètres de paiement ont été mis à jour."
 
 msgid "manager.payment.options.enablePayments"
 msgstr "Les paiement seront activés pour cette revue. Veuillez noter que les utilisateurs-trices doivent se connecter pour effectuer des paiements."
@@ -296,7 +290,7 @@ msgid "manager.sections.hideTocTitle"
 msgstr "Omettre le titre de cette rubrique dans les sommaires des numéros."
 
 msgid "manager.sections.identifyType"
-msgstr "Identifier les articles publiés dans cette rubrique en tant que"
+msgstr "Identifier les publications dans cette rubrique en tant que un.e"
 
 msgid "manager.sections.identifyTypeExamples"
 msgstr "(Par exemple : « Article évalué par des pairs », « Compte-rendu de livre », « Note de recherche », etc.)"
@@ -394,9 +388,6 @@ msgstr "Au lieu du titre et du logo, une version HTML de l'en-tête peut aussi �
 msgid "manager.setup.announcements"
 msgstr "Annonces"
 
-msgid "manager.setup.announcements.success"
-msgstr "Les paramètres des annonces ont été mis à jour."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Introduction"
 
@@ -405,9 +396,6 @@ msgstr "Ajouter toute information additionnelle qui devrait être affichée aux 
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(À paraître dans « À propos » de la revue) "
-
-msgid "manager.setup.archiving.success"
-msgstr "Les informations d'archivage de cette revue ont été mises à jour."
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Les auteurs-es soumissionnaires doivent déposer une déclaration de conflits d'intérêts avec leur soumission."
@@ -420,9 +408,6 @@ msgstr "Historique de la revue"
 
 msgid "manager.setup.historyDescription"
 msgstr "Ce texte apparaîtra dans la section « À propos » du site Web de la revue et peut être utilisé pour décrire tout changement au titre de la revue, au comité éditorial, et tout autre élément d'intérêt dans l'histoire de la publication de la revue."
-
-msgid "manager.setup.contact.success"
-msgstr "Les coordonnées de cette revue ont été mises à jour."
 
 msgid "manager.setup.currentIssue"
 msgstr "Numéro courant"
@@ -564,9 +549,6 @@ msgstr "Pour les bibliothécaires"
 msgid "manager.setup.information.forReaders"
 msgstr "Pour les lecteurs-trices"
 
-msgid "manager.setup.information.success"
-msgstr "Les informations pour cette revue ont été mises à jour."
-
 msgid "manager.setup.initialIssue"
 msgstr "Numéro initial"
 
@@ -669,9 +651,6 @@ msgstr "Fournir une brève description de votre revue et présenter les rédacte
 msgid "manager.setup.labelName"
 msgstr "Nom du libellé"
 
-msgid "manager.setup.lists.success"
-msgstr "Les paramètres de listes pour cette revue ont été mis à jour."
-
 msgid "manager.setup.lists"
 msgstr "Listes"
 
@@ -746,9 +725,6 @@ msgstr "Configuration de la gestion et de la publication"
 msgid "manager.setup.managingTheJournal"
 msgstr "Étape 4. Gérer la revue"
 
-msgid "manager.setup.masthead.success"
-msgstr "Les renseignements du bloc générique de cette revue ont été mis à jour."
-
 msgid "manager.setup.navigationBar"
 msgstr "Barre de navigation"
 
@@ -793,9 +769,6 @@ msgstr "Orientation, évaluation par les pairs, rubriques, confidentialité, sé
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN imprimé"
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "La déclaration de confidentialité a été mise à jour."
 
 msgid "manager.setup.proofingInstructions"
 msgstr "Directives pour la correction d'épreuves"
@@ -887,9 +860,6 @@ msgstr "Politique d'évaluation"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Indexation par les moteurs de recherche"
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "Les paramètres d'indexation par les moteurs de recherche ont été mis à jour."
-
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr "Aider les moteurs de recherche comme Google à découvrir et à afficher votre site. Nous vous encourageons à envoyer votre <a href=\"{$sitemapUrl}\" target=\"_blank\">plan de site</a> (sitemap)."
 
@@ -970,9 +940,6 @@ msgstr "Les articles et les numéros peuvent être étiquetés avec un numéro d
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "La revue aura recours à un comité éditorial/d'évaluation."
-
-msgid "manager.setup.userAccess.success"
-msgstr "Les informations d'accès de l'utilisateur-trice pour cette revue ont été mises à jour."
 
 msgid "manager.setup.useThumbnail"
 msgstr "Vignette"

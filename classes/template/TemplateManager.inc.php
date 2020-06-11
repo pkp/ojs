@@ -27,6 +27,11 @@ class TemplateManager extends PKPTemplateManager {
 	function initialize($request) {
 		parent::initialize($request);
 
+		// Pass app-specific details to template
+		$this->assign(array(
+			'brandImage' => 'templates/images/ojs_brand.png',
+		));
+
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/**
 			 * Kludge to make sure no code that tries to connect to
@@ -51,20 +56,6 @@ class TemplateManager extends PKPTemplateManager {
 					)
 				);
 			}
-
-			// Pass app-specific details to template
-			$this->assign(array(
-				'brandImage' => 'templates/images/ojs_brand.png',
-				'packageKey' => 'common.software',
-			));
-
-			// Get a count of unread tasks.
-			if ($user = $request->getUser()) {
-				$notificationDao = DAORegistry::getDAO('NotificationDAO'); /* @var $notificationDao NotificationDAO */
-				// Exclude certain tasks, defined in the notifications grid handler
-				import('lib.pkp.controllers.grid.notifications.TaskNotificationsGridHandler');
-				$this->assign('unreadNotificationCount', $notificationDao->getNotificationCount(false, $user->getId(), null, NOTIFICATION_LEVEL_TASK));
-			}
 			if (isset($context)) {
 
 				$this->assign(array(
@@ -81,13 +72,6 @@ class TemplateManager extends PKPTemplateManager {
 					'enableAnnouncements' => $context->getData('enableAnnouncements'),
 					'disableUserReg' => $context->getData('disableUserReg'),
 				));
-
-				// Get a link to the settings page for the current context.
-				// This allows us to reduce template duplication by using this
-				// variable in templates/common/header.tpl, instead of
-				// reproducing a lot of OMP/OJS-specific logic there.
-				$dispatcher = $request->getDispatcher();
-				$this->assign( 'contextSettingsUrl', $dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'context') );
 
 				$paymentManager = Application::getPaymentManager($context);
 				$this->assign('pageFooter', $context->getLocalizedData('pageFooter'));
@@ -115,6 +99,64 @@ class TemplateManager extends PKPTemplateManager {
 
 			}
 		}
+	}
+
+	/**
+	 * @copydoc PKPTemplateManager::setupBackendPage()
+	 */
+	function setupBackendPage() {
+		parent::setupBackendPage();
+
+		$request = Application::get()->getRequest();
+		if (defined('SESSION_DISABLE_INIT')
+				|| !$request->getContext()
+				|| !$request->getUser()) {
+			return;
+		}
+
+		$router = $request->getRouter();
+		$handler = $router->getHandler();
+		$userRoles = (array) $handler->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+
+		$menu = (array) $this->getState('menu');
+
+		// Add issues after submissions items
+		if (in_array(ROLE_ID_MANAGER, $userRoles)) {
+			$issuesLink = [
+				'name' => __('editor.navigation.issues'),
+				'url' => $router->url($request, null, 'manageIssues'),
+				'isCurrent' => $request->getRequestedPage() === 'manageIssues',
+			];
+
+			$index = array_search('submissions', array_keys($menu));
+			if ($index === false || count($menu) <= ($index + 1)) {
+				$menu['issues'] = $issuesLink;
+			} else {
+				$menu = array_slice($menu, 0, $index + 1, true) +
+						['issues' => $issuesLink] +
+						array_slice($menu, $index + 1, null, true);
+			}
+		}
+
+		// Add payments link before settings
+		if ($request->getContext()->getData('paymentsEnabled') && array_intersect([ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER], $userRoles)) {
+			$paymentsLink = [
+				'name' => __('common.payments'),
+				'url' => $router->url($request, null, 'payments'),
+				'isCurrent' => $request->getRequestedPage() === 'payments',
+			];
+
+			$index = array_search('settings', array_keys($menu));
+			if ($index === false || count($menu) === $index) {
+				$menu['payments'] = $paymentsLink;
+			} else {
+				$menu = array_slice($menu, 0, $index, true) +
+						['payments' => $paymentsLink] +
+						array_slice($menu, $index, null, true);
+			}
+		}
+
+		$this->setState(['menu' => $menu]);
 	}
 }
 

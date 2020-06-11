@@ -11,23 +11,23 @@ describe('Sites with more than one context', function() {
 
 	it('Tests disabled context is not publicly visible', function() {
 		cy.login('admin', 'admin');
-		cy.visit('/index.php/publicknowledge/admin/contexts');
+		cy.visit('/index.php/index/admin/contexts');
 		cy.get('.show_extras').click();
 		cy.get('#contextGridContainer a').contains('Edit').eq(0).click();
 		cy.wait(1000);
 		cy.get('span').contains('Enable this journal').siblings('input').uncheck();
 		cy.get('button').contains('Save').click();
-		cy.contains('Journal of Public Knowledge was edited successfully.');
+		cy.get('#editContext [role="status"]').contains('Saved');
 		cy.logout();
 		cy.visit('/index.php/publicknowledge');
 		cy.get('h1').contains('Login');
 		cy.login('admin', 'admin');
-		cy.visit('/index.php/publicknowledge/admin/contexts');
+		cy.visit('/index.php/index/admin/contexts');
 		cy.get('.show_extras').click();
 		cy.get('#contextGridContainer a').contains('Edit').eq(0).click();
 		cy.wait(1000);
 		cy.get('span').contains('Enable this journal').siblings('input').check();
 		cy.get('button').contains('Save').click();
-		cy.contains('Journal of Public Knowledge was edited successfully.');
+		cy.get('#editContext [role="status"]').contains('Saved');
 	});
 });

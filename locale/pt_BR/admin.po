@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2020-01-30 08:35+0000\n"
-"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"PO-Revision-Date: 2020-06-05 20:39+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -16,15 +16,6 @@ msgstr ""
 
 msgid "admin.hostedContexts"
 msgstr "Revistas hospedadas"
-
-msgid "admin.settings.appearance.success"
-msgstr "As configurações de aparência do site foram atualizadas com sucesso."
-
-msgid "admin.settings.config.success"
-msgstr "As configurações do site foram atualizadas com sucesso."
-
-msgid "admin.settings.info.success"
-msgstr "As informações do site foram atualizadas com sucesso."
 
 msgid "admin.settings.redirect"
 msgstr "Redirecionamento para revista"
@@ -77,7 +68,7 @@ msgid "admin.languages.downloadFailed"
 msgstr "Erro ao baixar idioma. A seguir, um detalhamento do(s) erro(s)."
 
 msgid "admin.languages.localeInstalled"
-msgstr "Idioma \"{$locale}\" instalado."
+msgstr "O idioma \"{$locale}\" foi instalado."
 
 msgid "admin.languages.download"
 msgstr "Baixar idioma"
@@ -137,12 +128,6 @@ msgstr "O caminho deve conter apenas caracteres alfanuméricos, sublinhado, híf
 
 msgid "admin.contexts.form.pathExists"
 msgstr "O caminho selecionado já está em uso por outra revista."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} foi criado com sucesso."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} foi editado com sucesso."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Permitir Acesso Livre a esta revista no portal"

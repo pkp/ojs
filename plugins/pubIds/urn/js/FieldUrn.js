@@ -16,7 +16,7 @@ var template = pkp.Vue.compile('<div class="pkpFormField pkpFormField--text pkpF
 '				:label="label"' +
 '				:localeLabel="localeLabel"' +
 '				:isRequired="isRequired"' +
-'				:requiredLabel="i18n.required"' +
+'				:requiredLabel="__(\'common.required\')"' +
 '				:multilingualLabel="multilingualLabel"' +
 '			/>' +
 '			<div' +
@@ -42,7 +42,7 @@ var template = pkp.Vue.compile('<div class="pkpFormField pkpFormField--text pkpF
 '					class="pkpButton pkpFormField--urn__button"' +
 '					@click.prevent="addCheckNumber"' +
 '				>' +
-'					{{ i18n.addCheckNumber }}' +
+'					{{ addCheckNumberLabel }}' +
 '				</button>' +
 '				<field-error' +
 '					v-if="errors.length"' +
@@ -57,6 +57,10 @@ pkp.Vue.component('field-urn', {
 	name: 'FieldUrn',
 	extends: pkp.Vue.component('field-text'),
 	props: {
+		addCheckNumberLabel: {
+			type: String,
+			required: true
+		},
 		urnPrefix: {
 			type: String,
 			required: true

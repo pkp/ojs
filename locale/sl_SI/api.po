@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2020-01-13 22:20+0000\n"
-"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
+"PO-Revision-Date: 2020-06-09 12:06+0000\n"
+"Last-Translator: Mitja Podreka <mitja.podreka@ff.uni-lj.si>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/api/sl/>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
@@ -23,3 +23,12 @@ msgstr ""
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Članku ne morete spremeniti imena revije."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Nimate dovoljenja, da premaknete to e-poštno predlogo v drugo revijo."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Izbran način plačila ni podprt."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Prispevek, za katerega ste zaprosili, ni del te revije."

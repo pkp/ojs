@@ -21,8 +21,8 @@ class ContextForm extends PKPContextForm {
 	/**
 	 * @copydoc PKPContextForm::__construct()
 	 */
-	public function __construct($action, $successMessage, $locales, $baseUrl, $context) {
-		parent::__construct($action, $successMessage, $locales, $baseUrl, $context);
+	public function __construct($action, $locales, $baseUrl, $context) {
+		parent::__construct($action, $locales, $baseUrl, $context);
 
 		$this->addField(new FieldText('abbreviation', [
 				'label' => __('manager.setup.journalAbbreviation'),

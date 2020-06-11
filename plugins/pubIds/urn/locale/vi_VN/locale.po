@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-29 07:38+0000\n"
+"PO-Revision-Date: 2020-06-07 15:39+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
 "pubIds-urn/vi_VN/>\n"
@@ -28,3 +28,213 @@ msgstr ""
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Namespace định danh liên tục thường cần cho đăng ký (ví dụ: tại Deutsche "
+"Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL giải quyết"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(e.g. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Vui lòng nhập URL giải quyết."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Tái chỉ định URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Nếu bạn thay đổi cấu hình URN, URN đã được chỉ định sẽ không bị ảnh hưởng. "
+"Khi cấu hình URN được lưu, sử dụng nút này để xóa tất cả các URN hiện có để "
+"các cài đặt mới sẽ có hiệu lực với các đối tượng hiện có."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Bạn có chắc chắn muốn xóa tất cả các URN hiện có?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "số"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "bài báo"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "bản in"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "Không thể gán URN vì hậu tố tùy chỉnh bị thiếu."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "Không thể gán URN vì nó chứa một dạng chưa được giải quyết."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Những gì bạn thấy là một bản xem trước của URN. Chọn checkbox và lưu biểu "
+"mẫu để gán URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN được gán cho {$pubObjectType} này."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Hậu tố URN đã cho đã được sử dụng cho một mục được xuất bản khác. Vui lòng "
+"nhập một hậu tố URN duy nhất cho mỗi mục."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Xóa"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Bạn có chắc chắn muốn xóa URN hiện tại?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Xóa các đối tượng URN của số"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Bạn có chắc chắn muốn xóa các đối tượng URNs của số hiện tại?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Sử dụng tùy chọn sau để xóa URN của tất cả các đối tượng (bài viết và bản in)"
+" hiện được lên lịch cho số này."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Thêm số kiểm tra"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Chỉ định URN {$pubId} cho {$pubObjectType} này"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "Không thể gán URN vì hậu tố tùy chỉnh bị thiếu."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "Không thể gán URN {$pubId} vì nó chứa dạng chưa được giải quyết."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$ pubId} đã được chỉ định."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Số kiểm tra bị thiếu."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN phải bắt đầu bằng {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Chỉ định"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr "Bạn không thể tạo URN cho đến khi ấn phẩm này được chỉ định cho một số."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Bạn không thể tạo URN vì một hoặc nhiều phần của mẫu URN bị thiếu dữ liệu. "
+"Bạn có thể cần chỉ định ấn phẩm cho một số, đặt ID nhà xuất bản hoặc nhập số "
+"trang."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN phải bắt đầu bằng {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN cho ấn phẩm này sẽ là {$urn}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Một URN đã không được chỉ định cho ấn phẩm này."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Bản in: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Mục"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Chọn"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Namespace"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Số kiểm tra sẽ được tự động tính toán và thêm vào cuối, là chữ số cuối cùng "
+"của URN."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Số kiểm tra"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Nhập một hậu tố URN riêng cho mỗi mục được xuất bản. Bạn sẽ tìm thấy một "
+"trường đầu vào URN bổ sung trên trang siêu dữ liệu của từng mục."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i cho các số<br />%j.v%vi%i.%a cho các bài báo<br />%j.v%vi%i.%a.g%g "
+"cho các bản in."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Sử dụng các mẫu mặc định."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Vui lòng nhập mẫu hậu tố URN cho các bản in."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Vui lòng nhập mẫu hậu tố URN cho các bài báo."
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Vui lòng nhập mẫu hậu tố URN cho các số."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "cho các bản in"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "cho các bài báo"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "cho các số"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Ví dụ: vol%viss%ipp%p có thể tạo hậu tố URN \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Sử dụng mẫu được nhập dưới đây để tạo hậu tố URN. Sử dụng %j cho tên viết "
+"tắt của tạp chí, %v cho số tập, %i cho số phát hành, %Y cho năm, %a cho ID "
+"bài viết OJS, %g cho ID galley OJS, %f cho ID tệp OJS , %p cho số trang và %"
+"x cho \"Số nhận dạng tùy chỉnh\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"Hậu tố URN có thể có bất kỳ dạng nào, nhưng phải là duy nhất trong số tất cả "
+"các đối tượng xuất bản có cùng tiền tố URN được gán:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "Hậu tố URN"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "Mẫu tiền tố URN phải ở dạng \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"Tiền tố URN là bản sửa lỗi, không bao giờ thay đổi một phần của URN (ví dụ: "
+"\"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "Tiền tố URN"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Các bản in"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Các bài báo"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"Vui lòng chọn các đối tượng xuất bản sẽ được gán Uniform Resource Names "
+"(URN):"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Các số"

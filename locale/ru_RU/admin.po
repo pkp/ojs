@@ -17,15 +17,6 @@ msgstr ""
 msgid "admin.hostedContexts"
 msgstr "Журналы на сайте"
 
-msgid "admin.settings.appearance.success"
-msgstr "Настройки оформления сайта были успешно обновлены."
-
-msgid "admin.settings.config.success"
-msgstr "Настройки конфигурации сайта были успешно обновлены."
-
-msgid "admin.settings.info.success"
-msgstr "Информация сайта была успешно обновлена."
-
 msgid "admin.settings.redirect"
 msgstr "Перенаправление журнала"
 
@@ -129,12 +120,6 @@ msgstr "Путь может содержать только буквы, цифр
 
 msgid "admin.contexts.form.pathExists"
 msgstr "Указанный Вами путь уже используется другим журналом."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} был успешно создан."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} был успешно отредактирован."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Включить показ этого журнала для всех на сайте"

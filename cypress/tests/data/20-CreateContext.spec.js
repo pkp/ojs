@@ -45,14 +45,14 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('a').contains('Administration').click();
+		cy.get('.app__nav a').contains('Administration').click();
 		cy.get('a').contains('Hosted Journals').click();
 		cy.get('a[class=show_extras]').click();
 		cy.contains('Settings wizard').click();
 
 		cy.get('button[id="appearance-button"]').click();
 		cy.get('div[id=appearance]').find('button').contains('Save').click();
-		cy.contains('The theme has been updated.');
+		cy.get('#appearance [role="status"]').contains('Saved');
 
 		cy.get('button[id="languages-button"]').click();
 		cy.get('input[id^=select-cell-fr_CA-submissionLocale]').click();
@@ -71,15 +71,14 @@ describe('Data suite tests', function() {
 		cy.get('button[id="context-button"]').click();
 		cy.get('input[name="abbreviation-en_US"]').type('publicknowledge', {delay: 0});
 		cy.get('div[id=context]').find('button').contains('Save').click();
-		cy.contains('was edited successfully');
+		cy.get('#context [role="status"]').contains('Saved');
 	});
 
 	it('Tests context settings form', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('a').contains('Settings').click();
-		cy.get('a').contains('Journal').click();
+		cy.get('.app__nav a').contains('Journal').click();
 
 		cy.get('input[name="abbreviation-en_US"]').type('J Pub Know', {delay: 0});
 		cy.get('input[name="acronym-en_US"]').type(Cypress.env('contextAcronyms')['en_US'], {delay: 0});
@@ -97,15 +96,14 @@ describe('Data suite tests', function() {
 		cy.get('input[name="printIssn"]').clear().type('0378-5955', {delay: 0});
 
 		cy.get('div[id=masthead]').find('button').contains('Save').click();
-		cy.contains('The masthead details for this journal have been updated.');
+		cy.get('#masthead [role="status"]').contains('Saved');
 	});
 
 	it('Tests contact settings form', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('a').contains('Settings').click();
-		cy.get('a').contains('Journal').click();
+		cy.get('.app__nav a').contains('Journal').click();
 		cy.get('button[id="contact-button"]').click();
 
 		// Submit the form with required fields missing.
@@ -130,6 +128,6 @@ describe('Data suite tests', function() {
 		cy.get('input[name=contactEmail').clear().type('rvaca@mailinator.com', {delay: 0});
 		cy.get('input[name=supportEmail').clear().type('rvaca@mailinator.com', {delay: 0});
 		cy.get('div[id=contact').find('button').contains('Save').click();
-		cy.contains('The contact details for this');
+		cy.get('#contact [role="status"]').contains('Saved');
 	});
 })

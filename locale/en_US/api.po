@@ -11,6 +11,9 @@ msgstr ""
 "PO-Revision-Date: 2019-09-27T09:54:38-07:00\n"
 "Language: \n"
 
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "The announcement you requested is not part of this journal."
+
 msgid "api.submissions.403.cantChangeContext"
 msgstr "You can not change the journal of a submission."
 

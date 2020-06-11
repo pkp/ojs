@@ -28,6 +28,9 @@ class ArticleHandler extends Handler {
 	/** submission associated with the request **/
 	var $article;
 
+	/** category associated with the request **/
+	var $categories;
+
 	/** publication associated with the request **/
 	var $publication;
 
@@ -178,6 +181,11 @@ class ArticleHandler extends Handler {
 		if ($this->galley && !$this->userCanViewGalley($request, $article->getId(), $this->galley->getId())) {
 			fatalError('Cannot view galley.');
 		}
+
+		$categoryDao = DAORegistry::getDAO('CategoryDAO'); /* @var $categoryDao CategoryDAO */
+		$templateMgr->assign([
+			'categories' =>	$categoryDao->getByPublicationId($publication->getId())->toArray()
+		]);
 
 		// Get galleys sorted into primary and supplementary groups
 		$galleys = $publication->getData('galleys');

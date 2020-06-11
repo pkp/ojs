@@ -200,12 +200,6 @@ msgstr "Açık Erişim Bildirimi"
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Abonelik Sona Erme Hatırlatıcısı"
 
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} başarıyla düzeltildi."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} başarıyla oluşturuldu."
-
 msgid "admin.languages.downloadUnavailable"
 msgstr ""
 "<p>Şu anda PKP (Kamu Bilgi Projesi) sunucularından dil paketi indirilemiyor. "
@@ -235,12 +229,3 @@ msgstr ""
 "\t\tarama sonuçlarını derecelendirmek için. Lütfen yapılandırılmış "
 "metriklerden birini varsayılan olarak seçin.\n"
 "\t"
-
-msgid "admin.settings.info.success"
-msgstr "Site bilgisi başarılı şekilde güncellendi."
-
-msgid "admin.settings.config.success"
-msgstr "Site ayarları başarılı şekilde güncellendi."
-
-msgid "admin.settings.appearance.success"
-msgstr "Site görünüm ayarları başarılı şekilde güncellendi."

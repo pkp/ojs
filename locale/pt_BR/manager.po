@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2020-06-04 19:54+0000\n"
+"PO-Revision-Date: 2020-06-07 15:39+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
@@ -40,9 +40,6 @@ msgstr "A revista oferecerá acesso livre ao seu conteúdo."
 
 msgid "manager.distribution.publishingMode.subscription"
 msgstr "A revista terá controle de assinaturas para acesso ao seu conteúdo, ou parte dele."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Os detalhes da publicação foram atualizados."
 
 msgid "manager.website.archiving"
 msgstr "Arquivamento"
@@ -147,9 +144,6 @@ msgstr "Esta ação ativará pagamento para assinaturas, sendo responsabilidade 
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Deseja realmente apagar esta subscrição?"
-
-msgid "manager.payment.success"
-msgstr "As opções de pagamento foram atualizadas."
 
 msgid "manager.payment.options.enablePayments"
 msgstr "Clique aqui para habilitar o módulo de pagamentos. Em seguida, configure as opções de pagamento através do formulário disponível. Usuários deverão estar cadastrados e logados no sistema para realizar pagamentos."
@@ -260,7 +254,7 @@ msgid "manager.sections.assigned"
 msgstr "Editores desta seção"
 
 msgid "manager.sections.confirmDelete"
-msgstr "Deseja realmente exluir permanentemente esta seção?"
+msgstr "Deseja realmente excluir permanentemente esta seção?"
 
 msgid "manager.sections.alertDelete"
 msgstr "Antes de poder excluir esta seção, é necessário mover os artigos publicados nela para outras seções."
@@ -400,7 +394,7 @@ msgid "manager.setup.announcements"
 msgstr "Notícias"
 
 msgid "manager.setup.announcements.success"
-msgstr "As configurações de anúncios foram atualizadas."
+msgstr "As configurações de notícias foram atualizadas."
 
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Introdução"
@@ -410,9 +404,6 @@ msgstr "Digite um texto introdutório, ou qualquer informação desejada, a ser 
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Para inclusão na página Sobre a Revista) "
-
-msgid "manager.setup.archiving.success"
-msgstr "Os detalhes de arquivamento deste periódico foram atualizados."
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Exigir dos autores o registro de conflito de interesses (CI) junto com a submissão."
@@ -425,9 +416,6 @@ msgstr "Histórico da revista"
 
 msgid "manager.setup.historyDescription"
 msgstr "Este texto aparecerá na seção \"Sobre\" da revista e pode ser usado para detalhar mudanças de título, corpo editorial e outros itens de relevância na história da publicação."
-
-msgid "manager.setup.contact.success"
-msgstr "Os detalhes de contato desta revista foram atualizados."
 
 msgid "manager.setup.currentIssue"
 msgstr "Edição Atual"
@@ -470,7 +458,7 @@ msgstr "Qualquer e-mail retornado (não recebido pelo destinatário) produzirá 
 
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
-"Para enviar emails não entregues para um endereço de devolução, o "
+"Para enviar e-mails não entregues para um endereço de devolução, o "
 "administrador do site deve habilitar a opção "
 "<code>allow_envelope_sender</code> no arquivo de configuração do site. A "
 "configuração do servidor pode ser necessária, conforme indicado na "
@@ -483,7 +471,10 @@ msgid "manager.setup.emailSignature"
 msgstr "Assinatura"
 
 msgid "manager.setup.emailSignature.description"
-msgstr "Os e-mails padrão enviados pelo sistema em nome da revista incluirão a seguinte assinatura no final. O corpo do texto pode ser editado na seção E-mails da Administração da revista."
+msgstr ""
+"Os <em>e-mails</em> padrão enviados pelo sistema em nome da revista "
+"incluirão a seguinte assinatura no final. O corpo do texto pode ser editado "
+"na seção <em>E-mails</em> da Administração da revista."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Habilitar notícias"
@@ -495,7 +486,9 @@ msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "Exibir na página inicial"
 
 msgid "manager.setup.numAnnouncementsHomepage.description"
-msgstr "Quantos anúncios serão exibidos na página inicial. Deixe em branco para não exibir nenhum."
+msgstr ""
+"Quantas notícias serão exibidos na página inicial. Deixe em branco para não "
+"exibir nenhum."
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Usuários visitantes podem se cadastrar na revista, assumindo um ou mais papéis."
@@ -510,7 +503,17 @@ msgid "manager.setup.forAuthorsToIndexTheirWork"
 msgstr "Indexação da submissão"
 
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
-msgstr "O sistema adota o Protocolo para Coleta de Metadados do <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a>, que é um padrão emergente para proporcionar acesso com base na indexação a recursos eletrônicos de pesquisa em escala global. Os autores farão uso de um padrão similar para incluir os metadados da submissão. O Gerente da revista deverá escolher as categorias para indexação e apresentar aos autores exemplos relevantes para auxiliá-los na indexação, separando os termos com ponto-e-vírgula (Ex.: termo1; termo2). Os termos deverão ser apresentados como exemplos ao acessar a página, por meio das expressões \"Ex.\" ou \"Por exemplo,\"."
+msgstr ""
+"O OJS adota o Protocolo para Coleta de Metadados do <a href=\""
+"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a>"
+", que é um padrão emergente para proporcionar acesso com base na indexação a "
+"recursos eletrônicos de pesquisa em escala global. Os autores farão uso de "
+"um padrão similar para incluir os metadados da submissão. O Gerente da "
+"revista deverá escolher as categorias para indexação e apresentar aos "
+"autores exemplos relevantes para auxiliá-los na indexação, separando os "
+"termos com ponto-e-vírgula (Ex.: termo1; termo2). Os termos deverão ser "
+"apresentados como exemplos ao acessar a página, por meio das expressões \"Ex."
+"\" ou \"Por exemplo,\"."
 
 msgid "manager.setup.form.issnInvalid"
 msgstr "O ISSN especificado não é válido."
@@ -568,9 +571,6 @@ msgstr "Para Bibliotecários"
 
 msgid "manager.setup.information.forReaders"
 msgstr "Para Leitores"
-
-msgid "manager.setup.information.success"
-msgstr "As informações desta revista foram atualizadas."
 
 msgid "manager.setup.initialIssue"
 msgstr "Edição inicial"
@@ -669,13 +669,12 @@ msgid "manager.setup.keyInfo"
 msgstr "Informação chave"
 
 msgid "manager.setup.keyInfo.description"
-msgstr "Forneça uma breve descrição do seu diário e identifique editores, diretores administrativos e outros membros da sua equipe editorial."
+msgstr ""
+"Forneça uma breve descrição da sua revista e identifique editores, diretores "
+"administrativos e outros membros da sua equipe editorial."
 
 msgid "manager.setup.labelName"
 msgstr "Rótulo"
-
-msgid "manager.setup.lists.success"
-msgstr "As configurações da lista para este diário foram atualizadas."
 
 msgid "manager.setup.lists"
 msgstr "Listas"
@@ -698,7 +697,7 @@ msgid "manager.setup.plnPluginNotInstalled"
 msgstr "A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios. O plugin PKP PN para OJS 3 está em desenvolvimento e ficará disponível na galeria de plugins em breve."
 
 msgid "manager.setup.otherLockss"
-msgstr "Opções Alternativas de Arquivo"
+msgstr "Opções Alternativas de Arquivo (LOCKSS e CLOCKSS)"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
@@ -759,9 +758,6 @@ msgstr "Configurações administrativas e de publicação"
 msgid "manager.setup.managingTheJournal"
 msgstr "Passo 4. Administração da revista"
 
-msgid "manager.setup.masthead.success"
-msgstr "Os detalhes do cabeçalho desta revista foram atualizados."
-
 msgid "manager.setup.navigationBar"
 msgstr "Barra de navegação"
 
@@ -786,8 +782,8 @@ msgstr "Nota de agradecimento"
 msgid "manager.setup.notifications.submissionAckDisabled"
 msgstr ""
 "<strong>Aviso:</strong> O e-mail de confirmação de submissão está desativado "
-"no momento. Para usar esse recurso, ative o email \"Submission Ack\" em "
-"Emails."
+"no momento. Para usar esse recurso, ative o e-mail \"Submission Ack\" em "
+"E-mails."
 
 msgid "manager.setup.numPageLinks"
 msgstr "Links de paginação"
@@ -809,9 +805,6 @@ msgstr "Foco, avaliação pelos pares, seções, privacidade, acesso, segurança
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN Impresso"
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "A declaração de privacidade foi atualizada."
 
 msgid "manager.setup.proofingInstructions"
 msgstr "Instruções para leitura de provas"
@@ -856,11 +849,13 @@ msgid "manager.setup.reviewOptions"
 msgstr "Opções para avaliação"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "E-mails automatizados serão enviados ao avaliador (o editor também pode enviar lembretes ao avaliador)"
+msgstr ""
+"E-mails automatizados serão enviados ao avaliador (o editor também pode "
+"enviar lembretes ao avaliador)"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
-"Para enviar lembretes por email automatizados, o administrador do site deve "
+"Para enviar lembretes por e-mail automatizados, o administrador do site deve "
 "ativar a opção <tt>scheduled_tasks</tt> no arquivo de configuração do OJS. "
 "Pode ser necessária uma configuração adicional do servidor, conforme "
 "indicado na documentação do OJS."
@@ -887,10 +882,17 @@ msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Habilitar acesso 1-clique"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>Aviso:</strong> O convite ao avaliador conterá uma URL especial que levará os avaliadores diretamente à página de avaliação da submissão em questão (sendo necessário realizar o login para acessar outras páginas). Para garantir a segurança do processo ao usar esta opção, não é permitido ao editor alterar endereços de e-mail ou incluir destinatários de Cópias Carbono (CCs) ou Cópias Ocultas (BCCs) antes de enviar a mensagem aos avaliadores."
+msgstr ""
+"<strong>Aviso:</strong> O convite ao avaliador conterá uma URL especial que "
+"levará os avaliadores diretamente à página de avaliação da submissão em "
+"questão (sendo necessário realizar o login para acessar outras páginas). "
+"Para garantir a segurança do processo ao usar esta opção, não é permitido ao "
+"editor alterar endereços de e-mail ou incluir destinatários de Cópias "
+"Carbono (CCs) ou Cópias Ocultas (BCCs) antes de enviar a mensagem aos "
+"avaliadores."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
-msgstr "Inclua um link seguro no convite por e-mail aos revisores."
+msgstr "Inclua um link seguro no convite por e-mail aos avaliadores."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Classificação de avaliadores"
@@ -904,9 +906,6 @@ msgstr "Política de avaliação"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Indexação para mecanismos de busca"
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "As configurações de índice de mecanismo de pesquisa foram atualizadas."
-
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
 "Ajude os mecanismos de pesquisa como o Google a descobrir e exibir seu site. "
@@ -914,7 +913,10 @@ msgstr ""
 "mapa do site </a>."
 
 msgid "manager.setup.searchDescription.description"
-msgstr "Forneça uma breve descrição (50 a 300 caracteres) do diário, que os mecanismos de pesquisa podem exibir ao listar o diário nos resultados da pesquisa."
+msgstr ""
+"Forneça uma breve descrição (50 a 300 caracteres) da revista, que os "
+"mecanismos de pesquisa podem exibir ao listar a revista nos resultados da "
+"busca."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Seções e editores de seção"
@@ -924,9 +926,9 @@ msgstr "(Caso não sejam incluídas outras seções, todos os itens serão subme
 
 msgid "manager.setup.sectionsDescription"
 msgstr ""
-"Para modificar as seções do periódico (Ex.: Artigos, Resenhas, etc.), vá em "
-"Seções.<br /><br />Autores farão a designação ao submeterem trabalhos para o "
-"periódico..."
+"Para modificar as seções do revista (Ex.: Artigos, Resenhas, etc.), vá em "
+"Seções.<br /><br />Autores farão a designação ao submeterem trabalhos para a "
+"revista..."
 
 msgid "manager.setup.selectEditorDescription"
 msgstr "O editor será responsável pelo processo editorial."
@@ -994,9 +996,6 @@ msgstr "Artigos e edições podem receber um código ou texto identificador, emp
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Um comitê editorial/avaliador será utilizado pela revista."
 
-msgid "manager.setup.userAccess.success"
-msgstr "Os detalhes de acesso do usuário para este diário foram atualizados."
-
 msgid "manager.setup.useThumbnail"
 msgstr "Miniatura"
 
@@ -1012,8 +1011,8 @@ msgstr "Título em formato de texto"
 msgid "manager.statistics.defaultMetricDescription"
 msgstr ""
 "\n"
-"\t\tSeu periódico está configurado para registrar mais de uma métrica de "
-"uso. As estatísticas de uso serão exibidas em vários contextos.\n"
+"\t\tSua revista está configurado para registrar mais de uma métrica de uso. "
+"As estatísticas de uso serão exibidas em vários contextos.\n"
 "Há casos em que uma estatística de uso único deve ser usada, por exemplo, "
 "para exibir uma lista ordenada dos artigos mais usados ou para classificar\n"
 "resultados de busca. Selecione uma das métricas configuradas como padrão.\n"
@@ -1137,22 +1136,25 @@ msgid "manager.subscriptionPolicies.xWeeks"
 msgstr "{$x} Semanas"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Notificar os subscritores por email após expiração da subscrição"
+msgstr "Notificar os assinantes por e-mail após expiração da assinatura"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr "Notificar os subscritores por email após expiração da subscrição."
+msgstr "Notificar os assinantes por e-mail após expiração da assinatura."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
-msgstr "Notificar os subscritores por email antes da expiração da subscrição."
+msgstr "Notificar os assinantes por e-mail antes da expiração da assinatura."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
-msgstr "Notificar os subscritores por email antes da expiração da subscrição."
+msgstr "Notificar os assinantes por e-mail antes da expiração da assinatura."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Lembretes de expiração de assinatura"
 
 msgid "manager.subscriptionPolicies.expiryRemindersDescription"
-msgstr "Lembretes automáticos via e-mail (editáveis nas configurações da revista por editores-gerentes na opção E-mails) podem ser enviados aos assinantes tanto antes quanto depois da expiração da assinatura."
+msgstr ""
+"Lembretes automáticos via e-mail (editáveis nas configurações da revista por "
+"editores-gerentes na opção E-mails) podem ser enviados aos assinantes tanto "
+"antes quanto depois da expiração da assinatura."
 
 msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
 msgstr "<strong>Aviso:</strong> Para ativar esta opção, o administrador do portal deverá habilitar a opção <tt>scheduled_tasks</tt> no arquivo de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para o funcionamento correto da opção (que pode não ser possível em todos os servidores!), como indicado na documentação do sistema."
@@ -1179,7 +1181,9 @@ msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderVali
 msgstr "Informe um número válido para o período de semanas antes da expiração da assinatura."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
-msgstr "Leitores cadastrados terão a opção de receber o sumário via e-mail quando a edição se tornar de Acesso Livre."
+msgstr ""
+"Leitores cadastrados terão a opção de receber o sumário via e-mail quando a "
+"edição se tornar de Acesso Livre."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
 msgstr "<strong>Aviso:</strong> Para ativar esta opção, o administrador do portal deverá habilitar a opção <tt>scheduled_tasks</tt> no arquivo de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para o funcionamento correto da opção (que pode não ser possível em todos os servidores!), como indicado na documentação do sistema."
@@ -1188,19 +1192,30 @@ msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
 msgstr "Notificações de pagamento online"
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
-msgstr "Notificações automáticas via e-mail (disponíveis para personalização pelo Gerente da Revista na seção E-mails) podem ser enviados ao gerente de assinaturas após a conclusão de pagamentos online."
+msgstr ""
+"Notificações automáticas via e-mail (disponíveis para personalização pelo "
+"Gerente da Revista na seção E-mails) podem ser enviados ao gerente de "
+"assinaturas após a conclusão de pagamentos online."
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
-msgstr "Notificar o gerente de assinaturas via e-mail após a realização de um pagamento de assinatura individual online."
+msgstr ""
+"Notificar o gerente de assinaturas via e-mail após a realização de um "
+"pagamento de assinatura individual online."
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
-msgstr "Notificar o gerente de assinaturas via e-mail após a realização de um pagamento de assinatura institucional online."
+msgstr ""
+"Notificar o gerente de assinaturas via e-mail após a realização de um "
+"pagamento de assinatura institucional online."
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
-msgstr "Notificar via e-mail o gerente de assinaturas quando ocorrer renovação de assinatura individual."
+msgstr ""
+"Notificar via e-mail o gerente de assinaturas quando ocorrer renovação de "
+"assinatura individual."
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
-msgstr "Notificar via e-mail o gerente de assinaturas quando ocorrer renovação de assinatura institucional."
+msgstr ""
+"Notificar via e-mail o gerente de assinaturas quando ocorrer renovação de "
+"assinatura institucional."
 
 msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
 msgstr "<strong>Aviso:</strong> Assinaturas institucionais adquiridas online exigem aprovação do domínio informado e das faixas de IP, além da ativação da assinatura pelo gerente de assinaturas."
@@ -1414,7 +1429,10 @@ msgid "manager.subscriptions.form.saveAndCreateAnother"
 msgstr "Salvar e incluir outra"
 
 msgid "manager.subscriptions.form.subscriptionContactRequired"
-msgstr "Para enviar uma notificação via e-mail ao usuário, é necessário especificar, na administração da revista, o nome e endereço de e-mail do contato para assinaturas."
+msgstr ""
+"Para enviar uma notificação via e-mail ao usuário, é necessário especificar, "
+"na administração da revista, o nome e endereço de e-mail do contato para "
+"assinaturas."
 
 msgid "manager.subscriptions.form.subscriptionExists"
 msgstr "O usuário já possui uma assinatura da revista."
@@ -1762,7 +1780,7 @@ msgid "plugins.importexport.common.cliError"
 msgstr "ERRO:"
 
 msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "O caminho da revista expecificado, \"{$journalPath}\", não existe."
+msgstr "O caminho especificado da revista, \"{$journalPath}\", não existe."
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Os objetos especificados não puderam ser encontrados."

@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-04-21 19:24+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2020-06-11 02:04+0000\n"
+"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -741,7 +741,7 @@ msgid "layoutEditor.galley.uploadSuppFile"
 msgstr "上传附件"
 
 msgid "submission.layout.imageInvalid"
-msgstr "无效地俄图片格式，允许 .gif, .jpg, 和.png格式."
+msgstr "无效的图片格式，仅允许 .gif、.jpg和.png格式。"
 
 msgid "reviewer.pendingReviews"
 msgstr "文章等待审阅"
@@ -1858,3 +1858,30 @@ msgstr "文章已提交"
 
 msgid "subscriptions.institutionalOnlinePaymentDescription"
 msgstr "<strong>注意</strong>：在线购买的机构订阅必须先获得域名和IP范围的批准，然后才能激活订阅。"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "指定编辑"
+
+msgid "issue.viewIssueIdentification"
+msgstr "查看 {$identification}"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "是的，我希望收到我注册的所有期刊的新出版物和公告通知。"
+
+msgid "user.register.selectContext"
+msgstr "选择要注册的期刊："
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "设置或调整评审编辑的建议。"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "远程托管内容的URL"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "此插件在网站分离独立时可用。"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "稿件插件库用来为稿件的各种文档显示提供支持插件。"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "稿件插件库"

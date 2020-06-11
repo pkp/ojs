@@ -195,9 +195,6 @@ msgid "publication.publish.confirmation"
 msgstr ""
 "Alle publikationskrav er opfyldt. Er du sikker på, at du vil publicere dette?"
 
-msgid "publication.issue.success"
-msgstr "Publikationens nummerdetaljer er blevet opdateret."
-
 msgid "publication.invalidIssue"
 msgstr "Nummeret til denne publikation blev ikke fundet."
 

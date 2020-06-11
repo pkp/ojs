@@ -179,18 +179,3 @@ msgstr "Повідомлення про відкритий доступ"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Нагадування рецензенту"
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} було відредаговано успішно."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} було створено успішно."
-
-msgid "admin.settings.info.success"
-msgstr "Інформація про сайт успішно оновлена."
-
-msgid "admin.settings.config.success"
-msgstr "Налаштування конфігурації сайту успішно оновлено."
-
-msgid "admin.settings.appearance.success"
-msgstr "Налаштування зовнішнього вигляду сайту успішно оновлено."

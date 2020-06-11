@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-03-09 13:16+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2020-06-09 12:06+0000\n"
+"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/admin/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -154,12 +154,6 @@ msgstr ""
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "订阅到期提醒"
 
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} 已成功编辑。"
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} 已成功创建。"
-
 msgid "admin.contexts.form.titleRequired"
 msgstr "标题为必填项。"
 
@@ -174,12 +168,3 @@ msgstr ""
 
 msgid "admin.languages.confirmDisable"
 msgstr "您确定要禁用此语言吗？ 任何使用该语言的托管期刊都会受到影响。"
-
-msgid "admin.settings.info.success"
-msgstr "站点信息已成功更新。"
-
-msgid "admin.settings.config.success"
-msgstr "站点配置设置已成功更新。"
-
-msgid "admin.settings.appearance.success"
-msgstr "站点外观设置已成功更新。"

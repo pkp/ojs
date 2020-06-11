@@ -247,23 +247,8 @@ msgstr ""
 "A főoldal ehhez a folyóirathoz irányít át. A funkció akkor lehet praktikus, "
 "ha az oldalon csak egy folyóirat érhető el."
 
-msgid "admin.settings.info.success"
-msgstr "Az oldal információ sikeresen módosítva."
-
-msgid "admin.settings.config.success"
-msgstr "Az oldal konfigurációs beállításai sikeresen módosítva."
-
-msgid "admin.settings.appearance.success"
-msgstr "Az oldal megjelenítési beállításai sikeresen módosítva."
-
 msgid "admin.settings.redirect"
 msgstr "Folyóirat átirányítás"
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} sikeresen létrehozva."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} sikeresen szerkesztve."
 
 msgid "admin.contexts.contextDescription"
 msgstr "Folyóirat leírás"

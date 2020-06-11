@@ -1798,9 +1798,6 @@ msgstr "Statistika članka"
 msgid "manager.setup.resetPermissions.success"
 msgstr "Dovoljenja članka so bila uspešno ponastavljena."
 
-msgid "manager.setup.userAccess.success"
-msgstr "Dostop uporabnikov do revije je bil posodobljen."
-
 msgid "manager.setup.enableOai.description"
 msgstr ""
 "Podajte metapodatke za storitve indeksiranja drugih proizvajalcev skozi <a "
@@ -1823,9 +1820,6 @@ msgstr ""
 "vašo stran. Vabljeni ste, da prijavite vaš <a href=\"{$sitemapUrl}\" target="
 "\"_blank\">zemljevid strani</a>."
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "Nastavitve za iskalnike so bile posodobljene."
-
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Vključi varno povezavo v email povabilo recenzentom."
 
@@ -1842,17 +1836,8 @@ msgstr ""
 msgid "manager.setup.publishing"
 msgstr "Podrobnosti objavljanja"
 
-msgid "manager.setup.privacyStatement.success"
-msgstr "Izjava o zasebnosti je bila posodobljena."
-
 msgid "manager.setup.numPageLinks.description"
 msgstr "Omejite število prikazanih povezav do nadaljnjih strani v seznamu."
-
-msgid "manager.setup.masthead.success"
-msgstr "Kolofon revije je bil posodobljen."
-
-msgid "manager.setup.lists.success"
-msgstr "Nastavitve seznamov revije so bile shranjene."
 
 msgid "manager.setup.keyInfo.description"
 msgstr ""
@@ -1866,9 +1851,6 @@ msgid "manager.setup.itemsPerPage.description"
 msgstr ""
 "Omejite število postavk (npr. člankov, uporabnikov, številk revij), ki naj "
 "se prikažejo na eni strani, ostale bodo na naslednjih straneh."
-
-msgid "manager.setup.information.success"
-msgstr "Informacije za revijo so bile posodobljene."
 
 msgid "manager.setup.identity"
 msgstr "Identiteta revije"
@@ -1902,24 +1884,9 @@ msgstr ""
 msgid "manager.setup.emailBounceAddress.description"
 msgstr "Vsak nedostavljen email se bo sporočil kot napaka na ta naslov."
 
-msgid "manager.setup.contact.success"
-msgstr "Kontaktne podrobnosti revije so bile posodobljene."
-
-msgid "manager.setup.archiving.success"
-msgstr "Podrobnosti arhiviranja so bile posodobljene."
-
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr ""
 "Vnesite informacije, za katere želite, da se prikažejo na strani z obvestili."
-
-msgid "manager.setup.announcements.success"
-msgstr "Nastavitve obveščanja so bile posodobljene."
-
-msgid "manager.payment.success"
-msgstr "Nastavitve plačila so bile posodobljene."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Podrobnosti objavljanja so bile posodobljene."
 
 msgid "manager.distribution.publishingMode.subscription"
 msgstr "Revija bo zahtevala naročnino za dostop do delov ali celotne revije."

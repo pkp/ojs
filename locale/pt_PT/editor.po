@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2020-01-30 18:29+0000\n"
+"PO-Revision-Date: 2020-06-08 16:46+0000\n"
 "Last-Translator: Carla Marques <carla.marques@sdum.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/editor/pt_PT/>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
-msgstr "Página Inicial do Editor"
+msgstr "Página do Editor"
 
 msgid "editor.submissionsAndPublishing"
 msgstr "Submissões e Publicações"
@@ -45,7 +45,9 @@ msgid "editor.submissionArchive.noSubmissions"
 msgstr "Nenhuma submissão no arquivo."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "Guardar alterações a submissões arquivadas? Submissões marcadas para exclusão serão excluídas permanentemente do sistema."
+msgstr ""
+"Guardar alterações a submissões arquivadas? Submissões marcadas para "
+"exclusão serão eliminadas permanentemente do sistema."
 
 msgid "editor.submissionArchive.confirmDelete"
 msgstr "Deseja realmente eliminar esta submissão?"
@@ -60,7 +62,7 @@ msgid "editor.notifyUsers"
 msgstr "Notificar Utilizadores"
 
 msgid "editor.notifyUsers.inProgress"
-msgstr "Notificando utilizadores..."
+msgstr "A notificar os utilizadores..."
 
 msgid "editor.usersNotified"
 msgstr "Utilizadores Notificados"
@@ -81,7 +83,7 @@ msgid "editor.issues.createIssue"
 msgstr "Criar Edição"
 
 msgid "editor.issues.currentIssue"
-msgstr "Edição Actual"
+msgstr "Edição Atual"
 
 msgid "editor.issues.numArticles"
 msgstr "Artigos"
@@ -126,10 +128,10 @@ msgid "editor.issues.accessStatus"
 msgstr "Tipo de Acesso"
 
 msgid "editor.issues.accessDate"
-msgstr "Data para Acesso Livre"
+msgstr "Data para Acesso Aberto"
 
 msgid "editor.issues.invalidAccessDate"
-msgstr "A data para acesso é inválida."
+msgstr "A data de acesso é inválida."
 
 msgid "editor.issues.coverPage"
 msgstr "Capa"
@@ -166,13 +168,13 @@ msgid "editor.issues.coverPageCaption"
 msgstr "Legenda da capa"
 
 msgid "editor.issues.showCoverPage"
-msgstr "Criar capa personalizada para esta edição."
+msgstr "Criar capa para esta edição com os seguintes elementos."
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Exibir"
 
 msgid "editor.issues.openAccess"
-msgstr "Acesso Livre"
+msgstr "Acesso Aberto"
 
 msgid "editor.issues.subscription"
 msgstr "Subscrição"
@@ -187,7 +189,9 @@ msgid "editor.issues.cover"
 msgstr "Capa"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Todos os artigos voltarão à fila de espera e todos os documentos associados serão eliminados permanentemente. Deseja realmente eliminar esta edição?"
+msgstr ""
+"Todos os artigos voltarão à fila de edição e todos os documentos associados "
+"serão eliminados permanentemente. Deseja realmente eliminar esta edição?"
 
 msgid "editor.issues.resetIssueOrder"
 msgstr "Esta revista utiliza ordenação personalizada de edições. <a href=\"{$url}\" class=\"action\">Restaurar para a configuração padrão.</a>"
@@ -223,7 +227,7 @@ msgid "editor.issues.confirmPublish"
 msgstr "Deseja realmente publicar a nova edição?"
 
 msgid "editor.issues.publicArticleIdExists"
-msgstr "Não foi possível guardar id público para o artigo:"
+msgstr "Não foi possível guardar Id público para o artigo:"
 
 msgid "editor.issues.noLiveIssues"
 msgstr "Nenhuma edição em produção"
@@ -253,7 +257,7 @@ msgid "editor.submissions.submitMMDD"
 msgstr "Enviar MM-DD"
 
 msgid "editor.submissions.activeAssignments"
-msgstr "Tarefas Activas"
+msgstr "Tarefas Ativas"
 
 msgid "editor.submissions.invite"
 msgstr "Convidar"
@@ -268,7 +272,7 @@ msgid "editor.submissions.lastAssigned"
 msgstr "Última"
 
 msgid "editor.submissions.averageTime"
-msgstr "Dias"
+msgstr "Semanas"
 
 msgid "editor.submissions.lastCompleted"
 msgstr "Última Concluída"
@@ -283,25 +287,30 @@ msgid "editor.article.scheduleForPublication"
 msgstr "Agendar para publicar em"
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
-msgstr "A Agendar"
+msgstr "Para Agendar"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "A Taxa para Publicação do artigo não foi paga. Uma vez realizado o pagamento, será permitido agendar o artigo para publicação."
+msgstr ""
+"A Taxa para Publicação do artigo não foi paga. Para agendar o artigo para "
+"publicação, notifique o autor para pagar a taxa ou pedir isenção."
 
 msgid "editor.article.remove"
 msgstr "Eliminar"
 
 msgid "editor.issues.enableOpenAccessDate"
-msgstr "Activar acesso livre adiado"
+msgstr "Ativar acesso aberto embargado"
 
 msgid "editor.issues.unpublishIssue"
-msgstr "Despublicar edição"
+msgstr "Despublicar Edição"
 
 msgid "editor.issues.confirmUnpublish"
 msgstr "Deseja realmente despublicar esta edição?"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Antes de enviar a submissão para Copyediting, use o link Notificar Autor para informá-lo sobre a decisão e seleccionar a versão que vai ser enviada."
+msgstr ""
+"Antes de enviar a submissão para Edição de Texto, use o botão Notificar "
+"Autor para informá-lo sobre a decisão e selecionar a versão que vai ser "
+"enviada."
 
 msgid "editor.notifyUsers.allReaders"
 msgstr "Todos os leitores ({$count} utilizadores)"
@@ -316,62 +325,69 @@ msgid "editor.notifyUsers.allInstitutionalSubscribers"
 msgstr "Todos os assinantes institucionais ({$count} utilizadores)"
 
 msgid "editor.reassign"
-msgstr "Re-atribuir"
+msgstr "Redesignar"
 
 msgid "editor.publicIdentificationExists"
-msgstr "O identificador público '{$publicIdentifier}' já existe para outro objecto (número, artigo, edição ou ficheiro suplementar). Por favor, escolha identificadores únicos que pertençam à sua revista."
+msgstr ""
+"O identificador público '{$publicIdentifier}' já existe para outro objecto ("
+"número, artigo, ficheiro de publicação ou ficheiro suplementar). Por favor, "
+"escolha identificadores únicos para a sua revista."
 
 msgid "editor.issues.galleys"
-msgstr "Número Edições"
+msgstr "Ficheiros de publicação da Edição"
 
 msgid "editor.issues.galley"
-msgstr "Número Edição"
+msgstr "Ficheiro de publicação da Edição"
 
 msgid "editor.issues.viewingGalley"
-msgstr "Visualizando Edição"
+msgstr "Visualizar Ficheiro de publicação da Edição"
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Publicar edição com todos os conteúdos do número."
+msgstr "Publicar ficheiro de publicação com todos os conteúdos do número."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Nenhuma edição do número publicada."
+msgstr "Nenhum ficheiro de publicação do número foi publicado."
 
 msgid "editor.issues.galleyLabelRequired"
 msgstr ""
 "É obrigatório indicar uma etiqueta para o formato de publicação do número."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "É obrigatório indicar uma edição local do número."
+msgstr "É obrigatório um ficheiro de publicação do número."
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "A identificação pública da edição já existe."
+msgstr "O identificador público da edição já existe."
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "Voltar à edição"
+msgstr "Voltar ao formato de publicação da edição"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "Tem a certeza que pretende eliminar esta edição?"
+msgstr "Deseja realmente eliminar este formato de publicação da edição?"
 
 msgid "editor.issues.editIssue"
-msgstr "Gestão Número: {$issueIdentification}"
+msgstr "Gestão de Números: {$issueIdentification}"
 
 msgid "editor.issues.datePublished"
-msgstr "Data Publicação"
+msgstr "Data de Publicação"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr "A imagem da capa que solicitou para eliminar não corresponde à imagem da capa para este número. Por favor, recarregue a página e tente novamente."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "A imagem da capa que solicitou para eliminar não pôde ser encontrada. Talvez já tenha sido eliminada. Tente recarregar a página."
+msgstr ""
+"A imagem da capa que solicitou para eliminar não foi encontrada. Talvez já "
+"tenha sido eliminada. Tente recarregar a página."
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Formato de página de rosto inválido. Os formatos permitidos são .gif, .jpg ou .png."
+msgstr ""
+"Formato de imagem de capa inválido. Os formatos permitidos são .gif, .jpg ou "
+".png."
 
 msgid "editor.issues.identifiers"
 msgstr "Identificadores"
 
 msgid "grid.action.addGalley"
-msgstr "Adicionar edição"
+msgstr "Adicionar formato de publicação"
 
 msgid "grid.action.publish"
 msgstr "Publicar Número"
@@ -380,40 +396,51 @@ msgid "grid.action.addIssue"
 msgstr "Criar Número"
 
 msgid "grid.action.viewIssue"
-msgstr "Ver Número"
+msgstr "Visualizar"
 
 msgid "grid.action.previewIssue"
-msgstr "Prévisualizar Número"
+msgstr "Pré-visualizar"
 
 msgid "grid.action.addIssueGalley"
-msgstr "Criar Edição"
+msgstr "Criar formato de publicação da Edição"
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "A imagem da capa que solicitou para eliminar não pôde ser encontrada. Talvez já tenha sido elimindas. Tente recarregar a página."
+msgstr ""
+"A imagem da capa que tentou eliminar não foi encontrada. Talvez já tenha "
+"sido eliminda. Tente recarregar a página."
 
 msgid "grid.action.removeArticle"
-msgstr "Remover Artigo de Número"
+msgstr "Remover Artigo do Número"
 
 msgid "editor.article.remove.confirm"
-msgstr "Tem certeza de que deseja remover este artigo do número? O artigo estará disponível para agendamento noutro número."
+msgstr ""
+"Deseja realmente remover este artigo do número? O artigo estará disponível "
+"para agendamento em outro número."
 
 msgid "editor.issues.editIssueGalley"
-msgstr "Editar Edição"
+msgstr "Editar formato de publicação da Edição"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
 "O editor de layout prepara estes ficheiros para cada formato de publicação "
-"e, em seguida, carrega para as  <span class=\"pkp_help_title\">Provas</span> "
+"e, em seguida, transfere as  <span class=\"pkp_help_title\">Provas</span> "
 "para leitura de provas."
 
 msgid "editor.submission.selectGalleyFiles"
-msgstr "Seleccionar Ficheiros Edição"
+msgstr "Selecionar ficheiros de publicação"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "Os ficheiros de rascunho finais nesta lista são transformados por um Copyeditor em versões copiadas, carregadas abaixo em <span class =\"pkp_help_title\">Copyediting </span>."
+msgstr ""
+"Os ficheiros de rascunho finais nesta lista são transformados por um Edição "
+"de Texto em versões corrigidas, transferidas abaixo em <span class =\""
+"pkp_help_title\">Edição de Texto</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Todos os ficheiros que já foram enviados para qualquer etapa de submissão podem ser adicionados à Listagem de Revisão, marcando a caixa de selecção Incluir abaixo e clicando em Pesquisar: todos os ficheiros disponíveis serão listados e podem ser escolhidos para inclusão."
+msgstr ""
+"Todos os ficheiros enviados para uma das etapas de submissão podem ser "
+"adicionados à Lista de Leitura de Provas, selecionando Incluir abaixo e "
+"clicando em Pesquisar: todos os ficheiros disponíveis serão listados e podem "
+"ser escolhidos para inclusão."
 
 msgid "editor.issues.confirmSetCurrentIssue"
 msgstr "Deseja realmente definir esta edição como a atual?"
@@ -422,7 +449,10 @@ msgid "grid.action.setCurrentIssue"
 msgstr "Definir como Edição Atual"
 
 msgid "editor.publicIdentificationExistsForTheSameType"
-msgstr "O identificador público '{$publicIdentifier}' já existe para outro objeto do mesmo tipo. Por favor escolha identificadores únicos para os objetos do mesmo tipo da sua revista."
+msgstr ""
+"O identificador público '{$publicIdentifier}' já existe para outro objeto do "
+"mesmo tipo. Por favor escolha identificadores únicos para os objetos do "
+"mesmo tipo na sua revista."
 
 msgid "editor.article.coverImage"
 msgstr "Imagem de capa"

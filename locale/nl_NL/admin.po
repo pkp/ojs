@@ -14,15 +14,6 @@ msgstr ""
 msgid "admin.hostedContexts"
 msgstr "Tijdschriften"
 
-msgid "admin.settings.appearance.success"
-msgstr "De instellingen voor de weergave van de site zijn bijgewerkt."
-
-msgid "admin.settings.config.success"
-msgstr "De instellingen voor de configuratie van de site zijn bijgewerkt."
-
-msgid "admin.settings.info.success"
-msgstr "De informatie voor de site is bijgewerkt."
-
 msgid "admin.settings.redirect"
 msgstr "Doorsturen naar tijdschrift"
 
@@ -124,12 +115,6 @@ msgstr "Het pad mag alleen alfanumerieke tekens, liggende streepjes en koppeltek
 
 msgid "admin.contexts.form.pathExists"
 msgstr "Het opgegeven pad is al in gebruik voor een ander tijdschrift."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} is met succes aangemaakt."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} is met succes bewerkt."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Toon dit tijdschrift op de site"

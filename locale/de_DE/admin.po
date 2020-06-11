@@ -174,19 +174,3 @@ msgstr "Open-Access-Benachrichtigung"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Erinnerung an Gutachten"
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} wurde erfolgreich geändert."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} wurde erfolgreich erstellt."
-
-msgid "admin.settings.info.success"
-msgstr "Die Seiteninformationen wurden erfolgreich aktualisiert."
-
-msgid "admin.settings.config.success"
-msgstr ""
-"Die Einstellungen zur Seitenkonfiguration wurden erfolgreich aktualisiert."
-
-msgid "admin.settings.appearance.success"
-msgstr "Die Einstellungen unter 'Aussehen' wurden erfolgreich aktualisiert."
