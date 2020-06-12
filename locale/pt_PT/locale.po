@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2020-06-09 19:36+0000\n"
+"PO-Revision-Date: 2020-06-12 22:00+0000\n"
 "Last-Translator: Carla Marques <carla.marques@sdum.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/pt_PT/>\n"
@@ -912,10 +912,15 @@ msgid "article.nonpdf.title"
 msgstr "Transferir artigo"
 
 msgid "article.nonpdf.note"
-msgstr "O documento seleccionado deverá ser transferido automaticamente. Em caso negativo, clique no atalho abaixo. Note que o documento pode requerer um visualizador especial ou extensão para ser executado.<br /><br />Caso o documento não seja transferido automaticamente, <a href=\"{$url}\">clique aqui</a>."
+msgstr ""
+"O documento selecionado deverá ser transferido automaticamente. Em caso "
+"negativo, clique no atalho abaixo. Note que o documento pode requerer um "
+"visualizador especial ou extensão para ser executado.<br /><br />Caso o "
+"documento não seja transferido automaticamente, <a href=\"{$url}\">clique "
+"aqui</a>."
 
 msgid "site.journalsHosted"
-msgstr "Revistas hospedadas no portal"
+msgstr "Revistas alojadas no portal"
 
 msgid "site.journalView"
 msgstr "Aceder à revista"
@@ -924,16 +929,16 @@ msgid "site.journalRegister"
 msgstr "Registo"
 
 msgid "site.journalCurrent"
-msgstr "Edição Actual"
+msgstr "Edição Atual"
 
 msgid "current.current"
-msgstr "Actual"
+msgstr "Atual"
 
 msgid "current.noCurrentIssueDesc"
 msgstr "Esta revista ainda não publicou nenhuma edição."
 
 msgid "current.noCurrentIssue"
-msgstr "Sem edição actual"
+msgstr "Sem edição atual"
 
 msgid "archive.archives"
 msgstr "Edições Anteriores"
@@ -981,7 +986,7 @@ msgid "about.submissionPreparationChecklist.description"
 msgstr "Como parte do processo de submissão, os autores são obrigados a verificar a conformidade da submissão em relação a todos os itens listados a seguir. As submissões que não estiverem de acordo com as normas serão devolvidas aos autores."
 
 msgid "about.copyrightNotice"
-msgstr "Declaração de Direito Autoral"
+msgstr "Declaração de Direitos de Autor"
 
 msgid "about.privacyStatement"
 msgstr "Política de Privacidade"
@@ -993,19 +998,19 @@ msgid "about.publicationFrequency"
 msgstr "Periodicidade"
 
 msgid "about.openAccessPolicy"
-msgstr "Política de Acesso Livre"
+msgstr "Política de Acesso Aberto"
 
 msgid "about.delayedOpenAccess"
-msgstr "Acesso Livre Adiado"
+msgstr "Acesso Aberto Embargado"
 
 msgid "about.delayedOpenAccessDescription1"
-msgstr "O conteúdo desta revista estará disponível para Acesso Livre"
+msgstr "O conteúdo desta revista estará disponível para Acesso Aberto"
 
 msgid "about.delayedOpenAccessDescription2"
 msgstr "mês(es) após a publicação da edição."
 
 msgid "about.archiving"
-msgstr "Arquivamento"
+msgstr "Arquivo"
 
 msgid "about.subscriptions"
 msgstr "Subscrições"
@@ -1018,14 +1023,22 @@ msgstr "Tipos de Subscrições"
 
 msgid "about.aboutThisPublishingSystem"
 msgstr ""
-"Mais informação sobre o sistema de publicação, Platforma e Fluxo de Trabalho "
-"do OJS/PKP."
+"Mais informação sobre o sistema de publicação, Plataforma e Fluxo de "
+"Trabalho do OJS/PKP."
 
 msgid "about.aboutOJSJournal"
-msgstr "A revista utiliza o Sistema Electrónico de Edição de Revistas (OJS {$ojsVersion}), sistema de código livre para a administração e a publicação de revistas desenvolvido, com suporte, e distribuído gratuitamente pelo <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sob a licença GNU General Public License."
+msgstr ""
+"A revista utiliza o Open Journal Systems (OJS {$ojsVersion}), sistema de "
+"código aberto para a administração e a publicação de revistas desenvolvido, "
+"com suporte, e distribuído gratuitamente pelo <a href=\"http://pkp.sfu.ca/\">"
+"Public Knowledge Project</a> sob a licença GNU General Public License."
 
 msgid "about.aboutOJSSite"
-msgstr "O portal utiliza o Sistema Electrónico de Edição de Revistas (OJS {$ojsVersion}), sistema de código livre para a administração e a publicação de revistas desenvolvido, com suporte e distribuído gratuitamente pelo <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sob a licença GNU General Public License."
+msgstr ""
+"O portal utiliza o Open Journal Systems (OJS {$ojsVersion}), sistema de "
+"código aberto para a administração e publicação de revistas desenvolvido, "
+"com suporte e distribuído gratuitamente pelo <a href=\"http://pkp.sfu.ca/\">"
+"Public Knowledge Project</a> sob a licença GNU General Public License."
 
 msgid "help.ojsHelp"
 msgstr "Ajuda do Open Journal Systems"
@@ -1037,7 +1050,7 @@ msgid "installer.appInstallation"
 msgstr "Instalação do Sistema"
 
 msgid "installer.ojsUpgrade"
-msgstr "Actualização do Sistema"
+msgstr "Atualização do Sistema"
 
 msgid "installer.installationInstructions"
 msgstr ""
@@ -1134,7 +1147,11 @@ msgid "installer.localeInstructions"
 msgstr "O idioma padrão do sistema. Consulte a documentação caso deseje suporte a idiomas não listados."
 
 msgid "installer.additionalLocalesInstructions"
-msgstr "Escolha qualquer idioma adicional para incluir no sistema. Os idiomas estarão disponíveis a todas as revistas hospedadas. Idiomas adicionais também podem ser instalados a qualquer tempo através da interface de administração via web."
+msgstr ""
+"Escolha qualquer idioma adicional para incluir no sistema. Os idiomas "
+"estarão disponíveis a todas as revistas alojadas. Idiomas adicionais também "
+"podem ser instalados a qualquer momento através da interface de "
+"administração via web."
 
 msgid "installer.filesDirInstructions"
 msgstr ""
@@ -1182,7 +1199,9 @@ msgid "log.author.documentRevised"
 msgstr "{$authorName} reviu o artigo {$submissionId}. O novo ID é {$fileId}."
 
 msgid "log.review.reviewerUnassigned"
-msgstr "{$reviewerName} liberada(o) da ronda {$round} de revisão da submissão {$submissionId}."
+msgstr ""
+"{$reviewerName} desassociado(a) da ronda {$round} de revisão da submissão "
+"{$submissionId}."
 
 msgid "log.review.reviewInitiated"
 msgstr "A ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}, foi iniciada."
@@ -1215,7 +1234,7 @@ msgid "log.review.reviewFileByProxy"
 msgstr "O Editor {$userName} enviou um documento de revisão em nome do Revisor {$reviewerName}, para a ronda {$round} da submissão {$submissionId}."
 
 msgid "log.review.reviewerFile"
-msgstr "Versão para Revisão obrigatória."
+msgstr "Versão do Revisor enviada para o sistema."
 
 msgid "log.copyedit.initiate"
 msgstr "Iniciada a Edição de Texto da submissão {$submissionId} por {$copyeditorName}."
@@ -1230,7 +1249,9 @@ msgid "log.copyedit.finalEditComplete"
 msgstr "{$copyeditorName} concluiu a edição de texto final da submissão {$submissionId}."
 
 msgid "log.copyedit.copyeditorAssigned"
-msgstr "{$copyeditorName} designada(o) para Edição de Texto da submissão {$submissionId}."
+msgstr ""
+"{$copyeditorName} designado(a) para Edição de Texto da submissão "
+"{$submissionId}."
 
 msgid "log.copyedit.copyeditorFile"
 msgstr "A versão de edição de texto foi enviada."
@@ -1239,10 +1260,14 @@ msgid "log.copyedit.authorFile"
 msgstr "A versão de edição de texto do autor foi enviada."
 
 msgid "log.layout.layoutEditorAssigned"
-msgstr "{$editorName} designada(o) como editor de layout da submissão {$submissionId}."
+msgstr ""
+"{$editorName} designado(a) como editor de layout da submissão "
+"{$submissionId}."
 
 msgid "log.layout.layoutEditorUnassigned"
-msgstr "{$editorName} liberada(o) da edição de layout da submissão {$submissionId}."
+msgstr ""
+"{$editorName} desassociado(a) da edição de layout da submissão "
+"{$submissionId}."
 
 msgid "log.layout.layoutEditComplete"
 msgstr "{$editorName} concluiu a edição de layout da submissão {$submissionId}."
@@ -1260,7 +1285,8 @@ msgid "log.editor.restored"
 msgstr "A submissão {$submissionId} foi restaurada para a fila."
 
 msgid "log.editor.editorAssigned"
-msgstr "{$editorName} foi designada(o) como editor da submissão {$submissionId}."
+msgstr ""
+"{$editorName} foi designado(a) como editor da submissão {$submissionId}."
 
 msgid "log.proofread.assign"
 msgstr "{$assignerName} designou {$proofreaderName} para a leitura de provas da submissão {$submissionId}."
@@ -1395,10 +1421,11 @@ msgid "donations.thankYou"
 msgstr "Obrigado"
 
 msgid "donations.thankYouMessage"
-msgstr "Agradecemos a sua contribuição. É de grande valia para a revista."
+msgstr ""
+"Agradecemos a sua contribuição.  É uma grande mais-valia para a revista."
 
 msgid "payment.loginRequired"
-msgstr "É necessário autenticar-se para efectuar um pagamento."
+msgstr "É necessário autenticar-se para efetuar um pagamento."
 
 msgid "payment.loginRequired.forArticle"
 msgstr "Documento disponível apenas para assinantes ou exige pagamento para acesso.<br />É necessário autenticar-se para fazer um pagamento."
@@ -1413,7 +1440,7 @@ msgid "payment.type.publication"
 msgstr "Taxa de Publicação"
 
 msgid "payment.type.fastTrack"
-msgstr "Taxa de Acompanhamento Rápido da Revisão"
+msgstr "Taxa de Revisão por pares Rápida"
 
 msgid "payment.type.membership"
 msgstr "Taxa de Subscrição Individual"
@@ -1452,10 +1479,14 @@ msgid "installer.databaseSettingsInstructions"
 msgstr "O sistema exige acesso a uma base de dados SQL para armazenar os seus dados. Verifique os requisitos do sistema para a lista de bases de dados suportadas. Nos campos a seguir, informe as configurações a serem utilizadas para conectar ao servidor de bases de dados."
 
 msgid "log.review.reviewDeclinedByProxy"
-msgstr "{$userName} marcou indisponibilidade na ronda {$round} para rever a submissão {$submissionId} em nome de {$reviewerName}."
+msgstr ""
+"{$userName} informou que estava indisponível para a ronda {$round} de "
+"revisão da submissão {$submissionId} em nome de {$reviewerName}."
 
 msgid "log.editor.decision"
-msgstr "A Decisão Editorial ({$decision}) sobre a submissão {$submissionId} foi registada por {$editorName}."
+msgstr ""
+"A Decisão Editorial ({$decision}) para a submissão {$submissionId} foi "
+"registada por {$editorName}."
 
 msgid "debug.notes.currencyListLoad"
 msgstr "Lista de moedas \"{$filename}\" do ficheiro XML"
@@ -1488,7 +1519,10 @@ msgid "payment.alreadyPaid"
 msgstr "Pago Anteriormente"
 
 msgid "payment.alreadyPaidMessage"
-msgstr "Marque esta opção caso já tenha enviado o pagamento à revista para concluir o processo de submissão. A submissão não será avaliada até o recebimento do pagamento. Clique em \"Pagar agora\" para instruções sobre o pagamento."
+msgstr ""
+"Marque esta opção caso já tenha enviado o pagamento à revista para concluir "
+"o processo de submissão. A submissão não será avaliada até a receção do "
+"pagamento. Clique em \"Pagar agora\" para instruções sobre o pagamento."
 
 msgid "payment.paymentReceived"
 msgstr "Pagamento recebido"
@@ -1767,7 +1801,7 @@ msgstr "Domínio"
 
 msgid "user.subscriptions.form.domainInstructions"
 msgstr ""
-"Caso informe um domínio, faixas de IP são opcionais. <br />Valores válidos "
+"Caso insira um domínio, faixas de IP são opcionais. <br />Valores válidos "
 "são nomes de domínios (ex.: lib.sfu.ca)."
 
 msgid "user.subscriptions.form.domainIPRangeRequired"
@@ -1789,7 +1823,7 @@ msgstr ""
 "IP (ex.: 142.58.103.1), uma faixa de IP CIDR (ex.: 142.58.100.0/24), uma "
 "faixa de IP (ex.: 142.58.103.1 - 142.58.103.4), uma faixa de IP com coringa "
 "'*' (ex.: 142.58.103.*), ou qualquer combinação dessas opções separadas por "
-"ponto-e-vírgula (;) (ex.: 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; "
+"ponto e vírgula (;) (ex.: 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; "
 "142.58.106.*)."
 
 msgid "user.subscriptions.form.ipRangeValid"
@@ -1829,7 +1863,7 @@ msgid "installer.installApplication"
 msgstr "Instalar o sistema"
 
 msgid "installer.upgradeApplication"
-msgstr "Actualizar o sistema"
+msgstr "Atualizar o sistema"
 
 msgid "notification.type.editing"
 msgstr "Editando eventos"
@@ -1856,7 +1890,7 @@ msgid "notification.type.site"
 msgstr "Eventos do Site"
 
 msgid "notification.type.submissionComment"
-msgstr "Um editor fez comentários sobre \"{$title}.\""
+msgstr "Um editor escreveu um comentário sobre \"{$title}.\""
 
 msgid "notification.type.submissions"
 msgstr "Eventos da Submissão"
@@ -1871,7 +1905,10 @@ msgid "user.subscriptions.subscriptionStatus"
 msgstr "Estado da Subscrição"
 
 msgid "user.subscriptions.statusInformation"
-msgstr "As subscrições activas e expiradas são exibidas em baixo assim prazo de expiração. Além disso, a informação seguinte sobre o estado pode ser incluída em cada subscrição."
+msgstr ""
+"As subscrições ativas e expiradas são exibidas em baixo assim como o prazo "
+"de expiração. Além disso, a informação seguinte sobre o estado pode ser "
+"incluída em cada subscrição."
 
 msgid "user.subscriptions.status"
 msgstr "Estado"
@@ -1880,10 +1917,10 @@ msgid "user.subscriptions.statusDescription"
 msgstr "Descrição"
 
 msgid "user.subscriptions.status.needsInformationDescription"
-msgstr "É necessária informação adicional antes da subscrução ser activada"
+msgstr "É necessária informação adicional antes da subscrição ser ativada"
 
 msgid "user.subscriptions.status.needsApprovalDescription"
-msgstr "A subscrição é analisada antes de ser activada"
+msgstr "A subscrição deve ser analisada antes de ser ativada"
 
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
 msgstr "O pagamento manual foi iniciado mas ainda não foi recebido"
@@ -1916,16 +1953,23 @@ msgid "site.noJournals"
 msgstr "Não existem revistas."
 
 msgid "payment.loginRequired.forIssue"
-msgstr "Subscrição ou compra de número necessários para acedero ao artigo. Para verificar a subscrição, aceda a compra anterior, ou compre número, faça login na revista."
+msgstr ""
+"Subscrição ou compra de número necessário para aceder ao artigo. Para "
+"verificar a subscrição, aceder à compra anterior, ou comprar um número, faça "
+"login na revista."
 
 msgid "payment.type.purchaseIssue"
-msgstr "Taxa Compra Número"
+msgstr "Taxa de Compra de Número"
 
 msgid "installer.allowFileUploads"
-msgstr "O servidor actualmente permite uploads de ficheiros: <strong>{$allowFileUploads}</strong>"
+msgstr ""
+"O servidor atualmente permite uploads de ficheiros: "
+"<strong>{$allowFileUploads}</strong>"
 
 msgid "installer.maxFileUploadSize"
-msgstr "O servidor actualmente permite o upload máximo de ficheiros com o tamanho de: <strong>{$maxFileUploadSize}</strong>"
+msgstr ""
+"O servidor atualmente permite o upload máximo de ficheiros com o tamanho de: "
+"<strong>{$maxFileUploadSize}</strong>"
 
 msgid "site.upgradeAvailable.admin"
 msgstr ""
@@ -1939,10 +1983,12 @@ msgid "site.upgradeAvailable.manager"
 msgstr "Está disponível uma nova versão do OJS! Actualmente usa a versão do OJS {$currentVersion}. A versão mais recente do OJS {$latestVersion}. Por favor contacte o Administrador ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) para notificá-lo da última versão. Pode encontrar mais informação <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">aqui</a>."
 
 msgid "user.authorization.copyeditorAssignmentMissing"
-msgstr "Acesso recusado! Não tem direitos de autor sobre este artigo."
+msgstr ""
+"Acesso recusado! Não lhe foi atribuído a submissão como tarefa de edição de "
+"texto."
 
 msgid "user.authorization.sectionAssignment"
-msgstr "Está a tentar aceder a um artigo que não pertence à secção."
+msgstr "Está a tentar aceder a um artigo que não pertence à sua secção."
 
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Submissão de cópia de editor inválida ou nenhuma de cópia de editor solicitada!"
@@ -1951,10 +1997,10 @@ msgid "editor.navigation.issues"
 msgstr "Números"
 
 msgid "editor.issues.futureIssues"
-msgstr "Próximos"
+msgstr "Edições Próximos"
 
 msgid "editor.issues.backIssues"
-msgstr "Anteriores"
+msgstr "Edições Anteriores"
 
 msgid "submission.layout.galley.remotelyHostedContent"
 msgstr "Este formato de publicação estará disponível num site separado."
@@ -2081,10 +2127,13 @@ msgid "article.pageTitle"
 msgstr "Visualização de {$title}"
 
 msgid "article.download"
-msgstr "Download este ficheiro PDF"
+msgstr "Transferir este ficheiro PDF"
 
 msgid "article.pluginMissing"
-msgstr "<p>O ficheiro PDF que seleccionou deve carregar aqui se o navegador da Web tiver um plugin de leitor de PDF instalado (por exemplo, uma versão recente de <a href=\"https://get.adobe.com/reader/\">Leitor Adobe Acrobat</a>).</p>"
+msgstr ""
+"<p>O ficheiro PDF que selecionou deve carregar aqui se o navegador da Web "
+"tiver um plugin de leitor de PDF instalado (por exemplo, uma versão recente "
+"do <a href=\"https://get.adobe.com/reader/\">Leitor Adobe Acrobat</a>).</p>"
 
 msgid "archive.archivesPageNumber"
 msgstr "Arquivos - Página {$pageNumber}"
@@ -2133,13 +2182,15 @@ msgid "notification.type.submissionSubmitted"
 msgstr "Foi submetido um novo artigo \"{$title}\"."
 
 msgid "notification.savedIssueMetadata"
-msgstr "Guardados os metadados do número publicado."
+msgstr "Os metadados de publicação do número foram guardados com sucesso."
 
 msgid "notification.type.editorAssignmentTask"
 msgstr "Um novo artigo foi submetido para o qual tem de ser designado um Editor."
 
 msgid "notification.type.assignProductionUser"
-msgstr "Designe um utilizador para criar uma edição usando o link Adicionar na lista Participantes."
+msgstr ""
+"Designe um utilizador para criar um formato de publicação através do link "
+"Adicionar na lista de Participantes."
 
 msgid "notification.type.awaitingRepresentations"
 msgstr "A aguardar Ficheiros para Publicação."
@@ -2148,16 +2199,18 @@ msgid "user.authorization.noContext"
 msgstr "Nenhuma revista no contexto!"
 
 msgid "user.authorization.invalidIssue"
-msgstr "Pedido de número inválido!"
+msgstr "A edição solicitada é inválida!"
 
 msgid "grid.action.createContext"
 msgstr "Criar Nova Revista"
 
 msgid "notification.type.approveSubmission"
-msgstr "Esta submissão está actualmente aguardando aprovação antes que seja associada a um número."
+msgstr ""
+"Esta submissão está atualmente a aguardar aprovação antes que seja associada "
+"a um número."
 
 msgid "notification.type.approveSubmissionTitle"
-msgstr "Aguardando aprovação."
+msgstr "A aguardar aprovação."
 
 msgid "user.profile.form.showOtherContexts"
 msgstr "Registar-se noutras revistas"
@@ -2166,25 +2219,25 @@ msgid "user.profile.form.hideOtherContexts"
 msgstr "Ocultar outras revistas"
 
 msgid "article.view.interstitial"
-msgstr "Escolha um ficheiro do artigo para fazer o download."
+msgstr "Escolha um ficheiro para fazer o download."
 
 msgid "grid.catalogEntry.availableRepresentation.approved"
 msgstr "Aprovado"
 
 msgid "grid.catalogEntry.availableRepresentation.notApproved"
-msgstr "Aguardando Aprovação"
+msgstr "A aguarda Aprovação"
 
 msgid "grid.catalogEntry.approvedRepresentation.title"
-msgstr "Aprovação Edição"
+msgstr "Aprovação do Ficheiro para Publicação"
 
 msgid "grid.catalogEntry.approvedRepresentation.message"
-msgstr "<p>Aprovar esta edição para publicação.</p>"
+msgstr "<p>Aprovar este ficheiro para publicação.</p>"
 
 msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
-msgstr "<p>Remover aprovação desta edição.</p>"
+msgstr "<p>Remover aprovação deste ficheiro para publicação.</p>"
 
 msgid "search.cli.rebuildIndex.indexing"
-msgstr "Indexão \"{$journalName}\""
+msgstr "Indexação \"{$journalName}\""
 
 msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
 msgstr "A execução da pesquisa não permite a re-indexação por revista."
@@ -2199,19 +2252,21 @@ msgid "reader.purchasePrice"
 msgstr "({$currency} {$price})"
 
 msgid "payment.type.publication.required"
-msgstr "A taxa de publicação está em pagamento."
+msgstr "A taxa de publicação está para pagamento."
 
 msgid "payment.requestPublicationFee"
 msgstr "Solicitar taxa de publicação ({$feeAmount})"
 
 msgid "payment.notFound"
-msgstr "Foi solicitado um pagamento, mas o prazo expirou. Contacte o Gestor da Revista para mais informação."
+msgstr ""
+"Foi solicitado um pagamento, mas o prazo expirou. Contacte o Editor-gestor "
+"para mais informações."
 
 msgid "navigation.subscriptions"
 msgstr "Subscrições"
 
 msgid "log.editor.submissionExpedited"
-msgstr "{$editorName} tomou o processo de edição do artigo {$submissionId}."
+msgstr "{$editorName} assumiu o processo de edição do artigo {$submissionId}."
 
 msgid "log.editor.recommendation"
 msgstr "O editor {$editorName} registou uma recomendação ({$decision}) para o artigo {$submissionId}."
@@ -2231,7 +2286,7 @@ msgid "user.register.form.missingContextConsent"
 msgstr "Tem de concordar com os termos de privacidade para todas as revistas para as quais se registou."
 
 msgid "user.register.form.missingSiteConsent"
-msgstr "Tem de concordar com os termos de privacidade deste sítio."
+msgstr "Tem de concordar com os termos de privacidade do site."
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "Escolher a forma de ordenação dos artigos nesta categoria."
