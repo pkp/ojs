@@ -52,26 +52,6 @@ msgstr ""
 "во информациите од OJS профилот, тие ќе се чуваат одделно од информациите во "
 "далечинскиот извор."
 
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr ""
-"Не може да додаде нова локализација од фајлот на локлизациски регистри, "
-"типично \"registry/locales.xml\"."
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Не може да отвори десцриптор на јазик од PKP веб сајтот."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr ""
-"Избери било која дополнителна локализација за инсталињае поддршка во овој "
-"систем. ЛОкализацијата мора да биде инсталирана пред да се користи во "
-"хостираното списание. Види ја OJS документацијата за информациите околу "
-"додавање нови јазици."
-
-msgid "admin.languages.confirmUninstall"
-msgstr ""
-"Сигурни сте дека сакате да ја одинсталирате локализацијата? Ова може да "
-"влијае врз било кое соисание кое во моментов користи локализација."
-
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr ""
 "Избери ги сите локализации кои го поддржуваат овој сајт. Избраните "
@@ -80,19 +60,6 @@ msgstr ""
 "специфичните страници од списанието). Доколку не се избрани повеќекратни "
 "локализации, менито за јазици нем ада се појавува и подесувањата за додатни "
 "јазици нема да биде достапно за списанијата."
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Симунивање пакет за јазикот од Public Knowledge Project веб серверот не е "
-"во моментов возможно поради:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Вашиот сервер нема или не дозволува извршување на GNU \"tar\" "
-"опција.</li>\n"
-"\t\t<li>OJS не е во состојба да модифицира локален регистерски фајл, типично "
-"\"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Пакетот за јазик може рачно да се симне од <a href=\"http://pkp.sfu.ca\">"
-"PKP веб сајтот</a>.</p>"
 
 msgid "admin.languages.confirmDisable"
 msgstr ""
@@ -117,16 +84,6 @@ msgstr ""
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Означените локализации може да не се комплетни."
-
-msgid "admin.languages.downloadFailed"
-msgstr ""
-"Симнувањето локализација не успеа. Долната порака(и) ја опишува грешката."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Инсталирана е \"{$locale}\" локализација."
-
-msgid "admin.languages.download"
-msgstr "Симни локализација"
 
 msgid "admin.auth.ojs"
 msgstr "OJS база на корисници"

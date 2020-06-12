@@ -32,27 +32,6 @@ msgstr "选择这个网站支持的所有地区配置。本网站上的所有期
 msgid "admin.locale.maybeIncomplete"
 msgstr "标记的语言环境也许没有完成."
 
-msgid "admin.languages.confirmUninstall"
-msgstr "您确认卸载这个语言环境?这个将影响使用该语言环境的主办期刊."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "安装额外的地区配置以在这个系统取得语言支持。地区配置必须先安装，系统上的期刊才能使用该地区语言。请参考OJS文件以取得关于增加语言支持的信息。"
-
-msgid "admin.languages.downloadFailed"
-msgstr "语言环境下载失败.错误提示信息描述如下."
-
-msgid "admin.languages.localeInstalled"
-msgstr "语言环境 \"{$locale}\" 已经被安装."
-
-msgid "admin.languages.download"
-msgstr "下载语言环境"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "无法从PKP网站打开语言描述."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "无法添加一个新的语言环境到注册文件\"registry/locales.xml\"."
-
 msgid "admin.auth.ojs"
 msgstr "OJS用户数据库"
 
@@ -156,15 +135,6 @@ msgstr "订阅到期提醒"
 
 msgid "admin.contexts.form.titleRequired"
 msgstr "标题为必填项。"
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>当前无法从Public Knowledge Project Web服务器下载语言包，因为：</p>\n"
-"\t<ul>\n"
-"\t\t<li>您的服务器没有或不允许执行GNU \"tar\" 程序。</li>\n"
-"\t\t<li>OJS无法修改语言环境文件，它通常位于 \"registry/locales.xml\"。</li>\n"
-"\t</ul>\n"
-"<p>可以从<a href=\"http://pkp.sfu.ca\"> PKP网站</a>手动下载语言包。</p>"
 
 msgid "admin.languages.confirmDisable"
 msgstr "您确定要禁用此语言吗？ 任何使用该语言的托管期刊都会受到影响。"

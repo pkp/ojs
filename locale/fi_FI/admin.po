@@ -36,15 +36,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Haluatko varmasti poistaa tämän kielialueen käytöstä? Se saattaa vahingoittaa muita ylläpidettyjä julkaisuja, joilla on tämä kielialue käytössä."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Kielipakettien lataaminen Public Knowledge Projectin verkkopalvelimelta ei ole juuri nyt mahdollista, koska:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Palvelimellasi ei ole GNU:n tar-ohjelmaa tai palvelin ei salli sen suorittamista.</li>\n"
-"\t\t<li>OJS ei voi muuntaa kielialueen rekisteritiedostoa, yleensä \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Kielipaketteja voidaan ladata manuaalisesti <a href=\"http://pkp.sfu.ca\">PKP:n verkkosivustolta</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Tätä kieltä käytetään sivuston ja kaikkien ylläpidettyjen julkaisujen oletuskielenä."
 
@@ -53,27 +44,6 @@ msgstr "Valitse kaikki sivustolla tuettavat kielialueet. Valitut kielialueet ova
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Merkityt kielialueet saattavat olla vaillinaisia."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Haluatko varmasti poistaa tämän kielialueen? Se saattaa vahingoittaa muita ylläpidettyjä julkaisuja, joilla on tämä kielialue käytössä."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Valitse mitä tahansa lisäkielialueita asentaaksesi tuen tässä järjestelmässä. Kielialueet täytyy asentaa ennen kuin ylläpidetyt julkaisut voivat käyttää niitä. Katso OJS:n ohjeista tietoja siitä, kuinka uusille kielille lisätään tuki."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Kielialueen lataaminen epäonnistui. Tarkemmat tiedot ongelmasta alla."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Kielialue \"{$locale}\" on asennettu."
-
-msgid "admin.languages.download"
-msgstr "Lataa kielialue"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Kielenkuvausta ei voitu avata PKP:n verkkosivustosta."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Uutta kielialuetta ei voitu lisätä kielialueiden rekisteritiedostoon, yleensä \"registry/locales.xml\"."
 
 msgid "admin.auth.ojs"
 msgstr "OJS:n käyttäjätietokanta"

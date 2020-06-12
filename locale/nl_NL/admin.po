@@ -29,15 +29,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Weet u zeker dat u deze taal wilt uitschakelen? Dit beïnvloedt de tijdschriften in de site die deze taal gebruiken."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Er kunnen geen taalpakketten worden gedownload van de Public Knowledge Project webserver, omdat:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Het GNU \"tar\" commando is niet beschikbaar op uw server, of het kan niet worden uitgevoerd.</li>\n"
-"\t\t<li>OJS kan het taalregisterbestand niet wijzigen, dat zich standaard bevindt op \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Taalpakketten kunnen manueel worden gedownload van de <a href=\"http://pkp.sfu.ca\">PKP website</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Dit wordt de standaard taalkeuze voor de site en de tijdschriften daarin."
 
@@ -46,27 +37,6 @@ msgstr "Selecteer de talen die de site moet ondersteunen. De geselecteerde talen
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "De gemarkeerde talen kunnen onvolledig zijn."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Weet u zeker dat u deze taal wilt de-installeren? Dit beïnvloedt de tijdschriften in de site die deze taal gebruiken."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Selecteer aanvullende talen voor gebruik in dit systeem. De talen moeten geïnstalleerd worden voor ze door te tijdschriften gebruikt kunnen worden. Zie de OJS documentatie voor informatie over het toevoegen van ondersteuning voor nieuwe talen."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Het ophalen van de taalbestanden is mislukt. De foutmelding hieronder beschrijft het probleem."
-
-msgid "admin.languages.localeInstalled"
-msgstr "De taal \"{$locale}\" is geïnstalleerd."
-
-msgid "admin.languages.download"
-msgstr "Taalbestanden binnenhalen"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "De taalbeschrijving kan niet geopend worden op de PKP website."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "De taal kan niet toegevoegd worden aan het taalregister-bestand (doorgaans registry/locales.xml)\"."
 
 msgid "admin.auth.ojs"
 msgstr "OJS gebruikersdatabank"

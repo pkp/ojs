@@ -43,27 +43,6 @@ msgstr "Seleccioneu totes les configuracions regionals que oferirà el lloc web.
 msgid "admin.locale.maybeIncomplete"
 msgstr "Les configuracions regionals marcades poden estar incompletes."
 
-msgid "admin.languages.confirmUninstall"
-msgstr "Esteu segurs que voleu suprimir aquesta configuració regional? Aquesta acció pot afectar les revistes allotjades que fan servir aquesta configuració regional."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Seleccioneu les llengües addicionals que vulgueu utilitzar en aquest sistema. Cal que instal·leu les configuracions regionals abans que les revistes allotjades les puguin fer servir. Consulteu la documentació de l'OJS per obtenir més informació sobre com instal·lar llengües addicionals."
-
-msgid "admin.languages.downloadFailed"
-msgstr "La descàrrega de la configuració regional ha fallat. El missatge d'error a continuació descriu el problema."
-
-msgid "admin.languages.localeInstalled"
-msgstr "La configuració regional \"{$locale}\" s'ha instal·lat."
-
-msgid "admin.languages.download"
-msgstr "Descarrega la configuració regional"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "No s'ha pogut obrir el descriptor de llengua des del lloc web de PKP."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "No s'ha pogut afegir la nova configuració regional al fitxer de registre de configuracions regionals, normalment «registry/locales.xml»."
-
 msgid "admin.auth.ojs"
 msgstr "Base de dades d'usuaris/àries de l'OJS"
 
@@ -161,15 +140,6 @@ msgstr "No s’ha donat d’alta cap usuari/ària."
 
 msgid "admin.languages.confirmDisable"
 msgstr "Esteu segur que voleu desactivar aquesta configuració regional? Això podria afectar a totes les revistes allotjades que actualment utilitzin aquesta configuració regional."
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>La descàrrega de paquets d'idiomes des del servidor web de Public Knowledge Project no està disponible actualment perquè:</p>\n"
-"\t<ul>\n"
-"\t\t<li>El seu servidor no té o no permet l'execució de la utilitat GNU \"tar\".</li>\n"
-"\t\t<li>OJS no pot modificar l'arxiu de registre de configuració regional, normalment \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Els paquets d'idiomes poden descarregarse manualment des de la pàgina web de PKP: <a href=\"http://pkp.sfu.ca\"></a>.</p>"
 
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Recordatori de caducitat de la subscripció"

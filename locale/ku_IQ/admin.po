@@ -148,34 +148,6 @@ msgstr ""
 msgid "admin.auth.ojs"
 msgstr "داتابەیسی سیستەمەکە"
 
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr ""
-"زمانی نوێ بۆ لیستی زمانە چالاکەکان زیاد ناکرێت، ئەمە لە چوارچێوەی فایلە "
-"خەزنکراوەکانە:  \"registry/locales.xml\"."
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "پێناسەی زمانەکە لە سیستەمەکەدا ناکرێتەوە."
-
-msgid "admin.languages.download"
-msgstr "دابەزاندنی زمان"
-
-msgid "admin.languages.localeInstalled"
-msgstr "زمانەکە\"{$locale}\" بەسەرکەوتویی دابەزێندرا."
-
-msgid "admin.languages.downloadFailed"
-msgstr "دابەزاندنی زمانەکە شکستی هێنا. لە خوارەوە هۆکاری شکستەکە ڕون کراوەتەوە."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr ""
-"هەر فایلێکی دیکەی زیادە دەستنیشان بکە بۆ دابەزاندنی پاڵپشتی بۆ سیستەمەکە. "
-"فایلەکان پێویستە پێش ئەوەی لە لایەن گۆڤارە میوانەکانەوە بەکار بهێندرێن، "
-"دابەزێندرابن."
-
-msgid "admin.languages.confirmUninstall"
-msgstr ""
-"ئایا تۆ دڵنیایت لە سڕینەوەی ئەم زمانە لە پێگەکەتدا؟ ئەمە لەوانەیە کاریگەری "
-"لەسەر گۆڤارەکانی دیکەش بکات کە هەمان سیستەمی ناوخۆیی بەکار دێنن."
-
 msgid "admin.locale.maybeIncomplete"
 msgstr "زمانە دیاریکراوەکان لەوانەیە تەواونەکراو بن."
 
@@ -190,19 +162,6 @@ msgstr ""
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "ئەمە زمانی سەرەکییە بۆ هەر گۆڤارێکی میوان."
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p> دابەزاندنی پاکێتە زمانییەکەنا لە پڕۆژەی زانیاریی گشتی سەر تۆڕ لە ئێستادا "
-"بەردەست نییە </p>\n"
-"\t<ul>\n"
-"\t\t<li>سێرڤەرەکەت ڕێگا بە ئامرازی دەستکاریکردن نادات یان نییەتی \"tar\""
-".</li>\n"
-"\t\t<li>بەگشتی سیستەمی گۆڤارە کراوەکان ڕێگا بە گۆڕانکاری لە تۆمارەکان نادات "
-"\"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>پاکێتە زمانییەکان دەکرێت لێرەوە داببەزێندرێن <a href=\"http://pkp.sfu.ca\""
-">پێگەی پڕۆژەی زانیاریی گشتی</a>.</p>"
 
 msgid "admin.languages.confirmDisable"
 msgstr ""

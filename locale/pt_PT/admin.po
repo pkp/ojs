@@ -37,32 +37,6 @@ msgstr ""
 "menu de idiomas não estará disponível e a opção \"configurações de idioma\" "
 "não estará disponível para as revistas."
 
-msgid "admin.languages.confirmUninstall"
-msgstr ""
-"Deseja realmente remover este idioma? A execução pode afetar revistas "
-"alojadas que podem estar a utilizar o idioma."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr ""
-"Selecione idiomas adicionais para uso no sistema. Os idiomas devem ser "
-"instalados antes que possam ser utilizados pelas revistas alojadas. Veja a "
-"documentação para informações sobre como adicionar novos idiomas no sistema."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Erro ao transferir idioma. A seguir, aparecerá o detalhe do(s) erro(s)."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Idioma \"{$locale}\" instalado."
-
-msgid "admin.languages.download"
-msgstr "Transferir idioma"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Não é possível abrir a identificação de idioma do portal do PKP."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Não é possível adicionar novo idioma no ficheiro de registo de idiomas, geralmente \"registry/locales.xml\"."
-
 msgid "admin.auth.ojs"
 msgstr "Base de Dados de Utilizadores do OJS"
 
@@ -180,19 +154,6 @@ msgid "admin.languages.confirmDisable"
 msgstr ""
 "Deseja realmente desativar este idioma? Esta ação pode afetar todas as "
 "revistas alojadas que estejam a utilizar este idioma."
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>O download de pacotes de idiomas do servidor do Public Knowledge Project "
-"não se encontra disponível de momento porque:</p>\n"
-"\t<ul>\n"
-"\t\t<li>O seu servidor não tem ou permite execução do utilitário GNU \"tar\""
-".</li>\n"
-"\t\t<li>O OJS não tem permissões para modificar o ficheiro de registo de "
-"idioma, tipicamente \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Os pacotes de idioma podem ser manualmente descarregados do <a href=\""
-"http://pkp.sfu.ca\">site do PKP</a>.</p>"
 
 msgid "admin.contexts.form.titleRequired"
 msgstr "É obrigatório um título."

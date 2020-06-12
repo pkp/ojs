@@ -31,15 +31,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Are you sure you want to disable this locale? This may affect any hosted journals currently using the locale."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Your server does not have or allow execution of the GNU \"tar\" utility.</li>\n"
-"\t\t<li>OJS is unable to modify the locale registry file, typically \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Language packs can be manually downloaded from the <a href=\"http://pkp.sfu.ca\">PKP web site</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "This will be the default language for the site and any hosted journals."
 
@@ -48,27 +39,6 @@ msgstr "Select all locales to support on the site. The selected locales will be 
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Marked locales may be incomplete."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages."
-
-msgid "admin.languages.downloadFailed"
-msgstr "The locale download failed. The error message(s) below describe the failure."
-
-msgid "admin.languages.localeInstalled"
-msgstr "The \"{$locale}\" locale has been installed."
-
-msgid "admin.languages.download"
-msgstr "Download Locale"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Cannot open language descriptor from PKP web site."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Cannot add the new locale to the locale registry file, typically \"registry/locales.xml\"."
 
 msgid "admin.auth.ojs"
 msgstr "OJS User Database"

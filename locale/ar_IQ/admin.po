@@ -31,15 +31,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "هل أنت متأكد من رغبتك في تعطيل هذه اللغة؟ هذا الأمر سيؤثر على المجلات المستضافة التي تستعمل هذه اللغة حالياً."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>تنزيل حزم اللغة من ملقم مشروع المعرفة العامة غير متاح حالياً لأن:</p>\n"
-"\t<ul>\n"
-"\t\t<li>ملقمك لا يمتلك أو لا يسمح بتنفيذ أداة معالجة ضغط الملفات \"tar\".</li>\n"
-"\t\t<li>نظام المجلات المفتوحة غير قادر على تعديل ملف سجلاته، وهو عادة \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>إن حزم اللغات متاحة للتنزيل يدوياً عبر <a href=\"http://pkp.sfu.ca\">موقع مشروع المعرفة العامة</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "ستكون هذه اللغة هي الإفتراضية للموقع ولأي مجلة يستضيفها"
 
@@ -48,27 +39,6 @@ msgstr "إختر أي من اللغات التي من المفترض أن يدع
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "اللغات المعلمة بالنجمة قد تكون غير مكتملة"
-
-msgid "admin.languages.confirmUninstall"
-msgstr "هل أنت متأكد من رغبتك في تغييب هذه اللغة عن الموقع؟ إذ قد يؤثر هذا الأمر على أيٍّ من المجلات التي تستعملها حالياً"
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "إختر أي من اللغات الإضافية لتنصيب الدعم لها في هذا الموقع. إذ لا بد من تنصيبها قبل أن تستعملها المجلات المستضافة في الموقع. أنظر ما هو مكتوب في وثيقة النظام لمزيد من المعلومات التي تتعلق بإضافة الدعم للغات جديدة"
-
-msgid "admin.languages.downloadFailed"
-msgstr "فشل تحميل اللغة، الوصف أدناه يشرح سبب الفشل"
-
-msgid "admin.languages.localeInstalled"
-msgstr "اللغة \"{$locale}\" تم تنصيبها بنجاح"
-
-msgid "admin.languages.download"
-msgstr "تحميل لغة"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "تعذر فتح موَصِّف اللغة من موقع النظام"
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "تعذر إضافة اللغة الجديدة إلى سجل اللغات الفعالة، وهو مبدئياً ضمن حافظة الملفات: \"registry/locales.xml\"."
 
 msgid "admin.auth.ojs"
 msgstr "قاعدة بيانات النظام"

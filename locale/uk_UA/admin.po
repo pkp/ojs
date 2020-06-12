@@ -34,15 +34,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Ви впевнені, що хочете відключити цю мову? Це може вплинути на всі розміщені журнали, які зараз її використовують."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Завантаження мовних пакетів з веб-сервера Public Knowledge Project зараз недоступне, оскільки:</p>\n"
-"\t<ul>\n"
-"\t\t<li>На вашому сервері не встановлена утиліта GNU «tar» або не дозволено її виконання сервером.</li>\n"
-"\t\t<li>OJS не може змінити файл списку мов, зазвичай розташований в «registry/locales.xml».</li>\n"
-"\t</ul>\n"
-"<p>Мовні пакети можуть бути вручну завантажені з <a href=\"http://pkp.sfu.ca\">веб-сайта PKP</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Це буде мова за замовчуванням для сайту та всіх журналів на ньому."
 
@@ -51,27 +42,6 @@ msgstr "Оберіть всі локалізації, що будуть підт
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Підтримка відмічених мов може бути неповною."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Ви впевнені, що бажаєте видалити локалізацію? Ця зміна торкнеться всіх журнілів, які зараз її використовують."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Оберіть будь-які додаткові локалізації, на підтримку яких Ви хочете налаштувати систему. Локалізації мають бути встановлені перш ніж вони зможуть використовуватись журналами. Дивіться документацію OJS для інформації щодо додавання підтримки нових мов."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Завантаження локалізації невдале. Причини невдачі деталізовані у списку нижче."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Локалізація \"{$locale}\" встановлена."
-
-msgid "admin.languages.download"
-msgstr "Завантажити локалізацію"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Не вдається відкрити мовний дескриптор з веб-сайту PKP."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Не вдається додати нову локалізацію до реєстраційного файлу локалізацій, типово \"registry/locales.xml\"."
 
 msgid "admin.auth.ojs"
 msgstr "База даних користувачів OJS"

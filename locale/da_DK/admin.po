@@ -34,37 +34,6 @@ msgstr ""
 "sprog, vises sprogvalgsmenuen ikke, og udvidede sprogindstillinger vil ikke "
 "være tilgængelige for tidsskrifter."
 
-msgid "admin.languages.confirmUninstall"
-msgstr ""
-"Er du sikker på, at du vil fjerne dette sprog? Denne handling kan påvirke "
-"alle tilknyttede tidsskrifter, der i øjeblikket benytter sproget."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr ""
-"Vælg yderligere sprog, du vil installere til understøttelse af i dette "
-"system. Sprog skal installeres, inden de kan benyttes af tilknyttede "
-"tidsskrifter. Se dokumentationen til OJS for at få oplysninger om "
-"understøttelse af nye sprog."
-
-msgid "admin.languages.downloadFailed"
-msgstr ""
-"Overførslen af sproget mislykkedes. Fejlen er beskrevet i nedenstående "
-"fejlmeddelelse(r)."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Sproget \"{$locale}\" er blevet installeret."
-
-msgid "admin.languages.download"
-msgstr "Download sprog"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Det er ikke muligt at åbne sprogbeskrivelsen fra PKP-webstedet."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr ""
-"Det er ikke muligt at føje det nye sprog til sprogregistreringsfil, normalt "
-"\"registry/locales.xml\"."
-
 msgid "admin.auth.ojs"
 msgstr "OJS-brugerdatabase"
 
@@ -207,15 +176,3 @@ msgstr ""
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Påmindelse om bedømmelse"
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Download af sprogpakker fra Public Knowledge Project's web-server er ikke "
-"muligt på nuværende tidspunkt fordi:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Din server har ikke, eller tillader ikke afvikling af, GNU \"tar\""
-"-værktøjet.</li>\n"
-"\t\t<li>OJS kan ikke ændre sprog-registerfilen, typisk \"registry/locales."
-"xml\".</li>\n"
-"\t</ul>\n"
-"<p>Sprogpakker kan downloades manuelt fra <a href=\"http://pkp.sfu.ca\"> "
-"PKPs websted </a>.</p>"

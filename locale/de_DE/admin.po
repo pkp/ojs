@@ -33,15 +33,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Sind Sie sicher, dass Sie diese Regionaleinstellung deaktivieren wollen? Dies könnte alle Zeitschriften auf dieser Plattform, die momentan diese Regionaleinstellung benutzen, betreffen."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Sprachpakete können momentan nicht vom Webserver des Public Knowledge Project installiert werden. Mögliche Gründe sind:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Ihr Server verfügt nicht über das Hilfsprogramm GNU \"tar\" oder erlaubt nicht dessen Ausführung.</li>\n"
-"\t\t<li>OJS kann die Locale-Registrierungsdatei nicht verändern, üblicherweise \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Sprachpakete können manuell von der <a href=\"http://pkp.sfu.ca\">PKP-Website</a> heruntergeladen werden.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften."
 
@@ -50,27 +41,6 @@ msgstr "Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten sol
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Gekennzeichnete Lokaleinstellungen können unvollständig sein."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Sind Sie sicher, dass Sie diese Regionaleinstellung deinstallieren wollen? Jede Zeitschrift, die diesen Datensatz verwendet, wird davon betroffen sein."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Wählen Sie zusätzliche Regionaleinstellungen, die dieses System unterstützen soll. Die Regionaleinstellungen müssen installiert sein, bevor sie von den angebotenen Zeitschriften verwendet werden können. Weitere Informationen zum Hinzufügen neuer Regionaleinstellungen finden Sie in der OJS-Dokumentation."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Das Herunterladen der Regionaleinstellung ist fehlgeschlagen. Die Fehlernachricht(en) weiter unten beschreiben den Fehler."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Die Regionaleinstellung \"{$locale}\" wurde installiert."
-
-msgid "admin.languages.download"
-msgstr "Regionaleinstellung herunterladen"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Die Sprachbeschreibung von der PKP-Webseite kann nicht geöffnet werden."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Die neue Regionaleinstellung kann nicht zu der Registrierungsdatei für Regionaleinstellungen (üblicherweise \"registry/locales.xml\") hinzugefügt werden."
 
 msgid "admin.auth.ojs"
 msgstr "OJS-Benutzer/innen-Datenbank"

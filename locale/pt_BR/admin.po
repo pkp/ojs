@@ -36,19 +36,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Tem certeza de que deseja desativar este idioma? Isso pode afetar qualquer revistas hospedadas utilizando o idioma."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>O download de pacotes de idioma do servidor web do Public Knowledge "
-"Project não está disponível por que:</p>\n"
-"\t<ul>\n"
-"\t\t<li>O seu servidor não possui ou não permite execução da utilidade GNU \""
-"tar\".</li>\n"
-"\t\t<li>O OJS é incapaz de modificar o arquivo de registro de idioma, "
-"tipicamente em \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Pacotes de idioma podem ser baixados manualmente pelo <a href=\""
-"http://pkp.sfu.ca\">site do PKP</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Este será o idioma padrão para o portal e todas as revistas hospedadas."
 
@@ -57,27 +44,6 @@ msgstr "Os idiomas selecionados estarão disponíveis para todas as revistas no 
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Idiomas marcados podem estar incompletos."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Deseja realmente remover este idioma? A execução pode afetar revistas hospedas que podem estar utilizando o idioma."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Selecione idiomas adicionais para uso no sistema. Os idiomas devem ser instalados antes que possam ser utilizados pelas revistas hospedadas. Veja a documentação para informações sobre como incluir novos idiomas no sistema."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Erro ao baixar idioma. A seguir, um detalhamento do(s) erro(s)."
-
-msgid "admin.languages.localeInstalled"
-msgstr "O idioma \"{$locale}\" foi instalado."
-
-msgid "admin.languages.download"
-msgstr "Baixar idioma"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Não é possível abrir a identificação de idioma do portal do PKP."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Não é possível incluir novo idioma no arquivo de registro de idiomas, geralmente \"registry/locales.xml\"."
 
 msgid "admin.auth.ojs"
 msgstr "Base de dados de usuários"

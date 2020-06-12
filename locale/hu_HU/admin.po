@@ -57,15 +57,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Biztosan letiltja ezt a nyelvi környezetet? Ez hatással lehet bármelyik tárolt folyóiratra, amely jelenleg használja ezt a nyelvi környezetet."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>A nyelvi csomag letöltése a Public Knowledge Project webszerveréről sikertelen, mert:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Az Ön szervere nem támogatja a GNU \"tar\" alkalmazást.</li>\n"
-"\t\t<li>Az OJS nem tudja módosítani a nyelvi beállítások fájlt, ami általában itt található \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>A nyelvi csomagokat manuálisan is le lehet tölteni a <a href=\"http://pkp.sfu.ca\">PKP weboldaláról</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Ez lesz az alapértelmezett nyelv az oldalon és valamennyi tárolt folyóiratnál."
 
@@ -74,27 +65,6 @@ msgstr "Válassza ki azokat a nyelvi környezeteket, amelyeket használna az old
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "A jelölt nyelvi környezetek hiányosak lehetnek."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Biztosan törölni szeretné ezt a nyelvi környezetet? Ez hatással lehet bármelyik tárolt folyóiratra, amely jelenleg használja ezt a nyelvi környezetet."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Telepítse bármelyiket az alábbi támogatott nyelvi környezetek közül. A nyelvi környezeteket telepíteni kell mielőtt a tárolt folyóiratok oldalain használni kezdené. Lásd az OJS dokumentációt a további támogatott nyelvi környezetek használatához."
-
-msgid "admin.languages.downloadFailed"
-msgstr "A nyelvi környezet letöltése sikertelen. Az alábbiakban láthatók a hibák."
-
-msgid "admin.languages.localeInstalled"
-msgstr "A(z) \"{$locale}\" nyelvi környezet telepítve."
-
-msgid "admin.languages.download"
-msgstr "Nyelvi környezetek letöltése"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "A nyelvleírót nem sikerült megnyitni a PKP weboldaláról."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Az új nyelvi környezetet nem sikerült hozzáadni a registry fájlhoz, jellemzően \"registry/locales.xml\"-hez."
 
 msgid "admin.auth.ojs"
 msgstr "OJS Felhasználói adatbázis"
