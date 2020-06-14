@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-06-11 14:08+0000\n"
-"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
+"PO-Revision-Date: 2020-06-15 16:01+0000\n"
+"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -598,10 +598,10 @@ msgstr ""
 
 msgid "admin.auth.defaultSourceDescription"
 msgstr ""
-"\n"
-"\t\t指定一个OJS之外的认证来源会有下列的好处：\n"
+"<p>指定一个OJS之外的认证来源会有下列的好处：</p>\n"
 "\t\t<ul>\n"
-"\t\t\t<li>如果一个用户想要在这个网站中，以一个在认证来源中（而非OJS的数据库中）已经存在的名称来注册一个新的帐号，只有在输入的密码对该用户帐号来说是有效的时候，才能完成注册程序。</li>\n"
+"\t\t\t<li>如果一个用户想要在这个网站中，以一个在认证来源中（而非OJS的数据库中）已经存在的名称来注册一个新的帐号，只有在输入的密码对该用户帐号"
+"来说是有效的时候，才能完成注册程序。</li>\n"
 "\t\t</ul>"
 
 msgid "admin.overwriteConfigFileInstructions"
@@ -2023,3 +2023,30 @@ msgstr "您必须同意正在注册的任何期刊的隐私声明。"
 msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
 "是的，我同意根据该期刊的<a href=\"{$privacyUrl}\" target=\"_blank\">隐私声明</a>收集和存储我的数据信息。"
+
+msgid "navigation.subscriptions"
+msgstr "订阅"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "给定的期刊路径“ {$journalPath}”无法解析为一个有效的期刊。"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "此搜索实现不允许按期刊重新索引。"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "正在索引“ {$journalName}”"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>删除该校样的批准。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>批准此校样发布。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "批准校样"
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "等待校样。"
+
+msgid "notification.type.assignProductionUser"
+msgstr "使用“参与者”列表中的“分配”链接指派用户以创建校样。"
