@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-11 02:04+0000\n"
-"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
+"PO-Revision-Date: 2020-06-15 16:01+0000\n"
+"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/submission/zh_Hans/>\n"
-"Language: zh_Hans\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,3 +20,39 @@ msgstr ""
 "_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
 "generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
 "generic.shtml#type</a>"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "投稿的公开标识符已更新。"
+
+msgid "grid.action.issueEntry"
+msgstr "查看此提交的源数据"
+
+msgid "submission.submit.whatNext.description"
+msgstr "该期刊已收到您提交的通知，并且已通过电子邮件发送确认。 编辑审核完提交的内容后，他们将与您联系。"
+
+msgid "submission.issueEntry"
+msgstr "源数据"
+
+msgid "submission.submit.noContext"
+msgstr "找不到此投稿的期刊。"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "摘要不得超过 {$wordCount} 个字。"
+
+msgid "grid.action.workflow"
+msgstr "投稿工作流"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "新投稿"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "开始一次新的提交"
+
+msgid "submission.title"
+msgstr "文章标题"
+
+msgid "submission.upload.selectComponent"
+msgstr "选择文章组件"
+
+msgid "submission.submit.userGroup"
+msgstr "以下列角色提交..."
