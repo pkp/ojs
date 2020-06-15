@@ -1748,6 +1748,13 @@
 						"in": "query",
 						"required": false,
 						"type": "string"
+					},
+					{
+						"name": "stageIds",
+						"description": "Filter results by email templates that belong to one or more workflow stage IDs. Separate role IDs with a comma. Pass `0` to return templates not assigned to a stage.",
+						"in": "query",
+						"required": false,
+						"type": "string"
 					}
 				],
 				"responses":  {

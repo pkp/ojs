@@ -21,7 +21,7 @@ class EmailTemplatesListPanel extends PKPEmailTemplatesListPanel {
 	 */
 	public function getConfig() {
 		$config = parent::getConfig();
-		$config['filters'][count($config['filters']) - 1]['filters'][] = [
+		$config['filters'][count($config['filters']) - 2]['filters'][] = [
 			'param' => 'toRoleIds',
 			'title' => __('default.groups.name.subscriptionManager'),
 			'value' => ROLE_ID_SUBSCRIPTION_MANAGER,
