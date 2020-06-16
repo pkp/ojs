@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-06-11 02:04+0000\n"
+"PO-Revision-Date: 2020-06-16 22:10+0000\n"
 "Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hans/>\n"
@@ -598,10 +598,10 @@ msgstr ""
 
 msgid "admin.auth.defaultSourceDescription"
 msgstr ""
-"\n"
-"\t\t指定一个OJS之外的认证来源会有下列的好处：\n"
+"<p>指定一个OJS之外的认证来源会有下列的好处：</p>\n"
 "\t\t<ul>\n"
-"\t\t\t<li>如果一个用户想要在这个网站中，以一个在认证来源中（而非OJS的数据库中）已经存在的名称来注册一个新的帐号，只有在输入的密码对该用户帐号来说是有效的时候，才能完成注册程序。</li>\n"
+"\t\t\t<li>如果一个用户想要在这个网站中，以一个在认证来源中（而非OJS的数据库中）已经存在的名称来注册一个新的帐号，只有在输入的密码对该用户帐号"
+"来说是有效的时候，才能完成注册程序。</li>\n"
 "\t\t</ul>"
 
 msgid "admin.overwriteConfigFileInstructions"
@@ -660,8 +660,18 @@ msgstr ""
 
 msgid "editor.submissionReview.notes"
 msgstr ""
-"<ol>\n"
-"\t<li>突出项目表明编辑要求需要处理的项目.</li>\n"
+"\n"
+"\t<ol>\n"
+"\t<li>突出项目表明编辑要求需要处理的项目，如下：\n"
+"\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">审稿人已定但未发邮件提醒</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">所有审稿人都返回了他们的评论，但没有形成任何决定</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">作者上传了一个修改稿</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">审稿人逾期未确认同行审稿邀请</li>"
+"\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">审稿人逾期完成的审稿</li>\n"
+"\t\t</ul>\n"
+"        </li>\n"
 "\t<li>「期限」是指离审稿截止日还剩下多少周或者已经过期多少(-)周。当一个审稿人接受审稿的邀请时就算开始计算.</li>\n"
 "</ol>"
 
@@ -849,7 +859,7 @@ msgid "reviewer.article.reviewGuidelinesDescription"
 msgstr "The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first \"for author and editor,\" and the second \"for editor.\" Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author."
 
 msgid "reviewer.article.notifyEditorA"
-msgstr ">通知稿件负责编辑"
+msgstr "通知稿件负责编辑"
 
 msgid "reviewer.article.notifyEditorB"
 msgstr "你是否会进行审稿。"
@@ -864,7 +874,7 @@ msgid "reviewer.article.enterCompetingInterests"
 msgstr "声明您是否有这方面的研究利益冲突 (参阅 <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;方针</a>)."
 
 msgid "reviewer.competingInterests"
-msgstr ">竞争的利益（Competing Interests）"
+msgstr "竞争的利益（Competing Interests）"
 
 msgid "reviewer.article.enterReviewA"
 msgstr "点图标击后，输入（或粘贴）您对本稿件的审稿意见。"
@@ -1321,7 +1331,7 @@ msgid "about.memberships"
 msgstr "会员资格"
 
 msgid "about.aboutThisPublishingSystem"
-msgstr "关于这个期刊系统"
+msgstr "有关此发布系统平台和工作流的更多信息由 OJS / PKP 提供。"
 
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS编审与出版流程"
@@ -1695,9 +1705,9 @@ msgstr "浏览期次"
 
 msgid "editor.submissionEditing.notes"
 msgstr ""
-"<ol>\n"
-"\t<![CDATA[<ol>\n"
-"\t<li>编辑要求突出标明项目显示行动，按照下列进行标注:\n"
+"\n"
+"\t<ol>\n"
+"\t<li>编辑要求突出标明需要完成项目，标注如下 ：\n"
 "\t\t<ul>\n"
 "\t\t\t<li class=\"highlightCopyediting\">在文字编辑阶段要求行动</li>\n"
 "\t\t\t<li class=\"highlightLayoutEditing\">在排版编辑阶段要求行动</li>\n"
@@ -1851,7 +1861,7 @@ msgid "search.results.orderBy"
 msgstr "对结果排序"
 
 msgid "reader.purchasePrice"
-msgstr "({$currency} {$price})"
+msgstr "({$currency} {$price})元"
 
 msgid "submission.event.submissionSubmitted"
 msgstr "文章已提交"
@@ -1885,3 +1895,168 @@ msgstr "稿件插件库用来为稿件的各种文档显示提供支持插件。
 
 msgid "plugins.categories.viewableFiles"
 msgstr "稿件插件库"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "选择此目录稿件排序方式。"
+
+msgid "catalog.sortBy"
+msgstr "稿件顺序"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$ editorName}已完成文章{$ submissionId}的编辑。"
+
+msgid "editor.issues.futureIssues"
+msgstr "待出版期次"
+
+msgid "editor.issues.backIssues"
+msgstr "往期"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "等待审核"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "通过"
+
+msgid "article.view.interstitial"
+msgstr "请选择一篇论文文件下载。"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "隐藏其他期刊"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "注册其他期刊"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "正在等待审核。"
+
+msgid "notification.type.approveSubmission"
+msgstr "此稿件目前正在等待审核，审核通过后才会出现在当前期次中。"
+
+msgid "editor.navigation.issues"
+msgstr "期次"
+
+msgid "grid.action.createContext"
+msgstr "创建一种期刊"
+
+msgid "user.authorization.invalidIssue"
+msgstr "请求期次无效！"
+
+msgid "user.authorization.noContext"
+msgstr "上下文中没有期刊！"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "已提交新文章，需要为其分配评审编辑。"
+
+msgid "notification.savedIssueMetadata"
+msgstr "当期发布元数据已保存。"
+
+msgid "notification.type.public"
+msgstr "公告"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "提交了新稿件 “ {$ title}” 。"
+
+msgid "log.editor.recommendation"
+msgstr "{$ editorName} 撰写了文章 {$ submissionId} 的推荐语（{$ decision}）。"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>预安装步骤</h4>\n"
+"\n"
+"\n"
+"<p>1. 下列文件和目录（包括内容）必须可写：</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt>可写 (可选): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> 可写: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> 可写: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> 可写: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> 可写: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> 可写: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. 必须预先设定文件上传目录，并且可写 (查看下面的\"文件设定\").</p>"
+
+msgid "payment.notFound"
+msgstr "已申请付款，但申请已过期。有关详细信息，请联系期刊管理员。"
+
+msgid "payment.requestPublicationFee"
+msgstr "需要出版费（{$ feeAmount}）"
+
+msgid "payment.type.publication.required"
+msgstr "需要支付出版费。"
+
+msgid "help.goToEditPage"
+msgstr "编辑 {$sectionTitle}"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "查看您的审核中的稿件"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "提交新稿件"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "向<a href=\"{$url}\"> {$ name} </a>栏目提交新稿件。"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} 或 {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.register"
+msgstr "注册"
+
+msgid "about.aboutContext"
+msgstr "关于期刊"
+
+msgid "about.contact"
+msgstr "联系"
+
+msgid "archive.archivesPageNumber"
+msgstr "归档 - 第 {$pageNumber} 页"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>如果您的Web浏览器安装了PDF阅读器插件（例如， 最新版本的 <a href=\"https://get.adobe.com/reader/\">"
+"Adobe Acrobat Reader</a>），则您应该在此处看到加载的您选择的PDF文件。</p>"
+
+msgid "article.download"
+msgstr "下载 PDF 格式文件"
+
+msgid "article.pageTitle"
+msgstr "翻阅 {$title}"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "您必须同意本网站的隐私声明。"
+
+msgid "user.register.form.missingContextConsent"
+msgstr "您必须同意正在注册的任何期刊的隐私声明。"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"是的，我同意根据该期刊的<a href=\"{$privacyUrl}\" target=\"_blank\">隐私声明</a>收集和存储我的数据信息。"
+
+msgid "navigation.subscriptions"
+msgstr "订阅"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "给定的期刊路径“ {$journalPath}”无法解析为一个有效的期刊。"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "此搜索实现不允许按期刊重新索引。"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "正在索引“ {$journalName}”"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>删除该校样的批准。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>批准此校样发布。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "批准校样"
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "等待校样。"
+
+msgid "notification.type.assignProductionUser"
+msgstr "使用“参与者”列表中的“分配”链接指派用户以创建校样。"

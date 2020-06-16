@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2020-01-31 16:21+0000\n"
-"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
+"PO-Revision-Date: 2020-06-15 16:01+0000\n"
+"Last-Translator: Edvin Erdtman <edvin.erdtman@liu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/admin/sv/>\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
@@ -175,3 +175,18 @@ msgstr "Open access-avisering"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Granskningspåminnelse"
+
+msgid "admin.settings.info.success"
+msgstr "Informationen om webbplatsen har uppdaterats."
+
+msgid "admin.settings.config.success"
+msgstr "Webbplatsens inställningar har uppdaterats."
+
+msgid "admin.settings.appearance.success"
+msgstr "Webbplatsens utseende har uppdaterats."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} har redigerats."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} har skapats."

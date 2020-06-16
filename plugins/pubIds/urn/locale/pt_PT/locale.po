@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
-"PO-Revision-Date: 2020-02-04 12:33+0000\n"
+"PO-Revision-Date: 2020-06-12 22:00+0000\n"
 "Last-Translator: Carla Marques <carla.marques@sdum.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/pubIds-urn/pt_PT/>\n"
@@ -18,19 +18,22 @@ msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
 
 msgid "plugins.pubIds.urn.description"
-msgstr "Este plugin permite a atribuição de Uniform Resource Names aos números, artigos e composições no OJS."
+msgstr ""
+"Este plugin permite a atribuição de Uniform Resource Names aos números, "
+"artigos e ficheiros de publicação no OJS."
 
 msgid "plugins.pubIds.urn.manager.settings.description"
-msgstr "Configure o plugin URN para gerire usar URNs no OJS:"
+msgstr "Configure o plugin URN para gerir e usar URNs no OJS:"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjects"
-msgstr "Conteúdo Revista"
+msgstr "Conteúdo da Revista"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
-msgstr "Seleccione as publicações às quais devem ser atribuídos os URNs ."
+msgstr "Selecione as publicações às quais devem ser atribuídos os URNs ."
 
 msgid "plugins.pubIds.urn.manager.settings.explainURNs"
-msgstr "Seleccione as publicações que terão Uniform Resource Names (URN) atribuídos:"
+msgstr ""
+"Selecione as publicações que terão Uniform Resource Names (URN) atribuídos:"
 
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
 msgstr "Números"
@@ -39,13 +42,15 @@ msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
 msgstr "Artigos"
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
-msgstr "Composições"
+msgstr "Ficheiros de publicação"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
 msgstr "Prefixo URN"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
-msgstr "O prefixo URN é a correcção, nunca mudando parte da URN (por exemplo, \"urn: nbn: de: 0000-\")."
+msgstr ""
+"O prefixo URN é a correção, nunca mudando parte da URN (por exemplo, \"urn: "
+"nbn: de: 0000-\")."
 
 msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
 msgstr ""
@@ -59,7 +64,11 @@ msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
 msgstr "Um sufixo URN pode assumir qualquer forma, mas deve ser exclusivo entre todas as publicações com o mesmo prefixo URN atribuído:"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
-msgstr "Use o padrão inserido abaixo para gerar sufixos URN. Use %j para as iniciais da revista, %v para volume, %i para o número, %Y para o ano, %a para o ID do artigo, %g para a ID da composição, %f para o ID do ficheiro, %P para o número da página e %x para \"Custom Identifier\"."
+msgstr ""
+"Use o padrão inserido abaixo para gerar sufixos URN. Use %j para as iniciais "
+"da revista, %v para volume, %i para o número, %Y para o ano, %a para o ID do "
+"artigo, %g para a ID do ficheiro de publicação, %f para o ID do ficheiro, %p "
+"para o número da página e %x para o identificador personalizado."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
 msgstr "Por exemple, vol%viss%ipp%p pode gerar o sufixo URN \"vol3iss2pp230\"."
@@ -71,7 +80,7 @@ msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
 msgstr "para artigos"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
-msgstr "para composições"
+msgstr "para ficheiros de publicação"
 
 msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
 msgstr "Insira o sufixo padrão URN para números."
@@ -80,19 +89,21 @@ msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
 msgstr "Insira o sufixo padrão URN para artigos."
 
 msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
-msgstr "Insira o sufixo padrão URN para composições."
+msgstr "Insira o sufixo padrão URN para ficheiros de publicação."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
 msgstr "Usar padrão."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
-msgstr "%j.v%vi%i para números<br />%j.v%vi%i.%a para artigos<br />%j.v%vi%i.%a.g%g para composições."
+msgstr ""
+"%j.v%vi%i para números<br />%j.v%vi%i.%a para artigos<br />%j.v%vi%i.%a.g%g "
+"para ficheiros de publicação."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
 msgstr "Insira um sufixo URN individual para cada publicação. Encontrará um campo de entrada URN adicional na página de metadados de cada publicação."
 
 msgid "plugins.pubIds.urn.manager.settings.checkNo"
-msgstr "Número Verificação"
+msgstr "Número de Verificação"
 
 msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
 msgstr "O número de verificação será automaticamente calculado e adicionado no final, como o último dígito de um URN."
@@ -101,7 +112,7 @@ msgid "plugins.pubIds.urn.manager.settings.namespace"
 msgstr "Namespace"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
-msgstr "Seleccione"
+msgstr "Selecione"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.description"
 msgstr "O namespace de identificador persistente é geralmente necessário para o registo (por exemplo, na Deutsche Nationalbibliothek)."

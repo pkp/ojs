@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-06-11 02:04+0000\n"
-"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
+"PO-Revision-Date: 2020-06-15 16:01+0000\n"
+"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/auth-ldap/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -39,13 +39,13 @@ msgid "plugins.auth.ldap.settings.basedn"
 msgstr "基本DN"
 
 msgid "plugins.auth.ldap.settings.basedn.description"
-msgstr "E.g., \"ou=people,dc=example,dc=com\""
+msgstr "例如，\"ou=people,dc=example,dc=com\""
 
 msgid "plugins.auth.ldap.settings.managerdn"
 msgstr "经理的DN"
 
 msgid "plugins.auth.ldap.settings.managerdn.description"
-msgstr "E.g., \"cn=Manager,dc=example,dc=com\""
+msgstr "例如，\"cn=Manager,dc=example,dc=com\""
 
 msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "管理员密码"
@@ -57,7 +57,7 @@ msgid "plugins.auth.ldap.settings.uid"
 msgstr "帐户名称属性"
 
 msgid "plugins.auth.ldap.settings.uid.description"
-msgstr "该属性的值唯一标识一个对象，如用户的uid或CN或sAMAccountName"
+msgstr "该属性的值唯一标识一个对象，如用户的uid或CN或sAMAccountName。"
 
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "密码加密"
@@ -66,10 +66,10 @@ msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "SASL的设置（可选）"
 
 msgid "plugins.auth.ldap.settings.saslmech"
-msgstr "SASL mechanism"
+msgstr "SASL机制"
 
 msgid "plugins.auth.ldap.settings.saslmech.description"
-msgstr "E.g., \"DIGEST-MD5\""
+msgstr "例如，\"DIGEST-MD5\""
 
 msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "领域"
