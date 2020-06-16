@@ -673,7 +673,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return int
 	 */
 	function getNumArticles($issueId) {
-		import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_PUBLISHED constant
 		$result = $this->retrieve(
 			'SELECT COUNT(*)
 				FROM submissions s
