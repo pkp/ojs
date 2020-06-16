@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-06-15 16:01+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2020-06-16 22:10+0000\n"
+"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -1337,10 +1337,10 @@ msgid "plugins.importexport.common.settings"
 msgstr "设置"
 
 msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr "为使用该款插件，请在\"公共标识符\"插件种类中，开启和配置DOI插件并且指定一个有效的DOI字首。"
+msgstr "为使用该款插件，请在\"公共标识符\"插件分类中，启用和配置DOI插件并且指定一个有效的DOI前置。"
 
 msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr "插件尚未完全建立。"
+msgstr "插件未完全安装。"
 
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "密码"
@@ -1352,7 +1352,7 @@ msgid "plugins.importexport.common.action.register"
 msgstr "注册"
 
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr "输出文件{$param}不可写。"
+msgstr "导出文件{$param}不可写。"
 
 msgid "plugins.importexport.common.register.error.mdsError"
 msgstr "注册失败！DOI注册服务器返回一个错误：'{$param}'。"
@@ -1662,3 +1662,140 @@ msgstr "在线购买个人订阅后，通过电子邮件通知订阅管理器。
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
 msgstr "订阅在线支付完成后，可以将自动电子邮件通知（由OJS的电子邮件中的日记管理器进行编辑）发送给订阅管理器。"
+
+msgid "stats.publications.galleys"
+msgstr "文件"
+
+msgid "stats.publications.abstracts"
+msgstr "摘要"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$total} 中的 {$count} 篇文章"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "按日期排列的文件查看视图"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "按日期排列的文摘访问视图"
+
+msgid "stats.publications.none"
+msgstr "找不到与使用情况统计参数匹配的文章。"
+
+msgid "stats.publications.details"
+msgstr "文章细节"
+
+msgid "stats.publicationStats"
+msgstr "文章统计"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "将副本发送到“期刊设置”中标识的主要联系人。"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "指定的对象未发现。"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "指定的期刊路径 \"{$journalPath}\"不存在。"
+
+msgid "plugins.importexport.common.cliError"
+msgstr "错误："
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "路径为 {$path} 的期刊缺少DOI前缀。"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "导入文件{$param}不可读。"
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "无效的XML："
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "不能转化选择的对象。"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "未选择。"
+
+msgid "plugins.importexport.common.validation"
+msgstr "在导出和注册之前验证XML。"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "标记为注册"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "导出"
+
+msgid "plugins.importexport.common.action"
+msgstr "操作"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "已注册"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "标记为已注册"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "未存取"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "任意一个统计"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "任意期次"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "在 DOI 公共标识符插件中没有为发布对象选择 DOI 设定，因此该插件没有没有存取或输出。"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "不符合插件要求"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "校样"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "期次"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "文章"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI 插件设定"
+
+msgid "grid.genres.description"
+msgstr "这些组件用于文件命名，并在上传文件的下拉菜单中显示。类型指定为##允许用户将文件与整个稿件为99Z号或指定编号（例如02）的特定组件相关联。"
+
+msgid "grid.genres.title"
+msgstr "文章组成部分"
+
+msgid "grid.genres.title.short"
+msgstr "组成"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "文章权限已成功重置。"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"从所有文章中删除版权声明和协议信息，将其还原为期刊默认设置。这将会永久删除所有原来文章中的版权声明和协议信息。一般来说，法律上是不可能允许您重新使用其他许"
+"可发布的已发布作品。所以使用此工具时请务必小心，如果不确定您对期刊中的文章拥有什么权利，请咨询法律专业人士。"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "您确定要重置所有文章的权限数据吗？此操作无法撤消。"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "期次：默认年份将从当期的发布日期中生成。"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "文章：默认年份将从文章的发布日期中生成。"
+
+msgid "manager.publication.library"
+msgstr "出版者图书馆"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"角色是期刊管理中被赋予不同的权限和工作职责的用户组。这里分为五个层级：期刊主管拥有至高权限（各种内容管理和所有设置）；栏目编辑拥有被分配内容的所有权限；期"
+"刊助理拥有被编辑分配的稿件特定权限；审核专家可以处理被分配给他们的稿件的审核；作者可以在他们的稿件处理过程（五个阶段：投稿、内部评审、专家评审、编辑统稿和"
+"出版）中会有一定的互动权限。"
+
+msgid "manager.setup.section.description"
+msgstr "期刊中文章通常按主题或内容类型（例如，评论文章，研究等）利用“栏目”进行组织。"
+
+msgid "grid.action.addSection"
+msgstr "添加栏目"
