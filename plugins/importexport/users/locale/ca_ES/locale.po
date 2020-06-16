@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-16 22:10+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/ca_ES/>\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Ús: {$scriptName} {$pluginName} [command] ...\n"
+"Ordres:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Carregueu un arxiu en l'apartat \"Importar\" per continuar."
+
+msgid "plugins.importexport.users.results"
+msgstr "Resultats"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"La importació s'ha completat correctament. S'han importat els usuaris/àries "
+"amb noms d'usuaris/àries i correus electrònics que ja no estan en ús, "
+"juntament amb els grups d'usuaris/àries corresponents."
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "No s'ha pogut escriure en l'arxiu \"{$fileName}\"."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Hi ha hagut errors durant l'exportació"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Exportar tot"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exportar per rol"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Exportar usuaris/àries"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "S'ha especificat un ruta de revista \"{$journalPath}\" desconeguda."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"No es poden utilitzar contrasenyes codificades amb {$importHash}; OJS està "
+"configurat per utilitzar {$ojsHash}. Si continueu necessitareu "
+"reinicialitzar les contrasenyes dels usuaris/àries importats."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Avís"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"Confirmeu que aquests son els usuaris/àries que voleu importar al sistema"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Hi ha hagut errors durant la importació"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Els següents usuaris/àries s'han importat correctament al sistema"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Continuar important els altres usuaris/àries si hi ha un error."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Enviar un correu electrònic de notificació a cadascun dels usuaris/àries "
+"importats amb el seu nom d'usuari/ària i la contrasenya."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Arxiu de dades d'usuari/ària"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Seleccioneu un arxiu de dades XML que contingui informació d'usuaris/àries "
+"per importar en aquesta revista. Consulteu l'ajuda de la revista per obtenir "
+"detalls sobre el format d'aquest arxiu.<br /><br />Tingueu en compte que si "
+"l'arxiu importat conté algun nom d'usuari/ària o correu electrònic ja "
+"existent en el sistema, aquestes dades no s'importaran i els nous rols que "
+"es crearan s'assignaran a usuaris/àries que ja existeixin."
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importar usuaris/àries"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Exemples:\n"
+"\tImportar usuaris/àries a myJournal des de myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExportar tots els usuaris/àries des de myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExportar usuaris/àries especificats pel seu ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importar i exportar usuaris/àries"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Mòdul d'usuaris/àries XML"

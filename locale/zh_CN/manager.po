@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-06-11 02:04+0000\n"
+"PO-Revision-Date: 2020-06-16 22:10+0000\n"
 "Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hans/>\n"
@@ -30,7 +30,7 @@ msgid "manager.language.forms"
 msgstr "表单"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
-msgstr "这将替换在此区域下您已经设定的任何指定区域的期刊设置。"
+msgstr "这将替换在此区域下您已经设定的任何指定区域的期刊设置"
 
 msgid "manager.languages.languageInstructions"
 msgstr "OJS可以让用户使用几种受到支持的语言介面。同时，OJS可以当作一个部分多语化的系统，让用户在每个页面中可以切换语言，并允许某些资料以额外的两种语言进行输入。<br /><br />如果一个受到OJS支持的语言没有列在下表，请您的网站管理员从网站管理介面来安装该项语系。新增支持新语系的指引说明，请见OJS的文件。"
@@ -39,7 +39,7 @@ msgid "manager.languages.noneAvailable"
 msgstr "抱歉，没有额外的语言可供使用。如果您希望在这份期刊中使用额外的语系，请联系您的网站管理者。"
 
 msgid "manager.languages.primaryLocaleInstructions"
-msgstr "这将会是期刊网站的预设语言"
+msgstr "这将会是期刊网站的预设语言。"
 
 msgid "manager.managementPages"
 msgstr "网页管理"
@@ -159,7 +159,7 @@ msgid "manager.people.allSiteUsers"
 msgstr "全部网站用户"
 
 msgid "manager.people.showNoRole"
-msgstr "Show users with no role"
+msgstr "显示没有角色的用户"
 
 msgid "manager.people.allUsers"
 msgstr "所有用户"
@@ -207,19 +207,19 @@ msgid "manager.sections.editors"
 msgstr "栏目编辑"
 
 msgid "manager.sections.form.abbrevRequired"
-msgstr "此栏目需要一个缩写的标题。"
+msgstr "此栏目需要一个缩写的标题"
 
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "请确认至少有一个选项已经选取，便于栏目编辑指派"
+msgstr "请确认至少有一个选项已经选取以便于栏目编辑指派。"
 
 msgid "manager.sections.form.reviewFormId"
-msgstr "请确认您已经选择一个有效的审稿表单"
+msgstr "请确认您已经选择一个有效的审稿表单。"
 
 msgid "manager.sections.form.titleRequired"
 msgstr "此栏目需要一个标题。"
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "在目录里忽略作者姓名"
+msgstr "在目录里忽略作者姓名。"
 
 msgid "manager.sections.hideTocTitle"
 msgstr "从这些期数的目录删掉本栏目的标题。"
@@ -249,7 +249,7 @@ msgid "manager.sections.reviewed"
 msgstr "需经审稿"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "将不会被包含在本期刊的索引。"
+msgstr "将不会被包含在本期刊的索引中"
 
 msgid "manager.sections.submissionReview"
 msgstr "将不会进行审稿"
@@ -264,7 +264,7 @@ msgid "manager.sections.wordCount"
 msgstr "字数"
 
 msgid "manager.sections.wordCountInstructions"
-msgstr "限制本栏目的字符数(0为不限制):"
+msgstr "限制本栏目的字符数(0为不限制)"
 
 msgid "manager.setup"
 msgstr "配置"
@@ -306,10 +306,10 @@ msgid "manager.setup.enableAnnouncements.description"
 msgstr "可以发布公告以通知期刊的读者关于期刊的新闻稿以及活动。已发布的公告会出现在「公告」页面。"
 
 msgid "manager.setup.announcementsIntroduction.description"
-msgstr "输入在公告网页上要给读者看到的额外的信息"
+msgstr "输入希望在公告页面上要让读者看到的任何信息。"
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(将在「期刊介绍」中出现)"
+msgstr "（将在「期刊介绍」中出现） "
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "要求投稿作者提供一个利益冲突（CI）的文字声明。"
@@ -333,7 +333,7 @@ msgid "manager.setup.currentIssue"
 msgstr "当期期刊"
 
 msgid "manager.setup.customizingTheLook"
-msgstr "步骤 5：自订外观。"
+msgstr "步骤 5：定制外观"
 
 msgid "manager.setup.customTags"
 msgstr "自订标签"
@@ -363,7 +363,7 @@ msgid "manager.setup.disciplineProvideExamples"
 msgstr "提供这份期刊相关的学科领域作为范例"
 
 msgid "manager.setup.displayCurrentIssue"
-msgstr ".为当期期刊新增一份目录（如果可以的话）"
+msgstr "为当期期刊新增一份目录（如果有必要）。"
 
 msgid "manager.setup.editorDecision"
 msgstr "编辑决策"
@@ -375,7 +375,9 @@ msgid "manager.setup.emailBounceAddress.description"
 msgstr "如有任何退回的电子邮件，都会发送一封错误信息到这个地址。"
 
 msgid "manager.setup.emailBounceAddress.disabled"
-msgstr "<strong>注意：</strong>要启用这个选项，网站管理员必须启用OJS配置文件中的 <tt>allow_envelope_sender</tt>选项。可能会需要额外的服务器配置才能支持使用这个功能（可能不是所有服务器上都能用），请见上述的OJS文件。"
+msgstr ""
+"为了将无法送达的电子邮件发送到退回地址，网站管理员必须启用OJS配置文件中的 <code>allow_envelope_sender</code>选项。可"
+"能会需要额外的服务器配置才能支持使用这个功能（可能不是所有服务器上都能用），请见上述的OJS文件。"
 
 msgid "manager.setup.emails"
 msgstr "电子邮件认证"
@@ -387,13 +389,13 @@ msgid "manager.setup.emailSignature.description"
 msgstr "系统代表这份期刊所寄发的预备电子邮件会具有下面的签名列在信末。预备电子邮件的正文部分允许「期刊管理员」进行编辑。"
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr "让期刊管理员可以增加期刊公告。"
+msgstr "启用公告"
 
 msgid "manager.setup.enablePublicIssueId"
 msgstr "自订的识别码将会被用来识别期数。"
 
 msgid "manager.setup.enableUserRegistration"
-msgstr "允设用户在本期刊网站注册为："
+msgstr "允设用户在本期刊网站注册。"
 
 msgid "manager.setup.focusAndScope"
 msgstr "焦点和范围"
@@ -414,7 +416,7 @@ msgid "manager.setup.form.journalInitialsRequired"
 msgstr "需要期刊起首字母名称。"
 
 msgid "manager.setup.form.journalTitleRequired"
-msgstr "需要期刊名称"
+msgstr "期刊名称是必填项。"
 
 msgid "manager.setup.form.numReviewersPerSubmission"
 msgstr "每篇稿件所需审稿人数目。"
@@ -429,7 +431,7 @@ msgid "manager.setup.generalInformation"
 msgstr "一般信息"
 
 msgid "manager.setup.gettingDownTheDetails"
-msgstr "步骤 1：输入细节。"
+msgstr "步骤 1：输入细节"
 
 msgid "manager.setup.guidelines"
 msgstr "须知"
@@ -477,7 +479,9 @@ msgid "manager.setup.journalHomepageContent"
 msgstr "期刊首页内容"
 
 msgid "manager.setup.journalHomepageContentDescription"
-msgstr "根据预设，首页由导航链接所组成。您可以使用下面一个或所有的选项来增添额外的首页内容，会以所见的顺序来显示。注意，当期期刊永远都可以透过导航栏中的「当期期刊」链接来阅读"
+msgstr ""
+"根据预设，首页由导航链接所组成。您可以使用下面一个或所有的选项来增添额外的首页内容，会以所见的顺序来显示。注意，当期期刊永远都可以通过导航栏中的「当期期刊"
+"」链接来阅读。"
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "期刊首页标题"
@@ -534,10 +538,14 @@ msgid "manager.setup.lists"
 msgstr "列表"
 
 msgid "manager.setup.lockssEnable"
-msgstr "启用LOCKSS，在加入LOCKSS的图书馆中保存与散布期刊的内容。<a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a>页面。 A LOCKSS的认证信息会显示在「期刊存档」的「期刊介绍」中："
+msgstr ""
+"启用LOCKSS，在加入LOCKSS的图书馆通过<a href=\"{$lockssUrl}\" target=\"_blank\""
+">发布者清单</a>页面保存与传播期刊的内容。"
 
 msgid "manager.setup.lockssRegister"
-msgstr "列出6-10个会注册并且快取这份期刊的图书馆。比方说，指派编辑或者编委成员工作的机构，以及＼或者已经加入LOCKSS的机构。见 <a href=\"http://lockss.stanford.edu/about/users.htm\" target=\"_blank\">participating libraries</a>. 用预备好的邀请函寄给(i) <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">libraries participating in LOCKSS</a>或者 (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">libraries not yet participating in LOCKSS</a>."
+msgstr ""
+"列出6-10个会注册并且快取这份期刊的图书馆。例如，指派编辑或者编委成员工作的机构，以及或者已经加入LOCKSS的机构。见<a href=\""
+"http://www.lockss.org/community/\" target=\"_blank\">LOCKSS 社区</a>。"
 
 msgid "manager.setup.look"
 msgstr "外观"
@@ -564,7 +572,7 @@ msgid "manager.setup.navigationBar"
 msgstr "导航栏"
 
 msgid "manager.setup.navigationBarDescription"
-msgstr "增加或删除额外的导航栏项目"
+msgstr "增加或删除额外的导航栏项目。"
 
 msgid "manager.setup.navItemIsAbsolute"
 msgstr "网址是一个绝对路径(如\"http://www.example.com\") 而不是一个相对于本站的相对路径(如\"/manager/setup\")"
@@ -576,13 +584,13 @@ msgid "manager.setup.noImageFileUploaded"
 msgstr "没有上传的图片文件。"
 
 msgid "manager.setup.noStyleSheetUploaded"
-msgstr "没有上传CSS样式表"
+msgstr "没有上传CSS样式表。"
 
 msgid "manager.setup.note"
 msgstr "备注"
 
 msgid "manager.setup.notifications.submissionAckDisabled"
-msgstr "<strong>注意：</strong>收稿通知的电子邮件现在是关闭的。若要开启，请在 <a class=\"action\" href=\"{$preparedEmailsUrl}\">备用电子邮件</a>启用「收稿通知」电子邮件。"
+msgstr "<strong>注意：</strong>收稿通知的电子邮件现在是关闭的。若要开启，请备用电子邮件启用「收稿通知」电子邮件。"
 
 msgid "manager.setup.numPageLinks"
 msgstr "网页链接"
@@ -928,7 +936,7 @@ msgid "manager.subscriptionPolicies.subscriptionContactDescription"
 msgstr "这份联系信息会列在「期刊介绍」的「订阅」下面。"
 
 msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
-msgstr "请输入一个有效的电子邮件地址"
+msgstr "请输入一个有效的电子邮件地址。"
 
 msgid "manager.subscriptions"
 msgstr "订阅"
@@ -943,7 +951,7 @@ msgid "manager.subscriptions.createTitle"
 msgstr "建立"
 
 msgid "manager.subscriptions.renew"
-msgstr "Renew"
+msgstr "续借"
 
 msgid "manager.subscriptions.dateEnd"
 msgstr "结束"
@@ -979,7 +987,7 @@ msgid "manager.subscriptions.form.typeId"
 msgstr "订阅类别"
 
 msgid "manager.subscriptions.form.typeIdRequired"
-msgstr "一个订阅类别是必须的"
+msgstr "一个订阅类别是必须的。"
 
 msgid "manager.subscriptions.form.typeIdValid"
 msgstr "请选择一个有效的订阅类型。"
@@ -1015,16 +1023,16 @@ msgid "manager.subscriptions.form.userIdRequired"
 msgstr "用户是必须的."
 
 msgid "manager.subscriptions.form.userIdValid"
-msgstr "请选择一个有效的用户"
+msgstr "请选择一个有效的用户。"
 
 msgid "manager.subscriptions.form.userCountryValid"
-msgstr "请选择一个有效的国家"
+msgstr "请选择一个有效的国家。"
 
 msgid "manager.subscriptions.form.notifyEmail"
-msgstr "给用户发送一封包含用户名和订阅详情的邮件"
+msgstr "给用户发送一封包含用户名和订阅详情的邮件。"
 
 msgid "manager.subscriptions.form.notifyEmailValid"
-msgstr "请使用复选框"
+msgstr "请使用复选框。"
 
 msgid "manager.subscriptions.form.membership"
 msgstr "会员"
@@ -1117,7 +1125,7 @@ msgid "manager.subscriptions.select"
 msgstr "指派角色给订户"
 
 msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
-msgstr "成功建立订户"
+msgstr "成功创建订阅。"
 
 msgid "manager.subscriptions.subscriptionType"
 msgstr "订阅类型"
@@ -1174,16 +1182,16 @@ msgid "manager.subscriptionTypes.form.costNumeric"
 msgstr "价格必须是一个正整数。"
 
 msgid "manager.subscriptionTypes.form.costRequired"
-msgstr "需要一个价格"
+msgstr "需要一个价格。"
 
 msgid "manager.subscriptionTypes.form.currency"
 msgstr "货币"
 
 msgid "manager.subscriptionTypes.form.currencyRequired"
-msgstr "需要一种货币"
+msgstr "需要一种货币。"
 
 msgid "manager.subscriptionTypes.form.currencyValid"
-msgstr "请选择一种有效的货币"
+msgstr "请选择一种有效的货币。"
 
 msgid "manager.subscriptionTypes.form.description"
 msgstr "说明"
@@ -1210,16 +1218,16 @@ msgid "manager.subscriptionTypes.form.durationNumeric"
 msgstr "期限必须是一个正整数。"
 
 msgid "manager.subscriptionTypes.form.durationRequired"
-msgstr "需要一段订阅期限"
+msgstr "需要一段订阅期限。"
 
 msgid "manager.subscriptionTypes.form.format"
 msgstr "格式"
 
 msgid "manager.subscriptionTypes.form.formatRequired"
-msgstr "需要一个订阅类型的格式"
+msgstr "需要一个订阅类型的格式。"
 
 msgid "manager.subscriptionTypes.form.formatValid"
-msgstr "请选择一个有效的订阅类型的格式"
+msgstr "请选择一个有效的订阅类型的格式。"
 
 msgid "manager.subscriptionTypes.form.subscriptions"
 msgstr "订阅"
@@ -1228,16 +1236,16 @@ msgid "manager.subscriptionTypes.form.individual"
 msgstr "个人(用户通过登录验证)"
 
 msgid "manager.subscriptionTypes.form.institutional"
-msgstr "订阅者应该透过网域或者IP进行授权认证。"
+msgstr "机构（订阅者应该通过域名或者IP地址进行授权认证）"
 
 msgid "manager.subscriptionTypes.form.institutionalValid"
-msgstr "请使用所提供之检查框"
+msgstr "请使用所提供之检查框。"
 
 msgid "manager.subscriptionTypes.form.membership"
-msgstr "订阅者一定要是一个协会或组织的成员。"
+msgstr "订阅者需要成员信息（例如协会、组织、集团等）"
 
 msgid "manager.subscriptionTypes.form.membershipValid"
-msgstr "请使用所提供之检查框"
+msgstr "请使用所提供之检查框。"
 
 msgid "manager.subscriptionTypes.form.options"
 msgstr "选项"
@@ -1246,7 +1254,7 @@ msgid "manager.subscriptionTypes.form.public"
 msgstr "这个订阅类型不会出现在「期刊介绍」之中的「订阅」里。"
 
 msgid "manager.subscriptionTypes.form.publicValid"
-msgstr "请使用所提供之检查框"
+msgstr "请使用所提供之检查框。"
 
 msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
 msgstr "存档并建立另一个"
@@ -1255,10 +1263,10 @@ msgid "manager.subscriptionTypes.form.typeName"
 msgstr "名称"
 
 msgid "manager.subscriptionTypes.form.typeNameExists"
-msgstr "订阅类型的名称已经存在了"
+msgstr "订阅类型的名称已经存在了。"
 
 msgid "manager.subscriptionTypes.form.typeNameRequired"
-msgstr "需要一个订阅类型的名称"
+msgstr "需要一个订阅类型的名称。"
 
 msgid "manager.subscriptionTypes.name"
 msgstr "订阅类型"
@@ -1267,7 +1275,7 @@ msgid "manager.subscriptionTypes.noneCreated"
 msgstr "没有建立任何的订阅类型。"
 
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
-msgstr "成功建立订阅类型"
+msgstr "成功建立订阅类型。"
 
 msgid "manager.language.submissions"
 msgstr "投稿"
@@ -1329,10 +1337,10 @@ msgid "plugins.importexport.common.settings"
 msgstr "设置"
 
 msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr "为使用该款插件，请在\"公共标识符\"插件种类中，开启和配置DOI插件并且指定一个有效的DOI字首。"
+msgstr "为使用该款插件，请在\"公共标识符\"插件分类中，启用和配置DOI插件并且指定一个有效的DOI前置。"
 
 msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr "插件尚未完全建立。"
+msgstr "插件未完全安装。"
 
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "密码"
@@ -1344,7 +1352,7 @@ msgid "plugins.importexport.common.action.register"
 msgstr "注册"
 
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr "输出文件{$param}不可写。"
+msgstr "导出文件{$param}不可写。"
 
 msgid "plugins.importexport.common.register.error.mdsError"
 msgstr "注册失败！DOI注册服务器返回一个错误：'{$param}'。"
@@ -1567,7 +1575,7 @@ msgstr "CLOCKSS 协议描述"
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
 "CLOCKSS 协议将出现在归档： <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS "
-"协议</a> 下的关于期刊中。"
+"协议</a> 下的『关于期刊』中"
 
 msgid "manager.setup.clockssEnable"
 msgstr ""
@@ -1575,4 +1583,201 @@ msgstr ""
 " 存储和发布期刊内容到特定的文档库中。"
 
 msgid "manager.setup.archiving.success"
-msgstr "此期刊的归档细节已经更新。"
+msgstr "此期刊归档细节已更新。"
+
+msgid "grid.category.path"
+msgstr "路径"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "仅当访客登录时，才会显示此链接。"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "链接到描述访问者当前和过去订阅的页面。"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "链接到描述您提供的订阅的页面。"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "如果订阅类型要求订阅者属于某个协会或组织，请输入成员资格信息。"
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "这是永久订阅类型； 请不要指定结束日期。"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "这是永久订阅类型； 请不要指定开始日期。"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "所有"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "有状态"
+
+msgid "manager.subscriptions.summary"
+msgstr "订阅摘要"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "您确定要续订此订阅吗？"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "机构订阅"
+
+msgid "manager.individualSubscriptions"
+msgstr "个人订阅"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>注意</strong>：要启用这些选项，期刊管理器必须启用在线支付模块，包括“读者费用”下的订阅在线支付。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>注意</strong>：在线购买的机构订阅需要获得提供的域和IP范围的批准，并且需要订阅管理器激活订阅。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "在线续订机构订阅时，通过电子邮件通知订阅管理器。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "在线续订个人订阅时，通过电子邮件通知订阅管理器。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "在线购买机构订阅后，通过电子邮件通知订阅管理器（推荐）。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "在线购买个人订阅后，通过电子邮件通知订阅管理器。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "订阅在线支付完成后，可以将自动电子邮件通知（由OJS的电子邮件中的日记管理器进行编辑）发送给订阅管理器。"
+
+msgid "stats.publications.galleys"
+msgstr "文件"
+
+msgid "stats.publications.abstracts"
+msgstr "摘要"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$total} 中的 {$count} 篇文章"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "按日期排列的文件查看视图"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "按日期排列的文摘访问视图"
+
+msgid "stats.publications.none"
+msgstr "找不到与使用情况统计参数匹配的文章。"
+
+msgid "stats.publications.details"
+msgstr "文章细节"
+
+msgid "stats.publicationStats"
+msgstr "文章统计"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "将副本发送到“期刊设置”中标识的主要联系人。"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "指定的对象未发现。"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "指定的期刊路径 \"{$journalPath}\"不存在。"
+
+msgid "plugins.importexport.common.cliError"
+msgstr "错误："
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "路径为 {$path} 的期刊缺少DOI前缀。"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "导入文件{$param}不可读。"
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "无效的XML："
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "不能转化选择的对象。"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "未选择。"
+
+msgid "plugins.importexport.common.validation"
+msgstr "在导出和注册之前验证XML。"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "标记为注册"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "导出"
+
+msgid "plugins.importexport.common.action"
+msgstr "操作"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "已注册"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "标记为已注册"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "未存取"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "任意一个统计"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "任意期次"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "在 DOI 公共标识符插件中没有为发布对象选择 DOI 设定，因此该插件没有没有存取或输出。"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "不符合插件要求"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "校样"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "期次"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "文章"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI 插件设定"
+
+msgid "grid.genres.description"
+msgstr "这些组件用于文件命名，并在上传文件的下拉菜单中显示。类型指定为##允许用户将文件与整个稿件为99Z号或指定编号（例如02）的特定组件相关联。"
+
+msgid "grid.genres.title"
+msgstr "文章组成部分"
+
+msgid "grid.genres.title.short"
+msgstr "组成"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "文章权限已成功重置。"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"从所有文章中删除版权声明和协议信息，将其还原为期刊默认设置。这将会永久删除所有原来文章中的版权声明和协议信息。一般来说，法律上是不可能允许您重新使用其他许"
+"可发布的已发布作品。所以使用此工具时请务必小心，如果不确定您对期刊中的文章拥有什么权利，请咨询法律专业人士。"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "您确定要重置所有文章的权限数据吗？此操作无法撤消。"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "期次：默认年份将从当期的发布日期中生成。"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "文章：默认年份将从文章的发布日期中生成。"
+
+msgid "manager.publication.library"
+msgstr "出版者图书馆"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"角色是期刊管理中被赋予不同的权限和工作职责的用户组。这里分为五个层级：期刊主管拥有至高权限（各种内容管理和所有设置）；栏目编辑拥有被分配内容的所有权限；期"
+"刊助理拥有被编辑分配的稿件特定权限；审核专家可以处理被分配给他们的稿件的审核；作者可以在他们的稿件处理过程（五个阶段：投稿、内部评审、专家评审、编辑统稿和"
+"出版）中会有一定的互动权限。"
+
+msgid "manager.setup.section.description"
+msgstr "期刊中文章通常按主题或内容类型（例如，评论文章，研究等）利用“栏目”进行组织。"
+
+msgid "grid.action.addSection"
+msgstr "添加栏目"
