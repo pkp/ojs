@@ -91,3 +91,9 @@ msgstr "لینک زیر یک گزارش بر اساس داده‌های افزو
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "تمامی مشتریان"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "گزارش مقاله 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "گزارش مجله 1"

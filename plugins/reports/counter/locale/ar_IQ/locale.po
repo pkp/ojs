@@ -91,3 +91,9 @@ msgstr "الروابط أدناه تنشئ تقارير بصيغة مهملة ع
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "All Customers"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "تقرير المقالة 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "تقرير المجلة 1"

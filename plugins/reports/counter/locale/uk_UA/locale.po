@@ -100,3 +100,9 @@ msgstr "Нижченаведені посилання генерують зас�
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Усі клієнти"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Звіт за статтями 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Звіт за журналами 1"
