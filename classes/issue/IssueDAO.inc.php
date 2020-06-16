@@ -14,9 +14,9 @@
  * @brief Operations for retrieving and modifying Issue objects.
  */
 
-import ('classes.issue.Issue');
+import('classes.issue.Issue');
+import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_... constants
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
-
 
 class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	var $caches;
