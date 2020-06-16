@@ -91,3 +91,9 @@ msgstr "De links hieronder genereren rapporten met de oude COUNTER plugin gegeve
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Alle gebruikers"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Artikels rapport 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Tijdschriften rapport 1"

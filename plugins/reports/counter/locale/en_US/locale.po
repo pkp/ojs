@@ -91,3 +91,9 @@ msgstr "The links below generate obsolete reports using the old plugin data, whi
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "All Customers"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Article Report 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Journal Report 1"

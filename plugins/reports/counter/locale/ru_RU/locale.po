@@ -91,3 +91,9 @@ msgstr "Ссылки ниже генерируют устаревшие отче
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Все покупатели"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Отчет по статьям 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Отчет по журналам 1"
