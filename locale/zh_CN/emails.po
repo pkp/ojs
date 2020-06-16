@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2020-06-15 16:01+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2020-06-16 22:10+0000\n"
+"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/emails/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -1178,7 +1178,6 @@ msgstr ""
 "<br />\n"
 "访问我们的网站查看<a href=\"{$url}\">公告全文</a>。."
 
-#, fuzzy
 msgid "emails.announcement.subject"
 msgstr "{$title}"
 
