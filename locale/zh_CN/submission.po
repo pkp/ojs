@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-15 16:01+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2020-06-16 22:10+0000\n"
+"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/submission/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -22,16 +22,16 @@ msgstr ""
 "generic.shtml#type</a>"
 
 msgid "submission.event.publicIdentifiers"
-msgstr "投稿的公开标识符已更新。"
+msgstr "稿件的公开标识符已更新。"
 
 msgid "grid.action.issueEntry"
-msgstr "查看此提交的源数据"
+msgstr "查看稿件元数据"
 
 msgid "submission.submit.whatNext.description"
-msgstr "该期刊已收到您提交的通知，并且已通过电子邮件发送确认。 编辑审核完提交的内容后，他们将与您联系。"
+msgstr "该期刊已收到您提交的稿件通知，并且已通过电子邮件发送确认。 编辑审核完提交的内容后，他们将与您联系。"
 
 msgid "submission.issueEntry"
-msgstr "源数据"
+msgstr "元数据"
 
 msgid "submission.submit.noContext"
 msgstr "找不到此投稿的期刊。"
@@ -40,10 +40,10 @@ msgid "submission.abstract.wordCount.description"
 msgstr "摘要不得超过 {$wordCount} 个字。"
 
 msgid "grid.action.workflow"
-msgstr "投稿工作流"
+msgstr "稿件工作流"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "新投稿"
+msgstr "新稿件"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "开始一次新的提交"
@@ -56,3 +56,169 @@ msgstr "选择文章组件"
 
 msgid "submission.submit.userGroup"
 msgstr "以下列角色提交..."
+
+msgid "publication.selectIssue"
+msgstr "选择一个期次安排出版"
+
+msgid "publication.scheduleInissue"
+msgstr "分配给期次"
+
+msgid "publication.unscheduledIn"
+msgstr "尚未计划将其发布在某一期中。"
+
+msgid "publication.scheduledIn"
+msgstr "出版物已安排于第 <a href=\"{$issueUrl}\">{$issueName}</a> 期次。"
+
+msgid "publication.publishedIn"
+msgstr "发布在 <a href=\"{$issueUrl}\">{$issueName}</a>。"
+
+msgid "publication.required.issue"
+msgstr "在发布之前，必须先将该文章分配一个期次。"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr "已满足所有发布要求。由于发布日期已设置为{$ datePublished}。您确定要发布吗？"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr "已满足所有发布要求。这将发布在{$ issue}中。您确定要发布吗？"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr "已满足所有发布要求。这将在{$ issue}发布时发布。您确定要安排发布吗？"
+
+msgid "publication.publish.confirmation"
+msgstr "已满足所有发布要求。您确定要发布吗？"
+
+msgid "publication.issue.success"
+msgstr "出版物的期次细节已更新。"
+
+msgid "publication.invalidIssue"
+msgstr "未发现出版物的期次。"
+
+msgid "publication.invalidSection"
+msgstr "未发现出版物的栏目。"
+
+msgid "publication.datePublished.description"
+msgstr "出版日期会在期刊发行时自动设定。除非文章以前发表过或者在做回溯数据，否则不要人为设定。"
+
+msgid "galley.publicationNotFound"
+msgstr "未发现此校样的正氏出版物。"
+
+msgid "galley.editPublishedDisabled"
+msgstr "此出版物已出版，所以校样已经不能编辑。"
+
+msgid "catalog.category.heading"
+msgstr "所有项"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} 项"
+
+msgid "submission.sectionOptions"
+msgstr "栏目选项"
+
+msgid "section.any"
+msgstr "任意栏目"
+
+msgid "submission.metadataDescription"
+msgstr "这些规范基于都柏林核心元数据集（一种用于描述期刊内容的国际标准）。"
+
+msgid "submission.citationFormat.notFound"
+msgstr "请求的引用格式无法进行检索。"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "选择合作者的角色。"
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "您的摘要太长了。请按照要求作必要删减。"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "请填写文章摘要。"
+
+msgid "submission.submit.form.titleRequired"
+msgstr "请填写文章题目。"
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "作者的名字、姓氏、电子邮件地址必填。"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "至少要有一位作者。"
+
+msgid "submission.submit.contributorRole"
+msgstr "合作者"
+
+msgid "submission.submit.privacyStatement"
+msgstr "隐私声明"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "你在继续操作前已经阅读并且理解了下面的要求。"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "稿件清单"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "选择稿件语言。"
+
+msgid "submission.incomplete"
+msgstr "等待批复中"
+
+msgid "submission.complete"
+msgstr "已批准"
+
+msgid "submission.upload.fileContents"
+msgstr "文章组成"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "稿件的期刊元数据已更新。"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "送审"
+
+msgid "workflow.review.externalReview"
+msgstr "审核"
+
+msgid "submission.confirmSubmit"
+msgstr "确认要提交此文章吗？"
+
+msgid "submission.pageProofs"
+msgstr "校对"
+
+msgid "submission.submit.upload.description"
+msgstr "上传跟稿件相关的文件，包括文章原文、多媒体、数据集、艺术插图等等。"
+
+msgid "submission.submit.titleAndSummary"
+msgstr "标题和摘要"
+
+msgid "grid.action.pageProofApproved"
+msgstr "此校样文件已批准。"
+
+msgid "grid.action.approveProof"
+msgstr "批准此用于校样的文件。"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"美工编辑上传了准备发布时用的校样文件。请通过<em>分配任务</em>提醒作者和其他人对校样进行最后审核校对，如有修改，清在发布之前上传更正的文件。"
+
+msgid "submission.galleyFiles"
+msgstr "校样文件"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "启用此校样"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>此校样读者 <em>可用</em>。</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>此校样对读者 <em>不可用e</em>。</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "格式合格"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "稿件文章 \"{$galleyFormatName}\" 校样未生成。"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "稿件文章 \"{$galleyFormatName}\" 校样生成。"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "当期文章校样"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "选择提交稿件的身份。"
