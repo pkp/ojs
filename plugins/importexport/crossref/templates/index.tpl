@@ -82,6 +82,7 @@
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.crossref.settings.form.validation" checked=$validation|default:false}
+							<input type='hidden' id='downloadFileEnabled' name='downloadFileEnabled' value='1' />
 						{/fbvFormSection}
 						{if !empty($actionNames)}
 							{fbvFormSection}
