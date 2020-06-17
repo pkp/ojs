@@ -1657,6 +1657,12 @@ msgstr "Registration was not successful! The DOI registration server returned an
 msgid "plugins.importexport.common.register.success"
 msgstr "Registration successful!"
 
+msgid "plugins.importexport.common.validation.success"
+msgstr "Validation successful!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Validation Failed."
+
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI prefix is missing for the journal with the path {$path}."
 

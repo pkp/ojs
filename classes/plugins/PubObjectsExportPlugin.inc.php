@@ -188,25 +188,32 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			assert($filter != null);
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
-			import('lib.pkp.classes.file.FileManager');
-			$fileManager = new FileManager();
-			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
-			$fileManager->writeFile($exportFileName, $exportXml);
 
-			$downloadFileEnabled = $request->getUserVar('downloadFileEnabled');
-			if (isset($downloadFileEnabled) && $downloadFileEnabled == 1) {
-				$fileManager->downloadByPath($exportFileName);
-			} else {
-				$this->_sendNotification(
-					$request->getUser(),
-					$this->getDepositSuccessNotificationMessageKey(),
-					NOTIFICATION_TYPE_SUCCESS
-				);
+			$onlyValidateExport = $request->getUserVar('onlyValidateExport');
+			if (isset($onlyValidateExport) && $onlyValidateExport == 'on') {
+				if (isset($exportXml)) {
+					$this->_sendNotification(
+						$request->getUser(),
+						$this->getValidationExportSuccessNotificationMessageKey(),
+						NOTIFICATION_TYPE_SUCCESS
+					);
+				} else {
+					$this->_sendNotification(
+						$request->getUser(),
+						$this->getValidationExportFailNotificationMessageKey(),
+						NOTIFICATION_TYPE_ERROR
+					);
+				}
 
 				$request->redirect(null, null, null, $path, null, $tab);
+			} else {
+				import('lib.pkp.classes.file.FileManager');
+				$fileManager = new FileManager();
+				$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+				$fileManager->writeFile($exportFileName, $exportXml);
+				$fileManager->downloadByPath($exportFileName);
+				$fileManager->deleteByPath($exportFileName);
 			}
-			
-			$fileManager->deleteByPath($exportFileName);
 		} elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
 			assert($filter != null);
 			// Get the XML
@@ -259,6 +266,22 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 */
 	function getDepositSuccessNotificationMessageKey() {
 		return 'plugins.importexport.common.register.success';
+	}
+
+	/**
+	 * Get the locale key used in the notification for
+	 * the successful export validation.
+	 */
+	function getValidationExportSuccessNotificationMessageKey() {
+		return 'plugins.importexport.common.validation.success';
+	}
+
+	/**
+	 * Get the locale key used in the notification for
+	 * the unsuccessful export validation.
+	 */
+	function getValidationExportFailNotificationMessageKey() {
+		return 'plugins.importexport.common.validation.fail';
 	}
 
 	/**
