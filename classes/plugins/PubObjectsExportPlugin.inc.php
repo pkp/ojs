@@ -192,7 +192,20 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			$fileManager = new FileManager();
 			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
 			$fileManager->writeFile($exportFileName, $exportXml);
-			$fileManager->downloadByPath($exportFileName);
+
+			$downloadFileEnabled = $request->getUserVar('downloadFileEnabled');
+			if (isset($downloadFileEnabled) && $downloadFileEnabled == 1) {
+				$fileManager->downloadByPath($exportFileName);
+			} else {
+				$this->_sendNotification(
+					$request->getUser(),
+					$this->getDepositSuccessNotificationMessageKey(),
+					NOTIFICATION_TYPE_SUCCESS
+				);
+
+				$request->redirect(null, null, null, $path, null, $tab);
+			}
+			
 			$fileManager->deleteByPath($exportFileName);
 		} elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
 			assert($filter != null);
