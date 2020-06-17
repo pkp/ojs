@@ -186,11 +186,16 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$path = array('plugin', $this->getName());
 		if ($request->getUserVar(EXPORT_ACTION_EXPORT)) {
 			assert($filter != null);
+
+			$onlyValidateExport = ($request->getUserVar('onlyValidateExport')) ? true : false;
+			if ($onlyValidateExport) {
+				$noValidation = false;
+			}
+
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
-
-			$onlyValidateExport = $request->getUserVar('onlyValidateExport');
-			if (isset($onlyValidateExport) && $onlyValidateExport == 'on') {
+			
+			if ($onlyValidateExport) {
 				if (isset($exportXml)) {
 					$this->_sendNotification(
 						$request->getUser(),
