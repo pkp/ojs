@@ -65,6 +65,9 @@ msgstr "Use the CrossRef test API (testing environment) for the DOI deposit. Ple
 msgid "plugins.importexport.crossref.settings.form.validation"
 msgstr "Validate XML. Use this option for the XML download for the manual DOI registration."
 
+msgid "plugins.importexport.crossref.settings.form.onlyValidateExport"
+msgstr "Only validate export. Don't download the file."
+
 msgid "plugins.importexport.crossref.issues.description"
 msgstr "Note: Only issues (and not their articles) will be considered for export/registration here."
 
@@ -94,7 +97,7 @@ msgstr ""
 "\t\t<p>If a deposit has failed, please solve the problem and try to register the DOI again.</p>"
 
 msgid "plugins.importexport.crossref.action.export"
-msgstr "Download XML"
+msgstr "Export"
 
 msgid "plugins.importexport.crossref.action.markRegistered"
 msgstr "Mark active"

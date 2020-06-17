@@ -136,18 +136,10 @@ describe('DOI/Crossref tests', function() {
 		cy.get('a#ui-id-2').click();
 		cy.get('input#select-1').check();
 		cy.get('input#validation').check();
-
-		cy.get('input#downloadFileEnabled').then(elem => {
-			elem.val('0');
-		});
-
+		cy.get('input#onlyValidateExport').check();
 		cy.get('button#export').click();
 
-		cy.get('input#downloadFileEnabled').then(elem => {
-			elem.val('1');
-		});
-
-		cy.get('div:contains("Registration successful!")');
+		cy.contains('Validation successful!');
 	});
 	
 })
