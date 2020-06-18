@@ -64,7 +64,6 @@ describe('DOI/Crossref tests', function() {
 	});
 
 	it('Check Issue DOI Visible', function() {
-		// Chec
 		cy.visit('');
 		cy.get('a:contains("Archives")').click();
 		cy.get('a:contains("' + issueDescription + '")').click();

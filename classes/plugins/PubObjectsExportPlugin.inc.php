@@ -199,13 +199,13 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				if (isset($exportXml)) {
 					$this->_sendNotification(
 						$request->getUser(),
-						$this->getValidationExportSuccessNotificationMessageKey(),
+						'plugins.importexport.common.validation.success',
 						NOTIFICATION_TYPE_SUCCESS
 					);
 				} else {
 					$this->_sendNotification(
 						$request->getUser(),
-						$this->getValidationExportFailNotificationMessageKey(),
+						'plugins.importexport.common.validation.fail',
 						NOTIFICATION_TYPE_ERROR
 					);
 				}
@@ -271,22 +271,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 */
 	function getDepositSuccessNotificationMessageKey() {
 		return 'plugins.importexport.common.register.success';
-	}
-
-	/**
-	 * Get the locale key used in the notification for
-	 * the successful export validation.
-	 */
-	function getValidationExportSuccessNotificationMessageKey() {
-		return 'plugins.importexport.common.validation.success';
-	}
-
-	/**
-	 * Get the locale key used in the notification for
-	 * the unsuccessful export validation.
-	 */
-	function getValidationExportFailNotificationMessageKey() {
-		return 'plugins.importexport.common.validation.fail';
 	}
 
 	/**
