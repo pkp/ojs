@@ -55,6 +55,7 @@ msgstr "Tugas registrasi otomatis CrossRef"
 msgid "plugins.importexport.crossref.action.markRegistered"
 msgstr "Tandai sebagai aktif"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Unduh XML"
 

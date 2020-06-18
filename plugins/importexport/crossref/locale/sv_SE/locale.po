@@ -90,6 +90,7 @@ msgstr ""
 "\t\t<p>Bara den senaste deponeringen visas.</p>\n"
 "\t\t<p>Om deponeringen misslyckas, vänligen lös problemet och registrera DOI:t en gång till.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Ladda ner XML"
 

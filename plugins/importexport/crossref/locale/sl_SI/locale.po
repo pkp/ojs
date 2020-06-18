@@ -89,6 +89,7 @@ msgstr ""
 "\t\t<p>Prikazan je samo status zadnjega poskusa depozita.</p>\n"
 "\t\t<p>Če je bil depozit neuspešen, razrešite problem in ponovno poskusite registrirati DOI.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Prenesi XML"
 

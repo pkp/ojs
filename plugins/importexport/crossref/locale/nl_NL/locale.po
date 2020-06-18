@@ -95,6 +95,7 @@ msgstr ""
 "\t\t<p>Alleen de status van de laatste depostitpoging wordt getoond.</p>\n"
 "\t\t<p>Als een deposit mislukt is, los het probleem dan op en probeer de DOI opnieuw te registreren.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Download XML"
 

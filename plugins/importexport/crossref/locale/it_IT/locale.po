@@ -109,6 +109,7 @@ msgstr ""
 "<p>Se il deposito è fallito, risolvere il problema e riprovare a depositare "
 "il DOI.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Scarica XML"
 

@@ -90,6 +90,7 @@ msgstr ""
 "\t\t<p> Apenas o status da última tentativa de depósito é exibido.</p>\n"
 "\t\t<p> Se um depósito falhou, resolva o problema e tente registrar novamente o DOI.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Download XML"
 

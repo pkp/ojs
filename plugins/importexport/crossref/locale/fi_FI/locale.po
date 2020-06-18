@@ -90,6 +90,7 @@ msgstr ""
 "\t\t<p>Vain viimeisimmän talletusyrityksen tila näytetään.</p>\n"
 "\t\t<p>Jos talletus on epäonnistunut, ratkaise ongelma ja yritä rekisteröidä DOI-tunniste uudelleen.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Lataa XML"
 
