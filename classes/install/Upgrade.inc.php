@@ -1050,7 +1050,9 @@ class Upgrade extends Installer {
 				$journal = $journalDao->getById($row['context_id']);
 				$managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
 				$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
-				$creatorUserId = $managerUsers->next()->getId();
+				$managerUser = $managerUsers->next();
+				if (!$managerUser) fatalError('Journal ID ' . $journal->getId() . ' does not have any enrolled managers!');
+				$creatorUserId = $managerUser->getId();
 			}
 			$article = $submissionDao->getById($row['article_id']);
 			if (!$article) {
