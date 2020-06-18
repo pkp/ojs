@@ -95,6 +95,7 @@ msgstr ""
 "\t\t<p>إذا فشل الإيداع، لطفاً، عالج المشكلة ثم حاول تسجيل DOI مرة أخرى.</p>\n"
 "\t"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "تنزيل XML"
 

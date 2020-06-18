@@ -121,6 +121,7 @@ msgstr "Markér aktiv"
 msgid "plugins.importexport.crossref.senderTask.name"
 msgstr "CrossRef automatiske registreringsopgave"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Download XML"
 

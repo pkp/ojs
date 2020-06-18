@@ -89,6 +89,7 @@ msgstr "Aktywne"
 msgid "plugins.importexport.crossref.status.markedRegistered"
 msgstr "Oznaczone jako aktywne"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Pobierz XML"
 

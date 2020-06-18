@@ -98,6 +98,7 @@ msgstr ""
 "<p> Csak az utolsó betöltési kísérlet állapota jelenik meg. </p>\n"
 "<p> Ha egy betöltés sikertelen, kérjük, oldja meg a problémát, és próbálja meg ismét regisztrálni a DOI-t.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "XML letöltés"
 

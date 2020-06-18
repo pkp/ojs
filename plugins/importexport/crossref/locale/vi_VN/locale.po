@@ -41,6 +41,7 @@ msgstr "Nhiệm vụ đăng ký tự động CrossRef"
 msgid "plugins.importexport.crossref.action.markRegistered"
 msgstr "Đánh dấu hoạt động"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Tải xuống XML"
 

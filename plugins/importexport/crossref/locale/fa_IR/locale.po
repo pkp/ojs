@@ -90,6 +90,7 @@ msgstr ""
 "اگر سپرده شکست خورده باشد، لطفا مشکل را حل کنید و مجددا DOI را ثبت کنید.\n"
 "</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "دانلود XML"
 

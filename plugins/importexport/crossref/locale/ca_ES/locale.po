@@ -73,6 +73,7 @@ msgstr ""
 msgid "plugins.importexport.crossref.action.markRegistered"
 msgstr "Marcar com a actiu"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Descarregar XML"
 

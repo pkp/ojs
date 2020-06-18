@@ -93,6 +93,7 @@ msgstr ""
 "\t\t<p>Es wird nur der Status des letzten Übermittlungsversuchs angezeigt.</p>\n"
 "\t\t<p>Wenn eine Ablieferung fehlgeschlagen ist, beheben Sie bitte die Ursache und versuchen Sie erneut, den DOI zu registrieren.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "XML herunterladen"
 

@@ -98,6 +98,7 @@ msgstr ""
 "  <p> Pokud uložení selhalo, vyřešte problém a pokuste se znovu "
 "zaregistrovat DOI. </p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Stáhnout XML"
 

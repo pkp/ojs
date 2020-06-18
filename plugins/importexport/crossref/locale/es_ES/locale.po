@@ -95,6 +95,7 @@ msgstr ""
 "\t\t<p>Solo se muestran los estados de los últimos intentos de depósito.</p>\n"
 "\t\t<p>Si un deposito fallase, resuelva el problema e intente registrar el DOI de nuevo.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Descargar XML"
 
