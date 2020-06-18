@@ -185,7 +185,7 @@ msgstr ""
 "{$editorialContactSignature}"
 
 msgid "emails.submissionAck.description"
-msgstr "This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission."
+msgstr "This email, when enabled, is automatically sent to an author when they complete the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission."
 
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Submission Acknowledgement"
