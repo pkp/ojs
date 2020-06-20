@@ -1,12 +1,70 @@
 OJS 3.2.1 Release Notes
 Git tag: 3_2_1-0
 
-Release date: 
-============================
+Release date: June 19, 2020
+===========================
 
 New Features
 ------------
+	#5886: OMP site wide search
+	#5784: [OMP] Site index should list all presses
+	#5744: Add Noto font for Arabic characters
+	#5703: Improve upgrade performance
+	#5694: Allow subeditors to be assigned to Categories
+	#5601: Add range slider for filter by last activity in submissions list
+	#5190: Add TITLE parameter to IFRAME of article galley view
+	#5177: Issue archive pages should add headings to issue titles
+	#4888: Write integration tests for versioning features
+	#3698: Support a "draft" option for reviews
 
 Bug Fixes
 --------------------
-
+	#6026: Submission deletion can delete author records in other submissions
+	#6022: PostgreSQL upgrade to 3.2.0 resets all submissions to unpublished
+	#6000: Undefined const SCHEMA_PUBLICATION during upgrade
+	#5977: Fatal error viewing HTML publication format in OMP
+	#5974: TinyMCE can not be loaded in sr_RS@cyrillic locale
+	#5967: SQL error on 3.2.0->3.2.1RC upgrade
+	#5961: enabling crossrefReferenceLinking (even master branch) makes doi disappear
+	#5933: [OPS] Editorial Statistics "Active Submissions" don't match actual number
+	#5923: PostgreSQL 12 not properly supported
+	#5920: Native ImportExport Plugin: Importing a localized publication causes an error
+	#5907: CrossRefExportPlugin Article Search not filtering by `Status`
+	#5903: Reorder OPS archive/browse handlers
+	#5876: OJS3.2 Editorial activity stats counting submissions from removed journals
+	#5872: Update Cypress and vue-cli to address warnings
+	#5869: Clean up plugin installation error handling
+	#5862: Resolve double slash in file paths during upgrade
+	#5860: Multilingual form fields do not show primary locale on initial load
+	#5856: Review Form not getting the correct title and description
+	#5837: Publication and Submission State inconsistency
+	#5833: [OMP] Order catalog by series position leads to database error
+	#5813: Logged out users directed to site homepage instead of journal homepage when logo is present
+	#5801: Recommend by Author Plugin duplicates entries
+	#5796: Metadata sections in submission form
+	#5791: Vue js error after choosing a file for uploading
+	#5789: H1 for screen readers not available in Site level if site logo is given
+	#5781: Optionally suppress SMTP authentication in PHPMailer
+	#5698: Update the citation library to solving the citation problem.
+	#5695: OJS - Extra space below empty submission list
+	#5693: ValidationFactory reports required fields with value "0" as invalid
+	#5640: Language installation features hidden from single-journal installations
+	#5633: FormComponent subclasses, even when invoked via the API, require CSRF tokens
+	#5631: Mismatch between datePublished and issue scheduling can cause problems
+	#5630: Unscheduling a publication does not update the issue scheduling field
+	#5617: Themes shown when installed, even if they are not enabled
+	#5585: Update syntax for draggable options
+	#5533: Unclear language for setting to allow participants to edit metadata
+	#5532: Editors fail to schedule for publication
+	#5373: Unported CC licenses 3.0
+	#5288: Performance issue using LIMIT and OFFSET in search users query
+	#5273: User validation email references {$contextName}, which is not resolved before sending
+	#5265: Crossref error message is not translated
+	#5240: Skip links and anchors in the default theme should appear within landmarks
+	#5186: Add aria-required to register and login forms
+	#5176: Sidebar blocks should always have a heading and section
+	#5175: Fix use of <h1> in header
+	#5095: Workflow participants receive more than one email about the same thing
+	#5061: [OJS 3.1.2-1] Crossref module: Language of all metadata EXCEPT author names depends on submission language (author names depend on locale chosen)
+	#4746: Announcement notification email should include the announcement content
+	#4042: Editorial history should save the datestamp when a new review round starts
