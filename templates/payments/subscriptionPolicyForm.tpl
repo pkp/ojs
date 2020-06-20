@@ -22,7 +22,7 @@
 		<p>{translate key="manager.subscriptionPolicies.subscriptionContactDescription"}</p>
 		{fbvElement type="text" label="user.name" required=true id="subscriptionName" value=$subscriptionName maxlength="60" inline=true size=$fbvStyles.size.MEDIUM}
 		{fbvElement type="text" label="user.email" id="subscriptionEmail" value=$subscriptionEmail size=$fbvStyles.size.MEDIUM required=true}
-		{fbvElement type="text" label="user.phone" name="subscriptionPhone" id="subscriptionPhone" value=$subscriptionPhone maxlength="24" size=$fbvStyles.size.SMALL}
+		{fbvElement type="tel" label="user.phone" name="subscriptionPhone" id="subscriptionPhone" value=$subscriptionPhone maxlength="24" size=$fbvStyles.size.SMALL}
 		{fbvElement type="textarea" id="subscriptionMailingAddress" value=$subscriptionMailingAddress height=$fbvStyles.height.SHORT required=true label="common.mailingAddress"}
 	{/fbvFormSection}
 
