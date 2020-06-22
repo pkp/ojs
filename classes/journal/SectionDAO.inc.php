@@ -415,33 +415,15 @@ class SectionDAO extends PKPSectionDAO {
 	 *  that are active.
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
-	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false, $activeOnly = false) {
+	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false) {
 		$result = $this->retrieveRange(
-			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ($activeOnly ? ' AND is_inactive = 0' : '') . ' ORDER BY seq',
+			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ' ORDER BY seq',
 			(int) $journalId, $rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
-
-	/**
-	 * Retrieve the IDs and titles of the sections for a context in an associative array.
-	 * @param $contextId int context ID
-	 * @param $submittableOnly boolean optional. Whether to return only sections
-	 *  that can be submitted to by anyone.
-	 * @param $activeOnly boolean optional. Whether to return only sections 
-	 *  that are active.
-	 * @return array
-	 */
-	function getTitlesByContextId($contextId, $submittableOnly = false, $activeOnly = false) {
-		$sections = array();
-		$sectionsIterator = $this->getByContextId($contextId, null, $submittableOnly, $activeOnly);
-		while ($section = $sectionsIterator->next()) {
-			$sections[$section->getId()] = $section->getLocalizedTitle();
-		}
-		return $sections;
-	}
-
+	
 	/**
 	 * Retrieve all sections.
 	 * @param $rangeInfo DBResultRange optional

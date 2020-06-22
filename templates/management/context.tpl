@@ -20,7 +20,7 @@
 		</notification>
 	{/if}
 
-	{if !$submissionsEnabled}
+	{if !$currentContext->getData('enableSubmissions')}
 		<div class="pkp_notification">
 			{capture assign="notificationContents"}{translate key="manager.setup.allowSubmissions.enableSubmissions.notAccepting" }{/capture}
 			{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId="submissionsEnabledWarning-"|uniqid notificationStyleClass="notifyWarning" notificationTitle="common.warning"|translate notificationContents=$notificationContents}

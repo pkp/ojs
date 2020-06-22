@@ -9,7 +9,7 @@
  * @class SectionGridCellProvider
  * @ingroup controllers_grid_settings_sections
  *
- * @brief Subclass for review form column's cell provider
+* @brief Grid cell provider for section grid
  */
 
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
@@ -45,38 +45,41 @@ class SectionGridCellProvider extends GridCellProvider {
 				$router = $request->getRouter();
 				import('lib.pkp.classes.linkAction.LinkAction');
 
-				if ($element['inactive']) return array(new LinkAction(
-					'activateSection',
-					new RemoteActionConfirmationModal(
-						$request->getSession(),
-						__('manager.sections.confirmActivateSection'),
-						null,
-						$router->url(
-							$request,
+				if ($element['inactive']) {
+					return array(new LinkAction(
+						'activateSection',
+						new RemoteActionConfirmationModal(
+							$request->getSession(),
+							__('manager.sections.confirmActivateSection'),
 							null,
-							'grid.settings.sections.SectionGridHandler',
-							'activateSection',
-							null,
-							array('sectionKey' => $row->getId())
+							$router->url(
+								$request,
+								null,
+								'grid.settings.sections.SectionGridHandler',
+								'activateSection',
+								null,
+								array('sectionKey' => $row->getId())
+							)
 						)
-					)
-				));
-				else return array(new LinkAction(
-					'deactivateSection',
-					new RemoteActionConfirmationModal(
-						$request->getSession(),
-						__('manager.sections.confirmDeactivateSection'),
-						null,
-						$router->url(
-							$request,
+					));
+				} else {
+					return array(new LinkAction(
+						'deactivateSection',
+						new RemoteActionConfirmationModal(
+							$request->getSession(),
+							__('manager.sections.confirmDeactivateSection'),
 							null,
-							'grid.settings.sections.SectionGridHandler',
-							'deactivateSection',
-							null,
-							array('sectionKey' => $row->getId())
+							$router->url(
+								$request,
+								null,
+								'grid.settings.sections.SectionGridHandler',
+								'deactivateSection',
+								null,
+								array('sectionKey' => $row->getId())
+							)
 						)
-					)
-				));
+					));
+				}
 		}
 		return parent::getCellActions($request, $row, $column, $position);
 	}

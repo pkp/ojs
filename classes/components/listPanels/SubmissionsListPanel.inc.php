@@ -17,10 +17,13 @@ use \PKP\components\listPanels\PKPSubmissionsListPanel;
 
 class SubmissionsListPanel extends PKPSubmissionsListPanel {
 
+	/** @var boolean Whether to show inactive section filters */
+  	public $includeInactiveSectionFilters = false;
+
 	/**
 	 * @copydoc PKPSubmissionsListPanel::getConfig()
 	 */
-	public function getConfig($activeOnly = false) {
+	public function getConfig() {
 		$config = parent::getConfig();
 
 		$request = \Application::get()->getRequest();
@@ -28,7 +31,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 			// Add section filters above last activity filter
 			array_splice($config['filters'], 2, 0, [[
 				'heading' => __('section.sections'),
-				'filters' => self::getSectionFilters($activeOnly),
+				'filters' => self::getSectionFilters($this->includeInactiveSectionFilters),
 			]]);
 		}
 
@@ -68,6 +71,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	/**
 	 * Compile the sections for passing as filters
 	 *
+	 * @param $activeOnly boolean show inactive section filters or not
 	 * @return array
 	 */
 	static function getSectionFilters($activeOnly = false) {

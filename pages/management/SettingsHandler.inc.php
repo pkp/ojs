@@ -48,10 +48,6 @@ class SettingsHandler extends ManagementHandler {
 		$templateMgr = TemplateManager::getManager($request);
 		$context = $request->getContext();
 		
-		// Check if the submissions are enabled
-		$submissionsEnabled = $context->getData('enableSubmissions');
-		$templateMgr->assign('submissionsEnabled', $submissionsEnabled);
-		
 		$templateMgr->display('management/workflow.tpl');
 	}
 
@@ -129,10 +125,6 @@ class SettingsHandler extends ManagementHandler {
 				'groupId' => 'default',
 			]));
 		}
-
-		// Check if the submissions are enabled
-		$submissionsEnabled = $context->getData('enableSubmissions');
-		$templateMgr->assign('submissionsEnabled', $submissionsEnabled);
 
 		// Add forms to the existing settings data
 		$components = $templateMgr->getState('components');

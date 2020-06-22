@@ -32,7 +32,6 @@ class AllowSubmissionsForm extends FormComponent {
 	 */
 	public function __construct($action, $context) {
 		$this->action = $action;
-		$this->successMessage = __('manager.setup.allowSubmissions.success');
 
 		$this->addField(new FieldOptions('enableSubmissions', [
 				'label' => __('manager.setup.allowSubmissions.enableSubmissions.label'),

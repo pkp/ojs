@@ -269,10 +269,15 @@ class SectionGridHandler extends SetupGridHandler {
 
 		// Get section object
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-		// Prevent deactivating all sections
-		$sectionIterator = $sectionDao->getByContextId($context->getId(),null,false,true);
-
-		if ($sectionIterator->getCount() > 1) {
+		// Validate if it can be inactive
+		$sectionsIterator = $sectionDao->getByContextId($context->getId(),null,false);
+		$activeSectionsCount = 0;
+		while ($section = $sectionsIterator->next()) {
+			if (!$section->getIsInactive()) {
+				$activeSectionsCount++;
+			}
+		}
+		if ($activeSectionsCount > 1) {
 			$section = $sectionDao->getById($sectionId, $context->getId());
 
 			if ($request->checkCSRF() && isset($section) && !$section->getIsInactive()) {

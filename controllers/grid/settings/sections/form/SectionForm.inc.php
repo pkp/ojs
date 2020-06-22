@@ -55,7 +55,7 @@ class SectionForm extends PKPSectionForm {
 				'title' => $section->getTitle(null), // Localized
 				'abbrev' => $section->getAbbrev(null), // Localized
 				'reviewFormId' => $section->getReviewFormId(),
-				'isInactive' => $section->getIsInactive(), // #2066: Inverted
+				'isInactive' => $section->getIsInactive(),
 				'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
 				'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
 				'abstractsNotRequired' => $section->getAbstractsNotRequired(),
@@ -147,17 +147,6 @@ class SectionForm extends PKPSectionForm {
 		$section->setHideAuthor($this->getData('hideAuthor') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
-
-		// Prevent deactivating all sections
-		$sectionIterator = $sectionDao->getByContextId($journal->getId(),null,false,true);
-
-		if ($sectionIterator->getCount() <= 1 && $section->getIsInactive()) {
-			$section->setIsInactive(0);
-			// Create the notification.
-			$notificationMgr = new NotificationManager();
-			$user = $request->getUser();
-			$notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('manager.sections.confirmDeactivateSection.error')));
-		}
 
 		// Insert or update the section in the DB
 		if ($this->getSectionId()) {
