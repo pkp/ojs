@@ -9,7 +9,9 @@
 
 describe('Statistics Tests', function() {
 	it('Generates usage statistics', function() {
-		cy.exec('php lib/pkp/tools/generateTestMetrics.php');
+		var today = new Date().toISOString().split('T')[0];
+		var daysAgo90 = (d => new Date(d.setDate(d.getDate()-91)) )(new Date).toISOString().split('T')[0];
+		cy.exec('php lib/pkp/tools/generateTestMetrics.php 1 ' + daysAgo90 + ' ' + today);
 	});
 
 	it('Check statistics', function() {
