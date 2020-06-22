@@ -34,15 +34,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Επιβεβαιώνετε την απενεργοποίηση αυτής της γλώσσας; Η επιλογή σας μπορεί να επηρεάσει τη λειτουργία όσων περιοδικών χρησιμοποιούν τη συγκεκριμένη γλώσσα."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Η μεταφόρτωση γλωσσών από τον διακομιστή web του Public Knowledge Project δεν είναι δυνατή διότι:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Ο διακομιστής σας δεν έχει ή δεν επιτρέπει εκτέλεση του βοηθητικού προγράμματος GNU \"tar\".</li>\n"
-"\t\t<li>Το OJS δε μπορεί να τροποποιήσει το αρχείο μητρώου γλωσσών, συνήθως \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Τα πακέτα γλωσσών μπορούν να μεταφορτωθούν από τον δικτυακό τόπο του PKP <a href=\"http://pkp.sfu.ca\"></a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Αυτή θα είναι η προκαθορισμένη γλώσσα του ιστοτόπου και όλων των φιλοξενούμενων περιοδικών."
 
@@ -51,27 +42,6 @@ msgstr "Επιλέξτε τις γλώσσες που θα υποστηρίζο�
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Ενδέχεται να μην υπάρχουν πλήρεις μεταφράσεις για τις επιλεγμένες γλώσσες."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Επιβεβαιώνετε την απεγκατάσταση αυτής της γλώσσας; Η επιλογή σας μπορεί να επηρεάσει τη λειτουργία όσων περιοδικών χρησιμοποιούν τη συγκεκριμένη γλώσσα."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Επιλέξτε τις πρόσθετες γλώσσες προς εγκατάσταση. Η εγκατάσταση γλωσσών είναι προαπαιτούμενο για τη χρήση τους στα περιοδικά. Για πληροφορίες σχετικά με την υποστήριξη νέων γλωσσών, ανατρέξτε στο τεκμηριωτικό υλικό του OJS."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Η μεταφόρτωση της γλώσσας απέτυχε. Ακολουθεί η περιγραφή του σφάλματος."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Η γλώσσα \"{$locale}\" εγκαταστάθηκε."
-
-msgid "admin.languages.download"
-msgstr "Μεταφόρτωση γλώσσας"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Το άνοιγμα του αρχείου τεκμηρίωσης της γλώσσας από τον ιστότοπο του PKP δεν είναι εφικτό."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Δεν είναι δυνατή η προσθήκη της γλώσσας στο αρχείο μητρώου γλωσσών, συνήθως \"registry/locales.xml\"."
 
 msgid "admin.auth.ojs"
 msgstr "Βάση δεδομένων Χρηστών του OJS"

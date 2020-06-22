@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2020-01-31 16:21+0000\n"
-"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
+"PO-Revision-Date: 2020-06-15 16:01+0000\n"
+"Last-Translator: Edvin Erdtman <edvin.erdtman@liu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/admin/sv/>\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
@@ -33,15 +33,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Är du säker på att du vill inaktivera detta språk/region? Det kan påverka tidskrifter som använder språket nu."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Det går för tillfället inte att ladda ned språkpaket från Public Knowledge Projects webbserver eftersom:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Din server har inte eller tillåter inte körning av GNU \"tar\"-verktyget.</li>\n"
-"\t\t<li>OJS kan inte ändra på språkets registerfil, vanligtvis \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Språkpaket kan laddas ned manuellt från <a href=\"http://pkp.sfu.ca\">PKP:s webbplats</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Det här kommer att vara förvalt språk för webbplatsen och samtliga tillhörande tidskrifter."
 
@@ -50,27 +41,6 @@ msgstr "Välj språk/regioner som webbplatsen ska stödja. Valda språk/regioner
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "De markerade språken/regionerna kan vara ofullständigt översatta."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Är du säker på att du vill avinstallera språket/regionen? Det kan komma att påverka de tidskrifter som stöds av språket/regionen."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Välj ytterligare språk/regioner som ska stödjas i systemet. Språken/regionerna måste installeras innan de kan användas av tidskrifterna. Se OJS-dokumentationen för information om hur man lägger till nya språk/regioner."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Nedladdningen av språket/regionen misslyckades. Se felmeddelanden nedan för information."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Språket/regionen \"{$locale}\" har installerats."
-
-msgid "admin.languages.download"
-msgstr "Ladda ned språk/region"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Kan ej öppna språkbeskrivning från PKP:s hemsida."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Kan ej lägga till nya språk/regioner till språkregistreringsfilen, vanligtvis \"registry/locales.xml\"."
 
 msgid "admin.auth.ojs"
 msgstr "OJS Användardatabas"
@@ -175,3 +145,18 @@ msgstr "Open access-avisering"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Granskningspåminnelse"
+
+msgid "admin.settings.info.success"
+msgstr "Informationen om webbplatsen har uppdaterats."
+
+msgid "admin.settings.config.success"
+msgstr "Webbplatsens inställningar har uppdaterats."
+
+msgid "admin.settings.appearance.success"
+msgstr "Webbplatsens utseende har uppdaterats."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} har redigerats."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} har skapats."

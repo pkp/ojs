@@ -34,15 +34,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Вы уверены, что хотите отключить этот язык? Это может повлиять на все размещенные журналы, которые сейчас используют его."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Скачивание языковых пакетов с веб-сервера Public Knowledge Project сейчас недоступно, поскольку:</p>\n"
-"\t<ul>\n"
-"\t\t<li>На вашем сервере утилита GNU «tar» не установлена или не разрешено выполнение ее сервером.</li>\n"
-"\t\t<li>OJS нет может изменить файл списка языков, обычно расположенный в «registry/locales.xml».</li>\n"
-"\t</ul>\n"
-"<p>Языковые пакеты могут быть вручную скачаны с <a href=\"http://pkp.sfu.ca\">веб-сайта PKP</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Это будет язык по умолчанию для сайта и всех размещенных на нем журналов."
 
@@ -51,27 +42,6 @@ msgstr "Выберите все языки для поддержки на сай
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Поддержка отмеченных языков может быть неполной."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Вы уверены, что хотите удалить этот язык? Это может повлиять на все размещенные журналы, которые сейчас используют его."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Выберите дополнительные языки для установки их поддержки в этой системе. Языки должны быть установлены до того, как их можно будет использовать в размещенных журналах. Смотрите в документации OJS информацию о том, как добавить поддержку новых языков."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Загрузка языка завершилась ошибкой. Сообщения ниже описывают эту ошибку."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Язык «{$locale}» был установлен."
-
-msgid "admin.languages.download"
-msgstr "Скачать язык"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Невозможно открыть дескриптор языка с веб-сайта PKP."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Невозможно добавить новый язык в файл списка языков, обычно расположенный в «registry/locales.xml»."
 
 msgid "admin.auth.ojs"
 msgstr "База пользователей OJS"

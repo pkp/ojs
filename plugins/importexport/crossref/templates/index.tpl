@@ -82,6 +82,7 @@
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.crossref.settings.form.validation" checked=$validation|default:false}
+							{fbvElement type="checkbox" id="onlyValidateExport" label="plugins.importexport.crossref.settings.form.onlyValidateExport" checked=$onlyValidateExport|default:false}
 						{/fbvFormSection}
 						{if !empty($actionNames)}
 							{fbvFormSection}

@@ -152,50 +152,6 @@ msgstr ""
 msgid "admin.auth.ojs"
 msgstr "Cơ sở dữ liệu người dùng OJS"
 
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr ""
-"Không thể thêm ngôn ngữ mới vào tệp đăng ký ngôn ngữ, điển hình là \"registr/"
-"local.xml\"."
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Không thể mô tả ngôn ngữ mở từ trang web PKP."
-
-msgid "admin.languages.download"
-msgstr "Tải xuống ngôn ngữ"
-
-msgid "admin.languages.localeInstalled"
-msgstr "Ngôn ngữ \"{$locale}\" đã được cài đặt."
-
-msgid "admin.languages.downloadFailed"
-msgstr ""
-"Việc tải xuống ngôn ngữ không thành công. (Các) thông báo lỗi dưới đây mô tả "
-"sự thất bại này."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr ""
-"Chọn bất kỳ ngôn ngữ bổ sung để cài đặt hỗ trợ trong hệ thống này. Ngôn ngữ "
-"phải được cài đặt trước khi chúng có thể được sử dụng bởi các tạp chí được "
-"lưu trữ. Xem tài liệu OJS để biết thông tin về việc thêm hỗ trợ cho các ngôn "
-"ngữ mới."
-
-msgid "admin.languages.confirmUninstall"
-msgstr ""
-"Bạn có chắc chắn muốn gỡ cài đặt ngôn ngữ này? Điều này có thể ảnh hưởng đến "
-"bất kỳ tạp chí được lưu trữ hiện đang sử dụng ngôn ngữ này."
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Tải xuống gói ngôn ngữ từ máy chủ web Dự án Tri thức Công đồng hiện không "
-"khả dụng vì:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Máy chủ của bạn không có hoặc cho phép thực thi tiện ích GNU \"tar\""
-".</li>\n"
-"\t\t<li>OJS không thể sửa đổi tệp đăng ký ngôn ngữ, điển hình là \"registry/"
-"local.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Có thể tải xuống các gói ngôn ngữ theo cách thủ công từ <a href=\""
-"http://pkp.sfu.ca\">PKP web site</a>.</p>"
-
 msgid "admin.locale.maybeIncomplete"
 msgstr "Ngôn ngữ được đánh dấu có thể không đầy đủ."
 

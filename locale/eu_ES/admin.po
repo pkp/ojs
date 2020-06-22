@@ -26,24 +26,6 @@ msgstr "Hau izango da gunearen eta bertan ostatatutako aldizkarien hizkuntza leh
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan."
 
-msgid "admin.languages.confirmUninstall"
-msgstr "Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Hizkuntza deskargatzeak huts egin du. Beheko errore-mezuan azaltzen da hutsegitea."
-
-msgid "admin.languages.localeInstalled"
-msgstr "\"{$locale}\" hizkuntza instalatu da."
-
-msgid "admin.languages.download"
-msgstr "Deskargatu hizkuntza-paketea"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Ezin da ireki PKP webguneko hizkuntza-deskriptorea."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Ezin da hizkuntza-pakete berria gehitu localeen erregistro-fitxategian (normalean \"registry/locales.xml\"."
-
 msgid "admin.auth.ojs"
 msgstr "OJS erabiltzaileen datu-basea"
 
@@ -136,9 +118,6 @@ msgstr "Inskribatutako erabiltzailerik ez."
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Markatutako localeak osatu gabe egon daitezke."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko."
 
 msgid "admin.journals.createInstructions"
 msgstr "Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta erabiltzailearen izen-ematearekin jarraitzeko."

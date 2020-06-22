@@ -2,14 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
+"PO-Revision-Date: 2020-06-14 15:54+0000\n"
+"Last-Translator: M. Ali <vorteem@gmail.com>\n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"ar_IQ/>\n"
+"Language: ar_IQ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:02+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -178,3 +182,48 @@ msgstr "لقد تم تعيين URN {$pubId} لهذا المكون."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "رقم التحقق مفقود."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "إن URN لا بد له أن يبدأ بـ {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr "لا يمكنك توليد URN حتى يتم تعيين هذا المؤلَّف إلى عدد ما."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "إن URN لا بد له أن يبدأ بـ {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "العنصر"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "اللوح الطباعي: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "لم يتم تعيين URN لهذا المنشور بعد."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "إن URN لهذا المؤلَّف سيكون {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"لا يمكنك توليد URN لأن واحداً أو أكثر من أجزائه يفتقر إلى المعطيات. قد تكون "
+"بحاجة إلى تخصيص المؤلَّف للنشر في أحد الأعداد، وضع رمز التعريف للناشر أو "
+"إدخال أرقام الصفحات."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "تعيين"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "لطفاً، أدخل نمط لاحقة URN للمقالات."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"استعمل النمط المبين أدناه لتوليد لواحق URN. متبعاً الترميزات الآتية: %j "
+"للدلالة على الحروف الأولية للمجلة، %v للدلالة على رقم المجلد، %i للدلالة على "
+"رقم العدد، %Y للدلالة على السنة، %a للدلالة على معرف المقالة في نظام المجلات "
+"المفتوحة، %g للدلالة على معرف اللوح الطباعي في نظام المجلات المفتوحة، %f "
+"للدلالة على معرف الملف في نظام المجلات المفتوحة، %p للدلالة على رقم الصفحة و "
+"%x للدلالة على \"المعرف المخصص\"."
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "المقالات"

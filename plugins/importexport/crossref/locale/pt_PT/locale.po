@@ -120,6 +120,7 @@ msgstr ""
 "\t\t<p>Se um depósito falhou, resolva o problema e tente registar novamente "
 "o DOI.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Download XML"
 

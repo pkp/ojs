@@ -29,12 +29,6 @@ msgstr "Dette vil bli standard språk for nettstedet og alle de tidsskriftene de
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Velg alle lokalinnstillinger som nettstedet skal støtte. De valgte lokalinnstillingene vil bli tilgjengelig til bruk for alle tidsskrift nettstedet er vert for, og de vil også bli vist i en språkvalgmeny som vil vises på hver nettstedside (men som kan overstyres på tidsskriftspesifikke sider). Hvis multiple lokalinnstillinger ikke er valgt, vil språkvekslingsmenyen ikke bli vist og utvidete språkinnstillinger vil ikke være tilgjengelig for tidsskriftet."
 
-msgid "admin.languages.confirmUninstall"
-msgstr "Er du sikker på at du vil avinstallere denne lokalinnstillingen? Dette kan påvirke alle lokale tidsskrift som for tiden bruker lokalinnstillingen."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Velg øvrige lokalinnstillinger å installere støtte for i dette systemet. Lokalinnstillinger må være installert før de kan brukes av lokale tidsskrift. Konsulter OJS-dokumentasjonen for informasjon om å legge til støtte for flere språk."
-
 msgid "admin.auth.ojs"
 msgstr "OJS brukerdatabase"
 
@@ -105,24 +99,6 @@ msgstr "Filsti for import er påkrevet."
 
 msgid "admin.journals.importErrors"
 msgstr "Importeringen var ikke vellykket"
-
-msgid "admin.languages.downloadLocales"
-msgstr "Last ned oversatte lokalfiler"
-
-msgid "admin.languages.downloadFailed"
-msgstr "Noe gikk galt med nedlastingen av oversatte lokalfiler. Se feilmeldingen(e) nedenfor."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Den oversatte lokalfilen \"{$locale}\" ble installert."
-
-msgid "admin.languages.download"
-msgstr "Last ned oversatte lokalfiler"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Språkdeskriptoren fra PKP-nettstedet lar seg ikke åpne."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Kan ikke legge til de oversatte lokalfilene i registerfilen for lokalfiler, som vanligvis heter \"registry/locales.xml\"."
 
 msgid "admin.journals.redirect"
 msgstr "Generer kode for å oversette OJS 1 URLs to OJS 2 URLs"

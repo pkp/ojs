@@ -91,3 +91,9 @@ msgstr "Die Links unten erzeugen veraltete Berichte auf Basis der alten Plugin-D
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Alle Kund/innen"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Artikel-Bericht 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Zeitschriften-Bericht 1"

@@ -28,27 +28,6 @@ msgstr "Toto bude výchozí jazyk pro stránku a všechny hostované časopisy."
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Vyberte všechny jazykové lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více jazykových lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné."
 
-msgid "admin.languages.confirmUninstall"
-msgstr "Jste si jistý, že chcete odinstalovat tuto jazykovou lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně tuto jazykovou lokalizaci používají."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Vyberte další jazykové lokalizace, pro které má být do systému nainstalována podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci k OJS."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Stahování jazykové lokalizace selhalo. Níže uvedené chybové hlášení popisuje selhání."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Tato \"{$locale}\" lokalizace byla nainstalována."
-
-msgid "admin.languages.download"
-msgstr "Stáhnout jazykovou lokalizaci"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Nelze otevřít popisovač jazyka z webové stránky PKP."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Nelze přidat novou jazykovou lokalizaci do registračního souboru lokalizací - typicky \"registry/locales.xml\"."
-
 msgid "admin.auth.ojs"
 msgstr "Databáze OJS uživatelů"
 
@@ -156,15 +135,6 @@ msgstr ""
 
 msgid "admin.languages.confirmDisable"
 msgstr "Jste si jisti, že chcete zakázat tuto lokalizaci? Bude to mít vliv na všechny časopisy, které tuto lokalizaci využívají."
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Stahování jazykových balíčků z webu Public Knowledge Project je momentálně nedostupné protože:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Váš server nemá, nebo nepovoluje využití GNU utility \"tar\".</li>\n"
-"\t\t<li>OJS nemůže změnit lokální soubor registrace lokalizace, typicky \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Jazykové balíčky lze stáhnout manuálně z <a href=\"http://pkp.sfu.ca\">webu PKP</a>.</p>"
 
 msgid "admin.contexts.form.titleRequired"
 msgstr "Je třeba zadat název."

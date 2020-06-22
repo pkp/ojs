@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-12 22:00+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/ca_ES/>\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Informe de subscripcions"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "Rangs IP"
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Adreça postal de la institució"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Aquest mòdul implementa un informe CSV que conté un llistat de les "
+"subscripcions i la seva informació."

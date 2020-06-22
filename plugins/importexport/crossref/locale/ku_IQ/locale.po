@@ -29,6 +29,7 @@ msgstr "تۆمارکردنی ئۆتۆماتیکی CrossRef"
 msgid "plugins.importexport.crossref.action.markRegistered"
 msgstr "چالاکی بکە"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "دابەزاندنی XML"
 

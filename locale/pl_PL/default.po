@@ -2,14 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2020-01-30T17:55:09+00:00\n"
+"PO-Revision-Date: 2020-06-12 22:00+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"pl_PL/>\n"
+"Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-01-30T17:55:09+00:00\n"
-"PO-Revision-Date: 2020-01-30T17:55:09+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "section.default.title"
 msgstr "Artykuły"
@@ -27,7 +31,7 @@ msgid "default.journalSettings.checklist.addressesLinked"
 msgstr "Jeżeli jest dostępny należy dostarczyć URL dla pozycji bibliograficznych."
 
 msgid "default.journalSettings.forAuthors"
-msgstr "Czy jesteś zaintersowany(a) zgłoszeniem tekstu do tego czasopisma? Rekomendujemy zapoznanie się z zawartością strony <a href=\"{$indexUrl}/{$journalPath}/about\">O czasopiśmie</a>, na której zamieszczone są zasady czasopisma oraz <a href=\"{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines\">Instrukcja dla autorów</a>. Autor musi <a href=\"{$indexUrl}/{$journalPath}/user/register\">zarejestrować się</a> na stronie czasopisma, zanim rozpocznie proces recenzji lub  <a href=\"{$indexUrl}/index/login\">zalogować się</a>, jeżeli posiada już konto w systemie. Proces zgłoszenia tekstu składa się z pięciu kroków."
+msgstr "Czy jesteś zaintersowany(a) zgłoszeniem tekstu do tego czasopisma? Rekomendujemy zapoznanie się z zawartością strony <a href=\"{$indexUrl}{$contextPath}/about\">O czasopiśmie</a>, na której zamieszczone są zasady czasopisma oraz <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Instrukcja dla autorów</a>. Autor musi <a href=\"{$indexUrl}{$contextPath}/user/register\">zarejestrować się</a> na stronie czasopisma, zanim rozpocznie proces recenzji lub  <a href=\"{$indexUrl}/index/login\">zalogować się</a>, jeżeli posiada już konto w systemie. Proces zgłoszenia tekstu składa się z pięciu kroków."
 
 msgid "default.journalSettings.publicationFee"
 msgstr "Publikacja artykułu"
@@ -191,7 +195,7 @@ msgstr ""
 "\tAkapit rozpoczynający się od słów \"Ten ostatni temat...\" nie jest wcięty.</pre>"
 
 msgid "default.journalSettings.forReaders"
-msgstr "Zachęcamy czytelników, aby zarejestrowali się na stronie w celu uzyskiwania powiadomień od czasopisma. W tym celu należy kliknąć przycisk <a href=\"{$indexUrl}/{$journalPath}/user/register\">Zarejestruj</a> znajdujący się w górnej części strony. W wyniku rejestracji czytelnicy będą otrzymywać na skrzynkę e-mail spisy treści nowych numerów. To pozwoli również czasopismu zapewnić dodatkowe wsparcie czytelnikom. Przed rejestracją czytelnicy powinni zapoznać się z <a href=\"{$indexUrl}/{$journalPath}/about/submissions#privacyStatement\">Polityką prywatności</a>."
+msgstr "Zachęcamy czytelników, aby zarejestrowali się na stronie w celu uzyskiwania powiadomień od czasopisma. W tym celu należy kliknąć przycisk <a href=\"{$indexUrl}{$contextPath}/user/register\">Zarejestruj</a> znajdujący się w górnej części strony. W wyniku rejestracji czytelnicy będą otrzymywać na skrzynkę e-mail spisy treści nowych numerów. To pozwoli również czasopismu zapewnić dodatkowe wsparcie czytelnikom. Przed rejestracją czytelnicy powinni zapoznać się z <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Polityką prywatności</a>."
 
 msgid "default.journalSettings.forLibrarians"
 msgstr "Zachęcamy bibliotekarzy do włączenia strony czasopisma do ich systemów bibliotecznych."
@@ -207,3 +211,45 @@ msgstr "ART"
 
 msgid "default.journalSettings.copyeditInstructions"
 msgstr "Instrukcja korekty (copyediting)."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr ""
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""

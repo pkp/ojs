@@ -2,14 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
+"PO-Revision-Date: 2020-06-15 16:01+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
+"pl_PL/>\n"
+"Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:01+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
@@ -160,3 +164,38 @@ msgstr "DOI {$pubId} nie może zostać przydzielone, ponieważ posiada nierozwi�
 
 msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
 msgstr "DOI {$pubId} zostało przydzielone."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "element"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Szpalta: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "DOI nie zostało przydzielone do tej publikacji."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "Numer DOI dla tej publikacji to {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI musi rozpoczynać się od {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Nie można wygenerować DOI ponieważ brakuje danych do jednego z elementów. "
+"Być może należ← przydzielić artykuł do wydania, ustawić ID wydawcy lub "
+"wprowadzić numery stron."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Nie możesz wygenerować DOI dopóki publikacja nie jest przydzielona do "
+"wydania."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Przydziel"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI musi zaczynać się od {$prefix}."
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Artykuły"

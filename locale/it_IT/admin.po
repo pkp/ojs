@@ -28,33 +28,6 @@ msgstr "Questa sarà la lingua di default del sito e di ogni rivista."
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Seleziona tutte le localizzazioni supportate dal sito. Le lingue scelte saranno disponibili per tutte le riviste ospitate e saranno visibili nel menu presente in tutte le pagine del sito (in ogni caso il layout potrà sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate più lingue, il menu di selezione non sarà presente e non saranno disponibili le impostazioni estese per le lingue."
 
-msgid "admin.languages.confirmUninstall"
-msgstr ""
-"Sei sicuro di voler disinstallare questa locale? Questa operazione avrà "
-"effetto su tutte le testate che la stanno utilizzando."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr ""
-"Seleziona le lacci da installare nel sistema. I file di localizzazione vanno "
-"installati, prima che le riviste possano utilizzarli. Leggi la "
-"documentazione di OJS per ulteriori informazioni su come aggiungere nuove "
-"lingue."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Lo scaricamento della lingua è fallito. Il(I) messaggio(i) di errore qui sotto descrive il motivo dell'insuccesso."
-
-msgid "admin.languages.localeInstalled"
-msgstr "La lingua \"{$locale}\" è stata installata."
-
-msgid "admin.languages.download"
-msgstr "Scarica localizzazione"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Non è possibile aprire il descrittore della lingua dal sito web del PKP."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Non è possibile aggiungere la nuova lingua al file di registro della lingua, solitamente \"registry/locales.xml\"."
-
 msgid "admin.auth.ojs"
 msgstr "Database degli utenti OJS"
 
@@ -172,19 +145,6 @@ msgid "admin.languages.confirmDisable"
 msgstr ""
 "Sei sicuro di voler disabilitare questa traduzione? Questo impatterà tutte "
 "le riviste che la stanno utilizzando."
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Scaricare i pacchetti linguistici dal Public Knowledge Project web server "
-"non è attualmente possibile perchè:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Il tuo server non ha o non permette l'esecuzione di GNU \"tar\".</li>"
-"\n"
-"\t\t<li>OJS non può modificare il file che registrata le traduzioni, di "
-"solito \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>I pachetti linguistici posso essere scaricati dal <a href=\""
-"http://pkp.sfu.ca\">PKP web site</a>.</p>"
 
 msgid "admin.contexts.form.titleRequired"
 msgstr "E' obbligatorio inserire un titolo."

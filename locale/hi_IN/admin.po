@@ -55,22 +55,6 @@ msgid "admin.languages.confirmDisable"
 msgstr "क्या आप वाकई इस लोकेल को अक्षम करना चाहते हैं? यह वर्तमान में लोकेल का उपयोग करके किसी भी होस्ट की गई जर्नल्स को प्रभावित कर सकता है।"
 
 # (pofilter) doublequoting: Different quotation marks
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) tabs: Different tabs
-# (pofilter) urls: Different URLs
-# (pofilter) xmltags: Added XML tags
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>सार्वजनिक ज्ञान परियोजना वेब सर्वर से भाषा पैक डाउनलोड करना वर्तमान में उपलब्ध नहीं है क्योंकि:</p>\n"
-"\t<ul>\n"
-"\t\t<li>आपके सर्वर में GNU का निष्पादन या अनुमति नहीं है \"tar\" utility.</li>\n"
-"\t\t<li>OJS आमतौर पर स्थानीय रजिस्ट्री फ़ाइल को संशोधित करने में असमर्थ है \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>भाषा पैक मैन्युअल रूप से वेबसाइट से डाउनलोड किया जा सकता है <a href=\"http://pkp.sfu.ca\">PKP web site</a>.</p>"
-
-# (pofilter) endpunc: Different punctuation at the end
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "यह साइट और किसी भी होस्ट की गई जर्नल्स के लिए डिफ़ॉल्ट भाषा होगी।"
 
@@ -85,42 +69,6 @@ msgstr "साइट पर समर्थन के लिए सभी लो
 # (pofilter) simplecaps: Different capitalization
 msgid "admin.locale.maybeIncomplete"
 msgstr "चिह्नित लोकेल अपूर्ण हो सकते हैं।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) simplecaps: Different capitalization
-msgid "admin.languages.confirmUninstall"
-msgstr "क्या आप वाकई इस लोकेल को अनइंस्टॉल करना चाहते हैं? यह वर्तमान में लोकेल का उपयोग करके किसी भी होस्ट की गई जर्नल्स को प्रभावित कर सकता है।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "इस प्रणाली में समर्थन स्थापित करने के लिए किसी भी अतिरिक्त लोकेल का चयन करें। होस्टेड जर्नल द्वारा उपयोग किए जाने से पहले लोकेल स्थापित किए जाने चाहिए। नई भाषाओं के लिए समर्थन जोड़ने की जानकारी के लिए OJS प्रलेखन देखें।"
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) simplecaps: Different capitalization
-msgid "admin.languages.downloadFailed"
-msgstr "लोकेल डाउनलोड विफल रहा। नीचे त्रुटि संदेश (एस) विफलता का वर्णन करते हैं।"
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$locale}
-# (pofilter) startcaps: Different capitalization at the start
-msgid "admin.languages.localeInstalled"
-msgstr "The \"{$locale}\" लोकेल स्थापित किया गया है।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "admin.languages.download.cannotOpen"
-msgstr "पीकेपी वेब साइट से लैंग्वेज डिस्क्रिप्टर नहीं खोल सकते।"
-
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "आम तौर पर लोकल रजिस्ट्री फ़ाइल में नया लोकेल नहीं जोड़ा जा सकता है\"registry/locales.xml\"."
 
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
@@ -303,9 +251,6 @@ msgstr "इस पत्रिका को साइट पर सार्व�
 
 msgid "admin.contexts.create"
 msgstr "जर्नल बनाएँ"
-
-msgid "admin.languages.download"
-msgstr "डाउनलोड लोकेल"
 
 msgid "admin.settings.redirect"
 msgstr "जर्नल रीडायरेक्ट"

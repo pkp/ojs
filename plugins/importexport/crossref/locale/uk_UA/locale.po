@@ -98,6 +98,7 @@ msgstr ""
 "\t\t<p>Якщо депонування не вдалося, усуньте проблему і спробуйте знову "
 "зареєструвати DOI.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Завантажити XML"
 

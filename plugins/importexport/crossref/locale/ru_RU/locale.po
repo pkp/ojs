@@ -65,6 +65,9 @@ msgstr "Использовать тестовый API CrossRef (среда те�
 msgid "plugins.importexport.crossref.settings.form.validation"
 msgstr "Проверка XML. Используйте этот параметр, чтобы скачать XML для ручной регистрации DOI."
 
+msgid "plugins.importexport.crossref.settings.form.onlyValidateExport"
+msgstr "Только проверить экспорт, не скачивая файл."
+
 msgid "plugins.importexport.crossref.issues.description"
 msgstr "Примечание: Здесь для экспорта/регистрации будут рассматриваться только выпуски (а не статьи в этих выпусках)."
 
@@ -94,7 +97,7 @@ msgstr ""
 "\t\t<p>Если депонирование потерпело неудачу, пожалуйста, решите проблему и попробуйте зарегистрировать DOI снова.</p>"
 
 msgid "plugins.importexport.crossref.action.export"
-msgstr "Скачать XML"
+msgstr "Экспорт"
 
 msgid "plugins.importexport.crossref.action.markRegistered"
 msgstr "Отметить как активный"

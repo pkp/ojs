@@ -91,3 +91,9 @@ msgstr "Povezave spodaj generirajo zastarela poročila na osnovi podatkov zastar
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Vsi obiskovalci"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Poročilo o prispevkih 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Poročilo o revijah 1"

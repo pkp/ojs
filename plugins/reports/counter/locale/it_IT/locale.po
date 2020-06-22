@@ -98,3 +98,9 @@ msgstr "I link sottostanti generano report obsoleti, utilizzando i vecchi dati d
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Tutti gli utenti"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Article Report 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Journal Report 1"

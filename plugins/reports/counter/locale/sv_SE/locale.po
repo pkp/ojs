@@ -91,3 +91,9 @@ msgstr "Länken nedan genererar äldre rapporter och använder data från det ga
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Alla kunder"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Artikelrapport 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Tidskriftsrapport 1"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-11 02:04+0000\n"
+"PO-Revision-Date: 2020-06-12 22:00+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
@@ -1212,3 +1212,155 @@ msgstr "Không có khuyến nghị được chọn. Bạn phải chọn một đ
 
 msgid "reviewer.article.selectRecommendation.byEditor"
 msgstr "Đặt hoặc điều chỉnh đề xuất của người phản biện."
+
+msgid "user.register.authorDescription"
+msgstr "Có thể gửi các mục cho tạp chí."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Thông báo qua email khi một số của tạp chí được thực hiện truy cập mở."
+
+msgid "user.register.readerDescription"
+msgstr "Thông báo qua email về việc xuất bản một số của tạp chí."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Mật khẩu bạn đã nhập không đủ dài."
+
+msgid "user.register.registrationDisabled"
+msgstr "Tạp chí này hiện không chấp nhận đăng ký người dùng."
+
+msgid "user.register.privacyStatement"
+msgstr "Tuyên bố về quyền riêng tư"
+
+msgid "user.register.noJournals"
+msgstr "Không có tạp chí nào bạn có thể đăng ký trên trang web này."
+
+msgid "user.register.selectContext"
+msgstr "Chọn một tạp chí để đăng ký với:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Lưu và email cho biên tạp viên"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Lưu và email cho tác giả"
+
+msgid "submission.comments.forEditor"
+msgstr "Cho biên tập viên"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Cho tác giả và biên tập viên"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Sau khi gửi, xuất trình một bản sao BCC có thể chỉnh sửa để gửi cho người "
+"phản biện."
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Cho biên tập viên"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Cho tác giả và biên tập viên"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Những bình luận có thể được chia sẻ với tác giả.<br />\n"
+"(Sau khi lưu, có thể thêm bình luận.)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Những thảo luận trong phần biên tập"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Biên tập viên/Tác giả liên hệ"
+
+msgid "submission.logType.proofread"
+msgstr "Hiệu đính"
+
+msgid "submission.logType.layout"
+msgstr "Trình bày"
+
+msgid "submission.logType.copyedit"
+msgstr "Biên tập"
+
+msgid "submission.logType.review"
+msgstr "Phản biện"
+
+msgid "submission.logType.editor"
+msgstr "Biên tập viên"
+
+msgid "submission.logType.author"
+msgstr "Tác giả"
+
+msgid "submission.logType.article"
+msgstr "Bài báo"
+
+msgid "submission.proofread.instructions"
+msgstr "Hướng dẫn bản in thử"
+
+msgid "submission.proofread.corrections"
+msgstr "Sửa lỗi hiệu đính"
+
+msgid "submission.proofreadingComments"
+msgstr "Thảo luận trong phần hiệu đính"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Liên kết của tài liệu tham khảo"
+
+msgid "submission.layout.instructions"
+msgstr "Hướng dẫn trình bày"
+
+msgid "submission.layout.layoutComments"
+msgstr "Thảo luận trong phần trình bày"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Thay thế biên tâp viên trình bày"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Phân công Biên tập viên trình bày"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Nhận dạng bản in công khai đã tồn tại."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Không có (Tải lên phiên bản biên tập cuối cùng dưới dạng bản trình bày trước "
+"khi gửi yêu cầu)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Hướng dẫn biên tập"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Thảo luận ở vòng biên tập"
+
+msgid "submission.copyedit.useFile"
+msgstr "Sử dụng tập tin"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Phân biên tập viên bản thảo"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Phiên bản C/E"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Sửa chữa cuối cùng"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Sửa chữa của Tác giả"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Sửa chữa của Biên tập viên"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Biên tập ban đầu"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Email yêu cầu không thể được gửi cho đến khi tập tin được tải lên để biên "
+"tập."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Email yêu cầu không thể được gửi cho đến khi tập tin được chọn để hiệu đính "
+"trong Quyết định của Ban biên tập, trang Phản biện."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Email yêu cầu không thể được gửi cho đến khi có phiên bản cho vòng phản biện."

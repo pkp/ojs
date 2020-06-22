@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-12 22:00+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/api/ca_ES/>"
+"\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "La publicació que heu sol·licitat no forma part d'aquesta tramesa."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "La publicació que heu sol·licitat no forma part d'aquesta revista."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "El mètode de pagament que heu seleccionat no està suportat."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"No teniu permís per moure aquesta plantilla de correu electrònic a una altra "
+"revista."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "No s'ha trobat la revista que heu sol·licitat."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "No teniu permís per eliminar aquesta revista."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "No teniu permís per editar aquesta revista."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "No podeu editar aquesta revista des de l'API de tot el lloc web."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"No podreu veure ni editar aquesta revista a menys que feu una sol·licitud a "
+"l'API de la revista o de tot el lloc web."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "No teniu permís per veure aquesta revista."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Només podeu veure revistes que estiguin actives."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Per fer o editar una tramesa heu de realitzar una sol·licitud al terminal "
+"API de la revista."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "No teniu permís per veure els números retirats de publicació."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "No podeu canviar la revista d'una tramesa."

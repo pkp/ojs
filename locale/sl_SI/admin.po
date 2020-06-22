@@ -40,15 +40,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "Ste prepričani, da želite onemogočiti ta jezik? To lahko vpliva na revije, ki ga trenutno uporabljajo."
 
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Prenos jezikovnega paketa iz Public Knowledge Project spletne strani trenutno ni mogoče zaradi:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Vaš srežnik nima ali ni mogoče uporabljati orodja \"tar\".</li>\n"
-"\t\t<li>OJS ne more spremeniti lokalne konfiguracijske datoteke, običajno \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Jezikovni paket lahko ročno prenesete iz <a href=\"http://pkp.sfu.ca\">PKP spletne strani</a>.</p>"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "To bo privzeti jezik za spletišče in vse gostujoče revije."
 
@@ -57,27 +48,6 @@ msgstr "Izberite vse jezike, ki bodo podprti na tem spletišču. Izbrani jeziki 
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Označeni jeziki so lahko nepopolni."
-
-msgid "admin.languages.confirmUninstall"
-msgstr "Ste prepričani, da želite odstraniti ta jezik? To lahko vpliva na vse gostujoče revije."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Izberite dodatne jezike, ki jih želite imeti na voljo na spletišču. Vsak jezik mora biti nameščen pred uporabo. V OJS dokumentaciji lahko najdete več informacij o podpori novih jezikov."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Prenos jezika ni uspel. Spodaj je opis napak(e)."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Nameščen je bil jezik \"{$locale}\"."
-
-msgid "admin.languages.download"
-msgstr "Prenesi jezik"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Jezikovnega deskriptorja ni bilo mogoče odpreti na PKP spletni strani."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Dodajenje novega jezika v nastavitveno datoteko ni bilo mogoče, običajno je to  \"registry/locales.xml\"."
 
 msgid "admin.auth.ojs"
 msgstr "OJS uporabniška baza podatkov"

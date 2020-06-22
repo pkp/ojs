@@ -248,6 +248,9 @@ msgstr "Крупный"
 msgid "article.return"
 msgstr "Вернуться к Подробностям о статье"
 
+msgid "category.category"
+msgstr "Категории"
+
 msgid "submission.submissionEditing"
 msgstr "Редактирование отправленного материала"
 

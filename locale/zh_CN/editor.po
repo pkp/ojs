@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-03-09 13:16+0000\n"
+"PO-Revision-Date: 2020-06-15 16:01+0000\n"
 "Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/editor/zh_Hans/>\n"
@@ -171,7 +171,7 @@ msgid "editor.issues.removeStyleFile"
 msgstr "删除样式表?"
 
 msgid "editor.issues.coverPageCaption"
-msgstr "Cover caption"
+msgstr "封面标题"
 
 msgid "editor.issues.showCoverPage"
 msgstr "使用下面的元素为这个刊期创建一个封面."
@@ -369,7 +369,7 @@ msgid "editor.issues.galleyPublicIdentificationExists"
 msgstr "公共期目校样确认已经存在。"
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "返回期目校样。"
+msgstr "返回期目校样"
 
 msgid "editor.issues.confirmDeleteGalley"
 msgstr "您确定要删除该期目校样吗？"
@@ -439,3 +439,24 @@ msgstr "出版日期"
 
 msgid "editor.issues.editIssue"
 msgstr "刊期管理: {$issueIdentification}"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"此列表中的最终草稿文件由Copyeditor转换为复制编辑的版本，并在下面的<span class=\" pkp_help_title\""
+">复制编辑</span>下上传。"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "选择样稿文件"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"布局编辑器为每个校对样稿准备这些文件，然后上传到相应的<span class=\"pkp_help_title\">校对</span>进行校对。"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "编辑刊期样稿"
+
+msgid "grid.action.addIssueGalley"
+msgstr "创建刊期样稿"
+
+msgid "grid.action.addGalley"
+msgstr "增加校对"

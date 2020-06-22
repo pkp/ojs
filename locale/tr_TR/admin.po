@@ -39,30 +39,6 @@ msgstr ""
 msgid "admin.locale.maybeIncomplete"
 msgstr "İşaretlenmiş diller tamamlanmamış olabilir."
 
-msgid "admin.languages.confirmUninstall"
-msgstr "Bu dili kulanımdan kaldırmak istediğinizden emin misiniz? Dil kaldırılınca bu dili kullanan dergilerde sorun olabilir."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr ""
-"Sistemin destekleyeceği ek bir bir dil seçin. Sitedeki dergiler kullanmaya "
-"başlamadan önce, diller sisteme yüklenmelidir. Yeni dil eklenmesi konusunda "
-"OJS yardım dökümanlarında daha fazla bilgi bulabilirsiniz."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Dil indirme başarısız. Hata mesaj(lar)ı aşağıda belirtilmiştir."
-
-msgid "admin.languages.localeInstalled"
-msgstr "\"{$locale}\" dili yüklendi."
-
-msgid "admin.languages.download"
-msgstr "Dil İndir"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "PKP web sitesinden dil tanımlayıcısı açılamıyor."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Dil kayıt dosyasına \"registry/locales.xml\"  yeni dil eklenemiyor."
-
 msgid "admin.auth.ojs"
 msgstr "OJS Kullanıcı Veri Tabanı"
 
@@ -199,19 +175,6 @@ msgstr "Açık Erişim Bildirimi"
 
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Abonelik Sona Erme Hatırlatıcısı"
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Şu anda PKP (Kamu Bilgi Projesi) sunucularından dil paketi indirilemiyor. "
-"Buna aşağıdaki sorunlardan birisi neden olmuş olabilir:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Sunucunuzda GNU \"tar\" yardımcı programına sahip değil veya "
-"çalıştırılmasına izin verilmiyor.</li>\n"
-"\t\t<li>OJS, yerel dil kayıt dosyasını \"registry/locales.xml\" "
-"değiştiremiyor.</li>\n"
-"\t</ul>\n"
-"<p>Dil paketi <a href=\"http://pkp.sfu.ca\">PKP web sitesi</a> üzerinden "
-"manuel olarak indirilebilir.</p>"
 
 msgid "admin.languages.confirmDisable"
 msgstr ""

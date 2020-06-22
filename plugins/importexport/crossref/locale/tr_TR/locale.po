@@ -120,6 +120,7 @@ msgstr ""
 "\t\t<p>Bir depolama başarısız olursa, lütfen sorunu çözün ve DOI'yi tekrar "
 "kaydettirmeyi deneyin.</p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "XML İndir"
 

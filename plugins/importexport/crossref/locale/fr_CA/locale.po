@@ -131,6 +131,7 @@ msgstr ""
 "\t\t<p> Si un dépôt a échoué, veuillez résoudre le problème et réessayer "
 "d'enregistrer le DOI. </p>"
 
+#, fuzzy
 msgid "plugins.importexport.crossref.action.export"
 msgstr "Télécharger le XML"
 

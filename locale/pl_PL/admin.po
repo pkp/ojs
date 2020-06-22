@@ -35,27 +35,6 @@ msgstr "Wybierz wszystkie języki wspierane w obrębie strony."
 msgid "admin.locale.maybeIncomplete"
 msgstr "Zaznaczone języki mogą nie być przetłumaczone w pełni."
 
-msgid "admin.languages.confirmUninstall"
-msgstr "Odinstalować język?."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Wybierz dodatkowe języki do zainstalowania w systemie."
-
-msgid "admin.languages.downloadFailed"
-msgstr "Pobieranie plików lokalizacyjnych nie udało się. Komunikat błędu znajduje się poniżej."
-
-msgid "admin.languages.localeInstalled"
-msgstr "Język \"{$locale}\" został zainstalowany."
-
-msgid "admin.languages.download"
-msgstr "Pobierz tłumaczenie"
-
-msgid "admin.languages.download.cannotOpen"
-msgstr "Nie można otworzyć pliku opisu dostępnych języków ze strony PKP."
-
-msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Błąd, nie można dodać nowego języka do lokalnego rejestru."
-
 msgid "admin.auth.ojs"
 msgstr "Baza danych użytkowników OJS"
 
@@ -138,15 +117,6 @@ msgstr "Twój system jest skonfigurowany do korzystania z więcej niż jednej me
 
 msgid "admin.languages.confirmDisable"
 msgstr "Czy na pewno wyłączyć ten język? Twoja decyzja może mieć wpływ na utworzone czasopisma aktualnie wykorzystujące ten język."
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Pobieranie plików języka ze strony PKP jest w tej chwili niemożliwe, ponieważ:</p>\n"
-"\t<ul>\n"
-"\t\t<li>Twój serwer nie pozwala na użycie narzędzia \"tar\".</li>\n"
-"\t\t<li>OJS nie jest w stanie zmodyfikować pliku \"registry/locales.xml\".</li>\n"
-"\t</ul>\n"
-"<p>Pliki języka mogą być pobrane ręcznie <a href=\"http://pkp.sfu.ca\">ze strony PKP</a>.</p>"
 
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "Brak przypisanych użytkowników."

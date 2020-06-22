@@ -38,7 +38,7 @@
 		status value is incorrect for any submissions.
 	-->
 	<sql>
-		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">UPDATE submissions SET status=1 FROM	submissions AS s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) WHERE s.status=3 AND ps.submission_id IS NULL</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">UPDATE submissions SET status=1 FROM submissions AS s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) WHERE s.submission_id = submissions.submission_id AND s.status=3 AND ps.submission_id IS NULL</query>
 		<query driver="mysql,mysqli">UPDATE submissions s LEFT JOIN published_submissions ps ON (ps.submission_id = s.submission_id) SET s.status=1 WHERE s.status=3 AND ps.submission_id IS NULL</query>
 	</sql>
 	<!-- Modify citations table to refer to publications #5465-->

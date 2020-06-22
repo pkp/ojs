@@ -1657,6 +1657,12 @@ msgstr "Регистрация завершилась неудачей! Серв
 msgid "plugins.importexport.common.register.success"
 msgstr "Регистрация прошла успешно!"
 
+msgid "plugins.importexport.common.validation.success"
+msgstr "Проверка прошла успешно!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Проверка завершилась неудачей."
+
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Отсутствует префикс DOI для журнала с адресом {$path}."
 

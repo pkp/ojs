@@ -186,14 +186,39 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$path = array('plugin', $this->getName());
 		if ($request->getUserVar(EXPORT_ACTION_EXPORT)) {
 			assert($filter != null);
+
+			$onlyValidateExport = ($request->getUserVar('onlyValidateExport')) ? true : false;
+			if ($onlyValidateExport) {
+				$noValidation = false;
+			}
+
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
-			import('lib.pkp.classes.file.FileManager');
-			$fileManager = new FileManager();
-			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
-			$fileManager->writeFile($exportFileName, $exportXml);
-			$fileManager->downloadByPath($exportFileName);
-			$fileManager->deleteByPath($exportFileName);
+			
+			if ($onlyValidateExport) {
+				if (isset($exportXml)) {
+					$this->_sendNotification(
+						$request->getUser(),
+						'plugins.importexport.common.validation.success',
+						NOTIFICATION_TYPE_SUCCESS
+					);
+				} else {
+					$this->_sendNotification(
+						$request->getUser(),
+						'plugins.importexport.common.validation.fail',
+						NOTIFICATION_TYPE_ERROR
+					);
+				}
+
+				$request->redirect(null, null, null, $path, null, $tab);
+			} else {
+				import('lib.pkp.classes.file.FileManager');
+				$fileManager = new FileManager();
+				$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+				$fileManager->writeFile($exportFileName, $exportXml);
+				$fileManager->downloadByPath($exportFileName);
+				$fileManager->deleteByPath($exportFileName);
+			}
 		} elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
 			assert($filter != null);
 			// Get the XML

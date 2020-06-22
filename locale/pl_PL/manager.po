@@ -2,14 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2020-01-30T17:55:29+00:00\n"
+"PO-Revision-Date: 2020-06-12 22:00+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"pl_PL/>\n"
+"Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-01-30T17:55:29+00:00\n"
-"PO-Revision-Date: 2020-01-30T17:55:29+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr "Zresetować wszystkie szablony wiadomosci e-mail w tym czasopiśmie? Zmiany są nieodwracalne."
@@ -1386,3 +1390,74 @@ msgstr "Nie znaleziono żadnego artykułu"
 
 msgid "stats.publishedSubmissions.totalAbstractViews.timeSegment"
 msgstr "Całkowita liczba wyświetleń abstraktów każdego artykułu wg daty"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Wszystkie niedostarczone maile spowodują wyświetlenie komunikatu błędu przy "
+"próbie wysyłki pod ten adres."
+
+msgid "manager.setup.contact.success"
+msgstr "Dane kontaktowe zostały zaktualizowane."
+
+msgid "manager.setup.archiving.success"
+msgstr "Szczegóły archiwizacji zostały zaktualizowane."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Wprowadź informację która ukazywałaby się na stronie ogłoszeń."
+
+msgid "manager.setup.announcements.success"
+msgstr "Ustawienia ogłoszeń zostały zaktualizowane."
+
+msgid "manager.setup.editorialTeam"
+msgstr "Zespół redakcyjny"
+
+msgid "manager.payment.userName"
+msgstr "ID płatności"
+
+msgid "manager.paymentTypes"
+msgstr "Typy płatności"
+
+msgid "manager.payment.records"
+msgstr "Zaksięgowane"
+
+msgid "manager.payment.readerFees"
+msgstr "Opłaty czytelnika"
+
+msgid "manager.payment.paymentType"
+msgstr "Typ płatności"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Metody składania opłat"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "W niniejszym ekranie możesz skonfigurować parametry wtyczek Płatności."
+
+msgid "manager.payment.success"
+msgstr "Ustawienia płatności zostały zaktualizowane."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Szczegóły publikacji zostały zaktualizowane."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Czasopismo będzie wymagać subskrypcji aby uzyskać dostęp do całości lub "
+"części publikowanych treści."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Czasopismo zapewnia otwarty dostęp do publikowanej zawartości."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+"OJS nie będzie wykorzystywany do publikowania zawartości online czasopisma."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Tryb publikowania"
+
+msgid "manager.distribution.publication"
+msgstr "Publikacja"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Używaj daty publikacji artykułu"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Używaj daty publikacji numeru"
