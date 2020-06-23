@@ -908,6 +908,9 @@ msgstr "Submissions"
 msgid "manager.setup.submissions.description"
 msgstr "Author guidelines, copyright, and indexing (including registration)."
 
+msgid "manager.setup.allowSubmissions.description"
+msgstr "Allow users to submit new articles to the journal. Submissions can be disabled for individual journal sections on the <a href="{$url}">journal sections</a> settings page."
+
 msgid "manager.setup.enableOai"
 msgstr "Enable OAI"
 
