@@ -260,15 +260,6 @@ msgstr "Items can only be submitted by Editors and Section Editors."
 msgid "manager.sections.editors"
 msgstr "Section editors"
 
-msgid "manager.sections.form.deactivateSection"
-msgstr "Deactivate this section and do not allow new submissions to be made to it."
-
-msgid "manager.sections.confirmDeactivateSection"
-msgstr "Are you sure you wish to deactivate this section?"
-
-msgid "manager.sections.confirmActivateSection"
-msgstr "Are you sure you wish to activate this section?"
-
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr "At least one section must be active. Visit the workflow settings to disable all submissions to this journal."
 
