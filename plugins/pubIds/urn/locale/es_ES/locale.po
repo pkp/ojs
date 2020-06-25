@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
-"PO-Revision-Date: 2020-01-16 15:00+0000\n"
+"PO-Revision-Date: 2020-06-18 16:39+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
-"es/>\n"
+"es_ES/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgid "plugins.pubIds.urn.description"
 msgstr "Este módulo activa la asignación de URN (Uniform Resource Names) de los números, artículos y galeradas en OJS."
 
 msgid "plugins.pubIds.urn.manager.settings.description"
-msgstr "Configura el módulo URN para poder administrar y usar URNs en OJS:"
+msgstr "Configure el módulo URN para poder administrar y usar URN en OJS:"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjects"
 msgstr "Contenido de la revista"
@@ -125,7 +125,7 @@ msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
 msgstr "Si cambia su configuración URN, los URNs ya asignados no se verán afectadas. Cuando guarde la configuración URN, podrá usar este botón para limpiar los URNs existentes, de forma que la nueva configuración tenga efecto para todos los objetos existentes."
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
-msgstr "¿Está seguro/a de querer borrar todos los URNs existentes?"
+msgstr "¿Seguro que quiere eliminar todos los URN existentes?"
 
 msgid "plugins.pubIds.urn.editor.urn"
 msgstr "URN"
@@ -155,22 +155,23 @@ msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
 msgstr "El sufijo URN dado ya está en uso para otro elemento publicado. Ingrese un sufijo URN único para cada elemento."
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN"
-msgstr "Limpiar URN"
+msgstr "Limpiar"
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
-msgstr "¿Está seguro/a de querer borrar todos los URN existentes?"
+msgstr "¿Seguro que quiere borrar el URN existente?"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
-msgstr "Limpiar URNs de los Objetos del Número"
+msgstr "Limpiar los URN de los objetos del número"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
-msgstr "¿Está seguro/a de querer borrar todos los URNs de los objetos del número?"
+msgstr ""
+"¿Seguro que quiere eliminar los URN de los objetos del número existentes?"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
 msgstr "Use la siguiente opción para limpiar los URNs de todos los objetos (artículos y galerias) actualmente programados para este número."
 
 msgid "plugins.pubIds.urn.editor.addCheckNo"
-msgstr "Añadir Número de Comprobación"
+msgstr "Añadir número de comprobación"
 
 msgid "plugins.pubIds.urn.editor.assignURN"
 msgstr "Asignar el URN {$pubId} a este {$pubObjectType}"
@@ -185,7 +186,7 @@ msgid "plugins.pubIds.urn.editor.assignURN.assigned"
 msgstr "Se ha asignado el URN {$pubId}."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
-msgstr "Falta el Número de Comprobación."
+msgstr "Falta el número de comprobación."
 
 msgid "plugins.pubIds.urn.editor.preview.objects"
 msgstr "Ítem"
