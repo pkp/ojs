@@ -1,2 +1,38 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-06-19 20:40+0000\n"
+"Last-Translator: Renat Gaysin <renat@astrin.uz>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/admin/uz_UZ@"
+"latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+#, fuzzy
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Saytning asosiy sahifasi ushbu jurnalning asosiy sahifasi bo'ladi. Bu, "
+"masalan, agar saytda faqat bitta jurnal mavjud bo'lsa, foydalidir."
+
+#, fuzzy
+msgid "admin.settings.redirect"
+msgstr "Jurnalni qayta yo'naltirish"
+
+#, fuzzy
+msgid "admin.settings.info.success"
+msgstr "Sayt ma'lumotlari muvaffaqiyatli yangilandi."
+
+#, fuzzy
+msgid "admin.settings.config.success"
+msgstr "Sayt konfiguratsiyasi sozlamalari muvaffaqiyatli yangilandi."
+
+#, fuzzy
+msgid "admin.settings.appearance.success"
+msgstr "Sayt dizayni sozlamalari muvaffaqiyatli yangilandi."
+
+#, fuzzy
+msgid "admin.hostedContexts"
+msgstr "Saytdagi jurnallar"
