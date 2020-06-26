@@ -4,7 +4,7 @@ Git tag: 3_2_1-1
 Release date: June 26, 2020
 ===========================
 
-3.2.0-1 Build
+3.2.1-1 Build
 -------------
 	#6045: Permit database collation configuration
 	#6041: License override formatting error
