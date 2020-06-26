@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2020-02-13 01:10+0000\n"
+"PO-Revision-Date: 2020-06-27 08:40+0000\n"
 "Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "de/>\n"
@@ -232,3 +232,18 @@ msgstr "Rubrikenoptionen"
 
 msgid "submission.submit.noContext"
 msgstr "Die Zeitschrift für diese Einreichung konnte nicht gefunden werden."
+
+msgid "publication.selectIssue"
+msgstr "Wählen Sie eine Ausgabe zur Planung der Veröffentlichung"
+
+msgid "publication.scheduleInissue"
+msgstr "Einer Ausgabe zuordnen"
+
+msgid "publication.unscheduledIn"
+msgstr "Dies wurde nicht für die Veröffentlichung in einer Ausgabe vorgesehen."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Alle Vorraussetzungen für die Veröffentlichung wurden erfüllt. Dies wird "
+"sofort veröffentlicht, da das Veröffentlichungsdatum auf {$datePublished} "
+"gesetzt wurde. Sind Sie sicher, dass Sie dies veröffentlichen möchten?"
