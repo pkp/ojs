@@ -1,8 +1,16 @@
 OJS 3.2.1 Release Notes
-Git tag: 3_2_1-0
+Git tag: 3_2_1-1
 
-Release date: June 19, 2020
+Release date: June 26, 2020
 ===========================
+
+3.2.0-1 Build
+-------------
+	#6045: Permit database collation configuration
+	#6041: License override formatting error
+	#6035: Plugin install does not work across filesystems
+	#6033: Announcements can be viewed even when disabled
+	#6007: User roles can be passed to the browser as an object instead of array
 
 New Features
 ------------
