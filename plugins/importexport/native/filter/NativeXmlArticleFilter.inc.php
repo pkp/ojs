@@ -44,30 +44,6 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
-	 * @see Filter::process()
-	 * @param $document DOMDocument|string
-	 * @return array Array of imported documents
-	 */
-	function &process(&$document) {
-		$importedObjects =& parent::process($document);
-
-		$deployment = $this->getDeployment();
-		$submission = $deployment->getSubmission();
-		
-		// Index imported content
-		$articleSearchIndex = Application::getSubmissionSearchIndex();
-		foreach ($importedObjects as $submission) {
-			assert(is_a($submission, 'Submission'));
-			$articleSearchIndex->submissionMetadataChanged($submission);
-			$articleSearchIndex->submissionFilesChanged($submission);
-		}
-
-		$articleSearchIndex->submissionChangesFinished();
-
-		return $importedObjects;
-	}
-
-	/**
 	 * Populate the submission object from the node, checking first for a valid section and published_date/issue relationship
 	 * @param $submission Submission
 	 * @param $node DOMElement
