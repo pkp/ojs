@@ -17,9 +17,9 @@ Checkout submodules and copy default configuration :
 
 Install or update dependencies via Composer (https://getcomposer.org/):
 
-    composer --working-dir=lib/pkp update
-    composer --working-dir=plugins/paymethod/paypal update
-    composer --working-dir=plugins/generic/citationStyleLanguage update
+    composer --working-dir=lib/pkp install
+    composer --working-dir=plugins/paymethod/paypal install
+    composer --working-dir=plugins/generic/citationStyleLanguage install
 
 Install or update dependencies via [NPM](https://www.npmjs.com/):
 
