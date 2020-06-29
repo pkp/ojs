@@ -522,7 +522,7 @@ class IssueGridHandler extends GridHandler {
 			foreach ($notificationUsers as $userRole) {
 				$notificationManager->createNotification(
 					$request, $userRole['id'], NOTIFICATION_TYPE_PUBLISHED_ISSUE,
-					$contextId
+					$contextId, ASSOC_TYPE_ISSUE, $issue->getId()
 				);
 			}
 		}
