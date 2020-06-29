@@ -9,6 +9,11 @@
  *}
 {if $sectionOptions|@count == 1}
 	 {translate key="author.submit.notAccepting"}
+{elseif !$currentContext->getData('enableSubmissions')}
+	<notification>
+		{capture assign=url}{url page="management" op="settings" path="workflow" anchor="submission/allowSubmissions"}{/capture}
+		{translate key="manager.setup.allowSubmissions.notAccepting"}
+	</notification>
 {else}
 	{capture assign="additionalFormContent2"}
 		{if $sectionOptions|@count == 2}

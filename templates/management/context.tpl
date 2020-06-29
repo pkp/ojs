@@ -22,7 +22,8 @@
 
 	{if !$currentContext->getData('enableSubmissions')}
 		<notification>
-			{translate key="author.submit.notAccepting" }{/capture}
+			{capture assign=url}{url page="management" op="settings" path="workflow" anchor="submission/allowSubmissions"}{/capture}
+			{translate key="manager.setup.allowSubmissions.notAccepting"}
 		</notification>
 	{/if}
 
