@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-06-05 20:39+0000\n"
+"PO-Revision-Date: 2020-06-19 20:39+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "tr_TR/>\n"
@@ -63,7 +63,7 @@ msgstr ""
 "generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "Yeni Bir Gönderi Başlat"
+msgstr "Yeni Makale Gönder"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Öz, {$wordCount} kelime veya daha az olmalıdır."
@@ -184,22 +184,22 @@ msgid "submission.submit.noContext"
 msgstr "Gönderinin bulunduğu dergi bulunamadı."
 
 msgid "publication.invalidIssue"
-msgstr "Bu yayın için sayı bulunamadı."
+msgstr "Bu yayının sayısı bulunamadı."
 
 msgid "publication.invalidSection"
-msgstr "Bu yayının için bölüm bulunamadı."
+msgstr "Bu yayının bölümü bulunamadı."
 
 msgid "galley.publicationNotFound"
 msgstr "Bu dizgi için yayın bulunamadı."
 
 msgid "galley.editPublishedDisabled"
-msgstr "Bu yayının dizgileri zaten yayınlandığı için düzenlenemez."
+msgstr "Bu makale yayımlandığı için dizgi biçimi düzenlenemez."
 
 msgid "catalog.category.heading"
 msgstr "Tüm Öğeler"
 
 msgid "catalog.browseTitles"
-msgstr "{$numTitles} Öğeleri"
+msgstr "{$numTitles} Öge"
 
 msgid "submission.sectionOptions"
 msgstr "Bölüm Seçenekleri"

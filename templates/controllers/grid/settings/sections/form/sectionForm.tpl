@@ -21,10 +21,6 @@
 
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="sectionFormNotification"}
 
-	{if !$hasSubEditors}
-		<span class="pkp_form_error"><p>{translate key="manager.section.noSectionEditors"}</p></span>
-	{/if}
-
 	{fbvFormArea id="sectionInfo"}
 		{fbvFormSection}
 			{fbvElement type="text" multilingual=true id="title" label="section.title" value=$title maxlength="80" size=$fbvStyles.size.MEDIUM inline=true required=true}
@@ -66,13 +62,15 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{if count($subeditors)}
-		{fbvFormSection list=true title="user.role.subEditors"}
+	{fbvFormSection list=true title="user.role.subEditors"}
+		{if count($subeditors)}
 			{foreach from=$subeditors item="subeditor" key="id"}
 				{fbvElement type="checkbox" id="subEditors[]" value=$id checked=in_array($id, $assignedSubeditors) label=$subeditor translate=false}
 			{/foreach}
-		{/fbvFormSection}
-	{/if}
+		{else}
+			<span class="pkp_form_error"><p>{translate key="manager.section.noSectionEditors"}</p></span>
+		{/if}
+	{/fbvFormSection}
 
 	{fbvFormButtons submitText="common.save"}
 </form>
