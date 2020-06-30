@@ -256,10 +256,10 @@
 					},
 					{
 						"name": "assignedTo",
-						"description": "Filter results by those assigned to this user ID. All users except managers and admins are automatically restricted to assigned submissions and do not need to pass this parameter.",
+						"description": "Filter results by those assigned to one or more user ids. All users except managers and admins are automatically restricted to assigned submissions and do not need to pass this parameter.",
 						"in": "query",
 						"required": false,
-						"type": "integer"
+						"type": "array"
 					},
 					{
 						"name": "count",
