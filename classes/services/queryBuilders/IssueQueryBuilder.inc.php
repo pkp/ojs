@@ -56,6 +56,9 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface {
 	/** @var int whether to offset the number of results returned. Use to return a second page of results. */
 	protected $offset = 0;
 
+	/** @var string return issues which match words from this search phrase */
+	protected $searchPhrase = '';
+
 	/**
 	 * Set context issues filter
 	 *
@@ -158,6 +161,18 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface {
 	}
 
 	/**
+	 * Set query search phrase
+	 *
+	 * @param string $phrase
+	 *
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+	 */
+	public function searchPhrase($phrase) {
+		$this->searchPhrase = $phrase;
+		return $this;
+	}
+
+	/**
 	 * Set query limit
 	 *
 	 * @param int $count
@@ -246,6 +261,71 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface {
 		// issue ids
 		if (!empty($this->issueIds)) {
 			$q->whereIn('i.issue_id', $this->issueIds);
+		}
+
+		// search phrase
+		if (!empty($this->searchPhrase)) {
+			$searchPhrase = $this->searchPhrase;
+
+			// Add support for searching for the volume, number and year
+			// using the localized issue identification formats. In
+			// en_US this will match Vol. 1. No. 1 (2018) against:
+			// i.volume = 1 AND i.number = 1 AND i.year = 2018
+			$volume = '';
+			$number = '';
+			$year = '';
+			$volumeRegex = '/' . preg_quote(__('issue.vol')) . '\s\S/';
+			preg_match($volumeRegex, $searchPhrase, $matches);
+			if (count($matches)) {
+				$volume = trim(str_replace(__('issue.vol'), '', $matches[0]));
+				$searchPhrase = str_replace($matches[0], '', $searchPhrase);
+			}
+			$numberRegex = '/' . preg_quote(__('issue.no')) . '\s\S/';
+			preg_match($numberRegex, $searchPhrase, $matches);
+			if (count($matches)) {
+				$number = trim(str_replace(__('issue.no'), '', $matches[0]));
+				$searchPhrase = str_replace($matches[0], '', $searchPhrase);
+			}
+			preg_match('/\(\d{4}\)\:?/', $searchPhrase, $matches);
+			if (count($matches)) {
+				$year = substr($matches[0], 1, 4);
+				$searchPhrase = str_replace($matches[0], '', $searchPhrase);
+			}
+			if ($volume !== '' || $number !== '' || $year !== '') {
+				$q->where(function($q) use ($volume, $number, $year) {
+					if ($volume) {
+						$q->where('i.volume', '=', $volume);
+					}
+					if ($number) {
+						$q->where('i.number', '=', $number);
+					}
+					if ($year) {
+						$q->where('i.year', '=', $year);
+					}
+				});
+			}
+
+			$words = array_unique(explode(' ', $searchPhrase));
+			if (count($words)) {
+				foreach ($words as $word) {
+					$word = strtolower(addcslashes($word, '%_'));
+					$q->where(function($q) use ($word)  {
+						$q->where(function($q) use ($word) {
+							$q->where('is.setting_name', 'title');
+							$q->where(Capsule::raw('lower(is.setting_value)'), 'LIKE', "%{$word}%");
+						})
+						->orWhere(function($q) use ($word) {
+							$q->where('is.setting_name', 'description');
+							$q->where(Capsule::raw('lower(is.setting_value)'), 'LIKE', "%{$word}%");
+						});
+
+						// Match any four-digit number to the year
+						if (ctype_digit($word) && strlen($word) === 4) {
+							$q->orWhere('i.year', '=', $word);
+						}
+					});
+				}
+			}
 		}
 
 		// Allow third-party query statements
