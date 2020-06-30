@@ -20,10 +20,10 @@
 		</notification>
 	{/if}
 
-	{if !$currentContext->getData('enableSubmissions')}
+	{if $currentContext->getData('disableSubmissions')}
 		<notification>
-			{capture assign=url}{url page="management" op="settings" path="workflow" anchor="submission/allowSubmissions"}{/capture}
-			{translate key="manager.setup.allowSubmissions.notAccepting"}
+			{capture assign=url}{url page="management" op="settings" path="workflow" anchor="submission/disableSubmissions"}{/capture}
+			{translate key="manager.setup.disableSubmissions.notAccepting"}
 		</notification>
 	{/if}
 

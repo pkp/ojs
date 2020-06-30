@@ -401,6 +401,7 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $rangeInfo DBResultRange optional
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
+
 	function getByJournalId($journalId, $rangeInfo = null) {
 		return $this->getByContextId($journalId, $rangeInfo);
 	}
@@ -411,8 +412,6 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $rangeInfo DBResultRange optional
 	 * @param $submittableOnly boolean optional. Whether to return only sections
 	 *  that can be submitted to by anyone.
-	 * @param $activeOnly boolean optional. Whether to return only sections
-	 *  that are active.
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
 	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false) {
@@ -423,7 +422,7 @@ class SectionDAO extends PKPSectionDAO {
 
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
-	
+
 	/**
 	 * Retrieve all sections.
 	 * @param $rangeInfo DBResultRange optional

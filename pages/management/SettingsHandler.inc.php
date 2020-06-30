@@ -44,11 +44,7 @@ class SettingsHandler extends ManagementHandler {
 	 */
 	function workflow($args, $request) {
 		parent::workflow($args, $request);
-
-		$templateMgr = TemplateManager::getManager($request);
-		$context = $request->getContext();
-		
-		$templateMgr->display('management/workflow.tpl');
+		TemplateManager::getManager($request)->display('management/workflow.tpl');
 	}
 
 	/**

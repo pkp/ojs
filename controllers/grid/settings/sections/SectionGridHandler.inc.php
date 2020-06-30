@@ -118,7 +118,7 @@ class SectionGridHandler extends SetupGridHandler {
 		$this->addColumn(
 			new GridColumn(
 				'inactive',
-				'manager.sections.inactive',
+				'common.inactive',
 				null,
 				'controllers/grid/common/cell/selectStatusCell.tpl',
 				$sectionGridCellProvider,

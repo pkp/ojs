@@ -24,13 +24,14 @@ class SectionService implements EntityPropertyInterface {
 	 * Get array of sections
 	 *
 	 * @param int $contextId
-	 * @param boolean $activeOnly
+	 * @param boolean $activeOnly Exclude inactive sections 
+	 * 	from the section list that is returned
 	 *
 	 * @return array
 	 */
 	public function getSectionList($contextId, $activeOnly = false) {
 		$sectionDao = \DAORegistry::getDAO('SectionDAO'); /* $sectionDao SectionDAO */
-		$sectionIterator = $sectionDao->getByContextId($contextId, null, false);
+		$sectionIterator = $sectionDao->getByContextId($contextId);
 
 		$sections = array();
 		while ($section = $sectionIterator->next()) {
