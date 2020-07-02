@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:49-07:00\n"
-"PO-Revision-Date: 2020-01-28 23:48+0000\n"
+"PO-Revision-Date: 2020-07-03 09:08+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -110,3 +110,9 @@ msgstr "anonyme"
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Tous les clients"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Rapport de revue 1"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Rapport d'article 1"
