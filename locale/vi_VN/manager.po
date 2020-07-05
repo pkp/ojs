@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-07 15:39+0000\n"
+"PO-Revision-Date: 2020-07-06 17:40+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
@@ -245,3 +245,194 @@ msgstr "Sử dụng ngày của số xuất bản"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Sử dụng ngày xuất bản của bài viết"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Thêm liên kết cơ sở dữ liệu mới"
+
+msgid "manager.setup.addNavItem"
+msgstr "Thêm mục"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Thêm mục xuất hiện ở \"About the Journal\""
+
+msgid "manager.setup.addItem"
+msgstr "Thêm mục"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Thêm mục Checklist"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Thêm mục About"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Nội dung"
+
+msgid "manager.setup.pageHeader"
+msgstr "Tiêu đề trang của tạp chí"
+
+msgid "manager.setup.contextName"
+msgstr "Tên tạp chí"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Style sheet tạp chí"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Trang chủ tạp chí bao gồm các liên kết điều hướng theo mặc định. Nội dung "
+"trang chủ bổ sung có thể được thêm vào bằng cách sử dụng một hoặc tất cả các "
+"tùy chọn sau, sẽ xuất hiện theo thứ tự hiển thị."
+
+msgid "manager.setup.homepageContent"
+msgstr "Nội dung trang chủ của tạp chí"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Ban biên tập"
+
+msgid "manager.setup.masthead"
+msgstr "Tiêu đề"
+
+msgid "manager.setup"
+msgstr "Cài đặt tạp chí"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Giới hạn số lượng từ tóm tắt cho chuyên mục này (0 cho không giới hạn)"
+
+msgid "manager.sections.wordCount"
+msgstr "Số từ"
+
+msgid "manager.sections.unassigned"
+msgstr "Các biên tập viên chuyên mục có sẵn"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Các bài gửi được thực hiện cho chuyên mục này của tạp chí"
+
+msgid "manager.sections.submissionReview"
+msgstr "Sẽ không được đánh giá ngang hàng"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Sẽ không được bao gồm trong việc lập chỉ mục của tạp chí"
+
+msgid "manager.sections.reviewed"
+msgstr "Đánh giá ngang hàng"
+
+msgid "manager.sections.readingTools"
+msgstr "Các công cụ đọc"
+
+msgid "manager.sections.policy"
+msgstr "Chính sách chuyên mục"
+
+msgid "manager.sections.open"
+msgstr "Đệ trình mở"
+
+msgid "manager.sections.noneCreated"
+msgstr "Không có chuyên mục nào đã được tạo."
+
+msgid "manager.sections.indexed"
+msgstr "Lập chỉ mục"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Ví dụ: \"Bài viết được đánh giá ngang hàng\", \"Đánh giá sách không được "
+"giới thiệu\", \"Bình luận được mời\", v.v.)"
+
+msgid "manager.sections.identifyType"
+msgstr "Xác định các mục được xuất bản trong chuyên mục này là một (nhiều)"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Bỏ qua tiêu đề của chuyên mục này từ mục lục của các số."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Bỏ qua tên tác giả cho các mục của chuyên mục từ mục lục của số."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Một tiêu đề là bắt buộc cho chuyên mục."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Vui lòng đảm bảo rằng bạn đã chọn một mẫu phản biện hợp lệ."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Vui lòng đảm bảo rằng ít nhất một checkbox được chọn cho mỗi lần gán biên "
+"tập viên chuyên mục."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Một tiêu đề viết tắt là bắt buộc cho chuyên mục"
+
+msgid "manager.sections.editors"
+msgstr "Các biên tập viên chuyên mục"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Các chuyên mục chỉ có thể được gửi bởi các biên tập viên chính và biên tập "
+"chuyên mục."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Thêm một biên tập viên cho chuyên mục này để có bài gửi sẽ tự động gán cho "
+"biên tập viên chuyên mục. (Nếu không, biên tập viên chuyên mục có thể được "
+"gán bằng tay, sau một khi bài gửi đến). Nếu thêm, biên tập viên chuyên mục "
+"có thể được tự động gán cho giám sát việc ĐÁNH GIÁ (đánh giá ngang hàng) và/"
+"hoặc chỉnh sửa (biên tập bản thảo, bố cục và hiệu đính) của bài gửi cho "
+"chuyên mục này. Biên tập viên chuyên mục được tạo ra bằng cách nhấn Biên tập "
+"viên chuyên mục ở vai trò trong Quản lý tạp chí."
+
+msgid "manager.sections.create"
+msgstr "Tạo chuyên mục"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Trước khi chuyên mục này có thể bị xóa, bạn phải di chuyển các bài báo được "
+"xuất bản trong chuyên mục này sang các các chuyên mục khác."
+
+msgid "manager.sections.confirmDelete"
+msgstr "Bạn có chắc chắn muốn xóa vĩnh viễn chuyên mục này?"
+
+msgid "manager.sections.assigned"
+msgstr "Các biên tập viên của chuyên mục này"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Không có biên tập viên chuyên mục nào.  Thêm vai trò này cho ít nhất một "
+"người dùng thông qua Quản lý > Cài đặt > Người dùng &amp; Vai trò đầu tiên."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Không yêu cầu tóm tắt"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Đồng bộ hóa những đăng ký sẽ đăng ký tất cả người dùng đã đăng ký vào vai "
+"trò được chỉ định trong tạp chí được chỉ định vào cùng một vai trò trong tạp "
+"chí này. Chức năng này cho phép một nhóm người dùng chung (ví dụ: Người phản "
+"biện) được đồng bộ hóa giữa các tạp chí."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} đăng ký"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Chọn một người dùng (hoặc một số) để hợp nhất vào một tài khoản người dùng "
+"khác (ví dụ: khi ai đó có hai tài khoản người dùng). (Các) tài khoản được "
+"chọn trước sẽ bị xóa và mọi nội dung gửi, công việc, v.v. sẽ được quy cho "
+"tài khoản thứ hai."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Chọn người dùng thuộc tính tác giả của người dùng trước, công tác biên tập, "
+"v.v."
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Với tạp chí"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Đăng ký người dùng hiện tại"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Chọn một mẫu"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Xóa người dùng này khỏi tạp chí này? Hành động này sẽ hủy đăng ký người dùng "
+"khỏi tất cả các vai trò trong tạp chí này."
+
+msgid "manager.people.allUsers"
+msgstr "Tất cả người dùng đã đăng ký"
