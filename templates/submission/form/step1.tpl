@@ -11,7 +11,6 @@
 	 {translate key="author.submit.notAccepting"}
 {elseif $currentContext->getData('disableSubmissions')}
 	<notification>
-		{capture assign=url}{url page="management" op="settings" path="workflow" anchor="submission/disableSubmissions"}{/capture}
 		{translate key="manager.setup.disableSubmissions.notAccepting"}
 	</notification>
 {else}

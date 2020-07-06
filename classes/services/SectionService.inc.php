@@ -39,6 +39,7 @@ class SectionService implements EntityPropertyInterface {
 				$sections[] = array(
 					'id' => $section->getId(),
 					'title' => $section->getLocalizedTitle(),
+					'group' => $section->getIsInactive(),
 				);
 			}
 		}

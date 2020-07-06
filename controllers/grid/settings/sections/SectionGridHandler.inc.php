@@ -249,6 +249,24 @@ class SectionGridHandler extends SetupGridHandler {
 			return new JSONMessage(false, __('manager.sections.alertDelete'));
 		}
 
+		// Validate if it can be deleted
+		$sectionsIterator = $sectionDao->getByContextId($journal->getId(),null,false);
+		$activeSectionsCount = (!$section->getIsInactive()) ? -1 : 0;
+		while ($checkSection = $sectionsIterator->next()) {
+			if (!$checkSection->getIsInactive()) {
+				$activeSectionsCount++;
+			}
+		}
+
+		if ($activeSectionsCount < 1) {
+			return new JSONMessage(false, __('manager.sections.confirmDeactivateSection.error'));
+			return false;
+		}
+
+		if ($checkSubmissions->numRows() > 0) {
+			return new JSONMessage(false, __('manager.sections.alertDelete'));
+		}
+
 		$sectionDao->deleteObject($section);
 		return DAO::getDataChangedEvent($section->getId());
 
