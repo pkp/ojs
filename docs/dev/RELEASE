@@ -15,7 +15,7 @@ OJS release:
     dbscripts/xml/version.xml
     dbscripts/xml/install.xml
     dbscripts/xml/upgrade.xml
-    package.json
+    package.json (and package-lock.json, `using composer install`)
 
     Commands that may be helpful in determining what bugs have been closed
     since the last release (whose tag is specified in place of <last-tag>:
