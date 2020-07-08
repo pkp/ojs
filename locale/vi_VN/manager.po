@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-06 17:40+0000\n"
+"PO-Revision-Date: 2020-07-08 17:27+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
@@ -237,8 +237,8 @@ msgstr ""
 
 msgid "manager.files.note"
 msgstr ""
-"Lưu ý: Trình duyệt tập tin là một tính năng nâng cao cho phép các tập tin và "
-"thư mục được liên kết với tạp chí được xem và thao tác trực tiếp."
+"Lưu ý: Trình duyệt các tập tin là một tính năng nâng cao cho phép các tập "
+"tin và thư mục được liên kết với tạp chí được xem và thao tác trực tiếp."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
 msgstr "Sử dụng ngày của số xuất bản"
@@ -436,3 +436,457 @@ msgstr ""
 
 msgid "manager.people.allUsers"
 msgstr "Tất cả người dùng đã đăng ký"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Bước 4. Quản lý Tạp chí"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Quản lý và thiết lập xuất bản"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Quản lý các bước biên tập cơ bản"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Truy cập và bảo mật, lên lịch, thông báo, biên tập, bố cục và hiệu đính."
+
+msgid "manager.setup.management"
+msgstr "Quản lý"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"đầu trang chủ, nội dung, tên tạp chí, chân trang, thanh điều hướng và "
+"stylesheet."
+
+msgid "manager.setup.look"
+msgstr "Giao diện"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Đăng ký dịch vụ CLOCKSS bằng cách truy cập <a href=\"http://clockss.org/\" "
+"target=\"_blank\">the CLOCKSS website</a>."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Mô tả giấy phép CLOCKSS"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"Giấy phép CLOCKSS sẽ xuất hiện trong Giới thiệu về Tạp chí trong Lưu trữ: <a "
+"href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Kích hoạt CLOCKSS để lưu trữ và phân phối nội dung tạp chí tại các thư viện "
+"tham gia thông qua trang <a href=\"{$clockssUrl}\" target=\"_blank\">"
+"Publisher Manifest</a> của CLOCKSS."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Xác định 6-10 thư viện sẽ đăng ký và lưu trữ tạp chí. Ví dụ: chuyển sang các "
+"tổ chức nơi các biên tập viên hoặc thành viên Hội đồng biên tập làm việc và/"
+"hoặc các tổ chức đã tham gia LOCKSS. Xem <a href=\"http://www.lockss.org/"
+"community/\" target=\"_blank\">the LOCKSS community</a>."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Mô tả giấy phép LOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Cho phép LOCKSS lưu trữ và phân phối nội dung tạp chí tại các thư viện tham "
+"gia thông qua trang LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">"
+"Publisher Manifest</a> page."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"Giấy phép LOCKSS sẽ xuất hiện trong Giới thiệu về Tạp chí trong Lưu trữ <a "
+"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\""
+"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS và CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"The PKP Preservation Network (PN) cung cấp dịch vụ dự phòng miễn phí cho bất "
+"kỳ tạp chí OJS nào đáp ứng một vài tiêu chí cơ bản. Plugin PKP PN cho OJS 3 "
+"hiện đang được phát triển và sẽ sớm có trong bộ sưu tập plugin."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Xem <button>plugin settings</button> để chấp nhận các điều khoản sử dụng cho "
+"PKP PN."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"The PKP Preservation Network (PN) cung cấp dịch vụ dự phòng miễn phí cho bất "
+"kỳ tạp chí OJS nào đáp ứng một vài tiêu chí cơ bản."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Kích hoạt plugin PKP PN"
+
+msgid "manager.setup.lists"
+msgstr "Các danh sách"
+
+msgid "manager.setup.lists.success"
+msgstr "Các thiết lập danh sách cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.labelName"
+msgstr "Tên nhãn"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Cung cấp một mô tả ngắn về tạp chí của bạn và xác định các biên tập viên, "
+"quản lý và các thành viên khác trong ban biên tập của bạn."
+
+msgid "manager.setup.keyInfo"
+msgstr "Thông tin quan trọng"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Phiên bản đồ họa của tên và logo của tạp chí (dưới dạng tệp .gif, .jpg hoặc "
+".png) có thể được tải lên cho trang chủ, sẽ thay thế phiên bản văn bản xuất "
+"hiện."
+
+msgid "manager.setup.contextTitle"
+msgstr "Tên tạp chí"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Một logo nhỏ hoặc hình đại diện của tạp chí có thể được sử dụng trong danh "
+"sách các tạp chí."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Hình thu nhỏ của tạp chí"
+
+msgid "manager.setup.journalTheme"
+msgstr "Chủ đề tạp chí"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr ""
+"Định dạng stylesheet tạp chí không hợp lệ. Định dạng được chấp nhận là .css."
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Thiết lập tạp chí của bạn đã được cập nhật."
+
+msgid "manager.setup.journalSetup"
+msgstr "Cài đặt tạp chí"
+
+msgid "manager.setup.journalPolicies"
+msgstr "Bước 2. Chính sách tạp chí"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Đây là chân trang của tạp chí của bạn. Để thay đổi hoặc cập nhật chân trang, "
+"hãy dán mã HTML vào textbox bên dưới. Ví dụ có thể là một thanh điều hướng "
+"khác, bộ đếm, v.v ... Phần chân trang này sẽ xuất hiện trên mỗi trang."
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Chân trang tạp chí"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Logo tạp chí"
+
+msgid "manager.setup.journalLogo"
+msgstr "Logo tạp chí"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Chọn một chủ đề tạp chí và chọn các thành phần bố cụ ở đây.Một stylesheet "
+"của tạp chí cũng có thể được tải lên, có thể được sử dụng để ghi đè dữ liệu "
+"trong stylesheet toàn hệ thống và stylesheet chủ đề (nếu một chủ đề được "
+"chọn)."
+
+msgid "manager.setup.journalLayout"
+msgstr "Bố cục tạp chí"
+
+msgid "manager.setup.contextInitials"
+msgstr "Các chữ cái đầu tiên của tên tạp chí"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Đầu trang ở trang chủ của tạp chí"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Đầu trang của trang chủ tạp chí"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Theo mặc định, trang chủ bao gồm các liên kết điều hướng. Nội dung trang chủ "
+"bổ sung có thể được thêm vào bằng cách sử dụng một hoặc tất cả các tùy chọn "
+"sau, sẽ xuất hiện theo thứ tự hiển thị. Lưu ý rằng số hiện tại luôn có thể "
+"truy cập được thông qua liên kết Số mới trong thanh điều hướng."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Nội dung trang chủ tạp chí"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Bao gồm bất kỳ thông tin nào về tạp chí của bạn có thể được độc giả, tác giả "
+"hoặc người phản biện quan tâm. Điều này có thể bao gồm chính sách truy cập "
+"mở của bạn, phạm vi và mục đích của tạp chí, thông báo bản quyền, tài trợ, "
+"lịch sử của tạp chí, tuyên bố về bảo mật thông tin và đưa vào bất kỳ hệ "
+"thống lưu trữ LOCKSS hoặc CLOCKSS nào."
+
+msgid "manager.setup.contextAbout"
+msgstr "Giới thiệu về Tạp chí"
+
+msgid "manager.setup.contextSummary"
+msgstr "Tóm tắt tạp chí"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Tạp chí lưu trữ"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Giới hạn số lượng mục (ví dụ: nội dung gửi, người dùng hoặc phân công biên "
+"tập) để hiển thị trong danh sách trước khi hiển thị các mục tiếp theo trong "
+"trang khác."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Mục trên mỗi trang"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Viết tắt tạp chí"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Các mục trên thanh điều hướng có thể được thêm vào cài đặt hiện tại (Trang "
+"chủ, Giới thiệu, Trang người dùng, v.v.) xuất hiện ở đầu trang."
+
+msgid "manager.setup.institution"
+msgstr "Tổ chức"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Tùy thuộc vào định dạng được chọn, xác định số, tập và/hoặc năm của số đầu "
+"tiên được xuất bản với OJS:"
+
+msgid "manager.setup.initialIssue"
+msgstr "Số bắt đầu"
+
+msgid "manager.setup.information.success"
+msgstr "Thông tin cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.information.forReaders"
+msgstr "Cho độc giả"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Cho thủ thư"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Cho tác giả"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Mô tả ngắn gọn của tạp chí cho thủ thư và các tác giả và độc giả tương lai. "
+"Chúng được cung cấp trong thanh bên của trang web khi khối Thông tin đã được "
+"thêm."
+
+msgid "manager.setup.information"
+msgstr "Thông tin"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Đối với các tạp chí cung cấp quyền truy cập mở ngay lập tức hoặc trì hoãn, "
+"hãy bao gồm giấy phép Creative Commons với tất cả các tác phẩm được xuất bản "
+"vào thời điểm thích hợp."
+
+msgid "manager.setup.identity"
+msgstr "Nhận dạng tạp chí"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Bước 3. Hướng dẫn gửi bài"
+
+msgid "manager.setup.guidelines"
+msgstr "Các hướng dẫn"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Bước 1. Tìm hiểu chi tiết"
+
+msgid "manager.setup.generalInformation"
+msgstr "Thông tin chung"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Tên người hỗ trợ là bắt buộc."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Email hỗ trợ là bắt buộc."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Số lượng người phản biện trên một bài gửi là bắt buộc."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Tên tạp chí là bắt buộc."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Tên viết tắt của tạp chí là bắt buộc."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Tên người liên lạc chính là bắt buộc."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Email liên hệ chính là bắt buộc."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "ISSN được chỉ định là không hợp lệ."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS tuân thủ giao thức <a href=\"http://www.openarchives.org/\" target=\""
+"_blank\">Open Archives Initiative</a> để thu thập siêu dữ liệu, là tiêu "
+"chuẩn mới nổi để cung cấp quyền truy cập được lập chỉ mục tốt vào tài nguyên "
+"nghiên cứu điện tử trên quy mô toàn cầu. Các tác giả sẽ sử dụng một mẫu "
+"tương tự để cung cấp siêu dữ liệu cho bài gửi của họ. Người quản lý tạp chí "
+"nên chọn các danh mục để lập chỉ mục và trình bày các tác giả với các ví dụ "
+"có liên quan để hỗ trợ họ lập chỉ mục nghiên cứu của họ."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Để các tác giả lập chỉ mục nghiên cứu của họ"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Mô tả cho các tác giả, độc giả và thủ thư phạm vi các bài báo và các danh "
+"mục khác mà tạp chí sẽ xuất bản."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Phạm vi và mục đích"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Khách truy cập có thể đăng ký tài khoản người dùng với tạp chí."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Có bao nhiêu thông báo hiển thị trên trang chủ. Để trống nếu không muốn hiển "
+"thị."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Hiển thị trên Trang chủ"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Thông báo có thể được công bố để thông báo cho độc giả về tin tức và sự kiện "
+"tạp chí. Thông báo được công bố sẽ xuất hiện trên trang Thông báo."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Bật thông báo"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Các email được chuẩn bị được gửi bởi hệ thống thay mặt cho tạp chí sẽ có chữ "
+"ký sau đây được thêm vào cuối."
+
+msgid "manager.setup.emailSignature"
+msgstr "Chữ ký"
+
+msgid "manager.setup.emails"
+msgstr "Nhận dạng email"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Để gửi email không gửi được đến địa chỉ bị trả lại, quản trị viên trang web "
+"phải bật tùy chọn <code>allow_envelope_sender</code> trong tệp cấu hình "
+"trang. Cấu hình máy chủ có thể được yêu cầu, như được nêu trong tài liệu OJS."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "Bất kỳ email nào không gửi được sẽ thông báo lỗi tới địa chỉ này."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Địa chỉ trả lại"
+
+msgid "manager.setup.editorDecision"
+msgstr "Quyết định của biên tập viên"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Thêm mục lục cho số hiện tại (nếu có)."
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Cung cấp các ví dụ về các chuyên ngành liên quan với tạp chí này"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(Ví dụ: Lịch sử; Giáo dục; Xã hội học; Tâm lý học, Nghiên cứu văn hóa; Luật)"
+
+msgid "manager.setup.discipline"
+msgstr "Chuyên ngành và chuyên ngành con"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Điều này hữu ích khi tạp chí vượt qua ranh giới ngành và/hoặc tác giả gửi "
+"các mục đa ngành."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Người quản lý tạp chí sẽ đăng ký tất cả các tài khoản người dùng. Biên tập "
+"viên hoặc Biên tập viên chuyên mục có thể đăng ký tài khoản cho người phản "
+"biện."
+
+msgid "manager.setup.details.description"
+msgstr ""
+"Tên của tạp chí, ISSN, địa chỉ liên lạc, nhà tài trợ và công cụ tìm kiếm."
+
+msgid "manager.setup.details"
+msgstr "Các chi tiết"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Bước 5. Tùy chỉnh giao diện"
+
+msgid "manager.setup.currentIssue"
+msgstr "Số mới"
+
+msgid "manager.setup.contact.success"
+msgstr "Các chi tiết liên lạc cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Văn bản này sẽ xuất hiện trong phần \"Giới thiệu\" của trang web tạp chí và "
+"có thể được sử dụng để mô tả các thay đổi trong tiêu đề, ban biên tập và các "
+"mục khác liên quan đến lịch sử xuất bản của tạp chí."
+
+msgid "manager.setup.history"
+msgstr "Lịch sử tạp chí"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Yêu cầu Người phản biện nộp báo cáo CI với mỗi đánh giá ngang hàng họ gửi."
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Yêu cầu tác giả gửi một tuyên bố xung đột lợi ích (CI) với bài gửi của họ."
+
+msgid "manager.setup.archiving.success"
+msgstr "Các chi tiết lưu trữ cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Để xuất hiện trong Giới thiệu về Tạp chí) "
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Nhập bất kỳ thông tin nào bạn muốn xuất hiện trên trang thông báo của bạn."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Giới thiệu"
+
+msgid "manager.setup.announcements.success"
+msgstr "Các cài đặt thông báo đã được cập nhật."
+
+msgid "manager.setup.announcements"
+msgstr "Các thông báo"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Thay thế, thay vì tiêu đề và logo, một phiên bản HTML của tiêu đề có thể "
+"được chèn vào hộp văn bản bên dưới. Để trống hộp văn bản nếu không cần thiết."
+
+msgid "manager.setup.alternateHeader"
+msgstr "Tiêu đề thay thế"
+
+msgid "manager.setup.addSponsor"
+msgstr "Thêm tổ chức bảo trợ"
