@@ -890,3 +890,6 @@ msgstr "Tiêu đề thay thế"
 
 msgid "manager.setup.addSponsor"
 msgstr "Thêm tổ chức bảo trợ"
+
+msgid "manager.setup.masthead.success"
+msgstr "Các chi tiết tiêu đề cho tạp chí này đã được cập nhật."
