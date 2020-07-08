@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-08 17:27+0000\n"
+"PO-Revision-Date: 2020-07-08 18:13+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
@@ -893,3 +893,310 @@ msgstr "Thêm tổ chức bảo trợ"
 
 msgid "manager.setup.masthead.success"
 msgstr "Các chi tiết tiêu đề cho tạp chí này đã được cập nhật."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Ngày xuất bản"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Ngày để xem xét"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Gửi lại"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Từ chối"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Chấp nhận"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Số lượt xem bài viết (chỉ dành cho tác giả)"
+
+msgid "manager.statistics.statistics"
+msgstr "Thống kê tạp chí"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Tiêu đề văn bản"
+
+msgid "manager.setup.userRegistration"
+msgstr "Đăng ký người dùng"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Hình thu nhỏ"
+
+msgid "manager.setup.userAccess.success"
+msgstr "Các chi tiết truy cập người dùng cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Một ban biên tập/đánh giá sẽ được sử dụng bởi tạp chí."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Các bài viết và số có thể được gắn thẻ với số hoặc chuỗi nhận dạng, sử dụng "
+"hệ thống đăng ký, chẳng hạn như Digital Object Identifier System (DOI)."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Định danh duy nhất"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Cung cấp các ví dụ về các loại, phương pháp và cách tiếp cận nghiên cứu có "
+"liên quan cho lĩnh vực này"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Loại (Phương pháp/Cách tiếp cận)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(Ví dụ: Điều tra lịch sử; Quasi-Experimental; Phân tích văn học; Khảo sát/"
+"Phỏng vấn)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Cung cấp siêu dữ liệu cho các dịch vụ lập chỉ mục của bên thứ ba thông qua <"
+"a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Checklist cho các bài chuẩn bị gửi"
+
+msgid "manager.setup.policies"
+msgstr "Các chính sách"
+
+msgid "manager.setup.enableOai"
+msgstr "Kích hoạt OAI"
+
+msgid "manager.setup.submissions.description"
+msgstr "Hướng dẫn tác giả, bản quyền và lập chỉ mục (bao gồm đăng ký)."
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"Khi gửi bài cho tạp chí, trước tiên các tác giả được yêu cầu hoàn thành từng "
+"mục trong checklist cho các bài chuẩn bị gửi. Checklist cũng xuất hiện trong "
+"Hướng dẫn tác giả, bên dưới Giới thiệu về Tạp chí. Danh sách có thể được "
+"chỉnh sửa dưới đây, nhưng tất cả các mục trong danh sách sẽ yêu cầu đánh dấu "
+"trước khi tác giả có thể tiến hành gửi."
+
+msgid "manager.setup.submissions"
+msgstr "Các bài gửi"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Hướng dẫn gửi bài"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Cung cấp các ví dụ về từ khóa hoặc chủ đề làm hướng dẫn cho tác giả"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Từ khóa"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(Ví dụ: Quang hợp; Lỗ đen; Vấn đề bản đồ bốn màu; Lý thuyết Bayes)"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Năm bước đến một trang web tạp chí"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Xem nội dung bài viết"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Truy cập trang web"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Luôn hiển thị các thư viện liên kết và chỉ ra quyền truy cập hạn chế."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Chuyên mục tạp chí sẽ được xem xét."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Các biên tập viên tạp chí sẽ nhìn thấy nó thông qua quá trình biên tập."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Để tạo hoặc sửa đổi các chuyên mục cho tạp chí (ví dụ: Bài viết, Đánh giá "
+"sách, v.v.), hãy đi tới Quản lý chuyên mục. <br/> <br/> Tác giả gửi bài theo "
+"các chuyên mục cho tạp chí sẽ chỉ định ..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Nếu các chuyên mục không được thêm vào, thì các bài được gửi đến chuyên mục "
+"Bài báo theo mặc định.)"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Các chuyên mục và các biên tập viên chuyên mục"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Cung cấp một mô tả ngắn gọn (50-300 ký tự) của tạp chí mà công cụ tìm kiếm "
+"có thể hiển thị khi liệt kê tạp chí trong kết quả tìm kiếm."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Giúp các công cụ tìm kiếm như Google khám phá và hiển thị trang web của bạn. "
+"Bạn được khuyến khích gửi <a href=\"{$sitemapUrl}\" target=\"_blank\""
+">sitemap</a> của bạn."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Các cài đặt công cụ tìm kiếm chỉ mục đã được cập nhật."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Lập chỉ mục tìm kiếm"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Chính sách phản biện"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Nhắc nhở phản biện"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Đánh giá người phản biện"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Bao gồm một liên kết an toàn trong thư mời đến người phản biện."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Người phản biện có thể được gửi một liên kết an toàn trong thư mời, điều này "
+"sẽ cho phép họ truy cập đánh giá mà không cần đăng nhập. Truy cập vào các "
+"trang khác yêu cầu họ đăng nhập."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Người phản biện truy cập chỉ bằng một cú nhấp chuột"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Truy cập của người phản biện"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Người phản biện sẽ không được cấp quyền truy cập vào tệp bài gửi cho đến khi "
+"họ đồng ý xem xét."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Hạn chế truy cập tệp"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Biên tập viên sẽ đánh giá người phản biện theo thang điểm chất lượng năm "
+"điểm sau mỗi lần đánh giá."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Tuần được phép hoàn thành đánh giá"
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Blind Review"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Để gửi lời nhắc email tự động, quản trị viên trang phải kích hoạt tùy chọn "
+"<tt>scheduled_tasks</tt> trong tệp cấu hình OJS. Cấu hình máy chủ bổ sung có "
+"thể được yêu cầu như được nêu trong tài liệu OJS."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Nhắc nhở email tự động"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Tùy chọn đánh giá"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Hướng dẫn phản biện"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Người dùng phải được đăng ký và đăng nhập để xem trang web tạp chí."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Người dùng phải được đăng ký và đăng nhập để xem nội dung truy cập mở."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Link liên kết của các tài liệu tham khảo"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Các chi tiết này có thể được bao gồm trong siêu dữ liệu được cung cấp cho "
+"các cơ quan lưu trữ của bên thứ ba."
+
+msgid "manager.setup.publisher"
+msgstr "Nhà xuất bản"
+
+msgid "manager.setup.publishing"
+msgstr "Chi tiết xuất bản"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Xác định nội dung tạp chí"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Lịch trình xuất bản"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Các mục tạp chí có thể được xuất bản chung, như là một phần của số với Mục "
+"lục của chính nó. Ngoài ra, các mục riêng lẻ có thể được xuất bản ngay khi "
+"chúng sẵn sàng, bằng cách thêm chúng vào Mục lục của tập \"hiện tại\". Cung "
+"cấp cho độc giả, trong Giới thiệu về Tạp chí, với một tuyên bố về hệ thống "
+"mà tạp chí này sẽ sử dụng và tần suất xuất bản dự kiến của nó."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Lịch trình xuất bản"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Hướng dẫn hiệu đính sẽ được cung cấp cho người đọc hiệu đính, tác giả, biên "
+"tập viên trình bày và và biên tập viên chuyên mục trong giai đoạn biên tập "
+"nội dung. Dưới đây là một bộ hướng dẫn mặc định trong HTML, có thể được "
+"chỉnh sửa hoặc thay thế bởi Người quản lý Tạp chí tại bất kỳ thời điểm nào ("
+"bằng HTML hoặc văn bản thuần túy)."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Hướng dẫn hiệu đính"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Các cam kết bảo mật đã được cập nhật."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN in"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Mục đích, đánh giá ngang hàng, các chuyên mục, quyền riêng tư, bảo mật và "
+"các mục bổ sung."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Tùy chọn số trang"
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN trực truyến"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Giới hạn số lượng liên kết để hiển thị cho các trang tiếp theo trong danh "
+"sách."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Liên kết trang"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Ghi chú:</ strong> Email xác nhận gửi hiện đang bị vô hiệu hóa. Để "
+"sử dụng tính năng này, hãy bật email \"Submission Ack\" trong Email."
+
+msgid "manager.setup.note"
+msgstr "Ghi chú"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Không có style sheet tải lên."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Không có tập tin hình ảnh được tải lên."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Giá trị nhãn là một chuỗi bằng chữ (ví dụ: \"Thiết lập Tạp chí\") chứ không "
+"phải là khóa thông báo địa phương (ví dụ: \"manager.setup\")"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL là một URL hoàn toàn (ví dụ: \"http://www.example.com\") chứ không phải "
+"là một đường dẫn liên quan đến trang web (ví dụ: \"/manager/setup\")"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Thêm hoặc loại bỏ các mục thanh điều hướng bổ sung."
+
+msgid "manager.setup.navigationBar"
+msgstr "Thanh điều hướng"
