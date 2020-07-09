@@ -50,27 +50,28 @@ class SectionForm extends PKPSectionForm {
 			$section = $sectionDao->getById($sectionId, $journal->getId());
 		}
 
-		if (isset($section) ) {
-			$this->setData(array(
-				'title' => $section->getTitle(null), // Localized
-				'abbrev' => $section->getAbbrev(null), // Localized
-				'reviewFormId' => $section->getReviewFormId(),
-				'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
-				'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
-				'abstractsNotRequired' => $section->getAbstractsNotRequired(),
-				'identifyType' => $section->getIdentifyType(null), // Localized
-				'editorRestriction' => $section->getEditorRestricted(),
-				'hideTitle' => $section->getHideTitle(),
-				'hideAuthor' => $section->getHideAuthor(),
-				'policy' => $section->getPolicy(null), // Localized
-				'wordCount' => $section->getAbstractWordCount(),
-				'assignedSubeditors' => Services::get('user')->getIds([
-					'contextId' => Application::get()->getRequest()->getContext()->getId(),
-					'roleIds' => ROLE_ID_SUB_EDITOR,
-					'assignedToSection' => (int) $this->getSectionId(),
-				]),
-			));
-		}
+		if (isset($section)) $this->setData([
+			'title' => $section->getTitle(null), // Localized
+			'abbrev' => $section->getAbbrev(null), // Localized
+			'reviewFormId' => $section->getReviewFormId(),
+			'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
+			'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
+			'abstractsNotRequired' => $section->getAbstractsNotRequired(),
+			'identifyType' => $section->getIdentifyType(null), // Localized
+			'editorRestriction' => $section->getEditorRestricted(),
+			'hideTitle' => $section->getHideTitle(),
+			'hideAuthor' => $section->getHideAuthor(),
+			'policy' => $section->getPolicy(null), // Localized
+			'wordCount' => $section->getAbstractWordCount(),
+			'assignedSubeditors' => Services::get('user')->getIds([
+				'contextId' => Application::get()->getRequest()->getContext()->getId(),
+				'roleIds' => ROLE_ID_SUB_EDITOR,
+				'assignedToSection' => (int) $this->getSectionId(),
+			]),
+		]);
+		else $this->setData([
+			'assignedSubeditors' => [],
+		]);
 
 		parent::initData();
 	}
