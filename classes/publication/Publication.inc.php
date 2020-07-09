@@ -13,7 +13,9 @@
  *
  * @brief Class for Publication.
  */
+
 import('lib.pkp.classes.publication.PKPPublication');
+import('classes.article.Author'); // Class definition required for cache hits
 
 class Publication extends PKPPublication {
 

@@ -19,53 +19,13 @@ import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_... constants
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
 class IssueDAO extends DAO implements PKPPubIdPluginDAO {
-	var $caches;
-
-	/**
-	 * Handle a cache miss.
-	 * @param $cache GenericCache
-	 * @param $id string
-	 * @return Issue
-	 */
-	function _cacheMiss($cache, $id) {
-		if ($cache->getCacheId() === 'current') {
-			$issue = $this->getCurrent($id, false);
-		} else {
-			$issue = $this->getByBestId($id, null, false);
-		}
-		$cache->setCache($id, $issue);
-		return $issue;
-	}
-
-	/**
-	 * Get an issue cache by cache ID.
-	 * @param $cacheId string
-	 * @return GenericCache
-	 */
-	function _getCache($cacheId) {
-		if (!isset($this->caches)) $this->caches = array();
-		if (!isset($this->caches[$cacheId])) {
-			$cacheManager = CacheManager::getManager();
-			$this->caches[$cacheId] = $cacheManager->getObjectCache('issues', $cacheId, array($this, '_cacheMiss'));
-		}
-		return $this->caches[$cacheId];
-	}
-
 	/**
 	 * Retrieve Issue by issue id
 	 * @param $issueId int
 	 * @param $journalId int optional
-	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function getById($issueId, $journalId = null, $useCache = false) {
-		if ($useCache) {
-			$cache = $this->_getCache('issues');
-			$returner = $cache->get($issueId);
-			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
-			return $returner;
-		}
-
+	function getById($issueId, $journalId = null) {
 		$params = array((int) $issueId);
 		if ($journalId) $params[] = (int) $journalId;
 		$result = $this->retrieve(
@@ -89,17 +49,9 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 * @param $pubId string
 	 * @param $journalId int optional
-	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function getByPubId($pubIdType, $pubId, $journalId = null, $useCache = false) {
-		if ($useCache && $pubIdType == 'publisher-id') {
-			$cache = $this->_getCache('issues');
-			$returner = $cache->get($pubId);
-			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
-			return $returner;
-		}
-
+	function getByPubId($pubIdType, $pubId, $journalId = null) {
 		$issues = $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
 		if (empty($issues)) {
 			return null;
@@ -221,10 +173,9 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * falling back on the internal issue ID otherwise.
 	 * @param $issueId string
 	 * @param $contextId int optional
-	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function getByBestId($issueId, $contextId = null, $useCache = false) {
+	function getByBestId($issueId, $contextId = null) {
 		$params = [
 			$issueId
 		];
@@ -249,15 +200,9 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	/**
 	 * Retrieve current issue
 	 * @param $journalId int
-	 * @param $useCache boolean optional
 	 * @return Issue object
 	 */
-	function getCurrent($journalId, $useCache = false) {
-		if ($useCache) {
-			$cache = $this->_getCache('current');
-			return $cache->get($journalId);
-		}
-
+	function getCurrent($journalId) {
 		$result = $this->retrieve(
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND current = 1', (int) $journalId
 		);
@@ -279,8 +224,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1', (int) $journalId
 		);
 		if ($issue) $this->updateObject($issue);
-
-		$this->flushCache();
 	}
 
 
@@ -473,10 +416,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		);
 
 		$this->updateLocaleFields($issue);
-
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
-
-		$this->flushCache();
 	}
 
 	/**
@@ -517,8 +457,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$this->update('DELETE FROM issues WHERE issue_id = ?', (int) $issueId);
 		$this->update('DELETE FROM custom_issue_orders WHERE issue_id = ?', (int) $issueId);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
-
-		$this->flushCache();
 	}
 
 	/**
@@ -848,7 +786,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			'setting_value' => (string)$pubId
 		);
 		$this->replace('issue_settings', $updateArray, $idFields);
-		$this->flushCache();
 	}
 
 	/**
@@ -863,7 +800,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				(int)$pubObjectId
 			)
 		);
-		$this->flushCache();
 	}
 
 	/**
@@ -883,16 +819,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				)
 			);
 		}
-		$this->flushCache();
-	}
-
-	/**
-	 * Flush the issue cache.
-	 */
-	function flushCache() {
-		$this->_getCache('issues')->flush();
-		$this->_getCache('current')->flush();
 	}
 }
-
 

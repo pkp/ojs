@@ -47,11 +47,7 @@ session_lifetime = 30
 scheduled_tasks = Off
 
 ; Site time zone
-; Please refer to lib/pkp/registry/timeZones.xml for a full list of supported
-; time zones.
-; I.e.:
-; <entry key="Europe/Amsterdam" name="Amsterdam" />
-; time_zone="Amsterdam"
+; Please refer to https://www.php.net/manual/en/timezones.php for a full list.
 time_zone = "UTC"
 
 ; Short and long date formats
@@ -149,17 +145,6 @@ debug = Off
 
 [cache]
 
-; Choose the type of object data caching to use. Options are:
-; - memcache: Use the memcache server configured below
-; - xcache: Use the xcache variable store
-; - apc: Use the APC variable store
-; - none: Use no caching.
-object_cache = none
-
-; Enable memcache support
-memcache_hostname = localhost
-memcache_port = 11211
-
 ; For site visitors who are not logged in, many pages are often entirely
 ; static (e.g. About, the home page, etc). If the option below is enabled,
 ; these pages will be cached in local flat files for the number of hours
@@ -176,6 +161,14 @@ memcache_port = 11211
 ; find .../ojs/cache -maxdepth 1 -name wc-\*.html -mtime +1 -exec rm "{}" ";"
 web_cache = Off
 web_cache_hours = 1
+
+; Object cache driver (see https://www.stashphp.com/Drivers.html)
+; Uses Stash\Driver\Ephemeral by default.
+; object_cache_driver = Stash\Driver\Memcache
+
+; Some Stash object cache drivers require additional options. These can be
+; provided here in JSON format.
+; object_cache_options = {}
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;

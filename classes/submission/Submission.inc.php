@@ -30,6 +30,7 @@ define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);
 define('ARTICLE_ACCESS_OPEN', 1);
 
 import('lib.pkp.classes.submission.PKPSubmission');
+import('classes.publication.Publication'); // Class definition required for cache hits
 
 class Submission extends PKPSubmission {
 
