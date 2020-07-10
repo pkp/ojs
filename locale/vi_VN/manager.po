@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-10 17:28+0000\n"
+"PO-Revision-Date: 2020-07-10 18:40+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
@@ -240,8 +240,8 @@ msgstr ""
 
 msgid "manager.files.note"
 msgstr ""
-"Lưu ý: Trình duyệt các tập tin là một tính năng nâng cao cho phép các tập "
-"tin và thư mục được liên kết với tạp chí được xem và thao tác trực tiếp."
+"Lưu ý: Duyệt các tập tin là một tính năng nâng cao cho phép các tập tin và "
+"thư mục được liên kết với tạp chí được xem và thao tác trực tiếp."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
 msgstr "Sử dụng ngày của số xuất bản"
