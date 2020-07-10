@@ -152,6 +152,18 @@ msgstr ""
 msgid "admin.auth.ojs"
 msgstr "Cơ sở dữ liệu người dùng OJS"
 
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Chọn bất kỳ ngôn ngữ bổ sung để cài đặt hỗ trợ trong hệ thống này. Ngôn ngữ "
+"phải được cài đặt trước khi chúng có thể được sử dụng bởi các tạp chí được "
+"lưu trữ. Xem tài liệu OJS để biết thông tin về việc thêm hỗ trợ cho các ngôn "
+"ngữ mới."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Bạn có chắc chắn muốn gỡ cài đặt ngôn ngữ này? Điều này có thể ảnh hưởng đến "
+"bất kỳ tạp chí được lưu trữ hiện đang sử dụng ngôn ngữ này."
+
 msgid "admin.locale.maybeIncomplete"
 msgstr "Ngôn ngữ được đánh dấu có thể không đầy đủ."
 

@@ -28,6 +28,18 @@ msgstr "Questa sarà la lingua di default del sito e di ogni rivista."
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Seleziona tutte le localizzazioni supportate dal sito. Le lingue scelte saranno disponibili per tutte le riviste ospitate e saranno visibili nel menu presente in tutte le pagine del sito (in ogni caso il layout potrà sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate più lingue, il menu di selezione non sarà presente e non saranno disponibili le impostazioni estese per le lingue."
 
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Sei sicuro di voler disinstallare questa locale? Questa operazione avrà "
+"effetto su tutte le testate che la stanno utilizzando."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Seleziona le lacci da installare nel sistema. I file di localizzazione vanno "
+"installati, prima che le riviste possano utilizzarli. Leggi la "
+"documentazione di OJS per ulteriori informazioni su come aggiungere nuove "
+"lingue."
+
 msgid "admin.auth.ojs"
 msgstr "Database degli utenti OJS"
 

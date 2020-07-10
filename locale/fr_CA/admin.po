@@ -51,6 +51,14 @@ msgstr "Sélectionner toutes les langues qui doivent être prises en charge sur 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Les langues sélectionnées peuvent être incomplètes."
 
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Êtes-vous sûr de vouloir désinstaller cette langue ? Ceci affectera toute "
+"revue hébergée utilisant actuellement cette langue."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Sélectionner toute langue supplémentaire pour la prise en charge sur ce système. Les langues doivent être installées avant qu'elles ne puissent être utilisées par les revues hébergées. Voir la documentation d'OJS pour plus de renseignements sur la prise en charge de nouvelles langues."
+
 msgid "admin.auth.ojs"
 msgstr "Base de données utilisateur d'OJS"
 

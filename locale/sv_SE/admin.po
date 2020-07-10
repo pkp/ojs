@@ -42,6 +42,12 @@ msgstr "Välj språk/regioner som webbplatsen ska stödja. Valda språk/regioner
 msgid "admin.locale.maybeIncomplete"
 msgstr "De markerade språken/regionerna kan vara ofullständigt översatta."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Är du säker på att du vill avinstallera språket/regionen? Det kan komma att påverka de tidskrifter som stöds av språket/regionen."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Välj ytterligare språk/regioner som ska stödjas i systemet. Språken/regionerna måste installeras innan de kan användas av tidskrifterna. Se OJS-dokumentationen för information om hur man lägger till nya språk/regioner."
+
 msgid "admin.auth.ojs"
 msgstr "OJS Användardatabas"
 

@@ -38,6 +38,12 @@ msgstr "Selecteer de talen die de site moet ondersteunen. De geselecteerde talen
 msgid "admin.locale.maybeIncomplete"
 msgstr "De gemarkeerde talen kunnen onvolledig zijn."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Weet u zeker dat u deze taal wilt de-installeren? Dit beïnvloedt de tijdschriften in de site die deze taal gebruiken."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Selecteer aanvullende talen voor gebruik in dit systeem. De talen moeten geïnstalleerd worden voor ze door te tijdschriften gebruikt kunnen worden. Zie de OJS documentatie voor informatie over het toevoegen van ondersteuning voor nieuwe talen."
+
 msgid "admin.auth.ojs"
 msgstr "OJS gebruikersdatabank"
 

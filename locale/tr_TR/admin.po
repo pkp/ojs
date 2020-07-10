@@ -40,6 +40,15 @@ msgstr ""
 msgid "admin.locale.maybeIncomplete"
 msgstr "İşaretlenmiş diller tamamlanmamış olabilir."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Bu dili kulanımdan kaldırmak istediğinizden emin misiniz? Dil kaldırılınca bu dili kullanan dergilerde sorun olabilir."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Sistemin destekleyeceği ek bir bir dil seçin. Sitedeki dergiler kullanmaya "
+"başlamadan önce, diller sisteme yüklenmelidir. Yeni dil eklenmesi konusunda "
+"OJS yardım dökümanlarında daha fazla bilgi bulabilirsiniz."
+
 msgid "admin.auth.ojs"
 msgstr "OJS Kullanıcı Veri Tabanı"
 

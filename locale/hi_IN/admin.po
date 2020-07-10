@@ -54,7 +54,7 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "क्या आप वाकई इस लोकेल को अक्षम करना चाहते हैं? यह वर्तमान में लोकेल का उपयोग करके किसी भी होस्ट की गई जर्नल्स को प्रभावित कर सकता है।"
 
-# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "यह साइट और किसी भी होस्ट की गई जर्नल्स के लिए डिफ़ॉल्ट भाषा होगी।"
 
@@ -69,6 +69,17 @@ msgstr "साइट पर समर्थन के लिए सभी लो
 # (pofilter) simplecaps: Different capitalization
 msgid "admin.locale.maybeIncomplete"
 msgstr "चिह्नित लोकेल अपूर्ण हो सकते हैं।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "admin.languages.confirmUninstall"
+msgstr "क्या आप वाकई इस लोकेल को अनइंस्टॉल करना चाहते हैं? यह वर्तमान में लोकेल का उपयोग करके किसी भी होस्ट की गई जर्नल्स को प्रभावित कर सकता है।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "इस प्रणाली में समर्थन स्थापित करने के लिए किसी भी अतिरिक्त लोकेल का चयन करें। होस्टेड जर्नल द्वारा उपयोग किए जाने से पहले लोकेल स्थापित किए जाने चाहिए। नई भाषाओं के लिए समर्थन जोड़ने की जानकारी के लिए OJS प्रलेखन देखें।"
 
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start

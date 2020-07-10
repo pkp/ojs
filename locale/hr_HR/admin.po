@@ -26,6 +26,12 @@ msgstr "Ovo će biti standardni jezik stranice i svakog časopisa koji se na njo
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Izaberite sve jezike za koje želite da budu podržani na stranici. Izabrane prijevode bit će moguće koristiti sa svim časopisima postavljenim u sustavu, te će se na svakoj stranici prikazivati i izbornik jezika (što se može uključiti ili isključiti na razini pojedinog časopisa). Ako je izabran samo jedan jezik, jezični izbornik se neće prikazivati, niti će glavnim urednicima pojedinih časopisa biti na raspolaganu jezične postavke."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Jeste li sigurni da želite deinstalirati ovaj prijevod? To može utjecati na časopise koji trenutno koriste taj prijevod."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Izaberite bilo koji od ispod navedenih prijevoda kako biste instalirali podršku za taj jezik u sustavu. Prijevodi moraju biti instalirani prije nego što se mogu aktivirati i koristiti u pojedinim časopisima. Pogledajte OJS dokumentaciju za informacije o dodavanju podrške za nove jezike."
+
 msgid "admin.auth.ojs"
 msgstr "OJS korisnička baza"
 

@@ -43,6 +43,12 @@ msgstr "Seleccioneu totes les configuracions regionals que oferirà el lloc web.
 msgid "admin.locale.maybeIncomplete"
 msgstr "Les configuracions regionals marcades poden estar incompletes."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Esteu segurs que voleu suprimir aquesta configuració regional? Aquesta acció pot afectar les revistes allotjades que fan servir aquesta configuració regional."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Seleccioneu les llengües addicionals que vulgueu utilitzar en aquest sistema. Cal que instal·leu les configuracions regionals abans que les revistes allotjades les puguin fer servir. Consulteu la documentació de l'OJS per obtenir més informació sobre com instal·lar llengües addicionals."
+
 msgid "admin.auth.ojs"
 msgstr "Base de dades d'usuaris/àries de l'OJS"
 

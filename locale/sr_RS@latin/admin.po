@@ -29,6 +29,12 @@ msgstr "Odaberite lokalizacije koje želite da podržite na sajtu. One će biti 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Markirane lokalizacije nisu kompletne."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Da li ste sigurni da želite da obrišete lokalizaciju? Ovo može uticati na časopise koji se nalaze u sistemu i koriste tu lokalizaciju."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Odaberite dodatne lokalizacije koje želite da instalirate.Pogledajte OJS dokumentaciju za više informacija kako da obezbedite podršku za nove jezike."
+
 msgid "admin.auth.ojs"
 msgstr "OJS korisnička baza podataka"
 
@@ -139,4 +145,3 @@ msgstr "Obaveštenje o Otvorenom pristupu"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Podsetnik o recenziji"
-

@@ -36,6 +36,12 @@ msgstr "Wybierz wszystkie języki wspierane w obrębie strony."
 msgid "admin.locale.maybeIncomplete"
 msgstr "Zaznaczone języki mogą nie być przetłumaczone w pełni."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Odinstalować język?."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Wybierz dodatkowe języki do zainstalowania w systemie."
+
 msgid "admin.auth.ojs"
 msgstr "Baza danych użytkowników OJS"
 

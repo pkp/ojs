@@ -42,6 +42,12 @@ msgstr "Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten sol
 msgid "admin.locale.maybeIncomplete"
 msgstr "Gekennzeichnete Lokaleinstellungen können unvollständig sein."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Sind Sie sicher, dass Sie diese Regionaleinstellung deinstallieren wollen? Jede Zeitschrift, die diesen Datensatz verwendet, wird davon betroffen sein."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Wählen Sie zusätzliche Regionaleinstellungen, die dieses System unterstützen soll. Die Regionaleinstellungen müssen installiert sein, bevor sie von den angebotenen Zeitschriften verwendet werden können. Weitere Informationen zum Hinzufügen neuer Regionaleinstellungen finden Sie in der OJS-Dokumentation."
+
 msgid "admin.auth.ojs"
 msgstr "OJS-Benutzer/innen-Datenbank"
 

@@ -37,6 +37,12 @@ msgstr "Seleccione todas las configuraciones regionales que serán compatibles c
 msgid "admin.locale.maybeIncomplete"
 msgstr "Las configuraciones regionales marcadas pueden estar incompletas."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "¿Está seguro/a de que desea desinstalar esta configuración regional? Esto puede afectar a cualquier revista alojada que esté utilizando actualmente dicha configuración regional."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Seleccione cualquier configuración regional adicional para instalar su soporte en este sistema. Debe instalar las configuraciones regionales antes de que otras revistas alojadas puedan utilizarlas. Vea la documentación de OJS para obtener más información o para añadir soporte para nuevos idiomas."
+
 msgid "admin.auth.ojs"
 msgstr "Base de datos de usuarios/as de OJS"
 

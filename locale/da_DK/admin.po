@@ -34,6 +34,18 @@ msgstr ""
 "sprog, vises sprogvalgsmenuen ikke, og udvidede sprogindstillinger vil ikke "
 "være tilgængelige for tidsskrifter."
 
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Er du sikker på, at du vil fjerne dette sprog? Denne handling kan påvirke "
+"alle tilknyttede tidsskrifter, der i øjeblikket benytter sproget."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Vælg yderligere sprog, du vil installere til understøttelse af i dette "
+"system. Sprog skal installeres, inden de kan benyttes af tilknyttede "
+"tidsskrifter. Se dokumentationen til OJS for at få oplysninger om "
+"understøttelse af nye sprog."
+
 msgid "admin.auth.ojs"
 msgstr "OJS-brugerdatabase"
 
@@ -175,4 +187,3 @@ msgstr ""
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Påmindelse om bedømmelse"
-
