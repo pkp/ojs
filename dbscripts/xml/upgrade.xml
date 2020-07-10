@@ -183,7 +183,7 @@
 		<data file="dbscripts/xml/upgrade/3.2.0_url_path.xml" />
 		<code function="setStatsEmailSettings" />
 		<code function="fixLibraryFiles" />
-		<code function="installEmailTemplate" key="STATISTICS_REPORT_NOTIFICATION" locales="en_US" />
+		<code function="installEmailTemplate" key="STATISTICS_REPORT_NOTIFICATION" locales="ar_IQ,ca_ES,cs_CZ,da_DK,de_DE,en_US,es_ES,fi_FI,fr_CA,hi_IN,hu_HU,id_ID,it_IT,ku_IQ,pt_BR,pt_PT,ru_RU,sl_SI,sv_SE,tr_TR,vi_VN,zh_CN" />
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 
