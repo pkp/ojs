@@ -267,7 +267,8 @@
 
 	<upgrade minversion="2.4.0.0" maxversion="3.2.0.9">
 		<data file="dbscripts/xml/upgrade/3.2.1_update.xml" />
-		<code function="installEmailTemplate" key="ANNOUNCEMENT" locales="en_US" />
+		<code function="installEmailTemplate" key="ANNOUNCEMENT" locales="ca_ES,cs_CZ,ar_IQ,da_DK,en_US,es_ES,fr_CA,id_ID,it_IT,pt_BR,pt_PT,ru_RU,sl_SI,sv_SE,tr_TR,vi_VN,zh_CN" />
+
 		<note file="docs/release-notes/README-3.2.1" />
 	</upgrade>
 
