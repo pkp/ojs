@@ -368,6 +368,9 @@ msgstr "Last Complete"
 msgid "editor.submissions.assignedTo"
 msgstr "Assigned To"
 
+msgid "issues.submissions.issueIds"
+msgstr "Assigned Issues"
+
 msgid "editor.submissions.inSection"
 msgstr "In Section"
 
