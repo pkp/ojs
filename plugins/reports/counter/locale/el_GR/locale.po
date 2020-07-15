@@ -2,17 +2,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:07+00:00\n"
+"PO-Revision-Date: 2020-07-15 12:45+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/el/>\n"
+"Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:07+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:07+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.reports.counter.description"
-msgstr "Το COUNTER plugin επιτρέπει την καταγραφή και την σύνταξη αναφορών συμβατών με το <a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a> για τα στατιστικά του ιστοτόπου."
+msgstr ""
+"Το πρόσθετο COUNTER επιτρέπει την καταγραφή και την σύνταξη αναφορών "
+"συμβατών με το <a href=\"http://www.projectcounter.org/about.html\" target=\""
+"_new\">COUNTER</a> για τα στατιστικά του ιστοτόπου."
 
 msgid "plugins.reports.counter"
 msgstr "Στατιστικά COUNTER"
@@ -21,13 +27,13 @@ msgid "plugins.reports.counter.1a.title"
 msgstr "Αναφορά Περιοδικού 1 (R3): Αιτήματα για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό"
 
 msgid "plugins.reports.counter.1a.title1"
-msgstr "Αναφορά Περιοδικού 1 1 (R3)"
+msgstr "Αναφορά Περιοδικού 1 (R3)"
 
 msgid "plugins.reports.counter.1a.title2"
 msgstr "Αριθμός Επιτυχημένων Αιτημάτων για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό (Έτος {$year})"
 
 msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Ημερομηνία:"
+msgstr "Ημερομηνία εκτέλεσης:"
 
 msgid "plugins.reports.counter.1a.publisher"
 msgstr "Εκδότης"
@@ -42,7 +48,7 @@ msgid "plugins.reports.counter.1a.onlineIssn"
 msgstr "Online ISSN"
 
 msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "YTD Σύνολο"
+msgstr "Σύνολο τρέχοντος έτους"
 
 msgid "plugins.reports.counter.1a.ytdHtml"
 msgstr "YTD HTML"
@@ -54,4 +60,44 @@ msgid "plugins.reports.counter.1a.totalForAllJournals"
 msgstr "Σύνολο για όλα τα περιοδικά"
 
 msgid "plugins.reports.counter.legacyStats"
-msgstr "Οι παρακάτω σύνδεσμοι παράγουν αναφορές με τη χρήση του παλιού COUNTER plugin. Αν θέλετε να δημιουργήσετε COUNTER αναφορές με τη χρήση του νέου OJS COUNTER μετρικού συστήματος, χρησιμοποιείστε τους παραπάνω συνδέσμους."
+msgstr ""
+"Οι παρακάτω σύνδεσμοι παράγουν αναφορές με τη χρήση του παλιού πρόσθετου "
+"COUNTER. Αν θέλετε να δημιουργήσετε αναφορές COUNTER με τη χρήση του νέου "
+"OJS COUNTER μετρικού συστήματος, χρησιμοποιείστε τους παραπάνω συνδέσμους."
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Πελάτες"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "ανώνυμος"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER JR1 (R3): Αιτήματα για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "Έκδοση XML"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Αναφορά COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Αυτοί οι σύνδεσμοι δημιουργούν αναφορές έτοιμες για COUNTER με βάση την "
+"ξεπερασμένη έκδοση 3.0. Αυτή η αναφορά καλύπτει όλα τα περιοδικά στον "
+"ιστότοπο. Χρησιμοποιήστε, όταν είναι δυνατό, την πιο πρόσφατη έκδοση."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Δεν ήταν δυνατή η μορφοποίηση των αποτελεσμάτων ως XML."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Δεν βρέθηκαν αποτελέσματα για αυτήν την αναφορά."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Το αίτημα δημιουργίας αναφοράς δεν είναι έγκυρο."
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Οι παράμετροι της αναφοράς δεν ήταν έγκυρες."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Παλαιότερες αναφορές του ιστότοπου"
