@@ -139,14 +139,6 @@ class Application extends PKPApplication {
 	}
 
 	/**
-	 * Get the context settings DAO.
-	 * @return SettingsDAO
-	 */
-	public static function getContextSettingsDAO() {
-		return DAORegistry::getDAO('JournalSettingsDAO');
-	}
-
-	/**
 	 * Get the submission DAO.
 	 * @deprecated Just get the DAO directly.
 	 * @return SubmissionDAO

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class JournalSettingsDAO
+ * @deprecated To be removed after last use case in Upgrade.inc.php is removed!
  * @ingroup journal
  *
  * @brief Operations for retrieving and modifying journal settings.
@@ -30,13 +31,5 @@ class JournalSettingsDAO extends SettingsDAO {
 	protected function _getPrimaryKeyColumn() {
 		return 'journal_id';
 	}
-
-	/**
-	 * Get the cache name.
-	 */
-	protected function _getCacheName() {
-		return 'journalSettings';
-	}
 }
-
 
