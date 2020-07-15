@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2020-07-15 12:45+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/manager/el/>\n"
+"Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.website.archiving"
 msgstr "Αρχειοθέτηση"
@@ -210,7 +212,12 @@ msgid "manager.people.roleEnrollment"
 msgstr "Ανάθεση ρόλου {$role}"
 
 msgid "manager.people.syncUserDescription"
-msgstr "Ο συγχρονισμός ανάθεσης ρόλων πραγματοποιεί εγγραφή σε αυτό το περιοδικό όλων των Χρηστών με συγκεκριμένο ρόλο σε κάποιο άλλο περιοδικό. Οι νέοι Χρήστες θα εγγραφούν με τον ρόλο που κατέχουν στο άλλο περιοδικό. Η λειτουργία αυτή επιτρέπει σε ένα κοινό σύνολο Χρηστών (π.χ. Αξιολογητές) να συγχρονίζονται σε διάφορα περιοδικά."
+msgstr ""
+"Ο συγχρονισμός ανάθεσης ρόλων πραγματοποιεί εγγραφή σε αυτό το περιοδικό "
+"όλων των Χρηστών με συγκεκριμένο ρόλο σε κάποιο άλλο περιοδικό. Οι νέοι "
+"Χρήστες θα εγγραφούν με τον ρόλο που κατέχουν στο άλλο περιοδικό. Η "
+"λειτουργία αυτή επιτρέπει σε ένα κοινό σύνολο Χρηστών (π.χ. Κριτές) να "
+"συγχρονίζονται σε διάφορα περιοδικά."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Δεν απαιτούνται περιλήψεις"
@@ -246,7 +253,7 @@ msgid "manager.sections.form.mustAllowPermission"
 msgstr "Παρακαλούμε εξασφαλίστε ότι τουλάχιστον ένα πλαίσιο ελέγχου έχει επιλεγεί για κάθε ανάθεση Επιμελητή Ενότητας."
 
 msgid "manager.sections.form.reviewFormId"
-msgstr "Παρακαλούμε βεβαιωθείτε ότι έχετε επιλέξει μία έγκυρη φόρμα αξιολόγησης."
+msgstr "Παρακαλούμε βεβαιωθείτε ότι έχετε επιλέξει μία έγκυρη φόρμα κρίσης."
 
 msgid "manager.sections.form.titleRequired"
 msgstr "Απαιτείται ένας τίτλος για την ενότητα."
@@ -261,7 +268,9 @@ msgid "manager.sections.identifyType"
 msgstr "Χαρακτηρισμός κάθε τεκμηρίου που έχει δημοσιευτεί στην ενότητα αυτή ως:"
 
 msgid "manager.sections.identifyTypeExamples"
-msgstr "(για παράδειγμα, \"Άρθρο που έχει περάσει από ομότιμη αξιολόγηση\", \"Βιβλιοκρισία χωρίς κριτές\", \"Σχολιασμός κατόπιν προσκλήσεως\", κτλ.)"
+msgstr ""
+"(για παράδειγμα, \"Άρθρο που έχει περάσει από ομότιμη κρίση\", \""
+"Βιβλιοκρισία χωρίς κριτές\", \"Σχολιασμός κατόπιν προσκλήσεως\", κτλ.)"
 
 msgid "manager.sections.indexed"
 msgstr "Έχει ευρετηριαστεί"
@@ -279,13 +288,13 @@ msgid "manager.sections.readingTools"
 msgstr "Εργαλεία ανάγνωσης"
 
 msgid "manager.sections.reviewed"
-msgstr "Έχει περάσει από ομότιμη αξιολόγηση."
+msgstr "Έχει περάσει από ομότιμη κρίση."
 
 msgid "manager.sections.submissionIndexing"
 msgstr "Δεν θα συμπεριληφθούν στην ευρετηρίαση του περιοδικού."
 
 msgid "manager.sections.submissionReview"
-msgstr "Δεν θα πραγματοποιηθεί ομότιμη αξιολόγηση."
+msgstr "Δεν θα πραγματοποιηθεί ομότιμη κρίση."
 
 msgid "manager.section.submissionsToThisSection"
 msgstr "Υποβολές στη συγκεκριμένη ενότητα του περιοδικού"
@@ -378,7 +387,9 @@ msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Απαιτείται από τους Συγγραφείς να καταθέτουν Δήλωση Αντικρουόμενων Συμφερόντων μαζί με την υποβολή."
 
 msgid "manager.setup.competingInterests.requireReviewers"
-msgstr "Απαιτείται από τους Αξιολογητές να καταθέτουν Δήλωση Αντικρουόμενων Συμφερόντων μαζί με κάθε αξιολόγηση."
+msgstr ""
+"Απαιτείται από τους Κριτές να καταθέτουν Δήλωση Αντικρουόμενων Συμφερόντων "
+"μαζί με κάθε κρίση."
 
 msgid "manager.setup.history"
 msgstr "Ιστορικό περιοδικού"
@@ -420,7 +431,9 @@ msgid "manager.setup.details.description"
 msgstr "Τίτλος περιοδικού, Διεθνής Πρότυπος Αριθμός Περιοδικής Έκδοσης (ISSN), πρόσωπα επικοινωνίας, χορηγοί και μηχανές αναζήτησης."
 
 msgid "manager.setup.disableUserRegistration"
-msgstr "Ο Διαχειριστής του περιοδικού θα εγγράφει Χρήστες όλων των κατηγοριών, ενώ οι Επιμελητές και οι Επιμελητές Ενότητας θα μπορούν να εγγράφουν μόνο Αξιολογητές."
+msgstr ""
+"Ο Διαχειριστής του περιοδικού θα εγγράφει Χρήστες όλων των κατηγοριών, ενώ "
+"οι Επιμελητές και οι Επιμελητές Ενότητας θα μπορούν να εγγράφουν μόνο Κριτές."
 
 msgid "manager.setup.discipline"
 msgstr "Επιστημονικά πεδία και υπο-πεδία"
@@ -498,7 +511,7 @@ msgid "manager.setup.form.journalTitleRequired"
 msgstr "Απαιτείται ο τίτλος του περιοδικού."
 
 msgid "manager.setup.form.numReviewersPerSubmission"
-msgstr "Απαιτείται ο αριθμός των Αξιολογητών ανά υποβολή."
+msgstr "Απαιτείται ο αριθμός των Κριτών ανά υποβολή."
 
 msgid "manager.setup.form.supportEmailRequired"
 msgstr "Απαιτείται η διεύθυνση ηλεκτρονικού ταχυδρομείου για την υποστήριξη Χρηστών."
@@ -792,7 +805,9 @@ msgid "manager.setup.policies"
 msgstr "Πολιτικές"
 
 msgid "manager.setup.policies.description"
-msgstr "Θεματική περιοχή, ομότιμη αξιολόγηση, ενότητες, προσωπικά δεδομένα, και άλλα στοιχεία σχετικά με το περιοδικό."
+msgstr ""
+"Θεματική περιοχή, ομότιμη κρίση, ενότητες, προσωπικά δεδομένα, και άλλα "
+"στοιχεία σχετικά με το περιοδικό."
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN εντύπου"
@@ -837,13 +852,13 @@ msgid "manager.setup.restrictSiteAccess"
 msgstr "Για την προβολή του ιστοτόπου του περιοδικού, απαιτείται εγγραφή και σύνδεση των Χρηστών."
 
 msgid "manager.setup.reviewGuidelines"
-msgstr "Κατευθυντήριες γραμμές αξιολόγησης"
+msgstr "Κατευθυντήριες γραμμές κρίσης"
 
 msgid "manager.setup.reviewGuidelinesDescription"
 msgstr "Παρατίθενται τα κριτήρια αξιολόγησης των υποβολών και οδηγίες για τη διεξαγωγή μιας χρήσιμης αξιολόγησης. Οι Αξιολογητές έχουν τη δυνατότητα υποβολής σχολίων προς τους Συγγραφείς και τους Επιμελητές, καθώς και παρατηρήσεων αποκλειστικά προς τους Επιμελητές. "
 
 msgid "manager.setup.reviewOptions"
-msgstr "Επιλογές αξιολόγησης"
+msgstr "Επιλογές κρίσης"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "Αυτοματοποιημένες υπενθυμίσεις μέσω μηνυμάτων"
@@ -852,37 +867,45 @@ msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "Για την αποστολή υπενθυμίσεων, ο Διαχειριστής του ιστοτόπου πρέπει να ενεργοποιήσει τις &lt;tt&gt;προγραμματισμένες εργασίες&lt;/tt&gt; στο αρχείο ρυθμίσεων του OJS. Ενδέχεται να απαιτούνται πρόσθετες ρυθμίσεις στον εξυπηρετητή για υποστήριξη της συγκεκριμένης λειτουργίας, όπως διευκρινίζεται στα έγγραφα τεκμηρίωσης του OJS."
 
 msgid "manager.setup.reviewOptions.blindReview"
-msgstr "\"Τυφλή\" αξιολόγηση"
+msgstr "\"Τυφλή\" Κρίση"
 
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
-msgstr "Χρονικό διάστημα (σε εβδομάδες) για την ολοκλήρωση της αξιολόγησης"
+msgstr "Χρονικό διάστημα (σε εβδομάδες) για την ολοκλήρωση της κρίσης"
 
 msgid "manager.setup.reviewOptions.onQuality"
-msgstr "Κατά την ολοκλήρωση της αξιολόγησης, οι Επιμελητές του περιοδικού θα βαθμολογούν τους Αξιολογητές."
+msgstr ""
+"Κατά την ολοκλήρωση της κρίσης, οι Επιμελητές του περιοδικού θα βαθμολογούν "
+"τους Κριτές."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
-msgstr "Οι Αξιολογητές θα έχουν πρόσβαση στο αρχείο υποβολής μόνο μετά από αποδοχή του αιτήματος αξιολόγησης."
+msgstr "Περιορισμός πρόσβασης σε αρχεία"
 
 msgid "manager.setup.reviewOptions.reviewerAccess"
-msgstr "Πρόσβαση Αξιολογητή"
+msgstr "Πρόσβαση Κριτή"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Ενεργοποίηση πρόσβασης Αξιολογητή με ένα κλικ."
+msgstr "Ενεργοποίηση πρόσβασης Κριτή με ένα κλικ."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "&lt;strong&gt;Σημείωση:&lt;/strong&gt; Το αίτημα προς τους Αξιολογητές θα περιλαμβάνει έναν ειδικό σύνδεσμο που θα οδηγεί κατευθείαν στη σελίδα αξιολόγησης της υποβολής (με πρόσβαση και σε όλες τις άλλες σελίδες που απαιτούν σύνδεση). Για λόγους ασφαλείας, οι Επιμελητές δεν μπορούν να τροποποιούν τις διευθύνσεις ηλεκτρονικού ταχυδρομείου ή να προσθέτουν παραλήπτες κοινοποίησης πριν από την αποστολή αιτημάτων στους Αξιολογητές."
+msgstr ""
+"&lt;strong&gt;Σημείωση:&lt;/strong&gt; Το αίτημα προς τους Κριτές θα "
+"περιλαμβάνει έναν ειδικό σύνδεσμο που θα οδηγεί κατευθείαν στη σελίδα κρίσης "
+"της υποβολής (με πρόσβαση και σε όλες τις άλλες σελίδες που απαιτούν σύνδεση)"
+". Για λόγους ασφαλείας, οι Επιμελητές δεν μπορούν να τροποποιούν τις "
+"διευθύνσεις ηλεκτρονικού ταχυδρομείου ή να προσθέτουν παραλήπτες "
+"κοινοποίησης πριν από την αποστολή αιτημάτων στους Κριτές."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
-msgstr "Βαθμολόγηση Αξιολογητή"
+msgstr "Βαθμολόγηση Κριτή"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
-msgstr "Υπενθυμίσεις προς τους Αξιολογητές"
+msgstr "Υπενθυμίσεις προς τους Κριτές"
 
 msgid "manager.setup.reviewOptions.showEnsuringLink"
 msgstr "Προβολή συνδέσμων &lt;a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\"&gt;Διασφάλιση \"τυφλής\" αξιολόγησης&lt;/a&gt; σε σελίδες όπου μεταφορτώνουν αρχεία οι Συγγραφείς και οι Αξιολογητές."
 
 msgid "manager.setup.reviewPolicy"
-msgstr "Πολιτική αξιολόγησης"
+msgstr "Πολιτική Κρίσης"
 
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Ευρετηρίαση μηχανών αναζήτησης"
@@ -1008,13 +1031,19 @@ msgid "manager.statistics.statistics.count.revise"
 msgstr "Επανυποβολή"
 
 msgid "manager.statistics.statistics.daysPerReview"
-msgstr "Ημέρες για αξιολόγηση"
+msgstr "Ημέρες για κρίση"
 
 msgid "manager.statistics.statistics.daysToPublication"
 msgstr "Ημέρες για δημοσίευση"
 
 msgid "manager.statistics.statistics.description"
-msgstr "Το OJS υπολογίζει τα ακόλουθα στατιστικά: Οι \"Ημέρες για αξιολόγηση\" υπολογίζονται από την ημερομηνία υποβολής (ή της σήμανσης των υποβεβλημένων αρχείων ως \"έκδοση αξιολόγησης\") μέχρι την αρχική απόφαση του Επιμελητή, ενώ οι \"Ημέρες  για δημοσίευση\" υπολογίζονται, για άρθρα που έχουν γίνει αποδεκτά, από την ημερομηνία της αρχικής μεταφόρτωσης του άρθρου μέχρι τη δημοσίευσή του."
+msgstr ""
+"Το OJS υπολογίζει τα ακόλουθα στατιστικά: Οι \"Ημέρες για κρίση\" "
+"υπολογίζονται από την ημερομηνία υποβολής (ή της σήμανσης των υποβεβλημένων "
+"αρχείων ως \"έκδοση κρίσης\") μέχρι την αρχική απόφαση του Επιμελητή, ενώ οι "
+"\"Ημέρες  για δημοσίευση\" υπολογίζονται, για άρθρα που έχουν γίνει "
+"αποδεκτά, από την ημερομηνία της αρχικής μεταφόρτωσης του άρθρου μέχρι τη "
+"δημοσίευσή του."
 
 msgid "manager.statistics.statistics.itemsPublished"
 msgstr "Δημοσιευμένα τεκμήρια"
@@ -1023,7 +1052,10 @@ msgid "manager.statistics.statistics.makePublic"
 msgstr "Επιλέξτε τα τεκμήρια που επιθυμείτε να είναι διαθέσιμα στους Αναγνώστες στη σελίδα \"Σχετικά με το Περιοδικό\"."
 
 msgid "manager.statistics.statistics.note"
-msgstr "Σημείωση: Τα ποσοστά για τα αξιολογημένα άρθρα μπορεί να μη δίνουν άθροισμα 100%, καθώς άρθρα που υποβάλλονται εκ νέου είτε γίνονται αποδεκτά, είτε απορρίπτονται, είτε βρίσκονται ακόμη στη διαδικασία αξιολόγησης."
+msgstr ""
+"Σημείωση: Τα ποσοστά για τα αξιολογημένα άρθρα μπορεί να μη δίνουν άθροισμα "
+"100%, καθώς άρθρα που υποβάλλονται εκ νέου είτε γίνονται αποδεκτά, είτε "
+"απορρίπτονται, είτε βρίσκονται ακόμη στη διαδικασία κρίσης."
 
 msgid "manager.statistics.statistics.numIssues"
 msgstr "Δημοσιευμένα τεύχη"
@@ -1044,16 +1076,18 @@ msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Αριθμός αναθέσεων"
 
 msgid "manager.statistics.statistics.reviewers"
-msgstr "Αξιολογητές"
+msgstr "Κριτές"
 
 msgid "manager.statistics.statistics.reviewerScore"
 msgstr "Βαθμολογία Επιμελητή"
 
 msgid "manager.statistics.statistics.reviewsPerReviewer"
-msgstr "Αριθμός αξιολογήσεων"
+msgstr "Αριθμός κρίσεων"
 
 msgid "manager.statistics.statistics.selectSections"
-msgstr "Επιλέξτε τις ενότητες που θα χρησιμοποιηθούν για τον υπολογισμό των σχετικών με την ομότιμη αξιολόγηση στατιστικών του περιοδικού."
+msgstr ""
+"Επιλέξτε τις ενότητες που θα χρησιμοποιηθούν για τον υπολογισμό των σχετικών "
+"με την ομότιμη κρίση στατιστικών του περιοδικού."
 
 msgid "manager.statistics.statistics.subscriptions"
 msgstr "Συνδρομές"
@@ -1596,7 +1630,19 @@ msgid "manager.setup.section.description"
 msgstr "Τα άρθρα που περιλαμβάνονται σε δημοσιευμένα τεύχη ενός περιοδικού οργανώνονται σε ενότητες, ανά θέμα ή τύπο περιεχομένου (π.χ. άρθρα ανασκόπησης, μελέτες, κτλ)."
 
 msgid "settings.roles.gridDescription"
-msgstr "Οι ρόλοι είναι σύνολα Χρηστών στο περιοδικό, με διαβαθμισμένη πρόσβαση στις διαχειριστικές σελίδες και τις σχετικές ροές εργασιών στα πλαίσια του περιοδικού. Υπάρχουν πέντε διαφορετικές κατηγορίες ρόλων: οι Διαχειριστές του περιοδικού έχουν πρόσβαση σε όλο το περιεχόμενο και τις ρυθμίσεις∙ οι Επιμελητές Ενότητας έχουν πρόσβαση στις υποβολές που τους έχουν ανατεθεί∙ οι Βοηθοί του περιοδικού έχουν περιορισμένη πρόσβαση σε όλες τις υποβολές που τους έχουν ανατεθεί από έναν Επιμελητή∙ οι Αξιολογητές έχουν πρόσβαση στις υποβολές που τους ανατέθηκε να αξιολογήσουν∙ οι Συγγραφείς έχουν μερική πρόσβαση και δυνατότητα εκτέλεσης ενεργειών που αφορούν στις δικές τους υποβολές. Επιπροσθέτως, υπάρχουν πέντε διαφορετικές ροές εργασιών για τις οποίες μπορεί να δοθεί πρόσβαση στους ρόλους: Υποβολή, Εσωτερική αξιολόγηση, Αξιολόγηση, Σύνταξη και Παραγωγή."
+msgstr ""
+"Οι ρόλοι είναι σύνολα Χρηστών στο περιοδικό, με διαβαθμισμένη πρόσβαση στις "
+"διαχειριστικές σελίδες και τις σχετικές ροές εργασιών στα πλαίσια του "
+"περιοδικού. Υπάρχουν πέντε διαφορετικές κατηγορίες ρόλων: οι Διαχειριστές "
+"του περιοδικού έχουν πρόσβαση σε όλο το περιεχόμενο και τις ρυθμίσεις∙ οι "
+"Επιμελητές Ενότητας έχουν πρόσβαση στις υποβολές που τους έχουν ανατεθεί∙ οι "
+"Βοηθοί του περιοδικού έχουν περιορισμένη πρόσβαση σε όλες τις υποβολές που "
+"τους έχουν ανατεθεί από έναν Επιμελητή∙ οι Κριτές έχουν πρόσβαση στις "
+"υποβολές που τους ανατέθηκε να αξιολογήσουν∙ οι Συγγραφείς έχουν μερική "
+"πρόσβαση και δυνατότητα εκτέλεσης ενεργειών που αφορούν στις δικές τους "
+"υποβολές. Επιπροσθέτως, υπάρχουν πέντε διαφορετικές ροές εργασιών για τις "
+"οποίες μπορεί να δοθεί πρόσβαση στους ρόλους: Υποβολή, Εσωτερική κρίση, "
+"Κρίση, Σύνταξη και Παραγωγή."
 
 msgid "manager.publication.library"
 msgstr "Βιβλιοθήκη εκδότη"
@@ -1726,3 +1772,222 @@ msgstr "Τα καθορισμένα αντικείμενα δεν βρέθηκα
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Αποστολή αντιγράφου στο κύριο πρόσωπο επικοινωνίας, που έχει οριστεί στις Ρυθμίσεις του Περιοδικού."
+
+msgid "stats.publications.galleys"
+msgstr "Αρχεία"
+
+msgid "stats.publications.abstracts"
+msgstr "Περιλήψεις"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} από {$total} άρθρα"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Σύνολο προβολών αρχείων κατά ημερομηνία"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Σύνολο προβολών περίληψης κατά ημερομηνία"
+
+msgid "stats.publications.none"
+msgstr ""
+"Δεν βρέθηκαν άρθρα με στατιστικά στοιχεία χρήσης που να ταιριάζουν με αυτές "
+"τις παραμέτρους."
+
+msgid "stats.publicationStats"
+msgstr "Στατιστικά Άρθρου"
+
+msgid "stats.publications.details"
+msgstr "Λεπτομέρειες Άρθρου"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Έγινε επαναφορά των δικαιωμάτων του άρθρου με επιτυχία."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Αυτός είναι ένας τύπος συνδρομής χωρίς λήξη. Μην ορίσετε ημερομηνία λήξης."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Αυτός είναι ένας τύπος συνδρομής χωρίς λήξη. Μην ορίσετε ημερομηνία έναρξης."
+
+msgid "manager.setup.userAccess.success"
+msgstr "Τα στοιχεία πρόσβασης χρήστη γι' αυτό το περιοδικό έχουν ενημερωθεί."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Παρέχετε μεταδεδομένα σε υπηρεσίες ευρετηρίασης τρίτων, μέσω του <a href=\""
+"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Ενεργοποίηση του OAI"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Προβολή Περιεχομένου Άρθρου"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Πρόσβαση στον Ιστότοπο"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Δώστε μια σύντομη περιγραφή (50-300 χαρακτήρες) του περιοδικού την οποία "
+"μπορούν να εμφανίζουν οι μηχανές αναζήτησης κατά την εμφάνιση του περιοδικού "
+"στα αποτελέσματα αναζήτησης."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Βοηθήστε τις μηχανές αναζήτησης όπως το Google να ανακαλύψουν και να "
+"εμφανίσουν τον ιστότοπό σας. Σας συνιστούμε να υποβάλετε τον <a href=\""
+"{$sitemapUrl}\" target=\"_blank\">χάρτη ιστότοπου</a>."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Οι ρυθμίσεις ευρετηρίασης από τις μηχανές αναζήτησης έχουν ενημερωθεί."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+"Να συμπεριλαμβάνεται ένας ασφαλής σύνδεσμος στην πρόσκληση μέσω ηλεκτρονικού "
+"ταχυδρομείου στους Κριτές."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Οι Κριτές θα έχουν πρόσβαση στο αρχείο υποβολής μόνο αφού αποδεχτούν το "
+"αίτημα κρίσης."
+
+msgid "manager.setup.lists.success"
+msgstr ""
+"Οι ρυθμίσεις εμφάνισης σε λίστες γι' αυτό το περιοδικό έχουν ενημερωθεί."
+
+#, fuzzy
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Επιλέξτε τον τρόπο προεπιλογής της ημερομηνίας πνευματικών δικαιωμάτων για "
+"ένα άρθρο. Αυτή η προεπιλογή μπορεί να παρακαμφθεί κατά περίπτωση. Εάν \""
+"δημοσιεύετε στην πορεία\", μην χρησιμοποιήσετε την ημερομηνία δημοσίευσης "
+"του τεύχους."
+
+#, fuzzy
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Αυτές οι λεπτομέρειες μπορεί να περιλαμβάνονται στα μεταδεδομένα που "
+"εμφανίζονται στην σελίδα \"Σχετικά με το περιοδικό\"."
+
+msgid "manager.setup.publishing"
+msgstr "Λεπτομέρειες Δημοσίευσης"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Η δήλωση απορρήτου έχει ενημερωθεί."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Περιορίστε τον αριθμό των συνδέσμων που θα εμφανίζονται σε κάθε σελίδα μιας "
+"λίστας."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Δώστε μια σύντομη περιγραφή του περιοδικού σας και προσδιορίστε τους "
+"συντάκτες, τους διευθυντές και άλλα μέλη της συντακτικής σας ομάδας."
+
+msgid "manager.setup.contextTitle"
+msgstr "Τίτλος Περιοδικού"
+
+msgid "manager.setup.contextInitials"
+msgstr "Αρχικά Περιοδικού"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Συμπεριλάβετε οποιαδήποτε πληροφορία σχετικά με το περιοδικό σας, η οποία "
+"μπορεί να ενδιαφέρει τους αναγνώστες, τους συγγραφείς ή τους κριτές. Αυτό θα "
+"μπορούσε να περιλαμβάνει την πολιτική ανοικτής πρόσβασης, την εστίαση και το "
+"πεδίο εφαρμογής του περιοδικού, την ειδοποίηση σχετικά με τα πνευματικά "
+"δικαιώματα, τη γνωστοποίηση χορηγίας, το ιστορικό του περιοδικού, μια δήλωση "
+"προστασίας προσωπικών δεδομένων και την ένταξη σε οποιοδήποτε σύστημα "
+"αρχειοθέτησης LOCKSS ή CLOCKSS."
+
+msgid "manager.setup.contextAbout"
+msgstr "Σχετικά με το Περιοδικό"
+
+msgid "manager.setup.contextSummary"
+msgstr "Περίληψη περιοδικού"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Περιορίστε τον αριθμό τεκμηρίων (για παράδειγμα, υποβολές, χρήστες ή "
+"αναθέσεις επιμέλειας) που εμφανίζονται σε κάθε σελίδα μιας λίστας."
+
+msgid "manager.setup.information.success"
+msgstr "Οι πληροφορίες γι' αυτό το περιοδικό ενημερώθηκαν."
+
+msgid "manager.setup.identity"
+msgstr "Ταυτότητα του Περιοδικού"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Πόσες ανακοινώσεις θα εμφανίζονται στην Αρχική Σελίδα. Αφήστε το κενό για να "
+"μην εμφανίζεται κανένα."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Εμφάνιση στην Αρχική Σελίδα"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Οι Ανακοινώσεις μπορούν να δημοσιευτούν για να ενημερώνουν τους αναγνώστες "
+"για νέα και εκδηλώσεις του περιοδικού. Οι δημοσιευμένες ανακοινώσεις θα "
+"εμφανιστούν στη σελίδα Ανακοινώσεις."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Ενεργοποίηση ανακοινώσεων"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Τα προετοιμασμένα emails που αποστέλλονται από το σύστημα για λογαριασμό του "
+"περιοδικού θα έχουν την ακόλουθη υπογραφή στο τέλος."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Τυχόν ανεπίδοτα email θα οδηγήσουν σε αποστολή email σφαλμάτων σ' αυτήν τη "
+"διεύθυνση."
+
+msgid "manager.setup.contact.success"
+msgstr "Τα στοιχεία επικοινωνίας γι' αυτό το περιοδικό έχουν ενημερωθεί."
+
+msgid "manager.setup.archiving.success"
+msgstr "Οι λεπτομέρειες αρχειοθέτησης γι' αυτό το περιοδικό έχουν ενημερωθεί."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Εισαγάγετε τυχόν πληροφορίες που θέλετε να εμφανίζονται στη σελίδα "
+"ανακοινώσεων."
+
+msgid "manager.setup.announcements.success"
+msgstr "Οι ρυθμίσεις ανακοινώσεων ενημερώθηκαν."
+
+msgid "manager.payment.success"
+msgstr "Οι ρυθμίσεις πληρωμής ενημερώθηκαν."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Οι λεπτομέρειες δημοσίευσης ενημερώθηκαν."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Το περιοδικό θα απαιτεί συνδρομές για πρόσβαση σε μέρος ή όλο το περιεχόμενό "
+"του."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Το περιοδικό θα παρέχει ανοιχτή πρόσβαση στο περιεχόμενό του."
+
+#, fuzzy
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+"Η πλατφόρμα OJS δεν θα χρησιμοποιηθεί για τη δημοσίευση του περιεχομένου του "
+"περιοδικού online."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Τρόπος Δημοσίευσης"
+
+msgid "manager.distribution.publication"
+msgstr "Δημοσίευση"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Χρησιμοποιήστε την ημερομηνία δημοσίευσης του άρθρου"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Χρησιμοποιήστε την ημερομηνία δημοσίευσης του τεύχους"
