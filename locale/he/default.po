@@ -1,2 +1,176 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-07-17 07:47+0000\n"
+"Last-Translator: Rachel Joseph <rachel.joseph@biu.ac.il>\n"
+"Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/ojs/default/he/>"
+"\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 3.9.1\n"
+
+#, fuzzy
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>"
+"\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "בק"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "מבקרים"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "מבקר"
+
+msgid "default.genres.sourceTexts"
+msgstr "טקסט מקור"
+
+msgid "default.genres.dataSet"
+msgstr "מערך נתונים"
+
+msgid "default.genres.dataAnalysis"
+msgstr "ניתוח נתונים"
+
+msgid "default.genres.transcripts"
+msgstr "תמלילים"
+
+msgid "default.genres.researchResults"
+msgstr "תואצות מחקר"
+
+msgid "default.genres.researchMaterials"
+msgstr "חומרי מחקר"
+
+msgid "default.genres.researchInstrument"
+msgstr "כלי מחקר"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "ממ"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "מנהלי מנויים"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "מנהל מנויים"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "עמ"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "עורכי מדור"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "עורך מדור"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "עא"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "עורכים אורחים"
+
+msgid "default.groups.name.guestEditor"
+msgstr "עורך אורח"
+
+msgid "default.groups.abbrev.editor"
+msgstr "עו"
+
+msgid "default.groups.plural.editor"
+msgstr "עורכי כתב העת"
+
+msgid "default.groups.name.editor"
+msgstr "עורך כתב העת"
+
+msgid "default.groups.abbrev.manager"
+msgstr "מכע"
+
+msgid "default.groups.plural.manager"
+msgstr "מנהלי כתב העת"
+
+msgid "default.groups.name.manager"
+msgstr "מנהל כתב העת"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"כתב עת  זה משתמש במערכת CLOCKSS ליצירת מערכת ארכיב מבוזרת בין הספריות "
+"המשתתפות ומאפשר לאותם ספריות ליצור ארכיונים קבועים של כתב העת למטרות שימור "
+"ושיקום.<a href=\"http://clockss.org/\">עוד</a>"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"כתב עת זה משתמש במערכת LOCKSS ליצירת מערכת ארכיב מבוזרת בין הספריות המשתתפות "
+"ומאפשרת לספריות אלה ליצור ארכיונים קבועים של כתב העת למטרות שימור ושיקום. <a "
+"href=\"http://www.lockss.org/\"> עוד ... </a>"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"אנו מעודדים ספרנים מחקריים לרשום כתב עת זה בין אחזקות כתבי העת האלקטרוני של "
+"הספרייה שלהם. כמו כן, ראוי לציין שמערכת ההוצאה לאור בקוד הפתוח של כתב העת "
+"הזו מתאימה לספריות לארח את חברי הסגל שלהם עם כתבי עת בהם הם עוסקים בעריכה "
+"(ראה<a href=\"http://pkp.sfu.ca/ojs\">מערכות כתבי עת פתוחים</a>)."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"מעוניין להגיש לכתב עת זה? אנו ממליצים שתבדוק את <a href=\""
+"{$indexUrl}{$contextPath}/about\">אודות כתב העת</a>לכללים שלו <a href=\""
+"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">וגם להנחיות "
+"למחבר</a>. מחברים צריכים <a href=\"{$indexUrl}{$contextPath}/user/register\""
+">לרשום</a> לכתב העת לפני הגשה, ואם רשומים כבר אז רק <a href=\"{$indexUrl}/"
+"index/login\">להתחבר</a> ולהתחיל את שלבי הגשה."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"אנו מעודדים את הקוראים להירשם לשירות ההודעות על פרסום בכתב עת זה. השתמשו "
+"בקישור <a href=\"{$indexUrl}{$contextPath}/user/register\">  \">רישום</a> "
+"בראש דף הבית של כתב העת. רישום זה יביא לכך שהקורא יקבל את תוכן העניינים "
+"במייל עבור כל גיליון חדש של כתב העת. רשימה זו מאפשרת גם לכתב עת להגיע לרמה "
+"מסוימת של תמיכה וקהל קוראים. ראה את <a href=\"{$indexUrl}{$contextPath}/"
+"about/submissions#privacyStatement\">הצהרת פרטיות</a> של כתב העת, שמבטיח "
+"לקוראים ששמם וכתובת הדוא\"ל שלהם לא ישמשו למטרות אחרות."
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"כתב עת זה מספק גישה פתוחה מיידית לתוכנו על בסיס העיקרון שלפיו הנגשת המחקר "
+"באופן חופשי לציבור תומכת בחילופי ידע גלובליים גדולים יותר."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>השמות וכתובות הדוא\"ל שהוזנו באתר כתב עת זה ישמשו אך ורק למטרות המוצהרות "
+"של כתב עת זה ולא יהיו זמינים למטרה אחרת או לצד אחר.</p>"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "הטקסט עומד בדרישות הסגנוניות והביבליוגרפיות המפורטות בהנחיות למחבר."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"הטקסט ברווחים של שורה בלבד; משתמש בגופן בן 12 נקודות; הדגשות בנטוי, ולא בקו "
+"מדגיש (למעט לכתובות URL); וכל האיורים, הדמויות והטבלאות ממוקמים בטקסט "
+"בנקודות המתאימות, ולא בסוף."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "במידת האפשר, סופקו כתובות אתרים להפניות."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "קובץ ההגשה הוא בתבנית OpenOffice, Microsoft Word או RTF."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"ההגשה לא פורסמה עד כה, והיא גם לא הוגשה לכתב עת אחר  (או שנמסר הסבר בתגובות "
+"לעורך)."
+
+msgid "default.genres.article"
+msgstr "טקסט המאמר"
+
+msgid "section.default.policy"
+msgstr "מדיניות ברירת המחדל של המדור"
+
+msgid "section.default.abbrev"
+msgstr "מאמר"
+
+msgid "section.default.title"
+msgstr "מאמרים"
