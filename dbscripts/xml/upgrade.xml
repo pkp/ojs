@@ -195,12 +195,12 @@
 	<upgrade minversion="3.0.0.0" maxversion="3.2.0.9">
 		<data file="dbscripts/xml/upgrade/3.2.1_update.xml" />
 		<code function="installEmailTemplate" key="ANNOUNCEMENT" locales="ca_ES,cs_CZ,ar_IQ,da_DK,en_US,es_ES,fr_CA,id_ID,it_IT,pt_BR,pt_PT,ru_RU,sl_SI,sv_SE,tr_TR,vi_VN,zh_CN" />
-		<migration class="lib.pkp.classes.migration.upgrade.v3_2_1SubeditorCategoriesMigration" />
+		<migration class="lib.pkp.classes.migration.upgrade.PKPv3_2_1SubeditorCategoriesMigration" />
 		<note file="docs/release-notes/README-3.2.1" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.2.9.9">
-		<migration class="lib.pkp.classes.migration.upgrade.v3_3_0UpgradeMigration" />
+		<migration class="lib.pkp.classes.migration.upgrade.PKPv3_3_0UpgradeMigration" />
 		<note file="docs/release-notes/README-3.3.0" />
 	</upgrade>
 
