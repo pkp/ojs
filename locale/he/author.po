@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-16 05:22+0000\n"
+"PO-Revision-Date: 2020-07-17 07:47+0000\n"
 "Last-Translator: Rachel Joseph <rachel.joseph@biu.ac.il>\n"
 "Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/ojs/author/he/>\n"
 "Language: he\n"
@@ -82,3 +82,263 @@ msgstr "הגשות פעילות"
 
 msgid "author.submit"
 msgstr "הגשה חדשה"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"חשבון משתמש נדרש להגיש לכתב עת זה. זה מאפשר לעורכים שלנו לעקוב אחר ההגשות "
+"שלך וליצור איתך קשר כאשר מצב ההגשה שלך משתנה, או אם נדרש ממך מידע נוסף."
+
+msgid "author.article.authorRevisedFile"
+msgstr "קובץ מחבר"
+
+msgid "author.article.copyeditedFile"
+msgstr "קובץ ערוך"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "העלה גרסת מחבר"
+
+msgid "author.submit.submissionComplete"
+msgstr "ההגשה הושלמה. תודה על התעניינותך בפרסום באמצעות {journalTitle$}."
+
+msgid "author.submit.finishSubmission"
+msgstr "סיים את ההגשה"
+
+msgid "author.submit.filesSummary"
+msgstr "סיכום קובץ"
+
+msgid "author.submit.noFiles"
+msgstr "לא צורפו קבצים להגשה זו."
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"כדי להגיש את כתב היד שלך ל {journalTitle$} לחץ על סיום הגשה. איש הקשר העיקרי "
+"של ההגשה יקבל אישור בדוא\"ל ויוכל לראות את התקדמות ההגשה בתהליך העריכה על "
+"ידי כניסה לאתר כתב הכת. תודה על התעניינותך בפרסום באמצעות {journalTitle$}."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "מזהה קובץ משלים ציבורי"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "זיהוי קובץ משלים ציבורי קיים כבר."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "אנא הכנס תיאור."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "אנא הכנס נושא."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "אנא הכנס את כותרת הקובץ המשלים הזה."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "לא הועלה קובץ."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "ציין אחר"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "שם המחקר או נקודת מוצא אחרת."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "תאריך בו נאספו נתונים או יצרו מסמך."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "השתמש רק עם חומרים שפורסמו רשמית."
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "הציגו קובץ לבודקים (ללא מטא-נתונים), מכיוון שהוא לא יפגע בבדיקה עיוורת."
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "תיאור קצר"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "טקסט מקור"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "מערך נתונים"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "ניתוח נתונים"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "תמלילים"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "תוצאות מחקר"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "חומרי מחקר"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "כלי מחקר"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "יוצר (או בעלים) של הקובץ"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "קובץ משלים"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "למיפתוח של חומר משלים זה, ספק את המטא-נתונים הבאים לקובץ המשלים שהועלה."
+
+msgid "author.submit.supplementaryFileData"
+msgstr "מטא-נתונים על קבצים משלימים"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "ערוך קובץ משלים"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "הוסף קובץ משלים"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "העלה קובץ משלים"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "האם אתה בטוח שברצונך למחוק קובץ משלים זה?"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "חזרה לקבצים משלימים"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "להגשה זו לא נוספו קבצים משלימים."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "האם אתה בטוח שברצונך להמשיך בלי להעלות את הקובץ המשלים שבחרת?"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "לחץ על שמור כדי להעלות קובץ (שלאחריו ניתן להעלות קבצים נוספים)."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"שלב אופציונלי זה מאפשר להוסיף קבצים משלימים להגשה. הקבצים שיכולים להיות בכל "
+"פורמט עשויים לכלול (א) כלי מחקר, (ב) מערכי נתונים העומדים בתנאי סקירת האתיקה "
+"המחקרית של המחקר, (ג) מקורות שאחרת לא יהיו זמינים לקוראים, (ד) ) דמויות "
+"וטבלאות שלא ניתן לשלבם בטקסט עצמו, או בחומרים אחרים המוסיפים לתרומת היצירה."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "האם אתה בטוח שברצונך להמשיך בלי להעלות קובץ הגשה?"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "לא הועלה קובץ הגשה."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "חלף קובץ הגשה"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "העלה קובץ הגשה"
+
+msgid "author.submit.submissionFile"
+msgstr "קובץ הגשה"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "חרגת ממגבלת המילים המרבית עבור תקצירים במסלול של מדור זה."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "אנא הכנס את תקציר המאמר שלך."
+
+msgid "author.submit.form.titleRequired"
+msgstr "אנא הכנס את כותרת המאמר שלך."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "נדרש שם פרטי, שם משפחה וכתובת דוא\"ל של כל מחבר."
+
+msgid "author.submit.form.authorRequired"
+msgstr "דרוש לפחות מחבר אחד."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">קודים נוספים</a>."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"מתייחס למיקום הגיאוגרפי, סיקור כרונולוגי או היסטורי ו / או מאפייני מדגם "
+"המחקר."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"ספק מונחים לצורך מיפתוח ההגשה; מונחים נפרדים עם נקודה פסיק (מונח 1; מונח 2; "
+"מונח 3)."
+
+msgid "author.submit.deleteAuthor"
+msgstr "מחק מחבר"
+
+msgid "author.submit.addAuthor"
+msgstr "הוסף מחבר"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "איש קשר ראשי לתכתובת עריכה."
+
+msgid "author.submit.reorder"
+msgstr "סדר מחדש את שם המחבר"
+
+msgid "author.submit.reorderInstructions"
+msgstr "סדר מחדש מחברים שיופיעו לפי הסדר שיופיעו בפרסום."
+
+msgid "submission.submit.privacyStatement"
+msgstr "הצהרת הפרטיות של כתב העת"
+
+msgid "author.submit.form.localeRequired"
+msgstr "בחר שפת הגשה."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "בחר מדור כתב העת מתאים להגשה זו."
+
+msgid "author.submit.comments"
+msgstr "הזן טקסט (לא חובה)"
+
+msgid "submission.submit.coverNote"
+msgstr "הערות לעורך"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "עליך להסכים לתנאי הודעת זכויות היוצרים לפני שתמשיך."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"המחברים מסכימים לתנאי הודעת זכויות יוצרים זו, אשר יחולו על הגשה זו אם וכאשר "
+"היא תפורסם על ידי כתב עת זה (ניתן להוסיף הערות לעורך בהמשך)."
+
+msgid "author.submit.verifyChecklist"
+msgstr "עליך לוודא שכל הפריטים ברשימת הבדיקה של ההגשה הושלמו לפני שתמשיך."
+
+msgid "author.submit.journalSectionDescription"
+msgstr "יש להגיש מאמרים לאחד ממדורי כתב העת."
+
+msgid "author.submit.journalSection"
+msgstr "מדור כתב עת"
+
+msgid "author.submissions.noSubmissions"
+msgstr "אין הגשות."
+
+msgid "author.submissions.viewStatus"
+msgstr "הצג סטטוס"
+
+msgid "author.submissions.confirmDelete"
+msgstr "האם אתה בטוח שברצונך למחוק את ההגשה החלקית הזו?"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "תיקוני הגהה"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "העלה גרסה ערוכה"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "בעריכה: הגהה מבוקשת"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "בעריכה: עריכה מבוקשת"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "בסקירה: נדרשות תיקונים"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "בסבב הביקורת {round$}"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "אם אתם פונים לקבלת ויתור, אתם חייבים להכניס סיבה במקום המיועד לכך."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "אנא השתמש בתיבת ההערות שלהלן כדי לציין מדוע יש לוותר על דמי הגשה."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "אנא שקול לוותר על דמי הגשת המאמר עבור מאמר זה"
