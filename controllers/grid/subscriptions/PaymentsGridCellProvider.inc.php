@@ -46,7 +46,7 @@ class PaymentsGridCellProvider extends GridCellProvider {
 			case 'name':
 				$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 				$user = $userDao->getById($payment->getUserId());
-				return array('label' => $user->getFullName());
+				return array('label' => $user ? $user->getFullName() : __('common.user.nonexistent')); // If no $user, returns "[Nonexistent user]" to avoid null user
 			case 'type':
 				$paymentManager = Application::getPaymentManager($this->_request->getJournal());
 				return array('label' => $paymentManager->getPaymentName($payment));

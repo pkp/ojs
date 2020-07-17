@@ -64,7 +64,7 @@ class UserAction extends PKPUserAction {
 		// Transfer completed payments.
 		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $paymentDao OJSCompletedPaymentDAO */
 		$paymentFactory = $paymentDao->getByUserId($oldUserId);
-		while ($payment = next($paymentFactory)) {
+		while ($payment = $paymentFactory->next()) {
 			$payment->setUserId($newUserId);
 			$paymentDao->updateObject($payment);
 		}
