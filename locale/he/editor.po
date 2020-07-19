@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-17 07:47+0000\n"
+"PO-Revision-Date: 2020-07-20 05:47+0000\n"
 "Last-Translator: Rachel Joseph <rachel.joseph@biu.ac.il>\n"
 "Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/ojs/editor/he/>\n"
 "Language: he\n"
@@ -65,9 +65,8 @@ msgstr ""
 "דמי פרסום לא שולמו. כדי לתזמן פריט לפרסום הודע למחבר לשלם דמי פרסום או ויתור "
 "על עמלה."
 
-#, fuzzy
 msgid "editor.article.scheduleForPublication.toBeAssigned"
-msgstr "יוקצה"
+msgstr "מחכה"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "לוח זמנים לפרסום"
@@ -90,9 +89,8 @@ msgstr "במדור"
 msgid "editor.submissions.assignedTo"
 msgstr "הוקצה ל"
 
-#, fuzzy
 msgid "editor.submissions.lastCompleted"
-msgstr "השלם האחרון"
+msgstr "תאריך אחרון"
 
 msgid "editor.submissions.averageTime"
 msgstr "שבועות"
