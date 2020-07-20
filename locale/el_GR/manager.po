@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2020-07-17 07:47+0000\n"
+"PO-Revision-Date: 2020-07-20 10:20+0000\n"
 "Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/manager/el/>\n"
 "Language: el_GR\n"
@@ -1993,3 +1993,6 @@ msgstr "Χρησιμοποιήστε την ημερομηνία δημοσίε�
 
 msgid "manager.distribution.copyrightYearBasis.issue"
 msgstr "Χρησιμοποιήστε την ημερομηνία δημοσίευσης του τεύχους"
+
+msgid "manager.setup.masthead.success"
+msgstr "Ενημερώθηκαν οι λεπυομέρειες του κύριου τίτλου αυτού του περιοδικού."
