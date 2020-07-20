@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2020-07-15 12:45+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/editor/el/>\n"
+"Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
 msgstr "Αρχική σελίδα Επιμελητή περιοδικού"
@@ -415,3 +417,15 @@ msgstr "Το δημόσιο αναγνωριστικό '{$publicIdentifier}' υ�
 
 msgid "editor.article.coverImage"
 msgstr "Εικόνα εξωφύλλου"
+
+msgid "editor.article.editMetadata"
+msgstr "Επεξεργασία των Μεταστοιχείων της Έκδοσης"
+
+msgid "editor.article.viewMetadata"
+msgstr "Εμφάνιση των Μεταστοιχείων της Έκδοσης"
+
+msgid "editor.article.publishVersion"
+msgstr "Έκδοση Δημοσίευσης"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Εμφάνιση Προγραμματισμένης Δημοσιεύσης"

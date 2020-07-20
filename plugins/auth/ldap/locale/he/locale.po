@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-07-16 05:22+0000\n"
+"Last-Translator: Rachel Joseph <rachel.joseph@biu.ac.il>\n"
+"Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/he/"
+">\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "יציאת שרת"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"לדוגמה, \"ldap.example.com\", או \"ldaps: //ldap.example.com\" (לשימוש ב-SSL)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "שם השרת"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "הגדרות LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"תוסף זה מאפשר אימות וסנכרון של חשבונות משתמשים מול מקור נתונים חיצוני של "
+"LDAP."
+
+#, fuzzy
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "תכונות אבטחה SASL"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "דרוש מזהה הרשאה"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "תְחוּם"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "למשל, \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "מנגנון SASL"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "השתמש ב- SASL במקום באימות פשוט"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "הגדרות SASL (לא חובה)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "פונקציית גיבוב לסיסמאות המאוחסנות בשרת. מומלץ להשתמש ב-SSHA."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "הצפנת סיסמא"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"התכונה שערכה מזהה באופן ייחודי אובייקט משתמש, כגון uid או cn או "
+"sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "תכונת שם חשבון"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"DN וסיסמא המנהל נדרשים רק אם סנכרון פרופיל משתמש / סיסמא או אפשרויות יצירת "
+"משתמש מופעלות. אם LDAP ישמש אך ורק לאימות, ניתן להשמיט אפשרויות אלה."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "סיסמת מנהל"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "למשל, \"cn = מנהל, dc = דוגמה, dc = com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "מנהל DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "למשל, \"ou = אנשים, dc = דוגמא, dc = com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "בסיס DN"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "אופציונאלי. ברירת המחדל היא 389 (LDAP) או 636 (LDAP באמצעות SSL)"

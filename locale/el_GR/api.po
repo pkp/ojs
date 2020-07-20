@@ -2,14 +2,59 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
+"PO-Revision-Date: 2020-07-15 12:45+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/api/el/>\n"
+"Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:19+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Δεν έχετε άδεια να δείτε μη δημοσιευμένα τεύχη."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Η δημοσίευση που ζητήσατε δεν ανήκει σ' αυτό το περιοδικό."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Η δημοσίευση που ζητήσατε δεν ανήκει σ' αυτή την υποβολή."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Η μέθοδος πληρωμής που επιλέξατε δεν υποστηρίζεται."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Δεν έχετε άδεια να μετακινήσετε αυτό το πρότυπο ηλεκτρονικού ταχυδρομείου σε "
+"άλλο περιοδικό."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Το περιοδικό που ζητήσατε δεν βρέθηκε."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Δεν έχετε άδεια να διαγράψετε αυτό το περιοδικό."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Δεν έχετε άδεια να επεξεργαστείτε αυτό το περιοδικό."
+
+msgid "api.contexts.403.requiresContext"
+msgstr ""
+"Δεν μπορείτε να επεξεργαστείτε αυτό το περιοδικό από το API του ιστότοπου."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Δεν μπορείτε να προβάλετε ή να επεξεργαστείτε αυτό το περιοδικό, εκτός εάν "
+"υποβάλετε αίτημα στο API του περιοδικού ή στο API του ιστότοπου."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Δεν έχετε άδεια προβολής αυτού του περιοδικού."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Μπορείτε να δείτε μόνο περιοδικά που έχουν ενεργοποιηθεί."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Για να υποβάλετε ή να επεξεργαστείτε μια υποβολή, πρέπει να κάνετε αίτημα "
+"στο τελικό σημείο API του περιοδικού."

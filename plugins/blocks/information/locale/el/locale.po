@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-07-15 12:45+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-information/el/>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.information.description"
+msgstr "Δημιουργία συνδέσμου πληροφοριών στην πλαϊνή μπάρα."
+
+msgid "plugins.block.information.displayName"
+msgstr "Δομικό Στοιχείο Πληροφοριών"
+
+msgid "plugins.block.information.link"
+msgstr "Πληροφορίες"

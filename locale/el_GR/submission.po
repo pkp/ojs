@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2020-07-15 12:45+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/submission/el/"
+">\n"
+"Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Υποβολή άρθρου"
@@ -160,3 +163,20 @@ msgstr "Οι προδιαγραφές βασίζονται στο διεθνές
 
 msgid "section.any"
 msgstr "Όλες οι ενότητες"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Δεν είναι δυνατή η επεξεργασία των τυπογραφικών δοκιμίων αυτής της έκδοσης "
+"επειδή έχει ήδη δημοσιευτεί."
+
+msgid "catalog.category.heading"
+msgstr "Όλα τα Τεκμήρια"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Τεκμήρια"
+
+msgid "submission.sectionOptions"
+msgstr "Επιλογές Ενότητας"
+
+msgid "submission.submit.noContext"
+msgstr "Δεν ήταν δυνατή η εύρεση του περιοδικού που ανήκει αυτή η υποβολή."
