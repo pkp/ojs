@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-07-17 07:47+0000\n"
+"Last-Translator: Rachel Joseph <rachel.joseph@biu.ac.il>\n"
+"Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/he/>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "למידע נוסף"
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "מנוי נדרש כדי לגשת למשאבים."
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "התחבר כדי לגשת למשאבים למנויים בלבד."
+
+msgid "plugins.block.subscription.about"
+msgstr "מנויים"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "גישה מ: {ip$}"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "גישה ניתנת על ידי: {institutionName$}"
+
+msgid "plugins.block.subscription.expires"
+msgstr "פג תוקף"
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "מנוי"
+
+msgid "plugins.block.subscription.description"
+msgstr "תוסף זה מספק מידע על מנויים בסרגל הצד."
+
+msgid "plugins.block.subscription.displayName"
+msgstr "בלוק מנוי"

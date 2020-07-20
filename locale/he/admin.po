@@ -1,0 +1,223 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-07-15 12:45+0000\n"
+"Last-Translator: Rachel Joseph <rachel.joseph@biu.ac.il>\n"
+"Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/ojs/admin/he/>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.languages.downloadUnavailable"
+msgstr "הורדת חבילות שפה משרת האינטרנט של פרויקט הידע הציבורי אינה זמינה כעת"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "תזכורת סקירה"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "הודעת גישה פתוחה"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "תזכורת לתאריך סיום המנוי"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "אין משתמשים רשומים."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"האם אתה בטוח שברצונך למזג את {oldAccountCount$} חשבונות שנבחרו לחשבון עם שם "
+"המשתמש \"{newUsername$}\"? חשבונות {oldAccountCount$} שנבחרו לא יהיו קיימים "
+"לאחר מכן. פעולה זו אינה הפיכה."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "כל המשתמשים הרשומים"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"בחר משתמש (או כמה) כדי למזג לחשבון משתמש אחר (למשל, אם למישהו יש שני חשבונות "
+"משתמש). החשבונ(ות) שנבחרו ראשונים יימחקו וכל ההגשות, המטלות וכו' יוחסו "
+"לחשבון השני."
+
+msgid "admin.mergeUsers.into.description"
+msgstr "בחר משתמש למי לייחס את מחברי המשתמש הקודם, משימות עריכה וכו '."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "מיזוג משתמש"
+
+msgid "admin.mergeUsers"
+msgstr "מיזוג משתמשים"
+
+msgid "admin.journals.importErrors"
+msgstr "היבוא לא הושלם בהצלחה"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "דרוש נתיב הייבוא."
+
+msgid "admin.journals.redirect"
+msgstr "צור קוד למיפוי כתובות אתרים של OJS 1 לכתובות אתרים של OJS 2"
+
+msgid "admin.journals.transcode"
+msgstr "המרת קידוד מטא נתונים מ- ISO8859-1"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "ייבא מנויים"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "נתיב קיים או נתיב ליצירה (למשל, \"ojs\")."
+
+msgid "admin.contexts.contextDescription"
+msgstr "תיאור כתב העת"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "אפשר לכתב עת זה להופיע באתר"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{name$} נערך בהצלחה."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{name$} נוצר בהצלחה."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "הנתיב שסיפקת נמצא בשימוש כבר בכתב עת אחר."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"הנתיב יכול לכלול אותיות בלבד, מספרים והתווים _ ו- -. עליו להתחיל ולהסתיים "
+"באות או במספר."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "דרוש נתיב (path)."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "נדרשת כותרת."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"זו צריכה להיות מילה קצרה או ראשי תיבות שמזהה את כתב העת. כתובת האתר של כתב "
+"העת תהיה {sampleUrl$}."
+
+msgid "admin.contexts.create"
+msgstr "צור כתב עת"
+
+msgid "admin.journals.noneCreated"
+msgstr "לא נוצרו כתבי עת."
+
+msgid "admin.journals.journalSettings"
+msgstr "הגדרות כתב עת"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"תירשם אוטומטית כמנהל כתב עת זה. לאחר יצירת כתב עת חדש, תנותב לאשף ההגדרות "
+"שלו, כדי להשלים את הגדרת כתב העת הראשונית."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "הגדרות תצורת OJS מ- <tt> config.inc.php </tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "תצורת OJS"
+
+msgid "admin.systemVersion"
+msgstr "גרסת OJS"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"אפשר יצירת משתמשים (אם נתמך על ידי תוסף אימות זה). משתמשים שנוצרו בתוך OJS "
+"עם מקור אימות זה יתווספו אוטומטית למקור האימות המרוחק אם הם לא קיימים כבר. "
+"בנוסף, אם מקור זה הוא מקור האימות המוגדר כברירת מחדל, חשבונות OJS שנוצרו "
+"באמצעות רישום משתמשים יתווספו גם למקור האימות המרוחק."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"אפשר שינוי סיסמת משתמש (אם נתמך על ידי תוסף אימות זה). הפעלת אפשרות זו "
+"מאפשרת למשתמשים לשנות את הסיסמה שלהם מתוך OJS ולהשתמש בתכונה \"סיסמה שנאבדה\""
+" של OJS כדי לאפס סיסמא שנשכחה. פונקציות אלה לא יהיו זמינות למשתמשים עם מקור "
+"אימות זה אם אפשרות זו אינה מופעלת."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"אפשר סינכרון פרופיל משתמש (אם נתמך על ידי תוסף אימות זה). פרטי פרופיל המשתמש "
+"יעודכנו אוטומטית מהמקור המרוחק כאשר משתמש נכנס, ושינויי פרופיל (כולל שינויים "
+"בסיסמה) שבוצעו בתוך OJS יעודכנו אוטומטית על המקור המרוחק. אם אפשרות זו אינה "
+"מופעלת מידע על פרופיל OJS יופרד ממידע פרופיל מקור מרוחק."
+
+msgid "admin.auth.ojs"
+msgstr "מאגר המשתמשים של OJS"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"לא ניתן להוסיף את האזור החדש לקובץ הרישום המקומי, בדרך כלל \"registry / "
+"locales.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "לא ניתן לפתוח את מתאר השפה מאתר האינטרנט של PKP."
+
+msgid "admin.languages.download"
+msgstr "הורד אזור"
+
+msgid "admin.languages.localeInstalled"
+msgstr "האזור \"{$ locale}\" הותקן."
+
+msgid "admin.languages.downloadFailed"
+msgstr "הורדת האזור נכשלה. הודעת השגיאה להלן מתארת את הכישלון."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"בחר אזורים נוספים שתתקין להם תמיכה במערכת זו. יש להתקין אזורים לפני שניתן "
+"יהיה להשתמש בהם כתבי עת שמתארחים. עיין בתיעוד של OJS למידע על הוספת תמיכה "
+"בשפות חדשות."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"האם אתה בטוח שברצונך להסיר את ההתקנה של אזור זה? זה עשוי להשפיע על כל כתבי "
+"העת המתארחים המשתמשים כעת באזור."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "אזורים מסומנים עשויים להיות לא שלמים."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"בחר את כל האזורים לתמיכה באתר. האזורים שנבחרו יהיו זמינים לשימוש בכל כתבי "
+"העת המתארחים באתר, ויופיעו גם בתפריט בחירת שפה שיופיע בכל דף אתר (שניתן יהיה "
+"לבטל אותו בדפים ספציפיים לכתב עת). אם לא נבחרו מספר אזורים, תפריט מעבר לשפה "
+"לא יופיע והגדרות השפה המורחבת לא יהיו זמינות לכתבי עת."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "זו תהיה שפת ברירת המחדל של האתר ושל כל כתבי העת המתארחים."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"האם אתה בטוח שאתה רוצה לבטל האזור הזה? זה עשוי להשפיע על כל כתבי העת "
+"המתארחים המשתמשים כעת באזור."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tהתקנת ה- OJS שלך מוגדרת להקליט יותר ממדד שימוש אחד. סטטיסטיקות שימוש "
+"יוצגו בכמה הקשרים.\n"
+"ישנם מקרים בהם יש להשתמש בנתון של שימוש בודד, למשל להצגת רשימה מסודרת של "
+"מאמרים הנפוצים ביותר או לדרג\n"
+"תוצאות חיפוש. בחר אחת מהערכים המוגדרים כברירת מחדל.\n"
+"\t"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"בקשות לאתר הראשי יופנו לכתב עת זה. זה עשוי להיות שימושי אם האתר מארח רק כתב "
+"עת בודד, למשל."
+
+msgid "admin.settings.redirect"
+msgstr "פניית כתב עת"
+
+msgid "admin.settings.info.success"
+msgstr "מידע האתר עודכן בהצלחה."
+
+msgid "admin.settings.config.success"
+msgstr "הגדרות תצורת האתר עודכנו בהצלחה."
+
+msgid "admin.settings.appearance.success"
+msgstr "הגדרות מראה האתר עודכנו בהצלחה."
+
+msgid "admin.hostedContexts"
+msgstr "כתבי עת מתארחים"

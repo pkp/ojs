@@ -1,0 +1,465 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-07-20 05:47+0000\n"
+"Last-Translator: Rachel Joseph <rachel.joseph@biu.ac.il>\n"
+"Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/ojs/editor/he/>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.article.coverImage"
+msgstr "תמונת כריכה"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"המזהה הציבורי '{publicIdentifier$}' כבר קיים עבור אובייקט אחר מאותו סוג. בחר "
+"מזהים ייחודיים לאובייקטים מאותו סוג בכתב העת."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"כל קבצים שכבר הועלו לשלב הגשה כלשהם ניתן להוסיף לרשימת הגהה על ידי סימון "
+"תיבת הסימון כלול למטה ולחיצה על חיפוש: כל הקבצים הזמינים יופיעו וניתן לבחור "
+"אותם לכלול."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"קובצי טיוטה סופיים ברשימה זו הופכים על ידי מתקין לגירסאות המתוקנות שהועלו "
+"להלן תחת <span class=\"pkp_help_title\">התקנה</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "בחר קבצי הגהה"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"עורך הסדר מכין קבצים אלה לכל <span class=\"pkp_help_title\">הגהה</span> ואז "
+"מעלה אותם לצורך הגהה."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "ערוך הגהת גיליון"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "תאריך הגישה אינו תקף."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"האם אתה בטוח שברצונך להסיר מאמר זה מהגיליון? המאמר יהיה זמין לתזמון בגיליון "
+"אחר."
+
+msgid "editor.article.remove"
+msgstr "הסר"
+
+msgid "grid.action.removeArticle"
+msgstr "הסר את המאמר מהגליון"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"לא ניתן למצוא את תמונת השער שביקשת למחוק. יתכן שהוא כבר נמחק. נסה לטעון מחדש "
+"את הדף."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"דמי פרסום לא שולמו. כדי לתזמן פריט לפרסום הודע למחבר לשלם דמי פרסום או ויתור "
+"על עמלה."
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "מחכה"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "לוח זמנים לפרסום"
+
+msgid "editor.article.editMetadata"
+msgstr "ערוך מטא-נתונים של גרסה"
+
+msgid "editor.article.viewMetadata"
+msgstr "צפה במטא-נתונים של גרסה"
+
+msgid "editor.article.publishVersion"
+msgstr "פרסם גרסה"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "הצג פרסום מתוזמן"
+
+msgid "editor.submissions.inSection"
+msgstr "במדור"
+
+msgid "editor.submissions.assignedTo"
+msgstr "הוקצה ל"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "תאריך אחרון"
+
+msgid "editor.submissions.averageTime"
+msgstr "שבועות"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "אחרון"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "אין הגשות"
+
+msgid "editor.submissions.accept"
+msgstr "קבל"
+
+msgid "editor.submissions.invite"
+msgstr "הזמן"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "משימות פעילות"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "הגש MM-DD"
+
+msgid "editor.submissions.showBy"
+msgstr "הצג לפי"
+
+msgid "editor.article.decision"
+msgstr "החלטה"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "הגדר את הקובץ המקורי כגרסת הביקורת"
+
+msgid "editor.navigation.issueArchive"
+msgstr "גיליונות קודמים"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "הגדר גיליון נוכחי"
+
+msgid "grid.action.addIssueGalley"
+msgstr "צור הגהת גיליון"
+
+msgid "grid.action.previewIssue"
+msgstr "תצוגה מקדימה"
+
+msgid "grid.action.viewIssue"
+msgstr "הצג"
+
+msgid "grid.action.addIssue"
+msgstr "צור גיליון"
+
+msgid "grid.action.publish"
+msgstr "פרסם גיליון"
+
+msgid "grid.action.addGalley"
+msgstr "הוסף הגהה"
+
+msgid "editor.navigation.futureIssues"
+msgstr "גיליונות עתידיים"
+
+msgid "editor.issues.identifiers"
+msgstr "מזהים"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "האם אתה בטוח שברצונך למחוק הגהות גיליון זה?"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "חזור להגהות גיליון"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "מזהה הגהות גיליון ציבורי כבר קיים."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "מיקום הגהות גיליון נדרש."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "תווית הגהות גיליון נדרש."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "הגהות גליון לא פורסמו."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "פרסם הגהות עם כל תוכן הגיליון."
+
+msgid "editor.issues.viewingGalley"
+msgstr "מציג הגהת גיליון"
+
+msgid "editor.issues.galley"
+msgstr "הגהת גיליון"
+
+msgid "editor.issues.galleys"
+msgstr "הגהות גיליון"
+
+msgid "editor.issues.pages"
+msgstr "מספר עמודים"
+
+msgid "editor.issues.open"
+msgstr "פתוח"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "אין גיליונות נוכחיות"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "לא ניתן לשמור מזהה ציבורי למאמר:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "האם אתה בטוח שברצונך להגדיר את הגיליון לגיליון נוכחי?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "האם אתה בטוח שברצונך לבטל את פרסום הגיליון שפורסם?"
+
+msgid "editor.issues.confirmPublish"
+msgstr "האם אתה בטוח שברצונך לפרסם את הגיליון החדש?"
+
+msgid "editor.issues.preview"
+msgstr "תצוגה מקדימה"
+
+msgid "editor.issues.previewIssue"
+msgstr "תצוגה מקדימה של הגיליון"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "בטל את הפרסום"
+
+msgid "editor.issues.publishIssue"
+msgstr "פרסם גיליון"
+
+msgid "editor.issues.publicId"
+msgstr "זיהוי ציבורי"
+
+msgid "editor.issues.order"
+msgstr "סדר"
+
+msgid "editor.issues.default"
+msgstr "ברירת מחדל"
+
+msgid "editor.issues.saveChanges"
+msgstr "שמור שינויים לתוכן העניינים?"
+
+msgid "editor.issues.issueData"
+msgstr "נתוני גיליון"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"גיליון זה משתמש בהזמנת מדורים בהתאמה אישית.<a href=\"{$url}\" class=\""
+"action\">אפס לברירת מחדל</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"כתב עת זה משתמש בהזמנת גיליונות בהתאמה אישית.<a href=\"{$url}\" class=\""
+"action\">אפס לברירת מחדל</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"כל המאמרים יוחזרו לתור העריכה וכל הקבצים המשויכים יוסרו לצמיתות. האם אתה "
+"בטוח שברצונך להסיר את הגיליון?"
+
+msgid "editor.issues.cover"
+msgstr "כריכה"
+
+msgid "editor.issues.access"
+msgstr "גישה"
+
+msgid "editor.issues.identification"
+msgstr "זיהוי"
+
+msgid "editor.issues.subscription"
+msgstr "מנוי"
+
+msgid "editor.issues.openAccess"
+msgstr "גישה חופשית"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "הצג"
+
+msgid "editor.issues.showCoverPage"
+msgstr "צור כריכה לגיליון זה עם האלמנטים הבאים."
+
+msgid "editor.issues.coverPageCaption"
+msgstr "כותרת הכריכה"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "להסיר גיליון סגנונות?"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"פורמט גיליון סגנונות לא חוקי. ודא שהקובץ שהוגש הוא CSS תקף. (שים לב "
+"שגיליונות סגנונות עם הערות בהתחלה עשויים להידחות.)"
+
+msgid "editor.issues.styleFile"
+msgstr "גיליון סגנון"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "פורמט דף שער לא חוקי. פורמטים מקובלים הם gif ,jpg או png."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"לא ניתן למצוא את תמונת השער שביקשת למחוק. יתכן שהוא כבר נמחק. נסה לטעון מחדש "
+"את הדף."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"תמונת הכריכה שביקשת למחוק לא תאמה את תמונת הכריכה לגיליון זה. טען מחדש את "
+"הדף ונסה שוב."
+
+msgid "editor.issues.removeCoverPage"
+msgstr "להסיר את תמונת הכריכה?"
+
+msgid "editor.issues.proofed"
+msgstr "מוגהה"
+
+msgid "editor.issues.remove"
+msgstr "הסר"
+
+msgid "editor.issues.uploaded"
+msgstr "הועלה"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(פורמטים מותרים: gif, jpg או png)"
+
+msgid "editor.issues.coverPage"
+msgstr "תמונת כריכה"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "אפשר גישה פתוחה מעוכבת"
+
+msgid "editor.issues.accessDate"
+msgstr "תאריך גישה פתוח"
+
+msgid "editor.issues.accessStatus"
+msgstr "סטטוס גישה"
+
+msgid "editor.issues.description"
+msgstr "תיאור"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "מזהה גיליון ציבורי"
+
+msgid "editor.issues.issueIdentification"
+msgstr "זיהוי גיליון"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "נדרש זיהוי גיליון. בחר לפחות אחת מאפשרויות זיהוי הגיליון."
+
+msgid "editor.issues.titleRequired"
+msgstr "כותרת נדרשת לגיליון."
+
+msgid "editor.issues.yearRequired"
+msgstr "שנה נדרשת ועליה להיות ערך מספרי חיובי."
+
+msgid "editor.issues.numberRequired"
+msgstr "מספר נדרש ועליו להיות ערך מספרי חיובי."
+
+msgid "editor.issues.volumeRequired"
+msgstr "מספר כרך נדרש וחייב להיות ערך מספרי חיובי."
+
+msgid "editor.issues.datePublished"
+msgstr "תאריך פירסום"
+
+msgid "editor.issues.unpublished"
+msgstr "לא פורסם"
+
+msgid "editor.issues.published"
+msgstr "פורסם"
+
+msgid "editor.issues.confirmDelete"
+msgstr "האם אתה בטוח שברצונך למחוק גיליון זו לצמיתות?"
+
+msgid "editor.issues.noArticles"
+msgstr "כרגע לא מוגדרים פריטים לגיליון זה."
+
+msgid "editor.issues.numArticles"
+msgstr "פריטים"
+
+msgid "editor.issues.currentIssue"
+msgstr "גיליון נוכחי"
+
+msgid "editor.issues.editIssue"
+msgstr "ניהול גיליון: {issueIdentification$}"
+
+msgid "editor.issues.createIssue"
+msgstr "צור גיליון"
+
+msgid "editor.editorAdministration"
+msgstr "ניהול עורך"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "כלול את תוכן העניינים מגליון זה:"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"שלח הודעה זו למשתמשים הקשורים לכתב עת זה שציינו כי הם רוצים לקבל עדכונים "
+"({count$} משתמשים)"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "שלח הודעה זו לכל המשתמשים הקשורים לכתב עת זה ({count$} משתמשים)"
+
+msgid "editor.usersNotified"
+msgstr "משתמשים קיבלו הודעה"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "מודיע למשתמשים ..."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "כל המנויים המוסדיים ({count$} משתמשים)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "כל המנויים הפרטיים ({count$} משתמשים)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "כל המחברים שפורסמו ({count$} משתמשים)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "כל הקוראים ({count$} משתמשים)"
+
+msgid "editor.notifyUsers"
+msgstr "הודע למשתמשים"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"לפני שתשלח הגשה לעריכה, השתמש בקישור הודע למחבר כדי ליידע את המחבר על ההחלטה "
+"ובחר בגירסה שתישלח."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"הגשה זו תישמר בארכיון לאחר שנשלח דוא\"ל הודעת המחבר או שנלחץ דלג על דוא\"ל."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "האם אתה בטוח שברצונך לרשום החלטה זו?"
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "האם אתה בטוח שברצונך למחוק הגשה זו לצמיתות?"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"לשמור שינויים בהגשות שנשמרו בארכיון? הגשות המסומנות למחיקה יימחקו מהמערכת "
+"לצמיתות."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "אין הגשות בארכיון."
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"המזהה הציבורי '{publicIdentifier$}' כבר קיים עבור אובייקט אחר (גיליון, מאמר "
+"או קובץ). בחר מזהים ייחודיים בכתב עת שלך."
+
+msgid "editor.me"
+msgstr "אני"
+
+msgid "editor.allEditors"
+msgstr "כל העורכים"
+
+msgid "editor.allSections"
+msgstr "כל המדורים"
+
+msgid "editor.publishedIssues"
+msgstr "גיליונות שפורסמו"
+
+msgid "editor.publishing"
+msgstr "פרסום"
+
+msgid "editor.submissionArchive"
+msgstr "ארכיון הגשה"
+
+msgid "editor.submissionQueue"
+msgstr "תור הגשה"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "הגשות ופרסום"
+
+msgid "editor.reassign"
+msgstr "הקצה מחדש"
+
+msgid "editor.home"
+msgstr "דף הבית של העורך"
