@@ -117,12 +117,12 @@
 	a {
 		display: inline-block;
 		padding: 0.125rem 0;
-		color: #fff;
+		color: @text-bg-base;
 		text-decoration: none;
 
 		&:hover,
 		&:focus {
-			color: #fff;
+			color: @text-bg-base;
 			text-decoration: underline;
 		}
 	}
@@ -141,7 +141,7 @@
 		margin-right: auto;
 		margin-top: 1rem;
 		padding-top: 1rem;
-		border-top: 1px solid rgba(255,255,255,0.1);
+		border-top: 1px solid @bg-base-border-color;
 	}
 
 	.task_count {
@@ -150,7 +150,7 @@
 		height: 20px;
 		margin-left: 0.5em;
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.3);
+		background: @bg-base-border-color;
 		line-height: 20px;
 		text-align: center;
 		font-size: 12px; // helps visually center the number
@@ -164,13 +164,14 @@
 	> li > ul a {
 		.task_count {
 			display: inline-block;
-			background: rgba(255, 255, 255, 0.8);
-			color: @primary;
+			background: @bg-base-border-color;
+			color: @text-bg-base;
 		}
 
 		&:hover .task_count,
 		&:focus .task_count {
-			background: #fff;
+			background: @text-bg-base;
+			background: @text;
 		}
 	}
 }
@@ -452,7 +453,7 @@
 
 		> li > ul a {
 			.task_count {
-				background: rgba(0, 0, 0, 0.2);
+				display: none;
 			}
 		}
 	}
