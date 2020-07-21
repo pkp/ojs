@@ -323,7 +323,7 @@ class IssueHandler extends Handler {
 		$issueSubmissionsInSection = [];
 		foreach ($sections as $section) {
 			$issueSubmissionsInSection[$section->getId()] = [
-				'title' => $section->getLocalizedTitle(),
+				'title' => $section->getHideTitle()?null:$section->getLocalizedTitle(),
 				'articles' => [],
 			];
 		}
