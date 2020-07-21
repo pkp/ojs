@@ -153,38 +153,6 @@ class Submission extends PKPSubmission {
 	}
 
 	/**
-	 * Get title of article's section.
-	 * @return string
-	 */
-	function getSectionTitle() {
-		return $this->getData('sectionTitle');
-	}
-
-	/**
-	 * Set title of article's section.
-	 * @param $sectionTitle string
-	 */
-	function setSectionTitle($sectionTitle) {
-		return $this->setData('sectionTitle', $sectionTitle);
-	}
-
-	/**
-	 * Get section abbreviation.
-	 * @return string
-	 */
-	function getSectionAbbrev() {
-		return $this->getData('sectionAbbrev');
-	}
-
-	/**
-	 * Set section abbreviation.
-	 * @param $sectionAbbrev string
-	 */
-	function setSectionAbbrev($sectionAbbrev) {
-		return $this->setData('sectionAbbrev', $sectionAbbrev);
-	}
-
-	/**
 	 * Get the localized cover page server-side file name
 	 * @return string
 	 * @deprecated 3.2.0.0
