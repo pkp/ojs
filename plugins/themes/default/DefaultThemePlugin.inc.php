@@ -170,6 +170,7 @@ class DefaultThemePlugin extends ThemePlugin {
 			$additionalLessVariables[] = '@bg-base:' . $this->getOption('baseColour') . ';';
 			if (!$this->isColourDark($this->getOption('baseColour'))) {
 				$additionalLessVariables[] = '@text-bg-base:rgba(0,0,0,0.84);';
+				$additionalLessVariables[] = '@bg-base-border-color:rgba(0,0,0,0.2);';
 			}
 		}
 
