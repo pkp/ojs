@@ -40,6 +40,12 @@ msgstr "Select all locales to support on the site. The selected locales will be 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Marked locales may be incomplete."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages."
+
 msgid "admin.auth.ojs"
 msgstr "OJS User Database"
 

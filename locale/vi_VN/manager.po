@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-07 15:39+0000\n"
+"PO-Revision-Date: 2020-07-10 18:40+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
@@ -129,7 +129,10 @@ msgid "manager.distribution.publishingMode"
 msgstr "Kiểu xuất bản"
 
 msgid "manager.distribution.copyrightYearBasis.description"
-msgstr "Tiếng Việt (vi_VN)"
+msgstr ""
+"Chọn cách ngày bản quyền mặc định được chọn cho một bài viết. Mặc định này "
+"có thể được ghi đè trên cơ sở từng trường hợp. Nếu bạn \"xuất bản ngay khi "
+"đó\", đừng sử dụng ngày xuất bản của số."
 
 msgid "manager.people.showNoRole"
 msgstr "Hiển thị những người dùng không có vai trò"
@@ -217,7 +220,7 @@ msgid "manager.payment.description"
 msgstr "Mô tả"
 
 msgid "manager.languages.primaryLocaleInstructions"
-msgstr "Đây sẽ là ngôn ngữ mặc định cho trang web tạp chí"
+msgstr "Đây sẽ là ngôn ngữ mặc định cho trang web tạp chí."
 
 msgid "manager.languages.noneAvailable"
 msgstr ""
@@ -237,7 +240,7 @@ msgstr ""
 
 msgid "manager.files.note"
 msgstr ""
-"Lưu ý: Trình duyệt tập tin là một tính năng nâng cao cho phép các tập tin và "
+"Lưu ý: Duyệt các tập tin là một tính năng nâng cao cho phép các tập tin và "
 "thư mục được liên kết với tạp chí được xem và thao tác trực tiếp."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
@@ -245,3 +248,1837 @@ msgstr "Sử dụng ngày của số xuất bản"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Sử dụng ngày xuất bản của bài viết"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Thêm liên kết cơ sở dữ liệu mới"
+
+msgid "manager.setup.addNavItem"
+msgstr "Thêm mục"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Thêm mục xuất hiện ở \"About the Journal\""
+
+msgid "manager.setup.addItem"
+msgstr "Thêm mục"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Thêm mục Checklist"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Thêm mục About"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Nội dung"
+
+msgid "manager.setup.pageHeader"
+msgstr "Tiêu đề trang của tạp chí"
+
+msgid "manager.setup.contextName"
+msgstr "Tên tạp chí"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Style sheet tạp chí"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Trang chủ tạp chí bao gồm các liên kết điều hướng theo mặc định. Nội dung "
+"trang chủ bổ sung có thể được thêm vào bằng cách sử dụng một hoặc tất cả các "
+"tùy chọn sau, sẽ xuất hiện theo thứ tự hiển thị."
+
+msgid "manager.setup.homepageContent"
+msgstr "Nội dung trang chủ của tạp chí"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Ban biên tập"
+
+msgid "manager.setup.masthead"
+msgstr "Tiêu đề"
+
+msgid "manager.setup"
+msgstr "Cài đặt tạp chí"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Giới hạn số lượng từ tóm tắt cho chuyên mục này (0 cho không giới hạn)"
+
+msgid "manager.sections.wordCount"
+msgstr "Số từ"
+
+msgid "manager.sections.unassigned"
+msgstr "Các biên tập viên chuyên mục có sẵn"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Các bài gửi được thực hiện cho chuyên mục này của tạp chí"
+
+msgid "manager.sections.submissionReview"
+msgstr "Sẽ không được đánh giá ngang hàng"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Sẽ không được bao gồm trong việc lập chỉ mục của tạp chí"
+
+msgid "manager.sections.reviewed"
+msgstr "Đánh giá ngang hàng"
+
+msgid "manager.sections.readingTools"
+msgstr "Các công cụ đọc"
+
+msgid "manager.sections.policy"
+msgstr "Chính sách chuyên mục"
+
+msgid "manager.sections.open"
+msgstr "Đệ trình mở"
+
+msgid "manager.sections.noneCreated"
+msgstr "Không có chuyên mục nào đã được tạo."
+
+msgid "manager.sections.indexed"
+msgstr "Lập chỉ mục"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Ví dụ: \"Bài viết được đánh giá ngang hàng\", \"Đánh giá sách không được "
+"giới thiệu\", \"Bình luận được mời\", v.v.)"
+
+msgid "manager.sections.identifyType"
+msgstr "Xác định các mục được xuất bản trong chuyên mục này là một (nhiều)"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Bỏ qua tiêu đề của chuyên mục này từ mục lục của các số."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Bỏ qua tên tác giả cho các mục của chuyên mục từ mục lục của số."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Một tiêu đề là bắt buộc cho chuyên mục."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Vui lòng đảm bảo rằng bạn đã chọn một mẫu phản biện hợp lệ."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Vui lòng đảm bảo rằng ít nhất một checkbox được chọn cho mỗi lần gán biên "
+"tập viên chuyên mục."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Một tiêu đề viết tắt là bắt buộc cho chuyên mục"
+
+msgid "manager.sections.editors"
+msgstr "Các biên tập viên chuyên mục"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Các chuyên mục chỉ có thể được gửi bởi các biên tập viên chính và biên tập "
+"chuyên mục."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Thêm một biên tập viên cho chuyên mục này để có bài gửi sẽ tự động gán cho "
+"biên tập viên chuyên mục. (Nếu không, biên tập viên chuyên mục có thể được "
+"gán bằng tay, sau một khi bài gửi đến). Nếu thêm, biên tập viên chuyên mục "
+"có thể được tự động gán cho giám sát việc ĐÁNH GIÁ (đánh giá ngang hàng) và/"
+"hoặc chỉnh sửa (biên tập bản thảo, bố cục và hiệu đính) của bài gửi cho "
+"chuyên mục này. Biên tập viên chuyên mục được tạo ra bằng cách nhấn Biên tập "
+"viên chuyên mục ở vai trò trong Quản lý tạp chí."
+
+msgid "manager.sections.create"
+msgstr "Tạo chuyên mục"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Trước khi chuyên mục này có thể bị xóa, bạn phải di chuyển các bài báo được "
+"xuất bản trong chuyên mục này sang các các chuyên mục khác."
+
+msgid "manager.sections.confirmDelete"
+msgstr "Bạn có chắc chắn muốn xóa vĩnh viễn chuyên mục này?"
+
+msgid "manager.sections.assigned"
+msgstr "Các biên tập viên của chuyên mục này"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Không có biên tập viên chuyên mục nào.  Thêm vai trò này cho ít nhất một "
+"người dùng thông qua Quản lý > Cài đặt > Người dùng &amp; Vai trò đầu tiên."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Không yêu cầu tóm tắt"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Đồng bộ hóa những đăng ký sẽ đăng ký tất cả người dùng đã đăng ký vào vai "
+"trò được chỉ định trong tạp chí được chỉ định vào cùng một vai trò trong tạp "
+"chí này. Chức năng này cho phép một nhóm người dùng chung (ví dụ: Người phản "
+"biện) được đồng bộ hóa giữa các tạp chí."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} đăng ký"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Chọn một người dùng (hoặc một số) để hợp nhất vào một tài khoản người dùng "
+"khác (ví dụ: khi ai đó có hai tài khoản người dùng). (Các) tài khoản được "
+"chọn trước sẽ bị xóa và mọi nội dung gửi, công việc, v.v. sẽ được quy cho "
+"tài khoản thứ hai."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Chọn người dùng thuộc tính tác giả của người dùng trước, công tác biên tập, "
+"v.v."
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Với tạp chí"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Đăng ký người dùng hiện tại"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Chọn một mẫu"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Xóa người dùng này khỏi tạp chí này? Hành động này sẽ hủy đăng ký người dùng "
+"khỏi tất cả các vai trò trong tạp chí này."
+
+msgid "manager.people.allUsers"
+msgstr "Tất cả người dùng đã đăng ký"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Bước 4. Quản lý Tạp chí"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Quản lý và thiết lập xuất bản"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Quản lý các bước biên tập cơ bản"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Truy cập và bảo mật, lên lịch, thông báo, biên tập, bố cục và hiệu đính."
+
+msgid "manager.setup.management"
+msgstr "Quản lý"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"đầu trang chủ, nội dung, tên tạp chí, chân trang, thanh điều hướng và "
+"stylesheet."
+
+msgid "manager.setup.look"
+msgstr "Giao diện"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Đăng ký dịch vụ CLOCKSS bằng cách truy cập <a href=\"http://clockss.org/\" "
+"target=\"_blank\">the CLOCKSS website</a>."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Mô tả giấy phép CLOCKSS"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"Giấy phép CLOCKSS sẽ xuất hiện trong Giới thiệu về Tạp chí trong Lưu trữ: <a "
+"href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Kích hoạt CLOCKSS để lưu trữ và phân phối nội dung tạp chí tại các thư viện "
+"tham gia thông qua trang <a href=\"{$clockssUrl}\" target=\"_blank\">"
+"Publisher Manifest</a> của CLOCKSS."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Xác định 6-10 thư viện sẽ đăng ký và lưu trữ tạp chí. Ví dụ: chuyển sang các "
+"tổ chức nơi các biên tập viên hoặc thành viên Hội đồng biên tập làm việc và/"
+"hoặc các tổ chức đã tham gia LOCKSS. Xem <a href=\"http://www.lockss.org/"
+"community/\" target=\"_blank\">the LOCKSS community</a>."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Mô tả giấy phép LOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Cho phép LOCKSS lưu trữ và phân phối nội dung tạp chí tại các thư viện tham "
+"gia thông qua trang LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">"
+"Publisher Manifest</a> page."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"Giấy phép LOCKSS sẽ xuất hiện trong Giới thiệu về Tạp chí trong Lưu trữ <a "
+"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\""
+"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS và CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"The PKP Preservation Network (PN) cung cấp dịch vụ dự phòng miễn phí cho bất "
+"kỳ tạp chí OJS nào đáp ứng một vài tiêu chí cơ bản. Plugin PKP PN cho OJS 3 "
+"hiện đang được phát triển và sẽ sớm có trong bộ sưu tập plugin."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Xem <button>plugin settings</button> để chấp nhận các điều khoản sử dụng cho "
+"PKP PN."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"The PKP Preservation Network (PN) cung cấp dịch vụ dự phòng miễn phí cho bất "
+"kỳ tạp chí OJS nào đáp ứng một vài tiêu chí cơ bản."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Kích hoạt plugin PKP PN"
+
+msgid "manager.setup.lists"
+msgstr "Các danh sách"
+
+msgid "manager.setup.lists.success"
+msgstr "Các thiết lập danh sách cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.labelName"
+msgstr "Tên nhãn"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Cung cấp một mô tả ngắn về tạp chí của bạn và xác định các biên tập viên, "
+"quản lý và các thành viên khác trong ban biên tập của bạn."
+
+msgid "manager.setup.keyInfo"
+msgstr "Thông tin quan trọng"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Phiên bản đồ họa của tên và logo của tạp chí (dưới dạng tệp .gif, .jpg hoặc "
+".png) có thể được tải lên cho trang chủ, sẽ thay thế phiên bản văn bản xuất "
+"hiện."
+
+msgid "manager.setup.contextTitle"
+msgstr "Tên tạp chí"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Một logo nhỏ hoặc hình đại diện của tạp chí có thể được sử dụng trong danh "
+"sách các tạp chí."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Hình thu nhỏ của tạp chí"
+
+msgid "manager.setup.journalTheme"
+msgstr "Chủ đề tạp chí"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr ""
+"Định dạng stylesheet tạp chí không hợp lệ. Định dạng được chấp nhận là .css."
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Thiết lập tạp chí của bạn đã được cập nhật."
+
+msgid "manager.setup.journalSetup"
+msgstr "Cài đặt tạp chí"
+
+msgid "manager.setup.journalPolicies"
+msgstr "Bước 2. Chính sách tạp chí"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Đây là chân trang của tạp chí của bạn. Để thay đổi hoặc cập nhật chân trang, "
+"hãy dán mã HTML vào textbox bên dưới. Ví dụ có thể là một thanh điều hướng "
+"khác, bộ đếm, v.v ... Phần chân trang này sẽ xuất hiện trên mỗi trang."
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Chân trang tạp chí"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Logo tạp chí"
+
+msgid "manager.setup.journalLogo"
+msgstr "Logo tạp chí"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Chọn một chủ đề tạp chí và chọn các thành phần bố cụ ở đây.Một stylesheet "
+"của tạp chí cũng có thể được tải lên, có thể được sử dụng để ghi đè dữ liệu "
+"trong stylesheet toàn hệ thống và stylesheet chủ đề (nếu một chủ đề được "
+"chọn)."
+
+msgid "manager.setup.journalLayout"
+msgstr "Bố cục tạp chí"
+
+msgid "manager.setup.contextInitials"
+msgstr "Các chữ cái đầu tiên của tên tạp chí"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Đầu trang ở trang chủ của tạp chí"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Đầu trang của trang chủ tạp chí"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Theo mặc định, trang chủ bao gồm các liên kết điều hướng. Nội dung trang chủ "
+"bổ sung có thể được thêm vào bằng cách sử dụng một hoặc tất cả các tùy chọn "
+"sau, sẽ xuất hiện theo thứ tự hiển thị. Lưu ý rằng số hiện tại luôn có thể "
+"truy cập được thông qua liên kết Số mới trong thanh điều hướng."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Nội dung trang chủ tạp chí"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Bao gồm bất kỳ thông tin nào về tạp chí của bạn có thể được độc giả, tác giả "
+"hoặc người phản biện quan tâm. Điều này có thể bao gồm chính sách truy cập "
+"mở của bạn, phạm vi và mục đích của tạp chí, thông báo bản quyền, tài trợ, "
+"lịch sử của tạp chí, tuyên bố về bảo mật thông tin và đưa vào bất kỳ hệ "
+"thống lưu trữ LOCKSS hoặc CLOCKSS nào."
+
+msgid "manager.setup.contextAbout"
+msgstr "Giới thiệu về Tạp chí"
+
+msgid "manager.setup.contextSummary"
+msgstr "Tóm tắt tạp chí"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Tạp chí lưu trữ"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Giới hạn số lượng mục (ví dụ: nội dung gửi, người dùng hoặc phân công biên "
+"tập) để hiển thị trong danh sách trước khi hiển thị các mục tiếp theo trong "
+"trang khác."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Mục trên mỗi trang"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Viết tắt tạp chí"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Các mục trên thanh điều hướng có thể được thêm vào cài đặt hiện tại (Trang "
+"chủ, Giới thiệu, Trang người dùng, v.v.) xuất hiện ở đầu trang."
+
+msgid "manager.setup.institution"
+msgstr "Tổ chức"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Tùy thuộc vào định dạng được chọn, xác định số, tập và/hoặc năm của số đầu "
+"tiên được xuất bản với OJS:"
+
+msgid "manager.setup.initialIssue"
+msgstr "Số bắt đầu"
+
+msgid "manager.setup.information.success"
+msgstr "Thông tin cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.information.forReaders"
+msgstr "Cho độc giả"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Cho thủ thư"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Cho tác giả"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Mô tả ngắn gọn của tạp chí cho thủ thư và các tác giả và độc giả tương lai. "
+"Chúng được cung cấp trong thanh bên của trang web khi khối Thông tin đã được "
+"thêm."
+
+msgid "manager.setup.information"
+msgstr "Thông tin"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Đối với các tạp chí cung cấp quyền truy cập mở ngay lập tức hoặc trì hoãn, "
+"hãy bao gồm giấy phép Creative Commons với tất cả các tác phẩm được xuất bản "
+"vào thời điểm thích hợp."
+
+msgid "manager.setup.identity"
+msgstr "Nhận dạng tạp chí"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Bước 3. Hướng dẫn gửi bài"
+
+msgid "manager.setup.guidelines"
+msgstr "Các hướng dẫn"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Bước 1. Tìm hiểu chi tiết"
+
+msgid "manager.setup.generalInformation"
+msgstr "Thông tin chung"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Tên người hỗ trợ là bắt buộc."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Email hỗ trợ là bắt buộc."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Số lượng người phản biện trên một bài gửi là bắt buộc."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Tên tạp chí là bắt buộc."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Tên viết tắt của tạp chí là bắt buộc."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Tên người liên lạc chính là bắt buộc."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Email liên hệ chính là bắt buộc."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "ISSN được chỉ định là không hợp lệ."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS tuân thủ giao thức <a href=\"http://www.openarchives.org/\" target=\""
+"_blank\">Open Archives Initiative</a> để thu thập siêu dữ liệu, là tiêu "
+"chuẩn mới nổi để cung cấp quyền truy cập được lập chỉ mục tốt vào tài nguyên "
+"nghiên cứu điện tử trên quy mô toàn cầu. Các tác giả sẽ sử dụng một mẫu "
+"tương tự để cung cấp siêu dữ liệu cho bài gửi của họ. Người quản lý tạp chí "
+"nên chọn các danh mục để lập chỉ mục và trình bày các tác giả với các ví dụ "
+"có liên quan để hỗ trợ họ lập chỉ mục nghiên cứu của họ."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Để các tác giả lập chỉ mục nghiên cứu của họ"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Mô tả cho các tác giả, độc giả và thủ thư phạm vi các bài báo và các danh "
+"mục khác mà tạp chí sẽ xuất bản."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Phạm vi và mục đích"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Khách truy cập có thể đăng ký tài khoản người dùng với tạp chí."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Có bao nhiêu thông báo hiển thị trên trang chủ. Để trống nếu không muốn hiển "
+"thị."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Hiển thị trên Trang chủ"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Thông báo có thể được công bố để thông báo cho độc giả về tin tức và sự kiện "
+"tạp chí. Thông báo được công bố sẽ xuất hiện trên trang Thông báo."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Bật thông báo"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Các email được chuẩn bị được gửi bởi hệ thống thay mặt cho tạp chí sẽ có chữ "
+"ký sau đây được thêm vào cuối."
+
+msgid "manager.setup.emailSignature"
+msgstr "Chữ ký"
+
+msgid "manager.setup.emails"
+msgstr "Nhận dạng email"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Để gửi email không gửi được đến địa chỉ bị trả lại, quản trị viên trang web "
+"phải bật tùy chọn <code>allow_envelope_sender</code> trong tệp cấu hình "
+"trang. Cấu hình máy chủ có thể được yêu cầu, như được nêu trong tài liệu OJS."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "Bất kỳ email nào không gửi được sẽ thông báo lỗi tới địa chỉ này."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Địa chỉ trả lại"
+
+msgid "manager.setup.editorDecision"
+msgstr "Quyết định của biên tập viên"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Thêm mục lục cho số hiện tại (nếu có)."
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Cung cấp các ví dụ về các chuyên ngành liên quan với tạp chí này"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(Ví dụ: Lịch sử; Giáo dục; Xã hội học; Tâm lý học, Nghiên cứu văn hóa; Luật)"
+
+msgid "manager.setup.discipline"
+msgstr "Chuyên ngành và chuyên ngành con"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Điều này hữu ích khi tạp chí vượt qua ranh giới ngành và/hoặc tác giả gửi "
+"các mục đa ngành."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Người quản lý tạp chí sẽ đăng ký tất cả các tài khoản người dùng. Biên tập "
+"viên hoặc Biên tập viên chuyên mục có thể đăng ký tài khoản cho người phản "
+"biện."
+
+msgid "manager.setup.details.description"
+msgstr ""
+"Tên của tạp chí, ISSN, địa chỉ liên lạc, nhà tài trợ và công cụ tìm kiếm."
+
+msgid "manager.setup.details"
+msgstr "Các chi tiết"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Bước 5. Tùy chỉnh giao diện"
+
+msgid "manager.setup.currentIssue"
+msgstr "Số mới"
+
+msgid "manager.setup.contact.success"
+msgstr "Các chi tiết liên lạc cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Văn bản này sẽ xuất hiện trong phần \"Giới thiệu\" của trang web tạp chí và "
+"có thể được sử dụng để mô tả các thay đổi trong tiêu đề, ban biên tập và các "
+"mục khác liên quan đến lịch sử xuất bản của tạp chí."
+
+msgid "manager.setup.history"
+msgstr "Lịch sử tạp chí"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Yêu cầu Người phản biện nộp báo cáo CI với mỗi đánh giá ngang hàng họ gửi."
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Yêu cầu tác giả gửi một tuyên bố xung đột lợi ích (CI) với bài gửi của họ."
+
+msgid "manager.setup.archiving.success"
+msgstr "Các chi tiết lưu trữ cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Để xuất hiện trong Giới thiệu về Tạp chí) "
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Nhập bất kỳ thông tin nào bạn muốn xuất hiện trên trang thông báo của bạn."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Giới thiệu"
+
+msgid "manager.setup.announcements.success"
+msgstr "Các cài đặt thông báo đã được cập nhật."
+
+msgid "manager.setup.announcements"
+msgstr "Các thông báo"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Thay thế, thay vì tiêu đề và logo, một phiên bản HTML của tiêu đề có thể "
+"được chèn vào hộp văn bản bên dưới. Để trống hộp văn bản nếu không cần thiết."
+
+msgid "manager.setup.alternateHeader"
+msgstr "Tiêu đề thay thế"
+
+msgid "manager.setup.addSponsor"
+msgstr "Thêm tổ chức bảo trợ"
+
+msgid "manager.setup.masthead.success"
+msgstr "Các chi tiết tiêu đề cho tạp chí này đã được cập nhật."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Ngày xuất bản"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Ngày để xem xét"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Gửi lại"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Từ chối"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Chấp nhận"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Số lượt xem bài viết (chỉ dành cho tác giả)"
+
+msgid "manager.statistics.statistics"
+msgstr "Thống kê tạp chí"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Tiêu đề văn bản"
+
+msgid "manager.setup.userRegistration"
+msgstr "Đăng ký người dùng"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Hình thu nhỏ"
+
+msgid "manager.setup.userAccess.success"
+msgstr "Các chi tiết truy cập người dùng cho tạp chí này đã được cập nhật."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Một ban biên tập/đánh giá sẽ được sử dụng bởi tạp chí."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Các bài viết và số có thể được gắn thẻ với số hoặc chuỗi nhận dạng, sử dụng "
+"hệ thống đăng ký, chẳng hạn như Digital Object Identifier System (DOI)."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Định danh duy nhất"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Cung cấp các ví dụ về các loại, phương pháp và cách tiếp cận nghiên cứu có "
+"liên quan cho lĩnh vực này"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Loại (Phương pháp/Cách tiếp cận)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(Ví dụ: Điều tra lịch sử; Quasi-Experimental; Phân tích văn học; Khảo sát/"
+"Phỏng vấn)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Cung cấp siêu dữ liệu cho các dịch vụ lập chỉ mục của bên thứ ba thông qua <"
+"a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Checklist cho các bài chuẩn bị gửi"
+
+msgid "manager.setup.policies"
+msgstr "Các chính sách"
+
+msgid "manager.setup.enableOai"
+msgstr "Kích hoạt OAI"
+
+msgid "manager.setup.submissions.description"
+msgstr "Hướng dẫn tác giả, bản quyền và lập chỉ mục (bao gồm đăng ký)."
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"Khi gửi bài cho tạp chí, trước tiên các tác giả được yêu cầu hoàn thành từng "
+"mục trong checklist cho các bài chuẩn bị gửi. Checklist cũng xuất hiện trong "
+"Hướng dẫn tác giả, bên dưới Giới thiệu về Tạp chí. Danh sách có thể được "
+"chỉnh sửa dưới đây, nhưng tất cả các mục trong danh sách sẽ yêu cầu đánh dấu "
+"trước khi tác giả có thể tiến hành gửi."
+
+msgid "manager.setup.submissions"
+msgstr "Các bài gửi"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Hướng dẫn gửi bài"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Cung cấp các ví dụ về từ khóa hoặc chủ đề làm hướng dẫn cho tác giả"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Từ khóa"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(Ví dụ: Quang hợp; Lỗ đen; Vấn đề bản đồ bốn màu; Lý thuyết Bayes)"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Năm bước đến một trang web tạp chí"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Xem nội dung bài viết"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Truy cập trang web"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Luôn hiển thị các thư viện liên kết và chỉ ra quyền truy cập hạn chế."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Chuyên mục tạp chí sẽ được xem xét."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Các biên tập viên tạp chí sẽ nhìn thấy nó thông qua quá trình biên tập."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Để tạo hoặc sửa đổi các chuyên mục cho tạp chí (ví dụ: Bài viết, Đánh giá "
+"sách, v.v.), hãy đi tới Quản lý chuyên mục. <br/> <br/> Tác giả gửi bài theo "
+"các chuyên mục cho tạp chí sẽ chỉ định ..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Nếu các chuyên mục không được thêm vào, thì các bài được gửi đến chuyên mục "
+"Bài báo theo mặc định.)"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Các chuyên mục và các biên tập viên chuyên mục"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Cung cấp một mô tả ngắn gọn (50-300 ký tự) của tạp chí mà công cụ tìm kiếm "
+"có thể hiển thị khi liệt kê tạp chí trong kết quả tìm kiếm."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Giúp các công cụ tìm kiếm như Google khám phá và hiển thị trang web của bạn. "
+"Bạn được khuyến khích gửi <a href=\"{$sitemapUrl}\" target=\"_blank\""
+">sitemap</a> của bạn."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Các cài đặt công cụ tìm kiếm chỉ mục đã được cập nhật."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Lập chỉ mục tìm kiếm"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Chính sách phản biện"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Nhắc nhở phản biện"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Đánh giá người phản biện"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Bao gồm một liên kết an toàn trong thư mời đến người phản biện."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Người phản biện có thể được gửi một liên kết an toàn trong thư mời, điều này "
+"sẽ cho phép họ truy cập đánh giá mà không cần đăng nhập. Truy cập vào các "
+"trang khác yêu cầu họ đăng nhập."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Người phản biện truy cập chỉ bằng một cú nhấp chuột"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Truy cập của người phản biện"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Người phản biện sẽ không được cấp quyền truy cập vào tệp bài gửi cho đến khi "
+"họ đồng ý xem xét."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Hạn chế truy cập tệp"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Biên tập viên sẽ đánh giá người phản biện theo thang điểm chất lượng năm "
+"điểm sau mỗi lần đánh giá."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Tuần được phép hoàn thành đánh giá"
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Phản biện kín"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Để gửi lời nhắc email tự động, quản trị viên trang phải kích hoạt tùy chọn "
+"<tt>scheduled_tasks</tt> trong tệp cấu hình OJS. Cấu hình máy chủ bổ sung có "
+"thể được yêu cầu như được nêu trong tài liệu OJS."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Nhắc nhở email tự động"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Tùy chọn đánh giá"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Hướng dẫn phản biện"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Người dùng phải được đăng ký và đăng nhập để xem trang web tạp chí."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Người dùng phải được đăng ký và đăng nhập để xem nội dung truy cập mở."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Link liên kết của các tài liệu tham khảo"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Các chi tiết này có thể được bao gồm trong siêu dữ liệu được cung cấp cho "
+"các cơ quan lưu trữ của bên thứ ba."
+
+msgid "manager.setup.publisher"
+msgstr "Nhà xuất bản"
+
+msgid "manager.setup.publishing"
+msgstr "Chi tiết xuất bản"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Xác định nội dung tạp chí"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Lịch trình xuất bản"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Các mục tạp chí có thể được xuất bản chung, như là một phần của số với Mục "
+"lục của chính nó. Ngoài ra, các mục riêng lẻ có thể được xuất bản ngay khi "
+"chúng sẵn sàng, bằng cách thêm chúng vào Mục lục của tập \"hiện tại\". Cung "
+"cấp cho độc giả, trong Giới thiệu về Tạp chí, với một tuyên bố về hệ thống "
+"mà tạp chí này sẽ sử dụng và tần suất xuất bản dự kiến của nó."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Lịch trình xuất bản"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Hướng dẫn hiệu đính sẽ được cung cấp cho người đọc hiệu đính, tác giả, biên "
+"tập viên trình bày và và biên tập viên chuyên mục trong giai đoạn biên tập "
+"nội dung. Dưới đây là một bộ hướng dẫn mặc định trong HTML, có thể được "
+"chỉnh sửa hoặc thay thế bởi Người quản lý Tạp chí tại bất kỳ thời điểm nào ("
+"bằng HTML hoặc văn bản thuần túy)."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Hướng dẫn hiệu đính"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Các cam kết bảo mật đã được cập nhật."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN in"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Mục đích, đánh giá ngang hàng, các chuyên mục, quyền riêng tư, bảo mật và "
+"các mục bổ sung."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Tùy chọn số trang"
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN trực truyến"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Giới hạn số lượng liên kết để hiển thị cho các trang tiếp theo trong danh "
+"sách."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Liên kết trang"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Lưu ý:</strong> Email cảm ơn khi nhận bài hiện đang bị vô hiệu hóa. "
+"Để sử dụng tính năng này, hãy bật email \"Submission Ack\" trong Emails."
+
+msgid "manager.setup.note"
+msgstr "Ghi chú"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Không có style sheet tải lên."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Không có tập tin hình ảnh được tải lên."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Giá trị nhãn là một chuỗi bằng chữ (ví dụ: \"Thiết lập Tạp chí\") chứ không "
+"phải là khóa thông báo địa phương (ví dụ: \"manager.setup\")"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL là một URL hoàn toàn (ví dụ: \"http://www.example.com\") chứ không phải "
+"là một đường dẫn liên quan đến trang web (ví dụ: \"/manager/setup\")"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Thêm hoặc loại bỏ các mục thanh điều hướng bổ sung."
+
+msgid "manager.setup.navigationBar"
+msgstr "Thanh điều hướng"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Một thời hạn là bắt buộc."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Thời hạn phải là một số giá trị dương."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML có thể được sử dụng trong textarea (đối với kích thước phông chữ, màu "
+"sắc, v.v.), với \"trả về\" được coi là <tt>&lt;br&gt;</tt>; Trình chỉnh sửa "
+"HTML hoạt động với trình duyệt Firefox."
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Sửa"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Tạo"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Tạo"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Xác thực XML trước khi xuất và đăng ký."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Đăng ký không thành công! Máy chủ đăng ký DOI đã trả về lỗi: '{$param}'."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Tệp đầu vào {$param} không thể đọc được."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Tệp đầu ra {$param} không thể ghi."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "XML không hợp lệ:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Không thể chuyển đổi các đối tượng được chọn."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Không có đối tượng được chọn."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Đăng ký"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Đánh dấu đã đăng ký"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Xuất"
+
+msgid "plugins.importexport.common.action"
+msgstr "Hoạt động"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Đã đăng ký"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Đánh dấu đã đăng ký"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Không ký gửi"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Trạng thái bất kỳ"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Số bất kỳ"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Xin lưu ý rằng mật khẩu sẽ được lưu dưới dạng văn bản thuần túy, tức là "
+"không được mã hóa."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Mật khẩu"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"Không có đối tượng xuất bản nào được chọn để gán DOI trong plugin định danh "
+"công khai DOI, do đó không có khả năng gửi hoặc xuất trong plugin này."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Các plugin không được thiết lập đầy đủ."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Để sử dụng plugin này, vui lòng truy cập danh mục plugin \"Định danh công "
+"khai\", bật và định cấu hình plugin DOI và chỉ định tiền tố DOI hợp lệ tại "
+"đó."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Yêu cầu plugin không được đáp ứng"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Các bản in"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Các số"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Các bài viết"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Các cài đặt Plugin DOI"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Các cài đặt"
+
+msgid "grid.genres.description"
+msgstr ""
+"Các thành phần này được sử dụng cho mục đích đặt tên tệp và được trình bày "
+"trong menu kéo xuống khi tải tệp lên. Các thể loại được chỉ định ## cho phép "
+"người dùng liên kết tệp với toàn bộ 99Z gửi hoặc một thành phần cụ thể theo "
+"số (ví dụ: 02)."
+
+msgid "grid.genres.title"
+msgstr "Các thành phần bài viết"
+
+msgid "grid.genres.title.short"
+msgstr "Các thành phần"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Điều khoản của bài viết đã được thiết lập lại thành công."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Xóa tuyên bố bản quyền và thông tin giấy phép cho mỗi bài viết được xuất "
+"bản, hoàn nguyên chúng về cài đặt mặc định hiện tại của tạp chí. Điều này sẽ "
+"xóa vĩnh viễn tất cả các thông tin bản quyền và giấy phép trước đây kèm theo "
+"bài viết. Trong một số trường hợp, bạn có thể không được phép hợp pháp để "
+"cấp phép lại cho công việc đã được xuất bản theo một giấy phép khác. Xin lưu "
+"ý khi sử dụng công cụ này và tham khảo ý kiến chuyên môn pháp lý nếu bạn "
+"không chắc chắn về quyền lợi của bạn đối với các bài báo được công bố trên "
+"tạp chí của bạn."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Bạn có chắc chắn muốn đặt lại dữ liệu về điều khoanr cho tất cả các bài "
+"viết? Hành động này không thể được hoàn tác."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Đặt lại các thông tin điều khoản của bài viết"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Số: năm mặc định sẽ được rút ra từ ngày xuất bản của số."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Bài viết: năm mặc định sẽ được rút ra từ ngày xuất bản của bài viết."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Năm bản quyền cơ sở của bài viết mới trên"
+
+msgid "manager.publication.library"
+msgstr "Thư viện nhà xuất bản"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Vai trò là nhóm người dùng trong tạp chí được cấp quyền truy cập vào các cấp "
+"phép khác nhau và quy trình công việc liên quan trong tạp chí. Có năm cấp độ "
+"cho phép khác nhau: Người quản trị tạp chí có quyền truy cập vào mọi thứ "
+"trong tạp chí (tất cả nội dung và cài đặt); Biên tập viên chuyên mục có "
+"quyền truy cập đầy đủ vào tất cả các nội dung được phân công; Thư ký tạp chí "
+"có quyền truy cập hạn chế vào tất cả các bài gửi đã được biên tập viên phân "
+"công cho họ; Người phản biện có thể xem và thực hiện các bài gửi mà họ đã "
+"được chỉ định để đánh giá; và Tác giả có thể nhìn thấy và tương tác với một "
+"lượng thông tin hạn chế trên bài gửi của chính họ. Ngoài ra, có năm giai "
+"đoạn khác nhau mà vai trò có thể được cấp quyền truy cập vào: Gửi bài, Đánh "
+"giá ban đầu, Phản biện, Biên tập và Chế bản."
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Các bài viết trong các số phát hành của một tạp chí được tổ chức trong "
+"chuyên mục, thường theo chủ đề hoặc loại nội dung (ví dụ: Bài viết tổng "
+"quan, Nghiên cứu, v.v.)."
+
+msgid "grid.action.addSection"
+msgstr "Thêm chuyên mục"
+
+msgid "grid.category.path"
+msgstr "Đường dẫn"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Chọn các danh mục phù hợp nhất được liệt kê ở trên. Độc giả sẽ có thể duyệt "
+"theo thể loại từ tập tạp chí hoàn chỉnh."
+
+msgid "manager.setup.categories"
+msgstr "Thể loại"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Liên kết này sẽ chỉ được hiển thị khi khách truy cập đăng nhập."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Liên kết đến một trang mô tả các thuê bao hiện tại và quá khứ của khách truy "
+"cập."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Liên kết đến một trang mô tả các thuê bao bạn cung cấp."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Đăng ký thành công!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Tiền tố DOI bị thiếu cho tạp chí có đường dẫn {$ path}."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "LỖI:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Đường dẫn tạp chí được chỉ định, \"{$journalPath}\", không tồn tại."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Các đối tượng được chỉ định không thể được tìm thấy."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Gửi một bản sao đến liên hệ chính, được xác định trong Cài đặt tạp chí."
+
+msgid "stats.publicationStats"
+msgstr "Thống kê bài viết"
+
+msgid "stats.publications.details"
+msgstr "Chi tiết bài viết"
+
+msgid "stats.publications.none"
+msgstr ""
+"Không có bài viết nào  được tìm thấy với số liệu thống kê sử dụng phù hợp "
+"với các tham số này."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Tổng lượt xem tóm tắt theo ngày"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Tổng lượt xem tập tin theo ngày"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} của {$total} bài báo"
+
+msgid "stats.publications.abstracts"
+msgstr "Các tóm tắt"
+
+msgid "stats.publications.galleys"
+msgstr "Các tập tin"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Loại thuê bao được tạo thành công."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Không có loại thuê bao được tạo ra."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Loại thuê bao"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Tên của loại thuê bao là bắt buộc."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Một loại thuê bao với tên này đã tồn tại."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Tên loại"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Lưu và tạo cái khác"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Vui lòng sử dụng checkbox được cung cấp."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Không làm cho loại thuê bao này công khai hoặc hiển thị trên trang web."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Các tùy chọn"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Vui lòng sử dụng checkbox được cung cấp."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Thuê bao yêu cầu thông tin thành viên (ví dụ: của một hiệp hội, tổ chức, tập "
+"đoàn, v.v.)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Vui lòng sử dụng các tùy chọn được cung cấp."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Tổ chức (người dùng được xác thực qua tên miền hoặc địa chỉ IP)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Cá nhân (người dùng được xác thực qua đăng nhập)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Các thuê bao"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Vui lòng chọn một định dạng cho loại thuê bao hợp lệ."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Một định dạng loại thuê bao là bắt buộc."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Định dạng"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Số tháng đăng ký kéo dài (ví dụ: 12)."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Thời hạn"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Vui lòng sử dụng các tùy chọn được cung cấp."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Không bao giờ hết hạn"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "tháng (ví dụ: 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Hết hạn sau"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Mô tả"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Vui lòng chọn một loại tiền tệ hợp lệ."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Một loại tiền tệ được yêu cầu."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Tiền tệ"
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Chi phí phải là một số giá trị dương."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Một giá là cần thiết."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Nhập một giá trị số (ví dụ: 40 hoặc 40.00) không có ký hiệu (ví dụ: $)."
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Giá"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Sửa kiểu thuê bao"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Thời hạn"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Tạo kiểu thuê bao mới"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Tổ chức"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Cá nhân"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Các thuê bao"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Giá"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Cảnh báo! Tất cả các thuê bao với loại thuê bao này cũng sẽ bị xóa. Bạn có "
+"chắc chắn muốn tiếp tục và xóa loại thuê bao này?"
+
+msgid "manager.subscriptionTypes"
+msgstr "Các kiểu thuê bao"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Tên cơ quan tổ chức"
+
+msgid "manager.subscriptions.contact"
+msgstr "Tên người liên hệ"
+
+msgid "manager.subscriptions.user"
+msgstr "Người dùng"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Các kiểu thuê bao"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Thuê bao được tạo thành công."
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Các đặc quyền truy cập thuê bao được tự động cấp cho người quản trị tạp chí, "
+"Biên tập viên, Biên tập viên chuyên mục, Biên tập viên trình bày, Biên tập "
+"viên bản thảo và Người hiệu đính."
+
+msgid "manager.subscriptions.select"
+msgstr "Chọn"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Chọn người dùng"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Chọn liên hệ thuê bao"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Không có thuê bao"
+
+msgid "manager.subscriptions.notes"
+msgstr "Các lưu ý"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Số tài liệu tham khảo"
+
+msgid "manager.subscriptions.membership"
+msgstr "Thành viên"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Dải IP"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+"Một loại thuê bao phải được tạo trước khi đăng ký mới có thể được thực hiện."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Người dùng này đã đăng ký một thuê bao cho tạp chí này."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Để gửi cho người dùng email thông báo, tên liên hệ thuê bao và địa chỉ email "
+"phải được chỉ định trong Cài đặt tạp chí."
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Lưu và tạo cái khác"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Thêm"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Xóa"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Vui lòng nhập một dải IP hợp lệ."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Nếu dải IP được nhập tại đây, tên miền là tùy chọn.<br/>Các giá trị hợp lệ "
+"bao gồm địa chỉ IP (ví dụ: 142.58.103.1), dải IP (ví dụ: "
+"142.58.103.1-142.58.103.4), dải IP có ký tự đại diện '*' ( ví dụ: 142.58.*.*)"
+" và dải IP với CIDR (ví dụ: 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Dải IP"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Vui lòng nhập một tên miền hợp lệ."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Loại thuê bao được chọn yêu cầu tên miền và/hoặc dải IP để xác thực."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Nếu một tên miền được nhập vào đây, phạm vi IP là tùy chọn.<br/>Giá trị hợp "
+"lệ là tên miền (ví dụ: lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Địa chỉ gửi thư"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Một tên cơ quan, tổ chức là bắt buộc."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Tên cơ quan tổ chức"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Tên miền"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Các lưu ý"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Loại thuê bao được chọn yêu cầu thông tin thành viên."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Nhập thông tin thành viên nếu loại thuê bao yêu cầu người đăng ký thuộc về "
+"một hiệp hội hoặc tổ chức."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Số tài liệu tham khảo"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Thành viên"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Vui lòng sử dụng checkbox được cung cấp."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Gửi cho người dùng một email với tên người dùng và chi tiết thuê bao của họ."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Vui lòng chọn một quốc gia hợp lệ."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Vui lòng chọn một người dùng hợp lệ."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Một người dùng được yêu cầu."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Liên lạc"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Người dùng"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Lưu ý: Tất cả các thay đổi bên dưới là cấu hình toàn hệ thống của người dùng."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Vui lòng chọn ngày kết thúc thuê bao hợp lệ."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Đây là loại thuê bao không hết hạn; xin vui lòng không chỉ định ngày kết "
+"thúc."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Đây là loại thuê bao không hết hạn; xin vui lòng không chỉ định ngày bắt đầu."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Chọn một ngày kết thúc thuê bao là bắt buộc."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Ngày kết thúc"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Vui lòng chọn ngày bắt đầu thuê bao hợp lệ."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Chọn một ngày bắt đầu thuê bao là bắt buộc."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Ngày bắt đầu"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Vui lòng chọn một loại thuê bao hợp lệ."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Một loại thuê bao là bắt buộc."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Kiểu thuê bao"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Vui lòng chọn một trạng thái thuê bao hợp lệ."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Một trạng thái của thuê bao là bắt buộc."
+
+msgid "manager.subscriptions.form.status"
+msgstr "Trạng thái"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Tất cả"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Với trạng thái"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Sửa"
+
+msgid "manager.subscriptions.edit"
+msgstr "Sửa thuê bao"
+
+msgid "manager.subscriptions.domain"
+msgstr "Tên miền"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Ngày bắt đầu"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Bắt đầu"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Ngày kết thúc"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Kết thúc"
+
+msgid "manager.subscriptions.renew"
+msgstr "Gia hạn"
+
+msgid "manager.subscriptions.create"
+msgstr "Tạo thuê bao mới"
+
+msgid "manager.subscriptions.summary"
+msgstr "Tóm tắt thuê bao"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Bạn có chắc chắn muốn xóa thuê bao này?"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Bạn có chắc chắn muốn gia hạn thuê bao này?"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Các thuê bao tổ chức"
+
+msgid "manager.individualSubscriptions"
+msgstr "Các thuê bao cá nhận"
+
+msgid "manager.subscriptions"
+msgstr "Các thuê bao"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Vui lòng nhập email hợp lệ."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Những chi tiết liên lạc này sẽ được liệt kê trên trang thuê bao cho khách "
+"hàng có thắc mắc liên quan đến thuê bao."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Quản trị thuê bao"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Các loại thuê bao và cấu trúc lệ phí sẽ được hiển thị trên trang đăng ký "
+"thuê bao, cùng với tên và thông tin liên hệ của Quản trị thuê bao. Thông tin "
+"bổ sung về thuê bao, chẳng hạn như phương thức thanh toán hoặc hỗ trợ cho "
+"thuê bao ở các nước đang phát triển, có thể được thêm vào đây."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Thông tin thuê bao"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Tạp chí đăng ký thuê bao có thể cung cấp \"quyền truy cập mở bị trì hoãn\" "
+"vào nội dung được xuất bản của họ, cũng như cho phép \"tự lưu trữ tác giả\" ("
+"cả hai đều giúp tăng lượng độc giả và trích dẫn nội dung)."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Tùy chọn truy cập mở cho các tạp chí đăng ký thuê bao"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Lưu ý:</strong> Để bật các tùy chọn này, Người quản lý tạp chí phải "
+"kích hoạt mô-đun thanh toán trực tuyến, bao gồm thanh toán trực tuyến cho "
+"thuê bao, dưới Phí người đọc."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Lưu ý:</strong> Đăng ký tổ chức được mua trực tuyến yêu cầu phê "
+"duyệt phạm vi tên miền và IP được cung cấp và kích hoạt đăng ký bởi Quản trị "
+"thuê bao."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Thông báo cho người quản lý đăng ký bằng email khi gia hạn trực tuyến thuê "
+"bao của tổ chức."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Thông báo cho người quản lý đăng ký bằng email khi gia hạn trực tuyến một "
+"thuê bao cá nhân."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Thông báo cho người quản lý đăng ký bằng email khi mua trực tuyến thuê bao "
+"của tổ chức (được khuyến nghị)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Thông báo cho người quản lý đăng ký bằng email khi mua trực tuyến một thuê "
+"bao cá nhân."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Thông báo email tự động (có sẵn để chỉnh sửa bởi người quản lý tạp chí trong "
+"email của OJS) có thể được gửi đến Quản trị thuê bao sau khi hoàn tất thanh "
+"toán trực tuyến."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Thông báo thanh toán trực tuyến"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Lưu ý:</strong> Để kích hoạt tùy chọn này, quản trị viên trang phải "
+"bật tùy chọn <tt>scheduled_tasks</tt> trong tệp cấu hình OJS. Cấu hình máy "
+"chủ bổ sung có thể được yêu cầu để hỗ trợ chức năng này (có thể không khả "
+"dụng trên tất cả các máy chủ), như được nêu trong tài liệu OJS."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Độc giả đã đăng ký sẽ có tùy chọn nhận mục lục qua email khi một số được "
+"phép truy cập mở."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Vui lòng chọn một giá trị hợp lệ cho số tuần trước khi hết hạn thuê bao."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Vui lòng chọn một giá trị hợp lệ cho số tuần sau khi hết hạn thuê bao."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Vui lòng chọn một giá trị hợp lệ cho số tháng trước khi hết hạn thuê bao."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Vui lòng chọn một giá trị hợp lệ cho số tháng sau khi hết hạn thuê bao."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Lựa chọn một trong những thứ sau:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Lưu ý:</strong> Để kích hoạt các tùy chọn này, quản trị viên trang "
+"phải kích hoạt tùy chọn the <tt>scheduled_tasks</tt> trong tệp cấu hình OJS. "
+"Cấu hình máy chủ bổ sung có thể được yêu cầu để hỗ trợ chức năng này (có thể "
+"không khả dụng trên tất cả các máy chủ), như được nêu trong tài liệu OJS."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Lời nhắc bằng email tự động (có thể chỉnh sửa bởi người quản lý tạp chí "
+"trong Email của OJS) có thể được gửi đến người đăng ký thuê bao trước và sau "
+"khi thuê bao hết hạn."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Nhắc nhở hết hạn thuê bao"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr ""
+"Thông báo cho người đăng ký thuê bao bằng email trước khi hết hạn thuê bao."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr ""
+"Thông báo cho người đăng ký thuê bao bằng email trước khi hết hạn thuê bao."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr ""
+"Thông báo cho người đăng ký thuê bao bằng email sau khi hết hạn thuê bao."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Thông báo cho người đăng ký thuê bao qua email sau khi hết hạn thuê bao"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} tuần"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} tháng"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Độc giả bị từ chối truy cập vào nội dung đăng ký được xuất bản gần đây, "
+"nhưng vẫn giữ quyền truy cập vào nội dung đăng ký được xuất bản trước ngày "
+"hết hạn."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Hết hạn một phần"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Độc giả bị từ chối truy cập vào tất cả các nội dung đăng ký khi hết hạn."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Hết hạn sử dụng"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Khi hết hạn thuê bao, độc giả có thể bị từ chối truy cập vào tất cả nội dung "
+"đăng ký hoặc có thể tiếp tục duy trì quyền truy cập vào nội dung đăng ký "
+"được công bố trước ngày hết hạn."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Hết hạn thuê bao"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Vui lòng sử dụng checkbox được cung cấp."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Truy cập mở trì hoãn"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Chính sách thuê bao"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"Thu hẹp kết quả theo loại đối tượng (tạp chí, số, bài viết, loại tệp) và/"
+"hoặc bởi một hoặc nhiều id đối tượng."
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Thu hẹp kết quả theo ngữ cảnh (số và/hoặc bài viết)."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Lượt xem mục lục"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Lượt xem trang của tạp chí"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Lượt xem tóm tắt và tải xuống"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Lượt xem tóm tắt"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Lượt tải xuống tập tin bài viết"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Thuê bao"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Chọn các phần để tính toán thống kê bình duyệt của tạp chí này."
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Số bài đánh giá"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Điểm biên tập viên"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Các phản biện"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Số bài đã giao"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Người dùng đã được đăng ký"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Các bài đã được bình duyệt"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Tổng số bài gửi"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Các số đã xuất bản"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Lưu ý: Tỷ lệ phần trăm cho các bài gửi được bình duyệt có thể không tới 100%"
+", vì có cả các bài gửi lại sau đó được chấp nhận, bị từ chối hoặc vẫn đang "
+"trong quá trình phản biện."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Kiểm tra các mục sẽ được cung cấp cho độc giả trong Giới thiệu về Tạp chí."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Các mục đã xuất bản"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS tính toán các số liệu thống kê sau cho mỗi tạp chí. \"Ngày để phản biện\""
+" được tính từ ngày gửi (hoặc chỉ định phiên bản dùng để đánh giá) cho đến "
+"quyết định ban đầu, trong khi \"ngày để xuất bản\" được tính cho bài gửi "
+"được chấp nhận từ khi tải lên bản gốc đến khi được xuất bản."
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tTạp chí của bạn được cấu hình để ghi lại nhiều hơn một số liệu sử dụng. "
+"Thống kê sử dụng sẽ được hiển thị trong một số bối cảnh.\n"
+"\t\tCó những trường hợp phải sử dụng một thống kê sử dụng duy nhất, ví dụ: "
+"để hiển thị một danh sách theo thứ tự các bài viết được sử dụng nhiều nhất "
+"hoặc để xếp hạng\n"
+"\t\tkết quả tìm kiếm. Vui lòng chọn một trong các số liệu được cấu hình làm "
+"mặc định.\n"
+"\t"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Tiêu đề ảnh"

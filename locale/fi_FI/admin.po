@@ -45,6 +45,12 @@ msgstr "Valitse kaikki sivustolla tuettavat kielialueet. Valitut kielialueet ova
 msgid "admin.locale.maybeIncomplete"
 msgstr "Merkityt kielialueet saattavat olla vaillinaisia."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Haluatko varmasti poistaa tämän kielialueen? Se saattaa vahingoittaa muita ylläpidettyjä julkaisuja, joilla on tämä kielialue käytössä."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Valitse mitä tahansa lisäkielialueita asentaaksesi tuen tässä järjestelmässä. Kielialueet täytyy asentaa ennen kuin ylläpidetyt julkaisut voivat käyttää niitä. Katso OJS:n ohjeista tietoja siitä, kuinka uusille kielille lisätään tuki."
+
 msgid "admin.auth.ojs"
 msgstr "OJS:n käyttäjätietokanta"
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:14-08:00\n"
-"PO-Revision-Date: 2020-04-21 19:24+0000\n"
+"PO-Revision-Date: 2020-07-02 12:03+0000\n"
 "Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/reports-counter/zh_Hans/>\n"
@@ -94,3 +94,9 @@ msgstr "旧版网站报告"
 
 msgid "plugins.reports.counter.release"
 msgstr "计数器版本"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "期刊报告 1"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "文章报告 1"

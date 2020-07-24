@@ -66,6 +66,12 @@ msgstr "Válassza ki azokat a nyelvi környezeteket, amelyeket használna az old
 msgid "admin.locale.maybeIncomplete"
 msgstr "A jelölt nyelvi környezetek hiányosak lehetnek."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Biztosan törölni szeretné ezt a nyelvi környezetet? Ez hatással lehet bármelyik tárolt folyóiratra, amely jelenleg használja ezt a nyelvi környezetet."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Telepítse bármelyiket az alábbi támogatott nyelvi környezetek közül. A nyelvi környezeteket telepíteni kell mielőtt a tárolt folyóiratok oldalain használni kezdené. Lásd az OJS dokumentációt a további támogatott nyelvi környezetek használatához."
+
 msgid "admin.auth.ojs"
 msgstr "OJS Felhasználói adatbázis"
 

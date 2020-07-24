@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-12 22:00+0000\n"
+"PO-Revision-Date: 2020-07-10 17:28+0000\n"
 "Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
@@ -876,7 +876,7 @@ msgid "layoutEditor.layoutEditingAssignments"
 msgstr "Phân công trình bày bản thảo"
 
 msgid "layoutEditor.noActiveAssignments"
-msgstr "Phân công biên tập không được kích hoạt"
+msgstr "Phân công biên tập không được kích hoạt."
 
 msgid "layoutEditor.completedEditorialAssignments"
 msgstr "Phân công Biên tập hoàn thành"
@@ -939,7 +939,7 @@ msgstr ""
 "biên tập viên bản thảo. Bạn có chắc chắn muốn làm điều này?"
 
 msgid "sectionEditor.noneAssigned"
-msgstr "Không bài gửi nào được giao"
+msgstr "Không bài gửi nào được giao."
 
 msgid "sectionEditor.completedEditorialAssignments"
 msgstr "Hoàn thành giao phản biện"
@@ -1032,9 +1032,9 @@ msgstr ""
 msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
 "Các bước: Bài mới gửi &gt; Bài đang Phản biện &gt; Bài đang biên tập &gt; "
-"Mục lục. <br /> <br />\n"
+"Mục lục.<br /><br />\n"
 "Chọn một mô hình để xử lý các khía cạnh của quá trình biên tập. (Để chỉ định "
-"một Biên tập viên Quản lý và Biên tập viên Chuyên mục, hãy chuyển đến mục "
+"một Biên tập viên Quản lý và Biên tập viên chuyên mục, hãy chuyển đến mục "
 "Biên tập trong Quản lý Tạp chí.)"
 
 msgid "reviewer.article.selectRecommendation"
@@ -1175,19 +1175,16 @@ msgstr "Biên tập viên được phân công"
 msgid "author.submit.uploadInstructions"
 msgstr ""
 "\n"
-"<p>To upload a manuscript to this journal, complete the following steps.</p>"
-"\n"
+"<p>Để tải lên bản thảo lên tạp chí này, hãy hoàn thành các bước sau.</p>\n"
 "<ol>\n"
-"<li>On this page, click Browse (or Choose File) which opens a Choose File "
-"window for locating the file on the hard drive of your computer.</li>\n"
-"<li>Locate the file you wish to submit and highlight it.</li>\n"
-"<li>Click Open on the Choose File window, which places the name of the file "
-"on this page.</li>\n"
-"<li>Click Upload on this page, which uploads the file from the computer to "
-"the journal's web site and renames it following the journal's "
-"conventions.</li>\n"
-"<li>Once the submission is uploaded, click Save and Continue at the bottom "
-"of this page.</li>\n"
+"<li>Trên trang này, nhấp Duyệt (hoặc Chọn tệp) sẽ mở cửa sổ Chọn tệp để định "
+"vị tệp trên ổ cứng máy tính của bạn.</li>\n"
+"<li>Xác định vị trí tệp bạn muốn gửi và chọn nó. </li>\n"
+"<li>Nhấp vào Mở trên cửa sổ Chọn tệp, đặt tên tệp trên trang này.</li>\n"
+"<li>Nhấp vào Tải lên trên trang này, tải tệp từ máy tính lên trang web của "
+"tạp chí và đổi tên tệp theo quy ước của tạp chí (nếu có).</li>\n"
+"<li>Khi nội dung gửi được tải lên, hãy nhấp vào Lưu và Tiếp tục ở cuối trang "
+"này.</li>\n"
 "</ol>"
 
 msgid "proofreader.noProofreadingAssignments"
@@ -1364,3 +1361,1048 @@ msgstr ""
 msgid "submission.review.mustUploadFileForReview"
 msgstr ""
 "Email yêu cầu không thể được gửi cho đến khi có phiên bản cho vòng phản biện."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Biên tập viên, {$userName}, đã tải lên một tệp đánh giá cho vòng {$round} "
+"của bài gửi {$submissionId} thay mặt cho phản biện, {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} đã chấp nhận vòng phản biện {$round} cho bài gửi {$submissionId} "
+"thay mặt cho {$reviewerName}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} đã từ chối vòng phản biện {$round} của bài gửi {$submissionId} "
+"thay mặt cho {$reviewerName}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} đã chấp nhận vòng phản biện {$round} của bài gửi "
+"{$submissionId}."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} đã từ chối vòng phản biện {$round} của bài gửi "
+"{$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "Bài gửi {$submissionId} đã được gửi lại để đánh giá tiếp."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Khuyến nghị cho vòng phản biện {$round} của bài gửi {$submitId} đã được đặt "
+"bởi biên tập viên, {$editorName}, thay mặt cho người phản biện, "
+"{$reviewerName}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Khuyến nghị cho vòng phản biện {$round} của bài gửi {$submitId} của "
+"{$reviewerName} đã được đặt."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Ngày hết hạn của vòng phản biện {$round} của bài gửi {$submitId} bởi "
+"{$reviewerName} đã được đặt thành {$dueDate}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$ reviewerName} đã được xếp hạng cho vòng phản biện {$round} về việc gửi {$ "
+"submitId}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"Vòng phản biện {$round} bởi {$reviewerName} cho bài gửi {$submissionId} đã "
+"được bắt đầu."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} đã không được giao từ quá trình phản biện bài gửi {$submitId}"
+" cho vòng phản biện {$round}."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} đã sửa chữa bài viết {$submissionId}. ID tập tin mới là "
+"{$fileId}."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Có một phiên bản mới của OJS! Bạn hiện đang sử dụng OJS {$currentVersion}. "
+"Phiên bản gần đây nhất là OJS {$latestVersion}. Vui lòng liên hệ với Quản "
+"trị trang web của bạn ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\""
+">{$siteAdminEmail}</a>) để thông báo cho họ về bản phát hành mới này. Thông "
+"tin chi tiết có thể được tìm thấy <a href=\"http://pkp.sfu.ca/ojs_download\" "
+"target=\"_new\">tại đây</a>."
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Có một phiên bản mới của OJS! Bạn hiện đang sử dụng OJS {$currentVersion}. "
+"Phiên bản gần đây nhất là OJS {$latestVersion}. Vui lòng truy cập <a href=\""
+"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this page</a> để tải xuống "
+"phiên bản mới nhất và tìm hướng dẫn nâng cấp."
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Nâng cấp OJS lên phiên bản {$version} đã hoàn tất thành công.</p>\n"
+"<p>Đừng quên đặt cài đặt \"installed\" trong tệp cấu hình config.inc.php của "
+"bạn trở lại <em>On</em>.</p>\n"
+"<p>Nếu bạn chưa đăng ký và muốn nhận tin tức và cập nhật, <strong>vui lòng "
+"đăng ký tại <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\""
+">http://pkp.sfu.ca/ojs/register</a>.</strong> Nếu bạn có câu hỏi hoặc nhận "
+"xét, vui lòng truy cập <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">"
+"support forum</a>.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Quá trình cài đặt OJS đã hoàn tất thành công.</p>\n"
+"<p>Để bắt đầu sử dụng hệ thống, hãy <a href=\"{$loginUrl}\">đăng nhập</a> "
+"với tên người dùng và mật khẩu đã nhập trên trang trước đó.</p>\n"
+"<p>Nếu bạn muốn trở thành một phần của cộng đồng PKP, bạn có thể:</p>\n"
+"<ol>\n"
+"\t<li>Đọc <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP blog</a> và "
+"theo dõi <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS feed</a>"
+" để biết tin tức và cập nhật.</li>\n"
+"\t<li>Truy cập <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support "
+"forum</a> nếu bạn có câu hỏi hoặc nhận xét.</li>\n"
+"</ol>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>QUAN TRỌNG!</h4>\n"
+"<p>Trình cài đặt không thể tự động ghi đè tệp cấu hình. Trước khi thử sử "
+"dụng hệ thống, vui lòng mở <tt>config.inc.php</tt> trong trình chỉnh sửa văn "
+"bản phù hợp và thay thế nội dung của nó bằng nội dung của trường văn bản bên "
+"dưới.</p>"
+
+msgid "log.review.reviewerFile"
+msgstr "Một tập tin của người phản biện đã được tải lên."
+
+msgid "log.editor.decision"
+msgstr ""
+"Một quyết định ({$decision}) cho bài viết {$submissionId} đã được ghi lại "
+"bởi {$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Một kiến nghị của biên tập viên ({$decision}) cho bài viết {$submitId} đã "
+"được ghi lại bởi {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"Việc biên tập của bài gửi {$ submitId} đã được bắt đầu bởi {$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Các tập tin copyedit mặc định đã được chọn."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} đã hoàn thành bản chỉnh sửa ban đầu của bài nộp "
+"{$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} đã hoàn thành bản chỉnh sửa cuối cùng của bài gửi "
+"{$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} đã được giao làm biên tập bản thảo cho bài gửi "
+"{$submissionId}."
+
+msgid "log.copyedit.authorFile"
+msgstr ""
+"Một phiên bản của tập tin bài gửi được sửa chữa bởi tác giả đã được tải lên."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr ""
+"Một phiên bản của biên tập viên bản thảo của tập tin bài gửi đã được tải lên."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} đã được giao làm biên tập viên trình bày cho bài gửi "
+"{$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} đã không được giao làm biên tập viên trình bày cho bài gửi "
+"{$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} đã hoàn thành chỉnh sửa bố cục cho bài gửi {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "Siêu dữ liệu cho bài viết này đã được sửa đổi bởi {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr ""
+"Một phiên bản của biên tập viên của tập tin của bài gửi đã được tải lên."
+
+msgid "log.editor.archived"
+msgstr "Bài gửi {$submissionId} đã được chuyển sang lưu trữ."
+
+msgid "log.editor.restored"
+msgstr "Bài gửi {$submissionId} đã được khôi phục vào hàng đợi."
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} đã được giao như một biên tập viên cho bài gửi {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} đã giao {$proofreaderName} để hiệu đính bài gửi "
+"{$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} đã cho {$submissionId} được lên lịch xuất bản."
+
+msgid "log.imported"
+msgstr "{$userName} đã nhập bài viết {$submitId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Các bài báo đã được đánh giá ngang hàng"
+
+msgid "notification.type.editing"
+msgstr "Các sự kiện trong quá trình biên tập"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Một bài viết mới, \"{$title},\" đã được gửi."
+
+msgid "notification.type.editorDecisionComment"
+msgstr ""
+"Một bình luận đã được để lại trên quyết định của biên tập viên cho \""
+"{$title}.\""
+
+msgid "notification.type.galleyModified"
+msgstr "Một bản in đã được sửa đổi cho \"{$title}.\""
+
+msgid "notification.type.issuePublished"
+msgstr "Một số đã được xuất bản."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Một thông báo mới đã được tạo ra."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Một mẫu phản biện đã được gửi cho \"{$title}.\""
+
+msgid "notification.type.reviewing"
+msgstr "Các sự kiện trong quá trình phản biện"
+
+msgid "notification.type.site"
+msgstr "Các sự kiện của trang web"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Cảnh báo:</strong> Nếu cài đặt thất bại một phần trong quá trình cài "
+"đặt cơ sở dữ liệu, bạn có thể cần phải hủy cơ sở dữ liệu OJS hoặc bảng cơ sở "
+"dữ liệu trước khi thử cài đặt lại cơ sở dữ liệu."
+
+msgid "installer.upgradeApplication"
+msgstr "Nâng cấp Open Journal Systems"
+
+msgid "installer.installApplication"
+msgstr "Cài đặt Open Journal Systems"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS yêu cầu quyền truy cập vào cơ sở dữ liệu SQL để lưu trữ dữ liệu của nó. "
+"Xem các yêu cầu hệ thống ở trên để biết danh sách các cơ sở dữ liệu được hỗ "
+"trợ. Trong các trường bên dưới, cung cấp các cài đặt sẽ được sử dụng để kết "
+"nối với cơ sở dữ liệu."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Nhập tên đường dẫn đầy đủ đến một thư mục hiện có nơi lưu giữ các tệp đã tải "
+"lên. Thư mục này không nên truy cập trực tiếp trên web. <strong>Vui lòng đảm "
+"bảo rằng thư mục này tồn tại và có thể ghi được trước khi cài đặt.</strong>"
+"Tên đường dẫn Windows nên sử dụng dấu gạch chéo về phía trước, ví dụ: \"C:/"
+"myjournal/files\"."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Chọn bất kỳ ngôn ngữ bổ sung để hỗ trợ trong hệ thống này. Các ngôn ngữ này "
+"sẽ có sẵn để sử dụng bởi các tạp chí được lưu trữ trên trang web. Các ngôn "
+"ngữ bổ sung cũng có thể được cài đặt bất cứ lúc nào từ giao diện quản trị "
+"trang web."
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Ngôn ngữ chính để sử dụng cho hệ thống này. Vui lòng tham khảo tài liệu OJS "
+"nếu bạn muốn hỗ trợ cho các ngôn ngữ không được liệt kê ở đây."
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Máy chủ của bạn hiện cho phép kích thước tải lên tệp tối đa là: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Máy chủ của bạn hiện cho phép tải lên tệp: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Để được hỗ trợ Unicode (UTF-8) hoàn chỉnh, chọn UTF-8 cho tất cả các cài đặt "
+"bộ ký tự. Xin lưu ý rằng hỗ trợ Unicode đầy đủ yêu cầu PHP phải được biên "
+"dịch với sự hỗ trợ cho <a href=\"http://www.php.net/mbstring\" target=\""
+"_blank\">mbstring</a> thư viện (được bật theo mặc định trong hầu hết các cài "
+"đặt PHP gần đây). Bạn có thể gặp sự cố khi sử dụng bộ ký tự mở rộng nếu máy "
+"chủ của bạn không đáp ứng các yêu cầu này.\n"
+"<br /><br />\n"
+"Máy chủ của bạn hiện đang hỗ trợ mbstring: "
+"<strong>{$supportsMBString}</strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>Phiên bản OJS {$version}</h4>\n"
+"\n"
+"<p>Cảm ơn bạn đã tải xuống Public Knowledge Project's <strong>Open Journal "
+"Systems</strong>. Trước khi tiếp tục, vui lòng đọc <a href=\"{$baseUrl}/docs/"
+"README.md\">README</a> và tập tin <a href=\"{$baseUrl}/docs/UPGRADE.md\""
+">UPGRADE</a> kèm theo phần mềm này. Để biết thêm thông tin về Dự án Tri thức "
+"công cộng và các dự án phần mềm của nó, vui lòng truy cập trang web <a href="
+"\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. Nếu bạn có báo "
+"cáo lỗi hoặc yêu cầu hỗ trợ kỹ thuật về Open Journal Systems, hãy xem <a "
+"href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> hoặc "
+"truy cập PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" "
+"target=\"_blank\">bug reporting system</a>. Mặc dù diễn đàn hỗ trợ là phương "
+"thức liên hệ ưa thích, bạn cũng có thể gửi email cho nhóm tạit <a href=\""
+"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>Đây là <strong>khuyên chân thành</strong> bạn nên sao lưu cơ sở dữ liệu, "
+"thư mục tệp và thư mục cài đặt OJS trước khi tiếp tục.</p>\n"
+"<p>Nếu bạn đang chạy ở <a href=\"http://www.php.net/features.safe-mode\" "
+"target=\"_blank\">PHP Safe Mode</a>, vui lòng đảm bảo rằng lệnh "
+"max_execution_time trong tệp cấu hình php.ini của bạn được đặt ở giới hạn "
+"cao. Nếu đạt đến giới hạn thời gian này hoặc bất kỳ giới hạn thời gian nào "
+"khác ví dụ: Chỉ thị \"Hết giờ\" của Apache) và quá trình nâng cấp bị gián "
+"đoạn, sẽ cần phải can thiệp thủ công.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Các bước chuẩn bị cài đặt</h4>\n"
+"\n"
+"\n"
+"<p>1. Các tệp và thư mục sau (và nội dung của chúng) phải được ghi lại:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> có thể ghi (tùy chọn): {$writable_config}</li>"
+"\n"
+"\t<li><tt>public/</tt> có thể ghi: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> có thể ghi: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> có thể ghi: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> có thể ghi: "
+"{$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> có thể ghi: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Một thư mục để lưu trữ các tệp đã tải lên phải được tạo và ghi lại ("
+"xem \"Cài đặt tệp\" bên dưới).</p>"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>Phiên bản OJS {$version}</h4>\n"
+"\n"
+"<p>ảm ơn bạn đã tải xuống <strong>Open Journal Systems</strong> của Dự án "
+"Public Knowledge. Trước khi tiếp tục, vui lòng đọc tập tin <a href=\""
+"{$baseUrl}/docs/README.md\">README</a> đi kèm với phần mềm này. Để biết thêm "
+"thông tin về Public Knowledge Project và các dự án phần mềm của nó, vui lòng "
+"truy cập trang web <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web "
+"site</a>. Nếu bạn có báo cáo lỗi hoặc yêu cầu hỗ trợ kỹ thuật về Open "
+"Journal Systems, hãy xem <a href=\"http://forum.pkp.sfu.ca\" target=\""
+"_blank\">support forum</a> hoặc truy cập PKP's online <a href=\""
+"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting "
+"system</a>. Mặc dù diễn đàn hỗ trợ là phương thức liên hệ ưa thích, bạn cũng "
+"có thể gửi email cho nhóm tại <a href=\"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Nâng cấp</h4>\n"
+"\n"
+"<p> Nếu bạn đang nâng cấp bản cài đặt OJS hiện có, <a href=\"{$upgradeUrl}\">"
+"click here</a> to proceed.</p>\n"
+"\n"
+"<h4>Yêu cầu hệ thống được đề xuất</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; you are currently using PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >="
+" 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Hệ điều hành: Bất kỳ HĐH nào hỗ trợ phần mềm ở trên, bao gồm <a href=\""
+"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\""
+"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle."
+"com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" "
+"target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\""
+">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Vì PKP không có tài nguyên để kiểm tra mọi sự kết hợp có thể có của các "
+"phiên bản phần mềm và nền tảng, nên không có đảm bảo nào cho hoạt động hoặc "
+"hỗ trợ chính xác .</p>\n"
+"\n"
+"<p>Thay đổi các cài đặt này có thể được thực hiện sau khi cài đặt bằng cách "
+"chỉnh sửa tệp <tt>config.inc.php</tt> rong thư mục OJS cơ sở hoặc sử dụng "
+"giao diện web quản trị trang web.</p>\n"
+"\n"
+"<h4>Hệ thống cơ sở dữ liệu được hỗ trợ</h4>\n"
+"\n"
+"<p>JS hiện chỉ mới được thử nghiệm trên MySQL và PostgreSQL, mặc dù các hệ "
+"thống quản lý cơ sở dữ liệu khác được hỗ trợ bởi <a href=\""
+"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> có thể hoạt động "
+"(đầy đủ hoặc một phần). Báo cáo tương thích và/hoặc bản vá mã cho các DBMS "
+"thay thế có thể được gửi đến team OJS.</p>\n"
+
+msgid "installer.ojsUpgrade"
+msgstr "Nâng cấp OJS"
+
+msgid "installer.appInstallation"
+msgstr "Cài đặt OJS"
+
+msgid "payment.subscription.expires"
+msgstr "Hết hạn"
+
+msgid "payment.subscription.renew"
+msgstr "Gia hạn thuê bao"
+
+msgid "payment.subscription.purchase"
+msgstr "Thuê bao mua"
+
+msgid "payment.membership.ends"
+msgstr "Kết thúc"
+
+msgid "payment.membership.renewMembership"
+msgstr "Gia hạn thành viên cá nhân"
+
+msgid "payment.membership.buyMembership"
+msgstr "Mua thành viên cá nhân"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Phí xuất bản đã thanh toán"
+
+msgid "payment.publication.payPublication"
+msgstr "Thanh toán để xuất bản"
+
+msgid "payment.submission.paySubmission"
+msgstr "Thanh toán phí bài gửi"
+
+msgid "payment.donation.makeDonation"
+msgstr "Đóng góp"
+
+msgid "payment.notFound"
+msgstr ""
+"Một khoản thanh toán đã được yêu cầu, nhưng yêu cầu đã hết hạn. Liên hệ với "
+"Quản lý Tạp chí để biết chi tiết."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Đăng ký với các tạp chí khác"
+
+msgid "notification.type.userComment"
+msgstr "Một độc giả đã bình luận về \"{$title}\""
+
+msgid "notification.type.submissions"
+msgstr "Các sự kiện của bài gửi"
+
+msgid "notification.type.submissionComment"
+msgstr "Một biên tập viên đã bình luận về \"{$title}.\""
+
+msgid "notification.type.public"
+msgstr "Thông báo công khai"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Siêu dữ liệu của số xuất bản đã được lưu."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Một bài báo mới đã được gửi đến cần một biên tập viên được giao."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Gán một người sử dụng để tạo ra các bản in sử dụng liên kết Gán trong danh "
+"sách Những người tham gia."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Đang chờ các bản in."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Truy cập bị từ chối! Bạn chưa được chỉ định là một BTV bản thảo bài viết này."
+
+msgid "user.authorization.noContext"
+msgstr "Không tạp chí trong bối cảnh!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr ""
+"Bạn đang cố gắng truy cập một bài viết không phải là một phần chuyên mục của "
+"bạn."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Số được yêu cầu không hợp lệ!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "BTV bản thảo không hợp lệ hoặc không có BTV bản thảo được yêu cầu!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Danh sách tiền tệ đã tải \"{$ filename}\" từ XML"
+
+msgid "grid.action.createContext"
+msgstr "Tạo một tạp chí mới"
+
+msgid "editor.navigation.issues"
+msgstr "Các số"
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Bài gửi này hiện đang chờ phê duyệt trước khi nó xuất hiện trong một số cụ "
+"thể."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Đang chờ phê duyệt."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Ẩn các tạp chí khác"
+
+msgid "article.view.interstitial"
+msgstr "Vui lòng chọn một tập tin bài báo để tải xuống."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Đã phê duyệt"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Chờ phê duyệt"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Phê duyệt bản in"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Phê duyệt bản in này để xuất bản.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Xóa phê duyệt của bản in này.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Lập chỉ mục \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr ""
+"Việc thực hiện tìm kiếm này không cho phép lập chỉ mục lại trên mỗi tạp chí."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"Đường dẫn tạp chí đã cho \"{$journalPath}\" không thể được tạo thành một tạp "
+"chí."
+
+msgid "editor.issues.backIssues"
+msgstr "Số đã xuất bản"
+
+msgid "editor.issues.futureIssues"
+msgstr "Số chuẩn bị xuất bản"
+
+msgid "navigation.subscriptions"
+msgstr "Các thuê bao"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} đã thực hiện quá trình chỉnh sửa cho bài báo {$submissionId}."
+
+msgid "catalog.sortBy"
+msgstr "Thứ tự bài báo"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Chọn cách đặt hàng bài báo trong loại này."
+
+msgid "payment.requestPublicationFee"
+msgstr "Yêu cầu phí xuất bản ({$feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "Quyên góp"
+
+msgid "payment.type.subscription"
+msgstr "Phí thuê bao"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Phí mua số"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Phí mua bài báo"
+
+msgid "payment.type.membership"
+msgstr "Lệ phí thành viên cá nhân"
+
+msgid "payment.type.fastTrack"
+msgstr "Lệ phí phản biện nhanh"
+
+msgid "payment.type.publication.required"
+msgstr "Phí xuất bản đã tới hạn thanh toán."
+
+msgid "payment.type.publication"
+msgstr "Lệ phí xuất bản"
+
+msgid "payment.type.submission"
+msgstr "Lệ phí bài gửi"
+
+msgid "payment.authorFees"
+msgstr "Lệ phí tác giả"
+
+msgid "payment.paymentSent"
+msgstr "Thanh toán đã được gửi đi"
+
+msgid "payment.paymentReceived"
+msgstr "Đã nhận thanh toán"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Chọn box này nếu bạn đã gửi khoản thanh toán của mình cho tạp chí để hoàn "
+"tất quy trình gửi. Việc nộp sẽ không được xem xét cho đến khi thanh toán "
+"đến. Nhấp vào THANH TOÁN NGAY ở trên để xem hướng dẫn thanh toán."
+
+msgid "payment.alreadyPaid"
+msgstr "Sẵn sàng thanh toán"
+
+msgid "payment.waive"
+msgstr "Từ bỏ"
+
+msgid "payment.payNow"
+msgstr "Thanh toán ngay"
+
+msgid "payment.paid"
+msgstr "Đã thanh toán"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Bạn phải đăng nhập để quyên góp."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Thuê bao hoặc mua số cần thiết để truy cập. Để xác minh thuê bao, truy cập "
+"mua trước hoặc số mua, đăng nhập vào tạp chí."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Thuê bao hoặc mua bài viết cần thiết để truy cập. Để xác minh thuê bao, truy "
+"cập mua trước hoặc mua bài viết, đăng nhập vào tạp chí."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Xóa"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Mẹo tìm kiếm: <ul>\n"
+"<li>Thuật ngữ tìm kiếm không phân biệt chữ hoa chữ thường </li>\n"
+"<li>Các từ phổ biến bị bỏ qua </li>\n"
+"<li>Theo mặc định, chỉ các bài viết có chứa <em>tất cả</em> các điều khoản "
+"trong truy vấn được trả về (nghĩa là, <em>AND</em> được ngụ ý) </li>\n"
+"<li>Kết hợp nhiều từ với <em>OR</em> để tìm các bài viết có chứa một trong "
+"hai thuật ngữ; ví dụ: <em> giáo dục OR nghiên cứu </em> </li>\n"
+"<li>Sử dụng dấu ngoặc đơn để tạo các truy vấn phức tạp hơn; ví dụ: <em> lưu "
+"trữ ((tạp chí OR hội nghị) KHÔNG phải là luận văn) </em> </li>\n"
+"<li>Tìm kiếm một cụm từ chính xác bằng cách đặt nó trong dấu ngoặc kép; ví "
+"dụ: <em> \"xuất bản truy cập mở\" </em> </li>\n"
+"<li>Loại trừ một từ bằng cách thêm tiền tố vào <strong>-</strong> hoặc "
+"<em>NOT</em>; ví dụ. <em>chính trị trực tuyến</em> hoặc <em>trực tuyến NOT "
+"chính trị</em> </li>\n"
+"<li>Sử dụng <strong>*</strong> trong một thuật ngữ làm ký tự đại diện để "
+"khớp với bất kỳ chuỗi ký tự nào; ví dụ: <em>soci* đạo đức </em> sẽ khớp với "
+"các tài liệu có chứa \"xã hội học\" hoặc \"xã hội\" </li>\n"
+"</ul>"
+
+msgid "payment.loginRequired"
+msgstr "Bạn phải đăng nhập để thanh toán."
+
+msgid "donations.thankYouMessage"
+msgstr ""
+"Cảm ơn bạn đã đóng góp. Những đóng góp của bạn được chúng tôi đánh giá cao."
+
+msgid "donations.thankYou"
+msgstr "Cảm ơn"
+
+msgid "help.goToEditPage"
+msgstr "Chỉnh sửa {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Trở về kết quả tìm kiếm"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Trợ giúp OJS"
+
+msgid "help.ojsHelp"
+msgstr "Trợ giúp Open Journal Systems"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Trang web này sử dụng Open Journal Systems {$ojsVersion}, đây là phần mềm "
+"quản lý và xuất bản tạp chí nguồn mở được phát triển, hỗ trợ và phân phối "
+"miễn phí bởi <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> "
+"theo Giấy phép Công cộng GNU."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Tạp chí này sử dụng Open Journal Systems {$ojsVersion}, đây là phần mềm quản "
+"lý và xuất bản tạp chí nguồn mở được phát triển, hỗ trợ và phân phối miễn "
+"phí bởi <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> theo "
+"Giấy phép Công cộng GNU."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Quy trình xuất bản và biên tập của OJS"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Thông tin thêm về hệ thống xuất bản, Nền tảng và quy trình làm việc của OJS/"
+"PKP."
+
+msgid "about.memberships"
+msgstr "Các thành viên"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Các kiểu thuê bao"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Giá"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Thời hạn"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Định dạng"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Tên"
+
+msgid "about.subscriptionsContact"
+msgstr "Liên hệ các thuê bao"
+
+msgid "about.subscriptions.institutional"
+msgstr "Các thuê bao tổ chức"
+
+msgid "about.subscriptions.individual"
+msgstr "Các thuê bao các nhân"
+
+msgid "about.subscriptions"
+msgstr "Thuê bao"
+
+msgid "about.archiving"
+msgstr "Lưu trữ"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "(các) tháng sau khi một số được công bố."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Nội dung của tạp chí này sẽ có sẵn ở định dạng truy cập mở"
+
+msgid "about.delayedOpenAccess"
+msgstr "Truy cập mở bị trì hoãn"
+
+msgid "about.openAccessPolicy"
+msgstr "Chính sách truy cập mở"
+
+msgid "about.publicationFrequency"
+msgstr "Tần suất xuất bản"
+
+msgid "about.peerReviewProcess"
+msgstr "Quy trình đánh giá ngang hàng"
+
+msgid "about.authorFeesMessage"
+msgstr "Tạp chí này tính phí tác giả như sau."
+
+msgid "about.authorFees"
+msgstr "Phí tác giả"
+
+msgid "about.privacyStatement"
+msgstr "Cam kết bảo mật"
+
+msgid "about.copyrightNotice"
+msgstr "Thông báo bản quyền"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Là một phần của quy trình gửi, các tác giả được yêu cầu kiểm tra sự tuân thủ "
+"của họ đối với tất cả các mục sau đây và các bài gửi có thể được trả lại cho "
+"các tác giả không tuân thủ các mục này."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Checklist cho các bài chuẩn bị gửi"
+
+msgid "about.authorGuidelines"
+msgstr "Hướng dẫn tác giả"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "xem các bài nộp đang chờ của bạn"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Nộp bài mới"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Tạo 1 bài gửi mới tới chuyên mục <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} hoặc {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} hoặc {$register} để gửi bài."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Đăng ký"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Đăng nhập"
+
+msgid "about.submissions"
+msgstr "Các bài gửi"
+
+msgid "about.sectionPolicies"
+msgstr "Chính sách các chuyên mục"
+
+msgid "about.focusAndScope"
+msgstr "Phạm vi và mục đích"
+
+msgid "about.editorialPolicies"
+msgstr "Chính sách biên tập"
+
+msgid "about.editorialTeam.biography"
+msgstr "Tiểu sử"
+
+msgid "about.editorialTeam"
+msgstr "Ban biên tập"
+
+msgid "about.history"
+msgstr "Lịch sử Tạp chí"
+
+msgid "about.aboutContext"
+msgstr "Giới thiệu về Tạp chí"
+
+msgid "about.contact"
+msgstr "Liên hệ"
+
+msgid "about.statistics"
+msgstr "Số liệu thống kê"
+
+msgid "archive.issueUnavailable"
+msgstr "Số không tồn tại"
+
+msgid "archive.browse"
+msgstr "Duyệt qua các số cũ hơn"
+
+msgid "archive.archivesPageNumber"
+msgstr "Lưu trữ - Trang {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Lưu trữ"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Tạp chí này chưa xuất bản số nào."
+
+msgid "current.noCurrentIssue"
+msgstr "Không có số hiện tại"
+
+msgid "current.current"
+msgstr "Hiện tại"
+
+msgid "site.noJournals"
+msgstr "Không có tạp chí có sẵn."
+
+msgid "site.journalCurrent"
+msgstr "Số mới"
+
+msgid "site.journalRegister"
+msgstr "Đăng ký"
+
+msgid "site.journalView"
+msgstr "Xem tạp chí"
+
+msgid "site.journalsHosted"
+msgstr "Tạp chí được lưu trữ trên trang web này"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Các tập tin bạn đã chọn sẽ bắt đầu tải xuống tự động. Nếu không, nhấp vào "
+"liên kết dưới đây. Lưu ý rằng tệp này có thể yêu cầu trình xem hoặc plugin "
+"đặc biệt để xem. <br/> <br/> Nếu tệp không tự động tải xuống, hãy <a href=\""
+"{$url}\">bấm vào đây</a>."
+
+msgid "article.nonpdf.title"
+msgstr "Bài báo tải về"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Tệp PDF bạn đã chọn sẽ tải ở đây nếu trình duyệt Web của bạn đã cài đặt "
+"plugin đọc PDF (ví dụ: phiên bản gần đây của <a href=\"https://get.adobe.com/"
+"reader/\">Adobe Acrobat Reader </a>).</p>"
+
+msgid "article.download"
+msgstr "Tải xuống tập tin PDF này"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.pageTitle"
+msgstr "Xem {$title}"
+
+msgid "search.authorDetails"
+msgstr "Chi tiết về tác giả"
+
+msgid "search.authorIndex"
+msgstr "Duyệt chỉ mục tác giả"
+
+msgid "search.allJournals"
+msgstr "Tất cả các tạp chí"
+
+msgid "search.withinJournal"
+msgstr "Trong"
+
+msgid "search.searchFor"
+msgstr "Tìm kiếm bài viết cho"
+
+msgid "search.browseAuthorIndex"
+msgstr "Duyệt chỉ mục tác giả"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Thêm"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Vui lòng nhập một dải IP hợp lệ."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Nếu dải IP được nhập vào đây, tên miền là tùy chọn. <br />Các giá trị hợp lệ "
+"bao gồm địa chỉ IP (ví dụ: 142.58.103.1), dải IP (ví dụ: 142.58.103.1 - "
+"142.58.103.4), dải IP có ký tự đại diện '*' ( ví dụ: 142.58.*.*) và dải IP "
+"với CIDR (ví dụ: 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Dải IP"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Vui lòng nhập một tên miền hợp lệ."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Loại đăng ký được chọn yêu cầu tên miền và/hoặc dải IP để xác thực đăng ký."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Nếu một tên miền được nhập vào đây, phạm vi IP là tùy chọn. <br />Giá trị "
+"hợp lệ là tên miền (ví dụ: lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domain"
+msgstr "Tên miền"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Địa chỉ gửi thư"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Một tên tổ chức là bắt buộc."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Tên tổ chức"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Thông tin thành viên nếu cần cho loại thuê bao đã chọn."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Tài khoản người dùng này đã có một thuê bao cá nhân."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Vui lòng chọn một loại thuê bao hợp lệ."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Loại đăng ký được chọn yêu cầu thông tin thành viên."
+
+msgid "user.subscriptions.form.membership"
+msgstr "Thành viên"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Các loại thuê bao"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Xem các loại thuê bao có sẵn"
+
+msgid "user.subscriptions.expired"
+msgstr "Đã hết hạn: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Hết hạn: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Mua thuê bao tổ chức"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Mua thuê bao cá nhân"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Mua thuê bao mới"
+
+msgid "user.subscriptions.purchase"
+msgstr "Mua"
+
+msgid "user.subscriptions.renew"
+msgstr "Gia hạn"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Thuê bao tổ chức"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Thuê bao cá nhân"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr ""
+"Một khoản thanh toán trực tuyến đã được bắt đầu nhưng đã bị hủy hoặc chưa "
+"hoàn thành"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Thanh toán thủ công đã được bắt đầu nhưng chưa nhận được"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Thuê bao phải được xem xét trước khi nó có thể được kích hoạt"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Cần thêm thông tin trước khi thuê bao có thể được kích hoạt"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Mô tả"
+
+msgid "user.subscriptions.status"
+msgstr "Trạng thái"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Đăng ký hoạt động và hết hạn được hiển thị dưới đây cùng với ngày hết hạn. "
+"Ngoài ra, thông tin trạng thái sau có thể được bao gồm trong mỗi thuê bao."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Trạng thái thuê bao"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Thuê bao của tôi"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Bạn phải đồng ý với việc cam kết bảo mật của trang web này."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Bạn phải đồng ý với cam kết bảo mật cho bất kỳ tạp chí nào mà bạn đang đăng "
+"ký."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Có, tôi đồng ý thu thập và lưu trữ dữ liệu của mình theo tạp chí này <a href="
+"\"{$privacyUrl}\" target=\"_blank\">cam kết bảo mật</a>."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Có, tôi muốn được thông báo về các ấn phẩm và thông báo mới cho tất cả các "
+"tạp chí mà tôi đã đăng ký."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Xác định những lĩnh vực quan tâm (lĩnh vực nghiên cứu độc lập và phương pháp "
+"nghiên cứu):"
+
+msgid "user.register.reviewerDescription"
+msgstr "Sẵn sàng tiến hành đánh giá ngang hàng các bài gửi vào trang web."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Sẵn sàng tiến hành đánh giá ngang hàng các bài gửi cho tạp chí."

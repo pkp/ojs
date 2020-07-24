@@ -45,6 +45,12 @@ msgstr "Os idiomas selecionados estarão disponíveis para todas as revistas no 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Idiomas marcados podem estar incompletos."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Deseja realmente remover este idioma? A execução pode afetar revistas hospedas que podem estar utilizando o idioma."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Selecione idiomas adicionais para uso no sistema. Os idiomas devem ser instalados antes que possam ser utilizados pelas revistas hospedadas. Veja a documentação para informações sobre como incluir novos idiomas no sistema."
+
 msgid "admin.auth.ojs"
 msgstr "Base de dados de usuários"
 

@@ -32,6 +32,12 @@ msgstr "选择这个网站支持的所有地区配置。本网站上的所有期
 msgid "admin.locale.maybeIncomplete"
 msgstr "标记的语言环境也许没有完成."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "您确认卸载这个语言环境?这个将影响使用该语言环境的主办期刊."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "安装额外的地区配置以在这个系统取得语言支持。地区配置必须先安装，系统上的期刊才能使用该地区语言。请参考OJS文件以取得关于增加语言支持的信息。"
+
 msgid "admin.auth.ojs"
 msgstr "OJS用户数据库"
 

@@ -462,9 +462,6 @@ recaptcha_enforce_hostname = Off
 
 ; Using full paths to the binaries is recommended.
 
-; perl (used in paracite citation parser)
-perl = /usr/bin/perl
-
 ; tar (used in backup plugin, translation packaging)
 tar = /bin/tar
 

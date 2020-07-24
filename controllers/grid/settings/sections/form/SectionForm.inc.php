@@ -50,7 +50,7 @@ class SectionForm extends PKPSectionForm {
 			$section = $sectionDao->getById($sectionId, $journal->getId());
 		}
 
-		if (isset($section) ) {
+		if (isset($section)) {
 			$this->setData(array(
 				'title' => $section->getTitle(null), // Localized
 				'abbrev' => $section->getAbbrev(null), // Localized
@@ -71,6 +71,10 @@ class SectionForm extends PKPSectionForm {
 					'assignedToSection' => (int) $this->getSectionId(),
 				]),
 			));
+		} else {
+			$this->setData([
+			'assignedSubeditors' => [],
+			]);
 		}
 
 		parent::initData();

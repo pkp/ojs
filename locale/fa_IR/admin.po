@@ -38,6 +38,12 @@ msgstr "از این لیست زبان‌های دلخواه را برای سای
 msgid "admin.locale.maybeIncomplete"
 msgstr "زبان‌های مشخص شده ممکن است ناکامل باشند."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "آیا می‌خواهید این زبان را حذف کنید؟ این کار ممکن است بر روی مجلات سایت که از این زبان‌ها استفاده می‌کنند تأثیر بگذارد"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "زبان‌هایی را که می‌خواهید در این سیستم حمایت شود انتخاب کنید. زبان‌ها قبل از استفاده می‌بایست نصب شوند. برای اطلاع از چگونگی انجام این کار به راهنمای OJS مراجعه کنید."
+
 msgid "admin.auth.ojs"
 msgstr "پایگاه داده کاربران OJS"
 

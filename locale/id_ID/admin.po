@@ -42,6 +42,14 @@ msgstr ""
 msgid "admin.locale.maybeIncomplete"
 msgstr "Bahasa yang diberi tanda kemungkinan masih belum lengkap."
 
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Anda yakin ingin membatalkan instalasi bahasa ini? Hal ini akan mempengaruhi "
+"jurnal yang sedang menggunakannya."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Pilih bahasa tambahan untuk diinstal dalam sistem ini. Bahasa harus diinstal sebelum dapat digunakan oleh jurnal."
+
 msgid "admin.auth.ojs"
 msgstr "Database Pengguna OJS"
 

@@ -28,6 +28,12 @@ msgstr "Toto bude výchozí jazyk pro stránku a všechny hostované časopisy."
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Vyberte všechny jazykové lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více jazykových lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Jste si jistý, že chcete odinstalovat tuto jazykovou lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně tuto jazykovou lokalizaci používají."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Vyberte další jazykové lokalizace, pro které má být do systému nainstalována podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci k OJS."
+
 msgid "admin.auth.ojs"
 msgstr "Databáze OJS uživatelů"
 

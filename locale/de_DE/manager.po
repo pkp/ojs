@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2020-06-25 16:42+0000\n"
+"PO-Revision-Date: 2020-07-01 18:09+0000\n"
 "Last-Translator: Jens Unkenholz <jens.unkenholz@uni-muenster.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/de/>"
 "\n"
@@ -737,7 +737,6 @@ msgstr "Seitenzahl-Option"
 msgid "manager.setup.policies"
 msgstr "Zur Zeitschrift"
 
-#, fuzzy
 msgid "manager.setup.policies.description"
 msgstr ""
 "Schwerpunkt, Begutachtung, Rubriken, Schutz personenbezogener Daten, "
@@ -1720,3 +1719,62 @@ msgstr "Eingeschränkter Dateizugriff"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Sicheren Link in die Einladungs-E-Mail für Gutachter/innen einfügen."
+
+msgid "manager.setup.userAccess.success"
+msgstr "Die Nutzerzugriffsdetails für diese Zeitschrift wurden aktualisiert."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Stellen Sie Metadaten für Indizierungsservices von Dritten über <a href=\""
+"https://www.openarchives.org/\">Open Archives Initiative</a> zur Verfügung."
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Artikelinhalt ansehen"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Seitenzugriff"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Geben Sie eine kurze Beschreibung (50-300 Zeichen) der Zeitschrift, die "
+"Suchmaschinen anzeigen können, wenn die Zeitschrift in den Suchergebnissen "
+"aufgelistet wird."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Die Suchmaschinenindex-Einstellungen wurden aktualisiert."
+
+msgid "manager.setup.publishing"
+msgstr "Veröffentlichungsdetails"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Die Datenschutzerklärung wurde aktualisiert."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Begrenzen Sie die Zahl der angezeigten Links auf Folgeseiten in einer Liste."
+
+msgid "manager.setup.masthead.success"
+msgstr "Das Impressum dieser Zeitschrift wurde aktualisiert."
+
+msgid "manager.setup.lists.success"
+msgstr "Die Listeneinstellung dieser Zeitschrift wurde aktualisiert."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Geben Sie eine kurze Beschreibung Ihrer Zeitschrift ein und benennen Sie "
+"Redakteure, Direktoren und andere Mitglieder Ihres Redaktionsteams."
+
+msgid "manager.setup.keyInfo"
+msgstr "Schlüsselinformation"
+
+msgid "stats.publicationStats"
+msgstr "Artikelstatistik"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} von {$total} Artikeln"
+
+msgid "stats.publications.abstracts"
+msgstr "Abstracts"
+
+msgid "stats.publications.details"
+msgstr "Artikeldetails"

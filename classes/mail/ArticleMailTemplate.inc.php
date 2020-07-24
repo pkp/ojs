@@ -23,7 +23,12 @@ class ArticleMailTemplate extends SubmissionMailTemplate {
 	 * @copydoc SubmissionMailTemplate::assignParams()
 	 */
 	function assignParams($paramArray = array()) {
-		$paramArray['sectionName'] = strip_tags($this->submission->getSectionTitle());
+		$publication = $this->submission->getCurrentPublication();
+		if ($sectionId = $publication->getData('sectionId')) {
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var $sectionDao SectionDAO */
+			$section = $sectionDao->getById($sectionId);
+			if ($section) $paramArray['sectionName'] = strip_tags($section->getLocalizedTitle());
+		}
 		parent::assignParams($paramArray);
 	}
 }

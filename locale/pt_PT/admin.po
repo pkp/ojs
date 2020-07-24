@@ -37,6 +37,17 @@ msgstr ""
 "menu de idiomas não estará disponível e a opção \"configurações de idioma\" "
 "não estará disponível para as revistas."
 
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Deseja realmente remover este idioma? A execução pode afetar revistas "
+"alojadas que podem estar a utilizar o idioma."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Selecione idiomas adicionais para uso no sistema. Os idiomas devem ser "
+"instalados antes que possam ser utilizados pelas revistas alojadas. Veja a "
+"documentação para informações sobre como adicionar novos idiomas no sistema."
+
 msgid "admin.auth.ojs"
 msgstr "Base de Dados de Utilizadores do OJS"
 

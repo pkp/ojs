@@ -26,6 +26,12 @@ msgstr "Cette langue sera la langue par défaut du site et de toute revue héber
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Sélectionner toutes les langues qui doivent être prises en charge sur le site. Les langues sélectionnées seront disponibles pour toutes les revues hébergées sur le site, et vont également apparaître dans un menu de sélection de langue présent sur chaque page (qui peut être désactivé pour les pages spécifiques à une revue). S'il n'y a qu'une seule langue qui est sélectionnée, le menu de sélection de langue n'apparaîtra pas et les paramètres d'extension de langues ne seront pas disponibles aux revues."
 
+msgid "admin.languages.confirmUninstall"
+msgstr "Êtes-vous sûr de vouloir désinstaller cette langue? Ceci affectera toute revue actuellement hébergée utilisant cette langue."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Sélectionner toute langue supplémentaire pour la prise en charge sur ce système. Les langues doivent être installées avant qu'elles ne puissent être utilisées pas les revues hébergées. Lire la documentation d'OJS pour plus d'information sur la prise en charge de nouvelles langues."
+
 msgid "admin.auth.ojs"
 msgstr "Base de données utilisateur d'OJS"
 
@@ -193,4 +199,3 @@ msgstr "Avis de libre accès"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Rappel d'évaluation"
-

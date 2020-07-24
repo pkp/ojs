@@ -50,7 +50,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			$supportedLocales = $journal->getSupportedLocales();
 		} else {
 			$site = Application::get()->getRequest()->getSite();
-			$supportedLocales = $site->getSupportedLocales();;
+			$supportedLocales = $site->getSupportedLocales();
 		}
 		$supportedLocalesCount = count($supportedLocales);
 		$sqlJoinAuthorSettings = $sqlColumnsAuthorSettings = $initialSql = '';
@@ -120,9 +120,9 @@ class AuthorDAO extends PKPAuthorDAO {
 					JOIN issues i ON (ppss.setting_name = ? AND ppss.setting_value = CAST(i.issue_id AS CHAR) AND i.published = 1)
 					LEFT JOIN author_settings ac ON (ac.author_id = aa.author_id AND ac.setting_name = \'country\')
 					' . $sqlJoinAuthorSettings . '
-					WHERE j.enabled = 1 AND
-					' . (isset($journalId) ? 'j.journal_id = ?' : '')
-					. $initialSql .'
+					WHERE j.enabled = 1
+					' . (isset($journalId) ? ' AND j.journal_id = ?' : '')
+					. $initialSql . '
 					GROUP BY names
 				) as t1 ON (t1.author_id = a.author_id)
 				ORDER BY author_family, author_given',
