@@ -64,6 +64,9 @@
  *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
  *}
+{if !$heading}
+	{assign var="heading" value="h3"}
+{/if}
 <article class="obj_article_details">
 
 	{* Notification that this is an old version *}
