@@ -108,6 +108,10 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 		$section = $sectionDao->getById($this->getData('sectionId'), $context->getId());
 		if (!$section) return false;
 
+		if ($context->getData('disableSubmissions') || $section->getIsInactive()) {
+			return false;
+		}
+
 		return true;
 	}
 

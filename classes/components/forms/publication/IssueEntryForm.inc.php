@@ -77,7 +77,7 @@ class IssueEntryForm extends FormComponent {
 		$sectionOptions = [];
 		foreach ($sections as $section) {
 			$sectionOptions[] = [
-				'label' => $section['title'].(($section['group'])?' (Inactive)':''),
+				'label' => (($section['group'])? __('publication.inactiveSecrion', ['section' => $section['title']]) : $section['title']),
 				'value' => (int) $section['id'],
 			];
 		}

@@ -77,6 +77,32 @@ class SectionForm extends PKPSectionForm {
 	}
 
 	/**
+	 * @see Form::validate()
+	 */
+	function validate($callHooks = true) {
+		// Validate if it can be inactive
+		if ($this->getData('isInactive')) {
+			$request = Application::get()->getRequest();
+			$context = $request->getContext();
+			$sectionId = $this->getSectionId();
+
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+			$sectionsIterator = $sectionDao->getByContextId($context->getId());
+			$activeSectionsCount = 0;
+			while ($section = $sectionsIterator->next()) {
+				if (!$section->getIsInactive() && ($sectionId != $section->getId())) {
+					$activeSectionsCount++;
+				}
+			}
+			if ($activeSectionsCount < 1 && $this->getData('isInactive')) {
+				$this->addError('isInactive', __('manager.sections.confirmDeactivateSection.error'));
+			}
+		}
+
+		return parent::validate($callHooks);
+	}
+
+	/**
 	 * @copydoc Form::fetch()
 	 */
 	function fetch($request, $template = null, $display = false) {
