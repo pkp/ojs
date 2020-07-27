@@ -103,20 +103,13 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 
 		$request = Application::get()->getRequest();
 		$context = $request->getContext();
-
-		// Ensure that submissions are enabled and the assigned section is activated
-		$sectionId = $this->getData('sectionId');
-		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-		$section = $sectionDao->getById($sectionId);
-		if ($context->getData('disableSubmissions') || $section->getIsInactive()) {
-			return false;
-		}
-
-		// Validate that the section ID is attached to this journal.
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$section = $sectionDao->getById($this->getData('sectionId'), $context->getId());
+
+		// Validate that the section ID is attached to this journal.
 		if (!$section) return false;
 
+		// Ensure that submissions are enabled and the assigned section is activated
 		if ($context->getData('disableSubmissions') || $section->getIsInactive()) {
 			return false;
 		}
