@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-22 20:24+0000\n"
+"PO-Revision-Date: 2020-07-29 01:55+0000\n"
 "Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/mk/>\n"
@@ -92,7 +92,7 @@ msgid "submission.submit.userGroupDescription"
 msgstr "Одбери под кој капацитет го поднесувате овој труд."
 
 msgid "submission.submit.userGroup"
-msgstr "Поденси во улога како ..."
+msgstr "Поденси во моја улога како ..."
 
 msgid "submission.submit.title"
 msgstr "Поденси труд"
