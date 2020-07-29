@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-07-21 22:47+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/"
+"metadata-mods34/el_GR/>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.metadata.mods34.articleAdapter.description"
+msgstr "Εισάγει και εξάγει μεταδεδομένα από και προς τα άρθρα."
+
+msgid "plugins.metadata.mods34.articleAdapter.displayName"
+msgstr "Μεταδεδομένα MODS 3.4"

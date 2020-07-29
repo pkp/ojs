@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-01-28 23:48+0000\n"
-"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"PO-Revision-Date: 2020-07-22 20:24+0000\n"
+"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "mk/>\n"
 "Language: mk_MK\n"
@@ -73,3 +73,303 @@ msgstr "Авторски фајл"
 
 msgid "author.submit"
 msgstr "Нов поднесок"
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"За да го доставите вашиот ракопис до {$journalTitle} кликнете на Заврши "
+"Поднесување. Главниот контакт на поднесувањето ќе добие потврда преку е-"
+"пошта и ќе може да го гледа напредокот на поднесокот во текот на "
+"уредувачкиот процес со најавување на веб-страницата на списанието. Ви "
+"благодариме за интересот за објавување во {$journalTitle}."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Јавна идентификација  на дополнителна датотека"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Јавна идентификација  на дополнителната датотека веќе постои."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Внесете опис."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Внесете тема."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Внесете го насловот на дополнителниот фајл."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Фајлот не се аплодира."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Поконкретно за друго"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Име на студијата или друг податок за потекло."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Датум кога се собрани податоци или се создадени инструментите."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Користете само со формално објавени материјали."
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Доставете ја датотеката до рецензентите (без метаподатоци), за да на ја "
+"компромитира слепата рецензија."
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Краток опис"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Изворен текст"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Комплети на податоци"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Анализа на податоци"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Транскрипти"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Резултати од истражувањето"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Материјали за истражувањето"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Инструмент за истражување"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Создавач (или сопственик) на фајлот"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Дополнителен фајл"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"За индексирање на овој дополнителен материјал, доставете ги следниве "
+"метаподатоци за преземената дополнителна датотека."
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Метадата на дополнителен фајл"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Едитирај дополнителен фајл"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Додадете дополнителен фајл"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Аплодирај те дополнителни фајлови"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "На преглед по {$round} пат"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr ""
+"Ве молам да размислите за ослободување од плаќање за поднесување на оваа "
+"статија"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr ""
+"Дали сте сигурни дека сакате да ја избришете оваа дополнителна датотека?"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Назад кон дополнителни датотеки"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Нема додадени дополнителни датотеки на овој поднесок."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Дали сте сигурни дека сакате да продолжите без да ја аплодирате "
+"дополнителната датотека што сте ја одбрале?"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Кликнете на Зачувај за да аплодирате датотека (по што може да се постават "
+"дополнителни датотеки)."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Овој опционален чекор овозможува да се додадат Дополнителните датотеки  на "
+"поднесок. Фајловите, кои можат да бидат во кој било формат, може да содржат "
+"(а) инструменти за истражување, (б) збирки на податоци, кои се во согласност "
+"со условите на прегледот на етиката на истражувањето на студијата, (в) "
+"извори што инаку би биле недостапни за читателите, (г ) бројки и табели што "
+"не можат да се интегрираат во самиот текст или други материјали што додаваат "
+"на придонесот на делото."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr ""
+"Дали сте сигурни дека сакате да продолжите без да уплодирате датотека за "
+"поднесување?"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Не е аплодиран фајл на поднесокот."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Заменете го фајлот на поднесокот"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Аплодирајте го фајлот на поднесокот"
+
+msgid "author.submit.submissionFile"
+msgstr "Фајлот на поднесокот"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Го надминавте максималниот лимит на зборови за апстракти во овој дел."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Внесете апстракт за вашата статија."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Внесете го насловот на вашата статија."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Потребно е име, презиме и адреса на е-пошта на секој автор."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Потребен е барем еден автор."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Англиски=en; Француски=fr; Шпански=es. <a href=\"http://www.loc.gov/"
+"standards/iso639-2/php/code_list.php\" target=\"_blank\">Дополнителни "
+"кодови</a>."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Се однесува на гео-просторна локација, хронолошко или историско покритие и / "
+"или карактеристики на примерокот од истражувањето."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Додадете термини за индексирање на поднесокот; одделени термини соточка "
+"запирка (термин1; термин2; термин3)."
+
+msgid "author.submit.deleteAuthor"
+msgstr "Избришете автор"
+
+msgid "author.submit.addAuthor"
+msgstr "Додадете автор"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Главен контакт со уредништвото."
+
+msgid "author.submit.reorder"
+msgstr "Сменете го редоследот на името на авторот"
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Променете го редоследот на авторите како да бидат наведени во публикацијата."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Изјава за приватност на списанието"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Изберете јазик на поднесувањето."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Изберете соодветен оддел за списанија за овој поднесок."
+
+msgid "author.submit.comments"
+msgstr "Додадете текст (опционално)"
+
+msgid "submission.submit.coverNote"
+msgstr "Коментари за уредникот"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Мора да се согласите со условите на Известувањето за авторски права пред да "
+"продолжите."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"Авторите се согласуваат со условите на ова Известување за авторски права, "
+"што ќе се применува на овој поднесок ако и кога ќе биде објавен од ова "
+"списание (коментарите до уредникот може да се додадат подолу)."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Мора да бидете сигурни дека сите елементи во списокот со проверки се "
+"задоволени пред да продолжите."
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Статијата мора да биде поднесена за еден од оддел на списанието."
+
+msgid "author.submit.journalSection"
+msgstr "Оддел на списанието"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Нема поднесоци."
+
+msgid "author.submissions.viewStatus"
+msgstr "Види  статус"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Дали сте сигурни дека сакате да го избришете овој непотполн поднесок?"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Кориекции од лекторот"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Аплодирајте едитирана верзија"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Во уредување: Потребна е лектура"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Во уредување: Потребно е уредување"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "На рецензија: Потребна е ревизија"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Доколку аплицирате за ослободување, мора да наведете причина."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Користтете го полето за коментари да наведете причина за барањето за "
+"ослободување на плаќање."
+
+msgid "author.submit.requestWaiver"
+msgstr "Побаарај ослободување од плаќање"
+
+msgid "author.submit.notAccepting"
+msgstr "Списанието не прима поднесоци во моментов."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Можете да го завршите поднесувањето подоцна со селектирање на Активни "
+"поднесоци од страната за автори."
+
+msgid "author.submit.step5"
+msgstr "Чекор 5: Потврди го поднесувањето"
+
+msgid "author.submit.step4a"
+msgstr "Чекор 4а: Додади дополнителен фајл"
+
+msgid "author.submit.step4"
+msgstr "Чекор 4: Аплодирање на помошни фајлови"
+
+msgid "author.submit.step3"
+msgstr "Чекор 3: Внесување на метадата за поднесокот"
+
+msgid "author.submit.step2"
+msgstr "Чекор 2: Аплодирање на поднесокот"
+
+msgid "author.submit.step1"
+msgstr "Чекор 1: Започнување на поднесувањето"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Притиснете овде</a> да отидете на "
+"првиот чекор од процесот за поднесување од 5 чекори."
+
+msgid "author.competingInterests"
+msgstr ""
+"Конфликт на интереси <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Пoлитика на КИ</a>"

@@ -2,14 +2,63 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
+"PO-Revision-Date: 2020-07-27 19:06+0000\n"
+"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/api/fr/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:23+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Vous n'avez pas la permission de consulter les numéros non publiés."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr ""
+"La publication que vous avez demandée ne fait pas partie de cette soumission."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr ""
+"La publication que vous avez demandée ne fait pas partie de cette revue."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Le mode de paiement que vous avez sélectionné n'est pas pris en charge."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Vous n'avez pas l'autorisation de déplacer ce modèle de courriel vers une "
+"autre revue."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "La revue que vous avez demandée n'a pas été trouvée."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Vous n'avez pas l'autorisation de supprimer cette revue."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Vous n'avez pas l'autorisation de modifier cette revue."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Vous ne pouvez pas modifier cette revue depuis l'API du site."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Vous ne pouvez pas voir ou modifier cette revue à moins d'effectuer une "
+"requête à l'API du journal ou à l'API du site."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Vous n'avez pas l'autorisation de voir cette revue."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Vous ne pouvez afficher que les revues qui ont été activées."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Pour effectuer ou modifier une soumission, vous devez effectuer une requête "
+"au point d'accès de l'API de la revue."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Vous ne pouvez pas changer la revue d'une soumission."

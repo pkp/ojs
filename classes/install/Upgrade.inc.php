@@ -895,7 +895,7 @@ class Upgrade extends Installer {
 
 		// Consider article cover images
 		// Note that the locale column values are already changed above
-		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.context_id FROM submission_settings a, submissions b WHERE a.setting_name = \'fileName\' AND a.locale = ? AND a.setting_value LIKE ? AND a.setting_type = \'string\' AND b.submission_id = a.submission_id', array($newLocale, '%' .$oldLocale .'%'));
+		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.context_id FROM submission_settings a, submissions b WHERE a.setting_name = \'fileName\' AND a.locale = ? AND a.setting_value LIKE ? AND b.submission_id = a.submission_id', array($newLocale, '%' .$oldLocale .'%'));
 		while (!$settingValueResult->EOF) {
 			$row = $settingValueResult->getRowAssoc(false);
 			$oldCoverImage = $row['setting_value'];
@@ -914,7 +914,7 @@ class Upgrade extends Installer {
 		// blockContent (from a custom block plugin), additionalInformation (from objects for review plugin)
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$settingNames = "('blockContent', 'additionalInformation')";
-		$settingValueResult = $pluginSettingsDao->retrieve('SELECT * FROM plugin_settings WHERE setting_name IN ' .$settingNames .' AND setting_value LIKE ? AND setting_type = \'object\'', array('%' .$oldLocaleStringLength .':"' .$oldLocale .'%'));
+		$settingValueResult = $pluginSettingsDao->retrieve('SELECT * FROM plugin_settings WHERE setting_name IN ' .$settingNames .' AND setting_value LIKE ?', array('%' .$oldLocaleStringLength .':"' .$oldLocale .'%'));
 		while (!$settingValueResult->EOF) {
 			$row = $settingValueResult->getRowAssoc(false);
 			$arraySettingValue = $pluginSettingsDao->getSetting($row['context_id'], $row['plugin_name'], $row['setting_name']);
