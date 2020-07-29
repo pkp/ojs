@@ -113,9 +113,6 @@ the OJS team.
 After obtaining the latest OJS code, an additional script must be run to
 upgrade the OJS database.
 
-NOTE: Patches to the included ADODB library may be required for PostgreSQL
-upgrades; see https://forum.pkp.sfu.ca/t/upgrade-failure-postgresql/19215
-
 This script can be executed from the command-line or via the OJS web interface.
 
 #### 1. Command-line
