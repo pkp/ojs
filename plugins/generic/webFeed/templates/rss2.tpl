@@ -41,7 +41,8 @@
 		{/if}
 
 		{if $issue->getDatePublished()}
-			<pubDate>{$issue->getDatePublished()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
+			{capture assign="datePublished"}{$issue->getDatePublished()|strtotime}{/capture}
+			<pubDate>{$smarty.const.DATE_RSS|date:$datePublished}</pubDate>
 		{/if}
 
 		{* <lastBuildDate/> *}
@@ -80,7 +81,8 @@
 
 					<guid isPermaLink="true">{url page="article" op="view" path=$article->getBestId()}</guid>
 					{if $article->getDatePublished()}
-						<pubDate>{$article->getDatePublished()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
+						{capture assign="datePublished"}{$article->getDatePublished()|strtotime}{/capture}
+						<pubDate>{$smarty.const.DATE_RSS|date:$datePublished}</pubDate>
 					{/if}
 				</item>
 			{/foreach}{* articles *}
