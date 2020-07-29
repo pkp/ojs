@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-01-28 09:51+0000\n"
-"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"PO-Revision-Date: 2020-07-29 01:55+0000\n"
+"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/mk/>\n"
 "Language: mk_MK\n"
@@ -11,13 +11,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "submission.proofReadingDescription"
 msgstr ""
-"The layout editor uploads the production-ready files that have been prepared "
-"for publication here. Use <em>Assign Auditor</em> to designate authors and "
-"others to proofread the galleys, with corrected files uploaded for approval "
-"prior to publication."
+"Уредникот за форматирање ги поставува датотеките подготвени за објавување. "
+"Користете го <em> Доделете прегледувач</em> за да назначите автори и други "
+"да ги лекторираат галиите, со корегирани датотеки поставени за одобрување "
+"пред објавувањето."
 
 msgid "submission.galleyFiles"
 msgstr "Фајлови од отисок"
@@ -93,7 +92,167 @@ msgid "submission.submit.userGroupDescription"
 msgstr "Одбери под кој капацитет го поднесувате овој труд."
 
 msgid "submission.submit.userGroup"
-msgstr "Поденси во улога како ..."
+msgstr "Поденси во моја улога како ..."
 
 msgid "submission.submit.title"
 msgstr "Поденси труд"
+
+msgid "publication.selectIssue"
+msgstr "Изберете број за планирање за објавување"
+
+msgid "publication.scheduleInissue"
+msgstr "Назначи за број на списание"
+
+msgid "publication.unscheduledIn"
+msgstr "Ова не е планирано за објавување во некој број."
+
+msgid "publication.scheduledIn"
+msgstr "Планирано за објавување во <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Објавено во <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr ""
+"Објавувањето мора да биде доделено на конкретен  број  на списанието пред да "
+"може да се објави."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Сите барања за објавување се исполнети. Ова ќе биде објавено веднаш , зато "
+"што датумот на објавување е поставен на {$datePublished}. Дали сте сигурни "
+"дека сакате да го објавите ова?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Сите барања за објавување се исполнети. Ова ќе биде објавено веднаш во број  "
+"{$issue}. Дали сте сигурни дека сакате да го објавите ова?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Сите барања за објавување се исполнети. Ова ќе биде објавено кога   "
+"број{$issue} ќе се објави. Дали сте сигурни дека сакате да го закажете ова "
+"за објавување?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Сите барања за објавување се исполнети. Дали сте сигурни дека сакате да го "
+"објавите ова?"
+
+msgid "publication.issue.success"
+msgstr "Деталите за бројот на списанието се ажурирани."
+
+msgid "publication.invalidIssue"
+msgstr "Бројот на списанието не може да се најде."
+
+msgid "publication.invalidSection"
+msgstr "Овој оддел на списанието не може да се најде."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Датумот на објавување ќе се постави автоматски кога ќе се објави бројот. Не "
+"внесувајте датум на објавување, освен ако статијата претходно била објавена "
+"на друго место и треба да ставите претходен датум."
+
+msgid "galley.publicationNotFound"
+msgstr "Публикацијата за овој преглед не може да се најде."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Прегледите на оваа публикација не можат да се уредуваат затоа што веќе се "
+"објавени."
+
+msgid "catalog.category.heading"
+msgstr "Сите елементи"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} елементи"
+
+msgid "submission.sectionOptions"
+msgstr "Опции за одделот"
+
+msgid "section.any"
+msgstr "Било кој оддел"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Овие спецификации се засноваат на Даблинската основна метадата , меѓународен "
+"стандард што се користи за опишување на содржината на списанијата."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Бараниот формат за цитирање не може да се преземе."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Изберете ја улогата на соработникот."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Вашиот апстракт е предолг. Скратете го на според бројот на зборови што е "
+"наведено за овој дел."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Внесете го апстрактот на статијата."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Внесете го насловот на статијата."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Потребно е име, презиме и адреса на е-пошта на секој автор."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Потребен е барем еден автор."
+
+msgid "submission.submit.contributorRole"
+msgstr "Улога на соработникот"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Изјава за приватност"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Мора да прочитате и да потврдите дека сте ги завршиле барањата подолу пред "
+"да продолжите."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Лисѕта на проверка за поднесување"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Изберете јазик на поднесокот."
+
+msgid "submission.incomplete"
+msgstr "Чека одобрување"
+
+msgid "submission.complete"
+msgstr "Одобрено"
+
+msgid "submission.upload.fileContents"
+msgstr "Компонента на статијата"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Метадатата на поднесокот е ажурирана."
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Пратете на рецензија"
+
+msgid "workflow.review.externalReview"
+msgstr "Рецензија"
+
+msgid "submission.confirmSubmit"
+msgstr "Дали сте сигурни дека сакате да поднесете статијата до списнието?"
+
+msgid "submission.pageProofs"
+msgstr "Лектура"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Поставете датотеки поврзани со овој поднесок, вклучувајќи ја статијата, "
+"мултимедија, датабази, цртежи, итн."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Наслов и апстракт"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Ова пробна копија е одобрена за да биде ставена за приказ."
+
+msgid "grid.action.approveProof"
+msgstr "Одобрете ја пробната копија за да биде поставена за приказ."
