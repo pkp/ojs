@@ -25,7 +25,8 @@
 		{if $journal->getPrimaryLocale()}
 			<language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</language>
 		{/if}
-		<pubDate>{$dateUpdated|date_format:"%a, %d %b %Y %T %z"}</pubDate>
+		{capture assign="dateUpdated"}{$dateUpdated|strtotime}{/capture}
+		<pubDate>{$smarty.const.DATE_RSS|date:$dateUpdated}</pubDate>
 		<generator>OJS {$ojsVersion|escape}</generator>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 		<ttl>60</ttl>
@@ -39,7 +40,8 @@
 
 				{* optional elements *}
 				<guid isPermaLink="true">{url page="announcement" op="view" path=$announcement->getId()}</guid>
-				<pubDate>{$announcement->getDatetimePosted()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
+				{capture assign="datePosted"}{$announcement->getDatetimePosted()|strtotime}{/capture}
+				<pubDate>{$smarty.const.DATE_RSS|date:$datePosted}</pubDate>
 			</item>
 		{/foreach}
 	</channel>
