@@ -50,7 +50,7 @@ and other documentation in the docs directory before performing an upgrade.
 ### Obtaining the latest OJS code
 
 The OJS source code is available in two forms: a complete stand-alone 
-package, and from read-only github access.
+package, and from read-only GitHub access.
 
 #### 1. Full Package
 
@@ -76,10 +76,10 @@ downloading the complete package for the latest release of OJS:
 
 #### 2. git
 
-Updating from github is the recommended approach if you have made local
+Updating from GitHub is the recommended approach if you have made local
 modifications to the system.
 
-If your instance of OJS was checked out from github (see [docs/README-GIT.md](README-GIT.md)),
+If your instance of OJS was checked out from GitHub (see [README.md](../README.md)),
 you can update the OJS code using a git client.
 
 To update the OJS code from a git check-out, run the following command from
