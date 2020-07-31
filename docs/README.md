@@ -83,6 +83,7 @@ To install OJS:
 	 * `cache/t_config`
 	 * `cache/t_compile`
 	 * `cache/_db`
+    [A more detailed guide to permissions can be found here[(https://forum.pkp.sfu.ca/t/how-should-file-permissions-be-set/23276/2).
 
 3. Create a directory to store uploaded files (submission files, etc.)
 	 and make this directory writeable. It is recommended that this
