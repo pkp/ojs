@@ -1,2 +1,411 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-08-02 08:13+0000\n"
+"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"ro_RO/>\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.issues.futureIssues"
+msgstr "Numărul viitor"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Fișiere suplimentare"
+
+msgid "user.reviewerPrompt"
+msgstr "Ați fi dispus să evaluați manuscrise trimise către acest jurnal?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Înregistrarea unei alte reviste"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Alegeți cum să comandați articole din această categorie."
+
+msgid "catalog.sortBy"
+msgstr "Comandarea articolelor"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} se ocupă de editarea manuscrisului {$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Depunere manuscript"
+
+msgid "user.showAllJournals"
+msgstr "Arată revistele mele"
+
+msgid "user.profile.profileImage"
+msgstr "Imagine de profil"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Includeți utilizatorii fără roluri în acest jurnal."
+
+msgid "journal.viewAllIssues"
+msgstr "Vezi toate volumele"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Revistă"
+
+msgid "journal.path"
+msgstr "Cale"
+
+msgid "context.contexts"
+msgstr "Reviste"
+
+msgid "journal.currentIssue"
+msgstr "Număr curent"
+
+msgid "submission.search"
+msgstr "Căutare articol"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Corectat"
+
+msgid "submissions.layoutComplete"
+msgstr "Aspect editat"
+
+msgid "submissions.copyeditComplete"
+msgstr "Editare"
+
+msgid "submission.eventLog"
+msgstr "Jurnal de evenimente"
+
+msgid "submissions.editorRuling"
+msgstr "Hotărârea editorului"
+
+msgid "submissions.editorDecision"
+msgstr "Decizia editorului"
+
+msgid "submissions.proof"
+msgstr "Corectură"
+
+msgid "submissions.reviewRound"
+msgstr "Runda de revizie"
+
+msgid "submissions.postAuthor"
+msgstr "Post-Autor"
+
+msgid "submissions.initialProof"
+msgstr "Corectura Inițială"
+
+msgid "submissions.proofread"
+msgstr "Corectat"
+
+msgid "submissions.initial"
+msgstr "Inițial"
+
+msgid "submissions.published"
+msgstr "Publicat"
+
+msgid "submissions.queuedReview"
+msgstr "În revizie"
+
+msgid "submissions.step3"
+msgstr "Pasul 3"
+
+msgid "submissions.step1"
+msgstr "Pasul 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submission.scheduledIn"
+msgstr "Programat pentru publicare în {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Programare"
+
+msgid "submission.proofreading"
+msgstr "Corectură"
+
+msgid "submission.copyedit"
+msgstr "Editare"
+
+msgid "submission.copyediting"
+msgstr "Editare"
+
+msgid "submission.authorVersion"
+msgstr "Versiunea autorului"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Fișier cu versiunea revizuită a autorului"
+
+msgid "submission.editorVersion"
+msgstr "Versiunea editorului"
+
+msgid "submission.postReviewVersion"
+msgstr "Versiunea fișierului post-revizie"
+
+msgid "submission.reviewersVersion"
+msgstr "Versiunea de fișier adnotată de revizor(i)"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Înregistrare Email Editor/Autor"
+
+msgid "submission.notifyEditor"
+msgstr "Notificare editor"
+
+msgid "submission.notifyAuthor"
+msgstr "Notificare autor"
+
+msgid "submission.editorReview"
+msgstr "Revizuirea editorului"
+
+msgid "submission.round"
+msgstr "Rundă&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Decizia Editorului"
+
+msgid "submission.sent"
+msgstr "Trimite"
+
+msgid "submission.changeSection"
+msgstr "Schimbă în"
+
+msgid "submission.submissionEditing"
+msgstr "Editarea Înregistrării"
+
+msgid "article.return"
+msgstr "Reveniți la detaliile articolului"
+
+msgid "article.fontSize.large.altText"
+msgstr "Mare"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Mediu"
+
+msgid "article.fontSize.small.altText"
+msgstr "Mic"
+
+msgid "article.fontSize"
+msgstr "Mărimea Fontului"
+
+msgid "article.comments.enable"
+msgstr "Activare"
+
+msgid "article.comments.disable"
+msgstr "Dezactivare"
+
+msgid "article.comments.sectionDefault"
+msgstr "Mod implicit"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Acces Restricționat"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Acces Liber"
+
+msgid "article.coverPage.altText"
+msgstr "Imagine pentru Copertă"
+
+msgid "article.abstract"
+msgstr "Rezumat"
+
+msgid "article.details"
+msgstr "Detalii"
+
+msgid "article.submissions"
+msgstr "Înregistrare manuscris"
+
+msgid "article.submission"
+msgstr "Înregistrare manuscris"
+
+msgid "article.commentsToEditor"
+msgstr "Comentariile autorilor"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Limba"
+
+msgid "article.type"
+msgstr "Tipul, metoda sau abordarea"
+
+msgid "article.coverage"
+msgstr "Acoperire"
+
+msgid "article.subject"
+msgstr "Cuvinte cheie"
+
+msgid "article.discipline"
+msgstr "Disciplina academică și sub-disciplina"
+
+msgid "article.suppFiles"
+msgstr "Fișier(e) suplimentar(e)"
+
+msgid "article.suppFile"
+msgstr "Fișier Suplimentar"
+
+msgid "article.file"
+msgstr "Fișier"
+
+msgid "article.journalSection"
+msgstr "Secțiunea Jurnalului"
+
+msgid "article.metadata"
+msgstr "Metadate"
+
+msgid "article.indexingInformation"
+msgstr "Informații de indexare"
+
+msgid "article.authors"
+msgstr "Autori"
+
+msgid "article.title"
+msgstr "Titlu"
+
+msgid "article.submissionId"
+msgstr "ID Înregistrare manuscris"
+
+msgid "common.publications"
+msgstr "Articole"
+
+msgid "common.publication"
+msgstr "Articol"
+
+msgid "article.articles"
+msgstr "Articole"
+
+msgid "article.article"
+msgstr "Articol"
+
+msgid "section.policy"
+msgstr "Despre Secțiune"
+
+msgid "section.abbreviation.example"
+msgstr "(De exemplu, Articol=ART)"
+
+msgid "section.abbreviation"
+msgstr "Abreviere"
+
+msgid "section.title"
+msgstr "Titlul secțiunii"
+
+msgid "section.sections"
+msgstr "Secțiuni"
+
+msgid "section.section"
+msgstr "Secțiune"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Editori alocați"
+
+msgid "common.queue.short.completed"
+msgstr "Arhivă"
+
+msgid "common.queue.long.completed"
+msgstr "Arhivă"
+
+msgid "common.queue.short.active"
+msgstr "Activ"
+
+msgid "common.queue.long.active"
+msgstr "Activ"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arhive"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arhivă"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "In Revizie"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Trimiteri la Revizuit"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "In Editare"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Trimiteri la Editare"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Neatribuit"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Neatribuit"
+
+msgid "navigation.skip.issue"
+msgstr "Treci la Volumul curent"
+
+msgid "navigation.skip.about"
+msgstr "Treci la despre revistă"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informații pentru Bibliotecari"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informații pentru Autori"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Ghid pentru Competitori"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Pentru Biblioteci"
+
+msgid "navigation.infoForAuthors"
+msgstr "După Autori"
+
+msgid "navigation.browseByAuthor"
+msgstr "După Autor"
+
+msgid "navigation.browseByIssue"
+msgstr "După Număr (Volum)"
+
+msgid "navigation.otherJournals"
+msgstr "Alte Reviste"
+
+msgid "navigation.current"
+msgstr "Curent"
+
+msgid "navigation.journalHelp"
+msgstr "Ajutor"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Imaginea de pe Pagina de Pornire"
+
+msgid "common.homePageHeader.altText"
+msgstr "Antetul Paginii de Pornire"
+
+msgid "common.payments"
+msgstr "Plăți"
+
+msgid "common.payment"
+msgstr "Plată"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Sigur doriți să marcați această sarcină ca finalizată? Este posibil să nu "
+"mai puteți face modificări după aceea."
+
+msgid "common.software"
+msgstr "Sisteme de Reviste Open Source"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vă rugăm să completați câmpurile obligatorii."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Faceți clic pe pictogramă pentru a completa formularul de recenzie."
+
+msgid "navigation.categories.browse"
+msgstr "Navigare"
+
+msgid "navigation.categories"
+msgstr "Categorii"
+
+msgid "context.select"
+msgstr "Treci la alt jurnal:"
+
+msgid "context.current"
+msgstr "Jurnalul Curent:"
