@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-02 11:30+0000\n"
+"PO-Revision-Date: 2020-08-02 19:48+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -352,10 +352,10 @@ msgid "navigation.competingInterestGuidelines"
 msgstr "Ghid pentru Competitori"
 
 msgid "navigation.infoForLibrarians"
-msgstr "Pentru Biblioteci"
+msgstr "Pentru Bibliotecari"
 
 msgid "navigation.infoForAuthors"
-msgstr "După Autori"
+msgstr "Pentru autori"
 
 msgid "navigation.browseByAuthor"
 msgstr "După Autor"
@@ -405,7 +405,7 @@ msgid "navigation.categories"
 msgstr "Categorii"
 
 msgid "context.select"
-msgstr "Treci la alt jurnal:"
+msgstr "Schimbă jurnalul:"
 
 msgid "context.current"
 msgstr "Jurnalul Curent:"
@@ -668,3 +668,295 @@ msgstr ""
 
 msgid "user.reviewerPrompt.userGroup"
 msgstr "Da, solicitați rolul {$ userGroup}."
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Sarcină editorială activă"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Sarcină editorială completă"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Nu au fost alocate manuscrisuri."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Notificând din nou acest editor, va reporni misiunea. Ești sigur că vrei să "
+"faci asta?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Notificând din nou acest autor, va reporni misiunea. Ești sigur că vrei să "
+"faci asta?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Notificând din nou acest editor de machetă, va reporni sarcina. Ești sigur "
+"că vrei să faci asta?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Notificând din nou acest corector va reporni sarcina. Ești sigur că vrei să "
+"faci asta?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Regrete"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Regrete revizor, anulări & Runde iniţiale"
+
+msgid "sectionEditor.regrets"
+msgstr "Regrete"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Vizualizare regrete, anulări, runde anterioare"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Revizuire, Runda{$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Dicizia editorului, Runda {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Regrete și anulări pentru evaluatori (recenzori)"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Regret"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Rezultat"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Înrolați un utilizator existent ca evaluator"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Creați un nou recenzor"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Misiune editorială activă"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Misiune editorială completă"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Nu există misiuni editoriale active."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Alocarea editării machetei"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Încarcă formatul pentru galerie"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Galeria va fi disponibilă pe un site separat."
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Înlocuiește fișierul"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Încarcă fișier suplimentar"
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"Format de imagine invalid. Formatele acceptate sunt .gif, .jpg, and .png."
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Pași: Alocarea manuscrisului &gt; Revizuirea manuscrisului &gt; Editarea "
+"manuscrisului &gt; Cuprins.<br /><br />\n"
+"Selectați un model pentru tratarea acestor aspecte ale procesului editorial.("
+"Pentru a desemna un editor și un editor de secțiuni, accesați editori în "
+"Gestionare Revistă.)"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Notificări privind drepturile de autor (Creative Commons Copyright)</h3>"
+"\n"
+"<h4>1.Politica propusă pentru jurnalele care oferă acces deschis</h4>\n"
+"Autorii care publică în această revistă sunt de acord cu următorii termeni:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autorii păstrează drepturile de autor și acordă jurnalului dreptul de "
+"prima publicare a articolului în temeiul <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Licenței Creative Commons</a> "
+"care permite altor persoane să împărtășească lucrarea, cu o recunoaștere a "
+"autorului lucrării și a publicării inițiale în acest jurnal.</li>\n"
+"\t<li>Autorii pot să încheie aranjamente contractuale separate și "
+"suplimentare pentru distribuirea neexclusivă a versiunii publicate "
+"articolului din revistă (de exemplu, să îl posteze într-un depozit "
+"instituțional sau să îl publice într-o carte), cu o confirmare a publicării "
+"inițiale în acest jurnal.</li>\n"
+"\t<li>Autorii sunt autorizați și încurajați să își posteze activitatea "
+"online (de exemplu, în depozitele instituționale sau pe site-ul lor web) "
+"înainte și în timpul procesului de trimitere de manuscris, deoarece poate "
+"duce la schimburi productive, precum și citarea anterioară și mai mare a "
+"lucrărilor publicate (See <a target=\"_new\" href=\"http://opcit.eprints.org/"
+"oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Politica propusă pentru jurnalele care oferă acces deschis cu "
+"întârziere</h4>\n"
+"Autorii care publică în această revistă sunt de acord cu următorii termeni:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autorii păstrează drepturile de autor și acordă jurnalului dreptul de "
+"prima publicație, pentru lucrare [SPECIFICĂ PERIOADA DE TIMP] după "
+"publicarea simultană licențiată în baza  <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Licenței Creative Commons</a> "
+"care permite altor persoane să împărtășească lucrarea cu o recunoaștere a "
+"autorului lucrării și a publicării inițiale în acest jurnal.</li>\n"
+"\t <li>Autorii pot să încheie aranjamente contractuale separate și "
+"suplimentare pentru distribuirea neexclusivă a versiunii publicate "
+"articolului (de exemplu, să îl posteze într-un depozit instituțional sau să "
+"îl publice într-o carte), cu o confirmare a publicării inițiale în acest "
+"jurnal.</li>\n"
+"\t <li>Autorii sunt autorizați și încurajați să își posteze activitatea "
+"online (de exemplu, în depozitele instituționale sau pe site-ul lor web) "
+"înainte și în timpul procesului de trimitere de manuscris, deoarece poate "
+"duce la schimburi productive, precum și citarea anterioară și mai mare a "
+"lucrărilor publicate (See <a target=\"_new\" href=\"http://opcit.eprints.org/"
+"oacitation-biblio.html\"> The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Plugin-urile generice sunt utilizate pentru a extinde sistemele Open Journal "
+"într-o varietate de moduri care nu sunt acceptate de celelalte categorii de "
+"pluginuri."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Pluginurile de autorizare permit Open Journal Systems să delege sarcinile de "
+"autentificare a utilizatorului în alte sisteme, cum ar fi serverele LDAP."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Pluginurile pentru Articole din Galley adaugă suport pentru vizualizarea "
+"diferitelor tipuri de documente din galeria de articole"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Pluginurile pentru Articole din Galley"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Tipuri de înregistrare"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Înregistrare instituțională"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Înregistrare instdividuală"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Managementul abonărilor (înregistrărilor)"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOTĂ!</h4>\n"
+"<p>Sistemul nu a putut suprascrie automat fișierul de configurare. Pentru a "
+"aplica modificările de configurare, trebuie să deschideți "
+"<tt>config.inc.php</tt> într-un editor de text adecvat și înlocuiți "
+"conținutul său cu conținutul câmpului de text de mai jos.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Specificarea unei surse de autentificare implicită, alta decât OJS, are "
+"următoarele efecte:</p>\n"
+"<ul>\n"
+"\t<li>Dacă un utilizator încearcă să înregistreze un cont nou pe acest site "
+"cu un nume de utilizator care există pe sursa de autentificare (dar nu în "
+"baza de date OJS), încercarea de înregistrare este permisă numai dacă parola "
+"furnizată este valabilă pentru contul de utilizator.</li>\n"
+"</ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "documente similare"
+
+msgid "search.results.orderDir.desc"
+msgstr "Descendent"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascendent"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevanţă"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularitate (În ultima lună)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularitate (Tot timpul)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Titlu Jurnal"
+
+msgid "search.results.orderBy.issue"
+msgstr "Număr"
+
+msgid "search.results.orderBy.date"
+msgstr "Data publicării"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor"
+
+msgid "search.results.orderBy.article"
+msgstr "Titlu articol"
+
+msgid "search.results.orderBy"
+msgstr "Ordonează rezultatele după"
+
+msgid "comments.authenticated"
+msgstr ""
+"by <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$NumeUtilzator}</a>"
+
+msgid "editor.issues.backIssues"
+msgstr "Numere arhivate"
+
+msgid "comments.commentsOnArticle"
+msgstr "Comentarii pentru acest articol"
+
+msgid "reader.purchasePrice"
+msgstr "({$valuta} {$preț})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Necesită înregistrare sau plată"
+
+msgid "reader.subscriptionAccess"
+msgstr "Necesită înregistrare"
+
+msgid "reader.openAccess"
+msgstr "Acces liber"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Înregistrare necesară pentru accesarea temei. Pentru a verifica "
+"înregistrarea, va trebui să te autentifici."
+
+msgid "reader.subscribersOnly"
+msgstr "Doar pentru abonați"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Machetarea articolului este completă"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Galeria cu articolul machetat a fost actualizată"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "S-a inițiat atribuirea machetei articolului"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Editor de machetare refuzat"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Editorul de machetare este atribuit"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Atribuirea corectorului este completă"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "A fost actualizat fișierul revizuit de corector"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Atribuirea corectorului a fost inițiată"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Corector refuzat"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Corector atribuit"
