@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-02 18:13+0000\n"
+"PO-Revision-Date: 2020-08-02 19:48+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/api/ro_RO/>"
 "\n"
@@ -57,4 +57,4 @@ msgid "api.submissions.403.unpublishedIssues"
 msgstr "Nu aveți permisiunea de a vedea numere de revistă nepublicate."
 
 msgid "api.submissions.403.cantChangeContext"
-msgstr "Nu puteți schimba jurnalul  pentru un manuscris înregistrat."
+msgstr "Nu puteți schimba jurnalul pentru un manuscris înregistrat."
