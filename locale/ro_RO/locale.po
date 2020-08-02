@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-02 08:13+0000\n"
+"PO-Revision-Date: 2020-08-02 11:30+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -409,3 +409,262 @@ msgstr "Treci la alt jurnal:"
 
 msgid "context.current"
 msgstr "Jurnalul Curent:"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Editarea inițială a fost terminată"
+
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Fișierul editat a fost actualizat"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Procesul de editare este complet"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Fișierul revizuit de editor a fost actualizat"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "A fost inițiată editarea"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Editor refuzat manuscrisului"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Editor alocat manuscrisului"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Manuscrisul a fost restaurat din arhivă"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Manuscrisul a fost trimis spre arhivă"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Fișierul editorului a fost actualizat"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Decizia editorului a fost încărcată"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor refuzat pentru manuscris"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editor alocat manuscrisului"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Fișierul revizuit de autor a fost actualizat"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Revizia articolului este încărcată"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Articol publicat"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Manuscrisul a fost alocat unui volum"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Manuscrisul înregistrat a fost trimis spre următoarea etapă"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Manuscris depus"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Eveniment de depunere"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Notă:</strong> Abonamentele instituționale achiziționate online "
+"necesită aprobarea domeniilor și a intervalelor IP înainte de activarea "
+"abonamentului."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Înregistrările individuale necesită autentificare pentru a avea acces la "
+"conținutul încărcat."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Abonamentele instituționale nu necesită autentificare. Domeniul de "
+"utilizator și/sau adresa IP sunt utilizate pentru a permite accesul la "
+"conținut."
+
+msgid "subscriptions.status.other"
+msgstr "Altele, a se vedea Notele"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Nu ai nici o înregistrare activă."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Plată online în așteptare"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Plată în așteptare"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Necesită aprobare"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Necesită informații"
+
+msgid "subscriptions.status.active"
+msgstr "Activ"
+
+msgid "subscriptions.status"
+msgstr "Statut"
+
+msgid "subscriptions.inactive"
+msgstr "Inactiv"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Tipărit și Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Tipărit"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format"
+msgstr "Format"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "în termen"
+
+msgid "subscriptionTypes.months"
+msgstr "lunile"
+
+msgid "subscriptionTypes.month"
+msgstr "luna"
+
+msgid "subscriptionTypes.years"
+msgstr "ani"
+
+msgid "subscriptionTypes.year"
+msgstr "an"
+
+msgid "subscriptionTypes.currency"
+msgstr "Currency"
+
+msgid "issue.return"
+msgstr "Revin-o la detaliile numărului"
+
+msgid "issue.viewIssue"
+msgstr "Vizualizare număr"
+
+msgid "issue.nonpdf.title"
+msgstr "Descărcare număr"
+
+msgid "issue.fullIssue"
+msgstr "Număr complet"
+
+msgid "issue.coverPage.altText"
+msgstr "Copertă"
+
+msgid "issue.abstract"
+msgstr "Rezumat"
+
+msgid "issue.toc"
+msgstr "Cuprins"
+
+msgid "issue.noIssues"
+msgstr "Fără Numere"
+
+msgid "issue.year"
+msgstr "An"
+
+msgid "issue.no"
+msgstr "Nr."
+
+msgid "issue.number"
+msgstr "Număr"
+
+msgid "issue.volume"
+msgstr "Volum"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Vizualizare {$identification}"
+
+msgid "issue.title"
+msgstr "Titlu"
+
+msgid "issue.issues"
+msgstr "Numere"
+
+msgid "issue.issue"
+msgstr "Număr"
+
+msgid "user.role.journalAssistants"
+msgstr "Asistenții jurnalului"
+
+msgid "user.role.journalAssistant"
+msgstr "Asistentul jurnalului"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Coordonatori înregistrări manuscrise"
+
+msgid "user.role.subEditors"
+msgstr "Editori de secțiune"
+
+msgid "user.role.managers"
+msgstr "Coordonatori jurnal"
+
+msgid "user.role.subscriptionManager"
+msgstr "Coordonator înregistrări manuscrise"
+
+msgid "user.role.subEditor"
+msgstr "Editor de secțiune"
+
+msgid "user.role.manager"
+msgstr "Manager jurnal"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Înregistrează-te ca revizor: Înregistrarea ca revizoe este dezactivată în "
+"prezent."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Înregistrează-te ca revizor"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr ""
+"Încarcă un manuscris: Înregistrarea autorului este dezactivată în prezent."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Încarcă o propunere"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Contul dumneavoastră nu are nici un rol curent în acest jurnal. Vă rugăm să "
+"alegeți dintre acțiunile de mai jos:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"În prezent, contul dvs. nu este asociat nici unui jurnal. Vă rugăm să "
+"alegeți un jurnal:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Gestionează înregistrările mele"
+
+msgid "user.myJournals"
+msgstr "Revistele mele"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Dacă ați solicitat să fiți recenzor, vă rugăm să introduceți subiectele de "
+"interes."
+
+msgid "user.register.otherContextRoles"
+msgstr "Solicitați următoarele roluri."
+
+msgid "user.register.contextsPrompt"
+msgstr "La ce reviste de pe acest site doriți să vă înregistrați?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Da, aș dori să fiu contactat pentru solicitări de analiză a manuscriselor "
+"trimise la acest jurnal."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Da, solicitați rolul {$ userGroup}."
