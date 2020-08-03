@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-02 19:48+0000\n"
+"PO-Revision-Date: 2020-08-03 02:47+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -829,7 +829,7 @@ msgstr ""
 msgid "plugins.categories.viewableFiles.description"
 msgstr ""
 "Pluginurile pentru Articole din Galley adaugă suport pentru vizualizarea "
-"diferitelor tipuri de documente din galeria de articole"
+"diferitelor tipuri de documente din galeria de articole."
 
 msgid "plugins.categories.viewableFiles"
 msgstr "Pluginurile pentru Articole din Galley"
@@ -960,3 +960,336 @@ msgstr "Corector refuzat"
 
 msgid "submission.event.proofread.proofreaderAssigned"
 msgstr "Corector atribuit"
+
+msgid "notification.type.galleyModified"
+msgstr "Conținutul a fost modificat pentru \"{$title}.\""
+
+msgid "notification.type.issuePublished"
+msgstr "Un număr a fost publicat."
+
+msgid "notification.type.newAnnouncement"
+msgstr "A fost creat un anunț de revizuire."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "A fost încărcată o evaluare pentru \"{$title}.\""
+
+msgid "notification.type.reviewing"
+msgstr "Revizuirea evenimentelor"
+
+msgid "notification.type.site"
+msgstr "Sit Evenimente"
+
+msgid "notification.type.submissionComment"
+msgstr "Un editor a făcut un comentariu la \"{$title}.\""
+
+msgid "notification.type.submissions"
+msgstr "Înregistrare evenimente"
+
+msgid "notification.type.userComment"
+msgstr "Un cititor a făcut un comentariu la \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "Anunțuri publice"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Metadatele de publicare au fost salvate."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr ""
+"Un nou articol a fost înregistrat. Acestuia trebuie să i se atribuie un e "
+"editor."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Alocați unui utilizator să creeze conținut cu ajutorul linkului Alocare din "
+"lista Participanți."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Încercați să accesați un articol care nu face parte din secțiunea dvs."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Așteaptă activarea conținutului."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Acces refuzat! Nu ați fost repartizat în calitate de editor de conținut la "
+"acest articol."
+
+msgid "user.authorization.noContext"
+msgstr "Niciun jurnal în context!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Solicitare număr nevalid!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Depunerea nevalidă a editorului de conținut sau nu a fost solicitată nicio "
+"depunere a editorului!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Lista de valute a fost încărcată \"{$filename}\" din XML"
+
+msgid "grid.action.createContext"
+msgstr "Crează un nou jurnal"
+
+msgid "editor.navigation.issues"
+msgstr "Numere"
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Această depunere de manuscris este în așteptarea aprobării înainte de a "
+"apărea în număr."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Aprobare în așteptare."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Înregistrează-te cu alte reviste"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Ascunde alte jurnale"
+
+msgid "article.view.interstitial"
+msgstr "Vă rugăm să alegeți un articol pe care să îl descărcați."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Aprobat"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Aprobare în așteptare"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Conținut aprobat"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Aprobați acest conținut pentru publicare.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Eliminați aprobarea pentru acest conținut.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexarea \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Această implementare de căutare nu permite re-indexarea jurnalului."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"Calea de jurnal dată \"{$journalPath}\"nu a putut fi rezolvată pentru un "
+"jurnal."
+
+msgid "notification.type.editing"
+msgstr "Editare evenimente"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Articol revizuit"
+
+msgid "installer.upgradeApplication"
+msgstr "Actualizare OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Actualizare OJS"
+
+msgid "installer.appInstallation"
+msgstr "Instalare OJS"
+
+msgid "payment.type.donation"
+msgstr "Donații"
+
+msgid "payment.type.publication.required"
+msgstr "Taxa de publicare este pregătită pentru plată."
+
+msgid "payment.type.publication"
+msgstr "Taxă de publicare"
+
+msgid "payment.paymentReceived"
+msgstr "Înregistrare plată"
+
+msgid "donations.thankYou"
+msgstr "Mulțumesc"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Ghidul pentru revizori"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Pași pentru revizie"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Programare revizie"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Manuscris depus pentru a fi revizuit"
+
+msgid "reviewer.article.schedule"
+msgstr "Programare"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Vezi comentariile"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Refuzare depunere manuscris"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Redepunere în altă parte"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Redepunere pentru revizie"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Revizii necesare"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Înregistrare acceptată"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Revizie finalizată"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Revizie încărcată"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Răspunsul tău"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Solicitarea editorului"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Dacă doriți să adnotați fișierul, pentru editor, salvați pe hard disk și "
+"folosiți Browse / Încărcare.)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Versiune încărcată de revizor"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Încărcare fișiere"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Comentarii"
+
+msgid "reviewer.article.submitReview"
+msgstr "Încărcare revizie de către editor"
+
+msgid "reviewer.article.recommendation"
+msgstr "Recomandare"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Trimite reamintire"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor pentru a Intra"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Introduceți sau lipiți aici comentariile de revizie"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Editor înregistrare manuscrise"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Trimiterea manuscrisului va fi disponibilă, doar atunci când recenzorul este "
+"de acord să efectueze revizuirea"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Imposibil de revizuit"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Voi face recenzia"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Notifică editorul"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Fișier ce trebuie revizuit"
+
+msgid "reviewer.averageQuality"
+msgstr "Evaluare"
+
+msgid "reviewer.completedReviews"
+msgstr "Efectuat"
+
+msgid "reviewer.pendingReviews"
+msgstr "Articolul așteaptă să fie revizuit"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Adresa URL a conținutului găzduit de la distanță"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Elementele evidențiate indică o acțiune necesară de către un editor, "
+"etichetat după cum urmează:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">O acțiune este necesară în faza de "
+"editare</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">O acțiune este necesară în etapa "
+"de editare a machetei</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">O acțiune este necesară în faza de "
+"corectare</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Elementele evidențiate indică o acțiune necesar a fi efectuată de "
+"către un editor, după cum urmează:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Un recenzor a fost "
+"atribuit, dar nu a fost notificat prin e-mail</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Toți recenzorii au revenit cu "
+"comentariile lor, dar nu este înregistrată nicio decizie</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Autorul a încărcat un "
+"manuscris revizuit</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Recenzorul a "
+"întârziat să confirme invitația de recenzie</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Recenzorul a "
+"întârziat să completeze evaluarea</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Due\" se completează atunci când recenzorul acceptă cererea de "
+"revizuire; afișează numărul de săptămâni pentru a revizui data scadentă sau "
+"(-) săptămâni in care a fost restante.</li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Ne pare rău, nu aveți drepturi administrative asupra acestui utilizator. "
+"Acest lucru se poate întâmpla pentru că:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Utilizatorul este administrator de site</li>\n"
+"\t\t\t<li>Utilizatorul este activ în jurnalele pe care nu le gestionați</li>"
+"\n"
+"\t\t</ul>\n"
+"\tAceastă sarcină trebuie efectuată de un administrator de site.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Dezactivați acest utilizator? Acest lucru va împiedica utilizatorul să se "
+"autentifice în sistem.\n"
+"\n"
+"Opțional, puteți oferi utilizatorului un motiv pentru dezactivarea contului "
+"său."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Pentru a permite cititorilor să localizeze versiunile online ale lucrării "
+"citate de un autor, sunt disponibile următoarele opțiuni.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Add a Reading Tool</strong><p>Managerul jurnalului poate "
+"adăuga \"Caută referințe\" la Instrumentele de citire care însoțesc "
+"articolele publicate, care permite cititorilor să lipească titlul unei "
+"referințe și apoi să caute în baze de date academice preselectate pentru "
+"lucrarea citată.</p></li>\n"
+"\t<li><strong>Activați linkul în referințe</strong><p>Editorul de machetă "
+"poate adăuga un link la referințe care pot fi găsite online utilizând "
+"instrucțiunile următoare(which can be edited).</p></li>\n"
+"</ol>"
