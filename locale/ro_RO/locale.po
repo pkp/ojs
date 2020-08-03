@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-03 03:38+0000\n"
+"PO-Revision-Date: 2020-08-03 14:57+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -1506,3 +1506,256 @@ msgstr "Caută articole pentru"
 
 msgid "search.browseAuthorIndex"
 msgstr "Index autori"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Da, aș dori să fiu notificat despre noile publicații și anunțuri pentru "
+"toate revistele la care m-am înregistrat."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Identificați interesele revizorilor (domenii de expertiză și metode de "
+"cercetare):"
+
+msgid "user.register.reviewerDescription"
+msgstr "Dornic de a realiza o revizuire a manuscriselor depuse pe site."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Dornic să efectueze o revizuire pentru manuscrisele depuse la jurnal."
+
+msgid "user.register.authorDescription"
+msgstr "Capabil de a trimite articole la jurnal."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Notificare prin e-mail atunci când un număr al jurnalului este acces deschis."
+
+msgid "user.register.readerDescription"
+msgstr "Notificare prin e-mail la publicarea unui număr al jurnalului."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Parola introdusă nu este suficient de lungă."
+
+msgid "user.register.registrationDisabled"
+msgstr "Acest jurnal nu acceptă în prezent înregistrări ale utilizatorilor."
+
+msgid "user.register.noJournals"
+msgstr "Nu există reviste cu care vă puteți înregistra pe acest site."
+
+msgid "user.register.selectContext"
+msgstr "Selectați un jurnal pentru a vă înregistra cu:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Salvează și trimite email autorului"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Salvează și trimite email autorului"
+
+msgid "submission.comments.forEditor"
+msgstr "Pentru editor"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Pentru autor și editor"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"După trimitere, prezentați o copie BCC editabilă care să fie trimisă "
+"recenzorilor."
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Pentru editor"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Pentru autor și editor"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Aceste comentarii pot fi partajate cu autorul.<br />\n"
+"(După salvare, pot fi adăugate alte comentarii.)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Comentariile editorului de conținut"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Corespondență Editor/Autor"
+
+msgid "submission.logType.proofread"
+msgstr "Corectură"
+
+msgid "submission.logType.layout"
+msgstr "Aspect"
+
+msgid "submission.logType.copyedit"
+msgstr "Editare de conținut"
+
+msgid "submission.logType.review"
+msgstr "Revizie"
+
+msgid "submission.logType.editor"
+msgstr "Editor"
+
+msgid "submission.logType.author"
+msgstr "Autor"
+
+msgid "submission.logType.article"
+msgstr "Articol"
+
+msgid "submission.proofread.instructions"
+msgstr "Instrucțiuni de corectare"
+
+msgid "submission.proofread.corrections"
+msgstr "Corecturile corectorului"
+
+msgid "submission.proofreadingComments"
+msgstr "Comentariile corectorului"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Link de referință"
+
+msgid "submission.layout.instructions"
+msgstr "Instrucțiuni privind aspectul"
+
+msgid "submission.layout.layoutComments"
+msgstr "Comentarii privind aspectul"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Înlocuiește editorul de machetare"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Atribuie editor de machetare"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Identificarea conținutului public există deja."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Nimeni (Încărcați versiunea finală copiată ca versiune de machetare înainte "
+"de a trimite solicitarea)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instrucțiunile de editare"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Comentariile editorului de conținut"
+
+msgid "submission.copyedit.useFile"
+msgstr "Utilizați fișierul"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Atribuie editor conținut"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Versiunea C/E"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Editare finală"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Editare făcută de autor"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Editor conținut"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Editare inițială"
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Cererea nu poate fi trimisă pe e-mail până când fișierul nu este selectat "
+"pentru copiere în Decizia editorului, pagina de revizuire."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Cererea nu poate fi pe e-mail trimisă până când fișierul nu este încărcat "
+"pentru copiere."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Cererea nu poate fi trimisă pe e-mail până când nu există o versiune de "
+"revizuire."
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Pentru a încărca un manuscris în acest jurnal, parcurgeți pașii "
+"următori.</p>\n"
+"<ol>\n"
+"<li>În această pagină, faceți clic pe Browse (sau Alegeți fișier) care "
+"deschide o fereastră de alegere a fișierului pentru localizarea fișierului "
+"pe hard disk-ul computerului.</li>\n"
+"<li>Localizați fișierul pe care doriți să îl trimiteți și evidențiați-l.</li>"
+"\n"
+"<li>Faceți clic pe Deschide în fereastra Alegeți fișier, care plasează "
+"numele fișierului pe această pagină.</li>\n"
+"<li>Faceți clic pe Încărcare pe această pagină, astfel fiind permisă "
+"încărcarea fișierului de pe computer pe site-ul web al jurnalului și "
+"redenumirea sa conform convențiilor jurnalului.</li>\n"
+"<li>După încărcarea manuscrisului, faceți clic pe Salvați și continuați în "
+"partea de jos a acestei pagini.</li>\n"
+"</ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Fără alocări ce corectură"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Fișier editor conținut"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Fișier editor conținut"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Fișier la C/E"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"După ce ați înregistrat o decizie, nu veți mai putea face modificări la "
+"această revizuire. Sunteți sigur că vreți să continuați?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"A fost selectată o nouă recomandare. Trebuie să alegeți o recomandare pe "
+"care să o trimiteți."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Setați sau ajustați recomandarea recenzorului."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Selectați o recomandare și trimiteți recenzia pentru a finaliza procesul. "
+"Trebuie să introduceți o recenzie sau să încărcați un fișier înainte de a "
+"selecta o recomandare."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"În plus, puteți încărca fișiere pe care editorul și / sau autorul le poate "
+"consulta."
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Faceți clic pe pictogramă pentru a introduce (sau a lipi) recenzia dvs. "
+"pentru manuscris."
+
+msgid "reviewer.competingInterests"
+msgstr "Interesele concurente"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Declarați dacă aveți sau nu interese concurente cu privire la această "
+"cercetare (see <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Faceți clic pe numele fișierelor pentru a descărca și revizui fișierele "
+"asociate cu această depunere."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Dacă acceptați să faceți revizuirea, consultați ghidul de revizuire de mai "
+"jos."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "dacă veți face revizia."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Notificați editorul responsabil de depunerea manuscriselor"
