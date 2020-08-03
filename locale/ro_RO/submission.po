@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-02 19:39+0000\n"
+"PO-Revision-Date: 2020-08-03 20:06+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ro_RO/>\n"
@@ -130,7 +130,7 @@ msgstr ""
 "înainte de a continua."
 
 msgid "submission.submit.submissionChecklist"
-msgstr "Lista de verificare a înregistrării"
+msgstr "Lista de verificare pentru depunerea manuscrisului"
 
 msgid "submission.submit.form.localeRequired"
 msgstr "Selectați limba de înregistrare."
