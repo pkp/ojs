@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-03 03:27+0000\n"
+"PO-Revision-Date: 2020-08-03 03:38+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -343,7 +343,7 @@ msgid "navigation.skip.about"
 msgstr "Treci la despre revistă"
 
 msgid "navigation.infoForLibrarians.long"
-msgstr "Informații pentru Bibliotecari"
+msgstr "Informații pentru bibliotecari"
 
 msgid "navigation.infoForAuthors.long"
 msgstr "Informații pentru Autori"
@@ -352,7 +352,7 @@ msgid "navigation.competingInterestGuidelines"
 msgstr "Ghid pentru Competitori"
 
 msgid "navigation.infoForLibrarians"
-msgstr "Pentru Bibliotecari"
+msgstr "Pentru bibliotecari"
 
 msgid "navigation.infoForAuthors"
 msgstr "Pentru autori"
@@ -1471,3 +1471,38 @@ msgstr "Arhivă - Page {$pageNumber}"
 
 msgid "archive.archives"
 msgstr "Arhivă"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Trebuie să consimțiți declarația de confidențialitate a acestui site."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Trebuie să consimțiți declarația de confidențialitate pentru orice jurnal "
+"pentru care vă înregistrați."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Da, sunt de acord ca datele mele să fie colectate și stocate în conformitate "
+"cu precizările din <a href=\"{$privacyUrl}\" target=\"_blank\">declarația de "
+"confidențialitate</a>."
+
+msgid "user.register.privacyStatement"
+msgstr "Declarație de confidențialitate"
+
+msgid "search.authorDetails"
+msgstr "Detalii autor"
+
+msgid "search.authorIndex"
+msgstr "Index autori"
+
+msgid "search.allJournals"
+msgstr "Toate jurnalele"
+
+msgid "search.withinJournal"
+msgstr "În"
+
+msgid "search.searchFor"
+msgstr "Caută articole pentru"
+
+msgid "search.browseAuthorIndex"
+msgstr "Index autori"
