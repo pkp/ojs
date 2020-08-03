@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-03 02:47+0000\n"
+"PO-Revision-Date: 2020-08-03 03:27+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -46,7 +46,7 @@ msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Includeți utilizatorii fără roluri în acest jurnal."
 
 msgid "journal.viewAllIssues"
-msgstr "Vezi toate volumele"
+msgstr "Vezi toate numerele"
 
 msgid "journal.issn"
 msgstr "ISSN"
@@ -1293,3 +1293,181 @@ msgstr ""
 "poate adăuga un link la referințe care pot fi găsite online utilizând "
 "instrucțiunile următoare(which can be edited).</p></li>\n"
 "</ol>"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Ghidul de revizuire va oferi recenzorilor criterii pentru a evalua "
+"caracterul adecvat al unui manuscris trimis pentru publicarea în jurnal și "
+"poate include orice instrucțiuni speciale pentru pregătirea unei recenzii "
+"eficiente și utile. În realizarea revizuirii, recenzorilor li se oferă două "
+"căsuțe de text deschise, prima „pentru autor și editor” și a doua „pentru "
+"editor”. În mod alternativ, Managerul de jurnal poate crea un formular de "
+"revizuire de la egal la Formulare de revizuire. În toate cazurile, editorii "
+"vor avea opțiunea de a include recenziile în corespondență cu autorul."
+
+msgid "help.goToEditPage"
+msgstr "Editare {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Întoarce rezultatele căutării"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Ajutor OJS"
+
+msgid "help.ojsHelp"
+msgstr "Ajutor OJS"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Acest site folosește Open Journal Systems {$ojsVersion}, care este un "
+"instrument de gestionare a jurnalelor academice, acest software este "
+"dezvoltat, susținut și distribuit liber de către <a href=\"http://pkp.sfu.ca/"
+"\">Public Knowledge Project</a> sub licența GNU General Public License."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Acest jurnal folosește Open Journal Systems {$ojsVersion}, care este un "
+"instrument de gestionare a jurnalelor academice, acest software este "
+"dezvoltat, susținut și distribuit liber de către <a href=\"http://pkp.sfu.ca/"
+"\">Public Knowledge Project</a> sub licența GNU General Public License."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Procesul editorial și de publicare OJS"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Informații suplimentare despre sistemul de publicare și platforma de lucru "
+"OJS/PKP."
+
+msgid "about.memberships"
+msgstr "Afilieri"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Tipuri de înregistrare (abonare)"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Cost"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Durată"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Format"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nume"
+
+msgid "about.subscriptionsContact"
+msgstr "Date de contact pentru înregistrare (abonare)"
+
+msgid "about.subscriptions.institutional"
+msgstr "Înregistrare instituțională"
+
+msgid "about.subscriptions.individual"
+msgstr "Înregistrare individuală"
+
+msgid "about.subscriptions"
+msgstr "Depunere manuscrise"
+
+msgid "about.archiving"
+msgstr "Arhivare"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "lună (luni) după publicarea unui număr."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Conținutul acestui jurnal va fi disponibil în format liber"
+
+msgid "about.delayedOpenAccess"
+msgstr "Acces liber întârziat"
+
+msgid "about.openAccessPolicy"
+msgstr "Politica de acces liber"
+
+msgid "about.publicationFrequency"
+msgstr "Frecvența publicării"
+
+msgid "about.peerReviewProcess"
+msgstr "Procesul de revizuire"
+
+msgid "about.authorFeesMessage"
+msgstr "Acest jurnal percepe următoarele taxe de autor."
+
+msgid "about.authorFees"
+msgstr "Taxe pentru autor"
+
+msgid "about.privacyStatement"
+msgstr "Declarație de confidențialitate"
+
+msgid "about.copyrightNotice"
+msgstr "Notificare privind drepturile de autor"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Ca parte a procesului de depunere de manuscrise, autorii sunt obligați să "
+"verifice respectarea regulilor de submitere, ținând cont de toate elementele "
+"următoare, în caz contrar trimiterile putând fi returnate autorilor care nu "
+"respectă aceste reguli."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Lista de verificare a pregătirii depunerii manuscrisului"
+
+msgid "about.authorGuidelines"
+msgstr "Ghid pentru autori"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Vizualizare manuscrise aflate în așteptare"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Depune un nou manuscris"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Depune manuscrisul în secțiunea <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} sau {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} sau {$register} pentru a depune un manuscris."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Înregistrare"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Autentificare"
+
+msgid "about.submissions"
+msgstr "Depuneri manuscrise"
+
+msgid "about.sectionPolicies"
+msgstr "Secțiunea Politici"
+
+msgid "about.focusAndScope"
+msgstr "Scop"
+
+msgid "about.editorialPolicies"
+msgstr "Politici editoriale"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografie"
+
+msgid "about.editorialTeam"
+msgstr "Colectiv editorial"
+
+msgid "about.history"
+msgstr "Istoricul revistei"
+
+msgid "about.aboutContext"
+msgstr "Despre revistă"
+
+msgid "about.contact"
+msgstr "Date de contact"
+
+msgid "about.statistics"
+msgstr "Statistici"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arhivă - Page {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Arhivă"
