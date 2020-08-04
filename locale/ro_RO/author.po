@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-04 09:04+0000\n"
+"PO-Revision-Date: 2020-08-04 09:15+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "ro_RO/>\n"
@@ -301,3 +301,79 @@ msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "Este necesar să acceptați termenii din Nota privind copyright-ul înainte de "
 "a continua."
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Accesul pentru înregistrarea unui manuscris la acest jurnal poate fi făcut "
+"prin intermediul unui cont de autor. Acest lucru permite redactorilor noștri "
+"să vă urmărească manuscrisele înregistrate și să vă contacteze atunci când "
+"se schimbă starea manuscrisului dvs. sau să vă solicite informații "
+"suplimentare."
+
+msgid "author.article.authorRevisedFile"
+msgstr "Fișierul autorului"
+
+msgid "author.article.copyeditedFile"
+msgstr "Fișier editat"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Încărcare versiunea autorului"
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Înregistrare completă. Mulțumim pentru interesul dumneavoastră de a publica "
+"în {$journalTitle}."
+
+msgid "author.submit.finishSubmission"
+msgstr "Termină înregistrarea"
+
+msgid "author.submit.filesSummary"
+msgstr "Rezumatul fișierului"
+
+msgid "author.submit.noFiles"
+msgstr "Nu au fost atașate fișiere la această înregistrare."
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"Pentru a înregistra manuscrisul la {$journalTitle} click Finalizare "
+"înregistrare. Autorul corespondent al manuscrisului înregistrat va primi o "
+"confirmare prin e-mail și va putea vizualiza progresul manuscrisului prin "
+"procesul editorial, conectându-se pe site-ul web al jurnalului. Vă mulțumim "
+"pentru interesul dvs. de a publica în {$journalTitle}."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Identificator de fișiere suplimentare publice"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Există deja identificarea pentru fișier suplimentar public."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Vă rugăm să introduceți o descriere."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Vă rugăm să introduceți un subiect."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Vă rugăm să introduceți titlul acestui fișier suplimentar."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Nici un fișier încărcat."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Alte precizări"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Denumirea studiului sau alt punct de origine."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr ""
+"Data calendaristică la care datele au fost colectate sau create de un "
+"instrument."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Folosiți numai cu materiale publicate în mod oficial."
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Prezentați fișierul pentru recenzori (fără metadate), deoarece nu va "
+"compromite revizuirea orb."
