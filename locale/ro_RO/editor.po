@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-04 10:49+0000\n"
+"PO-Revision-Date: 2020-08-04 10:53+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "ro_RO/>\n"
@@ -236,7 +236,7 @@ msgid "editor.issues.saveChanges"
 msgstr "Salvați schimbările în cuprins?"
 
 msgid "editor.issues.issueData"
-msgstr "Data numărului"
+msgstr "Datele numărului"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
