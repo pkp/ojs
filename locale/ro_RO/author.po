@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-03 15:15+0000\n"
+"PO-Revision-Date: 2020-08-04 09:04+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "ro_RO/>\n"
@@ -14,10 +14,10 @@ msgstr ""
 
 msgid "author.submit.copyrightNoticeAgree"
 msgstr ""
-"Autorii sunt de acord cu termenii acestui acord privind drepturile de autor, "
-"care se va aplica la această depunere de manuscris, dacă și când este "
-"publicată de această revistă (comentariile la editor pot fi adăugate mai "
-"jos)."
+"Autorii sunt de acord cu termenii Notificării privind drepturile de autor, "
+"care se vor aplica pentru această înregistrare de manuscris, dacă și când "
+"este publicată de această revistă (comentariile pentru editor pot fi "
+"adăugate mai jos)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -25,7 +25,7 @@ msgstr ""
 "de verificare a depunerilor sunt satisfăcute."
 
 msgid "author.submit.journalSectionDescription"
-msgstr "Articolele trebuie trimise la una dintre secțiunile jurnalului."
+msgstr "Articolele trebuie înregistrate la una dintre secțiunile jurnalului."
 
 msgid "author.submit.journalSection"
 msgstr "Secțiunea jurnalului"
@@ -143,3 +143,161 @@ msgstr "Depuneri active"
 
 msgid "author.submit"
 msgstr "Depunere nouă de manuscris"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Scurtă descriere"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Text sursă"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Set de date"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Analize de date"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transcrieri"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Rezultatele cercetării"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Materiale folosite pentru cercetare"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Instrument de cercetare"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Creatorul (sau proprietarul) fișierului"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Fișier suplimentar"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Pentru a indexa acest material suplimentar, furnizați următoarele metadate "
+"pentru fișierul suplimentar încărcat."
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metadate pentru fișiere suplimentare"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Editați un fișier suplimentar"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Adăugați un fișier suplimentar"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Încărcați fișierul suplimentar"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Sigur doriți să ștergeți acest fișier suplimentar?"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Înapoi la fișiere suplimentare"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Nu au fost adăugate fișiere suplimentare la această înregistrare."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Sigur doriți să continuați fără a încărca fișierul suplimentar ales?"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Faceți clic pe Salvați pentru a încărca fișierul (după care pot fi încărcate "
+"fișiere suplimentare)."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Acest pas opțional permite adăugarea fișierelor suplimentare la o "
+"înregistrare. Fișierele, care pot fi în orice format, ar putea include (a) "
+"instrumente de cercetare, (b) seturi de date, care respectă termenii "
+"reviziei eticii de cercetare a studiului, (c) surse care altfel nu ar fi "
+"disponibile pentru cititori, (d) ) figuri și tabele care nu pot fi integrate "
+"în textul în sine, sau alte materiale care adaugă contribuției lucrării."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Sigur doriți să continuați fără a încărca un fișier de înregistrare?"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Nu a fost încărcată nici o fișă de înregistrare."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Înlocuire fișă de înregistrare"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Încărcare fișă înregistrare"
+
+msgid "author.submit.submissionFile"
+msgstr "Fișă de înregistrare"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Ați depășit limita maximă de cuvinte pentru rezumat."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Vă rugăm să introduceți rezumatul manuscrisului dvs."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Vă rugăm să introduceți titlul manuscrisului dvs."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr ""
+"Numele, prenumele și adresa de e-mail a fiecărui autor sunt obligatorii."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Cel puțin un autor este necesar."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Engleză=en; Franceză=fr; Spaniolă=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Coduri suplimentare</a>."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Se referă la locația geo-spațială, acoperirea cronologică sau istorică și/"
+"sau caracteristicile eșantionului de studiu."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Precizați condițiile pentru indexarea înregistrării; Condițiile separate cu "
+"punct și virgulă (condiția1; condiția2; condiția3)."
+
+msgid "author.submit.deleteAuthor"
+msgstr "Ștergere autor"
+
+msgid "author.submit.addAuthor"
+msgstr "Adăugare autor"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Autor corespondent."
+
+msgid "author.submit.reorder"
+msgstr "Reordonați numele autorilor"
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Reordonați autorii astfel încât să apară în ordinea în care vor fi listați "
+"la publicare."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declarația de confidențialitate a jurnalului"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Vă rugăm să selectați limba folosită pentru înregistrare."
+
+msgid "author.submit.form.sectionRequired"
+msgstr ""
+"Vă rugăm să selectați o secțiune de jurnal adecvată pentru această "
+"înregistrare."
+
+msgid "author.submit.comments"
+msgstr "Introduceți text (opțional)"
+
+msgid "submission.submit.coverNote"
+msgstr "Comentarii pentru Editor"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Este necesar să acceptați termenii din Nota privind copyright-ul înainte de "
+"a continua."
