@@ -206,7 +206,7 @@ class DefaultThemePlugin extends ThemePlugin {
 
 			$this->addStyle(
 				'homepageImage',
-				'.pkp_structure_head { background: inherit center / cover no-repeat url("' . $homepageImageUrl . '");}',
+				'.pkp_structure_head { background: center / cover no-repeat url("' . $homepageImageUrl . '");}',
 				['inline' => true]
 			);
 		}
