@@ -110,6 +110,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 			'volumes' => null,
 			'numbers' => null,
 			'years' => null,
+			'searchPhrase' => '',
 		);
 
 		$args = array_merge($defaultArgs, $args);
@@ -121,7 +122,8 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 			->filterByPublished($args['isPublished'])
 			->filterByVolumes($args['volumes'])
 			->filterByNumbers($args['numbers'])
-			->filterByYears($args['years']);
+			->filterByYears($args['years'])
+			->searchPhrase($args['searchPhrase']);
 
 			if (isset($args['count'])) {
 				$issueListQB->limitTo($args['count']);

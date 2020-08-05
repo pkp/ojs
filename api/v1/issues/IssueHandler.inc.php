@@ -151,6 +151,10 @@ class IssueHandler extends APIHandler {
 				case 'isPublished':
 					$params[$param] = $val ? true : false;
 					break;
+
+				case 'searchPhrase':
+					$params[$param] = $val;
+					break;
 			}
 		}
 
