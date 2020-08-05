@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-04 06:52+0000\n"
+"PO-Revision-Date: 2020-08-05 11:48+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -621,7 +621,7 @@ msgstr "Manager jurnal"
 
 msgid "user.noRoles.regReviewerClosed"
 msgstr ""
-"Înregistrează-te ca revizor: Înregistrarea ca revizoe este dezactivată în "
+"Înregistrează-te ca revizor: Înregistrarea ca revizor este dezactivată în "
 "prezent."
 
 msgid "user.noRoles.regReviewer"
@@ -841,7 +841,7 @@ msgid "subscriptionManager.institutionalSubscriptions"
 msgstr "Înregistrare instituțională"
 
 msgid "subscriptionManager.individualSubscriptions"
-msgstr "Înregistrare instdividuală"
+msgstr "Înregistrare individuală"
 
 msgid "subscriptionManager.subscriptionManagement"
 msgstr "Managementul abonărilor (înregistrărilor)"
@@ -1044,7 +1044,7 @@ msgid "notification.type.approveSubmissionTitle"
 msgstr "Aprobare în așteptare."
 
 msgid "user.profile.form.showOtherContexts"
-msgstr "Înregistrează-te cu alte reviste"
+msgstr "Înregistrează-te la alte reviste"
 
 msgid "user.profile.form.hideOtherContexts"
 msgstr "Ascunde alte jurnale"
