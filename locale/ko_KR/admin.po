@@ -1,2 +1,211 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-08-01 17:48+0000\n"
+"Last-Translator: Seok Hyun Ga <shga89@naver.com>\n"
+"Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/admin/ko_KR/>"
+"\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"다른 사용자 계정에 병합할 사용자(또는 여러 명)를 선택하십시오 (예 : 누군가 두 개의 사용자 계정이있는 경우). 먼저 선택한 계정이 "
+"삭제되고 모든 제출, 할당 등이 두 번째 계정에 귀속됩니다."
+
+#, fuzzy
+msgid "admin.journals.redirect"
+msgstr "OJS 1 URL을 OJS 2 URL에 매핑하는 코드 생성"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"이 인증 플러그인에서 지원되는 경우, 사용자 생성을 활성화합니다. 이 인증 소스로 OJS 내에서 작성된 사용자는 원격 인증 소스가 없는 "
+"경우 자동으로 원격 인증 소스에 추가됩니다. 또한 이 소스가 기본 인증 소스 인 경우 사용자 등록을 통해 생성 된 OJS 계정도 원격 "
+"인증 소스에 추가됩니다."
+
+#, fuzzy
+msgid "admin.languages.download.cannotOpen"
+msgstr "PKP 웹 사이트에서 언어 설명을 열 수 없습니다."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"선택한 {$oldAccountCount} 계정을 사용자 이름이 \"{$newUsername}\"인 계정으로 병합 하시겠습니까? 선택한 "
+"{$oldAccountCount} 계정은 삭제됩니다. 이 조치는 돌이킬 수 없습니다."
+
+#, fuzzy
+msgid "admin.mergeUsers.into.description"
+msgstr "이전 사용자의 저작자, 과제 편집 등을 대신할 사용자를 선택하십시오."
+
+#, fuzzy
+msgid "admin.journals.transcode"
+msgstr "ISO8859-1에 따른 기사 메타 데이터 코드 변환"
+
+msgid "admin.auth.ojs"
+msgstr "OJS 사용자 데이터베이스"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "새 언어를 언어 레지스트리 파일 (일반적으로 \"registry/locales.xml\")에 추가 할 수 없습니다."
+
+msgid "admin.languages.download"
+msgstr "언어팩 다운로드"
+
+msgid "admin.languages.localeInstalled"
+msgstr "\"{$locale}\" 언어팩이 설치되었습니다."
+
+msgid "admin.languages.downloadFailed"
+msgstr "언어팩 다운로드가 실패했습니다. 자세한 정보는 아래 메시지를 참고하세요."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"이 시스템에서 추가적으로 설치할 언어를 선택하십시오. 호스팅 된 학술지에서 언어를 사용하려면 이를 설치해야합니다. 새 언어 지원 추가에 "
+"대한 정보는 OJS 문서를 참조하십시오."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "이 언어를 삭제하시겠습니까? 이는 현재 호스팅 중인 저널 중 이 언어를 사용하는 저널에 영향을 미칩니다."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "표시한 언어는 아직 완성되지 않았습니다."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"사이트에서 지원할 모든 언어를 선택하십시오. 선택한 언어는 사이트에서 호스팅되는 모든 학술지에서 사용할 수 있으며 언어 선택 메뉴에 "
+"표시되어 각 사이트 페이지에 표시됩니다 (학술지 별 페이지에서 재정의 될 수 있음). 여러 언어를 선택하지 않으면 언어 변경 메뉴가 "
+"나타나지 않고 학술지에서 확장 언어 설정을 사용할 수 없습니다."
+
+msgid "admin.settings.redirect"
+msgstr "학술지 이동"
+
+msgid "admin.hostedContexts"
+msgstr "호스팅된 학술지"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "리뷰 알림"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "오픈 액세스 알림"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "구독 만료 알림"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "등록된 사용자가 없습니다."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "등록된 모든 사용자"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "사용자 통합"
+
+msgid "admin.mergeUsers"
+msgstr "사용자 통합"
+
+msgid "admin.journals.importErrors"
+msgstr "가져오기가 실패하였습니다"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "가져오기 경로가 필요합니다."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "구독자 가져오기"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "이미 존재하는 학술지 경로, 또는 생성할 학술지 경로 (예. \"ojs\")."
+
+msgid "admin.contexts.contextDescription"
+msgstr "학술지 설명"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "이 학술지를 사이트에서 공개로 설정 허용"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name}가 성공적으로 수정되었습니다."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name}가 성공적으로 생성되었습니다."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "입력하신 경로를 다른 학술지에서 이미 사용하고 있습니다."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "경로는 문자, 숫자, 특수기호(_, -)만 포함 할 수 있습니다. 문자나 숫자로 시작하고 끝나야 합니다."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "경로가 필요합니다."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "제목이 필요합니다."
+
+msgid "admin.journals.urlWillBe"
+msgstr "학술지를 식별하는 하나의 짧은 단어 또는 머리 글자 여야합니다. 저널의 URL은 {$ sampleUrl}입니다."
+
+msgid "admin.contexts.create"
+msgstr "학술지 만들기"
+
+msgid "admin.journals.noneCreated"
+msgstr "아무 학술지도 생성되지 않았습니다."
+
+msgid "admin.journals.journalSettings"
+msgstr "학술지 설정"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"이 학술지의 관리자로 자동 등록됩니다. 새 학술지를 만든 후에는 학술지 초기 설정을 완료하기 위해 해당 설정 마법사로 이동됩니다."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt>의 OJS 설정."
+
+msgid "admin.systemConfiguration"
+msgstr "OJS 설정"
+
+msgid "admin.systemVersion"
+msgstr "OJS 버전"
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"이 인증 플러그인에서 지원되는 경우 사용자 비밀번호 수정을 사용. 이 옵션을 사용하면 사용자가 OJS 내에서 비밀번호를 수정하고 OJS "
+"\"비밀번호 분실\"기능을 사용하여 잊어 버린 비밀번호를 재설정 할 수 있습니다. 이 옵션을 사용하지 않으면이 인증 소스를 가진 "
+"사용자는이 기능을 사용할 수 없습니다."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"이 인증 플러그인에서 지원하는 경우, 사용자 프로필 동기화를 활성화합니다. 사용자가 로그인하면 사용자 프로필 정보가 원격 소스에서 "
+"자동으로 업데이트되고 OJS 내에서 수행 된 프로필 변경 (암호 변경 포함)이 원격 소스에서 자동으로 업데이트됩니다. 이 옵션을 사용하지 "
+"않으면 OJS 프로파일 정보가 원격 소스 프로파일 정보와 분리되어 유지됩니다."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "이 언어가 사이트 및 호스팅 된 학술지의 기본 언어가 됩니다."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>현재 다음과 같은 이유로 웹 서버에서 언어 팩을 다운로드 할 수 없습니다:</p>\n"
+"\t<ul>\n"
+"\t\t<li>귀하의 서버에 GNU \"tar\"유틸리티가 없거나 실행할 수 없습니다. </li>\n"
+"\t\t<li>OJS가 언어 레지스트리 파일(일반적으로 \"registry/locales.xml\")을 수정할 수 없습니다.</li>\n"
+"\t</ul>\n"
+"<p>언어팩은  <a href=\"http://pkp.sfu.ca\">PKP 웹사이트</a>에서 다운로드할 수 있습니다.</p>"
+
+msgid "admin.languages.confirmDisable"
+msgstr "이 언어를 비활성화 하시겠습니까? 이는 현재 언어를 사용하는 모든 학술지에 영향을 줄 수 있습니다."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tOJS 설치는 둘 이상의 사용 메트릭을 기록하도록 구성되어 있습니다. 사용 통계는 여러 컨텍스트로 표시됩니다. 단일 사용 통계를 "
+"사용해야하는 경우가 있습니다. (예: 가장 많이 사용되는 기사의 정렬 된 목록을 표시하거나 검색 결과 순위를 지정합니다. )구성된 측정 "
+"항목 중 하나를 기본값으로 선택하십시오.\n"
+"\t"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "메인 화면 접속 시 이 학술지로 이동 합니다. 예를 들어, 사이트에서 한 가지의 학술지만 호스팅하는 경우 유용 할 수 있습니다."
+
+msgid "admin.settings.info.success"
+msgstr "이 웹사이트의 정보가 성공적으로 변경되었습니다."
+
+msgid "admin.settings.config.success"
+msgstr "이 웹사이트의 환경 설정이 성공적으로 변경되었습니다."
+
+msgid "admin.settings.appearance.success"
+msgstr "이 웹사이트의 모양 설정이 성공적으로 변경되었습니다."

@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
+"PO-Revision-Date: 2020-07-30 07:47+0000\n"
+"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"fr/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:24+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.form.authorRequiredFields"
 msgstr "Les prénom, nom et adresse courriel de chaque auteur sont requis."
@@ -33,7 +36,7 @@ msgid "submission.incomplete"
 msgstr "En attente d'approbation"
 
 msgid "submission.submit.form.localeRequired"
-msgstr "Sélectionner une langue pour la soumission"
+msgstr "Sélectionner une langue pour la soumission."
 
 msgid "submission.submit.submissionChecklist"
 msgstr "Liste de vérification de la soumission"
@@ -54,7 +57,7 @@ msgid "submission.submit.title"
 msgstr "Soumettre un article"
 
 msgid "submission.submit.userGroup"
-msgstr "Rôle"
+msgstr "soumettre en qualité de …"
 
 msgid "submission.submit.userGroupDescription"
 msgstr "Choisissez le rôle sous lequel vous soumettez votre article."
@@ -66,7 +69,13 @@ msgid "submission.title"
 msgstr "Titre de l'article"
 
 msgid "submission.title.tip"
-msgstr "voici une variable avec une valeur erronée"
+msgstr ""
+"Le type de soumission est généralement une « image », un « texte » ou un "
+"autre format multimédia, y compris « logiciel » ou « ressource interactive »"
+". Veuillez choisir celui qui correspond le mieux à votre soumission. Vous "
+"pouvez trouver des exemple sur <a target=\"_blank\" href=\"http://dublincore."
+"org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore."
+"org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Commencer une nouvelle soumission dans"
@@ -102,7 +111,7 @@ msgid "submission.publication"
 msgstr "Publication"
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "Les épreuves se trouvent dans le dossier du numéro."
+msgstr "Les épreuves se trouvent dans le dossier du numéro"
 
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "L'article mis en page \"{$galleyFormatName}\" est disponible."
@@ -117,10 +126,12 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Approbation du format"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "*<p>Ce mod`èle de mise en page <em>ne sera plus offert</em>aux lecteurs</p>."
+msgstr ""
+"<p>Cette épreuve<em>ne sera plus mise à la disposition</em> des lecteurs et "
+"lectrices.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "*<p>Ce mod`èle de mise en page <em>sera offert</em>aux lecteurs</p>."
+msgstr "<p>Cette épreuve <em>sera mise à la disposition</em> des lecteurs.</p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Rendre ce modèle de mise en page disponible"
@@ -147,7 +158,7 @@ msgid "submission.pageProofs"
 msgstr "Correction d'épreuve"
 
 msgid "submission.confirmSubmit"
-msgstr "Êtes-vous certain de vouloir soumettre cet article à la revue?"
+msgstr "Êtes-vous certain-e de vouloir soumettre cet article à la revue ?"
 
 msgid "workflow.review.externalReview"
 msgstr "Évaluation"
@@ -160,3 +171,80 @@ msgstr "Votre résumé est trop long. Merci de respecter le nombre de mots limit
 
 msgid "section.any"
 msgstr "Toutes les sections"
+
+msgid "publication.selectIssue"
+msgstr "Choisir un numéro pour programmer la publication"
+
+msgid "publication.scheduleInissue"
+msgstr "Assigner à un numéro"
+
+msgid "publication.unscheduledIn"
+msgstr "Ceci n'a pas été programmé pour publication dans un numéro."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Publication programmée dans le <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Publié dans le <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr ""
+"La publication doit être assignée à un numéro avant de pouvoir être publiée."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Toutes les exigences de publication ont été remplies. Ceci sera publié "
+"immédiatement car la date de publication a été fixée au {$datePublished}. "
+"Êtes-vous certain-e de vouloir publier ceci ?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Toutes les exigences de publication ont été remplies. Ceci sera publié "
+"immédiatement dans le {$issue}. Êtes-vous certain-e de vouloir publier ceci ?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Toutes les exigences de publication ont été remplies. Ceci sera publié quand "
+"le {$issue} sera publié. Êtes-vous certain-e de vouloir programmer cette "
+"publication ?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Toutes les exigences de publication ont été remplies. Êtes-vous certain-e de "
+"vouloir publier ceci ?"
+
+msgid "publication.issue.success"
+msgstr "Les renseignements du numéro de cette publication ont été mis à jour."
+
+msgid "publication.invalidIssue"
+msgstr "Le numéro de cette publication est introuvable."
+
+msgid "publication.invalidSection"
+msgstr "La rubrique de cette publication est introuvable."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"La date de publication sera définie automatiquement lors de la publication "
+"du numéro. Ne pas entrer de date de publication sauf si l'article a déjà été "
+"publié ailleurs et que vous devez l'antidater."
+
+msgid "galley.publicationNotFound"
+msgstr "La publication pour ces épreuves est introuvable."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Les épreuves de cette publication ne peuvent pas être modifiées car elles "
+"ont déjà été publiées."
+
+msgid "catalog.category.heading"
+msgstr "Tous les titres"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} titres"
+
+msgid "submission.sectionOptions"
+msgstr "Options de rubrique"
+
+msgid "submission.submit.noContext"
+msgstr "La revue de cette soumission est introuvable."
