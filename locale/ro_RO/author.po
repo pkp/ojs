@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-07 14:49+0000\n"
+"PO-Revision-Date: 2020-08-07 15:56+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "ro_RO/>\n"
@@ -144,7 +144,7 @@ msgid "author.track"
 msgstr "Procese de înregistrare manuscrise active"
 
 msgid "author.submit"
-msgstr "Depunere nouă de manuscris"
+msgstr "Înregistrare nouă de manuscris"
 
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Scurtă descriere"
