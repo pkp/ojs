@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-05 11:48+0000\n"
+"PO-Revision-Date: 2020-08-07 16:31+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -19,7 +19,7 @@ msgid "article.suppFilesAbbrev"
 msgstr "Fișiere suplimentare"
 
 msgid "user.reviewerPrompt"
-msgstr "Ați fi dispus să evaluați manuscrise trimise către acest jurnal?"
+msgstr "Ați fi dispus să evaluați manuscrise înregistrate la acest jurnal?"
 
 msgid "user.registerForOtherJournals"
 msgstr "Înregistrarea unei alte reviste"
@@ -316,19 +316,19 @@ msgid "common.queue.short.submissionsArchives"
 msgstr "Arhive"
 
 msgid "common.queue.long.submissionsArchives"
-msgstr "Arhivă"
+msgstr "Arhive"
 
 msgid "common.queue.short.submissionsInReview"
-msgstr "In Revizie"
+msgstr "In revizie"
 
 msgid "common.queue.long.submissionsInReview"
-msgstr "Trimiteri la Revizuit"
+msgstr "Manuscrise în revizie"
 
 msgid "common.queue.short.submissionsInEditing"
-msgstr "In Editare"
+msgstr "In editare"
 
 msgid "common.queue.long.submissionsInEditing"
-msgstr "Trimiteri la Editare"
+msgstr "Manuscrise în editare"
 
 msgid "common.queue.short.submissionsUnassigned"
 msgstr "Neatribuit"
@@ -468,7 +468,7 @@ msgid "submission.event.general.issueScheduled"
 msgstr "Manuscrisul înregistrat a fost trimis spre următoarea etapă"
 
 msgid "submission.event.submissionSubmitted"
-msgstr "Manuscris depus"
+msgstr "Manuscris înregistrat"
 
 msgid "submission.event.general.defaultEvent"
 msgstr "Eveniment de depunere"
@@ -664,7 +664,7 @@ msgstr "La ce reviste de pe acest site doriți să vă înregistrați?"
 msgid "user.reviewerPrompt.optin"
 msgstr ""
 "Da, aș dori să fiu contactat pentru solicitări de analiză a manuscriselor "
-"trimise la acest jurnal."
+"înregistrate la acest jurnal."
 
 msgid "user.reviewerPrompt.userGroup"
 msgstr "Da, solicitați rolul {$ userGroup}."
@@ -1405,9 +1405,9 @@ msgstr "Notificare privind drepturile de autor"
 msgid "about.submissionPreparationChecklist.description"
 msgstr ""
 "Ca parte a procesului de depunere de manuscrise, autorii sunt obligați să "
-"verifice respectarea regulilor de submitere, ținând cont de toate elementele "
-"următoare, în caz contrar trimiterile putând fi returnate autorilor care nu "
-"respectă aceste reguli."
+"verifice respectarea regulilor de înregistrare manuscrise, ținând cont de "
+"elementele următoare, în caz contrar trimiterile putând fi returnate "
+"autorilor care nu respectă aceste reguli."
 
 msgid "about.submissionPreparationChecklist"
 msgstr "Lista de verificare a pregătirii depunerii manuscrisului"
@@ -1419,10 +1419,10 @@ msgid "about.onlineSubmissions.viewSubmissions"
 msgstr "Vizualizare manuscrise aflate în așteptare"
 
 msgid "about.onlineSubmissions.newSubmission"
-msgstr "Depune un nou manuscris"
+msgstr "Înregistrare manuscris nou"
 
 msgid "about.onlineSubmissions.submitToSection"
-msgstr "Depune manuscrisul în secțiunea <a href=\"{$url}\">{$name}</a>."
+msgstr "Înregistrează manuscrisul la secțiunea <a href=\"{$url}\">{$name}</a>."
 
 msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission} sau {$viewSubmissions}."
@@ -1437,7 +1437,7 @@ msgid "about.onlineSubmissions.login"
 msgstr "Autentificare"
 
 msgid "about.submissions"
-msgstr "Depuneri manuscrise"
+msgstr "Înregistrare manuscrise"
 
 msgid "about.sectionPolicies"
 msgstr "Secțiunea Politici"
@@ -1518,10 +1518,11 @@ msgstr ""
 "cercetare):"
 
 msgid "user.register.reviewerDescription"
-msgstr "Dornic de a realiza o revizuire a manuscriselor depuse pe site."
+msgstr "Dispus de a realiza o revizuire a manuscriselor înregistrate pe site."
 
 msgid "user.register.reviewerDescriptionNoInterests"
-msgstr "Dornic să efectueze o revizuire pentru manuscrisele depuse la jurnal."
+msgstr ""
+"Dispus să efectueze o revizuire pentru manuscrisele înregistrate la jurnal."
 
 msgid "user.register.authorDescription"
 msgstr "Capabil de a trimite articole la jurnal."
