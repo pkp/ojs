@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-04 09:15+0000\n"
+"PO-Revision-Date: 2020-08-07 14:49+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "ro_RO/>\n"
@@ -22,28 +22,30 @@ msgstr ""
 msgid "author.submit.verifyChecklist"
 msgstr ""
 "Înainte de a continua, trebuie să vă asigurați că toate elementele din lista "
-"de verificare a depunerilor sunt satisfăcute."
+"de verificare pentru înregistrarea manuscriselor sunt satisfăcute."
 
 msgid "author.submit.journalSectionDescription"
-msgstr "Articolele trebuie înregistrate la una dintre secțiunile jurnalului."
+msgstr "Manuscrisele trebuie înregistrate în una dintre secțiunile jurnalului."
 
 msgid "author.submit.journalSection"
 msgstr "Secțiunea jurnalului"
 
 msgid "author.submissions.noSubmissions"
-msgstr "Nici o depunere."
+msgstr "Nici o înregistrare de manuscris."
 
 msgid "author.submissions.viewStatus"
-msgstr "Verifică statusul"
+msgstr "Verificați evoluția"
 
 msgid "author.submissions.confirmDelete"
-msgstr "Ești sigur că vrei să ștergi această depunere incompletă?"
+msgstr ""
+"Sunteți sigur(ă) că doriți să ștergi această înregistrare de manuscris "
+"incompletă?"
 
 msgid "author.submissions.proofreadingCorrections"
 msgstr "Corecturi de text"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Încarcă versiunea editată"
+msgstr "Încărcare versiune editată"
 
 msgid "author.submissions.queuedEditingProofread"
 msgstr "În editare: solicitare corectare text"
@@ -69,69 +71,69 @@ msgstr ""
 
 msgid "author.submit.qualifyForWaiver"
 msgstr ""
-"Vă rugăm să luați în considerare renunțarea la taxa de depunere a "
-"articolului pentru acest articol"
+"Vă rugăm să luați în considerare renunțarea la taxa de înregistrare pentru "
+"acest manuscris"
 
 msgid "author.submit.requestWaiver"
 msgstr "Cerere renunțare"
 
 msgid "author.submit.notAccepting"
-msgstr "Jurnalul nu acceptă depuneri de manuscrise în acest moment."
+msgstr "Jurnalul nu acceptă înregistrări de manuscrise în acest moment."
 
 msgid "submission.submit.cancelSubmission"
 msgstr ""
-"Puteți completa această depunere la o dată ulterioară, selectând Depuneri "
-"active din pagina de autor."
+"Puteți completa această înregistrare de manuscris la o dată ulterioară, "
+"selectând înregistrările active din pagina de autor."
 
 msgid "author.submit.nextSteps"
 msgstr "Pașii următori"
 
 msgid "author.submit.confirmation"
-msgstr "Confirma"
+msgstr "Confirmare"
 
 msgid "author.submit.supplementaryFiles"
-msgstr "Încarcă fișiere suplimentare"
+msgstr "Încărcați fișiere suplimentare"
 
 msgid "author.submit.metadata"
-msgstr "Introdu metadatele"
+msgstr "Completați metadatele"
 
 msgid "author.submit.upload"
-msgstr "Încarcă depunerea"
+msgstr "Încărcați manuscrisul"
 
 msgid "author.submit.start"
 msgstr "Start"
 
 msgid "author.submit.step5"
-msgstr "Pasul 5. Confirmă depunerea"
+msgstr "Pasul 5. Confirmați înregistrarea de manuscris"
 
 msgid "author.submit.step4a"
-msgstr "Pasul 4a. Adaugă fișiere suplimentare"
+msgstr "Pasul 4a. Adăugați fișiere suplimentare"
 
 msgid "author.submit.step4"
-msgstr "Pasul 4. Încarcă fișiere suplimentare"
+msgstr "Pasul 4. Încărcați fișiere suplimentare"
 
 msgid "author.submit.step3"
-msgstr "Pasul 3. Completează metadatele de înregistrare"
+msgstr "Pasul 3. Completați metadatele de înregistrare manuscris"
 
 msgid "author.submit.step2"
-msgstr "Pasul 2. Încarcă și înregistrează"
+msgstr "Pasul 2. Încărcați manuscrisul și continuați înregistrarea"
 
 msgid "author.submit.step1"
-msgstr "Pasul 1. Începe depunerea de manuscrise"
+msgstr "Pasul 1. Start înregistrare manuscris"
 
 msgid "author.submit.startHereLink"
 msgstr ""
 "<a href=\"{$submitUrl}\" class=\"action\">Click aici</a> pentru a merge la "
-"pasul unu al procesului de depunere în cinci pași."
+"pasul unu al procesului de înregistrare de manuscrise în cinci pași."
 
 msgid "author.submit.startHereTitle"
-msgstr "Începe o nouă depunere"
+msgstr "Înregistrare nouă de manuscris"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "Cinci pași pentru depunere"
+msgstr "Cinci pași pentru a înregistra un manuscris"
 
 msgid "author.submit.submitArticle"
-msgstr "Depune un articol (manuscris)"
+msgstr "Înregistrați un manuscris"
 
 msgid "author.competingInterests"
 msgstr ""
@@ -139,7 +141,7 @@ msgstr ""
 "{$competingInterestGuidelinesUrl}\">Politica de concurență</a>"
 
 msgid "author.track"
-msgstr "Depuneri active"
+msgstr "Procese de înregistrare manuscrise active"
 
 msgid "author.submit"
 msgstr "Depunere nouă de manuscris"
@@ -211,26 +213,27 @@ msgstr ""
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
 "Acest pas opțional permite adăugarea fișierelor suplimentare la o "
-"înregistrare. Fișierele, care pot fi în orice format, ar putea include (a) "
-"instrumente de cercetare, (b) seturi de date, care respectă termenii "
-"reviziei eticii de cercetare a studiului, (c) surse care altfel nu ar fi "
-"disponibile pentru cititori, (d) ) figuri și tabele care nu pot fi integrate "
-"în textul în sine, sau alte materiale care adaugă contribuției lucrării."
+"înregistrare de manuscris. Fișierele, care pot fi în orice format, ar putea "
+"include (a) instrumente de cercetare, (b) seturi de date, care respectă "
+"termenii reviziei eticii de cercetare a studiului, (c) surse care altfel nu "
+"ar fi disponibile pentru cititori, (d) ) figuri și tabele care nu pot fi "
+"integrate în textul în sine, sau alte materiale care adaugă contribuției "
+"lucrării."
 
 msgid "author.submit.noSubmissionConfirm"
 msgstr "Sigur doriți să continuați fără a încărca un fișier de înregistrare?"
 
 msgid "author.submit.noSubmissionFile"
-msgstr "Nu a fost încărcată nici o fișă de înregistrare."
+msgstr "Nu a fost încărcată nici un fișier de înregistrare."
 
 msgid "author.submit.replaceSubmissionFile"
-msgstr "Înlocuire fișă de înregistrare"
+msgstr "Înlocuire fișierul de înregistrare"
 
 msgid "author.submit.uploadSubmissionFile"
-msgstr "Încărcare fișă înregistrare"
+msgstr "Încărcare fișierul de înregistrare"
 
 msgid "author.submit.submissionFile"
-msgstr "Fișă de înregistrare"
+msgstr "Fișier înregistrare manuscris"
 
 msgid "author.submit.form.wordCountAlert"
 msgstr "Ați depășit limita maximă de cuvinte pentru rezumat."
@@ -246,7 +249,7 @@ msgstr ""
 "Numele, prenumele și adresa de e-mail a fiecărui autor sunt obligatorii."
 
 msgid "author.submit.form.authorRequired"
-msgstr "Cel puțin un autor este necesar."
+msgstr "Este necesar cel puțin un autor."
 
 msgid "author.submit.languageInstructions"
 msgstr ""
@@ -260,8 +263,8 @@ msgstr ""
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
-"Precizați condițiile pentru indexarea înregistrării; Condițiile separate cu "
-"punct și virgulă (condiția1; condiția2; condiția3)."
+"Precizați condițiile pentru indexarea manuscrisului înregistrat; Condițiile "
+"separate cu punct și virgulă (condiția1; condiția2; condiția3)."
 
 msgid "author.submit.deleteAuthor"
 msgstr "Ștergere autor"
@@ -284,12 +287,13 @@ msgid "submission.submit.privacyStatement"
 msgstr "Declarația de confidențialitate a jurnalului"
 
 msgid "author.submit.form.localeRequired"
-msgstr "Vă rugăm să selectați limba folosită pentru înregistrare."
+msgstr ""
+"Vă rugăm să selectați limba folosită pentru înregistrarea manuscrisului."
 
 msgid "author.submit.form.sectionRequired"
 msgstr ""
 "Vă rugăm să selectați o secțiune de jurnal adecvată pentru această "
-"înregistrare."
+"înregistrare de manuscris."
 
 msgid "author.submit.comments"
 msgstr "Introduceți text (opțional)"
@@ -299,25 +303,24 @@ msgstr "Comentarii pentru Editor"
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
-"Este necesar să acceptați termenii din Nota privind copyright-ul înainte de "
-"a continua."
+"Este necesar să acceptați termenii din Nota privind Drepturile de Autor "
+"înainte de a continua."
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"Accesul pentru înregistrarea unui manuscris la acest jurnal poate fi făcut "
-"prin intermediul unui cont de autor. Acest lucru permite redactorilor noștri "
-"să vă urmărească manuscrisele înregistrate și să vă contacteze atunci când "
-"se schimbă starea manuscrisului dvs. sau să vă solicite informații "
-"suplimentare."
+"Accesul pentru înregistrarea unui manuscris la acest jurnal necesită unui "
+"cont de autor. Acest lucru permite redactorilor noștri să vă urmărească "
+"manuscrisele înregistrate și să vă contacteze atunci când se schimbă starea "
+"manuscrisului dvs. sau să vă solicite informații suplimentare."
 
 msgid "author.article.authorRevisedFile"
-msgstr "Fișierul autorului"
+msgstr "Fișier autor"
 
 msgid "author.article.copyeditedFile"
 msgstr "Fișier editat"
 
 msgid "author.article.uploadAuthorVersion"
-msgstr "Încărcare versiunea autorului"
+msgstr "Încărcare versiune autor"
 
 msgid "author.submit.submissionComplete"
 msgstr ""
@@ -325,7 +328,7 @@ msgstr ""
 "în {$journalTitle}."
 
 msgid "author.submit.finishSubmission"
-msgstr "Termină înregistrarea"
+msgstr "Finalizați înregistrarea de manuscris"
 
 msgid "author.submit.filesSummary"
 msgstr "Rezumatul fișierului"
@@ -335,7 +338,7 @@ msgstr "Nu au fost atașate fișiere la această înregistrare."
 
 msgid "author.submit.confirmationDescription"
 msgstr ""
-"Pentru a înregistra manuscrisul la {$journalTitle} click Finalizare "
+"Pentru a înregistra manuscrisul la {$journalTitle} click pe Finalizare "
 "înregistrare. Autorul corespondent al manuscrisului înregistrat va primi o "
 "confirmare prin e-mail și va putea vizualiza progresul manuscrisului prin "
 "procesul editorial, conectându-se pe site-ul web al jurnalului. Vă mulțumim "
