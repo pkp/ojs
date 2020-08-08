@@ -16,6 +16,8 @@
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 
+	<migration class="lib.pkp.classes.migration.utils.DisableConstraintsMigration" />
+
 	<!-- PKP schema components -->
 	<migration class="lib.pkp.classes.migration.AnnouncementsMigration" />
 	<migration class="lib.pkp.classes.migration.CategoriesMigration" />
@@ -40,6 +42,8 @@
 
 	<!-- OJS schema -->
 	<migration class="classes.migration.OJSMigration" />
+
+	<migration class="lib.pkp.classes.migration.utils.EnableConstraintsMigration" />
 
 	<!-- Other install tasks -->
 	<code function="createData"/>
