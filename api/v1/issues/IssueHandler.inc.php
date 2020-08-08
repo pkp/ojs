@@ -38,7 +38,7 @@ class IssueHandler extends APIHandler {
 					'roles' => $roles
 				),
 				array(
-					'pattern' => $this->getEndpointPattern().  '/{issueId}',
+					'pattern' => $this->getEndpointPattern().  '/{issueId:\d+}',
 					'handler' => array($this, 'get'),
 					'roles' => $roles
 				),
