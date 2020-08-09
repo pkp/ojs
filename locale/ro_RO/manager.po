@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-09 15:52+0000\n"
+"PO-Revision-Date: 2020-08-10 02:49+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ro_RO/>\n"
@@ -248,3 +248,88 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "Acces"
+
+msgid "manager.sections.editors"
+msgstr "Editor de Secţiune"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Articolele pot fi trimise numai de către editori și editori de secțiuni."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Adăugați un editor de secțiuni la această secțiune pentru a fi trimise "
+"automat înregistrările de manuscrise la Editorul de secțiuni. (În caz "
+"contrar, Editorii de secțiuni pot fi alocați manual, după ce va fi trimisă o "
+"înregistrare de manuscris.) Dacă este adăugat, un Editor de secțiuni poate "
+"fi atribuit automat pentru a supraveghea REVIZIA (revizuirea) și / sau "
+"EDITAREA (conținutul, aspectul și corectarea) manuscriselor în această "
+"secțiune. Editorii de secțiuni sunt creați făcând clic pe Editori de "
+"secțiune sub Roluri în Management Jurnal."
+
+msgid "manager.sections.create"
+msgstr "Creare secțiune"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Înainte de a șterge această secțiune, trebuie să mutați articolele publicate "
+"în cadrul acesteia în alte secțiuni."
+
+msgid "manager.sections.confirmDelete"
+msgstr "Sigur doriți să ștergeți definitiv această secțiune?"
+
+msgid "manager.sections.assigned"
+msgstr "Editorii acestei secțiuni"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Încă nu există editori de secțiuni.  Adăugați acest rol la cel puțin un "
+"utilizator viaManagement > Setări > Utilizatori &amp; Primele roluri."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Nu necesită rezumate"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Sincronizarea înscrierii va înscrie toți utilizatorii înrolați în rolul "
+"specificat în jurnalul specificat în același rol din acest jurnal. Această "
+"funcție permite sincronizarea unui set comun de utilizatori (de exemplu, "
+"Revizori) între jurnale."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} Înrolare"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Selectați un utilizator căruia să i se atribuie authorship-ul utilizatorului "
+"anterior, sarcinile de editare etc."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Selectați un utilizator (sau mai mulți) pentru a se contopi într-un alt cont "
+"de utilizator (de exemplu, când cineva are două conturi de utilizator). "
+"Contul (conturile) selectat(e) primul va fi șters și toate manuscrisele "
+"înregistrate, sarcinile etc. vor fi atribuite celui de-al doilea cont."
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Cu jurnal"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Înrolați un utilizator existent"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Selectați un șablon"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Ștergeți acest utilizator din acest jurnal? Această acțiune va anula "
+"utilizatorul din toate rolurile din acest jurnal."
+
+msgid "manager.people.allUsers"
+msgstr "Toți utilizatorii înscriși"
+
+msgid "manager.people.showNoRole"
+msgstr "Afișați utilizatorii fără rol"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Înscrieți un utilizator de pe acest site în acest jurnal"
