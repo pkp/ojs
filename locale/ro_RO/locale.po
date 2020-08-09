@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-07 16:31+0000\n"
+"PO-Revision-Date: 2020-08-10 02:49+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -545,7 +545,7 @@ msgid "subscriptionTypes.year"
 msgstr "an"
 
 msgid "subscriptionTypes.currency"
-msgstr "Currency"
+msgstr "Valuta"
 
 msgid "issue.return"
 msgstr "Revin-o la detaliile numărului"
