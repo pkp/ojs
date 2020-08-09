@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-07 16:31+0000\n"
+"PO-Revision-Date: 2020-08-09 15:52+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "ro_RO/>\n"
@@ -81,7 +81,7 @@ msgid "admin.contexts.form.edit.success"
 msgstr "{$name} a fost editat cu succes."
 
 msgid "admin.contexts.form.create.success"
-msgstr "{$name} a dost creat cu succes."
+msgstr "{$name} a fost creat cu succes."
 
 msgid "admin.contexts.form.pathExists"
 msgstr "Calea pe care ați furnizat-o este deja folosită de un alt jurnal."
