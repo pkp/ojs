@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-10 02:49+0000\n"
+"PO-Revision-Date: 2020-08-10 14:27+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ro_RO/>\n"
@@ -34,7 +34,7 @@ msgid "log.editor.submissionExpedited"
 msgstr "{$editorName} se ocupă de editarea manuscrisului {$submissionId}."
 
 msgid "navigation.subscriptions"
-msgstr "Depunere manuscript"
+msgstr "Abonamente"
 
 msgid "user.showAllJournals"
 msgstr "Arată revistele mele"
@@ -481,8 +481,8 @@ msgstr ""
 
 msgid "subscriptions.individualDescription"
 msgstr ""
-"Înregistrările individuale necesită autentificare pentru a avea acces la "
-"conținutul încărcat."
+"Abonările individuale necesită autentificare pentru a avea acces la "
+"conținutul abonat."
 
 msgid "subscriptions.institutionalDescription"
 msgstr ""
@@ -494,7 +494,7 @@ msgid "subscriptions.status.other"
 msgstr "Altele, a se vedea Notele"
 
 msgid "subscriptions.status.noSubscription"
-msgstr "Nu ai nici o înregistrare activă."
+msgstr "Nu aveți nici un abonament activ."
 
 msgid "subscriptions.status.awaitingOnlinePayment"
 msgstr "Plată online în așteptare"
@@ -602,7 +602,7 @@ msgid "user.role.journalAssistant"
 msgstr "Asistentul jurnalului"
 
 msgid "user.role.subscriptionManagers"
-msgstr "Coordonatori înregistrări manuscrise"
+msgstr "Coordonatori abonamente"
 
 msgid "user.role.subEditors"
 msgstr "Editori de secțiune"
@@ -611,7 +611,7 @@ msgid "user.role.managers"
 msgstr "Coordonatori jurnal"
 
 msgid "user.role.subscriptionManager"
-msgstr "Coordonator înregistrări manuscrise"
+msgstr "Gestionar abonamente"
 
 msgid "user.role.subEditor"
 msgstr "Editor de secțiune"
@@ -645,7 +645,7 @@ msgstr ""
 "alegeți un jurnal:"
 
 msgid "user.manageMySubscriptions"
-msgstr "Gestionează înregistrările mele"
+msgstr "Gestionează abonamentele mele"
 
 msgid "user.myJournals"
 msgstr "Revistele mele"
@@ -835,13 +835,13 @@ msgid "plugins.categories.viewableFiles"
 msgstr "Pluginurile pentru Articole din Galley"
 
 msgid "subscriptionManager.subscriptionTypes"
-msgstr "Tipuri de înregistrare"
+msgstr "Tipuri de abonamente"
 
 msgid "subscriptionManager.institutionalSubscriptions"
-msgstr "Înregistrare instituțională"
+msgstr "Abonare instituțională"
 
 msgid "subscriptionManager.individualSubscriptions"
-msgstr "Înregistrare individuală"
+msgstr "Abonare individuală"
 
 msgid "subscriptionManager.subscriptionManagement"
 msgstr "Managementul abonărilor (înregistrărilor)"
@@ -915,18 +915,18 @@ msgid "reader.purchasePrice"
 msgstr "({$valuta} {$preț})"
 
 msgid "reader.subscriptionOrFeeAccess"
-msgstr "Necesită înregistrare sau plată"
+msgstr "Necesită abonare sau plată"
 
 msgid "reader.subscriptionAccess"
-msgstr "Necesită înregistrare"
+msgstr "Necesită abonare"
 
 msgid "reader.openAccess"
 msgstr "Acces liber"
 
 msgid "reader.subscriptionRequiredLoginText"
 msgstr ""
-"Înregistrare necesară pentru accesarea temei. Pentru a verifica "
-"înregistrarea, va trebui să te autentifici."
+"Abonare necesară pentru accesarea temei. Pentru a verifica abonamentul, va "
+"trebui să vă autentificați."
 
 msgid "reader.subscribersOnly"
 msgstr "Doar pentru abonați"
@@ -1343,7 +1343,7 @@ msgid "about.memberships"
 msgstr "Afilieri"
 
 msgid "about.availableSubscriptionTypes"
-msgstr "Tipuri de înregistrare (abonare)"
+msgstr "Tipuri de abonare"
 
 msgid "about.subscriptionTypes.cost"
 msgstr "Cost"
@@ -1358,16 +1358,16 @@ msgid "about.subscriptionTypes.name"
 msgstr "Nume"
 
 msgid "about.subscriptionsContact"
-msgstr "Date de contact pentru înregistrare (abonare)"
+msgstr "Date de contact pentru abonare"
 
 msgid "about.subscriptions.institutional"
-msgstr "Înregistrare instituțională"
+msgstr "Abonare instituțională"
 
 msgid "about.subscriptions.individual"
-msgstr "Înregistrare individuală"
+msgstr "Abonare individuală"
 
 msgid "about.subscriptions"
-msgstr "Depunere manuscrise"
+msgstr "Abonamente"
 
 msgid "about.archiving"
 msgstr "Arhivare"
@@ -2127,7 +2127,7 @@ msgid "payment.requestPublicationFee"
 msgstr "Solicitați taxa de publicare ({$feeAmount})"
 
 msgid "payment.type.subscription"
-msgstr "Taxa de depunere manuscris"
+msgstr "Taxa de abonare"
 
 msgid "payment.type.purchaseIssue"
 msgstr "Prețul de achiziție al numărului"
@@ -2174,13 +2174,13 @@ msgstr "Trebuie să fiți autentificat pentru a face o donație."
 
 msgid "payment.loginRequired.forIssue"
 msgstr ""
-"Este necesară achiziția unui număr al jurnalului sau înregistrarea pentru "
+"Este necesară achiziția unui număr al jurnalului sau abonarea pentru "
 "accesarea articolului. Pentru a verifica abonamentul, accesați achiziția "
 "anterioară sau achiziționarea numărului, conectați-vă la jurnal."
 
 msgid "payment.loginRequired.forArticle"
 msgstr ""
-"Este necesară achiziția unui articol sau înregistrarea pentru accesarea "
+"Este necesară achiziția unui articol sau abonarea pentru accesarea "
 "articolului. Pentru a verifica abonamentul, accesați achiziția anterioară "
 "sau achiziționarea articolului, conectați-vă la jurnal."
 
@@ -2341,7 +2341,7 @@ msgstr "Vă rog să introduceți un domeniu valid."
 
 msgid "user.subscriptions.form.domainIPRangeRequired"
 msgstr ""
-"Tipul de înregistrare selectat necesită un domeniu și / sau un interval IP "
+"Tipul de abonament selectat necesită un domeniu și / sau un interval IP "
 "pentru autentificarea acesteia."
 
 msgid "user.subscriptions.form.domainInstructions"
@@ -2363,28 +2363,28 @@ msgstr "Numele instituției"
 
 msgid "user.subscriptions.form.membershipInstructions"
 msgstr ""
-"Pentru tipul de înscriere selectat sunt necesare informații privind "
+"Pentru tipul de abonare selectat sunt necesare informații privind "
 "apartenența."
 
 msgid "user.subscriptions.form.subscriptionExists"
-msgstr "Acest cont de utilizator are deja o înregistrare individuală."
+msgstr "Acest cont de utilizator are deja o abonare individuală."
 
 msgid "user.subscriptions.form.typeIdValid"
-msgstr "Vă rog să selectați un tip de înscriere valid."
+msgstr "Vă rog să selectați un tip de abonare valid."
 
 msgid "user.subscriptions.form.membershipRequired"
 msgstr ""
-"Pentru tipul de înscriere selectat sunt necesare informații privind "
+"Pentru tipul de abonare selectat sunt necesare informații privind "
 "apartenența."
 
 msgid "user.subscriptions.form.membership"
 msgstr "Apartenență"
 
 msgid "user.subscriptions.form.typeId"
-msgstr "Tip de înregistrare"
+msgstr "Tip de abonare"
 
 msgid "user.subscriptions.viewSubscriptionTypes"
-msgstr "Vezi tipurile disponibile de înregistrare"
+msgstr "Vezi tipurile disponibile de abonare"
 
 msgid "user.subscriptions.expired"
 msgstr "Expirat: {$date}"
@@ -2393,13 +2393,13 @@ msgid "user.subscriptions.expires"
 msgstr "Expiră: {$date}"
 
 msgid "user.subscriptions.purchaseInstitutionalSubscription"
-msgstr "Cumpără o înregistrare instituțională"
+msgstr "Cumpără un abonament instituțional"
 
 msgid "user.subscriptions.purchaseIndividualSubscription"
-msgstr "Cumpără o înregistrare individuală"
+msgstr "Cumpără un abonament individual"
 
 msgid "user.subscriptions.purchaseNewSubscription"
-msgstr "Cumpără o nouă înregistrare"
+msgstr "Cumpără un nou abonament"
 
 msgid "user.subscriptions.purchase"
 msgstr "Cumpără"
@@ -2408,10 +2408,10 @@ msgid "user.subscriptions.renew"
 msgstr "Reînnoire"
 
 msgid "user.subscriptions.institutionalSubscriptions"
-msgstr "Depunere instituțională"
+msgstr "Abonare instituțională"
 
 msgid "user.subscriptions.individualSubscriptions"
-msgstr "Depunere individuală"
+msgstr "Abonare individuală"
 
 msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
 msgstr "Plata online a fost inițiată, dar a fost anulată sau nu este completă"
@@ -2420,11 +2420,11 @@ msgid "user.subscriptions.status.awaitingManualPaymentDescription"
 msgstr "Plata manuală a fost inițiată, dar nu este încă recepționată"
 
 msgid "user.subscriptions.status.needsApprovalDescription"
-msgstr "Depunerea trebuie revăzută înainte de a fi activată"
+msgstr "Abonamentul trebuie revăzut înainte de a fi activat"
 
 msgid "user.subscriptions.status.needsInformationDescription"
 msgstr ""
-"Sunt necesare informații suplimentare înainte ca depunerea să fie activată"
+"Sunt necesare informații suplimentare înainte ca abonamentul să fie activat"
 
 msgid "user.subscriptions.statusDescription"
 msgstr "Descriere"
@@ -2434,12 +2434,12 @@ msgstr "Status"
 
 msgid "user.subscriptions.statusInformation"
 msgstr ""
-"Depunerile active și expirate sunt afișate mai jos împreună cu data de "
+"Abonamentele active și expirate sunt afișate mai jos împreună cu data de "
 "expirare. În plus, la fiecare depunere pot fi incluse următoarele informații "
 "de stare."
 
 msgid "user.subscriptions.subscriptionStatus"
-msgstr "Status depunere"
+msgstr "Status abonare"
 
 msgid "user.subscriptions.mySubscriptions"
-msgstr "Depunerile mele"
+msgstr "Abonamentele mele"
