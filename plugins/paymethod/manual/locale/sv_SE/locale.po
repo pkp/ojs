@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-30 12:38+0000\n"
+"PO-Revision-Date: 2020-08-10 14:27+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual/sv_SE/>\n"
@@ -18,7 +18,7 @@ msgid "plugins.paymethod.manual.purchase.title"
 msgstr "Titel"
 
 msgid "plugins.paymethod.manual.notificationSent"
-msgstr "Kvitto på betalning skickat"
+msgstr "Ett kvitto på betalning har skickats"
 
 msgid "plugins.paymethod.manual.paymentNotification"
 msgstr "Avisering om betalning"
