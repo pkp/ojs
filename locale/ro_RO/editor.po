@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-04 10:53+0000\n"
+"PO-Revision-Date: 2020-08-10 14:27+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "ro_RO/>\n"
@@ -263,7 +263,7 @@ msgid "editor.issues.identification"
 msgstr "Identificare"
 
 msgid "editor.issues.subscription"
-msgstr "Înregistrare"
+msgstr "Abonament"
 
 msgid "editor.issues.openAccess"
 msgstr "Acces liber"
