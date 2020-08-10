@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-10 02:49+0000\n"
+"PO-Revision-Date: 2020-08-10 14:27+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ro_RO/>\n"
@@ -130,7 +130,7 @@ msgid "manager.payment.enable"
 msgstr "Activare"
 
 msgid "manager.payment.editSubscription"
-msgstr "Editează abonamentul"
+msgstr "Editați abonamentul"
 
 msgid "manager.payment.details"
 msgstr "Detalii"
@@ -333,3 +333,1814 @@ msgstr "Afișați utilizatorii fără rol"
 
 msgid "manager.people.allSiteUsers"
 msgstr "Înscrieți un utilizator de pe acest site în acest jurnal"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Abonările necesită informații privind apartenența (de exemplu, la o "
+"asociație, organizație, consorțiu etc.)"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Cost"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Cost"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Accept"
+
+msgid "manager.setup.management"
+msgstr "Management"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Obiectul specificat nu poate fi găsit."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Nici un obiect selectat."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Validarea XML înainte de exportare și înregistrare."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Notificați abonații prin e-mail după expirarea abonamentului."
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Pentru a trimite o trimitere automată de e-mail, site-ul de administrare a "
+"acesteia trebuie să activeze <tt>scheduled_tasks</tt>Opțiune în fișierul de "
+"configurare OJS. Configurarea suplimentară a serverului poate fi necesară "
+"pentru a putea fi indicată în documentația OJS."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Este necesar un nume de persoană pentru asistență."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Este necesar un email de asistență."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr ""
+"Este necesar de a completa numărul minim de revizori alocați unui manuscris."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Solicitați evaluatorilor să depună o declarație de interes  la fiecare "
+"evaluare."
+
+msgid "manager.setup.masthead"
+msgstr "Masthead"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} din {$total} articole"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Fișiere vizualizate după dată"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Rezumate vizualizate după dată"
+
+msgid "stats.publications.none"
+msgstr ""
+"Nu s-au găsit articole cu statistici de utilizare care să corespundă acestor "
+"parametri."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Trimiteți o copie la contactul principal, identificat în Setările jurnalului."
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Calea jurnalului specificat,\"{$journalPath}\", nu există."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Prefixul DOI lipsește pentru jurnalul cu calea {$path}."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Fișierul de intrare {$param} nu poate fi citit."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Fișierul de ieșire {$param} nu este inscriptibil."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Nu s-au putut converti obiectele selectate."
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Marcat înregistrat"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Rețineți că parola va fi salvată ca text simplu, adică nu criptată."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"Nu sunt selectate obiecte de publicare pentru alocarea DOI în pluginul de "
+"identificare publică DOI, astfel încât nu există nicio depunere sau "
+"posibilitate de export în acest plugin."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Pentru a utiliza acest plugin, vă rugăm să accesați categoria pluginului „"
+"Public Identifier”, să activați și să configurați pluginul DOI și să "
+"specificați acolo un prefix DOI valid."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Cerințele pluginului nu au fost îndeplinite"
+
+msgid "grid.genres.description"
+msgstr ""
+"Aceste componente sunt utilizate în scopuri de denumire a fișierelor și sunt "
+"prezentate într-un meniu derulant la încărcarea fișierelor. Genurile "
+"desemnate ## permit utilizatorului să asocieze fișierul cu întreaga "
+"trimitere 99Z sau cu o anumită componentă după număr (de exemplu, 02)."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Eliminați declarația de copyright și informațiile de licență pentru fiecare "
+"articol publicat, aducându-le la setările implicite ale jurnalului. Aceasta "
+"va elimina definitiv toate drepturile de autor anterioare și informațiile de "
+"licență atașate la articole. În unele cazuri, este posibil să nu aveți "
+"dreptul legal să re-licențiați lucrările care au fost publicate sub o altă "
+"licență. Vă rugăm să aveți grijă când utilizați acest instrument și "
+"consultați expertiza juridică dacă nu sunteți sigur ce drepturi dețineți "
+"asupra articolelor publicate în jurnalul dvs."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Sigur doriți să resetați datele privind permisiunile pentru toate "
+"articolele? Această acțiune nu poate fi anulată."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Număr: anul implicit va fi extras de la data publicării numărului."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Articol: anul implicit va fi extras de la data publicării articolului, ca în "
+"„publish-as-you-go”."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Bazați drepturile de autor pentru articole noi la anul"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Rolurile sunt grupuri de utilizatori din jurnal cărora li se oferă acces la "
+"diferite niveluri de permisiuni și la fluxurile de lucru asociate din "
+"jurnal. Există cinci niveluri de permisiuni diferite: Managerii de jurnale "
+"au acces la tot ce există în jurnal (tot conținutul și setările); Redactorii "
+"de secțiuni au acces complet la întregul conținut alocat; Asistenții de "
+"jurnal au acces limitat la toate trimiterile care le-au fost atribuite în "
+"mod explicit de către un editor; Recenzorii pot vedea și efectua trimiterile "
+"cărora li s-au atribuit examinarea; iar Autorii pot vedea și interacționa cu "
+"o cantitate limitată de informații din propriile trimiteri. În plus, există "
+"cinci misiuni de etapă diferite la care rolurile pot avea acces la: "
+"Înregistrare manuscris, Revizuire Internă, Revizuire, Redacție și Producție."
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Articolele din numerele publicate ale unei reviste sunt organizate în "
+"secțiuni, de obicei în funcție de temă sau tip de conținut (de exemplu, "
+"articole de revizuire, cercetare etc.)."
+
+msgid "grid.category.path"
+msgstr "Cale"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Alegeți categoriile cele mai potrivite din setul enumerat mai sus. Cititorii "
+"vor putea răsfoi după categorie din setul complet de jurnale."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Acest link va fi afișat numai atunci când vizitatorul este conectat."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Link către o pagină care descrie abonamentele curente și anterioare ale "
+"vizitatorului."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Link către o pagină care descrie abonamentele pe care le oferiți."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Există deja un tip de abonament cu acest nume."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Vă rugăm să utilizați caseta pusă la dispoziție."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Nu faceți acest tip de abonament disponibil public sau vizibil pe site-ul "
+"web."
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Vă rugăm să utilizați caseta pusă la dispoziție."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Numărul de luni care durează abonamentul (de ex. 12)."
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Vă rugăm să utilizați opțiunile furnizate."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+"Introduceți o valoare numerică (de exemplu, 40 sau 40.00) fără simbol (de "
+"exemplu, $)."
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Avertizare! Toate abonamentele de acest tip vor fi, de asemenea, șterse. "
+"Sigur doriți să continuați și să ștergeți acest tip de abonament?"
+
+msgid "manager.subscriptionTypes"
+msgstr "Tipuri de abonamente"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Numele instituției"
+
+msgid "manager.subscriptions.contact"
+msgstr "Nume de contact"
+
+msgid "manager.subscriptions.user"
+msgstr "Utilizator"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Tip de abonare"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Abonamentul a fost creat cu succes."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Tipul de abonament a fost creat cu succes."
+
+msgid "manager.subscriptions.select"
+msgstr "Selectare"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Privilegiile de acces la abonamente sunt acordate automat managerilor de "
+"jurnal, editorilor, editorilor de secțiuni, editorilor de machetă, celor de "
+"conținut și corectorilor."
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Selectare utilizator"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Selectați contactul de abonare"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Nici o abonare"
+
+msgid "manager.subscriptions.notes"
+msgstr "Note"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Număr de referință"
+
+msgid "manager.subscriptions.membership"
+msgstr "Apartenență"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Interval IP"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+"Trebuie creat un tip de abonament înainte de a putea face abonamente noi."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Acest utilizator are deja un abonament pentru acest jurnal."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Pentru a trimite utilizatorului un e-mail de notificare, numele contactului "
+"de abonament și adresa de e-mail trebuie specificate în jurnalul de "
+"configurare."
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Salvați și creați un alt"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Adaugă"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Șterge"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Vă rog să introduceți o adresă validă de IP."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Dacă intervalele de IP sunt introduse aici, domeniul este opțional.<br />"
+"Valorile valide includ adrese IP (e.g. 142.58.103.1), intervale de IP (e.g. "
+"142.58.103.1 - 142.58.103.4), Interval IP cu wildcard '*' (e.g. 142.58.*.*), "
+"și intervale IP cu CIDR (e.g. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Intervale IP"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Vă rog să introduceți un domeniu valid."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Tipul de abonament selectat necesită un domeniu și / sau un interval IP "
+"pentru autentificarea acesteia."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Dacă domeniul este introdus aici, adresele IP sunt opționale.<br />Sunt "
+"valide doar numele de domenii (e.g. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Adresa de poștă"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Este solicitat numele instituției."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Numele instituției"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domeniu"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Note"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr ""
+"Pentru tipul de abonare selectat sunt necesare informații privind "
+"apartenența."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Introduceți informațiile despre apartenență dacă tipul abonamentului "
+"solicită ca abonații să aparțină unei asociații sau organizații."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Număr de referință"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Apartenență"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Vă rugăm să utilizați caseta pusă la dispoziție."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Trimiteți utilizatorului un e-mail cu numele de utilizator și detaliile "
+"abonamentului."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Vă rog să selectați o țară validă."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Selectați un utilizator valid."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Este necesar un utilizator."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Contact"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Utilizator"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Notă: Toate modificările de mai jos se referă la profilul utilizatorului."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Selectați o dată validă de încheiere a abonamentului."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Acesta este un tip de abonament care nu expiră; vă rugăm să nu specificați o "
+"dată de încheiere."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Acesta este un tip de abonament care nu expiră; vă rugăm să nu specificați "
+"data de început."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Este necesară data de final a abonamentului."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Dată de sfârșit"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Vă rog să selectați o dată de start pentru abonament."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Este necesară data de începere a abonamentului."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Data de început"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Vă rog să selectați un tip de abonare valid."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Este necesar numele tipului de abonament."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Este necesar numele tipului de abonament."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Tipul de abonament"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Vă rog să selectați un status de abonare valid."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Este necesar statusul de abonare."
+
+msgid "manager.subscriptions.form.status"
+msgstr "Statut"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Toate"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Cu statut"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Editați"
+
+msgid "manager.subscriptions.edit"
+msgstr "Editați abonamentul"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domeniu"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Data de început"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Start"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Dată de sfârșit"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Finalizare"
+
+msgid "manager.subscriptions.renew"
+msgstr "Reînnoire"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Crează"
+
+msgid "manager.subscriptions.create"
+msgstr "Creați un nou abonament"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Creați un nou tip de abonament"
+
+msgid "manager.subscriptions.summary"
+msgstr "Sumarul abonamentelor"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Sigur doriți să ștergeți acest abonament?"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Sigur doriți să reînnoiți acest abonament?"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Abonamente instituționale"
+
+msgid "manager.individualSubscriptions"
+msgstr "Abonamente individuale"
+
+msgid "manager.subscriptions"
+msgstr "Abonamente"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Vă rugăm să introduceți un email valid."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Aceste date de contact vor fi listate pe pagina de abonare pentru clienții "
+"cu întrebări legate de abonamente."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Manager abonament"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Tipurile de abonament și structura taxelor vor fi afișate pe pagina "
+"abonamentelor, împreună cu numele și informațiile de contact pentru "
+"Managerul de abonamente. Informații suplimentare despre abonamente, cum ar "
+"fi metodele de plată sau asistența pentru abonați din țările în curs de "
+"dezvoltare, pot fi adăugate aici."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Informații de abonament"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Abonamentele de jurnalele de  pot oferi „acces deschis cu întârziere” la "
+"conținutul publicat, precum și „auto-arhivarea” autorului (ambele cresc "
+"citirea și citarea conținutului)."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Opțiuni de acces deschis pentru abonament  de jurnale"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Notă:</strong> Pentru a activa aceste opțiuni, Managerul de jurnale "
+"trebuie să activeze modulul de plăți online, inclusiv plățile online pentru "
+"abonamente, sub Taxe de citire."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Notă:</strong> Abonamentele instituționale achiziționate online "
+"necesită aprobarea domeniilor și a intervalelor IP furnizate și activarea "
+"abonamentului de către administratorul abonamentului."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Notificați administratorul abonamentelor prin e-mail la reînnoirea online a "
+"unui abonament instituțional."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Notificați administratorul abonamentului prin e-mail la reînnoirea online a "
+"unui abonament individual."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Notificați administratorul abonamentelor prin e-mail după cumpărarea online "
+"a unui abonament instituțional (recomandat)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Notificați-vă administratorul abonamentului prin e-mail după cumpărarea "
+"online a unui abonament individual."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Notificările automate de e-mail (disponibile pentru editare pentru Managerii "
+"de jurnak în e-mailurile OJS) pot fi fișierele de gestionare a abonamentului "
+"la finalizarea plăților online pentru abonament."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Notificări de plată online"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Notă:</strong> Pentru a putea activa această opțiune, "
+"administratorul site-ului trebuie să activeze opțiunea "
+"<tt>scheduled_tasks</tt> în fișierul de configurare OJS. Configurarea "
+"suplimentară a serverului poate fi necesară pentru o susținere a acestei "
+"funcții (nu este posibilă pentru toate serviciile), dupăcum este indicat în "
+"documentația OJS."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Cititorii trebuie să poată avea opțiuni pentru a primi un tabel cu privire "
+"la e-mail atunci când problemă devine accesibilă."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Selectați o valoare valabilă pentru numărul de funcții înainte de expirarea "
+"abonamentului."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Selectați o valoare valabilă pentru numărul de luni înainte de expirarea "
+"abonamentului."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Selectați o valoare valabilă pentru numărul de luni înainte de expirarea "
+"abonamentului."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Vă rugăm să selectați o valoare valabilă pentru numărul de luni după "
+"expirarea abonamentului."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML poate fi utilizat în textarea (pentru dimensiunea fontului, culoare "
+"etc.), cu „returnări” tratate ca <tt>&lt;br&gt;</tt>; Editorul HTML "
+"funcționează cu browserele Firefox."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Selectați una dintre următoarele:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Notă:</strong> Pentru a activa aceste opțiuni, administratorul site-"
+"ului trebuie să activeze opțiunea <tt>scheduled_tasks</tt> în fișierul de "
+"configurare OJS. Configurația suplimentară a serverului poate fi necesară "
+"pentru a susține această funcționalitate (care nu este posibilă pe toate "
+"serverele), așa cum este indicat în documentația OJS."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Memento-uri automate de e-mail (disponibile pentru editare de către Journal "
+"Managers în e-mailurile OJS) pot fi trimise abonaților atât înainte cât și "
+"după expirarea abonamentului."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Memento-uri de expirare a abonamentului"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Notificați abonații prin e-mail înainte de expirarea abonamentului."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Notificați abonații prin e-mail înainte de expirarea abonamentului."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Notificați abonații prin e-mail după expirarea abonamentului"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} WSăptămâni"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Luni"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Cititorilor li se refuză accesul la conținutul de abonament publicat recent, "
+"dar își păstrează accesul la conținutul abonament publicat înainte de data "
+"expirării abonamentului."
+
+msgid "manager.setup.userAccess.success"
+msgstr "Detaliile de acces ale utilizatorului au fost actualizate."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Expirare parțială"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Cititorilor li se refuză accesul la întregul conținut al abonamentului la "
+"expirarea abonamentului."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Expirarea completă"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"La expirarea abonamentului, cititorilor li se poate refuza accesul la tot "
+"conținutul abonamentului sau poate continua să păstreze accesul la "
+"conținutul abonament publicat înainte de data expirării abonamentului."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Expirare abonament"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Vă rugăm să utilizați caseta pusă la dispoziție."
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Refuzați"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Număr de vizualizări articol (doar pentru autori)"
+
+msgid "manager.statistics.statistics"
+msgstr "Statistici jurnal"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tAplicația OJS instalată este configurată pentru a înregistra mai multe "
+"date de utilizare. Statisticile de utilizare vor fi afișate în diferite "
+"contexturi.\n"
+"\t\tExistă cazuri în care trebuie utilizată o singură statistică de "
+"utilizare, de ex. pentru a afișa o listă ordonată cu cele mai utilizate "
+"articole sau pentru a clasifica\n"
+"\t\trezultatele căutărilor. Vă rugăm să selectați una din valorile "
+"măsurabile ca implicită.\n"
+"\t"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Text titlu"
+
+msgid "manager.setup.userRegistration"
+msgstr "Înregistrare utilizator"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Titlul imagine"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Miniatura"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Jurnalul va folosi un comitet editorial / de revizuire."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Articolele și numerele pot fi etichetate cu un număr sau un șir de "
+"identificare, folosind un sistem de înregistrare, cum ar fi Digital Object "
+"Identifier System (DOI)."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Identificator unic"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Oferiți exemple de tipuri de cercetare, metode și abordări relevante pentru "
+"acest domeniu"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Tip (metodă/abordare)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(De exemplu, anchetă istorică; cvasi-experimentală; analiză literară; sondaj "
+"/ interviu)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Furnizați metadate serviciilor de indexare ale terților prin intermediul <a "
+"href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Activați OAI"
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Ghidul autorului, drepturile de autor și indexarea (inclusiv înregistrarea)."
+
+msgid "manager.setup.submissions"
+msgstr "Înregistrare manuscris"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"La înregistrarea manuscrisului către revistă, autorilor li se cere mai întâi "
+"să verifice fiecare articol din Lista de verificare a pregătirii înainte de "
+"a continua. Lista de verificare apare și în Ghidul autorului, la Despre "
+"jurnal. Lista poate fi editată mai jos, dar toate elementele din listă vor "
+"necesita o bifă înainte ca autorii să poată continua trimiterea lor."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Lista de verificare a pregătirii depunerii manuscrisului"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Ghidul de înregistrare manuscrise"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Oferiți exemple de cuvinte cheie sau subiecte ca ghidul pentru autori"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Cuvinte cheie"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(De exemplu, fotosinteză; găuri negre; problema hărții în patru culori; "
+"teoria Bayesiană)"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Cinci pași către un site Web al jurnalului"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Vizualizare conținut articol"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Acces site"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr ""
+"Afișați întotdeauna linkurile la galerie și indicați acces restricționat."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Secțiunea jurnalului pentru care va fi luat în considerare articolul."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Editorul jurnalului vă permite să vedeți procesul editorial."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Pentru crearea sau modificarea secțiunilor pentru jurnal (de exemplu, "
+"articole, recenzii de carte etc.), accesați secțiunea de management.<br /><"
+"br />Autorii care înregistrează manuscrise în jurnal vor desemna..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Dacă nu sunt adăugate secțiuni, elementele sunt înregistrate în mod "
+"implicit în secțiunea Articole.)"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Secțiuni și editori de secțiuni"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Oferiți o scurtă descriere (50-300 de caractere) a jurnalului pe care "
+"motoarele de căutare o pot afișa la listarea jurnalului în rezultatele "
+"căutării."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Ajutați motoarele de căutare precum Google să vă descopere și să afișeze "
+"site-ul dvs. Sunteți încurajat să vă trimiteți <a href=\"{$sitemapUrl}\" "
+"target=\"_blank\">sitemap</a>."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Setările indexului motorului de căutare au fost actualizate."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Căutare indexare"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Politica de revizie"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Memento revizuiri"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Evaluările revizorilor"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Includeți un link securizat în invitația de e-mail către recenzori."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Revizorilor li se poate trimite un link securizat în invitația de e-mail, "
+"care le va permite să acceseze revizuirea fără să se autentifice. Accesul la "
+"alte pagini necesită conectare."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Acces cu un singur clic"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Acces revizor"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Revizorii nu vor avea acces la fișierul de trimitere până nu vor fi de acord "
+"să-l revizuiască."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Acces restricționat la fișiere"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Editorii vor evalua revizorii pe o scară de calitate în cinci puncte după "
+"fiecare revizuire."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Săptămâni permise pentru completarea reviziei"
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Revizuirea în orb"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Email automat de reamintire"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Opțiuni de revizuire"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Ghidul de revizuire"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Utilizatorii trebuie să fie înregistrați și să se autentifice pentru a "
+"vizualiza site-ul jurnalului."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Utilizatorii trebuie să fie înregistrați și să se autentifice pentru a "
+"vizualiza conținutul de acces deschis."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Link referință"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Aceste detalii pot fi incluse în metadatele furnizate unor organisme de "
+"arhivare terțe."
+
+msgid "manager.setup.publisher"
+msgstr "Editor de publicare"
+
+msgid "manager.setup.publishing"
+msgstr "Detalii de publicare"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Identificarea conținutului jurnalului"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Planificarea publicării"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Articolele din jurnal pot fi publicate colectiv, ca parte a unei probleme cu "
+"cuprinsul propriu. În mod alternativ, articolele individuale pot fi "
+"publicate imediat ce sunt gata, adăugându-le în cuprinsul volumului „curent”"
+". Furnizați cititorilor, în Despre jurnal, o declarație despre sistemul pe "
+"care acest jurnal îl va folosi și frecvența preconizată de publicare a "
+"acestuia."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Program de publicare"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Instrucțiunile de corectare vor fi puse la dispoziția redactorilor de "
+"corectare, a autorilor, a editorilor de machete și a editorilor de secțiuni "
+"în etapa de editare a transmiterii. Mai jos este un set implicit de "
+"instrucțiuni în HTML, care pot fi editate sau înlocuite de  Managerul de "
+"Journal în orice moment (în HTML sau text simplu)."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Instrucțiuni de corectură"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Declarația de confidențialitate a fost actualizată."
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Focus, recenzie, secțiuni, confidențialitate, securitate și suplimente "
+"despre articole."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN tipar"
+
+msgid "manager.setup.policies"
+msgstr "Politici"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Opțiuni numere de pagină"
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN Online"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Limită pentru numărul de documente afișate în listă de paginile ulterioare."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Linkuri de pagină"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Notă:</strong> Mesajul de confirmare a trimiterii este dezactivat în "
+"prezent. Pentru a utiliza această caracteristică, activăți prin e-mail „"
+"Trimitere confirmare” din e-mailuri."
+
+msgid "manager.setup.note"
+msgstr "Notă"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Nu a fost încărcată o foaie de stil."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Nu s-a încărcat niciun fișier imagine."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Valoarea etichetei este un șir literal (de exemplu, \"Setare jurnal\"), mai "
+"degrabă decât o cheie a mesajului de localizare (de exemplu, \"manager."
+"setup\")"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL-ul este o adresă URL absolută (de ex., \"Http://www.example.com\") și nu "
+"o cale relativă la site (de exemplu, \"/manager /setup\")"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Adăugați sau eliminați elemente suplimentare din bara de navigare."
+
+msgid "manager.setup.navigationBar"
+msgstr "Bară de navigare"
+
+msgid "manager.setup.masthead.success"
+msgstr "Detaliile de la acest jurnal au fost actualizate."
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Pasul 4. Gestionarea jurnalului"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Configurare management și publicare"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Managementul etapelor editoriale de bază"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Acces și securitate, programare, anunțuri, editare de conținut, aranjare și "
+"corectură."
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Antetul paginii de pornire, conținut, antetul jurnalului, subsol, bara de "
+"navigare și foaie de stil."
+
+msgid "manager.setup.look"
+msgstr "Aspectul"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Înregistrați-vă la serviciul CLOCKSS vizitând <a href=\"http://clockss.org/\""
+" target=\"_blank\">situl web CLOCKSS</a>."
+
+msgid "stats.publications.galleys"
+msgstr "Fișiere"
+
+msgid "stats.publications.abstracts"
+msgstr "Rezumate"
+
+msgid "stats.publications.details"
+msgstr "Detalii articol"
+
+msgid "stats.publicationStats"
+msgstr "Statut articol"
+
+msgid "plugins.importexport.common.cliError"
+msgstr "EROARE:"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Înregistrare finalizată cu succes!"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Înregistrarea nu s-a finalizat cu succes!. Serverul registrator DOI a "
+"returnat eroarea: '{$param}'."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "XML Invalid:"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Înregistrare"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Marcă înregistrată"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Export"
+
+msgid "plugins.importexport.common.action"
+msgstr "Acțiune"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Înregistrat"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Nu este (sunt) depozitat(e)"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Orice statut"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Orice număr"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Parolă"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Pluginul nu este setat complet."
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Galerii"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Numere"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Articole"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Setări plugin DOI"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Setări"
+
+msgid "grid.genres.title"
+msgstr "Componente articol"
+
+msgid "grid.genres.title.short"
+msgstr "COmponente"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Permisiunile articolului au fost resetate cu succes."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Resetare permisiuni articol"
+
+msgid "manager.publication.library"
+msgstr "Biblioteca editorului de publicare"
+
+msgid "grid.action.addSection"
+msgstr "Adăugați o secțiune"
+
+msgid "manager.setup.categories"
+msgstr "Categorii"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Nu a fost creat nici un tip de abonament."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Tipul de abonament"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Numele tipului"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Salvați și creați altă"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Opțiuni"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Vă rugăm să utilizați opțiunile furnizate."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Instituțional (Utilizatorii sunt validați pe vaza domeniului ori adresei IP)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individual (Utilizatorii sunt validați pe baza logării)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Abonamente"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Vă rog să selectați un format valid pentru abonament."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Este necesar tipul de abonament."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Este necesară durata."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Durata trebuie să fie o valoare numerică pozitivă."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Durata"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Nu expiră niciodată"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "luni (ex. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Expiră după"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Descriere"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Vă rog să selectați o valută validă."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Valuta este necesară."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Valuta"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Este necesar un preț."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Costul trebuie să aibă o valoare pozitivă, numerică."
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Editați"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Editați tipul de abonament"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Durata"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Creați"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Instituțional"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individual"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Abonări"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Descrierea licenței CLOCKSS"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"O licență CLOCKSS va apărea în Despre jurnal sub Arhivare: <a href=\""
+"http://clockss.org/\" target=\"_blank\">Licența CLOCKSS</a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Permiteți CLOCKSS să stocheze și să distribuie conținutul jurnalului în "
+"bibliotecile participante prin intermediul CLOCKSS <a href=\"{$clockssUrl}\" "
+"target=\"_blank\">pagina Manifestul editorului</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"IIdentificați 6-10 biblioteci care vor înregistra jurnalul. De exemplu, "
+"adresați-vă instituțiilor unde lucrează editori sau membri ai consiliului de "
+"administrație și / sau instituții care participă deja la LOCKSS. Vedeți <a "
+"href=\"http://www.lockss.org/community/\" target=\"_blank\">comunitatea "
+"LOCKSS</a>."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Descrierea licenței LOCKSS"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"O licență LOCKSS va apărea în Despre jurnal sub Arhivare: <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"Licența LOCKSS</a>"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Permiteți LOCKSS să stocheze și să distribuiți conținutul jurnalului în "
+"bibliotecile participante la LOCKSS <a href=\"{$lockssUrl}\" target=\""
+"_blank\">pagina Manifestul editorului</a>."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS și CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"Rețeaua de conservare PKP (PN) oferă servicii de conservare gratuite pentru "
+"orice jurnal OJS care îndeplinește câteva criterii de bază. Pluginul PKP PN "
+"pentru OJS 3 este în prezent în curs de dezvoltare și va fi disponibil în "
+"galeria de pluginuri în curând."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "Rețea de conservare PKP (PN)"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Vizualizați <button>setări plugin</button> să accepte condițiile de "
+"utilizare pentru PKP PN."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"Pluginul PKP PN (Conservare rețea) oferă servicii de conservare gratuite "
+"pentru orice jurnal OJS care îndeplinește câteva criterii de bază."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Activați pluginul PKP PN"
+
+msgid "manager.setup.lists"
+msgstr "Liste"
+
+msgid "manager.setup.lists.success"
+msgstr "Setările listei pentru acest jurnal au fost actualizate."
+
+msgid "manager.setup.labelName"
+msgstr "Numele etichetei"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Oferiți o scurtă descriere a jurnalului dvs. și identificați editorii, "
+"directorii manageri și alți membri ai echipei dvs. de redacție."
+
+msgid "manager.setup.keyInfo"
+msgstr "Informație cheie"
+
+msgid "manager.setup.contextTitle"
+msgstr "Titlul jurnalului"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Un mic logo sau reprezentare a jurnalului care poate fi utilizat în listele "
+"de jurnale."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Miniatura jurnalului"
+
+msgid "manager.setup.journalTheme"
+msgstr "Tema jurnalului"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Formatul foii de stil jurnal este invalid. Formatul acceptat este .css."
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Configurarea jurnalului dvs. a fost actualizată."
+
+msgid "manager.setup.journalSetup"
+msgstr "Setare jurnal"
+
+msgid "manager.setup.journalPolicies"
+msgstr "Pasul 2. Politicile jurnalului"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Aceasta este subsolul jurnalului. Pentru a-l schimba sau actualiza, lipiți "
+"codul HTML în caseta de text mai jos. Exemple pot fi o altă bară de "
+"navigare, un contor, etc. Acest subsol va apărea în fiecare pagină."
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Subsol pagină"
+
+msgid "manager.setup.journalLogo"
+msgstr "Logo-ul jurnalului"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Alegeți o temă de jurnal și selectați aici componentele de aspect. Poate fi "
+"încărcat și o fișier de stil de jurnal, care poate fi folosit pentru a "
+"înlocui datele de stil din foile de stil din întregul sistem și din tabelul "
+"de stil (dacă este aleasă o temă)."
+
+msgid "manager.setup.journalLayout"
+msgstr "Aspectul jurnalului"
+
+msgid "manager.setup.contextInitials"
+msgstr "Inițialele jurnalului"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Logo-ul jurnalului"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Pentru pagina principală poate fi încărcată o versiune grafică a titlului și "
+"logo-ului jurnalului (ca fișier .gif, .jpg sau .png), care va înlocui "
+"versiunea text."
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Antetul paginii principale"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Antetul paginii principale"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"În mod implicit, pagina principală constă din link-uri de navigare. Conținut "
+"suplimentar al paginii de pornire poate fi anexat folosind una sau toate "
+"opțiunile următoare, care vor apărea în ordinea indicată. Rețineți că "
+"numărul curent este întotdeauna accesibil prin linkul Curent din bara de "
+"navigare."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Conținutul paginii principale"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Includeți informații despre jurnalul dvs. care pot fi de interes pentru "
+"cititori, autori sau recenzori. Aceasta ar putea include politica dvs. de "
+"acces deschis, accentul și domeniul de aplicare al jurnalului, notificarea "
+"privind drepturile de autor, divulgarea sponsorizării, istoricul jurnalului, "
+"o declarație de confidențialitate și includerea în orice sistem de arhivare "
+"LOCKSS sau CLOCKSS."
+
+msgid "manager.setup.contextAbout"
+msgstr "Despre revistă"
+
+msgid "manager.setup.contextSummary"
+msgstr "Rezumatul jurnalului"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Arhivarea jurnalului"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Abreviere jurnal"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Limitați numărul de elemenre (de exemplu, manuscrise, utilizatori sau "
+"misiuni de editare) la afișare într-o listă înainte de a afișa elemente "
+"ulterioare într-o altă pagină."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Elemente pe pagină"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Pot fi adăugate elemente suplimentare la bara de navigare, alături de setul "
+"curent (Acasă, Despre,  etc.), care apare în partea de sus a paginii."
+
+msgid "manager.setup.institution"
+msgstr "Instituție"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"În funcție de formatul selectat, identificarea numărului, volumului și / sau "
+"anul primelor numere vor fi fi publicate în fiecare OJS:"
+
+msgid "manager.setup.initialIssue"
+msgstr "Număr inițial"
+
+msgid "manager.setup.information.success"
+msgstr "Informațiile pentru această revistă au fost actualizate."
+
+msgid "manager.setup.information.forReaders"
+msgstr "Pentru cititori"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Pentru bibliotecari"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Pentru autori"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Scurte descrieri ale revistei pentru bibliotecari și potențiali autori și "
+"cititori. Acestea sunt disponibile în bara laterală a site-ului în blocul de "
+"Informații."
+
+msgid "manager.setup.information"
+msgstr "Informații"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Pentru jurnalele care oferă acces deschis imediat sau întârziat, includeți o "
+"licență Creative Commons cu toate lucrările publicate la momentul potrivit."
+
+msgid "manager.setup.identity"
+msgstr "Identitatea jurnalului"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Pasul 3. Ghidarea înregistrării de manuscrise"
+
+msgid "manager.setup.guidelines"
+msgstr "Instrucțiuni"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Pasul 1. Înregistrarea detaliilor"
+
+msgid "manager.setup.generalInformation"
+msgstr "Informații generale"
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Titlul jurnalului este necesar."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Initialele jurnalului sunt obligatorii."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Este necesar numele principal de contact."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "E-mailul principal de contact este necesar."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "ISSN specificat nu este valid."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS aderă la <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open "
+"Archives Initiative</a> Protocol pentru colectarea metadatelor, care este "
+"standardul emergent pentru furnizarea de acces indexat la resursele "
+"electronice de cercetare  la scară globală. Autorii vor folosi un șablon "
+"similar pentru a furniza metadate în vederea transmiterii lor. Managerul "
+"jurnalului ar trebui să selecteze categoriile pentru indexare și să prezinte "
+"autoriilor exemple relevante pentru a-i ajuta în indexarea lucrărilor lor."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Pentru autorii, în vederea indexării activității acestora"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Descrieți autorilor, cititorilor și bibliotecarilor gama de articole pe care "
+"jurnalul le va publica."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Scop"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Vizitatorii se pot înregistra cu un cont de utilizator la jurnal."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Câte anunțuri pot fi afișate pe pagina principală. Lăsați această casetă "
+"goală pentru a nu afișa anunțuri."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Afișare pe pagina de pornire"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Anunțurile pot fi publicate pentru a informa cititorii despre știrile și "
+"evenimentele din jurnal. Anunțurile publicate vor apărea pe pagina Anunțuri."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Activați anunțurile"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"E-mailurile pregătite care sunt trimise de sistem în numele jurnalului vor "
+"avea următoarea semnătură adăugată la final."
+
+msgid "manager.setup.emailSignature"
+msgstr "Semnătură"
+
+msgid "manager.setup.emails"
+msgstr "Identificare prin e-mail"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Pentru ca emailurile ”undeliverable” să fie trimise la adresa bounce, "
+"administratorul sitului trebuie să activeze "
+"<code>allow_envelope_sender</code> opțiune în fișierul de configurare a site-"
+"ului. Configurația serverului poate fi necesară, așa cum este indicat în "
+"documentația OJS."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Orice e-mailuri care nu sunt livrate vor duce la un mesaj de eroare la "
+"această adresă."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Adresă de respingere emailuri"
+
+msgid "manager.setup.editorDecision"
+msgstr "Decizia editorului"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Adăugați cuprinsul pentru numărul curent (dacă este disponibil)."
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr ""
+"Oferiți exemple de discipline academice relevante pentru această revistă"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(De exemplu, istorie; educație; sociologie; psihologie; studii culturale; "
+"drept)"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Este util atunci când jurnalul traversează granițele disciplinare și / sau "
+"autorii trimit articole multidisciplinare."
+
+msgid "manager.setup.discipline"
+msgstr "Discipline și subdiscipline academice"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Manager ul de Journal  va înregistra toate conturile de utilizator. "
+"Redactorii sau editorii de secțiuni pot înregistra conturi de utilizator "
+"pentru recenzori."
+
+msgid "manager.setup.details.description"
+msgstr "Numele jurnalului, ISSN, contacte, sponsori și motoare de căutare."
+
+msgid "manager.setup.details"
+msgstr "Detalii"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Pasul 5. Personalizarea aspectului"
+
+msgid "manager.setup.currentIssue"
+msgstr "Număr curent"
+
+msgid "manager.setup.contact.success"
+msgstr "Datele de contact pentru această revistă au fost actualizate."
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Acest text va apărea în secțiunea „Despre” de pe site-ul web al jurnalului "
+"și poate fi utilizat pentru a descrie modificările titlurilor, ale "
+"comitetului de redacție și alte elemente relevante pentru istoricul "
+"publicării jurnalului."
+
+msgid "manager.setup.history"
+msgstr "Istoric jurnal"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Solicitați autorilor care înregistrează manuscrise să depună o declarație de "
+"interes (CI) odată cu transmiterea lor."
+
+msgid "manager.setup.archiving.success"
+msgstr "Detaliile de arhivare pentru acest jurnal au fost actualizate."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Să apară în Despre Jurnal) "
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Introduceți orice informație doriți să se afișeze pe pagina de anunțuri."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introducere"
+
+msgid "manager.setup.announcements.success"
+msgstr "Setările anunțurilor au fost actualizate."
+
+msgid "manager.setup.announcements"
+msgstr "Anunțuri"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"În mod alternativ, în loc de titlu și logo, o versiune HTML a antetului "
+"poate fi introdusă în caseta de text de mai jos. Lăsați căsuța text goală "
+"dacă nu este necesar."
+
+msgid "manager.setup.alternateHeader"
+msgstr "Antet alternativ"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Adăugați un nou link de bază de date"
+
+msgid "manager.setup.addSponsor"
+msgstr "Adăugați un sponsor"
+
+msgid "manager.setup.addNavItem"
+msgstr "Adăugați element"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Adaugă un element care să apară în „Despre jurnal”"
+
+msgid "manager.setup.addItem"
+msgstr "Adăugare element"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Adăugați lista de verificare"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Adăugați Despre element"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Conținut"
+
+msgid "manager.setup.pageHeader"
+msgstr "Antetul paginii de jurnal"
+
+msgid "manager.setup.contextName"
+msgstr "Numele jurnalului"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Fișă de stil jurnal"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Prima pagină a jurnalului constă din linkuri de navigare în mod implicit. "
+"Conținutul suplimentar al paginii de pornire poate fi anexat folosind una "
+"sau mai multe din opțiunile următoare, care vor apărea în ordinea indicată."
+
+msgid "manager.setup.homepageContent"
+msgstr "Conținutul paginii de pornire a jurnalului"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Echipa editorială"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Acces liber întârziat"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Politici de abonare"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"Rezultate restrânse în funcție de tipul obiectului (jurnal, număr, articol, "
+"tipuri de fișiere) și / sau de unul sau mai multe ID-uri de obiect."
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Rezultate restrânse după context (volume și/sau articol)."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Vizualizări cuprins volum"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Vizualizări ale paginii principale a jurnalului"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Vizualizări și descărcări ale rezumatelor articolelor"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Vizualizări pagină rezumat articol"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Fișiere de articole descărcate"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Abonamente"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Selectați secțiunile pentru calcularea statisticilor revizuite de la acea "
+"revistă."
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Numărul de revizii"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Scor editor"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Revizori"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Nr. Alocat"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Cititori înregistrați"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Revizii"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Număr total de manuscrise depuse"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Numere publicate"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Notă: Procentele de manuscripte revizuite nu pot fi de până la 100%, "
+"deoarece articolele reînregistrate sunt fie acceptate,respinse, fie încă în "
+"proces."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Verificați articolele care vor fi puse la dispoziția cititorilor din Despre "
+"jurnal."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Articole publicate"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS calculează următoarele statistici pentru fiecare jurnal. „Zilele de "
+"revizuire” se calculează de la data depunerii (sau desemnarea versiunii de "
+"revizuire) la Decizia inițială de editor, în timp ce „zilele de publicare” "
+"sunt măsurate pentru trimiterile acceptate de la încărcarea inițială la "
+"publicarea sa."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Zile pentru publicare"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Zile pentru revizie"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Reînregistrați"
+
+msgid "manager.setup"
+msgstr "Setări jurnal"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Numărul de cuvinte din rezumat este limitat în cazul acestei secțiuni (0 "
+"fără limită)"
+
+msgid "manager.sections.wordCount"
+msgstr "Număr de cuvinte"
+
+msgid "manager.sections.unassigned"
+msgstr "Editori de secțiune disponibili"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Înregistrări de manuscrise la această secțiune a jurnalului"
+
+msgid "manager.sections.submissionReview"
+msgstr "Nu va fi revizuit"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Nu va fi inclus în indexarea jurnalului"
+
+msgid "manager.sections.reviewed"
+msgstr "Revizii"
+
+msgid "manager.sections.readingTools"
+msgstr "Instrumente de citit"
+
+msgid "manager.sections.policy"
+msgstr "Secțiunea Politică"
+
+msgid "manager.sections.open"
+msgstr "Deschide înregistrările de manuscrise"
+
+msgid "manager.sections.noneCreated"
+msgstr "Nu au fost create secțiuni."
+
+msgid "manager.sections.indexed"
+msgstr "Indexat"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(De exemplu, „Articol revizuit”, „Recenzie de carte”, „Comentariu invitat” "
+"etc.)"
+
+msgid "manager.sections.identifyType"
+msgstr "Identificați elementele publicate în această secțiune ca (n)"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Eliminați titlul acestei secțiuni din cuprinsul numerelor."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Omiteți numele autorilor pentru secțiunile din cuprinsul numerelor."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Pentru această secțiune este necesar un titlu."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Vă rugăm să vă asigurați că ați ales un formular de revizuire valid."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Vă rugăm să vă asigurați că cel puțin o casetă de selectare este bifată "
+"pentru fiecare misiune de editor de secțiuni."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Pentru această secțiune este nevoie de un titlu prescurtat"
