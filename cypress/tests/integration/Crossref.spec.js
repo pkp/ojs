@@ -130,11 +130,8 @@ describe('DOI/Crossref tests', function() {
 		cy.get('form#crossrefSettingsForm button:contains("Save")').click();
 		cy.get('div:contains("Your changes have been saved.")');
 
-		cy.reload();
-
 		cy.get('a#ui-id-2').click();
 		cy.get('input#select-1').check();
-		cy.get('input#validation').check();
 		cy.get('input#onlyValidateExport').check();
 		cy.get('button#export').click();
 
