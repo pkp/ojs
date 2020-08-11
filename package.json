@@ -13,7 +13,7 @@
     "@tinymce/tinymce-vue": "^1.1.0",
     "chart.js": "^2.9.3",
     "debounce": "^1.2.0",
-    "tinymce": "^4.9.10",
+    "tinymce": "^4.9.11",
     "v-tooltip": "^2.0.2",
     "vue": "^2.6.11",
     "vue-autosuggest": "^2.0.4",
