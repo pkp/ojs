@@ -68,7 +68,8 @@ class OJSMigration extends Migration {
 			$table->string('label', 255)->nullable();
 
 			$table->bigInteger('file_id')->nullable();
-			$table->foreign('file_id')->references('file_id')->on('submission_files');
+			// pkp/pkp-lib#6093 FIXME: Compound foreign key
+			// $table->foreign('file_id')->references('file_id')->on('submission_files');
 
 			$table->float('seq', 8, 2)->default(0);
 			$table->string('remote_url', 2047)->nullable();
