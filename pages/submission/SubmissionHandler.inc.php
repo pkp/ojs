@@ -52,8 +52,9 @@ class SubmissionHandler extends PKPSubmissionHandler {
 				};
 				header('Content-Type: text/json');
 				echo json_encode($matches);
+			default:
+				assert(false);
 		}
-		assert(false);
 	}
 
 
