@@ -28,9 +28,9 @@ class TemplateManager extends PKPTemplateManager {
 		parent::initialize($request);
 
 		// Pass app-specific details to template
-		$this->assign(array(
+		$this->assign([
 			'brandImage' => 'templates/images/ojs_brand.png',
-		));
+		]);
 
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/**
@@ -51,14 +51,11 @@ class TemplateManager extends PKPTemplateManager {
 				$this->addStyleSheet(
 					'siteStylesheet',
 					$request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . $site->getData('styleSheet')['uploadName'],
-					array(
-						'priority' => STYLE_SEQUENCE_LATE
-					)
+					['priority' => STYLE_SEQUENCE_LATE]
 				);
 			}
 			if (isset($context)) {
-
-				$this->assign(array(
+				$this->assign([
 					'currentJournal' => $context,
 					'siteTitle' => $context->getLocalizedName(),
 					'publicFilesDir' => $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId()),
@@ -71,22 +68,20 @@ class TemplateManager extends PKPTemplateManager {
 					'itemsPerPage' => $context->getData('itemsPerPage'),
 					'enableAnnouncements' => $context->getData('enableAnnouncements'),
 					'disableUserReg' => $context->getData('disableUserReg'),
-				));
-
-				$paymentManager = Application::getPaymentManager($context);
-				$this->assign('pageFooter', $context->getLocalizedData('pageFooter'));
+					'pageFooter' => $context->getLocalizedData('pageFooter'),
+				]);
 			} else {
 				// Check if registration is open for any contexts
 				$contextDao = Application::getContextDAO();
 				$contexts = $contextDao->getAll(true)->toArray();
-				$contextsForRegistration = array();
+				$contextsForRegistration = [];
 				foreach($contexts as $context) {
 					if (!$context->getData('disableUserReg')) {
 						$contextsForRegistration[] = $context;
 					}
 				}
 
-				$this->assign(array(
+				$this->assign([
 					'contexts' => $contextsForRegistration,
 					'disableUserReg' => empty($contextsForRegistration),
 					'displayPageHeaderTitle' => $site->getLocalizedPageHeaderTitle(),
@@ -95,7 +90,7 @@ class TemplateManager extends PKPTemplateManager {
 					'primaryLocale' => $site->getPrimaryLocale(),
 					'supportedLocales' => $site->getSupportedLocaleNames(),
 					'pageFooter' => $site->getLocalizedData('pageFooter'),
-				));
+				]);
 
 			}
 		}

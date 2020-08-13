@@ -26,8 +26,6 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter {
 		return 'plugins.importexport.native.filter.PublicationNativeXmlFilter';
 	}
 
-	
-
 
 	//
 	// Implement abstract methods from SubmissionNativeXmlFilter
