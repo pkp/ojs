@@ -16,12 +16,13 @@
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 
-	<migration class="lib.pkp.classes.migration.utils.DisableConstraintsMigration" />
-
-	<!-- PKP schema components -->
-	<migration class="lib.pkp.classes.migration.AnnouncementsMigration" />
-	<migration class="lib.pkp.classes.migration.CategoriesMigration" />
+	<migration class="classes.migration.JournalsMigration" />
 	<migration class="lib.pkp.classes.migration.CommonMigration" />
+	<migration class="lib.pkp.classes.migration.AnnouncementsMigration" />
+	<migration class="lib.pkp.classes.migration.SubmissionsMigration" />
+	<migration class="classes.migration.PublicationsMigration" />
+	<migration class="lib.pkp.classes.migration.AuthorsMigration" />
+	<migration class="lib.pkp.classes.migration.CategoriesMigration" />
 	<migration class="lib.pkp.classes.migration.ControlledVocabMigration" />
 	<migration class="lib.pkp.classes.migration.GenresMigration" />
 	<migration class="lib.pkp.classes.migration.LibraryFilesMigration" />
@@ -30,20 +31,16 @@
 	<migration class="lib.pkp.classes.migration.MetricsMigration" />
 	<migration class="lib.pkp.classes.migration.NavigationMenusMigration" />
 	<migration class="lib.pkp.classes.migration.NotesMigration" />
+	<migration class="lib.pkp.classes.migration.SubmissionFilesMigration" />
+	<migration class="classes.migration.IssuesMigration" />
 	<migration class="lib.pkp.classes.migration.ReviewFormsMigration" />
 	<migration class="lib.pkp.classes.migration.ReviewsMigration" />
 	<migration class="lib.pkp.classes.migration.RolesAndUserGroupsMigration" />
 	<migration class="lib.pkp.classes.migration.ScheduledTasksMigration" />
-	<migration class="lib.pkp.classes.migration.SubmissionFilesMigration" />
-	<migration class="lib.pkp.classes.migration.SubmissionsMigration" />
 	<migration class="lib.pkp.classes.migration.TemporaryFilesMigration" />
 	<migration class="lib.pkp.classes.migration.TombstoneMigration" />
 	<migration class="lib.pkp.classes.migration.ViewsMigration" />
-
-	<!-- OJS schema -->
 	<migration class="classes.migration.OJSMigration" />
-
-	<migration class="lib.pkp.classes.migration.utils.EnableConstraintsMigration" />
 
 	<!-- Other install tasks -->
 	<code function="createData"/>
