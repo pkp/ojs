@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-10 18:40+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2020-08-14 15:14+0000\n"
+"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-users/vi_VN/>\n"
 "Language: vi_VN\n"
@@ -35,7 +35,7 @@ msgid "plugins.importexport.users.export.couldNotWriteFile"
 msgstr "Không thể ghi vào tập tin \"{$fileName}\"."
 
 msgid "plugins.importexport.users.export.errorsOccurred"
-msgstr "Có lỗi trong khi xuất dữ liệu người dùng"
+msgstr "Đã có lỗi xảy ra khi Xuất dữ liệu người dùng"
 
 msgid "plugins.importexport.users.unknownPress"
 msgstr ""
@@ -64,8 +64,8 @@ msgstr "Tiếp tục nhập người dùng khác nếu xảy ra lỗi."
 
 msgid "plugins.importexport.users.import.sendNotify"
 msgstr ""
-"Gửi email thông báo cho mỗi người dùng được nhập có chứa tên tài khoản và "
-"mật khẩu của người dùng."
+"Gửi email thông báo cho mỗi người dùng được nhập vào với tên tài khoản và "
+"mật khẩu tương ứng."
 
 msgid "plugins.importexport.users.import.dataFile"
 msgstr "Tập tin dữ liệu người dùng"
@@ -107,4 +107,4 @@ msgid "plugins.importexport.users.description"
 msgstr "Nhập và xuất người dùng"
 
 msgid "plugins.importexport.users.displayName"
-msgstr "Plugin người dùng XML"
+msgstr "Plugin người dùng XML"
