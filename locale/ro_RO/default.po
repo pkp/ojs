@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-05 11:48+0000\n"
+"PO-Revision-Date: 2020-08-10 14:27+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "ro_RO/>\n"
@@ -122,10 +122,10 @@ msgid "default.groups.abbrev.sectionEditor"
 msgstr "SecE"
 
 msgid "default.groups.name.subscriptionManager"
-msgstr "Responsabil de Înregistrare"
+msgstr "Manager abonamente"
 
 msgid "default.groups.plural.subscriptionManager"
-msgstr "Responsabili de Înregistrare"
+msgstr "Manageri abonamente"
 
 msgid "default.groups.abbrev.subscriptionManager"
 msgstr "SubM"
