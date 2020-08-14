@@ -25,7 +25,7 @@ define('MEDRA_WS_RESPONSE_OK', 200);
 
 class MedraWebservice {
 
-	/** @var string HTTP authentication credentials. */
+	/** @var array HTTP authentication credentials. */
 	var $_auth;
 
 	/** @var string The mEDRA web service endpoint. */
@@ -40,7 +40,7 @@ class MedraWebservice {
 	 */
 	function __construct($endpoint, $login, $password) {
 		$this->_endpoint = $endpoint;
-		$this->_auth = "$login:$password";
+		$this->_auth = [$login, $password];
 	}
 
 
@@ -104,52 +104,35 @@ class MedraWebservice {
 			$contentType = 'text/xml';
 		}
 
-		// Prepare HTTP session.
-		import('lib.pkp.classes.helpers.PKPCurlHelper');
-		$curlCh = PKPCurlHelper::getCurlObject();
-
-		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($curlCh, CURLOPT_POST, true);
-
-		// Set up basic authentication.
-		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-		curl_setopt($curlCh, CURLOPT_USERPWD, $this->_auth);
-
-		// Make SOAP request.
-		curl_setopt($curlCh, CURLOPT_URL, $this->_endpoint);
-		$extraHeaders = array(
-			'SOAPAction: "' . $action . '"',
-			'Content-Type: ' . $contentType,
-			'UserAgent: OJS-mEDRA'
-		);
-		curl_setopt($curlCh, CURLOPT_HTTPHEADER, $extraHeaders);
-		curl_setopt($curlCh, CURLOPT_POSTFIELDS, $request);
-
+		$httpClient = Application::get()->getHttpClient();
 		$result = true;
-		$response = curl_exec($curlCh);
-
-		// We do not localize our error messages as they are all
-		// fatal errors anyway and must be analyzed by technical staff.
-		if ($response === false) {
+		// Make SOAP request.
+		try {
+			$response = $httpClient->request('POST', $this->_endpoint, [
+				'auth' => $this->_auth,
+				'headers' => [
+					'SOAPAction' => $action,
+					'Content-Type' => $contentType,
+					'UserAgent' => 'OJS-mEDRA',
+				],
+				'body' => $request,
+			]);
+		} catch (GuzzleHttp\Exception\RequestException $e) {
 			$result = 'OJS-mEDRA: Expected string response.';
 		}
 
-		if ($result === true && ($status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE)) != MEDRA_WS_RESPONSE_OK) {
+		if ($result === true && ($status = $response->getStatusCode()) != MEDRA_WS_RESPONSE_OK) {
 			$result = 'OJS-mEDRA: Expected ' . MEDRA_WS_RESPONSE_OK . ' response code, got ' . $status . ' instead.';
-		}
-
-		curl_close($curlCh);
-
-		// Check SOAP response by simple string manipulation rather
-		// than instantiating a DOM.
-		if (is_string($response)) {
+		} elseif ($result === true) {
+			// Check SOAP response by simple string manipulation rather
+			// than instantiating a DOM.
 			$matches = array();
-			PKPString::regexp_match_get('#<faultstring>([^<]*)</faultstring>#', $response, $matches);
+			PKPString::regexp_match_get('#<faultstring>([^<]*)</faultstring>#', $response->getBody(), $matches);
 			if (empty($matches)) {
 				if ($attachment) {
-					assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response));
+					assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response->getBody()));
 				} else {
-					$parts = explode("\r\n\r\n", $response);
+					$parts = explode("\r\n\r\n", $response->getBody());
 					$result = array_pop($parts);
 					$result = PKPString::regexp_replace('/>[^>]*$/', '>', $result);
 				}
