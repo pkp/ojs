@@ -208,55 +208,45 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 		assert(!empty($url));
 
 		// Prepare HTTP session.
-		import('lib.pkp.classes.helpers.PKPCurlHelper');
-		$curlCh = PKPCurlHelper::getCurlObject();
-
-		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($curlCh, CURLOPT_POST, true);
-		// Set up basic authentication.
-		$username = $this->getSetting($context->getId(), 'username');
-		$password = $this->getSetting($context->getId(), 'password');
-		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-		curl_setopt($curlCh, CURLOPT_USERPWD, "$username:$password");
-		// Transmit meta-data.
 		assert(is_readable($filename));
-		$payload = file_get_contents($filename);
-		assert($payload !== false && !empty($payload));
-		curl_setopt($curlCh, CURLOPT_URL, DATACITE_API_URL . 'metadata');
-		curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type: application/xml;charset=UTF-8'));
-		curl_setopt($curlCh, CURLOPT_POSTFIELDS, $payload);
-		$result = true;
-		$response = curl_exec($curlCh);
-		if ($response === false) {
-			$result = array(array('plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: No response from server."));
-		} else {
-			$status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
-			if ($status != DATACITE_API_RESPONSE_OK) {
-				$result = array(array('plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $status - $response"));
-			}
+		$httpClient = Application::get()->getHttpClient();
+		try {
+			$response = $httpClient->request('POST', DATACITE_API_URL . 'metadata', [
+				'auth' => [$this->getSetting($context->getId(), 'username'), $this->getSetting($context->getId(), 'password')],
+				'body' => fopen($filename, 'r'),
+				'headers' => [
+					'Content-Type' => 'application/xml;charset=UTF-8',
+				],
+			]);
+		} catch (GuzzleHttp\Exception\RequestException $e) {
+			return [['plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: No response from server."]];
 		}
+		if (($status = $response->getStatusCode()) != DATACITE_API_RESPONSE_OK) {
+			return [['plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $status - " . $response->getBody()]];
+		}
+
 		// Mint a DOI.
-		if ($result === true) {
-			$payload = "doi=$doi\nurl=$url";
-			curl_setopt($curlCh, CURLOPT_URL, DATACITE_API_URL . 'doi');
-			curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type: text/plain;charset=UTF-8'));
-			curl_setopt($curlCh, CURLOPT_POSTFIELDS, $payload);
-			$response = curl_exec($curlCh);
-			if ($response === false) {
-				$result = array(array('plugins.importexport.common.register.error.mdsError', 'Registering DOI $doi: No response from server.'));
-			} else {
-				$status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
-				if ($status != DATACITE_API_RESPONSE_OK) {
-					$result = array(array('plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $status - $response"));
-				}
-			}
+		$httpClient = Application::get()->getHttpClient();
+		try {
+			$response = $httpClient->request('POST', DATACITE_API_URL . 'doi', [
+				'auth' => [$this->getSetting($context->getId(), 'username'), $this->getSetting($context->getId(), 'password')],
+				'headers' => [
+					'Content-Type' => 'text/plain;charset=UTF-8',
+				],
+				'form_params' => [
+					'doi' => $doi,
+					'url' => $url,
+				],
+			]);
+		} catch (GuzzleHttp\Exception\RequestException $e) {
+			return [['plugins.importexport.common.register.error.mdsError', 'Registering DOI $doi: No response from server.']];
 		}
-		curl_close($curlCh);
-		if ($result === true) {
-			$object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
-			$this->saveRegisteredDoi($context, $object, DATACITE_API_TESTPREFIX);
+		if (($status = $response->getStatusCode()) != DATACITE_API_RESPONSE_OK) {
+			return [['plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $status - " . $response->getBody()]];
 		}
-		return $result;
+		$object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
+		$this->saveRegisteredDoi($context, $object, DATACITE_API_TESTPREFIX);
+		return true;
 	}
 
 	/**

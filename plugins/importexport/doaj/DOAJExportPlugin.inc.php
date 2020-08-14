@@ -106,42 +106,22 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	 * @return boolean Whether the JSON string has been registered
 	 */
 	function depositXML($objects, $context, $jsonString) {
-
-		import('lib.pkp.classes.helpers.PKPCurlHelper');
-		$curlCh = PKPCurlHelper::getCurlObject();
-
-		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($curlCh, CURLOPT_POST, true);
-		curl_setopt($curlCh, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-		curl_setopt($curlCh, CURLOPT_POSTFIELDS, $jsonString);
-
-		$endpoint = ($this->isTestMode($context) ? DOAJ_API_URL_DEV : DOAJ_API_URL);
 		$apiKey = $this->getSetting($context->getId(), 'apiKey');
-		$params = 'api_key=' . $apiKey;
-
-		curl_setopt(
-			$curlCh,
-			CURLOPT_URL,
-			$endpoint . DOAJ_API_OPERATION . (strpos($endpoint,'?')===false?'?':'&') . $params
+		$httpClient = Application::get()->getHttpClient();
+		$response = $httpClient->request(
+			'POST',
+			($this->isTestMode($context) ? DOAJ_API_URL_DEV : DOAJ_API_URL) . '?api_key=' . urlencode($apiKey),
+			[
+				'json' => $jsonString
+			]
 		);
-
-		$response = curl_exec($curlCh);
-
-		if ($response === false) {
-			$result = array(array('plugins.importexport.doaj.register.error.mdsError', 'No response from server.'));
-		} elseif ( $status = curl_getinfo($curlCh, CURLINFO_HTTP_CODE) != DOAJ_API_DEPOSIT_OK ) {
-			$result = array(array('plugins.importexport.doaj.register.error.mdsError', "$status - $response"));
-		} else {
-			// Deposit was received
-			$result = true;
-			// set the status
-			$objects->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
-			// Update the object
-			$this->updateObject($objects);
+		if (($status = $response->getStatusCode()) != DOAJ_API_DEPOSIT_OK) {
+			return [['plugins.importexport.doaj.register.error.mdsError', $status . ' - ' . $response->getBody()]];
 		}
-		curl_close($curlCh);
-		return $result;
+		// Deposit was received; set the status
+		$objects->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
+		$this->updateObject($objects);
+		return true;
 	}
 
 	/**

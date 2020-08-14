@@ -330,67 +330,32 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 	 * @see FunctionalDoiExportTest::checkDoiRegistration()
 	 */
 	protected function checkDoiRegistration($doi, $sampleFile, $expectedTargetUrl) {
-		// Prepare HTTP session.
-		import('lib.pkp.classes.helpers.PKPCurlHelper');
-		$curlCh = PKPCurlHelper::getCurlObject();
+		foreach(['doi' => $doi, 'metadata' => $sampleFile] as $action => $expectedResponse) {
+			$httpClient = Application::get()->getHttpClient();
+			$httpClient->request('POST', "https://mds.datacite.org/$action/$doi?testMode=true", [
+				'auth' => ['TIB.OJSTEST', $this->dcPassword],
+				'headers' => [
+					'Content-Type' => 'text/plain;charset=UTF-8',
+				],
+				'form_params' => [
+					'doi' => $doi,
+					'url' => $url,
+				],
+			]);
+			$response = $httpClient->getResponse();
 
-		// Set up basic authentication.
-		$login = 'TIB.OJSTEST:' . $this->dcPassword;
-		curl_setopt($curlCh, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-		curl_setopt($curlCh, CURLOPT_USERPWD, $login);
-
-		// Request the DOI's URL over SSL.
-		$apiUrl = "https://mds.datacite.org/%action/$doi?testMode=true";
-
-		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
-		try {
-			$tests = array(
-				'doi' => $doi,
-				'metadata' => $sampleFile
-			);
-			foreach($tests as $action => $expectedResponse) {
-				// Set the URL for the API request.
-				curl_setopt($curlCh, CURLOPT_URL, str_replace('%action', $action, $apiUrl));
-
-				// Wait for Handle to propagate our information
-				// but not longer than 1 minute.
-				$lastStatus = null;
-				$tryAgain = true;
-				for ($secs=0; $secs <= 60 && $tryAgain; $secs+=10) {
-					// Status 204 means that the DOI has been registered
-					// but is not yet available due to Handle's latency.
-					if ($lastStatus == 204) {
-						sleep(5);
-					}
-					$response = curl_exec($curlCh);
-					$lastStatus = curl_getinfo($curlCh, CURLINFO_HTTP_CODE);
-					$tryAgain = ($lastStatus == 204);
-				}
-
-				if ($lastStatus == 204) {
-					self::fail("The DOI $doi has been correctly registered but is not yet available " .
-						"due to Handle's latency. Please re-execute this test in a few minutes.");
-				}
-
-				// The return status should be 200 - OK.
-				self::assertEquals(200, $lastStatus);
-				if ($action == 'doi') {
+			// The return status should be 200 - OK.
+			self::assertEquals(200, $response->getStatusCode());
+			switch ($action) {
+				case 'doi':
 					// Check the registered target URL.
 					self::assertEquals($expectedTargetUrl, $response);
-				} else {
+					break;
+				case 'metadata':
 					// Check the registered meta-data.
 					$this->assertXml($sampleFile, $response);
-				}
 			}
-			// Check the registered meta-data.
-		} catch(Exception $e) {
-			curl_close($curlCh);
-			throw $e;
 		}
-
-
-		// Destroy HTTP session.
-		curl_close($curlCh);
 	}
 
 	/**
