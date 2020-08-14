@@ -279,7 +279,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $objects mixed Array of or single published submission, issue or galley
 	 * @param $context Context
 	 * @param $filename Export XML filename
-	 * @return boolean Whether the XML document has been registered
+	 * @return boolean|array Whether the XML document has been registered
 	 */
 	abstract function depositXML($objects, $context, $filename);
 
