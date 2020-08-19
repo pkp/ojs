@@ -39,6 +39,7 @@
     "element-resize-event": "^3.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.3",
+    "google-closure-compiler-java": "^20200719.0.0",
     "less": "^3.10.3",
     "less-loader": "^4.1.0",
     "lint-staged": "^8.2.1",
