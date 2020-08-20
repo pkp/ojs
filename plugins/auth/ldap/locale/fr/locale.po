@@ -1,2 +1,98 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-08-21 14:48+0000\n"
+"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/fr/"
+">\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Propriétés de sécurité SASL"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Identifiant d'autorisation requis"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Domaine"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Par exemple : « DIGEST-MD5 »"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Mécanisme SASL"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Utiliser SASL au lieu d'une authentification simple"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Paramètres SASL (facultatif)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+"Format Hash pour les mots de passe conservés sur le serveur. SSHA est "
+"recommandé."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Chiffrement du mot de passe"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"L'attribut dont la valeur identifie de façon unique un objet d'utilisateur "
+"ou ou utilisatrice, tel que uid, cn ou sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Attribut du nom du compte"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"Le DN et mot de passe du gestionnaire ne sont requis que si la "
+"synchronisation du profil/mot de passe de l'utilisateur ou utilisatrice ou "
+"les option de création d'un utilisateur ou d'une utilisatrice sont activées. "
+"Si le LDAP n'est utilisé que pour l'authentification, ces options peuvent "
+"être ignorées."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Mot de passe du gestionnaire"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "par exemple : « cn=Manager,dc=example,dc=com »"
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "DN du gestionnaire"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Par exemple : « ou=people,dc=example,dc=com »"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Base DN"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Facultatif. Utilise par défaut 389 (LDAP) ou 636 (LDAP sur SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Port du serveur"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"Par exemple : « ldap.exemple.com » ou  « ldaps://ldap.exemple.com » (pour "
+"utiliser SSL)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Nom d'hôte du serveur"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Paramètres LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Ce module permet l'authentification et la synchronisation de comptes "
+"d'utilisateurs et utilisatrices au moyen d'une source de données LDAP "
+"externe."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
