@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-21 14:48+0000\n"
+"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-views/fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.views.galleyViews"
+msgstr "Total de consultation des épreuves"
+
+msgid "plugins.reports.views.abstractViews"
+msgstr "Consultations du résumé"
+
+msgid "plugins.reports.views.datePublished"
+msgstr "Date de publication"
+
+msgid "plugins.reports.views.articleTitle"
+msgstr "Titre de l'article"
+
+msgid "plugins.reports.views.articleId"
+msgstr "Identifiant de l'article"
+
+msgid "plugins.reports.views.description"
+msgstr ""
+"Ce module met en place un rapport CSV décrivant le lectorat pour chaque "
+"article."
+
+msgid "plugins.reports.views.displayName"
+msgstr "Rapport de consultation"

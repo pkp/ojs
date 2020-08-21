@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-10 18:40+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2020-08-19 06:58+0000\n"
+"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -21,7 +21,7 @@ msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Nhắc nhở hết hạn thuê bao"
 
 msgid "admin.mergeUsers.noneEnrolled"
-msgstr "Không có người dùng đăng ký."
+msgstr "Không có người dùng đã đăng ký."
 
 msgid "admin.mergeUsers.confirm"
 msgstr ""
@@ -55,19 +55,19 @@ msgid "admin.journals.importErrors"
 msgstr "Quá trình nhập thất bại"
 
 msgid "admin.journals.form.importPathRequired"
-msgstr "Đường dẫn nhập dữ liệu là bắt buộc."
+msgstr "Bắt buộc phải có Đường dẫn nhập dữ liệu."
 
 msgid "admin.journals.redirect"
 msgstr "Tạo mã để ánh xạ các URL của OJS 1 thành các URL của OJS 2"
 
 msgid "admin.journals.transcode"
-msgstr "Mã hoá siêu dữ liệu bài viết theo ISO8859-1"
+msgstr "Mã hoá siêu dữ liệu bài viết theo ISO8859-1"
 
 msgid "admin.journals.importSubscriptions"
 msgstr "Nhập thuê bao"
 
 msgid "admin.journal.pathImportInstructions"
-msgstr "Đường dẫn tạp chí hiện tại hoặc đường dẫn để tạo (ví dụ: \"ojs\")."
+msgstr "Đường dẫn tạp chí hiện có hoặc đường dẫn để tạo (ví dụ: \"ojs\")."
 
 msgid "admin.contexts.contextDescription"
 msgstr "Mô tả tạp chí"
@@ -164,6 +164,22 @@ msgstr ""
 "Bạn có chắc chắn muốn gỡ cài đặt ngôn ngữ này? Điều này có thể ảnh hưởng đến "
 "bất kỳ tạp chí được lưu trữ hiện đang sử dụng ngôn ngữ này."
 
+<<<<<<< HEAD
+=======
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Tải xuống gói ngôn ngữ từ máy chủ web Dự án Tri thức Công đồng hiện không "
+"khả dụng vì:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Máy chủ của bạn không có hoặc cho phép thực thi tiện ích GNU \"tar\""
+".</li>\n"
+"\t\t<li>OJS không thể sửa đổi tệp đăng ký ngôn ngữ, điển hình là \"registry/"
+"local.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Có thể tải xuống các gói ngôn ngữ theo cách thủ công từ <a href=\""
+"http://pkp.sfu.ca\">trang web PKP</a>.</p>"
+
+>>>>>>> 302147e2e2... Merge pull request #2863 from pkp-translations/stable-3_2_1
 msgid "admin.locale.maybeIncomplete"
 msgstr "Ngôn ngữ được đánh dấu có thể không đầy đủ."
 
@@ -184,7 +200,7 @@ msgid "admin.settings.config.success"
 msgstr "Các cài đặt cấu hình trang web đã được cập nhật thành công."
 
 msgid "admin.settings.appearance.success"
-msgstr "Các cài đặt xuất hiện trang web đã được cập nhật thành công."
+msgstr "Các cài đặt giao diện trang web đã được cập nhật thành công."
 
 msgid "admin.hostedContexts"
 msgstr "Các tạp chí lưu trữ"
@@ -197,19 +213,18 @@ msgstr ""
 msgid "admin.settings.defaultMetricDescription"
 msgstr ""
 "\n"
-"\tCài đặt OJS của bạn được cấu hình để ghi lại nhiều hơn một số liệu sử "
+"\t\tCài đặt OJS của bạn được cấu hình để ghi lại nhiều hơn một số liệu sử "
 "dụng. Thống kê sử dụng sẽ được hiển thị trong một số bối cảnh.\n"
 "\tCó những trường hợp phải sử dụng một thống kê sử dụng duy nhất, ví dụ: để "
-"hiển thị một danh sách theo thứ tự các bài viết được sử dụng nhiều nhất hoặc "
-"để xếp hạng\n"
-"\tkết quả tìm kiếm. Vui lòng chọn một trong các số liệu được cấu hình làm "
-"mặc định.\n"
+"hiển thị một danh sách theo thứ tự các bài viết \n"
+"\tđược sử dụng nhiều nhất hoặc để xếp hạng kết quả tìm kiếm. Vui lòng chọn "
+"một trong các số liệu được cấu hình làm mặc định.\n"
 "\t"
 
 msgid "admin.settings.redirectInstructions"
 msgstr ""
-"Yêu cầu đến trang web chính sẽ được chuyển hướng đến tạp chí này. Điều này "
-"có thể hữu ích nếu trang web chỉ có một tạp chí duy nhất."
+"Các yêu cầu đến trang web chính sẽ được chuyển hướng đến tạp chí này. Điều "
+"này có thể hữu ích nếu trang web chỉ có một tạp chí duy nhất."
 
 msgid "admin.settings.redirect"
 msgstr "Chuyển hướng tạp chí"
