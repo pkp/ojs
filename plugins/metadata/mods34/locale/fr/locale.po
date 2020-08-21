@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-21 14:48+0000\n"
+"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
+"metadata-mods34/fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.metadata.mods34.articleAdapter.description"
+msgstr "Extraction/injection de métadonnées à partir/dans les articles."
+
+msgid "plugins.metadata.mods34.articleAdapter.displayName"
+msgstr "Adaptateur d'articles MODS 3.4"

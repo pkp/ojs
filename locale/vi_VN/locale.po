@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-10 17:28+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2020-08-19 06:58+0000\n"
+"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -12,19 +12,19 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.event.copyedit.copyeditorUnassigned"
-msgstr "Biên tập viên bản thảo đã không được phân công bài gửi"
+msgstr "Biên tập viên bản thảo đã không được phân công cho bài gửi"
 
 msgid "submission.event.copyedit.copyeditorAssigned"
-msgstr "Biên tập viên bản thảo đã được phân công bài gửi"
+msgstr "Biên tập viên bản thảo đã được phân công cho  bài gửi"
 
 msgid "submission.event.editor.submissionRestored"
-msgstr "Bài gửi đã được khôi phục từ lưu trữ"
+msgstr "Bài gửi đã được khôi phục từ Lưu trữ"
 
 msgid "submission.event.editor.submissionArchived"
-msgstr "Bài gửi đã được chuyển sang lưu trữ"
+msgstr "Bài gửi đã được chuyển sang Lưu trữ"
 
 msgid "submission.event.editor.editorFile"
-msgstr "Tập tin của biên tập viên đã cập nhật"
+msgstr "Cập nhật Tập tin của Biên tập viên"
 
 msgid "submission.event.editor.editorDecision"
 msgstr "Quyết định của Ban biên tập đã được gửi"
@@ -33,7 +33,7 @@ msgid "submission.event.editor.editorUnassigned"
 msgstr "Bài gửi không được phân công cho biên tập viên"
 
 msgid "submission.event.editor.editorAssigned"
-msgstr "Bài gửi đã được phân công cho biên tập viên"
+msgstr "Bài gửi được phân công cho biên tập viên"
 
 msgid "submission.event.general.authorRevision"
 msgstr "Tập tin sửa chữa của tác giả đã được cập nhật"
@@ -42,19 +42,19 @@ msgid "submission.event.author.authorRevision"
 msgstr "Bản sửa chữa của tác giả đã được gửi"
 
 msgid "submission.event.general.articlePublished"
-msgstr "Bài báo đã được xuất bản"
+msgstr "Bài báo Đã xuất bản"
 
 msgid "submission.event.general.issueAssigned"
 msgstr "Bài gửi được xếp vào số"
 
 msgid "submission.event.general.issueScheduled"
-msgstr "Bài gửi đã được xếp vào chờ xuất bản"
+msgstr "Bài gửi đã được xếp vào số chờ xuất bản"
 
 msgid "submission.event.submissionSubmitted"
-msgstr "Bài báo đã gửi"
+msgstr "Bài báo Đã gửi"
 
 msgid "submission.event.general.defaultEvent"
-msgstr "Sự kiện của bài gửi"
+msgstr "Sự kiện của Bài gửi"
 
 msgid "subscriptions.institutionalOnlinePaymentDescription"
 msgstr ""
@@ -70,19 +70,19 @@ msgid "subscriptions.individualDescription"
 msgstr "Các thuê bao cá nhân yêu cầu đăng nhập để truy cập nội dung thuê bao."
 
 msgid "subscriptions.status.other"
-msgstr "Khác, xem ghi chú"
+msgstr "Khác, Xem Ghi chú"
 
 msgid "subscriptions.status.noSubscription"
-msgstr "Bạn không có đăng ký hoạt động."
+msgstr "Bạn không có đăng ký đang hoạt động."
 
 msgid "subscriptions.status.awaitingOnlinePayment"
-msgstr "Đang chờ thanh toán trực tuyến"
+msgstr "Đang chờ Thanh toán Trực tuyến"
 
 msgid "subscriptions.status.awaitingManualPayment"
-msgstr "Đang chờ thanh toán thủ công"
+msgstr "Đang chờ Thanh toán Thủ công"
 
 msgid "subscriptions.status.needsApproval"
-msgstr "Cần phê duyệt"
+msgstr "Cần Phê duyệt"
 
 msgid "subscriptions.status.needsInformation"
 msgstr "Cần thông tin"
@@ -91,7 +91,7 @@ msgid "subscriptions.status.active"
 msgstr "Hoạt động"
 
 msgid "subscriptions.status"
-msgstr "Tình trạng"
+msgstr "Trạng thái"
 
 msgid "subscriptions.inactive"
 msgstr "Không hoạt động"
@@ -124,16 +124,16 @@ msgid "subscriptionTypes.currency"
 msgstr "Tiền tệ"
 
 msgid "issue.return"
-msgstr "Trở lại chi tiết số"
+msgstr "Trở lại Chi tiết Số"
 
 msgid "issue.viewIssue"
-msgstr "Xem số"
+msgstr "Xem Số"
 
 msgid "issue.nonpdf.title"
-msgstr "Tải xuống số"
+msgstr "Tải xuống Số"
 
 msgid "issue.fullIssue"
-msgstr "Số đầy đủ"
+msgstr "Cả số"
 
 msgid "issue.coverPage.altText"
 msgstr "Trang bìa"
@@ -172,42 +172,42 @@ msgid "issue.issue"
 msgstr "Số"
 
 msgid "user.role.journalAssistants"
-msgstr "Các thư ký tạp chí"
+msgstr "Các Thư ký Tạp chí"
 
 msgid "user.role.journalAssistant"
-msgstr "Thư ký tạp chí"
+msgstr "Thư ký Tạp chí"
 
 msgid "user.role.subscriptionManagers"
-msgstr "Các quản lý thuê bao"
+msgstr "Các Quản lý Thuê bao"
 
 msgid "user.role.subEditors"
-msgstr "Các biên tập viên chuyên mục"
+msgstr "Các Biên tập viên chuyên mục"
 
 msgid "user.role.managers"
-msgstr "Các quản lý tạp chí"
+msgstr "Các Quản lý tạp chí"
 
 msgid "user.role.subscriptionManager"
-msgstr "Quản lý thuê bao"
+msgstr "Quản lý Thuê bao"
 
 msgid "user.role.subEditor"
 msgstr "Biên tập viên chuyên mục"
 
 msgid "user.role.manager"
-msgstr "Quản lý tạp chí"
+msgstr "Quản lý Tạp chí"
 
 msgid "user.noRoles.regReviewerClosed"
 msgstr ""
-"Đăng ký làm Người phản biện: Đăng ký người phản biện hiện đang bị vô hiệu "
-"hóa."
+"Đăng ký làm Người phản biện: Đăng ký làm người phản biện hiện đang bị vô "
+"hiệu hóa."
 
 msgid "user.noRoles.regReviewer"
-msgstr "Đăng ký làm một Người phản biện"
+msgstr "Đăng ký làm Người phản biện"
 
 msgid "user.noRoles.submitArticleRegClosed"
-msgstr "Gửi một bài báo: Đăng ký tác giả hiện đang bị vô hiệu hóa."
+msgstr "Gửi một bài báo: Đăng ký làm Tác giả hiện đang bị vô hiệu hóa."
 
 msgid "user.noRoles.submitArticle"
-msgstr "Gửi một đề xuất"
+msgstr "Gửi một Đề xuất"
 
 msgid "user.noRoles.noRolesForJournal"
 msgstr ""
@@ -234,32 +234,31 @@ msgid "user.register.otherContextRoles"
 msgstr "Yêu cầu các vai trò sau."
 
 msgid "user.register.contextsPrompt"
-msgstr "Những tạp chí trên trang web này bạn muốn đăng ký?"
+msgstr "Bạn muốn đăng ký những tạp chí nào trên trang web này?"
 
 msgid "user.reviewerPrompt.optin"
-msgstr ""
-"Có, tôi muốn được liên hệ với các yêu cầu để làm phản biện cho tạp chí này."
+msgstr "Có, tôi muốn được liên hệ với yêu cầu phản biện cho tạp chí này."
 
 msgid "user.reviewerPrompt.userGroup"
 msgstr "Có, yêu cầu vai trò {$userGroup}."
 
 msgid "user.reviewerPrompt"
-msgstr "Bạn có sẵn sàng để làm phản biện cho tạp chí này?"
+msgstr "Bạn có sẵn sàng làm phản biện cho tạp chí này?"
 
 msgid "user.registerForOtherJournals"
-msgstr "Đăng ký tạp chí khác"
+msgstr "Đăng ký Tạp chí khác"
 
 msgid "user.showAllJournals"
-msgstr "Hiển thị tạp chí của tôi"
+msgstr "Xem các tạp chí của tôi"
 
 msgid "user.profile.profileImage"
-msgstr "Ảnh hồ sơ"
+msgstr "Ảnh Hồ sơ"
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Bao gồm người dùng không có vai trò trong tạp chí này."
 
 msgid "journal.viewAllIssues"
-msgstr "Xem tất cả các số"
+msgstr "Xem Tất cả Các số"
 
 msgid "journal.issn"
 msgstr "ISSN"
@@ -268,7 +267,7 @@ msgid "context.context"
 msgstr "Tạp chí"
 
 msgid "journal.path"
-msgstr "Phần"
+msgstr "Đường dẫn"
 
 msgid "context.contexts"
 msgstr "Các tạp chí"
@@ -277,22 +276,22 @@ msgid "journal.currentIssue"
 msgstr "Số hiện tại"
 
 msgid "submission.search"
-msgstr "Tìm kiếm bài báo"
+msgstr "Tìm kiếm Bài báo"
 
 msgid "submissions.proofreadingComplete"
-msgstr "Đã hiệu đính"
+msgstr "Đã Hiệu đính"
 
 msgid "submissions.layoutComplete"
-msgstr "Đã trình bày"
+msgstr "Đã Trình bày"
 
 msgid "submissions.copyeditComplete"
-msgstr "Đã biên tập"
+msgstr "Đã Biên tập"
 
 msgid "submission.eventLog"
-msgstr "Nhật ký sự kiện"
+msgstr "Nhật ký Sự kiện"
 
 msgid "submissions.editorRuling"
-msgstr "Biên tập viên quản trị"
+msgstr "Phán quyết của Biên tập viên"
 
 msgid "submissions.editorDecision"
 msgstr "Quyết định của Ban biên tập"
@@ -304,22 +303,22 @@ msgid "submissions.reviewRound"
 msgstr "Vòng đánh giá"
 
 msgid "submissions.postAuthor"
-msgstr "Post-Author"
+msgstr "Tác giả-gửi bài"
 
 msgid "submissions.initialProof"
 msgstr "Bản in thử ban đầu"
 
 msgid "submissions.proofread"
-msgstr "Đọc hiệu đính"
+msgstr "Hiệu đính"
 
 msgid "submissions.initial"
 msgstr "Ban đầu"
 
 msgid "submissions.published"
-msgstr "Đã xuất bản"
+msgstr "Đã Xuất bản"
 
 msgid "submissions.queuedReview"
-msgstr "Phản biện"
+msgstr "Đang Phản biện"
 
 msgid "submissions.step3"
 msgstr "Bước 3"
@@ -331,34 +330,34 @@ msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
 
 msgid "submission.scheduledIn"
-msgstr "Đã lên lịch xuất bản trong {$issueName}."
+msgstr "Đã lập lịch trình để xuất bản trong {$issueName}."
 
 msgid "submission.scheduling"
-msgstr "Lên lịch"
+msgstr "Lập lịch trình"
 
 msgid "submission.proofreading"
-msgstr "Đọc hiệu đính"
+msgstr "Hiệu đính"
 
 msgid "submission.copyedit"
-msgstr "biên tập"
+msgstr "Biên tập"
 
 msgid "submission.copyediting"
 msgstr "Biên tập"
 
 msgid "submission.authorVersion"
-msgstr "Phiên bản của tác giả"
+msgstr "Phiên bản Tác giả"
 
 msgid "submission.authorsRevisedVersion"
-msgstr "Phiên bản sửa chữa của tác giả của tập tin"
+msgstr "Phiên bản Tập tin sửa chữa của tác giả"
 
 msgid "submission.editorVersion"
-msgstr "Phiên bản cho biên tập viên"
+msgstr "Phiên bản cho Biên tập viên"
 
 msgid "submission.postReviewVersion"
 msgstr "Phiên bản sau rà soát của tập tin"
 
 msgid "submission.reviewersVersion"
-msgstr "Phiên bản chú thích của người phản người của tập tin"
+msgstr "Phiên bản tập tin có chú thích của người phản biện"
 
 msgid "submission.editorAuthorRecord"
 msgstr "Bản ghi Email của Biên tập viên/Tác giả"
@@ -376,7 +375,7 @@ msgid "submission.round"
 msgstr "Vòng&nbsp;{$round}"
 
 msgid "submission.editorDecision"
-msgstr "Quyết định của ban biên tập"
+msgstr "Quyết định của Ban biên tập"
 
 msgid "submission.sent"
 msgstr "Đã gửi"
@@ -385,10 +384,10 @@ msgid "submission.changeSection"
 msgstr "Thay đổi thành"
 
 msgid "submission.submissionEditing"
-msgstr "Chỉnh sửa bài nộp"
+msgstr "Chỉnh sửa bài gửi"
 
 msgid "article.return"
-msgstr "Quay trở lại chi tiết bài báo"
+msgstr "Quay trở lại Chi tiết Bài báo"
 
 msgid "article.fontSize.large.altText"
 msgstr "Lớn"
@@ -412,7 +411,7 @@ msgid "article.comments.sectionDefault"
 msgstr "Mặc định"
 
 msgid "article.accessLogoRestricted.altText"
-msgstr "Giới hạn truy cập"
+msgstr "Giới hạn Truy cập"
 
 msgid "article.accessLogoOpen.altText"
 msgstr "Truy cập mở"
@@ -433,22 +432,22 @@ msgid "article.submission"
 msgstr "Bài gửi"
 
 msgid "article.commentsToEditor"
-msgstr "Ý kiến tác giả"
+msgstr "Bình luận của tác giả"
 
 msgid "article.type"
 msgstr "Loại, phương pháp hoặc cách tiếp cận"
 
 msgid "article.sectionEditor"
-msgstr "SE"
+msgstr "BTV CM"
 
 msgid "article.language"
 msgstr "Ngôn ngữ"
 
 msgid "article.coverage"
-msgstr "Hỗ trợ"
+msgstr "Phủ sóng"
 
 msgid "article.discipline"
-msgstr "Ngành và các phân ngành học thuật"
+msgstr "Ngành và các chuyên ngành học thuật"
 
 msgid "common.queue.short.completed"
 msgstr "Lưu trữ"
@@ -469,7 +468,7 @@ msgid "article.file"
 msgstr "Tập tin"
 
 msgid "article.journalSection"
-msgstr "Chuyên mục của tạp chí"
+msgstr "Chuyên mục của Tạp chí"
 
 msgid "article.metadata"
 msgstr "Siêu dữ liệu"
@@ -562,7 +561,7 @@ msgid "navigation.infoForAuthors.long"
 msgstr "Thông tin cho Tác giả"
 
 msgid "navigation.competingInterestGuidelines"
-msgstr "Nguyên tắc lợi ích cạnh tranh"
+msgstr "Nguyên tắc Lợi ích Cạnh tranh"
 
 msgid "navigation.infoForLibrarians"
 msgstr "Dành cho Thủ thư"
@@ -571,10 +570,10 @@ msgid "navigation.infoForAuthors"
 msgstr "Dành cho Tác giả"
 
 msgid "navigation.browseByAuthor"
-msgstr "Bởi Tác giả"
+msgstr "Theo Tác giả"
 
 msgid "navigation.browseByIssue"
-msgstr "Bởi số"
+msgstr "Theo Số"
 
 msgid "navigation.otherJournals"
 msgstr "Các tạp chí khác"
@@ -583,13 +582,13 @@ msgid "navigation.current"
 msgstr "Số hiện tại"
 
 msgid "navigation.journalHelp"
-msgstr "Trợ giúp của tạp chí"
+msgstr "Trợ giúp Tạp chí"
 
 msgid "common.journalHomepageImage.altText"
-msgstr "Hình ảnh trang chủ tạp chí"
+msgstr "Hình ảnh Trang chủ Tạp chí"
 
 msgid "common.homePageHeader.altText"
-msgstr "Phần đầu trang chủ"
+msgstr "Tiêu đề trang chủ"
 
 msgid "common.payments"
 msgstr "Thanh toán"
@@ -794,37 +793,37 @@ msgid "submission.event.layout.layoutEditorUnassigned"
 msgstr "Biên tập viên trình bày đã được ngừng phân công"
 
 msgid "submission.event.layout.layoutEditorAssigned"
-msgstr "Biên tập viên trình bày đã được phân"
+msgstr "Biên tập viên trình bày đã được phân công"
 
 msgid "submission.event.proofread.proofreadCompleted"
-msgstr "Hiệu đính được phân công đã hoàn thành"
+msgstr "Đã hoàn thành phân công hiệu đính"
 
 msgid "submission.event.proofread.proofreadRevision"
-msgstr "Bản sửa hiệu đính đã được cập nhật"
+msgstr "Đã cập nhật Tệp sửa đổi Hiệu đính"
 
 msgid "submission.event.proofread.proofreadInitiated"
-msgstr "Hiệu đính đã bắt đầu"
+msgstr "Đã khởi tạo Phân công Hiệu đính"
 
 msgid "submission.event.proofread.proofreaderUnassigned"
-msgstr "Người hiệu đính được ngừng phân công"
+msgstr "Chưa phân công Người hiệu đính cho bài gửi này"
 
 msgid "submission.event.proofread.proofreaderAssigned"
 msgstr "Người hiệu đính đã được phân công"
 
 msgid "submission.event.copyedit.copyeditSetFile"
-msgstr "Tập tin bản thảo biên tập đã được cập nhật"
+msgstr "Đã cập nhật Tập tin bản thảo biên tập"
 
 msgid "submission.event.copyedit.copyeditFinalCompleted"
-msgstr "Biên tập bản thảo cuối cùng đã được hoàn thành"
+msgstr "Biên tập Bản thảo cuối đã hoàn thành"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
-msgstr "Biên tập bản thảo ban đầu đã được hoàn thành"
+msgstr "Biên tập bản thảo sơ bộ đã hoàn thành"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Bản sửa của biên tập viên bản thảo đã được cập nhật"
+msgstr "Đã cập nhật Tập tin sửa chữa của Biên tập viên bản thảo"
 
 msgid "submission.event.copyedit.copyeditInitiated"
-msgstr "Biên tập viên bản thảo được bắt đầu phân công"
+msgstr "Bắt đầu phân công Biên tập viên bản thảo"
 
 msgid "reviewer.article.restrictedFileAccess"
 msgstr ""

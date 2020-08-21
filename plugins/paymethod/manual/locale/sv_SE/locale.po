@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-10 14:27+0000\n"
-"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
+"PO-Revision-Date: 2020-08-21 14:48+0000\n"
+"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual/sv_SE/>\n"
 "Language: sv_SE\n"
@@ -34,3 +34,6 @@ msgstr "Manuell betalning"
 
 msgid "plugins.paymethod.manual.displayName"
 msgstr "Manuell betalning"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "Tidskriftsansvarig bokför betalningen manuellt (utanför detta system)."
