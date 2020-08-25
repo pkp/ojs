@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-10 14:27+0000\n"
+"PO-Revision-Date: 2020-08-25 18:40+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ro_RO/>\n"
@@ -19,7 +19,7 @@ msgid "publication.scheduleInissue"
 msgstr "Atribuire la număr"
 
 msgid "publication.unscheduledIn"
-msgstr "Aceasta nu a fost programată pentru publicare într-un număr."
+msgstr "Acest articol nu a fost încă alocat unui număr de revistă."
 
 msgid "publication.scheduledIn"
 msgstr "Programat spre publicare în <a href=\"{$issueUrl}\">{$issueName}</a>."
