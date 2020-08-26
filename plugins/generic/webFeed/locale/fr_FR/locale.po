@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-25 06:34+0000\n"
+"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-webFeed/fr/>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "Logo RSS2"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "Logo RSS1"
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Logo Atom"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "veuillez entrer un entier positif pour les éléments publiés récemment."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Nombre d'éléments à afficher"
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Afficher un nombre fixe des éléments les plus récents."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Afficher les éléments dans le numéro publié."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Afficher les liens du flux web sur toutes les pages de la revue."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+"Afficher les liens du flux sur la page d'accueil et sur les pages du numéro "
+"uniquement."
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Afficher les liens du flux web sur les pages du numéro uniquement."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Paramètres"
+
+msgid "plugins.generic.webfeed.description"
+msgstr ""
+"Ce module produit des flux de syndication RRS/Atom pour le numéro en cours."
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Module de flux web"

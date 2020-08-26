@@ -1,0 +1,258 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-09 15:52+0000\n"
+"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
+"ro_RO/>\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Memento revizuire"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notificare de acces deschis"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Memento de expirare abonament"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Nici un utilizator înregistrat."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Sigur doriți să îmbinați conturile {$ oldAccountCount} selectate în cont cu "
+"numele de utilizator „{$ newUsername}”? Conturile selectate {$ "
+"oldAccountCount} nu vor exista ulterior. Această acțiune nu este reversibilă."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Toți utilizatorii înscriși"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Selectați un utilizator (sau mai mulți) pentru a se contopi într-un alt cont "
+"de utilizator (de exemplu, când cineva are două conturi de utilizator). "
+"Contul (conturile) selectat(e) primul va fi șters și toate manuscrisele "
+"înregistrate, sarcinile etc. vor fi atribuite celui de-al doilea cont."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Selectați un utilizator căruia să i se atribuie authorship-ul utilizatorului "
+"anterior, sarcinile de editare etc."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Îmbinare utilizator"
+
+msgid "admin.mergeUsers"
+msgstr "Îmbinare utilizatori"
+
+msgid "admin.journals.importErrors"
+msgstr "Importul nu s-a finalizat cu succes"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Calea de import este necesară."
+
+msgid "admin.journals.redirect"
+msgstr ""
+"Generați codul pentru a mapa adresele URL OJS 1 către adresele URL OJS 2"
+
+msgid "admin.journals.transcode"
+msgstr "Metadatele articolului folosesc trans-codurile ISO8859-1"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importați abonamente (subscrieri)"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Calea existentă a jurnalului sau calea ce trebuie creată (e.g., \"ojs\")."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descrierea jurnalului"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Permiteți acest jurnal să apară public pe site"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} a fost editat cu succes."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} a fost creat cu succes."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Calea pe care ați furnizat-o este deja folosită de un alt jurnal."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Calea poate include doar litere, numere și caracterele _ și -. Trebuie să "
+"înceapă și să se încheie cu o literă sau un număr."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Este necesară o cale."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Este necesar un titlu."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Acesta ar trebui să fie un singur cuvânt scurt sau acronim care identifică "
+"jurnalul. URL-ul jurnalului va fi {$sampleUrl}."
+
+msgid "admin.contexts.create"
+msgstr "Creare jurnal"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nu a fost creat nici un jurnal."
+
+msgid "admin.journals.journalSettings"
+msgstr "Setări Jurnal"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Veți fi automat înscris ca manager al acestui jurnal. După crearea unui "
+"jurnal nou, veți fi redirecționat către setări, pentru a finaliza "
+"configurația inițială a jurnalului."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Setări de configurare OJS din <tt>config.inc.php</tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "Configurarea OJS"
+
+msgid "admin.systemVersion"
+msgstr "Versiunea OJS"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Activați crearea utilizatorului (dacă este acceptat de acest plugin de "
+"autentificare). Utilizatorii creați în OJS cu această sursă de autentificare "
+"vor fi adăugați automat la sursa de autentificare de la distanță dacă nu "
+"există deja. În plus, dacă această sursă este sursa de autentificare "
+"implicită, conturile OJS create prin înregistrarea utilizatorului vor fi "
+"adăugate și la sursa de autentificare de la distanță."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Activați modificarea parolei utilizatorului (dacă este acceptată de acest "
+"plugin de autentificare). Activarea acestei opțiuni permite utilizatorilor "
+"să își modifice parola din OJS și să utilizeze funcția „parola pierdută” "
+"pentru a reseta o parolă uitată. Aceste funcții nu vor fi disponibile pentru "
+"utilizatorii care au această sursă de autentificare dacă această opțiune nu "
+"este activată."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Activați sincronizarea profilului de utilizator (dacă este acceptată de "
+"acest plugin de autentificare). Informațiile despre profilul utilizatorului "
+"vor fi actualizate automat din sursa de la distanță atunci când un "
+"utilizator se conectează, iar modificările profilului (inclusiv modificările "
+"parolei) făcute în OJS vor fi actualizate automat pe sursa de la distanță. "
+"Dacă această opțiune nu este activată, informațiile despre profilul OJS vor "
+"fi păstrate separat de informațiile despre profilul sursă de la distanță."
+
+msgid "admin.auth.ojs"
+msgstr "Baza de date utilizator OJS"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"Nu se poate adăuga noua limbă în fișierul registru pentru limbă, de obicei \""
+"registry / locales.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Nu se poate deschide descriptorul de limbă de pe site-ul web PKP."
+
+msgid "admin.languages.download"
+msgstr "Descărcare limbă"
+
+msgid "admin.languages.localeInstalled"
+msgstr "Limba \"{$locale}\" a fost instalată cu succes."
+
+msgid "admin.languages.downloadFailed"
+msgstr ""
+"Descărcarea acestei limbi a eșuat. Mesajul(ele) de eroare pot descrie acest "
+"eșec."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Selectați orice limbă suplimentară pentru a instala asistența în acest "
+"sistem. Limbile trebuie instalate înainte de a putea fi utilizate de jurnale "
+"găzduite. Consultați documentația OJS pentru informații despre adăugarea de "
+"suport pentru limbi noi."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Ești sigur că vrei să dezinstalezi această limbă? Aceasta poate afecta "
+"jurnalele găzduite ce folosesc în mod curent această limbă."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Limba selectată poate fi incompletă."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Selectați toate limbile naționale acceptate pe site. Limbile selectate vor "
+"fi disponibile pentru a fi utilizate de toate jurnalele găzduite pe site și, "
+"de asemenea, vor apărea într-un meniu de selectare a limbii pentru a apărea "
+"pe fiecare pagină a site-ului (care poate fi anulată pe paginile specifice "
+"jurnalului). Dacă nu sunt selectate mai multe limbi locale, meniul de "
+"comutare a limbii nu va apărea și setările de limbă extinse nu vor fi "
+"disponibile jurnalelor."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Aceasta va fi limba implicită pentru site și pentru toate jurnalele găzduite."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Descărcarea pachetului limbii naționale de pe situl web Public Knowledge "
+"Project nu este în prezent posibilă deoarece:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Serverul dvs. nu are sau nu permite executarea utilitarul GNU \"tar\""
+".</li>\n"
+"\t\t<li>OJS nu poate să modifice fișierele registru locale \"registry/"
+"locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Pachetul lingvistic poate fi descărcat manual de pe  <a href=\""
+"http://pkp.sfu.ca\">PKP web site</a>.</p>"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Sigur doriți să dezactivați această caracteristică locală? Acest lucru poate "
+"afecta jurnalele găzduite care utilizează momentan caracteristici locale."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tAplicația OJS instalată este configurată pentru a înregistra mai multe "
+"date de utilizare. Statisticile de utilizare vor fi afișate în diferite "
+"contexturi.\n"
+"\t\tExistă cazuri în care trebuie utilizată o singură statistică de "
+"utilizare, de ex. pentru a afișa o listă ordonată cu cele mai utilizate "
+"articole sau pentru a clasifica\n"
+"\t\trezultatele căutărilor. Vă rugăm să selectați una din valorile "
+"măsurabile ca implicită.\n"
+"\t"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Cererile către site-ul principal vor fi redirecționate către acest jurnal. "
+"Acest lucru poate fi util dacă site-ul găzduiește doar un singur jurnal, de "
+"exemplu."
+
+msgid "admin.settings.redirect"
+msgstr "Redirecționarea jurnalului"
+
+msgid "admin.settings.info.success"
+msgstr "Informațiile site-ului au fost actualizate cu succes."
+
+msgid "admin.settings.config.success"
+msgstr "Setările de configurare a site-ului au fost actualizate cu succes."
+
+msgid "admin.settings.appearance.success"
+msgstr "Setările pentru aspectul site-ului au fost actualizate cu succes."
+
+msgid "admin.hostedContexts"
+msgstr "Reviste găzduite"

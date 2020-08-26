@@ -55,7 +55,6 @@ scheduled_tasks = Off
 time_zone = "UTC"
 
 ; Short and long date formats
-date_format_trunc = "%m-%d"
 date_format_short = "%Y-%m-%d"
 date_format_long = "%B %e, %Y"
 datetime_format_short = "%Y-%m-%d %I:%M %p"
@@ -505,6 +504,6 @@ deprecation_warnings = Off
 log_web_service_info = Off
 
 ; declare a cainfo path if a certificate other than PHP's default should be used for curl calls.
-; This setting overrides the 'curl.cainfo' parameter of the php.ini configuration file. 
+; This setting overrides the 'curl.cainfo' parameter of the php.ini configuration file.
 [curl]
 ; cainfo = ""

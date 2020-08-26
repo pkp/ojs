@@ -18,35 +18,5 @@
 import('lib.pkp.classes.submission.PKPAuthor');
 
 class Author extends PKPAuthor {
-
-	//
-	// Get/set methods
-	//
-
-	/**
-	 * Get the localized competing interests statement for this author
-	 */
-	function getLocalizedCompetingInterests() {
-		return $this->getLocalizedData('competingInterests');
-	}
-
-	/**
-	 * Get author competing interests.
-	 * @param $locale string
-	 * @return string
-	 */
-	function getCompetingInterests($locale) {
-		return $this->getData('competingInterests', $locale);
-	}
-
-	/**
-	 * Set author competing interests.
-	 * @param $competingInterests string
-	 * @param $locale string
-	 */
-	function setCompetingInterests($competingInterests, $locale) {
-		return $this->setData('competingInterests', $competingInterests, $locale);
-	}
 }
-
 

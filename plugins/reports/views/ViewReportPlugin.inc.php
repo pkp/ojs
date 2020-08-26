@@ -118,7 +118,7 @@ class ViewReportPlugin extends ReportPlugin {
 		fputcsv($fp, array_merge($columns, $galleyLabels));
 
 		ksort($abstractViewCounts);
-		$dateFormatShort = Config::getVar('general', 'date_format_short');
+		$dateFormatShort = $context->getLocalizedDateFormatShort();
 		foreach ($abstractViewCounts as $articleId => $abstractViewCount) {
 			$values = array(
 				$articleId,

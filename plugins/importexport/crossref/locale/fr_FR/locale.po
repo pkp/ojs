@@ -1,0 +1,160 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-25 06:34+0000\n"
+"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-crossref/fr/>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr ""
+"Aucun article ne correspond à l'identifiant d'article spécifié « {$articleId}"
+" »."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr ""
+"Aucun numéro ne correspond à l'identifiant du numéro spécifié « {$issueId} »."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr ""
+"L'enregistrement a été réalisé, mais l'avertissement suivant a été émis : "
+"'{$param}'."
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr ""
+"L'enregistrement a échoué ! Le serveur d'enregistrement de DOI a renvoyé une "
+"erreur."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Utilisation :\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 "
+"[objectId2] ...\n"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Tâche automatique d'enregistrement CrossRef"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Marqué actif"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Télécharger le XML"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p> Statut du dépôt : </p>\n"
+"\t\t<p>\n"
+"\t\t- Non déposé : aucune tentative de dépôt n'a été effectuée pour ce DOI. <"
+"br />\n"
+"\t\t- Actif : le DOI a été déposé et se résout correctement. <br />\n"
+"\t\t- Échec : le dépôt du DOI a échoué. <br />\n"
+"\t\t- Marqué actif : le DOI a été marqué manuellement comme actif.\n"
+"\t\t</p>\n"
+"\t\t<p> Seul le statut de la dernière tentative de dépôt est affiché. </p>\n"
+"\t\t<p> Si un dépôt a échoué, veuillez résoudre le problème et réessayer "
+"d'enregistrer le DOI. </p>"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Dépôt"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Marqué actif"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Actif"
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Échec"
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr ""
+"Note : seuls les numéros (et non leurs articles) seront pris en compte pour "
+"l'exportation/enregistrement ici."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr ""
+"Valider le XML. Utilisez cette option pour télécharger le XML pour "
+"l'enregistrement manuel du DOI."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr ""
+"Utiliser l'API test CrossRef (environnement de test) pour le dépôt de DOI. "
+"N'oubliez pas de désactiver option lors du passage en production."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS déposera automatiquement les DOI assignés auprès de CrossRef. Veuillez "
+"noter que le traitement peut prendre un peu de temps après la publication ("
+"par exemple, en fonction de votre configuration cronjob). Vous pouvez "
+"vérifier tous les DOI non enregistrés."
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr ""
+"Veuillez entrer le nom d'utilisateur ou utilisatrice que vous avez obtenu de "
+"CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Nom d'utilisateur ou utilisatrice"
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr ""
+"Si vous souhaitez utiliser ce module pour enregistrer des DOI (Digital "
+"Object Identifiers) directement avec CrossRef, vous aurez besoin d'un nom "
+"d'utilisateur ou d'utilisatrice et d'un mot de passe (disponible sur <a href="
+"\"http://www.crossref.org\" target=\"_blank\"> CrossRef </a>). Si vous "
+"n'avez pas votre propre nom d'utilisateur ou d'utilisatrice et mot de passe, "
+"vous pouvez toujours exporter en format XML CrossRef, mais vous ne pouvez "
+"pas enregistrer vos DOI avec CrossRef à partir d'OJS."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Veuillez entrer le courriel du déposant."
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Veuillez entrer le nom du déposant."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Courriel du déposant"
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Nom du déposant"
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Les éléments suivants sont requis pour un dépôt CrossRef réussi."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr ""
+"Les articles ne sont pas sélectionnés pour l'attribution d'un DOI dans le "
+"module d'identifiant public DOI, le dépôt et l'exportation à partir de ce "
+"module sont donc impossibles."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr ""
+"L'ISSN de la revue n'a pas été configuré ! Vous devez ajouter un ISSN sur la "
+"page des <a href=\"{$journalSettingsUrl}\" target=\"_blank\">paramètres de "
+"la revue</a>."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr ""
+"Un éditeur n'a pas été configuré ! Vous devez ajouter une institution "
+"éditrice sur la page  des <a href=\"{$journalSettingsUrl}\" target=\"_blank\""
+">paramètres de la revue</a>."
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Toutes les exigences du module sont satisfaites."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Exigences"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Exporter les métadonnées de l'article au format CrossRef XML."
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Module d'exportation CrossRef XML"

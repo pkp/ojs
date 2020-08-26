@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-27 23:09+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2020-08-16 19:13+0000\n"
+"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/author/"
-"vi/>\n"
-"Language: vi\n"
+"vi_VN/>\n"
+"Language: vi_VN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,28 +24,28 @@ msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
 "Một tài khoản người dùng được yêu cầu để gửi đến tạp chí này. Điều này cho "
 "phép các biên tập viên của chúng tôi theo dõi nội dung bài gửi của bạn và "
-"liên hệ với bạn khi trạng thái bài gửi của bạn thay đổi hoặc nếu bạn cần "
-"thêm thông tin."
+"liên hệ với bạn khi trạng thái bài gửi của bạn thay đổi hoặc nếu cần bổ sung "
+"thêm thông tin từ bạn."
 
 msgid "author.article.authorRevisedFile"
-msgstr "Tập tin của tác giả"
+msgstr "Tập tin Của tác giả"
 
 msgid "author.article.copyeditedFile"
-msgstr "Tập tin đã biên tập"
+msgstr "Tập tin Đã biên tập"
 
 msgid "author.article.uploadAuthorVersion"
-msgstr "Tải lên phiên bản tác giả"
+msgstr "Tải lên Phiên bản Tác giả"
 
 msgid "author.submit.submissionComplete"
 msgstr ""
-"Bài gửi đã hoàn tất. Cám ơn bạn đã quan tâm đến việc xuất bản với "
+"Bài gửi đã hoàn tất. Cám ơn bạn đã quan tâm đến việc xuất bản trên "
 "{$journalTitle}."
 
 msgid "author.submit.finishSubmission"
-msgstr "Hoàn tất bài gửi"
+msgstr "Hoàn tất Gửi bài"
 
 msgid "author.submit.filesSummary"
-msgstr "Tóm tắt tập tin"
+msgstr "Tóm tắt Tập tin"
 
 msgid "author.submit.noFiles"
 msgstr "Không có tập tin đã được đính kèm với bài gửi này."
@@ -55,7 +55,7 @@ msgstr ""
 "Để gửi bản thảo của bạn tới {$journalTitle} nhấp vào Hoàn tất bài gửi. Người "
 "liên hệ chính của bài gửi sẽ nhận được xác nhận qua email và sẽ có thể xem "
 "tiến trình của bài gửi thông qua quy trình biên tập bằng cách đăng nhập vào "
-"trang web của tạp chí. Cảm ơn bạn đã quan tâm đến việc xuất bản với "
+"trang web của tạp chí. Cảm ơn bạn đã quan tâm đến việc xuất bản trên "
 "{$journalTitle}."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
@@ -68,7 +68,7 @@ msgid "author.submit.suppFile.form.descriptionRequired"
 msgstr "Vui lòng nhập mô tả."
 
 msgid "author.submit.suppFile.form.subjectRequired"
-msgstr "Vui lòng nhập một đề tài."
+msgstr "Vui lòng nhập một chủ đề."
 
 msgid "author.submit.suppFile.form.titleRequired"
 msgstr "Vui lòng nhập tiêu đề của tập tin bổ sung này."
@@ -80,12 +80,12 @@ msgid "author.submit.suppFile.sourceDescription"
 msgstr "Tên của nghiên cứu hoặc ý tưởng gốc khác."
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr "Chỉ sử dụng với các tài liệu chính thức được công bố."
+msgstr "Ngày khi dữ liệu được thu thập hoặc công cụ được tạo."
 
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Tập tin hiện tại cho người phản biện (không có siêu dữ liệu), vì nó sẽ không "
-"được bình duyệt kín."
+"Tập tin dành cho người phản biện (không có siêu dữ liệu), vì nó sẽ dùng cho "
+"bình duyệt kín."
 
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Mô tả ngắn gọn"
@@ -109,7 +109,7 @@ msgid "author.submit.suppFile.researchMaterials"
 msgstr "Vật liệu nghiên cứu"
 
 msgid "author.submit.suppFile.researchInstrument"
-msgstr "Dụng cụ nghiên cứu"
+msgstr "Công cụ nghiên cứu"
 
 msgid "author.submit.suppFile.createrOrOwner"
 msgstr "Người tạo (hoặc chủ sở hữu) của tập tin"
@@ -150,7 +150,7 @@ msgstr ""
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr ""
-"Nhấp vào Lưu để tải lên tập tin (sau đó có thể tải lên các tập tin bổ sung)."
+"Nhấp vào Lưu để tải tập tin (sau đó các tập tin bổ sung có thể được tải lên)."
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
@@ -174,7 +174,7 @@ msgid "author.submit.submissionFile"
 msgstr "Tập tin bài gửi"
 
 msgid "author.submit.form.wordCountAlert"
-msgstr "Bạn đã vượt quá giới hạn từ tối đa cho tóm tắt."
+msgstr "Giới hạn từ tối đa cho tóm tắt bị vượt quá."
 
 msgid "author.submit.form.abstractRequired"
 msgstr "Vui lòng nhập tóm tắt của bài viết của bạn."
@@ -186,12 +186,12 @@ msgid "author.submit.form.authorRequiredFields"
 msgstr "Tên, họ và địa chỉ email của mỗi tác giả là bắt buộc."
 
 msgid "author.submit.form.authorRequired"
-msgstr "Ít nhất một tác giả là bắt buộc."
+msgstr "Bắt buộc phải có ít nhất một tác giả."
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/"
-"iso639-2/php/code_list.php\" target=\"_blank\">Mã bổ sung</a>."
+"Tiếng Anh=en; Tiếng Việt=vi. <a href=\"http://www.loc.gov/standards/iso639-2/"
+"php/code_list.php\" target=\"_blank\">Mã bổ sung</a>."
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
@@ -200,8 +200,8 @@ msgstr ""
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
-"Cung cấp các yêu cầu để lập chỉ mục cho bài gửi; các thuật ngữ riêng tách "
-"biệt bằng dấu chấm phẩy (term1; term2; term3)."
+"Cung cấp các yêu cầu để lập chỉ mục cho bài gửi; tách biệt các thuật ngữ bởi "
+"dấu chấm phẩy (term1; term2; term3)."
 
 msgid "author.submit.deleteAuthor"
 msgstr "Xóa tác giả"
@@ -232,7 +232,7 @@ msgid "author.submit.comments"
 msgstr "Nhập văn bản (tùy chọn)"
 
 msgid "submission.submit.coverNote"
-msgstr "Bình luận cho biên tập viên"
+msgstr "Bình luận cho Biên tập viên"
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
@@ -266,22 +266,22 @@ msgid "author.submissions.confirmDelete"
 msgstr "Bạn có chắc chắn muốn xóa bài gửi không đầy đủ này?"
 
 msgid "author.submissions.proofreadingCorrections"
-msgstr "Sửa lỗi hiệu đính"
+msgstr "Sửa lỗi Hiệu đính"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Tải liên bản sửa"
+msgstr "Tải liên bản đã biên tập"
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr "Biên tập: Yêu cầu đọc hiệu đính"
+msgstr "Đang biên tập: Yêu cầu Hiệu đính"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Biên tập: Yêu cầu sửa chữa"
+msgstr "Đang Biên tập: Yêu cầu sửa chữa"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "Phản biện: Yêu cầu sửa chữa"
+msgstr "Đang phản biện: Yêu cầu sửa chữa"
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Phản biện vòng  {$round}"
+msgstr "Phản biện Vòng  {$round}"
 
 msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
@@ -291,18 +291,18 @@ msgid "author.submit.addReasonsForWaiver"
 msgstr "Vui lòng bình luận bên dưới để cho biết lý do tại sao phải miễn phí."
 
 msgid "author.submit.qualifyForWaiver"
-msgstr "Vui lòng xem xét miễn lệ phí gửi bài cho bài viết này"
+msgstr "Vui lòng xem xét miễn Lệ phí gửi bài cho bài viết này"
 
 msgid "author.submit.requestWaiver"
-msgstr "Yêu cầu từ bỏ"
+msgstr "Yêu cầu Miễn lệ phí"
 
 msgid "author.submit.notAccepting"
 msgstr "Tạp chí này không chấp nhận các bài gửi tại thời điểm này."
 
 msgid "submission.submit.cancelSubmission"
 msgstr ""
-"Bạn có thể hoàn thành việc gửi này vào ngày sau đó bằng cách chọn Các bài "
-"gửi đang hoạt động."
+"Bạn có thể hoàn thành việc gửi bài này vào ngày sau đó bằng cách chọn Các "
+"bài gửi đang hoạt động từ trang tác giả."
 
 msgid "author.submit.nextSteps"
 msgstr "Bước tiếp theo"
@@ -317,28 +317,28 @@ msgid "author.submit.metadata"
 msgstr "Nhập siêu dữ liệu"
 
 msgid "author.submit.upload"
-msgstr "Tải lên bài gửi"
+msgstr "Tải lên tập tin bài gửi"
 
 msgid "author.submit.start"
 msgstr "Bắt đầu"
 
 msgid "author.submit.step5"
-msgstr "Bước 5. Xác nhận"
+msgstr "Bước 5. Xác nhận gửi bài"
 
 msgid "author.submit.step4a"
-msgstr "Bước 4a. Thêm một tập tin bổ sung"
+msgstr "Bước 4a. Thêm một tập tin phụ trợ"
 
 msgid "author.submit.step4"
-msgstr "Bước 4. Tải lên tập tin bổ sung"
+msgstr "Bước 4. Tải lên tập tin phụ trợ"
 
 msgid "author.submit.step3"
-msgstr "Bước 3. Nhập siêu dữ liệu"
+msgstr "Bước 3. Nhập siêu dữ liệu mô tả bài viết"
 
 msgid "author.submit.step2"
-msgstr "Bước 2. Tải lên"
+msgstr "Bước 2. Tải lên tập tin bài gửi"
 
 msgid "author.submit.step1"
-msgstr "Bước 1. Bắt đầu"
+msgstr "Bước 1. Bắt đầu gửi bài"
 
 msgid "author.submit.startHereLink"
 msgstr ""
@@ -349,18 +349,18 @@ msgid "author.submit.startHereTitle"
 msgstr "Bắt đầu một bài gửi mới"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "Năm bước để gửi bài"
+msgstr "Năm bước để Gửi bài"
 
 msgid "author.submit.submitArticle"
-msgstr "Gửi một bài viết"
+msgstr "Gửi bài"
 
 msgid "author.competingInterests"
 msgstr ""
-"Lợi ích&nbsp;cạnh tranh <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">Chính sách&nbsp;CI</a>"
+"Lợi ích cạnh tranh (CI) <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Chính sách Lợi ích cạnh tranh</a>"
 
 msgid "author.track"
-msgstr "Các bài gửi đang hoạt động"
+msgstr "Các bài gửi đang xử lý"
 
 msgid "author.submit"
-msgstr "Bài gửi mới"
+msgstr "Gửi bài mới"

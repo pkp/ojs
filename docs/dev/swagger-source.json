@@ -1000,6 +1000,13 @@
 						"in": "query",
 						"required": false,
 						"type": "string"
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter the results by a search phrase matched against the title, description and year. It will also attempt to match search phrases using the localised issue identification. For example, in English a search for `Vol. 1 No. 2 (2018)` will match an issue with a volume of `1`, a number of `2` and a year of `2018`. The precise format differs for each language.",
+						"in": "query",
+						"required": false,
+						"type": "string"
 					}
 				],
 				"responses": {

@@ -1,2 +1,2445 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-08-10 14:27+0000\n"
+"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"ro_RO/>\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.issues.futureIssues"
+msgstr "Numărul viitor"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Fișiere suplimentare"
+
+msgid "user.reviewerPrompt"
+msgstr "Ați fi dispus să evaluați manuscrise înregistrate la acest jurnal?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Înregistrarea unei alte reviste"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Alegeți cum să comandați articole din această categorie."
+
+msgid "catalog.sortBy"
+msgstr "Comandarea articolelor"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} se ocupă de editarea manuscrisului {$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Abonamente"
+
+msgid "user.showAllJournals"
+msgstr "Arată revistele mele"
+
+msgid "user.profile.profileImage"
+msgstr "Imagine de profil"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Includeți utilizatorii fără roluri în acest jurnal."
+
+msgid "journal.viewAllIssues"
+msgstr "Vezi toate numerele"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Revistă"
+
+msgid "journal.path"
+msgstr "Cale"
+
+msgid "context.contexts"
+msgstr "Reviste"
+
+msgid "journal.currentIssue"
+msgstr "Număr curent"
+
+msgid "submission.search"
+msgstr "Căutare articol"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Corectat"
+
+msgid "submissions.layoutComplete"
+msgstr "Aspect editat"
+
+msgid "submissions.copyeditComplete"
+msgstr "Editare"
+
+msgid "submission.eventLog"
+msgstr "Jurnal de evenimente"
+
+msgid "submissions.editorRuling"
+msgstr "Hotărârea editorului"
+
+msgid "submissions.editorDecision"
+msgstr "Decizia editorului"
+
+msgid "submissions.proof"
+msgstr "Corectură"
+
+msgid "submissions.reviewRound"
+msgstr "Runda de revizie"
+
+msgid "submissions.postAuthor"
+msgstr "Post-Autor"
+
+msgid "submissions.initialProof"
+msgstr "Corectura Inițială"
+
+msgid "submissions.proofread"
+msgstr "Corectat"
+
+msgid "submissions.initial"
+msgstr "Inițial"
+
+msgid "submissions.published"
+msgstr "Publicat"
+
+msgid "submissions.queuedReview"
+msgstr "În revizie"
+
+msgid "submissions.step3"
+msgstr "Pasul 3"
+
+msgid "submissions.step1"
+msgstr "Pasul 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submission.scheduledIn"
+msgstr "Programat pentru publicare în {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Programare"
+
+msgid "submission.proofreading"
+msgstr "Corectură"
+
+msgid "submission.copyedit"
+msgstr "Editare"
+
+msgid "submission.copyediting"
+msgstr "Editare"
+
+msgid "submission.authorVersion"
+msgstr "Versiunea autorului"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Fișier cu versiunea revizuită a autorului"
+
+msgid "submission.editorVersion"
+msgstr "Versiunea editorului"
+
+msgid "submission.postReviewVersion"
+msgstr "Versiunea fișierului post-revizie"
+
+msgid "submission.reviewersVersion"
+msgstr "Versiunea de fișier adnotată de revizor(i)"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Înregistrare Email Editor/Autor"
+
+msgid "submission.notifyEditor"
+msgstr "Notificare editor"
+
+msgid "submission.notifyAuthor"
+msgstr "Notificare autor"
+
+msgid "submission.editorReview"
+msgstr "Revizuirea editorului"
+
+msgid "submission.round"
+msgstr "Runda&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Decizia Editorului"
+
+msgid "submission.sent"
+msgstr "Trimite"
+
+msgid "submission.changeSection"
+msgstr "Schimbă în"
+
+msgid "submission.submissionEditing"
+msgstr "Editarea Înregistrării"
+
+msgid "article.return"
+msgstr "Reveniți la detaliile articolului"
+
+msgid "article.fontSize.large.altText"
+msgstr "Mare"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Mediu"
+
+msgid "article.fontSize.small.altText"
+msgstr "Mic"
+
+msgid "article.fontSize"
+msgstr "Mărimea Fontului"
+
+msgid "article.comments.enable"
+msgstr "Activare"
+
+msgid "article.comments.disable"
+msgstr "Dezactivare"
+
+msgid "article.comments.sectionDefault"
+msgstr "Mod implicit"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Acces Restricționat"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Acces Liber"
+
+msgid "article.coverPage.altText"
+msgstr "Imagine pentru Copertă"
+
+msgid "article.abstract"
+msgstr "Rezumat"
+
+msgid "article.details"
+msgstr "Detalii"
+
+msgid "article.submissions"
+msgstr "Înregistrare manuscris"
+
+msgid "article.submission"
+msgstr "Înregistrare manuscris"
+
+msgid "article.commentsToEditor"
+msgstr "Comentariile autorilor"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Limba"
+
+msgid "article.type"
+msgstr "Tipul, metoda sau abordarea"
+
+msgid "article.coverage"
+msgstr "Acoperire"
+
+msgid "article.subject"
+msgstr "Cuvinte cheie"
+
+msgid "article.discipline"
+msgstr "Disciplina academică și sub-disciplina"
+
+msgid "article.suppFiles"
+msgstr "Fișier(e) suplimentar(e)"
+
+msgid "article.suppFile"
+msgstr "Fișier Suplimentar"
+
+msgid "article.file"
+msgstr "Fișier"
+
+msgid "article.journalSection"
+msgstr "Secțiunea Jurnalului"
+
+msgid "article.metadata"
+msgstr "Metadate"
+
+msgid "article.indexingInformation"
+msgstr "Informații de indexare"
+
+msgid "article.authors"
+msgstr "Autori"
+
+msgid "article.title"
+msgstr "Titlu"
+
+msgid "article.submissionId"
+msgstr "ID Înregistrare manuscris"
+
+msgid "common.publications"
+msgstr "Articole"
+
+msgid "common.publication"
+msgstr "Articol"
+
+msgid "article.articles"
+msgstr "Articole"
+
+msgid "article.article"
+msgstr "Articol"
+
+msgid "section.policy"
+msgstr "Despre Secțiune"
+
+msgid "section.abbreviation.example"
+msgstr "(De exemplu, Articol=ART)"
+
+msgid "section.abbreviation"
+msgstr "Abreviere"
+
+msgid "section.title"
+msgstr "Titlul secțiunii"
+
+msgid "section.sections"
+msgstr "Secțiuni"
+
+msgid "section.section"
+msgstr "Secțiune"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Editori alocați"
+
+msgid "common.queue.short.completed"
+msgstr "Arhivă"
+
+msgid "common.queue.long.completed"
+msgstr "Arhivă"
+
+msgid "common.queue.short.active"
+msgstr "Activ"
+
+msgid "common.queue.long.active"
+msgstr "Activ"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arhive"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arhive"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "In revizie"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Manuscrise în revizie"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "In editare"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Manuscrise în editare"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Neatribuit"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Neatribuit"
+
+msgid "navigation.skip.issue"
+msgstr "Treci la Volumul curent"
+
+msgid "navigation.skip.about"
+msgstr "Treci la despre revistă"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informații pentru bibliotecari"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informații pentru Autori"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Ghid pentru Competitori"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Pentru bibliotecari"
+
+msgid "navigation.infoForAuthors"
+msgstr "Pentru autori"
+
+msgid "navigation.browseByAuthor"
+msgstr "După Autor"
+
+msgid "navigation.browseByIssue"
+msgstr "După Număr (Volum)"
+
+msgid "navigation.otherJournals"
+msgstr "Alte Reviste"
+
+msgid "navigation.current"
+msgstr "Curent"
+
+msgid "navigation.journalHelp"
+msgstr "Ajutor"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Imaginea de pe Pagina de Pornire"
+
+msgid "common.homePageHeader.altText"
+msgstr "Antetul Paginii de Pornire"
+
+msgid "common.payments"
+msgstr "Plăți"
+
+msgid "common.payment"
+msgstr "Plată"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Sigur doriți să marcați această sarcină ca finalizată? Este posibil să nu "
+"mai puteți face modificări după aceea."
+
+msgid "common.software"
+msgstr "Sisteme de Reviste Open Source"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vă rugăm să completați câmpurile obligatorii."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Faceți clic pe pictogramă pentru a completa formularul de recenzie."
+
+msgid "navigation.categories.browse"
+msgstr "Navigare"
+
+msgid "navigation.categories"
+msgstr "Categorii"
+
+msgid "context.select"
+msgstr "Schimbă jurnalul:"
+
+msgid "context.current"
+msgstr "Jurnalul Curent:"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Editarea inițială a fost terminată"
+
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Fișierul editat a fost actualizat"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Procesul de editare este complet"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Fișierul revizuit de editor a fost actualizat"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "A fost inițiată editarea"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Editor refuzat manuscrisului"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Editor alocat manuscrisului"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Manuscrisul a fost restaurat din arhivă"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Manuscrisul a fost trimis spre arhivă"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Fișierul editorului a fost actualizat"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Decizia editorului a fost încărcată"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor refuzat pentru manuscris"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editor alocat manuscrisului"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Fișierul revizuit de autor a fost actualizat"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Revizia articolului este încărcată"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Articol publicat"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Manuscrisul a fost alocat unui volum"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Manuscrisul înregistrat a fost trimis spre următoarea etapă"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Manuscris înregistrat"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Eveniment de depunere"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Notă:</strong> Abonamentele instituționale achiziționate online "
+"necesită aprobarea domeniilor și a intervalelor IP înainte de activarea "
+"abonamentului."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Abonările individuale necesită autentificare pentru a avea acces la "
+"conținutul abonat."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Abonamentele instituționale nu necesită autentificare. Domeniul de "
+"utilizator și/sau adresa IP sunt utilizate pentru a permite accesul la "
+"conținut."
+
+msgid "subscriptions.status.other"
+msgstr "Altele, a se vedea Notele"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Nu aveți nici un abonament activ."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Plată online în așteptare"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Plată în așteptare"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Necesită aprobare"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Necesită informații"
+
+msgid "subscriptions.status.active"
+msgstr "Activ"
+
+msgid "subscriptions.status"
+msgstr "Statut"
+
+msgid "subscriptions.inactive"
+msgstr "Inactiv"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Tipărit și Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Tipărit"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format"
+msgstr "Format"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "în termen"
+
+msgid "subscriptionTypes.months"
+msgstr "lunile"
+
+msgid "subscriptionTypes.month"
+msgstr "luna"
+
+msgid "subscriptionTypes.years"
+msgstr "ani"
+
+msgid "subscriptionTypes.year"
+msgstr "an"
+
+msgid "subscriptionTypes.currency"
+msgstr "Valuta"
+
+msgid "issue.return"
+msgstr "Revin-o la detaliile numărului"
+
+msgid "issue.viewIssue"
+msgstr "Vizualizare număr"
+
+msgid "issue.nonpdf.title"
+msgstr "Descărcare număr"
+
+msgid "issue.fullIssue"
+msgstr "Număr complet"
+
+msgid "issue.coverPage.altText"
+msgstr "Copertă"
+
+msgid "issue.abstract"
+msgstr "Rezumat"
+
+msgid "issue.toc"
+msgstr "Cuprins"
+
+msgid "issue.noIssues"
+msgstr "Fără Numere"
+
+msgid "issue.year"
+msgstr "An"
+
+msgid "issue.no"
+msgstr "Nr."
+
+msgid "issue.number"
+msgstr "Număr"
+
+msgid "issue.volume"
+msgstr "Volum"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Vizualizare {$identification}"
+
+msgid "issue.title"
+msgstr "Titlu"
+
+msgid "issue.issues"
+msgstr "Numere"
+
+msgid "issue.issue"
+msgstr "Număr"
+
+msgid "user.role.journalAssistants"
+msgstr "Asistenții jurnalului"
+
+msgid "user.role.journalAssistant"
+msgstr "Asistentul jurnalului"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Coordonatori abonamente"
+
+msgid "user.role.subEditors"
+msgstr "Editori de secțiune"
+
+msgid "user.role.managers"
+msgstr "Coordonatori jurnal"
+
+msgid "user.role.subscriptionManager"
+msgstr "Gestionar abonamente"
+
+msgid "user.role.subEditor"
+msgstr "Editor de secțiune"
+
+msgid "user.role.manager"
+msgstr "Manager jurnal"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Înregistrează-te ca revizor: Înregistrarea ca revizor este dezactivată în "
+"prezent."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Înregistrează-te ca revizor"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr ""
+"Încarcă un manuscris: Înregistrarea autorului este dezactivată în prezent."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Încarcă o propunere"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Contul dumneavoastră nu are nici un rol curent în acest jurnal. Vă rugăm să "
+"alegeți dintre acțiunile de mai jos:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"În prezent, contul dvs. nu este asociat nici unui jurnal. Vă rugăm să "
+"alegeți un jurnal:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Gestionează abonamentele mele"
+
+msgid "user.myJournals"
+msgstr "Revistele mele"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Dacă ați solicitat să fiți recenzor, vă rugăm să introduceți subiectele de "
+"interes."
+
+msgid "user.register.otherContextRoles"
+msgstr "Solicitați următoarele roluri."
+
+msgid "user.register.contextsPrompt"
+msgstr "La ce reviste de pe acest site doriți să vă înregistrați?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Da, aș dori să fiu contactat pentru solicitări de analiză a manuscriselor "
+"înregistrate la acest jurnal."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Da, solicitați rolul {$ userGroup}."
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Sarcină editorială activă"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Sarcină editorială completă"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Nu au fost alocate manuscrisuri."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Notificând din nou acest editor, va reporni misiunea. Ești sigur că vrei să "
+"faci asta?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Notificând din nou acest autor, va reporni misiunea. Ești sigur că vrei să "
+"faci asta?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Notificând din nou acest editor de machetă, va reporni sarcina. Ești sigur "
+"că vrei să faci asta?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Notificând din nou acest corector va reporni sarcina. Ești sigur că vrei să "
+"faci asta?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Regrete"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Regrete revizor, anulări & Runde iniţiale"
+
+msgid "sectionEditor.regrets"
+msgstr "Regrete"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Vizualizare regrete, anulări, runde anterioare"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Revizuire, Runda {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Decizia editorului, Runda {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Regrete și anulări pentru evaluatori (recenzori)"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Regret"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Rezultat"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Înrolați un utilizator existent ca evaluator"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Creați un nou recenzor"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Misiune editorială activă"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Misiune editorială completă"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Nu există misiuni editoriale active."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Alocarea editării machetei"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Încarcă formatul pentru galerie"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Galeria va fi disponibilă pe un site separat."
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Înlocuiește fișierul"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Încarcă fișier suplimentar"
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"Format de imagine invalid. Formatele acceptate sunt .gif, .jpg, and .png."
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Pași: Alocarea manuscrisului &gt; Revizuirea manuscrisului &gt; Editarea "
+"manuscrisului &gt; Cuprins.<br /><br />\n"
+"Selectați un model pentru tratarea acestor aspecte ale procesului editorial.("
+"Pentru a desemna un editor și un editor de secțiuni, accesați editori în "
+"Gestionare Revistă.)"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Notificări privind drepturile de autor (Creative Commons Copyright)</h3>"
+"\n"
+"<h4>1.Politica propusă pentru jurnalele care oferă acces deschis</h4>\n"
+"Autorii care publică în această revistă sunt de acord cu următorii termeni:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autorii păstrează drepturile de autor și acordă jurnalului dreptul de "
+"prima publicare a articolului în temeiul <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Licenței Creative Commons</a> "
+"care permite altor persoane să împărtășească lucrarea, cu o recunoaștere a "
+"autorului lucrării și a publicării inițiale în acest jurnal.</li>\n"
+"\t<li>Autorii pot să încheie aranjamente contractuale separate și "
+"suplimentare pentru distribuirea neexclusivă a versiunii publicate "
+"articolului din revistă (de exemplu, să îl posteze într-un depozit "
+"instituțional sau să îl publice într-o carte), cu o confirmare a publicării "
+"inițiale în acest jurnal.</li>\n"
+"\t<li>Autorii sunt autorizați și încurajați să își posteze activitatea "
+"online (de exemplu, în depozitele instituționale sau pe site-ul lor web) "
+"înainte și în timpul procesului de trimitere de manuscris, deoarece poate "
+"duce la schimburi productive, precum și citarea anterioară și mai mare a "
+"lucrărilor publicate (See <a target=\"_new\" href=\"http://opcit.eprints.org/"
+"oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Politica propusă pentru jurnalele care oferă acces deschis cu "
+"întârziere</h4>\n"
+"Autorii care publică în această revistă sunt de acord cu următorii termeni:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autorii păstrează drepturile de autor și acordă jurnalului dreptul de "
+"prima publicație, pentru lucrare [SPECIFICĂ PERIOADA DE TIMP] după "
+"publicarea simultană licențiată în baza  <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Licenței Creative Commons</a> "
+"care permite altor persoane să împărtășească lucrarea cu o recunoaștere a "
+"autorului lucrării și a publicării inițiale în acest jurnal.</li>\n"
+"\t <li>Autorii pot să încheie aranjamente contractuale separate și "
+"suplimentare pentru distribuirea neexclusivă a versiunii publicate "
+"articolului (de exemplu, să îl posteze într-un depozit instituțional sau să "
+"îl publice într-o carte), cu o confirmare a publicării inițiale în acest "
+"jurnal.</li>\n"
+"\t <li>Autorii sunt autorizați și încurajați să își posteze activitatea "
+"online (de exemplu, în depozitele instituționale sau pe site-ul lor web) "
+"înainte și în timpul procesului de trimitere de manuscris, deoarece poate "
+"duce la schimburi productive, precum și citarea anterioară și mai mare a "
+"lucrărilor publicate (See <a target=\"_new\" href=\"http://opcit.eprints.org/"
+"oacitation-biblio.html\"> The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Plugin-urile generice sunt utilizate pentru a extinde sistemele Open Journal "
+"într-o varietate de moduri care nu sunt acceptate de celelalte categorii de "
+"pluginuri."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Pluginurile de autorizare permit Open Journal Systems să delege sarcinile de "
+"autentificare a utilizatorului în alte sisteme, cum ar fi serverele LDAP."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Pluginurile pentru Articole din Galley adaugă suport pentru vizualizarea "
+"diferitelor tipuri de documente din galeria de articole."
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Pluginurile pentru Articole din Galley"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Tipuri de abonamente"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Abonare instituțională"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Abonare individuală"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Managementul abonărilor (înregistrărilor)"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOTĂ!</h4>\n"
+"<p>Sistemul nu a putut suprascrie automat fișierul de configurare. Pentru a "
+"aplica modificările de configurare, trebuie să deschideți "
+"<tt>config.inc.php</tt> într-un editor de text adecvat și înlocuiți "
+"conținutul său cu conținutul câmpului de text de mai jos.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Specificarea unei surse de autentificare implicită, alta decât OJS, are "
+"următoarele efecte:</p>\n"
+"<ul>\n"
+"\t<li>Dacă un utilizator încearcă să înregistreze un cont nou pe acest site "
+"cu un nume de utilizator care există pe sursa de autentificare (dar nu în "
+"baza de date OJS), încercarea de înregistrare este permisă numai dacă parola "
+"furnizată este valabilă pentru contul de utilizator.</li>\n"
+"</ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "documente similare"
+
+msgid "search.results.orderDir.desc"
+msgstr "Descendent"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascendent"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevanţă"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularitate (În ultima lună)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularitate (Tot timpul)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Titlu Jurnal"
+
+msgid "search.results.orderBy.issue"
+msgstr "Număr"
+
+msgid "search.results.orderBy.date"
+msgstr "Data publicării"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor"
+
+msgid "search.results.orderBy.article"
+msgstr "Titlu articol"
+
+msgid "search.results.orderBy"
+msgstr "Ordonează rezultatele după"
+
+msgid "comments.authenticated"
+msgstr ""
+"by <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$NumeUtilzator}</a>"
+
+msgid "editor.issues.backIssues"
+msgstr "Numere arhivate"
+
+msgid "comments.commentsOnArticle"
+msgstr "Comentarii pentru acest articol"
+
+msgid "reader.purchasePrice"
+msgstr "({$valuta} {$preț})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Necesită abonare sau plată"
+
+msgid "reader.subscriptionAccess"
+msgstr "Necesită abonare"
+
+msgid "reader.openAccess"
+msgstr "Acces liber"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Abonare necesară pentru accesarea temei. Pentru a verifica abonamentul, va "
+"trebui să vă autentificați."
+
+msgid "reader.subscribersOnly"
+msgstr "Doar pentru abonați"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Machetarea articolului este completă"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Galeria cu articolul machetat a fost actualizată"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "S-a inițiat atribuirea machetei articolului"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Editor de machetare refuzat"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Editorul de machetare este atribuit"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Atribuirea corectorului este completă"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "A fost actualizat fișierul revizuit de corector"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Atribuirea corectorului a fost inițiată"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Corector refuzat"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Corector atribuit"
+
+msgid "notification.type.galleyModified"
+msgstr "Conținutul a fost modificat pentru \"{$title}.\""
+
+msgid "notification.type.issuePublished"
+msgstr "Un număr a fost publicat."
+
+msgid "notification.type.newAnnouncement"
+msgstr "A fost creat un anunț de revizuire."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "A fost încărcată o evaluare pentru \"{$title}.\""
+
+msgid "notification.type.reviewing"
+msgstr "Revizuirea evenimentelor"
+
+msgid "notification.type.site"
+msgstr "Sit Evenimente"
+
+msgid "notification.type.submissionComment"
+msgstr "Un editor a făcut un comentariu la \"{$title}.\""
+
+msgid "notification.type.submissions"
+msgstr "Înregistrare evenimente"
+
+msgid "notification.type.userComment"
+msgstr "Un cititor a făcut un comentariu la \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "Anunțuri publice"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Metadatele de publicare au fost salvate."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr ""
+"Un nou articol a fost înregistrat. Acestuia trebuie să i se atribuie un e "
+"editor."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Alocați unui utilizator să creeze conținut cu ajutorul linkului Alocare din "
+"lista Participanți."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Încercați să accesați un articol care nu face parte din secțiunea dvs."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Așteaptă activarea conținutului."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Acces refuzat! Nu ați fost repartizat în calitate de editor de conținut la "
+"acest articol."
+
+msgid "user.authorization.noContext"
+msgstr "Niciun jurnal în context!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Solicitare număr nevalid!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Depunerea nevalidă a editorului de conținut sau nu a fost solicitată nicio "
+"depunere a editorului!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Lista de valute a fost încărcată \"{$filename}\" din XML"
+
+msgid "grid.action.createContext"
+msgstr "Crează un nou jurnal"
+
+msgid "editor.navigation.issues"
+msgstr "Numere"
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Această depunere de manuscris este în așteptarea aprobării înainte de a "
+"apărea în număr."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Aprobare în așteptare."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Înregistrează-te la alte reviste"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Ascunde alte jurnale"
+
+msgid "article.view.interstitial"
+msgstr "Vă rugăm să alegeți un articol pe care să îl descărcați."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Aprobat"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Aprobare în așteptare"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Conținut aprobat"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Aprobați acest conținut pentru publicare.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Eliminați aprobarea pentru acest conținut.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexarea \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Această implementare de căutare nu permite re-indexarea jurnalului."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"Calea de jurnal dată \"{$journalPath}\"nu a putut fi rezolvată pentru un "
+"jurnal."
+
+msgid "notification.type.editing"
+msgstr "Editare evenimente"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Articol revizuit"
+
+msgid "installer.upgradeApplication"
+msgstr "Actualizare OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Actualizare OJS"
+
+msgid "installer.appInstallation"
+msgstr "Instalare OJS"
+
+msgid "payment.type.donation"
+msgstr "Donații"
+
+msgid "payment.type.publication.required"
+msgstr "Taxa de publicare este pregătită pentru plată."
+
+msgid "payment.type.publication"
+msgstr "Taxă de publicare"
+
+msgid "payment.paymentReceived"
+msgstr "Înregistrare plată"
+
+msgid "donations.thankYou"
+msgstr "Mulțumesc"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Ghidul pentru revizori"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Pași pentru revizie"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Programare revizie"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Manuscris depus pentru a fi revizuit"
+
+msgid "reviewer.article.schedule"
+msgstr "Programare"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Vezi comentariile"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Refuzare depunere manuscris"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Redepunere în altă parte"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Redepunere pentru revizie"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Revizii necesare"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Înregistrare acceptată"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Revizie finalizată"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Revizie încărcată"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Răspunsul tău"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Solicitarea editorului"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Dacă doriți să adnotați fișierul, pentru editor, salvați pe hard disk și "
+"folosiți Browse / Încărcare.)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Versiune încărcată de revizor"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Încărcare fișiere"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Comentarii"
+
+msgid "reviewer.article.submitReview"
+msgstr "Încărcare revizie de către editor"
+
+msgid "reviewer.article.recommendation"
+msgstr "Recomandare"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Trimite reamintire"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor pentru a Intra"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Introduceți sau lipiți aici comentariile de revizie"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Editor înregistrare manuscrise"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Trimiterea manuscrisului va fi disponibilă, doar atunci când recenzorul este "
+"de acord să efectueze revizuirea"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Imposibil de revizuit"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Voi face recenzia"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Notifică editorul"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Fișier ce trebuie revizuit"
+
+msgid "reviewer.averageQuality"
+msgstr "Evaluare"
+
+msgid "reviewer.completedReviews"
+msgstr "Efectuat"
+
+msgid "reviewer.pendingReviews"
+msgstr "Articolul așteaptă să fie revizuit"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Adresa URL a conținutului găzduit de la distanță"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Elementele evidențiate indică o acțiune necesară de către un editor, "
+"etichetat după cum urmează:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">O acțiune este necesară în faza de "
+"editare</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">O acțiune este necesară în etapa "
+"de editare a machetei</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">O acțiune este necesară în faza de "
+"corectare</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Elementele evidențiate indică o acțiune necesar a fi efectuată de "
+"către un editor, după cum urmează:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Un recenzor a fost "
+"atribuit, dar nu a fost notificat prin e-mail</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Toți recenzorii au revenit cu "
+"comentariile lor, dar nu este înregistrată nicio decizie</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Autorul a încărcat un "
+"manuscris revizuit</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Recenzorul a "
+"întârziat să confirme invitația de recenzie</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Recenzorul a "
+"întârziat să completeze evaluarea</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Due\" se completează atunci când recenzorul acceptă cererea de "
+"revizuire; afișează numărul de săptămâni pentru a revizui data scadentă sau "
+"(-) săptămâni in care a fost restante.</li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Ne pare rău, nu aveți drepturi administrative asupra acestui utilizator. "
+"Acest lucru se poate întâmpla pentru că:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Utilizatorul este administrator de site</li>\n"
+"\t\t\t<li>Utilizatorul este activ în jurnalele pe care nu le gestionați</li>"
+"\n"
+"\t\t</ul>\n"
+"\tAceastă sarcină trebuie efectuată de un administrator de site.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Dezactivați acest utilizator? Acest lucru va împiedica utilizatorul să se "
+"autentifice în sistem.\n"
+"\n"
+"Opțional, puteți oferi utilizatorului un motiv pentru dezactivarea contului "
+"său."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Pentru a permite cititorilor să localizeze versiunile online ale lucrării "
+"citate de un autor, sunt disponibile următoarele opțiuni.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Add a Reading Tool</strong><p>Managerul jurnalului poate "
+"adăuga \"Caută referințe\" la Instrumentele de citire care însoțesc "
+"articolele publicate, care permite cititorilor să lipească titlul unei "
+"referințe și apoi să caute în baze de date academice preselectate pentru "
+"lucrarea citată.</p></li>\n"
+"\t<li><strong>Activați linkul în referințe</strong><p>Editorul de machetă "
+"poate adăuga un link la referințe care pot fi găsite online utilizând "
+"instrucțiunile următoare(which can be edited).</p></li>\n"
+"</ol>"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Ghidul de revizuire va oferi recenzorilor criterii pentru a evalua "
+"caracterul adecvat al unui manuscris trimis pentru publicarea în jurnal și "
+"poate include orice instrucțiuni speciale pentru pregătirea unei recenzii "
+"eficiente și utile. În realizarea revizuirii, recenzorilor li se oferă două "
+"căsuțe de text deschise, prima „pentru autor și editor” și a doua „pentru "
+"editor”. În mod alternativ, Managerul de jurnal poate crea un formular de "
+"revizuire de la egal la Formulare de revizuire. În toate cazurile, editorii "
+"vor avea opțiunea de a include recenziile în corespondență cu autorul."
+
+msgid "help.goToEditPage"
+msgstr "Editare {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Întoarce rezultatele căutării"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Ajutor OJS"
+
+msgid "help.ojsHelp"
+msgstr "Ajutor OJS"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Acest site folosește Open Journal Systems {$ojsVersion}, care este un "
+"instrument de gestionare a jurnalelor academice, acest software este "
+"dezvoltat, susținut și distribuit liber de către <a href=\"http://pkp.sfu.ca/"
+"\">Public Knowledge Project</a> sub licența GNU General Public License."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Acest jurnal folosește Open Journal Systems {$ojsVersion}, care este un "
+"instrument de gestionare a jurnalelor academice, acest software este "
+"dezvoltat, susținut și distribuit liber de către <a href=\"http://pkp.sfu.ca/"
+"\">Public Knowledge Project</a> sub licența GNU General Public License."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Procesul editorial și de publicare OJS"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Informații suplimentare despre sistemul de publicare și platforma de lucru "
+"OJS/PKP."
+
+msgid "about.memberships"
+msgstr "Afilieri"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Tipuri de abonare"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Cost"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Durată"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Format"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nume"
+
+msgid "about.subscriptionsContact"
+msgstr "Date de contact pentru abonare"
+
+msgid "about.subscriptions.institutional"
+msgstr "Abonare instituțională"
+
+msgid "about.subscriptions.individual"
+msgstr "Abonare individuală"
+
+msgid "about.subscriptions"
+msgstr "Abonamente"
+
+msgid "about.archiving"
+msgstr "Arhivare"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "lună (luni) după publicarea unui număr."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Conținutul acestui jurnal va fi disponibil în format liber"
+
+msgid "about.delayedOpenAccess"
+msgstr "Acces liber întârziat"
+
+msgid "about.openAccessPolicy"
+msgstr "Politica de acces liber"
+
+msgid "about.publicationFrequency"
+msgstr "Frecvența publicării"
+
+msgid "about.peerReviewProcess"
+msgstr "Procesul de revizuire"
+
+msgid "about.authorFeesMessage"
+msgstr "Acest jurnal percepe următoarele taxe de autor."
+
+msgid "about.authorFees"
+msgstr "Taxe pentru autor"
+
+msgid "about.privacyStatement"
+msgstr "Declarație de confidențialitate"
+
+msgid "about.copyrightNotice"
+msgstr "Notificare privind drepturile de autor"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Ca parte a procesului de depunere de manuscrise, autorii sunt obligați să "
+"verifice respectarea regulilor de înregistrare manuscrise, ținând cont de "
+"elementele următoare, în caz contrar trimiterile putând fi returnate "
+"autorilor care nu respectă aceste reguli."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Lista de verificare a pregătirii depunerii manuscrisului"
+
+msgid "about.authorGuidelines"
+msgstr "Ghid pentru autori"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Vizualizare manuscrise aflate în așteptare"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Înregistrare manuscris nou"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Înregistrează manuscrisul la secțiunea <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} sau {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} sau {$register} pentru a depune un manuscris."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Înregistrare"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Autentificare"
+
+msgid "about.submissions"
+msgstr "Înregistrare manuscrise"
+
+msgid "about.sectionPolicies"
+msgstr "Secțiunea Politici"
+
+msgid "about.focusAndScope"
+msgstr "Scop"
+
+msgid "about.editorialPolicies"
+msgstr "Politici editoriale"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografie"
+
+msgid "about.editorialTeam"
+msgstr "Colectiv editorial"
+
+msgid "about.history"
+msgstr "Istoricul revistei"
+
+msgid "about.aboutContext"
+msgstr "Despre revistă"
+
+msgid "about.contact"
+msgstr "Date de contact"
+
+msgid "about.statistics"
+msgstr "Statistici"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arhivă - Page {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Arhivă"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Trebuie să consimțiți declarația de confidențialitate a acestui site."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Trebuie să consimțiți declarația de confidențialitate pentru orice jurnal "
+"pentru care vă înregistrați."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Da, sunt de acord ca datele mele să fie colectate și stocate în conformitate "
+"cu precizările din <a href=\"{$privacyUrl}\" target=\"_blank\">declarația de "
+"confidențialitate</a>."
+
+msgid "user.register.privacyStatement"
+msgstr "Declarație de confidențialitate"
+
+msgid "search.authorDetails"
+msgstr "Detalii autor"
+
+msgid "search.authorIndex"
+msgstr "Index autori"
+
+msgid "search.allJournals"
+msgstr "Toate jurnalele"
+
+msgid "search.withinJournal"
+msgstr "În"
+
+msgid "search.searchFor"
+msgstr "Caută articole pentru"
+
+msgid "search.browseAuthorIndex"
+msgstr "Index autori"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Da, aș dori să fiu notificat despre noile publicații și anunțuri pentru "
+"toate revistele la care m-am înregistrat."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Identificați interesele revizorilor (domenii de expertiză și metode de "
+"cercetare):"
+
+msgid "user.register.reviewerDescription"
+msgstr "Dispus de a realiza o revizuire a manuscriselor înregistrate pe site."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr ""
+"Dispus să efectueze o revizuire pentru manuscrisele înregistrate la jurnal."
+
+msgid "user.register.authorDescription"
+msgstr "Capabil de a trimite articole la jurnal."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Notificare prin e-mail atunci când un număr al jurnalului este acces deschis."
+
+msgid "user.register.readerDescription"
+msgstr "Notificare prin e-mail la publicarea unui număr al jurnalului."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Parola introdusă nu este suficient de lungă."
+
+msgid "user.register.registrationDisabled"
+msgstr "Acest jurnal nu acceptă în prezent înregistrări ale utilizatorilor."
+
+msgid "user.register.noJournals"
+msgstr "Nu există reviste cu care vă puteți înregistra pe acest site."
+
+msgid "user.register.selectContext"
+msgstr "Selectați un jurnal pentru a vă înregistra cu:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Salvează și trimite email autorului"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Salvează și trimite email autorului"
+
+msgid "submission.comments.forEditor"
+msgstr "Pentru editor"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Pentru autor și editor"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"După trimitere, prezentați o copie BCC editabilă care să fie trimisă "
+"recenzorilor."
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Pentru editor"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Pentru autor și editor"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Aceste comentarii pot fi partajate cu autorul.<br />\n"
+"(După salvare, pot fi adăugate alte comentarii.)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Comentariile editorului de conținut"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Corespondență Editor/Autor"
+
+msgid "submission.logType.proofread"
+msgstr "Corectură"
+
+msgid "submission.logType.layout"
+msgstr "Aspect"
+
+msgid "submission.logType.copyedit"
+msgstr "Editare de conținut"
+
+msgid "submission.logType.review"
+msgstr "Revizie"
+
+msgid "submission.logType.editor"
+msgstr "Editor"
+
+msgid "submission.logType.author"
+msgstr "Autor"
+
+msgid "submission.logType.article"
+msgstr "Articol"
+
+msgid "submission.proofread.instructions"
+msgstr "Instrucțiuni de corectare"
+
+msgid "submission.proofread.corrections"
+msgstr "Corecturile corectorului"
+
+msgid "submission.proofreadingComments"
+msgstr "Comentariile corectorului"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Link de referință"
+
+msgid "submission.layout.instructions"
+msgstr "Instrucțiuni privind aspectul"
+
+msgid "submission.layout.layoutComments"
+msgstr "Comentarii privind aspectul"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Înlocuiește editorul de machetare"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Atribuie editor de machetare"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Identificarea conținutului public există deja."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Nimeni (Încărcați versiunea finală copiată ca versiune de machetare înainte "
+"de a trimite solicitarea)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instrucțiunile de editare"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Comentariile editorului de conținut"
+
+msgid "submission.copyedit.useFile"
+msgstr "Utilizați fișierul"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Atribuie editor conținut"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Versiunea C/E"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Editare finală"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Editare făcută de autor"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Editor conținut"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Editare inițială"
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Cererea nu poate fi trimisă pe e-mail până când fișierul nu este selectat "
+"pentru copiere în Decizia editorului, pagina de revizuire."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Cererea nu poate fi pe e-mail trimisă până când fișierul nu este încărcat "
+"pentru copiere."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Cererea nu poate fi trimisă pe e-mail până când nu există o versiune de "
+"revizuire."
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Pentru a încărca un manuscris în acest jurnal, parcurgeți pașii "
+"următori.</p>\n"
+"<ol>\n"
+"<li>În această pagină, faceți clic pe Browse (sau Alegeți fișier) care "
+"deschide o fereastră de alegere a fișierului pentru localizarea fișierului "
+"pe hard disk-ul computerului.</li>\n"
+"<li>Localizați fișierul pe care doriți să îl trimiteți și evidențiați-l.</li>"
+"\n"
+"<li>Faceți clic pe Deschide în fereastra Alegeți fișier, care plasează "
+"numele fișierului pe această pagină.</li>\n"
+"<li>Faceți clic pe Încărcare pe această pagină, astfel fiind permisă "
+"încărcarea fișierului de pe computer pe site-ul web al jurnalului și "
+"redenumirea sa conform convențiilor jurnalului.</li>\n"
+"<li>După încărcarea manuscrisului, faceți clic pe Salvați și continuați în "
+"partea de jos a acestei pagini.</li>\n"
+"</ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Fără alocări ce corectură"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Fișier editor conținut"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Fișier editor conținut"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Fișier la C/E"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"După ce ați înregistrat o decizie, nu veți mai putea face modificări la "
+"această revizuire. Sunteți sigur că vreți să continuați?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"A fost selectată o nouă recomandare. Trebuie să alegeți o recomandare pe "
+"care să o trimiteți."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Setați sau ajustați recomandarea recenzorului."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Selectați o recomandare și trimiteți recenzia pentru a finaliza procesul. "
+"Trebuie să introduceți o recenzie sau să încărcați un fișier înainte de a "
+"selecta o recomandare."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"În plus, puteți încărca fișiere pe care editorul și / sau autorul le poate "
+"consulta."
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Faceți clic pe pictogramă pentru a introduce (sau a lipi) recenzia dvs. "
+"pentru manuscris."
+
+msgid "reviewer.competingInterests"
+msgstr "Interesele concurente"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Declarați dacă aveți sau nu interese concurente cu privire la această "
+"cercetare (see <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Faceți clic pe numele fișierelor pentru a descărca și revizui fișierele "
+"asociate cu această depunere."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Dacă acceptați să faceți revizuirea, consultați ghidul de revizuire de mai "
+"jos."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "dacă veți face revizia."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Notificați editorul responsabil de depunerea manuscriselor"
+
+msgid "log.copyedit.authorFile"
+msgstr "A fost încărcată de către autor o versiune editată a manuscrisului."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Versiunea editată a manuscrisului a fost încărcată."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} a fost repartizat pentru editarea manuscrisului "
+"{$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} a finalizat editarea variantei finale a manuscrisului "
+"{$submissionId}."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} a finalizat varianta inițială pentru manuscrisul "
+"{$submissionId}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "A fost ales fișierul implicit pentru editare."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"Editarea manuscrisului {$submissionId} a fost preluată de {$copyeditorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Recomandarea editorului ({$decision}) pentru manuscrisul {$submissionId} a "
+"fost înregistrată de {$editorName}."
+
+msgid "log.editor.decision"
+msgstr ""
+"Decizia editorului ({$decision}) pentru manuscrisul {$submissionId} a fost "
+"înregistrată de {$editorName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Un fișier revizuit a fost încărcat."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Editorul, {$userName}, a încărcat fișierul pentru revizie în runda {$round} "
+"a pentru manuscrisul {$submissionId} în acord cu revizorul, {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} a acceptat runda {$round} de revizie a manuscrisului "
+"{$submissionId} în numele {$reviewerName}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} a refuzat runda {$round} de revizie a manuscrisului "
+"{$submissionId} în numele {$reviewerName}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} a acceptat runda {$round} de revizuire a manuscrisului "
+"{$submissionId}."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} a refuzat runda {$round} de revizie pentru manuscrisul "
+"{$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "Manuscrisul {$submissionId} a fost redepus pentru revizie."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Recomandarea de revuzuire în {$round} a manuscrisului {$submissionId} a fost "
+"stabilită de editorul {$editorName}, în numele revizorului, {$reviewerName}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"A fost stabilită recomandarea pentru runda {$round} de revizuire a "
+"manuscrisului {$submissionId} pentru revizorul {$reviewerName}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Data scadenței pentru runda {$round} de revizuire a manuscrisului "
+"{$submissionId} ce va fi făcută de {$reviewerName} a fost fixată la "
+"{$dueDate}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} a făcut evaluarea pentru runda {$round} de revizuire a "
+"manuscrisului {$submissionId}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"A fost inițiată runda {$round} de revizie ce va fi făcută de {$reviewerName} "
+"pentru manuscrisul {$submissionId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} a fost desemnat să examineze manuscrisul {$submissionId} "
+"pentru runda de revizuire {$round}."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} a revizuit manuscrisul {$submissionId}. Noul ID al fișierului "
+"este {$fileId}."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Există o nouă versiune de OJS disponibilă! În prezent utilizați OJS "
+"{$currentVersion}. Cea mai recentă versiune este OJS {$latestVersion}. Vă "
+"rugăm să contactați administratorul site-ului ({$siteAdminName}, <a href=\""
+"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) pentru a-l notifica despre "
+"această nouă versiune. Mai multe informații pot fi găsite <a href=\""
+"http://pkp.sfu.ca/ojs_download\" target=\"_new\">here</a>."
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Există o nouă versiune de OJS disponibilă! În prezent utilizați OJS "
+"{$currentVersion}. Cea mai recentă versiune este OJS {$latestVersion}. Vă "
+"rugăm să vizitați <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">"
+"this page</a> pentru a descărca cea mai recentă versiune și pentru a găsi "
+"instrucțiuni de actualizare."
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Actualizarea OJS la versiunea {$version} a fost finalizată cu succes.</p>"
+"\n"
+"<p>Nu uitați să setați setarea „instalată” din fișierul de configurare "
+"config.inc.php la <em>On</em>.</p>\n"
+"<p>Dacă nu v-ați înregistrat deja și doriți să primiți noutăți și "
+"actualizări, <strong>vă rugăm să vă înregistrați la <a href=\"http://pkp.sfu."
+"ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/"
+"register</a>.</strong> Dacă aveți întrebări sau comentarii, vizitați pagina <"
+"a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Instalarea OJS s-a finalizat cu succes.</p>\n"
+"<p>Pentru a începe utilizarea sistemului, <a href=\"{$loginUrl}\""
+">autentificați-vă</a> cu contul de utilizator și cu parola introduse pe "
+"pagina anterioară.</p>\n"
+"<p>Dacă doriți să faceți parte din comunitatea PKP, puteți:</p>\n"
+"<ol>\n"
+"\t<li>să citiți <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP "
+"blog</a> și să urmăriți <a href=\"http://pkp.sfu.ca/blog/feed\" target=\""
+"_new\">RSS feed</a>pentru noi actualizări.</li>\n"
+"\t<li>să vizitați <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">"
+"support forum</a> dacă aveți întrebări sau comentarii.</li>\n"
+"</ol>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>IMPORTANT!</h4>\n"
+"<p>Instalatorul nu a putut suprascrie automat fișierul de configurare. "
+"Înainte de a încerca să utilizați sistemul, vă rugăm să deschideți "
+"<tt>config.inc.php</tt> într-un editor de text adecvat și înlocuiți "
+"conținutul său cu conținutul câmpului de text de mai jos.</p>"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Atenție:</strong> Dacă instalarea a eșuat parțial prin instalarea "
+"bazei de date, poate fi necesar să renunțați la baza de date OJS sau la "
+"tabelele bazei de date înainte de a încerca să reinstalați baza de date."
+
+msgid "installer.installApplication"
+msgstr "Instalare Open Journal Systems"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS necesită acces la o bază de date SQL pentru a stoca datele sale. "
+"Consultați cerințele de sistem de mai sus pentru o listă de baze de date "
+"acceptate. În câmpurile de mai jos, furnizați setările care vor fi utilizate "
+"pentru a vă conecta la baza de date."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Introduceți numele complet de acces într-un director existent în care "
+"trebuie păstrate fișierele încărcate. Acest director nu trebuie să fie "
+"direct accesibil web. <strong>Vă rugăm să vă asigurați că acest director "
+"există și poate fi scris înainte de instalare.</strong> Numele căilor "
+"Windows ar trebui să utilizeze bare oblice dreapta, de ex. \"C:/myjournal/"
+"files\"."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Selectați limbile suplimentare pe care le doriți în acest sistem. Aceste "
+"limbi vor fi disponibile pentru utilizare de jurnalele găzduite pe site. "
+"Limbi suplimentare pot fi, de asemenea, instalate în orice moment din "
+"interfața de administrare a site-ului."
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Limba principală utilizată pentru acest sistem. Vă rugăm să consultați "
+"documentația OJS dacă sunteți interesat de asistență pentru limbile care nu "
+"sunt listate aici."
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"În prezent, serverul dvs. permite o dimensiune maximă de încărcare a "
+"fișierelor: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"În prezent, serverul dvs. permite încărcarea fișierelor: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Pentru asistență completă Unicode (UTF-8), selectați UTF-8 pentru toate "
+"setările setului de caractere. Rețineți că suportul Unicode complet necesită "
+"compilarea PHP cu suport pentru biblioteca <a href=\"http://www.php.net/"
+"mbstring\" target=\"_blank\"> mbstring </a> (activată în mod implicit în "
+"majoritatea instalații PHP recente). Puteți întâmpina probleme folosind "
+"seturi de caractere extinse dacă serverul dvs. nu îndeplinește aceste "
+"cerințe.\n"
+"<br /><br />\n"
+"În prezent, serverul dvs. acceptă mbstring: "
+"<strong>{$supportsMBString}</strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS Version {$version}</h4>\n"
+"\n"
+"<p>Mulțumim pentru că ați descărcat Public Knowledge Project's <strong>Open "
+"Journal Systems</strong>. Înainte de a continua, vă rugăm să citiți "
+"fișierele <a href=\"{$baseUrl}/docs/README.md\">README</a> și <a href=\""
+"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> care sunt incluse în această "
+"aplicație. Pentru mai multe informații despre Public Knowledge Project și "
+"despre proiectele de software ale acestuia, please visit the <a href=\""
+"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. Dacă aveți rapoarte "
+"de eroare sau întrebări de asistență tehnică despre Open Journal Systems, "
+"vedeți <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support "
+"forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#"
+"issues\" target=\"_blank\">bug reporting system</a>. Deși forumul de "
+"asistență este metoda preferată de contact, puteți trimite prin e-mail și "
+"echipa <a href=\"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>.</p>\n"
+"<p>Este <strong>recomandat</strong> să faceți o copie de siguranță a bazei "
+"de date, a directorului fișierelor și a directorului de instalare OJS "
+"înainte de a continua.</p>\n"
+"<p>Dacă rulați în <a href=\"http://www.php.net/features.safe-mode\" target=\""
+"_blank\">PHP Safe Mode</a>,Vă rugăm să vă asigurați că directiva "
+"max_execution_time din fișierul dvs. de configurare php.ini este setată la o "
+"limită ridicată. Dacă acesta sau orice alt termen (e.g. Apache's \"Timeout\" "
+"directive) este atins și procesul de actualizare este întrerupt, va fi "
+"necesară intervenția manuală.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Pașii de pre-instalare</h4>\n"
+"\n"
+"\n"
+"<p>1. Următoarele fișiere și directoare (și conținutul lor) trebuie să fie "
+"scrise:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> este editabil (opțional): "
+"{$writable_config}</li>\n"
+"\t<li><tt>public/</tt> este editabil: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> este editabil: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> este editabil: {$writable_templates_cache}</li>"
+"\n"
+"\t<li><tt>cache/t_compile/</tt> este editabil: "
+"{$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> este editabil: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Trebuie creat un director pentru stocarea fișierelor încărcate și să "
+"poată fi scris (vezi „Setări fișiere” de mai jos).</p>"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS Versiunea {$version}</h4>\n"
+"\n"
+"<p>Vă mulțumim pentru că ați descărcat Public Knowledge Project's <strong>"
+"Open Journal Systems</strong>. Înainte de a merge mai departe, vă rog să "
+"citiți fișierul <a href=\"{$baseUrl}/docs/README.md\">README</a> inclus în "
+"această aplicație. Pentru mai multe informații cu privire la Public "
+"Knowledge Project și proiectele de software ale acestuia, vă rog să vizitați "
+"<a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. Dacă "
+"aveți rapoarte de eroare sau întrebări de asistență tehnică despre Open "
+"Journal Systems, vedeți <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\""
+">support forum</a> sau vizitați PKP's online <a href=\"https://github.com/"
+"pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Deși "
+"forumul de asistență este metoda preferată de contact, puteți trimite prin e-"
+"mail la adresesa <a href=\"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Actualizare</h4>\n"
+"\n"
+"<p>Dacă actualizați o instalare existentă a OJS, <a href=\"{$upgradeUrl}\">"
+"click aici</a> pentru a continua.</p>\n"
+"\n"
+"<h4>Cerințe de sistem recomandate</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; utilizați în prezent "
+"PHP{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >="
+" 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Sistem de operare: Orice sistem de operare care acceptă software-ul de "
+"mai sus, inclusiv <a href=\"http://www.linux.org/\" target=\"_blank\""
+">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a "
+"href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\""
+"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\""
+"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Deoarece PKP nu dispune de resurse pentru a testa orice combinație "
+"posibilă de versiuni și platforme software, nu este implicată nicio garanție "
+"de funcționare sau asistență corectă.</p>\n"
+"\n"
+"<p>Modificările acestor setări pot fi făcute după instalare, prin editarea "
+"fișierului <tt>config.inc.php</tt> din directorul OJS de bază sau prin "
+"utilizarea interfeței web de administrare a site-ului.</p>\n"
+"\n"
+"<h4>Sisteme de baze de date acceptate</h4>\n"
+"\n"
+"<p>OJS a fost testat în prezent numai pe MySQL și PostgreSQL, deși alte "
+"sisteme de gestionare a bazelor de date sunt acceptate de <a href=\""
+"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> poate funcționa ("
+"integral sau parțial). Rapoartele de compatibilitate și / sau corecțiile de "
+"cod pentru SGBD alternative pot fi trimise echipei OJS.</p>\n"
+
+msgid "payment.subscription.expires"
+msgstr "Expiră"
+
+msgid "payment.subscription.renew"
+msgstr "Reînnoiește abonamentul"
+
+msgid "payment.subscription.purchase"
+msgstr "Cumpărare de abonament"
+
+msgid "payment.membership.ends"
+msgstr "Finalizare"
+
+msgid "payment.membership.renewMembership"
+msgstr "Reînnoiește calitatea de membru individual"
+
+msgid "payment.membership.buyMembership"
+msgstr "Cumpără calitatea de membru individual"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Taxa de publicare plătită"
+
+msgid "payment.publication.payPublication"
+msgstr "Taxa de publicare"
+
+msgid "payment.submission.paySubmission"
+msgstr "Taxa de depunere manuscris"
+
+msgid "payment.donation.makeDonation"
+msgstr "Faceți o donație"
+
+msgid "payment.notFound"
+msgstr ""
+"A fost solicitată o plată, dar cererea a expirat. Pentru detalii, contactați "
+"managerul de jurnal."
+
+msgid "payment.requestPublicationFee"
+msgstr "Solicitați taxa de publicare ({$feeAmount})"
+
+msgid "payment.type.subscription"
+msgstr "Taxa de abonare"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Prețul de achiziție al numărului"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Prețul de achiziție al articolului"
+
+msgid "payment.type.membership"
+msgstr "Taxa individuală de membru"
+
+msgid "payment.type.fastTrack"
+msgstr "Taxa de examinare rapidă"
+
+msgid "payment.type.submission"
+msgstr "Taxa de depunere  manuscris"
+
+msgid "payment.authorFees"
+msgstr "Taxe pentru autor"
+
+msgid "payment.paymentSent"
+msgstr "Plata a fost deja trimisă"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Selectați această casetă dacă ați trimis deja plata către jurnal pentru a "
+"finaliza procesul de trimitere. Transmiterea nu va fi revizuită până la "
+"sosirea plății. Faceți clic pe PLAY ACUM mai sus pentru a vedea "
+"instrucțiunile de plată."
+
+msgid "payment.alreadyPaid"
+msgstr "Deja plătit"
+
+msgid "payment.waive"
+msgstr "Renunțați"
+
+msgid "payment.payNow"
+msgstr "Plătește acum"
+
+msgid "payment.paid"
+msgstr "Plătit"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Trebuie să fiți autentificat pentru a face o donație."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Este necesară achiziția unui număr al jurnalului sau abonarea pentru "
+"accesarea articolului. Pentru a verifica abonamentul, accesați achiziția "
+"anterioară sau achiziționarea numărului, conectați-vă la jurnal."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Este necesară achiziția unui articol sau abonarea pentru accesarea "
+"articolului. Pentru a verifica abonamentul, accesați achiziția anterioară "
+"sau achiziționarea articolului, conectați-vă la jurnal."
+
+msgid "payment.loginRequired"
+msgstr "Pentru a face o plată trebuie să fiți autentificat."
+
+msgid "donations.thankYouMessage"
+msgstr "Vă mulțumim că ați contribuit. Contribuția dvs. este mult apreciată."
+
+msgid "archive.issueUnavailable"
+msgstr "Număr indisponibil"
+
+msgid "archive.browse"
+msgstr "Căutați în numerele mai vechi"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Acest jurnal nu a publicat niciun număr."
+
+msgid "current.noCurrentIssue"
+msgstr "Nici un număr curent"
+
+msgid "current.current"
+msgstr "Curent"
+
+msgid "site.noJournals"
+msgstr "Nu există reviste disponibile."
+
+msgid "site.journalCurrent"
+msgstr "Număr curent"
+
+msgid "site.journalRegister"
+msgstr "Înregistrare"
+
+msgid "site.journalView"
+msgstr "Vizualizați Jurnalul"
+
+msgid "site.journalsHosted"
+msgstr "Jurnale găzduite pe acest site"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Pentru fișierul selectat ar trebui să înceapă descărcarea automată. Dacă nu, "
+"faceți clic pe linkul de mai jos. Rețineți că acest fișier poate necesita un "
+"vizualizator sau un plugin special pentru a fi vizualizate.<br /><br />Dacă "
+"fișierul nu se descarcă automat, <a href=\"{$url}\">faceți click aici</a>."
+
+msgid "article.nonpdf.title"
+msgstr "Descărcare articol"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Fișierul PDF selectat ar trebui să se încarce aici dacă browser-ul dvs. "
+"web are instalat un plugin pentru cititor PDF (de exemplu, o versiune "
+"recentă a<a href=\"https://get.adobe.com/reader/\">Adobe Acrobat "
+"Reader</a>).</p>"
+
+msgid "article.download"
+msgstr "Descarcă acest fișier PDF"
+
+msgid "article.pdf.title"
+msgstr "PDF"
+
+msgid "article.pageTitle"
+msgstr "Vezi în {$title}"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Setări de căutare: <ul>\n"
+"<li>Termenii de căutare sunt sensibili între litere mari și mici</li>\n"
+"<li>Cuvintele comune sunt ignorate</li>\n"
+"<li>În mod implicit, sunt returnate doar articolele care conțin <em>all</em> "
+"ca și termeni de interogare (i.e., <em>AND</em> is implied)</li>\n"
+"<li>Combină mai multe cuvinte cu <em>OR</em> pentru a găsi articole care "
+"conțin oricare dintre termeni; ex., <em>education OR research</em></li>\n"
+"<li>Utilizați paranteze pentru a crea interogări mai complexe; ex., <em>"
+"archive ((journal OR conference) NOT theses)</em></li>\n"
+"<li>Căutați o expresie exactă, punând-o între ghilimele; ex., <em>\"open "
+"access publishing\"</em></li>\n"
+"<li>Excludeți un cuvânt prefixându-l cu <strong>-</strong> sau <em>NOT</em>; "
+"ex. <em>online -politics</em> or <em>online NOT politics</em></li>\n"
+"<li>Folosiți <strong>*</strong> într-un termen ca wildcard pentru a se "
+"potrivi cu orice secvență de caractere; ex., <em>soci* morality</em> s-ar "
+"potrivi cu documentele care conțin \"sociological\" sau \"societal\"</li>\n"
+"</ul>"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Adaugă"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Șterge"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Vă rog să introduceți o adresă validă de IP."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Dacă intervalele de IP sunt introduse aici, domeniul este opțional.<br />"
+"Valorile valide includ adrese IP (e.g. 142.58.103.1), intervale de IP (e.g. "
+"142.58.103.1 - 142.58.103.4), Interval IP cu wildcard '*' (e.g. 142.58.*.*), "
+"și intervale IP cu CIDR (e.g. 142.58.100.0/24)."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} a fost desemnat ca editor de machete pentru manuscris "
+"{$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} a fost desemnat ca editor de machete pentru manuscris "
+"{$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} a finalizat editarea machetei pentru manuscris {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "Metadatele pentru acest articol au fost modificate de {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "Versiunea editorului pentru manuscris a fost încărcată."
+
+msgid "log.editor.archived"
+msgstr "Manuscrisul depus {$submissionId} a fost arhivat."
+
+msgid "log.editor.restored"
+msgstr "Manuscrisul depus {$submissionId} a fost restaurat la coadă."
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} a fost atribuit ca editor pentru manuscrisul depus "
+"{$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} a fost atribuit {$proofreaderName} pentru depunerea "
+"corecturii {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} a depus {$submissionId} pentru programare."
+
+msgid "log.imported"
+msgstr "{$userName} a importat aricolul {$submissionId}."
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Un nou manuscris, \"{$title},\" a fost încărcat."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Un comentariu a fost lăsat la decizia editorului pentru \"{$title}.\""
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Intervale IP"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Vă rog să introduceți un domeniu valid."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Tipul de abonament selectat necesită un domeniu și / sau un interval IP "
+"pentru autentificarea acesteia."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Dacă domeniul este introdus aici, adresele IP sunt opționale.<br />Sunt "
+"valide doar numele de domenii (e.g. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domeniu"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Adresa de poștă"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Este solicitat numele instituției."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Numele instituției"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr ""
+"Pentru tipul de abonare selectat sunt necesare informații privind "
+"apartenența."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Acest cont de utilizator are deja o abonare individuală."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Vă rog să selectați un tip de abonare valid."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr ""
+"Pentru tipul de abonare selectat sunt necesare informații privind "
+"apartenența."
+
+msgid "user.subscriptions.form.membership"
+msgstr "Apartenență"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Tip de abonare"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Vezi tipurile disponibile de abonare"
+
+msgid "user.subscriptions.expired"
+msgstr "Expirat: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Expiră: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Cumpără un abonament instituțional"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Cumpără un abonament individual"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Cumpără un nou abonament"
+
+msgid "user.subscriptions.purchase"
+msgstr "Cumpără"
+
+msgid "user.subscriptions.renew"
+msgstr "Reînnoire"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Abonare instituțională"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Abonare individuală"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Plata online a fost inițiată, dar a fost anulată sau nu este completă"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Plata manuală a fost inițiată, dar nu este încă recepționată"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Abonamentul trebuie revăzut înainte de a fi activat"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr ""
+"Sunt necesare informații suplimentare înainte ca abonamentul să fie activat"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Descriere"
+
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Abonamentele active și expirate sunt afișate mai jos împreună cu data de "
+"expirare. În plus, la fiecare depunere pot fi incluse următoarele informații "
+"de stare."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Status abonare"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Abonamentele mele"

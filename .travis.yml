@@ -57,6 +57,7 @@ before_install:
       npm install && npm run build
     else
       # Prepare for validation tests.
+      npm install
       ./lib/pkp/tools/travis/install-linter.sh
     fi
 

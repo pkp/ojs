@@ -1,0 +1,481 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-10 14:27+0000\n"
+"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"ro_RO/>\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.issues.proofed"
+msgstr "Proofed"
+
+msgid "editor.article.coverImage"
+msgstr "Imaginea de copertă"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Identificatorul public '{$publicIdentifier}' deja există pentru alte obiecte "
+"de tipuri similare. Vă rugăm să alegeți identificatori unici pentru obiecte "
+"de același tip din jurnalul dvs."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Toate fișiere care au fost deja încărcate în orice etapă de trimitere ,pot "
+"fi adăugate în lista de corectare, bifând caseta de validare Include și "
+"făcând clic pe Căutare: toate fișierele disponibile vor fi listate și "
+"ulterior pot fi alese pentru a fi incluse."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Fișierele finale din această listă sunt transformate de către editorul de "
+"conținut în versiuni editate, încărcate mai jos respectând drepturile de "
+"autor <span class=\"pkp_help_title\">Copyediting</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Selectare fișiere din galeria de conținut"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Editorul de machete pregătește aceste fișiere pentru fiecare galerie de "
+"conținut și apoi acesta le încarcă pe cele corespunzătoare <span class=\""
+"pkp_help_title\">Proofs</span> for proofreading."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Editare conținut număr"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Data de acces nu este validă."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Sunteți sigur că doriți să înlăturați articolul din număr? Acest articol va "
+"fi disponibil pentru programarea spre publicare în alt număr."
+
+msgid "editor.article.remove"
+msgstr "Înlătură"
+
+msgid "grid.action.removeArticle"
+msgstr "Înlătură articolul din număr"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Imaginea de copertă pe care ați solicitat să o ștergeți nu a putut fi "
+"găsită. Este posibil să fi fost deja șters. Încercați să reîncărcați pagina."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Taxa de publicare neplătită. Pentru a planifica un articol pentru publicare "
+"notificați autorul să plătească o taxă sau să renunțare."
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Va fi atribuit"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Programat pentru publicare în"
+
+msgid "editor.article.editMetadata"
+msgstr "Editare metadate versiune"
+
+msgid "editor.article.viewMetadata"
+msgstr "Vizualizare metadate versiune"
+
+msgid "editor.article.publishVersion"
+msgstr "Versiunea publică"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Arată programul de publicare"
+
+msgid "editor.submissions.inSection"
+msgstr "In secțiunea"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Atribuit către"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Ultima completare"
+
+msgid "editor.submissions.averageTime"
+msgstr "Săptămâni"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Cele mai recente"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Nici o înregistrare"
+
+msgid "editor.submissions.accept"
+msgstr "Accept"
+
+msgid "editor.submissions.invite"
+msgstr "Invită"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Atribuții active"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Înregistrare MM-DD"
+
+msgid "editor.submissions.showBy"
+msgstr "Arată prin"
+
+msgid "editor.article.decision"
+msgstr "Decizie"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Desemnați fișierul original ca versiune de revizuire"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Numere vechi"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Setați numărul curent"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Crează conținut pentru număr"
+
+msgid "grid.action.previewIssue"
+msgstr "Previzualizare"
+
+msgid "grid.action.viewIssue"
+msgstr "Vizualizare"
+
+msgid "grid.action.addIssue"
+msgstr "Crează un număr"
+
+msgid "grid.action.publish"
+msgstr "Publică numărul"
+
+msgid "grid.action.addGalley"
+msgstr "Adaugă conținut"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Numere viitoare"
+
+msgid "editor.issues.identifiers"
+msgstr "Identificatorii"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Sunteți sigur că vreți să ștergeți conținutul acestui număr?"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Reveniți la conținutul numărului"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Conținutul public al numărului deja există."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Este necesară o localizare a conținutului numărului."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Este necesară o etichetă a conținutului numărului."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Nu există conținut de număr care poate fi publicat."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publicați întreg conținutul numărului."
+
+msgid "editor.issues.viewingGalley"
+msgstr "Vizualizare conținut număr"
+
+msgid "editor.issues.galley"
+msgstr "Conținut număr"
+
+msgid "editor.issues.galleys"
+msgstr "Conținutul numărului"
+
+msgid "editor.issues.pages"
+msgstr "Pagini"
+
+msgid "editor.issues.open"
+msgstr "Deschide"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Nu există Numere active"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Imposibil de salvat ID-ul public pentru articol:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Sunteți sigur că doriți să setați acest număr ca și curent?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Sunteți sigur că doriți să retrageți de la publicare numărul publicat?"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Sunteți sigur că doriți să publicați noul număr?"
+
+msgid "editor.issues.preview"
+msgstr "Vizualizare"
+
+msgid "editor.issues.previewIssue"
+msgstr "Vizualizare număr"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Retrageți de la publicare numărul"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publicați numărul"
+
+msgid "editor.issues.publicId"
+msgstr "ID public"
+
+msgid "editor.issues.order"
+msgstr "Comandă"
+
+msgid "editor.issues.default"
+msgstr "Mod implicit"
+
+msgid "editor.issues.saveChanges"
+msgstr "Salvați schimbările în cuprins?"
+
+msgid "editor.issues.issueData"
+msgstr "Datele numărului"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Acest număr permite alocarea de secțiuni speciale. <a href=\"{$url}\" class="
+"\"action\">Revenire la valorile inițiale</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Acest jurnal permite comanda de numere speciale. <a href=\"{$url}\" class=\""
+"action\">Revenire la valorile inițiale</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Toate articolele vor fi returnate la coada de editare și toate fișierele "
+"asociate vor fi eliminate definitiv. Sigur doriți să eliminați acest număr?"
+
+msgid "editor.issues.cover"
+msgstr "Copertă"
+
+msgid "editor.issues.access"
+msgstr "Acces"
+
+msgid "editor.issues.identification"
+msgstr "Identificare"
+
+msgid "editor.issues.subscription"
+msgstr "Abonament"
+
+msgid "editor.issues.openAccess"
+msgstr "Acces liber"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Afișează"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Creați o copertă pentru acest număr cu următoarele elemente."
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Titlu copertă"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Înlături fișierul de stil (stylesheet)?"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Format stylesheet invalid. Asigurați-vă că fișierul trimis este un CSS "
+"valid. (Rețineți că foile de stil cu comentarii la început pot fi respinse.)"
+
+msgid "editor.issues.styleFile"
+msgstr "Stylesheet"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Formatul paginii de acoperire nevalide. Formate acceptate sunt .gif, .jpg "
+"sau .png."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Imaginea de copertă pe care ați solicitat să o ștergeți nu a putut fi "
+"găsită. Este posibil să fi fost deja șterasă. Încercați să reîncărcați "
+"pagina."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Imaginea de copertă pe care ați solicitat să o ștergeți nu a corespuns "
+"imaginii de copertă pentru acest număr. Reîncărcați pagina și încercați din "
+"nou."
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Înlăturați imaginea pentru pagina de copertă?"
+
+msgid "editor.issues.remove"
+msgstr "Înlătură"
+
+msgid "editor.issues.uploaded"
+msgstr "Încărcat(ă)"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Formate permise: .gif, .jpg sau .png)"
+
+msgid "editor.issues.coverPage"
+msgstr "Imaginea de copertă"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Activați amânarea accesului liber"
+
+msgid "editor.issues.accessDate"
+msgstr "Data de acces liber"
+
+msgid "editor.issues.accessStatus"
+msgstr "Statut acces"
+
+msgid "editor.issues.description"
+msgstr "Descriere"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Identificator public de număr"
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identificare număr"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Identificarea numărului este necesară. Vă rugăm să selectați cel puțin una "
+"dintre opțiunile de identificare a numărului."
+
+msgid "editor.issues.titleRequired"
+msgstr "Este nevoie de un titlu pentru acest număr."
+
+msgid "editor.issues.yearRequired"
+msgstr "Anul este necesar și trebuie să fie o valoare numerică pozitivă."
+
+msgid "editor.issues.numberRequired"
+msgstr "Este necesar ca Numărul să aibă o valoare numerică pozitivă."
+
+msgid "editor.issues.volumeRequired"
+msgstr "Este necesar ca Numărul să aibă o valoare numerică pozitivă."
+
+msgid "editor.issues.datePublished"
+msgstr "Data publicării"
+
+msgid "editor.issues.unpublished"
+msgstr "Nepublicat"
+
+msgid "editor.issues.published"
+msgstr "Publicat"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Ești sigur că dorești să ștergi permanent acest număr?"
+
+msgid "editor.issues.noArticles"
+msgstr "În acest moment nu sunt elemente în așteptare pentru acest număr."
+
+msgid "editor.issues.numArticles"
+msgstr "Elemente"
+
+msgid "editor.issues.currentIssue"
+msgstr "Număr curent"
+
+msgid "editor.issues.editIssue"
+msgstr "Gestionare număr: {$issueIdentification}"
+
+msgid "editor.issues.createIssue"
+msgstr "Creare număr"
+
+msgid "editor.editorAdministration"
+msgstr "Administrare Editor"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Includeți cuprinsul din acest număr:"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Trimiteți acest mesaj utilizatorilor asociați cu acest jurnal care au "
+"indicat că doresc să primească actualizări ({$count} users)"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Trimiteți acest mesaj tuturor utilizatorilor asociați cu acest jurnal "
+"({$count} users)"
+
+msgid "editor.usersNotified"
+msgstr "Utilizatori notificați"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Notificarea utilizatorilor ..."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Toate înregistrările instituționale ({$count} users)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Toate înregistrările individuale ({$count} users)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Toți autorii ce au publicat ({$count} users)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Toți cititorii ({$count} users)"
+
+msgid "editor.notifyUsers"
+msgstr "Notificare utilizatori"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Înainte de a trimite o înregistrare la editare de text, utilizați linkul "
+"Notificare autor pentru a informa autorul cu privire la decizie și selectați "
+"versiunea de trimis."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Această înregistrare va fi arhivată după ce e-mailul de notificare este "
+"trimis autorului sau se apasă butonul Skip Email."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Sigur doriți să înregistrați această decizie?"
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Sunteți sigur că doriți să ștergeți definitiv această înregistrare?"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Salvați modificările la înregistrările arhivate? Înregistrările marcate "
+"pentru ștergere vor fi șterse definitiv din sistem."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Nu există înregistrări în arhivă."
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Identificatorul public '{$publicIdentifier}' deja există pentru alte "
+"componente (numere, articole, conținut ori fișiere). Vă rugăm să alegeți "
+"identificatori unici în jurnalul dvs."
+
+msgid "editor.me"
+msgstr "Eu"
+
+msgid "editor.allEditors"
+msgstr "Toți editorii"
+
+msgid "editor.allSections"
+msgstr "Toate secțiunile"
+
+msgid "editor.publishedIssues"
+msgstr "Numere publicate"
+
+msgid "editor.publishing"
+msgstr "Publicare"
+
+msgid "editor.submissionArchive"
+msgstr "Arhiva cu manuscrise înregistrate"
+
+msgid "editor.submissionQueue"
+msgstr "Înregistrări în așteptare"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Înregistrări și publicare"
+
+msgid "editor.reassign"
+msgstr "Realocați"
+
+msgid "editor.home"
+msgstr "Acasă Editor"

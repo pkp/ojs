@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-02 10:46+0000\n"
+"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/ro_RO/>\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: O combinație complementară între fontul serif pentru titluri "
+"și fontul sans-serif pentru conținut."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: O combinație complementară între fontul sans-serif "
+"pentru titluri și fontul serif pentru conținut."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: O combinație complementară între fontul serif pentru "
+"titluri și fontul sans-serif pentru conținut."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: O variantă Google a fontului nativ."
+
+msgid "plugins.themes.default.description"
+msgstr "Această temă este implementată implicit."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Afișează imaginea paginii de pornire ca fundal al antetului."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Când a fost încărcată o imagine pe pagina de pornire, afișați-o în fundalul "
+"antetului în loc de poziția obișnuită pe pagina de pornire."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Imagine de fundal pentru antet"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Alegeți o culoare pentru antet."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Arată o scurtă descriere a jurnalului pe prima pagină."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Culoare"
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Un set larg de fonturi serif bun pentru a citi on-line."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: un font sans-serif modern și popular."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: un font nativ digital conceput de Google cu suport extins pentru "
+"limbi străine."
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Alegeți o combinație de fonturi care se potrivește acestui jurnal."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Fonturi/ Caractere"
+
+msgid "plugins.themes.default.name"
+msgstr "Tema implicită"
