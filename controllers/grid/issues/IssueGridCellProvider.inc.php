@@ -24,7 +24,7 @@ class IssueGridCellProvider extends GridCellProvider {
 	 */
 	function __construct() {
 		parent::__construct();
-		$this->dateFormatShort = Config::getVar('general', 'date_format_short');
+		$this->dateFormatShort = \Application::get()->getRequest()->getContext()->getLocalizedDateFormatShort();
 	}
 
 	/**
