@@ -72,7 +72,7 @@ class ArticleHandler extends Handler {
 
 		if (!$submission && ctype_digit((string) $urlPath)) {
 			$submission = Services::get('submission')->get($urlPath);
-			if ($request->getContext()->getId() != $submission->getContextId()) $submission = null;
+			if ($submission && $request->getContext()->getId() != $submission->getContextId()) $submission = null;
 		}
 
 		if (!$submission || $submission->getData('status') !== STATUS_PUBLISHED) {
