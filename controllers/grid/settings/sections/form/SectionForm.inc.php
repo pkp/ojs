@@ -50,30 +50,60 @@ class SectionForm extends PKPSectionForm {
 			$section = $sectionDao->getById($sectionId, $journal->getId());
 		}
 
-		if (isset($section)) $this->setData([
-			'title' => $section->getTitle(null), // Localized
-			'abbrev' => $section->getAbbrev(null), // Localized
-			'reviewFormId' => $section->getReviewFormId(),
-			'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
-			'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
-			'abstractsNotRequired' => $section->getAbstractsNotRequired(),
-			'identifyType' => $section->getIdentifyType(null), // Localized
-			'editorRestriction' => $section->getEditorRestricted(),
-			'hideTitle' => $section->getHideTitle(),
-			'hideAuthor' => $section->getHideAuthor(),
-			'policy' => $section->getPolicy(null), // Localized
-			'wordCount' => $section->getAbstractWordCount(),
-			'assignedSubeditors' => Services::get('user')->getIds([
-				'contextId' => Application::get()->getRequest()->getContext()->getId(),
-				'roleIds' => ROLE_ID_SUB_EDITOR,
-				'assignedToSection' => (int) $this->getSectionId(),
-			]),
-		]);
-		else $this->setData([
+		if (isset($section)) {
+			$this->setData(array(
+				'title' => $section->getTitle(null), // Localized
+				'abbrev' => $section->getAbbrev(null), // Localized
+				'reviewFormId' => $section->getReviewFormId(),
+				'isInactive' => $section->getIsInactive(),
+				'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
+				'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
+				'abstractsNotRequired' => $section->getAbstractsNotRequired(),
+				'identifyType' => $section->getIdentifyType(null), // Localized
+				'editorRestriction' => $section->getEditorRestricted(),
+				'hideTitle' => $section->getHideTitle(),
+				'hideAuthor' => $section->getHideAuthor(),
+				'policy' => $section->getPolicy(null), // Localized
+				'wordCount' => $section->getAbstractWordCount(),
+				'assignedSubeditors' => Services::get('user')->getIds([
+					'contextId' => Application::get()->getRequest()->getContext()->getId(),
+					'roleIds' => ROLE_ID_SUB_EDITOR,
+					'assignedToSection' => (int) $this->getSectionId(),
+				]),
+			));
+		} else {
+			$this->setData([
 			'assignedSubeditors' => [],
-		]);
+			]);
+		}
 
 		parent::initData();
+	}
+
+	/**
+	 * @see Form::validate()
+	 */
+	function validate($callHooks = true) {
+		// Validate if it can be inactive
+		if ($this->getData('isInactive')) {
+			$request = Application::get()->getRequest();
+			$context = $request->getContext();
+			$sectionId = $this->getSectionId();
+
+			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+			$sectionsIterator = $sectionDao->getByContextId($context->getId());
+			$activeSectionsCount = 0;
+			while ($section = $sectionsIterator->next()) {
+				if (!$section->getIsInactive() && ($sectionId != $section->getId())) {
+					$activeSectionsCount++;
+				}
+			}
+			if ($activeSectionsCount < 1 && $this->getData('isInactive')) {
+				$this->addError('isInactive', __('manager.sections.confirmDeactivateSection.error'));
+			}
+		}
+
+		return parent::validate($callHooks);
 	}
 
 	/**
@@ -101,7 +131,7 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
+		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'isInactive', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
 	}
 
 	/**
@@ -119,7 +149,8 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function execute(...$functionArgs) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-		$journal = Application::get()->getRequest()->getJournal();
+		$request = Application::get()->getRequest();
+		$journal = $request->getJournal();
 
 		// Get or create the section object
 		if ($this->getSectionId()) {
@@ -136,6 +167,7 @@ class SectionForm extends PKPSectionForm {
 		$reviewFormId = $this->getData('reviewFormId');
 		if ($reviewFormId === '') $reviewFormId = null;
 		$section->setReviewFormId($reviewFormId);
+		$section->setIsInactive($this->getData('isInactive') ? 1 : 0);
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
 		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
 		$section->setAbstractsNotRequired($this->getData('abstractsNotRequired') ? 1 : 0);

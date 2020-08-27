@@ -35,7 +35,15 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 
 		// Get section options for this context
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-		$sectionOptions = array('0' => '') + $sectionDao->getTitlesByContextId($this->context->getId(), !$canSubmitAll);
+		$sections = array();
+		$sectionsIterator = $sectionDao->getByContextId($this->context->getId(), null, !$canSubmitAll);
+		while ($section = $sectionsIterator->next()) {
+			if (!$section->getIsInactive()) {
+				$sections[$section->getId()] = $section->getLocalizedTitle();
+			}
+		} 
+		$sectionOptions = array('0' => '') + $sections;
+
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 		$templateMgr->assign('sectionId', $request->getUserVar('sectionId'));
@@ -93,12 +101,18 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	function validate($callHooks = true) {
 		if (!parent::validate($callHooks)) return false;
 
-		// Validate that the section ID is attached to this journal.
 		$request = Application::get()->getRequest();
 		$context = $request->getContext();
 		$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 		$section = $sectionDao->getById($this->getData('sectionId'), $context->getId());
+
+		// Validate that the section ID is attached to this journal.
 		if (!$section) return false;
+
+		// Ensure that submissions are enabled and the assigned section is activated
+		if ($context->getData('disableSubmissions') || $section->getIsInactive()) {
+			return false;
+		}
 
 		return true;
 	}

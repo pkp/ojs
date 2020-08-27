@@ -260,6 +260,9 @@ msgstr "Items can only be submitted by Editors and Section Editors."
 msgid "manager.sections.editors"
 msgstr "Section editors"
 
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr "At least one section must be active. Visit the workflow settings to disable all submissions to this journal."
+
 msgid "manager.sections.form.abbrevRequired"
 msgstr "An abbreviated title is required for the section"
 
@@ -895,6 +898,12 @@ msgstr "Submissions"
 
 msgid "manager.setup.submissions.description"
 msgstr "Author guidelines, copyright, and indexing (including registration)."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr "Prevent users from submitting new articles to the journal. Submissions can be disabled for individual journal sections on the <a href="{$url}">journal sections</a> settings page."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr "This journal is not accepting submissions at this time. Visit the workflow settings to allow submissions."
 
 msgid "manager.setup.enableOai"
 msgstr "Enable OAI"

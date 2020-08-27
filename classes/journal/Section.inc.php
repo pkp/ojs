@@ -186,4 +186,21 @@ class Section extends PKPSection {
 	function setHideAuthor($hideAuthor) {
 		return $this->setData('hideAuthor', $hideAuthor);
 	}
+
+	/**
+	 * Return boolean indicating if section should be inactivated.
+	 * @return int
+	 */
+	function getIsInactive() {
+		return $this->getData('isInactive');
+	}
+
+	/**
+	 * Set if section should be inactivated.
+	 * @param $isInactive int
+	 */
+	function setIsInactive($isInactive) {
+		$this->setData('isInactive', $isInactive);
+	}
+
 }

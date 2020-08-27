@@ -55,6 +55,7 @@ class OJSMigration extends Migration {
 			$table->tinyInteger('abstracts_not_required')->default(0);
 			$table->tinyInteger('hide_title')->default(0);
 			$table->tinyInteger('hide_author')->default(0);
+			$table->tinyInteger('is_inactive')->default(0);
 			$table->bigInteger('abstract_word_count')->nullable();
 			$table->index(['journal_id'], 'sections_journal_id');
 		});

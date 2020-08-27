@@ -9,6 +9,10 @@
  *}
 {if $sectionOptions|@count == 1}
 	 {translate key="author.submit.notAccepting"}
+{elseif $currentContext->getData('disableSubmissions')}
+	<notification>
+		{translate key="manager.setup.disableSubmissions.notAccepting"}
+	</notification>
 {else}
 	{capture assign="additionalFormContent2"}
 		{if $sectionOptions|@count == 2}

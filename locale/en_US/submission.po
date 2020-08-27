@@ -182,6 +182,9 @@ msgstr "The publication date will be set automatically when the issue is publish
 msgid "publication.invalidSection"
 msgstr "The section for this publication could not be found."
 
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactive)"
+
 msgid "publication.invalidIssue"
 msgstr "The issue for this publication could not be found."
 
