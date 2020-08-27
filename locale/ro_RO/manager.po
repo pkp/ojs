@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-26 06:40+0000\n"
+"PO-Revision-Date: 2020-08-28 21:52+0000\n"
 "Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ro_RO/>\n"
@@ -1412,7 +1412,7 @@ msgid "grid.genres.title"
 msgstr "Componente articol"
 
 msgid "grid.genres.title.short"
-msgstr "COmponente"
+msgstr "Componente"
 
 msgid "manager.setup.resetPermissions.success"
 msgstr "Permisiunile articolului au fost resetate cu succes."
@@ -1743,8 +1743,8 @@ msgstr "Pentru autori"
 
 msgid "manager.setup.information.description"
 msgstr ""
-"Scurte descrieri ale revistei pentru bibliotecari și potențiali autori și "
-"cititori. Acestea sunt disponibile în bara laterală a site-ului în blocul de "
+"Scurtă descriere a revistei pentru bibliotecari, autori și cititori. Aceste "
+"informații sunt disponibile în bara laterală a site-ului, în blocul de "
 "Informații."
 
 msgid "manager.setup.information"
@@ -1970,7 +1970,7 @@ msgid "manager.setup.contextName"
 msgstr "Numele jurnalului"
 
 msgid "manager.setup.useStyleSheet"
-msgstr "Fișă de stil jurnal"
+msgstr "Fișier de stil pentru jurnal"
 
 msgid "manager.setup.homepageContentDescription"
 msgstr ""
