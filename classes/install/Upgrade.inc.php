@@ -532,14 +532,14 @@ class Upgrade extends Installer {
 			$oldKeywords = array_map('trim', $oldKeywordsArray);
 			// get current keywords
 			$newKeywords = array();
-			$newKeywordsArray = $submissionKeywordDao->getKeywords($submissionId, array($locale));
+			$newKeywordsArray = $submissionKeywordDao->getKeywords($submissionId, [$locale], ASSOC_TYPE_SUBMISSION);
 			if (array_key_exists($locale, $newKeywordsArray)) {
 				$newKeywords = array_map('trim', $newKeywordsArray[$locale]);
 			}
 			// get the difference and insert them
 			$keywordsToAdd = array_diff($oldKeywords, $newKeywords);
 			if (!empty($keywordsToAdd)) {
-				$submissionKeywordDao->insertKeywords(array($locale => $keywordsToAdd), $submissionId, false);
+				$submissionKeywordDao->insertKeywords(array($locale => $keywordsToAdd), $submissionId, false, ASSOC_TYPE_SUBMISSION);
 			}
 
 			// correct the old keywords migration:
@@ -548,7 +548,7 @@ class Upgrade extends Installer {
 			// consider locales other than old keywords locales (for example if added after the migration),
 			// in order not to remove those when inserting below
 			if (!array_key_exists($submissionId, $subjectsToKeep)) {
-				$newSubjectsArray = $submissionSubjectDao->getSubjects($submissionId, $installedLocales);
+				$newSubjectsArray = $submissionSubjectDao->getSubjects($submissionId, $installedLocales, ASSOC_TYPE_SUBMISSION);
 				$subjectsToKeep[$submissionId] = $newSubjectsArray;
 			}
 			// if subjects for the current locale exist
@@ -570,7 +570,7 @@ class Upgrade extends Installer {
 			// insert the subjects that should be kept, overriding the existing ones
 			// also if they are empty, because then they should be deleted
 			foreach ($subjectsToKeep as $submissionId => $submissionSubjects) {
-				$submissionSubjectDao->insertSubjects($submissionSubjects, $submissionId);
+				$submissionSubjectDao->insertSubjects($submissionSubjects, $submissionId, true, ASSOC_TYPE_SUBMISSION);
 			}
 		}
 
@@ -584,14 +584,14 @@ class Upgrade extends Installer {
 			$oldSubjects = array_map('trim', $oldSubjectsArray);
 			// get current subjects
 			$newSubjects = array();
-			$newSubjectsArray = $submissionSubjectDao->getSubjects($submissionId, array($locale));
+			$newSubjectsArray = $submissionSubjectDao->getSubjects($submissionId, array($locale), ASSOC_TYPE_SUBMISSION);
 			if (array_key_exists($locale, $newSubjectsArray)) {
 				$newSubjects = array_map('trim', $newSubjectsArray[$locale]);
 			}
 			// get the difference and insert them
 			$subjectsToAdd = array_diff($oldSubjects, $newSubjects);
 			if (!empty($subjectsToAdd)) {
-				$submissionSubjectDao->insertSubjects(array($locale => $subjectsToAdd), $submissionId, false);
+				$submissionSubjectDao->insertSubjects(array($locale => $subjectsToAdd), $submissionId, false, ASSOC_TYPE_SUBMISSION);
 			}
 			$result->MoveNext();
 		}
