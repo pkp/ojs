@@ -27,7 +27,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 			$table->mediumText('setting_value')->nullable()->change();
 		});
 		Capsule::schema()->table('sections', function (Blueprint $table) {
-			$table->boolean('is_inactive')->default(false);
+			$table->smallInteger('is_inactive')->default(0);
 		});
 	}
 
