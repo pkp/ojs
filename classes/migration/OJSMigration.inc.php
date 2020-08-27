@@ -28,7 +28,7 @@ class OJSMigration extends Migration {
 			$table->string('path', 32);
 			$table->float('seq', 8, 2)->default(0)->comment('Used to order lists of journals');
 			$table->string('primary_locale', 14);
-			$table->tinyInteger('enabled')->default(1)->comment('Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)');
+			$table->boolean('enabled')->default(1)->comment('Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)');
 			$table->unique(['path'], 'journals_path');
 		});
 
@@ -49,13 +49,13 @@ class OJSMigration extends Migration {
 			$table->bigInteger('journal_id');
 			$table->bigInteger('review_form_id')->nullable();
 			$table->float('seq', 8, 2)->default(0);
-			$table->tinyInteger('editor_restricted')->default(0);
-			$table->tinyInteger('meta_indexed')->default(0);
-			$table->tinyInteger('meta_reviewed')->default(1);
-			$table->tinyInteger('abstracts_not_required')->default(0);
-			$table->tinyInteger('hide_title')->default(0);
-			$table->tinyInteger('hide_author')->default(0);
-			$table->tinyInteger('is_inactive')->default(0);
+			$table->boolean('editor_restricted')->default(0);
+			$table->boolean('meta_indexed')->default(0);
+			$table->boolean('meta_reviewed')->default(1);
+			$table->boolean('abstracts_not_required')->default(0);
+			$table->boolean('hide_title')->default(0);
+			$table->boolean('hide_author')->default(0);
+			$table->boolean('is_inactive')->default(0);
 			$table->bigInteger('abstract_word_count')->nullable();
 			$table->index(['journal_id'], 'sections_journal_id');
 		});
@@ -78,17 +78,17 @@ class OJSMigration extends Migration {
 			$table->smallInteger('volume')->nullable();
 			$table->string('number', 40)->nullable();
 			$table->smallInteger('year')->nullable();
-			$table->tinyInteger('published')->default(0);
-			$table->tinyInteger('current')->default(0);
+			$table->boolean('published')->default(0);
+			$table->boolean('current')->default(0);
 			$table->datetime('date_published')->nullable();
 			$table->datetime('date_notified')->nullable();
 			$table->datetime('last_modified')->nullable();
-			$table->tinyInteger('access_status')->default(1);
+			$table->smallInteger('access_status')->default(1);
 			$table->datetime('open_access_date')->nullable();
-			$table->tinyInteger('show_volume')->default(0);
-			$table->tinyInteger('show_number')->default(0);
-			$table->tinyInteger('show_year')->default(0);
-			$table->tinyInteger('show_title')->default(0);
+			$table->boolean('show_volume')->default(0);
+			$table->boolean('show_number')->default(0);
+			$table->boolean('show_year')->default(0);
+			$table->boolean('show_title')->default(0);
 			$table->string('style_file_name', 90)->nullable();
 			$table->string('original_style_file_name', 255)->nullable();
 			$table->string('url_path', 64)->nullable();
@@ -190,8 +190,7 @@ class OJSMigration extends Migration {
 			$table->bigInteger('section_id')->nullable();
 			$table->float('seq', 8, 2)->default(0);
 			$table->bigInteger('submission_id');
-			//  STATUS_QUEUED 
-			$table->tinyInteger('status')->default(1);
+			$table->smallInteger('status')->default(1); // STATUS_QUEUED
 			$table->string('url_path', 64)->nullable();
 			$table->bigInteger('version')->nullable();
 			$table->index(['submission_id'], 'publications_submission_id');
@@ -208,7 +207,7 @@ class OJSMigration extends Migration {
 			$table->bigInteger('file_id')->nullable();
 			$table->float('seq', 8, 2)->default(0);
 			$table->string('remote_url', 2047)->nullable();
-			$table->tinyInteger('is_approved')->default(0);
+			$table->boolean('is_approved')->default(0);
 			$table->string('url_path', 64)->nullable();
 			$table->index(['publication_id'], 'publication_galleys_publication_id');
 			$table->index(['url_path'], 'publication_galleys_url_path');
@@ -235,12 +234,12 @@ class OJSMigration extends Migration {
 			$table->bigInteger('journal_id');
 			$table->float('cost', 8, 2);
 			$table->string('currency_code_alpha', 3);
-			$table->tinyInteger('non_expiring')->default(0);
+			$table->boolean('non_expiring')->default(0);
 			$table->smallInteger('duration')->nullable();
 			$table->smallInteger('format');
-			$table->tinyInteger('institutional')->default(0);
-			$table->tinyInteger('membership')->default(0);
-			$table->tinyInteger('disable_public_display');
+			$table->boolean('institutional')->default(0);
+			$table->boolean('membership')->default(0);
+			$table->boolean('disable_public_display');
 			$table->float('seq', 8, 2);
 		});
 
@@ -263,7 +262,7 @@ class OJSMigration extends Migration {
 			$table->bigInteger('type_id');
 			$table->date('date_start')->nullable();
 			$table->datetime('date_end')->nullable();
-			$table->tinyInteger('status')->default(1);
+			$table->smallInteger('status')->default(1);
 			$table->string('membership', 40)->nullable();
 			$table->string('reference_number', 40)->nullable();
 			$table->text('notes')->nullable();
