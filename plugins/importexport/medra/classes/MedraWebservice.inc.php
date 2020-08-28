@@ -118,7 +118,7 @@ class MedraWebservice {
 		          "<med:$action>" .
 		              "<med:accessMode>01</med:accessMode>" .
 		              "<med:language>$arg</med:language>" .
-		              "<med:contentID>" . key(htmlspecialchars($attachment)) . "</med:contentID>" .
+		              "<med:contentID>" . key($attachment) . "</med:contentID>" .
 		          "</med:$action>" .
 		      '</SOAP-ENV:Body>' .
 		    '</SOAP-ENV:Envelope>';
@@ -131,7 +131,7 @@ class MedraWebservice {
 				"--MIME_boundary\r\n" .
 				$this->_getMimePart($soapMessageId, $soapMessage) .
 				"--MIME_boundary\r\n" .
-				$this->_getMimePart(key(htmlspecialchars($attachment)), current(htmlspecialchars($attachment))) .
+				$this->_getMimePart(key($attachment), current($attachment)) .
 				"--MIME_boundary--\r\n";
 			$contentType = 'multipart/related; type="text/xml"; boundary="MIME_boundary"';
 		} else {
@@ -183,8 +183,7 @@ class MedraWebservice {
 			PKPString::regexp_match_get('#<faultstring>([^<]*)</faultstring>#', $response, $matches);
 			if (empty($matches)) {
 				if ($attachment) {
-					assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response));
-					if(!assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response))){
+					if(empty(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response))){
 					    $parts = explode("\r\n\r\n", $response);
 					    $result = array_pop($parts);
 					    $result = PKPString::regexp_replace('/>[^>]*$/', '>', $result);
