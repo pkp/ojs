@@ -48,15 +48,15 @@
 			<tbody>
 				{foreach from=$headlines key=k item=v}
 					<tr>
-						<td>{$v['code']}</td>
-						<td>{$v['reference']}</td>
-						<td>{$v['description']}</td>
+						<td>{$v['code']|escape}</td>
+						<td>{$v['reference']|escape}</td>
+						<td>{$v['description']|escape}</td>
 					</tr>
 				{/foreach}
 			</tbody>
 		</table>
 		<h3>  {translate key="plugins.importexport.common.invalidXML"} </h3>
-		<pre>{$htmlspecialchars}</pre>
+		<pre>{$htmlspecialchars|strip_unsafe_html}</pre>
 		
 	</body>
 </html>

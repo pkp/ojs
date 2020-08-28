@@ -260,7 +260,6 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		}
 		// ISSN
 		if (!empty($issn)) {
-			// $issn = PKPString::regexp_replace('/[^0-9]/', '', $issn); There is no more need to remove character that is NOT in 0-9 
 			$serialVersionNode->appendChild($this->createIdentifierNode($doc, 'Product', O4DOI_ID_TYPE_ISSN, $issn));
 		}
 		// Product Form

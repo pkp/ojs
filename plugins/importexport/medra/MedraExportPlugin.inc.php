@@ -109,19 +109,12 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		foreach($objects as $object) {
 		    $language = $object->getLocale();
 		}
-		$lang = 'eng';
-		if(substr($language, 0, 2) == 'it'){
-		    $lang = 'ita';
-		} else if(substr($language, 0, 2) == 'de'){
-		    $lang = 'ger';
-		}
 		
 		// Instantiate the mEDRA web service wrapper.
 		$ws = new MedraWebservice($endpoint, $username, $password);
 		// Register the XML with mEDRA.
-		//$result = $ws->upload($xml);
 		//The selected checkbox determines the only deposit on mEDRA or the further deposit also in Crossref 
-		$result = $this->_request->getUserVar('crEnabled') == 'on' ? $ws->deposit($xml, $lang) : $ws->upload($xml);
+		$result = $this->_request->getUserVar('crEnabled') == 'on' ? $ws->deposit($xml, PKPLocale::get3LetterFrom2LetterIsoLanguage(substr($language, 0, 2))) : $ws->upload($xml);
 
 		if ($result === true) {
 			// Mark all objects as registered.
@@ -132,14 +125,14 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		} else {
 			// Handle errors. There are validations before sending the request of submission to Crossref endpoint, and there is a need to throw a readable exception to the end user
 			//the exception are shown in a table as represented in the code below.
-		    if(!assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $result))){
-		        $doc = new DOMDocument();
-		        $doc->loadXML($result);
-		        $templateMgr = TemplateManager::getManager($this->_request);
-		        $numberError = '';
-		        
-		        if($doc->getElementsByTagName('statusCode')->item(0)->textContent == 'FAILED'){
-		            $numberError = $doc->getElementsByTagName('errorsNumber')->item(0)->textContent;
+			if(empty(PKPString::regexp_match('#<returnCode>success</returnCode>#', $result))){
+				$doc = new DOMDocument();
+				$doc->loadXML($result);
+				$templateMgr = TemplateManager::getManager($this->_request);
+				$numberError = '';
+				
+				if($doc->getElementsByTagName('statusCode')->item(0)->textContent == 'FAILED'){
+				    $numberError = $doc->getElementsByTagName('errorsNumber')->item(0)->textContent;
 		            $nodeList = $doc->getElementsByTagName('error');
 		            
 		            $headlines = array();
@@ -173,8 +166,6 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		        
 		    } else
 		        if (is_string($result)) {
-		            
-		            error_log($result);
 		            $doc = new DOMDocument();
 		            $doc->loadXML($result);
 		            $resultCode = $doc->getElementsByTagName('statusCode')->item(0)->nodeValue;
@@ -182,10 +173,10 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		            $result = array(
 		                array('plugins.importexport.common.register.error.mdsError', $resultCode)
 		            );
-		        } else {
-		            
+		        } 
+		        else {
 		            $result = false;
-			     }
+			    }
 		}
 		return $result;
 	}

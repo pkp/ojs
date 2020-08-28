@@ -51,7 +51,7 @@ class MedraWebservice {
 	//
 	/**
 	 * mEDRA upload operation.
-	 * @param $xml
+	 * @param $xml String
 	 */
 	function upload($xml) {
 		$attachmentId = $this->_getContentId('metadata');
@@ -66,8 +66,8 @@ class MedraWebservice {
 	//
 	/**
 	 * mEDRA deposit operation.
-	 * @param $xml
-	 * @param $language
+	 * @param $xml String
+	 * @param $language String
 	 */
 	function deposit($xml, $language) {
 	    $attachmentId = $this->_getContentId('metadata');
@@ -118,7 +118,7 @@ class MedraWebservice {
 		          "<med:$action>" .
 		              "<med:accessMode>01</med:accessMode>" .
 		              "<med:language>$arg</med:language>" .
-		              "<med:contentID>" . key($attachment) . "</med:contentID>" .
+		              "<med:contentID>" . key(htmlspecialchars($attachment)) . "</med:contentID>" .
 		          "</med:$action>" .
 		      '</SOAP-ENV:Body>' .
 		    '</SOAP-ENV:Envelope>';
@@ -131,7 +131,7 @@ class MedraWebservice {
 				"--MIME_boundary\r\n" .
 				$this->_getMimePart($soapMessageId, $soapMessage) .
 				"--MIME_boundary\r\n" .
-				$this->_getMimePart(key($attachment), current($attachment)) .
+				$this->_getMimePart(key(htmlspecialchars($attachment)), current(htmlspecialchars($attachment))) .
 				"--MIME_boundary--\r\n";
 			$contentType = 'multipart/related; type="text/xml"; boundary="MIME_boundary"';
 		} else {
