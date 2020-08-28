@@ -366,7 +366,7 @@ msgid "editor.submissions.lastCompleted"
 msgstr "Последняя завершенная"
 
 msgid "editor.submissions.assignedTo"
-msgstr Назначен редактору"
+msgstr "Назначен редактору"
 
 msgid "issues.submissions.issueIds"
 msgstr "Назначен в выпуск"
