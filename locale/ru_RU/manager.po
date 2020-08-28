@@ -260,6 +260,9 @@ msgstr "Статьи могут отправляться только редак
 msgid "manager.sections.editors"
 msgstr "Редакторы разделов"
 
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr "Минимум один раздел должен быть активным. Зайдите в настройки рабочего процесса, чтобы отключить отправку материалов в этот журнал."
+
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Требуется аббревиатура названия для раздела"
 
@@ -895,6 +898,12 @@ msgstr "Отправка материалов"
 
 msgid "manager.setup.submissions.description"
 msgstr "Руководство для авторов, авторские права и индексирование (включая регистрацию)."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr "Запрещает пользователям отправлять новые статьи в журнал. Отправка материалов может быть отключена для отдельных разделов журнала на странице настроек <a href="{$url}">разделов журнала</a>."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr "Этот журнал в данное время не принимает материалы. Зайдите в настройки рабочего процесса, чтобы разрешить отправку материалов."
 
 msgid "manager.setup.enableOai"
 msgstr "Включить OAI"

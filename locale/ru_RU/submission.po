@@ -182,6 +182,9 @@ msgstr "Дата публикации будет автоматически пр
 msgid "publication.invalidSection"
 msgstr "Раздел для этой публикации не удаётся найти."
 
+msgid "publication.inactiveSection"
+msgstr "«{$section}» (Отправка отключена)"
+
 msgid "publication.invalidIssue"
 msgstr "Выпуск для этой публикации не удаётся найти."
 
