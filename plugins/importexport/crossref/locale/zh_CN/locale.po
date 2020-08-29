@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:13-08:00\n"
-"PO-Revision-Date: 2020-06-12 22:00+0000\n"
-"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
+"PO-Revision-Date: 2020-08-30 02:48+0000\n"
+"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
-"ojs/importexport-crossref/zh_Hans/>\n"
+"ojs/importexport-crossref/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,10 +31,10 @@ msgid "plugins.importexport.crossref.settings.form.username"
 msgstr "用户名"
 
 msgid "plugins.importexport.crossref.settings.form.usernameRequired"
-msgstr "请输入CrossRef为您配置的用户名"
+msgstr "请输入CrossRef为您配置的用户名。"
 
 msgid "plugins.importexport.crossref.settings.depositorIntro"
-msgstr "请输入CrossRef DOI存储负责人的姓名和邮箱"
+msgstr "请输入CrossRef DOI存储负责人的姓名和邮箱。"
 
 msgid "plugins.importexport.crossref.settings.form.depositorName"
 msgstr "存储名"
@@ -43,16 +43,16 @@ msgid "plugins.importexport.crossref.settings.form.depositorEmail"
 msgstr "存储邮箱"
 
 msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
-msgstr "请输入存储名"
+msgstr "请输入存储名。"
 
 msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
-msgstr "请输入存储邮件"
+msgstr "请输入存储邮件。"
 
 msgid "plugins.importexport.crossref.requirements"
 msgstr "要求"
 
 msgid "plugins.importexport.crossref.requirements.satisfied"
-msgstr "已满足所有插件的要求"
+msgstr "已满足所有插件的要求。"
 
 msgid "plugins.importexport.crossref.error.noDOIContentObjects"
 msgstr "在DOI公共标识符插件中没有为文章设定 DOI 标识，因此该插件不能存储或者输出。"
@@ -66,3 +66,69 @@ msgid "plugins.importexport.crossref.error.publisherNotConfigured"
 msgstr ""
 "还没有设定期刊发行商！必须在<a href=\"{$journalSettingsUrl}\" target=\"_blank\""
 ">期刊设置页</a>设置一个发行机构。"
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "注意：仅刊期（而非它们的文章）将在此被考虑导出/注册。"
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "指定文章ID不存在： {$articleId}."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "指定刊期ID不存在：{$issueId}."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr "注册成功，但是发生以下警告：'{$param}'。"
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "注册未完全成功！ DOI注册服务器返回了错误。"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "CrossRef自动注册任务"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "标记为启用"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "下载XML"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>存储状态：</p>\n"
+"\t\t<p>\n"
+"\t\t- 未存储: 尚未对此DOI进行任何存储尝试。<br />\n"
+"\t\t- 启用: DOI已存储，并且正确解析。<br />\n"
+"\t\t- 失败: DOI存储失败。<br />\n"
+"\t\t- 标记启用: DOI已手动标记为启用。\n"
+"\t\t</p>\n"
+"\t\t<p>仅显示上次尝试存储的状态。</p>\n"
+"\t\t<p>如果存储失败，请解决问题，然后尝试重新注册DOI。</p>"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "存储"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "标记为启用"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "启用"
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "失败"
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr "验证XML。 使用此选项进行XML下载以进行手动DOI注册。"
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "使用CrossRef测试API（测试环境）来存储DOI。 请不要忘记在生产环境中删除此选项。"
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS会将分配的DOI自动保存到CrossRef。 请注意，这可能在发布后需要一段时间处理（例如，取决于您的cronjob配置）。 "
+"您可以检查所有未注册的DOI。"
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr ""
+"如果您想使用此插件直接向CrossRef注册数字对象标识符（DOI），则需要一个用户名和密码（可从<a href=\""
+"http://www.crossref.org\" target=\"_blank\">CrossRef </a>获得）。 如果您没有自己的用户名和密码，"
+"则仍然可以导出为CrossRef XML格式，但是无法从OJS中使用CrossRef注册DOI。"
