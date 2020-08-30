@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
-"PO-Revision-Date: 2020-02-03 06:35+0000\n"
+"PO-Revision-Date: 2020-08-31 02:16+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/id/>\n"
@@ -113,3 +113,9 @@ msgstr "Laporan Situs Terdahulu"
 
 msgid "plugins.reports.counter.release"
 msgstr "Rilis COUNTER"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Laporan Jurnal 1"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Laporan Artikel 1"
