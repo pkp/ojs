@@ -1,2 +1,132 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-09-03 16:49+0000\n"
+"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-medra/fr/>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Utilisation :\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys}"
+" objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "Tâche d'enregistrement automatique mEDRA"
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr ""
+"N.B. : Les DOI assignés aux articles seront exportés à mEDRA comme <a href=\""
+"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">« travaux »</a>. "
+"Les DOI assignés aux épreuves seront exportés comme <a href=\""
+"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">« manifestations "
+"»</a>."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr ""
+"Utiliser l'API de test mEDRA (environnement de test) pour l'enregistrement "
+"des DOI. N'oubliez pas de désactiver cette option en mode production."
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS enregistrera automatiquement les DOI assignés à mEDRA. Veuillez noter le "
+"traitement peut prendre un peu de temps après la publication (par exemple, "
+"en fonction de votre configuration cronjob). Vous pouvez vérifier tous les "
+"DOI non enregistrés."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Numéros exportés en tant que"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "Manifestations"
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "Travaux"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr ""
+"Veuillez choisir si vous souhaitez exporter les numéros en tant que <a href="
+"\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\"> « travaux » "
+"ou « manifestations »</a>."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr ""
+"Veuillez indiquer le pays désigné comme « pays de publication » à mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr ""
+"Veuillez entrer une adresse électronique valide pour le contact technique."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "Courriel"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr ""
+"Veuillez entrer le nom de la personne à contacter pour les questions d'ordre "
+"technique."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Contact"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr ""
+"Veuillez entrer le nom de l'institution techniquement responsable de "
+"l'exportation DOI (par exemple l'établissement qui héberge votre serveur "
+"internet)."
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Institution"
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Personne à contacter par mEDRA pour tout renseignement technique :"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Veuillez entrer le nom de l'institution inscrite à mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Nom de l'institution inscrite à mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr ""
+"Veuillez entrer votre nom d'utilisateur ou d'utilisatrice mEDRA. Il ne doit "
+"pas contenir de double point."
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Nom d'utilisateur ou utilisatrice"
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Veuillez configurer le module d'exportation mEDRA :"
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"\n"
+"\t\tSi vous voulez enregistrer vos DOI avec mEDRA, veuillez suivre les "
+"directives\n"
+"\tsur la <a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">"
+"page d'accueil mEDRA</a>\n"
+"\tpour recevoir un nom d'utilisateur ou d'utilisatrice ainsi qu'un mot de "
+"passe. Si vous n'avez pas de nom d'utilisateur\n"
+"\tet de mot de passe vous serez toujours en mesure d'exporter dans le format "
+"XML mEDRA (Onix pour DOI)\n"
+"\tmais vous ne pourrez pas enregistrer vos DOI avec mEDRA depuis OJS. "
+"Veuillez noter que le mot de passe\n"
+"\tsera sauvegardé en texte brut, c'est-à-dire non chiffré, en raison des "
+"exigences du service d'enregistrement de mEDRA.\n"
+"\t"
+
+msgid "plugins.importexport.medra.description"
+msgstr ""
+"Exportez les métadonnées des numéros, articles et épreuves dans Onix pour le "
+"format DOI (O4DOI) et enregistrez les DOI avec une agence d'enregistrement "
+"mEDRA."
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "Module d'exportation/enregistrement mEDRA"
