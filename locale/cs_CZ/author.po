@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2020-09-03 04:27+0000\n"
-"Last-Translator: Lucie Melicharova <lucie.melicharova@upce.cz>\n"
+"PO-Revision-Date: 2020-09-03 16:49+0000\n"
+"Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/author/cs_CZ/>"
 "\n"
 "Language: cs_CZ\n"
@@ -262,9 +262,8 @@ msgstr "Pro odeslání vašeho příspěvku do {$journalTitle} klikněte na Doko
 msgid "author.submit.noFiles"
 msgstr "K příspěvku nebyly připojeny žádné soubory."
 
-#, fuzzy
 msgid "author.submit.filesSummary"
-msgstr "Soubor byl přidán"
+msgstr "Informace o souboru"
 
 msgid "author.submit.finishSubmission"
 msgstr "Dokončit příspěvek"
