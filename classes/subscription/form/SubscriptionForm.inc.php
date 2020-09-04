@@ -205,7 +205,7 @@ class SubscriptionForm extends Form {
 		if (!$subscriptionType->getNonExpiring()) {
 			$subscription->setDateStart($this->getData('dateStart'));
 			$dateEnd = strtotime($this->getData('dateEnd'));
-			$subscription->setDateEnd(mktime(23, 59, 59, date("m", $dateEnd)+$duration, date("d", $dateEnd), date("Y", $dateEnd)));
+			$subscription->setDateEnd(mktime(23, 59, 59, (int) date("m", $dateEnd), (int) date("d", $dateEnd), (int) date("Y", $dateEnd)));
 		}
 	}
 
