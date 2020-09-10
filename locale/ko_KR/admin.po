@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-01 17:48+0000\n"
-"Last-Translator: Seok Hyun Ga <shga89@naver.com>\n"
+"PO-Revision-Date: 2020-09-11 10:49+0000\n"
+"Last-Translator: Hyongjun Choi <chj2812@dankook.ac.kr>\n"
 "Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/admin/ko_KR/>"
 "\n"
 "Language: ko_KR\n"
@@ -16,9 +16,8 @@ msgstr ""
 "다른 사용자 계정에 병합할 사용자(또는 여러 명)를 선택하십시오 (예 : 누군가 두 개의 사용자 계정이있는 경우). 먼저 선택한 계정이 "
 "삭제되고 모든 제출, 할당 등이 두 번째 계정에 귀속됩니다."
 
-#, fuzzy
 msgid "admin.journals.redirect"
-msgstr "OJS 1 URL을 OJS 2 URL에 매핑하는 코드 생성"
+msgstr "OJS 1 URL 주소를 OJS 2 URL 주소로 매핑하는 코드 실행"
 
 msgid "admin.auth.enableCreateUsers"
 msgstr ""
@@ -26,22 +25,19 @@ msgstr ""
 "경우 자동으로 원격 인증 소스에 추가됩니다. 또한 이 소스가 기본 인증 소스 인 경우 사용자 등록을 통해 생성 된 OJS 계정도 원격 "
 "인증 소스에 추가됩니다."
 
-#, fuzzy
 msgid "admin.languages.download.cannotOpen"
-msgstr "PKP 웹 사이트에서 언어 설명을 열 수 없습니다."
+msgstr "PKP 웹 사이트에서 언어 관련 설명을 열 수 없습니다."
 
 msgid "admin.mergeUsers.confirm"
 msgstr ""
 "선택한 {$oldAccountCount} 계정을 사용자 이름이 \"{$newUsername}\"인 계정으로 병합 하시겠습니까? 선택한 "
 "{$oldAccountCount} 계정은 삭제됩니다. 이 조치는 돌이킬 수 없습니다."
 
-#, fuzzy
 msgid "admin.mergeUsers.into.description"
-msgstr "이전 사용자의 저작자, 과제 편집 등을 대신할 사용자를 선택하십시오."
+msgstr "이전 사용자의 저작권, 심사 내용 편집 등을 대신할 사용자를 선택하십시오."
 
-#, fuzzy
 msgid "admin.journals.transcode"
-msgstr "ISO8859-1에 따른 기사 메타 데이터 코드 변환"
+msgstr "ISO8859-1 형식의 논문 메타 데이터 코드 변환"
 
 msgid "admin.auth.ojs"
 msgstr "OJS 사용자 데이터베이스"
