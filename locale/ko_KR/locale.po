@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-01 17:48+0000\n"
-"Last-Translator: Seok Hyun Ga <shga89@naver.com>\n"
+"PO-Revision-Date: 2020-09-11 10:49+0000\n"
+"Last-Translator: Hyongjun Choi <chj2812@dankook.ac.kr>\n"
 "Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/locale/ko_KR/"
 ">\n"
-"Language: ko\n"
+"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,9 +41,8 @@ msgstr "이 작업을 완료된 것으로 표시 하시겠습니까? 나중에 �
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "필수 항목을 모두 입력하세요."
 
-#, fuzzy
 msgid "reviewer.article.enterReviewForm"
-msgstr "리뷰 양식을 채우기 위해 아이콘을 클릭하세요."
+msgstr "심사서 양식에 내용을 채우기 위해 아이콘을 클릭하세요."
 
 msgid "navigation.categories.browse"
 msgstr "찾아보기"
@@ -56,3 +55,615 @@ msgstr "다른 학술지로 변경:"
 
 msgid "context.current"
 msgstr "현재 학술지:"
+
+msgid "reader.subscribersOnly"
+msgstr "구독자만"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "레이아웃 할당 완료됨"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "레이아웃 방향 업데이트됨"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "레이아웃 할당 초기화됨"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "투고에서 할당되지 않은 레이아웃 편집자"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "할당된 레이아웃 편집자 투고"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "교정 할당이 완료됨"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "교정 수정 파일이 업데이트됨"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "교정 할당이 초기화됨"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "투고에서 할당되지 않은 교정"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "할당된 교정 투고"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "저작 편집 파일이 업데이트됨"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "최종 저작 편집이 완료됨"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "초기 저작 편집자 완료됨"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "저작 편집자 수정 파일이 업데이트됨"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "저작 편집자 할당이 초기화됨"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "투고에서 할당되지 않은 저작 편집자"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "투고에 할당된 저작 편집자"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "아카이브로부터 저장된 투고"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "투고가 아카이브에 보내짐"
+
+msgid "submission.event.editor.editorFile"
+msgstr "편집자 파일이 업데이트됨"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "편집자 결정이 등록됨"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "투고로 부터 할당되지 않은 편집자"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "투고에 할당된 편집자"
+
+msgid "submission.event.general.authorRevision"
+msgstr "저자 수정 파일이 업데이트됨"
+
+msgid "submission.event.author.authorRevision"
+msgstr "저자 수정이 등록됨"
+
+msgid "submission.event.general.articlePublished"
+msgstr "출판된 논문"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "본 투고는 권에 할당됨"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "예정된 권에 투고되었음"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "투고된 논문"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "투고 이벤트"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>공지:</strong> 온라인으로 구입한 기관 구독은 구독을 활성화하기 전에 도메인과 IP 범위의 허가가 필요합니다."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "기관 구독은 로그인이 필요하지 않습니다. 사용자 도메인과 IP 주소는 구독 내용에 접속하기 위한 것입니다."
+
+msgid "subscriptions.individualDescription"
+msgstr "구독 내용을 보려면 각각의 구독에 로그인 해야 합니다."
+
+msgid "subscriptions.status.other"
+msgstr "다른, 메모 보기"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "현재 활성화된 구독이 없습니다."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "온라인 결제 대기"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "수동 결제 대기"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "승인 필요함"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "정보 필요함"
+
+msgid "subscriptions.status.active"
+msgstr "활성화"
+
+msgid "subscriptions.status"
+msgstr "상태"
+
+msgid "subscriptions.inactive"
+msgstr "비활성화"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "인쇄 및 온라인"
+
+msgid "subscriptionTypes.format.print"
+msgstr "인쇄"
+
+msgid "subscriptionTypes.format.online"
+msgstr "온라인"
+
+msgid "subscriptionTypes.format"
+msgstr "양식"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "기한없음"
+
+msgid "subscriptionTypes.months"
+msgstr "월(들)"
+
+msgid "subscriptionTypes.month"
+msgstr "월"
+
+msgid "subscriptionTypes.years"
+msgstr "연도(들)"
+
+msgid "subscriptionTypes.year"
+msgstr "연도"
+
+msgid "subscriptionTypes.currency"
+msgstr "환율"
+
+msgid "issue.return"
+msgstr "권 세부정보로 돌아가기"
+
+msgid "issue.viewIssue"
+msgstr "권 보기"
+
+msgid "issue.nonpdf.title"
+msgstr "권 다운로드"
+
+msgid "issue.fullIssue"
+msgstr "권 전체"
+
+msgid "issue.coverPage.altText"
+msgstr "커버 페이지"
+
+msgid "issue.abstract"
+msgstr "초록"
+
+msgid "issue.toc"
+msgstr "목차"
+
+msgid "issue.noIssues"
+msgstr "권(들) 없음"
+
+msgid "issue.year"
+msgstr "연도"
+
+msgid "issue.no"
+msgstr "번호."
+
+msgid "issue.vol"
+msgstr "호."
+
+msgid "issue.number"
+msgstr "번호"
+
+msgid "issue.volume"
+msgstr "호"
+
+msgid "issue.viewIssueIdentification"
+msgstr "{$identification} 보기"
+
+msgid "issue.title"
+msgstr "제목"
+
+msgid "issue.issues"
+msgstr "권(들)"
+
+msgid "issue.issue"
+msgstr "권"
+
+msgid "user.role.journalAssistants"
+msgstr "학술지 보조관리자(들)"
+
+msgid "user.role.journalAssistant"
+msgstr "학술지 보조관리자"
+
+msgid "user.role.subscriptionManagers"
+msgstr "구독 관리자(들)"
+
+msgid "user.role.subEditors"
+msgstr "세션 관리자(들)"
+
+msgid "user.role.managers"
+msgstr "학술지 관리자(들)"
+
+msgid "user.role.subscriptionManager"
+msgstr "구독 관리자"
+
+msgid "user.role.subEditor"
+msgstr "세션 편집자"
+
+msgid "user.role.manager"
+msgstr "학술지 관리자"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "심사위원으로 등록: 현재 심사위원 등록이 불가능합니다."
+
+msgid "user.noRoles.regReviewer"
+msgstr "심사위원으로 등록"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "논문 투고: 현재 저자 등록이 불가능합니다."
+
+msgid "user.noRoles.submitArticle"
+msgstr "계획서 투고"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "당신은 이 학술지에 어떠한 역할도 하지 않습니다. 다음 중 어느 것을 선택하실지 고르세요:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "당신은 어떤 학술지에도 등록되어 있지 않습니다. 학술지를 선택하여 주시기 바랍니다:"
+
+msgid "user.manageMySubscriptions"
+msgstr "내 구독(들) 관리"
+
+msgid "user.myJournals"
+msgstr "내 학술지(들)"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "심사위원으로 등록하시려면, 당신의 관심 주제를 입력해 주시기 바랍니다."
+
+msgid "user.register.otherContextRoles"
+msgstr "다음 역할에 대해 요청하기."
+
+msgid "user.register.contextsPrompt"
+msgstr "이 사이트의 어느 학술지에 등록하시겠습니까?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "네, 이 학술지에 투고된 논문을 심사하기 위한 요청을 허용하겠습니다."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "네, {$userGroup} 역할을 요청합니다."
+
+msgid "user.reviewerPrompt"
+msgstr "이 학술지에 투고된 논문을 심사하겠습니까?"
+
+msgid "user.registerForOtherJournals"
+msgstr "다른 학술지 등록하기"
+
+msgid "user.showAllJournals"
+msgstr "내 학술지 보기"
+
+msgid "user.profile.profileImage"
+msgstr "프로파일 이미지"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "이 학술지의 역할이 없는 사용자 포함."
+
+msgid "journal.viewAllIssues"
+msgstr "모든 권 보기"
+
+#, fuzzy
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "학술지"
+
+msgid "journal.path"
+msgstr "경로"
+
+msgid "context.contexts"
+msgstr "학술지(들)"
+
+msgid "journal.currentIssue"
+msgstr "최신 권"
+
+msgid "submission.search"
+msgstr "논문 검색"
+
+msgid "submissions.proofreadingComplete"
+msgstr "교정"
+
+msgid "submissions.layoutComplete"
+msgstr "레이아웃 편집됨"
+
+msgid "submissions.copyeditComplete"
+msgstr "편집 복사됨"
+
+msgid "submission.eventLog"
+msgstr "이벤트 로그"
+
+msgid "submissions.editorRuling"
+msgstr "편집자 규정"
+
+msgid "submissions.editorDecision"
+msgstr "편집자 결정"
+
+msgid "submissions.proof"
+msgstr "증명"
+
+msgid "submissions.reviewRound"
+msgstr "심사 단계"
+
+msgid "submissions.postAuthor"
+msgstr "사후-저자"
+
+msgid "submissions.initialProof"
+msgstr "초기 증명"
+
+msgid "submissions.proofread"
+msgstr "교정"
+
+msgid "submissions.initial"
+msgstr "초기"
+
+msgid "submissions.published"
+msgstr "출판됨"
+
+msgid "submissions.queuedReview"
+msgstr "심사 중"
+
+msgid "submissions.step3"
+msgstr "3단계"
+
+msgid "submissions.step1"
+msgstr "1단계"
+
+#, fuzzy
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submission.scheduledIn"
+msgstr "{$issueName}의 출판을 위한 일정."
+
+msgid "submission.scheduling"
+msgstr "스케줄링"
+
+msgid "submission.proofreading"
+msgstr "교정"
+
+msgid "submission.copyedit"
+msgstr "편집 복사"
+
+msgid "submission.copyediting"
+msgstr "편집 내용 복사"
+
+msgid "submission.authorVersion"
+msgstr "저자 버전"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "저자의 수정이 포함된 파일"
+
+msgid "submission.editorVersion"
+msgstr "편집자 버전"
+
+msgid "submission.postReviewVersion"
+msgstr "심사-후 파일"
+
+msgid "submission.reviewersVersion"
+msgstr "심사자의 의견이 포함된 파일"
+
+msgid "submission.editorAuthorRecord"
+msgstr "편집자/저자 이메일 기록"
+
+msgid "submission.notifyEditor"
+msgstr "편집자에게 공지"
+
+msgid "submission.notifyAuthor"
+msgstr "저자에게 공지"
+
+msgid "submission.editorReview"
+msgstr "편집자 심사"
+
+msgid "submission.round"
+msgstr "라운드&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "편집자 결정"
+
+msgid "submission.sent"
+msgstr "보내기"
+
+msgid "submission.changeSection"
+msgstr "바꾸기"
+
+msgid "submission.submissionEditing"
+msgstr "투고 편집하기"
+
+msgid "article.return"
+msgstr "논문 세부 정보로 돌아가기"
+
+msgid "article.fontSize.large.altText"
+msgstr "크게"
+
+msgid "article.fontSize.medium.altText"
+msgstr "중간"
+
+msgid "article.fontSize.small.altText"
+msgstr "작게"
+
+msgid "article.fontSize"
+msgstr "폰트 크기"
+
+msgid "article.comments.enable"
+msgstr "활성화"
+
+msgid "article.comments.disable"
+msgstr "비활성화"
+
+msgid "article.comments.sectionDefault"
+msgstr "기본"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "제한된 엑세스"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "오픈 엑세스"
+
+msgid "article.coverPage.altText"
+msgstr "커버 이미지"
+
+msgid "article.abstract"
+msgstr "초록"
+
+msgid "article.details"
+msgstr "세부정보"
+
+msgid "article.submissions"
+msgstr "투고(들)"
+
+msgid "article.submission"
+msgstr "투고"
+
+msgid "article.commentsToEditor"
+msgstr "저자 의견"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "언어"
+
+msgid "article.type"
+msgstr "형식, 방법 혹은 접근"
+
+msgid "article.coverage"
+msgstr "범위"
+
+msgid "article.subject"
+msgstr "키워드"
+
+msgid "article.discipline"
+msgstr "학문 주 분야 및 세부 분야"
+
+msgid "article.suppFilesAbbrev"
+msgstr "추가 파일(들)"
+
+msgid "article.suppFiles"
+msgstr "추가 파일(들)"
+
+msgid "article.suppFile"
+msgstr "추가 파일"
+
+msgid "article.file"
+msgstr "파일"
+
+msgid "article.journalSection"
+msgstr "학술지 세션"
+
+msgid "article.metadata"
+msgstr "메타데이터"
+
+msgid "article.indexingInformation"
+msgstr "인덱스 정보"
+
+msgid "article.authors"
+msgstr "저자(들)"
+
+msgid "article.title"
+msgstr "제목"
+
+msgid "article.submissionId"
+msgstr "투고 ID"
+
+msgid "common.publications"
+msgstr "논문들"
+
+msgid "common.publication"
+msgstr "논문"
+
+msgid "article.articles"
+msgstr "논문들"
+
+msgid "article.article"
+msgstr "논문"
+
+msgid "section.policy"
+msgstr "세션 규정"
+
+msgid "section.abbreviation.example"
+msgstr "(예시: 논문(Articles)=ART)"
+
+msgid "section.abbreviation"
+msgstr "약어"
+
+msgid "section.title"
+msgstr "세션 제목"
+
+msgid "section.sections"
+msgstr "세션들"
+
+msgid "section.section"
+msgstr "세션"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "할당된 편집 위원"
+
+msgid "common.queue.short.completed"
+msgstr "아카이브"
+
+msgid "common.queue.long.completed"
+msgstr "아카이브"
+
+msgid "common.queue.short.active"
+msgstr "활성"
+
+msgid "common.queue.long.active"
+msgstr "활성"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "아카이브"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "아카이브"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "심사 중"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "심사 중인 투고 논문"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "편집 중인 투고 논문"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "편집중"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "할당되지 않은"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "할당되지 않은"
+
+msgid "navigation.skip.issue"
+msgstr "현재 권으로 건너뛰기"
+
+msgid "navigation.skip.about"
+msgstr "학술지에 대해서 건너뛰기"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "도서관 사서(들)을 위한 정보"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "저자(들)을 위한 정보"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "흥미 가이드라인 경쟁"
+
+msgid "navigation.infoForLibrarians"
+msgstr "도서관 사서를 위해"
+
+msgid "navigation.infoForAuthors"
+msgstr "저자를 위해"
+
+msgid "navigation.browseByIssue"
+msgstr "권으로"
+
+msgid "common.software"
+msgstr "오픈 학술지 시스템"
