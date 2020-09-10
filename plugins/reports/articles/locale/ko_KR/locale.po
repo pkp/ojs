@@ -1,2 +1,21 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-09-11 10:49+0000\n"
+"Last-Translator: Hyongjun Choi <chj2812@dankook.ac.kr>\n"
+"Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-articles/ko_KR/>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "결정되지 않음"
+
+msgid "plugins.reports.articles.description"
+msgstr "이 플러그인은 논문 목록과 정보를 담은 CSV 파일을 제공합니다."
+
+msgid "plugins.reports.articles.displayName"
+msgstr "논문 리포트"
