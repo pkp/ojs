@@ -1,2 +1,42 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-09-11 10:49+0000\n"
+"Last-Translator: Hyongjun Choi <chj2812@dankook.ac.kr>\n"
+"Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
+"ko_KR/>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "관리자 DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "예시, \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "베이스 DN"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "선택. 389(LDAP) 혹은 636(SSL 기반 LDAP) 기본"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "서버 포트"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "예시, \"ldap.example.com\", 혹은 \"ldaps://ldap.example.com\" (SSL 사용)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "서버 호스트이름"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP 설정"
+
+msgid "plugins.auth.ldap.description"
+msgstr "이 플러그인은 외부 LDAP 데이터 소스로부터 사용자의 정보 권한과 교환 권한을 허용합니다."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
