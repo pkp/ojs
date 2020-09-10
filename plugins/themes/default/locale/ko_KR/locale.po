@@ -1,2 +1,24 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-09-11 10:49+0000\n"
+"Last-Translator: Hyongjun Choi <chj2812@dankook.ac.kr>\n"
+"Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/ko_KR/>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "이 학술지에 어울리는 폰트 조합을 선택하세요."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "서체"
+
+msgid "plugins.themes.default.description"
+msgstr "이 테마를 기본 테마로 적용합니다."
+
+msgid "plugins.themes.default.name"
+msgstr "기본 테마"
