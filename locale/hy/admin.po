@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-13 20:49+0000\n"
+"PO-Revision-Date: 2020-09-14 11:51+0000\n"
 "Last-Translator: anau vpn <anauvpn@gmail.com>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "hy_AM/>\n"
@@ -13,3 +13,64 @@ msgstr ""
 
 msgid "admin.hostedContexts"
 msgstr "Թողարկված հոդված"
+
+msgid "admin.auth.ojs"
+msgstr "OJS օգտագործողի տվյալների բազա"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"Հնարավոր չէ ավելացնել նոր լեզուն լեզվի գրանցման ֆայլի մեջ, հիմնակնում  \""
+"registry/locales.xml\"-ում:"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Հնարավոր չէ բացել լեզվի նկարագիրը PKP կայքի համար:"
+
+msgid "admin.languages.download"
+msgstr "Ներբեռնել լեզուն"
+
+msgid "admin.languages.localeInstalled"
+msgstr "\"{$locale}\" լեզուն տեղակայվել է:"
+
+msgid "admin.languages.downloadFailed"
+msgstr ""
+"Լեզվի տեղադրումը ձախողվեց: Սխալի մասին տեղեկատվությունը նկարագրում է "
+"ձախողումը:"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Ընտրեք որևէ լրացուցիչ լեզու այս համակարգում աջակցություն/support տեղադրելու "
+"համար: Լեզուները պետք է տեղադրվեն նախքան դրանք  ամսագրերի համար օգտագործելը: "
+"Տես OJS փաստաթղթերը նոր լեզվի համար աջակցություն/support ավելացնելու համար:"
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Վստա՞հ եք, որ ցանկանում եք հեռացնել այս լեզուն:Սա կարող է անդրադառնալ "
+"ցանկացած ամսագրի վրա, որոնք այս պահին օգտագործում են այս լեզում:"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Նշված լեզուները կարող են լինել թերի :"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Սա կլինի լռելյայն լեզուն կայքի և ընդգրկված ցանկացած ամսագրերի համար:"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Դուք վստա՞հ եք, որ ցանկանում եք ապաակտիվացնել այս լեզուն: Սա կարող է ազդել "
+"ցանկացած տեղակայված ամսագրի վրա, որն այժմ օգտագործում է լեզուն:"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Հիմնական կայքի հարցումները կուղղորդվեն այս ամսագիր: Սա կարող է օգտակար "
+"լինել, եթե կայքը, օրինակ, պարունակում է միայն մեկ ամսագիր:"
+
+msgid "admin.settings.redirect"
+msgstr "Ամսագրի վերաուղորդում"
+
+msgid "admin.settings.info.success"
+msgstr "Կայիք տեղեկատվությունը հաջողությամբ թարմացվել է:"
+
+msgid "admin.settings.config.success"
+msgstr "Կայքի Կայքի Ձևավորման կարգավորումները հաջողությամբ թարմացվել են:"
+
+msgid "admin.settings.appearance.success"
+msgstr "Կայքի արտաքին տեսքի կարգաբերումները հաջողությամբ թարմացվել են:"
