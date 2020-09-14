@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-14 11:51+0000\n"
+"PO-Revision-Date: 2020-09-14 11:52+0000\n"
 "Last-Translator: anau vpn <anauvpn@gmail.com>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "hy_AM/>\n"
@@ -74,3 +74,11 @@ msgstr "Կայքի Կայքի Ձևավորման կարգավորումները 
 
 msgid "admin.settings.appearance.success"
 msgstr "Կայքի արտաքին տեսքի կարգաբերումները հաջողությամբ թարմացվել են:"
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Ակտիվացնել օգտագործողի փոփոխված գաղտնաբառը (եթե աջակցվում է այս "
+"նույնականացման plugin-ով):  Այս տարբերակի ակտիվացումը  թույլ է տալիս փոխել "
+"գաղտնաբառը OJS-ի ներսից և օգտագործել «կորած գաղտնաբառ»  հոդվածը մոռացված "
+"գաղտնաբառը վերականգնելու համար: Այս գործառույթները հասանելի չեն լինի "
+"վավերացման աղբյուրով օգտագործողների համար, եթե այս տարբերակը միացված չէ:"
