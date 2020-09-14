@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-14 11:52+0000\n"
+"PO-Revision-Date: 2020-09-15 05:48+0000\n"
 "Last-Translator: anau vpn <anauvpn@gmail.com>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "hy_AM/>\n"
@@ -82,3 +82,44 @@ msgstr ""
 "գաղտնաբառը OJS-ի ներսից և օգտագործել «կորած գաղտնաբառ»  հոդվածը մոռացված "
 "գաղտնաբառը վերականգնելու համար: Այս գործառույթները հասանելի չեն լինի "
 "վավերացման աղբյուրով օգտագործողների համար, եթե այս տարբերակը միացված չէ:"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Պահանջվում է վերնագիր:"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Սա կլինի մեկ կարճ բառ կամ հապավում, որը   ներկայացնում է պարբերականը: "
+"Պարբերականի հղումը հետևյալն է՝ {$sampleUrl}:"
+
+msgid "admin.contexts.create"
+msgstr "Ստեղծել պարբերական:"
+
+msgid "admin.journals.noneCreated"
+msgstr "Որևէ պարբերական չի ստեղծվել:"
+
+msgid "admin.journals.journalSettings"
+msgstr "Պարբերականի կարգաբերումներ"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Դուք ավտոմատ կավելացվեք որպես այս պարբերականի մենեջեր:Նոր պարբերական "
+"ստեղծելուց հետո, Դուք կուղորդվեք դեպքի կարգաբերումներ ամսագրի նախնական "
+"տեղադրումը կատարելու համար:"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS կարգաբերման կարգավորում <tt>config.inc.php</tt>-ից:"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS  կարգավորում"
+
+msgid "admin.systemVersion"
+msgstr "OJS տարբերակ"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Ակտիվացնել օգտագործողների ստեղծումը (եթե աջակցվում է այս նույնականացման "
+"plugin-ով): OJS-ում ստեղծված օգտագործողները այս նույնականացման աղբյուրով "
+"ավտոմատ կավելացվեն հեռավար նույնականացման աղբյուրին, եթե արդեն գոյություն "
+"չունեն: Ինչպես նաև, եթե այս աղբյուրը  լռելյայն է,  OJS  հաշիվը ստեղծվում է "
+"օգտագործողի գրանցման միջոցով,  ավտամատ կավելացվի հեռավար նույնականացման "
+"աղբյուրին:"
