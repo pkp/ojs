@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
+"PO-Revision-Date: 2020-09-17 22:03+0000\n"
+"Last-Translator: Emma U <emmaupkp@gmail.com>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/ja/>\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:08+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.reports.counter.description"
 msgstr "サイトの運用状況を記録し、<a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a>準拠の報告書を作成します。"
@@ -55,3 +58,17 @@ msgstr "全雑誌の合計"
 
 msgid "plugins.reports.counter.migrate"
 msgstr "ログファイルを移行する。"
+
+#, fuzzy
+msgid "plugins.reports.counter.error.noXML"
+msgstr "結果をXML形式にフォーマットできませんでした。"
+
+#, fuzzy
+msgid "plugins.reports.counter.error.noResults"
+msgstr "レポートの条件に一致する結果が見つかりませんでした。"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "レポートのパラメーターが無効です。"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTERバージョン"
