@@ -16,13 +16,13 @@
 
 		<fieldset>
 			<legend>
-				{translate key="user.subscriptions.form.typeId"}
+				{translate key="payment.subscription.purchase"}
 			</legend>
 			<div class="fields">
 				<div class="subscription_type">
 					<label>
 						<span class="label">
-							{translate key="user.subscriptions.form.typeId"}
+							{translate key="payment.subscription.purchase"}
 						</span>
 						<select name="typeId" id="typeId">
 							{foreach name=types from=$subscriptionTypes key=thisTypeId item=subscriptionType}
