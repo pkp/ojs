@@ -6,7 +6,7 @@
  * Welcome to the OJS API Reference. This resource contains documentation
  * generated automatically from the OJS source code.
  *
- * The design of Open %Journal Systems 2.x is heavily structured for
+ * The design of Open %Journal Systems is heavily structured for
  * maintainability, flexibility and robustness. Those familiar with Sun's
  * Enterprise Java Beans technology or the Model-View-Controller (MVC) pattern
  * will note similarities.
