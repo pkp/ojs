@@ -103,7 +103,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	 * @param $objects Submission
 	 * @param $context Context
 	 * @param $jsonString string Export JSON string
-	 * @return boolean Whether the JSON string has been registered
+	 * @return boolean|array Whether the JSON string has been registered
 	 */
 	function depositXML($objects, $context, $jsonString) {
 		$apiKey = $this->getSetting($context->getId(), 'apiKey');
