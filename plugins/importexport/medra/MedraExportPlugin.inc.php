@@ -105,28 +105,20 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 
 		// Instantiate the mEDRA web service wrapper.
 		$ws = new MedraWebservice($endpoint, $username, $password);
+
 		// Register the XML with mEDRA.
-		$result = $ws->upload($xml);
-
-		if ($result === true) {
-			// Mark all objects as registered.
-			foreach($objects as $object) {
-				$object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
-				$this->saveRegisteredDoi($context, $object);
-			}
-		} else {
-			// Handle errors.
-			if (is_string($result)) {
-				$result = array(
-					array('plugins.importexport.common.register.error.mdsError', $result)
-				);
-			} else {
-				$result = false;
-			}
+		if (($result = $ws->upload($xml)) !== true) {
+			if (is_string($result)) return [['plugins.importexport.common.register.error.mdsError', $result]];
+			else return false;
 		}
-		return $result;
-	}
 
+		// Mark all objects as registered.
+		foreach($objects as $object) {
+			$object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
+			$this->saveRegisteredDoi($context, $object);
+		}
+		return true;
+	}
 }
 
 
