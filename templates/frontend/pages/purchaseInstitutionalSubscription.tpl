@@ -26,7 +26,7 @@
 
 		<fieldset>
 			<legend>
-				{translate key="user.subscriptions.form.typeId"}
+				{translate key="payment.subscription.purchase"}
 			</legend>
 			<div class="fields">
 				<div class="subscription_type">

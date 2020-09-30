@@ -389,12 +389,6 @@ msgstr "Show My Journals"
 msgid "user.registerForOtherJournals"
 msgstr "Register for Other Journals"
 
-msgid "user.email"
-msgstr "Email address"
-
-msgid "user.userCredentials"
-msgstr "Username and Password credentials"
-
 msgid "user.reviewerPrompt"
 msgstr "Would you be willing to review submissions to this journal?"
 
@@ -1245,9 +1239,6 @@ msgstr "Identify reviewing interests (substantive areas and research methods):"
 
 msgid "user.register.form.emailConsentAllContexts"
 msgstr "Yes, I would like to be notified of new publications and announcements for all journals that I registered with."
-
-msgid "user.register.form.privacyConsentLabel"
-msgstr "Option to consent"
 
 msgid "user.register.form.privacyConsentThisContext"
 msgstr "Yes, I agree to have my data collected and stored according to this journal's <a href=\"{$privacyUrl}\" target=\"_blank\">privacy statement</a>."
