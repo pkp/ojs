@@ -22,7 +22,7 @@
 				<div class="subscription_type">
 					<label>
 						<span class="label">
-							{translate key="payment.subscription.purchase"}
+							{translate key="user.subscriptions.form.typeId"}
 						</span>
 						<select name="typeId" id="typeId">
 							{foreach name=types from=$subscriptionTypes key=thisTypeId item=subscriptionType}
