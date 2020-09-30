@@ -25,6 +25,9 @@
 		{include file="common/formErrors.tpl"}
 
 		<fieldset>
+			<legend>
+				{translate key="payment.subscription.purchase"}
+			</legend>
 			<div class="fields">
 				<div class="subscription_type">
 					<label>
