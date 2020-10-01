@@ -77,6 +77,7 @@ msgstr "Tutti i costi devono essere valori numerici positivi (sono permessi i de
 msgid "manager.payment.generalFees"
 msgstr "Quote generali"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "La quota associativa comparirà nella pagina delle informazioni sulla rivista (sotto (Politiche) e il link alle donazioni apparirà nel menu laterale."
 

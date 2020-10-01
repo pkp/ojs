@@ -89,6 +89,7 @@ msgstr "Kaikkien hintojen tulee olla positiivia numeerisia arvoja (desimaalipilk
 msgid "manager.payment.generalFees"
 msgstr "Yleiset maksut"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Yhdistyksen jäsenyys näkyy Tietoa julkaisusta -sivulla Toimintaperiaatteet-kohdassa ja lahjoituslinkki näkyy hakutoiminnon yläpuolella, oikeanpuoleisessa kehyksessä."
 

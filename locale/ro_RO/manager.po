@@ -109,6 +109,7 @@ msgstr "Nici o plată"
 msgid "manager.payment.generalOptions"
 msgstr "Opțiuni generale"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
 "Calitatea de membru de asociere va apărea în „Despre jurnal” sub „Politici”, "

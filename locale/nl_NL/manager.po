@@ -116,6 +116,7 @@ msgstr "Alle prijzen moeten positieve numerieke waarden zijn (decimalen zijn toe
 msgid "manager.payment.generalFees"
 msgstr "Algemene betalingen"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Het verenigingslidmaatschap verschijnt in Over dit Tijdschrift onder Beleid en de schenkingen-link verschijnt boven de zoekfunctie in de rechterkolom."
 

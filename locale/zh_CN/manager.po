@@ -83,6 +83,7 @@ msgstr "所有费用必须是正的数字值 (允许小数点)"
 msgid "manager.payment.generalFees"
 msgstr "一般费用"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "该协会的成员，将出现在政策下面的关于期刊里, 捐赠链接就会出现右边框的搜索功能上面."
 

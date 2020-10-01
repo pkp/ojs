@@ -68,6 +68,7 @@ msgstr "Svi iznosi moraju biti pozitivne numeričke vrijednosti (decimalni broje
 msgid "manager.payment.generalFees"
 msgstr "Opće naplate"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Mogućnost članstva u organizaciji bit će navedena u rubrici \"uređivačka politika\" pod poveznicom \"o časopisu\". U slučaju aktivacije opcije, poveznica na donacije nalazit će se u gornjem desnom okviru svake stranice, ponad prozora za pretraživanje."
 

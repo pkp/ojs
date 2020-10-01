@@ -100,6 +100,7 @@ msgstr "Egy ajándék előfizetési link fog megjelenni a Folyóiratról szóló
 msgid "manager.payment.generalFees"
 msgstr "Általános költségek"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Az Egyesületi Tagság megjelenik a Folyóiratról oldal Irányelvek részében, és egy támogatói link a jobb oldali blokk keresés funkciója felett."
 

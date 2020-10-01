@@ -359,6 +359,7 @@ msgstr "Liste"
 msgid "manager.payment.authorFeesDescription"
 msgstr "Odabrane opcije sa njihovim opisima i naknadama (koje mogu biti izmenjene ispod) će se pojaviti u Korak 1 procesu prijave članka i u O časopisu i Prijave delu kao i udelovima gde je plaćanje naknada naznačeno."
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Članstvo asocijacije će se pojaviti u stranici O časopisu u delu Politike,a link za donacije će se pojaviti iznad funkcije za pretragu u okviru sa desne strane."
 

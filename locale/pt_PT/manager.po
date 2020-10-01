@@ -92,6 +92,7 @@ msgstr "Todos os preços devem ser valores numéricos positivos (são autorizada
 msgid "manager.payment.generalFees"
 msgstr "Taxas Gerais"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
 "A Taxa de Adesão aparecerá na secção Políticas em Sobre da revista e o link "

@@ -77,6 +77,7 @@ msgstr "Všechny částky musí mít kladné číselné hodnoty (desetinná mís
 msgid "manager.payment.generalFees"
 msgstr "Obecné poplatky"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Členství v asociaci se objeví v části O časopise pod Pravidly a odkaz pro dary se objeví nad funkcí pro vyhledávání v rámci napravo."
 
