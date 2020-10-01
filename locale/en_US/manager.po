@@ -113,8 +113,9 @@ msgstr "All costs must be positive numeric values (decimal points are allowed)"
 msgid "manager.payment.generalFees"
 msgstr "General Fees"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "The Association Membership will appear in About the Journal under Policies, and the donations link will appear above the search function in the right-hand frame."
+msgstr "The Association Membership will appear in About the Journal under Policies."
 
 msgid "manager.payment.generalOptions"
 msgstr "General Options"

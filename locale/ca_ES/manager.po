@@ -86,6 +86,7 @@ msgstr "Tots els costos han de ser valors numèrics positius (s’admeten decima
 msgid "manager.payment.generalFees"
 msgstr "Quotes generals"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "L’afiliació a l’associació apareix a la pàgina «Sobre la revista», secció «Polítiques», i l’enllaç per fer donacions es mostra damunt de la funció de cerca que hi ha al marc dret."
 

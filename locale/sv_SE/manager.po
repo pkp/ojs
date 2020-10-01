@@ -93,6 +93,7 @@ msgstr "Alla kostnader måste ha positiva numeriska värden (decimaltecken är t
 msgid "manager.payment.generalFees"
 msgstr "Allmänna avgifter"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Föreningsprenumeranters medlemsskap kommer att synas under Policyer i Om Tidskriften. Donationslänkarna kommer att synas ovanför sökrutan i högermenyn."
 

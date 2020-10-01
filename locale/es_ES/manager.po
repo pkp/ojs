@@ -86,6 +86,7 @@ msgstr "Todos los costes deben tener un valor numérico positivo (se permite el 
 msgid "manager.payment.generalFees"
 msgstr "Cuotas generales"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "La sección de Miembros de la asociación se mostrará en la sección Acerca de la revista, debajo de Políticas, y el enlace para realizar donaciones aparecerá sobre el buscador, en la parte derecha de la ventana."
 

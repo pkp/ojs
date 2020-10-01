@@ -23,6 +23,7 @@ msgstr "خۆڕایی"
 msgid "manager.payment.generalOptions"
 msgstr "بژاردە گشتییەکان"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
 "بون بە ئەندام لە بەشی زانیارییەکانی گۆڤار پیشان دەدرێت و شێوازی بەخشین لە "

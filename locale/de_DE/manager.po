@@ -100,6 +100,7 @@ msgstr "Alle Kosten müssen durch positive Zahlenwerte ausgedrückt werden, Dezi
 msgid "manager.payment.generalFees"
 msgstr "Allgemeine Gebühren"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "\"Institutionelle Mitgliedschaft\" steht im \"Über uns\" der Zeitschrift unter \"Zur Zeitschrift\", der Link für Spenden befindet sich oberhalb der Suchfunktion im rechten Frame."
 

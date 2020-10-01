@@ -98,6 +98,7 @@ msgstr "Semua biaya harus dalam nilai numerik positif (desimal dibolehkan)"
 msgid "manager.payment.generalFees"
 msgstr "Biaya Umum"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Keanggotaan Asosiasi akan ditampilkan di Tentang Jurnal di bawah kebijakan, dan tautan donasi akan muncul di atas fungsi cari di frame sebelah kanan."
 

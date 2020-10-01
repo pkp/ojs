@@ -90,6 +90,7 @@ msgstr "Vsi zneski morajo biti pozitivna števila (decimalke so dovoljene)"
 msgid "manager.payment.generalFees"
 msgstr "Splošna pristojbina"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Možnost članstva bo objavljena na strani O reviji pod Politike. V slučaju aktivacije opcije, se bo donatorska povezava pokazala nad funkcijo iskanja na desni strani okvirja."
 

@@ -81,6 +81,7 @@ msgstr "Alle omkostninger skal være positive numeriske værdier (decimaltegn er
 msgid "manager.payment.generalFees"
 msgstr "Generelle gebyrer"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
 "Foreningsmedlemskab vises under 'Om tidsskriftet' under 'Politikker', og "

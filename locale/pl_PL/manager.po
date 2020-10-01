@@ -1334,6 +1334,7 @@ msgstr "Opcje"
 msgid "manager.payment.options.enablePayments"
 msgstr "Dla tego czasopisma zostaną włączone płatności. Uwaga: użytkownicy będą musieli zalogować się, aby dokonać płatności."
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "Członkostwo w stowarzyszeniu pojawi się w sekcji O czasopiśmie, pod zasadami, natomiast link do wpłat pojawi się nad oknem wyszukiwawczym po prawej stronie."
 

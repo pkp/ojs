@@ -106,6 +106,7 @@ msgstr ""
 msgid "manager.payment.generalFees"
 msgstr "Genel Ücretler"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
 "Dernek Üyeliği, Dergi Hakkında sayfasında Politikalar altında, bağış "

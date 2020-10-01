@@ -38,6 +38,7 @@ msgstr "Không thanh toán"
 msgid "manager.payment.generalOptions"
 msgstr "Các tùy chọn chung"
 
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
 "Tư cách thành viên Hiệp hội sẽ xuất hiện trong Giới thiệu về Tạp chí theo "

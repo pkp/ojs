@@ -139,6 +139,7 @@ msgid "manager.payment.generalFees"
 msgstr "सामान्य शुल्क"
 
 # (pofilter) endpunc: Different punctuation at the end
+#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
 "एसोसिएशन सदस्यता नीतियों के तहत जर्नल के बारे में दिखाई देगा, और दान लिंक "
