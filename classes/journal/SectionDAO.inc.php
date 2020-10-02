@@ -57,7 +57,7 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $sectionId int
 	 * @param $journalId int Journal ID optional
 	 * @param $useCache boolean optional
-	 * @return Section
+	 * @return Section?
 	 */
 	function getById($sectionId, $journalId = null, $useCache = false) {
 		if ($useCache) {
@@ -67,21 +67,16 @@ class SectionDAO extends PKPSectionDAO {
 			return $returner;
 		}
 
-		$sql = 'SELECT * FROM sections WHERE section_id = ?';
-		$params = array((int) $sectionId);
-		if ($journalId !== null) {
-			$sql .= ' AND journal_id = ?';
-			$params[] = (int) $journalId;
-		}
-		$result = $this->retrieve($sql, $params);
+		$params = [(int) $sectionId];
+		if ($journalId !== null) $params[] = (int) $journalId;
+		$result = $this->retrieve(
+			'SELECT * FROM sections WHERE section_id = ?'
+			. ($journalId !== null ? ' AND journal_id = ?' : ''),
+			$params
+		);
 
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-
-		return $returner;
+		$row = (array) $result->current();
+		return $row?$this->_fromRow($row):null;
 	}
 
 	/**
@@ -89,13 +84,11 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $sectionAbbrev string
 	 * @param $journalId int Journal ID
 	 * @param $locale string optional
-	 * @return Section
+	 * @return Section?
 	 */
 	function getByAbbrev($sectionAbbrev, $journalId, $locale = null) {
-		$params = array('abbrev', $sectionAbbrev, (int) $journalId);
-		if ($locale !== null) {
-			$params[] = $locale;
-		}
+		$params = ['abbrev', $sectionAbbrev, (int) $journalId];
+		if ($locale !== null) $params[] = $locale;
 
 		$result = $this->retrieve(
 			'SELECT	s.*
@@ -108,13 +101,8 @@ class SectionDAO extends PKPSectionDAO {
 			$params
 		);
 
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $returner;
+		$row = (array) $result->current();
+		return $row?$this->_fromRow($row):null;
 	}
 
 	/**
@@ -122,13 +110,11 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $sectionTitle string
 	 * @param $journalId int Journal ID
 	 * @param $locale string optional
-	 * @return Section
+	 * @return Section?
 	 */
 	function getByTitle($sectionTitle, $journalId, $locale = null) {
-		$params = array('title', $sectionTitle, (int) $journalId);
-		if ($locale !== null) {
-			$params[] = $locale;
-		}
+		$params = ['title', $sectionTitle, (int) $journalId];
+		if ($locale !== null) $params[] = $locale;
 
 		$result = $this->retrieve(
 			'SELECT	s.*
@@ -141,13 +127,8 @@ class SectionDAO extends PKPSectionDAO {
 			$params
 		);
 
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $returner;
+		$row = (array) $result->current();
+		return $row?$this->_fromRow($row):null;
 	}
 
 	/**
@@ -160,15 +141,11 @@ class SectionDAO extends PKPSectionDAO {
 				JOIN submissions
 				ON (submissions.section_id = sections.section_id)
 				WHERE submissions.submission_id = ?',
-			array((int) $submissionId));
+			[(int) $submissionId]
+		);
 
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-
-		return $returner;
+		$row = (array) $result->current();
+		return $row?$this->_fromRow($row):null;
 	}
 
 	/**
@@ -384,15 +361,11 @@ class SectionDAO extends PKPSectionDAO {
 			array_merge([(int) $issueId], $sectionIds)
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$returner[] = $this->_fromRow($row);
-			$result->MoveNext();
+		$sections = [];
+		foreach ($result as $row) {
+			$sections[] = $this->_fromRow((array) $row);
 		}
-
-		$result->Close();
-		return $returner;
+		return $sections;
 	}
 
 	/**
@@ -417,7 +390,7 @@ class SectionDAO extends PKPSectionDAO {
 	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ' ORDER BY seq',
-			(int) $journalId, $rangeInfo
+			[(int) $journalId], $rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
