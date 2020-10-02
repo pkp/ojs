@@ -56,7 +56,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @param $issueId int
 	 * @param $journalId int optional
 	 * @param $useCache boolean optional
-	 * @return Issue object
+	 * @return Issue?
 	 */
 	function getById($issueId, $journalId = null, $useCache = false) {
 		if ($useCache) {
@@ -66,7 +66,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			return $returner;
 		}
 
-		$params = array((int) $issueId);
+		$params = [(int) $issueId];
 		if ($journalId) $params[] = (int) $journalId;
 		$result = $this->retrieve(
 			'SELECT i.* FROM issues i WHERE issue_id = ?'
@@ -74,12 +74,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$params
 		);
 
-		$issue = null;
-		if ($result->RecordCount() != 0) {
-			$issue = $this->_returnIssueFromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-		return $issue;
+		$row = (array) $result->current();
+		return $row?$this->_returnIssueFromRow($row):null;
 	}
 
 	/**
@@ -136,11 +132,9 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$result = $this->retrieve($sql, $params);
 
 		$issues = array();
-		while (!$result->EOF) {
-			$issues[] = $this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
+		foreach ($result as $row) {
+			$issues[] = $this->_returnIssueFromRow((array) $row);
 		}
-		$result->Close();
 		return $issues;
 	}
 
@@ -183,7 +177,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return DAOResultFactory
 	 */
 	function getIssuesByIdentification($journalId, $volume = null, $number = null, $year = null, $titles = array()) {
-		$params = array();
+		$params = [];
 
 		$i = 1;
 		$sqlTitleJoin = '';
@@ -225,9 +219,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return Issue object
 	 */
 	function getByBestId($issueId, $contextId = null, $useCache = false) {
-		$params = [
-			$issueId
-		];
+		$params = [$issueId];
 		if ($contextId) $params[] = (int) $contextId;
 
 		$result = $this->retrieve(
@@ -236,12 +228,11 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$params
 		);
 
-		if ($result->RecordCount() != 0) {
-			$issue = $this->_returnIssueFromRow($result->GetRowAssoc(false));
+		if ($row = (array) $result->current()) {
+			$issue = $this->_returnIssueFromRow($row);
 		} elseif (is_int($issueId) || ctype_digit($issueId)) {
 			$issue = $this->getById($issueId);
 		}
-		$result->Close();
 
 		return $issue ?? null;
 	}
@@ -250,7 +241,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * Retrieve current issue
 	 * @param $journalId int
 	 * @param $useCache boolean optional
-	 * @return Issue object
+	 * @return Issue?
 	 */
 	function getCurrent($journalId, $useCache = false) {
 		if ($useCache) {
@@ -259,15 +250,11 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		}
 
 		$result = $this->retrieve(
-			'SELECT i.* FROM issues i WHERE journal_id = ? AND current = 1', (int) $journalId
+			'SELECT i.* FROM issues i WHERE journal_id = ? AND current = 1', [(int) $journalId]
 		);
 
-		$issue = null;
-		if ($result->RecordCount() != 0) {
-			$issue = $this->_returnIssueFromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-		return $issue;
+		$row = (array) $result->current();
+		return $row?$this->_returnIssueFromRow($row):null;
 	}
 
 	/**
@@ -276,7 +263,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 */
 	function updateCurrent($journalId, $issue = null) {
 		$this->update(
-			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1', (int) $journalId
+			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1', [(int) $journalId]
 		);
 		if ($issue) $this->updateObject($issue);
 
@@ -423,9 +410,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND volume = ? AND number = ? AND year = ? AND issue_id <> ?',
 			array((int) $journalId, $this->nullOrInt($volume), $number, $year, (int) $issueId)
 		);
-		$returner = $result->RecordCount() != 0 ? true : false;
-		$result->Close();
-		return $returner;
+		return (boolean) $result->current();
 	}
 
 	/**
@@ -513,9 +498,9 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$issueFileManager->deleteIssueTree();
 
 		// Delete issue settings and issue
-		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', (int) $issueId);
-		$this->update('DELETE FROM issues WHERE issue_id = ?', (int) $issueId);
-		$this->update('DELETE FROM custom_issue_orders WHERE issue_id = ?', (int) $issueId);
+		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', [(int) $issueId]);
+		$this->update('DELETE FROM issues WHERE issue_id = ?', [(int) $issueId]);
+		$this->update('DELETE FROM custom_issue_orders WHERE issue_id = ?', [(int) $issueId]);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
 
 		$this->flushCache();
@@ -550,7 +535,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * Get issue by article id
 	 * @param articleId int
 	 * @param journalId int optional
-	 * @return Issue object
+	 * @return Issue?
 	 */
 	function getBySubmissionId($articleId, $journalId = null) {
 		$params = ['issueId', (int) $articleId];
@@ -569,13 +554,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$params
 		);
 
-		$issue = null;
-		if ($result->RecordCount() != 0) {
-			$issue = $this->_returnIssueFromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $issue;
+		$row = (array) $result->current();
+		return $row?$this->_returnIssueFromRow($row):null;
 	}
 
 	/**
@@ -587,7 +567,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	function getIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC',
-			(int) $journalId, $rangeInfo
+			[(int) $journalId], $rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
@@ -602,7 +582,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	function getPublishedIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT i.* FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? AND i.published = 1 ORDER BY o.seq ASC, i.current DESC, i.date_published DESC',
-			(int) $journalId, $rangeInfo
+			[(int) $journalId], $rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
@@ -617,7 +597,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	function getUnpublishedIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 0 ORDER BY year ASC, volume ASC, number ASC',
-			(int) $journalId, $rangeInfo
+			[(int) $journalId], $rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
@@ -682,7 +662,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			['issueId', (int) $issueId, (int) STATUS_SCHEDULED, (int) STATUS_PUBLISHED]
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
-		$result->Close();
 		return $returner;
 	}
 
@@ -692,7 +671,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 */
 	function deleteCustomIssueOrdering($journalId) {
 		$this->update(
-			'DELETE FROM custom_issue_orders WHERE journal_id = ?', (int) $journalId
+			'DELETE FROM custom_issue_orders WHERE journal_id = ?', [(int) $journalId]
 		);
 	}
 
@@ -710,10 +689,10 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			(int) $journalId
 		);
 
-		for ($i=1; !$result->EOF; $i++) {
-			list($issueId) = $result->fields;
+		for ($i=1; $row = (array) $result->current(); $i++) {
+			$issueId = $row['issue_id'];
 			$resultB = $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array($journalId, $issueId));
-			if (!$resultB->EOF) {
+			if ($rowB = $result->current()) {
 				$this->update(
 					'UPDATE custom_issue_orders SET seq = ? WHERE issue_id = ? AND journal_id = ?',
 					array($i, $issueId, $journalId)
@@ -722,10 +701,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				// This entry is missing. Create it.
 				$this->insertCustomIssueOrder($journalId, $issueId, $i);
 			}
-			$resultB->Close();
-			$result->MoveNext();
 		}
-		$result->Close();
 	}
 
 	/**
@@ -735,19 +711,18 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 */
 	function customIssueOrderingExists($journalId) {
 		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM custom_issue_orders WHERE journal_id = ?',
-			(int) $journalId
+			'SELECT COUNT(*) AS row_count FROM custom_issue_orders WHERE journal_id = ?',
+			[(int) $journalId]
 		);
-		$returner = isset($result->fields[0]) && $result->fields[0] == 0 ? false : true;
-		$result->Close();
-		return $returner;
+		$row = (array) $result->current();
+		return $row && $row['row_count'] != 0;
 	}
 
 	/**
 	 * Get the custom issue order of a journal.
 	 * @param $journalId int
 	 * @param $issueId int
-	 * @return int
+	 * @return int?
 	 */
 	function getCustomIssueOrder($journalId, $issueId) {
 		$result = $this->retrieve(
@@ -755,12 +730,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			array((int) $journalId, (int) $issueId)
 		);
 
-		$returner = null;
-		if (!$result->EOF) {
-			list($returner) = $result->fields;
-		}
-		$result->Close();
-		return $returner;
+		$row = (array) $result->current();
+		return $row?$result['seq']:null;
 	}
 
 	/**
@@ -809,7 +780,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			// This entry is missing. Create it.
 			$this->insertCustomIssueOrder($journalId, $issueId, $newPos);
 		}
-		$result->Close();
 	}
 
 	/**
@@ -817,7 +787,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 */
 	function pubIdExists($pubIdType, $pubId, $excludePubObjectId, $contextId) {
 		$result = $this->retrieve(
-			'SELECT COUNT(*)
+			'SELECT COUNT(*) AS row_count
 			FROM issue_settings ist
 				INNER JOIN issues i ON ist.issue_id = i.issue_id
 			WHERE ist.setting_name = ? AND ist.setting_value = ? AND i.issue_id <> ? AND i.journal_id = ?',
@@ -828,9 +798,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				(int) $contextId
 			)
 		);
-		$returner = $result->fields[0] ? true : false;
-		$result->Close();
-		return $returner;
+		$row = (array) $result->current();
+		return $row && $row['row_count'];
 	}
 
 	/**
