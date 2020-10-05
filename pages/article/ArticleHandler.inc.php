@@ -78,7 +78,12 @@ class ArticleHandler extends Handler {
 			if (!$submission || $request->getContext()->getId() != $submission->getContextId()) $submission = null;
 		}
 
-		if (!$submission || $submission->getData('status') !== STATUS_PUBLISHED) {
+		import('classes.issue.IssueAction');
+		$issueAction = new IssueAction();
+		$context = $request->getContext();
+		$user = $request->getUser();
+
+		if (!$submission || ($submission->getData('status') !== STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user))) {
 			$request->getDispatcher()->handle404();
 		}
 
@@ -110,7 +115,7 @@ class ArticleHandler extends Handler {
 			$galleyId = $subPath;
 		}
 
-		if ($this->publication->getData('status') !== STATUS_PUBLISHED) {
+		if ($this->publication->getData('status') !== STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user)) {
 			$request->getDispatcher()->handle404();
 		}
 
