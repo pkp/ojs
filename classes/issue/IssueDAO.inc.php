@@ -770,12 +770,9 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @param $newPos int The new position (0-based) of this section
 	 */
 	function moveCustomIssueOrder($journalId, $issueId, $newPos) {
-		$result = $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array((int) $journalId, (int) $issueId));
-		if (!$result->EOF) {
-			$this->update(
-				'UPDATE custom_issue_orders SET seq = ? WHERE journal_id = ? AND issue_id = ?',
-				array($newPos, (int) $journalId, (int) $issueId)
-			);
+		$result = $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', [(int) $journalId, (int) $issueId]);
+		if ($result->current()) {
+			$this->update('UPDATE custom_issue_orders SET seq = ? WHERE journal_id = ? AND issue_id = ?', [$newPos, (int) $journalId, (int) $issueId]);
 		} else {
 			// This entry is missing. Create it.
 			$this->insertCustomIssueOrder($journalId, $issueId, $newPos);

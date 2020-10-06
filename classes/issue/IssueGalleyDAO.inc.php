@@ -129,8 +129,6 @@ class IssueGalleyDAO extends DAO {
 	 * @return array IssueGalleys
 	 */
 	function getByIssueId($issueId) {
-		$galleys = array();
-
 		$result = $this->retrieve(
 			'SELECT
 				g.*,
@@ -144,17 +142,16 @@ class IssueGalleyDAO extends DAO {
 			FROM issue_galleys g
 				LEFT JOIN issue_files f ON (g.file_id = f.file_id)
 			WHERE g.issue_id = ? ORDER BY g.seq',
-			(int) $issueId
+			[(int) $issueId]
 		);
 
-		while (!$result->EOF) {
-			$issueGalley = $this->_fromRow($result->GetRowAssoc(false));
+		$galleys = [];
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$issueGalley = $this->_fromRow($row);
 			$galleys[$issueGalley->getId()] = $issueGalley;
-			$result->MoveNext();
 		}
-
-		$result->Close();
-		HookRegistry::call('IssueGalleyDAO::getGalleysByIssue', array(&$galleys, &$issueId));
+		HookRegistry::call('IssueGalleyDAO::getGalleysByIssue', [&$galleys, &$issueId]);
 		return $galleys;
 	}
 
@@ -378,21 +375,11 @@ class IssueGalleyDAO extends DAO {
 	 * @param $issueId int
 	 */
 	function resequence($issueId) {
-		$result = $this->retrieve(
-			'SELECT galley_id FROM issue_galleys WHERE issue_id = ? ORDER BY seq',
-			(int) $issueId
-		);
-
-		for ($i=1; !$result->EOF; $i++) {
-			list($galleyId) = $result->fields;
-			$this->update(
-				'UPDATE issue_galleys SET seq = ? WHERE galley_id = ?',
-				array($i, $galleyId)
-			);
-			$result->MoveNext();
+		$result = $this->retrieve('SELECT galley_id FROM issue_galleys WHERE issue_id = ? ORDER BY seq', [(int) $issueId]);
+		for ($i=1; $row = (array) $result->current(); $i++) {
+			$this->update('UPDATE issue_galleys SET seq = ? WHERE galley_id = ?', [$i, $row['galley_id']]);
+			$result->next();
 		}
-
-		$result->Close();
 	}
 
 	/**
@@ -401,13 +388,9 @@ class IssueGalleyDAO extends DAO {
 	 * @return int
 	 */
 	function getNextGalleySequence($issueId) {
-		$result = $this->retrieve(
-			'SELECT MAX(seq) + 1 FROM issue_galleys WHERE issue_id = ?',
-			(int) $issueId
-		);
-		$returner = floor($result->fields[0]);
-		$result->Close();
-		return $returner;
+		$result = $this->retrieve('SELECT MAX(seq) + 1 AS next_sequence FROM issue_galleys WHERE issue_id = ?', [(int) $issueId]);
+		$row = (array) $result->current();
+		return $row['next_sequence'];
 	}
 
 	/**
@@ -418,5 +401,4 @@ class IssueGalleyDAO extends DAO {
 		return $this->_getInsertId('issue_galleys', 'galley_id');
 	}
 }
-
 

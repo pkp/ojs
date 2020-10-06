@@ -257,14 +257,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 */
 	function deleteById($subscriptionId, $journalId = null) {
-		$params = array((int) $subscriptionId);
+		$params = [(int) $subscriptionId];
 		if ($journalId) $params[] = (int) $journalId;
-		$this->update(
-			'DELETE FROM subscriptions
-			WHERE	subscription_id = ?'
-			.($journalId ? ' AND journal_id = ?' : ''),
-			$params
-		);
+		$this->update('DELETE FROM subscriptions WHERE subscription_id = ?' .($journalId ? ' AND journal_id = ?' : ''), $params);
 	}
 
 	/**
@@ -273,27 +268,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteByJournalId($journalId) {
-		$result = $this->retrieve(
-			'SELECT s.subscription_id
-			FROM
-			subscriptions s
-			WHERE s.journal_id = ?',
-			(int) $journalId
-		);
+		$result = $this->retrieve('SELECT subscription_id FROM subscriptions WHERE journal_id = ?', [(int) $journalId]);
 
 		$returner = true;
-		if ($result->RecordCount() != 0) {
-			while (!$result->EOF) {
-				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteById($subscriptionId);
-				if (!$returner) {
-					break;
-				}
-				$result->MoveNext();
-			}
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$returner = $this->deleteById($row['subscription_id']);
+			if (!$returner) break;
 		}
-
-		$result->Close();
 		return $returner;
 	}
 
@@ -303,27 +285,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteByUserId($userId) {
-		$result = $this->retrieve(
-			'SELECT s.subscription_id
-			FROM
-			subscriptions s
-			WHERE s.user_id = ?',
-			(int) $userId
-		);
+		$result = $this->retrieve('SELECT subscription_id FROM subscriptions WHERE user_id = ?', [(int) $userId]);
 
 		$returner = true;
-		if ($result->RecordCount() != 0) {
-			while (!$result->EOF) {
-				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteById($subscriptionId);
-				if (!$returner) {
-					break;
-				}
-				$result->MoveNext();
-			}
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$returner = $this->deleteById($row['subscription_id']);
+			if (!$returner) break;
 		}
-
-		$result->Close();
 		return $returner;
 	}
 
@@ -334,31 +303,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteByUserIdForJournal($userId, $journalId) {
-		$result = $this->retrieve(
-			'SELECT s.subscription_id
-			FROM
-			subscriptions s
-			WHERE s.user_id = ?
-			AND s.journal_id = ?',
-			array (
-				(int) $userId,
-				(int) $journalId
-			)
-		);
+		$result = $this->retrieve('SELECT subscription_id FROM subscriptions WHERE user_id = ? AND journal_id = ?', [(int) $userId, (int) $journalId]);
 
 		$returner = true;
-		if ($result->RecordCount() != 0) {
-			while (!$result->EOF) {
-				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteById($subscriptionId);
-				if (!$returner) {
-					break;
-				}
-				$result->MoveNext();
-			}
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$returner = $this->deleteById($row['subscription_id']);
+			if (!$returner) break;
 		}
-
-		$result->Close();
 		return $returner;
 	}
 
@@ -368,27 +320,15 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function deleteByTypeId($subscriptionTypeId) {
-		$result = $this->retrieve(
-			'SELECT s.subscription_id
-			FROM
-			subscriptions s
-			WHERE s.type_id = ?',
-			(int) $subscriptionTypeId
-		);
+		$result = $this->retrieve('SELECT subscription_id FROM subscriptions WHERE type_id = ?', [(int) $subscriptionTypeId]);
 
 		$returner = true;
-		if ($result->RecordCount() != 0) {
-			while (!$result->EOF) {
-				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteById($subscriptionId);
-				if (!$returner) {
-					break;
-				}
-				$result->MoveNext();
-			}
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$returner = $this->deleteById($row['subscription_id']);
+			if (!$returner) break;
 		}
 
-		$result->Close();
 		return $returner;
 	}
 
