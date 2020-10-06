@@ -1,2 +1,169 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-10-06 12:07+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/author/sk_SK/"
+">\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Reorganizujte autorov tak, aby boli zobrazení v rovnakom poradí, v akom majú "
+"byť uvedení v publikácii."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Vyhlásenie o súkromí pre tento časopis"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Zvoľte si, prosím, jazyk príspevku."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Prosím, vyberte vhodnú sekciu časopisu pre tento príspevok."
+
+msgid "author.submit.comments"
+msgstr "Vložte text (nepovinné)"
+
+msgid "submission.submit.coverNote"
+msgstr "Komentár pre editora"
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"Autori súhlasia s podmienkami uvedenými v Oznámenie o copyrighte, ktoré budú "
+"aplikované na tento príspevok, akonáhle bude publikovaný týmto časopisom ("
+"nižšie je možné pridať komentár pre editora)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Než budete pokračovať, musíte súhlasiť s podmienkami uvedenými v Oznámenie o "
+"copyrighte."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Pred pokračovaním musíte zaistiť splnenie všetkých položiek zaškrtávacieho "
+"zoznamu."
+
+msgid "author.submit.journalSectionDescription"
+msgstr ""
+"Zvoľte vhodnú sekciu pre tento príspevok (pozri Sekcia a pravidlá v časti<a "
+"href=\"{$aboutUrl}\" target=\"_new\">O časopise</a>)."
+
+msgid "author.submit.journalSection"
+msgstr "Sekcia časopisu"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Žiadne príspevky."
+
+msgid "author.submissions.viewStatus"
+msgstr "Zobraziť stav"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Ste si istý, že chcete zmazať tento nedokončený príspevok?"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Korektúrne opravy"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Nahrať redigovania verziu"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Redakčné úpravy: Vyžiadaná korektúra"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Redakčná úprava: Vyžiadanie redigovania"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "V recenznom konaní: Vyžaduje prepracovanie"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "V recenznom kole {$round}"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Ak žiadate o odpustenie platby, musíte do príslušného miesta uviesť dôvod."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Použite, prosím, nižšie umiestnené pole pre komentár a uveďte, prečo by Vám "
+"mal byť poplatok odpustený."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr ""
+"Zvážte, prosím, odpustenie platby poplatku za zaslanie príspevku pre tento "
+"článok"
+
+msgid "author.submit.requestWaiver"
+msgstr "Požiadať o odpustenie"
+
+msgid "author.submit.notAccepting"
+msgstr "Tento časopis aktuálne neprijíma príspevky."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Odoslanie tohto príspevku môžete dokončiť neskôr tým, že na domácej stránke "
+"pre autora vyberiete Aktívne príspevky."
+
+msgid "author.submit.nextSteps"
+msgstr "Ďalšie kroky"
+
+msgid "author.submit.confirmation"
+msgstr "Potvrdenie"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Nahrať doplnkové súbory"
+
+msgid "author.submit.metadata"
+msgstr "Vložiť metadata"
+
+msgid "author.submit.upload"
+msgstr "Nahrať príspevok"
+
+msgid "author.submit.start"
+msgstr "Začatie"
+
+msgid "author.submit.step5"
+msgstr "Krok 5. Potvrdenie príspevku"
+
+msgid "author.submit.step4a"
+msgstr "Krok 4a. Pridať doplnkový súbor"
+
+msgid "author.submit.step4"
+msgstr "Krok 4. Nahranie doplnkových súborov"
+
+msgid "author.submit.step3"
+msgstr "Krok 3. Vloženie metadát príspevku"
+
+msgid "author.submit.step2"
+msgstr "Krok 2. Nahranie príspevku"
+
+msgid "author.submit.step1"
+msgstr "Krok 1. Začatie príspevku"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"Pre prechod k prvému z piatich krokov odosielania príspevku <a href=\""
+"{$submitUrl}\" class=\"action\">kliknite sem</a>."
+
+msgid "author.submit.startHereTitle"
+msgstr "Začať nový príspevok"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Päť krokov pre odoslanie príspevku"
+
+msgid "author.submit.submitArticle"
+msgstr "Odoslať článok"
+
+msgid "author.competingInterests"
+msgstr ""
+"Konflikt záujmov <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Pravidlá upravujúce konflikt záujmov</a>"
+
+msgid "author.track"
+msgstr "Aktívne príspevky"
+
+msgid "author.submit"
+msgstr "Nový príspevok"
