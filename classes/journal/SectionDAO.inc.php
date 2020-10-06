@@ -303,26 +303,22 @@ class SectionDAO extends PKPSectionDAO {
 	 * @return array editorId => array(sections they edit)
 	 */
 	function getEditorSections($journalId) {
-		$returner = array();
 
 		$result = $this->retrieve(
 			'SELECT s.*, se.user_id AS editor_id FROM subeditor_submission_group ssg, sections s WHERE ssg.assoc_id = s.section_id AND ssg.assoc_type = ? AND s.journal_id = ssg.context_id AND s.journal_id = ?',
-			(int) ASSOC_TYPE_SECTION,
-			(int) $journalId
+			[(int) ASSOC_TYPE_SECTION, (int) $journalId]
 		);
 
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
+		$returner = [];
+		foreach ($result as $row) {
+			$row = (array) $row;
 			$section = $this->_fromRow($row);
 			if (!isset($returner[$row['editor_id']])) {
-				$returner[$row['editor_id']] = array($section);
+				$returner[$row['editor_id']] = [$section];
 			} else {
 				$returner[$row['editor_id']][] = $section;
 			}
-			$result->MoveNext();
 		}
-
-		$result->Close();
 		return $returner;
 	}
 
@@ -404,7 +400,7 @@ class SectionDAO extends PKPSectionDAO {
 	function getAll($rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM sections ORDER BY journal_id, seq',
-			false, $rangeInfo
+			[], $rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -417,16 +413,15 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	function getEmptyByJournalId($journalId) {
 		$result = $this->retrieve(
-			'SELECT s.section_id FROM sections s LEFT JOIN submissions a ON (a.section_id = s.section_id) WHERE a.section_id IS NULL AND s.journal_id = ?',
-			(int) $journalId
+			'SELECT s.section_id AS section_id FROM sections s LEFT JOIN submissions a ON (a.section_id = s.section_id) WHERE a.section_id IS NULL AND s.journal_id = ?',
+			[(int) $journalId]
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$returner[] = $result->fields[0];
-			$result->MoveNext();
+		$returner = [];
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$returner[] = $row['section_id'];
 		}
-		$result->Close();
 		return $returner;
 	}
 
@@ -452,24 +447,13 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $journalId int Journal ID
 	 */
 	function resequenceSections($journalId) {
-		$result = $this->retrieve(
-			'SELECT section_id FROM sections WHERE journal_id = ? ORDER BY seq',
-			(int) $journalId
-		);
+		$result = $this->retrieve('SELECT section_id FROM sections WHERE journal_id = ? ORDER BY seq', [(int) $journalId]);
 
-		for ($i=1; !$result->EOF; $i++) {
+		for ($i=1; $row = (array) $result->current(); $i++) {
 			list($sectionId) = $result->fields;
-			$this->update(
-				'UPDATE sections SET seq = ? WHERE section_id = ?',
-				array(
-					$i,
-					$sectionId
-				)
-			);
-
-			$result->MoveNext();
+			$this->update('UPDATE sections SET seq = ? WHERE section_id = ?', [$i, $row['section_id']]);
+			$result->next();
 		}
-		$result->Close();
 	}
 
 	/**
@@ -516,21 +500,13 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $issueId int
 	 */
 	function resequenceCustomSectionOrders($issueId) {
-		$result = $this->retrieve(
-			'SELECT section_id FROM custom_section_orders WHERE issue_id = ? ORDER BY seq',
-			(int) $issueId
-		);
+		$result = $this->retrieve('SELECT section_id FROM custom_section_orders WHERE issue_id = ? ORDER BY seq', [(int) $issueId]);
 
-		for ($i=1; !$result->EOF; $i++) {
+		for ($i=1; $row = (array) $result->current(); $i++) {
 			list($sectionId) = $result->fields;
-			$this->update(
-				'UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?',
-				array($i, $sectionId, (int) $issueId)
-			);
-
-			$result->MoveNext();
+			$this->update('UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?', [$i, $row['section_id'], (int) $issueId]);
+			$result->next();
 		}
-		$result->Close();
 	}
 
 	/**
@@ -539,33 +515,24 @@ class SectionDAO extends PKPSectionDAO {
 	 * @return boolean
 	 */
 	function customSectionOrderingExists($issueId) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM custom_section_orders WHERE issue_id = ?',
-			(int) $issueId
-		);
-		$returner = isset($result->fields[0]) && $result->fields[0] == 0 ? false : true;
-		$result->Close();
-		return $returner;
+		$result = $this->retrieve('SELECT COUNT(*) AS row_count FROM custom_section_orders WHERE issue_id = ?', [(int) $issueId]);
+		$row = (array) $result->current();
+		return $row && $row['row_count'] != 0;
 	}
 
 	/**
 	 * Get the custom section order of a section.
 	 * @param $issueId int
 	 * @param $sectionId int
-	 * @return int
+	 * @return int?
 	 */
 	function getCustomSectionOrder($issueId, $sectionId) {
 		$result = $this->retrieve(
 			'SELECT seq FROM custom_section_orders WHERE issue_id = ? AND section_id = ?',
-			array((int) $issueId, (int) $sectionId)
+			[(int) $issueId, (int) $sectionId]
 		);
-
-		$returner = null;
-		if (!$result->EOF) {
-			list($returner) = $result->fields;
-		}
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row?$row['seq']:null;
 	}
 
 	/**

@@ -91,21 +91,17 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			3600 * $cacheHours // Cache for 24 hours
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$row = $result->getRowAssoc(false);
+		$returner = [];
+		foreach ($result as $row) {
+			$row = (array) $row;
 			$returner[$row['submission_id']] = array(
 				'count' => $row['count'],
 				'journal_id' => $row['journal_id'],
 				'issuePublicationDate' => $this->datetimeFromDB($row['i_pub']),
 				'publicationDate' => $this->datetimeFromDB($row['s_pub'])
 			);
-			$result->MoveNext();
 		}
-		$result->Close();
-
 		return $returner;
 	}
 }
-
 

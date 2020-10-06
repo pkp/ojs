@@ -53,7 +53,7 @@ class SubscriptionTypeDAO extends DAO {
 	/**
 	 * Retrieve subscription type name by ID.
 	 * @param $typeId int
-	 * @return string
+	 * @return string?
 	 */
 	function getSubscriptionTypeName($typeId) {
 		$result = $this->retrieve(
@@ -63,11 +63,8 @@ class SubscriptionTypeDAO extends DAO {
 				(int) $typeId, 'name', AppLocale::getPrimaryLocale()
 			)
 		);
-
-		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
-
-		$result->Close();
-		return $returner;
+		$row = (array) $result->current();
+		return $row?$row['subscription_type_name']:null;
 	}
 
 	/**
@@ -273,16 +270,13 @@ class SubscriptionTypeDAO extends DAO {
 			'SELECT type_id
 			 FROM   subscription_types
 			 WHERE  journal_id = ?',
-			 (int) $journalId
+			 [(int) $journalId]
 		);
-		if ($result->RecordCount() != 0) {
-			while (!$result->EOF && $returner) {
-				$typeId = $result->fields[0];
-				$returner = $this->deleteSubscriptionTypeById($typeId);
-				$result->MoveNext();
-			}
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$typeId = $row['type_id'];
+			$this->deleteSubscriptionTypeById($typeId);
 		}
-		$result->Close();
 	}
 
 	/**
@@ -291,11 +285,7 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return object DAOResultFactory containing matching SubscriptionTypes
 	 */
 	function getByJournalId($journalId, $rangeInfo = null) {
-		$result = $this->retrieveRange(
-			'SELECT * FROM subscription_types WHERE journal_id = ? ORDER BY seq',
-			(int) $journalId, $rangeInfo
-		);
-
+		$result = $this->retrieveRange('SELECT * FROM subscription_types WHERE journal_id = ? ORDER BY seq', [(int) $journalId], $rangeInfo);
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
@@ -354,25 +344,13 @@ class SubscriptionTypeDAO extends DAO {
 	 * Sequentially renumber subscription types in their sequence order.
 	 */
 	function resequenceSubscriptionTypes($journalId) {
-		$result = $this->retrieve(
-			'SELECT type_id FROM subscription_types WHERE journal_id = ? ORDER BY seq',
-			(int) $journalId
-		);
+		$result = $this->retrieve('SELECT type_id FROM subscription_types WHERE journal_id = ? ORDER BY seq', [(int) $journalId]);
 
-		for ($i=1; !$result->EOF; $i++) {
+		for ($i=1; $row = (array) $result->current(); $i++) {
 			list($subscriptionTypeId) = $result->fields;
-			$this->update(
-				'UPDATE subscription_types SET seq = ? WHERE type_id = ?',
-				array(
-					(int) $i,
-					(int) $subscriptionTypeId
-				)
-			);
-
-			$result->MoveNext();
+			$this->update('UPDATE subscription_types SET seq = ? WHERE type_id = ?', [(int) $i, [(int) $row['subscription_type_id']]);
+			$result->next();
 		}
-
-		$result->Close();
 	}
 }
 

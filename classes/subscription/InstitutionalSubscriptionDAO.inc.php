@@ -324,22 +324,11 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 */
 	function deleteByJournalId($journalId) {
-		$result = $this->retrieve(
-			'SELECT	s.subscription_id
-			FROM	subscriptions s
-			WHERE	s.journal_id = ?',
-			(int) $journalId
-		);
-
-		if ($result->RecordCount() != 0) {
-			while (!$result->EOF) {
-				$subscriptionId = $result->fields[0];
-				$this->deleteById($subscriptionId);
-				$result->MoveNext();
-			}
+		$result = $this->retrieve('SELECT s.subscription_id AS subscription_id FROM subscriptions s WHERE s.journal_id = ?', [(int) $journalId]);
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$this->deleteById($row['subscription_id']);
 		}
-
-		$result->Close();
 	}
 
 	/**
@@ -347,16 +336,11 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $userId int
 	 */
 	function deleteByUserId($userId) {
-		$result = $this->retrieve('SELECT s.subscription_id FROM subscriptions s WHERE s.user_id = ?', (int) $userId);
-		if ($result->RecordCount() != 0) {
-			while (!$result->EOF) {
-				$subscriptionId = $result->fields[0];
-				$this->deleteById($subscriptionId);
-				$result->MoveNext();
-			}
+		$result = $this->retrieve('SELECT s.subscription_id AS subscription_id FROM subscriptions s WHERE s.user_id = ?', [(int) $userId]);
+		foreach ($result a $row) {
+			$row = (array) $row;
+			$this->deleteById($row['subscription_id']);
 		}
-
-		$result->Close();
 	}
 
 	/**
@@ -365,20 +349,11 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int Journal ID
 	 */
 	function deleteByUserIdForJournal($userId, $journalId) {
-		$result = $this->retrieve(
-			'SELECT s.subscription_id FROM subscriptions s WHERE s.user_id = ? AND s.journal_id = ?',
-			array((int) $userId, (int) $journalId)
-		);
-
-		if ($result->RecordCount() != 0) {
-			while (!$result->EOF) {
-				$subscriptionId = $result->fields[0];
-				$this->deleteById($subscriptionId);
-				$result->MoveNext();
-			}
+		$result = $this->retrieve('SELECT s.subscription_id AS subscription_id FROM subscriptions s WHERE s.user_id = ? AND s.journal_id = ?', [(int) $userId, (int) $journalId]);
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$this->deleteById($row['subscription_id']);
 		}
-
-		$result->Close();
 	}
 
 	/**
@@ -386,17 +361,11 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $subscriptionTypeId int Subscription type ID
 	 */
 	function deleteByTypeId($subscriptionTypeId) {
-		$result = $this->retrieve('SELECT s.subscription_id FROM subscriptions s WHERE s.type_id = ?', (int) $subscriptionTypeId);
-
-		if ($result->RecordCount() != 0) {
-			while (!$result->EOF) {
-				$subscriptionId = $result->fields[0];
-				$this->deleteById($subscriptionId);
-				$result->MoveNext();
-			}
+		$result = $this->retrieve('SELECT s.subscription_id AS subscription_id FROM subscriptions s WHERE s.type_id = ?', [(int) $subscriptionTypeId]);
+		foreach ($result as $row) {
+			$row = (array) $row;
+			$this->deleteById($row['subscription_id']);
 		}
-
-		$result->Close();
 	}
 
 	/**
@@ -411,7 +380,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
 			WHERE	st.institutional = 1
 			ORDER BY iss.institution_name ASC, s.subscription_id',
-			false,
+			[],
 			$rangeInfo
 		);
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -676,15 +645,12 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			(int) $institutionalSubscription->getId()
 		);
 
-		$ipRanges = array();
-		while (!$ipResult->EOF) {
-			$ipRow = $ipResult->GetRowAssoc(false);
+		$ipRanges = [];
+		foreach ($ipResult as $row) {
+			$row = (array) $row;
 			$ipRanges[] = $ipRow['ip_string'];
-			$ipResult->MoveNext();
 		}
-
 		$institutionalSubscription->setIPRanges($ipRanges);
-		$ipResult->Close();
 
 		HookRegistry::call('InstitutionalSubscriptionDAO::_fromRow', array(&$institutionalSubscription, &$row));
 

@@ -175,15 +175,14 @@ class OJSCompletedPaymentDAO extends DAO {
 	function getByContextId($contextId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM completed_payments WHERE context_id = ? ORDER BY timestamp DESC',
-			(int) $contextId,
+			[(int) $contextId],
 			$rangeInfo
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$payment = $this->_fromRow($result->fields);
+		$returner = [];
+		foreach ($result as $row) {
+			$payment = $this->_fromRow((array) $row);
 			$returner[$payment->getId()] = $payment;
-			$result->MoveNext();
 		}
 		return $returner;
 	}
