@@ -1,2 +1,44 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-10-08 06:26+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"Text má jednoduché riadkovanie; písmo má veľkosť 12; je použitá skôr kurzíva "
+"a nie podčiarknutie (okrem url adries); všetky ilustrácie tabuľky a obrázky "
+"sú umiestnené skôr v texte, ako na konci."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "URL odkazy na referencie sú uvedené všade, kde to bolo možné."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"Súbor príspevku je vo formáte OpenOffice, Microsoft Word, RTF alebo "
+"WordPerfect."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"Príspevok nebol doteraz publikovaný ani nie je v súčasnosti zaslaný do iného "
+"časopisu na posúdenie (alebo bolo podané vysvetlenie v komentároch pre "
+"editora)."
+
+msgid "default.genres.article"
+msgstr "Text článku"
+
+msgid "section.default.policy"
+msgstr "Predvolené pravidlá sekcie"
+
+msgid "section.default.abbrev"
+msgstr "ČL"
+
+msgid "section.default.title"
+msgstr "Články"
