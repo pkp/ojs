@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-08 08:47+0000\n"
+"PO-Revision-Date: 2020-10-08 12:47+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "sk_SK/>\n"
@@ -176,3 +176,68 @@ msgid "plugins.pubIds.urn.manager.settings.explainURNs"
 msgstr ""
 "Zvoľte, prosím, objekty k publikovaniu, ktoré budú mať priradené Uniform "
 "Resource Names (URN):"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Položka"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Sadzobnica: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "K tejto publikácii nebolo priradené URN."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN pre túto publikácia bude {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN musí začínať {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Nedá sa vygenerovať URN, pretože v jednej alebo viac častiach vzoru URN "
+"chýbajú dáta. Pravdepodobne budete musieť publikácii priradiť číslo, "
+"nastaviť ID vydavateľa alebo zadať čísla stránok."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr "Kým nebude táto publikácia priradená k číslu, nemôžete vygenerovať URN."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Priradiť"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN musí začínať {$prefix}."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Kontrolné číslo chýba."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} bolo priradené."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$pubId} nie je možné priradiť, pretože obsahuje neplatný vzor."
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN nemôže byť pridelené, pretože vlastný suffix je prázdny."
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Priradiť URN {$pubId} tomuto {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Pridať kontrolné číslo"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Použite nasledujúcu možnosť k vymazaniu URN všetkých objektov (článkov a "
+"sadzobníc), ktoré sú aktuálne naplánované pre toto číslo."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Ste si istý, že chcete vymazať existujúce URN objekty čísla?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Vymazať URN objektov čísla"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Ste si istý, že chcete zmazať existujúcu URN?"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Zmazať URN"
