@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-08 08:47+0000\n"
+"PO-Revision-Date: 2020-10-08 09:29+0000\n"
 "Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "sk_SK/>\n"
@@ -92,3 +92,99 @@ msgstr ""
 "Text odpovedá štylistickým a bibliografickým požiadavkám uvedených v <a href="
 "\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\""
 "_new\">Pokynoch pre autorov</a>, ktoré sa nachádzajú na stránke O časopisu."
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>"
+"\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Rec"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Recenzenti"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Recenzent"
+
+msgid "default.genres.sourceTexts"
+msgstr "Zdrojové texty"
+
+msgid "default.genres.dataSet"
+msgstr "Súbor dát"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Analýza dát"
+
+msgid "default.genres.transcripts"
+msgstr "Prepisy"
+
+msgid "default.genres.researchResults"
+msgstr "Výsledky výskumu"
+
+msgid "default.genres.researchMaterials"
+msgstr "Výskumné materiály"
+
+msgid "default.genres.researchInstrument"
+msgstr "Výskumný nástroj"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "ManPred"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Manažéri predplatného"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Manažér predplatného"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SEd"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editori sekcie"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor sekcie"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "HEd"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Hosťujúci editori"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Hosťujúci editor"
+
+msgid "default.groups.abbrev.editor"
+msgstr "Ed"
+
+msgid "default.groups.plural.editor"
+msgstr "Editori časopisu"
+
+msgid "default.groups.name.editor"
+msgstr "Editor časopisu"
+
+msgid "default.groups.abbrev.manager"
+msgstr "Man"
+
+msgid "default.groups.plural.manager"
+msgstr "Manažéri časopisu"
+
+msgid "default.groups.name.manager"
+msgstr "Manažér časopisu"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Tento časopis využíva systém CLOCKSS na vytvorenie distribuovaného systému "
+"archivácie medzi zúčastnenými knižnicami a umožňuje knižniciam vytvárať "
+"trvalé archívy časopisu na účely uchovania a obnovy. <a href=\""
+"http://clockss.org/\"> Viac ... </a>"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Tento časopis využíva systém LOCKSS pre vytvorenie distribuovaného "
+"archivačného systému medzi zúčastnenými knižnicami a dovoľuje týmto "
+"knižniciam vytvárať trvalé archívy časopisu na účely jeho uchovania a "
+"obnovenia.<a href=\"http://lockss.org/\">Viac...</a>"
