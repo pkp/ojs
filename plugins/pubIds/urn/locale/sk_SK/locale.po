@@ -1,2 +1,31 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-10-08 07:31+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Zvoľte, prosím objekty, ktoré majú mať priradené URN."
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Obsah časopisu"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"Nakonfigurujte, prosím URN plugin, aby bolo možné spravovať a používať URN v "
+"rámci OJS:"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"Tento plugin umožňuje priradenie jednotných názvov zdrojov (Uniform Resource "
+"Names) k číslam, článkom a sadzobniciam, v OJS."
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
