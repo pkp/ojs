@@ -1067,13 +1067,13 @@ class Upgrade extends Installer {
 				[(int) $row['file_id'], 2531, 531, (int) $row['setting_value']]
 			);
 		}
-		# update temprorary 2531 values to 531 values
+		// update temprorary 2531 values to 531 values
 		$metricsDao->update('UPDATE metrics_supp SET assoc_type = ? WHERE assoc_type = ?', [531, 2531]);
-		# delete all existing 531 values from the actual metrics table
+		// delete all existing 531 values from the actual metrics table
 		$metricsDao->update('DELETE FROM metrics WHERE assoc_type = 531');
-		# copy updated 531 values from metrics_supp to metrics table
+		// copy updated 531 values from metrics_supp to metrics table
 		$metricsDao->update('INSERT INTO metrics SELECT * FROM metrics_supp');
-		# Drop metrics_supp table
+		// Drop metrics_supp table
 		$metricsDao->update('DROP TABLE metrics_supp');
 		return true;
 	}
