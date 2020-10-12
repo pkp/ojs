@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-08 16:28+0000\n"
+"PO-Revision-Date: 2020-10-12 11:16+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
 "sk_SK/>\n"
@@ -160,3 +160,69 @@ msgstr ""
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Položka"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Sadzobnica: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Do tejto publikácie nebol priradený DOI."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "DOI pre túto publikáciu bude {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI musí začínať {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "DOI  {$pubId} bolo priradené."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} sa nedá priradiť, pretože obsahuje neplatný vzor."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "DOI nemôže byť pridelené, pretože vlastný suffix je prázdny."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Priradiť {$pubId} tomuto {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Použite následujúcu možnosť k vymazaniu DOI všetkých objektov (článkov a "
+"sadzobníc), ktoré sú aktuálne naplánované pre toto číslo."
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Ste si istý, že chcete vymazať existujúcu DOI objektov čísla?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Vymazať DOI objektov čísla"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Ste si istý, že chcete zmazať existujúcu DOI?"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Vymazať DOI"
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Uvedený suffix DOI sa už používa pre ďalšiu publikovanú položku. Pre každú "
+"položku zadejte jedinečný suffix DOI."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "Tomuto {$pubObjectType} bolo pridelené DOI."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr ""
+"To, čo vidíte, je náhľad DOI. Vyberte zaškrtávacie políčko a uložte formulár "
+"pre priradenie DOI."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "DOI nemôže byť pridelené, pretože obsahuje neplatný vzorec."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Nedá sa vygenerovať DOI, pretože v jednej alebo viac častiach DOI vzoru "
+"chýbajú dáta. Možno budete musieť publikácii priradiť problém, nastaviť ID "
+"vydavateľa alebo zadať čísla stránok."
