@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-13 09:17+0000\n"
+"PO-Revision-Date: 2020-10-13 22:03+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -114,3 +114,142 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "Prístup"
+
+msgid "manager.people.allUsers"
+msgstr "Všetci zapísaní užívatelia"
+
+msgid "manager.people.showNoRole"
+msgstr "Zobraziť používateľov bez žiadnej role"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Zapísať užívateľa z týchto stránok do tohto časopisu"
+
+msgid "manager.people.allJournals"
+msgstr "Všetky časopisy"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Užívatelia zapísaní do tohto časopisu"
+
+msgid "manager.payment.userName"
+msgstr "ID platby"
+
+msgid "manager.paymentTypes"
+msgstr "Typy platby"
+
+msgid "manager.payment.records"
+msgstr "Záznamy"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Vybrané možnosti spolu s ich popisom a poplatky (možno editovať nižšie) sa "
+"objaví v časti O časopise pod Pravidlami a ďalej na miestach, kde je platba "
+"vyžadovaná."
+
+msgid "manager.payment.readerFees"
+msgstr "Poplatky čitateľov"
+
+msgid "manager.payment.paymentType"
+msgstr "Typ platby"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Spôsoby platby poplatku"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Z tejto obrazovky môžete konfigurovať všetky následujúce pluginy pre spôsob "
+"platby."
+
+msgid "manager.payment.paymentMethod"
+msgstr "Spôsob platby"
+
+msgid "manager.payment.paymentId"
+msgstr "ID platby"
+
+msgid "manager.payment.options.text"
+msgstr "Popis metódy platby"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Zakúpiť prístup k číslu"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Kúpiť článok"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Pulikovanie článku"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Iba obmedziť prístup k PDF verziám čísel a článkov"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Členstvo v asociácii"
+
+msgid "manager.payment.options.feeName"
+msgstr "Názov poplatku"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Popis poplatku"
+
+msgid "manager.payment.options.fee"
+msgstr "Poplatok"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Kliknite sem pre povolenie modulu platieb. Musíte nakonfigurovať nastavenia "
+"platieb vyplnením nižšie uvedeného formulára. Používatelia sa budú musieť "
+"prihlásiť, aby mohli vykonať platby."
+
+msgid "manager.payment.success"
+msgstr "Nastavenie platieb bolo aktualizované."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Ste si istý, že chcete zmazať toto predplatné?"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Toto aktivuje platby predplatného; typy, ceny, trvanie a predplatitelia sú "
+"spravovaní manažérom predplatného."
+
+msgid "manager.payment.options"
+msgstr "Možnosti"
+
+msgid "manager.payment.notFound"
+msgstr "Nenájdené"
+
+msgid "manager.payment.noPayments"
+msgstr "Žiadne platby"
+
+msgid "manager.payment.generalOptions"
+msgstr "Všeobecné možnosti"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"Členstvo v asociácii sa objaví v časti O časopise pod Pravidlami a odkaz pre "
+"dary se objaví nad funkciou pre vyhľadávanie v rámci napravo."
+
+msgid "manager.payment.generalFees"
+msgstr "Obecné poplatky"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Všetky čiastky musia mať kladné číselné hodnoty (desatinné miesta sú "
+"povolené)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Možnosti platby poplatkov"
+
+msgid "manager.payment.enable"
+msgstr "Povoliť"
+
+msgid "manager.payment.editSubscription"
+msgstr "Upraviť predplatné"
+
+msgid "manager.payment.details"
+msgstr "Detaily"
+
+msgid "manager.payment.description"
+msgstr "Popis"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS nevykonáva žiadne menové prevody. Ak prijímate platbu za predplatné, "
+"musíte zaistiť, že mena predplatného zodpovedá mene tu špecifikovanej."
