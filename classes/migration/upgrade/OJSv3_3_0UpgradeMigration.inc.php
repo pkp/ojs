@@ -135,15 +135,11 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 			return true;
 		});
 
-		// Build raw where query
-		$whereRaw = '';
-		$lastKey = array_key_last($searchBy);
+		$queryBuilder = Capsule::table($tableName)->where($id, $row->{$id});
 		foreach ($searchBy as $key => $column) {
-			$whereRaw .= $column . " = '" . $row->{$column} . "'";
-			if ($key !== $lastKey) $whereRaw .= ' AND ';
+			$queryBuilder = $queryBuilder->where($column, $row->{$column});
 		}
-
-		Capsule::table($tableName)->where($id, $row->{$id})->whereRaw($whereRaw)->update([$valueToConvert => $newValue]);
+		$queryBuilder->update([$valueToConvert => $newValue]);
 	}
 
 	/**
