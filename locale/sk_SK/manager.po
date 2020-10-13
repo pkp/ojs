@@ -1,2 +1,116 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-10-13 09:17+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Vybrané možnosti spolu s ich popisom a poplatkom (dá sa editovať nižšie) sa "
+"objaví v Kroku 1 pri odosielaní príspevku a v časti O časopise pod "
+"Príspevkami a ďalej na miestach, kde je platba vyžadovaná."
+
+msgid "manager.payment.authorFees"
+msgstr "Autorské poplatky"
+
+msgid "manager.payment.amount"
+msgstr "Čiastka"
+
+msgid "manager.payment.addPayment"
+msgstr "Pridať platbu"
+
+msgid "manager.payment.action"
+msgstr "Akcia"
+
+msgid "manager.managementPages"
+msgstr "Stránky pre správu"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Toto bude východzí jazyk pre stránky vášho časopisu."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Prepáčte, žiadne ďalšie jazyky niesú dostupné. Ak chcete s týmto časopisom "
+"používať ďalšie jazyky, kontaktujte svojho administrátora stránok."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS môže byť užívateľom sprístupnený v ktoromkoľvek z podporovaných jazykov. "
+"Rovnako tak môže OJS fungovať ako viacjazyčný systém, ktorý užívateľom "
+"umožňuje prepínať na každej stránke medzi jazyky a zadávať určité dáta v "
+"niekoľkých ďalších jazykoch. <br /><br />Ak niektorý jazyk podporovaný OJS "
+"nie je uvedený nižšie, požiadajte svojho administrátora stránok, aby z "
+"rozhrania administrátora požadovaný jazyk nainštaloval. Inštrukcie pre "
+"pridanie podpory nových jazykov nájdete v OJS dokumentácii."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Toto nahradí všetky nastavenia časopisu špecifické pre lokalizáciu, ktoré "
+"ste mal pre túto lokalizáciu"
+
+msgid "manager.language.forms"
+msgstr "Formuláre"
+
+msgid "manager.language.submissions"
+msgstr "Príspevky"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.journalManagement"
+msgstr "Správa časopisu"
+
+msgid "manager.files.note"
+msgstr ""
+"Poznámka: Prehliadač súborov je pokročilý nástroj, ktorý umožňuje zobrazenie "
+"a priamu manipuláciu so súborrmi a adresármi súvisiacimi s časopisom."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Ste si istý, že chcete resetovať všetky šablóny e-mailov v tomto časopise? "
+"Stratíte tak všetky prispôsobenia, které ste doteraz spravili."
+
+msgid "manager.website.archiving"
+msgstr "Archivácia"
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Podrobnosti o vydaní boli aktualizované."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Časopis bude vyžadovať pre prístup k niektorým častiam alebo k celému obsahu "
+"predplatného."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Časopis bude poskytovať otvorený prístup k svojmu obsahu."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS nebude používaný pre online publikovanie obsahu časopisu."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Režim vydania"
+
+msgid "manager.distribution.publication"
+msgstr "Vydanie"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Použite dátum zverejnenia článku"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Použite dátum vydania čísla"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Zvoľte, ako má byť vybraný východiskový dátum autorských práv článku. Táto "
+"východzia hodnota môže byť v niektorých prípadoch prepísaná. Ak „publikujete "
+"za behu“, nepoužívajte dátum vydania čísla."
+
+msgid "manager.distribution.access"
+msgstr "Prístup"
