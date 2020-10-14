@@ -437,7 +437,7 @@ class SectionDAO extends PKPSectionDAO {
 			[(int) $sectionId, (int) $journalId]
 		);
 		$row = $result->current();
-		return $row ? (boolean) $result->row_count : false;
+		return $row ? (boolean) $row->row_count : false;
 	}
 
 	/**
