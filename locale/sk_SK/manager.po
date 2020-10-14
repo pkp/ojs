@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-13 22:03+0000\n"
+"PO-Revision-Date: 2020-10-14 18:01+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -253,3 +253,115 @@ msgid "manager.payment.currencymessage"
 msgstr ""
 "OJS nevykonáva žiadne menové prevody. Ak prijímate platbu za predplatné, "
 "musíte zaistiť, že mena predplatného zodpovedá mene tu špecifikovanej."
+
+msgid "manager.sections.open"
+msgstr "Otvorené príspevky"
+
+msgid "manager.sections.noneCreated"
+msgstr "Neboli vytvorené žiadne sekcie."
+
+msgid "manager.sections.indexed"
+msgstr "Indexované"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Napríklad \"Recenzovaný článok\", \"Neposudzovaný článok\", \"Pozvaný "
+"komentár\", apod.)"
+
+#, fuzzy
+msgid "manager.sections.identifyType"
+msgstr "Na účely zberu metadát označte každú položku v tejto sekcii ako a(n)"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Vypustiť názov tejto sekcie z obsahu čísla."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Vypustiť mená autorov pre položky sekcie z obsahu čísla."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Je vyžadovaný názov pre túto sekciu."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Uistite sa prosím, že ste vybral platný formulár posudku."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Uistite sa, prosím, že je zaškrtnuté aspoň jedno políčko pre každú úlohu "
+"editora sekcie."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Je vyžadovaný skrátený názov pre túto sekciu"
+
+msgid "manager.sections.editors"
+msgstr "Editori sekcie"
+
+msgid "manager.sections.editorRestriction"
+msgstr "Položky môžu byť zaslané iba editormi a editormi sekcií."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Vyberte z dostupných editorov sekcií pre túto sekciu, aby boli sekčný "
+"editori automaticky zaradení. (Inak budete musieť sekčných editorov "
+"prideľovať neskôr manuálne). Ak je sekčný editor pridaný, môžete zvoliť, či "
+"bude automaticky priradený k riadeniu recenzného a / alebo editačného "
+"procesu (redigovania, rozloženia a korektúry), procesu príspevkov v tejto "
+"sekcii. Editori sekcií sú tvorení kliknutím na \"Editori sekcií\" v roliach "
+"správy časopisu."
+
+msgid "manager.sections.create"
+msgstr "Vytvoriť sekciu"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Než budete môcť zmazať túto sekciu, musíte presunúť všetky články z tejto "
+"sekcie do iných sekcií."
+
+msgid "manager.sections.confirmDelete"
+msgstr "Ste si istí, že chcete natrvalo vymazať túto sekciu?"
+
+msgid "manager.sections.assigned"
+msgstr "Editori tejto sekcie"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Zatiaľ nie sú žiadni sekčný editori. Pridajte najprv túto rolu minimálne "
+"jednému používateľovi pomocou Správa> Nastavenia> Používatelia a role."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Nepožadovať abstrakty"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Synchronizáciou zapísanie užívateľov zapíšete všetkých užívateľov zapísaných "
+"do určitej úlohy v určitom časopise do rovnakej úlohy aj v tomto časopise. "
+"Táto funkcia umožňuje, aby boli bežné sady používateľov (napr. Recenzent) "
+"synchronizované medzi časopismi."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} Zapísanie"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Vyberte používateľa, ku ktorému majú byť priradené autorstvo, editorské "
+"úlohy atď. predchádzajúceho užívateľa."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Vyberte používateľa, ktorý má byť zlúčený s iným užívateľským účtom (napr. "
+"ak niekto má dva používateľské kontá). Účet, ktorý bol vybraný ako prvý, "
+"bude zmazaný a všetky jeho príspevky, úlohy atď. budú priradené ku druhému "
+"účtu."
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "S časopisom"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Zapísať existujúceho používateľa"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Vyberte šablónu"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Odstrániť tohto používateľa z tohto časopisu? Táto akcia odpíše užívateľa zo "
+"všetkých jeho rolí v rámci tohto časopisu."
