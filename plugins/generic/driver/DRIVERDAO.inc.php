@@ -46,10 +46,11 @@ class DRIVERDAO extends OAIDAO {
 
 		$result = $this->_getRecordsRecordSet($setIds, $from, $until, null);
 
-		$total = $result->RecordCount();
-
-		for ($i=0; $i<$offset; $i++) $result->next(); // FIXME: This is inefficient
-		for ($count = 0; $count < $limit && $result->current(); $count++) {
+		$total = 0;
+		for ($i=0; $i<$offset; $i++) {
+			if ($result->next()) $total++; // FIXME: This is inefficient
+		}
+		for ($count = 0; $count < $limit && $result->current(); $count++ && $total++) {
 			$row = (array) $result->current();
 			$record = $this->_returnRecordFromRow($row);
 			if(in_array('driver', $record->sets)){

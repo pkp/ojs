@@ -433,13 +433,11 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	function sectionExists($sectionId, $journalId) {
 		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM sections WHERE section_id = ? AND journal_id = ?',
-			array((int) $sectionId, (int) $journalId)
+			'SELECT COUNT(*) AS row_count FROM sections WHERE section_id = ? AND journal_id = ?',
+			[(int) $sectionId, (int) $journalId]
 		);
-		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
-
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? (boolean) $result->row_count : false;
 	}
 
 	/**
@@ -450,7 +448,6 @@ class SectionDAO extends PKPSectionDAO {
 		$result = $this->retrieve('SELECT section_id FROM sections WHERE journal_id = ? ORDER BY seq', [(int) $journalId]);
 
 		for ($i=1; $row = (array) $result->current(); $i++) {
-			list($sectionId) = $result->fields;
 			$this->update('UPDATE sections SET seq = ? WHERE section_id = ?', [$i, $row['section_id']]);
 			$result->next();
 		}
@@ -503,7 +500,6 @@ class SectionDAO extends PKPSectionDAO {
 		$result = $this->retrieve('SELECT section_id FROM custom_section_orders WHERE issue_id = ? ORDER BY seq', [(int) $issueId]);
 
 		for ($i=1; $row = (array) $result->current(); $i++) {
-			list($sectionId) = $result->fields;
 			$this->update('UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?', [$i, $row['section_id'], (int) $issueId]);
 			$result->next();
 		}
