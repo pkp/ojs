@@ -30,7 +30,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return InstitutionalSubscription
 	 */
 	function getById($subscriptionId, $journalId = null) {
-		$params = array((int) $subscriptionId);
+		$params = [(int) $subscriptionId];
 		if ($journalId) $params[] = (int) $journalId;
 		$result = $this->retrieve(
 			'SELECT	s.*, iss.*
@@ -42,14 +42,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				' . ($journalId?' AND s.journal_id = ?':''),
 			$params
 		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? $this->_fromRow((array) $row) : null;
 	}
 
 	/**
@@ -65,7 +59,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
 			WHERE	st.institutional = 1
 				AND s.user_id = ?',
-			(int) $userId,
+			[(int) $userId],
 			$rangeInfo
 		);
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -87,10 +81,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			WHERE	st.institutional = 1
 				AND s.user_id = ?
 				AND s.journal_id = ?',
-			array(
-				(int) $userId,
-				(int) $journalId
-			),
+			[(int) $userId, (int) $journalId],
 			$rangeInfo
 		);
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -114,10 +105,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$exactMatch ? ' AND LOWER(iss.institution_name) = LOWER(?)'
 			: ' AND LOWER(iss.institution_name) LIKE LOWER(?)'
 			. ' AND s.journal_id = ?',
-			array(
-				$institutionName,
-				(int) $journalId
-			),
+			[$institutionName, (int) $journalId],
 			$rangeInfo
 		);
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -129,10 +117,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return int
 	 */
 	function getStatusCount($journalId, $status = null) {
-		$params = array((int) $journalId);
+		$params = [(int) $journalId];
 		if ($status !== null) $params[] = (int) $status;
 		$result = $this->retrieve(
-			'SELECT	COUNT(*)
+			'SELECT	COUNT(*) AS row_count
 			FROM	subscriptions s,
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 			WHERE	st.institutional = 1 AND
@@ -140,9 +128,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				' . ($status !== null?' AND s.status = ?':''),
 			$params
 		);
-		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? $row->row_count : 0;
 	}
 
 	/**
@@ -164,7 +151,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		$params = array((int) $subscriptionId);
 		if ($journalId) $params[] = (int) $journalId;
 		$result = $this->retrieve(
-			'SELECT	COUNT(*)
+			'SELECT	COUNT(*) AS row_count
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 			WHERE	st.institutional = 1
@@ -172,9 +159,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				' . ($journalId?' AND s.journal_id = ?':''),
 			$params
 		);
-		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? (boolean) $row->row_count : false;
 	}
 
 	/**
@@ -185,20 +171,16 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 */
 	function subscriptionExistsByUser($subscriptionId, $userId) {
 		$result = $this->retrieve(
-			'SELECT COUNT(*)
+			'SELECT COUNT(*) AS row_count
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 			WHERE	st.institutional = 1
 				AND s.subscription_id = ?
 				AND s.user_id = ?',
-			array(
-				(int) $subscriptionId,
-				(int) $userId
-			)
+			[(int) $subscriptionId, (int) $userId]
 		);
-		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? (boolean) $row->row_count : false;
 	}
 
 	/**
@@ -209,20 +191,16 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 */
 	function subscriptionExistsByUserForJournal($userId, $journalId) {
 		$result = $this->retrieve(
-			'SELECT	COUNT(*)
+			'SELECT	COUNT(*) AS row_count
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 			WHERE	st.institutional = 1
 				AND s.user_id = ?
 				AND s.journal_id = ?',
-			array(
-				(int) $userId,
-				(int) $journalId
-			)
+			[(int) $userId, (int) $journalId]
 		);
-		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? (boolean) $row->row_count : false;
 	}
 
 	/**
@@ -234,7 +212,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 */
 	function subscriptionExistsByInstitutionName($institutionName, $journalId, $exactMatch = true) {
 		$result = $this->retrieve(
-			'SELECT	COUNT(*)
+			'SELECT	COUNT(*) AS row_count
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
@@ -242,14 +220,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				$exactMatch ? ' AND LOWER(iss.institution_name) = LOWER(?)'
 				: ' AND LOWER(iss.institution_name) LIKE LOWER(?)'
 				. ' AND s.journal_id = ?',
-			array(
-				$institutionName,
-				(int) $journalId
-			)
+			[$institutionName, (int) $journalId]
 		);
-		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? (boolean) $row->row_count : false;
 	}
 
 	/**
@@ -267,12 +241,12 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				(subscription_id, institution_name, mailing_address, domain)
 				VALUES
 				(?, ?, ?, ?)',
-				array(
+				[
 					(int) $subscriptionId,
 					$institutionalSubscription->getInstitutionName(),
 					$institutionalSubscription->getInstitutionMailingAddress(),
 					$institutionalSubscription->getDomain()
-				)
+				]
 			);
 
 			$this->_insertSubscriptionIPRanges($subscriptionId, $institutionalSubscription->getIPRanges());
@@ -295,12 +269,12 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				mailing_address = ?,
 				domain = ?
 			WHERE	subscription_id = ?',
-			array(
+			[
 				$institutionalSubscription->getInstitutionName(),
 				$institutionalSubscription->getInstitutionMailingAddress(),
 				$institutionalSubscription->getDomain(),
 				(int) $institutionalSubscription->getId()
-			)
+			]
 		);
 
 		$this->_deleteSubscriptionIPRanges($institutionalSubscription->getId());
@@ -314,8 +288,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	function deleteById($subscriptionId, $journalId = null) {
 		if (!$this->subscriptionExists($subscriptionId, $journalId)) return;
 
-		$this->update('DELETE FROM subscriptions WHERE subscription_id = ?', (int) $subscriptionId);
-		$this->update('DELETE FROM institutional_subscriptions WHERE subscription_id = ?', (int) $subscriptionId);
+		$this->update('DELETE FROM subscriptions WHERE subscription_id = ?', [(int) $subscriptionId]);
+		$this->update('DELETE FROM institutional_subscriptions WHERE subscription_id = ?', [(int) $subscriptionId]);
 		$this->_deleteSubscriptionIPRanges($subscriptionId);
 	}
 
@@ -337,7 +311,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 */
 	function deleteByUserId($userId) {
 		$result = $this->retrieve('SELECT s.subscription_id AS subscription_id FROM subscriptions s WHERE s.user_id = ?', [(int) $userId]);
-		foreach ($result a $row) {
+		foreach ($result as $row) {
 			$row = (array) $row;
 			$this->deleteById($row['subscription_id']);
 		}
@@ -477,7 +451,6 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 */
 	function isValidInstitutionalSubscription($domain, $IP, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
 		if (empty($journalId) || (empty($domain) && empty($IP))) return false;
-		$returner = false;
 
 		$today = $this->dateToDB(Core::getCurrentDate());
 
@@ -513,22 +486,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
 					AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 					OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
-				array(
-					$domain,
-					$domain,
-					(int) $journalId
-				)
+				[$domain, $domain, (int) $journalId]
 			);
-
-			if ($result->RecordCount() != 0) {
-				$returner = $result->fields[0];
-			}
-
-			$result->Close();
-
-			if ($returner) {
-				return $returner;
-			}
+			$row = $result->current();
+			if ($row) return $row->subscription_id;
 		}
 
 		// Check for IP match
@@ -556,23 +517,13 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
 					AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 					OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))',
-				array (
-					$IP,
-					$IP,
-					(int) $journalId,
-					$IP,
-					(int) $journalId
-				)
+				[$IP, $IP, (int) $journalId, $IP, (int) $journalId]
 			);
-
-			if ($result->RecordCount() != 0) {
-				$returner = $result->fields[0];
-			}
-
-			$result->Close();
+			$row = $result->current();
+			if ($row) return $row->subscription_id;
 		}
 
-		return $returner;
+		return false;
 	}
 
 	/**

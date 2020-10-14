@@ -76,45 +76,46 @@ class GatewayHandler extends Handler {
 				$year = (int)$year;
 				$result = $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
-					array($journal->getId(), $year)
+					[$journal->getId(), $year]
 				);
-				if ($result->RecordCount() == 0) {
-					unset($year);
-				}
+				if (!$result->current()) unset($year);
 			}
 
 			if (!isset($year)) {
 				$result = $issueDao->retrieve(
-					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
-					$journal->getId()
+					'SELECT MAX(year) AS max_year FROM issues WHERE journal_id = ? AND published = 1',
+					[$journal->getId()]
 				);
-				list($year) = $result->fields;
+				$row = $result->current();
+				$year = $row?$row->max_year:null;
 				$templateMgr->assign('showInfo', true);
 			}
 
 			$prevYear = $nextYear = null;
 			if (isset($year)) {
 				$result = $issueDao->retrieve(
-					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
-					array($journal->getId(), $year)
+					'SELECT MAX(year) AS max_year FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
+					[$journal->getId(), $year]
 				);
-				list($prevYear) = $result->fields;
+				$row = $result->current();
+				$prevYear = $row?$row->max_year:null;
 
 				$result = $issueDao->retrieve(
-					'SELECT MIN(year) FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
-					array($journal->getId(), $year)
+					'SELECT MIN(year) AS min_year FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
+					[$journal->getId(), $year]
 				);
-				list($nextYear) = $result->fields;
+				$row = $result->current();
+				$nextYear = $row?$row->min_year:null;
 			}
 
 			$issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
-			$templateMgr->assign(array(
+			$templateMgr->assign([
 				'journal' => $journal,
 				'year' => $year,
 				'prevYear' => $prevYear,
 				'nextYear' => $nextYear,
 				'issues' => $issues,
-			));
+			]);
 
 			$locales = $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
@@ -158,49 +159,51 @@ class GatewayHandler extends Handler {
 				$year = (int)$year;
 				$result = $issueDao->retrieve(
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
-					array($journal->getId(), $year)
+					[$journal->getId(), $year]
 				);
-				if ($result->RecordCount() == 0) {
-					unset($year);
-				}
+				$row = $result->current();
+				if (!$row) unset($year);
 			}
 
 			if (!isset($year)) {
 				$result = $issueDao->retrieve(
-					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1',
-					$journal->getId()
+					'SELECT MAX(year) AS max_year FROM issues WHERE journal_id = ? AND published = 1',
+					[$journal->getId()]
 				);
-				list($year) = $result->fields;
+				$row = $result->current();
+				$year = $row?$row->max_year:null;
 				$issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
-				$templateMgr->assign(array(
+				$templateMgr->assign([
 					'issues' => $issues,
 					'showInfo' => true,
-				));
+				]);
 			}
 
 			$prevYear = $nextYear = null;
 			if (isset($year)) {
 				$result = $issueDao->retrieve(
-					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
-					array($journal->getId(), $year)
+					'SELECT MAX(year) AS max_year FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
+					[$journal->getId(), $year]
 				);
-				list($prevYear) = $result->fields;
+				$row = $result->current();
+				$prevYear = $row?$row->max_year:null;
 
 				$result = $issueDao->retrieve(
-					'SELECT MIN(year) FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
-					array($journal->getId(), $year)
+					'SELECT MIN(year) AS min_year FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
+					[$journal->getId(), $year]
 				);
-				list($nextYear) = $result->fields;
+				$row = $result->current();
+				$nextYear = $row?$row->min_year:null;
 			}
 
 			$issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
-			$templateMgr->assign(array(
+			$templateMgr->assign([
 				'journal' => $journal,
 				'year' => $year,
 				'prevYear' => $prevYear,
 				'nextYear' => $nextYear,
 				'issues' => $issues,
-			));
+			]);
 
 			$locales = $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
