@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-08 16:28+0000\n"
+"PO-Revision-Date: 2020-10-15 09:51+0000\n"
 "Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/editor/sk_SK/"
 ">\n"
@@ -416,3 +416,61 @@ msgstr "Nové pridelenie"
 
 msgid "editor.home"
 msgstr "Domáca stránka editora"
+
+msgid "editor.article.coverImage"
+msgstr "Titulný obrázok"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Verejný identifikátor '{$publicIdentifier}' už existuje pre iný objekt "
+"rovnakého typu. Vyberte jedinečné identifikátory pre objekty rovnakého typu "
+"v časopise."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Akékoľvek súbory, ktoré už boli nahrané do ľubovoľnej etapy podania článku, "
+"môžu byť pridané do zoznamu Korektúry zaškrtnutím políčka Zahrnúť a "
+"kliknutím na tlačidlo Hľadať: budú uvedené všetky dostupné súbory a môžu byť "
+"vybrané k zaradeniu."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Konečné návrhy súborov v tomto zozname sú prevedené redaktorom do redakčných "
+"verzií, nahrané nižšie pod <span class = \"pkp_help_title\">Redakcie</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Vyberte súbory sazdobnice"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Editor rozvrhnutiá pripravuje tieto súbory pre každú sadzobnicu a potom ich "
+"nahráva na príslušné <span class=\"pkp_help_title\">Korektúry</span> pre "
+"korektúru."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Upraviť sadzobnicu čísla"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Dátum prístupu nie je platný."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Naozaj chcete odstrániť tento článok z čísla? Článok bude k dispozícii pre "
+"vydanie v inom čísle."
+
+msgid "editor.article.remove"
+msgstr "Odstrániť"
+
+msgid "grid.action.removeArticle"
+msgstr "Odobrať článok z čísla"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Obrázok obálky, ktorý chcete zmazať, nebol nájdený. Možno už bol zmazaný. "
+"Skúste znova načítať stránku."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Publikačný poplatok nebol zaplatený. Aby bola položka naplánovaná na "
+"publikovanie, informujte autora, aby zaplatil poplatok alebo sa vzdajte "
+"poplatku."
