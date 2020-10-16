@@ -25,7 +25,7 @@ class IssueGalleyDAO extends DAO {
 	 * @return IssueGalley
 	 */
 	function getById($galleyId, $issueId = null) {
-		$params = array((int) $galleyId);
+		$params = [(int) $galleyId];
 		if ($issueId !== null) $params[] = (int) $issueId;
 		$result = $this->retrieve(
 			'SELECT
@@ -45,12 +45,11 @@ class IssueGalleyDAO extends DAO {
 		);
 
 		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
+		if ($row = $result->current()) {
+			$returner = $this->_fromRow((array) $row);
 		} else {
-			HookRegistry::call('IssueGalleyDAO::getById', array(&$galleyId, &$issueId, &$returner));
+			HookRegistry::call('IssueGalleyDAO::getById', [&$galleyId, &$issueId, &$returner]);
 		}
-		$result->Close();
 		return $returner;
 	}
 
@@ -67,21 +66,20 @@ class IssueGalleyDAO extends DAO {
 	 */
 	function pubIdExists($pubIdType, $pubId, $galleyId, $journalId) {
 		$result = $this->retrieve(
-			'SELECT COUNT(*)
+			'SELECT COUNT(*) AS row_count
 			FROM issue_galley_settings igs
 				INNER JOIN issue_galleys ig ON igs.galley_id = ig.galley_id
 				INNER JOIN issues i ON ig.issue_id = i.issue_id
 			WHERE igs.setting_name = ? AND igs.setting_value = ? AND igs.galley_id <> ? AND i.journal_id = ?',
-			array(
+			[
 				'pub-id::'.$pubIdType,
 				$pubId,
 				(int) $galleyId,
 				(int) $journalId
-			)
+			]
 		);
-		$returner = $result->fields[0] ? true : false;
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? (boolean) $row->row_count : false;
 	}
 
 	/**
@@ -110,16 +108,15 @@ class IssueGalleyDAO extends DAO {
 			WHERE	gs.setting_name = ? AND
 				gs.setting_value = ? AND
 				g.issue_id = ?',
-			array('pub-id::'.$pubIdType, (string) $pubId, (int) $issueId)
+			['pub-id::'.$pubIdType, (string) $pubId, (int) $issueId]
 		);
-
+		$row = $result->current();
 		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
+		if ($row) {
+			$returner = $this->_fromRow((array) $row);
 		} else {
-			HookRegistry::call('IssueGalleyDAO::getByPubId', array(&$pubIdType, &$pubId, &$issueId, &$returner));
+			HookRegistry::call('IssueGalleyDAO::getByPubId', [&$pubIdType, &$pubId, &$issueId, &$returner]);
 		}
-		$result->Close();
 		return $returner;
 	}
 
@@ -147,8 +144,7 @@ class IssueGalleyDAO extends DAO {
 
 		$galleys = [];
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$issueGalley = $this->_fromRow($row);
+			$issueGalley = $this->_fromRow((array) $row);
 			$galleys[$issueGalley->getId()] = $issueGalley;
 		}
 		HookRegistry::call('IssueGalleyDAO::getGalleysByIssue', [&$galleys, &$issueId]);
@@ -182,15 +178,8 @@ class IssueGalleyDAO extends DAO {
 				(int) $issueId,
 			]
 		);
-
-		if ($result->RecordCount() != 0) {
-			$issueGalley = $this->_fromRow($result->GetRowAssoc(false));
-		} else {
-			$issueGalley = $this->getById($galleyId, $issueId);
-		}
-		$result->Close();
-
-		return $issueGalley;
+		if ($row = $result->current()) return $this->_fromRow((array) $row);
+		return $this->getById($galleyId, $issueId);
 	}
 
 	/**
@@ -198,7 +187,7 @@ class IssueGalleyDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array();
+		return [];
 	}
 
 	/**
@@ -218,9 +207,9 @@ class IssueGalleyDAO extends DAO {
 	 * @param $galley
 	 */
 	function updateLocaleFields($galley) {
-		$this->updateDataObjectSettings('issue_galley_settings', $galley, array(
+		$this->updateDataObjectSettings('issue_galley_settings', $galley, [
 			'galley_id' => $galley->getId()
-		));
+		]);
 	}
 
 	/**
@@ -258,7 +247,7 @@ class IssueGalleyDAO extends DAO {
 
 		$this->getDataObjectSettings('issue_galley_settings', 'galley_id', $row['galley_id'], $galley);
 
-		HookRegistry::call('IssueGalleyDAO::_fromRow', array(&$galley, &$row));
+		HookRegistry::call('IssueGalleyDAO::_fromRow', [&$galley, &$row]);
 
 		return $galley;
 	}
@@ -278,19 +267,19 @@ class IssueGalleyDAO extends DAO {
 				url_path)
 				VALUES
 				(?, ?, ?, ?, ?, ?)',
-			array(
+			[
 				(int) $galley->getIssueId(),
 				(int) $galley->getFileId(),
 				$galley->getLabel(),
 				$galley->getLocale(),
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getIssueId()) : $galley->getSequence(),
 				$galley->getData('urlPath'),
-			)
+			]
 		);
 		$galley->setId($this->getInsertId());
 		$this->updateLocaleFields($galley);
 
-		HookRegistry::call('IssueGalleyDAO::insertObject', array(&$galley, $galley->getId()));
+		HookRegistry::call('IssueGalleyDAO::insertObject', [&$galley, $galley->getId()]);
 
 		return $galley->getId();
 	}
@@ -309,14 +298,14 @@ class IssueGalleyDAO extends DAO {
 					seq = ?,
 					url_path = ?
 				WHERE galley_id = ?',
-			array(
+			[
 				(int) $galley->getFileId(),
 				$galley->getLabel(),
 				$galley->getLocale(),
 				$galley->getSequence(),
 				$galley->getData('urlPath'),
 				(int) $galley->getId()
-			)
+			]
 		);
 		$this->updateLocaleFields($galley);
 	}
@@ -335,20 +324,17 @@ class IssueGalleyDAO extends DAO {
 	 * @param $issueId int optional
 	 */
 	function deleteById($galleyId, $issueId = null) {
-		HookRegistry::call('IssueGalleyDAO::deleteById', array(&$galleyId, &$issueId));
+		HookRegistry::call('IssueGalleyDAO::deleteById', [&$galleyId, &$issueId]);
 
-		if (isset($issueId)) {
-			$this->update(
-				'DELETE FROM issue_galleys WHERE galley_id = ? AND issue_id = ?',
-				array((int) $galleyId, (int) $issueId)
-			);
-		} else {
-			$this->update(
-				'DELETE FROM issue_galleys WHERE galley_id = ?', (int) $galleyId
-			);
-		}
-		if ($this->getAffectedRows()) {
-			$this->update('DELETE FROM issue_galley_settings WHERE galley_id = ?', array((int) $galleyId));
+		$params = [(int) $galleyId];
+		if ($issueId) $params[] = (int) $issueId;
+		
+		if ($this->update(
+			'DELETE FROM issue_galleys WHERE galley_id = ?'
+			. ($issueId ? ' AND issue_id = ?' : ''),
+			$params
+		)) {
+			$this->update('DELETE FROM issue_galley_settings WHERE galley_id = ?', [(int) $galleyId]);
 		}
 	}
 
@@ -370,8 +356,8 @@ class IssueGalleyDAO extends DAO {
 	 */
 	function resequence($issueId) {
 		$result = $this->retrieve('SELECT galley_id FROM issue_galleys WHERE issue_id = ? ORDER BY seq', [(int) $issueId]);
-		for ($i=1; $row = (array) $result->current(); $i++) {
-			$this->update('UPDATE issue_galleys SET seq = ? WHERE galley_id = ?', [$i, $row['galley_id']]);
+		for ($i=1; $row = $result->current(); $i++) {
+			$this->update('UPDATE issue_galleys SET seq = ? WHERE galley_id = ?', [$i, $row->galley_id]);
 			$result->next();
 		}
 	}
@@ -383,8 +369,8 @@ class IssueGalleyDAO extends DAO {
 	 */
 	function getNextGalleySequence($issueId) {
 		$result = $this->retrieve('SELECT MAX(seq) + 1 AS next_sequence FROM issue_galleys WHERE issue_id = ?', [(int) $issueId]);
-		$row = (array) $result->current();
-		return $row['next_sequence'];
+		$row = $result->current();
+		return $row->next_sequence;
 	}
 
 	/**

@@ -25,11 +25,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 	 * @return array of results (associative arrays)
 	 */
 	public function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
-		import('lib.pkp.classes.db.DBRowIterator');
-		if (empty($phrase)) {
-			$results = false;
-			return new DBRowIterator($results);
-		}
+		if (empty($phrase)) return array();
 
 		$sqlFrom = '';
 		$sqlWhere = '';

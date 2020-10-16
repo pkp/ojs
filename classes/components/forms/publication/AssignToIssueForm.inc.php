@@ -37,26 +37,26 @@ class AssignToIssueForm extends FormComponent {
 
 		// Issue options
 		$issueOptions = [['value' => '', 'label' => '']];
-		$unpublishedIterator = \Services::get('issue')->getMany([
+		$unpublishedIssues = iterator_to_array(\Services::get('issue')->getMany([
 			'contextId' => $publicationContext->getId(),
 			'isPublished' => false,
-		]);
-		if (count($unpublishedIterator)) {
+		]));
+		if (count($unpublishedIssues)) {
 			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
-			foreach ($unpublishedIterator as $issue) {
+			foreach ($unpublishedIssues as $issue) {
 				$issueOptions[] = [
 					'value' => (int) $issue->getId(),
 					'label' => $issue->getIssueIdentification(),
 				];
 			}
 		}
-		$publishedIterator = \Services::get('issue')->getMany([
+		$publishedIssues = iterator_to_array(\Services::get('issue')->getMany([
 			'contextId' => $publicationContext->getId(),
 			'isPublished' => true,
-		]);
-		if (count($publishedIterator)) {
+		]));
+		if (count($publishedIssues)) {
 			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
-			foreach ($publishedIterator as $issue) {
+			foreach ($publishedIssues as $issue) {
 				$issueOptions[] = [
 					'value' => (int) $issue->getId(),
 					'label' => $issue->getIssueIdentification(),
@@ -65,9 +65,9 @@ class AssignToIssueForm extends FormComponent {
 		}
 
 		$this->addField(new FieldSelect('issueId', [
-				'label' => __('issue.issue'),
-				'options' => $issueOptions,
-				'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
-			]));
+			'label' => __('issue.issue'),
+			'options' => $issueOptions,
+			'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
+		]));
 	}
 }
