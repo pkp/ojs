@@ -34,17 +34,14 @@ abstract class SubscriptionDAO extends DAO {
 	/**
 	 * Retrieve subscription journal ID by subscription ID.
 	 * @param $subscriptionId int
-	 * @return int
+	 * @return int|false
 	 */
 	function getSubscriptionJournalId($subscriptionId) {
 		$result = $this->retrieve(
-			'SELECT journal_id FROM subscriptions WHERE subscription_id = ?', (int) $subscriptionId
+			'SELECT journal_id FROM subscriptions WHERE subscription_id = ?', [(int) $subscriptionId]
 		);
-
-		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
-
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? $row->journal_id : false;
 	}
 
 	/**
@@ -52,14 +49,14 @@ abstract class SubscriptionDAO extends DAO {
 	 * @return array
 	 */
 	static function getStatusOptions() {
-		return array(
+		return [
 			SUBSCRIPTION_STATUS_ACTIVE => 'subscriptions.status.active',
 			SUBSCRIPTION_STATUS_NEEDS_INFORMATION => 'subscriptions.status.needsInformation',
 			SUBSCRIPTION_STATUS_NEEDS_APPROVAL => 'subscriptions.status.needsApproval',
 			SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT => 'subscriptions.status.awaitingManualPayment',
 			SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT => 'subscriptions.status.awaitingOnlinePayment',
 			SUBSCRIPTION_STATUS_OTHER => 'subscriptions.status.other'
-		);
+		];
 	}
 
 	/**
@@ -321,7 +318,7 @@ abstract class SubscriptionDAO extends DAO {
 		$subscription->setReferenceNumber($row['reference_number']);
 		$subscription->setNotes($row['notes']);
 
-		HookRegistry::call('SubscriptionDAO::_fromRow', array(&$subscription, &$row));
+		HookRegistry::call('SubscriptionDAO::_fromRow', [&$subscription, &$row]);
 
 		return $subscription;
 	}
@@ -341,7 +338,7 @@ abstract class SubscriptionDAO extends DAO {
 				(?, ?, ?, %s, %s, ?, ?, ?, ?)',
 				$dateStart!==null?$this->dateToDB($dateStart):'null',
 				$dateEnd!==null?$this->datetimeToDB($dateEnd):'null'
-			), array(
+			), [
 				(int) $subscription->getJournalId(),
 				(int) $subscription->getUserId(),
 				(int) $subscription->getTypeId(),
@@ -349,7 +346,7 @@ abstract class SubscriptionDAO extends DAO {
 				$subscription->getMembership(),
 				$subscription->getReferenceNumber(),
 				$subscription->getNotes()
-			)
+			]
 		);
 
 		$subscriptionId = $this->getInsertId();
@@ -380,7 +377,7 @@ abstract class SubscriptionDAO extends DAO {
 				WHERE subscription_id = ?',
 				$dateStart!==null?$this->dateToDB($dateStart):'null',
 				$dateEnd!==null?$this->datetimeToDB($dateEnd):'null'
-			), array(
+			), [
 				(int) $subscription->getJournalId(),
 				(int) $subscription->getUserId(),
 				(int) $subscription->getTypeId(),
@@ -389,7 +386,7 @@ abstract class SubscriptionDAO extends DAO {
 				$subscription->getReferenceNumber(),
 				$subscription->getNotes(),
 				(int) $subscription->getId()
-			)
+			]
 		);
 	}
 

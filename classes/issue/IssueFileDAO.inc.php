@@ -46,7 +46,7 @@ class IssueFileDAO extends DAO {
 	 * @return IssueFile
 	 */
 	function getById($fileId, $issueId = null) {
-		$params = array((int) $fileId);
+		$params = [(int) $fileId];
 		if ($issueId) $params[] = (int) $issueId;
 		$result = $this->retrieve(
 			'SELECT f.*
@@ -54,13 +54,9 @@ class IssueFileDAO extends DAO {
 			WHERE	f.file_id = ?
 				' . ($issueId?' AND f.issue_id = ?':''),
 				$params
-			);
-		$returner = null;
-		if (isset($result) && $result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-		return $returner;
+		);
+		$row = $result->current();
+		return $row ? $this->_fromRow((array) $row) : null;
 	}
 
 	/**
@@ -113,14 +109,14 @@ class IssueFileDAO extends DAO {
 				$this->datetimeToDB($issueFile->getDateUploaded()),
 				$this->datetimeToDB($issueFile->getDateModified())
 			),
-			array(
+			[
 				(int) $issueFile->getIssueId(),
 				$issueFile->getServerFileName(),
 				$issueFile->getFileType(),
 				$issueFile->getFileSize(),
 				$issueFile->getContentType(),
 				$issueFile->getOriginalFileName()
-			)
+			]
 		);
 
 		$issueFile->setId($this->getInsertId());
@@ -147,7 +143,7 @@ class IssueFileDAO extends DAO {
 				$this->datetimeToDB($issueFile->getDateUploaded()),
 				$this->datetimeToDB($issueFile->getDateModified())
 			),
-			array(
+			[
 				(int) $issueFile->getIssueId(),
 				$issueFile->getServerFileName(),
 				$issueFile->getFileType(),
@@ -155,7 +151,7 @@ class IssueFileDAO extends DAO {
 				$issueFile->getContentType(),
 				$issueFile->getOriginalFileName(),
 				(int) $issueFile->getId()
-			)
+			]
 		);
 
 		return $issueFile->getId();
@@ -175,9 +171,7 @@ class IssueFileDAO extends DAO {
 	 * @param $issueId int
 	 */
 	function deleteById($fileId) {
-		$this->update(
-			'DELETE FROM issue_files WHERE file_id = ?', (int) $fileId
-		);
+		$this->update('DELETE FROM issue_files WHERE file_id = ?', [(int) $fileId]);
 	}
 
 	/**
@@ -185,9 +179,7 @@ class IssueFileDAO extends DAO {
 	 * @param $issueId int
 	 */
 	function deleteByIssueId($issueId) {
-		$this->update(
-			'DELETE FROM issue_files WHERE issue_id = ?', (int) $issueId
-		);
+		$this->update('DELETE FROM issue_files WHERE issue_id = ?', [(int) $issueId]);
 	}
 
 	/**
