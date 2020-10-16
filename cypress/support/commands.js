@@ -30,6 +30,7 @@ Cypress.Commands.add('isInIssue', (submissionTitle, issueTitle) => {
 
 Cypress.Commands.add('checkViewableGalley', (galleyTitle) => {
 	cy.get('[class^="obj_galley_link"]').contains(galleyTitle).click();
+	cy.wait(1000); // Wait for JS to populate iframe src attribute (https://github.com/pkp/pkp-lib/issues/6246)
 	cy.get('iframe')
 		.should('have.attr', 'src')
 		.then((src) => {
