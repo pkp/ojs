@@ -63,6 +63,6 @@
 	<email key="SUBSCRIPTION_RENEW_INSTL" can_edit="1" can_disable="0" to_role_id="2097152" subject="emails.subscriptionRenewInstl.subject" description="emails.subscriptionRenewInstl.description" body="emails.subscriptionRenewInstl.body"/>
 	<email key="CITATION_EDITOR_AUTHOR_QUERY" can_edit="1" can_disable="0" stage_id="4" subject="emails.citationEditorAuthorQuery.subject" description="emails.citationEditorAuthorQuery.description" body="emails.citationEditorAuthorQuery.body"/>
 	<email key="REVISED_VERSION_NOTIFY" can_edit="1" can_disable="0" to_role_id="16" stage_id="3" subject="emails.revisedVersionNotify.subject" description="emails.revisedVersionNotify.description" body="emails.revisedVersionNotify.body"/>
-	<email key="STATISTICS_REPORT_NOTIFICATION" can_edit="1" can_disable="0" from_role_id="16" to_role_id="17" subject="emails.statisticsReportNotification.subject" description="emails.statisticsReportNotification.description" body="emails.statisticsReportNotification.body"/>
+	<email key="STATISTICS_REPORT_NOTIFICATION" can_edit="1" can_disable="1" from_role_id="16" to_role_id="17" subject="emails.statisticsReportNotification.subject" description="emails.statisticsReportNotification.description" body="emails.statisticsReportNotification.body"/>
 	<email key="ANNOUNCEMENT" can_edit="1" can_disable="0" from_role_id="16" to_role_id="1048576" subject="emails.announcement.subject" description="emails.announcement.description" body="emails.announcement.body"/>
 </emails>
