@@ -323,8 +323,7 @@ class IssueGridHandler extends GridHandler {
 		$issueDao->deleteObject($issue);
 		if ($issue->getCurrent()) {
 			$issues = $issueDao->getPublishedIssues($journal->getId());
-			if (!$issues->eof()) {
-				$issue = $issues->next();
+			if ($issue = $issues->next()) {
 				$issue->setCurrent(1);
 				$issueDao->updateObject($issue);
 			}
