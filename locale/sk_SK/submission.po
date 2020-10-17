@@ -1,0 +1,252 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-07 09:38+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "publication.selectIssue"
+msgstr "K naplánovaniu publikovania je potrebné zvoliť číslo"
+
+msgid "publication.scheduleInissue"
+msgstr "Priradiť do čísla"
+
+msgid "publication.unscheduledIn"
+msgstr "Pre túto položku nebolo doteraz naplánované publikovanie v čísle."
+
+msgid "publication.scheduledIn"
+msgstr "Naplánované zverejnenie v <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Publikované v <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr "Pred zverejnením musí byť publikácia priradená k číslu."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Všetky požiadavky pre publikovanie boli splnené. Položka bude publikovaná "
+"okamžite, pretože dátum publikovania bol nastavený na {$datePublished}. Ste "
+"si istý, že má byť položka publikovaná?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Všetky požiadavky na zverejnenie boli splnené. Toto bude okamžite zverejnené "
+"v {$issue}. Naozaj si prajete publikovať?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Všetky požiadavky na zverejnenie boli splnené. Pri publikovaní bude "
+"zverejnené: {$issue}. Naozaj si prajete naplánovať zverejnenie?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Všetky požiadavky na zverejnenie boli splnené. Naozaj si prajete publikovať?"
+
+msgid "publication.issue.success"
+msgstr "Podrobnosti o probléme publikácií boli aktualizované."
+
+msgid "publication.invalidIssue"
+msgstr "Problém pre túto publikáciu nebol nájdený."
+
+msgid "publication.invalidSection"
+msgstr "Sekcia pre túto publikáciu nebola nájdená."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Dátum vydania bude stanovené automaticky pri zverejnení čísla. Nezadávajte "
+"dátum publikácie, kým nebol článok skôr publikovaný inde a potrebujete ho "
+"antedatovať."
+
+msgid "galley.publicationNotFound"
+msgstr "Publikácia pre túto sadzobnicu nebola nájdená."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Sadzobnice tejto publikáce sa nedajú upravovať, pretože už boli publikované."
+
+msgid "catalog.category.heading"
+msgstr "Všetky položky"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} položiek"
+
+msgid "submission.sectionOptions"
+msgstr "Možnosti sekcie"
+
+msgid "section.any"
+msgstr "Ľubovoľná sekcia"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Tieto špecifikácie vychádzajú z množiny metadát Dublin Core, čo je "
+"mezinárodný štandard používaný k popisu obsahu časopisu."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Požadovaný citačný formát sa nedá načítať."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Zvoľte, prosím, rolu autora."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Váš abstrakt je príliš dlhý. Skráťte ho, prosím na počet slov podľa limitu "
+"stanoveného pre túto sekciu."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vložte, prosím, abstrakt vášho článku."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vložte, prosím, názov vášho článku."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr ""
+"Krstné meno, priezvisko a emailová adresa sú vyžadované pre každého autora."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Je vyžadovaný minimálne jeden autor."
+
+msgid "submission.submit.contributorRole"
+msgstr "Rola autora"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Prehlásenie o ochrane súkromia"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Pred pokračovaním musíte prečítať a potvrdiť, že ste splnili nižšie uvedené "
+"požiadavky."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Kontrolný zoznam pre príspevok"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Vyberte, prosím, jazyk príspevku."
+
+msgid "submission.incomplete"
+msgstr "Čaká na schválenie"
+
+msgid "submission.complete"
+msgstr "Schválené"
+
+msgid "submission.upload.fileContents"
+msgstr "Komponenty článku"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metadáta príspevku boli aktualizované."
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Odoslať na recenziu"
+
+msgid "workflow.review.externalReview"
+msgstr "Recenzia"
+
+msgid "submission.confirmSubmit"
+msgstr "Ste si istý, že chcete odoslať tento článok do časopisu?"
+
+msgid "submission.pageProofs"
+msgstr "Korektúry"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Nahrajte súbory spojené s týmto príspevkom, vrátane článku, multimédií, "
+"dátových sád, kresieb atď."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Názov a abstrakt"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Korektúra bola schválená pre vloženie do sadzobnice."
+
+msgid "grid.action.approveProof"
+msgstr "Schváliť túto korektúru pre vloženie do sadzobnice."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Editor layoutu sem načíta súbory pripravené k publikovaniu. Pomocou <em> "
+"Priradiť audítora </em> určíte autorov a ďalších, aby spravili korektúru "
+"sadzobnice, a opravené súbory nahrali k schváleniu pred publikáciou."
+
+msgid "submission.galleyFiles"
+msgstr "Súbory sadzobnice"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Sprístupniť túto sadzobnicu"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Táto sadzobnica <em>bude dostupná čitateľom</em>.</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Táto sadzobnica <em>už nebude dostupná čitateľom</em>.</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Schválenie formátu"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Verejné identifikátory príspevku boli aktualizované."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Sadzobnica článku \"{$galleyFormatName}\" bola zneprístupnená."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Sadzobnica článku \"{$galleyFormatName}\" bola sprístupnená."
+
+msgid "grid.action.issueEntry"
+msgstr "Prezrite si metadáta príspevku"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Vo vstupe do čísla je sadzobnica"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Redakcia časopisu bola informovaná o vašom príspevku a bol vám zaslaný email "
+"s potvrdením o vašom príspevku. Akonáhle redaktor skontroluje príspevok, "
+"bude vás kontaktovať."
+
+msgid "submission.issueEntry"
+msgstr "Metadáta"
+
+msgid "submission.submit.noContext"
+msgstr "Časopis tohoto príspevku nebol nájdený."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Abstrakt musí obsahovať maximálne {$wordCount} slov."
+
+msgid "grid.action.workflow"
+msgstr "Workflow príspevku"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nový príspevok"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Začať nový príspevok v"
+
+msgid "submission.title.tip"
+msgstr ""
+"Typ odesielania je obvykle jeden z nasledujúcich 'obrázok', 'text' alebo iný "
+"multimediálny typ, vrátane 'software' alebo 'interaktívny'. Zvoľte prosím "
+"ten, ktorý je pre váš príspevok najrelevantnejší. Príklady nájdete na adrese "
+"<a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "Názov článku"
+
+msgid "submission.upload.selectComponent"
+msgstr "Zvoľte komponent článku"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Zvoľte rolu, pod ktorou odosielate tento článok."
+
+msgid "submission.submit.userGroup"
+msgstr "Vložiť v rámci mojej nasledujúcej role..."
+
+msgid "submission.submit.title"
+msgstr "Odoslať článok"

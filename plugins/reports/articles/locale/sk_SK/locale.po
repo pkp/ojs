@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-08 07:07+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-articles/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "Žiadne rozhodnutie"
+
+msgid "plugins.reports.articles.description"
+msgstr ""
+"Tento plugin zavádza CSV report obsahujúci zoznam článkov a informácií o "
+"nich."
+
+msgid "plugins.reports.articles.displayName"
+msgstr "Report článkov"

@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-07 11:59+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "Rozsah IP adries"
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Emailová adresa inštitúcie"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Tento plugin generuje správu so zoznamom predplatiteľov a informácií o nich "
+"vo formáte CSV."
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Správa o predplatiteľoch"

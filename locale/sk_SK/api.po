@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-02 07:37+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/api/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Požadovaná publikácie nie je súčasťou tohto denníka."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Požadovaná publikácie nie je súčasťou tohto denníka."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Zvolený spôsob platby nie je podporovaný."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Nemáte oprávnenie presunúť túto e-mailovú šablónu do iného časopisu."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Požadovaný časopis nebol nájdený."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Na odstránenie tohto denníka nemáte oprávnenie."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Nemáte oprávnenie upravovať tento časopis."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Tento časopis nemožno upravovať cez API."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Tento časopis nemôžete prehliadať ani upravovať, kým nepožiadate o API "
+"časopisu alebo API pre celý web."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Na prehliadanie tohto časopisu nemáte oprávnenie."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Môžete zobraziť iba povolené časopisy."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Ak chcete odoslať alebo upraviť príspevok, musíte odoslať požiadavku do "
+"koncového bodu API časopisu."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Nemáte právo vidieť nepublikované čísla."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Nemôžete zmeniť záznamy príspevku."

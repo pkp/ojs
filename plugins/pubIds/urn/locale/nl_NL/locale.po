@@ -2,20 +2,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
+"PO-Revision-Date: 2020-10-13 06:29+0000\n"
+"Last-Translator: Hans Spijker <hans.spijker@huygens.knaw.nl>\n"
+"Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/nl/"
+">\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:03+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
 
 msgid "plugins.pubIds.urn.description"
-msgstr "Deze plugin maakt het mogelijk om Uniform Resource Names toe te wijzen aan de nummers, artikels en proeven in OJS."
+msgstr ""
+"Deze plugin maakt het mogelijk om Uniform Resource Names toe te wijzen aan "
+"de nummers, artikelen en proeven in OJS."
 
 msgid "plugins.pubIds.urn.manager.settings.description"
 msgstr "Configureer de URN plugin om URN's te kunnen beheren en gebruiken in OJS:"
@@ -30,13 +35,13 @@ msgid "plugins.pubIds.urn.manager.settings.explainURNs"
 msgstr "Selecteer de objecten waaraan Uniform Resource Names (URN) zullen worden toegekend:"
 
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
-msgstr "URN's worden toegekend aan nummers."
+msgstr "Nummers"
 
 msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
 msgstr "URN's worden toegekend aan artikels."
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
-msgstr "URN's worden toegekend aan proeven (bv. HTML of PDF bestanden)."
+msgstr "Galleys"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
 msgstr "URN voorvoegsel"
@@ -63,25 +68,27 @@ msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
 msgstr "voor nummers"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
-msgstr "voor artikels"
+msgstr "voor artikelen"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
 msgstr "voor proeven"
 
 msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
-msgstr "Geef het URN achtervoegsel patroon voor nummers."
+msgstr "Geef het URN-achtervoegsel patroon voor nummers."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
 msgstr "Geef het URN achtervoegsel patroon voor artikels."
 
 msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
-msgstr "Geef het URN achtervoegsel patroon voor proeven."
+msgstr "Geef het URN-achtervoegsel patroon voor proeven."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
-msgstr "Gebruik standaardpatronen"
+msgstr "Gebruik standaardpatronen."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
-msgstr "%j.v%vi%i voor nummers<br />%j.v%vi%i.%a voor artikels<br />%j.v%vi%i.%a.g%g voor proeven."
+msgstr ""
+"%j.v%vi%i voor nummers<br />%j.v%vi%i.%a voor artikelen<br />%j.v%vi%i.%a.g%"
+"g voor proeven."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
 msgstr "Vul een indificueel URN achtervoegsel in voor elk gepubliceerd item. U vindt een bijkomend URN invoerveld bij de metadata voor elk item."
@@ -93,22 +100,24 @@ msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
 msgstr "Het controlegetal wordt automatisch berekend en toegevoegd aan het eind als het laatste cijfer van de URN."
 
 msgid "plugins.pubIds.urn.manager.settings.namespace"
-msgstr "Namespace"
+msgstr "Naamruimte"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
 msgstr "Kies"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.description"
-msgstr "De namespace van de persistente identificatie die doorgaans gebruikt wordt voor de registratie (bv. bij de Koninklijke Bibliotheek)"
+msgstr ""
+"De naamruimte van de persistente identificatie die doorgaans gebruikt wordt "
+"voor de registratie (bv. bij de Koninklijke Bibliotheek)."
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver"
-msgstr "Resolver URL"
+msgstr "Resolver-URL"
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
 msgstr "(bv. http://nbn-resolving.de/)"
 
 msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
-msgstr "Vul de resolver URL in."
+msgstr "Vul de resolver-URL in."
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign"
 msgstr "Wis URN's"
@@ -129,7 +138,7 @@ msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
 msgstr "artikel"
 
 msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
-msgstr "proef"
+msgstr "galley"
 
 msgid "plugins.pubIds.urn.editor.customSuffixMissing"
 msgstr "De URN kan niet worden toegekend omdat het aangepaste achtervoegsel ontbreekt."
@@ -159,7 +168,9 @@ msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
 msgstr "Weet u zeker dat u de bestaande URN's voor de objecten in dit nummer wilt verwijderen?"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
-msgstr "Gebruik de volgende optie om URN's van alle objecten (artikels en proeven) te verwijderen die ingepland zijn voor dit nummer."
+msgstr ""
+"Gebruik de volgende optie om URN's van alle objecten (artikelen en galleys) "
+"te verwijderen die ingepland zijn voor dit nummer."
 
 msgid "plugins.pubIds.urn.editor.addCheckNo"
 msgstr "Voeg controlegetal toe"
@@ -178,3 +189,41 @@ msgstr "De URN {$pubId} werd toegekend."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Het controlegetal ontbreekt."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Voer het URN-achtervoegselpatroon voor artikelen in."
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Onderdeel"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Aan deze publicatie is geen URN toegekend."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "De URN voor deze publicatie is {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "De URN moet beginnen met {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"U kunt geen URN genereren omdat er in een of meer delen van het URN-patroon "
+"gegevens ontbreken. Mogelijk moet u de publicatie aan een nummer toewijzen, "
+"een uitgever-ID instellen of paginanummers invoeren."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"U kunt pas een URN genereren als deze publicatie aan een nummer is "
+"toegewezen."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Toewijzen"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "De URN moet beginnen met {$prefix}."
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Artikelen"

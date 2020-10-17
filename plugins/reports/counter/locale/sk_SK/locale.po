@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-08 07:05+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Výsledky nie je možné formátovať ako XML."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Pre túto správu neboli nájdené žiadne výsledky."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Žiadosť o prehľad je neplatná."
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Parametre zostavy boli neplatné."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Staršie správy o stránkach"
+
+msgid "plugins.reports.counter.release"
+msgstr "Zverejnenie COUNTER"
+
+msgid "plugins.reports.counter"
+msgstr "Štatistiky COUNTER"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"Plugin COUNTER umožňuje zaznamenávanie a vytváranie správ o aktivitách na "
+"stránkach pomocou <a href=\"http://www.projectcounter.org\">standardu "
+"COUNTER</a>. Samotné tieto správy nezabezpečujú, aby bol denník COUNTER v "
+"súlade. Ak chcete ponúknuť súlad COUNTER, prečítajte si požiadavky na "
+"webovej stránke Project COUNTER."
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Správa časopisu 1"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Správa článku 1"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Všetci zákazníci"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Odkazy nižšie generujú správy využitia pomocou starého pluginu počítania "
+"prístupov. Ak chcete počty generovať pomocou nového nástroja OJS COUNTER, "
+"použite odkazy vyššie."
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anonymný"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Celkom pre všetky časopisy"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD celkom"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSN on-line verzia"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN tlačená verzia"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platforma"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Vydavateľ"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Dátum spustenia:"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Počet úspešných požiadavkov na plný text článkov po mesiacoch a časopisoch ("
+"Rok {$year})"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Správa časopisu 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Správa časopisu 1 (R3): Požiadavka na plné texty článku po mesiacoch a "
+"časopisoch"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"Správa COUNTER Journal  1 (R3): Žiadosti o fulltextové články podľa mesiaca "
+"a časopisu"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML verzia"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Správa COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Tieto odkazy generujú správy pripravené pre formát COUNTER na základe "
+"zastaralej verzie 3.0. Tato správa zahrňuje všetky časopisy na webe. Ak je "
+"to možné, použite miesto toho najnovšiu verziu."

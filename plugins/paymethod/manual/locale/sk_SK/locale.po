@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-12 13:08+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"paymethod-manual/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Poplatok"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Názov"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Oznámenie o platbe odoslané"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Oznámenie o platbe"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Poslať oznámenie o platbe"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Nastavenie manuálnej platby"
+
+msgid "plugins.paymethod.manual"
+msgstr "Manuálna platba polatku"
+
+msgid "plugins.paymethod.manual.description"
+msgstr ""
+"Manažér manuálne zaznamená prijatie platby užívateľa (mimo tento software)."
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Manuálna platba poplatkov"

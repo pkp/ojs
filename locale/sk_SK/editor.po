@@ -1,0 +1,476 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-15 09:51+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/editor/sk_SK/"
+">\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Ste si istí, že chcete zrušiť vydanie tohto vydaného čísla?"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Ste si istí, že chcete publikovať nové číslo?"
+
+msgid "editor.issues.preview"
+msgstr "(Náhľad)"
+
+msgid "editor.issues.previewIssue"
+msgstr "Náhľad čísla"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Zrušiť vydanie čísla"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publikovať číslo"
+
+msgid "editor.issues.publicId"
+msgstr "Verejné ID"
+
+msgid "editor.issues.order"
+msgstr "Poradie"
+
+msgid "editor.issues.default"
+msgstr "Predvolené"
+
+msgid "editor.issues.saveChanges"
+msgstr "Uložiť zmeny do obsahu?"
+
+msgid "editor.issues.issueData"
+msgstr "Dáta čísla"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Toto číslo používa obvyklé radenie sekcií. <a href=\"{$url}\" class=\""
+"action\">Resetovať na predvolené</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Tento časopis používa prispôsobené radenie čísel. <a href=\"{$url}\" class=\""
+"action\">Resetovať na predvolené</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Všetky články budú vrátené do fronty a všetky asociované súbory budú "
+"natrvalo odstránené. Ste si istí, že chcete odstrániť toto číslo?"
+
+msgid "editor.issues.cover"
+msgstr "Titulná strana"
+
+msgid "editor.issues.access"
+msgstr "Prístup"
+
+msgid "editor.issues.identification"
+msgstr "Identifikácia"
+
+msgid "editor.issues.subscription"
+msgstr "Predplatné"
+
+msgid "editor.issues.openAccess"
+msgstr "Otvorený prístup"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Zobraziť"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Vytvoriť titulnú stránku pre toto číslo s nasledujúcimi prvkami."
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Legenda k titulnej stránke"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Odstrániť súbor štýlu?"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Neplatný formát súboru štýlu. Presvedčte sa, že odoslaný súbor je platný "
+"CSS. (Vedzte že súbory štýlu s komentárom na začiatku môžu byť odmietnuté.)"
+
+msgid "editor.issues.styleFile"
+msgstr "Súbor štýlu"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Neprípustný formát obrázku obálky. Prijateľné formáty sú .gif, .jpg a .png."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Obrázok obálky čísla, ktorý chcete odstrániť, nebol nájdený. Možno už bol "
+"zmazaný. Skúste znova načítať stránku."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Obrázok obálky, ktorý ste požadovali odstrániť, nezodpovedá obrázku obalu "
+"tohto čísla. Znova načítajte stránku a skúste to znova."
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Odstrániť obrázok titulnej stránky?"
+
+msgid "editor.issues.proofed"
+msgstr "Schválené"
+
+msgid "editor.issues.remove"
+msgstr "Odstrániť"
+
+msgid "editor.issues.uploaded"
+msgstr "Nahrané"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Povolené formáty: .gif, .jpg nebo .png)"
+
+msgid "editor.issues.coverPage"
+msgstr "Titulný obrázok"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Povoliť oneskorený otvorený prístup"
+
+msgid "editor.issues.accessDate"
+msgstr "Dátum otvoreného prístupu"
+
+msgid "editor.issues.accessStatus"
+msgstr "Stav prístupu"
+
+msgid "editor.issues.description"
+msgstr "Popis"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Verejný identifikátor čísla"
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identifikácia čísla"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Bude pridelené"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Naplánovať na publikovanie v"
+
+msgid "editor.article.editMetadata"
+msgstr "Upraviť metadáta verzie"
+
+msgid "editor.article.viewMetadata"
+msgstr "Zobraziť metadáta verzie"
+
+msgid "editor.article.publishVersion"
+msgstr "Publikovať verziu"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Zobraziť plánovanú publikáciu"
+
+msgid "editor.submissions.inSection"
+msgstr "V sekcii"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Pridelené (komu)"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Posledný zhotovený"
+
+msgid "editor.submissions.averageTime"
+msgstr "Týždne"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Posledný"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Žiadne príspevky"
+
+msgid "editor.submissions.accept"
+msgstr "Prijať"
+
+msgid "editor.submissions.invite"
+msgstr "Pozvať"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktívne úlohy"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Odoslanie MM-DD"
+
+msgid "editor.submissions.showBy"
+msgstr "Ukázať podľa"
+
+msgid "editor.article.decision"
+msgstr "Rozhodnutie"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Označiť pôvodný súbor za verziu pre recenziu"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Minulé čísla"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Nastavte aktuálne číslo"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Vytvoriť sadzobnicu čísla"
+
+msgid "grid.action.previewIssue"
+msgstr "Náhľad"
+
+msgid "grid.action.viewIssue"
+msgstr "Zobraziť"
+
+msgid "grid.action.addIssue"
+msgstr "Vytvoriť číslo"
+
+msgid "grid.action.publish"
+msgstr "Publikovať číslo"
+
+msgid "grid.action.addGalley"
+msgstr "Pridať sadzobnicu"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Budúce čísla"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikátory"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Ste si istí, že chcete zmazať túto sadzobnicu čísla?"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Späť na sadzobnice čísla"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Verejný identifikátor sadzobnice čísla už existuje."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Je vyžadovaná jazyková lokalizácia sadzobnice čísla."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Je vyžadované označenie sadzobnice čísla."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Neboli publikované žiadne sadzobnice čísla."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publikovať sadzobnicu s obsahom celého čísla."
+
+msgid "editor.issues.viewingGalley"
+msgstr "Prezrieť sadzobnicu čísla"
+
+msgid "editor.issues.galley"
+msgstr "Sadzobnica čísla"
+
+msgid "editor.issues.galleys"
+msgstr "Sadzobnica čísla"
+
+msgid "editor.issues.pages"
+msgstr "Stránky"
+
+msgid "editor.issues.open"
+msgstr "Otvoriť"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Žiadne živé čísla"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Nebolo možné uložiť verejné ID pre článok:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Ste si istí, že chcete nastaviť toto číslo ako číslo aktuálne?"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Je vyžadovaná identifikácia čísla. Zvoľte prosím aspoň jednu z možností "
+"identifikácie čísla."
+
+msgid "editor.issues.titleRequired"
+msgstr "Je vyžadovaný názov čísla."
+
+msgid "editor.issues.yearRequired"
+msgstr "Je vyžadovaný rok. Musí to byť kladné číslo."
+
+msgid "editor.issues.numberRequired"
+msgstr "Je vyžadované číslo. Musí to byť kladné číslo."
+
+msgid "editor.issues.volumeRequired"
+msgstr "Je vyžadovaný ročník. Musí to byť kladné číslo."
+
+msgid "editor.issues.datePublished"
+msgstr "Dátum publikácie"
+
+msgid "editor.issues.unpublished"
+msgstr "Nepublikované"
+
+msgid "editor.issues.published"
+msgstr "Publikované"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Ste si istý, že chcete natrvalo zmazať toto číslo?"
+
+msgid "editor.issues.noArticles"
+msgstr "Pre toto číslo nie sú aktuálne naplánované žiadne položky."
+
+msgid "editor.issues.numArticles"
+msgstr "Položky"
+
+msgid "editor.issues.currentIssue"
+msgstr "Aktuálne číslo"
+
+msgid "editor.issues.editIssue"
+msgstr "Správa čísla: {$issueIdentification}"
+
+msgid "editor.issues.createIssue"
+msgstr "Vytvoriť číslo"
+
+msgid "editor.editorAdministration"
+msgstr "Editorské administrácia"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Pripojiť obsah tohto čísla:"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Poslať túto správu užívateľom spojeným s týmto časopisom, ktorí uviedli, že "
+"si želajú dostávať najnovšie informácie ({$count} užívateľov)"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Poslať túto správu všetkým užívateľom spojeným s týmto časopisom ({$count} "
+"užívateľov)"
+
+msgid "editor.usersNotified"
+msgstr "Užívatelia boli informovaní"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Prebieha informovanie užívateľov..."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Všetkým inštitucionálnym predplatiteľom ({$count} užívateľov)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Všetkým individuálnym predplatiteľom ({$count} užívateľov)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Všetkým autorom článkov ({$count} užívateľov)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Všetkým čitateľom ({$count} užívateľov)"
+
+msgid "editor.notifyUsers"
+msgstr "Informovať užívateľa"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Pred odoslaním príspevku na redigovanie, použite odkaz Upozorniť autora, aby "
+"ste informovali autora o rozhodnutí a vyberte, ktorá verzia má byť odoslaná."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Tento príspevok bude archivovaný po tom, čo bude odoslaný e-mail informovať "
+"autora alebo bude kliknuté na tlačidlo preskočiť e-mail."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Ste si istí, že chcete zaznamenať toto rozhodnutie?"
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Ste si istí, že chcete natrvalo zmazať tento príspevok?"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Uložiť zmeny v archivovaných príspevkoch? Príspevky označené pre zmazanie "
+"budú natrvalo odstránené zo systému."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "V archíve nie sú žiadne príspevky."
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Verejný identifikátor '{$publicIdentifier}' už existuje pre iný objekt ("
+"vydanie, článok, sadzobnice či doplnkový súbor). Zvoľte si, prosím, unikátny "
+"identifikátor v rámci celého časopisu."
+
+msgid "editor.me"
+msgstr "Ja"
+
+msgid "editor.allEditors"
+msgstr "Všetci editori"
+
+msgid "editor.allSections"
+msgstr "Všetky sekcie"
+
+msgid "editor.publishedIssues"
+msgstr "Publikované čísla"
+
+msgid "editor.publishing"
+msgstr "Publikovanie"
+
+msgid "editor.submissionArchive"
+msgstr "Archív príspevkov"
+
+msgid "editor.submissionQueue"
+msgstr "Fronta príspevkov"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Príspevky a publikovanie"
+
+msgid "editor.reassign"
+msgstr "Nové pridelenie"
+
+msgid "editor.home"
+msgstr "Domáca stránka editora"
+
+msgid "editor.article.coverImage"
+msgstr "Titulný obrázok"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Verejný identifikátor '{$publicIdentifier}' už existuje pre iný objekt "
+"rovnakého typu. Vyberte jedinečné identifikátory pre objekty rovnakého typu "
+"v časopise."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Akékoľvek súbory, ktoré už boli nahrané do ľubovoľnej etapy podania článku, "
+"môžu byť pridané do zoznamu Korektúry zaškrtnutím políčka Zahrnúť a "
+"kliknutím na tlačidlo Hľadať: budú uvedené všetky dostupné súbory a môžu byť "
+"vybrané k zaradeniu."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Konečné návrhy súborov v tomto zozname sú prevedené redaktorom do redakčných "
+"verzií, nahrané nižšie pod <span class = \"pkp_help_title\">Redakcie</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Vyberte súbory sazdobnice"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Editor rozvrhnutiá pripravuje tieto súbory pre každú sadzobnicu a potom ich "
+"nahráva na príslušné <span class=\"pkp_help_title\">Korektúry</span> pre "
+"korektúru."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Upraviť sadzobnicu čísla"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Dátum prístupu nie je platný."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Naozaj chcete odstrániť tento článok z čísla? Článok bude k dispozícii pre "
+"vydanie v inom čísle."
+
+msgid "editor.article.remove"
+msgstr "Odstrániť"
+
+msgid "grid.action.removeArticle"
+msgstr "Odobrať článok z čísla"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Obrázok obálky, ktorý chcete zmazať, nebol nájdený. Možno už bol zmazaný. "
+"Skúste znova načítať stránku."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Publikačný poplatok nebol zaplatený. Aby bola položka naplánovaná na "
+"publikovanie, informujte autora, aby zaplatil poplatok alebo sa vzdajte "
+"poplatku."

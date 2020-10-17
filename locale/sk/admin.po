@@ -1,0 +1,254 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-01 19:11+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/admin/sk_SK/>"
+"\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Pripomienka recenzie"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Upozornenie na otvorený prístup (Open Access)"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Pripomenutie vypršaného predplatného"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Žiadni zapísaní užívatelia."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Ste si istý, že chcete zlúčiť vybraný účet/účty   \"{$oldAccountCount}\" do "
+"účtu/účtov s uživatelským menom \"{$newUsername}\"? Vybraný účet/účty  \""
+"{$oldAccounCount}\" potom prestane/prestanú existovať. Táto akcia je "
+"nevratná."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Všetci zaregistrovaní užívatelia"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Vyberte používateľa, ktorý má byť zlúčený s iným užívateľským účtom (napr. "
+"Ak má niekto dva používateľské kontá). Najprv zvolený účet bude vymazaný a "
+"jeho príspevky, úlohy atď. budú priradené ku druhému účtu."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Vyberte používateľa, ktorému majú byť priradené autorstvá, pridelené úlohy "
+"atď. predchádzajúceho užívateľa."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Zlúčiť užívateľov"
+
+msgid "admin.mergeUsers"
+msgstr "Zlúčiť užívateľov"
+
+msgid "admin.journals.importErrors"
+msgstr "Úspešné dokončenie importu zlyhalo"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Je vyžadovaná cesta importu."
+
+msgid "admin.journals.redirect"
+msgstr "Generovať kód pre presmerovanie adries URL OJS 1 na adresy URL OJS 2"
+
+msgid "admin.journals.transcode"
+msgstr "Prekódovať metadáta článkov z ISO8859-1"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importovať predplatné"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Existujúca cesta k časopisu alebo cesta, ktorá má byť vytvorená (napr. \""
+"OJS\")."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Popis časopisu"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr ""
+"Povoľte zobrazenie tohto časopisu, aby bol na týchto stránkach zobrazený "
+"verejne"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} bol úspěšne upravený."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} bol úspešne vytvorený."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Zvolená cesta už je využívaná iným časopisom."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Cesta môže obsahovať len alfanumerické znaky, podčiarknutia a pomlčky a musí "
+"začínať a končiť alfanumerickým znakom."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Je vyžadovaná cesta."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Je potrebné zadať názov."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Toto má byť krátke slovo alebo akronym, ktoré identifikuje časopis. URL "
+"časopisu bude {$sampleUrl}."
+
+msgid "admin.contexts.create"
+msgstr "Vytvoriť časopis"
+
+msgid "admin.journals.noneCreated"
+msgstr "Žiadne časopisy neboli vytvorené."
+
+msgid "admin.journals.journalSettings"
+msgstr "Nastavenie časopisu"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Budete automaticky zaregistrovaný ako manažér tohto časopisu. Potom, čo "
+"vytvoríte nový časopis, vstúpte do neho ako manažér a pokračujte v jeho "
+"nastavení a zápisu užívateľov."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Nastavenie konfigurácie OJS z <tt>config.inc.php</tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "Konfigurácia OJS"
+
+msgid "admin.systemVersion"
+msgstr "Verzia OJS"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Umožniť vytvorenie používateľa (pokiaľ je podporovaný týmto overovacím "
+"pluginom). Užívatelia vytvorení v rámci OJS týmto zdrojom overení budú, "
+"pokiaľ už neexistujú, automaticky sa pridajú do vzdialeného overovacieho "
+"zdroja. Navyše, ak je tento zdroj východiskovým zdrojom overení, OJS účty "
+"vytvorené v priebehu registrácie užívateľa budú pridané do vzdialeného "
+"overovacieho zdroja."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Umožniť zmenu hesla používateľa (ak je podporovaná týmto overovacím pluginom)"
+". Povolenie tejto možnosti umožní užívateľom zmeniť svoje heslo v rámci OJS "
+"a využiť funkciu \"stratené heslo\" pre obnovenie zabudnutého hesla. Tieto "
+"funkcie nebudú dostupné užívateľom s týmto zdrojom overenia ak nie je "
+"povolená táto možnosť."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Umožniť synchronizáciu užívateľských profilov (ak je podporovaná týmto "
+"overovacím pluginom). Informácie v profile používateľa budú automaticky "
+"aktualizované zo vzdialeného zdroja, akonáhle sa používateľ prihlási a zmení "
+"sa jeho profil (vrátane zmien hesla) v rámci OJS. Pokiaľ nie je táto možnosť "
+"povolená, informácie v OJS profile budú uchovávané oddelene od informácií "
+"vzdialeného zdroja."
+
+msgid "admin.languages.download"
+msgstr "Stiahnuť jazykovú lokalizáciu"
+
+msgid "admin.auth.ojs"
+msgstr "Databáza OJS užívateľov"
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"Nemožno pridať novú jazykovú lokalizáciu do registračného súboru lokalizácií "
+"- typicky \"registry/locales.xml\"."
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Nemožno otvoriť popisovač jazyka z webovej stránky PKP."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Lokalizácia \"{$locale}\" bola nainštalovaná."
+
+msgid "admin.languages.downloadFailed"
+msgstr ""
+"Sťahovanie jazykovej lokalizácie zlyhalo. Nižšie uvedené chybové hlásenie "
+"popisuje zlyhanie."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Vyberte ďalšie jazykové lokalizácie, pre ktoré má byť do systému "
+"nainštalovaná podpora. Aby mohli byť lokalizácie využité hosťovanými "
+"časopismi, musia byť najprv nainštalované. Pre informácie o pridanie nových "
+"jazykov pozri dokumentáciu k OJS."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Ste si istý, že chcete odinštalovať túto jazykovú lokalizáciu? Môže to "
+"ovplyvniť všetky časopisy tu hostované, ktoré aktuálne túto jazykovú "
+"lokalizáciu používajú."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Označené súbory lokalizácie môžu byť nekompletné."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Vyberte všetky jazykové lokalizácie, ktoré majú byť podporované na tejto "
+"stránke. Vybrané lokalizácie budú dostupné na použitie vo všetkých "
+"časopisoch hostovaných na tejto stránke a objavia sa aj v menu pre výber "
+"jazyka na všetkých stránkach (toto nastavenie môže byť prepísané na "
+"špecifických stránkach daného časopisu). Ak nie je vybrané viacero "
+"jazykových lokalizácií, menu pre výber jazyka sa na stránkach neobjaví a "
+"rozšírené jazykové nastavenie nebude pre časopisy dostupné."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Toto bude predvolený jazyk pre stránku a všetky hostované časopisy."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Sťahovanie jazykových balíčkov z webu Public Knowledge Project je "
+"momentálne nedostupné pretože: </p>\n"
+"\t<ul>\n"
+"\t\t<li>Váš server nemá, alebo nepovoľuje využitie GNU utility \"tar\". </li>"
+"\n"
+"\t\t<li>OJS nemôže zmeniť lokálny súbor registrácia lokalizácie, typicky  \""
+"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Jazykové balíčky možno stiahnuť manuálne z  <a href=\"http://pkp.sfu.ca\">"
+"PKP web site</a>.</p>"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Ste si istý, že chcete zakázať túto lokalizáciu? Bude to mať vplyv na všetky "
+"časopisy, ktoré túto lokalizáciu využívajú."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tVaša inštalácia OJS je konfigurovaná na zaznamenávanie viacerých metrík. "
+"Štatistiky čítanosti budú zobrazené vo viacerých kontextoch.\n"
+"\t\tV niektorých prípadoch musí byť použitá jedna štatistika čítanosti, "
+"napr. Pri zobrazovaní zoznamu najčítanejších článkov, alebo pri zobrazení "
+"rozsahu hľadaní. Vyberte si, prosím, jednu z nasledujúcich metrík ako "
+"štandardný.\n"
+"\t"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Požiadavky na hlavnú stránku budú presmerované na tento časopis. To môže byť "
+"užitočné napríklad ak stránka hosťuje iba jeden časopis."
+
+msgid "admin.settings.redirect"
+msgstr "Presmerovanie časopisu"
+
+msgid "admin.settings.info.success"
+msgstr "Informácie o webe boli úspešne aktualizované."
+
+msgid "admin.settings.config.success"
+msgstr "Nastavenie konfigurácie webu bola úspešne aktualizovaná."
+
+msgid "admin.settings.appearance.success"
+msgstr "Nastavenie vzhľadu webu bola úspešne aktualizovaná."
+
+msgid "admin.hostedContexts"
+msgstr "Hostované časopisy"
