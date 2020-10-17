@@ -113,9 +113,8 @@ msgstr "Все цены должны быть положительными чи�
 msgid "manager.payment.generalFees"
 msgstr "Общие платежи"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "Ссылка «Ассоциированное членство» появится на странице «О журнале» в разделе «Правила», а ссылка для пожертвований появится над полем поиска во фрейме справа."
+msgstr "Ссылка «Ассоциированное членство» появится на странице «О журнале» в разделе «Правила»."
 
 msgid "manager.payment.generalOptions"
 msgstr "Общие параметры"
