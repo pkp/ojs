@@ -1,0 +1,243 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-08 12:47+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Zvoľte, prosím objekty, ktoré majú mať priradené URN."
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Obsah časopisu"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"Nakonfigurujte, prosím URN plugin, aby bolo možné spravovať a používať URN v "
+"rámci OJS:"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"Tento plugin umožňuje priradenie jednotných názvov zdrojov (Uniform Resource "
+"Names) k číslam, článkom a sadzobniciam, v OJS."
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Uvedený suffix URN sa už používa pre ďalšiu publikovanú položku. Pre každú "
+"položku zadajte jedinečný suffix URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "Tomuto {$pubObjectType} bolo pridelené URN."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"To, čo vidíte, je náhľad URN. Vyberte zaškrtávacie políčko a uložte formulár "
+"pre priradenie URN."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN nemôže byť pridelené, pretože obsahuje neplatný vzorec."
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN nemôže byť pridelené, pretože chýba vlastný suffix."
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "sadzobnica"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "článok"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "číslo"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Ste si istý, že chcete zmazať všetky existujúce URN?"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Ak zmeníte konfiguráciu URN, URN, ktorej už boli priradené, nebudú "
+"ovplyvnené. Akonáhle je konfigurácia URN uložená, použite toto tlačítko pre "
+"vymazanie všetkých zostávajúcich URN tak, aby sa nové nastavenia prejavili "
+"aj pri existujúcich objektoch."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Znovu prideliť URN"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Vložte, prosím, URL adresu prekladača."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(napr.. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Webová adresa resolveru"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Pre registráciu (obvykle pri Deutsche Nationalbibliothek) je obvykle "
+"potrebný menný priestor pre trvalý identifikátor."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Zvoľte"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Menný priestor"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Kontrolné číslo bude automaticky vypočítané a pridané na koniec, ako "
+"posledná číslica URN."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Kontrolné číslo"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Pre každú publikovanú položku zadajte individuálny suffix URN. Na stránke "
+"metadát každej položky nájdete ďalšie vstupné pole URN."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i pre čísla<br />%j.v%vi%i.%a pre články<br />%j.v%vi%i.%a.g%g pre "
+"sadzobnice."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Použiť predvolené vzory."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Zadajte, prosím, vzor URN pre sadzobnice."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Zadajte vzor prípony URN pre články."
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Zadajte, prosím, vzor URN pre čísla."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "pre sadzobnice"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "pre články"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "pre čísla"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Napr.  vol%viss%ipp%p vytvorí URN suffix \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Pre generáciu URN suffixu použite nasledujúci vzor. Použite %j pre iniciály "
+"časopisu, %v pre číslo zväzku, %i pre číslo časopisu, %Y pre rok, %a pre ID "
+"článku v rámci OJS, %g ID sadzobnice v rámci OJS, %f pre ID súboru v rámci "
+"OJS, %p pre číslo stránky a %x pre \"Vlastný identifikátor\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"URN suffix môže mať akúkoľvek formu, ale musí byť jedinečný u všetkých "
+"publikačných objektov s rovnakým URN prefixom:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "Suffix URN"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr ""
+"Vzor URN prefixu musí zodpovedať formátu \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"Prefix URN je pevná, nikdy sa nemeniaca časť URN (např. \"urn:nbn:de:0000-\""
+")."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "Prefix URN"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Sadzobnice"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Články"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Čísla"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"Zvoľte, prosím, objekty k publikovaniu, ktoré budú mať priradené Uniform "
+"Resource Names (URN):"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Položka"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Sadzobnica: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "K tejto publikácii nebolo priradené URN."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN pre túto publikácia bude {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN musí začínať {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Nedá sa vygenerovať URN, pretože v jednej alebo viac častiach vzoru URN "
+"chýbajú dáta. Pravdepodobne budete musieť publikácii priradiť číslo, "
+"nastaviť ID vydavateľa alebo zadať čísla stránok."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr "Kým nebude táto publikácia priradená k číslu, nemôžete vygenerovať URN."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Priradiť"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN musí začínať {$prefix}."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Kontrolné číslo chýba."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} bolo priradené."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$pubId} nie je možné priradiť, pretože obsahuje neplatný vzor."
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN nemôže byť pridelené, pretože vlastný suffix je prázdny."
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Priradiť URN {$pubId} tomuto {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Pridať kontrolné číslo"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Použite nasledujúcu možnosť k vymazaniu URN všetkých objektov (článkov a "
+"sadzobníc), ktoré sú aktuálne naplánované pre toto číslo."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Ste si istý, že chcete vymazať existujúce URN objekty čísla?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Vymazať URN objektov čísla"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Ste si istý, že chcete zmazať existujúcu URN?"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Zmazať URN"

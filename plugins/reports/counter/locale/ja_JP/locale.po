@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
-"PO-Revision-Date: 2020-09-17 22:03+0000\n"
+"PO-Revision-Date: 2020-09-23 00:39+0000\n"
 "Last-Translator: Emma U <emmaupkp@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/ja/>\n"
@@ -72,3 +72,42 @@ msgstr "レポートのパラメーターが無効です。"
 
 msgid "plugins.reports.counter.release"
 msgstr "COUNTERバージョン"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "ジャーナルレポート１ (JR1)"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "論文レポート１ (AR1)"
+
+#, fuzzy
+msgid "plugins.reports.counter.allCustomers"
+msgstr "全クライアント"
+
+#, fuzzy
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"下記のリンクでプラグインの旧データに基づいてレポートを生成できます。OJSの新COUNTER手法で最新バージョン用COUNTERレポートを生成したい場合、"
+"上記のリンクをご利用ください。"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "無名"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "COUNTERジャーナルレポート1 (R3): 月別およびジャーナル別のフルテキスト論文リクエスト"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML版"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTERレポートJR1 (R3)"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"これらのリンクは、COUNTER 3.0という古いバージョンに基づいてCOUNTER用レポートを生成します。可能な場合、 "
+"最新バージョンにアップデートしてご利用ください。"
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "レポートのリクエストが無効です。"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "過去のサイトレポート"

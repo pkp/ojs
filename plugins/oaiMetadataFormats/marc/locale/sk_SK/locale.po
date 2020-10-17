@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-13 07:37+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"oaiMetadataFormats-marc/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.OAIMetadata.marc.description"
+msgstr "Štruktúruje metadáta spôsobom konzistentným s MARC formátom."
+
+msgid "plugins.OAIMetadata.marc.displayName"
+msgstr "Formát metadát MARC"

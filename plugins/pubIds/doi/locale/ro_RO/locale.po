@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-15 19:39+0000\n"
+"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
+"ro_RO/>\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Element"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Galeria: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Acestei publicații nu i s-a atribuit un DOI."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "DOI pentru această publicație va fi {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI trebuie să înceapă cu {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "DOI pentru {$pubId} a fost alocat."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr ""
+"DOI pentru {$pubId} nu poate fi atribuit deoarece conține un model "
+"nerezolvat."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "DOI nu poate fi atribuit deoarece lipsește sufixul personalizat."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Alocați DOI {$pubId} pentru {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Utilizați următoarea opțiune pentru a șterge DOI-urile pentru toate "
+"obiectele (articole și galeriile) programate în prezent pentru acest număr."
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Sigur doriți să ștergeți DOI-ul existent pentru volume?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Ștergeți DOI-urile pentru volume"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Sigur doriți să ștergeți DOI-ul existent?"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Curăță"
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Sufixul DOI dat este deja utilizat pentru un alt articol publicat. Vă rugăm "
+"să introduceți un sufix DOI unic pentru fiecare articol."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "DOI este atribuit acestui pentru {$pubObjectType}."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr ""
+"Ceea ce vedeți este o previzualizare a DOI. Bifați caseta de selectare și "
+"salvați formularul pentru a atribui DOI."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "DOI nu poate fi atribuit deoarece conține un model nerezolvat."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Nu puteți genera un DOI deoarece pentru una sau mai multe părți ale "
+"modelului DOI lipsesc date. Poate fi necesar să atribuiți publicația unui "
+"număr, să setați un ID de editor sau să introduceți numerele de pagină."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Nu puteți genera un DOI până când această publicație nu va fi atribuită unui "
+"număr."
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "DOI nu poate fi atribuit deoarece lipsește sufixul personalizat."
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "Galerie"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "Articol"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "Număr"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Atribuie"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI trebuie să înceapă cu {$prefix}."
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Sigur doriți să atribuiți DOI-uri tuturor obiectelor publicate cărora nu li "
+"s-au atribuit DOI-uri?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Atribuiți DOI-uri tuturor obiectelor din jurnal publicate cărora nu li s-au "
+"atribuit DOI-uri. Această acțiune nu poate fi utilizată cu configurația "
+"sufixului individual. Dacă ați modificat configurația DOI de mai sus, vă "
+"rugăm să salvați modificările înainte de a iniția această acțiune. "
+"Atribuirea DOI poate dura mult timp, în funcție de numărul de obiecte "
+"publicate din jurnal."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Atribuiți DOI-uri"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr "Sigur doriți să ștergeți toate DOI-urile existente?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr ""
+"Dacă modificați configurația DOI, acele coduri DOI care au fost deja "
+"atribuite nu vor fi afectate. Odată ce configurația DOI este salvată, "
+"utilizați acest buton pentru a șterge toate DOI-urile existente, astfel "
+"încât noile setări să aibă efect cu obiectele existente."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "Realocați DOI-urile"
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Vă rugăm să introduceți modelul de sufix DOI pentru galerii."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Vă rugăm să introduceți modelul de sufix DOI pentru articole."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Vă rugăm să introduceți modelul de sufix DOI pentru numere."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Introduceți un sufix DOI individual pentru fiecare articol publicat. Veți "
+"găsi un câmp suplimentar de intrare DOI pe pagina de metadate a fiecărui "
+"articol."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i pentru numere<br />%j.v%vi%i.%a pentru articole<br "
+"/>%j.v%vi%i.%a.g%g pentru galerii."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "Utilizați modele implicite."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "pentru galerii"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "pentru articole"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "pentru numere"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr "De exemplu, vol%viss%ipp%p ar putea crea sufixul DOI \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Utilizați modelul introdus mai jos pentru a genera sufixe DOI. Utilizați %j "
+"pentru inițialele jurnalului, %v pentru numărul de volum, %i pentru număr, %"
+"Y pentru an, %a pentru ID-ul articolului OJS, %g pentru codul de galerie "
+"OJS, %f pentru ID-ul fișierului OJS, %p pentru numărul paginii și %x pentru „"
+"Identificator personalizat”."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Un sufix DOI poate lua orice formă, dar trebuie să fie unic pentru toate "
+"obiectele de publicare cu același prefix DOI atribuit:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "Sufixul DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "Prefixul DOI este obligatoriu și trebuie să aibă forma 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr ""
+"Prefixul DOI este atribuit de agențiile de înregistrare(de ex. <a href=\""
+"http://www.crossref.org\" target=\"_new\">Crossref</a>) și are formatul "
+"10.xxxx (de ex. 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "Prefix DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Galerii"
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Articole"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Numere"
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr "Vă rugăm să selectați elementele de publicare cărora li se vor DOI:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Vă rugăm să alegeți obiectele la care trebuie să li se atribuie DOI-urile."
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Conținutul jurnalului"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr ""
+"Vă rugăm să configurați pluginul DOI pentru a putea gestiona și utiliza DOI-"
+"urile în OJS:"
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.description"
+msgstr ""
+"Acest plugin permite alocarea codului DOI pentru numerele din revistă, "
+"articole și galeriile din OJS."
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI"

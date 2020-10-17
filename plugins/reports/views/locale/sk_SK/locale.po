@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-07 11:55+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-views/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.views.galleyViews"
+msgstr "Celkový počet zobrazení sadzobnice"
+
+msgid "plugins.reports.views.abstractViews"
+msgstr "Počet zobrazení abstraktu"
+
+msgid "plugins.reports.views.datePublished"
+msgstr "Dátum publikácie"
+
+msgid "plugins.reports.views.articleTitle"
+msgstr "Názov článku"
+
+msgid "plugins.reports.views.articleId"
+msgstr "ID článku"
+
+msgid "plugins.reports.views.description"
+msgstr ""
+"Tento plugin implementuje tvorbu CSV súboru s údajmi o čítanosti každého "
+"článku."
+
+msgid "plugins.reports.views.displayName"
+msgstr "Zobraziť správu"

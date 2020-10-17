@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-06 10:16+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
+"sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Vlastnosti bezpečnosti SASL"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Požadované autorizačné ID"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Oblasť"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Napr.: \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL mechanizmus"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Namiesto jednoduchej autentizácie použite SASL"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL nastavenie (voliteľné)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Formát hash pre heslá uložené na serveri. Odporúča sa SSHA."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Šifrovanie hesla"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"Atribút, ktorého hodnota jedinečne identifikuje užívateľský objekt, ako uid "
+"alebo cn alebo sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atribút mena účtu"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"Správca DN a heslo sú požadované iba ak sú povolené možnosti synchronizácie "
+"používateľských profilov/hesiel alebo vytváranie používateľov. Pokiaľ bude "
+"LDAP použité iba pre overovanie, je možné tieto možnosti vynechať."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Heslo správcu"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Napr.: \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Správca DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Napr.: \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Základné DN"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Volitelné. Predvolené na to 389 (LDAP) alebo 636 (LDAP cez SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Port serveru"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"Napr.: \"ldap.example.com\" alebo \"ldaps://ldap.example.com\" (pri použití "
+"SSL)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "hostname serveru"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "nastavenie LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Tento plugin umožňuje overenie a synchronizovanie používateľských účtov "
+"vzhľadom k externému LDAP zdroju overení."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"

@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-17 14:39+0000\n"
+"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Utilizare:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr ""
+"Depunerea nu a avut succes! API-ul DOAJ a returnat o eroare: '{$param}'."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Sarcină de înregistrare automată DOAJ"
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"Utilizați API-ul de testare DOAJ (mediul de testare) pentru înregistrare. Vă "
+"rugăm să nu uitați să eliminați această opțiune pentru producție."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS va depune articole automat la DOAJ. Vă rugăm să rețineți că procesarea "
+"poate dura puțin timp după publicare (de exemplu, în funcție de configurația "
+"dvs. cronjob). Puteți verifica dacă există articole neînregistrate."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Veți găsi cheia API pe pagina dvs. de utilizator DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "Cheie API DOAJ"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr ""
+"Dacă doriți să înregistrați articole din OJS, vă rugăm să introduceți cheia "
+"API DOAJ. Altfel, veți putea exporta în continuare în formatul DOAJ XML, dar "
+"nu vă puteți înregistra articolele cu DOAJ din OJS."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Contactați DOAJ pentru includere"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Exportă revista pentru DOAJ."
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Plugin export DOAJ"

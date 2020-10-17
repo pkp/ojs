@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-07 09:49+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Viac informácií"
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Pre prístup k niektorým zdrojom treba predplatné."
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Prihláste sa pre prístup k zdrojom s obmedzeným prístupom."
+
+msgid "plugins.block.subscription.about"
+msgstr "Prístupy"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Prichádza z IP: {$ip}"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Prístup poskytol: {$institutionName}"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Vyprší"
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Predplatné"
+
+msgid "plugins.block.subscription.description"
+msgstr "Tento plugin pridá do bočného panela blok s informáciou o predplatnom."
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Blok predplatného"

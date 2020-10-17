@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-17 14:39+0000\n"
+"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Vă rugăm să încărcați un fișier sub „Import” pentru a continua."
+
+msgid "plugins.importexport.users.results"
+msgstr "Rezultate"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Importul s-a finalizat cu succes. Utilizatorii cu nume de utilizator și "
+"adrese de e-mail care nu sunt deja utilizate au fost importați, împreună cu "
+"grupurile de utilizatori însoțitori."
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Nu s-a putut scrie în fișier \"{$fileName}\"."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Au apărut erori în timpul exportului"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Exportați toți utilizatorii"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exportați după rol"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Export utilizatori"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "A fost specificată o cale de jurnal necunoscută \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Nu se pot folosi parole cu hash {$importHash}; OJS este configurat pentru "
+"utilizare {$ojsHash}. Dacă continuați, va trebui să resetați parolele "
+"utilizatorilor importați."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Avertizare"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"Confirmați că aceștia sunt utilizatorii pe care doriți să îi importați în "
+"sistem"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Au apărut erori în timpul importului"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Următorii utilizatori au fost importați cu succes în sistem"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Continuați să importați alți utilizatori dacă apare o eroare."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Trimiteți un e-mail de notificare fiecărui utilizator importat care conține "
+"numele de utilizator și parola utilizatorului."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Fișier date utilizator"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Selectați un fișier de date XML care conține informații despre utilizator "
+"pentru a fi importat în acest jurnal. Consultați ajutorul jurnalului pentru "
+"detalii despre formatul acestui fișier.<br /><br />Rețineți că dacă fișierul "
+"importat conține nume de utilizator sau adrese de e-mail care există deja în "
+"sistem, datele de utilizator pentru acei utilizatori nu vor fi importate și "
+"orice roluri noi care vor fi create vor fi atribuite utilizatorilor "
+"existenți."
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Import utilizatori"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Exemple:\n"
+"\tImportați utilizatorii în myJournal din myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} importă myImportFile.xml myJournal\n"
+"\n"
+"\tExportați toți utilizatorii din myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExportați utilizatorii specificați prin ID-ul lor:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Utilizare: {$scriptName} {$pluginName} [command] ...\n"
+"Comenzi:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importă și exportă utilizatori"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Plugin XML pentru utilizatori"

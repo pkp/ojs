@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-09-24 07:28+0000\n"
+"Last-Translator: Emma U <emmaupkp@gmail.com>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/admin/"
+"ja_JP/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "ユーザーをマージ"
+
+msgid "admin.mergeUsers"
+msgstr "ユーザーをマージ"
+
+msgid "admin.journals.importErrors"
+msgstr "インポートに失敗しました"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "インポートパスは必須です。"
+
+msgid "admin.contexts.contextDescription"
+msgstr "ジャーナルの説明"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name}がが正常に変更されました。"
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name}が正常に作成されました。"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "入力したパスは既に使用されています。"
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "パスに使用できる文字列は半角英数字・ハイフン（-）・アンダーバー（_）のみです。先頭および末尾文字は必ず半角英数字を使用してください。"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "パスは必須です。"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "タイトルは必須です。"
+
+msgid "admin.journals.urlWillBe"
+msgstr "ジャーナルを識別する短い単語または頭字語を半角英数字で入力してください。ジャーナルのURLは{$sampleUrl}となります。"
+
+msgid "admin.contexts.create"
+msgstr "ジャーナル作成"
+
+msgid "admin.journals.noneCreated"
+msgstr "ジャーナルはまだ作成されていません。"
+
+msgid "admin.journals.journalSettings"
+msgstr "ジャーナル設定"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt>のOJS設定です。"
+
+msgid "admin.systemVersion"
+msgstr "OJSバージョン"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "メインサイトへのリクエストを以下のジャーナルに転送されます。単一のジャーナルがホストされている場合に有効です。"
+
+msgid "admin.settings.redirect"
+msgstr "ジャーナルリダイレクト"
+
+msgid "admin.settings.info.success"
+msgstr "サイト情報が正常に変更されました。"
+
+msgid "admin.settings.config.success"
+msgstr "サイト設定が正常に変更されました。"
+
+msgid "admin.settings.appearance.success"
+msgstr "外観設定が正常に変更されました。"
+
+msgid "admin.hostedContexts"
+msgstr "ホストされているジャーナル"
