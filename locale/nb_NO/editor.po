@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
+"PO-Revision-Date: 2020-10-19 15:21+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"editor/nb_NO/>\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:27+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
 msgstr "Ansvarlig redaktør"
@@ -346,3 +349,138 @@ msgstr "Alle institusjonelle abonnenter  ({$count} users)"
 
 msgid "editor.article.coverImage"
 msgstr "Omslagsbilde"
+
+msgid "editor.article.viewMetadata"
+msgstr "Se versjonens metadata"
+
+msgid "editor.article.publishVersion"
+msgstr "Publiser versjon"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Denne offentlige identifikatoren {$publicIdentifier} finnes allerede for et "
+"element av samme type. Velg unike identifikatorer for samme type elementer i "
+"tidsskriftet ditt."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Filer som allerede er lastet opp til innlevering, uansett stadie, kan bli "
+"lagt til listen for korrekturlesing ved å krysse av «Inkluder» under og "
+"klikke «Søk». Alle tilgjengelige filer vil bli listet opp som alternativer."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Språkvaskeren endrer filene i denne listen til filer for språkvask. Disse "
+"lastes opp under <span class=\"pkp_help_title\">«Språkvask»</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Velg oppsettfil"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Layoutredaktøren forbereder disse filene for hvert oppsett, for så å laste "
+"opp den passende <span class=\"pkp_help_title\">versjonen</span> for "
+"korrekturlesing."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Endre oppsettet"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Er du sikker på at du vil fjerne artikkelen fra denne utgaven? Artikkelen "
+"kan legges til en annen utgave."
+
+msgid "grid.action.removeArticle"
+msgstr "Fjern artikkelen fra utgaven"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Bildet du ønsket å slette ble ikke funnet. Det kan være slettet allerede. "
+"Prøv å laste siden på nytt."
+
+msgid "editor.article.editMetadata"
+msgstr "Endre metadata"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Vis planlagt publikasjon"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Sett nyeste utgave"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Opprett oppsett"
+
+msgid "grid.action.previewIssue"
+msgstr "Forhåndsvis"
+
+msgid "grid.action.viewIssue"
+msgstr "Vis"
+
+msgid "grid.action.publish"
+msgstr "Publiser utgave"
+
+msgid "grid.action.addGalley"
+msgstr "Legg til oppsett"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikatorer"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Er du sikker på at du vil slette oppsettet for denne utgaven?"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Tilbake til oppsett"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Det finnes allerede en offentlig identifikator for oppsettet."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Du må legge inn en språkpakke for oppsettet."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Du må legge inn en etikett for oppsettet."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Ingen oppsett har blitt publisert."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publiser oppsett med alt innhold fra utgaven."
+
+msgid "editor.issues.viewingGalley"
+msgstr "Vis oppsett"
+
+msgid "editor.issues.galley"
+msgstr "Oppsett"
+
+msgid "editor.issues.galleys"
+msgstr "Oppsett"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Er du sikker på at du vil sette denne utgaven som den nyeste?"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Ugyldig bildeformat. Tillatte format: .gif, .jpg eller .png."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Bildet du ønsket å slette ble ikke funnet. Det kan allerede være slettet. "
+"Prøv å laste siden på nytt."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Last på nytt og prøv igjen. Bildet du ville slette stemte ikke overens med "
+"bildet for denne utgaven."
+
+msgid "editor.issues.datePublished"
+msgstr "Dato publisert"
+
+msgid "editor.issues.editIssue"
+msgstr "Administrere utgave: {$issueIdentification}"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Velg en annen unik identifikator, siden «{$publicIdentifier}» eksisterer "
+"allerede for et annet element (utgave, artikkel, oppsett eller fil)."
+
+msgid "editor.reassign"
+msgstr "Oppnevn på nytt"
