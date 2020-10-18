@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-24 07:28+0000\n"
+"PO-Revision-Date: 2020-10-19 15:22+0000\n"
 "Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-users/fr/>\n"
@@ -39,3 +39,82 @@ msgstr "Importer et exporter les utilisateurs et utilisatrices"
 
 msgid "plugins.importexport.users.displayName"
 msgstr "Module XML utilisateurs et utilisatrices"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Veuillez téléverser un fichier sous « Importer » pour continuer."
+
+msgid "plugins.importexport.users.results"
+msgstr "Résultats"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Importation réussie. Les utilisatrices et utilisateurs dont les noms et "
+"adresses de courriel ne sont pas déjà utilisés ont été importés, ainsi que "
+"les groupes d'utilisatrices et d'utilisateurs associés."
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Impossible d'écrire dans le fichier « {$fileName} »."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Des erreurs se sont produites lors de l'exportation"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Tout exporter"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exporter par rôle"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Exporter les utilisatrices et utilisateurs"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Un chemin d'accès de revue inconnu « {$journalPath} » a été indiqué."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Impossible d'utiliser les mots de passe hachés avec {$importHash} ; OJS est "
+"configuré pour utiliser {$ojsHash}. Si vous continuez, vous devrez "
+"réinitialiser les mots de passe des utilisatrices et utilisateurs importés."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Avertissement"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"Confirmez qu'il s'agit bien des utilisateurs ou utilisatrices que vous "
+"souhaitez importer dans le système"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Des erreurs se sont produites lors de l'importation"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr ""
+"Les utilisatrices ou utilisateurs suivants ont été importés avec succès dans "
+"le système"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr ""
+"Continuer à importer d'autres utilisatrices ou utilisateurs si une erreur se "
+"produit."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Envoyer un courriel de notification contenant leur nom et leur mot de passe "
+"à chaque utilisatrice ou utilisateur importé."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Fichier de données de l'utilisateur ou utilisatrice"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Sélectionner un fichier de données XML contenant les renseignements à propos "
+"des  utilisatrices et utilisateurs pour l'importation dans cette revue. "
+"Voyez l'aide de la revue pour les renseignements sur le format de ce "
+"fichier.<br/><br/>Notez que si le fichier importé contient un ou plusieurs "
+"noms d'utilisatrices et utilisateurs  ou adresses de courriel qui existent "
+"déjà dans le système, les données pour ces utilisatrices et utilisateurs ne "
+"seront pas importées et tous les nouveaux rôles à créer seront assignés aux "
+"utilisatrices et utilisateurs existants."
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importer des utilisateurs ou utilisatrices"
