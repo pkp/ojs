@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:05:36+00:00\n"
+"PO-Revision-Date: 2020-10-19 15:22+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-crossref/nb_NO/>\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:05:36+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:05:36+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.importexport.crossref.displayName"
 msgstr "Programutvidelse for eksport til CrossRef XML"
@@ -29,3 +32,124 @@ msgstr "Ingen utgave stemmer med den angitte utgave-ID'en \"{$issueId}\"."
 
 msgid "plugins.importexport.crossref.export.error.articleNotFound"
 msgstr "Ingen artikkel stemmer med den angitte artikkel-ID'en \"{$articleId}\"."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr ""
+"Artiklene er ikke valgt for opprettelse av DOI i programtillegget for DOIs "
+"offentlige identifikator, så det er ikke mulig å overføre eller eksportere i "
+"dette programtillegget."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr ""
+"Du har ikke konfigurert et ISSN for tidsskriftet. Du må legge til et ISSN "
+"under <a href=\"{$journalSettingsUrl}\" target=\"_blank\">siden med "
+"innstillinger for tidsskriftet</a>."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr ""
+"Registreringen var vellykket, men følgende advarsel ble gitt: '{$ param}'."
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr ""
+"Overføringen mislyktes. Serveren som skal registrere DOI meldte en feil: "
+"«{$param}»."
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "CrossRefs automatiske registrering"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Merk som aktiv"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Last ned XML"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Status overføring:</p>\n"
+"<ul>\n"
+"<li>Ikke overført: ingen forsøk på å overføre denne DOI-en.</li>\n"
+"<li>Innlevert: denne DOI-en har blitt innlevert for overføring.</li>\n"
+"<li>Overført: denne DOI-en har blitt overført til CrossRef, men er muligens "
+"ikke aktiv ennå.</li>\n"
+"<li>Active: denne DOI-en er overført og fungerer som den skal.</li>\n"
+"<li>Mislyktes: overføringen av DOI mislyktes.</li>\n"
+"<li>Merket aktiv: DOI-en ble manuelt markert som aktiv.</li>\n"
+"</ul>\n"
+"<p>Bare statusen på det siste overføringsforsøket vises.</p>\n"
+"<p>Dersom en overføring mislyktes, løs problemet og prøv å registrere DOI "
+"igjen.</p>"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Lever inn"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Markert aktiv"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Aktiv"
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Mislyktes"
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr ""
+"Merk: Bare utgaver (ikke artiklene) vil bli vurdert for eksport/registrering "
+"her."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr ""
+"Valider XML. Bruk dette XML-nedlastingsalternativet for manuell DOI-"
+"registrering."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr ""
+"Bruk CrossRef sjekk API for overføringen av DOI. Husk å fjerne denne "
+"valgmuligheten for produksjonsfasen."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS vil overføre de oppnevnte DOI-ene automatisk til CrossRef. Merk at det "
+"kan ta litt tid etter publiseringen før alt er klart. Du kan velge alle "
+"uregistrerte DOI-er."
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Legg inn brukernavnet du fikk fra CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Brukernavn"
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr ""
+"Dersom du ønsker å bruke dette programtillegget for å registrere DOI direkte "
+"med CrossRef, må du ha et brukernavn og passord. Dette finner du hos <a href="
+"\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>. Om du ikke har "
+"brukernavn og passord, kan du fremdeles eksportere til CrossRef XML-"
+"formatet, men du kan ikke registrere DOI med CrossRef i OJS."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Legg inn e-posten til den som overfører."
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Legg inn navnet på den som overfører."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "E-posten til den som overfører"
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Navnet på den som overfører"
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Du må legge inn informasjonen under for å ekportere til CrossRef:"
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr ""
+"Du har ikke konfigurert en utgiver. Du må legge til en utgiverinstitusjon "
+"under <a href=\"{$journalSettingsUrl}\" target=\"_blank\">siden med "
+"innstillinger for tidsskriftet</a>."
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Alle programtilleggkravene er møtt."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Krav"
