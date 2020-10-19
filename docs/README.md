@@ -176,14 +176,14 @@ interpreter installed on your server.
 * See [lib/pkp/lib/libraries.txt](../lib/pkp/lib/libraries.txt) for a list of third-party libraries
 	used by OJS.
 
-* OJS supports the legacy GeoLiteCite database to approximate geolocation
+* OJS supports the legacy GeoLite City database to approximate geolocation
 	information for usage statistics. If you would like to use this optional
-	functionality, you can download the database from MaxMind at:
-	http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+	functionality, you can download the database from here:
+	https://download.cnet.com/MaxMind-GeoLite-City-Database/3000-10254_4-10506960.html
 	You will need to decompress the file and place "GeoLiteCity.dat" into
 	the `plugins/generic/usageStats` directory. A separate license agreement
 	is required for this use of this database. For details, see:
-	https://dev.maxmind.com/geoip/legacy/geolite/
+	https://support.maxmind.com/geolite-legacy-discontinuation-notice/
 
 ## Contact/Support
 
