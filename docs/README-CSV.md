@@ -17,8 +17,8 @@ when importing CSV files.
 One workaround for this limitation is to use software that correctly processes
 CSV files.
 
-For example, OpenOffice can be used to import a CSV file that contains newlines
-in data fields. The resulting spreadsheet can either be used as is or OpenOffice
+For example, LibreOffice can be used to import a CSV file that contains newlines
+in data fields. The resulting spreadsheet can either be used as is or LibreOffice
 can be used to save the file in Microsoft Excel format (e.g. .xls). The file
 can then be opened for editing in Microsoft Excel.
 
@@ -27,10 +27,10 @@ resulting spreadsheet may be used as is or Google Docs may be used to save the
 file in Microsoft Excel format for editing in Microsoft Excel.
 
 
-## OpenOffice
+## LibreOffice
 
-OpenOffice may be obtained free of charge for Windows, Mac, and Linux:
-http://www.openoffice.org
+LibreOffice may be obtained free of charge for Windows, Mac, and Linux:
+https://www.libreoffice.org/
 
 Alternately, Mac users can use NeoOffice, an OpenOffice port for the Mac:
 http://www.neooffice.org
