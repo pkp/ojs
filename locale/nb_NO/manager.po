@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
+"PO-Revision-Date: 2020-10-19 15:21+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"manager/nb_NO/>\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:28+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr "Er du sikker på at du vil tilbakestille alle e-postmaler i dette tidsskriftet? Du vil miste alle tilpasninger du har gjort."
@@ -186,7 +189,7 @@ msgid "manager.setup.announcementsIntroduction.description"
 msgstr "Skriv inn øvrig informasjon som skal vises til lesere på oppslagstavlen."
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(Vil bli vist i Om tidsskriftet)"
+msgstr "(Vil bli vist i «Om» tidsskriftet) "
 
 msgid "manager.setup.copyrightNotice.description"
 msgstr "Krev at forfatterene aksepterer erklæringen om copyright i løpet av innsendingsprosessen."
@@ -258,7 +261,12 @@ msgid "manager.setup.emailBounceAddress.description"
 msgstr "Alle e-poster som ikke kan leveres, vil utløse en feilmelding som sendes til denne adressen."
 
 msgid "manager.setup.emailBounceAddress.disabled"
-msgstr "<strong>NB:</strong> For å aktivere denne valgmuligheten, må nettstedsadministratoren slå på <tt>allow_envelope_sender</tt> valgmuligheten i OJS konfigurasjonsfilen. Ytterligere serverkonfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen."
+msgstr ""
+"<strong>NB:</strong> For å aktivere denne valgmuligheten, må "
+"nettstedsadministratoren slå på <code>allow_envelope_sender</code> "
+"valgmuligheten i OJS konfigurasjonsfilen. Ytterligere serverkonfigurasjon "
+"kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig "
+"å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen."
 
 msgid "manager.setup.emails"
 msgstr "E-post identifikasjon"
@@ -270,10 +278,10 @@ msgid "manager.setup.emailSignature.description"
 msgstr "De forberedte e-postene som blir sendt av systemet på vegne av tidsskriftet kommer til å ha følgende signatur nederst. Selve meldingstekstene til de forberedte e-postene er tilgjengelig for redigering under Tidsskriftadministrasjon."
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Tillat redaksjonsledere å legge til tidsskriftsoppslag."
+msgstr "Aktiver mulighet for å lage oppslag"
 
 msgid "manager.setup.enableUserRegistration"
-msgstr "Tillat brukere å registrere selv på tidsskriftets nettsted som:"
+msgstr "La brukere registrere seg på tidsskriftets nettsted."
 
 msgid "manager.setup.focusAndScope"
 msgstr "Hovedfokus og spennvidde"
@@ -435,13 +443,22 @@ msgid "manager.setup.lists"
 msgstr "Lister"
 
 msgid "manager.setup.lockssEnable"
-msgstr "Tillat LOCKSS å lagre og distribuere tidsskriftinnholdet hos tilsluttete bibliotek via et LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Utgivermanifest</a>. En LOCKSS-lisens vil i så fall bli vist i 'Om' tidsskriftet, under Arkivering:"
+msgstr ""
+"La LOCKSS lagre og distribuere tidsskriftinnholdet hos tilsluttede bibliotek "
+"via LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a>"
+". En LOCKSS-lisens vil i så fall bli vist i «Om» tidsskriftet, under "
+"«Arkivering»."
 
 msgid "manager.setup.lockssLicenses"
 msgstr "Se <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">andre versjoner av LOCKSS-lisensen</a>."
 
 msgid "manager.setup.lockssRegister"
-msgstr "Identifiser 6-10 bibliotek som vil registrere og cache tidsskriftet. Du kan for eksempel henvende deg til institusjoner hvor redaktører eller rådsmedlemmer arbeider og/eller institusjoner som allerede deltar i LOCKSS. Se <a href=\"http://www.lockss.org/community/\" target=\"_blank\">tilsluttete bibliotek</a>. Bruk de forberedte invitasjonene til (i) <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">bibliotek tilsluttet LOCKSS</a> eller (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">bibliotek som ennå ikke er tilsluttet LOCKSS</a>."
+msgstr ""
+"Identifiser 6-10 bibliotek som kan registrere og cache tidsskriftet. Du kan "
+"f.eks. henvende deg til institusjoner hvor redaktører eller styremedlemmer "
+"arbeider og/eller institusjoner som allerede deltar i LOCKSS. Se <a href=\""
+"http://www.lockss.org/community/\" target=\"_blank\">tilsluttede bibliotek "
+"her</a>."
 
 msgid "manager.setup.look"
 msgstr "Utseendet"
@@ -501,7 +518,10 @@ msgid "manager.setup.notifications.description"
 msgstr "Når en forfatter har gjennomført innsendingsprosessen, får han automatisk tilsendt en e-post med bekreftelse og takk for bidraget (denne e-posten kan sees og redigeres i Forberedte e-poster). I tillegg kan kopi av samme e-post sendes til følgende:"
 
 msgid "manager.setup.notifications.submissionAckDisabled"
-msgstr "<strong>NB:</strong> Automatisk e-post med bekreftelse av manuskriptinnsending er for øyeblikket slått av. For å bruke denne funksjonen må du slå på SUBMISSION_ACK e-posten i <a class=\"action\" href=\"{$preparedEmailsUrl}\">Forberedte e-poster</a>."
+msgstr ""
+"<strong>NB:</strong> Automatisk e-post med bekreftelse av innlevering er for "
+"øyeblikket slått av. For å bruke denne funksjonen, må du slå på "
+"SUBMISSION_ACK i listen over e-postmaler."
 
 msgid "manager.setup.noUseCopyeditors"
 msgstr "Manusredigering vil bli utført av redaktøren."
@@ -627,7 +647,12 @@ msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "Automatiserte e-post purringer (tilgjengelig i OJS's default e-poster) kan sendes til fagkonsulenter ved to anledninger (redaktøren kan i tillegg sende e-post direkte til fagkonsulenten)"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
-msgstr "<strong>NB:</strong> For å aktivere disse valgmulighetene, må nettstedsadministratoren slå på <tt>scheduled_tasks</tt>-valgmuligheten i OJS-konfigurasjonsfilen. Ytterligere serverkonfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen."
+msgstr ""
+"<strong>Merk</strong> For å aktivere automatiske epostvarsler, må "
+"nettstedsadministratoren slå på valgmuligheten <tt>planlagte_oppgaver</tt> i "
+"OJS-konfigurasjonsfilen. Annen serverkonfigurasjon kan være nødvendig for å "
+"støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte "
+"servere), som oppgitt i OJS-dokumentasjonen."
 
 msgid "manager.setup.reviewOptions.noteOnModification"
 msgstr "Kan endres i løpet av den redaksjonelle prosessen."
@@ -657,7 +682,7 @@ msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Fagkonsulenttilgang"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Slå på ettklikks fagkonsulenttilgang."
+msgstr "Slå på ettklikks tilgang for fagfellene"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>NB:</strong> E-post-invitasjonen til fagkonsulenter kommer til å inneholde en spesiell URL som binger den inviterte fagkonsulenten direkte til fagvurderingssiden for det aktuelle manuskriptet (tilgang til andre sider vil likevel kreve innlogging).  Med denne valgmuligheten slått på, kan ikke redaktørene endre e-postadresser eller legge til kopier eller blindkopier ved bestilling av fagvurderinger (av sikkerhetsgrunner)."
@@ -693,7 +718,10 @@ msgid "manager.setup.searchEngineIndexing"
 msgstr "Søkermotorindeksering"
 
 msgid "manager.setup.searchEngineIndexing.description"
-msgstr "For at brukere av søkemotorer skal finne dette tidsskriftet, bør du gi en kort beskrivelse av tidsskriftet, og relevante nøkkelord (atskilt med semikolon)."
+msgstr ""
+"For at brukere av søkemotorer skal finne dette tidsskriftet, bør du gi en "
+"kort beskrivelse av tidsskriftet. Du oppfordres til å sende inn <a href=\""
+"{$sitemapUrl}\" target=\"_blank\">sitemap</a>."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Tidsskriftseksjoner og seksjonsredaktører"
@@ -993,7 +1021,10 @@ msgid "manager.subscriptions.form.domain"
 msgstr "Domene"
 
 msgid "manager.subscriptions.form.domainInstructions"
-msgstr "Skriv inn et domene hvis abonnementstypen er for institusjoner. Hvis et domene er skrevet inn her, er IP-range valgfritt. Gyldige verdier er domenenavn (for eks. lib.sfu.ca)."
+msgstr ""
+"Skriv inn et domene hvis abonnementstypen er for institusjoner. Hvis et "
+"domene er skrevet inn her, er IP-område valgfritt. <br />Gyldige verdier er "
+"domenenavn (f.eks. lib.sfu.ca)."
 
 msgid "manager.subscriptions.form.domainIPRangeRequired"
 msgstr "Den valgte abonnementstypen krever et domene og/eller et IP-områe for abonnementsautentisering."
@@ -1005,7 +1036,11 @@ msgid "manager.subscriptions.form.ipRange"
 msgstr "IP-område"
 
 msgid "manager.subscriptions.form.ipRangeInstructions"
-msgstr "Skriv inn et IP-område hvis abonnementstypen er for institusjoner. Hvis et IP-område er skrevet inn her, er domene valgfritt. Gyldige verdier kan være en IP (f.eks. 142.58.103.1), et CIDR IP-område (for eks. 142.58.100.0/24), en IP-range (f.eks. 142.58.103.1 - 142.58.103.4), et IP-område med '*' (f.eks. 142.58.103.*), eller hvilken som helst kombinasjon av disse, atskilt med en ';' (f.eks. 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*)"
+msgstr ""
+"Hvis et IP-område er skrevet inn her, er domene valgfritt.<br />Gyldige "
+"verdier kan være en IP (f.eks. 142.58.103.1),  et IP-område (f.eks. "
+"142.58.103.1 - 142.58.103.4), et IP-område med jokertegnet «*» (f.eks. "
+"142.58.103.*) eller et CIDR IP-område (f.eks. 142.58.100.0/24)."
 
 msgid "manager.subscriptions.form.ipRangeValid"
 msgstr "Vennligst skriv inn et gyldig IP-område."
@@ -1056,7 +1091,7 @@ msgid "manager.subscriptions.ipRange"
 msgstr "IP-område"
 
 msgid "manager.subscriptions.noneCreated"
-msgstr "Ingen abonnement er opprettet."
+msgstr "Ingen abonnement er opprettet"
 
 msgid "manager.subscriptions.select"
 msgstr "Verve abonnent"
@@ -1143,13 +1178,15 @@ msgid "manager.subscriptionTypes.form.formatValid"
 msgstr "Vennligst velg et gyldig abonnementstypeformat."
 
 msgid "manager.subscriptionTypes.form.institutional"
-msgstr "Institusjonell (brukere må valideres via domene eller IP-adresse)."
+msgstr "Institusjonell (brukere må valideres via domene eller IP-adresse)"
 
 msgid "manager.subscriptionTypes.form.institutionalValid"
 msgstr "Vennligst bruk avkrysningsboksen."
 
 msgid "manager.subscriptionTypes.form.membership"
-msgstr "Abonnenter må være medlemmer av et selskap eller en organisasjon."
+msgstr ""
+"Abonnenter krever medlemsopplysninger (f.eks av en forening, organisasjon "
+"e.l.)"
 
 msgid "manager.subscriptionTypes.form.membershipValid"
 msgstr "Vennligst bruk avkrysningsboksen."
@@ -1236,7 +1273,8 @@ msgid "manager.payment.generalFees"
 msgstr "Standardbetaling"
 
 msgid "manager.payment.generalFeesDescription"
-msgstr "Organisasjonsmedlemskap vil vises i 'OM' tidsskriftet under 'Retningslinjer', og donasjonslenken vil vises i sidespalten."
+msgstr ""
+"Organisasjonsmedlemskap vil vises i «Om» tidsskriftet under «Retningslinjer»."
 
 msgid "manager.payment.generalOptions"
 msgstr "Generelle alternativer"
@@ -1299,7 +1337,10 @@ msgid "manager.payment.readerFees"
 msgstr "Leserbetaling"
 
 msgid "manager.payment.readerFeesDescription"
-msgstr "De valgte alternativene med beskrivelse og priser vil vises både i 'Om' tidsskriftet, og når det kreves betaling. (Prisene og beskrivelsene kan redigeres nedenfor.)"
+msgstr ""
+"De valgte alternativene med beskrivelse og priser vil vises både i «Om» "
+"tidsskriftet og når det kreves betaling. (Prisene og beskrivelsene kan "
+"redigeres nedenfor)."
 
 msgid "manager.payment.records"
 msgstr "Betalingsoversikt"
@@ -1374,7 +1415,7 @@ msgid "manager.setup.journalLogo.altText"
 msgstr "Tidsskriftlogo"
 
 msgid "manager.setup.journalTheme"
-msgstr "Tidsskriftnettsidenes designtema."
+msgstr "Tidsskriftsutseende"
 
 msgid "manager.setup.notifyAllAuthorsOnDecision"
 msgstr "Når e-postfunksjonen 'Send beskjed til forfatter' brukes skal e-posten sendes til alle medforfattere, ikke bare til den forfatteren som sendte inn manuskriptet."
@@ -1569,7 +1610,9 @@ msgid "manager.setup.historyDescription"
 msgstr "Denne teksten vil vises i \"Om\"-avsnittet av tidsskriftets nettsted, og kan benyttes til å beskriver endringer i navn, redaksjon og annet som er relevant for tidsskriftets publiseringshistorie."
 
 msgid "manager.sections.wordCountInstructions"
-msgstr "Begrens antall ord i abstrakt i denne delen av tidsskriftet til (0 betyr ingen begrensning):"
+msgstr ""
+"Begrens antall ord i sammendrag i denne delen av tidsskriftet til (0 betyr "
+"ingen begrensning)"
 
 msgid "manager.setup.copyrightNoticeDescription"
 msgstr "Opphavsrettserklæringen som legges inn nedenfor vil bli synlig i \"om tidsskriftet\" og i metadataene for hver publisert artikkel/tilsv. Selv om det det er opp til tidsskriftet å inngå opphavsrettsavtale med forfattere, anbefaler The Public Knowledge Project å bruke en <a href=\"http://creativecommons.org\" target=\"_new\" class=\"action\">Creative Commons</a> lisens. For dette formål finnes det et <a href=\"{$sampleCopyrightWordingUrl}\" target=\"_new\" class=\"action\">forslag til opphavsretterklæring</a> som kan klippes og limes inn nedenfor for tidsskrifter som (a) tilbyr open access, (b) tilbyr forsinket open access, eller (c) ikke tilbyr open access."
@@ -1653,7 +1696,7 @@ msgid "manager.subscriptions.form.institutionName"
 msgstr "Institusjonsnavn"
 
 msgid "manager.subscriptions.form.institutionNameRequired"
-msgstr "Oppgi et institusjonsnavn"
+msgstr "Oppgi et institusjonsnavn."
 
 msgid "manager.subscriptions.form.institutionMailingAddress"
 msgstr "Postadresse"
@@ -1770,7 +1813,9 @@ msgid "grid.action.addSection"
 msgstr "Legg til seksjon"
 
 msgid "manager.setup.section.description"
-msgstr "Artikler i publiserte tidsskriftsnummer er organisert i seksjoner, vanligvis etter tema eller innholdstype (f.eks. vitenskapelige artikler, vitenskapelige oversiktsartikler osv.)"
+msgstr ""
+"Artiklene i publiserte utgaver av et tidsskrift er organisert i seksjoner, "
+"vanligvis etter tema eller type (f.eks. oversiktsartikler, forskning)."
 
 msgid "settings.roles.gridDescription"
 msgstr "Roller er grupper av tidsskriftsbrukere  som er gitt ulikt tilgangsnivå og knyttet til ulike arbeidsflyter i tidsskriftet. Det er fem ulike tilgangsnivå: Tidsskriftsadministratorer har tilgang til alt i tidsskriftet (alt innhold og alle innstillinger). Seksjonsredaktører har full tilgang til alt innhold de er blitt tildelt. Tidsskriftsassistenter har begrenset tilgang til alle manuskript som en redaktør har tildelt dem. Fagfeller kan se og arbeide med manuskriptene som de skal vurdere. Forfattere kan se og interagere med en begrenset mengde informasjon knyttet til deres manuskript. I tillegg er det fem ulike trinn som roller kan bli gitt tilgang til: Manuskriptinnsending, Intern fagfellevurdering, Fagfellevurdering, Redaksjonelt og Produksjon."
@@ -1791,7 +1836,9 @@ msgid "manager.setup.resetPermissions"
 msgstr "Tilbakestill artikkelrettigheter"
 
 msgid "manager.setup.resetPermissions.confirm"
-msgstr "Er du sikker på at du ønsker å tilbakestille rettighetsinformasjon som er knyttet til artikler?"
+msgstr ""
+"Er du sikker på at du vil tilbakestille data om rettighetene som allerede er "
+"knyttet til artiklene? Denne handlingen kan ikke angres."
 
 msgid "grid.genres.title.short"
 msgstr "Komponenter"
@@ -1806,7 +1853,15 @@ msgid "manager.setup.useThumbnail"
 msgstr "Miniatyrbilde"
 
 msgid "manager.statistics.defaultMetricDescription"
-msgstr "Tidsskriftet er konfigurert til å lagre mer enn én type brukerstatistikk. Brukerstatistikk vil bli vist i flere kontekster. Det er tilfeller der en enkelt brukerstatistikk må brukes, f.eks. for å vise en ordnet liste over de mest brukte artiklene eller for å rangere søkeresultat. Vennligst velg en av de konfigurerte statistikkene som standard."
+msgstr ""
+"\n"
+"\t\tDin {$contextObjectName} er konfigurert til å registrere mer enn ett mål "
+"på bruk. Brukerstatistikken vil bli vist i flere sammenhenger.\n"
+"\t\tI noen tilfeller vil ett enkelt statistisk mål må brukes, f.eks. for å "
+"vise en ordnet liste over de mest brukte innleveringene eller til å rangere "
+"søkeresultater. Velg ett av de\n"
+"\t\tkonfigurerte målene som standard.\n"
+"\t"
 
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Nedlasting av artikkelfil"
@@ -1851,7 +1906,7 @@ msgid "plugins.importexport.common.error.DOIsNotAvailable"
 msgstr "For å bruke denne programutvidelsen vennligst gå til \"Programutvidelser for offentlige identifikatorer\", slå på og konfigurer DOI-programutvidelsen og spesifiser et gyldig DOI-prefiks."
 
 msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr "Programutvidelsen er ikke ferdig satt opp"
+msgstr "Programtillegget er ikke ferdig satt opp."
 
 msgid "plugins.importexport.common.error.noDOIContentObjects"
 msgstr "Ingen publiserte objekt er valgt for DOI-tildeling i DOI-programutvidelsen, så det er ingen deponerings- eller eksportmulighet i denne programutvidelsen."
@@ -1890,7 +1945,7 @@ msgid "plugins.importexport.common.action.register"
 msgstr "Registrer"
 
 msgid "plugins.importexport.common.error.noObjectsSelected"
-msgstr "Ingen objekt er valgt"
+msgstr "Ingen objekt valgt."
 
 msgid "plugins.importexport.common.error.validation"
 msgstr "Kunne ikke konvertere de valgte objektene."
@@ -1918,3 +1973,231 @@ msgstr "Den spesifiserte tidsskriftsstien \"{$journalPath}\" eksisterer ikke."
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "De spesifiserte objekteter ble ikke funnet."
+
+msgid "stats.publications.galleys"
+msgstr "Filer"
+
+msgid "stats.publications.abstracts"
+msgstr "Abstrakter"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} av {$total} artikler"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Totalt antall filvisninger etter dato"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Totalt antall sammendragsvisninger etter dato"
+
+msgid "stats.publications.none"
+msgstr ""
+"Ingen artikler med bruksstatistikk som samsvarer med disse parameterne ble "
+"funnet."
+
+msgid "stats.publications.details"
+msgstr "Artikkelopplysninger"
+
+msgid "stats.publicationStats"
+msgstr "Artikkelstatistikk"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Filen {$param} kan ikke leses."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Valider XML før eksport og registrering."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Artikkeltillatelsene ble tilbakestilt."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Erklæring om opphavsrett og lisensinformasjon vil bli permanent knyttet til "
+"publisert materiale. Det betyr at data ikke vil forandres dersom "
+"tidsskriftet endrer retningslinjer for nye innleveringer. For å "
+"tilbakestille informasjonen allerede lagt ved det publiserte materialet, "
+"bruk knappen under."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Denne lenken vil bare vises når en gjest er logget inn."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Lenk til en side som beskriver gjestens gjeldende og tidligere abonnementer."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Lenke til en side som beskriver abonnementene dere tilbyr."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Dette er en abonnementstype som ikke utløper; ikke spesifiser en sluttdato."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Dette er en abonnementstype som ikke utløper; ikke angi en startdato."
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Er du sikker på at du vil fornye dette abonnementet?"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Send e-post til abonnenter om abonnement som snart løper ut."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Send e-post til abonnenter om abonnement som snart løper ut."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Send e-post til abonnenter om abonnement som har løpt ut."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Send e-post til abonnenter om abonnement som har løpt ut"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} uker"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} måneder"
+
+msgid "manager.setup.userAccess.success"
+msgstr "Informasjon om brukertilgang for dettee tidsskriftet er oppdatert."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Gi metadata for tredjeparts indekseringstjenester gjennom <a href=\""
+"https://www.openarchives.org/\"> Open Archives Initiative </a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Aktiver OAI"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Se artikkelinnhold"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Nettstedstilgang"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Gi en kort beskrivelse (50-300 tegn) av tidsskriftet som søkemotorene kan "
+"presentere når tidsskriftet vises blant søkeresultatene."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Innstillingene knyttet til søkemotorindeksen er oppdatert."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Inkluder en sikker lenke i e-postinvitasjonen til anmeldere."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr ""
+"Fagfellene vil få tilgang til innleveringen bare etter å ha akseptert "
+"oppdraget"
+
+msgid "manager.setup.publishing"
+msgstr "Publiseringsopplysninger"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Erklæringen om vern av personopplysninger har blitt oppdatert."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Begrens antallet lenker som skal vises på hver side i en liste, før resten "
+"blir vist på påfølgende sider."
+
+msgid "manager.setup.masthead.success"
+msgstr "Tidsskriftets kolofonopplysninger hat blitt oppdatert."
+
+msgid "manager.setup.otherLockss"
+msgstr "Alternative arkivvalg"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKPs Preservation Network (PN) gir gratis bevaringstjenester for ethvert OJS-"
+"tidsskrift som oppfyller noen grunnleggene kriterier. Programtillegget PKP "
+"PN for OJS 3 er under utvikling og vil snart bli tilgjengelig i listen over "
+"programtillegg."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Klikk på lenken til <button>innstillnger</button> for å akseptere kriteriene "
+"for bruk av PKSs PN."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKPs Preservation Network (PN) gir gratis bevaringstjenester for ethvert OJS-"
+"tidsskrift som oppfyller noen grunnleggene kriterier."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Programtillegget PKP PN er slått på"
+
+msgid "manager.setup.lists.success"
+msgstr "Tidsskriftets listeinnstillinger har blitt oppdatert."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Gi en kort beskrivelse av tidsskriftet ditt og identifiser redaktører, "
+"tidsskriftsansvarlige og andre medlemmer av redaksjonen din."
+
+msgid "manager.setup.keyInfo"
+msgstr "Nøkkelinformasjon"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Begrens antall oppføringer (for eksempel innleveringer, brukere eller "
+"redigeringsoppgaver) som skal vises i en liste på én nettside, før de resten "
+"av oppføringene vises på en annen side."
+
+msgid "manager.setup.information.success"
+msgstr "Tidsskriftsinformasjonen har blitt oppdatert."
+
+msgid "manager.setup.identity"
+msgstr "Tidsskriftsidentitet"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Hvor mange oppslag skal vises på hovedsiden. La dette være tomt hvis du ikke "
+"ønsker å vise noen."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Vis på hovedsiden"
+
+msgid "manager.setup.contact.success"
+msgstr "Tidsskriftets kontaktopplysninger har blitt oppdatert."
+
+msgid "manager.setup.archiving.success"
+msgstr "Arkiveringsopplysningene til tidsskriftet har blitt oppdatert."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Annen informasjon"
+
+msgid "manager.setup.announcements.success"
+msgstr "Oppslagsinnstillingene har blitt oppdatert."
+
+msgid "manager.paymentTypes"
+msgstr "Betalingstyper"
+
+msgid "manager.payment.success"
+msgstr "Betalingsinnsillingene har blitt oppdatert."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Er du sikker på at du vil slette dette abonnementet?"
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Publiseringsopplysningene har blitt oppdatert."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Publiseringsform"
+
+msgid "manager.distribution.publication"
+msgstr "Publikasjon"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Bruk artikkelens publiseringsdato"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Bruk nummerets publiseringsdato"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Velg hvordan du skal velge en standard copyrightdato for en artikkel. Denne "
+"standardinnstillingen kan overstyres fra ved publisering. Hvis du har valgt "
+"å publisere artiklene regelmessig \"publiser fortløpende\", ikke bruk "
+"utgivelsens utgivelsesdato."
