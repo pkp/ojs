@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
+"PO-Revision-Date: 2020-10-19 15:21+0000\n"
+"Last-Translator: Hans Spijker <hans.spijker@huygens.knaw.nl>\n"
+"Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/editor/nl/>\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:28+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
 msgstr "Homepage Redacteur"
@@ -60,7 +62,10 @@ msgid "editor.submissionReview.emailWillArchive"
 msgstr "Deze inzending wordt gearchiveerd nadat de bevestigings-e-mail naar de auteur is verstuurd of de Sla e-mail over functie is gekozen."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Gebruik de Bericht aan de auteur-link om de auteur van de beslissing op de hoogte te stellen en selecteer de te versturen versie, alvorens een inzending maar de tekstredactie te sturen,"
+msgstr ""
+"Voordat u een inzending naar Eindredactie verzendt, gebruikt u de link "
+"Auteur Informeren om de auteur op de hoogte te stellen van de beslissing en "
+"de te verzenden versie te selecteren."
 
 msgid "editor.notifyUsers"
 msgstr "Gebruikers inlichten"
@@ -135,7 +140,9 @@ msgid "editor.issues.titleRequired"
 msgstr "De titel voor het nummer is verplicht."
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "Nummeridentificatie is verplicht. Kies minimaal één van de nummeridentificatie opties"
+msgstr ""
+"Nummeridentificatie is verplicht. Kies minimaal één van de "
+"nummeridentificatie opties."
 
 msgid "editor.issues.issueIdentification"
 msgstr "Identificatie van het nummer"
@@ -285,16 +292,16 @@ msgid "editor.issues.issueGalleysDescription"
 msgstr "Publiceer proeven met de inhoud van het hele nummer."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Er zijn geen nummer-proeven gepubliceerd"
+msgstr "Er zijn geen proeven van het nummer gepubliceerd."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "een nummer-proef label is verplicht"
+msgstr "Een label van de proef van het nummer is verplicht."
 
 msgid "editor.issues.galleyLocaleRequired"
 msgstr "Een nummer-proef taalkode is verplicht."
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Publieke identificatie van de nummer-proef bestaat al"
+msgstr "Publieke identificatie van de nummer-proef bestaat al."
 
 msgid "editor.issues.backToIssueGalleys"
 msgstr "Terug naar de proeven van het nummer"
@@ -415,3 +422,15 @@ msgstr "De publieke identificatie '{$publicIdentifier}' bestaat al voor een ande
 
 msgid "editor.article.coverImage"
 msgstr "Omslagafbeelding"
+
+msgid "editor.article.editMetadata"
+msgstr "Bewerk metadata van deze versie"
+
+msgid "editor.article.viewMetadata"
+msgstr "Toon metadata van deze versie"
+
+msgid "editor.article.publishVersion"
+msgstr "Publiceer versie"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Geplande publicatie weergeven"
