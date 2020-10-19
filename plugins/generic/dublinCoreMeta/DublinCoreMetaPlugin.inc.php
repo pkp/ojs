@@ -94,7 +94,6 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 
 		$i=0;
 		if (is_a($article, 'Submission')) foreach($article->getGalleys() as $galley) {
-			if (is_a($galley, 'SupplementaryFile')) continue;
 			$templateMgr->addHeader('dublinCoreFormat' . $i++, '<meta name="DC.Format" scheme="IMT" content="' . htmlspecialchars($galley->getFileType()) . '"/>');
 		}
 

@@ -83,11 +83,9 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 		self::assertRegExp('/##plugins.importexport.native.import.error.duplicatePubId##/', $result);
 
 		// Delete inserted article files from the filesystem.
-		$request = Application::get()->getRequest();
-		$context = $request->getContext();
-		import('lib.pkp.classes.file.SubmissionFileManager');
-		$submissionFileManager = new SubmissionFileManager($context->getId(), $articleId);
-		$submissionFileManager->rmtree($submissionFileManager->getBasePath());
+		$contextId = Application::get()->getRequest()->getContext()->getId();
+		$submissionDir = Services::get('submissionFile')->getSubmissionDir($contextId, $articleId);
+		Services::get('file')->fs->delete($submissionDir);
 	}
 
 	public function testNativeDoiImportWithErrors() {

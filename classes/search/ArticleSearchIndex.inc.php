@@ -86,27 +86,22 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *
 	 * @param $articleId int
 	 * @param $type int
-	 * @param $fileId int
+	 * @param $submissionFile SubmissionFile
 	 */
-	public function submissionFileChanged($articleId, $type, $fileId) {
+	public function submissionFileChanged($articleId, $type, $submissionFile) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::submissionFileChanged',
-			array($articleId, $type, $fileId)
+			array($articleId, $type, $submissionFile->getId())
 		);
 
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-			$file = $submissionFileDao->getLatestRevision($fileId);
-			if (isset($file)) {
-				$parser = SearchFileParser::fromFile($file);
-			}
-
+			$parser = SearchFileParser::fromFile($submissionFile);
 			if (isset($parser) && $parser->open()) {
 				$searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
-				$objectId = $searchDao->insertObject($articleId, $type, $fileId);
+				$objectId = $searchDao->insertObject($articleId, $type, $submissionFile->getId());
 
 				$position = 0;
 				while(($text = $parser->read()) !== false) {
@@ -147,21 +142,12 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		if ($hookResult === false || is_null($hookResult)) {
 			$fileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $fileDao SubmissionFileDAO */
 			import('lib.pkp.classes.submission.SubmissionFile'); // Constants
-			// Index galley files
-			$files = $fileDao->getLatestRevisions(
-				$article->getId(), SUBMISSION_FILE_PROOF
-			);
-			foreach ($files as $file) {
-				if ($file->getFileId()) {
-					$this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $file->getFileId());
-					// Index dependent files associated with any galley files.
-					$dependentFiles = $fileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $article->getId(), SUBMISSION_FILE_DEPENDENT);
-					foreach ($dependentFiles as $depFile) {
-						if ($depFile->getFileId()) {
-							$this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $depFile->getFileId());
-						}
-					}
-				}
+			$submissionFilesIterator = Services::get('submissionFile')->getMany([
+				'submissionIds' => [$article->getId()],
+				'fileStages' => [SUBMISSION_FILE_PROOF],
+			]);
+			foreach ($submissionFilesIterator as $submissionFile) {
+				$this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
 			}
 		}
 	}

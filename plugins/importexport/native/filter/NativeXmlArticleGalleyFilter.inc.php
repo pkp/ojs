@@ -70,10 +70,8 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 		$addSubmissionFile = false;
 		if ($submissionFileRefNodes->length == 1) {
 			$fileNode = $submissionFileRefNodes->item(0);
-			$fileId = $fileNode->getAttribute('id');
-			$revisionId = $fileNode->getAttribute('revision');
-			$dbFileId = $deployment->getFileDBId($fileId, $revisionId);
-			if ($dbFileId) $addSubmissionFile = true;
+			$newSubmissionFileId = $deployment->getSubmissionFileDBId($fileNode->getAttribute('id'));
+			if ($newSubmissionFileId) $addSubmissionFile = true;
 		}
 		$representation = parent::handleElement($node);
 
@@ -88,16 +86,20 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 		}
 
 		$representationDao = Application::getRepresentationDAO();
-		if ($addSubmissionFile) $representation->setFileId($dbFileId);
+		if ($addSubmissionFile) $representation->setFileId($newSubmissionFileId);
 		$representationDao->insertObject($representation);
 
 		if ($addSubmissionFile) {
 			// Update the submission file.
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-			$submissionFile = $submissionFileDao->getRevision($dbFileId, $revisionId);
-			$submissionFile->setAssocType(ASSOC_TYPE_REPRESENTATION);
-			$submissionFile->setAssocId($representation->getId());
-			$submissionFileDao->updateObject($submissionFile);
+			$submissionFile = Services::get('submissionFile')->get($newSubmissionFileId);
+			$submissionFile = Services::get('submissionFile')->edit(
+				$submissionFile,
+				[
+					'assocType' => ASSOC_TYPE_REPRESENTATION,
+					'assocId' => $representation->getId(),
+				],
+				Application::get()->getRequest()
+			);
 		}
 
 		// representation proof files

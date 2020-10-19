@@ -87,9 +87,6 @@ msgstr "Az összes exportálása"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Hiba történt az exportálás során"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Nem tud ebbe a fájlba írni \"{$fileName}\"."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "Az import sikeresen megtörtént. Felhasználók olyan felhasználónévvel és e-mail címmel, amelyek nincsenek használatban exportálva lettek, a kapcsolódó felhasználói csoportokkal együtt."
 

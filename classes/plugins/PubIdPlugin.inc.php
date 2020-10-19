@@ -213,7 +213,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 				if ($submissionFile) {
 					// %f - file id
-					$pubIdSuffix = PKPString::regexp_replace('/%f/', $submissionFile->getFileId(), $pubIdSuffix);
+					$pubIdSuffix = PKPString::regexp_replace('/%f/', $submissionFile->getId(), $pubIdSuffix);
 				}
 
 				break;
@@ -236,7 +236,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 				}
 
 				if ($submissionFile) {
-					$pubIdSuffix .= '.f' . $submissionFile->getFileId();
+					$pubIdSuffix .= '.f' . $submissionFile->getId();
 				}
 		}
 		if (empty($pubIdSuffix)) return null;
@@ -284,9 +284,13 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 							Application::getRepresentationDAO()->deletePubId($representation->getId(), $pubIdType);
 						}
 						if ($filePubIdEnabled) { // Does this option have to be enabled here for?
-							$articleProofFiles = $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $representation->getId(), SUBMISSION_FILE_PROOF);
-							foreach ($articleProofFiles as $articleProofFile) {
-								$submissionFileDao->deletePubId($articleProofFile->getFileId(), $pubIdType);
+							$articleProofFileIds = Services::get('submissionFile')->getIds([
+								'assocTypes' => [ASSOC_TYPE_REPRESENTATION],
+								'assocIds' => [$representation->getId()],
+								'fileStages' => [SUBMISSION_FILE_PROOF],
+							]);
+							foreach ($articleProofFileIds as $articleProofFileId) {
+								$submissionFileDao->deletePubId($articleProofFileId, $pubIdType);
 							}
 						}
 					}

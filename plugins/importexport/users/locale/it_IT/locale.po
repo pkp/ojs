@@ -89,9 +89,6 @@ msgstr "Esporta tutti"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Si sono presentati errori durante l'esportazione"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Non si può scrivere sul file \"{$fileName}\"."
-
 msgid "plugins.importexport.users.import.warning"
 msgstr "Attenzione"
 

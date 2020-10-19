@@ -1817,9 +1817,6 @@ msgstr "درخواست شماره نامعتبر!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "فایل ارسالی ویراستار نامعتبر است یا فایلی ارسال نشده است!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "لیست واحدهای پول (بارگذاری شده از فایل «\"{$filename}»)"
-
 msgid "grid.action.createContext"
 msgstr "ایجاد مجله جدید"
 

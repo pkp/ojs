@@ -2,14 +2,17 @@
 	"title": "Galley",
 	"description": "A galley representing a published file, such as a PDF or HTML file.",
 	"required": [
-		"fileId",
+		"submissionFileId",
 		"label",
 		"publicationId"
 	],
 	"properties": {
-		"fileId": {
+		"submissionFileId": {
 			"type": "integer",
-			"apiSummary": true
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
 		},
 		"dependentFiles": {
 			"type": "object",

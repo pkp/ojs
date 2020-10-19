@@ -1827,9 +1827,6 @@ msgstr "Snažíte se přistoupit k článku, který není součástí této sekc
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Špatný příspěvek redaktora, nebo příspěvek redaktora není vyžadován!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Nahraný seznam měn \"{$filename}\" z XML"
-
 msgid "context.current"
 msgstr "Aktuální časopis:"
 

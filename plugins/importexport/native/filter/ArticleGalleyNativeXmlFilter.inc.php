@@ -62,7 +62,7 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
 	function getFiles($representation) {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		$galleyFiles = array();
-		if ($representation->getFileId()) $galleyFiles = array($submissionFileDao->getLatestRevision($representation->getFileId()));
+		if ($representation->getFileId()) $galleyFiles = array(Services::get('submissionFile')->get($representation->getFileId()));
 		return $galleyFiles;
 	}
 }

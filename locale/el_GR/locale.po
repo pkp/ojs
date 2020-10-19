@@ -2028,9 +2028,6 @@ msgstr "Ζητήθηκε μη έγκυρο τεύχος!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Μη έγκυρη υποβολή Επιμελητή Κειμένου ή δεν έχει ζητηθεί υποβολή Επιμελητή Κειμένου!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Η λίστα νομισματικών μονάδων \"{$filename}\" φορτώθηκε από το αρχείο XML"
-
 msgid "grid.action.createContext"
 msgstr "Δημιουργία νέου περιοδικού"
 

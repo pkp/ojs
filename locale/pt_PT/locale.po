@@ -1488,9 +1488,6 @@ msgstr ""
 "A Decisão Editorial ({$decision}) para a submissão {$submissionId} foi "
 "registada por {$editorName}."
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Lista de moedas \"{$filename}\" do ficheiro XML"
-
 msgid "reader.subscriptionRequiredLoginText"
 msgstr "Subscrição exigida para acesso ao item. Para verificar a sua subscrição, aceda à revista."
 

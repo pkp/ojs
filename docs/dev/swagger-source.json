@@ -1,9 +1,9 @@
 {
 	"swagger": "2.0",
 	"info": {
-		"version": "3.2.x",
+		"version": "3.3.x",
 		"title": "Open Journal Systems - API Reference",
-		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for documentation on the platform's internals.\n\n**Breaking changes**\n* Major changes have been made to submission data to support versioning. All related endpoints have major changes. See the [release notebook](/dev/release-notebooks/en/3.2-release-notebook) for further information. \n* The `_parent` property has been removed from issue galleys.\n* The Author property, `isBrowseable`, was renamed to `includeInBrowse`.\n* The Author property, `isPrimaryContact`, was renamed to `primaryContact`.\n* The Submission property, `status`, was changed from an `object` to an `integer`. Please see documentation for more information.\n* The `/submissions/{submissionId}/galleys` endpoint was removed. Galley data is provided with each publication.",
+		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for documentation on the platform's internals.\n\n**Breaking changes since v3.2**\n* Submission files...",
 		"contact": {
 			"name": "Public Knowledge Project",
 			"url": "https://pkp.sfu.ca"
@@ -15,6 +15,15 @@
 	"tags": [
 		{
 			"name": "Submissions"
+		},
+		{
+			"name": "Submissions / Files"
+		},
+		{
+			"name": "Submissions / Participants"
+		},
+		{
+			"name": "Submissions / Publications"
 		},
 		{
 			"name": "Issues"
@@ -399,7 +408,7 @@
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					}
@@ -434,7 +443,7 @@
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					},
@@ -483,7 +492,7 @@
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					}
@@ -510,17 +519,256 @@
 				}
 			}
 		},
+		"/submissions/{submissionId}/files": {
+			"get": {
+				"tags": [
+					"Submissions / Files"
+				],
+				"summary": "Get the files for this submission.",
+				"description": "This will return all of a submission's files that the user is allowed to access, except review attachments and discussion files. A user is allowed to access different file stages depending on their stage assignment.\n* Managers, subeditors and assistants can access all file stages if they are assigned to the matching workflow stage. For example, an assistant assigned to the copyediting stage can access files in `SUBMISSION_FILE_COPYEDIT` and `SUBMISSION_FILE_FINAL`.\n* Authors are restricted to the `SUBMISSION_FILE_SUBMISSION`, `SUBMISSION_FILE_REVIEW_REVISION`, `SUBMISSION_FILE_COPYEDIT` and `SUBMISSION_FILE_PROOF` file stages. For example, an author with access to the copyediting stage will have access to `SUBMISSION_FILE_COPYEDIT` (copyedited files) but not `SUBMISSION_FILE_FINAL` (draft files).\n* Reviewers and readers are not allowed to access this endpoint.\n* Managers who are not assigned to the submission are allowed to access all file stages as though they are assigned to every workflow stage.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "fileStages",
+						"description": "Filter results by those submission files assigned to one or more file stage. One of the `SUBMISSION_FILE_` constants.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "reviewRoundIds",
+						"description": "Filter results by those submission files assigned to one or more review rounds.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "List of requested submission files.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/SubmissionFileSummary"
+							}
+						}
+					},
+					"403": {
+						"description": "You do not have permission to view the requested files.\n\n|Error Code|Description|\n|---|---|\n|`api.403.unauthorized`|You are not allowed to access files for this submission.|\n|`api.submissionFiles.403.unauthorizedFileStageId`|You are not allowed to access files in one or more of the `fileStages` requested.|\n|`api.submissionFiles.403.unauthorizedReviewRound`|You are not allowed to access files in one or more of the `reviewRoundIds` requested.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Submissions / Files"
+				],
+				"summary": "Create a new submission file.",
+				"description": "A user is allowed to upload to different file stages depending on their stage assignments. See the description for `GET /submission/{submissionId}/files` above. Once a submission has been completed, authors are no longer allowed to upload to `SUBMISSION_FILE_SUBMISSION`. Authors are not allowed to upload to `SUBMISSION_FILE_REVIEW_REVISION` until revisions have been requested.",
+				"consumes": "multipart/form-data",
+				"parameters": [
+					{
+						"name": "file",
+						"in": "formData",
+						"description": "The file to be uploaded.",
+						"type": "file"
+					},
+					{
+						"description": "Details about the submission file that should be created.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/SubmissionFileEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of the submission file that was just added.",
+						"schema": {
+							"$ref": "#/definitions/SubmissionFile"
+						}
+					},
+					"400": {
+						"description": "There was an error when uploading the file or the values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"description": "You are not allowed to upload a file to the specified file stage of this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/files/{submissionFileId}": {
+			"get": {
+				"tags": [
+					"Submissions / Files"
+				],
+				"summary": "Get a submission file.",
+				"description": "You must pass the correct `stageId` when requesting a file.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "submissionFileId",
+						"in": "path",
+						"description": "Submission File ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "stageId",
+						"in": "query",
+						"description": "The workflow stage id of the requested file. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of the requested submission file.",
+						"schema": {
+							"$ref": "#/definitions/SubmissionFile"
+						}
+					},
+					"403": {
+						"description": "You are not allowed to access the requested file.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"Submissions / Files"
+				],
+				"summary": "Edit a submission file.",
+				"description": "You must pass the correct `stageId` when editing a file.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "submissionFileId",
+						"in": "path",
+						"description": "Submission File ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "stageId",
+						"in": "query",
+						"description": "The workflow stage id of the file to be edited. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "The details about the submission file that you want to edit. All params are optional. When a param is omitted, the existing value of that param will not be modified.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/SubmissionFileEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The submission file that was just edited with the new values after the update has occurred.",
+						"schema": {
+							"$ref": "#/definitions/SubmissionFile"
+						}
+					},
+					"400": {
+						"description": "There was an error when uploading the file or the values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"description": "You are not allowed to edit the requested file.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Submissions / Files"
+				],
+				"summary": "Delete a submission file.",
+				"description": "You must pass the correct `stageId` when deleting a file.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "submissionFileId",
+						"in": "path",
+						"description": "Submission File ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "stageId",
+						"in": "query",
+						"description": "The workflow stage id of the file to be edited. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The submission file that was just deleted.",
+						"schema": {
+							"$ref": "#/definitions/SubmissionFile"
+						}
+					},
+					"403": {
+						"description": "You are not allowed to edit the requested file.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/submissions/{submissionId}/participants": {
 			"get": {
 				"tags": [
-					"Submissions"
+					"Submissions / Participants"
 				],
 				"summary": "Get the participants assigned to a submisssion.",
 				"parameters": [
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					}
@@ -547,21 +795,21 @@
 		"/submissions/{submissionId}/participants/{stageId}": {
 			"get": {
 				"tags": [
-					"Submissions"
+					"Submissions / Participants"
 				],
 				"summary": "Get the participants assigned to a stage of this submisssion's workflow.",
 				"parameters": [
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					},
 					{
 						"name": "stageId",
 						"in": "path",
-						"descriptions": "Stage ID",
+						"description": "Stage ID",
 						"required": true,
 						"type": "integer"
 					}
@@ -588,14 +836,14 @@
 		"/submissions/{submissionId}/publications": {
 			"get": {
 				"tags": [
-					"Submissions"
+					"Submissions / Publications"
 				],
 				"summary": "Get a list of publications for this submission.",
 				"parameters": [
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					}
@@ -620,21 +868,21 @@
 			},
 			"post": {
 				"tags": [
-					"Submissions"
+					"Submissions / Publications"
 				],
 				"summary": "Create a new publication for this submission.",
 				"parameters": [
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					},
 					{
 						"name": "publicationId",
 						"in": "path",
-						"descriptions": "Publication ID",
+						"description": "Publication ID",
 						"required": true,
 						"type": "integer"
 					},
@@ -665,21 +913,21 @@
 		"/submissions/{submissionId}/publications/{publicationId}": {
 			"get": {
 				"tags": [
-					"Submissions"
+					"Submissions / Publications"
 				],
 				"summary": "Get a publication.",
 				"parameters": [
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					},
 					{
 						"name": "publicationId",
 						"in": "path",
-						"descriptions": "Publication ID",
+						"description": "Publication ID",
 						"required": true,
 						"type": "integer"
 					}
@@ -701,21 +949,21 @@
 			},
 			"put": {
 				"tags": [
-					"Submissions"
+					"Submissions / Publications"
 				],
 				"summary": "Edit a publication.",
 				"parameters": [
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					},
 					{
 						"name": "publicationId",
 						"in": "path",
-						"descriptions": "Publication ID",
+						"description": "Publication ID",
 						"required": true,
 						"type": "integer"
 					},
@@ -756,7 +1004,7 @@
 			},
 			"delete": {
 				"tags": [
-					"Submissions"
+					"Submissions / Publications"
 				],
 				"summary": "Delete a publication.",
 				"description": "Only journal managers and subeditors can make a request to this endpoint.",
@@ -764,14 +1012,14 @@
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					},
 					{
 						"name": "publicationId",
 						"in": "path",
-						"descriptions": "Publication ID",
+						"description": "Publication ID",
 						"required": true,
 						"type": "integer"
 					}
@@ -801,21 +1049,21 @@
 		"/submissions/{submissionId}/publications/{publicationId}/version": {
 			"post": {
 				"tags": [
-					"Submissions"
+					"Submissions / Publications"
 				],
 				"summary": "Create a new version of an existing publication.",
 				"parameters": [
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					},
 					{
 						"name": "publicationId",
 						"in": "path",
-						"descriptions": "Publication ID",
+						"description": "Publication ID",
 						"required": true,
 						"type": "integer"
 					}
@@ -845,7 +1093,7 @@
 		"/submissions/{submissionId}/publications/{publicationId}/publish": {
 			"put": {
 				"tags": [
-					"Submissions"
+					"Submissions / Publications"
 				],
 				"summary": "Publish a publication.",
 				"description": "If the publication is assigned to an issue that is not yet published, it will be scheduled for publication and the `status` will be set to `STATUS_SCHEDULED`. If the issue is already published, it will be published immediately and the `status` will be set to `STATUS_PUBLISHED`.\n\nThe publication will be validated against any publishing requirements before it is published and a `400` response will be returned if it fails validation.",
@@ -853,14 +1101,14 @@
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					},
 					{
 						"name": "publicationId",
 						"in": "path",
-						"descriptions": "Publication ID",
+						"description": "Publication ID",
 						"required": true,
 						"type": "integer"
 					}
@@ -896,21 +1144,21 @@
 		"/submissions/{submissionId}/publications/{publicationId}/unpublish": {
 			"put": {
 				"tags": [
-					"Submissions"
+					"Submissions / Publications"
 				],
 				"summary": "Unpublish a publication.",
 				"parameters": [
 					{
 						"name": "submissionId",
 						"in": "path",
-						"descriptions": "Submission ID",
+						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
 					},
 					{
 						"name": "publicationId",
 						"in": "path",
-						"descriptions": "Publication ID",
+						"description": "Publication ID",
 						"required": true,
 						"type": "integer"
 					}

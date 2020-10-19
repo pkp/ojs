@@ -91,7 +91,7 @@ class AuthorDAO extends PKPAuthorDAO {
 		}
 
 		$result = $this->retrieveRange(
-			'SELECT a.*, ug.show_title, p.locale,
+			'SELECT a.*, ug.show_title, s.locale,
 				COALESCE(agl.setting_value, agpl.setting_value) AS author_given,
 				CASE WHEN agl.setting_value <> \'\' THEN afl.setting_value ELSE afpl.setting_value END AS author_family
 			FROM	authors a
@@ -99,9 +99,9 @@ class AuthorDAO extends PKPAuthorDAO {
 				JOIN publications p ON (p.publication_id = a.publication_id)
 				JOIN submissions s ON (s.current_publication_id = p.publication_id)
 				LEFT JOIN author_settings agl ON (a.author_id = agl.author_id AND agl.setting_name = ? AND agl.locale = ?)
-				LEFT JOIN author_settings agpl ON (a.author_id = agpl.author_id AND agpl.setting_name = ? AND agpl.locale = p.locale)
+				LEFT JOIN author_settings agpl ON (a.author_id = agpl.author_id AND agpl.setting_name = ? AND agpl.locale = s.locale)
 				LEFT JOIN author_settings afl ON (a.author_id = afl.author_id AND afl.setting_name = ? AND afl.locale = ?)
-				LEFT JOIN author_settings afpl ON (a.author_id = afpl.author_id AND afpl.setting_name = ? AND afpl.locale = p.locale)
+				LEFT JOIN author_settings afpl ON (a.author_id = afpl.author_id AND afpl.setting_name = ? AND afpl.locale = s.locale)
 				JOIN (
 					SELECT
 					MIN(aa.author_id) as author_id,

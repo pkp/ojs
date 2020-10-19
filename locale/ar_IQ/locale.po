@@ -2026,9 +2026,6 @@ msgstr "تم طلب عدد غير موجود!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "تقديم المدقق غير صحيح، أو لم تتم المطالبة به!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "قائمة العملات المحملة \"{$filename}\" من ملف بصيغة XML"
-
 msgid "grid.action.createContext"
 msgstr "إنشاء مجلة جديدة"
 

@@ -1526,9 +1526,6 @@ msgstr "ئەم ڕێچکەیەی گۆڤار \"{$journalPath}\"بەردەست نی
 msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
 msgstr "ئەم گەڕانە ڕێگە بە دوبارە پێنوێنیکردن نادات بە گوێرەی گۆڤار."
 
-msgid "debug.notes.currencyListLoad"
-msgstr "لیستی دراوەکان  \"{$filename}\" لە XML"
-
 msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr ""
 "دەستپێڕاگەیشتن ڕێگە پێ نەدراوە! تۆ وەک وردبینی ئەم توێژینەوەیە دەستنیشان "

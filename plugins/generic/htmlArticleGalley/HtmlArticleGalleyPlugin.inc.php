@@ -62,7 +62,13 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		$galley =& $args[2];
 		$article =& $args[3];
 
-		if ($galley && $galley->getFileType() == 'text/html') {
+		if (!$galley) {
+			return false;
+		}
+
+		$submissionFile = $galley->getFile();
+		$filepath = Services::get('file')->getPath($submissionFile->getData('fileId'));
+		if (Services::get('file')->fs->getMimetype($filepath) === 'text/html') {
 			foreach ($article->getData('publications') as $publication) {
 				if ($publication->getId() === $galley->getData('publicationId')) {
 					$galleyPublication = $publication;
@@ -96,7 +102,13 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		$fileId =& $args[2];
 		$request = Application::get()->getRequest();
 
-		if ($galley && $galley->getFileType() == 'text/html' && $galley->getFileId() == $fileId) {
+		if (!$galley) {
+			return false;
+		}
+
+		$submissionFile = $galley->getFile();
+		$filepath = Services::get('file')->getPath($submissionFile->getData('fileId'));
+		if (Services::get('file')->fs->getMimetype($filepath) === 'text/html' && $galley->getData('submissionFileId') == $fileId) {
 			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
 				echo $this->_getHTMLContents($request, $galley);
 				$returner = true;
@@ -117,18 +129,18 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	 */
 	protected function _getHTMLContents($request, $galley) {
 		$submissionFile = $galley->getFile();
-		$submissionId = $submissionFile->getSubmissionId();
-		$contents = file_get_contents($submissionFile->getFilePath());
+		$submissionId = $submissionFile->getData('submissionId');
+		$contents = Services::get('file')->fs->read(Services::get('file')->getPath($submissionFile->getData('fileId')));
 
 		// Replace media file references
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		import('lib.pkp.classes.submission.SubmissionFile'); // Constants
-		$embeddableFiles = array_merge(
-			$submissionFileDao->getLatestRevisions($submissionId, SUBMISSION_FILE_PROOF),
-			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionId, SUBMISSION_FILE_DEPENDENT)
-		);
-		$referredArticle = null;
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$embeddableFilesIterator = Services::get('submissionFile')->getMany([
+			'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
+			'assocIds' => [$submissionFile->getId()],
+			'fileStages' => [SUBMISSION_FILE_DEPENDENT],
+			'includeDependentFiles' => true,
+		]);
+		$embeddableFiles = iterator_to_array($embeddableFilesIterator);
 
 		foreach ($embeddableFiles as $embeddableFile) {
 			$params = array();
@@ -139,8 +151,8 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			if (!$referredArticle || $referredArticle->getId() != $submissionId) {
 				$referredArticle = $submissionDao->getById($submissionId);
 			}
-			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
-			$pattern = preg_quote(rawurlencode($embeddableFile->getOriginalFileName()));
+			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getId()), $params);
+			$pattern = preg_quote(rawurlencode($embeddableFile->getLocalizedData('name')));
 
 			$contents = preg_replace(
 				'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',

@@ -2153,9 +2153,6 @@ msgstr "A edição solicitada é inválida!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Submissão do editor de texto inválida ou nenhuma submissão do editor de texto solicitada!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Lista de moedas \"{$filename}\" do arquivo XML"
-
 msgid "grid.action.createContext"
 msgstr "Criar Nova Revista"
 

@@ -86,9 +86,6 @@ msgstr "Exportovat všechny"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Během exportu došlo k chybám"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Do souboru \"{$fileName}\" nelze zapisovat."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "Import byl úspěšně dokončen. Uživatelé s uživatelskými jmény a e-mailovými adresami, které se doposud nepoužívají, byli importováni společně s příslušnými uživatelskými skupinami."
 

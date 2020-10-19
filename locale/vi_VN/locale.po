@@ -1843,9 +1843,6 @@ msgstr "Số được yêu cầu không hợp lệ!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "BTV bản thảo không hợp lệ hoặc không có BTV bản thảo được yêu cầu!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Danh sách tiền tệ đã tải \"{$ filename}\" từ XML"
-
 msgid "grid.action.createContext"
 msgstr "Tạo một tạp chí mới"
 

@@ -2235,9 +2235,6 @@ msgstr "Вказаний неправильний випуск!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Помилка призначення літературного редактора подання або запиту на літературне редагування!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "З XML-файлу завантажений список валют \"{$filename}\""
-
 msgid "grid.action.createContext"
 msgstr "Створити новий журнал"
 

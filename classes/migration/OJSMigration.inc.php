@@ -204,13 +204,14 @@ class OJSMigration extends Migration {
 			$table->string('locale', 14)->nullable();
 			$table->bigInteger('publication_id');
 			$table->string('label', 255)->nullable();
-			$table->bigInteger('file_id')->nullable();
+			$table->bigInteger('submission_file_id')->nullable();
 			$table->float('seq', 8, 2)->default(0);
 			$table->string('remote_url', 2047)->nullable();
 			$table->smallInteger('is_approved')->default(0);
 			$table->string('url_path', 64)->nullable();
 			$table->index(['publication_id'], 'publication_galleys_publication_id');
 			$table->index(['url_path'], 'publication_galleys_url_path');
+			$table->foreign('submission_file_id')->references('submission_file_id')->on('submission_files');
 		});
 
 		// Galley metadata.

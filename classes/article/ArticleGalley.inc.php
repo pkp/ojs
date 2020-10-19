@@ -83,39 +83,45 @@ class ArticleGalley extends Representation {
 
 	/**
 	 * Set file ID.
+	 * @deprecated 3.3
 	 * @param $fileId int
 	 */
 	function setFileId($fileId) {
-		$this->setData('fileId', $fileId);
+		$this->setData('submissionFileId', $fileId);
 	}
 
 	/**
 	 * Get file id
+	 * @deprecated 3.3
 	 * @return int
 	 */
 	function getFileId() {
-		return $this->getData('fileId');
+		return $this->getData('submissionFileId');
 	}
 
 	/**
 	 * Get the submission file corresponding to this galley.
+	 * @deprecated 3.3
 	 * @return SubmissionFile
 	 */
 	function getFile() {
 		if (!isset($this->_submissionFile)) {
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-			$this->_submissionFile = $submissionFileDao->getLatestRevision($this->getFileId());
+			$this->_submissionFile = Services::get('submissionFile')->get($this->getData('submissionFileId'));
 		}
 		return $this->_submissionFile;
 	}
 
 	/**
 	 * Get the file type corresponding to this galley.
+	 * @deprecated 3.3
 	 * @return string MIME type
 	 */
 	function getFileType() {
 		$galleyFile = $this->getFile();
-		return isset($galleyFile) ? $galleyFile->getFileType() : null;
+		if (!$galleyFile) {
+			return null;
+		}
+		return Services::get('file')->fs->getMimetype(Services::get('file')->getPath($galleyFile->getData('fileId')));
 	}
 
 	/**

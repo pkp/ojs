@@ -19,9 +19,11 @@ use \Pimple\Container;
 use \APP\Services\PublicationService;
 use \APP\Services\StatsEditorialService;
 use \APP\Services\StatsService;
+use \APP\Services\SubmissionFileService;
 use \PKP\Services\PKPAnnouncementService;
 use \PKP\Services\PKPAuthorService;
 use \PKP\Services\PKPEmailTemplateService;
+use \PKP\Services\PKPFileService;
 use \PKP\Services\PKPSchemaService;
 use \PKP\Services\PKPSiteService;
 use \PKP\Services\PKPUserService;
@@ -42,6 +44,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		// Author service
 		$pimple['author'] = function() {
 			return new PKPAuthorService();
+		};
+
+		// File service
+		$pimple['file'] = function() {
+			return new PKPFileService();
 		};
 
 		// Submission service
@@ -87,6 +94,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		// Site service
 		$pimple['site'] = function() {
 			return new PKPSiteService();
+		};
+
+		// Submission file service
+		$pimple['submissionFile'] = function() {
+			return new SubmissionFileService();
 		};
 
 		// Email Templates service

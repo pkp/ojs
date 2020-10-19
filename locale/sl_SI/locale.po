@@ -1987,9 +1987,6 @@ msgstr "Zahtevana je bila napačna številka revije!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Napačna lektorska oddaja ali oddaja ni bila zahtevana!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Seznam valut je bil prebran iz XML datoteke \"{$filename}\""
-
 msgid "grid.action.createContext"
 msgstr "Ustvari novo revijo"
 

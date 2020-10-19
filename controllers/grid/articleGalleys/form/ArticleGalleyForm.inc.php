@@ -65,11 +65,16 @@ class ArticleGalleyForm extends Form {
 	 */
 	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
-		if ($this->_articleGalley) $templateMgr->assign(array(
-			'representationId' => $this->_articleGalley->getId(),
-			'articleGalley' => $this->_articleGalley,
-			'articleGalleyFile' => $this->_articleGalley->getFile(),
-		));
+		if ($this->_articleGalley) {
+			$articleGalleyFile = $this->_articleGalley->getFile();
+			$filepath = Services::get('file')->getPath($articleGalleyFile->getData('fileId'));
+			$templateMgr->assign(array(
+				'representationId' => $this->_articleGalley->getId(),
+				'articleGalley' => $this->_articleGalley,
+				'articleGalleyFile' => $articleGalleyFile,
+				'supportsDependentFiles' => Services::get('submissionFile')->supportsDependentFiles($articleGalleyFile, $filepath),
+			));
+		}
 		$context = $request->getContext();
 		$templateMgr->assign(array(
 			'supportedLocales' => $context->getSupportedSubmissionLocaleNames(),

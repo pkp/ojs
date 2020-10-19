@@ -79,9 +79,6 @@ msgstr "Tümünü ver"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Veriler verilmeye hazırlanırken hata oldu"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "\"{$fileName}\" dosyasına yazamıyorum."
-
 msgid "plugins.importexport.users.cliUsage.examples"
 msgstr ""
 "\n"

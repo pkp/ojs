@@ -201,8 +201,16 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * @copydoc GridHandler::loadData()
 	 */
 	function loadData($request, $filter = null) {
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-		return $galleyDao->getByPublicationId($this->getPublication()->getId());
+		$galleyIterator = Services::get('galley')->getMany([
+			'publicationIds' => [$this->getPublication()->getId()],
+		]);
+		// ArticleGalleyGridRow::initialize expects the array
+		// key to match the galley id
+		$galleys = [];
+		foreach ($galleyIterator as $galley) {
+			$galleys[$galley->getId()] = $galley;
+		}
+		return $galleys;
 	}
 
 	//
@@ -291,27 +299,12 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galleyDao->deleteObject($galley);
 
-		if ($galley->getFileId()) {
-			import('lib.pkp.classes.submission.SubmissionFile'); // Import constants
-			$publication = Services::get('publication')->get($galley->getData('publicationId'));
-
-			// Delete dependent files if no other galley uses them
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-			$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galley->getId(), $publication->getData('submissionId'), SUBMISSION_FILE_PROOF);
-			foreach ($galleyFiles as $file) {
-				$sharedFileGalleys = $articleGalleyDao->getByFileId($file->getFileId())->toArray();
-				if (empty($sharedFileGalleys)) {
-					$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), SUBMISSION_FILE_DEPENDENT);
-				}
-			}
-
-			// Delete main galley file if no other galley uses it
-			$sharedFileGalleys = $articleGalleyDao->getByFileId($galley->getFileId())->toArray();
-			if (empty($sharedFileGalleys)) {
-				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-				$submissionFileDao->deleteAllRevisionsById($galley->getFileId());
-			}
+		$submissionFilesIterator = Services::get('submissionFile')->getMany([
+			'assocTypes' => [ASSOC_TYPE_REPRESENTATION],
+			'assocIds' => [$galley->getId()],
+		]);
+		foreach ($submissionFilesIterator as $submissionFile) {
+			Services::get('submissionFile')->delete($submissionFile);
 		}
 
 		$notificationDao = DAORegistry::getDAO('NotificationDAO'); /* @var $notificationDao NotificationDAO */
@@ -429,7 +422,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$json = parent::fetchRow($args, $request);
 		if ($row = $this->getRequestedRow($request, $args)) {
 			$galley = $row->getData();
-			if ($galley->getRemoteUrl()=='' && !$galley->getFileId()) {
+			if ($galley->getRemoteUrl()=='' && !$galley->getData('submissionFileId')) {
 				$json->setEvent('uploadFile', $galley->getId());
 			}
 		}

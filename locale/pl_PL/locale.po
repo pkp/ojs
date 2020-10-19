@@ -1550,9 +1550,6 @@ msgstr ""
 "Niepoprawny tekst korektora lub brak zrealizowanej korekty zgłoszonego "
 "tekstu!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Ładowanie wykazu walut \"{$filename}\" z pliku XML"
-
 msgid "navigation.categories"
 msgstr "Kategorie"
 

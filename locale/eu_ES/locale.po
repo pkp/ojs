@@ -1496,9 +1496,6 @@ msgstr "{$userName} erabiltzaileak {$submissionId} artikulua inportatu du."
 msgid "metadata.pkp.peerReviewed"
 msgstr "Adituek ebaluatutako artikulua"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "{$filename} moneta-zerrenda XMLtik kargatu da"
-
 msgid "user.manageMySubscriptions"
 msgstr "Kudeatu nire harpidetzak"
 

@@ -1656,9 +1656,6 @@ msgstr "投稿时间"
 msgid "notification.type.userComment"
 msgstr "一个读者对\"{$title}\"进行了评论"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "已经从XML载入货币列表：{$filename}"
-
 msgid "about.aboutOJSSite"
 msgstr "本站使用开放期刊系统（OJS  {$ojsVersion} ）.OJS是一个开源的期刊管理于出版软件，由<a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>组织研发，遵循GNU General Public License."
 

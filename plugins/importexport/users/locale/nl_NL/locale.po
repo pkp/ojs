@@ -84,9 +84,6 @@ msgstr "Exporteer alle"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Er waren fouten tijdens het exporteren"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Kon het bestand \"{$fileName}\" niet schrijven."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "De gebruikers werden met succes geïmporteerd: gebruikers met gebruikersnamen en e-mailadressen die nog niet in gebruik waren zijn geïmporteerd, met overeenkomstige gebruikersgroepen."
 

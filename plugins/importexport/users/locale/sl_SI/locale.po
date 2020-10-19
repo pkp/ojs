@@ -88,9 +88,6 @@ msgstr "Izvozi vse"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Med izvozom se je pojavila napaka"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "V datoteko \"{$fileName}\" ni bilo možno pisati."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "Uvoz se je uspešno končal. Uporabniki z uporabniškimi imeni in gesli, ki še niso v uporabi, so bili uvoženi, skupaj s pripadajočimi vlogami."
 
