@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-19 15:22+0000\n"
-"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
+"PO-Revision-Date: 2020-10-21 07:50+0000\n"
+"Last-Translator: Tom Granroth <tom.granroth@tsv.fi>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-recommendBySimilarity/fi_FI/>\n"
 "Language: fi_FI\n"
@@ -23,3 +23,6 @@ msgstr ""
 
 msgid "plugins.generic.recommendBySimilarity.displayName"
 msgstr "Suosittele samankaltaisia artikkeleita"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "Aloita samankaltaisten artikkeleiden haku"
