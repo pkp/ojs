@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-16 16:54+0000\n"
+"PO-Revision-Date: 2020-10-21 07:50+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -819,3 +819,25 @@ msgstr "Nástroje na čítanie"
 
 msgid "manager.sections.policy"
 msgstr "Pravidlá sekcie"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"Licencia LOCKSS sa objaví v O časopise pod Archivácia: <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"Licencia LOCKSS</a>"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Umožnite technológiu LOCKSS ukladať a distribuovať obsah časopisu v "
+"zúčastnených knižniciach cez LOCKSS stránku <a href=\"{$lockssUrl}\" target="
+"\"_blank\">Zoznam vydavateľov</a>."
+
+msgid "manager.setup.otherLockss"
+msgstr "Iné archivačné možnosti"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) poskytuje bezplatné archivačné služby pre "
+"všetky časopisy OJS, ktoré spĺňajú niekoľko základných kritérií. Plugin PKP "
+"PN pre OJS 3 je v súčasnosti vo vývoji a čoskoro bude k dispozícii v galérii "
+"pluginov."
