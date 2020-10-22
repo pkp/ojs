@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-22 11:49+0000\n"
+"PO-Revision-Date: 2020-10-22 13:33+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -911,3 +911,28 @@ msgstr "Pridať alebo odstrániť prídavné položky navigačného panela."
 
 msgid "manager.setup.navigationBar"
 msgstr "Navigačný panel"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Poznámka:</ strong>E-mail s poďakovaním za príspevok je v súčasnosti "
+"zakázaný. Pre použitie tejto funkcie, zapnite SUBMISSION_ACK e-mail v "
+"pripravených e-mailoch."
+
+msgid "manager.setup.note"
+msgstr "Poznámka"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Nebol nahraný žiadny súbor štýlu."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Nebol nahraný žiadny súbor s obrázkom."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Hodnotou popisku je skôr textový reťazec (napr .: \"Nastavenie časopisu\") "
+"ako lokalizačný kľúč (napr .: \"manager.setup\")"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL je skôr absolútna URL (napr.: \"http://www.example.com\") ako relatívny "
+"odkaz na stránku (napr.: \"/manager/setup\")"
