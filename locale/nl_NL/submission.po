@@ -2,14 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
+"PO-Revision-Date: 2020-10-22 11:46+0000\n"
+"Last-Translator: Hans Spijker <hans.spijker@huygens.knaw.nl>\n"
+"Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/submission/nl/"
+">\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
 msgstr "Stuur een artikel in"
@@ -27,7 +30,12 @@ msgid "submission.title"
 msgstr "Titel van het artikel"
 
 msgid "submission.title.tip"
-msgstr "De inzending is doorgaans een 'afbeelding', 'tekst' of ander multimediatype, zoals 'software' of 'interactief'. Kies het meest relevante type voor uw inzending. Voorbeelden kunnen worden gevonden op <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>."
+msgstr ""
+"De inzending is doorgaans een 'afbeelding', 'tekst' of ander multimediatype, "
+"zoals 'software' of 'interactief'. Kies het meest relevante type voor uw "
+"inzending. Voorbeelden kunnen worden gevonden op <a target=\"_blank\" href=\""
+"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Begin een nieuwe inzending in"
@@ -160,3 +168,80 @@ msgstr "Deze bepalingen zijn gebaseerd op de Dublin Core metadata specificatie, 
 
 msgid "section.any"
 msgstr "Alle secties"
+
+msgid "publication.selectIssue"
+msgstr "Selecteer een nummer om in te plannen voor publicatie"
+
+msgid "publication.scheduleInissue"
+msgstr "Toewijzen aan nummer"
+
+msgid "publication.unscheduledIn"
+msgstr "Dit is niet gepland voor publicatie in een nummer."
+
+msgid "publication.scheduledIn"
+msgstr "Gepland voor publicatie in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Gepubliceerd in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr ""
+"De publicatie moet aan een nummer worden toegewezen voordat deze kan worden "
+"gepubliceerd."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Aan alle publicatievereisten is voldaan. Dit wordt onmiddellijk gepubliceerd "
+"omdat de publicatiedatum is ingesteld op {$datePublished}. Weet u zeker dat "
+"u dit wilt publiceren?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Aan alle publicatievereisten is voldaan. Dit wordt onmiddellijk gepubliceerd "
+"in {$issue}. Weet u zeker dat u dit wilt publiceren?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Aan alle publicatievereisten is voldaan. Dit wordt gepubliceerd wanneer "
+"{$issue} wordt gepubliceerd. Weet u zeker dat u dit wilt inplannen voor "
+"publicatie?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Aan alle publicatievereisten is voldaan. Weet u zeker dat u dit wilt "
+"publiceren?"
+
+msgid "publication.issue.success"
+msgstr "De details van het nummer van de publicatie zijn bijgewerkt."
+
+msgid "publication.invalidIssue"
+msgstr "Het nummer voor deze publicatie is niet gevonden."
+
+msgid "publication.invalidSection"
+msgstr "De sectie voor deze publicatie is niet gevonden."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"De publicatiedatum wordt automatisch ingesteld wanneer het nummer "
+"gepubliceerd is. Voer geen publicatiedatum in, tenzij het artikel eerder "
+"elders is gepubliceerd en u het moet antidateren."
+
+msgid "galley.publicationNotFound"
+msgstr "De publicatie voor deze proef kan niet gevonden worden."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"De proeven van deze publicatie kunnen niet worden bewerkt omdat deze al is "
+"gepubliceerd."
+
+msgid "catalog.category.heading"
+msgstr "Alle onderdelen"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Onderdelen"
+
+msgid "submission.sectionOptions"
+msgstr "Sectie opties"
+
+msgid "submission.submit.noContext"
+msgstr "Het tijdschrift van deze inzending kan niet gevonden worden."
