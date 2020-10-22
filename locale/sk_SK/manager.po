@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-22 10:19+0000\n"
+"PO-Revision-Date: 2020-10-22 11:49+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -905,3 +905,9 @@ msgid "manager.setup.management.description"
 msgstr ""
 "Prístup a zebezpečenie, plánovanie, oznámenia, redigovanie, typografické "
 "úpravy a korektúry."
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Pridať alebo odstrániť prídavné položky navigačného panela."
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigačný panel"
