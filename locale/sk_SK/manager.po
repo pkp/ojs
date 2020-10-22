@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-22 07:08+0000\n"
+"PO-Revision-Date: 2020-10-22 10:19+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -888,3 +888,20 @@ msgstr ""
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Popis licencie LOCKSS"
+
+msgid "manager.setup.masthead.success"
+msgstr "Podrobnosti o vedení v tomto denníku boli aktualizované."
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Krok 4. Správa časopisu"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Nastavenia správy a publikovania"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Správa Základných editorských krokov"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Prístup a zebezpečenie, plánovanie, oznámenia, redigovanie, typografické "
+"úpravy a korektúry."
