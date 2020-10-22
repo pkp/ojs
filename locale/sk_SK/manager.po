@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-21 07:50+0000\n"
+"PO-Revision-Date: 2020-10-22 07:08+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -841,3 +841,50 @@ msgstr ""
 "všetky časopisy OJS, ktoré spĺňajú niekoľko základných kritérií. Plugin PKP "
 "PN pre OJS 3 je v súčasnosti vo vývoji a čoskoro bude k dispozícii v galérii "
 "pluginov."
+
+msgid "manager.setup.management"
+msgstr "Správa"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Záhlavie domáce stránky, obsah, hlavičky časopisu, päty, navigačný panel a "
+"kaskádové štýly."
+
+msgid "manager.setup.look"
+msgstr "Vzhľad"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Prihláste sa k službe CLOCKSS na adrese <a href=\"http://clockss.org/\" "
+"target=\"_blank\"> webu CLOCKSS </a>."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Popis licencie CLOCKSS"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"Licencia CLOCKSS sa objaví v sekcii O časopise v sekcii Archivovanie: <a "
+"href=\"http://clockss.org/\" target=\"_blank\"> Licencia CLOCKSS </a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Povoľte službe CLOCKSS ukladať a distribuovať obsah časopisu v zúčastnených "
+"knižniciach prostredníctvom stránky <a href=\"{$clockssUrl}\" target=\""
+"_blank\"> stránky Manifest vydavateľa </a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Identifikujte 6–10 knižníc, ktoré budú registrovať a uskladňovať časopis. "
+"Napríklad se obráťte na inštitúcie, kde pracujú editori alebo členovia "
+"redakčnej rady a/alebo na inštitúcie, ktoré se už zúčastňujú LOCKSS. Viď <a "
+"href=\"http://www.lockss.org/community/\" target=\"_blank\">zúčastnené "
+"knižnice</a>."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Popis licencie LOCKSS"
