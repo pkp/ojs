@@ -124,11 +124,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($givenNames[$locale]), ENT_COMPAT, 'UTF-8')));
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($familyNames[$locale]), ENT_COMPAT, 'UTF-8')));
 				$hasAltName = false;
-				
-				if ($author->getData('orcid')) {
-				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
-				}
-				
+
 				foreach($familyNames as $otherLocal => $familyName) {
 					if ($otherLocal != $locale && isset($familyName) && !empty($familyName)) {
 						if (!$hasAltName) {
@@ -153,7 +149,9 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			} else {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getFullName(false)), ENT_COMPAT, 'UTF-8')));
 			}
-			
+			if ($author->getData('orcid')) {
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
+			}
 			$contributorsNode->appendChild($personNameNode);
 			$isFirst = false;
 		}
