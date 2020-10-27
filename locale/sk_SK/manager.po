@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-22 13:33+0000\n"
+"PO-Revision-Date: 2020-10-28 13:50+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -936,3 +936,117 @@ msgid "manager.setup.navItemIsAbsolute"
 msgstr ""
 "URL je skôr absolútna URL (napr.: \"http://www.example.com\") ako relatívny "
 "odkaz na stránku (napr.: \"/manager/setup\")"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Recenzenti budú mať prístup k súboru s príspevkom len potom, čo odsúhlasia, "
+"že spracujú jeho recenziu."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Obmedzte prístup k súborom"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Editor bude hodnotiť recenzentov na päťstupňovej škále kvality pre každú "
+"recenziu."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Obvyklé povolené časové obdobie pre spracovanie recenzií"
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Anonymná recenzia"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Pre aktivovanie týchto možností musí administrátor stránky povoliť možnosť "
+"<tt>cheduled_tasks</tt> v konfiguračnom súbore OJS. Pre podporu týchto "
+"funkcií môže byť potrebná ďalšia konfigurácia servera (čo nemusí byť možné "
+"na všetkých serveroch), ako je naznačené v OJS dokumentácii."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr ""
+"Automatická e-mailové pripomenutie (dostupné vo východiskových e-mailoch OJS)"
+" môžu byť posielané recenzentom v dvoch bodoch (editor pritom vždy tiež môže "
+"zaslať e-mail priamo recenzentovi)"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Možnosti recenzií"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Inštrukcie pre recenzovanie"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Používatelia musia byť registrovaní, aby mohli prezerať stránky časopisu."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Používatelia musia byť registrovaní, aby mohli prezerať obsah s otvoreným "
+"prístupom."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Odkazovanie na referencie"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Názov organizácie vydávajúcej časopis bude zobrazený v časti O časopise."
+
+msgid "manager.setup.publisher"
+msgstr "Vydavateľ"
+
+msgid "manager.setup.publishing"
+msgstr "Podrobnosti o publikovaní"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Identifikácia obsahu časopisu"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Plánovanie publikácií"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Práce môžu byť v časopise publikované hromadne ako súčasť jedného čísla s "
+"vlastným obsahom. Alternatívne môžu byť jednotlivé práce publikované "
+"akonáhle sú na to pripravené, tak že budú pridané do obsahu \"aktuálneho\" "
+"čísla. Poskytnite čitateľom v časti O časopise informácie o systéme, ktorý "
+"tento časopis bude používať a o predpokladanej frekvencii publikovanie."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Plán publikácií"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Inštrukcie pre korektúry budú sprístupnené, korektorom, autorom, typografom "
+"a editorom sekcií vo fáze editovania príspevku. Nižšie je uvedený predvolený "
+"set inštrukcií v HTML, ktorý môže byť kedykoľvek upravený alebo nahradený "
+"manažérom časopisu (v HTML alebo obyčajný text)."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Inštrukcie pre korektúry"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Vyhlásenie o ochrane osobných údajov bolo aktualizované."
+
+msgid "manager.setup.printIssn"
+msgstr "Tlačové ISSN"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Zameranie, recenzné riadenie, sekcia, súkromie, bezpečnosť a ďalšie položky."
+
+msgid "manager.setup.policies"
+msgstr "Pravidlá"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Možnosť číslovania strán"
+
+msgid "manager.setup.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Obmedzte počet odkazov, ktoré sa majú zobraziť na nasledujúcich stránkach v "
+"zozname."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Odkazy na stránky"
