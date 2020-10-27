@@ -109,6 +109,7 @@ class URNSettingsForm extends Form {
 			'urn:nbn:de' => 'urn:nbn:de',
 			'urn:nbn:at' => 'urn:nbn:at',
 			'urn:nbn:ch' => 'urn:nbn:ch',
+			'urn:nbn:fi' => 'urn:nbn:fi',
 			'urn:nbn' => 'urn:nbn',
 			'urn' => 'urn'
 		);
