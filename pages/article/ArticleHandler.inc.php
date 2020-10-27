@@ -414,9 +414,10 @@ class ArticleHandler extends Handler {
 
 				$filename = Services::get('file')->formatFilename($path, $submissionFile->getLocalizedData('name'));
 
-				Services::get('file')->download($path, $filename);
-
+				$returner = true;
 				HookRegistry::call('FileManager::downloadFileFinished', array(&$returner));
+
+				Services::get('file')->download($path, $filename);
 			}
 		} else {
 			header('HTTP/1.0 403 Forbidden');

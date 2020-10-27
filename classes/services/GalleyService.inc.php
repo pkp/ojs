@@ -85,7 +85,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 			$galleyQB->filterByPublicationIds($args['publicationIds']);
 		}
 
-		\HookRegistry::call('Galley::getMany::queryBuilder', array($galleyQB, $args));
+		\HookRegistry::call('Galley::getMany::queryBuilder', array(&$galleyQB, $args));
 
 		return $galleyQB;
 	}
@@ -246,7 +246,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		$galleyId = $articleGalleyDao->insertObject($galley);
 		$galley = $this->get($galleyId);
 
-		\HookRegistry::call('Galley::add', array($galley, $request));
+		\HookRegistry::call('Galley::add', array(&$galley, $request));
 
 		return $galley;
 	}
@@ -260,7 +260,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		$newGalley = $galleyDao->newDataObject();
 		$newGalley->_data = array_merge($galley->_data, $params);
 
-		\HookRegistry::call('Galley::edit', array($newGalley, $galley, $params, $request));
+		\HookRegistry::call('Galley::edit', array(&$newGalley, $galley, $params, $request));
 
 		$galleyDao->updateObject($newGalley);
 		$newGalley = $this->get($newGalley->getId());
@@ -272,7 +272,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 * @copydoc \PKP\Services\EntityProperties\EntityWriteInterface::delete()
 	 */
 	public function delete($galley) {
-		\HookRegistry::call('Galley::delete::before', [$galley]);
+		\HookRegistry::call('Galley::delete::before', [&$galley]);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 		$articleGalleyDao->deleteObject($galley);
@@ -280,12 +280,12 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		// Delete related submission files
 		$submissionFilesIterator = Services::get('submissionFile')->getMany([
 			'assocTypes' => [ASSOC_TYPE_GALLEY],
-			'assocIds' => $galley->getId(),
+			'assocIds' => [$galley->getId()],
 		]);
 		foreach ($submissionFilesIterator as $submissionFile) {
 			Services::get('submissionFile')->delete($submissionFile);
 		}
 
-		\HookRegistry::call('Galley::delete', [$galley]);
+		\HookRegistry::call('Galley::delete', [&$galley]);
 	}
 }
