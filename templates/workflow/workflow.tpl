@@ -60,6 +60,11 @@
 					:label="i18n.preview"
 					:href="submission.urlPublished"
 				></pkp-button>
+				<pkp-button v-if="submission.status === getConstant('STATUS_PUBLISHED') && workingPublication.status !== getConstant('STATUS_PUBLISHED')"
+					element="a"
+					:label="i18n.preview"
+					:href="workingPublication.urlPublished"
+				></pkp-button>
 				{if $canAccessEditorialHistory}
 					<pkp-button
 						label="{translate key="editor.activityLog"}"
