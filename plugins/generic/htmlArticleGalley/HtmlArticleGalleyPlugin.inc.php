@@ -148,6 +148,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				'\1="' . $fileUrl . '"',
 				$contents
 			);
+			if ($contents === null) error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
 
 			// Replacement for Flowplayer
 			$contents = preg_replace(
@@ -155,6 +156,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				'url:\'' . $fileUrl . '\'',
 				$contents
 			);
+			if ($contents === null) error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
 
 			// Replacement for other players (ested with odeo; yahoo and google player won't work w/ OJS URLs, might work for others)
 			$contents = preg_replace(
@@ -162,7 +164,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				'url=' . $fileUrl ,
 				$contents
 			);
-
+			if ($contents === null) error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
 		}
 
 		// Perform replacement for ojs://... URLs
@@ -171,6 +173,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			array($this, '_handleOjsUrl'),
 			$contents
 		);
+		if ($contents === null) error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
 
 		$templateMgr = TemplateManager::getManager($request);
 		$contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
