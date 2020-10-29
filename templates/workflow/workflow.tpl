@@ -58,13 +58,6 @@
 			>
 				{translate key="common.preview"}
 			</pkp-button>
-			<pkp-button
-				v-if="submission.status === getConstant('STATUS_PUBLISHED') && workingPublication.status !== getConstant('STATUS_PUBLISHED')"
-				element="a"
-				:href="workingPublication.urlPublished"
-			>
-				{translate key="common.preview"}
-			</pkp-button>
 			{if $canAccessEditorialHistory}
 				<pkp-button
 					ref="activityButton"
@@ -163,6 +156,13 @@
 									@click="openCreateVersionPrompt"
 								>
 									{translate key="publication.createVersion"}
+								</pkp-button>
+								<pkp-button
+									v-if="submission.status === getConstant('STATUS_PUBLISHED') && workingPublication.status !== getConstant('STATUS_PUBLISHED')"
+									element="a"
+									:href="workingPublication.urlPublished"
+								>
+									{translate key="common.preview"}
 								</pkp-button>
 							</template>
 						{/if}
