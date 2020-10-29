@@ -115,8 +115,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	 * @param $galley ArticleGalley
 	 * @return string
 	 */
-	function _getHTMLContents($request, $galley) {
-		$journal = $request->getJournal();
+	protected function _getHTMLContents($request, $galley) {
 		$submissionFile = $galley->getFile();
 		$submissionId = $submissionFile->getSubmissionId();
 		$contents = file_get_contents($submissionFile->getFilePath());
