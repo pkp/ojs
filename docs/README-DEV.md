@@ -199,22 +199,20 @@ For contributions that are distributed separately as patches or plugins:
 
 ### Database Queries
 
-* SQL queries should use the ADOdb or Laravel abstraction layer.
+* SQL queries should use the Laravel abstraction layer.
 * SQL should use placeholders for variables.
 * Explicit typecasts should be used where possible in variable replacements.
 * For example:
 ```
-	$dbconn = DBConnection::getConn();
-	$result = $dbconn->execute('SELECT x FROM mytable WHERE y = ?', array($y));
-	$result = $dbconn->execute('INSERT INTO mytable (x, y) VALUES (?, ?)', array((int) $x, $y));
+	$result = $this->execute('SELECT x FROM mytable WHERE y = ?', [$y]);
+	$result = $this->execute('INSERT INTO mytable (x, y) VALUES (?, ?)', [(int) $x, $y]);
 ```
 * Only portable, standards compliant SQL should be used - compatibility with
   MySQL and PostgreSQL (versions as per README) is required. If database
-  specific logic cannot be avoided it should be abstracted into DBConnection or
-  ADOdb.
+  specific logic cannot be avoided it should be abstracted.
 
 
-### Direct Access Objects
+### Data Access Objects
 
 * DAO classes should be used to encapsulate all database calls.
 * For example:
