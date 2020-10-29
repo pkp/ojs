@@ -65,6 +65,7 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * @see PKPHandler::initialize()
+	 * @param $request Request
 	 * @param $args array Arguments list
 	 */
 	function initialize($request, $args = array()) {
@@ -80,10 +81,10 @@ class ArticleHandler extends Handler {
 
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
-		$context = $request->getContext();
+		$journal = $request->getJournal();
 		$user = $request->getUser();
 
-		if (!$submission || ($submission->getData('status') !== STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user))) {
+		if (!$submission || ($submission->getData('status') !== STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($journal, $submission, $user))) {
 			$request->getDispatcher()->handle404();
 		}
 
@@ -115,7 +116,7 @@ class ArticleHandler extends Handler {
 			$galleyId = $subPath;
 		}
 
-		if ($this->publication->getData('status') !== STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user)) {
+		if ($this->publication->getData('status') !== STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($journal, $submission, $user)) {
 			$request->getDispatcher()->handle404();
 		}
 
@@ -517,6 +518,6 @@ class ArticleHandler extends Handler {
 	 */
 	function setupTemplate($request) {
 		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION);
 	}
 }

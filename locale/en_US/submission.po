@@ -158,6 +158,9 @@ msgstr "The requested citation format could not be retrieved."
 msgid "submission.metadataDescription"
 msgstr "These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content."
 
+msgid "submission.viewingPreview"
+msgstr "This is a preview and has not been published. <a href=\"{$url}\">View submission</a>"
+
 msgid "section.any"
 msgstr "Any Section"
 
