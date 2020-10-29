@@ -140,7 +140,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		// If no search plug-in is activated then fall back to the
 		// default database search implementation.
 		if ($hookResult === false || is_null($hookResult)) {
-			$fileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $fileDao SubmissionFileDAO */
 			import('lib.pkp.classes.submission.SubmissionFile'); // Constants
 			$submissionFilesIterator = Services::get('submissionFile')->getMany([
 				'submissionIds' => [$article->getId()],
@@ -148,6 +147,16 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			]);
 			foreach ($submissionFilesIterator as $submissionFile) {
 				$this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
+				$dependentFilesIterator = Services::get('submissionFile')->getMany([
+					'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
+					'assocIds' => [$submissionFile->getId()],
+					'submissionIds' => [$article->getId()],
+					'fileStages' => [SUBMISSION_FILE_DEPENDENT],
+					'includeDependentFiles' => true,
+				]);
+				foreach ($dependentFilesIterator as $dependentFile) {
+					$this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $dependentFile);
+				}
 			}
 		}
 	}

@@ -28,24 +28,24 @@
     <articles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
       <article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" date_submitted="2020-03-10" status="5" submission_progress="0" current_publication_id="16" stage="production">
         <id type="internal" advice="ignore">9</id>
-        <submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" stage="submission" id="9" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-          <revision number="1" genre="Article Text" filename="test-upload-1.txt" viewable="true" date_uploaded="2020-03-10" date_modified="2020-03-10" filesize="47" filetype="text/plain" uploader="admin">
-            <name locale="en_US">admin, test-upload-1.txt</name>
+        <submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" stage="submission" id="9" xsi:schemaLocation="http://pkp.sfu.ca native.xsd" genre="Article Text" viewable="true" uploader="admin" file_id="1">
+          <name locale="en_US">admin, test-upload-1.txt</name>
+          <file id="1" extension="txt" filesize="47">
             <embed encoding="base64">dGVzdCB0ZXN0IHRlc3QgDQp0ZXN0IHRldHMgZXRzIA0KdGVzdCB0c2V0IHN0c3Q=</embed>
-          </revision>
+          </file>
         </submission_file>
-        <submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" stage="final" id="11" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-          <revision number="1" source="9-1" genre="Article Text" filename="test-upload-1.txt" viewable="true" date_uploaded="2020-03-10" date_modified="2020-03-10" filesize="47" filetype="text/plain" uploader="admin">
-            <name locale="en_US">admin, test-upload-1.txt</name>
+        <submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" stage="final" id="11" xsi:schemaLocation="http://pkp.sfu.ca native.xsd" source_submission_file_id="9" genre="Article Text" viewable="true" uploader="admin" file_id="1">
+          <name locale="en_US">admin, test-upload-1.txt</name>
+          <file id="1" extension="txt" filesize="47">
             <embed encoding="base64">dGVzdCB0ZXN0IHRlc3QgDQp0ZXN0IHRldHMgZXRzIA0KdGVzdCB0c2V0IHN0c3Q=</embed>
-          </revision>
+          </file>
         </submission_file>
-        <supplementary_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" stage="proof" id="10" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-          <revision number="1" genre="Research Instrument" filename="test-upload-5.txt" viewable="false" date_uploaded="2020-03-10" date_modified="2020-03-10" filesize="47" filetype="text/plain" uploader="admin">
-            <name locale="en_US">admin, test-upload-5.txt</name>
+        <submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" stage="proof" id="10" xsi:schemaLocation="http://pkp.sfu.ca native.xsd" genre="Research Instrument" viewable="false" uploader="admin" file_id="2">
+          <name locale="en_US">admin, test-upload-5.txt</name>
+          <file id="2" extension="txt" filesize="47">
             <embed encoding="base64">dGVzdCB0ZXN0IHRlc3QgDQp0ZXN0IHRldHMgZXRzIA0KdGVzdCB0c2V0IHN0c3Q=</embed>
-          </revision>
-        </supplementary_file>
+          </file>
+        </submission_file>
         <publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en_US" version="1" status="5" primary_contact_id="9" url_path="te-1" seq="0" section_ref="ART" access_status="0" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
           <id type="internal" advice="ignore">16</id>
           <title locale="en_US">test submission 2 - title</title>
@@ -70,7 +70,7 @@
             <id type="internal" advice="ignore">1</id>
             <name locale="en_US">test galley 1</name>
             <seq>0</seq>
-            <submission_file_ref id="10" revision="1"/>
+            <submission_file_ref id="10" />
           </article_galley>
           <pages>1-2</pages>
           <covers>

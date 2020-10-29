@@ -296,16 +296,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galley = $this->getGalley();
 		if (!$galley || !$request->checkCSRF()) return new JSONMessage(false);
 
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-		$galleyDao->deleteObject($galley);
-
-		$submissionFilesIterator = Services::get('submissionFile')->getMany([
-			'assocTypes' => [ASSOC_TYPE_REPRESENTATION],
-			'assocIds' => [$galley->getId()],
-		]);
-		foreach ($submissionFilesIterator as $submissionFile) {
-			Services::get('submissionFile')->delete($submissionFile);
-		}
+		Services::get('galley')->delete($galley);
 
 		$notificationDao = DAORegistry::getDAO('NotificationDAO'); /* @var $notificationDao NotificationDAO */
 		$notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());
@@ -322,11 +313,6 @@ class ArticleGalleyGridHandler extends GridHandler {
 				$this->getSubmission()->getId()
 			);
 		}
-
-		//inform search index that file has been deleted
-		$articleSearchIndex = Application::getSubmissionSearchIndex();
-		$articleSearchIndex->submissionFileDeleted($this->getSubmission()->getId());
-		$articleSearchIndex->submissionChangesFinished();
 
 		return DAO::getDataChangedEvent($galley->getId());
 	}
