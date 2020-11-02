@@ -154,7 +154,7 @@
 										@click="openCreateVersionPrompt"
 									></pkp-button>
 									<pkp-button
-										v-if="submission.status === getConstant('STATUS_PUBLISHED') && workingPublication.status !== getConstant('STATUS_PUBLISHED')"
+										v-if="workingPublication.status !== getConstant('STATUS_PUBLISHED')"
 										element="a"
 										:label="i18n.preview"
 										:href="workingPublication.urlPublished"
