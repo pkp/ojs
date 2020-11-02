@@ -158,7 +158,7 @@
 									{translate key="publication.createVersion"}
 								</pkp-button>
 								<pkp-button
-									v-if="submission.status === getConstant('STATUS_PUBLISHED') && workingPublication.status !== getConstant('STATUS_PUBLISHED')"
+									v-if="workingPublication.status !== getConstant('STATUS_PUBLISHED')"
 									element="a"
 									:href="workingPublication.urlPublished"
 								>
