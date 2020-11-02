@@ -251,10 +251,10 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	public function callbackUpdateFileIndex($hook, $params) {
 		self::assertEquals('ArticleSearchIndex::submissionFileChanged', $hook);
 
-		list($articleId, $type, $submissionFile) = $params;
+		list($articleId, $type, $submissionFileId) = $params;
 		self::assertEquals(0, $articleId);
 		self::assertEquals(1, $type);
-		self::assertEquals(2, $submissionFile->getId());
+		self::assertEquals(2, $submissionFileId);
 
 		// Returning "true" is required so that the default submissionMetadataChanged()
 		// code won't run.
