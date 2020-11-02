@@ -130,6 +130,12 @@
 							{if $canPublish}
 								<template slot="actions">
 									<pkp-button
+										v-if="workingPublication.status !== getConstant('STATUS_PUBLISHED') && submission.stageId >= getConstant('WORKFLOW_STAGE_ID_EDITING')"
+										element="a"
+										:label="i18n.preview"
+										:href="workingPublication.urlPublished"
+									></pkp-button>
+									<pkp-button
 										v-if="workingPublication.status === getConstant('STATUS_QUEUED')"
 										ref="publish"
 										:label="submission.status === getConstant('STATUS_PUBLISHED') ? i18n.publish : i18n.schedulePublication"
@@ -152,12 +158,6 @@
 										ref="createVersion"
 										label="{translate key="publication.createVersion"}"
 										@click="openCreateVersionPrompt"
-									></pkp-button>
-									<pkp-button
-										v-if="workingPublication.status !== getConstant('STATUS_PUBLISHED')"
-										element="a"
-										:label="i18n.preview"
-										:href="workingPublication.urlPublished"
 									></pkp-button>
 								</template>
 							{/if}
