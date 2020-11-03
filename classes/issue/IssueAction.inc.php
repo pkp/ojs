@@ -49,6 +49,9 @@ class IssueAction {
 	 * @return bool
 	 */
 	function allowedPrePublicationAccess($journal, $submission, $user) {
+		// Don't grant access until submission reaches Copyediting stage
+		if ($submission->getData('stageId') < WORKFLOW_STAGE_ID_EDITING) return false;
+
 		if ($this->_roleAllowedPrePublicationAccess($journal, $user)) return true;
 
 		if ($user && $journal) {

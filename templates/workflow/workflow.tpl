@@ -50,10 +50,14 @@
 				</span>
 			</h1>
 			<template slot="actions">
-				<pkp-button
-					v-if="submission.status === getConstant('STATUS_PUBLISHED')"
+				<pkp-button v-if="submission.status === getConstant('STATUS_PUBLISHED')"
 					element="a"
 					:label="i18n.view"
+					:href="submission.urlPublished"
+				></pkp-button>
+				<pkp-button v-else-if="submission.status !== getConstant('STATUS_PUBLISHED') && submission.stageId >= getConstant('WORKFLOW_STAGE_ID_EDITING')"
+					element="a"
+					:label="i18n.preview"
 					:href="submission.urlPublished"
 				></pkp-button>
 				{if $canAccessEditorialHistory}
@@ -125,6 +129,12 @@
 							</span>
 							{if $canPublish}
 								<template slot="actions">
+									<pkp-button
+										v-if="workingPublication.status !== getConstant('STATUS_PUBLISHED') && submission.stageId >= getConstant('WORKFLOW_STAGE_ID_EDITING')"
+										element="a"
+										:label="i18n.preview"
+										:href="workingPublication.urlPublished"
+									></pkp-button>
 									<pkp-button
 										v-if="workingPublication.status === getConstant('STATUS_QUEUED')"
 										ref="publish"
