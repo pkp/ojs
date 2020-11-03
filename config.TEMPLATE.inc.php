@@ -34,6 +34,10 @@ base_url = "http://pkp.sfu.ca/ojs"
 ; Session cookie name
 session_cookie_name = OJSSID
 
+; Session cookie domain, for example "pkp.sfu.ca"
+; If not specified, defaults to the detected server host
+; session_cookie_domain = 
+
 ; Session cookie path; if not specified, defaults to the detected base path
 ; session_cookie_path = /
 
