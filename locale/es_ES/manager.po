@@ -720,9 +720,6 @@ msgstr ""
 "del servidor para admitir esta función, tal como se indica en la "
 "documentación de OJS."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Evaluación anónima"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "El plazo habitual establecido para las revisiones es de"
 

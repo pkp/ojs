@@ -235,6 +235,7 @@ msgstr "Kildetekst"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Kort beskrivelse"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "Præsentér fil for bedømmere (uden metadata), da det ikke vil kompromittere "

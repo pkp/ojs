@@ -376,6 +376,7 @@ msgstr ""
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Folosiți numai cu materiale publicate în mod oficial."
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "Prezentați fișierul pentru recenzori (fără metadate), deoarece nu va "

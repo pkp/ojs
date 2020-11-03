@@ -700,9 +700,6 @@ msgstr ""
 "Yderligere serverkonfiguration kan være påkrævet som angivet i OJS-"
 "dokumentationen."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Blind review"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Antal uger afsat til bedømmelse"
 

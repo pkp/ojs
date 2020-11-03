@@ -2639,9 +2639,6 @@ msgstr "फ़ाइल एक्सेस को प्रतिबंधित
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "सप्ताह की समीक्षा पूरी करने की अनुमति दी"
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "ब्लाइंड रिव्यू"
-
 msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "स्वचालित ईमेल स्मरणपत्र"
 

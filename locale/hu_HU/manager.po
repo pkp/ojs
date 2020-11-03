@@ -851,9 +851,6 @@ msgstr "Automatikus email értesítő"
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "Ezeknek a lehetőségeknek az aktiváláshoz az oldal adminisztrátornak engedélyeznie kell a <tt>scheduled_tasks</tt> lehetőséget az OJS konfigurációs fájljában. További szerver beállítások szükségesek, hogy ez a funkció támogatott legyen (amelyik nem érhető el minden szerveren), ahogy az az OJS dokumentációban is szerepel."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Vak lektorálás"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Lektorálásra adott határidő (hét)"
 
@@ -877,9 +874,6 @@ msgstr "Lektori értékelés"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Lektori emlékeztetők"
-
-msgid "manager.setup.reviewOptions.showEnsuringLink"
-msgstr "Link a <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Vak lektorálás biztosítása</a> oldalakhoz, ahol a szerzők és a lektorok tartalmakat töltenek fel."
 
 msgid "manager.setup.reviewPolicy"
 msgstr "Szakmai lektorálás irányelvei"

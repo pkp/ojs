@@ -266,6 +266,7 @@ msgstr "Quellentext"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Kurze Beschreibung"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Datei (ohne Metadaten) den Gutachter/innen übermitteln, da dies die Anonymität der Begutachtung nicht beeinträchtigen wird."
 

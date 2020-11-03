@@ -233,6 +233,7 @@ msgstr "Izvorni tekst"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Kratak opis"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Želim ovu datoteku (bez metapodataka) učiniti dostupnom recenzentima, budući da neće ugroziti anonimnost recenzije."
 

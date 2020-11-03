@@ -274,6 +274,7 @@ msgstr "Texte source"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Brève description"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Présenter le fichier aux évaluateurs-trices (sans métadonnées), de façon à ne pas compromettre l'évaluation anonyme."
 

@@ -265,6 +265,7 @@ msgstr "Teks Sumber"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Deskripsi Singkat"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Berikan file kepada reviewer (tanpa metadata), dengan demikian tidak akan merusak prinsip review anonim."
 

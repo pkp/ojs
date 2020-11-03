@@ -255,6 +255,7 @@ msgstr "Tekst źródłowy"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Krótki opis"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Udostępnij plik recenzentom (bez metadanych), jeżeli jego udostępnienie nie wpłynie negatywnie na proces ślepej recenzji."
 

@@ -605,9 +605,6 @@ msgstr "Poruke e-pošte kojima se recenzente podsjeća na njihov zadatak (dostup
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "<strong>Napomena:</strong> Da biste aktivirali ovu opciju, administrator stranice mora omogućiti <tt>scheduled_tasks</tt> opciju u konfiguracijskoj datoteci (što nije moguće učiniti na svim poslužiteljima), kao što je pojašnjeno u OJS dokumentaciji."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Anonimnost recenzije"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Tipičan rok dozvoljen za recenzije"
 

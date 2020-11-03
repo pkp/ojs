@@ -288,6 +288,7 @@ msgstr "نص مصدر"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "وصف موجز"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "قدم الملف إلى المحكمين (بدون البيانات الوصفية)، إذ أن ذلك لا يتعارض مع "

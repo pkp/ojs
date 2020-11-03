@@ -25,6 +25,7 @@ msgstr ""
 "سەردانیکردنی پێگەی ئەلیکترۆنیی گۆڤار. سوپاس بۆ ناردنی توێژینەوەکەت بۆ "
 "{$journalTitle}."
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "فایلەکە بنێرە بۆ هەڵسەنگێنەران (بەبێ زانیارییە کەسییەکان)، ئەگەر ئەمە "

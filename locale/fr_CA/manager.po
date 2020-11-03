@@ -820,9 +820,6 @@ msgstr "Rappels automatiques par courriel"
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "Pour activer ces options, l'administrateur-trice du site doit activer l'option <tt>scheduled_tasks</tt> dans le fichier de configuration d'OJS. Une configuration serveur supplémentaire peut être requise afin de prendre en charge cette fonctionnalité (laquelle n'est pas disponible sur tous les serveurs), tel que mentionné dans la documentation d'OJS."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Évaluation à l'aveugle"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Nombre de semaines allouées pour compléter l'évaluation"
 

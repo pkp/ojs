@@ -970,9 +970,6 @@ msgstr ""
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "ئەو هەفتانەی کە ڕێگەپێدراوە بۆ تەواوکردنی پێداچوونەوە"
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "هەڵسەنگاندنی کوێرانە"
-
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
 "بۆ ناردنی بیرخەرەوەی خۆدکاری ئیمێڵەکان، بەرێوەبەری سایتەکە دەبێت بژاردەی  "

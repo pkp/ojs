@@ -797,9 +797,6 @@ msgstr ""
 "gerekir. Bu iş için sunucuda da ayarlar yapmak gerekebilir ve her sunucuda "
 "bu işlev çalışmayabilir. Daha fazla bilgi için ADS rehberlerine bakınız."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Kör Hakemlik"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Hakem değerlendirmesini tamamlamak için verilen süre"
 
@@ -832,9 +829,6 @@ msgstr "Hakem Puanlama"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Hakem Hatırlatıcıları"
-
-msgid "manager.setup.reviewOptions.showEnsuringLink"
-msgstr "Yazarlara ve hakemlere dosya yükleme sayfalarında <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Kör Hakemlik Güvencesi</a> için bağlantılar sağlayın."
 
 msgid "manager.setup.reviewPolicy"
 msgstr "Değerlendirme Politikası"

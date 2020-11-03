@@ -747,9 +747,6 @@ msgstr "ایمیل‌های خودکار یادآوری"
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "<strong>توجه: </strong> برای فعال ساختن این گزینه مدیر سایت می‌بایست گزینه <tt>scheduled_tasks</tt> را در فایل تنظیمات سیستم فعال سازد، این تنظیم ممکن است نیازمند ویژگی‌های خاصی در سرور باشد که ممکن است در همه سرورها مقدور نباشد. در مستندات OJS به این موضوع اشاره شده است."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "داوری محرمانه"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "متوسط مهلت داوری"
 

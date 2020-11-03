@@ -238,6 +238,7 @@ msgstr "Testo della fonte"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Breve descrizione"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Mostra il file ai revisori (senza metadati), in quanto non comprometterà la blind review."
 

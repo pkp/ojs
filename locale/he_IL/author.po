@@ -145,6 +145,7 @@ msgstr "תאריך בו נאספו נתונים או יצרו מסמך."
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "השתמש רק עם חומרים שפורסמו רשמית."
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "הציגו קובץ לבודקים (ללא מטא-נתונים), מכיוון שהוא לא יפגע בבדיקה עיוורת."
 

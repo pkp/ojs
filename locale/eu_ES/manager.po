@@ -632,9 +632,6 @@ msgstr "Mezu elektroniko automatikoak (OJSren mezu elektroniko lehenetsietan dau
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "<strong>Oharra:</strong> Aukera hauek aktibatzeko, gune-administratzaileak <tt>scheduled_tasks</tt> aukera gaitu behar du konfigurazio-fitxategian. Funtzionalitate hau erabili ahal izateko, zerbitzari-konfigurazio gehiago egin beharko dira seguru asko (eta zerbitzari guztietan ezin izango da), OJS dokumentazioan adierazten den bezala."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Ebaluazio anonimoa"
-
 msgid "manager.setup.reviewOptions.onQuality"
 msgstr "Editoreek bost puntuko kalitate-eskala baten arabera baloratuko dituzte ebaluatzaileak, ebaluazio bakoitzaren ondoren."
 

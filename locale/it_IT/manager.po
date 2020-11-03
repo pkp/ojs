@@ -668,9 +668,6 @@ msgstr ""
 "questa funzione (che potrebbe non essere possibile su tutti i server), come "
 "indicato nella documentazione di OJS."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Revisione cieca"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Il periodo di tempo medio concesso ai revisori"
 
@@ -694,9 +691,6 @@ msgstr "Voto ai revisori"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Promemoria per i revisori"
-
-msgid "manager.setup.reviewOptions.showEnsuringLink"
-msgstr "Aggiungi il link a <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Come assicurare una revisione cieca</a> alle pagine dove gli autori e i revisori caricano i file."
 
 msgid "manager.setup.reviewPolicy"
 msgstr "Politiche di revisione"

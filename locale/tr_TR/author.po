@@ -265,6 +265,7 @@ msgstr "Kaynak Metin"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Kısa açıklama"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "Kör hakemlikten taviz vermeden dosyayı hakemlerin görmesine izin ver ("

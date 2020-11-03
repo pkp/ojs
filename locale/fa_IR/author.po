@@ -260,6 +260,7 @@ msgstr "متن منبع"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "توصیف مختصر"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "فایل بدون فراداده در دسترس داوران قرار گیرد تا سیاست داوری محرمانه خدشه‌دار نشود"
 

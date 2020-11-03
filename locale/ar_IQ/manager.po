@@ -813,9 +813,6 @@ msgstr "رسائل التذكير الآلية (المتوافرة في الرس
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "لتمكين رسائل التذكير المؤتمتة، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر إعدادات إضافية في الملقم لدعم هذه الوظيفة كما هو مبين في أدبيات النظام."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "التحكيم السري"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "المهلة المتاحة اعتيادياً للمحكمين"
 

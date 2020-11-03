@@ -234,6 +234,7 @@ msgstr "Dátum, kedy boli získané dáta alebo vytvorený nástroj."
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Použiť iba s formálne publikovanými materiálmi."
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "Poskytnúť súbor recenzentom (bez metadát), aby neboli narušené anonymný "

@@ -82,6 +82,7 @@ msgstr "Tên của nghiên cứu hoặc ý tưởng gốc khác."
 msgid "author.submit.suppFile.dateDescription"
 msgstr "Ngày khi dữ liệu được thu thập hoặc công cụ được tạo."
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "Tập tin dành cho người phản biện (không có siêu dữ liệu), vì nó sẽ dùng cho "

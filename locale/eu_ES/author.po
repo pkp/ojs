@@ -236,6 +236,7 @@ msgstr "Iturburu-testua"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Azalpen laburra"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Aurkeztu fitxategia ebaluatzaileei (metadaturik gabe), ez du arriskurik ebaluazio anonimoarentzat."
 

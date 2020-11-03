@@ -804,9 +804,6 @@ msgstr "Automated Email Reminders"
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "To send automated email reminders, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required as indicated in the OJS documentation."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Blind Review"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Weeks allowed to complete the review"
 

@@ -265,6 +265,7 @@ msgstr "Πηγαίο κείμενο"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Σύντομη περιγραφή"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Παρουσίαση του αρχείου (χωρίς μεταδεδομένα) στους Αξιολογητές, καθώς δεν θα επηρεάσει τη διαδικασία τυφλής αξιολόγησης."
 

@@ -1060,9 +1060,6 @@ msgstr "Nincs még ajánlás kiválasztva. Ki kell választania egyet."
 msgid "reviewer.article.confirmDecision"
 msgstr "Ha egyszer már megadott egy lektorálási döntést, azt később nem bírálhatja felül. Biztosan folytatja?"
 
-msgid "reviewer.article.ensuringBlindReview"
-msgstr "Anonim szakmai lektorálás biztosítása"
-
 msgid "copyeditor.article.fileToCopyedit"
 msgstr "Fájl ide TechSzerk"
 

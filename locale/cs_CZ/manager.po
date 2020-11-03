@@ -660,9 +660,6 @@ msgstr ""
 "funkcí může být nutná další konfigurace serveru (což nemusí být možné na "
 "všech serverech), jak je naznačeno v OJS dokumentaci."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Anonymní recenze"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Obvyklé povolené časové období pro zpracování recenzí"
 
@@ -686,9 +683,6 @@ msgstr "Hodnocení recenzenta"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Připomenutí pro recenzenta"
-
-msgid "manager.setup.reviewOptions.showEnsuringLink"
-msgstr "Poskytnout odkazy na <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Zajištění anonymní recenze</a> na stránkách, ze kterých autoři a recenzenti nahrávají soubory."
 
 msgid "manager.setup.reviewPolicy"
 msgstr "Pravidla recenzního řízení"
