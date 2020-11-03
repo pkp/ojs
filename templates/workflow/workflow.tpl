@@ -51,6 +51,13 @@
 			>
 				{{ __('common.view') }}
 			</pkp-button>
+			<pkp-button
+				v-else-if="submission.status !== getConstant('STATUS_PUBLISHED') && submission.stageId >= getConstant('WORKFLOW_STAGE_ID_EDITING')"
+				element="a"
+				:href="submission.urlPublished"
+			>
+				{translate key="common.preview"}
+			</pkp-button>
 			{if $canAccessEditorialHistory}
 				<pkp-button
 					ref="activityButton"
@@ -122,6 +129,13 @@
 						</span>
 						{if $canPublish}
 							<template slot="actions">
+								<pkp-button
+									v-if="workingPublication.status !== getConstant('STATUS_PUBLISHED') && submission.stageId >= getConstant('WORKFLOW_STAGE_ID_EDITING')"
+									element="a"
+									:href="workingPublication.urlPublished"
+								>
+									{translate key="common.preview"}
+								</pkp-button>
 								<pkp-button
 									v-if="workingPublication.status === getConstant('STATUS_QUEUED')"
 									ref="publish"
