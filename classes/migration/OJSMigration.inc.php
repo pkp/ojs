@@ -204,7 +204,7 @@ class OJSMigration extends Migration {
 			$table->string('locale', 14)->nullable();
 			$table->bigInteger('publication_id');
 			$table->string('label', 255)->nullable();
-			$table->bigInteger('submission_file_id')->nullable();
+			$table->bigInteger('submission_file_id')->unsigned()->nullable();
 			$table->float('seq', 8, 2)->default(0);
 			$table->string('remote_url', 2047)->nullable();
 			$table->smallInteger('is_approved')->default(0);
