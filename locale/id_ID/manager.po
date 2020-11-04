@@ -770,9 +770,6 @@ msgstr ""
 "Konfigurasi tambahan pada server mungkin diperlukan seperti ditunjukkan pada "
 "dokumentasi OJS."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Review Anonim"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Jangka waktu review (dalam minggu)"
 

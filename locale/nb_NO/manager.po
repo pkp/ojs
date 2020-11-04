@@ -1391,9 +1391,6 @@ msgstr "Database over potensielle fagkonsulenter"
 msgid "manager.setup.reviewerDatabaseLink.desc"
 msgstr "Legg til en lenke til en relevant og tilgjengelig litteraturdatabase på 'Velg fagkonsulent'-siden, for at databasen skal kunne brukes til å søke etter potensielle fagkonsulenter."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Anonym fagvurdering"
-
 msgid "manager.setup.showGalleyLinksDescription"
 msgstr "Vis alltid sideoppsettlenker og indikér om tilgangen er begrenset."
 

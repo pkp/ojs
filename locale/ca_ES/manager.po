@@ -706,9 +706,6 @@ msgstr ""
 "possible que no tots els servidors la permetin), tal com s'indica a la "
 "documentació de l'OJS."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Avaluació anònima"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Temps mitjà de què disposaran els revisors/ores"
 

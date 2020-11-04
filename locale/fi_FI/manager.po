@@ -752,9 +752,6 @@ msgstr "Automaattiset sähköpostimuistutukset"
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "Aktivoidakseen nämä valinnat sivuston ylläpitäjän täytyy ottaa käyttöön <tt>scheduled_tasks</tt> -valinta OJS:n määritystiedostossa. Palvelimen lisämäärityksiä saatetaan edellyttää tämän toiminnon tukemiseksi (joka ei välttämättä ole mahdollista kaikilla palvelimilla), kuten OJS:n käyttöohjeissa mainitaan."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Sokkoarviointi"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Arvioinnin suorittamiseen annettava aika (viikkoa)"
 
@@ -780,9 +777,6 @@ msgstr "Arvioijien arvostelu"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Arvioijan muistutukset"
-
-msgid "manager.setup.reviewOptions.showEnsuringLink"
-msgstr "Anna linkki kohtaan <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Sokkoarvioinnin varmistaminen</a> sellaisilla sivuilla, joissa kirjoittajat ja arvioijat lataavat tiedostoja."
 
 msgid "manager.setup.reviewPolicy"
 msgstr "Arviointiperiaatteet"

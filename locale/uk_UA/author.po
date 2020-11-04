@@ -266,6 +266,7 @@ msgstr "Текст першоджерела"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Короткий опис"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Дозволити рецензентам доступ до файлу (без метаданих), оскільки його зміст не суперечить нормам анонімного рецензування."
 

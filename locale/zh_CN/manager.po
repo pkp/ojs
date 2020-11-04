@@ -666,9 +666,6 @@ msgstr ""
 "要使用邮件自动提醒功能，管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> 选项。另外，OJS "
 "文档中对于服务器的配置会对此选项有所关联。"
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "盲审"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "一般审稿时间"
 

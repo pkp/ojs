@@ -1085,9 +1085,6 @@ msgstr ""
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Tuần được phép hoàn thành đánh giá"
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Phản biện kín"
-
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
 "Để gửi lời nhắc email tự động, quản trị viên trang phải kích hoạt tùy chọn "

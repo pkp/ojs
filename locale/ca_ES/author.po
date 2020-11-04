@@ -274,6 +274,7 @@ msgstr "Text original"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Descripció breu"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Presenteu el fitxer als revisors/ores (sense metadades), ja que això no comprometrà l'avaluació anònima."
 

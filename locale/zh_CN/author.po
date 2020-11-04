@@ -271,6 +271,7 @@ msgstr "源文本"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "摘要描述"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "给审稿人的当前文件 (没有元数据), 因为它不会妥协盲审."
 

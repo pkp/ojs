@@ -790,9 +790,6 @@ msgstr "Automatiska e-postpåminnelser"
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "För att aktivera dessa alternativ måste den webbplatsansvarige aktivera <tt>scheduled_tasks</tt> funktionen i OJS:s konfigurationsfil. Ytterligare serverkonfiguration kan komma att behöva göras för att stödja denna funktion (något som inte är möjligt på alla typer av servrar) som beskrivs i OJS-dokumentationen."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Anonym granskning"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Det antal veckor som granskningen av artikel/artiklar högst får ta"
 

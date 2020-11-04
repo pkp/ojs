@@ -263,6 +263,7 @@ msgstr "Texto Original"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Descrição"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Apresentar documento aos avaliadores (sem metadados), pois não irá comprometer a avaliação pelos pares cega."
 

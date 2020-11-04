@@ -812,9 +812,6 @@ msgstr ""
 "Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können "
 "erforderlich sein, siehe OJS-Dokumentation."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Anonyme Begutachtung"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Vorgesehener Zeitaufwand für eine Begutachtung"
 

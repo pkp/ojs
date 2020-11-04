@@ -1181,9 +1181,6 @@ msgstr ""
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Săptămâni permise pentru completarea reviziei"
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Revizuirea în orb"
-
 msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "Email automat de reamintire"
 

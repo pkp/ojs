@@ -264,6 +264,7 @@ msgstr "Brontekst"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Korte beschrijving"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Geef het bestand aan reviewers (zonder metadata), aangezien dat de blinde review niet compromitteert."
 

@@ -223,6 +223,7 @@ msgstr "Zdrojový text"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Stručný popis"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Poskytnout soubor recenzentům (bez metadat), aby nebyly narušeny anonymní recenze."
 

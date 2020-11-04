@@ -264,6 +264,7 @@ msgstr "Lähdeteksti"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Lyhyt kuvaus"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Luovuta tiedosto arvioijille (ilman metatietoja), se ei vaaranna arviointia."
 

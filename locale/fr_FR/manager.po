@@ -698,9 +698,6 @@ msgstr ""
 "prendre en charge cette fonctionnalité (laquelle n'est pas disponible sur "
 "tous les serveurs), tel que mentionné dans la documentation d'OJS."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Évaluation à l'aveugle"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Temps habituellement alloué aux évaluations"
 
@@ -724,9 +721,6 @@ msgstr "Notations du rapporteur"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Rappels au rapporteur"
-
-msgid "manager.setup.reviewOptions.showEnsuringLink"
-msgstr "Fournir un lien vers <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Assurer une évaluation à l'aveugle</a> dans les pages où les auteurs et les rapporteurs peuvent télécharger des fichiers."
 
 msgid "manager.setup.reviewPolicy"
 msgstr "Politique d'évaluation"

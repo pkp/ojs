@@ -224,6 +224,7 @@ msgstr "Kort beskrivelse"
 msgid "author.submit.suppFile.contributorOrSponsor"
 msgstr "Bidragsyter eller kilde til støtte"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Vis fram filen til fagkonsulenter (uten metadata), siden det ikke vil kompromittere anonym fagfellevurdering."
 

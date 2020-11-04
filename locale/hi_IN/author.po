@@ -266,6 +266,7 @@ msgstr "प्रतिलिपि"
 
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "समीक्षकों के लिए फ़ाइल (मेटाडेटा के बिना) प्रस्तुत करें, क्योंकि यह नेत्रहीन समीक्षा से समझौता नहीं करेगा।"
 

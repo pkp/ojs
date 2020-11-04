@@ -700,9 +700,6 @@ msgstr ""
 "tais funcionalidades (pode não ser possível em todos os tipos de servidores!)"
 ", como descrito na documentação do sistema."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Revisão Cega por Pares"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Tempo padrão permitido para conlusão de uma revisão"
 

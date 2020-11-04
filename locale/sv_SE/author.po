@@ -265,6 +265,7 @@ msgstr "Källtext"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Kort beskrivning"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Visa filen för granskare (utan metadata). Anonym granskning är fortfarande möjlig."
 

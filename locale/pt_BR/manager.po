@@ -863,9 +863,6 @@ msgstr ""
 "Pode ser necessária uma configuração adicional do servidor, conforme "
 "indicado na documentação do OJS."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Avaliação pelos pares cega"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Prazo padrão permitido para conlusão de uma avaliação"
 

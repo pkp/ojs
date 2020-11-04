@@ -260,6 +260,7 @@ msgstr "Izvorni tekst"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Kratak opis"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Prezentujte fajl recenzentima (bez metapodataka), što neće ugroziti \"slepu recenziju\"."
 

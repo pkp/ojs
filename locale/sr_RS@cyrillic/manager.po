@@ -1317,9 +1317,6 @@ msgstr "Опције за рецензију"
 msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "Аутоматски подсетници имејлом"
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Слепа рецензија"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Дозвољен број недеља да се заврши рецензија"
 

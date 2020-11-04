@@ -263,6 +263,7 @@ msgstr "Forrásszöveg"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Rövid leírás"
 
+#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr "Fájl átadása lektorálásra (metaadat nélkül), ez nem veszélyezteti a kettős vak lektorálást."
 

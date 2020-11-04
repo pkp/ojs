@@ -789,9 +789,6 @@ msgstr "Automatische herinnerings-e-mails (beschikbaar in de standaard e-mails v
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "<strong>Noot:</strong> Om deze opties te kunnen activeren moet de sitebeheerder de <tt>scheduled_tasks</tt> optie in het OJS configuratiebestand inschakelen. Bijkomende serverconfiguratie is mogelijk nodig om deze functionaliteit te kunnen gebruiken (wat wellicht niet op alle servers mogelijk is), zoals aangegeven is in de OJS documentatie."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Blinde review"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "De vastgestelde tijd voor een review"
 

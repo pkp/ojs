@@ -266,7 +266,7 @@ msgid "author.submit.suppFile.briefDescription"
 msgstr "Brief description"
 
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "Present file to reviewers (without metadata), as it will not compromise blind review."
+msgstr "Present file to reviewers (without metadata), as it will not compromise anonymous review."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Use only with formally published materials."

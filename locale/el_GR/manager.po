@@ -870,9 +870,6 @@ msgstr "Αυτοματοποιημένες υπενθυμίσεις μέσω μ�
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "Για την αποστολή υπενθυμίσεων, ο Διαχειριστής του ιστοτόπου πρέπει να ενεργοποιήσει τις &lt;tt&gt;προγραμματισμένες εργασίες&lt;/tt&gt; στο αρχείο ρυθμίσεων του OJS. Ενδέχεται να απαιτούνται πρόσθετες ρυθμίσεις στον εξυπηρετητή για υποστήριξη της συγκεκριμένης λειτουργίας, όπως διευκρινίζεται στα έγγραφα τεκμηρίωσης του OJS."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "\"Τυφλή\" Αξιολόγηση"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Χρονικό διάστημα (σε εβδομάδες) για την ολοκλήρωση της αξιολόγησης"
 
@@ -904,9 +901,6 @@ msgstr "Βαθμολόγηση Αξιολογητή"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Υπενθυμίσεις προς τους Αξιολογητές"
-
-msgid "manager.setup.reviewOptions.showEnsuringLink"
-msgstr "Προβολή συνδέσμων &lt;a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\"&gt;Διασφάλιση \"τυφλής\" αξιολόγησης&lt;/a&gt; σε σελίδες όπου μεταφορτώνουν αρχεία οι Συγγραφείς και οι Αξιολογητές."
 
 msgid "manager.setup.reviewPolicy"
 msgstr "Πολιτική αξιολόγησης"

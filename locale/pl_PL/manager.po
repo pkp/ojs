@@ -641,9 +641,6 @@ msgstr "Przypomnienia e-mail mogą zostać wysłane recenzentom w dwóch sytuacj
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "<strong>Uwaga:</strong> Aby włączyć tą funkcjonalność, administrator strony musi poprawnie skonfigurować zapis <tt>scheduled_tasks</tt> w pliku konfiguracyjnym OJS."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Recenzja"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Czas na wykonanie recenzji"
 
@@ -667,9 +664,6 @@ msgstr "Ocenianie recenzentów"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Przypomnienia wysłane recenzentom"
-
-msgid "manager.setup.reviewOptions.showEnsuringLink"
-msgstr "Łącza do <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">zapewnienie ślepej recenzji</a> na stronach, za pośrednictwem których autorzy i recenzenci przesyłają swoje pliki."
 
 msgid "manager.setup.reviewPolicy"
 msgstr "Zasady recenzji"

@@ -846,9 +846,6 @@ msgstr "Avtomatizirani e-poštni opomniki"
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "Za aktivacijo teh opcij mora administrator spletišča aktivirati nastavitev <tt>scheduled_tasks</tt>v nastavitveni datoteki OJS. Morda bodo potrebne tudi dodatne nastavitve strežnika, da bo ta opcija podprta kot je opisano v OJS dokumentaciji."
 
-msgid "manager.setup.reviewOptions.blindReview"
-msgstr "Anonimnost recenzije"
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Tipični rok za končanje recenzije"
 

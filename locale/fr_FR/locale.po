@@ -713,9 +713,6 @@ msgstr ""
 "Une fois la décision enregistrée,  vous ne pourrez plus modifier "
 "l'évaluation. voulez-vous continuer ?"
 
-msgid "reviewer.article.ensuringBlindReview"
-msgstr "Assurer une évaluation à l'aveugle"
-
 msgid "copyeditor.article.fileToCopyedit"
 msgstr "Fichier à réviser"
 
