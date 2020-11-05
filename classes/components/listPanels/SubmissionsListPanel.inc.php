@@ -30,11 +30,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 
 		$request = \Application::get()->getRequest();
 		if ($request->getContext()) {
-			// Add section filters above last activity filter
-			array_splice($config['filters'], 2, 0, [[
-				'heading' => __('section.sections'),
-				'filters' => self::getSectionFilters($this->includeActiveSectionFiltersOnly),
-			]]);
+			$config['filters'][] = self::getSectionFilters($this->includeActiveSectionFiltersOnly);
 		}
 
 		$context = $request->getContext();
@@ -42,26 +38,26 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 			$config['filters'][] = [
 				"filters" => [
 					[
-					'title' => _('issues'),
-					'param' => 'issueIds',
-					'value' => [],
-					'filterType' => 'pkp-filter-autosuggest',
-					'component' => 'field-select-issues',
-					'autosuggestProps' => [
-						'allErrors' => (object) [],
-						'apiUrl' => $request->getDispatcher()->url($request, ROUTE_API, $context->getPath(), 'issues', null, null, ['roleIds' => [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR]]),
-						'description' => '',
-						'deselectLabel' => __('common.removeItem'),
-						'formId' => 'default',
-						'groupId' => 'default',
-						'initialPosition' => 'inline',
-						'isRequired' => false,
-						'label' => __('issues.submissions.issueIds'),
-						'locales' => [],
-						'name' => 'issueIds',
-						'primaryLocale' => 'en_US',
-						'selectedLabel' => __('common.assigned'),
+						'title' => __('issue.issues'),
+						'param' => 'issueIds',
 						'value' => [],
+						'filterType' => 'pkp-filter-autosuggest',
+						'component' => 'field-select-issues',
+						'autosuggestProps' => [
+							'allErrors' => (object) [],
+							'apiUrl' => $request->getDispatcher()->url($request, ROUTE_API, $context->getPath(), 'issues', null, null, ['roleIds' => [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR]]),
+							'description' => '',
+							'deselectLabel' => __('common.removeItem'),
+							'formId' => 'default',
+							'groupId' => 'default',
+							'initialPosition' => 'inline',
+							'isRequired' => false,
+							'label' => __('issues.submissions.issueIds'),
+							'locales' => [],
+							'name' => 'issueIds',
+							'primaryLocale' => 'en_US',
+							'selectedLabel' => __('common.assigned'),
+							'value' => [],
 						]
 					]
 				]
@@ -110,18 +106,43 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 		$request = \Application::get()->getRequest();
 		$context = $request->getContext();
 
-		if (!$context) {
-			return [];
-		}
-
 		$sections = \Services::get('section')->getSectionList($context->getId(), $activeOnly);
 
-		return array_map(function($section) {
+		// Use an autosuggest field if the list of submissions is too long
+		if (count($sections) > 5) {
+			$autosuggestField = new \PKP\components\forms\FieldAutosuggestPreset('sectionIds', [
+				'label' => __('section.sections'),
+				'value' => [],
+				'options' => array_map(function($section) {
+					return [
+						'value' => (int) $section['id'],
+						'label' => $section['title'],
+					];
+				}, $sections),
+			]);
 			return [
-				'param' => 'sectionIds',
-				'value' => (int) $section['id'],
-				'title' => $section['title'],
+				'filters' => [
+					[
+						'title' => __('section.sections'),
+						'param' => 'sectionIds',
+						'filterType' => 'pkp-filter-autosuggest',
+						'component' => 'field-autosuggest-preset',
+						'value' => [],
+						'autosuggestProps' => $autosuggestField->getConfig(),
+					]
+				],
 			];
-		}, $sections);
+		}
+
+		return [
+			'heading' => __('section.sections'),
+			'filters' => array_map(function($section) {
+				return [
+					'param' => 'sectionIds',
+					'value' => (int) $section['id'],
+					'title' => $section['title'],
+				];
+			}, $sections),
+		];
 	}
 }
