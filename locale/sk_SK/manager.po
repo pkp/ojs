@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-29 19:44+0000\n"
+"PO-Revision-Date: 2020-11-06 09:25+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -1065,3 +1065,124 @@ msgstr "Umožniť prístup recenzentovi na-jedno-kliknutie"
 
 msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Prístup pre recenzenta"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Články a čísla môžu byť označené identifikačným číslom alebo reťazcom pričom "
+"možno uplatniť registračný systém ako \"Digital Object Identifier System\" "
+"(DOI)."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Jedinečný identifikátor"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Poskytnite príklady relevantných typov výskumu, metód a prístupov pre tento "
+"odbor"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Typ (Metóda/Prístup)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(napr. Historické dotazovanie; kvaziexperiment; literárna analýza; interview)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Poskytujte metadáta indexovacím službám tretích strán prostredníctvom <a "
+"href=\"https://www.openarchives.org/\"> iniciatívy Open Archives </a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Povoliť OAI"
+
+msgid "manager.setup.submissions.description"
+msgstr "Inštrukcie pre autorov, copyright a indexácia (vrátane registrácie)."
+
+msgid "manager.setup.submissions"
+msgstr "Príspevky"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"V priebehu zadávania príspevku do časopisu sú autori najprv požiadaní, aby "
+"zaškrtli všetky položky v Zaškrtávacom zozname pre prípravu príspevku a "
+"potvrdili tak ich splnenie; potom môžu postupovať ďalej. Zaškrtávací zoznam "
+"je tiež zobrazený v Pokyny autorom v časti O časopise. Zoznam môžete upraviť "
+"nižšie, pamätajte ale, že aby autori mohli pokračovať ďalej v odosielaní "
+"svojho príspevku, budú musieť zaškrtnutím potvrdiť všetky položky tohto "
+"zoznamu."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Zaškrtávací zoznam pre prípravu príspevku"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Inštrukcie pre príspevky"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Poskytnite príklady kľúčových slov ako vodítko pre autorov"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Kľúčové slová"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(napr. fotosyntéza; čierne diery; Bayesova teória; atď.)"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Päť krokov k webovej stránke časopisu"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Zobraziť obsah článku"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Prístup na stránky"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Vždy zobrazovať odkazy sadzobnice a indikovať obmedzený prístup."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Sekcia časopisu, pre ktorú je príspevok zamýšľaný."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Editor časopisu, ktorý na neho bude počas redakčného konania dohliadať."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Pre vytvorenie alebo úpravu sekcií časopisu (napríklad Články, Recenzie "
+"kníh, atď.) Prejdite na Správa sekcií.<br /><br />Autori pri odosielaní "
+"príspevkov do časopisu vyznačia..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Ak nie sú pridané sekcie, sú príspevky podľa východiskového nastavenia "
+"zasielané do sekcie Články.)"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Sekcia a editori sekcií"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Uveďte stručný opis (50-300 znakov) časopisu, ktorý môžu vyhľadávače "
+"zobraziť pri zaradení časopisu do výsledkov vyhľadávania."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Pomôžte vyhľadávačom, ako je napríklad Google, objaviť a zobraziť vaše "
+"stránky. Odporúčame vám odoslať súbor <a href=\"{$sitemapUrl}\" target=\""
+"_blank\">sitemap</a>."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Nastavenie pre vyhľadávače bolo aktualizované."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Indexácia vyhľadávacími nástrojmi"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Pravidlá pre recenzie"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Pripomenutie pre recenzenta"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Hodnotenie recenzenta"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Zahrnúť zabezpečený odkaz do e-mailovej pozvánky recenzentom."
