@@ -102,7 +102,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	 * @param $activeOnly boolean show inactive section filters or not
 	 * @return array
 	 */
-	static function getSectionFilters($activeOnly = false) {
+	public function getSectionFilters($activeOnly = false) {
 		$request = \Application::get()->getRequest();
 		$context = $request->getContext();
 
