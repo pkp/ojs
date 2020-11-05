@@ -41,8 +41,8 @@ class OAIDAO extends PKPOAIDAO {
 		$this->issueDao = DAORegistry::getDAO('IssueDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 
-		$this->journalCache = array();
-		$this->sectionCache = array();
+		$this->journalCache = [];
+		$this->sectionCache = [];
 	}
 
 	/**
