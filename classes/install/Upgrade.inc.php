@@ -70,12 +70,11 @@ class Upgrade extends Installer {
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		$journalIterator = $journalDao->getAll();
-		$driver = $submissionFileDao->getDriver();
 		while ($journal = $journalIterator->next()) {
 			$managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
 			$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
 			$creatorUserId = $managerUsers->next()->getId();
-			switch ($driver) {
+			switch (Config::getVar('database', 'driver')) {
 				case 'mysql':
 				case 'mysqli':
 					$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.uploader_user_id = ? WHERE sf.uploader_user_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $journal->getId()));
@@ -242,8 +241,7 @@ class Upgrade extends Installer {
 				$publicFileManager->removeContextFile($row->journal_id, $oldFileName);
 			}
 		}
-		$driver = Config::getVar('database', 'driver');
-		switch ($driver) {
+		switch (Config::getVar('database', 'driver')) {
 			case 'mysql':
 			case 'mysqli':
 				// Update cover image names in the issue_settings table
@@ -333,8 +331,7 @@ class Upgrade extends Installer {
 				$publicFileManager->removeContextFile($row->journal_id, $oldFileName);
 			}
 		}
-		$driver = $submissionDao->getDriver();
-		switch ($driver) {
+		switch (Config::getVar('database', 'driver')) {
 			case 'mysql':
 			case 'mysqli':
 				// Update cover image names in the submission_settings table
@@ -935,8 +932,7 @@ class Upgrade extends Installer {
 
 		// middle name will be migrated to the given name
 		// note that given names are already migrated to the settings table
-		$driver = $userDao->getDriver();
-		switch ($driver) {
+		switch (Config::getVar('database', 'driver')) {
 			case 'mysql':
 			case 'mysqli':
 				// the alias for _settings table cannot be used for some reason -- syntax error
@@ -1122,7 +1118,7 @@ class Upgrade extends Installer {
 		$roleString = '(' . implode(",", $roles) . ')';
 
 		$userGroupDao->update('UPDATE user_groups SET permit_metadata_edit = 1 WHERE role_id IN ' . $roleString);
-		switch ($userGroupDao->getDriver()) {
+		switch (Config::getVar('database', 'driver')) {
 			case 'mysql':
 			case 'mysqli':
 				$stageAssignmentDao->update('UPDATE stage_assignments sa JOIN user_groups ug on sa.user_group_id = ug.user_group_id SET sa.can_change_metadata = 1 WHERE ug.role_id IN ' . $roleString);

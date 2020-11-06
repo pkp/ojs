@@ -443,7 +443,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @param $check int Test using either start date, end date, or both (default)
 	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
-	 * @return int
+	 * @return int|false Found subscription ID, or false for none.
 	 */
 	function isValidInstitutionalSubscription($domain, $IP, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
 		if (empty($journalId) || (empty($domain) && empty($IP))) return false;

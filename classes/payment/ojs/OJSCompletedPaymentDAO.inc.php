@@ -65,12 +65,9 @@ class OJSCompletedPaymentDAO extends DAO {
 	/**
 	 * Update an existing completed payment.
 	 * @param $completedPayment CompletedPayment
-	 * @return boolean
 	 */
 	function updateObject($completedPayment) {
-		$returner = false;
-		
-		$returner = $this->update(
+		$this->update(
 			sprintf('UPDATE completed_payments
 			SET
 				timestamp = %s,
@@ -94,8 +91,6 @@ class OJSCompletedPaymentDAO extends DAO {
 				(int) $completedPayment->getId()
 			]
 		);
-
-		return $returner;
 	}
 
 	/**

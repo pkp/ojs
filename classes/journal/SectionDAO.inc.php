@@ -47,7 +47,7 @@ class SectionDAO extends PKPSectionDAO {
 	function &_getCache() {
 		if (!isset($this->cache)) {
 			$cacheManager = CacheManager::getManager();
-			$this->cache = $cacheManager->getObjectCache('sections', 0, array($this, '_cacheMiss'));
+			$this->cache = $cacheManager->getObjectCache('sections', 0, [$this, '_cacheMiss']);
 		}
 		return $this->cache;
 	}
@@ -187,7 +187,7 @@ class SectionDAO extends PKPSectionDAO {
 	function getLocaleFieldNames() {
 		return array_merge(
 			parent::getLocaleFieldNames(),
-			array('abbrev', 'identifyType')
+			['abbrev', 'identifyType']
 		);
 	}
 
@@ -196,9 +196,9 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $section object
 	 */
 	function updateLocaleFields($section) {
-		$this->updateDataObjectSettings('section_settings', $section, array(
-			'section_id' => $section->getId()
-		));
+		$this->updateDataObjectSettings('section_settings', $section,
+			['section_id' => $section->getId()]
+		);
 	}
 
 	/**
@@ -212,7 +212,7 @@ class SectionDAO extends PKPSectionDAO {
 				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, is_inactive, abstract_word_count)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-			array(
+			[
 				(int)$section->getJournalId(),
 				(int)$section->getReviewFormId(),
 				(float) $section->getSequence(),
@@ -224,7 +224,7 @@ class SectionDAO extends PKPSectionDAO {
 				$section->getHideAuthor() ? 1 : 0,
 				$section->getIsInactive() ? 1 : 0,
 				(int) $section->getAbstractWordCount()
-			)
+			]
 		);
 
 		$section->setId($this->getInsertId());
@@ -251,7 +251,7 @@ class SectionDAO extends PKPSectionDAO {
 					is_inactive = ?,
 					abstract_word_count = ?
 				WHERE section_id = ?',
-			array(
+			[
 				(int)$section->getReviewFormId(),
 				(float) $section->getSequence(),
 				(int)$section->getMetaIndexed(),
@@ -263,7 +263,7 @@ class SectionDAO extends PKPSectionDAO {
 				(int)$section->getIsInactive(),
 				$this->nullOrInt($section->getAbstractWordCount()),
 				(int)$section->getId()
-			)
+			]
 		);
 		$this->updateLocaleFields($section);
 	}
@@ -282,8 +282,8 @@ class SectionDAO extends PKPSectionDAO {
 		$submissionDao->removeSubmissionsFromSection($sectionId);
 
 		if (isset($contextId) && !$this->sectionExists($sectionId, $contextId)) return false;
-		$this->update('DELETE FROM section_settings WHERE section_id = ?', (int) $sectionId);
-		$this->update('DELETE FROM sections WHERE section_id = ?', (int) $sectionId);
+		$this->update('DELETE FROM section_settings WHERE section_id = ?', [(int) $sectionId]);
+		$this->update('DELETE FROM sections WHERE section_id = ?', [(int) $sectionId]);
 	}
 
 	/**
@@ -462,11 +462,10 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Delete the custom ordering of an issue's sections.
 	 * @param $issueId int
-	 * @return boolean
 	 */
 	function deleteCustomSectionOrdering($issueId) {
-		return $this->update(
-			'DELETE FROM custom_section_orders WHERE issue_id = ?', (int) $issueId
+		$this->update(
+			'DELETE FROM custom_section_orders WHERE issue_id = ?', [(int) $issueId]
 		);
 	}
 
@@ -480,13 +479,13 @@ class SectionDAO extends PKPSectionDAO {
 
 		$this->update(
 			'DELETE FROM custom_section_orders WHERE issue_id = ? AND section_id = ?',
-			array((int) $issueId, (int) $sectionId)
+			[(int) $issueId, (int) $sectionId]
 		);
 
 		// Reduce the section order of every successive section by one
 		$this->update(
 			'UPDATE custom_section_orders SET seq = seq - 1 WHERE issue_id = ? AND seq > ?',
-			array((int) $issueId, (float) $seq)
+			[(int) $issueId, (float) $seq]
 		);
 	}
 
@@ -552,7 +551,7 @@ class SectionDAO extends PKPSectionDAO {
 	function insertCustomSectionOrder($issueId, $sectionId, $seq) {
 		$this->update(
 			'INSERT INTO custom_section_orders (section_id, issue_id, seq) VALUES (?, ?, ?)',
-			array((int) $sectionId,(int) $issueId, (float) $seq)
+			[(int) $sectionId,(int) $issueId, (float) $seq]
 		);
 	}
 
@@ -565,7 +564,7 @@ class SectionDAO extends PKPSectionDAO {
 	function updateCustomSectionOrder($issueId, $sectionId, $seq) {
 		$this->update(
 			'UPDATE custom_section_orders SET seq = ? WHERE issue_id = ? AND section_id = ?',
-			array((float) $seq, (int) $issueId, (int) $sectionId)
+			[(float) $seq, (int) $issueId, (int) $sectionId]
 		);
 	}
 }

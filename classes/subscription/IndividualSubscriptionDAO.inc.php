@@ -44,7 +44,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * Retrieve individual subscription by user ID for journal.
 	 * @param $userId int
 	 * @param $journalId int
-	 * @return IndividualSubscriptions
+	 * @return IndividualSubscription
 	 */
 	function getByUserIdForJournal($userId, $journalId) {
 		$result = $this->retrieveRange(
