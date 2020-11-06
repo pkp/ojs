@@ -342,7 +342,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$params = array_merge($userDao->getFetchParameters(), [(int) $journalId]);
 		$result = $this->retrieveRange(
-			'SELECT	s.*,
+			$sql = 'SELECT	s.*,
 			' . $userDao->getFetchColumns() . '
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
@@ -355,7 +355,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			$params,
 			$rangeInfo
 		);
-		return new DAOResultFactory($result, $this, '_fromRow');
+		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params); // Counted in subscription grid paging
 	}
 
 	/**

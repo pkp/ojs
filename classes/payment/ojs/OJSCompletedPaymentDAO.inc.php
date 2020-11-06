@@ -16,6 +16,7 @@
  */
 
 import('lib.pkp.classes.payment.CompletedPayment');
+import('classes.payment.ojs.OJSPaymentManager'); // Constants
 
 class OJSCompletedPaymentDAO extends DAO {
 	/**
