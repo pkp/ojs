@@ -399,8 +399,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 				OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
 			[(int) $userId, (int) $journalId]
 		);
-		$row = (array) $result->current();
-		return $row ? (boolean) $row['subscription_id'] : false;
+		$row = $result->current();
+		return $row ? (boolean) $row->subscription_id : false;
 	}
 
 	/**
