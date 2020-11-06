@@ -300,8 +300,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	function deleteByJournalId($journalId) {
 		$result = $this->retrieve('SELECT s.subscription_id AS subscription_id FROM subscriptions s WHERE s.journal_id = ?', [(int) $journalId]);
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$this->deleteById($row['subscription_id']);
+			$this->deleteById($row->subscription_id);
 		}
 	}
 
@@ -312,8 +311,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	function deleteByUserId($userId) {
 		$result = $this->retrieve('SELECT s.subscription_id AS subscription_id FROM subscriptions s WHERE s.user_id = ?', [(int) $userId]);
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$this->deleteById($row['subscription_id']);
+			$this->deleteById($row->subscription_id);
 		}
 	}
 
@@ -325,8 +323,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	function deleteByUserIdForJournal($userId, $journalId) {
 		$result = $this->retrieve('SELECT s.subscription_id AS subscription_id FROM subscriptions s WHERE s.user_id = ? AND s.journal_id = ?', [(int) $userId, (int) $journalId]);
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$this->deleteById($row['subscription_id']);
+			$this->deleteById($row->subscription_id);
 		}
 	}
 
@@ -337,8 +334,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	function deleteByTypeId($subscriptionTypeId) {
 		$result = $this->retrieve('SELECT s.subscription_id AS subscription_id FROM subscriptions s WHERE s.type_id = ?', [(int) $subscriptionTypeId]);
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$this->deleteById($row['subscription_id']);
+			$this->deleteById($row->subscription_id);
 		}
 	}
 
@@ -593,13 +589,12 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			FROM	institutional_subscription_ip
 			WHERE	subscription_id = ?
 			ORDER BY institutional_subscription_ip_id ASC',
-			(int) $institutionalSubscription->getId()
+			[(int) $institutionalSubscription->getId()]
 		);
 
 		$ipRanges = [];
 		foreach ($ipResult as $row) {
-			$row = (array) $row;
-			$ipRanges[] = $ipRow['ip_string'];
+			$ipRanges[] = $ipRow->ip_string;
 		}
 		$institutionalSubscription->setIPRanges($ipRanges);
 

@@ -148,29 +148,28 @@ class Upgrade extends Installer {
 			WHERE s.comments_to_ed IS NOT NULL AND s.comments_to_ed != \'\''
 		);
 		foreach ($commentsResult as $row) {
-			$row = (array) $row;
-			$comments_to_ed = PKPString::stripUnsafeHtml($row['comments_to_ed']);
-			if ($comments_to_ed != ""){
+			$commentsToEd = PKPString::stripUnsafeHtml($row->comments_to_ed);
+			if ($commentsToEd != ''){
 				$userId = null;
-				$authorAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($row['submission_id'], ROLE_ID_AUTHOR);
+				$authorAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($row->submission_id, ROLE_ID_AUTHOR);
 				if ($authorAssignments->getCount() != 0) {
 					// We assume the results are ordered by stage_assignment_id i.e. first author assignment is first
 					$userId = $authorAssignments->next()->getUserId();
 				} else {
-					$managerUserGroup = $userGroupDao->getDefaultByRoleId($row['context_id'], ROLE_ID_MANAGER);
-					$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $row['context_id']);
+					$managerUserGroup = $userGroupDao->getDefaultByRoleId($row->context_id, ROLE_ID_MANAGER);
+					$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $row->context_id);
 					$userId = $managerUsers->next()->getId();
 				}
 				assert($userId);
 
 				$query = $queryDao->newDataObject();
 				$query->setAssocType(ASSOC_TYPE_SUBMISSION);
-				$query->setAssocId($row['submission_id']);
+				$query->setAssocId($row->submission_id);
 				$query->setStageId(WORKFLOW_STAGE_ID_SUBMISSION);
 				$query->setSequence(REALLY_BIG_NUMBER);
 
 				$queryDao->insertObject($query);
-				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row['submission_id']);
+				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row->submission_id);
 				$queryDao->insertParticipant($query->getId(), $userId);
 
 				$queryId = $query->getId();
@@ -179,9 +178,9 @@ class Upgrade extends Installer {
 				$note->setUserId($userId);
 				$note->setAssocType(ASSOC_TYPE_QUERY);
 				$note->setTitle('Comments for the Editor');
-				$note->setContents($comments_to_ed);
-				$note->setDateCreated(strtotime($row['date_submitted']));
-				$note->setDateModified(strtotime($row['date_submitted']));
+				$note->setContents($commentsToEd);
+				$note->setDateCreated(strtotime($row->date_submitted));
+				$note->setDateModified(strtotime($row->date_submitted));
 				$note->setAssocId($queryId);
 				$noteDao->insertObject($note);
 			}
@@ -218,12 +217,11 @@ class Upgrade extends Installer {
 		);
 		// remove the old 2.4.x cover images, for which a new cover image exists
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$oldFileName = $row['setting_value'];
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName)) {
-				$publicFileManager->removeContextFile($row['journal_id'], $oldFileName);
+			$oldFileName = $row->setting_value;
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row->journal_id) . '/' . $oldFileName)) {
+				$publicFileManager->removeContextFile($row->journal_id, $oldFileName);
 			}
-			$issueDao->update('DELETE FROM issue_settings WHERE issue_id = ? AND setting_name = \'fileName\' AND setting_value = ?', array((int) $row['issue_id'], $oldFileName));
+			$issueDao->update('DELETE FROM issue_settings WHERE issue_id = ? AND setting_name = \'fileName\' AND setting_value = ?', array((int) $row->issue_id, $oldFileName));
 		}
 
 		// retrieve names for unlocalized issue cover images
@@ -237,12 +235,11 @@ class Upgrade extends Installer {
 		// rename (copy + remove) the cover images files in the public folder,
 		// considering the locale (using the journal primary locale)
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$oldFileName = $row['setting_value'];
-			$newFileName = str_replace('.', '_' . $row['primary_locale'] . '.', $oldFileName);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName)) {
-				$publicFileManager->copyContextFile($row['journal_id'], $publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName, $newFileName);
-				$publicFileManager->removeContextFile($row['journal_id'], $oldFileName);
+			$oldFileName = $row->setting_value;
+			$newFileName = str_replace('.', '_' . $row->primary_locale . '.', $oldFileName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row->journal_id) . '/' . $oldFileName)) {
+				$publicFileManager->copyContextFile($row->journal_id, $publicFileManager->getContextFilesPath($row->journal_id) . '/' . $oldFileName, $newFileName);
+				$publicFileManager->removeContextFile($row->journal_id, $oldFileName);
 			}
 		}
 		$driver = Config::getVar('database', 'driver');
@@ -310,11 +307,10 @@ class Upgrade extends Installer {
 		);
 		// remove the old 2.4.x cover images, for which a new cover image exists
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$submissionId = $row['submission_id'];
-			$oldFileName = $row['setting_value'];
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['context_id']) . '/' . $oldFileName)) {
-				$publicFileManager->removeContextFile($row['journal_id'], $oldFileName);
+			$submissionId = $row->submission_id;
+			$oldFileName = $row->setting_value;
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row->context_id) . '/' . $oldFileName)) {
+				$publicFileManager->removeContextFile($row->journal_id, $oldFileName);
 			}
 			$submissionDao->update('DELETE FROM submission_settings WHERE submission_id = ? AND setting_name = \'fileName\' AND setting_value = ?', [(int) $submissionId, $oldFileName]);
 		}
@@ -330,12 +326,11 @@ class Upgrade extends Installer {
 		// rename (copy + remove) the cover images files in the public folder,
 		// considering the locale (using the journal primary locale)
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$oldFileName = $row['setting_value'];
-			$newFileName = str_replace('.', '_' . $row['primary_locale'] . '.', $oldFileName);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName)) {
-				$publicFileManager->copyContextFile($row['journal_id'], $publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName, $newFileName);
-				$publicFileManager->removeContextFile($row['journal_id'], $oldFileName);
+			$oldFileName = $row->setting_value;
+			$newFileName = str_replace('.', '_' . $row->primary_locale . '.', $oldFileName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row->journal_id) . '/' . $oldFileName)) {
+				$publicFileManager->copyContextFile($row->journal_id, $publicFileManager->getContextFilesPath($row->journal_id) . '/' . $oldFileName, $newFileName);
+				$publicFileManager->removeContextFile($row->journal_id, $oldFileName);
 			}
 		}
 		$driver = $submissionDao->getDriver();
@@ -393,9 +388,8 @@ class Upgrade extends Installer {
 			'SELECT a.author_id, s.context_id FROM authors a JOIN submissions s ON (a.submission_id = s.submission_id) JOIN user_groups g ON (a.user_group_id = g.user_group_id) WHERE g.context_id <> s.context_id'
 		);
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$authorGroup = $userGroupDao->getDefaultByRoleId($row['context_id'], ROLE_ID_AUTHOR);
-			if ($authorGroup) $userGroupDao->update('UPDATE authors SET user_group_id = ? WHERE author_id = ?', [(int) $authorGroup->getId(), $row['author_id']]);
+			$authorGroup = $userGroupDao->getDefaultByRoleId($row->context_id, ROLE_ID_AUTHOR);
+			if ($authorGroup) $userGroupDao->update('UPDATE authors SET user_group_id = ? WHERE author_id = ?', [(int) $authorGroup->getId(), $row->author_id]);
 		}
 		return true;
 	}
@@ -467,8 +461,7 @@ class Upgrade extends Installer {
 		// get cancelled review assignemnts
 		$result = $reviewAssignmentDao->retrieve('SELECT review_id FROM review_assignments_tmp');
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$reviewAssignmentDao->deleteById($row['review_id']);
+			$reviewAssignmentDao->deleteById($row->review_id);
 		}
 		// remove temporary table
 		$reviewAssignmentDao->update('DROP TABLE review_assignments_tmp');
@@ -488,8 +481,7 @@ class Upgrade extends Installer {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 		$result = $submissionFileDao->retrieve('SELECT df.file_id AS dependent_file_id, gf.file_id AS galley_file_id FROM submission_files df, submission_files gf, submission_html_galley_images i, submission_galleys g WHERE i.galley_id = g.galley_id AND g.file_id = gf.file_id AND i.file_id = df.file_id');
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$submissionFiles = $submissionFileDao->getAllRevisions($row['dependent_file_id']);
+			$submissionFiles = $submissionFileDao->getAllRevisions($row->dependent_file_id);
 			foreach ((array) $submissionFiles as $submissionFile) {
 				if ($submissionFile->getFileStage() != 1) continue; // SUBMISSION_FILE_PUBLIC
 
@@ -498,7 +490,7 @@ class Upgrade extends Installer {
 
 				$submissionFile->setFileStage(SUBMISSION_FILE_DEPENDENT);
 				$submissionFile->setAssocType(ASSOC_TYPE_SUBMISSION_FILE);
-				$submissionFile->setAssocId($row['galley_file_id']);
+				$submissionFile->setAssocId($row->galley_file_id);
 				$submissionFile->setGenreId($imageGenre->getId());
 				$submissionFileDao->updateObject($submissionFile);
 			}
@@ -525,10 +517,9 @@ class Upgrade extends Installer {
 		$oldKeywordsFound = false;
 		$result = $submissionKeywordDao->retrieve('SELECT * FROM submission_settings WHERE setting_name = \'subject\' AND setting_value <> \'\'');
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$submissionId = $row['submission_id'];
-			$locale = $row['locale'];
-			$oldKeywordsArray = preg_split('/[,;:]/', $row['setting_value']);
+			$submissionId = $row->submission_id;
+			$locale = $row->locale;
+			$oldKeywordsArray = preg_split('/[,;:]/', $row->setting_value);
 			$oldKeywords = array_map('trim', $oldKeywordsArray);
 			// get current keywords
 			$newKeywords = array();
@@ -576,10 +567,9 @@ class Upgrade extends Installer {
 		// insert old subjects
 		$result = $submissionKeywordDao->retrieve('SELECT * FROM submission_settings WHERE setting_name = \'subjectClass\' AND setting_value <> \'\'');
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$submissionId = $row['submission_id'];
-			$locale = $row['locale'];
-			$oldSubjectsArray = preg_split('/[,;:]/', $row['setting_value']);
+			$submissionId = $row->submission_id;
+			$locale = $row->locale;
+			$oldSubjectsArray = preg_split('/[,;:]/', $row->setting_value);
 			$oldSubjects = array_map('trim', $oldSubjectsArray);
 			// get current subjects
 			$newSubjects = array();
@@ -827,8 +817,8 @@ class Upgrade extends Installer {
 
 		// Check if the sr_SR is used, and if not do not run further
 		$srExistResult = $journalSettingsDao->retrieve('SELECT COUNT(*) AS row_count FROM site WHERE installed_locales LIKE ?', ['%'.$oldLocale.'%']);
-		$row = (array) $srExistResult->current();
-		$srExist = $row && $row['row_count'];
+		$row = $srExistResult->current();
+		$srExist = $row && $row->row_count;
 		if (!$srExist) return true;
 
 		// Consider all DB tables that have locale column:
@@ -860,14 +850,13 @@ class Upgrade extends Installer {
 		// As a precaution use $oldLocaleStringLength, to exclude that the text contain the old locale string
 		$settingValueResult = $journalSettingsDao->retrieve('SELECT * FROM journal_settings WHERE setting_name IN ' .$settingNames .' AND setting_value LIKE ? AND setting_type = \'object\'', array('%' .$oldLocaleStringLength .':"' .$oldLocale .'%'));
 		foreach ($settingValueResult as $row) {
-			$row = (array) $row;
-			$arraySettingValue = $journalSettingsDao->getSetting($row['journal_id'], $row['setting_name']);
+			$arraySettingValue = $journalSettingsDao->getSetting($row->journal_id, $row->setting_name);
 			for($i = 0; $i < count($arraySettingValue); $i++) {
 				if ($arraySettingValue[$i] == $oldLocale) {
 					$arraySettingValue[$i] = $newLocale;
 				}
 			}
-			$journalSettingsDao->updateSetting($row['journal_id'], $row['setting_name'], $arraySettingValue);
+			$journalSettingsDao->updateSetting($row->journal_id, $row->setting_name, $arraySettingValue);
 		}
 
 		// Consider journal images
@@ -876,45 +865,42 @@ class Upgrade extends Installer {
 		$settingNames = "('homeHeaderLogoImage', 'homeHeaderTitleImage', 'homepageImage', 'journalFavicon', 'journalThumbnail', 'pageHeaderLogoImage', 'pageHeaderTitleImage')";
 		$settingValueResult = $journalSettingsDao->retrieve('SELECT * FROM journal_settings WHERE setting_name IN ' .$settingNames .' AND locale = ? AND setting_value LIKE ? AND setting_type = \'object\'', array($newLocale, '%' .$oldLocale .'%'));
 		foreach ($settingValueResult as $row) {
-			$row = (array) $row;
-			$arraySettingValue = $journalSettingsDao->getSetting($row['journal_id'], $row['setting_name'], $newLocale);
+			$arraySettingValue = $journalSettingsDao->getSetting($row->journal_id, $row->setting_name, $newLocale);
 			$oldUploadName = $arraySettingValue['uploadName'];
 			$newUploadName = str_replace('_'.$oldLocale.'.', '_'.$newLocale.'.', $oldUploadName);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldUploadName)) {
-				$publicFileManager->copyContextFile($row['journal_id'], $publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldUploadName, $newUploadName);
-				$publicFileManager->removeContextFile($row['journal_id'], $oldUploadName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row->journal_id) . '/' . $oldUploadName)) {
+				$publicFileManager->copyContextFile($row->journal_id, $publicFileManager->getContextFilesPath($row->journal_id) . '/' . $oldUploadName, $newUploadName);
+				$publicFileManager->removeContextFile($row->journal_id, $oldUploadName);
 			}
 			$arraySettingValue['uploadName'] = $newUploadName;
 			$newArraySettingValue[$newLocale] = $arraySettingValue;
-			$journalSettingsDao->updateSetting($row['journal_id'], $row['setting_name'], $newArraySettingValue, 'object', true);
+			$journalSettingsDao->updateSetting($row->journal_id, $row->setting_name, $newArraySettingValue, 'object', true);
 		}
 
 		// Consider issue cover images
 		// Note that the locale column values are already changed above
 		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.journal_id FROM issue_settings a, issues b WHERE a.setting_name = \'fileName\' AND a.locale = ? AND a.setting_value LIKE ? AND a.setting_type = \'string\' AND b.issue_id = a.issue_id', array($newLocale, '%' .$oldLocale .'%'));
 		foreach ($settingValueResult as $row) {
-			$row = (array) $row;
-			$oldCoverImage = $row['setting_value'];
+			$oldCoverImage = $row->setting_value;
 			$newCoverImage = str_replace('_'.$oldLocale.'.', '_'.$newLocale.'.', $oldCoverImage);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldCoverImage)) {
-				$publicFileManager->copyContextFile($row['journal_id'], $publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldCoverImage, $newCoverImage);
-				$publicFileManager->removeContextFile($row['journal_id'], $oldCoverImage);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row->journal_id) . '/' . $oldCoverImage)) {
+				$publicFileManager->copyContextFile($row->journal_id, $publicFileManager->getContextFilesPath($row->journal_id) . '/' . $oldCoverImage, $newCoverImage);
+				$publicFileManager->removeContextFile($row->journal_id, $oldCoverImage);
 			}
-			$journalSettingsDao->update('UPDATE issue_settings SET setting_value = ? WHERE issue_id = ? AND setting_name = \'fileName\' AND locale = ?', [$newCoverImage, (int) $row['issue_id'], $newLocale]);
+			$journalSettingsDao->update('UPDATE issue_settings SET setting_value = ? WHERE issue_id = ? AND setting_name = \'fileName\' AND locale = ?', [$newCoverImage, (int) $row->issue_id, $newLocale]);
 		}
 
 		// Consider article cover images
 		// Note that the locale column values are already changed above
 		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.context_id FROM submission_settings a, submissions b WHERE a.setting_name = \'fileName\' AND a.locale = ? AND a.setting_value LIKE ? AND b.submission_id = a.submission_id', array($newLocale, '%' .$oldLocale .'%'));
 		foreach ($settingValueResult as $row) {
-			$row = (array) $row;
-			$oldCoverImage = $row['setting_value'];
+			$oldCoverImage = $row->setting_value;
 			$newCoverImage = str_replace('_'.$oldLocale.'.', '_'.$newLocale.'.', $oldCoverImage);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['context_id']) . '/' . $oldCoverImage)) {
-				$publicFileManager->copyContextFile($row['context_id'], $publicFileManager->getContextFilesPath($row['context_id']) . '/' . $oldCoverImage, $newCoverImage);
-				$publicFileManager->removeContextFile($row['context_id'], $oldCoverImage);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row->context_id) . '/' . $oldCoverImage)) {
+				$publicFileManager->copyContextFile($row->context_id, $publicFileManager->getContextFilesPath($row->context_id) . '/' . $oldCoverImage, $newCoverImage);
+				$publicFileManager->removeContextFile($row->context_id, $oldCoverImage);
 			}
-			$journalSettingsDao->update('UPDATE submission_settings SET setting_value = ? WHERE submission_id = ? AND setting_name = \'fileName\' AND locale = ?', array($newCoverImage, (int) $row['submission_id'], $newLocale));
+			$journalSettingsDao->update('UPDATE submission_settings SET setting_value = ? WHERE submission_id = ? AND setting_name = \'fileName\' AND locale = ?', array($newCoverImage, (int) $row->submission_id, $newLocale));
 		}
 
 		// plugin_settings
@@ -924,11 +910,10 @@ class Upgrade extends Installer {
 		$settingNames = "('blockContent', 'additionalInformation')";
 		$settingValueResult = $pluginSettingsDao->retrieve('SELECT * FROM plugin_settings WHERE setting_name IN ' .$settingNames .' AND setting_value LIKE ?', array('%' .$oldLocaleStringLength .':"' .$oldLocale .'%'));
 		foreach ($settingValueResult as $row) {
-			$row = (array) $row;
-			$arraySettingValue = $pluginSettingsDao->getSetting($row['context_id'], $row['plugin_name'], $row['setting_name']);
+			$arraySettingValue = $pluginSettingsDao->getSetting($row->context_id, $row->plugin_name, $row->setting_name);
 			$arraySettingValue[$newLocale] = $arraySettingValue[$oldLocale];
 			unset($arraySettingValue[$oldLocale]);
-			$pluginSettingsDao->updateSetting($row['context_id'], $row['plugin_name'], $row['setting_name'], $arraySettingValue);
+			$pluginSettingsDao->updateSetting($row->context_id, $row->plugin_name, $row->setting_name, $arraySettingValue);
 		}
 
 		return true;
@@ -980,13 +965,12 @@ class Upgrade extends Installer {
 			(suffix IS NOT NULL AND suffix <> '')"
 		);
 		foreach ($userResult as $row) {
-			$row = (array) $row;
-			$userId = $row['user_id'];
-			$firstName = $row['first_name'];
-			$lastName = $row['last_name'];
-			$middleName = $row['middle_name'];
-			$salutation = $row['salutation'];
-			$suffix = $row['suffix'];
+			$userId = $row->user_id;
+			$firstName = $row->first_name;
+			$lastName = $row->last_name;
+			$middleName = $row->middle_name;
+			$salutation = $row->salutation;
+			$suffix = $row->suffix;
 			foreach ($supportedLocales as $siteLocale) {
 				$preferredPublicName = ($salutation != '' ? "$salutation " : '') . "$firstName " . ($middleName != '' ? "$middleName " : '') . $lastName . ($suffix != '' ? ", $suffix" : '');
 				if (AppLocale::isLocaleWithFamilyFirst($siteLocale)) {
@@ -1016,13 +1000,12 @@ class Upgrade extends Installer {
 			WHERE suffix IS NOT NULL AND suffix <> ''"
 		);
 		foreach ($authorResult as $row) {
-			$row = (array) $row;
-			$authorId = $row['author_id'];
-			$firstName = $row['first_name'];
-			$lastName = $row['last_name'];
-			$middleName = $row['middle_name'];
-			$suffix = $row['suffix'];
-			$journalId = $row['journal_id'];
+			$authorId = $row->author_id;
+			$firstName = $row->first_name;
+			$lastName = $row->last_name;
+			$middleName = $row->middle_name;
+			$suffix = $row->suffix;
+			$journalId = $row->journal_id;
 			$supportedLocales = $journalsSupportedLocales[$journalId];
 			foreach ($supportedLocales as $locale) {
 				$preferredPublicName = "$firstName " . ($middleName != '' ? "$middleName " : '') . $lastName . ($suffix != '' ? ", $suffix" : '');
@@ -1060,11 +1043,10 @@ class Upgrade extends Installer {
 		);
 		// Loop through the data and save to temp table
 		foreach ($result as $row) {
-			$row = (array) $row;
 			// Use assoc_type 2531 to prevent collisions between old assoc_id and new assoc_id
 			$metricsDao->update(
 				'UPDATE metrics_supp SET assoc_id = ?, assoc_type = ? WHERE assoc_type = ? AND assoc_id = ?',
-				[(int) $row['file_id'], 2531, 531, (int) $row['setting_value']]
+				[(int) $row->file_id, 2531, 531, (int) $row->setting_value]
 			);
 		}
 		// update temprorary 2531 values to 531 values
@@ -1176,16 +1158,15 @@ class Upgrade extends Installer {
 			'SELECT * from submission_settings WHERE setting_name=\'coverImage\' OR setting_name=\'coverImageAltText\''
 		);
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$submissionId = $row['submission_id'];
+			$submissionId = $row->submission_id;
 			if (empty($coverImagesBySubmission[$submissionId])) {
 				$coverImagesBySubmission[$submissionId] = [];
 			}
-			if ($row['setting_name'] === 'coverImage') {
-				$coverImagesBySubmission[$submissionId]['uploadName'] = $row['setting_value'];
+			if ($row->setting_name === 'coverImage') {
+				$coverImagesBySubmission[$submissionId]['uploadName'] = $row->setting_value;
 				$coverImagesBySubmission[$submissionId]['dateUploaded'] = Core::getCurrentDate();
-			} elseif ($row['setting_name'] === 'coverImageAltText') {
-				$coverImagesBySubmission[$submissionId]['altText'] = $row['setting_value'];
+			} elseif ($row->setting_name === 'coverImageAltText') {
+				$coverImagesBySubmission[$submissionId]['altText'] = $row->setting_value;
 			}
 		}
 
