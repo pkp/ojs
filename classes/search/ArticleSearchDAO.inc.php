@@ -19,12 +19,16 @@ import('lib.pkp.classes.search.SubmissionSearchDAO');
 
 class ArticleSearchDAO extends SubmissionSearchDAO {
 	/**
-	 * Retrieve the top results for a phrases with the given
-	 * limit (default 500 results).
-	 * @param $keywordId int
+	 * Retrieve the top results for a phrase.
+	 * @param $journal Journal
+	 * @param $phrase array
+	 * @param $publishedFrom int|null Optional start date
+	 * @param $publishedTo int|null Optional end date
+	 * @param $type int|null ASSOC_TYPE_...
+	 * @param $limit int
 	 * @return array of results (associative arrays)
 	 */
-	public function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
+	public function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500) {
 		if (empty($phrase)) return array();
 
 		$sqlFrom = '';
@@ -88,12 +92,12 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 
 		$returner = [];
 		foreach ($result as $row) {
-			$returner[$row->submission_id] = array(
+			$returner[$row->submission_id] = [
 				'count' => $row->count,
 				'journal_id' => $row->journal_id,
 				'issuePublicationDate' => $this->datetimeFromDB($row->i_pub),
 				'publicationDate' => $this->datetimeFromDB($row->s_pub)
-			);
+			];
 		}
 		return $returner;
 	}
