@@ -377,9 +377,6 @@ min_word_length = 3
 ; are fetched and merged to provide results for searches with several keywords.
 results_per_keyword = 500
 
-; The number of hours for which keyword search results are cached.
-result_cache_hours = 1
-
 ; Paths to helper programs for indexing non-text files.
 ; Programs are assumed to output the converted text to stdout, and "%s" is
 ; replaced by the file argument.
