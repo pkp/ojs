@@ -667,18 +667,18 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			}
 
 			// Insert IP or IP range
-			if (($ipStart != null) && ($returner)) {
-				$returner = $this->update(
+			if ($ipStart != null && $returner) {
+				$returner = (boolean) $this->update(
 					'INSERT INTO institutional_subscription_ip
 					(subscription_id, ip_string, ip_start, ip_end)
 					VALUES
 					(?, ?, ?, ?)',
-					array(
+					[
 						(int) $subscriptionId,
 						$curIPString,
 						$ipStart,
 						$ipEnd
-					)
+					]
 				);
 			} else {
 				$returner = false;
@@ -696,7 +696,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 */
 	function _deleteSubscriptionIPRanges($subscriptionId) {
 		return $this->update(
-			'DELETE FROM institutional_subscription_ip WHERE subscription_id = ?', (int) $subscriptionId
+			'DELETE FROM institutional_subscription_ip WHERE subscription_id = ?', [(int) $subscriptionId]
 		);
 	}
 }
