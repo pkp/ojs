@@ -57,15 +57,15 @@ class ReviewerHandler extends PKPReviewerHandler {
 	 * @param $request PKPRequest
 	 * @return void
 	 */
-	function _validateAccessKey($request) {
+	protected function _validateAccessKey($request) {
 		$accessKeyCode = $request->getUserVar('key');
 		$reviewId = $request->getUserVar('reviewId');
-		if (!($accessKeyCode && $reviewId)) { return false; }
+		if (!($accessKeyCode && $reviewId)) return;
 
 		// Check if the user is already logged in
 		$sessionManager = SessionManager::getManager();
 		$session = $sessionManager->getUserSession();
-		if ($session->getUserId()) { return false; }
+		if ($session->getUserId()) return;
 
 		import('lib.pkp.classes.security.AccessKeyManager');
 		$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO'); /* @var $reviewerSubmissionDao ReviewerSubmissionDAO */
@@ -80,12 +80,12 @@ class ReviewerHandler extends PKPReviewerHandler {
 			$reviewerSubmission->getReviewerId(),
 			$accessKeyHash
 		);
-		if (!$accessKey) { return false; }
+		if (!$accessKey) return;
 
 		// Get the reviewer user object
 		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
 		$user = $userDao->getById($accessKey->getUserId());
-		if (!$user) { return false; }
+		if (!$user) return;
 
 		// Register the user object in the session
 		import('lib.pkp.classes.security.Validation');
@@ -102,7 +102,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 	public function getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment) {
 	    switch ($step) {
 	        case 3: 
-	        	import("classes.submission.reviewer.form.ReviewerReviewStep3Form");
+	        	import('classes.submission.reviewer.form.ReviewerReviewStep3Form');
 	        	return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
 	    }
 	    return parent::getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment);
