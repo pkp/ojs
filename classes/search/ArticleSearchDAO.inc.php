@@ -63,7 +63,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		}
 
 		import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_PUBLISHED
-		$result = $this->retrieveCached(
+		$result = $this->retrieve(
 			'SELECT
 				o.submission_id,
 				MAX(s.context_id) AS journal_id,
@@ -83,8 +83,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			GROUP BY o.submission_id
 			ORDER BY count DESC
 			LIMIT ' . $limit,
-			$params,
-			3600 * $cacheHours // Cache for 24 hours
+			$params
 		);
 
 		$returner = [];

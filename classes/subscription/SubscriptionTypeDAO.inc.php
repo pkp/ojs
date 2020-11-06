@@ -64,40 +64,40 @@ class SubscriptionTypeDAO extends DAO {
 	/**
 	 * Retrieve institutional flag by ID.
 	 * @param $typeId int
-	 * @return int|false
+	 * @return boolean
 	 */
 	function getSubscriptionTypeInstitutional($typeId) {
 		$result = $this->retrieve(
 			'SELECT institutional FROM subscription_types WHERE type_id = ?', [(int) $typeId]
 		);
 		$row = $result->current();
-		return $row ? $row->institutional : false;
+		return $row ? (boolean) $row->institutional : false;
 	}
 
 	/**
 	 * Retrieve membership flag by ID.
 	 * @param $typeId int
-	 * @return int|false
+	 * @return boolean
 	 */
 	function getSubscriptionTypeMembership($typeId) {
 		$result = $this->retrieve(
 			'SELECT membership FROM subscription_types WHERE type_id = ?', [(int) $typeId]
 		);
 		$row = $result->current();
-		return $row ? $row->membership : false;
+		return $row ? (boolean) $row->membership : false;
 	}
 
 	/**
 	 * Retrieve public display flag by ID.
 	 * @param $typeId int
-	 * @return int|false
+	 * @return boolean
 	 */
 	function getSubscriptionTypeDisablePublicDisplay($typeId) {
 		$result = $this->retrieve(
 			'SELECT disable_public_display FROM subscription_types WHERE type_id = ?', [(int) $typeId]
 		);
 		$row = $result->current();
-		return $row ? $row->disable_public_display : false;
+		return $row ? (boolean) $row->disable_public_display : false;
 	}
 
 	/**
