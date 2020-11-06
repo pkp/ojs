@@ -75,8 +75,8 @@ class SectionDAO extends PKPSectionDAO {
 			$params
 		);
 
-		$row = (array) $result->current();
-		return $row?$this->_fromRow($row):null;
+		$row = $result->current();
+		return $row?$this->_fromRow((array) $row):null;
 	}
 
 	/**
@@ -101,8 +101,8 @@ class SectionDAO extends PKPSectionDAO {
 			$params
 		);
 
-		$row = (array) $result->current();
-		return $row?$this->_fromRow($row):null;
+		$row = $result->current();
+		return $row?$this->_fromRow((array) $row):null;
 	}
 
 	/**
@@ -127,8 +127,8 @@ class SectionDAO extends PKPSectionDAO {
 			$params
 		);
 
-		$row = (array) $result->current();
-		return $row?$this->_fromRow($row):null;
+		$row = $result->current();
+		return $row?$this->_fromRow((array) $row):null;
 	}
 
 	/**
@@ -144,8 +144,8 @@ class SectionDAO extends PKPSectionDAO {
 			[(int) $submissionId]
 		);
 
-		$row = (array) $result->current();
-		return $row?$this->_fromRow($row):null;
+		$row = $result->current();
+		return $row?$this->_fromRow((array) $row):null;
 	}
 
 	/**
@@ -311,12 +311,11 @@ class SectionDAO extends PKPSectionDAO {
 
 		$returner = [];
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$section = $this->_fromRow($row);
-			if (!isset($returner[$row['editor_id']])) {
-				$returner[$row['editor_id']] = [$section];
+			$section = $this->_fromRow((array) $row);
+			if (!isset($returner[$row->editor_id])) {
+				$returner[$row->editor_id] = [$section];
 			} else {
-				$returner[$row['editor_id']][] = $section;
+				$returner[$row->editor_id][] = $section;
 			}
 		}
 		return $returner;
@@ -419,8 +418,7 @@ class SectionDAO extends PKPSectionDAO {
 
 		$returner = [];
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$returner[] = $row['section_id'];
+			$returner[] = $row->section_id;
 		}
 		return $returner;
 	}
@@ -447,8 +445,8 @@ class SectionDAO extends PKPSectionDAO {
 	function resequenceSections($journalId) {
 		$result = $this->retrieve('SELECT section_id FROM sections WHERE journal_id = ? ORDER BY seq', [(int) $journalId]);
 
-		for ($i=1; $row = (array) $result->current(); $i++) {
-			$this->update('UPDATE sections SET seq = ? WHERE section_id = ?', [$i, $row['section_id']]);
+		for ($i=1; $row = $result->current(); $i++) {
+			$this->update('UPDATE sections SET seq = ? WHERE section_id = ?', [$i, $row->section_id]);
 			$result->next();
 		}
 	}
@@ -499,8 +497,8 @@ class SectionDAO extends PKPSectionDAO {
 	function resequenceCustomSectionOrders($issueId) {
 		$result = $this->retrieve('SELECT section_id FROM custom_section_orders WHERE issue_id = ? ORDER BY seq', [(int) $issueId]);
 
-		for ($i=1; $row = (array) $result->current(); $i++) {
-			$this->update('UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?', [$i, $row['section_id'], (int) $issueId]);
+		for ($i=1; $row = $result->current(); $i++) {
+			$this->update('UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?', [$i, $row->section_id, (int) $issueId]);
 			$result->next();
 		}
 	}
@@ -512,8 +510,8 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	function customSectionOrderingExists($issueId) {
 		$result = $this->retrieve('SELECT COUNT(*) AS row_count FROM custom_section_orders WHERE issue_id = ?', [(int) $issueId]);
-		$row = (array) $result->current();
-		return $row && $row['row_count'] != 0;
+		$row = $result->current();
+		return $row && $row->row_count != 0;
 	}
 
 	/**
@@ -528,7 +526,7 @@ class SectionDAO extends PKPSectionDAO {
 			[(int) $issueId, (int) $sectionId]
 		);
 		$row = $result->current();
-		return $row?$row['seq']:null;
+		return $row?$row->seq:null;
 	}
 
 	/**

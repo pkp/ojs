@@ -239,8 +239,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = true;
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$returner = $this->deleteById($row['subscription_id']);
+			$returner = $this->deleteById($row->subscription_id);
 			if (!$returner) break;
 		}
 		return $returner;
@@ -256,8 +255,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = true;
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$returner = $this->deleteById($row['subscription_id']);
+			$returner = $this->deleteById($row->subscription_id);
 			if (!$returner) break;
 		}
 		return $returner;
@@ -274,8 +272,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = true;
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$returner = $this->deleteById($row['subscription_id']);
+			$returner = $this->deleteById($row->subscription_id);
 			if (!$returner) break;
 		}
 		return $returner;
@@ -291,8 +288,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 		$returner = true;
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$returner = $this->deleteById($row['subscription_id']);
+			$returner = $this->deleteById($row->subscription_id);
 			if (!$returner) break;
 		}
 

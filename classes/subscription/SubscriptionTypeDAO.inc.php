@@ -253,8 +253,7 @@ class SubscriptionTypeDAO extends DAO {
 			 [(int) $journalId]
 		);
 		foreach ($result as $row) {
-			$row = (array) $row;
-			$typeId = $row['type_id'];
+			$typeId = $row->type_id;
 			$this->deleteSubscriptionTypeById($typeId);
 		}
 	}
