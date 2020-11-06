@@ -74,8 +74,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$params
 		);
 
-		$row = (array) $result->current();
-		return $row?$this->_returnIssueFromRow($row):null;
+		$row = $result->current();
+		return $row ? $this->_returnIssueFromRow((array) $row) : null;
 	}
 
 	/**
@@ -555,8 +555,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$params
 		);
 
-		$row = (array) $result->current();
-		return $row?$this->_returnIssueFromRow($row):null;
+		$row = $result->current();
+		return $row ? $this->_returnIssueFromRow((array) $row) : null;
 	}
 
 	/**
@@ -615,14 +615,11 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return DAOResultFactory
 	 */
 	function getExportable($contextId, $pubIdType = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null) {
-		$params = array();
-		if ($pubIdSettingName) {
-			$params[] = $pubIdSettingName;
-		}
+		$params = [];
+		if ($pubIdSettingName) $params[] = $pubIdSettingName;
 		$params[] = (int) $contextId;
-		if ($pubIdType) {
-			$params[] = 'pub-id::'.$pubIdType;
-		}
+		if ($pubIdType) $params[] = 'pub-id::'.$pubIdType;
+
 		import('classes.plugins.PubObjectsExportPlugin');
 		if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) {
 			$params[] = $pubIdSettingValue;
@@ -690,17 +687,13 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			[(int) $journalId]
 		);
 
-		for ($i=1; $row = (array) $result->current(); $i++) {
-			$issueId = $row['issue_id'];
-			$resultB = $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', [$journalId, $issueId]);
-			if ($rowB = $result->current()) {
-				$this->update(
-					'UPDATE custom_issue_orders SET seq = ? WHERE issue_id = ? AND journal_id = ?',
-					[$i, $issueId, $journalId]
-				);
-			} else {
+		for ($i=1; $row = $result->current(); $i++) {
+			if (!$this->update(
+				'UPDATE custom_issue_orders SET seq = ? WHERE issue_id = ? AND journal_id = ?',
+				[$i, $row->issue_id, $journalId]
+			)) {
 				// This entry is missing. Create it.
-				$this->insertCustomIssueOrder($journalId, $issueId, $i);
+				$this->insertCustomIssueOrder($journalId, $row->issue_id, $i);
 			}
 		}
 	}
@@ -715,8 +708,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			'SELECT COUNT(*) AS row_count FROM custom_issue_orders WHERE journal_id = ?',
 			[(int) $journalId]
 		);
-		$row = (array) $result->current();
-		return $row && $row['row_count'] != 0;
+		$row = $result->current();
+		return $row && $row->row_count != 0;
 	}
 
 	/**
@@ -731,8 +724,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			[(int) $journalId, (int) $issueId]
 		);
 
-		$row = (array) $result->current();
-		return $row?$result['seq']:null;
+		$row = $result->current();
+		return $row ? $result->seq : null;
 	}
 
 	/**
@@ -767,10 +760,10 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @param $newPos int The new position (0-based) of this section
 	 */
 	function moveCustomIssueOrder($journalId, $issueId, $newPos) {
-		$result = $this->retrieve('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', [(int) $journalId, (int) $issueId]);
-		if ($result->current()) {
-			$this->update('UPDATE custom_issue_orders SET seq = ? WHERE journal_id = ? AND issue_id = ?', [$newPos, (int) $journalId, (int) $issueId]);
-		} else {
+		if (!$this->update(
+			'UPDATE custom_issue_orders SET seq = ? WHERE journal_id = ? AND issue_id = ?',
+			[$newPos, (int) $journalId, (int) $issueId]
+		)) {
 			// This entry is missing. Create it.
 			$this->insertCustomIssueOrder($journalId, $issueId, $newPos);
 		}
@@ -800,15 +793,17 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @copydoc PKPPubIdPluginDAO::changePubId()
 	 */
 	function changePubId($pubObjectId, $pubIdType, $pubId) {
-		$idFields = ['issue_id', 'locale', 'setting_name'];
-		$updateArray = [
-			'issue_id' => (int) $pubObjectId,
-			'locale' => '',
-			'setting_name' => 'pub-id::'.$pubIdType,
-			'setting_type' => 'string',
-			'setting_value' => (string)$pubId
-		];
-		$this->replace('issue_settings', $updateArray, $idFields);
+		$this->replace(
+			'issue_settings',
+			[
+				'issue_id' => (int) $pubObjectId,
+				'locale' => '',
+				'setting_name' => 'pub-id::' . $pubIdType,
+				'setting_type' => 'string',
+				'setting_value' => (string) $pubId
+			],
+			['issue_id', 'locale', 'setting_name']
+		);
 		$this->flushCache();
 	}
 
