@@ -567,11 +567,11 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 */
 	function getIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
-			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC',
-			[(int) $journalId], $rangeInfo
+			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC',
+			$params = [(int) $journalId], $rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
+		return new DAOResultFactory($result, $this, '_returnIssueFromRow', [], $sql, $params); // Counted in ExportableIssuesListGridHandler
 	}
 
 	/**

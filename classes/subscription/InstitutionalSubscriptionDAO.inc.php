@@ -421,7 +421,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 
 
 		$result = $this->retrieveRange(
-			'SELECT DISTINCT s.*, iss.*,
+			$sql = 'SELECT DISTINCT s.*, iss.institution_name, iss.mailing_address, iss.domain,
 				' . $userDao->getFetchColumns() .'
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
@@ -437,7 +437,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_fromRow');
+		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params); // Counted in subscription grid paging
 	}
 
 	/**
