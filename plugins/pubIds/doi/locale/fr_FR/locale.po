@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-19 15:22+0000\n"
+"PO-Revision-Date: 2020-11-08 13:50+0000\n"
 "Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
 "fr/>\n"
@@ -123,3 +123,114 @@ msgstr ""
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Élément"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Épreuve : {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Un DOI n'a pas été attribué pour cette publication."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "Le DOI pour cette publication sera {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "Le DOI doit commencer par {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "Le DOI {$pubId} a été attribué."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr ""
+"Le dOI {$pubId} ne peut pas être attribué car il contient un modèle non "
+"résolu."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr ""
+"Le DOI ne peut pas être attribué car le suffixe personnalisé est manquant."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Attribuer le DOI {$pubId} à cet objet de type {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Utilisez l'option suivante pour supprimer les DOI de l'ensemble des objets ("
+"articles et épreuves) actuellement programmés pour ce numéro."
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Voulez-vous vraiment supprimer les DOI des numéros existants ?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Supprimer les DOI des numéros"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Voulez-vous vraiment supprimer le DOI existant ?"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Supprimer"
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Le suffixe DOI attribué est déjà utilisé pour un autre élément publié. "
+"Veuillez entrer un suffixe DOI unique pour chaque élément."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "Le DOI est attribué à cet objet : {$pubObjectType}."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr ""
+"Ce que vous voyez est un aperçu du DOI. Cochez la case et enregistrez le "
+"formuler pour attribuer le DOI."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "Le DOI ne peut pas être attribué car il contient un modèle non résolu."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Vous ne pouvez pas générer un DOI car une ou plusieurs parties du modèle DOI "
+"requièrent davantage de données. Il est peut-être nécessaire d'affecter la "
+"publication à un numéro, de définir un identifiant d'éditeur ou de saisir "
+"des numéros de page."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Vous ne pouvez pas générer un DOI tant que cette publication n'a pas été "
+"affectée à un numéro."
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr ""
+"Le DOI ne peut pas être attribué car le suffixe personnalisé est manquant."
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "épreuve"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "article"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "numéro"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Attribuer"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "Le DOI doit commencer par {$prefix}."
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Voulez-vous assigner des DOI à tous les objets publiés pour lesquels aucun "
+"DOI n'a été attribué ?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Attribuer des DOI à tous les objets de revues publiés pour lesquels aucun "
+"DOI n'a été attribué. Cette action ne peut pas être utilisée avec la "
+"configuration du suffixe individuel. Si vous avez modifié la configuration "
+"DOI ci-dessus, veuillez enregistrer vos modifications avant de lancer cette "
+"action. L'attribution de DOI peut prendre un certain temps, en fonction du "
+"nombre d'objets publiés dans la revue."
