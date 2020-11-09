@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-06 09:25+0000\n"
+"PO-Revision-Date: 2020-11-10 08:50+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -1186,3 +1186,463 @@ msgstr "Hodnotenie recenzenta"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Zahrnúť zabezpečený odkaz do e-mailovej pozvánky recenzentom."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Mailová adresa"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Je požadovaný názov inštitúcie."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Názov inštitúcie"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Doména"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Poznámky"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Zvolený typ predplatného vyžaduje informáciu o členstve."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Vložte informáciu o členstvo, ak typ predplatného vyžaduje, aby predplatiteľ "
+"patril do nejakej asociácie alebo organizácie."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Referenčné číslo"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Členstvo"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Použite prosím ponúkané zaškrtávacie políčko."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Poslať užívateľovi email s užívateľským menom a detaily predplatného."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Zvoľte prosím platnú krajinu."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Zvoľte prosím platného používateľa."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Je vyžadovaný užívateľ."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Kontakt"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Užívateľ"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Poznámka: Všetky nižšie vykonané zmeny sa týkajú používateľského profilu v "
+"celom systéme."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Zvoľte prosím platný dátum konca predplatného."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Toto je typ predplatného bez dátumu platnosti; prosím neuvádzajte dátum "
+"ukončenia."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Toto je typ predplatného bez dátumu platnosti; prosím nezadávajte dátum "
+"zahájenia."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Je vyžadovaný dátum konca predplatného."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Dátum konca"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Zvoľte prosím platný dátum začiatku predplatného."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Je vyžadovaný dátum začiatku predplatného."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Dátum začiatku"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Zvoľte, prosím, platný typ predplatného."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Je požadovaný typ predplatného."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Typ predplatného"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Zvoľte prosím platný stav predplatného."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Je požadovaný stav predplatného."
+
+msgid "manager.subscriptions.form.status"
+msgstr "Stav"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Všetko"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "So stavom"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Editovať"
+
+msgid "manager.subscriptions.edit"
+msgstr "Editovať predplatné"
+
+msgid "manager.subscriptions.domain"
+msgstr "Doména"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Počiatočný dátum"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Začiatok"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Konečný dátum"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Koniec"
+
+msgid "manager.subscriptions.renew"
+msgstr "Obnoviť"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Vytvoriť"
+
+msgid "manager.subscriptions.create"
+msgstr "Vytvoriť nové predplatné"
+
+msgid "manager.subscriptions.summary"
+msgstr "Súhrn predplatného"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Ste si istí, že chcete zmazať toto predplatné?"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Ste si istí, že chcete obnoviť toto predplatné?"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Inštitucionálne predplatné"
+
+msgid "manager.individualSubscriptions"
+msgstr "Individuálne predplatné"
+
+msgid "manager.subscriptions"
+msgstr "Predplatné"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Vložte prosím platný e-mail."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Kontakt uvedený pod položkou Predplatné v O časopise."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Manažér predplatného"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Typy predplatného a štruktúra poplatku bude automaticky umiestnená pod "
+"položku Predplatné na stránke O časopise spoločne s menom a kontaktom na "
+"manažéra predplatného. Môžu sem byť vložené doplňujúce informácie o "
+"predplatnom ako napr. Spôsob platby alebo forma podpory predplatiteľov z "
+"rozvojových krajín."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Informácie o predplatnom"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Časopisy s predplatným môžu poskytovať \"oneskorený otvorený prístup\" k "
+"svojmu publikovanému obsahu, rovnako ako povoľovať \"seba-archivovanie "
+"autora\" (čo v oboch prípadoch zvyšuje čítanosť a citácií obsahu)."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Možnosti otvoreného prístupu pre časopisy s predplatným"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Poznámka:</strong> Pre zapnutie týchto možností musí manažér "
+"časopisu zapnúť modul pre online platby vrátane online platieb predplatného "
+"pod čitateľskými poplatkami."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Poznámka:</strong> Inštitucionálne predplatné zakúpené online "
+"vyžaduje schválenie uvedenej domény a IP rozsahu a aktiváciu predplatného "
+"manažérom predplatného."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Informovať manažéra predplatného e-mailom po vykonaní online obnovy "
+"inštitucionálneho predplatného."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Informovať manažéra predplatného e-mailom po vykonaní online obnovy "
+"individuálneho predplatného."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Informovať manažéra predplatného e-mailom po vykonaní online nákupu "
+"inštitucionálneho predplatného (odporúčané)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Informovať manažéra predplatného e-mailom po vykonaní online nákupu "
+"individuálneho predplatného."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Automatické e-mailové oznámenia (dostupná pre editáciu manažérovi časopisu v "
+"Pripravených emailoch OJS) môžu byť zasielané manažérovi predplatného po "
+"vykonaní online platby predplatného."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Oznámenie o online platbe"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Poznámka:</strong> Pre aktivovanie tejto možnosti musí administrátor "
+"stránok povoliť voľbu <tt>scheduled_tasks</tt> v konfiguračnom súbore OJS. "
+"Podpora týchto funkcií môže vyžadovať dodatočnú konfiguráciu servera (nemusí "
+"byť realizovateľná na všetkých serveroch) tak, ako je uvedené v OJS "
+"dokumentácii."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Registrovaní čitatelia budú mať možnosť dostať e-mailom obsah čísla v "
+"okamihu, keď k danému číslu bude umožnený otvorený prístup."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Vyberte prosím platnú hodnotu pre počet týždňov pred expiráciou predplatného."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Vyberte prosím platnú hodnotu pre počet týždňov po expirácii predplatného."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Vyberte prosím platnú hodnotu pre počet mesiacov pred expiráciou "
+"predplatného."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Vyberte prosím platnú hodnotu pre počet mesiacov po expirácii predplatného."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML možno použiť v textových poliach (pre font size, color atď.), Pričom s "
+"\"vracanými hodnotami\" je nakladané ako s <tt>&lt;br&gt;</tt>; HTML editor "
+"funguje s prehliadačom Firefox."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Zvoľte jednu z nasledujúcich možností:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Poznámka:</strong> Pre aktivovanie tejto možnosti musí administrátor "
+"stránok povoliť voľbu <tt>scheduled_tasks</tt> v konfiguračnom súbore OJS. "
+"Podpora týchto funkcií môže vyžadovať dodatočnú konfiguráciu servera (nemusí "
+"byť realizovateľná na všetkých serveroch) tak, ako je uvedené v OJS "
+"dokumentácii."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Predplatiteľom môžu byť automaticky zasielané e-mailom pripomienky (dostupné "
+"manažérom časopisu pre úpravy v predpripravených emailoch OJS) pred tým aj "
+"potom, čo predplatné expirovalo."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Pripomenutie expirácie predplatného"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Upozorniť predplatiteľov emailom pred expiráciou predplatného."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Upozorniť predplatiteľov emailom pred expiráciou predplatného."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Upozorniť predplatiteľov emailom po expirácii predplatného."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Upozorniť predplatiteľov emailom po expirácii predplatného"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} týždňov"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} mesiacov"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Čitatelia majú zakázaný prístup k novo publikovanému predplatenému obsahu, "
+"ale zostáva im povolený prístup k predplatenému obsahu vydanému pred dátumom "
+"expirácie predplatného."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Čiastočná expirácia"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Čitateľom je po expirácii predplatného zakázaný prístup k všetkému "
+"predplatenému obsahu."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Úplná expirácia"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Po expirácii predplatného môže byť čitateľom zamietnutý prístup k celému "
+"platenému obsahu alebo si môžu zachovať prístup k predplatenému obsahu, "
+"ktorý bol publikovaný pred expiráciou predplatného."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Expirácia predplatného"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Použite, prosím, zaškrtávacie políčka."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Oneskorený otvorený prístup"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Pravidla predplatného"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"Spresnite výsledky podľa typu objektu (časopis, číslo, článok, pdf "
+"sadzobnice, ostatné sadzobnice) a / alebo podľa jedného, alebo viacerých id."
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Zúženie výsledkov podľa kontextu (vydania a / alebo článku)."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Obsah čísla s počtom prístupov"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Počet prečítaní hlavnej stránky časopisu"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Abstrakty článku a stiahnutia"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Počet prečítaní stránky abstraktu daného článku"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Stiahnutie súborov článku"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Predplatné"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Vyberte sekcie, pre ktoré majú byť v tomto časopise vypočítavané štatistiky "
+"o recenznom konaní."
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Počet recenzií"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Skóre od editora"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Recenzenti"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Počet pridelených"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Registrovaní čitatelia"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Recenzovaných"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Celkom príspevkov"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Publikované čísla"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Poznámka: Percentá pre recenzované príspevky nemusia dosiahnuť 100%, pretože "
+"znovu odoslané položky sú buď prijaté, odmietnuté alebo prebieha ich "
+"spracovanie."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Zaškrtnite položky, ktoré majú byť prístupné čitateľom v časti O časopise."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Publikované položky"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS vypočítava pre každý časopis nasledujúce štatistiky. \"Dni do recenzie\" "
+"sú vypočítané z dátumu odoslania príspevku (alebo stanovenie verzie recenzie)"
+" po dátume úvodného rozhodnutia editora, zatiaľ čo \"dni do publikovania\" "
+"sú pre prijatý príspevok merané od jeho pôvodného nahratia až po jeho "
+"publikovanie."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Dni do publikovania"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Dni do recenzie"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Znovu odoslať"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Odmietnuť"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Prijať"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Počet zobrazení článku (len pre autorov)"
+
+msgid "manager.statistics.statistics"
+msgstr "Štatistiky časopisu"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tVáš denník je nakonfigurovaný na zaznamenávanie viac ako jednej metriky. "
+"Štatistiky používania sa budú zobrazovať v niekoľkých kontextoch.\n"
+"\t\tExistujú prípady, kedy je potrebné použiť jednu štatistiku, napr. na "
+"zobrazenie zoradeného zoznamu najpoužívanejších článkov alebo na zaradenie\n"
+"\t\tvýsledkov vyhľadávania. Vyberte jednu z nakonfigurovaných metrík ako "
+"predvolenú.\n"
+"\t"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Text nadpisu"
+
+msgid "manager.setup.userRegistration"
+msgstr "Registrácia užívateľov"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Titulný obrázok"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Náhľad"
+
+msgid "manager.setup.userAccess.success"
+msgstr "Podrobnosti o prístupe užívateľov k tomuto denníku boli aktualizované."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Časopis bude využívať redakčnú / recenznú radu."
