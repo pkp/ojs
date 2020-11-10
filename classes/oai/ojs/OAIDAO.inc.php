@@ -202,7 +202,7 @@ class OAIDAO extends PKPOAIDAO {
 	 * @param $set string
 	 * @param $submissionId int optional
 	 * @param $orderBy string UNFILTERED
-	 * @return ADORecordSet
+	 * @return Enumerable
 	 */
 	function _getRecordsRecordSet($setIds, $from, $until, $set, $submissionId = null, $orderBy = 'journal_id, submission_id') {
 		$journalId = array_shift($setIds);
@@ -219,7 +219,7 @@ class OAIDAO extends PKPOAIDAO {
 			$params[] = $set . ':%';
 		}
 		if ($submissionId) $params[] = (int) $submissionId;
-		$result = $this->retrieve(
+		return $this->retrieve(
 			'SELECT	GREATEST(a.last_modified, i.last_modified) AS last_modified,
 				a.submission_id AS submission_id,
 				j.journal_id AS journal_id,
@@ -262,7 +262,6 @@ class OAIDAO extends PKPOAIDAO {
 			ORDER BY ' . $orderBy,
 			$params
 		);
-		return $result;
 	}
 }
 
