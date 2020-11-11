@@ -56,8 +56,8 @@
 
 	.is_img {
 		display: inline-block;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding-top: @half;
+		padding-bottom: @half;
 
 		&:focus {
 			box-shadow: 0 0 1px @text-bg-base;
@@ -65,7 +65,7 @@
 
 		img {
 			display: block;
-			max-height: @nav-menu-height - 10px;
+			max-height: @nav-menu-height - @base;
 			max-width: 100%;
 			width: auto;
 			height: auto;
@@ -146,14 +146,16 @@
 
 	.task_count {
 		display: inline-block;
-		width: 20px;
-		height: 20px;
+		width: @double;
+		height: @double;
 		margin-left: 0.5em;
 		border-radius: 50%;
 		background: @bg-base-border-color;
-		line-height: 20px;
+		line-height: @double;
 		text-align: center;
-		font-size: 12px; // helps visually center the number
+		font-size: 0.857rem; // helps visually center the number
+		position: relative;
+		top: 0.3rem;
 	}
 
 	// Hide the top-level task count in mobile nav
@@ -178,7 +180,7 @@
 
 // The padding to apply to top-level items in the navigation row
 // Total height - line height (divided by 2 since it will be applied to top and bottom)
-@pkp_nav_primary_row_el_padding: (@quadruple - @double) / 2;
+@pkp_nav_primary_row_el_padding: @base;
 
 @media (min-width: @screen-desktop) {
 	.pkp_head_wrapper {
@@ -319,7 +321,7 @@
 			> a {
 				margin: 0 1em;
 				padding: @pkp_nav_primary_row_el_padding 0
-					(@pkp_nav_primary_row_el_padding - 2); // -2 to account for border size
+					calc(~"@{pkp_nav_primary_row_el_padding} - 2px"); // -2 to account for border size
 				border-bottom: 2px solid transparent;
 				color: @text-bg-base;
 				text-decoration: none;
@@ -346,7 +348,7 @@
 		}
 
 		> li:hover ul {
-			left: 14px;
+			left: 1rem;
 		}
 
 		ul a {

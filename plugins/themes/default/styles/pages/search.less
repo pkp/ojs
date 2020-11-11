@@ -15,9 +15,9 @@
 		.query {
 			width: 100%;
 			max-width: 100%;
-			height: (@double * 2) - 2; // account for border;
+			height: calc(~"@{quadruple} - 2px"); // account for border;
 			font-size: @font-lead;
-			line-height: (@double * 2) - 2; // account for border;
+			line-height: calc(~"@{quadruple} - 2px"); // account for border;
 		}
 	}
 
@@ -76,7 +76,7 @@
 	}
 
 	.search_results {
-		margin: (@double * 2) 0;
+		margin: @quadruple 0;
 
 		.obj_article_summary {
 			padding: @double 0;

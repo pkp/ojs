@@ -16,7 +16,7 @@
 	button[type="submit"] {
 		&:extend(.cmp_button);
 		position: absolute;
-		top: @base + 2px;
+		top: calc(~"@{base} + 2px");
 		right: 2px;
 	}
 
@@ -45,7 +45,7 @@
 	.search_loading {
 		display: none;
 		position: absolute;
-		top: @base - 2;
+		top: calc(~"@{base} - 2px");
 		right: 100%;
 		margin-right: @double;
 		text-align: center;

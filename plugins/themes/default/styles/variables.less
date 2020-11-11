@@ -44,12 +44,12 @@
 // spacings should also use this baseline. However, in some cases with inline
 // elements it is more appropriate to use an `em` spacing.
 //
-@base:                   10px;
-@half:                   @base / 2;
-@double:                 @base * 2;
-@triple:                 @base * 3;
-@quadruple:              @base * 4;
-@quintuple:              @base * 5;
+@rem:                    14px;
+@base:                   0.714rem;
+@half:                   0.357rem;
+@double:                 1.43rem;
+@triple:                 2.143rem;
+@quadruple:              2.857rem;
 
 //
 // Typography
@@ -57,17 +57,17 @@
 @font:                   "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 @font-heading:           @font;
 @font-site-title:        @font-heading;
-@font-sml:               13px;
-@line-sml:               @double;
-@font-base:              14px;
-@line-base:              @double;
-@line-base-large:        @line-base + 5; // large blocks of text
-@font-bump:              16px;
-@line-bump:              @double;
-@font-lead:              18px;
-@line-lead:              @triple;
-@font-header:            24px;
-@line-header:            @triple;
+@font-sml:               0.93rem;
+@line-sml:               1.43rem;
+@font-base:              1rem;
+@line-base:              1.43rem;
+@line-base-large:        1.785rem; // large blocks of text
+@font-bump:              1.143rem;
+@line-bump:              1.43rem;
+@font-lead:              1.285rem;
+@line-lead:              2.143rem;
+@font-header:            1.714rem;
+@line-header:            2.143rem;
 
 // Font weights
 @normal:                 400;
@@ -86,15 +86,15 @@
 //
 @screen-phone:                480px;
 @screen-tablet:               768px;
-@screen-tablet-container:     @screen-tablet - (@double * 2);
+@screen-tablet-container:     @screen-tablet - @quadruple;
 @screen-desktop:              992px;
-@screen-desktop-container:    @screen-desktop - (@double * 2);
+@screen-desktop-container:    @screen-desktop - @quadruple;
 @screen-lg-desktop:           1200px;
-@screen-lg-desktop-container: @screen-lg-desktop - (@double * 2);
+@screen-lg-desktop-container: @screen-lg-desktop - @quadruple;
 
 // Fixed widths and heights
 @sidebar-width:               300px;
-@logo-height:                 @quadruple * 3;
+@logo-height:                 8.571rem;
 
 // Base URL
 // The base URL is set appropriately before the LESS stylesheet is compiled and
