@@ -29,7 +29,8 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 			'ArticleHandler::download',
 			'IssueHandler::download',
 			'HtmlArticleGalleyPlugin::articleDownload',
-			'HtmlArticleGalleyPlugin::articleDownloadFinished'
+			'HtmlArticleGalleyPlugin::articleDownloadFinished',
+			'LensGalleyPlugin::articleDownloadFinished'
 		));
 	}
 
@@ -38,7 +39,8 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	 */
 	protected function getDownloadFinishedEventHooks() {
 		return array_merge(parent::getDownloadFinishedEventHooks(), array(
-			'HtmlArticleGalleyPlugin::articleDownloadFinished'
+			'HtmlArticleGalleyPlugin::articleDownloadFinished',
+			'LensGalleyPlugin::articleDownloadFinished'
 		));
 	}
 
@@ -114,6 +116,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					// Article file.
 				case 'ArticleHandler::download':
 				case 'HtmlArticleGalleyPlugin::articleDownload':
+				case 'LensGalleyPlugin::articleDownloadFinished':
 					$assocType = ASSOC_TYPE_SUBMISSION_FILE;
 					$article = $hookArgs[0];
 					$galley = $hookArgs[1];
