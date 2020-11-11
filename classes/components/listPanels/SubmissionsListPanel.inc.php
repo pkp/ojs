@@ -13,13 +13,17 @@
  */
 
 namespace APP\components\listPanels;
-use \PKP\components\listPanels\PKPSubmissionsListPanel;
+
+use APP\components\forms\FieldSelectIssues;
+use PKP\components\listPanels\PKPSubmissionsListPanel;
+use PKP\components\forms\FieldAutosuggestPreset;
 
 class SubmissionsListPanel extends PKPSubmissionsListPanel {
 
 	/** @var boolean Whether to show inactive section filters */
 	public $includeActiveSectionFiltersOnly = false;
 
+	/** @var boolean Whether to show issue filters */
 	public $includeIssuesFilter = false;
 
 	/**
@@ -30,39 +34,24 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 
 		$request = \Application::get()->getRequest();
 		if ($request->getContext()) {
-			// Add section filters above last activity filter
-			array_splice($config['filters'], 2, 0, [[
-				'heading' => __('section.sections'),
-				'filters' => self::getSectionFilters($this->includeActiveSectionFiltersOnly),
-			]]);
+			$config['filters'][] = $this->getSectionFilters($this->includeActiveSectionFiltersOnly);
 		}
 
-		$context = $request->getContext();
 		if ($this->includeIssuesFilter) {
+			$issueAutosuggestField = new FieldSelectIssues('issueIds', [
+				'label' => __('issue.issues'),
+				'value' => [],
+				'apiUrl' => $request->getDispatcher()->url($request, ROUTE_API, $request->getContext()->getPath(), 'issues'),
+			]);
 			$config['filters'][] = [
-				"filters" => [
+				'filters' => [
 					[
-					'title' => _('issues'),
-					'param' => 'issueIds',
-					'value' => [],
-					'filterType' => 'pkp-filter-autosuggest',
-					'component' => 'field-select-issues',
-					'autosuggestProps' => [
-						'allErrors' => (object) [],
-						'apiUrl' => $request->getDispatcher()->url($request, ROUTE_API, $context->getPath(), 'issues', null, null, ['roleIds' => [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR]]),
-						'description' => '',
-						'deselectLabel' => __('common.removeItem'),
-						'formId' => 'default',
-						'groupId' => 'default',
-						'initialPosition' => 'inline',
-						'isRequired' => false,
-						'label' => __('issues.submissions.issueIds'),
-						'locales' => [],
-						'name' => 'issueIds',
-						'primaryLocale' => 'en_US',
-						'selectedLabel' => __('common.assigned'),
+						'title' => __('issue.issues'),
+						'param' => 'issueIds',
 						'value' => [],
-						]
+						'filterType' => 'pkp-filter-autosuggest',
+						'component' => 'field-select-issues',
+						'autosuggestProps' => $issueAutosuggestField->getConfig(),
 					]
 				]
 			];
@@ -106,22 +95,47 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	 * @param $activeOnly boolean show inactive section filters or not
 	 * @return array
 	 */
-	static function getSectionFilters($activeOnly = false) {
+	public function getSectionFilters($activeOnly = false) {
 		$request = \Application::get()->getRequest();
 		$context = $request->getContext();
 
-		if (!$context) {
-			return [];
-		}
-
 		$sections = \Services::get('section')->getSectionList($context->getId(), $activeOnly);
 
-		return array_map(function($section) {
+		// Use an autosuggest field if the list of submissions is too long
+		if (count($sections) > 5) {
+			$autosuggestField = new FieldAutosuggestPreset('sectionIds', [
+				'label' => __('section.sections'),
+				'value' => [],
+				'options' => array_map(function($section) {
+					return [
+						'value' => (int) $section['id'],
+						'label' => $section['title'],
+					];
+				}, $sections),
+			]);
 			return [
-				'param' => 'sectionIds',
-				'value' => (int) $section['id'],
-				'title' => $section['title'],
+				'filters' => [
+					[
+						'title' => __('section.sections'),
+						'param' => 'sectionIds',
+						'filterType' => 'pkp-filter-autosuggest',
+						'component' => 'field-autosuggest-preset',
+						'value' => [],
+						'autosuggestProps' => $autosuggestField->getConfig(),
+					]
+				],
 			];
-		}, $sections);
+		}
+
+		return [
+			'heading' => __('section.sections'),
+			'filters' => array_map(function($section) {
+				return [
+					'param' => 'sectionIds',
+					'value' => (int) $section['id'],
+					'title' => $section['title'],
+				];
+			}, $sections),
+		];
 	}
 }

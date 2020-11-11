@@ -224,7 +224,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface {
 	public function getQuery() {
 		$this->columns[] = 'i.*';
 		$q = Capsule::table('issues as i')
-					->leftJoin('issue_settings as is', 'i.issue_id', '=', 'is.issue_id')
+					->leftJoin('issue_settings as iss', 'i.issue_id', '=', 'iss.issue_id')
 					->leftJoin('custom_issue_orders as o', 'o.issue_id', '=', 'i.issue_id')
 					->orderBy($this->orderColumn, $this->orderDirection)
 					->groupBy('i.issue_id', $this->orderColumn);
@@ -311,12 +311,12 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface {
 					$word = strtolower(addcslashes($word, '%_'));
 					$q->where(function($q) use ($word)  {
 						$q->where(function($q) use ($word) {
-							$q->where('is.setting_name', 'title');
-							$q->where(Capsule::raw('lower(is.setting_value)'), 'LIKE', "%{$word}%");
+							$q->where('iss.setting_name', 'title');
+							$q->where(Capsule::raw('lower(iss.setting_value)'), 'LIKE', "%$word%");
 						})
 						->orWhere(function($q) use ($word) {
-							$q->where('is.setting_name', 'description');
-							$q->where(Capsule::raw('lower(is.setting_value)'), 'LIKE', "%{$word}%");
+							$q->where('iss.setting_name', 'description');
+							$q->where(Capsule::raw('lower(iss.setting_value)'), 'LIKE', "%$word%");
 						});
 
 						// Match any four-digit number to the year
