@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-10 08:50+0000\n"
+"PO-Revision-Date: 2020-11-12 08:07+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -1646,3 +1646,88 @@ msgstr "Podrobnosti o prístupe užívateľov k tomuto denníku boli aktualizova
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Časopis bude využívať redakčnú / recenznú radu."
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Predplatné bolo úspešne vytvorené."
+
+msgid "manager.subscriptions.select"
+msgstr "Vybrať"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Práva predplatiteľského prístupu sú automaticky garantované pre manažérov "
+"časopisu, editorov, editorov sekcií, typografov, redaktorov a korektorov."
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Vybrať užívateľa"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Zvoľte kontakt pre predplatné"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Žiadne predplatné"
+
+msgid "manager.subscriptions.notes"
+msgstr "Poznámky"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Referenčné číslo"
+
+msgid "manager.subscriptions.membership"
+msgstr "Členstvo"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Rozsah IP"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+"Pred zaobstaraním nového predplatného musí byť vytvorený typ predplatného."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Tento používateľ už má pre tento časopis predplatné."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Aby bolo možné zaslať užívateľovi notifikačný email, musí byť v Nastavení "
+"časopisu špecifikované meno kontaktu pre predplatné a E-mailová adresa."
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Uložiť a vytvoriť ďalší"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Pridať"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Zmazať"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Vložte prosím platný rozsah IP."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Vložte IP rozsah, pokiaľ sa jedná o typ predplatného pre inštitúcie. Ak je "
+"sem vložený rozsah IP, doména je nepovinná. <br /> Platné hodnoty zahŕňajú "
+"IP (napr. 142.58.103.1), CIDR IP rozsah (napr. 142.58.100.0/24), IP rozsah ("
+"napr. 142.58.103.1 - 142.58.103.4), IP rozsah s '*' ( napr. 142.58.103. *) "
+"alebo akúkoľvek kombináciu predchádzajúcich oddelených pomocou ';' (Napr. "
+"142.58.103. * - 142.58.107. *; 142.58.108.1/24; 142.58.106. *)."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP rozsah"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Vložte prosím platnú doménu."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Zvolený typ predplatného vyžaduje pre autentifikáciu doménu a / alebo rozsah "
+"IP."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Vložte doménu, ak sa jedná o typ predplatného pre inštitúcie. Ak je sem "
+"vložená doména, IP rozsah je nepovinný. <br /> Platné hodnoty sú doménové "
+"mená (napr. lib.sfu.ca)."
