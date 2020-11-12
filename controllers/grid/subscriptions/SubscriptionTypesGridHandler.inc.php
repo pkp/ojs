@@ -149,7 +149,7 @@ class SubscriptionTypesGridHandler extends GridHandler {
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 		$rangeInfo = $this->getGridRangeInfo($request, $this->getId());
-		return $subscriptionTypeDao->getByJournalId($journal->getId());
+		return $subscriptionTypeDao->getByJournalId($journal->getId(), $rangeInfo);
 	}
 
 

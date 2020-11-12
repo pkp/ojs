@@ -351,7 +351,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			$params,
 			$rangeInfo
 		);
-		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params); // Counted in subscription grid paging
+		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo); // Counted in subscription grid paging
 	}
 
 	/**
