@@ -1,2 +1,209 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-11-12 11:40+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/locale/sk_SK/"
+">\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "article.submission"
+msgstr "Príspevok"
+
+msgid "article.commentsToEditor"
+msgstr "Komentár autora"
+
+msgid "article.sectionEditor"
+msgstr "ES"
+
+msgid "article.language"
+msgstr "Jazyk"
+
+msgid "article.type"
+msgstr "Typ, metóda alebo prístup"
+
+msgid "article.coverage"
+msgstr "Pokrytie"
+
+msgid "article.subject"
+msgstr "Kľúčové slová"
+
+msgid "article.discipline"
+msgstr "Akademická disciplína a subdisciplíny"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Dopln. súbory"
+
+msgid "article.suppFiles"
+msgstr "Doplnkový/é súbor/y"
+
+msgid "article.suppFile"
+msgstr "Doplnkový súbor"
+
+msgid "article.file"
+msgstr "Súbor"
+
+msgid "article.journalSection"
+msgstr "Sekcia časopisu"
+
+msgid "article.metadata"
+msgstr "Metadáta"
+
+msgid "article.indexingInformation"
+msgstr "Informácie pre indexáciu"
+
+msgid "article.authors"
+msgstr "Autori"
+
+msgid "article.title"
+msgstr "Názov"
+
+msgid "article.submissionId"
+msgstr "ID príspevku"
+
+msgid "common.publications"
+msgstr "Články"
+
+msgid "common.publication"
+msgstr "Článok"
+
+msgid "article.articles"
+msgstr "Články"
+
+msgid "article.article"
+msgstr "Článok"
+
+msgid "section.policy"
+msgstr "Pravidlá sekcie"
+
+msgid "section.abbreviation.example"
+msgstr "(Napríklad články = ČL)"
+
+msgid "section.abbreviation"
+msgstr "Skratka"
+
+msgid "section.title"
+msgstr "Názov sekcie"
+
+msgid "section.sections"
+msgstr "Sekcia časopisu"
+
+msgid "section.section"
+msgstr "Sekcia"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Priradení editori"
+
+msgid "common.queue.short.completed"
+msgstr "Archív"
+
+msgid "common.queue.long.completed"
+msgstr "Archív"
+
+msgid "common.queue.short.active"
+msgstr "Aktívne"
+
+msgid "common.queue.long.active"
+msgstr "Aktívne príspevky"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archívy"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archívy"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "V recenznom konaní"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Príspevky v recenznom konaní"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Editované"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Práve editované príspevky"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Nepridelené"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Nepridelené"
+
+msgid "navigation.skip.issue"
+msgstr "Prejsť na aktuálne vydanie"
+
+msgid "navigation.skip.about"
+msgstr "Prejsť k časopisu"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informácie pre knihovníkov"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informácie pre autorov"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Smernica pre konflikt záujmov"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Pre knihovníkov"
+
+msgid "navigation.infoForAuthors"
+msgstr "Pre autorov"
+
+msgid "navigation.browseByAuthor"
+msgstr "Podľa autora"
+
+msgid "navigation.browseByIssue"
+msgstr "podľa čísla"
+
+msgid "navigation.otherJournals"
+msgstr "Ďalšie časopisy"
+
+msgid "navigation.current"
+msgstr "Aktuálny"
+
+msgid "navigation.journalHelp"
+msgstr "Nápoveda časopisu"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Obrázok domácej stránky časopisu"
+
+msgid "common.homePageHeader.altText"
+msgstr "Hlavička domácej stránky"
+
+msgid "common.payments"
+msgstr "Platby"
+
+msgid "common.payment"
+msgstr "Platba"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Ste si istí, že chcete označiť túto úlohu ako dokončenú? Potom nebudete mať "
+"možnosť vykonať zmeny."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vyplňte prosím požadované položky."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Pre vyplnenie formulára recenzie kliknite na ikonu."
+
+msgid "navigation.categories.browse"
+msgstr "Prechádzať"
+
+msgid "navigation.categories"
+msgstr "Kategória"
+
+msgid "context.select"
+msgstr "Zvoliť iný časopis:"
+
+msgid "context.current"
+msgstr "Aktuálny časopis:"
