@@ -50,6 +50,14 @@
 
 	.articles {
 		&:extend(.pkp_unstyled_list);
+
+		// Prevent articles from moving up into section divider
+		// if the title of a section is omitted from the table of contents
+		margin-top: calc(~"@{triple} + @{double}");
+	}
+
+	h2 + .articles {
+		margin-top: 0;
 	}
 
 	.sections:not(:first-child) {
