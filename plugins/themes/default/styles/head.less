@@ -179,6 +179,12 @@
 	}
 }
 
+.pkp_navigation_search_wrapper {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 1px solid @bg-base-border-color;
+}
+
 // The padding to apply to top-level items in the navigation row
 // Total height - line height (divided by 2 since it will be applied to top and bottom)
 @pkp_nav_primary_row_el_padding: @base;
@@ -462,6 +468,36 @@
 		> li > ul a {
 			.task_count {
 				display: none;
+			}
+		}
+	}
+
+	.pkp_navigation_search_wrapper {
+		float: right;
+		margin: 0;
+		padding: 0;
+		border: none;
+
+		a {
+			margin: @half 0.5em 0;
+			padding: @half 0.5em
+				calc(~"@{pkp_nav_primary_row_el_padding} - 2px"); // -2 to account for border size
+			border-bottom: 2px solid transparent;
+			color: @text-bg-base;
+			text-decoration: none;
+
+			&:hover {
+				color: @text-bg-base;
+				outline: 0;
+				border-color: @text-bg-base;
+				text-decoration: none;
+			}
+
+			&:focus {
+				background: @text-bg-base;
+				color: @bg-base;
+				outline: 0;
+				text-decoration: none;
 			}
 		}
 	}
