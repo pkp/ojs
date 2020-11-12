@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-12 22:00+0000\n"
+"PO-Revision-Date: 2020-11-13 12:51+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/api/ca_ES/>"
 "\n"
@@ -57,4 +57,4 @@ msgid "api.submissions.403.unpublishedIssues"
 msgstr "No teniu permís per veure els números retirats de publicació."
 
 msgid "api.submissions.403.cantChangeContext"
-msgstr "No podeu canviar la revista d'una tramesa."
+msgstr "No podeu canviar un article de revista."
