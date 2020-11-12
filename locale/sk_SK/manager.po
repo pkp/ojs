@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-12 08:07+0000\n"
+"PO-Revision-Date: 2020-11-12 10:01+0000\n"
 "Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
@@ -1731,3 +1731,384 @@ msgstr ""
 "Vložte doménu, ak sa jedná o typ predplatného pre inštitúcie. Ak je sem "
 "vložená doména, IP rozsah je nepovinný. <br /> Platné hodnoty sú doménové "
 "mená (napr. lib.sfu.ca)."
+
+msgid "stats.publications.galleys"
+msgstr "Súbory"
+
+msgid "stats.publications.abstracts"
+msgstr "Abstrakty"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} z {$total} článkov"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Celkový počet zobrazení súborov podľa dátumu"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Celkový počet zobrazení podľa dátumu"
+
+msgid "stats.publications.none"
+msgstr "Neboli nájdené žiadne články zodpovedajúce týmto parametrom."
+
+msgid "stats.publications.details"
+msgstr "Detaily článku"
+
+msgid "stats.publicationStats"
+msgstr "Štatistiky článku"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Odoslanie kópie primárnemu kontaktu, identifikovanému v Nastavení časopisu."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Špecifikované objekty sa nepodarilo nájsť."
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Vybraná adresa časopisu  \"{$journalPath}\" neexistuje."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "CHYBA:"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Prefix DOI chýba pre časopis na adrese {$path}."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registrácia bola úspešná!"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Registrácia nebola úspešná! Registračný server DOI vrátil nasledujúcu chybu: "
+"'{$param}'."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Vstupný súbor {$param} nie je čitateľný."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Do výstupného súboru {$param} sa nedá zapisovať."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Neplatné XML:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Vybrané objekty sa nedajú konvertovať."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Neboli vybrané žiadne objekty."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Validujte XML pred exportom a registráciou."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Registrácia"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Označiť registrované"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Export"
+
+msgid "plugins.importexport.common.action"
+msgstr "Akcia"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Registrované"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Označené ako registrované"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Neuložené"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Ľubovoľný status"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Ľubovoľné číslo"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Upozornenie: heslo bude uložené ako obyčajný text, nebude teda zašifrované."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Heslo"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"Neboli vybrané žiadne objekty pre priradenie DOI v rámci pluginu DOI, takže "
+"v tomto plugine nie je žiadna možnosť ukladania či exportu."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Doplnok nie je úplne nastavený."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Aby bolo možné používať tento plugin, choďte prosím do kategórie pluginov "
+"Verejné identifikátory, povoľte a nastavte plugin DOI a špecifikujte tam "
+"platný prefix DOI."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Nevyhovuje požiadavkám pluginu"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Sadzobnice"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Čísla"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Články"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Nastavenie pluginu DOI"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Nastavenia"
+
+msgid "grid.genres.description"
+msgstr ""
+"Tieto komponenty sa používajú na účely pomenovania súborov a sú zobrazené v "
+"rozbaľovacej ponuke pri nahrávaní súborov. Žánre označené ## umožňujú "
+"užívateľovi priradiť súbor buď s celým príspevkom 99Z, alebo s určitým "
+"komponentom podľa čísla (napr. 02)."
+
+msgid "grid.genres.title"
+msgstr "Komponenty článku"
+
+msgid "grid.genres.title.short"
+msgstr "Komponenty"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Oprávnenia k článku boli úspešne vynulované."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Odstráňte vyhlásenie o autorských právach a informácie o licenciu u každého "
+"publikovaného článku a vráťte ich späť na aktuálne predvolené nastavenia "
+"časopisu. Tým sa natrvalo odstránia všetky predchádzajúce informácie o "
+"autorských právach a licenciách pripojených k článkom. V niektorých "
+"prípadoch nemusí byť legálne povolené opätovné licencovania diela, ktoré "
+"bolo publikované pod inou licenciou. Pri používaní tohto nástroja buďte "
+"opatrní a ak si nie ste istí, aké máte práva k článkom zverejneným vo vašom "
+"časopise, obráťte sa na právnika."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Ste si istí, že chcete resetovať údaje o oprávnení pri všetkých článkoch? "
+"Táto akcia sa nedá vrátiť späť."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Resetovať oprávnenia k článku"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Číslo: východiskový rok vydania bude odvodený z dátumu vydania čísla."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Článok: východiskový rok vydania bude odvodený z dátumu publikácie článku, "
+"podobne ako pri \"publish-as-you-go\"."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Nastaviť rok copyrightu nového článku na"
+
+msgid "manager.publication.library"
+msgstr "Knižnica vydavateľa"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Role sú skupiny používateľov v časopise, ktorí majú prístup k rôznym "
+"úrovniam oprávnenia a pridruženým pracovným postupom v časopise. Existuje "
+"päť rôznych úrovní oprávnenia: Správcovia časopisu majú prístup ku všetkému "
+"v časopise (všetok obsah a nastavenia); Editori sekcií majú kompletný "
+"prístup k celému priradenému obsahu. Asistenti časopisu majú obmedzený "
+"prístup ku všetkým príspevkom, ktoré im explicitne pridelil Editor; "
+"Recenzenti môžu zobraziť a recenzovať príspevky, ktoré im boli pridelené na "
+"kontrolu. A Autori môžu vidieť a komunikovať s obmedzeným množstvom "
+"informácií o svojich príspevkoch. Okrem toho existuje päť rôznych etáp, do "
+"ktorých môže byť nastavený prístup: podanie, interné recenzie, recenzie, "
+"redakcia a výroba."
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Články v publikovaných číslach časopisu sú organizované v sekciách, zvyčajne "
+"podľa témy alebo typu obsahu (napr. Recenzované články, Výskum atď.)."
+
+msgid "grid.action.addSection"
+msgstr "Pridať sekciu"
+
+msgid "grid.category.path"
+msgstr "Cesta"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Zvoľte najviac vhodné kategórie z ponuky vyššie. Čitatelia búdou môcť "
+"prechádzať podľa týchto kategórií z kompletnej sady časopisov."
+
+msgid "manager.setup.categories"
+msgstr "Kategórie"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Tento odkaz sa zobrazí iba v prípade, že je návštevník prihlásený."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Odkaz na stránku popisujúcu súčasné i minulé predplatné návštevníka."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Odkaz na stránku, kde sú popísané ponuky vášho predplatného."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Typ predplatného bol úspešne vytvorený."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Neboli vytvorené žiadne typy predplatného."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Typ predplatného"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Je vyžadovaný názov typu predplatného."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Typ predplatného s týmto názvom už existuje."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Názov typu"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Uložiť a vytvoriť ďalší"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Použite zaškrtávacie políčko."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Tento typ predplatného nebude verejne viditeľný <br /> (napr. Pod položkou "
+"Predplatné v časti O časopisu)."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Možnosti"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Použite prosím poskytnuté políčko."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Predplatné vyžaduje informáciu o členstve <br />(napr. V asociácii alebo "
+"organizácii alebo konzorciu atď.)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Použite prosím poskytnuté zaškrtávacie políčko."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Inštitucionálni predplatitelia (užívatelia sú overovaní prostredníctvom "
+"domény alebo IP adresy)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individuálne (užívatelia sú overovaní pomocou prihlásenia)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Predplatné"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Prosím vyberte platný formát typu predplatného."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Vyžaduje sa formát typu predplatného."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Formát"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Je vyžadované trvanie."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Trvanie musí byť kladná číselná hodnota."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Počet mesiacov počas ktorých trvá predplatné (napr. 12)."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Trvanie"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Použite, prosím, ponúkané možnosti."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Nikdy neexpiruje"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "mesiace (napr.: 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Expiruje po"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Popis"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Vyberte prosím platnú menu."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Je vyžadovaná mena."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Mena"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Je vyžadovaná cena."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Cena musí byť kladná číselná hodnota."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Vložte číslenú hodnotu (napr. 40 alebo 40.00) bez symbolu (napr. €)."
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Cena"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Editovať"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Editovať typ predplatného"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Trvanie"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Vytvoriť"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Vytvoriť nový typ predplatného"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Inštitucionálne"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individuálne"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Predplatné"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Cena"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Varovanie! Všetky predplatné s týmto typom predplatného budú tiež vymazané. "
+"Ste si istí, že chcete pokračovať a zmazať tento typ predplatného?"
+
+msgid "manager.subscriptionTypes"
+msgstr "Typy predplatného"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Názov inštitúcie"
+
+msgid "manager.subscriptions.contact"
+msgstr "Kontaktné meno"
+
+msgid "manager.subscriptions.user"
+msgstr "Užívateľ"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Typ predplatného"
