@@ -107,6 +107,12 @@ class DataciteXmlFilter extends NativeExportFilter {
 				$article = Services::get('submission')->get($publication->getData('submissionId'));
 				if ($article) $cache->add($article, null);
 			}
+			if ($cache->isCached('genres', $galleyFile->getData('genreId'))) {
+				$genre = $cache->get('genres', $galleyFile->getData('genreId'));
+			} else {
+				$genre = DAORegistry::getDAO('GenreDAO')->getById($galleyFile->getData('genreId'));
+				if ($genre) $cache->add($genre, null);
+			}
 		}
 		if (!$issue) {
 			$issueId = $article->getCurrentPublication()->getData('issueId');
@@ -157,7 +163,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publicationYear', date('Y', strtotime($publicationDate))));
 		// Subjects
 		$subject = null;
-		if (!empty($galleyFile) && is_a($galleyFile, 'SupplementaryFile')) {
+		if (!empty($galleyFile) && !empty($genre) && $genre->getSupplementary()) {
 			$subject = $this->getPrimaryTranslation($galleyFile->getSubject(null), $objectLocalePrecedence);
 		} elseif (!empty($article) && !empty($publication)) {
 			$subject = $this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence);
@@ -237,7 +243,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$deployment = $this->getDeployment();
 		$creators = array();
 		switch (true) {
-			case (isset($galleyFile) && is_a($galleyFile, 'SupplementaryFile')):
+			case (isset($galleyFile) && ($genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
 				// Check whether we have a supp file creator set...
 				$creator = $this->getPrimaryTranslation($galleyFile->getCreator(null), $objectLocalePrecedence);
 				if (!empty($creator)) {
@@ -283,8 +289,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 		// Get an array of localized titles.
 		$alternativeTitle = null;
 		switch (true) {
-			case (isset($galleyFile) && is_a($galleyFile, 'SupplementaryFile')):
-				$titles = $galleyFile->getName(null);
+			case (isset($galleyFile) && ($genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
+				$titles = $galleyFile->getData('name');
 				break;
 			case isset($publication):
 				$titles = $publication->getData('title');
@@ -331,7 +337,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$dates = array();
 		switch (true) {
 			case isset($galleyFile):
-				if (is_a($galleyFile, 'SupplementaryFile')) {
+				$genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
+				if ($genre->getSupplementary()) {
 					// Created date (for supp files only): supp file date created.
 					$createdDate = $galleyFile->getDateCreated();
 					if (!empty($createdDate)) {
@@ -339,12 +346,12 @@ class DataciteXmlFilter extends NativeExportFilter {
 					}
 				}
 				// Accepted date (for galleys files): file uploaded.
-				$acceptedDate = $galleyFile->getDateUploaded();
+				$acceptedDate = $galleyFile->getData('createdAt');
 				if (!empty($acceptedDate)) {
 					$dates[DATACITE_DATE_ACCEPTED] = $acceptedDate;
 				}
 				// Last modified date (for galley files): file modified date.
-				$lastModified = $galleyFile->getDateModified();
+				$lastModified = $galleyFile->getData('updatedAt');
 				if (!empty($lastModified)) {
 					$dates[DATACITE_DATE_UPDATED] = $lastModified;
 				}
@@ -410,8 +417,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		switch (true) {
 			case isset($galley):
 				if (!$galley->getRemoteURL()) {
-					$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
-					$genre = $genreDao->getById($galleyFile->getGenreId());
+					$genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
 					if ($genre->getCategory() == GENRE_CATEGORY_DOCUMENT && !$genre->getSupplementary() && !$genre->getDependent()) {
 						$resourceType = 'Article';
 					}
@@ -554,33 +560,29 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 */
 	function createSizesNode($doc, $issue, $article, $publication, $galley, $galleyFile) {
 		$deployment = $this->getDeployment();
+		$sizes = [];
 		switch (true) {
 			case isset($galley):
 				// The galley represents the article.
 				$pages = $publication->getData('pages');
-				$files = array($galleyFile);
+				$path = Services::get('file')->getPath($galleyFile->getData('fileId'));
+				$size = Services::get('file')->fs->getSize($path);
+				$sizes[] = Services::get('file')->getNiceFileSize($size);
 				break;
 			case isset($article):
 				$pages = $publication->getData('pages');
-				$files = array();
 				break;
 			case isset($issue):
 				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-				$files = $issueGalleyDao->getByIssueId($issue->getId());
+				$issueGalleyFile = $issueGalleyDao->getByIssueId($issue->getId());
+				$sizes[] = $issueGalleyFile->getNiceFileSize();
 				break;
 			default:
 				assert(false);
 		}
-		$sizes = array();
 		if (!empty($pages)) {
 			AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_EDITOR));
 			$sizes[] = $pages . ' ' . __('editor.issues.pages');
-		}
-		foreach($files as $file) { /* @var $file PKPFile */
-			if ($file) {
-				$sizes[] = $file->getNiceFileSize();
-			}
-			unset($file);
 		}
 		$sizesNode = null;
 		if (!empty($sizes)) {
@@ -609,7 +611,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$descriptions = array();
 		switch (true) {
 			case isset($galley):
-				if (is_a($galleyFile, 'SupplementaryFile')) {
+				$genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
+				if ($genre->getSupplementary()) {
 					$suppFileDesc = $this->getPrimaryTranslation($galleyFile->getDescription(null), $objectLocalePrecedence);
 					if (!empty($suppFileDesc)) $descriptions[DATACITE_DESCTYPE_OTHER] = $suppFileDesc;
 				}

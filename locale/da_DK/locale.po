@@ -1499,9 +1499,6 @@ msgstr "{$userName} har importeret artiklen {$submissionId}."
 msgid "metadata.pkp.peerReviewed"
 msgstr "Fagfællebedømt artikel"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Valutalisten \"{$filename}\" er indlæst fra XML"
-
 msgid "reviewer.article.enterReviewForm"
 msgstr "Klik på ikonet for at udfylde review formularen."
 

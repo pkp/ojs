@@ -1746,9 +1746,6 @@ msgstr "Está intentando acceder a un artículo que no forma parte de su secció
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Envío del corrector/a de originales incorrecto o no se ha solicitado un envío del corrector/a de originales."
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Lista de monedas “{$filename}” cargada de XML"
-
 msgid "context.current"
 msgstr "Revista actual:"
 

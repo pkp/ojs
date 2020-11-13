@@ -1941,9 +1941,6 @@ msgstr "Pyyntöä vastaavaa numeroa ei ole!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Virheellinen teknisen toimittajan lähettämä käsikirjoitus tai teknisen toimittajan lähetystä ei pyydetty!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "XML-muodosta ladattu valuuttaluettelo \"{$filename}\""
-
 msgid "grid.action.createContext"
 msgstr "Luo uusi julkaisu"
 

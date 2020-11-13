@@ -86,9 +86,6 @@ msgstr "Eksportér alle"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Der opstod fejl under eksporten"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Kunne ikke skrive i filen \"{$fileName}\"."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "Importen blev gennemført. Brugere med brugernavne og e-mail-adresser, der ikke allerede er i brug, er blevet importeret sammen med tilhørende brugergrupper."
 

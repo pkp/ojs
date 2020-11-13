@@ -350,17 +350,18 @@ class ArticleHandler extends Handler {
 			$dispatcher->handle404();
 		}
 		$suppId = isset($args[1]) ? $args[1] : 0;
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-		$submissionFiles = $submissionFileDao->getBySubmissionId($articleId);
-		foreach ($submissionFiles as $submissionFile) {
+		$submissionFilesIterator = Services::get('submissionFile')->getMany([
+			'submissionIds' => [$articleId->getId()],
+		]);
+		foreach ($submissionFilesIterator as $submissionFile) {
 			if ($submissionFile->getData('old-supp-id') == $suppId) {
 				$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 				$articleGalleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
 				while ($articleGalley = $articleGalleys->next()) {
 					$galleyFile = $articleGalley->getFile();
-					if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getFileId()) {
+					if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getId()) {
 						header('HTTP/1.1 301 Moved Permanently');
-						$request->redirect(null, null, 'download', array($articleId, $articleGalley->getId(), $submissionFile->getFileId()));
+						$request->redirect(null, null, 'download', array($articleId, $articleGalley->getId(), $submissionFile->getId()));
 					}
 				}
 			}
@@ -382,7 +383,7 @@ class ArticleHandler extends Handler {
 			if (!$this->fileId) {
 				$submissionFile = $this->galley->getFile();
 				if ($submissionFile) {
-					$this->fileId = $submissionFile->getFileId();
+					$this->fileId = $submissionFile->getId();
 					// The file manager expects the real article id.  Extract it from the submission file.
 				}
 			}
@@ -391,19 +392,32 @@ class ArticleHandler extends Handler {
 			if (!$this->fileId) $request->getDispatcher()->handle404();
 
 			// If the file ID is not the galley's file ID, ensure it is a dependent file, or else 404.
-			if ($this->fileId != $this->galley->getFileId()) {
-				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-				$dependentFileIds = array_map(
-					function($f) {return $f->getFileId();},
-					$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $this->galley->getFileId(), $this->article->getId(), SUBMISSION_FILE_DEPENDENT)
-				);
+			if ($this->fileId != $this->galley->getData('submissionFileId')) {
+				$dependentFileIds = Services::get('submissionFile')->getIds([
+					'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
+					'assocIds' => [$this->galley->getFileId()],
+					'fileStages' => [SUBMISSION_FILE_DEPENDENT],
+					'includeDependentFiles' => true,
+				]);
 				if (!in_array($this->fileId, $dependentFileIds)) $request->getDispatcher()->handle404();
 			}
 
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$this->fileId))) {
-				import('lib.pkp.classes.file.SubmissionFileManager');
-				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
-				$submissionFileManager->downloadById($this->fileId, null, $request->getUserVar('inline')?true:false);
+				if (!$submissionFile) {
+					$submissionFile = Services::get('submissionFile')->get($this->fileId);
+				}
+
+				$path = Services::get('file')->getPath($submissionFile->getData('fileId'));
+				if (!Services::get('file')->fs->has($path)) {
+					throw new Exception('File ' . $submissionFile->getData('fileId') . ' at ' . $path . ' does not exist or is not readable.');
+				}
+
+				$filename = Services::get('file')->formatFilename($path, $submissionFile->getLocalizedData('name'));
+
+				$returner = true;
+				HookRegistry::call('FileManager::downloadFileFinished', array(&$returner));
+
+				Services::get('file')->download($path, $filename);
 			}
 		} else {
 			header('HTTP/1.0 403 Forbidden');

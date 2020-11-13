@@ -22,9 +22,6 @@ msgstr ""
 "هاوردەکردنەکە بە تەواوی سەرکەوتو بو. بەکارهێنەران بە ناوی بەکاهێنەر و "
 "ئیمەیڵەکانیانەوە هاوردە کران."
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "ناتوانیت شت لەسەر \"{$fileName}\" بنوسیت."
-
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "هەندێک هەڵە لە کاتی هەناردەکردنەکەدا ڕویان دا"
 

@@ -1746,9 +1746,6 @@ msgid "user.authorization.invalidCopyditorSubmission"
 msgstr ""
 "Tramesa del corrector/a d'originals invàlida o cap tramesa sol·licitada!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "S’ha carregat la llista de monedes \"{$filename}\" des d'un XML"
-
 msgid "context.current"
 msgstr "Revista actual:"
 

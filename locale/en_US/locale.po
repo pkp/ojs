@@ -380,6 +380,9 @@ msgstr "ISSN"
 msgid "journal.viewAllIssues"
 msgstr "View All Issues"
 
+msgid "user.authorization.representationNotFound"
+msgstr "The requested galley could not be found."
+
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Include users with no roles in this journal."
 
@@ -1993,9 +1996,6 @@ msgstr "Invalid issue requested!"
 
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Invalid copyeditor submission or no copyeditor submission requested!"
-
-msgid "debug.notes.currencyListLoad"
-msgstr "Loaded currency list \"{$filename}\" from XML"
 
 msgid "grid.action.createContext"
 msgstr "Create a New Journal"

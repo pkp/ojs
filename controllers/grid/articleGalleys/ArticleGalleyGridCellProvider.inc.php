@@ -77,15 +77,9 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 		switch ($column->getId()) {
 			case 'label':
 				$element = $row->getData();
-				if ($element->getRemoteUrl() != '' || !$element->getFileId()) break;
+				if ($element->getRemoteUrl() != '' || !$element->getData('submissionFileId')) break;
 
-				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-				import('lib.pkp.classes.submission.SubmissionFile');
-				$submissionFile = $submissionFileDao->getLatestRevision(
-					$element->getFileId(),
-					null,
-					$this->_submission->getId()
-				);
+				$submissionFile = Services::get('submissionFile')->get($element->getData('submissionFileId'));
 				import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');
 				return array(new DownloadFileLinkAction($request, $submissionFile, WORKFLOW_STAGE_ID_PRODUCTION, $element->getLabel()));
 		}

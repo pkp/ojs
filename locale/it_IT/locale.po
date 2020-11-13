@@ -1881,9 +1881,6 @@ msgstr "Stai cercando di accedere a un articolo che non appartiene alla tua sezi
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Invio del copyeditor non valido o nessun invio richiesto!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Elenco delle valute caricate \"{$filename}\" da XML"
-
 msgid "journal.viewAllIssues"
 msgstr "Visualizza tutte le uscite"
 

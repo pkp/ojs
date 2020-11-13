@@ -1314,9 +1314,6 @@ msgstr "{$userName} a refusé le cycle {$round} d'évaluation pour la soumission
 msgid "log.editor.decision"
 msgstr "Une décision du rédacteur ({$decision}) pour l'article {$submissionId} a été enregistré par {$editorName}."
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Liste des devises chargée \"{$filename}\" à partir d'un XML"
-
 msgid "common.payment"
 msgstr "Paiement"
 

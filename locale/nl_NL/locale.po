@@ -1963,9 +1963,6 @@ msgstr "Ongeldig nummer gevraagd!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Onjuiste tekstredacteur inzending of geen tekstredacteur inzending gevraagd!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Lijst munteenheden \"{$filename}\" uit XML geladen"
-
 msgid "grid.action.createContext"
 msgstr "Maak een nieuw tijdschrift"
 

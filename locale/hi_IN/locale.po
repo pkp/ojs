@@ -2335,9 +2335,6 @@ msgstr "अंक"
 msgid "grid.action.createContext"
 msgstr "एक नया जर्नल बनाएँ"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "एक्सएमएल से लोड मुद्रा सूची \"{$ filename}\""
-
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr ""
 "अमान्य प्रतिलिपि संपादक सबमिशन या कोई प्रतिलिपि संपादक सबमिशन करने का अनुरोध "

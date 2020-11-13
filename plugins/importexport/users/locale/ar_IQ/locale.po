@@ -94,9 +94,6 @@ msgstr "تصدير الكل"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "حدثت أخطاء خلال عملية التصدير"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "تعذرت الكتابة إلى الملف \"{$fileName}\"."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "إكتملت عملية الاستيراد بنجاح. اسماء المستخدمين وعناوينهم البريدية من الذين لم يسبق معرفتهم قد تم استيرادها فضلاً عن المجموعات المصاحبة لهم."
 

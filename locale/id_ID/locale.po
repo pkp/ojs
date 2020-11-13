@@ -1952,9 +1952,6 @@ msgstr "Terbitan Invalid!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Kiriman copyeditor invalid atau tidak ada permintaan kiriman copyeditor!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Memuat daftar mata uang \"{$filename}\" dari XML"
-
 msgid "grid.action.createContext"
 msgstr "Buat Jurnal Baru"
 

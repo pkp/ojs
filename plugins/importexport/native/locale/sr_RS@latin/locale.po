@@ -71,6 +71,3 @@ msgstr "Navedeni korisnik, \"{$userName}\", ne postoji."
 
 msgid "plugins.importexport.native.error.unknownJournal"
 msgstr "Navedena putanja časopisa, \"{$journalPath}\", ne postoji."
-
-msgid "plugins.importexport.native.export.error.couldNotWrite"
-msgstr "Ne mogu da upišem u fajl \"{$fileName}\"."

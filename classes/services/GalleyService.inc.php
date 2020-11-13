@@ -85,7 +85,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 			$galleyQB->filterByPublicationIds($args['publicationIds']);
 		}
 
-		\HookRegistry::call('Galley::getMany::queryBuilder', array($galleyQB, $args));
+		\HookRegistry::call('Galley::getMany::queryBuilder', array(&$galleyQB, $args));
 
 		return $galleyQB;
 	}
@@ -144,85 +144,15 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 					break;
 				case 'file':
 					$values[$prop] = null;
-					$file = $galley->getFile();
-					if (!$file) {
-						break;
-					}
-					$values[$prop] = array(
-						'fileName' => $file->getOriginalFileName(),
-					);
-					if (is_a($file, 'SubmissionFile')) {
-						$values[$prop]['id'] = $file->getFileId();
-						$values[$prop]['revision'] = $file->getRevision();
-						$values[$prop]['fileStage'] = $file->getFileStage();
-						$values[$prop]['genreId'] = $file->getGenreId();
-						$values[$prop]['fileName'] = $file->getClientFileName();
-					} elseif (is_a($file, 'IssueFile')) {
-						$values[$prop]['id'] = $file->getId();
-					}
-					if (is_a($file, 'SupplementaryFile')) {
-						$values[$prop]['metadata'] = array(
-							'description' => $file->getDescription(null),
-							'creator' => $file->getCreator(null),
-							'publisher' => $file->getPublisher(null),
-							'source' => $file->getSource(null),
-							'subject' => $file->getSubject(null),
-							'sponsor' => $file->getSponsor(null),
-							'dateCreated' => $file->getDateCreated(),
-							'language' => $file->getLanguage(),
-						);
-					} elseif (is_a($file, 'SubmissionArtworkFile')) {
-						$values[$prop]['metadata'] = array(
-							'caption' => $file->getCaption(),
-							'credit' => $file->getCredit(),
-							'copyrightOwner' => $file->getCopyrightOwner(),
-							'terms' => $file->getPermissionTerms(),
-							'width' => $file->getWidth(),
-							'height' => $file->getHeight(),
-							'physicalWidth' => $file->getPhysicalWidth(300),
-							'physicalHeight' => $file->getPhysicalHeight(300),
-						);
-					}
-
-					// Look for dependent files
-					if (is_a($file, 'SubmissionFile')) {
-						$values['dependentFiles'] = [];
-						$submissionFileDao = \DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-						$dependentFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $submission->getId(), SUBMISSION_FILE_DEPENDENT);
-						if ($dependentFiles) {
-							foreach ($dependentFiles as $dependentFile) {
-								$dependentFileProps = array(
-									'id' => $dependentFile->getFileId(),
-									'fileName' => $dependentFile->getOriginalFileName(),
-								);
-								if (is_a($dependentFile, 'SubmissionFile')) {
-									$dependentFileProps['revision'] = $dependentFile->getRevision();
-									$dependentFileProps['fileStage'] = $dependentFile->getFileStage();
-									$dependentFileProps['genreId'] = $dependentFile->getGenreId();
-									$dependentFileProps['fileName'] = $dependentFile->getClientFileName();
-								}
-								if (is_a($dependentFile, 'SupplementaryFile')) {
-									$dependentFileProps['description'] = $dependentFile->getDescription(null);
-									$dependentFileProps['creator'] = $dependentFile->getCreator(null);
-									$dependentFileProps['publisher'] = $dependentFile->getPublisher(null);
-									$dependentFileProps['source'] = $dependentFile->getSource(null);
-									$dependentFileProps['subject'] = $dependentFile->getSubject(null);
-									$dependentFileProps['sponsor'] = $dependentFile->getSponsor(null);
-									$dependentFileProps['dateCreated'] = $dependentFile->getDateCreated();
-									$dependentFileProps['language'] = $dependentFile->getLanguage();
-								} elseif (is_a($dependentFile, 'SubmissionArtworkFile')) {
-									$dependentFileProps['caption'] = $dependentFile->getCaption();
-									$dependentFileProps['credit'] = $dependentFile->getCredit();
-									$dependentFileProps['copyrightOwner'] = $dependentFile->getCopyrightOwner();
-									$dependentFileProps['terms'] = $dependentFile->getPermissionTerms();
-									$dependentFileProps['width'] = $dependentFile->getWidth();
-									$dependentFileProps['height'] = $dependentFile->getHeight();
-									$dependentFileProps['physicalWidth'] = $dependentFile->getPhysicalWidth(300);
-									$dependentFileProps['physicalHeight'] = $dependentFile->getPhysicalHeight(300);
-								}
-								$values['dependentFiles'][] = $dependentFileProps;
-							}
+					if (is_a($galley, 'ArticleGalley')) {
+						$submissionFile = Services::get('submissionFile')->get($galley->getData('submissionFileId'));
+						if (empty($submissionFile)) {
+							break;
 						}
+						$values[$prop] = Services::get('submissionFile')->getFullProperties($submissionFile, [
+							'request' => $request,
+							'submission' => $submission,
+						]);
 					}
 					break;
 				default:
@@ -316,7 +246,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		$galleyId = $articleGalleyDao->insertObject($galley);
 		$galley = $this->get($galleyId);
 
-		\HookRegistry::call('Galley::add', array($galley, $request));
+		\HookRegistry::call('Galley::add', array(&$galley, $request));
 
 		return $galley;
 	}
@@ -330,7 +260,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		$newGalley = $galleyDao->newDataObject();
 		$newGalley->_data = array_merge($galley->_data, $params);
 
-		\HookRegistry::call('Galley::edit', array($newGalley, $galley, $params, $request));
+		\HookRegistry::call('Galley::edit', array(&$newGalley, $galley, $params, $request));
 
 		$galleyDao->updateObject($newGalley);
 		$newGalley = $this->get($newGalley->getId());
@@ -342,24 +272,20 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 * @copydoc \PKP\Services\EntityProperties\EntityWriteInterface::delete()
 	 */
 	public function delete($galley) {
-		\HookRegistry::call('Galley::delete::before', [$galley]);
+		\HookRegistry::call('Galley::delete::before', [&$galley]);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 		$articleGalleyDao->deleteObject($galley);
 
 		// Delete related submission files
-		$publication = Services::get('publication')->get($galley->getData('publicationId'));
-
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-		import('lib.pkp.classes.submission.SubmissionFile'); // Import constants
-		$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galley->getId(), $publication->getData('submissionId'), SUBMISSION_FILE_PROOF);
-		foreach ($galleyFiles as $file) {
-			// delete dependent files for each galley file
-			$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), SUBMISSION_FILE_DEPENDENT);
+		$submissionFilesIterator = Services::get('submissionFile')->getMany([
+			'assocTypes' => [ASSOC_TYPE_GALLEY],
+			'assocIds' => [$galley->getId()],
+		]);
+		foreach ($submissionFilesIterator as $submissionFile) {
+			Services::get('submissionFile')->delete($submissionFile);
 		}
-		// delete the galley files.
-		$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galley->getId(), SUBMISSION_FILE_PROOF);
 
-		\HookRegistry::call('Galley::delete', [$galley]);
+		\HookRegistry::call('Galley::delete', [&$galley]);
 	}
 }

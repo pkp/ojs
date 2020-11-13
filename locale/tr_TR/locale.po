@@ -1819,9 +1819,6 @@ msgid "user.authorization.invalidCopyditorSubmission"
 msgstr ""
 "Hatalı sayfa düzenleyici gönderisi veya sayfa düzenleyici gönderi isteği yok!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "\"{$filename}\" XML dosyasından para birimi listesi yüklendi"
-
 msgid "editor.submissionEditing.notes"
 msgstr ""
 "\n"

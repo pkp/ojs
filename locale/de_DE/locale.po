@@ -2047,9 +2047,6 @@ msgstr "Ungültige Ausgabe angefordert!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Ungültige Lektor/innenfassung oder keine Lektor/innenfassung angefordert!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Währungsliste \"{$filename}\" aus XML geladen"
-
 msgid "grid.action.createContext"
 msgstr "Neue Zeitschrift anlegen"
 

@@ -53,7 +53,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 
 		$deployment = $this->getDeployment();
 		$submission = $deployment->getSubmission();
-		
+
 		// Index imported content
 		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		foreach ($importedObjects as $submission) {
@@ -78,22 +78,6 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
-	 * Handle an element whose parent is the submission element.
-	 * @param $n DOMElement
-	 * @param $submission Submission
-	 */
-	function handleChildElement($n, $submission) {
-		switch ($n->tagName) {
-			case 'artwork_file':
-			case 'supplementary_file':
-				$this->parseSubmissionFile($n, $submission);
-				break;
-			default:
-				parent::handleChildElement($n, $submission);
-		}
-	}
-
-	/**
 	 * Get the import filter for a given element.
 	 * @param $elementName string Name of XML element
 	 * @return Filter
@@ -104,12 +88,6 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		switch ($elementName) {
 			case 'submission_file':
 				$importClass='SubmissionFile';
-				break;
-			case 'artwork_file':
-				$importClass='SubmissionArtworkFile';
-				break;
-			case 'supplementary_file':
-				$importClass='SupplementaryFile';
 				break;
 			case 'publication':
 				$importClass='Publication';

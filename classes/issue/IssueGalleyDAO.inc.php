@@ -341,6 +341,12 @@ class IssueGalleyDAO extends DAO {
 		HookRegistry::call('IssueGalleyDAO::deleteById', array(&$galleyId, &$issueId));
 
 		if (isset($issueId)) {
+			// Delete the file
+			$issueGalley = $this->getById($galleyId);
+			import('classes.file.IssueFileManager');
+			$issueFileManager = new IssueFileManager($issueId);
+			$issueFileManager->deleteById($issueGalley->getFileId());
+
 			$this->update(
 				'DELETE FROM issue_galleys WHERE galley_id = ? AND issue_id = ?',
 				array((int) $galleyId, (int) $issueId)

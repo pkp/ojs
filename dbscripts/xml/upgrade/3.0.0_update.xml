@@ -203,8 +203,6 @@
 		<query driver="mysql,mysqli">UPDATE submission_files sf, articles_migration am SET sf.file_stage=15 WHERE am.revised_file_id=sf.file_id</query><!-- SUBMISSION_FILE_REVISION -->
 		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">UPDATE submission_files SET file_stage=15 FROM articles_migration am WHERE am.revised_file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_REVISION -->
 
-		<query driver="mysql,mysqli">UPDATE submission_files sf, articles_migration am SET sf.file_stage=7 WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
-		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">UPDATE submission_files SET file_stage=7 FROM articles_migration am WHERE am.editor_file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query driver="mysql,mysqli">UPDATE submission_files sf, submission_galleys sg SET sf.file_stage=10 WHERE sg.file_id=sf.file_id</query><!-- SUBMISSION_FILE_PROOF -->
 		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">UPDATE submission_files SET file_stage=10 FROM submission_galleys sg WHERE sg.file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_PROOF -->
 		<query driver="mysql,mysqli">UPDATE submission_files sf, article_galleys_migration agm SET sf.file_stage=17 WHERE agm.style_file_id=sf.file_id</query><!-- SUBMISSION_FILE_DEPENDANT -->

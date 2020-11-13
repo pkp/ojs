@@ -85,9 +85,6 @@ msgstr "Export All"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Errors occurred during the export"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Could not write to the file \"{$fileName}\"."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "The import completed successfully. Users with usernames and email addresses that are not already in use have been imported, along with accompanying user groups."
 

@@ -1994,9 +1994,6 @@ msgstr "Запрошен неправильный выпуск!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Версия, отправленная литературным редактором, является неправильной или запрос на литературное редактирование не был отправлен!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Загружен список валют «{$filename}» из XML"
-
 msgid "grid.action.createContext"
 msgstr "Создать новый журнал"
 

@@ -96,9 +96,6 @@ msgstr "Exportar Todos"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Ocorreram erros durante a exportação"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Não foi possível gravar no ficheiro \"{$fileName}\"."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "A importação foi concluída com sucesso. Utilizadores com nomes de utilizadores e endereços de e-mail que ainda não estão em uso foram importados, juntamente com os grupos de utilizadores que os acompanham."
 

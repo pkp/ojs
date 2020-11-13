@@ -2080,9 +2080,6 @@ msgstr "Numéro demandé invalide !"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Soumission du,de la correcteur-trice d'épreuves non valide ou non requise !"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Liste des devises « {$filename} » chargée à partir du XML"
-
 msgid "grid.action.createContext"
 msgstr "Créer une nouvelle revue"
 

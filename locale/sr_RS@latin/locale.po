@@ -1376,9 +1376,6 @@ msgstr "{$userName} je odbio/la {$round} recenziju priloga {$submissionId} u ime
 msgid "log.editor.decision"
 msgstr "{$editorName} je evidentirao uredničku odluku ({$decision}) za članak {$submissionId}."
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Učitana je lista valuta \"{$filename}\" iz XML-a."
-
 msgid "reviewer.article.enterReviewForm"
 msgstr "Kliknite na ikonu i ispunite obrazac za recencziju."
 

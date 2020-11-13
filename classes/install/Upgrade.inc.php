@@ -12,7 +12,7 @@
  *
  * @brief Perform system upgrade.
  */
-
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 import('lib.pkp.classes.install.Installer');
 
@@ -107,8 +107,11 @@ class Upgrade extends Installer {
 		while ($context = $contexts->next()) {
 			$submissions = $submissionDao->getByContextId($context->getId());
 			while ($submission = $submissions->next()) {
-				$submissionFiles = $submissionFileDao->getBySubmissionId($submission->getId());
-				foreach ($submissionFiles as $submissionFile) {
+				$submissionFilesIterator = Services::get('submissionFile')->getMany([
+					'submissionIds' => [$submission->getId()],
+					'includeDependentFiles' => true,
+				]);
+				foreach ($submissionFilesIterator as $submissionFile) {
 					$reviewStage = $submissionFile->getFileStage() == SUBMISSION_FILE_REVIEW_FILE ||
 						$submissionFile->getFileStage() == SUBMISSION_FILE_REVIEW_ATTACHMENT ||
 						$submissionFile->getFileStage() == SUBMISSION_FILE_REVIEW_REVISION;
@@ -415,42 +418,55 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function moveReviewerFiles() {
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-
-		import('lib.pkp.classes.file.SubmissionFileManager');
-
-		// get reviewer file ids
-		$result = $submissionFileDao->retrieve(
-			'SELECT ra.review_id, ra.submission_id, ra.review_round_id, ra.review_id, ra.reviewer_file_id, s.context_id
-			FROM review_assignments ra, submissions s
-			WHERE ra.reviewer_file_id IS NOT NULL AND s.submission_id = ra.submission_id'
-		);
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-
-			$submissionFileManager = new SubmissionFileManager($row['context_id'], $row['submission_id']);
-			$revisions = $submissionFileDao->getAllRevisions($row['reviewer_file_id']);
-			if (!empty($revisions)) {
-				foreach ($revisions as $revision) {
-					$wrongFilePath = $revision->getFilePath();
-					$revision->setFileStage(SUBMISSION_FILE_REVIEW_ATTACHMENT);
-					$newFilePath = $revision->getFilePath();
-					if (!file_exists($newFilePath)) {
-						if (!file_exists($path = dirname($newFilePath)) && !$submissionFileManager->mkdirtree($path)) {
-							error_log("ERROR: Unable to make directory \"$path\"");
-						}
-						if (!rename($wrongFilePath, $newFilePath)) {
-							error_log("ERROR: Unable to move \"$wrongFilePath\" to \"$newFilePath\".");
-						}
-					}
-				}
-			} else {
+		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_...
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
+		$fileRows = Capsule::table('review_assignments as ra')
+			->leftJoin('submissions as s', 's.submission_id', '=', 'ra.submission_id')
+			->whereNotNull('ra.reviewer_file_id')
+			->get();
+		foreach ($fileRows as $fileRow) {
+			$submissionDir = Services::get('submissionFile')->getSubmissionDir($fileRow->context_id, $fileRow->submission_id);
+			$revisionRows = Capsule::table('submission_files')
+				->where('file_id', '=' , $fileRow->reviewer_file_id)
+				->get();
+			if (empty($revisionRows)) {
 				error_log('ERROR: Reviewer files with ID ' . $row['reviewer_file_id'] . ' from review assignment ' .$row['review_id'] . ' could not be found in the database table submission_files');
 			}
-
-			$result->MoveNext();
+			foreach ($revisionRows as $revisionRow) {
+				// Reproduces the removed method SubmissionFile::_generateFileName()
+				// genre is %s because it can be blank with review attachments
+				$wrongFilename = sprintf(
+					'%d-%s-%d-%d-%d-%s.%s',
+					$revisionRow->submission_id,
+					$revisionRow->genre_id,
+					$revisionRow->file_id,
+					$revisionRow->revision,
+					$revisionRow->file_stage,
+					date('Ymd', strtotime($revisionRow->date_uploaded)),
+					strtolower_codesafe($fileManager->parseFileExtension($revisionRow->original_file_name))
+				);
+				$newFilename = sprintf(
+					'%d-%s-%d-%d-%d-%s.%s',
+					$revisionRow->submission_id,
+					$revisionRow->genre_id,
+					$revisionRow->file_id,
+					$revisionRow->revision,
+					SUBMISSION_FILE_REVIEW_ATTACHMENT,
+					date('Ymd', strtotime($revisionRow->date_uploaded)),
+					strtolower_codesafe($fileManager->parseFileExtension($revisionRow->original_file_name))
+				);
+				$wrongFilePath = $submissionDir . '/' . $this->_fileStageToPath($revisionRow->file_stage) . '/' . $wrongFilename;
+				$newFilePath = $submissionDir . '/' . $this->_fileStageToPath(SUBMISSION_FILE_REVIEW_ATTACHMENT) . '/' . $newFilename;
+				if (Services::get('file')->fs->has($newFilePath)) {
+					continue;
+				}
+				if (!Services::get('file')->fs->rename($wrongFilePath, $newFilePath)) {
+					error_log("Unable to move \"$wrongFilePath\" to \"$newFilePath\".");
+				}
+			}
 		}
-		$result->Close();
+
 		return true;
 	}
 
@@ -491,7 +507,7 @@ class Upgrade extends Installer {
 			foreach ((array) $submissionFiles as $submissionFile) {
 				if ($submissionFile->getFileStage() != 1) continue; // SUBMISSION_FILE_PUBLIC
 
-				$submission = $submissionDao->getById($submissionFile->getSubmissionId());
+				$submission = $submissionDao->getById($submissionFile->getData('submissionId'));
 				$imageGenre = $genreDao->getByKey('IMAGE', $submission->getContextId());
 
 				$submissionFile->setFileStage(SUBMISSION_FILE_DEPENDENT);
@@ -633,32 +649,51 @@ class Upgrade extends Installer {
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-
-		import('lib.pkp.classes.file.SubmissionFileManager');
 
 		$contexts = $journalDao->getAll();
 		while ($context = $contexts->next()) {
 			$styleGenre = $genreDao->getByKey('STYLE', $context->getId());
 			$submissions = $submissionDao->getByContextId($context->getId());
 			while ($submission = $submissions->next()) {
-				$submissionFileManager = new SubmissionFileManager($context->getId(), $submission->getId());
-				$basePath = $submissionFileManager->getBasePath();
-				$submissionFiles = $submissionFileDao->getBySubmissionId($submission->getId());
-				foreach ($submissionFiles as $submissionFile) {
+				$submissionDir = Services::get('submissionFile')->getSubmissionDir($context->getId(), $submission->getId());
+				import('lib.pkp.classes.file.FileManager');
+				$fileManager = new FileManager();
+				$rows = Capsule::table('submission_files')
+					->where('submission_id', '=', $submission->getId())
+					->get([
+						'file_id',
+						'revision',
+						'submission_id',
+						'genre_id',
+						'file_stage',
+						'date_uploaded',
+						'original_file_name'
+					]);
+				foreach ($rows as $row) {
 					// Ignore files with style genre -- if they exist, they are corrected manually i.e.
 					// the moveCSSFiles function will do this, s. https://github.com/pkp/pkp-lib/issues/2758
-					if ($submissionFile->getGenreId() != $styleGenre->getId()) {
-						$generatedNewFilename = $submissionFile->getServerFileName();
-						$targetFilename = $basePath . $submissionFile->_fileStageToPath($submissionFile->getFileStage()) . '/' . $generatedNewFilename;
-						$timestamp = date('Ymd', strtotime($submissionFile->getDateUploaded()));
-						$wrongFileName = $submission->getId() . '-' . '1' . '-' . $submissionFile->getFileId() . '-' . $submissionFile->getRevision() . '-' . $submissionFile->getFileStage() . '-' . $timestamp . '.' . strtolower_codesafe($submissionFile->getExtension());
-						$sourceFilename = $basePath . $submissionFile->_fileStageToPath($submissionFile->getFileStage()) . '/' . $wrongFileName;
-						if (file_exists($targetFilename)) continue; // Skip existing files/links
-						if (!file_exists($path = dirname($targetFilename)) && !$submissionFileManager->mkdirtree($path)) {
-							error_log("Unable to make directory \"$path\"");
+					if ($row->genre_id != $styleGenre->getId()) {
+						// Reproduces the removed method SubmissionFile::_generateFileName()
+						// genre is %s because it can be blank with review attachments
+						$generatedNewFilename = sprintf(
+							'%d-%s-%d-%d-%d-%s.%s',
+							$row->submission_id,
+							$row->genre_id,
+							$row->file_id,
+							$row->revision,
+							$row->file_stage,
+							date('Ymd', strtotime($row->date_uploaded)),
+							strtolower_codesafe($fileManager->parseFileExtension($row->original_file_name))
+						);
+
+						$targetFilename = $submissionDir . '/' . $this->_fileStageToPath($row->file_stage) . '/' . $generatedNewFilename;
+						$timestamp = date('Ymd', strtotime($row->date_uploaded));
+						$wrongFileName = $submission->getId() . '-' . '1' . '-' . $row->file_id . '-' . $row->revision . '-' . $row->file_stage . '-' . $timestamp . '.' . strtolower_codesafe($fileManager->parseFileExtension($row->original_file_name));
+						$sourceFilename = $submissionDir . '/' . $this->_fileStageToPath($row->file_stage) . '/' . $wrongFileName;
+						if (Services::get('file')->fs->has($targetFilename)) {
+							continue;
 						}
-						if (!rename($sourceFilename, $targetFilename)) {
+						if (!Services::get('file')->fs->rename($sourceFilename, $targetFilename)) {
 							error_log("Unable to move \"$sourceFilename\" to \"$targetFilename\".");
 						}
 					}
@@ -678,47 +713,38 @@ class Upgrade extends Installer {
 	function moveCSSFiles() {
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 
 		import('lib.pkp.classes.file.FileManager');
-		import('lib.pkp.classes.file.SubmissionFileManager');
-		import('lib.pkp.classes.submission.SubmissionFile');
+		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_ constants
 
+		$fileManager = new FileManager();
 		$journals = $journalDao->getAll();
 		while ($journal = $journals->next()) {
 			// Get style genre
 			$genre = $genreDao->getByKey('STYLE', $journal->getId());
 
-			// get CSS file names from the corrected submission_files table
-			$result = $submissionFileDao->retrieve('SELECT file_id, revision, original_file_name, date_uploaded, submission_id FROM submission_files WHERE file_stage = ? AND genre_id = ? AND assoc_type = ?',
-				array((int) SUBMISSION_FILE_DEPENDENT, (int) $genre->getId(), (int) ASSOC_TYPE_SUBMISSION_FILE));
-			while (!$result->EOF) {
-				$row = $result->GetRowAssoc(false);
+			$rows = Capsule::table('submission_files')
+				->where('file_stage', '=', SUBMISSION_FILE_DEPENDENT)
+				->where('genre_id', '=', (int) $genre->getId())
+				->where('assoc_type', '=', ASSOC_TYPE_SUBMISSION_FILE)
+				->get();
+
+			foreach ($rows as $row) {
 				// Get the wrong file name (after the 3.0.x migration)
 				// and the correct file name
-				$timestamp = date('Ymd', strtotime($row['date_uploaded']));
-				$fileManager = new FileManager();
-				$extension = $fileManager->parseFileExtension($row['original_file_name']);
-				$wrongServerName = 	$row['submission_id'] . '-' . '1' . '-' . $row['file_id'] . '-' . $row['revision'] . '-' . '1' . '-' . $timestamp . '.' . strtolower_codesafe($extension);
-				$newServerName = 	$row['submission_id'] . '-' . $genre->getId() . '-' . $row['file_id'] . '-' . $row['revision'] . '-' . SUBMISSION_FILE_DEPENDENT . '-' . $timestamp . '.' . strtolower_codesafe($extension);
+				$timestamp = date('Ymd', strtotime($row->date_uploaded));
+				$extension = $fileManager->parseFileExtension($row->original_file_name);
+				$wrongServerName = 	$row->submission_id . '-' . '1' . '-' . $row->file_id . '-' . $row->revision . '-' . '1' . '-' . $timestamp . '.' . strtolower_codesafe($extension);
+				$newServerName = 	$row->submission_id . '-' . $genre->getId() . '-' . $row->file_id . '-' . $row->revision . '-' . SUBMISSION_FILE_DEPENDENT . '-' . $timestamp . '.' . strtolower_codesafe($extension);
 				// Get the old file path (after the 3.0.x migration, i.e. from OJS 2.4.x)
 				// and the correct file path
-				$submissionFileManager = new SubmissionFileManager($journal->getId(), $row['submission_id']);
-				$basePath = $submissionFileManager->getBasePath();
-				$sourceFilename = $basePath . 'public' . '/' . $wrongServerName;
-				$targetFilename = $basePath . 'submission/proof' . '/' . $newServerName;
-				// Move the file
-				if (!file_exists($targetFilename) && file_exists($sourceFilename)) {
-					if (!file_exists($path = dirname($targetFilename)) && !$submissionFileManager->mkdirtree($path)) {
-						error_log("Unable to make directory \"$path\"");
-					}
-					if (!rename($sourceFilename, $targetFilename)) {
-						error_log("Unable to move \"$sourceFilename\" to \"$targetFilename\".");
-					}
+				$submissionDir = Services::get('submissionFile')->getSubmissionDir($journal->getId(), $row->submission_id);
+				$sourceFilename = $submissionDir . '/public' . '/' . $wrongServerName;
+				$targetFilename = $submissionDir . '/submission/proof' . '/' . $newServerName;
+				if (!Services::get('file')->fs->rename($sourceFilename, $targetFilename)) {
+					error_log("Unable to move \"$sourceFilename\" to \"$targetFilename\".");
 				}
-				$result->MoveNext();
 			}
-			$result->Close();
 			unset($journal);
 		}
 		return true;
@@ -730,40 +756,50 @@ class Upgrade extends Installer {
 	 */
 	function repairSuppFilesFilestage() {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
+		import('lib.pkp.classes.file.FileManager');
+		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_ constants
+		$fileManager = new FileManager();
 
-		import('lib.pkp.classes.submission.SubmissionFile');
-		import('lib.pkp.classes.file.SubmissionFileManager');
+		$rows = Capsule::table('submission_supplementary_files as ssf')
+			->leftJoin('submission_files as sf', 'sf.file_id', '=', 'ssf.file_id')
+			->leftJoin('submission as s', 's.submission_id', '=', 'sf.submission_id')
+			->where('sf.file_stage', '=', SUBMISSION_FILE_SUBMISSION)
+			->where('sf.assoc_type', '=', ASSOC_TYPE_REPRESENTATION)
+			->where('sf.revision', '=', 'ssf.revision')
+			->get();
 
-		// get reviewer file ids
-		$result = $submissionFileDao->retrieve(
-			'SELECT ssf.*, s.context_id
-			FROM submission_supplementary_files ssf, submission_files sf, submissions s
-			WHERE sf.file_id = ssf.file_id AND sf.file_stage = ? AND sf.assoc_type = ? AND sf.revision = ssf.revision AND s.submission_id = sf.submission_id',
-			array((int)SUBMISSION_FILE_SUBMISSION, (int)ASSOC_TYPE_REPRESENTATION)
-		);
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$submissionFileRevision = $submissionFileDao->getRevision($row['file_id'], $row['revision']);
-			$submissionFileManager = new SubmissionFileManager($row['context_id'], $submissionFileRevision->getSubmissionId());
-			$basePath = $submissionFileManager->getBasePath();
-			$generatedOldFilename = $submissionFileRevision->getServerFileName();
-			$oldFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedOldFilename;
-			$submissionFileRevision->setFileStage(SUBMISSION_FILE_PROOF);
-			$generatedNewFilename = $submissionFileRevision->getServerFileName();
-			$newFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedNewFilename;
-			if (!file_exists($newFileName)) {
-				if (!file_exists($path = dirname($newFileName)) && !$submissionFileManager->mkdirtree($path)) {
-					error_log("Unable to make directory \"$path\"");
-				}
-				if (!rename($oldFileName, $newFileName)) {
-					error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
-				} else {
-					$submissionFileDao->updateObject($submissionFileRevision);
-				}
+		foreach ($rows as $row) {
+			$submissionDir = Services::get('submissionFile')->getSubmissionDir($row->context_id, $row->submission_id);
+			$generatedOldFilename = sprintf(
+				'%d-%s-%d-%d-%d-%s.%s',
+				$row->submission_id,
+				$row->genre_id,
+				$row->file_id,
+				$row->revision,
+				$row->file_stage,
+				date('Ymd', strtotime($row->date_uploaded)),
+				strtolower_codesafe($fileManager->parseFileExtension($row->original_file_name))
+			);
+			$generatedNewFilename = sprintf(
+				'%d-%s-%d-%d-%d-%s.%s',
+				$row->submission_id,
+				$row->genre_id,
+				$row->file_id,
+				$row->revision,
+				SUBMISSION_FILE_PROOF,
+				date('Ymd', strtotime($row->date_uploaded)),
+				strtolower_codesafe($fileManager->parseFileExtension($row->original_file_name))
+			);
+			$oldFileName = $submissionDir . '/' . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedOldFilename;
+			$newFileName = $submissionDir . '/' . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedNewFilename;
+			if (!Services::get('file')->fs->rename($oldFileName, $newFileName)) {
+				error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
 			}
-			$result->MoveNext();
+			Capsule::table('submission_files')
+				->where('file_id', '=', $row->file_id)
+				->where('revision', '=', $row->revision)
+				->update(['file_stage' => SUBMISSION_FILE_PROOF]);
 		}
-		$result->Close();
 		return true;
 	}
 
@@ -1207,5 +1243,35 @@ class Upgrade extends Installer {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Get the directory of a file based on its file stage
+	 *
+	 * @param int $fileStage ONe of SUBMISSION_FILE_ constants
+	 * @return string
+	 */
+	function _fileStageToPath($fileStage) {
+		import('lib.pkp.classes.submission.SubmissionFile');
+		static $fileStagePathMap = [
+			SUBMISSION_FILE_SUBMISSION => 'submission',
+			SUBMISSION_FILE_NOTE => 'note',
+			SUBMISSION_FILE_REVIEW_FILE => 'submission/review',
+			SUBMISSION_FILE_REVIEW_ATTACHMENT => 'submission/review/attachment',
+			SUBMISSION_FILE_REVIEW_REVISION => 'submission/review/revision',
+			SUBMISSION_FILE_FINAL => 'submission/final',
+			SUBMISSION_FILE_COPYEDIT => 'submission/copyedit',
+			SUBMISSION_FILE_DEPENDENT => 'submission/proof',
+			SUBMISSION_FILE_PROOF => 'submission/proof',
+			SUBMISSION_FILE_PRODUCTION_READY => 'submission/productionReady',
+			SUBMISSION_FILE_ATTACHMENT => 'attachment',
+			SUBMISSION_FILE_QUERY => 'submission/query',
+		];
+
+		if (!isset($fileStagePathMap[$fileStage])) {
+			throw new Exception('A file assigned to the file stage ' . $fileStage . ' could not be migrated.');
+		}
+
+		return $fileStagePathMap[$fileStage];
 	}
 }

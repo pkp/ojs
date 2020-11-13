@@ -31,9 +31,6 @@ msgstr ""
 "amb noms d'usuaris/àries i correus electrònics que ja no estan en ús, "
 "juntament amb els grups d'usuaris/àries corresponents."
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "No s'ha pogut escriure en l'arxiu \"{$fileName}\"."
-
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Hi ha hagut errors durant l'exportació"
 

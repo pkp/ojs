@@ -1974,9 +1974,6 @@ msgstr "Ogiltigt nummer valt!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Ogiltigt bidrag från manusredaktör eller inget bidrag från manusredaktör valt!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Laddade valutalistan \"{$filename}\" från XML"
-
 msgid "grid.action.createContext"
 msgstr "Skapa en ny tidskrift"
 

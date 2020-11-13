@@ -85,9 +85,6 @@ msgstr "Експортувати усіх"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Під час експорту трапилися помилки"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Не вдалося записати у файл \"{$fileName}\"."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "Імпорт завершено успішно. Користувачі з іменами користувачів та адресами електронної пошти, які ще не використовувалися, імпортуються разом із відповідними групами користувачів."
 

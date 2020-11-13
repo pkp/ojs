@@ -2161,9 +2161,6 @@ msgstr "Érvénytelen folyóiratszám kérése!"
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Érvénytelen technikai szerkesztés beküldése vagy nem történt meg a technikai szerkesztő példányányának kérése!"
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Pénznem lista betöltése \"{$filename}\" XML-ből"
-
 msgid "grid.action.createContext"
 msgstr "Új folyóirat készítése"
 

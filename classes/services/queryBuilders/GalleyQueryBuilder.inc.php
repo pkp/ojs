@@ -68,6 +68,8 @@ class GalleyQueryBuilder implements EntityQueryBuilderInterface {
 			$q->whereIn('g.publication_id', $this->publicationIds);
 		}
 
+		$q->orderBy('g.seq', 'asc');
+
 		// Add app-specific query statements
 		\HookRegistry::call('Galley::getMany::queryObject', array(&$q, $this));
 

@@ -1403,9 +1403,6 @@ msgstr "{$userName} је одбио/ла {$round} рецензију прило�
 msgid "log.editor.decision"
 msgstr "{$editorName} је евидентирао уредничку одлуку ({$decision}) за чланак {$submissionId}."
 
-msgid "debug.notes.currencyListLoad"
-msgstr "Учитана је листа валута \"{$filename}\" из XML-a."
-
 msgid "reviewer.article.enterReviewForm"
 msgstr "Кликните на икону и испуните образац за реценцзију."
 

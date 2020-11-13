@@ -19,21 +19,21 @@ import('lib.pkp.classes.db.SchemaDAO');
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
 class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
-	/** @copydoc SchemaDao::$schemaName */
+	/** @copydoc SchemaDAO::$schemaName */
 	public $schemaName = SCHEMA_GALLEY;
 
-	/** @copydoc SchemaDao::$tableName */
+	/** @copydoc SchemaDAO::$tableName */
 	public $tableName = 'publication_galleys';
 
-	/** @copydoc SchemaDao::$settingsTableName */
+	/** @copydoc SchemaDAO::$settingsTableName */
 	public $settingsTableName = 'publication_galley_settings';
 
-	/** @copydoc SchemaDao::$primaryKeyColumn */
+	/** @copydoc SchemaDAO::$primaryKeyColumn */
 	public $primaryKeyColumn = 'galley_id';
 
-	/** @copydoc SchemaDao::$primaryTableColumns */
+	/** @copydoc SchemaDAO::$primaryTableColumns */
 	public $primaryTableColumns = [
-		'fileId' => 'file_id',
+		'submissionFileId' => 'submission_file_id',
 		'id' => 'galley_id',
 		'isApproved' => 'is_approved',
 		'locale' => 'locale',
@@ -118,11 +118,9 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 				'SELECT sf.*, g.*
 				FROM publication_galleys g
 				INNER JOIN publications p ON (g.publication_id = p.publication_id)
-				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
-				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
+				LEFT JOIN submission_files sf ON (g.submission_file_id = sf.submission_file_id)
 				' . ($contextId ? 'LEFT JOIN submissions s ON (s.submission_id = p.submission_id)' : '') .
-				'WHERE g.publication_id = ?
-					AND nsf.file_id IS NULL ' .
+				'WHERE g.publication_id = ? ' .
 					 ($contextId?' AND s.context_id = ? ':'') .
 				'ORDER BY g.seq',
 				$params
@@ -142,10 +140,8 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 			FROM	publication_galleys g
 				INNER JOIN publications p ON (p.publication_id = g.publication_id)
 				LEFT JOIN submissions s ON (s.submission_id = p.submission_id)
-				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
-				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
-			WHERE	s.context_id = ?
-				AND nsf.file_id IS NULL',
+				LEFT JOIN submission_files sf ON (g.submission_file_id = sf.submission_file_id)
+			WHERE	s.context_id = ?',
 			(int) $journalId
 		);
 
@@ -161,7 +157,7 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 		$result = $this->retrieve(
 			'SELECT	*
 			FROM	publication_galleys g
-			WHERE	g.file_id = ?',
+			WHERE	g.submission_file_id = ?',
 			(int) $fileId
 		);
 
@@ -185,11 +181,9 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 			'SELECT sf.*, g.*
 			FROM publication_galleys g
 			INNER JOIN publications p ON (g.publication_id = p.publication_id)
-			LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
-			LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
+			LEFT JOIN submission_files sf ON (g.submission_file_id = sf.submission_file_id)
 			WHERE g.publication_id = ?
 				AND g.url_path = ?
-				AND nsf.file_id IS NULL
 			ORDER BY g.seq',
 			$params
 		);
@@ -321,8 +315,7 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 				LEFT JOIN publications p ON (p.publication_id = g.publication_id)
 				LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
 				LEFT JOIN submissions s ON (s.submission_id = p.submission_id)
-				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
-				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision AND nsf.file_id IS NULL )
+				LEFT JOIN submission_files sf ON (g.submission_file_id = sf.submission_file_id)
 				' . ($pubIdType != null?' LEFT JOIN publication_galley_settings gs ON (g.galley_id = gs.galley_id)':'')
 				. ($title != null?' LEFT JOIN publication_settings pst ON (p.publication_id = pst.publication_id)':'')
 				. ($author != null?' LEFT JOIN authors au ON (p.publication_id = au.publication_id)

@@ -237,7 +237,7 @@ class PublicationService extends PKPPublicationService {
 		// scheduled.
 		$issue = Services::get('issue')->get($newPublication->getData('issueId'));
 		if ($issue && !$issue->getData('published')) {
-			$newPublication->setData('datePublished', '');
+			$newPublication->setData('datePublished', null);
 			$newPublication->setData('status', STATUS_SCHEDULED);
 		}
 	}

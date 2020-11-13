@@ -133,7 +133,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 				$issueListQB->offsetBy($args['count']);
 			}
 
-		\HookRegistry::call('Issue::getMany::queryBuilder', array($issueListQB, $args));
+		\HookRegistry::call('Issue::getMany::queryBuilder', array(&$issueListQB, $args));
 
 		return $issueListQB;
 	}

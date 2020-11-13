@@ -85,9 +85,6 @@ msgstr "Izvezi sve"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Došlo je do grešaka prilikom izvoza"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Nemoguće upisivanje u fajl \"{$fileName}\"."
-
 msgid "plugins.importexport.users.importComplete"
 msgstr "Uvoz je uspešno završen. Korisnici sa korisničkim imenima i imejl adresama koje do sada nisu bila u upotrebi su uspešno uvezeni i dodati u odgovarajuće grupe."
 

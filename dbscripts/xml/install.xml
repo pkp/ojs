@@ -21,6 +21,7 @@
 	<migration class="lib.pkp.classes.migration.CategoriesMigration" />
 	<migration class="lib.pkp.classes.migration.CommonMigration" />
 	<migration class="lib.pkp.classes.migration.ControlledVocabMigration" />
+	<migration class="lib.pkp.classes.migration.FilesMigration" />
 	<migration class="lib.pkp.classes.migration.GenresMigration" />
 	<migration class="lib.pkp.classes.migration.LibraryFilesMigration" />
 	<migration class="lib.pkp.classes.migration.LogMigration" />
@@ -29,10 +30,10 @@
 	<migration class="lib.pkp.classes.migration.NavigationMenusMigration" />
 	<migration class="lib.pkp.classes.migration.NotesMigration" />
 	<migration class="lib.pkp.classes.migration.ReviewFormsMigration" />
+	<migration class="lib.pkp.classes.migration.SubmissionFilesMigration" /><!-- before ReviewsMigration so that foreign keys can be defined-->
 	<migration class="lib.pkp.classes.migration.ReviewsMigration" />
 	<migration class="lib.pkp.classes.migration.RolesAndUserGroupsMigration" />
 	<migration class="lib.pkp.classes.migration.ScheduledTasksMigration" />
-	<migration class="lib.pkp.classes.migration.SubmissionFilesMigration" />
 	<migration class="lib.pkp.classes.migration.SubmissionsMigration" />
 	<migration class="lib.pkp.classes.migration.TemporaryFilesMigration" />
 	<migration class="lib.pkp.classes.migration.TombstoneMigration" />

@@ -74,9 +74,6 @@ msgstr "Iznesi sve"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Pogreške koje su se pojavile prilikom iznošenja"
 
-msgid "plugins.importexport.users.export.couldNotWriteFile"
-msgstr "Nije moguće pisati po datoteci \"{$fileName}\"."
-
 msgid "plugins.importexport.users.import.warning"
 msgstr "Upozorenje"
 
