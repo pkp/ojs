@@ -2,17 +2,118 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2020-03-20T15:57:55+00:00\n"
+"PO-Revision-Date: 2020-10-19 15:22+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/nb_NO/>\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-03-20T15:57:55+00:00\n"
-"PO-Revision-Date: 2020-03-20T15:57:55+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.reports.counter.description"
-msgstr "Programtillegg for COUNTER muliggjør rapportering på tidsskriftaktivitet ved å bruke <a href=\"http://www.projectcounter.org\">COUNTER standarden</a>. Disse rapportene alene gjør ikke et tidsskrift COUNTER kompatibelt. For å tilby COUNTER kompatibilitet, se retningslinjene på Project COUNTER sin nettside. "
+msgstr ""
+"Programtillegget COUNTER gjør det mulig å rapportere aktivitet i "
+"tidsskriftet ved bruk av <a href=\"http://www.projectcounter.org\">COUNTER "
+"standarden</a>. Disse rapportene gjør ikke alene tidsskriftet kompatibelt "
+"med COUNTER. For å tilby COUNTER-kompatibilitet, se gjennom  kravene på "
+"nettstedet til Project COUNTER."
 
 msgid "plugins.reports.counter"
 msgstr "COUNTER rapporter"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Tidskriftsrapport 1"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Artikkelrapport 1"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Alle kunder"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Lenkene under generer foreldede rapporter med eldre programtilleggsdata, som "
+"ikke er COUNTER-klare. Dersom du vil generere oppdaterte COUNTER-rapporter "
+"ved hjelp av den nye OJS COUNTER måltypen, bruk lenkene over."
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anonym"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Totalt for alle tidsskrift"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Totalt"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSN (online)"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN (trykt utgave)"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Plattform"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Utgiver"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Dato:"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Antall vellykkede forespørsler om artikler i fulltekst etter måned og "
+"tidsskrift (år {$year})"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Tidsskriftsrapport 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Tidsskriftsrapport 1 (R3): Forespørsler om artikler i fulltekst etter måned "
+"og tidsskrift"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER tidsskriftsrapport  1 (R3): Forespørsler om artikler i fulltekst "
+"etter måned og tidsskrift"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML-versjon"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER-rapport JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Disse lenkene genererer COUNTER-klare rapporter basert på den foreldete "
+"Release 3.0. Rapporten dekker alle tidsskriftene på nettsiden. Bruk den "
+"siste Release i stedet, om mulig."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Resultatene kunne ikke formateres som XML."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Det var ingen resultat for denne rapporten."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Rapportforespørselen var ugyldig."
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Rapportens parametre var ugyldige."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Eldre rapporter"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER-versjon"

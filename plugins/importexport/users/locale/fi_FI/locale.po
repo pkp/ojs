@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-19 15:22+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/fi_FI/>\n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Ole hyvä ja lataa tiedosto kohdassa \"Tuo\" jatkaaksesi."
+
+msgid "plugins.importexport.users.results"
+msgstr "Tulokset"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Tuonti suoritettiin onnistuneesti. Kaikki käyttäjäryhmät ja käyttäjät, "
+"joiden mukaisia käyttäjänimiä tai sähköpostiosoitteita ei ollut vielä "
+"järjestelmässä,  tuotiin järjestelmään."
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Tiedostoon \"{$fileName}\" ei voitu kirjoittaa."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Viennin aikana tapahtuneet virheet"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Vie kaikki"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Vie rooli mukaan"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Vie käyttäjiä"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Tuntematon julkaisun polku \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Tiivistettä {$importHash} käyttäviä salasanoja ei voi käyttää. Järjestelmä "
+"on määritetty käyttämään tiivistettä {$ojsHash}. Mikäli jatkat, sinun on "
+"uusittava tuotavien käyttäjien salasanat."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Varoitus"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Vahvista, että haluat tuoda nämä käyttäjät järjestelmään"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Tuonnin aikana tapahtuneet virheet"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Seuraavat käyttäjät tuotiin järjestelmään onnistuneesti"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Jatka tuontia virheiden sattuessa."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Lähetä tuotaville käyttäjille ilmoitussähköposti, jossa on hänen "
+"käyttäjätunnuksensa ja salasanansa."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Käyttäjätietotiedosto"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Valitse XML-tiedosto, joka sisältää tuotavien käyttäjien tiedot. Katso "
+"tarkemmat ohjeet tämän tiedoston oikeasta muotoilemisesta.<br /><br />"
+"Huomaa, että mikäli tiedosto sisältää järjestelmässä jo käytössä olevia "
+"käyttäjänimiä tai sähköpostiosoitteita, näitä tietoja ei tuoda järjestelmään "
+"ja mahdolliset uudet luotavat roolit osoitetaan olemassa oleville "
+"käyttäjille."
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Tuo käyttäjiä"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Esimerkit:\n"
+"\tTuo käyttäjiä julkaisuun myJournal tiedostosta myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tVie kaikki käyttäjät julkaisusta myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tVie käyttäjiä ID-tunnisteiden perusteella:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Käyttö: {$scriptName} {$pluginName} [command] ...\n"
+"Komennot:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.description"
+msgstr "Vie ja tuo käyttäjiä"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Käyttäjien siirtolisäosa"

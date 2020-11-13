@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-23 11:00+0000\n"
+"PO-Revision-Date: 2020-10-29 19:44+0000\n"
 "Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-crossref/el_GR/>\n"
@@ -16,3 +16,9 @@ msgstr "Εξαγωγή των μεταδεδομένων του άρθρου σ�
 
 msgid "plugins.importexport.crossref.displayName"
 msgstr "Πρόσθετο εξαγωγής CrossRef XML"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Πληρούνται όλες οι απαιτήσεις των πρόσθετων."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Απαιτήσεις"

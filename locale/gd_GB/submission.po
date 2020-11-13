@@ -1,0 +1,279 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-13 12:51+0000\n"
+"Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
+"Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"gd_GB/>\n"
+"Language: gd_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.submit.title"
+msgstr "Cuir artaigeal"
+
+msgid "submission.submit.userGroup"
+msgstr "Cuir e ’s mi nam dhreuchd a leanas…"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Tagh an dreuchd agad a thaobh an tagraidh artaigil seo."
+
+msgid "submission.upload.selectComponent"
+msgstr "Tagh co-phàirt artaigil"
+
+msgid "submission.title"
+msgstr "Tiotal an artaigil"
+
+msgid "submission.title.tip"
+msgstr ""
+"Mar is trice, ’s e “dealbh”, “teacsa” an seòrsa de thagradh no seòrsa eile "
+"de mheadhan, a’ gabhail a-staigh “bathar-bog” no “rud eadar-ghnìomhach”.  "
+"Tagh am fear as iomchaidhe dhan tagradh agad. Gheibh thu buill-eisimpleir "
+"aig <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Tòisich air tagradh ùr ann an"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Tagradh ùr"
+
+msgid "grid.action.workflow"
+msgstr "Sruth-obrach an tagraidh"
+
+msgid "submission.abstract.wordCount.description"
+msgstr ""
+"Feumaidh an geàrr-chunntas a bhith uiread a dh’fhaclan a dh’ fhaid no nas "
+"giorra: {$wordCount}."
+
+msgid "submission.submit.noContext"
+msgstr "Cha b’ urrainn dhuinn iris-leabhar an tagraidh seo a lorg."
+
+msgid "submission.issueEntry"
+msgstr "Meata-dàta"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Chaidh fios mun tagradh agad a chur chun an iris-leabhair agus chaidh post-d "
+"a chur thugad a dhearbhas gun d’fhuair iad e. Turas a rinn an lèirmheasaiche "
+"lèirmheas air an tagradh, cuiridh iad fios thugad."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Tha a’ mhòr-dhuilleag a’ nochdadh ann an innteart na h-irise"
+
+msgid "grid.action.issueEntry"
+msgstr "Faic meata-dàta an tagraidh seo"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Chaidh mòr-dhuilleag an artaigil “{$galleyFormatName}” a chur ri làimh."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr ""
+"Chan eil mòr-dhuilleag an artaigil “{$galleyFormatName}” ri làimh tuilleadh."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Chaidh aithnichearan poblach an tagraidh seo ùrachadh."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Aonta an fhòrmait"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p><em>Cha bhi</em> a’ mhòr-dhuilleag seo ri làimh an luchd-leughaidh.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p><em>Bidh</em> a’ mhòr-dhuilleag seo ri làimh an luchd-leughaidh.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Cuir a’ mhòr-dhuilleag seo ri làimh"
+
+msgid "submission.galleyFiles"
+msgstr "Faidhlichean nam mòr-dhuilleag"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Luchdaichidh deasaiche na co-dhealbhachd suas na faidhlichean a chaidh "
+"ullachadh airson foillseachadh agus a tha deiseil airson saothrachadh an-"
+"seo. Cleachd <em>Iomruin neach-sgrùdaidh</em> a thaghadh nan ùghdaran is "
+"daoine eile a nì dearbh-leughadh air na mòr-dhuilleagan. Thèid na "
+"faidhlichean ceartaichte a luchdadh suas airson aontachadh ron "
+"fhoillseachadh."
+
+msgid "grid.action.approveProof"
+msgstr ""
+"Thoir aonta dhan tionndadh dearbhaidh seo airson a ghabhail a-staigh sa mhòr-"
+"dhuilleag."
+
+msgid "grid.action.pageProofApproved"
+msgstr ""
+"Fhuair an tionndadh dearbhaidh seo aonta agus thèid a ghabhail a-staigh sa "
+"mhòr-dhuilleag."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "An tiotal is geàrr-chunntas"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Luchdaich suas na faidhlichean a tha co-cheangailte ris an tagradh seo, a’ "
+"gabhail a-staigh an artaigil, na meadhanan, seataichean dàta, obair-ealain "
+"is msaa."
+
+msgid "submission.pageProofs"
+msgstr "Dearbh-leughadh"
+
+msgid "submission.confirmSubmit"
+msgstr ""
+"A bheil thu cinnteach gu bheil thu airson an t-artaigeal seo a chur dhan "
+"iris-leabhar?"
+
+msgid "workflow.review.externalReview"
+msgstr "Lèirmheas"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Cuir airson lèirmheas"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Chaidh am meata-dàta tagraidh aig an iris ùrachadh."
+
+msgid "submission.upload.fileContents"
+msgstr "Co-phàirt an artaigil"
+
+msgid "submission.complete"
+msgstr "Air aontachadh"
+
+msgid "submission.incomplete"
+msgstr "A’ feitheamh ri aonta"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Tagh cànan an tagraidh."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Liosta-chromagan an tagraidh"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Feumaidh tu cur an cèill gun do leugh is gun do choilean thu na riatanasan "
+"gu h-ìosal mus lean thu air adhart."
+
+msgid "submission.submit.privacyStatement"
+msgstr "An aithris prìobhaideachd"
+
+msgid "submission.submit.contributorRole"
+msgstr "Dreuchd neach-pàirteachaidh"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Tha feum air co-dhiù aon ùghdar."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Tha ainm, sloinneadh is post-d gach ùghdar riatanach."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Cuir a-steach tiotal an artaigil seo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Cuir a-steach geàrr-chunntas an artaigil agad."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Tha an geàrr-chunntas agad ro fhada. Dèan nas giorra e gus an gèill e ri "
+"crìoch nam faclan aig an earrann seo."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Tagh dreuchd neach-pàirteachaidh."
+
+msgid "submission.citationFormat.notFound"
+msgstr ""
+"Cha b’ urrainn dhuinn t-iomradh a dh’iarr thu fhaighinn san fhòrmat sin."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Tha na riatanasan seo stèidhichte air seata meata-dàta Dublin Core, stannard "
+"eadar-nàiseanta airson tuairisgeul a thoirt air susbaint iris-leabhraichean."
+
+msgid "submission.viewingPreview"
+msgstr ""
+"’S e ro-shealladh a tha seo ’s cha deach fhoillseachadh fhathast. <a href=\""
+"{$url}\">Seall an tagradh</a>"
+
+msgid "section.any"
+msgstr "Earrann sam bith"
+
+msgid "submission.sectionOptions"
+msgstr "Roghainnean na h-earrainn"
+
+msgid "catalog.browseTitles"
+msgstr "Nithean ({$numTitles})"
+
+msgid "catalog.category.heading"
+msgstr "A h-uile nì"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Cha ghabh mòr-dhuilleagan an fhoillseachaidh seo a dheasachadh a chionn ’s "
+"gun deach fhoillseachadh mu thràth."
+
+msgid "galley.publicationNotFound"
+msgstr "Cha b’ urrainn dhuinn am foillseachadh dhen mhòr-dhuilleag seo a lorg."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Thèid ceann-là an fhoillseachaidh a shuidheachadh gu fèin-obrachail nuair a "
+"thèid an iris fhoillseachadh. Na cuir a-steach ceann-là foillsichidh ach ma "
+"chaidh an t-artaigeal fhoillseachadh roimhe seo am badeigin eile agus ma tha "
+"feum agad air seann cheann-là a chur air."
+
+msgid "publication.invalidSection"
+msgstr "Cha b’ urrainn dhuinn an earrann dhen fhoillseachadh seo a lorg."
+
+msgid "publication.invalidIssue"
+msgstr "Cha b’ urrainn dhuinn an iris dhen fhoillseachadh seo a lorg."
+
+msgid "publication.issue.success"
+msgstr "Chaidh am mion-fhiosrachadh aig iris dhen fhoillseachadh ùrachadh."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Chaidh gach riatanas foillseachaidh a choileanadh. A bheil thu cinnteach gu "
+"bheil thu airson seo fhoillseachadh?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Chaidh gach riatanas foillseachaidh a choileanadh. Thèid seo fhoillseachadh "
+"nuair a thig {$issue} a-mach. A bheil thu cinnteach gu bheil thu airson seo "
+"a chur air an sgeideal airson foillseachadh?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Chaidh gach riatanas foillseachaidh a choileanadh. Thèid seo fhoillseachadh "
+"sa bhad ann an {$issue}. A bheil thu cinnteach gu bheil thu airson seo "
+"fhoillseachadh?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Chaidh gach riatanas foillseachaidh a choileanadh. Leis gun deach "
+"{$datePublished} a shuidheachadh mar cheann-là foillseachaidh, thèid "
+"fhoillseachadh sa bhad. A bheil thu cinnteach gu bheil thu airson seo "
+"fhoillseachadh?"
+
+msgid "publication.required.issue"
+msgstr "Feumar am foillseachadh iomruineadh do dh’iris mus gabh fhoillseachadh."
+
+msgid "publication.publishedIn"
+msgstr "Air fhoillseachadh ann an <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Gu bhith fhoillseachadh ann an <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Cha deach seo a chur air an sgeideal airson foillseachadh fhathast."
+
+msgid "publication.scheduleInissue"
+msgstr "Iomruin do dh’iris"
+
+msgid "publication.selectIssue"
+msgstr "Tagh iris airson a chur air an sgeideal airson foillseachadh"

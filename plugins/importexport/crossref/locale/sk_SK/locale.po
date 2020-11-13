@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-12 13:19+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-crossref/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Žiadny článok nezodpovedá tomuto ID článku \"{$articleId}\"."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Žiadne číslo nezodpovedá tomuto ID číslu: \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr ""
+"Registrácia bola úspešná, ale došlo k nasledujúcemu upozorneniu: '{$param}'."
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "Registrácia nebola úplne úspešná! Registračný server DOI vrátil chybu."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Použitie:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 "
+"[objectId2] ...\n"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Úloha automatickej registrácie CrossRef"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Označiť ako aktívne"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Stiahnuť XML"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Stav ukladania:</p>\n"
+"  <p>\n"
+"  - Nie je uložené: pre tento DOI nebol vykonaný žiadny pokus o uloženie. <"
+"br/>\n"
+"  - Aktívne: DOI bol uložený a je aktívny. <br/>\n"
+"  - Zlyhalo: vklad DOI zlyhal.<br/>\n"
+"  - Označené ako aktívny: DOI bol ručne označený ako aktívny.\n"
+"  </p>\n"
+"  <p> Zobrazí sa iba stav posledného pokusu o uloženie.</p>\n"
+"  <p> Ak uloženie zlyhalo, vyriešte problém a pokúste sa znovu zaregistrovať "
+"DOI. </p>"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Vklad"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Označené ako aktívne"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Aktívne"
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Zlyhalo"
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr ""
+"Poznámka: Na účely exportu/registrácie sa tu zohľadnia len čísla (a nie ich "
+"články)."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr ""
+"Validácia XML. Túto možnosť použite pre stiahnuté XML pre ručnú registráciu "
+"DOI."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr ""
+"Použite testovacie rozhranie API CrossRef (skúšobné prostredie) pre vklad "
+"DOI. Nezabudnite túto možnosť odstrániť pred reálnym používaním časopisu."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS uloží priradené DOI automaticky do CrossRef. Upozorňujeme, že to môže "
+"trvať krátku dobu po spracovaní publikácie. Môžete skontrolovať všetky "
+"neregistrované DOI."
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Vložte, prosím, užívateľské meno, ktoré ste dostali od CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Užívateľské meno"
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr ""
+"Ak chcete tento plugin použiť na registráciu identifikátorov digitálnych "
+"objektov (DOI) priamo s CrossRef, budete potrebovať užívateľské meno a heslo "
+"(k dispozícii na adrese <a href=\"http://www.crossref.org\" target=\"_blank\""
+"> CrossRef </a>), aby ste tak urobili. Ak nemáte vlastné užívateľské meno a "
+"heslo, môžete exportovať do formátu CrossRef XML, ale nemôžete zaregistrovať "
+"svoje DOI v CrossRef priamo z OJS."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Vložte, prosím, e-mail vkladajúceho."
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Vložte, prosím, meno vkladajúceho."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Email vkladajúceho"
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Meno vkladajúceho"
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Nasledujúce položky sú potrebné pre úspešné uloženie do CrossRef."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr ""
+"Nie sú vybrané články pre priradenie verejných identifikátorov DOI, takže v "
+"tomto pluginu nie je žiadna možnosť uloženia alebo exportu."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr ""
+"ISSN časopisu nebolo nakonfigurované! Musíte pridať ISSN na <a href=\""
+"{$journalSettingsUrl}\" target=\"_blank\"> Stránke nastavenie časopisu </a>."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr ""
+"Vydavateľ časopisu nebol nakonfigurovaný! Musíte pridať inštitúcii "
+"vydavateľa na <a href=\"{$journalSettingsUrl}\" target=\"_blank\"> Stránke "
+"nastavenie časopisu </a>."
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Všetky požiadavky pluginu boli uspokojené."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Požadavky"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Export metadát článku v XML formáte CrossRef."
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Plugin exportu do XML pre CrossRef"
