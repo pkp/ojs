@@ -1,8 +1,51 @@
-OJS 3.2.1 Release Notes
-Git tag: 3_2_1-1
+OJS 3.2.1-2 Release Notes
+Git tag: 3_2_1-2
 
-Release date: June 26, 2020
-===========================
+Release date: November 13, 2020
+===============================
+
+3.2.1-2 Build
+-------------
+	#2580: Correct outdated reference to geo IP tool path
+	#4991: Add Category to article page in OJS
+	#5445: Test licenseUrl context setting
+	#5565: Allow editors and editorial assistants to preview an article before it is published
+	#5592: [OJS] Block plugins and cacheing problem
+	#6029: Report Generator doesn't return any results when custom range is selected with a single day
+	#6056: [OPS] Version number showing Publication ID for authors
+	#6064: [OJS] Text color does not respond to background color selection on mobile
+	#6067: Submission Checklist - Reordering doesn't save
+	#6069: package-lock.json contains wrong version number
+	#6084: Announcement emails sent blank after upgrade
+	#6102: Submission::getSectionTitle doesn't return any value
+	#6105: Allow capital letters in context urlPath
+	#6107: "Omit the title of this section from the issue's Table of Contents" section option does not work
+	#6111: SQL typo in "browse by authors" feature
+	#6115: Enable "download all files" in production ready files grid
+	#6120: Internal Review queries are placed in External Review
+	#6134: The statistics notification is sent to roles that have no access to the interface
+	#6146: [OPS] Allow submission search by ORCID ID
+	#6148: Error for custom blocks in side bar due to automatic name addition
+	#6165: Announcement mailout can fail if any user is unsubscribed from notifications
+	#6168: ANNOUNCEMENT email template not installed on upgrade to OJS 3.2.1
+	#6183: Sitemap does not include articles
+	#6184: Can't use array values in theme options
+	#6196: Fix test/build for changed Google closure compiler installation process
+	#6207: Ensure that served articles are matched against the request's context ID
+	#6212: Quick Submit Plugin notification error problem
+	#6213: Error in upgrade from OJS 3.1.x to 3.2.x on submissionSubject (controlled vocabulary) data
+	#6226: CSRF checks missing from import/export plugin upload bounce requests
+	#6229: Subscription end dates are not inclusive
+	#6246: Let iframe use relative URL instead of absolute
+	#6257: Refactor submission file policies
+	#6259: copyrightHolder should be assigned as localized data
+	#6262: Broken catalog page with PostgreSQL
+	#6265: New sample file for Native Import/export
+	#6269: Submission Hyperlink
+	#6276: QuickSubmit Plugin [OJS 3.2.1.1] Keywords in a non-primary locale can’t be deleted
+	#6300: PHP warning with cancelled reviews
+	#6301: Add indexes for search performance
+	#6330: Lens Galley XML views not tracked in usage statistics
 
 3.2.1-1 Build
 -------------

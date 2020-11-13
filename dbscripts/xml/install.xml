@@ -10,7 +10,7 @@
   * Installation descriptor file.
   -->
 
-<install version="3.2.1.1">
+<install version="3.2.1.2">
 	<code function="checkPhpVersion" />
 
 	<code function="createDirectories"/>
