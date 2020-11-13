@@ -29,6 +29,7 @@
 	<locale key="fi_FI" complete="true" name="Suomi" iso639-2b="fin" iso639-3="fin" />
 	<locale key="fr_CA" complete="true" name="Français (Canada)" iso639-2b="fre" iso639-3="fra" />
 	<locale key="fr_FR" complete="false" name="Français (France)" iso639-2b="fre" iso639-3="fra" />
+	<locale key="gd_GB" complete="false" name="Scottish Gaelic" iso639-2b="gla" iso639-3="gla" />
 	<locale key="he_IL" complete="false" name="עברית" iso639-2b="heb" iso639-3="heb" />
 	<locale key="hi_IN" complete="false" name="Hindi" iso639-2b="hin" iso639-3="hin" />
 	<locale key="hu_HU" complete="true" name="Magyar" iso639-2b="hun" iso639-3="hun" />
