@@ -34,8 +34,10 @@
 	<locale key="hi_IN" complete="false" name="Hindi" iso639-2b="hin" iso639-3="hin" />
 	<locale key="hu_HU" complete="true" name="Magyar" iso639-2b="hun" iso639-3="hun" />
 	<locale key="hr_HR" complete="false" name="Hrvatski" iso639-2b="hrv" iso639-3="hrv" />
+	<locale key="hy_AM" complete="false" name="Armenian" iso639-2b="hye" iso639-3="hye" />
 	<locale key="id_ID" complete="true" name="Bahasa Indonesia" iso639-2b="ind" iso639-3="ind" />
 	<locale key="it_IT" complete="true" name="Italiano" iso639-2b="ita" iso639-3="ita" />
+	<locale key="ja_JP" complete="false" name="日本語" iso639-2b="jpn" iso639-3="jpn" />
 	<locale key="mk_MK" complete="false" name="македонски јазик" iso639-2b="mkd" iso639-3="mkd" />
 	<locale key="ko_KR" complete="false" name="한국어" iso639-2b="kor" iso639-3="kor" />
 	<locale key="ku_IQ" complete="true" name="کوردی" iso639-2b="ckb" iso639-3="ckb" direction="rtl" />
@@ -46,6 +48,7 @@
 	<locale key="pt_PT" complete="false" name="Português (Portugal)" iso639-2b="por" iso639-3="por" />
 	<locale key="ro_RO" complete="false" name="Limba Română" iso639-2b="rum" iso639-3="ron" />
 	<locale key="ru_RU" complete="true" name="Русский" iso639-2b="rus" iso639-3="rus" />
+	<locale key="sk_SK" complete="false" name="Slovenčina" iso639-2b="slk" iso639-3="slk" />
 	<locale key="sl_SI" complete="true" name="Slovenščina" iso639-2b="slv" iso639-3="slv" />
 	<locale key="sr_RS@cyrillic" complete="false" name="Cрпски" iso639-2b="srp" iso639-3="srp" />
 	<locale key="sr_RS@latin" complete="false" name="Srpski" iso639-2b="srp" iso639-3="srp" />
