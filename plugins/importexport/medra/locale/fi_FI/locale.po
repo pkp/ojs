@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-21 07:50+0000\n"
+"Last-Translator: Tom Granroth <tom.granroth@tsv.fi>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-medra/fi_FI/>\n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr ""
+"Käytä mEDRAn testi-API:a (testausympäristö) DOI-tunnisteen talletukseen. "
+"Muista poistaa tämä valinta tuotantovaihetta varten."
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Käyttö: \n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys}"
+" objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "mEDRAn automaattinen rekisteröintitehtävä"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Anna kelvollinen teknisen yhteyshekilön sähköpostiosoite."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "Sähköposti"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Anna tekninen yhteyshenkilö."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Yhteyshenkilö"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Instituutio"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Anna mEDRA-käyttäjätunnus. Tunnus ei voi sisältää kaksoispistettä."
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Käyttäjätunnus"
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Määritä mEDRA -vientilisäosa:"

@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-21 07:50+0000\n"
+"Last-Translator: Tom Granroth <tom.granroth@tsv.fi>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/fi_FI/>\n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr ""
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Samankaltaiset artikkelit"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Tämä lisäosa listaa samankaltaiset artikkelit artikkelin abstraktisivulla."
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Suosittele samankaltaisia artikkeleita"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "Aloita samankaltaisten artikkeleiden haku"

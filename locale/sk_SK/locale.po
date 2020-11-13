@@ -1,0 +1,569 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-13 12:51+0000\n"
+"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/locale/sk_SK/"
+">\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "article.submission"
+msgstr "Príspevok"
+
+msgid "article.commentsToEditor"
+msgstr "Komentár autora"
+
+msgid "article.sectionEditor"
+msgstr "ES"
+
+msgid "article.language"
+msgstr "Jazyk"
+
+msgid "article.type"
+msgstr "Typ, metóda alebo prístup"
+
+msgid "article.coverage"
+msgstr "Pokrytie"
+
+msgid "article.subject"
+msgstr "Kľúčové slová"
+
+msgid "article.discipline"
+msgstr "Akademická disciplína a subdisciplíny"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Dopln. súbory"
+
+msgid "article.suppFiles"
+msgstr "Doplnkový/é súbor/y"
+
+msgid "article.suppFile"
+msgstr "Doplnkový súbor"
+
+msgid "article.file"
+msgstr "Súbor"
+
+msgid "article.journalSection"
+msgstr "Sekcia časopisu"
+
+msgid "article.metadata"
+msgstr "Metadáta"
+
+msgid "article.indexingInformation"
+msgstr "Informácie pre indexáciu"
+
+msgid "article.authors"
+msgstr "Autori"
+
+msgid "article.title"
+msgstr "Názov"
+
+msgid "article.submissionId"
+msgstr "ID príspevku"
+
+msgid "common.publications"
+msgstr "Články"
+
+msgid "common.publication"
+msgstr "Článok"
+
+msgid "article.articles"
+msgstr "Články"
+
+msgid "article.article"
+msgstr "Článok"
+
+msgid "section.policy"
+msgstr "Pravidlá sekcie"
+
+msgid "section.abbreviation.example"
+msgstr "(Napríklad články = ČL)"
+
+msgid "section.abbreviation"
+msgstr "Skratka"
+
+msgid "section.title"
+msgstr "Názov sekcie"
+
+msgid "section.sections"
+msgstr "Sekcia časopisu"
+
+msgid "section.section"
+msgstr "Sekcia"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Priradení editori"
+
+msgid "common.queue.short.completed"
+msgstr "Archív"
+
+msgid "common.queue.long.completed"
+msgstr "Archív"
+
+msgid "common.queue.short.active"
+msgstr "Aktívne"
+
+msgid "common.queue.long.active"
+msgstr "Aktívne príspevky"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archívy"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archívy"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "V recenznom konaní"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Príspevky v recenznom konaní"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Editované"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Práve editované príspevky"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Nepridelené"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Nepridelené"
+
+msgid "navigation.skip.issue"
+msgstr "Prejsť na aktuálne vydanie"
+
+msgid "navigation.skip.about"
+msgstr "Prejsť k časopisu"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informácie pre knihovníkov"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informácie pre autorov"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Smernica pre konflikt záujmov"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Pre knihovníkov"
+
+msgid "navigation.infoForAuthors"
+msgstr "Pre autorov"
+
+msgid "navigation.browseByAuthor"
+msgstr "Podľa autora"
+
+msgid "navigation.browseByIssue"
+msgstr "podľa čísla"
+
+msgid "navigation.otherJournals"
+msgstr "Ďalšie časopisy"
+
+msgid "navigation.current"
+msgstr "Aktuálny"
+
+msgid "navigation.journalHelp"
+msgstr "Nápoveda časopisu"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Obrázok domácej stránky časopisu"
+
+msgid "common.homePageHeader.altText"
+msgstr "Hlavička domácej stránky"
+
+msgid "common.payments"
+msgstr "Platby"
+
+msgid "common.payment"
+msgstr "Platba"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Ste si istí, že chcete označiť túto úlohu ako dokončenú? Potom nebudete mať "
+"možnosť vykonať zmeny."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vyplňte prosím požadované položky."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Pre vyplnenie formulára recenzie kliknite na ikonu."
+
+msgid "navigation.categories.browse"
+msgstr "Prechádzať"
+
+msgid "navigation.categories"
+msgstr "Kategória"
+
+msgid "context.select"
+msgstr "Zvoliť iný časopis:"
+
+msgid "context.current"
+msgstr "Aktuálny časopis:"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Je očakávaná on-line platba"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Je očakávaná manuálna platba"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Potrebuje schválenie"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Potrebuje informácie"
+
+msgid "subscriptions.status.active"
+msgstr "Aktívne"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.inactive"
+msgstr "Neaktívne"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Tlač a Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Tlač"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format"
+msgstr "Formát"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Trvalé"
+
+msgid "subscriptionTypes.months"
+msgstr "mesiace"
+
+msgid "subscriptionTypes.month"
+msgstr "mesiac"
+
+msgid "subscriptionTypes.years"
+msgstr "roky"
+
+msgid "subscriptionTypes.year"
+msgstr "rok"
+
+msgid "subscriptionTypes.currency"
+msgstr "Mena"
+
+msgid "issue.return"
+msgstr "Vrátiť sa na podrobnosti čísla"
+
+msgid "issue.viewIssue"
+msgstr "Prezrieť číslo"
+
+msgid "issue.nonpdf.title"
+msgstr "Stiahnutie čísla"
+
+msgid "issue.fullIssue"
+msgstr "Celé číslo"
+
+msgid "issue.coverPage.altText"
+msgstr "Obálka"
+
+msgid "issue.abstract"
+msgstr "Abstrakt"
+
+msgid "issue.toc"
+msgstr "Obsah"
+
+msgid "issue.noIssues"
+msgstr "Žiadne čísla"
+
+msgid "issue.year"
+msgstr "Rok"
+
+msgid "issue.no"
+msgstr "Číslo"
+
+msgid "issue.vol"
+msgstr "Diel"
+
+msgid "issue.number"
+msgstr "Číslo"
+
+msgid "issue.volume"
+msgstr "Ročník"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Náhľad {$identification}"
+
+msgid "issue.title"
+msgstr "Názov"
+
+msgid "issue.issues"
+msgstr "Čísla"
+
+msgid "issue.issue"
+msgstr "Číslo"
+
+msgid "user.role.journalAssistants"
+msgstr "Asistenti časopisu"
+
+msgid "user.role.journalAssistant"
+msgstr "Asistent časopisu"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Manažéri predplatného"
+
+msgid "user.role.subEditors"
+msgstr "Editori sekcií"
+
+msgid "user.role.managers"
+msgstr "Manažéri časopisu"
+
+msgid "user.role.subscriptionManager"
+msgstr "Manažér predplatného"
+
+msgid "user.role.subEditor"
+msgstr "Editor sekcie"
+
+msgid "user.role.manager"
+msgstr "Manažér časopisu"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Registrovať sa ako recenzent: Registrácia recenzentov je aktuálne zakázaná."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Registrovať sa ako recenzent"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Poslať článok: Registrácia autorov je aktuálne zakázaná."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Poslať článok"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Váš účet nemá aktuálne v tomto časopise žiadne role. Prosím, zvoľte si z "
+"akcií nižšie:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Váš účet nie je aktuálne asociovaný so žiadnym časopisom. Prosím, vyberte si "
+"časopis:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Spravovať moje predplatné"
+
+msgid "user.myJournals"
+msgstr "Moje časopisy"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Ak ste uviedli záujem o úlohu recenzenta v akomkoľvek časopise, zadajte "
+"svoje záujmy."
+
+msgid "user.register.otherContextRoles"
+msgstr "Požadovať následujúce role."
+
+msgid "user.register.contextsPrompt"
+msgstr "Ktoré časopisy na tomto webe by ste si chceli zaregistrovať?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Áno, chcem byť kontaktovaný s požiadavkami na recenzie príspevkov do tohto "
+"časopisu."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Áno, požadovať rolu {$userGroup}."
+
+msgid "user.reviewerPrompt"
+msgstr "Boli by ste ochotný/ná recenzovať príspevok do tohto časopisu?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Registrovať sa do ďalších časopisov"
+
+msgid "user.showAllJournals"
+msgstr "Zobraziť moje časopisy"
+
+msgid "user.profile.profileImage"
+msgstr "Profilový obrázok"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Zahrnúť aj používateľov bez rolí v tomto časopise."
+
+msgid "journal.viewAllIssues"
+msgstr "Zobraziť všetky čísla"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Časopis"
+
+msgid "journal.path"
+msgstr "Cesta"
+
+msgid "context.contexts"
+msgstr "Časopisy"
+
+msgid "journal.currentIssue"
+msgstr "Aktuálne číslo"
+
+msgid "submission.search"
+msgstr "Vyhľadať článok"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Po korektúre"
+
+msgid "submissions.layoutComplete"
+msgstr "Po typografickej úprave"
+
+msgid "submissions.copyeditComplete"
+msgstr "Zredigované"
+
+msgid "submission.eventLog"
+msgstr "Log udalostí"
+
+msgid "submissions.editorRuling"
+msgstr "Pravidlá editorovania"
+
+msgid "submissions.editorDecision"
+msgstr "Rozhodnutie editora"
+
+msgid "submissions.proof"
+msgstr "Kontrola"
+
+msgid "submissions.reviewRound"
+msgstr "Kolo recenzie"
+
+msgid "submissions.postAuthor"
+msgstr "Po autorovi"
+
+msgid "submissions.initialProof"
+msgstr "Počiatočná kontrola"
+
+msgid "submissions.proofread"
+msgstr "Korektúra"
+
+msgid "submissions.initial"
+msgstr "Počiatočný"
+
+msgid "submissions.published"
+msgstr "Publikované"
+
+msgid "submissions.queuedReview"
+msgstr "Vo fronte k recenzii"
+
+msgid "submissions.step3"
+msgstr "Krok 3"
+
+msgid "submissions.step1"
+msgstr "Krok 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(Bude oznámené)"
+
+msgid "submission.scheduledIn"
+msgstr "Naplánovaná publikácia v {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Plánovanie"
+
+msgid "submission.proofreading"
+msgstr "Korektúra"
+
+msgid "submission.copyedit"
+msgstr "Redigovanie"
+
+msgid "submission.copyediting"
+msgstr "Redigovanie"
+
+msgid "submission.authorVersion"
+msgstr "Verzia autora"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Autorom revidovaná verzia súboru"
+
+msgid "submission.editorVersion"
+msgstr "Verzia editora"
+
+msgid "submission.postReviewVersion"
+msgstr "Verzia súboru po recenziu"
+
+msgid "submission.reviewersVersion"
+msgstr "Recenzentom okomentované verzie súboru"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Evidencia e-mailov editora / autora"
+
+msgid "submission.notifyEditor"
+msgstr "Informovať editora"
+
+msgid "submission.notifyAuthor"
+msgstr "Informovať autora"
+
+msgid "submission.editorReview"
+msgstr "Posudok editora"
+
+msgid "submission.round"
+msgstr "Kolo&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Rozhodnutie editora"
+
+msgid "submission.sent"
+msgstr "Odoslané"
+
+msgid "submission.changeSection"
+msgstr "Zmeniť na"
+
+msgid "submission.submissionEditing"
+msgstr "Editovanie príspevku"
+
+msgid "article.return"
+msgstr "Návrat na podrobnosti článku"
+
+msgid "article.fontSize.large.altText"
+msgstr "Veľký"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Stredný"
+
+msgid "article.fontSize.small.altText"
+msgstr "Malý"
+
+msgid "article.fontSize"
+msgstr "Veľkosť fontu"
+
+msgid "article.comments.enable"
+msgstr "Povoliť"
+
+msgid "article.comments.disable"
+msgstr "Zakázať"
+
+msgid "article.comments.sectionDefault"
+msgstr "Predvolené"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Obmedzený prístup"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Otvorený prístup"
+
+msgid "article.coverPage.altText"
+msgstr "Obrázok obalu"
+
+msgid "article.abstract"
+msgstr "Abstrakt"
+
+msgid "article.details"
+msgstr "Detaily"
+
+msgid "article.submissions"
+msgstr "Príspevky"

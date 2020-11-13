@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-12 12:28+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 logo"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 logo"
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom logo"
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Vložte prosím celé kladné číslo pre počet posledných noviniek."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "posledné novinky."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Obmedziť oznámenia na"
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Zobraziť odkazy na oznámenie iba na stránke noviniek."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Zobraziť odkazy na oznámenie iba na úvodnej stránke a stránke noviniek."
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Zobraziť odkazy na oznámenia na všetkých stránkach časopisu."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Nastavenie"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Tento plugin vytvára RSS/Atom web syndikáciu noviniek na stránkach časopisu."
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Plugin pre poskytovanie oznámení o novinkách"

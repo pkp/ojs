@@ -1,0 +1,381 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-05 06:39+0000\n"
+"Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
+"Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/author/gd_GB/"
+">\n"
+"Language: gd_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Beurla=en; Fraingis=fr; Spàinntis=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Còdaichean a bharrachd</a>."
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Briog an-seo</a> a thòiseachadh "
+"air ceum a h-aon (à còig) de chur an tagraidh."
+
+msgid "author.competingInterests"
+msgstr ""
+"<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}"
+"\">Poileasaidh CI</a> a thaibh còmhstri ùidhean"
+
+msgid "author.submit"
+msgstr "Tagradh ùr"
+
+msgid "author.track"
+msgstr "Tagraidhean gnìomhach"
+
+msgid "author.submit.submitArticle"
+msgstr "Cuir artaigeal"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Còig ceuman airson an tagradh a chur"
+
+msgid "author.submit.startHereTitle"
+msgstr "Tòisich air tagradh ùr"
+
+msgid "author.submit.step1"
+msgstr "Ceum 1. A’ tòiseachadh air an tagradh"
+
+msgid "author.submit.step2"
+msgstr "Ceum 2. A’ luchdadh suas an tagraidh"
+
+msgid "author.submit.step3"
+msgstr "Ceum 3. A’ cur a-steach meata-dàta an tagraidh"
+
+msgid "author.submit.step4"
+msgstr "Ceum 4. A’ luchdadh suas nam faidhlichean foirlionaidh"
+
+msgid "author.submit.step4a"
+msgstr "Ceum 4a. Cuir faidhle foirlionaidh ris"
+
+msgid "author.submit.step5"
+msgstr "Ceum 5. A’ dearbhadh an tagraidh"
+
+msgid "author.submit.start"
+msgstr "Tòisich"
+
+msgid "author.submit.upload"
+msgstr "Luchdaich an tagradh suas"
+
+msgid "author.submit.metadata"
+msgstr "Cuir a-steach meata-dàta"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Luchdaich suas faidhlichean foirlionaidh"
+
+msgid "author.submit.confirmation"
+msgstr "Dearbhadh"
+
+msgid "author.submit.nextSteps"
+msgstr "Na h-ath cheuman"
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"’S urrainn dhut an tagradh seo a choileanadh uaireigin eile le bhith a’ "
+"taghadh “Tagraidhean gnìomhach” o dhachaigh an ùghdair."
+
+msgid "author.submit.notAccepting"
+msgstr "Chan eil an iris seo a’ gabhail ri tagraidhean aig an àm seo."
+
+msgid "author.submit.requestWaiver"
+msgstr "Iarr cur gu neoini na tàille"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr ""
+"Tha sinn ag iarraidh gun cuirear an tàille airson an artaigil seo gu neoini"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Mìnich sa bhogsa gu h-ìosal carson a chuirte an tàille gu neoini."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Ma tha thu ag iarraidh gun tèid an tàille a chur gu neoini, feumaidh tu "
+"adhbhar a thoirt seachad san raon air a shon."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Sa cuairt lèirmheis {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Fo lèirmheas: Tha feum air ath-dheasachadh"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Fo dheasachadh: Chaidh grinn-deasachadh iarraidh"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Fo dheasachadh: Chaidh dearbh-leughadh iarraidh"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Luchdaich suas tionndadh grinn-deasaichte"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Ceartachaidhean an dearbh-leughaidh"
+
+msgid "author.submissions.confirmDelete"
+msgstr ""
+"A bheil thu cinnteach gu bheil thu airson tagradh neo-choileanta seo a "
+"sguabadh às?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Seall an staid"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Chan eil tagradh ann."
+
+msgid "author.submit.journalSection"
+msgstr "Earrann na h-irise"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Feumar artaigealan a chur a-null gu aon dhe na h-earrannan aig an iris."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Feumaidh tu dèanamh cinnteach gun do dhèilig thu ri gach rud air liosta an "
+"tagraidh mus lean thu air adhart."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"Tha na h-ùghdaran a’ gabhail ri teirmichean brath na còrach-lethbhreac seo "
+"agus bidh buaidh aca air an tagradh seo ma thèid fhoillseachadh leis an iris "
+"seo (’s urrainn dhut beachdan dhan deasaiche a chur ris gu h-ìosal)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Feumaidh tu gabhail ri brath na còrach-lethbhreac mus lean thu air adhart."
+
+msgid "submission.submit.coverNote"
+msgstr "Beachdan dhan deasaiche"
+
+msgid "author.submit.comments"
+msgstr "Cuir teacsa a-steach (roghainneil)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Tagh earrann iomchaidh dhen iris airson an tagraidh seo."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Tagh cànan an tagraidh."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Aithris prìobhaideachd na h-irise"
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Cuir na h-ùghdaran air dòigh san òrdugh anns an nochd iad sa fhoillseachadh."
+
+msgid "author.submit.reorder"
+msgstr "Atharraich òrdugh ainm nan ùghdar"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Am prìomh neach-conaltraidh airson conaltradh deasachaidh."
+
+msgid "author.submit.addAuthor"
+msgstr "Cuir ùghdar ris"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Sguab an t-ùghdar às"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Thoir seachad teirmichean airson inneacsadh an tagraidh; cuir leth-chòilean "
+"eadar na teirmichean (teirm1; teirm2; teirm3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Tha seo a’ buntainn ri ionad geò-spàsail, sìneadh ama no eachdraidheil agus/"
+"no na feartan aig a’ bhall-sampaill rannsachaidh."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Tha feum air co-dhiù aon ùghdar."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Tha ainm, sloinneadh is post-d gach ùghdar riatanach."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Cuir a-steach tiotal an artaigil seo."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Cuir a-steach geàrr-chunntas an artaigil agad."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"Tha thu seachad air a’ chunntas fhaclan a tha ceadaichte airson geàrr-"
+"chunntasan ann an traca na h-earrainn seo."
+
+msgid "author.submit.submissionFile"
+msgstr "Faidhle tagraidh"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Luchdaich suas faidhle tagraidh"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Cuir an àite an fhaidhle tagraidh"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Cha deach faidhle tagraidh a luchdadh suas."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr ""
+"A bheil thu cinnteach gu bheil thu airson leantainn air adhart gun a bhith "
+"faidhle tagraidh a luchdadh suas?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Bheir an ceum roghainneil seo comas do dhaoine faidhlichean foirlionaidh a "
+"chur ri tagradh. Dh’fhaoidte gum bi na leanas sna faidhlichean (a dh’"
+"fhaodadh a bhith ann am fòrmat sam bith): (a) ionnsramaidean rannsachaidh, "
+"(b) seataichean dàta a ghèilleas ri teirmichean lèirmheas beusalachd an "
+"rannsachaidh seo, (c) tùsan nach biodh ri làimh leughadairean air dòigh "
+"eile, (d) àireamhan is clàran nach gabh amalachadh san teacsa fhèin no "
+"stuthan eile a chuireas ris an obair."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Briog air “Sàbhail” airson am faidhle a luchdadh suas (gabhaidh faidhlichean "
+"a bharrachd a luchdadh suas an dèidh sin)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"A bheil thu cinnteach gu bheil thu airson leantainn air adhart gun a bhith a’"
+" luchdadh suas an fhaidhle fhoirlionaidh a thagh thu?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Cha deach faidhle foirlionaidh sam bith a chur ris an tagradh seo."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Air ais chun nam faidhlichean foirlionaidh"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr ""
+"A bheil thu cinnteach gu bheil thu airson am faidhle foirlionaidh seo a "
+"sguabadh às?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Luchdaich suas faidhle foirlionaidh"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Cuir faidhle foirlionaidh ris"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Deasaich faidhle foirlionaidh"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Meata-dàta an fhaidhle fhoirlionaidh"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Airson na stuthan foirlionaidh seo inneacsadh, thoir seachad am meata-dàta a "
+"leanas airson an fhaidhle fhoirlionaidh a luchdaich thu suas."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Faidhle foirlionaidh"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Cruthadair (no sealbhadair) an fhaidhle"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Ionnsramaid rannsachaidh"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Stuthan rannsachaidh"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Toraidhean rannsachaidh"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Tar-sgrìobhaidhean"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Anailis dàta"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Seata dàta"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Teacsa tùsail"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Tuairisgeul goirid"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Taisbean am faidhle dhan luchd-lèirmheis (as aonais meata-dàta), oir cha "
+"bhris e an lèirmheas dall."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr ""
+"Na cleachd seo ach mu choinneamh stuthan a chaidh fhoillseachadh gu foirmeil."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr ""
+"Cuin a chaidh an dàta a chruinneachadh no an ionnsramaid a chruthachadh."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Ainm an rannsachaidh no tùs eile."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Sònraich rud eile"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Cha deach faidhle a luchdadh suas."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Cuir a-steach tiotal an fhaidhle fhoirlionaidh seo."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Cuir a-steach cuspair."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Cuir a-steach tuairisgeul."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr ""
+"Tha an t-aithnichear poblach seo aig faidhle foirlionaidh eile mu thràth."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Aithnichear poblach an fhaidhle fhoirlionaidh"
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"Airson an sgrìobhainn agad a chur gu {$journalTitle}, briog air “Coilean cur "
+"an tagraidh”. Gheibh prìomh neach-conaltraidh an tagraidh agad fios air a’ "
+"phost-d gun d’fhuair sinn e agus chì iad adhartas an tagraidh tron phròiseas "
+"deasachaidh ma chlàraicheas iad a-steach air làrach-lìn na h-irise. Tapadh "
+"leat airson ùidh a ghabhail ann am foillseachadh san iris {$journalTitle}."
+
+msgid "author.submit.noFiles"
+msgstr "Cha deach faidhle sam bith a cheangal ris an tagradh."
+
+msgid "author.submit.filesSummary"
+msgstr "Geàrr-chunntas air an fhaidhle"
+
+msgid "author.submit.finishSubmission"
+msgstr "Coilean cur an tagraidh"
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Chaidh an tagradh a chur. Tapadh leat airson ùidh a ghabhail ann am "
+"foillseachadh san iris {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Luchdaich suas tionndadh an ùghdair"
+
+msgid "author.article.copyeditedFile"
+msgstr "Faidhle grinn-deasaichte"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Faidhle an ùghdair"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Tha feum air cunntas cleachdaiche mus gabh artaigeal a chur chun na h-irise "
+"seo. Bheir seo comas dha na deasaichean againn an tagradh agad a thracadh "
+"agus fios a chur thugad ma thig atharrachadh air inbhe an tagraidh agad no "
+"ma bhios feum air barrachd fiosrachaidh."

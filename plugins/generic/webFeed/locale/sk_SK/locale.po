@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-12 13:01+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-webFeed/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "RSS2 logo"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "RSS1 logo"
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Atom logo"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Vložte prosím celé kladné číslo pre počet posledných vydaných položiek."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Počet položiek na zobrazenie"
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Zobrazovať pevný počet najnovších položiek."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Položky v aktuálnom publikovanom čísle."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Zobraziť odkazy na feed na všetkých stránkach časopisu."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "Zobraziť odkazy na feed iba na domácej stránke a na stránkach čísla."
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Zobraziť odkazy na feed iba na stránkach čísla."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Nastavenie"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Tento plugin vytvára RSS/Atom web syndication feedy pre aktuálne číslo."
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Plugin Web Feed"

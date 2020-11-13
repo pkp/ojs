@@ -1,0 +1,2536 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-13 12:51+0000\n"
+"Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
+"Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/locale/gd_GB/"
+">\n"
+"Language: gd_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "notification.type.galleyModified"
+msgstr "Chaidh mòr-dhuilleag airson “{$title}” atharrachadh."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Brathan còir-lethbhreac Creative Commons a tha gam moladh</h3>\n"
+"<h4>1. Am poileasaidh a thathar a’ moladh airson iris-leabhraichean ris a "
+"bheil inntrigeadh fosgailte</h4>\n"
+"Tha ùghdaran a tha airson rud fhoillseachadh san iris-leabhar seo ag "
+"aontachadh ris na teirmichean a leanas:\n"
+"<ol type=\"a\">\n"
+"\t<li>Glèidhidh na h-ùghdaran a’ chòir-lethbhreac aca agus tha iad a’ toirt "
+"cead ciad fhoillseachadh dhan iris-leabhar agus a’ cur na h-obrach fo <a "
+"target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">"
+"cheadachas aithrisidh Creative Commons</a> ag aon aon àm a bheir cead do "
+"dhaoine eile an obair a cho-roinneadh fhad ’s a nì iad aithris air ùghdar na "
+"h-obrach agus a chiad fhoillseachadh san iris-leabhar seo.\n"
+"</li>\n"
+"\t<li>Faodaidh ùghdaran cùmhnantan fa leth eile a dhèanamh airson sgaoileadh "
+"neo-às-dùnach de thionndadh na h-obrach a dh’fhoillsich an t-iris-leabhar ("
+"m.e. airson a phostadh ann an ionad-tasgaidh buidhinn no fhoillseachadh ann "
+"an leabhar) fhad ’s a nithear aithris air ciad fhoillseachadh na h-obrach "
+"san iris-leabhar seo.\n"
+"</li>\n"
+"\t<li>Tha cead aig ùghdaran an cuid obrach a phostadh air loidhne (m.e. ann "
+"an ionadan-tasgaidh institiuidean no air an làrach-lìn aca) agus thathar a’ "
+"brosnachadh seo ro agus rè pròiseas an tagraidh oir faodaidh seo eadar-"
+"ghabhail thairbheach a bhrosnachadh agus iomradh nas tràithe agus nas pailte "
+"dhen obair fhoillsichte (Faic <a target=\"_new\" href=\"http://opcit.eprints."
+"org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Am poileasaidh a thathar a’ moladh airson iris-leabhraichean ris a "
+"bheil inntrigeadh fosgailte le dàil</h4>\n"
+"Tha ùghdaran a tha airson rud fhoillseachadh san iris-leabhar seo ag "
+"aontachadh ris na teirmichean a leanas:\n"
+"<ol type=\"a\">\n"
+"\t<li>Glèidhidh na h-ùghdaran a’ chòir-lethbhreac aca agus tha iad a’ toirt "
+"cead ciad fhoillseachadh dhan iris-leabhar agus a’ cur na h-obrach [SÒNRAICH "
+"ÙINE] an dèidh foillseachaidh fo <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">cheadachas aithrisidh Creative "
+"Commons</a> ag aon aon àm a bheir cead do dhaoine eile an obair a cho-"
+"roinneadh fhad ’s a nì iad aithris air ùghdar na h-obrach agus a chiad "
+"fhoillseachadh san iris-leabhar seo.\n"
+"</li>\n"
+"\t <li>Faodaidh ùghdaran cùmhnantan fa leth eile a dhèanamh airson "
+"sgaoileadh neo-às-dùnach de thionndadh na h-obrach a dh’fhoillsich an t-iris-"
+"leabhar (m.e. airson a phostadh ann an ionad-tasgaidh buidhinn no "
+"fhoillseachadh ann an leabhar) fhad ’s a nithear aithris air ciad "
+"fhoillseachadh na h-obrach san iris-leabhar seo.\n"
+"</li>\n"
+"\t <li>Tha cead aig ùghdaran an cuid obrach a phostadh air loidhne (m.e. ann "
+"an ionadan-tasgaidh institiuidean no air an làrach-lìn aca) agus thathar a’ "
+"brosnachadh seo ro agus rè pròiseas an tagraidh oir faodaidh seo eadar-"
+"ghabhail thairbheach a bhrosnachadh agus iomradh nas tràithe agus nas pailte "
+"dhen obair fhoillsichte (Faic <a target=\"_new\" href=\"http://opcit.eprints."
+"org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Thoir an t-aonta air falbh on ghailearaidh seo.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Thoir aonta foillseachaidh dhan ghailearaidh seo.</p>"
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Tha tionndadh ùr de OJS ri fhaighinn! ’S e tionndadh {$currentVersion} de "
+"OJS a tha agad an-dràsta. ’S e {$latestVersion} an tionndadh as ùire de OJS. "
+"Cuir fios gu rianaire na làraich agad, ({$siteAdminName}, <a href=\""
+"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) is innis dhaibh gu bheil "
+"tionndadh ùr ga sgaoileadh. Gheibh thu barrachd fiosrachaidh <a href=\""
+"http://pkp.sfu.ca/ojs_download\" target=\"_new\">an-seo</a>."
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Tha tionndadh ùr de OJS ri fhaighinn! ’S e tionndadh {$currentVersion} de "
+"OJS a tha agad an-dràsta. ’S e {$latestVersion} an tionndadh as ùire de OJS. "
+"Tadhail air <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">an "
+"duilleag seo</a> a luchdadh a-nuas an tionndaidh as ùire agus airson "
+"stiùireadh mun àrdachadh."
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Chaidh tionndadh {$version} de OJS a stàladh.</p>\n"
+"<p>Na dìochuimhnich an roghainn “stàlaichte” a chur gu <em>Air</em> a-"
+"rithist san fhaidhle rèiteachaidh config.inc.php agad.</p>\n"
+"<p>Mur eil thu air clàradh agus ma tha thu ag iarraidh naidheachdan is "
+"ùrachaidhean fhaighinn, <strong>dèan clàradh aig<a href=\"http://pkp.sfu.ca/"
+"ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> "
+"Ma tha ceistean no beachdan agad mu dhèidhinn, tadhail air an <a href=\""
+"http://forum.pkp.sfu.ca\" target=\"_new\">fhòram taice</a>.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Chaidh OJS a stàladh.</p>\n"
+"<p>Airson tòiseachadh leis an t-siostam, <a href=\"{$loginUrl}\">clàraich "
+"a-steach</a> leis an ainm-chleachdaiche is facal-faire a chuir thu a-steach "
+"air an duilleag roimhpe.</p>\n"
+"<p>Ma tha thu airson pàirt a ghabhail ann an coimhearsnachd PKP,</p>\n"
+"<ol>\n"
+"\t<li>Leugh <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">bloga PKP</a> "
+"agus lean ris an <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">"
+"inbhir RSS</a> airson naidheachd is ùrachaidhean.\n"
+"</li>\n"
+"\t<li>Tadhail air an <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">"
+"fhòram taice</a> ma tha ceist no beachd sam bith agad.</li>\n"
+"</ol>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>CUDROMACH!</h4>\n"
+"<p>Cha b’ urrainn dhan stàlaichear sgrìobhadh thairis air an fhaidhle "
+"rèiteachaidh.\n"
+"Mus cleachd thu an siostam, fosgail <tt>config.inc.php</tt> ann an deasaiche "
+"teacsa iomchaidh agus cuir na tha san raon teacsa gu h-ìosal an àite na "
+"susbaint ann.</p>"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Rabhadh:</strong> Ma dh’fhàilligeas an stàladh letheach slighe tro "
+"stàladh an stòir-dhàta, dh’fhaoidte gum bi agad ris an stòr-dàta OJS no "
+"clàran an stòir-dhàta a sguabadh às mus nì thu oidhirp eile air an stòr-dàta "
+"a stàladh."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Cuir a-steach ainm slàn na slighe gu pasgan làithreach far an tèid na "
+"faidhlichean a chumail a thèid a luchdadh suas. Cha bu chòir dha a bhith na "
+"phasgan a ruigear calg-dhìreach on lìon. <strong>Dèan cinnteach gu bheil am "
+"pasgan seo ann agus gun gabh sgrìobhadh ann mus tòisich thu air an "
+"stàladh.</strong> Bu chòir do shlaisichean air adhart a bhith ann an ainmean "
+"slighean Windows, m.e. \"C:/myjournal/faidhlichean\"."
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Tha am frithealaiche agad a’ ceadachadh luchdadh suas de dh’fhaidhlichean "
+"suas chun a’ mheud a leanas aig an àm seo: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Tha am frithealaiche agad a’ ceadachadh luchdadh suas de dh’fhaidhlichean "
+"aig an àm seo: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Airson làn-taic Unicode (UTF-8), tagh UTF-8 airson gach roghainn a thaobh "
+"nan seataichean charactaran.\n"
+"Thoir an aire gum bi agad ri PHP a thrusadh le taic airson leabhar-lann <a "
+"href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> (rud a "
+"bhios an comas a ghnàth anns gach stàladh PHP o chionn greis).\n"
+"Dh’fhaoidte gum bi duilgheadasas agad le seataichean charactaran sònraichte "
+"mur eil am frithealaiche agad a’ coileanadh nan riatanasan seo.\n"
+"<br /><br />\n"
+"Tha taic aig an fhrithealaiche agad ri mbstring: "
+"<strong>{$supportsMBString}</strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>Tionndadh OJS {$version}</h4>\n"
+"\n"
+"<p>Mòran taing airson <strong>Open Journal Systems</strong> aig a’ Public "
+"Knowledge Project a luchdadh a-nuas.\n"
+"Mus lean thu air adhart, leugh na faidhlichean <a href=\"{$baseUrl}/docs/"
+"README.md\">README</a> agus <a href=\"{$baseUrl}/docs/UPGRADE.md\""
+">UPGRADE</a> a tha gan gabhail a-staigh leis a’ bhathar-bhog seo.\n"
+"Airson barrachd fiosrachaidh mun Public Knowledge Project agus na "
+"pròiseactan bathair-bhog aca, tadhail air <a href=\"http://pkp.sfu.ca/\" "
+"target=\"_blank\">làrach-lìn PKP</a>.\n"
+"Ma tha thu airson aithris a dhèanamh aig buga no ma tha ceist agad mu Open "
+"Journal Systems, faic am <a href=\"http://forum.pkp.sfu.ca\" target=\""
+"_blank\">fòram taice</a> no tadhail air an t-siostam aig PKP airson <a href="
+"\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">aithris a "
+"dhèanamh aig bugaichean</a>.\n"
+"Ge b’ fheàrr leinn cluinntinn o dhaoine slighe an fhòraim, ’s urrainn dhut "
+"post-d a chur chun an sgioba cuideachd aig <a href=\""
+"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p><strong>Mholamaid dhut gu mòr</strong> gun dèan thu lethbhreac-glèidhidh "
+"dhen stòr-dàta, pasgan nam faidhlichean agus pasgan stàladh OJS agad mus "
+"lean thu air adhart.</p>\n"
+"<p>Ma tha thu a’ ruith <a href=\"http://www.php.net/features.safe-mode\" "
+"target=\"_blank\">sa mhodh sàbhailte PHP</a>, dèan cinnteach gu bheil crìoch "
+"àrd aig steòrnadh max_execution_time san fhaidhle rèiteachaidh php.ini agad."
+"\n"
+"Ma ruigear a’ chrìoch-ama seo no tè sam bith eile (m.e. an steòrnadh "
+"“Timeout” aig Apache) agus ma bhriseas sin a-steach air an àrdachadh, bidh "
+"agad ris a chur ceart de làimh.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Ceuman ron stàladh</h4>\n"
+"\n"
+"\n"
+"<p>1. Feumaidh tu na faidhlichean is pasganan a leans (agus an t-susbaint "
+"annta) a dhèanamh so-sgrìobhte:</p>\n"
+"<ul>\n"
+"\t<li>Tha <tt>config.inc.php</tt> so-sgrìobhte (roghainneil):\n"
+"{$writable_config}\n"
+"</li>\n"
+"\t<li>Tha <tt>public/</tt> so-sgrìobhte:\n"
+"{$writable_public}\n"
+"</li>\n"
+"\t<li>Tha <tt>cache/</tt> so-sgrìobhte:\n"
+"{$writable_cache}\n"
+"</li>\n"
+"\t<li>Tha <tt>cache/t_cache/</tt> so-sgrìobhte:\n"
+"{$writable_templates_cache}\n"
+"</li>\n"
+"\t<li>Tha <tt>cache/t_compile/</tt> so-sgrìobhte:\n"
+"{$writable_templates_compile}\n"
+"</li>\n"
+"\t<li>Tha <tt>cache/_db</tt> so-sgrìobhte:\n"
+"{$writable_db_cache}\n"
+"</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Feumaidh tu pasgan a chruthachadh far an cumar na faidhlichean a thèid "
+"a luchdadh suas agus feumaidh e a bhith so-sgrìobhte (faic “Roghainnean "
+"faidhle” gu h-ìosal.</p>"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>Tionndadh OJS {$version}</h4>\n"
+"\n"
+"<p>Mòran taing airson <strong>Open Journal Systems</strong> aig a’ Public "
+"Knowledge Project a luchdadh a-nuas.\n"
+"Mus lean thu air adhart, leugh am faidhle <a href=\"{$baseUrl}/docs/README."
+"md\">README</a> a tha ga ghabhail a-staigh leis a’ bhathar-bhog seo.\n"
+"Airson barrachd fiosrachaidh mun Public Knowledge Project agus na "
+"pròiseactan bathair-bhog aca, tadhail air <a href=\"http://pkp.sfu.ca/\" "
+"target=\"_blank\">làrach-lìn PKP</a>.\n"
+"Ma tha thu airson aithris a dhèanamh aig buga no ma tha ceist agad mu Open "
+"Journal Systems, faic am <a href=\"http://forum.pkp.sfu.ca\" target=\""
+"_blank\">fòram taice</a> no tadhail air an t-siostam aig PKP airson <a href="
+"\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">aithris a "
+"dhèanamh aig bugaichean</a>.\n"
+"Ge b’ fheàrr leinn cluinntinn o dhaoine slighe an fhòraim, ’s urrainn dhut "
+"post-d a chur chun an sgioba cuideachd <a href=\"mailto:pkp.contact@gmail."
+"com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Àrdachadh</h4>\n"
+"\n"
+"<p>Ma tha thu ag àrdachadh stàladh làithreach de OJS, <a href=\"{$upgradeUrl}"
+"\">briog an-seo</a> a leantainn air adhart.</p>\n"
+"\n"
+"<h4>Riatanasan an t-siostaim a mholamaid</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; ’s e PHP {$phpVersion}{$wrongPhpText} a tha agad an-"
+"dràsta\n"
+"</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"no <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >="
+" 9.1.5\n"
+"</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x no >= 2.0.4x no Microsoft IIS 6\n"
+"</li>\n"
+"\t<li>Siostam-obrachaidh:\n"
+"OS sam bith a chuireas taic ris a’ bhathar-bhog gu h-àrd, a’ gabhail a-"
+"staigh <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a "
+"href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\""
+"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\""
+"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\""
+"http://www.microsoft.com/\">Windows</a>\n"
+"</li>\n"
+"</ul>\n"
+"\n"
+"<p>Leis nach eil de mhaoineachadh aig PKP gach co-measgachadh de bhathar-bog "
+"agus ùrlar a chur fo dheuchainn, chan urrainn dhuinn barantas sam bith a "
+"thoirt gun obraich e mar bu chòir no gum bi taic airson gach co-"
+"measgachadh.</p>\n"
+"\n"
+"<p>Gabhaidh na roghainnean seo a chur air gleus an dèidh an stàlaidh le "
+"bhith a’ deasachadh an fhaidhle <tt>config.inc.php</tt> sa bhun-phasgan OJS "
+"no slighe eadar-aghaidh lìn airson rianachd na làraich.</p>\n"
+"\n"
+"<h4>Siostam stòr-dàta ris a bheil taic</h4>\n"
+"\n"
+"<p>Cha deach OJS a chur fo dheuchainn gu ruige seo ach air MySQL agus "
+"PostgreSQL, ach dh’fhaoidte gun obraich siostam stiùireadh stòr-dàta eile ma "
+"tha taic <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\""
+">ADOdb</a> riutha (gu ìre no gu tur).\n"
+"Faodar aithisgean air co-chòrdalachd agus/no brèidean còd airson DBMS eile a "
+"chur gu sgioba OJS.</p>\n"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Tha an làrach seo a’ cleachdadh Open Journal Systems {$ojsVersion}, bathar-"
+"bog le còd fosgailte airson stiùireadh iris-leabhraichean is foillseachadh, "
+"le taic a’ <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> agus "
+"ga sgaoileadh gu saor fo cheadachas coitcheann poblach GNU."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Tha an t-iris-leabhar seo a’ cleachdadh Open Journal Systems {$ojsVersion}, "
+"bathar-bog le còd fosgailte airson stiùireadh iris-leabhraichean is "
+"foillseachadh, le taic a’ <a href=\"http://pkp.sfu.ca/\">Public Knowledge "
+"Project</a> agus ga sgaoileadh gu saor fo cheadachas coitcheann poblach GNU."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Dèan tagradh ùr dhan earrann <a href=\"{$url}\">{$name}</a>."
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Thèid am faidhle a thagh thu a luchdadh a-nuas gu fèin-obrachail a ghnàth. "
+"Mur an dèan e sin, briog air a’ cheangal gu h-ìosal. Thoir an aire gum feum "
+"thu prògram no plugan sònraichte mus fhaic thu am faidhle seo ma "
+"dh’fhaoidte.<br /><br />Mur an tèid am faidhle a luchdadh a-nuas gu fèin-"
+"obrachail, <a href=\"{$url}\">briog an-seo</a>."
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Thèid am faidhle PDF agad a luchdadh an-seo fhèin mar is trice ma tha "
+"plugan leughadair PDF aig a’ bhrabhsair-lìn agad (mar eisimpleir, tionndadh "
+"ùr de <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat "
+"Reader</a>).</p>"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Gliocasan luirg:<ul>\n"
+"<li>Chan eil aire do litrichean mòra ’s beaga ann am faclan-luirg\n"
+"</li>\n"
+"<li>Thèid faclan cumanta a leigeil seachad\n"
+"</li>\n"
+"<li>A ghnàth, cha tèid ach artaigealan a thilleadh a tha <em>gach</em> facal-"
+"luirg sa cheist aca (sin e, thathar a’ tuigsinn dheth gu bheil <em>AND</em> "
+"eatarra)\n"
+"</li>\n"
+"<li>Dèan lorg le iomadh facal le <em>OR</em> eatarra airson artaigealan anns "
+"a bheil co-dhiù aonan dhiubh; m.e. <em>foghlam OR rannsachadh</em>\n"
+"</li>\n"
+"<li>Cleachd eadar-ràdhan airson ceistean nas toinnte a chruthachadh; m.e. <em"
+">tasg-lann ((iris-leabhar OR co-labhairt) NOT teusas)</em>\n"
+"</li>\n"
+"<li>Lorg abairt phongail le bhith ga chur eadar comharran-labhairt; m.e. <em>"
+"\"foillseachadh le inntrigeadh fosgailte\"</em>\n"
+"</li>\n"
+"<li>Dùin facal às le bhith a’ cur <strong>-</strong> no <em>NOT</em> air a "
+"bheulaibh; m.e. <em>air loidhne -poileataigs</em> no <em>air loidhne NOT "
+"poileataigs</em>\n"
+"</li>\n"
+"<li>Cleachd <strong>*</strong> ann am facal mar shaorag a ghabhas àite "
+"sreath charactaran sam bith; m.e. <em>moraltachd sòis*</em> airson "
+"sgrìobhainnean anns a bheil “sòiseo-eòlach” no “sòisealtais” a’ nochdadh</li>"
+"\n"
+"</ul>"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ma chuirear rainsean IP a-steach an-seo, cha leigear a leas àrainn a chur "
+"a-steach.<br />Tha luachan dligheach a’ gabhail a-staigh seòlaidhean IP ("
+"m.e. 142.58.103.1), rainse IP (m.e. 142.58.103.1 - 142.58.103.4), rainse IP "
+"le saorag “*” (m.e. 142.58.*.*) agus rainse IP le CIDR (m.e. 142.58.100.0/"
+"24)."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Ma chuirear rainsean IP a-steach an-seo, cha leigear a leas àrainn a chur "
+"a-steach.<br />Tha ainmean àrainnean nan luachan dligheach (m.e. gla.ac.uk)."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Tha, tha mi ag aontachadh gun tèid an dàta agam a chruinneachadh is a "
+"stòradh a rèir <a href=\"{$privacyUrl}\" target=\"_blank\">aithris "
+"prìobhaideachd</a> an iris-leabhair seo."
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Gabhaidh na beachdan seo a cho-roinneadh leis an ùghdar.<br />\n"
+"(’S urrainn dhut barrachd bheachdan a chur ris an dèidh dhut a shàbhaladh "
+"cuideachd.)"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Airson sgrìobhainn a luchdadh suas dhan iris-leabhar seo, lean ris na "
+"ceuman a leanas.</p>\n"
+"<ol>\n"
+"<li>Air an duilleag seo, briog air “Brabhsaich” (no “Tagh faidhle”) a dh’"
+"fhosglas uinneag airson faidhle a thaghadh air clàr-cruaidh a’ choimpiutair "
+"agad.\n"
+"</li>\n"
+"<li>Faigh grèim air an fhaidhle a tha thu airson cur thugainn agus "
+"comharraich e.\n"
+"</li>\n"
+"<li>Briog air “Fosgail” san uinneag “Tagh faidhle” agus cuiridh sinn ainm an "
+"fhaidhle dhan duilleag seo.\n"
+"</li>\n"
+"<li>Briog air “Luchdaich suas” air an duilleag seo agus luchdaichidh sin "
+"suas am faidhle on choimpiutair gu làrach-lìn an iris-leabhair agus thèid "
+"ainm ùr a thoirt air an fhaidhle a rèir gnàthasan an iris-leabhair.\n"
+"</li>\n"
+"<li>Turas a chaidh an tagradh a luchdadh suas, briog air “Sàbhail agus lean "
+"air adhart” aig bonn na duilleige seo.</li>\n"
+"</ol>"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Cuir an cèill a bhail còmhstri ùidhean agad a thaobh an rannsachaidh seo ("
+"faic <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">poileasaidh na còmhstri ùidhean</a>)."
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Aithreachasan ⁊ na sguir an lèirmheasaiche dheth"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} aithreachasan an lèirmheasaiche, na sguir iad dheth ⁊ "
+"cuairtean roimhe seo"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Ma tha nì air a shoillseachadh, tha sin ag innse gum feum deasaiche "
+"rudeigin a dhèanamh agus seo na leubailean:\n"
+"<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Tha rud ri dhèanamh ann an ceum a’ "
+"ghrinn-deasachaidh\n"
+"</li>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Tha rud ri dhèanamh ann an ceum na "
+"co-dhealbhachd\n"
+"</li>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Tha rud ri dhèanamh ann an ceum an "
+"dearbh-leughaidh</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Ma tha nì air a shoillseachadh, tha sin ag innse gum feum deasaiche "
+"rudeigin a dhèanamh agus seo na leubailean:\n"
+"<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Chaidh lèirmheasaiche "
+"iomruineadh ach cha deach fios a chur aca air a’ phost-d\n"
+"</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Thill gach lèirmheasaiche na "
+"beachdan aca ach cha deach co-dhùnadh a chlàradh\n"
+"</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Luchdaich an t-ùghdar suas "
+"sgrìobhainn lèirmheasaichte\n"
+"</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Tha an "
+"lèirmheasaiche fadalach le dearbhadh a’ chuiridh gu lèirmheas seise\n"
+"</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Tha an lèirmheasaiche "
+"fadalach le coileanadh an lèirmheis\n"
+"</li>\n"
+"\t\t</ul>\n"
+"</li>\n"
+"\t<li>Thèid an raon “Ri lìbhrigeadh” a lìonadh nuair a ghabhas an "
+"lèirmheasaiche ris an iarrtas airson lèirmheas; seallaidh e co mheud "
+"seachdain a tha air fhàgail gu ceann-là lìbhrigeadh an lèirmheis no (-) co "
+"mheud seachdain ’s a tha e fadalach.</li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Tha sinn duilich ach chan eil còraichean rianachd agad mu choinneamh a’ "
+"chleachdaiche seo.\n"
+"Dh’fhaoidte nach eil a chionn ’s:\n"
+"<ul>\n"
+"\t\t\t<li>gu bheil an cleachdaiche na rianaire làraich\n"
+"</li>\n"
+"\t\t\t<li>gu bheil an cleachdaiche gnìomhach ann an iris-leabhraichean nach "
+"eil fo do stiùireadh-sa\n"
+"</li>\n"
+"\t\t</ul>\n"
+"\tgum bi aig rianaire làraich an t-saothair seo a choileanadh.\n"
+"\t"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Airson ’s gun urrainn do leughadairean tionndaidhean air loidhne dhe na h-"
+"obrachaidhean air a bheil ùghdar ag iomradh, tha na roghainnean a leanas ri "
+"làimh.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Cuir inneal leughaidh ris</strong><p>’S urrainn do mhanaidsear "
+"nan iris-leabhraichean “Lorg reifreansan” a chur ris na h-innealan leughaidh "
+"a gheibhear an cois nithean foillsichte agus bheir seo comas do "
+"leughadairean an tiotal aig reifreans a chur a-steach agus lorg a dhèanamh "
+"ann an stòir-dhàta sgoilearach ro-shocraichte.</p>\n"
+"</li>\n"
+"\t<li><strong>Leabaich ceanglaichean sna reifreansan</strong><p>’S urrainn "
+"do dheasaiche na co-dhealbhachd ceangal ri reifreansan air loidhne a chur "
+"ris ma leanar an stiùireadh a leanas (gabhaidh seo a dheasachadh).</p></li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Ceuman: Ciutha nan tagradh &gt; Lèirmheas nan tagradh &gt; Deasachadh nan "
+"tagradh &gt; Clàr-innse.<br /><br />\n"
+"Tagh modail airson na ceuman seo dhen phròiseas deasachaidh a làimhseachadh. "
+"(Tadhail air “Deasaichean” ann an “Stiùireadh nan iris-leabhar” airson "
+"deasaiche stiùiridh agus deasaichean earrannan ainmeachadh.)"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>AN AIRE!</h4>\n"
+"<p>Cha b’ urrainn dhan t-siostam sgrìobhadh thairis air an fhaidhle "
+"rèiteachaidh. Airson na h-atharraichean agad air an rèiteachadh a chur an "
+"sàs, feumaidh tu <tt>config.inc.php</tt> fhosgladh ann an deasaiche teacsa "
+"iomchaidh agus na tha san raon teacsa gu h-ìosal a chur an àite na susbaint "
+"ann.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Ma shònraicheas tu tùs dearbhaidh bunaiteach eile seach OJS, bidh a’ "
+"bhuaidh a leanas aige seo:</p>\n"
+"<ul>\n"
+"\t<li>Ma nì cleachdaiche oidhirp cunntas ùr a chruthachadh air an làrach seo "
+"le ainm-cleachdaiche a tha aig an tùs dearbhaidh (ach chan ann aig stòr-dàta "
+"OJS), cha tèid an oidhirp clàraidh a cheadachadh ach ma tha am facal-faire a "
+"thugadh seachad dligheach airson a’ chunntais chleachdaiche ud.</li>\n"
+"</ul>"
+
+msgid "comments.authenticated"
+msgstr ""
+"a rèir <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>An aire:</strong> Feumaidh fo-sgrìobhaidhean institiuide a chaidh a "
+"cheannach air loidhne cead àrainne agus rainse nan IP mus tèid am fo-"
+"sgrìobhadh a chur an gnìomh."
+
+msgid "submission.round"
+msgstr "Cuairt&nbsp;{$round}"
+
+msgid "context.current"
+msgstr "An t-iris-leabhar làithreach:"
+
+msgid "context.select"
+msgstr "Geàrr leum gu iris-leabhar eile:"
+
+msgid "navigation.categories"
+msgstr "Roinnean-seòrsa"
+
+msgid "navigation.categories.browse"
+msgstr "Rùraich"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Briog air an ìomhaigheag gus am foirm lèirmheis a lìonadh."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Lìon na raointean air a bheil feum."
+
+msgid "common.confirmComplete"
+msgstr ""
+"A bheil thu cinnteach gu bheil thu airson comharradh gun deach an t-saothair "
+"seo a choileanadh? Dh’fhaoidte nach urrainn dhut dad atharrachadh às a "
+"dhèidh sin."
+
+msgid "common.payment"
+msgstr "Pàigheadh"
+
+msgid "common.payments"
+msgstr "Pàighidhean"
+
+msgid "common.homePageHeader.altText"
+msgstr "Bann-cinn na duilleige-dachaigh"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Dealbh duilleag-dhachaigh an iris-leabhair"
+
+msgid "navigation.journalHelp"
+msgstr "Cobhair an iris-leabhair"
+
+msgid "navigation.current"
+msgstr "An tè làithreach"
+
+msgid "navigation.otherJournals"
+msgstr "Leabhraichean-là eile"
+
+msgid "navigation.browseByIssue"
+msgstr "A rèir irise"
+
+msgid "navigation.browseByAuthor"
+msgstr "A rèir ùghdair"
+
+msgid "navigation.infoForAuthors"
+msgstr "Do dh’ùghdaran"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Do leabhar-lannaichean"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Stiùireadh mu chòmhstri ùidhean"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Fiosrachadh do dh’ùghdaran"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Fiosrachadh do leabhar-lannaichean"
+
+msgid "navigation.skip.about"
+msgstr "Leum chun an fhiosrachaidh mun iris-leabhar"
+
+msgid "navigation.skip.issue"
+msgstr "Leum chun na h-irise làithreach"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Gun iomruineadh"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Gun iomruineadh"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Tagraidhean fo dheasachadh"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Fo dheasachadh"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Tagraidhean fo lèirmheas"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Fo lèirmheas"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Tasg-lannan"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Tasg-lannan"
+
+msgid "common.queue.long.active"
+msgstr "Gnìomhach"
+
+msgid "common.queue.short.active"
+msgstr "Gnìomhach"
+
+msgid "common.queue.long.completed"
+msgstr "Tasg-lann"
+
+msgid "common.queue.short.completed"
+msgstr "Tasg-lann"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Deasaichean iomruinte"
+
+msgid "section.section"
+msgstr "Earrann"
+
+msgid "section.sections"
+msgstr "Earrannan"
+
+msgid "section.title"
+msgstr "Tiotal na h-earrainn"
+
+msgid "section.abbreviation"
+msgstr "Giorrachadh"
+
+msgid "section.abbreviation.example"
+msgstr "(Mar eisimpleir, Artaigealan=ART)"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Chaidh faidhle a’ ghrinn-deasachaidh ùrachadh"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Chaidh dearbh-leughadair iomruineadh dhan tagradh"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Chaidh an dearbh-leughadair a thoirt air falbh on tagradh"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Thòiseachadh air an obair dearbh-leughaidh"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Chaidh faidhle lèirmheasan an dearbh-leughadair ùrachadh"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Chaidh an obair dearbh-leughaidh a choileanadh"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Chaidh deasaiche co-dhealbhachd iomruineadh dhan tagradh"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Chaidh deasaiche na co-dhealbhachd a thoirt air falbh on tagradh"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Thòiseachadh air an obair cho-dhealbhachd"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Chaidh mòr-dhuilleag na co-dhealbhachd ùrachadh"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Chaidh an obair co-dhealbhachd a choileanadh"
+
+msgid "reader.subscribersOnly"
+msgstr "Fo-sgrìobhaichean a-mhàin"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Feumaidh tu fo-sgrìobhadh mus fhaigh thu cothrom air an nì seo. Clàraich a-"
+"steach dhan iris-leabhar gus am fo-sgrìobhadh a dhearbhadh."
+
+msgid "reader.openAccess"
+msgstr "Inntrigeadh fosgailte"
+
+msgid "reader.subscriptionAccess"
+msgstr "Feumaidh seo fo-sgrìobhadh"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Feumaidh seo fo-sgrìobhadh no tàille"
+
+msgid "comments.commentsOnArticle"
+msgstr "Beachdan air an artaigeal seo"
+
+msgid "search.results.orderBy"
+msgstr "Cuir na toraidhean air dòigh a rèir"
+
+msgid "search.results.orderBy.article"
+msgstr "Tiotal an artaigil"
+
+msgid "search.results.orderBy.author"
+msgstr "Ùghdar"
+
+msgid "search.results.orderBy.date"
+msgstr "Ceann-là an fhoillseachaidh"
+
+msgid "search.results.orderBy.issue"
+msgstr "Iris"
+
+msgid "search.results.orderBy.journal"
+msgstr "Tiotal an iris-leabhair"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Fèillmhorachd (a-riamh)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Fèillmhorachd (am mìos seo chaidh)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Buntainneas"
+
+msgid "search.results.orderDir.asc"
+msgstr "A’ dìreadh"
+
+msgid "search.results.orderDir.desc"
+msgstr "A’ teàrnadh"
+
+msgid "search.results.similarDocuments"
+msgstr "sgrìobhainnean coltach ris"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Stiùireadh nam fo-sgrìobhadh"
+
+msgid "search.authorDetails"
+msgstr "Mion-fhiosrachadh mun ùghdar"
+
+msgid "article.pageTitle"
+msgstr "A’ coimhead air {$title}"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Luchdaich a-nuas am faidhle PDF seo"
+
+msgid "article.nonpdf.title"
+msgstr "Luchdadh a-nuas an artaigil"
+
+msgid "site.journalsHosted"
+msgstr "Iris-leabhraichean air òstaireachd na làraich seo"
+
+msgid "site.journalView"
+msgstr "Seall an t-iris-leabhar"
+
+msgid "site.journalRegister"
+msgstr "Clàraich"
+
+msgid "site.journalCurrent"
+msgstr "An iris làithreach"
+
+msgid "site.noJournals"
+msgstr "Chan eil iris-leabhraichean ri fhaighinn."
+
+msgid "current.current"
+msgstr "An tè làithreach"
+
+msgid "current.noCurrentIssue"
+msgstr "Chan eil iris làithreach ann"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Cha do dh’fhoillsich an t-iris-leabhar seo iris sam bith gu ruige seo."
+
+msgid "archive.archives"
+msgstr "Na tasg-lannan"
+
+msgid "archive.archivesPageNumber"
+msgstr "Na tasg-lannan – Duilleag {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Rùraich na seann irisean"
+
+msgid "archive.issueUnavailable"
+msgstr "Chan eil an iris seo ri làimh"
+
+msgid "about.statistics"
+msgstr "Stats"
+
+msgid "about.contact"
+msgstr "Fiosrachadh conaltraidh"
+
+msgid "about.aboutContext"
+msgstr "Mun iris-leabhar"
+
+msgid "about.history"
+msgstr "Eachdraidh an iris-leabhair"
+
+msgid "about.editorialTeam"
+msgstr "An sgioba deasachaidh"
+
+msgid "about.editorialTeam.biography"
+msgstr "Beatha-eachdraidh"
+
+msgid "about.editorialPolicies"
+msgstr "Poileasaidhean deasachaidh"
+
+msgid "about.focusAndScope"
+msgstr "Fòcas is sgòp"
+
+msgid "about.sectionPolicies"
+msgstr "Poileasaidhean nan earrannan"
+
+msgid "about.submissions"
+msgstr "Tagraidhean"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Clàraich a-steach"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Clàraich"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} no {$register} a dhèanamh tagradh."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} no {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Dèan tagradh ùr"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "coimhead air na tagraidhean agad a tha ri dhèiligeadh"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Bidh inntrigeadh fosgailte do shusbaint an iris-leabhair seo"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "mìos(an) an dèidh foillseachadh de dh’iris."
+
+msgid "about.archiving"
+msgstr "Tasglannadh"
+
+msgid "about.subscriptions"
+msgstr "Fo-sgrìobhaidhean"
+
+msgid "about.subscriptions.individual"
+msgstr "Fo-sgrìobhaidhean daoine fa leth"
+
+msgid "about.subscriptions.institutional"
+msgstr "Fo-sgrìobhaidhean institiuide"
+
+msgid "about.subscriptionsContact"
+msgstr "Neach-conaltraidh nam fo-sgrìobhadh"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Ainm"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Fòrmat"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Faid"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Cosgais"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Seòrsaichean de dh’fho-sgrìobhaidhean"
+
+msgid "about.memberships"
+msgstr "Ballrachdan"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Barrachd fiosrachaidh mu na siostaman foillseachaidh, mun ùrlar agus sruth-"
+"obrach le OJS/PKP."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Pròiseas foillseachadh is deasachadh OJS"
+
+msgid "help.ojsHelp"
+msgstr "Cobhair Open Journal Systems"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Cobhair OJS"
+
+msgid "help.searchReturnResults"
+msgstr "Till gu toraidhean an luirg"
+
+msgid "help.goToEditPage"
+msgstr "Deasaich {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Mòran taing"
+
+msgid "donations.thankYouMessage"
+msgstr "Mòran taing airson taic a chumail rinn.  Tha sinn fada nad chomain."
+
+msgid "payment.loginRequired"
+msgstr ""
+"Feumaidh tu a bhith clàraichte a-staigh mus urrainn dhut pàigheadh a "
+"dhèanamh."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Feumaidh tu artaigeal a cheannach no fo-sgrìobhadh a bhith agad mus fhaigh "
+"thu cothrom air an nì seo. A dhearbhadh gu bheil fo-sgrìobhadh agad, a dh’"
+"fhaighinn cothrom air na cheannaich no roimhe no airson artaigeal a "
+"cheannach, clàraich a-steach dhan iris-leabhar."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Feumaidh tu iris a cheannach no fo-sgrìobhadh a bhith agad mus fhaigh thu "
+"cothrom air an nì seo. A dhearbhadh gu bheil fo-sgrìobhadh agad, a dh’"
+"fhaighinn cothrom air na cheannaich no roimhe no airson iris a cheannach, "
+"clàraich a-steach dhan iris-leabhar."
+
+msgid "payment.loginRequired.forDonation"
+msgstr ""
+"Feumaidh tu a bhith clàraichte a-staigh mus urrainn dhut tabhartas a thoirt."
+
+msgid "payment.paid"
+msgstr "Air a phàigheadh"
+
+msgid "payment.payNow"
+msgstr "Pàigh an-dràsta"
+
+msgid "payment.waive"
+msgstr "Leig seachad"
+
+msgid "payment.alreadyPaid"
+msgstr "Air a phàigheadh mu thràth"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Cuir cromag sa bhogsa seo ma phàigh thu an t-iris-leabhar mu thràth airson "
+"pròiseas an tagraidh a choileanadh.  Cha dèanar lèirmheas air an tagradh gus "
+"an ruig am pàigheadh.  Briog air “Pàigh an-dràsta” gu h-àrd is gheibh thu "
+"stiùireadh mu na dòighean air am pàigh thu air a shon."
+
+msgid "payment.paymentReceived"
+msgstr "Fhuaras am pàigheadh"
+
+msgid "payment.paymentSent"
+msgstr "Chaidh a phàigheadh mu thràth"
+
+msgid "payment.authorFees"
+msgstr "Tàillean ùghdair"
+
+msgid "payment.type.submission"
+msgstr "Tàille tagraidh"
+
+msgid "payment.type.publication"
+msgstr "Tàille foillseachaidh"
+
+msgid "payment.type.publication.required"
+msgstr "Tha an tàille foillseachaidh ri phàigheadh."
+
+msgid "payment.type.fastTrack"
+msgstr "Tàille airson grad-lèirmheas"
+
+msgid "payment.type.membership"
+msgstr "Tàille ballrachd neach fa leth"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Tàille airson artaigeal a cheannach"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Tàille airson iris a cheannach"
+
+msgid "payment.type.subscription"
+msgstr "Tàille fo-sgrìobhaidh"
+
+msgid "payment.type.donation"
+msgstr "Tabhartasan"
+
+msgid "payment.requestPublicationFee"
+msgstr "Iarr tàille foillseachaidh ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr ""
+"Chaidh pàigheadh iarraidh ach dh’fhalbh an ùine air an iarrtas. Cuir fios gu "
+"manaidsear an iris-leabhair airson mion-fhiosrachadh."
+
+msgid "payment.donation.makeDonation"
+msgstr "Thoir tabhartas"
+
+msgid "payment.submission.paySubmission"
+msgstr "Pàigh tàille tagraidh"
+
+msgid "payment.publication.payPublication"
+msgstr "Pàigh airson foillseachadh"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Tàille foillseachaidh air a phàigheadh"
+
+msgid "payment.membership.buyMembership"
+msgstr "Ceannaich ballrachd neach fa leth"
+
+msgid "payment.membership.renewMembership"
+msgstr "Ath-nuadhaich a’ bhallrachd neach fa leth"
+
+msgid "payment.membership.ends"
+msgstr "A’ crìochnachadh"
+
+msgid "payment.subscription.purchase"
+msgstr "Ceannaich fo-sgrìobhaidh"
+
+msgid "payment.subscription.renew"
+msgstr "Ath-nuadhaich am fo-sgrìobhadh"
+
+msgid "payment.subscription.expires"
+msgstr "Falbhaidh an ùine air"
+
+msgid "installer.appInstallation"
+msgstr "Stàladh OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Àrdachadh OJS"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Am prìomh-chànan a chleachdas an siostam seo. Thoir sùil air an stiùireadh "
+"airson OJS ma tha cànan a dhìth ort nach fhaic thu an-seo."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Tagh na cànain eile a thèid a chleachdadh san t-siostam seo. Bidh na cànain "
+"seo ri làimh iris-leabhraichean aig am bi air òstaireachd air an làrach. "
+"Gabhaidh cànain a stàladh o eadar-aghaidh rianachd na làraich uair sam bith "
+"cuideachd."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"Feumaidh OJS cothrom air stòr-dàta SQL far an cùm e an dàta aige. Faic "
+"riatanasan an t-siostaim gu h-àrd airson liosta nan stòr-dàta ris a bheil "
+"taic. Cuir na roghainnean a thèid a chleachdadh airson ceangal a dhèanamh "
+"ris an stòr-dàta sna raointean gu h-ìosal."
+
+msgid "installer.installApplication"
+msgstr "Stàlaich Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Àrdaich Open Journal Systems"
+
+msgid "log.author.documentRevised"
+msgstr ""
+"Rinn {$authorName} lèirmheas air an artaigeal {$submissionId}. ’S e {$fileId}"
+" ID ùr an fhaidhle."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"Chaidh {$reviewerName} a thoirt air falbh o lèirmheas an tagraidh "
+"{$submissionId} mu choinneamh cuairt {$round} dhen lèirmheas."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"Thòiseachadh air lèirmheas cuairt {$round} le {$reviewerName} mu choinneamh "
+"an tagraidh {$submissionId}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"Chaidh {$userName} a rangachadh a thaobh cuairt {$round} dhen tagradh "
+"{$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Chaidh {$dueDate} a shuidheachadh le {$reviewerName} mar cheann-là "
+"lìbhrigidh airson lèirmheas cuairt {$round} dhen tagradh {$submissionId}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Chaidh am moladh airson lèirmheas cuairt {$round} dhen tagradh "
+"{$submissionId} le {$reviewerName} a shuidheachadh."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Chaidh am moladh airson cuairt {$round} dhen tagradh {$submissionId} a "
+"shuidheachadh leis an deasaiche, {$editorName}, às leth an lèirmheasaiche, "
+"{$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "Chaidh an tagradh {$submissionId} a chur airson ath-lèirmheas."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"Dhiùlt {$userName} lèirmheas cuairt {$round} mu choinneamh tagradh "
+"{$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"Ghabh {$reviewerName} ri lèirmheas cuairt {$round} mu choinneamh tagraidh "
+"{$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"Dhiùlt {$userName} lèirmheas cuairt {$round} mu choinneamh tagradh "
+"{$submissionId} às leth {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"Ghabh {$userName} ri lèirmheas cuairt {$round} mu choinneamh tagradh "
+"{$submissionId} às leth {$reviewerName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Luchdaich an deasaiche, {$userName}, suas faidhle lèirmheis airson cuairt "
+"{$round} dhen tagradh {$submissionId} às leth an lèirmheasaiche, "
+"{$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Chaidh faidhle lèirmheasaiche a luchdadh suas."
+
+msgid "log.editor.decision"
+msgstr ""
+"Chaidh co-dhùnadh le deasaiche ({$decision}) mu choinneamh an artaigil "
+"{$submissionId} a chlàradh le {$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Chaidh moladh le deasaiche ({$decision}) mu choinneamh an artaigil "
+"{$submissionId} a chlàradh le {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"Thòisich {$copyeditorName} air grinn-deasachadh an tagraidh {$submissionId}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Chaidh faidhle bunaiteach a’ ghrinn-deasachaidh a thaghadh."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"Choilean {$copyeditorName} an grinn-deasachadh tòiseachail dhen tagradh "
+"{$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"Choilean {$copyeditorName} an grinn-deasachadh deireannach dhen tagradh "
+"{$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"Chaidh {$copyeditorName} iomruineadh dhan tagradh {$submissionId} mar ghrinn-"
+"deasaiche."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr ""
+"Chaidh tionndadh grinn-deasaiche de dh’fhaidhle an tagraidh a luchdadh suas."
+
+msgid "log.copyedit.authorFile"
+msgstr ""
+"Chaidh tionndadh de dh’fhaidhle an tagraidh a ghrinn-deasaich an t-ùghdar a "
+"luchdadh suas."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"Chaidh {$editorName} iomruineadh dhan tagradh {$submissionId} mar dheasaiche "
+"na co-dhealbhachd."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"Chaidh {$editorName} a thoirt air falbh on tagradh {$submissionId} mar "
+"dheasaiche na co-dhealbhachd."
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"Choilean {$editorName} deasachadh na co-dhealbhachd san tagradh "
+"{$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "Chaidh meata-dàta an artaigil seo atharrachadh le {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "Chaidh tionndadh deasaiche de dh’fhaidhle an tagraidh a luchdadh suas."
+
+msgid "log.editor.archived"
+msgstr "Chaidh an tagradh {$submissionId} a chur dhan tasg-lann."
+
+msgid "log.editor.restored"
+msgstr "Chaidh an tagradh {$submissionId} aiseag dhan chiutha."
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"Chaidh {$editorName} iomruineadh dhan tagradh {$submissionId} mar dheasaiche."
+
+msgid "log.proofread.assign"
+msgstr ""
+"Dh’iomruin {$assignerName} {$proofreaderName} airson dearbh-leughadh a "
+"dhèanamh air an tagradh {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "Chuir {$proofreaderName} {$submissionId} airson sgeidealachadh."
+
+msgid "log.imported"
+msgstr "Thug {$userName} a-steach an t-artaigeal {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Artaigeal air a lèirmheas le seise"
+
+msgid "notification.type.editing"
+msgstr "Tachartasan deasachaidh"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Chaidh artaigeal ùr, “{$title}”, a chur."
+
+msgid "notification.type.editorDecisionComment"
+msgstr ""
+"Chaidh beachd a thoirt seachad air co-dhùnadh an deasaiche mu choinneamh "
+"“{$title}.”"
+
+msgid "notification.type.issuePublished"
+msgstr "Chaidh iris fhoillseachadh."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Chaidh fios-naidheachd ùr a chruthachadh."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Chaidh lèirmheas air foirm lèirmheis a chur mu choinneamh “{$title}.”"
+
+msgid "notification.type.reviewing"
+msgstr "Lèirmheasadh thachartasan"
+
+msgid "notification.type.site"
+msgstr "Tachartasan na làraich"
+
+msgid "notification.type.submissionComment"
+msgstr "Thug deasaiche seachad beachd air “{$title}.”"
+
+msgid "notification.type.submissions"
+msgstr "Tachartas tagraidh"
+
+msgid "notification.type.userComment"
+msgstr "Thug leughadair seachad beachd air “{$title}”"
+
+msgid "notification.type.public"
+msgstr "Fiosan-naidheachd poblach"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Chaidh meata-dàta foillseachadh na h-irise a shàbhaladh."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Chaidh artaigeal ùr a chur agus tha e feumach air deasaiche."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Tagh cleachdaiche airson mòr-dhuilleagan a chruthachadh leis a’ cheangal "
+"“Iomruin” ann an liosta nan com-pàirtichean."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "A’ feitheamh ris na mòr-dhuilleagan."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Chaidh inntrigeadh a dhiùltadh! Cha deach d’ iomruineadh mar ghrinn-"
+"deasaiche an artaigil seo."
+
+msgid "user.authorization.noContext"
+msgstr "Chan eil iris-leabhar sa cho-theacsa!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr ""
+"Tha thu a’ feuchainn ri cothrom fhaighinn air artaigeal nach eil na phàirt "
+"dhen earrann agad-sa."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Chaidh iris mhì-dhligheach iarraidh!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Bha tagradh a’ ghrinn-deasaiche mì-dhligheach no cha deach tagradh grinn-"
+"deasaiche iarraidh!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Chaidh liosta nan airgeadra “{$filename}” on XML"
+
+msgid "grid.action.createContext"
+msgstr "Cruthaich iris-leabhar ùr"
+
+msgid "section.policy"
+msgstr "Poileasaidh na h-earrainn"
+
+msgid "article.article"
+msgstr "Artaigeal"
+
+msgid "article.articles"
+msgstr "Artaigealan"
+
+msgid "common.publication"
+msgstr "Artaigeal"
+
+msgid "common.publications"
+msgstr "Artaigealan"
+
+msgid "article.submissionId"
+msgstr "ID an tagraidh"
+
+msgid "article.title"
+msgstr "Tiotal"
+
+msgid "article.authors"
+msgstr "Ùghdaran"
+
+msgid "article.indexingInformation"
+msgstr "Fiosrachadh inneacsaidh"
+
+msgid "article.metadata"
+msgstr "Meata-dàta"
+
+msgid "article.journalSection"
+msgstr "Earrann na h-irise"
+
+msgid "article.file"
+msgstr "Faidhle"
+
+msgid "article.suppFile"
+msgstr "Faidhle foirlionaidh"
+
+msgid "article.suppFiles"
+msgstr "Faidhlichean foirlionaidh"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Faidhlichean foirlionaidh"
+
+msgid "article.discipline"
+msgstr "Diosaplain is fo-dhiosaplainean acadaimigeach"
+
+msgid "article.subject"
+msgstr "Faclan-luirg"
+
+msgid "article.coverage"
+msgstr "Tuairisgeulachadh"
+
+msgid "article.type"
+msgstr "Seòrsa, dòigh no dòigh-obrach"
+
+msgid "article.language"
+msgstr "Cànan"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "Beachdan an ùghdair"
+
+msgid "article.submission"
+msgstr "Tagradh"
+
+msgid "article.submissions"
+msgstr "Tagraidhean"
+
+msgid "article.details"
+msgstr "Mion-fhiosrachadh"
+
+msgid "article.abstract"
+msgstr "Geàrr-chunntas"
+
+msgid "article.coverPage.altText"
+msgstr "Dealbh a’ chòmhdachaidh"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Inntrigeadh fosgailte"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Inntrigeadh cuingichte"
+
+msgid "article.comments.sectionDefault"
+msgstr "Bun-roghainn"
+
+msgid "article.comments.disable"
+msgstr "Cuir à comas"
+
+msgid "article.comments.enable"
+msgstr "Cuir an comas"
+
+msgid "article.fontSize"
+msgstr "Meud a’ chrutha-chlò"
+
+msgid "article.fontSize.small.altText"
+msgstr "Beag"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Meadhanach"
+
+msgid "article.fontSize.large.altText"
+msgstr "Mòr"
+
+msgid "article.return"
+msgstr "Till gu mion-fhiosrachadh an artaigil"
+
+msgid "submission.submissionEditing"
+msgstr "Deasachadh an tagraidh"
+
+msgid "submission.changeSection"
+msgstr "Atharraich gu"
+
+msgid "submission.sent"
+msgstr "Air a chur"
+
+msgid "submission.editorDecision"
+msgstr "Co-dhùnadh deasaiche"
+
+msgid "submission.editorReview"
+msgstr "Lèirmheas an deasaiche"
+
+msgid "submission.notifyAuthor"
+msgstr "Cuir fios chun an ùghdair"
+
+msgid "submission.notifyEditor"
+msgstr "Cuir fios chun an deasaiche"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Clàr post-d an deasaiche/ùghdair"
+
+msgid "submission.reviewersVersion"
+msgstr "An tionndadh dhen fhaidhle le nòtaichean an lèirmheasaiche"
+
+msgid "submission.postReviewVersion"
+msgstr "An tionndadh dhen fhaidhle a tha an dèidh lèirmheis"
+
+msgid "submission.editorVersion"
+msgstr "Tionndadh an deasaiche"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "An tionndadh dhen fhaidhle a rinn an t-ùghdar lèirmheas air"
+
+msgid "submission.authorVersion"
+msgstr "Tionndadh an ùghdair"
+
+msgid "submission.copyediting"
+msgstr "Grinn-deasachadh"
+
+msgid "submission.copyedit"
+msgstr "Grinn-deasachadh"
+
+msgid "submission.proofreading"
+msgstr "Dearbh-leughadh"
+
+msgid "submission.scheduling"
+msgstr "Sgeidealan"
+
+msgid "submission.scheduledIn"
+msgstr "Gu bhith fhoillseachadh ann an {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.step1"
+msgstr "Ceum 1"
+
+msgid "submissions.step3"
+msgstr "Ceum 3"
+
+msgid "submissions.queuedReview"
+msgstr "Fo lèirmheas"
+
+msgid "submissions.published"
+msgstr "Foillsichte"
+
+msgid "submissions.initial"
+msgstr "Tòiseachail"
+
+msgid "submissions.proofread"
+msgstr "Air a dhearbh-leughadh"
+
+msgid "submissions.initialProof"
+msgstr "Dearbhadh tòiseachail"
+
+msgid "submissions.postAuthor"
+msgstr "An dèidh an ùghdair"
+
+msgid "submissions.reviewRound"
+msgstr "A’ chuairt lèirmheis"
+
+msgid "submissions.proof"
+msgstr "Dearbhadh"
+
+msgid "submissions.editorDecision"
+msgstr "Co-dhùnadh deasaiche"
+
+msgid "submissions.editorRuling"
+msgstr "Riaghladh deasaiche"
+
+msgid "submission.eventLog"
+msgstr "Loga nan tachartas"
+
+msgid "submissions.copyeditComplete"
+msgstr "Air a ghrinn-deasachadh"
+
+msgid "submissions.layoutComplete"
+msgstr "Co-dhealbhachd air a dheasachadh"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Air a dhearbh-leughadh"
+
+msgid "submission.search"
+msgstr "Lorg artaigeal"
+
+msgid "journal.currentIssue"
+msgstr "An iris làithreach"
+
+msgid "context.contexts"
+msgstr "Iris-leabhraichean"
+
+msgid "journal.path"
+msgstr "Slighe"
+
+msgid "context.context"
+msgstr "Iris-leabhar"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Seall a h-uile iris"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Gabh a-staigh cleachdaichean aig nach eil dreuchd san iris-leabhar seo."
+
+msgid "user.profile.profileImage"
+msgstr "Dealbh na pròifil"
+
+msgid "user.showAllJournals"
+msgstr "Seall na h-iris-leabhraichean agam"
+
+msgid "user.registerForOtherJournals"
+msgstr "Clàraich airson iris-leabhraichean eile"
+
+msgid "user.reviewerPrompt"
+msgstr ""
+"A bheil ùidh agad ann a bhith a’ dèanamh lèirmheasan air tagraidhean dhan "
+"iris-leabhar seo?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Tha, iarr dreuchd {$userGroup}."
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Tha, tha mi ag iarraidh gun cuirear fios thugam ma bhios iarrtas ann airson "
+"lèirmheas tagraidh dhan iris-leabhar seo."
+
+msgid "user.register.contextsPrompt"
+msgstr "Dè na h-iris-leabhraichean air an làrach seo bu toil leat clàradh aca?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Iarr na dreuchdan a leanas."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Ma dh’iarr thu inbhe lèirmheasaiche airson iris-leabhar sam bith, cuir a-"
+"steach na cuspairean sa bheil ùidh agad."
+
+msgid "user.myJournals"
+msgstr "Na h-iris-leabhraichean agam"
+
+msgid "user.manageMySubscriptions"
+msgstr "Stiùirich na fo-sgrìobhaidhean agam"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Chan eil an cunntas agad co-cheangailte ri iris-leabhar sam bith aig an àm "
+"seo. Tagh iris-leabhar:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Chan eil dreuchd sam bith aig a’ chunntas agad mu choinneamh an iris-"
+"leabhair seo aig an àm seo. Tagh gnìomh gu h-ìosal:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Cuir moladh"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr ""
+"Cuir artaigeal airson foillseachadh: Tha clàradh ùghdaran à comas aig an àm "
+"seo."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Clàraich mar lèirmheasaiche"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Clàraich mar lèirmheasaiche: Tha clàradh lèirmheasaichean à comas aig an àm "
+"seo."
+
+msgid "user.role.manager"
+msgstr "Manaidsear an iris-leabhair"
+
+msgid "user.role.subEditor"
+msgstr "Deasaiche na h-earrainn"
+
+msgid "user.role.subscriptionManager"
+msgstr "Manaidsear an fho-sgrìobhaidh"
+
+msgid "user.role.managers"
+msgstr "Manaidsearan an iris-leabhair"
+
+msgid "user.role.subEditors"
+msgstr "Deasaichean na h-earrainn"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Manaidsearan an fho-sgrìobhaidh"
+
+msgid "user.role.journalAssistant"
+msgstr "Cuidiche an iris-leabhair"
+
+msgid "user.role.journalAssistants"
+msgstr "Cuidichean an iris-leabhair"
+
+msgid "issue.issue"
+msgstr "Iris"
+
+msgid "issue.issues"
+msgstr "Irisean"
+
+msgid "issue.title"
+msgstr "Tiotal"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Seall {$identification}"
+
+msgid "issue.volume"
+msgstr "Leabhar"
+
+msgid "issue.number"
+msgstr "Àireamh"
+
+msgid "issue.vol"
+msgstr "Lbh."
+
+msgid "issue.no"
+msgstr "Àir."
+
+msgid "issue.year"
+msgstr "Bliadhna"
+
+msgid "issue.noIssues"
+msgstr "Gun iris sam bith"
+
+msgid "issue.toc"
+msgstr "An clàr-innse"
+
+msgid "issue.abstract"
+msgstr "An geàrr-chunntas"
+
+msgid "issue.coverPage.altText"
+msgstr "An duilleag-chòmhdachaidh"
+
+msgid "issue.fullIssue"
+msgstr "An iris shlàn"
+
+msgid "issue.nonpdf.title"
+msgstr "Luchdaich a-nuas an iris"
+
+msgid "issue.viewIssue"
+msgstr "Seall an iris"
+
+msgid "issue.return"
+msgstr "Till gu mion-fhiosrachadh na h-irise"
+
+msgid "subscriptionTypes.currency"
+msgstr "Airgeadra"
+
+msgid "subscriptionTypes.year"
+msgstr "bhliadhna"
+
+msgid "subscriptionTypes.years"
+msgstr "bliadhna"
+
+msgid "subscriptionTypes.month"
+msgstr "mhìos"
+
+msgid "subscriptionTypes.months"
+msgstr "mìos(an)"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Buan"
+
+msgid "subscriptionTypes.format"
+msgstr "Fòrmat"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Air loidhne"
+
+msgid "subscriptionTypes.format.print"
+msgstr "An clò-bhualadh"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "An clò-bhualadh is air loidhne"
+
+msgid "subscriptions.inactive"
+msgstr "Neo-ghnìomhach"
+
+msgid "subscriptions.status"
+msgstr "Staid"
+
+msgid "subscriptions.status.active"
+msgstr "Gnìomhach"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Fiosrachadh a dhìth"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Feumach air aontachadh"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "A’ feitheamh ri pàigheadh de làimh"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "A’ feitheamh ri pàigheadh air loidhne"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Chan eil fo-sgrìobhadh gnìomhach agad."
+
+msgid "subscriptions.status.other"
+msgstr "Eile, faic na nòtaichean"
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Ma tha fo-sgrìobhadh neach fa leth aig cuideigin, feumaidh iad clàradh a-"
+"steach a dh’fhaighinn cothrom air susbaint an fho-sgrìobhaidh."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Ma tha fo-sgrìobhadh institiuide aig cuideigin, cha leigear a leas clàradh a-"
+"steach. Gheibhear inntrigeadh do shusbaint nam fo-sgrìobhaidhean stèidhichte "
+"air àrainn agus/no seòladh IP a’ chleachdaiche."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Tachartas tagraidh"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Chaidh an t-artaigeal a chur"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Chaidh an tagradh a chur gu ciutha foillseachaidh"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Chaidh an tagradh iomruineadh do dh’fhoillseachadh"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Chaidh an t-artaigeal fhoillseachadh"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Chaidh lèirmheas an ùghdar a chur"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Chaidh faidhle lèirmheasan an ùghdair ùrachadh"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Chaidh an deasaiche iomruineadh dhan tagradh"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Chaidh an deasaiche a thoirt air falbh on tagradh"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Chaidh co-dhùnadh an deasaiche a chur"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Chaidh faidhle an deasaiche ùrachadh"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Chaidh an tagradh a chur dhan tasg-lann"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Chaidh an tagradh aiseag on tasg-lann"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Chaidh an grinn-deasaiche iomruineadh dhan tagradh"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Chaidh an grinn-deasaiche a thoirt air falbh on tagradh"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Chaidh an obair grinn-deasachaidh iomruineadh"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Chaidh faidhle lèirmheasan a’ ghrinn-deasaiche ùrachadh"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Chaidh a’ chiad ghrinn-deasachadh a choileanadh"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Chaidh an grinn-deasachadh deireannach a choileanadh"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Fo-sgrìobhaidhean daoine fa leth"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Fo-sgrìobhaidhean institiuide"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Seòrsaichean de dh’fho-sgrìobhaidhean"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Plugain mòr-dhuilleagan artaigealan"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Tha plugain mòr-dhuilleagan nan artaigealan a’ toirt comas sgrìobhainnean de "
+"dhiofar seòrsaichean a shealltainn mar mhòr-dhuilleagan."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Bheir plugain ùghdarrachaidh comas dha Open Journal Systems saothraichean "
+"dearbhadh chleachdaichean iomruineadh do shiostaman eile, can "
+"frithealaichean LDAP."
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Thathar a’ cleachdadh plugain coitcheann airson siostam an iris-leabhair "
+"fhosgailte a leudachadh ann an dòighean air nach eil plugain eile comasach."
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"A bheil thu airson an cleachdaiche seo a chur à comas? Ma nì thu seo, chan "
+"urrainn dhan chleachdaiche clàradh a-steach dhan t-siostam tuilleadh.\n"
+"\n"
+"’S urrainn dhut innse dhan chleachdaiche carson a chuir thu an cunntas aca à "
+"comas."
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Obraichean deasachaidh gnìomhach"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Obraichean deasachaidh coileanta"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Cha deach tagradh sam bith iomruineadh."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Ma chuireas tu brath dhan ghrinn-deasaiche seo às ùr, thèid am pìos obrach "
+"aca ath-thòiseachadh. A bheil thu cinnteach gu bheil thu airson seo a "
+"dhèanamh?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Ma chuireas tu brath dhan ùghdar seo às ùr, thèid am pìos obrach aca ath-"
+"thòiseachadh. A bheil thu cinnteach gu bheil thu airson seo a dhèanamh?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Ma chuireas tu brath dhan deasaiche cho-dhealbhachd seo às ùr, thèid am pìos "
+"obrach aca ath-thòiseachadh. A bheil thu cinnteach gu bheil thu airson seo a "
+"dhèanamh?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Ma chuireas tu brath dhan dearbh-leughadair seo às ùr, thèid am pìos obrach "
+"aca ath-thòiseachadh. A bheil thu cinnteach gu bheil thu airson seo a "
+"dhèanamh?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Aithreachasan"
+
+msgid "sectionEditor.regrets"
+msgstr "Aithreachasan"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Seall aithreachasan, na sguireadh dheth, cuairtean roimhe"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Lèirmheas seise, cuairt {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Co-dhùnadh an deasaiche, cuairt {$round}"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Aithreachas"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Toradh"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Clàraich cleachdaiche làithreach mar lèirmheasaiche"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Cruthaich lèirmheasaiche ùr"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Obraichean deasachaidh gnìomhach"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Obraichean deasachaidh coileanta"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Chan eil obair deasachaidh ghnìomhach agad."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Obraichean deasachadh co-dhealbhachd"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Fòrmat luchdadh suas mhòr-dhuilleagan"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Cuir an àite an fhaidhle"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Luchdaich suas faidhle foirlionaidh"
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"Fòrmat deilbh mì-dhligheach. Gabhar ri faidhlichean .gif, .jpg agus .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Bidh a’ mhòr-dhuilleag seo ri làimh air làrach-lìn fa leth."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL de shusbaint air òstair cèin"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artaigealan ri lèirmheasadh"
+
+msgid "reviewer.completedReviews"
+msgstr "Deiseil"
+
+msgid "reviewer.averageQuality"
+msgstr "Rangachadh"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Am faidhle a tha ri lèirmheasadh"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Cuir fios chun an deasaiche"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Nì mi an lèirmheas"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Chan urrainn dhomh an lèirmheas a dhèanamh"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Bidh an tagradh ri làimh ma ghabhas lèirmheasaiche an tagradh os làimh"
+
+msgid "about.authorGuidelines"
+msgstr "Riaghailtean dha na h-ùghdaran"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Liosta-chromagan ullachadh an tagraidh"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Mar phàirt dhen phròiseas tagraidh, bidh aig na h-ùghdaran cromag a chur ris "
+"na nithean a leanas air fad a dh’innse gu bheil an tagradh aca a’ gèilleadh "
+"ri gach aon dhiubh agus mur eil tagradh a’ gèilleadh ris na riaghailtean "
+"seo, dh’fhaoidte gun tèid a thilleadh dha na h-ùghdaran."
+
+msgid "about.copyrightNotice"
+msgstr "Brath na còrach-lethbhreac"
+
+msgid "about.privacyStatement"
+msgstr "An aithris prìobhaideachd"
+
+msgid "about.authorFees"
+msgstr "Tàillean ùghdair"
+
+msgid "about.authorFeesMessage"
+msgstr "Iarraidh an t-iris-leabhar seo na tàillean a leanas air ùghdaran."
+
+msgid "about.peerReviewProcess"
+msgstr "Pròiseas nan lèirmheas le seise"
+
+msgid "about.publicationFrequency"
+msgstr "Tricead an fhoillseachaidh"
+
+msgid "about.openAccessPolicy"
+msgstr "Poileasaidh an inntrigidh fhosgailte"
+
+msgid "about.delayedOpenAccess"
+msgstr "Inntrigeadh fosgailte le dàil"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Deasaiche an tagraidh"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Sgrìobh no cuir ann beachdan an lèirmheis an-seo"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Ri lìonadh leis an deasaiche"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Cuir cuimhneachan"
+
+msgid "reviewer.article.automatic"
+msgstr "(Gu fèin-obrachail)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Moladh"
+
+msgid "reviewer.article.submitReview"
+msgstr "Cuir an lèirmheas chun an deasaiche"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Beachdan"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Faidhlichean a chaidh luchdadh suas"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "An tionndadh a luchdaich an lèirmheasaiche suas"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Ma tha thu airson nòtaichean a chur ris an fhaidhle dhan deasaiche, sàbhail "
+"e air a’ chlàr-chruaidh agad is cleachd “Brabhsaich” no “Luchdaich suas”.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Iarrtas an deasaiche"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Do fhreagairt"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Chaidh an lèirmheas a chur"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Tha an lèirmheas ri lìbhrigeadh"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Gabh ris an tagradh"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Tha feum air ath-dheasachadh"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Cuir a chùm lèirmheis às ùr"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Cuir às ùr am badeigin eile"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Diùlt an tagradh"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Seall na beachdan"
+
+msgid "reviewer.article.schedule"
+msgstr "An sgeideal"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "An tagradh a tha ri lèirmheasadh"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Sgeideal lèirmheis"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Ceuman lèirmheis"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Stiùireadh do lèirmheasaichean"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Innsidh an stiùireadh do lèirmheasaichean mar a thomhaiseas iad a bheil "
+"tagradh iomchaidh airson foillseachadh san iris-leabhar agus faodar "
+"stiùireadh sònraichte sam bith a ghabhail a-staigh a dh’innseas mar a dh’"
+"ullaichear lèirmheas èifeachdach is cuideachail. Bidh dà bhogsa airson "
+"teacsa saor aig lèirmheasaichean rè an lèirmheis, a’ chiad dhiubh “airson an "
+"ùghdair is an deasaiche” agus an dàrna fear “airson an deasaiche.” Air neo, "
+"is urrainn do mhanaidsear an iris-leabhair lèirmheas seise a chruthachadh "
+"fon earrann “Foirmean lèirmheis.” Ge be dè an t-slighe, bidh cothrom aig na "
+"deasaichean na lèirmheasan a ghabhail a-staigh sa chonaltradh leis an ùghdar."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Cuir fios gu deasaiche nan tagraidhean"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "is innis an gabh thu an lèirmheas os làimh."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Ma tha thusa a’ dol a dhèanamh an lèirmheis, thoir sùil air an stiùireadh do "
+"lèirmheasaichean gu h-ìosal."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Briog air ainmean fhaidhlichean airson na faidhlichean a tha co-cheangailte "
+"ris an tagradh seo a luchdadh a-nuas is lèirmheas a dhèanamh orra (air an "
+"sgrìn no air tionndadh clò-bhuailte)."
+
+msgid "reviewer.competingInterests"
+msgstr "Còmhstri ùidhean"
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Briog air an ìomhaigheag airson do lèirmheas air an tagradh seo a chur a-"
+"steach (no a chur ann)."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"A bharrachd air sin, is urrainn dhut faidhlichean a luchdadh suas dhan "
+"deasaiche agus/no ùghdar airson co-comhairleachaidh."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Tagh moladh agus cuir an lèirmheas airson am pròiseas a choileanadh. "
+"Feumaidh tu lèirmheas a chur a-steach no faidhle a luchdadh suas mus tagh "
+"thu moladh."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Suidhich no cuir air gleus moladh an lèirmheasaiche."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Cha deach moladh a thaghadh. Feumaidh tu moladh a thaghadh airson a chur."
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Turas a chlàraich thu co-dhùnadh, chan urrainn dhut atharraichean a dhèanamh "
+"air an lèirmheas seo tuilleadh. A bheil thu cinnteach gu bheil thu airson "
+"leantainn air adhart?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Am faidhle a tha ri ghrinn-deasachadh"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Faidhle a’ ghrinn-deasaiche"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Faidhle a’ ghrinn-deasaiche"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Chan eil dearbh-leughadh ri dhèanamh"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Cha ghabh am post-d iarrtais a chur gus am bi tionndadh lèirmheis ann."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Cha ghabh am post-d iarrtais a chur gus an deach faidhle a thaghadh airson "
+"grinn-deasachadh fo “Co-dhùnadh an deasaiche” air duilleag nan lèirmheasan."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Cha ghabh am post-d iarrtais a chur gus an deach am faidhle a luchdadh suas "
+"airson grinn-deasachadh."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Grinn-deasachadh tòiseachail"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Grinn-deasachadh an deasaiche"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Grinn-deasachadh an ùghdair"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Grinn-deasachadh deireannach"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Tionndadh an grinn-deasachaidh"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Iomruin grinn-deasaiche"
+
+msgid "submission.copyedit.useFile"
+msgstr "Cleachd am faidhle"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Beachdan grinn-deasachaidh"
+
+msgid "submission.copyedit.instructions"
+msgstr "Stiùireadh grinn-deasachaidh"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Chan eil gin (Luchdaich suas an tionndadh grinn-deasaichte deireannach mar "
+"thionndadh co-dhealbhachd mus cuir thu iarrtas)"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Tha aithnichear poblach a’ ghailearaidh seo ann mu thràth."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Iomruin deasaiche co-dhealbhachd"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Tagh deasaiche co-dhealbhachd ùr"
+
+msgid "submission.layout.layoutComments"
+msgstr "Beachdan co-dhealbhachd"
+
+msgid "submission.layout.instructions"
+msgstr "Stiùireadh co-dhealbhachd"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Ceangladh nan reifreansan"
+
+msgid "submission.proofreadingComments"
+msgstr "Beachdan dearbh-leughaidh"
+
+msgid "submission.proofread.corrections"
+msgstr "Ceartachaidhean dearbh-leughaidh"
+
+msgid "submission.proofread.instructions"
+msgstr "Stiùireadh dearbhaidh"
+
+msgid "submission.logType.article"
+msgstr "Artaigeal"
+
+msgid "submission.logType.author"
+msgstr "Ùghdar"
+
+msgid "submission.logType.editor"
+msgstr "Deasaiche"
+
+msgid "submission.logType.review"
+msgstr "Lèirmheas"
+
+msgid "submission.logType.copyedit"
+msgstr "Grinn-deasachadh"
+
+msgid "submission.logType.layout"
+msgstr "Co-dhealbhachd"
+
+msgid "submission.logType.proofread"
+msgstr "Dearbh-leughadh"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Conaltradh an deasaiche/ùghdair"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Beachdan grinn-deasachaidh"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Airson an ùghdair is an deasaiche"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Airson an deasaiche"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"An dèidh a chur, thoir seachad lethbhreac so-dheasaichte BCC as urrainnear "
+"cur dha na lèirmheasaichean."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Airson an ùghdair is an deasaiche"
+
+msgid "submission.comments.forEditor"
+msgstr "Airson an deasaiche"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Sàbhail is cuir post-d chun an ùghdair"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Sàbhail is cuir post-d chun an deasaiche"
+
+msgid "user.register.selectContext"
+msgstr "Tagh iris-leabhar airson clàradh aige:"
+
+msgid "user.register.noJournals"
+msgstr ""
+"Chan eil iris-leabhar sam bith air an làrach seo as urrainn dhut clàradh "
+"aige."
+
+msgid "user.register.privacyStatement"
+msgstr "An aithris prìobhaideachd"
+
+msgid "user.register.registrationDisabled"
+msgstr ""
+"Chan eil an t-iris-leabhar seo a’ clàradh chleachdaichean aig an àm seo."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Chan eil am facal-faire a chuir thu a-steach fada gu leòr."
+
+msgid "user.register.readerDescription"
+msgstr ""
+"Gheibhear fios air a’ phost-d nuair a thèid iris dhen iris-leabhar "
+"fhoillseachadh."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Gheibhear fios air a’ phost-d nuair a thèid inntrigeadh fosgailte a thoirt "
+"do dh’iris-leabhar."
+
+msgid "user.register.authorDescription"
+msgstr "Comasach air nithean a chur dhan iris."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Deònach lèirmheas seise a dhèanamh air tagraidhean dhan iris-leabhar."
+
+msgid "user.register.reviewerDescription"
+msgstr "Deònach lèirmheas seise a dhèanamh air tagraidhean dhan làrach."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Aithneachadh de dh’ùidhean lèirmheis (raointean chuspairean agus dòighean "
+"rannsachaidh):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Tha, bu toil leam fios fhaighinn air foillseachaidhean ùra agus brathan a "
+"thaobh gach iris-leabhar a chlàraich mi aige."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Feumaidh tu gabhail ris an aithris phrìobhaideachd aig gach iris-leabhar a "
+"tha thu a’ clàradh aige."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Feumaidh tu gabhail ri aithris prìobhaideachd na làraich seo."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Na fo-sgrìobhaidhean agam"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Staid an fho-sgrìobhaidh"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Chì thu fo-sgrìobhaidhean gnìomhach agus feadhainn a dh’fhalbh an ùine orra "
+"gu h-ìosal leis a’ cheann-là a dh’fhalbh an ùine orra. A bharrachd air sin, "
+"dh’fhaoidte gum bi am fiosrachadh a leanas mun staid ri fhaicinn an cois "
+"gach fo-sgrìobhadh."
+
+msgid "user.subscriptions.status"
+msgstr "Staid"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Tuairisgeul"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr ""
+"Tha feum air barrachd fiosrachaidh mus gabh am fo-sgrìobhadh a chur an gnìomh"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Feumaidh gach fo-sgrìobhadh lèirmheas mus gabh a chur an gnìomh"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Thòiseachadh air pàigheadh de làimh ach cha d’fhuaradh e fhathast"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr ""
+"Thòiseachadh air pàigheadh air loidhne ach sguireadh dheth no cha deach a "
+"choileanadh"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Fo-sgrìobhadh neach fa leth"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Fo-sgrìobhaidhean institiuide"
+
+msgid "user.subscriptions.renew"
+msgstr "Ath-nuadhaich"
+
+msgid "user.subscriptions.purchase"
+msgstr "Ceannaich"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Ceannaich fo-sgrìobhadh ùr"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Ceannaich fo-sgrìobhadh neach fa leth"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Ceannaich fo-sgrìobhadh institiuide"
+
+msgid "user.subscriptions.expires"
+msgstr "Falbhaidh an ùine air: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Dh’fhalbh an ùine air: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Seall na seòrsaichean de dh’fho-sgrìobhaidhean a tha ri fhaighinn"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Seòrsa an fho-sgrìobhaidh"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Ballrachd"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Thagh thu fo-sgrìobhadh de sheòrsa a dh’fheumas fiosrachadh ballrachd."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Tagh seòrsa dligheach de dh’fho-sgrìobhadh."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Tha fo-sgrìobhadh fa leth aig a’ chunntas chleachdaiche seo mu thràth."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr ""
+"Fiosrachadh mun bhallrachd ma tha feum air seo mu choinneamh seòrsa an fho-"
+"sgrìobhaidh a chaidh a thaghadh."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Ainm na h-institiuide"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Tha feum air ainm institiuid."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Seòladh puist"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Àrainn"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Feumaidh fo-sgrìobhadh dhen t-seòrsa a thagh thu àrainn agus/no rainse IP "
+"airson dearbhadh an fho-sgrìobhaidh."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Cuir àrainn dhligheach a-steach."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Rainsean IP"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Cuir a-steach rainse IP dhligheach."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Sguab às"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Cuir ris"
+
+msgid "search.browseAuthorIndex"
+msgstr "Rùraich clàr-amais nan ùghdar"
+
+msgid "search.searchFor"
+msgstr "Lorg na leanas sna h-artaigealan"
+
+msgid "search.withinJournal"
+msgstr "Am broinn"
+
+msgid "search.allJournals"
+msgstr "A h-uile iris-leabhar"
+
+msgid "search.authorIndex"
+msgstr "Rùraich clàr-amais nan ùghdar"
+
+msgid "editor.navigation.issues"
+msgstr "Irisean"
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Tha an tagradh seo a’ feitheamh ri aonta fhathast agus nochdaidh e san iris "
+"an uairsin."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "A’ feitheamh ri aonta."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Clàraich aig iris-leabhraichean eile"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Falaich na h-iris-leabhraichean eile"
+
+msgid "article.view.interstitial"
+msgstr "Tagh faidhle artaigil airson a luchdadh a-nuas."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Air aontachadh"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "A’ feitheamh ri aonta"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Aonta a’ ghailearaidh"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Ag inneacsadh “{$journalName}”"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr ""
+"Chan eil an gleus luirg seo a’ ceadachadh ath inneacsadh iris-leabhar air "
+"iris-leabhar."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"Cha robh an t-slighe “{$journalPath}” a thugadh seachad a’ dol gu iris-"
+"leabhar."
+
+msgid "editor.issues.backIssues"
+msgstr "Seann irisean"
+
+msgid "editor.issues.futureIssues"
+msgstr "Irisean ri thighinn"
+
+msgid "navigation.subscriptions"
+msgstr "Fo-sgrìobhaidhean"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"Ghabh {$editorName} am pròiseas deasachaidh airson an artaigil "
+"{$submissionId} os làimh."
+
+msgid "catalog.sortBy"
+msgstr "Òrdugh nan artaigeal"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Tagh òrdugh dha na h-artaigealan san roinn-seòrsa seo."

@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-13 10:04+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Použitie:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr ""
+"Uloženie nebolo úspešné! DOAJ API vrátilo nasledujúce chybu: '{$param}'."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Automatická registrácia DOAJ"
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"Pre registráciu použite testovacie rozhrania API (testovacie prostredie) "
+"DOAJ. Nezabudnite túto možnosť odstrániť pred produkčnou fázou."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS automaticky uloží články do DOAJ. Upozorňujeme, že to môže trvať krátku "
+"dobu po spracovaní publikácie. Môžete si prezrieť všetky nezaregistrované "
+"články."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Kľúč API nájdete na užívateľskej stránke DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API kľúč"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr ""
+"Ak chcete zaregistrovať články z OJS, zadajte prosím kľúč DOAJ API. Inak "
+"budete aj naďalej môcť exportovať do formátu DOAJ XML, ale nebudete môcť "
+"zaregistrovať svoje články s DOAJ z OJS."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Kontaktujte DOAJ pre vloženie"
+
+msgid "plugins.importexport.doaj.description"
+msgstr ""
+"Export časopisu pre DOAJ a odoslanie emailu s informáciami o časopise "
+"zástupcovi DOAJ."
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Plugin exportu pre DOAJ"

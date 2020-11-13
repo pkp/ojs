@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-13 11:41+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/sk_SK/>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Pre pokračovanie nahrajte súbor v \"Import\"."
+
+msgid "plugins.importexport.users.results"
+msgstr "Výsledky"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Import bol úspešne dokončený. Používatelia s užívateľskými menami a e-"
+"mailovými adresami, ktoré sa doteraz nepoužívajú, boli importované spoločne "
+"s príslušnými užívateľskými skupinami."
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Do súboru \"{$fileName}\" sa nedá zapisovať."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Počas exportu došlo k chybám"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Exportovať všetky"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exportovať podľa role"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Export užívateľov"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Bol špecifikovaný neznámy časopis \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Nedajú sa použiť heslá s {$importHash}; OJS je nakonfigurovaný pre použitie "
+"{$ojsHash}. Ak budete pokračovať, budete musieť obnoviť heslá importovaných "
+"užívateľov."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Varovanie"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Potvrďte, že toto sú užívatelia, ktorých chcete importovať do systému"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Počas importu došlo k chybe"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Nasledujúci užívatelia boli úspešne importovaní do systému"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Pokračovať v importe ostatných užívateľov v prípade výskytu chyby."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Pošlite e-mailom každému importovanému užívateľovi upozornenie, ktoré "
+"obsahuje užívateľské meno a heslo používateľa."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Súbor údajov o užívateľoch"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Vyberte dátový súbor XML obsahujúci informácie o užívateľovi, ktorý chcete "
+"importovať do tohto časopisu. Informácie o formáte tohto súboru nájdete v "
+"pomocníkovi časopisu. <br/> <br/> Ak importovaný súbor obsahuje nejaká "
+"používateľské mená alebo e-mailové adresy, ktoré už v systéme existujú, "
+"používateľské dáta pre týchto používateľov nebudú importované a všetky nové "
+"úlohy, ktoré majú byť vytvorené, budú pridelené súčasným užívateľom."
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "import užívateľov"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Príklady:\n"
+"\tImport užívateľov do myJournal z myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExport všetkých užívateľov myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExport užívateľov podľa ich ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Použitie: {$scriptName} {$pluginName} [command] ...\n"
+"Príkazy:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.description"
+msgstr "Zaisťuje import a export užívateľov"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Plugin XML import/export užívateľov"
