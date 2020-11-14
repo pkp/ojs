@@ -260,9 +260,8 @@ msgstr "Исходный текст"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Краткое описание"
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "Предоставить файл рецензентам (без метаданных), так как он не нарушает требования слепого рецензирования."
+msgstr "Предоставить файл рецензентам (без метаданных), так как он не нарушает требования анонимного рецензирования."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Использовать только для официально опубликованных материалов."
