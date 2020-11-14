@@ -380,6 +380,9 @@ msgstr "ISSN"
 msgid "journal.viewAllIssues"
 msgstr "Показать все выпуски"
 
+msgid "user.authorization.representationNotFound"
+msgstr "Не удалось найти запрошенную гранку."
+
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Включить пользователей без назначенных ролей в этом журнале."
 

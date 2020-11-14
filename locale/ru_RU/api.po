@@ -55,3 +55,6 @@ msgstr "Запрошенная вами публикация не являетс
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Запрошенная вами публикация не является частью этого материала."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Вы не можете связать файл с этого этапа с гранкой."
