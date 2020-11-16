@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-13 12:51+0000\n"
-"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"PO-Revision-Date: 2020-11-16 07:19+0000\n"
+"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/locale/sk_SK/"
 ">\n"
 "Language: sk_SK\n"
@@ -567,3 +567,27 @@ msgstr "Detaily"
 
 msgid "article.submissions"
 msgstr "Príspevky"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Udalosť príspevku"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong> Poznámka: </strong> Inštitucionálne predplatné platené online "
+"vyžaduje overenie domény a rozsahu IP adries, aby mohlo byť aktivované."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Inštitucionálne predplatné nepožaduje login. Užívateľská doména a/alebo IP "
+"adresa slúži k umožneniu prístupu k obsahu predplatného."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Individuálne predplatné vyžaduje prihlásenie, aby bol umožnený prístup k "
+"obsahu predplatného."
+
+msgid "subscriptions.status.other"
+msgstr "Iné, pozri poznámky"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Nemáte aktívne predplatné."
