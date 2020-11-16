@@ -17,7 +17,7 @@
 </tab>
 <tab id="archive" label="{translate key="manager.website.archiving"}">
 	{help file="settings/distribution-settings" section="archiving" class="pkp_help_tab"}
-	<tabs :is-side-tabs="true">
+	<tabs :is-side-tabs="true" :track-history="true">
 		<tab id="pln" label="{translate key="manager.setup.plnPluginArchiving"}">
 			<pkp-form
 				v-bind="components.archivePn"
