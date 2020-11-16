@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-16 10:34+0000\n"
+"PO-Revision-Date: 2020-11-16 18:52+0000\n"
 "Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/locale/sk_SK/"
 ">\n"
@@ -1320,3 +1320,261 @@ msgstr "Príspevok odoslaný do fronty pre naplánovanie publikácie"
 
 msgid "submission.event.submissionSubmitted"
 msgstr "Článok bol podaný"
+
+msgid "article.nonpdf.title"
+msgstr "Stiahnutie článku"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Vybraný súbor PDF by sa mal načítať tu, ak má váš webový prehliadač "
+"nainštalovaný plugin pre čítanie súborov PDF (napríklad posledná verzia <a "
+"href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>). </p>"
+
+msgid "article.download"
+msgstr "Stihnúť tento PDF súbor"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.pageTitle"
+msgstr "Zobraziť {$title}"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Tipy pre vyhľadávanie: <ul>\n"
+"<li>Nezáleží na veľkosti písmen vyhľadávaného výrazu</li>\n"
+"<li>Bežné slová sú ignorované</li>\n"
+"<li>V predvolenom nastavení sú vrátené iba články obsahujúce<em>všetky</em> "
+"termíny dotazu (tzn. <em>AND</em> je aplikováno)</li>\n"
+"<li>Kombinujte viac slov pomocou<em>OR</em> pre nájdenie článkov "
+"obsahujúcich niektorý z termínov; napr. <em>vzdelávanie OR výskum</em></li>\n"
+"<li>Pre vytvorenie komplexnejších dopytov použite zátvorky; napr. <em>archív "
+"((časopis OR konferencia) NOT dizertácia)</em></li>\n"
+"<li>Vyhľadajte presnú frázu vložením hľadaného výrazu do úvodzoviek; napr. "
+"<em>\"open access publikovanie\"</em></li>\n"
+"<li>Vylúčte slovo tým, že pred neho vložíte <strong>-</strong> alebo "
+"<em>NOT</em>; napr.. <em>online -politika</em> alebo <em>online NOT "
+"politika</em></li>\n"
+"<li>Použite <strong>*</strong> v termíne ako divokú kartu pre nájdenie "
+"akejkoľvek sekvencie znakov; napr. <em>soci* etika</em> by vrátilo dokumenty "
+"obsahujúci \"sociologický\" nebo \"sociálny\"</li>\n"
+"</ul>"
+
+msgid "search.authorDetails"
+msgstr "Detaily autora"
+
+msgid "search.authorIndex"
+msgstr "Prechádzať index autorov"
+
+msgid "search.allJournals"
+msgstr "Všetky časopisy"
+
+msgid "search.withinJournal"
+msgstr "V rámci"
+
+msgid "search.searchFor"
+msgstr "Vyhľadávať v článkoch"
+
+msgid "search.browseAuthorIndex"
+msgstr "Prechádzať index autorov"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Pridať"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Zmazať"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Vložte, prosím, platný rozsah IP adries."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ak je sem vložený rozsah IP adries, je meno domény voliteľné.<br />Platné "
+"hodnoty zahŕňajú jednotlivú IP adresu (napr. 142.58.103.1), IP rozsah (napr. "
+"142.58.103.1 - 142.58.103.4), IP rozsah vyjadrený divokou kartou '*' (napr.. "
+"142.58.*.*), a IP rozsah s CIDR (napr.. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Rozsah IP adries"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Vložte, prosím, platný názov domény."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Zvolený typ predplatného vyžaduje meno domény a/alebo rozsah IP pre overenie "
+"predplatného."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Pokiaľ sem vložíte meno domény, rozsah IP je voliteľný.<br />Platné hodnoty "
+"sú mená domén (napr. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domain"
+msgstr "Doména"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Poštová adresa"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Je vyžadované zadanie mena organizácie."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Meno organizácie"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Je potrebné zadať informácie o členstve pre vybraný typ predplatného."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Tento užívateľský účet má už individuálne predplatné."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Zvoľte, prosím, platný typ predplatného."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Zvolený typ predplatného vyžaduje informácie o členstve."
+
+msgid "user.subscriptions.form.membership"
+msgstr "Členstvo"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Typy predplatného"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Zobraziť dostupné typy predplatného"
+
+msgid "user.subscriptions.expired"
+msgstr "Vypršalo dňa {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Vyprší dňa {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Zakúpiť inštitucionálne predplatné"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Zakúpiť individuálne predplatné"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Zakúpiť nové predplatné"
+
+msgid "user.subscriptions.purchase"
+msgstr "Kúpiť"
+
+msgid "user.subscriptions.renew"
+msgstr "Obnoviť"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Inštitucionálne predplatné"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Individuálne predplatné"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr ""
+"On-line platba bola začatá, ale buď bola zrušená, alebo nebola dokončená"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manuálna platba bola začatá, ale doteraz nebola doručená"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Je potrebné skontrolovať predplatné pred jeho aktiváciou"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Je potrebné zadať ďalšie informácie pred aktivovaním predplatného"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Popis"
+
+msgid "user.subscriptions.status"
+msgstr "Stav"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Nižšie sú zobrazené aktívne a zmazané predplatné spolu s dňom vypršania. "
+"Navyše, nasledujúce informácie o stave môžu byť vložené ku každému "
+"predplatnému."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Stav predplatného"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Moje predplatné"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Musíte súhlasiť s prehlásením o ochrane osobných údajov na tomto webe."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Musíte súhlasiť s prehlásením o ochrane osobných údajov každého časopisu, do "
+"ktorého sa registrujete."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Áno, súhlasím s tým, aby moje údaje boli zozbierané a uložené podľa<a href=\""
+"{$privacyUrl}\" target=\"_blank\">vyhlásenie o ochrane osobných údajov</a> "
+"tohto časopisu."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Áno, chcem dostávať upozornenia na nové články a dostávať nové upozornenia v "
+"rámci všetkých časopisov, ku ktorým som sa zaregistroval."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Napíšte vaše oblasti záujmu pre recenzie (predmety záujmu a výskumné metódy):"
+
+msgid "user.register.reviewerDescription"
+msgstr ""
+"Ochotný spracovávať recenzie k príspevkom do časopisu. Určiť oblasť záujmu ("
+"významné oblasti a výskumné metódy)."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Ochotný spracovávať recenzie k príspevkom do časopisu."
+
+msgid "user.register.authorDescription"
+msgstr "Schopný prispievať do časopisu."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Informovaný e-mailom v okamihu udelenia otvoreného prístupu číslu časopisu."
+
+msgid "user.register.readerDescription"
+msgstr "Informovaný e-mailom pri vydaní čísla časopisu."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Heslo, ktoré ste vložili, nie je dostatočne dlhé."
+
+msgid "user.register.registrationDisabled"
+msgstr "Tento časopis v súčasnosti neprijíma žiadne registrácie užívateľov."
+
+msgid "user.register.privacyStatement"
+msgstr "Vyhlásenie o súkromí"
+
+msgid "user.register.noJournals"
+msgstr ""
+"Na tejto stránke nie sú žiadne časopisy, do ktorých by ste sa mohli "
+"zaregistrovať."
+
+msgid "user.register.selectContext"
+msgstr "Vybrať časopis, v ktorom chcete byť registrovaný:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Uložiť a zaslať e-mailom editorovi"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Uložiť a zaslať e-mailom autorovi"
+
+msgid "submission.comments.forEditor"
+msgstr "Pre editora"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Pre autora a editora"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Po odoslaní poskytnúť editovateľnú BCC (skrytú) kópiu pre zaslanie "
+"recenzentom."
