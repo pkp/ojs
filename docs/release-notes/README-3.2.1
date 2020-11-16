@@ -4,6 +4,20 @@ Git tag: 3_2_1-2
 Release date: November 13, 2020
 ===============================
 
+Configuration Changes
+---------------------
+
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
+New config.inc.php parameters:
+	- database.collation - The character set collation to use in database
+		queries. Default: utf8_general_ci
+	- email.smtp_suppress_cert_check - True if PHPMailer's certificate check
+		is to be disabled. Not recommended unless you're sure. Default: Off
+	- curl.cainfo - Path to Certificate Authority (CA) bundle.
+
+
 3.2.1-2 Build
 -------------
 	#2580: Correct outdated reference to geo IP tool path
