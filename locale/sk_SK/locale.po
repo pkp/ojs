@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-16 07:19+0000\n"
+"PO-Revision-Date: 2020-11-16 10:34+0000\n"
 "Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/locale/sk_SK/"
 ">\n"
@@ -591,3 +591,732 @@ msgstr "Iné, pozri poznámky"
 
 msgid "subscriptions.status.noSubscription"
 msgstr "Nemáte aktívne predplatné."
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Pre editora"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Pre autora a editora"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Tieto komentáre môžu byť zdieľané s autorom.<br />\n"
+"(Po uložení je možné pridať ďalšie komentáre.)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Komentáre pre redigovanie"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Korešpondencia Editor/Autor"
+
+msgid "submission.logType.proofread"
+msgstr "Korektúry"
+
+msgid "submission.logType.layout"
+msgstr "Typografia"
+
+msgid "submission.logType.copyedit"
+msgstr "Redigovanie"
+
+msgid "submission.logType.review"
+msgstr "Recenzia"
+
+msgid "submission.logType.editor"
+msgstr "Editor"
+
+msgid "submission.logType.author"
+msgstr "Autor"
+
+msgid "submission.logType.article"
+msgstr "Článok"
+
+msgid "submission.proofread.instructions"
+msgstr "Inštrukcie pre korektúry"
+
+msgid "submission.proofread.corrections"
+msgstr "Korekčné opravy"
+
+msgid "submission.proofreadingComments"
+msgstr "Komentár korektora"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Previazanie referencií"
+
+msgid "submission.layout.instructions"
+msgstr "Inštrukcie pre typografické úpravy"
+
+msgid "submission.layout.layoutComments"
+msgstr "Komentár typografa"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Nahradiť typografa"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Prideliť typografa"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Identifikácia verejnej sadzobnice už existuje."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Žiadny (Nahrajte finálnu redigovanú verziu ako verziu typografa pred tým, "
+"než odošlete žiadosť)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Inštrukcie pre redigovanie"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Komentár k redigovaniu"
+
+msgid "submission.copyedit.useFile"
+msgstr "Použiť súbor"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Prideliť redaktora"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Redaktorova verzia"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Finálna redigovaná verzia"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Redigovaná verzia autora"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Redigovaná verzia editora"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Úvodná verzia redigovania"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"E-mail so žiadosťou nemôže byť odoslaný pokiaľ nie je nahraný súbor "
+"redigovania."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"E-mail so žiadosťou nemôže byť odoslaný kým nie je vybraný súbor redigovania "
+"v Rozhodnutia editora na stránke Recenzie."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"E-mail so žiadosťou nemôže byť odoslaný pokiaľ nie je vložená verzia pre "
+"recenziu."
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Pre nahranie manuskriptu do tohto časopisu dokončite nasledujúce "
+"kroky.</p>\n"
+"<ol>\n"
+"<li>Na tejto stránke kliknite na Prehliadať (alebo Vybrať súbor), čím "
+"otvoríte okno slúžiace pre nájdenie súboru na harddisku Vášho počítača.</li>"
+"\n"
+"<li>Nájdite súbor, ktorý chcete odoslať a označte ho.</li>\n"
+"<li>V okne pre výber súboru kliknite na Otvoriť; tým dôjde k umiestneniu "
+"mena súboru na túto stránku.</li>\n"
+"<li>Na tejto stránke kliknite na Nahrať; tým sa súbor z Vášho počítača nahrá "
+"do časopisu a bude premenovaný v súlade s pravidlami časopisu.</li>\n"
+"<li>Akonáhle bol príspevok nahraný, kliknite na Uložiť a Pokračovať dole na "
+"tejto stránke.</li>\n"
+"</ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Žiadne úlohy pre korektora"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Súbor od redaktora"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Súbor od redaktora"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Súbor pre redaktora"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Akonáhle zaznamenáte rozhodnutie, nebudete už môcť v tejto recenzii vykonať "
+"žiadne zmeny. Ste si istý, že chcete pokračovať?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Nebolo vybrané žiadne odporúčanie. Pred odoslaním musíte vybrať odporúčania."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Nastavte alebo upravte odporúčania recenzenta."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Pre dovŕšenie celého procesu vyberte odporúčania a odošlite recenziu. Než "
+"vyberiete odporúčania, musíte vložiť recenziu alebo nahrať súbor."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Navyše môžete nahrať súbory na konzultáciu pre editora a/alebo autora."
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Pre vloženie (alebo nakopírovanie) Vašej recenzie tohto príspevku kliknite "
+"na ikonu."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Prehláste, či ste alebo nie ste v konflikte záujmov vo vzťahu k tomuto "
+"výskumu (pozri <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\"> Pravidlá upravujúce konflikt "
+"záujmov</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Konflikt záujmov"
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Pre stiahnutie a spracovanie recenzie súborov spojených s týmto príspevkom "
+"kliknite na názvy týchto súborov."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Ak budete spracovávať recenziu, držte sa nižšie uvedených Pokynov pre "
+"recenzenta."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "či spracujete recenziu."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Informovať editora príspevku"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Smernice pre recenzentov poskytujú recenzentom kritériá pre zhodnotenie "
+"vhodnosti príspevku pre publikáciu v časopise a môžu zahŕňať zvláštne pokyny "
+"na prípravu efektívnej a užitočnej recenzie. Pri vlastnej recenzii majú "
+"recenzenti k dispozícii dva rámčeky pre voľný text, jednak \"pre autora a "
+"editora\" a za druhé \"pre editora\". Prípadne môže manažér časopisu "
+"vytvoriť formulár pre recenzie v sekcii \"Formuláre recenzií\". Vo všetkých "
+"prípadoch budú mať editori možnosť vložiť recenziu do korešpondencie s "
+"autorom."
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Inštrukcie pre recenzenta"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Kroky recenzie"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Plán recenzie"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Príspevok k recenzovaniu"
+
+msgid "reviewer.article.schedule"
+msgstr "Plánovanie"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Pozri komentáre"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Odmietnuť príspevok"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Podať niekde inde"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Znovu predložiť na recenziu"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Požadovať prepracovanie"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Prijať príspevok"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Termín pre recenziu"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Recenzia odoslaná"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Vaša odpoveď"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Požiadavky editora"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Ak chcete súbor pre editora opatriť poznámkami, uložte ho na Váš pevný disk "
+"a použite Prehľadávať/Nahrať.)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Verzia nahraná recenzentom"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Nahrané súbory"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Komentáre"
+
+msgid "reviewer.article.submitReview"
+msgstr "Odoslať recenziu editorovi"
+
+msgid "reviewer.article.recommendation"
+msgstr "Odporúčanie"
+
+msgid "reviewer.article.automatic"
+msgstr "(Automaticky)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Poslať pripomienku"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Vyplní editor"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Tu napíšte alebo sem nakopírujte komentár recenzenta"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Editor príspevku"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Príspevok bude sprístupnený po tom, čo recenzent odsúhlasí, že spracuje "
+"recenziu"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Nemôžem spracovať recenziu"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Spracujem recenziu"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Informovať editora"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Súbor k recenzovaniu"
+
+msgid "reviewer.averageQuality"
+msgstr "Hodnotenie"
+
+msgid "reviewer.completedReviews"
+msgstr "Hotové"
+
+msgid "reviewer.pendingReviews"
+msgstr "Články čakajúce na recenziu"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL pre vzdialene hosťovaný obsah"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Táto sadzobnica bude dostupná na novej webovej stránke."
+
+msgid "submission.layout.imageInvalid"
+msgstr "Neplatný formát obrázku. Podporované formáty sú .gif, .jpg a .png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Nahrať doplnkový súbor"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Nahradiť súbor"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Nahrať sadzobnicový formát"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Úlohy pre typografické úpravy"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Žiadne aktívne editorské úlohy."
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Dokončené editorské úlohy"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktívne editorské úlohy"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Vytvoriť nového recenzenta"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Zapísať existujúceho používateľa ako recenzenta"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Výsledok"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Odmietnutie"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Odmietnutie recenzentom & zrušenie"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Rozhodnutie editora, Kolo {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Recenzia, Kolo{$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Zobraziť odmietnutie, zrušenie, predchádzajúce kolá"
+
+msgid "sectionEditor.regrets"
+msgstr "Odmietnutie"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$SubmissionId} Odmietnutie recenzentov, zrušenie & predchádzajúce kolá"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Odmietnutie"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Opätovným informovaním tohto korektora znova spustíte jeho úlohy. Určite si "
+"to prajete urobiť?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Opätovným informovaním tohto typografa znova spustíte jeho úlohy. Určite si "
+"to prajete urobiť?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Opätovným informovaním tohto autora znova spustíte jeho úlohy. Určite si to "
+"prajete urobiť?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Opätovným informovaním tohto redaktora znova spustíte jeho úlohy. Určite si "
+"to prajete urobiť?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Neboli pridelené žiadne príspevky."
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Dokončené editorské úlohy"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktívne editorské úlohy"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Označené položky vyžadujú zásah editora, jednotlivé označenia "
+"znamenajú:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Vyžaduje sa zásah vo fáze "
+"lektorovania</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Vyžaduje sa zásah vo fáze "
+"rozvrhnutia textu</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Vyžaduje sa zásah vo fáze korektúr "
+"textu</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+" <li>Zvýraznené položky označujú akciu, ktorú vyžaduje editor, označený "
+"takto:\n"
+"  <ul>\n"
+"   <li class=\"highlightReviewerNotNotified\">Recenzent bol priradený, ale "
+"nebol oznámený e-mailom</li>\n"
+"   <li class=\"highlightNoDecision\">Všetci recenzenti sa vrátili so svojimi "
+"komentármi, ale žiadne rozhodnutie nie je zaznamenané</li>\n"
+"   <li class=\"highlightRevisedCopyUploaded\">Autor nahral revidovaný "
+"rukopis</li>\n"
+"   <li class=\"highlightReviewerConfirmationOverdue\">Recenzent čaká na "
+"potvrdenie pozvania ku vzájomnej recenzii</li>\n"
+"   <li class=\"highlightReviewerCompletionOverdue\">Recenzent čaká na "
+"dokončenie kontroly</li>\n"
+"  </ul>\n"
+" </li>\n"
+" <li>\"Termín splnenia\" je vyplnený v okamihu, keď recenzent prijme žiadosť "
+"o recenziu; ukazuje počet týždňov do termínu splnenia alebo (-) počet "
+"týždňov po termíne.</li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Prepáčte, nad týmto užívateľom nemáte administrátorské práva. Dôvodom môže "
+"byť:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Užívateľ je administrátorom stránok</li>\n"
+"\t\t\t<li>Užívateľ je aktívny v časopisoch, ktoré Vy nespravujete</li>\n"
+"\t\t</ul>\n"
+"\tTúto úlohu musí vykonať administrátor stránok.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Zablokovať tohto používateľa? Táto akcia zabráni užívateľovi, aby sa "
+"prihlásil do systému.\n"
+"\n"
+"Voliteľne môžete užívateľovi poskytnúť zdôvodnenie, prečo bol jeho účet "
+"zablokovaný."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Aby mohli čitatelia nájsť online verzie prác citovaných autormi, sú "
+"dostupné nasledujúce možnosti.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Pridať čitateľský nástroj</strong><p>Manažér časopisu môže do "
+"čitateľských nástrojov, ktoré sprevádzajú publikované položky, pridať "
+"funkciu \"Nájsť referenciu\", čo čitateľom umožní skopírovať názov "
+"referencie a vyhľadať tak v predvolených databázach citovanú prácu.</p></li>"
+"\n"
+"\t<li><strong>Vložiť odkazy do referencií</strong><p>Typograf môže pridať "
+"odkaz do referencií, ktoré je možné vyhľadať online. K tomu použije "
+"nasledujúce inštrukcie (možno ich upravovať).</p></li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Kroky: Front príspevkov &gt; Recenzia príspevku &gt; Editovanie príspevku "
+"&gt; Obsah.<br /><br />\n"
+"Zvoľte model, podľa ktorého bude s týmito aspektami procesu editácie "
+"nakladané. (Pre stanovenie hlavného editora a editorov sekcií prejdite v "
+"časti Správa časopisu na stránku Editori.)"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Navrhované oznámenie o copyrighte Creative Commons</h3>\n"
+"<h4>1. Navrhované pravidlá pre časopisy, ktoré ponúkajú otvorený prístup</h4>"
+"\n"
+"Autori, ktorí publikujú v tomto časopise, súhlasia s nasledujúcimi bodmi:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autori si ponechávajú copyright a garantujú časopisu právo prvého "
+"publikovania, pritom je práca zároveň licencovaná pod <a target=\"_new\" "
+"href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons "
+"Attribution licenciou</a>, ktorá umožňuje ostatným zdieľať túto prácu s tým, "
+"že priznajú jej autora a prvé publikovanie v tomto časopise.</li>\n"
+"\t<li>Autori môžu vstupovať do ďalších samostatných zmluvných dohôd pre "
+"neexkluzívne šírenie práce vo verzii, ktorá bola publikovaná v časopise ("
+"napríklad publikovať ju v knihe), avšak s tým, že priznajú jej prvé "
+"publikovanie v tomto časopise.</li>\n"
+"\t<li>Autorom je dovolené a odporúčané, aby sprístupnili svoju prácu online ("
+"napríklad na svojich webových stránkach) pred a počas redakčného riadenia "
+"ich príspevku, pretože takýto postup môže viesť k produktívnym výmenám "
+"názorov a tiež skoršiu a vyššiu citáciu publikovanej práce (Pozri <a target="
+"\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">Efekt "
+"otvoreného prístupu</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4> Navrhované pravidlá pre časopisy, ktoré ponúkajú oneskorený otvorený "
+"prístup</h4>\n"
+"Autori, ktorí publikujú v tomto časopise, súhlasia s nasledujúcimi bodmi:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autori si ponechávajú copyright a garantujú časopisu právo prvého "
+"publikovania, práca je po [URČITE PO AKO DLHOM ČASOVOM OBDOBÍ] od "
+"publikovania zároveň licencovaná pod <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution "
+"licenciou</a>, ktorá umožňuje ostatným zdieľať túto prácu s tým, že priznajú "
+"jej autora a prvé publikovanie v tomto časopise.</li>\n"
+"\t<li>Autori môžu vstupovať do ďalších samostatných zmluvných dohôd pre "
+"neexkluzívne šírenie práce vo verzii, ktorá bola publikovaná v časopise ("
+"napríklad publikovať ju v knihe), avšak s tým, že priznajú jej prvé "
+"publikovanie v tomto časopise.</li>\n"
+"\t<li>Autorom je dovolené a odporúčané, aby sprístupnili svoju prácu online ("
+"napríklad na svojich webových stránkach) pred a počas redakčného riadenia "
+"ich príspevku, pretože takýto postup môže viesť k produktívnym výmenám "
+"názorov a tiež skoršiu a vyššiu citáciu publikovanej práce (Pozri <a target="
+"\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">Efekt "
+"otvoreného prístupu</a>).</li>\n"
+"</ol>"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Všeobecné pluginy sa používajú k rozšíreniu OJS rôznymi spôsobmi, ktoré nie "
+"sú podporované inými kategóriami pluginov."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Autorizačné pluginy umožňujú OJS delegovať overenie užívateľov na iné "
+"systémy ako napríklad LDAP servery."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Pluginy sadzobníc článkov pridávajú podporu pre rôzne typy sadzobníc článkov."
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Pluginy pre sadzobnice článkov"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Typy predplatného"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Inštitucionálne predplatné"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Individuálne predplatné"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Správa predplatného"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>POZNÁMKA!</h4>\n"
+"<p>Systém nemohol automaticky prepísať konfiguračný súbor. Na vykonanie "
+"zmien konfigurácie musíte otvoriť<tt>config.inc.php</tt> vo vhodnom textovom "
+"editore a nahradiť jeho obsah obsahom textového poľa nižšie. </p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Špecifikovanie iného východiskového zdroja overení než OJS má nasledujúci "
+"efekt:</p>\n"
+"<ul>\n"
+"\t<li>Ak sa užívateľ pokúsi zaregistrovať nový účet na tejto stránke s "
+"používateľským menom, ktoré existuje v zdroji overenie (ale nie v OJS "
+"databáze), pokus o registráciu je povolený len vtedy, ak je zadané heslo "
+"platné pre tento užívateľský účet.</li>\n"
+"</ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "podobné dokumenty"
+
+msgid "search.results.orderDir.desc"
+msgstr "Zostupne"
+
+msgid "search.results.orderDir.asc"
+msgstr "Vzostupne"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevantnosť"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularita (za mesiac)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularita (za celý čas)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Názov časopisu"
+
+msgid "search.results.orderBy.issue"
+msgstr "Číslo"
+
+msgid "search.results.orderBy.date"
+msgstr "Dátum zverejnenia"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor"
+
+msgid "search.results.orderBy.article"
+msgstr "Názov článku"
+
+msgid "search.results.orderBy"
+msgstr "Radiť výsledky podľa"
+
+msgid "comments.authenticated"
+msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "Komentáre k tomuto článku"
+
+msgid "reader.purchasePrice"
+msgstr "{$price}) ({$currency}"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Predplatné alebo platený prístup"
+
+msgid "reader.subscriptionAccess"
+msgstr "Predplatený prístup"
+
+msgid "reader.openAccess"
+msgstr "Voľný prístup"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Pre prístup k položke je vyžadované predplatné. Prihláste sa do časopisu pre "
+"overenie predplatného."
+
+msgid "reader.subscribersOnly"
+msgstr "Iba pre predplatiteľov"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Typografické úpravy dokončené"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Sadzobnica aktualizovaná"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Typografické úpravy zahájené"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Typograf odobratý od príspevku"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Typograf pridelený k príspevku"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Pridelená korektúra dokončená"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Súbor s korektúrami aktualizovaný"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Pridelená korektúra zahájená"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Korektor odobratý od príspevku"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Korektor pridelený k príspevku"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Redigovaný súbor aktualizovaný"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Finálne redigovanie dokončené"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Úvodné redigovania dokončené"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Súbor s revíziami redaktora aktualizovaný"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Pridelené redigovanie začaté"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Redaktor odobratý od príspevku"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Redaktor pridelený k príspevku"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Príspevok obnovený z archívu"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Príspevok odoslaný do archívu"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Editorov súbor aktualizovaný"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Editorovo rozhodnutie odoslané"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor odobratý od príspevku"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editor pridelený k príspevku"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Autorov revidovaný súbor aktualizovaný"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Autorova revízia odoslaná"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Článok publikovaný"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Príspevok zaradený do čísla"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Príspevok odoslaný do fronty pre naplánovanie publikácie"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Článok bol podaný"
