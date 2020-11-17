@@ -23,7 +23,7 @@
 	border-radius: @radius;
 	box-shadow: inset 0 -1em 1em rgba(0, 0, 0, 0.1);
 	font-size: @font-sml;
-	line-height: @triple - 2; // account for border
+	line-height: calc(~"@{triple} - 2px"); // account for border
 	font-weight: @bold;
 	color: @primary;
 	text-decoration: none;
@@ -42,7 +42,7 @@
 	border: 1px solid @primary;
 	border-radius: @radius;
 	font-size: @font-sml;
-	line-height: @triple - 2; // account for border
+	line-height: calc(~"@{triple} - 2px"); // account for border
 	color: @primary;
 	text-decoration: none;
 
@@ -205,12 +205,12 @@
 	textarea {
 		padding: 0 0.5em;
 		width: 100%;
-		height: @triple - 2; // account for border
+		height: calc(~"@{triple} - 2px"); // account for border
 		background: #fff;
 		border: @form-border;
 		border-radius: @radius;
 		font-size: @font-sml;
-		line-height: @triple - 2; // account for border
+		line-height: calc(~"@{triple} - 2px"); // account for border
 	}
 
 	textarea {
@@ -264,84 +264,6 @@
 		input[type="tel"],
 		select {
 			max-width: 20em;
-		}
-	}
-
-	// Tag-it component
-	// @todo This just duplicates some styles from pkp-lib. We can probably
-	//  find a better way to share styles after beta, or move this to somewhere
-	//  more appropriate in the theme.
-	.tagit {
-		&:extend(.pkp_unstyled_list);
-		&:extend(.cmp_form input[type="text"]);
-		.pkp_helpers_clear();
-
-		// overwrite text field styles
-		max-width: 100%;
-		height: auto;
-
-		> li {
-			display: inline-block;
-
-			&.tagit-choice {
-				margin-right: 0.5em;
-				padding-left: 0.5em;
-				background: @bg-shade;
-				border-radius: @radius;
-				line-height: @double;
-			}
-		}
-
-		input[type="text"] {
-			display: inline-block;
-			border: none;
-			width: inherit;
-			line-height: 30px;
-			height: 30px;
-			vertical-align: top;
-			padding: 0 0.5em;
-		}
-	}
-
-	.tagit-close {
-		padding: 0 0.5em;
-		color: @no;
-	}
-}
-
-// Auto-complete selection fields for tagit component (not nested in .pkp_form)
-.ui-autocomplete {
-	&:extend(.pkp_unstyled_list);
-	width: 20em;
-	padding: 2px;
-	border-radius: @radius;
-	background: @bg-base;
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: -@half;
-		left: 1em;
-		width: 0;
-		height: 0;
-		color: @bg-base;
-		border-bottom: @half solid;
-		border-right: @half solid transparent;
-		border-left: @half solid transparent;
-		vertical-align: middle;
-	}
-
-	> li {
-		padding: @half;
-		font-size: @font-sml;
-		line-height: @line-sml;
-		color: #fff;
-		cursor: pointer;
-
-		&:hover,
-		&:focus {
-			background: @bg;
-			color: @text;
 		}
 	}
 }
@@ -438,7 +360,7 @@
 	ol {
 		&:extend(.pkp_unstyled_list);
 		margin-bottom: @triple;
-		padding: 5px 0;
+		padding: @half 0;
 		line-height: @double;
 		font-size: @font-sml;
 	}
@@ -524,6 +446,7 @@
 		clip: auto;
 		top: 0;
 		left: 50%;
+		color: @primary;
 	}
 }
 

@@ -225,7 +225,6 @@ class DefaultThemePlugin extends ThemePlugin {
 		// the files within the theme directory
 		$this->addScript('jQuery', $jquery, array('baseUrl' => ''));
 		$this->addScript('jQueryUI', $jqueryUI, array('baseUrl' => ''));
-		$this->addScript('jQueryTagIt', $request->getBaseUrl() . '/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js', array('baseUrl' => ''));
 
 		// Load Bootsrap's dropdown
 		$this->addScript('popper', 'js/lib/popper/popper.js');

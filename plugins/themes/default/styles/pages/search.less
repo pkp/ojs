@@ -15,14 +15,13 @@
 		.query {
 			width: 100%;
 			max-width: 100%;
-			height: (@double * 2) - 2; // account for border;
+			height: calc(~"@{quadruple} - 2px"); // account for border;
 			font-size: @font-lead;
-			line-height: (@double * 2) - 2; // account for border;
+			line-height: calc(~"@{quadruple} - 2px"); // account for border;
 		}
 	}
 
 	.search_advanced {
-		.pkp_helpers_clear;
 		border: @bg-border;
 		padding: 0 @double @double;
 
@@ -30,16 +29,27 @@
 			padding: @base @double;
 			margin: 0;
 			font-weight: @normal;
-			color: @text-light;
+		}
+
+		label {
+			font-size: @font-base;
+			font-style: normal;
 		}
 	}
 
 	.date_range {
-		float: left;
-		width: 50%;
 
-		.from {
-			margin-bottom: @double;
+		legend {
+			padding: 0;
+			font-size: @font-base;
+		}
+
+		label {
+			.pkp_screen_reader();
+		}
+
+		select + label + select {
+			margin-left: 0.25em;
 		}
 
 		[name*="Year"] {
@@ -53,11 +63,6 @@
 		[name*="Month"] {
 			width: 10em;
 		}
-	}
-
-	.author {
-		width: 50%;
-		float: right;
 	}
 
 	.submit {
@@ -76,10 +81,12 @@
 	}
 
 	.search_results {
-		margin: (@double * 2) 0;
+		margin: @quadruple 0;
+		padding: 0;
+		list-style: none;
 
 		.obj_article_summary {
-			padding: @double 0;
+			margin: @double 0;
 		}
 	}
 
@@ -94,6 +101,27 @@
 		a {
 			padding-left: 0.5em;
 			padding-right: 0.5em;
+		}
+	}
+
+	@media (min-width: @screen-tablet) {
+
+		.search_advanced {
+			.pkp_helpers_clear;
+		}
+
+		.date_range {
+			float: left;
+			width: 50%;
+
+			.to fieldset {
+				margin-bottom: 0;
+			}
+		}
+
+		.author {
+			float: right;
+			width: 50%;
 		}
 	}
 }

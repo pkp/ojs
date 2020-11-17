@@ -37,7 +37,7 @@
 	}
 
 	.submission_checklist {
-	
+
 		li {
 			padding: @double;
 
@@ -52,7 +52,7 @@
 				position: absolute;
 				font-size: @font-lead;
 				color: @yes;
-			}			
+			}
 		}
 	}
 
@@ -62,7 +62,7 @@
 			li {
 				.fa {
 					top: 22px;
-					left: @double - 3;
+					left: calc(~"@{double} - 3px");
 				}
 			}
 		}
@@ -74,9 +74,9 @@
 			}
 
 			li {
-				padding: @double @double @double (@double * 2);
+				padding: @double @double @double @quadruple;
 				border-bottom: @bg-border;
-				
+
 				.fa {
 					left: @double;
 				}
