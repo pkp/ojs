@@ -73,13 +73,13 @@ class IndexHandler extends PKPIndexHandler {
 				$request->redirect($journal->getPath());
 			}
 
-			$templateMgr->assign(array(
+			$templateMgr->assign([
 				'pageTitleTranslated' => $site->getLocalizedTitle(),
 				'about' => $site->getLocalizedAbout(),
 				'journalFilesPath' => $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/',
-				'journals' => $journalDao->getAll(true),
+				'journals' => $journalDao->getAll(true)->toArray(),
 				'site' => $site,
-			));
+			]);
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 			$templateMgr->display('frontend/pages/indexSite.tpl');
 		}
