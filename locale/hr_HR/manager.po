@@ -2,14 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
+"PO-Revision-Date: 2020-11-17 18:56+0000\n"
+"Last-Translator: Jakov-Marin Vežić <jakov.vezic@gmail.com>\n"
+"Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/manager/hr/"
+">\n"
+"Language: hr_HR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:25+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr "Jeste li sigurni da želite vratiti izvorno sve predloške e-pošte u ovom časopisu? Izgubit ćete sva podešenja koja ste napravili."
@@ -1370,3 +1374,497 @@ msgstr "Odaberite kontakt za pretplatu"
 
 msgid "manager.setup.categories.description"
 msgstr "Odaberite odgovarajuće kategorije koje su gore izlistane. Čitatelji će moći pregledavati članke po kategoriji iz cjelokupnog kompleta časopisa."
+
+msgid "stats.publications.galleys"
+msgstr "Datoteke"
+
+msgid "stats.publications.abstracts"
+msgstr "Sažeci"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} od {$total} članaka"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Ukupno pregleda datoteke po datumu"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Ukupno pregleda sažetka po datumu"
+
+msgid "stats.publications.none"
+msgstr "Nije pronađena statistika članka s navedenim parametrima."
+
+msgid "stats.publications.details"
+msgstr "Detalji članka"
+
+msgid "stats.publicationStats"
+msgstr "Statistika članka"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Pošalji kopiju primarnom kontaktu identificiranom u Postavkama časopisa."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Navedeni objekti nisu pronađeni."
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Navedena putanja časopisa, \"{$journalPath}\", ne postoji."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "GREŠKA:"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Nedostaje DOI prefiks za časopis s putem {$path}."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registracija uspješna!"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Registracija je neuspješna! Poslužitelj za DOI registraciju vratio je grešku:"
+" '{$param}'."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Ulazna datoteka {$param} nije čitljiva."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Za izlaznu datoteku {$param} nije moguće zapisivanje."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Neispravan XML:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Nemoguće konvertirati odabrane objekte."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Nijedan objekt nije odabran."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Prije izvoženja i registracije potvrdi XML."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Registriraj"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Označi kao registrirano"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Izvezi"
+
+msgid "plugins.importexport.common.action"
+msgstr "Radnja"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Registrirano"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Označi kao registrirano"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Nije pohranjeno"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Bilo koji status"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Bilo koji broj"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Imajte na umu da će lozinka biti spremljena kao obični tekst, tj. neće biti "
+"šifrirana."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Lozinka"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"Nije odabran nijedan izdavački objekt za dodjelu DOI-a u dodatku DOI javni "
+"identifikator, tako da u ovom dodatku nema mogućnosti pohranjivanja i "
+"izvoženja."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Dodatak nije u potpunosti postavljen."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Kako biste koristili dodatak, molimo idite u kategoriju dodatka \"Javni "
+"identifikator\", omogućite i konfigurirajte DOI dodatak i odredite ispravni "
+"DOI prefiks."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Zahtjevi dodatka nisu ispunjeni"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Prijelomi"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Brojevi"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Članci"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Postavke DOI dodatka"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Postavke"
+
+msgid "grid.genres.description"
+msgstr ""
+"Ove se sastavnice koriste u svrhu imenovanja datoteka i prikazane su u "
+"padajućem izborniku na datotekama koje se šalju. Vrste označene  ## "
+"omogućavaju korisniku da poveže datoteku ili s cijelom prijavom 99Z ili s "
+"određenom sastavnicom prema broju (npr., 02)."
+
+msgid "grid.genres.title"
+msgstr "Sastavnice članka"
+
+msgid "grid.genres.title.short"
+msgstr "Sastavnice"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Dozvole članka uspješno su resetirane."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Izjava o autorskim pravima i informacija o licenci će biti trajno "
+"priključena uz objavljen sadržaj, kako se ti podaci ne bi promijenili u "
+"slučaju da časopis izmijeni pravila za nove podneske članaka. Pritisni donje "
+"dugme da bi se vratile na početno stanje informacije o spremljenim dozvolama "
+"uz objavljen sadržaj članka."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Jeste li sigurni da želite ponovno postaviti podatke o dopuštenjima koji su "
+"već povezani uz članke? Ova akcija se ne može poništiti."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Broj: zadana će godina biti izvučena iz datuma objavljivanja broja."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Članak: zadana će godina biti izvučena iz datuma objavljivanja članka, kao \""
+"publish-as-you-go\"."
+
+msgid "manager.publication.library"
+msgstr "Knjižnica izdavača"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Uloge su grupe korisnika u časopisu kojima je dan pristup različitim "
+"razinama dopuštenja i povezanim tijekovima rada unutar časopisa. Postoji pet "
+"različitih razina dopuštenja: Upravitelji časopisa imaju pristup svemu u "
+"časopisu (svom sadržaju i postavkama); Urednici rubrike imaju potpuni "
+"pristup svom dodijeljenom sadržaju; Suradnici časopisa imaju ograničen "
+"pristup svim prijavama koje je urednik dodijelio izričito njima; Recenzenti "
+"mogu vidjeti i izvoditi prijave koje su im dodijeljene ; Autori mogu vidjeti "
+"i međudjelovati s ograničenom količinom informacija na njihovim vlastitim "
+"prijavama. Dodatno još postoji pet različitih zadataka po fazama za koje "
+"uloge mogu dobiti pristup: Prijava, Urednička recenzija, Recenzija, "
+"Uređivanje i Produkcija."
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Članci unutar objavljenih brojeva časopisa organizirani su u rubrike, obično "
+"prema temi ili vrsti sadržaja (npr. Pregledni članak, Istraživanje, itd)."
+
+msgid "grid.action.addSection"
+msgstr "Dodaj rubriku"
+
+msgid "grid.category.path"
+msgstr "Put"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Ova poveznica bit će prikazana samo kada se posjetitelj prijavi."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Poveznica na stranicu s opisom posjetiteljevih trenutnih i prijašnjih "
+"pretplata."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Poveznica na stranicu s opisom pretplata koje nudite."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Ovo je vrsta pretplate koja ne ističe; molimo da ne navodite datum završetka."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Ovo je vrsta pretplate koja ne ističe; molimo da ne navodite datum početka."
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Jeste li sigurni da želite obnoviti ovu pretplatu?"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Obavijesti pretplatnike putem e-pošte prije isteka pretplate."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Obavijesti pretplatnike putem e-pošte prije isteka pretplate."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Obavijesti pretplatnike putem e-pošte nakon isteka pretplate."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Obavijesti pretplatnike putem e-pošte nakon isteka pretplate"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} tjedana"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} mjeseci"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Molimo koristite dani popis stavki."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Pregledi stranice tablice sadržaja broja"
+
+msgid "manager.setup.userAccess.success"
+msgstr "Detalji pristupa korisnika časopisu su ažurirani."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Pružanje metapodataka vanjskim uslugama indeksiranja kroz <a href=\""
+"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Uključi OAI"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Prikazivanje sadržaja članka"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Ograničenja pristupa stranici"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Kratki opis (50-300 znakova) časopisa kojeg će tražilice prikazati na "
+"prikazu časopisa u rezultatima pretraživanja."
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Postavke indeksiranja za tražilice su ažurirane."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Dodajte sigurnu poveznicu u e-mail pozivu recenzentima."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Ograničenje pristupa datoteci"
+
+msgid "manager.setup.publishing"
+msgstr "Detalji objavljivanja"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Izjava o privatnosti je ažurirana."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Ograničenje broja poveznica za prikaz sljedećih stranica na popisu."
+
+msgid "manager.setup.masthead.success"
+msgstr "Detalji impresuma ovog časopisa su ažurirani."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Prijavi se za CLOCKSS uslugu putem <a href=\"http://clockss.org/\" target=\""
+"_blank\">the CLOCKSS web stranice</a>."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Opis CLOCKSS Licence"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS licenca će biti prikazana u O časopisu pod Arhiviranje: <a href=\""
+"http://clockss.org/\" target=\"_blank\">CLOCKSS Licenca</a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Omogućite CLOCKSS-u da pohrani i distribuira sadržaj časopisa u knjižnicama "
+"sudionicima putem stranice CLOCKSS <a href=\"{$clockssUrl}\" target=\""
+"_blank\">Publisher Manifest</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Odredite 6-10 knjižnica koje će registrirati i predmemorirati časopis. Na "
+"primjer, obratite se ustanovama gdje rade urednici ili članovi odbora ili "
+"ustanovama koje već sudjeluju u LOCKSS-u. Vidi <a href=\"http://www.lockss."
+"org/community/\" target=\"_blank\">LOCKSS zajednica</a>."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Opis LOCKSS licence"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS licenca će biti prikazana u O časopisu pod Arhiviranje: <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"LOCKSS Licenca</a>"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS i CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) osigurava besplatne usluge očuvanja za bilo "
+"koji OJS časopis koji ispunjava nekoliko osnovnih kriterija. PKP PN dodatak "
+"za OJS 3 je trenutno u razvoju i uskoro će bit dostupan u galeriji dodataka."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Kliknite na <button>Postavke</button> kako biste prihvatili uvjete "
+"korištenja za PKP PN."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Preservation Network (PN) osigurava besplatnu uslugu očuvanja za bilo "
+"koji OJS časopis koji ispunjava nekoliko osnovnih kriterija."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Omogućite PKP PN dodatak"
+
+msgid "manager.setup.lists.success"
+msgstr "Postavke popisa za ovaj časopis su ažurirane."
+
+msgid "manager.setup.keyInfo.description"
+msgstr "Popis urednika, upravitelja i drugih osoba povezanih s časopisom."
+
+msgid "manager.setup.keyInfo"
+msgstr "Ključne informacije"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Manji logo ili prikaz časopisa koji se može koristiti u popisima časopisa."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Uključite sve informacije o časopisu koje bi čitateljima, autorima i "
+"recenzentima mogle biti od interesa. To može uključivati Vašu politiku "
+"otvorenog pristupa, fokus i opseg časopisa, obavijest o autorskim pravima, "
+"objavljivanje sponzorstva, povijest časopisa, izjavu o privatnosti te "
+"uključenost u bilo koji LOCKSS i CLOCKSS arhivski sustav."
+
+msgid "manager.setup.contextAbout"
+msgstr "O časopisu"
+
+msgid "manager.setup.contextSummary"
+msgstr "Sažetak časopisa"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Unesite maksimalan broj stavki koji se može pojaviti na pojedinoj stranici "
+"raznih popisa koje generira časopis (na primjer, arhiv izdanja, kazalo "
+"autora, popis prijava, korisnika ili uređivanje zaduženja), te broj "
+"poveznica na prethodne odnosno slijedeće stranice popisa koji se može "
+"prikazati ispod popisa."
+
+msgid "manager.setup.information.success"
+msgstr "Informacije o časopisu su ažurirane."
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Za časopise koji nude trenutni ili odgođeni otvoreni pristup, uključite "
+"Creative Commons licencu uz sve objavljene radove u prikladno vrijeme."
+
+msgid "manager.setup.identity"
+msgstr "Identitet časopisa"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Navedeni ISSN nije ispravan."
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Opišite autorima, čitateljima i knjižničarima opseg članaka i drugih stavki "
+"koje će časopis objavljivati."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Koliko obavijesti prikazati na naslovnoj stranici. Ostaviti prazno da se "
+"obavijesti ne bi prikazivale."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Prikaži na naslovnoj stranici"
+
+msgid "manager.setup.contact.success"
+msgstr "Detalji o kontaktu časopisa su ažurirani."
+
+msgid "manager.setup.archiving.success"
+msgstr "Detalji o arhiviranju časopisa su ažurirani."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Dodatne informacije"
+
+msgid "manager.setup.announcements.success"
+msgstr "Postavke obavijesti su ažurirane."
+
+msgid "manager.setup.pageHeader"
+msgstr "Zaglavlje stranice časopisa"
+
+msgid "manager.setup.contextName"
+msgstr "Naziv časopisa"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Stilski list časopisa"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Početna stranica se po zadanim postavkama sastoji od navigacijskih "
+"poveznica. Dodatni se sadržaj početne stranice može dodati korištenjem jedne "
+"ili svih opcija u nastavku koje će se pojaviti po prikazanom redoslijedu."
+
+msgid "manager.setup.homepageContent"
+msgstr "Sadržaj početne stranice časopisa"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Urednički odbor"
+
+msgid "manager.setup.masthead"
+msgstr "Impresum"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Još ne postoje urednici rubrike. Dodajte ovu ulogu najmanje jednom korisniku "
+"putem Korisnici & uloge > Korisnici."
+
+msgid "manager.paymentTypes"
+msgstr "Načini plaćanja"
+
+msgid "manager.payment.success"
+msgstr "Postavke plaćanja su ažurirane."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Jeste li sigurni da želite obrisati ovu pretplatu?"
+
+msgid "manager.website.archiving"
+msgstr "Arhiviranje"
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Ažurirani su detalji o objavljivanju."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Način objavljivanja"
+
+msgid "manager.distribution.publication"
+msgstr "Objavljivanje"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Koristi datum objavljivanja članka"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Koristi datum objavljivanja broja"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Odaberite kako se označava zadana godina autorskih prava članka. Zadana "
+"vrijednost može se kasnije urediti i u svakom zasebnom članku. Ako "
+"objavljujete \"članak po članak\", nemojte koristiti datum objavljivanja "
+"broja."
+
+msgid "manager.distribution.access"
+msgstr "Pristup"
