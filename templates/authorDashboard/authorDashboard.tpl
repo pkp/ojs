@@ -38,7 +38,7 @@
 				</pkp-button>
 			</template>
 		</pkp-header>
-		<tabs>
+		<tabs :track-history="true">
 			<tab id="workflow" label="{translate key="manager.workflow"}">
 
 				{include file="controllers/notification/inPlaceNotification.tpl" notificationId="authorDashboardNotification" requestOptions=$authorDashboardNotificationRequestOptions}
@@ -121,7 +121,7 @@
 					>
 						{translate key="publication.editDisabled"}
 					</div>
-					<tabs :is-side-tabs="true" class="pkpPublication__tabs" :label="currentPublicationTabsLabel">
+					<tabs :is-side-tabs="true" :track-history="true" class="pkpPublication__tabs" :label="currentPublicationTabsLabel">
 						<tab id="titleAbstract" label="{translate key="publication.titleAbstract"}">
 							<pkp-form v-bind="components.{$smarty.const.FORM_TITLE_ABSTRACT}" @set="set" />
 						</tab>

@@ -14,7 +14,7 @@
 		{translate key="editor.navigation.issues"}
 	</h1>
 
-	<tabs>
+	<tabs :track-history="true">
 		<tab id="future" label="{translate key="editor.navigation.futureIssues"}">
 			{help file="issue-management" class="pkp_help_tab"}
 			{capture assign=futureIssuesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.FutureIssueGridHandler" op="fetchGrid" escape=false}{/capture}
