@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-16 18:52+0000\n"
+"PO-Revision-Date: 2020-11-18 12:42+0000\n"
 "Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/locale/sk_SK/"
 ">\n"
@@ -1578,3 +1578,821 @@ msgid "submission.comments.blindCcReviewers"
 msgstr ""
 "Po odoslaní poskytnúť editovateľnú BCC (skrytú) kópiu pre zaslanie "
 "recenzentom."
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Vyberte spôsob radenia článkov v tejto kategórii."
+
+msgid "catalog.sortBy"
+msgstr "Poradie článkov"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} prevzal redakčný proces príspevku {$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Predplatné"
+
+msgid "editor.issues.futureIssues"
+msgstr "Budúce čísla"
+
+msgid "editor.issues.backIssues"
+msgstr "Predchádzajúce čísla"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"Nastavená cesta k časopisu  \"{$journalPath}\" nemožno priradiť k časopisu."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr ""
+"Táto implementácia vyhľadávania neumožňuje opakované indexovanie podľa "
+"časopisov."
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexácia \"{$journalName}\""
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Odobratie schválenia tejto sadzobnice.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Schválenie tejto sadzobnice pre publikovanie. </p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Schválenie sadzobnice"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Čaká sa na schválenie"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Schválené"
+
+msgid "article.view.interstitial"
+msgstr "Vyberte, prosím, článok na stiahnutie."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Schovať ďalšie časopisy"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Zaregistrovať sa do ďalších časopisov"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Očakáva sa schválenie."
+
+msgid "notification.type.approveSubmission"
+msgstr "Tento príspevok čaká na schválenie, než sa objaví v čísle."
+
+msgid "editor.navigation.issues"
+msgstr "Čísla"
+
+msgid "grid.action.createContext"
+msgstr "Vytvoriť nový časopis"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Nahraný zoznam mien \"{$filename}\" z XML"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Zlý príspevok redaktora, alebo príspevok redaktora nie je vyžadovaný!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Je vyžadované chybné číslo!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Snažíte sa pristúpiť k článku, ktorý nie je súčasťou tejto sekcie."
+
+msgid "user.authorization.noContext"
+msgstr "Žiadny časopis v kontexte!"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Prístup nie je povolený! Nebol/a vám priradená úloha lektora tohto článku."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Sú očakávané sadzobnice."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Priraďte užívateľa pre tvorbu sadzobníc pomocou \"Pridať odkaz\" v zozname "
+"používateľov."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Bol vložený nový článok a je nutné mu priradiť editora."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Metadáta čísla boli uložené."
+
+msgid "notification.type.public"
+msgstr "Verejné oznámenie"
+
+msgid "notification.type.userComment"
+msgstr "Čitateľ vložil poznámku k článku \"{$title}.\""
+
+msgid "notification.type.submissions"
+msgstr "Udalosti príspevku"
+
+msgid "notification.type.submissionComment"
+msgstr "Editor vložil poznámku k článku \"{$title}.\""
+
+msgid "notification.type.site"
+msgstr "Udalosti stránok"
+
+msgid "notification.type.reviewing"
+msgstr "Udalosti recenzného procesu"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Bol vyplnený recenzný formulár k článku \"{$title}.\""
+
+msgid "notification.type.newAnnouncement"
+msgstr "Bolo vytvorené nové oznámenie."
+
+msgid "notification.type.issuePublished"
+msgstr "Bolo publikované číslo."
+
+msgid "notification.type.galleyModified"
+msgstr "Bola zmenená sadzobnica článku \"{$title}.\""
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Bola vložená poznámka k rozhodnutiu editora o článku \"{$title}.\""
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Nový článok s názvom \"{$title}\" bol vložený."
+
+msgid "notification.type.editing"
+msgstr "Editácia udalostí"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Recenzovaný článok"
+
+msgid "log.imported"
+msgstr "{$userName} importoval článok {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$ProofreaderName} odoslal {$submissionId} do plánovania."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$AssignerName} pridelil {$proofreaderName} pre spracovanie korektúr "
+"príspevku {$submissionId}."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$EditorName} bol pridelený ako editor príspevku {$submissionId}."
+
+msgid "log.editor.restored"
+msgstr "Príspevok {$submissionId} bol obnovený do fronty."
+
+msgid "log.editor.archived"
+msgstr "Príspevok {$submissionId} bol archivovaný."
+
+msgid "log.editor.editorFile"
+msgstr "Editorova verzia súboru s príspevkom bola nahraná."
+
+msgid "log.editor.metadataModified"
+msgstr "Metadáta tohto článku pozmenil {$editorName}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} dokončil typografické úpravy príspevku {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$EditorName} bol odstránený z pozície typografa pre príspevok "
+"{$submissionId}."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} bol pridelený ako typograf pre príspevok {$submissionId}."
+
+msgid "log.copyedit.authorFile"
+msgstr "Bola nahraná autorom redigovaná verzia súboru s príspevkom."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Redaktorova verzia súboru s príspevkom bola nahraná."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} bol pridelený pre redigovanie príspevku {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} dokončil záverečné redigovanie príspevku {$submissionId}."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} dokončil úvodné redigovanie príspevku {$submissionId}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Bol vybraný predvolený súbor redigovania."
+
+msgid "log.copyedit.initiate"
+msgstr "Redigovanie príspevku {$submissionId} zahájil {$copyeditorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Odporúčania redaktora ({$decision}) pre článok {$submissionId} zaznamenal "
+"{$editorName}."
+
+msgid "log.editor.decision"
+msgstr ""
+"Rozhodnutie editora ({$decision}) pre článok {$submissionId} zaznamenal "
+"{$editorName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Súbor recenzenta bol nahraný."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Editor, {$userName}, nahral súbor s recenziou pre kolo {$round} príspevku "
+"{$submissionId} v zastúpení recenzenta {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} prijal recenzné kolo {$round} pre príspevok {$submissionId} v "
+"zastúpení recenzenta {$reviewerName}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} odmietol recenzné kolo {$round} pre príspevok {$submissionId} v "
+"zastúpení recenzenta {$reviewerName}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} prijal recenzné kolo {$round} pre príspevok {$submissionId}."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$ReviewerName} odmietol recenzné kolo {$round} pre príspevok "
+"{$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "Príspevok {$submissionId} bol znovu odoslaný k recenzii."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Odporúčanie pre recenzné kolo {$round} príspevku {$submissionId} bolo "
+"stanovené editorom, {$editorName}, v zastúpení recenzenta {$reviewerName}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Odporúčanie pre recenzné kolo {$round} príspevku {$submissionId} od "
+"recenzenta {$reviewerName} bolo stanovené."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Termín splnenia recenzného kola {$round} príspevku {$submissionId} "
+"recenzenta {$reviewerName} bol nastavený na {$dueDate}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} bol ohodnotený pre recenzné kolo {$round} príspevku "
+"{$submissionId}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"Recenzné kolo {$round} uskutočňované recenzentom {$reviewerName} pre "
+"príspevok {$submissionId} sa začalo."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} bol odobratý z recenzovania príspevku {$submissionId} v "
+"recenznom kole {$round}."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} pozmenil článok {$submissionId}. Nové ID súboru je {$fileId}."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Je dostupná nová verzia OJS! Vy používate nasledujúcu verziu OJS: "
+"{$currentVersion}. Najnovšia verzia OJS je: {$latestVersion}. Kontaktujte, "
+"prosím, administrátora webu ({$siteAdminName}, <a href=\""
+"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) a upozornite ho na novú "
+"verziu OJS. Viac informácií možno nájsť <a href=\"http://pkp.sfu.ca/"
+"ojs_download\" target=\"_new\">tu</a>."
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Nová verzia OJS je dostupná! V súčasnej dobe používate verziu OJS "
+"{$CurrentVersion}. Najnovšia verzia OJS je {$latestVersion}. Navštívte, "
+"prosím, <a href=\"http://php.sfu.ca/ojs_download\" target=\"_new\"> túto "
+"stránku </a> a stiahnite si najnovšiu verziu OJS a prečítajte si pokyny pre "
+"upgrade."
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Upgrade OJS na verziu {$version} bol úspešne dokončený.</p>\n"
+"<p>Nezabudnite upraviť \"installed\" nastavenia vo Vašom config.inc.php "
+"konfiguračnom súbore späť na <em>On</em>.</p>\n"
+"<p>Ak ste sa ešte nezaregistroval a prajete si dostávať informácie o "
+"novinkách a aktualizáciách, <strong>zaregistrujte sa prosím na <a href=\""
+"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/"
+"register</a>.</strong> Ak máte otázky alebo komentáre, navštívte prosím <a "
+"href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Inštalácia OJS bola úspešne dokončená.</p>\n"
+"<p>Aby ste začali používať systém, <a href=\"{$loginUrl}\">prihláste sa</a> "
+"pomocou používateľského mena a hesla, ktoré ste zadali na predchádzajúcej "
+"stránke.</p>\n"
+"<p>Pokiaľ si prajete stať sa súčasťou komunity PKP, môžete</p>\n"
+"<ol>\n"
+"\t<li>Čítať <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">blog PKP</a> "
+"a sledovať <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS "
+"feed</a> pre informácie o novinkách a aktualizáciách.</li>\n"
+"\t<li>Navštíviť <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">fórum "
+"podpory</a> s vašimi dotazy a komentármi.</li>\n"
+"</ol>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>DÔLEŽITÉ!</h4>\n"
+"<p>Inštalácia nemohla automaticky prepísať konfiguračný súbor. Než sa "
+"pokúsite používať systém, otvorte prosím <tt>config.inc.php</tt> vo vhodnom "
+"textovom editore a nahraďte jeho obsah obsahom nižšie uvedeného textového "
+"poľa.</p>"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Varovanie:</strong> Ak inštalácia zlyhala v priebehu inštalácie "
+"databázy, budete možno musieť odstrániť Vašu OJS databázu alebo databázové "
+"tabuľky pred tým, než sa pokúsite databázu preinštalovať."
+
+msgid "installer.upgradeApplication"
+msgstr "Aktualizácia Open Journal Systems"
+
+msgid "installer.installApplication"
+msgstr "Inštalácia Open Journal Systems"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS vyžaduje prístup k SQL databáze, aby mohol uchovávať svoje dáta. Pozri "
+"systémové požiadavky vyššie pre zoznam podporovaných databáz. Do políčok "
+"nižšie uveďte nastavenie, ktoré sa má použiť na pripojenie do databázy."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Zadajte celú cestu k existujúcemu adresáru, v ktorom sa majú uchovávať "
+"nahrané súbory. Tento adresár by nemal byť priamo dostupný z webu. <strong>"
+"Prosím, pred začatím inštalácie sa uistite, že tento adresár existuje a je "
+"zapsatelný.</strong> Vo Windowse by mala cesta obsahovať lomítka, napr .: \""
+"C:/myjournal/files\"."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Zvoľte akékoľvek doplnkové jazyky, ktoré majú byť podporované v tomto "
+"systéme. Tieto jazyky budú dostupné na použitie v časopisoch hostovaných na "
+"tejto stránke. Doplnkové jazyky môžu byť tiež kedykoľvek nainštalované cez "
+"webové administračné rozhranie."
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Predvolený jazyk pre použitie tohto systému. Pokiaľ Vás zaujíma podpora "
+"jazykov tu neuvedených, preštudujte si dokumentáciu k OJS."
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Váš server v súčasnosti dovoľuje nahrávanie súborov s maximálnou veľkosťou "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Váš server v súčasnosti umožňuje nahrávanie súborov: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Pre kompletnú podporu Unicode (UTF-8) zvoľte UTF-8 pre nastavenie všetkých "
+"znakových sád. Vedzte, že táto podpora aktuálne vyžaduje MySQL >= 4.1.1 "
+"alebo PostgreSQL >= 7.1 databázový server. Vedzte prosím tiež, že plná "
+"Unicode podpora vyžaduje PHP >= 4.3.0 kompilované s podporou pre <a href=\""
+"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> knižnicu (v "
+"predvolenom nastavení povolené vo väčšine najnovších inštalácií PHP). Pokiaľ "
+"Váš server nespĺňa tieto požiadavky, môžete sa pri používaní rozšírených "
+"znakových sád stretnúť s problémami.\n"
+"<br /><br />\n"
+"Váš server aktuálne podporuje mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>Verzia OJS {$version}</h4>\n"
+"\n"
+"<p>Ďakujeme za sťiahnutie <strong>Open Journal Systému</strong> vytvoreného "
+"projektom Public Knowledge Project. Než budete pokračovať, prečítajte si, "
+"prosím, súbory <a href=\"{$baseUrl}/docs/README.md\">README</a> a <a href=\""
+"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> dodané s týmto softwarom. Pre viac "
+"informácií o Public Knowledge Project a jeho softwarových projektoch "
+"navštívte prosím <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">webové "
+"stránky PKP</a>. Ak máte chybové hlásenia alebo otázky na technickú podporu "
+"OJS, navštívte <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">fórum "
+"podpory</a> alebo navštívte PKP online <a href=\"http://pkp.sfu.ca/bugzilla/"
+"\" target=\"_blank\">bug reporting systém</a>. Hoci je support forum "
+"preferovaným spôsobom kontaktovania, môžete tiež tímu poslať email na<a href="
+"\"mailto:pkp-support@sfu.ca\">pkp-support@sfu.ca</a>.</p>\n"
+"<p>Je <strong>dôrazne doporučené</strong>, aby ste urobili zálohu vašej "
+"databázy, adresáre súborov a OJS inštalácie pred tým, než budete "
+"pokračovať.</p>\n"
+"<p>Pokiaľ máte zapnutý <a href=\"http://www.php.net/features.safe-mode\" "
+"target=\"_blank\">PHP Safe Mode</a>, uistite sa prosím, že "
+"max_execution_time instrukce vo vašom php.ini konfiguračnom súbore je "
+"nastavený na vysoký limit. Pokiaľ bude tohto alebo akéhokoľvek ďalšieho "
+"časového limitu (napr. \"Timeout\" inštrukcie u Apache) dosiahnuté a bude "
+"prerušený proces upgradovania, budú vyžadované ručné zásahy.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Kroky pred inštaláciou</h4>\n"
+"\n"
+"\n"
+"<p>1. Nasledujúce súbory a adresáre (a ich obsah) musia byť zapisovateľné: "
+"</p>\n"
+"<ul>\n"
+" <li><tt>config.inc.php</tt> je zapisovateľný (voliteľné): "
+"{$writable_config}</li>\n"
+" <li><tt>public/</tt> je zapisovateľný: {$writable_public}</li>\n"
+" <li><tt>cache/</tt> je zapisovateľný: {$writable_cache}</li>\n"
+" <li><tt>cache/t_cache/</tt> je zapisovateľný: {$writable_templates_cache} "
+"</li>\n"
+" <li> <tt>cache/t_compile/</tt> je zapisovateľný: "
+"{$writable_templates_compile} </li>\n"
+" <li> <tt>cache/_db</tt> je zapisovateľný: {$writable_db_cache} </li>\n"
+"</ul>\n"
+"\n"
+"<p> 2. Adresár pre ukladanie nahraných súborov musí byť vytvorený a "
+"zapisovateľný (viď \"Nastavenia súborov\" nižšie). </p>"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>Verzia OJS {$version}</h4>\n"
+"\n"
+"<p>Ďakujeme za sťiahnutie <strong>Open Journal Systému</strong> vytvoreného "
+"projektom Public Knowledge Project. Než budete pokračovať, prečítajte si, "
+"prosím, súbor <a href=\"{$baseUrl}/docs/README.md\">README</a> dodaný s "
+"týmto softwarom. Pre viac informácií o Public Knowledge Project a jeho "
+"softwarových projektoch navštívte, prosím, <a href=\"http://pkp.sfu.ca/\" "
+"target=\"_blank\"> webové stránky PKP</a>. Pokiaľ máte chybové hlásenia, "
+"alebo otázky na technickú podporu OJS, navštívte <a href=\""
+"http://forum.pkp.sfu.ca\" target=\"_blank\">fórum podpory</a> alebo "
+"navštívte PKP online <a href=\"http://pkp.sfu.ca/bugzilla/\" target=\""
+"_blank\">bug reporting systém</a>. Hoci je preferovaným spôsobom "
+"kontaktovanie fórum podpory, môžete tiež tímu poslať email na <a href=\""
+"mailto:pkp-support@sfu.ca\">pkp-support@sfu.ca</a>.</p>\n"
+"\n"
+"<h4>Aktualizácia</h4>\n"
+"\n"
+"<p>Ak vykonávate aktualizáciu existujúcej inštalácie OJS, <a href=\""
+"{$upgradeUrl}\">Kliknete tu</a> pre pokračovanie.</p>\n"
+"\n"
+"<h4>Odporúčané požiadavky na systém</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; aktuálne používate PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"alebo <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a>"
+" >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x alebo Microsoft IIS 6</li>\n"
+"\t<li>Operačný systém: akýkoľvek OS, ktorý podporuje vyššie uvedený softvér, "
+"vrátane <a href=\"http://www.linux.org/\" target=\"_blank\">Linuxu</a>, <a "
+"href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\""
+"http://www.sun.com/\" target=\"_blank\">Solarisu</a>, <a href=\""
+"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\""
+"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Keďže PKP nemá prostriedky, aby otestoval každú možnú kombináciu verzie "
+"softvéru a platformy, nie je predpokladaná garancia plnej funkčnosti alebo "
+"podpora.</p>\n"
+"\n"
+"<p>Tieto nastavenia môžu byť po inštalácii zmenené úpravou súboru "
+"<tt>config.inc.php</tt> v predvolenom OJS adresári alebo s využitím webového "
+"administračného rozhrania.</p>\n"
+"\n"
+"<h4>Podporované databázové systémy</h4>\n"
+"\n"
+"<p>OJS bol v súčasnosti testovaný len na MySQL a PostgreSQL, avšak iné "
+"systémy pre správu databáz podporované <a href=\"http://adodb.sourceforge."
+"net/\" target=\"_blank\">ADOdb</a> môžu tiež fungovať (úplne alebo čiastočne)"
+". Reporty o kompatibilite a/alebo opravy kódu (code patches) pre "
+"alternatívne DBMS možno zaslať OJS tímu.</p>\n"
+
+msgid "installer.ojsUpgrade"
+msgstr "Aktualizácia OJS"
+
+msgid "installer.appInstallation"
+msgstr "OJS inštalácia"
+
+msgid "payment.subscription.expires"
+msgstr "Vyprší"
+
+msgid "payment.subscription.renew"
+msgstr "Obnoviť predplatné"
+
+msgid "payment.subscription.purchase"
+msgstr "Kúpiť predplatné"
+
+msgid "payment.membership.ends"
+msgstr "Končí"
+
+msgid "payment.membership.renewMembership"
+msgstr "Obnoviť individuálne členstvo"
+
+msgid "payment.membership.buyMembership"
+msgstr "Kúpiť individuálne členstvo"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Poplatok za publikovanie zaplatený"
+
+msgid "payment.publication.payPublication"
+msgstr "Zaplatiť za publikovanie"
+
+msgid "payment.submission.paySubmission"
+msgstr "Zaplatiť poplatok za príspevok"
+
+msgid "payment.donation.makeDonation"
+msgstr "Darovať"
+
+msgid "payment.notFound"
+msgstr ""
+"Bola požadovaná platba, ale termín požiadavke vypršal. Podrobné informácie "
+"získate od správcu časopisu."
+
+msgid "payment.requestPublicationFee"
+msgstr "Požadovaný publikačný poplatok ({$feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "Dary"
+
+msgid "payment.type.subscription"
+msgstr "Predplatné"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Zakúpenie prístupu k číslu"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Zaplatiť poplatok za článok"
+
+msgid "payment.type.membership"
+msgstr "Poplatok za individuálne členstvo"
+
+msgid "payment.type.fastTrack"
+msgstr "Poplatok za rýchle spracovanie recenzie"
+
+msgid "payment.type.publication.required"
+msgstr "Je potrebné uhradiť publikačný poplatok."
+
+msgid "payment.type.publication"
+msgstr "Poplatok za publikovanie"
+
+msgid "payment.type.submission"
+msgstr "Poplatok za príspevok"
+
+msgid "payment.authorFees"
+msgstr "Autorské poplatky"
+
+msgid "payment.paymentSent"
+msgstr "Platba už bola odoslaná"
+
+msgid "payment.paymentReceived"
+msgstr "Platba prijatá"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Zaškrtnite toto políčko, ak ste už odoslali platbu do časopisu, aby sa "
+"dokončil proces odosielania príspevku. Kým nedorazí platba, nebude príspevok "
+"recenzovaný. Pre zobrazenie inštrukcií k platbe kliknite na ZAPLATIŤ TERAZ."
+
+msgid "payment.alreadyPaid"
+msgstr "Už zaplatené"
+
+msgid "payment.waive"
+msgstr "Previesť"
+
+msgid "payment.payNow"
+msgstr "Zaplatiť teraz"
+
+msgid "payment.paid"
+msgstr "Zaplatené"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Aby ste mohli darovať dar, musíte byť prihlásený."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Predplatné, alebo platený prístup k číslu je požadované pre túto položku. Na "
+"overenie predplatného, prístup k už zaplatenej položke či zakúpenia "
+"plateného prístupu je potrebné sa do časopisu prihlásiť."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Pre prístup k položke je vyžadované predplatné alebo platba za zhliadnutie. "
+"Prihláste sa do časopisu, aby sa mohlo overiť predplatné alebo zaplatený "
+"poplatok."
+
+msgid "payment.loginRequired"
+msgstr "Pre uskutočnenie platby musíte byť prihlásený."
+
+msgid "donations.thankYouMessage"
+msgstr "Ďakujeme za Váš príspevok. Veľmi si vážime Vašej pomoci."
+
+msgid "donations.thankYou"
+msgstr "Ďakujeme"
+
+msgid "help.goToEditPage"
+msgstr "Editovať {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Späť k výsledkom vyhľadávania"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS Nápoveda"
+
+msgid "help.ojsHelp"
+msgstr "Nápoveda Open Journal Systems"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Táto stránka používa Open Journal Systems {$ojsVersion}, čo je open source "
+"softvér pre správu a publikovanie časopisov vyvinutý, podporovaný a voľne "
+"šírený v rámci projektu <a href=\"http://pkp.sfu.ca/\">Public Knowledge "
+"Project</a> pod GNU General Public licencou."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Tento časopis používa Open Journal Systems {$ojsVersion}, čo je open source "
+"softvér pre správu a publikovanie časopisov vyvinutý, podporovaný a voľne "
+"šírený v rámci projektu <a href=\"http://pkp.sfu.ca/\">Public Knowledge "
+"Project</a> pod GNU General Public licenciou."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS edičný a vydavateľský proces"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Viac informácií o publikačnom systéme, platforme a workflow OJS/PKP."
+
+msgid "about.memberships"
+msgstr "Členstvo"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Typy predplatného"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Cena"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Trvanie"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formát"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Meno"
+
+msgid "about.subscriptionsContact"
+msgstr "Kontakt pre predplatné"
+
+msgid "about.subscriptions.institutional"
+msgstr "Inštitucionálne predplatné"
+
+msgid "about.subscriptions.individual"
+msgstr "Individuálne predplatné"
+
+msgid "about.subscriptions"
+msgstr "Predplatné"
+
+msgid "about.archiving"
+msgstr "Archivácia"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "mesiac(e) po tom, čo bolo číslo publikované."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Obsah tohto čísla bude dostupný vo formáte otvoreného prístupu"
+
+msgid "about.delayedOpenAccess"
+msgstr "Oneskorený otvorený prístup"
+
+msgid "about.openAccessPolicy"
+msgstr "Pravidlá otvoreného prístupu"
+
+msgid "about.publicationFrequency"
+msgstr "Frekvencia publikovania"
+
+msgid "about.peerReviewProcess"
+msgstr "Recenzné riadenie"
+
+msgid "about.authorFeesMessage"
+msgstr "Tento časopis si účtuje nasledujúce autorské poplatky."
+
+msgid "about.authorFees"
+msgstr "Autorské poplatky"
+
+msgid "about.privacyStatement"
+msgstr "Vyhlásenie o súkromí"
+
+msgid "about.copyrightNotice"
+msgstr "Oznámenie o copyrightu"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Ako súčasť procesu odosielania príspevku je požadované, aby autori "
+"zaškrtnutím potvrdili, že ich príspevok je v súlade so všetkými "
+"nasledujúcimi položkami. Príspevky, ktoré nebudú v súlade s týmito "
+"pravidlami, môžu byť autorom vrátené."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Kontrolný zoznam pre prípravu príspevku"
+
+msgid "about.authorGuidelines"
+msgstr "Pokyny pre autorov"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "zobraziť vaše rozpracované príspevky"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Zaslať nový príspevok"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Odošlite nový príspevok do sekcie <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} alebo {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "K podaniu príspevku je treba {$login} alebo {$register}."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Registrovať"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Ísť na prihlásenie"
+
+msgid "about.submissions"
+msgstr "Príspevky"
+
+msgid "about.sectionPolicies"
+msgstr "Pravidlá sekcií"
+
+msgid "about.focusAndScope"
+msgstr "Zameranie a záber"
+
+msgid "about.editorialPolicies"
+msgstr "Edičné pravidlá"
+
+msgid "about.editorialTeam.biography"
+msgstr "Životopis"
+
+msgid "about.editorialTeam"
+msgstr "Editorský tým"
+
+msgid "about.history"
+msgstr "História časopisu"
+
+msgid "about.aboutContext"
+msgstr "O časopise"
+
+msgid "about.contact"
+msgstr "Kontakt"
+
+msgid "about.statistics"
+msgstr "Štatistiky"
+
+msgid "archive.issueUnavailable"
+msgstr "Číslo nedostupné"
+
+msgid "archive.browse"
+msgstr "Prehľadávať staršie čísla"
+
+msgid "archive.archivesPageNumber"
+msgstr "Archívy - strana {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Archívy"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Tento časopis doteraz nepublikoval žiadne čísla."
+
+msgid "current.noCurrentIssue"
+msgstr "Žiadne aktuálne číslo"
+
+msgid "current.current"
+msgstr "Aktuálne"
+
+msgid "site.noJournals"
+msgstr "Nie sú k dispozícii žiadne časopisy."
+
+msgid "site.journalCurrent"
+msgstr "Aktuálne číslo"
+
+msgid "site.journalRegister"
+msgstr "Registrovať"
+
+msgid "site.journalView"
+msgstr "Zobraziť časopis"
+
+msgid "site.journalsHosted"
+msgstr "Časopisy hostované na tejto stránke"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Sťahovanie vybraného súboru by malo začať automaticky. Ak nezačne, kliknite "
+"na odkaz nižšie. Vedzte, že súbor môže vyžadovať pre svoje zobrazenie "
+"špeciálny prehliadač alebo plugin.<br /><br />Ak nezačalo sťahovanie "
+"automaticky, <a href=\"{$url}\">kliknite tu</a>."
