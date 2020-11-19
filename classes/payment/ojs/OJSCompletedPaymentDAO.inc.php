@@ -16,6 +16,7 @@
  */
 
 import('lib.pkp.classes.payment.CompletedPayment');
+import('classes.payment.ojs.OJSPaymentManager'); // Constants
 
 class OJSCompletedPaymentDAO extends DAO {
 	/**
@@ -25,21 +26,15 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return CompletedPayment
 	 */
 	function getById($completedPaymentId, $contextId = null) {
-		$params = array((int) $completedPaymentId);
+		$params = [(int) $completedPaymentId];
 		if ($contextId) $params[] = (int) $contextId;
 
 		$result = $this->retrieve(
 			'SELECT * FROM completed_payments WHERE completed_payment_id = ?' . ($contextId?' AND context_id = ?':''),
 			$params
 		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? $this->_fromRow((array) $row) : null;
 	}
 
 	/**
@@ -53,7 +48,7 @@ class OJSCompletedPaymentDAO extends DAO {
 				VALUES
 				(%s, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB(Core::getCurrentDate())),
-			array(
+			[
 				(int) $completedPayment->getType(),
 				(int) $completedPayment->getContextId(),
 				(int) $completedPayment->getUserId(),
@@ -61,7 +56,7 @@ class OJSCompletedPaymentDAO extends DAO {
 				$completedPayment->getAmount(),
 				$completedPayment->getCurrencyCode(),
 				$completedPayment->getPayMethodPluginName()
-			)
+			]
 		);
 
 		return $this->getInsertId();
@@ -70,12 +65,9 @@ class OJSCompletedPaymentDAO extends DAO {
 	/**
 	 * Update an existing completed payment.
 	 * @param $completedPayment CompletedPayment
-	 * @return boolean
 	 */
 	function updateObject($completedPayment) {
-		$returner = false;
-		
-		$returner = $this->update(
+		$this->update(
 			sprintf('UPDATE completed_payments
 			SET
 				timestamp = %s,
@@ -88,7 +80,7 @@ class OJSCompletedPaymentDAO extends DAO {
 				payment_method_plugin_name = ? 
 			WHERE completed_payment_id = ?',
 			$this->datetimeToDB($completedPayment->getTimestamp())),
-			array(
+			[
 				(int) $completedPayment->getType(),
 				(int) $completedPayment->getContextId(),
 				(int) $completedPayment->getUserId(),
@@ -97,10 +89,8 @@ class OJSCompletedPaymentDAO extends DAO {
 				$completedPayment->getCurrencyCode(),
 				$completedPayment->getPayMethodPluginName(),
 				(int) $completedPayment->getId()
-			)
+			]
 		);
-
-		return $returner;
 	}
 
 	/**
@@ -119,7 +109,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @return CompletedPayment|null
 	 */
 	function getByAssoc($userId = null, $paymentType = null, $assocId = null) {
-		$params = array();
+		$params = [];
 		if ($userId) $params[] = (int) $userId;
 		if ($paymentType) $params[] = (int) $paymentType;
 		if ($assocId) $params[] = (int) $assocId;
@@ -130,14 +120,8 @@ class OJSCompletedPaymentDAO extends DAO {
 			($assocId?' AND assoc_id = ?':''),
 			$params
 		);
-
-		$returner = null;
-		if (isset($result->fields[0]) && $result->fields[0] != 0) {
-			$returner = $this->_fromRow($result->fields);
-		}
-
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? $this->_fromRow((array) $row) : null;
 	}
 
 	/**
@@ -175,15 +159,14 @@ class OJSCompletedPaymentDAO extends DAO {
 	function getByContextId($contextId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM completed_payments WHERE context_id = ? ORDER BY timestamp DESC',
-			(int) $contextId,
+			[(int) $contextId],
 			$rangeInfo
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$payment = $this->_fromRow($result->fields);
+		$returner = [];
+		foreach ($result as $row) {
+			$payment = $this->_fromRow((array) $row);
 			$returner[$payment->getId()] = $payment;
-			$result->MoveNext();
 		}
 		return $returner;
 	}
@@ -197,7 +180,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	function getByUserId($userId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM completed_payments WHERE user_id = ? ORDER BY timestamp DESC',
-			(int) $userId,
+			[(int) $userId],
 			$rangeInfo
 		);
 

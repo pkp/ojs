@@ -60,22 +60,16 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 			WHERE r.review_id = ?',
-			array(
+			[
 				'title', $primaryLocale, // Section title
 				'title', $locale, // Section title
 				'abbrev', $primaryLocale, // Section abbreviation
 				'abbrev', $locale, // Section abbreviation
 				(int) $reviewId
-			)
+			]
 		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? $this->_fromRow((array) $row) : null;
 	}
 
 	/**
@@ -159,7 +153,7 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 				$this->datetimeToDB($reviewerSubmission->getDateAcknowledged()),
 				$this->datetimeToDB($reviewerSubmission->getDateDue()),
 				$this->datetimeToDB($reviewerSubmission->getDateResponseDue())),
-			array(
+			[
 				(int) $reviewerSubmission->getId(),
 				(int) $reviewerSubmission->getReviewerId(),
 				(int) $reviewerSubmission->getStageId(),
@@ -172,7 +166,7 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 				(int) $reviewerSubmission->getCancelled(),
 				$reviewerSubmission->getQuality(),
 				(int) $reviewerSubmission->getReviewId()
-			)
+			]
 		);
 	}
 }

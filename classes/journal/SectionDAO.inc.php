@@ -47,7 +47,7 @@ class SectionDAO extends PKPSectionDAO {
 	function &_getCache() {
 		if (!isset($this->cache)) {
 			$cacheManager = CacheManager::getManager();
-			$this->cache = $cacheManager->getObjectCache('sections', 0, array($this, '_cacheMiss'));
+			$this->cache = $cacheManager->getObjectCache('sections', 0, [$this, '_cacheMiss']);
 		}
 		return $this->cache;
 	}
@@ -57,7 +57,7 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $sectionId int
 	 * @param $journalId int Journal ID optional
 	 * @param $useCache boolean optional
-	 * @return Section
+	 * @return Section?
 	 */
 	function getById($sectionId, $journalId = null, $useCache = false) {
 		if ($useCache) {
@@ -67,21 +67,16 @@ class SectionDAO extends PKPSectionDAO {
 			return $returner;
 		}
 
-		$sql = 'SELECT * FROM sections WHERE section_id = ?';
-		$params = array((int) $sectionId);
-		if ($journalId !== null) {
-			$sql .= ' AND journal_id = ?';
-			$params[] = (int) $journalId;
-		}
-		$result = $this->retrieve($sql, $params);
+		$params = [(int) $sectionId];
+		if ($journalId !== null) $params[] = (int) $journalId;
+		$result = $this->retrieve(
+			'SELECT * FROM sections WHERE section_id = ?'
+			. ($journalId !== null ? ' AND journal_id = ?' : ''),
+			$params
+		);
 
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-
-		return $returner;
+		$row = $result->current();
+		return $row?$this->_fromRow((array) $row):null;
 	}
 
 	/**
@@ -89,13 +84,11 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $sectionAbbrev string
 	 * @param $journalId int Journal ID
 	 * @param $locale string optional
-	 * @return Section
+	 * @return Section?
 	 */
 	function getByAbbrev($sectionAbbrev, $journalId, $locale = null) {
-		$params = array('abbrev', $sectionAbbrev, (int) $journalId);
-		if ($locale !== null) {
-			$params[] = $locale;
-		}
+		$params = ['abbrev', $sectionAbbrev, (int) $journalId];
+		if ($locale !== null) $params[] = $locale;
 
 		$result = $this->retrieve(
 			'SELECT	s.*
@@ -108,13 +101,8 @@ class SectionDAO extends PKPSectionDAO {
 			$params
 		);
 
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row?$this->_fromRow((array) $row):null;
 	}
 
 	/**
@@ -122,13 +110,11 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $sectionTitle string
 	 * @param $journalId int Journal ID
 	 * @param $locale string optional
-	 * @return Section
+	 * @return Section?
 	 */
 	function getByTitle($sectionTitle, $journalId, $locale = null) {
-		$params = array('title', $sectionTitle, (int) $journalId);
-		if ($locale !== null) {
-			$params[] = $locale;
-		}
+		$params = ['title', $sectionTitle, (int) $journalId];
+		if ($locale !== null) $params[] = $locale;
 
 		$result = $this->retrieve(
 			'SELECT	s.*
@@ -141,13 +127,8 @@ class SectionDAO extends PKPSectionDAO {
 			$params
 		);
 
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row?$this->_fromRow((array) $row):null;
 	}
 
 	/**
@@ -160,15 +141,11 @@ class SectionDAO extends PKPSectionDAO {
 				JOIN submissions
 				ON (submissions.section_id = sections.section_id)
 				WHERE submissions.submission_id = ?',
-			array((int) $submissionId));
+			[(int) $submissionId]
+		);
 
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-
-		return $returner;
+		$row = $result->current();
+		return $row?$this->_fromRow((array) $row):null;
 	}
 
 	/**
@@ -210,7 +187,7 @@ class SectionDAO extends PKPSectionDAO {
 	function getLocaleFieldNames() {
 		return array_merge(
 			parent::getLocaleFieldNames(),
-			array('abbrev', 'identifyType')
+			['abbrev', 'identifyType']
 		);
 	}
 
@@ -219,9 +196,9 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $section object
 	 */
 	function updateLocaleFields($section) {
-		$this->updateDataObjectSettings('section_settings', $section, array(
-			'section_id' => $section->getId()
-		));
+		$this->updateDataObjectSettings('section_settings', $section,
+			['section_id' => $section->getId()]
+		);
 	}
 
 	/**
@@ -235,7 +212,7 @@ class SectionDAO extends PKPSectionDAO {
 				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, is_inactive, abstract_word_count)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-			array(
+			[
 				(int)$section->getJournalId(),
 				(int)$section->getReviewFormId(),
 				(float) $section->getSequence(),
@@ -247,7 +224,7 @@ class SectionDAO extends PKPSectionDAO {
 				$section->getHideAuthor() ? 1 : 0,
 				$section->getIsInactive() ? 1 : 0,
 				(int) $section->getAbstractWordCount()
-			)
+			]
 		);
 
 		$section->setId($this->getInsertId());
@@ -274,7 +251,7 @@ class SectionDAO extends PKPSectionDAO {
 					is_inactive = ?,
 					abstract_word_count = ?
 				WHERE section_id = ?',
-			array(
+			[
 				(int)$section->getReviewFormId(),
 				(float) $section->getSequence(),
 				(int)$section->getMetaIndexed(),
@@ -286,7 +263,7 @@ class SectionDAO extends PKPSectionDAO {
 				(int)$section->getIsInactive(),
 				$this->nullOrInt($section->getAbstractWordCount()),
 				(int)$section->getId()
-			)
+			]
 		);
 		$this->updateLocaleFields($section);
 	}
@@ -305,8 +282,8 @@ class SectionDAO extends PKPSectionDAO {
 		$submissionDao->removeSubmissionsFromSection($sectionId);
 
 		if (isset($contextId) && !$this->sectionExists($sectionId, $contextId)) return false;
-		$this->update('DELETE FROM section_settings WHERE section_id = ?', (int) $sectionId);
-		$this->update('DELETE FROM sections WHERE section_id = ?', (int) $sectionId);
+		$this->update('DELETE FROM section_settings WHERE section_id = ?', [(int) $sectionId]);
+		$this->update('DELETE FROM sections WHERE section_id = ?', [(int) $sectionId]);
 	}
 
 	/**
@@ -326,26 +303,21 @@ class SectionDAO extends PKPSectionDAO {
 	 * @return array editorId => array(sections they edit)
 	 */
 	function getEditorSections($journalId) {
-		$returner = array();
 
 		$result = $this->retrieve(
 			'SELECT s.*, se.user_id AS editor_id FROM subeditor_submission_group ssg, sections s WHERE ssg.assoc_id = s.section_id AND ssg.assoc_type = ? AND s.journal_id = ssg.context_id AND s.journal_id = ?',
-			(int) ASSOC_TYPE_SECTION,
-			(int) $journalId
+			[(int) ASSOC_TYPE_SECTION, (int) $journalId]
 		);
 
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$section = $this->_fromRow($row);
-			if (!isset($returner[$row['editor_id']])) {
-				$returner[$row['editor_id']] = array($section);
+		$returner = [];
+		foreach ($result as $row) {
+			$section = $this->_fromRow((array) $row);
+			if (!isset($returner[$row->editor_id])) {
+				$returner[$row->editor_id] = [$section];
 			} else {
-				$returner[$row['editor_id']][] = $section;
+				$returner[$row->editor_id][] = $section;
 			}
-			$result->MoveNext();
 		}
-
-		$result->Close();
 		return $returner;
 	}
 
@@ -384,15 +356,11 @@ class SectionDAO extends PKPSectionDAO {
 			array_merge([(int) $issueId], $sectionIds)
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$returner[] = $this->_fromRow($row);
-			$result->MoveNext();
+		$sections = [];
+		foreach ($result as $row) {
+			$sections[] = $this->_fromRow((array) $row);
 		}
-
-		$result->Close();
-		return $returner;
+		return $sections;
 	}
 
 	/**
@@ -417,7 +385,7 @@ class SectionDAO extends PKPSectionDAO {
 	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ' ORDER BY seq',
-			(int) $journalId, $rangeInfo
+			[(int) $journalId], $rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -431,7 +399,7 @@ class SectionDAO extends PKPSectionDAO {
 	function getAll($rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM sections ORDER BY journal_id, seq',
-			false, $rangeInfo
+			[], $rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -444,16 +412,14 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	function getEmptyByJournalId($journalId) {
 		$result = $this->retrieve(
-			'SELECT s.section_id FROM sections s LEFT JOIN submissions a ON (a.section_id = s.section_id) WHERE a.section_id IS NULL AND s.journal_id = ?',
-			(int) $journalId
+			'SELECT s.section_id AS section_id FROM sections s LEFT JOIN submissions a ON (a.section_id = s.section_id) WHERE a.section_id IS NULL AND s.journal_id = ?',
+			[(int) $journalId]
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$returner[] = $result->fields[0];
-			$result->MoveNext();
+		$returner = [];
+		foreach ($result as $row) {
+			$returner[] = $row->section_id;
 		}
-		$result->Close();
 		return $returner;
 	}
 
@@ -465,13 +431,11 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	function sectionExists($sectionId, $journalId) {
 		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM sections WHERE section_id = ? AND journal_id = ?',
-			array((int) $sectionId, (int) $journalId)
+			'SELECT COUNT(*) AS row_count FROM sections WHERE section_id = ? AND journal_id = ?',
+			[(int) $sectionId, (int) $journalId]
 		);
-		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
-
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? (boolean) $row->row_count : false;
 	}
 
 	/**
@@ -479,24 +443,12 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $journalId int Journal ID
 	 */
 	function resequenceSections($journalId) {
-		$result = $this->retrieve(
-			'SELECT section_id FROM sections WHERE journal_id = ? ORDER BY seq',
-			(int) $journalId
-		);
+		$result = $this->retrieve('SELECT section_id FROM sections WHERE journal_id = ? ORDER BY seq', [(int) $journalId]);
 
-		for ($i=1; !$result->EOF; $i++) {
-			list($sectionId) = $result->fields;
-			$this->update(
-				'UPDATE sections SET seq = ? WHERE section_id = ?',
-				array(
-					$i,
-					$sectionId
-				)
-			);
-
-			$result->MoveNext();
+		for ($i=1; $row = $result->current(); $i++) {
+			$this->update('UPDATE sections SET seq = ? WHERE section_id = ?', [$i, $row->section_id]);
+			$result->next();
 		}
-		$result->Close();
 	}
 
 	/**
@@ -510,11 +462,10 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Delete the custom ordering of an issue's sections.
 	 * @param $issueId int
-	 * @return boolean
 	 */
 	function deleteCustomSectionOrdering($issueId) {
-		return $this->update(
-			'DELETE FROM custom_section_orders WHERE issue_id = ?', (int) $issueId
+		$this->update(
+			'DELETE FROM custom_section_orders WHERE issue_id = ?', [(int) $issueId]
 		);
 	}
 
@@ -528,13 +479,13 @@ class SectionDAO extends PKPSectionDAO {
 
 		$this->update(
 			'DELETE FROM custom_section_orders WHERE issue_id = ? AND section_id = ?',
-			array((int) $issueId, (int) $sectionId)
+			[(int) $issueId, (int) $sectionId]
 		);
 
 		// Reduce the section order of every successive section by one
 		$this->update(
 			'UPDATE custom_section_orders SET seq = seq - 1 WHERE issue_id = ? AND seq > ?',
-			array((int) $issueId, (float) $seq)
+			[(int) $issueId, (float) $seq]
 		);
 	}
 
@@ -543,21 +494,12 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $issueId int
 	 */
 	function resequenceCustomSectionOrders($issueId) {
-		$result = $this->retrieve(
-			'SELECT section_id FROM custom_section_orders WHERE issue_id = ? ORDER BY seq',
-			(int) $issueId
-		);
+		$result = $this->retrieve('SELECT section_id FROM custom_section_orders WHERE issue_id = ? ORDER BY seq', [(int) $issueId]);
 
-		for ($i=1; !$result->EOF; $i++) {
-			list($sectionId) = $result->fields;
-			$this->update(
-				'UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?',
-				array($i, $sectionId, (int) $issueId)
-			);
-
-			$result->MoveNext();
+		for ($i=1; $row = $result->current(); $i++) {
+			$this->update('UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?', [$i, $row->section_id, (int) $issueId]);
+			$result->next();
 		}
-		$result->Close();
 	}
 
 	/**
@@ -566,33 +508,24 @@ class SectionDAO extends PKPSectionDAO {
 	 * @return boolean
 	 */
 	function customSectionOrderingExists($issueId) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM custom_section_orders WHERE issue_id = ?',
-			(int) $issueId
-		);
-		$returner = isset($result->fields[0]) && $result->fields[0] == 0 ? false : true;
-		$result->Close();
-		return $returner;
+		$result = $this->retrieve('SELECT COUNT(*) AS row_count FROM custom_section_orders WHERE issue_id = ?', [(int) $issueId]);
+		$row = $result->current();
+		return $row && $row->row_count != 0;
 	}
 
 	/**
 	 * Get the custom section order of a section.
 	 * @param $issueId int
 	 * @param $sectionId int
-	 * @return int
+	 * @return int?
 	 */
 	function getCustomSectionOrder($issueId, $sectionId) {
 		$result = $this->retrieve(
 			'SELECT seq FROM custom_section_orders WHERE issue_id = ? AND section_id = ?',
-			array((int) $issueId, (int) $sectionId)
+			[(int) $issueId, (int) $sectionId]
 		);
-
-		$returner = null;
-		if (!$result->EOF) {
-			list($returner) = $result->fields;
-		}
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row?$row->seq:null;
 	}
 
 	/**
@@ -618,7 +551,7 @@ class SectionDAO extends PKPSectionDAO {
 	function insertCustomSectionOrder($issueId, $sectionId, $seq) {
 		$this->update(
 			'INSERT INTO custom_section_orders (section_id, issue_id, seq) VALUES (?, ?, ?)',
-			array((int) $sectionId,(int) $issueId, (float) $seq)
+			[(int) $sectionId,(int) $issueId, (float) $seq]
 		);
 	}
 
@@ -631,7 +564,7 @@ class SectionDAO extends PKPSectionDAO {
 	function updateCustomSectionOrder($issueId, $sectionId, $seq) {
 		$this->update(
 			'UPDATE custom_section_orders SET seq = ? WHERE issue_id = ? AND section_id = ?',
-			array((float) $seq, (int) $issueId, (int) $sectionId)
+			[(float) $seq, (int) $issueId, (int) $sectionId]
 		);
 	}
 }

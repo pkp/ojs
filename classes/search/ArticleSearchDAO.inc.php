@@ -19,17 +19,17 @@ import('lib.pkp.classes.search.SubmissionSearchDAO');
 
 class ArticleSearchDAO extends SubmissionSearchDAO {
 	/**
-	 * Retrieve the top results for a phrases with the given
-	 * limit (default 500 results).
-	 * @param $keywordId int
+	 * Retrieve the top results for a phrase.
+	 * @param $journal Journal
+	 * @param $phrase array
+	 * @param $publishedFrom int|null Optional start date
+	 * @param $publishedTo int|null Optional end date
+	 * @param $type int|null ASSOC_TYPE_...
+	 * @param $limit int
 	 * @return array of results (associative arrays)
 	 */
-	public function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
-		import('lib.pkp.classes.db.DBRowIterator');
-		if (empty($phrase)) {
-			$results = false;
-			return new DBRowIterator($results);
-		}
+	public function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500) {
+		if (empty($phrase)) return array();
 
 		$sqlFrom = '';
 		$sqlWhere = '';
@@ -67,7 +67,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		}
 
 		import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_PUBLISHED
-		$result = $this->retrieveCached(
+		$result = $this->retrieve(
 			'SELECT
 				o.submission_id,
 				MAX(s.context_id) AS journal_id,
@@ -87,25 +87,19 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			GROUP BY o.submission_id
 			ORDER BY count DESC
 			LIMIT ' . $limit,
-			$params,
-			3600 * $cacheHours // Cache for 24 hours
+			$params
 		);
 
-		$returner = array();
-		while (!$result->EOF) {
-			$row = $result->getRowAssoc(false);
-			$returner[$row['submission_id']] = array(
-				'count' => $row['count'],
-				'journal_id' => $row['journal_id'],
-				'issuePublicationDate' => $this->datetimeFromDB($row['i_pub']),
-				'publicationDate' => $this->datetimeFromDB($row['s_pub'])
-			);
-			$result->MoveNext();
+		$returner = [];
+		foreach ($result as $row) {
+			$returner[$row->submission_id] = [
+				'count' => $row->count,
+				'journal_id' => $row->journal_id,
+				'issuePublicationDate' => $this->datetimeFromDB($row->i_pub),
+				'publicationDate' => $this->datetimeFromDB($row->s_pub)
+			];
 		}
-		$result->Close();
-
 		return $returner;
 	}
 }
-
 

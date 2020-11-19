@@ -14,7 +14,6 @@
 	<code function="checkPhpVersion" />
 
 	<code function="createDirectories"/>
-	<code function="createDatabase"/>
 
 	<!-- PKP schema components -->
 	<migration class="lib.pkp.classes.migration.AnnouncementsMigration" />
