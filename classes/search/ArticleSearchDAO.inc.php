@@ -78,7 +78,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				submissions s
 				JOIN publications p ON (p.publication_id = s.current_publication_id)
 				JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name=\'issueId\')
-				JOIN issues i ON (CAST(i.issue_id AS CHAR) = ps.setting_value)
+				JOIN issues i ON (i.issue_id = CAST(ps.setting_value AS INTEGER))
 				JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
 				NATURAL JOIN ' . $sqlFrom . '
 			WHERE
