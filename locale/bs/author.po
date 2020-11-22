@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-22 22:36+0000\n"
+"PO-Revision-Date: 2020-11-23 02:44+0000\n"
 "Last-Translator: Tihomir Veselinovic <tiho@efsa.unsa.ba>\n"
 "Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/author/bs/>"
 "\n"
@@ -181,7 +181,7 @@ msgstr ""
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"Hrvatski=hr; Engleski=en; Francuski=fr; Španjolski=es. <a href=\""
+"Bosanski=bs; Engleski=en; Francuski=fr; Španjolski=es. <a href=\""
 "http://www.loc.gov/standards/iso639-2/langcodes.html\" target=\"_blank\">"
 "Dodatni kôdovi</a>."
 
