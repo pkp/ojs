@@ -109,7 +109,13 @@
 							</span>
 							{if $author->getLocalizedData('affiliation')}
 								<span class="affiliation">
-									{$author->getLocalizedData('affiliation')|escape}
+									{if $author->getData('rorId')}
+										<a href="{$author->getData('rorId')|escape}">
+											{$author->getLocalizedData('affiliation')|escape}{$rorIdIcon}
+										</a>
+									{else}
+										{$author->getLocalizedData('affiliation')|escape}
+									{/if}
 								</span>
 							{/if}
 							{if $author->getData('orcid')}
