@@ -28,19 +28,6 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 		return array_merge(parent::getEventHooks(), array(
 			'ArticleHandler::download',
 			'IssueHandler::download',
-			'HtmlArticleGalleyPlugin::articleDownload',
-			'HtmlArticleGalleyPlugin::articleDownloadFinished',
-			'LensGalleyPlugin::articleDownloadFinished'
-		));
-	}
-
-	/**
-	 * @copydoc PKPUsageEventPlugin::getDownloadFinishedEventHooks()
-	 */
-	protected function getDownloadFinishedEventHooks() {
-		return array_merge(parent::getDownloadFinishedEventHooks(), array(
-			'HtmlArticleGalleyPlugin::articleDownloadFinished',
-			'LensGalleyPlugin::articleDownloadFinished'
 		));
 	}
 
@@ -48,7 +35,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	 * @copydoc PKPUsageEventPlugin::getUSageEventData()
 	 */
 	protected function getUsageEventData($hookName, $hookArgs, $request, $router, $templateMgr, $context) {
-		list($pubObject, $downloadSuccess, $assocType, $idParams, $canonicalUrlPage, $canonicalUrlOp, $canonicalUrlParams) =
+		list($pubObject, $assocType, $idParams, $canonicalUrlPage, $canonicalUrlOp, $canonicalUrlParams) =
 			parent::getUsageEventData($hookName, $hookArgs, $request, $router, $templateMgr, $context);
 
 		if (!$pubObject) {
@@ -97,7 +84,6 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 						$idParams = array('m' . $pubObject->getId());
 					}
 
-					$downloadSuccess = true;
 					$canonicalUrlOp = $op;
 					break;
 
@@ -109,7 +95,6 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					$canonicalUrlOp = 'download';
 					$canonicalUrlParams = array($issue->getId(), $galley->getId());
 					$idParams = array('i' . $issue->getId(), 'f' . $galley->getId());
-					$downloadSuccess = false;
 					$pubObject = $galley;
 					break;
 
@@ -126,7 +111,6 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					$canonicalUrlOp = 'download';
 					$canonicalUrlParams = array($article->getId(), $galley->getId(), $submissionFileId);
 					$idParams = array('a' . $article->getId(), 'g' . $galley->getId(), 'f' . $submissionFileId);
-					$downloadSuccess = false;
 					$pubObject = Services::get('submissionFile')->get($submissionFileId);
 					break;
 				default:
@@ -135,7 +119,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 			}
 		}
 
-		return array($pubObject, $downloadSuccess, $assocType, $idParams, $canonicalUrlPage, $canonicalUrlOp, $canonicalUrlParams);
+		return array($pubObject, $assocType, $idParams, $canonicalUrlPage, $canonicalUrlOp, $canonicalUrlParams);
 	}
 
 	/**
