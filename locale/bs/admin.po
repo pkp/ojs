@@ -1,0 +1,252 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-22 22:36+0000\n"
+"Last-Translator: Tihomir Veselinovic <tiho@efsa.unsa.ba>\n"
+"Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/admin/bs/>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Časopisi u sustavu"
+
+msgid "admin.settings.redirect"
+msgstr "Izravno preusmjeravanje na časopis"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Svi upiti i posjeti glavnoj stranici bit će preusmjereni na odabrani "
+"časopis. To može biti izuzetno korisno ako je na sustavu postavljen samo "
+"jedan časopis."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Ovo će biti standardni jezik stranice i svakog časopisa koji se na njoj "
+"nalazi."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Izaberite sve jezike za koje želite da budu podržani na stranici. Izabrane "
+"prijevode bit će moguće koristiti sa svim časopisima postavljenim u sustavu, "
+"te će se na svakoj stranici prikazivati i izbornik jezika (što se može "
+"uključiti ili isključiti na razini pojedinog časopisa). Ako je izabran samo "
+"jedan jezik, jezični izbornik se neće prikazivati, niti će glavnim "
+"urednicima pojedinih časopisa biti na raspolaganu jezične postavke."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Označeni prijevodi su možda nezavršeni."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Jeste li sigurni da želite deinstalirati ovaj prijevod? To može utjecati na "
+"časopise koji trenutno koriste taj prijevod."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Izaberite bilo koji od ispod navedenih prijevoda kako biste instalirali "
+"podršku za taj jezik u sustavu. Prijevodi moraju biti instalirani prije nego "
+"što se mogu aktivirati i koristiti u pojedinim časopisima. Pogledajte OJS "
+"dokumentaciju za informacije o dodavanju podrške za nove jezike."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Lokalizacija \"{$locale}\" je uspješno postavljena."
+
+msgid "admin.languages.download"
+msgstr "Preuzmi lokalizaciju"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Nije moguće otvoriti deskriptor jezika sa PKP mrežne stranice."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr ""
+"Nije moguće dodati lokalizaciju u lokalizacijsku registry datoteku, obično \""
+"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS korisnička baza"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Omogući sinkronizaciju korisničkog profila (ako je podržana ovim "
+"autentifikacijskim dodatkom). Informacije o korisničkom profilu bit će "
+"automatski ažurirane preko udaljenog izvora prilikom prijave korisnika. "
+"Također, izmjene profila (uključujući promjenu lozinke) izvršene unutar OJS-"
+"a bit će automatski ažurirane na udaljenom izvoru. Informacije o OJS profilu "
+"bit će odvojene od informacija o profilu na udaljenom izvoru, ako ova opcija "
+"nije uključena."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Omogući promjenu korisničke lozinke (ako je podržana ovim autentifikacijskim "
+"dodatkom). Uključivanje ove opcije dopušta korisnicima da promjene svoje "
+"lozinke unutar OJS-a te korištenje OJS opcije \"izdaj novu lozinku\" kako bi "
+"se umjesto zaboravljene lozinke izdala nova. Te opcije neće biti dostupne "
+"korisnicima s ovim izvorom autentifikacije, ako ova opcija nije uključena."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Omogući kreiranja korisnika (ako je podržano ovim autentifikacijskim "
+"dodatkom). Korisnici kreirani unutar OJS-a s ovim autentifikacijskim izvorom "
+"bit će automatski dodani na udaljeni izvor autentifikacije ukoliko već ne "
+"postoje. Osim toga, ako je ovaj izvor primaran, OJS računi kreirani preko "
+"korisničke registracije bit će također dodani na udaljeni izvor."
+
+msgid "admin.systemVersion"
+msgstr "OJS verzija"
+
+msgid "admin.systemConfiguration"
+msgstr "Konfiguracija OJS-a"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS konfiguracijske postavke iz <tt>config.inc.php</tt> datoteke."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Automatski ćete biti evidentirani  kao glavni urednik ovog časopisa. Po "
+"kreiranju novog časopisa, pristupite mu kao glavni urednik kako biste "
+"nastavili s podešavanjem i upisom korisnika."
+
+msgid "admin.journals.journalSettings"
+msgstr "Postavke časopisa"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nema kreiranih časopisa."
+
+msgid "admin.contexts.create"
+msgstr "Kreiraj časopis"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Putanja je obavezna."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Putanja smije sadržavati samo alfanumeričke znakove, podvlačenja i povlake, "
+"mora početi, a i završiti s alfanumeričkim znakom."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Odabrana putanja je već u korištenju drugog časopisa."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Opis časopisa"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Postojeća putanja časopisa ili putanja koju treba kreirati (npr. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Prenesi pretplate i pretplatnike"
+
+msgid "admin.journals.transcode"
+msgstr "Prekodiraj metapodatke prenesenih članaka iz ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Generiraj kod koji će mapirati OJS 1 URL-ove u OJS 2 URL-ove"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Putanja uvođenja je obavezna."
+
+msgid "admin.journals.importErrors"
+msgstr "Neuspješno uvođenje"
+
+msgid "admin.mergeUsers"
+msgstr "Spajanje korisnika"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Spoji korisnika"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Odaberite korisnika kojeg ćete spojiti s drugim korisničkim računom (npr. u "
+"slučaju da neki korisnik posjeduje dva korisnička računa). Račun koji prvi "
+"odaberete bit će obrisan, a svi njegovi prilogzi, zaduženja itd. bit će "
+"pridruženi drugom računu."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Svi evidentirani korisnici"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Jeste li sigurni da želite spojiti račun korisnika \"{$oldUsername}\" s "
+"računom korisnika \"{$newUsername}\"? Račun korisničkog imena \""
+"{$oldUsername}\" više neće postojati nakon toga. Ovo je nepovratna radnja."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Nema evidentiranih korisnika."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Odaberite korisnika kojem želite pripisati radove, urednička zaduženja, itd."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Omogućite ovom časopisu da se pojavi javno na stranici"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Preporuča se jedna kratka riječ ili akronim koji identificira časopis. URL "
+"časopisa će biti {$sampleUrl}."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tVaš časopis je podešen tako da bilježi više od jednog načina mjerenja "
+"upotrebe stranica. Statistika upotrebe stranica će biti prikazana u nekoliko "
+"konteksta.\n"
+"Ima slučajeva kad je potrebno uzeti jedan način mjerenja npr. za prikaz "
+"liste sa rangiranjem najčešće preuzetih članaka ili za rangiranje rezultata "
+"pretrage.\n"
+"Odaberite jedan od podešenih načina mjerenja kao pretpostavljeni.\n"
+"\t"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Podsjetnik za recenziju"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Obavijest o otvorenom pristupu"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Podsjetnik na istek pretplate"
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} je uspješno ažuriran."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} je uspješno napravljen."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Potrebno je unijeti naslov."
+
+msgid "admin.languages.downloadFailed"
+msgstr ""
+"Preuzimanje lokalizacije nije uspjelo. Ispod priložena poruka/e opisuje "
+"grešku."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Preuzimanje paketa jezika s web poslužitelja Projekta javnog znanja "
+"trenutno nije dostupno jer:</p>\n"
+"        <ul>\n"
+"                <li>Vaš poslužitelj nema ili ne dozvoljava izvođenje GNU \""
+"tar\" uslužnog programa</li>\n"
+"                <li>OJS nije u mogućnosti prilagoditi registarsku datoteku "
+"jezika, obično \"registry/locales.xml\".</li>\n"
+"        </ul>\n"
+"<p>Paketi jezika mogu se ručno preuzeti s <a href=\"http://pkp.sfu.ca\">PKP "
+"web site</a>.</p>"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Jeste li sigurni da želite onemogućiti ovaj jezik? To može utjecati na sve "
+"časopise koji trenutno koriste taj jezik."
+
+msgid "admin.settings.info.success"
+msgstr "Informacije o časopisu uspješno su ažurirane."
+
+msgid "admin.settings.appearance.success"
+msgstr "Postavke izgleda časopisa uspješno su spremljene."
+
+msgid "admin.settings.config.success"
+msgstr "Postavke konfiguracije časopisa uspješno su spremljene."

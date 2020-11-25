@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-16 18:52+0000\n"
+"Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
+"Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/gd_GB/>\n"
+"Language: gd_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Plugan inbhir nam fiosan-naidheachd"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Tha am plugan seo a’ gintinn inbhirean siondacaideadh-lìn RSS/Atom airson "
+"fiosan-naidheachd an iris-leabhair."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Roghainnean"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Na seall ceanglaichean an inbhir air gach duilleag an iris-leabhair."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr ""
+"Na seall ceanglaichean an inbhir ach air an duilleag-dhachaigh agus duilleag "
+"nam fiosan-naidheachd."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr ""
+"Na seall ceanglaichean an inbhir ach air duilleag nam fiosan-naidheachd."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Na seall san inbhir ach na"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "fiosan-naidheachd as ùire."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Cuir a-steach àireamh shlàn airson fiosan-naidheachd o chionn goirid."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Suaicheantas Atom"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "Suaicheantas RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "Suaicheantas RSS2"

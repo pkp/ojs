@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-16 18:52+0000\n"
+"Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
+"Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/gd_GB/>\n"
+"Language: gd_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Artaigealan coltach ris a mholar"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Tha am plugan seo a’ cur ris liosta de dh’artaigealan coltach ris air "
+"duilleag geàrr-chunntas an artaigil."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Artaigealan coltach ris"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "’S urrainn dhut {$advancedSearchLink} cuideachd."
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "tòiseachadh air lorg ionnannachd adhartach"

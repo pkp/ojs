@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-16 18:52+0000\n"
+"Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
+"Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-webFeed/gd_GB/>\n"
+"Language: gd_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Plugan an inbhir-lìn"
+
+msgid "plugins.generic.webfeed.description"
+msgstr ""
+"Tha am plugan seo a’ gintinn inbhirean siondacaideadh-lìn RSS/Atom airson na "
+"h-irise làithreach."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Roghainnean"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Na seall ceanglaichean an inbhir-lìn ach air duilleagan na h-irise."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+"Na seall ceanglaichean an inbhir-lìn ach air an duilleag-dhachaigh agus "
+"duilleagan na h-irise."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Seall ceanglaichean an inbhir-lìn air gach duilleag an iris-leabhair."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Seallaidh seo nithean san iris fhoillsichte làithreach."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Seallaidh seo àireamh shocraichte de rudan a bha ann o chionn goirid."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Co mheud nì a thèid a shealltainn"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr ""
+"Cuir a-steach àireamh shlàn airson nithean a chaidh fhoillseachadh o chionn "
+"goirid."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Suaicheantas Atom"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "Suaicheantas RSS1"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "Suaicheantas RSS2"
