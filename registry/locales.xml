@@ -17,7 +17,7 @@
 
 <locales>
 	<locale key="ar_IQ" complete="true"  name="العربية" iso639-2b="ara" iso639-3="ara" direction="rtl" />
-	<locale key="bs_BA" complete="false" name="bosanski" iso639-2b="bos" iso639-3="bos" />
+	<locale key="bs_BA" complete="false" name="Bosanski" iso639-2b="bos" iso639-3="bos" />
 	<locale key="ca_ES" complete="false" name="Català" iso639-2b="cat" iso639-3="cat" />
 	<locale key="cs_CZ" complete="true" name="Čeština" iso639-2b="cze" iso639-3="ces" />
 	<locale key="da_DK" complete="true" name="Dansk" iso639-2b="dan" iso639-3="dan" />
