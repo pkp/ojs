@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-17 18:56+0000\n"
+"Last-Translator: Evangelos Papakirykou <vpapakir@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-articles/el_GR/>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "Δεν έχει καταγραφεί απόφαση"
+
+msgid "plugins.reports.articles.description"
+msgstr ""
+"Αυτό το πρόσθετο δημιουργεί μια αναφορά CSV που περιέχει τη λίστα των άρθρων "
+"και τις αντίστοιχες πληροφορίες τους."
+
+msgid "plugins.reports.articles.displayName"
+msgstr "Αναφορά άρθρων"

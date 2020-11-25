@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-22 06:30+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"api/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Publikasjonen som du forespurte er ikke del av denne innleveringen."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Publikasjonen du forespurte finnes ikke i dette tidsskriftet."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Betalingsmetoden du valgte støttes ikke."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Du har ikke tillatelse til å flytte denne epostmalen til et annet tidsskrift."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Tidsskriftet du sendte forespørsel om etter ble ikke funnet."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Du har ikke rettigheter til å slette dette tidsskriftet."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Du har ikke rettigheter til å redigere dette tidsskriftet."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Du kan ikke redigere dette tidsskriftet via nettstedets API."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Du kan ikke se eller redigere dette tidsskriftet hvis du ikke sender en "
+"forespørsel til tidsskriftets API eller nettstedets API."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Du har ikke rettigheter til å se dette tidsskriftet."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Du kan bare se tidsskrift som har blitt aktivert."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"For å redigere en innlevering må du sende en forespørsel til tidsskriftets "
+"API endepunkt."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Du har ikke tillatelse til å se upubliserte utgaver."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Du kan ikke bytte tidsskrift for en innlevering."

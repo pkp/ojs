@@ -1,2 +1,50 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-11-17 18:56+0000\n"
+"Last-Translator: Evangelos Papakirykou <vpapakir@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
+"el_GR/>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Κωδικός πρόσβασης διαχειριστή"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Π.χ., \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Διαχειριστικό (Manager) DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Π.χ., \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Βασικό (Base) DN"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr ""
+"Προαιρετικό. Η προεπιλεγμένη τιμή είναι 389 (LDAP) ή 636 (LDAP με χρήση SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Θύρα εξυπηρετητή"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"Π.χ. , \"ldap.example.com\", ή \"ldaps://ldap.example.com\" (εάν γίνεται "
+"χρήση SSL)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Όνομα εξυπηρετητή"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Ρυθμίσεις LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Αυτό το πρόσθετο επιτρέπει την αυθεντικοποίηση και το συγχρονισμό των "
+"λογαριασμών των χρηστών με τη χρήση μιας εξωτερικής υπηρεσίας LDAP."
