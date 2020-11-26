@@ -166,7 +166,8 @@ class LegacyJR1 {
 
 		$site = $request->getSite();
 		$availableContexts = $journalDao->getAvailable();
-		if ($availableContexts->getCount() > 1) {
+		list($firstContext, $secondContext) = [$availableContexts->next(), $availableContexts->next()];
+		if ($secondContext) { // Multiple contexts
 			$vendorName = $site->getLocalizedTitle();
 		} else {
 			$vendorName =  $journal->getData('publisherInstitution');

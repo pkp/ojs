@@ -268,9 +268,10 @@ class CounterReport {
 		$context = $request->getContext();
 		$contextDao = Application::getContextDAO();
 		$availableContexts = $contextDao->getAvailable();
+		list($firstContext, $secondContext) = [$availableContexts->next(), $availableContexts->next()];
 		switch ($key) {
 			case 'name':
-				if ($availableContexts->getCount() > 1) {
+				if ($secondContext) { // Multiple contexts
 					$name = $site->getLocalizedTitle();
 				} else {
 					$name =  $context->getData('publisherInstitution');
@@ -283,7 +284,7 @@ class CounterReport {
 				return $request->getBaseUrl();
 			case 'contacts':
 				try {
-					if ($availableContexts->getCount() > 1) {
+					if ($secondContext) { // Multiple contexts
 						$contactName = $site->getLocalizedContactName();
 						$contactEmail =  $site->getLocalizedContactEmail();
 					} else {
