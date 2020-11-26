@@ -231,7 +231,7 @@ class OAIDAO extends PKPOAIDAO {
 			FROM
 				submissions a
 				JOIN publications p ON (a.current_publication_id = p.publication_id)
-				JOIN publication_settings psissue ON (psissue.publication_id = p.publication_id AND psissue.setting_name=\'issueId\')
+				JOIN publication_settings psissue ON (psissue.publication_id = p.publication_id AND psissue.setting_name=\'issueId\' AND psissue.locale=\'\')
 				JOIN issues i ON (CAST(i.issue_id AS CHAR(20)) = psissue.setting_value)
 				JOIN sections s ON (s.section_id = p.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)

@@ -544,13 +544,12 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 
 		$result = $this->retrieve(
 			'SELECT	i.*
-			FROM	issues i,
-				submissions a
-			LEFT JOIN publications p ON (p.publication_id = a.current_publication_id)
-			LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
-			WHERE	ps.setting_name = ? AND ps.setting_value = CAST(i.issue_id as CHAR) AND
-				a.submission_id = ? AND
-				a.context_id = i.journal_id' .
+			FROM	submissions s
+				JOIN publications p ON (p.publication_id = s.current_publication_id)
+				JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name = ? AND ps.locale = \'\')
+				JOIN issues i ON ps.setting_value = CAST(i.issue_id as CHAR)
+			WHERE	s.submission_id = ? AND
+				s.context_id = i.journal_id' .
 				($journalId?' AND i.journal_id = ?':''),
 			$params
 		);
@@ -653,10 +652,10 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	function getNumArticles($issueId) {
 		$result = $this->retrieve(
 			'SELECT COUNT(*) AS row_count
-				FROM submissions s
-				LEFT JOIN publications p ON (p.publication_id = s.current_publication_id)
-				LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
-				WHERE ps.setting_name = ? AND ps.setting_value = ? AND (s.status = ? or s.status = ?) ',
+			FROM submissions s
+				JOIN publications p ON (p.publication_id = s.current_publication_id)
+				JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name = ? AND ps.locale=\'\')
+			WHERE ps.setting_value = ? AND (s.status = ? or s.status = ?) ',
 			['issueId', (int) $issueId, (int) STATUS_SCHEDULED, (int) STATUS_PUBLISHED]
 		);
 		$row = $result->current();
