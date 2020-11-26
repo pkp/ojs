@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2020-10-08 06:26+0000\n"
+"PO-Revision-Date: 2020-11-26 18:19+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/locale/da_DK/"
 ">\n"
@@ -2220,3 +2220,9 @@ msgstr "Se {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Valgte redaktører"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Den ønskede publiceringsversion blev ikke fundet."
+
+msgid "category.category"
+msgstr "Kategorier"
