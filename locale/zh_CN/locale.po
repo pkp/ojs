@@ -1334,6 +1334,7 @@ msgstr "有关此发布系统平台和工作流的更多信息由 OJS / PKP 提�
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS编审与出版流程"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "本期刊使用开放期刊系统（{$ojsVersion}）,本系统是由<a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>研发与支持的一个开源的期刊管理与出版软件，另外，系统基于GNU通用公共许可证，因此可以自由的分发。"
 
@@ -1656,6 +1657,7 @@ msgstr "投稿时间"
 msgid "notification.type.userComment"
 msgstr "一个读者对\"{$title}\"进行了评论"
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "本站使用开放期刊系统（OJS  {$ojsVersion} ）.OJS是一个开源的期刊管理于出版软件，由<a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>组织研发，遵循GNU General Public License."
 

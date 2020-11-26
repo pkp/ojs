@@ -1917,12 +1917,14 @@ msgstr "یارمەتیی OJS"
 msgid "help.ojsHelp"
 msgstr "یارمەتیی سیستەمی گۆڤاری کراوە"
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
 "ئەم پەڕەیە سیستەمی گۆڤاری کراوە بەکار دەهێنێت {$ojsVersion}ئەمە سیستەمێکی "
 "کراوەیە بۆ بڵاوکردنەوە و گەشەی پێ دراوە لە لایەن <a href=\"http://pkp.sfu.ca/"
 "\">پڕۆژەی زانیاریی گشتی</a> بە ڕێگەپێدانی GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "ئەم گۆڤارە سیستەمی گۆڤاری کراوە پەیڕەو دەکات {$ojsVersion}،کە ئەمە "

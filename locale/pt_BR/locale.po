@@ -1660,9 +1660,11 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Processo editorial e de publicação"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "A revista usa o Open Journal Systems (OJS {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas, desenvolvido com suporte e distribuição pelo <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sob a licença GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "O portal utiliza o Open Journal Systems (OJS {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas desenvolvido com suporte e distribuição  pelo <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sob a licença GNU General Public License."
 

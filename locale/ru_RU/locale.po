@@ -1583,9 +1583,11 @@ msgstr "Больше информации об этой издательской
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Редакционный и издательский процесс OJS"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Этот журнал использует Open Journal Systems {$ojsVersion}, которая является программным обеспечением с открытым исходным кодом для управления журналами и их публикации. Данное программное обеспечение разработано, поддерживается и свободно распространяется <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> по лицензии GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Этот сайт использует Open Journal Systems {$ojsVersion}, которая является программным обеспечением с открытым исходным кодом для управления журналами и их публикации. Данное программное обеспечение разработано, поддерживается и свободно распространяется <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> по лицензии GNU General Public License."
 

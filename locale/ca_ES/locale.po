@@ -1366,9 +1366,11 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Procés editorial i de publicació de l’OJS"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Aquesta revista utilitza l’Open Journal Systems {$ojsVersion}, un programari de codi obert per a la gestió i la publicació de revistes que ha estat desenvolupat, impulsat i distribuït lliurement pel <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sota la Llicència Pública General GNU."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Aquest lloc utilitza l’Open Journal Systems {$ojsVersion}, un programari de codi obert per a la gestió i la publicació de revistes que ha estat desenvolupat, impulsat i distribuït lliurement pel <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sota la Llicència Pública General GNU."
 

@@ -1317,6 +1317,7 @@ msgstr "Ajutor OJS"
 msgid "help.ojsHelp"
 msgstr "Ajutor OJS"
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
 "Acest site folosește Open Journal Systems {$ojsVersion}, care este un "
@@ -1324,6 +1325,7 @@ msgstr ""
 "dezvoltat, susținut și distribuit liber de către <a href=\"http://pkp.sfu.ca/"
 "\">Public Knowledge Project</a> sub licența GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "Acest jurnal folosește Open Journal Systems {$ojsVersion}, care este un "

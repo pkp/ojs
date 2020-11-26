@@ -1556,9 +1556,11 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS process för redigering och publicering"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Den här tidskriften använder Open Journal Systems {$ojsVersion}, ett system för tidskriftshantering och publicering som bygger på fri och öppen programvara som utvecklas, drivs och distribueras fritt av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Den här webbplatsen använder Open Journal Systems {$ojsVersion}, ett system för tidskriftshantering och publicering som bygger på fri och öppen programvara som utvecklas, drivs och distribueras fritt av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
 

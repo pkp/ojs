@@ -1583,11 +1583,14 @@ msgstr "More information about the publishing system, Platform and Workflow by O
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS Editorial and Publishing Process"
 
+msgid "about.aboutSoftware"
+msgstr "About Open Journal Systems"
+
 msgid "about.aboutOJSJournal"
-msgstr "This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+msgstr "This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the Public Knowledge Project under the GNU General Public License. Visit PKP's website to <a href=\"http://pkp.sfu.ca/\">learn more about the software</a>. Please <a href=\"{$contactUrl}\">contact the journal</a> directly with questions about the journal and submissions to the journal."
 
 msgid "about.aboutOJSSite"
-msgstr "This site uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+msgstr "This site uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the Public Knowledge Project under the GNU General Public License. Visit PKP's website to <a href=\"http://pkp.sfu.ca/\">learn more about the software</a>. Please contact the site directly with questions about its journals and submissions to its journals."
 
 msgid "help.ojsHelp"
 msgstr "Open Journal Systems Help"

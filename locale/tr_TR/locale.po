@@ -1387,9 +1387,11 @@ msgstr "Dergi Yönetim Sistemi Hakkında."
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "ADS Editöryal ve Yayımlama Süreci"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Bu dergi açık kaynak kodlu bir dergi hazırlama ve yayınlama yazılımı olan Açık Dergi Sistemleri (Open Journal Systems) yazılım {$ojsVersion} sürümünü kullanmaktadır. ADS olarak kısaltılan bu yazılım <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> tarafından geliştirilmiştir ve (GNU General Public License) lisansı ile ücretsiz dağıtılmaktadır."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Bu site açık kaynak kodlu bir dergi hazırlama ve yayınlama yazılımı olan Açık Dergi Sistemleri (Open Journal Systems) yazılımı {$ojsVersion} sürümünü kullanmaktadır. ADS olarak kısaltılan bu yazılım <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> tarafından geliştirilmiştir ve (GNU General Public License) lisansı ile ücretsiz dağıtılmaktadır."
 

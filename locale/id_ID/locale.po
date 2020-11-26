@@ -1551,9 +1551,11 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Editorial OJS dan Proses Penerbitan"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Jurnal ini menggunakan Open Journal Systems {$ojsVersion}, yang merupakan perangkat lunak open source untuk pengelolaan dan penerbitan jurnal yang dikembangkan, didukung, dan didistribusikan bebas oleh <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> di bawah GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Situs ini menggunakan Open Journal Systems {$ojsVersion}, merupakan perangkat lunak open source untuk pengelolaan dan penerbitan jurnal yang dikembangkan, didukung, dan didistribusikan bebas oleh <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> di bawah GNU General Public License."
 

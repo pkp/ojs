@@ -1466,9 +1466,11 @@ msgstr "درباره این سامانه انتشاراتی"
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "روند داوری و انتشار در سامانه OJS"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "این مجله از سیستم مجلات آزاد (OJS) نسخه {$ojsVersion} استفاده می‌کند. OJS یک نرم‌افزار متن‌باز مدیریت و انتشار مجلات است که توسط  <a href=\"http://pkp.sfu.ca/\">پروژه دانش عمومی</a> و تحت مجوز GNU در اختیار عموم قرار گرفته است."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "این سایت از سیستم مجلات آزاد (OJS) نسخه {$ojsVersion} استفاده می‌کند. OJS یک نرم‌افزار متن‌باز مدیریت و انتشار مجلات است که توسط  <a href=\"http://pkp.sfu.ca/\">پروژه دانش عمومی</a> و تحت مجوز GNU در اختیار عموم قرار گرفته است."
 

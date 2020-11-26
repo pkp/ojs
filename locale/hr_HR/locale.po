@@ -1026,9 +1026,11 @@ msgstr "Tipovi pretplate"
 msgid "about.aboutThisPublishingSystem"
 msgstr "Više informacija o OJS-u."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Ovaj časopis koristi Open Journal Systems {$ojsVersion}, otvoreni softver namijenjen uređivanju i izdavanju časopisa, razvijan,  podržan i besplatno distribuiran od <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>-a pod GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Ova stranica koristi Open Journal Systems {$ojsVersion}, koji je otvoreni izvor upravljanja časopisom i program za izdavanje, podržan i besplatno distribuiran od <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>-a pod GNU General Public License."
 
