@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2020-08-02 19:48+0000\n"
+"PO-Revision-Date: 2020-11-26 18:19+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs_CZ/"
 ">\n"
@@ -77,9 +77,8 @@ msgstr "Všechny částky musí mít kladné číselné hodnoty (desetinná mís
 msgid "manager.payment.generalFees"
 msgstr "Obecné poplatky"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "Členství v asociaci se objeví v části O časopise pod Pravidly a odkaz pro dary se objeví nad funkcí pro vyhledávání v rámci napravo."
+msgstr "Členství v asociaci se objeví v části O časopise pod Pravidly."
 
 msgid "manager.payment.generalOptions"
 msgstr "Obecné možnosti"
@@ -1813,7 +1812,7 @@ msgid "manager.distribution.publishingMode.success"
 msgstr "Podrobnosti o vydání byly aktualizovány."
 
 msgid "manager.distribution.publishingMode"
-msgstr "Režim vydání"
+msgstr "Režim vydávání"
 
 msgid "manager.distribution.publication"
 msgstr "Vydání"
@@ -1829,3 +1828,25 @@ msgstr ""
 "Zvolte, jak má být vybráno výchozí datum autorských práv článku. Tato "
 "výchozí hodnota může být v některých případech přepsána. Pokud „publikujete "
 "za běhu“, nepoužívejte datum vydání čísla."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Validace selhala."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Validace byla úspěšná!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Tento časopis v tomto okamžiku nepřijímá příspěvky. Přejděte do nastavení "
+"workflow a povolte příspěvky."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Zamezte uživatelům zasílání nových článků do tohoto časopisu.  Na stránce "
+"nastavení <a href=\"{$url}\">sekce časopisu</a> lze zakázat odesílání  "
+"příspěvků do jednotlivých sekcí časopisu."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Musí být aktivní alespoň jedna sekce. Chcete-li zakázat všechny příspěvky do "
+"tohoto časopisu, přejděte do nastavení workflow."
