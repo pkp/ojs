@@ -151,9 +151,9 @@ class Upgrade extends Installer {
 			if ($commentsToEd != ''){
 				$userId = null;
 				$authorAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($row->submission_id, ROLE_ID_AUTHOR);
-				if ($authorAssignments->getCount() != 0) {
+				if ($authorAssignment = $authorAssignments->next()) {
 					// We assume the results are ordered by stage_assignment_id i.e. first author assignment is first
-					$userId = $authorAssignments->next()->getUserId();
+					$userId = $authorAssignment->getUserId();
 				} else {
 					$managerUserGroup = $userGroupDao->getDefaultByRoleId($row->context_id, ROLE_ID_MANAGER);
 					$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $row->context_id);
