@@ -168,11 +168,11 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 				$issue = $this->parseIssueIdentification($publication, $issueIdentificationNode);
 			}
 		}
-		
+
 		if ($issue) {
 			$publication->setData('issueId', $issue->getId());
 		}
-			
+
 		return $publication;
 	}
 
@@ -211,11 +211,12 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 		}
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /** @var $issueDao IssueDAO */
 		$issue = null;
-		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
-		if ($issuesByIdentification->getCount() != 1) {
+		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles)->toAssociativeArray();
+
+		if (count($issuesByIdentification) != 1) {
 			$deployment->addError(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => $node->ownerDocument->saveXML($node))));
 		} else {
-			$issue = $issuesByIdentification->next();
+			$issue = $issuesByIdentification[0];
 		}
 
 		if (!isset($issue)) {
@@ -238,7 +239,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 
 			$issue->setId($issueId);
 		}
-		
+
 		return $issue;
 	}
 }
