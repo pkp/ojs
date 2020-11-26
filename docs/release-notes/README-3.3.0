@@ -1,7 +1,9 @@
-OJS 3.3.0 Release Notes
-Git tag: 3_3_0-0
+OJS 3.3.0RC1 Release Notes
+Git tag: 3_3_0-0rc1
 
-Release date:
+THIS IS A RELEASE CANDIDATE AND NOT INTENDED FOR PRODUCTION USE.
+
+Release date: [prerelease]
 ============================
 
 Configuration Changes
@@ -16,6 +18,8 @@ configuration parameters.
 
 New Features
 ------------
+	- [to be completed after Release Candidate phase]
 
 Bug Fixes
 ---------
+	- [to be completed after Release Candidate phase]
