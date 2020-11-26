@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:22+00:00\n"
-"PO-Revision-Date: 2020-11-16 18:52+0000\n"
-"Last-Translator: Dawid Kość <kosc.dawid@gmail.com>\n"
+"PO-Revision-Date: 2020-11-26 21:58+0000\n"
+"Last-Translator: Dariusz Lis <Dariusz@lis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/locale/pl_PL/"
 ">\n"
 "Language: pl_PL\n"
@@ -400,7 +400,7 @@ msgid "issue.issue"
 msgstr "Numer"
 
 msgid "issue.issues"
-msgstr "Numery"
+msgstr "Wydania"
 
 msgid "issue.title"
 msgstr "Tytuł"
@@ -1174,13 +1174,13 @@ msgid "current.noCurrentIssue"
 msgstr "Brak aktualnego numeru"
 
 msgid "current.noCurrentIssueDesc"
-msgstr "Numery w przygotowaniu."
+msgstr "To czasopismo nie opublikowało żadnego wydania."
 
 msgid "archive.archives"
 msgstr "Archiwum"
 
 msgid "archive.browse"
-msgstr "Przeglądaj numery archiwalne"
+msgstr "Przeglądaj starsze wydania"
 
 msgid "archive.issueUnavailable"
 msgstr "Numer niedostępny"
@@ -1604,7 +1604,7 @@ msgstr ""
 "</ol>"
 
 msgid "context.current"
-msgstr "Aktualne czasopismo:"
+msgstr "Bieżące czasopismo:"
 
 msgid "context.select"
 msgstr "Przełącz do innego czasopisma:"
@@ -1616,7 +1616,7 @@ msgid "context.context"
 msgstr "Czasopismo"
 
 msgid "journal.viewAllIssues"
-msgstr "Wyświetl wszystkie numery"
+msgstr "Wyświetl wszystkie wydania"
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Uwzględnij użytkowników bez przypisanych ról w czasopiśmie."
@@ -1790,7 +1790,7 @@ msgid "grid.action.createContext"
 msgstr "Utwórz nowe czasopismo"
 
 msgid "editor.navigation.issues"
-msgstr "Numery"
+msgstr "Wydania"
 
 msgid "notification.type.approveSubmission"
 msgstr "Zgłoszony tekst musi zostać zatwierdzony zanim pojawi się w numerze."
@@ -1832,10 +1832,10 @@ msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Podana ścieżka \"{$journalPath}\" nie odnosi się do czasopisma."
 
 msgid "editor.issues.backIssues"
-msgstr "Opublikowane numery"
+msgstr "Opublikowane"
 
 msgid "editor.issues.futureIssues"
-msgstr "Zaplanowane numery"
+msgstr "Przygotowywane"
 
 msgid "subscriptions.status.noSubscription"
 msgstr "Nie posiadasz aktualnej prenumeraty."
@@ -2239,3 +2239,6 @@ msgstr ""
 "target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"> "
 "Efekt otwartego dostępu </a>). </li>\n"
 "</ol>"
+
+msgid "category.category"
+msgstr "Kategorie"
