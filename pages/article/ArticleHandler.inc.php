@@ -380,6 +380,7 @@ class ArticleHandler extends Handler {
 		if (!isset($this->galley)) $request->getDispatcher()->handle404();
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 		else if ($this->userCanViewGalley($request, $this->article->getId(), $this->galley->getId())) {
+			$submissionFile = null;
 			if (!$this->fileId) {
 				$submissionFile = $this->galley->getFile();
 				if ($submissionFile) {
