@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-27 08:29+0000\n"
+"PO-Revision-Date: 2020-11-27 11:12+0000\n"
 "Last-Translator: mhh <mhh@centrum.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/editor/sk_SK/"
 ">\n"
@@ -328,34 +328,34 @@ msgstr "Pripojiť obsah tohto čísla:"
 
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
-"Poslať túto správu užívateľom spojeným s týmto časopisom, ktorí uviedli, že "
-"si želajú dostávať najnovšie informácie ({$count} užívateľov)"
+"Poslať túto správu používateľom spojeným s týmto časopisom, ktorí uviedli, "
+"že si želajú dostávať najnovšie informácie ({$count} používateľov)"
 
 msgid "editor.notifyUsers.allUsers"
 msgstr ""
-"Poslať túto správu všetkým užívateľom spojeným s týmto časopisom ({$count} "
-"užívateľov)"
+"Poslať túto správu všetkým používateľom spojeným s týmto časopisom ({$count} "
+"používateľov)"
 
 msgid "editor.usersNotified"
-msgstr "Užívatelia boli informovaní"
+msgstr "Používatelia boli informovaní"
 
 msgid "editor.notifyUsers.inProgress"
-msgstr "Prebieha informovanie užívateľov..."
+msgstr "Prebieha informovanie používateľov..."
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "Všetkým inštitucionálnym predplatiteľom ({$count} užívateľov)"
+msgstr "Všetkým inštitucionálnym predplatiteľom ({$count} používateľov)"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "Všetkým individuálnym predplatiteľom ({$count} užívateľov)"
+msgstr "Všetkým individuálnym predplatiteľom ({$count} používateľov)"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "Všetkým autorom článkov ({$count} užívateľov)"
+msgstr "Všetkým autorom článkov ({$count} používateľov)"
 
 msgid "editor.notifyUsers.allReaders"
-msgstr "Všetkým čitateľom ({$count} užívateľov)"
+msgstr "Všetkým čitateľom ({$count} používateľov)"
 
 msgid "editor.notifyUsers"
-msgstr "Informovať užívateľa"
+msgstr "Informovať používateľa"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
