@@ -132,12 +132,13 @@ host = localhost
 username = ojs
 password = ojs
 name = ojs
+
 ; Set the non-standard port and/or socket, if used
 ; port = 3306
 ; unix_socket = /var/run/mysqld/mysqld.sock
 
-; Enable persistent connections
-persistent = Off
+; Database collation
+; collation = utf8_general_ci
 
 ; Enable database debug output (very verbose!)
 debug = Off

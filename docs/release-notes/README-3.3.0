@@ -15,6 +15,10 @@ configuration parameters.
 - The proxy configuration settings have changed. Please review the [proxy]
   section in config.TEMPLATE.inc.php and adapt your settings in config.inc.php
   as needed.
+- The db.persistent option for persistent database connections has been removed.
+- The db.collation option for configuring a database connection collation has
+  been added (default: utf8_general_ci)
+
 
 New Features
 ------------
