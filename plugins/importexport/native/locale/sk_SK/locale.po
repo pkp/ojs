@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-13 11:15+0000\n"
-"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"PO-Revision-Date: 2020-11-27 11:12+0000\n"
+"Last-Translator: mhh <mhh@centrum.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/sk_SK/>\n"
 "Language: sk_SK\n"
@@ -52,7 +52,7 @@ msgstr ""
 "čísle {$issueTitle} zodpovedá rôznym existujúcim sekciám časopisu."
 
 msgid "plugins.importexport.native.error.unknownUser"
-msgstr "Zadaný užívateľ \"{$userName}\" neexistuje."
+msgstr "Zadaný používateľ \"{$userName}\" neexistuje."
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Neznáma sekcia {$param}"
