@@ -211,7 +211,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 		}
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /** @var $issueDao IssueDAO */
 		$issue = null;
-		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles)->toAssociativeArray();
+		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles)->toArray();
 
 		if (count($issuesByIdentification) != 1) {
 			$deployment->addError(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => $node->ownerDocument->saveXML($node))));
