@@ -210,6 +210,7 @@ msgstr "Editores/as de esta sección"
 msgid "manager.sections.confirmDelete"
 msgstr "¿Está seguro/a de que desea eliminar esta sección de forma permanente?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Antes de poder eliminar esta sección, es necesario mover los artículos publicados en ella a otras secciones."
 

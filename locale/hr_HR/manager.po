@@ -1254,6 +1254,7 @@ msgstr "Pokaži korisnike bez uloge"
 msgid "manager.sections.confirmDelete"
 msgstr "Da li ste sigurni da želite trajno izbrisati ovu rubriku?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Prije nego obrišete ovu rubriku morate sve članke koji su u njoj prmjestiti u druge rubrike."
 

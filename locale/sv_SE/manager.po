@@ -228,6 +228,7 @@ msgstr "Sektionens redaktörer"
 msgid "manager.sections.confirmDelete"
 msgstr "Vill du ta bort sektionen?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Innan sektionen kan tas bort, måste sektionens artiklar flyttas till en annan  sektion."
 

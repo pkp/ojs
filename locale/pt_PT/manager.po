@@ -1390,6 +1390,7 @@ msgstr "Comprar Número"
 msgid "manager.sections.confirmDelete"
 msgstr "Tem a certeza que pretende eliminar permanentemente esta secção?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "Antes de ser eliminada esta secção, tem de mover os artigos publicados para "

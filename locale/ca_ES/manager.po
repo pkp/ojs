@@ -210,6 +210,7 @@ msgstr "Els editors/ores d'aquesta secció"
 msgid "manager.sections.confirmDelete"
 msgstr "Esteu segur/a que voleu eliminar aquesta secció de manera permanent?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Abans d'eliminar aquesta secció, heu de moure'n els articles publicats a altres seccions."
 

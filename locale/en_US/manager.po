@@ -247,7 +247,7 @@ msgid "manager.sections.confirmDelete"
 msgstr "Are you sure you want to permanently delete this section?"
 
 msgid "manager.sections.alertDelete"
-msgstr "Before this section can be deleted, you must move articles published within it into other sections."
+msgstr "Before this section can be deleted, you must move articles submitted to it into other sections."
 
 msgid "manager.sections.create"
 msgstr "Create Section"

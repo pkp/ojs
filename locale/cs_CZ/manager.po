@@ -1334,6 +1334,7 @@ msgstr "Individuální (uživatelé jsou ověřování pomocí přihlášení)"
 msgid "manager.sections.confirmDelete"
 msgstr "Jste si jisti, že chcete natrvalo vymazat tuto sekci?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Než budete moci smazat tuto sekci, musíte přesunout všechny články z této sekce do jiných sekcí."
 

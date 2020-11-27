@@ -233,6 +233,7 @@ msgstr "Rubrikredakteur/innen dieser Rubrik"
 msgid "manager.sections.confirmDelete"
 msgstr "Sind Sie sicher, dass Sie diese Rubrik endgültig entfernen wollen?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Bevor diese Rubrik entfernt werden kann, müssen Sie Artikel aus dieser Rubrik in andere Rubriken verschieben."
 

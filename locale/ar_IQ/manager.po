@@ -250,6 +250,7 @@ msgstr "محررو هذا القسم"
 msgid "manager.sections.confirmDelete"
 msgstr "هل أنت متأكد من رغبتك في حذف هذا القسم؟"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "قبل حذف هذا القسم، عليك نقل المؤلَّفات المنشورة ضمنه إلى قسم آخر."
 

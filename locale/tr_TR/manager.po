@@ -1478,6 +1478,7 @@ msgstr "Herhangi bir abonelik türü oluşturulmadı."
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Abonelik türü başarıyla oluşturuldu."
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "Bu bölümü silmeden önce, bu bölümde yayımlanmış makaleleri diğer bölümlere "

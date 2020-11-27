@@ -259,6 +259,7 @@ msgstr "Editores desta seção"
 msgid "manager.sections.confirmDelete"
 msgstr "Deseja realmente excluir permanentemente esta seção?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Antes de poder excluir esta seção, é necessário mover os artigos publicados nela para outras seções."
 

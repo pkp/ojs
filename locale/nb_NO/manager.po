@@ -1716,6 +1716,7 @@ msgstr "Velg de mest passende kategorier fra listen. Lesere vil kunne bruke kate
 msgid "manager.sections.confirmDelete"
 msgstr "Er du sikker på at du ønsker å slette denne seksjonen for godt?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Før du kan slette denne seksjonen, må du flytte artiklene som er publisert i den over i andre seksjoner."
 

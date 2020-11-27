@@ -219,6 +219,7 @@ msgstr "Uredniki te rubrike"
 msgid "manager.sections.confirmDelete"
 msgstr "Ste prepričani, da želite trajno zbrisati to rubriko?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Pred brisanjem rubrike, morate objavljene prispevke iz te rubrike premakniti v drugo rubriko."
 

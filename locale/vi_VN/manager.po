@@ -384,6 +384,7 @@ msgstr ""
 msgid "manager.sections.create"
 msgstr "Tạo chuyên mục"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "Trước khi chuyên mục này có thể bị xóa, bạn phải di chuyển các bài báo được "

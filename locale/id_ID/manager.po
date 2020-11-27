@@ -225,6 +225,7 @@ msgstr "Editor Bagian ini"
 msgid "manager.sections.confirmDelete"
 msgstr "Apakah Anda yakin ingin menghapus bagian ini secara permanen?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Sebelum bagian ini dapat dihapus, Anda harus memindah artikel yang dipublikasikan di bagian ini ke bagian lain."
 

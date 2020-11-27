@@ -219,6 +219,7 @@ msgstr "Tämän osaston toimittajat"
 msgid "manager.sections.confirmDelete"
 msgstr "Haluatko varmasti poistaa tämän osaston pysyvästi?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Ennen kuin tämä osasto voidaan poistaa, sinun on siirrettävä kyseisessä osastossa julkaistut artikkelit muihin osastoihin."
 

@@ -458,6 +458,7 @@ msgstr ""
 msgid "manager.sections.create"
 msgstr "بەشێک دروست بکە"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "پێش ئەوەی ئەم بەشە بسڕدرێتەوە، تۆ دەبیت توێژینەوەکانی ئێرە بۆ بەشێکی دیکە "

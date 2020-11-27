@@ -1314,6 +1314,7 @@ msgstr "Erosi ale bat"
 msgid "manager.sections.confirmDelete"
 msgstr "Ziur al zaude atal hau behin betiko ezabatu nahi duzula?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Atal hau ezabatu aurretik, bertan argitaratutako artikuluak beste atal batzuetara mugitu behar dituzu."
 

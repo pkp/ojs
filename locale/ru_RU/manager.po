@@ -245,6 +245,7 @@ msgstr "Редакторы данного раздела"
 msgid "manager.sections.confirmDelete"
 msgstr "Вы уверены, что хотите навсегда удалить этот раздел?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Перед удалением этого раздела вы должны переместить опубликованные статьи в другие разделы."
 

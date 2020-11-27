@@ -1284,6 +1284,7 @@ msgstr "购买事项"
 msgid "manager.sections.confirmDelete"
 msgstr "您确定要永久删除该栏目吗？"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "在该栏目能够被删除之前，您必须将栏目中已经出版过的文章移动到另一个栏目中。"
 

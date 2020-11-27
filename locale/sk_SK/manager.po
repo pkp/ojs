@@ -310,6 +310,7 @@ msgstr ""
 msgid "manager.sections.create"
 msgstr "Vytvoriť sekciu"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "Než budete môcť zmazať túto sekciu, musíte presunúť všetky články z tejto "

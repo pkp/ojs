@@ -1394,6 +1394,7 @@ msgstr "Kategorier"
 msgid "manager.payment.options.purchaseIssueFee"
 msgstr "Køb nummer"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Før denne sektion kan slettes, skal de artikler, der er publiceret i sektionen overføres til andre sektioner."
 

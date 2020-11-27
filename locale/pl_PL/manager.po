@@ -860,6 +860,7 @@ msgstr "Opisy"
 msgid "manager.subscriptions.noneCreated"
 msgstr "Brak subskrypcji"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Zanim sekcja zostanie usunięta, musisz przesunąć opublikowane artykuły do innej sekcji."
 
