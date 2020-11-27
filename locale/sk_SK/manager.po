@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-12 10:01+0000\n"
-"Last-Translator: Miroslav Chladný <klwngbnl@zeroe.ml>\n"
+"PO-Revision-Date: 2020-11-27 08:29+0000\n"
+"Last-Translator: mhh <mhh@centrum.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sk_SK/>\n"
 "Language: sk_SK\n"
@@ -915,9 +915,9 @@ msgstr "Navigačný panel"
 
 msgid "manager.setup.notifications.submissionAckDisabled"
 msgstr ""
-"<strong>Poznámka:</ strong>E-mail s poďakovaním za príspevok je v súčasnosti "
-"zakázaný. Pre použitie tejto funkcie, zapnite SUBMISSION_ACK e-mail v "
-"pripravených e-mailoch."
+"<strong>Poznámka:</strong> E-mail s potvrdením odoslania je momentálne "
+"deaktivovaný. Ak chcete používať túto funkciu, povoľte „Submission Ack“ v "
+"emailoch."
 
 msgid "manager.setup.note"
 msgstr "Poznámka"
@@ -2113,3 +2113,24 @@ msgstr "Užívateľ"
 
 msgid "manager.subscriptions.subscriptionType"
 msgstr "Typ predplatného"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Overenie bolo úspešné!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Tento časopis v súčasnosti neprijíma príspevky. Prejdite do nastavenia "
+"workflow a povoľte odosielanie."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Overenie zlyhalo."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Zabráňte používateľom v odosielaní nových článkov do časopisu. Príspevky je "
+"možné zakázať na stránke nastavení <a href=\"{$url}\">sekcie denníka</a>."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Musí byť aktívna aspoň jedna sekcia. Ak chcete zakázať všetky príspevky do "
+"tohto časopisu, upravte workflow nastavenie."
