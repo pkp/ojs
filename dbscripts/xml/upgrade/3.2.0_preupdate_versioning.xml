@@ -43,8 +43,8 @@
 	</sql>
 	<!-- Modify citations table to refer to publications #5465-->
 	<sql>
-		<dropindex table="citations" index="citations_submission" />
-		<dropindex table="citations" index="citations_submission_seq" />
+		<dropindex table="citations" index="citations_submission" ifexists="true" />
+		<dropindex table="citations" index="citations_submission_seq" ifexists="true" />
 		<rename table="citations" column="submission_id" to="publication_id" />
 	</sql>
 </data>
