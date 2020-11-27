@@ -1558,9 +1558,11 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS uredniški in izdajateljski postopek"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Ta revija uporablja Open Journal System {$ojsVersion}, ki je odprtokodni sistem za urejanje in objavljanje revij, ki je razvit, podprt in prosto dostopen s strani <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> pod GNU General Public licenco."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "To spletišče uporablja Open Journal System {$ojsVersion}, ki je odprtokodni sistem za urejanje in objavljanje revij, ki je razvit, podprt in prosto dostopen s strani <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> pod GNU General Public licenco."
 

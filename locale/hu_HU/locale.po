@@ -1572,9 +1572,11 @@ msgstr "A kiadói rendszerről"
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS szerkesztői és kiadási folyamat"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Ez a folyóirat Open Journal Systems {$ojsVersion} verziót használ, amely egy nyílt forráskódú folyóirat menedzselő és kiadói szoftver, a <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> által támogatott és szabadon terjeszthető a GNU General Public License alatt."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Ez az oldal Open Journal Systems {$ojsVersion} verziót, amely egy nyílt forráskódú folyóirat menedzselő és kiadói szoftver, a <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> által támogatott és szabadon terjeszthető a GNU General Public License alatt."
 

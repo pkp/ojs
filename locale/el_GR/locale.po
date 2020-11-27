@@ -1560,9 +1560,11 @@ msgstr "Περισσότερες πληροφορίες σχετικά με τη
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Διαδικασία επιμέλειας και δημοσίευσης"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Το περιοδικό αυτό χρησιμοποιεί το OJS (Open Journal Systems) {$ojsVersion}, ένα λογισμικό ανοιχτού κώδικα για τη διαχείριση και δημοσίευση ηλεκτρονικών περιοδικών, που έχει αναπτυχθεί υποστηρίζεται και διατίθεται ελεύθερα από το &lt;a href=\"http://pkp.sfu.ca/\"&gt;Public Knowledge Project&lt;/a&gt; υπό την άδεια GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Ο ιστότοπος αυτός χρησιμοποιεί το OJS (Open Journal Systems) {$ojsVersion}, ένα λογισμικό ανοικτού κώδικα για τη διαχείριση και δημοσίευση ηλεκτρονικών περιοδικών, που έχει αναπτυχθεί υποστηρίζεται και διατίθεται ελεύθερα από το &lt;a href=\"http://pkp.sfu.ca/\"&gt;Public Knowledge Project&lt;/a&gt; υπό την άδεια GNU General Public License."
 

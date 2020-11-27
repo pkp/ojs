@@ -1024,6 +1024,7 @@ msgstr "Članstvo"
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Proces uređivanja i izdavanja u OJS-u"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "Ovaj časopis koristi Open Journal Systems {$ojsVersion}, otvoreni softver "
@@ -1216,6 +1217,7 @@ msgstr ""
 msgid "about.delayedOpenAccessDescription2"
 msgstr "mjesec(i) nakon objave broja časopisa."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
 "Ova stranica koristi Open Journal Systems {$ojsVersion}, koji je otvoreni "

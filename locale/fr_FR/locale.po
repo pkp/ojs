@@ -1046,9 +1046,11 @@ msgid "about.aboutThisPublishingSystem"
 msgstr ""
 "À propos de ce système de publication, plateforme et processus par OJS/PKP."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Cette revue utilise Open Journal Systems {$ojsVersion}, un logiciel de gestion et d'édition de revues à code source libre développé, pris en charge et distribué librement par le <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sous la license publique générale GNU."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Ce site utilise Open Journal Systems {$ojsVersion}, un logiciel de gestion et d'édition de revues à code source libre développé, pris en charge et distribué librement par le <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sous la license publique générale GNU."
 

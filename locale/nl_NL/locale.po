@@ -1598,9 +1598,11 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS Redactie- en publicatieproces"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Dit tijdschrift gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> onder de GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Deze site gebruikt Open Journal Systems {$ojsVersion}, open source software voor het beheren en publiceren van een tijdschrift, ondersteund en gratis geleverd door het <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> onder de GNU General Public License."
 

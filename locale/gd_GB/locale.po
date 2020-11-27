@@ -307,6 +307,7 @@ msgstr ""
 "Faodar aithisgean air co-chòrdalachd agus/no brèidean còd airson DBMS eile a "
 "chur gu sgioba OJS.</p>\n"
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
 "Tha an làrach seo a’ cleachdadh Open Journal Systems {$ojsVersion}, bathar-"
@@ -314,6 +315,7 @@ msgstr ""
 "le taic a’ <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> agus "
 "ga sgaoileadh gu saor fo cheadachas coitcheann poblach GNU."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "Tha an t-iris-leabhar seo a’ cleachdadh Open Journal Systems {$ojsVersion}, "

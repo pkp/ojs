@@ -1184,9 +1184,11 @@ msgstr ""
 "OJSren\n"
 "Prozesu editoriala eta argitaratze-prozesua"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Aldizkari honek Open Journal Systems {$ojsVersion} (OJS) erabiltzen du. Aldizkariak kudeatzeko eta argitaratzeko iturburu irekiko software bat da OJS; <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> proiektuak garatzen eta sostengatzen du, eta doan banatzen du GNUren lizentzia publiko orokorrarekin (General Public License)."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Gune honek Open Journal Systems {$ojsVersion} erabiltzen du (OJS). Aldizkariak kudeatzeko eta argitaratzeko iturburu irekiko software bat da OJS; <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> proiektuak garatzen eta sostengatzen du, eta doan banatzen du GNUren lizentzia publiko orokorrarekin (General Public License)."
 

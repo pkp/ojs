@@ -2207,6 +2207,7 @@ msgstr "OJS Nápoveda"
 msgid "help.ojsHelp"
 msgstr "Nápoveda Open Journal Systems"
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
 "Táto stránka používa Open Journal Systems {$ojsVersion}, čo je open source "
@@ -2214,6 +2215,7 @@ msgstr ""
 "šírený v rámci projektu <a href=\"http://pkp.sfu.ca/\">Public Knowledge "
 "Project</a> pod GNU General Public licencou."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "Tento časopis používa Open Journal Systems {$ojsVersion}, čo je open source "

@@ -1541,9 +1541,11 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS:n toimitus- ja julkaisuprosessit"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Tämä julkaisu käyttää Open Journal Systems {$ojsVersion} -järjestelmää, joka on <a href=\"http://pkp.sfu.ca/\">Public Knowledge Projectin</a> kehittämä, tukema ja GNU General Public License -lisenssillä vapaasti jakama avoimen lähdekoodin julkaisunhallinta- ja julkaisuohjelmisto."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Tämä sivusto käyttää Open Journal Systems {$ojsVersion} -järjestelmää, joka on <a href=\"http://pkp.sfu.ca/\">Public Knowledge Projectin</a> kehittämä, tukema ja GNU General Public License -lisenssillä vapaasti jakama avoimen lähdekoodin julkaisunhallinta- ja julkaisuohjelmisto."
 

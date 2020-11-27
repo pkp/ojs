@@ -1160,9 +1160,11 @@ msgstr ""
 "Mere information om dette publiceringssystem, platform og workflow fra OJS/"
 "PKP."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Dette tidsskrift anvender Open Journal Systems {$ojsVersion}, som er open source-software til administration og publicering af tidsskrifter, der er udviklet , understøttet og gratis distribueret af <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> i henhold til GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Dette websted anvender Open Journal Systems {$ojsVersion}, som er open source-software til administration og publicering af tidsskrifter, der er udviklet , understøttet og gratis distribueret af <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> i henhold til GNU General Public License."
 

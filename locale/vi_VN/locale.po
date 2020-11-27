@@ -2025,6 +2025,7 @@ msgstr "Trợ giúp OJS"
 msgid "help.ojsHelp"
 msgstr "Trợ giúp Open Journal Systems"
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
 "Trang web này sử dụng Open Journal Systems {$ojsVersion}, đây là phần mềm "
@@ -2032,6 +2033,7 @@ msgstr ""
 "miễn phí bởi <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> "
 "theo Giấy phép Công cộng GNU."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "Tạp chí này sử dụng Open Journal Systems {$ojsVersion}, đây là phần mềm quản "

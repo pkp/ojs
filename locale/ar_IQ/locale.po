@@ -1612,9 +1612,11 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "عملية التحرير والنشر لنظام المجلات المفتوحة"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "هذه المجلة تستعمل نظام المجلات المفتوحة {$ojsVersion}، والذي هو نظام مفتوح المصدر لإدارة النشر مطور ومدعوم وموزع مجاناً عبر الرابط <a href=\"http://pkp.sfu.ca/\">مشروع المعرفة العامة</a> تحت رخصة GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "هذا الموقع يستعمل نظام المجلات المفتوحة {$ojsVersion} والذي هو نظام مفتوح المصدر لإدارة النشر العلمي، مطور ومدعوم وموزع مجاناً عبر الرابط <a href=\"http://pkp.sfu.ca/\">مشروع المعرفة العامة</a> تحت رخصة GNU General Public License."
 

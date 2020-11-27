@@ -2004,6 +2004,7 @@ msgstr "OJS मदद"
 msgid "help.ojsHelp"
 msgstr "ओपन जर्नल प्रणाली मदद"
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
 "यह साइट ओपन जर्नल सिस्टम {$ ojsVersion} का उपयोग करती है, जो ओपन सोर्स जर्नल "
@@ -2011,6 +2012,7 @@ msgstr ""
 "http://pkp.sfu.ca/\"> सार्वजनिक ज्ञान परियोजना <द्वारा वितरित किया जाता है "
 "जीएनयू जनरल पब्लिक लाइसेंस के तहत ।</a>"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "यह जर्नल ओपन जर्नल सिस्टम {$ ojsVersion} का उपयोग करती है, जो ओपन सोर्स जर्"

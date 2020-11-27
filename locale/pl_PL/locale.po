@@ -1296,9 +1296,11 @@ msgstr "Więcej informacji o systemie publikacji, Platformie i Obiegu OJS/PKP."
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Proces redakcyjny"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Strona zbudowana jest w oparciu o Open Journal Systems {$ojsVersion}, otwarty (open source) system zarządzania treścią dostarczany, rozwijany i dystrybuowany bezpłatnie przez <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> na licencji GNU GPL."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Strona zbudowana jest w oparciu o Open Journal Systems {$ojsVersion}, otwarty (open source) system zarządzania treścią dostarczany, rozwijany i dystrybuowany bezpłatnie przez <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> na licencji GNU GPL."
 
