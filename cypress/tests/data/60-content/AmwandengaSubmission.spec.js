@@ -76,15 +76,17 @@ describe('Data suite tests', function() {
 
 		// Metadata
 		cy.get('#metadata-button').click();
-		cy.get('#metadata-keywords-control-en_US').type('Professional Development{enter}', {delay: 0});
-		cy.wait(100);
-		cy.get('#metadata-keywords-control-en_US').type('Social Transformation{enter}', {delay: 0});
-		cy.wait(100);
+		cy.get('#metadata-keywords-control-en_US').type('Professional Development', {delay: 0});
+		cy.wait(500);
+		cy.get('#metadata-keywords-control-en_US').type('{enter}', {delay: 0});
+		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
+		cy.get('#metadata-keywords-control-en_US').type('Social Transformation', {delay: 0});
+		cy.wait(500);
+		cy.get('#metadata-keywords-control-en_US').type('{enter}', {delay: 0});
+		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
 		cy.get('#metadata button').contains('Save').click();
 		cy.get('#metadata [role="status"]').contains('Saved');
 
-		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
-		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
 
 		// Permissions & Disclosure
 		cy.get('#license-button').click();
