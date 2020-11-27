@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-02 07:37+0000\n"
-"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"PO-Revision-Date: 2020-11-27 08:29+0000\n"
+"Last-Translator: mhh <mhh@centrum.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/api/sk_SK/>\n"
 "Language: sk_SK\n"
 "MIME-Version: 1.0\n"
@@ -55,3 +55,9 @@ msgstr "Nemáte právo vidieť nepublikované čísla."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Nemôžete zmeniť záznamy príspevku."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Súbor z tejto fázy súboru nemôžete priradiť k sadzobnici."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Požadované oznámenie nie je súčasťou tohto časopisu."
