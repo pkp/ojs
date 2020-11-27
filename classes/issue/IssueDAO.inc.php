@@ -570,7 +570,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$params = [(int) $journalId], $rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnIssueFromRow', [], $sql, $params); // Counted in ExportableIssuesListGridHandler
+		return new DAOResultFactory($result, $this, '_returnIssueFromRow', [], $sql, $params, $rangeInfo); // Counted in ExportableIssuesListGridHandler
 	}
 
 	/**
