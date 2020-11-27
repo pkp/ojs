@@ -74,20 +74,6 @@ describe('Data suite tests', function() {
 		cy.get('#titleAbstract button').contains('Save').click();
 		cy.get('#titleAbstract [role="status"]').contains('Saved');
 
-		// Metadata
-		cy.get('#metadata-button').click();
-		cy.get('#metadata-keywords-control-en_US').type('Professional Development', {delay: 0});
-		cy.wait(500);
-		cy.get('#metadata-keywords-control-en_US').type('{enter}', {delay: 0});
-		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
-		cy.get('#metadata-keywords-control-en_US').type('Social Transformation', {delay: 0});
-		cy.wait(500);
-		cy.get('#metadata-keywords-control-en_US').type('{enter}', {delay: 0});
-		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
-		cy.get('#metadata button').contains('Save').click();
-		cy.get('#metadata [role="status"]').contains('Saved');
-
-
 		// Permissions & Disclosure
 		cy.get('#license-button').click();
 		cy.get('#license button').contains('Save').click();
@@ -189,8 +175,6 @@ describe('Data suite tests', function() {
 		cy.contains('Alan Mwandenga');
 		cy.contains('University of Cape Town');
 		cy.contains('Lorem Ipsum');
-		cy.contains('Professional Development');
-		cy.contains('Social Transformation');
 	});
 
 	it('Article is not available when unpublished', function() {
