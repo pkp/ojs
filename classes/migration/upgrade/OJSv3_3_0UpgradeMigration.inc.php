@@ -36,6 +36,10 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 
 		$this->_settingsAsJSON();
 		$this->_migrateSubmissionFiles();
+
+		// Delete the old MODS34 filters
+		Capsule::statement("DELETE FROM filters WHERE class_name='plugins.metadata.mods34.filter.Mods34SchemaArticleAdapter'");
+		Capsule::statement("DELETE FROM filter_groups WHERE symbolic IN ('article=>mods34', 'mods34=>article')");
 	}
 
 	/**
