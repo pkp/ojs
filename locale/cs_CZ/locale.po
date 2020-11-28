@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2020-11-26 18:19+0000\n"
+"PO-Revision-Date: 2020-11-29 12:56+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/locale/cs_CZ/>"
 "\n"
@@ -1418,9 +1418,15 @@ msgstr "Více informací o publikačním systému, platformě a workflow OJS/PKP
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS ediční a vydavatelský proces"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "Tento časopis používá Open Journal Systems {$ojsVersion}, což je open source software pro správu a publikování časopisů vyvinutý, podporovaný a volně šířený v rámci projektu <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> pod GNU General Public licencí."
+msgstr ""
+"Tento časopis používá Open Journal Systems {$ojsVersion}, což je open source "
+"software pro správu a publikování časopisů vyvinutý, podporovaný a volně "
+"šířený v rámci projektu Public Knowledge Project pod GNU General Public "
+"licencí. Navštivte webové stránky <a href=\"http://pkp.sfu.ca/\">pokud se "
+"chcete dozvědět více o tomto software</a>.  <a href=\"{$contactUrl}\">"
+"Kontaktujte přímo časopis</a> pokud máte jakékoliv otázky k časopisu a k "
+"možnostem do něj přispívat."
 
 #, fuzzy
 msgid "about.aboutOJSSite"
@@ -2138,3 +2144,6 @@ msgstr "Nelze nalézt požadovanou sazebnici."
 
 msgid "category.category"
 msgstr "Kategorie"
+
+msgid "about.aboutSoftware"
+msgstr "O Open Journal Systems"
