@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
-"PO-Revision-Date: 2020-11-27 22:43+0000\n"
+"PO-Revision-Date: 2020-11-30 11:43+0000\n"
 "Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "pl_PL/>\n"
@@ -19,7 +19,9 @@ msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
 
 msgid "plugins.auth.ldap.description"
-msgstr "Wtyczka umożliwia uwierzytelnianie użytkowników za pomocą zewnętrznych serwerów LDAP"
+msgstr ""
+"Wtyczka umożliwia uwierzytelnianie użytkowników za pomocą zewnętrznych "
+"serwerów LDAP."
 
 msgid "plugins.auth.ldap.settings"
 msgstr "Ustawienia"
@@ -57,3 +59,38 @@ msgstr ""
 
 msgid "plugins.auth.ldap.settings.managerdn"
 msgstr "DN menedżera"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"Wyznaczona nazwa, która wyróżnia użytkownika, taka jak identyfikator "
+"użytkownika lub sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Wyznacz nazwę użytkownika"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Ochrona własności SASL"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Wymagane uwierzytelnienie ID"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Dziedzina"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Np. \"PRZEGLĄD-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Procedura SASL"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Zastosuj SASL zamiast podstawowego uwierzytelnienia"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Ustawienia SASL (opcjonalnie)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Oznacz format dla haseł przechowywanych w serwerze. Zalecany jest SSHA."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Kodowanie hasła"
