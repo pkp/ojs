@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:29+00:00\n"
-"PO-Revision-Date: 2020-11-29 12:56+0000\n"
-"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
+"PO-Revision-Date: 2020-11-30 11:43+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "pl_PL/>\n"
 "Language: pl_PL\n"
@@ -39,7 +39,13 @@ msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "Czynność spowoduje nadpisanie wszystkich ustawień czasopisma w kontekście tego języka"
 
 msgid "manager.languages.languageInstructions"
-msgstr "OJS może zostać udostępniony dla użytkowników w dowolnym języku wspieranym przez system. Ponadto, OJS może funkcjonować jako system wielojęzykowy, umożliwiając użytkownikom przełączanie wyświetlanego języka na dowolnej z podstron."
+msgstr ""
+"OJS może zostać udostępniony dla użytkowników w dowolnym języku wspieranym "
+"przez system. Ponadto, OJS może funkcjonować jako system wielojęzykowy, "
+"umożliwiając użytkownikom przełączanie wyświetlanego języka na dowolnej z "
+"podstron.<br /><br/>Jeśli język obsługiwany przez OJS nie jest wyświetlony "
+"poniżej, poproś administratora strony, aby zainstalował język ze złącza "
+"administracji."
 
 msgid "manager.languages.noneAvailable"
 msgstr "Dodatkowe języki nie są dostępne."
@@ -108,7 +114,9 @@ msgid "manager.people.allUsers"
 msgstr "Wszyscy użytkownicy z przydzielonymi rolami"
 
 msgid "manager.people.confirmRemove"
-msgstr "Usunąc użytkownika z czasopisma?"
+msgstr ""
+"Usunąć użytkownika z czasopisma? Ten ruch wykluczy użytkownika z wszystkich "
+"zleceń w tym czasopiśmie."
 
 msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Wybierz szablon"
@@ -129,7 +137,7 @@ msgid "manager.people.syncUserDescription"
 msgstr "Synchronizacja ról użytkowników pozwala na synchronizowanie ról pomiędzy czasopismami utworzonymi w systemie."
 
 msgid "manager.sections.abstractsNotRequired"
-msgstr "Abstrakt nie jest wymagany."
+msgstr "Abstrakt nie jest wymagany"
 
 msgid "manager.sections.assigned"
 msgstr "Redaktorzy działu"
@@ -192,13 +200,13 @@ msgid "manager.sections.reviewed"
 msgstr "Zrecenzowane"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "Nie będzie uwzględniony przy indeksowaniu czasopisma."
+msgstr "Nie będzie uwzględniony przy indeksowaniu czasopisma"
 
 msgid "manager.sections.submissionReview"
 msgstr "Nie podlega recenzji"
 
 msgid "manager.section.submissionsToThisSection"
-msgstr "Teksty wysłane do tego działu."
+msgstr "Teksty wysłane do tego działu"
 
 msgid "manager.sections.unassigned"
 msgstr "Nie przydzieleni redaktorzy działu"
@@ -207,7 +215,7 @@ msgid "manager.sections.wordCount"
 msgstr "Liczba słów"
 
 msgid "manager.sections.wordCountInstructions"
-msgstr "Ogranicz liczbę słów abstraktu dla tego działu (0 = bez limitu):"
+msgstr "Ogranicz liczbę słów abstraktu dla tego działu (0 = bez limitu)"
 
 msgid "manager.setup"
 msgstr "Konfiguracja"
@@ -315,7 +323,7 @@ msgid "manager.setup.disciplineExamples"
 msgstr "(np. historia; edukacja; socjologia; psychologia; antropologia; prawo)"
 
 msgid "manager.setup.disciplineProvideExamples"
-msgstr "Podaj przykłady dziedzin naukowych dla tego czasopisma."
+msgstr "Podaj przykłady dziedzin naukowych dla tego czasopisma"
 
 msgid "manager.setup.displayCurrentIssue"
 msgstr "Dodaj spis treści dla aktualnego numeru (jeśli jest dostępny)."
@@ -513,7 +521,11 @@ msgid "manager.setup.listsDescription"
 msgstr "Podaj maksymalną liczbę elementów, która będzie widoczna na każdej stronie listy, oraz liczbę linków wyświetlanych na każdej stronie."
 
 msgid "manager.setup.lockssEnable"
-msgstr "Włącz LOCKSS w celu gromadzenia i udostępniania zawartości czasopisma za pośrednictwem usługi LOCKSS. <a href=\"{$lockssUrl}\" target=\"_blank\">Dowiedz się więcej na temat LOCKSS</a>. Treść licencji LOCKSS będzie widoczna w dziale O czasopiśmie:"
+msgstr ""
+"Włącz LOCKSS w celu gromadzenia i udostępniania zawartości czasopisma za "
+"pośrednictwem usługi LOCKSS. <a href=\"{$lockssUrl}\" target=\"_blank\">"
+"Dowiedz się więcej na temat LOCKSS</a>. Treść licencji LOCKSS będzie "
+"widoczna w dziale O czasopiśmie."
 
 msgid "manager.setup.lockssRegister"
 msgstr "Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href=\"http://www.lockss.org/community/\" target=\"_blank\">participating libraries</a>. Use the prepared invitations for (i) <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">libraries participating in LOCKSS</a> or (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">libraries not yet participating in LOCKSS</a>."
@@ -650,13 +662,15 @@ msgid "manager.setup.reviewOptions.onQuality"
 msgstr "Redaktorzy oceniają recenzentów na podstawie przesłanych recenzji za pomocą pięciostopniowej skali."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
-msgstr "Recenzenci dostaną dostęp do pliku z tekstem tylko i wyłącznie, gdy zgodzą się na napisanie recenzji."
+msgstr ""
+"Recenzenci dostaną dostęp do pliku z tekstem tylko i wyłącznie, gdy zgodzą "
+"się na napisanie recenzji"
 
 msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Dostęp dla recenzentów"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Włącz dostęp do recenzji po jednym kliknięciu."
+msgstr "Włącz dostęp do recenzji po jednym kliknięciu"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Uwaga:</strong> E-mail z zaproszeniem do recenzji wysłany do recenzenta (recenzentów) zawiera specjalnie przygotowany link, który przekieruje recenzenta bezpośrednio do strony recenzji."
@@ -683,7 +697,10 @@ msgid "manager.setup.sectionsDefaultSectionDescription"
 msgstr "(Jeżeli działy nie zostaną utworzone, przesłane teksty zostaną przydzielone do działu artykuły.)"
 
 msgid "manager.setup.sectionsDescription"
-msgstr "W celu utworzenia lub zmodyfikowania działu dla czasopisma, udaj się do zarządzania działami."
+msgstr ""
+"W celu utworzenia lub zmodyfikowania działu dla czasopisma, udaj się do "
+"zarządzania działami.<br /><br />Autorzy będą przypisani do zgłoszonych "
+"pozycji czasopismu..."
 
 msgid "manager.setup.securitySettings"
 msgstr "Dostęp oraz ustawienia bezpieczeństwa"
@@ -746,7 +763,8 @@ msgid "manager.setup.typeMethodApproach"
 msgstr "Metoda badawcza"
 
 msgid "manager.setup.typeProvideExamples"
-msgstr "Podaj przykłady odpowiednich dla tego obszaru metod badawczych i podejść."
+msgstr ""
+"Podaj przykłady odpowiednich dla tego obszaru metod badawczych i podejść"
 
 msgid "manager.setup.uniqueIdentifier"
 msgstr "Unikalny identyfikator"
@@ -882,7 +900,14 @@ msgid "manager.setup.useThumbnail"
 msgstr "Miniatura"
 
 msgid "manager.statistics.defaultMetricDescription"
-msgstr "Czasopismo jest skonfigurowane do wykorzystania więcej niż jednego rodzaju metryki. Statystyki zostaną wyświetlone w różnych kontekstach. W niektórych przypadkach mogą zostać wyświetlone tylko pojedyncze statystyki, np. przy wyświetlaniu listy najczęściej czytanych artykułów lub w celu sortowania elementów wyszukiwanych. Podaj domyślny rodzaj metryki."
+msgstr ""
+"\n"
+"\t\tCzasopismo jest skonfigurowane do wykorzystania więcej niż jednego "
+"rodzaju metryki. Statystyki zostaną wyświetlone w różnych kontekstach. W "
+"niektórych przypadkach mogą zostać wyświetlone tylko pojedyncze statystyki, "
+"np. przy wyświetlaniu listy najczęściej czytanych artykułów lub w celu "
+"sortowania elementów wyszukiwanych. Podaj domyślny rodzaj metryki.\n"
+"\t"
 
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Liczba pobrań artykułu"
@@ -897,7 +922,7 @@ msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Liczba wyświetleń głównej strony czasopisma"
 
 msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Ogranicz wyniki wyszukiwania według kontekstu (numer lub artykuł)"
+msgstr "Ogranicz wyniki wyszukiwania według kontekstu (numer lub artykuł)."
 
 msgid "manager.statistics.reports.filters.byObject.description"
 msgstr "Ogranicz wyniki wyszukiwania według typu obiektu (czasopismo, numer, artykuł, plik) lub dodatkowego ID obiektu."
@@ -996,7 +1021,9 @@ msgid "manager.setup.clockssLicenseLabel"
 msgstr "Opis licencji CLOCKSS"
 
 msgid "manager.setup.clockssRegister"
-msgstr "Zarejestruj się w serwisie CLOCKSS pod adresem <a href=\"http://clockss.org/\" target=\"_blank\">clockss.org</a>"
+msgstr ""
+"Zarejestruj się w serwisie CLOCKSS pod adresem <a href=\"http://clockss.org/"
+"\" target=\"_blank\">clockss.org</a>."
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Liczba wyświetleń spisu treści numeru"
@@ -1032,7 +1059,9 @@ msgid "manager.setup.copyrightYearBasis.issue"
 msgstr "Numer: domyślny rok będzie pobrany z daty publikacji numeru."
 
 msgid "manager.setup.resetPermissions.confirm"
-msgstr "Czy na pewno wyzerować informacje o prawach przypisane do artykułów?"
+msgstr ""
+"Czy na pewno wyzerować informacje o prawach przypisane do artykułów? Tego "
+"działania nie da się cofnąć."
 
 msgid "grid.genres.title.short"
 msgstr "Elementy"
@@ -1152,7 +1181,9 @@ msgid "manager.setup.plnDescription"
 msgstr "PKP Preservation Network (PN) dostarcza nieodpłatne usługi przechowywania dla każdego czasopisma korzystającego z OJS, które spełnia kilka podstawowych kryteriów."
 
 msgid "manager.setup.plnSettingsDescription"
-msgstr "Kliknij link z Ustawieniami, aby zaakceptować zasady korzystania z PKP PN."
+msgstr ""
+"Kliknij link <button> z Ustawieniami</button> , aby zaakceptować zasady "
+"korzystania z PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Preservation Network (PN)"
@@ -1314,7 +1345,7 @@ msgid "plugins.importexport.common.validation"
 msgstr "Sprawdź XML przed eksportem i rejestracją."
 
 msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "Nie można odczytać pliku wejściowego {$param}"
+msgstr "Nie można odczytać pliku wejściowego {$param}."
 
 msgid "manager.navigationMenus.subscriptions.description"
 msgstr "Link do strony przedstawiającej zasady subskrypcji."
@@ -1484,3 +1515,571 @@ msgid "manager.setup.enableAnnouncements.description"
 msgstr ""
 "Publikując ogłoszenia można informować czytelników czasopisma o nowościach i "
 "wydarzeniach. Ogłoszenia te będą pojawiać się na stronie Ogłoszenia."
+
+msgid "stats.publications.galleys"
+msgstr "Pliki"
+
+msgid "stats.publications.abstracts"
+msgstr "Abstrakty"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} z {$total} artykułów"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Całkowity widok pliku wg daty"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Całkowity widok abstraktu wg daty"
+
+msgid "stats.publications.none"
+msgstr ""
+"Nie znaleziono artykułu z zastosowaniem statystyk pasujących do tych "
+"parametrów."
+
+msgid "stats.publications.details"
+msgstr "Szczegóły artykułu"
+
+msgid "stats.publicationStats"
+msgstr "Statystyki artykułu"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Nieudana weryfikacja."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Udana weryfikacja!"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Zezwolenia artykułu zostały zresetowane."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Utworzono rodzaj subskrypcji."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Nie utworzono żadnego rodzaju subskrypcji."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Rodzaj subskrypcji"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Nazwa rodzaju subskrypcji jest wymagana."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Rodzaj subskrypcji z tą nazwą już istnieje."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Nazwa rodzaju"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Zachowaj i utwórz nowy"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Proszę, skorzystaj z podanego pola wyboru."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Nie zezwalaj na publiczną dostępność tej subskrypcji oraz jej widoczność na "
+"stronie."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Opcje"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Proszę użyj podanego pola wyboru."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Subskrypcje wymagają informacji o członkostwie (np. w stowarzyszeniu, "
+"organizacji, konsorcjum, itp.)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Proszę, użyj podanych opcji."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Instytucyjny (użytkownicy są obsługiwani poprzez domenę lub adres IP)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Indywidualna (użytkownicy są obsługiwani poprzez swój login)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Subskrypcje"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Proszę, wybierz ważny format rodzaju subskrypcji."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Format rodzaju subskrypcji jest wymagany."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Czas trwania jest wymagany."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Czas trwania musi być numeryczną wartością dodatnią."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Ilość miesięcy subskrypcji trwa (np.12)."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Czas trwania"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Proszę, użyj podanych opcji."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Nie wygasa"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "Miesiące (np.12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Wygasa po"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Opis"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Proszę wybierz ważną walutę."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Waluta jest wymagana."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Waluta"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Cena jest wymagana."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Cena musi mieć numeryczną wartość dodatnią."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Wprowadź wartość liczbową (np. 40 lub 40.000) bez symboli (np.,$)."
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Cena"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Edytuj"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Edytuj rodzaj subskrypcji"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Czas trwanie"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Utwórz"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Utwórz nowy rodzaj subskrypcji"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Instytucyjna"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Indywidualna"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Subskrypcje"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Cena"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Ostrzeżenie! Wszystkie subskrypcje z tym rodzajem subskrypcji będą usunięte. "
+"Jesteś pewien, że chcesz kontynuować i usunąć ten rodzaj subskrypcji?"
+
+msgid "manager.subscriptionTypes"
+msgstr "Rodzaje subskrypcji"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Nazwa instytucji"
+
+msgid "manager.subscriptions.contact"
+msgstr "Nazwa kontaktu"
+
+msgid "manager.subscriptions.user"
+msgstr "Użytkownik"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Rodzaj subskrypcji"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Subskrypcja została utworzona."
+
+msgid "manager.subscriptions.select"
+msgstr "Wybierz"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Przywileje dostępu poprzez subskrypcje są automatycznie przydzielone "
+"menedżerom, redaktorom, redaktorom składu, redaktorom sekcji i korektorom "
+"współpracującym z czasopismem."
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Wybierz użytkownika"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Wybierz kontakt dla subskrypcji"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Numer odniesienia"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Zakres IP"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+"Rodzaj subskrypcji musi być stworzony przed dokonaniem nowych subskrypcji."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Ten użytkownik już posiada subskrypcją tego czasopisma."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Aby wysłać użytkownikowi email z powiadomieniem, nazwa kontaktu subskrypcji "
+"i adres email muszą być określone w ustawieniach czasopisma."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Proszę wprowadź ważny zakres IP."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Jeśli zakres IP jest wprowadzony tutaj, domena jest opcjonalna.<br />Ważne "
+"dane zawierają adres IP (np.142.58.103.1), zakres IP (np. 142.58.103.1 - "
+"142.58.103.4), zakres IP z wieloznacznikiem '*' (np.142.58.*.*) i zakres IP "
+"z CIDR (np.142.58.111.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Zakres IP"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Proszę, wprowadź ważną domenę."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Wybrany rodzaj subskrypcji wymaga domeny i/lub zakresu IP do "
+"uwierzytelnienia subskrypcji."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Jeśli domena jest tutaj wprowadzona, zakres IP jest opcjonalny.<br />Ważne "
+"są nazwy domeny (np. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Adres korespondencyjny"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Wymagana nazwa instytucji."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Nazwa instytucji"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Dziedzina"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Uwagi"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Wybrany rodzaj subskrypcji wymaga informacji o członkostwie."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Przejdź do informacji o członkostwie, jeśli rodzaj subskrypcji wymaga, aby "
+"subskrypcja należała do stowarzyszenia lub organizacji."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Numer odnośnika"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"To jest rodzaj niewygasający subskrypcji, proszę nie określaj daty "
+"początkowej."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"To jest rodzaj niewygasający subskrypcji, proszę nie określaj daty końcowej."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Te dane kontaktowe będą wymienione na stronie subskrypcji dla klientów z "
+"ofertami powiązanymi z daną subskrypcją."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Menedżer subskrypcji"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Rodzaje subskrypcji i struktura opłat będą wyświetlonej na stronie "
+"subskrypcji, razem z danymi kontaktowymi menedżera subskrypcji. Dodatkowe "
+"informacje o subskrypcjach, takie jak metody płatności i wsparcie dla "
+"subskrybentów w rozwijających się krajach, mogą być tutaj dodane."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Informacje o subskrypcji"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Subskrypcja czasopisma może zapewnić \"opóźniony wolny dostęp\" do ich "
+"publikowanej treści, zarówno jak stała \"autorskie samoarchiwizowanie\" ("
+"obie opcje zwiększają poczytność i cytowanie treści)."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Opcje wolnego dostępu do subskrypcji czasopisma"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Uwaga:</strong>Aby uruchomić te opcje, menedżer czasopisma musi "
+"włączyć moduł płatności online, łącznie z płatnościami online dla "
+"subskrybentów, pod Opłatami czytelnika."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Uwaga:</strong>Subskrypcje insytucyjne zakupione online wymagają "
+"potwierdzenia dostarczonej domeny , wydzielonego zakresu i aktywacji "
+"subskrypcji przez menedżera subskrypcji."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Powiadom menedżera subskrypcji emailem w momencie wznowienia subskrypcji "
+"instytucyjnej."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Powiadom menedżera subskrypcji emailem w momencie wznowienia subskrypcji "
+"indywidualnej."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Powiadom menedżera subskrypcji emailem w momencie zakupu online subskrypcji "
+"instytucyjnej (zalecane)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Powiadom menedżera subskrypcji emailem w momencie zakupu online subskrypcji "
+"indywidualnej."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Automatyczne powiadomienie email (dostępne do edycji przez menedżerów "
+"czasopisma w Emailach OJS) może być wysyłane do menedżera subskrypcji w "
+"momencie ukończenia płatności online za subskrypcję."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Powiadomienie o płatności online"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Uwaga:</strong>Aby aktywować tę opcje, administrator strony musi "
+"włączyć <tt>zaplanowane_zadania</tt>opcje w pliku konfiguracyjnym OJS. "
+"Dodatkowy serwer konfiguracji może wymagać wsparcia tej funkcji (co może nie "
+"być możliwe na wszystkich serwerach), jak wskazano w dokumentacji OJS."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Zarejestrowani czytelnicy będą mieli możliwość otrzymania spisu treści przez "
+"email, kiedy numer będzie dostępny."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Proszę wybrać odpowiednią wartość dla ilości miesięcy przed upływem "
+"subskrypcji."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Proszę wybrać odpowiednią wartość dla ilości tygodni po upływie subskrypcji."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Proszę wybrać odpowiednią wartość dla ilości miesięcy przed upływem "
+"subskrypcji."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Proszę wybrać odpowiednią wartość dla ilości miesięcy po upływie subskrypcji."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML może być użyte w polu tekstowym (dla rozmiaru, koloru czcionki itp.), "
+"ze \"zwrotami\" traktowanymi jak <tt>&lt;br&gt;</tt>; edytor HTML działa w "
+"przeglądarce Firefox."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Wybierz jedno z poniższych:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Uwaga:</strong>Aby aktywować te opcje, administrator strony musi "
+"włączyć <tt>zaplanowane_zadania</tt>opcję w pliku konfiguracyjnym OJS. "
+"Dodatkowa konfiguracja serweru może wymagać wsparcia tej funkcji (co może "
+"nie być możliwe na wszystkich serwerach), jak wskazano w dokumentacji OJS."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Automatyczne przypomnienie emailowe (dostępne do edytowania poprzez "
+"Menedżerów czasopisma w  emailach OJS) mogą być wysyłane  do subskrybentów "
+"zarówno przed, jak i po wygaśnięciu subskrypcji."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Przypomnienie o wygaśnięciu subskrypcji"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Powiadom subskrybentów emailem przed wygaśnięciem subskrypcji."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Powiadom subskrybentów emailem przed wygaśnięciem subskrypcji."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Powiadom subskrybentów emailem po wygaśnięciu subskrypcji."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Powiadom subskrybentów emailem po wygaśnięciu subskrypcji"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Tygodnie"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Miesiące"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Czytelnicy nie mają dostępu do ostatnio opublikowanej treści subskrypcji, "
+"ale zachowują dostęp do subskrybowanej treści opublikowanej przez datę "
+"wygaśnięcia subskrypcji."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Częściowe wygaśnięcie"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Czytelnicy nie mają dostępu do subskrybowanej treści po wygaśnięciu "
+"subskrypcji."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Pełne wygaśnięcie"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Po wygaśnięciu subskrypcji, czytelnicy nie będą mieć dostępu do "
+"subskrybowanej treści lub mogą zachować dostęp do subskrybowanej "
+"opublikowanej przed wygaśnięciem daty subskrypcji."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Dostarcz metadane do zewnętrznych serwisów indeksowania przez <a href=\""
+"https://www.openarchives.org/\">Inicjatywa Otwartego Archiwum</a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Aktywuj OAI"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Czasopismo nie przyjmuje zgłoszeń w tym momencie. Odwiedź ustawienia "
+"Workflow, aby zezwolić na zgłoszenia."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Nie zezwalaj na zgłaszanie nowych artykułów do tego czasopisma. Zgłoszenia "
+"mogą być wyświetlane tylko dla indywidualnych sekcji czasopisma w <a href=\""
+"{$url}\">sekcja czasopisma</a> zakładce ustawień."
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Wyświetl zawartość artykułu"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Dostęp do strony"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Dostarcz krótki opis (50-300 znaków) czasopisma, które wyszukiwarka może "
+"wyświetlić podczas wymieniania czasopisma w wynikach wyszukiwania."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Pomóż wyszukiwarkom takim jak Google odkryć i wyświetlić Twoją stronę. "
+"Zachęcamy do zgłoszenia Twojej <a href=\"{$sitemapUrl}\" target=\"_blank\">"
+"mapy witryny</a>."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Załącz bezpieczny link w emailu zapraszającym do recenzentów."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Recenzenci nie otrzymają dostępu do zgłoszonych plików póki nie wyrażą zgody "
+"na ich zrecenzowanie."
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Te szczegóły mogą być zawarte w metadanych dostarczanych do innego, "
+"archiwalnego zespołu."
+
+msgid "manager.setup.publishing"
+msgstr "Szczegóły publikacji"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Ogranicz liczbę wyświetlanych linków na następnych stronach w spisie."
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Dostarcz krótki opis Twojego czasopisma i określ redaktorów, dyrektorów "
+"zarządzających i innych członków Twojego zespołu wydawniczego."
+
+msgid "manager.setup.keyInfo"
+msgstr "Kluczowe informacje"
+
+msgid "manager.setup.contextTitle"
+msgstr "Tytuł czasopisma"
+
+msgid "manager.setup.contextInitials"
+msgstr "Inicjały czasopisma"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Załącz wszelkie informacje o Twoim czasopiśmie, które mogą zainteresować "
+"czytelników, autorów lub recenzentów. Mogą się wliczać informacje o Twoich "
+"zasadach wolnego dostępu, cel i zakres czasopisma, uwagi o prawach "
+"autorskich, informacje o sponsorach, historię czasopisma, oświadczenie o "
+"ochronie prywatności, ujęcie w systemie archiwalnym LOCKSS lub CLOCKSS."
+
+msgid "manager.setup.contextAbout"
+msgstr "O czasopiśmie"
+
+msgid "manager.setup.contextSummary"
+msgstr "Podsumowanie czasopisma"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Ogranicz liczbę pozycji (np. zgłoszeń, użytkowników, zleceń redakcyjnych), "
+"aby pokazać listę przed ukazaniem dalszych pozycji na następnej stronie."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Aby wysłać niedostarczone emaile na adres zwrotny, administrator strony musi "
+"aktywować <code>allow_envelope_sender</code> opcję w pliku konfiguracyjnym "
+"strony.\n"
+"Konfiguracja serweru może być wymagana jako wskazanie w dokumentacje OJS."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Przynajmniej jedna sekcja musi być aktywna. Odwiedź ustawienia Workflow, aby "
+"zdezaktywować zgłoszenia dla tego czasopisma."
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Wybrane opcje, razem z ich opisem i opłatami (które mogą być edytowane "
+"poniżej) pojawią się w O czasopiśmie, pod zasadami, zarówno jak miejsca, "
+"gdzie wymagana jest opłata."
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Wybierz jak data domyślnych praw autorskich ma być wybrana dla tego "
+"artykułu. Ustawienia domyślne mogą być nadpisane do każdego przypadku "
+"oddzielnie. Jeśli wybierasz model \"publish as you go\", nie używaj daty "
+"publikacji numeru."
