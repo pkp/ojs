@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-11 10:49+0000\n"
-"Last-Translator: Hyongjun Choi <chj2812@dankook.ac.kr>\n"
+"PO-Revision-Date: 2020-11-29 12:56+0000\n"
+"Last-Translator: Seok Hyun Ga <shga89@naver.com>\n"
 "Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/locale/ko_KR/"
 ">\n"
 "Language: ko_KR\n"
@@ -667,3 +667,358 @@ msgstr "권으로"
 
 msgid "common.software"
 msgstr "오픈 학술지 시스템"
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} 님께서 {$submissionId} 투고 건을 수정하였습니다.새로운 파일의 ID는 {$fileId} 입니다."
+
+msgid "installer.upgradeApplication"
+msgstr "오픈 저널 시스템 업그레이드"
+
+msgid "installer.installApplication"
+msgstr "오픈 저널 시스템 설치"
+
+msgid "about.aboutSoftware"
+msgstr "오픈 저널 시스템 정보"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS 편집 및 출판 과정"
+
+#, fuzzy
+msgid "about.aboutThisPublishingSystem"
+msgstr "OJS/PKP 출판 시스템, 플랫폼 및 워크 플로에 대한 자세한 정보."
+
+msgid "about.memberships"
+msgstr "멤버십"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "구독 유형"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "가격"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "기간"
+
+msgid "about.subscriptionTypes.format"
+msgstr "형식"
+
+msgid "about.subscriptionTypes.name"
+msgstr "이름"
+
+msgid "about.subscriptions.institutional"
+msgstr "단체 구독"
+
+msgid "about.subscriptions.individual"
+msgstr "개인 구독"
+
+msgid "about.subscriptions"
+msgstr "구독"
+
+#, fuzzy
+msgid "about.delayedOpenAccessDescription1"
+msgstr "이 학술지의 내용은 오픈 액세스 형식으로 제공됩니다."
+
+msgid "about.delayedOpenAccess"
+msgstr "지연된 오픈 액세스"
+
+msgid "about.openAccessPolicy"
+msgstr "오픈 액세스 정책"
+
+msgid "about.publicationFrequency"
+msgstr "발간 주기"
+
+msgid "about.peerReviewProcess"
+msgstr "교차 심사 과정"
+
+msgid "about.authorFeesMessage"
+msgstr "이 학술지는 다음과 같은 투고료를 부과합니다."
+
+msgid "about.authorFees"
+msgstr "투고료"
+
+msgid "about.privacyStatement"
+msgstr "개인정보보호정책"
+
+msgid "about.copyrightNotice"
+msgstr "저작권 안내"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "투고 준비 체크리스트"
+
+msgid "about.authorGuidelines"
+msgstr "저자 지침"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "계류 중인 투고"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "새로 투고하기"
+
+msgid "about.onlineSubmissions.register"
+msgstr "등록"
+
+msgid "about.onlineSubmissions.login"
+msgstr "로그인"
+
+msgid "about.submissions"
+msgstr "투고"
+
+msgid "about.editorialPolicies"
+msgstr "편집 규정"
+
+msgid "about.editorialTeam"
+msgstr "편집위원회"
+
+msgid "about.history"
+msgstr "학술지 이력"
+
+msgid "about.aboutContext"
+msgstr "학술지 소개"
+
+msgid "about.contact"
+msgstr "연락"
+
+msgid "about.statistics"
+msgstr "통계"
+
+msgid "archive.issueUnavailable"
+msgstr "이용 불가한 호"
+
+msgid "archive.archivesPageNumber"
+msgstr "아카이브 - 페이지 {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "아카이브"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "이 학술지는 아직 아무 호도 발행한 적이 없습니다."
+
+msgid "current.noCurrentIssue"
+msgstr "최근 발행호가 없습니다"
+
+msgid "current.current"
+msgstr "현재"
+
+msgid "site.noJournals"
+msgstr "이용가능한 학술지가 없습니다."
+
+msgid "site.journalCurrent"
+msgstr "최근 발행호"
+
+msgid "site.journalRegister"
+msgstr "등록"
+
+msgid "site.journalView"
+msgstr "학술지 보기"
+
+msgid "article.download"
+msgstr "PDF 파일 다운로드"
+
+msgid "article.pageTitle"
+msgstr "{$title} 보기"
+
+msgid "search.allJournals"
+msgstr "모든 학술지"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "추가"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "삭제"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP 범위"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "기관 이름을 입력하세요."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "기관 이름"
+
+msgid "user.subscriptions.form.domain"
+msgstr "영역"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "우편물 주소"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "이 사용자 계정은 이미 개인 구독 중입니다."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "올바른 구독 유형을 선택하세요."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "선택된 구독 유형은 멤버십을 필요로 합니다."
+
+msgid "user.subscriptions.form.membership"
+msgstr "멤버십"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "구독 유형"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "사용가능한 구독 유형 보기"
+
+msgid "user.subscriptions.expired"
+msgstr "만료: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "유효기간: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "단체 구독 구매"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "개인 구독 구매"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "새로운 구독 구매"
+
+msgid "user.subscriptions.purchase"
+msgstr "구매"
+
+msgid "user.subscriptions.renew"
+msgstr "갱신"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "단체 구독"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "개인 구독"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "원고의 심사자에게 알림"
+
+#, fuzzy
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"심사 지침은 심사자에게 학술지 게재에 대한 원고의 적합성을 판단하는 기준을 제공하며 효과적이고 유용한 리뷰를 준비하기 위한 특별 지침을 "
+"포함 할 수 있습니다. 심사를 수행 할 때 심사자에게는 두 개의 열린 텍스트 상자가 표시됩니다. 첫 번째는 \"저자 및 편집자용\"이고 "
+"두 번째는 \"편집자용\"입니다. 또는 학술지 관리자가 심사 양식에서 동료 심사 양식을 만들 수 있습니다. 모든 경우에 편집자는 저자와 "
+"함께 심사를 포함 할 수 있습니다."
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "심사 지침"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "심사 단계"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "심사 일정"
+
+msgid "reviewer.article.schedule"
+msgstr "일정"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "의견 보기"
+
+msgid "reviewer.article.decision.decline"
+msgstr "투고 거절"
+
+#, fuzzy
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "다른 곳으로 재투고"
+
+#, fuzzy
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "심사를 위한 재투고"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "수정 필요"
+
+msgid "reviewer.article.decision.accept"
+msgstr "투고 승인"
+
+msgid "reviewer.article.schedule.due"
+msgstr "심사 기한"
+
+msgid "reviewer.article.schedule.response"
+msgstr "당신의 응답"
+
+msgid "reviewer.article.schedule.request"
+msgstr "편집자의 요청"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "심사자에 의해 업로드된 버전"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "업로드된 파일"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "의견"
+
+msgid "reviewer.article.submitReview"
+msgstr "편집자에게 심사결과 보내기"
+
+msgid "reviewer.article.recommendation"
+msgstr "추천"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "구독 유형"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "단체 구독"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "개인 구독"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "구독 관리"
+
+msgid "search.results.similarDocuments"
+msgstr "유사한 문서"
+
+msgid "search.results.orderDir.desc"
+msgstr "내림차순"
+
+msgid "search.results.orderDir.asc"
+msgstr "오름차순"
+
+msgid "search.results.orderBy.relevance"
+msgstr "관련성"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "인기 (지난달)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "인기 (전체)"
+
+msgid "search.results.orderBy.journal"
+msgstr "학술지 이름"
+
+msgid "search.results.orderBy.issue"
+msgstr "호"
+
+msgid "search.results.orderBy.date"
+msgstr "게재일"
+
+msgid "search.results.orderBy.author"
+msgstr "저자"
+
+msgid "search.results.orderBy.article"
+msgstr "논문 제목"
+
+#, fuzzy
+msgid "search.results.orderBy"
+msgstr "정렬 기준"
+
+#, fuzzy
+msgid "comments.authenticated"
+msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+#, fuzzy
+msgid "comments.commentsOnArticle"
+msgstr "이 논문에 대한 의견"
+
+msgid "reader.openAccess"
+msgstr "오픈 액세스"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "이 항목을 열람하기 위해서는 구독이 필요합니다. 구독 여부를 확인하려면 로그인하세요."
+
+msgid "user.authorization.representationNotFound"
+msgstr "요청한 갤러리를 찾을 수 없습니다."
+
+msgid "category.category"
+msgstr "분류"
