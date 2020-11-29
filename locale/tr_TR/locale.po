@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-11-26 18:19+0000\n"
+"PO-Revision-Date: 2020-11-29 12:56+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "tr_TR/>\n"
@@ -1387,9 +1387,15 @@ msgstr "Dergi Yönetim Sistemi Hakkında."
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "ADS Editöryal ve Yayımlama Süreci"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "Bu dergi açık kaynak kodlu bir dergi hazırlama ve yayınlama yazılımı olan Açık Dergi Sistemleri (Open Journal Systems) yazılım {$ojsVersion} sürümünü kullanmaktadır. ADS olarak kısaltılan bu yazılım <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> tarafından geliştirilmiştir ve (GNU General Public License) lisansı ile ücretsiz dağıtılmaktadır."
+msgstr ""
+"Bu dergi açık kaynak kodlu bir dergi yönetim yazılımı olan Açık Dergi "
+"Sistemleri (Open Journal Systems) {$ojsVersion} sürümünü kullanmaktadır. ADS "
+"olarak kısaltılan bu yazılım <a href=\"http://pkp.sfu.ca/\">Public Knowledge "
+"Project</a> tarafından geliştirilmiştir ve (GNU General Public License) "
+"lisansı ile ücretsiz dağıtılmaktadır. Dergi ve aday makaleleriniz ile ilgili "
+"sorularınız için lütfen doğrudan <a href=\"{$contactUrl}\">dergi ile "
+"iletişime</a> geçiniz."
 
 #, fuzzy
 msgid "about.aboutOJSSite"
@@ -2259,3 +2265,6 @@ msgstr "İstenilen dizgi bulunamadı."
 
 msgid "category.category"
 msgstr "Kategori"
+
+msgid "about.aboutSoftware"
+msgstr "Açık Dergi Sistemleri Hakkında"
