@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-27 22:43+0000\n"
+"PO-Revision-Date: 2020-11-30 11:43+0000\n"
 "Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/api/pl_PL/>\n"
 "Language: pl_PL\n"
@@ -53,3 +53,12 @@ msgstr ""
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Nie masz zezwolenia, aby wyświetlać niepublikowany nakład."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Nie można powiązać pliku tego etapu z gotową szpaltą."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Nie można zmienić czasopisma do którego należy to zgłoszenie."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "To ogłoszenie nie należy do tego czasopisma."
