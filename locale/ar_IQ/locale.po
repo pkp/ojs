@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2020-06-14 15:53+0000\n"
+"PO-Revision-Date: 2020-11-30 15:32+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/locale/ar_IQ/"
 ">\n"
@@ -2090,3 +2090,12 @@ msgstr "ترتيب المقالات"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "إختر كيفية ترتيب المقالات ضمن هذا القطاع."
+
+msgid "about.aboutSoftware"
+msgstr "عن نظام المجلات المفتوحة"
+
+msgid "user.authorization.representationNotFound"
+msgstr "تعذر العثور على اللوح الطباعي المطلوب."
+
+msgid "category.category"
+msgstr "الفئات"
