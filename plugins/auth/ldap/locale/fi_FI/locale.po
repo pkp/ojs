@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-21 07:50+0000\n"
+"PO-Revision-Date: 2020-12-01 22:46+0000\n"
 "Last-Translator: Tom Granroth <tom.granroth@tsv.fi>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "fi_FI/>\n"
@@ -59,3 +59,9 @@ msgstr "LDAP asetukset"
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Manager DN"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Base DN"
