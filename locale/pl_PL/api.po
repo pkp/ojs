@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-30 11:43+0000\n"
-"Last-Translator: rl <biuro@fimagis.pl>\n"
+"PO-Revision-Date: 2020-12-01 11:48+0000\n"
+"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/api/pl_PL/>\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
@@ -12,50 +12,52 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Publikacja, którą wybrałeś, nie należy do tego zgłoszenia."
+msgstr "Żądana publikacja nie jest częścią tego przedłożenia."
 
 msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Publikacja, którą wybrałeś, nie należy do tego czasopisma."
+msgstr "Żądana publikacja nie jest częścią tego czasopisma."
 
 msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Wybrana metoda płatności jest nieobsługiwana."
+msgstr "Wybrana metoda płatności nie jest obsługiwana."
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr "Nie masz zezwolenia, aby przenieść ten wzór email do innego czasopisma."
+msgstr ""
+"Nie masz pozwolenia do przenoszenia tego szablonu e-mail do innego "
+"czasopisma."
 
 msgid "api.contexts.404.contextNotFound"
-msgstr "Nie znaleziono czasopisma, którego szukałeś."
+msgstr "Nie znaleziono szukanego czasopisma."
 
 msgid "api.contexts.403.notAllowedDelete"
-msgstr "Nie masz zezwolenia, aby usunąć to czasopismo."
+msgstr "Nie masz pozwolenia do usunięcia tego czasopisma."
 
 msgid "api.contexts.403.notAllowedEdit"
-msgstr "Nie masz zezwolenia, aby edytować to czasopismo."
+msgstr "Nie masz pozwolenia do edycji tego czasopisma."
 
 msgid "api.contexts.403.requiresContext"
-msgstr "Nie możesz edytować tego czasopisma z sieciowego API."
+msgstr "Nie możesz edytować tego czasopisma przez API ogólne."
 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
-"Nie możesz wyświetlać ani edytować tego czasopisma, jeśli nie wyślesz "
-"wniosku do jego API lub sieciowego API."
+"Nie możesz wyświetlać ani edytować tego czasopisma, dopóki nie wyślesz "
+"żądania do API mu przeznaczonemu lub API ogólnego."
 
 msgid "api.contexts.403.notAllowed"
-msgstr "Nie masz zezwolenia, aby wyświetlić to czasopismo."
+msgstr "Nie masz pozwolenia do przeglądania tego czasopisma."
 
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Możesz wyświetlać tylko czasopisma, które zostały aktywowane."
 
 msgid "api.submissions.403.contextRequired"
 msgstr ""
-"Aby stworzyć lub edytować zgłoszenie, wyślij wniosek do węzła końcowego API "
-"czasopisma."
+"Aby stworzyć lub edytować zgłoszenie, wyślij żądanie do węzła końcowego API "
+"tego czasopisma."
 
 msgid "api.submissions.403.unpublishedIssues"
-msgstr "Nie masz zezwolenia, aby wyświetlać niepublikowany nakład."
+msgstr "Nie jesteś uprawniony do podglądu nieopublikowanych wydań."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Nie można powiązać pliku tego etapu z gotową szpaltą."
+msgstr "Na tym etapie publikacji nie można powiązać pliku z gotową szpaltą."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Nie można zmienić czasopisma do którego należy to zgłoszenie."
