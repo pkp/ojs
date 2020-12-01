@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-21 07:50+0000\n"
+"PO-Revision-Date: 2020-12-01 22:46+0000\n"
 "Last-Translator: Tom Granroth <tom.granroth@tsv.fi>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-medra/fi_FI/>\n"
@@ -50,3 +50,6 @@ msgstr "Käyttäjätunnus"
 
 msgid "plugins.importexport.medra.settings.form.description"
 msgstr "Määritä mEDRA -vientilisäosa:"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "mEDRA viennin- / rekisteröinnin lisäosa"
