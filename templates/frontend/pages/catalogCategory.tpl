@@ -46,19 +46,19 @@
 		</div>
 	</div>
 
-	{if !$subcategories->wasEmpty()}
+	{if $subcategories|@count}
 	<nav class="subcategories" role="navigation">
 		<h2>
 			{translate key="catalog.category.subcategories"}
 		</h2>
 		<ul>
-			{iterate from=subcategories item=subcategory}
+			{foreach from=$subcategories item=subcategory}
 				<li>
 					<a href="{url op="category" path=$subcategory->getPath()}">
 						{$subcategory->getLocalizedTitle()|escape}
 					</a>
 				</li>
-			{/iterate}
+			{/foreach}
 		</ul>
 	</nav>
 	{/if}
