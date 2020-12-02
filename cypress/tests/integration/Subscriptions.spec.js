@@ -37,9 +37,6 @@ describe('Subscription tests', function() {
 		cy.get('div#access button:contains("Save")').click();
 		cy.get('#access [role="status"]').contains('Saved');
 
-		// FIXME: The payment menu should now be visible, but it's not. (pkp/pkp-lib#5408)
-		cy.reload();
-
 		// Configure an issue for subscription.
 		cy.get('.app__nav a:contains("Issues")').click();
 		cy.get('button:contains("Back Issues")').click();
