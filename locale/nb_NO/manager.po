@@ -822,6 +822,7 @@ msgstr "Titteltekst"
 msgid "manager.setup.volumePerYear"
 msgstr "Utgaver per år"
 
+#, fuzzy
 msgid "manager.statistics.reports"
 msgstr "Rapportgenerator"
 
