@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-13 12:51+0000\n"
+"PO-Revision-Date: 2020-12-02 19:57+0000\n"
 "Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
 "Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "gd_GB/>\n"
@@ -277,3 +277,6 @@ msgstr "Iomruin do dh’iris"
 
 msgid "publication.selectIssue"
 msgstr "Tagh iris airson a chur air an sgeideal airson foillseachadh"
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Neo-ghnìomhach)"
