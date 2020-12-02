@@ -377,7 +377,7 @@ class IssueGalleyDAO extends DAO {
 	 * @return int
 	 */
 	function getNextGalleySequence($issueId) {
-		$result = $this->retrieve('SELECT MAX(seq) + 1 AS next_sequence FROM issue_galleys WHERE issue_id = ?', [(int) $issueId]);
+		$result = $this->retrieve('SELECT COALESCE(MAX(seq), 0) + 1 AS next_sequence FROM issue_galleys WHERE issue_id = ?', [(int) $issueId]);
 		$row = $result->current();
 		return $row->next_sequence;
 	}
