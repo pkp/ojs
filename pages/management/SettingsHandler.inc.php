@@ -129,6 +129,15 @@ class SettingsHandler extends ManagementHandler {
 		$components[$archivePnForm->id] = $archivePnForm->getConfig();
 		$templateMgr->setState(['components' => $components]);
 
+		// Add a payments link to be added/removed when payments form submitted
+		$templateMgr->setState([
+			'paymentsNavLink' => [
+				'name' => __('common.payments'),
+				'url' => $router->url($request, null, 'payments'),
+				'isCurrent' => false,
+			],
+		]);
+
 		// Hook into the settings templates to add the appropriate tabs
 		HookRegistry::register('Template::Settings::distribution', function($hookName, $args) {
 			$templateMgr = $args[1];
