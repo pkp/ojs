@@ -39,10 +39,10 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager {
 	 * @param $decisions array
 	 * @return array
 	 */
-	public function getActionLabels($context, $stageId, $decisions) {
+	public function getActionLabels($context, $submission, $stageId, $decisions) {
 		$allDecisionsData =
-			$this->_submissionStageDecisions($stageId) +
-			$this->_externalReviewStageDecisions($context) +
+			$this->_submissionStageDecisions($submission, $stageId) +
+			$this->_externalReviewStageDecisions($context, $submission) +
 			$this->_editorialStageDecisions();
 
 		$actionLabels = array();
@@ -68,7 +68,9 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager {
 		$editorDecisions = $editDecisionDao->getEditorDecisions($reviewRound->getSubmissionId(), $reviewRound->getStageId(), $reviewRound->getRound());
 
 		if (empty($decisions)) {
-			$decisions = array_keys($this->_externalReviewStageDecisions($context));
+			$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+			$submission = $submissionDao->getById($reviewRound->getSubmissionId());
+			$decisions = array_keys($this->_externalReviewStageDecisions($context, $submission));
 		}
 		$takenDecision = false;
 		foreach ($editorDecisions as $decision) {
@@ -89,7 +91,7 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager {
 	 * @param $makeDecision boolean If the user can make decisions
 	 * @return array
 	 */
-	protected function _externalReviewStageDecisions($context, $makeDecision = true) {
+	protected function _externalReviewStageDecisions($context, $submission, $makeDecision = true) {
 		$paymentManager = Application::getPaymentManager($context);
 		$decisions = array();
 		if ($makeDecision) {
@@ -118,12 +120,27 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager {
 					'requestPaymentText' => __('payment.requestPublicationFee', array('feeAmount' => $context->getData('publicationFee') . ' ' . $context->getData('currency'))),
 					'waivePaymentText' => __('payment.waive'),
 				),
-				SUBMISSION_EDITOR_DECISION_DECLINE => array(
-					'operation' => 'sendReviewsInReview',
-					'name' => 'decline',
-					'title' => 'editor.submission.decision.decline',
-				),
 			);
+
+			if ($submission->getStatus() == STATUS_QUEUED){
+				$decisions = $decisions + array(
+					SUBMISSION_EDITOR_DECISION_DECLINE => array(
+						'operation' => 'sendReviewsInReview',
+						'name' => 'decline',
+						'title' => 'editor.submission.decision.decline',
+					),
+				);
+			}
+			if ($submission->getStatus() == STATUS_DECLINED){
+				$decisions = $decisions + array(
+					SUBMISSION_EDITOR_DECISION_REVERT_DECLINE => array(
+						'name' => 'revert',
+						'operation' => 'revertDecline',
+						'title' => 'editor.submission.decision.revertDecline',
+					),
+				);
+			}
+
 		}
 		return $decisions;
 	}

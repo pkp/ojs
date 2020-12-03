@@ -31,6 +31,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 				'externalReview', 'saveExternalReview',
 				'sendReviews', 'saveSendReviews',
 				'promote', 'savePromote',
+				'revertDecline', 'saveRevertDecline',
 			), $this->_getReviewRoundOps())
 		);
 	}
@@ -122,6 +123,8 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 			case SUBMISSION_EDITOR_DECISION_DECLINE:
 			case SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE:
 				return NOTIFICATION_TYPE_EDITOR_DECISION_DECLINE;
+			case SUBMISSION_EDITOR_DECISION_REVERT_DECLINE:
+				return NOTIFICATION_TYPE_EDITOR_DECISION_REVERT_DECLINE;
 			case SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION:
 				return NOTIFICATION_TYPE_EDITOR_DECISION_SEND_TO_PRODUCTION;
 		}
