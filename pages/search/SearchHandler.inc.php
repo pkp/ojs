@@ -91,8 +91,8 @@ class SearchHandler extends Handler {
 
 		// Assign the year range.
 		$yearRange = Services::get('publication')->getDateBoundaries(['contextIds' => $journalId]);
-		$yearStart = substr($yearRange[1], 0, 4);
-		$yearEnd = substr($yearRange[0], 0, 4);
+		$yearStart = substr($yearRange[0], 0, 4);
+		$yearEnd = substr($yearRange[1], 0, 4);
 		$templateMgr->assign(array(
 			'yearStart' => $yearStart,
 			'yearEnd' => $yearEnd,
