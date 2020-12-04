@@ -51,7 +51,7 @@ class SubscriptionTypeDAO extends DAO {
 	 */
 	function getSubscriptionTypeName($typeId) {
 		$result = $this->retrieve(
-			'SELECT COALESCE(l.setting_value, p.setting_value) FROM subscription_type_settings l LEFT JOIN subscription_type_settings p ON (p.type_id = ? AND p.setting_name = ? AND p.locale = ?) WHERE l.type_id = ? AND l.setting_name = ? AND l.locale = ?', 
+			'SELECT COALESCE(l.setting_value, p.setting_value) as subscription_type_name FROM subscription_type_settings l LEFT JOIN subscription_type_settings p ON (p.type_id = ? AND p.setting_name = ? AND p.locale = ?) WHERE l.type_id = ? AND l.setting_name = ? AND l.locale = ?',
 			[
 				(int) $typeId, 'name', AppLocale::getLocale(),
 				(int) $typeId, 'name', AppLocale::getPrimaryLocale()
