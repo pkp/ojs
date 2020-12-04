@@ -329,7 +329,7 @@ class SubscriptionTypeDAO extends DAO {
 		$result = $this->retrieve('SELECT type_id FROM subscription_types WHERE journal_id = ? ORDER BY seq', [(int) $journalId]);
 
 		for ($i=1; $row = $result->current(); $i++) {
-			$this->update('UPDATE subscription_types SET seq = ? WHERE type_id = ?', [(int) $i, (int) $row->subscription_type_id]);
+			$this->update('UPDATE subscription_types SET seq = ? WHERE type_id = ?', [(int) $i, (int) $row->type_id]);
 			$result->next();
 		}
 	}
