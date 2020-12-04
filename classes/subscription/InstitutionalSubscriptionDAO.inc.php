@@ -593,7 +593,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		);
 
 		$ipRanges = [];
-		foreach ($ipResult as $row) {
+		foreach ($ipResult as $ipRow) {
 			$ipRanges[] = $ipRow->ip_string;
 		}
 		$institutionalSubscription->setIPRanges($ipRanges);
