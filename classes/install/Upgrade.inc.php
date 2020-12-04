@@ -410,7 +410,7 @@ class Upgrade extends Installer {
 				->where('file_id', '=' , $fileRow->reviewer_file_id)
 				->get();
 			if (empty($revisionRows)) {
-				error_log('ERROR: Reviewer files with ID ' . $row['reviewer_file_id'] . ' from review assignment ' .$row['review_id'] . ' could not be found in the database table submission_files');
+				error_log('ERROR: Reviewer files with ID ' . $fileRow->reviewer_file_id . ' from review assignment ' .$fileRow->review_id . ' could not be found in the database table submission_files');
 			}
 			foreach ($revisionRows as $revisionRow) {
 				// Reproduces the removed method SubmissionFile::_generateFileName()
