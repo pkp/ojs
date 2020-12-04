@@ -27,7 +27,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 
 		// Publisher
 		$publisher = $journal->getLocalizedName(); // Default
-		$publisherInstitution = $journal->getLocalizedData('publisherInstitution');
+		$publisherInstitution = $journal->getData('publisherInstitution');
 		if (!empty($publisherInstitution)) {
 			$publisher = $publisherInstitution;
 		}
@@ -50,14 +50,17 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		}
 
 		// Subject
+		$supportedLocales = array_keys(AppLocale::getSupportedFormLocales());
+		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionKeywordDao SubmissionKeywordDAO */
+		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /* @var $submissionSubjectDao SubmissionSubjectDAO */
 		$subjects = array_merge_recursive(
-			stripAssocArray((array) $article->getDiscipline(null)),
-			stripAssocArray((array) $article->getSubject(null))
+			(array) $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), $supportedLocales),
+			(array) $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
 		);
-		$subject = isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'';
+		$subject = $subjects[$journal->getPrimaryLocale()] ?? '';
 
 		// Coverage
-		$coverage = $article->getCoverage(null);
+		$coverage = $article->getCoverage($article->getData('locale'));
 
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
@@ -84,7 +87,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			$this->formatElement('keyword', $subject) .
 			$this->formatElement('period', $coverage) .
 			$this->formatElement('monitoring', $article->getLocalizedSponsor()) .
-			$this->formatElement('language', $article->getLanguage()) .
+			$this->formatElement('language', $article->getData('locale')) .
 			$this->formatElement('abstract', strip_tags($article->getLocalizedAbstract())) .
 			"</rfc1807>\n";
 
@@ -97,12 +100,8 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 	 * @param $value mixed
 	 */
 	function formatElement($name, $value) {
-		if (!is_array($value)) {
-			$value = array($value);
-		}
-
 		$response = '';
-		foreach ($value as $v) {
+		foreach ((array) $value as $v) {
 			$response .= "\t<$name>" . OAIUtils::prepOutput($v) . "</$name>\n";
 		}
 		return $response;
