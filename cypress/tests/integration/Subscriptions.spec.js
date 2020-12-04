@@ -121,6 +121,7 @@ describe('Subscription tests', function() {
 		// Grant the reader a new subscription
 		cy.get('div#subscriptionsTabs a[name="individualSubscription"]').click();
 		cy.waitJQuery();
+		cy.wait(1000); // Occasional detached element failure
 		cy.get('div#individualSubscriptionsGridContainer a:contains("Create New Subscription")').click();
 		cy.wait(1000); // Form initialization problem
 		cy.get('form#userSearchForm input[name=search]').type('Der');
