@@ -150,7 +150,7 @@ class CounterReportAR1 extends CounterReport {
 		$journalPubIds[] = new COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, $journal->getPath());
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $journalId);
 		$articlePubIds = array();
-		$articlePubIds[] = new COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, $submissionId);
+		$articlePubIds[] = new COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, (string) $submissionId);
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			$pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType(), true);
 			if ($pubId) {
