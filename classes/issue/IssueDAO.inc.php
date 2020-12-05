@@ -724,7 +724,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		);
 
 		$row = $result->current();
-		return $row ? $result->seq : null;
+		return $row ? $row->seq : null;
 	}
 
 	/**
