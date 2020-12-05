@@ -688,7 +688,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			[(int) $journalId]
 		);
 
-		$queryBuilder = new \Staudenmeir\LaravelUpsert\Query\Builder(Capsule::connection());
 		for ($i=1; $row = $result->current(); $i++) {
 			$this->replace(
 				'custom_issue_orders',
