@@ -18,6 +18,8 @@ import('classes.issue.Issue');
 import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_... constants
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	var $caches;
 
@@ -686,14 +688,18 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			[(int) $journalId]
 		);
 
+		$queryBuilder = new \Staudenmeir\LaravelUpsert\Query\Builder(Capsule::connection());
 		for ($i=1; $row = $result->current(); $i++) {
-			if (!$this->update(
-				'UPDATE custom_issue_orders SET seq = ? WHERE issue_id = ? AND journal_id = ?',
-				[$i, $row->issue_id, $journalId]
-			)) {
-				// This entry is missing. Create it.
-				$this->insertCustomIssueOrder($journalId, $row->issue_id, $i);
-			}
+			$this->replace(
+				'custom_issue_orders',
+				[
+					'issue_id' => $row->issue_id,
+					'journal_id' => (int) $journalId,
+					'seq' => $i
+				],
+				['issue_id', 'journal_id']
+			);
+			$result->next();
 		}
 	}
 
