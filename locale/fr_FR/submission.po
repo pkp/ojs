@@ -257,125 +257,98 @@ msgstr ""
 msgid "submission.publication"
 msgstr "Publication"
 
-
 msgid "publication.status.published"
 msgstr "Publié"
-
 
 msgid "submission.status.scheduled"
 msgstr "Programmé"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Non programmé"
 
-
 msgid "submission.publications"
 msgstr "Publications"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "L'année des droits d'auteur sera définie automatiquement lorsque ceci sera "
 "publié dans le numéro."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "L'année des droits d'auteur sera définie automatiquement sur la base de la "
 "date de publication."
 
-
 msgid "publication.datePublished"
 msgstr "Date de publication"
-
 
 msgid "publication.editDisabled"
 msgstr "Cette version a été publiée et ne peut pas être modifiée."
 
-
 msgid "publication.event.published"
 msgstr "La soumission a été publiée."
-
 
 msgid "publication.event.scheduled"
 msgstr "La soumission a été programmée pour publication."
 
-
 msgid "publication.event.unpublished"
 msgstr "La soumission a été dépubliée."
-
 
 msgid "publication.event.versionPublished"
 msgstr "Une nouvelle version a été publiée."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "Une nouvelle version a été programmée pour publication."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "Une version a été dépubliée."
 
-
 msgid "publication.invalidSubmission"
 msgstr "La soumission pour cette publication n'a pu être trouvée."
 
-
 msgid "publication.publish"
 msgstr "Publier"
-
 
 msgid "publication.publish.requirements"
 msgstr ""
 "les conditions suivantes doivent être remplies avant que ceci ne puisse être "
 "publié."
 
-
 msgid "publication.required.declined"
 msgstr "Une soumission refusée ne peut pas être publiée."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "La soumission doit être à l'étape de révision ou de production avant de "
 "pouvoir être publiée."
 
-
 msgid "submission.license.description"
 msgstr ""
 "La licence sera automatiquement définie comme <a href='{$licenseUrl}' "
 "target='_blank'> {$licenseName} </a> lorsque ceci sera publié."
-
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "Les droits d'auteur seront automatiquement attribués à {$copyright} lorsque "
 "ceci sera publié."
 
-
 msgid "submission.copyrightOther.description"
 msgstr ""
 "Attribuer à la partie suivante les droits d'auteur pour les soumissions "
 "publiées."
 
-
 msgid "publication.unpublish"
 msgstr "Dépublier"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Avez-vous la certitude de ne pas vouloir que ceci soit publié ?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr ""
 "Avez-vous la certitude de ne pas vouloir programmer ceci pour publication ?"
 
-
 msgid "publication.version.details"
 msgstr "Renseignements de publication pour la version {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Discussions sur la production"

@@ -224,110 +224,83 @@ msgstr "Select an issue to schedule for publication"
 msgid "submission.publication"
 msgstr "Publication"
 
-
 msgid "publication.status.published"
 msgstr "Published"
-
 
 msgid "submission.status.scheduled"
 msgstr "Scheduled"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Unscheduled"
-
 
 msgid "submission.publications"
 msgstr "Publications"
 
-
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr "The copyright year will be set automatically when this is published in an issue."
-
 
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "The copyright year will be set automatically based on the publication date."
 
-
 msgid "publication.datePublished"
 msgstr "Date Published"
-
 
 msgid "publication.editDisabled"
 msgstr "This version has been published and can not be edited."
 
-
 msgid "publication.event.published"
 msgstr "The submission was published."
-
 
 msgid "publication.event.scheduled"
 msgstr "The submission was scheduled for publication."
 
-
 msgid "publication.event.unpublished"
 msgstr "The submission was unpublished."
-
 
 msgid "publication.event.versionPublished"
 msgstr "A new version was published."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "A new version was scheduled for publication."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "A version was removed from publication."
 
-
 msgid "publication.invalidSubmission"
 msgstr "The submission for this publication could not be found."
-
 
 msgid "publication.publish"
 msgstr "Publish"
 
-
 msgid "publication.publish.requirements"
 msgstr "The following requirements must be met before this can be published."
-
 
 msgid "publication.required.declined"
 msgstr "A declined submission can not be published."
 
-
 msgid "publication.required.reviewStage"
 msgstr "The submission must be in the Copyediting or Production stages before it can be published."
-
 
 msgid "submission.license.description"
 msgstr "The license will be set automatically to <a href='{$licenseUrl}' target='_blank'>{$licenseName}</a> when this is published."
 
-
 msgid "submission.copyrightHolder.description"
 msgstr "Copyright will be assigned automatically to {$copyright} when this is published."
-
 
 msgid "submission.copyrightOther.description"
 msgstr "Assign copyright for published submissions to the following party."
 
-
 msgid "publication.unpublish"
 msgstr "Unpublish"
-
 
 msgid "publication.unpublish.confirm"
 msgstr "Are you sure you don't want this to be published?"
 
-
 msgid "publication.unschedule.confirm"
 msgstr "Are you sure you don't want this scheduled for publication?"
 
-
 msgid "publication.version.details"
 msgstr "Publication details for version {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Production Discussions"

@@ -251,118 +251,91 @@ msgstr ""
 msgid "submission.publication"
 msgstr "Publikation"
 
-
 msgid "publication.status.published"
 msgstr "Publiceret"
-
 
 msgid "submission.status.scheduled"
 msgstr "Planlagt"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Ikke planlagt"
 
-
 msgid "submission.publications"
 msgstr "Publikationer"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Copyright-året indstilles automatisk, når dette offentliggøres i et nummer."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "Copyright-året indstilles automatisk ud fra publiceringsdatoen."
-
 
 msgid "publication.datePublished"
 msgstr "Dato publiceret"
 
-
 msgid "publication.editDisabled"
 msgstr "Denne version er blevet publiceret og kan ikke redigeres."
-
 
 msgid "publication.event.published"
 msgstr "Indsendelsen blev publiceret."
 
-
 msgid "publication.event.scheduled"
 msgstr "Indsendelsen var planlagt til publicering."
-
 
 msgid "publication.event.unpublished"
 msgstr "Indsendelsen blev ikke publiceret."
 
-
 msgid "publication.event.versionPublished"
 msgstr "En ny version blev publiceret."
-
 
 msgid "publication.event.versionScheduled"
 msgstr "En ny version var planlagt til publicering."
 
-
 msgid "publication.event.versionUnpublished"
 msgstr "En version blev fjernet fra publikationen."
-
 
 msgid "publication.invalidSubmission"
 msgstr "Indsendelsen til denne publikation kunne ikke findes."
 
-
 msgid "publication.publish"
 msgstr "Publicér"
-
 
 msgid "publication.publish.requirements"
 msgstr "Følgende krav skal være opfyldt, før dette kan offentliggøres."
 
-
 msgid "publication.required.declined"
 msgstr "En afvist indsendelse kan ikke offentliggøres."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "Indsendelsen skal være under manuskriptredigerings- eller "
 "produktionstrinnet, før det kan offentliggøres."
 
-
 msgid "submission.license.description"
 msgstr ""
 "Licensen indstilles automatisk til <a href='{$licenseUrl}' target='_blank'>{$"
 " licensnavn}</a>, når dette publiceres."
 
-
 msgid "submission.copyrightHolder.description"
 msgstr "Copyright tildeles automatisk {$copyright}, når dette publiceres."
-
 
 msgid "submission.copyrightOther.description"
 msgstr ""
 "Tildel copyright i forbindelse med offentliggjorte indsendelser til følgende "
 "gruppe."
 
-
 msgid "publication.unpublish"
 msgstr "Træk tilbage"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Er du sikker på, at du ikke ønsker, at dette skal publiceres?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr ""
 "Er du sikker på, at du ikke vil have dette planlagt til senere publicering?"
 
-
 msgid "publication.version.details"
 msgstr "Publikationsoplysninger i forbindelse med version {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Drøftelser under produktion"

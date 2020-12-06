@@ -227,117 +227,90 @@ msgstr "Revije, ki je bila določena prispevku, ni bila najdena."
 msgid "submission.publication"
 msgstr "Objava"
 
-
 msgid "publication.status.published"
 msgstr "Objavljeno"
-
 
 msgid "submission.status.scheduled"
 msgstr "Načrtovano"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Ni načrtovano"
 
-
 msgid "submission.publications"
 msgstr "Objave"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Leto avtorskih pravic bo določeno avtomatično, ko bo številka objavljena."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "Leto avtorskih pravic bo ob objavi avtomatično nastavljeno na datum izdaje."
 
-
 msgid "publication.datePublished"
 msgstr "Datum objave"
-
 
 msgid "publication.editDisabled"
 msgstr "Ta verzija je bila objavljena in je ni mogoče spremeniti."
 
-
 msgid "publication.event.published"
 msgstr "Prispevek je bil objavljen."
-
 
 msgid "publication.event.scheduled"
 msgstr "Prispevek je bil načrtovan za objavo."
 
-
 msgid "publication.event.unpublished"
 msgstr "Prispevek ni več objavljen."
-
 
 msgid "publication.event.versionPublished"
 msgstr "Nova verzija je bila objavljena."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "Nova verzija je bila načrtovana za objavo."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "Nova verzija ni več objavljena."
 
-
 msgid "publication.invalidSubmission"
 msgstr "Prispevka za objavo ni bilo mogoče najti."
-
 
 msgid "publication.publish"
 msgstr "Objavi"
 
-
 msgid "publication.publish.requirements"
 msgstr "Spodnje zahteve morajo biti izpolnjene pred objavo."
 
-
 msgid "publication.required.declined"
 msgstr "Zavrnjen prispevek ne more biti objavljen."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "Prispevek mora biti v fazi Lektoriranje ali Produkcija preden je lahko "
 "objavljen."
 
-
 msgid "submission.license.description"
 msgstr ""
 "Licenca bo ob objavi avtomatično nastavljena na <a href='{$licenseUrl}' "
 "target='_blank'>{$licenseName}</a>."
 
-
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "Avtorske pravice bodo ob objavi avtomatično nastavljene na {$copyright}."
 
-
 msgid "submission.copyrightOther.description"
 msgstr "Dodeli avtorske pravice za objavljene članke naslednji osebi."
-
 
 msgid "publication.unpublish"
 msgstr "Umakni objavo"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Ste prepričani, da želite umakniti to objavo?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr "Ste prepričani, da ne želite načrtovati te objave?"
 
-
 msgid "publication.version.details"
 msgstr "Podrobnosti objave za verzijo {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Produkcijska diskusija"

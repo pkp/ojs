@@ -261,122 +261,95 @@ msgstr ""
 msgid "submission.publication"
 msgstr "Publicação"
 
-
 msgid "publication.status.published"
 msgstr "Publicado"
-
 
 msgid "submission.status.scheduled"
 msgstr "Agendado"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Não Agendado"
 
-
 msgid "submission.publications"
 msgstr "Publicações"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "O ano dos direitos autorais serão definido automaticamente quando for "
 "publicado em um fascículo."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "O ano dos direitos autorais será definido automaticamente com base na data "
 "de publicação."
 
-
 msgid "publication.datePublished"
 msgstr "Data de Publicação"
-
 
 msgid "publication.editDisabled"
 msgstr "Esta versão foi publicada e não pode ser editada."
 
-
 msgid "publication.event.published"
 msgstr "A submissão foi publicada."
-
 
 msgid "publication.event.scheduled"
 msgstr "A submissão foi agendada para publicação."
 
-
 msgid "publication.event.unpublished"
 msgstr "A submissão foi despublicada."
-
 
 msgid "publication.event.versionPublished"
 msgstr "Uma nova versão foi publicada."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "Uma nova versão foi agendada para publicação."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "Uma versão foi despublicada."
 
-
 msgid "publication.invalidSubmission"
 msgstr "A submissão para esta publicação não foi encontrada."
 
-
 msgid "publication.publish"
 msgstr "Publicar"
-
 
 msgid "publication.publish.requirements"
 msgstr ""
 "Os seguintes requisitos devem ser atendidos antes que isso possa ser "
 "publicado."
 
-
 msgid "publication.required.declined"
 msgstr "Uma submissão recusada não pode ser publicada."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "A submissão precisa estar nos estágios de Edição ou Editoração para que ela "
 "possa ser publicada."
 
-
 msgid "submission.license.description"
 msgstr ""
 "A licença será definida automaticamente como <a href='{$licenseUrl}' "
 "target='_blank'> {$licenseName} </a> quando publicada."
-
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "Os direitos autorais serão atribuídos automaticamente a {$copyright} quando "
 "publicados."
 
-
 msgid "submission.copyrightOther.description"
 msgstr "Atribua direitos autorais para submissões publicadas à parte seguinte."
-
 
 msgid "publication.unpublish"
 msgstr "Despublicar"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Tem certeza que não gostaria de publicar isto?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr "Tem certeza que não deseja agendar isto para publicação?"
 
-
 msgid "publication.version.details"
 msgstr "Detalhes da publicação da versão {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Discussão da Editoração"

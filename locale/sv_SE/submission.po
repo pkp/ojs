@@ -237,114 +237,88 @@ msgstr ""
 msgid "submission.publication"
 msgstr "Publikation"
 
-
 msgid "publication.status.published"
 msgstr "Publicerad"
-
 
 msgid "submission.status.scheduled"
 msgstr "Planerad"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Inte planerad"
-
 
 msgid "submission.publications"
 msgstr "Publikationer"
 
-
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Upphovsrättsåret genereras automatiskt när detta publiceras i ett nummer."
-
 
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "Upphovsrättsåret kommer att genereras automatiskt baserat på publicerings "
 "datum."
 
-
 msgid "publication.datePublished"
 msgstr "Publiceringsdatum"
-
 
 msgid "publication.editDisabled"
 msgstr "Versionen har publicerats och kan inte redigeras."
 
-
 msgid "publication.event.published"
 msgstr "Bidraget är publicerat."
-
 
 msgid "publication.event.scheduled"
 msgstr "Bidraget ska publiceras."
 
-
 msgid "publication.event.unpublished"
 msgstr "Bidraget är avpublicerat."
-
 
 msgid "publication.event.versionPublished"
 msgstr "En ny version har publicerats."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "En ny version ska publiceras."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "En version har tagits bort från publikationen."
 
-
 msgid "publication.invalidSubmission"
 msgstr "Bidraget för publikationen kan inte hittas."
-
 
 msgid "publication.publish"
 msgstr "Publicera"
 
-
 msgid "publication.publish.requirements"
 msgstr "Följande krav måste uppfyllas innan den kan publiceras."
 
-
 msgid "publication.required.declined"
 msgstr "Ett avslaget bidrag kan inte publiceras."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "Bidraget måste vara i Manusredigerings- eller Produktionssteget innan det "
 "kan publiceras."
 
-
 msgid "submission.license.description"
 msgstr ""
 "Licensen <a href='{$licenseUrl}' target='_blank'>{$licenseName}</a> läggs "
 "till automatiskt när den är publicerad."
 
-
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "Upphovsrätt tilldelas automatiskt till {$copyright} när den är publicerad."
 
-
 msgid "publication.unpublish"
 msgstr "Avpublicera"
-
 
 msgid "publication.unpublish.confirm"
 msgstr "Är du säker på att du vill avpublicera?"
 
-
 msgid "publication.unschedule.confirm"
 msgstr "Vill du ta bort denna från publiceringsplanen?"
 
-
 msgid "publication.version.details"
 msgstr "Publiceringsdetaljer för version {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Produktionsdiskussioner"

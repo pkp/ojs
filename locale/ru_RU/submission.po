@@ -224,110 +224,83 @@ msgstr "Выберите выпуск, чтобы запланировать к 
 msgid "submission.publication"
 msgstr "Публикация"
 
-
 msgid "publication.status.published"
 msgstr "Опубликовано"
-
 
 msgid "submission.status.scheduled"
 msgstr "Запланирован"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Снято с плана"
-
 
 msgid "submission.publications"
 msgstr "Публикации"
 
-
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr "Год копирайта будет задан автоматически при публикации выпуска."
-
 
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "Год копирайта будет проставлен автоматически, исходя из даты публикации."
 
-
 msgid "publication.datePublished"
 msgstr "Дата публикации"
-
 
 msgid "publication.editDisabled"
 msgstr "Эта версия была опубликована, её нельзя отредактировать."
 
-
 msgid "publication.event.published"
 msgstr "Материал был опубликован."
-
 
 msgid "publication.event.scheduled"
 msgstr "Материал запланирован к публикации."
 
-
 msgid "publication.event.unpublished"
 msgstr "Материал был снят с публикации."
-
 
 msgid "publication.event.versionPublished"
 msgstr "Опубликована новая версия."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "Новая версия запланирована к публикации."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "Версия была убрана с публикации."
 
-
 msgid "publication.invalidSubmission"
 msgstr "Материал для этой публикации не удаётся найти."
-
 
 msgid "publication.publish"
 msgstr "Опубликовать"
 
-
 msgid "publication.publish.requirements"
 msgstr "Перед публикацией необходимо выполнить следующие требования."
-
 
 msgid "publication.required.declined"
 msgstr "Отклонённый материал нельзя опубликовать."
 
-
 msgid "publication.required.reviewStage"
 msgstr "Перед публикацией материал должен быть на этапе «Литературное редактирование» или «Публикация»."
-
 
 msgid "submission.license.description"
 msgstr "Автоматически при публикации будет назначена лицензия <a href='{$licenseUrl}' target='_blank'>{$licenseName}</a>."
 
-
 msgid "submission.copyrightHolder.description"
 msgstr "Автоматически при публикации будет проставлено авторское право {$copyright}."
-
 
 msgid "submission.copyrightOther.description"
 msgstr "Проставить авторское право на опубликованных материалах с указанием следующей формулировки."
 
-
 msgid "publication.unpublish"
 msgstr "Снять с публикации"
-
 
 msgid "publication.unpublish.confirm"
 msgstr "Вы уверены, что не хотите публиковать этот материал?"
 
-
 msgid "publication.unschedule.confirm"
 msgstr "Вы уверены, что не хотите запланировать этот материал к публикации?"
 
-
 msgid "publication.version.details"
 msgstr "Информация о публикации для версии {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Обсуждения публикации"

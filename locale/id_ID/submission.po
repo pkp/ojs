@@ -257,119 +257,92 @@ msgstr ""
 msgid "submission.publication"
 msgstr "Publikasi"
 
-
 msgid "publication.status.published"
 msgstr "Diterbitkan"
-
 
 msgid "submission.status.scheduled"
 msgstr "Dijadwalkan"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Tidak dijadwalkan"
 
-
 msgid "submission.publications"
 msgstr "Publikasi"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Tahunhak cipta akan ditetapkan secara otomatis jika naskah ini diterbitkan "
 "pada satu nomor terbitan."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "Tahunhak cipta akan ditetapkan secara otomatis berdasarkan tanggal publikasi."
 
-
 msgid "publication.datePublished"
 msgstr "Tanggal DIterbitkan"
-
 
 msgid "publication.editDisabled"
 msgstr "Versi ini telah diterbitkan dan tidak dapat disunting."
 
-
 msgid "publication.event.published"
 msgstr "Naskah telah diterbitkan."
-
 
 msgid "publication.event.scheduled"
 msgstr "Naskah telah dijadwalkan untuk terbit."
 
-
 msgid "publication.event.unpublished"
 msgstr "Naskah tidak diterbitkan."
-
 
 msgid "publication.event.versionPublished"
 msgstr "Versi baru telah diterbitkan."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "Versi baru telah dijadwalkan untuk terbit."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "Sebuah versi dihapus dari publikasi."
 
-
 msgid "publication.invalidSubmission"
 msgstr "Naskah publikasi ini tidak dapat ditemukan."
-
 
 msgid "publication.publish"
 msgstr "Terbitkan"
 
-
 msgid "publication.publish.requirements"
 msgstr "Persyaratan berikut harus dipenuhi sebelum naskah diterbitkan."
 
-
 msgid "publication.required.declined"
 msgstr "Naskah yang ditolak tidak bisa diterbitkan."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "Naskah harus melewati tahap Copyediting atau Produksi sebelum dapat "
 "diterbitkan."
 
-
 msgid "submission.license.description"
 msgstr ""
 "Lisensi akan ditetapkan otomatis pada <a href='{$licenseUrl}' "
 "target='_blank'>{$licenseName}</a> ketika naskah ini diterbitkan."
-
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "Hak cipta akan ditentukan secara otomatis pada {$copyright} ketika naskah "
 "ini diterbitkan."
 
-
 msgid "submission.copyrightOther.description"
 msgstr "Gunakan hak cipta untuk naskah terbitan pada pihak berikut."
-
 
 msgid "publication.unpublish"
 msgstr "Tidak diterbitkan"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Yakin tidak ingin menerbitkan naskah ini?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr "Yakin tidak ingin menjadwalkan naskah ini untuk diterbitkan?"
 
-
 msgid "publication.version.details"
 msgstr "PRincian publikasi naskah versi {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Diskusi Produksi"
