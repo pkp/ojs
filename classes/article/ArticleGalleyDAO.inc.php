@@ -216,7 +216,6 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 			'galley_id' => (int) $pubObjectId,
 			'locale' => '',
 			'setting_name' => 'pub-id::' . $pubIdType,
-			'setting_type' => 'string',
 			'setting_value' => (string) $pubId
 		];
 		$this->replace('publication_galley_settings', $updateArray, $idFields);
