@@ -253,3 +253,7 @@ msgid "submission.viewingPreview"
 msgstr ""
 "To jest wgląd do artykułu, który jeszcze nie był publikowany.<a href=\"{$url}"
 "\">Wyświetl zgłoszenie</a>"
+
+msgid "submission.queries.production"
+msgstr "Dyskusja w trakcie realizacji"
+

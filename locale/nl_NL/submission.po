@@ -245,3 +245,7 @@ msgstr "Sectie opties"
 
 msgid "submission.submit.noContext"
 msgstr "Het tijdschrift van deze inzending kan niet gevonden worden."
+
+msgid "submission.queries.production"
+msgstr "Productie-discussies"
+

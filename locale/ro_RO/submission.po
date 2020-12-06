@@ -260,3 +260,127 @@ msgstr "Trimit manuscrisul în calitate de ..."
 
 msgid "submission.submit.title"
 msgstr "Înregistrare manuscrise"
+
+msgid "submission.publication"
+msgstr "Publicare"
+
+
+msgid "publication.status.published"
+msgstr "Publicat"
+
+
+msgid "submission.status.scheduled"
+msgstr "Planificat"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Neprogramat(e)"
+
+
+msgid "submission.publications"
+msgstr "Publicații"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Anul drepturilor de autor va fi setat automat atunci când manuscrisul va fi "
+"publicat într-un număr."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Anul drepturilor de autor va fi setat automat pe baza datei publicării."
+
+
+msgid "publication.datePublished"
+msgstr "Data publicării"
+
+
+msgid "publication.editDisabled"
+msgstr "Această versiune a fost publicată și nu poate fi modificată."
+
+
+msgid "publication.event.published"
+msgstr "Manuscrisul a fost publicat."
+
+
+msgid "publication.event.scheduled"
+msgstr "Manuscrisul a fost planificat pentru publicare."
+
+
+msgid "publication.event.unpublished"
+msgstr "Manuscrisul a fost retras de la publicare."
+
+
+msgid "publication.event.versionPublished"
+msgstr "O nouă versiune a fost publicată."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "O nouă versiune a fost planificată pentru publicare."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "O versiune a fost eliminată de la publicare."
+
+
+msgid "publication.invalidSubmission"
+msgstr "Manuscrisul pentru această publicație nu a fost găsit."
+
+
+msgid "publication.publish"
+msgstr "Publicați"
+
+
+msgid "publication.publish.requirements"
+msgstr ""
+"Înainte ca manuscrisul să fie publicat, trebuie îndeplinite următoarele "
+"cerințe."
+
+
+msgid "publication.required.declined"
+msgstr "O înregistrare de manuscris refuzată nu poate fi publicată."
+
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Depunerea trebuie să fie în etapele de editare conținut sau de producție "
+"înainte de a putea fi publicată."
+
+
+msgid "submission.license.description"
+msgstr ""
+"Licența va fi setată automat la <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> când articolul este publicat."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Dreptul de autor va fi atribuit automat revistei {$copyright} în momentul "
+"publicării acesteia."
+
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"Alocați drepturile de autor pentru trimiterile publicate către următoarea "
+"parte."
+
+
+msgid "publication.unpublish"
+msgstr "Anulare publicare"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "Sunteți sigur că nu vreți să fie publicat(ă)?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr "Sunteți sigur că nu doriți ca acest program să fie publicat?"
+
+
+msgid "publication.version.details"
+msgstr "Detalii de publicare pentru versiunea {$version}"
+
+
+msgid "submission.queries.production"
+msgstr "Discuții producție"
+
