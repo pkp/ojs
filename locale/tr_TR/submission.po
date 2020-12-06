@@ -257,3 +257,122 @@ msgid "submission.viewingPreview"
 msgstr ""
 "Bu bir önizlemedir ve yayınlanmamıştır.  <a href=\"{$url}\">Makaleyi "
 "görüntüle</a>"
+
+msgid "submission.publication"
+msgstr "Yayın"
+
+
+msgid "publication.status.published"
+msgstr "Yayınlandı"
+
+
+msgid "submission.status.scheduled"
+msgstr "Programlanmış"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Planlanmamış"
+
+
+msgid "submission.publications"
+msgstr "Yayınlar"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "Telif hakkı yılı, bir sayıda yayınlandığında otomatik olarak ayarlanır."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Telif hakkı yılı, yayın tarihine göre otomatik olarak ayarlanır."
+
+
+msgid "publication.datePublished"
+msgstr "Yayın Tarihi"
+
+
+msgid "publication.editDisabled"
+msgstr "Bu sürüm yayınlandı ve düzenlenemez."
+
+
+msgid "publication.event.published"
+msgstr "Gönderi yayınlandı."
+
+
+msgid "publication.event.scheduled"
+msgstr "Gönderi yayın için planlandı."
+
+
+msgid "publication.event.unpublished"
+msgstr "Gönderi yayınlandı."
+
+
+msgid "publication.event.versionPublished"
+msgstr "Yeni bir sürüm yayınlandı."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "Yayınlanmak üzere yeni bir sürüm planlandı."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "Bir sürüm yayından kaldırıldı."
+
+
+msgid "publication.invalidSubmission"
+msgstr "Bu yayının için gönderi bulunamadı."
+
+
+msgid "publication.publish"
+msgstr "Yayınla"
+
+
+msgid "publication.publish.requirements"
+msgstr ""
+"Bunun yayınlanabilmesi için aşağıdaki gereksinimlerin karşılanması gerekir."
+
+
+msgid "publication.required.declined"
+msgstr "Reddedilen bir gönderi yayınlanamaz."
+
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Gönderinin yayınlanabilmesi için önce Kopyalama veya Üretim aşamalarında "
+"olması gerekir."
+
+
+msgid "submission.license.description"
+msgstr ""
+"Lisans yayınlandığında otomatik <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> olarak ayarlanacaktır."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Telif hakkı, yayınlandığında {$copyright} adresine otomatik olarak "
+"atanacaktır."
+
+
+msgid "submission.copyrightOther.description"
+msgstr "Yayınlanan gönderilerin telif hakkını aşağıdaki kısma atayın."
+
+
+msgid "publication.unpublish"
+msgstr "Yayından Kaldır"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "Bunun yayınlanmasını istemediğinizden emin misiniz?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr "Bunun yayınlanmak üzere zamanlanmasını istemediğinizden emin misiniz?"
+
+
+msgid "publication.version.details"
+msgstr "{$version} sürümü için yayın ayrıntıları"
+
+
+msgid "submission.queries.production"
+msgstr "Basım Tartışmaları"
+

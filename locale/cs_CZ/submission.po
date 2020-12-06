@@ -242,3 +242,121 @@ msgid "submission.viewingPreview"
 msgstr ""
 "Toto je náhled – dosud nebyl publikován.  <a href=\"{$url}\">Zobrazit "
 "příspěvek</a>"
+
+msgid "submission.publication"
+msgstr "Vydání"
+
+
+msgid "publication.status.published"
+msgstr "Publikováno"
+
+
+msgid "submission.status.scheduled"
+msgstr "Naplánováno"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Neplánovaný"
+
+
+msgid "submission.publications"
+msgstr "Vydání"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Rok vydání autorských práv bude nastaven automaticky, jakmile bude toto "
+"číslo zveřejněno."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Rok autorských práv bude nastaven automaticky na základě data zveřejnění."
+
+
+msgid "publication.datePublished"
+msgstr "Datum publikace"
+
+
+msgid "publication.editDisabled"
+msgstr "Tato verze byla publikována a nelze ji upravovat."
+
+
+msgid "publication.event.published"
+msgstr "Příspěvek byl publikován."
+
+
+msgid "publication.event.scheduled"
+msgstr "Příspěvek byl naplánován k publikaci."
+
+
+msgid "publication.event.unpublished"
+msgstr "Příspěvek nebyl publikován."
+
+
+msgid "publication.event.versionPublished"
+msgstr "Byla vydána nová verze."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "Vydání nové verze bylo naplánováno."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "Verze byla odstraněna z publikace."
+
+
+msgid "publication.invalidSubmission"
+msgstr "Příspěvek pro tuto publikace nebyl nalezen."
+
+
+msgid "publication.publish"
+msgstr "Publikovat"
+
+
+msgid "publication.publish.requirements"
+msgstr "Před zveřejněním musí být splněny následující požadavky."
+
+
+msgid "publication.required.declined"
+msgstr "Odmítnutý příspěvek nelze zveřejnit."
+
+
+msgid "publication.required.reviewStage"
+msgstr "Před zveřejněním musí být ve fázi editace nebo produkce."
+
+
+msgid "submission.license.description"
+msgstr ""
+"Jakmile bude tato licence zveřejněna, bude automaticky nastavena na <a "
+"href='{$licenseUrl}' target='_blank'> {$licenseName} </a>."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Po jeho zveřejnění bude autorské právo automaticky přiděleno {$copyright}."
+
+
+msgid "submission.copyrightOther.description"
+msgstr "Přiřaďte autorská práva k publikovaným příspěvkům následující straně."
+
+
+msgid "publication.unpublish"
+msgstr "Nepublikovat"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "Opravdu nechcete, aby to bylo zveřejněno?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr "Opravdu si nepřejete, aby to bylo naplánováno na zveřejnění?"
+
+
+msgid "publication.version.details"
+msgstr "Podrobnosti publikace pro verzi {$version}"
+
+
+msgid "submission.queries.production"
+msgstr "Diskuse během produkčního procesu"
+

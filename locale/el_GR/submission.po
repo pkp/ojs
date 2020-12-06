@@ -250,3 +250,75 @@ msgid "submission.viewingPreview"
 msgstr ""
 "Αυτή είναι μια προεπισκόπηση και δεν έχει δημοσιευτεί ακόμα. <a href=\"{$url}"
 "\">Δείτε την υποβολή</a>"
+
+msgid "submission.publication"
+msgstr "Δημοσίευση"
+
+
+msgid "publication.status.published"
+msgstr "Δημοσιευμένο"
+
+
+msgid "submission.status.scheduled"
+msgstr "Προγραμματισμένο"
+
+
+msgid "submission.publications"
+msgstr "Δημοσιεύσεις"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Το έτος πνευματικών δικαιωμάτων θα οριστεί αυτόματα όταν δημοσιευθεί σε ένα "
+"τεύχος."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Το έτος πνευματικών δικαιωμάτων θα οριστεί αυτόματα με βάση την ημερομηνία "
+"δημοσίευσης."
+
+
+msgid "publication.datePublished"
+msgstr "Ημερομηνία Δημοσίευσης"
+
+
+msgid "publication.editDisabled"
+msgstr "Αυτή η έκδοση έχει δημοσιευτεί και δεν είναι δυνατή η επεξεργασία της."
+
+
+msgid "publication.event.published"
+msgstr "Η υποβολή δημοσιεύτηκε."
+
+
+msgid "publication.event.scheduled"
+msgstr "Η υποβολή είχε προγραμματιστεί για δημοσίευση."
+
+
+msgid "publication.event.versionPublished"
+msgstr "Δημοσιεύθηκε μια νέα έκδοση."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "Μια νέα έκδοση είχε προγραμματιστεί για δημοσίευση."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "Μια έκδοση καταργήθηκε από τη δημοσίευση."
+
+
+msgid "publication.invalidSubmission"
+msgstr "Δεν ήταν δυνατή η εύρεση της υποβολής αυτής της δημοσίευσης."
+
+
+msgid "publication.publish"
+msgstr "Δημοσίευση"
+
+
+msgid "publication.publish.requirements"
+msgstr "Πρέπει να πληρούνται οι ακόλουθες προϋποθέσεις για να δημοσιευτεί."
+
+
+msgid "submission.queries.production"
+msgstr "Συζητήσεις Παραγωγής"
+

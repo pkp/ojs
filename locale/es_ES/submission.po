@@ -258,3 +258,128 @@ msgid "submission.viewingPreview"
 msgstr ""
 "Esta es una vista previa y no se ha publicado. <a href=\"{$url}\">Ver "
 "envío</a>"
+
+msgid "submission.publication"
+msgstr "Publicación"
+
+
+msgid "publication.status.published"
+msgstr "Publicado"
+
+
+msgid "submission.status.scheduled"
+msgstr "Programado"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Desprogramado"
+
+
+msgid "submission.publications"
+msgstr "Publicaciones"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"El año de los derechos de autor se ajustará automáticamente cuando se "
+"publique en un número."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"El año de los derechos de autor se ajustará automáticamente en función de la "
+"fecha de publicación."
+
+
+msgid "publication.datePublished"
+msgstr "Fecha de publicación"
+
+
+msgid "publication.editDisabled"
+msgstr "Esta versión ya ha sido publicada y no puede editarse."
+
+
+msgid "publication.event.published"
+msgstr "El envío fue publicado."
+
+
+msgid "publication.event.scheduled"
+msgstr "El envío se programó para su publicación."
+
+
+msgid "publication.event.unpublished"
+msgstr "El envío fue retirado de publicación."
+
+
+msgid "publication.event.versionPublished"
+msgstr "Se publicó una versión nueva."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "Se programó una versión nueva para su publicación."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "Se eliminó una versión de publicación."
+
+
+msgid "publication.invalidSubmission"
+msgstr "No se pudo encontrar el envío para esta publicación."
+
+
+msgid "publication.publish"
+msgstr "Publicar"
+
+
+msgid "publication.publish.requirements"
+msgstr ""
+"Se deben cumplir los siguientes requisitos antes de que esto pueda ser "
+"publicado."
+
+
+msgid "publication.required.declined"
+msgstr "Un envío rechazado no puede ser publicado."
+
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"El envío debe estar en las fases de \"corrección\" o de \"producción\" antes "
+"de poder ser publicado."
+
+
+msgid "submission.license.description"
+msgstr ""
+"La licencia se ajustará automáticamente a <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> cuando se publique."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Los derechos de autor se asignarán automáticamente a {$copyright} cuando se "
+"publique."
+
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"Asignar derechos de autor para los envíos publicados en la parte siguiente."
+
+
+msgid "publication.unpublish"
+msgstr "Retirar de publicación"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "¿Seguro que no quiere que esto sea publicado?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr "¿Seguro que no quiere que esto se programe para su publicación?"
+
+
+msgid "publication.version.details"
+msgstr "Detalles de publicación de la versión {$version}"
+
+
+msgid "submission.queries.production"
+msgstr "Discusiones de producción"
+

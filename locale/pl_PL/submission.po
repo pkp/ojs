@@ -245,3 +245,7 @@ msgstr "Opcje działu"
 
 msgid "submission.submit.noContext"
 msgstr "Nie znaleziono czasopisma do którego pasuje to zgłoszenie."
+
+msgid "submission.queries.production"
+msgstr "Dyskusja w trakcie realizacji"
+

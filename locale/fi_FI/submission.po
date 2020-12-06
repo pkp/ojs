@@ -237,3 +237,120 @@ msgstr "Lisää numeroon"
 
 msgid "publication.unscheduledIn"
 msgstr "Tätä ei ole ajoitettu julkaistavaksi missään numerossa."
+
+msgid "submission.publication"
+msgstr "Julkaistu versio"
+
+
+msgid "publication.status.published"
+msgstr "Julkaistu"
+
+
+msgid "submission.status.scheduled"
+msgstr "Ajoitettu"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Ajoitus peruttu"
+
+
+msgid "submission.publications"
+msgstr "Julkaistut versiot"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "Tekijänoikeusvuosi asetetaan automaattisesti julkaisun yhteydessä."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Tekijänoikeusvuosi asetetaan automaattisesti julkaisupäivän mukaan."
+
+
+msgid "publication.datePublished"
+msgstr "Julkaisupäivä"
+
+
+msgid "publication.editDisabled"
+msgstr "Tämä versio on julkaistu eikä sitä voi muokata."
+
+
+msgid "publication.event.published"
+msgstr "Käsikirjoitus julkaistiin."
+
+
+msgid "publication.event.scheduled"
+msgstr "Käsikirjoitus ajoitettiin julkaistavaksi."
+
+
+msgid "publication.event.unpublished"
+msgstr "Käsikirjoituksen julkaisu peruttiin."
+
+
+msgid "publication.event.versionPublished"
+msgstr "Uusi versio julkaistiin."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "Uusi versio ajoitettiin julkaistavaksi."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "Versio poistettiin."
+
+
+msgid "publication.invalidSubmission"
+msgstr "Tälle julkaistulle versiolle ei löydy vastaavaa käsikirjoitusta."
+
+
+msgid "publication.publish"
+msgstr "Julkaise"
+
+
+msgid "publication.publish.requirements"
+msgstr "Seuraavat ehdot pitää täyttyä ennen julkaisua."
+
+
+msgid "publication.required.declined"
+msgstr "Hylättyä käsikirjoitusta ei voi julkaista."
+
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Käsikirjoituksen pitää olla teknisen toimituksessa tai tuotantovaiheessa, "
+"jotta sen voi julkaista."
+
+
+msgid "submission.license.description"
+msgstr ""
+"Lisenssiksi annetaan julkaisun yhteydessä <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr "Tekijänoikeus osoitetaan julkaisun yhteydessä {$copyright}."
+
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"Osoita julkaistujen käsikirjoitusten tekijänoikeus seuraavalle osapuolelle."
+
+
+msgid "publication.unpublish"
+msgstr "Peru julkaisu"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "Oletko varma, että haluat peruuttaa julkaisun?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr "Oletko varma, että et halua ajoittaa tätä julkaistavaksi?"
+
+
+msgid "publication.version.details"
+msgstr "Version {$version} tiedot"
+
+
+msgid "submission.queries.production"
+msgstr "Tuotantoon liittyvät keskustelut"
+

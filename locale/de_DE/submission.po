@@ -249,3 +249,128 @@ msgid "submission.viewingPreview"
 msgstr ""
 "Diese Vorschau wurde noch nicht veröffentlicht. <a href=\"{$url}\">Beitrag "
 "anzeigen</a>"
+
+msgid "submission.publication"
+msgstr "Veröffentlichung"
+
+
+msgid "publication.status.published"
+msgstr "Veröffentlicht"
+
+
+msgid "submission.status.scheduled"
+msgstr "Eingeplant"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Nicht eingeplant"
+
+
+msgid "submission.publications"
+msgstr "Veröffentlichungen"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Das Copyright-Jahr wird automatisch gesetzt, wenn dieser Beitrag in einer "
+"Ausgabe veröffentlicht wird."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Das Copyright-Jahr wird, basierend auf dem Veröffentlichungsdatum, "
+"automatisch gesetzt."
+
+
+msgid "publication.datePublished"
+msgstr "Veröffentlichungsdatum"
+
+
+msgid "publication.editDisabled"
+msgstr "Diese Version wurde veröffentlicht und kann nicht geändert werden."
+
+
+msgid "publication.event.published"
+msgstr "Der Beitrag wurde veröffentlicht."
+
+
+msgid "publication.event.scheduled"
+msgstr "Der Beitrag wurde zur Veröffentlichung vorgesehen."
+
+
+msgid "publication.event.unpublished"
+msgstr "Der Beitrag wurde zurückgezogen."
+
+
+msgid "publication.event.versionPublished"
+msgstr "Eine neue Version wurde veröffentlicht."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "Eine neue Version wurde zur Veröffentlichung vorgesehen."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "Eine Version wurde zurückgezogen."
+
+
+msgid "publication.invalidSubmission"
+msgstr ""
+"Die Einreichung für diese Veröffentlichung konnte nicht gefunden werden."
+
+
+msgid "publication.publish"
+msgstr "Veröffentlichen"
+
+
+msgid "publication.publish.requirements"
+msgstr ""
+"Die folgenden Bedingungen müssen erfüllt sein, bevor dies veröffentlicht "
+"werden kann."
+
+
+msgid "publication.required.declined"
+msgstr "Ein abgelehnter Beitrag kann nicht veröffentlicht werden."
+
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Die Einreichung muss sich im Copyediting oder im Produktionsschritt befinden "
+"um veröffentlicht werden zu können."
+
+
+msgid "submission.license.description"
+msgstr ""
+"Die Lizenz wird bei Veröffentlichung  automatisch auf <a href='{$licenseUrl}"
+"' target='_blank'>{$licenseName}</a> gesetzt."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"{$copyright} wird bei Veröffentlichung automatisch als Rechteinhaber gesetzt."
+
+
+msgid "submission.copyrightOther.description"
+msgstr "Die Rechte am veröffentlichten Beitrag folgender Gruppe zuordnen."
+
+
+msgid "publication.unpublish"
+msgstr "Zurückziehen"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "Sind sie sicher, dass dies nicht veröffentlicht werden soll?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr ""
+"Sind sie sicher, dass dies nicht zur Veröffentlichung eingeplant werden soll?"
+
+
+msgid "publication.version.details"
+msgstr "Veröffentlichungsdetails für Version {$version}"
+
+
+msgid "submission.queries.production"
+msgstr "Diskussion zur Herstellung"
+

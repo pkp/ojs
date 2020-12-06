@@ -166,3 +166,124 @@ msgstr "Ці специфікації базуються на наборі ме�
 
 msgid "section.any"
 msgstr "Будь-який розділ"
+
+msgid "submission.publication"
+msgstr "Публікація"
+
+
+msgid "publication.status.published"
+msgstr "Опубліковано"
+
+
+msgid "submission.status.scheduled"
+msgstr "Запланований"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Знято з плану"
+
+
+msgid "submission.publications"
+msgstr "Публікації"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Рік авторського права буде виставлено автоматично після публікації випуску."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Рік авторського права буде виставлено автоматично, базуючись на даті "
+"публікації."
+
+
+msgid "publication.datePublished"
+msgstr "Дата Публікації"
+
+
+msgid "publication.editDisabled"
+msgstr "Ця версія була опублікована і не може бути змінена."
+
+
+msgid "publication.event.published"
+msgstr "Подання було опубліковано."
+
+
+msgid "publication.event.scheduled"
+msgstr "Подання заплановане до публікації."
+
+
+msgid "publication.event.unpublished"
+msgstr "Подання було знято з публікації."
+
+
+msgid "publication.event.versionPublished"
+msgstr "Нова версія опублікована."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "Нова версія запланована до публікації."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "Версія була прибрана з публікації."
+
+
+msgid "publication.invalidSubmission"
+msgstr "Подання для цієї публікації неможливо знайти."
+
+
+msgid "publication.publish"
+msgstr "Опублікувати"
+
+
+msgid "publication.publish.requirements"
+msgstr "Наступні вимоги мають бути виконані перед публікацією."
+
+
+msgid "publication.required.declined"
+msgstr "Матеріал якому відмовлено, неможливо опублікувати."
+
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"До того як Опублікувати подання, воно має бути на стадії \"Літературне "
+"редагування\" або \"Виробництво\"."
+
+
+msgid "submission.license.description"
+msgstr ""
+"Ліцензія призначиться автоматично <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> коли матеріал буде опубліковано."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Авторське право автоматично призначиться на {$copyright} після публікування "
+"матеріалу."
+
+
+msgid "submission.copyrightOther.description"
+msgstr "Призначити авторські права на опубліковані матеріали наступній стороні."
+
+
+msgid "publication.unpublish"
+msgstr "Зняти з публікації"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "Ви впевнені що не хочете публікувати цей матеріал?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr "Ви впевнені, що не хочете запланувати цей матеріал до публікації?"
+
+
+msgid "publication.version.details"
+msgstr "Деталі публікації для версії {$version}"
+
+
+msgid "submission.queries.production"
+msgstr "Обговорення подання"
+

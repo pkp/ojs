@@ -241,3 +241,126 @@ msgid "submission.viewingPreview"
 msgstr ""
 "Això és una vista prèvia i encara no s'ha publicat. <a href=\"{$url}\">Veure "
 "tramesa</a>"
+
+msgid "submission.publication"
+msgstr "Publicació"
+
+
+msgid "publication.status.published"
+msgstr "Publicat"
+
+
+msgid "submission.status.scheduled"
+msgstr "Programat"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Desprogramat"
+
+
+msgid "submission.publications"
+msgstr "Publicacions"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"L'any dels drets d'autor s'ajustarà automàticament quan es publiqui en un "
+"número."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"L'any dels drets d'autor s'ajustarà automàticament en funció de la data de "
+"publicació."
+
+
+msgid "publication.datePublished"
+msgstr "Data de publicació"
+
+
+msgid "publication.editDisabled"
+msgstr "Aquesta versió ja s'ha publicat i no es pot editar."
+
+
+msgid "publication.event.published"
+msgstr "La tramesa ha estat publicada."
+
+
+msgid "publication.event.scheduled"
+msgstr "La tramesa s'ha programat per publicar-se."
+
+
+msgid "publication.event.unpublished"
+msgstr "La tramesa ha estat retirada de publicació."
+
+
+msgid "publication.event.versionPublished"
+msgstr "S'ha publicat una versió nova."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "S'ha programat una versió nova per publicar-se."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "S'ha eliminat una versió de publicació."
+
+
+msgid "publication.invalidSubmission"
+msgstr "No s'ha pogut trobar la tramesa per a aquesta publicació."
+
+
+msgid "publication.publish"
+msgstr "Publicar"
+
+
+msgid "publication.publish.requirements"
+msgstr "S'han de complir els següents requisits abans de poder-ho publicar."
+
+
+msgid "publication.required.declined"
+msgstr "Una tramesa rebutjada no pot ser publicada."
+
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"La tramesa ha d'estar en les fases de \"correcció\" o de \"producció\" abans "
+"de poder-la publicar."
+
+
+msgid "submission.license.description"
+msgstr ""
+"La llicència s'ajustarà automàticament a <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> quan es publiqui."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Els drets d'autor s'assignaran automàticament a {$copyright} quan es "
+"publiqui."
+
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"Assignar els drets d'autor de les trameses publicades en la següent part."
+
+
+msgid "publication.unpublish"
+msgstr "Retirar de publicació"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "Segur que no voleu que això es publiqui?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr "Segur que no voleu que això es programi per publicar-se?"
+
+
+msgid "publication.version.details"
+msgstr "Detalls de publicació de la versió {$version}"
+
+
+msgid "submission.queries.production"
+msgstr "Discussions de producció"
+

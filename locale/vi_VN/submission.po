@@ -251,3 +251,123 @@ msgstr ""
 
 msgid "publication.unscheduledIn"
 msgstr "Bài này đã không được lên kế hoạch để xuất bản trong một số."
+
+msgid "submission.publication"
+msgstr "Xuất bản"
+
+
+msgid "publication.status.published"
+msgstr "Đã xuất bản"
+
+
+msgid "submission.status.scheduled"
+msgstr "Đã lên lịch"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Huỷ lên lịch"
+
+
+msgid "submission.publications"
+msgstr "Ấn phẩm"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Năm bản quyền sẽ được đặt tự động khi điều này được xuất bản trong một Số."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Năm bản quyền sẽ được đặt tự động dựa trên ngày xuất bản."
+
+
+msgid "publication.datePublished"
+msgstr "Ngày Xuất bản"
+
+
+msgid "publication.editDisabled"
+msgstr "Phiên bản này đã được xuất bản và không thể chỉnh sửa."
+
+
+msgid "publication.event.published"
+msgstr "Bài gửi đã được xuất bản."
+
+
+msgid "publication.event.scheduled"
+msgstr "Bài gửi đã được lên lịch để xuất bản."
+
+
+msgid "publication.event.unpublished"
+msgstr "Bài gửi chưa được xuất bản."
+
+
+msgid "publication.event.versionPublished"
+msgstr "Một phiên bản mới đã được xuất bản."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "Một phiên bản mới đã được lên lịch để xuất bản."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "Một phiên bản đã bị xóa từ mục xuất bản."
+
+
+msgid "publication.invalidSubmission"
+msgstr "Bài gửi cho ấn phẩm này không thể được tìm thấy."
+
+
+msgid "publication.publish"
+msgstr "Xuất bản"
+
+
+msgid "publication.publish.requirements"
+msgstr ""
+"Các yêu cầu sau phải được đáp ứng trước khi bài này có thể được xuất bản."
+
+
+msgid "publication.required.declined"
+msgstr "Không thể xuất bản một bài bị từ chối."
+
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Bài gửi phải qua giai đoạn Sao chép hoặc Sản xuất trước khi có thể được xuất "
+"bản."
+
+
+msgid "submission.license.description"
+msgstr ""
+"Giấy phép sẽ được đặt tự động thành <a href='{$licenseUrl}' target='_blank'> "
+"{$licenseName} </a> khi giấy phép này được xuất bản."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Bản quyền sẽ tự động được chỉ định cho {$copyright} khi tài liệu này được "
+"xuất bản."
+
+
+msgid "submission.copyrightOther.description"
+msgstr "Chuyển nhượng bản quyền cho các bài đã xuất bản cho bên sau."
+
+
+msgid "publication.unpublish"
+msgstr "Hủy xuất bản"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "Bạn có chắc chắn rằng bạn không muốn xuất bản?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr "Bạn có chắc chắn rằng bạn không muốn lên lịch xuất bản?"
+
+
+msgid "publication.version.details"
+msgstr "Chi tiết xuất bản cho phiên bản {$version}"
+
+
+msgid "submission.queries.production"
+msgstr "Thảo luận về sản xuất"
+
