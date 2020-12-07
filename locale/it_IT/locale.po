@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2020-06-08 11:54+0000\n"
+"PO-Revision-Date: 2020-12-07 11:32+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
-"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/locale/it/>"
-"\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"it_IT/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1417,9 +1417,12 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Processo editoriale e di pubblicazione in OJS"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "Questa rivista utilizza Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+msgstr ""
+"Questa rivista utilizza Open Journal Systems {$ojsVersion}, un software open "
+"source distribuito da \n"
+" <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sulla base di "
+"licenze di utilizzo pubblico GNU."
 
 #, fuzzy
 msgid "about.aboutOJSSite"
@@ -2202,3 +2205,12 @@ msgstr "Visualizza {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Editor assegnati"
+
+msgid "user.authorization.representationNotFound"
+msgstr "La galley richiesta non è disponibile."
+
+msgid "about.aboutSoftware"
+msgstr "Open Journal Systems"
+
+msgid "category.category"
+msgstr "Categorie"

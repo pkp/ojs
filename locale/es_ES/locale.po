@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2020-06-18 16:39+0000\n"
+"PO-Revision-Date: 2020-11-30 15:32+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "es_ES/>\n"
@@ -1359,9 +1359,15 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Editorial OJS y proceso de publicación"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "Esta revista utiliza Open Journal Systems {$ojsVersion}, que es un gestor de revistas de acceso abierto y un software desarrollado, financiado y distribuido de forma gratuita por el proyecto <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sujeto a la Licencia General Pública de GNU."
+msgstr ""
+"Esta revista utiliza Open Journal Systems {$ojsVersion}, que es un software "
+"de gestión de revistas de código abierto desarrollado, impulsado y "
+"distribuido de forma gratuita por Public Knowledge Project bajo una licencia "
+"pública general GNU. Visite la página web de PKP para <a href=\""
+"http://pkp.sfu.ca/\">saber más acerca del software</a>. Por favor, <a href=\""
+"{$contactUrl}\">contacte con la revista</a> directamente si tiene preguntas "
+"sobre la revista o acerca de los envíos a la revista."
 
 #, fuzzy
 msgid "about.aboutOJSSite"
@@ -2044,3 +2050,12 @@ msgstr "Ver {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Editores/as asignados"
+
+msgid "about.aboutSoftware"
+msgstr "Acerca de Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "No se ha podido encontrar la galerada solicitada."
+
+msgid "category.category"
+msgstr "Categorías"

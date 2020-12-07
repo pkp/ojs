@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2020-06-14 15:53+0000\n"
+"PO-Revision-Date: 2020-11-30 15:32+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -117,9 +117,8 @@ msgstr "كل التكاليف ينبغي أن تكون بقيم رقمية مو�
 msgid "manager.payment.generalFees"
 msgstr "رسوم عامة"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "رابطة العضوية ستظهر ضمن (عن المجلة) تحت باب السياسات، ورابط الهبات سيظهر فوق آلية البحث في الإطار الأيمن."
+msgstr "رابطة العضوية ستظهر ضمن (عن المجلة) تحت باب السياسات."
 
 msgid "manager.payment.generalOptions"
 msgstr "خيارات عامة"
@@ -1711,3 +1710,25 @@ msgstr "الملخصات"
 
 msgid "stats.publications.galleys"
 msgstr "الملفات"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "التحقق فاشل."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "التحقق ناجح!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"هذه المجلة لا تقبل طلبات التقديم حالياً. قم بزيارة إعدادات مخطط سير العمل "
+"لتمكين طلبات التقديم."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"منع المستخدمين من تقديم مقالات جديدة إلى المجلة. يمكن تعطيل طلبات التقديم "
+"الموجهة إلى أقسام المجلة بشكل منفرد عبر صفحة إعدادات <a href=\"{$url}\">"
+"أقسام المجلة</a>."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"ينبغي أن يكون هناك مقطع واحد نشط على الأقل. قم بزيارة إعدادات مخطط سير العمل "
+"لتعطيل كل طلبات التقديم الموجهة إلى هذه المجلة."

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-13 12:51+0000\n"
+"PO-Revision-Date: 2020-12-01 11:48+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/api/ca_ES/>"
 "\n"
@@ -58,3 +58,9 @@ msgstr "No teniu permís per veure els números retirats de publicació."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "No podeu canviar un article de revista."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Des d'aquesta fase no podeu associar un arxiu amb una galerada."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "L'avís que heu sol·licitat no forma part d'aquesta revista."

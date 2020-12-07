@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-07 09:34+0000\n"
-"Last-Translator: Tomáš Blaho <tomas.blaho@umb.sk>\n"
+"PO-Revision-Date: 2020-11-27 08:29+0000\n"
+"Last-Translator: mhh <mhh@centrum.sk>\n"
 "Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/author/sk_SK/"
 ">\n"
 "Language: sk_SK\n"
@@ -234,11 +234,9 @@ msgstr "Dátum, kedy boli získané dáta alebo vytvorený nástroj."
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Použiť iba s formálne publikovanými materiálmi."
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Poskytnúť súbor recenzentom (bez metadát), aby neboli narušené anonymný "
-"recenzie."
+"Poskytnúť súbor recenzentom (bez metadát), aby nebola ohrozená anonymita."
 
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Stručný popis"

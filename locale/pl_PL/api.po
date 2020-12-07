@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-12-01 11:48+0000\n"
+"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/api/pl_PL/>\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Żądana publikacja nie jest częścią tego przedłożenia."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Żądana publikacja nie jest częścią tego czasopisma."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Wybrana metoda płatności nie jest obsługiwana."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Nie masz pozwolenia do przenoszenia tego szablonu e-mail do innego "
+"czasopisma."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Nie znaleziono szukanego czasopisma."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Nie masz pozwolenia do usunięcia tego czasopisma."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Nie masz pozwolenia do edycji tego czasopisma."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Nie możesz edytować tego czasopisma przez API ogólne."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Nie możesz wyświetlać ani edytować tego czasopisma, dopóki nie wyślesz "
+"żądania do API mu przeznaczonemu lub API ogólnego."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Nie masz pozwolenia do przeglądania tego czasopisma."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Możesz wyświetlać tylko czasopisma, które zostały aktywowane."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Aby stworzyć lub edytować zgłoszenie, wyślij żądanie do węzła końcowego API "
+"tego czasopisma."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Nie jesteś uprawniony do podglądu nieopublikowanych wydań."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Na tym etapie publikacji nie można powiązać pliku z gotową szpaltą."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Nie można zmienić czasopisma do którego należy to zgłoszenie."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "To ogłoszenie nie należy do tego czasopisma."

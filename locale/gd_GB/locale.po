@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-13 12:51+0000\n"
+"PO-Revision-Date: 2020-12-02 19:57+0000\n"
 "Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
 "Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/locale/gd_GB/"
 ">\n"
@@ -315,13 +315,15 @@ msgstr ""
 "le taic a’ <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> agus "
 "ga sgaoileadh gu saor fo cheadachas coitcheann poblach GNU."
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "Tha an t-iris-leabhar seo a’ cleachdadh Open Journal Systems {$ojsVersion}, "
 "bathar-bog le còd fosgailte airson stiùireadh iris-leabhraichean is "
-"foillseachadh, le taic a’ <a href=\"http://pkp.sfu.ca/\">Public Knowledge "
-"Project</a> agus ga sgaoileadh gu saor fo cheadachas coitcheann poblach GNU."
+"foillseachadh, le taic a’ Public Knowledge Project agus ga sgaoileadh gu "
+"saor fo cheadachas coitcheann poblach GNU. Tadhail air làrach-lìn PKP airson "
+"<a href=\"http://pkp.sfu.ca/\">barrachd fiosrachaidh mun bhathar-bhog</a>. <"
+"a href=\"{$contactUrl}\">Cuir fios chun an iris-leabhair fhèin</a> ma tha "
+"ceist agad mun iris-leabhar agus tagraidhean dhan iris-leabhar."
 
 msgid "about.onlineSubmissions.submitToSection"
 msgstr "Dèan tagradh ùr dhan earrann <a href=\"{$url}\">{$name}</a>."
@@ -2536,3 +2538,12 @@ msgstr "Òrdugh nan artaigeal"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "Tagh òrdugh dha na h-artaigealan san roinn-seòrsa seo."
+
+msgid "about.aboutSoftware"
+msgstr "Mu Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Cha b’ urrainn dhuinn a’ mhòr-dhuilleag a dh’iarr thu a lorg."
+
+msgid "category.category"
+msgstr "Roinnean-seòrsa"
