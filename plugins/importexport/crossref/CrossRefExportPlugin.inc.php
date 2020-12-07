@@ -271,7 +271,6 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 		$httpClient = Application::get()->getHttpClient();
 		assert(is_readable($filename));
-		$response = null;
 
 		try {
 			$response = $httpClient->request('POST',
@@ -307,7 +306,6 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 		// Get DOMDocument from the response XML string
 		$xmlDoc = new DOMDocument();
-		$resp = $response->getBody();
 		$xmlDoc->loadXML($response->getBody());
 		$batchIdNode = $xmlDoc->getElementsByTagName('batch_id')->item(0);
 
