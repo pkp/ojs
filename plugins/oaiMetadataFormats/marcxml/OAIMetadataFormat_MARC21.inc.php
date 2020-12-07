@@ -16,6 +16,14 @@
 
 class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 	/**
+	 * Constructor.
+	 */
+	function __construct($prefix, $schema, $namespace) {
+		parent::__construct($prefix, $schema, $namespace);
+		PKPLocale::requireComponents([LOCALE_COMPONENT_PKP_SUBMISSION]); // submission.copyrightStatement
+	}
+
+	/**
 	 * @see OAIMetadataFormat#toXml
 	 */
 	function toXml($record, $format = null) {
