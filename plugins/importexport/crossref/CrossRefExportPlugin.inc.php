@@ -20,6 +20,7 @@ import('classes.plugins.DOIPubIdExportPlugin');
 define('CROSSREF_STATUS_FAILED', 'failed');
 
 define('CROSSREF_API_DEPOSIT_OK', 200);
+define('CROSSREF_API_DEPOSIT_ERROR_FROM_CROSSREF', 403);
 
 define('CROSSREF_API_URL', 'https://api.crossref.org/v2/deposits');
 //TESTING
@@ -270,61 +271,68 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 		$httpClient = Application::get()->getHttpClient();
 		assert(is_readable($filename));
+		$response = null;
+
 		try {
-			$response = $httpClient->request(
-				'POST',
+			$response = $httpClient->request('POST',
 				$this->isTestMode($context) ? CROSSREF_API_URL_DEV : CROSSREF_API_URL,
 				[
-					'form_params' => [
-						'operation' => 'doMDUpload',
-						'usr' => $this->getSetting($context->getId(), 'username'),
-						'pwd' => $this->getSetting($context->getId(), 'password'),
-						'mdFile' => fopen($filename, 'r'),
+					'multipart' => [
+						[
+							'name'     => 'usr',
+							'contents' => $this->getSetting($context->getId(), 'username'),
+						],
+						[
+							'name'     => 'pwd',
+							'contents' => $this->getSetting($context->getId(), 'password'),
+						],
+						[
+							'name'     => 'operation',
+							'contents' => 'doMDUpload',
+						],
+						[
+							'name'     => 'mdFile',
+							'contents' => fopen($filename, 'r'),
+						],
 					]
 				]
 			);
 		} catch (GuzzleHttp\Exception\RequestException $e) {
-			return [['plugins.importexport.common.register.error.mdsError', 'No response from server.']];
+			if ($e->getResponse()->getStatusCode() != CROSSREF_API_DEPOSIT_ERROR_FROM_CROSSREF) {
+				return [['plugins.importexport.common.register.error.mdsError', 'No response from server.']];
+			}
+
+			$response = $e->getResponse();
 		}
-		if ($response->getStatusCode() != CROSSREF_API_DEPOSIT_OK) {
-			// These are the failures that occur immediately on request
-			// and can not be accessed later, so we save the falure message in the DB
-			$xmlDoc = new DOMDocument();
-			$xmlDoc->loadXML($response->getBody());
-			// Get batch ID
-			$batchIdNode = $xmlDoc->getElementsByTagName('batch_id')->item(0);
-			// Get re message
-			$msg = $response;
+
+		// Get DOMDocument from the response XML string
+		$xmlDoc = new DOMDocument();
+		$resp = $response->getBody();
+		$xmlDoc->loadXML($response->getBody());
+		$batchIdNode = $xmlDoc->getElementsByTagName('batch_id')->item(0);
+
+		// Get the DOI deposit status
+		// If the deposit failed
+		$failureCountNode = $xmlDoc->getElementsByTagName('failure_count')->item(0);
+		$failureCount = (int) $failureCountNode->nodeValue;
+		if ($failureCount > 0) {
 			$status = CROSSREF_STATUS_FAILED;
 			$result = false;
 		} else {
-			// Get DOMDocument from the response XML string
-			$xmlDoc = new DOMDocument();
-			$xmlDoc->loadXML($response->getBody());
-			$batchIdNode = $xmlDoc->getElementsByTagName('batch_id')->item(0);
+			// Deposit was received
+			$status = EXPORT_STATUS_REGISTERED;
+			$result = true;
 
-			// Get the DOI deposit status
-			// If the deposit failed
-			$failureCountNode = $xmlDoc->getElementsByTagName('failure_count')->item(0);
-			$failureCount = (int) $failureCountNode->nodeValue;
-			if ($failureCount > 0) {
-				$status = CROSSREF_STATUS_FAILED;
-				$result = false;
-			} else {
-				// Deposit was received
-				$status = EXPORT_STATUS_REGISTERED;
-				$result = true;
-
-				// If there were some warnings, display them
-				$warningCountNode = $xmlDoc->getElementsByTagName('warning_count')->item(0);
-				$warningCount = (int) $warningCountNode->nodeValue;
-				if ($warningCount > 0) {
-					$result = array(array('plugins.importexport.crossref.register.success.warning', htmlspecialchars($response->getBody())));
-				}
-				// A possibility for other plugins (e.g. reference linking) to work with the response
-				HookRegistry::call('crossrefexportplugin::deposited', array($this, $response->getBody(), $objects));
+			// If there were some warnings, display them
+			$warningCountNode = $xmlDoc->getElementsByTagName('warning_count')->item(0);
+			$warningCount = (int) $warningCountNode->nodeValue;
+			if ($warningCount > 0) {
+				$result = array(array('plugins.importexport.crossref.register.success.warning', htmlspecialchars($response->getBody())));
 			}
+			// A possibility for other plugins (e.g. reference linking) to work with the response
+			HookRegistry::call('crossrefexportplugin::deposited', array($this, $response->getBody(), $objects));
 		}
+
 		// Update the status
 		if ($status) {
 			$this->updateDepositStatus($context, $objects, $status, $batchIdNode->nodeValue, $msg);
