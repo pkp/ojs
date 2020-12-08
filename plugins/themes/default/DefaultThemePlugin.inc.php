@@ -37,8 +37,10 @@ class DefaultThemePlugin extends ThemePlugin {
 		$this->addOption('typography', 'FieldOptions', [
 			'type' => 'radio',
 			'label' => __('plugins.themes.default.option.typography.label'),
-			'description' => __('plugins.themes.default.option.typography.description'),
-			'options' => [
+			'description' => (Config::getVar('general', 'enable_cdn'))
+				? __('plugins.themes.default.option.typography.description')
+				: __('plugins.themes.default.option.typegrapht.cdn_disabled'),
+			'options' => (Config::getVar('general', 'enable_cdn')) ? [
 				[
 					'value' => 'notoSans',
 					'label' => __('plugins.themes.default.option.typography.notoSans'),
@@ -67,7 +69,7 @@ class DefaultThemePlugin extends ThemePlugin {
 					'value' => 'lora_openSans',
 					'label' => __('plugins.themes.default.option.typography.lora_openSans'),
 				],
-			],
+			] : [],
 			'default' => 'notoSans',
 		]);
 
