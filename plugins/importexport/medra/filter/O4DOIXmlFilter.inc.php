@@ -29,6 +29,11 @@ define('O4DOI_TEXTFORMAT_ASCII', '00');
 define('O4DOI_TITLE_TYPE_FULL', '01');
 define('O4DOI_TITLE_TYPE_ISSUE', '07');
 
+// Name identifier types
+define('O4DOI_NAME_IDENTIFIER_TYPE_PROPRIETARY', '01');
+define('O4DOI_NAME_IDENTIFIER_TYPE_ISNI', '16');
+define('O4DOI_NAME_IDENTIFIER_TYPE_ORCID', '21');
+
 // Publishing roles
 define('O4DOI_PUBLISHING_ROLE_PUBLISHER', '01');
 
@@ -216,6 +221,23 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Title text (mandatory)
 		$titleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'TitleText', htmlspecialchars(PKPString::html2text($localizedTitle), ENT_COMPAT, 'UTF-8')));
 		return $titleNode;
+	}
+	
+	/**
+	 * Create a NameIdentifier node.
+	 * @param $doc DOMDocument
+	 * @param $nameIDType string One of the O4DOI_NAME_IDENTIFIER_TYPE_* constants.
+	 * @param $idValue string
+	 * @return DOMElement
+	 */
+	function createNameIdentifierNode($doc, $nameIDType, $idValue) {
+	    $deployment = $this->getDeployment();
+	    $nameIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'NameIdentifier');
+	    // NameIDType (mandatory)
+	    $nameIdentifierNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NameIDType', $nameIDType));
+	    // IDValue (mandatory)
+	    $nameIdentifierNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'IDValue', $idValue));
+	    return $nameIdentifierNode;
 	}
 
 	/**
