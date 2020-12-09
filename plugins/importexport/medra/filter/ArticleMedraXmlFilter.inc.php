@@ -346,6 +346,10 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SequenceNumber', $seq));
 		// Contributor role (mandatory)
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ContributorRole', O4DOI_CONTRIBUTOR_ROLE_ACTUAL_AUTHOR));
+		// Contributor ORCID '21'
+		if (!empty($author->getOrcid())) {
+		    $this->createRelatedNode($doc, '21', $author->getOrcid());
+		}
 		// Person name (mandatory)
 		$personName = $author->getFullName(false);
 		assert(!empty($personName));
@@ -354,8 +358,13 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$invertedPersonName = $author->getFullName(false, true);
 		assert(!empty($invertedPersonName));
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonNameInverted', htmlspecialchars($invertedPersonName, ENT_COMPAT, 'UTF-8')));
+		$locale = AppLocale::getLocale();
+		// Name before key
+		$nameBeforeKey = $author->getGivenName($locale);
+		assert(!empty($nameBeforeKey));
+		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NamesBeforeKey', htmlspecialchars($nameBeforeKey, ENT_COMPAT, 'UTF-8')));
 		// Key names (mandatory)
-		$keyNames = $author->getFullName(false);
+		$keyNames = $author->getFamilyName($locale);
 		assert(!empty($keyNames));
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'KeyNames', htmlspecialchars($keyNames, ENT_COMPAT, 'UTF-8')));		
 		// Affiliation
