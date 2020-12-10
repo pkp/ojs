@@ -90,7 +90,7 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 				ASSOC_TYPE_SECTION => __('section.section'),
 				ASSOC_TYPE_ISSUE => __('issue.issue'),
 				ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
-				ASSOC_TYPE_PUBLICATION => __('common.submission'),
+				ASSOC_TYPE_PUBLICATION => __('common.publication'),
 		);
 
 		return $objectTypes;
