@@ -82,6 +82,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			if ($issue) $issueDao->updateCurrent($context->getId());
 			$issueDao->insertObject($issue);
 			$deployment->addProcessedObjectId(ASSOC_TYPE_ISSUE, $issue->getId());
+			$deployment->addImportedRootEntity(ASSOC_TYPE_ISSUE, $issue);
 		}
 		$deployment->setIssue($issue);
 

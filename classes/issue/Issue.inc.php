@@ -559,6 +559,10 @@ class Issue extends DataObject {
 	function getDAO() {
 		return DAORegistry::getDAO('IssueDAO');
 	}
+
+	function getUIDisplayString() {
+		return $this->getId() . ' - ' . $this->getIssueIdentification();
+	}
 }
 
 

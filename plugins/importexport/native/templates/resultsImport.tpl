@@ -12,14 +12,15 @@
 {else}
 	{translate key="plugins.importexport.native.importComplete"}
 	<ul>
-		{foreach from=$content item=contentItem}
-			<li>
-				{if is_a($contentItem, 'Submission')}
-					{$contentItem->getLocalizedTitle()|strip_unsafe_html}</li>
-				{else}
-					{$contentItem->getIssueIdentification()|escape}
-				{/if}
-			</li>
+		{foreach from=$importedRootObjects item=contentItemArrays key=contentItemName}
+			<b>{$contentItemName}</b>
+			{foreach from=$contentItemArrays item=contentItemArray}
+				{foreach from=$contentItemArray item=contentItem}
+					<li>
+						{$contentItem->getUIDisplayString()}
+					</li>
+				{/foreach}
+			{/foreach}
 		{/foreach}
 	</ul>
 {/if}

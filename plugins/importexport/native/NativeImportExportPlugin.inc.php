@@ -157,6 +157,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->assign('errorsAndWarnings', $problems);
 				$templateMgr->assign('errorsFound', $foundErrors);
 
+				$templateMgr->assign('importedRootObjects', $deployment->getImportedRootEntitiesWithNames());
+
 				// Display the results
 				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('resultsImport.tpl')));
 				header('Content-Type: application/json');
@@ -417,32 +419,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 				$deployment->import($filter, $xmlString);
 
-				$result = $deployment->processResult;
-				$problems = $deployment->getWarningsAndErrors();
-				$foundErrors = $deployment->isProcessFailed();
-
-				$warnings = array();
-				if (array_key_exists('warnings', $problems)) {
-					$warnings = $problems['warnings'];
-				}
-
-				$errors = array();
-				if (array_key_exists('errors', $problems)) {
-					$errors = $problems['errors'];
-				}
-
-				if (!$foundErrors) {
-					echo $c(__('plugins.importexport.native.importComplete'))->green()->bold() . PHP_EOL . PHP_EOL;
-
-				} else {
-					echo $c(__('plugins.importexport.native.processFailed'))->red()->bold() . PHP_EOL . PHP_EOL;
-					//echo $colors->getColoredString(__('plugins.importexport.common.cliError'), "purple", "red") . "\n";
-				}
-
-				// Are there any import warnings? Display them.
-				$this->displayCLIIssues($warnings, __('plugins.importexport.common.warningsEncountered'));
-				$this->displayCLIIssues($errors, __('plugins.importexport.common.errorsOccured'));
-
+				$this->getCLIImportResult($deployment);
+				$this->getCLIProblems($deployment);
 				return;
 			case 'export':
 				$outputDir = dirname($xmlFile);
@@ -463,6 +441,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						);
 
 						$this->getCLIExportResult($deployment, $xmlFile);
+						$this->getCLIProblems($deployment);
 						return;
 					case 'issue':
 					case 'issues':
@@ -474,6 +453,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						);
 
 						$this->getCLIExportResult($deployment, $xmlFile);
+						$this->getCLIProblems($deployment);
+
 						return;
 				}
 				break;
@@ -489,27 +470,61 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function getCLIExportResult($deployment, $xmlFile) {
+		$c = new Color();
+
+		$result = $deployment->processResult;
+		$foundErrors = $deployment->isProcessFailed();
+
+		if (!$foundErrors) {
+			$xml = $result->saveXml();
+			file_put_contents($xmlFile, $xml);
+			echo $c(__('plugins.importexport.native.export.completed'))->green()->bold() . PHP_EOL . PHP_EOL;
+		} else {
+			echo $c(__('plugins.importexport.native.processFailed'))->red()->bold() . PHP_EOL . PHP_EOL;
+		}
+	}
+
+	function getCLIImportResult($deployment) {
+		$c = new Color();
+
+		$result = $deployment->processResult;
+		$foundErrors = $deployment->isProcessFailed();
+		$importedRootObjects = $deployment->getImportedRootEntitiesWithNames();
+
+		if (!$foundErrors) {
+			echo $c(__('plugins.importexport.native.importComplete'))->green()->bold() . PHP_EOL . PHP_EOL;
+
+			foreach ($importedRootObjects as $contentItemName => $contentItemArrays) {
+				echo $c($contentItemName)->white()->bold()->highlight('black') . PHP_EOL;
+				foreach ($contentItemArrays as $contentItemArray) {
+					foreach ($contentItemArray as $contentItem) {
+						echo $c('-' . $contentItemName)->white()->bold() . PHP_EOL;
+					}
+				}
+			}
+		} else {
+			echo $c(__('plugins.importexport.native.processFailed'))->red()->bold() . PHP_EOL . PHP_EOL;
+		}
+	}
+
+	function getCLIProblems($deployment) {
 		$result = $deployment->processResult;
 		$problems = $deployment->getWarningsAndErrors();
 		$foundErrors = $deployment->isProcessFailed();
 
-		if (!$foundErrors) {
-			file_put_contents($xmlFile, $result);
-		} else {
-			$warnings = array();
-			if (array_key_exists('warnings', $problems)) {
-				$warnings = $problems['warnings'];
-			}
-
-			$errors = array();
-			if (array_key_exists('errors', $problems)) {
-				$errors = $problems['errors'];
-			}
-
-			// Are there any import warnings? Display them.
-			$this->displayCLIIssues($warnings, __('plugins.importexport.common.warningsEncountered'));
-			$this->displayCLIIssues($errors, __('plugins.importexport.common.errorsOccured'));
+		$warnings = array();
+		if (array_key_exists('warnings', $problems)) {
+			$warnings = $problems['warnings'];
 		}
+
+		$errors = array();
+		if (array_key_exists('errors', $problems)) {
+			$errors = $problems['errors'];
+		}
+
+		// Are there any import warnings? Display them.
+		$this->displayCLIIssues($warnings, __('plugins.importexport.common.warningsEncountered'));
+		$this->displayCLIIssues($errors, __('plugins.importexport.common.errorsOccured'));
 	}
 
 	function displayCLIIssues($relatedIssues, $title) {
