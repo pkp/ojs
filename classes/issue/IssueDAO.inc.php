@@ -627,7 +627,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		}
 
 		$result = $this->retrieveRange(
-			'SELECT i.*
+			$sql = 'SELECT i.*
 			FROM issues i
 				LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id)
 				' . ($pubIdType != null?' LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)':'')
@@ -643,7 +643,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
+		return new DAOResultFactory($result, $this, '_returnIssueFromRow', [], $sql, $params, $rangeInfo);
 	}
 
 	/**
