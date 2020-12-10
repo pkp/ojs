@@ -155,16 +155,13 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		        }
 		        
 		        $templateMgr->assign(
-		            'htmlspecialchars', htmlspecialchars($xml)
-		        );
-		        
-		        $templateMgr->assign(
+		            'htmlspecialchars', htmlspecialchars($xml),
 		            'numberError', $numberError
 		        );
 		        
 		        $templateMgr->display($this->getTemplateResource('crDepositErrors.tpl'));
-		        
-		    } else
+
+		 } else
 		        if (is_string($result)) {
 		            $doc = new DOMDocument();
 		            $doc->loadXML($result);
