@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2020-10-16 16:54+0000\n"
-"Last-Translator: Tom Granroth <tom.granroth@tsv.fi>\n"
+"PO-Revision-Date: 2020-12-12 08:52+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "fi_FI/>\n"
 "Language: fi_FI\n"
@@ -1541,9 +1541,14 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS:n toimitus- ja julkaisuprosessit"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "Tämä julkaisu käyttää Open Journal Systems {$ojsVersion} -järjestelmää, joka on <a href=\"http://pkp.sfu.ca/\">Public Knowledge Projectin</a> kehittämä, tukema ja GNU General Public License -lisenssillä vapaasti jakama avoimen lähdekoodin julkaisunhallinta- ja julkaisuohjelmisto."
+msgstr ""
+"Tämä julkaisu käyttää Open Journal Systems {$ojsVersion} -järjestelmää, joka "
+"on <a href=\"http://pkp.sfu.ca/\">Public Knowledge Projectin</a> kehittämä, "
+"tukema ja GNU General Public License -lisenssillä vapaasti jakama avoimen "
+"lähdekoodin julkaisunhallinta- ja julkaisuohjelmisto. Julkaisua ja "
+"käsikirjoituksia koskevissa kysymyksissä  tulee olla <a href=\"{$contactUrl}"
+"\">yhteydessä suoraan julkaisuun</a>."
 
 #, fuzzy
 msgid "about.aboutOJSSite"
@@ -2069,3 +2074,12 @@ msgstr "Näytä {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Osoitetut toimittajat"
+
+msgid "about.aboutSoftware"
+msgstr "Tietoa Open Journal Systems -järjestelmästä"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Pyydettyä julkaistavaa tiedostoa ei löytynyt."
+
+msgid "category.category"
+msgstr "Kategoriat"
