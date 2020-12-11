@@ -49,13 +49,6 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 						'exportIssues',
 						array('selectedIssues' => $request->getUserVar('selectedIssues'))
 				);
-			case 'exportSubmissions':
-				$submissionIds = (array) $request->getUserVar('selectedSubmissions');
-				$deployment = new NativeImportExportDeployment($request->getContext(), $request->getUser());
-
-				$this->getExportSubmissionsDeployment($submissionIds, $deployment);
-
-				return $this->getExportTemplateResult($deployment, $templateMgr, 'articles');
 			case 'exportIssues':
 				$selectedEntitiesIds = (array) $request->getUserVar('selectedIssues');
 				$deployment = new NativeImportExportDeployment($request->getContext(), $request->getUser());
