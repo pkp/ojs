@@ -53,7 +53,7 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 				$submissionIds = (array) $request->getUserVar('selectedSubmissions');
 				$deployment = new NativeImportExportDeployment($request->getContext(), $request->getUser());
 
-				$this->getExportSubmissionsDeployment('article=>native-xml', $submissionIds, $deployment);
+				$this->getExportSubmissionsDeployment($submissionIds, $deployment);
 
 				return $this->getExportTemplateResult($deployment, $templateMgr, 'articles');
 			case 'exportIssues':
@@ -79,7 +79,7 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 	 */
 	function exportSubmissions($submissionIds, $context, $user, $opts = array()) {
 		$deployment = new NativeImportExportDeployment($context, $user);
-		$this->getExportSubmissionsDeployment('article=>native-xml', $submissionIds, $deployment, $opts);
+		$this->getExportSubmissionsDeployment($submissionIds, $deployment, $opts);
 
 		return $this->exportResultXML($deployment);
 	}
@@ -120,6 +120,15 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 		}
 
 		return array($filter, $xmlString);
+	}
+
+	function getExportFilter($exportType) {
+		$filter = 'issue=>native-xml';
+		if ($exportType == 'exportSubmissions') {
+			$filter = 'article=>native-xml';
+		}
+
+		return $filter;
 	}
 
 
@@ -195,7 +204,6 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 					case 'article':
 					case 'articles':
 						$this->getExportSubmissionsDeployment(
-							'article=>native-xml',
 							$args,
 							$deployment,
 							$opts
