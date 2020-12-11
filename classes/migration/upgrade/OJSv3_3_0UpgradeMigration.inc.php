@@ -177,6 +177,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		Capsule::schema()->table('publication_galleys', function (Blueprint $table) {
 			$table->renameColumn('file_id', 'submission_file_id');
 		});
+		Capsule::statement('UPDATE publication_galleys SET file_id = NULL WHERE file_id = 0');
 		Capsule::schema()->table('publication_galleys', function (Blueprint $table) {
 			$table->bigInteger('submission_file_id')->nullable()->unsigned()->change();
 			$table->foreign('submission_file_id')->references('submission_file_id')->on('submission_files');
