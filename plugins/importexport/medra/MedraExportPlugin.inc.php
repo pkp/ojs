@@ -107,7 +107,7 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		// Select the language
 		$language = 'en_US';
 		foreach($objects as $object) {
-		    $language = $object->getLocale();
+			$language = $object->getLocale();
 		}
 		
 		// Instantiate the mEDRA web service wrapper.
@@ -132,48 +132,38 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 				$numberError = '';
 				
 				if($doc->getElementsByTagName('statusCode')->item(0)->textContent == 'FAILED'){
-				    $numberError = $doc->getElementsByTagName('errorsNumber')->item(0)->textContent;
-		            $nodeList = $doc->getElementsByTagName('error');
-		            
-		            $headlines = array();
-		            
-		            foreach($nodeList as $node) {
-		                $headline = array();
-		                if($node->childNodes->length) {
-		                    foreach($node->childNodes as $i) {
-		                        $headline[$i->nodeName] = $i->nodeValue;
-		                    }
-		                }
-		                
-		                $headlines[] = $headline;
-		            }
-		            
-		            $templateMgr->assign(
-		                'headlines', $headlines
-		            );
-		            
-		        }
-		        
-		        $templateMgr->assign(
-		            'htmlspecialchars', htmlspecialchars($xml),
-		            'numberError', $numberError
-		        );
-		        
-		        $templateMgr->display($this->getTemplateResource('crDepositErrors.tpl'));
-
-		 } else
-		        if (is_string($result)) {
-		            $doc = new DOMDocument();
-		            $doc->loadXML($result);
-		            $resultCode = $doc->getElementsByTagName('statusCode')->item(0)->nodeValue;
-		            
-		            $result = array(
-		                array('plugins.importexport.common.register.error.mdsError', $resultCode)
-		            );
-		        } 
-		        else {
-		            $result = false;
-			    }
+					$numberError = $doc->getElementsByTagName('errorsNumber')->item(0)->textContent;
+					$nodeList = $doc->getElementsByTagName('error');
+					$headlines = array();
+					foreach($nodeList as $node) {
+						$headline = array();
+						if($node->childNodes->length) {
+							foreach($node->childNodes as $i) {
+								$headline[$i->nodeName] = $i->nodeValue;
+							}
+						}
+						$headlines[] = $headline;
+					}
+					$templateMgr->assign(
+						'headlines', $headlines
+					);
+				}
+				$templateMgr->assign(
+					'htmlspecialchars', htmlspecialchars($xml),
+					'numberError', $numberError
+				);
+				$templateMgr->display($this->getTemplateResource('crDepositErrors.tpl'));
+		} else
+			if (is_string($result)) {
+				$doc = new DOMDocument();
+				$doc->loadXML($result);
+				$resultCode = $doc->getElementsByTagName('statusCode')->item(0)->nodeValue;
+				$result = array(
+					array('plugins.importexport.common.register.error.mdsError', $resultCode)
+				);
+			} else {
+				$result = false;
+			}
 		}
 		return $result;
 	}

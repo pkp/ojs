@@ -348,7 +348,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ContributorRole', O4DOI_CONTRIBUTOR_ROLE_ACTUAL_AUTHOR));
 		// Contributor ORCID '21'
 		if (!empty($author->getOrcid())) {
-            $this->createNameIdentifierNode($doc, '21', $author->getOrcid());
+			$this->createNameIdentifierNode($doc, '21', $author->getOrcid());
 		}
 		// Person name (mandatory)
 		$personName = $author->getFullName(false);

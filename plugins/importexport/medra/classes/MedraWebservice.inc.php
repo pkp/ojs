@@ -70,10 +70,10 @@ class MedraWebservice {
 	 * @param $language String
 	 */
 	function deposit($xml, $language) {
-	    $attachmentId = $this->_getContentId('metadata');
-	    $attachment = array($attachmentId => $xml);
-	    $result = $this->_doRequest('deposit', $language, $attachment);
-	    return $result;
+		$attachmentId = $this->_getContentId('metadata');
+		$attachment = array($attachmentId => $xml);
+		$result = $this->_doRequest('deposit', $language, $attachment);
+		return $result;
 	}
 	
 
@@ -110,18 +110,18 @@ class MedraWebservice {
 		
 		//Rebuild the multipart SOAP message for the deposit in CRossref: the action is 'deposit' instead of upload
 		if($action == 'deposit'){
-		    $soapMessage =
-		    '<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" ' .
-		    'xmlns:med="http://www.medra.org">' .
-		      '<SOAP-ENV:Header/>' .
-		      '<SOAP-ENV:Body>' .
-		          "<med:$action>" .
-		              "<med:accessMode>01</med:accessMode>" .
-		              "<med:language>$arg</med:language>" .
-		              "<med:contentID>" . key($attachment) . "</med:contentID>" .
-		          "</med:$action>" .
-		      '</SOAP-ENV:Body>' .
-		    '</SOAP-ENV:Envelope>';
+			$soapMessage =
+			'<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" ' .
+			'xmlns:med="http://www.medra.org">' .
+				'<SOAP-ENV:Header/>' .
+				'<SOAP-ENV:Body>' .
+					"<med:$action>" .
+						"<med:accessMode>01</med:accessMode>" .
+						"<med:language>$arg</med:language>" .
+						"<med:contentID>" . key($attachment) . "</med:contentID>" .
+					"</med:$action>" .
+				'</SOAP-ENV:Body>' .
+			'</SOAP-ENV:Envelope>';
 		}
 
 		$soapMessageId = $this->_getContentId($action);
