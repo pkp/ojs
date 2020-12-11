@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-01 22:46+0000\n"
-"Last-Translator: Tom Granroth <tom.granroth@tsv.fi>\n"
+"PO-Revision-Date: 2020-12-12 08:52+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "fi_FI/>\n"
 "Language: fi_FI\n"
@@ -65,3 +65,30 @@ msgstr "Manager DN"
 
 msgid "plugins.auth.ldap.settings.basedn"
 msgstr "Base DN"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL turvallisuusominaisuudet"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Pyydetty autentikointi-ID"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Käytä SASL:ia yksinkertaisen autentikoinnin sijasta"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"Attribuutin arvo, joka yksilöi käyttäjän, kuten uid, cs tai sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"Hallinnoija DN ja -salasana tarvitaan vain jos käyttäjäprofiilin / -"
+"salasanan synkronointi tai luomisen asetus on käytössä. Jos LDAP:ia "
+"käytetään vain käyttäjän autentikointiin, voidaan valinnat ohittaa."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Hallinnoija-salasana"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Tämä lisäosa mahdollistaa käyttäjätilien autentikoinnin ja synkronoinnin "
+"ulkoisesta LDAP-tietokannasta."
