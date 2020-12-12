@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2020-12-12 08:52+0000\n"
+"PO-Revision-Date: 2020-12-13 11:52+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "sl_SI/>\n"
@@ -2158,3 +2158,12 @@ msgstr "Poglej {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Dodeljeni uredniki"
+
+msgid "about.aboutSoftware"
+msgstr "O Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Zahtevani prelom ne obstaja."
+
+msgid "category.category"
+msgstr "Kategorije"
