@@ -24,23 +24,17 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 	 * @param $request PKPRequest
 	 */
 	function display($args, $request) {
-		$context = $request->getContext();
-		$user = $request->getUser();
-		$deployment = new NativeImportExportDeployment($context, $user);
+		parent::display($args, $request);
 
-		$this->setDeployment($deployment);
-
-		$templateMgr = TemplateManager::getManager($request);
-
-		list ($returnString, $managed) = parent::display($args, $request);
-
-		if ($managed) {
-			if ($returnString) {
-				return $returnString;
+		if ($this->isResultManaged) {
+			if ($this->result) {
+				return $this->result;
 			}
 
 			return;
 		}
+
+		$templateMgr = TemplateManager::getManager($request);
 
 		switch (array_shift($args)) {
 			case 'exportIssuesBounce':
@@ -51,7 +45,7 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 				);
 			case 'exportIssues':
 				$selectedEntitiesIds = (array) $request->getUserVar('selectedIssues');
-				$deployment = new NativeImportExportDeployment($request->getContext(), $request->getUser());
+				$deployment = $this->getDeployment();
 
 				$this->getExportIssuesDeployment($selectedEntitiesIds, $deployment);
 
@@ -60,21 +54,6 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 				$dispatcher = $request->getDispatcher();
 				$dispatcher->handle404();
 		}
-	}
-
-	/**
-	 * Get the XML for a set of submissions.
-	 * @param $submissionIds array Array of submission IDs
-	 * @param $context Context
-	 * @param $user User|null
-	 * @param $opts array
-	 * @return string XML contents representing the supplied submission IDs.
-	 */
-	function exportSubmissions($submissionIds, $context, $user, $opts = array()) {
-		$deployment = new NativeImportExportDeployment($context, $user);
-		$this->getExportSubmissionsDeployment($submissionIds, $deployment, $opts);
-
-		return $this->exportResultXML($deployment);
 	}
 
 	function getExportIssuesDeployment($issueIds, &$deployment, $opts = array()) {
