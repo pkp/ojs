@@ -89,8 +89,13 @@ To install OJS:
 	 and make this directory writeable. It is recommended that this
 	 directory be placed in a non-web-accessible location (or otherwise
 	 protected from direct access, such as via .htaccess rules).
-	 
-4. Open a web browser to http://yourdomain.com/path/to/ojs/ and
+
+4. Run the Dependencies installer commands to ensure your environment properly configured.
+     Using the CLI, at OJS directory:
+      * For backend dependencies run `composer install`;
+      * For frontend dependencies run `npm install && npm run build`;
+
+5. Open a web browser to http://yourdomain.com/path/to/ojs/ and
 	 follow the on-screen installation instructions.
 	 
 	 Alternatively, the command-line installer can be used instead by
@@ -99,7 +104,7 @@ To install OJS:
 	 and uploaded files directories after installation, if the Apache
 	 user is different from the user running the tool.)
 
-5. Recommended additional steps post-installation:
+6. Recommended additional steps post-installation:
 
 	 * Review `config.inc.php` for additional configuration settings
 	 * Review the FAQ document for frequently asked technical and
