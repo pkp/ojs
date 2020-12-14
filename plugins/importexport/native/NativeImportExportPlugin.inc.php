@@ -124,102 +124,41 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 		return $filter;
 	}
 
+	function getAppSpecificDeployment($journal, $user) {
+		return new NativeImportExportDeployment($journal, $user);
+	}
 
 	/**
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls']);
-		$command = array_shift($args);
-		$xmlFile = array_shift($args);
-		$journalPath = array_shift($args);
+		$result = parent::executeCLI($scriptName, $args);
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_SUBMISSION);
-
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /** @var $journalDao JournalDAO */
-		$userDao = DAORegistry::getDAO('UserDAO'); /** @var $userDao UserDAO */
-
-		$journal = $journalDao->getByPath($journalPath);
-
-		if (!$journal) {
-			if ($journalPath != '') {
-				$this->echoCLIError(__('plugins.importexport.common.error.unknownJournal', array('journalPath' => $journalPath)));
-			}
-			$this->usage($scriptName);
-			return;
+		if ($result) {
+			return $result;
 		}
 
-		if ($xmlFile && $this->isRelativePath($xmlFile)) {
-			$xmlFile = PWD . '/' . $xmlFile;
-		}
+		$cliDeployment = $this->cliDeployment;
+		$deployment = $this->getDeployment();
 
-		switch ($command) {
-			case 'import':
-				$userName = array_shift($args);
-				$user = $userDao->getByUsername($userName);
-
-				if (!$user) {
-					if ($userName != '') {
-						$this->echoCLIError(__('plugins.importexport.native.error.unknownUser', array('userName' => $userName)));
-					}
-					$this->usage($scriptName);
-					return;
-				}
-
-				if (!file_exists($xmlFile)) {
-					$this->echoCLIError(__('plugins.importexport.common.export.error.inputFileNotReadable', array('param' => $xmlFile)));
-
-					$this->usage($scriptName);
-					return;
-				}
-
-				list ($filter, $xmlString) = $this->getImportFilter($xmlFile);
-
-				$deployment = new NativeImportExportDeployment($journal, $user);
-				$deployment->setImportPath(dirname($xmlFile));
-
-				$deployment->import($filter, $xmlString);
-
-				$this->getCLIImportResult($deployment);
-				$this->getCLIProblems($deployment);
-				return;
+		switch ($cliDeployment->command) {
 			case 'export':
-				$deployment = new NativeImportExportDeployment($journal, null);
-
-				$outputDir = dirname($xmlFile);
-				if (!is_writable($outputDir) || (file_exists($xmlFile) && !is_writable($xmlFile))) {
-					$this->echoCLIError(__('plugins.importexport.common.export.error.outputFileNotWritable', array('param' => $xmlFile)));
-
-					$this->usage($scriptName);
-					return;
-				}
-				if ($xmlFile != '') switch (array_shift($args)) {
-					case 'article':
-					case 'articles':
-						$this->getExportSubmissionsDeployment(
-							$args,
-							$deployment,
-							$opts
-						);
-
-						$this->getCLIExportResult($deployment, $xmlFile);
-						$this->getCLIProblems($deployment);
-						return;
+				switch ($cliDeployment->exportEntity) {
 					case 'issue':
 					case 'issues':
 						$this->getExportIssuesDeployment(
-							$args,
+							$cliDeployment->args,
 							$deployment,
-							$opts
+							$cliDeployment->opts
 						);
 
-						$this->getCLIExportResult($deployment, $xmlFile);
+						$this->getCLIExportResult($deployment, $cliDeployment->xmlFile);
 						$this->getCLIProblems($deployment);
 
-						return;
+						return true;
 				}
-				break;
 		}
+
 		$this->usage($scriptName);
 	}
 
