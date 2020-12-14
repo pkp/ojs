@@ -91,8 +91,12 @@ To install OJS:
 	 protected from direct access, such as via .htaccess rules).
 
 4. Run the Dependencies installer commands to ensure your environment properly configured.
-     Using the CLI, at OJS directory:
-      * For backend dependencies run `composer install`;
+    Using the CLI, at OJS directory:
+    > Note: We use [composer](https://getcomposer.org/) and [nodejs](https://nodejs.org/en/) to manage the dependencies.
+      * For backend dependencies run:
+        * `composer --working-dir=lib/pkp install`;
+        * `composer --working-dir=plugins/paymethod/paypal install`;
+        * `composer --working-dir=plugins/generic/citationStyleLanguage install`;
       * For frontend dependencies run `npm install && npm run build`;
 
 5. Open a web browser to http://yourdomain.com/path/to/ojs/ and
