@@ -82,6 +82,8 @@ modifications to the system.
 If your instance of OJS was checked out from GitHub (see [README.md](../README.md)),
 you can update the OJS code using a git client.
 
+##### Rebasing your local changes on the updated code
+
 To update the OJS code from a git check-out, run the following command from
 your OJS directory:
 
@@ -98,7 +100,7 @@ be resolved in the usual way, e.g. using a merge tool like kdiff3.
 OJS release version tags are of the form "MAJOR_MINOR_REVSION-BUILD".
 For example, the tag for the initial release of OJS 3.2.0 is "3_2_0-0".
 
-Consult the [README](README.md) of the latest OJS package or the OJS web site for the
+Consult the [README.md](README.md) of the latest OJS package or the OJS web site for the
 tag corresponding to the latest available OJS release.
 
 Note that attempting to update to an unreleased version (e.g., using the HEAD
@@ -107,11 +109,31 @@ than OJS or third-party developers; using experimental code on a production
 deployment is strongly discouraged and will not be supported in any way by
 the OJS team.
 
+The official .tar.gz releases contain PHP dependencies and precompiled javascript
+which you will need to update within a git-based upgrade.
+
+##### Update PHP dependencies
+
+To update the PHP dependencies, you have to run
+```
+composer --working-dir=lib/pkp update
+composer --working-dir=plugins/paymethod/paypal update
+composer --working-dir=plugins/generic/citationStyleLanguage update
+```
+
+##### Update Javascript libraries and build.js
+
+To update the Javascript libraries and rebuild the build.js you have to run
+```
+npm install
+npm run build
+```
 
 ### Upgrading the OJS database
 
 After obtaining the latest OJS code, an additional script must be run to
-upgrade the OJS database.
+upgrade the OJS database and potentially execute additional upgrade code,
+which notably may also manipulate the OJS data files.
 
 This script can be executed from the command-line or via the OJS web interface.
 
@@ -122,7 +144,10 @@ upgrade the database as follows:
 
 - Edit config.inc.php and change "installed = On" to "installed = Off"
 - Run the following command from the OJS directory (not including the $):
-	`$ php tools/upgrade.php upgrade`
+	- `$ php tools/upgrade.php upgrade`
+	- Because the database upgrade may also write to the filesystem
+	(especially `files_dir`), it is important to consider the user
+        selected to execute this command.
 - Re-edit config.inc.php and change "installed = Off" back to
 	 "installed = On"
 
@@ -138,18 +163,3 @@ web-based script. To do so:
 - Re-edit config.inc.php and change "installed = Off" back to
 	 "installed = On"
 
-### Update Javascript libraries and build.js
-
-The official .tar.gz releases, and the stable branches in git (e.g.
-`ojs-stable-3_1_1`), contain precompiled javascript. If you are installing
-OJS using either of those and have not modified your Javascript, you do not
-need to compile Javascript.
-
-If you are using the git `master` branch, or have made changes to your
-Javascript code, you will need to recompile it following these instructions.
-
-To update the Javascript libraries and rebuild the build.js you have to run
-```
-npm install
-npm run build
-```
