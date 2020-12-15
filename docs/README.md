@@ -84,6 +84,7 @@ To install OJS:
 	 * `cache/t_config`
 	 * `cache/t_compile`
 	 * `cache/_db`
+	 * `plugins/*`
 
 3. Create a directory to store uploaded files (submission files, etc.)
 	 and make this directory writeable. It is recommended that this
