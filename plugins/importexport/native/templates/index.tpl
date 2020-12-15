@@ -56,6 +56,7 @@
 
 				{fbvFormButtons submitText="plugins.importexport.native.import" hideCancel="true"}
 			{/fbvFormArea}
+			<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 		</form>
 	</div>
 	<div id="exportSubmissions-tab">
