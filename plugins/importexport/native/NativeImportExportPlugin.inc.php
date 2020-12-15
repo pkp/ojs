@@ -131,8 +131,8 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 							$cliDeployment->opts
 						);
 
-						$this->getCLIExportResult($deployment, $cliDeployment->xmlFile);
-						$this->getCLIProblems($deployment);
+						$this->cliToolkit->getCLIExportResult($deployment, $cliDeployment->xmlFile);
+						$this->cliToolkit->getCLIProblems($deployment);
 
 						return true;
 				}
