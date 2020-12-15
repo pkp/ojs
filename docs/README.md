@@ -80,11 +80,7 @@ To install OJS:
 		 to manually overwrite this file during installation)
 	 * `public`
 	 * `cache`
-	 * `cache/t_cache`
-	 * `cache/t_config`
-	 * `cache/t_compile`
-	 * `cache/_db`
-	 * `plugins/*`
+	 * `plugins` (for plugin installation via the web interface)
 
 3. Create a directory to store uploaded files (submission files, etc.)
 	 and make this directory writeable. It is recommended that this
