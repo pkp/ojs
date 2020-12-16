@@ -33,6 +33,12 @@
 				"nullable"
 			]
 		},
+		"coverImage": {
+			"type": "string",
+			"validation": [
+				"nullable"
+			]
+		},
 		"pages": {
 			"type": "string",
 			"description": "The pages of the issue in which this article appears if it is published in a physical format.",
