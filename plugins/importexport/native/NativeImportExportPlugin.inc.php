@@ -34,7 +34,7 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 
 		$templateMgr = TemplateManager::getManager($request);
 
-		switch (array_shift($args)) {
+		switch ($this->opType) {
 			case 'exportIssuesBounce':
 				return $this->getBounceTab($request,
 					__('plugins.importexport.native.export.issues.results'),
