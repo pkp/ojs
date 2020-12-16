@@ -19,9 +19,7 @@ import('lib.pkp.plugins.importexport.native.PKPNativeImportExportPlugin');
 class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 
 	/**
-	 * Display the plugin.
-	 * @param $args array
-	 * @param $request PKPRequest
+	 * @see ImportExportPlugin::display()
 	 */
 	function display($args, $request) {
 		parent::display($args, $request);
@@ -31,7 +29,7 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 				return $this->result;
 			}
 
-			return;
+			return false;
 		}
 
 		$templateMgr = TemplateManager::getManager($request);
@@ -56,6 +54,12 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 		}
 	}
 
+	/**
+	 * Get the issues and proceed to the export
+	 * @param $issueIds array Array of issueIds to export
+	 * @param $deployment PKPNativeImportExportDeployment
+	 * @param $opts array
+	 */
 	function getExportIssuesDeployment($issueIds, &$deployment, $opts = array()) {
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /** @var $issueDao IssueDAO */
 		$issues = array();
@@ -69,9 +73,10 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 
 	/**
 	 * Get the XML for a set of issues.
-	 * @param $issueIds array Array of issue IDs
+	 * @param $issueIds array
 	 * @param $context Context
 	 * @param $user User
+	 * @param $opts array
 	 * @return string XML contents representing the supplied issue IDs.
 	 */
 	function exportIssues($issueIds, $context, $user, $opts = array()) {
@@ -81,6 +86,9 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 		return $this->exportResultXML($deployment);
 	}
 
+	/**
+	 * @see PKPNativeImportExportPlugin::getImportFilter
+	 */
 	function getImportFilter($xmlFile) {
 		$filter = 'native-xml=>issue';
 		// is this articles import:
@@ -94,6 +102,9 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 		return array($filter, $xmlString);
 	}
 
+	/**
+	 * @see PKPNativeImportExportPlugin::getExportFilter
+	 */
 	function getExportFilter($exportType) {
 		$filter = 'issue=>native-xml';
 		if ($exportType == 'exportSubmissions') {
@@ -103,8 +114,11 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 		return $filter;
 	}
 
-	function getAppSpecificDeployment($journal, $user) {
-		return new NativeImportExportDeployment($journal, $user);
+	/**
+	 * @see PKPNativeImportExportPlugin::getAppSpecificDeployment
+	 */
+	function getAppSpecificDeployment($context, $user) {
+		return new NativeImportExportDeployment($context, $user);
 	}
 
 	/**
