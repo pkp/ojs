@@ -16,15 +16,6 @@
 import('lib.pkp.plugins.importexport.native.filter.NativeXmlSubmissionFilter');
 
 class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
-	/**
-	 * Constructor
-	 * @param $filterGroup FilterGroup
-	 */
-	function __construct($filterGroup) {
-		parent::__construct($filterGroup);
-	}
-
-
 	//
 	// Implement template methods from PersistableFilter
 	//
@@ -41,40 +32,6 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 */
 	function getPublishedSubmissionInsertMethod() {
 		return 'insertObject';
-	}
-
-	/**
-	 * @see Filter::process()
-	 * @param $document DOMDocument|string
-	 * @return array Array of imported documents
-	 */
-	function &process(&$document) {
-		$importedObjects =& parent::process($document);
-
-		$deployment = $this->getDeployment();
-		$submission = $deployment->getSubmission();
-
-		// Index imported content
-		$articleSearchIndex = Application::getSubmissionSearchIndex();
-		foreach ($importedObjects as $submission) {
-			assert(is_a($submission, 'Submission'));
-			$articleSearchIndex->submissionMetadataChanged($submission);
-			$articleSearchIndex->submissionFilesChanged($submission);
-		}
-
-		$articleSearchIndex->submissionChangesFinished();
-
-		return $importedObjects;
-	}
-
-	/**
-	 * Populate the submission object from the node, checking first for a valid section and published_date/issue relationship
-	 * @param $submission Submission
-	 * @param $node DOMElement
-	 * @return Submission
-	 */
-	function populateObject($submission, $node) {
-		return parent::populateObject($submission, $node);
 	}
 
 	/**
