@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-15 09:20-0700\n"
-"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"PO-Revision-Date: 2020-12-17 17:52+0000\n"
 "Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
 "Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/editor/hi/>\n"
 "Language: hi_IN\n"
@@ -65,7 +65,10 @@ msgstr "नोटिफ़ाइ लेखक के ईमेल भेजन�
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) startcaps: Different capitalization at the start
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent."
+msgstr ""
+"प्रतिलिपि संपादित करने के लिए सबमिशन भेजने से पहले, निर्णय के लेखक को सूचित "
+"करने के लिए सूचित करें लिंक का उपयोग करें और भेजे जाने वाले संस्करण का चयन "
+"करें।"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "editor.notifyUsers"
@@ -431,13 +434,19 @@ msgstr "अभिगमन तिथि मान्य नहीं है।"
 # (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
 # (pofilter) xmltags: Added XML tags
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "लेआउट संपादक प्रत्येक गैली के लिए इन फाइलों को तैयार करता है और फिर प्रूफरीडिंग के लिए उपयुक्त <span class = \ "pkp_help_title \"> Proofs </ span> पर अपलोड करता है।"
+msgstr ""
+"लेआउट संपादक प्रत्येक गैली के लिए इन फाइलों को तैयार करता है और फिर "
+"प्रूफरीडिंग के लिए उपयुक्त <span class=\"pkp_help_title\">Proofs</span> पर "
+"अपलोड करता है।"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
 # (pofilter) xmltags: Added XML tags
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "इस सूची की अंतिम ड्राफ्ट फाइलें कॉपीराइटर द्वारा कॉपी किए गए संस्करणों में तब्दील हो जाती हैं, जिसे नीचे <span class = \ "pkp_help_title \"> Copyediting </ span> के तहत अपलोड किया जाता है।"
+msgstr ""
+"इस सूची की अंतिम ड्राफ्ट फाइलें अनुकृति संपादक द्वारा कॉपी किए गए संस्करणों "
+"में तब्दील हो जाती हैं, जिसे नीचे <span class=\"pkp_help_title\""
+">Copyediting</span> के तहत अपलोड किया जाता है।"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "editor.submission.proof.manageProofFilesDescription"
@@ -574,3 +583,6 @@ msgstr "पुनः असाइन"
 
 msgid "editor.home"
 msgstr "संपादक का घर"
+
+msgid "issues.submissions.issueIds"
+msgstr "अंक को सौंपे"

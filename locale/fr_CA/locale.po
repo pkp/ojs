@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2020-10-16 16:54+0000\n"
+"PO-Revision-Date: 2020-12-09 14:51+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -1619,9 +1619,15 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Processus d'édition et de publication d'OJS"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "Cette revue utilise Open Journal Systems {$ojsVersion}, un logiciel de gestion et d'édition de revues à code source libre développé, pris en charge et distribué librement par le <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sous la license publique générale GNU."
+msgstr ""
+"Cette revue utilise Open Journal Systems {$ojsVersion}, un logiciel de "
+"gestion et d'édition de revues à code source libre développé, pris en charge "
+"et distribué librement par le <a href=\"http://pkp.sfu.ca/\">Public "
+"Knowledge Project</a> sous la license publique générale GNU. Visiter le site "
+"Web de PKP pour <a href=\"http://pkp.sfu.ca/\"> en apprendre plus sur "
+"l'application </a>. Veuillez <a href=\"{$contactUrl}\"> contacter la revue "
+"</a> directement pour toute question sur la revue et les soumissions."
 
 #, fuzzy
 msgid "about.aboutOJSSite"
@@ -2150,3 +2156,12 @@ msgstr "Afficher {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Rédacteurs-trices assignés-ées"
+
+msgid "about.aboutSoftware"
+msgstr "À propos de Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Les épreuves demandées n'ont pas pu être trouvées."
+
+msgid "category.category"
+msgstr "Catégories"

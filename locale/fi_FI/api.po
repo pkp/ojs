@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
-"PO-Revision-Date: 2020-10-13 22:03+0000\n"
+"PO-Revision-Date: 2020-12-09 14:51+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/api/fi_FI/>"
 "\n"
@@ -59,3 +59,9 @@ msgstr ""
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Et voi vaihtaa käsikirjoitukseen liittyvää julkaisua."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Tämän vaiheen tiedosto ei voi olla julkaistava tiedosto."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Pyytämäsi ilmoitus ei ole osa tätä julkaisua."

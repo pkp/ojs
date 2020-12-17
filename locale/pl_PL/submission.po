@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:38+00:00\n"
-"PO-Revision-Date: 2020-11-30 11:43+0000\n"
+"PO-Revision-Date: 2020-12-09 14:51+0000\n"
 "Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "pl_PL/>\n"
@@ -257,3 +257,93 @@ msgstr ""
 msgid "submission.queries.production"
 msgstr "Dyskusja w trakcie realizacji"
 
+msgid "publication.version.details"
+msgstr "Szczegóły publikacji wersji {$version}"
+
+msgid "publication.unschedule.confirm"
+msgstr "Jesteś pewien, że nie chcesz zaplanować tego do publikacji?"
+
+msgid "publication.unpublish.confirm"
+msgstr "Jesteś pewien, że nie chcesz, aby to nie było publikowane?"
+
+msgid "publication.unpublish"
+msgstr "Nie publikuj"
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"Przypisz copyright dla opublikowanego zgłoszenia do następującej części."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Copyright zostanie przydzielony automatycznie do {$copyright}, kiedy "
+"zostanie opublikowane."
+
+msgid "submission.license.description"
+msgstr ""
+"Licencja zostanie automatycznie przydzielone do <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>, kiedy zostanie opublikowane."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Zgłoszenie musi przejść wszystkie etapy procesu wydawniczego i produkcyjnego "
+"zanim zostanie opublikowane."
+
+msgid "publication.required.declined"
+msgstr "Odrzucone zgłoszenie nie może być opublikowane."
+
+msgid "publication.publish.requirements"
+msgstr "Następujące wymagania muszą być spełnione przed publikacją."
+
+msgid "publication.publish"
+msgstr "Publikuj"
+
+msgid "publication.invalidSubmission"
+msgstr "Zgłoszenie do publikacji nie zostało odnalezione."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Wersja została usunięta z publikacji."
+
+msgid "publication.event.versionScheduled"
+msgstr "Nowa wersja została zaplanowana do publikacji."
+
+msgid "publication.event.versionPublished"
+msgstr "Nowa wersja została opublikowana."
+
+msgid "publication.event.unpublished"
+msgstr "Zgłoszenie nie zostało opublikowane."
+
+msgid "publication.event.scheduled"
+msgstr "Zgłoszenie zaplanowane do publikacji."
+
+msgid "publication.event.published"
+msgstr "Zgłoszenie zostało opublikowane."
+
+msgid "publication.editDisabled"
+msgstr "Wersja zostało opublikowana i nie może być edytowana."
+
+msgid "publication.datePublished"
+msgstr "Data publikacji"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Data praw autorskich będzie nada automatycznie na podstawie daty publikacji."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Data praw autorskich zostanie nadana automatyczne, kiedy zostanie "
+"opublikowane w konkretnym wydaniu."
+
+msgid "submission.publications"
+msgstr "Publikacje"
+
+msgid "publication.status.unscheduled"
+msgstr "Niezaplanowany"
+
+msgid "submission.status.scheduled"
+msgstr "Zaplanowano"
+
+msgid "publication.status.published"
+msgstr "Opublikowano"
+
+msgid "submission.publication"
+msgstr "Publikacja"

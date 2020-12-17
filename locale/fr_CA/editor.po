@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2020-01-07 10:19+0000\n"
+"PO-Revision-Date: 2020-12-08 07:27+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -371,7 +371,7 @@ msgid "editor.submissions.lastCompleted"
 msgstr "Dernière complétée"
 
 msgid "editor.submissions.assignedTo"
-msgstr "Assignée à"
+msgstr "Assignée au,à la rédacteur-trice"
 
 msgid "editor.submissions.inSection"
 msgstr "Dans la rubrique"
@@ -435,3 +435,6 @@ msgstr "L'identifiant public « {$publicIdentifier} » existe déjà pour un aut
 
 msgid "editor.article.coverImage"
 msgstr "Image de la page couverture"
+
+msgid "issues.submissions.issueIds"
+msgstr "Assignée au numéro"
