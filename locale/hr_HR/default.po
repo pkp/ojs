@@ -28,7 +28,7 @@ msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr "Tekst sadrži jednostruki razmak; koristi se font 12; preferira se kurziv(italic), radije nego podcrtavanje (prihvaća se za URL adrese); i sve ilustracije, slike i tablice su smještene na prikladnim mjestima u tekstu, radije nego na njegovom kraju."
 
 msgid "default.contextSettings.checklist.bibliographicRequirements"
-msgstr "Tekst ispunjava stilske i bibliografske zahtjeve navedene u <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Smjernice za autore</a>, koje se nalaze u rubrici \"o časopisu\"."
+msgstr "Tekst ispunjava stilske i bibliografske zahtjeve navedene u <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Smjernice za autore</a>, koje se nalaze u rubrici \"o časopisu\"."
 
 msgid "default.contextSettings.privacyStatement"
 msgstr "<p>Imena i adrese e-pošte registrirane na ovim stranicama koristit će se isključivo u navedene svrhe časopisa i neće biti dostupne niti jednoj drugoj stranci.</p>"
@@ -40,13 +40,13 @@ msgid "default.contextSettings.emailSignature"
 msgstr ""
 "________________________________________________________________________\n"
 "{$journalName}\n"
-"{$indexUrl}{$contextPath}"
+"{$indexUrl}/{$contextPath}"
 
 msgid "default.contextSettings.forReaders"
-msgstr "Potičemo čitatelje da se predbilježe za primanje obavijesti o novim izdanjima ovoga časopisa. Koristite <a href=\"{$indexUrl}{$contextPath}/user/register\">Registrirajte se</a> poveznicu na vrhu početne stranice časopisa. Ova registracija rezultirat će time da će čitatelj putem e-pošte primati kazalo sadržaja  za svaku novi broj ovoga časopisa. Popis predbilježenih čitatelja također pruža časopisu informacije o postignutom stupnju podrške čitateljstva. Pogledajte <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Izjavu o privatnosti</a> časopisa koja jamči čitateljima da njihovo ime i adresa e-pošte neće biti korišteni za druge potrebe."
+msgstr "Potičemo čitatelje da se predbilježe za primanje obavijesti o novim izdanjima ovoga časopisa. Koristite <a href=\"{$indexUrl}/{$contextPath}/user/register\">Registrirajte se</a> poveznicu na vrhu početne stranice časopisa. Ova registracija rezultirat će time da će čitatelj putem e-pošte primati kazalo sadržaja  za svaku novi broj ovoga časopisa. Popis predbilježenih čitatelja također pruža časopisu informacije o postignutom stupnju podrške čitateljstva. Pogledajte <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Izjavu o privatnosti</a> časopisa koja jamči čitateljima da njihovo ime i adresa e-pošte neće biti korišteni za druge potrebe."
 
 msgid "default.contextSettings.forAuthors"
-msgstr "Jeste li zainteresirani za ustupanje vlastitog priloga ovome časopisu? Preporučujemo da pregledate stranicu <a href=\"{$indexUrl}{$contextPath}/about\">O časopisu</a> u poveznici izdavačke politike časopisa i sadržaja pojedinih rubrika, kao i <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Smjernice za autore</a>. Autori se moraju <a href=\"{$indexUrl}{$contextPath}/user/register\">registrirati</a> prije nego mogu prijaviti svoj prilog, ili ako su već registrirani kao korisnici se jednostavno <a href=\"{$indexUrl}{$contextPath}/login\">prijaviti</a> i početi s procesom prijave priloga u 5 koraka.' u 'Autori se moraju registrirati da bi mogli objaviti svoj prilog, ili ako su već registrirani kao korisnici mogu se jednostavno prijaviti i početi s postupkom prijave priloga u 5 koraka."
+msgstr "Jeste li zainteresirani za ustupanje vlastitog priloga ovome časopisu? Preporučujemo da pregledate stranicu <a href=\"{$indexUrl}/{$contextPath}/about\">O časopisu</a> u poveznici izdavačke politike časopisa i sadržaja pojedinih rubrika, kao i <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Smjernice za autore</a>. Autori se moraju <a href=\"{$indexUrl}/{$contextPath}/user/register\">registrirati</a> prije nego mogu prijaviti svoj prilog, ili ako su već registrirani kao korisnici se jednostavno <a href=\"{$indexUrl}/{$contextPath}/login\">prijaviti</a> i početi s procesom prijave priloga u 5 koraka.' u 'Autori se moraju registrirati da bi mogli objaviti svoj prilog, ili ako su već registrirani kao korisnici mogu se jednostavno prijaviti i početi s postupkom prijave priloga u 5 koraka."
 
 msgid "default.contextSettings.forLibrarians"
 msgstr "Potičemo knjižničare knjižnica znanstveno-istraživačkih institucija da uvrste ovaj časopis u svoje evidencije elektroničkih časopisa. Isto tako, vrijedi istaknuti da pomoću ovoga sustava za izdavanje časopisa temeljenog na otvorenom kodu knjižnice jednostavno mogu istraživačima u vlastitoj instituciji pružiti platformu za uređivanje i izdavanje vlastitih časopisa (pogledajte <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
