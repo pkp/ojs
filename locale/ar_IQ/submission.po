@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2020-11-30 15:32+0000\n"
+"PO-Revision-Date: 2020-12-17 17:52+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ar_IQ/>\n"
@@ -22,7 +22,7 @@ msgid "submission.submit.userGroup"
 msgstr "قدم طلباً بصفتي..."
 
 msgid "submission.submit.userGroupDescription"
-msgstr "إختر بأية صفة تقوم بتقديم طلبك هذا."
+msgstr "إختر الصفة التي تقدم بها طلبك هذا."
 
 msgid "submission.upload.selectComponent"
 msgstr "إختر مكون المؤلَّف..."
@@ -310,4 +310,3 @@ msgstr "تفاصيل النشر للنسخة {$version}"
 
 msgid "submission.queries.production"
 msgstr "مناقشات الإنتاج"
-
