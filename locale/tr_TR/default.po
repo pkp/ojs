@@ -48,7 +48,7 @@ msgstr ""
 "bölümleri ek dosya olarak tek, tek gönderebilirsiniz."
 
 msgid "default.contextSettings.checklist.bibliographicRequirements"
-msgstr "Buraya eklenen sitil ve bibliyografk gereksinimler Dergi Hakkında kısmındaki <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Yazar Rehberi</a>'nden görülebilir."
+msgstr "Buraya eklenen sitil ve bibliyografk gereksinimler Dergi Hakkında kısmındaki <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Yazar Rehberi</a>'nden görülebilir."
 
 msgid "default.contextSettings.privacyStatement"
 msgstr "<p>Bu dergi sitesindeki isimler ve elektronik posta adresleri bu derginin belirtilen amaçları doğrultusunda kullanılacaktır. Diğer amaçlar veya başka bir bölüm için kullanılmaycaktır.</p>"
@@ -64,10 +64,10 @@ msgstr ""
 "<a href=\"{$contextUrl}\">{$contextName}</a>"
 
 msgid "default.contextSettings.forReaders"
-msgstr "Okuyucuların yayın bildirimi servisine kayıt olmaları önerilir. Dergi ana sayfasının üst kısmında yer alan <a href=\"{$indexUrl}{$contextPath}/user/register\">Kayıt</a> bağlantısı aracılığı ile bu işlem gerçekleştirilebilir. Bu kayıtla her yeni sayı yayınlandığında İÇİNDEKİLER sayfası e-posta aracılığı ile okuyucuya iletilir. Derginin <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">güvenlik kurallarına bakınız</a> yazarların kimlik bilgileri ve e-posta adresleri hiç bir şekilde başka amaçlar için kullanılmayacaktır."
+msgstr "Okuyucuların yayın bildirimi servisine kayıt olmaları önerilir. Dergi ana sayfasının üst kısmında yer alan <a href=\"{$indexUrl}/{$contextPath}/user/register\">Kayıt</a> bağlantısı aracılığı ile bu işlem gerçekleştirilebilir. Bu kayıtla her yeni sayı yayınlandığında İÇİNDEKİLER sayfası e-posta aracılığı ile okuyucuya iletilir. Derginin <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">güvenlik kurallarına bakınız</a> yazarların kimlik bilgileri ve e-posta adresleri hiç bir şekilde başka amaçlar için kullanılmayacaktır."
 
 msgid "default.contextSettings.forAuthors"
-msgstr "Dergimize makale başvurusunda bulunmayı düşünüyorsanız <a href=\"{$indexUrl}{$contextPath}/about\">Dergi Hakkında</a> bağlantısı araılığıyla dergi yayın politikası ve <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Yazar Rehberi</a>'ne ulaşabilirsiniz. Yazarlar dergiye gönderi yapmadan önce <a href=\"{$indexUrl}{$contextPath}/user/register\">register</a> üye olmalıdır. Gönderi işlemi  <a href=\"{$indexUrl}{$contextPath}/login\">Üye Giriş</a> bağlantısı aracılığıyla 5 basamakta yapılır."
+msgstr "Dergimize makale başvurusunda bulunmayı düşünüyorsanız <a href=\"{$indexUrl}/{$contextPath}/about\">Dergi Hakkında</a> bağlantısı araılığıyla dergi yayın politikası ve <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Yazar Rehberi</a>'ne ulaşabilirsiniz. Yazarlar dergiye gönderi yapmadan önce <a href=\"{$indexUrl}/{$contextPath}/user/register\">register</a> üye olmalıdır. Gönderi işlemi  <a href=\"{$indexUrl}/{$contextPath}/login\">Üye Giriş</a> bağlantısı aracılığıyla 5 basamakta yapılır."
 
 msgid "default.contextSettings.forLibrarians"
 msgstr "Kütüphanelere, bu açık erişimli dergiyi elektronik dergileri içine almaları önerilir. Açık Dergi Sitemleri ile ilgili ayrıntılı bilgi <a href=\"http://pkp.sfu.ca\">Public Knowledge Project</a> bağlantısından elde edilebilir."

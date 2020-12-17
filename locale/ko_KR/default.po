@@ -112,18 +112,18 @@ msgstr ""
 
 msgid "default.contextSettings.forAuthors"
 msgstr ""
-"이 학술지에 투고하고 싶으십니까? <a href=\"{$indexUrl}{$contextPath}/about\">학술지 정보</a>  "
-"페이지에서 학술지의 섹션 정책 및 <a href=\"{$indexUrl}{$contextPath}/about/submissions#"
+"이 학술지에 투고하고 싶으십니까? <a href=\"{$indexUrl}/{$contextPath}/about\">학술지 정보</a>  "
+"페이지에서 학술지의 섹션 정책 및 <a href=\"{$indexUrl}/{$contextPath}/about/submissions#"
 "authorGuidelines\">저자 지침</a>을 검토하는 것이 좋습니다. 저자는 제출하기 전에 학술지에 <a href=\""
-"{$indexUrl}{$contextPath}/user/register\">가입 </a>해야하며, 이미 가입된 경우 간단히 <a href="
+"{$indexUrl}/{$contextPath}/user/register\">가입 </a>해야하며, 이미 가입된 경우 간단히 <a href="
 "\"{$indexUrl}/index/login\">로그인</a>하고 5단계의 투고과정을 시작합니다."
 
 msgid "default.contextSettings.forReaders"
 msgstr ""
 "독자들이 이 학술지의 출판 알림 서비스에 등록 할 것을 권장합니다. 학술지 홈페이지 상단에 있는 <a href=\""
-"{$indexUrl}{$contextPath}/user/register\"> 등록 </a> 링크를 사용하십시오. 이 등록을 통해 독자는 "
+"{$indexUrl}/{$contextPath}/user/register\"> 등록 </a> 링크를 사용하십시오. 이 등록을 통해 독자는 "
 "학술지의 새로운 호마다 이메일로 목차를 받게됩니다. 이 목록을 통해 학술지는 특정 수준의 지지 또는 독자층을 주장 할 수 있습니다. "
-"학술지의 <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\""
+"학술지의 <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\""
 "> 개인 정보 보호 정책 </a>을 참조하세요. 이는 독자의 이름과 이메일 주소가 다른 용도로 사용되지 않을 것임을 보증합니다."
 
 #, fuzzy

@@ -36,7 +36,7 @@ msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr "El text utilitza un espaiat senzill, lletra de mida 12 i en cursiva, més que no pas subratllat, excepte a les adreces URL. Pel que fa a totes les il·lustracions, figures i taules, es col·loquen al lloc corresponent del text i no al final."
 
 msgid "default.contextSettings.checklist.bibliographicRequirements"
-msgstr "El text compleix els requisits estilístics i bibliogràfics descrits a les instruccions de l'autor/a a <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Indicacions de l’autor/a</a>, que es troben a «Sobre la revista»."
+msgstr "El text compleix els requisits estilístics i bibliogràfics descrits a les instruccions de l'autor/a a <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Indicacions de l’autor/a</a>, que es troben a «Sobre la revista»."
 
 msgid "default.contextSettings.privacyStatement"
 msgstr "<p>Els noms i les adreces de correu electrònic que hi ha al lloc web de la revista només s'utilitzaran per als usos indicats en aquesta revista i no estaran disponibles per cap altre ús ni per terceres parts.</p>"
@@ -51,10 +51,10 @@ msgstr ""
 "<a href=\"{$contextUrl}\">{$contextName}</a>"
 
 msgid "default.contextSettings.forReaders"
-msgstr "Animem els lectors/ores que s’inscriguin al servei de notificació de publicació a la revista. Utilitzeu l’enllaç <a href=\"{$indexUrl}{$contextPath}/user/register\">Registre</a> a l’inici de la pàgina inicial de la revista. Un cop el lector/a s’hagi registrat, rebrà la taula de continguts per correu electrònic per cada nou número de la revista. Aquesta llista també permet que la revista pugui demostrar que té un cert nivell de seguiment o de lectors/ores. Vegeu la <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Declaració de privacitat</a> de la revista, que assegura als lectors/ores que el seu nom i correu electrònic no s'utilitzarà per a cap altra finalitat."
+msgstr "Animem els lectors/ores que s’inscriguin al servei de notificació de publicació a la revista. Utilitzeu l’enllaç <a href=\"{$indexUrl}/{$contextPath}/user/register\">Registre</a> a l’inici de la pàgina inicial de la revista. Un cop el lector/a s’hagi registrat, rebrà la taula de continguts per correu electrònic per cada nou número de la revista. Aquesta llista també permet que la revista pugui demostrar que té un cert nivell de seguiment o de lectors/ores. Vegeu la <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Declaració de privacitat</a> de la revista, que assegura als lectors/ores que el seu nom i correu electrònic no s'utilitzarà per a cap altra finalitat."
 
 msgid "default.contextSettings.forAuthors"
-msgstr "Esteu interessat/da a trametre a aquesta revista? Reviseu la secció de les polítiques de la revista a <a href=\"{$indexUrl}{$contextPath}/about\">Informació de la revista</a> i <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Indicacions de l’autor/a</a>. Els autors/ores s'han de <a href=\"{$indexUrl}{$contextPath}/user/register\">registrar</a> a la pàgina de la revista abans d'enviar una tramesa. Si ja s'han registrat, poden <a href=\"{$indexUrl}/index/login\">iniciar sessió</a> i començar el procés de cinc passos."
+msgstr "Esteu interessat/da a trametre a aquesta revista? Reviseu la secció de les polítiques de la revista a <a href=\"{$indexUrl}/{$contextPath}/about\">Informació de la revista</a> i <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Indicacions de l’autor/a</a>. Els autors/ores s'han de <a href=\"{$indexUrl}/{$contextPath}/user/register\">registrar</a> a la pàgina de la revista abans d'enviar una tramesa. Si ja s'han registrat, poden <a href=\"{$indexUrl}/index/login\">iniciar sessió</a> i començar el procés de cinc passos."
 
 msgid "default.contextSettings.forLibrarians"
 msgstr "Recomanem als bibliotecaris/àries que incloguin la revista als catàlegs de revistes electròniques de la seva biblioteca. La revista també és un sistema de publicació de codi obert i és adequat per a les biblioteques per tal que l'utilitzin els membres de la facultat que treballen en l’edició de revistes Open Journal Systems (veieu <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."

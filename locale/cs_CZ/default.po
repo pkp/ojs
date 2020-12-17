@@ -35,7 +35,7 @@ msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr "Text má jednoduché řádkování; písmo má velikost 12; je použita spíše kurzíva a ne podtržení (kromě url adres); všechny ilustrace tabulky a obrázky jsou umístěny spíše v textu, než na konci."
 
 msgid "default.contextSettings.checklist.bibliographicRequirements"
-msgstr "Text odpovídá stylistickým a bibliografickým požadavkům uvedeným v <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Pokynech pro autory</a>, které se nachází na stránce O časopisu."
+msgstr "Text odpovídá stylistickým a bibliografickým požadavkům uvedeným v <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Pokynech pro autory</a>, které se nachází na stránce O časopisu."
 
 msgid "default.contextSettings.privacyStatement"
 msgstr "<p>Jména a emailové adresy vložené na této stránce budou použity výhradně pro uvedené účely tohoto časopisu a nebudou zpřístupněny pro jiné účely ani třetí straně.</p>"
@@ -50,10 +50,10 @@ msgstr ""
 "<a href=\"{$contextUrl}\">{$contextName}</a>"
 
 msgid "default.contextSettings.forReaders"
-msgstr "Vyzýváme čtenáře, aby se zapsali do služby pro oznamování nově vydaných čísel tohoto časopisu. Použijte odkaz <a href=\"{$indexUrl}{$contextPath}/user/register\">Registrovat</a> v horní části domácí stránky časopisu. Díky této registraci bude čtenář dostávat emailem obsah každého nově vydaného čísla. Seznam čtenářů rovněž umožňuje časopisu doložit určitou úroveň podpory nebo čtenosti časopisu. Viz <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Prohlášení o soukromí</a> tohoto časopisu, které ujišťuje čtenáře, že jejich jméno a emailová adresa nebudou použity pro jiné účely."
+msgstr "Vyzýváme čtenáře, aby se zapsali do služby pro oznamování nově vydaných čísel tohoto časopisu. Použijte odkaz <a href=\"{$indexUrl}/{$contextPath}/user/register\">Registrovat</a> v horní části domácí stránky časopisu. Díky této registraci bude čtenář dostávat emailem obsah každého nově vydaného čísla. Seznam čtenářů rovněž umožňuje časopisu doložit určitou úroveň podpory nebo čtenosti časopisu. Viz <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Prohlášení o soukromí</a> tohoto časopisu, které ujišťuje čtenáře, že jejich jméno a emailová adresa nebudou použity pro jiné účely."
 
 msgid "default.contextSettings.forAuthors"
-msgstr "Máte zájem publikovat v tomto časopisu? Doporučujeme pročtení stránky <a href=\"{$indexUrl}{$contextPath}/about\">O časopisu</a> kde jsou uvedeny pravidla časopisu pro jednotlivé sekce, stejně jako <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Pokyny pro autory</a>. Než mohou autoři odeslat příspěvek, musí se do časopisu <a href=\"{$indexUrl}{$contextPath}/user/register\">zaregistrovat</a> nebo pokud již registrovaní jsou, mohou se jednoduše <a href=\"{$indexUrl}{$contextPath}/login\">přihlásit</a> a zahájit pětistupňový proces."
+msgstr "Máte zájem publikovat v tomto časopisu? Doporučujeme pročtení stránky <a href=\"{$indexUrl}/{$contextPath}/about\">O časopisu</a> kde jsou uvedeny pravidla časopisu pro jednotlivé sekce, stejně jako <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Pokyny pro autory</a>. Než mohou autoři odeslat příspěvek, musí se do časopisu <a href=\"{$indexUrl}/{$contextPath}/user/register\">zaregistrovat</a> nebo pokud již registrovaní jsou, mohou se jednoduše <a href=\"{$indexUrl}/{$contextPath}/login\">přihlásit</a> a zahájit pětistupňový proces."
 
 msgid "default.contextSettings.forLibrarians"
 msgstr "Vyzýváme knihovníky, aby uváděli tento časopis ve svém seznamu volně dostupných elektronických publikací. Také může být vhodné poznamenat, že open source redakční software, který tento časopis využívá, je vhodný pro použití s časopisy, v jejichž redakcích mohou členové fakult dané univerzity pracovat (viz <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."

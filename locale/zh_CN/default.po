@@ -37,7 +37,7 @@ msgstr ""
 "该文本设置为单倍行距；字号大小为12点； 采用斜体，而不是强调 (除非获得URL 地址)，所有的插图、图片以及表格放在文本的适当位置，而不一定非得是最后。"
 
 msgid "default.contextSettings.checklist.bibliographicRequirements"
-msgstr "该文本符合<a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">作者指南</a>里文体和书目的要求,作者指南可以在关于期刊里找到."
+msgstr "该文本符合<a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">作者指南</a>里文体和书目的要求,作者指南可以在关于期刊里找到."
 
 msgid "default.contextSettings.privacyStatement"
 msgstr "<p>在这个期刊网站已经输入的姓名于电子邮箱地址只用于该期刊已经阐述的目的,将不提供给任何其他目的或任何其他方.</p>"
@@ -61,10 +61,10 @@ msgstr ""
 
 msgid "default.contextSettings.forAuthors"
 msgstr ""
-"对这份期刊感兴趣吗？我们建议您看一下<a href=\"{$indexUrl}{$contextPath}/about\""
-">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href=\"{$indexUrl}{$contextPath}/about/"
+"对这份期刊感兴趣吗？我们建议您看一下<a href=\"{$indexUrl}/{$contextPath}/about\""
+">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href=\"{$indexUrl}/{$contextPath}/about/"
 "submissions#authorGuidelines\">作者指引</a>。作者在进行投稿之前必须在本期刊<a href=\""
-"{$indexUrl}{$contextPath}/user/register\">注册</a>，而如果已经注册的话，可以简单地<a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">注册</a>，而如果已经注册的话，可以简单地<a href=\""
 "{$indexUrl}/index/login\">登入</a>并且开始五个步骤的投稿流程。"
 
 msgid "default.contextSettings.forLibrarians"
