@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-05 23:35+0000\n"
+"PO-Revision-Date: 2020-12-19 09:52+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/api/id/>"
 "\n"
@@ -59,3 +59,10 @@ msgstr ""
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Anda tidak dapat mengubah naskah jurnal yang masuk."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""
+"Anda tidak bisa mengasosiasikan file dari tahapan file denga sebuah galley."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Pengumuman yang Anda cari bukan bagian dari jurnal ini."
