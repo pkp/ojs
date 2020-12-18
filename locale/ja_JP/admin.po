@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-18 09:16+0000\n"
-"Last-Translator: Bjorn-Ole Kamm <webbok@icloud.com>\n"
+"PO-Revision-Date: 2020-12-19 09:52+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "ja_JP/>\n"
 "Language: ja_JP\n"
@@ -85,3 +85,12 @@ msgstr "OJS設定"
 
 msgid "admin.auth.ojs"
 msgstr "OJSユーザーデータベース"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "査読リマインダー"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "登録ユーザーがいない。"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "全ての登録ユーザー"
