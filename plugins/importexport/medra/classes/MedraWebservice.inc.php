@@ -52,6 +52,7 @@ class MedraWebservice {
 	/**
 	 * mEDRA upload operation.
 	 * @param $xml String
+	 * @return boolean|string True for success, an error message otherwise.
 	 */
 	function upload($xml) {
 		$attachmentId = $this->_getContentId('metadata');
@@ -59,23 +60,22 @@ class MedraWebservice {
 		$arg = "<med:contentID href=\"$attachmentId\" />";
 		return $this->_doRequest('upload', $arg, $attachment);
 	}
-	
-	
-	//
-	// Public Web Service Actions deposit to Crossref
-	//
+
 	/**
-	 * mEDRA deposit operation.
+	 * mEDRA deposit operation, includes the deposit to Crossref.
 	 * @param $xml String
-	 * @param $language String
+	 * @param $lang String
+	 * @param $accessMode String
+	 * @return boolean|string True for success, an error message otherwise.
 	 */
-	function deposit($xml, $language) {
+	function deposit($xml, $lang = 'eng', $accessMode = '01') {
 		$attachmentId = $this->_getContentId('metadata');
 		$attachment = array($attachmentId => $xml);
-		$result = $this->_doRequest('deposit', $language, $attachment);
-		return $result;
+		$arg = "<med:accessMode>" . $accessMode . "</med:accessMode>" .
+			"<med:language>" .$lang . "</med:language>" .
+			"<med:contentID>" . $attachmentId . "</med:contentID>";
+		return $this->_doRequest('deposit', $arg, $attachment);
 	}
-	
 
 	/**
 	 * mEDRA viewMetadata operation
@@ -85,7 +85,6 @@ class MedraWebservice {
 		$arg = "<med:doi>$doi</med:doi>";
 		return $this->_doRequest('viewMetadata', $arg);
 	}
-
 
 	//
 	// Internal helper methods.
@@ -107,22 +106,6 @@ class MedraWebservice {
 					"<med:$action>$arg</med:$action>" .
 				'</SOAP-ENV:Body>' .
 			'</SOAP-ENV:Envelope>';
-		
-		//Rebuild the multipart SOAP message for the deposit in CRossref: the action is 'deposit' instead of upload
-		if($action == 'deposit'){
-			$soapMessage =
-			'<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" ' .
-			'xmlns:med="http://www.medra.org">' .
-				'<SOAP-ENV:Header/>' .
-				'<SOAP-ENV:Body>' .
-					"<med:$action>" .
-						"<med:accessMode>01</med:accessMode>" .
-						"<med:language>$arg</med:language>" .
-						"<med:contentID>" . key($attachment) . "</med:contentID>" .
-					"</med:$action>" .
-				'</SOAP-ENV:Body>' .
-			'</SOAP-ENV:Envelope>';
-		}
 
 		$soapMessageId = $this->_getContentId($action);
 		if ($attachment) {
@@ -183,7 +166,8 @@ class MedraWebservice {
 			PKPString::regexp_match_get('#<faultstring>([^<]*)</faultstring>#', $response, $matches);
 			if (empty($matches)) {
 				if ($attachment) {
-					if(empty(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response))){
+					if(empty(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response)) &&
+					   empty(PKPString::regexp_match('#<statusCode>SUCCESS</statusCode>#', $response))) {
 					    $parts = explode("\r\n\r\n", $response);
 					    $result = array_pop($parts);
 					    $result = PKPString::regexp_replace('/>[^>]*$/', '>', $result);
@@ -199,7 +183,6 @@ class MedraWebservice {
 		} else {
 			$result = 'OJS-mEDRA: Expected string response.';
 		}
-
 		return $result;
 	}
 

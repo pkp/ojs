@@ -90,11 +90,13 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 	 * @copydoc PubObjectsExportPlugin::depositXML()
 	 */
 	function depositXML($objects, $context, $filename) {
-		// Use a different endpoint for testing and
-		// production.
 		$this->import('classes.MedraWebservice');
-		// New endpoint introduced: if the user select the checkbox to deposit also in Crossref, the relative and correct endpoint is choosen. it could be the staging endpoint o production endpoint
-		$endpoint = ($this->isTestMode($context) ? ($this->_request->getUserVar('crEnabled') == 'on' ? MEDRA2CR_WS_ENDPOINT_DEV : MEDRA_WS_ENDPOINT_DEV) : ($this->_request->getUserVar('crEnabled') == 'on' ? MEDRA2CR_WS_ENDPOINT : MEDRA_WS_ENDPOINT));
+		// Use a different endpoint for testing and production.
+		// New endpoint: use a different endpoint if the user selects the checkbox to deposit also in Crossref.
+		$crEnabled = false;
+		if ($this->_request->getUserVar('crEnabled') == 'on') $crEnabled = true;
+
+		$endpoint = ($this->isTestMode($context) ? ($crEnabled ? MEDRA2CR_WS_ENDPOINT_DEV : MEDRA_WS_ENDPOINT_DEV) : ($crEnabled ? MEDRA2CR_WS_ENDPOINT : MEDRA_WS_ENDPOINT));
 
 		// Get credentials.
 		$username = $this->getSetting($context->getId(), 'username');
@@ -103,18 +105,20 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		assert(is_readable($filename));
 		$xml = file_get_contents($filename);
 		assert($xml !== false && !empty($xml));
-		
-		// Select the language
-		$language = 'en_US';
-		foreach($objects as $object) {
-			$language = $object->getLocale();
+
+		// Get the current user locale to get the Crossref service validation error messages in that language
+		// Currently only supported: eng, ita
+		$language = 'eng';
+		$supportedLanguages = array('eng', 'ita');
+		$user3LetterLang = AppLocale::get3LetterIsoFromLocale(AppLocale::getLocale());
+		if (in_array($user3LetterLang, $supportedLanguages)) {
+			$language = $user3LetterLang;
 		}
-		
+
 		// Instantiate the mEDRA web service wrapper.
 		$ws = new MedraWebservice($endpoint, $username, $password);
-		// Register the XML with mEDRA.
-		//The selected checkbox determines the only deposit on mEDRA or the further deposit also in Crossref 
-		$result = $this->_request->getUserVar('crEnabled') == 'on' ? $ws->deposit($xml, PKPLocale::get3LetterFrom2LetterIsoLanguage(substr($language, 0, 2))) : $ws->upload($xml);
+		// Register the XML with mEDRA (upload) or also with Crossref (deposit)
+		$result = $crEnabled ? $ws->deposit($xml, $language) : $ws->upload($xml);
 
 		if ($result === true) {
 			// Mark all objects as registered.
@@ -123,43 +127,35 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 				$this->saveRegisteredDoi($context, $object);
 			}
 		} else {
-			// Handle errors. There are validations before sending the request of submission to Crossref endpoint, and there is a need to throw a readable exception to the end user
-			//the exception are shown in a table as represented in the code below.
-			if(empty(PKPString::regexp_match('#<returnCode>success</returnCode>#', $result))){
-				$doc = new DOMDocument();
-				$doc->loadXML($result);
-				$templateMgr = TemplateManager::getManager($this->_request);
-				$numberError = '';
-				
-				if($doc->getElementsByTagName('statusCode')->item(0)->textContent == 'FAILED'){
-					$numberError = $doc->getElementsByTagName('errorsNumber')->item(0)->textContent;
-					$nodeList = $doc->getElementsByTagName('error');
-					$headlines = array();
-					foreach($nodeList as $node) {
-						$headline = array();
-						if($node->childNodes->length) {
-							foreach($node->childNodes as $i) {
-								$headline[$i->nodeName] = $i->nodeValue;
-							}
-						}
-						$headlines[] = $headline;
-					}
-					$templateMgr->assign(
-						'headlines', $headlines
-					);
-				}
-				$templateMgr->assign(
-					'htmlspecialchars', htmlspecialchars($xml),
-					'numberError', $numberError
-				);
-				$templateMgr->display($this->getTemplateResource('crDepositErrors.tpl'));
-		} else
+			// Handle errors.
 			if (is_string($result)) {
 				$doc = new DOMDocument();
 				$doc->loadXML($result);
-				$resultCode = $doc->getElementsByTagName('statusCode')->item(0)->nodeValue;
+				$statusCode = $doc->getElementsByTagName("statusCode");
+				if ($statusCode->length > 0 && $statusCode->item(0)->textContent == 'FAILED'){
+					$errNo = $doc->getElementsByTagName('errorsNumber')->item(0)->textContent;
+					$errNodeList = $doc->getElementsByTagName('error');
+					$errors = array();
+					foreach($errNodeList as $errNode) {
+						$error = array();
+						if($errNode->childNodes->length) {
+							foreach($errNode->childNodes as $errChildNode) {
+								$error[$errChildNode->nodeName] = $errChildNode->nodeValue;
+							}
+						}
+						$errors[] = $error;
+					}
+					$templateMgr = TemplateManager::getManager($this->_request);
+					$templateMgr->assign([
+						'errNo' => $errNo,
+						'errors' => $errors,
+						'xml' => $xml,
+					]);
+					$templateMgr->display($this->getTemplateResource('crDepositErrors.tpl'));
+					exit();
+				}
 				$result = array(
-					array('plugins.importexport.common.register.error.mdsError', $resultCode)
+					array('plugins.importexport.common.register.error.mdsError', $result)
 				);
 			} else {
 				$result = false;

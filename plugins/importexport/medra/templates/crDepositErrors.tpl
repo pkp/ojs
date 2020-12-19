@@ -20,22 +20,19 @@
 				font-size: 18; 
 				padding: 10px;
 			}
-			
 			table tbody tr:nth-child(even) {
 				background: #ABCDEF;
 			}
 			table tbody tr:nth-child(odd) {
 				background: #BDB9AA;
 			}
-			
 		</style>
 	</head>
 	<body>
-		<h2> {translate key="plugins.importexport.common.validationErrors"} </h2>
-		
-		<div> {translate key="plugins.importexport.medra.crossref.error.cause"} </div> <br/>
-		<div> {translate key="plugins.importexport.medra.crossref.error.number"}:  {$numberError} </div> <br/>
-		<div> {translate key="plugins.importexport.medra.crossref.error.details"}: </div> <br/>
+		<h2>{translate key="plugins.importexport.common.validationErrors"}</h2>
+		<div>{translate key="plugins.importexport.medra.crossref.error.cause"}</div><br/>
+		<div>{translate key="plugins.importexport.medra.crossref.error.number"}:{$errNo|escape}</div><br/>
+		<div>{translate key="plugins.importexport.medra.crossref.error.details"}:</div><br/>
 		<table>
 			<thead>
 				<tr>
@@ -43,20 +40,18 @@
 					<th>{translate key="plugins.importexport.medra.crossref.error.element"}</th>
 					<th>{translate key="plugins.importexport.medra.crossref.error.description"}</th>
 				</tr>
-				
 			</thead>
 			<tbody>
-				{foreach from=$headlines key=k item=v}
+				{foreach from=$errors item=error}
 					<tr>
-						<td>{$v['code']|escape}</td>
-						<td>{$v['reference']|escape}</td>
-						<td>{$v['description']|escape}</td>
+						<td>{$error['code']|escape}</td>
+						<td>{$error['reference']|escape}</td>
+						<td>{$error['description']|escape}</td>
 					</tr>
 				{/foreach}
 			</tbody>
 		</table>
-		<h3>  {translate key="plugins.importexport.common.invalidXML"} </h3>
-		<pre>{$htmlspecialchars|strip_unsafe_html}</pre>
-		
+		<h3>{translate key="plugins.importexport.common.invalidXML"}</h3>
+		<pre>{$xml|escape}</pre>
 	</body>
 </html>

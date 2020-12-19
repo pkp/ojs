@@ -346,9 +346,9 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SequenceNumber', $seq));
 		// Contributor role (mandatory)
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ContributorRole', O4DOI_CONTRIBUTOR_ROLE_ACTUAL_AUTHOR));
-		// Contributor ORCID '21'
+		// Contributor ORCID
 		if (!empty($author->getOrcid())) {
-			$this->createNameIdentifierNode($doc, '21', $author->getOrcid());
+			$contributorNode->appendChild($this->createNameIdentifierNode($doc, O4DOI_NAME_IDENTIFIER_TYPE_ORCID, $author->getOrcid()));
 		}
 		// Person name (mandatory)
 		$personName = $author->getFullName(false);
@@ -358,15 +358,17 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$invertedPersonName = $author->getFullName(false, true);
 		assert(!empty($invertedPersonName));
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonNameInverted', htmlspecialchars($invertedPersonName, ENT_COMPAT, 'UTF-8')));
-		$locale = AppLocale::getLocale();
-		// Name before key
-		$nameBeforeKey = $author->getGivenName($locale);
+		// Names before key
+		$locale = $author->getSubmissionLocale();
+		$nameBeforeKey = $author->getLocalizedData(IDENTITY_SETTING_GIVENNAME, $locale);
 		assert(!empty($nameBeforeKey));
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NamesBeforeKey', htmlspecialchars($nameBeforeKey, ENT_COMPAT, 'UTF-8')));
-		// Key names (mandatory)
-		$keyNames = $author->getFamilyName($locale);
-		assert(!empty($keyNames));
-		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'KeyNames', htmlspecialchars($keyNames, ENT_COMPAT, 'UTF-8')));		
+		// Key names
+		if ($author->getLocalizedFamilyName() != '') {
+			$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'KeyNames', htmlspecialchars($author->getLocalizedFamilyName(), ENT_COMPAT, 'UTF-8')));
+		} else {
+			$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'KeyNames', htmlspecialchars($personName, ENT_COMPAT, 'UTF-8')));
+		}
 		// Affiliation
 		$affiliation = $this->getPrimaryTranslation($author->getAffiliation(null), $objectLocalePrecedence);
 		if (!empty($affiliation)) {

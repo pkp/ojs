@@ -222,7 +222,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		$titleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'TitleText', htmlspecialchars(PKPString::html2text($localizedTitle), ENT_COMPAT, 'UTF-8')));
 		return $titleNode;
 	}
-	
+
 	/**
 	 * Create a NameIdentifier node.
 	 * @param $doc DOMDocument
@@ -452,15 +452,6 @@ class O4DOIXmlFilter extends NativeExportFilter {
 			$locales[] = $galley->getLocale();
 		}
 		if (is_a($article, 'Submission')) {
-			// First try to translate the article language into a locale.
-			$articleLocale = $this->translateLanguageToLocale($article->getLanguage());
-			if (!is_null($articleLocale)) {
-				$locales[] = $articleLocale;
-			}
-
-			// Use the article locale as fallback only
-			// as this is the primary locale of article meta-data, not
-			// necessarily of the article itself.
 			if(AppLocale::isLocaleValid($article->getLocale())) {
 				$locales[] = $article->getLocale();
 			}
@@ -480,26 +471,6 @@ class O4DOIXmlFilter extends NativeExportFilter {
 
 		assert(!empty($locales));
 		return $locales;
-	}
-
-	/**
-	 * Try to translate an ISO language code to an OJS locale.
-	 * @param $language string 2- or 3-letter ISO language code
-	 * @return string|null An OJS locale or null if no matching
-	 *  locale could be found.
-	 */
-	function translateLanguageToLocale($language) {
-		$locale = null;
-		if (strlen($language) == 2) {
-			$language = AppLocale::get3LetterFrom2LetterIsoLanguage($language);
-		}
-		if (strlen($language) == 3) {
-			$language = AppLocale::getLocaleFrom3LetterIso($language);
-		}
-		if (AppLocale::isLocaleValid($language)) {
-			$locale = $language;
-		}
-		return $locale;
 	}
 
 	/**
