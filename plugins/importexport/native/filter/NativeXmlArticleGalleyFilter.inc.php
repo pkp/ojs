@@ -74,6 +74,7 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 			if ($newSubmissionFileId) $addSubmissionFile = true;
 		}
 		$representation = parent::handleElement($node);
+		$representation->setData('urlPath', $node->getAttribute('url_path'));
 
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) if (is_a($n, 'DOMElement')) switch($n->tagName) {
 			case 'name':
