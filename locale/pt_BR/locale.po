@@ -2262,3 +2262,27 @@ msgstr "A composição solicitada não foi encontrada."
 
 msgid "category.category"
 msgstr "Categorias"
+
+msgid "exercise.index.title"
+msgstr "Índice do Exercício"
+
+msgid "posted.on"
+msgstr "Escrito em"
+
+msgid "announcement.title"
+msgstr "Notícias"
+
+msgid "users.title"
+msgstr "Usuários"
+
+msgid "go.back.text"
+msgstr "Voltar"
+
+msgid "announcements.keyword"
+msgstr "Palavra-chave"
+
+msgid "manager.announcements.form.keyword"
+msgstr "Palavra-chave"
+
+msgid "manager.announcements.form.keywordInstructions"
+msgstr "Você pode adicionar uma palavra-chave a esse artigo, todavia só aceitamos \"banana\", \"apple\" e \"cherry\" como valores."

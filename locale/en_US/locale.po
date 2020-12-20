@@ -2062,3 +2062,27 @@ msgstr "Order of articles"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "Choose how to order articles in this category."
+
+msgid "exercise.index.title"
+msgstr "Exercise Index"
+
+msgid "posted.on"
+msgstr "Posted on"
+
+msgid "announcement.title"
+msgstr "Announcements"
+
+msgid "users.title"
+msgstr "Users"
+
+msgid "go.back.text"
+msgstr "Go back"
+
+msgid "announcements.keyword"
+msgstr "Keyword"
+
+msgid "manager.announcements.form.keyword"
+msgstr "Palavra-chave"
+
+msgid "manager.announcements.form.keywordInstructions"
+msgstr "You could add an announcement keyword, but we only accept the following values: \"banana\", \"apple\" and \"cherry\"."
