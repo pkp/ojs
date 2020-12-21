@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-21 07:20+0000\n"
+"PO-Revision-Date: 2020-12-21 07:32+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ja_JP/>\n"
@@ -241,3 +241,77 @@ msgstr "投稿の要素を選択"
 
 msgid "submission.submit.userGroupDescription"
 msgstr "この記事・論文を投稿することにあたって、役割を選択してください。"
+
+msgid "submission.queries.production"
+msgstr "制作ディスカッション"
+
+msgid "publication.version.details"
+msgstr "バージョン{$version}の公開詳細"
+
+msgid "publication.unpublish.confirm"
+msgstr "本当に公開をキャンセルしてよろしいですか？"
+
+msgid "publication.unschedule.confirm"
+msgstr "本当に公開予約をキャンセルしてよろしいですか？"
+
+msgid "publication.unpublish"
+msgstr "未公開"
+
+msgid "submission.copyrightOther.description"
+msgstr "公開された投稿物の著作権を次の者に譲渡する。"
+
+msgid "submission.copyrightHolder.description"
+msgstr "これが公開されると自動的に{$copyright}に著作権が付与されます。"
+
+msgid "submission.license.description"
+msgstr ""
+"これを公開すると、<a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>に自動的にライセンスが設定されます。"
+
+msgid "publication.required.reviewStage"
+msgstr "公開する前に、投稿はコピー編集または制作の段階を経る必要があります。"
+
+msgid "publication.required.declined"
+msgstr "拒否した投稿は公開できません。"
+
+msgid "publication.publish.requirements"
+msgstr "これを公開するには、以下の要件を満たしていなければなりません。"
+
+msgid "publication.publish"
+msgstr "公開"
+
+msgid "publication.invalidSubmission"
+msgstr "この出版物の投稿が見つかりませんでした。"
+
+msgid "publication.event.versionUnpublished"
+msgstr "出版から削除されたバージョンがあります。"
+
+msgid "publication.event.versionScheduled"
+msgstr "新版の発行を予定していました。"
+
+msgid "publication.event.versionPublished"
+msgstr "新版が公開されました。"
+
+msgid "publication.event.unpublished"
+msgstr "投稿は未発表にされました。"
+
+msgid "publication.event.scheduled"
+msgstr "投稿が予約済みです。"
+
+msgid "publication.event.published"
+msgstr "投稿が公開済みです。"
+
+msgid "publication.editDisabled"
+msgstr "このバージョンは公開されており、編集することはできません。"
+
+msgid "publication.datePublished"
+msgstr "発行日"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "著作権年は発行日を基準に自動的に設定されます。"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "これが号に掲載されると著作権年が自動的に設定されます。"
+
+msgid "submission.publications"
+msgstr "公開物"
