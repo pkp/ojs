@@ -211,8 +211,19 @@ class OAIDAO extends PKPOAIDAO {
 	function _getRecordsRecordSet($setIds, $from, $until, $set, $submissionId = null, $orderBy = 'journal_id, submission_id') {
 		$journalId = array_shift($setIds);
 		$sectionId = array_shift($setIds);
+		
+		$result = $this->retrieve('
+			SELECT journal_id FROM journal_settings WHERE setting_name = ? AND setting_value = ?',
+			['enableOai', 0]
+		);
 
-		$params = array('enableOai', (int) STATUS_DECLINED);
+		while (!$result->EOF) {
+			$excludeJournals[] = $result->fields[0];
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		$params = array(STATUS_DECLINED);
 		if (isset($journalId)) $params[] = (int) $journalId;
 		if (isset($sectionId)) $params[] = (int) $sectionId;
 		if ($submissionId) $params[] = (int) $submissionId;
@@ -238,8 +249,8 @@ class OAIDAO extends PKPOAIDAO {
 				JOIN issues i ON (i.issue_id = pa.issue_id)
 				JOIN sections s ON (s.section_id = a.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
-				JOIN journal_settings jsoai ON (jsoai.journal_id = j.journal_id AND jsoai.setting_name=? AND jsoai.setting_value=\'1\')
 			WHERE	i.published = 1 AND j.enabled = 1 AND a.status <> ?
+				' . (isset($excludeJournals) ?' AND j.journal_id NOT IN ('.implode(',', $excludeJournals).')':'') . '
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND s.section_id = ?':'') . '
 				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
