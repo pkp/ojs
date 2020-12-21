@@ -1,32 +1,34 @@
 <?php declare(strict_types = 1);
 
 /**
- * @file pages/exercise/ExerciseHandler.inc.php
+ * @file pages/exercise/AdminExerciseHandler.inc.inc.php
  *
  * Copyright (c) 2020 Simon Fraser University
  * Copyright (c) 2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class ExerciseHandler
+ * @class AdminExerciseHandler
  * @ingroup pages_index
  *
  * @brief Handle site index requests.
  */
 
 import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
-import('lib.pkp.pages.index.PKPIndexHandler');
+import('classes.handler.Handler');
 
-class ExerciseHandler extends PKPIndexHandler
+class AdminExerciseHandler extends Handler
 {
     protected $templateMgr;
 
     protected $currentRequest;
 
+    public $_isBackendPage = true;
+
     public function __construct()
     {
         $roles = [ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER];
 
-        $this->addRoleAssignment($roles, ['announcements', 'users', 'index']);
+        $this->addRoleAssignment($roles, ['announcements_admin']);
 
         parent::__construct($roles);
     }
@@ -43,21 +45,30 @@ class ExerciseHandler extends PKPIndexHandler
 
     public function initialize($request)
     {
+        AppLocale::requireComponents(
+            LOCALE_COMPONENT_PKP_ADMIN,
+            LOCALE_COMPONENT_APP_MANAGER,
+            LOCALE_COMPONENT_APP_ADMIN,
+            LOCALE_COMPONENT_APP_COMMON,
+            LOCALE_COMPONENT_PKP_USER,
+            LOCALE_COMPONENT_PKP_MANAGER
+        );
+
         $this->templateMgr = TemplateManager::getManager($request);
 
         $this->templateMgr->assign([
-            'exerciseLink' => $request->getRouter()->url($request, null, 'exercise'),
-            'announcementsLink' => $request->getRouter()->url($request, null, 'exercise', 'announcements'),
-            'usersLink' => $request->getRouter()->url($request, null, 'exercise', 'users'),
+            'announcementsLink' => $request->getRouter()->url($request, null, 'exercise', 'announcements_admin'),
             'pageTitle' => __('exercise.index.title'),
         ]);
 
         $this->currentRequest = $request;
 
-        parent::initialize($request);
+        $this->setupTemplate($request);
+
+        return parent::initialize($request);
     }
 
-    public function announcements($args, $request)
+    public function announcements_admin($args, $request)
     {
         if (isset($args[0]) && is_numeric($args[0])) {
             return $this->viewAnnouncement((int) $args[0]);
@@ -74,7 +85,7 @@ class ExerciseHandler extends PKPIndexHandler
                 $request,
                 null,
                 'exercise',
-                'announcements',
+                'announcements_admin',
                 $announcementId
             );
 
@@ -94,7 +105,7 @@ class ExerciseHandler extends PKPIndexHandler
             'pageTitle' => __('announcement.title'),
         ]);
 
-        $this->templateMgr->display('exercise/announcements.tpl');
+        $this->templateMgr->display('exercise/admin/announcements.tpl');
     }
 
     public function viewAnnouncement(int $announcementId)
@@ -118,24 +129,6 @@ class ExerciseHandler extends PKPIndexHandler
             'pageTitle' => __('announcement.title'),
         ]);
 
-        $this->templateMgr->display('exercise/viewAnnouncement.tpl');
-    }
-
-    public function users($args, $request)
-    {
-        $this->templateMgr->assign([
-            'pageTitle' => __('users.title'),
-        ]);
-
-        $this->templateMgr->display('exercise/users.tpl');
-    }
-
-    public function index($args, $request)
-    {
-        $this->templateMgr->assign([
-            'pageTitle' => __('exercise.index.title'),
-        ]);
-
-        $this->templateMgr->display('exercise/index.tpl');
+        $this->templateMgr->display('exercise/admin/viewAnnouncement.tpl');
     }
 }

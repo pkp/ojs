@@ -21,11 +21,21 @@ $defaultFunction = static function () {
     import('pages.exercise.ExerciseHandler');
 };
 
+$adminDefaultFunction = static function () {
+    define('HANDLER_CLASS', 'AdminExerciseHandler');
+    import('pages.exercise.AdminExerciseHandler');
+};
+
 $subPages = [
+    'announcements_admin' => $adminDefaultFunction,
     'announcements' => $defaultFunction,
     'users' => $defaultFunction,
     'index' => $defaultFunction,
 ];
+
+if (!isset($subPages[$op])) {
+    Application::get()->getRequest()->getDispatcher()->handle404();
+}
 
 $subPages[$op]();
 
