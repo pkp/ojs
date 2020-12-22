@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-21 07:32+0000\n"
+"PO-Revision-Date: 2020-12-22 09:05+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ja_JP/>\n"
@@ -147,7 +147,7 @@ msgid "submission.event.issueMetadataUpdated"
 msgstr "投稿のメタデーターが更新されました。"
 
 msgid "editor.submission.decision.sendExternalReview"
-msgstr "査読に出す"
+msgstr "査読に回す"
 
 msgid "workflow.review.externalReview"
 msgstr "査読"
