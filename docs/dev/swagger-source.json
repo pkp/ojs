@@ -636,12 +636,6 @@
 				"consumes": "multipart/form-data",
 				"parameters": [
 					{
-						"name": "file",
-						"in": "formData",
-						"description": "The file to be uploaded.",
-						"type": "file"
-					},
-					{
 						"description": "Details about the submission file that should be created.",
 						"in": "body",
 						"schema": {
