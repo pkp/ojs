@@ -1,83 +1,11 @@
 {
-    "title": "Announcement",
-    "description": "An announcement or news item.",
-    "required": [
-        "assocType",
-        "assocId",
-        "title"
-    ],
     "properties": {
-        "_href": {
-            "type": "string",
-            "format": "uri",
-            "readOnly": true,
-            "apiSummary": true
-        },
-        "assocId": {
-            "type": "integer",
-            "apiSummary": true
-        },
-        "assocType": {
-            "type": "integer",
-            "apiSummary": true
-        },
-        "dateExpire": {
-            "type": "string",
-            "apiSummary": true,
-            "validation": [
-                "nullable",
-                "date_format:Y-m-d"
-            ]
-        },
-        "datePosted": {
-            "type": "string",
-            "apiSummary": true,
-            "validation": [
-                "nullable",
-                "date_format:Y-m-d H:i:s"
-            ]
-        },
-        "description": {
-            "type": "string",
-            "multilingual": true,
-            "apiSummary": true,
-            "validation": [
-                "nullable"
-            ]
-        },
-        "descriptionShort": {
-            "type": "string",
-            "multilingual": true,
-            "apiSummary": true,
-            "validation": [
-                "nullable"
-            ]
-        },
-        "id": {
-            "type": "integer",
-            "apiSummary": true
-        },
-        "title": {
-            "type": "string",
-            "multilingual": true,
-            "apiSummary": true,
-            "validation": [
-                "nullable"
-            ]
-        },
-        "typeId": {
-            "type": "integer",
-            "apiSummary": true,
-            "validation": [
-                "nullable"
-            ]
-        },
         "keyword": {
             "type": "string",
-            "multilingual": false,
+            "multilingual": true,
             "apiSummary": true,
             "validation": [
-                "in:apple,banana,cherry"
+                "in:apple,banana,cherry,maça,cereja"
             ]
         }
     }

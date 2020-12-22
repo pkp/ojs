@@ -2069,9 +2069,6 @@ msgstr "Exercise Index"
 msgid "posted.on"
 msgstr "Posted on"
 
-msgid "announcement.title"
-msgstr "Announcements"
-
 msgid "users.title"
 msgstr "Users"
 

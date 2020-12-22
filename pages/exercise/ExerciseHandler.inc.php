@@ -14,16 +14,15 @@
  */
 
 import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
-import('lib.pkp.pages.index.PKPIndexHandler');
+import('classes.handler.Handler');
 
-class ExerciseHandler extends PKPIndexHandler
+class ExerciseHandler extends Handler
 {
     protected $templateMgr;
 
     protected $currentRequest;
 
-    public function __construct()
-    {
+    public function __construct() {
         $roles = [ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER];
 
         $this->addRoleAssignment($roles, ['announcements', 'users', 'index']);
@@ -41,8 +40,7 @@ class ExerciseHandler extends PKPIndexHandler
         return parent::authorize($request, $args, $roleAssignments);
     }
 
-    public function initialize($request)
-    {
+    public function initialize($request) {
         $this->templateMgr = TemplateManager::getManager($request);
 
         $this->templateMgr->assign([
@@ -57,8 +55,7 @@ class ExerciseHandler extends PKPIndexHandler
         parent::initialize($request);
     }
 
-    public function announcements($args, $request)
-    {
+    public function announcements($args, $request) {
         if (isset($args[0]) && is_numeric($args[0])) {
             return $this->viewAnnouncement((int) $args[0]);
         }
@@ -91,14 +88,13 @@ class ExerciseHandler extends PKPIndexHandler
 
         $this->templateMgr->assign([
             'announcements' => $announcements,
-            'pageTitle' => __('announcement.title'),
+            'pageTitle' => __('announcement.announcements'),
         ]);
 
         $this->templateMgr->display('exercise/announcements.tpl');
     }
 
-    public function viewAnnouncement(int $announcementId)
-    {
+    public function viewAnnouncement(int $announcementId) {
         $announcementObject = Services::get('announcement')->get($announcementId);
 
         $announcementId = $announcementObject->getData('id');
@@ -115,14 +111,13 @@ class ExerciseHandler extends PKPIndexHandler
 
         $this->templateMgr->assign([
             'announcement' => $announcementArray,
-            'pageTitle' => __('announcement.title'),
+            'pageTitle' => __('announcement.announcements'),
         ]);
 
         $this->templateMgr->display('exercise/viewAnnouncement.tpl');
     }
 
-    public function users($args, $request)
-    {
+    public function users($args, $request) {
         $this->templateMgr->assign([
             'pageTitle' => __('users.title'),
         ]);
@@ -130,8 +125,7 @@ class ExerciseHandler extends PKPIndexHandler
         $this->templateMgr->display('exercise/users.tpl');
     }
 
-    public function index($args, $request)
-    {
+    public function index($args, $request) {
         $this->templateMgr->assign([
             'pageTitle' => __('exercise.index.title'),
         ]);

@@ -2269,9 +2269,6 @@ msgstr "Índice do Exercício"
 msgid "posted.on"
 msgstr "Escrito em"
 
-msgid "announcement.title"
-msgstr "Notícias"
-
 msgid "users.title"
 msgstr "Usuários"
 

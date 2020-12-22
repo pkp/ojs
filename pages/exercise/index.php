@@ -27,7 +27,7 @@ $adminDefaultFunction = static function () {
 };
 
 $subPages = [
-    'announcements_admin' => $adminDefaultFunction,
+    'announcementsAdmin' => $adminDefaultFunction,
     'announcements' => $defaultFunction,
     'users' => $defaultFunction,
     'index' => $defaultFunction,

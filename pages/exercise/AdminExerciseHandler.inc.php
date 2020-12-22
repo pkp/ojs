@@ -13,7 +13,7 @@
  * @brief Handle site index requests.
  */
 
-import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
+import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
 import('classes.handler.Handler');
 
 class AdminExerciseHandler extends Handler
@@ -28,7 +28,7 @@ class AdminExerciseHandler extends Handler
     {
         $roles = [ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER];
 
-        $this->addRoleAssignment($roles, ['announcements_admin']);
+        $this->addRoleAssignment($roles, ['announcementsAdmin']);
 
         parent::__construct($roles);
     }
@@ -38,7 +38,7 @@ class AdminExerciseHandler extends Handler
         &$args,
         $roleAssignments
     ) {
-        $this->addPolicy(new PKPSiteAccessPolicy($request, null, $roleAssignments));
+        $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
         return parent::authorize($request, $args, $roleAssignments);
     }
@@ -57,7 +57,7 @@ class AdminExerciseHandler extends Handler
         $this->templateMgr = TemplateManager::getManager($request);
 
         $this->templateMgr->assign([
-            'announcementsLink' => $request->getRouter()->url($request, null, 'exercise', 'announcements_admin'),
+            'announcementsLink' => $request->getRouter()->url($request, null, 'exercise', 'announcementsAdmin'),
             'pageTitle' => __('exercise.index.title'),
         ]);
 
@@ -68,7 +68,7 @@ class AdminExerciseHandler extends Handler
         return parent::initialize($request);
     }
 
-    public function announcements_admin($args, $request)
+    public function announcementsAdmin($args, $request)
     {
         if (isset($args[0]) && is_numeric($args[0])) {
             return $this->viewAnnouncement((int) $args[0]);
@@ -76,6 +76,7 @@ class AdminExerciseHandler extends Handler
 
         $announcementsIterator = Services::get('announcement')->getMany([
             'isEnabled' => true,
+            'contextIds' => [$request->getContext()->getId()],
         ]);
 
         $announcements = [];
@@ -85,7 +86,7 @@ class AdminExerciseHandler extends Handler
                 $request,
                 null,
                 'exercise',
-                'announcements_admin',
+                'announcementsAdmin',
                 $announcementId
             );
 
@@ -102,7 +103,7 @@ class AdminExerciseHandler extends Handler
 
         $this->templateMgr->assign([
             'announcements' => $announcements,
-            'pageTitle' => __('announcement.title'),
+            'pageTitle' => __('announcement.announcements'),
         ]);
 
         $this->templateMgr->display('exercise/admin/announcements.tpl');
@@ -126,7 +127,7 @@ class AdminExerciseHandler extends Handler
 
         $this->templateMgr->assign([
             'announcement' => $announcementArray,
-            'pageTitle' => __('announcement.title'),
+            'pageTitle' => __('announcement.announcements'),
         ]);
 
         $this->templateMgr->display('exercise/admin/viewAnnouncement.tpl');
