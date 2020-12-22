@@ -1,12 +1,12 @@
 {
-    "properties": {
-        "keyword": {
-            "type": "string",
-            "multilingual": true,
-            "apiSummary": true,
-            "validation": [
-                "in:apple,banana,cherry,maça,cereja"
-            ]
-        }
-    }
+	"properties": {
+			"keyword": {
+					"type": "string",
+					"multilingual": true,
+					"apiSummary": true,
+					"validation": [
+							"in:apple,banana,cherry,maça,cereja"
+					]
+			}
+	}
 }
