@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-23 09:50+0000\n"
+"PO-Revision-Date: 2020-12-24 08:28+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
@@ -76,3 +76,555 @@ msgstr "他の雑誌を選択："
 
 msgid "context.current"
 msgstr "現在選択された雑誌："
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "投稿物がアーカイブから復元された"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "投稿物がアーカイブに送られた"
+
+msgid "submission.event.editor.editorFile"
+msgstr "編集者ファイルが更新された"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "編集者の判断が投稿された"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "投稿物の担当編集者が解除された"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "投稿物に担当編集者が任命された"
+
+msgid "submission.event.general.authorRevision"
+msgstr "著者改訂ファイルが更新された"
+
+msgid "submission.event.author.authorRevision"
+msgstr "著者改訂版が投稿された"
+
+msgid "submission.event.general.articlePublished"
+msgstr "論文が出版された"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "投稿物が巻号に割り付けられた"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "投稿物が巻号スケジューリングキューに送られた"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "投稿論文"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "投稿イベント"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>注意:</strong> 機関のオンライン購読では購読のアクティベーションの前に提供されたドメイン名とIPアドレスの承認が必要です。"
+
+msgid "subscriptions.institutionalDescription"
+msgstr "機関購読ではログインは必要ありません。ユーザのドメインもしくはIPアドレス(またはその両方)によって購読コンテンツへのアクセスが提供されます。"
+
+msgid "subscriptions.individualDescription"
+msgstr "個人購読では購読コンテンツにアクセスするためにはログインが必要です。"
+
+msgid "subscriptions.status.other"
+msgstr "その他，メモ"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "有効購読がありません。"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "オンライン支払待ち"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "手作業による支払い待ち"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "承認が必要"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "情報の入力待ち"
+
+msgid "subscriptions.status.active"
+msgstr "有効"
+
+msgid "subscriptions.status"
+msgstr "状態"
+
+msgid "subscriptions.inactive"
+msgstr "無効"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "冊子とオンライン"
+
+msgid "subscriptionTypes.format.print"
+msgstr "冊子"
+
+msgid "subscriptionTypes.format.online"
+msgstr "オンライン"
+
+msgid "subscriptionTypes.format"
+msgstr "フォーマット"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "期間なし"
+
+msgid "subscriptionTypes.months"
+msgstr "ヶ月"
+
+msgid "subscriptionTypes.month"
+msgstr "月"
+
+msgid "subscriptionTypes.years"
+msgstr "年"
+
+msgid "subscriptionTypes.year"
+msgstr "年"
+
+msgid "subscriptionTypes.currency"
+msgstr "通貨"
+
+msgid "issue.return"
+msgstr "巻号情報に戻る"
+
+msgid "issue.viewIssue"
+msgstr "巻号を見る"
+
+msgid "issue.nonpdf.title"
+msgstr "巻号ダウンロード"
+
+#, fuzzy
+msgid "issue.fullIssue"
+msgstr "全巻号"
+
+msgid "issue.coverPage.altText"
+msgstr "表紙ページ"
+
+msgid "issue.abstract"
+msgstr "要旨"
+
+msgid "issue.toc"
+msgstr "目次"
+
+msgid "issue.noIssues"
+msgstr "発行なし"
+
+msgid "issue.year"
+msgstr "年"
+
+msgid "issue.no"
+msgstr "号"
+
+msgid "issue.vol"
+msgstr "巻"
+
+msgid "issue.number"
+msgstr "号"
+
+msgid "issue.volume"
+msgstr "巻"
+
+msgid "issue.viewIssueIdentification"
+msgstr "{$identification}を見る"
+
+msgid "issue.title"
+msgstr "タイトル"
+
+msgid "issue.issues"
+msgstr "巻号"
+
+msgid "issue.issue"
+msgstr "巻号"
+
+msgid "user.role.journalAssistants"
+msgstr "雑誌アシスタント"
+
+msgid "user.role.journalAssistant"
+msgstr "雑誌アシスタント"
+
+msgid "user.role.subscriptionManagers"
+msgstr "購読管理者"
+
+msgid "user.role.subEditors"
+msgstr "セクションエディタ"
+
+msgid "user.role.managers"
+msgstr "雑誌管理者"
+
+msgid "user.role.subscriptionManager"
+msgstr "購読管理者"
+
+msgid "user.role.subEditor"
+msgstr "セクションエディタ"
+
+msgid "user.role.manager"
+msgstr "雑誌管理者"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "査読者として登録: 査読者登録が現在できません。"
+
+msgid "user.noRoles.regReviewer"
+msgstr "査読者として登録"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "論文を投稿: 著者登録が現在できません。"
+
+msgid "user.noRoles.submitArticle"
+msgstr "提案書を投稿"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "この雑誌では役割が与えられていません。下のアクションから選択してください。"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "雑誌が選択されていません。雑誌を選択してください。"
+
+msgid "user.manageMySubscriptions"
+msgstr "購読管理"
+
+msgid "user.myJournals"
+msgstr "マイ･ジャーナル"
+
+#, fuzzy
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"If you requested to be a reviewer on any journal, please enter your subject "
+"interests."
+
+#, fuzzy
+msgid "user.register.otherContextRoles"
+msgstr "Request the following roles."
+
+#, fuzzy
+msgid "user.register.contextsPrompt"
+msgstr "Which journals on this site would you like to register with?"
+
+#, fuzzy
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Yes, I would like to be contacted with requests to review submissions to "
+"this journal."
+
+#, fuzzy
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Yes, request the {$userGroup} role."
+
+#, fuzzy
+msgid "user.reviewerPrompt"
+msgstr "Would you be willing to review submissions to this journal?"
+
+msgid "user.registerForOtherJournals"
+msgstr "他の雑誌に登録"
+
+msgid "user.showAllJournals"
+msgstr "全てのジャーナルの表示"
+
+msgid "user.profile.profileImage"
+msgstr "プロファイル画像"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "この雑誌では役割が与えられていないユーザを含む。"
+
+msgid "user.authorization.representationNotFound"
+msgstr "要求されたゲラが見つかりませんでした。"
+
+msgid "journal.viewAllIssues"
+msgstr "全ての巻号を見る"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "雑誌"
+
+msgid "journal.path"
+msgstr "パス名"
+
+msgid "context.contexts"
+msgstr "雑誌"
+
+msgid "journal.currentIssue"
+msgstr "最新号"
+
+msgid "submission.search"
+msgstr "論文検索"
+
+msgid "submissions.proofreadingComplete"
+msgstr "校正済み"
+
+msgid "submissions.layoutComplete"
+msgstr "レイアウト済み"
+
+msgid "submissions.copyeditComplete"
+msgstr "原稿整理済み"
+
+msgid "submission.eventLog"
+msgstr "イベントログ"
+
+msgid "submissions.editorRuling"
+msgstr "編集者の判定"
+
+msgid "submissions.editorDecision"
+msgstr "編集者の判断"
+
+msgid "submissions.proof"
+msgstr "校正"
+
+msgid "submissions.reviewRound"
+msgstr "ラウンド"
+
+msgid "submissions.postAuthor"
+msgstr "著者修正済"
+
+msgid "submissions.initialProof"
+msgstr "初校"
+
+msgid "submissions.proofread"
+msgstr "校正"
+
+msgid "submissions.initial"
+msgstr "開始"
+
+msgid "submissions.published"
+msgstr "出版済"
+
+msgid "submissions.queuedReview"
+msgstr "査読作業待ち"
+
+msgid "submissions.step3"
+msgstr "テップ 3"
+
+msgid "submissions.step1"
+msgstr "テップ 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "（未定）"
+
+msgid "submission.scheduledIn"
+msgstr "{$issueName}出版スケジュール。"
+
+msgid "submission.scheduling"
+msgstr "出版スケジュール"
+
+msgid "submission.proofreading"
+msgstr "校正"
+
+msgid "submission.copyedit"
+msgstr "原稿整理"
+
+msgid "submission.copyediting"
+msgstr "原稿整理"
+
+msgid "submission.authorVersion"
+msgstr "著者版"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "著者修正版"
+
+msgid "submission.editorVersion"
+msgstr "編集者版"
+
+msgid "submission.postReviewVersion"
+msgstr "査読済み版"
+
+msgid "submission.reviewersVersion"
+msgstr "査読者版"
+
+msgid "submission.editorAuthorRecord"
+msgstr "編集者/著者のメールレコード"
+
+msgid "submission.notifyEditor"
+msgstr "編集者に通知"
+
+msgid "submission.notifyAuthor"
+msgstr "著者に通知"
+
+msgid "submission.editorReview"
+msgstr "編集者の査読"
+
+msgid "submission.round"
+msgstr "ラウンド&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "編集者の判断"
+
+msgid "submission.sent"
+msgstr "送信済み"
+
+msgid "submission.changeSection"
+msgstr "セクションの変更"
+
+msgid "submission.submissionEditing"
+msgstr "投稿物の編集"
+
+msgid "category.category"
+msgstr "カテゴリー"
+
+msgid "article.return"
+msgstr "論文情報に戻る"
+
+msgid "article.fontSize.large.altText"
+msgstr "大"
+
+msgid "article.fontSize.medium.altText"
+msgstr "中"
+
+msgid "article.fontSize.small.altText"
+msgstr "小"
+
+msgid "article.fontSize"
+msgstr "フォントサイズ"
+
+msgid "article.comments.enable"
+msgstr "有効化"
+
+msgid "article.comments.disable"
+msgstr "無効化"
+
+msgid "article.comments.sectionDefault"
+msgstr "デフォルト"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "アクセス制限あり"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "オープンアクセス"
+
+msgid "article.coverPage.altText"
+msgstr "表紙画像"
+
+msgid "article.abstract"
+msgstr "要旨"
+
+msgid "article.details"
+msgstr "詳細"
+
+msgid "article.submissions"
+msgstr "投稿物"
+
+msgid "article.submission"
+msgstr "投稿物"
+
+msgid "article.commentsToEditor"
+msgstr "編集者へのコメント"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "言語"
+
+msgid "article.type"
+msgstr "種類、方法またはアプローチ"
+
+msgid "article.coverage"
+msgstr "範囲"
+
+msgid "article.subject"
+msgstr "キーワード"
+
+msgid "article.discipline"
+msgstr "学術分野"
+
+msgid "article.suppFilesAbbrev"
+msgstr "補足ファイル"
+
+msgid "article.suppFiles"
+msgstr "補足ファイル"
+
+msgid "article.suppFile"
+msgstr "補足ファイル"
+
+msgid "article.file"
+msgstr "ファイル"
+
+msgid "article.journalSection"
+msgstr "雑誌セクション"
+
+msgid "article.metadata"
+msgstr "メタデーター"
+
+msgid "article.indexingInformation"
+msgstr "インデックス情報"
+
+msgid "article.authors"
+msgstr "著者"
+
+msgid "article.title"
+msgstr "タイトル"
+
+msgid "article.submissionId"
+msgstr "投稿物ID"
+
+msgid "common.publications"
+msgstr "論文"
+
+msgid "common.publication"
+msgstr "論文"
+
+msgid "article.articles"
+msgstr "論文"
+
+msgid "article.article"
+msgstr "論文"
+
+msgid "section.abbreviation.example"
+msgstr "(例、論文=ART)"
+
+msgid "section.policy"
+msgstr "セクション・ポリシー"
+
+msgid "section.abbreviation"
+msgstr "セクション名略称"
+
+msgid "section.title"
+msgstr "セクション名"
+
+msgid "section.sections"
+msgstr "セクション"
+
+msgid "section.section"
+msgstr "セクション"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "担当編集者"
+
+msgid "common.queue.short.completed"
+msgstr "アーカイブ"
+
+msgid "common.queue.long.completed"
+msgstr "アーカイブされた投稿物"
+
+msgid "common.queue.short.active"
+msgstr "処理中"
+
+msgid "common.queue.long.active"
+msgstr "処理中の投稿物"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "アーカイブ"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "アーカイブされた投稿物"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "査読中"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "査読中の投稿物"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "編集中"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "編集中の投稿物"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "未処理"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "未処理の投稿物"
+
+msgid "navigation.skip.issue"
+msgstr "最新号へスキップ"
+
+msgid "navigation.skip.about"
+msgstr "本雑誌についてへスキップ"
