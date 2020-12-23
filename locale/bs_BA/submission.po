@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-22 20:48+0000\n"
+"PO-Revision-Date: 2020-12-23 09:50+0000\n"
 "Last-Translator: Kazimir Hrastek <kazimir3385@gmail.com>\n"
 "Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "bs_BA/>\n"
@@ -47,3 +47,6 @@ msgstr "Pošalji u mojoj ulozi kao..."
 
 msgid "submission.submit.title"
 msgstr "Pošalji članak"
+
+msgid "submission.pageProofs"
+msgstr "Lektura"
