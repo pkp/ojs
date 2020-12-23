@@ -1,2 +1,78 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-12-23 09:50+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "図書館員の皆さまへ"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "論文著者の皆さまへ"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "利害の競合に関するガイドライン"
+
+msgid "navigation.infoForLibrarians"
+msgstr "図書館員の皆さまへ"
+
+msgid "navigation.infoForAuthors"
+msgstr "論文著者の皆さまへ"
+
+msgid "navigation.browseByAuthor"
+msgstr "著者によるブラウズ"
+
+msgid "navigation.browseByIssue"
+msgstr "巻号によるブラウズ"
+
+msgid "navigation.otherJournals"
+msgstr "その他の雑誌"
+
+msgid "navigation.current"
+msgstr "最新号"
+
+msgid "navigation.journalHelp"
+msgstr "ヘルプ"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "雑誌ホームページ画像"
+
+msgid "common.homePageHeader.altText"
+msgstr "ページヘッダー"
+
+msgid "common.payments"
+msgstr "支払い"
+
+msgid "common.payment"
+msgstr "支払い"
+
+msgid "common.confirmComplete"
+msgstr "このタスクを完了にしてもいいですか。後で修正することができなくなります。"
+
+msgid "common.software"
+msgstr "オープン・ジャーナル・システム"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "必須項目をご記入ください。"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "アイコンをクリックして査読フォームに記入してください。"
+
+msgid "navigation.categories.browse"
+msgstr "ブラウズ"
+
+msgid "navigation.categories"
+msgstr "カテゴリー"
+
+msgid "context.select"
+msgstr "他の雑誌を選択："
+
+msgid "context.current"
+msgstr "現在選択された雑誌："
