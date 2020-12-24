@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-23 09:50+0000\n"
+"PO-Revision-Date: 2020-12-24 08:28+0000\n"
 "Last-Translator: Kazimir Hrastek <kazimir3385@gmail.com>\n"
 "Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "bs_BA/>\n"
@@ -19,10 +19,10 @@ msgid "submission.abstract.wordCount.description"
 msgstr "Sažetak mora sadržavati {$ wordCount} riječi ili manje."
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "Nova prijava"
+msgstr "Nova predaja"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "Započnite novu prijavu u"
+msgstr "Započnite novu predaju u"
 
 msgid "submission.title.tip"
 msgstr ""
@@ -50,3 +50,153 @@ msgstr "Pošalji članak"
 
 msgid "submission.pageProofs"
 msgstr "Lektura"
+
+msgid "publication.scheduleInissue"
+msgstr "Dodijeli izdanju"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Svi zahtjevi za objavljivanje su ispunjeni. Ovo će biti objavljeno odmah jer "
+"je datum objavljivanja postavljen na {$datePublished}. Jeste li sigurni da "
+"ovo želite objaviti?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Svi zahtjevi za objavljivanje su ispunjeni. Ovo će biti odmah objavljeno u "
+"{$issue}. Jeste li sigurni da ovo želite objaviti?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Svi zahtjevi za objavljivanje su ispunjeni. Ovo će biti objavljeno kad izađe "
+"{$issue}. Jeste li sigurni da ovo želite zakazati za objavljivanje?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Svi zahtjevi za objavljivanje su ispunjeni. Jeste li sigurni da ovo želite "
+"objaviti?"
+
+msgid "publication.invalidIssue"
+msgstr "Izdanje ovog objavljivanja nije moguće pronaći."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Neaktivno)"
+
+msgid "publication.invalidSection"
+msgstr "Nije moguće pronaći sekciju za ovo objavljivanje."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Datum objavljivanja automatski će se postaviti kada se izdanje objavi. Ne "
+"unosite datum objavljivanja, osim ako je članak prethodno objavljen negdje "
+"drugdje i ako ga trebate datirati unazad."
+
+msgid "catalog.category.heading"
+msgstr "Sve stavke"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Stavke"
+
+msgid "submission.sectionOptions"
+msgstr "Odaberite opcije"
+
+msgid "section.any"
+msgstr "Bilo koja sekcija"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Ovo je pregled i nije objavljeno. <a href=\"{$url}\">Pogledaj predaju</a>"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Ove se specifikacije baziraju na skupu metapodataka Dublin Core, "
+"međunarodnom standardu koji se koristi za opisivanje sadržaja časopisa."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Traženi format citata nije se mogao dohvatiti."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Odaberite ulogu saradnika."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Vaš sažetak je predug. Skratite ga na dolje ograničeni broj riječi "
+"naznačenih za ovu sekciju."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Unesite sažetak vašeg članka."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Unesite naslov članka."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Potrebno je ime, prezime i e-mail adresa svakog autora."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Potreban je najmanje jedan autor."
+
+msgid "submission.submit.contributorRole"
+msgstr "Uloga saradnika"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Izjava o privatnosti"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Prije nastavka morate pročitati i potvrditi da ste ispunili dolje navedene "
+"zahtjeve."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Kontrolna lista predaje"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Odaberite jezik predaje."
+
+msgid "submission.incomplete"
+msgstr "Čeka odobrenje"
+
+msgid "submission.complete"
+msgstr "Odobreno"
+
+msgid "submission.upload.fileContents"
+msgstr "Komponenta članka"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metapodaci izdanja predaje su ažurirani."
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Pošalji na pregled"
+
+msgid "workflow.review.externalReview"
+msgstr "Pregled"
+
+msgid "submission.confirmSubmit"
+msgstr "Jeste li sigurni da želite ovaj članak poslati u časopis?"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Prenesite datoteke povezane s ovom predajom, uključujući članak, "
+"multimediju, skupove podataka, umjetnička djela itd."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Naslov i sažetak"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Odobrenje formata"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Javni identifikatori predaje su ažurirani."
+
+msgid "grid.action.issueEntry"
+msgstr "Pogledajte metapodatke ove predaje"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Časopis je obaviješten o vašoj predaji rada, a vi ste e-mailom dobili "
+"potvrdu za svoju evidenciju. Nakon što urednik pregleda predaju rada, "
+"kontaktirat će vas."
+
+msgid "submission.submit.noContext"
+msgstr "Časopis ovog predanog rada nije moguće pronaći."
+
+msgid "grid.action.workflow"
+msgstr "Proces predaje rada"
