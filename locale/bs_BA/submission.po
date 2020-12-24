@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-24 08:28+0000\n"
+"PO-Revision-Date: 2020-12-25 11:52+0000\n"
 "Last-Translator: Kazimir Hrastek <kazimir3385@gmail.com>\n"
 "Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "bs_BA/>\n"
@@ -200,3 +200,62 @@ msgstr "Časopis ovog predanog rada nije moguće pronaći."
 
 msgid "grid.action.workflow"
 msgstr "Proces predaje rada"
+
+msgid "publication.event.versionScheduled"
+msgstr "Nova verzija je zakazana za objavljivanje."
+
+msgid "publication.event.versionPublished"
+msgstr "Nova verzija je objavljena."
+
+msgid "publication.event.unpublished"
+msgstr "Predaja nije objavljena."
+
+msgid "publication.event.scheduled"
+msgstr "Predaja je zakazana za objavljivanje."
+
+msgid "publication.event.published"
+msgstr "Predaja je objavljena."
+
+msgid "publication.editDisabled"
+msgstr "Ova verzija je objavljena i ne može se uređivati."
+
+msgid "publication.datePublished"
+msgstr "Datum objavljivanja"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Godina autorskih prava bit će postavljena automatski na osnovu datuma "
+"objavljivanja."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Godina autorskih prava automatski će se postaviti kada se ovo objavi u "
+"izdanju."
+
+msgid "submission.publications"
+msgstr "Objave"
+
+msgid "submission.status.scheduled"
+msgstr "Zakazano"
+
+msgid "publication.status.published"
+msgstr "Objavljeno"
+
+msgid "submission.publication"
+msgstr "Objava"
+
+msgid "publication.selectIssue"
+msgstr "Odaberite izdanje koje želite zakazati za objavljivanje"
+
+msgid "publication.required.issue"
+msgstr ""
+"Objava mora biti dodijeljena izdanju prije nego što može biti objavljena."
+
+msgid "publication.unscheduledIn"
+msgstr "Ovo nije zakazano za objavljivanje u izdanju."
+
+msgid "publication.scheduledIn"
+msgstr "Zakazano za objavljivanje u <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Objavljeno u <a href=\"{$issueUrl}\">{$issueName}</a>."
