@@ -1,2 +1,42 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-12-26 12:52+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Ова списание овозможува непосреден отворен пристап до неговата содржина врз "
+"основа на принципот дека истражувањето кое е слободно достапно за јавноста "
+"поддржува поголема глобална размена на знаење."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Имињата и и-меил адресите внесени на страницата на ова списание ќе бидат "
+"користени исклучиво за наведените цели на ова списание и нема да бидат "
+"достапни за било која друга цел или на било кое друго лице.</p>"
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Поднесокот е од тип OpenOffice, Microsoft Word, или RTF документ."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"Поднесокот не бил објавен претходно, ниту е пријавен за разгледување во "
+"друго списание (или е поднесено објаснување во коментари до уредникот)."
+
+msgid "default.genres.article"
+msgstr "Текст на трудот"
+
+#, fuzzy
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.title"
+msgstr "Трудови"
