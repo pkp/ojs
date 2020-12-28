@@ -16,6 +16,8 @@
 
 import('classes.subscription.SubscriptionType');
 
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 class SubscriptionTypeDAO extends DAO {
 	/**
 	 * Create a new subscription type.
@@ -301,17 +303,12 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return boolean
 	 */
 	function subscriptionTypesExistByInstitutional($journalId, $institutional = false) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*)
-			FROM
-			subscription_types st
-			WHERE st.journal_id = ?
-			AND st.institutional = ?',
-			[(int) $journalId, (int) $institutional]
-		);
-		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
-		$result->Close();
-		return $returner;
+		$result = Capsule::table('subscription_types')
+			->where('journal_id', (int) $journalId)
+			->where('institutional', (int) $institutional)
+			->first();
+
+		return is_null($result) ? false : true;
 	}
 
 	/**
