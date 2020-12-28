@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-26 12:52+0000\n"
+"PO-Revision-Date: 2020-12-29 11:53+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
@@ -2140,3 +2140,124 @@ msgstr "Purchase Subscription"
 #, fuzzy
 msgid "payment.membership.ends"
 msgstr "Ends"
+
+msgid "notification.savedIssueMetadata"
+msgstr "巻号公開メタデータが保存された。"
+
+msgid "notification.type.public"
+msgstr "公的なお知らせ"
+
+msgid "notification.type.userComment"
+msgstr "「{$title}」について読者からコメントがあった"
+
+msgid "notification.type.submissions"
+msgstr "投稿イベント"
+
+msgid "notification.type.submissionComment"
+msgstr "「{$title}」について編集者からコメントがあった。"
+
+msgid "notification.type.site"
+msgstr "サイトイベント"
+
+msgid "notification.type.reviewing"
+msgstr "査読イベント"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "「{$title}」についての査読が査読フォームから送信された。"
+
+msgid "notification.type.newAnnouncement"
+msgstr "新しいお知らせが作成された。"
+
+msgid "notification.type.issuePublished"
+msgstr "新しい巻号が出版された。"
+
+msgid "notification.type.galleyModified"
+msgstr "「{$title}」のゲラが更新された。"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "「{$title}」の編集者の判断についてコメントがあった。"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "新しい論文「{$title}」が投稿された。"
+
+msgid "notification.type.editing"
+msgstr "編集イベント"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "査読論文"
+
+msgid "log.imported"
+msgstr "{$userName}が論文 {$submissionId}をインポートした。"
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName}がスケジューリングのために {$submissionId} を投稿した。"
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName}が{$proofreaderName}を投稿物 {$submissionId} の校正者に任命した。"
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName}が投稿物 {$submissionId} の編集者に任命された。"
+
+msgid "log.editor.restored"
+msgstr "投稿物 {$submissionId} がキューに格納された。"
+
+msgid "log.editor.archived"
+msgstr "投稿物 {$submissionId} がアーカイブされた。"
+
+msgid "log.editor.editorFile"
+msgstr "投稿ファイルの編集者版がアップロードされた。"
+
+msgid "log.editor.metadataModified"
+msgstr "この論文のメタデータが{$editorName}により変更された。"
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName}が投稿物 {$submissionId} のレイアウト編集を完了した。"
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName}が投稿物 {$submissionId} のレイアウトエディタを解除された。"
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "投稿物 {$submissionId} の最初の原稿整理が {$copyeditorName} によって完了した。"
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "投稿物 {$submissionId} にコピーエディタ {$copyeditorName} が任命された。"
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName}が投稿物 {$submissionId} のレイアウトエディタに任命された。"
+
+msgid "log.copyedit.authorFile"
+msgstr "筆者が整理編集した投稿ファイルが更新された。"
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "整理編集ファイルが更新された。"
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "投稿物 {$submissionId} の最終の原稿整理が {$copyeditorName} によって完了した。"
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "デフォルトのの整理編集ファイルが選択された。"
+
+msgid "log.copyedit.initiate"
+msgstr "投稿物 {$submissionId} の原稿整理が{$copyeditorName}によって開始された。"
+
+msgid "log.editor.recommendation"
+msgstr "論文{$submissionId}に対する編集者の査読結果({$decision})は、{$editorName}によって記録された。"
+
+msgid "log.editor.decision"
+msgstr "論文{$submissionId}に対する編集者の判断({$decision})は、{$editorName}によって記録された。"
+
+msgid "log.review.reviewerFile"
+msgstr "査読者ファイルがアップロードされた。"
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"編集者、{$userName}が投稿物 {$submissionId} "
+"の{$round}回目の査読ファイルを査読者、{$reviewerName}の代わりにアップロードした。"
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} が投稿物 {$submissionId} の{$round}回目の査読を査読者、{$reviewerName}の代わりに受諾した。"
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} が投稿物 {$submissionId} の{$round}回目の査読を査読者、{$reviewerName}の代わりに謝絶した。"
