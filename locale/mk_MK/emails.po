@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-31 13:52+0000\n"
+"PO-Revision-Date: 2021-01-01 14:52+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "mk_MK/>\n"
@@ -139,3 +139,14 @@ msgstr ""
 
 msgid "emails.notification.subject"
 msgstr "Ново известување од {$siteTitle}"
+
+msgid "emails.lockssExistingArchive.subject"
+msgstr "Барање за архивирање за {$contextName}"
+
+#, fuzzy
+msgid "emails.publishNotify.description"
+msgstr ""
+"Овој и-меил е испратен до регистрирани читатели преку линкот „Извести "
+"корисници“ на насловната страница на уредниците. Ги известува читателите за "
+"новообјавено издание и ги поканува да го посетат списанието преку добавеното "
+"URL."
