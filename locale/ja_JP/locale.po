@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-29 11:53+0000\n"
+"PO-Revision-Date: 2021-01-03 12:52+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
@@ -283,33 +283,23 @@ msgstr "購読管理"
 msgid "user.myJournals"
 msgstr "マイ･ジャーナル"
 
-#, fuzzy
 msgid "user.register.noContextReviewerInterests"
-msgstr ""
-"If you requested to be a reviewer on any journal, please enter your subject "
-"interests."
+msgstr "査読を希望された方は、ご興味のある分野をご記入ください。"
 
-#, fuzzy
 msgid "user.register.otherContextRoles"
-msgstr "Request the following roles."
+msgstr "以下の役割を要求します。"
 
-#, fuzzy
 msgid "user.register.contextsPrompt"
-msgstr "Which journals on this site would you like to register with?"
+msgstr "このサイトのどの雑誌に登録しますか？"
 
-#, fuzzy
 msgid "user.reviewerPrompt.optin"
-msgstr ""
-"Yes, I would like to be contacted with requests to review submissions to "
-"this journal."
+msgstr "はい、本誌に投稿された論文の査読依頼の連絡を希望します。"
 
-#, fuzzy
 msgid "user.reviewerPrompt.userGroup"
-msgstr "Yes, request the {$userGroup} role."
+msgstr "はい、{$userGroup}役割を要求します。"
 
-#, fuzzy
 msgid "user.reviewerPrompt"
-msgstr "Would you be willing to review submissions to this journal?"
+msgstr "この雑誌に投稿された論文の査読をしていただけますか？"
 
 msgid "user.registerForOtherJournals"
 msgstr "他の雑誌に登録"
@@ -1378,9 +1368,8 @@ msgstr ""
 msgid "user.subscriptions.subscriptionStatus"
 msgstr "Subscription Status"
 
-#, fuzzy
 msgid "user.subscriptions.mySubscriptions"
-msgstr "My Subscriptions"
+msgstr "購読一覧表"
 
 msgid "user.register.form.missingSiteConsent"
 msgstr "本サイトの個人情報保護方針に同意する必要があります。"
@@ -2261,3 +2250,90 @@ msgstr ""
 msgid "log.review.reviewDeclinedByProxy"
 msgstr ""
 "{$userName} が投稿物 {$submissionId} の{$round}回目の査読を査読者、{$reviewerName}の代わりに謝絶した。"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "このカテゴリの論文の並び方を選択してください。"
+
+msgid "catalog.sortBy"
+msgstr "論文の順番"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName}は論文{$submissionId}の編集プロセスを行いました。"
+
+msgid "navigation.subscriptions"
+msgstr "購読"
+
+msgid "editor.issues.futureIssues"
+msgstr "今後の巻号"
+
+msgid "editor.issues.backIssues"
+msgstr "バックナンバー"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "指定された雑誌パス「{$ journalPath}」を雑誌に定められませんでした。"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "この検索の実装では、雑誌ごとの再インデックス化はできません。"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "『{$journalName}』インデックス中"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>このゲラの承認を削除する。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>このゲラを出版することを承認する。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "ゲラ承認"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "承認待ち"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "承認済み"
+
+msgid "article.view.interstitial"
+msgstr "ダウンロードする論文ファイルを選択してください。"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "他の雑誌を非表示にする"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "他の雑誌に登録する"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "承認待ち。"
+
+msgid "notification.type.approveSubmission"
+msgstr "この投稿は、現在、巻号に掲載される前に承認待ちの状態です。"
+
+msgid "editor.navigation.issues"
+msgstr "巻号"
+
+msgid "grid.action.createContext"
+msgstr "新しい雑誌を作成"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "無効なコピーエディター投稿版、またはコピーエディターのない投稿を要求されていました！"
+
+msgid "user.authorization.invalidIssue"
+msgstr "無効な巻号を要求しました！"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "あなたのセクションの一部ではない論文にアクセスしようとしています。"
+
+msgid "user.authorization.noContext"
+msgstr "コンテキストには雑誌がありません！"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "アクセスが拒否されました！この論文のコピーエディターとして任命されていません。"
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "ゲラ作成待ち中。"
+
+msgid "notification.type.assignProductionUser"
+msgstr "参加者リストの「任命」リンクを使用して、ゲラを作成するユーザーを割り当てください。"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "編集者の任命が必要な論文が投稿されました。"
