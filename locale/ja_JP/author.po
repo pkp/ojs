@@ -1,2 +1,117 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-01-03 12:52+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submissions.noSubmissions"
+msgstr "投稿物がありません。"
+
+msgid "author.submissions.viewStatus"
+msgstr "状態の閲覧"
+
+msgid "author.submissions.confirmDelete"
+msgstr "この処理の終了していない投稿を削除してもよいですか。"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "校正による修正"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "コピーエディタ版のアップロード"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "編集中: 校正依頼済"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "編集中: 原稿整理依頼済"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "査読中: 要改訂"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "査読ラウンド {$round}"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "投稿料免除を依頼する場合、下のコメントボックスに理由を入力する必要があります。"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "投稿料免除が必要な理由を下のコメントボックスに入力してください。"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "この論文に対する論文投稿料の免除を検討してください"
+
+msgid "author.submit.requestWaiver"
+msgstr "免除依頼"
+
+msgid "author.submit.notAccepting"
+msgstr "この雑誌は現在投稿を受け付けていません。"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "後日、著者のホームページからこの投稿物を選択することにより、この投稿を完了することもできます。"
+
+msgid "author.submit.nextSteps"
+msgstr "次のステップ"
+
+msgid "author.submit.confirmation"
+msgstr "確認"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "補足ファイルアップロード"
+
+msgid "author.submit.metadata"
+msgstr "メタデータ入力"
+
+msgid "author.submit.upload"
+msgstr "投稿物アップロード"
+
+msgid "author.submit.start"
+msgstr "開始"
+
+msgid "author.submit.step5"
+msgstr "ステップ 5. 投稿の確認"
+
+msgid "author.submit.step4a"
+msgstr "ステップ 4a. 補足ファイルの追加"
+
+msgid "author.submit.step4"
+msgstr "ステップ 4. 補足ファイルのアップロード"
+
+msgid "author.submit.step3"
+msgstr "ステップ 3. 投稿物のメタデータ入力"
+
+msgid "author.submit.step2"
+msgstr "ステップ 2. 投稿物のアップロード"
+
+msgid "author.submit.step1"
+msgstr "ステップ 1. 投稿の開始"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"投稿の5ステップを開始するには<a href=\"{$submitUrl}\" class=\"action\">ここをクリック</a>してください。"
+
+msgid "author.submit.startHereTitle"
+msgstr "新規投稿を開始"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "投稿の5ステップ"
+
+msgid "author.submit.submitArticle"
+msgstr "論文の投稿"
+
+msgid "author.competingInterests"
+msgstr ""
+"利害の競合<a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CIポリシー</a>"
+
+msgid "author.track"
+msgstr "投稿物一覧"
+
+msgid "author.submit"
+msgstr "新規投稿"
