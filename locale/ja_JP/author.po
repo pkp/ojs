@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-03 12:52+0000\n"
+"PO-Revision-Date: 2021-01-03 16:30+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "ja_JP/>\n"
@@ -115,3 +115,58 @@ msgstr "投稿物一覧"
 
 msgid "author.submit"
 msgstr "新規投稿"
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "各著者の姓名、メールアドレスは必須です。"
+
+msgid "author.submit.form.authorRequired"
+msgstr "少なくとも1人の著者が必須です。"
+
+msgid "author.submit.coverageInstructions"
+msgstr "地理空間的・年代的・歴史的範囲または研究材料の特性を示してください。"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "投稿物の索引語を入力してください。各索引語は（索引語1;索引語2;索引語3）のようにセミコロンで区切ってください。"
+
+msgid "author.submit.deleteAuthor"
+msgstr "著者の削除"
+
+msgid "author.submit.addAuthor"
+msgstr "著者の追加"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "編集上の連絡を取る第一著者。"
+
+msgid "author.submit.reorder"
+msgstr "著者名の並べ替え"
+
+msgid "author.submit.reorderInstructions"
+msgstr "出版物に掲載される著者の並びを再度並び替える。"
+
+msgid "submission.submit.privacyStatement"
+msgstr "この雑誌のプライバシー情報の扱いについて"
+
+msgid "author.submit.form.localeRequired"
+msgstr "投稿言語を選択してください。"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "この投稿物にふさわしい雑誌セクションを選択してください。"
+
+msgid "author.submit.comments"
+msgstr "コメントを入力してください（オプション）"
+
+msgid "submission.submit.coverNote"
+msgstr "編集者へのコメント"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "投稿を続けるには、著作権表示条項に同意する必要があります。"
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"私（たち）は、投稿物がこの雑誌で出版される際に適用される上記の著作権表示条件に同意します。（このページの最後で編集者へのコメントを書くことができます。）"
+
+msgid "author.submit.verifyChecklist"
+msgstr "投稿を続けるには、投稿物がチェックリストの全項目を満たしていることが必要です。"
+
+msgid "author.submit.journalSection"
+msgstr "雑誌セクション"
