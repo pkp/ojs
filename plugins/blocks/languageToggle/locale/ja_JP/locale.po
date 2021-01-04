@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-21 11:00+0000\n"
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-languageToggle/ja_JP/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.block.languageToggle.description"
-msgstr "サイドバーに言語切替を表示します。"
+msgstr "このプラグインはサイドバーに言語切り替えを付けます。"
 
 msgid "plugins.block.languageToggle.displayName"
 msgstr "言語切替ブロック"
