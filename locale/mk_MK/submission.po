@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-29 01:55+0000\n"
-"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
+"PO-Revision-Date: 2020-12-25 11:52+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
-"submission/mk/>\n"
+"submission/mk_MK/>\n"
 "Language: mk_MK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -256,3 +256,105 @@ msgstr "Ова пробна копија е одобрена за да биде 
 
 msgid "grid.action.approveProof"
 msgstr "Одобрете ја пробната копија за да биде поставена за приказ."
+
+#, fuzzy
+msgid "publication.event.versionUnpublished"
+msgstr "A version was removed from publication."
+
+msgid "publication.event.unpublished"
+msgstr "Објавата на поднесокот беше откажана."
+
+msgid "submission.queries.production"
+msgstr "Дискусија за продукција"
+
+msgid "publication.version.details"
+msgstr "Детали за објавата на верзија {$version}"
+
+msgid "publication.unschedule.confirm"
+msgstr "Дали сте сигурни дека не сакате ова да биде закажано за објава?"
+
+msgid "publication.unpublish.confirm"
+msgstr "Дали сте сигурни дека не сакате ова да биде објавено?"
+
+msgid "publication.unpublish"
+msgstr "Откажете објавување"
+
+msgid "submission.copyrightOther.description"
+msgstr "Додели авторски права за објавен поднесок на следните лица."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Авторските права ќе бидат автоматски доделени на {$copyright} кога ова ќе "
+"биде објавено."
+
+msgid "submission.license.description"
+msgstr ""
+"Лиценцата ќе биде поставена автоматски како <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> кога ова ќе биде објавено."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Поднесокот мора да биде во фаза на уредување или продукција пред да биде "
+"објавен."
+
+msgid "publication.required.declined"
+msgstr "Одбиен поднесок не може да биде објавен."
+
+msgid "publication.publish.requirements"
+msgstr "Следните услови мора да бидат исполнети пред ова да биде објавено."
+
+msgid "publication.publish"
+msgstr "Објави"
+
+msgid "publication.invalidSubmission"
+msgstr "Поднесокот за оваа публикација не е пронајден."
+
+msgid "publication.event.versionScheduled"
+msgstr "Нова верзија беше закажана за објава."
+
+msgid "publication.event.versionPublished"
+msgstr "Нова верзија беше објавена."
+
+msgid "publication.event.scheduled"
+msgstr "Поднесокот беше закажан за објава."
+
+msgid "publication.event.published"
+msgstr "Поднесокот беше објавен."
+
+msgid "publication.editDisabled"
+msgstr "Оваа верзија е објавена и не може да се уредува."
+
+msgid "publication.datePublished"
+msgstr "Датум на објава"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Годината на авторското право ќе биде поставена автоматски врз основа на "
+"датумот на објавување."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Годината на авторското право ќе биде поставена автоматски кога ова ќе биде "
+"објавено во списание."
+
+msgid "submission.publications"
+msgstr "Публикации"
+
+msgid "publication.status.unscheduled"
+msgstr "Непланирано"
+
+msgid "submission.status.scheduled"
+msgstr "Планирано"
+
+msgid "publication.status.published"
+msgstr "Објавено"
+
+msgid "submission.publication"
+msgstr "Публикација"
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (неактивно)"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Ова е преглед кој не е објавен. <a href=\"{$url}\">Види го поднесокот</a>"

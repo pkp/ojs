@@ -1,0 +1,335 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submissions.noSubmissions"
+msgstr "投稿物がありません。"
+
+msgid "author.submissions.viewStatus"
+msgstr "状態の閲覧"
+
+msgid "author.submissions.confirmDelete"
+msgstr "この処理の終了していない投稿を削除してもよいですか。"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "校正による修正"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "コピーエディタ版のアップロード"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "編集中: 校正依頼済"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "編集中: 原稿整理依頼済"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "査読中: 要改訂"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "査読ラウンド {$round}"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "投稿料免除を依頼する場合、下のコメントボックスに理由を入力する必要があります。"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "投稿料免除が必要な理由を下のコメントボックスに入力してください。"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "この論文に対する論文投稿料の免除を検討してください"
+
+msgid "author.submit.requestWaiver"
+msgstr "免除依頼"
+
+msgid "author.submit.notAccepting"
+msgstr "この雑誌は現在投稿を受け付けていません。"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "後日、著者のホームページからこの投稿物を選択することにより、この投稿を完了することもできます。"
+
+msgid "author.submit.nextSteps"
+msgstr "次のステップ"
+
+msgid "author.submit.confirmation"
+msgstr "確認"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "補足ファイルアップロード"
+
+msgid "author.submit.metadata"
+msgstr "メタデータ入力"
+
+msgid "author.submit.upload"
+msgstr "投稿物アップロード"
+
+msgid "author.submit.start"
+msgstr "開始"
+
+msgid "author.submit.step5"
+msgstr "ステップ 5. 投稿の確認"
+
+msgid "author.submit.step4a"
+msgstr "ステップ 4a. 補足ファイルの追加"
+
+msgid "author.submit.step4"
+msgstr "ステップ 4. 補足ファイルのアップロード"
+
+msgid "author.submit.step3"
+msgstr "ステップ 3. 投稿物のメタデータ入力"
+
+msgid "author.submit.step2"
+msgstr "ステップ 2. 投稿物のアップロード"
+
+msgid "author.submit.step1"
+msgstr "ステップ 1. 投稿の開始"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"投稿の5ステップを開始するには<a href=\"{$submitUrl}\" class=\"action\">ここをクリック</a>してください。"
+
+msgid "author.submit.startHereTitle"
+msgstr "新規投稿を開始"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "投稿の5ステップ"
+
+msgid "author.submit.submitArticle"
+msgstr "論文の投稿"
+
+msgid "author.competingInterests"
+msgstr ""
+"利害の競合<a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CIポリシー</a>"
+
+msgid "author.track"
+msgstr "投稿物一覧"
+
+msgid "author.submit"
+msgstr "新規投稿"
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "各著者の姓名、メールアドレスは必須です。"
+
+msgid "author.submit.form.authorRequired"
+msgstr "少なくとも1人の著者が必須です。"
+
+msgid "author.submit.coverageInstructions"
+msgstr "地理空間的・年代的・歴史的範囲または研究材料の特性を示してください。"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "投稿物の索引語を入力してください。各索引語は（索引語1;索引語2;索引語3）のようにセミコロンで区切ってください。"
+
+msgid "author.submit.deleteAuthor"
+msgstr "著者の削除"
+
+msgid "author.submit.addAuthor"
+msgstr "著者の追加"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "編集上の連絡を取る第一著者。"
+
+msgid "author.submit.reorder"
+msgstr "著者名の並べ替え"
+
+msgid "author.submit.reorderInstructions"
+msgstr "出版物に掲載される著者の並びを再度並び替える。"
+
+msgid "submission.submit.privacyStatement"
+msgstr "この雑誌のプライバシー情報の扱いについて"
+
+msgid "author.submit.form.localeRequired"
+msgstr "投稿言語を選択してください。"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "この投稿物にふさわしい雑誌セクションを選択してください。"
+
+msgid "author.submit.comments"
+msgstr "コメントを入力してください（オプション）"
+
+msgid "submission.submit.coverNote"
+msgstr "編集者へのコメント"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "投稿を続けるには、著作権表示条項に同意する必要があります。"
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"私（たち）は、投稿物がこの雑誌で出版される際に適用される上記の著作権表示条件に同意します。（このページの最後で編集者へのコメントを書くことができます。）"
+
+msgid "author.submit.verifyChecklist"
+msgstr "投稿を続けるには、投稿物がチェックリストの全項目を満たしていることが必要です。"
+
+msgid "author.submit.journalSection"
+msgstr "雑誌セクション"
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">追加コード</a>。"
+
+msgid "author.submit.journalSectionDescription"
+msgstr ""
+"この投稿物に適切なセクションを選択してください。(セクションについては「このサイト/雑誌について」の「セクションポリシー」を参照してください。)"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"この雑誌に投稿するにはユーザアカウントが必要です。アカウントは編集者が投稿物を追跡したり、投稿物の状態が変更された場合やあなたに関する追加情報が必要になっ"
+"た場合に、あなたに連絡を取ることをできるようにします。"
+
+msgid "author.article.authorRevisedFile"
+msgstr "著者ファイル"
+
+msgid "author.article.copyeditedFile"
+msgstr "原稿整理済みファイル"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "著者版のアップロード"
+
+msgid "author.submit.submissionComplete"
+msgstr "投稿が完了しました。。雑誌「{$journalTitle}」による出版をご検討いただき、ありがとうございました。"
+
+msgid "author.submit.finishSubmission"
+msgstr "投稿を完了"
+
+msgid "author.submit.filesSummary"
+msgstr "ファイル情報"
+
+msgid "author.submit.noFiles"
+msgstr "この投稿物にはファイルが添付されていません。"
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"[投稿を完了]ボタンをクリックして、「{$journalTitle}」へ原稿を投稿してください。投稿を受け付けると受領確認のメールが連絡責任者に送られます"
+"。また、雑誌のWebサイトにログインすることにより編集処理の進捗状況を見ることができます。雑誌「{$journalTitle}」による出版をご検討いただき"
+"、ありがとうございました。"
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "補足ファイルの公開識別子"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "補足ファイルの公開識別子は既に存在します。"
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "説明文を入力してください。"
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "主題を入力してください。"
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "この補足ファイルのタイトルを入力してください。"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "ファイルはアップロードされていません。"
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "その他、具体的に示してください"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "研究の名称、またはその他の採取場所。"
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "データが収集された日付、または装置が作成された日付。"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "正式に出版された資料に限る。"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "ブラインド審査の条件に抵触しないので、査読者にファイルを（メタデータは付けずに）提供する。"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "簡単な説明"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "ソーステキスト"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "データセット"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "データ分析"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "筆記録"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "研究結果"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "研究材料"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "研究装置"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "ファイルの作成者（または所有者）"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "補足ファイル"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "この補足ファイルをインデックス化するために、アップロードする補足ファイルに以下のメタデータを与えてください。"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "補足ファイルのメタデータ"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "補足ファイルの編集"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "補足ファイルの追加"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "補足ファイルのアップロード"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "この補足ファイルを削除してもよいですか。"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "補足ファイルに戻る"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "この投稿物には補足ファイルが追加されませんでした。"
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "選択した補足ファイルをアップロードすることなく処理を継続しても良いですか。"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "保存ボタンを押してファイルをアップロードしてください（そうすると補足ファイルがアップロードされます）。"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"このオプションのステップは、補足ファイルを投稿物に追加することを可能にします。補足ファイルとしては、任意の形式の(a)研究機器、(b)研究者の研究倫理検査"
+"の条件を満たすデータセット、(c)他では読者が利用できない情報源、(d)テキストに埋め込むことができなかった図や表、その他の作品に貢献する資料が考えれる。"
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "投稿物のアップロードなしに処理を続けてもよいですか。"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "投稿物ファイルがアップロードされていません。"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "投稿物ファイルの置換"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "投稿物ファイルのアップロード"
+
+msgid "author.submit.submissionFile"
+msgstr "投稿物ファイル"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "このセクションにおける要旨の最大文字数を超過しています。"
+
+msgid "author.submit.form.abstractRequired"
+msgstr "論文の要旨を入力してください。"
+
+msgid "author.submit.form.titleRequired"
+msgstr "論文のタイトルを入力してください。"

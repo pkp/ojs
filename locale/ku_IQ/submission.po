@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-10 23:37+0000\n"
-"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"PO-Revision-Date: 2020-12-22 09:05+0000\n"
+"Last-Translator: Haval Abdulkarim <haval.abdulkarim@gmail.com>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ku_IQ/>\n"
 "Language: ku_IQ\n"
@@ -235,3 +235,33 @@ msgstr ""
 msgid "submission.status.scheduled"
 msgstr "لە خشتەی کار دانراوە"
 
+msgid "publication.editDisabled"
+msgstr "ئەم وەشانە بڵاوکراوەتەوە و ناتوانرێت دەستکاری بکرێت."
+
+msgid "publication.status.unscheduled"
+msgstr "لە خشتەی کار دانەنراوە"
+
+msgid "publication.datePublished"
+msgstr "ڕێکەوتی بڵاوکردنەوە"
+
+msgid "submission.publications"
+msgstr "بڵاوکراوەکان"
+
+msgid "publication.status.published"
+msgstr "بڵاوکراوەتەوە"
+
+msgid "submission.publication"
+msgstr "بڵاوکراوە"
+
+msgid "publication.selectIssue"
+msgstr "ژمارەیەک دیاریبکە بۆ کاتدانان بۆ بڵاوکردنەوە"
+
+msgid "publication.scheduleInissue"
+msgstr "پێسپاردن بە ژمارەیەک"
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (ناچالاک)"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"ئەمە پێشبینینە و بڵاونەکراوەتەوە. <a href=\"{$url}\">پیشاندانی پێشکەشکردن</a>"

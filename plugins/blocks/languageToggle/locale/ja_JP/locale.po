@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-languageToggle/ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.languageToggle.description"
+msgstr "このプラグインはサイドバーに言語切り替えを付けます。"
+
+msgid "plugins.block.languageToggle.displayName"
+msgstr "言語切替ブロック"

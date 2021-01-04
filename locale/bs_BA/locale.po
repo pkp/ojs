@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-26 18:19+0000\n"
-"Last-Translator: Tihomir Veselinovic <tiho@efsa.unsa.ba>\n"
+"PO-Revision-Date: 2020-12-22 09:05+0000\n"
+"Last-Translator: Kazimir Hrastek <kazimir3385@gmail.com>\n"
 "Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "bs_BA/>\n"
 "Language: bs_BA\n"
@@ -2431,3 +2431,6 @@ msgstr "Galley ne može biti pronađena"
 
 msgid "category.category"
 msgstr "Kategorije"
+
+msgid "about.aboutSoftware"
+msgstr "O Open Journal Sistemu"

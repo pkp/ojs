@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-16 22:10+0000\n"
-"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
+"PO-Revision-Date: 2020-12-29 11:53+0000\n"
+"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
-"ojs/submission/zh_Hans/>\n"
+"ojs/submission/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -222,3 +222,76 @@ msgstr "当期文章校样"
 
 msgid "submission.submit.userGroupDescription"
 msgstr "选择提交稿件的身份。"
+
+msgid "submission.copyrightHolder.description"
+msgstr "版权将在发布后自动分配给{$copyright}。"
+
+msgid "submission.license.description"
+msgstr ""
+"许可证在发布后将被自动设置为 <a href='{$licenseUrl}' target='_blank'>{$licenseName}</a>。"
+
+msgid "publication.required.reviewStage"
+msgstr "提交必须处于审稿或生产阶段才能发布。"
+
+msgid "publication.required.declined"
+msgstr "被拒绝的提交无法被发布。"
+
+msgid "publication.publish.requirements"
+msgstr "在发布之前，必须满足以下要求。"
+
+msgid "publication.publish"
+msgstr "发布"
+
+msgid "publication.invalidSubmission"
+msgstr "找不到此出版的提交。"
+
+msgid "publication.event.versionUnpublished"
+msgstr "版本已从发布中删除。"
+
+msgid "publication.event.versionScheduled"
+msgstr "新的版本已被计划发布。"
+
+msgid "publication.event.versionPublished"
+msgstr "新的版本被发布。"
+
+msgid "publication.event.unpublished"
+msgstr "提交尚未被发布。"
+
+msgid "publication.event.scheduled"
+msgstr "提交已被计划发布。"
+
+msgid "publication.event.published"
+msgstr "该提交已发布。"
+
+msgid "publication.editDisabled"
+msgstr "此版本已发布，无法编辑。"
+
+msgid "publication.datePublished"
+msgstr "发布日期"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "版权年份将根据发布日期自动设置。"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "在某个刊期发布后，它的版权年份将被自动设置。"
+
+msgid "submission.publications"
+msgstr "出版物"
+
+msgid "publication.status.unscheduled"
+msgstr "未计划"
+
+msgid "submission.status.scheduled"
+msgstr "已计划"
+
+msgid "publication.status.published"
+msgstr "已出版"
+
+msgid "submission.publication"
+msgstr "发布"
+
+msgid "publication.inactiveSection"
+msgstr "{$section}(不活跃)"
+
+msgid "submission.viewingPreview"
+msgstr "这仅是预览，并没有被发布。<a href=\"{$url}\">查看提交</a>"

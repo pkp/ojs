@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2020-11-26 18:19+0000\n"
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "cs_CZ/>\n"
@@ -168,10 +168,11 @@ msgid "submission.submit.form.wordCountAlert"
 msgstr "Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu stanoveného pro tuto sekci."
 
 msgid "galley.publicationNotFound"
-msgstr "Vydání pro tuto sazebnici nebyla nalezena."
+msgstr "Příspěvek pro tuto sazebnici nebyl nalezen."
 
 msgid "galley.editPublishedDisabled"
-msgstr "Sazebnice tohoto vydání nelze upravovat, protože již byly publikovány."
+msgstr ""
+"Sazebnice tohoto příspěvku nelze upravovat, protože již byly publikovány."
 
 msgid "publication.scheduledIn"
 msgstr "Naplánováno vydání v <a href=\"{$issueUrl}\">{$issueName}</a>."
@@ -180,7 +181,7 @@ msgid "publication.publishedIn"
 msgstr "Publikováno v <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.required.issue"
-msgstr "Před zveřejněním musí být vydání přiřazeno číslu."
+msgstr "Před zveřejněním musí být příspěvek přiřazen číslu."
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
@@ -200,15 +201,15 @@ msgid "publication.issue.success"
 msgstr "Podrobnosti o problému publikací byly aktualizovány."
 
 msgid "publication.invalidIssue"
-msgstr "Číslo pro toto vydání nelze nalézt."
+msgstr "Číslo pro tento příspěvek nelze nalézt."
 
 msgid "publication.invalidSection"
-msgstr "Sekce pro toto vydání nebyla nalezena."
+msgstr "Sekce pro tento příspěvek nebyla nalezena."
 
 msgid "publication.datePublished.description"
 msgstr ""
 "Datum vydání bude stanoveno automaticky při zveřejnění čísla. Nezadávejte "
-"datum publikace, pokud nebyl článek dříve publikován jinde a potřebujete jej "
+"datum vydání, pokud nebyl článek dříve publikován jinde a potřebujete jej "
 "antidatovat."
 
 msgid "catalog.category.heading"
@@ -234,9 +235,9 @@ msgstr "Pro tuto položku nebylo dosud naplánováno publikování v čísle."
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
-"Všechny požadavky pro publikování byly splněny. Položka bude publikována "
+"Všechny požadavky pro publikování byly splněny. Příspěvek bude publikován "
 "okamžitě, protože datum publikování bylo nastaveno na {$datePublished}. Jste "
-"si jisti, že má být položka publikována?"
+"si jisti, že má být příspěvek publikován?"
 
 msgid "submission.viewingPreview"
 msgstr ""
@@ -263,7 +264,7 @@ msgstr "Vydání"
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
-"Rok vydání autorských práv bude nastaven automaticky, jakmile bude toto "
+"Rok vydání u autorských práv bude nastaven automaticky, jakmile bude toto "
 "číslo zveřejněno."
 
 msgid "publication.copyrightYearBasis.submissionDescription"
@@ -283,7 +284,7 @@ msgid "publication.event.scheduled"
 msgstr "Příspěvek byl naplánován k publikaci."
 
 msgid "publication.event.unpublished"
-msgstr "Příspěvek nebyl publikován."
+msgstr "Publikace příspěvku byla odvolána."
 
 msgid "publication.event.versionPublished"
 msgstr "Byla vydána nová verze."
@@ -295,7 +296,7 @@ msgid "publication.event.versionUnpublished"
 msgstr "Verze byla odstraněna z publikace."
 
 msgid "publication.invalidSubmission"
-msgstr "Příspěvek pro tuto publikace nebyl nalezen."
+msgstr "Příspěvek pro tuto publikaci nebyl nalezen."
 
 msgid "publication.publish"
 msgstr "Publikovat"
@@ -307,7 +308,8 @@ msgid "publication.required.declined"
 msgstr "Odmítnutý příspěvek nelze zveřejnit."
 
 msgid "publication.required.reviewStage"
-msgstr "Před zveřejněním musí být ve fázi editace nebo produkce."
+msgstr ""
+"Před zveřejněním musí být příspěvek ve fázi Redakční úprava nebo Produkce."
 
 msgid "submission.license.description"
 msgstr ""
@@ -335,4 +337,3 @@ msgstr "Podrobnosti publikace pro verzi {$version}"
 
 msgid "submission.queries.production"
 msgstr "Diskuse během produkčního procesu"
-
