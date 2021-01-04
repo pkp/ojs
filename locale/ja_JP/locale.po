@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-03 12:52+0000\n"
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
@@ -2264,7 +2264,7 @@ msgid "navigation.subscriptions"
 msgstr "購読"
 
 msgid "editor.issues.futureIssues"
-msgstr "今後の巻号"
+msgstr "出版予定号"
 
 msgid "editor.issues.backIssues"
 msgstr "バックナンバー"
