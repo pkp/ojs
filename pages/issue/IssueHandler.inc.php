@@ -324,6 +324,7 @@ class IssueHandler extends Handler {
 		foreach ($sections as $section) {
 			$issueSubmissionsInSection[$section->getId()] = [
 				'title' => $section->getHideTitle()?null:$section->getLocalizedTitle(),
+				'hideAuthor' => $section->getHideAuthor(),
 				'articles' => [],
 			];
 		}
