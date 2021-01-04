@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-26 12:52+0000\n"
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "ja_JP/>\n"
@@ -64,16 +64,16 @@ msgid "default.genres.dataAnalysis"
 msgstr "データ分析"
 
 msgid "default.genres.transcripts"
-msgstr "記録"
+msgstr "筆記録"
 
 msgid "default.genres.researchResults"
 msgstr "研究結果"
 
 msgid "default.genres.researchMaterials"
-msgstr "研究資料"
+msgstr "研究材料"
 
 msgid "default.genres.researchInstrument"
-msgstr "研究方法"
+msgstr "研究装置"
 
 msgid "default.groups.plural.subscriptionManager"
 msgstr "購読担当者"
