@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-26 12:52+0000\n"
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ja_JP/>\n"
@@ -105,7 +105,7 @@ msgid "submission.submit.form.contributorRoleRequired"
 msgstr "協力者の役割を選択してください。"
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr "概要が長すぎます。このセクションで示されている制限語数以下に短縮してください。"
+msgstr "要旨が長すぎます。このセクションで示されている制限語数以下に短縮してください。"
 
 msgid "submission.submit.form.abstractRequired"
 msgstr "投稿の概要を入力してください。"
@@ -162,7 +162,7 @@ msgid "submission.submit.upload.description"
 msgstr "論文、マルチメディア、データセット、アートワークなど、この投稿に関連するファイルをアップロードしてください。"
 
 msgid "submission.submit.titleAndSummary"
-msgstr "タイトルと概要"
+msgstr "タイトルと要旨"
 
 msgid "grid.action.pageProofApproved"
 msgstr "本校正はガレ刷りのための承認を得ました。"
