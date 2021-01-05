@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-05 16:47+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-announcementFeed/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -37,18 +37,15 @@ msgstr ""
 "Прикажи ги линковите до каналот само на главната страница и на страницата со "
 "известувања."
 
-#, fuzzy
 msgid "plugins.generic.announcementfeed.settings.all"
-msgstr "Прикажи ги линковите до каналот на сите страници на списанието."
+msgstr "Прикажи ги линковите до каналот на сите страници од списанието."
 
 msgid "plugins.generic.announcementfeed.settings"
 msgstr "Поставки"
 
-#, fuzzy
 msgid "plugins.generic.announcementfeed.description"
 msgstr ""
-"This plugin produces RSS/Atom web syndication feeds for journal "
-"announcements."
+"Овој плагин создава RSS/Atom веб поддржувани пораки за најави на списанието."
 
 msgid "plugins.generic.announcementfeed.displayName"
 msgstr "Додаток за канал за известувања"
