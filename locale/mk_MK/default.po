@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-31 13:52+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -34,9 +34,8 @@ msgstr ""
 msgid "default.genres.article"
 msgstr "Текст на трудот"
 
-#, fuzzy
 msgid "section.default.abbrev"
-msgstr "ART"
+msgstr "АРТ"
 
 msgid "section.default.title"
 msgstr "Трудови"
@@ -46,13 +45,11 @@ msgstr ""
 "Текстот се придржува кон стилските и библиографските барања наведени во "
 "упатството за авторот."
 
-#, fuzzy
 msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr ""
-"The text is single-spaced; uses a 12-point font; employs italics, rather "
-"than underlining (except with URL addresses); and all illustrations, "
-"figures, and tables are placed within the text at the appropriate points, "
-"rather than at the end."
+"Текстот е со единечен проред; користи фонт од 12 точки; користи италикс, "
+"повеќе отколку подвлечено (освен во URL адреси); и сите илустрации, слики и "
+"табели се сместени во текстот во соодветни точки , отколку на крајот."
 
 msgid "section.default.policy"
 msgstr "Стандарден став на одделот"
@@ -60,7 +57,6 @@ msgstr "Стандарден став на одделот"
 msgid "default.contextSettings.checklist.addressesLinked"
 msgstr "Каде што се достапни, обезбедени се URL-адреси за препораките."
 
-#, fuzzy
 msgid "default.contextSettings.emailSignature"
 msgstr ""
 "<br/>\n"
@@ -68,9 +64,8 @@ msgstr ""
 "\n"
 "<a href=\"{$contextUrl}\">{$contextName}</a>"
 
-#, fuzzy
 msgid "default.groups.abbrev.externalReviewer"
-msgstr "R"
+msgstr "Р"
 
 msgid "default.groups.plural.externalReviewer"
 msgstr "Рецензенти"
@@ -78,7 +73,6 @@ msgstr "Рецензенти"
 msgid "default.groups.name.externalReviewer"
 msgstr "Рецензент"
 
-#, fuzzy
 msgid "default.genres.sourceTexts"
 msgstr "Изворни текстови"
 
@@ -100,9 +94,8 @@ msgstr "Материјали за истражување"
 msgid "default.genres.researchInstrument"
 msgstr "Помагало за истражување"
 
-#, fuzzy
 msgid "default.groups.abbrev.subscriptionManager"
-msgstr "SubM"
+msgstr "СубМ"
 
 msgid "default.groups.plural.subscriptionManager"
 msgstr "Менаџери за претплата"
@@ -110,9 +103,8 @@ msgstr "Менаџери за претплата"
 msgid "default.groups.name.subscriptionManager"
 msgstr "Менџер за претплата"
 
-#, fuzzy
 msgid "default.groups.abbrev.sectionEditor"
-msgstr "SecE"
+msgstr "СекЕ"
 
 msgid "default.groups.plural.sectionEditor"
 msgstr "Секциски уредници"
@@ -120,20 +112,17 @@ msgstr "Секциски уредници"
 msgid "default.groups.name.sectionEditor"
 msgstr "Секциски уредник"
 
-#, fuzzy
 msgid "default.groups.plural.guestEditor"
-msgstr "Гостин-уредници"
+msgstr "Гости уредници"
 
-#, fuzzy
 msgid "default.groups.abbrev.guestEditor"
-msgstr "GE"
+msgstr "ГЕ"
 
 msgid "default.groups.name.guestEditor"
 msgstr "Гостин-уредник"
 
-#, fuzzy
 msgid "default.groups.abbrev.editor"
-msgstr "JE"
+msgstr "ЈЕ"
 
 msgid "default.groups.plural.editor"
 msgstr "Уредници на списанието"
@@ -141,9 +130,8 @@ msgstr "Уредници на списанието"
 msgid "default.groups.name.editor"
 msgstr "Уредник на списанието"
 
-#, fuzzy
 msgid "default.groups.abbrev.manager"
-msgstr "JM"
+msgstr "ЈМ"
 
 msgid "default.groups.plural.manager"
 msgstr "Менаџери на списанието"
