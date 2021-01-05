@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-05 16:49+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "gateways-resolver/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -11,16 +11,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "plugins.gateways.resolver.exportHoldings"
-msgstr "Export Holdings"
+msgstr "Испраќање холдинзи"
 
-#, fuzzy
 msgid "plugins.gateways.resolver.errors.errorMessage"
 msgstr ""
 "Не може да се разреши ниеден објект со користење на информациите од "
 "посочениот цитат. Ве молиме да се осигурате дека информациите за цитатот се "
-"разбирливи и се однесуваат на објект во ова издание на OJS."
+"разбирливи и се однесуваат на објект од ова издание на OJS."
 
 msgid "plugins.gateways.resolver.description"
 msgstr ""
