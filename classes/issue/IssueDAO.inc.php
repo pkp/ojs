@@ -549,7 +549,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			FROM	submissions s
 				JOIN publications p ON (p.publication_id = s.current_publication_id)
 				JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name = ? AND ps.locale = \'\')
-				JOIN issues i ON ps.setting_value = CAST(i.issue_id as CHAR)
+				JOIN issues i ON ps.setting_value = CAST(i.issue_id AS CHAR(20))
 			WHERE	s.submission_id = ? AND
 				s.context_id = i.journal_id' .
 				($journalId?' AND i.journal_id = ?':''),
