@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-05 16:41+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-htmlArticleGalley/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -11,6 +11,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "plugins.generic.htmlArticleGalley.displayName"
-msgstr "HTML Article Galley"
+msgstr "HTML отисок на труд"
+
+msgid "plugins.generic.htmlArticleGalley.description"
+msgstr "Овој плагин овозможува рендерирана поддршка за HTML отисок на трудови."
