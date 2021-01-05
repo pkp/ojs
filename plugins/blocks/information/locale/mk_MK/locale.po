@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-25 11:52+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-information/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -14,9 +14,8 @@ msgstr ""
 msgid "plugins.block.information.link"
 msgstr "Информации"
 
-#, fuzzy
 msgid "plugins.block.information.description"
-msgstr "This plugin provides sidebar information link."
+msgstr "Овој плагин овозможува линк за странична информација."
 
 msgid "plugins.block.information.displayName"
 msgstr "Блок со информации"
