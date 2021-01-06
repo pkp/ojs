@@ -87,7 +87,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 				'institutionName' => $subscription->getInstitutionName(),
 				'institutionMailingAddress' => $subscription->getInstitutionMailingAddress(),
 				'domain' => $subscription->getDomain(),
-				'ipRanges' => $subscription->getIPRanges()
+				'ipRanges' => $subscription->getIPRangesString()
 			);
 		}
 	}
