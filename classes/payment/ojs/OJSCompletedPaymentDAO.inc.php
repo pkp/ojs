@@ -103,7 +103,7 @@ class OJSCompletedPaymentDAO extends DAO {
 
 	/**
 	 * Get a payment by assoc info
-	 * @param $userId int
+	 * @param $userId int?
 	 * @param $paymentType int PAYMENT_TYPE_...
 	 * @param $assocId int
 	 * @return CompletedPayment|null
@@ -126,20 +126,20 @@ class OJSCompletedPaymentDAO extends DAO {
 
 	/**
 	 * Look for a completed PAYMENT_TYPE_PURCHASE_ARTICLE payment matching the article ID
-	 * @param $userId int
+	 * @param $userId int?
 	 * @param $articleId int
 	 */
 	function hasPaidPurchaseArticle($userId, $articleId) {
-		return $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ARTICLE, $articleId)?true:false;
+		return $userId && $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ARTICLE, $articleId);
 	}
 
 	/**
 	 * Look for a completed PAYMENT_TYPE_PURCHASE_ISSUE payment matching the user and issue IDs
-	 * @param int $userId
-	 * @param int $issueId
+	 * @param $userId int?
+	 * @param $issueId int
 	 */
 	function hasPaidPurchaseIssue($userId, $issueId) {
-		return $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ISSUE, $issueId)?true:false;
+		return $userId && $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ISSUE, $issueId);
 	}
 
 	/**
@@ -148,7 +148,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param int $articleId
 	 */
 	function hasPaidPublication($userId, $articleId) {
-		return $this->getByAssoc($userId, PAYMENT_TYPE_PUBLICATION, $articleId)?true:false;
+		return $userId && $this->getByAssoc($userId, PAYMENT_TYPE_PUBLICATION, $articleId);
 	}
 
 	/**
