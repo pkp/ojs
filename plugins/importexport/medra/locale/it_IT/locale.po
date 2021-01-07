@@ -91,6 +91,27 @@ msgstr "NB: I DOI assegnati agli articoli verranno esportati in mEDRA come <a hr
 msgid "plugins.importexport.medra.senderTask.name"
 msgstr "Registrazione automatica DOI mEDRA"
 
+msgid "plugins.importexport.medra.crossref"
+msgstr "Deposita su Crossref. (Solo per utenti abilitati.)"
+
+msgid "plugins.importexport.medra.crossref.error.cause"
+msgstr "Motivo: file non valido rispetto ai requisiti di mEDRA e/o Crossref."
+
+msgid "plugins.importexport.medra.crossref.error.number"
+msgstr "Numero di errori"
+
+msgid "plugins.importexport.medra.crossref.error.details"
+msgstr "I seguenti requisiti non sono stati rispettati"
+
+msgid "plugins.importexport.medra.crossref.error.code"
+msgstr "CODICE"
+
+msgid "plugins.importexport.medra.crossref.error.element"
+msgstr "ELEMENTO"
+
+msgid "plugins.importexport.medra.crossref.error.description"
+msgstr "DESCRIZIONE"
+
 msgid "plugins.importexport.medra.cliUsage"
 msgstr ""
 "Uso: \n"

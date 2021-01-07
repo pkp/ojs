@@ -105,7 +105,7 @@ class MedraSettingsForm extends Form {
 	/**
 	 * copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 
 		// Issue export options.

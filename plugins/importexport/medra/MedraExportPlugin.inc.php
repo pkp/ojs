@@ -90,10 +90,13 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 	 * @copydoc PubObjectsExportPlugin::depositXML()
 	 */
 	function depositXML($objects, $context, $filename) {
-		// Use a different endpoint for testing and
-		// production.
 		$this->import('classes.MedraWebservice');
-		$endpoint = ($this->isTestMode($context) ? MEDRA_WS_ENDPOINT_DEV : MEDRA_WS_ENDPOINT);
+		// Use a different endpoint for testing and production.
+		// New endpoint: use a different endpoint if the user selects the checkbox to deposit also in Crossref.
+		$crEnabled = false;
+		if ($this->_request->getUserVar('crEnabled') == 'on') $crEnabled = true;
+
+		$endpoint = ($this->isTestMode($context) ? ($crEnabled ? MEDRA2CR_WS_ENDPOINT_DEV : MEDRA_WS_ENDPOINT_DEV) : ($crEnabled ? MEDRA2CR_WS_ENDPOINT : MEDRA_WS_ENDPOINT));
 
 		// Get credentials.
 		$username = $this->getSetting($context->getId(), 'username');
@@ -103,10 +106,19 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		$xml = file_get_contents($filename);
 		assert($xml !== false && !empty($xml));
 
+		// Get the current user locale to get the Crossref service validation error messages in that language
+		// Currently only supported: eng, ita
+		$language = 'eng';
+		$supportedLanguages = array('eng', 'ita');
+		$user3LetterLang = AppLocale::get3LetterIsoFromLocale(AppLocale::getLocale());
+		if (in_array($user3LetterLang, $supportedLanguages)) {
+			$language = $user3LetterLang;
+		}
+
 		// Instantiate the mEDRA web service wrapper.
 		$ws = new MedraWebservice($endpoint, $username, $password);
-		// Register the XML with mEDRA.
-		$result = $ws->upload($xml);
+		// Register the XML with mEDRA (upload) or also with Crossref (deposit)
+		$result = $crEnabled ? $ws->deposit($xml, $language) : $ws->upload($xml);
 
 		if ($result === true) {
 			// Mark all objects as registered.
@@ -117,6 +129,31 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 		} else {
 			// Handle errors.
 			if (is_string($result)) {
+				$doc = new DOMDocument();
+				$doc->loadXML($result);
+				$statusCode = $doc->getElementsByTagName("statusCode");
+				if ($statusCode->length > 0 && $statusCode->item(0)->textContent == 'FAILED'){
+					$errNo = $doc->getElementsByTagName('errorsNumber')->item(0)->textContent;
+					$errNodeList = $doc->getElementsByTagName('error');
+					$errors = array();
+					foreach($errNodeList as $errNode) {
+						$error = array();
+						if($errNode->childNodes->length) {
+							foreach($errNode->childNodes as $errChildNode) {
+								$error[$errChildNode->nodeName] = $errChildNode->nodeValue;
+							}
+						}
+						$errors[] = $error;
+					}
+					$templateMgr = TemplateManager::getManager($this->_request);
+					$templateMgr->assign([
+						'errNo' => $errNo,
+						'errors' => $errors,
+						'xml' => $xml,
+					]);
+					$templateMgr->display($this->getTemplateResource('crDepositErrors.tpl'));
+					exit();
+				}
 				$result = array(
 					array('plugins.importexport.common.register.error.mdsError', $result)
 				);

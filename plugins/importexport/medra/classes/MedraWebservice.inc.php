@@ -20,7 +20,9 @@
 import('lib.pkp.classes.xml.XMLNode');
 
 define('MEDRA_WS_ENDPOINT_DEV', 'https://www-medra-dev.medra.org/servlet/ws/medraWS');
+define('MEDRA2CR_WS_ENDPOINT_DEV', 'https://www-medra-dev.medra.org/servlet/ws/CRProxy');
 define('MEDRA_WS_ENDPOINT', 'https://www.medra.org/servlet/ws/medraWS');
+define('MEDRA2CR_WS_ENDPOINT', 'https://www.medra.org/servlet/ws/CRProxy');
 define('MEDRA_WS_RESPONSE_OK', 200);
 
 class MedraWebservice {
@@ -49,13 +51,30 @@ class MedraWebservice {
 	//
 	/**
 	 * mEDRA upload operation.
-	 * @param $xml
+	 * @param $xml String
+	 * @return boolean|string True for success, an error message otherwise.
 	 */
 	function upload($xml) {
 		$attachmentId = $this->_getContentId('metadata');
 		$attachment = array($attachmentId => $xml);
 		$arg = "<med:contentID href=\"$attachmentId\" />";
 		return $this->_doRequest('upload', $arg, $attachment);
+	}
+
+	/**
+	 * mEDRA deposit operation, includes the deposit to Crossref.
+	 * @param $xml String
+	 * @param $lang String
+	 * @param $accessMode String
+	 * @return boolean|string True for success, an error message otherwise.
+	 */
+	function deposit($xml, $lang = 'eng', $accessMode = '01') {
+		$attachmentId = $this->_getContentId('metadata');
+		$attachment = array($attachmentId => $xml);
+		$arg = "<med:accessMode>" . $accessMode . "</med:accessMode>" .
+			"<med:language>" .$lang . "</med:language>" .
+			"<med:contentID>" . $attachmentId . "</med:contentID>";
+		return $this->_doRequest('deposit', $arg, $attachment);
 	}
 
 	/**
@@ -147,7 +166,12 @@ class MedraWebservice {
 			PKPString::regexp_match_get('#<faultstring>([^<]*)</faultstring>#', $response, $matches);
 			if (empty($matches)) {
 				if ($attachment) {
-					assert(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response));
+					if(empty(PKPString::regexp_match('#<returnCode>success</returnCode>#', $response)) &&
+					   empty(PKPString::regexp_match('#<statusCode>SUCCESS</statusCode>#', $response))) {
+					    $parts = explode("\r\n\r\n", $response);
+					    $result = array_pop($parts);
+					    $result = PKPString::regexp_replace('/>[^>]*$/', '>', $result);
+					}
 				} else {
 					$parts = explode("\r\n\r\n", $response);
 					$result = array_pop($parts);
@@ -159,7 +183,6 @@ class MedraWebservice {
 		} else {
 			$result = 'OJS-mEDRA: Expected string response.';
 		}
-
 		return $result;
 	}
 
