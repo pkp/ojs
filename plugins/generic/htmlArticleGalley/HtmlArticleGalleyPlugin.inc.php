@@ -67,8 +67,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		}
 
 		$submissionFile = $galley->getFile();
-		$filepath = Services::get('file')->getPath($submissionFile->getData('fileId'));
-		if (Services::get('file')->fs->getMimetype($filepath) === 'text/html') {
+		if ($submissionFile->getData('mimetype') === 'text/html') {
 			foreach ($article->getData('publications') as $publication) {
 				if ($publication->getId() === $galley->getData('publicationId')) {
 					$galleyPublication = $publication;
@@ -107,8 +106,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		}
 
 		$submissionFile = $galley->getFile();
-		$filepath = Services::get('file')->getPath($submissionFile->getData('fileId'));
-		if (Services::get('file')->fs->getMimetype($filepath) === 'text/html' && $galley->getData('submissionFileId') == $fileId) {
+		if ($galley->getData('submissionFileId') == $fileId && $submissionFile->getData('mimetype') === 'text/html' && $galley->getData('submissionFileId') == $submissionFile->getId()) {
 			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
 				echo $this->_getHTMLContents($request, $galley);
 				$returner = true;
@@ -130,7 +128,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	protected function _getHTMLContents($request, $galley) {
 		$submissionFile = $galley->getFile();
 		$submissionId = $submissionFile->getData('submissionId');
-		$contents = Services::get('file')->fs->read(Services::get('file')->getPath($submissionFile->getData('fileId')));
+		$contents = Services::get('file')->fs->read($submissionFile->getData('path'));
 
 		// Replace media file references
 		import('lib.pkp.classes.submission.SubmissionFile'); // Constants
@@ -142,10 +140,14 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		]);
 		$embeddableFiles = iterator_to_array($embeddableFilesIterator);
 
+		$referredArticle = null;
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		foreach ($embeddableFiles as $embeddableFile) {
 			$params = array();
 
-			if ($embeddableFile->getFileType()=='text/plain' || $embeddableFile->getFileType()=='text/css') $params['inline']='true';
+			if ($embeddableFile->getData('mimetype') == 'text/plain' || $embeddableFile->getData('mimetype') == 'text/css') {
+				$params['inline'] ='true';
+			}
 
 			// Ensure that the $referredArticle object refers to the article we want
 			if (!$referredArticle || $referredArticle->getId() != $submissionId) {

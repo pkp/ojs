@@ -118,10 +118,7 @@ class ArticleGalley extends Representation {
 	 */
 	function getFileType() {
 		$galleyFile = $this->getFile();
-		if (!$galleyFile) {
-			return null;
-		}
-		return Services::get('file')->fs->getMimetype(Services::get('file')->getPath($galleyFile->getData('fileId')));
+		return $galleyFile ? $galleyFile->getData('mimetype') : null;
 	}
 
 	/**
