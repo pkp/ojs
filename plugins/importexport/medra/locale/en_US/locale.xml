@@ -24,7 +24,7 @@
 		Please note that the password will be saved as plain text, i.e. not encrypted, due
 		to the mEDRA registration service requirements.
 	]]></message>
-	
+
 	<message key="plugins.importexport.medra.settings.form.description">Please configure the mEDRA export plugin:</message>
 	<message key="plugins.importexport.medra.settings.form.username">Username</message>
 	<message key="plugins.importexport.medra.settings.form.usernameRequired">Please enter your mEDRA username. The username may not contain colons.</message>
@@ -48,6 +48,15 @@
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOIs assigned to articles will be exported to mEDRA as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOIs assigned to galleys will be exported as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
 
 	<message key="plugins.importexport.medra.senderTask.name">mEDRA automatic registration task</message>
+
+	<message key="plugins.importexport.medra.crossref">Deposit to Crossref. (This service must be enabled for your account.)</message>
+	<message key="plugins.importexport.medra.crossref.error.cause">Cause: file not valid in respect to the mEDRA and/or Crossref requirements.</message>
+	<message key="plugins.importexport.medra.crossref.error.number">Number of errors</message>
+	<message key="plugins.importexport.medra.crossref.error.details">The following requirements were not met</message>
+
+	<message key="plugins.importexport.medra.crossref.error.code">CODE</message>
+	<message key="plugins.importexport.medra.crossref.error.element">ELEMENT</message>
+	<message key="plugins.importexport.medra.crossref.error.description">DESCRIPTION</message>
 
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Usage: 
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...

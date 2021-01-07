@@ -29,6 +29,11 @@ define('O4DOI_TEXTFORMAT_ASCII', '00');
 define('O4DOI_TITLE_TYPE_FULL', '01');
 define('O4DOI_TITLE_TYPE_ISSUE', '07');
 
+// Name identifier types
+define('O4DOI_NAME_IDENTIFIER_TYPE_PROPRIETARY', '01');
+define('O4DOI_NAME_IDENTIFIER_TYPE_ISNI', '16');
+define('O4DOI_NAME_IDENTIFIER_TYPE_ORCID', '21');
+
 // Publishing roles
 define('O4DOI_PUBLISHING_ROLE_PUBLISHER', '01');
 
@@ -43,7 +48,7 @@ define('O4DOI_EPUB_FORMAT_HTML', '01');
 define('O4DOI_EPUB_FORMAT_PDF', '02');
 
 // Date formats
-define('O4DOI_DATE_FORMAT_YYYY', '06');
+define('O4DOI_DATE_FORMAT_YYYY', '05');
 
 // Extent types
 define('O4DOI_EXTENT_TYPE_FILESIZE', '22');
@@ -219,6 +224,23 @@ class O4DOIXmlFilter extends NativeExportFilter {
 	}
 
 	/**
+	 * Create a NameIdentifier node.
+	 * @param $doc DOMDocument
+	 * @param $nameIDType string One of the O4DOI_NAME_IDENTIFIER_TYPE_* constants.
+	 * @param $idValue string
+	 * @return DOMElement
+	 */
+	function createNameIdentifierNode($doc, $nameIDType, $idValue) {
+	    $deployment = $this->getDeployment();
+	    $nameIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'NameIdentifier');
+	    // NameIDType (mandatory)
+	    $nameIdentifierNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NameIDType', $nameIDType));
+	    // IDValue (mandatory)
+	    $nameIdentifierNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'IDValue', $idValue));
+	    return $nameIdentifierNode;
+	}
+
+	/**
 	 * Create a publisher node.
 	 * @param $doc DOMDocument
 	 * @param $journalLocalePrecedence array
@@ -260,7 +282,6 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		}
 		// ISSN
 		if (!empty($issn)) {
-			$issn = PKPString::regexp_replace('/[^0-9]/', '', $issn);
 			$serialVersionNode->appendChild($this->createIdentifierNode($doc, 'Product', O4DOI_ID_TYPE_ISSN, $issn));
 		}
 		// Product Form
@@ -431,15 +452,6 @@ class O4DOIXmlFilter extends NativeExportFilter {
 			$locales[] = $galley->getLocale();
 		}
 		if (is_a($article, 'Submission')) {
-			// First try to translate the article language into a locale.
-			$articleLocale = $this->translateLanguageToLocale($article->getLanguage());
-			if (!is_null($articleLocale)) {
-				$locales[] = $articleLocale;
-			}
-
-			// Use the article locale as fallback only
-			// as this is the primary locale of article meta-data, not
-			// necessarily of the article itself.
 			if(AppLocale::isLocaleValid($article->getLocale())) {
 				$locales[] = $article->getLocale();
 			}
@@ -459,26 +471,6 @@ class O4DOIXmlFilter extends NativeExportFilter {
 
 		assert(!empty($locales));
 		return $locales;
-	}
-
-	/**
-	 * Try to translate an ISO language code to an OJS locale.
-	 * @param $language string 2- or 3-letter ISO language code
-	 * @return string|null An OJS locale or null if no matching
-	 *  locale could be found.
-	 */
-	function translateLanguageToLocale($language) {
-		$locale = null;
-		if (strlen($language) == 2) {
-			$language = AppLocale::get3LetterFrom2LetterIsoLanguage($language);
-		}
-		if (strlen($language) == 3) {
-			$language = AppLocale::getLocaleFrom3LetterIso($language);
-		}
-		if (AppLocale::isLocaleValid($language)) {
-			$locale = $language;
-		}
-		return $locale;
 	}
 
 	/**

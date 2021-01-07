@@ -105,7 +105,7 @@ class MedraSettingsForm extends Form {
 	/**
 	 * copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 
 		// Issue export options.
@@ -130,7 +130,7 @@ class MedraSettingsForm extends Form {
 	/**
 	 * Execute the form.
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$plugin = $this->_getPlugin();
 		$contextId = $this->_getContextId();
 		foreach($this->getFormFields() as $fieldName => $fieldType) {
