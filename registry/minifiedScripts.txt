@@ -85,7 +85,6 @@ lib/pkp/js/controllers/wizard/WizardHandler.js
 lib/pkp/js/controllers/grid/queries/ReadQueryHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/FileUploadWizardHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/form/FileUploadFormHandler.js
-lib/pkp/js/controllers/wizard/fileUpload/form/RevisionConfirmationHandler.js
 lib/pkp/js/controllers/grid/navigationMenus/form/NavigationMenuFormHandler.js
 lib/pkp/js/controllers/grid/navigationMenus/form/NavigationMenuItemsFormHandler.js
 lib/pkp/js/controllers/grid/representations/form/RepresentationFormHandler.js

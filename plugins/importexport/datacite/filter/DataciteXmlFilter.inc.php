@@ -565,7 +565,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 			case isset($galley):
 				// The galley represents the article.
 				$pages = $publication->getData('pages');
-				$path = Services::get('file')->getPath($galleyFile->getData('fileId'));
+				$path = $galleyFile->getData('path');
 				$size = Services::get('file')->fs->getSize($path);
 				$sizes[] = Services::get('file')->getNiceFileSize($size);
 				break;
