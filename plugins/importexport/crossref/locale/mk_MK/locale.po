@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-08 12:25+0000\n"
+"PO-Revision-Date: 2021-01-09 09:52+0000\n"
 "Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-crossref/mk_MK/>\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Користете го CrossRef API за тестирање (околина за тестирање) за DOI "
 "депозитот. Ве молиме не заборавајте да ја извадите оваа опција за продукција."
 
-#, fuzzy
 msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
 msgstr ""
 "OJS автоматски ќе ги депонира назначените DOIs во CrossRef. Ве молиме имајте "
@@ -83,3 +82,74 @@ msgstr ""
 "Трудовите не се избрани за назначување ДОИ со јавниот плагин за "
 "идентификација на ДОИ, затоа нема можност за складирање или експортирање со "
 "овој плагин."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Нема спарен труд со специфицираниот ИД \"{$articleId}\"."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Нема спарен број со специфицираниот ИД \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr ""
+"Регистрацијата беше успешна, но се појави следното укажување: '{$param}'."
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr ""
+"Регистрацијата не е целосно успешна! Серверот за регистрација на ДОИ покажа "
+"грешка."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Koristewe:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 "
+"[objectId2] ...\n"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Автоматска постапка за регистрација во CrossRef"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Означи активно"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Експортирање"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Депонирана состојба:</p>\n"
+"\t\t<p>\n"
+"\t\t- Не депонирано: не е направен обид за депонирање на овој ДОИ.<br />\n"
+"\t\t- Активно: ДОИ е депониран и успешно разрешен.<br />\n"
+"\t\t- Неуспешно: Складирањето ДОИ е неуспешно.<br />\n"
+"\t\t- Означено активно: ДОИ е рачно назначен како активен.\n"
+"\t\t</p>\n"
+"\t\t<p>Прикажана е  само состојбата на последниот обид за депозит.</p>\n"
+"\t\t<p>Ако депозитот не  е успешен, молам раши го проблемот со повторна "
+"регистрација на ДОИ.</p>"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Депонирано"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Означено активно"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Активно"
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Неуспешно"
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr ""
+"Забележи: само броевите (и нивните трудови) тука ќе се земат за "
+"експорт/регистрација."
+
+msgid "plugins.importexport.crossref.settings.form.onlyValidateExport"
+msgstr "Валидира само експортирање. Не го симнувај фајлот."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr ""
+"Валидирај XML. Употреби ја оваа опција за симнување XML за рачна "
+"регистрација на ДОИ."
