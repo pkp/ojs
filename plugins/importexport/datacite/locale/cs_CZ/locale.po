@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:37+00:00\n"
-"PO-Revision-Date: 2020-12-12 08:52+0000\n"
+"PO-Revision-Date: 2021-01-09 09:52+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-datacite/cs_CZ/>\n"
@@ -59,3 +59,12 @@ msgstr "Použijte testovací prefix DataCite pro registraci DOI. Nezapomeňte tu
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Automatická úloha registrace DataCite"
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Testovací předpona DOI (DOI Prefix)"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Testovací heslo"
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Testovací uživatelské jméno"
