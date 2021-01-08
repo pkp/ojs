@@ -46,7 +46,7 @@
 	{/strip}
 	<br/>
 {/iterate}
-{if !$authors->wasEmpty()}
+{if !empty($firstLetter)}{* If the author list wasn't empty *}
 	<br />
 	{page_info iterator=$authors}&nbsp;&nbsp;&nbsp;&nbsp;{page_links anchor="authors" iterator=$authors name="authors" searchInitial=$searchInitial}
 {else}

@@ -91,7 +91,7 @@ class AuthorDAO extends PKPAuthorDAO {
 		}
 
 		$result = $this->retrieveRange(
-			'SELECT a.*, ug.show_title, s.locale,
+			$sql = 'SELECT a.*, ug.show_title, s.locale,
 				COALESCE(agl.setting_value, agpl.setting_value) AS author_given,
 				CASE WHEN agl.setting_value <> \'\' THEN afl.setting_value ELSE afpl.setting_value END AS author_family
 			FROM	authors a
@@ -129,7 +129,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_fromRow');
+		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo);
 	}
 }
 
