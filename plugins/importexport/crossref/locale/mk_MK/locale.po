@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-01-08 12:25+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-crossref/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -77,3 +77,9 @@ msgstr "Експортирај ги метаподатоците на трудо
 
 msgid "plugins.importexport.crossref.displayName"
 msgstr "Плагин за експортирање на CrossRef XML"
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr ""
+"Трудовите не се избрани за назначување ДОИ со јавниот плагин за "
+"идентификација на ДОИ, затоа нема можност за складирање или експортирање со "
+"овој плагин."
