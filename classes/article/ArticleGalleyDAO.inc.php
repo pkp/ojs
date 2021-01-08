@@ -290,7 +290,7 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 		}
 
 		$result = $this->retrieveRange(
-			'SELECT	g.*
+			$sql = 'SELECT	g.*
 			FROM	publication_galleys g
 				LEFT JOIN publications p ON (p.publication_id = g.publication_id)
 				LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
@@ -318,6 +318,6 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_fromRow');
+		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo);
 	}
 }

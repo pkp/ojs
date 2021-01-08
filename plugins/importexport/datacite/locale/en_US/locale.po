@@ -57,6 +57,15 @@ msgstr "OJS will deposit DOIs automatically to DataCite. Please note that this m
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr "Use the DataCite test prefix for DOI registration. Please do not forget to remove this option for the production."
 
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Test Username"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Test Password"
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Test DOI Prefix"
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite automatic registration task"
 
