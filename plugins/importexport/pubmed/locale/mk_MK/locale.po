@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-09 09:52+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-11 10:59+0000\n"
+"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -13,3 +13,42 @@ msgstr ""
 
 msgid "plugins.importexport.pubmed.displayName"
 msgstr "Плагин за експортирање на PubMed XML"
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr ""
+"Ниту една статија не се совпадна со наведениот ID на статијата "
+"„{$articleId}“."
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr ""
+"Ниту едно издание не се совпадна со наведениот ID на изданието „{$issueId}“."
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "ГРЕШКА:"
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+"Употреба:\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] написи [articleId1] "
+"[articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] издание [issueId]\n"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Изберете написи за извоз."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Написи за извоз"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Изберете издание за извоз."
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Изданија за извоз"
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "Извоз на податоци"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr ""
+"Извоз на метаподатоци за статии во формат PubMed XML за индексирање во "
+"MEDLINE."
