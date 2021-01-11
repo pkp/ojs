@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:34-07:00\n"
-"PO-Revision-Date: 2020-12-14 09:38+0000\n"
+"PO-Revision-Date: 2021-01-11 21:08+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-datacite/pt_BR/>\n"
@@ -60,3 +60,12 @@ msgstr "OJS depositará DOIs automaticamente no DataCite. Por favor note que iss
 
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr "Use o prefixo de testes do DataCite para registro dos DOI. Não esqueça de remover esta opção quando não estiver mais em testes."
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Prefixo DOI de teste"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Senha de teste"
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Nome de usuário de teste"
