@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:38+00:00\n"
-"PO-Revision-Date: 2020-12-21 11:00+0000\n"
+"PO-Revision-Date: 2021-01-11 10:59+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-datacite/it_IT/>\n"
@@ -55,7 +55,16 @@ msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr "Usa il prefisso di test di DataCite per la registrazione dei DOI. Per favore non dimenticarti di rimuovere questa opzione prima di andare in produzione."
 
 msgid "plugins.importexport.datacite.senderTask.name"
-msgstr "Nome del task di registrazione automatica su DataCite"
+msgstr "Nome della task di registrazione automatica su DataCite"
 
 msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
 msgstr "OJS depositerà automaticamente i DOI in DataCite per registrarli. Per favore nota che può passare un certo tempo dalla pubblicazione prima della fine del processo. Puoi controllare tutti i DOI non registrati."
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Test DOI Prefix"
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Test Username"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Test Password"
