@@ -203,7 +203,7 @@ class OAIDAO extends PKPOAIDAO {
 	 * @param $set string
 	 * @param $submissionId int optional
 	 * @param $orderBy string UNFILTERED
-	 * @return Enumerable
+	 * @return Iterable
 	 */
 	function _getRecordsRecordSet($setIds, $from, $until, $set, $submissionId = null, $orderBy = 'journal_id, submission_id') {
 		$journalId = array_shift($setIds);
