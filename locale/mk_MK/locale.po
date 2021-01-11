@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-11 10:59+0000\n"
+"PO-Revision-Date: 2021-01-11 21:08+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
@@ -43,3 +43,632 @@ msgstr "Префрелете се на друго списание:"
 
 msgid "context.current"
 msgstr "Тековно списание:"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Лекторот е отстранет од поднесокот"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Назначен Лектор на поднесокот"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Ажурирана датотеката за уредување"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Конечното уредување е завршено"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Првобитното уредување е завршено"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Ажурирана датотека со поправки на уредникот"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Започнато доделување за уредување"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Уредникот е отстранет од поднесокот"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Назначен уредник на поднесокот"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Поднесокот е повратен од архива"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Поднесокот е испратен во архива"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Ажурирана датотека на уредникот"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Поднесена одлука на уредникот"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Уредникот е отстранет од поднесокот"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Назначен Уредник на поднесок"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Ажурирана датотеката со поравки на авторот"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Поднесени поправки на авторот"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Трудот е објавен"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Поднесокот е доделен на издание"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Поднесокот е испратен во редицата за распоредување во изданија"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Поднесен труд"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Настан на поднесок"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Забелешка:</strong> Кај институционални претплати купени онлајн, "
+"доменот и  IP опсегот мора да бидат одобрени пред да се активира претплатата."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Не е потребна најава за претплати преку институции. Доменот и/или IP "
+"адресата на корисникот се користи за обезбедување пристап до претплатничка "
+"содржина."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Кај поединечни претплати, мора да бидете најавени за да пристапите до "
+"претплатничка содржина."
+
+msgid "subscriptions.status.other"
+msgstr "Останато, видете белешки"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Немате активна претплата."
+
+#, fuzzy
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Очекува онлајн уплата"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Очекува рачна уплата"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Треба одобрување"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Треба информации"
+
+msgid "subscriptions.status.active"
+msgstr "Активно"
+
+msgid "subscriptions.status"
+msgstr "Статус"
+
+msgid "subscriptions.inactive"
+msgstr "Неактивно"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "За печатење и онлајн"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Отпечати"
+
+#, fuzzy
+msgid "subscriptionTypes.format.online"
+msgstr "Онлајн"
+
+#, fuzzy
+msgid "subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Не истекува"
+
+msgid "subscriptionTypes.months"
+msgstr "месеци"
+
+msgid "subscriptionTypes.month"
+msgstr "месец"
+
+msgid "subscriptionTypes.years"
+msgstr "години"
+
+msgid "subscriptionTypes.year"
+msgstr "година"
+
+msgid "subscriptionTypes.currency"
+msgstr "Валута"
+
+msgid "issue.return"
+msgstr "Назад кон детали на изданието"
+
+msgid "issue.viewIssue"
+msgstr "Прегледај го изданието"
+
+msgid "issue.nonpdf.title"
+msgstr "Превземи го изданието"
+
+msgid "issue.fullIssue"
+msgstr "Целосно издание"
+
+msgid "issue.coverPage.altText"
+msgstr "Насловна страна"
+
+msgid "issue.abstract"
+msgstr "Апстракт"
+
+msgid "issue.toc"
+msgstr "Содржина"
+
+msgid "issue.noIssues"
+msgstr "Нема изданија"
+
+msgid "issue.year"
+msgstr "Година"
+
+msgid "issue.no"
+msgstr "Бр."
+
+msgid "issue.vol"
+msgstr "Том."
+
+msgid "issue.number"
+msgstr "Број"
+
+msgid "issue.volume"
+msgstr "Том"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Прегледај {$identification}"
+
+msgid "issue.title"
+msgstr "Наслов"
+
+msgid "issue.issues"
+msgstr "Изданија"
+
+msgid "issue.issue"
+msgstr "Издание"
+
+msgid "user.role.journalAssistants"
+msgstr "Асистенти на списанието"
+
+msgid "user.role.journalAssistant"
+msgstr "Асистент на списанието"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Раководители на претплата"
+
+msgid "user.role.subEditors"
+msgstr "Секциски уредници"
+
+msgid "user.role.managers"
+msgstr "Раководители на списанието"
+
+msgid "user.role.subscriptionManager"
+msgstr "Раководител на претплати"
+
+msgid "user.role.subEditor"
+msgstr "Секциски уредник"
+
+msgid "user.role.manager"
+msgstr "Раководител на списанието"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Регистријате се како рецензент: Регистрацијата на рецензенти во моментов не "
+"е достапна."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Регистрирајте се како рецензент"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Поднесете труд: Регистрацијата на автори во моментов не е достапна."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Поднесете предлог"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Вашата корисничка сметка во моментов нема ниедна дејност во ова списание. Ве "
+"молиме изберете од дејностите подолу:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Вашата корисничка сметка во моментов не е поврзана со ниедно списание. Ве "
+"молиме изберете списание:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Менаџирај ги моите претплати"
+
+msgid "user.myJournals"
+msgstr "Мои списанија"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Доколку побаравте да бидете рецензент во некое списание, ве молиме да "
+"внесете теми кои ве интересираат."
+
+msgid "user.register.otherContextRoles"
+msgstr "Побарајте ги следните улоги."
+
+msgid "user.register.contextsPrompt"
+msgstr "На кои списанија на оваа страница би сакале да се регистрирате?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Да, би сакал/а да ми испраќате барања за рецензирање поднесоци во ова "
+"списание."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Да, побарајте ја улогата {$userGroup}."
+
+msgid "user.reviewerPrompt"
+msgstr "Дали би сакале да ги рецензирате поднесоците на ова списание?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Регистрирај се на други списанија"
+
+msgid "user.showAllJournals"
+msgstr "Прикажи ги моите списанија"
+
+msgid "user.profile.profileImage"
+msgstr "Слика на профил"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Вклучи корисници без улога во ова списание."
+
+msgid "user.authorization.representationNotFound"
+msgstr "Бараниот отисок не беше пронајден."
+
+msgid "journal.viewAllIssues"
+msgstr "Види ги сите изданија"
+
+#, fuzzy
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Списание"
+
+msgid "journal.path"
+msgstr "Патека"
+
+msgid "context.contexts"
+msgstr "Списанија"
+
+msgid "journal.currentIssue"
+msgstr "Тековно издание"
+
+msgid "submission.search"
+msgstr "Пребарај труд"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Лекторирано"
+
+msgid "submissions.layoutComplete"
+msgstr "Уреден распоред"
+
+msgid "submissions.copyeditComplete"
+msgstr "Уредено"
+
+msgid "submission.eventLog"
+msgstr "Дневник на настани"
+
+msgid "submissions.editorRuling"
+msgstr "Пресуда на уредникот"
+
+msgid "submissions.editorDecision"
+msgstr "Одлука на уредникот"
+
+msgid "submissions.proof"
+msgstr "Лекториран труд"
+
+msgid "submissions.reviewRound"
+msgstr "Рунда на рецензирање"
+
+msgid "submissions.postAuthor"
+msgstr "По-авторот"
+
+msgid "submissions.initialProof"
+msgstr "Првобитен лекториран труд"
+
+msgid "submissions.proofread"
+msgstr "Лекторирање"
+
+msgid "submissions.initial"
+msgstr "Првобитно"
+
+msgid "submissions.published"
+msgstr "Објавено"
+
+msgid "submissions.queuedReview"
+msgstr "Во Рецензија"
+
+msgid "submissions.step3"
+msgstr "3 чекор"
+
+msgid "submissions.step1"
+msgstr "1 чекор"
+
+#, fuzzy
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submission.scheduledIn"
+msgstr "Закажано за објава во {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Агенда"
+
+msgid "submission.proofreading"
+msgstr "Лекторирање"
+
+msgid "submission.copyedit"
+msgstr "Уредувај"
+
+msgid "submission.copyediting"
+msgstr "Уредување"
+
+msgid "submission.authorVersion"
+msgstr "Верзија на авторот"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Преработена верзија на датотеката на авторот"
+
+msgid "submission.editorVersion"
+msgstr "Верзија на уредникот"
+
+msgid "submission.postReviewVersion"
+msgstr "Верзија на датотеката по рецензија"
+
+msgid "submission.reviewersVersion"
+msgstr "Обележана верзија на датотеката на рецензентот"
+
+msgid "submission.editorAuthorRecord"
+msgstr "И-меил запис на Уредник/Автор"
+
+msgid "submission.notifyEditor"
+msgstr "Извести го уредникот"
+
+msgid "submission.notifyAuthor"
+msgstr "Извести го авторот"
+
+msgid "submission.editorReview"
+msgstr "Рецензија на Уредник"
+
+msgid "submission.round"
+msgstr "Рунда&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Одлука на Уредник"
+
+msgid "submission.sent"
+msgstr "Пратено"
+
+msgid "submission.changeSection"
+msgstr "Промени во"
+
+msgid "submission.submissionEditing"
+msgstr "Уредување на поднесок"
+
+msgid "category.category"
+msgstr "Категории"
+
+msgid "article.return"
+msgstr "Назад кон Детали на трудот"
+
+msgid "article.fontSize.large.altText"
+msgstr "Голема"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Средна"
+
+msgid "article.fontSize.small.altText"
+msgstr "Мала"
+
+msgid "article.fontSize"
+msgstr "Големина на фонт"
+
+msgid "article.comments.enable"
+msgstr "Овозможи"
+
+msgid "article.comments.disable"
+msgstr "Оневозможи"
+
+msgid "article.comments.sectionDefault"
+msgstr "Стандардно"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Ограничен пристап"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Отворен пристап"
+
+#, fuzzy
+msgid "article.coverPage.altText"
+msgstr "Насловна слика"
+
+msgid "article.abstract"
+msgstr "Апстракт"
+
+msgid "article.details"
+msgstr "Детали"
+
+msgid "article.submissions"
+msgstr "Поднесоци"
+
+msgid "article.submission"
+msgstr "Поднесок"
+
+msgid "article.commentsToEditor"
+msgstr "Коментари на авторот"
+
+#, fuzzy
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Јазик"
+
+msgid "article.type"
+msgstr "Тип, метод или пристап"
+
+msgid "article.coverage"
+msgstr "Обем"
+
+msgid "article.subject"
+msgstr "Клучни зборови"
+
+msgid "article.discipline"
+msgstr "Академски дисциплини и поддисциплини"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Доп. датотеки"
+
+#, fuzzy
+msgid "article.suppFiles"
+msgstr "Дополнителна датотека(и)"
+
+msgid "article.suppFile"
+msgstr "Дополнителна датотека"
+
+msgid "article.file"
+msgstr "Датотека"
+
+msgid "article.journalSection"
+msgstr "Секција на списание"
+
+msgid "article.metadata"
+msgstr "Метаподатоци"
+
+msgid "article.indexingInformation"
+msgstr "Информации за индексирање"
+
+msgid "article.authors"
+msgstr "Автори"
+
+msgid "article.title"
+msgstr "Наслов"
+
+msgid "article.submissionId"
+msgstr "ID на поднесок"
+
+msgid "common.publications"
+msgstr "Трудови"
+
+msgid "common.publication"
+msgstr "Труд"
+
+msgid "article.articles"
+msgstr "Трудови"
+
+msgid "article.article"
+msgstr "Труд"
+
+msgid "section.policy"
+msgstr "Секциска полиса"
+
+#, fuzzy
+msgid "section.abbreviation.example"
+msgstr "(На пример, Изданија=ИЗД)"
+
+msgid "section.abbreviation"
+msgstr "Кратенка"
+
+msgid "section.title"
+msgstr "Наслов на секција"
+
+msgid "section.sections"
+msgstr "Секции"
+
+msgid "section.section"
+msgstr "Секција"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Назначени уредници"
+
+msgid "common.queue.short.completed"
+msgstr "Архива"
+
+msgid "common.queue.long.completed"
+msgstr "Архива"
+
+msgid "common.queue.short.active"
+msgstr "Активни"
+
+msgid "common.queue.long.active"
+msgstr "Активни"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Архиви"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Архиви"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Во Рецензија"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Поднесоци во Рецензија"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Во Уредување"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Поднесоци во Уредување"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Недоделено"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Недоделено"
+
+msgid "navigation.skip.issue"
+msgstr "Прескокни до тековното издание"
+
+msgid "navigation.skip.about"
+msgstr "Прескокни до списанието"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Информации за библиотекари"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Информации за автори"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Директива за судир на интереси"
+
+msgid "navigation.infoForLibrarians"
+msgstr "За библиотекари"
+
+msgid "navigation.infoForAuthors"
+msgstr "За автори"
+
+msgid "navigation.browseByAuthor"
+msgstr "Според Автор"
+
+msgid "navigation.browseByIssue"
+msgstr "Според издание"
+
+msgid "navigation.otherJournals"
+msgstr "Останати списанија"
+
+msgid "navigation.current"
+msgstr "Тековно"
+
+msgid "navigation.journalHelp"
+msgstr "Помош за списанието"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Слика на главната страна на списанието"
+
+msgid "common.homePageHeader.altText"
+msgstr "Заглавје на главна страна"
