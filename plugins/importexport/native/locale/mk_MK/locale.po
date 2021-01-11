@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-09 09:52+0000\n"
+"PO-Revision-Date: 2021-01-11 10:59+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/mk_MK/>\n"
@@ -84,3 +84,7 @@ msgstr ""
 
 msgid "plugins.importexport.native.displayName"
 msgstr "Плагин за нативен XML"
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"Трудот \"{$articleTitle}\" е содржан во изданието, но нема датум на објава."
