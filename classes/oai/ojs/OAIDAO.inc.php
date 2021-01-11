@@ -209,13 +209,17 @@ class OAIDAO extends PKPOAIDAO {
 		$journalId = array_shift($setIds);
 		$sectionId = array_shift($setIds);
 
-		# Exclude journals that have OAI turned off, see #pkp/pkp-lib#6503
-		$excludeJournals = Capsule::table('journal_settings')
-			->where('setting_name', 'enableOai')
-			->where('setting_value', 0)
-			->groupBy('journal_id')
-			->pluck('journal_id')
-			->all();
+		# Exlude all journals that do not have Oai specifically turned on, see #pkp/pkp-lib#6503
+		$excludeJournals = Capsule::table('journals')
+			->whereNotIn('journal_id',function($query){
+				$query->select('journal_id')
+				->from('journal_settings')
+				->where('setting_name', 'enableOai')
+				->where('setting_value', 1);
+			})
+		->groupBy('journal_id')
+		->pluck('journal_id')
+		->all();
 
 		$params = array((int) STATUS_PUBLISHED);
 		if (isset($journalId)) $params[] = (int) $journalId;
