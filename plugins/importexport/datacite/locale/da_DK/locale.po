@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:37+00:00\n"
-"PO-Revision-Date: 2020-12-15 09:06+0000\n"
+"PO-Revision-Date: 2021-01-11 10:59+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-datacite/da_DK/>\n"
@@ -62,3 +62,12 @@ msgstr "Brug DataCite test-præfix til DOI registrering. Husk at fjerne denne mu
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite automatisk registreringsopgave"
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Test-DOI præfix"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Test-password"
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Test-brugernavn"
