@@ -1685,6 +1685,7 @@ msgstr "OJS namestitev"
 msgid "installer.ojsUpgrade"
 msgstr "OJS nadgradnja"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS Version {$version}</h4>\n"

@@ -2032,6 +2032,7 @@ msgstr ""
 "<p>2. Trebuie creat un director pentru stocarea fișierelor încărcate și să "
 "poată fi scris (vezi „Setări fișiere” de mai jos).</p>"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS Versiunea {$version}</h4>\n"

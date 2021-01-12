@@ -1743,6 +1743,7 @@ msgstr "تنصيب نظام المجلات المفتوحة"
 msgid "installer.ojsUpgrade"
 msgstr "ترقية نظام المجلات المفتوحة"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>نسخة نظام المجلات المفتوحة {$version}</h4>\n"

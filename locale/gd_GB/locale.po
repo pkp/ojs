@@ -240,6 +240,7 @@ msgstr ""
 "a luchdadh suas agus feumaidh e a bhith so-sgrìobhte (faic “Roghainnean "
 "faidhle” gu h-ìosal.</p>"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>Tionndadh OJS {$version}</h4>\n"

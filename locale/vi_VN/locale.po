@@ -1698,6 +1698,7 @@ msgstr ""
 "<p>2. Một thư mục để lưu trữ các tệp đã tải lên phải được tạo và ghi lại ("
 "xem \"Cài đặt tệp\" bên dưới).</p>"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>Phiên bản OJS {$version}</h4>\n"

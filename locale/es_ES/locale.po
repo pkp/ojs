@@ -1484,6 +1484,7 @@ msgstr "Instalación de OJS"
 msgid "installer.ojsUpgrade"
 msgstr "Actualización de OJS"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>Versión OJS{$version}</h4>\n"
