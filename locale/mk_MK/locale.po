@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-12 12:00+0000\n"
+"PO-Revision-Date: 2021-01-13 17:01+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
@@ -825,3 +825,586 @@ msgstr ""
 "\n"
 "По избор можете да го известите корисникот за причината за оневозможување на "
 "нивната сметка."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} или {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} или {$register} да направите поднесок."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Регистрација"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Најава"
+
+msgid "about.submissions"
+msgstr "Поднесоци"
+
+msgid "about.sectionPolicies"
+msgstr "Секциски полиси"
+
+msgid "about.focusAndScope"
+msgstr "Главен интерес и обем"
+
+msgid "about.editorialPolicies"
+msgstr "Уредничка полиса"
+
+msgid "about.editorialTeam.biography"
+msgstr "Биографија"
+
+msgid "about.editorialTeam"
+msgstr "Уреднички тим"
+
+msgid "about.history"
+msgstr "Историја на списанието"
+
+msgid "about.aboutContext"
+msgstr "За списанието"
+
+msgid "about.contact"
+msgstr "Контакт"
+
+msgid "about.statistics"
+msgstr "Статистики"
+
+msgid "archive.issueUnavailable"
+msgstr "Изданието не е достапно"
+
+msgid "archive.browse"
+msgstr "Прелистај низ претходни изданија"
+
+msgid "archive.archivesPageNumber"
+msgstr "Архиви - {$pageNumber} страна"
+
+msgid "archive.archives"
+msgstr "Архиви"
+
+msgid "current.noCurrentIssue"
+msgstr "Нема тековни изданија"
+
+msgid "current.current"
+msgstr "Тековни"
+
+msgid "site.noJournals"
+msgstr "Нема достапни списанија."
+
+msgid "site.journalCurrent"
+msgstr "Тековно издание"
+
+msgid "site.journalRegister"
+msgstr "Регистрација"
+
+msgid "site.journalView"
+msgstr "Прегледај го списанието"
+
+msgid "article.nonpdf.title"
+msgstr "Превземи труд"
+
+msgid "article.download"
+msgstr "Превземи ја оваа PDF датотека"
+
+#, fuzzy
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.pageTitle"
+msgstr "Преглед на {$title}"
+
+msgid "search.authorDetails"
+msgstr "Детали за авторот"
+
+msgid "search.allJournals"
+msgstr "Сите списанија"
+
+msgid "search.withinJournal"
+msgstr "Во"
+
+msgid "search.searchFor"
+msgstr "Пребарај низ трудови за"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Додади"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Избриши"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Потребно е име на институција."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Име на институција"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Оваа корисничка сметка веќе има поединечна претплата."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Ве молиме изберете важечки тип на претплата."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Потребни се информации за членство за одбраниот тип претплата."
+
+msgid "user.subscriptions.form.membership"
+msgstr "Членство"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Тип претплата"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Прегледај достапни типови претплата"
+
+msgid "user.subscriptions.expired"
+msgstr "Истечено на: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Истекува на: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Набави претплата преку институција"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Набави поединечна претплата"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Набави нова претплата"
+
+msgid "user.subscriptions.purchase"
+msgstr "Набави"
+
+msgid "user.subscriptions.renew"
+msgstr "Обнови"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Претплати преку институции"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Поединечна претплата"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Започната е онлајн наплата но е откажана или не е завршена"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Започната е рачна наплата но се уште не е примена"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Претплатата мора да биде прегледана пред да биде активирана"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Потребни се дополнителни информации пред да биде активирана претплатата"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Опис"
+
+msgid "user.subscriptions.status"
+msgstr "Статус"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Активните и истечените претплати се прикажани подолу заедно со нивниот рок "
+"на важење. Покрај тоа, следната информација за статусот може да биде "
+"вклучена со секоја претплата."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Статус на претплата"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Мои претплати"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Мора да се согласите со изјавата за приватност на оваа веб-страница."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Мора да се согласите со изјавата за приватност на секое списание на кое се "
+"регистрирате."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Да, се согласувам моите податоци да бидат собирани и зачувани согласно со <a "
+"href=\"{$privacyUrl}\" target=\"_blank\">изјавата за приватност</a> на "
+"списанието."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Да, би сакал да бидам известен за нови објави и известувања на сите "
+"списанија на кои се регистрирав."
+
+msgid "user.register.reviewerDescription"
+msgstr "Согласен да изврши отворена рецензија на поднесоците на веб-страницата."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Согласен да изврши отворена рецензија на поднесоците на списанието."
+
+msgid "user.register.authorDescription"
+msgstr "Може да поднесе трудови до списанието."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Известени преку и-меил кога издание на списанието има отворен пристап."
+
+msgid "user.register.readerDescription"
+msgstr "Известени преку и-меил за објава на издание на списанието."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Лозинката која ја внесовте не е доволно долга."
+
+msgid "user.register.registrationDisabled"
+msgstr "Ова списание во моментов не прифаќа регистрација на корисници."
+
+msgid "user.register.privacyStatement"
+msgstr "Изјава за приватност"
+
+msgid "user.register.noJournals"
+msgstr "Нема списанија на кои може да се регистрирате на оваа веб-страница."
+
+msgid "user.register.selectContext"
+msgstr "Изберете списание на кое сакате да се регистрирате:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Зачувај и испрати и-меил до авторот"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Зачувај и испрати и-меил до авторот"
+
+msgid "submission.comments.forEditor"
+msgstr "За уредникот"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "За авторот и уредникот"
+
+#, fuzzy
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"По испраќање, прикажи BCC копија која може да се уреди за испраќање до "
+"рецензентите."
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "За уредникот"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "За авторот и уредникот"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Овие коментари може да се споделат со авторот.<br />\n"
+"(По зачувување, може да се додадат дополнителни коментари.)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Коментари за уредување"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Кореспонденција Уредник/Автор"
+
+msgid "submission.logType.proofread"
+msgstr "Лекторирање"
+
+msgid "submission.logType.layout"
+msgstr "Распоред"
+
+msgid "submission.logType.copyedit"
+msgstr "Уредување"
+
+msgid "submission.logType.review"
+msgstr "Рецензија"
+
+msgid "submission.logType.editor"
+msgstr "Уредник"
+
+msgid "submission.logType.author"
+msgstr "Автор"
+
+msgid "submission.logType.article"
+msgstr "Труд"
+
+msgid "submission.proofread.instructions"
+msgstr "Инструкции за лекторирање"
+
+msgid "submission.proofread.corrections"
+msgstr "Исправки од лекторирање"
+
+msgid "submission.proofreadingComments"
+msgstr "Коментари за лекторирање"
+
+#, fuzzy
+msgid "submission.layout.referenceLinking"
+msgstr "Reference Linking"
+
+msgid "submission.layout.instructions"
+msgstr "Инструкции за распоред"
+
+msgid "submission.layout.layoutComments"
+msgstr "Коментари за распоред"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Замени уредник за распоред"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Назначи уредник за распоред"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Веќе постои јавна идентификација на отисок."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Нема (Прикачете ја конечната верзија за уредување како верзија со распоред "
+"пред да го пратите барањето)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Инструкции за уредување"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Коментари за уредување"
+
+msgid "submission.copyedit.useFile"
+msgstr "Искористи датотека"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Назначи уредник"
+
+#, fuzzy
+msgid "submission.copyedit.copyeditVersion"
+msgstr "C/E Version"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Конечно уредување"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Уредување на авторот"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Уредување на уредникот"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Првобитно уредување"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Нема задачи за лекторирање"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Датотека на уредникот"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Датотека на уредникот"
+
+#, fuzzy
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "File To C/E"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Откако ќе внесете одлука повеќе нема да можете да правите промени на оваа "
+"рецензија. Дали сте сигурни дека сакате да продолжите?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Не беше избрана препорака. Морате да изберете препорака за да ја поднесете."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Поставете или прилагодете ја препораката од рецензијата."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Изберете препорака и поднесете ја рецензијата за да го завршите процесот. "
+"Морате да внесете рецензија или да прикачите датотека пред да изберете "
+"препорака."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Покрај тоа, можете да прикачите датотеки кои уредникот и/или авторот ќе ги "
+"земат во предвид."
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Кликнете на иконата за да ја внесете (или залепите) вашата рецензија за овој "
+"поднесок."
+
+msgid "reviewer.competingInterests"
+msgstr "Судир на интереси"
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Кликнете на имињата на датотеките за да ги превземете и рецензирате (на "
+"екран или преку печатење) датотеките поврзани со овој поднесок."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Доколку ќе ја извршите рецензијата, земете ги во предвид упатствата за "
+"рецензија подолу."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "дали ќе превземете обврска да извршите рецензија."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Известете го уредникот на поднесокот"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Прегледај упатства"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Прегледај чекори"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Прегледај распоред"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Поднесокот треба да се рецензира"
+
+msgid "reviewer.article.schedule"
+msgstr "Закажи"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Види коментари"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Одбиј поднесок"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Поднеси повторно на друго место"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Поднеси повторно за рецензија"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Потребни исправки"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Прифати поднесок"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Доспеана рецензија"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Поднесена рецензија"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Вашиот одоговор"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Барање на уредникот"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Доколку сакате да ја анотирате датотеката, за уредникот, зачувајте ја на "
+"вашиот хард диск и искористете Прегледај/Прикачи.)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Прикачена верзија на рецензентот"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Прикачени датотеки"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Коментари"
+
+msgid "reviewer.article.submitReview"
+msgstr "Испрати рецензија до уредник"
+
+msgid "reviewer.article.recommendation"
+msgstr "Препорака"
+
+msgid "reviewer.article.automatic"
+msgstr "(Автоматски)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Испрати потсетник"
+
+#, fuzzy
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor To Enter"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Внесете или залепете коментари за рецензијата тука"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Уредник на поднесок"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Поднесокот ќе биде достапен, доколку и кога рецензентот ќе се согласи да ја "
+"изврши рецензијата"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Не може да ја изврши рецензијата"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Ќе ја изврши рецензијата"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Извести го уредникот"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Датотека за рецензија"
+
+msgid "reviewer.averageQuality"
+msgstr "Оценка"
+
+msgid "reviewer.completedReviews"
+msgstr "Завршено"
+
+msgid "reviewer.pendingReviews"
+msgstr "Трудови кои чекаат рецензија"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL-адреса на одделно-хостирана содржина"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Овој отисок ќе биде пристапен на засебна веб-страница."
+
+msgid "submission.layout.imageInvalid"
+msgstr "Погрешен формат на слика. Прифатливи формати се .gif, .jpg, и .png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Прикачи дополнителна датотека"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Замени датотека"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Прикачи отисок на труд"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Задачи за уредување на распоред"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Нема активни задачи за уредување."
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Завршени задачи за уредување"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Активни задачи за уредување"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Создади нов рецензент"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Запиши постоечки корисник како рецензент"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Резултат"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Каење"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Каења и откажувања на рецензент"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Одлука на уредник, {$round} рунда"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Отворено рецензирање, {$round} рунда"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Прегледај каења, откажувања и претходни рунди"
+
+msgid "sectionEditor.regrets"
+msgstr "Каења"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Каења, откажувања и претходни рунди на рецензент"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Каења"
