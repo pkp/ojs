@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-01-12 10:16+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -22,9 +22,8 @@ msgstr ""
 "Дали сте сигурни дека сакате да ја обележите оваа задача како завршена? Нема "
 "да можете да направите промени потоа."
 
-#, fuzzy
 msgid "common.software"
-msgstr "Open Journal Systems"
+msgstr "Системи за отворени списанија"
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Ве молиме да ги пополните бараните полиња."
@@ -132,7 +131,6 @@ msgstr "Останато, видете белешки"
 msgid "subscriptions.status.noSubscription"
 msgstr "Немате активна претплата."
 
-#, fuzzy
 msgid "subscriptions.status.awaitingOnlinePayment"
 msgstr "Очекува онлајн уплата"
 
@@ -160,11 +158,9 @@ msgstr "За печатење и онлајн"
 msgid "subscriptionTypes.format.print"
 msgstr "Отпечати"
 
-#, fuzzy
 msgid "subscriptionTypes.format.online"
 msgstr "Онлајн"
 
-#, fuzzy
 msgid "subscriptionTypes.format"
 msgstr "Формат"
 
@@ -331,9 +327,8 @@ msgstr "Бараниот отисок не беше пронајден."
 msgid "journal.viewAllIssues"
 msgstr "Види ги сите изданија"
 
-#, fuzzy
 msgid "journal.issn"
-msgstr "ISSN"
+msgstr "ИССН"
 
 msgid "context.context"
 msgstr "Списание"
@@ -398,9 +393,8 @@ msgstr "3 чекор"
 msgid "submissions.step1"
 msgstr "1 чекор"
 
-#, fuzzy
 msgid "submission.scheduledIn.tba"
-msgstr "(TBA)"
+msgstr "(ЧБН)"
 
 msgid "submission.scheduledIn"
 msgstr "Закажано за објава во {$issueName}."
@@ -492,7 +486,6 @@ msgstr "Ограничен пристап"
 msgid "article.accessLogoOpen.altText"
 msgstr "Отворен пристап"
 
-#, fuzzy
 msgid "article.coverPage.altText"
 msgstr "Насловна слика"
 
@@ -511,9 +504,8 @@ msgstr "Поднесок"
 msgid "article.commentsToEditor"
 msgstr "Коментари на авторот"
 
-#, fuzzy
 msgid "article.sectionEditor"
-msgstr "SE"
+msgstr "СЕ"
 
 msgid "article.language"
 msgstr "Јазик"
@@ -533,7 +525,6 @@ msgstr "Академски дисциплини и поддисциплини"
 msgid "article.suppFilesAbbrev"
 msgstr "Доп. датотеки"
 
-#, fuzzy
 msgid "article.suppFiles"
 msgstr "Дополнителна датотека(и)"
 
@@ -576,9 +567,8 @@ msgstr "Труд"
 msgid "section.policy"
 msgstr "Секциска полиса"
 
-#, fuzzy
 msgid "section.abbreviation.example"
-msgstr "(На пример, Изданија=ИЗД)"
+msgstr "(На пример, Трудови=ТРУ)"
 
 msgid "section.abbreviation"
 msgstr "Кратенка"
