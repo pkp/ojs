@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-11 21:08+0000\n"
+"PO-Revision-Date: 2021-01-12 10:16+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
@@ -672,3 +672,116 @@ msgstr "Слика на главната страна на списанието"
 
 msgid "common.homePageHeader.altText"
 msgstr "Заглавје на главна страна"
+
+#, fuzzy
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Плагини за авторизација дозволуваат Open Journal Systems да делегира задачи "
+"за проверка на корисници до други системи, како LDAP сервери."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Плагин за отисок на труд додава поддршка за приказ на различни типови "
+"документи како отисоци на труд."
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Плагин за отисок на труд"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Типови претплати"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Претплати преку институции"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Поединечни претплати"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Раководење со претплата"
+
+msgid "search.results.similarDocuments"
+msgstr "слични документи"
+
+msgid "search.results.orderDir.desc"
+msgstr "Опаѓачки редослед"
+
+msgid "search.results.orderDir.asc"
+msgstr "Растечки редослед"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Релевантност"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Популарност (изминатиот месец)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Популарност (цело време)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Наслов на списание"
+
+msgid "search.results.orderBy.issue"
+msgstr "Издание"
+
+msgid "search.results.orderBy.date"
+msgstr "Датум на објава"
+
+msgid "search.results.orderBy.author"
+msgstr "Автор"
+
+msgid "search.results.orderBy.article"
+msgstr "Наслов на трудот"
+
+msgid "search.results.orderBy"
+msgstr "Подреди ги резултатите според"
+
+msgid "comments.authenticated"
+msgstr "од <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "Коментари за овој труд"
+
+#, fuzzy
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Потребно е претплата или наплата"
+
+msgid "reader.subscriptionAccess"
+msgstr "Потребна е претплата"
+
+msgid "reader.openAccess"
+msgstr "Отворен пристап"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Потребна е претплата за пристап до елементот. За потврда на претплатата, "
+"најавете се во списанието."
+
+msgid "reader.subscribersOnly"
+msgstr "Само за претплатници"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Задачата за распоред е завршена"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Ажуриран е отисокот за распоред"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Започнато доделување за распоред"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Уредникот за распоред е отстранет од поднесокот"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Назначен е уредник за распоред на поднесокот"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Задачата за лекторирање е завршена"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Ажурирана датотека со поправки на лекторот"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Започнато доделување за лекторирање"
