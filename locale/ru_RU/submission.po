@@ -215,7 +215,7 @@ msgstr "Запланировано к публикации в <a href=\"{$issueU
 msgid "publication.unscheduledIn"
 msgstr "Не запланировано к публикации в выпуске."
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Назначить в выпуск"
 
 msgid "publication.selectIssue"

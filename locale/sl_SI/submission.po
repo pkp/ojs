@@ -318,7 +318,7 @@ msgstr "Produkcijska diskusija"
 msgid "publication.selectIssue"
 msgstr "Izberite številko, v katero bo članke dodeljen za objavo"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Dodeli v številko"
 
 msgid "publication.unscheduledIn"

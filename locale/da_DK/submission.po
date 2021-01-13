@@ -231,7 +231,7 @@ msgstr "Denne indsendelses tidsskrift blev ikke fundet."
 msgid "publication.selectIssue"
 msgstr "Vælg et nummer som planlægges udgivet"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Angiv nummer"
 
 msgid "publication.unscheduledIn"

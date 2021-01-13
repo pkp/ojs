@@ -272,7 +272,7 @@ msgstr ""
 msgid "publication.unscheduledIn"
 msgstr "Cha deach seo a chur air an sgeideal airson foillseachadh fhathast."
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Iomruin do dh’iris"
 
 msgid "publication.selectIssue"

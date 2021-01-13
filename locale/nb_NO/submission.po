@@ -14,7 +14,7 @@ msgstr ""
 msgid "publication.selectIssue"
 msgstr "Velg et nummer som publikasjonen skal publiseres i"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Legg til nummer"
 
 msgid "publication.unscheduledIn"

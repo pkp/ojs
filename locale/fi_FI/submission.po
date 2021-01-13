@@ -232,7 +232,7 @@ msgstr ""
 msgid "publication.selectIssue"
 msgstr "Valitse numero julkaisun ajoittamiseksi"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Lisää numeroon"
 
 msgid "publication.unscheduledIn"

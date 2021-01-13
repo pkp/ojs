@@ -51,7 +51,7 @@ msgstr "Pošalji članak"
 msgid "submission.pageProofs"
 msgstr "Lektura"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Dodijeli izdanju"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
