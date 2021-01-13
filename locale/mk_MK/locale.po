@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-13 17:01+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-14 11:01+0000\n"
+"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -1408,3 +1408,8 @@ msgstr "#{$submissionId} Каења, откажувања и претходни 
 
 msgid "sectionEditor.regrets.breadcrumb"
 msgstr "Каења"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Генерички додатоци се користат за проширување на Open Journal Systems на "
+"различни начини кои не се поддржани од другите категории на додатоци."
