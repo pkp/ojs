@@ -256,7 +256,7 @@ msgstr "بڵاوکراوە"
 msgid "publication.selectIssue"
 msgstr "ژمارەیەک دیاریبکە بۆ کاتدانان بۆ بڵاوکردنەوە"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "پێسپاردن بە ژمارەیەک"
 
 msgid "publication.inactiveSection"

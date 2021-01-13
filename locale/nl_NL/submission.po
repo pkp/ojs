@@ -172,7 +172,7 @@ msgstr "Alle secties"
 msgid "publication.selectIssue"
 msgstr "Selecteer een nummer om in te plannen voor publicatie"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Toewijzen aan nummer"
 
 msgid "publication.unscheduledIn"

@@ -241,7 +241,7 @@ msgstr "Yayının sayı ayrıntıları güncellendi."
 msgid "publication.selectIssue"
 msgstr "Yayın için sayı seç ve planla"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Sayıya Ata"
 
 msgid "publication.unscheduledIn"

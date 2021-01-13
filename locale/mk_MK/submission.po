@@ -100,7 +100,7 @@ msgstr "Поденси труд"
 msgid "publication.selectIssue"
 msgstr "Изберете број за планирање за објавување"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Назначи за број на списание"
 
 msgid "publication.unscheduledIn"

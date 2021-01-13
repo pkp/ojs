@@ -213,7 +213,7 @@ msgstr "مجدول للنشر في <a href=\"{$issueUrl}\">{$issueName}</a>."
 msgid "publication.unscheduledIn"
 msgstr "لم تسبق جدولته للنشر ضمن أي عدد بعد."
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "التعيين للنشر ضمن عدد"
 
 msgid "publication.selectIssue"

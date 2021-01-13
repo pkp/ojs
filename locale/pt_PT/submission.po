@@ -250,7 +250,7 @@ msgstr ""
 msgid "publication.selectIssue"
 msgstr "Selecione um número para agendar a publicação"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Agendar para Número"
 
 msgid "publication.unscheduledIn"

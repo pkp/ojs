@@ -233,7 +233,7 @@ msgstr "Die Zeitschrift für diese Einreichung konnte nicht gefunden werden."
 msgid "publication.selectIssue"
 msgstr "Wählen Sie eine Ausgabe zur Planung der Veröffentlichung"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Einer Ausgabe zuordnen"
 
 msgid "publication.unscheduledIn"

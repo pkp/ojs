@@ -60,7 +60,7 @@ msgstr "以下列角色提交..."
 msgid "publication.selectIssue"
 msgstr "选择一个期次安排出版"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "分配给期次"
 
 msgid "publication.unscheduledIn"

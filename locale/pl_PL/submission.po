@@ -183,7 +183,7 @@ msgstr "Wszystkie pozycje"
 msgid "publication.selectIssue"
 msgstr "Wybierz wydanie w celu zaplanowania publikacji"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Przydziel do wydania"
 
 msgid "publication.unscheduledIn"

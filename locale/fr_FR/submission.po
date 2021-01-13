@@ -175,7 +175,7 @@ msgstr "Toutes les sections"
 msgid "publication.selectIssue"
 msgstr "Choisir un numéro pour programmer la publication"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Assigner à un numéro"
 
 msgid "publication.unscheduledIn"

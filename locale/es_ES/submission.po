@@ -242,7 +242,7 @@ msgstr "Los detalles de publicación del número han sido actualizados."
 msgid "publication.selectIssue"
 msgstr "Seleccionar un número para programarlo para publicación"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Asignar a número"
 
 msgid "publication.unscheduledIn"

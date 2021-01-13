@@ -227,7 +227,7 @@ msgstr "Časopis tohoto příspěvku nebyl nalezen."
 msgid "publication.selectIssue"
 msgstr "K naplánování publikování je třeba zvolit číslo"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Přiřadit do čísla"
 
 msgid "publication.unscheduledIn"

@@ -188,7 +188,7 @@ msgstr "Δεν ήταν δυνατή η εύρεση του περιοδικού
 msgid "publication.selectIssue"
 msgstr "Επιλέξτε ένα τεύχος για προγραμματισμό δημοσίευσης"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Εκχώρηση σε Τεύχος"
 
 msgid "publication.unscheduledIn"

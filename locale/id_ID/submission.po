@@ -242,7 +242,7 @@ msgstr "Jurnal untuk naskah yang diserahkan tidak dapat ditemukan."
 msgid "publication.selectIssue"
 msgstr "Tetapkan terbitan untuk dipublikasikan"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Dimasukkan ke dalam Terbitan"
 
 msgid "publication.unscheduledIn"

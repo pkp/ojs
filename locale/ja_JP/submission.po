@@ -32,7 +32,7 @@ msgstr "公開"
 msgid "publication.selectIssue"
 msgstr "発行予定の巻号を選択してください"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "巻号に割り当てる"
 
 msgid "publication.unscheduledIn"
