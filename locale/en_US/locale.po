@@ -1716,10 +1716,7 @@ msgid "installer.ojsUpgrade"
 msgstr "OJS Upgrade"
 
 msgid "installer.updatingInstructions"
-msgstr ""
-"\n"
-"<notification>\nIf you are upgrading an existing installation of OJS, <pkp-button element=\"a\" href=\"{$upgradeUrl}\">click here</pkp-button> to proceed.</notification>\n"
-""
+msgstr "If you are upgrading an existing installation of OJS, <a href=\"{$upgradeUrl}\">click here</a> to proceed."
 
 msgid "installer.installationInstructions"
 msgstr ""
