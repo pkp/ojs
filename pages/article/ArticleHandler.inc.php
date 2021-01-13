@@ -49,7 +49,12 @@ class ArticleHandler extends Handler {
 		if ($header = array_search('Authorization', array_flip(getallheaders()))) {
 			list($bearer, $jwt) = explode(' ', $header);
 			if (strcasecmp($bearer, 'Bearer') == 0) {
-				$apiToken = json_decode(JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256')));
+				$apiToken = JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256'));
+				// Compatibility with old API keys
+				// https://github.com/pkp/pkp-lib/issues/6462
+				if (substr($apiToken, 0, 2) === '""') {
+					$apiToken = json_decode($apiToken);
+				}
 				$this->setApiToken($apiToken);
 			}
 		}
