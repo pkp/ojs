@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-14 11:01+0000\n"
+"PO-Revision-Date: 2021-01-14 13:52+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
@@ -1463,3 +1463,9 @@ msgstr "Направете нов поднесок"
 
 msgid "about.onlineSubmissions.submitToSection"
 msgstr "Направете нов поднесок во <a href=\"{$url}\">{$name}</a> секција."
+
+msgid "about.subscriptions.institutional"
+msgstr "Претплати преку институција"
+
+msgid "about.subscriptions.individual"
+msgstr "Поединечни претплати"
