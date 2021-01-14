@@ -1270,6 +1270,7 @@ msgstr ""
 "socijalna\".</li>\n"
 "</ul>"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS verzija {$version}</h4>\n"

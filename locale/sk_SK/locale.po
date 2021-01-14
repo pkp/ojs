@@ -2016,6 +2016,7 @@ msgstr ""
 "<p> 2. Adresár pre ukladanie nahraných súborov musí byť vytvorený a "
 "zapisovateľný (viď \"Nastavenia súborov\" nižšie). </p>"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>Verzia OJS {$version}</h4>\n"

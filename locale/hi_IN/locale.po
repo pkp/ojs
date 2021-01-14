@@ -1844,6 +1844,7 @@ msgstr ""
 "<p>2. A directory to store uploaded files must be created and made writable ("
 "see \"File Settings\" below).</p>"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS Version {$version}</h4>\n"

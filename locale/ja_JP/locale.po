@@ -2056,6 +2056,7 @@ msgstr "投稿物のコピーエディタが解除された"
 msgid "submission.event.copyedit.copyeditorAssigned"
 msgstr "投稿物にコピーエディタが任命された"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS バージョン {$version}</h4>\n"
