@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-25 11:52+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -257,9 +257,8 @@ msgstr "Ова пробна копија е одобрена за да биде 
 msgid "grid.action.approveProof"
 msgstr "Одобрете ја пробната копија за да биде поставена за приказ."
 
-#, fuzzy
 msgid "publication.event.versionUnpublished"
-msgstr "A version was removed from publication."
+msgstr "Верзијата е отстранета од публикација."
 
 msgid "publication.event.unpublished"
 msgstr "Објавата на поднесокот беше откажана."

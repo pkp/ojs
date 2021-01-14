@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-04 11:25+0000\n"
+"PO-Revision-Date: 2021-01-05 08:15+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "ja_JP/>\n"
@@ -351,3 +351,96 @@ msgstr "出版予定号"
 
 msgid "editor.home"
 msgstr "編集者ホーム"
+
+msgid "editor.article.coverImage"
+msgstr "表紙画像"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"公開巻号識別子 '{$ publicIdentifier}'は、同じタイプの別のオブジェクトに既に存在します。 雑誌内で一意の識別子を選択してください。"
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"いずれかの投稿ステージにすでにアップロードされているファイルは、以下の「含める」チェックボックスをチェックして「検索」をクリックすることで、校正リストに追"
+"加することができます：利用可能なすべてのファイルがリストアップされ、含めるために選択することができます。"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"このリストの最終原稿ファイルは、コピーエディターによって整理編集版に変換され、以下の<span class=\"pkp_help_title\""
+">原稿整理</span>にアップロードされます。"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "ゲラファイルを選択"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"レイアウトエディターは、各ゲラごとにこれらのファイルを準備し、校正作業のために適切な <span class=\"pkp_help_title\""
+">校正</span>にアップロードします。"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "号のゲラを編集"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "アクセス公開日が不正です。"
+
+msgid "editor.article.remove.confirm"
+msgstr "この論文を号から削除してもよろしいですか。この論文は別の号でスケジューリング可能です。"
+
+msgid "editor.article.remove"
+msgstr "削除"
+
+msgid "grid.action.removeArticle"
+msgstr "論文を号から削除"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "削除しようとしたカバー画像が見つかりませんでした。 すでに削除されている可能性があります。 ページをリロードしてみてください。"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "出版料金が支払われていません。アイテムを出版スケジュールに載せるためには、料金を支払うよう著者に通知するか出版料金を免除してください。"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "指定予定"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "出版スケジュール"
+
+msgid "editor.article.editMetadata"
+msgstr "バージョンメタデーターを編集"
+
+msgid "editor.article.viewMetadata"
+msgstr "バージョンメタデーターの閲覧"
+
+#, fuzzy
+msgid "editor.article.publishVersion"
+msgstr "この版の出版"
+
+#, fuzzy
+msgid "editor.article.showPublicationVersion"
+msgstr "出版予定を表示する"
+
+msgid "editor.submissions.inSection"
+msgstr "セクション"
+
+msgid "issues.submissions.issueIds"
+msgstr "巻号"
+
+msgid "editor.submissions.assignedTo"
+msgstr "担当者"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "最新完了"
+
+msgid "editor.submissions.averageTime"
+msgstr "週数"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "最新"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "投稿物なし"
+
+msgid "editor.submissions.accept"
+msgstr "受領"
+
+msgid "editor.submissions.invite"
+msgstr "依頼"

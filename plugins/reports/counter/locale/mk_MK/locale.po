@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-11 10:59+0000\n"
+"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Извештај за весник 1"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Извештај за напис 1"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Сите клиенти"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Врските подолу генерираат застарени извештаи користејќи ги старите податоци "
+"за приклучокот, што не е подготвено за COUNTER. Ако сакате да генерирате "
+"тековни извештаи на COUNTER користејќи го новиот метрички тип OJS COUNTER, "
+"користете ги врските погоре."
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "анонимен"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Вкупно за сите списанија"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Вкупно"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "Интернет ISSN"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "Печати ISSN"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Платформа"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Издавач"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Датум на извршување:"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Број на успешни барања за написи во цел текст по месец и весник (година "
+"{$year})"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Извештај за весник 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Извештај за весник 1 (Р3): Барања за написи во цел текст по месец и весник"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"Извештај за весник COUNTER 1 (R3): Барања за написи во цел текст по месец и "
+"весник"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "Верзија на XML"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER Извештај JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Овие врски генерираат извештаи подготвени за COUNTER засновани на "
+"застареното издание 3.0. Овој извештај ги опфаќа сите списанија на "
+"страницата. Користете го најновото издание наместо тоа, кога е можно."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Резултатите не може да се форматираат како XML."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Не беа пронајдени резултати за овој извештај."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Барањето за извештај е неважечко."
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Параметрите на извештајот беа неважечки."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Извештаи за постари страници"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER објавување"
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER извештаи"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"Додатокот COUNTER дозволува известување за активноста на дневникот, "
+"користејќи го <a href=\"http://www.projectcounter.org\"> стандардот COUNTER "
+"</a>. Само овие извештаи не го прават списанието COUNTER усогласено. За да "
+"понудите усогласеност со COUNTER, прегледајте ги барањата на веб-страницата "
+"на Project COUNTER."

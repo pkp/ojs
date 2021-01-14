@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-11 10:59+0000\n"
+"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "Опсези на IP"
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Поштенска адреса на институцијата"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Овој приклучок спроведува извештај CSV кој содржи список со претплати и "
+"нивни информации."
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Извештај за претплати"

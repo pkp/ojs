@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-09 09:52+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Начин на користење:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Депозитот не беше успешен! DOAJ API пријави грешка: '{$param}'."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ задача за автоматска регистрација"
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"Користете го DOAJ API за тестирање (околина за тестирање) за регистрацијата. "
+"Ве молиме не заборавајте да ја извадите оваа опција за продукција."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS автоматски ќе депонира трудови до DOAJ. Ве молиме имајте во предвид дека "
+"ќе биде потребно малку време после објавување ова да се процесира (пр. "
+"зависно од вашата cronjob конфигурација). Можете да ги проверите сите "
+"нерегистрирани трудови."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr ""
+"Можете да го најдете вашиот API клуч на вашата корисничка страница на DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API клуч"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr ""
+"Доколку би сакале да регистрирате трудови преку OJS, ве молиме да го внесете "
+"вашиот DOAJ API клуч. Инаку, се уште ќе можете да експортирате во DOAJ XML "
+"форматот но нема да можете да ги регистрирате вашите трудови преку OJS."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Контактирајте го DOAJ за вклучување"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Експортирај списание за DOAJ."
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Плагин за експортирање на DOAJ"

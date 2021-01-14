@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-26 12:52+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-subscription/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -35,9 +35,8 @@ msgstr "Истекува"
 msgid "plugins.block.subscription.blockTitle"
 msgstr "Претплата"
 
-#, fuzzy
 msgid "plugins.block.subscription.description"
-msgstr "This plugin provides sidebar subscription information."
+msgstr "Овој блок овозможува информација за странична претплата."
 
 msgid "plugins.block.subscription.displayName"
 msgstr "Блок за претплата"

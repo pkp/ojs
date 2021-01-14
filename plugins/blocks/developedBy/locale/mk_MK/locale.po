@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-25 11:52+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-developedBy/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -11,9 +11,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "plugins.block.developedBy.description"
-msgstr "This plugin provides sidebar \"Developed By\" link."
+msgstr "Овој плагин овозможува линк до страничната колона \"Developed By\"."
 
 msgid "plugins.block.developedBy.displayName"
 msgstr "Блок \"Развиено од\""

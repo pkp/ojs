@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-26 12:52+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-languageToggle/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -11,9 +11,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "plugins.block.languageToggle.description"
-msgstr "This plugin provides the sidebar language toggler."
+msgstr "Овој плагин овозможува странично преклопување на јазик."
 
 msgid "plugins.block.languageToggle.displayName"
 msgstr "Блок за промена на јазик"

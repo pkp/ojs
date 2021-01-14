@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-09 09:52+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-medra/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Начин на кориње: \n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys}"
+" objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "mEDRA задача за автоматска регистрација"
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr ""
+"Користете го mEDRA API за тестирање (околина за тестирање) за ДОИ "
+"регистрацијата. Ве молиме не заборавајте да ја извадите оваа опција за "
+"продукција."
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS автоматски ќе регистрира назначени ДОИ во mEDRA. Ве молиме имајте во "
+"предвид дека ќе биде потребно малку време после објавување ова да се "
+"процесира (пр. зависно од вашата cronjob конфигурација). Можете да ги "
+"проверите сите нерегистрирани ДОИ."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Изданија се експортираат како"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "манифестација"
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "дело"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr ""
+"Ве молиме одберете дали сакате да ги експортирате изданијата како <a href=\""
+"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'дела' или "
+"'манифестации'</a>."
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Ве молиме да внесете валиден и-меил за технолошки контакт."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "И-меил"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Ве молиме внесете технолошко лице за контакт."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Лице за контакт"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr ""
+"Ве молиме да ја внесете институцијата која е технолошки одговорна за експорт "
+"на ДОИ (пр. институцијата која го хостира вашиот веб сервер)."
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Институција"
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Лицето за контакт од страна на mEDRA во случај на технички барања:"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Ве молиме внесете ја институцијата која е регистрирана во mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Името на институцијата регистрирана во mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr ""
+"Ве молиме да го внесете вашето mEDRA корисничко име. Корисничкото име не "
+"смее да содржи две точки."
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Корисничко име"
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Ве молиме да го конфигурирате mEDRA плагинот за експорт:"
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"\n"
+"\t\tДоколку сакате да регистрирате ДОИ преку mEDRA, ве молиме да ги следите "
+"упатствата на\n"
+"\t\t<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">главната "
+"страница на mEDRA</a>\n"
+"\t\tза да добиете корисничко име и лозинка. Доколку немате ваши корисничко "
+"име и\n"
+"\t\tлозинка, се уште ќе можете да експортирате во mEDRA XML формат (Onix за "
+"ДОИ)\n"
+"\t\tно нема да можете да ги регистрирате вашите ДОИ преку mEDRA од OJS. \n"
+"\t\tВе молиме имајте во предвид дека лозинката ќе биде зачувана како обичен "
+"текст, односно\n"
+"\t\tбез енкрипција, заради потребите на mEDRA услугите за регистрација.\n"
+"\t"
+
+msgid "plugins.importexport.medra.description"
+msgstr ""
+"Експортирај метаподатоци за издание, труд и орисок во Onix за ДОИ (O4DOI) "
+"формат  и регистрирај го ДОИ-те со mEDRA агенцијата за регистрација."
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "mEDRA плагин за експорт/регистрација"

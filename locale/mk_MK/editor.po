@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-31 13:52+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -11,11 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
-"Уредникот на нацртот ги подготвува овие датотеки за секое galley и потоа ги "
-"прикачува на соодветната <span class=\"pkp_help_title\">Лектура</span> за "
+"Уредникот на нацртот ги подготвува овие датотеки за секој отисок и потоа ги "
+"прикачува на соодветната <span class=\"pkp_help_title\">лектура</span> за "
 "лекторирање."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
@@ -31,23 +30,20 @@ msgstr ""
 "поле „Вклучи“ подолу и кликнување на „Пребарај“: сите достапни датотеки ќе "
 "бидат наведени и може да бидат избрани за вклучување."
 
-#, fuzzy
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
 "Конечните датотеки за нацрт во оваа листа се трансформирани во уредени "
 "верзии од страна на уредникот, прикачени подолу под <span class=\""
-"pkp_help_title\">Уредување</span>."
+"pkp_help_title\">уредување</span>."
 
-#, fuzzy
 msgid "editor.issues.editIssueGalley"
-msgstr "Измени го galley на изданието"
+msgstr "Измени го отисокот на бројот"
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "Датумот за пристап не е важечки."
 
-#, fuzzy
 msgid "editor.submission.selectGalleyFiles"
-msgstr "Избери galley датотеки"
+msgstr "Избери датотеки за отисоци"
 
 msgid "editor.article.remove.confirm"
 msgstr ""
@@ -142,9 +138,8 @@ msgstr "Откажи го обајвувањето на изданието"
 msgid "editor.issues.publishIssue"
 msgstr "Објави го изданието"
 
-#, fuzzy
 msgid "editor.issues.publicId"
-msgstr "Јавно Id"
+msgstr "Јавен Id"
 
 msgid "editor.issues.order"
 msgstr "Редослед"
@@ -195,24 +190,20 @@ msgstr "Приказ"
 msgid "editor.issues.showCoverPage"
 msgstr "Создадете корица за изданието со следните елементи."
 
-#, fuzzy
 msgid "editor.issues.coverPageCaption"
-msgstr "Наслов на корицата"
+msgstr "Наслов на корица"
 
-#, fuzzy
 msgid "editor.issues.removeStyleFile"
-msgstr "Отстранете stylesheet?"
+msgstr "Отстранете изглед?"
 
-#, fuzzy
 msgid "editor.issues.invalidStyleFormat"
 msgstr ""
-"Погрешен формат на stylesheet. Осигурете се дека доставената датотека е "
-"валиден CSS. (Имајте во предвид дека stylesheets со коментари на почетокот "
-"може да бидат одбиени.)"
+"Погрешен формат на изглед. Осигурете се дека доставената датотека е валиден "
+"CSS. (Имајте во предвид дека stylesheets со коментари на почетокот може да "
+"бидат одбиени.)"
 
-#, fuzzy
 msgid "editor.issues.styleFile"
-msgstr "Stylesheet"
+msgstr "Изглед"
 
 msgid "editor.issues.invalidCoverImageFormat"
 msgstr ""
@@ -244,7 +235,6 @@ msgstr "Поставено"
 msgid "editor.issues.coverPageInstructions"
 msgstr "(Дозволени формати: .gif, .jpg или .png)"
 
-#, fuzzy
 msgid "editor.issues.coverPage"
 msgstr "Насловна слика"
 
@@ -289,9 +279,8 @@ msgstr "Претходни изданија"
 msgid "grid.action.setCurrentIssue"
 msgstr "Постави актуелно издание"
 
-#, fuzzy
 msgid "grid.action.addIssueGalley"
-msgstr "Создади galley на изданието"
+msgstr "Создади отисок на број"
 
 msgid "grid.action.previewIssue"
 msgstr "Преглед"
@@ -305,9 +294,8 @@ msgstr "Создади издание"
 msgid "grid.action.publish"
 msgstr "Објави издание"
 
-#, fuzzy
 msgid "grid.action.addGalley"
-msgstr "Додај galley"
+msgstr "Додај отисок"
 
 msgid "editor.navigation.futureIssues"
 msgstr "Идни изданија"
@@ -315,44 +303,35 @@ msgstr "Идни изданија"
 msgid "editor.issues.identifiers"
 msgstr "Идентификатори"
 
-#, fuzzy
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "Дали сте сигурни дека сакате да го избришете ова galley на изданието?"
+msgstr "Дали сте сигурни дека сакате да го избришете овој отисок на бројот?"
 
-#, fuzzy
 msgid "editor.issues.backToIssueGalleys"
-msgstr "Врати се на galleys на изданието"
+msgstr "Врати се на отисок од бројот"
 
-#, fuzzy
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Јавна идентификација за galley на изданието веќе постои."
+msgstr "Јавна идентификација за отисок на бројот веќе постои."
 
-#, fuzzy
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Потребен е локал за galley на изданието."
+msgstr "Потребна е локализација за отисок на бројот."
 
 msgid "editor.issues.galleyLabelRequired"
 msgstr "Потребна е ознака за galley на изданието."
 
-#, fuzzy
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Нема објавени galleys на изданието."
+msgstr "Нема објавени отисоци на бројот."
 
-#, fuzzy
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Објави galleys со целата содржина на изданието."
+msgstr "Објави отисок со целата содржина на бројот."
 
-#, fuzzy
 msgid "editor.issues.viewingGalley"
-msgstr "Прикажување на Galley на изданието"
+msgstr "Прикажување отисок на број"
 
-#, fuzzy
 msgid "editor.issues.galley"
-msgstr "Galley на изданието"
+msgstr "Отисок на број"
 
-#, fuzzy
 msgid "editor.issues.galleys"
-msgstr "Galleys на изданието"
+msgstr "Отисоци на издание"
 
 msgid "editor.issues.pages"
 msgstr "Страни"
@@ -360,9 +339,8 @@ msgstr "Страни"
 msgid "editor.issues.open"
 msgstr "Отвори"
 
-#, fuzzy
 msgid "editor.issues.noLiveIssues"
-msgstr "Нема активни изданија"
+msgstr "Нема активни броеви"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Не може да се зачува јавното id за издание:"
@@ -471,7 +449,6 @@ msgstr ""
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Нема поднесоци во архивата."
 
-#, fuzzy
 msgid "editor.publicIdentificationExists"
 msgstr ""
 "Јавниот идентификатор '{$publicIdentifier}' веќе постои за друга ставка ("
@@ -505,6 +482,5 @@ msgstr "Поднесување и објавување"
 msgid "editor.reassign"
 msgstr "Прераспредели"
 
-#, fuzzy
 msgid "editor.home"
 msgstr "Насловна страна за уредници"
