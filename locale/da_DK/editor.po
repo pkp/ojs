@@ -49,9 +49,6 @@ msgstr ""
 "Vil du gemme ændringerne til de arkiverede indsendelser? Indsendelser, der "
 "er markeret til sletning, slettes permanent fra systemet."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Er du sikker på, at du vil slette denne indsendelse permanent?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Er du sikker på, at du vil registrere denne beslutning?"
 

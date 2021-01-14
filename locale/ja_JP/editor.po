@@ -305,9 +305,6 @@ msgstr "この投稿物は、著者に通知メールが送信された、また
 msgid "editor.submissionReview.confirmDecision"
 msgstr "この判断を記録してもよいですか。"
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "この投稿物を完全に削除してもよいですか。"
-
 msgid "editor.submissionArchive.saveChanges"
 msgstr "アーカイブされた投稿物に対する変更を保存しますか。削除マークが付けられた投稿物はこのシステムから完全に削除されます。"
 

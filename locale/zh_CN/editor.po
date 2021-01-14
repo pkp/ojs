@@ -47,9 +47,6 @@ msgstr "存档中没有投稿."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "将更改保存到归档的投稿? 标记为删除的投稿将永久从系统中删除."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "您确定要永久删除此投稿?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "你确定要记录这一决定?"
 

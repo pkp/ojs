@@ -56,9 +56,6 @@ msgstr ""
 "Shrani spremembe v arhiv oddanih prispevkov? Prispevki shranjeni za brisanje "
 "bodo trajno odstranjeni iz sistema."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Ste prepričani, da želite za vedno zbrisati ta prispevek?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Ste prepričani, da želite shraniti to odločitev?"
 

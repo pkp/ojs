@@ -438,9 +438,6 @@ msgstr ""
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Дали сте сигурни дека сакате да ја зачувате оваа одлука?"
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Дали сте сигурни дека сакате трајно да го избришете овој поднесок?"
-
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "Дали сакате да ги зачувате промените на архивираните поднесоци? Поднесоците "

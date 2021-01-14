@@ -55,9 +55,6 @@ msgstr "Aucune soumission dans les archives."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Enregistrer les modifications aux soumissions archivées ? Les soumissions sélectionnées pour suppression seront supprimées du système de façon permanente."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Êtes-vous certain-e de vouloir supprimer définitivement cette soumission ?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Êtes-vous certain-e de vouloir enregistrer cette décision ?"
 

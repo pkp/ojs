@@ -47,9 +47,6 @@ msgstr "Nessuna proposta nell'archivio."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Salva le modifiche effettuate nell'archivio delle proposte? I contributi che hai selezionato saranno cancellati definitivamente dal sistema."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Sei sicuro di cancellare definitivamente questa proposta?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Sei sicuro di registrare questa decisione?"
 

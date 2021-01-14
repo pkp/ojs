@@ -54,9 +54,6 @@ msgstr "В архіві немає матеріалів."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Зберегти зміни для архівованих матеріалів? Подання, помічені для видалення, будуть остаточно видалені з системи."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Ви впевнені, що хочете остаточно видалити це подання?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Ви впевнені, що хочете записати це рішення?"
 

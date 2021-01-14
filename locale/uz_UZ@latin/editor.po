@@ -439,9 +439,6 @@ msgstr ""
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Ushbu qarorni yozib olishni xohlayotganingizga aminmisiz?"
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Yuborilgan faylni butunlay o‘chirmoqchimisiz?"
-
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "Arxivga yuborilgan ma'lumotlardagi o‘zgarishlarni saqlaysizmi? O‘chirish "

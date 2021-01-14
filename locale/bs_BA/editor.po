@@ -45,9 +45,6 @@ msgstr "Nema prijava u arhivi."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Želite li spremiti izmjene u arhivu prijava? Prijave označene za brisanje bit će trajno izbrisane iz sustava."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Jeste li sigurni da želite trajno obrisati ovu prijavu?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Jeste li sigurni da želite zapisati ovu odluku?"
 

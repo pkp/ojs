@@ -52,9 +52,6 @@ msgstr "Geen inzendingen in het archief."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "De veranderingen aan de gearchiveerde inzendingen opslaan? Inzendingen die gemarkeerd zijn voor verwijdering worden definitief uit het systeem verwijderd."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Weet u zeker dat u deze inzending definitief wilt verwijderen?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Weet u zeker dat u deze beslissing wilt vastleggen?"
 

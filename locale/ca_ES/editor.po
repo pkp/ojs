@@ -53,9 +53,6 @@ msgstr "No hi ha cap tramesa a l’arxivament."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Voleu desar els canvis fets a les trameses arxivades? Si marqueu una tramesa per suprimir-la, s’eliminarà permanentment del sistema."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Esteu segur/a que voleu suprimir permanentment aquesta tramesa?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Esteu segur/a que voleu enregistrar aquesta decisió?"
 

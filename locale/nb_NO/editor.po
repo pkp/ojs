@@ -42,9 +42,6 @@ msgstr "Ingen innleveringer i arkivet."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Lagre endringer til arkiverte manuskripter? Manuskripter som er merket for sletting vil bli slettet for alltid."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Er du sikker på at du vil slette denne innleveringen for alltid?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Er du sikker på at du vil registrere denne beslutningen?"
 

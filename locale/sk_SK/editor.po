@@ -370,9 +370,6 @@ msgstr ""
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Ste si istí, že chcete zaznamenať toto rozhodnutie?"
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Ste si istí, že chcete natrvalo zmazať tento príspevok?"
-
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "Uložiť zmeny v archivovaných príspevkoch? Príspevky označené pre zmazanie "

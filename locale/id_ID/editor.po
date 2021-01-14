@@ -55,9 +55,6 @@ msgstr ""
 "Simpan perubahan pada arsip penyerahan naskah? Naskah yang mau dihapus akan "
 "terhapus dari sistem secara permanen."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Anda yakin ingin menghapus naskah ini secara permanen?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Apakah Anda ingin merekam keputusan ini?"
 

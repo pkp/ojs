@@ -63,9 +63,6 @@ msgstr ""
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Bạn có chắc chắn muốn ghi lại quyết định này?"
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Bạn có chắc chắn muốn xóa vĩnh viễn bài này?"
-
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "Có lưu thay đổi để bài gửi được lưu trữ? Bài gửi được đánh dấu để xóa sẽ bị "
