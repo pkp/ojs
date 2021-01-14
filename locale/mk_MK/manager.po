@@ -1,2 +1,59 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-01-14 13:52+0000\n"
+"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.files.note"
+msgstr ""
+"Забелешка: Прелистувачот Датотеки е напредна карактеристика што овозможува "
+"директно гледање и манипулирање со датотеките и директориумите поврзани со "
+"списание."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Дали сте сигурни дека сакате да ги ресетирате сите обрасци за е-пошта во ова "
+"списание? Ќе ги изгубите сите прилагодувања што сте ги направиле."
+
+msgid "manager.website.archiving"
+msgstr "Архивирање"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Списанието ќе бара претплати за пристап до некои или до целата содржина."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Списанието ќе обезбеди отворен пристап до неговата содржина."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+"OJS нема да се користи за објавување на содржината на списанието преку "
+"Интернет."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Режим на објавување"
+
+msgid "manager.distribution.publication"
+msgstr "Публикација"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Користете го датумот на објавување на статијата"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Користете го датумот на објавување на изданието"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Изберете како е избран стандардниот датум на авторско право за една статија. "
+"Ова стандардно може да се замени од случај до случај. Ако „објавувате додека "
+"одите“, не користете го датумот на објавување на изданието."
+
+msgid "manager.distribution.access"
+msgstr "Пристап"
