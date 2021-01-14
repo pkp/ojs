@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-14 16:11+0000\n"
+"PO-Revision-Date: 2021-01-15 00:39+0000\n"
 "Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk_MK/>\n"
@@ -965,3 +965,991 @@ msgstr ""
 "OJS не извршува никакви конверзии во валута. Ако прифаќате плаќања за "
 "претплати, мора да бидете сигурни дека валутата за претплата одговара на "
 "онаа што е наведена овде."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Дали сте сигурни дека сакате да ги ресетирате податоците за дозволи за сите "
+"статии? Ова дејство не може да се врати."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Ресетирајте ги дозволите за член"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr ""
+"Број: стандардната година ќе биде извлечена од датумот на објавување на "
+"изданието."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Напис: стандардната година ќе биде извлечена од датумот на објавување на "
+"статијата, како во „објавувај-како-одиш“."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Засновајте ги авторските права на новата статија на"
+
+msgid "manager.publication.library"
+msgstr "Библиотека на издавачи"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Улогите се групи на корисници во списанието на кои им е даден пристап до "
+"различни нивоа на дозволи и придружни работни текови во списанието. Постојат "
+"пет различни нивоа на дозвола: Менаџерите на весници имаат пристап до сè што "
+"има во дневникот (целата содржина и поставки); Уредниците на секциите имаат "
+"целосен пристап до целата доделена содржина; Асистенти за весници имаат "
+"ограничен пристап до сите поднесоци што експлицитно им ги додели уредникот; "
+"Рецензентите можат да ги видат и извршат поднесоците што им е доделено да ги "
+"прегледуваат; и Авторите можат да гледаат и да комуницираат со ограничена "
+"количина на информации за нивните сопствени поднесоци. Дополнително, "
+"постојат пет различни задачи на сцената на кои може да им се даде пристап на "
+"улогите: Поднесување, Внатрешен преглед, Преглед, Уредувач и Продукција."
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Написите во објавените изданија на списанието се организирани во Секции, "
+"обично според темата или типот на содржина (на пр. Написи за преглед, "
+"истражување, итн.)."
+
+msgid "grid.action.addSection"
+msgstr "Додај дел"
+
+msgid "grid.category.path"
+msgstr "Патека"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Изберете ги најсоодветните категории од сетот наведени погоре. Читателите ќе "
+"можат да прелистуваат по категории од комплетниот пакет списанија."
+
+msgid "manager.setup.categories"
+msgstr "Категории"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Оваа врска ќе се прикаже само кога е најавен посетител."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Врска до страница која ги опишува тековните и минатите претплати на "
+"посетителот."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Врска до страница која ги опишува претплатите што ги нудите."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Типот на претплата е успешно создаден."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Не се создадени типови на претплата."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Тип на претплата"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Потребно е име на типот на претплата."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Тип на претплата со ова име веќе постои."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Име на типот"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Зачувајте и создадете друг"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Користете го даденото поле за избор."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Не ставајте го овој тип на претплата јавно достапен или видлив на "
+"веб-страницата."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Опции"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Користете го даденото поле за избор."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"За претплати се потребни информации за членство (на пр., Здружение, "
+"организација, конзорциум, итн.)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Ве молиме, користете ги дадените опции."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Институционално (корисниците се потврдуваат преку домен или IP адреса)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Индивидуално (корисниците се потврдуваат преку најавување)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Претплати"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Изберете важечки формат на типот на претплата."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Потребен е формат на типот на претплата."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Формат"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Потребно е времетраење."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Времетраењето мора да биде позитивна, нумеричка вредност."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Бројот на месеци што трае претплатата (на пример, 12)."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Времетраење"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Ве молиме, користете ги дадените опции."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Никогаш не истекува"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "месеци (на пример, 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Истекува после"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Опис"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Изберете важечка валута."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Потребна е валута."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Валута"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Потребна е цена."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Трошокот мора да биде позитивна, нумеричка вредност."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+"Внесете нумеричка вредност (на пример, 40 или 40,00) без симбол (на пример, "
+"$)."
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Цена"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Уредување"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Уредете го типот на претплата"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Времетраење"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Креирај"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Создадете нов тип на претплата"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Институционално"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Индивидуално"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Претплати"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Цена"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Предупредување! Сите претплати со овој тип на претплата исто така ќе бидат "
+"избришани. Дали сте сигурни дека сакате да продолжите и да го избришете овој "
+"тип на претплата?"
+
+msgid "manager.subscriptionTypes"
+msgstr "Видови претплата"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Име на институција"
+
+msgid "manager.subscriptions.contact"
+msgstr "Име за контакт"
+
+msgid "manager.subscriptions.user"
+msgstr "Корисник"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Тип на претплата"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Претплата е успешно создадена."
+
+msgid "manager.subscriptions.select"
+msgstr "Изберете"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Привилегиите за пристап до претплата автоматски им се доделуваат на "
+"менаџерите на весникот, Уредниците, Уредниците на секциите, Уредниците на "
+"распоредот и Лекторите."
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Изберете корисник"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Изберете контакт за претплата"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Нема претплати"
+
+msgid "manager.subscriptions.notes"
+msgstr "Белешки"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Референтен број"
+
+msgid "manager.subscriptions.membership"
+msgstr "Членство"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Опсег на IP"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Тип на претплата мора да се создаде пред да се направат нови претплати."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Овој корисник веќе има претплата за овој весник."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"За да му испратите на корисникот е-пошта за известување, името на контактот "
+"за претплата и адресата за е-пошта мора да бидат наведени во Поставување на "
+"списанието."
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Зачувајте и создадете друго"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Додади"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Избриши"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Внесете валиден опсег на IP."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ако тука се внесени IP опсези, доменот е опционален. <br /> Валидните "
+"вредности вклучуваат IP адреса (на пр. 142.58.103.1), опсег на IP (на пр. "
+"142.58.103.1 - 142.58.103.4), опсег на IP со вајлд-картичка '*' ( на пр. "
+"142.58. *. *) и опсег на IP со CIDR (на пр. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Опсези на IP"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Внесете важечки домен."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Избраниот тип на претплата бара домен и / или опсег на IP за проверка на "
+"претплата."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Ако овде е внесен домен, опсезите за IP се опционални. <br/> Валидни "
+"вредности се имиња на домени (на пример, lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Поштенска адреса"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Потребно е име на институција."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Име на институција"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Домен"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Белешки"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Избраниот тип на претплата бара информации за членство."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Внесете информации за членството ако типот на претплата бара претплатниците "
+"да припаѓаат на здружение или организација."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Референтен број"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Членство"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Користете го даденото поле за избор."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Испратете му на корисникот е-пошта со неговото корисничко име и деталите за "
+"претплатата."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Изберете валидна земја."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Ве молиме изберете валиден корисник."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Потребен е корисник."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Контакт"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Корисник"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Забелешка: Сите промени подолу се во профилот на корисникот ширум системот."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Изберете важечки датум на крај на претплатата."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Ова е тип на претплата што не истекува; Ве молиме, не наведете датум на крај."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Ова е тип на претплата што не истекува; Ве молиме, не наведете датум за "
+"почеток."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Потребен е датум на крај на претплатата."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Крајна дата"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Изберете важечки датум за почеток на претплата."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Потребен е датум за почеток на претплата."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Почетен датум"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Изберете важечки тип на претплата."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Потребен е тип на претплата."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Тип на претплата"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Изберете важечки статус на претплата."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Потребен е статус на претплата."
+
+msgid "manager.subscriptions.form.status"
+msgstr "Статус"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Сите"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Со статус"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Уредување"
+
+msgid "manager.subscriptions.edit"
+msgstr "Уредете ја претплатата"
+
+msgid "manager.subscriptions.domain"
+msgstr "Домен"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Почетен датум"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Започни"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Крајна дата"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Крај"
+
+msgid "manager.subscriptions.renew"
+msgstr "Обнови"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Креирај"
+
+msgid "manager.subscriptions.create"
+msgstr "Создадете нова претплата"
+
+msgid "manager.subscriptions.summary"
+msgstr "Резиме на претплати"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Дали сте сигурни дека сакате да ја избришете оваа претплата?"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Дали сте сигурни дека сакате да ја обновите оваа претплата?"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Институционални претплати"
+
+msgid "manager.individualSubscriptions"
+msgstr "Индивидуални претплати"
+
+msgid "manager.subscriptions"
+msgstr "Претплати"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Внесете важечка е-пошта."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Овие детали за контакт ќе бидат наведени на страницата за претплата за "
+"клиенти со прашања поврзани со претплати."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Менаџер за претплати"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Видовите на претплата и структурата на надоместокот ќе бидат прикажани на "
+"страницата за претплати, заедно со името и информациите за контакт за "
+"Менаџерот за претплати. Дополнителни информации за претплати, како што се "
+"начини на плаќање или поддршка за претплатници во земјите во развој, може да "
+"се додадат тука."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Информации за претплата"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Претплатничките списанија можат да обезбедат „одложен отворен пристап“ до "
+"нивната објавена содржина, како и да дозволат „авто-архивирање на авторот“ ("
+"обете го зголемуваат читателот и цитираат содржина)."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Отвори опции за пристап за списанија за претплати"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong> Белешка: </strong> За да ги овозможите овие опции, Менаџерот за "
+"весници мора да го овозможи модулот за плаќања преку Интернет, вклучително и "
+"плаќањата преку Интернет за претплати, во надоместоците за читање."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong> Забелешка: </strong> Институционалните претплати купени преку "
+"Интернет бараат одобрување на обезбедениот опсег на домен и IP и активирање "
+"на претплатата од Менаџерот за претплати."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Известете го Менаџерот за претплати по е-пошта по обновување на "
+"институционална претплата преку Интернет."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Известете го Менаџерот за претплати по е-пошта по обновување на Интернет од "
+"Интернет."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Известете го Менаџерот за претплати по е-пошта по купување преку Интернет на "
+"институционална претплата (препорачано)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Известете го Менаџерот за претплати по е-пошта по купување преку Интернет од "
+"страна на Индивидуална претплата."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Известувањата за автоматизирана е-пошта (достапни за уредување од страна на "
+"менаџерите на списанија во е-поштата на OJS) може да се испратат до "
+"Менаџерот за претплати по завршувањето на плаќањата на претплатата преку "
+"Интернет."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Известувања за плаќање преку Интернет"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong> Белешка: </strong> За да ја активирате оваа опција, администраторот "
+"на страницата мора да ја овозможи опцијата <tt> закажани_задачи </tt> во "
+"датотеката за конфигурација на OJS. Може да биде потребна дополнителна "
+"конфигурација на серверот за поддршка на оваа функционалност (што можеби не "
+"е можно на сите сервери), како што е наведено во документацијата на OJS."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Регистрираните читатели ќе имаат можност да ја примаат содржината преку е-"
+"пошта кога проблемот ќе стане отворен пристап."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Изберете валидна вредност за бројот на недели пред истекот на претплатата."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Изберете валидна вредност за бројот на недели по истекот на претплатата."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Изберете валидна вредност за бројот на месеци пред истекот на претплатата."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Изберете валидна вредност за бројот на месеци по истекот на претплатата."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML може да се користи во текстуалната област (за големината на фонтот, "
+"бојата и сл.), Со „враќања“ третирани како <tt>&lt;br&gt;</tt>; HTML "
+"уредникот работи со прелистувачи на Firefox."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Изберете едно од следниве:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong> Белешка: </strong> За да ги активирате овие опции, администраторот "
+"на страницата мора да ја овозможи опцијата <tt> закажани_задачи </tt> во "
+"датотеката за конфигурација на OJS. Може да биде потребна дополнителна "
+"конфигурација на серверот за поддршка на оваа функционалност (што можеби не "
+"е можно на сите сервери), како што е наведено во документацијата на OJS."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Автоматски потсетници за е-пошта (достапни за уредување од страна на "
+"менаџерите на весници во е-поштата на OJS) може да се испраќаат до "
+"претплатниците и пред и по истекот на претплатата."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Потсетници за истекот на претплатата"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Известете ги претплатниците по е-пошта пред истекот на претплатата."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Известете ги претплатниците по е-пошта пред истекот на претплатата."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Известете ги претплатниците по е-пошта по истекот на претплатата."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Известете ги претплатниците по е-пошта по истекот на претплатата"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Недели"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Месеци"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"На читателите им е забранет пристап до неодамна објавената содржина за "
+"претплата, но го задржуваат пристапот до содржината на претплатата објавена "
+"пред датумот на истекување на претплатата."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Делумно истекување"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"На читателите им е забранет пристап до целата содржина на претплата по "
+"истекот на претплатата."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Целосно истекување"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"По истекот на претплатата, на читателите може да им се забрани пристап до "
+"целата содржина на претплатата или може да продолжат да го задржуваат "
+"пристапот до содржината на претплатата објавена пред датумот на истекување "
+"на претплатата."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Истекување на претплатата"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Користете го даденото поле за избор."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Одложен отворен пристап"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Политики за претплата"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"Тесни резултати според типот на објектот (списание, издание, напис, типови "
+"на датотеки) и / или по еден или повеќе идентитет (и) на објектот."
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Тесни резултати по контекст (прашања и / или напис)."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Издадете прегледи на страницата со содржина"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Прегледи на главната страница во весникот"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Апстрактни прегледи на страницата и преземања на статии"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Апстрактни прегледи на страници на статии"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Преземања на датотеки со статии"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Претплати"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Изберете ги деловите за пресметување на статистичките рецензии на ова "
+"списание."
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Број на прегледи"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Резултат на уредникот"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Рецензенти"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Бр. доделен"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Регистрирани читатели"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Рецензиран е врсник"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Вкупно поднесоци"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Објавени изданија"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Белешка: Процентите за поднесоци од рецензирани оценки може да не се додадат "
+"до 100%, бидејќи предметите што се повторно испратени се прифатени, одбиени "
+"или се уште во тек."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Проверете ги предметите што ќе им бидат достапни на читателите во About "
+"Journal."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Објавени предмети"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS ја пресметува следната статистика за секое списание. „Деновите за "
+"преглед“ се пресметуваат од датумот на доставување (или ознака на верзијата "
+"за преглед) до првичната одлука на уредникот, додека „деновите за објавување“"
+" се мерат за прифатените поднесоци од првичното поставување до неговото "
+"објавување."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Денови на објавување"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Денови за преглед"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Повторно испрати"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Одбиј"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Прифати"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Број на прегледи на написи (само за автори)"
+
+msgid "manager.statistics.statistics"
+msgstr "Статистика за весник"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tВашиот дневник е конфигуриран да снима повеќе од една метрика на "
+"употреба. Статистиката за употреба ќе биде прикажана во неколку контексти.\n"
+"Постојат случаи кога мора да се користи статистика за една употреба, на пр. "
+"да прикажува нарачана листа на најкористени статии или да рангира\n"
+"Резултати од пребарувањето. Изберете една од конфигурираните метрики како "
+"стандардна.\n"
+"\t"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Наслов текст"
+
+msgid "manager.setup.userRegistration"
+msgstr "Регистрација на корисник"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Насловна слика"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Сликичка"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Списанието ќе користи уреднички / рецензентски одбор."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Написите и темите можат да бидат обележани со идентификациски број или низа, "
+"користејќи систем за регистрација како што е системот за идентификација на "
+"дигитални објекти (ДОИ)."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Уникатен идентификатор"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Обезбедете примери за релевантни типови, методи и пристапи на истражување за "
+"оваа област"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Тип (метод / пристап)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(На пр., Историско истражување; квази-експериментално; литературна анализа; "
+"истражување / интервју)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Обезбедете метаподатоци на услуги за индексирање на трети лица преку <a href="
+"\"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Овозможете OAI"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Во овој момент, ова списание не прифаќа поднесоци. Посетете ги поставките за "
+"работниот тек за да дозволите поднесување."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Спречете ги корисниците да доставуваат нови статии до списанието. Пријавите "
+"може да бидат оневозможени за одделни делови од списанијата на страницата за "
+"поставки за <a href=\"{$url}\">journal sections</a>."
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Упатства за автор, авторски права и индексирање (вклучително и регистрација)."
+
+msgid "manager.setup.submissions"
+msgstr "Поднесоци"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"При поднесување на пријава до списанието, од авторите прво се бара да ја "
+"проверат секоја ставка во Списокот за подготовка на поднесувањето како "
+"завршен, пред да продолжат. Листата за проверка исто така се појавува во "
+"Упатството за авторот, под За списанието. Списокот може да се уредува "
+"подолу, но за сите ставки на списокот ќе биде потребна ознака пред авторите "
+"да продолжат со поднесувањето."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Список за подготовка на поднесување"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Упатства за поднесување"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Обезбедете примери на клучни зборови или теми како водич за авторите"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Клучни зборови"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(На пр., Фотосинтеза; Црни дупки; Проблем со четири бои на мапи; Баезијанска "
+"теорија)"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Пет чекори до веб-страница за весник"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Погледнете ја содржината на статијата"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Пристап до страницата"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr ""
+"Секогаш покажувајте врски од отисокот на труд и наведете ограничен пристап."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Дел за списание за кое ќе се разгледува предметот."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Уредникот на списанието кој ќе го види преку уредничкиот процес."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"За да креирате или измените делови за списанието (на пример, написи, "
+"прегледи на книги, итн.), Одете во Управување со оддели. <br/><br/> Авторите "
+"за поднесување предмети до списанието ќе назначат ..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Ако делови не се додадат, тогаш предметите се поставуваат стандардно до "
+"делот Написи.)"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Секции и уредници на оддели"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Обезбедете краток опис (50-300 карактери) на списанието што пребарувачите "
+"можат да го прикажат кога го наведуваат списанието во резултатите од "
+"пребарувањето."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Помогнете им на пребарувачите како Google да ја откријат и прикажат вашата "
+"страница. Ве охрабруваме да го доставите вашиот <a href=\"{$sitemapUrl}\" "
+"target=\"_blank\">sitemap</a>."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Индексирање на пребарувањето"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Политика за преглед"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Потсетници за рецензент"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Оценки на рецензентот"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Вклучете безбедна врска во поканата за е-пошта до рецензентите."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"На прегледувачите може да им се испрати безбедна врска во поканата за е-"
+"пошта, што ќе им овозможи пристап до прегледот без најавување. Пристапот до "
+"другите страници бара да се најават."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Пристап со прегледник со еден клик"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Пристап на рецензент"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Рецензентите нема да добијат пристап до датотеката за поднесување се додека "
+"не се согласат да ја разгледаат."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Ограничете го пристапот до датотеката"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Уредниците ќе ги оценат рецензентите на скала за квалитет од пет точки по "
+"секој преглед."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Недели дозволено да се заврши прегледот"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"За да испратите автоматски потсетници за е-пошта, администраторот на "
+"страницата мора да ја овозможи опцијата <tt>scheduled_tasks</tt> во "
+"датотеката за конфигурација на OJS. Може да биде потребна дополнителна "
+"конфигурација на серверот, како што е наведено во документацијата на OJS."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Потсетници за автоматски е-пошта"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Опции за преглед"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Упатства за преглед"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Корисниците мора да бидат регистрирани и да се најават за да ја видат "
+"страницата на списанието."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Корисниците мора да бидат регистрирани и да се најават за да ја видат "
+"содржината со отворен пристап."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Референтна врска"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Овие детали може да бидат вклучени во метаподатоците доставени до архивски "
+"тела на трети страни."
+
+msgid "manager.setup.publisher"
+msgstr "Издавач"
+
+msgid "manager.setup.publishing"
+msgstr "Детали за објавување"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Идентификација на содржината на весникот"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Распоред на публикации"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Артиклите за весници можат да бидат објавени колективно, како дел од издание "
+"со своја Содржина. Алтернативно, одделните ставки може да се објават веднаш "
+"штом се подготвени, со додавање на Содржината на „тековниот“ том. Обезбедете "
+"им на читателите, во За списанието, изјава за системот што ќе го користи ова "
+"списание и неговата очекувана фреквенција на објавување."
