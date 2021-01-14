@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-14 14:05+0000\n"
-"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
+"PO-Revision-Date: 2021-01-14 14:10+0000\n"
+"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -68,4 +68,50 @@ msgid "manager.language.submissions"
 msgstr "Поднесоци"
 
 msgid "manager.language.ui"
-msgstr "UI"
+msgstr "УИ"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Внесете износи на надоместоци подолу за да овозможите такси за обработка на "
+"авторот."
+
+msgid "manager.payment.authorFees"
+msgstr "Авторски такси"
+
+msgid "manager.payment.amount"
+msgstr "Износ"
+
+msgid "manager.payment.addPayment"
+msgstr "Додадете плаќање"
+
+msgid "manager.payment.action"
+msgstr "Акција"
+
+msgid "manager.managementPages"
+msgstr "Страници за управување"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Ова ќе биде стандардниот јазик за страницата на списанието."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Извинете, не се достапни дополнителни јазици. Контактирајте го "
+"администраторот на вашата страница ако сакате да користите дополнителни "
+"јазици со ова списание."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS може да биде достапен на корисниците на кој било од неколкуте поддржани "
+"јазици. Исто така, OJS може да работи како повеќејазичен систем, "
+"овозможувајќи им на корисниците можност да се префрлаат помеѓу јазиците на "
+"секоја страница и дозволувајќи внесување на одредени податоци на неколку "
+"дополнителни јазици. <br /> <br/> Ако јазик поддржан од OJS не е наведен "
+"подолу, прашајте го администраторот на вашата страница да го инсталира "
+"јазикот од интерфејсот за администрација на страницата. За упатства за "
+"додавање поддршка за нови јазици, ве молиме, консултирајте се со "
+"документацијата на ОЈС."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Ова ќе ги замени сите поставки за списанија специфични за локацијата што ги "
+"имавте за оваа локација"
