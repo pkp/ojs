@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-01-14 11:01+0000\n"
-"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -1240,7 +1240,7 @@ msgid "reviewer.article.notifyEditorA"
 msgstr "Известете го уредникот на поднесокот"
 
 msgid "reviewer.article.reviewerGuidelines"
-msgstr "Прегледај упатства"
+msgstr "Упатства за рецензенти"
 
 msgid "reviewer.article.reviewSteps"
 msgstr "Прегледај чекори"
@@ -1413,3 +1413,53 @@ msgid "plugins.categories.generic.description"
 msgstr ""
 "Генерички додатоци се користат за проширување на Open Journal Systems на "
 "различни начини кои не се поддржани од другите категории на додатоци."
+
+msgid "about.subscriptions"
+msgstr "Претплати"
+
+msgid "about.archiving"
+msgstr "Архивирање"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "месец(и) откако изданието е објавено."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr ""
+"Содржината на ова списание ќе биде достапна во формат со отворен пристап"
+
+msgid "about.delayedOpenAccess"
+msgstr "Одложен отворен пристап"
+
+msgid "about.openAccessPolicy"
+msgstr "Полиса за отворен пристап"
+
+msgid "about.peerReviewProcess"
+msgstr "Процес на отворено рецензирање"
+
+msgid "about.authorFeesMessage"
+msgstr "Ова списание ги наплаќа следните надоместоци од авторот."
+
+msgid "about.authorFees"
+msgstr "Надоместоци од авторорт"
+
+msgid "about.privacyStatement"
+msgstr "Изјава за приватност"
+
+msgid "about.copyrightNotice"
+msgstr "Известување за авторско право"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Список за проверка за подготвување на поднесок"
+
+msgid "about.authorGuidelines"
+msgstr "Упатства за авторот"
+
+#, fuzzy
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "прегледајте ги вашите поднесоци во очекување"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Направете нов поднесок"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Направете нов поднесок во <a href=\"{$url}\">{$name}</a> секција."
