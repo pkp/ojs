@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-01-15 14:19+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -142,7 +142,6 @@ msgstr "Ново известување од {$siteTitle}"
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Барање за архивирање за {$contextName}"
 
-#, fuzzy
 msgid "emails.publishNotify.description"
 msgstr ""
 "Овој и-меил е испратен до регистрирани читатели преку линкот „Извести "
@@ -204,7 +203,6 @@ msgstr ""
 "Овој и-меил, кога овозможен, автоматски е испратен до останатите автори кои "
 "не се корисници во OJS назначени во текот на процесот на поднесување."
 
-#, fuzzy
 msgid "emails.submissionAck.body"
 msgstr ""
 "{$authorName}:<br />\n"
@@ -224,7 +222,6 @@ msgstr ""
 "<br />\n"
 "{$editorialContactSignature}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Почитувани,<br />\n"
@@ -251,14 +248,12 @@ msgstr ""
 msgid "emails.submissionAck.subject"
 msgstr "Признание на поднесок"
 
-#, fuzzy
 msgid "emails.lockssNewArchive.description"
 msgstr ""
-"Овој и-меил ги охрабрува примателите за учествуваат во LOCKSS иницијативата "
+"Овој и-меил ги охрабрува примателите да учествуваат во LOCKSS иницијативата "
 "и да го вклучат ова списание во архивата. Им обезбедува информации за LOCKSS "
 "иницијативата и начин како да се приклучат."
 
-#, fuzzy
 msgid "emails.lockssNewArchive.body"
 msgstr ""
 "Почитуван/а [University Librarian]<br />\n"
@@ -290,14 +285,12 @@ msgstr ""
 msgid "emails.lockssNewArchive.subject"
 msgstr "Барање за архивирање за {$contextName}"
 
-#, fuzzy
 msgid "emails.lockssExistingArchive.description"
 msgstr ""
 "Овој и-меил бара чуварот на LOCKSS архива да го земе во предвид вклучувањето "
 "на ова списание во нивната архива. Ја обезбедува URL-адресата до издавачкиот "
 "манифест LOCKSS на списанието."
 
-#, fuzzy
 msgid "emails.lockssExistingArchive.body"
 msgstr ""
 "Почитуван/а [University Librarian]<br />\n"
@@ -636,7 +629,6 @@ msgstr ""
 "<br />\n"
 "Доколку имате дополнителни прашања, ве молам да не контактирате."
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$reviewerName}:<br />\n"
