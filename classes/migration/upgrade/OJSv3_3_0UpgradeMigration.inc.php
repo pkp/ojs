@@ -178,6 +178,10 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 			$table->renameColumn('file_id', 'submission_file_id');
 		});
 		Capsule::statement('UPDATE publication_galleys SET submission_file_id = NULL WHERE submission_file_id = 0');
+
+		// Delete publication_galleys entries that correspond to nonexistent submission files
+		Capsule::connection()->unprepared('DELETE FROM publication_galleys WHERE galley_id IN (SELECT galley_id FROM publication_galleys pg LEFT JOIN submission_files sf ON pg.submission_file_id = sf.submission_file_id WHERE pg.submission_file_id IS NOT NULL AND sf.submission_file_id IS NULL)');
+
 		Capsule::schema()->table('publication_galleys', function (Blueprint $table) {
 			$table->bigInteger('submission_file_id')->nullable()->unsigned()->change();
 			$table->foreign('submission_file_id')->references('submission_file_id')->on('submission_files');
