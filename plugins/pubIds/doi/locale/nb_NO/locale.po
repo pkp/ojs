@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-15 09:06+0000\n"
-"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"PO-Revision-Date: 2021-01-16 10:53+0000\n"
+"Last-Translator: FRITT, University of Oslo Library <fritt-"
+"info@journals.uio.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "pubIds-doi/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -36,3 +37,32 @@ msgstr ""
 
 msgid "plugins.pubIds.doi.displayName"
 msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Et DOI-suffiks kan ha en hvilken som helst form, men må være unikt der alle "
+"publiseringsobjekter er tildelt det samme DOI-prefikset:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "DOI-suffiks"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "DOI-prefikset er obligatorisk, og må være i formatet 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr ""
+"DOI-prefikset tildeles av registreringsbyråer (som <a href=\""
+"http://www.crossref.org\" target=\"_new\">CrossRef</a>), og er i formatet "
+"10.xxxx (f.eks. 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "DOI-prefiks"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Oppsett"
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Artikler"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Utgave"
