@@ -560,6 +560,10 @@ class Issue extends DataObject {
 		return DAORegistry::getDAO('IssueDAO');
 	}
 
+	/**
+	 * Display the object in Import/Export results
+	 * @return string A string that Identifies the object
+	 */
 	function getUIDisplayString() {
 		return $this->getId() . ' - ' . $this->getIssueIdentification();
 	}
