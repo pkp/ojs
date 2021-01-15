@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-15 08:15+0000\n"
+"PO-Revision-Date: 2021-01-15 14:05+0000\n"
 "Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
@@ -1188,9 +1188,8 @@ msgstr "Датотека на уредникот"
 msgid "copyeditor.article.copyeditorFile"
 msgstr "Датотека на уредникот"
 
-#, fuzzy
 msgid "copyeditor.article.fileToCopyedit"
-msgstr "File To C/E"
+msgstr "Фајл за лекторирање"
 
 msgid "reviewer.article.confirmDecision"
 msgstr ""
@@ -1310,9 +1309,8 @@ msgstr "(Автоматски)"
 msgid "reviewer.article.sendReminder"
 msgstr "Испрати потсетник"
 
-#, fuzzy
 msgid "reviewer.article.editorToEnter"
-msgstr "Editor To Enter"
+msgstr "Уреднички внес"
 
 msgid "reviewer.article.reviewerCommentsDescription"
 msgstr "Внесете или залепете коментари за рецензијата тука"
@@ -1526,3 +1524,23 @@ msgstr ""
 "http://opcit.eprints.org/oacitation-biblio.html\"> Ефектот на отворен "
 "пристап </a>). </li>\n"
 "</ol>"
+
+msgid "payment.paymentReceived"
+msgstr "Уплатата е примена"
+
+msgid "payment.alreadyPaid"
+msgstr "Веќе платено"
+
+msgid "payment.waive"
+msgstr "Отфрли"
+
+msgid "payment.payNow"
+msgstr "Плати сега"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Е-пошта за барање не може да се испраќа додека не се постави верзија за "
+"преглед."
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Завршени задачи од уредникот"
