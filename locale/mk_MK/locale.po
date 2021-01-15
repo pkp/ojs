@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-15 14:07+0000\n"
+"PO-Revision-Date: 2021-01-15 14:08+0000\n"
 "Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
@@ -1866,3 +1866,12 @@ msgstr "Цена за објавување"
 
 msgid "payment.type.publication.required"
 msgstr "Надоместокот за објавување се должи на плаќање."
+
+msgid "payment.type.purchaseArticle"
+msgstr "Цена за набавка на написи"
+
+msgid "payment.type.membership"
+msgstr "Индивидуална цена за членство"
+
+msgid "payment.type.fastTrack"
+msgstr "Надомест за преглед на брза патека"
