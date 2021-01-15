@@ -94,7 +94,8 @@ restful_urls = Off
 trust_x_forwarded_for = Off
 
 ; Allow javascript files to be served through a content delivery network (set to off to use local files)
-enable_cdn = On
+; This setting was deprecated in 3.3, but custom themes may continue to make use of it
+enable_cdn = Off
 
 ; Set the maximum number of citation checking processes that may run in parallel.
 ; Too high a value can increase server load and lead to too many parallel outgoing
