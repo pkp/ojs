@@ -1860,3 +1860,6 @@ msgstr ""
 
 msgid "payment.type.submission"
 msgstr "Цена за поднесување"
+
+msgid "payment.type.publication"
+msgstr "Цена за објавување"
