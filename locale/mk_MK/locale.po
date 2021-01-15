@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-15 14:08+0000\n"
+"PO-Revision-Date: 2021-01-16 10:53+0000\n"
 "Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
@@ -1875,3 +1875,567 @@ msgstr "Индивидуална цена за членство"
 
 msgid "payment.type.fastTrack"
 msgstr "Надомест за преглед на брза патека"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Изберете како да нарачате статии од оваа категорија."
+
+msgid "catalog.sortBy"
+msgstr "Ред на написи"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} го презеде процесот на уредување на статијата {$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Претплати"
+
+msgid "editor.issues.futureIssues"
+msgstr "Идни изданија"
+
+msgid "editor.issues.backIssues"
+msgstr "Стари изданија"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"Дадената патека за списанија „{$journalPath}“ не може да се реши во списание."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr ""
+"Оваа имплементација на пребарување не дозволува повторно индексирање по "
+"списание."
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Индексирање „{$journalName}“"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p> Отстранете го одобрувањето на овој отисок на труд. </p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p> Одобрете го овој отисок на труд за објавување. </p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Одобрување на отисок на труд"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Чека одобрување"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Одобрено"
+
+msgid "article.view.interstitial"
+msgstr "Ве молиме, изберете датотека за напис за преземање."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Скријте други списанија"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Регистрирајте се со други списанија"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Чека одобрување."
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Овој поднесок во моментов чека одобрување пред да се појави во изданието."
+
+msgid "editor.navigation.issues"
+msgstr "Изданија"
+
+msgid "grid.action.createContext"
+msgstr "Создадете нов весник"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Неважечко поднесување на уредник или не е побарано поднесување на уредник!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Побарано е неважечко издание!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Се обидувате да пристапите до една статија што не е дел од вашиот дел."
+
+msgid "user.authorization.noContext"
+msgstr "Нема списание во контекст!"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Одбиен пристап! Вие не сте доделени како уредник за овој напис."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Чекајќи ги отисоците на труд."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Доделете корисник да креира отисоци на труд користејќи ја врската Додели во "
+"списокот Учесници."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Доставена е нова статија на која треба да и биде доделен уредник."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Метаподатоците за објавување на изданието се зачувани."
+
+msgid "notification.type.public"
+msgstr "Јавни соопштенија"
+
+msgid "notification.type.userComment"
+msgstr "Читател направи коментар на „{$title}“"
+
+msgid "notification.type.submissions"
+msgstr "Поднесување настани"
+
+msgid "notification.type.submissionComment"
+msgstr "Уредник направи коментар на „{$title}.“"
+
+msgid "notification.type.site"
+msgstr "Настани на страницата"
+
+msgid "notification.type.reviewing"
+msgstr "Преглед на настани"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Поднесена е преглед на образец за преглед за „{$title}.“"
+
+msgid "notification.type.newAnnouncement"
+msgstr "Создадено е ново соопштение."
+
+msgid "notification.type.issuePublished"
+msgstr "Објавено е издание."
+
+msgid "notification.type.galleyModified"
+msgstr "Отисокот на труд е изменет за „{$title}.“"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Оставен е коментар за одлуката на уредникот за „{$title}.“"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Доставена е нова статија „{$title}“."
+
+msgid "notification.type.editing"
+msgstr "Уредување на настани"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Рецензиран напис"
+
+msgid "log.imported"
+msgstr "{$userName} ја увези статијата {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} достави {$submissionId} за закажување."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} го додели {$proofreaderName} за лекторирање на поднесувањето "
+"{$submissionId}."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} е доделен како уредник на поднесувањето {$submissionId}."
+
+msgid "log.editor.restored"
+msgstr "Поднесувањето {$submissionId} е вратено во редот."
+
+msgid "log.editor.archived"
+msgstr "Поднесувањето {$submissionId} е архивирано."
+
+msgid "log.editor.editorFile"
+msgstr "Верзијата на уредникот на датотеката за поднесување е поставена."
+
+msgid "log.editor.metadataModified"
+msgstr "Метаподатоците за оваа статија беа изменети од {$editorName}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} заврши со уредување на распоредот за доставување "
+"{$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} е неназначен за уредник на распоред за доставување "
+"{$submissionId}."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} е доделен како уредник на распоред за поднесување "
+"{$submissionId}."
+
+msgid "log.copyedit.authorFile"
+msgstr "Внесена е верзија на датотеката за поднесување копирана од авторот."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Верзијата за копирање на документот за поднесување е подигната."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} е доделен на поднесокот за копирање {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} ја заврши последната копија за уредување на поднесокот "
+"{$submissionId}."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} ја заврши првичната измена на копирање на поднесувањето "
+"{$submissionId}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Избрана е стандардната датотека за копирање."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"Копирањето при поднесувањето {$submissionId} е започнато од "
+"{$copyeditorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Препорака за уредник ({$decision}) за написот {$submissionId} е снимена од "
+"{$editorName}."
+
+msgid "log.editor.decision"
+msgstr ""
+"Одлуката за уредник ({$decision}) за написот {$submissionId} е снимена од "
+"{$editorName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Поставена е датотека за прегледувач."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Уредникот, {$userName}, постави датотека за преглед за круг од {$round} на "
+"поднесување {$submissionId} во име на рецензентот, {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} го прифати целосниот преглед на {$round} за доставување "
+"{$submissionId} во име на {$reviewerName}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} го одби целосниот преглед на {$round} преглед за доставување "
+"{$submissionId} во име на {$reviewerName}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} го прифати целосниот преглед на {$round} прегледот за "
+"доставување {$submissionId}."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} го одби целосниот преглед на {$round} преглед за доставување "
+"{$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "Поднесувањето {$submissionId} е повторно испратено за преглед."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Препораката за кружниот преглед на {$round} прегледот на поднесувањето "
+"{$submissionId} е поставена од уредникот, {$editorName}, во име на "
+"рецензентот, {$reviewerName}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Поставена е препораката за кружниот преглед на {$round} прегледот на "
+"поднесувањето {$submissionId} од {$reviewerName}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Датумот на достасување за кружниот преглед на {$round} прегледот на "
+"поднесувањето {$submissionId} од {$reviewerName} е поставен на {$dueDate}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} е оценет за кружниот преглед на {$round} на поднесувањето "
+"{$submissionId}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"Започнат е кружниот преглед на {$round} прегледот од страна на "
+"{$reviewerName} за доставување {$submissionId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} не е доделен од прегледување на поднесокот {$submissionId} "
+"за преглед во {$round}."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} ја ревидираше статијата {$submissionId}. Новиот ID на датотека "
+"е {$fileId}."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Достапна е нова верзија на OJS! Во моментов користите OJS {$currentVersion}. "
+"Најновата верзија е OJS {$latestVersion}. Контактирајте со администраторот "
+"на вашата страница ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\"> "
+"{$siteAdminEmail} </a>) за да ги известите за ова ново издание. Повеќе "
+"информации може да најдете <a href=\"http://pkp.sfu.ca/ojs_download\" target="
+"\"_new\"> тука </a>."
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Достапна е нова верзија на OJS! Во моментов користите OJS {$currentVersion}. "
+"Најновата верзија е OJS {$latestVersion}. Посетете ја <a href=\""
+"http://pkp.sfu.ca/ojs_download\" target=\"_new\"> оваа страница </a> за да "
+"ја преземете најновата верзија и да најдете упатства за надградба."
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p> Ажурирањето на OJS во верзија {$version} е успешно завршено. </p>\n"
+"<p> Не заборавајте да ја поставите поставката \"инсталирана\" во вашата "
+"конфигурациска датотека config.inc.php назад на <em> Вклучено </em>. </p>\n"
+"<p> Ако веќе не сте се регистрирале и сакате да добивате новости и новости, "
+"<strong> ве молиме регистрирајте се на <a href=\"http://pkp.sfu.ca/ojs/"
+"register\" target=\"_new\"> http://pkp.sfu.ca/ojs/register </a>. </strong> "
+"Ако имате прашања или коментари, посетете ја целта на <a href = \""
+"http://forum.pkp.sfu.ca\" = \"_new\"> форум за поддршка </a>. </p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p> Инсталирањето на OJS заврши успешно. </p>\n"
+"<p> За да започнете со користење на системот, <a href=\"{$loginUrl}\"> "
+"најавете се </a> со корисничкото име и лозинката внесени на претходната "
+"страница. </p>\n"
+"<p> Ако сакате да бидете дел од заедницата PKP, можете: </p>\n"
+"<ol>\n"
+"<li> Прочитајте го <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\"> "
+"блогот на PKP </a> и следете го <a href=\"http://pkp.sfu.ca/blog/feed\" "
+"target=\"_new\"> RSS-извор </a> за новости и ажурирања. </li>\n"
+"<li> Посетете го <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\"> "
+"форумот за поддршка </a> ако имате прашања или коментари. </li>\n"
+"</ol>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4> ВАЖНО! </h4>\n"
+"<p> Инсталаторот не може автоматски да ја замени конфигурациската датотека. "
+"Пред да се обидете да го користите системот, отворете <tt>config.inc.php</tt>"
+" во соодветен уредувач на текст и заменете ја неговата содржина со "
+"содржината на полето за текст подолу. </p>"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong> Предупредување: </strong> Ако инсталацијата не успеа делумно преку "
+"инсталацијата на базата на податоци, можеби ќе треба да ја исфрлите вашата "
+"база на податоци на OJS или табелите на базата на податоци пред да се "
+"обидете повторно да ја инсталирате базата на податоци."
+
+msgid "installer.upgradeApplication"
+msgstr "Надградете Open Journal Systems"
+
+msgid "installer.installApplication"
+msgstr "Инсталирајте Open Journal Systems"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS бара пристап до SQL база на податоци за да ги зачува своите податоци. "
+"Погледнете ги погоре барањата на системот за список на поддржани бази на "
+"податоци. Во полињата подолу, наведете ги поставките што ќе се користат за "
+"поврзување со базата на податоци."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Внесете го целосното име на постојниот директориум каде што треба да се "
+"чуваат подигнатите датотеки. Овој директориум не треба да биде директно "
+"достапен на веб. <strong> Ве молиме, осигурете се дека овој директориум "
+"постои и може да се запише пред инсталацијата. </strong> Имињата на патеките "
+"на Windows треба да користат пресеци нанапред, на пр. \"C:/myjournal/"
+"датотеки\"."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Изберете дополнителни јазици за поддршка во овој систем. Овие јазици ќе "
+"бидат достапни за употреба од списанија хостирани на страницата. "
+"Дополнителни јазици исто така може да се инсталираат во кое било време од "
+"интерфејсот за администрација на страницата."
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Примарен јазик што треба да се користи за овој систем. Ве молиме "
+"консултирајте се со документацијата на OJS доколку сте заинтересирани за "
+"поддршка за јазиците што не се наведени овде."
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Вашиот сервер во моментов дозволува максимална големина на поставување "
+"датотека од: <strong> {$maxFileUploadSize} </strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Вашиот сервер во моментов дозволува поставување датотеки: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"За целосна поддршка на Уникод (UTF-8), изберете UTF-8 за сите поставки за "
+"поставување знаци. Имајте предвид дека целосната поддршка за Уникод бара PHP "
+"да се состави со поддршка за библиотеката <a href=\"http://www.php.net/"
+"mbstring\" target=\"_blank\"> mbstring </a> (овозможено по правило во "
+"повеќето неодамнешни инсталации на PHP). Може да имате проблеми со користење "
+"на проширени множества на карактери, ако вашиот сервер не ги исполнува овие "
+"барања.\n"
+"<br /> <br />\n"
+"Вашиот сервер моментално поддржува mbstring: <strong> {$supportMBString} "
+"</strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4> Верзија на OJS {$version} </h4>\n"
+"\n"
+"<p> Ви благодариме што ги преземавте <strong> Отворените системи за весници "
+"</strong> на проектот за јавно знаење. Пред да продолжите, прочитајте ги <a "
+"href=\"{$baseUrl}/docs/README.md\"> README </a> и <a href=\"{$baseUrl}/docs/"
+"UPGRADE.md\"> UPGRADE </ a > датотеки вклучени во овој софтвер. За повеќе "
+"информации во врска со Проектот за јавно знаење и неговите софтверски "
+"проекти, посетете ја <a href=\"http://pkp.sfu.ca/\" target=\"_blank\"> веб-"
+"страницата на PKP </a>. Ако имате извештаи за грешки или прашања за техничка "
+"поддршка во врска со Open Journal Systems, видете во <a href=\""
+"http://forum.pkp.sfu.ca\" target=\"_blank\"> форумот за поддршка </a> или "
+"посетете го PKP на Интернет < a href = \"https://github.com/pkp/pkp-lib#"
+"issues\" target = \"_ blank\"> систем за пријавување грешки </a>. Иако "
+"форумот за поддршка е префериран метод за контакт, можете исто така да го "
+"испратите тимот по е-пошта на <a href=\"mailto:pkp.contact@gmail.com\"> "
+"pkp.contact@gmail.com </a>. </p>\n"
+"<p> <strong> Силно се препорачува </strong> да направите резервна копија од "
+"вашата база на податоци, директориумот со датотеки и директориумот за "
+"инсталација на OJS пред да продолжите. </p>\n"
+"<p> Ако трчате во <a href=\"http://www.php.net/features.safe-mode\" target=\""
+"_blank\"> Безбеден режим на PHP </a>, осигурете се дека директивата за "
+"max_execution_time во вашата датотека за конфигурација php.ini е поставена "
+"на висока граница. Доколку се постигне ова или кое било друго временско "
+"ограничување (на пример, директивата „Тајмаут“ на Апачи) и процесот на "
+"надградба е прекинат, ќе биде потребна рачна интервенција.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4> Чекори пред инсталација </h4>\n"
+"\n"
+"\n"
+"<p> 1 Следните датотеки и директориуми (и нивната содржина) мора да бидат "
+"напишани: </p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> може да се запише (по избор): "
+"{$writable_config} </li>\n"
+"\t<li><tt>public/</tt> може да се запише: {$writable_public} </li>\n"
+"\t<li><tt>cache/</tt> може да се запише: {$writable_cache} </li>\n"
+"\t<li><tt>cache/t_cache/</tt> може да се запише: {$writable_templates_cache} "
+"</li>\n"
+"\t<li><tt>cache/t_compile/</tt> може да се запише: "
+"{$writable_templates_compile} </li>\n"
+"        <li><tt>cache/_db</tt> може да се запише: {$writable_db_cache} </li>"
+"\n"
+"</ul>\n"
+"\n"
+"<p> 2. Именикот за зачувување на подигнатите датотеки мора да биде креиран и "
+"да се запишува (видете „Подесувања на датотека“ подолу). </p>"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4> Верзија на OJS {$version} </h4>\n"
+"\n"
+"<p> Ви благодариме што ги преземавте <strong> Отворените системи за весници "
+"</strong> на Проектот за јавно знаење. Пред да продолжите, прочитајте ја "
+"датотеката <a href=\"{$baseUrl}/docs/README.md\"> README </a> вклучена во "
+"овој софтвер. За повеќе информации во врска со Проектот за јавно знаење и "
+"неговите софтверски проекти, посетете ја <a href=\"http://pkp.sfu.ca/\" "
+"target=\"_blank\"> веб-страницата на PKP </a>. Ако имате извештаи за грешки "
+"или прашања за техничка поддршка во врска со Open Journal Systems, видете во "
+"<a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\"> форумот за поддршка "
+"</a> или посетете го PKP на Интернет < a href = \"https://github.com/pkp/pkp-"
+"lib#issues\" target = \"_ blank\"> систем за пријавување грешки </a>. Иако "
+"форумот за поддршка е префериран метод за контакт, исто така можете да го "
+"испратите тимот по е-пошта на <a href=\"mailto:pkp.contact@gmail.com\"> "
+"pkp.contact@gmail.com </a>.\n"
+"\n"
+"<h4> Препорачани системски побарувања </h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion};  во моментов користите PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"или <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> "
+">= 9.1.5</li>\n"
+"<li> <a href=\"http://httpd.apache.org/\" target=\"_blank\"> Apache </a>> = "
+"1.3.2x или> = 2.0.4x или Microsoft IIS 6 </li>\n"
+"<li> Оперативен систем: Секој оперативен систем што го поддржува "
+"горенаведениот софтвер, вклучувајќи и <a href=\"http://www.linux.org/\" "
+"target=\"_blank\"> Linux </a>, <a href = \"http: //www.bsd.org/ \"target =\""
+"_blank\"> BSD </a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">"
+" Соларис </a> , <a href=\"http://www.apple.com/\" target=\"_blank\"> Mac OS "
+"X </a>, <a href=\"http://www.microsoft.com/\"> Windows </а></li>\n"
+"</ul>\n"
+"\n"
+"<p> Бидејќи PKP нема ресурси за тестирање на секоја можна комбинација на "
+"софтверски верзии и платформи, не се подразбира никаква гаранција за "
+"правилно работење или поддршка. </p>\n"
+"\n"
+"<p> Промените во овие поставки може да се направат по инсталацијата со "
+"уредување на датотеката <tt>config.inc.php</tt> во основниот директориум OJS "
+"или користење веб-интерфејс за администрација на страницата.\n"
+"\n"
+"<h4> Поддржани системи за бази на податоци </h4>\n"
+"\n"
+"<p> OJS во моментов е тестиран само на MySQL и PostgreSQL, иако други "
+"системи за управување со базата на податоци поддржани од <a href=\""
+"http://adodb.sourceforge.net/\" target=\"_blank\"> ADOdb </a> можат да "
+"работат (во целост или делумно). Извештаите за компатибилност и / или "
+"закрпите за кодови за алтернативни ДБМС можат да бидат испратени до тимот на "
+"OJS. </p>\n"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Ако ја надградувате постоечката инсталација на OJS, <a href=\"{$upgradeUrl}\""
+"> кликнете тука </a> за да продолжите."
+
+msgid "installer.ojsUpgrade"
+msgstr "Надградба на OJS"
+
+msgid "installer.appInstallation"
+msgstr "Инсталација на OJS"
+
+msgid "payment.subscription.expires"
+msgstr "Истекува"
+
+msgid "payment.subscription.renew"
+msgstr "Обнови ја претплатата"
+
+msgid "payment.subscription.purchase"
+msgstr "Претплата за набавка"
+
+msgid "payment.membership.ends"
+msgstr "Завршува"
+
+msgid "payment.membership.renewMembership"
+msgstr "Обновете го индивидуалното членство"
+
+msgid "payment.membership.buyMembership"
+msgstr "Купете индивидуално членство"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Платена цената за објавување"
+
+msgid "payment.publication.payPublication"
+msgstr "Платете за објавување"
+
+msgid "payment.submission.paySubmission"
+msgstr "Платете ја цената за поднесување"
+
+msgid "payment.donation.makeDonation"
+msgstr "Направете донација"
+
+msgid "payment.notFound"
+msgstr ""
+"Побарано е плаќање, но барањето е истечено. Контактирајте го Менаџерот за "
+"весници за детали."
+
+msgid "payment.requestPublicationFee"
+msgstr "Побарајте цена за објавување ({$feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "Донации"
+
+msgid "payment.type.subscription"
+msgstr "Цена за претплата"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Цена за купување издание"
