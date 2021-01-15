@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-22 06:30+0000\n"
-"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"PO-Revision-Date: 2021-01-16 10:53+0000\n"
+"Last-Translator: FRITT, University of Oslo Library <fritt-"
+"info@journals.uio.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -27,7 +28,7 @@ msgid "publication.publishedIn"
 msgstr "Publisert i <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.required.issue"
-msgstr "Publikasjonen må legges til et nummer før det kan publiseres."
+msgstr "Publikasjonen må legges til et nummer før den kan publiseres."
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -43,7 +44,7 @@ msgstr ""
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
 "Alle publiseringskrav er oppfylt. Dette blir publisert når {issue} blir "
-"publisert. Er du sikker på at du vil publisere denne når nummeret publiseres?"
+"publisert. Er du sikker på at du vil publisere dette når nummeret publiseres?"
 
 msgid "publication.publish.confirmation"
 msgstr ""
@@ -263,120 +264,100 @@ msgstr "Lever inn en artikkel"
 msgid "submission.publication"
 msgstr "Publikasjon"
 
-
 msgid "publication.status.published"
 msgstr "Publisert"
-
 
 msgid "submission.status.scheduled"
 msgstr "Planlagt"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Ikke planlagt"
 
-
 msgid "submission.publications"
 msgstr "Publikasjoner"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Opphavsrettsåret settes automatisk når denne innleveringen publiseres i et "
 "nummer."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "Opphavsrettsåret settes automatisk basert på publiseringsdatoen."
-
 
 msgid "publication.datePublished"
 msgstr "Dato publisert"
 
-
 msgid "publication.editDisabled"
 msgstr "Denne versjonen er publisert og kan ikke redigeres."
-
 
 msgid "publication.event.published"
 msgstr "Innleveringen ble publisert."
 
-
 msgid "publication.event.scheduled"
 msgstr "Innleveringen var planlagt for publisering."
-
 
 msgid "publication.event.unpublished"
 msgstr "Innleveringen ble ikke publisert."
 
-
 msgid "publication.event.versionPublished"
 msgstr "En ny versjon ble publisert."
-
 
 msgid "publication.event.versionScheduled"
 msgstr "En ny versjon var planlagt for publisering."
 
-
 msgid "publication.event.versionUnpublished"
 msgstr "En versjon ble fjernet fra publikasjonen."
-
 
 msgid "publication.invalidSubmission"
 msgstr "Innleveringen til denne publikasjonen kunne ikke finnes."
 
-
 msgid "publication.publish"
 msgstr "Publiser"
-
 
 msgid "publication.publish.requirements"
 msgstr "Følgende krav må være oppfylt før dette kan publiseres."
 
-
 msgid "publication.required.declined"
 msgstr "En avvist innlevering kan ikke publiseres."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "Innleveringen må være under manusredigerings- eller produksjonstrinnet før "
-"det kan publiseres."
-
+"den kan publiseres."
 
 msgid "submission.license.description"
 msgstr ""
 "Lisensen settes automatisk til <a href='{$licenseUrl}' target='_blank'> "
 "{$licenseName} </a> når den blir publisert."
 
-
 msgid "submission.copyrightHolder.description"
 msgstr "Opphavsretten tildeles automatisk {$copyright} når den publiseres."
-
 
 msgid "submission.copyrightOther.description"
 msgstr ""
 "Tilordne opphavsrett i forbindelse med publiserte innleveringer til følgende "
 "gruppe."
 
-
 msgid "publication.unpublish"
 msgstr "Avpubliser"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Er du sikker på at du ikke ønsker at dette skal publiseres?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr ""
 "Er du sikker på at du ikke vil ha dette planlagt til senere publisering?"
 
-
 msgid "publication.version.details"
 msgstr "Publikasjonsopplysninger i forbindelse med versjon {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Diskusjon av produksjon"
 
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inaktiv)"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Dette er tildelt <a href=\"{$issueUrl}\">{$issueName}</a>, men det er ikke "
+"planlagt publisert."
