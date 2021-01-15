@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2020-10-19 15:21+0000\n"
+"PO-Revision-Date: 2021-01-16 10:53+0000\n"
 "Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
@@ -18,7 +18,9 @@ msgid "manager.emails.confirmResetAll"
 msgstr "Er du sikker på at du vil tilbakestille alle e-postmaler i dette tidsskriftet? Du vil miste alle tilpasninger du har gjort."
 
 msgid "manager.files.note"
-msgstr "NB: Filutforskeren er en avansert funksjon som gir mulighet til å manipulere filene og mappene til tidsskriftet direkte."
+msgstr ""
+"Merk: Filutforskeren er en avansert funksjon som gir mulighet til å se og å "
+"manipulere filene og mappene til tidsskriftet direkte."
 
 msgid "manager.groups"
 msgstr "Redaksjon"
@@ -48,7 +50,7 @@ msgid "manager.languages.noneAvailable"
 msgstr "Beklager, ingen flere språk er tilgjengelig. Kontakt nettstedsadministratoren din hvis du ønsker å bruke flere språk i dette tidsskriftet."
 
 msgid "manager.languages.primaryLocaleInstructions"
-msgstr "Dette vil bli standard språk for tidsskriftets nettsted."
+msgstr "Dette vil bli standardspråket for tidsskriftets nettsted."
 
 msgid "manager.managementPages"
 msgstr "Administrasjonssider"
@@ -60,7 +62,9 @@ msgid "manager.people.allUsers"
 msgstr "Alle brukere"
 
 msgid "manager.people.confirmRemove"
-msgstr "Fjern denne brukeren fra dette tidsskriftet? Denne handlingen kommer til å avløse brukeren fra alle roller innenfor dette tidsskriftet."
+msgstr ""
+"Vil du fjerne denne brukeren fra dette tidsskriftet? Denne handlingen vil "
+"avløse brukeren fra alle roller knyttet til dette tidsskriftet."
 
 msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Velg en mal"
@@ -72,43 +76,63 @@ msgid "manager.people.enrollSyncJournal"
 msgstr "Med tidsskrift"
 
 msgid "manager.people.mergeUsers.from.description"
-msgstr "Velg en bruker du vil slå sammen med en annen brukerkonto (for eks. når noen har to brukerkontoer). Den først valgte kontoen vil bli slettet og tilhørende manuskript, oppdrag etc. vil bli overført til den andre kontoen."
+msgstr ""
+"Velg bruker(e) du vil slå sammen med en annen brukerkonto (f.eks. når noen "
+"har to brukerkontoer). Den først valgte kontoen vil bli slettet og "
+"tilhørende innleveringer, oppdrag osv. vil bli overført til den andre "
+"kontoen."
 
 msgid "manager.people.mergeUsers.into.description"
-msgstr "Velg en bruker du vil overføre den foregående brukerens forfatterskap, redigeringsoppdrag etc."
+msgstr ""
+"Velg en bruker du vil overføre den foregående brukerens forfatterskap, "
+"redigeringsoppdrag etc. til."
 
 msgid "manager.people.syncUserDescription"
-msgstr "Vervingssynkronisering verver alle brukere som allerede er vervet i angitt rolle i det angitte tidsskriftet til samme rolle i dette tidsskriftet. Denne funksjonen tillater at et felles sett brukere (for eks. fagkonsulenter) synkroniseres mellom tidsskrift."
+msgstr ""
+"Vervingssynkronisering verver alle brukere som allerede er vervet i angitt "
+"rolle i det angitte tidsskriftet til samme rolle i dette tidsskriftet. Denne "
+"funksjonen tillater at et felles sett brukere (f.eks. fagfeller) "
+"synkroniseres mellom tidsskrift."
 
 msgid "manager.sections.assigned"
-msgstr "Denne seksjonens redaktører"
+msgstr "Redaktører for denne seksjonen"
 
 msgid "manager.sections.create"
 msgstr "Opprett seksjon"
 
 msgid "manager.section.sectionEditorInstructions"
-msgstr "Velg blant de tilgjengelige seksjonsredaktørene og 'Oppnevn Redaktør' for denne seksjonen."
+msgstr ""
+"Velg blant de tilgjengelige seksjonsredaktørene og «Oppnevn redaktør» for "
+"denne seksjonen. Velg blant de tilgjengelige seksjonsredaktørene og «Oppnevn "
+"redaktør» for denne seksjonen. (Ellers kan seksjonsredaktører bli oppnevnt "
+"manuelt etter en innlevering.) Dersom vedkommende blir lagt til, kan "
+"seksjonsredaktøren bli automatisk oppnevnt til å overse fagfellevurderingen "
+"og/eller redigeringen (språkvask, layout og korrekturlesing) av "
+"innleveringer til denne seksjonen. Du oppnevner seksjonsredaktører ved å "
+"klikke «Seksjonsredaktør» under «Roller» i «Tidsskriftsadministrasjon»."
 
 msgid "manager.sections.editorRestriction"
-msgstr "Element kan bare sendes inn av redaktører og seksjonsredaktører."
+msgstr "Bare redaktører og seksjonsredaktører kan levere inn elementer her."
 
 msgid "manager.sections.editors"
 msgstr "Seksjonsredaktører"
 
 msgid "manager.sections.form.abbrevRequired"
-msgstr "En forkortet tittel er påkrevet for seksjonen"
+msgstr "Du må legge inn en forkortet tittel for seksjonen"
 
 msgid "manager.sections.form.titleRequired"
-msgstr "En tittel er påkrevet for seksjonen."
+msgstr "Du må legge inn et navn på seksjonen."
 
 msgid "manager.sections.hideTocTitle"
-msgstr "Utelat tittelen til denne seksjonen fra utgavens innholdsoversikt."
+msgstr "Utelat tittelen til denne seksjonen fra innholdsfortegnelsen."
 
 msgid "manager.sections.identifyType"
-msgstr "Som metadata skal hvert element i denne seksjonen identifiseres som en"
+msgstr "Hvert element i denne seksjonen identifiseres som en/et"
 
 msgid "manager.sections.identifyTypeExamples"
-msgstr "(For eksempel, \"fagfellevurdert artikkel\", \"redaksjonelt vurdert artikkel\", \"invitert artikkel\" etc.)"
+msgstr ""
+"(For eksempel, fagfellevurdert artikkel, ikke-fagfellevurdert bokanmeldelse, "
+"invitert kommentar)"
 
 msgid "manager.sections.indexed"
 msgstr "Indeksert"
@@ -120,7 +144,7 @@ msgid "manager.sections.open"
 msgstr "Bidrag mottas"
 
 msgid "manager.sections.policy"
-msgstr "Seksjonsretningslinjer"
+msgstr "Retningslinjer for seksjonen"
 
 msgid "manager.sections.readingTools"
 msgstr "Leseverktøy"
@@ -141,13 +165,13 @@ msgid "manager.sections.unassigned"
 msgstr "Tilgjengelige seksjonsredaktører"
 
 msgid "manager.setup"
-msgstr "Oppsett"
+msgstr "Tidsskriftets innstillinger"
 
 msgid "manager.setup.aboutItemContent"
 msgstr "Innhold"
 
 msgid "manager.setup.addAboutItem"
-msgstr "Legg til om-element"
+msgstr "Legg til «Om»-element"
 
 msgid "manager.setup.addChecklistItem"
 msgstr "Legg til sjekklisteelement"
@@ -159,7 +183,7 @@ msgid "manager.setup.addItem"
 msgstr "Legg til element"
 
 msgid "manager.setup.addItemtoAboutJournal"
-msgstr "Legg til element som skal vises i Om tidsskriftet"
+msgstr "Legg til element som skal vises i «Om» tidsskriftet"
 
 msgid "manager.setup.additionalContent"
 msgstr "Ytterligere innhold"
@@ -234,25 +258,30 @@ msgid "manager.setup.details"
 msgstr "Detaljer"
 
 msgid "manager.setup.details.description"
-msgstr "Navn på tidsskrift, ISSN, kontakter, sponsorer, og søkemotorer."
+msgstr "Navn på tidsskrift, ISSN, kontakter, sponsorer og søkemotorer."
 
 msgid "manager.setup.disableUserRegistration"
 msgstr "Slå av brukerregistrering. Brukere må opprettes manuelt av en redaksjonsleder."
 
 msgid "manager.setup.discipline"
-msgstr "Akademisk fag og felt"
+msgstr "Fagfelt og underkategori"
 
 msgid "manager.setup.disciplineDescription"
-msgstr "Spesielt nyttig når tidsskrift krysser grensene mellom fagfelt og/eller forfattere sender inn tverrfaglige bidrag."
+msgstr ""
+"Dette er nyttig når tidsskrift krysser grensene mellom fagfelt og/eller "
+"forfattere sender inn tverrfaglige bidrag."
 
 msgid "manager.setup.disciplineExamples"
-msgstr "(For eks. historie; utdanningsvitenskap; sosiologi; psykologi; kulturstudier; statsvitenskap)"
+msgstr ""
+"(For eksempel historie, utdanningsvitenskap, sosiologi, psykologi, "
+"kulturstudier, statsvitenskap)"
 
 msgid "manager.setup.disciplineProvideExamples"
-msgstr "Gi eksempler på relevante fagemner for dette tidsskriftet"
+msgstr "Gi eksempler på relevante fagfelt for dette tidsskriftet"
 
 msgid "manager.setup.displayCurrentIssue"
-msgstr "Legg til innholdsoversikten for nyste utgave (hvis tilgjengelig)."
+msgstr ""
+"Legg til innholdsfortegnelsen for den nyeste utgaven (hvis tilgjengelig)."
 
 msgid "manager.setup.emailBounceAddress"
 msgstr "Feilmeldingsadresse"
@@ -265,8 +294,8 @@ msgstr ""
 "<strong>NB:</strong> For å aktivere denne valgmuligheten, må "
 "nettstedsadministratoren slå på <code>allow_envelope_sender</code> "
 "valgmuligheten i OJS konfigurasjonsfilen. Ytterligere serverkonfigurasjon "
-"kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig "
-"å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen."
+"kan være nødvendig for å støtte denne funksjonen (som likevel kan være "
+"umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen."
 
 msgid "manager.setup.emails"
 msgstr "E-post identifikasjon"
@@ -299,31 +328,40 @@ msgid "manager.setup.focusScopeDescription"
 msgstr "<b>EXAMPLE HTML DATA</b>"
 
 msgid "manager.setup.forAuthorsToIndexTheirWork"
-msgstr "Forfatterenes indeksering av eget verk"
+msgstr "Forfatternes indeksering av eget verk"
 
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
-msgstr "OJS følger <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> protokoll for innhøsting av metadata, som er en framtidsrettet indekseringsstandard som gir tilgang til elektroniske forskningsressurser på verdensbasis. Forfatterene kommer til å bruke en tilpasset mal for å oppgi slike metadata for sitt manuskript. Redaksjonslederen bør velge kategoriene for indeksering, og gi forfatterene relevante eksempler til hjelp ved indekseringen. Disse termene skal holdes atskilt med a semikolon (for eks. term1; term2). Merk eksemplene som eksempler ved å bruke \"For eks.\" eller \"For eksempel,\"."
+msgstr ""
+"OJS følger <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open "
+"Archives Initiative</a> -protokollen for innhøsting av metadata. Dette er en "
+"framtidsrettet indekseringsstandard som gir tilgang til elektroniske "
+"forskningsressurser på verdensbasis. Forfatterne vil bruke en tilpasset mal "
+"for å oppgi slike metadata for sitt manuskript. Redaksjonslederen bør velge "
+"kategoriene for indeksering, og gi forfatterne relevante eksempler til hjelp "
+"ved indekseringen. Disse termene skal holdes atskilt med et semikolon ("
+"f.eks. term1; term2). Merk eksemplene som eksempler ved å bruke «F.eks.» "
+"eller «For eksempel»."
 
 msgid "manager.setup.form.contactEmailRequired"
-msgstr "Hovedkontaktens e-post er påkrevet."
+msgstr "Du må fylle inn e-postadressen til kontaktpersonen."
 
 msgid "manager.setup.form.contactNameRequired"
-msgstr "Hovedkontaktens navn er påkrevet."
+msgstr "Du må fylle inn navnet på kontaktpersonen."
 
 msgid "manager.setup.form.journalInitialsRequired"
-msgstr "Tidsskriftets initialer er påkrevet."
+msgstr "Du må fylle inn initialene til tidsskriftet."
 
 msgid "manager.setup.form.journalTitleRequired"
-msgstr "Tidsskriftets tittel er påkrevet."
+msgstr "Du må fylle inn tittelen på tidsskriftet."
 
 msgid "manager.setup.form.numReviewersPerSubmission"
-msgstr "Antallet fagkonsulenter per manuskript er påkrevet."
+msgstr "Du må fylle inn antall fagfeller per bidrag."
 
 msgid "manager.setup.form.supportEmailRequired"
-msgstr "Teknisk kontaktpersons e-post er påkrevet."
+msgstr "Du må fylle inn e-posten til teknisk kontaktperson."
 
 msgid "manager.setup.form.supportNameRequired"
-msgstr "Teknisk kontaktpersons navn er påkrevet."
+msgstr "Du må fylle inn navnet på teknisk kontaktperson."
 
 msgid "manager.setup.frequencyOfPublication"
 msgstr "Førsteutgave og utgivelsesfrekvens"
@@ -338,13 +376,13 @@ msgid "manager.setup.generalInformation"
 msgstr "Generell informasjon"
 
 msgid "manager.setup.gettingDownTheDetails"
-msgstr "Trinn 1. Detaljene først"
+msgstr "Trinn 1: Legg til detaljer"
 
 msgid "manager.setup.guidelines"
 msgstr "Retningslinjer"
 
 msgid "manager.setup.guidingSubmissions"
-msgstr "Trinn 3. Innsending av manuskript"
+msgstr "Trinn 3: Innleveringsveiledning"
 
 msgid "manager.setup.homepageImage"
 msgstr "Hjemmesidebilde"
@@ -356,7 +394,9 @@ msgid "manager.setup.information"
 msgstr "Informasjon"
 
 msgid "manager.setup.information.description"
-msgstr "Korte beskrivelser av tidsskriftet for interesserte bibliotekarer, forfattere, og lesere som blir tilgjengelig i 'informasjon'-delen av sidefeltet."
+msgstr ""
+"Kort beskrivelse av tidsskriftet for interesserte bibliotekarer, forfattere "
+"og lesere. Den blir tilgjengelig i «Informasjon»-delen av sidefeltet."
 
 msgid "manager.setup.information.forAuthors"
 msgstr "For forfattere"
@@ -380,16 +420,18 @@ msgid "manager.setup.issuePerVolume"
 msgstr "Utgaver per volum"
 
 msgid "manager.setup.itemsDescription"
-msgstr "Navigasjonsfeltelementer kan legges til i det nåværende settet (hjem, om, min side, etc.) som vises på toppen av siden."
+msgstr ""
+"Elementer kan legges til i det nåværende navigasjonsfeltet («Hjem», «Om», «"
+"Min side» osv.) som vises på toppen av siden."
 
 msgid "manager.setup.itemsPerPage"
-msgstr "Element per side"
+msgstr "Elementer per side"
 
 msgid "manager.setup.journalAbbreviation"
-msgstr "Tidsskriftforkortelse"
+msgstr "Forkortet tidsskriftnavn"
 
 msgid "manager.setup.journalArchiving"
-msgstr "Tidsskriftarkivering"
+msgstr "Arkivering"
 
 msgid "manager.setup.journalDescription"
 msgstr "Tidsskriftbeskrivelse"
@@ -398,40 +440,51 @@ msgid "manager.setup.journalDescriptionDescription"
 msgstr "Legg til en kort 20-25 ords beskrivelse i text/HTML som vil bli vist like nedenfor navigasjonslenkene."
 
 msgid "manager.setup.journalHomepageContent"
-msgstr "Tidsskrifthjemmeside innhold"
+msgstr "Innhold på tidsskriftets hjemmeside"
 
 msgid "manager.setup.journalHomepageContentDescription"
-msgstr "Som standard består hjemmesiden av navigasjonslenker. Ytterligere hjemmesideinnhold kan legges til ved å bruke en eller flere av følgende valgmuligheter, som vil bli vist i den viste rekkefølgen. Merk at nåværende utgave alltid er tilgjengelig gjennom nyeste-lenken i navigasjonsfeltet."
+msgstr ""
+"Som standard består hjemmesiden av navigasjonslenker. Annet innhold kan "
+"legges til ved å bruke en eller flere av følgende valgmuligheter, som vil "
+"bli vist i den viste rekkefølgen. Merk at nåværende utgave alltid er "
+"tilgjengelig gjennom «Nyeste»-lenken i navigasjonsfeltet."
 
 msgid "manager.setup.journalHomepageHeader"
-msgstr "Tidsskriftets hjemmesidetopptekst"
+msgstr "Topptekst på hjemmesiden"
 
 msgid "manager.setup.journalHomepageHeaderDescription"
-msgstr "En grafisk versjon av tidsskriftets tittel og logo (i en .gif-, .jpg-, eller .png-fil) kan lastes opp for hjemmesiden, som kommer til å erstatte tekstversjonen som ellers vises."
+msgstr ""
+"En grafisk versjon av tidsskriftets tittel og logo (i en .gif-, .jpg-, eller "
+".png-fil) kan lastes opp for hjemmesiden. Den vil erstatte tekstversjonen "
+"som ellers vises."
 
 msgid "manager.setup.contextInitials"
 msgstr "Tidsskriftinitialer"
 
 msgid "manager.setup.journalLogo"
-msgstr "Tidsskriftlogo"
+msgstr "Tidsskriftets logo"
 
 msgid "manager.setup.journalPageFooter"
-msgstr "Tidsskriftside bunntekst"
+msgstr "Bunntekst"
 
 msgid "manager.setup.journalPageFooterDescription"
-msgstr "Dette er bunnteksten for tidsskriftet ditt. For å endre eller oppdatere bunnteksten, lim inn HTML kode i tekstboksen nedenfor. For eksempel et annet navigasjonsfelt, et telleverk etc. Denne bunnteksten vil bli vist på hver side."
+msgstr ""
+"Dette er bunnteksten for tidsskriftet ditt. For å endre eller oppdatere "
+"bunnteksten, lim inn en HTML-kode i tekstboksen nedenfor (f.eks. et annet "
+"navigasjonsfel eller et telleverk). Denne bunnteksten vil bli vist på hver "
+"side."
 
 msgid "manager.setup.journalPolicies"
-msgstr "Trinn 2. Retningslinjer for tidsskriftet"
+msgstr "Trinn 2: Retningslinjer for tidsskriftet"
 
 msgid "manager.setup.journalSetup"
-msgstr "Tidsskriftoppsett"
+msgstr "Tidsskriftsoppsett"
 
 msgid "manager.setup.journalSetupUpdated"
-msgstr "Ditt tidsskriftoppsett er nå oppdatert."
+msgstr "Tidsskriftoppsett er nå oppdatert."
 
 msgid "manager.setup.journalStyleSheetInvalid"
-msgstr "Ugyldig stylesheetformat for tidsskriftet. Akseptert format er .css."
+msgstr "Ugyldig stilarksformat. Akseptert format er .css."
 
 msgid "manager.setup.contextTitle"
 msgstr "Tidsskrifttittel"
@@ -461,10 +514,12 @@ msgstr ""
 "her</a>."
 
 msgid "manager.setup.look"
-msgstr "Utseendet"
+msgstr "Design"
 
 msgid "manager.setup.look.description"
-msgstr "Hjemmesidetopptekst, innhold, tidsskrift-topptekst, bunntekst, navigasjonsfelt, og stylesheet."
+msgstr ""
+"Hjemmesidetopptekst, innhold, tidsskrift-topptekst, bunntekst, "
+"navigasjonsfelt og stilark."
 
 msgid "manager.setup.mailingAddressDescription"
 msgstr "Tidsskriftets besøks- og postadresse."
@@ -473,7 +528,9 @@ msgid "manager.setup.management"
 msgstr "Administrasjon"
 
 msgid "manager.setup.management.description"
-msgstr "Planlegging, nettilgang, oppslag, og bruk av manusredaktører, layoutredaktører og korrekturlesere."
+msgstr ""
+"Tilgang og sikkerhet, planlegging, oppslag, språkvask, layoutredigering og "
+"korrekturlesing."
 
 msgid "manager.setup.managementOfBasicEditorialSteps"
 msgstr "Administrasjon av grunnleggende redaksjonelle trinn"
@@ -482,25 +539,29 @@ msgid "manager.setup.managingPublishingSetup"
 msgstr "Administrasjons- og publiseringsoppsett"
 
 msgid "manager.setup.managingTheJournal"
-msgstr "Trinn 4. Administrasjon av tidsskriftet"
+msgstr "Trinn 4: Administrere tidsskriftet"
 
 msgid "manager.setup.navigationBar"
 msgstr "Navigasjonsfelt"
 
 msgid "manager.setup.navigationBarDescription"
-msgstr "Legg til eller fjern ytterligere navigasjonsfeltelementer."
+msgstr "Legg til eller fjern andre navigasjonsfeltelementer."
 
 msgid "manager.setup.navItemIsAbsolute"
-msgstr "URL er en absolutt URL (for eks. \"http://www.example.com\") heller enn en filsti som er relativ til nettstedet (for eks. \"/manager/setup\")"
+msgstr ""
+"URL er en absolutt URL (f.eks. http://www.eksempel.com) framfor en filsti "
+"som er relativ til nettstedet (f.eks. /manager/setup)"
 
 msgid "manager.setup.navItemIsLiteral"
-msgstr "Etikettverdien er en tegnstreng (for eks. \"Tidsskriftoppsett\") heller enn en lokaliseringsnøkkel (for eks. \"manager.setup\")"
+msgstr ""
+"Beskrivelsen er en tegnstreng (f.eks. «Tidsskriftoppsett») framfor en "
+"lokaliseringsnøkkel (f.eks. manager.setup)"
 
 msgid "manager.setup.noImageFileUploaded"
 msgstr "Ingen bildefil er lastet opp."
 
 msgid "manager.setup.noStyleSheetUploaded"
-msgstr "Ingen stylesheet lastet opp."
+msgstr "Ingen stilark er lastet opp."
 
 msgid "manager.setup.note"
 msgstr "Merknad"
@@ -509,7 +570,8 @@ msgid "manager.setup.notifications"
 msgstr "Bekreftelse av manuskriptinnsending"
 
 msgid "manager.setup.notifications.copyPrimaryContact"
-msgstr "Send en kopi til tidsskriftets hovedkontakt, som ble oppgitt i Oppsett Trinn 1."
+msgstr ""
+"Send en kopi til kontaktpersonen som er angitt i tidsskriftsinnstillingene."
 
 msgid "manager.setup.notifications.copySpecifiedAddress"
 msgstr "Send en kopi til denne e-postadressen:"
@@ -533,7 +595,7 @@ msgid "manager.setup.noUseProofreaders"
 msgstr "Redaktørene og forfattere kommer til å korrigere sideoppsett."
 
 msgid "manager.setup.numPageLinks"
-msgstr "Side lenker"
+msgstr "Sidelenker"
 
 msgid "manager.setup.publishingMode"
 msgstr "Administrasjon av nettilgang"
@@ -566,7 +628,9 @@ msgid "manager.setup.policies"
 msgstr "Retningslinjer"
 
 msgid "manager.setup.policies.description"
-msgstr "Hovedfokus, fagvurdering, seksjoner, personopplysninger, sikkerhet, og øvrige Om-emner."
+msgstr ""
+"Fokus, fagfellevurdering, seksjoner, personvern, sikkerhet og andre "
+"«Om»-emner."
 
 msgid "manager.setup.principalContact"
 msgstr "Hovedkontakt"
@@ -590,7 +654,12 @@ msgid "manager.setup.proofingInstructions"
 msgstr "Instruks for korrekturlesing"
 
 msgid "manager.setup.proofingInstructionsDescription"
-msgstr "Instruksen for korrekturlesing vil bli gjort tilgjengelig for korrekturlesere, forfattere, layoutredaktører og seksjonsredaktører i manuskriptbehandlingsstadiet. Nedenfor finner du standardinstruksjoner (i HTML), som kan redigeres eller erstattes av redaksjonslederen når som helst (i HTML eller ren tekst)."
+msgstr ""
+"Instruksen for korrekturlesing vil bli gjort tilgjengelig for "
+"korrekturlesere, forfattere, layoutredaktører og seksjonsredaktører i "
+"språkvasken. Nedenfor finner du standardinstruksjoner (i HTML), som kan "
+"redigeres eller erstattes av redaksjonslederen når som helst (i HTML eller "
+"ren tekst)."
 
 msgid "manager.setup.proofreading"
 msgstr "Korrekturlesere"
@@ -614,13 +683,19 @@ msgid "manager.setup.publicationSchedule"
 msgstr "Publiseringsplan"
 
 msgid "manager.setup.publicationScheduleDescription"
-msgstr "Tidsskriftelementer kan publiseres samlet, som del av en utgave med egen innholdsoversikt. Alternativt kan enkeltelementene publiseres løpende, etter hvert som de er ferdigstilt, og da legges de til i nyeste nummers innholdsoversikt. I 'Om' tidsskriftet skal leserne finne opplysningene om hvilket av disse to systemene dette tidsskriftet vil bruke, og om forventet utgivelsesfrekvens."
+msgstr ""
+"Tidsskriftelementer kan publiseres samlet, som del av en utgave med egen "
+"innholdfortegnelse. Alternativt kan enkeltelementene publiseres løpende "
+"etter hvert som de er ferdigstilt. De legges da til innholdsfortegnelsen til "
+"den nyeste utgaven. I «Om» tidsskriftet skal leserne finne opplysningene om "
+"hvilket av disse to systemene tidsskriftet vil bruke, samt om forventet "
+"utgivelsesfrekvens."
 
 msgid "manager.setup.publicationScheduling"
-msgstr "Publiseringsplanlegging"
+msgstr "Planlegg publisering"
 
 msgid "manager.setup.publicIdentifier"
-msgstr "Identifikasjon av tidsskriftinnhold"
+msgstr "Identifiser tidsskriftinnhold"
 
 msgid "manager.setup.publisher"
 msgstr "Utgiver"
@@ -638,19 +713,19 @@ msgid "manager.setup.restrictSiteAccess"
 msgstr "Brukere må logge inn for å se tidsskriftets nettsted."
 
 msgid "manager.setup.reviewGuidelines"
-msgstr "Instruks for fagkonsulenter"
+msgstr "Instruks for fagfeller"
 
 msgid "manager.setup.reviewOptions"
-msgstr "Fagvurderingsvalgmuligheter"
+msgstr "Alternativer for fagfellevurdering"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "Automatiserte e-post purringer (tilgjengelig i OJS's default e-poster) kan sendes til fagkonsulenter ved to anledninger (redaktøren kan i tillegg sende e-post direkte til fagkonsulenten)"
+msgstr "Automatiserte e-postpurringer"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
-"<strong>Merk</strong> For å aktivere automatiske epostvarsler, må "
+"<strong>Merk</strong> For å aktivere disse valgmulighetene, må "
 "nettstedsadministratoren slå på valgmuligheten <tt>planlagte_oppgaver</tt> i "
-"OJS-konfigurasjonsfilen. Annen serverkonfigurasjon kan være nødvendig for å "
+"OJS' konfigurasjonsfil. Annen serverkonfigurasjon kan være nødvendig for å "
 "støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte "
 "servere), som oppgitt i OJS-dokumentasjonen."
 
@@ -658,10 +733,12 @@ msgid "manager.setup.reviewOptions.noteOnModification"
 msgstr "Kan endres i løpet av den redaksjonelle prosessen."
 
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
-msgstr "Vanlig varighet tillatt for fagfellevurderinger"
+msgstr "Antall uker fagfellen har på å fullføre fagfellevurderingen"
 
 msgid "manager.setup.reviewOptions.onQuality"
-msgstr "Redaktører kommer til å rangere fagkonsulentene på en fempunkts skala etter hvert vurderingsoppdrag."
+msgstr ""
+"Redaktørene vil rangere fagfellene på en fempunkts skala etter hver "
+"fagfellevurdering."
 
 msgid "manager.setup.reviewOptions.reminders.response.description1"
 msgstr "Hvis fagkonsulenten ikke har svart på en forespørsel om vurderingsoppdrag innen"
@@ -679,25 +756,31 @@ msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr "Fagkonsulenter kommer til å få tilgang til manuskriptfilen bare etter å ha akseptert vurderingsoppdraget."
 
 msgid "manager.setup.reviewOptions.reviewerAccess"
-msgstr "Fagkonsulenttilgang"
+msgstr "Fagfellenes tilgang"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Slå på ettklikks tilgang for fagfellene"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>NB:</strong> E-post-invitasjonen til fagkonsulenter kommer til å inneholde en spesiell URL som binger den inviterte fagkonsulenten direkte til fagvurderingssiden for det aktuelle manuskriptet (tilgang til andre sider vil likevel kreve innlogging).  Med denne valgmuligheten slått på, kan ikke redaktørene endre e-postadresser eller legge til kopier eller blindkopier ved bestilling av fagvurderinger (av sikkerhetsgrunner)."
+msgstr ""
+"<strong>Merk:</strong> E-post-invitasjonen til fagfeller vil inneholde en "
+"URL som tar den inviterte fagfellen direkte til fagfellevurderingssiden for "
+"den aktuelle innleveringen (tilgang til andre sider vil kreve innlogging). "
+"Om denne valgmuligheten er slått på, kan ikke redaktørene endre e-"
+"postadresser eller legge til kopier eller blindkopier ved bestilling av "
+"fagfellevurderinger (av sikkerhetsgrunner)."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
-msgstr "Vurdering av fagkonsulenter"
+msgstr "Vurdering av fagfellene"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
-msgstr "Fagkonsulent-purringer"
+msgstr "Påminnelse til fagfeller"
 
 msgid "manager.setup.reviewOptions.reviewTime"
 msgstr "Fagvurderingstid"
 
 msgid "manager.setup.reviewPolicy"
-msgstr "Om fagvurderingsprosessen"
+msgstr "Retningslinjer for fagfellevurderingen"
 
 msgid "manager.setup.reviewProcess"
 msgstr "Fagvurderingsprosessen"
@@ -724,16 +807,20 @@ msgstr ""
 "{$sitemapUrl}\" target=\"_blank\">sitemap</a>."
 
 msgid "manager.setup.sectionsAndSectionEditors"
-msgstr "Tidsskriftseksjoner og seksjonsredaktører"
+msgstr "Seksjoner og seksjonsredaktører"
 
 msgid "manager.setup.sectionsDefaultSectionDescription"
-msgstr "(Hvis seksjoner ikke er angitt, vil bidraget bli sendt inn til Artikler.)"
+msgstr ""
+"(Hvis seksjoner ikke er angitt, vil bidraget bli sendt inn til «Artikler».)"
 
 msgid "manager.setup.sectionsDescription"
-msgstr "For å opprette eller endre seksjoner for tidsskriftet (f.eks. Artikler, Bokanmeldelser, etc.), gå til seksjonsadministrasjon.<br /><br />Når forfattere sender inn elementer til tidsskriftet, kommer de til å angi ..."
+msgstr ""
+"For å opprette eller endre seksjoner for tidsskriftet (f.eks. «Artikler», "
+"«Bokanmeldelser»), gå til seksjonsadministrasjon.<br /><br /> Når forfattere "
+"leverer inn til tidsskriftet, kommer de til å angi ..."
 
 msgid "manager.setup.selectEditorDescription"
-msgstr "Tidsskriftredaktør som skal følge bidraget gjennom den redaksjonelle prosessen."
+msgstr "Redaktøren som skal følge bidraget gjennom den redaksjonelle prosessen."
 
 msgid "manager.setup.selectSectionDescription"
 msgstr "Tidsskriftseksjonen bidraget skal vurderes for."
@@ -751,25 +838,30 @@ msgid "manager.setup.subjectExamples"
 msgstr "(F.eks. fotosyntese; sorte hull; Gödels teorem; Zenons paradokser)"
 
 msgid "manager.setup.subjectKeywordTopic"
-msgstr "Emneord"
+msgstr "Nøkkelord"
 
 msgid "manager.setup.subjectProvideExamples"
-msgstr "Gi eksempler på relevante nøkkelord eller emneord, til veiledning for forfatterene"
+msgstr "Gi forfatterne eksempler på relevante nøkkelord eller emneord"
 
 msgid "manager.setup.submissionGuidelines"
-msgstr "Retningslinjer for innsending av manuskript"
+msgstr "Retningslinjer for innleveringer"
 
 msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Sjekkliste for klargjøring av manuskript"
+msgstr "Sjekkliste for innlevering"
 
 msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Ved innsending av manuskript til tidsskriftet, må forfattere først krysse av for hvert element på Sjekkliste for klargjøring av manuskript, før de får gå videre. Sjekklisten vises også i forfatterinstruksen, under 'Om' tidsskriftet. Sjekklisten kan redigeres nedenfor, men alle elementene på listen må krysses av før forfatteren kan gå videre med innsendingen."
+msgstr ""
+"Når de leverer inn bidrag til tidsskriftet, må forfattere først krysse av "
+"for hvert element på «Sjekkliste for innlevering», før de får gå videre. "
+"Sjekklisten vises også i forfatterinstruksen, under «Om» tidsskriftet. "
+"Sjekklisten kan redigeres nedenfor, men alle elementene på listen må krysses "
+"av før forfatteren kan gå videre med innsendingen."
 
 msgid "manager.setup.submissions"
-msgstr "Innsendte manuskripter"
+msgstr "Innleveringer"
 
 msgid "manager.setup.submissions.description"
-msgstr "Forfatterinstruks, copyright, og indeksering (herunder registrering)."
+msgstr "Forfatterinstruks, opphavsrett og indeksering (herunder registrering)."
 
 msgid "manager.distribution.publishingMode.subscription"
 msgstr "Tidsskriftet kommer til å kreve abonnement for tilgang til alt eller deler av innholdet."
@@ -781,7 +873,9 @@ msgid "manager.setup.technicalSupportContactDescription"
 msgstr "Denne personen vil bli oppført på tidsskriftets kontaktside, til bruk for redaktører, forfattere, og fagkonsulenter, og bør ha kjennskap til systemet fra synsvinkelen til alle rollene. Ettersom dette tidsskriftsystemet krever lite teknisk støtte, bør dette betraktes som en deltidsoppgave. Det vil likevel forekomme behov, for eksempel når forfattere og fagkonsulenter får problemer med instruksjonene eller filformat, eller når det blir nødvendig å sørge for at det regelmessig blir tatt sikkerhetskopi av tidsskriftet på serveren."
 
 msgid "manager.setup.typeExamples"
-msgstr "(F.eks. historisk studium; tankeeksperiment; feltundersøkelse; retorisk analyse; aksjonsforskning; kartlegging/intervju)"
+msgstr ""
+"(F.eks. historisk studium; feltundersøkelse; retorisk analyse; kartlegging/"
+"intervju)"
 
 msgid "manager.setup.typeMethodApproach"
 msgstr "Type (metode/innfallsvinkel)"
@@ -793,13 +887,16 @@ msgid "manager.setup.uniqueIdentifier"
 msgstr "Unik identifikator"
 
 msgid "manager.setup.uniqueIdentifierDescription"
-msgstr "Artikler og utgaver kan merkes med et identifikasjonsnummer eller tegnstreng som følger et registreringssystem, for eksempel  Digital Object Identifier (DOI)."
+msgstr ""
+"Artikler og utgaver kan merkes med et identifikasjonsnummer eller tegnstreng "
+"som følger et registreringssystem, for eksempel Digital Object Identifier "
+"(DOI)."
 
 msgid "manager.setup.useCopyeditors"
 msgstr "Tidsskriftet kommer til å utpeke manusredaktører for bearbeiding av hvert manuskript."
 
 msgid "manager.setup.useEditorialReviewBoard"
-msgstr "Tidsskriftet skal ha redaksjons- eller fagfelleråd."
+msgstr "Tidsskriftet skal ha redaksjonråd."
 
 msgid "manager.setup.useImageLogo"
 msgstr "Logobilde"
@@ -839,7 +936,7 @@ msgid "manager.statistics.statistics.count.decline"
 msgstr "Avvist"
 
 msgid "manager.statistics.statistics.count.revise"
-msgstr "Sendt inn igjen"
+msgstr "Send inn på nytt"
 
 msgid "manager.statistics.statistics.daysPerReview"
 msgstr "Dager til vurdering"
@@ -848,22 +945,32 @@ msgid "manager.statistics.statistics.daysToPublication"
 msgstr "Dager før utgitt"
 
 msgid "manager.statistics.statistics.description"
-msgstr "OJS beregner følgende statistikk for hvert tidsskrift.  'Dager til vurdering' er regnet ut fra innsendingsdatoen (eller datoen for utpeking av fagvurderingsversjon), til første gang redaktørens beslutning ble registrert, mens 'Dager før utgitt' er beregnet for det aksepterte manuskriptet fra det først ble lastet opp til det ble publisert."
+msgstr ""
+"OJS beregner følgende statistikk for hvert tidsskrift. «Dager til vurdering» "
+"er regnet ut fra innsendingsdatoen (eller utpeking av versjon til "
+"fagfellevurdering), til første gang redaktørens beslutning ble registrert, "
+"mens «Dager før utgitt» er beregnet for det aksepterte manuskriptet fra det "
+"først ble lastet opp til det ble publisert."
 
 msgid "manager.statistics.statistics.itemsPublished"
 msgstr "Element publisert"
 
 msgid "manager.statistics.statistics.makePublic"
-msgstr "Kryss av for elementer som skal gjøres tilgjengelig for leserne i 'Om' tidsskriftet."
+msgstr ""
+"Kryss av for elementer som skal gjøres tilgjengelig for leserne i «Om» "
+"tidsskriftet."
 
 msgid "manager.statistics.statistics.note"
-msgstr "NB: Det totale prosenttallet for fagfellevurderte manuskript kan bli mindre enn 100%, fordi gjeninnsendte elementer enten er akseptert, avvist, eller fortsatt under arbeid."
+msgstr ""
+"Merk: Det totale prosenttallet for fagfellevurderte bidrag kan bli mindre "
+"enn 100 %, fordi gjeninnsendte elementer enten er akseptert, avvist eller "
+"fortsatt under arbeid."
 
 msgid "manager.statistics.statistics.numIssues"
 msgstr "Utgaver publisert"
 
 msgid "manager.statistics.statistics.numSubmissions"
-msgstr "Totalt antall manuskript"
+msgstr "Totalt antall bidrag"
 
 msgid "manager.statistics.statistics.peerReviewed"
 msgstr "Fagfellevurdert"
@@ -878,7 +985,7 @@ msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Antall oppnevnt"
 
 msgid "manager.statistics.statistics.reviewers"
-msgstr "Fagkonsulenter"
+msgstr "Fagfeller"
 
 msgid "manager.statistics.statistics.reviewerScore"
 msgstr "Redaktørens score"
@@ -887,7 +994,9 @@ msgid "manager.statistics.statistics.reviewsPerReviewer"
 msgstr "Antall fagfellevurderinger"
 
 msgid "manager.statistics.statistics.selectSections"
-msgstr "Velg seksjonene for utregning av dette tidsskriftets statistikk over fagfellevurdering."
+msgstr ""
+"Velg seksjonene for utregning av tidsskriftets statistikk over "
+"fagfellevurdering."
 
 msgid "manager.statistics.statistics.subscriptions"
 msgstr "Abonnement"
@@ -899,7 +1008,7 @@ msgid "manager.subscriptionPolicies.delayedOpenAccess"
 msgstr "Utsatt Open Access"
 
 msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
-msgstr "Vennligst bruk avkrysningsboksen."
+msgstr "Bruk avkrysningsboksen."
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths1"
 msgstr "Send beskjed til abonnenter med e-post"
@@ -929,52 +1038,79 @@ msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Varsel om abonnementsutløp"
 
 msgid "manager.subscriptionPolicies.expiryRemindersDescription"
-msgstr "Automatiserte e-postpurringer (tilgjengelig for redigering av redaksjonsledere i OJS' Forberedte e-poster) kan sendes til abonnentene både før og etter at et abonnement har utløpt."
+msgstr ""
+"Automatiserte e-postpurringer kan sendes til abonnentene både før og etter "
+"at et abonnement har utløpt. Redaksjonsledere kan ev. redigere disse i "
+"systemets' e-postmaler."
 
 msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
-msgstr "<strong>NB:</strong> For å aktivere disse valgmulighetene, må nettstedsadministratoren slå på <tt>scheduled_tasks</tt> valgmuligheten in the OJS konfigurasjonsfilen. Ytterligere server konfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen."
+msgstr ""
+"<strong>Merk:</strong> For å aktivere disse, må nettstedsadministratoren slå "
+"på valgmuligheten <tt>planlagte_oppgaver</tt>  i konfigurasjonsfilen til "
+"OJS. Andre serverkonfigurasjoner kan være nødvendige for å støtte denne "
+"funksjonen (som likevel kan være umulig å bruke på enkelte servere), som "
+"oppgitt i OJS-dokumentasjonen."
 
 msgid "manager.subscriptionPolicies.htmlInstructions"
-msgstr "HTML kan brukes i tekstområdet (for skrifttype, størrelse, farge etc.), med \"linjeskift\" lest som <tt>&lt;br&gt;</tt>; HTML-editoren virker med Firefox nettlesere."
+msgstr ""
+"HTML kan brukes i tekstområdet (for skrifttype, størrelse, farge osv.), med "
+"«linjeskift» lest som <tt>&lt;br&gt;</tt>. HTML-redigeringen virker med "
+"Firefox nettlesere."
 
 msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
-msgstr "Vennligst velg en gyldig verdi for antallet måneder etter at abonnementet utløper."
+msgstr "Velg en gyldig verdi for antall måneder etter at abonnementet utløper."
 
 msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
-msgstr "Vennligst velg en gyldig verdi for antallet måneder før abonnementet utløper."
+msgstr "Velg en gyldig verdi for antall måneder før abonnementet utløper."
 
 msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
-msgstr "Vennligst velg en gyldig verdi for antallet uker etter at abonnementet utløper."
+msgstr "Velg en gyldig verdi for antall uker etter at abonnementet utløper."
 
 msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
-msgstr "Vennligst velg en gyldig verdi for antallet uker før abonnementet utløper."
+msgstr "Velg en gyldig verdi for antall uker før abonnementet utløper."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
-msgstr "Registrerte lesere kommer til å få velge om de vil motta innholdsoversikten med e-post straks en utgave blir Open Access."
+msgstr ""
+"Registrerte lesere vil få velge om de vil motta en e-post med "
+"innholdsfortegnelsen straks en utgave blir tilgjengelig som Open Access."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
-msgstr "<strong>NB:</strong> For å aktivere denne valgmuligheten, må nettstedsadministratoren slå på <tt>scheduled_tasks</tt> valgmuligheten i OJS' konfigurasjonsfil. Ytterligere serverkonfigurasjon kan være nødvendig for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen."
+msgstr ""
+"<strong>Merk:</strong> For å aktivere denne muligheten, må "
+"nettstedsadministratoren slå på valgmuligheten <tt>planlagte_oppgaver</tt> i "
+"konfigurasjonsfilen til OJS. Annen serverkonfigurasjon kan være nødvendig "
+"for å støtte denne funksjonen (som likevel kan være umulig å bruke på "
+"enkelte servere), som oppgitt i OJS-dokumentasjonen."
 
 msgid "manager.subscriptionPolicies.openAccessOptions"
 msgstr "Open Access-valg for abonnementstidsskrift"
 
 msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
-msgstr "Abonnementstidsskrift kan også tillate utsatt Open Access og/eller forfatters egenarkivering (som vil øke både leserkrets og siteringshyppighet). Valgene vil bli vist in 'Om' tidsskriftet."
+msgstr ""
+"Abonnementstidsskrift kan også tillate utsatt Open Access og/eller "
+"forfatters egenarkivering (som vil øke både leserkrets og antall "
+"refereringer). Valgene vil bli vist under «Om» tidsskriftet."
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
 msgstr "Abonnementsinformasjon"
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
-msgstr "Abonnementstyper og betalingsform vil bli skrevet inn automatisk under Abonnement på 'Om' tidsskriftet-siden, sammen med navnet og kontaktinformasjon for abonnementskontakten. Ytterligere informasjon om abonnement, som betalingsmåte eller særvilkår for abonnenter i den tredje verden, kan legges til her."
+msgstr ""
+"Abonnementstyper og betalingsformer vil bli skrevet inn automatisk under "
+"«Abonnement» under «Om» tidsskriftet, sammen med navnet og "
+"kontaktinformasjon for abonnementskontakten. Ytterligere informasjon om "
+"abonnement, som betalingsmåte eller særvilkår for abonnenter i "
+"utviklingsland, kan legges til her."
 
 msgid "manager.subscriptionPolicies.subscriptionContact"
 msgstr "Abonnementskontakt"
 
 msgid "manager.subscriptionPolicies.subscriptionContactDescription"
-msgstr "Kontaktpersonen som er oppført under Abonnement i 'Om' tidsskriftet."
+msgstr ""
+"Kontaktpersonen som er oppført under «Abonnement» under «Om» tidsskriftet."
 
 msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
-msgstr "Vennligst skriv inn en gyldig e-post."
+msgstr "Skriv inn en gyldig e-post."
 
 msgid "manager.subscriptions"
 msgstr "Abonnement"
@@ -1004,19 +1140,19 @@ msgid "manager.subscriptions.form.dateEnd"
 msgstr "Sluttdato"
 
 msgid "manager.subscriptions.form.dateEndRequired"
-msgstr "Sluttdato for abonnementet er påkrevet."
+msgstr "Du må fylle inn en sluttdato for abonnementet."
 
 msgid "manager.subscriptions.form.dateEndValid"
-msgstr "Vennligst velg en gyldig sluttdato for abonnementet."
+msgstr "Velg en gyldig sluttdato for abonnementet."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Startdato"
 
 msgid "manager.subscriptions.form.dateStartRequired"
-msgstr "Startdato for abonnementet er påkrevet."
+msgstr "Du må oppgi startdato for abonnementet."
 
 msgid "manager.subscriptions.form.dateStartValid"
-msgstr "Vennligst velg en gyldig startdato for abonnementet."
+msgstr "Velg en gyldig startdato for abonnementet."
 
 msgid "manager.subscriptions.form.domain"
 msgstr "Domene"
@@ -1028,10 +1164,12 @@ msgstr ""
 "domenenavn (f.eks. lib.sfu.ca)."
 
 msgid "manager.subscriptions.form.domainIPRangeRequired"
-msgstr "Den valgte abonnementstypen krever et domene og/eller et IP-områe for abonnementsautentisering."
+msgstr ""
+"Den valgte abonnementstypen må ha et domene og/eller et IP-område for "
+"abonnementsautentisering."
 
 msgid "manager.subscriptions.form.domainValid"
-msgstr "Vennligst skriv inn et gyldig domene."
+msgstr "Skriv inn et gyldig domene."
 
 msgid "manager.subscriptions.form.ipRange"
 msgstr "IP-område"
@@ -1044,22 +1182,24 @@ msgstr ""
 "142.58.103.*) eller et CIDR IP-område (f.eks. 142.58.100.0/24)."
 
 msgid "manager.subscriptions.form.ipRangeValid"
-msgstr "Vennligst skriv inn et gyldig IP-område."
+msgstr "Skriv inn et gyldig IP-område."
 
 msgid "manager.subscriptions.form.membership"
 msgstr "Medlemskap"
 
 msgid "manager.subscriptions.form.membershipInstructions"
-msgstr "Skriv inn medlemskapsinformasjon hvis abonnementstypen krever at abonnenter tilhører et selskap eller en organisasjon."
+msgstr ""
+"Skriv inn medlemskapsinformasjon hvis abonnementstypen krever at abonnenter "
+"tilhører en forening eller en organisasjon."
 
 msgid "manager.subscriptions.form.membershipRequired"
-msgstr "Den valgte abonnementstypen krever medlemskapsinformasjon."
+msgstr "Denne abonnementstypen krever medlemskapsinformasjon."
 
 msgid "manager.subscriptions.form.notifyEmail"
 msgstr "Send brukeren en e-post med brukernavn og abonnementsdetaljer."
 
 msgid "manager.subscriptions.form.notifyEmailValid"
-msgstr "Vennligst bruk avkrysningsboksen."
+msgstr "Bruk avkrysningsboksen."
 
 msgid "manager.subscriptions.form.saveAndCreateAnother"
 msgstr "Lagre og opprett en til"
@@ -1074,19 +1214,19 @@ msgid "manager.subscriptions.form.typeId"
 msgstr "Abonnementstype"
 
 msgid "manager.subscriptions.form.typeIdRequired"
-msgstr "En abonnementstype er påkrevet."
+msgstr "Du må fylle inn abonnementstype."
 
 msgid "manager.subscriptions.form.typeIdValid"
-msgstr "Vennligst velg en gyldig abonnementstype."
+msgstr "Velg en gyldig abonnementstype."
 
 msgid "manager.subscriptions.form.userId"
 msgstr "Bruker"
 
 msgid "manager.subscriptions.form.userIdRequired"
-msgstr "En bruker er påkrevet."
+msgstr "Du må fylle inn en bruker."
 
 msgid "manager.subscriptions.form.userIdValid"
-msgstr "Vennligst velg en gyldig bruker."
+msgstr "Velg en gyldig bruker."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP-område"
@@ -1095,13 +1235,16 @@ msgid "manager.subscriptions.noneCreated"
 msgstr "Ingen abonnement er opprettet"
 
 msgid "manager.subscriptions.select"
-msgstr "Verve abonnent"
+msgstr "Velg"
 
 msgid "manager.subscriptions.selectSubscriber.desc"
-msgstr "Tidsskriftets redaksjonsledere, redaktører, seksjonsredaktører, layoutredaktører, manusredaktører og korrekturlesere får automatisk abonnement på tidsskriftet."
+msgstr ""
+"Tidsskriftets redaksjonsledere, redaktører, seksjonsredaktører, "
+"layoutredaktører, språkvaskere og korrekturlesere får automatisk abonnement "
+"på tidsskriftet."
 
 msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
-msgstr "Abonnement opprettet successfully."
+msgstr "Abonnement opprettet."
 
 msgid "manager.subscriptions.subscriptionType"
 msgstr "Abonnementstype"
@@ -1137,22 +1280,24 @@ msgid "manager.subscriptionTypes.form.cost"
 msgstr "Pris"
 
 msgid "manager.subscriptionTypes.form.costInstructions"
-msgstr "Skriv inn en tallverdi (for eks. 40 eller 40.00). Ikke skriv inn annen tekst, som f.eks. «$» eller «NOK»."
+msgstr ""
+"Skriv inn en tallverdi (f.eks. 40 eller 40,00). Ikke skriv inn annen tekst, "
+"f.eks. «$» eller «NOK»."
 
 msgid "manager.subscriptionTypes.form.costNumeric"
 msgstr "Prisen må være en positiv tallverdi."
 
 msgid "manager.subscriptionTypes.form.costRequired"
-msgstr "En pris er påkrevet."
+msgstr "Du må fylle inn en pris."
 
 msgid "manager.subscriptionTypes.form.currency"
 msgstr "Valuta"
 
 msgid "manager.subscriptionTypes.form.currencyRequired"
-msgstr "En valuta er påkrevet."
+msgstr "Du må oppgi en valuta."
 
 msgid "manager.subscriptionTypes.form.currencyValid"
-msgstr "Vennligst velg en gyldig valuta."
+msgstr "Velg en gyldig valuta."
 
 msgid "manager.subscriptionTypes.form.description"
 msgstr "Beskrivelse"
@@ -1161,42 +1306,40 @@ msgid "manager.subscriptionTypes.form.duration"
 msgstr "Varighet"
 
 msgid "manager.subscriptionTypes.form.durationInstructions"
-msgstr "Abonnementets varighet, angitt i antall måneder (for eks. 12)."
+msgstr "Abonnementets varighet, angitt i antall måneder (f.eks. 12)."
 
 msgid "manager.subscriptionTypes.form.durationNumeric"
 msgstr "Varigheten må være en positiv tallverdi."
 
 msgid "manager.subscriptionTypes.form.durationRequired"
-msgstr "Varighet må angis."
+msgstr "Du må oppgi en varighet."
 
 msgid "manager.subscriptionTypes.form.format"
 msgstr "Format"
 
 msgid "manager.subscriptionTypes.form.formatRequired"
-msgstr "Et abonnementstypeformat er påkrevet."
+msgstr "Du må fylle inn et abonnementstypeformat."
 
 msgid "manager.subscriptionTypes.form.formatValid"
-msgstr "Vennligst velg et gyldig abonnementstypeformat."
+msgstr "Velg et gyldig abonnementstypeformat."
 
 msgid "manager.subscriptionTypes.form.institutional"
 msgstr "Institusjonell (brukere må valideres via domene eller IP-adresse)"
 
 msgid "manager.subscriptionTypes.form.institutionalValid"
-msgstr "Vennligst bruk avkrysningsboksen."
+msgstr "Bruk avkrysningsboksen."
 
 msgid "manager.subscriptionTypes.form.membership"
-msgstr ""
-"Abonnenter krever medlemsopplysninger (f.eks av en forening, organisasjon "
-"e.l.)"
+msgstr "Abonnenter må være medlemmer av en forening, organisasjon e.l."
 
 msgid "manager.subscriptionTypes.form.membershipValid"
-msgstr "Vennligst bruk avkrysningsboksen."
+msgstr "Bruk avkrysningsboksen."
 
 msgid "manager.subscriptionTypes.form.public"
-msgstr "Denne abonnementstypen vil ikke bli vist under Abonnement i 'Om' tidsskriftet."
+msgstr "Ikke vis abonnementstypen under «Abonnement» under «Om» tidsskriftet."
 
 msgid "manager.subscriptionTypes.form.publicValid"
-msgstr "Vennligst bruk avkrysningsboksen."
+msgstr "Bruk avkrysningsboksen."
 
 msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
 msgstr "Lagre og opprett en til"
@@ -1208,7 +1351,7 @@ msgid "manager.subscriptionTypes.form.typeNameExists"
 msgstr "En abonnementstype med dette navnet finnes allerede."
 
 msgid "manager.subscriptionTypes.form.typeNameRequired"
-msgstr "Et abonnementstypenavn er påkrevet."
+msgstr "Du må gi abonnementstypen et navn."
 
 msgid "manager.subscriptionTypes.name"
 msgstr "Abonnementstype"
@@ -1229,7 +1372,9 @@ msgid "manager.groups.context.people"
 msgstr "Vis tittelen som egen kategori under 'Personer' (for eks. redaksjonsråd)"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
-msgstr "Dette vil erstatte alle standard tidsskriftinnstillingene du hadde for dette lokalfilsettet"
+msgstr ""
+"Dette vil erstatte alle tidsskriftsspesifikke innstillinger for dette "
+"språkpakkesettet"
 
 msgid "manager.language.reloadLocalizedDefaultSettings"
 msgstr "Last opp igjen standardinnstillingene fra lokalfilsettet"
@@ -1247,10 +1392,12 @@ msgid "manager.payment.authorFees"
 msgstr "Forfatterbetaling"
 
 msgid "manager.payment.authorFeesDescription"
-msgstr "De valgte alternativene med beskrivelse og priser vil vises både i trinn 1 av innsendingsprosessen, i 'Om' tidsskriftet, og når det kreves betaling."
+msgstr "Legg inn betalingsbeløp under for å aktivere forfatterbetaling."
 
 msgid "manager.payment.currencymessage"
-msgstr "OJS utfører ingen valutakonversjoner. Hvis tidsskriftet skal ta betalt for abonnement, må du sørge for at den valutaen som er spesifisert her, er den riktige."
+msgstr ""
+"OJS veksler ikke valuta. Hvis tidsskriftet skal ta betalt for abonnement, må "
+"du sørge for at den valutaen som er spesifisert her, er den riktige."
 
 msgid "manager.payment.description"
 msgstr "Beskrivelse"
@@ -1326,7 +1473,9 @@ msgid "manager.payment.paymentMethod"
 msgstr "Betalingsmåte"
 
 msgid "manager.payment.paymentMethod.description"
-msgstr "Du kan konfigurere de programutvidelsene du trenger for ulike betalingsmåter fra dette skjermbildet."
+msgstr ""
+"Her kan du konfigurere de programtilleggene du trenger for ulike "
+"betalingsmåter."
 
 msgid "manager.payment.paymentMethods"
 msgstr "Betalingsmåter"
@@ -1353,7 +1502,7 @@ msgid "manager.people.allEnrolledUsers"
 msgstr "Registrerte brukere med roller i dette tidsskriftet"
 
 msgid "manager.people.allSiteUsers"
-msgstr "Verve en bruker fra tidsskriftnettstedet til dette tidsskriftet"
+msgstr "Verv en bruker fra tidsskriftnettstedet til dette tidsskriftet"
 
 msgid "manager.people.roleEnrollment"
 msgstr "{$role}-verving"
@@ -1365,13 +1514,15 @@ msgid "manager.sections.abstractsNotRequired"
 msgstr "Ikke krev sammendrag"
 
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "Vennligst kontrollér at minst én avkrysningsboks er krysset av for hvert oppdrag en seksjonsredaktør er oppnevnt til."
+msgstr ""
+"Kontroller at minst én avkrysningsboks er krysset av for hvert oppdrag en "
+"seksjonsredaktør er oppnevnt til."
 
 msgid "manager.sections.form.reviewFormId"
-msgstr "Vennligst kontrollér at du har valgt et gyldig vurderingsskjema."
+msgstr "Kontroller at du har valgt et gyldig skjema."
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "Utelat forfatternavn for seksjonselementer fra utgavens innholdsoversikt."
+msgstr "Utelat forfatternavn for seksjonselementer fra innholdsfortegnelsen."
 
 msgid "manager.setup.addReviewerDatabaseLink"
 msgstr "Legg til en ny databaselenke"
@@ -1386,7 +1537,9 @@ msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Krev at forfattere som sender inn manuskript samtidig sender inn en <I>Erklæring om interessekonflikter</I>."
 
 msgid "manager.setup.competingInterests.requireReviewers"
-msgstr "Krev at fagkonsulenter sender inn en <I>Erklæring om interessekonflikter</I> sammen med hver fagvurdering de sender inn."
+msgstr ""
+"Krev at fagfeller sender inn en <I>«Erklæring om interessekonflikter»</I> "
+"sammen med hver fagfellevurdering de sender inn."
 
 msgid "manager.setup.editorDecision"
 msgstr "Redaktørens beslutning"
@@ -1401,19 +1554,25 @@ msgid "manager.setup.enableUserRegistration.reviewer"
 msgstr "Fagkonsulenter (tilgjengelige for vurderingsoppdrag)"
 
 msgid "manager.setup.includeCreativeCommons"
-msgstr "Inkluder en <i>Creative Commons</i>-lisens i alt som publiseres i tidsskriftet når de enten gir umiddelbar eller utsatt <i>Open Access</i>."
+msgstr ""
+"Inkluder en <i>Creative Commons</i>-lisens i alt som publiseres i "
+"tidsskriftet når de gir umiddelbar eller utsatt <i>Open Access</i>."
 
 msgid "manager.setup.journalHomepageHeader.altText"
-msgstr "Tidsskrifthjemmeside topptekst"
+msgstr "Topptekst på hjemmesiden"
 
 msgid "manager.setup.journalLayout"
-msgstr "Tidsskriftnettsidenes layout"
+msgstr "Tidsskriftets layout"
 
 msgid "manager.setup.journalLayoutDescription"
-msgstr "Velg et designtema og velg layout-komponenter her. Det går også an å laste opp et egenprodusert stilark for tidsskriftet (CSS-stylesheet). Dette kan i så fall overstyre både stildata i systemet og tema-stilark for designtema (hvis et tema er valgt)."
+msgstr ""
+"Velg et designtema og velg layout-komponenter her. Det går også an å laste "
+"opp et egenprodusert stilark for tidsskriftet (CSS-stilark). Dette kan i så "
+"fall overstyre både stildata i systemet og tema-stilark for designtema (hvis "
+"et tema er valgt)."
 
 msgid "manager.setup.journalLogo.altText"
-msgstr "Tidsskriftlogo"
+msgstr "Tidsskriftets logo (alternativ tekst)"
 
 msgid "manager.setup.journalTheme"
 msgstr "Tidsskriftsutseende"
@@ -1425,7 +1584,7 @@ msgid "manager.setup.publicationFormatNumber"
 msgstr "Nummer"
 
 msgid "manager.setup.referenceLinking"
-msgstr "Aktive henvisningslenker"
+msgstr "Aktive referanselenker"
 
 msgid "manager.setup.reviewerDatabaseLink"
 msgstr "Database over potensielle fagkonsulenter"
@@ -1434,25 +1593,28 @@ msgid "manager.setup.reviewerDatabaseLink.desc"
 msgstr "Legg til en lenke til en relevant og tilgjengelig litteraturdatabase på 'Velg fagkonsulent'-siden, for at databasen skal kunne brukes til å søke etter potensielle fagkonsulenter."
 
 msgid "manager.setup.showGalleyLinksDescription"
-msgstr "Vis alltid sideoppsettlenker og indikér om tilgangen er begrenset."
+msgstr "Vis alltid lenker til oppsett og indiker om tilgangen er begrenset."
 
 msgid "manager.statistics.statistics.articleViews"
 msgstr "Telleverk for artikkelvisning (kun for forfattere)"
 
 msgid "manager.subscriptionPolicies.expiry"
-msgstr "Abonnementets utløpstid"
+msgstr "Abonnementets utløp"
 
 msgid "manager.subscriptionPolicies.expiryDescription"
-msgstr "Når abonnementet utløper kan leseren enten miste tilgangen til alt abonnementsinnhold, eller beholde tilgangen til det innholdet som var publisert fram til leserens abonnement utløp."
+msgstr ""
+"Når abonnementet utløper kan leseren enten miste tilgangen til alt innhold, "
+"eller beholde tilgangen til det innholdet som var publisert fram til "
+"leserens abonnement utløp."
 
 msgid "manager.subscriptionPolicies.expiryFull"
-msgstr "Utløpsdato"
+msgstr "Uten tilgang"
 
 msgid "manager.subscriptionPolicies.expiryFullDescription"
-msgstr "Lesere mister tilgang til alt abonnementsinnhold når abonnementet utløper."
+msgstr "Lesere mister tilgang til alt innhold når abonnementet utløper."
 
 msgid "manager.subscriptionPolicies.expiryPartial"
-msgstr "Delvis utløpsdato"
+msgstr "Delvis tilgang"
 
 msgid "manager.subscriptionPolicies.expiryPartialDescription"
 msgstr "Leseren får ikke lenger tilgang til nytt publisert innhold, men beholder tilgangen til det innholdet som var publisert fram til leserens abonnement utløp."
@@ -1473,13 +1635,13 @@ msgid "manager.subscriptions.membership"
 msgstr "Medlemskap"
 
 msgid "manager.language.ui"
-msgstr "Brukergrensesnitt"
+msgstr "Grensesnitt"
 
 msgid "manager.language.forms"
 msgstr "Skjema"
 
 msgid "manager.people.showNoRole"
-msgstr "Vis brukere som ikke har rolle"
+msgstr "Vis brukere som ikke har noen rolle"
 
 msgid "manager.plugins.upgrade"
 msgstr "Oppgrader programutvidelse"
@@ -1605,7 +1767,10 @@ msgid "manager.subscriptionTypes.form.options"
 msgstr "Valgmuligheter"
 
 msgid "manager.setup.historyDescription"
-msgstr "Denne teksten vil vises i \"Om\"-avsnittet av tidsskriftets nettsted, og kan benyttes til å beskriver endringer i navn, redaksjon og annet som er relevant for tidsskriftets publiseringshistorie."
+msgstr ""
+"Denne teksten vil vises i «Om»-avsnittet av tidsskriftets nettsted. Den kan "
+"benyttes til å beskrive endringer i navn, redaksjon og annet som er relevant "
+"for tidsskriftets publiseringshistorie."
 
 msgid "manager.sections.wordCountInstructions"
 msgstr ""
@@ -1625,28 +1790,45 @@ msgid "manager.distribution.publishingMode.none"
 msgstr "OJS vil ikke bli brukt til å publisere tidsskriftets innhold på nett."
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
-msgstr "Melding on online-betalinger"
+msgstr "Melding om nettbaserte betalinger"
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
-msgstr "Automatiske e-postbeskjeder (som kan redigeres av tidsskriftadministratorer i OJS' e-postmaler) kan sendes til abonnementsansvarlig når en online abonnementsbetaling er fullført."
+msgstr ""
+"Automatiske e-postbeskjeder kan sendes til abonnementsansvarlig når en "
+"nettbasert abonnementsbetaling er fullført. Beskjedene kan redigeres av "
+"tidsskriftadministratorer i OJS' e-postmaler."
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
-msgstr "Gi abonnementsansvarlig beskjed via e-post når noen kjøper et individuelt abonnement online."
+msgstr ""
+"Gi abonnementsansvarlig beskjed via e-post når noen kjøper et individuelt "
+"abonnement."
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
-msgstr "Gi abonnementsansvarlig beskjed via e-post når noen kjøper et institusjonelt abonnement online (anbefalt)."
+msgstr ""
+"Gi abonnementsansvarlig beskjed via e-post når noen kjøper et institusjonelt "
+"abonnement (anbefalt)."
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
-msgstr "Gi abonnementsansvarlig beskjed via e-post når noen fornyer et individuelt abonnement online."
+msgstr ""
+"Gi abonnementsansvarlig beskjed via e-post når noen fornyer et individuelt "
+"abonnement."
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
-msgstr "Gi abonnementsansvarlig beskjed via e-post når noen fornyer et institusjonelt abonnement online."
+msgstr ""
+"Gi abonnementsansvarlig beskjed via e-post når noen fornyer et "
+"institusjonelt abonnement."
 
 msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
-msgstr "<strong>OBS:</strong> Ved online-kjøp av institusjonelle abonnementer må det oppgitte domene og IP-område godkjennes, og abonnementet aktiviseres, av abonnementsansvarlig."
+msgstr ""
+"<strong>Merk:</strong> Abonnementsansvarlig godkjenne det oppgitte domenet "
+"og IP-området, samt aktivere abonnementet, ved kjøp av institusjonelle "
+"abonnementer."
 
 msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
-msgstr "<strong>OBS:</strong> For å tilgjengeliggjøre disse valgene, må tidsskriftadministratoren aktivisere modulen for online-betaling, inkludert online-betaling av abonnementer, under «leserbetaling»."
+msgstr ""
+"<strong>Merk:</strong> Tidsskriftadministratoren må aktivisere modulen for "
+"nettbasert betaling, inkludert nettbasert-betaling av abonnementer, under "
+"«leserbetaling» for at dette skal bli mulig."
 
 msgid "manager.individualSubscriptions"
 msgstr "Individuelle abonnementer"
@@ -1670,19 +1852,19 @@ msgid "manager.subscriptions.form.status"
 msgstr "Status"
 
 msgid "manager.subscriptions.form.statusRequired"
-msgstr "Abonnementsstatus må oppgis."
+msgstr "Du må oppgi en abonnementsstatus."
 
 msgid "manager.subscriptions.form.statusValid"
-msgstr "Vennligst velg en gyldig abonnementsstatus."
+msgstr "Velg en gyldig abonnementsstatus."
 
 msgid "manager.subscriptions.form.userProfileInstructions"
-msgstr "OBS: Alle endringer nedenfor gjelder i hele OJS-installasjonen."
+msgstr "Merk: Alle endringer nedenfor gjelder hele OJS-installasjonen."
 
 msgid "manager.subscriptions.form.userContact"
 msgstr "Kontakt"
 
 msgid "manager.subscriptions.form.userCountryValid"
-msgstr "Vennligst velg et gyldig land."
+msgstr "Velg et gyldig land."
 
 msgid "manager.subscriptions.form.referenceNumber"
 msgstr "Referansenummer"
@@ -1712,7 +1894,9 @@ msgid "manager.setup.categories"
 msgstr "Kategorier"
 
 msgid "manager.setup.categories.description"
-msgstr "Velg de mest passende kategorier fra listen. Lesere vil kunne bruke kategori for å navigere i hele tidsskriftutvalget."
+msgstr ""
+"Velg de mest passende kategorier fra listen. Lesere vil kunne bla gjennom "
+"tidsskriftutvalget etter kategori."
 
 msgid "manager.sections.confirmDelete"
 msgstr "Er du sikker på at du ønsker å slette denne seksjonen for godt?"
@@ -1731,10 +1915,12 @@ msgid "manager.website.archiving"
 msgstr "Arkivering"
 
 msgid "manager.language.submissions"
-msgstr "Manuskript"
+msgstr "Innleveringer"
 
 msgid "manager.section.noSectionEditors"
-msgstr "Det er ikke oppnevnt en seksjonsredaktør. Tildel denne rollen til minst en bruker under Administrasjon > Innstillinger > Brukere &amp; roller først."
+msgstr ""
+"Det er foreløpig ingen seksjonsredaktører. Oppnevn minst en bruker til "
+"rollen via «Administrasjon» > «Innstillinger»  > «Roller»."
 
 msgid "manager.setup.masthead"
 msgstr "Kolofon"
@@ -1743,13 +1929,16 @@ msgid "manager.setup.editorialTeam"
 msgstr "Redaksjon"
 
 msgid "manager.setup.homepageContent"
-msgstr "Innhold på hjemmesiden"
+msgstr "Hjemmesidens innhold"
 
 msgid "manager.setup.homepageContentDescription"
-msgstr "Som standard består hjemmesiden av navigasjonslenker. Ytterligere hjemmesideinnhold kan legges til ved å bruke en eller flere av følgende valgmuligheter, som vil bli vist i den viste rekkefølgen."
+msgstr ""
+"Hjemmesiden inneholder navigasjonslenker som standard. Annet innhold kan bli "
+"lagt til ved å bruke en eller alle av alternativene. De vil vises i denne "
+"rekkefølgen."
 
 msgid "manager.setup.useStyleSheet"
-msgstr "Tidsskriftets stilark"
+msgstr "Tidsskriftets stilark (CSS)"
 
 msgid "manager.setup.contextName"
 msgstr "Tidsskriftets navn"
@@ -1758,10 +1947,12 @@ msgid "manager.setup.pageHeader"
 msgstr "Tidsskriftets topptekst"
 
 msgid "manager.setup.focusAndScope.description"
-msgstr "Beskriv til forfattere, lesere og bibliotekarer spennvidden på artikler og annet innhold som tidsskriftet vil publisere."
+msgstr ""
+"Beskriv for forfattere, lesere og bibliotekarer hvilke typer artikler og "
+"andre bidrag tidsskriftet vil publisere."
 
 msgid "manager.setup.form.issnInvalid"
-msgstr "Angitt ISSN er ugyldig."
+msgstr "ISSN er ikke gyldig."
 
 msgid "manager.setup.contextSummary"
 msgstr "Tidsskriftsbeskrivelse"
@@ -1773,31 +1964,43 @@ msgid "manager.setup.contextAbout.description"
 msgstr "Inkluder informasjon om tidsskriftet som kan være av interesse for lesere, forfattere eller fagfeller. Dette kan inkludere retningslinjer for open access, hovedfokus og spennvidde for tidsskriftet, opphavsrettsnotis, informasjon om sponsorer, tidsskriftets historie, erklæring om personopplysninger og arkivering i LOCKSS eller CLOCKSS arkivsystem."
 
 msgid "manager.setup.journalThumbnail"
-msgstr "Tidsskriftets miniatyrbilde"
+msgstr "Miniatyrbilde"
 
 msgid "manager.setup.journalThumbnail.description"
-msgstr "En liten logo eller representasjon av tidsskriftet som kan bli brukt i listen over tidsskrift."
+msgstr ""
+"En liten logo eller representasjon av tidsskriftet som kan bli brukt i "
+"tidsskriftlister."
 
 msgid "manager.setup.lockssLicenseDescription"
-msgstr "En LOKCSS-lisens vil vises i Om tidsskriftet under Arkivering: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS-lisens</a>"
+msgstr ""
+"En LOCKSS-lisens vil vises i «Om» tidsskriftet under «Arkivering»: <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"LOCKSS License</a>"
 
 msgid "manager.setup.lockssLicenseLabel"
-msgstr "Beskrivelse av LOCKSS-lisens"
+msgstr "Beskrivelse av LOCKSS-lisensen"
 
 msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
-msgstr "Slå på CLOCKSS for å lagre og distribuere tidsskriftets innhold til deltakende bibliotek via et CLOCKSS-<a href=\"{$clockssUrl}\" target=\"_blank\">publiseringsmanifest</a> page."
+msgstr ""
+"La CLOCKSS lagre og distribuere tidsskriftets innhold til tilsluttede "
+"bibliotek via CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a>-siden."
 
 msgid "manager.setup.clockssLicenseDescription"
-msgstr "En CLOCKSS-lisens vil vises i Om tidsskriftet under Arkivering: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS-lisens</a>"
+msgstr ""
+"En CLOCKSS-lisens vil synes under «Om» tidsskriftet under «Arkivering»: <a "
+"href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Beskrivelse av CLOCKSS-lisens"
 
 msgid "manager.setup.clockssRegister"
-msgstr "Meld deg på CLOCKSS-tjenesten ved å besøke nettsiden: <a href=\"http://clockss.org/\" target=\"_blank\"></a>."
+msgstr ""
+"Ta i bruk CLOCKSS-tjenesten ved å besøke <a href=\"http://clockss.org/\" "
+"target=\"_blank\"> CLOCKSS-nettstedet</a>."
 
 msgid "manager.setup.clockssTitle"
 msgstr "CLOCKSS"
@@ -1817,22 +2020,34 @@ msgstr ""
 "vanligvis etter tema eller type (f.eks. oversiktsartikler, forskning)."
 
 msgid "settings.roles.gridDescription"
-msgstr "Roller er grupper av tidsskriftsbrukere  som er gitt ulikt tilgangsnivå og knyttet til ulike arbeidsflyter i tidsskriftet. Det er fem ulike tilgangsnivå: Tidsskriftsadministratorer har tilgang til alt i tidsskriftet (alt innhold og alle innstillinger). Seksjonsredaktører har full tilgang til alt innhold de er blitt tildelt. Tidsskriftsassistenter har begrenset tilgang til alle manuskript som en redaktør har tildelt dem. Fagfeller kan se og arbeide med manuskriptene som de skal vurdere. Forfattere kan se og interagere med en begrenset mengde informasjon knyttet til deres manuskript. I tillegg er det fem ulike trinn som roller kan bli gitt tilgang til: Manuskriptinnsending, Intern fagfellevurdering, Fagfellevurdering, Redaksjonelt og Produksjon."
+msgstr ""
+"«Roller» er grupper av brukere som har fått tilgang til ulike "
+"rettighetsnivåer og stadier i tidsskriftet. Det er fem ulike "
+"rettighetsnivåer. Redaksjonsledere har tilgang til alt i tidsskriftet (alt "
+"innhold og alle innstillinger). Seksjonsredaktører har tilgang til alt "
+"innhold i sin seksjon. Den redaksjonelle staben har begrenset tilgang til "
+"innleveringene som har blitt tildelt dem av en redaktør. Fagfellene kan se "
+"og arbeide med innleveringene de har blitt bedt om å vurdere. Forfattere se "
+"og jobbe med begrenset informasjon om deres egne innleveringer. I tillegg er "
+"det fem ulike nivåer disse rollene kan få tilgang til: Innlevering, intern "
+"vurdering, fagfellevurdering, redaksjonell behandling og produksjon."
 
 msgid "manager.publication.library"
-msgstr "Utgivers bibliotek"
+msgstr "Utgiverbibliotek"
 
 msgid "manager.setup.copyrightYearBasis"
 msgstr "Baser nye artiklers opphavsrettsår på"
 
 msgid "manager.setup.copyrightYearBasis.article"
-msgstr "Artikkel: År vil bli hentet fra artikkelens publiseringsdato."
+msgstr ""
+"Artikkel: standardår vil bli basert på artikkelens publiseringsdato, som i "
+"fortløpende publisering."
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr "Nummer: År vil bli hentet fra nummerets publiseringsdato."
+msgstr "Utgave: standardår vil bli basert på utgavens publiseringsdato."
 
 msgid "manager.setup.resetPermissions"
-msgstr "Tilbakestill artikkelrettigheter"
+msgstr "Tilbakestill rettigheter"
 
 msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
@@ -1846,7 +2061,11 @@ msgid "grid.genres.title"
 msgstr "Artikkelkomponenter"
 
 msgid "grid.genres.description"
-msgstr "Disse komponentene er brukt for å navngi filer og er presentert i en nedtrekksmeny ved opplasting av filer. Stilene som er tildelt ## tillater brukeren å knytte filen til enten hele innsendingen 99Z eller en bestemt nummerert komponent (f.eks. 02)."
+msgstr ""
+"Komponentene er brukt for å gi filene navn og vises i en rullegardinmeny når "
+"du laster opp filer. Genrene merket ## lar brukeren knytte filen til enten "
+"hele innleveringen (f.eks. 99Z) eller et spesielt komponent etter nummer ("
+"f.eks. 02)."
 
 msgid "manager.setup.useThumbnail"
 msgstr "Miniatyrbilde"
@@ -1863,70 +2082,77 @@ msgstr ""
 "\t"
 
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr "Nedlasting av artikkelfil"
+msgstr "Artikkelnedlastinger"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr "Sidevisning av artikkelsammendrag"
+msgstr "Visning av sammendrag"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr "Artikkelsammendrag og nedlastinger"
+msgstr "Sammendrag og nedlastinger"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
-msgstr "Visninger av tidsskriftets hovedside"
+msgstr "Antall visninger på hovedsiden"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr "Visninger av nummertabell eller innholdsside"
+msgstr "Visninger av innholdsfortegnelsen"
 
 msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Avgrens resultater etter kontekst (nummer og/eller artikler)."
+msgstr "Begrens resultatene ut fra kontekst (utgaver og/eller artikkel)."
 
 msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Avgrens resultater etter objekttype (tidsskrift, nummer, artikkel, filtype) og/eller etter en eller flere objektIDer."
+msgstr ""
+"Begrens resultatene ut fra type (tidsskrift, utgave, artikkel, filtype) og/"
+"eller objekt-ID(er)."
 
 msgid "plugins.importexport.common.settings"
 msgstr "Innstillinger"
 
 msgid "plugins.importexport.common.settings.DOIPluginSettings"
-msgstr "Innstillinger for DOI-programutvidelse"
+msgstr "Innstillinger for DOI programtillegg"
 
 msgid "plugins.importexport.common.export.articles"
 msgstr "Artikler"
 
 msgid "plugins.importexport.common.export.issues"
-msgstr "Nummer"
+msgstr "Numre"
 
 msgid "plugins.importexport.common.export.representations"
-msgstr "Sideoppsett"
+msgstr "Oppsett"
 
 msgid "plugins.importexport.common.missingRequirements"
-msgstr "Krav til programutvidelse er ikke oppfylt"
+msgstr "Krav for programtillegg ikke oppfylt"
 
 msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr "For å bruke denne programutvidelsen vennligst gå til \"Programutvidelser for offentlige identifikatorer\", slå på og konfigurer DOI-programutvidelsen og spesifiser et gyldig DOI-prefiks."
+msgstr ""
+"For å bruke dette programtillegget, gå til programtilleggkategorien «"
+"Offentlig identifikator», aktiver og konfiguer DOI-programtillegget og "
+"spesifiser en gyldig DOI-prefiks."
 
 msgid "plugins.importexport.common.error.pluginNotConfigured"
 msgstr "Programtillegget er ikke ferdig satt opp."
 
 msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr "Ingen publiserte objekt er valgt for DOI-tildeling i DOI-programutvidelsen, så det er ingen deponerings- eller eksportmulighet i denne programutvidelsen."
+msgstr ""
+"Ingen objekt er valgt for DOI i programtillegget for oppretting av DOI. Det "
+"er derfor ikke mulig å deponere eller eksportere i dette programtillegget."
 
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Passord"
 
 msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Vennligst merk at passordet vil bli lagret i ren tekst og ikke kryptert."
+msgstr "Merk: passordet blir lagret som ren tekst, dvs. ikke kryptert."
 
 msgid "plugins.importexport.common.filter.issue"
-msgstr "Ethvert nummer"
+msgstr "Alle nummer"
 
 msgid "plugins.importexport.common.status.any"
-msgstr "Enhver status"
+msgstr "Alle statuser"
 
 msgid "plugins.importexport.common.status.notDeposited"
 msgstr "Ikke deponert"
 
 msgid "plugins.importexport.common.status.markedRegistered"
-msgstr "Merket som registrert"
+msgstr "Merket registrert"
 
 msgid "plugins.importexport.common.status.registered"
 msgstr "Registrert"
@@ -1935,10 +2161,10 @@ msgid "plugins.importexport.common.action"
 msgstr "Handling"
 
 msgid "plugins.importexport.common.action.export"
-msgstr "Eksporter"
+msgstr "Eksport"
 
 msgid "plugins.importexport.common.action.markRegistered"
-msgstr "Merk som registrert"
+msgstr "Merk registrert"
 
 msgid "plugins.importexport.common.action.register"
 msgstr "Registrer"
@@ -1947,16 +2173,18 @@ msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Ingen objekt valgt."
 
 msgid "plugins.importexport.common.error.validation"
-msgstr "Kunne ikke konvertere de valgte objektene."
+msgstr "Kunne ikke konvertere valgte objekt."
 
 msgid "plugins.importexport.common.invalidXML"
 msgstr "Ugyldig XML:"
 
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr "Resultatfilen {$param} er ikke skrivbar."
+msgstr "Filen med utdata {$param} kan ikke skrives."
 
 msgid "plugins.importexport.common.register.error.mdsError"
-msgstr "Registreringen feilet! DOI-registreringstjeneren returnerte en feil: '{$param}'."
+msgstr ""
+"Registreringen mislyktes. Serveren for DOI-registrering returnerte en feil: "
+"{$param}."
 
 msgid "plugins.importexport.common.register.success"
 msgstr "Registreringen var vellykket!"
@@ -1968,10 +2196,10 @@ msgid "plugins.importexport.common.cliError"
 msgstr "FEIL:"
 
 msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Den spesifiserte tidsskriftsstien \"{$journalPath}\" eksisterer ikke."
+msgstr "Tidsskriftsstien «{$journalPath}» eksisterer ikke."
 
 msgid "plugins.importexport.common.error.unknownObjects"
-msgstr "De spesifiserte objekteter ble ikke funnet."
+msgstr "De spesifiserte objektene ble ikke funnet."
 
 msgid "stats.publications.galleys"
 msgstr "Filer"
@@ -2017,21 +2245,20 @@ msgstr ""
 "bruk knappen under."
 
 msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "Denne lenken vil bare vises når en gjest er logget inn."
+msgstr "Denne lenken vises kun når en bruker er logget inn."
 
 msgid "manager.navigationMenus.mySubscriptions.description"
 msgstr ""
 "Lenk til en side som beskriver gjestens gjeldende og tidligere abonnementer."
 
 msgid "manager.navigationMenus.subscriptions.description"
-msgstr "Lenke til en side som beskriver abonnementene dere tilbyr."
+msgstr "Lenk til en side som beskriver abonnementene dere tilbyr."
 
 msgid "manager.subscriptions.form.dateEndEmpty"
-msgstr ""
-"Dette er en abonnementstype som ikke utløper; ikke spesifiser en sluttdato."
+msgstr "Dette er et løpende abonnement; ikke spesifiser sluttdato."
 
 msgid "manager.subscriptions.form.dateStartEmpty"
-msgstr "Dette er en abonnementstype som ikke utløper; ikke angi en startdato."
+msgstr "Dette er et løpende abonnement; ikke spesifiser startdato."
 
 msgid "manager.subscriptions.confirmRenew"
 msgstr "Er du sikker på at du vil fornye dette abonnementet?"
@@ -2116,8 +2343,8 @@ msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
-"Klikk på lenken til <button>innstillnger</button> for å akseptere kriteriene "
-"for bruk av PKSs PN."
+"Klikk på lenken til <button>innstillinger</button> for å akseptere "
+"kriteriene for bruk av PKSs PN."
 
 msgid "manager.setup.plnDescription"
 msgstr ""
@@ -2200,3 +2427,25 @@ msgstr ""
 "standardinnstillingen kan overstyres fra ved publisering. Hvis du har valgt "
 "å publisere artiklene regelmessig \"publiser fortløpende\", ikke bruk "
 "utgivelsens utgivelsesdato."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Validering mislykket."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Validering vellykket!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Dette tidsskriftet tar ikke imot innleveringer på nåværende tidspunkt. Gå "
+"til Innstillinger > Arbeidsflyt for å aktivere innleveringer."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Forhindre brukere fra å sende inn nye innleveringer til tidsskriftet. "
+"Innleveringer kan deaktiveres for spesifikke seksjoner på <a href=\"{$url}\">"
+"Innstillinger > Tidsskrift > Tidsskriftsseksjoner</a>."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Minst en seksjon må være aktiv. Gå til Innstillinger > Arbeidsflyt for å "
+"deaktivere alle innleveringer til dette tidsskriftet."
