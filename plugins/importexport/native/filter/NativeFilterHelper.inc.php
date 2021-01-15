@@ -11,6 +11,7 @@
  *
  * @brief Class that provides native import/export filter-related helper methods.
  */
+import('lib.pkp.plugins.importexport.native.filter.PKPNativeFilterHelper');
 
 class NativeFilterHelper extends PKPNativeFilterHelper {
 
