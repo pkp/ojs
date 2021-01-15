@@ -27,14 +27,6 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
-	 * Get the method name for inserting a published submission.
-	 * @return string
-	 */
-	function getPublishedSubmissionInsertMethod() {
-		return 'insertObject';
-	}
-
-	/**
 	 * Get the import filter for a given element.
 	 * @param $elementName string Name of XML element
 	 * @return Filter
