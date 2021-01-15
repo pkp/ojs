@@ -16,14 +16,6 @@
 import('lib.pkp.plugins.importexport.native.filter.NativeXmlRepresentationFilter');
 
 class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
-	/**
-	 * Constructor
-	 * @param $filterGroup FilterGroup
-	 */
-	function __construct($filterGroup) {
-		parent::__construct($filterGroup);
-	}
-
 	//
 	// Implement template methods from NativeImportFilter
 	//
