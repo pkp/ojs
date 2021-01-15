@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-15 00:40+0000\n"
+"PO-Revision-Date: 2021-01-15 00:41+0000\n"
 "Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk_MK/>\n"
@@ -1986,3 +1986,12 @@ msgstr "Подесувања за плагин за DOI"
 
 msgid "plugins.importexport.common.settings"
 msgstr "Подесувања"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Прегледи"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Издание"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Напис"
