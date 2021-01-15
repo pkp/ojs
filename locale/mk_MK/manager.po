@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-15 00:41+0000\n"
-"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
+"PO-Revision-Date: 2021-01-15 08:15+0000\n"
+"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -1988,10 +1988,137 @@ msgid "plugins.importexport.common.settings"
 msgstr "Подесувања"
 
 msgid "plugins.importexport.common.export.representations"
-msgstr "Прегледи"
+msgstr "Описи на труд"
 
 msgid "plugins.importexport.common.export.issues"
-msgstr "Издание"
+msgstr "Изданија"
 
 msgid "plugins.importexport.common.export.articles"
-msgstr "Напис"
+msgstr "Написи"
+
+msgid "stats.publications.galleys"
+msgstr "Датотеки"
+
+msgid "stats.publications.abstracts"
+msgstr "Апстракти"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} од {$total} написи"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Вкупно прегледи на датотеки по датум"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Вкупно апстрактни прегледи по датум"
+
+msgid "stats.publications.none"
+msgstr ""
+"Не се пронајдени статии со статистика за употреба што одговара на овие "
+"параметри."
+
+msgid "stats.publications.details"
+msgstr "Детали за статијата"
+
+msgid "stats.publicationStats"
+msgstr "Статистика за статија"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Испратете копија до примарниот контакт, идентификуван во Поставки за весник."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Наведените објекти не може да се најдат."
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Наведената патека за списанија, \"{$journalPath}\", не постои."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "ГРЕШКА:"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Префиксот DOI недостасува за списанието со патека {$path}."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Проверката не успеа."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Проверката е успешна!"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Пријавувањето е успешно!"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Пријавувањето не беше успешно! Серверот за регистрација на DOI врати грешка: "
+"'{$param}'."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Влезната датотека {$param} не се чита."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Излезната датотека {$param} не може да се запише."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Невалиден XML:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Не може да се конвертираат избраните објекти."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Не се избрани објекти."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Потврдете го XML пред извозот и регистрацијата."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Регистрирај се"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Означи регистриран"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Извоз"
+
+msgid "plugins.importexport.common.action"
+msgstr "Акција"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Регистриран"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Означен регистрирано"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Не депониран"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Било кој статус"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Било кое издание"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Имајте предвид дека лозинката ќе биде зачувана како обичен текст, т.е. не "
+"криптирана."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Лозинка"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"Не се избрани објекти за објавување за доделување ДОИ во приклучокот за "
+"јавен идентификатор ДОИ, така што нема можност за депонирање или извоз во "
+"овој приклучок."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Приклучокот не е целосно поставен."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"За да го користите овој приклучок, одете во категоријата додатоци „Јавен "
+"идентификатор“, овозможете и конфигурирајте го додатокот DOI и наведете "
+"важечки префикс на DOI таму."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Барањата за приклучок не се исполнети"
