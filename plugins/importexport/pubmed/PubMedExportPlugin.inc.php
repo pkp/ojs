@@ -236,6 +236,27 @@ class PubMedExportPlugin extends ImportExportPlugin {
 			'pluginName' => $this->getName()
 		)) . "\n";
 	}
+
+	/**
+	 * @see ImportExportPlugin::getImportFilter
+	 */
+	function getImportFilter($xmlFile) {
+		throw new MethodNotImplementedException();
+	}
+
+	/**
+	 * @see ImportExportPlugin::getExportFilter
+	 */
+	function getExportFilter($exportType) {
+		throw new MethodNotImplementedException();
+	}
+
+	/**
+	 * @see ImportExportPlugin::getAppSpecificDeployment
+	 */
+	function getAppSpecificDeployment($context, $user) {
+		throw new MethodNotImplementedException();
+	}
 }
 
 

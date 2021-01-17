@@ -187,7 +187,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @param $issue Issue
 	 */
 	function addArticles($doc, $issueNode, $issue) {
-		$currentFilter = NativeImportExportFilter::getFilter('article=>native-xml', $this->getDeployment(), $this->opts);
+		$currentFilter = PKPImportExportFilter::getFilter('article=>native-xml', $this->getDeployment(), $this->opts);
 		$currentFilter->setIncludeSubmissionsNode(true);
 
 		$submissionsIterator = Services::get('submission')->getMany([
@@ -210,7 +210,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @param $issue Issue
 	 */
 	function addIssueGalleys($doc, $issueNode, $issue) {
-		$currentFilter = NativeImportExportFilter::getFilter('issuegalley=>native-xml', $this->getDeployment());
+		$currentFilter = PKPImportExportFilter::getFilter('issuegalley=>native-xml', $this->getDeployment());
 
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 		$issue = $issueGalleyDao->getByIssueId($issue->getId());

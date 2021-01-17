@@ -215,7 +215,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseIssueGalley($n, $issue) {
-		$currentFilter = NativeImportExportFilter::getFilter('native-xml=>IssueGalley', $this->getDeployment());
+		$currentFilter = PKPImportExportFilter::getFilter('native-xml=>IssueGalley', $this->getDeployment());
 		$issueGalleyDoc = new DOMDocument();
 		$issueGalleyDoc->appendChild($issueGalleyDoc->importNode($n, true));
 		return $currentFilter->execute($issueGalleyDoc);
@@ -247,7 +247,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseArticle($n, $issue) {
-		$currentFilter = NativeImportExportFilter::getFilter('native-xml=>article', $this->getDeployment());
+		$currentFilter = PKPImportExportFilter::getFilter('native-xml=>article', $this->getDeployment());
 		$articleDoc = new DOMDocument();
 		$articleDoc->appendChild($articleDoc->importNode($n, true));
 		return $currentFilter->execute($articleDoc);

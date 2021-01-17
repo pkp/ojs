@@ -124,7 +124,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 		}
 		// Caps on class name for consistency with imports, whose filter
 		// group names are generated implicitly.
-		$currentFilter = NativeImportExportFilter::getFilter('native-xml=>' . $importClass, $deployment);
+		$currentFilter = PKPImportExportFilter::getFilter('native-xml=>' . $importClass, $deployment);
 		return $currentFilter;
 	}
 
