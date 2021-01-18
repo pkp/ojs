@@ -179,8 +179,16 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		});
 		Capsule::statement('UPDATE publication_galleys SET submission_file_id = NULL WHERE submission_file_id = 0');
 
-		// Delete publication_galleys entries that correspond to nonexistent submission files
-		Capsule::connection()->unprepared('DELETE FROM publication_galleys WHERE galley_id IN (SELECT galley_id FROM publication_galleys pg LEFT JOIN submission_files sf ON pg.submission_file_id = sf.submission_file_id WHERE pg.submission_file_id IS NOT NULL AND sf.submission_file_id IS NULL)');
+		// pkp/pkp-lib#6616 Delete publication_galleys entries that correspond to nonexistent submission_files
+		$orphanedIds = Capsule::table('publication_galleys AS pg')
+			->leftJoin('submission_files AS sf', 'pg.submission_file_id', '=', 'sf.submission_file_id')
+			->whereNull('sf.submission_file_id')
+			->whereNotNull('pg.submission_file_id')
+			->pluck('pg.submission_file_id', 'pg.galley_id');
+		foreach ($orphanedIds as $galleyId => $submissionFileId) {
+			error_log("Removing orphaned publication_galleys entry ID $galleyId with submission_file_id $submissionFileId");
+			Capsule::table('publication_galleys')->where('galley_id', '=', $galleyId)->delete();
+		}
 
 		Capsule::schema()->table('publication_galleys', function (Blueprint $table) {
 			$table->bigInteger('submission_file_id')->nullable()->unsigned()->change();
