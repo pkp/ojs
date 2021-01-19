@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-09 09:52+0000\n"
+"PO-Revision-Date: 2021-01-20 07:53+0000\n"
 "Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-crossref/mk_MK/>\n"
@@ -151,5 +151,5 @@ msgstr "Валидира само експортирање. Не го симну
 
 msgid "plugins.importexport.crossref.settings.form.validation"
 msgstr ""
-"Валидирај XML. Употреби ја оваа опција за симнување XML за рачна "
+"Валидирај XML. Употреби ја оваа опција за симнување XML од рачна "
 "регистрација на ДОИ."
