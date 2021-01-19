@@ -30,7 +30,7 @@ describe('Data suite tests', function() {
 		cy.wait(1000);
 		cy.get('a[id^=component-grid-issues-futureissuegrid-addIssue-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[name="volume"]').type('1', {delay: 0});
+		cy.get('input[name="volume"]').type('2', {delay: 0});
 		cy.get('input[name="number"]').type('1', {delay: 0});
 		cy.get('input[name="year"]').type('2015', {delay: 0});
 		cy.get('input[id=showTitle]').click();
