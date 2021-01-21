@@ -21,7 +21,7 @@ use PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface;
 
 class IssueQueryBuilder extends BaseQueryBuilder implements EntityQueryBuilderInterface {
 
-	/** @var int|string|null Context ID or '*' to get from all contexts */
+	/** @var int|string|null Context ID or CONTEXT_ID_ALL to get from all contexts */
 	protected $contextId = null;
 
 	/** @var array list of columns for query */
@@ -216,11 +216,11 @@ class IssueQueryBuilder extends BaseQueryBuilder implements EntityQueryBuilderIn
 					->groupBy('i.issue_id', $this->orderColumn);
 
 		// context
-		// Never permit a query without a context_id clause unless the '*' wildcard
+		// Never permit a query without a context_id clause unless the CONTEXT_ID_ALL wildcard
 		// has been set explicitely.
 		if (is_null($this->contextId)) {
 			$q->where('i.journal_id', '=', CONTEXT_ID_NONE);
-		} elseif ($this->contextId !== '*') {
+		} elseif ($this->contextId !== CONTEXT_ID_ALL) {
 			$q->where('i.journal_id', '=' , $this->contextId);
 		}
 
