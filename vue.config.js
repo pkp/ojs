@@ -42,5 +42,12 @@ module.exports = {
 		watch: false
 	},
 	outputDir: path.resolve(__dirname, 'js'),
-	runtimeCompiler: true
+	runtimeCompiler: true,
+	// Part of the vue2-dropzone library is not transpiled
+	// as part of the normal build process, which results
+	// in errors in < IE 11. This directive makes sure the
+	// dependencies are included when babel transpiles code
+	// See: https://github.com/rowanwins/vue-dropzone/issues/439
+	// See: https://stackoverflow.com/a/58949645/1723499
+	transpileDependencies: ['vue2-dropzone']
 };
