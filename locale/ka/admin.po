@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-21 10:30+0000\n"
+"PO-Revision-Date: 2021-01-22 14:25+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
-"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
-"ka_GE/>\n"
+"Language-Team: ka (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
+"admin/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,3 +65,101 @@ msgstr "ჟურნალის გადამისამართება"
 
 msgid "admin.hostedContexts"
 msgstr "ჟურნალები"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "შეხსენება რეცენზენტს"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "შეტყობინება ღია წვდომის შესახებ"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "გამოწერის დასრულების ვადის შეხსენება"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "არ არის მოწვეული მომხმარებლები."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "ყველა მოწვეული მომხმარებელი"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "გაერთიანება"
+
+msgid "admin.mergeUsers"
+msgstr "მომხმარებლების გაერთიანება"
+
+msgid "admin.journals.importErrors"
+msgstr "იმპორტი ჩაიშალა"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "იმპორტის მდებარეობა სავალდებულოა."
+
+msgid "admin.journals.redirect"
+msgstr "OJS 1-ის მისამართების OJS 2-ის მისამართებად გარდაქმნის კოდის გენერაცია"
+
+msgid "admin.journals.transcode"
+msgstr "სტატიის მეტა-მონაცემების გარდაქმნა ISO8859-1-დან"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "გამოწერების იმპორტი"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"ჟურნალის არსებული მდებარეობა,ა ნ ახალი მდებარეობის შექმნა (მაგალითად, „ojs“)."
+
+msgid "admin.contexts.contextDescription"
+msgstr "ჟურნალის აღწერა"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "ამ ჟურნალის ჩვენება ყველასათვის"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "მითითებული მდებარეობა უკვე გამოიყენება სხვა ჟურნალისათვის."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"მდებარეობა შეიცავს მხოლოდ ასოებს, ციფრებს, სიმბოლოებს _ და -. მდებარეობა "
+"უნდა იწყებოდეს ასოთი, ან ციფრით."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "სავალდებულო მდებარეობა."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "არასავადებულო სათაური."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"ეს შეიძლება იყოს ერთი მოკლე სიტყვა, ან აბრევიატურა, რომელიც წარმოადგენს "
+"ჟურნალს. ჟურნალის მისამართი: {$sampleUrl}."
+
+msgid "admin.contexts.create"
+msgstr "ჟურნალის შექმნა"
+
+msgid "admin.journals.noneCreated"
+msgstr "არცერთი ჟურნალი არ არის შექმნილი."
+
+msgid "admin.journals.journalSettings"
+msgstr "ჟურნალის მორგება"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"თქვენ ავტომატურად დაემატებით ამ ჟურნალის მმართველად. ახალი ჟურნალის შექმნის "
+"შემდეგ თქვენ გადახვალთ ჟურნალის მორგების ოსტატზე, პირველადი მორგების "
+"დასრულების შემდგომ."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS-ის კონფიგურაციის პარამეტრები: <tt>config.inc.php</tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "OJS-ის კონფიგურაცია"
+
+msgid "admin.systemVersion"
+msgstr "OJS-ის ვერსია"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"მომხმარებელთა პროფილების სინქრონიზაციის ჩართვა (თუ მხარდაჭერილია "
+"ავთენტიფიკაციის ამ მოდულის მიერ). მომხმარებლის პროფილის ინფორმაცია "
+"ავტომატურად განახლდება გარე წყაროდან მომხმარებლის სისტემაში შესვლისას, ხოლო "
+"პროფილის ცვლილებები, რომლებიც OJS-ში მოხდა, ავტომატურად გადავა გარე წყაროში. "
+"თუ ეს პარამეტრი გამორთულია, მომხმარებლის პროფილის ინფორმაცია შენახული იქნება "
+"გარე წყაროს დამოუკიდებლად."
