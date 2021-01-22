@@ -1,7 +1,7 @@
-OJS 3.2.1-2 Release Notes
-Git tag: 3_2_1-2
+OJS 3.2.1-3 Release Notes
+Git tag: 3_2_1-3
 
-Release date: November 13, 2020
+Release date: January 22, 2021
 ===============================
 
 Configuration Changes
@@ -17,6 +17,25 @@ New config.inc.php parameters:
 		is to be disabled. Not recommended unless you're sure. Default: Off
 	- curl.cainfo - Path to Certificate Authority (CA) bundle.
 
+3.2.1-3 Build
+-------------
+	#6644: Fatal error if notifications are blocked for EditorialReportNotificationManager
+	#6632: Update Illuminate Database library for GHSA-3p32-j457-pg5x
+	#6620: WebFeed plugin missing restriction to published content
+	#6548: User issue payment unlocks issue globally for users who aren't logged in
+	#6529: Author can not upload revisions when decision is to resubmit for review
+	#6510: Non-expiring institutional subscription can't be added
+	#6495: Incorrect URLs in default context settings
+	#6473: Allow for access to public Library Files without forcing a download
+	#6467: "Reload defaults" for language invalidates $contextPath variable
+	#6462: Inconsistency in JWT (API key) encoding/decoding
+	#6421: Dependent file upload fails when confirm revision is detected
+	#6389: Trying to register an article with the DOAJ plugin throws an error : new DOAJ API version
+	#6344: Remove script host from smarty variables
+	#6320: [OJS] CAST AS CHAR i postgres
+	#6189: [OJS] Problem when submitting reviews
+	#6060: If a title prefix is given for a single locale, it is shown with all article title translations
+	#4414: Context path property creates conflict when disable_path_info is enabled
 
 3.2.1-2 Build
 -------------
