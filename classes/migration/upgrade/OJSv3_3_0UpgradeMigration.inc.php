@@ -29,9 +29,17 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		Capsule::schema()->table('sections', function (Blueprint $table) {
 			$table->smallInteger('is_inactive')->default(0);
 		});
+		Capsule::schema()->table('review_forms', function (Blueprint $table) {
+			$table->bigInteger('assoc_type')->nullable(false)->change();
+			$table->bigInteger('assoc_id')->nullable(false)->change();
+		});
 
 		$this->_settingsAsJSON();
 		$this->_migrateSubmissionFiles();
+
+		// Delete the old MODS34 filters
+		Capsule::statement("DELETE FROM filters WHERE class_name='plugins.metadata.mods34.filter.Mods34SchemaArticleAdapter'");
+		Capsule::statement("DELETE FROM filter_groups WHERE symbolic IN ('article=>mods34', 'mods34=>article')");
 	}
 
 	/**
@@ -169,6 +177,19 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		Capsule::schema()->table('publication_galleys', function (Blueprint $table) {
 			$table->renameColumn('file_id', 'submission_file_id');
 		});
+		Capsule::statement('UPDATE publication_galleys SET submission_file_id = NULL WHERE submission_file_id = 0');
+
+		// pkp/pkp-lib#6616 Delete publication_galleys entries that correspond to nonexistent submission_files
+		$orphanedIds = Capsule::table('publication_galleys AS pg')
+			->leftJoin('submission_files AS sf', 'pg.submission_file_id', '=', 'sf.submission_file_id')
+			->whereNull('sf.submission_file_id')
+			->whereNotNull('pg.submission_file_id')
+			->pluck('pg.submission_file_id', 'pg.galley_id');
+		foreach ($orphanedIds as $galleyId => $submissionFileId) {
+			error_log("Removing orphaned publication_galleys entry ID $galleyId with submission_file_id $submissionFileId");
+			Capsule::table('publication_galleys')->where('galley_id', '=', $galleyId)->delete();
+		}
+
 		Capsule::schema()->table('publication_galleys', function (Blueprint $table) {
 			$table->bigInteger('submission_file_id')->nullable()->unsigned()->change();
 			$table->foreign('submission_file_id')->references('submission_file_id')->on('submission_files');

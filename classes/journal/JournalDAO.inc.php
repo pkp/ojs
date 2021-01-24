@@ -78,7 +78,7 @@ class JournalDAO extends ContextDAO {
 			$dao = DAORegistry::getDAO($daoName);
 			$dao->deleteAllPubIds($journalId, $pubIdType);
 		}
-		import('lib.pkp.classes.submission.SubmissionFileDAO');
+		import('classes.submission.SubmissionFileDAO');
 		$submissionFileDao = new SubmissionFileDAO();
 		$submissionFileDao->deleteAllPubIds($journalId, $pubIdType);
 

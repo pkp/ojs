@@ -50,9 +50,6 @@ msgstr "هیچ مقاله ارسالی در بایگانی نیست"
 msgid "editor.submissionArchive.saveChanges"
 msgstr "آیا تغییرات در بایگانی مقالات ارسالی ذخیره شود؟ مقالاتی که جهت حذف انتخاب شده‌اند برای همیشه از سیستم حذف خواهند شد."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "آیا می‌خواهید برای همیشه این مقاله ارسالی را حذف کنید؟"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "آیا از تصمیم گرفته شده مطمئن هستید؟"
 

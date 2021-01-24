@@ -30,7 +30,7 @@ msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr "Tekst ima prored 1,5, koristi font Times New Roman veličine 12, koristi kurziv umesto podvlačenja (izuzev URL adresa) i ilustracije, tabele i prilozi su smešteni unutar teksta na odgovarajućim mestima ili na kraju."
 
 msgid "default.contextSettings.checklist.bibliographicRequirements"
-msgstr "Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Упутства за ауторе</a>, koja se nalaze u sekciji \"O časopisu\"."
+msgstr "Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Упутства за ауторе</a>, koja se nalaze u sekciji \"O časopisu\"."
 
 msgid "default.contextSettings.privacyStatement"
 msgstr "<p>Imena i imejl adrese unete na ovom sajtu biće korišćene isključivo za navedene potrebe ovog časopisa i neće biti dostupni ni za jednu drugu svrhu ili nekoj drugoj strani.</p>"
@@ -129,10 +129,10 @@ msgid "default.contextSettings.clockssLicense"
 msgstr "Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href=\"http://www.lockss.org/\">Više...</a>"
 
 msgid "default.contextSettings.forReaders"
-msgstr "Ohrabrujemo čitaoce da se upišu za obaveštenje kad izađe novi broj časopisa. Koristite <a href=\"{$indexUrl}{$contextPath}/user/register\">Registracija</a> vezu na vrhu početne strane časopisa. Ova registracija će za rezultat imati to da će čitaoci primiti Sadržaj porukom za svaki novi broj časopisa. Ova lista daje pravo čsopisu da traži od čitaoca izvesni vid podrške. Pogledajte  <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Izjava o privatnosti</a> časopisa koji garantuje čitaocima da njihovo ime i e-adresa neće biti upotrebljene za druge svrhe."
+msgstr "Ohrabrujemo čitaoce da se upišu za obaveštenje kad izađe novi broj časopisa. Koristite <a href=\"{$indexUrl}/{$contextPath}/user/register\">Registracija</a> vezu na vrhu početne strane časopisa. Ova registracija će za rezultat imati to da će čitaoci primiti Sadržaj porukom za svaki novi broj časopisa. Ova lista daje pravo čsopisu da traži od čitaoca izvesni vid podrške. Pogledajte  <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Izjava o privatnosti</a> časopisa koji garantuje čitaocima da njihovo ime i e-adresa neće biti upotrebljene za druge svrhe."
 
 msgid "default.contextSettings.forAuthors"
-msgstr "Zainteresovani ste da prijavite članak za ovaj časopis? Predlažemo da pogledate stranicu <a href=\"{$indexUrl}{$contextPath}/about\">O časopisu</a> kako bi se upoznali o sekcijama časopisa kao i <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Uputstvo za autore</a>.  potrebno je da se autori registruju <a href=\"{$indexUrl}{$contextPath}/user/register\">registruj</a> u časopis pre prijave članka ili ako su već registrovani da se jednostavno <a href=\"{$indexUrl}/index/login\">prijave</a> i da započnu proces prijave članka od pet koraka."
+msgstr "Zainteresovani ste da prijavite članak za ovaj časopis? Predlažemo da pogledate stranicu <a href=\"{$indexUrl}/{$contextPath}/about\">O časopisu</a> kako bi se upoznali o sekcijama časopisa kao i <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Uputstvo za autore</a>.  potrebno je da se autori registruju <a href=\"{$indexUrl}/{$contextPath}/user/register\">registruj</a> u časopis pre prijave članka ili ako su već registrovani da se jednostavno <a href=\"{$indexUrl}/index/login\">prijave</a> i da započnu proces prijave članka od pet koraka."
 
 msgid "default.contextSettings.forLibrarians"
 msgstr "Ohrabrujemo naučne bibliotekare da uvrste ovaj časopis u listu bibliotečkih časopisa. Može biti vredno da se napomene da ovaj časopis koristi sistem otvorenog koda za objavljivanje koji je pogodan za biblioteke za njihove fakultetske članove da ga koriste sa časopisima u kojima su uključeni u procesu redakcije   (see <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."

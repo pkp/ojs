@@ -367,7 +367,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 	 * @return DOMElement
 	 */
 	 function createExtentNode($doc, $file) {
-		 $path = Services::get('file')->getPath($file->getData('fileId'));
+		 $path = $file->getData('path');
 		 $filesize = Services::get('file')->fs->getSize($path);
 		 $deployment = $this->getDeployment();
 		 $extentNode = $doc->createElementNS($deployment->getNamespace(), 'Extent');

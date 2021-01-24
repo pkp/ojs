@@ -35,6 +35,10 @@
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="testMode" label="plugins.importexport.datacite.settings.form.testMode.description" checked=$testMode|compare:true}
+			{fbvElement type="text" id="testUsername" value=$testUsername label="plugins.importexport.datacite.settings.form.testUsername" maxlength="50" size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" password="true" id="testPassword" value=$testPassword label="plugins.importexport.datacite.settings.form.testPassword" maxLength="50" size=$fbvStyles.size.MEDIUM}
+			<span class="instruct">{translate key="plugins.importexport.common.settings.form.password.description"}</span><br/>
+			{fbvElement type="text" id="testDOIPrefix" value=$testDOIPrefix label="plugins.importexport.datacite.settings.form.testDOIPrefix" maxlength="50" size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormButtons submitText="common.save"}

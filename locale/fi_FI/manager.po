@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2020-10-13 22:03+0000\n"
+"PO-Revision-Date: 2020-12-12 08:52+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "fi_FI/>\n"
@@ -89,9 +89,11 @@ msgstr "Kaikkien hintojen tulee olla positiivia numeerisia arvoja (desimaalipilk
 msgid "manager.payment.generalFees"
 msgstr "Yleiset maksut"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "Yhdistyksen jäsenyys näkyy Tietoa julkaisusta -sivulla Toimintaperiaatteet-kohdassa ja lahjoituslinkki näkyy hakutoiminnon yläpuolella, oikeanpuoleisessa kehyksessä."
+msgstr ""
+"Yhdistyksen jäsenyys näkyy Tietoa julkaisusta -sivulla Toimintaperiaatteet-"
+"kohdassa ja lahjoituslinkki näkyy hakutoiminnon yläpuolella, "
+"oikeanpuoleisessa kehyksessä."
 
 msgid "manager.payment.generalOptions"
 msgstr "Yleiset valinnat"
@@ -219,6 +221,7 @@ msgstr "Tämän osaston toimittajat"
 msgid "manager.sections.confirmDelete"
 msgstr "Haluatko varmasti poistaa tämän osaston pysyvästi?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Ennen kuin tämä osasto voidaan poistaa, sinun on siirrettävä kyseisessä osastossa julkaistut artikkelit muihin osastoihin."
 
@@ -1748,3 +1751,25 @@ msgstr ""
 "Valitse miten tekijänoikeuden ajoitus tapahtuu oletuksena artikkeleissa. "
 "Tämä oletus voidaan ohittaa artikkelikohtaisesti. Mikäli et julkaise koko "
 "numeroa kerralla, älä valitse numeron julkaisuajankohtaa tähän asetukseen."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Vahvistaminen epäonnistui."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Vahvistaminen onnistui!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Julkaisu ei ota vastaan käsikirjoituksia tällä hetkellä. Käy työnkulun "
+"asetuksissa sallimassa käsikirjoitukset."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Estä käyttäjiä lähettämästä uusia artikkeleita julkaisuun. Käsikirjoitukset "
+"yksittäisiin julkaisun osastoihin voidaan estää <a href=\"{$url}\">julkaisun "
+"osastojen</a> asetussivulla."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Vähintään yhden osaston tulee olla käytössä. Käy työnkulun asetuksissa "
+"estämässä käsikirjoitusten lähettäminen tähän julkaisuun."

@@ -37,9 +37,6 @@ describe('Subscription tests', function() {
 		cy.get('div#access button:contains("Save")').click();
 		cy.get('#access [role="status"]').contains('Saved');
 
-		// FIXME: The payment menu should now be visible, but it's not. (pkp/pkp-lib#5408)
-		cy.reload();
-
 		// Configure an issue for subscription.
 		cy.get('.app__nav a:contains("Issues")').click();
 		cy.get('button:contains("Back Issues")').click();
@@ -124,6 +121,7 @@ describe('Subscription tests', function() {
 		// Grant the reader a new subscription
 		cy.get('div#subscriptionsTabs a[name="individualSubscription"]').click();
 		cy.waitJQuery();
+		cy.wait(1000); // Occasional detached element failure
 		cy.get('div#individualSubscriptionsGridContainer a:contains("Create New Subscription")').click();
 		cy.wait(1000); // Form initialization problem
 		cy.get('form#userSearchForm input[name=search]').type('Der');

@@ -1698,6 +1698,7 @@ msgstr ""
 "<p>2. Một thư mục để lưu trữ các tệp đã tải lên phải được tạo và ghi lại ("
 "xem \"Cài đặt tệp\" bên dưới).</p>"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>Phiên bản OJS {$version}</h4>\n"
@@ -2025,6 +2026,7 @@ msgstr "Trợ giúp OJS"
 msgid "help.ojsHelp"
 msgstr "Trợ giúp Open Journal Systems"
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
 "Trang web này sử dụng Open Journal Systems {$ojsVersion}, đây là phần mềm "
@@ -2032,6 +2034,7 @@ msgstr ""
 "miễn phí bởi <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> "
 "theo Giấy phép Công cộng GNU."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "Tạp chí này sử dụng Open Journal Systems {$ojsVersion}, đây là phần mềm quản "

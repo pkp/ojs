@@ -154,3 +154,7 @@ msgstr "این مشخصات بر اساس مجموعه فراداده های ه�
 
 msgid "section.any"
 msgstr "هر بخشی"
+
+msgid "submission.queries.production"
+msgstr "گفتگوی انتشار"
+

@@ -2,16 +2,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
+"PO-Revision-Date: 2020-12-09 14:51+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/api/"
+"fr_CA/>\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: fr_CA\n"
-# localization file for fr_CA. Last revision 2019-10-22T10:25:34 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
+# localization file for fr_CA. Last revision 2019-10-22T10:25:34 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Vous ne pouvez pas changer la revue d'une soumission."
 
@@ -54,3 +58,10 @@ msgstr "La publication que vous avez demandée ne fait pas partie de cette revue
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "La publication que vous avez demandée ne fait pas partie de cette soumission."
 
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""
+"Vous ne pouvez pas, à cette étape-ci du processus éditorial, associer un "
+"fichier aux épreuves."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "L'annonce que vous avez demandée ne fait pas partie de cette revue."

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-19 15:22+0000\n"
+"PO-Revision-Date: 2020-12-12 08:52+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-users/fi_FI/>\n"
@@ -33,7 +33,7 @@ msgid "plugins.importexport.users.export.exportAllUsers"
 msgstr "Vie kaikki"
 
 msgid "plugins.importexport.users.export.exportByRole"
-msgstr "Vie rooli mukaan"
+msgstr "Vie roolin mukaan"
 
 msgid "plugins.importexport.users.export.exportUsers"
 msgstr "Vie käyttäjiä"

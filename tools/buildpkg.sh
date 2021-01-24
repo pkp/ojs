@@ -47,6 +47,9 @@ lib/pkp/.git										\
 lib/pkp/lib/vendor/smarty/smarty/demo							\
 lib/pkp/lib/vendor/sebastian								\
 lib/pkp/lib/vendor/oyejorge/less.php/test						\
+lib/pkp/lib/vendor/swiftmailer/swiftmailer/tests					\
+lib/pkp/lib/vendor/dragonmantank/cron-expression/tests/					\
+lib/pkp/lib/vendor/cweagans/composer-patches/tests					\
 lib/pkp/tools/travis									\
 plugins/paymethod/paypal/vendor/omnipay/common/tests/					\
 plugins/paymethod/paypal/vendor/omnipay/paypal/tests/					\
@@ -55,6 +58,7 @@ plugins/paymethod/paypal/vendor/guzzle/guzzle/tests/					\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/debug/				\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/console/Tests/			\
 plugins/paymethod/paypal/vendor/symfony/http-foundation/Tests/				\
+plugins/paymethod/paypal/vendor/clue/stream-filter/tests				\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/filesystem/Tests/		\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/stopwatch/Tests/		\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/event-dispatcher/Tests/	\

@@ -122,7 +122,7 @@ class Subscription extends DataObject {
 
 	/**
 	 * Get the subscription type institutional flag for the subscription.
-	 * @return string
+	 * @return boolean
 	 */
 	public function getSubscriptionTypeInstitutional() {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */

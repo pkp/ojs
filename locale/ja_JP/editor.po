@@ -1,0 +1,443 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-05 08:15+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "任命済みの役割"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "月-日に投稿"
+
+msgid "editor.submissions.showBy"
+msgstr "表示"
+
+msgid "editor.article.decision"
+msgstr "判断"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "査読版としてオリジナルファイルを指定"
+
+msgid "editor.navigation.issueArchive"
+msgstr "バックナンバー"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "最新号設定"
+
+msgid "grid.action.addIssueGalley"
+msgstr "号のゲラ作成"
+
+msgid "grid.action.previewIssue"
+msgstr "プレビュー"
+
+msgid "grid.action.viewIssue"
+msgstr "巻号閲覧"
+
+msgid "grid.action.addIssue"
+msgstr "巻号作成"
+
+msgid "grid.action.publish"
+msgstr "巻号公開"
+
+msgid "grid.action.addGalley"
+msgstr "ゲラを追加"
+
+msgid "editor.issues.identifiers"
+msgstr "識別子"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "このゲラを完全に削除してもよいですか。"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "号のゲラに戻る"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "公開巻号ゲラ識別子が既に存在します。"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "ゲラの言語が必要です。"
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "ゲララベルが必要です。"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "号のゲラは公開されていません。"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "巻号の内容全体を含むゲラを公開します。"
+
+msgid "editor.issues.viewingGalley"
+msgstr "号のゲラの閲覧"
+
+msgid "editor.issues.galley"
+msgstr "号のゲラ"
+
+msgid "editor.issues.galleys"
+msgstr "号のゲラ"
+
+msgid "editor.issues.pages"
+msgstr "ページ"
+
+msgid "editor.issues.open"
+msgstr "オープン"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "処理中の巻号はありません"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "論文の公開IDを保存できませんでした:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "この号を最新号として設定してもよろしいですか。"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "公開されているこの巻号を未公開にしますか。"
+
+msgid "editor.issues.confirmPublish"
+msgstr "新しい号を出版してもよいですか。"
+
+msgid "editor.issues.preview"
+msgstr "プレビュー"
+
+msgid "editor.issues.previewIssue"
+msgstr "この号のプレビュー"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "未公開巻号"
+
+msgid "editor.issues.publishIssue"
+msgstr "この号の出版"
+
+msgid "editor.issues.publicId"
+msgstr "公開識別子"
+
+msgid "editor.issues.order"
+msgstr "配置順"
+
+msgid "editor.issues.default"
+msgstr "デフォルト"
+
+msgid "editor.issues.saveChanges"
+msgstr "目次の変更を保存しますか。"
+
+msgid "editor.issues.issueData"
+msgstr "巻号データ"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"この雑誌はカスタムセクションソートを使用します。<a href=\"{$url}\" class=\"action\">デフォルトにリセット</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "この雑誌はカスタム巻号ソートを使用します。<a href=\"{$url}\" class=\"action\">デフォルトにリセット</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "すべての論文は編集作業待ちに戻され、関連のファイルはすべて完全に削除されます。この号を削除してもよいですか。"
+
+msgid "editor.issues.cover"
+msgstr "カバー"
+
+msgid "editor.issues.access"
+msgstr "アクセス"
+
+msgid "editor.issues.identification"
+msgstr "識別"
+
+msgid "editor.issues.subscription"
+msgstr "購読"
+
+msgid "editor.issues.openAccess"
+msgstr "オープンアクセス"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "表示"
+
+msgid "editor.issues.showCoverPage"
+msgstr "次の要素を持つ巻号の表紙を作成する。"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "カバー見出し"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "スタイルシートを削除しますか。"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"スタイルシートフォーマットが不正です。指定したファイルが妥当なCSSファイルであることを確認してください（冒頭にコメントがあるスタイルシートは認められない"
+"ことに注意してください）。"
+
+msgid "editor.issues.styleFile"
+msgstr "スタイルシート"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "カバーページフォーマットが不正です。使用できるフォーマットは、.gif, .jpg, .pngの3フォーマットだけです。"
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "削除しようとしたカバー画像が見つかりませんでした。 すでに削除されている可能性があります。 ページをリロードしてみてください。"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "削除しようとしたカバー画像が、この巻号のカバー画像と一致しませんでした。 ページを再読み込みして、もう一度お試しください。"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "カバーページ画像を削除しますか。"
+
+msgid "editor.issues.proofed"
+msgstr "検証済"
+
+msgid "editor.issues.remove"
+msgstr "削除"
+
+msgid "editor.issues.uploaded"
+msgstr "アップロード済"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "（使用可能フォーマット: .gif, .jpg, .png）"
+
+msgid "editor.issues.coverPage"
+msgstr "カバー画像"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "遅延オープンアクセス (一定期間後にオープンアクセスになる) を有効にする"
+
+msgid "editor.issues.accessDate"
+msgstr "オープンアクセス公開日"
+
+msgid "editor.issues.accessStatus"
+msgstr "アクセス形態"
+
+msgid "editor.issues.description"
+msgstr "記述"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "公開巻号識別子"
+
+msgid "editor.issues.issueIdentification"
+msgstr "巻号の識別"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "巻号の識別が必要です。巻号の識別オプションから少なくとも1つ選択してください。"
+
+msgid "editor.issues.titleRequired"
+msgstr "巻号にはタイトルが必要です。"
+
+msgid "editor.issues.yearRequired"
+msgstr "年の入力は必須であり、正の数値でなければなりません。"
+
+msgid "editor.issues.numberRequired"
+msgstr "号の入力は必須であり、正の数値でなければなりません。"
+
+msgid "editor.issues.volumeRequired"
+msgstr "巻の入力は必須であり、正の数値でなければなりません。"
+
+msgid "editor.issues.datePublished"
+msgstr "発行日"
+
+msgid "editor.issues.unpublished"
+msgstr "未出版"
+
+msgid "editor.issues.published"
+msgstr "出版済"
+
+msgid "editor.issues.confirmDelete"
+msgstr "この号を完全に削除してもよいですか。"
+
+msgid "editor.issues.noArticles"
+msgstr "この号に現在予定されているアイテムはありません。"
+
+msgid "editor.issues.numArticles"
+msgstr "アイテム"
+
+msgid "editor.issues.currentIssue"
+msgstr "最新号"
+
+msgid "editor.issues.editIssue"
+msgstr "巻号管理: {$issueIdentification}"
+
+msgid "editor.issues.createIssue"
+msgstr "巻号作成"
+
+msgid "editor.editorAdministration"
+msgstr "編集者管理"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "この号の目次を含める:"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "この雑誌の更新情報の受け取りを希望しているユーザ（{$count}名）にこのメッセージを送信する"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "この雑誌に関係するすべてのユーザ（{$count}名）にこのメッセージを送信する"
+
+msgid "editor.usersNotified"
+msgstr "通知されたユーザ"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "ユーザに通知しています"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "すべての機関購読者 ({$count} ユーザ)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "すべての個人購読者 ({$count} ユーザ)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "すべての公開済の著者 ({$count} ユーザ)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "すべての読者 ({$count} ユーザ)"
+
+msgid "editor.notifyUsers"
+msgstr "ユーザへの通知"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "コピーエディタに投稿論文を送る前に，著者通知リンクを使用して著者への決定通知と送信するバージョンを選択します。"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "この投稿物は、著者に通知メールが送信された、またはメール送信をスキップボタンが押された後、保存されます。"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "この判断を記録してもよいですか。"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "アーカイブされた投稿物に対する変更を保存しますか。削除マークが付けられた投稿物はこのシステムから完全に削除されます。"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "アーカイブには投稿物はありません。"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"公開巻号識別子 '{$ publicIdentifier}'は、別のオブジェクト（巻号、論文、ゲラ、またはファイル）に既に存在します。 "
+"雑誌内で一意の識別子を選択してください。"
+
+msgid "editor.me"
+msgstr "自分"
+
+msgid "editor.allEditors"
+msgstr "全編集者"
+
+msgid "editor.allSections"
+msgstr "全セクション"
+
+msgid "editor.publishedIssues"
+msgstr "出版された巻号"
+
+msgid "editor.publishing"
+msgstr "出版"
+
+msgid "editor.submissionArchive"
+msgstr "投稿物アーカイブ"
+
+msgid "editor.submissionQueue"
+msgstr "作業待ち投稿物"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "投稿物と出版"
+
+msgid "editor.reassign"
+msgstr "再任命"
+
+msgid "editor.navigation.futureIssues"
+msgstr "出版予定号"
+
+msgid "editor.home"
+msgstr "編集者ホーム"
+
+msgid "editor.article.coverImage"
+msgstr "表紙画像"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"公開巻号識別子 '{$ publicIdentifier}'は、同じタイプの別のオブジェクトに既に存在します。 雑誌内で一意の識別子を選択してください。"
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"いずれかの投稿ステージにすでにアップロードされているファイルは、以下の「含める」チェックボックスをチェックして「検索」をクリックすることで、校正リストに追"
+"加することができます：利用可能なすべてのファイルがリストアップされ、含めるために選択することができます。"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"このリストの最終原稿ファイルは、コピーエディターによって整理編集版に変換され、以下の<span class=\"pkp_help_title\""
+">原稿整理</span>にアップロードされます。"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "ゲラファイルを選択"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"レイアウトエディターは、各ゲラごとにこれらのファイルを準備し、校正作業のために適切な <span class=\"pkp_help_title\""
+">校正</span>にアップロードします。"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "号のゲラを編集"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "アクセス公開日が不正です。"
+
+msgid "editor.article.remove.confirm"
+msgstr "この論文を号から削除してもよろしいですか。この論文は別の号でスケジューリング可能です。"
+
+msgid "editor.article.remove"
+msgstr "削除"
+
+msgid "grid.action.removeArticle"
+msgstr "論文を号から削除"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "削除しようとしたカバー画像が見つかりませんでした。 すでに削除されている可能性があります。 ページをリロードしてみてください。"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "出版料金が支払われていません。アイテムを出版スケジュールに載せるためには、料金を支払うよう著者に通知するか出版料金を免除してください。"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "指定予定"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "出版スケジュール"
+
+msgid "editor.article.editMetadata"
+msgstr "バージョンメタデーターを編集"
+
+msgid "editor.article.viewMetadata"
+msgstr "バージョンメタデーターの閲覧"
+
+#, fuzzy
+msgid "editor.article.publishVersion"
+msgstr "この版の出版"
+
+#, fuzzy
+msgid "editor.article.showPublicationVersion"
+msgstr "出版予定を表示する"
+
+msgid "editor.submissions.inSection"
+msgstr "セクション"
+
+msgid "issues.submissions.issueIds"
+msgstr "巻号"
+
+msgid "editor.submissions.assignedTo"
+msgstr "担当者"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "最新完了"
+
+msgid "editor.submissions.averageTime"
+msgstr "週数"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "最新"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "投稿物なし"
+
+msgid "editor.submissions.accept"
+msgstr "受領"
+
+msgid "editor.submissions.invite"
+msgstr "依頼"

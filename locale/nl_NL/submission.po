@@ -172,7 +172,7 @@ msgstr "Alle secties"
 msgid "publication.selectIssue"
 msgstr "Selecteer een nummer om in te plannen voor publicatie"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Toewijzen aan nummer"
 
 msgid "publication.unscheduledIn"
@@ -245,3 +245,7 @@ msgstr "Sectie opties"
 
 msgid "submission.submit.noContext"
 msgstr "Het tijdschrift van deze inzending kan niet gevonden worden."
+
+msgid "submission.queries.production"
+msgstr "Productie-discussies"
+

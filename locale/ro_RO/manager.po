@@ -271,6 +271,7 @@ msgstr ""
 msgid "manager.sections.create"
 msgstr "Creare secțiune"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "Înainte de a șterge această secțiune, trebuie să mutați articolele publicate "

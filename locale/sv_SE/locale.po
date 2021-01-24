@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2020-06-15 16:01+0000\n"
+"PO-Revision-Date: 2020-12-03 15:43+0000\n"
 "Last-Translator: Edvin Erdtman <edvin.erdtman@liu.se>\n"
-"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/locale/sv/>"
-"\n"
+"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"sv_SE/>\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1556,9 +1556,11 @@ msgstr ""
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS process för redigering och publicering"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "Den här tidskriften använder Open Journal Systems {$ojsVersion}, ett system för tidskriftshantering och publicering som bygger på fri och öppen programvara som utvecklas, drivs och distribueras fritt av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Den här webbplatsen använder Open Journal Systems {$ojsVersion}, ett system för tidskriftshantering och publicering som bygger på fri och öppen programvara som utvecklas, drivs och distribueras fritt av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
 
@@ -1685,6 +1687,7 @@ msgstr "Installation av OJS"
 msgid "installer.ojsUpgrade"
 msgstr "Uppgradering av OJS"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS-version {$version}</h4>\n"
@@ -2074,3 +2077,12 @@ msgstr "Visa {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Utsedda redaktörer"
+
+msgid "about.aboutSoftware"
+msgstr "Om Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Den efterfrågade publiceringsversionen kunde inte hittas."
+
+msgid "category.category"
+msgstr "Kategorier"

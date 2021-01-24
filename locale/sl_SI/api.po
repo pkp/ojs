@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2020-06-09 12:06+0000\n"
-"Last-Translator: Mitja Podreka <mitja.podreka@ff.uni-lj.si>\n"
-"Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/api/sl/>\n"
+"PO-Revision-Date: 2020-12-13 11:52+0000\n"
+"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
+"Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/api/sl_SI/"
+">\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,3 +33,35 @@ msgstr "Izbran način plačila ni podprt."
 
 msgid "api.publications.403.contextsDidNotMatch"
 msgstr "Prispevek, za katerega ste zaprosili, ni del te revije."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Dateteko iz te faze ne morete povezati s prelomom."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Zahtevana revija ni del tega prispevka."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Zahtevana revija ne obstaja."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Nimate pravic za izbris te revije."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Nimate pravic za spreminjanje te revije."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Revije ne morete spreminjati preko API-ja celotnega spletišča."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Do revije lahko dostopate ali spreminjati njeno vsebino le, če  dostopate "
+"preko API-ja revije ali API-ja spletišča."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Nimate pravic za dostopati do te revije."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Dostopate lahko samo do revij, ki imajo omogočen dostop."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Zahtevano obvestilo ni na voljo pri tej reviji."

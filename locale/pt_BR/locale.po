@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:43-07:00\n"
-"PO-Revision-Date: 2020-06-08 23:54+0000\n"
+"PO-Revision-Date: 2020-11-30 15:32+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/pt_BR/>\n"
@@ -1661,8 +1661,16 @@ msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Processo editorial e de publicação"
 
 msgid "about.aboutOJSJournal"
-msgstr "A revista usa o Open Journal Systems (OJS {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas, desenvolvido com suporte e distribuição pelo <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sob a licença GNU General Public License."
+msgstr ""
+"A revista usa o Open Journal Systems (OJS {$ojsVersion}), sistema de código "
+"livre gratuito para a administração e a publicação de revistas, desenvolvido "
+"com suporte e distribuição pelo <a href=\"http://pkp.sfu.ca/\">Public "
+"Knowledge Project</a> sob a licença GNU General Public License. Visite o "
+"site da PKP para saber mais sobre o software. Por favor, <a href=\""
+"{$contactUrl}\"> contate a revista </a> diretamente com perguntas sobre a "
+"revista e o processo de submissão."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "O portal utiliza o Open Journal Systems (OJS {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas desenvolvido com suporte e distribuição  pelo <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sob a licença GNU General Public License."
 
@@ -1789,6 +1797,7 @@ msgstr "Instalação do OJS"
 msgid "installer.ojsUpgrade"
 msgstr "Atualização do sistema"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>Versão do OJS {$version}</h4>\n"
@@ -2245,3 +2254,12 @@ msgstr "Visualizar {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Editores atribuídos"
+
+msgid "about.aboutSoftware"
+msgstr "Sobre Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "A composição solicitada não foi encontrada."
+
+msgid "category.category"
+msgstr "Categorias"

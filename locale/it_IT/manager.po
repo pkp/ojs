@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2019-12-28 17:34+0000\n"
+"PO-Revision-Date: 2020-12-07 11:32+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
-"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/it/>"
-"\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"it_IT/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,9 +77,9 @@ msgstr "Tutti i costi devono essere valori numerici positivi (sono permessi i de
 msgid "manager.payment.generalFees"
 msgstr "Quote generali"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "La quota associativa comparirà nella pagina delle informazioni sulla rivista (sotto (Politiche) e il link alle donazioni apparirà nel menu laterale."
+msgstr ""
+"La quota associativa comparirà nella pagina delle informazioni sulla rivista."
 
 msgid "manager.payment.generalOptions"
 msgstr "Opzioni generali"
@@ -1369,6 +1369,7 @@ msgstr "Categorie"
 msgid "manager.payment.options.purchaseIssueFee"
 msgstr "Acquista il fascicolo"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Prima di cancellare questa sezione, devi spostare in un'altra tutti gli articoli pubblicati che contiene."
 
@@ -1820,3 +1821,26 @@ msgid "manager.setup.numAnnouncementsHomepage.description"
 msgstr ""
 "Quanti annunci visualizzare nella homepage. Lasciare questo campo vuoto per "
 "non visualizzarne nessuno."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Non convalidato."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Convalida avvenuta con successo!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Questa testata non accetta nuovi articoli. Verificare le impostazioni per "
+"consentire nuove sottomissioni."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Impedisce agli utenti di sottomettere nuovi articoli alla rivista. Le "
+"sottomissioni possono essere disabilitate per la singola tipologia di "
+"articolo dalla sezione impostazioni ( <a href=\"{$url}\">journal sections</a>"
+" )"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Deve essere attiva almeno una tipologia di articolo. Vai alle impostazioni "
+"di workflow per disabilitare la sottomissione alla rivista."

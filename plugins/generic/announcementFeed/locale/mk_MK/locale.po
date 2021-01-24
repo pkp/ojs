@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "Лого на RSS2"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "Лого на RSS1"
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Лого на Atom"
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Ве молиме да внесете позитивен цел број за неодамнешните известувања."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "најнови известувања."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Ограничи го каналот на"
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Прикажи ги линковите до каналот само на страницата со известувања."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr ""
+"Прикажи ги линковите до каналот само на главната страница и на страницата со "
+"известувања."
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Прикажи ги линковите до каналот на сите страници од списанието."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Поставки"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Овој плагин создава RSS/Atom веб поддржувани пораки за најави на списанието."
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Додаток за канал за известувања"

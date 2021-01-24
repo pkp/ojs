@@ -227,3 +227,123 @@ msgid "galley.editPublishedDisabled"
 msgstr ""
 "Ennek a cikknek a posztprintje nem szerkeszthető, mert már publikálásra "
 "került."
+
+msgid "submission.publication"
+msgstr "Cikk"
+
+
+msgid "publication.status.published"
+msgstr "Publikált"
+
+
+msgid "submission.status.scheduled"
+msgstr "Ütemezett"
+
+
+msgid "publication.status.unscheduled"
+msgstr "Ütemezésből visszavonva"
+
+
+msgid "submission.publications"
+msgstr "Publikációk"
+
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Számban történő pulikáláskor a copyright  év automatikusan beállításra kerül."
+
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"A copyright  év automatikusan beállításra kerül a publikáció dátuma szerint."
+
+
+msgid "publication.datePublished"
+msgstr "Publikálás dátuma"
+
+
+msgid "publication.editDisabled"
+msgstr "Ez a verzió publikálásra került és nem szerkeszthető."
+
+
+msgid "publication.event.published"
+msgstr "A cikk publikált."
+
+
+msgid "publication.event.scheduled"
+msgstr "A cikk publikálásra volt ütemezve."
+
+
+msgid "publication.event.unpublished"
+msgstr "A cikk publikálását visszavonták."
+
+
+msgid "publication.event.versionPublished"
+msgstr "Új verzió került publikálásra."
+
+
+msgid "publication.event.versionScheduled"
+msgstr "Új verzió volt publikálásra ütemezve."
+
+
+msgid "publication.event.versionUnpublished"
+msgstr "A publikálásból egy verzió el lett távolítva."
+
+
+msgid "publication.invalidSubmission"
+msgstr "Ennek a publikációnak a beküldése nem található."
+
+
+msgid "publication.publish"
+msgstr "Publikál"
+
+
+msgid "publication.publish.requirements"
+msgstr "Az alábbi feltételeknek kell teljesülnie, mielőtt publikálhatóvá válik."
+
+
+msgid "publication.required.declined"
+msgstr "Elutasított beküldés nem publikálható."
+
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"A cikknek a technikai szerkesztés vagy előállítás fázisában kell lennie, "
+"hogy publikálható legyen."
+
+
+msgid "submission.license.description"
+msgstr ""
+"A licenc automatikusan beállításra kerül a(z) <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> számára, amikor publikálásra kerül."
+
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"A szerzői jog automatikusan hozzárendelésre kerül a {$copyright}-hoz "
+"publikáláskor."
+
+
+msgid "submission.copyrightOther.description"
+msgstr "Szerzői jogok hozzárendelése publikált cikkekhez az alábbi fél számára."
+
+
+msgid "publication.unpublish"
+msgstr "Publikálásból visszavonva"
+
+
+msgid "publication.unpublish.confirm"
+msgstr "Biztosan nem szeretné publikálni?"
+
+
+msgid "publication.unschedule.confirm"
+msgstr "Biztosan nem szeretné publikálásra ütemezni?"
+
+
+msgid "publication.version.details"
+msgstr "A publikáció részletei ennél a verziónál: {$version}"
+
+
+msgid "submission.queries.production"
+msgstr "Publikálási megbeszélések"
+

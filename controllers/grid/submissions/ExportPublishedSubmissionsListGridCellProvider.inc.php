@@ -66,21 +66,24 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 				$issueId = $submission->getCurrentPublication()->getData('issueId');
 				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 				$issue = $issueDao->getById($issueId, $contextId);
-				// Link to the issue edit modal
-				$application = Application::get();
-				$dispatcher = $application->getDispatcher();
-				import('lib.pkp.classes.linkAction.request.AjaxModal');
-				return array(
-					new LinkAction(
-						'edit',
-						new AjaxModal(
-							$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $issue->getId())),
-							__('plugins.importexport.common.settings.DOIPluginSettings')
-						),
-						htmlspecialchars($issue->getIssueIdentification()),
-						null
-					)
-				);
+				if ($issue) {
+					// Link to the issue edit modal
+					$application = Application::get();
+					$dispatcher = $application->getDispatcher();
+					import('lib.pkp.classes.linkAction.request.AjaxModal');
+					return array(
+						new LinkAction(
+							'edit',
+							new AjaxModal(
+								$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $issue->getId())),
+								__('plugins.importexport.common.settings.DOIPluginSettings')
+							),
+							htmlspecialchars($issue->getIssueIdentification()),
+							null
+						)
+					);
+				}
+				break;
 			case 'status':
 				$status = $submission->getData($this->_plugin->getDepositStatusSettingName());
 				$statusNames = $this->_plugin->getStatusNames();
@@ -89,6 +92,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 					assert(array_key_exists($status, $statusNames));
 					return array($statusActions[$status]);
 				}
+				break;
 		}
 		return parent::getCellActions($request, $row, $column, $position);
 	}

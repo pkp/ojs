@@ -418,9 +418,6 @@ msgstr ""
 msgid "editor.submissionReview.confirmDecision"
 msgstr "האם אתה בטוח שברצונך לרשום החלטה זו?"
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "האם אתה בטוח שברצונך למחוק הגשה זו לצמיתות?"
-
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "לשמור שינויים בהגשות שנשמרו בארכיון? הגשות המסומנות למחיקה יימחקו מהמערכת "

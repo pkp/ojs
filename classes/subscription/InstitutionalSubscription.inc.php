@@ -114,12 +114,16 @@ class InstitutionalSubscription extends Subscription {
 
 	/**
 	 * Check whether subscription is valid
+	 * @param $domain string
+	 * @param $IP string
+	 * @param $check int SUBSCRIPTION_DATE_... Test using either start date, end date, or both (default)
+	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
+	 * @return int|false Found subscription ID, or false for none.
 	 */
 	function isValid($domain, $IP, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
 		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
 		return $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $this->getData('journalId'), $check, $checkDate);
 	}
-
 }
 
 

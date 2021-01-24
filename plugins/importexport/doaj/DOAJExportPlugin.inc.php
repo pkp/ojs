@@ -19,8 +19,8 @@ define('DOAJ_XSD_URL', 'https://www.doaj.org/schemas/doajArticles.xsd');
 
 define('DOAJ_API_DEPOSIT_OK', 201);
 
-define('DOAJ_API_URL', 'https://doaj.org/api/v1/');
-define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/v1/');
+define('DOAJ_API_URL', 'https://doaj.org/api/v2/');
+define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/v2/');
 define('DOAJ_API_OPERATION', 'articles');
 
 class DOAJExportPlugin extends PubObjectsExportPlugin {
@@ -108,13 +108,18 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	function depositXML($objects, $context, $jsonString) {
 		$apiKey = $this->getSetting($context->getId(), 'apiKey');
 		$httpClient = Application::get()->getHttpClient();
-		$response = $httpClient->request(
-			'POST',
-			($this->isTestMode($context) ? DOAJ_API_URL_DEV : DOAJ_API_URL) . '?api_key=' . urlencode($apiKey),
-			[
-				'json' => $jsonString
-			]
-		);
+		try {
+			$response = $httpClient->request(
+				'POST',
+				($this->isTestMode($context) ? DOAJ_API_URL_DEV : DOAJ_API_URL) . DOAJ_API_OPERATION,
+				[
+					'query' => ['api_key' => $apiKey],
+					'json' => json_decode($jsonString)
+				]
+			);
+		} catch (Exception $e) {
+			return [['plugins.importexport.doaj.register.error.mdsError', $e->getMessage()]];
+		}
 		if (($status = $response->getStatusCode()) != DOAJ_API_DEPOSIT_OK) {
 			return [['plugins.importexport.doaj.register.error.mdsError', $status . ' - ' . $response->getBody()]];
 		}

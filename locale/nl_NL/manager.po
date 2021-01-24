@@ -256,6 +256,7 @@ msgstr "De redacteurs van deze sectie"
 msgid "manager.sections.confirmDelete"
 msgstr "Weet u zeker dat u deze sectie wilt verwijderen?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Voordat u deze sectie kunt verwijderen, moet u de erin gepubliceerde artikels verplaatsen naar andere secties."
 

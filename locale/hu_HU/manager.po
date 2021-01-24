@@ -245,6 +245,7 @@ msgstr "Ennek a rovatnak a szerkesztői"
 msgid "manager.sections.confirmDelete"
 msgstr "Biztos benne, hogy törölni akarja ezt a rovatot?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Mielőtt ezt a rovatot törli, át kell mozgatnia a benne lévő cikkeket egy másik rovatba."
 

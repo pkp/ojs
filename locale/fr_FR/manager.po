@@ -1406,6 +1406,7 @@ msgstr "Acheter un numéro"
 msgid "manager.sections.confirmDelete"
 msgstr "Êtes-vous sûr de vouloir définitivement supprimer cette section ?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Pour supprimer cette section, déplacez les articles qui la composent dans d'autres sections."
 

@@ -61,4 +61,38 @@ class StatsHandler extends PKPStatsHandler {
 			'filters' => $filters
 		]);
 	}
+
+	/**
+	 * @copydoc PKPStatsHandler::getReportRowValue()
+	 */
+	protected function getReportRowValue($key, $record) {
+		$returnValue = parent::getReportRowValue($key, $record);
+
+		if (!$returnValue && $key == STATISTICS_DIMENSION_ISSUE_ID) {
+			$assocId = $record[STATISTICS_DIMENSION_ISSUE_ID];
+			$assocType = ASSOC_TYPE_ISSUE;
+			$returnValue = $this->getObjectTitle($assocId, $assocType);
+		}
+
+		return $returnValue;
+	}
+
+	/**
+	 * @copydoc PKPStatsHandler::getObjectTitle()
+	 */
+	protected function getObjectTitle($assocId, $assocType) {
+		$objectTitle = parent::getObjectTitle($assocId, $assocType);
+
+		switch ($assocType) {
+			case ASSOC_TYPE_ISSUE:
+				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+				$issue = $issueDao->getById($assocId);
+				if ($issue) {
+					$objectTitle = $issue->getIssueIdentification();
+				}
+				break;
+		}
+
+		return $objectTitle;
+	}
 }

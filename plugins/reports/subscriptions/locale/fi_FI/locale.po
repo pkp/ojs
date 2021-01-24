@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-12-12 08:52+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/fi_FI/>\n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP-alueet"
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Instituution postiosoite"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Tällä lisäosalla voidaan hakea CSV-muotoinen lehden tilauksia koskeva "
+"raportti."
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Tilaukset-raportti"

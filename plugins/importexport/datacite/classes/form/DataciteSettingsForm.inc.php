@@ -104,6 +104,27 @@ class DataciteSettingsForm extends Form {
 	}
 
 	/**
+	 * @copydoc Form::validate
+	 */
+	function validate($callHooks = true) {
+		// if in test mode, the test DOI prefix must exist
+		if ($this->getData('testMode')) {
+			if (empty($this->getData('testDOIPrefix'))) {
+				$this->addError('testDOIPrefix', __('plugins.importexport.datacite.settings.form.testDOIPrefixRequired'));
+				$this->addErrorField('testDOIPrefix');
+			}
+			// if username exist there will be the possibility to register from within OJS,
+			// so the test username must exist too
+			if (!empty($this->getData('username')) && empty($this->getData('testUsername'))) {
+				$this->addError('testUsername', __('plugins.importexport.datacite.settings.form.testUsernameRequired'));
+				$this->addErrorField('testUsername');
+			}
+		}
+
+		return parent::validate($callHooks);
+	}
+
+	/**
 	 * @copydoc Form::execute()
 	 */
 	function execute(...$functionArgs) {
@@ -128,7 +149,10 @@ class DataciteSettingsForm extends Form {
 			'username' => 'string',
 			'password' => 'string',
 			'automaticRegistration' => 'bool',
-			'testMode' => 'bool'
+			'testMode' => 'bool',
+			'testUsername' => 'string',
+			'testPassword' => 'string',
+			'testDOIPrefix' => 'string',
 		);
 	}
 
@@ -138,7 +162,7 @@ class DataciteSettingsForm extends Form {
 	 * @return boolean
 	 */
 	function isOptional($settingName) {
-		return in_array($settingName, array('username', 'password', 'automaticRegistration', 'testMode'));
+		return in_array($settingName, array('username', 'password', 'automaticRegistration', 'testMode', 'testUsername', 'testPassword', 'testDOIPrefix'));
 	}
 
 }

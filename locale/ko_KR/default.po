@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-29 12:56+0000\n"
+"Last-Translator: Seok Hyun Ga <shga89@naver.com>\n"
+"Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"ko_KR/>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+#, fuzzy
+msgid "default.genres.article"
+msgstr "논문 텍스트"
+
+#, fuzzy
+msgid "section.default.title"
+msgstr "논문"
+
+#, fuzzy
+msgid "section.default.policy"
+msgstr "섹션 기본 정책"
+
+#, fuzzy
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>"
+"\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "심사자"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "심사자"
+
+msgid "default.genres.sourceTexts"
+msgstr "원본 텍스트"
+
+msgid "default.genres.dataSet"
+msgstr "데이터셋"
+
+msgid "default.genres.dataAnalysis"
+msgstr "자료 분석"
+
+msgid "default.genres.researchMaterials"
+msgstr "연구 재료"
+
+msgid "default.genres.researchInstrument"
+msgstr "연구 도구"
+
+msgid "default.genres.researchResults"
+msgstr "연구 결과"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "구독 관리자"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "구독 관리자"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "섹션 편집자"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "섹션 편집자"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "초빙 편집자"
+
+msgid "default.groups.name.guestEditor"
+msgstr "초빙 편집자"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.plural.editor"
+msgstr "학술지 편집자"
+
+msgid "default.groups.name.editor"
+msgstr "학술지 편집자"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.plural.manager"
+msgstr "학술지 관리자"
+
+msgid "default.groups.name.manager"
+msgstr "학술지 관리자"
+
+#, fuzzy
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"도서관 사서가 이 저널을 도서관의 전자 학술지 구독에 포함하는 것을 권장합니다. 또한,이 학술지의 오픈 소스 출판 시스템은 교수진이 "
+"편집에 관여하는 학술지와 함께 사용할 수 있도록 도서관에서 제공하기에 적합하다는 점에 주목할 가치가 있습니다(<a href=\""
+"http://pkp.sfu.ca/ojs\">오픈 저널 시스템</a> 참조)."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"이 학술지에 투고하고 싶으십니까? <a href=\"{$indexUrl}/{$contextPath}/about\">학술지 정보</a>  "
+"페이지에서 학술지의 섹션 정책 및 <a href=\"{$indexUrl}/{$contextPath}/about/submissions#"
+"authorGuidelines\">저자 지침</a>을 검토하는 것이 좋습니다. 저자는 제출하기 전에 학술지에 <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">가입 </a>해야하며, 이미 가입된 경우 간단히 <a href="
+"\"{$indexUrl}/index/login\">로그인</a>하고 5단계의 투고과정을 시작합니다."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"독자들이 이 학술지의 출판 알림 서비스에 등록 할 것을 권장합니다. 학술지 홈페이지 상단에 있는 <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\"> 등록 </a> 링크를 사용하십시오. 이 등록을 통해 독자는 "
+"학술지의 새로운 호마다 이메일로 목차를 받게됩니다. 이 목록을 통해 학술지는 특정 수준의 지지 또는 독자층을 주장 할 수 있습니다. "
+"학술지의 <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\""
+"> 개인 정보 보호 정책 </a>을 참조하세요. 이는 독자의 이름과 이메일 주소가 다른 용도로 사용되지 않을 것임을 보증합니다."
+
+#, fuzzy
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"이 학술지는 연구를 대중이 자유롭게 이용할 수 있도록하는 것이 더 큰 전 세계 지식 교환을 지원한다는 원칙에 따라 그 내용에 대한 "
+"즉각적인 오픈 액세스를 제공합니다."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>이 학술지 사이트에 입력된 이름과 이메일 주소는 이 학술지의 명시된 목적을 위해서만 사용되며 다른 목적이나 제 3자에게 제공되지 "
+"않습니다. </p>"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "원고는 저자 지침에 설명된 문체 및 서지 요구 사항을 준수합니다."
+
+#, fuzzy
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"텍스트는 단일 간격(single-spaced)이며. 12 포인트 글꼴을 사용합니다. 밑줄이 아닌 이탤릭체를 사용합니다 (URL 주소 제외)"
+". 그리고 모든 삽화, 그림 및 표는 텍스트의 끝이 아닌 적절한 지점에 배치됩니다."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "원고 파일은 OpenOffice, Microsoft Word, 또는 RTF 문서 형식이어야 합니다."
+
+#, fuzzy
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"이 투고 건은 이전에 출판된 적이 없거나 다른 학술지의 심사를 받은 적이 없습니다. 만일 이에 해당되지 않는다면, 편집자 요청사항에 관련 "
+"내용을 설명바랍니다."

@@ -1583,11 +1583,14 @@ msgstr "More information about the publishing system, Platform and Workflow by O
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS Editorial and Publishing Process"
 
+msgid "about.aboutSoftware"
+msgstr "About Open Journal Systems"
+
 msgid "about.aboutOJSJournal"
-msgstr "This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+msgstr "This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the Public Knowledge Project under the GNU General Public License. Visit PKP's website to <a href=\"http://pkp.sfu.ca/\">learn more about the software</a>. Please <a href=\"{$contactUrl}\">contact the journal</a> directly with questions about the journal and submissions to the journal."
 
 msgid "about.aboutOJSSite"
-msgstr "This site uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+msgstr "This site uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the Public Knowledge Project under the GNU General Public License. Visit PKP's website to <a href=\"http://pkp.sfu.ca/\">learn more about the software</a>. Please contact the site directly with questions about its journals and submissions to its journals."
 
 msgid "help.ojsHelp"
 msgstr "Open Journal Systems Help"
@@ -1712,15 +1715,14 @@ msgstr "OJS Installation"
 msgid "installer.ojsUpgrade"
 msgstr "OJS Upgrade"
 
+msgid "installer.updatingInstructions"
+msgstr "If you are upgrading an existing installation of OJS, <a href=\"{$upgradeUrl}\">click here</a> to proceed."
+
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS Version {$version}</h4>\n"
 "\n"
 "<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
-"\n"
-"<h4>Upgrade</h4>\n"
-"\n"
-"<p>If you are upgrading an existing installation of OJS, <a href=\"{$upgradeUrl}\">click here</a> to proceed.</p>\n"
 "\n"
 "<h4>Recommended system requirements</h4>\n"
 "\n"

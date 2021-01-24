@@ -49,10 +49,6 @@ msgstr ""
 "sélectionnées pour suppression seront supprimées du système de façon "
 "permanente."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr ""
-"Êtes-vous certain de vouloir supprimer définitivement cette soumission ?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Êtes-vous certain de vouloir enregistrer cette décision ?"
 

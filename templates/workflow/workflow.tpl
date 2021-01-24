@@ -93,6 +93,7 @@
 		</tab>
 		{if $canAccessPublication}
 			<tab id="publication" label="{translate key="submission.publication"}">
+				{help file="editorial-workflow/publication" class="pkp_help_tab"}
 				<div class="pkpPublication" ref="publication" aria-live="polite">
 					<pkp-header class="pkpPublication__header" :is-one-line="false">
 						<span class="pkpPublication__status">

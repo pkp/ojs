@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2020-11-13 12:51+0000\n"
+"PO-Revision-Date: 2020-12-01 11:47+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ca_ES/>\n"
@@ -1367,8 +1367,17 @@ msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Procés editorial i de publicació de l’OJS"
 
 msgid "about.aboutOJSJournal"
-msgstr "Aquesta revista utilitza l’Open Journal Systems {$ojsVersion}, un programari de codi obert per a la gestió i la publicació de revistes que ha estat desenvolupat, impulsat i distribuït lliurement pel <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sota la Llicència Pública General GNU."
+msgstr ""
+"Aquesta revista utilitza l’Open Journal Systems {$ojsVersion}, un programari "
+"de codi obert per a la gestió i la publicació de revistes que ha estat "
+"desenvolupat, impulsat i distribuït gratuïtament per Public Knowledge "
+"Project sota la llicència pública General GNU. Visiteu la pàgina web de PKP "
+"per a <a href=\"http://pkp.sfu.ca/\">obtenir més informació sobre el "
+"programari</a>. Si us plau, <a href=\"{$contactUrl}\">contacteu amb la "
+"revista</a> directament si teniu preguntes respecte a la revista o les "
+"trameses a la revista."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "Aquest lloc utilitza l’Open Journal Systems {$ojsVersion}, un programari de codi obert per a la gestió i la publicació de revistes que ha estat desenvolupat, impulsat i distribuït lliurement pel <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> sota la Llicència Pública General GNU."
 
@@ -1483,6 +1492,7 @@ msgstr "Instal·lació de l’OJS"
 msgid "installer.ojsUpgrade"
 msgstr "Actualització de l’OJS"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>Versió OJS {$version}</h4>\n"
@@ -2054,3 +2064,12 @@ msgstr "Veure {$identification}"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Editors/ores assignats"
+
+msgid "about.aboutSoftware"
+msgstr "Quant a Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "No s'ha pogut trobar la galerada sol·licitada."
+
+msgid "category.category"
+msgstr "Categories"

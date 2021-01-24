@@ -1755,6 +1755,7 @@ msgstr ""
 "گۆڤاری کراوە بکە بۆ زیادکردنی زمانێک کە لە لیستەکەدا نییە و تۆ دەتەوێت "
 "پاڵپشتی بکەیت."
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS وەشانی{$version}</h4>\n"
@@ -1917,12 +1918,14 @@ msgstr "یارمەتیی OJS"
 msgid "help.ojsHelp"
 msgstr "یارمەتیی سیستەمی گۆڤاری کراوە"
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
 "ئەم پەڕەیە سیستەمی گۆڤاری کراوە بەکار دەهێنێت {$ojsVersion}ئەمە سیستەمێکی "
 "کراوەیە بۆ بڵاوکردنەوە و گەشەی پێ دراوە لە لایەن <a href=\"http://pkp.sfu.ca/"
 "\">پڕۆژەی زانیاریی گشتی</a> بە ڕێگەپێدانی GNU General Public License."
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
 "ئەم گۆڤارە سیستەمی گۆڤاری کراوە پەیڕەو دەکات {$ojsVersion}،کە ئەمە "

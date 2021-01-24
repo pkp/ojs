@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2020-06-14 15:53+0000\n"
+"PO-Revision-Date: 2020-11-30 15:32+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/editor/ar_IQ/"
 ">\n"
@@ -57,9 +57,6 @@ msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "هل تريد حفظ التعديلات على طلبات النشر المحفوظة؟ الطلبات المؤشر عليها بأن "
 "تحذف، ستحذف نهائياً من النظام."
-
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "هل أنت متأكد من رغبتك في حذف طلب النشر هذا نهائياً؟"
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "هل أنت متأكد من رغبتك في تسجيل هذا القرار؟"
@@ -379,7 +376,7 @@ msgid "editor.submissions.lastCompleted"
 msgstr "آخر المكتمل"
 
 msgid "editor.submissions.assignedTo"
-msgstr "معين إلى"
+msgstr "مُعين إلى المحرر"
 
 msgid "editor.submissions.inSection"
 msgstr "في قسم"
@@ -442,3 +439,6 @@ msgstr "المعرف العام '{$publicIdentifier}' موجود سلفاً لم
 
 msgid "editor.article.coverImage"
 msgstr "صورة الغلاف"
+
+msgid "issues.submissions.issueIds"
+msgstr "مُعين إلى العدد"

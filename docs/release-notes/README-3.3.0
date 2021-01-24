@@ -1,7 +1,9 @@
-OJS 3.3.0 Release Notes
-Git tag: 3_3_0-0
+OJS 3.3.0RC2 Release Notes
+Git tag: 3_3_0-1
 
-Release date:
+THIS IS A RELEASE CANDIDATE AND NOT INTENDED FOR PRODUCTION USE.
+
+Release date: [prerelease]
 ============================
 
 Configuration Changes
@@ -13,9 +15,15 @@ configuration parameters.
 - The proxy configuration settings have changed. Please review the [proxy]
   section in config.TEMPLATE.inc.php and adapt your settings in config.inc.php
   as needed.
+- The db.persistent option for persistent database connections has been removed.
+- The db.collation option for configuring a database connection collation has
+  been added (default: utf8_general_ci)
+
 
 New Features
 ------------
+	- [to be completed after Release Candidate phase]
 
 Bug Fixes
 ---------
+	- [to be completed after Release Candidate phase]

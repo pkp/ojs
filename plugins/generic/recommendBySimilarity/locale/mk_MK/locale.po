@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "да започнате напредно барање на сличности"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Можете исто така {$advancedSearchLink} за овој труд."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Слични трудови"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Овој додаток додава листа од слични трудови на страната со апстрактот на "
+"трудот."
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Препорачани слични трудови"

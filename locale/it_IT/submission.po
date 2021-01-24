@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2020-06-08 11:54+0000\n"
+"PO-Revision-Date: 2020-12-14 09:38+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"it/>\n"
+"it_IT/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -237,7 +237,7 @@ msgstr "I dettagli di pubblicazione del fascicolo sono stati aggiornati."
 msgid "publication.selectIssue"
 msgstr "Seleziona l'uscita per la quale pianificare la pubblicazione"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Assegna ad un'uscita"
 
 msgid "publication.unscheduledIn"
@@ -250,3 +250,105 @@ msgstr ""
 "Tutti i requisiti di pubblicazioni sono completati. Questo articolo verrà "
 "pubblicato immediatamente in quanto la data di pubblicazione è stata fissata "
 "per il {$datePublished}. Confermi la pubblicazione?"
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inattiva)"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Questa è una preview non ancora pubblicata  <a href=\"{$url}\">Vai "
+"all'articolo</a>"
+
+msgid "submission.publication"
+msgstr "Pubblicazione"
+
+msgid "publication.status.published"
+msgstr "Pubblicato"
+
+msgid "submission.status.scheduled"
+msgstr "Pianificato"
+
+msgid "publication.status.unscheduled"
+msgstr "Rimosso dalla pianficazione"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"L'anno di copyright sarà configurato automaticamente quando questo articolo "
+"sarà assegnato ad un'uscita."
+
+msgid "publication.datePublished"
+msgstr "Data di pubblicazione"
+
+msgid "publication.editDisabled"
+msgstr "Questa versione è stata pubblicata e non può' essere modificata."
+
+msgid "publication.event.published"
+msgstr "Questo articolo è stato pubblicato."
+
+msgid "publication.event.scheduled"
+msgstr "Questo articolo è stato assegnato ad una uscita."
+
+msgid "publication.event.unpublished"
+msgstr "Questo articolo è stato rimosso da un'uscita."
+
+msgid "publication.event.versionPublished"
+msgstr "E' stata pubblicata una nuova versione."
+
+msgid "publication.event.versionScheduled"
+msgstr "Una nuova versione è stata pianificata per la pubblicazione."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Una versione non è più pubblicata."
+
+msgid "publication.invalidSubmission"
+msgstr "L'articolo per questa uscita non è stato trovato."
+
+msgid "publication.publish"
+msgstr "Pubblicare"
+
+msgid "publication.publish.requirements"
+msgstr "Prima della pubblicazione confermare i seguenti requisiti."
+
+msgid "publication.required.declined"
+msgstr "Un'articolo rigettato non puo' essere pubblicato."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Per essere pubblicato un'articolo deve essere nella fase di copy-editing o "
+"produzione."
+
+msgid "publication.unpublish"
+msgstr "Rimuovi dalla pubblicazione"
+
+msgid "publication.unpublish.confirm"
+msgstr "Confermi di non voler pubblicare questo articolo?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Confermi di non voler pianificare la pubblicazione di questo articolo?"
+
+msgid "publication.version.details"
+msgstr "Dettagli di pubblicazione per la versione {$version}"
+
+msgid "submission.queries.production"
+msgstr "Discussioni durante la produzione"
+
+msgid "submission.copyrightOther.description"
+msgstr "Assegnare il copyright degli articoli pubblicati al seguente soggetto."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Il copyright sarà assegnato automaticamente a {$copyright} alla "
+"pubblicazione."
+
+msgid "submission.license.description"
+msgstr ""
+"La licenza di pubblicazione sarà conforme a  <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> alla pubblicazione."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"L'anno di copyright verrà definito automaticamente in base alla data di "
+"pubblicazione."
+
+msgid "submission.publications"
+msgstr "Pubblicazioni"

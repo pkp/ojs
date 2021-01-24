@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-29 19:44+0000\n"
-"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"PO-Revision-Date: 2020-11-17 18:56+0000\n"
+"Last-Translator: Evangelos Papakirykou <vpapakir@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-crossref/el_GR/>\n"
 "Language: el_GR\n"
@@ -22,3 +22,12 @@ msgstr "Πληρούνται όλες οι απαιτήσεις των πρόσ�
 
 msgid "plugins.importexport.crossref.requirements"
 msgstr "Απαιτήσεις"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Ενεργό"
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Απέτυχε"
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Όνομα χρήστη"

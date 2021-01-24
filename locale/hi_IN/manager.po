@@ -314,6 +314,7 @@ msgstr "क्या आप वाकई इस अनुभाग को स्
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "इस खंड को हटाए जाने से पहले, आपको इसके भीतर प्रकाशित लेखों को अन्य अनुभागों "
@@ -2098,7 +2099,7 @@ msgstr ""
 "आंतरिक समीक्षा, समीक्षा, संपादकीय, और उत्पादन।"
 
 # (pofilter) untranslated: Checks whether a string has been translated at all.
-# 
+#
 # This check is really only useful if you want to extract untranslated
 # strings so that they can be translated independently of the main work.
 msgid "manager.setup.copyrightYearBasis"

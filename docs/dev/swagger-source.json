@@ -1,12 +1,16 @@
 {
 	"swagger": "2.0",
 	"info": {
-		"version": "3.3.x",
-		"title": "Open Journal Systems - API Reference",
-		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for documentation on the platform's internals.\n\n**Breaking changes since v3.2**\n* Submission files...",
+		"version": "3.3",
+		"title": "REST API - OJS",
+		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for technical documentation on the software.\n\n**Breaking changes since v3.2**\n* Major changes were made to how galleys are fetched and new endpoints were added for submission files. See the documentation for full details.",
 		"contact": {
 			"name": "Public Knowledge Project",
-			"url": "https://pkp.sfu.ca"
+			"url": "https://docs.pkp.sfu.ca"
+		},
+		"x-logo": {
+			"url": "/img/docs-logo.png",
+			"altText": "PKP Developer Docs"
 		}
 	},
 	"produces": [
@@ -45,7 +49,15 @@
 			"description": "Only admins and journal managers can access these endpoints."
 		},
 		{
-			"name": "Statistics",
+			"name": "Stats / Editorial",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "Stats / Publications",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "Stats / Users",
 			"description": "Only admins and journal managers can access these endpoints."
 		},
 		{
@@ -258,24 +270,32 @@
 				"parameters": [
 					{
 						"name": "status",
-						"description": "Filter results by submission status. Pass more than one status in a comma-separated list (eg - `3,4`). Must match the value of the `STATUS_QUEUED`, `STATUS_PUBLISHED` or `STATUS_DECLINED` constants in OJS 3.",
+						"description": "Filter results by one or more submission statuses. Must match the value of one of the `STATUS_QUEUED`, `STATUS_SCHEDULED`, `STATUS_PUBLISHED` or `STATUS_DECLINED` constants.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer",
+							"enum": [1,3,4,5]
+						}
 					},
 					{
 						"name": "assignedTo",
 						"description": "Filter results by those assigned to one or more user ids. All users except managers and admins are automatically restricted to assigned submissions and do not need to pass this parameter.",
 						"in": "query",
 						"required": false,
-						"type": "array"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "count",
-						"description": "How many results to return in a single request. Default is `20`. Max is `100`.",
+						"description": "How many results to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "integer"
+						"type": "integer",
+						"default": 20
 					},
 					{
 						"name": "offset",
@@ -286,17 +306,29 @@
 					},
 					{
 						"name": "orderBy",
-						"description": "Order the results returned. Must be one of `dateSubmitted`, `dateLastActivity`, `lastModified` or `title`. Default is `dateSubmitted`.",
+						"description": "Order the results returned.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "dateSubmitted",
+						"enum": [
+							"dateSubmitted",
+							"dateLastActivity",
+							"lastModified",
+							"title"
+						]
 					},
 					{
 						"name": "orderDirection",
-						"description": "Return the results in ascending or descending order. Must be `ASC` or `DESC`. Default is `DESC`.",
+						"description": "Return the results in ascending or descending order.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
 					},
 					{
 						"name": "isIncomplete",
@@ -324,14 +356,20 @@
 						"description": "Filter the results by those with one or more publications assigned to a section.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "issueIds",
 						"description": "Filter the results by those with one or more publications assigned to an issue.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "searchPhrase",
@@ -343,7 +381,8 @@
 				],
 				"responses": {
 					"200": {
-						"description": "List of submissions.",
+						"x-summary": "Success",
+						"description": "List of requested submissions.",
 						"schema": {
 							"type": "object",
 							"properties": {
@@ -360,7 +399,8 @@
 						}
 					},
 					"403": {
-						"description": "You do not have permission to access submission assigned to the user requested in the `assignedTo` parameter.",
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access submissions assigned to the user requested in the `assignedTo` parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -383,12 +423,14 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Details of the submission that was just added.",
 						"schema": {
 							"$ref": "#/definitions/Submission"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
@@ -415,19 +457,22 @@
 				],
 				"responses": {
 					"200": {
-						"description": "Submission details.",
+						"x-summary": "Success",
+						"description": "The submission details.",
 						"schema": {
 							"$ref": "#/definitions/Submission"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access this submissions.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
-						"description": "The requested submission could not be found.",
+						"x-summary": "Request Not Found",
+						"description": "The submission could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -457,24 +502,28 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The submission that was just edited with the new values after the update has occurred.",
 						"schema": {
 							"$ref": "#/definitions/Submission"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					},
 					"403": {
-						"description": "This error indicates one of the following:\n* You are not allowed to edit a submission from the site-wide endpoint. You must use a context (journal/press) endpoint.\n* You are not allowed to change the context (journal/press) of a submission.",
+						"x-summary": "Request Unauthorized",
+						"description": "This error indicates one of the following:\n* You are not allowed to edit a submission from the site-wide endpoint. You must use a context (journal/press/server) endpoint.\n* You are not allowed to change the context (journal/press/server) of a submission.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The submission could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -499,18 +548,21 @@
 				],
 				"responses": {
 					"200": {
-						"description": "The submission that was just deleted.",
+						"x-summary": "Success",
+						"description": "Details of the deleted submission.",
 						"schema": {
 							"$ref": "#/definitions/Submission"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You are not allowed to delete this submission.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The submission could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -524,7 +576,7 @@
 				"tags": [
 					"Submissions / Files"
 				],
-				"summary": "Get the files for this submission.",
+				"summary": "Get a submission's files.",
 				"description": "This will return all of a submission's files that the user is allowed to access, except review attachments and discussion files. A user is allowed to access different file stages depending on their stage assignment.\n* Managers, subeditors and assistants can access all file stages if they are assigned to the matching workflow stage. For example, an assistant assigned to the copyediting stage can access files in `SUBMISSION_FILE_COPYEDIT` and `SUBMISSION_FILE_FINAL`.\n* Authors are restricted to the `SUBMISSION_FILE_SUBMISSION`, `SUBMISSION_FILE_REVIEW_REVISION`, `SUBMISSION_FILE_COPYEDIT` and `SUBMISSION_FILE_PROOF` file stages. For example, an author with access to the copyediting stage will have access to `SUBMISSION_FILE_COPYEDIT` (copyedited files) but not `SUBMISSION_FILE_FINAL` (draft files).\n* Reviewers and readers are not allowed to access this endpoint.\n* Managers who are not assigned to the submission are allowed to access all file stages as though they are assigned to every workflow stage.",
 				"parameters": [
 					{
@@ -539,19 +591,26 @@
 						"description": "Filter results by those submission files assigned to one or more file stage. One of the `SUBMISSION_FILE_` constants.",
 						"in": "query",
 						"required": false,
-						"type": "integer"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "reviewRoundIds",
 						"description": "Filter results by those submission files assigned to one or more review rounds.",
 						"in": "query",
 						"required": false,
-						"type": "integer"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					}
 				],
 				"responses": {
 					"200": {
-						"description": "List of requested submission files.",
+						"x-summary": "Success.",
+						"description": "An array of the requested submission files.",
 						"schema": {
 							"type": "array",
 							"items": {
@@ -560,6 +619,7 @@
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to view the requested files.\n\n|Error Code|Description|\n|---|---|\n|`api.403.unauthorized`|You are not allowed to access files for this submission.|\n|`api.submissionFiles.403.unauthorizedFileStageId`|You are not allowed to access files in one or more of the `fileStages` requested.|\n|`api.submissionFiles.403.unauthorizedReviewRound`|You are not allowed to access files in one or more of the `reviewRoundIds` requested.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -576,12 +636,6 @@
 				"consumes": "multipart/form-data",
 				"parameters": [
 					{
-						"name": "file",
-						"in": "formData",
-						"description": "The file to be uploaded.",
-						"type": "file"
-					},
-					{
 						"description": "Details about the submission file that should be created.",
 						"in": "body",
 						"schema": {
@@ -591,18 +645,21 @@
 				],
 				"responses": {
 					"200": {
-						"description": "Details of the submission file that was just added.",
+						"x-summary": "Success",
+						"description": "The new submission file.",
 						"schema": {
 							"$ref": "#/definitions/SubmissionFile"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "There was an error when uploading the file or the values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You are not allowed to upload a file to the specified file stage of this submission.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -643,12 +700,14 @@
 				],
 				"responses": {
 					"200": {
-						"description": "Details of the requested submission file.",
+						"x-summary": "Success",
+						"description": "Details of the submission file.",
 						"schema": {
 							"$ref": "#/definitions/SubmissionFile"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You are not allowed to access the requested file.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -694,18 +753,21 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The submission file that was just edited with the new values after the update has occurred.",
 						"schema": {
 							"$ref": "#/definitions/SubmissionFile"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "There was an error when uploading the file or the values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You are not allowed to edit the requested file.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -744,13 +806,15 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The submission file that was just deleted.",
 						"schema": {
 							"$ref": "#/definitions/SubmissionFile"
 						}
 					},
 					"403": {
-						"description": "You are not allowed to edit the requested file.",
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to delete the requested file.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -763,7 +827,8 @@
 				"tags": [
 					"Submissions / Participants"
 				],
-				"summary": "Get the participants assigned to a submisssion.",
+				"summary": "Get assigned participants.",
+				"description": "Get the participants assigned to a submisssion.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -775,6 +840,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "List of users assigned to a submission",
 						"schema": {
 							"type": "array",
@@ -784,6 +850,7 @@
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested submission could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -797,7 +864,8 @@
 				"tags": [
 					"Submissions / Participants"
 				],
-				"summary": "Get the participants assigned to a stage of this submisssion's workflow.",
+				"summary": "Get assigned participants by stage.",
+				"description": "Get all participants assigned to a submission for a specific workflow stage, such as the review or copyediting stage.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -816,6 +884,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "List of users assigned to the requested stage of the requested submission",
 						"schema": {
 							"type": "array",
@@ -825,6 +894,7 @@
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested submission could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -838,7 +908,7 @@
 				"tags": [
 					"Submissions / Publications"
 				],
-				"summary": "Get a list of publications for this submission.",
+				"summary": "Get a submission's publications.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -850,6 +920,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "List of publications for this submission.",
 						"schema": {
 							"type": "array",
@@ -859,6 +930,7 @@
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested submission could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -870,7 +942,8 @@
 				"tags": [
 					"Submissions / Publications"
 				],
-				"summary": "Create a new publication for this submission.",
+				"summary": "Create a publication.",
+				"description": "Create a new publication for a submission.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -896,12 +969,14 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Details of the publication that was just added.",
 						"schema": {
 							"$ref": "#/definitions/Publication"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
@@ -934,12 +1009,14 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The publication details",
 						"schema": {
 							"$ref": "#/definitions/Publication"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested submission or publication could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -977,24 +1054,28 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The publication that was just edited with the new values after the update has occurred.",
 						"schema": {
 							"$ref": "#/definitions/Publication"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "This error indicates one of the following:\n* The publication you want to edit does not belong to this submission.\n* This publication is published and can not be edited. You must create and publish a new version.\n* You do not have permission to edit this publication.\n* You are not allowed to modify the `status` of a publication. You must use the `/submissions/{submissionId}/publications/{publicationId}/publish` and `.../unpublish` endpoints to modify the status of a publication.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The publication could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1026,18 +1107,21 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The publication that was just deleted.",
 						"schema": {
 							"$ref": "#/definitions/Publication"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "This may mean one of the following:\n* You are not allowed to delete this publication.\n* The publication does not belong to this submission.\n* This publication is published and can not be deleted.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The submission could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1051,7 +1135,8 @@
 				"tags": [
 					"Submissions / Publications"
 				],
-				"summary": "Create a new version of an existing publication.",
+				"summary": "Create a new version of a publication.",
+				"description": "Duplicate a publication, including author and galley records, in order to create a new version of a publication that can be edited.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -1070,18 +1155,21 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Details of the new publication that was created.",
 						"schema": {
 							"$ref": "#/definitions/Publication"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "The publication you want to version does not belong to this submission.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The publication could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1115,24 +1203,28 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Details of the publication that was just published.",
 						"schema": {
 							"$ref": "#/definitions/Publication"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "One or more publication requirements have not been met.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "A 403 response means that the publication you want to version does not belong to this submission or that the publication is already published.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The publication could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1165,18 +1257,21 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Details of the publication that was just unpublished.",
 						"schema": {
 							"$ref": "#/definitions/Publication"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "A 403 response means that the publication you want to version does not belong to this submission or that the publication is already unpublished.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The publication could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1191,14 +1286,15 @@
 					"Issues"
 				],
 				"summary": "Get a list of issues.",
-				"description": "Results ar eeordered by `datePublished` with the most recent first.",
+				"description": "Results are eordered by `datePublished`.",
 				"parameters": [
 					{
 						"name": "count",
-						"description": "How many results to return in a single request. Default is `20`. Max is `100`.",
+						"description": "How many results to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "integer"
+						"type": "integer",
+						"default": 20
 					},
 					{
 						"name": "offset",
@@ -1209,17 +1305,28 @@
 					},
 					{
 						"name": "orderBy",
-						"description": "Order the results returned. Must be one of `datePublished`, `lastModified` or `seq`. Default is `datePublished`.",
+						"description": "Order the results returned.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "datePublished",
+						"enum": [
+							"datePublished",
+							"lastModified",
+							"seq"
+						]
 					},
 					{
 						"name": "orderDirection",
-						"description": "Return the results in ascending or descending order. Must be `ASC` or `DESC`. Default is `DESC`.",
+						"description": "Return the results in ascending or descending order.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
 					},
 					{
 						"name": "isPublished",
@@ -1259,6 +1366,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "List of issues.",
 						"schema": {
 							"type": "array",
@@ -1268,6 +1376,7 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The requested volume, number or year is not valid.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1284,12 +1393,14 @@
 				"summary": "Get the current issue.",
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The current issue.",
 						"schema": {
 							"$ref": "#/definitions/Issue"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "This journal does not have a current issue.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1305,14 +1416,25 @@
 				],
 				"summary": "Get an issue by ID.",
 				"description": "If the issue has a custom section order, the `seq` property of each `SectionSummary` will reflect the sequence for that issue.",
+				"parameters": [
+					{
+						"name": "issueId",
+						"in": "path",
+						"description": "Issue ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The requested issue.",
 						"schema": {
 							"$ref": "#/definitions/Issue"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested issue could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1333,14 +1455,23 @@
 						"description": "Filter the results by those who have one of these user role IDs.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "status",
-						"description": "Filter results by active/disabled users. Must be one of `active`, `disabled`, `all`. Default is `active`.",
+						"description": "Filter results by active/disabled users.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "active",
+						"enum": [
+							"active",
+							"disabled",
+							"all"
+						]
 					},
 					{
 						"name": "assignedToSubmission",
@@ -1365,10 +1496,11 @@
 					},
 					{
 						"name": "count",
-						"description": "How many results to return in a single request. Default is `20`. Max is `100`.",
+						"description": "How many results to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "integer"
+						"type": "integer",
+						"default": 20
 					},
 					{
 						"name": "offset",
@@ -1379,17 +1511,28 @@
 					},
 					{
 						"name": "orderBy",
-						"description": "Order the results returned. Must be one of `id`, `familyName` or `givenName`. Default is `id`.",
+						"description": "Order the results returned. ",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "id",
+						"enum": [
+							"id",
+							"familyName",
+							"givenName"
+						]
 					},
 					{
 						"name": "orderDirection",
-						"description": "Return the results in ascending or descending order. Must be `ASC` or `DESC`. Default is `DESC`.",
+						"description": "Return the results in ascending or descending order.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
 					},
 					{
 						"name": "searchPhrase",
@@ -1401,6 +1544,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "A list of users.",
 						"schema": {
 							"type": "object",
@@ -1418,6 +1562,7 @@
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "Only administrators, journal managers and editors are allowed to access users on this site.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1443,6 +1588,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "User details.",
 						"schema": {
 							"$ref": "#/definitions/User"
@@ -1456,13 +1602,20 @@
 				"tags": [
 					"Users"
 				],
+				"summary": "Get a list of reviewers.",
 				"parameters": [
 					{
 						"name": "status",
-						"description": "Filter results by active/disabled users. Must be one of `active`, `disabled`, `all`. Default is `active`.",
+						"description": "Filter results by active/disabled users.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "active",
+						"enum": [
+							"active",
+							"disabled",
+							"all"
+						]
 					},
 					{
 						"name": "reviewerRating",
@@ -1508,10 +1661,11 @@
 					},
 					{
 						"name": "count",
-						"description": "How many results to return in a single request. Default is `20`. Max is `100`.",
+						"description": "How many results to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "integer"
+						"type": "integer",
+						"default": 20
 					},
 					{
 						"name": "offset",
@@ -1522,17 +1676,28 @@
 					},
 					{
 						"name": "orderBy",
-						"description": "Order the results returned. Must be one of `id`, `familyName` or `givenName`. Default is `id`.",
+						"description": "Order the results returned.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "id",
+						"enum": [
+							"id",
+							"familyName",
+							"givenName"
+						]
 					},
 					{
 						"name": "orderDirection",
-						"description": "Return the results in ascending or descending order. Must be `ASC` or `DESC`. Default is `DESC`.",
+						"description": "Return the results in ascending or descending order.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
 					},
 					{
 						"name": "searchPhrase",
@@ -1544,6 +1709,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "List of reviewers.",
 						"schema": {
 							"type": "object",
@@ -1561,6 +1727,7 @@
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "Only administrators, journal managers and editors are allowed to access users on this site.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1574,7 +1741,8 @@
 				"tags": [
 					"Contexts"
 				],
-				"summary": "Get a list of journals.",
+				"summary": "Get a list of contexts.",
+				"description": "Get an array of the journals (OJS), presses (OMP) or preprint servers (OPS) hosted on this site.",
 				"parameters": [
 					{
 						"name": "isEnabled",
@@ -1585,10 +1753,11 @@
 					},
 					{
 						"name": "count",
-						"description": "How many results to return in a single request. Default is `20`. Max is `100`.",
+						"description": "How many results to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "type"
+						"type": "type",
+						"default": 20
 					},
 					{
 						"name": "offset",
@@ -1607,6 +1776,7 @@
 				],
 				"responses":  {
 					"200": {
+						"x-summary": "Success",
 						"description": "List of contexts.",
 						"schema": {
 							"type": "object",
@@ -1624,6 +1794,7 @@
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to view disabled contexts.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1635,7 +1806,8 @@
 				"tags": [
 					"Contexts"
 				],
-				"summary": "Create a new context (journal/press).",
+				"summary": "Create a new context.",
+				"description": "Create a new journal (OJS), press (OMP) or preprint server (OPS).",
 				"parameters": [
 					{
 						"description": "Details about the context that should be created. The `path` field is required. The `name` is required in the site's primary locale.",
@@ -1647,12 +1819,14 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Details of the context that was just added.",
 						"schema": {
 							"$ref": "#/definitions/Context"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
@@ -1666,7 +1840,7 @@
 				"tags": [
 					"Contexts"
 				],
-				"summary": "Get a context by ID.",
+				"summary": "Get a context.",
 				"parameters": [
 					{
 						"name": "contextId",
@@ -1678,18 +1852,21 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Context details. Some details may be withheld if you are not a site admin or manager of that context.",
 						"schema": {
 							"$ref": "#/definitions/Context"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to view this context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested context could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1701,7 +1878,8 @@
 				"tags": [
 					"Contexts"
 				],
-				"summary": "Edit a context (journal/press).",
+				"summary": "Edit a context.",
+				"description": "Edit a journal (OJS), press (OMP) or preprint server (OPS).",
 				"parameters": [
 					{
 						"name": "contextId",
@@ -1720,24 +1898,28 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The context that was just edited with the current values after the edit has occurred.",
 						"schema": {
 							"$ref": "#/definitions/Context"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "There are two possible conditions that will result in a `403` response. 1. You do not have permission to edit this context. 2. You submitted changes for one context from the API endpoint of another context. To edit a context, you must make a request to that context's API endpoint or the site-wide API endpoint.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested context could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1749,7 +1931,8 @@
 				"tags": [
 					"Contexts"
 				],
-				"summary": "Delete a context (journal/press).",
+				"summary": "Delete a context.",
+				"description": "Delete a journal (OJS), press (OMP) or preprint server (OPS).",
 				"parameters": [
 					{
 						"name": "contextId",
@@ -1761,18 +1944,21 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Details of the context that was just deleted.",
 						"schema": {
 							"$ref": "#/definitions/Context"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to delete this context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested context could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1786,7 +1972,8 @@
 				"tags": [
 					"Contexts"
 				],
-				"summary": "Get a context's active theme and any theme options defined by it.",
+				"summary": "Get the active theme.",
+				"description": "Get the active theme and theme options for any journal (OJS), press (OMP) or preprint server (OPS).",
 				"parameters": [
 					{
 						"name": "contextId",
@@ -1798,18 +1985,21 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The response will include the theme plugin directory in `themePluginPath`. Any theme options will be provided in additional keys based on the option name.",
 						"schema": {
 							"$ref": "#/definitions/ThemeOptions"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to view this context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested context could not be found. A 404 may also be returned when a context has no active theme, or the active theme plugin has not been installed or enabled.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1821,7 +2011,8 @@
 				"tags": [
 					"Contexts"
 				],
-				"summary": "Edit a context's (journal/press) active theme and options defined by that theme.",
+				"summary": "Edit the active theme.",
+				"description": "Edit the active theme and theme options for any journal (OJS), press (OMP) or preprint server (OPS).",
 				"parameters": [
 					{
 						"name": "contextId",
@@ -1840,24 +2031,28 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The new theme and values for any of its theme options.",
 						"schema": {
 							"$ref": "#/definitions/ThemeOptions"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "There are two possible conditions that will result in a `403` response. 1. You do not have permission to edit this context. 2. You submitted changes for one context from the API endpoint of another context. To edit a context, you must make a request to that context's API endpoint or the site-wide API endpoint.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested context could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1871,9 +2066,10 @@
 				"tags": [
 					"Site"
 				],
-				"summary": "Get the overall site object.",
+				"summary": "Get the site.",
 				"responses":  {
 					"200": {
+						"x-summary": "Success",
 						"description": "Site settings.",
 						"schema": {
 							"$ref": "#/definitions/Site"
@@ -1885,7 +2081,7 @@
 				"tags": [
 					"Site"
 				],
-				"summary": "Edit a site.",
+				"summary": "Edit the site.",
 				"parameters": [
 					{
 						"description": "The details about the site that you want to edit. All params are optional. When a param is omitted, the existing value of that param will not be modified.",
@@ -1897,12 +2093,14 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The site details with the current values after the edit has occurred.",
 						"schema": {
 							"$ref": "#/definitions/Site"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
@@ -1916,15 +2114,18 @@
 				"tags": [
 					"Site"
 				],
-				"summary": "Get the site's active theme and any theme options defined by it.",
+				"summary": "Get the theme.",
+				"description": "Get the active theme and theme options for the site.",
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The response will include the theme plugin directory in `themePluginPath`. Any theme options will be provided in additional keys based on the option name.",
 						"schema": {
 							"$ref": "#/definitions/ThemeOptions"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "Details about the active theme could not be found. This can occur when the active theme plugin is not installed or enabled.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1936,7 +2137,8 @@
 				"tags": [
 					"Site"
 				],
-				"summary": "Edit the site's active theme and options defined by that theme.",
+				"summary": "Edit the theme.",
+				"description": "Get the active theme and theme options for the site.",
 				"parameters": [
 					{
 						"description": "The details you want to edit. The `themePluginPath` is required to specify the active theme, even if the theme is not being changed. Any additional keys/values must match the options defined by that theme.",
@@ -1948,12 +2150,14 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The new theme and values for any of its theme options.",
 						"schema": {
 							"$ref": "#/definitions/ThemeOptions"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
@@ -1967,7 +2171,7 @@
 				"tags": [
 					"Email Templates"
 				],
-				"summary": "Get a list of email templates.",
+				"summary": "Get email templates.",
 				"parameters": [
 					{
 						"name": "isEnabled",
@@ -1985,17 +2189,23 @@
 					},
 					{
 						"name": "fromRoleIds",
-						"description": "Filter results by email templates sent by one or more role IDs. Separate role IDs with a comma.",
+						"description": "Filter results by email templates sent by one or more role IDs.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "toRoleIds",
-						"description": "Filter results by email templates received by one or more role IDs. Separate role IDs with a comma.",
+						"description": "Filter results by email templates received by one or more role IDs.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "searchPhrase",
@@ -2006,14 +2216,18 @@
 					},
 					{
 						"name": "stageIds",
-						"description": "Filter results by email templates that belong to one or more workflow stage IDs. Separate role IDs with a comma. Pass `0` to return templates not assigned to a stage.",
+						"description": "Filter results by email templates that belong to one or more workflow stage IDs. Pass `0` to return templates not assigned to a stage.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					}
 				],
 				"responses":  {
 					"200": {
+						"x-summary": "Success",
 						"description": "List of email templates.",
 						"schema": {
 							"type": "object",
@@ -2031,6 +2245,7 @@
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to view email templates.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2042,7 +2257,7 @@
 				"tags": [
 					"Email Templates"
 				],
-				"summary": "Create a new email template.",
+				"summary": "Create an email template.",
 				"parameters": [
 					{
 						"description": "Details about the email template that should be created.",
@@ -2054,12 +2269,14 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Details of the email template that was just added.",
 						"schema": {
 							"$ref": "#/definitions/EmailTemplate"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
@@ -2073,7 +2290,8 @@
 				"tags": [
 					"Email Templates"
 				],
-				"summary": "Get an email template by its email key.",
+				"summary": "Get an email template by key.",
+				"description": "Email templates are fetched by their key, rather than ID, so that a default template is retrieved if it has not been customized. See the [documentation](https://docs.pkp.sfu.ca/dev/documentation/en/email-templates).",
 				"parameters": [
 					{
 						"name": "key",
@@ -2085,18 +2303,21 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Email template details.",
 						"schema": {
 							"$ref": "#/definitions/EmailTemplate"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to view email templates.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested email template could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2127,24 +2348,28 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The email template that was just edited with the current values after the edit has occurred.",
 						"schema": {
 							"$ref": "#/definitions/EmailTemplate"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "There are two possible conditions that will result in a `403` response. 1. You do not have permission to edit this email template. 2. You are an admin and you submitted changes for an email template in one context from the API endpoint of another context. To edit an email template, you must make a request to the API endpoint of that email template's context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested email template could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2156,7 +2381,8 @@
 				"tags": [
 					"Email Templates"
 				],
-				"summary": "Delete an email template. Default templates that have not been modified can not be deleted.",
+				"summary": "Delete an email template.",
+				"description": "Default templates that have not been modified can not be deleted.",
 				"parameters": [
 					{
 						"name": "key",
@@ -2168,18 +2394,21 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "Details of the email template that was just deleted.",
 						"schema": {
 							"$ref": "#/definitions/EmailTemplate"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to delete this email template.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested email template could not be found. This will be returned if you try to delete a default email template that has not been modified.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2193,9 +2422,11 @@
 				"tags": [
 					"Email Templates"
 				],
-				"summary": "Delete custom templates and reset all templates to their default settings.",
+				"summary": "Restore default email templates.",
+				"description": "Delete custom templates and reset all templates to their default settings.",
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "A list of template keys which were deleted or reset.",
 						"schema": {
 							"type": "array",
@@ -2210,9 +2441,9 @@
 		"/stats/editorial": {
 			"get": {
 				"tags": [
-					"Statistics"
+					"Stats / Editorial"
 				],
-				"summary": "Get statistics about editorial activity.",
+				"summary": "Get editorial activity stats.",
 				"description": "Returns information about editorial activity such as the number of submissions accepted and declined, the number of days to reach editorial decisions, and the acceptance and rejection rates.",
 				"parameters": [
 					{
@@ -2231,14 +2462,18 @@
 					},
 					{
 						"name": "sectionIds",
-						"description": "Filter results by submissions to these sections. Separate section IDs with a comma.",
+						"description": "Filter results by submissions to these sections.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					}
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "An array containing the requested stats. The `name` may change with translation but the `key` will be a reliable, unique identifier for the statistic.",
 						"schema": {
 							"type": "array",
@@ -2312,18 +2547,21 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access editorial statistics for this journal or press.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2335,21 +2573,25 @@
 		"/stats/editorial/averages": {
 			"get": {
 				"tags": [
-					"Statistics"
+					"Stats / Editorial"
 				],
-				"summary": "Get yearly averages of editorial activity.",
+				"summary": "Get yearly averages of editorial stats.",
 				"description": "Returns yearly averages of editorial activity. To ensure averages are calculated fairly, partial years are not included in the averages. For example, if the first submission was received in October 2017 and the last submission was received in the current calendar year, only submissions from 2018 up until the end of the previous calendar year will be used to calculate the average.",
 				"parameters": [
 					{
 						"name": "sectionIds",
-						"description": "Filter results by submissions to these sections. Separate section IDs with a comma.",
+						"description": "Filter results by submissions to these sections.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					}
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "An object containing the requested averages. Each property matches one of the properties from `/stats/editorial`. The value `-1` may be returned for a property if an average can not be calculated. This can occur if there is not a full calendar year of activity to average.",
 						"schema": {
 							"type": "array",
@@ -2364,12 +2606,14 @@
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access editorial statistics for this journal or press.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2381,9 +2625,9 @@
 		"/stats/publications": {
 			"get": {
 				"tags": [
-					"Statistics"
+					"Stats / Publications"
 				],
-				"summary": "Get total views for a set of publications.",
+				"summary": "Get the views of a publication.",
 				"description": "Returns a list of publications ordered by their total abstract views. Includes total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
 				"parameters": [
 					{
@@ -2402,17 +2646,20 @@
 					},
 					{
 						"name": "sectionIds",
-						"description": "Filter results by publications in these sections. Separate section IDs with a comma.",
+						"description": "Filter results by publications in these sections.",
 						"in": "query",
 						"required": false,
 						"type": "string"
 					},
 					{
 						"name": "submissionIds",
-						"description": "Filter results by these publications. Separate submission IDs with a comma.",
+						"description": "Filter results by these submissions.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "searchPhrase",
@@ -2423,10 +2670,11 @@
 					},
 					{
 						"name": "count",
-						"description": "How many publications to return in a single request. Default is `30`. Max is `100`.",
+						"description": "How many publications to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "type"
+						"type": "type",
+						"default": 30
 					},
 					{
 						"name": "offset",
@@ -2437,14 +2685,20 @@
 					},
 					{
 						"name": "orderDirection",
-						"description": "Order the results in `ASC` or `DESC` order. Default is `DESC`.",
+						"description": "Return the results in ascending or descending order.",
 						"in": "query",
 						"required": false,
-						"type": "integer"
+						"type": "integer",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
 					}
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "A list of publications with their total stats during the requested period.",
 						"schema": {
 							"type": "array",
@@ -2454,18 +2708,21 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal or press.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2477,17 +2734,22 @@
 		"/stats/publications/abstract": {
 			"get": {
 				"tags": [
-					"Statistics"
+					"Stats / Publications"
 				],
-				"summary": "Get total abstract views in a timeline.",
+				"summary": "Get abstract views by day or month.",
 				"description": "Returns a monthly or daily timeline of abstract views for the publications which match the request parameters.",
 				"parameters": [
 					{
 						"name": "timelineInterval",
-						"description": "Return a timeline by `month` or `day`. Default is `month`.",
+						"description": "Return the total daily or monthly views",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "month",
+						"enum": [
+							"day",
+							"month"
+						]
 					},
 					{
 						"name": "dateStart",
@@ -2505,17 +2767,23 @@
 					},
 					{
 						"name": "sectionIds",
-						"description": "Filter results by publications in these sections. Separate section IDs with a comma.",
+						"description": "Filter results by publications in these sections.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "submissionIds",
-						"description": "Filter results by these publications. Separate submission IDs with a comma.",
+						"description": "Filter results by these submissions.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "searchPhrase",
@@ -2527,6 +2795,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "A list of days or months with the total stats for that day or month.",
 						"schema": {
 							"type": "array",
@@ -2536,18 +2805,21 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal or press.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2559,17 +2831,22 @@
 		"/stats/publications/galley": {
 			"get": {
 				"tags": [
-					"Statistics"
+					"Stats / Publications"
 				],
-				"summary": "Get total galleys views in a timeline.",
+				"summary": "Get galley views by day or month.",
 				"description": "Returns a monthly or daily timeline of galley views for the publications which match the request parameters.",
 				"parameters": [
 					{
 						"name": "timelineInterval",
-						"description": "Return a timeline by `month` or `day`. Default is `month`.",
+						"description": "Return the total daily or monthly views.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "month",
+						"enum": [
+							"day",
+							"month"
+						]
 					},
 					{
 						"name": "dateStart",
@@ -2587,17 +2864,23 @@
 					},
 					{
 						"name": "sectionIds",
-						"description": "Filter results by publications in these sections. Separate section IDs with a comma.",
+						"description": "Filter results by publications in these sections.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "submissionIds",
-						"description": "Filter results by these publications. Separate submission IDs with a comma.",
+						"description": "Filter results by these publications.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "searchPhrase",
@@ -2609,6 +2892,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "A list of days or months with the total stats for that day or month.",
 						"schema": {
 							"type": "array",
@@ -2618,18 +2902,21 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal or press.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2641,9 +2928,9 @@
 		"/stats/publications/{submissionId}": {
 			"get": {
 				"tags": [
-					"Statistics"
+					"Stats / Publications"
 				],
-				"summary": "Get the total views of one publication.",
+				"summary": "Get one publication's views by type.",
 				"description": "Returns a publication's total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
 				"parameters": [
 					{
@@ -2663,24 +2950,28 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The total stats for the publication during the period requested.",
 						"schema": {
 							"$ref": "#/definitions/PublicationStats"
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal or press.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2692,17 +2983,22 @@
 		"/stats/publications/{submissionId}/abstract": {
 			"get": {
 				"tags": [
-					"Statistics"
+					"Stats / Publications"
 				],
-				"summary": "Get the abstract views of one publication in a timeline.",
+				"summary": "Get onne publication's abstract views by day or month.",
 				"description": "Returns a monthly or daily timeline of abstract views for the requested publication.",
 				"parameters": [
 					{
 						"name": "timelineInterval",
-						"description": "Return a timeline by `month` or `day`. Default is `month`.",
+						"description": "Return the total daily or monthly views",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "month",
+						"enum": [
+							"day",
+							"month"
+						]
 					},
 					{
 						"name": "dateStart",
@@ -2721,6 +3017,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "A list of days or months with the total stats for that day or month.",
 						"schema": {
 							"type": "array",
@@ -2730,18 +3027,21 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal or press.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2753,17 +3053,22 @@
 		"/stats/publications/{submissionId}/galley": {
 			"get": {
 				"tags": [
-					"Statistics"
+					"Stats / Publications"
 				],
-				"summary": "Get the galleys views of one publication in a timeline.",
+				"summary": "Get one publication's galley views by day or month.",
 				"description": "Returns a monthly or daily timeline of galley views for the requested publication.",
 				"parameters": [
 					{
 						"name": "timelineInterval",
-						"description": "Return a timeline by `month` or `day`. Default is `month`.",
+						"description": "Return the total daily or monthly views.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "month",
+						"enum": [
+							"day",
+							"month"
+						]
 					},
 					{
 						"name": "dateStart",
@@ -2782,6 +3087,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "A list of days or months with the total stats for that day or month.",
 						"schema": {
 							"type": "array",
@@ -2791,18 +3097,21 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal or press.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2814,9 +3123,9 @@
 		"/stats/users": {
 			"get": {
 				"tags": [
-					"Statistics"
+					"Stats / Users"
 				],
-				"summary": "Get statistics about users.",
+				"summary": "Get user statistics.",
 				"description": "Returns a count of the number of user registrations broken down by roles.\n\nPlease note when using the `registeredBefore` and `registeredAfter` parameters that role counts reflect current user roles.\n\nA user who registered as an author in January, 2019 but was later appointed to subeditor will be counted as a subeditor when the registration date range includes January, 2019.",
 				"parameters": [
 					{
@@ -2838,7 +3147,12 @@
 						"description": "Count `active` or `disabled` users. Default: `active`.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "string",
+						"default": "active",
+						"enum": [
+							"active",
+							"disabled"
+						]
 					}
 				],
 				"responses": {
@@ -2891,18 +3205,21 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access user statistics for this journal or press.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2916,7 +3233,7 @@
 				"tags": [
 					"Vocabs"
 				],
-				"summary": "Get the controlled vocab entries available in this journal.",
+				"summary": "Get controlled vocab entries.",
 				"parameters": [
 					{
 						"name": "vocab",
@@ -2935,6 +3252,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "A list of the entries available in this journal.",
 						"schema": {
 							"type": "array",
@@ -2944,12 +3262,14 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The `locale` that you requested is not supported in this journal.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
+						"x-summary": "Request Not Found",
 						"description": "The journal you requested could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -2963,9 +3283,11 @@
 				"tags": [
 					"Temporary Files"
 				],
-				"summary": "Responds with the appopriate headers to indicate file uploads maybe be sent, required by some file upload utilities which send a preflight request.",
+				"summary": "Get headers for file uploads.",
+				"description": "Responds with the appopriate headers to indicate file uploads maybe be sent, required by some file upload utilities which send a preflight request.",
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "An empty response body."
 					}
 				}
@@ -2974,7 +3296,8 @@
 				"tags": [
 					"Temporary Files"
 				],
-				"summary": "Upload a file to the temporary file storage area and receive a temporary file ID.",
+				"summary": "Upload a file.",
+				"description": "Upload a file to the temporary file storage area and receive a temporary file ID.",
 				"parameters": [
 					{
 						"name": "...",
@@ -2984,6 +3307,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The temporary file ID to use in other API requests.",
 						"schema": {
 							"type": "object",
@@ -2995,6 +3319,7 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "No uploaded file could be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -3008,7 +3333,7 @@
 				"tags": [
 					"Backend"
 				],
-				"summary": "Used to save payment settings.",
+				"summary": "Save payment settings.",
 				"description": "This endpoint is used on the settings page to save payment plugin settings alongside the general journal settings for enabling payments and setting the currency.",
 				"parameters": [
 					{
@@ -3032,9 +3357,11 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "The parameters you submitted"
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
@@ -3048,9 +3375,11 @@
 				"tags": [
 					"Backend"
 				],
-				"summary": "Responds with the appopriate headers to indicate file uploads maybe be sent, required by some file upload utilities which send a preflight request.",
+				"summary": "Get headers for file uploads.",
+				"description": "Responds with the appopriate headers to indicate file uploads maybe be sent, required by some file upload utilities which send a preflight request.",
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "An empty response body."
 					}
 				}
@@ -3059,7 +3388,7 @@
 				"tags": [
 					"Backend"
 				],
-				"summary": "Upload a file to the user's public file directory.",
+				"summary": "Upload a file.",
 				"description": "The user's public file directory supports files uploaded through the TinyMCE rich text editor. This is commonly used in context settings but is also available to all registered users through their profile biography.",
 				"parameters": [
 					{
@@ -3070,6 +3399,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "An object containing the URL to the uploaded file.",
 						"schema": {
 							"type": "object",
@@ -3081,12 +3411,14 @@
 						}
 					},
 					"400": {
+						"x-summary": "Request Invalid",
 						"description": "One of the following errors occurred.\n* No uploaded file could be found.\n* This file type is not supported.\n* The file you uploaded identifies itself as an image but it is not a valid image.\n* The mime-type did not match the file extension.\n* The file is too large.\n* The server configuration could not support this file upload because there is no temporary directory, it doesn't have permission to write to the directory, or a PHP extension stopped the file upload.\n\nThe error message will contain further details.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"403": {
+						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to upload this public file.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -3118,7 +3450,7 @@
 				"tags": [
 					"Backend"
 				],
-				"summary": "Used in submission lists.",
+				"summary": "Get submissions.",
 				"description": "This endpoint delivers a little bit of extra information about each submission that is used in the submissions list. This private endpoint saves a few extra HTTP requests, but it is more database-intensive for each query.",
 				"parameters": [
 					{
@@ -3127,6 +3459,7 @@
 				],
 				"responses": {
 					"200": {
+						"x-summary": "Success",
 						"description": "List of submissions."
 					}
 				}

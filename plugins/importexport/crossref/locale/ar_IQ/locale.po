@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:35+00:00\n"
-"PO-Revision-Date: 2020-06-14 15:53+0000\n"
+"PO-Revision-Date: 2020-11-30 15:32+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-crossref/ar_IQ/>\n"
@@ -126,3 +126,6 @@ msgstr "لا توجد مقالة تطابق المقالة المحددة بال
 
 msgid "plugins.importexport.crossref.action.register"
 msgstr "إيداع"
+
+msgid "plugins.importexport.crossref.settings.form.onlyValidateExport"
+msgstr "تحقق من عملية التصدير فقط. لا تقم بتنزيل الملف."

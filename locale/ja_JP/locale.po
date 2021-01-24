@@ -1,0 +1,2340 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "図書館員の皆さまへ"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "論文著者の皆さまへ"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "利害の競合に関するガイドライン"
+
+msgid "navigation.infoForLibrarians"
+msgstr "図書館員の皆さまへ"
+
+msgid "navigation.infoForAuthors"
+msgstr "論文著者の皆さまへ"
+
+msgid "navigation.browseByAuthor"
+msgstr "著者によるブラウズ"
+
+msgid "navigation.browseByIssue"
+msgstr "巻号によるブラウズ"
+
+msgid "navigation.otherJournals"
+msgstr "その他の雑誌"
+
+msgid "navigation.current"
+msgstr "最新号"
+
+msgid "navigation.journalHelp"
+msgstr "ヘルプ"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "雑誌ホームページ画像"
+
+msgid "common.homePageHeader.altText"
+msgstr "ページヘッダー"
+
+msgid "common.payments"
+msgstr "支払い"
+
+msgid "common.payment"
+msgstr "支払い"
+
+msgid "common.confirmComplete"
+msgstr "このタスクを完了にしてもいいですか。後で修正することができなくなります。"
+
+msgid "common.software"
+msgstr "オープン・ジャーナル・システム"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "必須項目をご記入ください。"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "アイコンをクリックして査読フォームに記入してください。"
+
+msgid "navigation.categories.browse"
+msgstr "ブラウズ"
+
+msgid "navigation.categories"
+msgstr "カテゴリー"
+
+msgid "context.select"
+msgstr "他の雑誌を選択："
+
+msgid "context.current"
+msgstr "現在選択された雑誌："
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "投稿物がアーカイブから復元された"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "投稿物がアーカイブに送られた"
+
+msgid "submission.event.editor.editorFile"
+msgstr "編集者ファイルが更新された"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "編集者の判断が投稿された"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "投稿物の担当編集者が解除された"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "投稿物に担当編集者が任命された"
+
+msgid "submission.event.general.authorRevision"
+msgstr "著者改訂ファイルが更新された"
+
+msgid "submission.event.author.authorRevision"
+msgstr "著者改訂版が投稿された"
+
+msgid "submission.event.general.articlePublished"
+msgstr "論文が出版された"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "投稿物が巻号に割り付けられた"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "投稿物が巻号スケジューリングキューに送られた"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "投稿論文"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "投稿イベント"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>注意:</strong> 機関のオンライン購読では購読のアクティベーションの前に提供されたドメイン名とIPアドレスの承認が必要です。"
+
+msgid "subscriptions.institutionalDescription"
+msgstr "機関購読ではログインは必要ありません。ユーザのドメインもしくはIPアドレス(またはその両方)によって購読コンテンツへのアクセスが提供されます。"
+
+msgid "subscriptions.individualDescription"
+msgstr "個人購読では購読コンテンツにアクセスするためにはログインが必要です。"
+
+msgid "subscriptions.status.other"
+msgstr "その他，メモ"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "有効購読がありません。"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "オンライン支払待ち"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "手作業による支払い待ち"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "承認が必要"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "情報の入力待ち"
+
+msgid "subscriptions.status.active"
+msgstr "有効"
+
+msgid "subscriptions.status"
+msgstr "状態"
+
+msgid "subscriptions.inactive"
+msgstr "無効"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "冊子とオンライン"
+
+msgid "subscriptionTypes.format.print"
+msgstr "冊子"
+
+msgid "subscriptionTypes.format.online"
+msgstr "オンライン"
+
+msgid "subscriptionTypes.format"
+msgstr "フォーマット"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "期間なし"
+
+msgid "subscriptionTypes.months"
+msgstr "ヶ月"
+
+msgid "subscriptionTypes.month"
+msgstr "月"
+
+msgid "subscriptionTypes.years"
+msgstr "年"
+
+msgid "subscriptionTypes.year"
+msgstr "年"
+
+msgid "subscriptionTypes.currency"
+msgstr "通貨"
+
+msgid "issue.return"
+msgstr "巻号情報に戻る"
+
+msgid "issue.viewIssue"
+msgstr "巻号の閲覧"
+
+msgid "issue.nonpdf.title"
+msgstr "巻号ダウンロード"
+
+#, fuzzy
+msgid "issue.fullIssue"
+msgstr "全巻号"
+
+msgid "issue.coverPage.altText"
+msgstr "表紙ページ"
+
+msgid "issue.abstract"
+msgstr "要旨"
+
+msgid "issue.toc"
+msgstr "目次"
+
+msgid "issue.noIssues"
+msgstr "発行なし"
+
+msgid "issue.year"
+msgstr "年"
+
+msgid "issue.no"
+msgstr "号"
+
+msgid "issue.vol"
+msgstr "巻"
+
+msgid "issue.number"
+msgstr "号"
+
+msgid "issue.volume"
+msgstr "巻"
+
+msgid "issue.viewIssueIdentification"
+msgstr "{$identification}の閲覧"
+
+msgid "issue.title"
+msgstr "タイトル"
+
+msgid "issue.issues"
+msgstr "巻号"
+
+msgid "issue.issue"
+msgstr "巻号"
+
+msgid "user.role.journalAssistants"
+msgstr "雑誌アシスタント"
+
+msgid "user.role.journalAssistant"
+msgstr "雑誌アシスタント"
+
+msgid "user.role.subscriptionManagers"
+msgstr "購読管理者"
+
+msgid "user.role.subEditors"
+msgstr "セクションエディタ"
+
+msgid "user.role.managers"
+msgstr "雑誌管理者"
+
+msgid "user.role.subscriptionManager"
+msgstr "購読管理者"
+
+msgid "user.role.subEditor"
+msgstr "セクションエディタ"
+
+msgid "user.role.manager"
+msgstr "雑誌管理者"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "査読者として登録: 査読者登録が現在できません。"
+
+msgid "user.noRoles.regReviewer"
+msgstr "査読者として登録"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "論文を投稿: 著者登録が現在できません。"
+
+msgid "user.noRoles.submitArticle"
+msgstr "提案書を投稿"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "この雑誌では役割が与えられていません。下のアクションから選択してください。"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "雑誌が選択されていません。雑誌を選択してください。"
+
+msgid "user.manageMySubscriptions"
+msgstr "購読管理"
+
+msgid "user.myJournals"
+msgstr "マイ･ジャーナル"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "査読を希望された方は、ご興味のある分野をご記入ください。"
+
+msgid "user.register.otherContextRoles"
+msgstr "以下の役割を要求します。"
+
+msgid "user.register.contextsPrompt"
+msgstr "このサイトのどの雑誌に登録しますか？"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "はい、本誌に投稿された論文の査読依頼の連絡を希望します。"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "はい、{$userGroup}役割を要求します。"
+
+msgid "user.reviewerPrompt"
+msgstr "この雑誌に投稿された論文の査読をしていただけますか？"
+
+msgid "user.registerForOtherJournals"
+msgstr "他の雑誌に登録"
+
+msgid "user.showAllJournals"
+msgstr "全てのジャーナルの表示"
+
+msgid "user.profile.profileImage"
+msgstr "プロファイル画像"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "この雑誌では役割が与えられていないユーザを含む。"
+
+msgid "user.authorization.representationNotFound"
+msgstr "要求されたゲラが見つかりませんでした。"
+
+msgid "journal.viewAllIssues"
+msgstr "全ての巻号の閲覧"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "雑誌"
+
+msgid "journal.path"
+msgstr "パス名"
+
+msgid "context.contexts"
+msgstr "雑誌"
+
+msgid "journal.currentIssue"
+msgstr "最新号"
+
+msgid "submission.search"
+msgstr "論文検索"
+
+msgid "submissions.proofreadingComplete"
+msgstr "校正済み"
+
+msgid "submissions.layoutComplete"
+msgstr "レイアウト済み"
+
+msgid "submissions.copyeditComplete"
+msgstr "原稿整理済み"
+
+msgid "submission.eventLog"
+msgstr "イベントログ"
+
+msgid "submissions.editorRuling"
+msgstr "編集者の判定"
+
+msgid "submissions.editorDecision"
+msgstr "編集者の判断"
+
+msgid "submissions.proof"
+msgstr "校正"
+
+msgid "submissions.reviewRound"
+msgstr "ラウンド"
+
+msgid "submissions.postAuthor"
+msgstr "著者改訂済"
+
+msgid "submissions.initialProof"
+msgstr "初校"
+
+msgid "submissions.proofread"
+msgstr "校正"
+
+msgid "submissions.initial"
+msgstr "開始"
+
+msgid "submissions.published"
+msgstr "出版済"
+
+msgid "submissions.queuedReview"
+msgstr "査読作業待ち"
+
+msgid "submissions.step3"
+msgstr "テップ 3"
+
+msgid "submissions.step1"
+msgstr "テップ 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "（未定）"
+
+msgid "submission.scheduledIn"
+msgstr "{$issueName}出版スケジュール。"
+
+msgid "submission.scheduling"
+msgstr "出版スケジュール"
+
+msgid "submission.proofreading"
+msgstr "校正"
+
+msgid "submission.copyedit"
+msgstr "原稿整理"
+
+msgid "submission.copyediting"
+msgstr "原稿整理"
+
+msgid "submission.authorVersion"
+msgstr "著者版"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "著者改訂版"
+
+msgid "submission.editorVersion"
+msgstr "編集者版"
+
+msgid "submission.postReviewVersion"
+msgstr "査読済み版"
+
+msgid "submission.reviewersVersion"
+msgstr "査読者版"
+
+msgid "submission.editorAuthorRecord"
+msgstr "編集者/著者のメールレコード"
+
+msgid "submission.notifyEditor"
+msgstr "編集者に通知"
+
+msgid "submission.notifyAuthor"
+msgstr "著者に通知"
+
+msgid "submission.editorReview"
+msgstr "編集者の査読"
+
+msgid "submission.round"
+msgstr "ラウンド&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "編集者の判断"
+
+msgid "submission.sent"
+msgstr "送信済み"
+
+msgid "submission.changeSection"
+msgstr "セクションの変更"
+
+msgid "submission.submissionEditing"
+msgstr "投稿物の編集"
+
+msgid "category.category"
+msgstr "カテゴリー"
+
+msgid "article.return"
+msgstr "論文情報に戻る"
+
+msgid "article.fontSize.large.altText"
+msgstr "大"
+
+msgid "article.fontSize.medium.altText"
+msgstr "中"
+
+msgid "article.fontSize.small.altText"
+msgstr "小"
+
+msgid "article.fontSize"
+msgstr "フォントサイズ"
+
+msgid "article.comments.enable"
+msgstr "有効化"
+
+msgid "article.comments.disable"
+msgstr "無効化"
+
+msgid "article.comments.sectionDefault"
+msgstr "デフォルト"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "アクセス制限あり"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "オープンアクセス"
+
+msgid "article.coverPage.altText"
+msgstr "表紙画像"
+
+msgid "article.abstract"
+msgstr "要旨"
+
+msgid "article.details"
+msgstr "詳細"
+
+msgid "article.submissions"
+msgstr "投稿物"
+
+msgid "article.submission"
+msgstr "投稿物"
+
+msgid "article.commentsToEditor"
+msgstr "編集者へのコメント"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "言語"
+
+msgid "article.type"
+msgstr "種類、方法またはアプローチ"
+
+msgid "article.coverage"
+msgstr "範囲"
+
+msgid "article.subject"
+msgstr "キーワード"
+
+msgid "article.discipline"
+msgstr "学術分野"
+
+msgid "article.suppFilesAbbrev"
+msgstr "補足ファイル"
+
+msgid "article.suppFiles"
+msgstr "補足ファイル"
+
+msgid "article.suppFile"
+msgstr "補足ファイル"
+
+msgid "article.file"
+msgstr "ファイル"
+
+msgid "article.journalSection"
+msgstr "雑誌セクション"
+
+msgid "article.metadata"
+msgstr "メタデーター"
+
+msgid "article.indexingInformation"
+msgstr "インデックス情報"
+
+msgid "article.authors"
+msgstr "著者"
+
+msgid "article.title"
+msgstr "タイトル"
+
+msgid "article.submissionId"
+msgstr "投稿物ID"
+
+msgid "common.publications"
+msgstr "論文"
+
+msgid "common.publication"
+msgstr "論文"
+
+msgid "article.articles"
+msgstr "論文"
+
+msgid "article.article"
+msgstr "論文"
+
+msgid "section.abbreviation.example"
+msgstr "(例、論文=ART)"
+
+msgid "section.policy"
+msgstr "セクション・ポリシー"
+
+msgid "section.abbreviation"
+msgstr "セクション名略称"
+
+msgid "section.title"
+msgstr "セクション名"
+
+msgid "section.sections"
+msgstr "セクション"
+
+msgid "section.section"
+msgstr "セクション"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "担当編集者"
+
+msgid "common.queue.short.completed"
+msgstr "アーカイブ"
+
+msgid "common.queue.long.completed"
+msgstr "アーカイブされた投稿物"
+
+msgid "common.queue.short.active"
+msgstr "処理中"
+
+msgid "common.queue.long.active"
+msgstr "処理中の投稿物"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "アーカイブ"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "アーカイブされた投稿物"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "査読中"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "査読中の投稿物"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "編集中"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "編集中の投稿物"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "未処理"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "未処理の投稿物"
+
+msgid "navigation.skip.issue"
+msgstr "最新号へスキップ"
+
+msgid "navigation.skip.about"
+msgstr "本雑誌についてへスキップ"
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} が投稿物 {$submissionId} の{$round}回目の査読を受諾した。"
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} が投稿物 {$submissionId} の{$round}回目の査読を謝絶した。"
+
+msgid "log.review.resubmit"
+msgstr "投稿物 {$submissionId} が査読に差し戻された。"
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"投稿物 {$submissionId} "
+"の{$round}回目の査読の審査結果が、査読者、{$reviewerName}の代わりに編集者、{$editorName}により設定された。"
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "投稿物 {$submissionId} の{$reviewerName}による{$round}回目の査読の審査結果が設定された。"
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"投稿物 {$submissionId} の{$reviewerName}による{$round}回目の査読の期限日が{$dueDate}に設定された。"
+
+msgid "log.review.reviewerRated"
+msgstr "投稿物 {$submissionId} の{$round}回目の査読に関して{$reviewerName}が評価された。"
+
+msgid "log.review.reviewInitiated"
+msgstr "投稿物 {$submissionId} の{$reviewerName}による{$round}回目の査読が開始された。"
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName}が投稿物 {$submissionId} の{$round}回目の査読の査読者を解除された。"
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName}が論文 {$submissionId} を改訂した。新しいファイルIDは {$fileId} である。"
+
+#, fuzzy
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"There is a new version of OJS available! You are currently using OJS "
+"{$currentVersion}. The most recent version is OJS {$latestVersion}. Please "
+"contact your Site Administrator ({$siteAdminName}, <a href=\""
+"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) to notify them of this new "
+"release. More information can be found <a href=\"http://pkp.sfu.ca/"
+"ojs_download\" target=\"_new\">here</a>."
+
+#, fuzzy
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"There is a new version of OJS available! You are currently using OJS "
+"{$currentVersion}. The most recent version is OJS {$latestVersion}. Please "
+"visit <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this "
+"page</a> to download the most recent version and find upgrade instructions."
+
+#, fuzzy
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Upgrade of OJS to version {$version} has completed successfully.</p>\n"
+"<p>Don't forget to set the \"installed\" setting in your config.inc.php "
+"configuration file back to <em>On</em>.</p>\n"
+"<p>If you haven't already registered and wish to receive news and updates, "
+"<strong>please register at <a href=\"http://pkp.sfu.ca/ojs/register\" target="
+"\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> If you have questions "
+"or comments, please visit the <a href=\"http://forum.pkp.sfu.ca\" target=\""
+"_new\">support forum</a>.</p>"
+
+#, fuzzy
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Installation of OJS has completed successfully.</p>\n"
+"<p>To begin using the system, <a href=\"{$loginUrl}\">login</a> with the "
+"username and password entered on the previous page.</p>\n"
+"<p>If you wish to be part of the PKP community, you can:</p>\n"
+"<ol>\n"
+"\t<li>Read the <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP "
+"blog</a> and follow the <a href=\"http://pkp.sfu.ca/blog/feed\" target=\""
+"_new\">RSS feed</a> for news and updates.</li>\n"
+"\t<li>Visit the <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support "
+"forum</a> if you have questions or comments.</li>\n"
+"</ol>"
+
+#, fuzzy
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>IMPORTANT!</h4>\n"
+"<p>The installer could not automatically overwrite the configuration file. "
+"Before attempting to use the system, please open <tt>config.inc.php</tt> in "
+"a suitable text editor and replace its contents with the contents of the "
+"text field below.</p>"
+
+#, fuzzy
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Warning:</strong> If installation failed part way through database "
+"installation you may need to drop your OJS database or database tables "
+"before attempting to reinstall the database."
+
+#, fuzzy
+msgid "installer.upgradeApplication"
+msgstr "Upgrade Open Journal Systems"
+
+#, fuzzy
+msgid "installer.installApplication"
+msgstr "Install Open Journal Systems"
+
+#, fuzzy
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS requires access to a SQL database to store its data. See the system "
+"requirements above for a list of supported databases. In the fields below, "
+"provide the settings to be used to connect to the database."
+
+#, fuzzy
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Enter full pathname to an existing directory where uploaded files are to be "
+"kept. This directory should not be directly web-accessible. <strong>Please "
+"ensure that this directory exists and is writable prior to "
+"installation.</strong> Windows path names should use forward slashes, e.g. \""
+"C:/myjournal/files\"."
+
+#, fuzzy
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Select any additional languages to support in this system. These languages "
+"will be available for use by journals hosted on the site. Additional "
+"languages can also be installed at any time from the site administration "
+"interface."
+
+#, fuzzy
+msgid "installer.localeInstructions"
+msgstr ""
+"The primary language to use for this system. Please consult the OJS "
+"documentation if you are interested in support for languages not listed here."
+
+#, fuzzy
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Your server currently allows a maximum file upload size of: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+#, fuzzy
+msgid "installer.allowFileUploads"
+msgstr ""
+"Your server currently allows file uploads: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Unicode（UTF-8）を完全にサポートするために、すべての文字セット設定でUTF-8を選択してください。これをサポートするには、現在のところ、"
+"MySQL 4.1.1以降、または、PostgreSQL "
+"7.1以降のデータベースサーバを必要とすることに注意してください。また、Unicodeを完全にサポートするには、<a href=\""
+"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a>"
+"ライブラリのサポートを選択してコンパイルしたPHP 4.3.0以降を必要とすることにも注意してください（最近のほとんどのPHPのインストールではデフォルト"
+"で有効になっています）。サーバがこれらの要件を満たしていないと、拡張文字セットの使用時に問題が生じるかもしれません。\n"
+"<br /><br />\n"
+"サーバは現在、mbstringをサポートしている: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS バージョン {$version}</h4>\n"
+"\n"
+"<p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうご"
+"ざいました。処理を進める前に、このソフトウェアに添付されている<a href=\"{$baseUrl}/docs/README\""
+">README</a>ファイルと<a href=\"{$baseUrl}/docs/UPGRADE\">UPGRADE</a>ファイルをお読みください。"
+"Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<a href=\"http://pkp.sfu."
+"ca/\" target=\"_blank\""
+">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a "
+"href=\"http://forum.pkp.sfu.ca\">サポートフォーラム</a>、または、PKPのオンライン<a href=\""
+"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\""
+">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href=\""
+"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>にメールしてくださっても構いません。</p>\n"
+"<p>処理を行う前に、データベース、ファイルディレクトリ、OJSインストールディレクトリのバックアップを行うことを<strong>強く推奨します</str"
+"ong>。</p>\n"
+"<p>システムを<a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\""
+">PHPセーフモード</a>で運用している場合は、\"php.ini\"設定ファイルの\"max_execution_time\""
+"ディレクティブに最大値が設定されていることを確認してください。この制限値、またはその他の時間制限（例えば、Apacheの\"Timeout\""
+"ディレクティブ）に達すると、バージョンアップ処理は中断され、手作業による処理が必要になります。</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>インストール前に行う処理</h4>\n"
+"\n"
+"\n"
+"<p>1. 以下のファイルとディレクトリ（配下のすべてのコンテンツを含む）を書き込みができるようにする必要があります。</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt>は書き込み可（オプション）: {$writable_config}</li>\n"
+"\t<li><tt>public/</tt>は書き込み可: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt>は書き込み可: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt>は書き込み可: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt>は書き込み可: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt>は書き込み可: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. "
+"アップロードファイルを格納するためのディレクトリを作成して、書き込みができるようにする必要があります（以下の「ファイル設定」を参照してください）。</p>"
+
+#, fuzzy
+msgid "payment.membership.renewMembership"
+msgstr "Renew Individual Membership"
+
+#, fuzzy
+msgid "payment.membership.buyMembership"
+msgstr "Buy Individual Membership"
+
+#, fuzzy
+msgid "payment.publication.publicationPaid"
+msgstr "Publication Fee Paid"
+
+#, fuzzy
+msgid "payment.publication.payPublication"
+msgstr "Pay to Publish"
+
+#, fuzzy
+msgid "payment.submission.paySubmission"
+msgstr "Pay Submission Fee"
+
+#, fuzzy
+msgid "payment.donation.makeDonation"
+msgstr "Make a donation"
+
+#, fuzzy
+msgid "payment.notFound"
+msgstr ""
+"A payment has been requested, but the request has expired. Contact the "
+"Journal Manager for details."
+
+#, fuzzy
+msgid "payment.requestPublicationFee"
+msgstr "Request publication fee ({$feeAmount})"
+
+#, fuzzy
+msgid "payment.type.donation"
+msgstr "Donations"
+
+#, fuzzy
+msgid "payment.type.subscription"
+msgstr "Subscription Fee"
+
+#, fuzzy
+msgid "payment.type.purchaseIssue"
+msgstr "Purchase Issue Fee"
+
+#, fuzzy
+msgid "payment.type.purchaseArticle"
+msgstr "Purchase Article Fee"
+
+#, fuzzy
+msgid "payment.type.membership"
+msgstr "Individual Membership Fee"
+
+#, fuzzy
+msgid "payment.type.fastTrack"
+msgstr "Fast Track Review Fee"
+
+#, fuzzy
+msgid "payment.type.publication.required"
+msgstr "The publication fee is due for payment."
+
+#, fuzzy
+msgid "payment.type.publication"
+msgstr "Publication Fee"
+
+#, fuzzy
+msgid "payment.type.submission"
+msgstr "Submission Fee"
+
+#, fuzzy
+msgid "payment.authorFees"
+msgstr "Author Fees"
+
+#, fuzzy
+msgid "payment.paymentSent"
+msgstr "Payment has already been sent"
+
+#, fuzzy
+msgid "payment.paymentReceived"
+msgstr "Payment Received"
+
+#, fuzzy
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Select this box if you've already sent your payment to the journal in order "
+"to finish the submission process.  The submission will not be reviewed until "
+"the payment arrives.  Click PAY NOW above to see the payment instructions."
+
+#, fuzzy
+msgid "payment.alreadyPaid"
+msgstr "Already Paid"
+
+#, fuzzy
+msgid "payment.waive"
+msgstr "Waive"
+
+#, fuzzy
+msgid "payment.payNow"
+msgstr "Pay Now"
+
+#, fuzzy
+msgid "payment.paid"
+msgstr "Paid"
+
+#, fuzzy
+msgid "payment.loginRequired.forDonation"
+msgstr "You must be logged in to make a donation."
+
+#, fuzzy
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Subscription or issue purchase required to access item. To verify "
+"subscription, access previous purchase, or purchase issue, log in to journal."
+
+#, fuzzy
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Subscription or article purchase required to access item. To verify "
+"subscription, access previous purchase, or purchase article, log in to "
+"journal."
+
+#, fuzzy
+msgid "payment.loginRequired"
+msgstr "You must be logged in to make a payment."
+
+#, fuzzy
+msgid "donations.thankYouMessage"
+msgstr ""
+"Thank you for making a contribution.  Your contribution is much appreciated."
+
+msgid "donations.thankYou"
+msgstr "ありがとうございます"
+
+msgid "help.goToEditPage"
+msgstr "{$sectionTitle}を編集"
+
+msgid "help.searchReturnResults"
+msgstr "検索結果に戻る"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJSヘルプ"
+
+msgid "help.ojsHelp"
+msgstr "オープン･ジャーナル･システムのヘルプ"
+
+#, fuzzy
+msgid "about.aboutOJSSite"
+msgstr ""
+"This site uses Open Journal Systems {$ojsVersion}, which is open source "
+"journal management and publishing software developed, supported, and freely "
+"distributed by the Public Knowledge Project under the GNU General Public "
+"License. Visit PKP's website to <a href=\"http://pkp.sfu.ca/\">learn more "
+"about the software</a>. Please contact the site directly with questions "
+"about its journals and submissions to its journals."
+
+#, fuzzy
+msgid "about.aboutOJSJournal"
+msgstr ""
+"This journal uses Open Journal Systems {$ojsVersion}, which is open source "
+"journal management and publishing software developed, supported, and freely "
+"distributed by the Public Knowledge Project under the GNU General Public "
+"License. Visit PKP's website to <a href=\"http://pkp.sfu.ca/\">learn more "
+"about the software</a>. Please <a href=\"{$contactUrl}\">contact the "
+"journal</a> directly with questions about the journal and submissions to the "
+"journal."
+
+msgid "about.aboutSoftware"
+msgstr "オープン・ジャーナル・システムについて"
+
+#, fuzzy
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS Editorial and Publishing Process"
+
+#, fuzzy
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"More information about the publishing system, Platform and Workflow by OJS/"
+"PKP."
+
+#, fuzzy
+msgid "about.memberships"
+msgstr "Memberships"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "購読種別"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "料金"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "期間"
+
+msgid "about.subscriptionTypes.format"
+msgstr "フォーマット"
+
+msgid "about.subscriptionTypes.name"
+msgstr "姓名"
+
+msgid "about.subscriptionsContact"
+msgstr "購読連絡先"
+
+msgid "about.subscriptions.institutional"
+msgstr "機関購読"
+
+msgid "about.subscriptions.individual"
+msgstr "個人購読"
+
+msgid "about.subscriptions"
+msgstr "購読"
+
+msgid "about.archiving"
+msgstr "アーカイビング"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "ヵ月からオープンアクセスで公開されます。"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "本雑誌のコンテンツは、出版後"
+
+msgid "about.delayedOpenAccess"
+msgstr "エンバーゴ付きオープンアクセス"
+
+msgid "about.openAccessPolicy"
+msgstr "オープンアクセスポリシー"
+
+msgid "about.publicationFrequency"
+msgstr "出版頻度"
+
+msgid "about.peerReviewProcess"
+msgstr "査読プロセス"
+
+#, fuzzy
+msgid "about.authorFeesMessage"
+msgstr "This journal charges the following author fees."
+
+msgid "about.authorFees"
+msgstr "論文掲載料"
+
+msgid "about.privacyStatement"
+msgstr "個人情報の扱いについて"
+
+msgid "about.copyrightNotice"
+msgstr "著作権表示"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"投稿プロセスの1つとして、著者は投稿物が以下のすべての事項を満たしていることを確認する必要があります。これらのガイドラインに従っていないと投稿物は著者の元"
+"に返されます場合があります。"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "投稿前の確認リスト"
+
+msgid "about.authorGuidelines"
+msgstr "執筆要項"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "保留中の投稿の閲覧"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "新投稿"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "<a href=\"{$url}\">{$name}</a> へ新投稿をする。"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission}または{$viewSubmissions}。"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "投稿のために{$login}または{$register}してください。"
+
+msgid "about.onlineSubmissions.register"
+msgstr "ユーザ登録画面へ"
+
+msgid "about.onlineSubmissions.login"
+msgstr "ログイン画面へ"
+
+msgid "about.submissions"
+msgstr "投稿"
+
+msgid "about.sectionPolicies"
+msgstr "セクションポリシー"
+
+msgid "about.focusAndScope"
+msgstr "対象と範囲"
+
+msgid "about.editorialPolicies"
+msgstr "編集ポリシー"
+
+msgid "about.editorialTeam.biography"
+msgstr "人物紹介"
+
+msgid "about.editorialTeam"
+msgstr "編集委員会"
+
+msgid "about.history"
+msgstr "雑誌の歴史"
+
+msgid "about.aboutContext"
+msgstr "本雑誌について"
+
+msgid "about.contact"
+msgstr "雑誌の連絡先"
+
+msgid "about.statistics"
+msgstr "統計"
+
+msgid "archive.issueUnavailable"
+msgstr "利用できない号"
+
+msgid "archive.browse"
+msgstr "バックナンバーをブラウズ"
+
+msgid "archive.archivesPageNumber"
+msgstr "アーカイブ - ページ{$pageNumber}"
+
+msgid "archive.archives"
+msgstr "アーカイブ"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "この雑誌は1号も出版されていません。"
+
+msgid "current.noCurrentIssue"
+msgstr "最新号はありません"
+
+msgid "current.current"
+msgstr "最新号"
+
+msgid "site.noJournals"
+msgstr "掲載誌はありません。"
+
+msgid "site.journalCurrent"
+msgstr "最新号"
+
+msgid "site.journalRegister"
+msgstr "登録"
+
+msgid "site.journalView"
+msgstr "雑誌の閲覧"
+
+msgid "site.journalsHosted"
+msgstr "このサイトで提供している雑誌"
+
+#, fuzzy
+msgid "article.nonpdf.note"
+msgstr ""
+"The file you selected should begin downloading automatically. If it does "
+"not, click the link below. Note that this file may require a special viewer "
+"or plugin to view.<br /><br />If the file does not download automatically, <"
+"a href=\"{$url}\">click here</a>."
+
+msgid "article.nonpdf.title"
+msgstr "論文ダウンロード"
+
+#, fuzzy
+msgid "article.pluginMissing"
+msgstr ""
+"<p>The PDF file you selected should load here if your Web browser has a PDF "
+"reader plugin installed (for example, a recent version of <a href=\""
+"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.download"
+msgstr "このPDFファイルをダウンロードする"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.pageTitle"
+msgstr "{$title}の閲覧"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"<h4>検索のヒント: </h4><ul>\n"
+"<li>検査語は大文字・小文字を区別しません。</li>\n"
+"<li>一般的な語は無視されます</li>\n"
+"<li>デフォルトでは、検索語に指定した<em>すべての</em>語を含む論文だけがヒットします（すなわち、暗黙に<em>AND</em>検索が行われます"
+"）</li>\n"
+"<li>複数の語を<em>OR</em>でつなげると、これらのいずれかの語を含む論文を検索します。例: <em>education OR "
+"reserach</em></li>\n"
+"<li>複雑なクエリの作成にはカッコを使用してください。例: <em>archive ((journal OR conference) NOT "
+"theses)</em></li>\n"
+"<li>フレーズ検索を行う場合は、引用符で囲んでください。例: <em>\"open access publishing\"</em></li>\n"
+"<li>ある語を除外する場合は、<strong>-</strong> または <em>NOT</em> を前に付けてください。例: <em>online "
+"-politics</em> または <em>online NOT politics</em></li>\n"
+"<li>任意の文字列にマッチさせるためのワイルドカードには <strong>*</strong> を使用してください。例えば、 <em>soci* "
+"morality</em> は、\"sociological\" または \"societal\" を持つ文書にヒットします。</li>\n"
+"</ul>"
+
+msgid "search.authorDetails"
+msgstr "著者情報"
+
+msgid "search.authorIndex"
+msgstr "著者インデックスをブラウズ"
+
+msgid "search.allJournals"
+msgstr "全雑誌"
+
+msgid "search.withinJournal"
+msgstr "対象雑誌"
+
+msgid "search.searchFor"
+msgstr "論文の検索"
+
+msgid "search.browseAuthorIndex"
+msgstr "著者インデックスのブラウズ"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "追加"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "削除"
+
+#, fuzzy
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Please enter a valid IP range."
+
+#, fuzzy
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"If IP ranges are entered here, the domain is optional.<br />Valid values "
+"include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - "
+"142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range "
+"with CIDR (e.g. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IPアドレス範囲"
+
+#, fuzzy
+msgid "user.subscriptions.form.domainValid"
+msgstr "Please enter a valid domain."
+
+#, fuzzy
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"The selected subscription type requires a domain and/or an IP range for "
+"subscription authentication."
+
+#, fuzzy
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"If a domain is entered here, IP ranges are optional.<br />Valid values are "
+"domain names (e.g. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domain"
+msgstr "ドメイン名"
+
+#, fuzzy
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Mailing address"
+
+#, fuzzy
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "An institution name is required."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "機関名"
+
+#, fuzzy
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Membership information if required for the selected subscription type."
+
+#, fuzzy
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "This user account already has an individual subscription."
+
+#, fuzzy
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Please select a valid subscription type."
+
+#, fuzzy
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "The selected subscription type requires membership information."
+
+#, fuzzy
+msgid "user.subscriptions.form.membership"
+msgstr "Membership"
+
+#, fuzzy
+msgid "user.subscriptions.form.typeId"
+msgstr "Subscription Type"
+
+#, fuzzy
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "View Available Subscription Types"
+
+#, fuzzy
+msgid "user.subscriptions.expired"
+msgstr "Expired: {$date}"
+
+#, fuzzy
+msgid "user.subscriptions.expires"
+msgstr "Expires: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "機関購読を購入"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "個人購読を購入"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "新しい購読を購入"
+
+msgid "user.subscriptions.purchase"
+msgstr "購入"
+
+msgid "user.subscriptions.renew"
+msgstr "更新"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "機関購読"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "個人購読"
+
+#, fuzzy
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "An online payment has been initiated but canceled or not completed"
+
+#, fuzzy
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manual payment has been initiated but not yet received"
+
+#, fuzzy
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Subscription must be reviewed before it can be activated"
+
+#, fuzzy
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr ""
+"Additional information is needed before the subscription can be activated"
+
+#, fuzzy
+msgid "user.subscriptions.statusDescription"
+msgstr "Description"
+
+#, fuzzy
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+#, fuzzy
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Active and expired subscriptions are displayed below along with their "
+"expiration date. In addition, the following status information may be "
+"included with each subscription."
+
+#, fuzzy
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Subscription Status"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "購読一覧表"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "本サイトの個人情報保護方針に同意する必要があります。"
+
+msgid "user.register.form.missingContextConsent"
+msgstr "登録する雑誌の個人情報保護方針に同意する必要があります。"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"はい、本誌の<a href=\"{$privacyUrl}\" target=\"_blank\""
+">個人情報保護方針</a>に従ってデータの収集・保存に同意します。"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "はい、登録したすべての雑誌の新しい新刊とお知らせについて通知を受け取りたいです。"
+
+msgid "user.register.reviewerInterests"
+msgstr "査読可能な分野（分野と研究手法）を指定してください。"
+
+msgid "user.register.reviewerDescription"
+msgstr "このサイトに投稿された論文の査読を行っていただきます。"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "この雑誌に投稿された論文の査読を行っていただきます。"
+
+msgid "user.register.authorDescription"
+msgstr "この雑誌に投稿できます。"
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "この雑誌のある号がオープンアクセスになった場合、メールで連絡する。"
+
+msgid "user.register.readerDescription"
+msgstr "この雑誌の新しい号が発行された場合、メールで連絡します。"
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "指定したパスワードは短すぎます。"
+
+msgid "user.register.registrationDisabled"
+msgstr "この雑誌は、現在、ユーザ登録を受付けていません。"
+
+msgid "user.register.privacyStatement"
+msgstr "個人情報の扱いについて"
+
+msgid "user.register.noJournals"
+msgstr "登録できる雑誌はありません。"
+
+msgid "user.register.selectContext"
+msgstr "登録する雑誌を選択してください"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "保存して編集者にメール"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "保存して著者にメール"
+
+msgid "submission.comments.forEditor"
+msgstr "編集者に"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "著者と編集者に"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "送信後、査読者に送信する編集可能なBCCコピーを提示してください。"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "編集者に"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "著者と編集者に"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"これらのコメントを著者に示すこともできます。<br />\n"
+"（保存後、さらにコメントを追加することができます。）"
+
+msgid "submission.comments.copyeditComments"
+msgstr "コピーエディタのコメント"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "編集者と著者の通信"
+
+msgid "submission.logType.proofread"
+msgstr "校正"
+
+msgid "submission.logType.layout"
+msgstr "レイアウト"
+
+msgid "submission.logType.copyedit"
+msgstr "整理"
+
+msgid "submission.logType.review"
+msgstr "査読"
+
+msgid "submission.logType.editor"
+msgstr "編集者"
+
+msgid "submission.logType.author"
+msgstr "著者"
+
+msgid "submission.logType.article"
+msgstr "論文"
+
+msgid "submission.proofread.instructions"
+msgstr "校正の手引き"
+
+msgid "submission.proofread.corrections"
+msgstr "校正作業による修正報告"
+
+msgid "submission.proofreadingComments"
+msgstr "校正者のコメント"
+
+msgid "submission.layout.referenceLinking"
+msgstr "参照リンキング"
+
+msgid "submission.layout.instructions"
+msgstr "レイアウトの手引き"
+
+msgid "submission.layout.layoutComments"
+msgstr "レイアウトエディタのコメント"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "レイアウトエディタの置換"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "レイアウトエディタの任命"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "公開ゲラ識別子は既に存在します。"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "なし（レイアウトの依頼をするには、最終原稿整理版をレイアウト版としてアップロードしてください）"
+
+msgid "submission.copyedit.instructions"
+msgstr "原稿整理の手引き"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "コピーエディタのコメント"
+
+msgid "submission.copyedit.useFile"
+msgstr "ファイルの使用"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "コピーエディタの任命"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "整理編集版"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "最終原稿整理"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "著者による原稿整理"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "編集者による原稿整理"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "最初の原稿整理"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "原稿整理するファイルがアップロードされないと、依頼メールは送信できません。"
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "査読ページの編集者の判断で原稿整理するファイルが選択されないと、依頼メールは送信できません。"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "査読版がないと、依頼メールは送信できません。"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>この雑誌へ原稿をアップロードするには以下の手順に従ってください。</p>\n"
+"<ol>\n"
+"<li>このページの[参照…]ボタンをクリックし、ファイル選択画面を表示させてください。</li>\n"
+"<li>ファイル選択画面を操作して、投稿したいファイルを選択してください。</li>\n"
+"<li>ファイル選択画面の[開く]ボタンをクリックしてください。選択したファイル名が投稿物ファイル欄に表示されます。</li>\n"
+"<li>この画面の[アップロード]ボタンをクリックしてください。すると、あなたのコンピュータ上にあるファイルが雑誌のWebサイトにアップロードされ、雑誌で"
+"決めた方法でリネームされます。</li>\n"
+"<li>投稿ファイルをアップロードしたら、このページの下部にある[保存して継続]ボタンをクリックしてください。</li>\n"
+"</ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "校正者は任命されていません"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "コピーエディタのファイル"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "コピーエディタのファイル"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "原稿整理するファイル"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>ハイライトされたアイテムは編集者による下記のとおりアクションが必要です。\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\""
+">査読者が任命されましたが、メールでは通知されていません</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\""
+">すべての査読者がコメントを返していますが、判断は記録されていません</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">著者が改訂版をアップロードしました</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\""
+">査読招待の確認には期限が過ぎています</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">査読完了には期限が過ぎています</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"期限\"は査読者が査読依頼を引き受けた際に入力されます。査読者の査読期限日または(-) 週数で表示されます。</li>\n"
+"</ol>"
+
+msgid "reviewer.article.confirmDecision"
+msgstr "一旦、査読結果を記録したら、もはや変更できなくなります。処理を続けてもよいですか。"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "審査結果が選択されていません。審査結果を選択する必要があります。"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "査読者の推薦を設定または調整します。"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"査読結果の審査結果を選択し、[投稿結果を編集者に送付]ボタンをクリックして、査読処理を完了させてください。審査結果を選択する前に、コメントを入力するか、フ"
+"ァイルをアップロードする必要があります。"
+
+msgid "reviewer.article.uploadFile"
+msgstr "また、投稿物に編集者や著者へのコメントを付したファイルをアップロードすることもできます。"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "アイコンをクリックして、この投稿物に対するコメントを入力してください。"
+
+msgid "reviewer.competingInterests"
+msgstr "利害の競合"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"この研究に利害の競合があるか否かを宣言してください（<a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CIポリシー</a>を参照）。"
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "ファイル名をクリックしてこの投稿物に関係するファイルをダウンロードして、査読を行ってください。"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "次項の査読の手引きを参照してください。"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "担当編集者にお知らせください。"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "査読を受諾するか否かを、"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"査読の手引きは、投稿物がこの雑誌で発表することがふさわしいかどうかを判断するための基準や，効果的で参考になる査読をするための特別な指示を査読者に提供します"
+"。査読をすすめるにあたり査読者には，2つの入力欄（「著者と編集者用」と「編集者用」）が提供されます。また雑誌管理者は査読フォームを使用してピアレビューフォ"
+"ームを作成することもできます。いずれの場合も，編集者は著者への通知に査読結果を含めるか否かを選択することができます。"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "査読の手引き"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "査読処理"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "査読スケジュール"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "査読する投稿物"
+
+msgid "reviewer.article.schedule"
+msgstr "スケジュール"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "コメント参照"
+
+msgid "reviewer.article.decision.decline"
+msgstr "不採用"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "別の雑誌に投稿"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "再投稿"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "改訂を要求"
+
+msgid "reviewer.article.decision.accept"
+msgstr "採用"
+
+msgid "reviewer.article.schedule.due"
+msgstr "査読期限"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "査読結果送付"
+
+msgid "reviewer.article.schedule.response"
+msgstr "回答"
+
+msgid "reviewer.article.schedule.request"
+msgstr "編集者からの依頼"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "（編集者への注釈をファイルに付けたい場合は、保存してからブラウズ/アップロード機能を使用してください。）"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "査読者によりアップロードされた版"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "アップロードファイル"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "コメント"
+
+msgid "reviewer.article.submitReview"
+msgstr "査読結果を編集者に送付"
+
+msgid "reviewer.article.recommendation"
+msgstr "審査結果"
+
+msgid "reviewer.article.automatic"
+msgstr "（自動）"
+
+msgid "reviewer.article.sendReminder"
+msgstr "督促メールの送信"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "編集者宛て"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "ここに査読コメントを入力してください"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "編集者へコメント送信"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "投稿物は、査読者が査読を受諾することに同意した場合、アクセスできるようになります"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "謝絶する"
+
+msgid "reviewer.article.canDoReview"
+msgstr "受諾する"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "編集者へ通知"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "査読対象のファイル"
+
+msgid "reviewer.averageQuality"
+msgstr "評価"
+
+msgid "reviewer.completedReviews"
+msgstr "実績"
+
+msgid "reviewer.pendingReviews"
+msgstr "査読待ちの論文"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "リモートでホストされるコンテンツのURL"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "このゲラは別サイトで公開される予定です。"
+
+msgid "submission.layout.imageInvalid"
+msgstr "画像フォーマットが不正です。受入可能なフォーマットは、.gif, .jpg, .pngです。"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "補足ファイルのアップロード"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "ファイルの置換"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "ゲラフォーマットのアップロード"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "レイアウト担当の任命"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "任命すべき担当はありません。"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "完了した編集担当の任命"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "編集担当の任命"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "新規査読者の作成"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "既存のユーザを査読者に割り当てる"
+
+msgid "sectionEditor.regrets.result"
+msgstr "結果"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "謝絶"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "査読者の謝絶と取消"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "編集者判断、{$round}回目"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "査読、 {$round}回目"
+
+msgid "sectionEditor.regrets.link"
+msgstr "謝絶と取消、これまでの査読処理の閲覧"
+
+msgid "sectionEditor.regrets"
+msgstr "謝絶"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} 査読者の謝絶と取消、これまでの査読ラウンド"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "謝絶"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "この校正者への通知は、再度、任命を行うことになります。これを実行してもよいですか。"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "このレイアウトエディタへの通知は、再度、任命を行うことになります。これを実行してもよいですか。"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "この著者への通知は、再度、任命を行うことになります。これを実行してもよいですか。"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "このコピーエディタへの通知は、再度、任命を行うことになります。これを実行してもよいですか。"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "任命された投稿物はありません。"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "完了した編集担当の任命"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "編集担当の任命"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>ハイライトされたアイテムは編集者による下記のとおりアクションが必要です。\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">原稿整理の段階でアクションが必要です</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">レイアウトの段階でアクションが必要です</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">校正の段階でアクションが必要です</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"申し訳ありませんが、あなたはこのユーザに関する管理権限がありません。その理由は、以下のいずれかです。\n"
+"\t\t<ul>\n"
+"\t\t\t<li>このユーザはサイト管理である。</li>\n"
+"\t\t\t<li>このユーザはあなたが管理していない雑誌に登録されている。</li>\n"
+"\t\t</ul>\n"
+"\tこの処理は、サイト管理者が行う必要があります。\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"このユーザを無効にしますか？この処理によってユーザはシステムにログインできなくなります。\n"
+"\n"
+"アカウントを無効にする理由をユーザに対して連絡したほうがよいかもしれません。"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>著者が引用した作品のオンラインバージョンを読者に示すために、次のオプションが利用できます。</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>読者ツールを追加する</strong><p>雑誌管理者は出版アイテムのページに表示される読者ツールに「参考文献の検索」を追加す"
+"ることができます。読者は、この検索画面に参考文献のタイトルをペーストすることにより、あらかじめ選択された学術データベースで引用文献を検索することができます"
+"。</p></li>\n"
+"\t<li><strong>参考文献にリンクを埋め込む</strong><p>レイアウトエディタは次の指示（編集可能）に従うことにより、オンラインで見つけ"
+"ることができる参考文献へのリンクを追加することができます。</p></li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"ステップ: 投稿キュー &gt; 投稿査読 &gt; 投稿編集 &gt; 目次。<br /><br />\n"
+"編集作業のこれらの側面を処理するためのモデルを選択してください。(編集長とセクションエディターを指定するには、雑誌設定で編集者に移動してください。)"
+
+#, fuzzy
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Proposed Creative Commons Copyright Notices</h3>\n"
+"<h4>1. Proposed Policy for Journals That Offer Open Access</h4>\n"
+"Authors who publish with this journal agree to the following terms:\n"
+"<ol type=\"a\">\n"
+"\t<li>Authors retain copyright and grant the journal right of first "
+"publication with the work simultaneously licensed under a <a target=\"_new\" "
+"href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons "
+"Attribution License</a> that allows others to share the work with an "
+"acknowledgement of the work's authorship and initial publication in this "
+"journal.</li>\n"
+"\t<li>Authors are able to enter into separate, additional contractual "
+"arrangements for the non-exclusive distribution of the journal's published "
+"version of the work (e.g., post it to an institutional repository or publish "
+"it in a book), with an acknowledgement of its initial publication in this "
+"journal.</li>\n"
+"\t<li>Authors are permitted and encouraged to post their work online (e.g., "
+"in institutional repositories or on their website) prior to and during the "
+"submission process, as it can lead to productive exchanges, as well as "
+"earlier and greater citation of published work (See <a target=\"_new\" href="
+"\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open "
+"Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Proposed Policy for Journals That Offer Delayed Open Access</h4>\n"
+"Authors who publish with this journal agree to the following terms:\n"
+"<ol type=\"a\">\n"
+"\t<li>Authors retain copyright and grant the journal right of first "
+"publication, with the work [SPECIFY PERIOD OF TIME] after publication "
+"simultaneously licensed under a <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution "
+"License</a> that allows others to share the work with an acknowledgement of "
+"the work's authorship and initial publication in this journal.</li>\n"
+"\t <li>Authors are able to enter into separate, additional contractual "
+"arrangements for the non-exclusive distribution of the journal's published "
+"version of the work (e.g., post it to an institutional repository or publish "
+"it in a book), with an acknowledgement of its initial publication in this "
+"journal.</li>\n"
+"\t <li>Authors are permitted and encouraged to post their work online (e.g., "
+"in institutional repositories or on their website) prior to and during the "
+"submission process, as it can lead to productive exchanges, as well as "
+"earlier and greater citation of published work (See <a target=\"_new\" href="
+"\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect of Open "
+"Access</a>).</li>\n"
+"</ol>"
+
+msgid "plugins.categories.generic.description"
+msgstr "他のカテゴリに含まれていない方法でオープン･ジャーナル･システムを拡張するのに使用されます。"
+
+msgid "plugins.categories.auth.description"
+msgstr "オープン･ジャーナル･システムが行うユーザ認証をLDAPサーバなどの他のシステムに委任できるようにします。"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "論文ゲラプラグインは、異なるドキュメントタイプを論文ゲラとして表示するためのサポートを追加します。"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "論文ゲラプラグイン"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "購読種別"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "機関購読"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "個人購読"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "購読管理"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>注意</h4>\n"
+"<p>設定ファイルを更新できませんでした。設定の変更を適用するためには、<tt>config.inc.php</tt>をエディタで開いて、以下の内容に置き"
+"換える必要があります。</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>OJSユーザデータベース以外の認証システムをデフォルトの認証システムに指定すると、次のような効果があります。</p>\n"
+"<ul>\n"
+"\t<li>ユーザが、（OJSデータベースには存在しないが）その認証システムには存在するユーザ名でこのサイトに新規アカウントを登録しようとした場合、指定さ"
+"れたパスワードがそのユーザアカウントのパスワードとして正しい場合のみ登録が許可される。</li>\n"
+"</ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "類似度"
+
+msgid "search.results.orderDir.desc"
+msgstr "降順"
+
+msgid "search.results.orderDir.asc"
+msgstr "昇順"
+
+msgid "search.results.orderBy.relevance"
+msgstr "関連度"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "人気（先月）"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "人気（全期間）"
+
+msgid "search.results.orderBy.journal"
+msgstr "雑誌名"
+
+msgid "search.results.orderBy.date"
+msgstr "発行日"
+
+msgid "search.results.orderBy.author"
+msgstr "筆者名"
+
+msgid "search.results.orderBy.article"
+msgstr "論文タイトル"
+
+msgid "search.results.orderBy"
+msgstr "結果の並べ替え"
+
+msgid "comments.authenticated"
+msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "この論文に対するコメント"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "購読アクセスまたはフリーアクセス"
+
+msgid "reader.subscriptionAccess"
+msgstr "購読アクセス"
+
+msgid "reader.openAccess"
+msgstr "オープン･アクセス"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "このアイテムにアクセスするには購読が必要です。購読を確認するために、雑誌にログインしてください。"
+
+msgid "reader.subscribersOnly"
+msgstr "購読者のみ"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "レイアウトが完了した"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "レイアウトゲラ版が更新された"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "レイアウトが開始された"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "投稿物のレイアウトエディタが解除された"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "投稿物にレイアウトエディタが任命された"
+
+msgid "search.results.orderBy.issue"
+msgstr "巻号"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "校正依頼が完了した"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "校正者改訂ファイルが更新された"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "校正が開始された"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "投稿物の校正者が解除された"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "投稿物に校正者が任命された"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "整理編集ファイルが更新された"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "最終の原稿整理が完了した"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "最初の原稿整理が完了した"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "コピーエディタ改訂ファイルが更新された"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "原稿整理が開始された"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "投稿物のコピーエディタが解除された"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "投稿物にコピーエディタが任命された"
+
+#, fuzzy
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS バージョン {$version}</h4>\n"
+"\n"
+"<p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうご"
+"ざいました。処理を進める前に、このソフトウェアに添付されている<a href=\"{$baseUrl}/docs/README\""
+">README</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<"
+"a href=\"http://pkp.sfu.ca/\" target=\"_blank\""
+">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a "
+"href=\"http://forum.pkp.sfu.ca\">サポートフォーラム</a>、または、PKPのオンライン<a href=\""
+"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\""
+">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href=\""
+"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>にメールしてくださっても構いません。</p>\n"
+"\n"
+"<h4>バージョンアップ</h4>\n"
+"\n"
+"<p>既存のOJSインストールからバージョンアップする場合は、<a href=\"{$upgradeUrl}\""
+">ここをクリック</a>して作業を進めてください。</p>\n"
+"\n"
+"<h4>推奨するシステム要件</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; you are currently using PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >="
+" 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Operating system: Any OS that supports the above software, including <"
+"a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\""
+"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle."
+"com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" "
+"target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\""
+">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>PKPは、上記のソフトウェアバージョンとプラットフォームの可能なすべての組み合わせについてテストする資源を持っていませんので、正常な動作やサポートを"
+"保証するものではありません。</p>\n"
+"\n"
+"<p>ここで行う設定は、インストール後にOJSベースディレクトリにある<tt>config.inc.php</tt>ファイルの編集、または、サイト管理We"
+"bインターフェースを使用することにより変更することができます。</p>\n"
+"\n"
+"<h4>サポートするデータベースシステム</h4>\n"
+"\n"
+"<p>OJSは、現在のところ、 MySQLとPostgreSQLでのみテストを行っていますが、<a href=\""
+"http://adodb.sourceforge.net/\" target=\"_blank\""
+">ADOdb</a>がサポートしている他のデータベース管理システムでも（完全に、または一部）動作すると思われます "
+"。他のDBMSによる互換性報告やパッチコードをOJSチームにお送りください。</p>\n"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJSのバージョンアップ"
+
+msgid "installer.appInstallation"
+msgstr "OJSのインストール"
+
+#, fuzzy
+msgid "payment.subscription.expires"
+msgstr "Expires"
+
+#, fuzzy
+msgid "payment.subscription.renew"
+msgstr "Renew Subscription"
+
+#, fuzzy
+msgid "payment.subscription.purchase"
+msgstr "Purchase Subscription"
+
+#, fuzzy
+msgid "payment.membership.ends"
+msgstr "Ends"
+
+msgid "notification.savedIssueMetadata"
+msgstr "巻号公開メタデータが保存された。"
+
+msgid "notification.type.public"
+msgstr "公的なお知らせ"
+
+msgid "notification.type.userComment"
+msgstr "「{$title}」について読者からコメントがあった"
+
+msgid "notification.type.submissions"
+msgstr "投稿イベント"
+
+msgid "notification.type.submissionComment"
+msgstr "「{$title}」について編集者からコメントがあった。"
+
+msgid "notification.type.site"
+msgstr "サイトイベント"
+
+msgid "notification.type.reviewing"
+msgstr "査読イベント"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "「{$title}」についての査読が査読フォームから送信された。"
+
+msgid "notification.type.newAnnouncement"
+msgstr "新しいお知らせが作成された。"
+
+msgid "notification.type.issuePublished"
+msgstr "新しい巻号が出版された。"
+
+msgid "notification.type.galleyModified"
+msgstr "「{$title}」のゲラが更新された。"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "「{$title}」の編集者の判断についてコメントがあった。"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "新しい論文「{$title}」が投稿された。"
+
+msgid "notification.type.editing"
+msgstr "編集イベント"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "査読論文"
+
+msgid "log.imported"
+msgstr "{$userName}が論文 {$submissionId}をインポートした。"
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName}がスケジューリングのために {$submissionId} を投稿した。"
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName}が{$proofreaderName}を投稿物 {$submissionId} の校正者に任命した。"
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName}が投稿物 {$submissionId} の編集者に任命された。"
+
+msgid "log.editor.restored"
+msgstr "投稿物 {$submissionId} がキューに格納された。"
+
+msgid "log.editor.archived"
+msgstr "投稿物 {$submissionId} がアーカイブされた。"
+
+msgid "log.editor.editorFile"
+msgstr "投稿ファイルの編集者版がアップロードされた。"
+
+msgid "log.editor.metadataModified"
+msgstr "この論文のメタデータが{$editorName}により変更された。"
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName}が投稿物 {$submissionId} のレイアウト編集を完了した。"
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName}が投稿物 {$submissionId} のレイアウトエディタを解除された。"
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "投稿物 {$submissionId} の最初の原稿整理が {$copyeditorName} によって完了した。"
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "投稿物 {$submissionId} にコピーエディタ {$copyeditorName} が任命された。"
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName}が投稿物 {$submissionId} のレイアウトエディタに任命された。"
+
+msgid "log.copyedit.authorFile"
+msgstr "筆者が整理編集した投稿ファイルが更新された。"
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "整理編集ファイルが更新された。"
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "投稿物 {$submissionId} の最終の原稿整理が {$copyeditorName} によって完了した。"
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "デフォルトのの整理編集ファイルが選択された。"
+
+msgid "log.copyedit.initiate"
+msgstr "投稿物 {$submissionId} の原稿整理が{$copyeditorName}によって開始された。"
+
+msgid "log.editor.recommendation"
+msgstr "論文{$submissionId}に対する編集者の査読結果({$decision})は、{$editorName}によって記録された。"
+
+msgid "log.editor.decision"
+msgstr "論文{$submissionId}に対する編集者の判断({$decision})は、{$editorName}によって記録された。"
+
+msgid "log.review.reviewerFile"
+msgstr "査読者ファイルがアップロードされた。"
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"編集者、{$userName}が投稿物 {$submissionId} "
+"の{$round}回目の査読ファイルを査読者、{$reviewerName}の代わりにアップロードした。"
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} が投稿物 {$submissionId} の{$round}回目の査読を査読者、{$reviewerName}の代わりに受諾した。"
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} が投稿物 {$submissionId} の{$round}回目の査読を査読者、{$reviewerName}の代わりに謝絶した。"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "このカテゴリの論文の並び方を選択してください。"
+
+msgid "catalog.sortBy"
+msgstr "論文の順番"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName}は論文{$submissionId}の編集プロセスを行いました。"
+
+msgid "navigation.subscriptions"
+msgstr "購読"
+
+msgid "editor.issues.futureIssues"
+msgstr "出版予定号"
+
+msgid "editor.issues.backIssues"
+msgstr "バックナンバー"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "指定された雑誌パス「{$ journalPath}」を雑誌に定められませんでした。"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "この検索の実装では、雑誌ごとの再インデックス化はできません。"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "『{$journalName}』インデックス中"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>このゲラの承認を削除する。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>このゲラを出版することを承認する。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "ゲラ承認"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "承認待ち"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "承認済み"
+
+msgid "article.view.interstitial"
+msgstr "ダウンロードする論文ファイルを選択してください。"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "他の雑誌を非表示にする"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "他の雑誌に登録する"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "承認待ち。"
+
+msgid "notification.type.approveSubmission"
+msgstr "この投稿は、現在、巻号に掲載される前に承認待ちの状態です。"
+
+msgid "editor.navigation.issues"
+msgstr "巻号"
+
+msgid "grid.action.createContext"
+msgstr "新しい雑誌を作成"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "無効なコピーエディター投稿版、またはコピーエディターのない投稿を要求されていました！"
+
+msgid "user.authorization.invalidIssue"
+msgstr "無効な巻号を要求しました！"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "あなたのセクションの一部ではない論文にアクセスしようとしています。"
+
+msgid "user.authorization.noContext"
+msgstr "コンテキストには雑誌がありません！"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "アクセスが拒否されました！この論文のコピーエディターとして任命されていません。"
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "ゲラ作成待ち中。"
+
+msgid "notification.type.assignProductionUser"
+msgstr "参加者リストの「任命」リンクを使用して、ゲラを作成するユーザーを割り当てください。"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "編集者の任命が必要な論文が投稿されました。"

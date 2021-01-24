@@ -433,9 +433,6 @@ msgstr ""
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Sigur doriți să înregistrați această decizie?"
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Sunteți sigur că doriți să ștergeți definitiv această înregistrare?"
-
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "Salvați modificările la înregistrările arhivate? Înregistrările marcate "

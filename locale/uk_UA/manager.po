@@ -228,6 +228,7 @@ msgstr "Редактори цього розділу"
 msgid "manager.sections.confirmDelete"
 msgstr "Ви впевнені, що хочете назавжди видалити цей розділ?"
 
+#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "Перш, ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані у ньому статті до інших розділів."
 

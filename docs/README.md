@@ -1,11 +1,12 @@
 	===================================
 	=== Open Journal Systems
 	=== The Public Knowledge Project
-	=== Version: 3.3.0-0
-	=== GIT tag: 3_3_0-0
-	=== Release date: March 20, 2020
+	=== Version: 3.3.0rc2
+	=== GIT tag: 3_3_0-1
+	=== Release date: December 7, 2020
 	===================================
 
+THIS IS A RELEASE CANDIDATE AND NOT INTENDED FOR PRODUCTION USE.
 
 ## About
 
@@ -28,7 +29,7 @@ improvements or bug fixes to the software.
 
 Recommended server requirements:
 
-* PHP >= 7.2
+* PHP >= 7.3
 * MySQL >= 4.1 or PostgreSQL >= 9.1.5
 * Apache >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6
 * Operating system: Any OS that supports the above software, including
@@ -79,10 +80,7 @@ To install OJS:
 		 to manually overwrite this file during installation)
 	 * `public`
 	 * `cache`
-	 * `cache/t_cache`
-	 * `cache/t_config`
-	 * `cache/t_compile`
-	 * `cache/_db`
+	 * `plugins` (for plugin installation via the web interface)
 
 3. Create a directory to store uploaded files (submission files, etc.)
 	 and make this directory writeable. It is recommended that this

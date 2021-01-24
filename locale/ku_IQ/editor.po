@@ -278,9 +278,6 @@ msgstr ""
 msgid "editor.submissionReview.confirmDecision"
 msgstr "ئایا تۆ دڵنیای کە دەتەوێت ئەم بڕیارە تۆمار بکەی؟"
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "ئایا تۆ دڵنیای کە دەتەوێت ئەم بابەتە نێردراوە بە یەکجاری بسڕیەوە؟"
-
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 ".گۆڕانکاری لە بابەتە نیردراوە ئەرشیفکراوەکاندا دەکەی؟ بابەتە نیردراوەکان کە "

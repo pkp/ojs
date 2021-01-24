@@ -49,7 +49,12 @@ class ArticleHandler extends Handler {
 		if ($header = array_search('Authorization', array_flip(getallheaders()))) {
 			list($bearer, $jwt) = explode(' ', $header);
 			if (strcasecmp($bearer, 'Bearer') == 0) {
-				$apiToken = json_decode(JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256')));
+				$apiToken = JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256'));
+				// Compatibility with old API keys
+				// https://github.com/pkp/pkp-lib/issues/6462
+				if (substr($apiToken, 0, 2) === '""') {
+					$apiToken = json_decode($apiToken);
+				}
 				$this->setApiToken($apiToken);
 			}
 		}
@@ -381,11 +386,7 @@ class ArticleHandler extends Handler {
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 		else if ($this->userCanViewGalley($request, $this->article->getId(), $this->galley->getId())) {
 			if (!$this->fileId) {
-				$submissionFile = $this->galley->getFile();
-				if ($submissionFile) {
-					$this->fileId = $submissionFile->getId();
-					// The file manager expects the real article id.  Extract it from the submission file.
-				}
+				$this->fileId = $this->galley->getData('submissionFileId');
 			}
 
 			// If no file ID could be determined, treat it as a 404.
@@ -403,21 +404,18 @@ class ArticleHandler extends Handler {
 			}
 
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$this->fileId))) {
-				if (!$submissionFile) {
-					$submissionFile = Services::get('submissionFile')->get($this->fileId);
+				$submissionFile = Services::get('submissionFile')->get($this->fileId);
+
+				if (!Services::get('file')->fs->has($submissionFile->getData('path'))) {
+					$request->getDispatcher()->handle404();
 				}
 
-				$path = Services::get('file')->getPath($submissionFile->getData('fileId'));
-				if (!Services::get('file')->fs->has($path)) {
-					throw new Exception('File ' . $submissionFile->getData('fileId') . ' at ' . $path . ' does not exist or is not readable.');
-				}
-
-				$filename = Services::get('file')->formatFilename($path, $submissionFile->getLocalizedData('name'));
+				$filename = Services::get('file')->formatFilename($submissionFile->getData('path'), $submissionFile->getLocalizedData('name'));
 
 				$returner = true;
 				HookRegistry::call('FileManager::downloadFileFinished', array(&$returner));
 
-				Services::get('file')->download($path, $filename);
+				Services::get('file')->download($submissionFile->getData('path'), $filename);
 			}
 		} else {
 			header('HTTP/1.0 403 Forbidden');

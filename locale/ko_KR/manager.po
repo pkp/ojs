@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-29 12:56+0000\n"
+"Last-Translator: Seok Hyun Ga <shga89@naver.com>\n"
+"Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"ko_KR/>\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.distribution.publishingMode"
+msgstr "출판 모드"
+
+msgid "manager.distribution.publication"
+msgstr "출판"
+
+msgid "manager.distribution.access"
+msgstr "액세스"

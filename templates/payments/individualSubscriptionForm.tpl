@@ -34,12 +34,10 @@
 			{fbvElement type="text" name="dateStart" id="dateStart" value=$dateStart label="manager.subscriptions.form.dateStart" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
 			{fbvElement type="text" name="dateEnd" id="dateEnd" value=$dateEnd label="manager.subscriptions.form.dateEnd" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
 		{/fbvFormSection}
-		{fbvFormSection label="manager.subscriptions.form.membership"}
-			{fbvElement type="text" name="membership" id="membership" value=$membership size=$fbvStyles.size.MEDIUM inline=true}
-		{/fbvFormSection}
-		{fbvFormSection label="manager.subscriptions.form.referenceNumber"}
-			{fbvElement type="text" name="referenceNumber" id="referenceNumber" value=$referenceNumber size=$fbvStyles.size.MEDIUM inline=true}
-		{/fbvFormSection}
+
+		{fbvElement type="text" label="manager.subscriptions.form.membership" name="membership" id="membership" value=$membership size=$fbvStyles.size.MEDIUM inline=true}
+		{fbvElement type="text" label="manager.subscriptions.form.referenceNumber" name="referenceNumber" id="referenceNumber" value=$referenceNumber size=$fbvStyles.size.MEDIUM inline=true}
+
 		{fbvFormSection label="manager.subscriptions.form.notes"}
 			{fbvElement type="textarea" name="notes" id="notes" value=$notes rich=true}
 		{/fbvFormSection}

@@ -7,27 +7,25 @@
  *
  * @brief Display the page to view details about the OJS software.
  *
- * @uses $currentJournal Journal The journal currently being viewed
+ * @uses $currentContext Journal The journal currently being viewed
  * @uses $appVersion string Current version of OJS
- * @uses $pubProcessFile string Path to image of OJS publishing process
+ * @uses $contactUrl string URL to the journal's contact page
  *}
-{include file="frontend/components/header.tpl" pageTitle="about.aboutThisPublishingSystem"}
+{include file="frontend/components/header.tpl" pageTitle="about.aboutSoftware"}
 
 <div class="page page_about_publishing_system">
-	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutThisPublishingSystem"}
+	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutSoftware"}
 	<h1>
-		{translate key="about.aboutThisPublishingSystem"}
+		{translate key="about.aboutSoftware"}
 	</h1>
 
 	<p>
-		{if $currentJournal}
-			{translate key="about.aboutOJSJournal" ojsVersion=$appVersion}
+		{if $currentContext}
+			{translate key="about.aboutOJSJournal" ojsVersion=$appVersion contactUrl=$contactUrl}
 		{else}
 			{translate key="about.aboutOJSSite" ojsVersion=$appVersion}
 		{/if}
 	</p>
-
-	<img src="{$baseUrl}/{$pubProcessFile}" alt="{translate key="about.aboutThisPublishingSystem.altText"}">
 
 </div><!-- .page -->
 

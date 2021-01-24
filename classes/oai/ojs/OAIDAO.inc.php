@@ -16,6 +16,7 @@
 
 import('lib.pkp.classes.oai.PKPOAIDAO');
 import('classes.issue.Issue');
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 class OAIDAO extends PKPOAIDAO {
 
@@ -41,8 +42,8 @@ class OAIDAO extends PKPOAIDAO {
 		$this->issueDao = DAORegistry::getDAO('IssueDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 
-		$this->journalCache = array();
-		$this->sectionCache = array();
+		$this->journalCache = [];
+		$this->sectionCache = [];
 	}
 
 	/**
@@ -202,13 +203,25 @@ class OAIDAO extends PKPOAIDAO {
 	 * @param $set string
 	 * @param $submissionId int optional
 	 * @param $orderBy string UNFILTERED
-	 * @return ADORecordSet
+	 * @return Iterable
 	 */
 	function _getRecordsRecordSet($setIds, $from, $until, $set, $submissionId = null, $orderBy = 'journal_id, submission_id') {
 		$journalId = array_shift($setIds);
 		$sectionId = array_shift($setIds);
 
-		$params = array('enableOai', (int) STATUS_PUBLISHED);
+		# Exlude all journals that do not have Oai specifically turned on, see #pkp/pkp-lib#6503
+		$excludeJournals = Capsule::table('journals')
+			->whereNotIn('journal_id',function($query){
+				$query->select('journal_id')
+				->from('journal_settings')
+				->where('setting_name', 'enableOai')
+				->where('setting_value', 1);
+			})
+		->groupBy('journal_id')
+		->pluck('journal_id')
+		->all();
+
+		$params = array((int) STATUS_PUBLISHED);
 		if (isset($journalId)) $params[] = (int) $journalId;
 		if (isset($sectionId)) $params[] = (int) $sectionId;
 		if ($submissionId) $params[] = (int) $submissionId;
@@ -219,7 +232,7 @@ class OAIDAO extends PKPOAIDAO {
 			$params[] = $set . ':%';
 		}
 		if ($submissionId) $params[] = (int) $submissionId;
-		$result = $this->retrieve(
+		return $this->retrieve(
 			'SELECT	GREATEST(a.last_modified, i.last_modified) AS last_modified,
 				a.submission_id AS submission_id,
 				j.journal_id AS journal_id,
@@ -231,12 +244,12 @@ class OAIDAO extends PKPOAIDAO {
 			FROM
 				submissions a
 				JOIN publications p ON (a.current_publication_id = p.publication_id)
-				JOIN publication_settings psissue ON (psissue.publication_id = p.publication_id AND psissue.setting_name=\'issueId\')
-				JOIN issues i ON (CAST(i.issue_id AS CHAR) = psissue.setting_value)
+				JOIN publication_settings psissue ON (psissue.publication_id = p.publication_id AND psissue.setting_name=\'issueId\' AND psissue.locale=\'\')
+				JOIN issues i ON (CAST(i.issue_id AS CHAR(20)) = psissue.setting_value)
 				JOIN sections s ON (s.section_id = p.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
-				JOIN journal_settings jsoai ON (jsoai.journal_id = j.journal_id AND jsoai.setting_name=? AND jsoai.setting_value=\'1\')
 			WHERE	i.published = 1 AND j.enabled = 1 AND a.status = ?
+				' . ($excludeJournals ?' AND j.journal_id NOT IN ('.implode(',', $excludeJournals).')':'') . '
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND p.section_id = ?':'') . '
 				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
@@ -262,7 +275,6 @@ class OAIDAO extends PKPOAIDAO {
 			ORDER BY ' . $orderBy,
 			$params
 		);
-		return $result;
 	}
 }
 

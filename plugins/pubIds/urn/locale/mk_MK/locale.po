@@ -1,0 +1,250 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-11 10:59+0000\n"
+"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-urn/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Предмет"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Отисок на труд: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "URN не е доделен на оваа публикација."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN за оваа публикација ќе биде {$urn}."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN мора да започне со {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Не можете да генерирате URN бидејќи на еден или повеќе делови на моделот URN "
+"недостасуваат податоци. Можеби ќе треба да ја доделите публикацијата на "
+"издание, да поставите ID на издавач или да внесете броеви на страницата."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Не можете да генерирате URN сè додека оваа публикација не биде доделена на "
+"издание."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Додели"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN мора да започне со {$prefix}."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Бројот за проверка недостасува."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "Назначен е URN {$pubId}."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$pubId} не може да се додели бидејќи содржи нерешена шема."
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN не може да се додели бидејќи недостасува сопствената наставка."
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Доделете го URN {$pubId} на овој {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Додадете број за проверка"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Користете ја следнава опција за да исчистите URN од сите објекти (написи и "
+"отисоци на труд) што се моментално закажани за ова издание."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr ""
+"Дали сте сигурни дека сакате да ги избришете постојните URN објекти на "
+"изданијата?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Исчисти ги објектите на изданијата URN"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Дали сте сигурни дека сакате да го избришете постојниот URN?"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Исчисти"
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Дадената наставка URN веќе се користи за друга објавена ставка. Внесете "
+"уникатна наставка URN за секоја ставка."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN е доделен на овој {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Она што го гледате е преглед на URN. Изберете го полето за избор и зачувајте "
+"го образецот за доделување на URN."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN не може да се додели бидејќи содржи нерешена шема."
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN не може да се додели бидејќи недостасува сопствената наставка."
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "отисок на труд"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "статија"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "издание"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "УРН"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Дали сте сигурни дека сакате да ги избришете сите постојни URN?"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Ако ја смените конфигурацијата на URN, URN што веќе се доделени нема да "
+"бидат засегнати. Откако ќе се зачува конфигурацијата на URN, користете го "
+"ова копче за да ги исчистите сите постојни URN, така што новите поставки ќе "
+"стапат на сила со постојните објекти."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Поставете ги УРН"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Внесете ја URL-адресата за решавање."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(на пр. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL на резолутор"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Постојаниот именски простор за идентификација обично е потребен за "
+"регистрација (на пример, во Дојче национал библиотек)."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Изберете"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Именски простор"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Бројот за проверка автоматски ќе се пресмета и додаде на крајот, како "
+"последна цифра на URN."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Проверете го бројот"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Внесете индивидуална наставка на URN за секоја објавена ставка. .Е најдете "
+"дополнително поле за внесување URN на страницата со метаподатоци на секоја "
+"ставка."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i за прашања <br />%j.v%vi%i.%a за написи <br />%j.v%vi%i.%a.g%g за "
+"отисоци на труд."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Користете стандардни обрасци."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Внесете ја шемата на наставки URN за отисоци на труд."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Внесете ја шемата на наставки URN за статии."
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Внесете ја шемата за наставки на URN за изданија."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "за отисоци на труд"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "за написи"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "за изданија"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "На пример, vol%viss%ipp%p може да создаде URN наставка „vol3iss2pp230“."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Користете ја шемата внесена подолу за да генерирате наставки URN. Користете %"
+"j за иницијали во списанието, %v за бројот на јачината на звукот,%i за "
+"бројот на изданието, %Y за годината, %a за ID на статијата OJS, %g за ID "
+"галеријата OJS, %f за ID на датотеката OJS , %p за бројот на страницата и %x "
+"за \"Прилагоден идентификатор\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"Суфиксот URN може да има каква било форма, но мора да биде единствен меѓу "
+"сите објавувачки објекти со ист доделен префикс URN:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "Додаток на URN"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr ""
+"Моделот на префиксот URN мора да биде во форма \"urn:\"&lt;NID&gt;\":\""
+"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"Префиксот URN е поправка, никогаш не менувајќи дел од URN (на пр. „Урна: нбн:"
+" де: 0000-“)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "Префикс на URN"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Отисоци на труд"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Написи"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Изданија"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"Изберете ги објектите за објавување на кои ќе им бидат доделени униформни "
+"имиња на ресурси (URN):"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Ве молиме, изберете ги предметите на кои треба да се доделуваат URN."
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Содржина на весник"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"Конфигурирајте го приклучокот URN за да може да управувате и да користите "
+"URN во OJS:"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"Овој приклучок овозможува доделување на Единствени имиња на ресурси на теми, "
+"статии и отисоци на труд во OJS."
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "УРН"

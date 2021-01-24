@@ -52,7 +52,7 @@ msgstr ""
 msgid "default.contextSettings.checklist.bibliographicRequirements"
 msgstr ""
 "إن نص المؤلَّف مقيد بالمتطلبات النمطية والأسلوبية الواردة في <a href=\""
-"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\""
+"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\" target=\""
 "_new\">دليل المؤلِّف</a>، الموجود في النص التعريفي بالمجلة ضمن هذا الموقع."
 
 msgid "default.contextSettings.privacyStatement"
@@ -65,10 +65,10 @@ msgstr ""
 "بني الإنسان."
 
 msgid "default.contextSettings.forReaders"
-msgstr "نحن نشجع القراء على التسجيل في خدمة إشعار النشر المتاحة في هذه المجلة. إستعمل <a href=\"{$indexUrl}{$contextPath}/user/register\">رابط التسجيل</a> المتواجد في أعلى الصفحة الرئيسية للمجلة. هذا التسجيل سيقدم لصاحبه رسالة بالبريد الكتروني تتضمن جدولاً بعمليات النشر الجديدة في المجلة. ذلك الجدول أو القائمة تساعد المجلة على استقطاب القراء مما يساعدها على الانتشار ويكسب لها سمعة في الوسط العلمي. أنظر <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">بيان الخصوصية</a> الذي يؤكد أن أسماء الأشخاص المسجلين في الموقع وعناوينهم البريدية لن تكون متاحة إلا للأغراض المتعلقة بإجراء النشر."
+msgstr "نحن نشجع القراء على التسجيل في خدمة إشعار النشر المتاحة في هذه المجلة. إستعمل <a href=\"{$indexUrl}/{$contextPath}/user/register\">رابط التسجيل</a> المتواجد في أعلى الصفحة الرئيسية للمجلة. هذا التسجيل سيقدم لصاحبه رسالة بالبريد الكتروني تتضمن جدولاً بعمليات النشر الجديدة في المجلة. ذلك الجدول أو القائمة تساعد المجلة على استقطاب القراء مما يساعدها على الانتشار ويكسب لها سمعة في الوسط العلمي. أنظر <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">بيان الخصوصية</a> الذي يؤكد أن أسماء الأشخاص المسجلين في الموقع وعناوينهم البريدية لن تكون متاحة إلا للأغراض المتعلقة بإجراء النشر."
 
 msgid "default.contextSettings.forAuthors"
-msgstr "ألديك اهتمام بالنشر في هذه المجلة؟ نوصيك إذن بمراجعة صفحة <a href=\"{$indexUrl}{$contextPath}/about\">عن المجلة</a> للاطلاع على سياسة عمل هذا القسم في المجلة، فضلاً عن <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">دليل المؤلفين</a>. يحتاج المؤلفون إلى <a href=\"{$indexUrl}{$contextPath}/user/register\">التسجيل</a> في المجلة ليتمكون من إرسال طلباتهم للنشر فيها، أو إن سبق لهم التسجيل فيها، <a href=\"{$indexUrl}/index/login\">تسجيل الدخول</a> والشروع بالخطوات الخمس لتقديم طلب النشر."
+msgstr "ألديك اهتمام بالنشر في هذه المجلة؟ نوصيك إذن بمراجعة صفحة <a href=\"{$indexUrl}/{$contextPath}/about\">عن المجلة</a> للاطلاع على سياسة عمل هذا القسم في المجلة، فضلاً عن <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">دليل المؤلفين</a>. يحتاج المؤلفون إلى <a href=\"{$indexUrl}/{$contextPath}/user/register\">التسجيل</a> في المجلة ليتمكون من إرسال طلباتهم للنشر فيها، أو إن سبق لهم التسجيل فيها، <a href=\"{$indexUrl}/index/login\">تسجيل الدخول</a> والشروع بالخطوات الخمس لتقديم طلب النشر."
 
 msgid "default.contextSettings.forLibrarians"
 msgstr "نحن نشجع العاملين في مكتبات البحوث العلمية على تضمين هذه المجلة في قوائم مكتباتهم المنشورة على الإنترنت للمجلات العلمية الناشرة للبحوث والمقالات العلمية. كما أنه من الناجع الإشارة إلى أن الموقع المستضيف لهذه المجلة يعمل بنظام يتناسب مع حاجات هذه المكتبات من حيث إمكانية حفظ حسابات منتسبيها ليتمكنوا من المشاركة في هيئة تحريرها. (أنظر <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."

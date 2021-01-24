@@ -1466,9 +1466,11 @@ msgstr "درباره این سامانه انتشاراتی"
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "روند داوری و انتشار در سامانه OJS"
 
+#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr "این مجله از سیستم مجلات آزاد (OJS) نسخه {$ojsVersion} استفاده می‌کند. OJS یک نرم‌افزار متن‌باز مدیریت و انتشار مجلات است که توسط  <a href=\"http://pkp.sfu.ca/\">پروژه دانش عمومی</a> و تحت مجوز GNU در اختیار عموم قرار گرفته است."
 
+#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr "این سایت از سیستم مجلات آزاد (OJS) نسخه {$ojsVersion} استفاده می‌کند. OJS یک نرم‌افزار متن‌باز مدیریت و انتشار مجلات است که توسط  <a href=\"http://pkp.sfu.ca/\">پروژه دانش عمومی</a> و تحت مجوز GNU در اختیار عموم قرار گرفته است."
 
@@ -1595,6 +1597,7 @@ msgstr "نصب OJS"
 msgid "installer.ojsUpgrade"
 msgstr "بروز رسانی OJS"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr "<h4>OJS نسخه {$version}</h4>\t  <p>از دانلود <strong>سیستم مجلات آزاد </strong> پروژه دانش عمومی تشکر می‌کنیم. قبل از ادامه لطفاً متن فایل  <a href=\"{$baseUrl}/docs/README.md\">README</a>  همراه با این سامانه را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و پروژه‌های نرم‌افزاری آن لطفاً از <a href=\"http://pkp.sfu.ca/\" target=\"_blank\"> وب‌سایت PKP</a> بازدید بفرمائید. اگر می‌خواهید گزارش اشکال بدهید و یا به دنبال حمایت تکنیکی برای سیستم مجلات آزاد هستید به <a href=\"http://forum.pkp.sfu.ca\">انجمن پشتیبانی</a> مراجعه و یا از  <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">سیستم گزارش اشکال </a> آنلاین PKP بازدید کنید. اگرچه ف انجمن پشتیبانی روش ترجیحی تماس می‌باشد ، شما می‌توانید به تیم حمایت کننده به آدرس <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a> ایمیل بزنید. </p>\t  <h4>به‌روزرسانی</h4>\t  <p>چنانچه می‌خواهید نسخه موجود را ارتقاء دهید  <a href=\"{$upgradeUrl}\">اینجا را کلیک </a> کنید.</p>\t  <h4>نیازمندی‌های توصیه شده برای نصب این سامانه</h4>   <ul>  <li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; نسخه کنونی PHP {$phpVersion}{$wrongPhpText}</li>  <li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 یا <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>  <li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x or >= 2.0.4x یا Microsoft IIS 6</li>  <li>سیستم‌عامل: هر سیستم‌عاملی که بتواند نیازمندی‌های فوق را دارا باشد که می‌تواند شامل:<a href=\"http://www.linux.org/\" target=\"_blank\">لینوکس</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">سولاریس</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">ویندوز</a></li>  </ul>\t   <p>از آنجا که PKP  دارای تمام امکانات برای تست کردن بر روی هر گونه ترکیب احتمالی  از نسخه‌های مختلف نرم‌افزارهای فوق و سیستم‌های عامل نیست ، هیچ‌گونه تضمینی در مورد عملکرد صحیح و یا حمایت از آن را نمی‌توانیم عهده‌دار شویم</p>\t  <p>پس از خاتمه نصب برنامه می‌توانید این تنظیمات را از طریق ویرایش فایل  <tt>config.inc.php</tt> در شاخه اصلی OJS ، و یا از طریق صفحه مدیریت سایت تغییر دهید.</p>\t  <h4>سیستم‌های بانک اطلاعاتی مورد پشتیبانی</h4>\t  <p>OJS در حال حاضر بر روی MySQL  و PostgreSQL تست شده است. با سایر سیستم‌های بانک اطلاعاتی که توسط <a href=\"http://php.weblogs.com/adodb/\" target=\"_blank\">ADOdb</a> حمایت می‌شوند نیز ممکن است به‌صورت نسبی یا تمام عیار کار کند. گزارشات سازگاری و یا کدهای وصله‌ای برای سایر سیستم‌های بانک اطلاعاتی را می‌توانید به تیم OJS بفرستید</p>"
 

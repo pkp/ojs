@@ -1,0 +1,168 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"この雑誌は、参加図書館による分散型アーカイブシステムを構築するCLOCKSSシステムを使用しています。このシステムの参加図書館が保存および障害復旧の目的で"
+"この雑誌の恒久的アーカイブを作成することを許可します。<a href=\"http://www.clockss.org/\""
+">さらなる情報</a>はここを参照してください。"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"この雑誌は、参加図書館による分散型アーカイブシステムを構築するLOCKSSシステムを使用しています。このシステムの参加図書館が保存および障害復旧の目的でこ"
+"の雑誌の恒久的アーカイブを作成することを許可します。<a href=\"http://www.lockss.org/\""
+">さらなる情報</a>はここを参照してください。"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>"
+"\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "section.default.policy"
+msgstr "セクションデフォルトポリシー"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "査読者"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "査読者"
+
+msgid "default.genres.sourceTexts"
+msgstr "ソーステキスト"
+
+msgid "default.genres.dataSet"
+msgstr "データセット"
+
+msgid "default.genres.dataAnalysis"
+msgstr "データ分析"
+
+msgid "default.genres.transcripts"
+msgstr "筆記録"
+
+msgid "default.genres.researchResults"
+msgstr "研究結果"
+
+msgid "default.genres.researchMaterials"
+msgstr "研究材料"
+
+msgid "default.genres.researchInstrument"
+msgstr "研究装置"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "購読担当者"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "購読担当者"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "セクション編集者"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "セクション編集者"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "ゲスト編集者"
+
+msgid "default.groups.name.guestEditor"
+msgstr "ゲスト編集者"
+
+msgid "default.groups.plural.editor"
+msgstr "雑誌編集者"
+
+msgid "default.groups.name.editor"
+msgstr "雑誌編集者"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.plural.manager"
+msgstr "雑誌管理者"
+
+msgid "default.groups.name.manager"
+msgstr "雑誌管理者"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"研究図書館の方には、この雑誌を電子ジャーナルリストに追加することをお薦めします。また、この雑誌が使用しているオープンソースの出版システムが、図書館が所属の"
+"教員が編集委員をしている雑誌を運用するために提供するシステムとしてふさわしいことも注目に値するでしょう（<a href=\"http://pkp.sfu."
+"ca/ojs\">オープン･ジャーナル･システム</a>のホームページを参照してください）。"
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"この雑誌に論文を投稿することに興味はありませんか。この雑誌のセクションポリシーを示す<a href=\""
+"{$indexUrl}/{$contextPath}/about\">この雑誌について</a>および<a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\""
+">執筆要項</a>をご覧になることをお薦めします。論文を投稿するにはあらかじめこの雑誌に<a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">登録</a>する必要があります。登録済みの方は<a href=\""
+"{$indexUrl}/index/login\">ログイン</a>して、5ステップの投稿処理を開始するだけです。"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"読者には、この雑誌の出版通知サービスへの登録をお薦めします。雑誌ホームページの上部にある<a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">登録</a>リンクをクリックして登録してください。このサービスは、登"
+"録した雑誌に新しい巻号が出版されるたびに、目次情報をメールでお知らせするものです。登録者リストは、この雑誌のサポートや読者数のレベルを主張することを可能に"
+"します。登録読者の名前とメールアドレスは、その他の目的では使用いたしません。この雑誌の<a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\""
+">個人情報の取り扱いについて</a>を参照してください。"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"本雑誌は、知の全世界的な流通を支援するために研究成果を自由に利用できるようにするという原則に基づいて、そのコンテンツを直ちにオープンアクセスで提供します。"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>本雑誌サイトに入力された名前およびメールアドレスは、本雑誌で述べた目的にのみ使用し、他の目的で使用したり、他のいかなる団体にも公開することはありませ"
+"ん。</p>"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "テキストは、執筆要項で示された書式要件および書誌記述要件を順守している。"
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"テキストはシングルスペースで書かれており、12ポイントのフォントサイズを使用しており、下線ではなくイタリック体を使用しており（URLアドレスを除く）、すべ"
+"てのイラスト、図、表は最後にまとめて示すのではなく、テキスト中の適当な場所に埋め込んでいる。"
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "可能な場合、参考文献のURLが提供されている。"
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "投稿ファイルは、OpenOffice、Microsoft Word、またはRTF文書ファイルフォーマットのいずれかである。"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "投稿物はこれまでに出版されておらず、また、別の雑誌に投稿されてもいない（または、編集者へのコメント欄で事情を説明している）。"
+
+msgid "default.genres.article"
+msgstr "投稿原本"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.title"
+msgstr "論文"

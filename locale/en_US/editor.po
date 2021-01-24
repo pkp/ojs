@@ -50,9 +50,6 @@ msgstr "No submissions in the archive."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Are you sure you want to permanently delete this submission?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Are you sure you wish to record this decision?"
 

@@ -93,9 +93,6 @@ restful_urls = Off
 ; Warning: This defaults to "On" if unset for backwards compatibility.
 trust_x_forwarded_for = Off
 
-; Allow javascript files to be served through a content delivery network (set to off to use local files)
-enable_cdn = On
-
 ; Set the maximum number of citation checking processes that may run in parallel.
 ; Too high a value can increase server load and lead to too many parallel outgoing
 ; requests to citation checking web services. Too low a value can lead to significantly
@@ -132,12 +129,13 @@ host = localhost
 username = ojs
 password = ojs
 name = ojs
+
 ; Set the non-standard port and/or socket, if used
 ; port = 3306
 ; unix_socket = /var/run/mysqld/mysqld.sock
 
-; Enable persistent connections
-persistent = Off
+; Database collation
+; collation = utf8_general_ci
 
 ; Enable database debug output (very verbose!)
 debug = Off
@@ -213,7 +211,7 @@ files_dir = files
 ; Windows users should use forward slashes
 public_files_dir = public
 
-; The maximum allowed size in bytes of each user's public files
+; The maximum allowed size in kilobytes of each user's public files
 ; directory. This is where user's can upload images through the
 ; tinymce editor to their bio. Editors can upload images for
 ; some of the settings.
@@ -376,9 +374,6 @@ min_word_length = 3
 ; The maximum number of search results fetched per keyword. These results
 ; are fetched and merged to provide results for searches with several keywords.
 results_per_keyword = 500
-
-; The number of hours for which keyword search results are cached.
-result_cache_hours = 1
 
 ; Paths to helper programs for indexing non-text files.
 ; Programs are assumed to output the converted text to stdout, and "%s" is
