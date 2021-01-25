@@ -375,7 +375,7 @@ class IssueGridHandler extends GridHandler {
 		$form = new PublicIdentifiersForm($issue);
 		$form->clearPubId($request->getUserVar('pubIdPlugIn'));
 		$json = new JSONMessage(true);
-		$json->setEvent('reloadTab', [['tabsLocator' => '#editIssueTabs', 'tabLocator' => '#identifiersTab']]);
+		$json->setEvent('reloadTab', [['tabsSelector' => '#editIssueTabs', 'tabSelector' => '#identifiersTab']]);
 		return $json;
 	}
 
