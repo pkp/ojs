@@ -1,2 +1,32 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-01-25 10:19+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"mn_MN/>\n"
+"Language: mn_MN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.competingInterests"
+msgstr ""
+"Өрсөлдөх сонирхолууд <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">ӨС- Бодлого</a>"
+
+msgid "author.submit.startHereTitle"
+msgstr "Шинэ бүтээл илгээхийг эхлүүлэх"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Бүтээл илгээх 5-н алхамтай"
+
+msgid "author.submit.submitArticle"
+msgstr "Бүтээлээ илгээх"
+
+msgid "author.track"
+msgstr "Идэвхтэй бүтээлүүд"
+
+msgid "author.submit"
+msgstr "Шинэ бүтээл илгээх"
