@@ -42,7 +42,7 @@
 		},
 		{
 			"name": "Site",
-			"description": "Only admins can access these endpoints, which should be accessed using `*` instead of the journal path."
+			"description": "Only admins can access these endpoints, which should be accessed using `_` instead of the journal path."
 		},
 		{
 			"name": "Email Templates",
