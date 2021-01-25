@@ -307,7 +307,9 @@ class IssueGridHandler extends GridHandler {
 		foreach ($submissionsIterator as $submission) {
 			$publications = (array) $submission->getData('publications');
 			foreach ($publications as $publication) {
-				$publication = Services::get('publication')->edit($publication, ['issueId' => '', 'status' => STATUS_QUEUED], $request);
+				if ($publication->getData('issueId') === (int) $issue->getId()) {
+					$publication = Services::get('publication')->edit($publication, ['issueId' => '', 'status' => STATUS_QUEUED], $request);
+				}
 			}
 			$newSubmission = Services::get('submission')->get($submission->getId());
 			Services::get('submission')->updateStatus($newSubmission);
