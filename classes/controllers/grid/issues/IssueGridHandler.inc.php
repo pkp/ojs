@@ -374,7 +374,9 @@ class IssueGridHandler extends GridHandler {
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($issue);
 		$form->clearPubId($request->getUserVar('pubIdPlugIn'));
-		return new JSONMessage(true);
+		$json = new JSONMessage(true);
+		$json->setEvent('reloadTab', [['tabsSelector' => '#editIssueTabs', 'tabSelector' => '#identifiersTab']]);
+		return $json;
 	}
 
 	/**
@@ -563,8 +565,7 @@ class IssueGridHandler extends GridHandler {
 		}
 
 		$dispatcher = $request->getDispatcher();
-		$json = new JSONMessage();
-		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'issuesTabs', null)));
+		$json = DAO::getDataChangedEvent($issue->getId());
 		$json->setGlobalEvent('issueUnpublished', array('id' => $issue->getId()));
 		return $json;
 	}
@@ -586,9 +587,7 @@ class IssueGridHandler extends GridHandler {
 		$issueDao->updateCurrent($journal->getId(), $issue);
 
 		$dispatcher = $request->getDispatcher();
-		$json = new JSONMessage();
-		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'issuesTabs', null)));
-		return $json;
+		return DAO::getDataChangedEvent();
 	}
 
 	/**
