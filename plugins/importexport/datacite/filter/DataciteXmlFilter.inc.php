@@ -192,7 +192,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		if ($sizesNode) $rootNode->appendChild($sizesNode);
 		// Formats
 		if (!empty($galleyFile)) {
-			$format = Services::get('file')->fs->getMimetype($galleyFile->getData('path'));
+			$format = $galleyFile->getData('mimetype');
 			if (!empty($format)) {
 				$formatsNode = $doc->createElementNS($deployment->getNamespace(), 'formats');
 				$formatsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'format', htmlspecialchars($format, ENT_COMPAT, 'UTF-8')));
