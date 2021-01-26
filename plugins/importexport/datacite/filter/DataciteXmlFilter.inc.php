@@ -192,7 +192,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		if ($sizesNode) $rootNode->appendChild($sizesNode);
 		// Formats
 		if (!empty($galleyFile)) {
-			$format = Services::get('file')->fs->getMimetype(Services::get('file')->getPath($galleyFile->getData('fileId')));
+			$format = $galleyFile->getData('mimetype');
 			if (!empty($format)) {
 				$formatsNode = $doc->createElementNS($deployment->getNamespace(), 'formats');
 				$formatsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'format', htmlspecialchars($format, ENT_COMPAT, 'UTF-8')));
@@ -576,8 +576,12 @@ class DataciteXmlFilter extends NativeExportFilter {
 				break;
 			case isset($issue):
 				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-				$issueGalleyFile = $issueGalleyDao->getByIssueId($issue->getId());
-				$sizes[] = $issueGalleyFile->getNiceFileSize();
+				$issueGalleyFiles = $issueGalleyDao->getByIssueId($issue->getId());
+				foreach($issueGalleyFiles as $issueGalleyFile) {
+					if ($issueGalleyFile) {
+						$sizes[] = $issueGalleyFile->getNiceFileSize();
+					}
+				}
 				break;
 			default:
 				assert(false);
