@@ -486,7 +486,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$sticky = null;
 				continue;
 			}
-			if (!starts_with($arg, '--')) {
+			if (substr($arg, 0, 2) != '--') {
 				$newArgs[] = $arg;
 				continue;
 			}
