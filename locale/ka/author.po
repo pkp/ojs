@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-23 14:13+0000\n"
+"PO-Revision-Date: 2021-01-27 11:14+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: ka (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/ka/>\n"
@@ -97,3 +97,97 @@ msgstr "აქტიური შენატანები"
 
 msgid "author.submit"
 msgstr "ახალი შენატანი"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"მიუთითეთ საკვანძო სიტყვები ამ მასალის ინდექსაციისათვის; საკვანძო სიტყვები "
+"გამოყავით წერტილმძიმით (სიტყვა1;სიტყვა2;სიტყვა3)."
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "ძირითადი ავტორი რედაქციასთან მიმოწერისათვის."
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"დაალაგეთ ავტორთა სახელები იმ თანმიმდევრობით, რომლითაც ისინი უნდა იყოს "
+"მითითებული სტატიაში."
+
+msgid "submission.submit.privacyStatement"
+msgstr "ჟურნალის კონფიდენციალურობის განცხადება"
+
+msgid "author.submit.form.localeRequired"
+msgstr "გთხოვთ, აირჩიეთ შესატანი მასალის ენა."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "გთხოვთ, აირჩეით ჟურნალის შესაბამისი განყოფილება ამ მასალისათვის."
+
+msgid "submission.submit.coverNote"
+msgstr "კომენტარები რედაქტორისათვის"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "გასაგრძელებლად უნდა დაეთანხმოთ საავტორო უფლებების გადაცემის წესებს."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"ავტორები ეთანხმებიან საავტორო უფლებების გადაცემის წესებს, რომლებიც "
+"გამოყენებული იქნება ამ მასალასთან მიმართებაში, თუ ის გამოქვეყნდება ამ "
+"ჟურნალში (კომენტარები რედაქტორისათვის შეიძლება დაემატოს ქვემოთ)."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"გასაგრძელებლად უნდა დარწმუნდეთ, რომ შესრულებულია საკონტროლო სიის ყველა "
+"პუნქტი."
+
+msgid "author.submit.journalSectionDescription"
+msgstr ""
+"აირჩიეთ შესაბამისი განყოფილება მასალისათვის (იხილეთ „განყოფილებები და წესები“"
+" გვერდზე <a href=\"{$aboutUrl}\" target=\"_new\">„ჟურნალის შესახებ“</a>)."
+
+msgid "author.submissions.confirmDelete"
+msgstr ""
+"დარწმუნებული ხართ, რომ გსურთ იმ მასალის წაშლა, რომლის გაგზავნა არ "
+"დასრულებულა?"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "შესწორებები კორექტურისას"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "ლიტერატურულად ჩასწორებული ვერსიის ატვირთვა"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "განხილვის პროცესში: საჭიროა კორექტურა"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "განხილვის პროცესში: საჭიროა ლიტერატურული ჩასწორება"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "განხილვის პროცესში: საჭიროა ცვლილება"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "განხილვის პროცესში {$round}"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"თუ თქვენ ითხოვთ საფასურის გაუქმებას, უნდა მიუთითოთ მიზეზი შესაბამის ველში."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"გთხოვთ გამოიყენთ კომენტარების ველი ქვემოთ მიზეზების მისათითებლად, თუ რატომ "
+"უნდა გაქუმდეს საფასური."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "გთხოვთ, განიხილოთ ამ სტატიის შეტანის საფასურის გაუქმების შესაძლებლობა"
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"შეგიძლიათ ამ შეტანის დასრულება მოგვიანებით, ავტორის გვერდზე „აქტიური "
+"მასალები“-ს არჩევით."
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">დააწკაპუნეთ აქ</a> შეტანის ხუთი "
+"ნაბიჯის პროცესზე გადასასვლელად."
+
+msgid "author.competingInterests"
+msgstr ""
+"ინტერესთა კონფლიქტი <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">ინტერესთა კონფლიქტის წესები</a>"
