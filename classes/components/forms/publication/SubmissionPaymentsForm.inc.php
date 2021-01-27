@@ -35,7 +35,7 @@ class SubmissionPaymentsForm extends FormComponent {
 		$this->action = $action;
 
 		$paymentManager = \Application::getPaymentManager($submissionContext);
-		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
 
@@ -51,8 +51,5 @@ class SubmissionPaymentsForm extends FormComponent {
 					($publicationFeePayment->getAmount() ? 'paid' : 'waived')
 				: 'unpaid'
 		]));
-	}
-
-	public function save() {
 	}
 }

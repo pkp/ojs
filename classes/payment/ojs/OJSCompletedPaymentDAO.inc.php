@@ -99,7 +99,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * Delete a completed payment.
 	 * @param $completedPaymentId int
 	 */
-	function deleteById($completedPaymentId) {
+	public function deleteById($completedPaymentId) {
 		Capsule::table('completed_payments')
 			->where('completed_payment_id', '=', $completedPaymentId)
 			->delete();

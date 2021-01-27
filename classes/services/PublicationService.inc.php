@@ -209,7 +209,7 @@ class PublicationService extends PKPPublicationService {
 
 		$context = Services::get('context')->get($submission->getData('contextId'));
 		$paymentManager = \Application::getPaymentManager($context);
-		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
 		if ($publicationFeeEnabled && !$publicationFeePayment) {

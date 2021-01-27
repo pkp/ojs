@@ -65,7 +65,7 @@ class SubmissionPaymentsHandler extends Handler {
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
-	function status($args, $request) {
+	public function status($args, $request) {
 		 AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 
 		 $submissionPaymentsForm = new APP\components\forms\publication\SubmissionPaymentsForm(
@@ -85,8 +85,6 @@ class SubmissionPaymentsHandler extends Handler {
 
 		return $templateMgr->fetchJson('controllers/modals/submissionPayments/status.tpl');
 
-		$templateMgr = TemplateManager::getManager($request);
-
 	}
 
 	/**
@@ -95,10 +93,10 @@ class SubmissionPaymentsHandler extends Handler {
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
-	function save($args, $request) {
+	public function save($args, $request) {
 		$context = $request->getContext();
 		$paymentManager = \Application::getPaymentManager($context);
-		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $this->submission->getId());
 		switch ($request->getUserVar('publicationFeeStatus')) {
@@ -128,7 +126,7 @@ class SubmissionPaymentsHandler extends Handler {
 				if ($publicationFeePayment) $completedPaymentDao->deleteById($publicationFeePayment->getId());
 
 				// Record a fulfilled payment.
-				$stageAssignmentDao = \DAORegistry::getDAO('StageAssignmentDAO');
+				$stageAssignmentDao = \DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
 				$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($this->submission->getId(), ROLE_ID_AUTHOR);
 				$submitterAssignment = $submitterAssignments->next();
 				$queuedPayment = $paymentManager->createQueuedPayment(
