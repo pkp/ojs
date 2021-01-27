@@ -9,7 +9,6 @@
 ./plugins/generic/citationStyleLanguage/lib/vendor
 ./plugins/generic/lucene/embedded
 ./plugins/oaiMetadataFormats/dc/tests/expectedResult.xml
-./plugins/importexport/medra/tests/functional
 ./plugins/importexport/datacite/tests/functional
 ./plugins/importexport/native/tests/functional
 ./plugins/importexport/users/sample.xml
