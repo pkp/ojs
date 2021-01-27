@@ -58,6 +58,14 @@
 			>
 				{translate key="common.preview"}
 			</pkp-button>
+			{if $submissionPaymentsEnabled}
+				<pkp-button
+					ref="submissionPaymentsButton"
+					@click="openSubmissionPayments"
+				>
+					{translate key="common.payments"}
+				</pkp-button>
+			{/if}
 			{if $canAccessEditorialHistory}
 				<pkp-button
 					ref="activityButton"

@@ -30,6 +30,7 @@ class PublicationService extends PKPPublicationService {
 		\HookRegistry::register('Publication::getProperties', [$this, 'getPublicationProperties']);
 		\HookRegistry::register('Publication::validate', [$this, 'validatePublication']);
 		\HookRegistry::register('Publication::validatePublish', [$this, 'validatePublishPublication']);
+		\HookRegistry::register('Publication::validatePublish', [$this, 'validatePublishPayments']);
 		\HookRegistry::register('Publication::version', [$this, 'versionPublication']);
 		\HookRegistry::register('Publication::publish::before', [$this, 'publishPublicationBefore']);
 		\HookRegistry::register('Publication::delete::before', [$this, 'deletePublicationBefore']);
@@ -188,6 +189,31 @@ class PublicationService extends PKPPublicationService {
 		// Every publication must be scheduled in an issue
 		if (!$publication->getData('issueId') || !Services::get('issue')->get($publication->getData('issueId'))) {
 			$errors['issueId'] = __('publication.required.issue');
+		}
+	}
+
+	/**
+	 * Make validation checks against payments, if configured
+	 * @param $hookName string
+	 * @param $args array [
+	 *		@option array Validation errors already identified
+	 *		@option Publication The publication to validate
+	 *		@option Submission The submission of the publication being validated
+	 *		@option array The locales accepted for this object
+	 *		@option string The primary locale for this object
+	 * ]
+	 */
+	public function validatePublishPayments($hookName, $args) {
+		$errors =& $args[0];
+		$submission = $args[2];
+
+		$context = Services::get('context')->get($submission->getData('contextId'));
+		$paymentManager = \Application::getPaymentManager($context);
+		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		$publicationFeeEnabled = $paymentManager->publicationEnabled();
+		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
+		if ($publicationFeeEnabled && !$publicationFeePayment) {
+			$errors['issueId'] = __('editor.article.payment.publicationFeeNotPaid');
 		}
 	}
 

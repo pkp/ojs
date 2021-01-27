@@ -79,12 +79,19 @@ class WorkflowHandler extends PKPWorkflowHandler {
 			$sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
 		}
 
+		import('classes.components.forms.publication.SubmissionPaymentsForm');
 		import('classes.components.forms.publication.AssignToIssueForm');
 		import('classes.components.forms.publication.PublishForm');
 		$templateMgr->setConstants([
+			'FORM_SUBMISSION_PAYMENTS',
 			'FORM_ASSIGN_TO_ISSUE',
 			'FORM_ISSUE_ENTRY',
 			'FORM_PUBLISH',
+		]);
+
+		$paymentManager = \Application::getPaymentManager($submissionContext);
+		$templateMgr->assign([
+			'submissionPaymentsEnabled' => $paymentManager->publicationEnabled(),
 		]);
 
 		$components = $templateMgr->getState('components');
@@ -118,7 +125,22 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$publicationFormIds = $templateMgr->getState('publicationFormIds');
 		$publicationFormIds[] = FORM_ISSUE_ENTRY;
 
+		$submissionPaymentsUrl = $request->getDispatcher()->url(
+			$request,
+			ROUTE_COMPONENT,
+			null,
+			'modals.submissionPayments.SubmissionPaymentsHandler',
+			'status',
+			null,
+			[
+				'submissionId' => $submission->getId(),
+				'publicationId' => '__publicationId__',
+			]
+		);
+
 		$templateMgr->setState([
+			'submissionPaymentsUrl' => $submissionPaymentsUrl,
+			'submissionPaymentsLabel' => __('common.payments'),
 			'assignToIssueUrl' => $assignToIssueUrl,
 			'components' => $components,
 			'publicationFormIds' => $publicationFormIds,
