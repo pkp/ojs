@@ -31,6 +31,7 @@ class ContextService extends \PKP\Services\PKPContextService {
 
 		\HookRegistry::register('Context::add', array($this, 'afterAddContext'));
 		\HookRegistry::register('Context::edit', array($this, 'afterEditContext'));
+		\HookRegistry::register('Context::delete::before', array($this, 'beforeDeleteContext'));
 		\HookRegistry::register('Context::delete', array($this, 'afterDeleteContext'));
 		\HookRegistry::register('Context::validate', array($this, 'validateContext'));
 	}
@@ -75,6 +76,7 @@ class ContextService extends \PKP\Services\PKPContextService {
 	 */
 	public function afterEditContext($hookName, $args) {
 		$newContext = $args[0];
+		$currentContext = $args[1];
 		$params = $args[2];
 		$request = $args[3];
 
@@ -96,6 +98,40 @@ class ContextService extends \PKP\Services\PKPContextService {
 				$newContext->setData('journalThumbnail', $localeValue, $localeKey);
 			}
 		}
+
+		// If the context is enabled or disabled, create or delete
+		// tombstones for all published submissions
+		if ($newContext->getData('enabled') !== $currentContext->getData('enabled')) {
+			import('classes.article.ArticleTombstoneManager');
+			$articleTombstoneManager = new \ArticleTombstoneManager();
+			if ($newContext->getData('enabled')) {
+				$articleTombstoneManager->deleteTombstonesByContextId($newContext->getId());
+			} else {
+				$articleTombstoneManager->insertTombstonesByContext($newContext);
+			}
+		}
+	}
+
+	/**
+	 * Perform actions before a context has been deleted
+	 *
+	 * This should only be used in cases where you need the context to still exist
+	 * in the database to complete the actions. Otherwise, use
+	 * ContextService::afterDeleteContext().
+	 *
+	 * @param $hookName string
+	 * @param $args array [
+	 *		@option Context The new context
+	 *		@option Request
+	 * ]
+	 */
+	public function beforeDeleteContext($hookName, $args) {
+		$context = $args[0];
+
+		// Create tombstones for all published submissions
+		import('classes.article.ArticleTombstoneManager');
+		$articleTombstoneManager = new \ArticleTombstoneManager();
+		$articleTombstoneManager->insertTombstonesByContext($context);
 	}
 
 	/**
