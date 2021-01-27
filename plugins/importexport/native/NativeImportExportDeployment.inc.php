@@ -80,10 +80,10 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 	}
 
 	/**
-	 * @see PKPNativeImportExportDeployment::getObjectTypesArray()
+	 * @see PKPNativeImportExportDeployment::getObjectTypes()
 	 */
-	protected function getObjectTypesArray() {
-		$objectTypes = parent::getObjectTypesArray();
+	protected function getObjectTypes() {
+		$objectTypes = parent::getObjectTypes();
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 		$objectTypes = $objectTypes + array(
 				ASSOC_TYPE_JOURNAL => __('context.context'),
