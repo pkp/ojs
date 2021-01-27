@@ -565,7 +565,7 @@ class Issue extends DataObject {
 	 * @return string A string that Identifies the object
 	 */
 	function getUIDisplayString() {
-		return $this->getId() . ' - ' . $this->getIssueIdentification();
+		return  $this->getId() . ' - ' . $this->getIssueIdentification();
 	}
 }
 

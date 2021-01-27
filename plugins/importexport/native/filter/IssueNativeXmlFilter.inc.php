@@ -216,7 +216,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$issue = $issueGalleyDao->getByIssueId($issue->getId());
 		$issueGalleysDoc = $currentFilter->execute($issue);
 
-		// throw new Exception('Ass Issue Galleys Exception');
 		if ($issueGalleysDoc->documentElement instanceof DOMElement) {
 			$clone = $doc->importNode($issueGalleysDoc->documentElement, true);
 			$issueNode->appendChild($clone);
