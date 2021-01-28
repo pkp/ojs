@@ -90,6 +90,21 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$components = $templateMgr->getState('components');
 		$components[FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
 
+		// Add payments form if enabled
+		$paymentManager = \Application::getPaymentManager($submissionContext);
+		$templateMgr->assign([
+			'submissionPaymentsEnabled' => $paymentManager->publicationEnabled(),
+		]);
+		if ($paymentManager->publicationEnabled()) {
+			$submissionPaymentsForm = new APP\components\forms\publication\SubmissionPaymentsForm(
+				$request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), '_submissions/' . $submission->getId() . '/payment'),
+				$submission,
+				$request->getContext()
+			);
+			$components[FORM_SUBMISSION_PAYMENTS] = $submissionPaymentsForm->getConfig();
+			$templateMgr->setConstants([FORM_SUBMISSION_PAYMENTS]);
+		}
+
 		// Add the word limit to the existing title/abstract form
 		if (!empty($components[FORM_TITLE_ABSTRACT]) &&
 				array_key_exists($submission->getLatestPublication()->getData('sectionId'), $sectionWordLimits)) {

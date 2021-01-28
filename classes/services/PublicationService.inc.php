@@ -184,10 +184,24 @@ class PublicationService extends PKPPublicationService {
 	public function validatePublishPublication($hookName, $args) {
 		$errors =& $args[0];
 		$publication = $args[1];
+		$submission = $args[2];
 
 		// Every publication must be scheduled in an issue
 		if (!$publication->getData('issueId') || !Services::get('issue')->get($publication->getData('issueId'))) {
 			$errors['issueId'] = __('publication.required.issue');
+		}
+
+		// If submission fees are enabled, check that they're fulfilled
+		$context = Application::get()->getRequest()->getContext();
+		if (!$context || $context->getId() !== $submission->getData('contextId')) {
+			$context = Services::get('context')->get($submission->getData('contextId'));
+		}
+		$paymentManager = \Application::getPaymentManager($context);
+		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+		$publicationFeeEnabled = $paymentManager->publicationEnabled();
+		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
+		if ($publicationFeeEnabled && !$publicationFeePayment) {
+			$errors['publicationFeeStatus'] = __('editor.article.payment.publicationFeeNotPaid');
 		}
 	}
 

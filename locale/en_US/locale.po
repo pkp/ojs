@@ -1625,6 +1625,12 @@ msgstr "You must be logged in to make a donation."
 msgid "payment.paid"
 msgstr "Paid"
 
+msgid "payment.unpaid"
+msgstr "Unpaid"
+
+msgid "payment.waived"
+msgstr "Waived"
+
 msgid "payment.payNow"
 msgstr "Pay Now"
 

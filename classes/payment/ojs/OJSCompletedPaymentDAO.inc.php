@@ -15,6 +15,8 @@
  *
  */
 
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 import('lib.pkp.classes.payment.CompletedPayment');
 import('classes.payment.ojs.OJSPaymentManager'); // Constants
 
@@ -91,6 +93,16 @@ class OJSCompletedPaymentDAO extends DAO {
 				(int) $completedPayment->getId()
 			]
 		);
+	}
+
+	/**
+	 * Delete a completed payment.
+	 * @param $completedPaymentId int
+	 */
+	public function deleteById($completedPaymentId) {
+		Capsule::table('completed_payments')
+			->where('completed_payment_id', '=', $completedPaymentId)
+			->delete();
 	}
 
 	/**

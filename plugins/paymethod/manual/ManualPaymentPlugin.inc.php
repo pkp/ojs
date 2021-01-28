@@ -57,6 +57,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	 * @param $form FormComponent
 	 */
 	public function addSettings($hookName, $form) {
+		import('lib.pkp.classes.components.forms.context.PKPPaymentSettingsForm'); // Load constant
 		if ($form->id !== FORM_PAYMENT_SETTINGS) {
 			return;
 		}
