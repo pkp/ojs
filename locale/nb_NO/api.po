@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-16 10:53+0000\n"
-"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"PO-Revision-Date: 2021-01-28 16:11+0000\n"
+"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "api/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -63,3 +63,6 @@ msgstr "Du kan ikke knytte en fil fra dette steget til et oppsett."
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Oppslaget du søkte etter finnes ikke i dette tidsskriftet."
+
+msgid "api.emails.403.disabled"
+msgstr "E-postvarsler er ikke slått på for dette tidsskriftet."
