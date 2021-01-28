@@ -101,7 +101,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		if ($paymentManager->publicationEnabled()) {
 			$submissionPaymentsForm = new APP\components\forms\publication\SubmissionPaymentsForm(
-				$request->getDispatcher()->url($request, ROUTE_COMPONENT, null, 'modals.submissionPayments.SubmissionPaymentsHandler', 'save', null, ['submissionId' => $submission->getId()]),
+				$request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), '_submissions/' . $submission->getId() . '/payment'),
 				$submission,
 				$request->getContext()
 			);
@@ -136,22 +136,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$publicationFormIds = $templateMgr->getState('publicationFormIds');
 		$publicationFormIds[] = FORM_ISSUE_ENTRY;
 
-		$submissionPaymentsUrl = $request->getDispatcher()->url(
-			$request,
-			ROUTE_COMPONENT,
-			null,
-			'modals.submissionPayments.SubmissionPaymentsHandler',
-			'status',
-			null,
-			[
-				'submissionId' => $submission->getId(),
-				'publicationId' => '__publicationId__',
-			]
-		);
-
 		$templateMgr->setState([
-			'submissionPaymentsUrl' => $submissionPaymentsUrl,
-			'submissionPaymentsLabel' => __('common.payments'),
 			'assignToIssueUrl' => $assignToIssueUrl,
 			'components' => $components,
 			'publicationFormIds' => $publicationFormIds,
