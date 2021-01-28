@@ -24,21 +24,35 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler {
 	public function __construct() {
 		\HookRegistry::register('API::_submissions::params', array($this, 'addAppSubmissionsParams'));
 
-		$this->_endpoints = array_merge_recursive($this->_endpoints, array(
-			'POST' => array(
-				array(
+		$this->_endpoints = array_merge_recursive($this->_endpoints, [
+			'PUT' => [
+				[
 					'pattern' => '/{contextPath}/api/{version}/_submissions/{submissionId}/payment',
-					'handler' => array($this, 'payment'),
-					'roles' => array(
+					'handler' => [$this, 'payment'],
+					'roles' => [
 						ROLE_ID_SUB_EDITOR,
 						ROLE_ID_MANAGER,
 						ROLE_ID_ASSISTANT,
-					),
-				),
-			),
-		));
+					],
+				],
+			],
+		]);
 
 		parent::__construct();
+	}
+
+	/**
+	 * @copydoc PKPHandler::authorize()
+	 */
+	public function authorize($request, &$args, $roleAssignments) {
+		$routeName = $this->getSlimRequest()->getAttribute('route')->getName();
+
+		if ($routeName === 'payment') {
+			import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
+			$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
+		}
+
+		return parent::authorize($request, $args, $roleAssignments);
 	}
 
 	/**
@@ -68,28 +82,40 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler {
 	}
 
 	/**
-	 * Change the status of publication payments.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
+	 * Change the status of submission payments.
+	 *
+	 * @param $slimRequest Request Slim request object
+	 * @param $response Response object
+	 * @param array $args arguments
+	 * @return Response
 	 */
 	public function payment($slimRequest, $response, $args) {
 		$request = $this->getRequest();
 		$context = $request->getContext();
-		$submissionId = (int) $args['submissionId'];
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-		$submission = $submissionDao->getById($submissionId);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
-		if (!$submission || $context->getId() != $submission->getContextId()) {
+		if (!$submission || !$context || $context->getId() != $submission->getContextId()) {
 			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$paymentManager = \Application::getPaymentManager($context);
-		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
+		if (!$publicationFeeEnabled) {
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+		}
+
+		$params = $slimRequest->getParsedBody();
+
+		if (empty($params['publicationFeeStatus'])) {
+			return $response->withJson([
+				'publicationFeeStatus' => [__('validator.required')],
+			], 400);
+		}
+
+		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
 
-		switch ($request->getUserVar('publicationFeeStatus'])) {
+		switch ($params['publicationFeeStatus']) {
 			case 'waived':
 				// Check if a waiver already exists; if so, don't do anything.
 				if ($publicationFeePayment && !$publicationFeePayment->getAmount()) break;
@@ -133,7 +159,12 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler {
 			case 'unpaid':
 				if ($publicationFeePayment) $completedPaymentDao->deleteById($publicationFeePayment->getId());
 				break;
-			default: throw new Exception('Unknown fee payment status!');
+			default:
+				return $response->withJson([
+					'publicationFeeStatus' => [__('validator.required')],
+				], 400);
 		}
+
+		return $response->withJson(true);
 	}
 }

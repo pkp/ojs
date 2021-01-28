@@ -34,9 +34,7 @@ class SubmissionPaymentsForm extends FormComponent {
 	public function __construct($action, $submission, $submissionContext) {
 		$this->action = $action;
 
-		$paymentManager = \Application::getPaymentManager($submissionContext);
 		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
-		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
 
 		$this->addField(new FieldRadioInput('publicationFeeStatus', [
@@ -47,8 +45,8 @@ class SubmissionPaymentsForm extends FormComponent {
 				['value' => 'paid', 'label' => __('payment.paid')],
 				['value' => 'unpaid', 'label' => __('payment.unpaid')],
 			],
-			'value' => $publicationFeePayment ?
-					($publicationFeePayment->getAmount() ? 'paid' : 'waived')
+			'value' => $publicationFeePayment
+				? ($publicationFeePayment->getAmount() ? 'paid' : 'waived')
 				: 'unpaid'
 		]));
 	}
