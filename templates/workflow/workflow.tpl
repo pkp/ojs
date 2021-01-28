@@ -59,12 +59,14 @@
 				{translate key="common.preview"}
 			</pkp-button>
 			{if $submissionPaymentsEnabled}
-				<pkp-button
-					ref="submissionPaymentsButton"
-					@click="openSubmissionPayments"
-				>
-					{translate key="common.payments"}
-				</pkp-button>
+				<span class="pkpPublication__relation">
+					<dropdown
+						class="pkpWorkflow__submissionPayments"
+						label="{translate key="common.payments"}"
+					>
+						<pkp-form class="pkpWorkflow__submissionPaymentsForm" v-bind="components.{$smarty.const.FORM_SUBMISSION_PAYMENTS}" @set="set">
+					</dropdown>
+				</span>
 			{/if}
 			{if $canAccessEditorialHistory}
 				<pkp-button

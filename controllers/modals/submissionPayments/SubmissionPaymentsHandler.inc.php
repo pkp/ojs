@@ -28,7 +28,7 @@ class SubmissionPaymentsHandler extends Handler {
 		parent::__construct();
 		$this->addRoleAssignment(
 			[ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER, ROLE_ID_ASSISTANT],
-			['status', 'save']
+			['save']
 		);
 	}
 
@@ -58,35 +58,6 @@ class SubmissionPaymentsHandler extends Handler {
 	//
 	// Public handler methods
 	//
-	/**
-	 * Display the status of publication payments.
-	 *
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	public function status($args, $request) {
-		 AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-
-		 $submissionPaymentsForm = new APP\components\forms\publication\SubmissionPaymentsForm(
-			$request->getDispatcher()->url($request, ROUTE_COMPONENT, null, 'modals.submissionPayments.SubmissionPaymentsHandler', 'save', null, ['submissionId' => $this->submission->getId()]),
-			$this->submission,
-			$request->getContext()
-		);
-
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign([
-			'assignData' => [
-				'components' => [
-					FORM_SUBMISSION_PAYMENTS => $submissionPaymentsForm->getConfig(),
-				],
-			],
-		]);
-
-		return $templateMgr->fetchJson('controllers/modals/submissionPayments/status.tpl');
-
-	}
-
 	/**
 	 * Change the status of publication payments.
 	 * @param $args array
