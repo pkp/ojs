@@ -192,13 +192,16 @@ class PublicationService extends PKPPublicationService {
 		}
 
 		// If submission fees are enabled, check that they're fulfilled
-		$context = Services::get('context')->get($submission->getData('contextId'));
+		$context = Application::get()->getRequest()->getContext();
+		if (!$context || $context->getId() !== $submission->getData('contextId')) {
+			$context = Services::get('context')->get($submission->getData('contextId'));
+		}
 		$paymentManager = \Application::getPaymentManager($context);
 		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
 		if ($publicationFeeEnabled && !$publicationFeePayment) {
-			$errors['issueId'] = __('editor.article.payment.publicationFeeNotPaid');
+			$errors['publicationFeeStatus'] = __('editor.article.payment.publicationFeeNotPaid');
 		}
 	}
 
