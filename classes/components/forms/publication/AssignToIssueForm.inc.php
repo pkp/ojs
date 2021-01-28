@@ -33,7 +33,6 @@ class AssignToIssueForm extends FormComponent {
 	 */
 	public function __construct($action, $publication, $publicationContext) {
 		$this->action = $action;
-		$this->successMessage = __('publication.issue.success');
 
 		// Issue options
 		$issueOptions = [['value' => '', 'label' => '']];

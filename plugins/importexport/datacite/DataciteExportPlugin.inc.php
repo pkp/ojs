@@ -394,7 +394,8 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 		$router = $request->getRouter();
 		// Retrieve the article of article files.
 		if (is_a($object, 'ArticleGalley')) {
-			$articleId = $object->getSubmissionId();
+			$publication = Services::get('publication')->get($object->getData('publicationId'));
+			$articleId = $publication->getData('submissionId');
 			$cache = $this->getCache();
 			if ($cache->isCached('articles', $articleId)) {
 				$article = $cache->get('articles', $articleId);

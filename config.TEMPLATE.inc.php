@@ -188,10 +188,7 @@ locale = en_US
 client_charset = utf-8
 
 ; Database connection character set
-; Must be set to "Off" if not supported by the database server
-; If enabled, must be the same character set as "client_charset"
-; (although the actual name may differ slightly depending on the server)
-connection_charset = Off
+connection_charset = utf8
 
 
 ;;;;;;;;;;;;;;;;;
