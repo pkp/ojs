@@ -72,7 +72,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 		$issue_identification = $node->getElementsByTagName('issue_identification');
 		if (!$datePublished && ($issue || $issue_identification->length)) {
 			$titleNodes = $node->getElementsByTagName('title');
-			$deployment->addError(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('publicationTitle' => $titleNodes->item(0)->textContent)));
+			$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
 		}
 
 		$this->populatePublishedPublication($publication, $node);
