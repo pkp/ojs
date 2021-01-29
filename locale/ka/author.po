@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-23 14:13+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: ka (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
+"author/ka/>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.submissionFile"
+msgstr "გასაგზავნი ფაილი"
+
+msgid "author.submit.form.titleRequired"
+msgstr "გთხოვთ შეიტანოთ სტატიის სათაური."
+
+msgid "author.submit.form.authorRequired"
+msgstr "სულ მცირე, ერთი ავტორი სავალდებულოა."
+
+msgid "author.submit.deleteAuthor"
+msgstr "ავტორის წაშლა"
+
+msgid "author.submit.addAuthor"
+msgstr "ავტორის დამატება"
+
+msgid "author.submit.reorder"
+msgstr "ავტორების სახელების გადაადგილება"
+
+msgid "author.submit.comments"
+msgstr "შეიტანეთ ტექსტი (არასავალდებულო)"
+
+msgid "author.submit.journalSection"
+msgstr "ჟურნალის სექცია"
+
+msgid "author.submissions.noSubmissions"
+msgstr "არ არის გაგზავნილი მასალები."
+
+msgid "author.submissions.viewStatus"
+msgstr "სტატუსის ჩვენება"
+
+msgid "author.submit.requestWaiver"
+msgstr "საფასურის გადახდის გაუქმების მოთხოვნა"
+
+msgid "author.submit.notAccepting"
+msgstr "ამჟამად ეს ჟურნალი არ იღებს მასალებს."
+
+msgid "author.submit.nextSteps"
+msgstr "შემდეგი ბიჯები"
+
+msgid "author.submit.confirmation"
+msgstr "დადასტურება"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "დამატებითი ფაილების ატვირთვა"
+
+msgid "author.submit.metadata"
+msgstr "მეტა-მონაცემების შეტანა"
+
+msgid "author.submit.upload"
+msgstr "მასალის ატვირთვა"
+
+msgid "author.submit.start"
+msgstr "დაწყება"
+
+msgid "author.submit.step5"
+msgstr "ბიჯი 5. მასალის შეტანის დადასტურება"
+
+msgid "author.submit.step4a"
+msgstr "ბიჯი 4ა. დამატებითი ფაილის ატვირთვა"
+
+msgid "author.submit.step4"
+msgstr "ბიჯი 4. დამატებითი ფაილების ატვირთვა"
+
+msgid "author.submit.step3"
+msgstr "ბიჯი 3. მასალის მეტა-მონაცემების შეტანა"
+
+msgid "author.submit.step2"
+msgstr "ბიჯი 2. მასალების ატვირთვა"
+
+msgid "author.submit.step1"
+msgstr "ბიჯი 1. შეტანის დაწყება"
+
+msgid "author.submit.startHereTitle"
+msgstr "ახალი შენატანის გაგზავნა"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "ხუთი ნაბიჯი გაგზავნისათვის"
+
+msgid "author.submit.submitArticle"
+msgstr "სტატიის გაგზავნა"
+
+msgid "author.track"
+msgstr "აქტიური შენატანები"
+
+msgid "author.submit"
+msgstr "ახალი შენატანი"

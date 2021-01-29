@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-22 06:30+0000\n"
+"PO-Revision-Date: 2021-01-16 10:53+0000\n"
 "Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "api/nb_NO/>\n"
@@ -57,3 +57,9 @@ msgstr "Du har ikke tillatelse til å se upubliserte utgaver."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Du kan ikke bytte tidsskrift for en innlevering."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Du kan ikke knytte en fil fra dette steget til et oppsett."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Oppslaget du søkte etter finnes ikke i dette tidsskriftet."

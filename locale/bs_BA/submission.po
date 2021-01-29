@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-25 11:52+0000\n"
+"PO-Revision-Date: 2021-01-20 09:02+0000\n"
 "Last-Translator: Kazimir Hrastek <kazimir3385@gmail.com>\n"
 "Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "bs_BA/>\n"
@@ -259,3 +259,101 @@ msgstr "Zakazano za objavljivanje u <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.publishedIn"
 msgstr "Objavljeno u <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "submission.queries.production"
+msgstr "Rasprave o produkciji"
+
+msgid "publication.version.details"
+msgstr "Detalji o publikaciji za verziju {$version}"
+
+msgid "publication.unschedule.confirm"
+msgstr "Jeste li sigurni da ne želite da ovo bude zakazano za objavljivanje?"
+
+msgid "publication.unpublish.confirm"
+msgstr "Jeste li sigurni da ne želite da ovo bude objavljeno?"
+
+msgid "publication.unpublish"
+msgstr "Ne objavljuj"
+
+msgid "submission.copyrightOther.description"
+msgstr "Dodijelite autorska prava za objavljene predaje rada sljedećoj strani."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Autorska prava će se automatski dodijeliti {$copyright} kada se ovo objavi."
+
+msgid "submission.license.description"
+msgstr ""
+"Licenca će biti automatski postavljena na <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> kada se ovo objavi."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Predaja rada mora biti u fazi uređivanja ili izrade prije nego što može biti "
+"objavljena."
+
+msgid "publication.required.declined"
+msgstr "Odbijena predaja rada ne može se objaviti."
+
+msgid "publication.publish.requirements"
+msgstr "Da bi se ovo moglo objaviti, moraju se ispuniti sljedeći zahtjevi."
+
+msgid "publication.publish"
+msgstr "Objavi"
+
+msgid "publication.invalidSubmission"
+msgstr "Predaja rada za ovu publikaciju nije pronađena."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Verzija je uklonjena iz publikacije."
+
+msgid "publication.status.unscheduled"
+msgstr "Nije zakazano"
+
+msgid "publication.changeIssue"
+msgstr "Promijeni izdanje"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Ovo je dodijeljeno <a href=\"{$issueUrl}\">{$issueName}</a>, ali nije "
+"zakazano za objavljivanje."
+
+msgid "galley.publicationNotFound"
+msgstr "Publikacija za ovu kopiju nije pronađena."
+
+msgid "galley.editPublishedDisabled"
+msgstr "Kopije ove publikacije nije moguće uređivati jer je već objavljena."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Ova korektura je odobrena za uvrštavanje u kopiju."
+
+msgid "grid.action.approveProof"
+msgstr "Odobri ovu korekturu za uvrštavanje u kopiju."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Uređivač izgleda ovdje prenosi datoteke spremne za produkciju koje su "
+"pripremljene za objavljivanje. Koristite <em>Dodijeli revizora</em> da biste "
+"odredili autore i druge koji će lektorisati kopije, s ispravljenim "
+"datotekama koje su prenesene na odobrenje prije objavljivanja."
+
+msgid "submission.galleyFiles"
+msgstr "Datoteke kopije"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Učini ovu kopiju dostupnom"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Ova kopija će<em>biti dostupna</em>čitateljima.</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Ova kopija<em>više neće biti dostupna</em>čitateljima.</p>"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Kopija članka \"{$ galley FormatName}\" nije dostupna."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Kopija članka \"{$ galley FormatName}\" je dostupna."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Kopija se pojavljuje u unosu izdanja"

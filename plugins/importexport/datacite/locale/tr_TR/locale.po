@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:38+00:00\n"
-"PO-Revision-Date: 2020-12-18 09:16+0000\n"
+"PO-Revision-Date: 2021-01-15 08:15+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-datacite/tr_TR/>\n"
@@ -59,3 +59,12 @@ msgstr "OJS, DOI'leri otomatik olarak DataCite'a depolayacak. Lütfen bu işlemi
 
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr "DOI kaydı için DataCite test önekini kullanın. Lütfen bu seçeneği yayın için kaldırmayı unutmayın."
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Test DOI Öneki"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Test Şifre"
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Test Kullanıcı adı"
