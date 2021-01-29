@@ -1694,12 +1694,6 @@ msgstr "Registracija je bila uspešna!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Revija s potjo {$path} nima DOI prefiksa."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "NAPAKA:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Podana pot revije, \"{$journalPath}\", ne obstaja."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Izbranih objektov ni bilo mogoče najti."
 

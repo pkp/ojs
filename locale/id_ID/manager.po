@@ -1603,12 +1603,6 @@ msgstr "Registrasi berhasil!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Prefix DOI tidak ditemukan untuk jurnal dengan path {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERROR:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Path jurnal yang Anda cari, \"{$journalPath}\", tidak ada."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Objek yang Anda cari tidak dapat ditemukan."
 

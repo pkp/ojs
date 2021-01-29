@@ -1574,12 +1574,6 @@ msgstr "Rekisteröinti onnistui!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Julkaisulta, jonka polku on {$path}, puuttuu DOI-prefiksi."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "VIRHE:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Annettua lehden polkua, \"{$journalPath}\", ei löydy."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Annettuja kohteita ei löytynyt."
 

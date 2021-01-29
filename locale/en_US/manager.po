@@ -1679,12 +1679,6 @@ msgstr "Validation Failed."
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI prefix is missing for the journal with the path {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERROR:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "The specified journal path, \"{$journalPath}\", does not exist."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "The specified objects could not be found."
 
@@ -1714,3 +1708,6 @@ msgstr "Abstracts"
 
 msgid "stats.publications.galleys"
 msgstr "Files"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Export Issues Results"

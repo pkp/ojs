@@ -1680,12 +1680,6 @@ msgstr "Il file di input {$param} non è leggibile."
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Il prefisso DOI manca per la rivista con il path {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERRORE:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Il path specificato, \"{$journalPath}\", non esiste."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Gli oggetti specificati non sono stati trovati."
 

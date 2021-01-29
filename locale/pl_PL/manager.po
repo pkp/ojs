@@ -1163,12 +1163,6 @@ msgstr "Rejestracja zakończona sukcesem!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Prefix DOI dla czasopisma o ścieżce {$path} nie istnieje."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "BŁĄD:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Określona ścieżka \"{$journalPath}\" nie istnieje."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Obiekt nie został znaleziony."
 

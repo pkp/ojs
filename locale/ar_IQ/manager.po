@@ -1675,12 +1675,6 @@ msgstr "نجحت عملية التسجيل!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "بادئة معرف DOI مفقودة للمجلة الموجودة في المسار {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "خطأ:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "المسار المخصص للمجلة، \"{$journalPath}\"، غير موجود."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "المكونات المحددة تعذر العثور عليها."
 

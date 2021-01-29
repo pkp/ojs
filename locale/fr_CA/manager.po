@@ -1704,12 +1704,6 @@ msgstr "Enregistrement réussi !"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Le préfixe du DOI est manquant pour la revue ayant le chemin d'accès {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERREUR :"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Le chemin « {$journalPath} » de la revue n'existe pas."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "L'objet spécifié est introuvable."
 
