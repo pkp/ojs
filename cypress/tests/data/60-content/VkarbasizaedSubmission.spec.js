@@ -205,5 +205,12 @@ describe('Data suite tests', function() {
 		cy.get('button:contains("OK")').click();
 		cy.visit('index.php/publicknowledge/manageIssues#future');
 		cy.get('span:contains("' + issueTitle + '")');
+		// define the back issue as the current issue again
+		cy.visit('index.php/publicknowledge/manageIssues#back');
+		cy.get('span:contains("Vol. 1 No. 2 (2014)")').prev('a.show_extras').click();
+		cy.get('tr:contains("Vol. 1 No. 2 (2014)")').next().contains('a', 'Current Issue').click();
+		cy.get('button:contains("OK")').click();
+		cy.visit('index.php/publicknowledge/issue/current');
+		cy.contains(submission.title);
 	});
 });
