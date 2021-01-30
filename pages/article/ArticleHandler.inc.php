@@ -394,6 +394,7 @@ class ArticleHandler extends Handler {
 
 			// If the file ID is not the galley's file ID, ensure it is a dependent file, or else 404.
 			if ($this->fileId != $this->galley->getData('submissionFileId')) {
+				import('lib.pkp.classes.submission.SubmissionFile'); // Constants
 				$dependentFileIds = Services::get('submissionFile')->getIds([
 					'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
 					'assocIds' => [$this->galley->getFileId()],
