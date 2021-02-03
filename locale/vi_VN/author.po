@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-16 19:13+0000\n"
+"PO-Revision-Date: 2021-02-03 17:44+0000\n"
 "Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "vi_VN/>\n"
@@ -92,7 +92,7 @@ msgid "author.submit.suppFile.briefDescription"
 msgstr "Mô tả ngắn gọn"
 
 msgid "author.submit.suppFile.sourceText"
-msgstr "Nguồn văn bản"
+msgstr "Văn bản nguồn"
 
 msgid "author.submit.suppFile.dataSet"
 msgstr "Tập dữ liệu"
@@ -333,7 +333,7 @@ msgid "author.submit.step4"
 msgstr "Bước 4. Tải lên tập tin phụ trợ"
 
 msgid "author.submit.step3"
-msgstr "Bước 3. Nhập siêu dữ liệu mô tả bài viết"
+msgstr "Bước 3. Nhập siêu dữ liệu mô tả"
 
 msgid "author.submit.step2"
 msgstr "Bước 2. Tải lên tập tin bài gửi"
