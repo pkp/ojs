@@ -47,9 +47,6 @@ msgstr "Нема предаја у архиви."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Сачувај измене у архивираним предајама? Предаје које су означене за брисање ће бити трајно обрисане."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Да ли желите да трајно обришете предаје?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Да ли желите да забележите ову одлуку?"
 

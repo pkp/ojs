@@ -3,8 +3,8 @@
 /**
  * @file pages/issue/IssueHandler.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueHandler
@@ -324,6 +324,7 @@ class IssueHandler extends Handler {
 		foreach ($sections as $section) {
 			$issueSubmissionsInSection[$section->getId()] = [
 				'title' => $section->getHideTitle()?null:$section->getLocalizedTitle(),
+				'hideAuthor' => $section->getHideAuthor(),
 				'articles' => [],
 			];
 		}

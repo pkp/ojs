@@ -53,9 +53,6 @@ msgstr "Nincs beküldött anyag az archívumban."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Mentse a változtatásokat az archívált beadványnál? A törlésre kijelölt beadványok véglegesen törlődnek a rendszerből."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Biztos benne, hogy véglegesen törli az anyagot a rendszerből?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Biztos, hogy rögzíteni akarja ezt a döntést?"
 

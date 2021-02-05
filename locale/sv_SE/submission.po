@@ -222,7 +222,7 @@ msgstr "{$numTitles} Objekt"
 msgid "publication.selectIssue"
 msgstr "Välj ett nummer som publikationen ska publiceras i"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Tilldela till ett nummer"
 
 msgid "publication.unscheduledIn"

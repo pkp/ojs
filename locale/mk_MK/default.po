@@ -1,0 +1,187 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-15 08:15+0000\n"
+"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Ова списание овозможува непосреден отворен пристап до неговата содржина врз "
+"основа на принципот дека истражувањето кое е слободно достапно за јавноста "
+"поддржува поголема глобална размена на знаење."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Имињата и и-меил адресите внесени на страницата на ова списание ќе бидат "
+"користени исклучиво за наведените цели на ова списание и нема да бидат "
+"достапни за било која друга цел или на било кое друго лице.</p>"
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Поднесокот е од тип OpenOffice, Microsoft Word, или RTF документ."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"Поднесокот не бил објавен претходно, ниту е пријавен за разгледување во "
+"друго списание (или е поднесено објаснување во коментари до уредникот)."
+
+msgid "default.genres.article"
+msgstr "Текст на трудот"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.title"
+msgstr "Трудови"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+"Текстот се придржува кон стилските и библиографските барања наведени во "
+"упатството за авторот."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"Текстот е со единечен проред; користи фонт од 12 точки; користи италикс, "
+"повеќе отколку подвлечено (освен во URL адреси); и сите илустрации, слики и "
+"табели се сместени во текстот во соодветни точки , отколку на крајот."
+
+msgid "section.default.policy"
+msgstr "Стандарден став на одделот"
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Каде што се достапни, обезбедени се URL-адреси за референците."
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>"
+"\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Р"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Рецензенти"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Рецензент"
+
+msgid "default.genres.sourceTexts"
+msgstr "Изворни текстови"
+
+msgid "default.genres.dataSet"
+msgstr "Збир на податоци"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Анализа на податоци"
+
+msgid "default.genres.transcripts"
+msgstr "Записници"
+
+msgid "default.genres.researchResults"
+msgstr "Резултати од истражување"
+
+msgid "default.genres.researchMaterials"
+msgstr "Материјали за истражување"
+
+msgid "default.genres.researchInstrument"
+msgstr "Помагало за истражување"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "СубМ"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Менаџери за претплата"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Менџер за претплата"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "СекЕ"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Секциски уредници"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Уредник на оддел"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Гости уредници"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "ГЕ"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Гостин-уредник"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ЈЕ"
+
+msgid "default.groups.plural.editor"
+msgstr "Уредници на списанието"
+
+msgid "default.groups.name.editor"
+msgstr "Уредник на списанието"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ЈМ"
+
+msgid "default.groups.plural.manager"
+msgstr "Менаџери на списанието"
+
+msgid "default.groups.name.manager"
+msgstr "Менаџер на списанието"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Ова списание го користи CLOCKSS системот за да создаде систем за архивирање "
+"дистрибуиран помеѓу библиотеките учесници и им дозволува на истите да "
+"создадат  постојани архиви на списанието со цел зачувување и реставрација. <"
+"a href=\"http://clockss.org/\">Повеќе...</a>"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Ова списание го користи LOCKSS системот за да создаде систем за архивирање "
+"дистрибуиран помеѓу библиотеките учесници и им дозволува на истите да "
+"создадат  постојани архиви на списанието заради зачувување и реставрација. <"
+"a href=\"http://www.lockss.org/\">Повеќе...</a>"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Ги поттикнуваме библиотекарите да го вклучат ова списание во електронските "
+"складишта на списанија во нивната библиотека. Исто така, вреди да се "
+"напомене дека системот за објавување со отворен извор на ова списание е "
+"погоден да биде вклучен во библиотеки како нивните членови би можеле да го "
+"користат во списанија каде што се вклучени во уредување (види <a href=\""
+"http://pkp.sfu.ca/ojs\">Систем за отворено објавување на списание</a>)."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Заинтересирани сте да доставите труд до ова списание? Ви препорачуваме да ја "
+"разгледате страницата <a href=\"{$indexUrl}/{$contextPath}/about\">За "
+"списанието</a> за да пристапите до политиките на списанието, како и <a href="
+"\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Упатства "
+"за авторот</a>. Авторите треба да се <a href=\"{$indexUrl}/{$contextPath}/"
+"user/register\">регистрираат</a> во списанието пред да го поднесат трудот "
+"или, доколку се веќе регистрирани, можат само да се <a href=\"{$indexUrl}/"
+"index/login\">пријават</a> и да го започнат процесот во пет чекори."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Ги поттикнуваме читателите на ова списание да се пријават на услугата за "
+"известување на ова списание. Искористете го линкот за <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">регистрација</a> кој се наоѓа во "
+"горниот дел на главната страница на списанието. Со оваа регистрација "
+"читателот ќе ја добие табелата со содржина на и-меил за секој нов број на "
+"списанието. Оваа листа исто така овозможува списанието да добие одредено "
+"ниво на поддршка или публика. Погледнете ја  <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Изјавата за "
+"приватност</a> на списанието, која ги уверува читателите дека нивното име и "
+"и-меил адреса нема да бидат користени за други цели."

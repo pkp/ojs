@@ -7,8 +7,8 @@
 ;
 ; config.TEMPLATE.inc.php
 ;
-; Copyright (c) 2014-2020 Simon Fraser University
-; Copyright (c) 2003-2020 John Willinsky
+; Copyright (c) 2014-2021 Simon Fraser University
+; Copyright (c) 2003-2021 John Willinsky
 ; Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
 ;
 ; OJS Configuration settings.
@@ -92,9 +92,6 @@ restful_urls = Off
 ; Set this to "On" if you are behind a reverse proxy and you control the X_FORWARDED_FOR
 ; Warning: This defaults to "On" if unset for backwards compatibility.
 trust_x_forwarded_for = Off
-
-; Allow javascript files to be served through a content delivery network (set to off to use local files)
-enable_cdn = On
 
 ; Set the maximum number of citation checking processes that may run in parallel.
 ; Too high a value can increase server load and lead to too many parallel outgoing
@@ -191,10 +188,7 @@ locale = en_US
 client_charset = utf-8
 
 ; Database connection character set
-; Must be set to "Off" if not supported by the database server
-; If enabled, must be the same character set as "client_charset"
-; (although the actual name may differ slightly depending on the server)
-connection_charset = Off
+connection_charset = utf8
 
 
 ;;;;;;;;;;;;;;;;;

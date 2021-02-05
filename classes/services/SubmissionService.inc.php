@@ -3,8 +3,8 @@
 /**
  * @file classes/services/SubmissionService.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2000-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubmissionService
@@ -16,7 +16,13 @@
 
 namespace APP\Services;
 
-class SubmissionService extends \PKP\Services\PKPSubmissionService {
+use \Application;
+use \DAORegistry;
+use \PKP\Services\PKPSubmissionService;
+use \Services;
+use \Submission;
+
+class SubmissionService extends PKPSubmissionService {
 
 	/**
 	 * Initialize hooks for extending PKPSubmissionService
@@ -26,6 +32,33 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 		\HookRegistry::register('Submission::getMany::queryBuilder', array($this, 'modifySubmissionQueryBuilder'));
 		\HookRegistry::register('Submission::getMany::queryObject', array($this, 'modifySubmissionListQueryObject'));
 		\HookRegistry::register('Submission::getProperties::values', array($this, 'modifyPropertyValues'));
+	}
+
+	/**
+	 * @copydoc PKPSubmissionService::updateStatus()
+	 */
+	public function updateStatus($submission) {
+		$oldStatus = $submission->getData('status');
+		$submission = parent::updateStatus($submission);
+		$newStatus = $submission->getData('status');
+
+		// Add or remove tombstones when submission is published or unpublished
+		if ($newStatus === STATUS_PUBLISHED && $newStatus !== $oldStatus) {
+			$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
+			$tombstoneDao->deleteByDataObjectId($submission->getId());
+		} elseif ($oldStatus === STATUS_PUBLISHED && $newStatus !== $oldStatus) {
+			$requestContext = Application::get()->getRequest()->getContext();
+			if ($requestContext && $requestContext->getId() === $submission->getData('contextId')) {
+				$context = $requestContext;
+			} else {
+				$context = Services::get('context')->get($submission->getData('contextId'));
+			}
+			import('classes.article.ArticleTombstoneManager');
+			$articleTombstoneManager = new \ArticleTombstoneManager();
+			$articleTombstoneManager->insertArticleTombstone($submission, $context);
+		}
+
+		return $submission;
 	}
 
 	/**

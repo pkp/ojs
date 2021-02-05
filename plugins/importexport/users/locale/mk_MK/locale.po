@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-11 10:59+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Плагин за XML за корисници"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Ве молме да прикажите датотека под \"Импортирај\" за да продолжите."
+
+msgid "plugins.importexport.users.results"
+msgstr "Резултати"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Импортирањето е успешно завршено. Беа импортирани корисници со кориснички "
+"имиња и и-меил адреси кои не се веќе искористени, заедно со придружни групи "
+"на корисници."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Се појавија грешки за време на експортирањето"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Експортирај ги сите"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Експортирај според улога"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Експортирај корисници"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Беше одредена непозната патека \"{$journalPath}\" на списанието."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Не може да се користат заштитени лозинки со {$importHash}; OJS е "
+"конфигуриран да користи {$ojsHash}. Доколку продолжите, ќе треба да ги "
+"ресетирате лозинките на импортираните корисници."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Предупредување"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"Потврдете дека овие се корисниците кои сакате да ги импортирате во системот"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Се појавија грешки за време на импортирањето"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Следните корисници беа успешно импортирани во системот"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr ""
+"Продолжете да ги импортирате другите корисници доколку се појави дефект."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Испратете и-меил известување до секој импортиран корисник со корисничкото "
+"име и лозинка на корисникот."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Датотека со податоци за корисници"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Селектирај XML датотека која содржи информации за корисници за импортирање "
+"во ова списание. Видете ја страницата за помош на списанието за детали за "
+"форматот на оваа датотека.<br /><br />Имајте во предвид дека доколку "
+"импортираната датотека содржи било кои кориснички имиња или и-меил адреси "
+"кои веќе постојат во системот, корисничките податоци за тие корисници нема "
+"да се импортираат и било кои новосоздадени улоги ќе бидат доделени на веќе "
+"постоечките корисници."
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Импортирај корисници"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Пример:\n"
+"\tИмпортирај корисници во myJournal од myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tЕкспортирај ги сите корисници од myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tЕкспортирај корисници со назначено ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Начин на користење: {$scriptName} {$pluginName} [command] ...\n"
+"Команди:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.description"
+msgstr "Импортирање и експортирање корисници"

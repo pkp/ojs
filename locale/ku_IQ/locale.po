@@ -1755,6 +1755,7 @@ msgstr ""
 "گۆڤاری کراوە بکە بۆ زیادکردنی زمانێک کە لە لیستەکەدا نییە و تۆ دەتەوێت "
 "پاڵپشتی بکەیت."
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS وەشانی{$version}</h4>\n"

@@ -2,8 +2,8 @@
 /**
  * @file classes/components/form/FieldSelectIssue.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2000-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class FieldSelectIssue
@@ -37,8 +37,10 @@ class FieldSelectIssue extends FieldSelect {
 			'__issueId__'
 		);
 
+		$config['assignLabel'] = __('publication.assignToissue');
+		$config['assignedNoticeBase'] = __('publication.assignedToIssue', ['issueUrl' => $issueUrlPlaceholder]);
+		$config['changeIssueLabel'] = __('publication.changeIssue');
 		$config['publishedNoticeBase'] = __('publication.publishedIn', ['issueUrl' => $issueUrlPlaceholder]);
-		$config['scheduleLabel'] = __('publication.scheduleInissue');
 		$config['scheduledNoticeBase'] = __('publication.scheduledIn', ['issueUrl' => $issueUrlPlaceholder]);
 		$config['unscheduledNotice'] = __('publication.unscheduledIn');
 		$config['unscheduleLabel'] = __('publication.unschedule');

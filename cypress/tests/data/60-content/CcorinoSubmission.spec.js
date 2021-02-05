@@ -1,8 +1,8 @@
 /**
  * @file cypress/tests/data/60-content/CcorinoSubmission.spec.js
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2000-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  */
@@ -32,6 +32,20 @@ describe('Data suite tests', function() {
 		cy.findSubmissionAsEditor('dbarnes', null, familyName);
 		cy.sendToReview();
 		cy.assignParticipant('Section editor', 'Minoti Inoue', true);
+
+		// Select pre-existing keywords
+		cy.get('#publication-button').click();
+		cy.get('#metadata-button').click();
+		cy.get('#metadata-keywords-control-en_US').type('pr', {delay: 0});
+		cy.wait(500);
+		cy.get('li').contains('Professional Development').click({force: true});
+		cy.get('#metadata-keywords-control-en_US').type('socia', {delay: 0});
+		cy.contains('Social Transformation');
+		cy.get('#metadata-keywords-control-en_US').type('l{downarrow}{downarrow}{enter}', {delay: 0});
+		cy.get('#metadata button').contains('Save').click();
+		cy.get('#metadata [role="status"]').contains('Saved');
+		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
+		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
 
 		cy.logout();
 

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-04 17:46+0000\n"
-"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/"
-"blocks-developedBy/ku/>\n"
+"blocks-developedBy/ku_IQ/>\n"
 "Language: ku_IQ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,3 +16,6 @@ msgstr "ئەم زیادکردنە لینکی لاتەنیشت دابین دەک�
 
 msgid "plugins.block.developedBy.displayName"
 msgstr "بلۆک\"گەشەی پێ دراوە لە لایەن\""
+
+msgid "plugins.block.developedBy.blockTitle"
+msgstr "Развиено од"

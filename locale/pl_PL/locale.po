@@ -2153,6 +2153,7 @@ msgstr "Przejdź do aktualnego wydania"
 msgid "navigation.skip.about"
 msgstr "Przejdź do informacji o czasopiśmie"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4> Wersja OJS {$version} </h4>\n"

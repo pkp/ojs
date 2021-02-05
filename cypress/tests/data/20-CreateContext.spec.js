@@ -1,8 +1,8 @@
 /**
  * @file cypress/tests/data/20-CreateContext.spec.js
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2000-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  */
@@ -22,9 +22,13 @@ describe('Data suite tests', function() {
 		cy.get('div[id=context-name-error-en_US]').find('span').contains('This field is required.');
 		cy.get('div[id=context-acronym-error-en_US]').find('span').contains('This field is required.');
 		cy.get('div[id=context-urlPath-error]').find('span').contains('This field is required.');
+		cy.get('div[id=context-primaryLocale-error]').find('span').contains('This field is required.');
 		cy.get('input[name="name-en_US"]').type(Cypress.env('contextTitles')['en_US'], {delay: 0});
 		cy.get('input[name=acronym-en_US]').type('JPK', {delay: 0});
 		cy.get('span').contains('Enable this journal').siblings('input').check();
+		cy.get('input[name="supportedLocales"][value="en_US').check();
+		cy.get('input[name="supportedLocales"][value="fr_CA').check();
+		cy.get('input[name="primaryLocale"][value="en_US').check();
 
 		// Test invalid path characters
 		cy.get('input[name=urlPath]').type('public&-)knowledge', {delay: 0});

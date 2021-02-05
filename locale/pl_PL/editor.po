@@ -48,9 +48,6 @@ msgstr "Brak tekstów w archiwum."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Czy zachować zmiany w archiwum? Przesłane teksty oznaczone \"do usunięcia\", zostaną nieodwracalnie usunięte z systemu."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Czy na pewno chcesz usunąć przesłane teksty?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Czy na pewno?"
 

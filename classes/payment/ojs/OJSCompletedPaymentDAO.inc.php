@@ -3,8 +3,8 @@
 /**
  * @file classes/payment/ojs/OJSCompletedPaymentDAO.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OJSCompletedPaymentDAO
@@ -14,6 +14,8 @@
  * @brief Operations for retrieving and querying past payments
  *
  */
+
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 import('lib.pkp.classes.payment.CompletedPayment');
 import('classes.payment.ojs.OJSPaymentManager'); // Constants
@@ -94,6 +96,16 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 
 	/**
+	 * Delete a completed payment.
+	 * @param $completedPaymentId int
+	 */
+	public function deleteById($completedPaymentId) {
+		Capsule::table('completed_payments')
+			->where('completed_payment_id', '=', $completedPaymentId)
+			->delete();
+	}
+
+	/**
 	 * Get the ID of the last inserted completed payment.
 	 * @return int
 	 */
@@ -103,7 +115,7 @@ class OJSCompletedPaymentDAO extends DAO {
 
 	/**
 	 * Get a payment by assoc info
-	 * @param $userId int
+	 * @param $userId int?
 	 * @param $paymentType int PAYMENT_TYPE_...
 	 * @param $assocId int
 	 * @return CompletedPayment|null
@@ -126,20 +138,20 @@ class OJSCompletedPaymentDAO extends DAO {
 
 	/**
 	 * Look for a completed PAYMENT_TYPE_PURCHASE_ARTICLE payment matching the article ID
-	 * @param $userId int
+	 * @param $userId int?
 	 * @param $articleId int
 	 */
 	function hasPaidPurchaseArticle($userId, $articleId) {
-		return $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ARTICLE, $articleId)?true:false;
+		return $userId && $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ARTICLE, $articleId);
 	}
 
 	/**
 	 * Look for a completed PAYMENT_TYPE_PURCHASE_ISSUE payment matching the user and issue IDs
-	 * @param int $userId
-	 * @param int $issueId
+	 * @param $userId int?
+	 * @param $issueId int
 	 */
 	function hasPaidPurchaseIssue($userId, $issueId) {
-		return $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ISSUE, $issueId)?true:false;
+		return $userId && $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ISSUE, $issueId);
 	}
 
 	/**
@@ -148,7 +160,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param int $articleId
 	 */
 	function hasPaidPublication($userId, $articleId) {
-		return $this->getByAssoc($userId, PAYMENT_TYPE_PUBLICATION, $articleId)?true:false;
+		return $userId && $this->getByAssoc($userId, PAYMENT_TYPE_PUBLICATION, $articleId);
 	}
 
 	/**

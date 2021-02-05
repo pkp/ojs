@@ -53,9 +53,6 @@ msgstr "Ei käsikirjoituksia arkistossa."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Tallennetaanko arkistoituihin käsikirjoituksiin tehdyt muutokset? Poistettaviksi merkityt käsikirjoitukset poistetaan pysyvästi järjestelmästä."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Haluatko varmasti poistaa tämän käsikirjoituksen pysyvästi?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Haluatko varmasti tallentaa tämän päätöksen?"
 

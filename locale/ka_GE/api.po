@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-25 10:19+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: ka (generated) <http://translate.pkp.sfu.ca/projects/ojs/api/"
+"ka/>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "არ შეგიძლიათ ფაილის ამ ეტაპიდან დაკავშირება გალერეასთან."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "თქვენს მიერ მოთხოვნილი პუბლიკაცია არ არის ამ შენატანის ნაწილი."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "თქვენს მიერ მოთხოვნილი პუბლიკაცია არ არის ამ ჟურნალის ნაწილი."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "თქვენს მიერ არჩეული გადახდის მეთოდი მხარდაჭერილი არ არის."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "არ გაქვთ წერილის ამ შაბლონის სხვა ჟურნალში გადატანის უფლება."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "მოთხოვნილი ჟურნალი ვერ მოიძებნა."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "არ გაქვთ ამ ჟურნალის წაშლის უფლება."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "არ გაქვთ ამ ჟურნალის ჩასწორების უფლება."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "არ შეგიძლიათ ამ ჟურნალის ჩასწორება საიტის API-ს გამოყენებით."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"არ შეგიძლიათ ნახოთ, ან ჩაასწოროთ ეს ჟურნალი, API მოთხოვნის, ან საიტის სრული "
+"API მოთხოვნის გარეშე."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "არ გაქვთ ამ ჟურნალის ნახვის უფლება."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "თქვენ შეგიძლიათ ნახოთ მხოლოდ ჟურნალები, რომლებზეც გაქვთ წვდომა."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"შენატანის შექმნის, ან ჩასწორებისათვის უნდა გააკეთოთ მოთხოვნა ჟურნალის API "
+"საბოლოო წერტილისათვის."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "არ გაქვთ ნახვის უფლება გამოუქვეყნებელი გამოცემისათვის."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "არ შეგიძლიათ ჟურნალის შეცვლა ამ შენატანისათვის."
+
+msgid "api.emails.403.disabled"
+msgstr "ელფოსტით შეტყობინების ფუნქცია არ არის ჩართული ამ ჟურნალისათვის."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "მოთხოვნილი განცხადება არ არის ამ ჟურნალის ნაწილი."

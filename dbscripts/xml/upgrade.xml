@@ -3,15 +3,15 @@
 <!--
   * dbscripts/xml/upgrade.xml
   *
-  * Copyright (c) 2014-2020 Simon Fraser University
-  * Copyright (c) 2003-2020 John Willinsky
+  * Copyright (c) 2014-2021 Simon Fraser University
+  * Copyright (c) 2003-2021 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
   *
   -->
 
-<install version="3.3.0.1">
+<install version="3.3.0.2">
 	<code function="checkPhpVersion" />
 
 	<upgrade minversion="2.0.0.0" maxversion="2.9.9.9">

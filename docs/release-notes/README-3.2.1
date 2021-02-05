@@ -1,8 +1,92 @@
-OJS 3.2.1 Release Notes
-Git tag: 3_2_1-0
+OJS 3.2.1-3 Release Notes
+Git tag: 3_2_1-3
 
-Release date: June 19, 2020
-===========================
+Release date: January 22, 2021
+===============================
+
+Configuration Changes
+---------------------
+
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
+New config.inc.php parameters:
+	- database.collation - The character set collation to use in database
+		queries. Default: utf8_general_ci
+	- email.smtp_suppress_cert_check - True if PHPMailer's certificate check
+		is to be disabled. Not recommended unless you're sure. Default: Off
+	- curl.cainfo - Path to Certificate Authority (CA) bundle.
+
+3.2.1-3 Build
+-------------
+	#6644: Fatal error if notifications are blocked for EditorialReportNotificationManager
+	#6632: Update Illuminate Database library for GHSA-3p32-j457-pg5x
+	#6620: WebFeed plugin missing restriction to published content
+	#6548: User issue payment unlocks issue globally for users who aren't logged in
+	#6529: Author can not upload revisions when decision is to resubmit for review
+	#6510: Non-expiring institutional subscription can't be added
+	#6495: Incorrect URLs in default context settings
+	#6473: Allow for access to public Library Files without forcing a download
+	#6467: "Reload defaults" for language invalidates $contextPath variable
+	#6462: Inconsistency in JWT (API key) encoding/decoding
+	#6421: Dependent file upload fails when confirm revision is detected
+	#6389: Trying to register an article with the DOAJ plugin throws an error : new DOAJ API version
+	#6344: Remove script host from smarty variables
+	#6320: [OJS] CAST AS CHAR i postgres
+	#6189: [OJS] Problem when submitting reviews
+	#6060: If a title prefix is given for a single locale, it is shown with all article title translations
+	#4414: Context path property creates conflict when disable_path_info is enabled
+
+3.2.1-2 Build
+-------------
+	#2580: Correct outdated reference to geo IP tool path
+	#4991: Add Category to article page in OJS
+	#5445: Test licenseUrl context setting
+	#5565: Allow editors and editorial assistants to preview an article before it is published
+	#5592: [OJS] Block plugins and cacheing problem
+	#6029: Report Generator doesn't return any results when custom range is selected with a single day
+	#6056: [OPS] Version number showing Publication ID for authors
+	#6064: [OJS] Text color does not respond to background color selection on mobile
+	#6067: Submission Checklist - Reordering doesn't save
+	#6069: package-lock.json contains wrong version number
+	#6084: Announcement emails sent blank after upgrade
+	#6102: Submission::getSectionTitle doesn't return any value
+	#6105: Allow capital letters in context urlPath
+	#6107: "Omit the title of this section from the issue's Table of Contents" section option does not work
+	#6111: SQL typo in "browse by authors" feature
+	#6115: Enable "download all files" in production ready files grid
+	#6120: Internal Review queries are placed in External Review
+	#6134: The statistics notification is sent to roles that have no access to the interface
+	#6146: [OPS] Allow submission search by ORCID ID
+	#6148: Error for custom blocks in side bar due to automatic name addition
+	#6165: Announcement mailout can fail if any user is unsubscribed from notifications
+	#6168: ANNOUNCEMENT email template not installed on upgrade to OJS 3.2.1
+	#6183: Sitemap does not include articles
+	#6184: Can't use array values in theme options
+	#6196: Fix test/build for changed Google closure compiler installation process
+	#6207: Ensure that served articles are matched against the request's context ID
+	#6212: Quick Submit Plugin notification error problem
+	#6213: Error in upgrade from OJS 3.1.x to 3.2.x on submissionSubject (controlled vocabulary) data
+	#6226: CSRF checks missing from import/export plugin upload bounce requests
+	#6229: Subscription end dates are not inclusive
+	#6246: Let iframe use relative URL instead of absolute
+	#6257: Refactor submission file policies
+	#6259: copyrightHolder should be assigned as localized data
+	#6262: Broken catalog page with PostgreSQL
+	#6265: New sample file for Native Import/export
+	#6269: Submission Hyperlink
+	#6276: QuickSubmit Plugin [OJS 3.2.1.1] Keywords in a non-primary locale can’t be deleted
+	#6300: PHP warning with cancelled reviews
+	#6301: Add indexes for search performance
+	#6330: Lens Galley XML views not tracked in usage statistics
+
+3.2.1-1 Build
+-------------
+	#6045: Permit database collation configuration
+	#6041: License override formatting error
+	#6035: Plugin install does not work across filesystems
+	#6033: Announcements can be viewed even when disabled
+	#6007: User roles can be passed to the browser as an object instead of array
 
 New Features
 ------------

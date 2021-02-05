@@ -225,7 +225,7 @@ msgstr "El resum ha de tenir {$wordCount} paraules o menys."
 msgid "publication.selectIssue"
 msgstr "Seleccionar un número per programar-lo per a publicació"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Assignar a número"
 
 msgid "publication.unscheduledIn"

@@ -3,8 +3,8 @@
 /**
  * @file classes/issue/IssueDAO.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueDAO
@@ -549,7 +549,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			FROM	submissions s
 				JOIN publications p ON (p.publication_id = s.current_publication_id)
 				JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name = ? AND ps.locale = \'\')
-				JOIN issues i ON ps.setting_value = CAST(i.issue_id as CHAR)
+				JOIN issues i ON ps.setting_value = CAST(i.issue_id AS CHAR(20))
 			WHERE	s.submission_id = ? AND
 				s.context_id = i.journal_id' .
 				($journalId?' AND i.journal_id = ?':''),
@@ -627,7 +627,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		}
 
 		$result = $this->retrieveRange(
-			'SELECT i.*
+			$sql = 'SELECT i.*
 			FROM issues i
 				LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id)
 				' . ($pubIdType != null?' LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)':'')
@@ -643,7 +643,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnIssueFromRow');
+		return new DAOResultFactory($result, $this, '_returnIssueFromRow', [], $sql, $params, $rangeInfo);
 	}
 
 	/**

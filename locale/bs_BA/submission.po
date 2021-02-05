@@ -1,0 +1,359 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-20 09:02+0000\n"
+"Last-Translator: Kazimir Hrastek <kazimir3385@gmail.com>\n"
+"Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"bs_BA/>\n"
+"Language: bs_BA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.issueEntry"
+msgstr "Metapodaci"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Sažetak mora sadržavati {$ wordCount} riječi ili manje."
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nova predaja"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Započnite novu predaju u"
+
+msgid "submission.title.tip"
+msgstr ""
+"Vrsta prijave je obično jedna od 'slika', 'tekst' ili druge vrste "
+"multimedije, uključujući 'softver' ili 'interaktivnost'. Odaberite onaj koji "
+"je najrelevantniji za vašu prijavu. Primjeri se mogu naći na <a target=\""
+"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type\"> http://dublincore.org/documents/ 2001/04/12 / useguide "
+"/ generic.shtml # type </a>"
+
+msgid "submission.title"
+msgstr "Naslov članka"
+
+msgid "submission.upload.selectComponent"
+msgstr "Odaberite komponentu članka"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Odaberite kapacitet pod kojim šaljete ovaj članak."
+
+msgid "submission.submit.userGroup"
+msgstr "Pošalji u mojoj ulozi kao..."
+
+msgid "submission.submit.title"
+msgstr "Pošalji članak"
+
+msgid "submission.pageProofs"
+msgstr "Lektura"
+
+msgid "publication.assignToissue"
+msgstr "Dodijeli izdanju"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Svi zahtjevi za objavljivanje su ispunjeni. Ovo će biti objavljeno odmah jer "
+"je datum objavljivanja postavljen na {$datePublished}. Jeste li sigurni da "
+"ovo želite objaviti?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Svi zahtjevi za objavljivanje su ispunjeni. Ovo će biti odmah objavljeno u "
+"{$issue}. Jeste li sigurni da ovo želite objaviti?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Svi zahtjevi za objavljivanje su ispunjeni. Ovo će biti objavljeno kad izađe "
+"{$issue}. Jeste li sigurni da ovo želite zakazati za objavljivanje?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Svi zahtjevi za objavljivanje su ispunjeni. Jeste li sigurni da ovo želite "
+"objaviti?"
+
+msgid "publication.invalidIssue"
+msgstr "Izdanje ovog objavljivanja nije moguće pronaći."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Neaktivno)"
+
+msgid "publication.invalidSection"
+msgstr "Nije moguće pronaći sekciju za ovo objavljivanje."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Datum objavljivanja automatski će se postaviti kada se izdanje objavi. Ne "
+"unosite datum objavljivanja, osim ako je članak prethodno objavljen negdje "
+"drugdje i ako ga trebate datirati unazad."
+
+msgid "catalog.category.heading"
+msgstr "Sve stavke"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Stavke"
+
+msgid "submission.sectionOptions"
+msgstr "Odaberite opcije"
+
+msgid "section.any"
+msgstr "Bilo koja sekcija"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Ovo je pregled i nije objavljeno. <a href=\"{$url}\">Pogledaj predaju</a>"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Ove se specifikacije baziraju na skupu metapodataka Dublin Core, "
+"međunarodnom standardu koji se koristi za opisivanje sadržaja časopisa."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Traženi format citata nije se mogao dohvatiti."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Odaberite ulogu saradnika."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Vaš sažetak je predug. Skratite ga na dolje ograničeni broj riječi "
+"naznačenih za ovu sekciju."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Unesite sažetak vašeg članka."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Unesite naslov članka."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Potrebno je ime, prezime i e-mail adresa svakog autora."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Potreban je najmanje jedan autor."
+
+msgid "submission.submit.contributorRole"
+msgstr "Uloga saradnika"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Izjava o privatnosti"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Prije nastavka morate pročitati i potvrditi da ste ispunili dolje navedene "
+"zahtjeve."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Kontrolna lista predaje"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Odaberite jezik predaje."
+
+msgid "submission.incomplete"
+msgstr "Čeka odobrenje"
+
+msgid "submission.complete"
+msgstr "Odobreno"
+
+msgid "submission.upload.fileContents"
+msgstr "Komponenta članka"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metapodaci izdanja predaje su ažurirani."
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Pošalji na pregled"
+
+msgid "workflow.review.externalReview"
+msgstr "Pregled"
+
+msgid "submission.confirmSubmit"
+msgstr "Jeste li sigurni da želite ovaj članak poslati u časopis?"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Prenesite datoteke povezane s ovom predajom, uključujući članak, "
+"multimediju, skupove podataka, umjetnička djela itd."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Naslov i sažetak"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Odobrenje formata"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Javni identifikatori predaje su ažurirani."
+
+msgid "grid.action.issueEntry"
+msgstr "Pogledajte metapodatke ove predaje"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Časopis je obaviješten o vašoj predaji rada, a vi ste e-mailom dobili "
+"potvrdu za svoju evidenciju. Nakon što urednik pregleda predaju rada, "
+"kontaktirat će vas."
+
+msgid "submission.submit.noContext"
+msgstr "Časopis ovog predanog rada nije moguće pronaći."
+
+msgid "grid.action.workflow"
+msgstr "Proces predaje rada"
+
+msgid "publication.event.versionScheduled"
+msgstr "Nova verzija je zakazana za objavljivanje."
+
+msgid "publication.event.versionPublished"
+msgstr "Nova verzija je objavljena."
+
+msgid "publication.event.unpublished"
+msgstr "Predaja nije objavljena."
+
+msgid "publication.event.scheduled"
+msgstr "Predaja je zakazana za objavljivanje."
+
+msgid "publication.event.published"
+msgstr "Predaja je objavljena."
+
+msgid "publication.editDisabled"
+msgstr "Ova verzija je objavljena i ne može se uređivati."
+
+msgid "publication.datePublished"
+msgstr "Datum objavljivanja"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Godina autorskih prava bit će postavljena automatski na osnovu datuma "
+"objavljivanja."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Godina autorskih prava automatski će se postaviti kada se ovo objavi u "
+"izdanju."
+
+msgid "submission.publications"
+msgstr "Objave"
+
+msgid "submission.status.scheduled"
+msgstr "Zakazano"
+
+msgid "publication.status.published"
+msgstr "Objavljeno"
+
+msgid "submission.publication"
+msgstr "Objava"
+
+msgid "publication.selectIssue"
+msgstr "Odaberite izdanje koje želite zakazati za objavljivanje"
+
+msgid "publication.required.issue"
+msgstr ""
+"Objava mora biti dodijeljena izdanju prije nego što može biti objavljena."
+
+msgid "publication.unscheduledIn"
+msgstr "Ovo nije zakazano za objavljivanje u izdanju."
+
+msgid "publication.scheduledIn"
+msgstr "Zakazano za objavljivanje u <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Objavljeno u <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "submission.queries.production"
+msgstr "Rasprave o produkciji"
+
+msgid "publication.version.details"
+msgstr "Detalji o publikaciji za verziju {$version}"
+
+msgid "publication.unschedule.confirm"
+msgstr "Jeste li sigurni da ne želite da ovo bude zakazano za objavljivanje?"
+
+msgid "publication.unpublish.confirm"
+msgstr "Jeste li sigurni da ne želite da ovo bude objavljeno?"
+
+msgid "publication.unpublish"
+msgstr "Ne objavljuj"
+
+msgid "submission.copyrightOther.description"
+msgstr "Dodijelite autorska prava za objavljene predaje rada sljedećoj strani."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Autorska prava će se automatski dodijeliti {$copyright} kada se ovo objavi."
+
+msgid "submission.license.description"
+msgstr ""
+"Licenca će biti automatski postavljena na <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> kada se ovo objavi."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Predaja rada mora biti u fazi uređivanja ili izrade prije nego što može biti "
+"objavljena."
+
+msgid "publication.required.declined"
+msgstr "Odbijena predaja rada ne može se objaviti."
+
+msgid "publication.publish.requirements"
+msgstr "Da bi se ovo moglo objaviti, moraju se ispuniti sljedeći zahtjevi."
+
+msgid "publication.publish"
+msgstr "Objavi"
+
+msgid "publication.invalidSubmission"
+msgstr "Predaja rada za ovu publikaciju nije pronađena."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Verzija je uklonjena iz publikacije."
+
+msgid "publication.status.unscheduled"
+msgstr "Nije zakazano"
+
+msgid "publication.changeIssue"
+msgstr "Promijeni izdanje"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Ovo je dodijeljeno <a href=\"{$issueUrl}\">{$issueName}</a>, ali nije "
+"zakazano za objavljivanje."
+
+msgid "galley.publicationNotFound"
+msgstr "Publikacija za ovu kopiju nije pronađena."
+
+msgid "galley.editPublishedDisabled"
+msgstr "Kopije ove publikacije nije moguće uređivati jer je već objavljena."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Ova korektura je odobrena za uvrštavanje u kopiju."
+
+msgid "grid.action.approveProof"
+msgstr "Odobri ovu korekturu za uvrštavanje u kopiju."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Uređivač izgleda ovdje prenosi datoteke spremne za produkciju koje su "
+"pripremljene za objavljivanje. Koristite <em>Dodijeli revizora</em> da biste "
+"odredili autore i druge koji će lektorisati kopije, s ispravljenim "
+"datotekama koje su prenesene na odobrenje prije objavljivanja."
+
+msgid "submission.galleyFiles"
+msgstr "Datoteke kopije"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Učini ovu kopiju dostupnom"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Ova kopija će<em>biti dostupna</em>čitateljima.</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Ova kopija<em>više neće biti dostupna</em>čitateljima.</p>"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Kopija članka \"{$ galley FormatName}\" nije dostupna."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Kopija članka \"{$ galley FormatName}\" je dostupna."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Kopija se pojavljuje u unosu izdanja"

@@ -49,9 +49,6 @@ msgstr ""
 "Guardar alterações a submissões arquivadas? Submissões marcadas para "
 "exclusão serão eliminadas permanentemente do sistema."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Deseja realmente eliminar esta submissão?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Deseja realmente registar a decisão?"
 

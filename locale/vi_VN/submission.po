@@ -240,7 +240,7 @@ msgstr "Gửi một bài báo mới"
 msgid "publication.selectIssue"
 msgstr "Chọn một số để lên lịch xuất bản"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Giao cho Số"
 
 msgid "publication.publish.confirmation.datePublishedInPast"

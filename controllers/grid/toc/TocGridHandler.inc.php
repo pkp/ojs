@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/toc/TocGridHandler.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2000-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TocGridHandler
@@ -222,12 +222,7 @@ class TocGridHandler extends CategoryGridHandler {
 		$journal = $request->getJournal();
 		$submission = Services::get('submission')->get((int) $request->getUserVar('articleId'));
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		import('classes.article.ArticleTombstoneManager');
-		$articleTombstoneManager = new ArticleTombstoneManager();
 		if ($submission && $request->checkCSRF()) {
-			if ($issue->getPublished() && $submission->getCurrentPublication()->getData('issueId') == $issue->getId()) {
-				$articleTombstoneManager->insertArticleTombstone($submission, $journal);
-			}
 			foreach ((array) $submission->getData('publications') as $publication) {
 				if ($publication->getData('issueId') === (int) $issue->getId()
 						&& in_array($publication->getData('status'), [STATUS_SCHEDULED, STATUS_PUBLISHED])) {

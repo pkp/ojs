@@ -1152,7 +1152,7 @@ msgid "emails.revisedVersionNotify.description"
 msgstr "Ce courriel est envoyé automatiquement au rédacteur attribué quand un auteur téléverse une version révisée d'un article."
 
 msgid "emails.reviewRequestRemindAuto.subject"
-msgstr "Demande d'évaluation d'un article"
+msgstr "Rappel de demande d'évaluation d'un article"
 
 msgid "emails.reviewRequestRemindAuto.body"
 msgstr ""

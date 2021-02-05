@@ -1,0 +1,483 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Уредникот на нацртот ги подготвува овие датотеки за секој отисок и потоа ги "
+"прикачува на соодветната <span class=\"pkp_help_title\">лектура</span> за "
+"лекторирање."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Јавниот идентификатор  '{$publicIdentifier}' веќе постои за друг предмет од "
+"истиот тип. Ве молиме да изберете единствени идентификатори за предметите од "
+"ист тип во вашето списание."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Кои било датотеки што веќе се прикачени во која било фаза на поднесување "
+"може да се додадат во списокот за лекторирање со означување на изборното "
+"поле „Вклучи“ подолу и кликнување на „Пребарај“: сите достапни датотеки ќе "
+"бидат наведени и може да бидат избрани за вклучување."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Конечните датотеки за нацрт во оваа листа се трансформирани во уредени "
+"верзии од страна на уредникот, прикачени подолу под <span class=\""
+"pkp_help_title\">уредување</span>."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Измени го отисокот на бројот"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Датумот за пристап не е важечки."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Избери датотеки за отисоци"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Дали сте сигурни дека сакате да го отстраните овој напис од изданието? "
+"Написот ќе биде достапен за распоред во друго издание."
+
+msgid "editor.article.remove"
+msgstr "Отстрани"
+
+msgid "grid.action.removeArticle"
+msgstr "Отстранете го написот од изданието"
+
+msgid "editor.article.coverImage"
+msgstr "Насловна слика"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Насловната слика која побаравте да биде избришана не е пронајдена. Можеби е "
+"веќе избришана. Обидете се повторно да ја вчитате страната."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Исплатата за објавување не е платена. Да го закажете предметот за објава "
+"известете го авторот за наплата или одречете се од наплатата."
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "За доделување"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Закажи за објава во"
+
+msgid "editor.article.editMetadata"
+msgstr "Уреди ги метаподатоците на верзијата"
+
+msgid "editor.article.viewMetadata"
+msgstr "Приказ на метаподатоци на верзијата"
+
+msgid "editor.article.publishVersion"
+msgstr "Објави верзија"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Прикажи закажано објавување"
+
+msgid "editor.submissions.inSection"
+msgstr "Во оддел"
+
+msgid "issues.submissions.issueIds"
+msgstr "Зададено на издание"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Зададено на уредник"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Последно завршено"
+
+msgid "editor.submissions.averageTime"
+msgstr "Недели"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Најново"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Нема поднесоци"
+
+msgid "editor.submissions.accept"
+msgstr "Прифати"
+
+msgid "editor.submissions.invite"
+msgstr "Покани"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Активни задачи"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Поднеси ММ-ДД"
+
+msgid "editor.submissions.showBy"
+msgstr "Прикажи според"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Дали сте сигурни дека сакате да го објавите новото издание?"
+
+msgid "editor.issues.preview"
+msgstr "Преглед"
+
+msgid "editor.issues.previewIssue"
+msgstr "Прегледај го изданието"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Откажи го обајвувањето на изданието"
+
+msgid "editor.issues.publishIssue"
+msgstr "Објави го изданието"
+
+msgid "editor.issues.publicId"
+msgstr "Јавен Id"
+
+msgid "editor.issues.order"
+msgstr "Редослед"
+
+msgid "editor.issues.default"
+msgstr "Стандардно"
+
+msgid "editor.issues.saveChanges"
+msgstr "Зачувајте ги промените на содржината?"
+
+msgid "editor.issues.issueData"
+msgstr "Податоци на изданието"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Ова издание користи сопствен редослед на одделите. <a href=\"{$url}\" class="
+"\"action\">Вратете го стандардниот</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Ова списание користи сопствен редослед за изданијата. <a href=\"{$url}\" "
+"class=\"action\">Вратете го стандардниот</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Сите написи ќе бидат вратени во редот за уредување и сите поврзани доатотеки "
+"ќе бидат трајно отстранети.  Дали сте сигурни дека сакате да го отстраните "
+"ова издание?"
+
+msgid "editor.issues.cover"
+msgstr "Корица"
+
+msgid "editor.issues.access"
+msgstr "Пристап"
+
+msgid "editor.issues.identification"
+msgstr "Идентификација"
+
+msgid "editor.issues.subscription"
+msgstr "Претплата"
+
+msgid "editor.issues.openAccess"
+msgstr "Отворен пристап"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Приказ"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Создадете корица за изданието со следните елементи."
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Наслов на корица"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Отстранете изглед?"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Погрешен формат на изглед. Осигурете се дека доставената датотека е валиден "
+"CSS. (Имајте во предвид дека stylesheets со коментари на почетокот може да "
+"бидат одбиени.)"
+
+msgid "editor.issues.styleFile"
+msgstr "Изглед"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Погрешен формат на насловна слика. Прифатени формати се .gif, .jpg, или .png."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Насловната слика која побаравте да биде избришана не е пронајдена. Можеби е "
+"веќе избришана. Обидете се повторно да ја вчитате страната."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Насловната слика која побаравте да биде избришана не се совпаѓаше со "
+"насловната слика на ова издание. Ве молиме повторно да ја вчитате страната и "
+"да се обидете."
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Отстранете ја сликата на насловната страна?"
+
+msgid "editor.issues.proofed"
+msgstr "Лекторирано"
+
+msgid "editor.issues.remove"
+msgstr "Отстрани"
+
+msgid "editor.issues.uploaded"
+msgstr "Поставено"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Дозволени формати: .gif, .jpg или .png)"
+
+msgid "editor.issues.coverPage"
+msgstr "Насловна слика"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Овозможете одложен отворен пристап"
+
+msgid "editor.issues.accessDate"
+msgstr "Датум на отворен пристап"
+
+msgid "editor.issues.accessStatus"
+msgstr "Статус на пристап"
+
+msgid "editor.issues.description"
+msgstr "Опис"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Јавна идентификација на изданието"
+
+msgid "editor.issues.issueIdentification"
+msgstr "Идентификација на изданието"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Потребна е идентификација на изданието. Ве молиме да изберете барем една од "
+"опциите за идентификација на изданието."
+
+msgid "editor.issues.titleRequired"
+msgstr "Потребен е насловот за изданието."
+
+msgid "editor.issues.yearRequired"
+msgstr "Потребна е годината која мора да биде позитивна, нумеричка вредност."
+
+msgid "editor.article.decision"
+msgstr "Одлука"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Назначи ја оригиналната датотека како верзија за преглед"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Претходни изданија"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Постави актуелно издание"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Создади отисок на број"
+
+msgid "grid.action.previewIssue"
+msgstr "Преглед"
+
+msgid "grid.action.viewIssue"
+msgstr "Приказ"
+
+msgid "grid.action.addIssue"
+msgstr "Создади издание"
+
+msgid "grid.action.publish"
+msgstr "Објави издание"
+
+msgid "grid.action.addGalley"
+msgstr "Додај отисок"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Идни изданија"
+
+msgid "editor.issues.identifiers"
+msgstr "Идентификатори"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Дали сте сигурни дека сакате да го избришете овој отисок на бројот?"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Врати се на отисок од бројот"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Јавна идентификација за отисок на бројот веќе постои."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Потребна е локализација за отисок на бројот."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Потребна е ознака за galley на изданието."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Нема објавени отисоци на бројот."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Објави отисок со целата содржина на бројот."
+
+msgid "editor.issues.viewingGalley"
+msgstr "Прикажување отисок на број"
+
+msgid "editor.issues.galley"
+msgstr "Отисок на број"
+
+msgid "editor.issues.galleys"
+msgstr "Отисоци на издание"
+
+msgid "editor.issues.pages"
+msgstr "Страни"
+
+msgid "editor.issues.open"
+msgstr "Отвори"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Нема активни броеви"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Не може да се зачува јавното id за издание:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr ""
+"Дали сте сигурни дека сакате да го поставите ова издание да биде актуелно?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr ""
+"Дали сте сигурни дека сакате да го откажете објавуавњето на ова објавено "
+"издание?"
+
+msgid "editor.issues.numberRequired"
+msgstr "Потребен е бројот кој мора да биде позитивна, нумеричка вредност."
+
+msgid "editor.issues.volumeRequired"
+msgstr "Потребен е томот кој мора да биде позитивна, нумеричка вредност."
+
+msgid "editor.issues.datePublished"
+msgstr "Датум на објава"
+
+msgid "editor.issues.unpublished"
+msgstr "Неиздадени"
+
+msgid "editor.issues.published"
+msgstr "Објавени"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Дали сте сигурни дека сакате трајно да го избришете ова издание?"
+
+msgid "editor.issues.noArticles"
+msgstr "Во моментов нема закажано артикли за ова издание."
+
+msgid "editor.issues.numArticles"
+msgstr "Артикли"
+
+msgid "editor.issues.currentIssue"
+msgstr "Актуелно издание"
+
+msgid "editor.issues.editIssue"
+msgstr "Управување со издание: {$issueIdentification}"
+
+msgid "editor.issues.createIssue"
+msgstr "Создади издание"
+
+msgid "editor.editorAdministration"
+msgstr "Администрација на уредникот"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Опфатете ја содржината од ова издание:"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Испрати ја оваа порака до сите корисници поврзани со ова списаните кои "
+"посочиле дека сакаат да добијат известувања ({$count} users)"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Испрати ја оваа порака до сите корисници поврзани со ова списание ({$count} "
+"users)"
+
+msgid "editor.usersNotified"
+msgstr "Корисниците се известени"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Ги известуваме корисниците..."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Сите институционални претплатници ({$count} users)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Сите поединечни претплатници ({$count} users)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Сите објавени автори ({$count} users)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Сите читатели ({$count} users)"
+
+msgid "editor.notifyUsers"
+msgstr "Извести ги корисниците"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Пред да го испратите поднесокот за уредување, искористете го линкот „"
+"Известување на авторот“ за да го известите авторот за одлуката и да ја "
+"изберете верзијата која што ќе ја испратите."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Овој поднесок ќе биде архивиран откако ќе биде испратен и-меил за "
+"известување на авторот или ќе се притисне копчето Прескокни и-маил."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Дали сте сигурни дека сакате да ја зачувате оваа одлука?"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Дали сакате да ги зачувате промените на архивираните поднесоци? Поднесоците "
+"ознчени за бришење ќе бидат трајно избришани од системот."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Нема поднесоци во архивата."
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Јавниот идентификатор '{$publicIdentifier}' веќе постои за друга ставка ("
+"издание, напис, galley или датотека). Ве молиме да изберете уникатни "
+"идентификатори во вашето списание."
+
+msgid "editor.me"
+msgstr "Јас"
+
+msgid "editor.allEditors"
+msgstr "Сите уредници"
+
+msgid "editor.allSections"
+msgstr "Сите оддели"
+
+msgid "editor.publishedIssues"
+msgstr "Објавени изданија"
+
+msgid "editor.publishing"
+msgstr "Објавување"
+
+msgid "editor.submissionArchive"
+msgstr "Архива за поднесоци"
+
+msgid "editor.submissionQueue"
+msgstr "Ред за поднесоци"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Поднесување и објавување"
+
+msgid "editor.reassign"
+msgstr "Прераспредели"
+
+msgid "editor.home"
+msgstr "Насловна страна за уредници"

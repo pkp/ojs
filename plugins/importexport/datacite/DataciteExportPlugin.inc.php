@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/datacite/DataciteExportPlugin.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataciteExportPlugin
@@ -18,9 +18,7 @@ import('classes.plugins.DOIPubIdExportPlugin');
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
 define('DATACITE_API_URL', 'https://mds.datacite.org/');
-
-// Test DOI prefix
-define('DATACITE_API_TESTPREFIX', '10.5072');
+define('DATACITE_API_URL_TEST', 'https://mds.test.datacite.org/');
 
 // Export file types.
 define('DATACITE_EXPORT_FILE_XML', 0x01);
@@ -201,51 +199,62 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 		// Get the DOI and the URL for the object.
 		$doi = $object->getStoredPubId('doi');
 		assert(!empty($doi));
+		$testDOIPrefix = null;
 		if ($this->isTestMode($context)) {
-			$doi = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
+			$testDOIPrefix = $this->getSetting($context->getId(), 'testDOIPrefix');
+			assert(!empty($testDOIPrefix));
+			$doi = PKPString::regexp_replace('#^[^/]+/#', $testDOIPrefix . '/', $doi);
 		}
 		$url = $this->_getObjectUrl($request, $context, $object);
 		assert(!empty($url));
+
+		$dataCiteAPIUrl = DATACITE_API_URL;
+		$username = $this->getSetting($context->getId(), 'username');
+		$password = $this->getSetting($context->getId(), 'password');
+		if ($this->isTestMode($context)) {
+			$dataCiteAPIUrl = DATACITE_API_URL_TEST;
+			$username = $this->getSetting($context->getId(), 'testUsername');
+			$password = $this->getSetting($context->getId(), 'testPassword');
+		}
 
 		// Prepare HTTP session.
 		assert(is_readable($filename));
 		$httpClient = Application::get()->getHttpClient();
 		try {
-			$response = $httpClient->request('POST', DATACITE_API_URL . 'metadata', [
-				'auth' => [$this->getSetting($context->getId(), 'username'), $this->getSetting($context->getId(), 'password')],
+			$response = $httpClient->request('POST', $dataCiteAPIUrl . 'metadata', [
+				'auth' => [$username, $password],
 				'body' => fopen($filename, 'r'),
 				'headers' => [
 					'Content-Type' => 'application/xml;charset=UTF-8',
 				],
 			]);
 		} catch (GuzzleHttp\Exception\RequestException $e) {
-			return [['plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: No response from server."]];
-		}
-		if (($status = $response->getStatusCode()) != DATACITE_API_RESPONSE_OK) {
-			return [['plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $status - " . $response->getBody()]];
+			$returnMessage = $e->getMessage();
+			if ($e->hasResponse()) {
+				$returnMessage = $e->getResponse()->getBody(true) . ' (' .$e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
+			}
+			return [['plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $returnMessage"]];
 		}
 
 		// Mint a DOI.
 		$httpClient = Application::get()->getHttpClient();
 		try {
-			$response = $httpClient->request('POST', DATACITE_API_URL . 'doi', [
-				'auth' => [$this->getSetting($context->getId(), 'username'), $this->getSetting($context->getId(), 'password')],
+			$response = $httpClient->request('POST', $dataCiteAPIUrl . 'doi', [
+				'auth' => [$username, $password],
 				'headers' => [
 					'Content-Type' => 'text/plain;charset=UTF-8',
 				],
-				'form_params' => [
-					'doi' => $doi,
-					'url' => $url,
-				],
+				'body' => "doi=$doi\nurl=$url",
 			]);
 		} catch (GuzzleHttp\Exception\RequestException $e) {
-			return [['plugins.importexport.common.register.error.mdsError', 'Registering DOI $doi: No response from server.']];
-		}
-		if (($status = $response->getStatusCode()) != DATACITE_API_RESPONSE_OK) {
-			return [['plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $status - " . $response->getBody()]];
+			$returnMessage = $e->getMessage();
+			if ($e->hasResponse()) {
+				$returnMessage = $e->getResponse()->getBody(true) . ' (' .$e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
+			}
+			return [['plugins.importexport.common.register.error.mdsError', "Registering DOI $doi: $returnMessage"]];
 		}
 		$object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
-		$this->saveRegisteredDoi($context, $object, DATACITE_API_TESTPREFIX);
+		$this->saveRegisteredDoi($context, $object, $testDOIPrefix);
 		return true;
 	}
 
@@ -385,7 +394,8 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 		$router = $request->getRouter();
 		// Retrieve the article of article files.
 		if (is_a($object, 'ArticleGalley')) {
-			$articleId = $object->getSubmissionId();
+			$publication = Services::get('publication')->get($object->getData('publicationId'));
+			$articleId = $publication->getData('submissionId');
 			$cache = $this->getCache();
 			if ($cache->isCached('articles', $articleId)) {
 				$article = $cache->get('articles', $articleId);

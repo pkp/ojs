@@ -3,8 +3,8 @@
 /**
  * @file plugins/paymethod/manual/ManualPaymentPlugin.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ManualPaymentPlugin
@@ -57,6 +57,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	 * @param $form FormComponent
 	 */
 	public function addSettings($hookName, $form) {
+		import('lib.pkp.classes.components.forms.context.PKPPaymentSettingsForm'); // Load constant
 		if ($form->id !== FORM_PAYMENT_SETTINGS) {
 			return;
 		}

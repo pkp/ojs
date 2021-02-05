@@ -51,10 +51,6 @@ msgid "editor.submissionArchive.saveChanges"
 msgstr "संग्रहीत प्रस्तुतियाँ में परिवर्तन सहेजें? विलोपन के लिए चिह्नित सबमिशन को सिस्टम से स्थायी रूप से हटा दिया जाएगा।"
 
 # (pofilter) endpunc: Different punctuation at the end
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "क्या आप वाकई इस सबमिशन को स्थायी रूप से हटाना चाहते हैं?"
-
-# (pofilter) endpunc: Different punctuation at the end
 msgid "editor.submissionReview.confirmDecision"
 msgstr "क्या आप वाकई इस निर्णय को रिकॉर्ड करना चाहते हैं?"
 

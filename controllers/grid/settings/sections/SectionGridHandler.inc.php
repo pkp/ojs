@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/settings/sections/SectionGridHandler.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SectionGridHandler
@@ -241,15 +241,13 @@ class SectionGridHandler extends SetupGridHandler {
 			return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
 		}
 
+		// Validate if it can be deleted
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-		$checkSubmissions = $submissionDao->retrieve('SELECT p.publication_id FROM publications p JOIN submissions s ON (s.submission_id = p.submission_id) WHERE p.section_id = ? AND s.context_id = ?', array((int) $request->getUserVar('sectionId'), (int) $journal->getId()));
-
-		if ($checkSubmissions->numRows() > 0) {
+		$sectionEmpty = $sectionDao->sectionEmpty($request->getUserVar('sectionId'), $journal->getId());
+		if (!$sectionEmpty) {
 			return new JSONMessage(false, __('manager.sections.alertDelete'));
 		}
 
-		// Validate if it can be deleted
 		$sectionsIterator = $sectionDao->getByContextId($journal->getId(),null,false);
 		$activeSectionsCount = (!$section->getIsInactive()) ? -1 : 0;
 		while ($checkSection = $sectionsIterator->next()) {
@@ -261,10 +259,6 @@ class SectionGridHandler extends SetupGridHandler {
 		if ($activeSectionsCount < 1) {
 			return new JSONMessage(false, __('manager.sections.confirmDeactivateSection.error'));
 			return false;
-		}
-
-		if ($checkSubmissions->numRows() > 0) {
-			return new JSONMessage(false, __('manager.sections.alertDelete'));
 		}
 
 		$sectionDao->deleteObject($section);

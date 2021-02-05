@@ -3,8 +3,8 @@
 /**
  * @file classes/search/ArticleSearchIndex.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchIndex
@@ -40,6 +40,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 				$authorText,
 				array_values((array) $author->getData('givenName')),
 				array_values((array) $author->getData('familyName')),
+				array_values((array) $author->getData('preferredPublicName')),
 				array_values(array_map('strip_tags', (array) $author->getData('affiliation'))),
 				array_values(array_map('strip_tags', (array) $author->getData('biography')))
 			);
@@ -52,8 +53,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TITLE, $publication->getFullTitles());
 		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_ABSTRACT, $publication->getData('abstract'));
 
-		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_SUBJECT, (array) $publication->getData('subjects'));
-		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_DISCIPLINE, (array) $publication->getData('disciplines'));
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_SUBJECT, (array) $this->_flattenLocalizedArray($publication->getData('subjects')));
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_KEYWORD, (array) $this->_flattenLocalizedArray($publication->getData('keywords')));
+		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_DISCIPLINE, (array) $this->_flattenLocalizedArray($publication->getData('disciplines')));
 		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TYPE, (array) $publication->getData('type'));
 		$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_COVERAGE, (array) $publication->getData('coverage'));
 		// FIXME Index sponsors too?
@@ -319,6 +321,23 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
 		$position = 0;
 		$this->_indexObjectKeywords($objectId, $text, $position);
+	}
+
+	/**
+	 * Flattens array of localized fields to a single, non-associative array of items
+	 *
+	 * @param $arrayWithLocales array Array of localized fields
+	 * @return array
+	 */
+	protected function _flattenLocalizedArray($arrayWithLocales) {
+		$flattenedArray = array();
+		foreach ($arrayWithLocales as $localeArray) {
+			$flattenedArray = array_merge(
+				$flattenedArray,
+				$localeArray
+			);
+		}
+		return $flattenedArray;
 	}
 }
 

@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-21 10:30+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "გაიგეთ მეტი"
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "ზოგიერთ რესურსზე წვდომისათვის საჭიროა გამოწერა."
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "სისტემაში შესვლა გამომწერების რესურებზე წვდომისათვის."
+
+msgid "plugins.block.subscription.about"
+msgstr "გამოწერები"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "წვდომა IP-მისამართიდან: {$ip}"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "წვდომა მოწოდებულია: {$institutionName}"
+
+msgid "plugins.block.subscription.expires"
+msgstr "დასრულების თარიღი"
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "გამოწერა"
+
+msgid "plugins.block.subscription.description"
+msgstr "ამატებს ბმულს „გამოწერა“ გვერდითა ზოლში."
+
+msgid "plugins.block.subscription.displayName"
+msgstr "ბლოკი „გამოწერა“"

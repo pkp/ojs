@@ -1805,6 +1805,7 @@ msgstr "OJS Installáció"
 msgid "installer.ojsUpgrade"
 msgstr "OJS Frissítés"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS verzió {$version}</h4>\n"

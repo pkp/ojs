@@ -3,8 +3,8 @@
 /**
  * @file classes/article/ArticleGalley.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalley
@@ -118,10 +118,7 @@ class ArticleGalley extends Representation {
 	 */
 	function getFileType() {
 		$galleyFile = $this->getFile();
-		if (!$galleyFile) {
-			return null;
-		}
-		return Services::get('file')->fs->getMimetype(Services::get('file')->getPath($galleyFile->getData('fileId')));
+		return $galleyFile ? $galleyFile->getData('mimetype') : null;
 	}
 
 	/**

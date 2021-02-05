@@ -1,0 +1,317 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-04 11:25+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.submit.userGroup"
+msgstr "...の役割として提出"
+
+msgid "submission.submit.title"
+msgstr "記事・論文を投稿"
+
+msgid "publication.status.unscheduled"
+msgstr "予約無し"
+
+msgid "submission.status.scheduled"
+msgstr "予約済み"
+
+msgid "publication.status.published"
+msgstr "公開済み"
+
+msgid "submission.publication"
+msgstr "公開"
+
+msgid "publication.selectIssue"
+msgstr "発行予定の巻号を選択してください"
+
+msgid "publication.assignToissue"
+msgstr "巻号に割り当てる"
+
+msgid "publication.unscheduledIn"
+msgstr "ある巻号に掲載される予定はありません。"
+
+msgid "publication.scheduledIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a>で公開予定です。"
+
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a>で公開されました。"
+
+msgid "publication.required.issue"
+msgstr "発行される前に、その巻号に割り当てられる必要があります。"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"すべての出版要件を満たしています。発行日が{$datePublished}に設定されているから、すぐに掲載されます。これを公開してもよろしいですか？"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr "すべての出版要件を満たしています。すぐに{$issue}に掲載されます。これを公開してもよろしいですか？"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr "すべての出版要件を満たしています。{$issue}が発行されたときに公開されます。これを発行する予定でよろしいですか？"
+
+msgid "publication.publish.confirmation"
+msgstr "すべての出版要件を満たしています。これを公開してもよろしいですか？"
+
+msgid "publication.invalidIssue"
+msgstr "本書の巻号は見つかりませんでした。"
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactive)"
+
+msgid "publication.invalidSection"
+msgstr "本書のセクションは見つかりませんでした。"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"発行日は、その号が発行されたときに自動的に設定されます。本投稿が以前に他の場所で公開されていて、それをバックデートする必要がある場合を除き、公開日を入力し"
+"ないでください。"
+
+msgid "galley.publicationNotFound"
+msgstr "このガレ刷りの出版物は見つかりませんでした。"
+
+msgid "galley.editPublishedDisabled"
+msgstr "本書のガレ刷りは既刊のため、編集できません。"
+
+msgid "catalog.category.heading"
+msgstr "全項目"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} 項目"
+
+msgid "submission.sectionOptions"
+msgstr "セクション・オプション"
+
+msgid "section.any"
+msgstr "任意のセクション"
+
+msgid "submission.viewingPreview"
+msgstr "これはプレビューであり、公開されていません。 <a href=\"{$url}\">投稿表示</a>"
+
+msgid "submission.metadataDescription"
+msgstr "これらの仕様は、ダブリン・コア・メタデータ・セット（ジャーナル・コンテンツを記述するための国際標準）に基づいています。"
+
+msgid "submission.citationFormat.notFound"
+msgstr "要求された引用形式は検索できません。"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "協力者の役割を選択してください。"
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "要旨が長すぎます。このセクションで示されている制限語数以下に短縮してください。"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "投稿の概要を入力してください。"
+
+msgid "submission.submit.form.titleRequired"
+msgstr "投稿のタイトルを入力してください。"
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "各著者の姓名、名字、メールアドレスが必要です。"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "著者は最低1名必要です。"
+
+msgid "submission.submit.contributorRole"
+msgstr "協力者の役割"
+
+msgid "submission.submit.privacyStatement"
+msgstr "個人情報保護方針"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "以下の要件を読み、完了したことを確認してから進めてください。"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "投稿チェックリスト"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "投稿言語を選択してください。"
+
+msgid "submission.incomplete"
+msgstr "承認待ち"
+
+msgid "submission.complete"
+msgstr "承認"
+
+msgid "submission.upload.fileContents"
+msgstr "投稿要素"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "投稿のメタデーターが更新されました。"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "査読に回す"
+
+msgid "workflow.review.externalReview"
+msgstr "査読"
+
+msgid "submission.confirmSubmit"
+msgstr "この投稿を本誌に提出してもよろしいですか？"
+
+msgid "submission.pageProofs"
+msgstr "校正"
+
+msgid "submission.submit.upload.description"
+msgstr "論文、マルチメディア、データセット、アートワークなど、この投稿に関連するファイルをアップロードしてください。"
+
+msgid "submission.submit.titleAndSummary"
+msgstr "タイトルと要旨"
+
+msgid "grid.action.pageProofApproved"
+msgstr "本校正はガレ刷りのための承認を得ました。"
+
+msgid "grid.action.approveProof"
+msgstr "ガレ刷りのために、この校正を承認する。"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"レイアウト編集者は、出版のために準備された制作準備済みのファイルをここにアップロードします。「監査役の選任」を使用して、出版前に承認のためにアップロードさ"
+"れた改訂済みのファイルを使って、著者やその他の人がガレ刷りの校正を行うように指定します。"
+
+msgid "submission.galleyFiles"
+msgstr "ゲラファイル"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "このゲラを利用可にする"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>このゲラを<em>読者には提供します</em>。</p>"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "投稿ゲラ\"{$galleyFormatName}\"が利用可能にされました。"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>このゲラは <em>もう読者には提供されません</em>。</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "フォーマット承認"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "投稿の公開識別子が更新されました。"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "投稿ゲラ\"{$galleyFormatName}\"が利用できなくなりました。"
+
+msgid "grid.action.issueEntry"
+msgstr "本投稿メタデーターを表示"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "最新号記事ゲラ"
+
+msgid "submission.submit.whatNext.description"
+msgstr "本誌編集部に投稿について通知され、記録の確認メールが送信されました。編集者が提出物を確認した次第、連絡いたします。"
+
+msgid "submission.issueEntry"
+msgstr "メタデーター"
+
+msgid "submission.submit.noContext"
+msgstr "この投稿のジャーナルは見つかりませんでした。"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "概要は{$wordCount}語以内でなければなりません。"
+
+msgid "grid.action.workflow"
+msgstr "投稿の流れ"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "新投稿"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "へ新投稿"
+
+msgid "submission.title.tip"
+msgstr ""
+"投稿タイプは通常、「画像」、「テキスト」、または「ソフトウェア」や「インタラクティブ」などのマルチメディアタイプのいずれかです。 "
+"投稿に最も近いものを選択してください。 例は以下のサイトにあります： <a target=\"_blank\" href=\""
+"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "記事・論文タイトル"
+
+msgid "submission.upload.selectComponent"
+msgstr "投稿の要素を選択"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "この記事・論文を投稿することにあたって、役割を選択してください。"
+
+msgid "submission.queries.production"
+msgstr "制作ディスカッション"
+
+msgid "publication.version.details"
+msgstr "バージョン{$version}の公開詳細"
+
+msgid "publication.unpublish.confirm"
+msgstr "本当に公開をキャンセルしてよろしいですか？"
+
+msgid "publication.unschedule.confirm"
+msgstr "本当に公開予約をキャンセルしてよろしいですか？"
+
+msgid "publication.unpublish"
+msgstr "未公開"
+
+msgid "submission.copyrightOther.description"
+msgstr "公開された投稿物の著作権を次の者に譲渡する。"
+
+msgid "submission.copyrightHolder.description"
+msgstr "これが公開されると自動的に{$copyright}に著作権が付与されます。"
+
+msgid "submission.license.description"
+msgstr ""
+"これを公開すると、<a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>に自動的にライセンスが設定されます。"
+
+msgid "publication.required.reviewStage"
+msgstr "公開する前に、投稿はコピー編集または制作の段階を経る必要があります。"
+
+msgid "publication.required.declined"
+msgstr "拒否した投稿は公開できません。"
+
+msgid "publication.publish.requirements"
+msgstr "これを公開するには、以下の要件を満たしていなければなりません。"
+
+msgid "publication.publish"
+msgstr "公開"
+
+msgid "publication.invalidSubmission"
+msgstr "この出版物の投稿が見つかりませんでした。"
+
+msgid "publication.event.versionUnpublished"
+msgstr "出版から削除されたバージョンがあります。"
+
+msgid "publication.event.versionScheduled"
+msgstr "新版の発行を予定していました。"
+
+msgid "publication.event.versionPublished"
+msgstr "新版が公開されました。"
+
+msgid "publication.event.unpublished"
+msgstr "投稿は未発表にされました。"
+
+msgid "publication.event.scheduled"
+msgstr "投稿が予約済みです。"
+
+msgid "publication.event.published"
+msgstr "投稿が公開済みです。"
+
+msgid "publication.editDisabled"
+msgstr "このバージョンは公開されており、編集することはできません。"
+
+msgid "publication.datePublished"
+msgstr "発行日"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "著作権年は発行日を基準に自動的に設定されます。"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "これが号に掲載されると著作権年が自動的に設定されます。"
+
+msgid "submission.publications"
+msgstr "公開物"

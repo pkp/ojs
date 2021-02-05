@@ -52,9 +52,6 @@ msgstr "Δεν υπάρχουν καταχωρήσεις στο αρχείο υ�
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Να αποθηκευτούν οι αλλαγές στις αρχειοθετημένες υποβολές; Οι υποβολές που έχουν επισημανθεί για διαγραφή θα διαγραφούν οριστικά από το σύστημα."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Επιβεβαιώνετε την οριστική διαγραφή της συγκεκριμένης υποβολής;"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Επιβεβαιώνετε την καταχώρηση της συγκεκριμένης απόφασης;"
 

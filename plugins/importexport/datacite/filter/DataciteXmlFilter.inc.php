@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/datacite/filter/DataciteXmlFilter.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2000-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataciteXmlFilter
@@ -149,7 +149,9 @@ class DataciteXmlFilter extends NativeExportFilter {
 		// DOI (mandatory)
 		$doi = $pubObject->getStoredPubId('doi');
 		if ($plugin->isTestMode($context)) {
-			$doi = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
+			$testDOIPrefix = $plugin->getSetting($context->getId(), 'testDOIPrefix');
+			assert(!empty($testDOIPrefix));
+			$doi = PKPString::regexp_replace('#^[^/]+/#', $testDOIPrefix . '/', $doi);
 		}
 		$rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'identifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 		$node->setAttribute('identifierType', DATACITE_IDTYPE_DOI);
@@ -190,7 +192,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		if ($sizesNode) $rootNode->appendChild($sizesNode);
 		// Formats
 		if (!empty($galleyFile)) {
-			$format = $galleyFile->getFileType();
+			$format = $galleyFile->getData('mimetype');
 			if (!empty($format)) {
 				$formatsNode = $doc->createElementNS($deployment->getNamespace(), 'formats');
 				$formatsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'format', htmlspecialchars($format, ENT_COMPAT, 'UTF-8')));
@@ -565,7 +567,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 			case isset($galley):
 				// The galley represents the article.
 				$pages = $publication->getData('pages');
-				$path = Services::get('file')->getPath($galleyFile->getData('fileId'));
+				$path = $galleyFile->getData('path');
 				$size = Services::get('file')->fs->getSize($path);
 				$sizes[] = Services::get('file')->getNiceFileSize($size);
 				break;
@@ -574,8 +576,12 @@ class DataciteXmlFilter extends NativeExportFilter {
 				break;
 			case isset($issue):
 				$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-				$issueGalleyFile = $issueGalleyDao->getByIssueId($issue->getId());
-				$sizes[] = $issueGalleyFile->getNiceFileSize();
+				$issueGalleyFiles = $issueGalleyDao->getByIssueId($issue->getId());
+				foreach($issueGalleyFiles as $issueGalleyFile) {
+					if ($issueGalleyFile) {
+						$sizes[] = $issueGalleyFile->getNiceFileSize();
+					}
+				}
 				break;
 			default:
 				assert(false);

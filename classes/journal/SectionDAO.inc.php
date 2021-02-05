@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/SectionDAO.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SectionDAO
@@ -406,21 +406,18 @@ class SectionDAO extends PKPSectionDAO {
 	}
 
 	/**
-	 * Retrieve all empty (without articles) section ids for a journal.
+	 * Check if the section is empty.
+	 * @param $sectionId int Section ID
 	 * @param $journalId int Journal ID
-	 * @return array
+	 * @return boolean
 	 */
-	function getEmptyByJournalId($journalId) {
+	function sectionEmpty($sectionId, $journalId) {
 		$result = $this->retrieve(
-			'SELECT s.section_id AS section_id FROM sections s LEFT JOIN submissions a ON (a.section_id = s.section_id) WHERE a.section_id IS NULL AND s.journal_id = ?',
-			[(int) $journalId]
+			'SELECT p.publication_id FROM publications p JOIN submissions s ON (s.submission_id = p.submission_id) WHERE p.section_id = ? AND s.context_id = ?', 
+			[(int) $sectionId, (int) $journalId]
 		);
-
-		$returner = [];
-		foreach ($result as $row) {
-			$returner[] = $row->section_id;
-		}
-		return $returner;
+		$row = $result->current();
+		return $row ? false : true;
 	}
 
 	/**

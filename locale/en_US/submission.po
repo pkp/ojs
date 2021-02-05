@@ -179,6 +179,15 @@ msgstr "The galleys of this publication can not be edited because it has already
 msgid "galley.publicationNotFound"
 msgstr "The publication for this galley could not be found."
 
+msgid "publication.assignToissue"
+msgstr "Assign to Issue"
+
+msgid "publication.assignedToIssue"
+msgstr "This has been assigned to <a href=\"{$issueUrl}\">{$issueName}</a> but it has not been scheduled for publication."
+
+msgid "publication.changeIssue"
+msgstr "Change Issue"
+
 msgid "publication.datePublished.description"
 msgstr "The publication date will be set automatically when the issue is published. Do not enter a publication date unless the article was previously published elsewhere and you need to backdate it."
 
@@ -214,9 +223,6 @@ msgstr "Scheduled for publication in <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
 msgstr "This has not been scheduled for publication in an issue."
-
-msgid "publication.scheduleInissue"
-msgstr "Assign to Issue"
 
 msgid "publication.selectIssue"
 msgstr "Select an issue to schedule for publication"

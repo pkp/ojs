@@ -53,9 +53,6 @@ msgstr "Arşivde kayıtlı gönderi yok."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Arşivlenmiş gönderilerdeki değişiklikleri kaydet. Silinmek üzere işaretli kayıtlı yazılar sistemden tamamen silinecektir."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Bu kaydı tamamen silmek istediğinizden emin misiniz?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Bu kararı kaydetmek istediğinizden emin misiniz?"
 

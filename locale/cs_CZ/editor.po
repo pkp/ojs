@@ -47,9 +47,6 @@ msgstr "V archivu nejsou žádné příspěvky."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Uložit změny v archivovaných příspěvcích? Příspěvky označené pro smazání budou trvale odstraněny ze systému."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Jste si jisti, že chcete trvale smazat tento příspěvek?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Jste si jisti, že chcete zaznamenat toto rozhodnutí?"
 

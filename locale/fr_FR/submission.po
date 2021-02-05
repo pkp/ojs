@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2020-11-08 13:50+0000\n"
-"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"PO-Revision-Date: 2021-01-29 20:07+0000\n"
+"Last-Translator: Olivier Roueff <olivier.roueff@cnrs.fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"fr/>\n"
+"fr_FR/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,7 +57,7 @@ msgid "submission.submit.title"
 msgstr "Soumettre un article"
 
 msgid "submission.submit.userGroup"
-msgstr "soumettre en qualité de …"
+msgstr "Soumettre en qualité de …"
 
 msgid "submission.submit.userGroupDescription"
 msgstr "Choisissez le rôle sous lequel vous soumettez votre article."
@@ -71,11 +71,11 @@ msgstr "Titre de l'article"
 msgid "submission.title.tip"
 msgstr ""
 "Le type de soumission est généralement une « image », un « texte » ou un "
-"autre format multimédia, y compris « logiciel » ou « ressource interactive »"
-". Veuillez choisir celui qui correspond le mieux à votre soumission. Vous "
-"pouvez trouver des exemple sur <a target=\"_blank\" href=\"http://dublincore."
-"org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore."
-"org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+"autre format multimédia, y compris un « logiciel » ou un « document "
+"interactif ». Veuillez choisir celui qui correspond le mieux à votre "
+"soumission. Vous pouvez trouver des exemple sur <a target=\"_blank\" href=\""
+"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Commencer une nouvelle soumission dans"
@@ -90,7 +90,10 @@ msgid "submission.issueEntry"
 msgstr "Métadonnées"
 
 msgid "submission.submit.whatNext.description"
-msgstr "Le journal a été informé de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers. Le rédacteur communiquera avec vous une fois que votre soumission aura été examinée."
+msgstr ""
+"Le journal a été informé de votre soumission et vous a envoyé par courriel "
+"une confirmation à archiver. L'éditeur vous contactera une fois que votre "
+"soumission aura été examinée."
 
 msgid "editor.submission.decision.sendExternalReview"
 msgstr "Envoyer pour évaluation"
@@ -111,7 +114,7 @@ msgid "submission.publication"
 msgstr "Publication"
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "Les épreuves se trouvent dans le dossier du numéro"
+msgstr "Les épreuves se trouvent dans le répertoire du numéro"
 
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "L'article mis en page \"{$galleyFormatName}\" est disponible."
@@ -120,7 +123,7 @@ msgid "submission.event.articleGalleyMadeUnavailable"
 msgstr "L'article mis en page \"{$galleyFormatName}\" n'est pas disponible."
 
 msgid "submission.event.publicIdentifiers"
-msgstr "Identifiants publics mis à jour."
+msgstr "Identifiants publics de la soumission mis à jour."
 
 msgid "grid.issueEntry.availableGalley.title"
 msgstr "Approbation du format"
@@ -131,31 +134,39 @@ msgstr ""
 "lectrices.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Cette épreuve <em>sera mise à la disposition</em> des lecteurs.</p>"
+msgstr ""
+"<p>Cette épreuve <em>sera mise à la disposition</em> des lecteurs et "
+"lectrices.</p>"
 
 msgid "grid.action.availableArticleGalley"
-msgstr "Rendre ce modèle de mise en page disponible"
+msgstr "Rendre ces épreuves disponibles"
 
 msgid "submission.galleyFiles"
-msgstr "Fichiers de mise en page"
+msgstr "Fichiers d'épreuves"
 
 msgid "submission.proofReadingDescription"
-msgstr "*Le responsable de la mise en page transfère les fichiers qui ont été préparés pour publication ici.  Utiliser <em>Assigner un vérificateur</em> pour identifier les auteurs et les autres personnes qui reliront les articles mis en page, avec les fichiers corrigés téléchargés, pour approbation avant la publication."
+msgstr ""
+"Le responsable de la mise en page transfère ici les fichiers qui sont prêts "
+"pour publication.  Utiliser <em>Assigner un vérificateur</em> pour "
+"identifier les auteurs et les autres personnes qui reliront les épreuves et "
+"chargerons les fichiers corrigés pour approbation avant la publication."
 
 msgid "grid.action.approveProof"
-msgstr "Approuver cette épreuve."
+msgstr "Approuver cette version pour inclusion aux épreuves."
 
 msgid "grid.action.pageProofApproved"
-msgstr "Cette épreuve a été approuvée."
+msgstr "Cette version a été approuvée pour inclusion aux épreuves."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Titre et résumé"
 
 msgid "submission.submit.upload.description"
-msgstr "Transférer les fichier associés à la soumission, incluant l'article, les fichiers multimedia, les ensembles de données, les oeuvres d'art, etc."
+msgstr ""
+"Transférer les fichier associés à cette soumission, incluant l'article, les "
+"fichiers multimédia, les ensembles de données, les œuvres d'art, etc."
 
 msgid "submission.pageProofs"
-msgstr "Correction d'épreuve"
+msgstr "Correction d'épreuves"
 
 msgid "submission.confirmSubmit"
 msgstr "Êtes-vous certain-e de vouloir soumettre cet article à la revue ?"
@@ -164,7 +175,7 @@ msgid "workflow.review.externalReview"
 msgstr "Évaluation"
 
 msgid "submission.abstract.wordCount.description"
-msgstr "Le résumé doit comporté au maximum {$wordCount} mots."
+msgstr "Le résumé doit comporter au maximum {$wordCount} mots."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr "Votre résumé est trop long. Merci de respecter le nombre de mots limite."
@@ -175,7 +186,7 @@ msgstr "Toutes les sections"
 msgid "publication.selectIssue"
 msgstr "Choisir un numéro pour programmer la publication"
 
-msgid "publication.scheduleInissue"
+msgid "publication.assignToissue"
 msgstr "Assigner à un numéro"
 
 msgid "publication.unscheduledIn"
@@ -247,7 +258,7 @@ msgid "submission.sectionOptions"
 msgstr "Options de rubrique"
 
 msgid "submission.submit.noContext"
-msgstr "La revue de cette soumission est introuvable."
+msgstr "La revue associée à cette soumission est introuvable."
 
 msgid "submission.viewingPreview"
 msgstr ""
@@ -257,126 +268,109 @@ msgstr ""
 msgid "submission.publication"
 msgstr "Publication"
 
-
 msgid "publication.status.published"
 msgstr "Publié"
-
 
 msgid "submission.status.scheduled"
 msgstr "Programmé"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Non programmé"
 
-
 msgid "submission.publications"
 msgstr "Publications"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "L'année des droits d'auteur sera définie automatiquement lorsque ceci sera "
 "publié dans le numéro."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "L'année des droits d'auteur sera définie automatiquement sur la base de la "
 "date de publication."
 
-
 msgid "publication.datePublished"
 msgstr "Date de publication"
-
 
 msgid "publication.editDisabled"
 msgstr "Cette version a été publiée et ne peut pas être modifiée."
 
-
 msgid "publication.event.published"
 msgstr "La soumission a été publiée."
-
 
 msgid "publication.event.scheduled"
 msgstr "La soumission a été programmée pour publication."
 
-
 msgid "publication.event.unpublished"
 msgstr "La soumission a été dépubliée."
-
 
 msgid "publication.event.versionPublished"
 msgstr "Une nouvelle version a été publiée."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "Une nouvelle version a été programmée pour publication."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "Une version a été dépubliée."
 
-
 msgid "publication.invalidSubmission"
 msgstr "La soumission pour cette publication n'a pu être trouvée."
 
-
 msgid "publication.publish"
 msgstr "Publier"
-
 
 msgid "publication.publish.requirements"
 msgstr ""
 "les conditions suivantes doivent être remplies avant que ceci ne puisse être "
 "publié."
 
-
 msgid "publication.required.declined"
 msgstr "Une soumission refusée ne peut pas être publiée."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "La soumission doit être à l'étape de révision ou de production avant de "
 "pouvoir être publiée."
 
-
 msgid "submission.license.description"
 msgstr ""
 "La licence sera automatiquement définie comme <a href='{$licenseUrl}' "
 "target='_blank'> {$licenseName} </a> lorsque ceci sera publié."
-
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "Les droits d'auteur seront automatiquement attribués à {$copyright} lorsque "
 "ceci sera publié."
 
-
 msgid "submission.copyrightOther.description"
 msgstr ""
 "Attribuer à la partie suivante les droits d'auteur pour les soumissions "
 "publiées."
 
-
 msgid "publication.unpublish"
 msgstr "Dépublier"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Avez-vous la certitude de ne pas vouloir que ceci soit publié ?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr ""
 "Avez-vous la certitude de ne pas vouloir programmer ceci pour publication ?"
 
-
 msgid "publication.version.details"
 msgstr "Renseignements de publication pour la version {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Discussions sur la production"
 
+msgid "publication.inactiveSection"
+msgstr "{$rubrique} (Inactif)"
+
+msgid "publication.changeIssue"
+msgstr "Changer de numéro"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Assigné à <a href=\"{$issueUrl}\">{$issueName}</a> mais la  publication "
+"n'est pas planifiée."

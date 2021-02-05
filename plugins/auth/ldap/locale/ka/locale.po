@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-25 10:19+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: ka (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
+"auth-ldap/ka/>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL-ის უსაფრთხოების თვისებები"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "ავტორიზაციის მოთხოვნილი ID"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Realm-არე"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "მაგალითად, \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL მექანიზმი"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "SASL-ის გამოყენება ავტორიზაციის ნაცვლად"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL პარამეტრები (არასავლდებულო)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "პაროლების ჰეშის ფორმატი, რომელიც სერვერზე ინახება. რეკომენდებულია SSHA."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "პაროლის დაშიფვრა"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"ატრიბუტი, რომლის მნიშვნელობა უნიკალურად განსაზღვრავს მომხმარებლის ობიექტს, "
+"მაგალითად uid, cn, ან sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "ანგარიშის სახელის ატრიბუტი"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"მენეჯერის DN და პაროლი საჭიროა მხოლოდ იმ შემთხვევაში, თუ ჩართულია პაროლების "
+"სინქრონიზაცია, ან ანგარიშების შექმნა. თუ LDAP გამოიყენება მხოლოდ "
+"ავტორიზაციისათვის, ეს პარამეტრები სავალდებულო არ არის."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "მენეჯერის პაროლი"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "მაგალითად, \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "მენეჯერის DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "მაგალითად, \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "საბაზო DN"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "არასავლდებულო. ნაგულისხმევად 389 (LDAP), ან 636 (LDAP over SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "სერვერის პორტი"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"მაგალითად, \"ldap.example.com\", ან \"ldaps://ldap.example.com\" (SSL-ის "
+"გამოყენებისათვის)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "სერვერის სახელი"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP-ის პარამეტრები"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"პლაგინი მხარს უჭერს მომხმარებელთა ანგარიშების ავტორიზაციას და სინქრონიზაციას "
+"LDAP-ის გარე მონაცემთა წყაროსთან."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP-მოდული"

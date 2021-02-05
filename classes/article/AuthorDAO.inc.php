@@ -3,8 +3,8 @@
 /**
  * @file classes/article/AuthorDAO.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AuthorDAO
@@ -91,7 +91,7 @@ class AuthorDAO extends PKPAuthorDAO {
 		}
 
 		$result = $this->retrieveRange(
-			'SELECT a.*, ug.show_title, s.locale,
+			$sql = 'SELECT a.*, ug.show_title, s.locale,
 				COALESCE(agl.setting_value, agpl.setting_value) AS author_given,
 				CASE WHEN agl.setting_value <> \'\' THEN afl.setting_value ELSE afpl.setting_value END AS author_family
 			FROM	authors a
@@ -129,7 +129,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_fromRow');
+		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo);
 	}
 }
 

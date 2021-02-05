@@ -47,9 +47,6 @@ msgstr "Nema predaja u arhivi."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Sačuvaj izmene u arhiviranim predajama? Predaje koje su označene za brisanje će biti trajno obrisane."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Da li želite da trajno obrišete predaje?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Da li želite da zabeležite ovu odluku?"
 

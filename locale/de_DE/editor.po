@@ -53,9 +53,6 @@ msgstr "Keine Beiträge im Archiv."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Änderungen der archivierten Beiträge speichern? Beiträge, die als zu löschend gekennzeichnet sind, werden dadurch engültig aus dem System gelöscht."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Sind Sie sicher, dass Sie diesen Beitrag endgültig löschen wollen?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Sind Sie sicher, dass Sie diese Entscheidung protokollieren wollen?"
 

@@ -8,8 +8,8 @@
 /**
  * @file controllers/grid/issues/IssueGridHandler.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2000-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueGridHandler
@@ -298,25 +298,21 @@ class IssueGridHandler extends GridHandler {
 		if (!$issue || !$request->checkCSRF()) return new JSONMessage(false);
 
 		$journal = $request->getJournal();
-		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
 		// remove all published submissions and return original articles to editing queue
-		import('classes.article.ArticleTombstoneManager');
-		$articleTombstoneManager = new ArticleTombstoneManager();
 		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
-			'count' => 5000, // large upper-limit
 			'issueIds' => $issue->getId(),
 		]);
 		foreach ($submissionsIterator as $submission) {
-			$submission = Services::get('submission')->edit($submission, ['status' => STATUS_QUEUED], $request);
-			if ($isBackIssue) {
-				$articleTombstoneManager->insertArticleTombstone($submission, $journal);
-			}
 			$publications = (array) $submission->getData('publications');
 			foreach ($publications as $publication) {
-				$publication = Services::get('publication')->edit($publication, ['issueId' => ''], $request);
+				if ($publication->getData('issueId') === (int) $issue->getId()) {
+					$publication = Services::get('publication')->edit($publication, ['issueId' => '', 'status' => STATUS_QUEUED], $request);
+				}
 			}
+			$newSubmission = Services::get('submission')->get($submission->getId());
+			Services::get('submission')->updateStatus($newSubmission);
 		}
 
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
@@ -378,7 +374,9 @@ class IssueGridHandler extends GridHandler {
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($issue);
 		$form->clearPubId($request->getUserVar('pubIdPlugIn'));
-		return new JSONMessage(true);
+		$json = new JSONMessage(true);
+		$json->setEvent('reloadTab', [['tabsSelector' => '#editIssueTabs', 'tabSelector' => '#identifiersTab']]);
+		return $json;
 	}
 
 	/**
@@ -490,8 +488,6 @@ class IssueGridHandler extends GridHandler {
 				'issueIds' => $issue->getId(),
 				'status' => STATUS_SCHEDULED,
 			]);
-			
-			$dataObjectTombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var $dataObjectTombstoneDao DataObjectTombstoneDAO */
 
 			foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
 				$publications = $submission->getData('publications');
@@ -501,9 +497,6 @@ class IssueGridHandler extends GridHandler {
 						$publication = Services::get('publication')->publish($publication);
 					}
 				}
-
-				// delete article tombstone
-				$dataObjectTombstoneDao->deleteByDataObjectId($submission->getId());
 			}
 		}
 
@@ -553,16 +546,12 @@ class IssueGridHandler extends GridHandler {
 
 		// insert article tombstones for all articles
 		import('classes.submission.Submission');
-		import('classes.article.ArticleTombstoneManager');
-		$articleTombstoneManager = new ArticleTombstoneManager();
 		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
 		]);
 
 		foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
-			$articleTombstoneManager->insertArticleTombstone($submission, $journal);
-
 			$publications = $submission->getData('publications');
 			foreach ($publications as $publication) { /** @var Publication $publication */
 				if ($publication->getData('status') === STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
@@ -576,8 +565,7 @@ class IssueGridHandler extends GridHandler {
 		}
 
 		$dispatcher = $request->getDispatcher();
-		$json = new JSONMessage();
-		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'issuesTabs', null)));
+		$json = DAO::getDataChangedEvent($issue->getId());
 		$json->setGlobalEvent('issueUnpublished', array('id' => $issue->getId()));
 		return $json;
 	}
@@ -599,9 +587,7 @@ class IssueGridHandler extends GridHandler {
 		$issueDao->updateCurrent($journal->getId(), $issue);
 
 		$dispatcher = $request->getDispatcher();
-		$json = new JSONMessage();
-		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'issuesTabs', null)));
-		return $json;
+		return DAO::getDataChangedEvent();
 	}
 
 	/**

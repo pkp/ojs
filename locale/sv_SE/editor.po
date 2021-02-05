@@ -53,9 +53,6 @@ msgstr "Det finns inga bidrag i arkivet."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Spara ändringar av arkiverade bidrag? Bidrag som markeras för borttagning kommer att raderas permanent ur systemet."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Är du säker på att du vill ta bort det här bidraget permanent?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Är du säker på att du vill registrera det här beslutet?"
 

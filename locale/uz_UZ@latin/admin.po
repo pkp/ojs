@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-08 06:26+0000\n"
-"Last-Translator: Renat Gaysin <renat@astrin.uz>\n"
+"PO-Revision-Date: 2021-01-11 10:59+0000\n"
+"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/admin/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -11,15 +11,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "admin.settings.redirectInstructions"
 msgstr ""
-"Saytning asosiy sahifasi ushbu jurnalning asosiy sahifasi bo'ladi. Bu, "
-"masalan, agar saytda faqat bitta jurnal mavjud bo'lsa, foydalidir."
+"Saytning asosiy sahifasi ushbu jurnalning asosiy sahifasi bo‘ladi. "
+"Masalan,bu agar saytda faqat bitta jurnal mavjud bo‘lsa, foydalidir."
 
-#, fuzzy
 msgid "admin.settings.redirect"
-msgstr "Jurnalni qayta yo'naltirish"
+msgstr "Jurnalni qayta yo‘naltirish"
 
 #, fuzzy
 msgid "admin.settings.info.success"
@@ -64,3 +62,7 @@ msgstr ""
 "ro'yxati uchun. Birortasi tanlanmaganda ishga tushadigan sozlash "
 "metrikasidan birini tanlang .\n"
 "\t"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Bu til shu sayt va unga bog‘langan barcha jurnallar uchun standart bo‘ladi."

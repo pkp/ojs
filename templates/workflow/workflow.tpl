@@ -1,8 +1,8 @@
 {**
  * templates/workflow/workflow.tpl
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Display the workflow tab structure.
@@ -58,6 +58,14 @@
 			>
 				{translate key="common.preview"}
 			</pkp-button>
+			{if $submissionPaymentsEnabled}
+				<dropdown
+					class="pkpWorkflow__submissionPayments"
+					label="{translate key="common.payments"}"
+				>
+					<pkp-form class="pkpWorkflow__submissionPaymentsForm" v-bind="components.{$smarty.const.FORM_SUBMISSION_PAYMENTS}" @set="set">
+				</dropdown>
+			{/if}
 			{if $canAccessEditorialHistory}
 				<pkp-button
 					ref="activityButton"

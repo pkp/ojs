@@ -56,9 +56,6 @@ msgstr "Nenhuma submissão no acervo."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Salvar alterações a submissões arquivadas? Submissões marcadas para exclusão serão excluídas permanentemente do sistema."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Você tem certeza que deseja excluir esta submissão?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Você tem certeza que deseja registrar esta decisão?"
 

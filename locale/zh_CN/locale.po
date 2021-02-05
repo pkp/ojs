@@ -1440,6 +1440,7 @@ msgstr "OJS安装"
 msgid "installer.ojsUpgrade"
 msgstr "OJS升级"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS版本 {$version}</h4>\n"

@@ -14,6 +14,9 @@ msgstr ""
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "The announcement you requested is not part of this journal."
 
+msgid "api.emails.403.disabled"
+msgstr "The email notification feature has not been enabled for this journal."
+
 msgid "api.submissions.403.cantChangeContext"
 msgstr "You can not change the journal of a submission."
 

@@ -3,8 +3,8 @@
 /**
  * @file pages/workflow/WorkflowHandler.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class WorkflowHandler
@@ -89,6 +89,21 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		$components = $templateMgr->getState('components');
 		$components[FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
+
+		// Add payments form if enabled
+		$paymentManager = \Application::getPaymentManager($submissionContext);
+		$templateMgr->assign([
+			'submissionPaymentsEnabled' => $paymentManager->publicationEnabled(),
+		]);
+		if ($paymentManager->publicationEnabled()) {
+			$submissionPaymentsForm = new APP\components\forms\publication\SubmissionPaymentsForm(
+				$request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), '_submissions/' . $submission->getId() . '/payment'),
+				$submission,
+				$request->getContext()
+			);
+			$components[FORM_SUBMISSION_PAYMENTS] = $submissionPaymentsForm->getConfig();
+			$templateMgr->setConstants([FORM_SUBMISSION_PAYMENTS]);
+		}
 
 		// Add the word limit to the existing title/abstract form
 		if (!empty($components[FORM_TITLE_ABSTRACT]) &&

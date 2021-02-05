@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/SubscriptionTypeDAO.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionTypeDAO
@@ -15,6 +15,8 @@
  */
 
 import('classes.subscription.SubscriptionType');
+
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 class SubscriptionTypeDAO extends DAO {
 	/**
@@ -301,17 +303,12 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return boolean
 	 */
 	function subscriptionTypesExistByInstitutional($journalId, $institutional = false) {
-		$result = $this->retrieve(
-			'SELECT COUNT(*)
-			FROM
-			subscription_types st
-			WHERE st.journal_id = ?
-			AND st.institutional = ?',
-			[(int) $journalId, (int) $institutional]
-		);
-		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
-		$result->Close();
-		return $returner;
+		$result = Capsule::table('subscription_types')
+			->where('journal_id', (int) $journalId)
+			->where('institutional', (int) $institutional)
+			->first();
+
+		return is_null($result) ? false : true;
 	}
 
 	/**

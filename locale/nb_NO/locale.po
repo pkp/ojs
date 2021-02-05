@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2020-10-19 15:21+0000\n"
-"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"PO-Revision-Date: 2021-01-29 20:07+0000\n"
+"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -30,10 +30,10 @@ msgid "navigation.otherJournals"
 msgstr "Andre tidsskrift"
 
 msgid "navigation.browseByIssue"
-msgstr "i utgaver"
+msgstr "Etter utgaver"
 
 msgid "navigation.browseByAuthor"
-msgstr "i forfattere"
+msgstr "Etter forfatter"
 
 msgid "navigation.infoForAuthors"
 msgstr "For forfattere"
@@ -48,22 +48,22 @@ msgid "navigation.infoForLibrarians.long"
 msgstr "Informasjon for bibliotekarer"
 
 msgid "common.queue.long.submissionsUnassigned"
-msgstr "Ikke oppnevnt"
+msgstr "Ikke tildelt"
 
 msgid "common.queue.short.submissionsUnassigned"
-msgstr "Ikke oppnevnt"
+msgstr "Ikke oppnevnt til fagfelle"
 
 msgid "common.queue.long.submissionsInEditing"
-msgstr "Manus redigeres"
+msgstr "Innleveringer til språkvask"
 
 msgid "common.queue.short.submissionsInEditing"
-msgstr "Redigeres"
+msgstr "Språkvaskes"
 
 msgid "common.queue.long.submissionsInReview"
-msgstr "Manus vurderes"
+msgstr "Innleveringer til fagfellevurdering"
 
 msgid "common.queue.short.submissionsInReview"
-msgstr "Vurderes"
+msgstr "Til fagfellevurdering"
 
 msgid "common.queue.long.submissionsArchives"
 msgstr "Arkiv"
@@ -72,16 +72,16 @@ msgid "common.queue.short.submissionsArchives"
 msgstr "Arkiv"
 
 msgid "common.queue.long.active"
-msgstr "Aktive manus"
+msgstr "Alle aktive"
 
 msgid "common.queue.short.active"
 msgstr "Aktive"
 
 msgid "common.queue.long.completed"
-msgstr "Arkiver"
+msgstr "Arkiv"
 
 msgid "common.queue.short.completed"
-msgstr "Arkiver"
+msgstr "Arkiv"
 
 msgid "section.section"
 msgstr "Seksjon"
@@ -111,7 +111,7 @@ msgid "common.publications"
 msgstr "Artikler"
 
 msgid "article.submissionId"
-msgstr "Manus-ID"
+msgstr "Innleveringens ID"
 
 msgid "article.title"
 msgstr "Tittel"
@@ -132,16 +132,16 @@ msgid "article.file"
 msgstr "Fil"
 
 msgid "article.suppFile"
-msgstr "Tilleggsfil"
+msgstr "Supplerende fil"
 
 msgid "article.suppFiles"
-msgstr "Tilleggsfil(er)"
+msgstr "Supplerende fil(er)"
 
 msgid "article.suppFilesAbbrev"
-msgstr "Tilleggsfil(er)"
+msgstr "Supp. filer"
 
 msgid "article.discipline"
-msgstr "Akademisk fag og felt"
+msgstr "Fagfelt og underkategorier"
 
 msgid "article.subject"
 msgstr "Emneord (Nøkkelord)"
@@ -159,13 +159,13 @@ msgid "article.sectionEditor"
 msgstr "Seksjonsred."
 
 msgid "article.commentsToEditor"
-msgstr "Forfatterkommentarer"
+msgstr "Forfatters kommentar til redaktør"
 
 msgid "article.submission"
-msgstr "Manuskript"
+msgstr "Innlevering"
 
 msgid "article.submissions"
-msgstr "Manuskript"
+msgstr "Innleveringer"
 
 msgid "article.abstract"
 msgstr "Sammendrag"
@@ -174,7 +174,7 @@ msgid "article.details"
 msgstr "Detaljer"
 
 msgid "submission.submissionEditing"
-msgstr "Manuskriptbehandling"
+msgstr "Behandle innlevering"
 
 msgid "submission.changeSection"
 msgstr "Endre til"
@@ -186,7 +186,7 @@ msgid "submission.round"
 msgstr "Runde&nbsp;{$round}"
 
 msgid "submission.editorReview"
-msgstr "Redaktørens fagvurdering"
+msgstr "Redaktørens gjennomgang"
 
 msgid "submission.notifyAuthor"
 msgstr "Send beskjed til forfatter"
@@ -195,28 +195,28 @@ msgid "submission.notifyEditor"
 msgstr "Send beskjed til redaktør"
 
 msgid "submission.editorAuthorRecord"
-msgstr "Redaktør/Forfatter e-post"
+msgstr "Logg over e-post til redaktør/forfatter"
 
 msgid "submission.reviewersVersion"
-msgstr "Fagkonsulentens annoterte filversjon"
+msgstr "Versjon med fagfellens kommentarer"
 
 msgid "submission.postReviewVersion"
-msgstr "Filversjon etter fagvurdering"
+msgstr "Versjon etter fagfellevurdering"
 
 msgid "submission.editorVersion"
 msgstr "Redaktørens versjon"
 
 msgid "submission.authorsRevisedVersion"
-msgstr "Forfatterens omarbeidete filversjon"
+msgstr "Forfatterens omarbeidede filversjon"
 
 msgid "submission.authorVersion"
 msgstr "Forfatterens versjon"
 
 msgid "submission.copyediting"
-msgstr "Manusredigering"
+msgstr "Språkvask"
 
 msgid "submission.copyedit"
-msgstr "Manusredigering"
+msgstr "Språkvask"
 
 msgid "submission.proofreading"
 msgstr "Korrekturlesing"
@@ -237,7 +237,7 @@ msgid "submissions.step3"
 msgstr "Trinn 3"
 
 msgid "submissions.queuedReview"
-msgstr "Planlagt fagvurdert"
+msgstr "Til fagfellevurdering"
 
 msgid "submissions.published"
 msgstr "Publisert"
@@ -246,16 +246,16 @@ msgid "submissions.initial"
 msgstr "Første"
 
 msgid "submissions.proofread"
-msgstr "Korrekturlesing"
+msgstr "Korrekturlest"
 
 msgid "submissions.initialProof"
 msgstr "Første korrektur"
 
 msgid "submissions.postAuthor"
-msgstr "Post-forfatter"
+msgstr "Etter forfatter"
 
 msgid "submissions.reviewRound"
-msgstr "Fagvurderingsrunde"
+msgstr "Fagfellevurderingsrunde"
 
 msgid "submissions.proof"
 msgstr "Korrektur"
@@ -267,16 +267,16 @@ msgid "submissions.editorRuling"
 msgstr "Redaktørens avgjørelse"
 
 msgid "submission.eventLog"
-msgstr "Hendelseslogg"
+msgstr "Aktivitetslogg"
 
 msgid "submissions.copyeditComplete"
-msgstr "Manuskript redigert"
+msgstr "Språkvasket"
 
 msgid "submissions.layoutComplete"
 msgstr "Sider oppsatt"
 
 msgid "submissions.proofreadingComplete"
-msgstr "Korrektur lest"
+msgstr "Korrekturlest"
 
 msgid "journal.currentIssue"
 msgstr "Nyeste utgave"
@@ -357,7 +357,7 @@ msgid "issue.title"
 msgstr "Tittel"
 
 msgid "issue.volume"
-msgstr "Volum"
+msgstr "Årgang"
 
 msgid "issue.number"
 msgstr "Nummer"
@@ -366,7 +366,7 @@ msgid "issue.vol"
 msgstr "Vol"
 
 msgid "issue.no"
-msgstr "Nr"
+msgstr "Nr."
 
 msgid "issue.year"
 msgstr "År"
@@ -381,94 +381,94 @@ msgid "issue.abstract"
 msgstr "Sammendrag"
 
 msgid "submission.event.general.defaultEvent"
-msgstr "Manuskripthendelse"
+msgstr "Aktivitet"
 
 msgid "submission.event.submissionSubmitted"
-msgstr "Artikkel innsendt"
+msgstr "Første steg av innlevering ferdig"
 
 msgid "submission.event.general.issueScheduled"
-msgstr "Manuskript sendt til publiseringsplanen"
+msgstr "Innlevering sendt til publiseringsplanen"
 
 msgid "submission.event.general.issueAssigned"
-msgstr "Manuskript utvalgt til utgave"
+msgstr "Innlevering planlagt til utgave"
 
 msgid "submission.event.general.articlePublished"
 msgstr "Artikkel publisert"
 
 msgid "submission.event.author.authorRevision"
-msgstr "Forfatterrevisjon innsendt"
+msgstr "Forfatterens revidering innlevert"
 
 msgid "submission.event.general.authorRevision"
-msgstr "Forfatter - revisjonsfil oppdatert"
+msgstr "Forfatterens fil med redigeringer oppdatert"
 
 msgid "submission.event.editor.editorAssigned"
-msgstr "Redaktør oppnevnt for manuskript"
+msgstr "Redaktør oppnevnt"
 
 msgid "submission.event.editor.editorUnassigned"
-msgstr "Redaktør avløst fra manuskript"
+msgstr "Redaktør avløst"
 
 msgid "submission.event.editor.editorDecision"
-msgstr "Redaktørens beslutning innsendt"
+msgstr "Redaktørens beslutning innlevert"
 
 msgid "submission.event.editor.editorFile"
-msgstr "Redaktør - fil oppdatert"
+msgstr "Redaktørens fil oppdatert"
 
 msgid "submission.event.editor.submissionArchived"
-msgstr "Manuskript sendt til arkivet"
+msgstr "Innleveringen sendt til arkivet"
 
 msgid "submission.event.editor.submissionRestored"
-msgstr "Manuskript hentet opp fra arkivet"
+msgstr "Innlevering gjenopprettet fra arkivet"
 
 msgid "submission.event.copyedit.copyeditorAssigned"
-msgstr "Manusredaktør oppnevnt for manuskript"
+msgstr "Språkvasker oppnevnt"
 
 msgid "submission.event.copyedit.copyeditorUnassigned"
-msgstr "Manusredaktør avløst fra manuskript"
+msgstr "Språkvasker avløst"
 
 msgid "submission.event.copyedit.copyeditInitiated"
-msgstr "Manusredigeringsoppdrag igangsatt"
+msgstr "Språkvask startet"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Manusredaktør - revisjonsfil oppdatert"
+msgstr "Språkvaskerens fil oppdatert"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
-msgstr "Første manusredigering ferdigstilt"
+msgstr "Første språkvask ferdigstilt"
 
 msgid "submission.event.copyedit.copyeditFinalCompleted"
-msgstr "Siste manusredigering ferdigstilt"
+msgstr "Siste språkvask ferdigstilt"
 
 msgid "submission.event.copyedit.copyeditSetFile"
-msgstr "Manusredigering - fil oppdatert"
+msgstr "Språkvaskfilen oppdatert"
 
 msgid "submission.event.proofread.proofreaderAssigned"
-msgstr "Korrekturleser oppnevnt for manuskript"
+msgstr "Korrekturleser oppnevnt"
 
 msgid "submission.event.proofread.proofreaderUnassigned"
-msgstr "Korrekturleser avløst fra manuskript"
+msgstr "Korrekturleser avløst"
 
 msgid "submission.event.proofread.proofreadInitiated"
-msgstr "Korrekturlesingsoppdrag igangsatt"
+msgstr "Korrekturlesing startet"
 
 msgid "submission.event.proofread.proofreadRevision"
-msgstr "Korrekturleser - revisjonsfil oppdatert"
+msgstr "Korrekturleserens fil oppdatert"
 
 msgid "submission.event.proofread.proofreadCompleted"
-msgstr "Korrekturlesingsoppdrag ferdigstilt"
+msgstr "Korrekturlesing ferdigstilt"
 
 msgid "submission.event.layout.layoutEditorAssigned"
-msgstr "Layoutredaktør oppnevnt for manuskript"
+msgstr "Layoutredaktør oppnevnt"
 
 msgid "submission.event.layout.layoutEditorUnassigned"
-msgstr "Layoutredaktør avløst fra manuskript"
+msgstr "Layoutredaktør avløst"
 
 msgid "submission.event.layout.layoutInitiated"
-msgstr "Layoutoppdrag igangsatt"
+msgstr "Layoutoppdrag startet"
 
 msgid "submission.event.layout.layoutGalleyCreated"
-msgstr "Layout - oppsett oppdatert"
+msgstr "Layoutoppsett oppdatert"
 
 msgid "submission.event.layout.layoutComplete"
-msgstr "Layoutoppdrag ferdigstilt"
+msgstr "Layout ferdigstilt"
 
 msgid "comments.commentsOnArticle"
 msgstr "Kommentarer til denne artikkelen"
@@ -498,10 +498,14 @@ msgid "subscriptionManager.subscriptionManagement"
 msgstr "Abonnementsadministrasjon"
 
 msgid "plugins.categories.generic.description"
-msgstr "Generiske programutvidelser brukes for å utvide Open Journal Systems på en rekke måter som ikke er støttet av de andre programutvidelseskategoriene."
+msgstr ""
+"Generiske programtillegg brukes for å utvide Open Journal Systems på en "
+"rekke måter som ikke er støttet av de andre kategoriene av programtillegg."
 
 msgid "plugins.categories.auth.description"
-msgstr "Validerings-programutvidelser tillater Open Journal Systems å delegere brukervalidering til andre systemer, som for eksempel LDAP-servere."
+msgstr ""
+"Programtillegg for validering lar Open Journal Systems delegere "
+"brukervalidering til andre systemer, f.eks. LDAP-servere."
 
 msgid "manager.setup.registerJournalForIndexingDescription"
 msgstr ""
@@ -513,12 +517,16 @@ msgstr ""
 
 msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
-"Trinn: Manuskriptarbeidskø &gt; Manuskriptvurdering &gt; Manuskriptbehandling &gt; Innholdsfortegnelse.<br /><br />\n"
-"Velg en modell for håndtering av disse sidene av den redaksjonelle prosessen. (For å oppnevne ansvarlig redaktør og seksjonsredaktører; gå til Redaktører i tidsskriftadministrasjon.)"
+"Trinn: Innleveringskø &gt; Fagfellevurdering &gt; Språkvask &gt; "
+"Innholdsfortegnelse.<br /><br />\n"
+"Velg en modell for håndtering av disse sidene av den redaksjonelle "
+"prosessen. (For å oppnevne ansvarlig redaktør og seksjonsredaktører; gå til "
+"«Redaktører» i tidsskriftadministrasjon.)"
 
 msgid "manager.people.confirmDisable"
 msgstr ""
-"Slå av denne brukeren? Dette vil hindre brukeren fra å logge inn på systemet.\n"
+"Slå av denne brukeren? Dette gjør at brukeren ikke kan logge seg inn i "
+"systemet.\n"
 "\n"
 "Du kan velge å gi brukeren en begrunnelse for at kontoen er slått av."
 
@@ -538,16 +546,20 @@ msgid "sectionEditor.completedEditorialAssignments"
 msgstr "Utførte redaksjonelle oppdrag"
 
 msgid "sectionEditor.noneAssigned"
-msgstr "Ingen manuskript utpekt."
+msgstr "Ingen oppdrag gitt."
 
 msgid "sectionEditor.copyedit.confirmRenotify"
-msgstr "Ved å varsle denne manusredaktøren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?"
+msgstr ""
+"Ved å varsle denne språkvaskeren igjen, kommer du til å sette oppdraget i "
+"gang på nytt. Er du sikker på at du vil gjøre dette?"
 
 msgid "sectionEditor.author.confirmRenotify"
 msgstr "Ved å varsle denne forfatteren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?"
 
 msgid "sectionEditor.layout.confirmRenotify"
-msgstr "Ved å varsle denne layoutredaktøren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?"
+msgstr ""
+"Ved å varsle layoutredaktøren igjen, kommer du til å sette oppdraget i gang "
+"på nytt. Er du sikker på at du vil gjøre dette?"
 
 msgid "sectionEditor.proofreader.confirmRenotify"
 msgstr "Ved å varsle denne korrekturleseren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?"
@@ -556,7 +568,7 @@ msgid "sectionEditor.regrets.breadcrumb"
 msgstr "Avslag"
 
 msgid "sectionEditor.regrets.title"
-msgstr "#{$submissionId} Fagkonsulent avslag, avbrutte og tidligere runder"
+msgstr "#{$submissionId} Fagfellens avslag, samt avbrutte og tidligere runder"
 
 msgid "sectionEditor.regrets"
 msgstr "Avslag"
@@ -571,7 +583,7 @@ msgid "sectionEditor.regrets.decisionRound"
 msgstr "Redaktørens beslutning, runde {$round}"
 
 msgid "sectionEditor.regrets.regretsAndCancels"
-msgstr "Fagkonsulent avslag og avbrutte"
+msgstr "Fagfellens avslag og avbrutte oppdrag"
 
 msgid "sectionEditor.regrets.regret"
 msgstr "Avslag"
@@ -580,10 +592,10 @@ msgid "sectionEditor.regrets.result"
 msgstr "Resultat"
 
 msgid "sectionEditor.review.enrollReviewer"
-msgstr "Verve eksisterende bruker som fagkonsulent"
+msgstr "Verve eksisterende bruker som fagfelle"
 
 msgid "sectionEditor.review.createReviewer"
-msgstr "Opprett ny fagkonsulent"
+msgstr "Opprett ny fagfelle"
 
 msgid "layoutEditor.activeEditorialAssignments"
 msgstr "Aktive redaksjonelle oppdrag"
@@ -604,13 +616,13 @@ msgid "layoutEditor.galley.replaceGalley"
 msgstr "Erstatt fil"
 
 msgid "layoutEditor.galley.uploadSuppFile"
-msgstr "Last opp tilleggsfil"
+msgstr "Last opp supplerende fil"
 
 msgid "reviewer.pendingReviews"
 msgstr "Artikler som avventer fagvurdering"
 
 msgid "reviewer.completedReviews"
-msgstr "Ferdig"
+msgstr "Fullført"
 
 msgid "reviewer.averageQuality"
 msgstr "Rangering"
@@ -622,22 +634,22 @@ msgid "reviewer.article.notifyTheEditor"
 msgstr "Send beskjed til redaktøren"
 
 msgid "reviewer.article.canDoReview"
-msgstr "Kommer til å utføre vurderingsoppdraget"
+msgstr "Vil utføre fagfellevurderingen"
 
 msgid "reviewer.article.cannotDoReview"
-msgstr "Kan ikke å utføre vurderingsoppdraget"
+msgstr "Kan ikke utføre fagfellevurderingen"
 
 msgid "reviewer.article.restrictedFileAccess"
-msgstr "Filer kan bare vises hvis vurderingsoppdraget er akseptert"
+msgstr "Filer vises bare om fagfellen tar oppdraget"
 
 msgid "reviewer.article.submissionEditor"
-msgstr "Manuskriptredaktør"
+msgstr "Redaktør"
 
 msgid "reviewer.article.reviewerCommentsDescription"
-msgstr "Skriv eller lim inn kommentarer til vurderingsoppdrag her"
+msgstr "Skriv eller lim inn kommentarer til fagfellevurderingen her"
 
 msgid "reviewer.article.editorToEnter"
-msgstr "Redaktøren fører inn"
+msgstr "Skal føres inn av redaktøren"
 
 msgid "reviewer.article.sendReminder"
 msgstr "Send purring"
@@ -646,88 +658,93 @@ msgid "reviewer.article.automatic"
 msgstr "(Auto)"
 
 msgid "reviewer.article.selectRecommendation"
-msgstr "Velg en anbefaling og send inn vurderingen for å ferdigstille prosessen. Du må legge inn en vurdering eller laste opp en fil før du velger anbefaling."
+msgstr ""
+"Velg en anbefaling og send inn fagfellevurderingen for å fullføre prosessen. "
+"Du må legge inn en fagfellevurdering eller laste opp en fil før du velger en "
+"anbefaling."
 
 msgid "reviewer.article.recommendation"
 msgstr "Anbefaling"
 
 msgid "reviewer.article.submitReview"
-msgstr "Send anbefaling til redaktør"
+msgstr "Send fagfellevurdering til redaktør"
 
 msgid "reviewer.article.reviewerComments"
 msgstr "Kommentarer"
 
 msgid "reviewer.article.uploadedFile"
-msgstr "Opplastete filer"
+msgstr "Opplastede filer"
 
 msgid "reviewer.article.reviewersAnnotatedVersion"
-msgstr "Versjon lastet opp av fagkonsulent"
+msgstr "Versjon lastet opp av fagfelle"
 
 msgid "reviewer.article.reviewersAnnotatedVersionDescription"
-msgstr "(Hvis du vil skrive merknader til redaktøren direkte i manuskriptfilen, må du først lagre den på din egen maskin, og deretter bruke Finn/Last opp.)"
+msgstr ""
+"(Hvis du vil skrive kommentarer direkte i filen, må du først lagre den på "
+"din egen maskin, og deretter bruke «Finn/Last opp».)"
 
 msgid "reviewer.article.schedule.request"
-msgstr "Redaktørens bestilling"
+msgstr "Redaktørens forespørsel"
 
 msgid "reviewer.article.schedule.response"
 msgstr "Ditt svar"
 
 msgid "reviewer.article.schedule.submitted"
-msgstr "Fagvurdering: innsendt"
+msgstr "Fagfellevurdering innlevert"
 
 msgid "reviewer.article.schedule.due"
-msgstr "Fagvurdering: ventet-dato"
+msgstr "Frist for fagfellevurdering"
 
 msgid "reviewer.article.decision.accept"
-msgstr "aksepteres"
+msgstr "Aksepteres"
 
 msgid "reviewer.article.decision.pendingRevisions"
-msgstr "aksepteres, med forbehold om omarbeiding"
+msgstr "Aksepteres med forbehold om omarbeiding"
 
 msgid "reviewer.article.decision.resubmitHere"
-msgstr "send inn på nytt for ny fagvurdering"
+msgstr "Sendes til enda en fagfellevurdering"
 
 msgid "reviewer.article.decision.resubmitElsewhere"
-msgstr "sendes inn til et annet publiseringssted"
+msgstr "Send til et annet tidsskrift"
 
 msgid "reviewer.article.decision.decline"
-msgstr "avvises"
+msgstr "Avvises"
 
 msgid "reviewer.article.decision.seeComments"
-msgstr "annet: se kommentarer"
+msgstr "Se kommentarer"
 
 msgid "reviewer.article.schedule"
-msgstr "Arbeidsplan"
+msgstr "Planlagte oppgaver"
 
 msgid "reviewer.article.submissionToBeReviewed"
-msgstr "Manuskriptet som skal vurderes"
+msgstr "Innlevering som skal fagfellevurderes"
 
 msgid "reviewer.article.reviewSchedule"
-msgstr "Arbeidsplan for fagvurderingen"
+msgstr "Plan for fagfellevurdering"
 
 msgid "reviewer.article.reviewSteps"
-msgstr "Fagvurdering steg for steg"
+msgstr "Fagfellevurdering steg for steg"
 
 msgid "reviewer.article.reviewerGuidelines"
-msgstr "Instruks for fagkonsulenter"
+msgstr "Instruks for fagfeller"
 
 msgid "reviewer.article.mustSelectDecision"
-msgstr "Ingen anbefaling er valgt. Du må velge en anbefaling å sende inn."
+msgstr "Ingen anbefaling er valgt. Du må velge en anbefaling."
 
 msgid "reviewer.article.confirmDecision"
 msgstr "Så snart du har registrert beslutningen, kan du ikke lenger endre den. Er du sikker på at du vil fortsette?"
 
 msgid "copyeditor.article.fileToCopyedit"
-msgstr "Fil til MR"
+msgstr "Fil til språkvasker"
 
 msgid "copyeditor.article.copyeditorFile"
-msgstr "Fil til manusredaktør"
+msgstr "Språkvaskerens fil"
 
 msgid "copyeditor.article.copyeditorFinalFile"
-msgstr "Manusredaktør fil"
+msgstr "Språkvaskerens siste fil"
 
 msgid "proofreader.noProofreadingAssignments"
-msgstr "Ingen korrekturlesingsoppdrag"
+msgstr "Ingen oppdrag for korrekturleser"
 
 msgid "author.submit.uploadInstructions"
 msgstr ""
@@ -748,40 +765,43 @@ msgstr ""
 "</ol>"
 
 msgid "submission.review.mustUploadFileForReview"
-msgstr "E-post med bestilling kan ikke sendes før en fagvurderingsversjon er på plass."
+msgstr ""
+"E-post med forespørsel kan ikke sendes før en fagfellevurdering er på plass."
 
 msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
-msgstr "E-post med bestilling kan ikke sendes før en fil er valgt for manusredigering i redaktørens beslutning på fagvurderingssiden."
+msgstr ""
+"E-post med forespørsel kan ikke sendes før en fil er valgt for språkvask i «"
+"Redaktørens beslutning» på fagfellevurderingssiden."
 
 msgid "submission.copyedit.mustUploadFileForCopyedit"
-msgstr "E-post med bestilling kan ikke sendes før en fil er lastet opp for manusredigering."
+msgstr "Forespørsel kan ikke sendes før en fil er lastet opp for språkvask."
 
 msgid "submission.copyedit.initialCopyedit"
-msgstr "Første manusredigering"
+msgstr "Første språkvask"
 
 msgid "submission.copyedit.editorsCopyedit"
-msgstr "Redaktørens manusredigering"
+msgstr "Redaktørens språkvask"
 
 msgid "submission.copyedit.editorAuthorReview"
-msgstr "Forfatterens manusredigering"
+msgstr "Forfatterens språkvask"
 
 msgid "submission.copyedit.finalCopyedit"
-msgstr "Siste manusredigering"
+msgstr "Siste språkvask"
 
 msgid "submission.copyedit.copyeditVersion"
-msgstr "Manusredaktørens versjon"
+msgstr "Språkvaskerens versjon"
 
 msgid "submission.copyedit.selectCopyeditor"
-msgstr "Oppnevn manusredaktør"
+msgstr "Oppnevn språkvasker"
 
 msgid "submission.copyedit.useFile"
 msgstr "Bruk fil"
 
 msgid "submission.copyedit.copyeditComments"
-msgstr "Manusredigeringskommentarer"
+msgstr "Kommentarer til språkvask"
 
 msgid "submission.copyedit.instructions"
-msgstr "Instruks for manusredigering"
+msgstr "Instruks for språkvask"
 
 msgid "submission.layout.assignLayoutEditor"
 msgstr "Oppnevn layoutredaktør"
@@ -790,16 +810,16 @@ msgid "submission.layout.replaceLayoutEditor"
 msgstr "Erstatt layoutredaktør"
 
 msgid "submission.layout.layoutComments"
-msgstr "Layoutkommentarer"
+msgstr "Kommentarer til layout"
 
 msgid "submission.layout.instructions"
-msgstr "Instruks for layoutredigering"
+msgstr "Layoutinstruks"
 
 msgid "submission.proofreadingComments"
-msgstr "Korrekturlesingskommentarer"
+msgstr "Kommentar til korrektur"
 
 msgid "submission.proofread.corrections"
-msgstr "Korrekturlesing: rettelser"
+msgstr "Rettelser i korrekturen"
 
 msgid "submission.proofread.instructions"
 msgstr "Instruks for korrekturlesing"
@@ -814,10 +834,10 @@ msgid "submission.logType.editor"
 msgstr "Redaktør"
 
 msgid "submission.logType.review"
-msgstr "Fagvurdering"
+msgstr "Fagfellevurdering"
 
 msgid "submission.logType.copyedit"
-msgstr "Manusredigering"
+msgstr "Språkvask"
 
 msgid "submission.logType.layout"
 msgstr "Layout"
@@ -826,10 +846,10 @@ msgid "submission.logType.proofread"
 msgstr "Korrekturlesing"
 
 msgid "submission.comments.editorAuthorCorrespondence"
-msgstr "Redaktør/forfatter-korrespondanse"
+msgstr "Korrespondanse mellom redaktør og forfatter"
 
 msgid "submission.comments.copyeditComments"
-msgstr "Manusredigering kommentarer"
+msgstr "Språkvaskerens kommentarer"
 
 msgid "submission.comments.viewableDescription"
 msgstr ""
@@ -840,10 +860,12 @@ msgid "submission.comments.canShareWithAuthor"
 msgstr "For forfatter og redaktør"
 
 msgid "submission.comments.cannotShareWithAuthor"
-msgstr "For redaktør"
+msgstr "For kun redaktør"
 
 msgid "submission.comments.blindCcReviewers"
-msgstr "Etter sending, vis fram en redigerbar blindkopiversjon som kan sendes til fagkonsulenter."
+msgstr ""
+"Etter sending, vis fram en redigerbar blindkopiversjon som kan sendes til "
+"fagfeller."
 
 msgid "submission.comments.forAuthorEditor"
 msgstr "For forfatter og redaktør"
@@ -852,10 +874,10 @@ msgid "submission.comments.forEditor"
 msgstr "For redaktør"
 
 msgid "submission.comments.saveAndEmailAuthor"
-msgstr "Lagre, og e-post til forfatter"
+msgstr "Lagre og send e-post til forfatter"
 
 msgid "submission.comments.saveAndEmailEditor"
-msgstr "Lagre og send e-post til Redaktør"
+msgstr "Lagre og send e-post til redaktør"
 
 msgid "user.login.registerNewAccount"
 msgstr "Har du ikke brukernavn? Registrer deg hos dette nettstedet"
@@ -869,10 +891,11 @@ msgid "user.register.selectJournal"
 msgstr "Velg et tidsskrift du vil registrere deg hos"
 
 msgid "user.register.noJournals"
-msgstr "Det finnes ingen tidsskrift å registrere seg hos på dette nettstedet."
+msgstr ""
+"Det finnes ingen tidsskrift du kan registrere deg ved på dette nettstedet."
 
 msgid "user.register.privacyStatement"
-msgstr "Erklæring om personopplysninger"
+msgstr "Erklæring om personvern"
 
 msgid "user.register.alreadyRegisteredOtherContext"
 msgstr "<a href=\"{$registerUrl}\">Klikk her</a> hvis du er allerede registrert hos dette eller et annet tidsskrift på dette nettstedet."
@@ -884,7 +907,7 @@ msgid "user.register.loginToRegister"
 msgstr "Skriv inn det registrerte brukernavnet og passordet ditt for å registrere deg hos dette tidsskriftet også."
 
 msgid "user.register.registrationDisabled"
-msgstr "Dette tidsskriftet tar for øyeblikket ikke i mot brukerregistrering."
+msgstr "Dette tidsskriftet tar for øyeblikket ikke imot brukerregistrering."
 
 msgid "user.register.form.passwordLengthTooShort"
 msgstr "Passordet du skrev inn er ikke langt nok."
@@ -893,19 +916,21 @@ msgid "user.register.readerDescription"
 msgstr "Be om varsel med e-post når en ny utgave av tidsskriftet publiseres."
 
 msgid "user.register.openAccessNotificationDescription"
-msgstr "Be om varsel med e-post når en utgave av tidsskriftet gis Open Access."
+msgstr "Be om varsel med e-post når en utgave av tidsskriftet har åpen tilgang."
 
 msgid "user.register.authorDescription"
 msgstr "Kan sende inn elementer til tidsskriftet."
 
 msgid "user.register.reviewerDescriptionNoInterests"
-msgstr "Villig til å utføre fagvurdering av manuskript for tidsskriftet."
+msgstr "Villig til å utføre fagfellevurdering for tidsskriftet."
 
 msgid "user.register.reviewerDescription"
-msgstr "Villig til å utføre fagvurdering av manuskript for tidsskriftet. Oppgi fagvurderingsinteresse (hovedområder og forskningsmetoder)."
+msgstr ""
+"Villig til å utføre fagfellevurdering for tidsskriftet. Oppgi faglige "
+"interesser (hovedområder og forskningsmetoder)."
 
 msgid "search.browseAuthorIndex"
-msgstr "Finn fram i forfatterregister"
+msgstr "Finn fram i forfatterregisteret"
 
 msgid "search.searchFor"
 msgstr "Søk i artikler etter"
@@ -917,7 +942,7 @@ msgid "search.allJournals"
 msgstr "Alle tidsskrift"
 
 msgid "search.authorIndex"
-msgstr "Finn fram i forfatterregister"
+msgstr "Finn fram i forfatterregisteret"
 
 msgid "search.authorDetails"
 msgstr "Forfatterdetaljer"
@@ -944,7 +969,7 @@ msgstr ""
 "</ul>"
 
 msgid "site.journalsHosted"
-msgstr "Tidsskrifter dette nettstedet er vert for"
+msgstr "Tidsskrifter som dette nettstedet er vert for"
 
 msgid "site.journalView"
 msgstr "Vis tidsskrift"
@@ -971,7 +996,7 @@ msgid "archive.browse"
 msgstr "Finn fram i eldre utgaver"
 
 msgid "archive.issueUnavailable"
-msgstr "Finner ingen utgave"
+msgstr "Utgaven er ikke tilgjengelig"
 
 msgid "about.statistics"
 msgstr "Statistikk"
@@ -995,10 +1020,10 @@ msgid "about.focusAndScope"
 msgstr "Hovedfokus og spennvidde"
 
 msgid "about.sectionPolicies"
-msgstr "Seksjonsretningslinjer"
+msgstr "Retningslinjer for seksjonen"
 
 msgid "about.submissions"
-msgstr "Manuskript"
+msgstr "Innleveringer"
 
 msgid "about.sponsors"
 msgstr "Sponsorer"
@@ -1013,7 +1038,7 @@ msgid "about.onlineSubmissions.haveAccount"
 msgstr "Har du allerede brukernavn/passord til {$journalTitle}?"
 
 msgid "about.onlineSubmissions.login"
-msgstr "Gå til innlogging"
+msgstr "Innlogging"
 
 msgid "about.onlineSubmissions.needAccount"
 msgstr "Trenger du brukernavn/passord?"
@@ -1022,37 +1047,41 @@ msgid "about.onlineSubmissions.registration"
 msgstr "Gå til registrering"
 
 msgid "about.onlineSubmissions.registrationRequired"
-msgstr "Registrering og innlogging er påkrevet for sende inn elementer online og for å følge status for innsendte manuskript."
+msgstr "{$login} eller {$register} for innlevering."
 
 msgid "about.authorGuidelines"
 msgstr "Forfatterinstruks"
 
 msgid "about.submissionPreparationChecklist"
-msgstr "Sjekkliste for klargjøring av manuskript"
+msgstr "Sjekkliste for innleveringen"
 
 msgid "about.submissionPreparationChecklist.description"
-msgstr "Som del av innsendingsprosessen må forfatteren krysse av for at manuskriptet oppfyller følgende krav, og manuskript som ikke oppfyller kravene og følger retningslinjene, kan bli returnert til forfatteren."
+msgstr ""
+"Forfatteren må krysse av for at innleveringen oppfyller kravene som listes "
+"under. Innleveringer som ikke oppfyller disse, kan bli returnert til "
+"forfatteren."
 
 msgid "about.copyrightNotice"
-msgstr "Erklæring om copyright"
+msgstr "Erklæring om opphavsrett"
 
 msgid "about.privacyStatement"
-msgstr "Erklæring om personopplysninger"
+msgstr "Erklæring om personvern"
 
 msgid "about.peerReviewProcess"
-msgstr "Om fagvurderingsprosessen"
+msgstr "Prosessen rundt fagfellevurderingen"
 
 msgid "about.publicationFrequency"
 msgstr "Publiseringsfrekvens"
 
 msgid "about.openAccessPolicy"
-msgstr "Open Access-retningslinjer"
+msgstr "Retningslinjer om Open Access"
 
 msgid "about.delayedOpenAccess"
 msgstr "Utsatt Open Access"
 
 msgid "about.delayedOpenAccessDescription1"
-msgstr "Innholdet i dette tidsskriftet vil bli tilgjengelig i Open Access format"
+msgstr ""
+"Innholdet i dette tidsskriftet vil bli tilgjengelig i Open Access-format"
 
 msgid "about.delayedOpenAccessDescription2"
 msgstr "måned(er) etter at en utgave er publisert."
@@ -1061,10 +1090,10 @@ msgid "about.archiving"
 msgstr "Arkivering"
 
 msgid "about.subscriptions"
-msgstr "Abonnement"
+msgstr "Abonnementer"
 
 msgid "about.subscriptionsContact"
-msgstr "Abonnementskontakt"
+msgstr "Abonnementsansvarlig"
 
 msgid "about.availableSubscriptionTypes"
 msgstr "Abonnementstyper"
@@ -1073,30 +1102,38 @@ msgid "about.journalSponsorship"
 msgstr "Tidsskriftets sponsorer"
 
 msgid "about.aboutThisPublishingSystem"
-msgstr ""
-"Mer informasjon om dette publiseringssystemet, plattformen og arbeidsflyten "
-"fra OJS/PKP."
+msgstr "Om dette publiseringssystemet."
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "Dette tidsskriftet bruker Open Journal Systems {$ojsVersion}, som er open source-programvare for tidskriftsadministrasjon og publisering. OJS er utviklet, støttet, og fritt distribuert av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
+msgstr ""
+"Dette tidsskriftet bruker Open Journal Systems {$ojsVersion}, som er en "
+"programvare for administrasjon og publisering av åpent tilgjengelige («open "
+"access») tidsskrifter. OJS er utviklet, støttet og fritt distribuert av <a "
+"href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General "
+"Public License. <a href=\"{$contactUrl}\">Kontakt tidsskriftet direkte</a> "
+"vedrørende spørsmål om tidsskriftet eller publisering hos tidsskriftet."
 
-#, fuzzy
 msgid "about.aboutOJSSite"
-msgstr "Dette nettstedet bruker Open Journal Systems {$ojsVersion}, som er open source programvare for tidskriftsadministrasjon og publisering. OJS er utviklet, støttet, og fritt distribuert av <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General Public License."
+msgstr ""
+"Dette nettstedet bruker Open Journal Systems {$ojsVersion}, som er en "
+"programvare for administrasjon og publisering av åpent tilgjengelige («open "
+"access») tidsskrifter. OJS er utviklet, støttet og fritt distribuert av <a "
+"href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under GNU General "
+"Public License."
 
 msgid "help.ojsHelp"
-msgstr "Open Journal Systems hjelp"
+msgstr "Open Journal Systems-hjelp"
 
 msgid "help.ojsHelpAbbrev"
-msgstr "OJS hjelp"
+msgstr "OJS-hjelp"
 
 msgid "installer.appInstallation"
-msgstr "OJS installasjon"
+msgstr "Installere OJS"
 
 msgid "installer.ojsUpgrade"
-msgstr "OJS oppgradering"
+msgstr "Oppgradere OJS"
 
+#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS versjon {$version}</h4>\n"
@@ -1178,24 +1215,38 @@ msgstr ""
 "avbrutt, vil det bli nødvendig å gripe inn manuelt.</p>"
 
 msgid "installer.localeInstructions"
-msgstr "Primærspråket som skal brukes i dette systemet. Vennligst slå opp i OJS-dokumentasjonen hvis du er interessert i støtte for språk som ikke er oppført her."
+msgstr ""
+"Hovedspråket som skal brukes i dette systemet. Slå opp i OJS-dokumentasjonen "
+"hvis du er interessert i støtte for språk som ikke er oppført her."
 
 msgid "installer.additionalLocalesInstructions"
-msgstr "Velg øvrige språk som skal støttes i dette systemet. Disse språkene vil bli tilgjengelig til bruk for de tidsskrift nettstedet er vert for. Flere språk kan også installeres når som helst, gjennom grensesnittet for nettstedsadministrasjon."
+msgstr ""
+"Velg andre språk som skal støttes i dette systemet. Disse språkene vil bli "
+"tilgjengelige til bruk for tidsskriftene som nettstedet er vert for. Flere "
+"språk kan også installeres når som helst gjennom grensesnittet for "
+"nettstedsadministrasjon."
 
 msgid "installer.filesDirInstructions"
-msgstr "Skriv inn fullstendig sti til en eksisterende mappe hvor opplastede filer skal oppbevares. Denne mappen bør ikke kunne aksesseres direkte fra internett. <strong>Vennligst sikre at denne mappen finnes og er overskrivbar før du installerer.</strong> Windows filstinavn bør bruke vanlig skråstrek (/), for eks. \"C:/myjournal/files\"."
+msgstr ""
+"Skriv inn en fullstendig sti til en eksisterende mappe hvor opplastede filer "
+"skal oppbevares. Denne mappen bør ikke kunne nås direkte fra internett. "
+"<strong> Pass på at denne mappen finnes og er overskrivbar før du "
+"installerer.</strong> Windows filstinavn bør bruke vanlig skråstrek (/), "
+"f.eks. «C:/myjournal/files»."
 
 msgid "installer.reinstallAfterDatabaseError"
 msgstr ""
 "<b>Advarsel:</b> Hvis installasjonen feilet under databaseinstallasjonen, "
-"kan du bli nødt til å tømme (drop) OJS-databasen din eller databasetabellene "
-"dine før du forsøker å reinstallere databasen."
+"kan du måtte droppe OJS-databasen din eller databasetabellene dine før du "
+"forsøker å reinstallere databasen."
 
 msgid "installer.overwriteConfigFileInstructions"
 msgstr ""
-"<h4>IMPORTANT!</h4>\n"
-"<p>Installasjonen kunne ikke automatisk overskrive konfigurasjonsfilen. Før du forsøker å bruke systemet, vennligst åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram og erstatt innholdet i den med innholdet i tekstfeltet nedenfor.</p>"
+"<h4>Viktig!</h4>\n"
+"<p>Installasjonen kunne ikke automatisk overskrive konfigurasjonsfilen. Før "
+"du forsøker å bruke systemet, åpne <tt>config.inc.php</tt> i et egnet "
+"tekstbehandlingsprogram og erstatt innholdet i den med innholdet i "
+"tekstfeltet nedenfor.</p>"
 
 msgid "installer.installationComplete"
 msgstr ""
@@ -1223,106 +1274,143 @@ msgstr ""
 " target=\"_new\">støtteforumet</a>.</p>"
 
 msgid "log.author.documentRevised"
-msgstr "{$authorName} har omarbeidet artikkel {$submissionId}. Den nye filens ID er {$fileId}."
+msgstr ""
+"{$authorName} har omarbeidet artikkelen {$submissionId}. Den nye filens ID "
+"er {$fileId}."
 
 msgid "log.review.reviewerUnassigned"
-msgstr "{$reviewerName} er avløst fra vurdering av manuskriptet {$submissionId} for vurderingsrunde {$round}."
+msgstr ""
+"{$reviewerName} er avløst fra fagfellevurdering av innleveringen "
+"{$submissionId} for vurderingsrunde {$round}."
 
 msgid "log.review.reviewInitiated"
-msgstr "Vurderingsrunde {$round} av manuskriptet {$submissionId} ved {$reviewerName} er igangsatt."
+msgstr ""
+"Fagfellevurderingsrunde {$round} av innleveringen {$submissionId} ble "
+"igangsatt av {$reviewerName}."
 
 msgid "log.review.reviewerRated"
-msgstr "{$reviewerName} er rangert for vurderingsrunde {$round} av manuskriptet {$submissionId}."
+msgstr ""
+"{$reviewerName} er rangert for vurderingsrunden {$round} av {$submissionId}."
 
 msgid "log.review.reviewDueDateSet"
-msgstr "Ventet-datoen for vurderingsrunde {$round}  av manuskriptet {$submissionId} ved {$reviewerName} er satt til {$dueDate}."
+msgstr ""
+"Frist for vurderingsrunde {$round}  av {$submissionId} ved {$reviewerName} "
+"er satt til {$dueDate}."
 
 msgid "log.review.reviewRecommendationSet"
-msgstr "Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} ved {$reviewerName} er satt."
+msgstr ""
+"Anbefalingen for runde {$round} i vurderingen av innleveringen "
+"{$submissionId} ved {$reviewerName} er lagt inn."
 
 msgid "log.review.reviewRecommendationSetByProxy"
-msgstr "Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} er satt av redaktøren, {$editorName}, på vegne av fagkonsulenten, {$reviewerName}."
+msgstr ""
+"Anbefalingen for runde {$round} i vurderingen av innleveringen "
+"{$submissionId} er lagt inn av redaktøren, {$editorName}, på vegne av "
+"fagfellen, {$reviewerName}."
 
 msgid "log.review.resubmit"
-msgstr "Manuskriptet {$submissionId} er gjeninnsendt for vurdering."
+msgstr "Innleveringen {$submissionId} er levert inn for fagfellevurdering."
 
 msgid "log.review.reviewDeclined"
-msgstr "{$reviewerName} har avslått runde {$round} vurdering av manuskript {$submissionId}."
+msgstr ""
+"{$reviewerName} har avslått forespørsel om deltakelse i runde {$round} i "
+"fagfellevurderingen av innleveringen {$submissionId}."
 
 msgid "log.review.reviewAccepted"
-msgstr "{$reviewerName} har akseptert runde {$round} vurdering av manuskript {$submissionId}."
+msgstr ""
+"{$reviewerName} har akseptert forespørsel om deltakelse i runde {$round} i "
+"fagfellevurderingen av innleveringen {$submissionId}."
 
 msgid "log.review.reviewAcceptedByProxy"
-msgstr "{$userName} har akseptert runde {$round} vurdering av manuskript {$submissionId} på vegne av {$reviewerName}."
+msgstr ""
+"{$userName} har akseptert fagfellevurderingen i runde {$round}  av "
+"innleveringen {$submissionId} på vegne av {$reviewerName}."
 
 msgid "log.review.reviewFileByProxy"
-msgstr "Redaktøren, {$userName}, har lastet opp en vurderingsfil for runde {$round} for manuskriptet {$submissionId} på vegne av fagkonsulenten, {$reviewerName}."
+msgstr ""
+"Redaktøren {$userName} har lastet opp en fagfellevurdering av innleveringen "
+"{$submissionId} i runde {$round} på vegne av fagfellen {$reviewerName}."
 
 msgid "log.review.reviewerFile"
-msgstr "En fagkonsulentfil er lastet opp."
+msgstr "En fil med fagfellevurdering er lastet opp."
 
 msgid "log.copyedit.initiate"
-msgstr "Manusredigering av manuskript {$submissionId} er utført av {$copyeditorName}."
+msgstr ""
+"Språkvasken av {$submissionId} har blitt kommentert av {$copyeditorName}."
 
 msgid "log.copyedit.copyeditFileSet"
-msgstr "Default manusredigeringsfil er valgt."
+msgstr "Standard språkvaskfil er valgt."
 
 msgid "log.copyedit.initialEditComplete"
-msgstr "{$copyeditorName} har ferdigstilt første manusredigering av manuskriptet {$submissionId}."
+msgstr ""
+"{$copyeditorName} har ferdigstilt første språkvask av innleveringen "
+"{$submissionId}."
 
 msgid "log.copyedit.finalEditComplete"
-msgstr "{$copyeditorName} har ferdigstilt siste manusredigering av manuskriptet {$submissionId}."
+msgstr ""
+"{$copyeditorName} har ferdigstilt siste språkvask av innleveringen "
+"{$submissionId}."
 
 msgid "log.copyedit.copyeditorAssigned"
-msgstr "{$copyeditorName} er oppnevnt for manusredigering av manuskriptet {$submissionId}."
+msgstr ""
+"{$copyeditorName} er oppnevnt som språkvasker av innleveringen "
+"{$submissionId}."
 
 msgid "log.copyedit.copyeditorFile"
-msgstr "En manusredaktørversjon av manuskriptfilen er lastet opp."
+msgstr "En språkvasket versjon av innleveringen er lastet opp."
 
 msgid "log.copyedit.authorFile"
-msgstr "En versjon av manuskriptfilen bearbeidet av forfatteren er lastet opp."
+msgstr "Forfatteren har lastet opp en språkvasket versjon av innleveringen."
 
 msgid "log.layout.layoutEditorAssigned"
-msgstr "{$editorName} er oppnevnt som layoutredaktør for manuskriptet {$submissionId}."
+msgstr ""
+"{$editorName} er oppnevnt som layoutredaktør for innleveringen "
+"{$submissionId}."
 
 msgid "log.layout.layoutEditorUnassigned"
-msgstr "{$editorName} er avløst som layoutredaktør for manuskriptet {$submissionId}."
+msgstr ""
+"{$editorName} er avløst som layoutredaktør for innleveringen {$submissionId}."
 
 msgid "log.layout.layoutEditComplete"
-msgstr "{$editorName} har ferdigstilt layoutredigering av manuskriptet {$submissionId}."
+msgstr ""
+"{$editorName} har ferdigstilt layoutredigering av innleveringen "
+"{$submissionId}."
 
 msgid "log.editor.metadataModified"
 msgstr "Metadata for denne artikkelen ble endret av {$editorName}."
 
 msgid "log.editor.editorFile"
-msgstr "En redaktørversjon av manuskriptfilen er lastet opp."
+msgstr "Redaktøren har lastet opp en versjon av innleveringen."
 
 msgid "log.editor.archived"
-msgstr "Manuskriptet {$submissionId} er arkivert."
+msgstr "Innleveringen {$submissionId} er arkivert."
 
 msgid "log.editor.restored"
-msgstr "Manuskriptet {$submissionId} er hentet tilbake til arbeidsplanen."
+msgstr "Innleveringen {$submissionId} er hentet tilbake til arbeidsplanen."
 
 msgid "log.editor.editorAssigned"
-msgstr "{$editorName} er oppnevnt som redaktør for manuskriptet {$submissionId}."
+msgstr ""
+"{$editorName} er oppnevnt som redaktør for innleveringen {$submissionId}."
 
 msgid "log.proofread.assign"
-msgstr "{$assignerName} har oppnevnt {$proofreaderName} til å korrigere manuskriptet {$submissionId}."
+msgstr ""
+"{$assignerName} har oppnevnt {$proofreaderName} til å korrekturlese "
+"innleveringen {$submissionId}."
 
 msgid "log.proofread.complete"
 msgstr "{$proofreaderName} har sendt inn {$submissionId} for planlegging."
 
 msgid "log.imported"
-msgstr "{$userName} har importert artikkel {$submissionId}."
+msgstr "{$userName} har importert artikkelen {$submissionId}."
 
 msgid "metadata.pkp.peerReviewed"
 msgstr "Fagfellevurdert artikkel"
 
 msgid "reviewer.article.enterReviewForm"
-msgstr "Klikk på ikonet for å fylle ut vurderingsskjemaet."
+msgstr "Klikk på ikonet for å fylle ut skjema for fagfellevurdering."
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
-msgstr "Vær vennlig å fylle inn de påkrevde feltene."
+msgstr "Legg inn de nødvendige feltene."
 
 msgid "common.payment"
 msgstr "Betaling"
@@ -1331,16 +1419,18 @@ msgid "common.payments"
 msgstr "Betalinger"
 
 msgid "common.confirmComplete"
-msgstr "Er du sikker på at du vil registrere at du er ferdig med denne oppgaven? Hvis du gjør dette, kan du muligens ikke foreta endringer senere."
+msgstr ""
+"Er du sikker på at du vil markere at du er ferdig med denne oppgaven? Hvis "
+"du gjør dette, kan du muligens ikke foreta endringer senere."
 
 msgid "common.homePageHeader.altText"
-msgstr "Tidsskriftets hjemmeside: topptekst"
+msgstr "Topptekst for tidsskriftets hjemmeside"
 
 msgid "common.journalHomepageImage.altText"
-msgstr "Tidsskriftets hjemmeside: bilde"
+msgstr "Bilde for tidsskriftets hjemmeside"
 
 msgid "navigation.competingInterestGuidelines"
-msgstr "Interessekonflikter: retningslinjer"
+msgstr "Retningslinjer angående interessekonflikter"
 
 msgid "article.coverPage.altText"
 msgstr "Omslagsbilde"
@@ -1367,7 +1457,7 @@ msgid "article.fontSize.small.altText"
 msgstr "Liten"
 
 msgid "article.fontSize.medium.altText"
-msgstr "Middelstor"
+msgstr "Mellomstor"
 
 msgid "article.fontSize.large.altText"
 msgstr "Stor"
@@ -1379,28 +1469,33 @@ msgid "journal.issn"
 msgstr "ISSN"
 
 msgid "user.noRoles.chooseJournal"
-msgstr "Brukerkontoen din er ikke knyttet til noe tidsskrift. Vennligst velg tidsskrift:"
+msgstr ""
+"Brukerkontoen din er ikke knyttet til noe tidsskrift. Du må velge et "
+"tidsskrift:"
 
 msgid "user.noRoles.noRolesForJournal"
-msgstr "Brukerkontoen din er ikke knyttet til noen rolle for dette tidsskriftet. Vennligst velg blant disse alternativene:"
+msgstr ""
+"Brukerkontoen din er ikke knyttet til noen rolle for dette tidsskriftet. "
+"Velg blant alternativene under:"
 
 msgid "user.noRoles.submitArticle"
-msgstr "Send inn et artikkelforslag"
+msgstr "Send inn en artikkel"
 
 msgid "user.noRoles.submitArticleRegClosed"
 msgstr "Send inn en artikkel: Forfatterregistreringen er for øyeblikket slått av."
 
 msgid "user.noRoles.regReviewer"
-msgstr "Registrer som fagkonsulent"
+msgstr "Registrer som fagfelle"
 
 msgid "user.noRoles.regReviewerClosed"
-msgstr "Registrer som fagkonsulent: Registrering av fagkonsulenter er for øyeblikket slått av."
+msgstr ""
+"Registrer som fagfelle: Registrering av fagfeller er for øyeblikket slått av."
 
 msgid "issue.coverPage.altText"
 msgstr "Omslagsside"
 
 msgid "reader.subscribersOnly"
-msgstr "Bare for abonnenter"
+msgstr "Kun for abonnenter"
 
 msgid "reader.subscriptionRequiredLoginText"
 msgstr "Bare abonnenter får tilgang til dette elementet. Logg inn for å bekrefte abonnement."
@@ -1409,10 +1504,10 @@ msgid "reader.openAccess"
 msgstr "Åpen tilgang (Open Access)"
 
 msgid "reader.subscriptionAccess"
-msgstr "Abonnementstilgang"
+msgstr "Krever abonnement"
 
 msgid "reader.subscriptionOrFeeAccess"
-msgstr "Abonnements- eller betalingstilgang"
+msgstr "Krever abonnement eller avgift"
 
 msgid "manager.setup.copyrightNotice.sample"
 msgstr ""
@@ -1435,78 +1530,99 @@ msgstr ""
 
 msgid "manager.setup.referenceLinkingDescription"
 msgstr ""
-"<p>For at lesere lett skal kunne finne nettpubliserte versjoner av verk forfattere henviser til i artiklene sine, finnes følgende muligheter.</p>\n"
+"<p>For at lesere lett skal kunne finne nettpubliserte versjoner av verk "
+"forfattere henviser til i artiklene sine, finnes følgende muligheter.</p>\n"
 "\n"
 "<ol>\n"
-"\t<li><strong>Legg til et Leseverktøy</strong><p>Redaksjonslederen kan legge til verktøyet \"Finn henvisning\" i Leseverktøy som vises i sidespalten ved publiserte artikler. Med dette verktøyet kan leseren lime inn tittelen fra en henvisning for å søke etter verket i egnete søkeverktøy som er valgt på forhånd av tidsskriftet.</p></li>\n"
-"\t<li><strong>Legg inn lenker i henvisningene</strong><p>Layoutredaktøren kan legge inn aktive lenker direkte i artikkelfilens henvisninger ved å følge instruksen nedenfor (som kan redigeres).</p></li>\n"
+"\t<li><strong>Legg til et leseverktøy</strong><p>Redaksjonslederen kan legge "
+"til verktøyet «Finn referanse» i «Leseverktøy» som vises i sidemenyen ved "
+"publiserte artikler. Med dette verktøyet kan leseren lime inn tittelen fra "
+"en referanse for å søke etter verket i databaser som tidsskriftet har valgt "
+"ut.</p></li>\n"
+"\t<li><strong>Legg inn lenker i referansene</strong><p>Layoutredaktøren kan "
+"legge inn aktive lenker direkte i referansene ved å følge instruksen "
+"nedenfor (som kan redigeres).</p></li>\n"
 "</ol>"
 
 msgid "submission.layout.imageInvalid"
-msgstr "Ugyldig filformat. Tillatte filformat er .gif, .jpg, eller .png."
+msgstr "Ugyldig filformat. Tillatte filformat: .gif, .jpg eller .png."
 
 msgid "reviewer.article.notifyEditorA"
-msgstr "Send e-post til manuskriptredaktøren"
+msgstr "Send e-post til redaktøren"
 
 msgid "reviewer.article.notifyEditorB"
-msgstr "om hvorvidt du vil påta deg vurderingsoppdraget."
+msgstr "om hvorvidt du vil påta deg fagfellevurderingen."
 
 msgid "reviewer.article.consultGuidelines"
-msgstr "Hvis du påtar deg vurderingsoppdraget: se 'Instruks for fagkonsulenter' nedenfor."
+msgstr ""
+"Hvis du påtar deg fagfellevurderingen: se «Instruks for fagfellevurdering» "
+"nedenfor."
 
 msgid "reviewer.article.downloadSubmission"
-msgstr "Klikk på filnavn for å laste ned og vurdere dette innsendte manuskriptet og de eventuelle tilleggsfilene som hører til (på skjerm eller i utskrift)."
+msgstr ""
+"Klikk på filnavn for å laste ned og fagfellevurdere (på skjerm eller i "
+"utskrift) filen(e) i innleveringen."
 
 msgid "reviewer.article.enterCompetingInterests"
-msgstr "Avgi en erklæring om hvorvidt du står i en interessekonflikt med hensyn til denne forskningen (se <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Retningslinjer for Erklæring om interessekonflikter</a>)."
+msgstr ""
+"Oppgi eventuelle interessekonflikter du står i knyttet til denne forskningen "
+"(se <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\"> «Erklæring om interessekonflikter»</a>)."
 
 msgid "reviewer.competingInterests"
 msgstr "Interessekonflikter"
 
 msgid "reviewer.article.enterReviewA"
-msgstr "Klikk på ikonet for å skrive eller lime inn fagvurderingen din av dette manuskriptet."
+msgstr "Klikk på ikonet for å skrive eller lime inn fagfellevurderingen."
 
 msgid "reviewer.article.uploadFile"
-msgstr "Du kan i tillegg laste opp filer som kan gjøres tilgjengelige for redaktør og/eller forfatter."
+msgstr ""
+"Du kan i tillegg laste opp filer som kan gjøres tilgjengelige for redaktør "
+"og/eller forfatter for konsultasjon."
 
 msgid "submission.layout.noLayoutFile"
-msgstr "Ingen (last opp en ferdigstilt filversjon til manusredigering før bestillingen sendes)"
+msgstr ""
+"Ingen (last opp en endelig, språkvasket versjon som layoutversjon før "
+"forespørselen sendes)"
 
 msgid "submission.layout.galleyPublicIdentificationExists"
-msgstr "Offentlig identifikator for sideoppsettet finnes allerede."
+msgstr "Offentlig identifikator for oppsettet finnes allerede."
 
 msgid "submission.layout.referenceLinking"
-msgstr "Henvisningslenking"
+msgstr "Lenke til referanser"
 
 msgid "about.authorFees"
-msgstr "Forfatterbetaling"
+msgstr "Forfatteravgift"
 
 msgid "about.authorFeesMessage"
-msgstr "Dette tidsskriftet krever inn følgende forfatterbetaling."
+msgstr "Dette tidsskriftet krever denne forfatteravgiften."
 
 msgid "about.memberships"
-msgstr "medlemskap"
+msgstr "Medlemskap"
 
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS' redaksjonelle prosess og publiseringsprosess"
 
 msgid "help.searchReturnResults"
-msgstr "Tilbake til søkeresultat"
+msgstr "Gå tilbake til søkeresultat"
 
 msgid "donations.thankYou"
 msgstr "Takk"
 
 msgid "donations.thankYouMessage"
-msgstr "Takk for bidraget ditt: vi setter stor pris på din støtte."
+msgstr "Takk for bidraget ditt. Vi setter stor pris på støtten din."
 
 msgid "payment.loginRequired"
 msgstr "Du må være logget inn for å betale."
 
 msgid "payment.loginRequired.forArticle"
-msgstr "Abonnement eller artikkelkjøp er påkrevet for å få tilgang til dette elementet. Du må være innlogget for å bekrefte tidligere betaling eller betale artikkelkjøp."
+msgstr ""
+"Du må være abonnent eller kjøpe artikkelen for å få tilgang til den. Logg "
+"inn for å verifisere abonnementet, å hente fram tidligere betaling eller å "
+"kjøpe artikkelen."
 
 msgid "payment.loginRequired.forDonation"
-msgstr "Du må være innlogget for å gi en donasjon."
+msgstr "Du må være innlogget for å gi en pengegave."
 
 msgid "payment.paid"
 msgstr "Betalt"
@@ -1515,13 +1631,17 @@ msgid "payment.payNow"
 msgstr "Betal nå"
 
 msgid "payment.waive"
-msgstr "Gi fritak"
+msgstr "Frita"
 
 msgid "payment.alreadyPaid"
 msgstr "Allerede betalt"
 
 msgid "payment.alreadyPaidMessage"
-msgstr "For å ferdigstille innsendingen kan du krysse av i denne boksen hvis du allerede har sendt betalingen til tidsskriftet. Den redaksjonelle behandlingen av det innsendte manuskriptet settes i gang så snart betalingen er mottatt. Klikk BETAL NÅ ovenfor, for å se betalingsinstruksen."
+msgstr ""
+"Kryss av i denne boksen hvis du allerede har sendt betalingen til "
+"tidsskriftet. Det fullfører innleveringsprosessen. Den redaksjonelle "
+"behandlingen settes i gang så snart betalingen er mottatt. Klikk «Betal nå» "
+"for å se instruks."
 
 msgid "payment.paymentReceived"
 msgstr "Betalingen er mottatt"
@@ -1530,37 +1650,37 @@ msgid "payment.paymentSent"
 msgstr "Betalingen er allerede sendt"
 
 msgid "payment.type.submission"
-msgstr "Innsendingsgebyr"
+msgstr "Innsendingsavgift"
 
 msgid "payment.type.publication"
-msgstr "Publiseringsgebyr"
+msgstr "Publiseringsavgift"
 
 msgid "payment.type.fastTrack"
-msgstr "Gebyr for ekspress-fagvurdering"
+msgstr "Avgift for hurtig fagfellevurdering"
 
 msgid "payment.type.membership"
-msgstr "Individuell medlemsavgift"
+msgstr "Kontingent for individuelt medlemskap"
 
 msgid "payment.type.purchaseArticle"
-msgstr "Betal artikkelpris"
+msgstr "Avgift for kjøp av artikkel"
 
 msgid "payment.type.subscription"
 msgstr "Abonnementsavgift"
 
 msgid "payment.type.donation"
-msgstr "Donasjoner"
+msgstr "Pengegaver"
 
 msgid "payment.donation.makeDonation"
-msgstr "Gi en donasjon"
+msgstr "Gi en pengegave"
 
 msgid "payment.submission.paySubmission"
-msgstr "Betal innsendingsgebyr"
+msgstr "Betal innsendingsavgift"
 
 msgid "payment.publication.payPublication"
-msgstr "Betal publiseringsgebyr"
+msgstr "Betal publiseringsavgift"
 
 msgid "payment.publication.publicationPaid"
-msgstr "Publiseringsgebyr er betalt"
+msgstr "Publiseringsavgift er betalt"
 
 msgid "payment.membership.buyMembership"
 msgstr "Kjøp individuelt medlemskap"
@@ -1569,7 +1689,7 @@ msgid "payment.membership.renewMembership"
 msgstr "Forny individuelt medlemskap"
 
 msgid "payment.membership.ends"
-msgstr "Avsluttes"
+msgstr "Utløper"
 
 msgid "payment.subscription.renew"
 msgstr "Forny abonnement"
@@ -1578,13 +1698,20 @@ msgid "payment.subscription.expires"
 msgstr "Utløper"
 
 msgid "installer.databaseSettingsInstructions"
-msgstr "OJS krever tilgang til en SQL-database for lagring av data. Se listen over databaser som støttes i systemkravene ovenfor. Skriv inn innstillingene som skal brukes for å opprette forbindelsen med databasen i feltene nedenfor."
+msgstr ""
+"OJS krever tilgang til en SQL-database for å lagre av data. Se listen over "
+"støttede databaser i systemkravene ovenfor. Skriv inn innstillingene som "
+"skal brukes for å opprette forbindelsen med databasen i feltene nedenfor."
 
 msgid "log.review.reviewDeclinedByProxy"
-msgstr "{$userName} har avslått å utføre fagvurdering i {$round}. runde for manuskriptet{$submissionId} på vegne av {$reviewerName}."
+msgstr ""
+"{$userName} har avslått forespørsel om å fagfellevurdere innleveringen "
+"{$submissionId} i runden {$round} på vegne av {$reviewerName}."
 
 msgid "log.editor.decision"
-msgstr "Redaktørbeslutningen ({$decision}) for artikkelen {$submissionId} ble journalført av {$editorName}."
+msgstr ""
+"Den redaksjonelle avgjørelsen ({$decision}) for innleveringen {$submissionId}"
+" ble journalført av {$editorName}."
 
 msgid "user.manageMySubscriptions"
 msgstr "Administrer mine abonnementer"
@@ -1611,13 +1738,13 @@ msgid "subscriptionTypes.format"
 msgstr "Format"
 
 msgid "subscriptionTypes.format.online"
-msgstr "Online"
+msgstr "På nett"
 
 msgid "subscriptionTypes.format.print"
 msgstr "Trykt"
 
 msgid "subscriptionTypes.format.printOnline"
-msgstr "Trykt og online"
+msgstr "Trykt og på nett"
 
 msgid "subscriptions.inactive"
 msgstr "Ikke aktiv"
@@ -1629,19 +1756,19 @@ msgid "subscriptions.status.active"
 msgstr "Aktiv"
 
 msgid "subscriptions.status.needsInformation"
-msgstr "Informasjon må oppdateres"
+msgstr "Informasjon må legges inn"
 
 msgid "subscriptions.status.needsApproval"
-msgstr "Behøver godkjenning"
+msgstr "Må godkjennes"
 
 msgid "subscriptions.status.awaitingManualPayment"
 msgstr "Avventer manuell betaling"
 
 msgid "subscriptions.status.awaitingOnlinePayment"
-msgstr "Avventer online-betaling"
+msgstr "Avventer betaling på nett"
 
 msgid "subscriptions.status.other"
-msgstr "Annet, se notater"
+msgstr "Annet, se «Notater»"
 
 msgid "subscriptions.individualDescription"
 msgstr "Personlige abonnement krever at man logger inn for å få tilgang til innhold."
@@ -1650,7 +1777,9 @@ msgid "subscriptions.institutionalDescription"
 msgstr "Institusjonsabonnement krever ikke innlogging. Brukerens domene og/eller IP-adresse benyttes for å gi tilgang til innhold."
 
 msgid "subscriptions.institutionalOnlinePaymentDescription"
-msgstr "<strong>Merk:</strong> Institusjonsabonnementer som er kjøpt online trenger godkjenning av domene og IP-adresseområde før abonnementet aktiveres."
+msgstr ""
+"<strong>Merk:</strong> Institusjonsabonnementer som er kjøpt på nett trenger "
+"godkjenning av domene og IP-adresseområde før abonnementet aktiveres."
 
 msgid "subscriptionManager.individualSubscriptions"
 msgstr "Personlige abonnementer"
@@ -1689,7 +1818,15 @@ msgstr ""
 "</ol>"
 
 msgid "reviewer.article.reviewGuidelinesDescription"
-msgstr "Retningslinjene for fagfellevurdering gir fagfellevurdererne kriterier for vurdering av hvorvidt en innlevering er egnet for publisering i tidsskriftet, og kan også inneholde veiledning i å skrive en effektiv og hjelpsom vurdering. Ved gjennomføring av vurderingen får fagfellevurdererne to tekstbokser tilgjengelig, en merket  \"for forfatter og redaktør,\" og den andre merket \"for redaktøren.\" Som et alternativ kan tidsskriftadministratoren lage vurderingsskjema under Vurderingsskjema. Uansett vil redaktøren kunne inkludere fagfellevurderingene i korrespondanse med forfattere."
+msgstr ""
+"Retningslinjene for fagfellevurdering gir fagfellene kriterier for vurdering "
+"av hvorvidt en innlevering er egnet for publisering i tidsskriftet. De kan "
+"også inneholde veiledning i å skrive en effektiv og hjelpsom vurdering. Ved "
+"gjennomføring av vurderingen får fagfellene to tekstbokser tilgjengelig. Den "
+"ene merket «For forfatter og redaktør» og den andre merket «For redaktøren.» "
+"Tidsskriftadministratoren kan eventuelt lage et vurderingsskjema under "
+"«Vurderingsskjema». Redaktøren vil i alle tilfeller kunne inkludere "
+"fagfellevurderingene i korrespondanse med forfattere."
 
 msgid "user.subscriptions.mySubscriptions"
 msgstr "Mine abonnementer"
@@ -1716,10 +1853,10 @@ msgid "user.subscriptions.purchaseInstitutionalSubscription"
 msgstr "Kjøp institusjonelt abonnement"
 
 msgid "user.subscriptions.expires"
-msgstr "Utløper"
+msgstr "Utløper: {$date}"
 
 msgid "user.subscriptions.expired"
-msgstr "Utløp"
+msgstr "Utløpt: {$date}"
 
 msgid "user.subscriptions.viewSubscriptionTypes"
 msgstr "Se tilgjengelige abonnementstyper"
@@ -1731,7 +1868,7 @@ msgid "user.subscriptions.form.membership"
 msgstr "Medlemskap"
 
 msgid "user.subscriptions.form.membershipRequired"
-msgstr "Valgt abonnementstype krever medlemskapsinformasjon."
+msgstr "Den valgte abonnementstypen krever informasjon om medlemsskap."
 
 msgid "user.subscriptions.form.typeIdValid"
 msgstr "Velg en gyldig abonnementstype."
@@ -1740,13 +1877,15 @@ msgid "user.subscriptions.form.subscriptionExists"
 msgstr "Denne brukerkontoen har allerede et personlig abonnement."
 
 msgid "user.subscriptions.form.membershipInstructions"
-msgstr "Medlemskapsinformasjon dersom det kreves for den valgte abonnementstypen."
+msgstr ""
+"Informasjon om medlemsskap, dersom det kreves for den valgte "
+"abonnementstypen."
 
 msgid "user.subscriptions.form.institutionName"
 msgstr "Institusjonsnavn"
 
 msgid "user.subscriptions.form.institutionNameRequired"
-msgstr "Et institusjonsnavn må oppgis."
+msgstr "Du må oppgi et institusjonsnavn."
 
 msgid "user.subscriptions.form.institutionMailingAddress"
 msgstr "Postadresse"
@@ -1761,7 +1900,7 @@ msgid "user.subscriptions.form.domainIPRangeRequired"
 msgstr "Den valgte abonnementstypen krever et domene og/eller et IP-adresseområde for abonnementsautentisering."
 
 msgid "user.subscriptions.form.domainValid"
-msgstr "Vennligst oppgi et gyldig domene."
+msgstr "Oppgi et gyldig domene."
 
 msgid "user.subscriptions.form.ipRange"
 msgstr "IP-adresseområde"
@@ -1773,7 +1912,7 @@ msgid "user.subscriptions.form.ipRangeInstructions"
 msgstr "OM IP-adresseområde oppgis her, er domene valgfritt.<br />Gyldige verdier inkluderer en IP-adresse (f.eks. 142.58.103.1), IP-adresseområde (f.eks. 142.58.103.1 - 142.58.103.4), IP-adresseområde med jokertegn '*' (f.eks. 142.58.*.*), og et IP-adresseområde med CIDR (f.eks. 142.58.100.0/24)."
 
 msgid "user.subscriptions.form.ipRangeValid"
-msgstr "Vennligst oppgi et gyldig IP-adresseområde."
+msgstr "Oppgi et gyldig IP-adresseområde."
 
 msgid "user.subscriptions.form.deleteIpRange"
 msgstr "Slett"
@@ -1800,7 +1939,7 @@ msgid "about.subscriptionTypes.duration"
 msgstr "Varighet"
 
 msgid "about.subscriptionTypes.cost"
-msgstr "Kostnad"
+msgstr "Pris"
 
 msgid "payment.subscription.purchase"
 msgstr "Kjøp abonnement"
@@ -1812,22 +1951,22 @@ msgid "installer.upgradeApplication"
 msgstr "Oppgrader Open Journal Systems"
 
 msgid "notification.type.editing"
-msgstr "Redigeringshendelser"
+msgstr "Redigeringsaktivitet"
 
 msgid "notification.type.editorDecisionComment"
-msgstr "Redaktørens beslutning vedrørende «{$param}» har blitt kommentert."
+msgstr "Redaktørens beslutning vedrørende \"{$title}\" har blitt kommentert."
 
 msgid "notification.type.galleyModified"
-msgstr "Et oppsett til «{$title}» har blitt endret."
+msgstr "Et oppsett til \"{$title}\" har blitt endret."
 
 msgid "notification.type.issuePublished"
-msgstr "Et nummer har blitt publisert."
+msgstr "En utgave har blitt publisert."
 
 msgid "notification.type.metadataModified"
 msgstr "\"{$title}'s\" metadata har blitt endret."
 
 msgid "notification.type.newAnnouncement"
-msgstr "En ny kunngjøring har blitt lagt inn."
+msgstr "Nytt oppslag."
 
 msgid "notification.type.reviewerComment"
 msgstr "En fagfellevurderer har kommentert \"{$title}\"."
@@ -1836,22 +1975,22 @@ msgid "notification.type.reviewerFormComment"
 msgstr "Et skjema for fagfellevurdering har blitt sendt inn for «{$title}»."
 
 msgid "notification.type.reviewing"
-msgstr "Vurderingshendelser"
+msgstr "Fagfelleaktivitet"
 
 msgid "notification.type.site"
-msgstr "Nettstedshendelser"
+msgstr "Nettstedsaktivitet"
 
 msgid "notification.type.submissionComment"
 msgstr "En redaktør har kommentert «{$title}»."
 
 msgid "notification.type.submissions"
-msgstr "Innleveringshendelser"
+msgstr "Innleveringsaktivitet"
 
 msgid "notification.type.userComment"
-msgstr "En leser har kommentert «{$title}»."
+msgstr "En leser har kommentert «{$title}»"
 
 msgid "user.register.reviewerInterests"
-msgstr "Angi interessante vurderingsområder (hovedområder og forskningsmetoder):"
+msgstr "Oppgi faglige interesser (hovedområder og forskningsmetoder):"
 
 msgid "user.subscriptions.subscriptionStatus"
 msgstr "Abonnementsstatus"
@@ -1866,28 +2005,30 @@ msgid "navigation.categories"
 msgstr "Kategorier"
 
 msgid "issue.fullIssue"
-msgstr "Hele nummeret"
+msgstr "Hele utgaven"
 
 msgid "issue.nonpdf.title"
-msgstr "Last ned nummeret"
+msgstr "Last ned utgaven"
 
 msgid "issue.viewIssue"
-msgstr "Vis nummeret"
+msgstr "Vis utgaven"
 
 msgid "issue.viewIssueDescription"
 msgstr "Vis eller last ned hele nummeret"
 
 msgid "site.noJournals"
-msgstr "Det er ingen tidsskrift tilgjengelig."
+msgstr "Ingen tidsskrift er tilgjengelig."
 
 msgid "payment.authorFees"
-msgstr "Forfatteravgifter"
+msgstr "Forfatteravgift"
 
 msgid "user.authorization.sectionAssignment"
 msgstr "Du forsøker å få tilgang til en artikkel som ikke er en del av din seksjon."
 
 msgid "user.subscriptions.statusInformation"
-msgstr "Aktive og utløpte abonnementer vises nedenfor sammen med sine utløpsdatoer. I tillegg kan følgende statusinformasjoner også vises med hvert abonnement."
+msgstr ""
+"Aktive og utløpte abonnementer vises nedenfor sammen med sine utløpsdatoer. "
+"I tillegg kan følgende statusinformasjon også vises med hvert abonnement."
 
 msgid "user.subscriptions.status.needsInformationDescription"
 msgstr "Det trengs mer informasjon før abonnementet kan aktiviseres"
@@ -1896,19 +2037,24 @@ msgid "user.subscriptions.status.needsApprovalDescription"
 msgstr "Abonnementet må gjennomgås før det kan aktiviseres"
 
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
-msgstr "Manuell betaling er initiert men ennå ikke mottatt"
+msgstr "Manuell betaling er startet, men ennå ikke mottatt"
 
 msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
-msgstr "En nettbetaling har blitt initiert men har blitt kansellert eller ikke fullført"
+msgstr ""
+"En nettbetaling har blitt startet, men har blitt kansellert eller er ikke "
+"fullført"
 
 msgid "editor.navigation.issues"
 msgstr "Utgaver"
 
 msgid "log.editor.submissionExpedited"
-msgstr "{$editorName} har forestått redigeringsprosessen for artikkelen {$submissionId}."
+msgstr "{$editorName} har ferdigstilt artikkelen {$submissionId}."
 
 msgid "installer.preInstallationInstructions"
 msgstr ""
+"\n"
+"<h4>Steg før innstallasjon</h4>\n"
+"\n"
 "\n"
 "<p>1. De følgende filene og mappene (og deres innhold) må være "
 "overskrivbare:</p>\n"
@@ -1931,21 +2077,24 @@ msgstr ""
 "For fullstendig støtte for Unicode (UTF-8), velg UTF-8 for alle "
 "innstillingene for tegnsett. Pass på at fullstendig støtte for Unicode "
 "krever at PHP er kompilert med støtte for <a href=\"http://www.php.net/"
-"mbstring\" target=\"_blank\">mbstring</a> biblioteket. Det kan hende du får "
-"problemer med å bruke utvidede tegnsett om serveren din ikke fyller disse "
-"kravene. Serveren din støtter mbstring: <strong>{$supportsMBString}</strong>"
+"mbstring\" target=\"_blank\">mbstring</a> biblioteket (som er aktivert som "
+"standard i de nyeste PHP-innstallasjonene). Det kan hende du får problemer "
+"med å bruke utvidede tegnsett om serveren din ikke fyller disse kravene. \n"
+"<br />\n"
+"<br />\n"
+"Serveren din støtter mbstring: <strong>{$supportsMBString}</strong>"
 
 msgid "catalog.sortBy.categoryDescription"
-msgstr "Velg hvordan artiklene sorteres i denne kategorien."
+msgstr "Velg hvordan du ønsker å ordne artikler i denne kategorien."
 
 msgid "catalog.sortBy"
-msgstr "Artikkelrekkefølge"
+msgstr "Rekkefølge på artikler"
 
 msgid "navigation.subscriptions"
 msgstr "Abonnementer"
 
 msgid "editor.issues.futureIssues"
-msgstr "Kommende utgaver"
+msgstr "Framtidige utgaver"
 
 msgid "editor.issues.backIssues"
 msgstr "Tidligere utgaver"
@@ -1969,7 +2118,7 @@ msgid "grid.catalogEntry.approvedRepresentation.title"
 msgstr "Godkjenn oppsettet"
 
 msgid "grid.catalogEntry.availableRepresentation.notApproved"
-msgstr "Venter på godkjenning"
+msgstr "Avventer godkjenning"
 
 msgid "grid.catalogEntry.availableRepresentation.approved"
 msgstr "Godkjent"
@@ -1978,19 +2127,19 @@ msgid "article.view.interstitial"
 msgstr "Velg en artikkel for nedlasting."
 
 msgid "user.profile.form.hideOtherContexts"
-msgstr "Skjul andre tidsskrift"
+msgstr "Gjem andre tidsskrift"
 
 msgid "user.profile.form.showOtherContexts"
 msgstr "Registrer hos andre tidsskrift"
 
 msgid "notification.type.approveSubmissionTitle"
-msgstr "Venter på godkjenning."
+msgstr "Avventer godkjenning."
 
 msgid "notification.type.approveSubmission"
 msgstr "Denne innleveringen avventer godkjennelse før det kan vises i utgaven."
 
 msgid "grid.action.createContext"
-msgstr "Opprett nytt tidsskrift"
+msgstr "Lag nytt tidsskrift"
 
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr "Ugyldig innlevering av språkvask eller ingen forespørsel om språkvask!"
@@ -2005,7 +2154,7 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Ingen tilgang. Du har ikke blitt bedt om å språkvaske denne artikkelen."
 
 msgid "notification.type.awaitingRepresentations"
-msgstr "Venter på sideoppsett."
+msgstr "Avventer oppsett."
 
 msgid "notification.type.assignProductionUser"
 msgstr ""
@@ -2020,7 +2169,7 @@ msgid "notification.savedIssueMetadata"
 msgstr "Metadata lagret."
 
 msgid "notification.type.public"
-msgstr "Oppslag"
+msgstr "Offentlige kunngjøringer"
 
 msgid "notification.type.submissionSubmitted"
 msgstr "En ny artikkel, «{$title}», har blitt innlevert."
@@ -2036,8 +2185,8 @@ msgstr ""
 "{$currentVersion}. Den nyeste versjonen er OJS {$latestVersion}. Kontakt "
 "nettstedsadministratoren ({$siteAdminName}, <a href=\""
 "mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) for å informere om "
-"lanseringen av ny versjon. Du finner mer <a href=\"http://pkp.sfu.ca/"
-"ojs_download\" target=\"_new\">informasjon om ny OJS-versjon her</a>."
+"lanseringen av ny versjon. Du finner mer informasjon <a href=\""
+"http://pkp.sfu.ca/ojs_download\" target=\"_new\">her</a>."
 
 msgid "site.upgradeAvailable.admin"
 msgstr ""
@@ -2086,8 +2235,7 @@ msgid "about.onlineSubmissions.newSubmission"
 msgstr "Ny innlevering"
 
 msgid "about.onlineSubmissions.submitToSection"
-msgstr ""
-"Send inn en ny innlevering til <a href=\"{$url}\"> {$name} </a>-seksjonen."
+msgstr "Lever inn bidrag til seksjon <a href=\"{$url}\">{$name}</a>."
 
 msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission} eller {$viewSubmissions}."
@@ -2108,8 +2256,8 @@ msgid "article.nonpdf.note"
 msgstr ""
 "Filen du har valgt burde bli lastet ned automatisk. Dersom det ikke skjer, "
 "kan du klikke på lenken under. Merk at denne filen krever en spesiell viser "
-"eller et programtillegg for at den kan vises.<br /><br />Dersom filen ikke "
-"lastes ned automatisk, <a href=\"{$url}\">Last ned filen her</a>."
+"eller et programtillegg for at den kan vises. <br /><br />Dersom filen ikke "
+"lastes ned automatisk, <a href=\"{$url}\">klikk her</a>."
 
 msgid "article.nonpdf.title"
 msgstr "Last ned artikkel"
@@ -2117,39 +2265,39 @@ msgstr "Last ned artikkel"
 msgid "article.pluginMissing"
 msgstr ""
 "<p>PDF-filen du valgte burde lastes her om du har en nettleser som har "
-"installert et programtillegg for pdf, f.eks. en nyere versjon av <a href=\""
+"installert et programtillegg for PDF, f.eks. en nyere versjon av <a href=\""
 "https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
 
 msgid "article.download"
 msgstr "Last ned denne PDF-filen"
 
 msgid "article.pdf.title"
-msgstr "PDF (Portable Document Format)"
+msgstr "PDF-format"
 
 msgid "article.pageTitle"
 msgstr "Visning av {$title}"
 
 msgid "user.register.form.missingSiteConsent"
-msgstr "Du må godkjenne dette nettstedets personvernerklæring."
+msgstr "Du må godta dette nettstedets personvernerklæring."
 
 msgid "user.register.form.missingContextConsent"
 msgstr ""
-"Du må i forbindelse med registrering godta personvernerklæringen til de "
-"aktuelle tidsskriftene."
+"Du må si ja til betingelsene i personvernerklæringen for alle tidsskrifter "
+"du registreres hos."
 
 msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
-"Ja, jeg godtar at dataene mine blir samlet inn og lagret i samsvar med dette "
-"tidsskriftets <a href=\"{$privacyUrl}\" target=\"_blank\"> "
-"personvernerklæring </a>."
+"Ja, jeg godtar at mine data samles inn og lagres i tråd med dette "
+"tidsskriftets <a href=\"{$privacyUrl}\" target=\"_blank\""
+">personvernerklæring</a>."
 
 msgid "user.register.form.emailConsentAllContexts"
 msgstr ""
-"Ja, jeg vil gjerne få beskjed om nye publikasjoner og oppslag fra alle "
-"tidsskriftene jeg er registrert hos."
+"Ja takk, jeg vil gjerne motta varsler om nye publikasjoner og kunngjøringer "
+"for alle tidsskriftene jeg er registrert hos."
 
 msgid "user.register.selectContext"
-msgstr "Velg et tidsskrift å registrere i:"
+msgstr "Velg et tidsskrift å registrere ved:"
 
 msgid "reviewer.article.selectRecommendation.byEditor"
 msgstr "Instill eller juster fagfellens anbefaling."
@@ -2158,7 +2306,7 @@ msgid "submission.layout.galley.remoteURL"
 msgstr "Ekstern URL"
 
 msgid "submission.layout.galley.remotelyHostedContent"
-msgstr "Dette oppsettet vil bil tilgjengelig på et separat nettsted."
+msgstr "Dette oppsettet vil bli tilgjengelig på et separat nettsted."
 
 msgid "editor.submissionEditing.notes"
 msgstr ""
@@ -2218,7 +2366,7 @@ msgid "search.results.orderBy.article"
 msgstr "Artikkeltittel"
 
 msgid "search.results.orderBy"
-msgstr "Sorter resultater etter"
+msgstr "Sorter resultat etter"
 
 msgid "reader.purchasePrice"
 msgstr "({$currency} {$price})"
@@ -2251,8 +2399,8 @@ msgstr "Hvilke tidsskrift på dette nettstedet vil du registere deg hos?"
 
 msgid "user.reviewerPrompt.optin"
 msgstr ""
-"Ja, jeg vil gjerne kontaktes angående forespørsler om fagfellevurdering av "
-"manuskript til dette tidsskriftet."
+"Ja takk, kontakt meg gjerne med forespørsel om å bidra til "
+"fagfellevurderinger for dette tidsskriftet."
 
 msgid "user.reviewerPrompt.userGroup"
 msgstr "Ja, be om en rolle i {$userGroup}."
@@ -2276,7 +2424,7 @@ msgid "article.return"
 msgstr "Gå tilbake til artikkeldetaljene"
 
 msgid "section.policy"
-msgstr "Seksjonspolicy"
+msgstr "Retningslinjer for tidsskriftseksjoner"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Valgte redaktører"
@@ -2295,3 +2443,23 @@ msgstr "Bytt til et annet tidsskrift:"
 
 msgid "context.current"
 msgstr "Gjeldende tidsskrift:"
+
+msgid "category.category"
+msgstr "Kategorier"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Hvis du oppgraderer en eksisterende innstallasjon av OJS: <a href=\""
+"{$upgradeUrl}\">fortsett til oppgraderingen</a>."
+
+msgid "about.aboutSoftware"
+msgstr "Om Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Oppsettet ble ikke funnet."
+
+msgid "payment.waived"
+msgstr "Frafalt"
+
+msgid "payment.unpaid"
+msgstr "Ubetalt"

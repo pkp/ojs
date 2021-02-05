@@ -2,8 +2,8 @@
 /**
  * @file classes/services/PublicationService.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2000-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PublicationService
@@ -184,10 +184,24 @@ class PublicationService extends PKPPublicationService {
 	public function validatePublishPublication($hookName, $args) {
 		$errors =& $args[0];
 		$publication = $args[1];
+		$submission = $args[2];
 
 		// Every publication must be scheduled in an issue
 		if (!$publication->getData('issueId') || !Services::get('issue')->get($publication->getData('issueId'))) {
 			$errors['issueId'] = __('publication.required.issue');
+		}
+
+		// If submission fees are enabled, check that they're fulfilled
+		$context = Application::get()->getRequest()->getContext();
+		if (!$context || $context->getId() !== $submission->getData('contextId')) {
+			$context = Services::get('context')->get($submission->getData('contextId'));
+		}
+		$paymentManager = \Application::getPaymentManager($context);
+		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+		$publicationFeeEnabled = $paymentManager->publicationEnabled();
+		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
+		if ($publicationFeeEnabled && !$publicationFeePayment) {
+			$errors['publicationFeeStatus'] = __('editor.article.payment.publicationFeeNotPaid');
 		}
 	}
 

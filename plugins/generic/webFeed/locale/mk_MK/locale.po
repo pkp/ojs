@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-09 09:52+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-webFeed/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "Лого на RSS2"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "Лого на RSS1"
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Лого на Atom"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr ""
+"Ве молиме да внесете позитивен цел број за неодамнешните објавени елементи."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Број на елементи за приказ"
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Прикажи постојан број на најнови елементи."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Прикажи ја содржината на тековното објавено издание."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Прикажи ги линковите до веб каналите на сите страници на списанието."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+"Прикажи ги линковите до веб каналите само на главната и на страницата на "
+"изданието."
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Прикажи ги линковите до веб каналите само на страницата на изданието."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Поставки"
+
+msgid "plugins.generic.webfeed.description"
+msgstr ""
+"Овој плагин изработува RSS/Atom веб-синдикални канали за тековното издание."
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Плагин за веб канал"

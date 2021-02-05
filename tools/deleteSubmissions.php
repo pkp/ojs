@@ -3,8 +3,8 @@
 /**
  * @file tools/deleteSubmissions.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class deleteSubmissions
@@ -46,7 +46,7 @@ class SubmissionDeletionTool extends CommandLineTool {
 	 * Delete submission data and associated files
 	 */
 	function execute() {
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 		foreach($this->parameters as $articleId) {
 			$article = $submissionDao->getById($articleId);
 			if(!isset($article)) {

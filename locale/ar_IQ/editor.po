@@ -58,9 +58,6 @@ msgstr ""
 "هل تريد حفظ التعديلات على طلبات النشر المحفوظة؟ الطلبات المؤشر عليها بأن "
 "تحذف، ستحذف نهائياً من النظام."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "هل أنت متأكد من رغبتك في حذف طلب النشر هذا نهائياً؟"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "هل أنت متأكد من رغبتك في تسجيل هذا القرار؟"
 

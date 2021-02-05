@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/form/ArticleGalleyForm.inc.php
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyForm
@@ -67,13 +67,12 @@ class ArticleGalleyForm extends Form {
 		$templateMgr = TemplateManager::getManager($request);
 		if ($this->_articleGalley) {
 			$articleGalleyFile = $this->_articleGalley->getFile();
-			$filepath = Services::get('file')->getPath($articleGalleyFile->getData('fileId'));
-			$templateMgr->assign(array(
+			$templateMgr->assign([
 				'representationId' => $this->_articleGalley->getId(),
 				'articleGalley' => $this->_articleGalley,
 				'articleGalleyFile' => $articleGalleyFile,
-				'supportsDependentFiles' => Services::get('submissionFile')->supportsDependentFiles($articleGalleyFile, $filepath),
-			));
+				'supportsDependentFiles' => $articleGalleyFile ? Services::get('submissionFile')->supportsDependentFiles($articleGalleyFile) : null,
+			]);
 		}
 		$context = $request->getContext();
 		$templateMgr->assign(array(

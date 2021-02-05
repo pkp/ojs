@@ -53,9 +53,6 @@ msgstr "Ningún envío en el archivo."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "¿Desea guardar los cambios en envíos archivados? Los envíos que se seleccionen para ser eliminados se eliminarán permanentemente del sistema."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "¿Está seguro/a de que desea eliminar este envío de forma permanente?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "¿Está seguro/a de que desea registrar esta decisión?"
 

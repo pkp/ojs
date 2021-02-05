@@ -44,9 +44,6 @@ msgstr "Ez dago bidalketarik artxiboan."
 msgid "editor.submissionArchive.saveChanges"
 msgstr "Bidalketa artxibatuetan egindako aldaketak gorde? Ezabatzeko markatuta dauden bidalketak betiko ezabatuko dira sistematik."
 
-msgid "editor.submissionArchive.confirmDelete"
-msgstr "Ziur zaude betiko ezabatu nahi duzula bidalketa hau?"
-
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Ziur zaude erabaki hau grabatu nahi duzula?"
 
