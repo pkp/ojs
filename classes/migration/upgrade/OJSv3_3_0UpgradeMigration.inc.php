@@ -107,21 +107,19 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		});
 
 		Capsule::table('site')->get()->each(function ($row) {
-			$oldInstalledLocales = unserialize($row->{'installed_locales'});
-			$oldSupportedLocales = unserialize($row->{'supported_locales'});
+			$localeToConvert = function($localeType) use($row) {
+				$serializedValue = $row->{$localeType};
+				if (@unserialize($serializedValue) === false) return;
+				$oldLocaleValue = unserialize($serializedValue);
 
-			if (is_array($oldInstalledLocales) && $this->_isNumerical($oldInstalledLocales)) $oldInstalledLocales = array_values($oldInstalledLocales);
-			if (is_array($oldSupportedLocales) && $this->_isNumerical($oldSupportedLocales)) $oldSupportedLocales = array_values($oldSupportedLocales);
+				if (is_array($oldLocaleValue) && $this->_isNumerical($oldLocaleValue)) $oldLocaleValue = array_values($oldLocaleValue);
 
-			if ($oldInstalledLocales) {
-				$newInstalledLocales = json_encode($oldInstalledLocales, JSON_UNESCAPED_UNICODE);
-				Capsule::table('site')->take(1)->update(['installed_locales' => $newInstalledLocales]);
-			}
+				$newLocaleValue = json_encode($oldLocaleValue, JSON_UNESCAPED_UNICODE);
+				Capsule::table('site')->take(1)->update([$localeType => $newLocaleValue]);
+			};
 
-			if ($oldSupportedLocales) {
-				$newSupportedLocales = json_encode($oldSupportedLocales, JSON_UNESCAPED_UNICODE);
-				Capsule::table('site')->take(1)->update(['supported_locales' => $newSupportedLocales]);
-			}
+			$localeToConvert('installed_locales');
+			$localeToConvert('supported_locales');
 		});
 	}
 
@@ -134,10 +132,13 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 	 */
 	private function _toJSON($row, $tableName, $searchBy, $valueToConvert)
 	{
-		$oldValue = unserialize($row->{$valueToConvert});
+		// Check if value can be unserialized
+		$serializedOldValue = $row->{$valueToConvert};
+		if (@unserialize($serializedOldValue) === false) return;
+		$oldValue = unserialize($serializedOldValue);
+
 		// Reset arrays to avoid keys being mixed up
 		if (is_array($oldValue) && $this->_isNumerical($oldValue)) $oldValue = array_values($oldValue);
-		if (!$oldValue && !is_array($oldValue)) return; // don't continue if value cannot be unserialized
 		$newValue = json_encode($oldValue, JSON_UNESCAPED_UNICODE); // don't convert utf-8 characters to unicode escaped code
 
 		$id = array_key_first((array)$row); // get first/primary key column
