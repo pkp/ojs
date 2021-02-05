@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-16 10:53+0000\n"
-"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
+"PO-Revision-Date: 2021-02-05 18:02+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -2439,3 +2439,9 @@ msgstr "Цена за претплата"
 
 msgid "payment.type.purchaseIssue"
 msgstr "Цена за купување издание"
+
+msgid "payment.waived"
+msgstr "Отфрлено"
+
+msgid "payment.unpaid"
+msgstr "Неплатено"
