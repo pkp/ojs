@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2021-01-29 12:48+0000\n"
-"Last-Translator: Olivier Roueff <olivier.roueff@cnrs.fr>\n"
+"PO-Revision-Date: 2021-02-04 16:47+0000\n"
+"Last-Translator: François Théron <francois.theron@uvsq.fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/editor/fr_FR/"
 ">\n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
-msgstr "Page d'accueil du rédacteur"
+msgstr "Page d'accueil de l'éditeur"
 
 msgid "editor.submissionsAndPublishing"
 msgstr "Soumissions et publication"
@@ -36,7 +36,7 @@ msgid "editor.allSections"
 msgstr "Toutes les rubriques"
 
 msgid "editor.allEditors"
-msgstr "Tous les rédacteurs"
+msgstr "Tous les éditeurs"
 
 msgid "editor.me"
 msgstr "Moi"
@@ -54,7 +54,9 @@ msgid "editor.submissionReview.confirmDecision"
 msgstr "Êtes-vous certain de vouloir enregistrer cette décision ?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Cette soumission sera archivée après l'envoi du courriel Avis à l'auteur, ou à l'après avoir cliquer sur le bouton Omettre le courriel."
+msgstr ""
+"Cette soumission sera archivée après l'envoi du courriel Avis à l'auteur, ou "
+"après avoir cliqué sur le bouton Omettre le courriel."
 
 msgid "editor.notifyUsers"
 msgstr "Informer les utilisateurs"
@@ -69,13 +71,15 @@ msgid "editor.notifyUsers.allUsers"
 msgstr "Envoyer ce message à tous les utilisateurs associés à cette revue ({$count} utilisateurs)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Envoyer ce message aux utilisateurs associés à cette revue qui ont indiqué qu'ils désirent recevoir les mises à jour ({$count} utilisateurs)"
+msgstr ""
+"Envoyer ce message aux utilisateurs associés à cette revue qui ont indiqué "
+"désirer recevoir les mises à jour ({$count} utilisateurs)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Inclure le sommaire de ce numéro :"
 
 msgid "editor.editorAdministration"
-msgstr "Administration du rédacteur"
+msgstr "Administration de l'éditeur"
 
 msgid "editor.issues.createIssue"
 msgstr "Créer un numéro"
@@ -87,7 +91,7 @@ msgid "editor.issues.futureIssues"
 msgstr "Numéros à venir"
 
 msgid "editor.issues.currentIssue"
-msgstr "Numéro courant"
+msgstr "Numéro en cours"
 
 msgid "editor.issues.numArticles"
 msgstr "Articles"
@@ -105,13 +109,18 @@ msgid "editor.issues.unpublished"
 msgstr "Non publié"
 
 msgid "editor.issues.volumeRequired"
-msgstr "Le volume est obligatoire et doit être une valeur numérique positive."
+msgstr ""
+"Le numéro de volume est obligatoire et doit être une valeur numérique "
+"positive."
 
 msgid "editor.issues.numberRequired"
-msgstr "Le numéro est obligatoire et doit être une valeur numérique positive."
+msgstr ""
+"Le numéro du volume est obligatoire et doit être une valeur numérique "
+"positive."
 
 msgid "editor.issues.yearRequired"
-msgstr "L'année est obligatoire et doit être une valeur numérique positive."
+msgstr ""
+"L'année du numéro est obligatoire et doit être une valeur numérique positive."
 
 msgid "editor.issues.titleRequired"
 msgstr "Le titre du numéro de la revue est obligatoire."
@@ -123,28 +132,28 @@ msgid "editor.issues.issueIdentification"
 msgstr "Numéro d'identification"
 
 msgid "editor.issues.publicIssueIdentifier"
-msgstr "Numéro d'identification publique"
+msgstr "Identifiant public du Numéro"
 
 msgid "editor.issues.description"
 msgstr "Description"
 
 msgid "editor.issues.accessStatus"
-msgstr "Statut d'accès"
+msgstr "Statut de l'accès"
 
 msgid "editor.issues.accessDate"
-msgstr "Date d'accès libre"
+msgstr "Date de mise en accès libre"
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "La date d'accès n'est pas valide."
 
 msgid "editor.issues.coverPage"
-msgstr "Image de la page couverture"
+msgstr "Image de la page de couverture"
 
 msgid "editor.issues.coverPageInstructions"
 msgstr "(Formats acceptés : .gif, .jpg, ou .png)"
 
 msgid "editor.issues.uploaded"
-msgstr "Transféré"
+msgstr "Téléchargé"
 
 msgid "editor.issues.remove"
 msgstr "Supprimer"
@@ -153,7 +162,7 @@ msgid "editor.issues.proofed"
 msgstr "Révisé"
 
 msgid "editor.issues.removeCoverPage"
-msgstr "Supprimer l'image de la page couverture ?"
+msgstr "Supprimer l'image de la page de couverture ?"
 
 msgid "editor.issues.invalidCoverPageFormat"
 msgstr "Format de page couverture invalide. Les formats acceptés sont .gif, .jpg, ou .png."
@@ -162,13 +171,16 @@ msgid "editor.issues.styleFile"
 msgstr "Feuille de style"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "Le format de la feuille de style n'est pas valide. Assurez-vous que le fichier soumis soit une CSS valide. (Noter que les feuilles de style commencant par des commentaires peuvent être rejetées.)"
+msgstr ""
+"Le format de la feuille de style n'est pas valide. Assurez-vous que le "
+"fichier soumis soit une CSS valide. (Veuillez noter que les feuilles de "
+"style commençant par des commentaires peuvent être rejetées.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Supprimer la feuille de style ?"
 
 msgid "editor.issues.coverPageCaption"
-msgstr "Légende de la page couverture"
+msgstr "Légende de la page de couverture"
 
 msgid "editor.issues.showCoverPage"
 msgstr "Créer une couverture pour ce numéro avec les éléments suivants."
@@ -456,7 +468,7 @@ msgid "editor.article.noDate"
 msgstr "(date)"
 
 msgid "editor.submissions.showBy"
-msgstr "Montrer par"
+msgstr "Visulaiser par"
 
 msgid "editor.submissions.submitMMDD"
 msgstr "Soumettre MM JJ"
@@ -528,7 +540,7 @@ msgid "editor.article.hideCoverPageAbstract"
 msgstr "Ne pas afficher l'image de la page couverture lors de l'affichage du résumé de l'article."
 
 msgid "editor.article.coverImage"
-msgstr "Image de la page couverture"
+msgstr "Image de la page de couverture"
 
 msgid "editor.article.coverImageInstructions"
 msgstr "(Formats autorisés : .gif, .jpg, ou .png)"
@@ -543,7 +555,7 @@ msgid "editor.article.remove"
 msgstr "Supprimer"
 
 msgid "editor.issues.enableOpenAccessDate"
-msgstr "Activer l'accès libre différé"
+msgstr "Activer l'accès libre différé (barrière mobile)"
 
 msgid "editor.issues.unpublishIssue"
 msgstr "Dépublier le numéro"
@@ -555,7 +567,9 @@ msgid "editor.article.archiveSubmission"
 msgstr "Rejeter et archiver la soumission"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Avant d'envoyer une soumission en Révision, utiliser le lien Aviser l'auteur pour informer l'auteur de la décision et sélectionner la version à envoyer."
+msgstr ""
+"Avant d'envoyer une soumission en Révision, utiliser le lien Aviser l'auteur "
+"pour l'informer de la décision et sélectionner la version à envoyer."
 
 msgid "editor.submissionReview.sendToCopyediting"
 msgstr "Envoyer en Mise aux normes"
@@ -615,13 +629,19 @@ msgid "editor.issues.datePublished"
 msgstr "Date de publication"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "L'image de la page couverture à supprimer ne correspond pas à l'image de ce numéro. Veuillez recharger la page et essayer de nouveau."
+msgstr ""
+"L'image de la page de couverture à supprimer ne correspond pas à l'image de "
+"ce numéro. Veuillez recharger la page et essayer de nouveau."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "L'image de la page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà détruite. Essayer de recharger la page."
+msgstr ""
+"L'image de la page de couverture à supprimer n'a pu être repérée. Elle est "
+"peut-être déjà détruite. Essayer de recharger la page."
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Format de page couverture invalide. Les formats acceptés sont .gif, .jpg, et .png."
+msgstr ""
+"Format de page de couverture non conforme. Les formats acceptés sont .gif, "
+".jpg, et .png."
 
 msgid "editor.issues.identifiers"
 msgstr "Identifiants"
@@ -671,7 +691,12 @@ msgstr ""
 ">Révision</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Tous les fichiers qui ont déjà été téléversés à n'importe quelle étape de soumission peuvent être ajoutés à la liste de vérification des épreuves en cochant la case \"Inclure\" ci-dessous et en cliquant sur \"Rechercher\". Tous les fichiers disponibles seront répertoriés et pourront être sélectionnés pour inclusion."
+msgstr ""
+"Tous les fichiers qui ont déjà été téléversés à n'importe quelle étape de la "
+"soumission peuvent être ajoutés à la liste de vérification des épreuves en "
+"cochant la case \"Inclure\" ci-dessous et en cliquant sur \"Rechercher\". "
+"Tous les fichiers disponibles seront répertoriés et pourront être "
+"sélectionnés pour inclusion."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr "Le public identifié comme '{$publicIdentifier}' existe déjà pour un autre objet de même type. Veuillez indiquer un public unique pour l'objet de même type à l'intérieur de votre revue."
