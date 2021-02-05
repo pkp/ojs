@@ -1,7 +1,7 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-2
+Git tag: 3_3_0-3
 
-Release date: February 1, 2021
+Release date: February 6, 2021
 ==============================
 
 Configuration Changes
@@ -17,6 +17,16 @@ configuration parameters.
 - The db.collation option for configuring a database connection collation has
   been added (default: utf8_general_ci)
 
+
+3.3.0-3 Build
+-------------
+	#6726: Privacy statement page error 500
+	#6722: Monograph export as native xml fails
+	#6718: SECURITY: Revisit Update Illuminate Database library for GHSA-3p32-j457-pg5x (#6632)
+	#6710: Upgrade to 3.3.0.2 fails when a journal has no supportedFormLocales
+	#6703: Unable to upgrade 3.3.0.2: Call to a member function getConnection() on null
+	#6643: Lack of notifications after the author uploads revisions
+	#6563: Authorization header with JWT can cause fatal error
 
 New Features
 ------------
