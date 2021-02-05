@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-25 11:52+0000\n"
+"PO-Revision-Date: 2021-02-05 18:02+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/api/"
 "mk_MK/>\n"
@@ -63,3 +63,6 @@ msgstr "Не можете да поврзете документ од оваа �
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Објавата која ја побаравте не е дел од ова списание."
+
+msgid "api.emails.403.disabled"
+msgstr "Функцијата за известување преку и-меил не е овозможена за ова списание."
