@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-22 14:25+0000\n"
-"Last-Translator: Omer Chaudhry <omerch92@gmail.com>\n"
+"PO-Revision-Date: 2021-02-08 02:37+0000\n"
+"Last-Translator: Sheikh Adnan Ahmed Usmani <a2usmani@gmail.com>\n"
 "Language-Team: Urdu (Pakistan) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/ur_PK/>\n"
 "Language: ur_PK\n"
@@ -66,9 +66,8 @@ msgstr "جوتھا مرحلہ(ا): اضافی فائل اپ لوڈ کریں"
 msgid "author.submit.step4"
 msgstr "چوتھا مرحلہ: اضافی فائلیں اپ لوڈ کریں"
 
-#, fuzzy
 msgid "author.submit.step3"
-msgstr "تیسرا مرحلہ: کلیدی الفاظ کا ادراج"
+msgstr "تیسرا مرحلہ: کلیدی الفاظ کا اندراج"
 
 msgid "author.submit.step2"
 msgstr "دوسرا مرحلہ: مقالہ اپ لوڈ کریں"
