@@ -10,7 +10,7 @@
   * Installation descriptor file.
   -->
 
-<install version="3.3.0.2">
+<install version="3.4.0.0">
 	<code function="checkPhpVersion" />
 
 	<code function="createDirectories"/>
@@ -31,10 +31,10 @@
 	<migration class="lib.pkp.classes.migration.NotesMigration" />
 	<migration class="lib.pkp.classes.migration.ReviewFormsMigration" />
 	<migration class="lib.pkp.classes.migration.SubmissionFilesMigration" /><!-- before ReviewsMigration so that foreign keys can be defined-->
-	<migration class="lib.pkp.classes.migration.ReviewsMigration" />
 	<migration class="lib.pkp.classes.migration.RolesAndUserGroupsMigration" />
 	<migration class="lib.pkp.classes.migration.ScheduledTasksMigration" />
 	<migration class="lib.pkp.classes.migration.SubmissionsMigration" />
+	<migration class="lib.pkp.classes.migration.ReviewsMigration" />
 	<migration class="lib.pkp.classes.migration.TemporaryFilesMigration" />
 	<migration class="lib.pkp.classes.migration.TombstoneMigration" />
 	<migration class="lib.pkp.classes.migration.ViewsMigration" />

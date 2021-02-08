@@ -1,0 +1,18 @@
+OJS 3.4.0 Release Notes
+Git tag: 3_4_0-0
+
+Release date:
+==============================
+
+Configuration Changes
+---------------------
+
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
+
+New Features
+------------
+
+Bug Fixes
+---------
