@@ -26,7 +26,6 @@ class SectionGridCellProvider extends GridCellProvider {
 	function getTemplateVarsFromRowColumn($row, $column) {
 		$element = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($element, 'Section') && !empty($columnId));
 		switch ($columnId) {
 			case 'inactive':
 				return array('selected' => $element['inactive']);
