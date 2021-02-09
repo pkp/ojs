@@ -1,2 +1,117 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-02-09 18:14+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Journal 1-ის ანგარიშგება"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Article 1-ის ანგარიშგება"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "ყველა მომხმარებელი"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"ქვემოთ მოცემული ბმულები აგენერირებენ ანგარიშგებებს, ძველი პლაგინის "
+"მონაცემების გამოყენებით და რომლებიც არ არის მზად COUNTER-ისათვის. თუ გსურთ „ "
+"COUNTER“-ის მიმდინარე ანგარიშგების გენერირება, OJS COUNTER-ის ახალი ტიპის "
+"მეტრიკებით, გამოიყენეთ ზემოთ მოცემული ბმულები."
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "ანონიმურად"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "ჯამურად ყველა ჟურნალისათვის"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD ჯამურად"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ონლაინ ვერსიის ISSN"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ნაბეჭდი ვერსიის ISSN"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "პლათფორმა"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "გამომცემელი"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "გაშვების თარიღი:"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"სტატიების სრული ტექსტების წარმატებული მოთხოვნა თვეებისა და ნომრების მიხედვით "
+"(წელი {$year})"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Journal 1-ის ანგარიშგება (R3)"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Journal 1-ის ანაგრიშგება (R3): სტატიების სრული ტექსტების მოთხოვნა თვეებისა "
+"და ჟურნალების მიხედვით"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER Journal ანაგრიშგება 1 (R3): სტატიების სრული ტექსტების მოთხოვნა "
+"თვეებისა და ჟურნალების მიხედვით"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML ვერსია"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER JR1 ანაგრიშგება (R3)"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"ეს ბმულები აგენრირებენ ანგარიშგებებს, რომლებიც COUNTER-მხარდაჭერილია, "
+"მოძველებულ Release 3.0-ზე დაყრდნობით. ეს ანაგრიშგება შეიცავს საიტის ყველა "
+"ჟურნალს. თუ შესაძლებელია, გამოიყენეთ უფრო ახალი ვერსია."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "ვერ ხერხდება შედეგების დაფორმატება XML-ში."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "ამ ანგარიშგების შედეგები ვერ მოიძებნა."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "ანგარიშგების არასწორი მოთხოვნა."
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "ანგარიშგების არასწორი პარამეტრები."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "საიტის მოძველებული ანგარიშგებები"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER Release-ის ვერსია"
+
+msgid "plugins.reports.counter"
+msgstr "პლაგინი „COUNTER-ანგარიშგებები“"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"პლაგინი „ COUNTER“ საშუალებას გაძლევთ შექმნათ ანგარიშგებები ჟურნალის "
+"აქტივობის შესახებ, <a href=\"http://www.projectcounter.org\">სტანდარული "
+"COUNTER</a>-ის გამოყენებით. მარტო ეს ანგარიშგებები არ ხდიან ჟურნალს COUNTER-"
+"ის სტანდარტის შესაბამისს. იმისათვის, რომ ჟურნალი შეესაბამებოდეს ამ "
+"სტანდარტს, იხილეთ COUNTER-ის მოთხოვნები."
