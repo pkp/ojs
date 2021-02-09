@@ -10,6 +10,8 @@ Configuration Changes
 See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
+- The captcha.captcha_on_login option for displaying a captcha challenge in
+  the login interface has been added (default: on)
 
 New Features
 ------------
