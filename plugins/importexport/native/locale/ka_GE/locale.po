@@ -1,2 +1,43 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-02-09 08:25+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-native/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "იმპორტი წარმატებით დასრულდა. მოხდა შემდეგი ელემენტების იმპორტი:"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "გასაგრძელებლად, გთხოვთ ატვირთოთ ფაილი სექციაში „იმპორტი“."
+
+msgid "plugins.importexport.native.results"
+msgstr "შედეგები"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "გამოცემების ექსპორტი"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "სტატიების ექსპორტი"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "საექსპორტო სტატიის არჩევა"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "იმპორტის XML ფაილის ატვირთვა"
+
+msgid "plugins.importexport.native.import"
+msgstr "იმპორტი"
+
+msgid "plugins.importexport.native.description"
+msgstr ""
+"აიმპორტებს და აესპორტებს სტატიებსა და გამოცემებს OJS-ის საკუთარ XML-ფორმატში."
+
+msgid "plugins.importexport.native.displayName"
+msgstr "მოდული „საკუთარი XML“"
