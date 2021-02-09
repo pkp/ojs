@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-09 08:48+0000\n"
+"PO-Revision-Date: 2021-02-09 18:14+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-users/ka_GE/>\n"
@@ -40,3 +40,74 @@ msgstr "აექსპორტებს და აიმპორტებს 
 
 msgid "plugins.importexport.users.displayName"
 msgstr "მოდული „ XML-მომხმარებლები“"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr ""
+"გაგრძელებისათვის, გთხოვთ ატვირთოთ ფაილი განყოფილებაში „მომხმარებლების "
+"იმპორტი“."
+
+msgid "plugins.importexport.users.results"
+msgstr "შედეგები"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"იმპორტი წარმატებით შესრულდა. მომხმარებლები მათი სახელებით და ელფსოტის "
+"მისამართებით, რომლებიც ჯერ არ იყო გამოყენებული, დაიმპორტდა შესაბამისი "
+"მომხმარებლების ჯგუფებით."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "ექსპორტის დროს მოხდა შეცდომები"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "ყველას ექსპორტი"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "ექსპორტი როლების მიხედვით"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "მომხმარებლების ექსპორტი"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "მითითებული იყო ჟურნალის უცნობი მდებარეობა „{$journalPath}“."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"არ შეიძლება პაროლების გამოყენება, რომლებიც ჰეშირებულია {$importHash} "
+"ალგორითმით; OJS ახლა მორგებულია {$ojsHash}-ის გამოყენებაზე. თუ თქვენ "
+"განაგრძობთ, თქვენ მოგიწევთ პაროლების ჩამოყრა დაიმპორტებული "
+"მომხმარებლებისათვის."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "შემდეგი მომხმარებლები წარმატებით დაემატა სისტემაში"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "გაფრთხილება"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"დაადასტურეთ, რომ ეს ზუსტად ის მომხმარებლები არიან, რომელთა იმპორტიც გსურთ "
+"სისტემაში"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "იმპორტის დროს მოხდა შეცდომები"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "იმპორტის გაგრძელება სხვა მომხმარებლებისათვის, შეცდომის შემთხვევაში."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"გაეგზავნის ყოველ დაიმპორტებულ მომხმარებელს შეტყობინერბა ელექტორნული ფოსტით, "
+"მისი სახელისა და პაროლის მითითებით."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "ფაილი მომხმარებლების მონაცემებით"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"აირჩიეთ მონაცემთა XML-ფაილი, რომელიც შეიცავს ინფორმაცის მომხმარებლების "
+"შესახებ, ამ ჟურნალში იმპორტისათვის. ამ ფაილის ფორმატის დეტალები იხილეთ "
+"ჟურნალის დახმარების სექციაში.<br /><br />ყურადღება მიაქციეთ, რომ თუ ფაილი "
+"შეიცავს მომხმარებლების სახელებს, ან ელექტრონული ფოსტის მისამართებს, რომლებიც "
+"უკვე არის რეგისტრირებული სისტემაში, მაშინ ამ მომხმარებლების მოანცემები არ "
+"დაიმპორტდება, ხოლო ყველა ახალი როლი, რომელიც უნდა შექმნილიყო, მიენიჭება "
+"არსებულ მომხმარებლებს."
