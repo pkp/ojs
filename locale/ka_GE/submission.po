@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-09 18:14+0000\n"
+"PO-Revision-Date: 2021-02-10 19:19+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ka_GE/>\n"
@@ -13,3 +13,114 @@ msgstr ""
 
 msgid "submission.submit.title"
 msgstr "სტატიის გაგზავნა"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "რეცენზიაზე გაგზავნა"
+
+msgid "workflow.review.externalReview"
+msgstr "რეცენზია"
+
+msgid "submission.confirmSubmit"
+msgstr "დარწმუნებული ხართ, რომ გსურთ ამ სტატიის გაგზავნა ჟურნალში?"
+
+msgid "submission.pageProofs"
+msgstr "კორექტურა"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"ფაილების ატვირთვა, რომლებიც დაკავშირებულია ამ მასალასთან: სტატიები, "
+"მულტიმედია, მონაცემთა ნაკრები, ხელოვნების ნიმუშები და ა.შ."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "დასახელება და აბსტრაქტი"
+
+msgid "grid.action.pageProofApproved"
+msgstr "ეს მონახაზი მოწონებულია გალერეაში დასამატებლად."
+
+msgid "grid.action.approveProof"
+msgstr "ამ მონახაზის მოწონება გალერეაში ჩართვისათვის."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"დამკაბადონებელი ატვირთავს აქ სრულიად მზა ფაილებს, რომლებიც მომზადებულია "
+"გამოსაქვეყნებლად. გამოიყენეთ  <em>აუდიტორის დანიშვნა</em>, ავტორებისა და "
+"სხვა მომხმარებლების  განსასაზღვრად გალერეების კორექტურისათვის, ჩასწორებული "
+"ფაილების ატვირთვით და მათი მოწონებით გამოქვეყნების წინ."
+
+msgid "submission.galleyFiles"
+msgstr "გალერეის ფაილები"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "გახდეს ეს გალერეა ხელმისაწვდომი"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr ""
+"<p>ეს გალერეა <em>შეიძლება გახდეს ხელმისაწვდომი</em> მკითხველებისათვის.</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p>ეს გალერეა <em>აღარ შეიძლება იყოს ხელმისაწვდომი</em> "
+"მკითხველებისათვის.</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "ფორმატი მიღებულია"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "გაგზავნილი მასალის ღია იდენტიფიკატორები განახლებულია."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "სტატიების გალერეა „{$galleyFormatName}“ მიუწვდომელი გახდა."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "სტატიების გალერეა „{$galleyFormatName}“ ხელმისაწვდომი გახდა."
+
+msgid "grid.action.issueEntry"
+msgstr "ამ მასალის მეტა-მონაცემების ჩვენება"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "გალერეა გამოჩნდა გამოცემაში"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"ჟურნალს ეცნობა თქვენი მასალის გამოგზავნის შესხებ, დამადასტურებელი წერილი "
+"გამოიგზავნა ელფოსტაზე. როგორც კი რედაქტორი ნახავს თქვენს მასალას, ჩვენ "
+"დაგიკავშირდებით."
+
+msgid "submission.issueEntry"
+msgstr "მეტა-მონაცემები"
+
+msgid "submission.submit.noContext"
+msgstr "ამ მასალისთვის ვერ მოიძებნა ჟურნალი."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "აბსტრაქტი უნდა შეიცავდეს არაუმეტეს {$wordCount} სიტყვას."
+
+msgid "grid.action.workflow"
+msgstr "გაგზავნის პროცესი"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "ახალი მასალა"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "ახალი მასალის გაგზავნა"
+
+msgid "submission.title.tip"
+msgstr ""
+"მასალის ტიპი, როგორც წესი, „გამოსახულება“, „ტექსტი“, ან მულტიმედიის სხვა "
+"ტიპი, „პროგრამული უზრუნველყოფის“, ან „ინტერაქტივის“ ჩათვლით. გთხოვთ აირჩიოთ "
+"ერთ-ერთი ყველაზე ხელსაყრელი ტიპი თქვენი მასალისათვის. მაგალითები შეგიძლიათ "
+"ნახოთ აქ: <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/"
+"04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/"
+"04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "სტატიის სათაური"
+
+msgid "submission.upload.selectComponent"
+msgstr "სტატიის კომპონენტის არჩევა"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "აირჩიეთ როლი, რომლითაც გაგზავნით სტატიას."
+
+msgid "submission.submit.userGroup"
+msgstr "გაგზავნა, ჩემი როლის გამოყენებით …"
