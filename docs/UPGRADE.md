@@ -49,12 +49,12 @@ and other documentation in the docs directory before performing an upgrade.
 
 ### Obtaining the latest OJS code
 
-The OJS source code is available in two forms: a complete stand-alone 
+The OJS source code is available in two forms: a complete stand-alone
 package, and from read-only GitHub access.
 
 #### 1. Full Package
 
-If you have not made local code modifications to the system, upgrade by 
+If you have not made local code modifications to the system, upgrade by
 downloading the complete package for the latest release of OJS:
 
 - Download and decompress the package from the OJS web site into an empty
@@ -86,7 +86,7 @@ To update the OJS code from a git check-out, run the following command from
 your OJS directory:
 
 ```
-$ git rebase --onto <new-release-tag> <previous-release-tag>
+git rebase --onto <new-release-tag> <previous-release-tag>
 ```
 
 This assumes that you have made local changes and committed them on top of
@@ -107,10 +107,28 @@ than OJS or third-party developers; using experimental code on a production
 deployment is strongly discouraged and will not be supported in any way by
 the OJS team.
 
+### Updating dependencies
+
+After obtaining to the latest OJS code, additional steps are required to
+update OJS's dependencies.
+
+Firstly, update all submodules and libraries like so:
+
+```
+git submodule update --init --recursive
+```
+
+Then, install and update dependencies via Composer:
+
+```
+composer --working-dir=lib/pkp install
+composer --working-dir=plugins/paymethod/paypal install
+composer --working-dir=plugins/generic/citationStyleLanguage install
+```
 
 ### Upgrading the OJS database
 
-After obtaining the latest OJS code, an additional script must be run to
+After updating your OJS installation, an additional script must be run to
 upgrade the OJS database.
 
 This script can be executed from the command-line or via the OJS web interface.
@@ -121,8 +139,8 @@ If you have the CLI version of PHP installed (e.g., `/usr/bin/php`), you can
 upgrade the database as follows:
 
 - Edit config.inc.php and change "installed = On" to "installed = Off"
-- Run the following command from the OJS directory (not including the $):
-	`$ php tools/upgrade.php upgrade`
+- Run the following command from the OJS directory:
+	`php tools/upgrade.php upgrade`
 - Re-edit config.inc.php and change "installed = Off" back to
 	 "installed = On"
 
