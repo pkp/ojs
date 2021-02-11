@@ -27,7 +27,7 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler {
 		$this->_endpoints = array_merge_recursive($this->_endpoints, [
 			'PUT' => [
 				[
-					'pattern' => '/{contextPath}/api/{version}/_submissions/{submissionId}/payment',
+					'pattern' => '/{contextPath}/api/{version}/_submissions/{submissionId:\d+}/payment',
 					'handler' => [$this, 'payment'],
 					'roles' => [
 						ROLE_ID_SUB_EDITOR,
