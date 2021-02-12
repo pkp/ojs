@@ -178,7 +178,7 @@ abstract class SubscriptionDAO extends DAO {
 	 * Internal function to generate subscription based search query.
 	 * @return string
 	 */
-	protected function _generateSearchSQL($status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, &$params) {
+	protected function _generateSearchSQL($status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, &$params = null) {
 		$searchSql = '';
 
 		if (!empty($search)) switch ($searchField) {
