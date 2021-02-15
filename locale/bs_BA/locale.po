@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-22 09:05+0000\n"
-"Last-Translator: Kazimir Hrastek <kazimir3385@gmail.com>\n"
+"PO-Revision-Date: 2021-02-15 09:56+0000\n"
+"Last-Translator: Udruženje ilmijje Islamske zajednice u BiH <web@ilmijja.ba>"
+"\n"
 "Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "bs_BA/>\n"
 "Language: bs_BA\n"
@@ -2435,3 +2436,9 @@ msgstr "Kategorije"
 
 msgid "about.aboutSoftware"
 msgstr "O Open Journal Sistemu"
+
+msgid "payment.waived"
+msgstr "Odrečeno"
+
+msgid "payment.unpaid"
+msgstr "Neplaćeno"
