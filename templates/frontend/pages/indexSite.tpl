@@ -47,7 +47,7 @@
 							</h3>
 							{if $description}
 								<div class="description">
-									{$description|nl2br}
+									{$description}
 								</div>
 							{/if}
 							<ul class="links">
