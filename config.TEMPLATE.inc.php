@@ -306,10 +306,22 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 ; smtp_port = 25
 
 ; Enable SMTP authentication
-; Supported mechanisms: ssl, tls
+; Supported smtp_auth: ssl, tls (see PHPMailer SMTPSecure)
 ; smtp_auth = ssl
 ; smtp_username = username
 ; smtp_password = password
+;
+; Supported smtp_authtype: RAM-MD5, LOGIN, PLAIN, XOAUTH2 (see PHPMailer AuthType)
+; (Leave blank to try them in that order)
+; smtp_authtype =
+
+; The following are required for smtp_authtype = XOAUTH2 (e.g. GMail OAuth)
+; (See https://github.com/PHPMailer/PHPMailer/wiki/Using-Gmail-with-XOAUTH2)
+; smtp_oauth_provider = Google
+; smtp_oauth_email =
+; smtp_oauth_clientid =
+; smtp_oauth_clientsecret =
+; smtp_oauth_refreshtoken =
 
 ; Enable suppressing verification of SMTP certificate in PHPMailer
 ; Note: this is not recommended per PHPMailer documentation
