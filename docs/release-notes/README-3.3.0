@@ -1,7 +1,7 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-2
+Git tag: 3_3_0-4
 
-Release date: February 1, 2021
+Release date: 
 ==============================
 
 Configuration Changes
@@ -17,6 +17,14 @@ configuration parameters.
 - The db.collation option for configuring a database connection collation has
   been added (default: utf8_general_ci)
 
+New config.inc.php parameters added for OAuth-based SMTP authorization:
+(see https://github.com/PHPMailer/PHPMailer/wiki/Using-Gmail-with-XOAUTH2)
+- email.smtp_authtype: See PHPMailer's AuthType setting
+- email.smtp_oauth_provider
+- email.smtp_oauth_email
+- email.smtp_oauth_clientid
+- email.smtp_oauth_clientsecret
+- email.smtp_oauth_refreshtoken
 
 New Features
 ------------
