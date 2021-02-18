@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-05 08:15+0000\n"
+"PO-Revision-Date: 2021-02-19 08:54+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "ja_JP/>\n"
@@ -270,28 +270,28 @@ msgid "editor.notifyUsers.includeToc"
 msgstr "この号の目次を含める:"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "この雑誌の更新情報の受け取りを希望しているユーザ（{$count}名）にこのメッセージを送信する"
+msgstr "この雑誌の更新情報の受け取りを希望しているユーザー（{$count}名）にこのメッセージを送信する"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "この雑誌に関係するすべてのユーザ（{$count}名）にこのメッセージを送信する"
+msgstr "この雑誌に関係するすべてのユーザー（{$count}名）にこのメッセージを送信する"
 
 msgid "editor.usersNotified"
-msgstr "通知されたユーザ"
+msgstr "通知されたユーザー"
 
 msgid "editor.notifyUsers.inProgress"
-msgstr "ユーザに通知しています"
+msgstr "ユーザーに通知しています"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "すべての機関購読者 ({$count} ユーザ)"
+msgstr "すべての機関購読者 ({$count} ユーザー)"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "すべての個人購読者 ({$count} ユーザ)"
+msgstr "すべての個人購読者 ({$count} ユーザー)"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "すべての公開済の著者 ({$count} ユーザ)"
+msgstr "すべての公開済の著者 ({$count} ユーザー)"
 
 msgid "editor.notifyUsers.allReaders"
-msgstr "すべての読者 ({$count} ユーザ)"
+msgstr "すべての読者 ({$count} ユーザー)"
 
 msgid "editor.notifyUsers"
 msgstr "ユーザへの通知"
