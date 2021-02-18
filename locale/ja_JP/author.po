@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-04 11:25+0000\n"
+"PO-Revision-Date: 2021-02-19 08:54+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "ja_JP/>\n"
@@ -182,8 +182,8 @@ msgstr ""
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"この雑誌に投稿するにはユーザアカウントが必要です。アカウントは編集者が投稿物を追跡したり、投稿物の状態が変更された場合やあなたに関する追加情報が必要になっ"
-"た場合に、あなたに連絡を取ることをできるようにします。"
+"この雑誌に投稿するにはユーザーアカウントが必要です。アカウントは編集者が投稿物を追跡したり、投稿物の状態が変更された場合やあなたに関する追加情報が必要にな"
+"った場合に、あなたに連絡を取ることをできるようにします。"
 
 msgid "author.article.authorRevisedFile"
 msgstr "著者ファイル"
