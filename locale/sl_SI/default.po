@@ -218,11 +218,5 @@ msgstr "Recenzent"
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "R"
 
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"_______________________________________________________________________<br/>\n"
-"<a href=\"{$ldelim}$contextUrl{$rdelim}\">{$ldelim}$contextName{$rdelim}</a>"
-
 msgid "section.default.policy"
 msgstr "Uredniška politika rubrike"

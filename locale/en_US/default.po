@@ -136,11 +136,3 @@ msgstr "Reviewers"
 
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "R"
-
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"<hr /><br/>\n"
-"<p class='emaiSignatureContextUrlStyle'><a href=\"{$contextUrl}\">{$contextName}</a></p>"
-"<p class='emaiSignatureMailingAddressStyle'>{$mailingAddress}</p>"
-"<p class='emaiSignatureContactMailToStyle'><a href='mailto: {$contactEmail}'>{$contactName}</a></p>"

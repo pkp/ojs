@@ -136,9 +136,3 @@ msgstr "Arvioijat"
 
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "A"
-
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>\n"
-"<a href=\"{$ldelim}$contextUrl{$rdelim}\">{$ldelim}$contextName{$rdelim}</a>"

@@ -99,12 +99,6 @@ msgstr ""
 "kreiraju trajne arhive časopisa u svrhu očuvanja i obnove. <a href=\""
 "http://www.lockss.org/\">Više...</a>"
 
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"________________________________________________________________________\n"
-"{$journalName}\n"
-"{$indexUrl}/{$contextPath}"
-
 msgid "default.contextSettings.clockssLicense"
 msgstr ""
 "Ovaj časopis koristi CLOCKSS sustav kako bi kreirao distribuirani sustav "

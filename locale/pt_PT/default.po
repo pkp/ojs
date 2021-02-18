@@ -49,12 +49,6 @@ msgstr ""
 "princípio de que disponibilizar gratuitamente o conhecimento científico ao "
 "público proporciona maior democratização mundial do conhecimento."
 
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
-
 msgid "default.contextSettings.forReaders"
 msgstr ""
 "Convidamos os leitores a registarem-se no serviço de notificação de "
