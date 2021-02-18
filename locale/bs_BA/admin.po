@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-25 11:52+0000\n"
-"Last-Translator: Haris Dulic <dulicharis@gmail.com>\n"
+"PO-Revision-Date: 2021-02-12 18:38+0000\n"
+"Last-Translator: Udruženje ilmijje Islamske zajednice u BiH <web@ilmijja.ba>"
+"\n"
 "Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/admin/bs_BA/"
 ">\n"
 "Language: bs_BA\n"
@@ -13,7 +14,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "admin.hostedContexts"
-msgstr "Žurnali u sistemu"
+msgstr "Časopisi u sistemu"
 
 msgid "admin.settings.redirect"
 msgstr "Izravno preusmjeravanje na časopis"
@@ -187,7 +188,7 @@ msgstr "Omogućite ovom časopisu da se pojavi javno na stranici"
 
 msgid "admin.journals.urlWillBe"
 msgstr ""
-"Preporuča se jedna kratka riječ ili akronim koji identificira časopis. URL "
+"Preporučuje se jedna kratka riječ ili akronim koji identificira časopis. URL "
 "časopisa će biti {$sampleUrl}."
 
 msgid "admin.settings.defaultMetricDescription"
@@ -251,3 +252,12 @@ msgstr "Postavke izgleda časopisa uspješno su spremljene."
 
 msgid "admin.settings.config.success"
 msgstr "Postavke konfiguracije časopisa uspješno su spremljene."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Funkcija masovne e-pošte onemogućena je za ovaj časopis. Omogućite ovu "
+"funkciju u <a href=\"{$siteSettingsUrl}\"> Admin> Site Settings</a>."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Primarna lokalizacija mora biti jedna od podržanih lokalizacija časopisa."
