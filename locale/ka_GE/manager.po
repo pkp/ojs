@@ -1,2 +1,141 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-02-20 17:04+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.sections.wordCount"
+msgstr "სიტყვების რაოდენობა"
+
+msgid "manager.sections.readingTools"
+msgstr "მკითხველის ხელსაწყოები"
+
+msgid "manager.sections.policy"
+msgstr "სექციის წესები"
+
+msgid "manager.sections.indexed"
+msgstr "ინდექსირდება"
+
+msgid "manager.sections.create"
+msgstr "სექციის შექმნა"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "ჟურნალით"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "შაბლონის არჩევა"
+
+msgid "manager.people.allJournals"
+msgstr "ყველა ჟურნალი"
+
+msgid "manager.paymentTypes"
+msgstr "გადახდის ტიპები"
+
+msgid "manager.payment.records"
+msgstr "ჩანაწერები"
+
+msgid "manager.payment.readerFees"
+msgstr "მკითხველის გადახდები"
+
+msgid "manager.payment.paymentType"
+msgstr "გადახდის ტიპი"
+
+msgid "manager.payment.paymentMethods"
+msgstr "გადახდის მეთოდები"
+
+msgid "manager.payment.paymentMethod"
+msgstr "გადახდის მეთოდი"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "გამოცემის შეძენა"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "სტატიის შეძენა"
+
+msgid "manager.payment.options.feeName"
+msgstr "გადახდის დასახელება"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "გადახდის აღწერა"
+
+msgid "manager.payment.options.fee"
+msgstr "გადახდა"
+
+msgid "manager.payment.options"
+msgstr "პარამეტრები"
+
+msgid "manager.payment.notFound"
+msgstr "ვერ მოიძებნა"
+
+msgid "manager.payment.noPayments"
+msgstr "არ არის გადახდები"
+
+msgid "manager.payment.generalOptions"
+msgstr "ზოგადი პარამეტრები"
+
+msgid "manager.payment.generalFees"
+msgstr "ზოგადი გადახდები"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "გადახდის პარამეტრები"
+
+msgid "manager.payment.enable"
+msgstr "ჩართვა"
+
+msgid "manager.payment.editSubscription"
+msgstr "გამოწერის ჩასწორება"
+
+msgid "manager.payment.details"
+msgstr "დეტალები"
+
+msgid "manager.payment.description"
+msgstr "აღწერა"
+
+msgid "manager.payment.authorFees"
+msgstr "ავტორის გადახდები"
+
+msgid "manager.payment.amount"
+msgstr "თანხა"
+
+msgid "manager.payment.addPayment"
+msgstr "გადახდის დამატება"
+
+msgid "manager.managementPages"
+msgstr "მართვის გვერდები"
+
+msgid "manager.language.forms"
+msgstr "ფორმები"
+
+msgid "manager.language.submissions"
+msgstr "გაგზავნილი მასალები"
+
+msgid "manager.language.ui"
+msgstr "ინტერფეისი"
+
+msgid "manager.journalManagement"
+msgstr "ჟურნალის მართვა"
+
+msgid "manager.website.archiving"
+msgstr "დაარქივება"
+
+msgid "manager.distribution.publishingMode"
+msgstr "პუბლიკაციის რეჟიმი"
+
+msgid "manager.distribution.publication"
+msgstr "პუბლიკაცია"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "სტატიის გამოქვეყნების თარიღის გამოყენება"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "გამოცემის გამოქვეყნების თარიღის გამოყენება"
+
+msgid "manager.distribution.access"
+msgstr "წვდომა"
