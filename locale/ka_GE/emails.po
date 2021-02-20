@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-19 10:03+0000\n"
+"PO-Revision-Date: 2021-02-20 17:04+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "ka_GE/>\n"
@@ -1015,3 +1015,394 @@ msgstr ""
 "დაავალა მას მასალების გავლის კონტროლი სარედაქციო პროცესის გავლით. წერილში "
 "მოცემულია ინფორმაცია მასალის შესახებ და აგრეთვე თუ როგორ უნდა მოხდეს "
 "ჟურნალის საიტზე შესვლა."
+
+msgid "emails.emailLink.description"
+msgstr ""
+"წერილის ეს შაბლონი დარეგისტრირებულ მკითხველს საშუალებას აძლევს გაგზავნოს "
+"ინფორმაცია სტატიის შესახებ მასთან, ვინც შესაძლოა დაინტერსდეს. წვდომა "
+"სექციიდან „მკითხევლის ხელსაწყოები“ ჩართული უნდა იყოს ჟურნალის მმართველის "
+"მიერ: „მკითხველის ხელსაწყოები: ადმინისტრირება“."
+
+msgid "emails.reviewRequestAttachedSubsequent.description"
+msgstr ""
+"ეს არის განყოფილების რედაქტორის წერილი, რომელიც ეგზავნება რეცენზენტს "
+"მასალების რეცენზირების თანხმობის, ან უარის დასადასტურებლად მეორე და შემდგომ "
+"რაუნდებში. წერილში მოცემულია უშუალოდ მასალა. ეს შეტყობინება გამოიყენება, თუ "
+"არჩეულია რეცენზირება ელფოსტის საშუალებით: მართვა > პარამეტრები > სამუშაო "
+"პროცესი > რეცენზირება. (სხვა შემთხვევაში იხილეთ REVIEW_REQUEST_SUBSEQUENT.)"
+
+msgid "emails.reviewRequestOneclickSubsequent.description"
+msgstr ""
+"ეს არის განყოფილების რედაქტორის წერილი, რომელიც ეგზავნება რეცენზენტს "
+"მასალების რეცენზირების თანხმობის, ან უარის დასადასტურებლად მეორე და შემდგომ "
+"რაუნდებში. წერილში მოცემულია მასალის სათაური, აბსტრაქტი, შერულების ვადები და "
+"წვდომის წესები. ეს შეტყობინება გამოიყენება, თუ არჩეულია სტანდარტული "
+"რეცენზირება: მართვა > პარამეტრები > სამუშაო პროცესი > რეცენზირება და "
+"ჩართულია პირდაპირი წვდომა ბმულის საშუალებით."
+
+msgid "emails.reviewRequestSubsequent.description"
+msgstr ""
+"ეს არის განყოფილების რედაქტორის წერილი, რომელიც ეგზავნება რეცენზენტს "
+"მასალების რეცენზირების თანხმობის, ან უარის დასადასტურებლად მეორე და შემდგომ "
+"რაუნდებში. წერილში მოცემულია მასალის სათაური, აბსტრაქტი, შერულების ვადები და "
+"წვდომის წესები. ეს შეტყობინება გამოიყენება, თუ არჩეულია სტანდარტული "
+"რეცენზირება: მართვა > პარამეტრები > სამუშაო პროცესი > რეცენზირება. (სხვა "
+"შემთხვევაში, იხილეთ RREVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
+
+msgid "emails.reviewRequestAttached.description"
+msgstr ""
+"ეს არის განყოფილების რედაქტორის წერილი, რომელიც ეგზავნება რეცენზენტს "
+"მასალების რეცენზირების თანხმობის, ან უარის დასადასტურებლად. წერილზე "
+"თანდართულია მასალები. ეს შეტყობინება გამოიყენება, თუ არჩეულია რეცენზირება "
+"ელფოსტის საშუალებით: მართვა > პარამეტრები > სამუშაო პროცესი > რეცენზირება. ("
+"სხვა შემთხვევაში, იხილეთ REVIEW_REQUEST.)"
+
+msgid "emails.reviewRequestRemindAutoOneclick.description"
+msgstr ""
+"ეს წერილი იგზავნება ავტომატურად, როდესაც რეცენზენტის მიერ მონაწილების "
+"მიღების დადასტურების თარიღი გასულია (იხილეთ რეცენზირების პარამეტრები: "
+"პარამეტრები > სამუშაო პროცესი > რეცენზირება) და რეცენზენტს გამოერთო "
+"პირდაპირი წვდომა მასალებზე. დაგეგმილი ამოცანები უნდა ჩაირთოს და მოერგოს ("
+"იხილეთ საიტის კონფიგურაციის ფაილი)."
+
+msgid "emails.reviewRequestOneclick.description"
+msgstr ""
+"ეს არის განყოფილების რედაქტორის წერილი, რომელიც ეგზავნება რეცენზენტს, "
+"მასალების რეცენზირების შესრულების თანხმობის ან უარის პასუხის მისაღებად. "
+"წერილში მოცემულია ინფორმაცია მასალის შესახებ, რგორიცაა დასახელება და "
+"აბსტრაქტი, რეცენზიის შესრულების ვადები და წვდომის წესები. ეს შეტყობინება "
+"გამოიყენება, თუ არჩეულია რეცენზირების სტანდარტული პროცესი: მართვა > "
+"პარამეტრები > სამუშაო პროცესი > რეცენზირება და ჩართულია პირდაპირი წვდომა "
+"მასალებზე."
+
+msgid "emails.reviewRequestRemindAuto.description"
+msgstr ""
+"ეს წერილი იგზავნება ავტომატურად, როდესაც რეცენზენტის მიერ მონაწილების "
+"მიღების დადასტურების თარიღი გასულია (იხილეთ რეცენზირების პარამეტრები: "
+"პარამეტრები > სამუშაო პროცესი > რეცენზირება) და რეცენზენტს გამოერთო "
+"პირდაპირი წვდომა მასალებზე. დაგეგმილი ამოცანები უნდა ჩაირთოს და მოერგოს ("
+"იხილეთ საიტის კონფიგურაციის ფაილი)."
+
+msgid "emails.reviewRequest.description"
+msgstr ""
+"ეს არის განყოფილების რედაქტორის წერილი, რომელიც ეგზავნება რეცენზენტს, "
+"მასალის რეცენზირების მოთხოვნის დადასტურების, ან უარყოფის შესახებ. წერილში "
+"მოცემულია ინფორმაცია მასალის შესახებ, როგორიცაა დასახელება და აბსტრაქტი, "
+"სამუშაოს შესრულების ვადები და წვდომის წესები. ეს შეტყობინება გამოიყენება, თუ "
+"არჩეულია რეცენზირების სტანდარტული პროცესი: მართვა > პარამეტრები > სამუშაო "
+"პროცესი > რეცენზირება. (სხვა შემთხვევაში, იხილეთ REVIEW_REQUEST_ATTACHED.)"
+
+msgid "emails.announcement.description"
+msgstr "ეს წერილი იგზავნება ახალი განცხადების შექმნისას."
+
+msgid "emails.statisticsReportNotification.description"
+msgstr ""
+"ეს წერილი ყოველთვიურად ავტომატურად ეგზავნებათ რედაქტორებს და ჟურნალის "
+"მმართველებს, რათა მათ ჰქონდეთ სისტემის მუშაობზე წარმოდგენა."
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr "ჟურნალის აქტოვობა {$month}, {$year}"
+
+msgid "emails.editorDecisionInitialDecline.description"
+msgstr ""
+"ეს წერილი ეგზავნება ავტორს, თუ რედაქტორი გადაწყვიტავს უარყოს გამოგზავნილი "
+"მასალა საწყის ეტაპზე, რეცენზირების დაწყებამდე"
+
+msgid "emails.editorDecisionInitialDecline.subject"
+msgstr "რედაქციის გადაწყვეტილება"
+
+msgid "emails.notificationCenterDefault.description"
+msgstr ""
+"ნაგულისხმევი შეტყობინება (ცარიელი) გამოიყენება შეტყობინებების ცენტრის სიის "
+"რედაქტორში."
+
+msgid "emails.notificationCenterDefault.body"
+msgstr "გთხოვთ, შეიტანოთ შეტყობინება."
+
+msgid "emails.notificationCenterDefault.subject"
+msgstr "შეტყობინება ჟურანლის შესახებ {$contextName}"
+
+msgid "emails.revisedVersionNotify.description"
+msgstr ""
+"ეს წერილი ავტომატურად იგზავნება დანიშნულ რედაქტორთან, როდესაც ავტორი "
+"ატვირთავს სტატიის ჩასწორებულ ვერსიას."
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr "ატვირთულია ჩასწორებული ვერსია"
+
+msgid "emails.citationEditorAuthorQuery.description"
+msgstr ""
+"ეს წერილი ლიტერატურულ რედაქტორებს საშუალებას აძლევთ მოითხოვონ დამატებითი "
+"ინფორმაცია ავტორებისგან ბმულების შესახებ."
+
+msgid "emails.citationEditorAuthorQuery.subject"
+msgstr "ბიბლიოგრაფიული ბმულების ჩასწორება"
+
+msgid "emails.subscriptionRenewInstl.description"
+msgstr ""
+"ეს წერილი ატყობინებს გამოწერების მმართველს იმის შესახებ, რომ საიტზე "
+"გაგრძელებულია ინსტიტუციონალური გამოწერა. წერილში მოცემულია ზოგადი ინფორმაცია "
+"გამოწერის შესახებ და ბმული სწრაფი წვდომისათვის შეძენილ გამოწერაზე."
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr "გამოწერის გაგრძელება: ინსტიტუციონალური"
+
+msgid "emails.subscriptionRenewIndl.description"
+msgstr ""
+"ეს წერილი ატყობინებს გამოწერების მმართველს იმის შესახებ, რომ საიტზე "
+"გაგრძელებულია პირადი გამოწერა. წერილში მოცემულია ზოგადი ინფორმაცია გამოწერის "
+"შესახებ და ბმული სწრაფი წვდომისათვის შეძენილ გამოწერაზე."
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr "გამოწერის გაგრძელება: პირადი"
+
+msgid "emails.subscriptionPurchaseInstl.description"
+msgstr ""
+"ეს წერილი ატყობინებს გამოწერების მმართველს იმის შესახებ, რომ საიტზე ნაყიდია "
+"ინსტიტუციონალური გამოწერა. წერილში მოცემულია ზოგადი ინფორმაცია გამოწერის "
+"შესახებ და ბმული სწრაფი წვდომისათვის შეძენილ გამოწერაზე."
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr "გამოწერის შეძენა: ინსტიტუციონალური"
+
+msgid "emails.subscriptionPurchaseIndl.description"
+msgstr ""
+"ეს წერილი ატყობინებს გამოწერების მმართველს იმის შესახებ, რომ საიტზე ნაყიდია "
+"პირადი გამოწერა. წერილში მოცემულია ზოგადი ინფორმაცია გამოწერის შესახებ და "
+"ბმული სწრაფი წვდომისათვის შეძენილ გამოწერაზე."
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr "გამოწერის შეძენა: პირადი"
+
+msgid "emails.subscriptionAfterExpiryLast.description"
+msgstr ""
+"ეს წერილი ატყობინებს გამომწერს იმის შესახებ, რომ გამოწერის ვადა დასრულდა. "
+"წერილში მოცემულია ჟურნალის მისამართი და წვდომის წესები."
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr "გამოწერის ვადა დასრულდა — საბოლოო შეტყობინება"
+
+msgid "emails.subscriptionAfterExpiry.description"
+msgstr ""
+"ეს წერილი ატყობინებს გამომწერს იმის შესახებ, რომ მისი გამოწერის ვადა "
+"დასრულდა. წერილში მოცემულია ჟურნალის მისამართი და წვდომის წესები."
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr "შეტყობინება გამოწერის ვადის დასრულების შესახებ"
+
+msgid "emails.subscriptionBeforeExpiry.description"
+msgstr ""
+"ეს წერილი ატყობინებს გამომწერს იმის შესახებ, რომ მისი გამოწერის ვადა მალე "
+"დასრულდება. წერილში მოცემულია ჟურნალის მისამართი და წვდომის წესები."
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr "შეტყობინება გამოწერის ვადის გასვლის შესახებ"
+
+msgid "emails.openAccessNotify.description"
+msgstr ""
+"ეს წერილი ეგზავნებათ იმ დარეგისტრირებულ მკითხველებს, რომლებსაც გამოწერილი "
+"აქვთ ელექტრონული ფოსტით შეტყობინებების მიღება, იმის შესახებ, რომ გამოცემაზე "
+"ღია წვდომა გახსნილია."
+
+msgid "emails.openAccessNotify.subject"
+msgstr "გამოცემაზე ღია წვდომა გახსნილია"
+
+msgid "emails.subscriptionNotify.description"
+msgstr ""
+"ეს წერილი ატყობინებს დარეგისტრირებულ მკითხველს, რომ მმართველმა მისთვის "
+"შექმნა გამოწერა. წერილში მოცემულია ჟურნალის მისამართი და წვდომის წესები."
+
+msgid "emails.subscriptionNotify.subject"
+msgstr "შეტყობინება გამოწერის შესახებ"
+
+msgid "emails.emailLink.body"
+msgstr ""
+"შესაძლოა, თქვენთვის საინტერესო იყოს მასალა {$submissionTitle} (ავტორები: "
+"{$authorName}), რომელიც გამოქვეყნებულია: ტომი {$volume}, ნომერი {$number} "
+"({$year}) ჟურნალში {$contextName}, მისამართი {$articleUrl}."
+
+msgid "emails.emailLink.subject"
+msgstr "ეს სტატია თქვენ დაგაინტერესებთ"
+
+msgid "emails.layoutComplete.description"
+msgstr ""
+"ეს წერილი იგზავნება დამკაბადონებლის მიერ განყოფილების რედაქტორთან იმის "
+"შესახებ, რომ გალერეები შექმნილია."
+
+msgid "emails.layoutComplete.subject"
+msgstr "გალერეები შექმნილია"
+
+msgid "emails.layoutRequest.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ მასალის გალერეის "
+"შემქმნელთან დაკაბადონების დაწყების მოთხოვნის შესახებ. წერილში მოცემულია "
+"ინფორმაცია მასალის შესახებ და იმის შესახებაც, თუ როგორ უნდა მიიღოს წვდომა ამ "
+"მასალაზე."
+
+msgid "emails.layoutRequest.subject"
+msgstr "გალერეების მოთხოვნა"
+
+msgid "emails.copyeditRequest.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ მასალის ლიტერატურულ "
+"რედაქტორთან რედაქტირების დაწყების მოთხოვნის შესახებ. წერილში მოცემულია "
+"ინფორმაცია მასალის შესახებ და იმის შესახებაც, თუ როგორ უნდა მიიღოს წვდომა ამ "
+"მასალაზე."
+
+msgid "emails.copyeditRequest.subject"
+msgstr "ლიტერატურული რედაქტირების მოთხოვნა"
+
+msgid "emails.editorRecommendation.description"
+msgstr ""
+"ეს წერილი არის რეკომენდაციის მიმცემი რედაქტორის, ან განყოფილების რედაქტორის "
+"მიერ გაგზავნილი მასალის საბოლოო რეკომენდაციის შესახებ."
+
+msgid "emails.editorRecommendation.subject"
+msgstr "რედაქციის გადაწყვეტილება"
+
+msgid "emails.editorDecisionDecline.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ ავტორთან „მასალის უარყოფა“ "
+"საბოლოო გადაწყვეტილების შესახებ."
+
+msgid "emails.editorDecisionDecline.subject"
+msgstr "რედაქციის გადაწყვეტილება"
+
+msgid "emails.editorDecisionResubmit.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ ავტორთან „რეცენზირებაზე "
+"გაგზავნა“ საბოლოო გადაწყვეტილების შესახებ."
+
+msgid "emails.editorDecisionResubmit.subject"
+msgstr "რედაქციის გადაწყვეტილება"
+
+msgid "emails.editorDecisionRevisions.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ ავტორთან „საჭიროა კორექტურა“"
+" საბოლოო გადაწყვეტილების შესახებ."
+
+msgid "emails.editorDecisionRevisions.subject"
+msgstr "რედაქციის გადაწყვეტილება"
+
+msgid "emails.editorDecisionSendToProduction.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ ავტორთან, მასალის "
+"წარმოებაში ჩაშვების შესახებ."
+
+msgid "emails.editorDecisionSendToProduction.subject"
+msgstr "რედაქციის გადაწყვეტილება"
+
+msgid "emails.editorDecisionSendToExternal.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ ავტორთან, მასალის გარე "
+"რეცენზირებაზე გაგზავნის შესახებ."
+
+msgid "emails.editorDecisionSendToExternal.subject"
+msgstr "რედაქციის გადაწყვეტილება"
+
+msgid "emails.editorDecisionAccept.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ ავტორთან „მასალის მიღების“ "
+"საბოლოო გადაწყვეტილების შესახებ."
+
+msgid "emails.editorDecisionAccept.subject"
+msgstr "რედაქციის გადაწყვეტილება"
+
+msgid "emails.reviewRemindAutoOneclick.description"
+msgstr ""
+"ეს წერილი იგზავნება ავტომატურად, როდესაც რეცენზიის მოწოდების ვადა გავიდა ("
+"იხილეთ პარამეტრები > სამუშაო პროცესი > რეცენიზრება) და რეცენზენტს პირდაპირი "
+"წვდომა გამოერთო. დაგეგმილი ამოცანები უნდა ჩაირთოს (იხილეთ საიტის "
+"კონფიგურაციის ფაილი)."
+
+msgid "emails.reviewRemindAutoOneclick.subject"
+msgstr "მასალის რეცენზირების ავტომატური შეხსენება"
+
+msgid "emails.reviewRemindAuto.description"
+msgstr ""
+"ეს წერილი იგზავნება ავტომატურად, როდესაც რეცენზიის მოწოდების ვადა გავიდა ("
+"იხილეთ პარამეტრები > სამუშაო პროცესი > რეცენიზრება) და რეცენზენტს პირდაპირი "
+"წვდომა გამოერთო. დაგეგმილი ამოცანები უნდა ჩაირთოს (იხილეთ საიტის "
+"კონფიგურაციის ფაილი)."
+
+msgid "emails.reviewRemindAuto.subject"
+msgstr "მასალის რეცენზირების ავტომატური შეხსენება"
+
+msgid "emails.reviewRemindOneclick.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ რეცენზენტთან იმის შესახებ, "
+"რეცენზიის მოწოდების ვადა უკვე გავიდა."
+
+msgid "emails.reviewRemindOneclick.subject"
+msgstr "მასალის რეცენზირების შეხსენება"
+
+msgid "emails.reviewRemind.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ რეცენზენტთან იმის შესახებ, "
+"რეცენზიის მოწოდების ვადა უკვე გავიდა."
+
+msgid "emails.reviewRemind.subject"
+msgstr "მასალის რეცენზირების შეხსენება"
+
+msgid "emails.reviewAck.description"
+msgstr ""
+"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ რეცენზიის მიღების "
+"დასადასტურებლად და მადლობის გამოსახატად რეცენზენტის მიერ გაწეული "
+"ღვაწლისათვის."
+
+msgid "emails.reviewAck.subject"
+msgstr "რეცენზიის მიღების დასტური"
+
+msgid "emails.reviewDecline.description"
+msgstr ""
+"ეს არის რეცენზენტის წერილი, გაგზავნილი განყოფილების რედაქტორთან, იმის "
+"შესახებ, რომ მოთხოვნა რეცენზირებაზე უარყოფილია."
+
+msgid "emails.reviewDecline.subject"
+msgstr "რეცენზიის მიცემა შეუძლებელია"
+
+msgid "emails.reviewConfirm.description"
+msgstr ""
+"ეს არის რეცენზენტის წერილი, გაგზავნილი განყოფილების რედაქტორთან, იმის "
+"შესახებ, რომ მოთხოვნა რეცენზირებაზე მიღებულია და რეცენზია მოწოდებული იქნება "
+"მითითებულ დროს."
+
+msgid "emails.reviewConfirm.subject"
+msgstr "თანხმობა რეცენზირებაზე"
+
+msgid "emails.reviewReinstate.description"
+msgstr ""
+"ეს არის განყოფილების რედაქტორის წერილი, გაგზავნილი რეცენზენტთან, რომელმაც "
+"დაიწყო მასალის რეცენზირება, იმის შესახებ, რომ რეცენზირება განახლებულია."
+
+msgid "emails.reviewReinstate.subject"
+msgstr "რეცენზირების განახლების მოთხოვნა"
+
+msgid "emails.reviewCancel.description"
+msgstr ""
+"ეს არის განყოფილების რედაქტორის წერილი, გაგზავნილი რეცენზენტთან, რომელმაც "
+"დაიწყო მასალის რეცენზირება, იმის შესახებ, რომ რეცენზირება გაუქმებულია."
+
+msgid "emails.reviewCancel.subject"
+msgstr "სტატიის რეცენზირების მოთხოვნა"
+
+msgid "emails.reviewRequestAttachedSubsequent.subject"
+msgstr "სტატიის რეცენზირების მოთხოვნა"
+
+msgid "emails.reviewRequestOneclickSubsequent.subject"
+msgstr "სტატიის რეცენზირების მოთხოვნა"
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "სტატიის რეცენზირების მოთხოვნა"
+
+msgid "emails.reviewRequestAttached.subject"
+msgstr "სტატიის რეცენზირების მოთხოვნა"
+
+msgid "emails.reviewRequestRemindAutoOneclick.subject"
+msgstr "სტატიის რეცენზირების მოთხოვნა"
+
+msgid "emails.reviewRequestOneclick.subject"
+msgstr "სტატიის რეცენზირების მოთხოვნა"
+
+msgid "emails.reviewRequestRemindAuto.subject"
+msgstr "სტატიის რეცენზირების მოთხოვნის შეხსენება"
