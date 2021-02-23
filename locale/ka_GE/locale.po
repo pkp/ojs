@@ -1,2 +1,24 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-02-23 10:21+0000\n"
+"Last-Translator: Zurab Tskvitinidze <zurab_tsqvitinidze@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "navigation.categories.browse"
+msgstr "დაათვალიერეთ"
+
+msgid "navigation.categories"
+msgstr "კატეგორიები"
+
+msgid "context.select"
+msgstr "გადადით სხვა ჟურნალზე:"
+
+msgid "context.current"
+msgstr "ჟურნალი:"
