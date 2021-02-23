@@ -42,9 +42,9 @@ class MetricsDAO extends PKPMetricsDAO {
 	/**
 	 * @copydoc PKPMetricsDAO::foreignKeyLookup()
 	 */
-	protected function foreignKeyLookup($assocType, $assocId) {
+	protected function foreignKeyLookup($assocType, $assocId, $representationId = null) {
 		list($contextId, $sectionId, $assocObjType,
-			$assocObjId, $submissionId, $representationId) = parent::foreignKeyLookup($assocType, $assocId);
+			$assocObjId, $submissionId, $representationId) = parent::foreignKeyLookup($assocType, $assocId, $representationId);
 
 		$isFile = false;
 
