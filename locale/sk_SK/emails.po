@@ -998,6 +998,7 @@ msgstr ""
 "Email sa odošle zaregistrovaným používateľom, ktorí majú povolený príjem "
 "tohto typu oznámenia."
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Máte nové oznámenie od {$siteTitle}:<br />\n"

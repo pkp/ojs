@@ -14,6 +14,7 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "Imate poruku od {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Imate poruku od {$siteTitle}:<br />\n"

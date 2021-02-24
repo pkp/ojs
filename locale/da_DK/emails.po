@@ -900,6 +900,7 @@ msgstr "Denne e-mail underretter en abonnent om, at vedkommendes abonnement er u
 msgid "emails.notification.subject"
 msgstr "Ny meddelelse fra {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Du har modtaget en ny meddelelse fra {$siteTitle}:<br />\n"

@@ -17,6 +17,7 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "Nova notificação de {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Você tem uma nova notificação de {$siteTitle}:<br />\n"
@@ -1395,6 +1396,7 @@ msgstr "Mensagem enviada pelo Editor de Seção ao Editor de Layout, agradecendo
 msgid "emails.notification.subject"
 msgstr "Nova notificação de {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Você tem uma nova notificação de {$siteTitle}:<br />\n"

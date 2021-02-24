@@ -806,6 +806,7 @@ msgstr "Ova se poruka šalje novoregistriranim korisnicima kako bi im se zaželi
 msgid "emails.announcement.subject"
 msgstr "{$title}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Imate novu obavijest od {$siteTitle}:<br />\n"

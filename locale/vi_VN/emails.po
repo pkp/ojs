@@ -1374,6 +1374,7 @@ msgstr ""
 "Email được gửi đến người dùng đã đăng ký đã chọn để gửi kiểu thông báo này "
 "qua email cho họ."
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Bạn có một thông báo mới từ {$siteTitle}:<br />\n"

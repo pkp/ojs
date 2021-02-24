@@ -823,6 +823,7 @@ msgstr "Ce courriel est envoyé à un rapporteur nouvellement inscrit, afin de l
 msgid "emails.notification.subject"
 msgstr "Nouvel avis de {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Vous avez un nouvel avis de {$siteTitle} :<br />\n"

@@ -95,6 +95,7 @@ msgstr "パスワードリセットの確認"
 msgid "emails.notification.description"
 msgstr "このメールは新規に登録された査読者に送付され、ユーザー名とパスワードが通知されます。"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "{$siteTitle}からの新しいお知らせです。<br />\n"

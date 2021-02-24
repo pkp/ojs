@@ -17,6 +17,7 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "Új értesítés a(z) {$siteTitle} oldaltól"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Önnek új értesítése van a(z) {$siteTitle} oldaltól:<br />\n"

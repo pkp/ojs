@@ -949,6 +949,7 @@ msgstr "Tento email informuje předplatitele, že jeho předplatné vypršelo. O
 msgid "emails.notification.subject"
 msgstr "Nové oznámení od {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Máte nové oznámení od {$siteTitle}:<br />\n"
