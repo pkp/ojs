@@ -23,13 +23,6 @@ msgstr ""
 "の雑誌の恒久的アーカイブを作成することを許可します。<a href=\"http://www.lockss.org/\""
 ">さらなる情報</a>はここを参照してください。"
 
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>"
-"\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
-
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "R"
 

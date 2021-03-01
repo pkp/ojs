@@ -23,14 +23,6 @@ msgstr "논문"
 msgid "section.default.policy"
 msgstr "섹션 기본 정책"
 
-#, fuzzy
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>"
-"\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
-
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "R"
 

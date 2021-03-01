@@ -153,9 +153,3 @@ msgstr "محكمون"
 
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "ح"
-
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"

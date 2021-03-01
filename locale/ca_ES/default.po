@@ -44,12 +44,6 @@ msgstr "<p>Els noms i les adreces de correu electrònic que hi ha al lloc web de
 msgid "default.contextSettings.openAccessPolicy"
 msgstr "La revista proporciona accés lliure immediat al contingut basant-se en el principi que fer que la cerca estigui disponible al públic facilita un intercanvi de coneixement més ampli i global."
 
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
-
 msgid "default.contextSettings.forReaders"
 msgstr "Animem els lectors/ores que s’inscriguin al servei de notificació de publicació a la revista. Utilitzeu l’enllaç <a href=\"{$indexUrl}/{$contextPath}/user/register\">Registre</a> a l’inici de la pàgina inicial de la revista. Un cop el lector/a s’hagi registrat, rebrà la taula de continguts per correu electrònic per cada nou número de la revista. Aquesta llista també permet que la revista pugui demostrar que té un cert nivell de seguiment o de lectors/ores. Vegeu la <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Declaració de privacitat</a> de la revista, que assegura als lectors/ores que el seu nom i correu electrònic no s'utilitzarà per a cap altra finalitat."
 

@@ -186,17 +186,6 @@ msgstr "समीक्षको"
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "R"
 
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextUrl}, {$contextName}
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
-
 msgid "default.genres.transcripts"
 msgstr "प्रतिलिपि"
 

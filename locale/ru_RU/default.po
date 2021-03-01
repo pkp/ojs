@@ -137,10 +137,3 @@ msgstr "Рецензенты"
 
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "Рец"
-
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________ <br/"
-">\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"

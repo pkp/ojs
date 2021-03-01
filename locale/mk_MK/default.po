@@ -57,13 +57,6 @@ msgstr "Стандарден став на одделот"
 msgid "default.contextSettings.checklist.addressesLinked"
 msgstr "Каде што се достапни, обезбедени се URL-адреси за референците."
 
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>"
-"\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
-
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "Р"
 

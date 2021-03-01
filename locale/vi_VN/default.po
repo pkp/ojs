@@ -11,13 +11,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"_______________________________________________________________________<br/>"
-"\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
-
 msgid "default.groups.abbrev.subscriptionManager"
 msgstr "Sub-M"
 

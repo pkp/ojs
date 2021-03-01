@@ -136,9 +136,3 @@ msgstr "REV"
 
 msgid "default.contextSettings.clockssLicense"
 msgstr "Questa rivista usa il sistema CLOCKSS per creare un sistema di archiviazione distribuito tra le biblioteche partecipanti e permette a queste biblioteche di creare archivi permanebti di riviste per conservazione e ripristinio. Vedi di più sul sito di <a href=\"http://clockss.org/\">CLOCKSS</a>"
-
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>\n"
-"<a href=\"{$ldelim}$contextUrl{$rdelim}\">{$ldelim}$contextName{$rdelim}</a>"

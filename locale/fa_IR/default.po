@@ -133,6 +133,3 @@ msgstr "داوران"
 
 msgid "default.groups.abbrev.externalReviewer"
 msgstr "داور"
-
-msgid "default.contextSettings.emailSignature"
-msgstr "<br/>  ________________________________________________________________________<br/>  <a href=\"{$contextUrl}\">{$contextName}</a>"

@@ -293,13 +293,6 @@ msgstr ""
 "ήδη εγγραφεί μπορούν απλά <a href=\"{$indexUrl}/{$journalPath}/login\">να "
 "συνδεθούν</a> και να ξεκινήσουν τη διαδικασία με τα 5 βήματα."
 
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"_______________________________________________________________________<br/>"
-"\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
-
 msgid "default.contextSettings.clockssLicense"
 msgstr ""
 "Αυτό το περιοδικό χρησιμοποιεί το σύστημα CLOCKSS για να δημιουργήσει ένα "
