@@ -1122,6 +1122,7 @@ msgstr "Mensagem de boas-vindas enviada a novo revisor registado no sistema, com
 msgid "emails.notification.subject"
 msgstr "Nova notificação de {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Você possui uma nova notificação de {$siteTitle}:<br />\n"

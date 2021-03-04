@@ -169,6 +169,7 @@ msgstr "אישור איפוס סיסמה"
 msgid "emails.notification.description"
 msgstr "הדוא\"ל נשלח למשתמשים רשומים שבחרו לשלוח אליהם הודעה מסוג זה."
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "יש לך הודעה חדשה מאת {$siteTitle}:<br />\n"

@@ -42,6 +42,7 @@ msgstr ""
 "Acest email este trimis utilizatorilor înregistrați care au selectat să "
 "primească prin e-mail acest tip de notificare."
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Ați primit o notificare nouă de la {$siteTitle}:<br />\n"

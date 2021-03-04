@@ -865,6 +865,7 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "Nuova notifica da {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Hai ricevuto una nuova notifica da  {$siteTitle}:<br />\n"

@@ -894,6 +894,7 @@ msgstr "This email requests the keeper of a LOCKSS archive to consider including
 msgid "emails.notification.subject"
 msgstr "فرم اطلاع رسانی جدید {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "شما یک فرم اطلاع رسانی جدید از {$siteTitle} دارید<br />\n"

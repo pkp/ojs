@@ -793,6 +793,7 @@ msgstr "Bu mesaj aboneliği biten abonelere gönderilir. Son mesajdır..."
 msgid "emails.notification.subject"
 msgstr "{$siteTitle} Yeni Bildirim"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "{$siteTitle} adlı sisteden yeni bir bildiriminiz var:<br />\n"

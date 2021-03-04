@@ -19,6 +19,7 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "से नई अधिसूचना {$siteTitle}"
 
+#, fuzzy
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) newlines: Different line endings
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$siteTitle}, {$url}, {$notificationContents}, {$principalContactSignature}

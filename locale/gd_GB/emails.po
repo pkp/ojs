@@ -18,6 +18,7 @@ msgstr "{$title}"
 msgid "emails.notification.subject"
 msgstr "Brath ùr o {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Tha bhrath ùr agad o {siteTitle}:<br />\n"

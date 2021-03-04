@@ -1017,6 +1017,7 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "Nytt varsel fra {$siteTitle}"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Du har fått et nytt varsel fra {$siteTitle}:<br />\n"

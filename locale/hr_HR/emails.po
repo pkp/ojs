@@ -827,6 +827,7 @@ msgstr ""
 "Ova e-pošta šalje se registriranim korisnicima koji su odabrali primati ovu "
 "vrstu obavijesti."
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Imate novu obavijest od časopisa {$siteTitle}:<br />\n"

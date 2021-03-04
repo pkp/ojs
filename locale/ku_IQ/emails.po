@@ -14,6 +14,7 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "دڵنیابوونەوەی لە دانانەوەی وشەى نهێنى"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "تۆ ئاگادارکردنەوی نوێت هەیە لە {$siteTitle}:<br />\n"

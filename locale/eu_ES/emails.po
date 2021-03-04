@@ -812,6 +812,7 @@ msgstr "Mezu honek harpidedunari jakinarazten dio harpidetza amaitu zaiola. Aldi
 msgid "emails.notification.subject"
 msgstr "{$siteTitle} gunearen jakinarazpen berria"
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "{$siteTitle} gunearen jakinarazpen berri bat daukazu:<br />\n"

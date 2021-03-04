@@ -1448,6 +1448,7 @@ msgstr ""
 "El correu electrònic s'envia a usuaris/àries registrats que hagin "
 "seleccionat rebre aquest tipus de notificació."
 
+#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Teniu una notificació nova de {$siteTitle}:<br />\n"
