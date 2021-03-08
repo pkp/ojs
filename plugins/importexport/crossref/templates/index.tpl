@@ -47,12 +47,12 @@
 						{/if}
 					{/foreach}
 					{if !$currentContext->getData('publisherInstitution')}
-						{capture assign=journalSettingsUrl}{url router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="context" escape=false}{/capture}
+						{capture assign=journalSettingsUrl}{url router=PKPApplication::ROUTE_PAGE page="management" op="settings" path="context" escape=false}{/capture}
 						{capture assign=missingPublisherMessage}{translate key="plugins.importexport.crossref.error.publisherNotConfigured" journalSettingsUrl=$journalSettingsUrl}{/capture}
 						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents=$missingPublisherMessage}
 					{/if}
 					{if !$currentContext->getData('onlineIssn') && !$currentContext->getData('printIssn')}
-						{capture assign=journalSettingsUrl}{url router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="context" escape=false}{/capture}
+						{capture assign=journalSettingsUrl}{url router=PKPApplication::ROUTE_PAGE page="management" op="settings" path="context" escape=false}{/capture}
 						{capture assign=missingIssnMessage}{translate key="plugins.importexport.crossref.error.issnNotConfigured" journalSettingsUrl=$journalSettingsUrl}{/capture}
 						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents=$missingIssnMessage}
 					{/if}
@@ -62,7 +62,7 @@
 				</div>
 			{/if}
 
-			{capture assign=crossrefSettingsGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="CrossRefExportPlugin" category="importexport" verb="index" escape=false}{/capture}
+			{capture assign=crossrefSettingsGridUrl}{url router=PKPApplication::ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="CrossRefExportPlugin" category="importexport" verb="index" escape=false}{/capture}
 			{load_url_in_div id="crossrefSettingsGridContainer" url=$crossrefSettingsGridUrl}
 		</div>
 
@@ -78,7 +78,7 @@
 					{csrf}
 					<input type="hidden" name="tab" value="exportSubmissions-tab" />
 					{fbvFormArea id="submissionsXmlForm"}
-						{capture assign=submissionsListGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}{/capture}
+						{capture assign=submissionsListGridUrl}{url router=PKPApplication::ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}{/capture}
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.crossref.settings.form.validation" checked=$validation|default:false}

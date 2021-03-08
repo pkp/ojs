@@ -30,7 +30,7 @@ class FieldSelectIssue extends FieldSelect {
 
 		$issueUrlPlaceholder = \Application::get()->getRequest()->getDispatcher()->url(
 			\Application::get()->getRequest(),
-			ROUTE_PAGE,
+			PKPApplication::ROUTE_PAGE,
 			null,
 			'issue',
 			'view',

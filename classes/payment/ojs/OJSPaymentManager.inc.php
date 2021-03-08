@@ -57,24 +57,24 @@ class OJSPaymentManager extends PaymentManager {
 
 		switch ($type) {
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
-				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'article', 'view', $assocId));
+				$payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
-				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'view', $assocId));
+				$payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
-				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'current'));
+				$payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'current'));
 				break;
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'user', 'subscriptions'));
+				$payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'user', 'subscriptions'));
 				break;
 			case PAYMENT_TYPE_PUBLICATION:
 				$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 				$submission = $submissionDao->getById($assocId);
 				if ($submission->getSubmissionProgress()!=0) {
-					$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), array('submissionId' => $assocId)));
+					$payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), array('submissionId' => $assocId)));
 				} else {
-					$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'authorDashboard', 'submission', $submission->getId()));
+					$payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'authorDashboard', 'submission', $submission->getId()));
 				}
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP: // Deprecated

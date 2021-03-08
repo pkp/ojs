@@ -275,7 +275,7 @@ class ArticleHandler extends Handler {
 			// Ask robots not to index outdated versions and point to the canonical url for the latest version
 			if ($publication->getId() !== $article->getCurrentPublication()->getId()) {
 				$templateMgr->addHeader('noindex', '<meta name="robots" content="noindex">');
-				$url = $request->getDispatcher()->url($request, ROUTE_PAGE, null, 'article', 'view', $article->getBestId());
+				$url = $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', $article->getBestId());
 				$templateMgr->addHeader('canonical', '<link rel="canonical" href="' . $url . '">');
 			}
 

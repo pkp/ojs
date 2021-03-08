@@ -81,7 +81,7 @@ class AssignToIssueHandler extends Handler {
 			$submissionContext = Services::get('context')->get($this->submission->getData('contextId'));
 		}
 
-		$publicationApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'submissions/' . $this->submission->getId() . '/publications/' . $this->publication->getId());
+		$publicationApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getPath(), 'submissions/' . $this->submission->getId() . '/publications/' . $this->publication->getId());
 		$assignToIssueForm = new APP\components\forms\publication\AssignToIssueForm($publicationApiUrl, $this->publication, $submissionContext);
 		$settingsData = [
 			'components' => [

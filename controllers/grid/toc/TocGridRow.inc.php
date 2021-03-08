@@ -43,7 +43,7 @@ class TocGridRow extends GridRow {
 			new LinkAction(
 				'workflow',
 				new RedirectAction(
-					$dispatcher->url($request, ROUTE_PAGE, null, 'workflow', 'access', array($this->getId()))
+					$dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'workflow', 'access', array($this->getId()))
 				),
 				__('submission.submission'),
 				'information'

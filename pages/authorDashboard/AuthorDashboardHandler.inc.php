@@ -24,7 +24,7 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 	protected function _getRepresentationsGridUrl($request, $submission) {
 		return $request->getDispatcher()->url(
 			$request,
-			ROUTE_COMPONENT,
+			PKPApplication::ROUTE_COMPONENT,
 			null,
 			'grid.articleGalleys.ArticleGalleyGridHandler',
 			'fetchGrid',
