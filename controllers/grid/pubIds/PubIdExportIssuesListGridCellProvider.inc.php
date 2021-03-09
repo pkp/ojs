@@ -53,7 +53,7 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 					new LinkAction(
 						'edit',
 						new AjaxModal(
-							$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $publishedIssue->getId())),
+							$dispatcher->url($request, PKPApplication::ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $publishedIssue->getId())),
 							__('plugins.importexport.common.settings.DOIPluginSettings')
 						),
 						htmlspecialchars($publishedIssue->getIssueIdentification()),

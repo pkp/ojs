@@ -53,7 +53,7 @@ class IssueGridRow extends GridRow {
 				new LinkAction(
 					$issue->getDatePublished()?'viewIssue':'previewIssue',
 					new OpenWindowAction(
-						$dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'view', array($issueId))
+						$dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'view', array($issueId))
 					),
 					__($issue->getDatePublished()?'grid.action.viewIssue':'grid.action.previewIssue'),
 					'information'

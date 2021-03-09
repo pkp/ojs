@@ -68,7 +68,7 @@ class PaymentsHandler extends Handler {
 				return $templateMgr->fetchAjax(
 					'institutionalSubscriptionsGridContainer',
 					$dispatcher->url(
-						$request, ROUTE_COMPONENT, null,
+						$request, PKPApplication::ROUTE_COMPONENT, null,
 						'grid.subscriptions.InstitutionalSubscriptionsGridHandler', 'fetchGrid'
 					)
 				);
@@ -76,7 +76,7 @@ class PaymentsHandler extends Handler {
 				return $templateMgr->fetchAjax(
 					'individualSubscriptionsGridContainer',
 					$dispatcher->url(
-						$request, ROUTE_COMPONENT, null,
+						$request, PKPApplication::ROUTE_COMPONENT, null,
 						'grid.subscriptions.IndividualSubscriptionsGridHandler', 'fetchGrid'
 					)
 				);
@@ -95,7 +95,7 @@ class PaymentsHandler extends Handler {
 		return $templateMgr->fetchAjax(
 			'subscriptionTypesGridContainer',
 			$dispatcher->url(
-				$request, ROUTE_COMPONENT, null,
+				$request, PKPApplication::ROUTE_COMPONENT, null,
 				'grid.subscriptions.SubscriptionTypesGridHandler', 'fetchGrid'
 			)
 		);
@@ -197,7 +197,7 @@ class PaymentsHandler extends Handler {
 		return $templateMgr->fetchAjax(
 			'paymentsGridContainer',
 			$dispatcher->url(
-				$request, ROUTE_COMPONENT, null,
+				$request, PKPApplication::ROUTE_COMPONENT, null,
 				'grid.subscriptions.PaymentsGridHandler', 'fetchGrid'
 			)
 		);

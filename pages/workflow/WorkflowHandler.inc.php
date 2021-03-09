@@ -62,9 +62,9 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		$latestPublication = $submission->getLatestPublication();
 
-		$latestPublicationApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
-		$temporaryFileApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'temporaryFiles');
-		$issueApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getData('urlPath'), 'issues/__issueId__');
+		$latestPublicationApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
+		$temporaryFileApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getPath(), 'temporaryFiles');
+		$issueApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getData('urlPath'), 'issues/__issueId__');
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
@@ -97,7 +97,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		]);
 		if ($paymentManager->publicationEnabled()) {
 			$submissionPaymentsForm = new APP\components\forms\publication\SubmissionPaymentsForm(
-				$request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), '_submissions/' . $submission->getId() . '/payment'),
+				$request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getPath(), '_submissions/' . $submission->getId() . '/payment'),
 				$submission,
 				$request->getContext()
 			);
@@ -119,7 +119,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		$assignToIssueUrl = $request->getDispatcher()->url(
 			$request,
-			ROUTE_COMPONENT,
+			PKPApplication::ROUTE_COMPONENT,
 			null,
 			'modals.publish.AssignToIssueHandler',
 			'assign',
@@ -172,7 +172,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	protected function _getRepresentationsGridUrl($request, $submission) {
 		return $request->getDispatcher()->url(
 			$request,
-			ROUTE_COMPONENT,
+			PKPApplication::ROUTE_COMPONENT,
 			null,
 			'grid.articleGalleys.ArticleGalleyGridHandler',
 			'fetchGrid',

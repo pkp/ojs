@@ -421,7 +421,7 @@ class IssueGridHandler extends GridHandler {
 		return $templateMgr->fetchAjax(
 			'issueGalleysGridContainer',
 			$dispatcher->url(
-				$request, ROUTE_COMPONENT, null,
+				$request, PKPApplication::ROUTE_COMPONENT, null,
 				'grid.issueGalleys.IssueGalleyGridHandler', 'fetchGrid', null,
 				array('issueId' => $issue->getId())
 			)

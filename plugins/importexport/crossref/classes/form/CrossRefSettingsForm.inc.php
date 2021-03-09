@@ -68,7 +68,7 @@ class CrossRefSettingsForm extends Form {
 			$doiPluginSettingsLinkAction = new LinkAction(
 				'settings',
 				new AjaxModal(
-					$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('plugin' => 'doipubidplugin', 'category' => 'pubIds')),
+					$dispatcher->url($request, PKPApplication::ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('plugin' => 'doipubidplugin', 'category' => 'pubIds')),
 					__('plugins.importexport.common.settings.DOIPluginSettings')
 				),
 				__('plugins.importexport.common.settings.DOIPluginSettings'),

@@ -14,7 +14,7 @@
 		$('#crossrefSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" id="crossrefSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" plugin="CrossRefExportPlugin" category="importexport" verb="save"}">
+<form class="pkp_form" id="crossrefSettingsForm" method="post" action="{url router=PKPApplication::ROUTE_COMPONENT op="manage" plugin="CrossRefExportPlugin" category="importexport" verb="save"}">
 	{csrf}
 	{if $doiPluginSettingsLinkAction}
 		{fbvFormArea id="doiPluginSettingsLink"}

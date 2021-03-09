@@ -429,7 +429,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		return $this->getPublication()->getData('status') !== STATUS_PUBLISHED &&
 			Services::get('user')->canUserAccessStage(
 				WORKFLOW_STAGE_ID_PRODUCTION,
-				WORKFLOW_TYPE_EDITORIAL,
+				PKPApplication::WORKFLOW_TYPE_EDITORIAL,
 				$this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
 				$this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)
 			);

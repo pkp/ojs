@@ -35,7 +35,7 @@ class NotificationManager extends PKPNotificationManager {
 
 		switch ($notification->getType()) {
 			case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
-				return $dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'issue', 'current');
+				return $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'issue', 'current');
 			default:
 				return parent::getNotificationUrl($request, $notification);
 		}

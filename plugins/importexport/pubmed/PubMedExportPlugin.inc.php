@@ -62,7 +62,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
-				$apiUrl = $request->getDispatcher()->url($request, ROUTE_API, $context->getPath(), 'submissions');
+				$apiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $context->getPath(), 'submissions');
 				$submissionsListPanel = new \APP\components\listPanels\SubmissionsListPanel(
 					'submissions',
 					__('common.publications'),

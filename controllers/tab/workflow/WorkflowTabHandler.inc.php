@@ -34,7 +34,7 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 					'schedulePublication',
 					new AjaxModal(
 						$dispatcher->url(
-							$request, ROUTE_COMPONENT, null,
+							$request, PKPApplication::ROUTE_COMPONENT, null,
 							'tab.issueEntry.IssueEntryTabHandler',
 							'publicationMetadata', null,
 							array('submissionId' => $submission->getId(), 'stageId' => $stageId)
