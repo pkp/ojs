@@ -63,8 +63,9 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 	function saveNewReviewRound($args, $request) {
 		// FIXME: this can probably all be managed somewhere.
 		$stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
+		$workflowStageDao = DAORegistry::getDAO('WorkflowStageDAO'); /* @var $workflowStageDao WorkflowStageDAO */
 		if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) {
-			$redirectOp = WORKFLOW_STAGE_PATH_EXTERNAL_REVIEW;
+			$redirectOp = $workflowStageDao->WORKFLOW_STAGE_PATH_EXTERNAL_REVIEW;
 		} else {
 			$redirectOp = null; // Suppress scrutinizer warn
 			assert(false);
@@ -84,12 +85,13 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 
 		$redirectOp = null;
 
+		$workflowStageDao = DAORegistry::getDAO('WorkflowStageDAO'); /* @var $workflowStageDao WorkflowStageDAO */
 		if ($decision == SUBMISSION_EDITOR_DECISION_ACCEPT) {
-			$redirectOp = WORKFLOW_STAGE_PATH_EDITING;
+			$redirectOp = $workflowStageDao->WORKFLOW_STAGE_PATH_EDITING;
 		} elseif ($decision == SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW) {
-			$redirectOp = WORKFLOW_STAGE_PATH_EXTERNAL_REVIEW;
+			$redirectOp = $workflowStageDao->WORKFLOW_STAGE_PATH_EXTERNAL_REVIEW;
 		} elseif ($decision == SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION) {
-			$redirectOp = WORKFLOW_STAGE_PATH_PRODUCTION;
+			$redirectOp = $workflowStageDao->WORKFLOW_STAGE_PATH_PRODUCTION;
 		}
 
 		// Make sure user has access to the workflow stage.
