@@ -76,7 +76,7 @@ class PublicationService extends PKPPublicationService {
 				case 'urlPublished':
 					$values[$prop] = $dispatcher->url(
 						$request,
-						PKPApplication::ROUTE_PAGE,
+						\PKPApplication::ROUTE_PAGE,
 						$submissionContext->getData('urlPath'),
 						'article',
 						'view',

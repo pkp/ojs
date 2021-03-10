@@ -204,7 +204,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 						$arguments = $route->getArguments();
 						$values[$prop] = $dispatcher->url(
 							$args['request'],
-							PKPApplication::ROUTE_API,
+							\PKPApplication::ROUTE_API,
 							$arguments['contextPath'],
 							'issues/' . $issue->getId()
 						);
@@ -245,7 +245,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 					if ($context) {
 						$values[$prop] = $dispatcher->url(
 							$request,
-							PKPApplication::ROUTE_PAGE,
+							\PKPApplication::ROUTE_PAGE,
 							$context->getPath(),
 							'issue',
 							'view',

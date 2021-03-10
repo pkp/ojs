@@ -113,7 +113,7 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 				case NMI_TYPE_CURRENT:
 					$navigationMenuItem->setUrl($dispatcher->url(
 						$request,
-						PKPApplication::ROUTE_PAGE,
+						\PKPApplication::ROUTE_PAGE,
 						null,
 						'issue',
 						'current',
@@ -123,7 +123,7 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 				case NMI_TYPE_ARCHIVES:
 					$navigationMenuItem->setUrl($dispatcher->url(
 						$request,
-						PKPApplication::ROUTE_PAGE,
+						\PKPApplication::ROUTE_PAGE,
 						null,
 						'issue',
 						'archive',
@@ -133,7 +133,7 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 				case NMI_TYPE_SUBSCRIPTIONS:
 					$navigationMenuItem->setUrl($dispatcher->url(
 						$request,
-						PKPApplication::ROUTE_PAGE,
+						\PKPApplication::ROUTE_PAGE,
 						null,
 						'about',
 						'subscriptions',
@@ -143,7 +143,7 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 				case NMI_TYPE_MY_SUBSCRIPTIONS:
 					$navigationMenuItem->setUrl($dispatcher->url(
 						$request,
-						PKPApplication::ROUTE_PAGE,
+						\PKPApplication::ROUTE_PAGE,
 						null,
 						'user',
 						'subscriptions',
