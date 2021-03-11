@@ -39,7 +39,7 @@ class SectionGridCellProvider extends GridCellProvider {
 	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
 		switch ($column->getId()) {
 			case 'inactive':
-				$element = $row->getData(); /* @var $element DataObject */
+				$element = $row->getData(); /* @var $element \PKP\core\DataObject */
 
 				$router = $request->getRouter();
 				import('lib.pkp.classes.linkAction.LinkAction');
