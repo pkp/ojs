@@ -29,7 +29,7 @@ define('SUBSCRIPTION_YEAR_OFFSET_PAST',		'-10');
 define('SUBSCRIPTION_YEAR_OFFSET_FUTURE',	'+10');
 
 
-class Subscription extends DataObject {
+class Subscription extends \PKP\core\DataObject {
 
 	//
 	// Get/set methods

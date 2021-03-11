@@ -22,7 +22,7 @@
 define('ISSUE_ACCESS_OPEN', 1);
 define('ISSUE_ACCESS_SUBSCRIPTION', 2);
 
-class Issue extends DataObject {
+class Issue extends \PKP\core\DataObject {
 	/**
 	 * get journal id
 	 * @return int
@@ -554,7 +554,7 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * @copydoc DataObject::getDAO()
+	 * @copydoc \PKP\core\DataObject::getDAO()
 	 */
 	function getDAO() {
 		return DAORegistry::getDAO('IssueDAO');
