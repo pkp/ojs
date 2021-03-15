@@ -126,7 +126,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				$hasAltName = false;
 
 				if ($author->getData('orcid')) {
-				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
+					$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
 				}
 
 				foreach($familyNames as $otherLocal => $familyName) {
@@ -152,10 +152,6 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 
 			} else {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getFullName(false)), ENT_COMPAT, 'UTF-8')));
-			}
-
-			if ($author->getData('orcid')) {
-				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
 			}
 
 			$contributorsNode->appendChild($personNameNode);
