@@ -33,7 +33,7 @@ msgid "plugins.importexport.native.exportIssues"
 msgstr "Export Issues"
 
 msgid "plugins.importexport.native.results"
-msgstr "Results"
+msgstr "Import Results"
 
 msgid "plugins.inportexport.native.uploadFile"
 msgstr "Please upload a file under \"Import\" in order to continue."

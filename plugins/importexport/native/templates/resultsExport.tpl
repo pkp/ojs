@@ -11,6 +11,7 @@
 	{translate key="plugins.importexport.native.processFailed"}
 {else}
 	{translate key="plugins.importexport.native.export.completed"}
+	{translate key="plugins.importexport.native.export.completed.downloadFile"}
 
 	<div id="exportIssues-tab">
 		<script type="text/javascript">
