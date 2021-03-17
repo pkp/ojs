@@ -122,14 +122,6 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 	}
 
 	/**
-	 * @see PKPNativeImportExportPlugin::loadCLILocales
-	 */
-	function loadCLILocales() {
-		parent::loadCLILocales();
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
-	}
-
-	/**
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
