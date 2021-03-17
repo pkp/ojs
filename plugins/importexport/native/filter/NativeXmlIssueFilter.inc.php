@@ -214,14 +214,10 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseIssueGalley($n, $issue) {
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$importFilters = $filterDao->getObjectsByGroup('native-xml=>IssueGalley');
-		assert(count($importFilters)==1); // Assert only a single unserialization filter
-		$importFilter = array_shift($importFilters);
-		$importFilter->setDeployment($this->getDeployment());
+		$currentFilter = NativeImportExportFilter::getFilter('native-xml=>IssueGalley', $this->getDeployment());
 		$issueGalleyDoc = new DOMDocument();
 		$issueGalleyDoc->appendChild($issueGalleyDoc->importNode($n, true));
-		return $importFilter->execute($issueGalleyDoc);
+		return $currentFilter->execute($issueGalleyDoc);
 	}
 
 	/**
@@ -250,14 +246,10 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseArticle($n, $issue) {
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$importFilters = $filterDao->getObjectsByGroup('native-xml=>article');
-		assert(count($importFilters)==1); // Assert only a single unserialization filter
-		$importFilter = array_shift($importFilters);
-		$importFilter->setDeployment($this->getDeployment());
+		$currentFilter = NativeImportExportFilter::getFilter('native-xml=>article', $this->getDeployment());
 		$articleDoc = new DOMDocument();
 		$articleDoc->appendChild($articleDoc->importNode($n, true));
-		return $importFilter->execute($articleDoc);
+		return $currentFilter->execute($articleDoc);
 	}
 
 	/**

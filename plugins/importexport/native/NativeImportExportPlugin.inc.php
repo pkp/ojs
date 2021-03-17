@@ -12,6 +12,7 @@
  *
  * @brief Native XML import/export plugin
  */
+use Colors\Color;
 
 import('lib.pkp.classes.plugins.ImportExportPlugin');
 
@@ -111,18 +112,27 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				header('Content-Type: application/json');
 				return $json->getString();
 			case 'importBounce':
-				if (!$request->checkCSRF()) throw new Exception('CSRF mismatch!');
-				$json = new JSONMessage(true);
-				$json->setEvent('addTab', array(
-					'title' => __('plugins.importexport.native.results'),
-					'url' => $request->url(null, null, null, array('plugin', $this->getName(), 'import'), array('temporaryFileId' => $request->getUserVar('temporaryFileId'))),
-				));
-				header('Content-Type: application/json');
-				return $json->getString();
+				return $this->getBounceTab($request,
+					__('plugins.importexport.native.results'),
+					'import',
+					array('temporaryFileId' => $request->getUserVar('temporaryFileId'))
+				);
+			case 'exportIssuesBounce':
+				return $this->getBounceTab($request,
+					__('plugins.importexport.native.export.issues.results'),
+						'exportIssues',
+						array('selectedIssues' => $request->getUserVar('selectedIssues'))
+				);
+			case 'exportSubmissionsBounce':
+				return $this->getBounceTab($request,
+					__('plugins.importexport.native.export.submissions.results'),
+						'exportSubmissions',
+						array('selectedSubmissions' => $request->getUserVar('selectedSubmissions'))
+				);
 			case 'import':
 				AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
 				$temporaryFileId = $request->getUserVar('temporaryFileId');
-				$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
+				$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /** @var $temporaryFileDao TemporaryFileDAO */
 				$user = $request->getUser();
 				$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 				if (!$temporaryFile) {
@@ -132,95 +142,103 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				}
 				$temporaryFilePath = $temporaryFile->getFilePath();
 
-				$filter = 'native-xml=>issue';
-				// is this articles import:
-				$xmlString = file_get_contents($temporaryFilePath);
-				$document = new DOMDocument();
-				$document->loadXml($xmlString);
-				if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
-					$filter = 'native-xml=>article';
-				}
+				list ($filter, $xmlString) = $this->getImportFilter($temporaryFilePath);
 
 				$deployment = new NativeImportExportDeployment($context, $user);
 
-				libxml_use_internal_errors(true);
-				$content = $this->importSubmissions(file_get_contents($temporaryFilePath), $filter, $deployment);
-				$templateMgr->assign('content', $content);
-				$validationErrors = array_filter(libxml_get_errors(), function($a) {
-					return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
-				});
-				$templateMgr->assign('validationErrors', $validationErrors);
-				libxml_clear_errors();
+				$deployment->import($filter, $xmlString);
 
-				// Are there any import warnings? Display them.
-				$warningTypes = array(
-					ASSOC_TYPE_ISSUE => 'issuesWarnings',
-					ASSOC_TYPE_SUBMISSION => 'submissionsWarnings',
-					ASSOC_TYPE_SECTION => 'sectionWarnings',
-				);
-				foreach ($warningTypes as $assocType => $templateVar) {
-					$foundWarnings = $deployment->getProcessedObjectsWarnings($assocType);
-					if (!empty($foundWarnings)) {
-						$templateMgr->assign($templateVar, $foundWarnings);
-					}
-				}
+				$templateMgr->assign('content', $deployment->processResult);
+				$templateMgr->assign('validationErrors', $deployment->getXMLValidationErrors());
 
-				// Are there any import errors? Display them.
-				$errorTypes = array(
-					ASSOC_TYPE_ISSUE => 'issuesErrors',
-					ASSOC_TYPE_SUBMISSION => 'submissionsErrors',
-					ASSOC_TYPE_SECTION => 'sectionErrors',
-				);
-				$foundErrors = false;
-				foreach ($errorTypes as $assocType => $templateVar) {
-					$currentErrors = $deployment->getProcessedObjectsErrors($assocType);
-					if (!empty($currentErrors)) {
-						$templateMgr->assign($templateVar, $currentErrors);
-						$foundErrors = true;
-					}
-				}
-				// If there are any data or validataion errors
-				// delete imported objects.
-				if ($foundErrors || !empty($validationErrors)) {
-					// remove all imported issues and sumissions
-					foreach (array_keys($errorTypes) as $assocType) {
-						$deployment->removeImportedObjects($assocType);
-					}
-				}
+				$problems = $deployment->getWarningsAndErrors();
+				$foundErrors = $deployment->isProcessFailed();
+
+				$templateMgr->assign('errorsAndWarnings', $problems);
+				$templateMgr->assign('errorsFound', $foundErrors);
+
 				// Display the results
-				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('results.tpl')));
+				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('resultsImport.tpl')));
 				header('Content-Type: application/json');
 				return $json->getString();
 			case 'exportSubmissions':
-				$exportXml = $this->exportSubmissions(
-					(array) $request->getUserVar('selectedSubmissions'),
-					$request->getContext(),
-					$request->getUser()
-				);
-				import('lib.pkp.classes.file.FileManager');
-				$fileManager = new FileManager();
-				$exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $context, '.xml');
-				$fileManager->writeFile($exportFileName, $exportXml);
-				$fileManager->downloadByPath($exportFileName);
-				$fileManager->deleteByPath($exportFileName);
-				break;
+				$submissionIds = (array) $request->getUserVar('selectedSubmissions');
+
+				$deployment = $this->getExportSubmissionsDeployment($submissionIds, $request->getContext(), $request->getUser());
+
+				$result = $deployment->processResult;
+				$problems = $deployment->getWarningsAndErrors();
+				$foundErrors = $deployment->isProcessFailed();
+
+				if ($foundErrors) {
+					$templateMgr->assign('validationErrors', $deployment->getXMLValidationErrors());
+
+					$templateMgr->assign('errorsAndWarnings', $problems);
+					$templateMgr->assign('errorsFound', $foundErrors);
+				} else {
+					$exportXml = $result->saveXml();
+
+					if ($exportXml) {
+						$path = $this->writeExportedFile('articles', $exportXml, $context);
+						$templateMgr->assign('exportPath', $path);
+					}
+				}
+
+				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('resultsExport.tpl')));
+				header('Content-Type: application/json');
+				return $json->getString();
 			case 'exportIssues':
-				$exportXml = $this->exportIssues(
-					(array) $request->getUserVar('selectedIssues'),
-					$request->getContext(),
-					$request->getUser()
-				);
-				import('lib.pkp.classes.file.FileManager');
-				$fileManager = new FileManager();
-				$exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $context, '.xml');
-				$fileManager->writeFile($exportFileName, $exportXml);
-				$fileManager->downloadByPath($exportFileName);
-				$fileManager->deleteByPath($exportFileName);
+				$selectedEntitiesIds = (array) $request->getUserVar('selectedIssues');
+
+				$deployment = $this->getExportIssuesDeployment($selectedEntitiesIds, $request->getContext(), $request->getUser());
+
+				$result = $deployment->processResult;
+				$problems = $deployment->getWarningsAndErrors();
+				$foundErrors = $deployment->isProcessFailed();
+
+				if ($foundErrors) {
+					$templateMgr->assign('validationErrors', $deployment->getXMLValidationErrors());
+
+					$templateMgr->assign('errorsAndWarnings', $problems);
+					$templateMgr->assign('errorsFound', $foundErrors);
+				} else {
+					$exportXml = $result->saveXml();
+
+					if ($exportXml) {
+						$path = $this->writeExportedFile('issues', $exportXml, $context);
+						$templateMgr->assign('exportPath', $path);
+					}
+				}
+
+				// Display the results
+				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('resultsExport.tpl')));
+				header('Content-Type: application/json');
+				return $json->getString();
+			case 'downloadExportFile':
+				$downloadPath = $request->getUserVar('downloadFilePath');
+				$this->downloadExportedFile($downloadPath);
+
 				break;
 			default:
 				$dispatcher = $request->getDispatcher();
 				$dispatcher->handle404();
 		}
+	}
+
+	function getExportSubmissionsDeployment($submissionIds, $context, $user, $opts = array()) {
+		$submissions = array();
+		foreach ($submissionIds as $submissionId) {
+			/** @var $submissionService APP\Services\SubmissionService */
+			$submissionService = Services::get('submission');
+			$submission = $submissionService->get($submissionId);
+
+			if ($submission) $submissions[] = $submission;
+		}
+
+		$deployment = new NativeImportExportDeployment($context, $user);
+		$deployment->export('article=>native-xml', $submissions, $opts);
+
+		return $deployment;
 	}
 
 	/**
@@ -232,36 +250,31 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @return string XML contents representing the supplied submission IDs.
 	 */
 	function exportSubmissions($submissionIds, $context, $user, $opts = array()) {
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$nativeExportFilters = $filterDao->getObjectsByGroup('article=>native-xml');
-		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
-		$exportFilter = array_shift($nativeExportFilters);
-		$exportFilter->setDeployment(new NativeImportExportDeployment($context, $user));
+		$deployment = $this->getExportSubmissionsDeployment($submissionIds, $context, $user, $opt);
 
-		$submissions = array();
-		foreach ($submissionIds as $submissionId) {
-			/** @var $submissionService APP\Services\SubmissionService */
-			$submissionService = Services::get('submission');
-			$submission = $submissionService->get($submissionId);
+		$result = $deployment->processResult;
+		$foundErrors = $deployment->isProcessFailed();
 
-			if ($submission) $submissions[] = $submission;
-		}
-
-		libxml_use_internal_errors(true);
-		$exportFilter->setOpts($opts);
-		$submissionXml = $exportFilter->execute($submissions, true);
-		$xml = $submissionXml->saveXml();
-
-		$errors = array_filter(libxml_get_errors(), function($a) {
-			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
-		});
-
-		if (!empty($errors)) {
-			$this->displayXMLValidationErrors($errors, $xml);
+		$xml = null;
+		if (!$foundErrors && $result) {
+			$xml = $result->saveXml();
 		}
 
 		return $xml;
+	}
+
+	function getExportIssuesDeployment($issueIds, $context, $user, $opts = array()) {
+		$issueDao = DAORegistry::getDAO('IssueDAO'); /** @var $issueDao IssueDAO */
+		$issues = array();
+		foreach ($issueIds as $issueId) {
+			$issue = $issueDao->getById($issueId, $context->getId());
+			if ($issue) $issues[] = $issue;
+		}
+
+		$deployment = new NativeImportExportDeployment($context, $user);
+		$deployment->export('issue=>native-xml', $issues, $opts);
+
+		return $deployment;
 	}
 
 	/**
@@ -272,44 +285,69 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @return string XML contents representing the supplied issue IDs.
 	 */
 	function exportIssues($issueIds, $context, $user, $opts = array()) {
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$nativeExportFilters = $filterDao->getObjectsByGroup('issue=>native-xml');
-		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
-		$exportFilter = array_shift($nativeExportFilters);
-		$exportFilter->setDeployment(new NativeImportExportDeployment($context, $user));
-		$issues = array();
-		foreach ($issueIds as $issueId) {
-			$issue = $issueDao->getById($issueId, $context->getId());
-			if ($issue) $issues[] = $issue;
+		$deployment = $this->getExportIssuesDeployment($issueIds, $context, $user, $opt);
+
+		$result = $deployment->processResult;
+		$foundErrors = $deployment->isProcessFailed();
+
+		$xml = null;
+		if (!$foundErrors && $result) {
+			$xml = $result->saveXml();
 		}
-		libxml_use_internal_errors(true);
-		$exportFilter->setOpts($opts);
-		$issueXml = $exportFilter->execute($issues, true);
-		$xml = $issueXml->saveXml();
-		$errors = array_filter(libxml_get_errors(), function($a) {
-			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
-		});
-		if (!empty($errors)) {
-			$this->displayXMLValidationErrors($errors, $xml);
-		}
+
 		return $xml;
 	}
 
+	function getBounceTab($request, $title, $bounceUrl, $bounceParameterArray) {
+		if (!$request->checkCSRF()) throw new Exception('CSRF mismatch!');
+		$json = new JSONMessage(true);
+		$json->setEvent('addTab', array(
+			'title' => $title,
+			'url' => $request->url(null, null, null, array('plugin', $this->getName(), $bounceUrl), $bounceParameterArray),
+		));
+		header('Content-Type: application/json');
+		return $json->getString();
+	}
+
 	/**
-	 * Get the XML for a set of submissions wrapped in a(n) issue(s).
-	 * @param $importXml string XML contents to import
-	 * @param $filter string Filter to be used
-	 * @param $deployment PKPImportExportDeployment
-	 * @return array Set of imported submissions
+	 * Create anf download file given it's name and content
+	 * @param $filename string
+	 * @param $fileContent string
+	 * @param $context Context
 	 */
-	function importSubmissions($importXml, $filter, $deployment) {
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$nativeImportFilters = $filterDao->getObjectsByGroup($filter);
-		assert(count($nativeImportFilters) == 1); // Assert only a single unserialization filter
-		$importFilter = array_shift($nativeImportFilters);
-		$importFilter->setDeployment($deployment);
-		return $importFilter->execute($importXml);
+	function writeExportedFile($filename, $fileContent, $context) {
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
+		$exportFileName = $this->getExportFileName($this->getExportPath(), $filename, $context, '.xml');
+		$fileManager->writeFile($exportFileName, $fileContent);
+
+		return $exportFileName;
+	}
+
+	/**
+	 * Create anf download file given it's name and content
+	 * @param $filename string
+	 * @param $fileContent string
+	 * @param $context Context
+	 */
+	function downloadExportedFile($exportFileName) {
+		import('lib.pkp.classes.file.FileManager');
+		$fileManager = new FileManager();
+		$fileManager->downloadByPath($exportFileName);
+		$fileManager->deleteByPath($exportFileName);
+	}
+
+	function getImportFilter($xmlFile) {
+		$filter = 'native-xml=>issue';
+		// is this articles import:
+		$xmlString = file_get_contents($xmlFile);
+		$document = new DOMDocument();
+		$document->loadXml($xmlString);
+		if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
+			$filter = 'native-xml=>article';
+		}
+
+		return array($filter, $xmlString);
 	}
 
 	/**
@@ -326,6 +364,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
+		$c = new Color();
+
 		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls']);
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
@@ -333,15 +373,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_SUBMISSION);
 
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
+		$journalDao = DAORegistry::getDAO('JournalDAO'); /** @var $journalDao JournalDAO */
+		$userDao = DAORegistry::getDAO('UserDAO'); /** @var $userDao UserDAO */
 
 		$journal = $journalDao->getByPath($journalPath);
 
 		if (!$journal) {
 			if ($journalPath != '') {
-				echo __('plugins.importexport.common.cliError') . "\n";
-				echo __('plugins.importexport.common.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+				$this->echoCLIError(__('plugins.importexport.common.error.unknownJournal', array('journalPath' => $journalPath)));
 			}
 			$this->usage($scriptName);
 			return;
@@ -358,115 +397,140 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 				if (!$user) {
 					if ($userName != '') {
-						echo __('plugins.importexport.common.cliError') . "\n";
-						echo __('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
+						$this->echoCLIError(__('plugins.importexport.native.error.unknownUser', array('userName' => $userName)));
 					}
 					$this->usage($scriptName);
 					return;
 				}
 
 				if (!file_exists($xmlFile)) {
-					echo __('plugins.importexport.common.cliError') . "\n";
-					echo __('plugins.importexport.common.export.error.inputFileNotReadable', array('param' => $xmlFile)) . "\n\n";
+					$this->echoCLIError(__('plugins.importexport.common.export.error.inputFileNotReadable', array('param' => $xmlFile)));
+
 					$this->usage($scriptName);
 					return;
 				}
 
-				$filter = 'native-xml=>issue';
-				// is this articles import:
-				$xmlString = file_get_contents($xmlFile);
-				$document = new DOMDocument();
-				$document->loadXml($xmlString);
-				if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
-					$filter = 'native-xml=>article';
-				}
+				list ($filter, $xmlString) = $this->getImportFilter($xmlFile);
+
 				$deployment = new NativeImportExportDeployment($journal, $user);
 				$deployment->setImportPath(dirname($xmlFile));
-				$content = $this->importSubmissions($xmlString, $filter, $deployment);
-				$validationErrors = array_filter(libxml_get_errors(), function($a) {
-					return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
-				});
+
+				$deployment->import($filter, $xmlString);
+
+				$result = $deployment->processResult;
+				$problems = $deployment->getWarningsAndErrors();
+				$foundErrors = $deployment->isProcessFailed();
+
+				$warnings = array();
+				if (array_key_exists('warnings', $problems)) {
+					$warnings = $problems['warnings'];
+				}
+
+				$errors = array();
+				if (array_key_exists('errors', $problems)) {
+					$errors = $problems['errors'];
+				}
+
+				if (!$foundErrors) {
+					echo $c(__('plugins.importexport.native.importComplete'))->green()->bold() . PHP_EOL . PHP_EOL;
+
+				} else {
+					echo $c(__('plugins.importexport.native.processFailed'))->red()->bold() . PHP_EOL . PHP_EOL;
+					//echo $colors->getColoredString(__('plugins.importexport.common.cliError'), "purple", "red") . "\n";
+				}
 
 				// Are there any import warnings? Display them.
-				$errorTypes = array(
-					ASSOC_TYPE_ISSUE => 'issue.issue',
-					ASSOC_TYPE_SUBMISSION => 'submission.submission',
-					ASSOC_TYPE_SECTION => 'section.section',
-				);
-				foreach ($errorTypes as $assocType => $localeKey) {
-					$foundWarnings = $deployment->getProcessedObjectsWarnings($assocType);
-					if (!empty($foundWarnings)) {
-						echo __('plugins.importexport.common.warningsEncountered') . "\n";
-						$i = 0;
-						foreach ($foundWarnings as $foundWarningMessages) {
-							if (count($foundWarningMessages) > 0) {
-								echo ++$i . '.' . __($localeKey) . "\n";
-								foreach ($foundWarningMessages as $foundWarningMessage) {
-									echo '- ' . $foundWarningMessage . "\n";
-								}
-							}
-						}
-					}
-				}
+				$this->displayCLIIssues($warnings, __('plugins.importexport.common.warningsEncountered'));
+				$this->displayCLIIssues($errors, __('plugins.importexport.common.errorsOccured'));
 
-				// Are there any import errors? Display them.
-				$foundErrors = false;
-				foreach ($errorTypes as $assocType => $localeKey) {
-					$currentErrors = $deployment->getProcessedObjectsErrors($assocType);
-					if (!empty($currentErrors)) {
-						echo __('plugins.importexport.common.errorsOccured') . "\n";
-						$i = 0;
-						foreach ($currentErrors as $currentErrorMessages) {
-							if (count($currentErrorMessages) > 0) {
-								echo ++$i . '.' . __($localeKey) . "\n";
-								foreach ($currentErrorMessages as $currentErrorMessage) {
-									echo '- ' . $currentErrorMessage . "\n";
-								}
-							}
-						}
-						$foundErrors = true;
-					}
-				}
-				// If there are any data or validataion errors
-				// delete imported objects.
-				if ($foundErrors || !empty($validationErrors)) {
-					// remove all imported issues and sumissions
-					foreach (array_keys($errorTypes) as $assocType) {
-						$deployment->removeImportedObjects($assocType);
-					}
-				}
 				return;
 			case 'export':
 				$outputDir = dirname($xmlFile);
 				if (!is_writable($outputDir) || (file_exists($xmlFile) && !is_writable($xmlFile))) {
-					echo __('plugins.importexport.common.cliError') . "\n";
-					echo __('plugins.importexport.common.export.error.outputFileNotWritable', array('param' => $xmlFile)) . "\n\n";
+					$this->echoCLIError(__('plugins.importexport.common.export.error.outputFileNotWritable', array('param' => $xmlFile)));
+
 					$this->usage($scriptName);
 					return;
 				}
 				if ($xmlFile != '') switch (array_shift($args)) {
 					case 'article':
 					case 'articles':
-						file_put_contents($xmlFile, $this->exportSubmissions(
+						$deployment = $this->getExportSubmissionsDeployment(
 							$args,
 							$journal,
 							null,
 							$opts
-						));
+						);
+
+						$this->getCLIExportResult($deployment, $xmlFile);
 						return;
 					case 'issue':
 					case 'issues':
-						file_put_contents($xmlFile, $this->exportIssues(
+						$deployment = $this->getExportIssuesDeployment(
 							$args,
 							$journal,
 							null,
 							$opts
-						));
+						);
+
+						$this->getCLIExportResult($deployment, $xmlFile);
 						return;
 				}
 				break;
 		}
 		$this->usage($scriptName);
+	}
+
+	function echoCLIError($errorMessage, $c = null) {
+		if (!isset($c)) $c = new Color();
+
+		echo $c(__('plugins.importexport.common.cliError'))->white()->bold()->highlight('red') . PHP_EOL;
+		echo $c($errorMessage)->red()->bold() . PHP_EOL;
+	}
+
+	function getCLIExportResult($deployment, $xmlFile) {
+		$result = $deployment->processResult;
+		$problems = $deployment->getWarningsAndErrors();
+		$foundErrors = $deployment->isProcessFailed();
+
+		if (!$foundErrors) {
+			file_put_contents($xmlFile, $result);
+		} else {
+			$warnings = array();
+			if (array_key_exists('warnings', $problems)) {
+				$warnings = $problems['warnings'];
+			}
+
+			$errors = array();
+			if (array_key_exists('errors', $problems)) {
+				$errors = $problems['errors'];
+			}
+
+			// Are there any import warnings? Display them.
+			$this->displayCLIIssues($warnings, __('plugins.importexport.common.warningsEncountered'));
+			$this->displayCLIIssues($errors, __('plugins.importexport.common.errorsOccured'));
+		}
+	}
+
+	function displayCLIIssues($relatedIssues, $title) {
+		$c = new Color();
+
+		if(count($relatedIssues) > 0) {
+			echo $c($title)->black()->bold()->highlight('light_gray') . PHP_EOL;
+			$i = 0;
+			foreach($relatedIssues as $relatedTypeName => $allRelatedTypes) {
+				foreach($allRelatedTypes as $thisTypeId => $thisTypeIds) {
+					if(count($thisTypeIds) > 0) {
+						echo ++$i . '.' . $relatedTypeName . PHP_EOL;
+						foreach($thisTypeIds as $idRelatedItems) {
+							foreach($idRelatedItems as $relatedItemMessage) {
+								echo '- ' . $relatedItemMessage . PHP_EOL;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	/**

@@ -214,15 +214,13 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @param $issue Issue
 	 */
 	function addIssueGalleys($doc, $issueNode, $issue) {
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$nativeExportFilters = $filterDao->getObjectsByGroup('issuegalley=>native-xml');
-		assert(count($nativeExportFilters)==1); // Assert only a single serialization filter
-		$exportFilter = array_shift($nativeExportFilters);
-		$exportFilter->setDeployment($this->getDeployment());
+		$currentFilter = NativeImportExportFilter::getFilter('issuegalley=>native-xml', $this->getDeployment());
 
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 		$issue = $issueGalleyDao->getByIssueId($issue->getId());
-		$issueGalleysDoc = $exportFilter->execute($issue);
+		$issueGalleysDoc = $currentFilter->execute($issue);
+
+		// throw new Exception('Ass Issue Galleys Exception');
 		if ($issueGalleysDoc->documentElement instanceof DOMElement) {
 			$clone = $doc->importNode($issueGalleysDoc->documentElement, true);
 			$issueNode->appendChild($clone);

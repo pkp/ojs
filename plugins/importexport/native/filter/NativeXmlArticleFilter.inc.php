@@ -98,9 +98,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		}
 		// Caps on class name for consistency with imports, whose filter
 		// group names are generated implicitly.
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$importFilters = $filterDao->getObjectsByGroup('native-xml=>' . $importClass);
-		$importFilter = array_shift($importFilters);
-		return $importFilter;
+		$currentFilter = NativeImportExportFilter::getFilter('native-xml=>' . $importClass, $deployment);
+		return $currentFilter;
 	}
 }
