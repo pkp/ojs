@@ -1711,3 +1711,9 @@ msgstr "Files"
 
 msgid "plugins.importexport.native.export.issues.results"
 msgstr "Export Issues Results"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Process failed to parse issue galleys"
