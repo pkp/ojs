@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-01 11:48+0000\n"
+"PO-Revision-Date: 2021-03-05 06:30+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/api/ca_ES/>"
 "\n"
@@ -64,3 +64,8 @@ msgstr "Des d'aquesta fase no podeu associar un arxiu amb una galerada."
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "L'avís que heu sol·licitat no forma part d'aquesta revista."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+"La funcionalitat de notificació per correu electrònic no s'ha activat en "
+"aquesta revista."

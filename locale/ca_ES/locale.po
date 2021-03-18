@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2020-12-01 11:47+0000\n"
+"PO-Revision-Date: 2021-03-05 06:30+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ca_ES/>\n"
@@ -2073,3 +2073,14 @@ msgstr "No s'ha pogut trobar la galerada sol·licitada."
 
 msgid "category.category"
 msgstr "Categories"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Si esteu actualitzant una instal·lació d'OJS que ja existeix, feu clic <a "
+"href=\"{$upgradeUrl}\">aquí</a> per continuar."
+
+msgid "payment.waived"
+msgstr "No exigit"
+
+msgid "payment.unpaid"
+msgstr "No pagat"
