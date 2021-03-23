@@ -14,7 +14,7 @@
 
 	{if $about}
 		<div class="about_site">
-			{$about|nl2br}
+			{$about}
 		</div>
 	{/if}
 
