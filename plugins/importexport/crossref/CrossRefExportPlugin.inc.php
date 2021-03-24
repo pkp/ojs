@@ -121,6 +121,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 			'POST',
 			$this->isTestMode($context) ? CROSSREF_API_STATUS_URL_DEV : CROSSREF_API_STATUS_URL,
 			[
+				'http_errors' => False,
 				'form_params' => [
 					'doi_batch_id' => $request->getUserVar('batchId'),
 					'type' => 'result',
@@ -131,7 +132,10 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 		);
 
 		if ($response->getStatusCode() != 200) {
-			return __('plugins.importexport.common.register.error.mdsError', array('param' => 'No response from server.'));
+			return __(
+				'plugins.importexport.common.register.error.mdsError',
+				array('param' => !empty($response->getBody()) ? (string) $response->getBody() : 'Empty response from Crossref server')
+			);
 		}
 		return (string) $response->getBody();
 	}
@@ -298,7 +302,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 			);
 		} catch (GuzzleHttp\Exception\RequestException $e) {
 			if ($e->getResponse()->getStatusCode() != CROSSREF_API_DEPOSIT_ERROR_FROM_CROSSREF) {
-				return [['plugins.importexport.common.register.error.mdsError', 'No response from server.']];
+				return [['plugins.importexport.common.register.error.mdsError', !empty($e->getResponse()->getBody()) ? (string) $e->getResponse()->getBody() : 'Empty response from Crossref server']];
 			}
 
 			$response = $e->getResponse();
