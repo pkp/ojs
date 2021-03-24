@@ -176,7 +176,7 @@ class SearchHandler extends Handler {
 		} else {
 			$searchParams = array('query' => implode(' ', $searchTerms));
 		}
-		$request->redirect(null, 'search', 'search', null, $searchParams);
+		$request->redirect(null, 'search', null, null, $searchParams);
 	}
 
 	/**
