@@ -35,7 +35,7 @@
 		</p>
 		<p id="articlesBySimilaritySearch">
 			{capture assign="advancedSearchLink"}{strip}
-				<a href="{url page="search" op="search" query=$articlesBySimilarityQuery}">
+				<a href="{url page="search" query=$articlesBySimilarityQuery}">
 					{translate key="plugins.generic.recommendBySimilarity.advancedSearch"}
 				</a>
 			{/strip}{/capture}
