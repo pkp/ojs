@@ -68,6 +68,7 @@ lib/pkp/js/lib/pnotify/build-tools							\
 lib/pkp/lib/vendor/alex198710/pnotify/.git						\
 lib/pkp/lib/vendor/sebastian								\
 lib/pkp/lib/vendor/oyejorge/less.php/test						\
+lib/pkp/lib/vendor/moxiecode/plupload/examples/						\
 lib/pkp/tools/travis									\
 lib/pkp/lib/swordappv2/.git								\
 lib/pkp/lib/swordappv2/.git								\
@@ -79,6 +80,7 @@ plugins/paymethod/paypal/vendor/guzzle/guzzle/tests/					\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/debug/				\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/console/Tests/			\
 plugins/paymethod/paypal/vendor/symfony/http-foundation/Tests/				\
+plugins/paymethod/paypal/vendor/clue/stream-filter/tests/				\
 plugins/paymethod/paypal/vendor/symfony/event-dispatcher/				\
 plugins/paymethod/paypal/vendor/guzzle/guzzle/tests/Guzzle/Tests/			\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/filesystem/Tests/		\
@@ -97,6 +99,7 @@ plugins/generic/citationStyleLanguage/lib/vendor/satooshi/php-coveralls/tests/		
 plugins/generic/citationStyleLanguage/lib/vendor/guzzle/guzzle/tests/			\
 plugins/generic/citationStyleLanguage/lib/vendor/seboettg/collection/tests/		\
 plugins/generic/citationStyleLanguage/lib/vendor/seboettg/citeproc-php/tests/		\
+plugins/generic/citationStyleLanguage/lib/vendor/seboettg/citeproc-php/example/		\
 lib/pkp/lib/vendor/nikic/fast-route/test/						\
 lib/pkp/lib/vendor/ezyang/htmlpurifier/tests/						\
 lib/pkp/lib/vendor/ezyang/htmlpurifier/smoketests/					\
