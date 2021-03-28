@@ -26,7 +26,7 @@ define('CROSSREF_API_URL', 'https://api.crossref.org/v2/deposits');
 //TESTING
 define('CROSSREF_API_URL_DEV', 'https://test.crossref.org/v2/deposits');
 
-define('CROSSREF_API_STATUS_URL', 'https://api.crossref.org/servlet/submissionDownload');
+define('CROSSREF_API_STATUS_URL', 'https://doi.crossref.org/servlet/submissionDownload');
 //TESTING
 define('CROSSREF_API_STATUS_URL_DEV', 'https://test.crossref.org/servlet/submissionDownload');
 
