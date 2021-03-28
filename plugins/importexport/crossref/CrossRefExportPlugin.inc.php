@@ -117,22 +117,27 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 		$context = $request->getContext();
 
 		$httpClient = Application::get()->getHttpClient();
-		$response = $httpClient->request(
-			'POST',
-			$this->isTestMode($context) ? CROSSREF_API_STATUS_URL_DEV : CROSSREF_API_STATUS_URL,
-			[
-				'form_params' => [
-					'doi_batch_id' => $request->getUserVar('batchId'),
-					'type' => 'result',
-					'usr' => $this->getSetting($context->getId(), 'username'),
-					'pwd' => $this->getSetting($context->getId(), 'password'),
+		try {
+			$response = $httpClient->request(
+				'POST',
+				$this->isTestMode($context) ? CROSSREF_API_STATUS_URL_DEV : CROSSREF_API_STATUS_URL,
+				[
+					'form_params' => [
+						'doi_batch_id' => $request->getUserVar('batchId'),
+						'type' => 'result',
+						'usr' => $this->getSetting($context->getId(), 'username'),
+						'pwd' => $this->getSetting($context->getId(), 'password'),
+					]
 				]
-			]
-		);
-
-		if ($response->getStatusCode() != 200) {
-			return __('plugins.importexport.common.register.error.mdsError', array('param' => 'No response from server.'));
+			);
+		} catch (GuzzleHttp\Exception\RequestException $e) {
+			$returnMessage = $e->getMessage();
+			if ($e->hasResponse()) {
+				$returnMessage = $e->getResponse()->getBody(true) . ' (' .$e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
+			}
+			return __('plugins.importexport.common.register.error.mdsError', array('param' => $returnMessage));
 		}
+
 		return (string) $response->getBody();
 	}
 
@@ -296,12 +301,25 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 					]
 				]
 			);
-		} catch (GuzzleHttp\Exception\RequestException $e) {
-			if ($e->getResponse()->getStatusCode() != CROSSREF_API_DEPOSIT_ERROR_FROM_CROSSREF) {
-				return [['plugins.importexport.common.register.error.mdsError', 'No response from server.']];
+		 } catch (GuzzleHttp\Exception\RequestException $e) {
+			$returnMessage = $e->getMessage();
+			if ($e->hasResponse()) {
+				$eResponseBody = $e->getResponse()->getBody(true);
+				$eStatusCode = $e->getResponse()->getStatusCode();
+				if ($eStatusCode == CROSSREF_API_DEPOSIT_ERROR_FROM_CROSSREF) {
+					$xmlDoc = new DOMDocument();
+					$xmlDoc->loadXML($eResponseBody);
+					$batchIdNode = $xmlDoc->getElementsByTagName('batch_id')->item(0);
+					$msg = $xmlDoc->getElementsByTagName('msg')->item(0)->nodeValue;
+					$status = CROSSREF_STATUS_FAILED;
+					$this->updateDepositStatus($context, $objects, $status, $batchIdNode->nodeValue, $msg);
+					$this->updateObject($objects);
+					$returnMessage = $msg . ' (' .$eStatusCode . ' ' . $e->getResponse()->getReasonPhrase() . ')';
+				} else {
+					$returnMessage = $eResponseBody . ' (' .$eStatusCode . ' ' . $e->getResponse()->getReasonPhrase() . ')';
+				}
 			}
-
-			$response = $e->getResponse();
+			return [['plugins.importexport.common.register.error.mdsError', $returnMessage]];
 		}
 
 		// Get DOMDocument from the response XML string
