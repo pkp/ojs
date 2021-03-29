@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-11 10:59+0000\n"
+"PO-Revision-Date: 2021-03-29 14:59+0000\n"
 "Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/admin/uz_UZ@"
 "latin/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Masalan,bu agar saytda faqat bitta jurnal mavjud bo‘lsa, foydalidir."
 
 msgid "admin.settings.redirect"
-msgstr "Jurnalni qayta yo‘naltirish"
+msgstr "Jurnalga yo‘naltirish"
 
 #, fuzzy
 msgid "admin.settings.info.success"
@@ -66,3 +66,201 @@ msgstr ""
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr ""
 "Bu til shu sayt va unga bog‘langan barcha jurnallar uchun standart bo‘ladi."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Ushbu tilni aniq olib tashlamoqchimisiz? Bu amal hozirda uni qo‘llayotgan "
+"barcha jurnallarga ta'sir qilishi mumkin."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Ko‘rsatilgan tillar to‘liq amal qilmasligi mumkin."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Sayt ochishi uchun barcha tillarni bosing. Tanlangan tillar ushbu saytda "
+"joylashgan barcha jurnallar uchun joriy qilinadi hamda saytning har bir "
+"sahifasida tilni tanlash menyusida paydo bo‘ladi (bu sozlama ma'lum bir "
+"jurnal sahifasida o‘zgartirilishi mumkin). Agarda faqat bitta til tanlangan "
+"bo‘lsa, tilni o‘zgartirish menyusi ko‘rsatilmaydi, jurnallar uchun qo‘"
+"shimcha til sozlamalari ham ko‘rinmaydi."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Ushbu jurnal uchun ommaviy elektron pochta funksiyasi o'chirilgan. Ushbu "
+"xususiyatni <a href=\"{$siteSettingsUrl}\"> Admin> Sayt sozlamalarida </a> "
+"yoqing."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Jurnal menejeri quyida tanlangan har qanday rolga ommaviy elektron pochta "
+"xabarlarini yubora olmaydi. Elektron pochta orqali xabar berish "
+"xususiyatidan foydalanishni cheklash uchun ushbu parametrdan foydalaning. "
+"Masalan, o'quvchilarga, mualliflarga yoki boshqa elektron pochta xabarlarini "
+"olishga rozi bo'lmagan boshqa yirik foydalanuvchilar guruhlariga elektron "
+"pochta xabarlarini o'chirib qo'yish xavfsizroq bo'lishi mumkin. <br> <br> "
+"Ushbu jurnal uchun ommaviy elektron pochta funktsiyasini to'liq o'chirib "
+"qo'yish mumkin <a href = \"{$ siteSettingsUrl}\"> Admin> Sayt sozlamalari "
+"</a>."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Ommaviy elektron pochta xabarlarini yuborish uchun ruxsat berilishi kerak "
+"bo'lgan joylashtirilgan jurnallarni tanlang. Ushbu xususiyat yoqilganda, "
+"jurnal menejeri o'z jurnalida ro'yxatdan o'tgan barcha foydalanuvchilarga "
+"elektron pochta xabarlarini yuborishi mumkin. <br> <br> Kiruvchi elektron "
+"pochta xabarlarini yuborish uchun ushbu funktsiyadan noto'g'ri foydalanish "
+"ba'zi yurisdiktsiyalardagi spam-qonunlarni buzishiga olib kelishi mumkin. "
+"sizning serveringiz elektron pochta xabarlari spam sifatida bloklangan. "
+"Ushbu funktsiyani yoqishdan oldin texnik maslahat so'rang va undan to'g'ri "
+"foydalanilishini ta'minlash uchun jurnal menejerlari bilan maslahatlashing. "
+"<br> <br> Ushbu funktsiyani cheklashlar har bir jurnal uchun <a href = \"{$ "
+"hostedContextsUrl}\"> Hosted Journals </a>."
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Eslatmani ko'rib chiqish"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Kirish haqidagi bildirishnoma"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Obuna muddati tugashini eslatish"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Ro'yxatdan o'tgan foydalanuvchilar yo'q."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Tanlangan {$ oldAccountCount} hisob (lar) ni \"{$ newUsername}\" "
+"foydalanuvchi nomi bilan birlashtirishga ishonchingiz komilmi? Tanlangan {$ "
+"oldAccountCount} hisoblari keyinchalik mavjud bo'lmaydi. Ushbu harakatni "
+"qaytarib bo'lmaydi."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Barcha ro'yxatdan o'tgan foydalanuvchilar"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Boshqa foydalanuvchi hisobiga qo'shilish uchun foydalanuvchini (yoki bir "
+"nechtasini) tanlang (masalan, kimdir ikkita foydalanuvchi hisobiga ega "
+"bo'lsa). Avval tanlangan hisob (lar) o'chiriladi va har qanday topshiriqlar "
+"va boshqalar ikkinchi hisobga tegishli bo'ladi."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Oldingi foydalanuvchining muallifligi, tahrirlash topshiriqlari va "
+"boshqalarga tegishli bo'lgan foydalanuvchini tanlang."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Birlashtirish"
+
+msgid "admin.mergeUsers"
+msgstr "Foydalanuvchilarni birlashtirish"
+
+msgid "admin.journals.importErrors"
+msgstr "Import muvaffaqiyatli bajarilmadi"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Import usuli talab qilinadi."
+
+msgid "admin.journals.redirect"
+msgstr "OJS 1 URL-larini OJS 2 URL-lariga solishtirish uchun kod yarating"
+
+msgid "admin.journals.transcode"
+msgstr "ISO8859-1 standartidagi metadata transkod kodi"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Obunalarni import qilish"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Mavjud jurnal yo'li yoki yaratish yo'li (masalan, \"ojs\")."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Jurnal tavsifi"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Ushbu jurnalni saytda ochiq ko'rinishini yoqing"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Asosiy til jurnal qo'llab-quvvatlaydigan tillardan biri bo'lishi kerak."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Siz taqdim etgan yo'l allaqachon boshqa jurnal tomonidan ishlatilgan."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Yo'lda faqat harflar, raqamlar va _ va - belgilar bo'lishi mumkin. U harf "
+"yoki raqam bilan boshlanishi va tugashi kerak."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Yo'l kerak."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Sarlavha kerak."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Bu jurnalni aniqlaydigan bitta qisqa so'z yoki qisqartma bo'lishi kerak. "
+"Jurnalning URL manzili {$ sampleUrl} bo'ladi."
+
+msgid "admin.contexts.create"
+msgstr "Jurnal yaratish"
+
+msgid "admin.journals.noneCreated"
+msgstr "Hech qanday jurnal yaratilmagan."
+
+msgid "admin.journals.journalSettings"
+msgstr "Jurnal sozlamalari"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Siz avtomatik ravishda ushbu jurnal menejeri sifatida ro'yxatdan o'tasiz. "
+"Yangi jurnalni yaratgandan so'ng, siz jurnalni dastlabki sozlashni yakunlash "
+"uchun uni sozlash ustasiga yo'naltirilasiz."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt> config.inc.php </tt> dan OJS konfiguratsiyasi sozlamalari."
+
+msgid "admin.systemConfiguration"
+msgstr "OJS konfiguratsiyasi"
+
+msgid "admin.systemVersion"
+msgstr "OJS talqini"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Foydalanuvchini yaratishni yoqing (agar ushbu autentifikatsiya plagini "
+"tomonidan qo'llab-quvvatlansa). Ushbu autentifikatsiya manbai bilan OJS "
+"ichida yaratilgan foydalanuvchilar avtomatik ravishda masofaviy "
+"autentifikatsiya manbasiga qo'shiladi, agar ular allaqachon mavjud bo'lmasa. "
+"Bundan tashqari, agar ushbu manba standart autentifikatsiya manbai bo'lsa, "
+"foydalanuvchini ro'yxatdan o'tkazish orqali yaratilgan OJS qayd yozuvlari "
+"masofaviy autentifikatsiya manbasiga qo'shiladi."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Foydalanuvchi parolini o'zgartirishni yoqing (agar ushbu autentifikatsiya "
+"plaginida qo'llab-quvvatlansa). Ushbu parametrni yoqish foydalanuvchilarga "
+"OJS ichidagi parollarini o'zgartirish va unutilgan parolni tiklash uchun OJS "
+"\"yo'qolgan parol\" xususiyatidan foydalanish imkoniyatini beradi. Agar "
+"ushbu parametr yoqilmagan bo'lsa, ushbu funktsiyalar ushbu autentifikatsiya "
+"manbasiga ega foydalanuvchilar uchun mavjud bo'lmaydi."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Foydalanuvchi profilini sinxronlashtirishni yoqing (agar ushbu "
+"autentifikatsiya plaginida qo'llab-quvvatlansa). Foydalanuvchi tizimga "
+"kirganda foydalanuvchi profil ma'lumotlari avtomatik ravishda uzoqdagi "
+"manbadan yangilanadi va OJS tarkibidagi profil o'zgarishlari (shu jumladan "
+"parol o'zgarishlari) masofaviy manbada avtomatik ravishda yangilanadi. Agar "
+"ushbu parametr yoqilmagan bo'lsa, OJS profil ma'lumotlari masofaviy manba "
+"profil ma'lumotlaridan alohida saqlanadi."
+
+msgid "admin.auth.ojs"
+msgstr "OJS foydalanuvchilar bazasi"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Ushbu tizimda qo'llab-quvvatlashni o'rnatish uchun qo'shimcha joylarni "
+"tanlang. Mahalliy jurnallar tomonidan ishlatilishidan oldin ularni o'rnatish "
+"kerak. Yangi tillarni qo'llab-quvvatlash haqida ma'lumot olish uchun OJS "
+"hujjatlarini ko'ring."
