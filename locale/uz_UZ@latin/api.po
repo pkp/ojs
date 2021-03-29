@@ -1,2 +1,69 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-03-29 14:59+0000\n"
+"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/api/uz_UZ@"
+"latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Siz ushbu bosqichidagi faylni to‘plam bilan bog'lay olmaysiz."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Siz so'ragan nashr ushbu taqdimotning bir qismi emas."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Siz so'ragan nashr ushbu jurnalning bir qismi emas."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Siz tanlagan to'lov usuli qo'llab-quvvatlanmaydi."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Ushbu elektron pochta shablonini boshqa jurnalga ko'chirishga ruxsatingiz "
+"yo'q."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Siz so'ragan jurnal topilmadi."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Sizda ushbu jurnalni o'chirishga ruxsat yo'q."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Ushbu jurnalni tahrirlash uchun sizning ruxsatingiz yo'q."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Siz ushbu jurnalni sayt miqyosidagi API-dan tahrir qila olmaysiz."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Jurnalning API-si yoki butun dunyo bo'ylab API-ga murojaat qilmaguningizcha, "
+"ushbu jurnalni ko'rishingiz yoki tahrirlashingiz mumkin emas."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Ushbu jurnalni ko'rish uchun sizda ruxsat yo'q."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Siz faqat yoqilgan jurnallarni ko'rishingiz mumkin."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Yuborish yoki tahrirlash uchun siz jurnalning API so'nggi nuqtasiga so'rov "
+"yuborishingiz kerak."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Sizda nashr qilinmagan nashrlarni ko'rish uchun ruxsat yo'q."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Siz topshirish jurnalini o'zgartira olmaysiz."
+
+msgid "api.emails.403.disabled"
+msgstr "Ushbu jurnal uchun elektron pochta xabarlari xususiyati yoqilmagan."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Siz so'ragan e'lon ushbu jurnalning bir qismi emas."
