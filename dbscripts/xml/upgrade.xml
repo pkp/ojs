@@ -205,6 +205,11 @@
 		<note file="docs/release-notes/README-3.3.0" />
 	</upgrade>
 
+	<upgrade minversion="3.0.0.0" maxversion="3.3.0.9">
+		<migration class="classes.migration.upgrade.OJSv3_3_1_i6872_UrlPathMigration" />
+		<note file="docs/release-notes/README-3.3.1" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
