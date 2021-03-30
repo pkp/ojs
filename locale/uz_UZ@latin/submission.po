@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-29 17:24+0000\n"
+"PO-Revision-Date: 2021-03-31 13:55+0000\n"
 "Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "uz_UZ@latin/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "Yangi materialyuborish"
+msgstr "Yangi material yuborish"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Yangi material yuborishni boshlang"
@@ -40,3 +40,12 @@ msgstr "Mening rolimdan foydalanib yuboring ..."
 
 msgid "submission.submit.title"
 msgstr "Maqola yuboring"
+
+msgid "submission.submit.noContext"
+msgstr "Ushbu material uchun jurnal topilmadi."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Annotatsiya {$ wordCount} yoki undan kam so'z bo'lishi kerak."
+
+msgid "grid.action.workflow"
+msgstr "Material yuborish jarayoni"
