@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-23 10:21+0000\n"
-"Last-Translator: Zurab Tskvitinidze <zurab_tsqvitinidze@iliauni.edu.ge>\n"
+"PO-Revision-Date: 2021-03-31 13:55+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ka_GE/>\n"
 "Language: ka_GE\n"
@@ -22,3 +22,273 @@ msgstr "გადადით სხვა ჟურნალზე:"
 
 msgid "context.current"
 msgstr "ჟურნალი:"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "მოწონებულია"
+
+msgid "payment.unpaid"
+msgstr "გადაუხდელი"
+
+msgid "navigation.subscriptions"
+msgstr "გამოწერები"
+
+msgid "payment.subscription.expires"
+msgstr "ვადა გასდის"
+
+msgid "payment.type.submission"
+msgstr "წარდგენის საფასური"
+
+msgid "payment.paid"
+msgstr "გადახდილია"
+
+msgid "donations.thankYou"
+msgstr "გმადლობთ"
+
+msgid "about.memberships"
+msgstr "წევრობა"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "საფასური"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "ხანგრძლივობა"
+
+msgid "about.subscriptionTypes.format"
+msgstr "ფორმატი"
+
+msgid "about.subscriptionTypes.name"
+msgstr "სახელი"
+
+msgid "about.subscriptions"
+msgstr "გამოწერები"
+
+msgid "about.onlineSubmissions.register"
+msgstr "რეგისტრაცია"
+
+msgid "about.onlineSubmissions.login"
+msgstr "შესვლა"
+
+msgid "about.editorialTeam.biography"
+msgstr "ბიოგრაფია"
+
+msgid "about.contact"
+msgstr "კონტაქტი"
+
+msgid "archive.archives"
+msgstr "არქივები"
+
+msgid "current.current"
+msgstr "მიმდინარე"
+
+msgid "site.journalRegister"
+msgstr "რეგისტრაცია"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "დამატება"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "წაშლა"
+
+msgid "user.subscriptions.form.domain"
+msgstr "დომენი"
+
+msgid "user.subscriptions.form.membership"
+msgstr "წევრობა"
+
+msgid "user.subscriptions.renew"
+msgstr "განახლება"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "აღწერა"
+
+msgid "user.subscriptions.status"
+msgstr "სტატუსი"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "ჩემი გამოწერები"
+
+msgid "submission.logType.layout"
+msgstr "განლაგება"
+
+msgid "submission.logType.review"
+msgstr "გამოხმაურება"
+
+msgid "submission.logType.editor"
+msgstr "რედაქტორი"
+
+msgid "submission.logType.author"
+msgstr "ავტორი"
+
+msgid "submission.logType.article"
+msgstr "სტატია"
+
+msgid "reviewer.article.schedule"
+msgstr "განრიგი"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "კომენტარები"
+
+msgid "reviewer.averageQuality"
+msgstr "შეფასება"
+
+msgid "reviewer.completedReviews"
+msgstr "მზადაა"
+
+msgid "search.results.orderDir.desc"
+msgstr "კლებადობით"
+
+msgid "search.results.orderDir.asc"
+msgstr "ზრდადობით"
+
+msgid "search.results.orderBy.author"
+msgstr "ავტორი"
+
+msgid "subscriptions.status.active"
+msgstr "აქტიური"
+
+msgid "subscriptions.status"
+msgstr "სტატუსი"
+
+msgid "subscriptions.inactive"
+msgstr "არააქტიური"
+
+msgid "subscriptionTypes.format.print"
+msgstr "ბეჭდვა"
+
+msgid "subscriptionTypes.format.online"
+msgstr "ონლაინში"
+
+msgid "subscriptionTypes.format"
+msgstr "ფორმატი"
+
+msgid "subscriptionTypes.months"
+msgstr "თვეები"
+
+msgid "subscriptionTypes.month"
+msgstr "თვე"
+
+msgid "subscriptionTypes.years"
+msgstr "წლები"
+
+msgid "subscriptionTypes.year"
+msgstr "წელი"
+
+msgid "subscriptionTypes.currency"
+msgstr "ვალუტა"
+
+msgid "issue.toc"
+msgstr "თავფურცელი"
+
+msgid "issue.year"
+msgstr "წელი"
+
+msgid "issue.no"
+msgstr "ნომერი."
+
+msgid "issue.title"
+msgstr "სათაური"
+
+msgid "journal.path"
+msgstr "მდებარეობა"
+
+msgid "submissions.published"
+msgstr "გამოქვეყნებული"
+
+msgid "submissions.step3"
+msgstr "ნაბიჯი 3"
+
+msgid "submissions.step1"
+msgstr "ნაბიჯი 1"
+
+msgid "submission.sent"
+msgstr "გაგზავნილი"
+
+msgid "category.category"
+msgstr "კატეგორიები"
+
+msgid "article.fontSize.large.altText"
+msgstr "დიდი"
+
+msgid "article.fontSize.medium.altText"
+msgstr "საშუალო"
+
+msgid "article.fontSize.small.altText"
+msgstr "პატარა"
+
+msgid "article.fontSize"
+msgstr "შრიფტის ზომა"
+
+msgid "article.comments.enable"
+msgstr "ჩართვა"
+
+msgid "article.comments.disable"
+msgstr "გამორთვა"
+
+msgid "article.comments.sectionDefault"
+msgstr "ნაგულისხმევი"
+
+msgid "article.coverPage.altText"
+msgstr "ყდის სურათი"
+
+msgid "article.details"
+msgstr "დეტალები"
+
+msgid "article.language"
+msgstr "ენა"
+
+msgid "article.subject"
+msgstr "საკვანძო სიტყვები"
+
+msgid "article.file"
+msgstr "ფაილი"
+
+msgid "article.metadata"
+msgstr "მეტა-მონაცემები"
+
+msgid "article.authors"
+msgstr "ავტორები"
+
+msgid "article.title"
+msgstr "სათაური"
+
+msgid "common.publications"
+msgstr "სტატიები"
+
+msgid "common.publication"
+msgstr "სტატია"
+
+msgid "article.articles"
+msgstr "სტატიები"
+
+msgid "article.article"
+msgstr "სტატია"
+
+msgid "section.section"
+msgstr "სექცია"
+
+msgid "common.queue.short.completed"
+msgstr "დაარქივება"
+
+msgid "common.queue.long.completed"
+msgstr "დაარქივება"
+
+msgid "common.queue.short.active"
+msgstr "აქტიური"
+
+msgid "common.queue.long.active"
+msgstr "აქტიური"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "არქივები"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "არქივები"
+
+msgid "navigation.current"
+msgstr "მიმდინარე"
+
+msgid "common.payments"
+msgstr "გადახდები"
+
+msgid "common.payment"
+msgstr "გადახდა"
