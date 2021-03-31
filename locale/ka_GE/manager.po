@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-20 17:04+0000\n"
+"PO-Revision-Date: 2021-03-31 13:55+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ka_GE/>\n"
@@ -139,3 +139,195 @@ msgstr "გამოცემის გამოქვეყნების თ�
 
 msgid "manager.distribution.access"
 msgstr "წვდომა"
+
+msgid "stats.publications.galleys"
+msgstr "ფაილები"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "წარმატებული რეგისტრაცია!"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "რეგისტრაცია"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "ექსპორტი"
+
+msgid "plugins.importexport.common.action"
+msgstr "მოქმედება"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "რეგისტრირებული"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "პაროლი"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "სტატიები"
+
+msgid "plugins.importexport.common.settings"
+msgstr "პარამეტრები"
+
+msgid "grid.genres.title.short"
+msgstr "კომპონენტები"
+
+msgid "grid.category.path"
+msgstr "მდებარეობა"
+
+msgid "manager.setup.categories"
+msgstr "კატეგორიები"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "პარამეტრები"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "გამოწერები"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "ფორმატი"
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "ხანგრძლივობა"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "აღწერა"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "ვალუტა"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "საფასური"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "ჩასწორება"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "ხანგრძლივობა"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "შექმნა"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "გამოწერები"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "საფასური"
+
+msgid "manager.subscriptions.user"
+msgstr "მომხმარებელი"
+
+msgid "manager.subscriptions.select"
+msgstr "მონიშვნა"
+
+msgid "manager.subscriptions.notes"
+msgstr "შენიშვნები"
+
+msgid "manager.subscriptions.membership"
+msgstr "წევრობა"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "დამატება"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "წაშლა"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "დომენი"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "შენიშვნები"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "წევრობა"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "კონტაქტი"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "მომხმარებელი"
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "დასრულების თარიღი"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "დაწყების თარიღი"
+
+msgid "manager.subscriptions.form.status"
+msgstr "სტატუსი"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "ყველა"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "ჩასწორება"
+
+msgid "manager.subscriptions.domain"
+msgstr "დომენი"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "დაწყების თარიღი"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "დასაწყისი"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "დასრულების თარიღი"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "დასასრული"
+
+msgid "manager.subscriptions.renew"
+msgstr "განახლება"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "შექმნა"
+
+msgid "manager.subscriptions"
+msgstr "გამოწერები"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "გამოწერები"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "უარყოფა"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "მიღება"
+
+msgid "manager.setup.userRegistration"
+msgstr "მომხმარებლის რეგისტრაცია"
+
+msgid "manager.setup.useThumbnail"
+msgstr "ესკიზი"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "საკვანძო სიტყვები"
+
+msgid "manager.setup.policies"
+msgstr "პოლიტიკები"
+
+msgid "manager.setup.note"
+msgstr "შენიშვნა"
+
+msgid "manager.setup.lists"
+msgstr "ჩამონათვალი"
+
+msgid "manager.setup.institution"
+msgstr "დაწესებულება"
+
+msgid "manager.setup.information"
+msgstr "ინფორმაცია"
+
+msgid "manager.setup.details"
+msgstr "დეტალები"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "გაცნობითი ხასიათის შესავალი"
+
+msgid "manager.setup.announcements"
+msgstr "განცხადებები"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "შიგთავსი"
+
+msgid "manager.payment.action"
+msgstr "მოქმედება"
