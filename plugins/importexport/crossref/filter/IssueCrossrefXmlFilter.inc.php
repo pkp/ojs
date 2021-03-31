@@ -180,15 +180,21 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		$deployment->setIssue($issue);
 
 		$journalIssueNode = $doc->createElementNS($deployment->getNamespace(), 'journal_issue');
+		
+		if ($issue->getLocalizedTitle() ) {
+			$journalTitlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
+			$journalTitlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($issue->getLocalizedTitle(), ENT_COMPAT, 'UTF-8')));
+			$journalIssueNode->appendChild($journalTitlesNode);
+		}
 		if ($issue->getDatePublished()) {
 			$journalIssueNode->appendChild($this->createPublicationDateNode($doc, $issue->getDatePublished()));
 		}
-		if ($issue->getVolume() && $issue->getShowVolume()){
+		if ($issue->getVolume() ){
 			$journalVolumeNode = $doc->createElementNS($deployment->getNamespace(), 'journal_volume');
 			$journalVolumeNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', htmlspecialchars($issue->getVolume(), ENT_COMPAT, 'UTF-8')));
 			$journalIssueNode->appendChild($journalVolumeNode);
 		}
-		if ($issue->getNumber() && $issue->getShowNumber()) {
+		if ($issue->getNumber() ) {
 			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'issue', htmlspecialchars($issue->getNumber(), ENT_COMPAT, 'UTF-8')));
 		}
 		if ($issue->getDatePublished() && $issue->getStoredPubId('doi')) {
