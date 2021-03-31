@@ -272,7 +272,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 */
 	function depositXML($objects, $context, $filename) {
 		$status = null;
-		$msg = null;
+		$msgSave = null;
 
 		$httpClient = Application::get()->getHttpClient();
 		assert(is_readable($filename));
@@ -311,8 +311,9 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 					$xmlDoc->loadXML($eResponseBody);
 					$batchIdNode = $xmlDoc->getElementsByTagName('batch_id')->item(0);
 					$msg = $xmlDoc->getElementsByTagName('msg')->item(0)->nodeValue;
+					$msgSave = $msg . PHP_EOL . $eResponseBody;
 					$status = CROSSREF_STATUS_FAILED;
-					$this->updateDepositStatus($context, $objects, $status, $batchIdNode->nodeValue, $msg);
+					$this->updateDepositStatus($context, $objects, $status, $batchIdNode->nodeValue, $msgSave);
 					$this->updateObject($objects);
 					$returnMessage = $msg . ' (' .$eStatusCode . ' ' . $e->getResponse()->getReasonPhrase() . ')';
 				} else {
@@ -351,7 +352,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 		// Update the status
 		if ($status) {
-			$this->updateDepositStatus($context, $objects, $status, $batchIdNode->nodeValue, $msg);
+			$this->updateDepositStatus($context, $objects, $status, $batchIdNode->nodeValue, $msgSave);
 			$this->updateObject($objects);
 		}
 
