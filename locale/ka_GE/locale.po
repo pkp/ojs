@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-01 10:06+0000\n"
+"PO-Revision-Date: 2021-04-01 10:14+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ka_GE/>\n"
@@ -1246,3 +1246,139 @@ msgstr "Open Journal Systems"
 
 msgid "reviewer.article.enterReviewForm"
 msgstr "დააჭირეთ ხატულას, რომ შეავსოთ რეცენზიის ფორმა."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "ჟურნალის ამ მდებარეობით \"{$journalPath}\" ვერ ხერხდება ჟურნალის ნახვა."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "ძიების ეს ფორმა არ იძლევა ჟურნალის ინდექსირების საშუალებას."
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "ინდექსირება \"{$journalName}\""
+
+msgid "search.authorDetails"
+msgstr "ავტორის დეტალები"
+
+msgid "search.authorIndex"
+msgstr "ავტორთა სიის დათვალიერება"
+
+msgid "search.allJournals"
+msgstr "ყველა ჟურნალი"
+
+msgid "search.withinJournal"
+msgstr "ჟურნალში"
+
+msgid "search.searchFor"
+msgstr "სტატიების ძებნა"
+
+msgid "search.browseAuthorIndex"
+msgstr "ავტორთა სიის დათვალიერება"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "რეცენზენტის რეკომენდაციის დაყენება, ან შეცვლა."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"გარდა ამისა, ფაილების ატვირთვა შეგიძლიათ რედაქტორის, ან/და ავტორისთვის, "
+"კონსულტაციისთვის."
+
+msgid "reviewer.competingInterests"
+msgstr "ინტერესთა კონფლიქტი"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "მასალა განსახილველად"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "ატვირთული ფაილები"
+
+msgid "reviewer.article.submitReview"
+msgstr "რედაქტორისთვის მიმოხილვის გაგზავნა"
+
+msgid "reviewer.article.sendReminder"
+msgstr "შეხსენების გაგზავნა"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "მასალის რედაქტორი"
+
+msgid "reviewer.pendingReviews"
+msgstr "სტატიები რეცენზიის მოლოდინში"
+
+msgid "sectionEditor.regrets"
+msgstr "უარი"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "უარი"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"ამ კორექტორის ხელახლა გაფრთხილება ხელახლა გაფრთხილება განაახლებს მათ "
+"დავალებას. დარწმუნებული ხართ, რომ ამის გაკეთება გსურთ?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"ამ დაკაბადონების რედაქტორის ხელახლა გაფრთხილება განაახლებს მათ დავალებას. "
+"დარწმუნებული ხართ, რომ ამის გაკეთება გსურთ?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"ამ ავტორს კვლავ შეატყობინებს დავალებას. დარწმუნებული ხართ, რომ ამის გაკეთება "
+"გსურთ?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"ამ ლიტერატურული რედაქტორის ხელახლა გაფრთხილება განაახლებს მათ დავალებას. "
+"დარწმუნებული ხართ, რომ ამის გაკეთება გსურთ?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "მასალები არ არის დანიშნული."
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "დასრულებული სარედაქციო დავალებები"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "აქტიური სარედაქციო დავალებები"
+
+msgid "search.results.similarDocuments"
+msgstr "მსგავსი დოკუმენტები"
+
+msgid "search.results.orderBy.relevance"
+msgstr "შესაბამისობა"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "პოპულარობა (ბოლო თვე)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "პოპულარობა (მთლიანად)"
+
+msgid "search.results.orderBy.journal"
+msgstr "ჟურნალის სათაური"
+
+msgid "search.results.orderBy.issue"
+msgstr "გამოცემა"
+
+msgid "search.results.orderBy.date"
+msgstr "გამოქვეყნების თარიღი"
+
+msgid "search.results.orderBy.article"
+msgstr "სტატიის სათაური"
+
+msgid "search.results.orderBy"
+msgstr "შედეგების დახარისხება"
+
+msgid "section.policy"
+msgstr "სექციის წესები"
+
+msgid "section.abbreviation.example"
+msgstr "(მაგალითად, სტატიები = სტ)"
+
+msgid "section.abbreviation"
+msgstr "აბრევიატურა"
+
+msgid "section.title"
+msgstr "სექციის სათაური"
+
+msgid "section.sections"
+msgstr "სექციები"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "გთხოვთ, შეავსოთ საჭირო ველები."
