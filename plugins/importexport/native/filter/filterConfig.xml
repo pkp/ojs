@@ -81,7 +81,7 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::lib.pkp.classes.submission.SubmissionFile" />
+			outputType="class::lib.pkp.classes.submission.SubmissionFile[]" />
 		<!-- Article Galley native XML output -->
 		<filterGroup
 			symbolic="article-galley=>native-xml"
@@ -109,7 +109,7 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.publication.Publication" />
+			outputType="class::classes.publication.Publication[]" />
 	</filterGroups>
 	<filters>
 		<!-- Native XML article output -->
