@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-01 10:14+0000\n"
+"PO-Revision-Date: 2021-04-02 12:16+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ka_GE/>\n"
@@ -733,10 +733,9 @@ msgstr ""
 "წყაროზე დაფუძნებული პროგრამული უზრუნველყოფაა, ჟურნალებისა და გამოცემების "
 "სამართავად. აღნიშნული პროგრამული უზრუნველყოფა შემუშავებულია, მხარდაჭერილია "
 "და თავისუფლად ვრცელდება Public Knowledge Project-ის მიერ GNU General Public "
-"License-ზე დაყრდნობით. ეწვიეთ PKP-ს საიტს, რათა <a href=“http://pkp.sfu.ca/“>"
-"გაიგოთ მეტი</a>. გთხოვთ, <a href=“{$contactUrl}”>დაუკავშირიდთ ჟურნალს</a> "
-"უშუალოდ, თუ გაქვთ კითხვები ჟურნალის და მასალების გაგზავნის შესახებ აღნიშნულ "
-"ჟურნალში."
+"License-ზე დაყრდნობით. ეწვიეთ PKP-ს საიტს, რათა <a href=\"http://pkp.sfu.ca/"
+"\">გაიგოთ მეტი</a>. გთხოვთ, დაუკავშირიდთ ჟურნალს უშუალოდ, თუ გაქვთ კითხვები "
+"ჟურნალის და მასალების გაგზავნის შესახებ აღნიშნულ ჟურნალში."
 
 msgid "about.aboutOJSJournal"
 msgstr ""
@@ -744,10 +743,10 @@ msgstr ""
 "წყაროზე დაფუძნებული პროგრამული უზრუნველყოფაა, ჟურნალებისა და გამოცემების "
 "სამართავად. აღნიშნული პროგრამული უზრუნველყოფა შემუშავებულია, მხარდაჭერილია "
 "და თავისუფლად ვრცელდება Public Knowledge Project-ის მიერ GNU General Public "
-"License-ზე დაყრდნობით. ეწვიეთ PKP-ს საიტს, რათა <a href=“http://pkp.sfu.ca/“>"
-"გაიგოთ მეტი</a>. გთხოვთ, <a href=“{$contactUrl}”>დაუკავშირიდთ ჟურნალს</a> "
-"უშუალოდ, თუ გაქვთ კითხვები ჟურნალის და მასალების გაგზავნის შესახებ აღნიშნულ "
-"ჟურნალში."
+"License-ზე დაყრდნობით. ეწვიეთ PKP-ს საიტს, რათა <a href=\"http://pkp.sfu.ca/"
+"\">გაიგოთ მეტი</a>. გთხოვთ, <a href=\"{$contactUrl}\">დაუკავშირიდთ "
+"ჟურნალს</a> უშუალოდ, თუ გაქვთ კითხვები ჟურნალის და მასალების გაგზავნის "
+"შესახებ აღნიშნულ ჟურნალში."
 
 msgid "about.aboutSoftware"
 msgstr "Open Journal Systems-ის შესახებ"
@@ -1382,3 +1381,1049 @@ msgstr "სექციები"
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "გთხოვთ, შეავსოთ საჭირო ველები."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS ვერსია {$version}</h4>\n"
+"\n"
+"<p>Thank you for downloading the Public Knowledge Project's <strong>Open "
+"Journal Systems</strong>. Before proceeding, please read the <a href=\""
+"{$baseUrl}/docs/README.md\">README</a> file included with this software. For "
+"more information about the Public Knowledge Project and its software "
+"projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">"
+"PKP web site</a>. If you have bug reports or technical support inquiries "
+"about Open Journal Systems, see the <a href=\"http://forum.pkp.sfu.ca\" "
+"target=\"_blank\">support forum</a> or visit PKP's online <a href=\""
+"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting "
+"system</a>. Although the support forum is the preferred method of contact, "
+"you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Recommended system requirements</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; you are currently using PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >="
+" 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Operating system: Any OS that supports the above software, including <"
+"a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\""
+"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle."
+"com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" "
+"target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\""
+">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>As PKP does not have the resources to test every possible combination of "
+"software versions and platforms, no guarantee of correct operation or "
+"support is implied.</p>\n"
+"\n"
+"<p>Changes to these settings can be made after installation by editing the "
+"file <tt>config.inc.php</tt> in the base OJS directory, or using the site "
+"administration web interface.</p>\n"
+"\n"
+"<h4>Supported database systems</h4>\n"
+"\n"
+"<p>OJS has currently only been tested on MySQL and PostgreSQL, although "
+"other database management systems supported by <a href=\""
+"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> may work (in "
+"full or partially). Compatibility reports and/or code patches for "
+"alternative DBMSs can be sent to the OJS team.</p>\n"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS ვერსია {$version}</h4>\n"
+"\n"
+"<p>Thank you for downloading the Public Knowledge Project's <strong>Open "
+"Journal Systems</strong>. Before proceeding, please read the <a href=\""
+"{$baseUrl}/docs/README.md\">README</a> and <a href=\"{$baseUrl}/docs/UPGRADE."
+"md\">UPGRADE</a> files included with this software. For more information "
+"about the Public Knowledge Project and its software projects, please visit "
+"the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If "
+"you have bug reports or technical support inquiries about Open Journal "
+"Systems, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">"
+"support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-"
+"lib#issues\" target=\"_blank\">bug reporting system</a>. Although the "
+"support forum is the preferred method of contact, you can also email the "
+"team at <a href=\"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>.</p>\n"
+"<p>It is <strong>strongly recommended</strong> that you back up your "
+"database, files directory, and OJS installation directory before "
+"proceeding.</p>\n"
+"<p>If you are running in <a href=\"http://www.php.net/features.safe-mode\" "
+"target=\"_blank\">PHP Safe Mode</a>, please ensure that the "
+"max_execution_time directive in your php.ini configuration file is set to a "
+"high limit. If this or any other time limit (e.g. Apache's \"Timeout\" "
+"directive) is reached and the upgrade process is interrupted, manual "
+"intervention will be required.</p>"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"ძებნის რჩევები: <ul>\n"
+"<li>Search terms are case-insensitive</li>\n"
+"<li>Common words are ignored</li>\n"
+"<li>By default only articles containing <em>all</em> terms in the query are "
+"returned (i.e., <em>AND</em> is implied)</li>\n"
+"<li>Combine multiple words with <em>OR</em> to find articles containing "
+"either term; e.g., <em>education OR research</em></li>\n"
+"<li>Use parentheses to create more complex queries; e.g., <em>archive (("
+"journal OR conference) NOT theses)</em></li>\n"
+"<li>Search for an exact phrase by putting it in quotes; e.g., <em>\"open "
+"access publishing\"</em></li>\n"
+"<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; "
+"e.g. <em>online -politics</em> or <em>online NOT politics</em></li>\n"
+"<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of "
+"characters; e.g., <em>soci* morality</em> would match documents containing \""
+"sociological\" or \"societal\"</li>\n"
+"</ul>"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>შემოთავაზებული Creative Commons საავტორო უფლებების შესახებ "
+"შენიშვნები</h3>\n"
+"<h4>1. შემოთავაზებული პოლიტიკა ჟურნალებისთვის, რომელიც გთავაზობთ ღია "
+"წვდომას</h4>\n"
+"ავტორები, რომლებიც ამ ჟურნალთან ერთად აქვეყნებენ, ეთანხმებით შემდეგ პირობებს:"
+"\n"
+"<ol type=\"a\">\n"
+"\t<li>ავტორები ინარჩუნებენ საავტორო უფლებებს და ჟურნალს ანიჭებენ პირველი "
+"გამოქვეყნების უფლებას ნამუშევართან ერთად, რომელიც ერთდროულად ლიცენზირებულია <"
+"a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">"
+"Creative Commons Attribution License</a> რომელიც საშუალებას აძლევს სხვებს "
+"გაუზიარონ ნამუშევარი ნაშრომის საავტორო უფლებების აღიარებით და ამ ჟურნალში "
+"თავდაპირველი გამოქვეყნებით.</li>\n"
+"\t<li>ავტორებს შეუძლიათ დადონ ცალკეული, დამატებითი სახელშეკრულებო "
+"შეთანხმებები ჟურნალის გამოქვეყნებული ნაშრომის არა-ექსკლუზიური "
+"განაწილებისათვის (მაგ., განათავსონ იგი ინსტიტუციონალურ საცავში ან "
+"გამოაქვეყნონ წიგნში), მისი აღიარებით. თავდაპირველი გამოქვეყნება ამ "
+"ჟურნალში.</li>\n"
+"\t<li>ავტორებს უფლება აქვთ და განათავსონ თავიანთი ნამუშევარი ინტერნეტით ("
+"მაგ., ინსტიტუციურ საცავებში ან მათ ვებგვერდზე) წარდგენის დაწყებამდე და "
+"პროცესში, რადგან ამან შეიძლება გამოიწვიოს პროდუქტიული გაცვლა, აგრეთვე "
+"გამოქვეყნებული ნაშრომის უფრო ადრეული და უფრო დიდი ციტირება. (იხილეთ <a "
+"target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">ღია "
+"წვდომის ეფექტი</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. შემოთავაზებული პოლიტიკა ჟურნალებისთვის, რომელიც გთავაზობთ შეაჩერეს "
+"ღია წვდომა</h4>\n"
+"ავტორები, რომლებიც ამ ჟურნალთან ერთად აქვეყნებენ, ეთანხმებით შემდეგ პირობებს:"
+"\n"
+"<ol type=\"a\">\n"
+"\t<li>ავტორები ინარჩუნებენ საავტორო უფლებებს და ჟურნალს ანიჭებენ პირველი "
+"გამოქვეყნების უფლებას, ნამუშევრით [განსაზღვრეთ დროის პერიოდი] პუბლიკაციის "
+"შემდეგ ერთდროულად ლიცენზირებულია <a target=\"_new\" href=\""
+"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution "
+"License</a> რომელიც საშუალებას აძლევს სხვებს გაუზიარონ ნამუშევარი ნაშრომის "
+"საავტორო უფლებების აღიარებით და ამ ჟურნალში თავდაპირველი გამოქვეყნებით.</li>"
+"\n"
+"\t <li>ავტორებს შეუძლიათ დადონ ცალკეული, დამატებითი სახელშეკრულებო "
+"შეთანხმებები ჟურნალის გამოქვეყნებული ნაშრომის არა-ექსკლუზიური "
+"განაწილებისათვის (მაგ., განათავსონ იგი ინსტიტუციონალურ საცავში ან "
+"გამოაქვეყნონ წიგნში), მისი აღიარებით. თავდაპირველი გამოქვეყნება ამ "
+"ჟურნალში.</li>\n"
+"\t <li>ავტორებს უფლება აქვთ და განათავსონ თავიანთი ნამუშევარი ინტერნეტით ("
+"მაგ., ინსტიტუციურ საცავებში ან მათ ვებგვერდზე) წარდგენის დაწყებამდე და "
+"პროცესში, რადგან ამან შეიძლება გამოიწვიოს პროდუქტიული გაცვლა, აგრეთვე "
+"გამოქვეყნებული ნაშრომის უფრო ადრეული და უფრო დიდი ციტირება. (იხილეთ <a "
+"target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"> "
+"ღია წვდომის ეფექტი</a>).</li>\n"
+"</ol>"
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"ხელმისაწვდომია OJS-ის ახალი ვერსია! თქვენ ამჟამად იყენებთ OJS-ს "
+"{$currentVersion}. უახლესი ვერსია არის OJS {$latestVersion}. გთხოვთ, "
+"დაუკავშირდეთ თქვენს საიტის ადმინისტრატორს ({$siteAdminName}, <a href=\""
+"mailto:{$siteAdminEmail}\">{$ siteAdminEmail} </a>), რომ შეატყობინოთ მათ ამ "
+"ახალი გამოშვების შესახებ. დამატებითი ინფორმაცია შეგიძლიათ იხილოთ <a href=\""
+"http://pkp.sfu.ca/ojs_download\" target=\"_new\">აქ</a>."
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p> OJS- ის განახლება ვერსიაზე {$version} წარმატებით დასრულდა. </p>\n"
+"<p> არ უნდა დაგვავიწყდეს, რომ დააყენოთ “დაინსტალირებული” პარამეტრი თქვენს "
+"config.inc.php კონფიგურაციის ფაილში <em>ჩართული</em>. </p>\n"
+"<p> თუ თქვენ ჯერ არ დარეგისტრირებულხართ და გსურთ მიიღოთ სიახლეები და "
+"განახლებები, <strong> გთხოვთ დარეგისტრირდეთ შემდეგ მისამართზე: <a href=\""
+"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/"
+"register</a>. </strong> თუ თქვენ გაქვთ შეკითხვები ან კომენტარები, ეწვიეთ <a "
+"href=\"http://forum.pkp.sfu.ca\" target=\"_new\">მხარდაჭერის ფორუმი </a>. "
+"</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p> OJS- ის ინსტალაცია წარმატებით დასრულდა. </p>\n"
+"<p> სისტემის გამოყენების დასაწყებად, <a href=\"{$loginUrl}\">შედით სისტემაში "
+"</a> წინა გვერდზე შეყვანილი მომხმარებლის სახელითა და პაროლით. </p>\n"
+"<p> თუ გსურთ იყოთ PKP საზოგადოების ნაწილი, შეგიძლიათ: </p>\n"
+"<ol>\n"
+"\t<li> წაიკითხეთ <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP "
+"ბლოგი </a> და მიჰყევით <a href=\"http://pkp.sfu.ca/blog/feed\" target=\""
+"_new\">RSS არხი </a> სიახლეებისა და განახლებებისთვის. </li>\n"
+"\t<li> ეწვიეთ <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">დამხმარე "
+"ფორუმს </a>, თუ კითხვები ან კომენტარები გაქვთ. </li>\n"
+"</ol>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"უნიკოდის (UTF-8) სრული მხარდაჭერისთვის, სიმბოლოების ნაკრების ყველა "
+"პარამეტრისთვის აირჩიეთ UTF-8. გთხოვთ გაითვალისწინოთ, რომ უნიკოდის სრული "
+"მხარდაჭერა მოითხოვს PHP შედგენას <a href=\"http://www.php.net/mbstring\" "
+"target=\"_blank\">mbstring </a> ბიბლიოთეკის მხარდაჭერით (ნაგულისხმევად "
+"ჩართულია უმეტეს ბოლო PHP ინსტალაციები). შეიძლება პრობლემები შეგექმნათ "
+"გაფართოებული სიმბოლოების გამოყენებით, თუ თქვენი სერვერი არ აკმაყოფილებს ამ "
+"მოთხოვნებს.\n"
+"<br /> <br />\n"
+"თქვენი სერვერი ამჟამად მხარს უჭერს mbstring- ს: <strong> {$ supportMBString} "
+"</strong>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li> მონიშნულ ერთეულებში მითითებულია, რომ რედაქტორი მოითხოვს მოქმედებას, "
+"რომელსაც აწერია შემდეგი:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">კოპირების ეტაპზე საჭიროა მოქმედება "
+"</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">საჭიროა მოქმედება განლაგების "
+"რედაქტირების ეტაპზე </li>\n"
+"\t\t\t<li class=\"higlightProofreading\">მოქმედება საჭიროა კორექტორის ეტაპზე "
+"</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li> მონიშნულ ერთეულებში მითითებულია, რომ რედაქტორი მოითხოვს მოქმედებას, "
+"რომელსაც აწერია შემდეგი:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">რეცენზენტი დანიშნულია, "
+"მაგრამ მას ელ.ფოსტით არ აცნობებენ </li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">ყველა მიმომხილველი დაბრუნდა თავისი "
+"კომენტარებით, მაგრამ გადაწყვეტილება არ ფიქსირდება </li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">ავტორმა ატვირთა შესწორებული "
+"ხელნაწერი </li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">მიმომხილველი "
+"ვადაგასულია, რათა დაადასტუროთ კოლეგების მიმოხილვის მოსაწვევი </li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">რეცენზენტი "
+"ვადაგასულია განხილვის დასრულებისას </li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li> “ვადა” ივსება, როდესაც რეცენზენტი მიიღებს თხოვნას განხილვის შესახებ; "
+"იგი აჩვენებს კვირების რაოდენობას გადახედვის ვადის გადაცილებისთვის ან (-) "
+"კვირის განმავლობაში, რომ იგი დაგვიანებულია. </li>\n"
+"</ol>"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p> იმისათვის, რომ მკითხველმა შეძლოს ავტორის მიერ ციტირებული ნაწარმოების "
+"ონლაინ ვერსიების განთავსება, ხელმისაწვდომია შემდეგი პარამეტრები. </p>\n"
+"\n"
+"<ol>\n"
+"<li> <strong> კითხვის ინსტრუმენტის დამატება </strong> <p> ჟურნალის მენეჯერს "
+"შეუძლია დაამატოთ “მითითებები” კითხვის ხელსაწყოებში, რომლებიც თან ახლავს "
+"გამოქვეყნებულ ნივთებს, რაც მკითხველებს საშუალებას აძლევს ჩასვან მითითების "
+"სათაური და შემდეგ მოძებნონ წინასწარ შერჩეული მეცნიერები მონაცემთა ბაზა "
+"მონაცემთა ციტირებისთვის. </p> </li>\n"
+"<li> <strong> ბმულების ჩასმა ცნობებში </strong> <p> განლაგების რედაქტორს "
+"შეუძლია დაამატოთ ბმულები ცნობას, რომლის ნახვა ინტერნეტში შეგიძლიათ შემდეგი "
+"ინსტრუქციის გამოყენებით (რომლის რედაქტირებაც შესაძლებელია). </p> </li>\n"
+"</ol>"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "სხვა ჟურნალების დამალვა"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "დარეგისტრირდით სხვა ჟურნალებში"
+
+msgid "user.authorization.invalidIssue"
+msgstr "მოთხოვნილია არასწორი გამოცემა!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "თქვენ ცდილობთ შეხვიდეთ სტატიაში, რომელიც არ არის თქვენი სექციის ნაწილი."
+
+msgid "user.authorization.noContext"
+msgstr "არანაირი ჟურნალი კონტექსტში!"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"წვდომა უარყოფილია! თქვენ არ ხართ დანიშნული ამ სტატიის ლიტერატურულ რედაქტორად."
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4> ინსტალაციის წინა ეტაპები </h4>\n"
+"\n"
+"\n"
+"<p> 1 შემდეგი ფაილები და დირექტორიები (და მათი შინაარსი) უნდა იყოს დაწერილი: "
+"</p>\n"
+"<ul>\n"
+"\t<li> <tt> config.inc.php </tt> იწერება (არასავალდებულო): {$ "
+"Writable_config} </li>\n"
+"\t<li> <tt> public / </tt> იწერება: {$ Writable_public} </li>\n"
+"\t<li> <tt> cache / </tt> იწერება: {$ writable_cache} </li>\n"
+"\t<li> <tt> cache / t_cache / </tt> იწერება: {$ Writable_templates_cache} "
+"</li>\n"
+"\t<li> <tt> cache / t_compile / </tt> იწერება: {$ Writable_templates_compile}"
+" </li>\n"
+"\t<li> <tt> cache / _db </tt> იწერება: {$ writable_db_cache} </li>\n"
+"</ul>\n"
+"\n"
+"<p> 2 ატვირთული ფაილების შესანახად დირექტორია უნდა შეიქმნას და დაწერილი უნდა "
+"იყოს (იხ. “ფაილის პარამეტრები”). </p>"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"ლიტერატურულ რედაქტორის გამოგზავნილი ვერსია არასწორია, ან მოთხოვნა "
+"ლიტერატურულ რედაქტირებაზე არ გაგზავნილა!"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"თქვენს მიერ არჩეული ფაილი უნდა დაიწყოს ავტომატურად ჩამოტვირთვის შესახებ. თუ "
+"არა, დააჭირეთ ქვემოთ მოცემულ ბმულს. გაითვალისწინეთ, რომ ამ ფაილს შეიძლება "
+"დასჭირდეს სპეციალური დამთვალიერებელი ან დანამატი.<br /><br /> თუ ფაილი "
+"ავტომატურად არ ჩამოიტვირთება, <a href=\"{$url}\">დააჭირეთ აქ</a> ."
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>თქვენს მიერ არჩეული PDF ფაილი აქ უნდა ჩაიტვირთოს, თუ თქვენს ბრაუზერში "
+"დაინსტალირებულია PDF წამკითხველის მოდული (მაგალითად, <a href=\""
+"https://get.adobe.com/reader/\">Adobe Acrobat Reader-</a> ის ბოლოდროინდელი "
+"ვერსია).</p>"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "გთხოვთ, შეიყვანოთ სწორი IP დიაპაზონი."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"თუ აქ შეყვანილია IP დიაპაზონები, დომენი არასავალდებულოა.<br /> მოქმედი "
+"მნიშვნელობები მოიცავს IP მისამართს (მაგ. 142.58.103.1), IP დიაპაზონს (მაგ. "
+"142.58.103.1 - 142.58.103.4), IP დიაპაზონს wildcard \"*\" (მაგ. 142.58. *. *)"
+" და IP დიაპაზონს CIDR (მაგ. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP დიაპაზონები"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "გთხოვთ, შეიყვანოთ სწორი დომენი."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"გამოწერის არჩეულ ტიპს სჭირდება დომენის ან/და IP დიაპაზონის გამოწერის "
+"ავთენტიფიკაციისთვის."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"თუ დომენი შეტანილია აქ, IP დიაპაზონები არასავალდებულოა.<br /> მოქმედი "
+"მნიშვნელობებია დომენის სახელები (მაგ. Lib.sfu.ca)."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Საფოსტო მისამართი"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "აუცილებელია დაწესებულების სახელი."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "დაწესებულების დასახელება"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "წევრობის ინფორმაცია, თუ საჭიროა არჩეული გამოწერის ტიპისთვის."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "ამ მომხმარებლის ანგარიშს უკვე აქვს ინდივიდუალური გამოწერა."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "გთხოვთ, აირჩიოთ გამოწერის სწორი ტიპი."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "გამოწერის არჩეული ტიპი მოითხოვს წევრობის ინფორმაციას."
+
+msgid "user.subscriptions.form.typeId"
+msgstr "გამოწერის ტიპი"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "ხელმოწერის ტიპების ნახვა"
+
+msgid "user.subscriptions.expired"
+msgstr "ვადა ამოიწურა: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "იწურება: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "ორგანიზაციის გამოწერის შეძენა"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "ინდივიდუალური გამოწერის შეძენა"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "ახალი გამოწერის შეძენა"
+
+msgid "user.subscriptions.purchase"
+msgstr "შეძენა"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "ორგანიზაციის გამოწერები"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "ინდივიდუალური გამოწერა"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "ონლაინ გადახდა დაიწყო, მაგრამ გაუქმდა, ან არ დასრულებულა"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "ხელით გადახდა დაიწყო, მაგრამ ჯერ არ არის მიღებული"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "გამოწერა უნდა გადაიხედოს, სანამ გააქტიურდება"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "ხელმოწერის გააქტიურებამდე საჭიროა დამატებითი ინფორმაცია"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"აქტიური და ვადაგასული ხელმოწერები ნაჩვენებია ქვემოთ, მათი ვადის გასვლის "
+"თარიღთან ერთად. გარდა ამისა, შემდეგი სტატუსის შესახებ ინფორმაცია შეიძლება "
+"შეიცავდეს თითოეულ გამოწერას."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "გამოწერის სტატუსი"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "თქვენ უნდა დაეთანხმოთ ამ საიტის კონფიდენციალურობის დებულებას."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"თქვენ უნდა დაეთანხმოთ კონფიდენციალურობის დებულებას ნებისმიერი ჟურნალისთვის, "
+"რომელთანაც დარეგისტრირდით."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"დიახ, მე ვეთანხმები ჩემს მონაცემების შეგროვებას და შენახვას ამ ჟურნალის <a "
+"href=\"{$privacyUrl}\" target=\"_blank\">კონფიდენციალურობის დებულების "
+"შესაბამისად</a> ."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"დიახ, მსურს გავიგო ახალი პუბლიკაციების და განცხადებების შესახებ ყველა იმ "
+"ჟურნალისთვის, რომელშიც მე დავრეგისტრირდი."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"ინტერესების განხილვის იდენტიფიცირება (არსებითი სფეროები და კვლევის მეთოდები):"
+
+msgid "user.register.reviewerDescription"
+msgstr "სურვილი აქვთ ჩაატარონ ვებსაიტზე წარდგინებათა თანმიმდევრული მიმოხილვა."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "სურვილი აქვთ ჩაატარონ ჟურნალთან დაკავშირებული სტატიების მიმოხილვა."
+
+msgid "user.register.authorDescription"
+msgstr "შესაძლებელია ჟურნალისთვის მასალების წარდგენა."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "ეცნობება ელფოსტით, როდესაც ჟურნალის გამოცემა ხდება ღია წვდომით."
+
+msgid "user.register.readerDescription"
+msgstr "ეცნობება ელფოსტით ჟურნალის ნომრის გამოცემის შესახებ."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "თქვენს მიერ შეყვანილი პაროლი არ არის საკმარისად გრძელი."
+
+msgid "user.register.registrationDisabled"
+msgstr "ეს ჟურნალი ამჟამად არ იღებს მომხმარებელთა რეგისტრაციას."
+
+msgid "user.register.privacyStatement"
+msgstr "კონფიდენციალურობის განცხადება"
+
+msgid "user.register.noJournals"
+msgstr "ამ საიტზე არ არსებობს ჟურნალები, რომელთა რეგისტრაციაც შეგიძლიათ."
+
+msgid "user.register.selectContext"
+msgstr "შეარჩიეთ ჟურნალი, რომ დარეგისტრირდეთ:"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p> ამ ჟურნალში ხელნაწერის ასატვირთად შეასრულეთ შემდეგი ნაბიჯები. </p>\n"
+"<ol>\n"
+"<li> ამ გვერდზე დააჭირეთ დათვალიერებას (ან აირჩიეთ ფაილი), რომელიც ხსნის "
+"არჩევის ფაილს, თქვენი კომპიუტერის მყარ დისკზე ფაილის დასადგენად. </li>\n"
+"<li> იპოვნეთ ფაილი, რომლის გაგზავნა გსურთ და მონიშნეთ იგი. </li>\n"
+"<li> დააჭირეთ Open- ს, აირჩიეთ File File ფანჯარა, რომელიც ამ გვერდზე "
+"ათავსებს ფაილის სახელს. </li>\n"
+"<li> დააჭირეთ ამ გვერდზე ატვირთვას, რომელიც ატვირთავს ფაილს კომპიუტერიდან "
+"ჟურნალის ვებ – გვერდზე და უწოდებს მას ჟურნალის კონვენციების შესაბამისად. "
+"</li>\n"
+"<li> გაგზავნის ატვირთვის შემდეგ, დააჭირეთ ღილაკს შენახვა და გაგრძელება ამ "
+"გვერდის ბოლოში. </li>\n"
+"</ol>"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"განაცხადეთ, გაქვთ თუ არა კონკურენტული ინტერესები ამ კვლევასთან დაკავშირებით ("
+"იხ. <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI პოლიტიკა</a> )."
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"მიმოხილვის სახელმძღვანელო მითითებები შემოგთავაზებთ რეცენზენტებს "
+"კრიტერიუმების შესაფასებლად, თუ რამდენად შესაფერისია ჟურნალში გამოქვეყნებული "
+"სტატიები, და მათში შედის სპეციალური ინსტრუქციები ეფექტური და სასარგებლო "
+"მიმოხილვის მოსამზადებლად. განხილვის ჩატარებისას რეცენზენტებს ორი ღია ტექსტის "
+"ყუთი აქვთ წარდგენილი, პირველი “ავტორისა და რედაქტორისთვის” და მეორე "
+"“რედაქტორისთვის”. გარდა ამისა, ჟურნალის მენეჯერს შეუძლია შექმნას შეფასების "
+"ფორმა, მიმოხილვის ფორმების ქვეშ. ყველა შემთხვევაში, რედაქტორებს ექნებათ "
+"შესაძლებლობა, რეცენზენტები შეიტანონ ავტორთან შესაბამისობაში."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"უკაცრავად, თქვენ ამ ადმინისტრატორის უფლებები არ გაქვთ. ეს შეიძლება იყოს იმის "
+"გამო, რომ:\n"
+"\t\t<ul>\n"
+"\t\t\t<li> მომხმარებელი არის საიტის ადმინისტრატორი</li>\n"
+"\t\t\t<li> მომხმარებელი აქტიურია ჟურნალებში, რომლებსაც თქვენ არ მართავთ</li>"
+"\n"
+"\t\t</ul>\n"
+"\tეს დავალება უნდა შეასრულოს საიტის ადმინისტრატორმა.\n"
+"\t"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"ნაბიჯები: წარდგენის რიგი > წარდგენის მიმოხილვა > წარდგენის რედაქტირება > "
+"სარჩევი.<br /><br />\n"
+"აირჩიეთ მოდელი სარედაქციო პროცესის ამ ასპექტების მოსაგვარებლად. (მმართველი "
+"რედაქტორისა და სექციის რედაქტორების დასადგენად, გადადით რედაქტორებში "
+"ჟურნალის მენეჯმენტში.)"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ᲨᲔᲜᲘᲨᲕᲜᲐ!</h4>\n"
+"<p> სისტემამ ავტომატურად ვერ შეცვალა კონფიგურაციის ფაილი. თქვენი "
+"კონფიგურაციის ცვლილებების <tt>შესაცვლელად, თქვენ უნდა გახსნათ "
+"config.inc.php</tt> შესაფერისი ტექსტური რედაქტორი და შეცვალოთ მისი შინაარსი "
+"ქვემოთ მოცემული ტექსტის ველის შინაარსით</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>ავტორიზაციის ნაგულისხმევი წყაროს მითითებას, OJS– ს გარდა, აქვს შემდეგი "
+"ეფექტები:</p>\n"
+"<ul>\n"
+"\t<li>თუ მომხმარებელი შეეცდება ამ საიტზე დაარეგისტრიროს ახალი ანგარიში "
+"მომხმარებლის სახელით, რომელიც არსებობს ავტორიზაციის წყაროსთან (მაგრამ არა "
+"OJS მონაცემთა ბაზაში), რეგისტრაციის მცდელობა ნებადართულია მხოლოდ იმ "
+"შემთხვევაში, თუ მოცემული პაროლი მოქმედებს ამ მომხმარებლის ანგარიშზე.</li>\n"
+"</ul>"
+
+msgid "user.role.journalAssistants"
+msgstr "ჟურნალის ასისტენტები"
+
+msgid "user.role.journalAssistant"
+msgstr "ჟურნალის ასისტენტი"
+
+msgid "user.role.subscriptionManagers"
+msgstr "ხელმოწერის მმართველები"
+
+msgid "user.role.subEditors"
+msgstr "განყოფილებების რედაქტორები"
+
+msgid "user.role.managers"
+msgstr "ჟურნალის მმართველები"
+
+msgid "user.role.subscriptionManager"
+msgstr "ხელმოწერის მმართველი"
+
+msgid "user.role.subEditor"
+msgstr "განყოფილების რედაქტორი"
+
+msgid "user.role.manager"
+msgstr "ჟურნალის მმართველი"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"რეცენზენტად დარეგისტრირება: მიმომხილველის რეგისტრაცია ამჟამად გამორთულია."
+
+msgid "user.noRoles.regReviewer"
+msgstr "დარეგისტრირდით როგორც რეცენზენტი"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "სტატიის გაგზავნა: ავტორების რეგისტრაცია ამჟამად გამორთულია."
+
+msgid "user.noRoles.submitArticle"
+msgstr "წინადადება წარდგინება"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"თქვენს ანგარიშს ამჟამად არ აქვს ამ ჟურნალის როლები. გთხოვთ, აირჩიოთ ქვემოთ "
+"მოცემული მოქმედებებიდან:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"თქვენი ანგარიში ამჟამად არ არის ასოცირებული არცერთ ჟურნალთან. გთხოვთ აირჩიოთ "
+"ჟურნალი:"
+
+msgid "user.manageMySubscriptions"
+msgstr "ჩემი გამოწერების მართვა"
+
+msgid "user.myJournals"
+msgstr "ჩემი ჟურნალები"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"თუ თქვენ მოითხოვეთ რაიმე ჟურნალის რეცენზენტობა, გთხოვთ მიუთითოთ თქვენი "
+"საგნების ინტერესები."
+
+msgid "user.register.otherContextRoles"
+msgstr "მოითხოვეთ შემდეგი როლები."
+
+msgid "user.register.contextsPrompt"
+msgstr "ამ საიტზე რომელ ჟურნალებში გსურთ დარეგისტრირება?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"დიახ, მსურს დამიკავშირდნენ ამ ჟურნალისთვის გაგზავნილი განცხადებების "
+"გადახედვის თხოვნით."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "დიახ, მოითხოვეთ {$userGroup} როლი."
+
+msgid "user.reviewerPrompt"
+msgstr "გსურთ, გადახედოთ ამ ჟურნალისთვის გაგზავნილ სტატიებს?"
+
+msgid "user.registerForOtherJournals"
+msgstr "დარეგისტრირდით სხვა ჟურნალებში"
+
+msgid "user.showAllJournals"
+msgstr "აჩვენე ჩემი ჟურნალები"
+
+msgid "user.profile.profileImage"
+msgstr "პროფილის სურათი"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "მომხმარებლების დამატება, რომლებსაც არ აქვთ როლები ამ ჟურნალში."
+
+msgid "user.authorization.representationNotFound"
+msgstr "მოთხოვნილი სვეტი ვერ მოიძებნა."
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"ხელმისაწვდომია OJS-ის ახალი ვერსია! თქვენ ამჟამად იყენებთ OJS-ს "
+"{$currentVersion} ვერსიას. უახლესი ვერსია არის OJS {$latestVersion}. გთხოვთ, "
+"ეწვიოთ <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">ამ "
+"გვერდს,</a> რომ ჩამოტვირთოთ უახლესი ვერსია და იპოვოთ განახლების ინსტრუქციები."
+
+msgid "site.noJournals"
+msgstr "ჟურნალები არ არის ხელმისაწვდომი."
+
+msgid "site.journalCurrent"
+msgstr "მიმდინარე გამოცემა"
+
+msgid "site.journalView"
+msgstr "ჟურნალის ნახვა"
+
+msgid "site.journalsHosted"
+msgstr "ამ საიტზე განთავსებული ჟურნალები"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "შენახვა და ელფოსტის გაგზავნა რედაქტორთან"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "შენახვა და ელფოსტის გაგზავნა ავტორთან"
+
+msgid "submission.comments.forEditor"
+msgstr "რედაქტორისთვის"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "ავტორისა და რედაქტორისთვის"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"გაგზავნის შემდეგ, წარმოადგინეთ რედაქტირებადი BCC ასლი, რომელსაც რეცენზენტებს "
+"გაუგზავნით."
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "რედაქტორისთვის"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "ავტორისა და რედაქტორისთვის"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"ეს კომენტარები შეიძლება გაზიარდეს ავტორთან.<br />\n"
+"(შენახვის შემდეგ, დამატებითი კომენტარების დამატება შეიძლება.)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "ლიტერატურული რედაქტირების კომენტარები"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "რედაქტორი/ავტორის მიმოწერა"
+
+msgid "submission.logType.proofread"
+msgstr "კორექტირება"
+
+msgid "submission.logType.copyedit"
+msgstr "ლიტერატურული რედაქტირება"
+
+msgid "submission.proofread.instructions"
+msgstr "კორექტურის სახელმძღვანელო"
+
+msgid "submission.proofread.corrections"
+msgstr "კორექტორის შესწორებები"
+
+msgid "submission.proofreadingComments"
+msgstr "კორექტურის კომენტარები"
+
+msgid "submission.layout.referenceLinking"
+msgstr "წყაროებზე ბმულების ჩასმა"
+
+msgid "submission.layout.instructions"
+msgstr "განლაგების ინსტრუქცია"
+
+msgid "submission.layout.layoutComments"
+msgstr "განლაგების კომენტარები"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "განლაგების რედაქტორის შეცვლა"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "კორეტურის რედაქტორი დაინშნა"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "საჯარო სვეტის იდენტიფიკაცია უკვე არსებობს."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"არცერთი (მოთხოვნის გაგზავნამდე ატვირთეთ კოპირებული საბოლოო ვერსია განლაგების "
+"ვერსიით)"
+
+msgid "submission.copyedit.instructions"
+msgstr "ლიტერატურული რედაქტირების ინსტრუქციები"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "ლიტერატურული რედაქტირების კომენტარები"
+
+msgid "submission.copyedit.useFile"
+msgstr "ფაილის გამოყენება"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "ლიტერატურული რედაქტორის დანიშვნა"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "ლიტერატურული რედაქტირების ვერსია"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "საბოლოო ლიტერატურული რედაქტირება"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "ლიტერატურული რედაქტირება ავტორის მიერ"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "ლიტერატურული რედაქტირება რედაქტორის მიერ"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "საწყისი ლიტერატურული რედაქტირება"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"მოთხოვნის ელფოსტის გაგზავნა შეუძლებელია, სანამ ფაილი არ აიტვირთება "
+"ლიტერატურული რედაქტირებისათვის."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"მოთხოვნის ელფოსტის გაგზავნა შეუძლებელია მანამ, სანამ ფაილი არ აირჩევა "
+"ლიტერატურული რედაქტირებისათვის რედაქტორის გადაწყვეტილებაში, განხილვის "
+"გვერდზე."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"მოთხოვნის ელფოსტის გაგზავნა შეუძლებელია, სანამ არ შეიქმნება მიმოხილვითი "
+"ვერსია."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "შიგთავსის URL, რომელიც გარე წყაროზეა"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "ეს სვეტი ხელმისაწვდომი იქნება ცალკე ვებ-გვერდზე."
+
+msgid "submission.layout.imageInvalid"
+msgstr "სურათის არასწორი ფორმატი. მიღებული ფორმატებია .gif, .jpg და .png."
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "ახალი რეცენზენტის შექმნა"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "არსებულ მომხმარებლის რეცენზენტად დანიშვნა"
+
+msgid "sectionEditor.regrets.result"
+msgstr "შედეგი"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "უარყოფა"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "რეცენზენტის უარყოფა და გაუქმება"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "რედაქტორის გადაწყვეტილება, {$round} რაუნდი"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "რეცენზირება, {$round} რაუნდი"
+
+msgid "sectionEditor.regrets.link"
+msgstr "უარყოფის, გაუქმებისა და ადრეული რაუნდების ნახვა"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} რეცენზენტის უარყოფა და გაუქმება და ადრეული რაუნდები"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "გამოწერის ტიპები"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "ორგანიზაციის გამოწერები"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "ინდივიდუალური გამოწერები"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "გამოწერის მართვა"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "დაკაბადონება დასრულებულია"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "განლაგების სვეტი განახლდა"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "განლაგების დავალება დაიწყო"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "დამკაბადონებელი მოიხსნა მასალიდან"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "დამკაბადონებელი დაინიშნა მასალაზე"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "კორექტურული დავალება შესრულებულია"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "კორექტორის სარედაქციო ფაილი განახლდა"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "კორექტურული დავალება დაიწყო"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "კორექტორი მოიხსნა მასალიდან"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "კორექტორი დაემატა მასალას"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "ლიტერატურული რედაქტირების შესწორებების ფაილი განახლდა"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "საბოლოო ლიტერატურული რედაქტირება დასრულდა"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "საწყისი ლიტერატურული რედაქტირება დასრულდა"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "ლიტერატურული რედაქტორის შესწორებების ფაილი განახლდა"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "ლიტერატურული რედაქტირება დაწყებულია"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "ლიტერატურული რედაქტორი მოიხსნა მასალიდან"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "ლიტერატურული რედაქტორი დაინიშნა მასალაზე"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "მასალა აღდგენილია არქივიდან"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "მასალა გაგზავნილია არქივში"
+
+msgid "submission.event.editor.editorFile"
+msgstr "რედაქტორის ფაილი განახლდა"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "რედაქტორის გადაწყვეტილება წარდგენილია"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "რედაქტორი მოიხსნა მასალიდან"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "რედაქტორი დაინიშნა მასალაზე"
+
+msgid "submission.event.general.authorRevision"
+msgstr "ავტორის შესწორებული ფაილი განახლდა"
+
+msgid "submission.event.author.authorRevision"
+msgstr "ავტორის შესწორება წარდგენილია"
+
+msgid "submission.event.general.articlePublished"
+msgstr "სტატია გამოქვეყნდა"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "მასალა მიენიჭა გამოცემას"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "მასალა გაგზავნილია დაგეგმილი გამოცემის რიგში"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "სტატია წარდგენილია"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "მასალის ღონისძიება"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>შენიშვნა:</strong> შეძენილი ორგანიზაციის გამოწერები მოითხოვს დომენის "
+"და IP დიაპაზონის დამტკიცებას, სანამ გამოწერა გააქტიურდება."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"ორგანიზაციის გამოწერები არ საჭიროებს შესვლას. მომხმარებლის დომენის ან/და IP "
+"მისამართი გამოიყენება სააბონენტო შინაარსზე წვდომის უზრუნველსაყოფად."
+
+msgid "subscriptions.individualDescription"
+msgstr "ინდივიდუალური გამოწერები საჭიროებს შესვლას შიგთავსის სანახავად."
+
+msgid "subscriptions.status.other"
+msgstr "სხვა, იხილეთ შენიშვნები"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "თქვენ არ გაქვთ აქტიური გამოწერა."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "ელოდება ონლაინ გადახდას"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "ელოდება ხელით გადახდას"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "საჭიროებს დამტკიცებას"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "საჭიროებს ინფორმაციას"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "ნაბეჭდი და ელექტრონული"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "უვადო"
+
+msgid "submission.search"
+msgstr "სტატიების ძებნა"
+
+msgid "submissions.proofreadingComplete"
+msgstr "კორექტურა"
+
+msgid "submissions.layoutComplete"
+msgstr "კორექტურა გაიარა"
+
+msgid "submissions.copyeditComplete"
+msgstr "ლიტერატურული ჩასწორება გაიარა"
+
+msgid "submission.eventLog"
+msgstr "ღონისძიების ჟურნალი"
+
+msgid "submissions.editorRuling"
+msgstr "რედაქტორის წესები"
+
+msgid "submissions.editorDecision"
+msgstr "რედაქტორის გადაწყვეტილება"
+
+msgid "submissions.proof"
+msgstr "კორექტურა"
+
+msgid "submissions.reviewRound"
+msgstr "რეცენზიის რაუნდი"
+
+msgid "submissions.postAuthor"
+msgstr "ავტორის შემდგომ"
+
+msgid "submissions.initialProof"
+msgstr "საწყისი კორექტურა"
+
+msgid "submissions.proofread"
+msgstr "კორექტურა"
+
+msgid "submissions.initial"
+msgstr "საწყისი"
+
+msgid "submissions.queuedReview"
+msgstr "რეცენზიაზე"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(მოგვიანებით)"
+
+msgid "submission.scheduledIn"
+msgstr "დაგეგმილია გამოსაქვეყნებლად {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "დაგეგმვა"
+
+msgid "submission.proofreading"
+msgstr "კორექტურა"
+
+msgid "submission.copyedit"
+msgstr "ლიტერატურული რედაქტირება"
+
+msgid "submission.copyediting"
+msgstr "ლიტერატურული რედაქტირება"
+
+msgid "submission.authorVersion"
+msgstr "ავტორის ვერსია"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "ფაილის შესწორებული ვერსია"
+
+msgid "submission.editorVersion"
+msgstr "რედაქტორის ვერსია"
+
+msgid "submission.postReviewVersion"
+msgstr "ფაილის განხილვის შემდგომი ვერსია"
+
+msgid "submission.reviewersVersion"
+msgstr "რეცენზენტის ფაილის ანოტირებული ვერსია"
+
+msgid "submission.editorAuthorRecord"
+msgstr "რედაქტორი/ავტორის მიმოწერის ჩაწერა"
+
+msgid "submission.notifyEditor"
+msgstr "შეატყობინება რედაქტორს"
+
+msgid "submission.notifyAuthor"
+msgstr "შეტყობინება ავტორს"
+
+msgid "submission.editorReview"
+msgstr "რედაქტორის მიმოხილვა"
+
+msgid "submission.round"
+msgstr "რაუნდი&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "რედაქციის გადაწყვეტილება"
+
+msgid "submission.changeSection"
+msgstr "შეცვლილია"
+
+msgid "submission.submissionEditing"
+msgstr "გაგზავნილი მასალის ჩასწორება"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "დანიშნული რედაქტორები"
