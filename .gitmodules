@@ -50,3 +50,6 @@
 [submodule "plugins/generic/googleScholar"]
 	path = plugins/generic/googleScholar
 	url = https://github.com/pkp/googleScholar
+[submodule "plugins/importexport/crossref"]
+	path = plugins/importexport/crossref
+	url = https://github.com/pkp/crossref-ojs.git
