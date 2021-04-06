@@ -14,7 +14,7 @@
 
 namespace APP\Services\QueryBuilders;
 
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\DB;
 use PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface;
 
 class GalleyQueryBuilder implements EntityQueryBuilderInterface {
@@ -62,7 +62,7 @@ class GalleyQueryBuilder implements EntityQueryBuilderInterface {
 	 */
 	public function getQuery() {
 		$this->columns = ['*'];
-		$q = Capsule::table('publication_galleys as g');
+		$q = DB::table('publication_galleys as g');
 
 		if (!empty($this->publicationIds)) {
 			$q->whereIn('g.publication_id', $this->publicationIds);

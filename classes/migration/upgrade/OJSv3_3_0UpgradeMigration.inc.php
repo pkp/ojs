@@ -14,7 +14,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class OJSv3_3_0UpgradeMigration extends Migration {
 	/**
@@ -22,14 +23,14 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 	 * @return void
 	 */
 	public function up() {
-		Capsule::schema()->table('journal_settings', function (Blueprint $table) {
+		Schema::table('journal_settings', function (Blueprint $table) {
 			// pkp/pkp-lib#6096 DB field type TEXT is cutting off long content
 			$table->mediumText('setting_value')->nullable()->change();
 		});
-		Capsule::schema()->table('sections', function (Blueprint $table) {
+		Schema::table('sections', function (Blueprint $table) {
 			$table->smallInteger('is_inactive')->default(0);
 		});
-		Capsule::schema()->table('review_forms', function (Blueprint $table) {
+		Schema::table('review_forms', function (Blueprint $table) {
 			$table->bigInteger('assoc_type')->nullable(false)->change();
 			$table->bigInteger('assoc_id')->nullable(false)->change();
 		});
@@ -38,16 +39,16 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		$this->_migrateSubmissionFiles();
 
 		// Delete the old MODS34 filters
-		Capsule::statement("DELETE FROM filters WHERE class_name='plugins.metadata.mods34.filter.Mods34SchemaArticleAdapter'");
-		Capsule::statement("DELETE FROM filter_groups WHERE symbolic IN ('article=>mods34', 'mods34=>article')");
+		DB::statement("DELETE FROM filters WHERE class_name='plugins.metadata.mods34.filter.Mods34SchemaArticleAdapter'");
+		DB::statement("DELETE FROM filter_groups WHERE symbolic IN ('article=>mods34', 'mods34=>article')");
 		// Delete mEDRA dependencies
-		Capsule::statement("DELETE FROM filters WHERE class_name IN ('plugins.importexport.medra.filter.IssueMedraXmlFilter', 'plugins.importexport.medra.filter.ArticleMedraXmlFilter', 'plugins.importexport.medra.filter.GalleyMedraXmlFilter')");
-		Capsule::statement("DELETE FROM filter_groups WHERE symbolic IN ('issue=>medra-xml', 'article=>medra-xml', 'galley=>medra-xml')");
-		Capsule::statement("DELETE FROM scheduled_tasks WHERE class_name='plugins.importexport.medra.MedraInfoSender'");
+		DB::statement("DELETE FROM filters WHERE class_name IN ('plugins.importexport.medra.filter.IssueMedraXmlFilter', 'plugins.importexport.medra.filter.ArticleMedraXmlFilter', 'plugins.importexport.medra.filter.GalleyMedraXmlFilter')");
+		DB::statement("DELETE FROM filter_groups WHERE symbolic IN ('issue=>medra-xml', 'article=>medra-xml', 'galley=>medra-xml')");
+		DB::statement("DELETE FROM scheduled_tasks WHERE class_name='plugins.importexport.medra.MedraInfoSender'");
 
 		// pkp/pkp-lib#6807 Make sure all submission/issue last modification dates are set
-		Capsule::statement('UPDATE issues SET last_modified = date_published WHERE last_modified IS NULL');
-		Capsule::statement('UPDATE submissions SET last_modified = NOW() WHERE last_modified IS NULL');
+		DB::statement('UPDATE issues SET last_modified = date_published WHERE last_modified IS NULL');
+		DB::statement('UPDATE submissions SET last_modified = NOW() WHERE last_modified IS NULL');
 	}
 
 	/**
@@ -55,7 +56,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Capsule::schema()->table('journal_settings', function (Blueprint $table) {
+		Schema::table('journal_settings', function (Blueprint $table) {
 			// pkp/pkp-lib#6096 DB field type TEXT is cutting off long content
 			$table->text('setting_value')->nullable()->change();
 		});
@@ -88,7 +89,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 			foreach ($schema->properties as $propName => $propSchema) {
 				if (empty($propSchema->readOnly)) {
 					if ($propSchema->type === 'array' || $propSchema->type === 'object') {
-						Capsule::table($tableName)->where('setting_name', $propName)->get()->each(function ($row) use ($tableName) {
+						DB::table($tableName)->where('setting_name', $propName)->get()->each(function ($row) use ($tableName) {
 							$this->_toJSON($row, $tableName, ['setting_name', 'locale'], 'setting_value');
 						});
 					}
@@ -97,20 +98,20 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		}
 
 		// Convert settings where only setting_type column is available
-		$tables = Capsule::connection()->getDoctrineSchemaManager()->listTableNames();
+		$tables = DB::connection()->getDoctrineSchemaManager()->listTableNames();
 		foreach ($tables as $tableName) {
 			if (substr($tableName, -9) !== '_settings' || in_array($tableName, $processedTables)) continue;
-			Capsule::table($tableName)->where('setting_type', 'object')->get()->each(function ($row) use ($tableName) {
+			DB::table($tableName)->where('setting_type', 'object')->get()->each(function ($row) use ($tableName) {
 				$this->_toJSON($row, $tableName, ['setting_name', 'locale'], 'setting_value');
 			});
 		}
 
 		// Finally, convert values of other tables dependent from DAO::convertToDB
-		Capsule::table('review_form_responses')->where('response_type', 'object')->get()->each(function ($row) {
+		DB::table('review_form_responses')->where('response_type', 'object')->get()->each(function ($row) {
 			$this->_toJSON($row, 'review_form_responses', ['review_id'], 'response_value');
 		});
 
-		Capsule::table('site')->get()->each(function ($row) {
+		DB::table('site')->get()->each(function ($row) {
 			$localeToConvert = function($localeType) use($row) {
 				$serializedValue = $row->{$localeType};
 				if (@unserialize($serializedValue) === false) return;
@@ -119,7 +120,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 				if (is_array($oldLocaleValue) && $this->_isNumerical($oldLocaleValue)) $oldLocaleValue = array_values($oldLocaleValue);
 
 				$newLocaleValue = json_encode($oldLocaleValue, JSON_UNESCAPED_UNICODE);
-				Capsule::table('site')->take(1)->update([$localeType => $newLocaleValue]);
+				DB::table('site')->take(1)->update([$localeType => $newLocaleValue]);
 			};
 
 			$localeToConvert('installed_locales');
@@ -153,7 +154,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 			return true;
 		});
 
-		$queryBuilder = Capsule::table($tableName)->where($id, $row->{$id});
+		$queryBuilder = DB::table($tableName)->where($id, $row->{$id});
 		foreach ($searchBy as $key => $column) {
 			$queryBuilder = $queryBuilder->where($column, $row->{$column});
 		}
@@ -183,23 +184,23 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 	 * be run before this one.
 	 */
 	private function _migrateSubmissionFiles() {
-		Capsule::schema()->table('publication_galleys', function (Blueprint $table) {
+		Schema::table('publication_galleys', function (Blueprint $table) {
 			$table->renameColumn('file_id', 'submission_file_id');
 		});
-		Capsule::statement('UPDATE publication_galleys SET submission_file_id = NULL WHERE submission_file_id = 0');
+		DB::statement('UPDATE publication_galleys SET submission_file_id = NULL WHERE submission_file_id = 0');
 
 		// pkp/pkp-lib#6616 Delete publication_galleys entries that correspond to nonexistent submission_files
-		$orphanedIds = Capsule::table('publication_galleys AS pg')
+		$orphanedIds = DB::table('publication_galleys AS pg')
 			->leftJoin('submission_files AS sf', 'pg.submission_file_id', '=', 'sf.submission_file_id')
 			->whereNull('sf.submission_file_id')
 			->whereNotNull('pg.submission_file_id')
 			->pluck('pg.submission_file_id', 'pg.galley_id');
 		foreach ($orphanedIds as $galleyId => $submissionFileId) {
 			error_log("Removing orphaned publication_galleys entry ID $galleyId with submission_file_id $submissionFileId");
-			Capsule::table('publication_galleys')->where('galley_id', '=', $galleyId)->delete();
+			DB::table('publication_galleys')->where('galley_id', '=', $galleyId)->delete();
 		}
 
-		Capsule::schema()->table('publication_galleys', function (Blueprint $table) {
+		Schema::table('publication_galleys', function (Blueprint $table) {
 			$table->bigInteger('submission_file_id')->nullable()->unsigned()->change();
 			$table->foreign('submission_file_id')->references('submission_file_id')->on('submission_files');
 		});

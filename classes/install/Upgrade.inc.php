@@ -12,7 +12,7 @@
  *
  * @brief Perform system upgrade.
  */
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\DB;
 
 import('lib.pkp.classes.install.Installer');
 
@@ -400,13 +400,13 @@ class Upgrade extends Installer {
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_...
 		import('lib.pkp.classes.file.FileManager');
 		$fileManager = new FileManager();
-		$fileRows = Capsule::table('review_assignments as ra')
+		$fileRows = DB::table('review_assignments as ra')
 			->leftJoin('submissions as s', 's.submission_id', '=', 'ra.submission_id')
 			->whereNotNull('ra.reviewer_file_id')
 			->get();
 		foreach ($fileRows as $fileRow) {
 			$submissionDir = Services::get('submissionFile')->getSubmissionDir($fileRow->context_id, $fileRow->submission_id);
-			$revisionRows = Capsule::table('submission_files')
+			$revisionRows = DB::table('submission_files')
 				->where('file_id', '=' , $fileRow->reviewer_file_id)
 				->get();
 			if (empty($revisionRows)) {
@@ -626,7 +626,7 @@ class Upgrade extends Installer {
 				$submissionDir = Services::get('submissionFile')->getSubmissionDir($context->getId(), $submission->getId());
 				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
-				$rows = Capsule::table('submission_files')
+				$rows = DB::table('submission_files')
 					->where('submission_id', '=', $submission->getId())
 					->get([
 						'file_id',
@@ -691,7 +691,7 @@ class Upgrade extends Installer {
 			// Get style genre
 			$genre = $genreDao->getByKey('STYLE', $journal->getId());
 
-			$rows = Capsule::table('submission_files')
+			$rows = DB::table('submission_files')
 				->where('file_stage', '=', SUBMISSION_FILE_DEPENDENT)
 				->where('genre_id', '=', (int) $genre->getId())
 				->where('assoc_type', '=', ASSOC_TYPE_SUBMISSION_FILE)
@@ -727,7 +727,7 @@ class Upgrade extends Installer {
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_ constants
 		$fileManager = new FileManager();
 
-		$rows = Capsule::table('submission_supplementary_files as ssf')
+		$rows = DB::table('submission_supplementary_files as ssf')
 			->leftJoin('submission_files as sf', 'sf.file_id', '=', 'ssf.file_id')
 			->leftJoin('submissions as s', 's.submission_id', '=', 'sf.submission_id')
 			->where('sf.file_stage', '=', SUBMISSION_FILE_SUBMISSION)
@@ -762,7 +762,7 @@ class Upgrade extends Installer {
 			if (!Services::get('file')->fs->rename($oldFileName, $newFileName)) {
 				error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
 			}
-			Capsule::table('submission_files')
+			DB::table('submission_files')
 				->where('file_id', '=', $row->file_id)
 				->where('revision', '=', $row->revision)
 				->update(['file_stage' => SUBMISSION_FILE_PROOF]);

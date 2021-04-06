@@ -15,7 +15,7 @@
 
 namespace APP\Services\QueryBuilders;
 
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\DB;
 use PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface;
 
 class IssueQueryBuilder implements EntityQueryBuilderInterface {
@@ -223,7 +223,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface {
 	 */
 	public function getQuery() {
 		$this->columns[] = 'i.*';
-		$q = Capsule::table('issues as i')
+		$q = DB::table('issues as i')
 					->leftJoin('issue_settings as iss', 'i.issue_id', '=', 'iss.issue_id')
 					->leftJoin('custom_issue_orders as o', 'o.issue_id', '=', 'i.issue_id')
 					->orderBy($this->orderColumn, $this->orderDirection)
@@ -312,11 +312,11 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface {
 					$q->where(function($q) use ($word)  {
 						$q->where(function($q) use ($word) {
 							$q->where('iss.setting_name', 'title');
-							$q->where(Capsule::raw('lower(iss.setting_value)'), 'LIKE', "%$word%");
+							$q->where(DB::raw('lower(iss.setting_value)'), 'LIKE', "%$word%");
 						})
 						->orWhere(function($q) use ($word) {
 							$q->where('iss.setting_name', 'description');
-							$q->where(Capsule::raw('lower(iss.setting_value)'), 'LIKE', "%$word%");
+							$q->where(DB::raw('lower(iss.setting_value)'), 'LIKE', "%$word%");
 						});
 
 						// Match any four-digit number to the year
