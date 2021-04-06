@@ -126,7 +126,7 @@ msgid "author.submit.journalSection"
 msgstr "Sección de la revista"
 
 msgid "author.submit.journalSectionDescription"
-msgstr "Seleccione la sección adecuada para el envío (ver Secciones y Política en <a href=\"{$aboutUrl}\" target=\"_new\">Acerca de</a> la revista)."
+msgstr "Los artículos deben enviarse a una de las secciones de la revista."
 
 msgid "submission.submit.selectSection"
 msgstr "Seleccione una sección..."
