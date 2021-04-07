@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-06 10:52+0000\n"
+"PO-Revision-Date: 2021-04-09 20:14+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ka_GE/>\n"
@@ -1509,3 +1509,596 @@ msgstr "ჟურნალის დასახელება"
 
 msgid "manager.setup.editorialTeam"
 msgstr "რედაქცია"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>შენიშვნა:</strong> ამ ვარიანტების ჩასართავად, ჟურნალის მენეჯერმა "
+"უნდა ჩართოს ონლაინ გადასახადების მოდული, მათ შორის ონლაინ გადახდები "
+"გამოწერებისთვის, მკითხველის ტარიფების ქვეშ."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"ამოიღეთ საავტორო უფლებების შესახებ განცხადება და ლიცენზიის ინფორმაცია "
+"თითოეული გამოქვეყნებული სტატიისთვის, დაუბრუნეთ მათ ჟურნალის მიმდინარე "
+"ნაგულისხმევ პარამეტრებს. ეს სამუდამოდ ამოიღებს საავტორო უფლებების წინა და "
+"სალიცენზიო ცნობებს, რომლებიც თან ერთვის სტატიებს. ზოგიერთ შემთხვევაში, "
+"შეიძლება კანონიერად არ მოგცეთ ნებართვა ხელახალი ლიცენზიის გაცემაზე, რომელიც "
+"სხვა ლიცენზიით არის გამოქვეყნებული. გთხოვთ, სიფრთხილე გამოიჩინოთ ამ "
+"ინსტრუმენტის გამოყენებისას და მიმართეთ იურიდიულ ექსპერტიზას, თუ არ ხართ "
+"დარწმუნებული, რა უფლებები გაქვთ თქვენს ჟურნალში გამოქვეყნებული სტატიების "
+"მიმართ."
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"როლები ჟურნალში არის მომხმარებელთა ჯგუფები, რომლებსაც აქვთ წვდომა სხვადასხვა "
+"ნებართვის დონეზე და მასთან დაკავშირებული სამუშაო ნაკადები ჟურნალში. "
+"ნებართვის ხუთი განსხვავებული დონეა: ჟურნალის მენეჯერებს აქვთ ჟურნალში "
+"არსებული ყველაფრის წვდომა (მთელი შინაარსი და პარამეტრები); სექციის "
+"რედაქტორებს აქვთ სრული წვდომა ყველა დანიშნულ შინაარსზე; ჟურნალისტის "
+"ასისტენტებს აქვთ შეზღუდული წვდომა ყველა წარდგინებაზე, რომლებიც მათ პირდაპირ "
+"მიანიჭა რედაქტორმა; რეცენზენტებს შეუძლიათ დაინახონ და შეასრულონ "
+"წარდგინებები, რომელთა გადახედვასაც დაევალათ; და ავტორებს შეუძლიათ იხილონ და "
+"ურთიერთქმედებენ შეზღუდული რაოდენობით ინფორმაციასთან დაკავშირებით საკუთარი "
+"წარდგინებით. გარდა ამისა, არსებობს ხუთი განსხვავებული ეტაპი დავალებები, "
+"რომელთა როლებზე წვდომა შეიძლება მიეცეს: წარდგენას, შიდა მიმოხილვას, "
+"მიმოხილვას, რედაქციას და წარმოებას."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"შეიყვანეთ წევრობის ინფორმაცია, თუ გამოწერის ტიპი მოითხოვს, რომ გამომწერები "
+"ასოციაციას ან ორგანიზაციას ეკუთვნით."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"ეს არის ვადაგასული აბონენტის ტიპი; გთხოვთ, არ მიუთითოთ დასრულების თარიღი."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "ეს არის ვადაგასული აბონენტის ტიპი; გთხოვთ, არ მიუთითოთ დაწყების თარიღი."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"ეს საკონტაქტო ინფორმაცია ჩამოთვლილი იქნება ხელმოწერის გვერდზე "
+"მომხმარებლებისთვის, რომლებსაც აქვთ გამოწერასთან დაკავშირებული შეკითხვები."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"გამოწერების ტიპები და საფასურის სტრუქტურა გამოჩნდება გამოწერების გვერდზე, "
+"გამოწერის მენეჯერის სახელთან და საკონტაქტო ინფორმაციასთან ერთად. აქ "
+"შეგიძლიათ დაემატოთ დამატებითი ინფორმაცია გამოწერების შესახებ, როგორიცაა "
+"გადახდის მეთოდები ან განვითარებადი ქვეყნების აბონენტების მხარდაჭერა."
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"სააბონენტო ჟურნალებს შეუძლიათ უზრუნველყონ „დაგვიანებული ღია წვდომა“ მათ "
+"გამოქვეყნებულ შინაარსზე, აგრეთვე ნება დართონ “ავტორის თვითარქივირებას“ ("
+"ორივე ზრდის მკითხველს და შინაარსის მითითებას)."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "გახსენით ხელმოწერის ოფციები სააბონენტო ჟურნალებისთვის"
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>შენიშვნა:</strong> ინტერნეტით შეძენილი ინსტიტუციური გამოწერები "
+"საჭიროებს მოწოდებული დომენისა და IP დიაპაზონის დამტკიცებას და გამოწერის "
+"აქტივაციას გამოწერა მენეჯერის მიერ."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"ავტომატიზირებული ელფოსტის შეტყობინებები (ჟურნალის მენეჯერების მიერ "
+"რედაქტირებისთვის ხელმისაწვდომია OJS ელ.ფოსტით) შეიძლება გაგზავნოთ გამოწერის "
+"მენეჯერი სააბონენტო ონლაინ გადახდების დასრულების შემდეგ."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>შენიშვნა:</strong> ამ ვარიანტის გასააქტიურებლად, საიტის "
+"ადმინისტრატორმა OJS კონფიგურაციის ფაილში უნდა ჩართოს <tt>scheduled_tasks</tt>"
+". შეიძლება საჭირო გახდეს სერვერის დამატებითი კონფიგურაცია, ამ ფუნქციონალური "
+"დახმარების უზრუნველსაყოფად (რაც შეუძლებელია ყველა სერვერზე), რაც მითითებულია "
+"OJS დოკუმენტაციაში."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"დარეგისტრირებულ მკითხველს შეეძლება ელფოსტით მიიღოს სარჩევი, როდესაც საკითხი "
+"გახდება ღია წვდომა."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"გთხოვთ, შეარჩიოთ სწორი მნიშვნელობა გამოწერის ამოწურვამდე რამდენიმე კვირის "
+"განმავლობაში."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"გთხოვთ, შეარჩიოთ სწორი მნიშვნელობა გამოწერის ამოწურვიდან რამდენიმე კვირის "
+"განმავლობაში."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"გთხოვთ, შეარჩიოთ სწორი მნიშვნელობა გამოწერის ვადის გასვლამდე თვეების "
+"რაოდენობისთვის."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"გთხოვთ, შეარჩიოთ სწორი მნიშვნელობა გამოწერის ვადის ამოწურვიდან თვის შემდეგ."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML შეიძლება გამოყენებულ იქნას ტექსტურ სივრცეში (შრიფტის ზომის, ფერის და "
+"ა.შ.), ხოლო “დაბრუნებები” განიხილება, როგორც <tt>&lt;br&gt;</tt>; HTML "
+"რედაქტორი მუშაობს Firefox ბრაუზერებთან."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong> შენიშვნა: </strong> ამ პარამეტრების გასააქტიურებლად, საიტის "
+"ადმინისტრატორმა OJS კონფიგურაციის ფაილში უნდა ჩართოს <tt>scheduled_tasks</tt>"
+" შეიძლება საჭირო გახდეს სერვერის დამატებითი კონფიგურაცია, ამ ფუნქციონალური "
+"დახმარების უზრუნველსაყოფად (რაც შეუძლებელია ყველა სერვერზე), რაც მითითებულია "
+"OJS დოკუმენტაციაში."
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tთქვენი ჟურნალი კონფიგურირებულია, რომ ჩაწეროს ერთზე მეტი გამოყენების "
+"მეტრი. გამოყენების სტატისტიკა ნაჩვენები იქნება რამდენიმე კონტექსტში.\n"
+"\t\tარის შემთხვევები, როდესაც გამოყენებული უნდა იქნას ერთიანი გამოყენების "
+"სტატისტიკური მონაცემები, მაგალითად, ყველაზე ხშირად გამოყენებული სტატიების "
+"მოწესრიგებული ჩამონათვალის ჩვენება ან რანჟირება\n"
+"\t\tძიების შედეგები. გთხოვთ, ნაგულისხმევად აირჩიოთ კონფიგურირებული მეტრიდან."
+"\n"
+"\t"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"ჟურნალის საგნები შეიძლება გამოქვეყნდეს ერთობლივად, როგორც საკუთარი შინაარსის "
+"ცხრილის გამოცემა. გარდა ამისა, ცალკეული საგნების გამოქვეყნება შესაძლებელია "
+"როგორც კი მზად იქნება, მათ “მიმდინარე” ტომის შინაარსის ცხრილში დამატება "
+"დაემატება. მკითხველს მიაწოდეთ ინფორმაცია ჟურნალის შესახებ, ჟურნალის შესახებ "
+"სისტემის შესახებ, რომელსაც გამოიყენებს ეს ჟურნალი და გამოქვეყნების სავარაუდო "
+"სიხშირე."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"ჩართეთ ნებისმიერი ინფორმაცია თქვენი ჟურნალის შესახებ, რომელიც შეიძლება "
+"საინტერესო იყოს მკითხველებისთვის, ავტორებისთვის ან რეცენზენტებისთვის. ეს "
+"შეიძლება შეიცავდეს თქვენი ღია წვდომის პოლიტიკას, ჟურნალის ყურადღების ცენტრს "
+"და მოცულობას, საავტორო უფლებების შეტყობინებას, სპონსორობის გამჟღავნებას, "
+"ჟურნალის ისტორიას, კონფიდენციალურობის დებულებას და ნებისმიერ LOCKSS ან "
+"CLOCKSS საარქივო სისტემაში ჩართვას."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS იცავს <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open "
+"Archives Initiative</a> ოქმის მეტამონაცემების მოსავლის აღების პროტოკოლს, "
+"რომელიც წარმოადგენს ახალ ინდექსაციურ წვდომას გლობალური მასშტაბის ელექტრონული "
+"კვლევითი რესურსები. ავტორები გამოიყენებენ მსგავს შაბლონს, რომ წარმოადგინონ "
+"მეტამონაცემები მათი წარსადგენად. ჟურნალის მენეჯერმა უნდა შეარჩიოს "
+"კატეგორიები ინდექსირებისთვის და ავტორებს წარუდგინოს შესაბამისი მაგალითები, "
+"რათა დაეხმაროს მათ სამუშაოს ინდექსაციაში."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"სექციის რედაქტორის დამატება ამ სექციაში, რომ წარდგინება ავტომატურად დაემატოს "
+"სექციის რედაქტორს. (წინააღმდეგ შემთხვევაში, სექციის რედაქტორების დანიშვნა "
+"შესაძლებელია ხელით, წარდგენის შემოსვლის შემდეგ.) დამატების შემთხვევაში, "
+"სექციის რედაქტორს შეუძლია ავტომატურად დაენიშნოს ზედამხედველობას წარდგენების "
+"მიმოხილვაზე (კოლეგების მიმოხილვა) და / ან რედაქტირებაზე (კოპირება, განლაგება "
+"და კორექტირება) ამ განყოფილებაში. სექციის რედაქტორები იქმნება ჟურნალის "
+"მენეჯმენტის როლების ქვე განყოფილების რედაქტორების დაწკაპუნებით."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS ხელმისწავდომი იქნება მომხმარებლებისათვის ნებისმიერ მხარდაჭერილ სისტემურ "
+"ენაზე. ამავდროულად, OJS-ს შეუძლია მუშაობა მრავალენოვან რეჟიმშიც და "
+"მომხმარებლებს საშუალებას მისცემს გადართონ ენები ყოველ გვერდზე და შეიტანონ "
+"მონაცემები რამდენიმე დამატებით ენაზე.<br /><br/>თუ მხარდაჭერილი ენა "
+"მითიტებული არ არის ქვემოთ მოცემულ სიაში, სთხოვეთ ადმინისტრატორს დაამატოს ენა "
+"ადმინისტირების ინტერფეისიდან. იხილდეთ OJS-ის დოკუმენტაცია ახალი ენების "
+"დამატების შესახებ."
+
+msgid "stats.publications.abstracts"
+msgstr "აბსტრაქტები"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} სტატია {$total} სტატიიდან"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "ფაილის ყველა ნახვა თარიღის მიხედვით"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "აბსტრაქტის ხედები თარიღის მიხედვით"
+
+msgid "stats.publications.none"
+msgstr "ვერ მოიძებნა სტატიები ამ პარამეტრების შესაბამისი სტატისტიკის შესახებ."
+
+msgid "stats.publications.details"
+msgstr "სტატიის დეტალები"
+
+msgid "stats.publicationStats"
+msgstr "სტატიის სტატისტიკა"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "მითითებული ობიექტები ვერ მოიძებნა."
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "ჟურნალის მითითებული გზა, \"{$journalPath}\", არ არსებობს."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "შეცდომა:"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr ""
+"ჟურნალისთვის გამოკლებულია DOI პრეფიქსი, რომელსაც აქვს მდებარეობა {$path}."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "დადასტურება ჩაშალა."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "დადასტურება წარმატებულია!"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"რეგისტრაცია წარმატებით ვერ განხორციელდა! DOI რეგისტრაციის სერვერმა დააბრუნა "
+"შეცდომა: '{$param}'."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "შეყვანის ფაილი {$param} არ იკითხება."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "გამომავალი ფაილი {$param} არ იწერება."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "არასწორი XML:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "არჩეული ობიექტების გარდაქმნა შეუძლებელია."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "ობიექტი არ არის არჩეული."
+
+msgid "plugins.importexport.common.validation"
+msgstr "დაადასტურეთ XML ექსპორტამდე და რეგისტრაციამდე."
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "მონიშნულია, როგორც დარეგისტირებული"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "მონიშნულია, როგორც რეგისტირებული"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "არ არის დეპონირებული"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "ნებისმიერი სტატუსი"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "ნებისმიერი გამოცემა"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"გთხოვთ გაითვალისწინოთ, რომ პაროლი შეინახება როგორც მარტივი ტექსტი, ანუ არ "
+"არის დაშიფრული."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"არცერთი საგამომცემლო ობიექტი არ არის არჩეული DOI დანიშვნისთვის DOI საჯარო "
+"იდენტიფიკატორის მოდულში, ამიტომ ამ დანამატში დეპოზიტის ან ექსპორტის "
+"შესაძლებლობა არ არის."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "პლაგინი სრულად არ არის დაყენებული."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"ამ პლაგინის გამოსაყენებლად გადადით \"Public Identifier\" მოდულის "
+"კატეგორიაში, ჩართეთ და დააკონფიგურირეთ DOI მოდული და მიუთითეთ აქ სწორი DOI "
+"პრეფიქსი."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "პლაგინის მოთხოვნები არ დაკმაყოფილდა"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "სვეტები"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "გამოცემები"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI პლაგინის პარამეტრები"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "გამოწერის ტიპი წარმატებით შეიქმნა."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "გამოწერის ტიპები არ შექმნილა."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "გამოწერის ტიპი"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "სააბონენტო ტიპის სახელი აუცილებელია."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "ამ სახელის გამოწერის ტიპი უკვე არსებობს."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "ტიპის დასახელება"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "შენახვა და ახლის შექმნა"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "გთხოვთ, გამოიყენოთ თოლია."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "არ გახადოთ გამოწერის ეს ტიპი საჯაროდ ხელმისაწვდომი ან ხილული ვებსაიტზე."
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "გთხოვთ, გამოიყენოთ თოლია."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"ხელმოწერა მოითხოვს ინფორმაციას წევრობის შესახებ (მაგ. ასოციაციის, "
+"ორგანიზაციის, კონსორციუმის და ა.შ.)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "გთხოვთ, გამოიყენოთ მოცემული ვარიანტები."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"დაწესებულების (მომხმარებლების დამოწმება ხდება დომენის ან IP მისამართის "
+"საშუალებით)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "ინდივიდუალური (მომხმარებლების შემოწმება ხდება შესვლის საშუალებით)"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "გთხოვთ, აირჩიოთ გამოწერის ტიპის სწორი ფორმატი."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "გამოწერის ტიპის ფორმატი სავალდებულოა."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "ხანგრძლივობა სავალდებულოა."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "ხანგრძლივობა უნდა იყოს დადებითი, რიცხვითი მნიშვნელობა."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "ხელმოწერის თვეების რაოდენობა (მაგ. 12)."
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "გთხოვთ, გამოიყენოთ მოცემული ვარიანტები."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "არასოდეს იწურება"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "თვე (მაგ. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "იწურება"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "გთხოვთ, აირჩიოთ სწორი ვალუტა."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "ვალუტა სავალდებულოა."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "საჭიროა ღირებულება."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "ღირებულება უნდა იყოს დადებითი, რიცხვითი მნიშვნელობა."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+"შეიყვანეთ რიცხვითი მნიშვნელობა (მაგ. 40 ან 40.00) სიმბოლოს გარეშე (მაგ., ₾)."
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "გამოწერის ტიპის ჩასწორება"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "ახალი გამოწერის ტიპის შექმნა"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "ორგანიზაციის"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "ინდივიდუალური"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"გაფრთხილება! ყველა გამოწერა ამ გამოწერის ტიპით ასევე წაიშლება. დარწმუნებული "
+"ხართ, რომ გსურთ გააგრძელოთ და წაშალოთ ამ გამოწერის ტიპი?"
+
+msgid "manager.subscriptionTypes"
+msgstr "გამოწერის ტიპები"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "დაწესებულების დასახელება"
+
+msgid "manager.subscriptions.contact"
+msgstr "საკონტაქტო სახელი"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "გამოწერის ტიპი"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "გამოწერა წარმატებით შეიქმნა."
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"გამოწერაზე დაშვების პრივილეგიები ავტომატურად ეძლევათ ჟურნალის მმართველებს, "
+"რედაქტორებს, განყოფილებების რედაქტორებს, განლაგების რედაქტორებს, რედაქტორებს "
+"და კორექტორებს."
+
+msgid "manager.subscriptions.selectUser"
+msgstr "მომხმარებლის არჩევა"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "აირჩიეთ გამოწერის კონტაქტი"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "გამოწერა არ არის"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "სარეგისტრაციო ნომერი"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP დიაპაზონი"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "გამოწერის ტიპი უნდა შეიქმნას ახალი გამოწერების გაკეთებამდე."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "ამ მომხმარებელს უკვე აქვს ამ ჟურნალის გამოწერა."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"მომხმარებლისთვის შეტყობინების ელფოსტის გაგზავნის მიზნით, ხელმოწერის "
+"საკონტაქტო სახელი და ელექტრონული ფოსტის მისამართი მითითებული უნდა იყოს "
+"ჟურნალის მორგებისას."
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "შენახვა და ახლის შექმნა"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "გთხოვთ, შეიყვანოთ სწორი IP დიაპაზონი."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"თუ აქ შეყვანილია IP დიაპაზონები, დომენი არასავალდებულოა.<br /> მოქმედი "
+"მნიშვნელობები მოიცავს IP მისამართს (მაგ. 142.58.103.1), IP დიაპაზონს (მაგ. "
+"142.58.103.1 - 142.58.103.4), IP დიაპაზონს wildcard \"*\" (მაგ. 142.58. *. *)"
+" და IP დიაპაზონს CIDR (მაგ. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP დიაპაზონები"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "გთხოვთ, შეიყვანოთ სწორი დომენი."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"გამოწერის არჩეულ ტიპს სჭირდება დომენის ან/და IP დიაპაზონის გამოწერის "
+"ავთენტიფიკაციისთვის."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"თუ დომენი შეტანილია აქ, IP დიაპაზონები არასავალდებულოა.<br /> მოქმედი "
+"მნიშვნელობებია დომენის სახელები (მაგ. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Საფოსტო მისამართი"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "აუცილებელია დაწესებულების სახელი."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "დაწესებულების დასახელება"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "გამოწერის არჩეული ტიპი მოითხოვს წევრობის ინფორმაციას."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "სარეგისტრაციო ნომერი"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "გთხოვთ, გამოიყენოთ თოლია."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "გაუგზავნეთ დადასტურების წერილი ახალ მომხმარებელს."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "გთხოვთ, აირჩიოთ სწორი ქვეყანა."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "გთხოვთ, აირჩიოთ სწორი მომხმარებელი."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "მომხმარებელი სავალდებულოა."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"შენიშვნა: ქვემოთ მოყვანილი ყველა ცვლილება შედის მომხმარებლის სისტემის მთელ "
+"პროფილში."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "გთხოვთ, აირჩიოთ გამოწერის დასრულების სწორი თარიღი."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "გამოწერის დასრულების თარიღი სავალდებულოა."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "გთხოვთ, აირჩიოთ გამოწერის დაწყების სწორი თარიღი."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "გამოწერის დაწყების თარიღი სავალდებულოა."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "გთხოვთ, აირჩიოთ გამოწერის სწორი ტიპი."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "საჭიროა გამოწერის ტიპი."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "გამოწერის ტიპი"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "გთხოვთ, აირჩიოთ გამოწერის სწორი სტატუსი."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "გამოწერის სტატუსი სავალდებულოა."
+
+msgid "manager.subscriptions.withStatus"
+msgstr "სტატუსით"
+
+msgid "manager.subscriptions.edit"
+msgstr "გამოწერის ჩასწორება"
+
+msgid "manager.subscriptions.create"
+msgstr "ახალი გამოწერის შექმნა"
+
+msgid "manager.subscriptions.summary"
+msgstr "გამოწერის საერთო ინფორმაცია"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "დარწმუნებული ხართ, რომ გსურთ გამოწერის წაშლა?"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "დარწმუნებული ხართ, რომ გსურთ გამოწერის განახლება?"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "გთხოვთ შეიტანოთ სწორი ელფოსტის მისამართი."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "გამოწერების მმართველი"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "გამოწერის ინფორმაცია"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "შეტყობინება ონლაინ გადახდის შესახებ"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "აირჩიეთ ერთ-ერთი:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"ავტომატური ელფოსტის შეხსენებები (ჟურნალის რედაქტირებისთვის ხელმისაწვდომია "
+"OJS-ის ელფოსტაში) აბონენტებს შეიძლება გაუგზავნონ როგორც გამოწერის ვადის "
+"ამოწურვამდე, ასევე მას შემდეგ."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "გამოწერის ვადის შეხსენება"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} კვირა"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} თვე"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "დარწმუნებული ხართ, რომ გსურთ გამოწერის წაშლა?"
