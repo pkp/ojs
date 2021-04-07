@@ -62,6 +62,7 @@ msgstr "Osaston lyhenne \"{$section1Abbrev}\" ja osaston lyhenne \"{$section2Abb
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Tuntematon osasto  {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Annettua käyttäjää \"{$userName}\" ei ole olemassa."
 

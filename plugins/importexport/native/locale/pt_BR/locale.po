@@ -86,6 +86,7 @@ msgstr "Exportar Edições"
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Seção desconhecida {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "O usuário informado, \"{$userName}\", não existe."
 

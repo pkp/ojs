@@ -66,6 +66,7 @@ msgstr ""
 msgid "plugins.importexport.native.cliError"
 msgstr "GREŠKA:"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Navedeni korisnik, \"{$userName}\", ne postoji."
 

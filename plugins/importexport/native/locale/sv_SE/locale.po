@@ -70,6 +70,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Okänd sektion: {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Användaren \"{$userName}\" existerar inte."
 

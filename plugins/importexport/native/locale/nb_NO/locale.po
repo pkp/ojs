@@ -64,6 +64,7 @@ msgstr ""
 "Seksjonstitene «{$section1Title}» og «{$section2Title}» i utgaven "
 "«{$issueTitle}» stemte med ulike eksisterende tidsskriftseksjoner."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Brukeren du spesifiserte, «{$userName}», finnes ikke."
 

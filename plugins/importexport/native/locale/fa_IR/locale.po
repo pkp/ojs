@@ -47,6 +47,7 @@ msgstr "نحوه استفاده: {$scriptName} {$pluginName} [command] ...  فر
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "بخش ناشناس {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "کاربر ذکر شده \"{$userName}\" وجود ندارد."
 

@@ -58,6 +58,7 @@ msgstr ""
 "número \"{$issueTitle}\" corresponen a les diferents seccions existents de "
 "la revista."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "L'usuari/ària especificat (\"{$userName}\") no existeix."
 

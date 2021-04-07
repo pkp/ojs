@@ -50,6 +50,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Section {$param} inconnue"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "L'utilisateur-trice spécifié-e, « {$userName} », n'existe pas."
 

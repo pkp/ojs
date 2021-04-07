@@ -75,6 +75,7 @@ msgstr ""
 "განყოფილებების „{$section1Title}“ და „{$section2Title}“ გამოცემაში "
 "„{$issueTitle}“ ემთხვევა ჟურნალის სხვადასხვა არსებულ განყოფილებებს."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "მითითებული მომხმარებელი, „{$userName}“, არ არსებობს."
 

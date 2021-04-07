@@ -71,6 +71,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Neznámá sekce {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Zadaný úživatel \"{$userName}\" neexistuje."
 

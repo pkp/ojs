@@ -357,6 +357,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		switch ($command) {
 			case 'import':
+				if (!isset($user)) {
+					echo __('plugins.importexport.common.cliError') . "\n";
+					echo __('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
+
+					$this->usage($scriptName);
+					return;
+				}
+
 				if (!file_exists($xmlFile)) {
 					echo __('plugins.importexport.common.cliError') . "\n";
 					echo __('plugins.importexport.common.export.error.inputFileNotReadable', array('param' => $xmlFile)) . "\n\n";

@@ -79,6 +79,7 @@ msgstr ""
 "Bagian judul \"{$section1Title}\" dan bagian judul \"{$section2Title}\" "
 "dalam issue \"{$issueTitle}\" sam dengan bagian jurnal yang ada dan berbeda."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Pengguna yang dimaksud,  \"{$userName}\", tidak ada."
 

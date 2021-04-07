@@ -70,6 +70,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Bilinmeyen bölüm {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Belirtilen kullanıcı \"{$userName}\" mevcut değil."
 

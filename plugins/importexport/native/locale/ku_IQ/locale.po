@@ -26,6 +26,7 @@ msgstr ""
 "ناونیشانی بەشی\"{$section1Title}\" و ناونیشانی بەشی\"{$section2Title}\" لە \""
 "{$issueTitle}\" لەگەڵ بەشێکی دیکەی گۆڤارەکە هاوشێوەیە."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "بەکارهێنەری دیاریکراو: \"{$userName}\"بەردەست نییە."
 

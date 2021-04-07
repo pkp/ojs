@@ -74,6 +74,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "قسم غير معروف: {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "المستخدم المحدد: \"{$userName}\"غير موجود."
 

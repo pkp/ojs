@@ -17,6 +17,7 @@ msgstr ""
 "\" во \"{$issueTitle}\" бројот се спаруваат различно во секциите на "
 "постоечкото списание."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Посочениот корисник, \"{$userName}\", не постои."
 
