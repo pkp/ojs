@@ -359,7 +359,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			case 'import':
 				if (!isset($user)) {
 					echo __('plugins.importexport.common.cliError') . "\n";
-					echo __('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
+					echo __('plugins.importexport.native.error.unknownUser') . "\n\n";
 
 					$this->usage($scriptName);
 					return;

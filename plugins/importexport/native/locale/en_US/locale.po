@@ -71,7 +71,7 @@ msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Unknown section {$param}"
 
 msgid "plugins.importexport.native.error.unknownUser"
-msgstr "A user must be provided by using --user_name command parameter"
+msgstr "A user must be provided by using the --user_name or -u command parameter."
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr "The section title \"{$section1Title}\" and the section title \"{$section2Title}\" in the \"{$issueTitle}\" issue matched the different existing journal sections."
