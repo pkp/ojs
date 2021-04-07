@@ -26,6 +26,20 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 - email.smtp_oauth_clientsecret
 - email.smtp_oauth_refreshtoken
 
+3.3.0-5 Build
+-------------
+	#6910: Use proper identification when issuing HTTP requests
+	#6892: View more accessible button label is broken in 3.3
+	#6888: Ensure Composer dependency test/example code is safe
+	#6886: crossrefReferenceLinking plugin: consider all references settings
+	#6879: Site settings not visible for usage statistics plugin when only one context exists
+	#6873: Saving the Website - Appearance - Setup form auto-focuses on Homepage Image Alt Text field
+	#6872: Article links broken after update to 3.3.0-4
+	#6871: Session destruction (and duplicate) warnings in the PHP error log
+	#6870: SQL logic error in upgrade when using PostgreSQL
+	#6862: Author name is not localized in How-to-Cite citation
+	#6757: Supported form locales can be serialized as associative array
+
 3.3.0-4 Build
 -------------
 	#6860: Make submission deletion more accepting of missing files
