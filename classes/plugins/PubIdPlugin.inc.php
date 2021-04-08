@@ -255,7 +255,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 * @param $issue Issue
 	 */
 	function clearIssueObjectsPubIds($issue) {
-		$submissionPubIdEnabled = $this->isObjectTypeEnabled('Submission', $issue->getJournalId());
+		$submissionPubIdEnabled = $this->isObjectTypeEnabled('Publication', $issue->getJournalId());
 		$representationPubIdEnabled = $this->isObjectTypeEnabled('Representation', $issue->getJournalId());
 		$filePubIdEnabled = $this->isObjectTypeEnabled('SubmissionFile', $issue->getJournalId());
 		if (!$submissionPubIdEnabled && !$representationPubIdEnabled && !$filePubIdEnabled) return false;
