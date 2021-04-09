@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-05 18:02+0000\n"
+"PO-Revision-Date: 2021-03-31 13:55+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-driver/ka_GE/>\n"
@@ -17,4 +17,4 @@ msgstr ""
 "ეხმარება OJS ჟურნალებს გახდნენ DRIVER-თავსებადი."
 
 msgid "plugins.generic.driver.displayName"
-msgstr "მოდული „DRIVER“"
+msgstr "პლაგინი „DRIVER“"

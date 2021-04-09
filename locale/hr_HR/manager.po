@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
-"PO-Revision-Date: 2020-11-17 18:56+0000\n"
-"Last-Translator: Jakov-Marin Vežić <jakov.vezic@gmail.com>\n"
+"PO-Revision-Date: 2021-04-03 20:34+0000\n"
+"Last-Translator: Jašo Vrdoljak <jasovrdoljak@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/manager/hr/"
 ">\n"
 "Language: hr_HR\n"
@@ -72,9 +72,12 @@ msgstr "Svi iznosi moraju biti pozitivne numeričke vrijednosti (decimalni broje
 msgid "manager.payment.generalFees"
 msgstr "Opće naplate"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "Mogućnost članstva u organizaciji bit će navedena u rubrici \"uređivačka politika\" pod poveznicom \"o časopisu\". U slučaju aktivacije opcije, poveznica na donacije nalazit će se u gornjem desnom okviru svake stranice, ponad prozora za pretraživanje."
+msgstr ""
+"Mogućnost članstva u organizaciji bit će navedena u rubrici \"uređivačka "
+"politika\" pod poveznicom \"o časopisu\". U slučaju aktivacije opcije, "
+"poveznica na donacije nalazit će se u gornjem desnom okviru svake stranice, "
+"ponad prozora za pretraživanje."
 
 msgid "manager.payment.generalOptions"
 msgstr "Opće opcije"
@@ -125,7 +128,8 @@ msgid "manager.payment.paymentMethod"
 msgstr "Način uplate"
 
 msgid "manager.payment.paymentMethod.description"
-msgstr "Sa ovog ekrana možete podesiti funkcionalne dodatke namijenjenih plaćanju:"
+msgstr ""
+"Sa ovog ekrana možete podesiti funkcionalne dodatke namijenjenih plaćanju."
 
 msgid "manager.payment.paymentMethods"
 msgstr "Način uplate"
@@ -215,7 +219,7 @@ msgid "manager.sections.hideTocTitle"
 msgstr "Izostavi naslov ove rubrike iz kazala sadržaja izdanih brojeva časopisa."
 
 msgid "manager.sections.identifyType"
-msgstr "Pri kreiranju metapodataka, svi će članci u rubrici biti označeni kao:"
+msgstr "Označite stavke objavljene u ovom odjeljku kao (n)"
 
 msgid "manager.sections.identifyTypeExamples"
 msgstr "(na primjer, \"članak\", \"prikaz\", \"uvodnik\", itd.)"
@@ -236,10 +240,10 @@ msgid "manager.sections.reviewed"
 msgstr "Recenzijski postupak"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "Nisu obuhvaćene indeksiranjem časopisa."
+msgstr "Nisu obuhvaćene indeksiranjem časopisa"
 
 msgid "manager.sections.submissionReview"
-msgstr "Ne prolaze kroz recenzijski postupak."
+msgstr "Ne prolaze kroz recenzijski postupak"
 
 msgid "manager.section.submissionsToThisSection"
 msgstr "Prijave u ovoj rubrici časopisa"
@@ -263,7 +267,7 @@ msgid "manager.setup.addItem"
 msgstr "Dodaj stavku"
 
 msgid "manager.setup.addItemtoAboutJournal"
-msgstr "Dodaj stavku koja će se pojaviti u \"o časopisu\"."
+msgstr "Dodaj stavku koja će se pojaviti u \"o časopisu\""
 
 msgid "manager.setup.addNavItem"
 msgstr "Dodaj stavke"
@@ -290,7 +294,7 @@ msgid "manager.setup.announcementsIntroduction.description"
 msgstr "Unesite dodatne informacije koje će biti stalno prikazane čitateljima na stranici \"obavijesti\"."
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(Pojavljuje se u \"o časopisu\")"
+msgstr "(Pojavljuje se u \"o časopisu\") "
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Zahtijevaj od autora da prilikom prijave svog rukopisa ispune izjavu o sukobu interesa."
@@ -347,7 +351,12 @@ msgid "manager.setup.emailBounceAddress.description"
 msgstr "Bilo koja nedostavljena e-pošta rezultirat će slanjem poruke o pogrešci na ovu adresu."
 
 msgid "manager.setup.emailBounceAddress.disabled"
-msgstr "<strong>Obavijest:</strong> Kako bi aktivirao ovu opciju, administrator stranice mora omogućiti <tt>allow_envelope_sender</tt> u konfiguracijskoj datoteci OJS-a. Dodatna konfiguracija poslužitelja je potrebna da bi podržala ovu funkcionalnost (što nije moguće na svim poslužiteljima) -  naznačeno u  OJS dokumentaciji."
+msgstr ""
+"<strong>Obavijest:</strong> Kako bi aktivirao ovu opciju, administrator "
+"stranice mora omogućiti <code>allow_envelope_sender</code> u "
+"konfiguracijskoj datoteci OJS-a. Dodatna konfiguracija poslužitelja je "
+"potrebna da bi podržala ovu funkcionalnost (što nije moguće na svim "
+"poslužiteljima) -  naznačeno u  OJS dokumentaciji."
 
 msgid "manager.setup.emails"
 msgstr "Identifikacija e-pošte"
@@ -1111,7 +1120,7 @@ msgid "manager.sections.wordCount"
 msgstr "Broj riječi"
 
 msgid "manager.sections.wordCountInstructions"
-msgstr "Ograničite broj riječi za sažetak u ovom odjeljku (0 za beskonačno):"
+msgstr "Ograničite broj riječi za sažetak u ovom odjeljku (0 za beskonačno)"
 
 msgid "manager.setup.history"
 msgstr "Povijest časopisa"
@@ -1866,3 +1875,25 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "Pristup"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Provjera valjanosti nije uspjela."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Provjera valjanosti je uspješna!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Ovaj časopis trenutno ne prihvaća prijave. Posjetite postavke tijeka rada da "
+"biste omogućili podnošenje."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Spriječite korisnike da šalju nove članke u časopis. Prijave se mogu "
+"onemogućiti za pojedine odjeljke časopisa na stranici postavki <a href=\""
+"{$url}\"> odjeljka </a>."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Barem jedan odjeljak mora biti aktivan. Posjetite postavke tijeka rada da "
+"biste onemogućili sve prijave u ovaj časopis."

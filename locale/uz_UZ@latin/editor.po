@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-11 10:59+0000\n"
+"PO-Revision-Date: 2021-03-29 14:59+0000\n"
 "Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/editor/uz_UZ@"
 "latin/>\n"
@@ -357,9 +357,7 @@ msgstr ""
 "lishi kerak"
 
 msgid "editor.issues.volumeRequired"
-msgstr ""
-"Har bir tom raqamlanishi va ular natural ko‘rinishdagi sonlardan iborat bo‘"
-"lishi kerak"
+msgstr "Har bir tom natural son bilan raqamlanishi kerak"
 
 msgid "editor.issues.datePublished"
 msgstr "Nashr qilingan sana"
@@ -374,7 +372,7 @@ msgid "editor.issues.confirmDelete"
 msgstr "Ushbu nashrni butunlay o‘chirib tashlashga ishonchingiz komilmi?"
 
 msgid "editor.issues.noArticles"
-msgstr "Ayni damda joriy nashr uchun rejalashtirilgan maqolalar yo‘q"
+msgstr "Joriy nashr uchun rejalashtirilgan maqolalar yo‘q"
 
 msgid "editor.issues.numArticles"
 msgstr "Maqolalar miqdori"
@@ -445,7 +443,7 @@ msgstr ""
 "uchun belgilangan yozuvlar tizimdan butunlay o‘chiriladi."
 
 msgid "editor.submissionArchive.noSubmissions"
-msgstr "Arxivga fayl yuborilmagan"
+msgstr "Arxivda hech qanday materiallar yo‘q"
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
