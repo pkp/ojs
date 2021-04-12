@@ -247,7 +247,7 @@ class ArticleHandler extends Handler {
 		));
 
 		// Citations
-		if ($publication->getData('citationsRaw')) {
+		if (!$publication->getData('citationsRaw')) {
 			$citationDao = DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
 			$parsedCitations = $citationDao->getByPublicationId($publication->getId());
 			$templateMgr->assign([
