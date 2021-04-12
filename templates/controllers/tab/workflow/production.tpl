@@ -1,18 +1,43 @@
 {**
  * templates/controllers/tab/workflow/production.tpl
  *
- * Copyright (c) 2014-2019 Simon Fraser University
- * Copyright (c) 2003-2019 John Willinsky
+* Copyright (c) 2014-2019 Simon Fraser University
+* Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Production workflow stage
  *}
+<script type="text/javascript">
+// Attach the JS file tab handler.
+$(function () {ldelim}
+	$('#submissionVersions').pkpHandler(
+			'$.pkp.controllers.TabHandler',
+			{ldelim}
+				{assign var=selectedTabIndex value=$currentSubmissionVersion - 1}
+				selected: {$selectedTabIndex}
+				{rdelim}
+	);
+	{rdelim});
+</script>
 
 {* Help tab *}
 {help file="editorial-workflow/production.md" class="pkp_help_tab"}
 
 <div id="production">
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions refreshOn="stageStatusUpdated"}
+	{if $isJatsTemplatePluginEnabled}
+		<div id="productionXmlUploadNotification" class="pkp_notification">
+			<div class="notifyInfo">
+				<span class="title"></span>
+				<span class="description">
+					{translate key="submission.upload.productionReadyXML.notification"}
+					<div class="pkp_button">{include file="linkAction/linkAction.tpl" action=$xmlFileCreateLinkAction submissionId=$submissionId stageId=$stageId fileStage=$fileStage}</div>
+					<div class="pkp_button">{include file="linkAction/linkAction.tpl" action=$xmlFileUploadLinkAction submissionId=$submissionId stageId=$stageId fileStage=$fileStage}</div>
+				</span>
+			</div>
+		</div>
+	{/if}
+
 
 	<div class="pkp_context_sidebar">
 		{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), (array)$userRoles)}
