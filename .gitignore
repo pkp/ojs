@@ -8,6 +8,7 @@ temp
 .buildpath
 .settings
 .DS_Store
+.php_cs.cache
 node_modules
 js/build.js
 js/hot-updates
