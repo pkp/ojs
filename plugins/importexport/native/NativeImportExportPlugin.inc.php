@@ -279,10 +279,16 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$exportFilter = array_shift($nativeExportFilters);
 		$exportFilter->setDeployment(new NativeImportExportDeployment($context, $user));
 		$issues = array();
-		foreach ($issueIds as $issueId) {
-			$issue = $issueDao->getById($issueId, $context->getId());
-			if ($issue) $issues[] = $issue;
+		if (!empty($issueIds)) {
+			foreach ($issueIds as $issueId) {
+				$issue = $issueDao->getById($issueId, $context->getId());
+				if ($issue) $issues[] = $issue;
+			}
+		} else {
+			$issues = $issueDao->getIssues($context->getId());
+			$issues = $issues->toArray();
 		}
+
 		libxml_use_internal_errors(true);
 		$exportFilter->setOpts($opts);
 		$issueXml = $exportFilter->execute($issues, true);
