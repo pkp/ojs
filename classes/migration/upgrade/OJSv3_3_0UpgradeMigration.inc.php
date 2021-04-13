@@ -98,7 +98,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		}
 
 		// Convert settings where only setting_type column is available
-		$tables = DB::connection()->getDoctrineSchemaManager()->listTableNames();
+		$tables = DB::getDoctrineSchemaManager()->listTableNames();
 		foreach ($tables as $tableName) {
 			if (substr($tableName, -9) !== '_settings' || in_array($tableName, $processedTables)) continue;
 			DB::table($tableName)->where('setting_type', 'object')->get()->each(function ($row) use ($tableName) {
