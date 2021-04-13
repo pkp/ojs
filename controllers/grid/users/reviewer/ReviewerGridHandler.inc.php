@@ -22,7 +22,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler {
 	 */
 	function reviewRead($args, $request) {
 		// Retrieve review assignment.
-		$reviewAssignment = $this->getAuthorizedContextObject(ASSOC_TYPE_REVIEW_ASSIGNMENT); /* @var $reviewAssignment ReviewAssignment */
+		$reviewAssignment = $this->getAuthorizedContextObject(ASSOC_TYPE_REVIEW_ASSIGNMENT); /* @var $reviewAssignment \PKP\submission\reviewAssignment\ReviewAssignment */
 
 		// Recommendation
 		$newRecommendation = $request->getUserVar('recommendation');
