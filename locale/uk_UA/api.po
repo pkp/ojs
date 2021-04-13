@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-04-13 20:01+0000\n"
-"Last-Translator: vfranchuk <vfranchuk@npu.edu.ua>\n"
+"Last-Translator: Наталія Петрівна Франчук <n.p.franchuk@npu.edu.ua>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/api/uk_UA/"
 ">\n"
 "Language: uk_UA\n"
@@ -14,3 +14,17 @@ msgstr ""
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Оголошення, яке Ви запросили, не є частиною цього журнала."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Щоб зробити або відредагувати подання, потрібно зробити запит до кінцевої "
+"точки API журналу."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "У вас немає дозволу на перегляд неопублікованих випусків."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Не можна змінити журнал подання."
+
+msgid "api.emails.403.disabled"
+msgstr "Функція сповіщення електронною поштою не ввімкнена для цього журналу."
