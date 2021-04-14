@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
 
+use \APP\core\Services;
+
 class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellProvider {
 	/** @var ImportExportPlugin */
 	var $_plugin;
@@ -51,7 +53,6 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 				if (empty($title)) $title = __('common.untitled');
 				$authorsInTitle = $submission->getShortAuthorString();
 				$title = $authorsInTitle . '; ' . $title;
-				import('classes.core.Services');
 				return array(
 					new LinkAction(
 						'itemWorkflow',

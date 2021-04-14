@@ -135,7 +135,7 @@ class Application extends PKPApplication {
 	 * @return ContextDAO
 	 */
 	public static function getContextDAO() {
-		return DAORegistry::getDAO('JournalDAO');
+		return \DAORegistry::getDAO('JournalDAO');
 	}
 
 	/**
@@ -144,7 +144,7 @@ class Application extends PKPApplication {
 	 * @return SubmissionDAO
 	 */
 	public static function getSubmissionDAO() {
-		return DAORegistry::getDAO('SubmissionDAO');
+		return \DAORegistry::getDAO('SubmissionDAO');
 	}
 
 	/**
@@ -152,7 +152,7 @@ class Application extends PKPApplication {
 	 * @return SectionDAO
 	 */
 	public static function getSectionDAO() {
-		return DAORegistry::getDAO('SectionDAO');
+		return \DAORegistry::getDAO('SectionDAO');
 	}
 
 	/**
@@ -160,7 +160,7 @@ class Application extends PKPApplication {
 	 * @return RepresentationDAO
 	 */
 	public static function getRepresentationDAO() {
-		return DAORegistry::getDAO('ArticleGalleyDAO');
+		return \DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
 	/**
@@ -168,14 +168,14 @@ class Application extends PKPApplication {
 	 */
 	public static function getSubmissionSearchIndex() {
 		import('classes.search.ArticleSearchIndex');
-		return new ArticleSearchIndex();
+		return new \ArticleSearchIndex();
 	}
 
 	/**
 	 * Get a SubmissionSearchDAO instance.
 	 */
 	public static function getSubmissionSearchDAO() {
-		return DAORegistry::getDAO('ArticleSearchDAO');
+		return \DAORegistry::getDAO('ArticleSearchDAO');
 	}
 
 	/**
@@ -225,6 +225,6 @@ class Application extends PKPApplication {
 	 */
 	public static function getPaymentManager($context) {
 		import('classes.payment.ojs.OJSPaymentManager');
-		return new OJSPaymentManager($context);
+		return new \OJSPaymentManager($context);
 	}
 }
