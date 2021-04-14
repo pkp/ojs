@@ -22,7 +22,7 @@ define('SUBSCRIPTION_TYPE_FORMAT_PRINT',		0x10);
 define('SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE',	0x11);
 
 
-class SubscriptionType extends DataObject {
+class SubscriptionType extends \PKP\core\DataObject {
 	//
 	// Get/set methods
 	//
