@@ -16,7 +16,7 @@
 
 import('classes.subscription.SubscriptionType');
 
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\DB;
 
 class SubscriptionTypeDAO extends DAO {
 	/**
@@ -303,7 +303,7 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return boolean
 	 */
 	function subscriptionTypesExistByInstitutional($journalId, $institutional = false) {
-		$result = Capsule::table('subscription_types')
+		$result = DB::table('subscription_types')
 			->where('journal_id', (int) $journalId)
 			->where('institutional', (int) $institutional)
 			->first();

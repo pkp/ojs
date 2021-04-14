@@ -14,7 +14,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class OJSMigration extends Migration {
         /**
@@ -23,7 +24,7 @@ class OJSMigration extends Migration {
          */
         public function up() {
 		// Journals and basic journal settings.
-		Capsule::schema()->create('journals', function (Blueprint $table) {
+		Schema::create('journals', function (Blueprint $table) {
 			$table->bigInteger('journal_id')->autoIncrement();
 			$table->string('path', 32);
 			$table->float('seq', 8, 2)->default(0)->comment('Used to order lists of journals');
@@ -33,7 +34,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Journal settings.
-		Capsule::schema()->create('journal_settings', function (Blueprint $table) {
+		Schema::create('journal_settings', function (Blueprint $table) {
 			$table->bigInteger('journal_id');
 			$table->string('locale', 14)->default('');
 			$table->string('setting_name', 255);
@@ -44,7 +45,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Journal sections.
-		Capsule::schema()->create('sections', function (Blueprint $table) {
+		Schema::create('sections', function (Blueprint $table) {
 			$table->bigInteger('section_id')->autoIncrement();
 			$table->bigInteger('journal_id');
 			$table->bigInteger('review_form_id')->nullable();
@@ -61,7 +62,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Section-specific settings
-		Capsule::schema()->create('section_settings', function (Blueprint $table) {
+		Schema::create('section_settings', function (Blueprint $table) {
 			$table->bigInteger('section_id');
 			$table->string('locale', 14)->default('');
 			$table->string('setting_name', 255);
@@ -72,7 +73,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Journal issues.
-		Capsule::schema()->create('issues', function (Blueprint $table) {
+		Schema::create('issues', function (Blueprint $table) {
 			$table->bigInteger('issue_id')->autoIncrement();
 			$table->bigInteger('journal_id');
 			$table->smallInteger('volume')->nullable();
@@ -97,7 +98,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Locale-specific issue data
-		Capsule::schema()->create('issue_settings', function (Blueprint $table) {
+		Schema::create('issue_settings', function (Blueprint $table) {
 			$table->bigInteger('issue_id');
 			$table->string('locale', 14)->default('');
 			$table->string('setting_name', 255);
@@ -107,13 +108,13 @@ class OJSMigration extends Migration {
 			$table->unique(['issue_id', 'locale', 'setting_name'], 'issue_settings_pkey');
 		});
 		// Add partial index (DBMS-specific)
-		switch (Capsule::connection()->getDriverName()) {
-			case 'mysql': Capsule::connection()->unprepared('CREATE INDEX issue_settings_name_value ON issue_settings (setting_name(50), setting_value(150))'); break;
-			case 'pgsql': Capsule::connection()->unprepared("CREATE INDEX issue_settings_name_value ON issue_settings (setting_name, setting_value) WHERE setting_name IN ('medra::registeredDoi', 'datacite::registeredDoi')"); break;
+		switch (DB::getDriverName()) {
+			case 'mysql': DB::unprepared('CREATE INDEX issue_settings_name_value ON issue_settings (setting_name(50), setting_value(150))'); break;
+			case 'pgsql': DB::unprepared("CREATE INDEX issue_settings_name_value ON issue_settings (setting_name, setting_value) WHERE setting_name IN ('medra::registeredDoi', 'datacite::registeredDoi')"); break;
 		}
 
 		// Issue galleys.
-		Capsule::schema()->create('issue_galleys', function (Blueprint $table) {
+		Schema::create('issue_galleys', function (Blueprint $table) {
 			$table->bigInteger('galley_id')->autoIncrement();
 			$table->string('locale', 14)->nullable();
 			$table->bigInteger('issue_id');
@@ -126,7 +127,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Issue galley metadata.
-		Capsule::schema()->create('issue_galley_settings', function (Blueprint $table) {
+		Schema::create('issue_galley_settings', function (Blueprint $table) {
 			$table->bigInteger('galley_id');
 			$table->string('locale', 14)->default('');
 			$table->string('setting_name', 255);
@@ -136,7 +137,7 @@ class OJSMigration extends Migration {
 			$table->unique(['galley_id', 'locale', 'setting_name'], 'issue_galley_settings_pkey');
 		});
 
-		Capsule::schema()->create('issue_files', function (Blueprint $table) {
+		Schema::create('issue_files', function (Blueprint $table) {
 			$table->bigInteger('file_id')->autoIncrement();
 			$table->bigInteger('issue_id');
 			$table->string('file_name', 90);
@@ -150,7 +151,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Custom sequencing information for journal issues, when available
-		Capsule::schema()->create('custom_issue_orders', function (Blueprint $table) {
+		Schema::create('custom_issue_orders', function (Blueprint $table) {
 			$table->bigInteger('issue_id');
 			$table->bigInteger('journal_id');
 			$table->float('seq', 8, 2)->default(0);
@@ -158,7 +159,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Custom sequencing information for journal sections by issue, when available.
-		Capsule::schema()->create('custom_section_orders', function (Blueprint $table) {
+		Schema::create('custom_section_orders', function (Blueprint $table) {
 			$table->bigInteger('issue_id');
 			$table->bigInteger('section_id');
 			$table->float('seq', 8, 2)->default(0);
@@ -166,7 +167,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Archived, removed from TOC, unscheduled or unpublished journal articles.
-		Capsule::schema()->create('submission_tombstones', function (Blueprint $table) {
+		Schema::create('submission_tombstones', function (Blueprint $table) {
 			$table->bigInteger('tombstone_id')->autoIncrement();
 			$table->bigInteger('submission_id');
 			$table->datetime('date_deleted');
@@ -180,7 +181,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Publications
-		Capsule::schema()->create('publications', function (Blueprint $table) {
+		Schema::create('publications', function (Blueprint $table) {
 			$table->bigInteger('publication_id')->autoIncrement();
 			$table->bigInteger('access_status')->default(0)->nullable();
 			$table->date('date_published')->nullable();
@@ -199,7 +200,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Publication galleys
-		Capsule::schema()->create('publication_galleys', function (Blueprint $table) {
+		Schema::create('publication_galleys', function (Blueprint $table) {
 			$table->bigInteger('galley_id')->autoIncrement();
 			$table->string('locale', 14)->nullable();
 			$table->bigInteger('publication_id');
@@ -215,7 +216,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Galley metadata.
-		Capsule::schema()->create('publication_galley_settings', function (Blueprint $table) {
+		Schema::create('publication_galley_settings', function (Blueprint $table) {
 			$table->bigInteger('galley_id');
 			$table->string('locale', 14)->default('');
 			$table->string('setting_name', 255);
@@ -224,13 +225,13 @@ class OJSMigration extends Migration {
 			$table->unique(['galley_id', 'locale', 'setting_name'], 'publication_galley_settings_pkey');
 		});
 		// Add partial index (DBMS-specific)
-		switch (Capsule::connection()->getDriverName()) {
-			case 'mysql': Capsule::connection()->unprepared('CREATE INDEX publication_galley_settings_name_value ON publication_galley_settings (setting_name(50), setting_value(150))'); break;
-			case 'pgsql': Capsule::connection()->unprepared("CREATE INDEX publication_galley_settings_name_value ON publication_galley_settings (setting_name, setting_value)"); break;
+		switch (DB::getDriverName()) {
+			case 'mysql': DB::unprepared('CREATE INDEX publication_galley_settings_name_value ON publication_galley_settings (setting_name(50), setting_value(150))'); break;
+			case 'pgsql': DB::unprepared("CREATE INDEX publication_galley_settings_name_value ON publication_galley_settings (setting_name, setting_value)"); break;
 		}
 
 		// Subscription types.
-		Capsule::schema()->create('subscription_types', function (Blueprint $table) {
+		Schema::create('subscription_types', function (Blueprint $table) {
 			$table->bigInteger('type_id')->autoIncrement();
 			$table->bigInteger('journal_id');
 			$table->float('cost', 8, 2);
@@ -245,7 +246,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Locale-specific subscription type data
-		Capsule::schema()->create('subscription_type_settings', function (Blueprint $table) {
+		Schema::create('subscription_type_settings', function (Blueprint $table) {
 			$table->bigInteger('type_id');
 			$table->string('locale', 14)->default('');
 			$table->string('setting_name', 255);
@@ -256,7 +257,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Journal subscriptions.
-		Capsule::schema()->create('subscriptions', function (Blueprint $table) {
+		Schema::create('subscriptions', function (Blueprint $table) {
 			$table->bigInteger('subscription_id')->autoIncrement();
 			$table->bigInteger('journal_id');
 			$table->bigInteger('user_id');
@@ -270,7 +271,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Journal institutional subscriptions.
-		Capsule::schema()->create('institutional_subscriptions', function (Blueprint $table) {
+		Schema::create('institutional_subscriptions', function (Blueprint $table) {
 			$table->bigInteger('institutional_subscription_id')->autoIncrement();
 			$table->bigInteger('subscription_id');
 			$table->string('institution_name', 255);
@@ -281,7 +282,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Journal institutional subscription IPs and IP ranges.
-		Capsule::schema()->create('institutional_subscription_ip', function (Blueprint $table) {
+		Schema::create('institutional_subscription_ip', function (Blueprint $table) {
 			$table->bigInteger('institutional_subscription_ip_id')->autoIncrement();
 			$table->bigInteger('subscription_id');
 			$table->string('ip_string', 40);
@@ -293,7 +294,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Logs queued (unfulfilled) payments.
-		Capsule::schema()->create('queued_payments', function (Blueprint $table) {
+		Schema::create('queued_payments', function (Blueprint $table) {
 			$table->bigInteger('queued_payment_id')->autoIncrement();
 			$table->datetime('date_created');
 			$table->datetime('date_modified');
@@ -302,7 +303,7 @@ class OJSMigration extends Migration {
 		});
 
 		// Logs completed (fulfilled) payments.
-		Capsule::schema()->create('completed_payments', function (Blueprint $table) {
+		Schema::create('completed_payments', function (Blueprint $table) {
 			$table->bigInteger('completed_payment_id')->autoIncrement();
 			$table->datetime('timestamp');
 			$table->bigInteger('payment_type');
@@ -321,27 +322,27 @@ class OJSMigration extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Capsule::schema()->drop('completed_payments');
-		Capsule::schema()->drop('queued_payments');
-		Capsule::schema()->drop('institutional_subscription_ip');
-		Capsule::schema()->drop('institutional_subscriptions');
-		Capsule::schema()->drop('subscriptions');
-		Capsule::schema()->drop('subscription_type_settings');
-		Capsule::schema()->drop('subscription_types');
-		Capsule::schema()->drop('publication_galley_settings');
-		Capsule::schema()->drop('publication_galleys');
-		Capsule::schema()->drop('publications');
-		Capsule::schema()->drop('submission_tombstones');
-		Capsule::schema()->drop('custom_section_orders');
-		Capsule::schema()->drop('custom_issue_orders');
-		Capsule::schema()->drop('issue_files');
-		Capsule::schema()->drop('issue_galley_settings');
-		Capsule::schema()->drop('issue_galleys');
-		Capsule::schema()->drop('issue_settings');
-		Capsule::schema()->drop('issues');
-		Capsule::schema()->drop('section_settings');
-		Capsule::schema()->drop('sections');
-		Capsule::schema()->drop('journal_settings');
-		Capsule::schema()->drop('journals');
+		Schema::drop('completed_payments');
+		Schema::drop('queued_payments');
+		Schema::drop('institutional_subscription_ip');
+		Schema::drop('institutional_subscriptions');
+		Schema::drop('subscriptions');
+		Schema::drop('subscription_type_settings');
+		Schema::drop('subscription_types');
+		Schema::drop('publication_galley_settings');
+		Schema::drop('publication_galleys');
+		Schema::drop('publications');
+		Schema::drop('submission_tombstones');
+		Schema::drop('custom_section_orders');
+		Schema::drop('custom_issue_orders');
+		Schema::drop('issue_files');
+		Schema::drop('issue_galley_settings');
+		Schema::drop('issue_galleys');
+		Schema::drop('issue_settings');
+		Schema::drop('issues');
+		Schema::drop('section_settings');
+		Schema::drop('sections');
+		Schema::drop('journal_settings');
+		Schema::drop('journals');
 	}
 }

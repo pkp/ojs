@@ -15,7 +15,7 @@
  *
  */
 
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\DB;
 
 import('lib.pkp.classes.payment.CompletedPayment');
 import('classes.payment.ojs.OJSPaymentManager'); // Constants
@@ -79,7 +79,7 @@ class OJSCompletedPaymentDAO extends DAO {
 				assoc_id = ?,
 				amount = ?,
 				currency_code_alpha = ?,
-				payment_method_plugin_name = ? 
+				payment_method_plugin_name = ?
 			WHERE completed_payment_id = ?',
 			$this->datetimeToDB($completedPayment->getTimestamp())),
 			[
@@ -100,7 +100,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $completedPaymentId int
 	 */
 	public function deleteById($completedPaymentId) {
-		Capsule::table('completed_payments')
+		DB::table('completed_payments')
 			->where('completed_payment_id', '=', $completedPaymentId)
 			->delete();
 	}

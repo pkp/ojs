@@ -14,7 +14,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\DB;
 
 class I6807_SetLastModified extends Migration {
 	/**
@@ -23,8 +23,8 @@ class I6807_SetLastModified extends Migration {
 	 */
 	public function up() {
 		// pkp/pkp-lib#6807 Make sure all submission/issue last modification dates are set
-		Capsule::statement('UPDATE issues SET last_modified = date_published WHERE last_modified IS NULL');
-		Capsule::statement('UPDATE submissions SET last_modified = NOW() WHERE last_modified IS NULL');
+		DB::statement('UPDATE issues SET last_modified = date_published WHERE last_modified IS NULL');
+		DB::statement('UPDATE submissions SET last_modified = NOW() WHERE last_modified IS NULL');
 	}
 
 	/**

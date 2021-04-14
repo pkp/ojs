@@ -16,7 +16,7 @@
 
 import('lib.pkp.classes.oai.PKPOAIDAO');
 import('classes.issue.Issue');
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\DB;
 
 class OAIDAO extends PKPOAIDAO {
 
@@ -210,7 +210,7 @@ class OAIDAO extends PKPOAIDAO {
 		$sectionId = array_shift($setIds);
 
 		# Exlude all journals that do not have Oai specifically turned on, see #pkp/pkp-lib#6503
-		$excludeJournals = Capsule::table('journals')
+		$excludeJournals = DB::table('journals')
 			->whereNotIn('journal_id',function($query){
 				$query->select('journal_id')
 				->from('journal_settings')

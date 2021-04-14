@@ -13,7 +13,7 @@
  */
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\DB;
 
 class OJSv3_3_1_i6872_UrlPathMigration extends Migration {
 	/**
@@ -21,7 +21,7 @@ class OJSv3_3_1_i6872_UrlPathMigration extends Migration {
 	 * @return void
 	 */
 	public function up() {
-		Capsule::table('publications')->whereNull('url_path')->update(['url_path' => null]);
+		DB::table('publications')->whereNull('url_path')->update(['url_path' => null]);
 	}
 
 	/**
