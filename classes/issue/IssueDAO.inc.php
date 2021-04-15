@@ -233,7 +233,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		if ($row = (array) $result->current()) {
 			$issue = $this->_returnIssueFromRow($row);
 		} elseif (is_int($issueId) || ctype_digit($issueId)) {
-			$issue = $this->getById($issueId);
+			$issue = $this->getById($issueId, $contextId);
 		}
 
 		return $issue ?? null;
