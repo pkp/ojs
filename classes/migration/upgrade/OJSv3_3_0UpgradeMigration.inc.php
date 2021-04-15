@@ -100,9 +100,15 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		$tables = Capsule::connection()->getDoctrineSchemaManager()->listTableNames();
 		foreach ($tables as $tableName) {
 			if (substr($tableName, -9) !== '_settings' || in_array($tableName, $processedTables)) continue;
-			Capsule::table($tableName)->where('setting_type', 'object')->get()->each(function ($row) use ($tableName) {
-				$this->_toJSON($row, $tableName, ['setting_name', 'locale'], 'setting_value');
-			});
+			if ($tableName === 'plugin_settings') {
+				Capsule::table($tableName)->where('setting_type', 'object')->get()->each(function ($row) use ($tableName) {
+					$this->_toJSON($row, $tableName, ['plugin_name', 'context_id', 'setting_name'], 'setting_value');
+				});
+			} else {
+				Capsule::table($tableName)->where('setting_type', 'object')->get()->each(function ($row) use ($tableName) {
+					$this->_toJSON($row, $tableName, ['setting_name', 'locale'], 'setting_value');
+				});
+			}
 		}
 
 		// Finally, convert values of other tables dependent from DAO::convertToDB
