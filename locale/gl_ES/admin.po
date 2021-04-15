@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-14 15:37+0000\n"
+"PO-Revision-Date: 2021-04-15 21:31+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "gl_ES/>\n"
@@ -31,9 +31,8 @@ msgstr ""
 
 msgid "admin.languages.confirmDisable"
 msgstr ""
-"Está seguro de que desexa desactivar esta configuración rexional? Isto "
-"podería afectar a todas as revistas aloxadas que actualmente utilizan esta "
-"configuración rexional."
+"Está seguro de que desexa desactivar este idioma? Isto podería afectar a "
+"todas as revistas aloxadas que actualmente o están utilizando."
 
 msgid "admin.settings.defaultMetricDescription"
 msgstr ""
@@ -100,3 +99,116 @@ msgstr ""
 "Está seguro/a de que desexa suprimir esta configuración rexional? Isto pode "
 "afectar a calquera revista aloxada que estea utilizando actualmente a dita "
 "configuración rexional."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Seleccione as revistas aloxadas que poden enviar correos electrónicos en "
+"masa. Cando este recurso está activo, o administrador da revista pode enviar "
+"un correo electrónico a todos/as os usuarios/as rexistrados na revista."
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Recordatorio de revisión"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notificación de acceso aberto"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Recordatorio de caducidade da subscrición"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Non se deu de alta ningún usuario/a"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Está seguro/a de que desexa fusionar a conta/s seleccionada/s "
+"{$oldAccountCount} coa conta co nome de usuario/a \"{$newUsername}\"? As "
+"contas seleccionadas {$oldAccountCount} deixarán de existir. Esta acción é "
+"irreversible."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Todos os usuarios/as dados de alta"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Seleccione un (ou máis dun) usuario/a para fusionalo con outra conta de "
+"usuario/a (p. ex. cando algún usuario/a ten dúas contas distintas). A conta "
+"seleccionada en primeiro lugar será eliminada e todos os envíos, asignacións "
+"etc., se atribuirán á segunda conta."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Seleccione o usuario/a ao que lle queira asignar as autorías do anterior, os "
+"encargos de edición etc."
+
+msgid "admin.mergeUsers"
+msgstr "Fusionar os usuarios/as"
+
+msgid "admin.journals.importErrors"
+msgstr "Non se completou a importación correctamente"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Requírese a ruta de importación."
+
+msgid "admin.journals.redirect"
+msgstr "Xerar o código para asignar enderezos URL OJS 1 a URL OJS 2"
+
+msgid "admin.journals.transcode"
+msgstr "Transcodificar metadatos de artigos de ISO8859-1"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importar subscricións"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Ruta existente ou ruta que se quere crear (p. ex., «ojs»)."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descrición da revista"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Permitir o acceso libre a esta revista no sitio web"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "O idioma principal debe ser compatible cos idiomas da revista."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Xa hai outra revista que utiliza a ruta seleccionada."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"A ruta só pode conter caracteres alfanuméricos, guións e guións baixos, e "
+"ten que empezar e acabar cun carácter alfanumérico."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Introduza unha ruta."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Cómpre poñer un título."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Introduza unha palabra curta ou un acrónimo que identifique a revista. O URL "
+"da revista será: {$sampleUrl}."
+
+msgid "admin.contexts.create"
+msgstr "Crear unha revista"
+
+msgid "admin.journals.noneCreated"
+msgstr "Non se creou ningunha revista."
+
+msgid "admin.journals.journalSettings"
+msgstr "Configuración da revista"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Asignaráselle  automaticamente o rol de director/a da revista. Tras crear "
+"unha revista nova, acceda a ela como director/a para continuar coa "
+"configuración e o rexistro de usuarios/as."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Configuración de OJS de <tt>config.inc.php</tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "Configuración de OJS"
+
+msgid "admin.systemVersion"
+msgstr "Versión de OJS"
