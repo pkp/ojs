@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-16 10:29+0000\n"
+"PO-Revision-Date: 2021-04-16 14:09+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/api/gl_ES/>"
 "\n"
@@ -21,3 +21,51 @@ msgstr ""
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "O aviso que solicitou non forma parte desta revista."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "A publicación que solicitou non forma parte deste envío."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Non ten autorización para eliminar esta revista."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Non é posible asociar un arquivo desta etapa cunha galerada."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "A publicación que solicitou non forma parte desta revista."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "O modo de pagamento que seleccionou non está soportado."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Non ten autorización para trasladar este modelo de correo electrónico  a "
+"outra revista."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "A revista que solicitou non se atopou."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Non ten autorización para editar esta revista."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Non pode editar esta revista desde a API de todo o sitio web."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Non pode ver ou editar esta revista a menos que faga unha solicitude á API "
+"da revista ou de todo o sitio web."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Non ten autorización para ver esta revista."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Só pode ver revistas que estean activas."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Para efectuar ou editar un envío debe realizar unha solicitude ao terminal "
+"API da revista."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Non ten permiso para consultar os números que non se publicaron."
