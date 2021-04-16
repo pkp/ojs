@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-19 08:54+0000\n"
+"PO-Revision-Date: 2021-04-16 05:57+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
@@ -192,7 +192,6 @@ msgstr "巻号の閲覧"
 msgid "issue.nonpdf.title"
 msgstr "巻号ダウンロード"
 
-#, fuzzy
 msgid "issue.fullIssue"
 msgstr "全巻号"
 
@@ -1364,9 +1363,8 @@ msgstr ""
 "expiration date. In addition, the following status information may be "
 "included with each subscription."
 
-#, fuzzy
 msgid "user.subscriptions.subscriptionStatus"
-msgstr "Subscription Status"
+msgstr "購読状況"
 
 msgid "user.subscriptions.mySubscriptions"
 msgstr "購読一覧表"
