@@ -17,12 +17,15 @@
 require_mock_env('env1');
 
 import('lib.pkp.tests.PKPTestCase');
-import('lib.pkp.classes.core.ArrayItemIterator');
 import('classes.search.ArticleSearch');
-import('lib.pkp.classes.core.PKPRouter');
 
 define('SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE', 1);
 define('SUBMISSION_SEARCH_TEST_ARTICLE_FROM_PLUGIN', 2);
+
+use \PKP\core\ArrayItemIterator;
+use \PKP\core\PKPRouter;
+
+use \APP\journal\Journal;
 
 class ArticleSearchTest extends PKPTestCase {
 	/** @var array */

@@ -29,6 +29,7 @@ define('EXPORT_ACTION_DEPOSIT', 'deposit');
 // Configuration errors.
 define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
+use \PKP\core\JSONMessage;
 
 abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/** @var PubObjectCache */

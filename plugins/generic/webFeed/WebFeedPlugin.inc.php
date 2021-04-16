@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
+use \PKP\core\JSONMessage;
+
 class WebFeedPlugin extends GenericPlugin {
 	/**
 	 * Get the display name of this plugin

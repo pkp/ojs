@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.search.SubmissionSearchIndex');
 
+use \APP\i18n\AppLocale;
+
 class ArticleSearchIndex extends SubmissionSearchIndex {
 
 	/**

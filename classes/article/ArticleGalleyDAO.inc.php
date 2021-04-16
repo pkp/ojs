@@ -18,9 +18,11 @@ import('classes.article.ArticleGalley');
 import('lib.pkp.classes.db.SchemaDAO');
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
+use \PKP\services\PKPSchemaService;
+
 class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 	/** @copydoc SchemaDAO::$schemaName */
-	public $schemaName = SCHEMA_GALLEY;
+	public $schemaName = PKPSchemaService::SCHEMA_GALLEY;
 
 	/** @copydoc SchemaDAO::$tableName */
 	public $tableName = 'publication_galleys';

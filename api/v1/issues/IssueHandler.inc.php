@@ -15,7 +15,8 @@
  */
 
 import('lib.pkp.classes.handler.APIHandler');
-import('classes.core.Services');
+
+use \APP\core\Services;
 
 class IssueHandler extends APIHandler {
 

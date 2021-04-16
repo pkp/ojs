@@ -14,6 +14,9 @@
  * @brief Test class for Dc11MetadataPlugin.
  */
 
+import('classes.core.Request'); // Cause mocked Request to be loaded
+import('classes.i18n.AppLocale'); // Cause mocked AppLocale to be loaded
+
 import('lib.pkp.plugins.metadata.dc11.tests.PKPDc11MetadataPluginTest');
 
 class Dc11MetadataPluginTest extends PKPDc11MetadataPluginTest {

@@ -19,6 +19,8 @@ import('controllers.grid.subscriptions.SubscriptionTypesGridCellProvider');
 import('controllers.grid.subscriptions.SubscriptionTypesGridRow');
 import('controllers.grid.subscriptions.SubscriptionTypeForm');
 
+use \PKP\core\JSONMessage;
+
 class SubscriptionTypesGridHandler extends GridHandler {
 
 	/**

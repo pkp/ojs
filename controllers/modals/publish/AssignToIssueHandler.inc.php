@@ -17,6 +17,8 @@
 // Import the base Handler.
 import('classes.handler.Handler');
 
+use \PKP\core\JSONMessage;
+
 class AssignToIssueHandler extends Handler {
 
 	/** @var Submission **/

@@ -17,6 +17,8 @@ import('controllers.grid.subscriptions.SubscriptionsGridHandler');
 
 import('controllers.grid.subscriptions.IndividualSubscriptionForm');
 
+use \PKP\core\JSONMessage;
+
 class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	/**
 	 * @copydoc SubscriptionsGridHandler::initialize()

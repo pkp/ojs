@@ -17,6 +17,8 @@ import('lib.pkp.classes.controllers.grid.CategoryGridHandler');
 import('controllers.grid.toc.TocGridCategoryRow');
 import('controllers.grid.toc.TocGridRow');
 
+use \PKP\core\JSONMessage;
+
 class TocGridHandler extends CategoryGridHandler {
 	var $submissionsBySectionId = [];
 
