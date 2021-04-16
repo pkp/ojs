@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-19 08:54+0000\n"
+"PO-Revision-Date: 2021-04-16 05:57+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "ja_JP/>\n"
@@ -407,13 +407,11 @@ msgstr "バージョンメタデーターを編集"
 msgid "editor.article.viewMetadata"
 msgstr "バージョンメタデーターの閲覧"
 
-#, fuzzy
 msgid "editor.article.publishVersion"
-msgstr "この版の出版"
+msgstr "バージョンの公開"
 
-#, fuzzy
 msgid "editor.article.showPublicationVersion"
-msgstr "出版予定を表示する"
+msgstr "予約済み出版の表示"
 
 msgid "editor.submissions.inSection"
 msgstr "セクション"
