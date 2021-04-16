@@ -14,7 +14,7 @@
  * @brief Operations for retrieving and modifying journal settings.
  */
 
-import('lib.pkp.classes.db.SettingsDAO');
+use \PKP\db\SettingsDAO;
 
 class JournalSettingsDAO extends SettingsDAO {
 	/**

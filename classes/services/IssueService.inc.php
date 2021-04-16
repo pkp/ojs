@@ -73,8 +73,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	public function getMany($args = []) {
 		$range = null;
 		if (isset($args['count'])) {
-			import('lib.pkp.classes.db.DBResultRange');
-			$range = new \DBResultRange($args['count'], null, isset($args['offset']) ? $args['offset'] : 0);
+			$range = new DBResultRange($args['count'], null, isset($args['offset']) ? $args['offset'] : 0);
 		}
 		// Pagination is handled by the DAO, so don't pass count and offset
 		// arguments to the QueryBuilder.

@@ -16,6 +16,8 @@
 
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
+use \PKP\db\DBResultRange;
+
 class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	protected $_parentPlugin;
 
@@ -108,7 +110,6 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		$announcementDao = DAORegistry::getDAO('AnnouncementDAO'); /* @var $announcementDao AnnouncementDAO */
 		$journalId = $journal->getId();
 		if ($recentItems > 0) {
-			import('lib.pkp.classes.db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
 			$announcements = $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo)->toArray();
 		} else {
