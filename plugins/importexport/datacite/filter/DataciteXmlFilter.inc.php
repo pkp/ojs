@@ -203,7 +203,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$rightsURL = $publication ? $publication->getData('licenseUrl') : $context->getData('licenseUrl');
 		if(!empty($rightsURL)) {
 			$rightsNode = $doc->createElementNS($deployment->getNamespace(), 'rightsList');
-			$rightsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'rights', htmlspecialchars(strip_tags(Application::getCCLicenseBadge($rightsURL)), ENT_COMPAT, 'UTF-8')));
+			$rightsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'rights', htmlspecialchars(strip_tags(Application::get()->getCCLicenseBadge($rightsURL)), ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('rightsURI', $rightsURL);
 			$rootNode->appendChild($rightsNode);
 		}
