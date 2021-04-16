@@ -14,8 +14,11 @@
  * @brief Operations for retrieving and modifying Journal objects.
  */
 
-import('lib.pkp.classes.context.ContextDAO');
-import('classes.journal.Journal');
+namespace APP\journal;
+
+use \PKP\context\ContextDAO;
+use \APP\journal\Journal;
+
 import('lib.pkp.classes.metadata.MetadataTypeDescription');
 
 define('JOURNAL_FIELD_TITLE', 1);
@@ -124,4 +127,8 @@ class JournalDAO extends ContextDAO {
 		}
 		return false;
 	}
+}
+
+if (!PKP_STRICT_MODE) {
+	class_alias('\APP\journal\JournalDAO', '\JournalDAO');
 }

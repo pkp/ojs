@@ -15,14 +15,16 @@
 
 namespace APP\Services;
 
-use \Journal;
-use \Services;
-use \DBResultRange;
-use \DAORegistry;
-use \DAOResultFactory;
+use \PKP\db\DBResultRange;
+use \PKP\db\DAORegistry;
+use \PKP\db\DAOResultFactory;
 use \PKP\Services\interfaces\EntityPropertyInterface;
 use \PKP\Services\interfaces\EntityReadInterface;
+use \PKP\Services\PKPSchemaService;
+
 use \APP\Services\QueryBuilders\IssueQueryBuilder;
+use \APP\journal\Journal;
+use \APP\core\Services;
 
 class IssueService implements EntityPropertyInterface, EntityReadInterface {
 
@@ -303,7 +305,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 			}
 		}
 
-		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_ISSUE, $values, $context->getSupportedFormLocales());
+		$values = Services::get('schema')->addMissingMultilingualValues(PKPSchemaService::SCHEMA_ISSUE, $values, $context->getSupportedFormLocales());
 
 		\HookRegistry::call('Issue::getProperties::values', array(&$values, $issue, $props, $args));
 

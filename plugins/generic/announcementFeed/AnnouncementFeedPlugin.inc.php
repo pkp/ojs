@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
+use \PKP\core\JSONMessage;
+
 class AnnouncementFeedPlugin extends GenericPlugin {
 	/**
 	 * @copydoc Plugin::register()

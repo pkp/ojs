@@ -15,14 +15,16 @@
 
 namespace APP\Services;
 
-use \DBResultRange;
-use \DAOResultFactory;
-use \DAORegistry;
-use \Services;
+use \PKP\db\DBResultRange;
+use \PKP\db\DAOResultFactory;
+use \PKP\db\DAORegistry;
 use \PKP\Services\interfaces\EntityPropertyInterface;
 use \PKP\Services\interfaces\EntityReadInterface;
 use \PKP\Services\interfaces\EntityWriteInterface;
+use \PKP\services\PKPSchemaService;
+
 use \APP\Services\QueryBuilders\GalleyQueryBuilder;
+use \APP\core\Services;
 
 class GalleyService implements EntityReadInterface, EntityWriteInterface, EntityPropertyInterface {
 
@@ -161,7 +163,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 			}
 		}
 
-		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $context->getSupportedSubmissionLocales());
+		$values = Services::get('schema')->addMissingMultilingualValues(PKPSchemaService::SCHEMA_GALLEY, $values, $context->getSupportedSubmissionLocales());
 
 		\HookRegistry::call('Galley::getProperties::values', array(&$values, $galley, $props, $args));
 
@@ -174,7 +176,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 * @copydoc \PKP\Services\interfaces\EntityPropertyInterface::getSummaryProperties()
 	 */
 	public function getSummaryProperties($galley, $args = null) {
-		$props = Services::get('schema')->getSummaryProps(SCHEMA_GALLEY);
+		$props = Services::get('schema')->getSummaryProps(PKPSchemaService::SCHEMA_GALLEY);
 
 		return $this->getProperties($galley, $props, $args);
 	}
@@ -183,7 +185,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 * @copydoc \PKP\Services\interfaces\EntityPropertyInterface::getFullProperties()
 	 */
 	public function getFullProperties($galley, $args = null) {
-		$props = Services::get('schema')->getFullProps(SCHEMA_GALLEY);
+		$props = Services::get('schema')->getFullProps(PKPSchemaService::SCHEMA_GALLEY);
 
 		return $this->getProperties($galley, $props, $args);
 	}
@@ -197,7 +199,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		import('lib.pkp.classes.validation.ValidatorFactory');
 		$validator = \ValidatorFactory::make(
 			$props,
-			$schemaService->getValidationRules(SCHEMA_GALLEY, $allowedLocales),
+			$schemaService->getValidationRules(PKPSchemaService::SCHEMA_GALLEY, $allowedLocales),
 			[
 				'locale.regex' => __('validator.localeKey'),
 				'urlPath.regex' => __('validator.alpha_dash'),
@@ -208,14 +210,14 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		\ValidatorFactory::required(
 			$validator,
 			$action,
-			$schemaService->getRequiredProps(SCHEMA_GALLEY),
-			$schemaService->getMultilingualProps(SCHEMA_GALLEY),
+			$schemaService->getRequiredProps(PKPSchemaService::SCHEMA_GALLEY),
+			$schemaService->getMultilingualProps(PKPSchemaService::SCHEMA_GALLEY),
 			$allowedLocales,
 			$primaryLocale
 		);
 
 		// Check for input from disallowed locales
-		\ValidatorFactory::allowedLocales($validator, $schemaService->getMultilingualProps(SCHEMA_GALLEY), $allowedLocales);
+		\ValidatorFactory::allowedLocales($validator, $schemaService->getMultilingualProps(PKPSchemaService::SCHEMA_GALLEY), $allowedLocales);
 
 		// The publicationId must match an existing publication that is not yet published
 		$validator->after(function($validator) use ($props) {
@@ -230,7 +232,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		});
 
 		if ($validator->fails()) {
-			$errors = $schemaService->formatValidationErrors($validator->errors(), $schemaService->get(SCHEMA_GALLEY), $allowedLocales);
+			$errors = $schemaService->formatValidationErrors($validator->errors(), $schemaService->get(PKPSchemaService::SCHEMA_GALLEY), $allowedLocales);
 		}
 
 		\HookRegistry::call('Galley::validate', array(&$errors, $action, $props, $allowedLocales, $primaryLocale));

@@ -14,11 +14,13 @@
  * @brief Test class for the ArticleSearchIndex class
  */
 
+import('classes.i18n.AppLocale'); // Causes mocked AppLocale class to be loaded
 
 import('lib.pkp.tests.PKPTestCase');
 import('classes.submission.Submission');
-import('lib.pkp.classes.core.ArrayItemIterator');
-import('lib.pkp.classes.services.PKPSchemaService'); // SCHEMA_GALLEY constant
+
+use \PKP\db\DAORegistry;
+use \PKP\core\ArrayItemIterator;
 
 class ArticleSearchIndexTest extends PKPTestCase {
 

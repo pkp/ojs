@@ -14,7 +14,9 @@
  *
  */
 
-import('lib.pkp.classes.i18n.PKPLocale');
+namespace APP\i18n;
+
+use \PKP\i18n\PKPLocale;
 
 class AppLocale extends PKPLocale {
 	/**
@@ -38,3 +40,6 @@ class AppLocale extends PKPLocale {
 	}
 }
 
+if (!PKP_STRICT_MODE) {
+	class_alias('\APP\i18n\AppLocale', '\AppLocale');
+}

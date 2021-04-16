@@ -16,6 +16,8 @@
 import('lib.pkp.controllers.grid.settings.SetupGridHandler');
 import('controllers.grid.settings.sections.SectionGridRow');
 
+use \PKP\core\JSONMessage;
+
 class SectionGridHandler extends SetupGridHandler {
 	/**
 	 * Constructor

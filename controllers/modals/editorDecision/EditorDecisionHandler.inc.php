@@ -18,6 +18,8 @@ import('lib.pkp.classes.controllers.modals.editorDecision.PKPEditorDecisionHandl
 // Access decision actions constants.
 import('classes.workflow.EditorDecisionActionsManager');
 
+use \PKP\core\JSONMessage;
+
 class EditorDecisionHandler extends PKPEditorDecisionHandler {
 	/**
 	 * Constructor.

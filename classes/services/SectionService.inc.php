@@ -15,8 +15,10 @@
 
 namespace APP\Services;
 
-use \Services;
 use \PKP\Services\interfaces\EntityPropertyInterface;
+use \PKP\services\PKPSchemaService;
+
+use \APP\core\Services;
 
 class SectionService implements EntityPropertyInterface {
 
@@ -70,7 +72,7 @@ class SectionService implements EntityPropertyInterface {
 		}
 
 		$locales = $args['request']->getContext()->getSupportedFormLocales();
-		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $locales);
+		$values = Services::get('schema')->addMissingMultilingualValues(PKPSchemaService::SCHEMA_GALLEY, $values, $locales);
 
 		\HookRegistry::call('Section::getProperties::values', array(&$values, $section, $props, $args));
 

@@ -18,6 +18,7 @@
 namespace APP\core;
 
 use \PKP\core\PKPApplication;
+use \PKP\db\DAORegistry;
 
 define('REQUIRES_XSL', false);
 
@@ -41,7 +42,7 @@ class Application extends PKPApplication {
 	 */
 	function __construct() {
 		parent::__construct();
-		if (!PKP_STRICT_MODE) {
+		if (!PKP_STRICT_MODE && !class_exists('\Application')) {
 			class_alias('\APP\core\Application', '\Application');
 		}
 	}
@@ -147,7 +148,7 @@ class Application extends PKPApplication {
 	 * @return ContextDAO
 	 */
 	public static function getContextDAO() {
-		return \DAORegistry::getDAO('JournalDAO');
+		return DAORegistry::getDAO('JournalDAO');
 	}
 
 	/**
@@ -156,7 +157,7 @@ class Application extends PKPApplication {
 	 * @return SubmissionDAO
 	 */
 	public static function getSubmissionDAO() {
-		return \DAORegistry::getDAO('SubmissionDAO');
+		return DAORegistry::getDAO('SubmissionDAO');
 	}
 
 	/**
@@ -164,7 +165,7 @@ class Application extends PKPApplication {
 	 * @return SectionDAO
 	 */
 	public static function getSectionDAO() {
-		return \DAORegistry::getDAO('SectionDAO');
+		return DAORegistry::getDAO('SectionDAO');
 	}
 
 	/**
@@ -172,7 +173,7 @@ class Application extends PKPApplication {
 	 * @return RepresentationDAO
 	 */
 	public static function getRepresentationDAO() {
-		return \DAORegistry::getDAO('ArticleGalleyDAO');
+		return DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
 	/**
@@ -187,7 +188,7 @@ class Application extends PKPApplication {
 	 * Get a SubmissionSearchDAO instance.
 	 */
 	public static function getSubmissionSearchDAO() {
-		return \DAORegistry::getDAO('ArticleSearchDAO');
+		return DAORegistry::getDAO('ArticleSearchDAO');
 	}
 
 	/**

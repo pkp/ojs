@@ -15,8 +15,10 @@
  * <journal_id> is assumed to be "index" for top-level site requests. @endverbatim
  */
 
+namespace APP\core;
 
-import('lib.pkp.classes.core.PKPRequest');
+use \PKP\plugins\HookRegistry;
+use \PKP\core\PKPRequest;
 
 class Request extends PKPRequest {
 	/**
@@ -92,5 +94,4 @@ class Request extends PKPRequest {
 		return $this->_delegateToRouter('redirectHome');
 	}
 }
-
 

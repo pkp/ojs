@@ -21,6 +21,8 @@
 import('lib.pkp.classes.controllers.grid.GridHandler');
 import('controllers.grid.issues.IssueGridRow');
 
+use \PKP\core\JSONMessage;
+
 class IssueGridHandler extends GridHandler {
 	/**
 	 * Constructor

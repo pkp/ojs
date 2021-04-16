@@ -20,12 +20,16 @@
  * @brief Describes basic journal properties.
  */
 
+namespace APP\journal;
+
+use \PKP\context\Context;
+use \APP\i18n\AppLocale;
+use \PKP\core\DAORegistry;
+use \PKP\plugins\PluginRegistry;
 
 define('PUBLISHING_MODE_OPEN', 0);
 define('PUBLISHING_MODE_SUBSCRIPTION', 1);
 define('PUBLISHING_MODE_NONE', 2);
-
-import('lib.pkp.classes.context.Context');
 
 class Journal extends Context {
 
@@ -156,4 +160,7 @@ class Journal extends Context {
 	}
 }
 
+if (!PKP_STRICT_MODE) {
+	class_alias('\APP\journal\Journal', '\Journal');
+}
 

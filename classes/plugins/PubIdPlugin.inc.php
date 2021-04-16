@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.plugins.PKPPubIdPlugin');
 
+use \PKP\core\JSONMessage;
+
 abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 	/**

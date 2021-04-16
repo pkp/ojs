@@ -15,7 +15,8 @@
 
 // Import the base handler.
 import('lib.pkp.controllers.api.file.PKPManageFileApiHandler');
-import('lib.pkp.classes.core.JSONMessage');
+
+use \PKP\core\JSONMessage;
 
 class ManageFileApiHandler extends PKPManageFileApiHandler {
 
