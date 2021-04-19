@@ -16,7 +16,7 @@
 
 import('classes.issue.IssueGalley');
 
-class IssueGalleyDAO extends DAO {
+class IssueGalleyDAO extends \PKP\db\DAO {
 
 	/**
 	 * Retrieve a galley by ID.

@@ -20,7 +20,7 @@ import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-class IssueDAO extends DAO implements PKPPubIdPluginDAO {
+class IssueDAO extends \PKP\db\DAO implements PKPPubIdPluginDAO {
 	var $caches;
 
 	/**

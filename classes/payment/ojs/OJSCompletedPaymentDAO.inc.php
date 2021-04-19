@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\DB;
 import('lib.pkp.classes.payment.CompletedPayment');
 import('classes.payment.ojs.OJSPaymentManager'); // Constants
 
-class OJSCompletedPaymentDAO extends DAO {
+class OJSCompletedPaymentDAO extends \PKP\db\DAO {
 	/**
 	 * Retrieve a CompletedPayment by its ID.
 	 * @param $completedPaymentId int

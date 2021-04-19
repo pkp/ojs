@@ -22,7 +22,7 @@ define('SUBSCRIPTION_MEMBERSHIP',		0x02);
 define('SUBSCRIPTION_REFERENCE_NUMBER',		0x03);
 define('SUBSCRIPTION_NOTES',			0x04);
 
-abstract class SubscriptionDAO extends DAO {
+abstract class SubscriptionDAO extends \PKP\db\DAO {
 
 	/**
 	 * Retrieve subscription by subscription ID.

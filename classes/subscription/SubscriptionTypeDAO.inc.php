@@ -18,7 +18,7 @@ import('classes.subscription.SubscriptionType');
 
 use Illuminate\Support\Facades\DB;
 
-class SubscriptionTypeDAO extends DAO {
+class SubscriptionTypeDAO extends \PKP\db\DAO {
 	/**
 	 * Create a new subscription type.
 	 * @return SubscriptionType
