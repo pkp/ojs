@@ -15,8 +15,6 @@
 use Colors\Color;
 
 import('lib.pkp.plugins.importexport.native.PKPNativeImportExportPlugin');
-
-use \PKP\core\JSONMessage;
 class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
 
 	/**
