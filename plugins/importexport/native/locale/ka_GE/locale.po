@@ -82,6 +82,7 @@ msgstr "მითითებული მომხმარებელი, „
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "უცნობი განყოფილება {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "გამოძახება: {$scriptName} {$pluginName} [command] ...\n"

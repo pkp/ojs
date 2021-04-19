@@ -41,6 +41,7 @@ msgstr "Nahrajte, prosím, soubor pod \"Import\", abyste mohli pokračovat."
 msgid "plugins.importexport.native.importComplete"
 msgstr "Import byl úspěšně dokončen. Byly importovány následující položky:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Použití: {$scriptName} {$pluginName} [command] ...\n"

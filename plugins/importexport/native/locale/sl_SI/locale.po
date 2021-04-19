@@ -41,6 +41,7 @@ msgstr "Prosimo, naložite datoteko pri \"Uvoz\" pred nadaljevanjem."
 msgid "plugins.importexport.native.importComplete"
 msgstr "Uvoz se je uspešno zaključil. Uvoženo je bilo:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Uporaba: {$scriptName} {$pluginName} [command] ...\n"

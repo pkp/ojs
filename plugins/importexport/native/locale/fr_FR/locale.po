@@ -65,6 +65,7 @@ msgstr "L'utilisatrice ou utilisateur spécifié, « {$userName] », n'existe 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Section {$param} inconnue"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Utilisation : {$scriptName} {$pluginName} [command] ...\n"

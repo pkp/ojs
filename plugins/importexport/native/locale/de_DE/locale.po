@@ -41,6 +41,7 @@ msgstr "Bitte laden Sie unter \"Import\" eine Datei hoch, um fortzufahren."
 msgid "plugins.importexport.native.importComplete"
 msgstr "Der Import wurde erfolgreich abgeschlossen. Die folgenden Elemente wurden importiert:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Nutzung: {$scriptName} {$pluginName} [command] ...\n"

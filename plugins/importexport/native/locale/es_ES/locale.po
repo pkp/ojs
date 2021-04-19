@@ -65,6 +65,7 @@ msgstr "Exportar artículos"
 msgid "plugins.importexport.native.exportIssues"
 msgstr "Exportar números"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Uso: {$scriptName} {$pluginName} [command] ...\n"

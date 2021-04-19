@@ -41,6 +41,7 @@ msgstr "Laad eerst een bestand op onder \"Importeer\"."
 msgid "plugins.importexport.native.importComplete"
 msgstr "De import is goed uitgevoerd. Volgende items werden geïmporteerd:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Gebruik: {$scriptName} {$pluginName} [commando] ...\n"

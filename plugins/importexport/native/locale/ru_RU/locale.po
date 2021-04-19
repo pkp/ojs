@@ -41,6 +41,7 @@ msgstr "Пожалуйста загрузите файл в раздел «Им�
 msgid "plugins.importexport.native.importComplete"
 msgstr "Импорт успешно завершен. Следующие элементы были импортированы:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Вызов: {$scriptName} {$pluginName} [команда] ...\n"

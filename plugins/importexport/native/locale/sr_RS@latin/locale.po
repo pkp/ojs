@@ -38,6 +38,7 @@ msgstr "Dostavite fajl pod \"Uvoz\" kako biste nastavili."
 msgid "plugins.importexport.native.importComplete"
 msgstr "Uvoz podataka je uspešno završen. Uvezeni su sledeći podaci:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Korišćenje: {$scriptName} {$pluginName} [command] ...\n"

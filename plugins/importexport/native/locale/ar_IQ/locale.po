@@ -45,6 +45,7 @@ msgstr "لطفاً، إرفع ملفاً ضمن \"استيراد\" للمتاب�
 msgid "plugins.importexport.native.importComplete"
 msgstr "الاستيراد إكتمل بنجاح. الفقرات الآتية تم استيرادها:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "الاستعمال: {$scriptName} {$pluginName} [command] ...\n"

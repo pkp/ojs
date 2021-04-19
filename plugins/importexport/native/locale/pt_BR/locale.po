@@ -53,6 +53,7 @@ msgstr "A abreviatura da seção \"{$sectionAbbrev}\" da edição \"{$issueTitle
 msgid "plugins.importexport.native.exportSubmissions"
 msgstr "Exportar Artigos"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Uso: {$scriptName} {$pluginName} [comando] ...\n"

@@ -45,6 +45,7 @@ msgstr "Prześlij plik pod \"Import\", aby kontynuować."
 msgid "plugins.importexport.native.importComplete"
 msgstr "Import ukończony z sukcesem. Poniższe pozycje zostały zaimportowane:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Użycie: {$scriptName} {$pluginName} [command] ...\n"

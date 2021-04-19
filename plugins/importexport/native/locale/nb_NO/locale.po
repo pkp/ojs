@@ -71,6 +71,7 @@ msgstr "Brukeren du spesifiserte, «{$userName}», finnes ikke."
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Ukjent seksjon {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Bruk: {$scriptName} {$pluginName} [command] ...\n"

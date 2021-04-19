@@ -64,6 +64,7 @@ msgstr "Người dùng được chỉ định, \"{$userName}\", không tồn t�
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Chuyên mục không xác định {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Sử dụng: {$scriptName} {$pluginName} [command] ...\n"

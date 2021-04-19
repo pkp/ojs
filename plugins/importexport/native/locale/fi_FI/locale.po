@@ -69,6 +69,7 @@ msgstr "Annettua käyttäjää \"{$userName}\" ei ole olemassa."
 msgid "plugins.importexport.native.exportSubmissionsSelect"
 msgstr "Valitse vietävät artikkelit"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Käyttö: {$scriptName} {$pluginName} [command] ...\n"

@@ -65,6 +65,7 @@ msgstr "L'usuari/ària especificat (\"{$userName}\") no existeix."
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Secció desconeguda {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Ús: {$scriptName} {$pluginName} [command] ...\n"

@@ -65,6 +65,7 @@ msgstr "Utilizatorul specificat, \"{$userName}\", nu există."
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Secțiune necunoscută {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Folosiți: {$scriptName} {$pluginName} [command] ...\n"

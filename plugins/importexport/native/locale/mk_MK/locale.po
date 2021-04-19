@@ -24,6 +24,7 @@ msgstr "Посочениот корисник, \"{$userName}\", не посто�
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Непозната секција {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Начин на користење: {$scriptName} {$pluginName} [command] ...\n"
