@@ -44,6 +44,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		Capsule::statement("DELETE FROM filters WHERE class_name IN ('plugins.importexport.medra.filter.IssueMedraXmlFilter', 'plugins.importexport.medra.filter.ArticleMedraXmlFilter', 'plugins.importexport.medra.filter.GalleyMedraXmlFilter')");
 		Capsule::statement("DELETE FROM filter_groups WHERE symbolic IN ('issue=>medra-xml', 'article=>medra-xml', 'galley=>medra-xml')");
 		Capsule::statement("DELETE FROM scheduled_tasks WHERE class_name='plugins.importexport.medra.MedraInfoSender'");
+		Capsule::statement("DELETE FROM versions WHERE product_type='plugins.importexport' AND product='medra'");
 
 		// pkp/pkp-lib#6807 Make sure all submission/issue last modification dates are set
 		Capsule::statement('UPDATE issues SET last_modified = date_published WHERE last_modified IS NULL');
