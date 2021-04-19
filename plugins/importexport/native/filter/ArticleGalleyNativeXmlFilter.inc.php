@@ -16,15 +16,6 @@
 import('lib.pkp.plugins.importexport.native.filter.RepresentationNativeXmlFilter');
 
 class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
-	/**
-	 * Constructor
-	 * @param $filterGroup FilterGroup
-	 */
-	function __construct($filterGroup) {
-		parent::__construct($filterGroup);
-	}
-
-
 	//
 	// Implement template methods from PersistableFilter
 	//
@@ -48,8 +39,6 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
 	function createRepresentationNode($doc, $representation) {
 		$representationNode = parent::createRepresentationNode($doc, $representation);
 		$representationNode->setAttribute('approved', $representation->getIsApproved()?'true':'false');
-
-		$submission = $this->getDeployment()->getSubmission();
 
 		return $representationNode;
 	}

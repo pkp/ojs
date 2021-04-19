@@ -1587,12 +1587,6 @@ msgstr "Neplatné XML:"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Prefix DOI chybí pro časopis na adrese {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "CHYBA:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Vybraná adresa časopisu  \"{$journalPath}\" neexistuje."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Specifikované objekty nelze najít."
 

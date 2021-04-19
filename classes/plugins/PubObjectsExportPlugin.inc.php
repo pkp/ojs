@@ -56,7 +56,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 		$this->addLocaleData();
-		
+
 		HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 		foreach ($this->_getDAOs() as $dao) {
 			if ($dao instanceof SchemaDAO) {
@@ -195,7 +195,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
-			
+
 			if ($onlyValidateExport) {
 				if (isset($exportXml)) {
 					$this->_sendNotification(
@@ -441,7 +441,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
 			$additionalFields[] = $fieldName;
 		}
-		
+
 		return false;
 	}
 
@@ -556,7 +556,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		if (!$context) {
 			if ($contextPath != '') {
 				echo __('plugins.importexport.common.cliError') . "\n";
-				echo __('plugins.importexport.common.error.unknownJournal', array('journalPath' => $contextPath)) . "\n\n";
+				echo __('plugins.importexport.common.error.unknownContext', array('contextPath' => $contextPath)) . "\n\n";
 			}
 			$this->usage($scriptName);
 			return;
@@ -758,6 +758,27 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			DAORegistry::getDAO('SubmissionFileDAO'),
 			DAORegistry::getDAO('IssueDAO'),
 		);
+	}
+
+	/**
+	 * @see ImportExportPlugin::getImportFilter
+	 */
+	function getImportFilter($xmlFile) {
+		throw new BadMethodCallException();
+	}
+
+	/**
+	 * @see ImportExportPlugin::getExportFilter
+	 */
+	function getExportFilter($exportType) {
+		throw new BadMethodCallException();
+	}
+
+	/**
+	 * @see ImportExportPlugin::getAppSpecificDeployment
+	 */
+	function getAppSpecificDeployment($context, $user) {
+		throw new BadMethodCallException();
 	}
 }
 

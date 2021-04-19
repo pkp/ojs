@@ -56,7 +56,7 @@ class UserImportExportPlugin extends PKPUserImportExportPlugin {
 		if (!$journal) {
 			if ($journalPath != '') {
 				echo __('plugins.importexport.common.cliError') . "\n";
-				echo __('plugins.importexport.common.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
+				echo __('plugins.importexport.common.error.unknownContext', array('contextPath' => $journalPath)) . "\n\n";
 			}
 			$this->usage($scriptName);
 			return;

@@ -1678,12 +1678,6 @@ msgstr "Проверка завершилась неудачей."
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Отсутствует префикс DOI для журнала с адресом {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ОШИБКА:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Указанный путь журнала «{$journalPath}» не существует."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Указанные объекты не удается найти."
 

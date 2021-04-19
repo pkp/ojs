@@ -1674,12 +1674,6 @@ msgstr "将副本发送到“期刊设置”中标识的主要联系人。"
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "指定的对象未发现。"
 
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "指定的期刊路径 \"{$journalPath}\"不存在。"
-
-msgid "plugins.importexport.common.cliError"
-msgstr "错误："
-
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "路径为 {$path} 的期刊缺少DOI前缀。"
 

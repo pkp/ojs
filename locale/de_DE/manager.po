@@ -1682,12 +1682,6 @@ msgstr "Registrierung erfolgreich!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI-Präfix fehlt für die Zeitschrift mit dem Pfad {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "FEHLER:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Der angegebene Zeitschriftenpfad, \"{$journalPath}\", existiert nicht."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Die angegebenen Objekte konnten nicht gefunden werden."
 

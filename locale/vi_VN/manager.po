@@ -1412,12 +1412,6 @@ msgstr "Đăng ký thành công!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Tiền tố DOI bị thiếu cho tạp chí có đường dẫn {$ path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "LỖI:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Đường dẫn tạp chí được chỉ định, \"{$journalPath}\", không tồn tại."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Các đối tượng được chỉ định không thể được tìm thấy."
 

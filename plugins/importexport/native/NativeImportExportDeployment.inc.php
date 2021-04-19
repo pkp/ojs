@@ -80,40 +80,21 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 	}
 
 	/**
-	 * Remove the processed objects.
-	 * @param $assocType integer ASSOC_TYPE_...
+	 * @see PKPNativeImportExportDeployment::getObjectTypes()
 	 */
-	function removeImportedObjects($assocType) {
-		switch ($assocType) {
-			case ASSOC_TYPE_ISSUE:
-				$processedIssuesIds = $this->getProcessedObjectsIds(ASSOC_TYPE_ISSUE);
-				if (!empty($processedIssuesIds)) {
-					$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-					foreach ($processedIssuesIds as $issueId) {
-						if ($issueId) {
-							$issue = $issueDao->getById($issueId);
-							$issueDao->deleteObject($issue);
-						}
-					}
-				}
-				break;
-			case ASSOC_TYPE_SECTION:
-				$processedSectionIds = $this->getProcessedObjectsIds(ASSOC_TYPE_SECTION);
-				if (!empty($processedSectionIds)) {
-					$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-					foreach ($processedSectionIds as $sectionId) {
-						if ($sectionId) {
-							$section = $sectionDao->getById($sectionId);
-							$sectionDao->deleteObject($section);
-						}
-					}
-				}
-				break;
-			default:
-				parent::removeImportedObjects($assocType);
-		}
-	}
+	protected function getObjectTypes() {
+		$objectTypes = parent::getObjectTypes();
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
+		$objectTypes = $objectTypes + array(
+				ASSOC_TYPE_JOURNAL => __('context.context'),
+				ASSOC_TYPE_SECTION => __('section.section'),
+				ASSOC_TYPE_ISSUE => __('issue.issue'),
+				ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
+				ASSOC_TYPE_PUBLICATION => __('common.publication'),
+		);
 
+		return $objectTypes;
+	}
 }
 
 

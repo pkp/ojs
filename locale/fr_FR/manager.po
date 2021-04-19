@@ -1689,17 +1689,11 @@ msgstr ""
 "êtes-vous certains de vouloir réinitialiser les autorisations déjà "
 "rattachées à l'article ? Cette action ne peut pas être annulée."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERREUR :"
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "L'objet spécifié est introuvable."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Envoyer une copie au contact principal, identifié dans les paramètres de la revue."
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Le chemin pour la revue, \"{$journalPath}\", n'existe pas."
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Etes-vous sûr de supprimer cet abonnement ?"

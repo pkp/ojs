@@ -559,6 +559,14 @@ class Issue extends \PKP\core\DataObject {
 	function getDAO() {
 		return DAORegistry::getDAO('IssueDAO');
 	}
+
+	/**
+	 * Display the object in Import/Export results
+	 * @return string A string that Identifies the object
+	 */
+	function getUIDisplayString() {
+		return __('plugins.importexport.issue.cli.display', ['issueId' => $this->getId(), 'issueIdentification' => $this->getIssueIdentification()]);
+	}
 }
 
 

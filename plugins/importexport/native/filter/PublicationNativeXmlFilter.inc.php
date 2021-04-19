@@ -59,10 +59,6 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter {
 			$entityNode->setAttribute('section_ref', $section->getLocalizedAbbrev());
 		}
 
-		$isPublished = $entity->getData('status') === STATUS_PUBLISHED;
-		$isPublished ? $entityNode->setAttribute('seq', (int) $entity->getData('seq')) : $entityNode->setAttribute('seq', '0');
-		$isPublished ? $entityNode->setAttribute('access_status', $entity->getData('accessStatus')) : $entityNode->setAttribute('access_status', '0');
-
 		// if this is a published submission and not part/subelement of an issue element
 		// add issue identification element
 		if ($entity->getData('issueId') && !$deployment->getIssue()) {

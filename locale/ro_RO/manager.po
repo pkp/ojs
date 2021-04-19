@@ -408,9 +408,6 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr ""
 "Trimiteți o copie la contactul principal, identificat în Setările jurnalului."
 
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Calea jurnalului specificat,\"{$journalPath}\", nu există."
-
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Prefixul DOI lipsește pentru jurnalul cu calea {$path}."
 
@@ -1347,9 +1344,6 @@ msgstr "Detalii articol"
 
 msgid "stats.publicationStats"
 msgstr "Statut articol"
-
-msgid "plugins.importexport.common.cliError"
-msgstr "EROARE:"
 
 msgid "plugins.importexport.common.register.success"
 msgstr "Înregistrare finalizată cu succes!"

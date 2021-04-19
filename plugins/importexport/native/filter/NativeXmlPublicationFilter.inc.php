@@ -72,7 +72,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 		$issue_identification = $node->getElementsByTagName('issue_identification');
 		if (!$datePublished && ($issue || $issue_identification->length)) {
 			$titleNodes = $node->getElementsByTagName('title');
-			$deployment->addError(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('publicationTitle' => $titleNodes->item(0)->textContent)));
+			$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
 		}
 
 		$this->populatePublishedPublication($publication, $node);
@@ -124,10 +124,8 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 		}
 		// Caps on class name for consistency with imports, whose filter
 		// group names are generated implicitly.
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$importFilters = $filterDao->getObjectsByGroup('native-xml=>' . $importClass);
-		$importFilter = array_shift($importFilters);
-		return $importFilter;
+		$currentFilter = PKPImportExportFilter::getFilter('native-xml=>' . $importClass, $deployment);
+		return $currentFilter;
 	}
 
 	/**
@@ -136,13 +134,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 	 * @param $publication Publication
 	 */
 	function parseArticleGalley($n, $publication) {
-		$importFilter = $this->getImportFilter($n->tagName);
-		assert(isset($importFilter)); // There should be a filter
-
-		$importFilter->setDeployment($this->getDeployment());
-		$articleGalleyDoc = new DOMDocument();
-		$articleGalleyDoc->appendChild($articleGalleyDoc->importNode($n, true));
-		return $importFilter->execute($articleGalleyDoc);
+		return $this->importWithXMLNode($n);
 	}
 
 	/**

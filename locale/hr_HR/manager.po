@@ -1413,12 +1413,6 @@ msgstr ""
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Navedeni objekti nisu pronađeni."
 
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Navedena putanja časopisa, \"{$journalPath}\", ne postoji."
-
-msgid "plugins.importexport.common.cliError"
-msgstr "GREŠKA:"
-
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Nedostaje DOI prefiks za časopis s putem {$path}."
 
