@@ -1714,3 +1714,9 @@ msgstr "Abstracts"
 
 msgid "stats.publications.galleys"
 msgstr "Files"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "Send a copy of the submission acknowledgement email to this journal's primary contact."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr "No primary contact has been defined for this journal. You can enter a primary contact in the <a href="{$url}">journal settings</a>."

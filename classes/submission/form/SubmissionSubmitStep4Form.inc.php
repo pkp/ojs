@@ -57,6 +57,22 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 			}
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 
+			// Add primary contact and e-mail addresses as specified in the journal submission settings
+			if ($this->context->getData('copySubmissionAckPrimaryContact')) {
+				$mail->addBcc(
+					$context->getData('contactEmail'),
+					$context->getData('contactName')
+				);
+			}
+
+			$submissionAckAddresses = $this->context->getData('copySubmissionAckAddress');
+			if (!empty($submissionAckAddresses)) {
+				$submissionAckAddressArray = explode(',', $submissionAckAddresses);
+				foreach ($submissionAckAddressArray as $submissionAckAddress) {
+					$mail->addBcc($submissionAckAddress);
+				}
+			}
+
 			if ($user->getEmail() != $primaryAuthor->getEmail()) {
 				$authorMail->addRecipient($primaryAuthor->getEmail(), $primaryAuthor->getFullName());
 			}
