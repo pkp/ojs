@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-16 14:09+0000\n"
+"PO-Revision-Date: 2021-04-19 12:40+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "gl_ES/>\n"
@@ -57,3 +57,39 @@ msgstr ""
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Propiedades de seguridade SASL"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "ID de autorización requirida"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Dominio"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Por exemplo, \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Mecanismo SASL"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Utilice SASL en lugar dunha autenticación simple"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Configuración SASL (opcional)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+"Formato Hash para os contrasinais almacenados no servidor. Recoméndase SSHA."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Encriptación de contrasinal"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"O atributo cuxo valor identifica unicamente un obxecto de usuario/a, como "
+"uid ou vc ou sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atributo do nome da conta"
