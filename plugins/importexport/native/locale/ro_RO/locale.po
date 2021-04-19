@@ -58,12 +58,14 @@ msgstr ""
 "\" în numărul \"{$issueTitle}\" se potrivesc unor secțiuni de jurnal "
 "existente."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Utilizatorul specificat, \"{$userName}\", nu există."
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Secțiune necunoscută {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Folosiți: {$scriptName} {$pluginName} [command] ...\n"

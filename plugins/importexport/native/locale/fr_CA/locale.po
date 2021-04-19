@@ -50,6 +50,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Section {$param} inconnue"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "L'utilisateur-trice spécifié-e, « {$userName} », n'existe pas."
 
@@ -69,6 +70,7 @@ msgstr ""
 msgid "plugins.importexport.native.exportSubmissionsSelect"
 msgstr "Sélectionner les articles à exporter"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Utilisation : {$scriptName} {$pluginName} [command] ...\n"

@@ -51,12 +51,14 @@ msgstr ""
 "Názov sekcie \"{$section1Title}\" a názov sekcie \"{$section2Title}\" v "
 "čísle {$issueTitle} zodpovedá rôznym existujúcim sekciám časopisu."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Zadaný používateľ \"{$userName}\" neexistuje."
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Neznáma sekcia {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Použitie: {$scriptName} {$pluginName} [command] ...\n"

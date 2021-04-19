@@ -41,6 +41,7 @@ msgstr "Nahrajte, prosím, soubor pod \"Import\", abyste mohli pokračovat."
 msgid "plugins.importexport.native.importComplete"
 msgstr "Import byl úspěšně dokončen. Byly importovány následující položky:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Použití: {$scriptName} {$pluginName} [command] ...\n"
@@ -71,6 +72,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Neznámá sekce {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Zadaný úživatel \"{$userName}\" neexistuje."
 

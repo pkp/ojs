@@ -44,6 +44,7 @@ msgstr "For at fortsætte skal du uploade en fil under \"Import\"."
 msgid "plugins.importexport.native.importComplete"
 msgstr "Importen blev gennemført. Følgende numre blev importeret:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Anvendelse: {$scriptName} {$pluginName} [command] ...\n"
@@ -77,6 +78,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Ukendt sektion {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Den angivne bruger, \"{$userName}\", eksisterer ikke."
 

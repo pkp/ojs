@@ -75,12 +75,14 @@ msgstr ""
 "განყოფილებების „{$section1Title}“ და „{$section2Title}“ გამოცემაში "
 "„{$issueTitle}“ ემთხვევა ჟურნალის სხვადასხვა არსებულ განყოფილებებს."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "მითითებული მომხმარებელი, „{$userName}“, არ არსებობს."
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "უცნობი განყოფილება {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "გამოძახება: {$scriptName} {$pluginName} [command] ...\n"

@@ -11,6 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Usage: {$scriptName} {$pluginName} [command] ...\n"
@@ -79,6 +80,7 @@ msgstr ""
 "Bagian judul \"{$section1Title}\" dan bagian judul \"{$section2Title}\" "
 "dalam issue \"{$issueTitle}\" sam dengan bagian jurnal yang ada dan berbeda."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Pengguna yang dimaksud,  \"{$userName}\", tidak ada."
 

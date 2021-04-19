@@ -44,6 +44,7 @@ msgstr "Per favore carica un file nell'area 'Importa' per continuare."
 msgid "plugins.importexport.native.importComplete"
 msgstr "L'import è stato completato. Questo è stato importato:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Uso: {$scriptName} {$pluginName} [command] ...\n"
@@ -74,6 +75,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Sezione non conosciuta  {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "L'utente specificato, \"{$userName}\", non esiste."
 

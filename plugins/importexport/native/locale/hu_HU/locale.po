@@ -44,6 +44,7 @@ msgstr "Kérjük, töltsön fel egy fájlt az \"Import\" alá, hogy folytathassa
 msgid "plugins.importexport.native.importComplete"
 msgstr "Az import sikeresen megtörtént. kövekező elemek kerültek importálásra:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Usage: {$scriptName} {$pluginName} [command] ...\n"
@@ -73,6 +74,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Ismeretlen rovat {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "A kiválaszott felhasználó \"{$userName}\", nem létezik."
 

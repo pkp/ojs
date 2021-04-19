@@ -53,6 +53,7 @@ msgstr "A abreviatura da seção \"{$sectionAbbrev}\" da edição \"{$issueTitle
 msgid "plugins.importexport.native.exportSubmissions"
 msgstr "Exportar Artigos"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Uso: {$scriptName} {$pluginName} [comando] ...\n"
@@ -86,6 +87,7 @@ msgstr "Exportar Edições"
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Seção desconhecida {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "O usuário informado, \"{$userName}\", não existe."
 

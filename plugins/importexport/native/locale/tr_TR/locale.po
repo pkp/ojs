@@ -41,6 +41,7 @@ msgstr "Devam etmek için lütfen \"İçe Aktar\"ın altında bir dosya yükleyi
 msgid "plugins.importexport.native.importComplete"
 msgstr "İçe aktarma başarıyla tamamlandı. Aşağıdaki öğeler içeriye aktarıldı:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Kullanım: {$scriptName} {$pluginName} [command] ...\n"
@@ -70,6 +71,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Bilinmeyen bölüm {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Belirtilen kullanıcı \"{$userName}\" mevcut değil."
 

@@ -41,12 +41,14 @@ msgstr "برای ادامه ابتدا یک فایل را در قسمت \"درو
 msgid "plugins.importexport.native.importComplete"
 msgstr "درون ریزی با موفقیت انجام شد، موارد زیر به سیستم درون ریزی شد:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr "نحوه استفاده: {$scriptName} {$pluginName} [command] ...  فرامین:  import [xmlFileName] [journal_path] [user_name] ...  export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...  export [xmlFileName] [journal_path] article [articleId]  export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...  export [xmlFileName] [journal_path] issue [issueId]\tبرای وارد کردن داده ها پارامترهای دیگری به شرح ذیل بسته به root node سند XML لازم است:  چنانچه root node موجود <article> و یا <articles> باشد پارامترهای دیگری نیز لازم است. الگوهای زیر قابل قبول است:\t{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]  issue_id [issueId] section_id [sectionId]\t{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]  issue_id [issueId] section_name [name]\t{$scriptName} {$pluginName} import [xmlFileName] [journal_path]  issue_id [issueId] section_abbrev [abbrev]"
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "بخش ناشناس {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "کاربر ذکر شده \"{$userName}\" وجود ندارد."
 

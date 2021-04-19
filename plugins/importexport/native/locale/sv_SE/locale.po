@@ -41,6 +41,7 @@ msgstr "Ladda upp en fil under \"Importera\" för att kunna fortsätta."
 msgid "plugins.importexport.native.importComplete"
 msgstr "Importen lyckades. Följande objekt har importerats:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Usage: {$scriptName} {$pluginName} [command] ...\n"
@@ -70,6 +71,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Okänd sektion: {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Användaren \"{$userName}\" existerar inte."
 

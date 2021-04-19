@@ -41,6 +41,7 @@ msgstr "Faça o upload de um ficheiro em \"Importar\" para continuar."
 msgid "plugins.importexport.native.importComplete"
 msgstr "A importação foi concluída com sucesso. Os seguintes artigos foram importados:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Modo de utilização: {$scriptName} {$pluginName} [command] ...\n"
@@ -72,6 +73,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Secção desconhecida {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "O utilizador especificado, \"{$userName}\", não existe."
 

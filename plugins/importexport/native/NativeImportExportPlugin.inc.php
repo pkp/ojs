@@ -328,6 +328,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
+		$user = Application::get()->getRequest()->getUser();
+
 		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls']);
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
@@ -355,14 +357,10 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 		switch ($command) {
 			case 'import':
-				$userName = array_shift($args);
-				$user = $userDao->getByUsername($userName);
+				if (!isset($user)) {
+					echo __('plugins.importexport.common.cliError') . "\n";
+					echo __('plugins.importexport.native.error.unknownUser') . "\n\n";
 
-				if (!$user) {
-					if ($userName != '') {
-						echo __('plugins.importexport.common.cliError') . "\n";
-						echo __('plugins.importexport.native.error.unknownUser', array('userName' => $userName)) . "\n\n";
-					}
 					$this->usage($scriptName);
 					return;
 				}
