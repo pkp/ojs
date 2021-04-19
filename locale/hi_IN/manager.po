@@ -2269,20 +2269,6 @@ msgstr "DOI उपसर्ग पथ के साथ जर्नल के �
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
-msgid "plugins.importexport.common.cliError"
-msgstr "त्रुटि:"
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$journalPath}
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) startcaps: Different capitalization at the start
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "निर्दिष्ट जर्नल पथ, \"{$ journalPath}\", मौजूद नहीं है।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "निर्दिष्ट ऑब्जेक्ट नहीं मिले।"
 

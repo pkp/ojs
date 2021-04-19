@@ -2213,12 +2213,6 @@ msgstr "Registreringen var vellykket!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI-prefikset mangler for tidsskrifte med stien {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "FEIL:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Tidsskriftsstien «{$journalPath}» eksisterer ikke."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "De spesifiserte objektene ble ikke funnet."
 

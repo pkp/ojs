@@ -1760,12 +1760,6 @@ msgstr "Η εγγραφή ήταν επιτυχής!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Το πρόθεμα DOI λείπει για το περιοδικό με τη διαδρομή {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ΣΦΑΛΜΑ:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Η καθορισμένη διαδρομή περιοδικού, \"{$journalPath}\", δεν υπάρχει."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Τα καθορισμένα αντικείμενα δεν βρέθηκαν."
 

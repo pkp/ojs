@@ -13,10 +13,10 @@
  * @brief Class that converts an Article to a DOAJ JSON string.
  */
 
-import('lib.pkp.plugins.importexport.native.filter.NativeImportExportFilter');
+import('lib.pkp.classes.plugins.importexport.PKPImportExportFilter');
 
 
-class DOAJJsonFilter extends NativeImportExportFilter {
+class DOAJJsonFilter extends PKPImportExportFilter {
 	/**
 	 * Constructor
 	 * @param $filterGroup FilterGroup

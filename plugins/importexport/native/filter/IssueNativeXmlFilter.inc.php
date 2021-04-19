@@ -187,20 +187,16 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @param $issue Issue
 	 */
 	function addArticles($doc, $issueNode, $issue) {
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$nativeExportFilters = $filterDao->getObjectsByGroup('article=>native-xml');
-		assert(count($nativeExportFilters)==1); // Assert only a single serialization filter
-		$exportFilter = array_shift($nativeExportFilters);
-		$exportFilter->setOpts($this->opts);
-		$exportFilter->setDeployment($this->getDeployment());
-		$exportFilter->setIncludeSubmissionsNode(true);
+		$currentFilter = PKPImportExportFilter::getFilter('article=>native-xml', $this->getDeployment(), $this->opts);
+		$currentFilter->setIncludeSubmissionsNode(true);
 
 		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
 		]);
+
 		$submissionsArray = iterator_to_array($submissionsIterator);
-		$articlesDoc = $exportFilter->execute($submissionsArray);
+		$articlesDoc = $currentFilter->execute($submissionsArray);
 		if ($articlesDoc->documentElement instanceof DOMElement) {
 			$clone = $doc->importNode($articlesDoc->documentElement, true);
 			$issueNode->appendChild($clone);
@@ -214,18 +210,20 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * @param $issue Issue
 	 */
 	function addIssueGalleys($doc, $issueNode, $issue) {
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$nativeExportFilters = $filterDao->getObjectsByGroup('issuegalley=>native-xml');
-		assert(count($nativeExportFilters)==1); // Assert only a single serialization filter
-		$exportFilter = array_shift($nativeExportFilters);
-		$exportFilter->setDeployment($this->getDeployment());
+		$currentFilter = PKPImportExportFilter::getFilter('issuegalley=>native-xml', $this->getDeployment());
 
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var $issueGalleyDao IssueGalleyDAO */
 		$issue = $issueGalleyDao->getByIssueId($issue->getId());
-		$issueGalleysDoc = $exportFilter->execute($issue);
-		if ($issueGalleysDoc->documentElement instanceof DOMElement) {
+		$issueGalleysDoc = $currentFilter->execute($issue);
+
+		if ($issueGalleysDoc && $issueGalleysDoc->documentElement instanceof DOMElement) {
 			$clone = $doc->importNode($issueGalleysDoc->documentElement, true);
 			$issueNode->appendChild($clone);
+		} else {
+			$deployment = $this->getDeployment();
+			$deployment->addError(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.issueGalleys.exportFailed'));
+
+			throw new Exception(__('plugins.importexport.issueGalleys.exportFailed'));
 		}
 	}
 

@@ -1842,12 +1842,6 @@ msgstr "Kayıt başarılı değil! DOI kayıt sunucusu bir hata verdi:  '{$param
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI öneki, günlük için {$path} yolu eksik."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "HATA:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Belirtilen günlük yolu \"{$journalPath}\" mevcut değil."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Belirtilen nesneler bulunamadı."
 

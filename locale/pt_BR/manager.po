@@ -1777,12 +1777,6 @@ msgstr "Registrado com sucesso!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "O prefixo DOI está faltando para a revista com o caminho {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERRO:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "O caminho especificado da revista, \"{$journalPath}\", não existe."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Os objetos especificados não puderam ser encontrados."
 

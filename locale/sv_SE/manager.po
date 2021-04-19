@@ -1639,12 +1639,6 @@ msgstr "Registreringen lyckades!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI-prefix saknas för tidskriften med sökvägen {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "FEL:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Sökvägen för tidskriften, \"{$journalPath}\", existerar inte."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Det önskade objektet kunde inte hittas."
 

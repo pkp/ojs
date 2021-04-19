@@ -1679,12 +1679,6 @@ msgstr "Validation Failed."
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI prefix is missing for the journal with the path {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERROR:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "The specified journal path, \"{$journalPath}\", does not exist."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "The specified objects could not be found."
 
@@ -1720,3 +1714,12 @@ msgstr "Send a copy of the submission acknowledgement email to this journal's pr
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
 msgstr "No primary contact has been defined for this journal. You can enter a primary contact in the <a href="{$url}">journal settings</a>."
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Export Issues Results"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Process failed to parse issue galleys"

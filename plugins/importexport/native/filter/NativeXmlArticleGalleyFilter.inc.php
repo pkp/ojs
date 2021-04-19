@@ -16,14 +16,6 @@
 import('lib.pkp.plugins.importexport.native.filter.NativeXmlRepresentationFilter');
 
 class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
-	/**
-	 * Constructor
-	 * @param $filterGroup FilterGroup
-	 */
-	function __construct($filterGroup) {
-		parent::__construct($filterGroup);
-	}
-
 	//
 	// Implement template methods from NativeImportFilter
 	//
@@ -104,15 +96,6 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 
 		// representation proof files
 		return $representation;
-	}
-
-	/**
-	 * Process the self_file_ref node found inside the article_galley node.
-	 * @param $node DOMElement
-	 * @param $deployment NativeImportExportDeployment
-	 * @param $representation ArticleGalley
-	 */
-	function _processFileRef($node, $deployment, $representation) {
 	}
 }
 

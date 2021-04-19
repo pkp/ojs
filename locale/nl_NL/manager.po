@@ -1726,12 +1726,6 @@ msgstr "Registratie succesvol!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI prefix ontbreekt voor het tijdschrift met het pad {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "FOUT:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Het opgegeven pad \"{$journalPath}\" bestaat niet."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "De opgegeven objecten konden niet worden gevonden."
 

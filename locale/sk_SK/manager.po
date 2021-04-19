@@ -1764,12 +1764,6 @@ msgstr ""
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Špecifikované objekty sa nepodarilo nájsť."
 
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Vybraná adresa časopisu  \"{$journalPath}\" neexistuje."
-
-msgid "plugins.importexport.common.cliError"
-msgstr "CHYBA:"
-
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Prefix DOI chýba pre časopis na adrese {$path}."
 
