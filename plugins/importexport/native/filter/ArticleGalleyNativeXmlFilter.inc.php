@@ -15,45 +15,53 @@
 
 import('lib.pkp.plugins.importexport.native.filter.RepresentationNativeXmlFilter');
 
-class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
-	//
-	// Implement template methods from PersistableFilter
-	//
-	/**
-	 * @copydoc PersistableFilter::getClassName()
-	 */
-	function getClassName() {
-		return 'plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter';
-	}
+class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter
+{
+    //
+    // Implement template methods from PersistableFilter
+    //
+    /**
+     * @copydoc PersistableFilter::getClassName()
+     */
+    public function getClassName()
+    {
+        return 'plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter';
+    }
 
-	//
-	// Extend functions in RepresentationNativeXmlFilter
-	//
-	/**
-	 * Create and return a representation node. Extend the parent class
-	 * with publication format specific data.
-	 * @param $doc DOMDocument
-	 * @param $representation Representation
-	 * @return DOMElement
-	 */
-	function createRepresentationNode($doc, $representation) {
-		$representationNode = parent::createRepresentationNode($doc, $representation);
-		$representationNode->setAttribute('approved', $representation->getIsApproved()?'true':'false');
+    //
+    // Extend functions in RepresentationNativeXmlFilter
+    //
+    /**
+     * Create and return a representation node. Extend the parent class
+     * with publication format specific data.
+     *
+     * @param $doc DOMDocument
+     * @param $representation Representation
+     *
+     * @return DOMElement
+     */
+    public function createRepresentationNode($doc, $representation)
+    {
+        $representationNode = parent::createRepresentationNode($doc, $representation);
+        $representationNode->setAttribute('approved', $representation->getIsApproved() ? 'true' : 'false');
 
-		return $representationNode;
-	}
+        return $representationNode;
+    }
 
-	/**
-	 * Get the available submission files for a representation
-	 * @param $representation Representation
-	 * @return array
-	 */
-	function getFiles($representation) {
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-		$galleyFiles = array();
-		if ($representation->getFileId()) $galleyFiles = array(Services::get('submissionFile')->get($representation->getFileId()));
-		return $galleyFiles;
-	}
+    /**
+     * Get the available submission files for a representation
+     *
+     * @param $representation Representation
+     *
+     * @return array
+     */
+    public function getFiles($representation)
+    {
+        $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
+        $galleyFiles = [];
+        if ($representation->getFileId()) {
+            $galleyFiles = [Services::get('submissionFile')->get($representation->getFileId())];
+        }
+        return $galleyFiles;
+    }
 }
-
-

@@ -9,26 +9,28 @@
  *
  * @class OJSv3_3_1_i6872_UrlPathMigration
  * @brief A database migration that converts empty string url_paths to null.
+ *
  * @see https://github.com/pkp/pkp-lib/issues/6872
  */
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
-class OJSv3_3_1_i6872_UrlPathMigration extends Migration {
-	/**
-	 * Run the migrations.
-	 * @return void
-	 */
-	public function up() {
-		DB::table('publications')->whereNull('url_path')->update(['url_path' => null]);
-	}
+class OJSv3_3_1_i6872_UrlPathMigration extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up()
+    {
+        DB::table('publications')->whereNull('url_path')->update(['url_path' => null]);
+    }
 
-	/**
-	 * Reverse the downgrades
-	 * @return void
-	 */
-	public function down() {
-		// This migration is not destructive. A downgrade should leave these url_paths as null.
-	}
+    /**
+     * Reverse the downgrades
+     */
+    public function down()
+    {
+        // This migration is not destructive. A downgrade should leave these url_paths as null.
+    }
 }

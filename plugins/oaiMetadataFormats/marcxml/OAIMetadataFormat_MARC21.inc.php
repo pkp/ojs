@@ -9,49 +9,53 @@
  *
  * @class OAIMetadataFormat_MARC21
  * @ingroup oai_format
+ *
  * @see OAI
  *
  * @brief OAI metadata format class -- MARC21 (MARCXML).
  */
 
-class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
-	/**
-	 * Constructor.
-	 */
-	function __construct($prefix, $schema, $namespace) {
-		parent::__construct($prefix, $schema, $namespace);
-		PKPLocale::requireComponents([LOCALE_COMPONENT_PKP_SUBMISSION]); // submission.copyrightStatement
-	}
+class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
+{
+    /**
+     * Constructor.
+     */
+    public function __construct($prefix, $schema, $namespace)
+    {
+        parent::__construct($prefix, $schema, $namespace);
+        PKPLocale::requireComponents([LOCALE_COMPONENT_PKP_SUBMISSION]); // submission.copyrightStatement
+    }
 
-	/**
-	 * @see OAIMetadataFormat#toXml
-	 */
-	function toXml($record, $format = null) {
-		$article = $record->getData('article');
-		$journal = $record->getData('journal');
+    /**
+     * @see OAIMetadataFormat#toXml
+     *
+     * @param null|mixed $format
+     */
+    public function toXml($record, $format = null)
+    {
+        $article = $record->getData('article');
+        $journal = $record->getData('journal');
 
-		$templateMgr = TemplateManager::getManager();
-		$templateMgr->assign(array(
-			'journal' => $journal,
-			'article' => $article,
-			'issue' => $record->getData('issue'),
-			'section' => $record->getData('section')
-		));
+        $templateMgr = TemplateManager::getManager();
+        $templateMgr->assign([
+            'journal' => $journal,
+            'article' => $article,
+            'issue' => $record->getData('issue'),
+            'section' => $record->getData('section')
+        ]);
 
-		$subjects = array_merge_recursive(
-			stripAssocArray((array) $article->getDiscipline(null)),
-			stripAssocArray((array) $article->getSubject(null))
-		);
+        $subjects = array_merge_recursive(
+            stripAssocArray((array) $article->getDiscipline(null)),
+            stripAssocArray((array) $article->getSubject(null))
+        );
 
-		$templateMgr->assign(array(
-			'subject' => isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'',
-			'abstract' => PKPString::html2text($article->getAbstract($article->getLocale())),
-			'language' => AppLocale::get3LetterIsoFromLocale($article->getLocale())
-		));
+        $templateMgr->assign([
+            'subject' => isset($subjects[$journal->getPrimaryLocale()]) ? $subjects[$journal->getPrimaryLocale()] : '',
+            'abstract' => PKPString::html2text($article->getAbstract($article->getLocale())),
+            'language' => AppLocale::get3LetterIsoFromLocale($article->getLocale())
+        ]);
 
-		$plugin = PluginRegistry::getPlugin('oaiMetadataFormats', 'OAIFormatPlugin_MARC21');
-		return $templateMgr->fetch($plugin->getTemplateResource('record.tpl'));
-	}
+        $plugin = PluginRegistry::getPlugin('oaiMetadataFormats', 'OAIFormatPlugin_MARC21');
+        return $templateMgr->fetch($plugin->getTemplateResource('record.tpl'));
+    }
 }
-
-

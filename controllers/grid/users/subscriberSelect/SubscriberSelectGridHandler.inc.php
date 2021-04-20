@@ -16,193 +16,209 @@
 import('lib.pkp.classes.controllers.grid.GridHandler');
 import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
 
-class SubscriberSelectGridHandler extends GridHandler {
-	/** @var array (user group ID => user group name) **/
-	var $_userGroupOptions;
+class SubscriberSelectGridHandler extends GridHandler
+{
+    /** @var array (user group ID => user group name) **/
+    public $_userGroupOptions;
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-		$this->addRoleAssignment(
-			array(ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER),
-			array('fetchGrid', 'fetchRows')
-		);
-	}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->addRoleAssignment(
+            [ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER],
+            ['fetchGrid', 'fetchRows']
+        );
+    }
 
-	//
-	// Implement template methods from PKPHandler
-	//
-	/**
-	 * @copydoc PKPHandler::authorize()
-	 */
-	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
-		$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
-		return parent::authorize($request, $args, $roleAssignments);
-	}
+    //
+    // Implement template methods from PKPHandler
+    //
+    /**
+     * @copydoc PKPHandler::authorize()
+     */
+    public function authorize($request, &$args, $roleAssignments)
+    {
+        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
+        $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
+        return parent::authorize($request, $args, $roleAssignments);
+    }
 
-	/**
-	 * @copydoc GridHandler::initialize()
-	 */
-	function initialize($request, $args = null) {
-		parent::initialize($request, $args);
+    /**
+     * @copydoc GridHandler::initialize()
+     *
+     * @param null|mixed $args
+     */
+    public function initialize($request, $args = null)
+    {
+        parent::initialize($request, $args);
 
-		AppLocale::requireComponents(
-			LOCALE_COMPONENT_PKP_SUBMISSION,
-			LOCALE_COMPONENT_PKP_MANAGER,
-			LOCALE_COMPONENT_PKP_USER,
-			LOCALE_COMPONENT_PKP_EDITOR,
-			LOCALE_COMPONENT_APP_EDITOR
-		);
+        AppLocale::requireComponents(
+            LOCALE_COMPONENT_PKP_SUBMISSION,
+            LOCALE_COMPONENT_PKP_MANAGER,
+            LOCALE_COMPONENT_PKP_USER,
+            LOCALE_COMPONENT_PKP_EDITOR,
+            LOCALE_COMPONENT_APP_EDITOR
+        );
 
-		$stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
-		$userGroups = $userGroupDao->getUserGroupsByStage(
-			$request->getContext()->getId(),
-			$stageId
-		);
-		$this->_userGroupOptions = array();
-		while ($userGroup = $userGroups->next()) {
-			$this->_userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
-		}
+        $stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+        $userGroups = $userGroupDao->getUserGroupsByStage(
+            $request->getContext()->getId(),
+            $stageId
+        );
+        $this->_userGroupOptions = [];
+        while ($userGroup = $userGroups->next()) {
+            $this->_userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
+        }
 
-		$this->setTitle('editor.submission.findAndSelectUser');
+        $this->setTitle('editor.submission.findAndSelectUser');
 
-		// Columns
-		$cellProvider = new UserSelectGridCellProvider($request->getUserVar('userId'));
-		$this->addColumn(
-			new GridColumn(
-				'select',
-				'',
-				null,
-				'controllers/grid/users/userSelect/userSelectRadioButton.tpl',
-				$cellProvider,
-				array('width' => 5)
-			)
-		);
-		$this->addColumn(
-			new GridColumn(
-				'name',
-				'author.users.contributor.name',
-				null,
-				null,
-				$cellProvider,
-				array('alignment' => COLUMN_ALIGNMENT_LEFT,
-					'width' => 30
-				)
-			)
-		);
-	}
+        // Columns
+        $cellProvider = new UserSelectGridCellProvider($request->getUserVar('userId'));
+        $this->addColumn(
+            new GridColumn(
+                'select',
+                '',
+                null,
+                'controllers/grid/users/userSelect/userSelectRadioButton.tpl',
+                $cellProvider,
+                ['width' => 5]
+            )
+        );
+        $this->addColumn(
+            new GridColumn(
+                'name',
+                'author.users.contributor.name',
+                null,
+                null,
+                $cellProvider,
+                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                    'width' => 30
+                ]
+            )
+        );
+    }
 
 
-	//
-	// Overridden methods from GridHandler
-	//
-	/**
-	 * @copydoc GridHandler::initFeatures()
-	 */
-	function initFeatures($request, $args) {
-		import('lib.pkp.classes.controllers.grid.feature.InfiniteScrollingFeature');
-		import('lib.pkp.classes.controllers.grid.feature.CollapsibleGridFeature');
-		return array(new InfiniteScrollingFeature('infiniteScrolling', $this->getItemsNumber()), new CollapsibleGridFeature());
-	}
+    //
+    // Overridden methods from GridHandler
+    //
+    /**
+     * @copydoc GridHandler::initFeatures()
+     */
+    public function initFeatures($request, $args)
+    {
+        import('lib.pkp.classes.controllers.grid.feature.InfiniteScrollingFeature');
+        import('lib.pkp.classes.controllers.grid.feature.CollapsibleGridFeature');
+        return [new InfiniteScrollingFeature('infiniteScrolling', $this->getItemsNumber()), new CollapsibleGridFeature()];
+    }
 
-	/**
-	 * @copydoc GridHandler::loadData()
-	 */
-	protected function loadData($request, $filter) {
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
-		return $users = $userGroupDao->getUsersById(
-			$filter['userGroup'],
-			$request->getContext()->getId(),
-			$filter['searchField'],
-			$filter['search']?$filter['search']:null,
-			$filter['searchMatch'],
-			$this->getGridRangeInfo($request, $this->getId())
-		);
-	}
+    /**
+     * @copydoc GridHandler::loadData()
+     */
+    protected function loadData($request, $filter)
+    {
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+        return $users = $userGroupDao->getUsersById(
+            $filter['userGroup'],
+            $request->getContext()->getId(),
+            $filter['searchField'],
+            $filter['search'] ? $filter['search'] : null,
+            $filter['searchMatch'],
+            $this->getGridRangeInfo($request, $this->getId())
+        );
+    }
 
-	/**
-	 * @copydoc GridHandler::renderFilter()
-	 */
-	function renderFilter($request, $filterData = array()) {
-		$context = $request->getContext();
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
-		$userGroups = $userGroupDao->getByContextId($context->getId());
-		$userGroupOptions = array('' => __('grid.user.allRoles'));
-		while ($userGroup = $userGroups->next()) {
-			$userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
-		}
+    /**
+     * @copydoc GridHandler::renderFilter()
+     */
+    public function renderFilter($request, $filterData = [])
+    {
+        $context = $request->getContext();
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+        $userGroups = $userGroupDao->getByContextId($context->getId());
+        $userGroupOptions = ['' => __('grid.user.allRoles')];
+        while ($userGroup = $userGroups->next()) {
+            $userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
+        }
 
-		return parent::renderFilter(
-			$request,
-			array(
-				'userGroupOptions' => $userGroupOptions,
-			)
-		);
-	}
+        return parent::renderFilter(
+            $request,
+            [
+                'userGroupOptions' => $userGroupOptions,
+            ]
+        );
+    }
 
-	/**
-	 * @copydoc GridHandler::getFilterSelectionData()
-	 * @return array Filter selection data.
-	 */
-	function getFilterSelectionData($request) {
-		// If we're editing an existing subscription, use the filter form to ensure that
-		// the already-selected user is chosen.
-		if (($userId = $request->getUserVar('userId')) && !$request->getUserVar('clientSubmit')) {
-			$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-			$user = $userDao->getById($userId);
-			return array(
-				'userGroup' => null,
-				'searchField' => USER_FIELD_USERNAME,
-				'searchMatch' => 'is',
-				'search' => $user->getUsername(),
-			);
-		}
+    /**
+     * @copydoc GridHandler::getFilterSelectionData()
+     *
+     * @return array Filter selection data.
+     */
+    public function getFilterSelectionData($request)
+    {
+        // If we're editing an existing subscription, use the filter form to ensure that
+        // the already-selected user is chosen.
+        if (($userId = $request->getUserVar('userId')) && !$request->getUserVar('clientSubmit')) {
+            $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
+            $user = $userDao->getById($userId);
+            return [
+                'userGroup' => null,
+                'searchField' => USER_FIELD_USERNAME,
+                'searchMatch' => 'is',
+                'search' => $user->getUsername(),
+            ];
+        }
 
-		return array(
-			'userGroup' => $request->getUserVar('userGroup') ? (int)$request->getUserVar('userGroup') : null,
-			'searchField' => $request->getUserVar('searchField'),
-			'searchMatch' => $request->getUserVar('searchMatch'),
-			'search' => (string) $request->getUserVar('search'),
-		);
-	}
+        return [
+            'userGroup' => $request->getUserVar('userGroup') ? (int)$request->getUserVar('userGroup') : null,
+            'searchField' => $request->getUserVar('searchField'),
+            'searchMatch' => $request->getUserVar('searchMatch'),
+            'search' => (string) $request->getUserVar('search'),
+        ];
+    }
 
-	/**
-	 * @copydoc GridHandler::getFilterForm()
-	 * @return string Filter template.
-	 */
-	protected function getFilterForm() {
-		return 'controllers/grid/users/exportableUsers/userGridFilter.tpl';
-	}
+    /**
+     * @copydoc GridHandler::getFilterForm()
+     *
+     * @return string Filter template.
+     */
+    protected function getFilterForm()
+    {
+        return 'controllers/grid/users/exportableUsers/userGridFilter.tpl';
+    }
 
-	/**
-	 * Determine whether a filter form should be collapsible.
-	 * @return boolean
-	 */
-	protected function isFilterFormCollapsible() {
-		return false;
-	}
+    /**
+     * Determine whether a filter form should be collapsible.
+     *
+     * @return boolean
+     */
+    protected function isFilterFormCollapsible()
+    {
+        return false;
+    }
 
-	/**
-	 * Define how many items this grid will start loading.
-	 * @return int
-	 */
-	protected function getItemsNumber() {
-		return 5;
-	}
+    /**
+     * Define how many items this grid will start loading.
+     *
+     * @return int
+     */
+    protected function getItemsNumber()
+    {
+        return 5;
+    }
 
-	/**
-	 * @copydoc GridHandler::getRequestArgs()
-	 */
-	function getRequestArgs() {
-		$request = Application::get()->getRequest();
-		return array_merge(parent::getRequestArgs(), array(
-			'userId' => $request->getUserVar('userId'),
-		));
-	}
+    /**
+     * @copydoc GridHandler::getRequestArgs()
+     */
+    public function getRequestArgs()
+    {
+        $request = Application::get()->getRequest();
+        return array_merge(parent::getRequestArgs(), [
+            'userId' => $request->getUserVar('userId'),
+        ]);
+    }
 }
-
-

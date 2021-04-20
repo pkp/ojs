@@ -16,4 +16,6 @@
 
 import('lib.pkp.api.v1.users.PKPUserHandler');
 
-class UserHandler extends PKPUserHandler { }
+class UserHandler extends PKPUserHandler
+{
+}

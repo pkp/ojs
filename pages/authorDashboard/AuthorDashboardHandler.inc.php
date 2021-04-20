@@ -16,25 +16,24 @@
 // Import base class
 import('lib.pkp.pages.authorDashboard.PKPAuthorDashboardHandler');
 
-class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
-
-	/**
-	 * @copydoc PKPAuthorDashboardHandler::_getRepresentationsGridUrl()
-	 */
-	protected function _getRepresentationsGridUrl($request, $submission) {
-		return $request->getDispatcher()->url(
-			$request,
-			PKPApplication::ROUTE_COMPONENT,
-			null,
-			'grid.articleGalleys.ArticleGalleyGridHandler',
-			'fetchGrid',
-			null,
-			[
-				'submissionId' => $submission->getId(),
-				'publicationId' => '__publicationId__',
-			]
-		);
-	}
+class AuthorDashboardHandler extends PKPAuthorDashboardHandler
+{
+    /**
+     * @copydoc PKPAuthorDashboardHandler::_getRepresentationsGridUrl()
+     */
+    protected function _getRepresentationsGridUrl($request, $submission)
+    {
+        return $request->getDispatcher()->url(
+            $request,
+            PKPApplication::ROUTE_COMPONENT,
+            null,
+            'grid.articleGalleys.ArticleGalleyGridHandler',
+            'fetchGrid',
+            null,
+            [
+                'submissionId' => $submission->getId(),
+                'publicationId' => '__publicationId__',
+            ]
+        );
+    }
 }
-
-

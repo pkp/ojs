@@ -15,17 +15,16 @@
 
 import('lib.pkp.classes.submission.reviewer.form.PKPReviewerReviewStep3Form');
 
-class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form {
-
-	/**
-	 * @copydoc PKPReviewerReviewStep3Form::__construct()
-	 */
-	function __construct($request, $reviewerSubmission, $reviewAssignment) {
-		parent::__construct($request, $reviewerSubmission, $reviewAssignment, 3);
-		$this->addCheck(new FormValidatorCustom($this, 'recommendation', 'required', 'reviewer.submission.reviewFormResponse.form.recommendationRequired', function($recommendation) {
-			return isset($recommendation);
-		}));		
-	}
+class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
+{
+    /**
+     * @copydoc PKPReviewerReviewStep3Form::__construct()
+     */
+    public function __construct($request, $reviewerSubmission, $reviewAssignment)
+    {
+        parent::__construct($request, $reviewerSubmission, $reviewAssignment, 3);
+        $this->addCheck(new FormValidatorCustom($this, 'recommendation', 'required', 'reviewer.submission.reviewFormResponse.form.recommendationRequired', function ($recommendation) {
+            return isset($recommendation);
+        }));
+    }
 }
-
-

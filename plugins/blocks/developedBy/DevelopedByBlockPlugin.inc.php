@@ -17,38 +17,43 @@
 
 import('lib.pkp.classes.plugins.BlockPlugin');
 
-class DevelopedByBlockPlugin extends BlockPlugin {
+class DevelopedByBlockPlugin extends BlockPlugin
+{
+    /**
+     * Install default settings on system install.
+     *
+     * @return string
+     */
+    public function getInstallSitePluginSettingsFile()
+    {
+        return $this->getPluginPath() . '/settings.xml';
+    }
 
-	/**
-	 * Install default settings on system install.
-	 * @return string
-	 */
-	function getInstallSitePluginSettingsFile() {
-		return $this->getPluginPath() . '/settings.xml';
-	}
+    /**
+     * Install default settings on journal creation.
+     *
+     * @return string
+     */
+    public function getContextSpecificPluginSettingsFile()
+    {
+        return $this->getPluginPath() . '/settings.xml';
+    }
 
-	/**
-	 * Install default settings on journal creation.
-	 * @return string
-	 */
-	function getContextSpecificPluginSettingsFile() {
-		return $this->getPluginPath() . '/settings.xml';
-	}
+    /**
+     * Get the display name of this plugin.
+     *
+     * @return String
+     */
+    public function getDisplayName()
+    {
+        return __('plugins.block.developedBy.displayName');
+    }
 
-	/**
-	 * Get the display name of this plugin.
-	 * @return String
-	 */
-	function getDisplayName() {
-		return __('plugins.block.developedBy.displayName');
-	}
-
-	/**
-	 * Get a description of the plugin.
-	 */
-	function getDescription() {
-		return __('plugins.block.developedBy.description');
-	}
+    /**
+     * Get a description of the plugin.
+     */
+    public function getDescription()
+    {
+        return __('plugins.block.developedBy.description');
+    }
 }
-
-

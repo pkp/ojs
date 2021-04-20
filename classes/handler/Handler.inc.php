@@ -15,6 +15,6 @@
 
 import('lib.pkp.classes.handler.PKPHandler');
 
-class Handler extends PKPHandler { }
-
-
+class Handler extends PKPHandler
+{
+}

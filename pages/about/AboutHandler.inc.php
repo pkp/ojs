@@ -15,36 +15,37 @@
 
 import('lib.pkp.pages.about.AboutContextHandler');
 
-class AboutHandler extends AboutContextHandler {
-	/**
-	 * Display about page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function subscriptions($args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$this->setupTemplate($request);
-		$journal = $request->getJournal();
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+class AboutHandler extends AboutContextHandler
+{
+    /**
+     * Display about page.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     */
+    public function subscriptions($args, $request)
+    {
+        $templateMgr = TemplateManager::getManager($request);
+        $this->setupTemplate($request);
+        $journal = $request->getJournal();
+        $subscriptionTypeDao = & DAORegistry::getDAO('SubscriptionTypeDAO');
 
-		if ($journal) {
-			$paymentManager = \Application::getPaymentManager($journal);
-			if (!($journal->getData('paymentsEnabled') && $paymentManager->isConfigured())) {
-				$request->redirect(null, 'index');
-			}
-		}
+        if ($journal) {
+            $paymentManager = \Application::getPaymentManager($journal);
+            if (!($journal->getData('paymentsEnabled') && $paymentManager->isConfigured())) {
+                $request->redirect(null, 'index');
+            }
+        }
 
-		$templateMgr->assign(array(
-			'subscriptionAdditionalInformation' => $journal->getLocalizedData('subscriptionAdditionalInformation'),
-			'subscriptionMailingAddress' => $journal->getData('subscriptionMailingAddress'),
-			'subscriptionName' => $journal->getData('subscriptionName'),
-			'subscriptionPhone' => $journal->getData('subscriptionPhone'),
-			'subscriptionEmail' => $journal->getData('subscriptionEmail'),
-			'individualSubscriptionTypes' => $subscriptionTypeDao->getByInstitutional($journal->getId(), false, false)->toArray(),
-			'institutionalSubscriptionTypes' => $subscriptionTypeDao->getByInstitutional($journal->getId(), true, false)->toArray(),
-		));
-		$templateMgr->display('frontend/pages/subscriptions.tpl');
-	}
+        $templateMgr->assign([
+            'subscriptionAdditionalInformation' => $journal->getLocalizedData('subscriptionAdditionalInformation'),
+            'subscriptionMailingAddress' => $journal->getData('subscriptionMailingAddress'),
+            'subscriptionName' => $journal->getData('subscriptionName'),
+            'subscriptionPhone' => $journal->getData('subscriptionPhone'),
+            'subscriptionEmail' => $journal->getData('subscriptionEmail'),
+            'individualSubscriptionTypes' => $subscriptionTypeDao->getByInstitutional($journal->getId(), false, false)->toArray(),
+            'institutionalSubscriptionTypes' => $subscriptionTypeDao->getByInstitutional($journal->getId(), true, false)->toArray(),
+        ]);
+        $templateMgr->display('frontend/pages/subscriptions.tpl');
+    }
 }
-
-

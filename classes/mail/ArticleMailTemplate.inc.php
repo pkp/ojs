@@ -18,19 +18,21 @@
 import('lib.pkp.classes.mail.SubmissionMailTemplate');
 import('lib.pkp.classes.log.SubmissionEmailLogEntry'); // Bring in log constants
 
-class ArticleMailTemplate extends SubmissionMailTemplate {
-	/**
-	 * @copydoc SubmissionMailTemplate::assignParams()
-	 */
-	function assignParams($paramArray = array()) {
-		$publication = $this->submission->getCurrentPublication();
-		if ($sectionId = $publication->getData('sectionId')) {
-			$sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var $sectionDao SectionDAO */
-			$section = $sectionDao->getById($sectionId);
-			if ($section) $paramArray['sectionName'] = strip_tags($section->getLocalizedTitle());
-		}
-		parent::assignParams($paramArray);
-	}
+class ArticleMailTemplate extends SubmissionMailTemplate
+{
+    /**
+     * @copydoc SubmissionMailTemplate::assignParams()
+     */
+    public function assignParams($paramArray = [])
+    {
+        $publication = $this->submission->getCurrentPublication();
+        if ($sectionId = $publication->getData('sectionId')) {
+            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
+            $section = $sectionDao->getById($sectionId);
+            if ($section) {
+                $paramArray['sectionName'] = strip_tags($section->getLocalizedTitle());
+            }
+        }
+        parent::assignParams($paramArray);
+    }
 }
-
-

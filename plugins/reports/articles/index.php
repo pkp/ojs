@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_reports_article Article Report Plugin
  */
- 
+
 /**
  * @file plugins/reports/articles/index.php
  *
@@ -19,5 +19,3 @@
 require_once('ArticleReportPlugin.inc.php');
 
 return new ArticleReportPlugin();
-
-

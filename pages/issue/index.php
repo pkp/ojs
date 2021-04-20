@@ -16,14 +16,12 @@
  *
  */
 switch ($op) {
-	case 'index':
-	case 'current':
-	case 'archive':
-	case 'view':
-	case 'download':
-		define('HANDLER_CLASS', 'IssueHandler');
-		import('pages.issue.IssueHandler');
-		break;
+    case 'index':
+    case 'current':
+    case 'archive':
+    case 'view':
+    case 'download':
+        define('HANDLER_CLASS', 'IssueHandler');
+        import('pages.issue.IssueHandler');
+        break;
 }
-
-

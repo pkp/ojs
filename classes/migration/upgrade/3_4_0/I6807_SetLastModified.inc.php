@@ -12,27 +12,25 @@
  */
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Builder;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 
-class I6807_SetLastModified extends Migration {
-	/**
-	 * Run the migration.
-	 * @return void
-	 */
-	public function up() {
-		// pkp/pkp-lib#6807 Make sure all submission/issue last modification dates are set
-		DB::statement('UPDATE issues SET last_modified = date_published WHERE last_modified IS NULL');
-		DB::statement('UPDATE submissions SET last_modified = NOW() WHERE last_modified IS NULL');
-	}
+class I6807_SetLastModified extends Migration
+{
+    /**
+     * Run the migration.
+     */
+    public function up()
+    {
+        // pkp/pkp-lib#6807 Make sure all submission/issue last modification dates are set
+        DB::statement('UPDATE issues SET last_modified = date_published WHERE last_modified IS NULL');
+        DB::statement('UPDATE submissions SET last_modified = NOW() WHERE last_modified IS NULL');
+    }
 
-	/**
-	 * Reverse the downgrades
-	 * @return void
-	 */
-	public function down() {
-		// We don't have the data to downgrade and downgrades are unwanted here anyway.
-	}
+    /**
+     * Reverse the downgrades
+     */
+    public function down()
+    {
+        // We don't have the data to downgrade and downgrades are unwanted here anyway.
+    }
 }
-

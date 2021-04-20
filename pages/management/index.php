@@ -17,23 +17,21 @@
  */
 
 switch ($op) {
-	//
-	// Settings
-	//
-	case 'index':
-	case 'settings':
-	case 'access':
-		import('pages.management.SettingsHandler');
-		define('HANDLER_CLASS', 'SettingsHandler');
-		break;
-	case 'tools':
-	case 'importexport':
-	case 'statistics':
-	case 'permissions':
-	case 'resetPermissions':
-		import('lib.pkp.pages.management.PKPToolsHandler');
-		define('HANDLER_CLASS', 'PKPToolsHandler');
-		break;
+    //
+    // Settings
+    //
+    case 'index':
+    case 'settings':
+    case 'access':
+        import('pages.management.SettingsHandler');
+        define('HANDLER_CLASS', 'SettingsHandler');
+        break;
+    case 'tools':
+    case 'importexport':
+    case 'statistics':
+    case 'permissions':
+    case 'resetPermissions':
+        import('lib.pkp.pages.management.PKPToolsHandler');
+        define('HANDLER_CLASS', 'PKPToolsHandler');
+        break;
 }
-
-

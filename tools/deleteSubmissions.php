@@ -15,49 +15,52 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-class SubmissionDeletionTool extends CommandLineTool {
+class SubmissionDeletionTool extends CommandLineTool
+{
+    public $articleIds;
 
-	var $articleIds;
+    /**
+     * Constructor.
+     *
+     * @param $argv array command-line arguments
+     */
+    public function __construct($argv = [])
+    {
+        parent::__construct($argv);
 
-	/**
-	 * Constructor.
-	 * @param $argv array command-line arguments
-	 */
-	function __construct($argv = array()) {
-		parent::__construct($argv);
+        if (!sizeof($this->argv)) {
+            $this->usage();
+            exit(1);
+        }
 
-		if (!sizeof($this->argv)) {
-			$this->usage();
-			exit(1);
-		}
+        $this->parameters = $this->argv;
+    }
 
-		$this->parameters = $this->argv;
-	}
+    /**
+     * Print command usage information.
+     */
+    public function usage()
+    {
+        echo "Permanently removes submission(s) and associated information.  USE WITH CARE.\n"
+            . "Usage: {$this->scriptName} submission_id [...]\n";
+    }
 
-	/**
-	 * Print command usage information.
-	 */
-	function usage() {
-		echo "Permanently removes submission(s) and associated information.  USE WITH CARE.\n"
-			. "Usage: {$this->scriptName} submission_id [...]\n";
-	}
-
-	/**
-	 * Delete submission data and associated files
-	 */
-	function execute() {
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-		foreach($this->parameters as $articleId) {
-			$article = $submissionDao->getById($articleId);
-			if(!isset($article)) {
-				printf("Error: Skipping $articleId. Unknown submission.\n");
-				continue;
-			}
-			$submissionDao->deleteById($articleId);
-		}
-	}
+    /**
+     * Delete submission data and associated files
+     */
+    public function execute()
+    {
+        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+        foreach ($this->parameters as $articleId) {
+            $article = $submissionDao->getById($articleId);
+            if (!isset($article)) {
+                printf("Error: Skipping ${articleId}. Unknown submission.\n");
+                continue;
+            }
+            $submissionDao->deleteById($articleId);
+        }
+    }
 }
 
-$tool = new SubmissionDeletionTool(isset($argv) ? $argv : array());
+$tool = new SubmissionDeletionTool($argv ?? []);
 $tool->execute();
-

@@ -16,230 +16,236 @@
 
 import('lib.pkp.classes.handler.APIHandler');
 
-use \APP\core\Services;
+use APP\core\Services;
 
-class IssueHandler extends APIHandler {
+class IssueHandler extends APIHandler
+{
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->_handlerPath = 'issues';
+        $roles = [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR];
+        $this->_endpoints = [
+            'GET' => [
+                [
+                    'pattern' => $this->getEndpointPattern(),
+                    'handler' => [$this, 'getMany'],
+                    'roles' => $roles
+                ],
+                [
+                    'pattern' => $this->getEndpointPattern() . '/current',
+                    'handler' => [$this, 'getCurrent'],
+                    'roles' => $roles
+                ],
+                [
+                    'pattern' => $this->getEndpointPattern() . '/{issueId:\d+}',
+                    'handler' => [$this, 'get'],
+                    'roles' => $roles
+                ],
+            ]
+        ];
+        parent::__construct();
+    }
 
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		$this->_handlerPath = 'issues';
-		$roles = array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR);
-		$this->_endpoints = array(
-			'GET' => array (
-				array(
-					'pattern' => $this->getEndpointPattern(),
-					'handler' => array($this, 'getMany'),
-					'roles' => $roles
-				),
-				array(
-					'pattern' => $this->getEndpointPattern().  '/current',
-					'handler' => array($this, 'getCurrent'),
-					'roles' => $roles
-				),
-				array(
-					'pattern' => $this->getEndpointPattern().  '/{issueId:\d+}',
-					'handler' => array($this, 'get'),
-					'roles' => $roles
-				),
-			)
-		);
-		parent::__construct();
-	}
+    //
+    // Implement methods from PKPHandler
+    //
+    public function authorize($request, &$args, $roleAssignments)
+    {
+        $routeName = null;
+        $slimRequest = $this->getSlimRequest();
 
-	//
-	// Implement methods from PKPHandler
-	//
-	function authorize($request, &$args, $roleAssignments) {
-		$routeName = null;
-		$slimRequest = $this->getSlimRequest();
+        if (!is_null($slimRequest) && ($route = $slimRequest->getAttribute('route'))) {
+            $routeName = $route->getName();
+        }
 
-		if (!is_null($slimRequest) && ($route = $slimRequest->getAttribute('route'))) {
-			$routeName = $route->getName();
-		}
+        import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
+        $this->addPolicy(new ContextRequiredPolicy($request));
 
-		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
-		$this->addPolicy(new ContextRequiredPolicy($request));
+        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
+        $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
-		import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
-		$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
+        import('classes.security.authorization.OjsJournalMustPublishPolicy');
+        $this->addPolicy(new OjsJournalMustPublishPolicy($request));
 
-		import('classes.security.authorization.OjsJournalMustPublishPolicy');
-		$this->addPolicy(new OjsJournalMustPublishPolicy($request));
+        if ($routeName === 'get') {
+            import('classes.security.authorization.OjsIssueRequiredPolicy');
+            $this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
+        }
 
-		if ($routeName === 'get') {
-			import('classes.security.authorization.OjsIssueRequiredPolicy');
-			$this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
-		}
+        return parent::authorize($request, $args, $roleAssignments);
+    }
 
-		return parent::authorize($request, $args, $roleAssignments);
-	}
+    //
+    // Public handler methods
+    //
+    /**
+     * Get a collection of issues
+     *
+     * @param $slimRequest Request Slim request object
+     * @param $response Response object
+     * @param array $args arguments
+     *
+     * @return Response
+     */
+    public function getMany($slimRequest, $response, $args)
+    {
+        $request = $this->getRequest();
+        $currentUser = $request->getUser();
+        $context = $request->getContext();
 
-	//
-	// Public handler methods
-	//
-	/**
-	 * Get a collection of issues
-	 * @param $slimRequest Request Slim request object
-	 * @param $response Response object
-	 * @param array $args arguments
-	 * @return Response
-	 */
-	public function getMany($slimRequest, $response, $args) {
-		$request = $this->getRequest();
-		$currentUser = $request->getUser();
-		$context = $request->getContext();
+        if (!$context) {
+            return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+        }
 
-		if (!$context) {
-			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
-		}
+        $defaultParams = [
+            'count' => 20,
+            'offset' => 0,
+        ];
 
-		$defaultParams = array(
-			'count' => 20,
-			'offset' => 0,
-		);
+        $requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
 
-		$requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
+        $params = [];
 
-		$params = array();
+        // Process query params to format incoming data as needed
+        foreach ($requestParams as $param => $val) {
+            switch ($param) {
 
-		// Process query params to format incoming data as needed
-		foreach ($requestParams as $param => $val) {
-			switch ($param) {
+                case 'orderBy':
+                    if (in_array($val, ['datePublished', 'lastModified', 'seq'])) {
+                        $params[$param] = $val;
+                    }
+                    break;
 
-				case 'orderBy':
-					if (in_array($val, array('datePublished', 'lastModified', 'seq'))) {
-						$params[$param] = $val;
-					}
-					break;
+                case 'orderDirection':
+                    $params[$param] = $val === 'ASC' ? $val : 'DESC';
+                    break;
 
-				case 'orderDirection':
-					$params[$param] = $val === 'ASC' ? $val : 'DESC';
-					break;
+                // Enforce a maximum count to prevent the API from crippling the
+                // server
+                case 'count':
+                    $params[$param] = min(100, (int) $val);
+                    break;
 
-				// Enforce a maximum count to prevent the API from crippling the
-				// server
-				case 'count':
-					$params[$param] = min(100, (int) $val);
-					break;
+                case 'offset':
+                    $params[$param] = (int) $val;
+                    break;
 
-				case 'offset':
-					$params[$param] = (int) $val;
-					break;
+                // Always convert volume, number and year values to array
+                case 'volumes':
+                case 'volume':
+                case 'numbers':
+                case 'number':
+                case 'years':
+                case 'year':
 
-				// Always convert volume, number and year values to array
-				case 'volumes':
-				case 'volume':
-				case 'numbers':
-				case 'number':
-				case 'years':
-				case 'year':
+                    // Support deprecated `year`, `number` and `volume` params
+                    if (substr($param, -1) !== 's') {
+                        $param .= 's';
+                    }
 
-					// Support deprecated `year`, `number` and `volume` params
-					if (substr($param, -1) !== 's') {
-						$param .= 's';
-					}
+                    if (is_string($val)) {
+                        $val = explode(',', $val);
+                    } elseif (!is_array($val)) {
+                        $val = [$val];
+                    }
+                    $params[$param] = array_map('intval', $val);
+                    break;
 
-					if (is_string($val)) {
-						$val = explode(',', $val);
-					} elseif (!is_array($val)) {
-						$val = array($val);
-					}
-					$params[$param] = array_map('intval', $val);
-					break;
+                case 'isPublished':
+                    $params[$param] = $val ? true : false;
+                    break;
 
-				case 'isPublished':
-					$params[$param] = $val ? true : false;
-					break;
+                case 'searchPhrase':
+                    $params[$param] = $val;
+                    break;
+            }
+        }
 
-				case 'searchPhrase':
-					$params[$param] = $val;
-					break;
-			}
-		}
+        $params['contextId'] = $context->getId();
 
-		$params['contextId'] = $context->getId();
+        \HookRegistry::call('API::issues::params', [&$params, $slimRequest]);
 
-		\HookRegistry::call('API::issues::params', array(&$params, $slimRequest));
+        // You must be a manager or site admin to access unpublished Issues
+        $isAdmin = $currentUser->hasRole([ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([ROLE_ID_SITE_ADMIN], CONTEXT_SITE);
+        if (isset($params['isPublished']) && !$params['isPublished'] && !$isAdmin) {
+            return $response->withStatus(403)->withJsonError('api.submissions.403.unpublishedIssues');
+        } elseif (!$isAdmin) {
+            $params['isPublished'] = true;
+        }
 
-		// You must be a manager or site admin to access unpublished Issues
-		$isAdmin = $currentUser->hasRole(array(ROLE_ID_MANAGER), $context->getId()) || $currentUser->hasRole(array(ROLE_ID_SITE_ADMIN), CONTEXT_SITE);
-		if (isset($params['isPublished']) && !$params['isPublished'] && !$isAdmin) {
-			return $response->withStatus(403)->withJsonError('api.submissions.403.unpublishedIssues');
-		} elseif (!$isAdmin) {
-			$params['isPublished'] = true;
-		}
+        $items = [];
+        $issuesIterator = Services::get('issue')->getMany($params);
+        $propertyArgs = [
+            'request' => $request,
+            'slimRequest' => $slimRequest,
+        ];
+        foreach ($issuesIterator as $issue) {
+            $items[] = Services::get('issue')->getSummaryProperties($issue, $propertyArgs);
+        }
 
-		$items = array();
-		$issuesIterator = Services::get('issue')->getMany($params);
-		$propertyArgs = array(
-			'request' => $request,
-			'slimRequest' => $slimRequest,
-		);
-		foreach ($issuesIterator as $issue) {
-			$items[] = Services::get('issue')->getSummaryProperties($issue, $propertyArgs);
-		}
+        $data = [
+            'itemsMax' => Services::get('issue')->getMax($params),
+            'items' => $items,
+        ];
 
-		$data = array(
-			'itemsMax' => Services::get('issue')->getMax($params),
-			'items' => $items,
-		);
+        return $response->withJson($data, 200);
+    }
 
-		return $response->withJson($data, 200);
-	}
+    /**
+     * Get the current issue
+     *
+     * @param $slimRequest Request Slim request object
+     * @param $response Response object
+     * @param array $args arguments
+     *
+     * @return Response
+     */
+    public function getCurrent($slimRequest, $response, $args)
+    {
+        $request = $this->getRequest();
+        $context = $request->getContext();
 
-	/**
-	 * Get the current issue
-	 *
-	 * @param $slimRequest Request Slim request object
-	 * @param $response Response object
-	 * @param array $args arguments
-	 *
-	 * @return Response
-	 */
-	public function getCurrent($slimRequest, $response, $args) {
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+        $issue = $issueDao->getCurrent($context->getId());
 
-		$request = $this->getRequest();
-		$context = $request->getContext();
+        if (!$issue) {
+            return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+        }
 
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issue = $issueDao->getCurrent($context->getId());
+        $data = Services::get('issue')->getFullProperties($issue, [
+            'request' => $request,
+            'slimRequest' => $slimRequest,
+        ]);
 
-		if (!$issue) {
-			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
-		}
+        return $response->withJson($data, 200);
+    }
 
-		$data = Services::get('issue')->getFullProperties($issue, array(
-			'request' => $request,
-			'slimRequest' => $slimRequest,
-		));
+    /**
+     * Get a single issue
+     *
+     * @param $slimRequest Request Slim request object
+     * @param $response Response object
+     * @param array $args arguments
+     *
+     * @return Response
+     */
+    public function get($slimRequest, $response, $args)
+    {
+        $request = $this->getRequest();
+        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
-		return $response->withJson($data, 200);
-	}
+        if (!$issue) {
+            return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+        }
 
-	/**
-	 * Get a single issue
-	 *
-	 * @param $slimRequest Request Slim request object
-	 * @param $response Response object
-	 * @param array $args arguments
-	 *
-	 * @return Response
-	 */
-	public function get($slimRequest, $response, $args) {
-		$request = $this->getRequest();
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $data = Services::get('issue')->getFullProperties($issue, [
+            'request' => $request,
+            'slimRequest' => $slimRequest,
+        ]);
 
-		if (!$issue) {
-			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
-		}
-
-		$data = Services::get('issue')->getFullProperties($issue, array(
-			'request' => $request,
-			'slimRequest' => $slimRequest,
-		));
-
-		return $response->withJson($data, 200);
-	}
+        return $response->withJson($data, 200);
+    }
 }

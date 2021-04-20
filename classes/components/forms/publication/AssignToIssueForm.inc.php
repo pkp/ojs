@@ -11,62 +11,66 @@
  *
  * @brief A preset form for setting a publication's issue.
  */
+
 namespace APP\components\forms\publication;
-use \PKP\components\forms\FormComponent;
-use \PKP\components\forms\FieldSelect;
+
+use PKP\components\forms\FieldSelect;
+use PKP\components\forms\FormComponent;
 
 define('FORM_ASSIGN_TO_ISSUE', 'assignToIssue');
 
-class AssignToIssueForm extends FormComponent {
-	/** @copydoc FormComponent::$id */
-	public $id = FORM_ASSIGN_TO_ISSUE;
+class AssignToIssueForm extends FormComponent
+{
+    /** @copydoc FormComponent::$id */
+    public $id = FORM_ASSIGN_TO_ISSUE;
 
-	/** @copydoc FormComponent::$method */
-	public $method = 'PUT';
+    /** @copydoc FormComponent::$method */
+    public $method = 'PUT';
 
-	/**
-	 * Constructor
-	 *
-	 * @param $action string URL to submit the form to
-	 * @param $publication \Publication The publication to change settings for
-	 * @param $publicationContext \Context The context of the publication
-	 */
-	public function __construct($action, $publication, $publicationContext) {
-		$this->action = $action;
+    /**
+     * Constructor
+     *
+     * @param $action string URL to submit the form to
+     * @param $publication \Publication The publication to change settings for
+     * @param $publicationContext \Context The context of the publication
+     */
+    public function __construct($action, $publication, $publicationContext)
+    {
+        $this->action = $action;
 
-		// Issue options
-		$issueOptions = [['value' => '', 'label' => '']];
-		$unpublishedIssues = iterator_to_array(\Services::get('issue')->getMany([
-			'contextId' => $publicationContext->getId(),
-			'isPublished' => false,
-		]));
-		if (count($unpublishedIssues)) {
-			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
-			foreach ($unpublishedIssues as $issue) {
-				$issueOptions[] = [
-					'value' => (int) $issue->getId(),
-					'label' => $issue->getIssueIdentification(),
-				];
-			}
-		}
-		$publishedIssues = iterator_to_array(\Services::get('issue')->getMany([
-			'contextId' => $publicationContext->getId(),
-			'isPublished' => true,
-		]));
-		if (count($publishedIssues)) {
-			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
-			foreach ($publishedIssues as $issue) {
-				$issueOptions[] = [
-					'value' => (int) $issue->getId(),
-					'label' => $issue->getIssueIdentification(),
-				];
-			}
-		}
+        // Issue options
+        $issueOptions = [['value' => '', 'label' => '']];
+        $unpublishedIssues = iterator_to_array(\Services::get('issue')->getMany([
+            'contextId' => $publicationContext->getId(),
+            'isPublished' => false,
+        ]));
+        if (count($unpublishedIssues)) {
+            $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
+            foreach ($unpublishedIssues as $issue) {
+                $issueOptions[] = [
+                    'value' => (int) $issue->getId(),
+                    'label' => $issue->getIssueIdentification(),
+                ];
+            }
+        }
+        $publishedIssues = iterator_to_array(\Services::get('issue')->getMany([
+            'contextId' => $publicationContext->getId(),
+            'isPublished' => true,
+        ]));
+        if (count($publishedIssues)) {
+            $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
+            foreach ($publishedIssues as $issue) {
+                $issueOptions[] = [
+                    'value' => (int) $issue->getId(),
+                    'label' => $issue->getIssueIdentification(),
+                ];
+            }
+        }
 
-		$this->addField(new FieldSelect('issueId', [
-			'label' => __('issue.issue'),
-			'options' => $issueOptions,
-			'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
-		]));
-	}
+        $this->addField(new FieldSelect('issueId', [
+            'label' => __('issue.issue'),
+            'options' => $issueOptions,
+            'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
+        ]));
+    }
 }

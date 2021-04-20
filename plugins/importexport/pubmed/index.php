@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_importexport_pubmed PubMed Export Plugin
  */
- 
+
 /**
  * @file plugins/importexport/pubmed/index.php
  *
@@ -19,5 +19,3 @@
 require_once('PubMedExportPlugin.inc.php');
 
 return new PubMedExportPlugin();
-
-

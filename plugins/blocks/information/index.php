@@ -2,7 +2,7 @@
 /**
  * @defgroup plugins_blocks_information Information Block Plugin
  */
- 
+
 /**
  * @file plugins/blocks/information/index.php
  *
@@ -18,5 +18,3 @@
 require_once('InformationBlockPlugin.inc.php');
 
 return new InformationBlockPlugin();
-
-

@@ -15,4 +15,6 @@
 
 import('lib.pkp.controllers.grid.users.author.form.PKPAuthorForm');
 
-class AuthorForm extends PKPAuthorForm {}
+class AuthorForm extends PKPAuthorForm
+{
+}

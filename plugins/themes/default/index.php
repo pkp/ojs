@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_themes_default Default theme plugin
  */
- 
+
 /**
  * @file plugins/themes/default/index.php
  *
@@ -19,5 +19,3 @@
 require_once('DefaultThemePlugin.inc.php');
 
 return new DefaultThemePlugin();
-
-

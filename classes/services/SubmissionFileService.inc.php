@@ -15,42 +15,44 @@
 
 namespace APP\Services;
 
-use \DAORegistry;
-use \Application;
+use Application;
+use DAORegistry;
 
-class SubmissionFileService extends \PKP\Services\PKPSubmissionFileService {
+class SubmissionFileService extends \PKP\Services\PKPSubmissionFileService
+{
+    /**
+     * Initialize hooks for extending PKPSubmissionService
+     */
+    public function __construct()
+    {
+        \HookRegistry::register('SubmissionFile::delete::before', [$this, 'deleteSubmissionFile']);
+    }
 
-	/**
-	 * Initialize hooks for extending PKPSubmissionService
-	 */
-	public function __construct() {
-		\HookRegistry::register('SubmissionFile::delete::before', array($this, 'deleteSubmissionFile'));
-	}
+    /**
+     * Delete related objects when a submission file is deleted
+     *
+     * @param string $hookName
+     * @param array $args [
+     *      @option SubmissionFile
+     * ]
+     *
+     * @return array
+     */
+    public function deleteSubmissionFile($hookName, $args)
+    {
+        $submissionFile = $args[0];
 
-	/**
-	 * Delete related objects when a submission file is deleted
-	 *
-	 * @param string $hookName
-	 * @param array $args [
-	 *      @option SubmissionFile
-	 * ]
-	 *
-	 * @return array
-	 */
-	public function deleteSubmissionFile($hookName, $args) {
-		$submissionFile = $args[0];
-
-		// Remove galley associations and update search index
-		if ($submissionFile->getData('assocType') == ASSOC_TYPE_REPRESENTATION) {
-			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-			$galley = $galleyDao->getById($submissionFile->getData('assocId'));
-			if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
-				$galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
-				$galleyDao->updateObject($galley);
-			}
-			import('lib.pkp.classes.search.SubmissionSearch');
-			$articleSearchIndex = Application::getSubmissionSearchIndex();
-			$articleSearchIndex->deleteTextIndex($submissionFile->getData('submissionId'), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getId());
-		}
-	}
+        // Remove galley associations and update search index
+        if ($submissionFile->getData('assocType') == ASSOC_TYPE_REPRESENTATION) {
+            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+            $galley = $galleyDao->getById($submissionFile->getData('assocId'));
+            if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
+                $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
+                $galleyDao->updateObject($galley);
+            }
+            import('lib.pkp.classes.search.SubmissionSearch');
+            $articleSearchIndex = Application::getSubmissionSearchIndex();
+            $articleSearchIndex->deleteTextIndex($submissionFile->getData('submissionId'), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getId());
+        }
+    }
 }

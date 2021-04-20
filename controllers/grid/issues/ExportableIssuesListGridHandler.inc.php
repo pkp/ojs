@@ -15,50 +15,54 @@
 
 import('classes.controllers.grid.issues.IssueGridHandler');
 
-class ExportableIssuesListGridHandler extends IssueGridHandler {
+class ExportableIssuesListGridHandler extends IssueGridHandler
+{
+    //
+    // Implemented methods from GridHandler.
+    //
+    /**
+     * @copydoc GridHandler::isDataElementSelected()
+     */
+    public function isDataElementSelected($gridDataElement)
+    {
+        return false; // Nothing is selected by default
+    }
 
-	//
-	// Implemented methods from GridHandler.
-	//
-	/**
-	 * @copydoc GridHandler::isDataElementSelected()
-	 */
-	function isDataElementSelected($gridDataElement) {
-		return false; // Nothing is selected by default
-	}
+    /**
+     * @copydoc GridHandler::getSelectName()
+     */
+    public function getSelectName()
+    {
+        return 'selectedIssues';
+    }
 
-	/**
-	 * @copydoc GridHandler::getSelectName()
-	 */
-	function getSelectName() {
-		return 'selectedIssues';
-	}
+    /**
+     * @copydoc GridHandler::loadData()
+     */
+    protected function loadData($request, $filter)
+    {
+        $journal = $request->getJournal();
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+        return $issueDao->getIssues($journal->getId(), $this->getGridRangeInfo($request, $this->getId()));
+    }
 
-	/**
-	 * @copydoc GridHandler::loadData()
-	 */
-	protected function loadData($request, $filter) {
-		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		return $issueDao->getIssues($journal->getId(), $this->getGridRangeInfo($request, $this->getId()));
-	}
+    /**
+     * @copydoc GridHandler::initFeatures()
+     */
+    public function initFeatures($request, $args)
+    {
+        import('lib.pkp.classes.controllers.grid.feature.selectableItems.SelectableItemsFeature');
+        import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
+        return [new SelectableItemsFeature(), new PagingFeature()];
+    }
 
-	/**
-	 * @copydoc GridHandler::initFeatures()
-	 */
-	function initFeatures($request, $args) {
-		import('lib.pkp.classes.controllers.grid.feature.selectableItems.SelectableItemsFeature');
-		import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
-		return array(new SelectableItemsFeature(), new PagingFeature());
-	}
-
-	/**
-	 * Get the row handler - override the parent row handler. We do not need grid row actions.
-	 * @return GridRow
-	 */
-	protected function getRowInstance() {
-		return new GridRow();
-	}
+    /**
+     * Get the row handler - override the parent row handler. We do not need grid row actions.
+     *
+     * @return GridRow
+     */
+    protected function getRowInstance()
+    {
+        return new GridRow();
+    }
 }
-
-

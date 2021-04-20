@@ -11,7 +11,11 @@
  *
  * @brief A preset form for configuring the guidance a reviewer should receive.
  */
-namespace APP\components\forms\context;
-use \PKP\components\forms\context\PKPReviewGuidanceForm;
 
-class ReviewGuidanceForm extends PKPReviewGuidanceForm {}
+namespace APP\components\forms\context;
+
+use PKP\components\forms\context\PKPReviewGuidanceForm;
+
+class ReviewGuidanceForm extends PKPReviewGuidanceForm
+{
+}

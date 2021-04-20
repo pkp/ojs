@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_reports_subscription Subscription Report Plugin
  */
- 
+
 /**
  * @file plugins/reports/subscriptions/index.php
  *
@@ -19,5 +19,3 @@
 require_once('SubscriptionReportPlugin.inc.php');
 
 return new SubscriptionReportPlugin();
-
-

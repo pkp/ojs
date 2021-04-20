@@ -15,117 +15,123 @@
 
 import('lib.pkp.classes.controllers.grid.GridRow');
 
-class IssueGridRow extends GridRow {
+class IssueGridRow extends GridRow
+{
+    //
+    // Overridden template methods
+    //
+    /*
+     * @copydoc GridRow::initialize
+     */
+    public function initialize($request, $template = null)
+    {
+        parent::initialize($request, $template);
 
-	//
-	// Overridden template methods
-	//
-	/*
-	 * @copydoc GridRow::initialize
-	 */
-	function initialize($request, $template = null) {
-		parent::initialize($request, $template);
+        // Is this a new row or an existing row?
+        $issueId = $this->getId();
+        if (!empty($issueId) && is_numeric($issueId)) {
+            $issue = $this->getData();
+            assert(is_a($issue, 'Issue'));
+            $router = $request->getRouter();
 
-		// Is this a new row or an existing row?
-		$issueId = $this->getId();
-		if (!empty($issueId) && is_numeric($issueId)) {
-			$issue = $this->getData();
-			assert(is_a($issue, 'Issue'));
-			$router = $request->getRouter();
+            import('lib.pkp.classes.linkAction.request.AjaxModal');
+            $this->addAction(
+                new LinkAction(
+                    'edit',
+                    new AjaxModal(
+                        $router->url($request, null, null, 'editIssue', null, ['issueId' => $issueId]),
+                        __('editor.issues.editIssue', ['issueIdentification' => $issue->getIssueIdentification()]),
+                        'modal_edit',
+                        true
+                    ),
+                    __('grid.action.edit'),
+                    'edit'
+                )
+            );
 
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			$this->addAction(
-				new LinkAction(
-					'edit',
-					new AjaxModal(
-						$router->url($request, null, null, 'editIssue', null, array('issueId' => $issueId)),
-						__('editor.issues.editIssue', array('issueIdentification' => $issue->getIssueIdentification())),
-						'modal_edit',
-						true),
-					__('grid.action.edit'),
-					'edit'
-				)
-			);
+            import('lib.pkp.classes.linkAction.request.OpenWindowAction');
+            $dispatcher = $request->getDispatcher();
+            $this->addAction(
+                new LinkAction(
+                    $issue->getDatePublished() ? 'viewIssue' : 'previewIssue',
+                    new OpenWindowAction(
+                        $dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'view', [$issueId])
+                    ),
+                    __($issue->getDatePublished() ? 'grid.action.viewIssue' : 'grid.action.previewIssue'),
+                    'information'
+                )
+            );
 
-			import('lib.pkp.classes.linkAction.request.OpenWindowAction');
-			$dispatcher = $request->getDispatcher();
-			$this->addAction(
-				new LinkAction(
-					$issue->getDatePublished()?'viewIssue':'previewIssue',
-					new OpenWindowAction(
-						$dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'view', array($issueId))
-					),
-					__($issue->getDatePublished()?'grid.action.viewIssue':'grid.action.previewIssue'),
-					'information'
-				)
-			);
+            import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+            if ($issue->getDatePublished()) {
+                import('lib.pkp.classes.linkAction.request.AjaxModal');
+                $this->addAction(
+                    new LinkAction(
+                        'unpublish',
+                        new RemoteActionConfirmationModal(
+                            $request->getSession(),
+                            __('editor.issues.confirmUnpublish'),
+                            __('editor.issues.unpublishIssue'),
+                            $router->url($request, null, null, 'unpublishIssue', null, ['issueId' => $issueId]),
+                            'modal_delete'
+                        ),
+                        __('editor.issues.unpublishIssue'),
+                        'delete'
+                    )
+                );
+            } else {
+                $this->addAction(
+                    new LinkAction(
+                        'publish',
+                        new AjaxModal(
+                            $router->url(
+                                $request,
+                                null,
+                                null,
+                                'publishIssue',
+                                null,
+                                ['issueId' => $issueId]
+                            ),
+                            __('editor.issues.publishIssue'),
+                            'modal_confirm'
+                        ),
+                        __('editor.issues.publishIssue'),
+                        'advance'
+                    )
+                );
+            }
 
-			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-			if ($issue->getDatePublished()) {
-				import('lib.pkp.classes.linkAction.request.AjaxModal');
-				$this->addAction(
-					new LinkAction(
-						'unpublish',
-						new RemoteActionConfirmationModal(
-							$request->getSession(),
-							__('editor.issues.confirmUnpublish'),
-							__('editor.issues.unpublishIssue'),
-							$router->url($request, null, null, 'unpublishIssue', null, array('issueId' => $issueId)),
-							'modal_delete'
-						),
-						__('editor.issues.unpublishIssue'),
-						'delete'
-					)
-				);
-			} else {
-				$this->addAction(
-					new LinkAction(
-						'publish',
-						new AjaxModal(
-							$router->url(
-								$request, null, null, 'publishIssue', null, array('issueId' => $issueId)),
-								__('editor.issues.publishIssue'),
-								'modal_confirm'
-							),
-						__('editor.issues.publishIssue'),
-						'advance'
-					)
-				);
-			}
+            if ($issue->getDatePublished() && !$issue->getCurrent()) {
+                $this->addAction(
+                    new LinkAction(
+                        'setCurrentIssue',
+                        new RemoteActionConfirmationModal(
+                            $request->getSession(),
+                            __('editor.issues.confirmSetCurrentIssue'),
+                            __('editor.issues.currentIssue'),
+                            $router->url($request, null, null, 'setCurrentIssue', null, ['issueId' => $issueId]),
+                            'modal_delete'
+                        ),
+                        __('editor.issues.currentIssue'),
+                        'delete'
+                    )
+                );
+            }
 
-			if ($issue->getDatePublished() && !$issue->getCurrent()) {
-				$this->addAction(
-					new LinkAction(
-						'setCurrentIssue',
-						new RemoteActionConfirmationModal(
-							$request->getSession(),
-							__('editor.issues.confirmSetCurrentIssue'),
-							__('editor.issues.currentIssue'),
-							$router->url($request, null, null, 'setCurrentIssue', null, array('issueId' => $issueId)),
-							'modal_delete'
-						),
-						__('editor.issues.currentIssue'),
-						'delete'
-					)
-				);
-			}
-
-			$this->addAction(
-				new LinkAction(
-					'delete',
-					new RemoteActionConfirmationModal(
-						$request->getSession(),
-						__('common.confirmDelete'),
-						__('grid.action.delete'),
-						$router->url($request, null, null, 'deleteIssue', null, array('issueId' => $issueId)),
-						'modal_delete'
-					),
-					__('grid.action.delete'),
-					'delete'
-				)
-			);
-		}
-	}
+            $this->addAction(
+                new LinkAction(
+                    'delete',
+                    new RemoteActionConfirmationModal(
+                        $request->getSession(),
+                        __('common.confirmDelete'),
+                        __('grid.action.delete'),
+                        $router->url($request, null, null, 'deleteIssue', null, ['issueId' => $issueId]),
+                        'modal_delete'
+                    ),
+                    __('grid.action.delete'),
+                    'delete'
+                )
+            );
+        }
+    }
 }
-
-

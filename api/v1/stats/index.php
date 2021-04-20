@@ -18,12 +18,12 @@
 
 $requestPath = Application::get()->getRequest()->getRequestPath();
 if (strpos($requestPath, '/stats/publications')) {
-  import('api.v1.stats.publications.StatsPublicationHandler');
-  return new StatsPublicationHandler();
+    import('api.v1.stats.publications.StatsPublicationHandler');
+    return new StatsPublicationHandler();
 } elseif (strpos($requestPath, '/stats/editorial')) {
-	import('api.v1.stats.editorial.StatsEditorialHandler');
-	return new StatsEditorialHandler();
+    import('api.v1.stats.editorial.StatsEditorialHandler');
+    return new StatsEditorialHandler();
 } elseif (strpos($requestPath, '/stats/users')) {
-	import('lib.pkp.api.v1.stats.users.PKPStatsUserHandler');
-	return new PKPStatsUserHandler();
+    import('lib.pkp.api.v1.stats.users.PKPStatsUserHandler');
+    return new PKPStatsUserHandler();
 }

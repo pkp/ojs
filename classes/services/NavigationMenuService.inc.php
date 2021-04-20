@@ -19,138 +19,142 @@ namespace APP\Services;
 define('NMI_TYPE_SUBSCRIPTIONS', 'NMI_TYPE_SUBSCRIPTIONS');
 define('NMI_TYPE_MY_SUBSCRIPTIONS', 'NMI_TYPE_MY_SUBSCRIPTIONS');
 define('NMI_TYPE_CURRENT', 'NMI_TYPE_CURRENT');
-define('NMI_TYPE_ARCHIVES',	'NMI_TYPE_ARCHIVES');
+define('NMI_TYPE_ARCHIVES', 'NMI_TYPE_ARCHIVES');
 
-class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
+class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService
+{
+    /**
+     * Initialize hooks for extending PKPSubmissionService
+     */
+    public function __construct()
+    {
+        \HookRegistry::register('NavigationMenus::itemTypes', [$this, 'getMenuItemTypesCallback']);
+        \HookRegistry::register('NavigationMenus::displaySettings', [$this, 'getDisplayStatusCallback']);
+    }
 
-	/**
-	 * Initialize hooks for extending PKPSubmissionService
-	 */
-	public function __construct() {
+    /**
+     * Return all default navigationMenuItemTypes.
+     *
+     * @param $hookName string
+     * @param $args array of arguments passed
+     */
+    public function getMenuItemTypesCallback($hookName, $args)
+    {
+        $types = & $args[0];
 
-		\HookRegistry::register('NavigationMenus::itemTypes', array($this, 'getMenuItemTypesCallback'));
-		\HookRegistry::register('NavigationMenus::displaySettings', array($this, 'getDisplayStatusCallback'));
-	}
+        \AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_EDITOR);
 
-	/**
-	 * Return all default navigationMenuItemTypes.
-	 * @param $hookName string
-	 * @param $args array of arguments passed
-	 */
-	public function getMenuItemTypesCallback($hookName, $args) {
-		$types =& $args[0];
+        $ojsTypes = [
+            NMI_TYPE_CURRENT => [
+                'title' => __('editor.issues.currentIssue'),
+                'description' => __('manager.navigationMenus.current.description'),
+            ],
+            NMI_TYPE_ARCHIVES => [
+                'title' => __('navigation.archives'),
+                'description' => __('manager.navigationMenus.archives.description'),
+            ],
+            NMI_TYPE_SUBSCRIPTIONS => [
+                'title' => __('navigation.subscriptions'),
+                'description' => __('manager.navigationMenus.subscriptions.description'),
+                'conditionalWarning' => __('manager.navigationMenus.subscriptions.conditionalWarning'),
+            ],
+            NMI_TYPE_MY_SUBSCRIPTIONS => [
+                'title' => __('user.subscriptions.mySubscriptions'),
+                'description' => __('manager.navigationMenus.mySubscriptions.description'),
+                'conditionalWarning' => __('manager.navigationMenus.mySubscriptions.conditionalWarning'),
+            ],
+        ];
 
-		\AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_EDITOR);
+        $types = array_merge($types, $ojsTypes);
+    }
 
-		$ojsTypes = array(
-			NMI_TYPE_CURRENT => array(
-				'title' => __('editor.issues.currentIssue'),
-				'description' => __('manager.navigationMenus.current.description'),
-			),
-			NMI_TYPE_ARCHIVES => array(
-				'title' => __('navigation.archives'),
-				'description' => __('manager.navigationMenus.archives.description'),
-			),
-			NMI_TYPE_SUBSCRIPTIONS => array(
-				'title' => __('navigation.subscriptions'),
-				'description' => __('manager.navigationMenus.subscriptions.description'),
-				'conditionalWarning' => __('manager.navigationMenus.subscriptions.conditionalWarning'),
-			),
-			NMI_TYPE_MY_SUBSCRIPTIONS => array(
-				'title' => __('user.subscriptions.mySubscriptions'),
-				'description' => __('manager.navigationMenus.mySubscriptions.description'),
-				'conditionalWarning' => __('manager.navigationMenus.mySubscriptions.conditionalWarning'),
-			),
-		);
+    /**
+     * Callback for display menu item functionallity
+     *
+     * @param $hookName string
+     * @param $args array of arguments passed
+     */
+    public function getDisplayStatusCallback($hookName, $args)
+    {
+        $navigationMenuItem = & $args[0];
 
-		$types = array_merge($types, $ojsTypes);
-	}
+        $request = \Application::get()->getRequest();
+        $dispatcher = $request->getDispatcher();
+        $templateMgr = \TemplateManager::getManager(\Application::get()->getRequest());
 
-	/**
-	 * Callback for display menu item functionallity
-	 * @param $hookName string
-	 * @param $args array of arguments passed
-	 */
-	function getDisplayStatusCallback($hookName, $args) {
-		$navigationMenuItem =& $args[0];
+        $isUserLoggedIn = \Validation::isLoggedIn();
+        $isUserLoggedInAs = \Validation::isLoggedInAs();
+        $context = $request->getContext();
 
-		$request = \Application::get()->getRequest();
-		$dispatcher = $request->getDispatcher();
-		$templateMgr = \TemplateManager::getManager(\Application::get()->getRequest());
+        $this->transformNavMenuItemTitle($templateMgr, $navigationMenuItem);
 
-		$isUserLoggedIn = \Validation::isLoggedIn();
-		$isUserLoggedInAs = \Validation::isLoggedInAs();
-		$context = $request->getContext();
+        $menuItemType = $navigationMenuItem->getType();
 
-		$this->transformNavMenuItemTitle($templateMgr, $navigationMenuItem);
+        // Conditionally hide some items
+        switch ($menuItemType) {
+            case NMI_TYPE_CURRENT:
+            case NMI_TYPE_ARCHIVES:
+                $navigationMenuItem->setIsDisplayed($context && $context->getData('publishingMode') != PUBLISHING_MODE_NONE);
+                break;
+            case NMI_TYPE_SUBSCRIPTIONS:
+                if ($context) {
+                    $paymentManager = \Application::getPaymentManager($context);
+                    $navigationMenuItem->setIsDisplayed($context->getData('paymentsEnabled') && $paymentManager->isConfigured());
+                }
+                break;
+            case NMI_TYPE_MY_SUBSCRIPTIONS:
+                if ($context) {
+                    $paymentManager = \Application::getPaymentManager($context);
+                    $navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getData('paymentsEnabled') && $paymentManager->isConfigured() && $context->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION);
+                }
+                break;
+        }
 
-		$menuItemType = $navigationMenuItem->getType();
+        if ($navigationMenuItem->getIsDisplayed()) {
 
-		// Conditionally hide some items
-		switch ($menuItemType) {
-			case NMI_TYPE_CURRENT:
-			case NMI_TYPE_ARCHIVES:
-				$navigationMenuItem->setIsDisplayed($context && $context->getData('publishingMode') != PUBLISHING_MODE_NONE);
-				break;
-			case NMI_TYPE_SUBSCRIPTIONS:
-				if ($context) {
-					$paymentManager = \Application::getPaymentManager($context);
-					$navigationMenuItem->setIsDisplayed($context->getData('paymentsEnabled') && $paymentManager->isConfigured());
-				}
-				break;
-			case NMI_TYPE_MY_SUBSCRIPTIONS:
-				if ($context) {
-					$paymentManager = \Application::getPaymentManager($context);
-					$navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getData('paymentsEnabled') && $paymentManager->isConfigured() && $context->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION);
-				}
-				break;
-		}
-
-		if ($navigationMenuItem->getIsDisplayed()) {
-
-			// Set the URL
-			switch ($menuItemType) {
-				case NMI_TYPE_CURRENT:
-					$navigationMenuItem->setUrl($dispatcher->url(
-						$request,
-						\PKPApplication::ROUTE_PAGE,
-						null,
-						'issue',
-						'current',
-						null
-					));
-					break;
-				case NMI_TYPE_ARCHIVES:
-					$navigationMenuItem->setUrl($dispatcher->url(
-						$request,
-						\PKPApplication::ROUTE_PAGE,
-						null,
-						'issue',
-						'archive',
-						null
-					));
-					break;
-				case NMI_TYPE_SUBSCRIPTIONS:
-					$navigationMenuItem->setUrl($dispatcher->url(
-						$request,
-						\PKPApplication::ROUTE_PAGE,
-						null,
-						'about',
-						'subscriptions',
-						null
-					));
-					break;
-				case NMI_TYPE_MY_SUBSCRIPTIONS:
-					$navigationMenuItem->setUrl($dispatcher->url(
-						$request,
-						\PKPApplication::ROUTE_PAGE,
-						null,
-						'user',
-						'subscriptions',
-						null
-					));
-					break;
-			}
-		}
-	}
+            // Set the URL
+            switch ($menuItemType) {
+                case NMI_TYPE_CURRENT:
+                    $navigationMenuItem->setUrl($dispatcher->url(
+                        $request,
+                        \PKPApplication::ROUTE_PAGE,
+                        null,
+                        'issue',
+                        'current',
+                        null
+                    ));
+                    break;
+                case NMI_TYPE_ARCHIVES:
+                    $navigationMenuItem->setUrl($dispatcher->url(
+                        $request,
+                        \PKPApplication::ROUTE_PAGE,
+                        null,
+                        'issue',
+                        'archive',
+                        null
+                    ));
+                    break;
+                case NMI_TYPE_SUBSCRIPTIONS:
+                    $navigationMenuItem->setUrl($dispatcher->url(
+                        $request,
+                        \PKPApplication::ROUTE_PAGE,
+                        null,
+                        'about',
+                        'subscriptions',
+                        null
+                    ));
+                    break;
+                case NMI_TYPE_MY_SUBSCRIPTIONS:
+                    $navigationMenuItem->setUrl($dispatcher->url(
+                        $request,
+                        \PKPApplication::ROUTE_PAGE,
+                        null,
+                        'user',
+                        'subscriptions',
+                        null
+                    ));
+                    break;
+            }
+        }
+    }
 }

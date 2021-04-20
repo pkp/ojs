@@ -15,13 +15,13 @@
 
 import('lib.pkp.classes.submission.form.PKPSubmissionSubmitStep2Form');
 
-class SubmissionSubmitStep2Form extends PKPSubmissionSubmitStep2Form {
-	/**
-	 * Constructor.
-	 */
-	function __construct($context, $submission) {
-		parent::__construct($context, $submission);
-	}
+class SubmissionSubmitStep2Form extends PKPSubmissionSubmitStep2Form
+{
+    /**
+     * Constructor.
+     */
+    public function __construct($context, $submission)
+    {
+        parent::__construct($context, $submission);
+    }
 }
-
-

@@ -12,148 +12,157 @@
  *
  * @brief Native XML import/export plugin
  */
-use Colors\Color;
 
 import('lib.pkp.plugins.importexport.native.PKPNativeImportExportPlugin');
-class NativeImportExportPlugin extends PKPNativeImportExportPlugin {
+class NativeImportExportPlugin extends PKPNativeImportExportPlugin
+{
+    /**
+     * @see ImportExportPlugin::display()
+     */
+    public function display($args, $request)
+    {
+        parent::display($args, $request);
 
-	/**
-	 * @see ImportExportPlugin::display()
-	 */
-	function display($args, $request) {
-		parent::display($args, $request);
+        if ($this->isResultManaged) {
+            if ($this->result) {
+                return $this->result;
+            }
 
-		if ($this->isResultManaged) {
-			if ($this->result) {
-				return $this->result;
-			}
+            return false;
+        }
 
-			return false;
-		}
+        $templateMgr = TemplateManager::getManager($request);
 
-		$templateMgr = TemplateManager::getManager($request);
+        switch ($this->opType) {
+            case 'exportIssuesBounce':
+                return $this->getBounceTab(
+                    $request,
+                    __('plugins.importexport.native.export.issues.results'),
+                    'exportIssues',
+                    ['selectedIssues' => $request->getUserVar('selectedIssues')]
+                );
+            case 'exportIssues':
+                $selectedEntitiesIds = (array) $request->getUserVar('selectedIssues');
+                $deployment = $this->getDeployment();
 
-		switch ($this->opType) {
-			case 'exportIssuesBounce':
-				return $this->getBounceTab($request,
-					__('plugins.importexport.native.export.issues.results'),
-						'exportIssues',
-						array('selectedIssues' => $request->getUserVar('selectedIssues'))
-				);
-			case 'exportIssues':
-				$selectedEntitiesIds = (array) $request->getUserVar('selectedIssues');
-				$deployment = $this->getDeployment();
+                $this->getExportIssuesDeployment($selectedEntitiesIds, $deployment);
 
-				$this->getExportIssuesDeployment($selectedEntitiesIds, $deployment);
+                return $this->getExportTemplateResult($deployment, $templateMgr, 'issues');
+            default:
+                $dispatcher = $request->getDispatcher();
+                $dispatcher->handle404();
+        }
+    }
 
-				return $this->getExportTemplateResult($deployment, $templateMgr, 'issues');
-			default:
-				$dispatcher = $request->getDispatcher();
-				$dispatcher->handle404();
-		}
-	}
+    /**
+     * Get the issues and proceed to the export
+     *
+     * @param $issueIds array Array of issueIds to export
+     * @param $deployment PKPNativeImportExportDeployment
+     * @param $opts array
+     */
+    public function getExportIssuesDeployment($issueIds, &$deployment, $opts = [])
+    {
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /** @var IssueDAO $issueDao */
+        $issues = [];
+        foreach ($issueIds as $issueId) {
+            $issue = $issueDao->getById($issueId, $deployment->getContext()->getId());
+            if ($issue) {
+                $issues[] = $issue;
+            }
+        }
 
-	/**
-	 * Get the issues and proceed to the export
-	 * @param $issueIds array Array of issueIds to export
-	 * @param $deployment PKPNativeImportExportDeployment
-	 * @param $opts array
-	 */
-	function getExportIssuesDeployment($issueIds, &$deployment, $opts = array()) {
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /** @var $issueDao IssueDAO */
-		$issues = array();
-		foreach ($issueIds as $issueId) {
-			$issue = $issueDao->getById($issueId, $deployment->getContext()->getId());
-			if ($issue) $issues[] = $issue;
-		}
+        $deployment->export('issue=>native-xml', $issues, $opts);
+    }
 
-		$deployment->export('issue=>native-xml', $issues, $opts);
-	}
+    /**
+     * Get the XML for a set of issues.
+     *
+     * @param $issueIds array
+     * @param $context Context
+     * @param $user User
+     * @param $opts array
+     *
+     * @return string XML contents representing the supplied issue IDs.
+     */
+    public function exportIssues($issueIds, $context, $user, $opts = [])
+    {
+        $deployment = new NativeImportExportDeployment($context, $user);
+        $this->getExportIssuesDeployment($issueIds, $deployment, $opts);
 
-	/**
-	 * Get the XML for a set of issues.
-	 * @param $issueIds array
-	 * @param $context Context
-	 * @param $user User
-	 * @param $opts array
-	 * @return string XML contents representing the supplied issue IDs.
-	 */
-	function exportIssues($issueIds, $context, $user, $opts = array()) {
-		$deployment = new NativeImportExportDeployment($context, $user);
-		$this->getExportIssuesDeployment($issueIds, $deployment, $opts);
+        return $this->exportResultXML($deployment);
+    }
 
-		return $this->exportResultXML($deployment);
-	}
+    /**
+     * @see PKPNativeImportExportPlugin::getImportFilter
+     */
+    public function getImportFilter($xmlFile)
+    {
+        $filter = 'native-xml=>issue';
+        // is this articles import:
+        $xmlString = file_get_contents($xmlFile);
+        $document = new DOMDocument();
+        $document->loadXml($xmlString);
+        if (in_array($document->documentElement->tagName, ['article', 'articles'])) {
+            $filter = 'native-xml=>article';
+        }
 
-	/**
-	 * @see PKPNativeImportExportPlugin::getImportFilter
-	 */
-	function getImportFilter($xmlFile) {
-		$filter = 'native-xml=>issue';
-		// is this articles import:
-		$xmlString = file_get_contents($xmlFile);
-		$document = new DOMDocument();
-		$document->loadXml($xmlString);
-		if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
-			$filter = 'native-xml=>article';
-		}
+        return [$filter, $xmlString];
+    }
 
-		return array($filter, $xmlString);
-	}
+    /**
+     * @see PKPNativeImportExportPlugin::getExportFilter
+     */
+    public function getExportFilter($exportType)
+    {
+        $filter = 'issue=>native-xml';
+        if ($exportType == 'exportSubmissions') {
+            $filter = 'article=>native-xml';
+        }
 
-	/**
-	 * @see PKPNativeImportExportPlugin::getExportFilter
-	 */
-	function getExportFilter($exportType) {
-		$filter = 'issue=>native-xml';
-		if ($exportType == 'exportSubmissions') {
-			$filter = 'article=>native-xml';
-		}
+        return $filter;
+    }
 
-		return $filter;
-	}
+    /**
+     * @see PKPNativeImportExportPlugin::getAppSpecificDeployment
+     */
+    public function getAppSpecificDeployment($context, $user)
+    {
+        return new NativeImportExportDeployment($context, $user);
+    }
 
-	/**
-	 * @see PKPNativeImportExportPlugin::getAppSpecificDeployment
-	 */
-	function getAppSpecificDeployment($context, $user) {
-		return new NativeImportExportDeployment($context, $user);
-	}
+    /**
+     * @see PKPImportExportPlugin::executeCLI()
+     */
+    public function executeCLI($scriptName, &$args)
+    {
+        $result = parent::executeCLI($scriptName, $args);
 
-	/**
-	 * @see PKPImportExportPlugin::executeCLI()
-	 */
-	function executeCLI($scriptName, &$args) {
-		$result = parent::executeCLI($scriptName, $args);
+        if ($result) {
+            return $result;
+        }
 
-		if ($result) {
-			return $result;
-		}
+        $cliDeployment = $this->cliDeployment;
+        $deployment = $this->getDeployment();
 
-		$cliDeployment = $this->cliDeployment;
-		$deployment = $this->getDeployment();
+        switch ($cliDeployment->command) {
+            case 'export':
+                switch ($cliDeployment->exportEntity) {
+                    case 'issue':
+                    case 'issues':
+                        $this->getExportIssuesDeployment(
+                            $cliDeployment->args,
+                            $deployment,
+                            $cliDeployment->opts
+                        );
 
-		switch ($cliDeployment->command) {
-			case 'export':
-				switch ($cliDeployment->exportEntity) {
-					case 'issue':
-					case 'issues':
-						$this->getExportIssuesDeployment(
-							$cliDeployment->args,
-							$deployment,
-							$cliDeployment->opts
-						);
+                        $this->cliToolkit->getCLIExportResult($deployment, $cliDeployment->xmlFile);
+                        $this->cliToolkit->getCLIProblems($deployment);
 
-						$this->cliToolkit->getCLIExportResult($deployment, $cliDeployment->xmlFile);
-						$this->cliToolkit->getCLIProblems($deployment);
+                        return true;
+                }
+        }
 
-						return true;
-				}
-		}
-
-		$this->usage($scriptName);
-	}
-
+        $this->usage($scriptName);
+    }
 }
-
-

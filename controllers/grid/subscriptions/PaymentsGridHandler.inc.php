@@ -17,121 +17,131 @@ import('lib.pkp.classes.controllers.grid.GridHandler');
 
 import('controllers.grid.subscriptions.PaymentsGridCellProvider');
 
-class PaymentsGridHandler extends GridHandler {
-
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-		$this->addRoleAssignment(array(
-			ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER),
-			array('fetchGrid', 'fetchRow', 'viewPayment')
-		);
-	}
-
-
-	//
-	// Implement template methods from PKPHandler.
-	//
-	/**
-	 * @copydoc PKPHandler::authorize()
-	 */
-	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
-		$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
-		return parent::authorize($request, $args, $roleAssignments);
-	}
-
-	/**
-	 * @copydoc GridHandler::initialize()
-	 */
-	function initialize($request, $args = null) {
-		parent::initialize($request, $args);
-
-		// Load user-related translations.
-		AppLocale::requireComponents(
-			LOCALE_COMPONENT_APP_MANAGER,
-			LOCALE_COMPONENT_PKP_MANAGER,
-			LOCALE_COMPONENT_PKP_USER
-		);
-
-		// Grid actions.
-		$router = $request->getRouter();
-
-		//
-		// Grid columns.
-		//
-		$cellProvider = new PaymentsGridCellProvider($request);
-
-		$this->addColumn(
-			new GridColumn(
-				'name',
-				'common.user',
-				null,
-				null,
-				$cellProvider
-			)
-		);
-		$this->addColumn(
-			new GridColumn(
-				'type',
-				'manager.payment.paymentType',
-				null,
-				null,
-				$cellProvider
-			)
-		);
-		$this->addColumn(
-			new GridColumn(
-				'amount',
-				'manager.payment.amount',
-				null,
-				null,
-				$cellProvider
-			)
-		);
-		$this->addColumn(
-			new GridColumn(
-				'timestamp',
-				'manager.payment.timestamp',
-				null,
-				null,
-				$cellProvider
-			)
-		);
-	}
+class PaymentsGridHandler extends GridHandler
+{
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->addRoleAssignment(
+            [
+                ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER],
+            ['fetchGrid', 'fetchRow', 'viewPayment']
+        );
+    }
 
 
-	/**
-	 * @copydoc GridHandler::initFeatures()
-	 */
-	function initFeatures($request, $args) {
-		import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
-		return array(new PagingFeature());
-	}
+    //
+    // Implement template methods from PKPHandler.
+    //
+    /**
+     * @copydoc PKPHandler::authorize()
+     */
+    public function authorize($request, &$args, $roleAssignments)
+    {
+        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
+        $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
+        return parent::authorize($request, $args, $roleAssignments);
+    }
+
+    /**
+     * @copydoc GridHandler::initialize()
+     *
+     * @param null|mixed $args
+     */
+    public function initialize($request, $args = null)
+    {
+        parent::initialize($request, $args);
+
+        // Load user-related translations.
+        AppLocale::requireComponents(
+            LOCALE_COMPONENT_APP_MANAGER,
+            LOCALE_COMPONENT_PKP_MANAGER,
+            LOCALE_COMPONENT_PKP_USER
+        );
+
+        // Grid actions.
+        $router = $request->getRouter();
+
+        //
+        // Grid columns.
+        //
+        $cellProvider = new PaymentsGridCellProvider($request);
+
+        $this->addColumn(
+            new GridColumn(
+                'name',
+                'common.user',
+                null,
+                null,
+                $cellProvider
+            )
+        );
+        $this->addColumn(
+            new GridColumn(
+                'type',
+                'manager.payment.paymentType',
+                null,
+                null,
+                $cellProvider
+            )
+        );
+        $this->addColumn(
+            new GridColumn(
+                'amount',
+                'manager.payment.amount',
+                null,
+                null,
+                $cellProvider
+            )
+        );
+        $this->addColumn(
+            new GridColumn(
+                'timestamp',
+                'manager.payment.timestamp',
+                null,
+                null,
+                $cellProvider
+            )
+        );
+    }
 
 
-	/**
-	 * @copydoc GridHandler::loadData()
-	 */
-	protected function loadData($request, $filter) {
-		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $paymentDao OJSCompletedPaymentDAO */
-		$rangeInfo = $this->getGridRangeInfo($request, $this->getId());
-		return $paymentDao->getByContextId($request->getContext()->getId(), $rangeInfo);
-	}
+    /**
+     * @copydoc GridHandler::initFeatures()
+     */
+    public function initFeatures($request, $args)
+    {
+        import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
+        return [new PagingFeature()];
+    }
 
-	//
-	// Public grid actions.
-	//
-	/**
-	 * View a payment.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function viewPayment($args, $request) {
-		// FIXME
-	}
+
+    /**
+     * @copydoc GridHandler::loadData()
+     */
+    protected function loadData($request, $filter)
+    {
+        $paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $paymentDao OJSCompletedPaymentDAO */
+        $rangeInfo = $this->getGridRangeInfo($request, $this->getId());
+        return $paymentDao->getByContextId($request->getContext()->getId(), $rangeInfo);
+    }
+
+    //
+    // Public grid actions.
+    //
+    /**
+     * View a payment.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     */
+    public function viewPayment($args, $request)
+    {
+        // FIXME
+    }
 }
 
 ?>
