@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-19 12:40+0000\n"
+"PO-Revision-Date: 2021-04-20 16:39+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "gl_ES/>\n"
@@ -87,3 +87,8 @@ msgstr "Envíos activos"
 
 msgid "author.submit"
 msgstr "Novo envío"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Utilice o cadro de comentarios que está abaixo para indicar por que solicita "
+"a exención da cota."
