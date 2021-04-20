@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-15 08:15+0000\n"
-"Last-Translator: Blagoja Grozdanovski <blagoja.grozdanovski@gmail.com>\n"
+"PO-Revision-Date: 2021-04-20 16:39+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -2122,3 +2122,22 @@ msgstr ""
 
 msgid "plugins.importexport.common.missingRequirements"
 msgstr "Барањата за приклучок не се исполнети"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Процесот не успеа да ги парсира отисоците на изданијата"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Експортирајте ги резултатите за изданија"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Не е дефинирано главно лице за контакт за ова списание. Можете да внесете  "
+"главно лице за контакт во <a href=\"{$url}\">поставки на списанието</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Испратете копија од е-поштата за потврда на поднескот до главното лице за "
+"контакт на ова списание."

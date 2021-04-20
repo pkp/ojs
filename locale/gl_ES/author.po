@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-20 16:39+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr ""
+"Teña en conta que pode solicitar a exención da cota de envío para este artigo"
+
+msgid "author.submit.requestWaiver"
+msgstr "Solicitude de exención de cotas"
+
+msgid "author.submit.notAccepting"
+msgstr "Esta revista non acepta envíos neste momento"
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Pode completar este envío máis tarde seleccionando Envíos activos na páxina "
+"de inicio do autor/a."
+
+msgid "author.submit.nextSteps"
+msgstr "Seguintes pasos"
+
+msgid "author.submit.confirmation"
+msgstr "Confirmación do envío"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Cargar os arquivos complementarios"
+
+msgid "author.submit.metadata"
+msgstr "Introducir os metadatos"
+
+msgid "author.submit.upload"
+msgstr "Cargar o envío"
+
+msgid "author.submit.start"
+msgstr "Inicio"
+
+msgid "author.submit.step5"
+msgstr "Paso 5. Confirmar o envío"
+
+msgid "author.submit.step4a"
+msgstr "Paso 4a. Engadir un arquivo complementario"
+
+msgid "author.submit.step4"
+msgstr "Paso 4. Cargar os arquivos complementarios"
+
+msgid "author.submit.step3"
+msgstr "Paso 3. Introducir os metadatos do envío"
+
+msgid "author.submit.step2"
+msgstr "Paso 2. Cargar o envío"
+
+msgid "author.submit.step1"
+msgstr "Paso 1. Iniciar o envío"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Faga clic aquí</a> para ir ao "
+"primeiro dos cinco pasos do proceso de envío."
+
+msgid "author.submit.startHereTitle"
+msgstr "Iniciar un novo envío"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Os cinco pasos para realizar un envío"
+
+msgid "author.submit.submitArticle"
+msgstr "Enviar un artigo"
+
+msgid "author.competingInterests"
+msgstr ""
+"Conflito de intereses <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Política relativa aos conflitos de "
+"intereses</a>"
+
+msgid "author.track"
+msgstr "Envíos activos"
+
+msgid "author.submit"
+msgstr "Novo envío"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Utilice o cadro de comentarios que está abaixo para indicar por que solicita "
+"a exención da cota."

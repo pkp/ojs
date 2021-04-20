@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-05 09:33+0000\n"
+"PO-Revision-Date: 2021-04-12 08:24+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "ka_GE/>\n"
@@ -64,7 +64,7 @@ msgid "admin.settings.redirect"
 msgstr "ჟურნალის გადამისამართება"
 
 msgid "admin.hostedContexts"
-msgstr "ჟურნალები"
+msgstr "განთავსებული ჟურნალები"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "შეხსენება რეცენზენტს"
@@ -124,7 +124,7 @@ msgid "admin.contexts.form.pathRequired"
 msgstr "სავალდებულო მდებარეობა."
 
 msgid "admin.contexts.form.titleRequired"
-msgstr "არასავადებულო სათაური."
+msgstr "სავადებულო სათაური."
 
 msgid "admin.journals.urlWillBe"
 msgstr ""

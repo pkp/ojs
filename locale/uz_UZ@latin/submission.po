@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-31 13:55+0000\n"
+"PO-Revision-Date: 2021-04-19 14:26+0000\n"
 "Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "uz_UZ@latin/>\n"
@@ -49,3 +49,90 @@ msgstr "Annotatsiya {$ wordCount} yoki undan kam so'z bo'lishi kerak."
 
 msgid "grid.action.workflow"
 msgstr "Material yuborish jarayoni"
+
+msgid "submission.incomplete"
+msgstr "Tasdiqlashni kutmoqdaman"
+
+msgid "submission.complete"
+msgstr "Tasdiqlangan"
+
+msgid "submission.upload.fileContents"
+msgstr "Maqola komponenti"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Hikoya uchun metama'lumotlar yangilandi."
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Ko'rib chiqish uchun yuboring"
+
+msgid "workflow.review.externalReview"
+msgstr "Taqriz"
+
+msgid "submission.confirmSubmit"
+msgstr "Ushbu maqolani jurnalga taqdim qilmoqchi ekanligingizga aminmisiz?"
+
+msgid "submission.pageProofs"
+msgstr "Tekshirish"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Ushbu materialga tegishli fayllarni yuklab oling: maqola, ommaviy axborot "
+"vositalari, ma'lumotlar to'plamlari, san'at asarlari va boshqalar."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Sarlavha va izoh"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Ushbu qoralama oshxonaga kiritish uchun ma'qullandi."
+
+msgid "grid.action.approveProof"
+msgstr "Ushbu qoralamani oshxonaga kiritish uchun tasdiqlang."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Maket dizaynerlari nashrga tayyorlanadigan to'liq tayyorlangan fayllarni bu "
+"erga yuklaydi. Dalillarni tekshirish, qayta ko'rib chiqilgan fayllarni "
+"yuklash va nashr etishdan oldin ularni tasdiqlash uchun mualliflarni va "
+"boshqa foydalanuvchilarni aniqlash uchun <em> Auditorni tayinlash </em> dan "
+"foydalaning."
+
+msgid "submission.galleyFiles"
+msgstr "Galley fayllari"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Ushbu oshxonani tayyorlang"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "p> Ushbu zali <em> o'quvchilarga taqdim etilishi </em> mumkin. </p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p> Ushbu oshxona <em> ni endi o'quvchilarga taqdim etish </em> mumkin emas. "
+"</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Formatni tasdiqlash"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Yuborilgan ochiq identifikatorlar yangilandi"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "{$ GalleyFormatName}\" maqolasining paneli endi mavjud emas"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "{$ GalleyFormatName}\" maqolasi mavjud."
+
+msgid "grid.action.issueEntry"
+msgstr "Ushbu material uchun metadata ko'rsating"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Galley nashrda paydo bo'ldi"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Jurnal sizning materialingizni taqdim etganingiz to'g'risida xabar beradi, "
+"yozuvingizni tasdiqlash elektron pochtangizga yuboriladi. Muharrir sizning "
+"materialingizni ko'rib chiqishi bilanoq, biz siz bilan bog'lanamiz."
+
+msgid "submission.issueEntry"
+msgstr "Metadata"

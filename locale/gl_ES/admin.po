@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-16 10:29+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/admin/"
+"gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "As configuracións rexionais marcadas poden estar incompletas."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Seleccione todas as configuracións rexionais que ofrecerá o sitio web. As "
+"configuracións rexionais seleccionadas estarán dispoñibles para todas as "
+"revistas aloxadas no sitio web, e tamén aparecerán nun menú de selección de "
+"idioma en cada páxina do sitio web (pode desactivarse en páxinas concretas "
+"das revistas). Se non se seleccionan diferentes configuracións rexionais, o "
+"menú de selección de idioma non aparecerá e a opción \"configuracións de "
+"idioma\" non estará dispoñible para as revistas."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Este será o idioma predeterminado para o sitio web e para todas as revistas "
+"aloxadas."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Está seguro de que desexa desactivar este idioma? Isto podería afectar a "
+"todas as revistas aloxadas que actualmente o están utilizando."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tA súa instalación de OJS está configurada para rexistrar máis dunha "
+"métrica de uso. As estatísticas de uso mostraranse en diversos contextos. "
+"Nalgúns casos deberase utilizar unha soa estatística  de uso, por exemplo "
+"para mostrar unha listaxe ordenada dos artigos máis consultados ou para "
+"clasificar os resultados dunha busca. Seleccione unha das métricas "
+"configuradas como predeterminada.\n"
+"\t"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"As solicitudes para acceder ao sitio principal redirixiranse a esta revista. "
+"Isto pode ser útil se o sitio web só aloxa unha revista, por exemplo."
+
+msgid "admin.settings.redirect"
+msgstr "Redirixir a revista"
+
+msgid "admin.hostedContexts"
+msgstr "Revistas aloxadas"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Activar a creación de usuarios/as (se é compatible co módulo de "
+"autenticación). Os usuarios/as creados en OJS con esta fonte de "
+"autenticación engadiranse automaticamente á fonte de autenticación remota se "
+"aínda non existían. Incluso, se esta é a fonte de autenticación "
+"predeterminada, as contas de OJS creadas mediante o rexistro de usuario/a "
+"tamén se engadirán á fonte de autenticación remota."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Activar a modificación de contrasinal de usuario/a (se o módulo de "
+"autenticación é compatible). Activar esta opción permite aos usuarios/as "
+"modificar o seu contrasinal desde OJS e usar a función de OJS \"recuperar "
+"contrasinal\" para restablecer o contrasinal esquecido. Os usuarios/as con "
+"esta fonte de autenticación non poderán dispoñer destas funcións se a opción "
+"non está activada."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Activar a sincronización do perfil de usuario/a (se o módulo de "
+"autenticación é compatible). A información do perfil do usuario/a "
+"actualizarase automaticamente desde a fonte remota cando o usuario/a inicie "
+"a sesión. Os cambios que se fagan no perfil dentro de OJS (incluído o cambio "
+"de contrasinal) actualizaranse automaticamente na fonte remota. Se esta "
+"opción non está activada, a información do perfil de OJS manterase separada "
+"da información do perfil da fonte remota."
+
+msgid "admin.auth.ojs"
+msgstr "Base de datos de usuarios/as de OJS"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Seleccione calquera configuración rexional adicional para instalar o seu "
+"soporte neste sistema. Debe instalar as configuracións rexionais antes de "
+"que outras revistas aloxadas poidan utilizalas. Vexa a documentación de OJS "
+"para obter máis información sobre como instalar novos idiomas."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Está seguro/a de que desexa suprimir esta configuración rexional? Isto pode "
+"afectar a calquera revista aloxada que estea utilizando actualmente a dita "
+"configuración rexional."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Seleccione as revistas aloxadas que poden enviar correos electrónicos en "
+"masa. Cando este recurso está activo, o administrador da revista pode enviar "
+"un correo electrónico a todos/as os usuarios/as rexistrados na revista."
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Recordatorio de revisión"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notificación de acceso aberto"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Recordatorio de caducidade da subscrición"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Non se deu de alta ningún usuario/a."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Está seguro/a de que desexa fusionar a conta/s seleccionada/s "
+"{$oldAccountCount} coa conta co nome de usuario/a \"{$newUsername}\"? As "
+"contas seleccionadas {$oldAccountCount} deixarán de existir. Esta acción é "
+"irreversible."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Todos os usuarios/as dados de alta"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Seleccione un (ou máis dun) usuario/a para fusionalo con outra conta de "
+"usuario/a (p. ex. cando algún usuario/a ten dúas contas distintas). A conta "
+"seleccionada en primeiro lugar será eliminada e todos os envíos, asignacións "
+"etc., se atribuirán á segunda conta."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Seleccione o usuario/a ao que lle queira asignar as autorías do anterior, os "
+"encargos de edición etc."
+
+msgid "admin.mergeUsers"
+msgstr "Fusionar os usuarios/as"
+
+msgid "admin.journals.importErrors"
+msgstr "Non se completou a importación correctamente"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Requírese a ruta de importación."
+
+msgid "admin.journals.redirect"
+msgstr "Xerar o código para asignar enderezos URL OJS 1 a URL OJS 2"
+
+msgid "admin.journals.transcode"
+msgstr "Transcodificar metadatos de artigos de ISO8859-1"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importar subscricións"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Ruta existente ou ruta que se quere crear (p. ex., «ojs»)."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descrición da revista"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Permitir o acceso libre a esta revista no sitio web"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "O idioma principal debe ser compatible cos idiomas da revista."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Xa hai outra revista que utiliza a ruta seleccionada."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"A ruta só pode conter caracteres alfanuméricos, guións e guións baixos, e "
+"ten que empezar e acabar cun carácter alfanumérico."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Introduza unha ruta."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Cómpre poñer un título."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Introduza unha palabra curta ou un acrónimo que identifique a revista. O URL "
+"da revista será: {$sampleUrl}."
+
+msgid "admin.contexts.create"
+msgstr "Crear unha revista"
+
+msgid "admin.journals.noneCreated"
+msgstr "Non se creou ningunha revista."
+
+msgid "admin.journals.journalSettings"
+msgstr "Configuración da revista"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Asignaráselle  automaticamente o rol de director/a da revista. Tras crear "
+"unha revista nova, acceda a ela como director/a para continuar coa "
+"configuración e o rexistro de usuarios/as."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Configuración de OJS de <tt>config.inc.php</tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "Configuración de OJS"
+
+msgid "admin.systemVersion"
+msgstr "Versión de OJS"
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"A función de correo electrónico foi desactivada para esta revista. Active a "
+"función en <a href=\"{$siteSettingsUrl}\">Administración > Configuracións do "
+"Site</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Un director de revista non poderá enviar correos electrónicos en masa a "
+"todos os roles seleccionados abaixo. Utilice esta configuración para limitar "
+"os abusos da función de notification de correo. Por exemplo, quizais sexa "
+"máis seguro desactivar o envío de correos electrónicos para os lectores, "
+"autores ou outros grandes grupos de usuarios/as que non deron o seu "
+"consentimento para recibir este tipo de correos.<br><br>A función para "
+"enviar correos electrónicos en masa pode desactivarse completamente para "
+"esta revista en <a href=\"{$siteSettingsUrl}\">Administración > "
+"Configuracións do Site</a>."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Fusionar o usuario/a"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-04 11:25+0000\n"
+"PO-Revision-Date: 2021-04-16 05:57+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ja_JP/>\n"
@@ -102,7 +102,7 @@ msgid "submission.citationFormat.notFound"
 msgstr "要求された引用形式は検索できません。"
 
 msgid "submission.submit.form.contributorRoleRequired"
-msgstr "協力者の役割を選択してください。"
+msgstr "寄稿者の役割を選択してください。"
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr "要旨が長すぎます。このセクションで示されている制限語数以下に短縮してください。"
@@ -120,7 +120,7 @@ msgid "submission.submit.form.authorRequired"
 msgstr "著者は最低1名必要です。"
 
 msgid "submission.submit.contributorRole"
-msgstr "協力者の役割"
+msgstr "寄稿者の役割"
 
 msgid "submission.submit.privacyStatement"
 msgstr "個人情報保護方針"
@@ -172,7 +172,7 @@ msgstr "ガレ刷りのために、この校正を承認する。"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
-"レイアウト編集者は、出版のために準備された制作準備済みのファイルをここにアップロードします。「監査役の選任」を使用して、出版前に承認のためにアップロードさ"
+"レイアウト編集者は、出版のために準備された制作準備済みのファイルをここにアップロードします。「監査役の任命」を使用して、出版前に承認のためにアップロードさ"
 "れた改訂済みのファイルを使って、著者やその他の人がガレ刷りの校正を行うように指定します。"
 
 msgid "submission.galleyFiles"
@@ -218,7 +218,7 @@ msgid "submission.abstract.wordCount.description"
 msgstr "概要は{$wordCount}語以内でなければなりません。"
 
 msgid "grid.action.workflow"
-msgstr "投稿の流れ"
+msgstr "投稿ワークフロー"
 
 msgid "submission.submit.newSubmissionSingle"
 msgstr "新投稿"
@@ -315,3 +315,9 @@ msgstr "これが号に掲載されると著作権年が自動的に設定され
 
 msgid "submission.publications"
 msgstr "公開物"
+
+msgid "publication.changeIssue"
+msgstr "巻号を変更"
+
+msgid "publication.assignedToIssue"
+msgstr "これは <a href=\"{$issueUrl}\">{$issueName}</a> に割り当てられていますが、公開が予定されていません。"
