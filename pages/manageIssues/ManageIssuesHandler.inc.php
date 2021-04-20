@@ -15,51 +15,55 @@
 
 import('classes.handler.Handler');
 
-class ManageIssuesHandler extends Handler {
-	/** issue associated with the request **/
-	var $issue;
+class ManageIssuesHandler extends Handler
+{
+    /** issue associated with the request **/
+    public $issue;
 
-	/** @copydoc PKPHandler::_isBackendPage */
-	var $_isBackendPage = true;
+    /** @copydoc PKPHandler::_isBackendPage */
+    public $_isBackendPage = true;
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-		$this->addRoleAssignment(
-			array(ROLE_ID_MANAGER),
-			array(
-				'index',
-			)
-		);
-	}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->addRoleAssignment(
+            [ROLE_ID_MANAGER],
+            [
+                'index',
+            ]
+        );
+    }
 
-	/**
-	 * @copydoc PKPHandler::authorize()
-	 */
-	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
-		$this->addPolicy(new PKPSiteAccessPolicy($request, null, $roleAssignments));
-		return parent::authorize($request, $args, $roleAssignments);
-	}
+    /**
+     * @copydoc PKPHandler::authorize()
+     */
+    public function authorize($request, &$args, $roleAssignments)
+    {
+        import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
+        $this->addPolicy(new PKPSiteAccessPolicy($request, null, $roleAssignments));
+        return parent::authorize($request, $args, $roleAssignments);
+    }
 
-	/**
-	 * Displays the issue listings in a tabbed interface.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return string Response contents.
-	 */
-	function index($args, $request) {
-		$this->setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
+    /**
+     * Displays the issue listings in a tabbed interface.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return string Response contents.
+     */
+    public function index($args, $request)
+    {
+        $this->setupTemplate($request);
+        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
 
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign([
-			'pageTitle' => __('editor.navigation.issues')
-		]);
-		return $templateMgr->display('manageIssues/issues.tpl');
-	}
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign([
+            'pageTitle' => __('editor.navigation.issues')
+        ]);
+        return $templateMgr->display('manageIssues/issues.tpl');
+    }
 }
-
-

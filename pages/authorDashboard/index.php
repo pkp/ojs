@@ -18,14 +18,12 @@
 
 
 switch ($op) {
-	//
-	// Author Dashboard
-	//
-	case 'submission':
-	case 'readSubmissionEmail':
-	case 'reviewRoundInfo':
-		import('pages.authorDashboard.AuthorDashboardHandler');
-		define('HANDLER_CLASS', 'AuthorDashboardHandler');
+    //
+    // Author Dashboard
+    //
+    case 'submission':
+    case 'readSubmissionEmail':
+    case 'reviewRoundInfo':
+        import('pages.authorDashboard.AuthorDashboardHandler');
+        define('HANDLER_CLASS', 'AuthorDashboardHandler');
 }
-
-

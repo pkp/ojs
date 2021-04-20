@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_generic_webFeed Web Feed Plugin
  */
- 
+
 /**
  * @file plugins/generic/webFeed/index.php
  *
@@ -18,4 +18,4 @@
 
 require_once('WebFeedPlugin.inc.php');
 
-return new WebFeedPlugin(); 
+return new WebFeedPlugin();

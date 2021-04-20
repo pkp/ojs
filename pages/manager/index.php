@@ -17,44 +17,42 @@
  */
 
 switch ($op) {
-	//
-	// Subscription Policies
-	//
-	case 'subscriptionPolicies':
-	case 'saveSubscriptionPolicies':
-	//
-	// Subscription Types
-	//
-	case 'subscriptionTypes':
-	case 'deleteSubscriptionType':
-	case 'createSubscriptionType':
-	case 'selectSubscriber':
-	case 'editSubscriptionType':
-	case 'updateSubscriptionType':
-	case 'moveSubscriptionType':
-	//
-	// Subscriptions
-	//
-	case 'subscriptions':
-	case 'subscriptionsSummary':
-	case 'deleteSubscription':
-	case 'renewSubscription':
-	case 'createSubscription':
-	case 'editSubscription':
-	case 'updateSubscription':
-		define('HANDLER_CLASS', 'SubscriptionHandler');
-		import('pages.manager.SubscriptionHandler');
-		break;
-	//
-	// Payment
-	//
-	case 'payments':
-	case 'savePaymentSettings':
-	case 'viewPayments':
-	case 'viewPayment':
-		define('HANDLER_CLASS', 'ManagerPaymentHandler');
-		import('pages.manager.ManagerPaymentHandler');
-		break;
+    //
+    // Subscription Policies
+    //
+    case 'subscriptionPolicies':
+    case 'saveSubscriptionPolicies':
+    //
+    // Subscription Types
+    //
+    case 'subscriptionTypes':
+    case 'deleteSubscriptionType':
+    case 'createSubscriptionType':
+    case 'selectSubscriber':
+    case 'editSubscriptionType':
+    case 'updateSubscriptionType':
+    case 'moveSubscriptionType':
+    //
+    // Subscriptions
+    //
+    case 'subscriptions':
+    case 'subscriptionsSummary':
+    case 'deleteSubscription':
+    case 'renewSubscription':
+    case 'createSubscription':
+    case 'editSubscription':
+    case 'updateSubscription':
+        define('HANDLER_CLASS', 'SubscriptionHandler');
+        import('pages.manager.SubscriptionHandler');
+        break;
+    //
+    // Payment
+    //
+    case 'payments':
+    case 'savePaymentSettings':
+    case 'viewPayments':
+    case 'viewPayment':
+        define('HANDLER_CLASS', 'ManagerPaymentHandler');
+        import('pages.manager.ManagerPaymentHandler');
+        break;
 }
-
-

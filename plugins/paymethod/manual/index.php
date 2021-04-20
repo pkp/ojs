@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_paymethod_manual Manual Payment Processing Plugin
  */
- 
+
 /**
  * @file plugins/paymethod/manual/index.php
  *
@@ -18,5 +18,3 @@
 require_once('ManualPaymentPlugin.inc.php');
 
 return new ManualPaymentPlugin();
-
-

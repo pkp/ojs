@@ -13,375 +13,405 @@
  * @brief Handle requests for issue functions.
  */
 
-import ('classes.issue.IssueAction');
+import('classes.issue.IssueAction');
 import('classes.handler.Handler');
 
-class IssueHandler extends Handler {
-	/** @var IssueGalley retrieved issue galley */
-	var $_galley = null;
+class IssueHandler extends Handler
+{
+    /** @var IssueGalley retrieved issue galley */
+    public $_galley = null;
 
 
-	/**
-	 * @copydoc PKPHandler::authorize()
-	 */
-	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
-		$this->addPolicy(new ContextRequiredPolicy($request));
+    /**
+     * @copydoc PKPHandler::authorize()
+     */
+    public function authorize($request, &$args, $roleAssignments)
+    {
+        import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
+        $this->addPolicy(new ContextRequiredPolicy($request));
 
-		import('classes.security.authorization.OjsJournalMustPublishPolicy');
-		$this->addPolicy(new OjsJournalMustPublishPolicy($request));
+        import('classes.security.authorization.OjsJournalMustPublishPolicy');
+        $this->addPolicy(new OjsJournalMustPublishPolicy($request));
 
-		import('classes.security.authorization.OjsIssueRequiredPolicy');
-		// the 'archives' op does not need this policy so it is left out of the operations array.
-		$this->addPolicy(new OjsIssueRequiredPolicy($request, $args, array('view', 'download')));
+        import('classes.security.authorization.OjsIssueRequiredPolicy');
+        // the 'archives' op does not need this policy so it is left out of the operations array.
+        $this->addPolicy(new OjsIssueRequiredPolicy($request, $args, ['view', 'download']));
 
-		return parent::authorize($request, $args, $roleAssignments);
-	}
+        return parent::authorize($request, $args, $roleAssignments);
+    }
 
-	/**
-	 * @see PKPHandler::initialize()
-	 * @param $args array Arguments list
-	 */
-	function initialize($request, $args = array()) {
-		// Get the issue galley
-		$galleyId = isset($args[1]) ? $args[1] : 0;
-		if ($galleyId) {
-			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-			$galleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $galleyDao IssueGalleyDAO */
-			$journal = $request->getJournal();
-			$galley = $galleyDao->getByBestId($galleyId, $issue->getId());
+    /**
+     * @see PKPHandler::initialize()
+     *
+     * @param $args array Arguments list
+     */
+    public function initialize($request, $args = [])
+    {
+        // Get the issue galley
+        $galleyId = $args[1] ?? 0;
+        if ($galleyId) {
+            $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+            $galleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $galleyDao IssueGalleyDAO */
+            $journal = $request->getJournal();
+            $galley = $galleyDao->getByBestId($galleyId, $issue->getId());
 
-			// Invalid galley id, redirect to issue page
-			if (!$galley) $request->redirect(null, null, 'view', $issue->getId());
+            // Invalid galley id, redirect to issue page
+            if (!$galley) {
+                $request->redirect(null, null, 'view', $issue->getId());
+            }
 
-			$this->setGalley($galley);
-		}
-	}
+            $this->setGalley($galley);
+        }
+    }
 
-	/**
-	 * Display about index page.
-	 */
-	function index($args, $request) {
-		$this->current($args, $request);
-	}
+    /**
+     * Display about index page.
+     */
+    public function index($args, $request)
+    {
+        $this->current($args, $request);
+    }
 
-	/**
-	 * Display current issue page.
-	 */
-	function current($args, $request) {
-		$journal = $request->getJournal();
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issue = $issueDao->getCurrent($journal->getId(), true);
+    /**
+     * Display current issue page.
+     */
+    public function current($args, $request)
+    {
+        $journal = $request->getJournal();
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+        $issue = $issueDao->getCurrent($journal->getId(), true);
 
-		if ($issue != null) {
-			$request->redirect(null, 'issue', 'view', $issue->getBestIssueId());
-		}
+        if ($issue != null) {
+            $request->redirect(null, 'issue', 'view', $issue->getBestIssueId());
+        }
 
-		$this->setupTemplate($request);
-		$templateMgr = TemplateManager::getManager($request);
-		// consider public identifiers
-		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
-		$templateMgr->display('frontend/pages/issue.tpl');
-	}
+        $this->setupTemplate($request);
+        $templateMgr = TemplateManager::getManager($request);
+        // consider public identifiers
+        $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+        $templateMgr->assign('pubIdPlugins', $pubIdPlugins);
+        $templateMgr->display('frontend/pages/issue.tpl');
+    }
 
-	/**
-	 * View an issue.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function view($args, $request) {
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$this->setupTemplate($request);
-		$templateMgr = TemplateManager::getManager($request);
-		$journal = $request->getJournal();
+    /**
+     * View an issue.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     */
+    public function view($args, $request)
+    {
+        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $this->setupTemplate($request);
+        $templateMgr = TemplateManager::getManager($request);
+        $journal = $request->getJournal();
 
-		if (($galley = $this->getGalley()) && $this->userCanViewGalley($request)) {
-			if (!HookRegistry::call('IssueHandler::view::galley', array(&$request, &$issue, &$galley))) {
-				$request->redirect(null, null, 'download', array($issue->getBestIssueId($journal), $galley->getBestGalleyId($journal)));
-			}
-		} else {
-			self::_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);
-			$templateMgr->assign('issueId', $issue->getBestIssueId());
+        if (($galley = $this->getGalley()) && $this->userCanViewGalley($request)) {
+            if (!HookRegistry::call('IssueHandler::view::galley', [&$request, &$issue, &$galley])) {
+                $request->redirect(null, null, 'download', [$issue->getBestIssueId($journal), $galley->getBestGalleyId($journal)]);
+            }
+        } else {
+            self::_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);
+            $templateMgr->assign('issueId', $issue->getBestIssueId());
 
-			// consider public identifiers
-			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-			$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
-			$templateMgr->display('frontend/pages/issue.tpl');
-		}
-	}
+            // consider public identifiers
+            $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+            $templateMgr->assign('pubIdPlugins', $pubIdPlugins);
+            $templateMgr->display('frontend/pages/issue.tpl');
+        }
+    }
 
-	/**
-	 * Display the issue archive listings
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function archive($args, $request) {
-		$this->setupTemplate($request);
-		$page = isset($args[0]) ? (int) $args[0] : 1;
-		$templateMgr = TemplateManager::getManager($request);
-		$context = $request->getContext();
+    /**
+     * Display the issue archive listings
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     */
+    public function archive($args, $request)
+    {
+        $this->setupTemplate($request);
+        $page = isset($args[0]) ? (int) $args[0] : 1;
+        $templateMgr = TemplateManager::getManager($request);
+        $context = $request->getContext();
 
-		$count = $context->getData('itemsPerPage') ? $context->getData('itemsPerPage') : Config::getVar('interface', 'items_per_page');
-		$offset = $page > 1 ? ($page - 1) * $count : 0;
+        $count = $context->getData('itemsPerPage') ? $context->getData('itemsPerPage') : Config::getVar('interface', 'items_per_page');
+        $offset = $page > 1 ? ($page - 1) * $count : 0;
 
-		$params = array(
-			'contextId' => $context->getId(),
-			'orderBy' => 'seq',
-			'orderDirection' => 'ASC',
-			'count' => $count,
-			'offset' => $offset,
-			'isPublished' => true,
-		);
-		$issues = iterator_to_array(Services::get('issue')->getMany($params));
-		$total = Services::get('issue')->getMax($params);
+        $params = [
+            'contextId' => $context->getId(),
+            'orderBy' => 'seq',
+            'orderDirection' => 'ASC',
+            'count' => $count,
+            'offset' => $offset,
+            'isPublished' => true,
+        ];
+        $issues = iterator_to_array(Services::get('issue')->getMany($params));
+        $total = Services::get('issue')->getMax($params);
 
-		$showingStart = $offset + 1;
-		$showingEnd = min($offset + $count, $offset + count($issues));
-		$nextPage = $total > $showingEnd ? $page + 1 : null;
-		$prevPage = $showingStart > 1 ? $page - 1 : null;
+        $showingStart = $offset + 1;
+        $showingEnd = min($offset + $count, $offset + count($issues));
+        $nextPage = $total > $showingEnd ? $page + 1 : null;
+        $prevPage = $showingStart > 1 ? $page - 1 : null;
 
-		$templateMgr->assign(array(
-			'issues' => $issues,
-			'showingStart' => $showingStart,
-			'showingEnd' => $showingEnd,
-			'total' => $total,
-			'nextPage' => $nextPage,
-			'prevPage' => $prevPage,
-		));
+        $templateMgr->assign([
+            'issues' => $issues,
+            'showingStart' => $showingStart,
+            'showingEnd' => $showingEnd,
+            'total' => $total,
+            'nextPage' => $nextPage,
+            'prevPage' => $prevPage,
+        ]);
 
-		$templateMgr->display('frontend/pages/issueArchive.tpl');
-	}
+        $templateMgr->display('frontend/pages/issueArchive.tpl');
+    }
 
-	/**
-	 * Downloads an issue galley file
-	 * @param $args array ($issueId, $galleyId)
-	 * @param $request Request
-	 */
-	function download($args, $request) {
-		if ($this->userCanViewGalley($request)) {
-			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-			$galley = $this->getGalley();
+    /**
+     * Downloads an issue galley file
+     *
+     * @param $args array ($issueId, $galleyId)
+     * @param $request Request
+     */
+    public function download($args, $request)
+    {
+        if ($this->userCanViewGalley($request)) {
+            $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+            $galley = $this->getGalley();
 
-			if (!HookRegistry::call('IssueHandler::download', array(&$issue, &$galley))) {
-				import('classes.file.IssueFileManager');
-				$issueFileManager = new IssueFileManager($issue->getId());
-				return $issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline')?true:false);
-			}
-		}
-	}
+            if (!HookRegistry::call('IssueHandler::download', [&$issue, &$galley])) {
+                import('classes.file.IssueFileManager');
+                $issueFileManager = new IssueFileManager($issue->getId());
+                return $issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline') ? true : false);
+            }
+        }
+    }
 
-	/**
-	 * Get the retrieved issue galley
-	 * @return IssueGalley
-	 */
-	function getGalley() {
-		return $this->_galley;
-	}
+    /**
+     * Get the retrieved issue galley
+     *
+     * @return IssueGalley
+     */
+    public function getGalley()
+    {
+        return $this->_galley;
+    }
 
-	/**
-	 * Set a retrieved issue galley
-	 * @param $galley IssueGalley
-	 */
-	function setGalley($galley) {
-		$this->_galley = $galley;
-	}
+    /**
+     * Set a retrieved issue galley
+     *
+     * @param $galley IssueGalley
+     */
+    public function setGalley($galley)
+    {
+        $this->_galley = $galley;
+    }
 
-	/**
-	 * Determines whether or not a user can view an issue galley.
-	 * @param $request Request
-	 */
-	function userCanViewGalley($request) {
+    /**
+     * Determines whether or not a user can view an issue galley.
+     *
+     * @param $request Request
+     */
+    public function userCanViewGalley($request)
+    {
+        import('classes.issue.IssueAction');
+        $issueAction = new IssueAction();
 
-		import('classes.issue.IssueAction');
-		$issueAction = new IssueAction();
+        $journal = $request->getJournal();
+        $user = $request->getUser();
+        $userId = $user ? $user->getId() : 0;
+        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $galley = $this->getGalley();
 
-		$journal = $request->getJournal();
-		$user = $request->getUser();
-		$userId = $user ? $user->getId() : 0;
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$galley = $this->getGalley();
+        // If this is an editorial user who can view unpublished issue galleys,
+        // bypass further validation
+        if ($issueAction->allowedIssuePrePublicationAccess($journal, $user)) {
+            return true;
+        }
 
-		// If this is an editorial user who can view unpublished issue galleys,
-		// bypass further validation
-		if ($issueAction->allowedIssuePrePublicationAccess($journal, $user)) return true;
+        // Ensure reader has rights to view the issue galley
+        if ($issue->getPublished()) {
+            $subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
+            $isSubscribedDomain = $issueAction->subscribedDomain($request, $journal, $issue->getId());
 
-		// Ensure reader has rights to view the issue galley
-		if ($issue->getPublished()) {
-			$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
-			$isSubscribedDomain = $issueAction->subscribedDomain($request, $journal, $issue->getId());
+            // Check if login is required for viewing.
+            if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getData('restrictArticleAccess')) {
+                Validation::redirectLogin();
+            }
 
-			// Check if login is required for viewing.
-			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getData('restrictArticleAccess')) {
-				Validation::redirectLogin();
-			}
+            // If no domain/ip subscription, check if user has a valid subscription
+            // or if the user has previously purchased the issue
+            if (!$isSubscribedDomain && $subscriptionRequired) {
+                // Check if user has a valid subscription
+                $subscribedUser = $issueAction->subscribedUser($user, $journal, $issue->getId());
+                if (!$subscribedUser) {
+                    // Check if payments are enabled,
+                    $paymentManager = Application::getPaymentManager($journal);
 
-			// If no domain/ip subscription, check if user has a valid subscription
-			// or if the user has previously purchased the issue
-			if (!$isSubscribedDomain && $subscriptionRequired) {
-				// Check if user has a valid subscription
-				$subscribedUser = $issueAction->subscribedUser($user, $journal, $issue->getId());
-				if (!$subscribedUser) {
-					// Check if payments are enabled,
-					$paymentManager = Application::getPaymentManager($journal);
+                    if ($paymentManager->purchaseIssueEnabled() || $paymentManager->membershipEnabled()) {
+                        // If only pdf files are being restricted, then approve all non-pdf galleys
+                        // and continue checking if it is a pdf galley
+                        if ($paymentManager->onlyPdfEnabled() && !$galley->isPdfGalley()) {
+                            return true;
+                        }
 
-					if ($paymentManager->purchaseIssueEnabled() || $paymentManager->membershipEnabled() ) {
-						// If only pdf files are being restricted, then approve all non-pdf galleys
-						// and continue checking if it is a pdf galley
-						if ($paymentManager->onlyPdfEnabled() && !$galley->isPdfGalley()) return true;
+                        if (!Validation::isLoggedIn()) {
+                            Validation::redirectLogin('payment.loginRequired.forIssue');
+                        }
 
-						if (!Validation::isLoggedIn()) {
-							Validation::redirectLogin("payment.loginRequired.forIssue");
-						}
+                        // If the issue galley has been purchased, then allow reader access
+                        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+                        $dateEndMembership = $user->getSetting('dateEndMembership', 0);
+                        if ($completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId()) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
+                            return true;
+                        } else {
+                            // Otherwise queue an issue purchase payment and display payment form
+                            $queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getData('purchaseIssueFee'));
+                            $paymentManager->queuePayment($queuedPayment);
 
-						// If the issue galley has been purchased, then allow reader access
-						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
-						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
-						if ($completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId()) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
-							return true;
-						} else {
-							// Otherwise queue an issue purchase payment and display payment form
-							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getData('purchaseIssueFee'));
-							$paymentManager->queuePayment($queuedPayment);
+                            $paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+                            $paymentForm->display($request);
+                            exit;
+                        }
+                    }
 
-							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
-							$paymentForm->display($request);
-							exit;
-						}
-					}
+                    if (!Validation::isLoggedIn()) {
+                        Validation::redirectLogin('reader.subscriptionRequiredLoginText');
+                    }
+                    $request->redirect(null, 'about', 'subscriptions');
+                }
+            }
+        } else {
+            $request->redirect(null, 'index');
+        }
+        return true;
+    }
 
-					if (!Validation::isLoggedIn()) {
-						Validation::redirectLogin("reader.subscriptionRequiredLoginText");
-					}
-					$request->redirect(null, 'about', 'subscriptions');
-				}
-			}
-		} else {
-			$request->redirect(null, 'index');
-		}
-		return true;
-	}
+    public function setupTemplate($request)
+    {
+        parent::setupTemplate($request);
+        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_APP_EDITOR);
+    }
 
-	function setupTemplate($request) {
-		parent::setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_APP_EDITOR);
-	}
+    /**
+     * Given an issue, set up the template with all the required variables for
+     * frontend/objects/issue_toc.tpl to function properly (i.e. current issue
+     * and view issue).
+     *
+     * @param $issue object The issue to display
+     * @param $showToc boolean iff false and a custom cover page exists,
+     * 	the cover page will be displayed. Otherwise table of contents
+     * 	will be displayed.
+     */
+    public static function _setupIssueTemplate($request, $issue, $showToc = false)
+    {
+        $journal = $request->getJournal();
+        $user = $request->getUser();
+        $templateMgr = TemplateManager::getManager($request);
 
-	/**
-	 * Given an issue, set up the template with all the required variables for
-	 * frontend/objects/issue_toc.tpl to function properly (i.e. current issue
-	 * and view issue).
-	 * @param $issue object The issue to display
-	 * @param $showToc boolean iff false and a custom cover page exists,
-	 * 	the cover page will be displayed. Otherwise table of contents
-	 * 	will be displayed.
-	 */
-	static function _setupIssueTemplate($request, $issue, $showToc = false) {
-		$journal = $request->getJournal();
-		$user = $request->getUser();
-		$templateMgr = TemplateManager::getManager($request);
+        // Determine pre-publication access
+        // FIXME: Do that. (Bug #8278)
 
-		// Determine pre-publication access
-		// FIXME: Do that. (Bug #8278)
+        $templateMgr->assign([
+            'issueIdentification' => $issue->getIssueIdentification(),
+            'issueTitle' => $issue->getLocalizedTitle(),
+            'issueSeries' => $issue->getIssueIdentification(['showTitle' => false]),
+        ]);
 
-		$templateMgr->assign(array(
-			'issueIdentification' => $issue->getIssueIdentification(),
-			'issueTitle' => $issue->getLocalizedTitle(),
-			'issueSeries' => $issue->getIssueIdentification(array('showTitle' => false)),
-		));
+        $locale = AppLocale::getLocale();
 
-		$locale = AppLocale::getLocale();
+        $templateMgr->assign([
+            'locale' => $locale,
+        ]);
 
-		$templateMgr->assign(array(
-			'locale' => $locale,
-		));
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
 
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
+        $primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
+        $primaryGenreIds = array_map(function ($genre) {
+            return $genre->getId();
+        }, $primaryGenres);
 
-		$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
-		$primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
-		$primaryGenreIds = array_map(function($genre) {
-			return $genre->getId();
-		}, $primaryGenres);
+        // Show scheduled submissions if this is a preview
+        import('classes.submission.Submission'); // import STATUS_ constants
+        $allowedStatuses = [STATUS_PUBLISHED];
+        if (!$issue->getPublished()) {
+            $allowedStatuses[] = STATUS_SCHEDULED;
+        }
 
-		// Show scheduled submissions if this is a preview
-		import('classes.submission.Submission'); // import STATUS_ constants
-		$allowedStatuses = [STATUS_PUBLISHED];
-		if (!$issue->getPublished()) {
-			$allowedStatuses[] = STATUS_SCHEDULED;
-		}
+        $issueSubmissions = iterator_to_array(Services::get('submission')->getMany([
+            'contextId' => $journal->getId(),
+            'issueIds' => [$issue->getId()],
+            'status' => $allowedStatuses,
+            'orderBy' => 'seq',
+            'orderDirection' => 'ASC',
+        ]));
 
-		$issueSubmissions = iterator_to_array(Services::get('submission')->getMany([
-			'contextId' => $journal->getId(),
-			'issueIds' => [$issue->getId()],
-			'status' => $allowedStatuses,
-			'orderBy' => 'seq',
-			'orderDirection' => 'ASC',
-		]));
+        $sections = Application::get()->getSectionDao()->getByIssueId($issue->getId());
+        $issueSubmissionsInSection = [];
+        foreach ($sections as $section) {
+            $issueSubmissionsInSection[$section->getId()] = [
+                'title' => $section->getHideTitle() ? null : $section->getLocalizedTitle(),
+                'hideAuthor' => $section->getHideAuthor(),
+                'articles' => [],
+            ];
+        }
+        foreach ($issueSubmissions as $submission) {
+            if (!$sectionId = $submission->getCurrentPublication()->getData('sectionId')) {
+                continue;
+            }
+            $issueSubmissionsInSection[$sectionId]['articles'][] = $submission;
+        }
 
-		$sections = Application::get()->getSectionDao()->getByIssueId($issue->getId());
-		$issueSubmissionsInSection = [];
-		foreach ($sections as $section) {
-			$issueSubmissionsInSection[$section->getId()] = [
-				'title' => $section->getHideTitle()?null:$section->getLocalizedTitle(),
-				'hideAuthor' => $section->getHideAuthor(),
-				'articles' => [],
-			];
-		}
-		foreach ($issueSubmissions as $submission) {
-			if (!$sectionId = $submission->getCurrentPublication()->getData('sectionId')) {
-				continue;
-			}
-			$issueSubmissionsInSection[$sectionId]['articles'][] = $submission;
-		}
+        $templateMgr->assign([
+            'issue' => $issue,
+            'issueGalleys' => $issueGalleyDao->getByIssueId($issue->getId()),
+            'publishedSubmissions' => $issueSubmissionsInSection,
+            'primaryGenreIds' => $primaryGenreIds,
+        ]);
 
-		$templateMgr->assign(array(
-			'issue' => $issue,
-			'issueGalleys' => $issueGalleyDao->getByIssueId($issue->getId()),
-			'publishedSubmissions' => $issueSubmissionsInSection,
-			'primaryGenreIds' => $primaryGenreIds,
-		));
+        // Subscription Access
+        import('classes.issue.IssueAction');
+        $issueAction = new IssueAction();
+        $subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
+        $subscribedUser = $issueAction->subscribedUser($user, $journal);
+        $subscribedDomain = $issueAction->subscribedDomain($request, $journal);
 
-		// Subscription Access
-		import('classes.issue.IssueAction');
-		$issueAction = new IssueAction();
-		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
-		$subscribedUser = $issueAction->subscribedUser($user, $journal);
-		$subscribedDomain = $issueAction->subscribedDomain($request, $journal);
+        if ($subscriptionRequired && !$subscribedUser && !$subscribedDomain) {
+            $templateMgr->assign('subscriptionExpiryPartial', true);
 
-		if ($subscriptionRequired && !$subscribedUser && !$subscribedDomain) {
-			$templateMgr->assign('subscriptionExpiryPartial', true);
+            // Partial subscription expiry for issue
+            $partial = $issueAction->subscribedUser($user, $journal, $issue->getId());
+            if (!$partial) {
+                $issueAction->subscribedDomain($request, $journal, $issue->getId());
+            }
+            $templateMgr->assign('issueExpiryPartial', $partial);
 
-			// Partial subscription expiry for issue
-			$partial = $issueAction->subscribedUser($user, $journal, $issue->getId());
-			if (!$partial) $issueAction->subscribedDomain($request, $journal, $issue->getId());
-			$templateMgr->assign('issueExpiryPartial', $partial);
+            // Partial subscription expiry for articles
+            $articleExpiryPartial = [];
+            foreach ($issueSubmissions as $issueSubmission) {
+                $partial = $issueAction->subscribedUser($user, $journal, $issue->getId(), $issueSubmission->getId());
+                if (!$partial) {
+                    $issueAction->subscribedDomain($request, $journal, $issue->getId(), $issueSubmission->getId());
+                }
+                $articleExpiryPartial[$issueSubmission->getId()] = $partial;
+            }
+            $templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
+        }
 
-			// Partial subscription expiry for articles
-			$articleExpiryPartial = array();
-			foreach ($issueSubmissions as $issueSubmission) {
-				$partial = $issueAction->subscribedUser($user, $journal, $issue->getId(), $issueSubmission->getId());
-				if (!$partial) $issueAction->subscribedDomain($request, $journal, $issue->getId(), $issueSubmission->getId());
-				$articleExpiryPartial[$issueSubmission->getId()] = $partial;
-			}
-			$templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
-		}
+        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+        $templateMgr->assign([
+            'hasAccess' => !$subscriptionRequired ||
+                $issue->getAccessStatus() == ISSUE_ACCESS_OPEN ||
+                $subscribedUser || $subscribedDomain ||
+                ($user && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId()))
+        ]);
 
-		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
-		$templateMgr->assign(array(
-			'hasAccess' => !$subscriptionRequired ||
-				$issue->getAccessStatus() == ISSUE_ACCESS_OPEN ||
-				$subscribedUser || $subscribedDomain ||
-				($user && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId()))
-		));
-
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = Application::getPaymentManager($journal);
-		if ( $paymentManager->onlyPdfEnabled() ) {
-			$templateMgr->assign('restrictOnlyPdf', true);
-		}
-		if ( $paymentManager->purchaseArticleEnabled() ) {
-			$templateMgr->assign('purchaseArticleEnabled', true);
-		}
-	}
+        import('classes.payment.ojs.OJSPaymentManager');
+        $paymentManager = Application::getPaymentManager($journal);
+        if ($paymentManager->onlyPdfEnabled()) {
+            $templateMgr->assign('restrictOnlyPdf', true);
+        }
+        if ($paymentManager->purchaseArticleEnabled()) {
+            $templateMgr->assign('purchaseArticleEnabled', true);
+        }
+    }
 }

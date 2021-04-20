@@ -16,76 +16,86 @@
 
 import('lib.pkp.classes.plugins.BlockPlugin');
 
-class SubscriptionBlockPlugin extends BlockPlugin {
-	/**
-	 * Install default settings on journal creation.
-	 * @return string
-	 */
-	function getContextSpecificPluginSettingsFile() {
-		return $this->getPluginPath() . '/settings.xml';
-	}
+class SubscriptionBlockPlugin extends BlockPlugin
+{
+    /**
+     * Install default settings on journal creation.
+     *
+     * @return string
+     */
+    public function getContextSpecificPluginSettingsFile()
+    {
+        return $this->getPluginPath() . '/settings.xml';
+    }
 
-	/**
-	 * Get the display name of this plugin.
-	 * @return String
-	 */
-	function getDisplayName() {
-		return __('plugins.block.subscription.displayName');
-	}
+    /**
+     * Get the display name of this plugin.
+     *
+     * @return String
+     */
+    public function getDisplayName()
+    {
+        return __('plugins.block.subscription.displayName');
+    }
 
-	/**
-	 * Get a description of the plugin.
-	 */
-	function getDescription() {
-		return __('plugins.block.subscription.description');
-	}
+    /**
+     * Get a description of the plugin.
+     */
+    public function getDescription()
+    {
+        return __('plugins.block.subscription.description');
+    }
 
-	/**
-	 * Get the HTML contents for this block.
-	 * @param $templateMgr object
-	 * @param $request PKPRequest
-	 * @return $string
-	 */
-	function getContents($templateMgr, $request = null) {
-		$journal = $request->getJournal();
-		if (!$journal) return '';
+    /**
+     * Get the HTML contents for this block.
+     *
+     * @param $templateMgr object
+     * @param $request PKPRequest
+     *
+     * @return $string
+     */
+    public function getContents($templateMgr, $request = null)
+    {
+        $journal = $request->getJournal();
+        if (!$journal) {
+            return '';
+        }
 
-		if ($journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
-			return '';
+        if ($journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+            return '';
+        }
 
-		$user = $request->getUser();
-		$userId = ($user)?$user->getId():null;
-		$templateMgr->assign('userLoggedIn', isset($userId) ? true : false);
+        $user = $request->getUser();
+        $userId = ($user) ? $user->getId() : null;
+        $templateMgr->assign('userLoggedIn', isset($userId) ? true : false);
 
-		if (isset($userId)) {
-			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
-			$individualSubscription = $subscriptionDao->getByUserIdForJournal($userId, $journal->getId());
-			$templateMgr->assign('individualSubscription', $individualSubscription);
-		}
+        if (isset($userId)) {
+            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+            $individualSubscription = $subscriptionDao->getByUserIdForJournal($userId, $journal->getId());
+            $templateMgr->assign('individualSubscription', $individualSubscription);
+        }
 
-		// If no individual subscription or if not valid, check for institutional subscription
-		if (!isset($individualSubscription) || !$individualSubscription->isValid()) {
-			$ip = $request->getRemoteAddr();
-			$domain = $request->getRemoteDomain();
-			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
-			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $ip, $journal->getId());
-			if ($subscriptionId) {
-				$institutionalSubscription = $subscriptionDao->getById($subscriptionId);
-				$templateMgr->assign(array(
-					'institutionalSubscription' => $institutionalSubscription,
-					'userIP' => $ip,
-				));
-			}
-		}
+        // If no individual subscription or if not valid, check for institutional subscription
+        if (!isset($individualSubscription) || !$individualSubscription->isValid()) {
+            $ip = $request->getRemoteAddr();
+            $domain = $request->getRemoteDomain();
+            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+            $subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $ip, $journal->getId());
+            if ($subscriptionId) {
+                $institutionalSubscription = $subscriptionDao->getById($subscriptionId);
+                $templateMgr->assign([
+                    'institutionalSubscription' => $institutionalSubscription,
+                    'userIP' => $ip,
+                ]);
+            }
+        }
 
-		$paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::getPaymentManager($journal);
 
-		if (isset($individualSubscription) || isset($institutionalSubscription)) {
-			$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
-		}
+        if (isset($individualSubscription) || isset($institutionalSubscription)) {
+            $templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
+        }
 
-		return parent::getContents($templateMgr, $request);
-	}
+        return parent::getContents($templateMgr, $request);
+    }
 }
-
-

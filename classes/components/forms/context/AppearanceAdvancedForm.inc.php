@@ -12,7 +12,11 @@
  * @brief A preset form for general website appearance setup, such as uploading
  *  a logo.
  */
-namespace APP\components\forms\context;
-use \PKP\components\forms\context\PKPAppearanceAdvancedForm;
 
-class AppearanceAdvancedForm extends PKPAppearanceAdvancedForm {}
+namespace APP\components\forms\context;
+
+use PKP\components\forms\context\PKPAppearanceAdvancedForm;
+
+class AppearanceAdvancedForm extends PKPAppearanceAdvancedForm
+{
+}

@@ -15,75 +15,76 @@
 
 import('lib.pkp.pages.index.PKPIndexHandler');
 
-class IndexHandler extends PKPIndexHandler {
-	//
-	// Public handler operations
-	//
-	/**
-	 * If no journal is selected, display list of journals.
-	 * Otherwise, display the index page for the selected journal.
-	 * @param $args array
-	 * @param $request Request
-	 */
-	function index($args, $request) {
-		$this->validate(null, $request);
-		$journal = $request->getJournal();
+class IndexHandler extends PKPIndexHandler
+{
+    //
+    // Public handler operations
+    //
+    /**
+     * If no journal is selected, display list of journals.
+     * Otherwise, display the index page for the selected journal.
+     *
+     * @param $args array
+     * @param $request Request
+     */
+    public function index($args, $request)
+    {
+        $this->validate(null, $request);
+        $journal = $request->getJournal();
 
-		if (!$journal) {
-			$hasNoContexts = null; // Avoid scrutinizer warnings
-			$journal = $this->getTargetContext($request, $hasNoContexts);
-			if ($journal) {
-				// There's a target context but no journal in the current request. Redirect.
-				$request->redirect($journal->getPath());
-			}
-			if ($hasNoContexts && Validation::isSiteAdmin()) {
-				// No contexts created, and this is the admin.
-				$request->redirect(null, 'admin', 'contexts');
-			}
-		}
+        if (!$journal) {
+            $hasNoContexts = null; // Avoid scrutinizer warnings
+            $journal = $this->getTargetContext($request, $hasNoContexts);
+            if ($journal) {
+                // There's a target context but no journal in the current request. Redirect.
+                $request->redirect($journal->getPath());
+            }
+            if ($hasNoContexts && Validation::isSiteAdmin()) {
+                // No contexts created, and this is the admin.
+                $request->redirect(null, 'admin', 'contexts');
+            }
+        }
 
-		$this->setupTemplate($request);
-		$router = $request->getRouter();
-		$templateMgr = TemplateManager::getManager($request);
-		if ($journal) {
-			// Assign header and content for home page
-			$templateMgr->assign(array(
-				'additionalHomeContent' => $journal->getLocalizedData('additionalHomeContent'),
-				'homepageImage' => $journal->getLocalizedData('homepageImage'),
-				'homepageImageAltText' => $journal->getLocalizedData('homepageImageAltText'),
-				'journalDescription' => $journal->getLocalizedData('description'),
-			));
+        $this->setupTemplate($request);
+        $router = $request->getRouter();
+        $templateMgr = TemplateManager::getManager($request);
+        if ($journal) {
+            // Assign header and content for home page
+            $templateMgr->assign([
+                'additionalHomeContent' => $journal->getLocalizedData('additionalHomeContent'),
+                'homepageImage' => $journal->getLocalizedData('homepageImage'),
+                'homepageImageAltText' => $journal->getLocalizedData('homepageImageAltText'),
+                'journalDescription' => $journal->getLocalizedData('description'),
+            ]);
 
-			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue = $issueDao->getCurrent($journal->getId(), true);
-			if (isset($issue) && $journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {
-				import('pages.issue.IssueHandler');
-				// The current issue TOC/cover page should be displayed below the custom home page.
-				IssueHandler::_setupIssueTemplate($request, $issue);
-			}
+            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+            $issue = $issueDao->getCurrent($journal->getId(), true);
+            if (isset($issue) && $journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {
+                import('pages.issue.IssueHandler');
+                // The current issue TOC/cover page should be displayed below the custom home page.
+                IssueHandler::_setupIssueTemplate($request, $issue);
+            }
 
-			$this->_setupAnnouncements($journal, $templateMgr);
+            $this->_setupAnnouncements($journal, $templateMgr);
 
-			$templateMgr->display('frontend/pages/indexJournal.tpl');
-		} else {
-			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-			$site = $request->getSite();
+            $templateMgr->display('frontend/pages/indexJournal.tpl');
+        } else {
+            $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+            $site = $request->getSite();
 
-			if ($site->getRedirect() && ($journal = $journalDao->getById($site->getRedirect())) != null) {
-				$request->redirect($journal->getPath());
-			}
+            if ($site->getRedirect() && ($journal = $journalDao->getById($site->getRedirect())) != null) {
+                $request->redirect($journal->getPath());
+            }
 
-			$templateMgr->assign([
-				'pageTitleTranslated' => $site->getLocalizedTitle(),
-				'about' => $site->getLocalizedAbout(),
-				'journalFilesPath' => $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/',
-				'journals' => $journalDao->getAll(true)->toArray(),
-				'site' => $site,
-			]);
-			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
-			$templateMgr->display('frontend/pages/indexSite.tpl');
-		}
-	}
+            $templateMgr->assign([
+                'pageTitleTranslated' => $site->getLocalizedTitle(),
+                'about' => $site->getLocalizedAbout(),
+                'journalFilesPath' => $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/',
+                'journals' => $journalDao->getAll(true)->toArray(),
+                'site' => $site,
+            ]);
+            $templateMgr->setCacheability(CACHEABILITY_PUBLIC);
+            $templateMgr->display('frontend/pages/indexSite.tpl');
+        }
+    }
 }
-
-

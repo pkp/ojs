@@ -16,29 +16,31 @@
 import('controllers.grid.submissions.ExportPublishedSubmissionsListGridCellProvider');
 
 
-class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissionsListGridCellProvider {
-	/**
-	 * Constructor
-	 */
-	function __construct($plugin, $authorizedRoles = null) {
-		parent::__construct($plugin, $authorizedRoles);
-	}
+class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissionsListGridCellProvider
+{
+    /**
+     * Constructor
+     *
+     * @param null|mixed $authorizedRoles
+     */
+    public function __construct($plugin, $authorizedRoles = null)
+    {
+        parent::__construct($plugin, $authorizedRoles);
+    }
 
-	/**
-	 * @copydoc ExportPublishedSubmissionsListGridCellProvider::getTemplateVarsFromRowColumn()
-	 */
-	function getTemplateVarsFromRowColumn($row, $column) {
-		$submission = $row->getData();
-		$columnId = $column->getId();
-		assert(is_a($submission, 'Submission') && !empty($columnId));
+    /**
+     * @copydoc ExportPublishedSubmissionsListGridCellProvider::getTemplateVarsFromRowColumn()
+     */
+    public function getTemplateVarsFromRowColumn($row, $column)
+    {
+        $submission = $row->getData();
+        $columnId = $column->getId();
+        assert(is_a($submission, 'Submission') && !empty($columnId));
 
-		switch ($columnId) {
-			case 'pubId':
-				return array('label' => $submission->getStoredPubId($this->_plugin->getPubIdType()));
-		}
-		return parent::getTemplateVarsFromRowColumn($row, $column);
-	}
-
+        switch ($columnId) {
+            case 'pubId':
+                return ['label' => $submission->getStoredPubId($this->_plugin->getPubIdType())];
+        }
+        return parent::getTemplateVarsFromRowColumn($row, $column);
+    }
 }
-
-

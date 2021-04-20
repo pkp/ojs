@@ -9,6 +9,7 @@
  *
  * @class Dc11Schema
  * @ingroup plugins_metadata_dc11_schema
+ *
  * @see PKPDc11Schema
  *
  * @brief OJS-specific implementation of the Dc11Schema.
@@ -18,13 +19,14 @@
 import('lib.pkp.plugins.metadata.dc11.schema.PKPDc11Schema');
 import('lib.pkp.classes.metadata.MetadataTypeDescription');
 
-class Dc11Schema extends PKPDc11Schema {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		// Configure the DC schema.
-		parent::__construct(array(ASSOC_TYPE_SUBMISSION, ASSOC_TYPE_ANY));
-	}
+class Dc11Schema extends PKPDc11Schema
+{
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        // Configure the DC schema.
+        parent::__construct([ASSOC_TYPE_SUBMISSION, ASSOC_TYPE_ANY]);
+    }
 }
-

@@ -16,39 +16,42 @@
 
 import('lib.pkp.classes.notification.managerDelegate.PKPApproveSubmissionNotificationManager');
 
-class ApproveSubmissionNotificationManager extends PKPApproveSubmissionNotificationManager {
+class ApproveSubmissionNotificationManager extends PKPApproveSubmissionNotificationManager
+{
+    /**
+     * Constructor.
+     *
+     * @param $notificationType int NOTIFICATION_TYPE_...
+     */
+    public function __construct($notificationType)
+    {
+        parent::__construct($notificationType);
+    }
 
-	/**
-	 * Constructor.
-	 * @param $notificationType int NOTIFICATION_TYPE_...
-	 */
-	function __construct($notificationType) {
-		parent::__construct($notificationType);
-	}
+    /**
+     * @copydoc PKPNotificationOperationManager::getNotificationTitle()
+     */
+    public function getNotificationTitle($notification)
+    {
+        switch ($notification->getType()) {
+            case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
+            case NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION:
+                return __('notification.type.approveSubmissionTitle');
+        }
+    }
 
-	/**
-	 * @copydoc PKPNotificationOperationManager::getNotificationTitle()
-	 */
-	function getNotificationTitle($notification) {
-		switch ($notification->getType()) {
-			case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
-			case NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION:
-				return __('notification.type.approveSubmissionTitle');
-		}	
-	}
-	
-	/**
-	 * @copydoc PKPNotificationOperationManager::getNotificationMessage()
-	 */
-	public function getNotificationMessage($request, $notification) {
-		switch ($notification->getType()) {
-			case NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION:
-				return __('notification.type.formatNeedsApprovedSubmission');
-			case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
-				return __('notification.type.approveSubmission');
-		}
+    /**
+     * @copydoc PKPNotificationOperationManager::getNotificationMessage()
+     */
+    public function getNotificationMessage($request, $notification)
+    {
+        switch ($notification->getType()) {
+            case NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION:
+                return __('notification.type.formatNeedsApprovedSubmission');
+            case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
+                return __('notification.type.approveSubmission');
+        }
 
-		return parent::getNotificationMessage($request, $notification);
-	}
+        return parent::getNotificationMessage($request, $notification);
+    }
 }
-

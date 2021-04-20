@@ -11,32 +11,36 @@
  *
  * @brief Add OJS-specific details to the license settings forms
  */
+
 namespace APP\components\forms\context;
-use \PKP\components\forms\context\PKPLicenseForm;
-use \PKP\components\forms\FieldOptions;
 
-class LicenseForm extends PKPLicenseForm {
-	/** @copydoc FormComponent::$id */
-	public $id = FORM_LICENSE;
+use PKP\components\forms\context\PKPLicenseForm;
+use PKP\components\forms\FieldOptions;
 
-	/** @copydoc FormComponent::$method */
-	public $method = 'PUT';
+class LicenseForm extends PKPLicenseForm
+{
+    /** @copydoc FormComponent::$id */
+    public $id = FORM_LICENSE;
 
-	/**
-	 * @copydoc PKPLicenseForm::__construct()
-	 */
-	public function __construct($action, $locales, $context) {
-		parent::__construct($action, $locales, $context);
+    /** @copydoc FormComponent::$method */
+    public $method = 'PUT';
 
-		$this->addField(new FieldOptions('copyrightYearBasis', [
-				'label' => __('submission.copyrightYear'),
-				'description' => __('manager.distribution.copyrightYearBasis.description'),
-				'type' => 'radio',
-				'options' => [
-					['value' => 'issue', 'label' => __('manager.distribution.copyrightYearBasis.issue')],
-					['value' => 'submission', 'label' => __('manager.distribution.copyrightYearBasis.submission')],
-				],
-				'value' => $context->getData('copyrightYearBasis'),
-			]), [FIELD_POSITION_AFTER, 'licenseUrl']);
-	}
+    /**
+     * @copydoc PKPLicenseForm::__construct()
+     */
+    public function __construct($action, $locales, $context)
+    {
+        parent::__construct($action, $locales, $context);
+
+        $this->addField(new FieldOptions('copyrightYearBasis', [
+            'label' => __('submission.copyrightYear'),
+            'description' => __('manager.distribution.copyrightYearBasis.description'),
+            'type' => 'radio',
+            'options' => [
+                ['value' => 'issue', 'label' => __('manager.distribution.copyrightYearBasis.issue')],
+                ['value' => 'submission', 'label' => __('manager.distribution.copyrightYearBasis.submission')],
+            ],
+            'value' => $context->getData('copyrightYearBasis'),
+        ]), [FIELD_POSITION_AFTER, 'licenseUrl']);
+    }
 }

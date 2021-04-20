@@ -14,37 +14,43 @@
 
 import('lib.pkp.classes.security.authorization.DataObjectRequiredPolicy');
 
-class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy {
-	/**
-	 * Constructor
-	 * @param $request PKPRequest
-	 * @param $args array request parameters
-	 * @param $operations array
-	 */
-	function __construct($request, &$args, $operations = null) {
-		parent::__construct($request, $args, 'issueGalleyId', 'user.authorization.invalidIssueGalley', $operations);
-	}
+class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
+{
+    /**
+     * Constructor
+     *
+     * @param $request PKPRequest
+     * @param $args array request parameters
+     * @param $operations array
+     */
+    public function __construct($request, &$args, $operations = null)
+    {
+        parent::__construct($request, $args, 'issueGalleyId', 'user.authorization.invalidIssueGalley', $operations);
+    }
 
-	//
-	// Implement template methods from AuthorizationPolicy
-	//
-	/**
-	 * @see DataObjectRequiredPolicy::dataObjectEffect()
-	 */
-	function dataObjectEffect() {
-		$issueGalleyId = (int)$this->getDataObjectId();
-		if (!$issueGalleyId) return AUTHORIZATION_DENY;
+    //
+    // Implement template methods from AuthorizationPolicy
+    //
+    /**
+     * @see DataObjectRequiredPolicy::dataObjectEffect()
+     */
+    public function dataObjectEffect()
+    {
+        $issueGalleyId = (int)$this->getDataObjectId();
+        if (!$issueGalleyId) {
+            return AUTHORIZATION_DENY;
+        }
 
-		// Make sure the issue galley belongs to the journal.
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-		$issueGalley = $issueGalleyDao->getById($issueGalleyId, $issue->getId());
-		if (!is_a($issueGalley, 'IssueGalley')) return AUTHORIZATION_DENY;
+        // Make sure the issue galley belongs to the journal.
+        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalley = $issueGalleyDao->getById($issueGalleyId, $issue->getId());
+        if (!is_a($issueGalley, 'IssueGalley')) {
+            return AUTHORIZATION_DENY;
+        }
 
-		// Save the publication format to the authorization context.
-		$this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY, $issueGalley);
-		return AUTHORIZATION_PERMIT;
-	}
+        // Save the publication format to the authorization context.
+        $this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY, $issueGalley);
+        return AUTHORIZATION_PERMIT;
+    }
 }
-
-

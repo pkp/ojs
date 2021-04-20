@@ -15,56 +15,61 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-class importExport extends CommandLineTool {
+class importExport extends CommandLineTool
+{
+    public $command;
+    public $plugin;
+    public $parameters;
 
-	var $command;
-	var $plugin;
-	var $parameters;
+    /**
+     * Constructor.
+     *
+     * @param $argv array command-line arguments (see usage)
+     */
+    public function __construct($argv = [])
+    {
+        parent::__construct($argv);
+        $this->command = array_shift($this->argv);
+        $this->parameters = $this->argv;
+    }
 
-	/**
-	 * Constructor.
-	 * @param $argv array command-line arguments (see usage)
-	 */
-	function __construct($argv = array()) {
-		parent::__construct($argv);
-		$this->command = array_shift($this->argv);
-		$this->parameters = $this->argv;
-	}
+    /**
+     * Print command usage information.
+     */
+    public function usage()
+    {
+        echo "Command-line tool for import/export tasks\n"
+            . "Usage:\n"
+            . "\t{$this->scriptName} list: List available plugins\n"
+            . "\t{$this->scriptName} [pluginName] usage: Display usage information for a plugin\n"
+            . "\t{$this->scriptName} [pluginName] [params...]: Invoke a plugin\n";
+    }
 
-	/**
-	 * Print command usage information.
-	 */
-	function usage() {
-		echo "Command-line tool for import/export tasks\n"
-			. "Usage:\n"
-			. "\t{$this->scriptName} list: List available plugins\n"
-			. "\t{$this->scriptName} [pluginName] usage: Display usage information for a plugin\n"
-			. "\t{$this->scriptName} [pluginName] [params...]: Invoke a plugin\n";
-	}
+    /**
+     * Parse and execute the import/export task.
+     */
+    public function execute()
+    {
+        $plugins = PluginRegistry::loadCategory('importexport');
+        if ($this->command === 'list') {
+            echo "Available plugins:\n";
+            if (empty($plugins)) {
+                echo "\t(None)\n";
+            } else {
+                foreach ($plugins as $plugin) {
+                    echo "\t" . $plugin->getName() . "\n";
+                }
+            }
+            return;
+        }
+        if ($this->command == 'usage' || $this->command == 'help' || $this->command == '' || ($plugin = PluginRegistry::getPlugin('importexport', $this->command)) === null) {
+            $this->usage();
+            return;
+        }
 
-	/**
-	 * Parse and execute the import/export task.
-	 */
-	function execute() {
-		$plugins = PluginRegistry::loadCategory('importexport');
-		if ($this->command === 'list') {
-			echo "Available plugins:\n";
-			if (empty($plugins)) echo "\t(None)\n";
-			else foreach ($plugins as $plugin) {
-				echo "\t" . $plugin->getName() . "\n";
-			}
-			return;
-		}
-		if ($this->command == 'usage' || $this->command == 'help' || $this->command == '' || ($plugin = PluginRegistry::getPlugin('importexport', $this->command))===null) {
-			$this->usage();
-			return;
-		}
-
-		return $plugin->executeCLI($this->scriptName, $this->parameters);
-	}
-
+        return $plugin->executeCLI($this->scriptName, $this->parameters);
+    }
 }
 
-$tool = new importExport(isset($argv) ? $argv : array());
+$tool = new importExport($argv ?? []);
 $tool->execute();
-

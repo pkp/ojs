@@ -9,6 +9,7 @@
  *
  * @class Services
  * @ingroup core
+ *
  * @see Core
  *
  * @brief Pimple Dependency Injection Container.
@@ -16,17 +17,17 @@
 
 namespace APP\core;
 
-class Services extends \PKP\core\PKPServices  {
-
-	/**
-	 * container initialization
-	 */
-	protected function init() {
-		$this->container->register(new \APP\Services\OJSServiceProvider());
-	}
-
+class Services extends \PKP\core\PKPServices
+{
+    /**
+     * container initialization
+     */
+    protected function init()
+    {
+        $this->container->register(new \APP\Services\OJSServiceProvider());
+    }
 }
 
 if (!PKP_STRICT_MODE) {
-	class_alias('\APP\core\Services', '\Services');
+    class_alias('\APP\core\Services', '\Services');
 }

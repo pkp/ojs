@@ -11,11 +11,13 @@
  *
  * @brief A text field to search for and select issues.
  */
+
 namespace APP\components\forms;
 
-use \PKP\components\forms\FieldBaseAutosuggest;
+use PKP\components\forms\FieldBaseAutosuggest;
 
-class FieldSelectIssues extends FieldBaseAutosuggest {
-	/** @copydoc Field::$component */
-	public $component = 'field-select-issues';
+class FieldSelectIssues extends FieldBaseAutosuggest
+{
+    /** @copydoc Field::$component */
+    public $component = 'field-select-issues';
 }

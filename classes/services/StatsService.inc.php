@@ -15,18 +15,19 @@
 
 namespace APP\Services;
 
-class StatsService extends \PKP\Services\PKPStatsService {
+class StatsService extends \PKP\Services\PKPStatsService
+{
+    /**
+     * Apply the sectionIds query param to the QueryBuilder
+     */
+    protected function getQueryBuilder($args = [])
+    {
+        $statsQB = parent::getQueryBuilder($args);
 
-	/**
-	 * Apply the sectionIds query param to the QueryBuilder
-	 */
-	protected function getQueryBuilder($args = []) {
-		$statsQB = parent::getQueryBuilder($args);
+        if (!empty(($args['sectionIds']))) {
+            $statsQB->filterBySections($args['sectionIds']);
+        }
 
-		if (!empty(($args['sectionIds']))) {
-			$statsQB->filterBySections($args['sectionIds']);
-		}
-
-		return $statsQB;
-	}
+        return $statsQB;
+    }
 }

@@ -17,14 +17,12 @@
  */
 
 switch ($op) {
-	//
-	// Issue
-	//
-	case 'index':
-	case 'issuesTabs':
-		define('HANDLER_CLASS', 'ManageIssuesHandler');
-		import('pages.manageIssues.ManageIssuesHandler');
-		break;
+    //
+    // Issue
+    //
+    case 'index':
+    case 'issuesTabs':
+        define('HANDLER_CLASS', 'ManageIssuesHandler');
+        import('pages.manageIssues.ManageIssuesHandler');
+        break;
 }
-
-

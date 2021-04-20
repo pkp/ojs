@@ -18,5 +18,3 @@
 require_once('DOIPubIdPlugin.inc.php');
 
 return new DOIPubIdPlugin();
-
-

@@ -20,5 +20,3 @@
 require_once('DataciteExportPlugin.inc.php');
 
 return new DataciteExportPlugin();
-
-

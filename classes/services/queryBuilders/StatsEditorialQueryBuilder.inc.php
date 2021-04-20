@@ -15,10 +15,10 @@
 
 namespace APP\Services\QueryBuilders;
 
-use \PKP\Services\QueryBuilders\PKPStatsEditorialQueryBuilder;
+use PKP\Services\QueryBuilders\PKPStatsEditorialQueryBuilder;
 
-class StatsEditorialQueryBuilder extends PKPStatsEditorialQueryBuilder {
-
-	/** @var string The table column name for section IDs */
-	public $sectionIdsColumn = 'section_id';
+class StatsEditorialQueryBuilder extends PKPStatsEditorialQueryBuilder
+{
+    /** @var string The table column name for section IDs */
+    public $sectionIdsColumn = 'section_id';
 }

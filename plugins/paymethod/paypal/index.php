@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_paymethod_paypal PayPal Payment Processing Plugin
  */
- 
+
 /**
  * @file plugins/paymethod/paypal/index.php
  *
@@ -18,5 +18,3 @@
 require_once('PaypalPaymentPlugin.inc.php');
 
 return new PaypalPaymentPlugin();
-
-

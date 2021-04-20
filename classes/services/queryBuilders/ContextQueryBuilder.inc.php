@@ -11,17 +11,17 @@
  *
  * @brief Journal list query builder
  */
+
 namespace APP\Services\QueryBuilders;
 
-use Illuminate\Database\Capsule\Manager as Capsule;
+class ContextQueryBuilder extends \PKP\Services\QueryBuilders\PKPContextQueryBuilder
+{
+    /** @copydoc \PKP\Services\QueryBuilders\PKPContextQueryBuilder::$db */
+    protected $db = 'journals';
 
-class ContextQueryBuilder extends \PKP\Services\QueryBuilders\PKPContextQueryBuilder {
-	/** @copydoc \PKP\Services\QueryBuilders\PKPContextQueryBuilder::$db */
-	protected $db = 'journals';
+    /** @copydoc \PKP\Services\QueryBuilders\PKPContextQueryBuilder::$dbSettings */
+    protected $dbSettings = 'journal_settings';
 
-	/** @copydoc \PKP\Services\QueryBuilders\PKPContextQueryBuilder::$dbSettings */
-	protected $dbSettings = 'journal_settings';
-
-	/** @copydoc \PKP\Services\QueryBuilders\PKPContextQueryBuilder::$dbIdColumn */
-	protected $dbIdColumn = 'journal_id';
+    /** @copydoc \PKP\Services\QueryBuilders\PKPContextQueryBuilder::$dbIdColumn */
+    protected $dbIdColumn = 'journal_id';
 }

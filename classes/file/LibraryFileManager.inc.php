@@ -15,15 +15,15 @@
 
 import('lib.pkp.classes.file.PKPLibraryFileManager');
 
-class LibraryFileManager extends PKPLibraryFileManager {
-
-	/**
-	 * Constructor
-	 * @param $contextId int
-	 */
-	function __construct($contextId) {
-		parent::__construct($contextId);
-	}
+class LibraryFileManager extends PKPLibraryFileManager
+{
+    /**
+     * Constructor
+     *
+     * @param $contextId int
+     */
+    public function __construct($contextId)
+    {
+        parent::__construct($contextId);
+    }
 }
-
-

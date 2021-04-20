@@ -9,6 +9,7 @@
  *
  * @class ReportGeneratorForm
  * @ingroup controllers_statistics_form
+ *
  * @see Form
  *
  * @brief Form to generate custom statistics reports.
@@ -16,14 +17,13 @@
 
 import('lib.pkp.controllers.statistics.form.PKPReportGeneratorForm');
 
-class ReportGeneratorForm extends PKPReportGeneratorForm {
-
-	/**
-	 * @see PKPReportGeneratorForm::getFileAssocTypes()
-	 */
-	function getFileAssocTypes() {
-		return array(ASSOC_TYPE_SUBMISSION_FILE, ASSOC_TYPE_ISSUE_GALLEY);
-	}
+class ReportGeneratorForm extends PKPReportGeneratorForm
+{
+    /**
+     * @see PKPReportGeneratorForm::getFileAssocTypes()
+     */
+    public function getFileAssocTypes()
+    {
+        return [ASSOC_TYPE_SUBMISSION_FILE, ASSOC_TYPE_ISSUE_GALLEY];
+    }
 }
-
-

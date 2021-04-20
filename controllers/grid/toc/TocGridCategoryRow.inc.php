@@ -15,19 +15,18 @@
 
 import('lib.pkp.classes.controllers.grid.GridCategoryRow');
 
-class TocGridCategoryRow extends GridCategoryRow {
-
-	//
-	// Overridden methods from GridCategoryRow
-	//
-	/**
-	 * Use a label if the actions in the grid are disabled.
-	 * return string
-	 */
-	function getCategoryLabel() {
-		$section = $this->getData();
-		return $section->getLocalizedTitle();
-	}
+class TocGridCategoryRow extends GridCategoryRow
+{
+    //
+    // Overridden methods from GridCategoryRow
+    //
+    /**
+     * Use a label if the actions in the grid are disabled.
+     * return string
+     */
+    public function getCategoryLabel()
+    {
+        $section = $this->getData();
+        return $section->getLocalizedTitle();
+    }
 }
-
-

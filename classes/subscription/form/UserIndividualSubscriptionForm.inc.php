@@ -15,168 +15,180 @@
 
 import('lib.pkp.classes.form.Form');
 
-class UserIndividualSubscriptionForm extends Form {
-	/** @var PKPRequest */
-	var $request;
+class UserIndividualSubscriptionForm extends Form
+{
+    /** @var PKPRequest */
+    public $request;
 
-	/** @var userId int the user associated with the subscription */
-	var $userId;
+    /** @var userId int the user associated with the subscription */
+    public $userId;
 
-	/** @var subscription the subscription being purchased */
-	var $subscription;
+    /** @var subscription the subscription being purchased */
+    public $subscription;
 
-	/** @var subscriptionTypes Array subscription types */
-	var $subscriptionTypes;
+    /** @var subscriptionTypes Array subscription types */
+    public $subscriptionTypes;
 
-	/**
-	 * Constructor
-	 * @param $request PKPRequest
-	 * @param $userId int
-	 * @param $subscriptionId int
-	 */
-	function __construct($request, $userId = null, $subscriptionId = null) {
-		parent::__construct('frontend/pages/purchaseIndividualSubscription.tpl');
+    /**
+     * Constructor
+     *
+     * @param $request PKPRequest
+     * @param $userId int
+     * @param $subscriptionId int
+     */
+    public function __construct($request, $userId = null, $subscriptionId = null)
+    {
+        parent::__construct('frontend/pages/purchaseIndividualSubscription.tpl');
 
-		$this->userId = isset($userId) ? (int) $userId : null;
-		$this->subscription = null;
-		$this->request = $request;
+        $this->userId = isset($userId) ? (int) $userId : null;
+        $this->subscription = null;
+        $this->request = $request;
 
-		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
+        $subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
-		if (isset($subscriptionId)) {
-			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
-			if ($subscriptionDao->subscriptionExists($subscriptionId)) {
-				$this->subscription = $subscriptionDao->getById($subscriptionId);
-			}
-		}
+        if (isset($subscriptionId)) {
+            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+            if ($subscriptionDao->subscriptionExists($subscriptionId)) {
+                $this->subscription = $subscriptionDao->getById($subscriptionId);
+            }
+        }
 
-		$journal = $this->request->getJournal();
-		$journalId = $journal->getId();
+        $journal = $this->request->getJournal();
+        $journalId = $journal->getId();
 
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
-		$subscriptionTypes = $subscriptionTypeDao->getByInstitutional($journalId, false, false);
-		$this->subscriptionTypes = $subscriptionTypes->toAssociativeArray();
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypes = $subscriptionTypeDao->getByInstitutional($journalId, false, false);
+        $this->subscriptionTypes = $subscriptionTypes->toAssociativeArray();
 
-		// Ensure subscription type is valid
-		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', function($typeId) use ($journalId) {
-			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
-			return $subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && !$subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) && !$subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId);
-		}));
+        // Ensure subscription type is valid
+        $this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', function ($typeId) use ($journalId) {
+            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+            return $subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && !$subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) && !$subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId);
+        }));
 
-		// Ensure that user does not already have a subscription for this journal
-		if (!isset($subscriptionId)) {
-			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', array(DAORegistry::getDAO('IndividualSubscriptionDAO'), 'subscriptionExistsByUserForJournal'), array($journalId), true));
-		} else {
-			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', function($userId) use ($journalId, $subscriptionId) {
-				$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
-				$checkId = $subscriptionDao->getByUserIdForJournal($userId, $journalId);
-				return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;
-			}));
-		}
+        // Ensure that user does not already have a subscription for this journal
+        if (!isset($subscriptionId)) {
+            $this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', [DAORegistry::getDAO('IndividualSubscriptionDAO'), 'subscriptionExistsByUserForJournal'], [$journalId], true));
+        } else {
+            $this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', function ($userId) use ($journalId, $subscriptionId) {
+                $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+                $checkId = $subscriptionDao->getByUserIdForJournal($userId, $journalId);
+                return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;
+            }));
+        }
 
-		$this->addCheck(new FormValidatorPost($this));
-		$this->addCheck(new FormValidatorCSRF($this));
-	}
+        $this->addCheck(new FormValidatorPost($this));
+        $this->addCheck(new FormValidatorCSRF($this));
+    }
 
-	/**
-	 * Initialize form data from current subscription.
-	 */
-	function initData() {
-		if (isset($this->subscription)) {
-			$subscription = $this->subscription;
+    /**
+     * Initialize form data from current subscription.
+     */
+    public function initData()
+    {
+        if (isset($this->subscription)) {
+            $subscription = $this->subscription;
 
-			$this->_data = array(
-				'typeId' => $subscription->getTypeId(),
-				'membership' => $subscription->getMembership()
-			);
-		}
-	}
+            $this->_data = [
+                'typeId' => $subscription->getTypeId(),
+                'membership' => $subscription->getMembership()
+            ];
+        }
+    }
 
-	/**
-	 * @copydoc Form::display
-	 */
-	function display($request = null, $template = null) {
-		if (is_null($request)) {
-			$request = $this->request;
-		}
-		$templateMgr = TemplateManager::getManager($this->request);
-		$templateMgr->assign(array(
-			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
-			'subscriptionTypes' => array_map(
-				function($subscriptionType) {return $subscriptionType->getLocalizedName() . ' (' . $subscriptionType->getCost() . ' ' . $subscriptionType->getCurrencyCodeAlpha() . ')';},
-				$this->subscriptionTypes
-			),
-		));
-		parent::display($request, $template);
-	}
+    /**
+     * @copydoc Form::display
+     *
+     * @param null|mixed $request
+     * @param null|mixed $template
+     */
+    public function display($request = null, $template = null)
+    {
+        if (is_null($request)) {
+            $request = $this->request;
+        }
+        $templateMgr = TemplateManager::getManager($this->request);
+        $templateMgr->assign([
+            'subscriptionId' => $this->subscription ? $this->subscription->getId() : null,
+            'subscriptionTypes' => array_map(
+                function ($subscriptionType) {
+                    return $subscriptionType->getLocalizedName() . ' (' . $subscriptionType->getCost() . ' ' . $subscriptionType->getCurrencyCodeAlpha() . ')';
+                },
+                $this->subscriptionTypes
+            ),
+        ]);
+        parent::display($request, $template);
+    }
 
-	/**
-	 * Assign form data to user-submitted data.
-	 */
-	function readInputData() {
-		$this->readUserVars(array('typeId', 'membership'));
+    /**
+     * Assign form data to user-submitted data.
+     */
+    public function readInputData()
+    {
+        $this->readUserVars(['typeId', 'membership']);
 
-		// If subscription type requires it, membership is provided
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
-		$needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
+        // If subscription type requires it, membership is provided
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
-		if ($needMembership) {
-			$this->addCheck(new FormValidator($this, 'membership', 'required', 'user.subscriptions.form.membershipRequired'));
-		}
-	}
+        if ($needMembership) {
+            $this->addCheck(new FormValidator($this, 'membership', 'required', 'user.subscriptions.form.membershipRequired'));
+        }
+    }
 
-	/**
-	 * @copydoc Form::execute
-	 */
-	function execute(...$functionArgs) {
-		$journal = $this->request->getJournal();
-		$journalId = $journal->getId();
-		$typeId = $this->getData('typeId');
-		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
-		$subscriptionType = $subscriptionTypeDao->getById($typeId, $journalId);
-		$nonExpiring = $subscriptionType->getNonExpiring();
-		$today = date('Y-m-d');
-		$insert = false;
+    /**
+     * @copydoc Form::execute
+     */
+    public function execute(...$functionArgs)
+    {
+        $journal = $this->request->getJournal();
+        $journalId = $journal->getId();
+        $typeId = $this->getData('typeId');
+        $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionType = $subscriptionTypeDao->getById($typeId, $journalId);
+        $nonExpiring = $subscriptionType->getNonExpiring();
+        $today = date('Y-m-d');
+        $insert = false;
 
-		parent::execute(...$functionArgs);
+        parent::execute(...$functionArgs);
 
-		if (!isset($this->subscription)) {
-			$subscription = $individualSubscriptionDao->newDataObject();
-			$subscription->setJournalId($journalId);
-			$subscription->setUserId($this->userId);
-			$subscription->setReferenceNumber(null);
-			$subscription->setNotes(null);
+        if (!isset($this->subscription)) {
+            $subscription = $individualSubscriptionDao->newDataObject();
+            $subscription->setJournalId($journalId);
+            $subscription->setUserId($this->userId);
+            $subscription->setReferenceNumber(null);
+            $subscription->setNotes(null);
 
-			$insert = true;
-		} else {
-			$subscription = $this->subscription;
-		}
+            $insert = true;
+        } else {
+            $subscription = $this->subscription;
+        }
 
-		$paymentManager = Application::getPaymentManager($journal);
-		$paymentPlugin = $paymentManager->getPaymentPlugin();
+        $paymentManager = Application::getPaymentManager($journal);
+        $paymentPlugin = $paymentManager->getPaymentPlugin();
 
-		if ($paymentPlugin->getName() == 'ManualPayment') {
-			$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
-		} else {
-			$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
-		}
+        if ($paymentPlugin->getName() == 'ManualPayment') {
+            $subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
+        } else {
+            $subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+        }
 
-		$subscription->setTypeId($typeId);
-		$subscription->setMembership($this->getData('membership') ? $this->getData('membership') : null);
-		$subscription->setDateStart($nonExpiring ? null : $today);
-		$subscription->setDateEnd($nonExpiring ? null : $today);
+        $subscription->setTypeId($typeId);
+        $subscription->setMembership($this->getData('membership') ? $this->getData('membership') : null);
+        $subscription->setDateStart($nonExpiring ? null : $today);
+        $subscription->setDateEnd($nonExpiring ? null : $today);
 
-		if ($subscription->getId()) {
-			$individualSubscriptionDao->updateObject($subscription);
-		} else {
-			$individualSubscriptionDao->insertObject($subscription);
-		}
+        if ($subscription->getId()) {
+            $individualSubscriptionDao->updateObject($subscription);
+        } else {
+            $individualSubscriptionDao->insertObject($subscription);
+        }
 
-		$queuedPayment = $paymentManager->createQueuedPayment($this->request, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
-		$paymentManager->queuePayment($queuedPayment);
+        $queuedPayment = $paymentManager->createQueuedPayment($this->request, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+        $paymentManager->queuePayment($queuedPayment);
 
-		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
-		$paymentForm->display($this->request);
-	}
+        $paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+        $paymentForm->display($this->request);
+    }
 }

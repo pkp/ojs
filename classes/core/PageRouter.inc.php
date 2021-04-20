@@ -15,15 +15,15 @@
 
 import('lib.pkp.classes.core.PKPPageRouter');
 
-class PageRouter extends PKPPageRouter {
-
-	/**
-	 * get the cacheable pages
-	 * @return array
-	 */
-	function getCacheablePages() {
-		return array('about', 'announcement', 'help', 'index', 'information', 'issue', '');
-	}
+class PageRouter extends PKPPageRouter
+{
+    /**
+     * get the cacheable pages
+     *
+     * @return array
+     */
+    public function getCacheablePages()
+    {
+        return ['about', 'announcement', 'help', 'index', 'information', 'issue', ''];
+    }
 }
-
-

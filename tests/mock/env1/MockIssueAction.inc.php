@@ -11,27 +11,35 @@
  * @brief a mock issue action.
  */
 
-class IssueAction {
+class IssueAction
+{
+    /**
+     * @copydoc IssueAction::subscriptionRequired()
+     */
+    public function subscriptionRequired($issue, $journal)
+    {
+        return false;
+    }
 
-	/**
-	 * @copydoc IssueAction::subscriptionRequired()
-	 */
-	function subscriptionRequired($issue, $journal) {
-		return false;
-	}
+    /**
+     * @copydoc IssueAction::subscribedUser()
+     *
+     * @param null|mixed $issueId
+     * @param null|mixed $articleId
+     */
+    public function subscribedUser($user, $journal, $issueId = null, $articleId = null)
+    {
+        return false;
+    }
 
-	/**
-	 * @copydoc IssueAction::subscribedUser()
-	 */
-	function subscribedUser($user, $journal, $issueId = null, $articleId = null) {
-		return false;
-	}
-
-	/**
-	 * @copydoc IssueAction::subscribedDomain()
-	 */
-	function subscribedDomain($request, $journal, $issueId = null, $articleId = null) {
-		return false;
-	}
+    /**
+     * @copydoc IssueAction::subscribedDomain()
+     *
+     * @param null|mixed $issueId
+     * @param null|mixed $articleId
+     */
+    public function subscribedDomain($request, $journal, $issueId = null, $articleId = null)
+    {
+        return false;
+    }
 }
-

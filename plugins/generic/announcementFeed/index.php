@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_generic_announcementFeed Announcement Feed Plugin
  */
- 
+
 /**
  * @file plugins/generic/announcementFeed/index.php
  *
@@ -18,4 +18,4 @@
 
 require_once('AnnouncementFeedPlugin.inc.php');
 
-return new AnnouncementFeedPlugin(); 
+return new AnnouncementFeedPlugin();

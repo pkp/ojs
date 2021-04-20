@@ -12,4 +12,6 @@
  * @brief Handle API requests for contexts (journals/presses).
  */
 import('lib.pkp.api.v1.contexts.PKPContextHandler');
-class ContextHandler extends PKPContextHandler { }
+class ContextHandler extends PKPContextHandler
+{
+}

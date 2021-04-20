@@ -15,70 +15,78 @@
 
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
-class IssueGridCellProvider extends GridCellProvider {
-	/** @var string */
-	var $dateFormatShort;
+class IssueGridCellProvider extends GridCellProvider
+{
+    /** @var string */
+    public $dateFormatShort;
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-		$this->dateFormatShort = \Application::get()->getRequest()->getContext()->getLocalizedDateFormatShort();
-	}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->dateFormatShort = \Application::get()->getRequest()->getContext()->getLocalizedDateFormatShort();
+    }
 
-	/**
-	 * Get cell actions associated with this row/column combination
-	 * @param $row GridRow
-	 * @param $column GridColumn
-	 * @return array an array of LinkAction instances
-	 */
-	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
-		if ($column->getId() == 'identification') {
-			$issue = $row->getData();
-			assert(is_a($issue, 'Issue'));
-			$router = $request->getRouter();
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			return array(
-				new LinkAction(
-					'edit',
-					new AjaxModal(
-						$router->url($request, null, null, 'editIssue', null, array('issueId' => $issue->getId())),
-						__('editor.issues.editIssue', array('issueIdentification' => $issue->getIssueIdentification())),
-						'modal_edit',
-						true
-					),
-					htmlspecialchars($issue->getIssueIdentification())
-				)
-			);
-		}
-		return array();
-	}
+    /**
+     * Get cell actions associated with this row/column combination
+     *
+     * @param $row GridRow
+     * @param $column GridColumn
+     *
+     * @return array an array of LinkAction instances
+     */
+    public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
+    {
+        if ($column->getId() == 'identification') {
+            $issue = $row->getData();
+            assert(is_a($issue, 'Issue'));
+            $router = $request->getRouter();
+            import('lib.pkp.classes.linkAction.request.AjaxModal');
+            return [
+                new LinkAction(
+                    'edit',
+                    new AjaxModal(
+                        $router->url($request, null, null, 'editIssue', null, ['issueId' => $issue->getId()]),
+                        __('editor.issues.editIssue', ['issueIdentification' => $issue->getIssueIdentification()]),
+                        'modal_edit',
+                        true
+                    ),
+                    htmlspecialchars($issue->getIssueIdentification())
+                )
+            ];
+        }
+        return [];
+    }
 
-	/**
-	 * Extracts variables for a given column from a data element
-	 * so that they may be assigned to template before rendering.
-	 * @param $row GridRow
-	 * @param $column GridColumn
-	 * @return array
-	 */
-	function getTemplateVarsFromRowColumn($row, $column) {
-		$issue = $row->getData(); /** @var Issue $issue */
-		$columnId = $column->getId();
-		assert (is_a($issue, 'Issue'));
-		assert(!empty($columnId));
-		switch ($columnId) {
-			case 'identification':
-				return array('label' => ''); // Title returned as action
-			case 'published':
-				$datePublished = $issue->getDatePublished();
-				if ($datePublished) $datePublished = strtotime($datePublished);
-				return array('label' => $datePublished?strftime($this->dateFormatShort, $datePublished):'');
-			case 'numArticles':
-				return array('label' => $issue->getNumArticles());
-			default: assert(false); break;
-		}
-	}
+    /**
+     * Extracts variables for a given column from a data element
+     * so that they may be assigned to template before rendering.
+     *
+     * @param $row GridRow
+     * @param $column GridColumn
+     *
+     * @return array
+     */
+    public function getTemplateVarsFromRowColumn($row, $column)
+    {
+        $issue = $row->getData(); /** @var Issue $issue */
+        $columnId = $column->getId();
+        assert(is_a($issue, 'Issue'));
+        assert(!empty($columnId));
+        switch ($columnId) {
+            case 'identification':
+                return ['label' => '']; // Title returned as action
+            case 'published':
+                $datePublished = $issue->getDatePublished();
+                if ($datePublished) {
+                    $datePublished = strtotime($datePublished);
+                }
+                return ['label' => $datePublished ? strftime($this->dateFormatShort, $datePublished) : ''];
+            case 'numArticles':
+                return ['label' => $issue->getNumArticles()];
+            default: assert(false); break;
+        }
+    }
 }
-
-

@@ -17,24 +17,22 @@
  */
 
 switch ($op) {
-	//
-	// Misc.
-	//
-	case 'index':
-	case 'subscriptions':
-	case 'setLocale':
-	case 'authorizationDenied':
-	case 'purchaseSubscription':
-	case 'payPurchaseSubscription':
-	case 'completePurchaseSubscription':
-	case 'payRenewSubscription':
-	case 'payMembership':
-	case 'getInterests':
-		define('HANDLER_CLASS', 'UserHandler');
-		import('pages.user.UserHandler');
-		break;
-	default:
-		require_once('lib/pkp/pages/user/index.php');
+    //
+    // Misc.
+    //
+    case 'index':
+    case 'subscriptions':
+    case 'setLocale':
+    case 'authorizationDenied':
+    case 'purchaseSubscription':
+    case 'payPurchaseSubscription':
+    case 'completePurchaseSubscription':
+    case 'payRenewSubscription':
+    case 'payMembership':
+    case 'getInterests':
+        define('HANDLER_CLASS', 'UserHandler');
+        import('pages.user.UserHandler');
+        break;
+    default:
+        require_once('lib/pkp/pages/user/index.php');
 }
-
-

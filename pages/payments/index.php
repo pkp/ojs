@@ -17,18 +17,18 @@
  */
 
 switch ($op) {
-	//
-	// Issue
-	//
-	case 'index':
-	case 'subscriptions':
-	case 'subscriptionTypes':
-	case 'subscriptionPolicies':
-	case 'saveSubscriptionPolicies':
-	case 'paymentTypes':
-	case 'savePaymentTypes':
-	case 'payments':
-		define('HANDLER_CLASS', 'PaymentsHandler');
-		import('pages.payments.PaymentsHandler');
-		break;
+    //
+    // Issue
+    //
+    case 'index':
+    case 'subscriptions':
+    case 'subscriptionTypes':
+    case 'subscriptionPolicies':
+    case 'saveSubscriptionPolicies':
+    case 'paymentTypes':
+    case 'savePaymentTypes':
+    case 'payments':
+        define('HANDLER_CLASS', 'PaymentsHandler');
+        import('pages.payments.PaymentsHandler');
+        break;
 }
