@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-20 16:39+0000\n"
+"PO-Revision-Date: 2021-04-22 01:40+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "gl_ES/>\n"
@@ -92,3 +92,94 @@ msgid "author.submit.addReasonsForWaiver"
 msgstr ""
 "Utilice o cadro de comentarios que está abaixo para indicar por que solicita "
 "a exención da cota."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Proporcione os termos para a indexación do envío e sepáreos con punto e coma "
+"(termo1 ; termo2 ; termo3)."
+
+msgid "author.submit.deleteAuthor"
+msgstr "Eliminar un autor"
+
+msgid "author.submit.addAuthor"
+msgstr "Engadir un autor"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Contacto principal para a correspondencia editorial."
+
+msgid "author.submit.reorder"
+msgstr "Reordenar o nome do autor/a"
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Reordenar os autores para que aparezan na orde en que serán enumerados na "
+"publicación."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declaración de privacidade da revista"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Seleccione un idioma para o envío."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Seleccione unha sección da revista axeitada para este envío."
+
+msgid "author.submit.comments"
+msgstr "Introduza o texto (opcional)"
+
+msgid "submission.submit.coverNote"
+msgstr "Comentarios para o editor/a"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Debe aceptar as condicións do aviso de dereitos de autor/a para poder "
+"continuar."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"Os autores/as aceptan as condicións deste aviso de dereitos de autor, que se "
+"aplicarán a este envío sempre e cando se publique  nesta revista (máis "
+"abaixo pódense engadir comentarios ao editor/a)."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Antes de continuar, asegúrese de que se cumpren todos os requisitos da lista "
+"de verificación do envío."
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Seleccionar a sección apropiada da revista para enviar os artigos."
+
+msgid "author.submit.journalSection"
+msgstr "Sección da revista"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Ningún envío."
+
+msgid "author.submissions.viewStatus"
+msgstr "Ver estado"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Está seguro/a de que quere eliminar este envío incompleto?"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Modificacións da corrección de probas"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Cargar a versión corrixida"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "En edición: Requírese corrección de probas"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "En edición: Corrección de texto solicitada"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "En revisión: Revisións requiridas"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "En revisión {$round}"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Se solicita a exención da cota, deberá introducir o motivo no espazo "
+"disposto para este efecto."
