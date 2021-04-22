@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
+use \PKP\mail\MailTemplate;
+
 class SubscriptionExpiryReminder extends ScheduledTask
 {
     /**
@@ -72,7 +74,6 @@ class SubscriptionExpiryReminder extends ScheduledTask
             'subscriptionContactSignature' => $subscriptionContactSignature
         ];
 
-        import('lib.pkp.classes.mail.MailTemplate');
         $mail = new MailTemplate($emailKey, $journal->getPrimaryLocale(), $journal, false);
         $mail->setReplyTo(null);
         $mail->setFrom($subscriptionEmail, $subscriptionName);

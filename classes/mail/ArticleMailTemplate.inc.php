@@ -15,8 +15,7 @@
  * This allows for article-specific functionality like logging, etc.
  */
 
-import('lib.pkp.classes.mail.SubmissionMailTemplate');
-import('lib.pkp.classes.log.SubmissionEmailLogEntry'); // Bring in log constants
+use \PKP\mail\SubmissionMailTemplate;
 
 class ArticleMailTemplate extends SubmissionMailTemplate
 {

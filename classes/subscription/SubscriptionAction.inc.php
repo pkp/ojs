@@ -13,6 +13,8 @@
  * Common actions for subscription management functions.
  */
 
+use \PKP\mail\MailTemplate;
+
 class SubscriptionAction
 {
     /**
@@ -76,7 +78,6 @@ class SubscriptionAction
                 break;
         }
 
-        import('lib.pkp.classes.mail.MailTemplate');
         $mail = new MailTemplate($mailTemplateKey);
         $mail->setReplyTo($subscriptionContactEmail, $subscriptionContactName);
         $mail->addRecipient($subscriptionContactEmail, $subscriptionContactName);
