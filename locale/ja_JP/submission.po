@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-16 05:57+0000\n"
+"PO-Revision-Date: 2021-04-22 01:40+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ja_JP/>\n"
@@ -123,7 +123,7 @@ msgid "submission.submit.contributorRole"
 msgstr "寄稿者の役割"
 
 msgid "submission.submit.privacyStatement"
-msgstr "個人情報保護方針"
+msgstr "個人情報の扱いについて"
 
 msgid "submission.submit.submissionChecklistDescription"
 msgstr "以下の要件を読み、完了したことを確認してから進めてください。"
