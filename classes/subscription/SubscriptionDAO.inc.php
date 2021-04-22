@@ -15,6 +15,8 @@
  * @brief Abstract class for retrieving and modifying subscriptions.
  */
 
+use \PKP\identity\Identity;
+
 import('classes.subscription.Subscription');
 import('classes.subscription.SubscriptionType');
 
@@ -233,7 +235,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
 
         if (!empty($search)) {
             switch ($searchField) {
-            case IDENTITY_SETTING_GIVENNAME:
+            case Identity::IDENTITY_SETTING_GIVENNAME:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(COALESCE(ugl.setting_value,ugpl.setting_value)) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
@@ -245,7 +247,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
                 }
                 $params[] = $search;
                 break;
-            case IDENTITY_SETTING_FAMILYNAME:
+            case Identity::IDENTITY_SETTING_FAMILYNAME:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {

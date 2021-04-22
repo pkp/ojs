@@ -30,7 +30,7 @@ define('AUTHOR_TOC_SHOW', 2);
 define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);
 define('ARTICLE_ACCESS_OPEN', 1);
 
-import('lib.pkp.classes.submission.PKPSubmission');
+use \PKP\submission\PKPSubmission;
 
 class Submission extends PKPSubmission
 {

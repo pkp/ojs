@@ -13,6 +13,8 @@
  * @brief Representation of an article galley grid row.
  */
 
+use \PKP\submission\SubmissionFile;
+
 import('lib.pkp.classes.controllers.grid.GridRow');
 
 class ArticleGalleyGridRow extends GridRow
@@ -85,7 +87,7 @@ class ArticleGalleyGridRow extends GridRow
                         $this->getSubmission()->getId(),
                         WORKFLOW_STAGE_ID_PRODUCTION,
                         [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT],
-                        SUBMISSION_FILE_PROOF,
+                        SubmissionFile::SUBMISSION_FILE_PROOF,
                         ASSOC_TYPE_REPRESENTATION,
                         $rowId,
                         null

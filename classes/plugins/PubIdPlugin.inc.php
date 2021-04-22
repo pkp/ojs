@@ -16,6 +16,7 @@
 import('lib.pkp.classes.plugins.PKPPubIdPlugin');
 
 use \PKP\core\JSONMessage;
+use \PKP\submission\SubmissionFile;
 
 abstract class PubIdPlugin extends PKPPubIdPlugin {
 
@@ -263,7 +264,6 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		if (!$submissionPubIdEnabled && !$representationPubIdEnabled && !$filePubIdEnabled) return false;
 
 		$pubIdType = $this->getPubIdType();
-		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 
 		$submissionIds = Services::get('submission')->getIds([
 			'contextId' => $issue->getJournalId(),
@@ -289,7 +289,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 							$articleProofFileIds = Services::get('submissionFile')->getIds([
 								'assocTypes' => [ASSOC_TYPE_REPRESENTATION],
 								'assocIds' => [$representation->getId()],
-								'fileStages' => [SUBMISSION_FILE_PROOF],
+								'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
 							]);
 							foreach ($articleProofFileIds as $articleProofFileId) {
 								$submissionFileDao->deletePubId($articleProofFileId, $pubIdType);

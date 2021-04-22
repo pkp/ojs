@@ -15,7 +15,8 @@
 
 import('lib.pkp.classes.search.SubmissionSearchIndex');
 
-use APP\i18n\AppLocale;
+use \APP\i18n\AppLocale;
+use \PKP\submission\SubmissionFile;
 
 class ArticleSearchIndex extends SubmissionSearchIndex
 {
@@ -157,7 +158,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
             import('lib.pkp.classes.submission.SubmissionFile'); // Constants
             $submissionFilesIterator = Services::get('submissionFile')->getMany([
                 'submissionIds' => [$article->getId()],
-                'fileStages' => [SUBMISSION_FILE_PROOF],
+                'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
             ]);
             foreach ($submissionFilesIterator as $submissionFile) {
                 $this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
@@ -165,7 +166,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                     'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
                     'assocIds' => [$submissionFile->getId()],
                     'submissionIds' => [$article->getId()],
-                    'fileStages' => [SUBMISSION_FILE_DEPENDENT],
+                    'fileStages' => [SubmissionFile::SUBMISSION_FILE_DEPENDENT],
                     'includeDependentFiles' => true,
                 ]);
                 foreach ($dependentFilesIterator as $dependentFile) {

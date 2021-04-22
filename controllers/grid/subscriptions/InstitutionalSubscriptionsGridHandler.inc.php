@@ -17,6 +17,7 @@ import('controllers.grid.subscriptions.SubscriptionsGridHandler');
 
 import('controllers.grid.subscriptions.InstitutionalSubscriptionForm');
 
+use \PKP\identity\Identity;
 use PKP\core\JSONMessage;
 
 class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
@@ -109,8 +110,8 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
 
         $filterData = array_merge($filterData, [
             'fieldOptions' => [
-                IDENTITY_SETTING_GIVENNAME => 'user.givenName',
-                IDENTITY_SETTING_FAMILYNAME => 'user.familyName',
+                Identity::IDENTITY_SETTING_GIVENNAME => 'user.givenName',
+                Identity::IDENTITY_SETTING_FAMILYNAME => 'user.familyName',
                 USER_FIELD_USERNAME => 'user.username',
                 USER_FIELD_EMAIL => 'user.email',
                 SUBSCRIPTION_MEMBERSHIP => 'user.subscriptions.form.membership',

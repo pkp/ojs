@@ -17,7 +17,9 @@
 
 import('classes.article.Author');
 import('classes.submission.Submission');
-import('lib.pkp.classes.submission.PKPAuthorDAO');
+
+use \PKP\submission\PKPAuthorDAO;
+use \PKP\identity\Identity;
 
 class AuthorDAO extends PKPAuthorDAO
 {
@@ -39,10 +41,10 @@ class AuthorDAO extends PKPAuthorDAO
     {
         $locale = AppLocale::getLocale();
         $params = [
-            IDENTITY_SETTING_GIVENNAME, $locale,
-            IDENTITY_SETTING_GIVENNAME,
-            IDENTITY_SETTING_FAMILYNAME, $locale,
-            IDENTITY_SETTING_FAMILYNAME,
+            Identity::IDENTITY_SETTING_GIVENNAME, $locale,
+            Identity::IDENTITY_SETTING_GIVENNAME,
+            Identity::IDENTITY_SETTING_FAMILYNAME, $locale,
+            Identity::IDENTITY_SETTING_FAMILYNAME,
             'issueId',
         ];
         if (isset($journalId)) {
@@ -72,8 +74,8 @@ class AuthorDAO extends PKPAuthorDAO
 				COALESCE(SUBSTRING(asa${index}.setting_value FROM 1 FOR 255), ''), ' '
 			";
             $sqlJoinAuthorSettings .= "
-				LEFT JOIN author_settings asg${index} ON (asg${index}.author_id  = aa.author_id AND asg${index}.setting_name = '" . IDENTITY_SETTING_GIVENNAME . "' AND asg${index}.locale = '${locale}')
-				LEFT JOIN author_settings asf${index} ON (asf${index}.author_id  = aa.author_id AND asf${index}.setting_name = '" . IDENTITY_SETTING_FAMILYNAME . "' AND asf${index}.locale = '${locale}')
+				LEFT JOIN author_settings asg${index} ON (asg${index}.author_id  = aa.author_id AND asg${index}.setting_name = '" . Identity::IDENTITY_SETTING_GIVENNAME . "' AND asg${index}.locale = '${locale}')
+				LEFT JOIN author_settings asf${index} ON (asf${index}.author_id  = aa.author_id AND asf${index}.setting_name = '" . Identity::IDENTITY_SETTING_FAMILYNAME . "' AND asf${index}.locale = '${locale}')
 				LEFT JOIN author_settings asa${index} ON (asa${index}.author_id  = aa.author_id AND asa${index}.setting_name = 'affiliation' AND asa${index}.locale = '${locale}')
 			";
             if (isset($initial)) {
@@ -137,4 +139,15 @@ class AuthorDAO extends PKPAuthorDAO
 
         return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo);
     }
+
+    /**
+     * Get a new data object
+     *
+     * @return DataObject
+     */
+    public function newDataObject()
+    {
+        return new Author();
+    }
+
 }

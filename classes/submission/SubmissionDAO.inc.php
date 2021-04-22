@@ -15,6 +15,8 @@
  * @brief Operations for retrieving and modifying Article objects.
  */
 
+use \PKP\identity\Identity;
+
 import('classes.submission.Submission');
 import('lib.pkp.classes.submission.PKPSubmissionDAO');
 
@@ -138,8 +140,8 @@ class SubmissionDAO extends PKPSubmissionDAO
                 . ($pubIdType != null ? ' LEFT JOIN publication_settings pspidt ON (p.publication_id = pspidt.publication_id)' : '')
                 . ($title != null ? ' LEFT JOIN publication_settings pst ON (p.publication_id = pst.publication_id)' : '')
                 . ($author != null ? ' LEFT JOIN authors au ON (p.publication_id = au.publication_id)
-						LEFT JOIN author_settings asgs ON (asgs.author_id = au.author_id AND asgs.setting_name = \'' . IDENTITY_SETTING_GIVENNAME . '\')
-						LEFT JOIN author_settings asfs ON (asfs.author_id = au.author_id AND asfs.setting_name = \'' . IDENTITY_SETTING_FAMILYNAME . '\')
+						LEFT JOIN author_settings asgs ON (asgs.author_id = au.author_id AND asgs.setting_name = \'' . Identity::IDENTITY_SETTING_GIVENNAME . '\')
+						LEFT JOIN author_settings asfs ON (asfs.author_id = au.author_id AND asfs.setting_name = \'' . Identity::IDENTITY_SETTING_FAMILYNAME . '\')
 					' : '')
                 . ($pubIdSettingName != null ? ' LEFT JOIN submission_settings pss ON (s.submission_id = pss.submission_id AND pss.setting_name = ?)' : '')
             . ' WHERE	s.status = ?

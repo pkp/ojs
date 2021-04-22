@@ -16,10 +16,11 @@
  */
 
 import('classes.article.ArticleGalley');
-import('lib.pkp.classes.db.SchemaDAO');
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
-use PKP\services\PKPSchemaService;
+use \PKP\db\SchemaDAO;
+use \PKP\identity\Identity;
+use \PKP\services\PKPSchemaService;
 
 class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
 {
@@ -336,8 +337,8 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
 				' . ($pubIdType != null ? ' LEFT JOIN publication_galley_settings gs ON (g.galley_id = gs.galley_id)' : '')
                 . ($title != null ? ' LEFT JOIN publication_settings pst ON (p.publication_id = pst.publication_id)' : '')
                 . ($author != null ? ' LEFT JOIN authors au ON (p.publication_id = au.publication_id)
-						LEFT JOIN author_settings asgs ON (asgs.author_id = au.author_id AND asgs.setting_name = \'' . IDENTITY_SETTING_GIVENNAME . '\')
-						LEFT JOIN author_settings asfs ON (asfs.author_id = au.author_id AND asfs.setting_name = \'' . IDENTITY_SETTING_FAMILYNAME . '\')
+						LEFT JOIN author_settings asgs ON (asgs.author_id = au.author_id AND asgs.setting_name = \'' . Identity::IDENTITY_SETTING_GIVENNAME . '\')
+						LEFT JOIN author_settings asfs ON (asfs.author_id = au.author_id AND asfs.setting_name = \'' . Identity::IDENTITY_SETTING_FAMILYNAME . '\')
 					' : '')
                 . ($pubIdSettingName != null ? ' LEFT JOIN publication_galley_settings gss ON (g.galley_id = gss.galley_id AND gss.setting_name = ?)' : '') . '
 			WHERE
