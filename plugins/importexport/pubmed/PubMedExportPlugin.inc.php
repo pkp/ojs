@@ -259,28 +259,4 @@ class PubMedExportPlugin extends ImportExportPlugin
             'pluginName' => $this->getName()
         ]) . "\n";
     }
-
-    /**
-     * @see ImportExportPlugin::getImportFilter
-     */
-    public function getImportFilter($xmlFile)
-    {
-        throw new BadMethodCallException();
-    }
-
-    /**
-     * @see ImportExportPlugin::getExportFilter
-     */
-    public function getExportFilter($exportType)
-    {
-        throw new BadMethodCallException();
-    }
-
-    /**
-     * @see ImportExportPlugin::getAppSpecificDeployment
-     */
-    public function getAppSpecificDeployment($context, $user)
-    {
-        throw new BadMethodCallException();
-    }
 }
