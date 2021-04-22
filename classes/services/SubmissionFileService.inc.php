@@ -15,8 +15,11 @@
 
 namespace APP\Services;
 
-use Application;
-use DAORegistry;
+use \PKP\db\DAORegistry;
+use \PKP\search\SubmissionSearch;
+use \PKP\plugins\HookRegistry;
+
+use \APP\core\Application;
 
 class SubmissionFileService extends \PKP\Services\PKPSubmissionFileService
 {
@@ -25,7 +28,7 @@ class SubmissionFileService extends \PKP\Services\PKPSubmissionFileService
      */
     public function __construct()
     {
-        \HookRegistry::register('SubmissionFile::delete::before', [$this, 'deleteSubmissionFile']);
+        HookRegistry::register('SubmissionFile::delete::before', [$this, 'deleteSubmissionFile']);
     }
 
     /**
@@ -50,9 +53,8 @@ class SubmissionFileService extends \PKP\Services\PKPSubmissionFileService
                 $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
                 $galleyDao->updateObject($galley);
             }
-            import('lib.pkp.classes.search.SubmissionSearch');
             $articleSearchIndex = Application::getSubmissionSearchIndex();
-            $articleSearchIndex->deleteTextIndex($submissionFile->getData('submissionId'), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getId());
+            $articleSearchIndex->deleteTextIndex($submissionFile->getData('submissionId'), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getId());
         }
     }
 }

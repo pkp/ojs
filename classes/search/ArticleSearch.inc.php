@@ -16,7 +16,7 @@
  *
  */
 
-import('lib.pkp.classes.search.SubmissionSearch');
+use \PKP\search\SubmissionSearch;
 
 class ArticleSearch extends SubmissionSearch
 {
@@ -221,7 +221,7 @@ class ArticleSearch extends SubmissionSearch
     public function getKeywordsFromSearchFilters($searchFilters)
     {
         $indexFieldMap = $this->getIndexFieldMap();
-        $indexFieldMap[SUBMISSION_SEARCH_INDEX_TERMS] = 'indexTerms';
+        $indexFieldMap[SubmissionSearch::SUBMISSION_SEARCH_INDEX_TERMS] = 'indexTerms';
         $keywords = [];
         if (isset($searchFilters['query'])) {
             $keywords[null] = $searchFilters['query'];
@@ -343,15 +343,15 @@ class ArticleSearch extends SubmissionSearch
     public function getIndexFieldMap()
     {
         return [
-            SUBMISSION_SEARCH_AUTHOR => 'authors',
-            SUBMISSION_SEARCH_TITLE => 'title',
-            SUBMISSION_SEARCH_ABSTRACT => 'abstract',
-            SUBMISSION_SEARCH_GALLEY_FILE => 'galleyFullText',
-            SUBMISSION_SEARCH_DISCIPLINE => 'discipline',
-            SUBMISSION_SEARCH_SUBJECT => 'subject',
-            SUBMISSION_SEARCH_KEYWORD => 'keyword',
-            SUBMISSION_SEARCH_TYPE => 'type',
-            SUBMISSION_SEARCH_COVERAGE => 'coverage'
+            SubmissionSearch::SUBMISSION_SEARCH_AUTHOR => 'authors',
+            SubmissionSearch::SUBMISSION_SEARCH_TITLE => 'title',
+            SubmissionSearch::SUBMISSION_SEARCH_ABSTRACT => 'abstract',
+            SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE => 'galleyFullText',
+            SubmissionSearch::SUBMISSION_SEARCH_DISCIPLINE => 'discipline',
+            SubmissionSearch::SUBMISSION_SEARCH_SUBJECT => 'subject',
+            SubmissionSearch::SUBMISSION_SEARCH_KEYWORD => 'keyword',
+            SubmissionSearch::SUBMISSION_SEARCH_TYPE => 'type',
+            SubmissionSearch::SUBMISSION_SEARCH_COVERAGE => 'coverage'
         ];
     }
 

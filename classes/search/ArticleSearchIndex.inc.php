@@ -13,10 +13,12 @@
  * @brief Class to maintain the article search index.
  */
 
-import('lib.pkp.classes.search.SubmissionSearchIndex');
+use \PKP\search\SubmissionSearchIndex;
+use \PKP\search\SubmissionSearch;
+use \PKP\submission\SubmissionFile;
+use \PKP\search\SearchFileParser;
 
 use \APP\i18n\AppLocale;
-use \PKP\submission\SubmissionFile;
 
 class ArticleSearchIndex extends SubmissionSearchIndex
 {
@@ -53,15 +55,15 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // Update search index
         import('classes.search.ArticleSearch');
         $submissionId = $submission->getId();
-        $this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_AUTHOR, $authorText);
-        $this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TITLE, $publication->getFullTitles());
-        $this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_ABSTRACT, $publication->getData('abstract'));
+        $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_AUTHOR, $authorText);
+        $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_TITLE, $publication->getFullTitles());
+        $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_ABSTRACT, $publication->getData('abstract'));
 
-        $this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_SUBJECT, (array) $this->_flattenLocalizedArray($publication->getData('subjects')));
-        $this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_KEYWORD, (array) $this->_flattenLocalizedArray($publication->getData('keywords')));
-        $this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_DISCIPLINE, (array) $this->_flattenLocalizedArray($publication->getData('disciplines')));
-        $this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TYPE, (array) $publication->getData('type'));
-        $this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_COVERAGE, (array) $publication->getData('coverage'));
+        $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_SUBJECT, (array) $this->_flattenLocalizedArray($publication->getData('subjects')));
+        $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_KEYWORD, (array) $this->_flattenLocalizedArray($publication->getData('keywords')));
+        $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_DISCIPLINE, (array) $this->_flattenLocalizedArray($publication->getData('disciplines')));
+        $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_TYPE, (array) $publication->getData('type'));
+        $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_COVERAGE, (array) $publication->getData('coverage'));
         // FIXME Index sponsors too?
     }
 
@@ -132,7 +134,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     public function clearSubmissionFiles($submission)
     {
         $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
-        $searchDao->deleteSubmissionKeywords($submission->getId(), SUBMISSION_SEARCH_GALLEY_FILE);
+        $searchDao->deleteSubmissionKeywords($submission->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE);
     }
 
     /**
@@ -161,7 +163,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
             ]);
             foreach ($submissionFilesIterator as $submissionFile) {
-                $this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
+                $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
                 $dependentFilesIterator = Services::get('submissionFile')->getMany([
                     'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
                     'assocIds' => [$submissionFile->getId()],
@@ -170,7 +172,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                     'includeDependentFiles' => true,
                 ]);
                 foreach ($dependentFilesIterator as $dependentFile) {
-                    $this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $dependentFile);
+                    $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $dependentFile);
                 }
             }
         }
