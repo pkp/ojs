@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-22 18:24+0000\n"
+"PO-Revision-Date: 2021-04-22 20:04+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "gl_ES/>\n"
@@ -311,3 +311,21 @@ msgid "author.submit.coverageInstructions"
 msgstr ""
 "Fai referencia a unha localización xeoespacial, unha cobertura cronolóxica "
 "ou histórica, e/ou ás características dunha mostraxe  de pescuda."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Introduza unha descrición."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Introduza o título deste arquivo adicional."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Non se cargou ningún arquivo."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Especificar outro"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Nome do estudo ou outro punto de orixe."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Data en que se recompilaron os datos ou se creou o instrumento"
