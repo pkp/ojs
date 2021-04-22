@@ -15,7 +15,9 @@
  * @brief Describes an entry in the submission history log.
  */
 
-import('lib.pkp.classes.log.PKPSubmissionEventLogEntry');
+namespace APP\log;
+
+use \PKP\log\PKPSubmissionEventLogEntry;
 
 // Log entry associative types. All types must be defined here
 
@@ -70,4 +72,8 @@ define('SUBMISSION_LOG_LAYOUT_GALLEY_UNAVAILABLE', 0x70000007);
 
 class SubmissionEventLogEntry extends PKPSubmissionEventLogEntry
 {
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\log\SubmissionEventLogEntry', '\SubmissionEventLogEntry');
 }
