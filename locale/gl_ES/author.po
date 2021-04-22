@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-22 01:40+0000\n"
+"PO-Revision-Date: 2021-04-22 18:24+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "gl_ES/>\n"
@@ -183,3 +183,131 @@ msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
 "Se solicita a exención da cota, deberá introducir o motivo no espazo "
 "disposto para este efecto."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Utilizar só con materiais oficialmente publicados."
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Presentar o arquivo (sen metadatos) aos revisores/as, de xeito que non "
+"comprometa a avaliación anónima."
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Descrición breve"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Texto orixinal"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Conxunto de datos"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Análise de datos"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transcricións"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Resultados da investigación"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Materiais de investigación"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Ferramenta de investigación"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Creador/a (ou propietario/a) do arquivo"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Arquivo adicional"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Para indexar este material adicional, proporcione os seguintes metadatos a "
+"cada arquivo adicional cargado"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metadatos do arquivo adicional"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Editar un arquivo adicional"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Engadir un arquivo adicional"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Cargar arquivo adicional"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Está seguro/a de que quere eliminar este arquivo adicional?"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Volver a arquivos adicionais"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Non se engadiu ningún arquivo adicional a este envío."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Está seguro/a de querer continuar sen cargar o arquivo adicional que "
+"seleccionou?"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Faga clic en Gardar para cargar o arquivo (a continuación poderanse cargar "
+"os aquivos adicionais)."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Este paso opcional permite engadir arquivos adicionais ao envío. Estes "
+"archivos, que poden estar en calquera formato, poden incluír (a) ferramentas "
+"de investigación; (b) conxuntos de datos conformes aos termos da revisión "
+"ética da investigación; (c) fontes que doutro xeito non estarían dispoñibles "
+"para os lectores/as, (d) figuras e táboas que non se poden integrar no "
+"texto, ou otros materiais que engaden unha\n"
+"achega ao traballo."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Está seguro/a de querer continuar sen cargar un arquivo de envío?"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Non se cargou ningún arquivo de envío."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Substituír o arquivo de envío"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Cargar o arquivo de envío"
+
+msgid "author.submit.submissionFile"
+msgstr "Arquivo de envío"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"Excedeu o límite máximo de palabras permitido para resumos nesta parte da "
+"sección."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Introduza o resumo do seu artigo."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Introduza o título do seu artigo."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr ""
+"Cómpre inserir o nome, os apelidos e o enderezo de correo electrónico de "
+"cada autor/a."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Requírese polo menos un autor."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Inglés=en; francés=fr; español=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Códigos adicionais</a>."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Fai referencia a unha localización xeoespacial, unha cobertura cronolóxica "
+"ou histórica, e/ou ás características dunha mostraxe  de pescuda."
