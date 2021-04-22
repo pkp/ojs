@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-19 08:54+0000\n"
+"PO-Revision-Date: 2021-04-22 01:40+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "ja_JP/>\n"
@@ -144,7 +144,7 @@ msgid "author.submit.reorderInstructions"
 msgstr "出版物に掲載される著者の並びを再度並び替える。"
 
 msgid "submission.submit.privacyStatement"
-msgstr "この雑誌のプライバシー情報の扱いについて"
+msgstr "この雑誌の個人情報の扱いについて"
 
 msgid "author.submit.form.localeRequired"
 msgstr "投稿言語を選択してください。"
