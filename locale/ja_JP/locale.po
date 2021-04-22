@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-16 05:57+0000\n"
+"PO-Revision-Date: 2021-04-22 01:40+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
@@ -1378,7 +1378,7 @@ msgstr "登録する雑誌の個人情報保護方針に同意する必要があ
 msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
 "はい、本誌の<a href=\"{$privacyUrl}\" target=\"_blank\""
-">個人情報保護方針</a>に従ってデータの収集・保存に同意します。"
+">個人情報の扱いについて</a>に従ってデータの収集・保存に同意します。"
 
 msgid "user.register.form.emailConsentAllContexts"
 msgstr "はい、登録したすべての雑誌の新しい新刊とお知らせについて通知を受け取りたいです。"
