@@ -21,6 +21,8 @@
  * @brief Article class.
  */
 
+namespace APP\submission;
+
 // Author display in ToC
 define('AUTHOR_TOC_DEFAULT', 0);
 define('AUTHOR_TOC_HIDE', 1);
@@ -31,6 +33,8 @@ define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);
 define('ARTICLE_ACCESS_OPEN', 1);
 
 use \PKP\submission\PKPSubmission;
+
+use \APP\core\Application;
 
 class Submission extends PKPSubmission
 {
@@ -319,3 +323,8 @@ class Submission extends PKPSubmission
         return $publication->getData('hideAuthor');
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\Submission', '\Submission');
+}
+
