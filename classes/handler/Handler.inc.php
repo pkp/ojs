@@ -13,8 +13,14 @@
  * @brief Base request handler application class
  */
 
-import('lib.pkp.classes.handler.PKPHandler');
+namespace APP\handler;
+
+use \PKP\handler\PKPHandler;
 
 class Handler extends PKPHandler
 {
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\handler\Handler', '\Handler');
 }

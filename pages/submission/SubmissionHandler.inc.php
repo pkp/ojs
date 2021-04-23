@@ -13,7 +13,7 @@
  * @brief Handle requests for the submission wizard.
  */
 
-import('classes.handler.Handler');
+use APP\handler\Handler;
 import('lib.pkp.pages.submission.PKPSubmissionHandler');
 
 

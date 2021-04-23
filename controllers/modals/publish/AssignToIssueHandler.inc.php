@@ -15,7 +15,7 @@
  */
 
 // Import the base Handler.
-import('classes.handler.Handler');
+use APP\handler\Handler;
 
 use PKP\core\JSONMessage;
 

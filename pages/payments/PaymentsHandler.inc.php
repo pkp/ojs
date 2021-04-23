@@ -13,7 +13,7 @@
  * @brief Handle requests for payment management.
  */
 
-import('classes.handler.Handler');
+use APP\handler\Handler;
 
 use PKP\core\JSONMessage;
 

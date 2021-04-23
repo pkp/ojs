@@ -13,7 +13,7 @@
  * @brief Handle AJAX operations for review round tabs on review stages workflow pages.
  */
 
-import('classes.handler.Handler');
+use APP\handler\Handler;
 
 // Import the base class.
 import('lib.pkp.classes.controllers.tab.workflow.PKPReviewRoundTabHandler');

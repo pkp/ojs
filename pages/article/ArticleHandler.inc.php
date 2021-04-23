@@ -18,7 +18,7 @@ use \PKP\submission\SubmissionFile;
 
 use \APP\template\TemplateManager;
 
-import('classes.handler.Handler');
+use APP\handler\Handler;
 
 use Firebase\JWT\JWT;
 
