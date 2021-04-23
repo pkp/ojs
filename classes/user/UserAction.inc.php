@@ -15,7 +15,10 @@
  * @brief UserAction class.
  */
 
-import('lib.pkp.classes.user.PKPUserAction');
+namespace APP\user;
+
+use \PKP\user\PKPUserAction;
+use \PKP\db\DAORegistry;
 
 class UserAction extends PKPUserAction
 {

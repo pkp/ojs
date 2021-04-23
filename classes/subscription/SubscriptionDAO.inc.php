@@ -16,6 +16,7 @@
  */
 
 use \PKP\identity\Identity;
+use \PKP\user\UserDAO;
 
 import('classes.subscription.Subscription');
 import('classes.subscription.SubscriptionType');
@@ -259,7 +260,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
                 }
                 $params[] = $search;
                 break;
-            case USER_FIELD_USERNAME:
+            case UserDAO::USER_FIELD_USERNAME:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(u.username) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
@@ -271,7 +272,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
                 }
                 $params[] = $search;
                 break;
-            case USER_FIELD_EMAIL:
+            case UserDAO::USER_FIELD_EMAIL:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(u.email) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {

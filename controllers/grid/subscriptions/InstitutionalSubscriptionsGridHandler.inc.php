@@ -18,7 +18,8 @@ import('controllers.grid.subscriptions.SubscriptionsGridHandler');
 import('controllers.grid.subscriptions.InstitutionalSubscriptionForm');
 
 use \PKP\identity\Identity;
-use PKP\core\JSONMessage;
+use \PKP\core\JSONMessage;
+use \PKP\user\UserDAO;
 
 class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
 {
@@ -112,8 +113,8 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
             'fieldOptions' => [
                 Identity::IDENTITY_SETTING_GIVENNAME => 'user.givenName',
                 Identity::IDENTITY_SETTING_FAMILYNAME => 'user.familyName',
-                USER_FIELD_USERNAME => 'user.username',
-                USER_FIELD_EMAIL => 'user.email',
+                UserDAO::USER_FIELD_USERNAME => 'user.username',
+                UserDAO::USER_FIELD_EMAIL => 'user.email',
                 SUBSCRIPTION_MEMBERSHIP => 'user.subscriptions.form.membership',
                 SUBSCRIPTION_REFERENCE_NUMBER => 'manager.subscriptions.form.referenceNumber',
                 SUBSCRIPTION_NOTES => 'manager.subscriptions.form.notes',

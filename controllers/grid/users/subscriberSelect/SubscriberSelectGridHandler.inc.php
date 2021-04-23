@@ -16,6 +16,8 @@
 import('lib.pkp.classes.controllers.grid.GridHandler');
 import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
 
+use \PKP\user\UserDAO;
+
 class SubscriberSelectGridHandler extends GridHandler
 {
     /** @var array (user group ID => user group name) **/
@@ -167,7 +169,7 @@ class SubscriberSelectGridHandler extends GridHandler
             $user = $userDao->getById($userId);
             return [
                 'userGroup' => null,
-                'searchField' => USER_FIELD_USERNAME,
+                'searchField' => UserDAO::USER_FIELD_USERNAME,
                 'searchMatch' => 'is',
                 'search' => $user->getUsername(),
             ];
