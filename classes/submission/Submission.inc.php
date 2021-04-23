@@ -35,6 +35,7 @@ define('ARTICLE_ACCESS_OPEN', 1);
 use \PKP\submission\PKPSubmission;
 
 use \APP\core\Application;
+use \APP\core\Services;
 
 class Submission extends PKPSubmission
 {
