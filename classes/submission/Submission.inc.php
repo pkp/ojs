@@ -33,9 +33,11 @@ define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);
 define('ARTICLE_ACCESS_OPEN', 1);
 
 use \PKP\submission\PKPSubmission;
+use \PKP\db\DAORegistry;
 
 use \APP\core\Application;
 use \APP\core\Services;
+use \APP\i18n\AppLocale;
 
 class Submission extends PKPSubmission
 {
