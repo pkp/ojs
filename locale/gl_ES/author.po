@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-22 20:04+0000\n"
+"PO-Revision-Date: 2021-04-23 10:48+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "gl_ES/>\n"
@@ -329,3 +329,39 @@ msgstr "Nome do estudo ou outro punto de orixe."
 
 msgid "author.submit.suppFile.dateDescription"
 msgstr "Data en que se recompilaron os datos ou se creou o instrumento"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Arquivo do autor/a"
+
+msgid "author.article.copyeditedFile"
+msgstr "Arquivo corrixido"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Cargar a versión do autor/a"
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Envío completado. Grazas polo seu interese en publicar en {$journalTitle}."
+
+msgid "author.submit.finishSubmission"
+msgstr "Finalizar o envío"
+
+msgid "author.submit.filesSummary"
+msgstr "Resumo do arquivo"
+
+msgid "author.submit.noFiles"
+msgstr "Non se anexou  ningún arquivo a este envío."
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"Para enviar o seu manuscrito a {$journalTitle} faga clic en Finalizar envío. "
+"O contacto principal do envío recibirá un xustificante de recepción por "
+"correo electrónico e poderá ver o progreso do envío no proceso editorial "
+"iniciando sesión no sitio web da revista. Grazas polo seu interese en "
+"publicar en {$journalTitle}."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Identificador público do arquivo adicional"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "A identificación pública do arquivo adicional xa existe."
