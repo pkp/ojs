@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-23 11:22+0000\n"
+"PO-Revision-Date: 2021-04-23 23:04+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-developedBy/gl_ES/>\n"
@@ -13,3 +13,10 @@ msgstr ""
 
 msgid "plugins.block.developedBy.displayName"
 msgstr "Bloque \"Desenvolvido por\""
+
+msgid "plugins.block.developedBy.blockTitle"
+msgstr "Desenvolvido por"
+
+msgid "plugins.block.developedBy.description"
+msgstr ""
+"Este complemento proporciona un enlace \"Desenvolvido por\" na barra lateral."
