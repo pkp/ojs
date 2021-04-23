@@ -14,7 +14,11 @@
  *
  * @brief Operations for retrieving and modifying submission files
  */
-import('lib.pkp.classes.submission.PKPSubmissionFileDAO');
+
+namespace APP\submission;
+
+use \PKP\submission\PKPSubmissionFileDAO;
+use \PKP\db\DAORegistry;
 
 class SubmissionFileDAO extends PKPSubmissionFileDAO
 {
@@ -38,3 +42,8 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO
         return $submissionFile->getId();
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\SubmissionFileDAO', '\SubmissionFileDAO');
+}
+
