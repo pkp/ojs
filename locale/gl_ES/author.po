@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-23 10:48+0000\n"
+"PO-Revision-Date: 2021-04-23 11:22+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "gl_ES/>\n"
@@ -19,7 +19,7 @@ msgid "author.submit.requestWaiver"
 msgstr "Solicitude de exención de cotas"
 
 msgid "author.submit.notAccepting"
-msgstr "Esta revista non acepta envíos neste momento"
+msgstr "Esta revista non acepta envíos neste momento."
 
 msgid "submission.submit.cancelSubmission"
 msgstr ""
@@ -225,7 +225,7 @@ msgstr "Arquivo adicional"
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
 "Para indexar este material adicional, proporcione os seguintes metadatos a "
-"cada arquivo adicional cargado"
+"cada arquivo adicional cargado."
 
 msgid "author.submit.supplementaryFileData"
 msgstr "Metadatos do arquivo adicional"
@@ -328,7 +328,7 @@ msgid "author.submit.suppFile.sourceDescription"
 msgstr "Nome do estudo ou outro punto de orixe."
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr "Data en que se recompilaron os datos ou se creou o instrumento"
+msgstr "Data en que se recompilaron os datos ou se creou o instrumento."
 
 msgid "author.article.authorRevisedFile"
 msgstr "Arquivo do autor/a"
@@ -365,3 +365,13 @@ msgstr "Identificador público do arquivo adicional"
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
 msgstr "A identificación pública do arquivo adicional xa existe."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Introduza un tema."
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Cómpre ter unha conta de usuario/a para realizar envíos a esta revista. Isto "
+"permite aos editores/as facer un seguimiento dos seus envíos e participarlle "
+"os cambios no estado destes ou, de ser necesario,  pedirlle información "
+"adicional."
