@@ -15,9 +15,16 @@
  *
  */
 
+namespace APP\template;
+
+use \PKP\template\PKPTemplateManager;
+
+use \APP\core\Application;
+
+// FIXME: Add namespacing
+use \PublicFileManager;
 import('classes.search.ArticleSearch');
 import('classes.file.PublicFileManager');
-import('lib.pkp.classes.template.PKPTemplateManager');
 
 class TemplateManager extends PKPTemplateManager
 {
@@ -54,7 +61,7 @@ class TemplateManager extends PKPTemplateManager
                 $this->addStyleSheet(
                     'siteStylesheet',
                     $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . $site->getData('styleSheet')['uploadName'],
-                    ['priority' => STYLE_SEQUENCE_LATE]
+                    ['priority' => self::STYLE_SEQUENCE_LATE]
                 );
             }
             if (isset($context)) {
@@ -151,4 +158,8 @@ class TemplateManager extends PKPTemplateManager
 
         $this->setState(['menu' => $menu]);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\template\TemplateManager', '\TemplateManager');
 }

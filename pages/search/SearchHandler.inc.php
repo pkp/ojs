@@ -16,6 +16,8 @@
 import('classes.search.ArticleSearch');
 import('classes.handler.Handler');
 
+use \APP\template\TemplateManager;
+
 class SearchHandler extends Handler
 {
     /**
@@ -145,7 +147,7 @@ class SearchHandler extends Handler
         // Prepare and display the search template.
         $this->setupTemplate($request);
         $templateMgr = TemplateManager::getManager($request);
-        $templateMgr->setCacheability(CACHEABILITY_NO_STORE);
+        $templateMgr->setCacheability(TemplateManager::CACHEABILITY_NO_STORE);
 
         // Result set ordering options.
         $orderByOptions = $articleSearch->getResultSetOrderingOptions($request);
@@ -328,7 +330,7 @@ class SearchHandler extends Handler
         $templateMgr = TemplateManager::getManager($request);
         $journal = $request->getJournal();
         if (!$journal || !$journal->getData('restrictSiteAccess')) {
-            $templateMgr->setCacheability(CACHEABILITY_PUBLIC);
+            $templateMgr->setCacheability(TemplateManager::CACHEABILITY_PUBLIC);
         }
     }
 }
