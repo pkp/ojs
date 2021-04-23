@@ -18,6 +18,8 @@
 import('lib.pkp.classes.form.Form');
 import('classes.issue.Issue'); // Bring in constants
 
+use \APP\template\TemplateManager;
+
 class IssueAccessForm extends Form
 {
     /** @var Issue current issue */

@@ -19,6 +19,8 @@ import('classes.handler.Handler');
 
 use PKP\core\JSONMessage;
 
+use \APP\template\TemplateManager;
+
 class AssignToIssueHandler extends Handler
 {
     /** @var Submission **/

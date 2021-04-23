@@ -18,6 +18,8 @@ import('lib.pkp.classes.plugins.GatewayPlugin');
 
 use PKP\db\DBResultRange;
 
+use \APP\template\TemplateManager;
+
 class AnnouncementFeedGatewayPlugin extends GatewayPlugin
 {
     protected $_parentPlugin;

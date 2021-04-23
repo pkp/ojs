@@ -16,6 +16,8 @@
 // Import the base Handler.
 import('lib.pkp.controllers.tab.workflow.PKPWorkflowTabHandler');
 
+use \APP\template\TemplateManager;
+
 class WorkflowTabHandler extends PKPWorkflowTabHandler
 {
     /**

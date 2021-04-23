@@ -17,6 +17,8 @@
 
 import('lib.pkp.classes.form.Form');
 
+use \APP\template\TemplateManager;
+
 class IssueGalleyForm extends Form
 {
     /** @var Issue the issue the galley belongs to */

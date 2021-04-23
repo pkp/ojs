@@ -17,6 +17,8 @@ import('lib.pkp.classes.form.Form');
 
 use \PKP\mail\MailTemplate;
 
+use \APP\template\TemplateManager;
+
 class SubscriptionForm extends Form
 {
     /** @var Subscription the subscription being created/edited */

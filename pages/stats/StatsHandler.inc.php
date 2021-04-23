@@ -15,6 +15,8 @@
 
 import('lib.pkp.pages.stats.PKPStatsHandler');
 
+use \APP\template\TemplateManager;
+
 class StatsHandler extends PKPStatsHandler
 {
     /**

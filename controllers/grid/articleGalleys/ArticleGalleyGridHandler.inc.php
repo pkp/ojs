@@ -21,6 +21,8 @@ import('lib.pkp.classes.linkAction.request.AjaxModal');
 
 use PKP\core\JSONMessage;
 
+use \APP\template\TemplateManager;
+
 class ArticleGalleyGridHandler extends GridHandler
 {
     /** @var PKPRequest */

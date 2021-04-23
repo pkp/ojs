@@ -16,6 +16,8 @@
 import('classes.issue.IssueAction');
 import('classes.handler.Handler');
 
+use \APP\template\TemplateManager;
+
 class IssueHandler extends Handler
 {
     /** @var IssueGalley retrieved issue galley */

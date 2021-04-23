@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.plugins.ImportExportPlugin');
 
+use \APP\template\TemplateManager;
+
 class PubMedExportPlugin extends ImportExportPlugin
 {
     /**

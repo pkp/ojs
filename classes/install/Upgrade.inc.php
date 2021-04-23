@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\DB;
 use \PKP\identity\Identity;
 use \PKP\submission\SubmissionFile;
 
+use \APP\template\TemplateManager;
+
 import('lib.pkp.classes.install.Installer');
 
 class Upgrade extends Installer

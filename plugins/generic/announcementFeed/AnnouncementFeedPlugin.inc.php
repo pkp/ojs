@@ -17,6 +17,8 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 use PKP\core\JSONMessage;
 
+use \APP\template\TemplateManager;
+
 class AnnouncementFeedPlugin extends GenericPlugin
 {
     /**

@@ -15,6 +15,8 @@
 
 use \PKP\mail\MailTemplate;
 
+use \APP\template\TemplateManager;
+
 import('lib.pkp.classes.plugins.PaymethodPlugin');
 
 class ManualPaymentPlugin extends PaymethodPlugin

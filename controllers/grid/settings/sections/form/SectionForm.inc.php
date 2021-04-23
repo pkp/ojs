@@ -15,6 +15,8 @@
 
 import('lib.pkp.controllers.grid.settings.sections.form.PKPSectionForm');
 
+use \APP\template\TemplateManager;
+
 class SectionForm extends PKPSectionForm
 {
     /**

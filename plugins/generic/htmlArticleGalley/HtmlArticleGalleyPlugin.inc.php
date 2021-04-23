@@ -17,6 +17,8 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 use \PKP\submission\SubmissionFile;
 
+use \APP\template\TemplateManager;
+
 class HtmlArticleGalleyPlugin extends GenericPlugin
 {
     /**

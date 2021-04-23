@@ -21,6 +21,8 @@ define('NMI_TYPE_MY_SUBSCRIPTIONS', 'NMI_TYPE_MY_SUBSCRIPTIONS');
 define('NMI_TYPE_CURRENT', 'NMI_TYPE_CURRENT');
 define('NMI_TYPE_ARCHIVES', 'NMI_TYPE_ARCHIVES');
 
+use \APP\template\TemplateManager;
+
 class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService
 {
     /**

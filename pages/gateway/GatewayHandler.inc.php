@@ -15,6 +15,8 @@
 
 import('classes.handler.Handler');
 
+use \APP\template\TemplateManager;
+
 class GatewayHandler extends Handler
 {
     public $plugin;

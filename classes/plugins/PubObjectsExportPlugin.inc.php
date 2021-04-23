@@ -31,6 +31,8 @@ define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
 use \PKP\core\JSONMessage;
 
+use \APP\template\TemplateManager;
+
 abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/** @var PubObjectCache */
 	var $_cache;

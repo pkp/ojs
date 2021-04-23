@@ -15,6 +15,8 @@
 
 import('lib.pkp.controllers.grid.pubIds.form.PKPAssignPublicIdentifiersForm');
 
+use \APP\template\TemplateManager;
+
 class AssignPublicIdentifiersForm extends PKPAssignPublicIdentifiersForm
 {
     /**

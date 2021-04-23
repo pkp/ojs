@@ -16,6 +16,8 @@
 // Import the base ManagementHandler.
 import('lib.pkp.pages.management.ManagementHandler');
 
+use \APP\template\TemplateManager;
+
 class SettingsHandler extends ManagementHandler
 {
     /**

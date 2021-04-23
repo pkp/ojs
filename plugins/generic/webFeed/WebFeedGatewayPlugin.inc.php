@@ -16,6 +16,8 @@
 
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
+use \APP\template\TemplateManager;
+
 class WebFeedGatewayPlugin extends GatewayPlugin
 {
     /** @var WebFeedPlugin Parent plugin */

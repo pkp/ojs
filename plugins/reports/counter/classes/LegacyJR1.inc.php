@@ -12,6 +12,8 @@
  * @brief The Legacy COUNTER JR1 (r3) report
  */
 
+use \APP\template\TemplateManager;
+
 class LegacyJR1
 {
     /**

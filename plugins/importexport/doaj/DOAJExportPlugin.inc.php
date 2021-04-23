@@ -23,6 +23,8 @@ define('DOAJ_API_URL', 'https://doaj.org/api/v2/');
 define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/v2/');
 define('DOAJ_API_OPERATION', 'articles');
 
+use \APP\template\TemplateManager;
+
 class DOAJExportPlugin extends PubObjectsExportPlugin
 {
     /**

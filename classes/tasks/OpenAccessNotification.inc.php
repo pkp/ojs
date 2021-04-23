@@ -17,6 +17,8 @@ import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
 use \PKP\mail\MailTemplate;
 
+use \APP\template\TemplateManager;
+
 class OpenAccessNotification extends ScheduledTask
 {
     /**

@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.form.Form');
 
+use \APP\template\TemplateManager;
+
 class AnnouncementFeedSettingsForm extends Form
 {
     /** @var int */

@@ -20,6 +20,7 @@ namespace APP\template;
 use \PKP\template\PKPTemplateManager;
 
 use \APP\core\Application;
+use \APP\template\TemplateManager;
 
 // FIXME: Add namespacing
 use \PublicFileManager;

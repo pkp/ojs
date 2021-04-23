@@ -20,6 +20,8 @@ define('COUNTER_CLASS_SUFFIX', '.inc.php');
 import('lib.pkp.classes.plugins.ReportPlugin');
 import('plugins.reports.counter.classes.CounterReport');
 
+use \APP\template\TemplateManager;
+
 class CounterReportPlugin extends ReportPlugin
 {
     /**

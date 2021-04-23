@@ -21,6 +21,8 @@ define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
 // The name of the setting used to save the registered DOI.
 define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
 
+use \APP\template\TemplateManager;
+
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	/**
 	 * @copydoc ImportExportPlugin::display()

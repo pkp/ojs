@@ -21,6 +21,8 @@ import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 
 import('classes.issue.Issue'); // Bring in constants
 
+use \APP\template\TemplateManager;
+
 class IssueForm extends Form
 {
     /** @var Issue current issue */

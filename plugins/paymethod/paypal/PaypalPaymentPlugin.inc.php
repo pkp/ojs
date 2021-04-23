@@ -16,6 +16,8 @@
 import('lib.pkp.classes.plugins.PaymethodPlugin');
 require_once(dirname(__FILE__) . '/vendor/autoload.php');
 
+use \APP\template\TemplateManager;
+
 class PaypalPaymentPlugin extends PaymethodPlugin
 {
     /**

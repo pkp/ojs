@@ -15,6 +15,8 @@
 
 import('lib.pkp.pages.user.PKPUserHandler');
 
+use \APP\template\TemplateManager;
+
 class UserHandler extends PKPUserHandler
 {
     /**

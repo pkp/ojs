@@ -16,6 +16,8 @@
 
 import('lib.pkp.classes.form.Form');
 
+use \APP\template\TemplateManager;
+
 class URNSettingsForm extends Form
 {
     //

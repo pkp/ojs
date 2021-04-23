@@ -18,6 +18,8 @@ import('lib.pkp.pages.workflow.PKPWorkflowHandler');
 // Access decision actions constants.
 import('classes.workflow.EditorDecisionActionsManager');
 
+use \APP\template\TemplateManager;
+
 class WorkflowHandler extends PKPWorkflowHandler
 {
     /**

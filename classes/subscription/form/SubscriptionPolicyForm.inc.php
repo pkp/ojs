@@ -24,6 +24,8 @@ define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MAX', '3');
 
 import('lib.pkp.classes.form.Form');
 
+use \APP\template\TemplateManager;
+
 
 class SubscriptionPolicyForm extends Form
 {

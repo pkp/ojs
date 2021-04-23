@@ -17,6 +17,8 @@ import('classes.handler.Handler');
 
 use PKP\core\JSONMessage;
 
+use \APP\template\TemplateManager;
+
 class PaymentsHandler extends Handler
 {
     /** @copydoc PKPHandler::_isBackendPage */

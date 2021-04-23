@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
+use \APP\template\TemplateManager;
+
 class ResolverPlugin extends GatewayPlugin
 {
     /**

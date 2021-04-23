@@ -15,6 +15,8 @@
 
 import('classes.handler.Handler');
 
+use \APP\template\TemplateManager;
+
 class ManageIssuesHandler extends Handler
 {
     /** issue associated with the request **/

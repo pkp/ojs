@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
+use \APP\template\TemplateManager;
+
 class DublinCoreMetaPlugin extends GenericPlugin
 {
     /**

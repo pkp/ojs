@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.form.Form');
 
+use \APP\template\TemplateManager;
+
 class SubscriptionTypeForm extends Form
 {
     /** @var int $typeId the ID of the subscription type being edited */
