@@ -14,7 +14,15 @@
  *
  * @brief Class for Publication.
  */
-import('lib.pkp.classes.publication.PKPPublication');
+
+namespace APP\publication;
+
+use \PKP\publication\PKPPublication;
+
+use \APP\core\Application;
+
+// FIXME: Add namespacing
+use \PublicFileManager;
 
 class Publication extends PKPPublication
 {
@@ -43,3 +51,8 @@ class Publication extends PKPPublication
         ]);
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\publication\Publication', '\Publication');
+}
+
