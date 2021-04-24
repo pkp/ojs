@@ -15,7 +15,9 @@
 
 import('lib.pkp.classes.plugins.ImportExportPlugin');
 
-use \APP\template\TemplateManager;
+use PKP\file\FileManager;
+
+use APP\template\TemplateManager;
 
 class PubMedExportPlugin extends ImportExportPlugin
 {
@@ -106,7 +108,6 @@ class PubMedExportPlugin extends ImportExportPlugin
                     $request->getContext(),
                     $request->getUser()
                 );
-                import('lib.pkp.classes.file.FileManager');
                 $fileManager = new FileManager();
                 $exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $context, '.xml');
                 $fileManager->writeFile($exportFileName, $exportXml);
@@ -119,7 +120,6 @@ class PubMedExportPlugin extends ImportExportPlugin
                     $request->getContext(),
                     $request->getUser()
                 );
-                import('lib.pkp.classes.file.FileManager');
                 $fileManager = new FileManager();
                 $exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $context, '.xml');
                 $fileManager->writeFile($exportFileName, $exportXml);

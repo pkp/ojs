@@ -18,7 +18,8 @@ import('lib.pkp.pages.workflow.PKPWorkflowHandler');
 // Access decision actions constants.
 import('classes.workflow.EditorDecisionActionsManager');
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+use APP\file\PublicFileManager;
 
 class WorkflowHandler extends PKPWorkflowHandler
 {
@@ -72,7 +73,6 @@ class WorkflowHandler extends PKPWorkflowHandler
         $temporaryFileApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getPath(), 'temporaryFiles');
         $issueApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getData('urlPath'), 'issues/__issueId__');
 
-        import('classes.file.PublicFileManager');
         $publicFileManager = new PublicFileManager();
         $baseUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($submissionContext->getId());
 

@@ -17,7 +17,8 @@
 
 import('lib.pkp.classes.form.Form');
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+use APP\file\IssueFileManager;
 
 class IssueGalleyForm extends Form
 {
@@ -167,7 +168,6 @@ class IssueGalleyForm extends Form
      */
     public function execute(...$functionArgs)
     {
-        import('classes.file.IssueFileManager');
         $issueFileManager = new IssueFileManager($this->_issue->getId());
 
         $request = Application::get()->getRequest();

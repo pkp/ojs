@@ -17,6 +17,8 @@
 
 import('classes.issue.IssueGalley');
 
+use \APP\file\IssueFileManager;
+
 class IssueGalleyDAO extends \PKP\db\DAO
 {
     /**
@@ -368,7 +370,6 @@ class IssueGalleyDAO extends \PKP\db\DAO
         if (isset($issueId)) {
             // Delete the file
             $issueGalley = $this->getById($galleyId);
-            import('classes.file.IssueFileManager');
             $issueFileManager = new IssueFileManager($issueId);
             $issueFileManager->deleteById($issueGalley->getFileId());
 

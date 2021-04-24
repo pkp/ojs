@@ -21,7 +21,8 @@ import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 
 import('classes.issue.Issue'); // Bring in constants
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+use APP\file\PublicFileManager;
 
 class IssueForm extends Form
 {
@@ -126,7 +127,6 @@ class IssueForm extends Form
             $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
             $temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 
-            import('classes.file.PublicFileManager');
             $publicFileManager = new PublicFileManager();
             if (!$publicFileManager->getImageExtension($temporaryFile->getFileType())) {
                 $this->addError('coverImage', __('editor.issues.invalidCoverImageFormat'));
@@ -275,7 +275,6 @@ class IssueForm extends Form
             $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
             $temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 
-            import('classes.file.PublicFileManager');
             $publicFileManager = new PublicFileManager();
             $newFileName = 'cover_issue_' . $issue->getId() . '_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
             $journal = $request->getJournal();

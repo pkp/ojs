@@ -15,10 +15,12 @@
 
 use Illuminate\Support\Facades\DB;
 
-use \PKP\identity\Identity;
-use \PKP\submission\SubmissionFile;
+use PKP\identity\Identity;
+use PKP\submission\SubmissionFile;
+use PKP\file\FileManager;
 
-use \APP\template\TemplateManager;
+use APP\file\PublicFileManager;
+use APP\template\TemplateManager;
 
 import('lib.pkp.classes.install.Installer');
 
@@ -428,7 +430,6 @@ class Upgrade extends Installer
      */
     public function moveReviewerFiles()
     {
-        import('lib.pkp.classes.file.FileManager');
         $fileManager = new FileManager();
         $fileRows = DB::table('review_assignments as ra')
             ->leftJoin('submissions as s', 's.submission_id', '=', 'ra.submission_id')
@@ -665,7 +666,6 @@ class Upgrade extends Installer
             $submissions = $submissionDao->getByContextId($context->getId());
             while ($submission = $submissions->next()) {
                 $submissionDir = Services::get('submissionFile')->getSubmissionDir($context->getId(), $submission->getId());
-                import('lib.pkp.classes.file.FileManager');
                 $fileManager = new FileManager();
                 $rows = DB::table('submission_files')
                     ->where('submission_id', '=', $submission->getId())
@@ -724,8 +724,6 @@ class Upgrade extends Installer
         $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
         $genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
 
-        import('lib.pkp.classes.file.FileManager');
-
         $fileManager = new FileManager();
         $journals = $journalDao->getAll();
         while ($journal = $journals->next()) {
@@ -766,7 +764,6 @@ class Upgrade extends Installer
     public function repairSuppFilesFilestage()
     {
         $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-        import('lib.pkp.classes.file.FileManager');
         $fileManager = new FileManager();
 
         $rows = DB::table('submission_supplementary_files as ssf')
@@ -1115,7 +1112,6 @@ class Upgrade extends Installer
     {
         $siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
 
-        import('classes.file.PublicFileManager');
         $publicFileManager = new PublicFileManager();
 
         if (!file_exists($publicFileManager->getSiteFilesPath() . '/sitestyle.css')) {

@@ -31,6 +31,7 @@ define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
 use PKP\core\JSONMessage;
 use PKP\submission\PKPSubmission;
+use PKP\file\FileManager;
 
 use APP\template\TemplateManager;
 
@@ -216,7 +217,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 				$request->redirect(null, null, null, $path, null, $tab);
 			} else {
-				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
 				$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
 				$fileManager->writeFile($exportFileName, $exportXml);
@@ -229,7 +229,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
 			// Write the XML to a file.
 			// export file name example: crossref-20160723-160036-articles-1.xml
-			import('lib.pkp.classes.file.FileManager');
 			$fileManager = new FileManager();
 			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
 			$fileManager->writeFile($exportFileName, $exportXml);
@@ -629,7 +628,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		if ($command == 'export' && $outputFile) file_put_contents($outputFile, $exportXml);
 
 		if ($command == 'register') {
-			import('lib.pkp.classes.file.FileManager');
 			$fileManager = new FileManager();
 			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
 			$fileManager->writeFile($exportFileName, $exportXml);

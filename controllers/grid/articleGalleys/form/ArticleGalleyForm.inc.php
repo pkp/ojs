@@ -17,7 +17,8 @@
 
 import('lib.pkp.classes.form.Form');
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+use APP\file\IssueFileManager;
 
 class ArticleGalleyForm extends Form
 {
@@ -157,8 +158,6 @@ class ArticleGalleyForm extends Form
      */
     public function execute(...$functionArgs)
     {
-        import('classes.file.IssueFileManager');
-
         $articleGalley = $this->_articleGalley;
         $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 

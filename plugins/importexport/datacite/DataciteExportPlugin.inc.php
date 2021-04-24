@@ -15,6 +15,8 @@
 
 import('classes.plugins.DOIPubIdExportPlugin');
 
+use PKP\file\FileManager;
+
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
 define('DATACITE_API_URL', 'https://mds.datacite.org/');
@@ -109,7 +111,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         $context = $request->getContext();
         $path = ['plugin', $this->getName()];
 
-        import('lib.pkp.classes.file.FileManager');
         $fileManager = new FileManager();
 
         // Export
@@ -276,7 +277,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function executeCLICommand($scriptName, $command, $context, $outputFile, $objects, $filter, $objectsFileNamePart)
     {
-        import('lib.pkp.classes.file.FileManager');
         $fileManager = new FileManager();
         switch ($command) {
             case 'export':

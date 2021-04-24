@@ -21,8 +21,9 @@
 import('lib.pkp.classes.controllers.grid.GridHandler');
 import('controllers.grid.issues.IssueGridRow');
 
-use \PKP\core\JSONMessage;
+use PKP\core\JSONMessage;
 use PKP\submission\PKPSubmission;
+use PKP\file\TemporaryFileManager;
 
 use \APP\template\TemplateManager;
 
@@ -202,7 +203,6 @@ class IssueGridHandler extends GridHandler
     {
         $user = $request->getUser();
 
-        import('lib.pkp.classes.file.TemporaryFileManager');
         $temporaryFileManager = new TemporaryFileManager();
         $temporaryFile = $temporaryFileManager->handleUpload('uploadedFile', $user->getId());
         if ($temporaryFile) {

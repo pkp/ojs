@@ -15,6 +15,7 @@
 
 import('lib.pkp.classes.scheduledTask.ScheduledTask');
 
+use PKP\file\FileManager;
 
 class DataciteInfoSender extends ScheduledTask
 {
@@ -141,7 +142,6 @@ class DataciteInfoSender extends ScheduledTask
     public function _registerObjects($objects, $filter, $journal, $objectsFileNamePart)
     {
         $plugin = $this->_plugin;
-        import('lib.pkp.classes.file.FileManager');
         $fileManager = new FileManager();
         foreach ($objects as $object) {
             // export XML

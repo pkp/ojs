@@ -13,6 +13,8 @@
  */
 import('lib.pkp.plugins.importexport.native.filter.PKPNativeFilterHelper');
 
+use APP\file\PublicFileManager;
+
 class NativeFilterHelper extends PKPNativeFilterHelper
 {
     /**
@@ -74,7 +76,6 @@ class NativeFilterHelper extends PKPNativeFilterHelper
                 $coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
                 $coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($object->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
 
-                import('classes.file.PublicFileManager');
                 $publicFileManager = new PublicFileManager();
                 $filePath = $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImage;
                 $embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
@@ -130,7 +131,6 @@ class NativeFilterHelper extends PKPNativeFilterHelper
                     case 'cover_image': $object->setCoverImage($n->textContent, $locale); break;
                     case 'cover_image_alt_text': $object->setCoverImageAltText($n->textContent, $locale); break;
                     case 'embed':
-                        import('classes.file.PublicFileManager');
                         $publicFileManager = new PublicFileManager();
                         $filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getCoverImage($locale);
                         file_put_contents($filePath, base64_decode($n->textContent));

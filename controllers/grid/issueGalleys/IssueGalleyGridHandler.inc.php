@@ -17,6 +17,9 @@ import('lib.pkp.classes.controllers.grid.GridHandler');
 import('controllers.grid.issueGalleys.IssueGalleyGridRow');
 
 use PKP\core\JSONMessage;
+use PKP\file\TemporaryFileManager;
+
+use APP\file\IssueFileManager;
 
 class IssueGalleyGridHandler extends GridHandler
 {
@@ -234,7 +237,6 @@ class IssueGalleyGridHandler extends GridHandler
     {
         $user = $request->getUser();
 
-        import('lib.pkp.classes.file.TemporaryFileManager');
         $temporaryFileManager = new TemporaryFileManager();
         $temporaryFile = $temporaryFileManager->handleUpload('uploadedFile', $user->getId());
         if ($temporaryFile) {
@@ -260,7 +262,6 @@ class IssueGalleyGridHandler extends GridHandler
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
         $issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
-        import('classes.file.IssueFileManager');
         $issueFileManager = new IssueFileManager($issue->getId());
         return $issueFileManager->downloadById($issueGalley->getFileId());
     }

@@ -17,6 +17,9 @@
 
 use PKP\submission\PKPSubmission;
 
+use \APP\file\PublicFileManager;
+use \APP\file\IssueFileManager;
+
 import('classes.issue.Issue');
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
@@ -552,7 +555,6 @@ class IssueDAO extends \PKP\db\DAO implements PKPPubIdPluginDAO
      */
     public function deleteObject($issue)
     {
-        import('classes.file.PublicFileManager');
         $publicFileManager = new PublicFileManager();
 
         if (is_array($issue->getCoverImage(null))) {
@@ -576,7 +578,6 @@ class IssueDAO extends \PKP\db\DAO implements PKPPubIdPluginDAO
         $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
         $issueFileDao->deleteByIssueId($issueId);
 
-        import('classes.file.IssueFileManager');
         $issueFileManager = new IssueFileManager($issueId);
         $issueFileManager->deleteIssueTree();
 

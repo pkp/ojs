@@ -20,9 +20,7 @@ namespace APP\publication;
 use \PKP\publication\PKPPublication;
 
 use \APP\core\Application;
-
-// FIXME: Add namespacing
-use \PublicFileManager;
+use \APP\file\PublicFileManager;
 
 class Publication extends PKPPublication
 {
@@ -41,7 +39,6 @@ class Publication extends PKPPublication
             return '';
         }
 
-        import('classes.file.PublicFileManager');
         $publicFileManager = new PublicFileManager();
 
         return join('/', [

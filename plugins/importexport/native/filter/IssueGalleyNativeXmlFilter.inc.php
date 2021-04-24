@@ -15,6 +15,8 @@
 
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
+use APP\file\IssueFileManager;
+
 class IssueGalleyNativeXmlFilter extends NativeExportFilter
 {
     /**
@@ -120,7 +122,6 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
             $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
             $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
 
-            import('classes.file.IssueFileManager');
             $issueFileManager = new IssueFileManager($issueGalley->getIssueId());
 
             $filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();

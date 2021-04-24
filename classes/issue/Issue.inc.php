@@ -23,6 +23,8 @@
 define('ISSUE_ACCESS_OPEN', 1);
 define('ISSUE_ACCESS_SUBSCRIPTION', 2);
 
+use \APP\file\PublicFileManager;
+
 class Issue extends \PKP\core\DataObject
 {
     /**
@@ -495,7 +497,6 @@ class Issue extends \PKP\core\DataObject
 
         $request = Application::get()->getRequest();
 
-        import('classes.file.PublicFileManager');
         $publicFileManager = new PublicFileManager();
 
         return $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($this->getJournalId()) . '/' . $coverImage;
@@ -514,7 +515,6 @@ class Issue extends \PKP\core\DataObject
         }
 
         $request = Application::get()->getRequest();
-        import('classes.file.PublicFileManager');
         $publicFileManager = new PublicFileManager();
 
         $urls = [];

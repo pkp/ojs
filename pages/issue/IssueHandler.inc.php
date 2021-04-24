@@ -19,6 +19,7 @@ use PKP\submission\PKPSubmission;
 
 use APP\handler\Handler;
 use APP\template\TemplateManager;
+use APP\file\IssueFileManager;
 
 class IssueHandler extends Handler
 {
@@ -182,7 +183,6 @@ class IssueHandler extends Handler
             $galley = $this->getGalley();
 
             if (!HookRegistry::call('IssueHandler::download', [&$issue, &$galley])) {
-                import('classes.file.IssueFileManager');
                 $issueFileManager = new IssueFileManager($issue->getId());
                 return $issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline') ? true : false);
             }
