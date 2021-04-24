@@ -16,6 +16,8 @@
  *
  */
 
+use PKP\submission\PKPSubmission;
+
 use \PKP\search\SubmissionSearch;
 
 class ArticleSearch extends SubmissionSearch
@@ -327,7 +329,7 @@ class ArticleSearch extends SubmissionSearch
         if ($result === false) {
             // Retrieve the article.
             $article = Services::get('submission')->get($submissionId);
-            if ($article->getData('status') === STATUS_PUBLISHED) {
+            if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                 // Retrieve keywords (if any).
                 $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionSubjectDao SubmissionKeywordDAO */
                 $allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getId(), [AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale()]));

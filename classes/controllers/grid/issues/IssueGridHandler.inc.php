@@ -22,6 +22,7 @@ import('lib.pkp.classes.controllers.grid.GridHandler');
 import('controllers.grid.issues.IssueGridRow');
 
 use \PKP\core\JSONMessage;
+use PKP\submission\PKPSubmission;
 
 use \APP\template\TemplateManager;
 
@@ -351,7 +352,7 @@ class IssueGridHandler extends GridHandler
             $publications = (array) $submission->getData('publications');
             foreach ($publications as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()) {
-                    $publication = Services::get('publication')->edit($publication, ['issueId' => '', 'status' => STATUS_QUEUED], $request);
+                    $publication = Services::get('publication')->edit($publication, ['issueId' => '', 'status' => PKPSubmission::STATUS_QUEUED], $request);
                 }
             }
             $newSubmission = Services::get('submission')->get($submission->getId());
@@ -557,14 +558,14 @@ class IssueGridHandler extends GridHandler
             $submissionsIterator = Services::get('submission')->getMany([
                 'contextId' => $issue->getJournalId(),
                 'issueIds' => $issue->getId(),
-                'status' => STATUS_SCHEDULED,
+                'status' => PKPSubmission::STATUS_SCHEDULED,
             ]);
 
             foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
                 $publications = $submission->getData('publications');
 
                 foreach ($publications as $publication) { /** @var Publication $publication */
-                    if ($publication->getData('status') === STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
+                    if ($publication->getData('status') === PKPSubmission::STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
                         $publication = Services::get('publication')->publish($publication);
                     }
                 }
@@ -635,10 +636,10 @@ class IssueGridHandler extends GridHandler
         foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) { /** @var Publication $publication */
-                if ($publication->getData('status') === STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
+                if ($publication->getData('status') === PKPSubmission::STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
                     // Republish the publication in the issue, now that it's status has changed,
-                    // to ensure the publication's status is restored to STATUS_SCHEDULED
-                    // rather than STATUS_QUEUED
+                    // to ensure the publication's status is restored to PKPSubmission::STATUS_SCHEDULED
+                    // rather than PKPSubmission::STATUS_QUEUED
                     $publication = Services::get('publication')->unpublish($publication);
                     $publication = Services::get('publication')->publish($publication);
                 }

@@ -15,8 +15,12 @@
  * @brief DAO operations for the OJS OAI interface.
  */
 
+use PKP\submission\PKPSubmission;
+
+// FIXME: use namespaces
 import('lib.pkp.classes.oai.PKPOAIDAO');
 import('classes.issue.Issue');
+
 use Illuminate\Support\Facades\DB;
 
 class OAIDAO extends PKPOAIDAO
@@ -243,7 +247,7 @@ class OAIDAO extends PKPOAIDAO
             ->pluck('journal_id')
             ->all();
 
-        $params = [(int) STATUS_PUBLISHED];
+        $params = [(int) PKPSubmission::STATUS_PUBLISHED];
         if (isset($journalId)) {
             $params[] = (int) $journalId;
         }

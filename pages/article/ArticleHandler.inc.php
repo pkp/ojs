@@ -14,10 +14,10 @@
  *
  */
 
-use \PKP\submission\SubmissionFile;
+use PKP\submission\SubmissionFile;
+use PKP\submission\PKPSubmission;
 
-use \APP\template\TemplateManager;
-
+use APP\template\TemplateManager;
 use APP\handler\Handler;
 
 use Firebase\JWT\JWT;
@@ -113,7 +113,7 @@ class ArticleHandler extends Handler
         $context = $request->getContext();
         $user = $request->getUser();
 
-        if (!$submission || ($submission->getData('status') !== STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user))) {
+        if (!$submission || ($submission->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user))) {
             $request->getDispatcher()->handle404();
         }
 
@@ -145,7 +145,7 @@ class ArticleHandler extends Handler
             $galleyId = $subPath;
         }
 
-        if ($this->publication->getData('status') !== STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user)) {
+        if ($this->publication->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user)) {
             $request->getDispatcher()->handle404();
         }
 
@@ -490,7 +490,7 @@ class ArticleHandler extends Handler
         }
 
         // Make sure the reader has rights to view the article/issue.
-        if ($issue && $issue->getPublished() && $submission->getStatus() == STATUS_PUBLISHED) {
+        if ($issue && $issue->getPublished() && $submission->getStatus() == PKPSubmission::STATUS_PUBLISHED) {
             $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
             $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission->getId());
 

@@ -16,6 +16,8 @@
 
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
+use \PKP\submission\PKPSubmission;
+
 use \APP\template\TemplateManager;
 
 class WebFeedGatewayPlugin extends GatewayPlugin
@@ -137,7 +139,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin
         $recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
 
         if ($displayItems == 'recent' && $recentItems > 0) {
-            $submissionsIterator = Services::get('submission')->getMany(['contextId' => $journal->getId(), 'status' => STATUS_PUBLISHED, 'count' => $recentItems]);
+            $submissionsIterator = Services::get('submission')->getMany(['contextId' => $journal->getId(), 'status' => PKPSubmission::STATUS_PUBLISHED, 'count' => $recentItems]);
             $submissionsInSections = [];
             foreach ($submissionsIterator as $submission) {
                 $submissionsInSections[]['articles'][] = $submission;

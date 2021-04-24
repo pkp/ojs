@@ -14,9 +14,11 @@
  */
 
 import('classes.search.ArticleSearch');
-use APP\handler\Handler;
 
-use \APP\template\TemplateManager;
+use PKP\submission\PKPSubmission;
+
+use APP\handler\Handler;
+use APP\template\TemplateManager;
 
 class SearchHandler extends Handler
 {
@@ -238,7 +240,7 @@ class SearchHandler extends Handler
             }, $authorRecords);
             $submissionIds = array_filter(array_map(function ($publicationId) {
                 $publication = Services::get('publication')->get($publicationId);
-                return $publication->getData('status') == STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
+                return $publication->getData('status') == PKPSubmission::STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
             }, array_unique($publicationIds)));
             $submissions = array_map(function ($submissionId) {
                 return Services::get('submission')->get($submissionId);

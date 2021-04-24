@@ -13,6 +13,7 @@
  * @brief Class defining basic operations for article tombstones.
  */
 
+use PKP\submission\PKPSubmission;
 
 class ArticleTombstoneManager
 {
@@ -57,8 +58,7 @@ class ArticleTombstoneManager
      */
     public function insertTombstonesByContext(Context $context)
     {
-        import('classes.submission.Submission'); // STATUS_PUBLISHED
-        $submissionsIterator = Services::get('submission')->getMany(['contextId' => $context->getId(), 'status' => STATUS_PUBLISHED]);
+        $submissionsIterator = Services::get('submission')->getMany(['contextId' => $context->getId(), 'status' => PKPSubmission::STATUS_PUBLISHED]);
         foreach ($submissionsIterator as $submission) {
             $this->insertArticleTombstone($submission, $context);
         }
@@ -69,9 +69,9 @@ class ArticleTombstoneManager
      */
     public function deleteTombstonesByContextId(int $contextId)
     {
-        import('classes.submission.Submission'); // STATUS_PUBLISHED
+        import('classes.submission.Submission'); // PKPSubmission::STATUS_PUBLISHED
         $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
-        $submissionsIterator = Services::get('submission')->getMany(['contextId' => $contextId, 'status' => STATUS_PUBLISHED]);
+        $submissionsIterator = Services::get('submission')->getMany(['contextId' => $contextId, 'status' => PKPSubmission::STATUS_PUBLISHED]);
         foreach ($submissionsIterator as $submission) {
             $tombstoneDao->deleteByDataObjectId($submission->getId());
         }

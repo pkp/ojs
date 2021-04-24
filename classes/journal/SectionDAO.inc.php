@@ -15,8 +15,10 @@
  * @brief Operations for retrieving and modifying Section objects.
  */
 
+use PKP\submission\PKPSubmission;
+use PKP\context\PKPSectionDAO;
+
 import('classes.journal.Section');
-import('lib.pkp.classes.context.PKPSectionDAO');
 
 class SectionDAO extends PKPSectionDAO
 {
@@ -381,11 +383,10 @@ class SectionDAO extends PKPSectionDAO
      */
     public function getByIssueId($issueId)
     {
-        import('classes.submission.Submission'); // import STATUS_* constants
         $issue = Services::get('issue')->get($issueId);
-        $allowedStatuses = [STATUS_PUBLISHED];
+        $allowedStatuses = [PKPSubmission::STATUS_PUBLISHED];
         if (!$issue->getPublished()) {
-            $allowedStatuses[] = STATUS_SCHEDULED;
+            $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
         }
         $submissionsIterator = Services::get('submission')->getMany([
             'contextId' => $issue->getJournalId(),

@@ -16,11 +16,13 @@
 
 namespace APP\Services;
 
-use Application;
-use DAORegistry;
-use PKP\Services\PKPSubmissionService;
-use Services;
-use Submission;
+use PKP\submission\PKPSubmission;
+use PKP\db\DAORegistry;
+use PKP\services\PKPSubmissionService;
+
+use APP\submission\Submission;
+use APP\core\Services;
+use APP\core\Application;
 
 class SubmissionService extends PKPSubmissionService
 {
@@ -45,10 +47,10 @@ class SubmissionService extends PKPSubmissionService
         $newStatus = $submission->getData('status');
 
         // Add or remove tombstones when submission is published or unpublished
-        if ($newStatus === STATUS_PUBLISHED && $newStatus !== $oldStatus) {
+        if ($newStatus === PKPSubmission::STATUS_PUBLISHED && $newStatus !== $oldStatus) {
             $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
             $tombstoneDao->deleteByDataObjectId($submission->getId());
-        } elseif ($oldStatus === STATUS_PUBLISHED && $newStatus !== $oldStatus) {
+        } elseif ($oldStatus === PKPSubmission::STATUS_PUBLISHED && $newStatus !== $oldStatus) {
             $requestContext = Application::get()->getRequest()->getContext();
             if ($requestContext && $requestContext->getId() === $submission->getData('contextId')) {
                 $context = $requestContext;
@@ -190,11 +192,10 @@ class SubmissionService extends PKPSubmissionService
      */
     public function getInSections($issueId, $contextId)
     {
-        import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_...
         $submissions = $this->getMany([
             'contextId' => $contextId,
             'issueIds' => $issueId,
-            'status' => [STATUS_PUBLISHED, STATUS_SCHEDULED],
+            'status' => [PKPSubmission::STATUS_PUBLISHED, PKPSubmission::STATUS_SCHEDULED],
             'orderBy' => 'seq',
             'orderDirection' => 'ASC',
         ]);

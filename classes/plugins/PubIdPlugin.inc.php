@@ -17,6 +17,7 @@ import('lib.pkp.classes.plugins.PKPPubIdPlugin');
 
 use \PKP\core\JSONMessage;
 use \PKP\submission\SubmissionFile;
+use PKP\submission\PKPSubmission;
 
 abstract class PubIdPlugin extends PKPPubIdPlugin {
 
@@ -54,7 +55,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 						$representationDao = Application::getRepresentationDAO();
 						$submissions = Services::get('submission')->getMany([
 							'contextId' => $context->getId(),
-							'status' => STATUS_PUBLISHED,
+							'status' => PKPSubmission::STATUS_PUBLISHED,
 							'count' => 5000, // large upper limit
 						]);
 						foreach ($submissions as $submission) {

@@ -21,6 +21,8 @@ define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
 // The name of the setting used to save the registered DOI.
 define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
 
+use PKP\submission\PKPSubmission;
+
 use \APP\template\TemplateManager;
 
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
@@ -193,7 +195,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 			return Services::get('submission')->get($submissionId);
 		}, $submissionIds);
 		return array_filter($submissions, function($submission) {
-			return $submission->getData('status') === STATUS_PUBLISHED && !!$submission->getStoredPubId('doi');
+			return $submission->getData('status') === PKPSubmission::STATUS_PUBLISHED && !!$submission->getStoredPubId('doi');
 		});
 	}
 

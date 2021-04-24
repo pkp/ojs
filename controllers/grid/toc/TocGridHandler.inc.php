@@ -18,6 +18,7 @@ import('controllers.grid.toc.TocGridCategoryRow');
 import('controllers.grid.toc.TocGridRow');
 
 use PKP\core\JSONMessage;
+use PKP\submission\PKPSubmission;
 
 class TocGridHandler extends CategoryGridHandler
 {
@@ -161,7 +162,6 @@ class TocGridHandler extends CategoryGridHandler
     protected function loadData($request, $filter)
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_...
         $submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $request->getContext()->getId());
         foreach ($submissionsInSections as $sectionId => $articles) {
             foreach ($articles['articles'] as $article) {
@@ -250,7 +250,7 @@ class TocGridHandler extends CategoryGridHandler
         if ($submission && $request->checkCSRF()) {
             foreach ((array) $submission->getData('publications') as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()
-                        && in_array($publication->getData('status'), [STATUS_SCHEDULED, STATUS_PUBLISHED])) {
+                        && in_array($publication->getData('status'), [PKPSubmission::STATUS_SCHEDULED, PKPSubmission::STATUS_PUBLISHED])) {
                     $publication = Services::get('publication')->unpublish($publication);
                     $publication = Services::get('publication')->edit(
                         $publication,

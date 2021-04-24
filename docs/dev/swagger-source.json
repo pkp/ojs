@@ -270,7 +270,7 @@
 				"parameters": [
 					{
 						"name": "status",
-						"description": "Filter results by one or more submission statuses. Must match the value of one of the `STATUS_QUEUED`, `STATUS_SCHEDULED`, `STATUS_PUBLISHED` or `STATUS_DECLINED` constants.",
+						"description": "Filter results by one or more submission statuses. Must match the value of one of the `PKPSubmission::STATUS_QUEUED`, `PKPSubmission::STATUS_SCHEDULED`, `PKPSubmission::STATUS_PUBLISHED` or `PKPSubmission::STATUS_DECLINED` constants.",
 						"in": "query",
 						"required": false,
 						"type": "array",
@@ -1184,7 +1184,7 @@
 					"Submissions / Publications"
 				],
 				"summary": "Publish a publication.",
-				"description": "If the publication is assigned to an issue that is not yet published, it will be scheduled for publication and the `status` will be set to `STATUS_SCHEDULED`. If the issue is already published, it will be published immediately and the `status` will be set to `STATUS_PUBLISHED`.\n\nThe publication will be validated against any publishing requirements before it is published and a `400` response will be returned if it fails validation.",
+				"description": "If the publication is assigned to an issue that is not yet published, it will be scheduled for publication and the `status` will be set to `PKPSubmission::STATUS_SCHEDULED`. If the issue is already published, it will be published immediately and the `status` will be set to `PKPSubmission::STATUS_PUBLISHED`.\n\nThe publication will be validated against any publishing requirements before it is published and a `400` response will be returned if it fails validation.",
 				"parameters": [
 					{
 						"name": "submissionId",

@@ -29,9 +29,10 @@ define('EXPORT_ACTION_DEPOSIT', 'deposit');
 // Configuration errors.
 define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
-use \PKP\core\JSONMessage;
+use PKP\core\JSONMessage;
+use PKP\submission\PKPSubmission;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/** @var PubObjectCache */
@@ -664,7 +665,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			return Services::get('submission')->get($submissionId);
 		}, $submissionIds);
 		return array_filter($submissions, function($submission) {
-			return $submission->getData('status') === STATUS_PUBLISHED;
+			return $submission->getData('status') === PKPSubmission::STATUS_PUBLISHED;
 		});
 	}
 

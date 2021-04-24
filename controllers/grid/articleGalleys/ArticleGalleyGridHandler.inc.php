@@ -20,8 +20,9 @@ import('lib.pkp.classes.controllers.grid.GridHandler');
 import('lib.pkp.classes.linkAction.request.AjaxModal');
 
 use PKP\core\JSONMessage;
+use PKP\submission\PKPSubmission;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class ArticleGalleyGridHandler extends GridHandler
 {
@@ -482,7 +483,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function canEdit()
     {
-        return $this->getPublication()->getData('status') !== STATUS_PUBLISHED &&
+        return $this->getPublication()->getData('status') !== PKPSubmission::STATUS_PUBLISHED &&
             Services::get('user')->canUserAccessStage(
                 WORKFLOW_STAGE_ID_PRODUCTION,
                 PKPApplication::WORKFLOW_TYPE_EDITORIAL,

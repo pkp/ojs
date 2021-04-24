@@ -15,6 +15,8 @@
  * @brief DAO class for article search index.
  */
 
+use PKP\submission\PKPSubmission;
+
 import('classes.search.ArticleSearch');
 import('lib.pkp.classes.search.SubmissionSearchDAO');
 
@@ -78,7 +80,6 @@ class ArticleSearchDAO extends SubmissionSearchDAO
             $params[] = $journal->getId();
         }
 
-        import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_PUBLISHED
         $result = $this->retrieve(
             'SELECT
 				o.submission_id,
@@ -94,7 +95,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO
 				JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
 				NATURAL JOIN ' . $sqlFrom . '
 			WHERE
-				s.status = ' . STATUS_PUBLISHED . ' AND
+				s.status = ' . PKPSubmission::STATUS_PUBLISHED . ' AND
 				i.published = 1 AND ' . $sqlWhere . '
 			GROUP BY o.submission_id
 			ORDER BY count DESC

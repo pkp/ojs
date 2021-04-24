@@ -16,10 +16,12 @@
  */
 
 import('classes.article.Author');
-import('classes.submission.Submission');
 
-use \PKP\submission\PKPAuthorDAO;
-use \PKP\identity\Identity;
+use PKP\submission\PKPAuthorDAO;
+use PKP\identity\Identity;
+use PKP\submission\PKPSubmission;
+
+use APP\submission\Submission;
 
 class AuthorDAO extends PKPAuthorDAO
 {
@@ -122,7 +124,7 @@ class AuthorDAO extends PKPAuthorDAO
 					FROM authors aa
 					JOIN publications pp ON (pp.publication_id = aa.publication_id)
 					LEFT JOIN publication_settings ppss ON (ppss.publication_id = pp.publication_id)
-					JOIN submissions ss ON (ss.submission_id = pp.submission_id AND ss.current_publication_id = pp.publication_id AND ss.status = ' . STATUS_PUBLISHED . ')
+					JOIN submissions ss ON (ss.submission_id = pp.submission_id AND ss.current_publication_id = pp.publication_id AND ss.status = ' . PKPSubmission::STATUS_PUBLISHED . ')
 					JOIN journals j ON (ss.context_id = j.journal_id)
 					JOIN issues i ON (ppss.setting_name = ? AND ppss.setting_value = CAST(i.issue_id AS CHAR(20)) AND i.published = 1)
 					LEFT JOIN author_settings ac ON (ac.author_id = aa.author_id AND ac.setting_name = \'country\')

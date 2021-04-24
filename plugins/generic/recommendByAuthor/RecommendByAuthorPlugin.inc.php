@@ -13,6 +13,7 @@
  * @brief Plugin to recommend articles from the same author.
  */
 
+use \PKP\submission\PKPSubmission;
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
@@ -90,7 +91,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
             }
             $submissionIds = array_map(function ($publicationId) {
                 $publication = Services::get('publication')->get($publicationId);
-                return $publication->getData('status') == STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
+                return $publication->getData('status') == PKPSubmission::STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
             }, array_unique($publicationIds));
             $foundArticles = array_unique(array_merge($foundArticles, $submissionIds));
         }

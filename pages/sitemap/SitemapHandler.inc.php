@@ -15,6 +15,8 @@
 
 import('lib.pkp.pages.sitemap.PKPSitemapHandler');
 
+use \PKP\submission\PKPSubmission;
+
 class SitemapHandler extends PKPSitemapHandler
 {
     /**
@@ -43,7 +45,7 @@ class SitemapHandler extends PKPSitemapHandler
                 $submissionsIterator = Services::get('submission')->getMany([
                     'issueIds' => [$issue->getId()],
                     'contextId' => $journal->getId(),
-                    'status' => STATUS_PUBLISHED,
+                    'status' => PKPSubmission::STATUS_PUBLISHED,
                 ]);
                 foreach ($submissionsIterator as $submission) {
                     // Abstract

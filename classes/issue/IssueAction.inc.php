@@ -15,6 +15,8 @@
  * @brief IssueAction class.
  */
 
+use PKP\submission\PKPSubmission;
+
 class IssueAction
 {
     /**
@@ -164,7 +166,7 @@ class IssueAction
             if (!$result && $journal->getData('subscriptionExpiryPartial')) {
                 if (isset($articleId)) {
                     $submission = Services::get('submission')->get($articleId);
-                    if ($submission->getData('status') === STATUS_PUBLISHED) {
+                    if ($submission->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                         import('classes.subscription.SubscriptionDAO');
                         $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $submission->getDatePublished());
                     }

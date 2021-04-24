@@ -21,11 +21,10 @@ use \PKP\template\PKPTemplateManager;
 
 use \APP\core\Application;
 use \APP\template\TemplateManager;
+use \APP\file\PublicFileManager;
 
 // FIXME: Add namespacing
-use \PublicFileManager;
 import('classes.search.ArticleSearch');
-import('classes.file.PublicFileManager');
 
 class TemplateManager extends PKPTemplateManager
 {

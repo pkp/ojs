@@ -16,7 +16,12 @@
  * [issue id]/public
  */
 
-import('lib.pkp.classes.file.FileManager');
+namespace APP\file;
+
+use PKP\file\FileManager;
+use PKP\db\DAORegistry;
+
+// FIXME: add namespacing
 import('classes.issue.IssueFile');
 
 class IssueFileManager extends FileManager
@@ -215,4 +220,8 @@ class IssueFileManager extends FileManager
 
         return $issueFile;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\file\IssueFileManager', '\IssueFileManager');
 }

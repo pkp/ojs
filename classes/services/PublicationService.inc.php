@@ -15,11 +15,13 @@
 
 namespace APP\Services;
 
-use Application;
-use AppLocale;
-use DAORegistry;
+use PKP\submission\PKPSubmission;
+use PKP\db\DAORegistry;
 use PKP\Services\PKPPublicationService;
-use Services;
+
+use APP\core\Services;
+use APP\i18n\AppLocale;
+use APP\core\Application;
 
 class PublicationService extends PKPPublicationService
 {
@@ -259,7 +261,7 @@ class PublicationService extends PKPPublicationService
         $issue = Services::get('issue')->get($newPublication->getData('issueId'));
         if ($issue && !$issue->getData('published')) {
             $newPublication->setData('datePublished', null);
-            $newPublication->setData('status', STATUS_SCHEDULED);
+            $newPublication->setData('status', PKPSubmission::STATUS_SCHEDULED);
         }
     }
 

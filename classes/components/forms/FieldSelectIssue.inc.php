@@ -21,7 +21,7 @@ class FieldSelectIssue extends FieldSelect
     /** @copydoc Field::$component */
     public $component = 'field-select-issue';
 
-    /** @var int One of the STATUS_ constants  */
+    /** @var int One of the PKPSubmission::STATUS_ constants  */
     public $publicationStatus;
 
     /**

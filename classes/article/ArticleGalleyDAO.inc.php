@@ -18,9 +18,10 @@
 import('classes.article.ArticleGalley');
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
-use \PKP\db\SchemaDAO;
-use \PKP\identity\Identity;
-use \PKP\services\PKPSchemaService;
+use PKP\db\SchemaDAO;
+use PKP\identity\Identity;
+use PKP\services\PKPSchemaService;
+use PKP\submission\PKPSubmission;
 
 class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
 {
@@ -306,8 +307,7 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
         if ($pubIdSettingName) {
             $params[] = $pubIdSettingName;
         }
-        import('classes.submission.Submission'); // STATUS_PUBLISHED constant
-        $params[] = STATUS_PUBLISHED;
+        $params[] = PKPSubmission::STATUS_PUBLISHED;
         $params[] = (int) $contextId;
         if ($pubIdType) {
             $params[] = 'pub-id::' . $pubIdType;

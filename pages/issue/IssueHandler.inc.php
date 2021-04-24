@@ -14,9 +14,11 @@
  */
 
 import('classes.issue.IssueAction');
-use APP\handler\Handler;
 
-use \APP\template\TemplateManager;
+use PKP\submission\PKPSubmission;
+
+use APP\handler\Handler;
+use APP\template\TemplateManager;
 
 class IssueHandler extends Handler
 {
@@ -333,10 +335,9 @@ class IssueHandler extends Handler
         }, $primaryGenres);
 
         // Show scheduled submissions if this is a preview
-        import('classes.submission.Submission'); // import STATUS_ constants
-        $allowedStatuses = [STATUS_PUBLISHED];
+        $allowedStatuses = [PKPSubmission::STATUS_PUBLISHED];
         if (!$issue->getPublished()) {
-            $allowedStatuses[] = STATUS_SCHEDULED;
+            $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
         }
 
         $issueSubmissions = iterator_to_array(Services::get('submission')->getMany([

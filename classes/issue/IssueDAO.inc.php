@@ -15,10 +15,10 @@
  * @brief Operations for retrieving and modifying Issue objects.
  */
 
-import('classes.issue.Issue');
-import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_... constants
-import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
+use PKP\submission\PKPSubmission;
 
+import('classes.issue.Issue');
+import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
 class IssueDAO extends \PKP\db\DAO implements PKPPubIdPluginDAO
 {
@@ -772,7 +772,7 @@ class IssueDAO extends \PKP\db\DAO implements PKPPubIdPluginDAO
 				JOIN publications p ON (p.publication_id = s.current_publication_id)
 				JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name = ? AND ps.locale=\'\')
 			WHERE ps.setting_value = ? AND (s.status = ? or s.status = ?) ',
-            ['issueId', (int) $issueId, (int) STATUS_SCHEDULED, (int) STATUS_PUBLISHED]
+            ['issueId', (int) $issueId, (int) PKPSubmission::STATUS_SCHEDULED, (int) PKPSubmission::STATUS_PUBLISHED]
         );
         $row = $result->current();
         return $row ? $row->row_count : 0;

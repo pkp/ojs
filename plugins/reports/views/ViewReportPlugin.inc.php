@@ -16,6 +16,8 @@
 
 import('lib.pkp.classes.plugins.ReportPlugin');
 
+use \PKP\submission\PKPSubmission;
+
 class ViewReportPlugin extends ReportPlugin
 {
     /**
@@ -75,11 +77,10 @@ class ViewReportPlugin extends ReportPlugin
         $articleTitles = [];
         $articleIssueIdentificationMap = [];
 
-        import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_PUBLISHED
         $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         $submissionsIterator = Services::get('submission')->getMany([
             'contextId' => $context->getId(),
-            'status' => STATUS_PUBLISHED,
+            'status' => PKPSubmission::STATUS_PUBLISHED,
         ]);
         foreach ($submissionsIterator as $submission) {
             $articleId = $submission->getId();

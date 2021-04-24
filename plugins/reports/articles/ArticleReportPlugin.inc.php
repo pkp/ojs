@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.plugins.ReportPlugin');
 
+use \PKP\submission\PKPSubmission;
+
 class ArticleReportPlugin extends ReportPlugin
 {
     /**
@@ -168,7 +170,7 @@ class ArticleReportPlugin extends ReportPlugin
                 'disciplines' => join(', ', $submissionDisciplineDao->getDisciplines($submission->getCurrentPublication()->getId(), [$submission->getLocale()])[$submission->getLocale()] ?? []),
                 'keywords' => join(', ', $submissionKeywordDao->getKeywords($submission->getCurrentPublication()->getId(), [$submission->getLocale()])[$submission->getLocale()] ?? []),
                 'agencies' => join(', ', $submissionAgencyDao->getAgencies($submission->getCurrentPublication()->getId(), [$submission->getLocale()])[$submission->getLocale()] ?? []),
-                'status' => $submission->getStatus() == STATUS_QUEUED ? $this->getStageLabel($submission->getStageId()) : __($statusMap[$submission->getStatus()]),
+                'status' => $submission->getStatus() == PKPSubmission::STATUS_QUEUED ? $this->getStageLabel($submission->getStageId()) : __($statusMap[$submission->getStatus()]),
                 'url' => $request->url(null, 'workflow', 'access', $submission->getId()),
                 'doi' => $submission->getStoredPubId('doi'),
                 'dateSubmitted' => $submission->getDateSubmitted(),
