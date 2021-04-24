@@ -17,12 +17,13 @@
 
 namespace APP\submission;
 
-use \PKP\identity\Identity;
-use \PKP\submission\PKPSubmissionDAO;
-use \PKP\db\DAORegistry;
+use PKP\identity\Identity;
+use PKP\submission\PKPSubmissionDAO;
+use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
 use PKP\submission\PKPSubmission;
 
-use \APP\submission\Submission;
+use APP\submission\Submission;
 
 class SubmissionDAO extends PKPSubmissionDAO
 {
