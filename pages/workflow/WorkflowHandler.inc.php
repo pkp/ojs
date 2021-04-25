@@ -88,9 +88,9 @@ class WorkflowHandler extends PKPWorkflowHandler
         import('classes.components.forms.publication.AssignToIssueForm');
         import('classes.components.forms.publication.PublishForm');
         $templateMgr->setConstants([
-            'FORM_ASSIGN_TO_ISSUE',
-            'FORM_ISSUE_ENTRY',
-            'FORM_PUBLISH',
+            'FORM_ASSIGN_TO_ISSUE' => FORM_ASSIGN_TO_ISSUE,
+            'FORM_ISSUE_ENTRY' => FORM_ISSUE_ENTRY,
+            'FORM_PUBLISH' => FORM_PUBLISH,
         ]);
 
         $components = $templateMgr->getState('components');
@@ -108,7 +108,9 @@ class WorkflowHandler extends PKPWorkflowHandler
                 $request->getContext()
             );
             $components[FORM_SUBMISSION_PAYMENTS] = $submissionPaymentsForm->getConfig();
-            $templateMgr->setConstants([FORM_SUBMISSION_PAYMENTS]);
+            $templateMgr->setConstants([
+                'FORM_SUBMISSION_PAYMENTS' => FORM_SUBMISSION_PAYMENTS,
+            ]);
         }
 
         // Add the word limit to the existing title/abstract form
