@@ -46,6 +46,7 @@ define('DATACITE_DESCTYPE_OTHER', 'Other');
 
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
+use DOMDocument;
 
 class DataciteXmlFilter extends NativeExportFilter
 {

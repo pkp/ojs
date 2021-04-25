@@ -17,6 +17,8 @@ import('lib.pkp.plugins.importexport.native.PKPNativeImportExportPlugin');
 
 use \APP\template\TemplateManager;
 
+use DOMDocument;
+
 class NativeImportExportPlugin extends PKPNativeImportExportPlugin
 {
     /**
