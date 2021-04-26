@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-23 23:04+0000\n"
+"PO-Revision-Date: 2021-04-26 09:26+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "gl_ES/>\n"
@@ -22,3 +22,17 @@ msgstr "ART"
 
 msgid "section.default.title"
 msgstr "Artigos"
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Sempre que foi posible, proporcionáronse URLs para as referencias."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"O arquivo do envío está en formato OpenOffice, Microsoft Word, RTF ou "
+"WordPerfect."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"O envío non se publicou anteriormente  nin se presentou antes a ningunha "
+"outra revista (de non ser así, debe dar una explicación ao respecto en «"
+"Comentarios ao editor/a»)."
