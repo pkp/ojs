@@ -19,12 +19,13 @@
  *  - Update the config file with installation parameters.
  */
 
+namespace APP\install;
+
+use PKP\install\PKPInstall;
 
 // Default installation data
 define('INSTALLER_DEFAULT_SITE_TITLE', 'common.software');
 define('INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH', 6);
-
-import('lib.pkp.classes.install.PKPInstall');
 
 class Install extends PKPInstall
 {
@@ -57,4 +58,8 @@ class Install extends PKPInstall
         $directories[] = 'journals';
         return $directories;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\install\Install', '\Install');
 }

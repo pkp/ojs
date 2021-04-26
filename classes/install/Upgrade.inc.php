@@ -13,16 +13,17 @@
  * @brief Perform system upgrade.
  */
 
+namespace APP\install;
+
 use Illuminate\Support\Facades\DB;
 
 use PKP\identity\Identity;
 use PKP\submission\SubmissionFile;
 use PKP\file\FileManager;
+use PKP\install\Installer;
 
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
-
-import('lib.pkp.classes.install.Installer');
 
 class Upgrade extends Installer
 {
@@ -1265,4 +1266,8 @@ class Upgrade extends Installer
 
         return $fileStagePathMap[$fileStage];
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\install\Upgrade', '\Upgrade');
 }
