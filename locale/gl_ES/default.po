@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-27 11:26+0000\n"
+"PO-Revision-Date: 2021-04-27 18:23+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "gl_ES/>\n"
@@ -94,3 +94,92 @@ msgstr ""
 "emprega cursiva no canto de subliñado (agás para os enderezos URL); e todas "
 "as ilustracións, figuras e táboas están inseridas nos lugares "
 "correspondentes do texto e non ao final."
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Revisores/as"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Revisor/a"
+
+msgid "default.genres.sourceTexts"
+msgstr "Fontes do texto"
+
+msgid "default.genres.dataSet"
+msgstr "Conxunto de datos"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Análise de datos"
+
+msgid "default.genres.transcripts"
+msgstr "Transcricións"
+
+msgid "default.genres.researchResults"
+msgstr "Resultados da investigación"
+
+msgid "default.genres.researchMaterials"
+msgstr "Materiais de investigación"
+
+msgid "default.genres.researchInstrument"
+msgstr "Instrumento de investigación"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "RespSubs"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Responsables das subscricións"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Responsable das subscricións"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "ESec"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editores/as de sección"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor/a de sección"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "EC"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Editores/as convidados/as"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Editor/a convidado/a"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ER"
+
+msgid "default.groups.plural.editor"
+msgstr "Editores/as da revista"
+
+msgid "default.groups.name.editor"
+msgstr "Editor/a da revista"
+
+msgid "default.groups.abbrev.manager"
+msgstr "DIR"
+
+msgid "default.groups.plural.manager"
+msgstr "Directores/as da revista"
+
+msgid "default.groups.name.manager"
+msgstr "Director/a da revista"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Esta revista utiliza o sistema CLOCKSS para crear un sistema de arquivamento "
+"distribuído entre as bibliotecas participantes e permite que estas "
+"bibliotecas creen arquivos permanentes da revista con fins de preservación e "
+"restauración. <a href=\"https://clockss.org/\">Saber máis...</a>"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Esta revista utiliza o sistema LOCKSS para crear un sistema de arquivamento "
+"distribuído entre as bibliotecas participantes, ademais de permitir que "
+"estas bibliotecas creen arquivos permanentes da revista para a preservación "
+"e restauración. <a href=\"https://lockss.org/\">Saber máis...</a>"
