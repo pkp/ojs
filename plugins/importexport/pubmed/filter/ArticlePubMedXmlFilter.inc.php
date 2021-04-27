@@ -13,7 +13,7 @@
  * @brief Class that converts a Article to a PubMed XML document.
  */
 
-import('lib.pkp.classes.filter.PersistableFilter');
+use PKP\filter\PersistableFilter;
 
 class ArticlePubMedXmlFilter extends PersistableFilter
 {
