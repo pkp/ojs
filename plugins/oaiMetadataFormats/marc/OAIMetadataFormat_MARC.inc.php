@@ -15,7 +15,9 @@
  * @brief OAI metadata format class -- MARC.
  */
 
-use \APP\template\TemplateManager;
+use PKP\oai\OAIMetadataFormat;
+
+use APP\template\TemplateManager;
 
 class OAIMetadataFormat_MARC extends OAIMetadataFormat
 {

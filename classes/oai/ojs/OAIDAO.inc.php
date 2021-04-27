@@ -16,9 +16,9 @@
  */
 
 use PKP\submission\PKPSubmission;
+use PKP\oai\PKPOAIDAO;
 
 // FIXME: use namespaces
-import('lib.pkp.classes.oai.PKPOAIDAO');
 import('classes.issue.Issue');
 
 use Illuminate\Support\Facades\DB;

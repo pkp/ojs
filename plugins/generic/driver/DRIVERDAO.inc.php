@@ -13,8 +13,7 @@
  * @brief DAO operations for DRIVER.
  */
 
-import('classes.oai.ojs.OAIDAO');
-
+use PKP\oai\OAIDAO;
 
 class DRIVERDAO extends OAIDAO
 {

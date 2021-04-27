@@ -17,7 +17,10 @@
  * (based on where the request is directed).
  */
 
-import('lib.pkp.classes.oai.OAI');
+use PKP\oai\OAI;
+use PKP\oai\OAIRepository;
+
+// FIXME: Add namespacing
 import('classes.oai.ojs.OAIDAO');
 
 class JournalOAI extends OAI

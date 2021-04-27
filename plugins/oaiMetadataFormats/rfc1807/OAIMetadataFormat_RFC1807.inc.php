@@ -15,6 +15,8 @@
  * @brief OAI metadata format class -- RFC 1807.
  */
 
+use PKP\oai\OAIMetadataFormat;
+
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {
     /**
