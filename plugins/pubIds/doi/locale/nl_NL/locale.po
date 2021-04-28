@@ -48,7 +48,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "DOI voorvoegsel"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "Het DOI voorvoegsel wordt toegekend door de registrerende instantie (bv. <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) en heeft als format 10.xxxx (bv. 10.1234):"
+msgstr "Het DOI voorvoegsel wordt toegekend door de registrerende instantie (bv. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) en heeft als format 10.xxxx (bv. 10.1234):"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "Het DOI voorvoegsel is verplicht en heeft de volgende vorm: 10.xxxx."

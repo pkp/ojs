@@ -322,4 +322,30 @@ class Repository
         $collector = $this->getCollector()->filterByContextIds([$contextId]);
         Repo::issue()->deleteMany($collector);
     }
+
+    /**
+     *
+     */
+    public function checkIfValidForDoiExport(Issue $issue): bool
+    {
+        if ($issue->getData('published')) {
+            return true;
+        }
+        return false;
+    }
+
+    public function createDoi(Issue $issue)
+    {
+        /** @var JournalDAO $contextDao */
+        $contextDao = \DAORegistry::getDAO('JournalDAO');
+        $context = $contextDao->getById($issue->getData('journalId'));
+
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_ISSUE) && empty($issue->getData('doiId'))) {
+            $doiId = Repo::doi()->mintIssueDoi($issue);
+            if ($doiId !== null) {
+                $issue->setData('doiId', $doiId);
+                $this->dao->update($issue);
+            }
+        }
+    }
 }

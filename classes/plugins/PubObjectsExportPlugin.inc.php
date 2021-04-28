@@ -36,11 +36,14 @@ use APP\issue\Issue;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
 use PKP\config\Config;
+use PKP\context\Context;
 use PKP\core\JSONMessage;
 use PKP\db\DAORegistry;
 use PKP\db\SchemaDAO;
 use PKP\file\FileManager;
+use PKP\filter\Filter;
 use PKP\linkAction\LinkAction;
+
 use PKP\linkAction\request\NullAction;
 use PKP\notification\PKPNotification;
 use PKP\plugins\HookRegistry;
@@ -50,6 +53,10 @@ use PKP\submission\PKPSubmission;
 
 abstract class PubObjectsExportPlugin extends ImportExportPlugin
 {
+    public const EXPORT_ACTION_EXPORT = 'export';
+    public const EXPORT_ACTION_MARKREGISTERED = 'markRegistered';
+    public const EXPORT_ACTION_DEPOSIT = 'deposit';
+
     /** @var PubObjectCache */
     public $_cache;
 
@@ -177,32 +184,50 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             case 'exportSubmissions':
             case 'exportIssues':
             case 'exportRepresentations':
-                $selectedSubmissions = (array) $request->getUserVar('selectedSubmissions');
-                $selectedIssues = (array) $request->getUserVar('selectedIssues');
-                $selectedRepresentations = (array) $request->getUserVar('selectedRepresentations');
-                $tab = (string) $request->getUserVar('tab');
-                $noValidation = $request->getUserVar('validation') ? false : true;
-
-                if (empty($selectedSubmissions) && empty($selectedIssues) && empty($selectedRepresentations)) {
-                    fatalError(__('plugins.importexport.common.error.noObjectsSelected'));
-                }
-                if (!empty($selectedSubmissions)) {
-                    $objects = $this->getPublishedSubmissions($selectedSubmissions, $context);
-                    $filter = $this->getSubmissionFilter();
-                    $objectsFileNamePart = 'articles';
-                } elseif (!empty($selectedIssues)) {
-                    $objects = $this->getPublishedIssues($selectedIssues, $context);
-                    $filter = $this->getIssueFilter();
-                    $objectsFileNamePart = 'issues';
-                } elseif (!empty($selectedRepresentations)) {
-                    $objects = $this->getArticleGalleys($selectedRepresentations);
-                    $filter = $this->getRepresentationFilter();
-                    $objectsFileNamePart = 'galleys';
-                }
-
-                // Execute export action
-                $this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation);
+                $this->prepareAndExportPubObjects($request, $context);
         }
+    }
+
+    /**
+     * Gathers relevant pub objects and runs export action
+     *
+     * @param $request
+     * @param $context
+     * @param $args array Optional args for passing in submissionIds from external API calls
+     */
+    public function prepareAndExportPubObjects($request, $context, $args = [])
+    {
+        $selectedSubmissions = (array) $request->getUserVar('selectedSubmissions');
+        $selectedIssues = (array) $request->getUserVar('selectedIssues');
+        $selectedRepresentations = (array) $request->getUserVar('selectedRepresentations');
+        $tab = (string) $request->getUserVar('tab');
+        $noValidation = $request->getUserVar('validation') ? false : true;
+
+        if (!empty($args['submissionIds'])) {
+            $selectedSubmissions = (array) $args['submissionIds'];
+        }
+        if (!empty($args['issueIds'])) {
+            $selectedIssues = (array) $args['issueIds'];
+        }
+        if (empty($selectedSubmissions) && empty($selectedIssues) && empty($selectedRepresentations)) {
+            fatalError(__('plugins.importexport.common.error.noObjectsSelected'));
+        }
+        if (!empty($selectedSubmissions)) {
+            $objects = $this->getPublishedSubmissions($selectedSubmissions, $context);
+            $filter = $this->getSubmissionFilter();
+            $objectsFileNamePart = 'articles';
+        } elseif (!empty($selectedIssues)) {
+            $objects = $this->getPublishedIssues($selectedIssues, $context);
+            $filter = $this->getIssueFilter();
+            $objectsFileNamePart = 'issues';
+        } elseif (!empty($selectedRepresentations)) {
+            $objects = $this->getArticleGalleys($selectedRepresentations);
+            $filter = $this->getRepresentationFilter();
+            $objectsFileNamePart = 'galleys';
+        }
+
+        // Execute export action
+        $this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation);
     }
 
     /**
@@ -214,12 +239,13 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      * @param $tab string Tab to return to
      * @param $objectsFileNamePart string Export file name part for this kind of objects
      * @param $noValidation boolean If set to true no XML validation will be done
+     * @param $shouldRedirect boolean If set to true, will redirect to `$tab`. Should be true if executed within an ImportExportPlugin.
      */
-    public function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null)
+    public function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null, $shouldRedirect = true)
     {
         $context = $request->getContext();
         $path = ['plugin', $this->getName()];
-        if ($request->getUserVar(EXPORT_ACTION_EXPORT)) {
+        if ($this->_checkForExportAction(EXPORT_ACTION_EXPORT)) {
             assert($filter != null);
 
             $onlyValidateExport = ($request->getUserVar('onlyValidateExport')) ? true : false;
@@ -245,7 +271,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                     );
                 }
 
-                $request->redirect(null, null, null, $path, null, $tab);
+                if ($shouldRedirect) {
+                    $request->redirect(null, null, null, $path, null, $tab);
+                }
             } else {
                 $fileManager = new FileManager();
                 $exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
@@ -253,7 +281,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                 $fileManager->downloadByPath($exportFileName);
                 $fileManager->deleteByPath($exportFileName);
             }
-        } elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
+        } elseif ($this->_checkForExportAction(EXPORT_ACTION_DEPOSIT)) {
             assert($filter != null);
             // Get the XML
             $exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
@@ -286,12 +314,16 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             }
             // Remove all temporary files.
             $fileManager->deleteByPath($exportFileName);
-            // redirect back to the right tab
-            $request->redirect(null, null, null, $path, null, $tab);
-        } elseif ($request->getUserVar(EXPORT_ACTION_MARKREGISTERED)) {
+            if ($shouldRedirect) {
+                // redirect back to the right tab
+                $request->redirect(null, null, null, $path, null, $tab);
+            }
+        } elseif ($this->_checkForExportAction(EXPORT_ACTION_MARKREGISTERED)) {
             $this->markRegistered($context, $objects);
-            // redirect back to the right tab
-            $request->redirect(null, null, null, $path, null, $tab);
+            if ($shouldRedirect) {
+                // redirect back to the right tab
+                $request->redirect(null, null, null, $path, null, $tab);
+            }
         } else {
             $dispatcher = $request->getDispatcher();
             $dispatcher->handle404();
@@ -434,10 +466,11 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      * @param $filter string
      * @param $context Context
      * @param $noValidation boolean If set to true no XML validation will be done
+     * @param null|mixed $outputErrors
      *
      * @return string XML document.
      */
-    public function exportXML($objects, $filter, $context, $noValidation = null)
+    public function exportXML($objects, $filter, $context, $noValidation = null, &$outputErrors = null)
     {
         $filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
         $exportFilters = $filterDao->getObjectsByGroup($filter);
@@ -455,7 +488,11 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
         });
         if (!empty($errors)) {
-            $this->displayXMLValidationErrors($errors, $xml);
+            if ($outputErrors === null) {
+                $this->displayXMLValidationErrors($errors, $xml);
+            } else {
+                $outputErrors = $errors;
+            }
         }
         return $xml;
     }
@@ -866,6 +903,25 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             DAORegistry::getDAO('SubmissionFileDAO'),
             Repo::issue()->dao
         ];
+    }
+
+    /**
+     * Checks for export action type as set user var and as action passed from API call
+     *
+     * @param $exportAction string Action to check for
+     *
+     * @return bool
+     */
+    protected function _checkForExportAction($exportAction)
+    {
+        $request = $this->getRequest();
+        if ($request->getUserVar($exportAction)) {
+            return true;
+        } elseif ($request->getUserVar('action') == $exportAction) {
+            return true;
+        }
+
+        return false;
     }
 }
 

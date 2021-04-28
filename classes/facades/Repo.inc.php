@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\App;
 
 class Repo extends \PKP\facades\Repo
 {
+    public static function doi(): \APP\doi\Repository
+    {
+        return App::make(\APP\doi\Repository::class);
+    }
+
     public static function issue(): \APP\issue\Repository
     {
         return App::make(\APP\issue\Repository::class);

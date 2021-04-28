@@ -84,7 +84,7 @@ msgstr "Le préfixe DOI est obligatoire et doit être sous la forme 10.xxxx."
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
 msgstr ""
 "Le préfixe DOI est attribué par des agences (par exemple <a href=\""
-"http://www.crossref.org\" target=\"_new\">CrossRef</a>) et se présente sous "
+"http://www.crossref.org\" target=\"_new\">Crossref</a>) et se présente sous "
 "la forme 10.xxxx (par exemple 10.1234) :"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix"

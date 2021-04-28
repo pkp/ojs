@@ -48,7 +48,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "DOI-prefiksi"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "DOI-prefiksi on rekisteröinnistä vastaavien tahojen (esim. <a href=\"http://www.crossref.org\" target=\"_new\">CrossRefin</a>) määrittämä ja on muodossa 10.xxxx (esim. 10.1234):"
+msgstr "DOI-prefiksi on rekisteröinnistä vastaavien tahojen (esim. <a href=\"http://www.crossref.org\" target=\"_new\">Crossrefin</a>) määrittämä ja on muodossa 10.xxxx (esim. 10.1234):"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "DOI-prefiksi on pakollinen, ja sen on oltava muodossa 10.xxxx."

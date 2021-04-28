@@ -39,7 +39,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "DOI prefiks"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "DOI prefiks dodeljuje registraciona agencija (npr. <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) i u formatu je 10.xxxx (npr. 10.1234):"
+msgstr "DOI prefiks dodeljuje registraciona agencija (npr. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) i u formatu je 10.xxxx (npr. 10.1234):"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "DOI prefiks je obavezan i mora biti u formi 10.xxxx."

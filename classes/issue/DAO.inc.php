@@ -62,7 +62,8 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
         'showTitle' => 'show_title',
         'styleFileName' => 'style_file_name',
         'originalStyleFileName' => 'original_style_file_name',
-        'urlPath' => 'url_path'
+        'urlPath' => 'url_path',
+        'doiId' => 'doi_id'
     ];
 
     /**
@@ -182,7 +183,10 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     /** @copydoc EntityDAO::fromRow() */
     public function fromRow(\stdClass $row): Issue
     {
-        return parent::fromRow($row);
+        $issue = parent::fromRow($row);
+        $this->setDoiObject($issue);
+
+        return $issue;
     }
 
     /** @copydoc EntityDAO::_insert() */
@@ -480,5 +484,16 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     {
         $this->_getCache('issues')->flush();
         $this->_getCache('current')->flush();
+    }
+
+    /**
+     * Set the DOI object
+     *
+     */
+    protected function setDoiObject(Issue $issue)
+    {
+        if (!empty($issue->getData('doiId'))) {
+            $issue->setData('doiObject', Repo::doi()->get($issue->getData('doiId')));
+        }
     }
 }

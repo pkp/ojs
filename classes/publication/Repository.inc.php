@@ -171,4 +171,13 @@ class Repository extends \PKP\publication\Repository
 
         parent::delete($publication);
     }
+
+    /**
+     * @throws \Exception
+     */
+    protected function createDois(Publication $newPublication)
+    {
+        $submission = Repo::submission()->get($newPublication->getData('submissionId'));
+        Repo::submission()->createDois($submission);
+    }
 }

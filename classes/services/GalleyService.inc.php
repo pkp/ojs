@@ -93,6 +93,10 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
     public function getQueryBuilder($args = [])
     {
         $galleyQB = new GalleyQueryBuilder();
+
+        if (!empty($args['contextIds'])) {
+            $galleyQB->filterByContexts($args['contextIds']);
+        }
         if (!empty($args['publicationIds'])) {
             $galleyQB->filterByPublicationIds($args['publicationIds']);
         }
@@ -128,6 +132,14 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 
         foreach ($props as $prop) {
             switch ($prop) {
+                case 'doiObject':
+                    if ($galley->getData('doiObject')) {
+                        $retVal = Repo::doi()->getSchemaMap()->summarize($galley->getData('doiObject'));
+                    } else {
+                        $retVal = null;
+                    }
+                    $values[$prop] = $retVal;
+                    break;
                 case 'urlPublished':
                     if (is_a($galley, 'IssueGalley')) {
                         $values[$prop] = $dispatcher->url(

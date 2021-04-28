@@ -48,8 +48,22 @@
 			"multilingual": "true",
 			"apiSummary": true
 		},
-		"doi": {
-			"type": "string"
+		"doiObject": {
+			"type": "object",
+			"description": "DOI object for this galley",
+			"apiSummary": true,
+			"readOnly": true,
+			"items": {
+				"$ref": "#/definitions/Doi"
+			}
+		},
+		"doiId": {
+			"type": "integer",
+			"description": "Reference to the DOI for this galley",
+			"writeOnly": true,
+			"validation": [
+				"nullable"
+			]
 		},
 		"galleys": {
 			"type": "array",
@@ -91,9 +105,9 @@
 		"originalStyleFileName": {
 		  "type": "string"
 		},
-		"published": {
-			"type": "boolean",
-			"apiSummary": true
+	  	"published": {
+		  "type": "boolean",
+		  "apiSummary": true
 		},
 		"publishedUrl": {
 			"type": "string",
