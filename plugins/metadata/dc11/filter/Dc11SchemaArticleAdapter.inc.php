@@ -18,8 +18,8 @@
  *  a Submission object.
  */
 
-
-import('lib.pkp.classes.metadata.MetadataDataObjectAdapter');
+use PKP\metadata\MetadataDescription;
+use PKP\metadata\MetadataDataObjectAdapter;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
@@ -130,7 +130,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
         // Type
         $driverType = 'info:eu-repo/semantics/article';
-        $dc11Description->addStatement('dc:type', $driverType, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+        $dc11Description->addStatement('dc:type', $driverType, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
         $types = $section->getIdentifyType(null);
         $types = array_merge_recursive(
             empty($types) ? [AppLocale::getLocale() => __('metadata.pkp.peerReviewed')] : $types,
@@ -174,10 +174,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
         $this->_addLocalizedElements($dc11Description, 'dc:source', $sources);
         if ($issn = $journal->getData('onlineIssn')) {
-            $dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+            $dc11Description->addStatement('dc:source', $issn, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
         }
         if ($issn = $journal->getData('printIssn')) {
-            $dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+            $dc11Description->addStatement('dc:source', $issn, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
         }
 
         // Get galleys and supp files.
@@ -216,7 +216,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $pubIdPlugins = (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId());
         foreach ($pubIdPlugins as $pubIdPlugin) {
             if ($issue && $pubIssueId = $issue->getStoredPubId($pubIdPlugin->getPubIdType())) {
-                $dc11Description->addStatement('dc:source', $pubIssueId, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+                $dc11Description->addStatement('dc:source', $pubIssueId, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
             }
             if ($pubArticleId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
                 $dc11Description->addStatement('dc:identifier', $pubArticleId);
