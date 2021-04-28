@@ -14,6 +14,7 @@
 
 namespace APP\facades;
 
+use APP\doi\Repository as DoiRepository;
 use APP\issue\Repository as IssueRepository;
 use APP\publication\Repository as PublicationRepository;
 use APP\submission\Repository as SubmissionRepository;
@@ -24,6 +25,11 @@ use PKP\facades\Repo as BaseRepo;
 
 class Repo extends BaseRepo
 {
+    public static function doi(): DoiRepository
+    {
+        return app()->make(DoiRepository::class);
+    }
+
     public static function issue(): IssueRepository
     {
         return app(IssueRepository::class);

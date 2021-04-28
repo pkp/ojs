@@ -1811,3 +1811,214 @@ msgstr "L'URL de la page d'accueil de la revue"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "Le nom de la revue"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"Ce plugiciel permet l'attribution d'identifiants numériques d'objets (DOI) à "
+"des articles, numéro ou épreuves crées dans OJS."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Veuillez configurer le plugiciel DOI pour être en mesure d'utiliser et gérer "
+"les DOIs dans OJS :"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Contenu de la revue"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Veuillez choisir les objets auxquels des DOIs seront attribués."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "Veuillez choisir les objets publiés auxquels seront attribués des DOI :"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Numéros"
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Articles"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "Préfixe DOI"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr ""
+"Le préfixe DOI est attribué par des agences (tel que <a href=\""
+"http://www.crossref.org\" target=\"_new\">Crossref</a>) et se présente sous "
+"la forme 10.xxxx (e.g. 10.1234) :"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "Le préfixe DOI est obligatoire et doit être de la forme 10.xxxx."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "Suffixe DOI"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Un suffixe DOI s'inscrit de différentes façons mais doit être unique par "
+"rapport aux autres « objets » publiés qui ont le même préfixe DOI :"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr "Utilisez le modèle personnalisé plus bas pour générer les suffixes DOI. Utiliser %j pour les initiales de revue, %v pour la volumaison, %i pour le numéro, %y pour l'année, %a pour le numéro unique de l'article dans OJS, $g pour le numéro de l'épreuve, %f pour le numéro unique du fichier dans OJS, %p pour le numéro de page et %x pour le numéro attribué."
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"Par exemple, vol%viss%ipp%p pourrait créer un suffixe DOI tel que 10.1234/"
+"vol3iss2pp230"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Épreuves"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "pour les numéros"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "pour les articles"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "pour les épreuves"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Utiliser les modèles par défaut."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i pour les numéros<br />%j.v%vi%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Inscrivez un suffixe DOI pour chaque élément publié. Vous trouverez un champ "
+"additionnel pour le DOI sur chaque page de métadonnées de l'élément."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Inscrivez le modèle de suffixe DOI pour les numéros."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Inscrivez le modèle de suffixe DOI pour les articles."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Inscrivez le modèle de suffixe pour les épreuves."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Réassignation de DOIs"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Si vous modifiez la configuration pour les DOIs, les DOIs déjà assignés ne "
+"seront pas affectés. Une fois que la configuration pour les DOIs est "
+"enregistrée, utiliser ce bouton pour effacer tous les DOIs existants et "
+"ainsi régénérer les DOIs avec la nouvelle configuration."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Êtes-vous certain-e de vouloir supprimer tous les DOIs existants ?"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "numéro"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "article"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "épreuves"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr ""
+"Le DOI ne peut pas être attribué car le suffixe personnalisé est manquant."
+
+msgid "doi.editor.patternNotResolved"
+msgstr ""
+"Le DOI ne peut pas être attribué car il contient un modèle qui ne peut être "
+"résolu."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Ce que vous voyez est un aperçu du DOI. Cocher la case et enregistrer le "
+"formulaire pour attribuer le DOI."
+
+msgid "doi.editor.assigned"
+msgstr "Le DOI est attribué à ce,cette {$pubObjectType}."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Le suffixe DOI attribué est déjà utilisé pour un autre élément publié. "
+"Veuillez entrer un suffixe DOI unique pour chaque élément."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Supprimer"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Êtes-vous certain-e de vouloir supprimer ce DOI ?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Supprimer les DOIs des éléments du numéro"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Êtes-vous certain-e de vouloir supprimer les DOIs des numéros ?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "Utiliser cette option pour supprimer les DOIs de tous les objets (articles et épreuves) actuellement prévus pour ce numéro."
+
+msgid "doi.editor.assignDoi"
+msgstr "Attribuer ce DOI {$pubId} à ce,cette {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "Le DOI ne peut pas être attribué car le suffixe est manquant."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+"Le DOI {$pubId} ne peut pas être attribué car il contient un modèle ne "
+"pouvant être résolu."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "Le DOI {$pubId} a été attribué."
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Attribuer des DOIs"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr "Attribuer des DOI à tous les objets de revues publiés pour lesquels aucun DOI n'a été attribué. Cette action ne peut pas être utilisée avec la configuration du suffixe individuel. Si vous avez modifié la configuration DOI ci-dessus, veuillez enregistrer vos modifications avant de lancer cette action. L'attribution de DOI peut prendre beaucoup de temps, en fonction du nombre d'objets publiés dans la revue."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Êtes-vous certain-e de vouloir attribuer des DOIs à tous les objets publiés "
+"n'ayant pas de DOI attribués ?"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Attribuer"
+
+msgid "doi.editor.doi.description"
+msgstr "Le DOI doit débuter par {$prefix}."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Vous ne pouvez pas générer un DOI car une ou plusieurs parties du modèle DOI "
+"requièrent davantage de données. Vous devrez peut-être affecter la "
+"publication à un numéro, définir un ID d'éditeur ou encore saisir des "
+"numéros de page."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Vous ne pouvez pas générer un DOI tant que cette publication n'a pas été "
+"affectée à un numéro."
+
+msgid "doi.editor.preview.objects"
+msgstr "Élément"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Épreuves : {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Un DOI n'a pas été assigné à cette publication."
+
+msgid "doi.editor.preview.publication"
+msgstr "Le DOI pour cette publication sera {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "Le DOI doit débuter par {$doiPrefix}."

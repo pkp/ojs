@@ -2166,3 +2166,227 @@ msgstr "УРЛ на страницата од списание"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "Име на списание"
+
+msgid "doi.editor.preview.objects"
+msgstr "Предмет"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Отисоци на труд: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "ДОИ не е доделен на оваа публикација."
+
+msgid "doi.editor.preview.publication"
+msgstr "ДОИ за оваа публикација ќе биде {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "ДОИ мора да започне со {$doiPrefix}."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "Назначен е ДОИ {$pubId}."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "ДОИ {$pubId} не може да се додели бидејќи содржи нерешена шема."
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI не може да се додели бидејќи недостасува прилагодената наставка."
+
+msgid "doi.editor.assignDoi"
+msgstr "Доделете го ДОИ {$pubId} на овој {$pubObjectType}"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Користете ја следнава опција за да исчистите DOI од сите објекти (написи и "
+"отисоците на труд) што се моментално закажани за ова издание."
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr ""
+"Дали сте сигурни дека сакате да ги избришете постојните ДОИ за предметните "
+"изданија?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Исчистете ги предметите на изданието ДОИ"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Дали сте сигурни дека сакате да го избришете постојниот ДОИ?"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Исчисти"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Дадената наставка ДОИ веќе се користи за друга објавена ставка. Внесете "
+"уникатен додаток ДОИ за секоја ставка."
+
+msgid "doi.editor.assigned"
+msgstr "ДОИ е доделен на овој {$pubObjectType}."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Она што го гледате е преглед на DOI. Изберете го полето за избор и зачувајте "
+"го образецот за да го доделите DOI."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "ДОИ не може да се додели затоа што содржи нерешена шема."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Не можете да генерирате DOI бидејќи на еден или повеќе делови на моделот DOI "
+"недостасуваат податоци. Можеби ќе треба да ја доделите публикацијата на "
+"издание, да поставите ID на издавач или да внесете броеви на страницата."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Не можете да генерирате ДОИ сè додека оваа публикација не биде доделена на "
+"издание."
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI не може да се додели бидејќи недостасува прилагодената наставка."
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "отисок на труд"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "напис"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "издание"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Додели"
+
+msgid "doi.editor.doi.description"
+msgstr "ДОИ мора да започне со {$prefix}."
+
+msgid "doi.editor.doi"
+msgstr "ДОИ"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Дали сте сигурни дека сакате да доделите ДОИ на сите објавени објекти на кои "
+"не им се доделени ДОИ?"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Доделете ДОИ на сите објавени дневни објекти на кои не им се доделени ДОИ. "
+"Ова дејство не може да се користи со индивидуална конфигурација на наставки. "
+"Ако ја измените конфигурацијата DOI погоре, зачувајте ги промените пред да "
+"започнете со оваа акција. Доделувањето ДОИ може да трае долго, во зависност "
+"од бројот на објавени објекти во списанието."
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Доделете ДОИ"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Дали сте сигурни дека сакате да ги избришете сите постојни ДОИ?"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Ако ја промените конфигурацијата DOI, ДОИ што веќе се доделени нема да бидат "
+"засегнати. Откако ќе се зачува конфигурацијата DOI, користете го ова копче "
+"за да ги исчистите сите постојни DOI, така што новите поставки ќе стапат на "
+"сила со постојните објекти."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Поставете повторно ДОИ"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Внесете ја шемата за наставки на ДОИ за отисоци на труд."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Внесете ја шемата за наставки на ДОИ за статии."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Внесете ја шемата на наставката ДОИ за изданија."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Внесете индивидуален додаток на ДОИ за секоја објавена ставка. Ќе најдете "
+"дополнително поле за внесување DOI на страницата со мета-податоци на секоја "
+"ставка."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i за изданија<br />%j.v%vi%i.%a за написиs<br />%j.v%vi%i.%a.g%g за "
+"отисоци на труд."
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Користете стандардни обрасци."
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "за отисоците на труд"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "за написи"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "за изданија"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"На пример, vol%viss%ipp%p може да создаде ДОИ како што е 10.1234 / "
+"vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Користете ја шемата внесена подолу за да генерирате наставки на DOI. "
+"Користете %j за иницијали во списанието, %v за бројот на јачината на звукот, "
+"%i за бројот на изданието, %Y за годината, %a за ID на статијата OJS, %g за "
+"ID галеријата OJS, %f за ID на датотеката OJS , %p за бројот на страницата и "
+"%x за \"Прилагоден идентификатор\"."
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Додаток на ДОИ може да има каква било форма, но мора да биде единствен меѓу "
+"сите објавувачки објекти со ист доделен префикс ДОИ:"
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "Додаток на ДОИ"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "Префиксот DOI е задолжителен и мора да биде во форма 10.xxxx."
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr ""
+"Префиксот DOI е доделен од агенциите за регистрација (на пр. <a href=\""
+"http://www.crossref.org\" target=\"_new\">Crossref</a>) и е во формат "
+"10.xxxx (на пример, 10.1234):"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "Префикс на ДОИ"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Отисоци на труд"
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Написи"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Изданија"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Изберете ги објектите за објавување на кои ќе им бидат доделени "
+"идентификатори на дигитални објекти (ДОИ):"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Ве молиме, изберете ги предметите на кои треба да се доделат ДОИ."
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Содржина на весник"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Конфигурирајте го приклучокот DOI за да може да управувате и да користите "
+"DOI во OJS:"
+
+msgid "doi.readerDisplayName"
+msgstr "ДОИ"
+
+msgid "doi.description"
+msgstr ""
+"Овој приклучок овозможува доделување на дигитални идентификатори на предмети "
+"на изданија, статии и отисоци на труд во OJS."
+
+msgid "doi.displayName"
+msgstr "ДОИ"

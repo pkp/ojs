@@ -2072,3 +2072,218 @@ msgstr "Tiêu đề ảnh"
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "Quá trình không thể phân tích cú pháp các bản trình bày của số"
+
+msgid "doi.editor.preview.objects"
+msgstr "Mục"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Bản in: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Một DOI đã không được chỉ định cho ấn phẩm này."
+
+msgid "doi.editor.preview.publication"
+msgstr "DOI cho ấn phẩm này sẽ là {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI phải bắt đầu với {$doiPrefix}."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} đã được gán."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "Không thể gán DOI {$pubId} vì nó chứa một mẫu chưa được giải quyết."
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI không thể được chỉ định vì hậu tố tùy chỉnh bị thiếu."
+
+msgid "doi.editor.assignDoi"
+msgstr "Gán DOI {$pubId} cho {$pubObjectType}"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Sử dụng tùy chọn sau để xóa DOI của tất cả các đối tượng (các bài báo và các "
+"bản in) hiện được lên lịch cho số này."
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Bạn có chắc chắn muốn xóa các đối tượng là số phát hành DOIs hiện tại?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Xóa các đối tượng là số phảt hành DOIs"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Bạn có chắc chắn muốn xóa DOI hiện tại không?"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Xóa sạch"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Hậu tố DOI đã cho đã được sử dụng cho một mục được xuất bản khác. Vui lòng "
+"nhập một hậu tố DOI duy nhất cho mỗi mục."
+
+msgid "doi.editor.assigned"
+msgstr "DOI được gán cho {$pubObjectType}."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Những gì bạn thấy là một bản xem trước của DOI. Chọn checkbox và lưu biểu "
+"mẫu để gán DOI."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI không thể được chỉ định vì nó chứa một mẫu chưa được giải quyết."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Bạn không thể tạo DOI vì một hoặc nhiều phần của mẫu DOI bị thiếu dữ liệu. "
+"Bạn có thể cần gán xuất bản phẩm cho một số, đặt ID nhà xuất bản hoặc nhập "
+"số trang."
+
+msgid "doi.editor.missingIssue"
+msgstr "Bạn không thể tạo DOI cho đến khi ấn phẩm này được chỉ định cho một số."
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI không thể được chỉ định vì hậu tố tùy chỉnh bị thiếu."
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "bản in"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "bài báo"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "số"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Gán"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI phải bắt đầu bằng {$prefix}."
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Bạn có chắc chắn muốn gán DOI cho tất cả các đối tượng được xuất bản chưa "
+"được gán DOI không?"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Chỉ định DOIs cho tất cả các đối tượng tạp chí đã xuất bản chưa được gán "
+"DOIs. Hành động này không thể được sử dụng với cấu hình hậu tố riêng lẻ. Nếu "
+"bạn đã sửa đổi cấu hình DOI ở trên, vui lòng lưu các thay đổi của bạn trước "
+"khi bắt đầu hành động này. Việc gán DOI có thể mất nhiều thời gian, tùy "
+"thuộc vào số lượng đối tượng được xuất bản trên tạp chí."
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Gán các DOI"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Bạn có chắc chắn muốn xóa tất cả các DOI hiện có?"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Nếu bạn thay đổi cấu hình DOI, DOI đã được chỉ định sẽ không bị ảnh hưởng. "
+"Khi cấu hình DOI được lưu, sử dụng nút này để xóa tất cả các DOI hiện có để "
+"các cài đặt mới sẽ có hiệu lực với các đối tượng hiện có."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Phân lại DOI"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Vui lòng nhập mẫu hậu tố DOI cho các bản in."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Vui lòng nhập mẫu hậu tố DOI cho các bài báo."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Vui lòng nhập mẫu hậu tố DOI cho các số."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Nhập một hậu tố DOI riêng cho mỗi mục được xuất bản. Bạn sẽ tìm thấy một "
+"trường nhập DOI bổ sung trên trang dữ liệu meta của từng mục."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i cho các số<br />%j.v%vi%i.%a cho các bài báo<br />%j.v%vi%i.%a.g%g "
+"cho các bản in."
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Sử dụng các mẫu mặc định."
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "cho các bản in"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "cho các bài báo"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "cho các số"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"Ví dụ: vol%viss%ipp%p có thể tạo DOI, chẳng hạn như 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Sử dụng mẫu được nhập dưới đây để tạo hậu tố DOI. Sử dụng %j cho tên viết "
+"tắt của tạp chí, %v cho số tập, %i cho số phát hành, %Y cho năm ,%a cho ID "
+"bài báo OJS, %g cho ID bản in OJS, %f cho ID tập tin OJS , %p cho số trang "
+"và %x cho \"Số nhận dạng tùy chỉnh\"."
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Hậu tố DOI có thể có bất kỳ dạng nào, nhưng phải là duy nhất trong số tất cả "
+"các đối tượng xuất bản có cùng tiền tố DOI được gán:"
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "Hậu tố DOI"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr ""
+"Tiền tố DOI được cấp bởi các cơ quan đăng ký (ví dụ: <a href=\""
+"http://www.crossref.org\" target=\"_new\">Crossref</a>) và có định dạng "
+"10.xxxx (ví dụ: 10.1234):"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "Tiền tố DOI là bắt buộc và phải ở dạng 10.xxxx."
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "Tiền tố DOI"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Các bản in"
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Các bài báo"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Các số"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Vui lòng chọn các đối tượng xuất bản sẽ có Digital Object Identifiers (DOI) "
+"được giao:"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Vui lòng chọn các đối tượng DOIs nên được chỉ định."
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Nội dung tạp chí"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Vui lòng cấu hình plugin DOI để có thể quản lý và sử dụng DOI trong OJS:"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"Plugin này cho phép gán Digital Object Identifiers cho các số, các bài báo "
+"và các bản in trong OJS."
+
+msgid "doi.displayName"
+msgstr "DOI"

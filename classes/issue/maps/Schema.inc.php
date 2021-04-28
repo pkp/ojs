@@ -104,13 +104,23 @@ class Schema extends \PKP\core\maps\Schema
                 case 'coverImageUrl':
                     $output[$prop] = $issue->getCoverImageUrls();
                     break;
+                case 'doiObject':
+                    if ($issue->getData('doiObject')) {
+                        $retVal = Repo::doi()->getSchemaMap()->summarize($issue->getData('doiObject'));
+                    } else {
+                        $retVal = null;
+                    }
+
+                    $output[$prop] = $retVal;
+                    break;
                 case 'galleys':
                     $data = [];
                     /** @var IssueGalleyDAO $issueGalleyDao */
                     $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
                     $galleys = $issueGalleyDao->getByIssueId($issue->getId());
                     if (!empty($galleys)) {
-                        $galleyArgs = ['issue' => $issue];
+                        $request = Application::get()->getRequest();
+                        $galleyArgs = ['issue' => $issue, 'request' => $request];
                         foreach ($galleys as $galley) {
                             $data[] = Services::get('galley')->getSummaryProperties($galley, $galleyArgs);
                         }
@@ -132,9 +142,12 @@ class Schema extends \PKP\core\maps\Schema
                     /** @var SectionDAO $sectionDao */
                     $sectionDao = DAORegistry::getDAO('SectionDAO');
                     $sections = $sectionDao->getByIssueId($issue->getId());
+                    $request = Application::get()->getRequest();
                     if (!empty($sections)) {
                         foreach ($sections as $section) {
-                            $sectionProperties = Services::get('section')->getSummaryProperties($section);
+                            $sectionProperties = Services::get('section')->getSummaryProperties($section, [
+                                'request' => $request
+                            ]);
                             $customSequence = $sectionDao->getCustomSectionOrder($issue->getId(), $section->getId());
                             if ($customSequence) {
                                 $sectionProperties['seq'] = $customSequence;
@@ -144,6 +157,10 @@ class Schema extends \PKP\core\maps\Schema
                     }
                     $output[$prop] = $data;
                     break;
+                case 'identification':
+                    $output[$prop] = $issue->getIssueIdentification();
+                    break;
+
                 default:
                     $output[$prop] = $issue->getData($prop);
             }

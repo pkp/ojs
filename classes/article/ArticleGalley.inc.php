@@ -19,6 +19,7 @@ namespace APP\article;
 
 use APP\core\Application;
 
+use APP\core\Services;
 use APP\facades\Repo;
 use APP\i18n\AppLocale;
 use PKP\submission\Representation;
@@ -205,6 +206,30 @@ class ArticleGalley extends Representation
     public function getLocalizedName()
     {
         return $this->getLabel();
+    }
+
+    /**
+     * @copydoc \PKP\submission\Representation::setStoredPubId()
+     */
+    public function setStoredPubId($pubIdType, $pubId)
+    {
+        if ($pubIdType == 'doi') {
+            if ($doiObject = $this->getData('doiObject')) {
+                Repo::doi()->edit($doiObject, ['doi' => $pubId]);
+            } else {
+                $newDoiObject = Repo::doi()->newDataObject(
+                    [
+                        'doi' => $pubId,
+                        'contextId' => $this->getContextId()
+                    ]
+                );
+                $doiId = Repo::doi()->add($newDoiObject);
+
+                $this->setData('doiId', $doiId);
+            }
+        } else {
+            parent::setStoredPubId($pubIdType, $pubId);
+        }
     }
 }
 

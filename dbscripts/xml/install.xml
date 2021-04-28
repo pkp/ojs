@@ -37,6 +37,7 @@
 	<migration class="PKP\migration\install\TemporaryFilesMigration" />
 	<migration class="PKP\migration\install\TombstoneMigration" />
 	<migration class="PKP\migration\install\ViewsMigration" />
+	<migration class="PKP\migration\install\DoiMigration" />
 
 	<!-- OJS schema -->
 	<migration class="APP\migration\install\OJSMigration" />

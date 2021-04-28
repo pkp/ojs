@@ -546,9 +546,10 @@ class IssueGridHandler extends GridHandler
                 $assignPublicIdentifiersForm->initData();
                 return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
             }
-            // Asign pub ids
+            // Assign pub ids
             $assignPublicIdentifiersForm->readInputData();
             $assignPublicIdentifiersForm->execute();
+            Repo::issue()->createDoi($issue);
         }
 
         $issue->setPublished(1);
@@ -576,6 +577,8 @@ class IssueGridHandler extends GridHandler
         Repo::issue()->updateCurrent($contextId, $issue);
 
         if (!$wasPublished) {
+            Repo::doi()->issueUpdated($issue);
+
             // Publish all related publications
             // Include published submissions in order to support cases where two
             // versions of the same submission are published in distinct issues. In
@@ -655,6 +658,8 @@ class IssueGridHandler extends GridHandler
 
         Repo::issue()->edit($issue, $updateParams);
         Repo::issue()->updateCurrent($request->getContext()->getId());
+
+        Repo::doi()->issueUpdated($issue);
 
         // insert article tombstones for all articles
         $submissions = Repo::submission()->getMany(

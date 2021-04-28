@@ -46,6 +46,11 @@ class OJSMigration extends \PKP\migration\Migration
             $table->unique(['journal_id', 'locale', 'setting_name'], 'journal_settings_pkey');
         });
 
+        // DOI foreign key references Journal, so it needs to be added AFTER the journal has been created
+        Schema::table('dois', function (Blueprint $table) {
+            $table->foreign('context_id')->references('journal_id')->on('journals');
+        });
+
         // Journal sections.
         Schema::create('sections', function (Blueprint $table) {
             $table->bigInteger('section_id')->autoIncrement();
@@ -94,8 +99,10 @@ class OJSMigration extends \PKP\migration\Migration
             $table->string('style_file_name', 90)->nullable();
             $table->string('original_style_file_name', 255)->nullable();
             $table->string('url_path', 64)->nullable();
+            $table->bigInteger('doi_id')->nullable();
             $table->index(['journal_id'], 'issues_journal_id');
             $table->index(['url_path'], 'issues_url_path');
+            $table->foreign('doi_id')->references('doi_id')->on('dois')->nullOnDelete();
         });
 
         // Locale-specific issue data
@@ -180,9 +187,11 @@ class OJSMigration extends \PKP\migration\Migration
             $table->smallInteger('status')->default(1); // PKPSubmission::STATUS_QUEUED
             $table->string('url_path', 64)->nullable();
             $table->bigInteger('version')->nullable();
+            $table->bigInteger('doi_id')->nullable();
             $table->index(['submission_id'], 'publications_submission_id');
             $table->index(['section_id'], 'publications_section_id');
             $table->index(['url_path'], 'publications_url_path');
+            $table->foreign('doi_id')->references('doi_id')->on('dois')->nullOnDelete();
         });
 
         // Publication galleys
@@ -196,9 +205,11 @@ class OJSMigration extends \PKP\migration\Migration
             $table->string('remote_url', 2047)->nullable();
             $table->smallInteger('is_approved')->default(0);
             $table->string('url_path', 64)->nullable();
+            $table->bigInteger('doi_id')->nullable();
             $table->index(['publication_id'], 'publication_galleys_publication_id');
             $table->index(['url_path'], 'publication_galleys_url_path');
             $table->foreign('submission_file_id')->references('submission_file_id')->on('submission_files');
+            $table->foreign('doi_id')->references('doi_id')->on('dois')->nullOnDelete();
         });
 
         // Galley metadata.
@@ -328,6 +339,8 @@ class OJSMigration extends \PKP\migration\Migration
         Schema::drop('issue_galleys');
         Schema::drop('issue_settings');
         Schema::drop('issues');
+        Schema::drop('doi_settings');
+        Schema::drop('dois');
         Schema::drop('section_settings');
         Schema::drop('sections');
         Schema::drop('journal_settings');
