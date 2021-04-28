@@ -15,7 +15,7 @@
  * @brief Article galley editing form.
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
 use APP\template\TemplateManager;
 use APP\file\IssueFileManager;
@@ -47,15 +47,15 @@ class ArticleGalleyForm extends Form
 
         AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
-        $this->addCheck(new FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
-        $this->addCheck(new FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
 
         // Ensure a locale is provided and valid
         $journal = $request->getJournal();
         $this->addCheck(
-            new FormValidator(
+            new \PKP\form\validation\FormValidator(
                 $this,
                 'galleyLocale',
                 'required',

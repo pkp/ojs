@@ -13,7 +13,7 @@
  * @brief Permit configuration of the various payment types.
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
 class PaymentTypesForm extends Form
 {
@@ -39,16 +39,16 @@ class PaymentTypesForm extends Form
             'restrictOnlyPdf' => 'bool',
         ];
 
-        $this->addCheck(new FormValidatorCustom($this, 'publicationFee', 'optional', 'manager.payment.form.numeric', function ($publicationFee) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'publicationFee', 'optional', 'manager.payment.form.numeric', function ($publicationFee) {
             return is_numeric($publicationFee) && $publicationFee >= 0;
         }));
-        $this->addCheck(new FormValidatorCustom($this, 'purchaseArticleFee', 'optional', 'manager.payment.form.numeric', function ($purchaseArticleFee) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'purchaseArticleFee', 'optional', 'manager.payment.form.numeric', function ($purchaseArticleFee) {
             return is_numeric($purchaseArticleFee) && $purchaseArticleFee >= 0;
         }));
-        $this->addCheck(new FormValidatorCustom($this, 'purchaseIssueFee', 'optional', 'manager.payment.form.numeric', function ($purchaseIssueFee) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'purchaseIssueFee', 'optional', 'manager.payment.form.numeric', function ($purchaseIssueFee) {
             return is_numeric($purchaseIssueFee) && $purchaseIssueFee >= 0;
         }));
-        $this->addCheck(new FormValidatorCustom($this, 'membershipFee', 'optional', 'manager.payment.form.numeric', function ($membershipFee) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'membershipFee', 'optional', 'manager.payment.form.numeric', function ($membershipFee) {
             return is_numeric($membershipFee) && $membershipFee >= 0;
         }));
     }

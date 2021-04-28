@@ -15,7 +15,8 @@
  * @brief Form to create or edit an issue
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
+
 import('lib.pkp.classes.linkAction.LinkAction');
 import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 
@@ -39,22 +40,22 @@ class IssueForm extends Form
         parent::__construct('controllers/grid/issues/form/issueForm.tpl');
 
         $form = $this;
-        $this->addCheck(new FormValidatorRegExp($this, 'volume', 'optional', 'editor.issues.volumeRequired', '/^[0-9]+$/i'));
-        $this->addCheck(new FormValidatorCustom($this, 'showVolume', 'optional', 'editor.issues.volumeRequired', function ($showVolume) use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'volume', 'optional', 'editor.issues.volumeRequired', '/^[0-9]+$/i'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'showVolume', 'optional', 'editor.issues.volumeRequired', function ($showVolume) use ($form) {
             return !$showVolume || $form->getData('volume') ? true : false;
         }));
-        $this->addCheck(new FormValidatorCustom($this, 'showNumber', 'optional', 'editor.issues.numberRequired', function ($showNumber) use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'showNumber', 'optional', 'editor.issues.numberRequired', function ($showNumber) use ($form) {
             return !$showNumber || $form->getData('number') ? true : false;
         }));
-        $this->addCheck(new FormValidatorCustom($this, 'showYear', 'optional', 'editor.issues.yearRequired', function ($showYear) use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'showYear', 'optional', 'editor.issues.yearRequired', function ($showYear) use ($form) {
             return !$showYear || $form->getData('year') ? true : false;
         }));
-        $this->addCheck(new FormValidatorCustom($this, 'showTitle', 'optional', 'editor.issues.titleRequired', function ($showTitle) use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'showTitle', 'optional', 'editor.issues.titleRequired', function ($showTitle) use ($form) {
             return !$showTitle || implode('', $form->getData('title')) != '' ? true : false;
         }));
-        $this->addCheck(new FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
         $this->issue = $issue;
     }
 
@@ -208,7 +209,7 @@ class IssueForm extends Form
         ]);
 
         $form = $this;
-        $this->addCheck(new FormValidatorCustom($this, 'issueForm', 'required', 'editor.issues.issueIdentificationRequired', function () use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'issueForm', 'required', 'editor.issues.issueIdentificationRequired', function () use ($form) {
             return $form->getData('showVolume') || $form->getData('showNumber') || $form->getData('showYear') || $form->getData('showTitle');
         }));
     }

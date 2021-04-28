@@ -13,7 +13,7 @@
  * @brief Form class for user purchase of individual subscription.
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
 use \APP\template\TemplateManager;
 
@@ -63,24 +63,24 @@ class UserIndividualSubscriptionForm extends Form
         $this->subscriptionTypes = $subscriptionTypes->toAssociativeArray();
 
         // Ensure subscription type is valid
-        $this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', function ($typeId) use ($journalId) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', function ($typeId) use ($journalId) {
             $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
             return $subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && !$subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) && !$subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId);
         }));
 
         // Ensure that user does not already have a subscription for this journal
         if (!isset($subscriptionId)) {
-            $this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', [DAORegistry::getDAO('IndividualSubscriptionDAO'), 'subscriptionExistsByUserForJournal'], [$journalId], true));
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', [DAORegistry::getDAO('IndividualSubscriptionDAO'), 'subscriptionExistsByUserForJournal'], [$journalId], true));
         } else {
-            $this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', function ($userId) use ($journalId, $subscriptionId) {
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', function ($userId) use ($journalId, $subscriptionId) {
                 $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
                 $checkId = $subscriptionDao->getByUserIdForJournal($userId, $journalId);
                 return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;
             }));
         }
 
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
     }
 
     /**
@@ -134,7 +134,7 @@ class UserIndividualSubscriptionForm extends Form
         $needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
         if ($needMembership) {
-            $this->addCheck(new FormValidator($this, 'membership', 'required', 'user.subscriptions.form.membershipRequired'));
+            $this->addCheck(new \PKP\form\validation\FormValidator($this, 'membership', 'required', 'user.subscriptions.form.membershipRequired'));
         }
     }
 

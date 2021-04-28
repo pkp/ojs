@@ -13,7 +13,8 @@
  * @brief Form for journal managers to setup the DataCite plugin.
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
+use PKP\form\validation\FormValidator;
 
 class DataciteSettingsForm extends Form
 {
@@ -83,8 +84,8 @@ class DataciteSettingsForm extends Form
 
         // Add form validation checks.
         // The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
-        $this->addCheck(new FormValidatorRegExp($this, 'username', FORM_VALIDATOR_OPTIONAL_VALUE, 'plugins.importexport.datacite.settings.form.usernameRequired', '/^[^:]+$/'));
-        $this->addCheck(new FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'username', FormValidator::FORM_VALIDATOR_OPTIONAL_VALUE, 'plugins.importexport.datacite.settings.form.usernameRequired', '/^[^:]+$/'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
     }
 
 

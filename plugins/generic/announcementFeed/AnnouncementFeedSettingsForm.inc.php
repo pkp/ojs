@@ -13,9 +13,9 @@
  * @brief Form for journal managers to modify announcement feed plugin settings
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class AnnouncementFeedSettingsForm extends Form
 {
@@ -37,8 +37,8 @@ class AnnouncementFeedSettingsForm extends Form
         $this->_plugin = $plugin;
 
         parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
     }
 
     /**

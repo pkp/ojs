@@ -13,10 +13,9 @@
  * @brief Form for journal managers to setup URN plugin
  */
 
+use PKP\form\Form;
 
-import('lib.pkp.classes.form.Form');
-
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class URNSettingsForm extends Form
 {
@@ -66,31 +65,31 @@ class URNSettingsForm extends Form
         parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
         $form = $this;
-        $this->addCheck(new FormValidatorCustom($this, 'urnObjects', 'required', 'plugins.pubIds.urn.manager.settings.urnObjectsRequired', function ($enableIssueURN) use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'urnObjects', 'required', 'plugins.pubIds.urn.manager.settings.urnObjectsRequired', function ($enableIssueURN) use ($form) {
             return $form->getData('enableIssueURN') || $form->getData('enablePublicationURN') || $form->getData('enableRepresentationURN');
         }));
-        $this->addCheck(new FormValidatorRegExp($this, 'urnPrefix', 'required', 'plugins.pubIds.urn.manager.settings.form.urnPrefixPattern', '/^urn:[a-zA-Z0-9-]*:.*/'));
-        $this->addCheck(new FormValidatorCustom($this, 'urnIssueSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired', function ($urnIssueSuffixPattern) use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urnPrefix', 'required', 'plugins.pubIds.urn.manager.settings.form.urnPrefixPattern', '/^urn:[a-zA-Z0-9-]*:.*/'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'urnIssueSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired', function ($urnIssueSuffixPattern) use ($form) {
             if ($form->getData('urnSuffix') == 'pattern' && $form->getData('enableIssueURN')) {
                 return $urnIssueSuffixPattern != '';
             }
             return true;
         }));
-        $this->addCheck(new FormValidatorCustom($this, 'urnPublicationSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnPublicationSuffixPatternRequired', function ($urnPublicationSuffixPattern) use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'urnPublicationSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnPublicationSuffixPatternRequired', function ($urnPublicationSuffixPattern) use ($form) {
             if ($form->getData('urnSuffix') == 'pattern' && $form->getData('enablePublicationURN')) {
                 return $urnPublicationSuffixPattern != '';
             }
             return true;
         }));
-        $this->addCheck(new FormValidatorCustom($this, 'urnRepresentationSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnRepresentationSuffixPatternRequired', function ($urnRepresentationSuffixPattern) use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'urnRepresentationSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnRepresentationSuffixPatternRequired', function ($urnRepresentationSuffixPattern) use ($form) {
             if ($form->getData('urnSuffix') == 'pattern' && $form->getData('enableRepresentationURN')) {
                 return $urnRepresentationSuffixPattern != '';
             }
             return true;
         }));
-        $this->addCheck(new FormValidatorUrl($this, 'urnResolver', 'required', 'plugins.pubIds.urn.manager.settings.form.urnResolverRequired'));
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorUrl($this, 'urnResolver', 'required', 'plugins.pubIds.urn.manager.settings.form.urnResolverRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
 
         // for URN reset requests
         import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');

@@ -13,7 +13,7 @@
  *
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
 use \APP\template\TemplateManager;
 

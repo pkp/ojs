@@ -13,11 +13,10 @@
  * @brief Base form class for subscription create/edits.
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
+use PKP\mail\MailTemplate;
 
-use \PKP\mail\MailTemplate;
-
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class SubscriptionForm extends Form
 {
@@ -62,22 +61,22 @@ class SubscriptionForm extends Form
         asort($this->validCountries);
 
         // User is provided and valid
-        $this->addCheck(new FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
-        $this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', function ($userId) {
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', function ($userId) {
             $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
             return $userDao->userExistsById($userId);
         }));
 
         // Subscription status is provided and valid
-        $this->addCheck(new FormValidator($this, 'status', 'required', 'manager.subscriptions.form.statusRequired'));
-        $this->addCheck(new FormValidatorInSet($this, 'status', 'required', 'manager.subscriptions.form.statusValid', array_keys($this->validStatus)));
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'status', 'required', 'manager.subscriptions.form.statusRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'status', 'required', 'manager.subscriptions.form.statusValid', array_keys($this->validStatus)));
         // Subscription type is provided
-        $this->addCheck(new FormValidator($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdRequired'));
         // Notify email flag is valid value
-        $this->addCheck(new FormValidatorInSet($this, 'notifyEmail', 'optional', 'manager.subscriptions.form.notifyEmailValid', ['1']));
+        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'notifyEmail', 'optional', 'manager.subscriptions.form.notifyEmailValid', ['1']));
 
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
     }
 
     /**
@@ -132,7 +131,7 @@ class SubscriptionForm extends Form
         $needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
         if ($needMembership) {
-            $this->addCheck(new FormValidator($this, 'membership', 'required', 'manager.subscriptions.form.membershipRequired'));
+            $this->addCheck(new \PKP\form\validation\FormValidator($this, 'membership', 'required', 'manager.subscriptions.form.membershipRequired'));
         }
 
         // If subscription type requires it, start and end dates are provided
@@ -141,51 +140,51 @@ class SubscriptionForm extends Form
 
         if (!$nonExpiring) {
             // Start date is provided and is valid
-            $this->addCheck(new FormValidator($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartRequired'));
-            $this->addCheck(new FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
+            $this->addCheck(new \PKP\form\validation\FormValidator($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartRequired'));
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
                 $dateStartYear = strftime('%Y', strtotime($dateStart));
                 $minYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_PAST;
                 $maxYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_FUTURE;
                 return ($dateStartYear >= $minYear && $dateStartYear <= $maxYear);
             }));
-            $this->addCheck(new FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
                 $dateStartMonth = strftime('%m', strtotime($dateStart));
                 return ($dateStartMonth >= 1 && $dateStartMonth <= 12);
             }));
-            $this->addCheck(new FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
                 $dateStartDay = strftime('%d', strtotime($dateStart));
                 return ($dateStartDay >= 1 && $dateStartDay <= 31);
             }));
 
             // End date is provided and is valid
-            $this->addCheck(new FormValidator($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndRequired'));
-            $this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
+            $this->addCheck(new \PKP\form\validation\FormValidator($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndRequired'));
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
                 $dateEndYear = strftime('%Y', strtotime($dateEnd));
                 $minYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_PAST;
                 $maxYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_FUTURE;
                 return ($dateEndYear >= $minYear && $dateEndYear <= $maxYear);
             }));
-            $this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
                 $dateEndMonth = strftime('%m', strtotime($dateEnd));
                 return ($dateEndMonth >= 1 && $dateEndMonth <= 12);
             }));
-            $this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
                 $dateEndDay = strftime('%d', strtotime($dateEnd));
                 return ($dateEndDay >= 1 && $dateEndDay <= 31);
             }));
         } else {
             // Is non-expiring; ensure that start/end dates weren't entered.
-            $this->addCheck(new FormValidatorCustom($this, 'dateStart', 'optional', 'manager.subscriptions.form.dateStartEmpty', function ($dateStart) {
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateStart', 'optional', 'manager.subscriptions.form.dateStartEmpty', function ($dateStart) {
                 return empty($dateStart);
             }));
-            $this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'optional', 'manager.subscriptions.form.dateEndEmpty', function ($dateEnd) {
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateEnd', 'optional', 'manager.subscriptions.form.dateEndEmpty', function ($dateEnd) {
                 return empty($dateEnd);
             }));
         }
 
         // If notify email is requested, ensure subscription contact name and email exist.
         if ($this->_data['notifyEmail'] == 1) {
-            $this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', function () {
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', function () {
                 $request = Application::get()->getRequest();
                 $journal = $request->getJournal();
                 $subscriptionName = $journal->getData('subscriptionName');

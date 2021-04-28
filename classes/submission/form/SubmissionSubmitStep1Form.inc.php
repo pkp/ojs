@@ -27,7 +27,7 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form
     public function __construct($context, $submission = null)
     {
         parent::__construct($context, $submission);
-        $this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', [DAORegistry::getDAO('SectionDAO'), 'sectionExists'], [$context->getId()]));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', [DAORegistry::getDAO('SectionDAO'), 'sectionExists'], [$context->getId()]));
     }
 
     /**

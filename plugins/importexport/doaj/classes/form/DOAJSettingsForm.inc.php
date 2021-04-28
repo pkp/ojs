@@ -13,8 +13,7 @@
  * @brief Form for journal managers to setup DOAJ plugin
  */
 
-
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
 class DOAJSettingsForm extends Form
 {
@@ -65,8 +64,8 @@ class DOAJSettingsForm extends Form
         parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
         // Add form validation checks.
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
     }
 
 

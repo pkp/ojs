@@ -15,10 +15,11 @@
  * @brief Form to edit an issue's access settings
  */
 
-import('lib.pkp.classes.form.Form');
-import('classes.issue.Issue'); // Bring in constants
+use PKP\form\Form;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+
+import('classes.issue.Issue'); // Bring in constants
 
 class IssueAccessForm extends Form
 {
@@ -33,8 +34,8 @@ class IssueAccessForm extends Form
     public function __construct($issue)
     {
         parent::__construct('controllers/grid/issues/form/issueAccessForm.tpl');
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
         $this->_issue = $issue;
     }
 

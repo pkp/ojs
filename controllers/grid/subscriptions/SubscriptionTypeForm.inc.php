@@ -13,9 +13,9 @@
  * @brief Form for journal managers to create/edit subscription types.
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class SubscriptionTypeForm extends Form
 {
@@ -61,27 +61,27 @@ class SubscriptionTypeForm extends Form
         parent::__construct('payments/subscriptionTypeForm.tpl');
 
         // Type name is provided
-        $this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));
 
         // Cost	is provided and is numeric and positive
-        $this->addCheck(new FormValidator($this, 'cost', 'required', 'manager.subscriptionTypes.form.costRequired'));
-        $this->addCheck(new FormValidatorCustom($this, 'cost', 'required', 'manager.subscriptionTypes.form.costNumeric', function ($cost) {
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'cost', 'required', 'manager.subscriptionTypes.form.costRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'cost', 'required', 'manager.subscriptionTypes.form.costNumeric', function ($cost) {
             return (is_numeric($cost) && $cost >= 0);
         }));
 
         // Currency is provided and is valid value
-        $this->addCheck(new FormValidator($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));
-        $this->addCheck(new FormValidatorInSet($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyValid', array_keys($this->validCurrencies)));
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyValid', array_keys($this->validCurrencies)));
 
         // Format is provided and is valid value
-        $this->addCheck(new FormValidator($this, 'format', 'required', 'manager.subscriptionTypes.form.formatRequired'));
-        $this->addCheck(new FormValidatorInSet($this, 'format', 'required', 'manager.subscriptionTypes.form.formatValid', array_keys($this->validFormats)));
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'format', 'required', 'manager.subscriptionTypes.form.formatRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'format', 'required', 'manager.subscriptionTypes.form.formatValid', array_keys($this->validFormats)));
 
         // Institutional flag is valid value
-        $this->addCheck(new FormValidatorInSet($this, 'institutional', 'optional', 'manager.subscriptionTypes.form.institutionalValid', ['0', '1']));
+        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'institutional', 'optional', 'manager.subscriptionTypes.form.institutionalValid', ['0', '1']));
 
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
     }
 
     /**
@@ -145,7 +145,7 @@ class SubscriptionTypeForm extends Form
     {
         $this->readUserVars(['name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'disable_public_display']);
 
-        $this->addCheck(new FormValidatorCustom($this, 'duration', 'optional', 'manager.subscriptionTypes.form.durationNumeric', function ($duration) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'duration', 'optional', 'manager.subscriptionTypes.form.durationNumeric', function ($duration) {
             return (is_numeric($duration) && $duration >= 0);
         }));
     }

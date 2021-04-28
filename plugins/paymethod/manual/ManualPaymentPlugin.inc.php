@@ -13,9 +13,10 @@
  * @brief Manual payment plugin class
  */
 
-use \PKP\mail\MailTemplate;
+use PKP\mail\MailTemplate;
+use PKP\form\Form;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 import('lib.pkp.classes.plugins.PaymethodPlugin');
 
@@ -128,7 +129,6 @@ class ManualPaymentPlugin extends PaymethodPlugin
 
         AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 
-        import('lib.pkp.classes.form.Form');
         $paymentForm = new Form($this->getTemplateResource('paymentForm.tpl'));
         $paymentManager = Application::getPaymentManager($context);
         $paymentForm->setData([
