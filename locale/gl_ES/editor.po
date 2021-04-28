@@ -1,2 +1,152 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-04-28 15:12+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Cómpre introducir a identificación do número. Seleccione polo menos unha das "
+"opcións de identificación do número."
+
+msgid "editor.issues.titleRequired"
+msgstr "Ten que introducir un título para o número."
+
+msgid "editor.issues.yearRequired"
+msgstr "Ten que introducir o ano e debe ser un valor numérico positivo."
+
+msgid "editor.issues.numberRequired"
+msgstr ""
+"Requírese o número do volume e cómpre que sexa un valor numérico positivo."
+
+msgid "editor.issues.volumeRequired"
+msgstr "Requírese o número de volume, que debe ser un valor numérico positivo."
+
+msgid "editor.issues.datePublished"
+msgstr "Data de publicación"
+
+msgid "editor.issues.unpublished"
+msgstr "Non publicado"
+
+msgid "editor.issues.published"
+msgstr "Publicado"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Está seguro/a de que quere eliminar definitivamente este número?"
+
+msgid "editor.issues.noArticles"
+msgstr "Non hai ningún artigo planificado para este número."
+
+msgid "editor.issues.numArticles"
+msgstr "Artigos"
+
+msgid "editor.issues.currentIssue"
+msgstr "Número actual"
+
+msgid "editor.issues.editIssue"
+msgstr "Xestión do número: {$issueIdentification}"
+
+msgid "editor.issues.createIssue"
+msgstr "Crear un número"
+
+msgid "editor.editorAdministration"
+msgstr "Administración do editor/a"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Incluír o sumario deste número"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Enviar esta mensaxe aos usuarios/as asociados a esta revista que indicaron "
+"que desexan recibir actualizacións ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Enviar esta mensaxe a todos os usuarios/as asociados a esta revista ({$count}"
+" usuarios/as)"
+
+msgid "editor.usersNotified"
+msgstr "Usuarios/as avisados"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Estase a informar os usuarios/as..."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Todos os subscritores/as institucionais ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Todos os subscritores/as individuais ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Todos os autores/as publicados ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Todos os lectores/as ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers"
+msgstr "Informar os usuarios/as"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Antes de mandar un envío para corrección de orixinais, utilice o enlace "
+"Notificar ao autor/a para comunicarlle a decisión e seleccionar a versión "
+"que se vai enviar."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Este envío arquivarase unha vez enviado o correo electrónico de notificación "
+"ao autor/a, ou despois de premer o botón Non enviar correo electrónico."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Está seguro/a de que quere rexistrar esta decisión?"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Quere gardar os cambios nos envíos arquivados? Os envíos que seleccione para "
+"suprimir eliminaranse definitivamente do sistema."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Non hai ningún envío no arquivo."
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"O identificador público '{$publicIdentifier}' corresponde a outro obxecto xa "
+"existente (número, artigo, galerada ou arquivo adicional). Escolla "
+"identificadores únicos dentro da súa revista."
+
+msgid "editor.me"
+msgstr "Eu"
+
+msgid "editor.allEditors"
+msgstr "Todos os editores"
+
+msgid "editor.allSections"
+msgstr "Todas as seccións"
+
+msgid "editor.publishedIssues"
+msgstr "Números publicados"
+
+msgid "editor.publishing"
+msgstr "Publicación"
+
+msgid "editor.submissionArchive"
+msgstr "Arquivo de envíos"
+
+msgid "editor.submissionQueue"
+msgstr "Cola de envíos"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Envíos e publicación"
+
+msgid "editor.reassign"
+msgstr "Reasignar"
+
+msgid "editor.home"
+msgstr "Páxina inicial do editor/a"
