@@ -15,6 +15,8 @@
 
 use PKP\form\Form;
 use PKP\form\validation\FormValidator;
+use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\LinkAction;
 
 class DataciteSettingsForm extends Form
 {
@@ -69,7 +71,6 @@ class DataciteSettingsForm extends Form
             $application = Application::get();
             $request = $application->getRequest();
             $dispatcher = $application->getDispatcher();
-            import('lib.pkp.classes.linkAction.request.AjaxModal');
             $doiPluginSettingsLinkAction = new LinkAction(
                 'settings',
                 new AjaxModal(

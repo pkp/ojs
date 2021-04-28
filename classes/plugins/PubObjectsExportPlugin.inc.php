@@ -13,7 +13,7 @@
  * @brief Basis class for XML metadata export plugins
  */
 
-import('lib.pkp.classes.plugins.ImportExportPlugin');
+namespace APP\plugins;
 
 // The statuses.
 define('EXPORT_STATUS_ANY', '');
@@ -30,10 +30,17 @@ define('EXPORT_ACTION_DEPOSIT', 'deposit');
 define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
 use PKP\core\JSONMessage;
+use PKP\plugins\HookRegistry;
 use PKP\submission\PKPSubmission;
 use PKP\file\FileManager;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\NullAction;
+use PKP\plugins\ImportExportPlugin;
+use PKP\db\DAORegistry;
 
 use APP\template\TemplateManager;
+use APP\i18n\AppLocale;
+use APP\core\Application;
 
 abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/** @var PubObjectCache */
@@ -134,7 +141,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				// Add link actions
 				$actions = $this->getExportActions($context);
 				$actionNames = array_intersect_key($this->getExportActionNames(), array_flip($actions));
-				import('lib.pkp.classes.linkAction.request.NullAction');
 				$linkActions = array();
 				foreach ($actionNames as $action => $actionName) {
 					$linkActions[] = new LinkAction($action, new NullAction(), $actionName);
@@ -783,4 +789,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	}
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\PubObjectsExportPlugin', '\PubObjectsExportPlugin');
+}

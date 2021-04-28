@@ -15,6 +15,9 @@
 
 import('classes.controllers.grid.issues.IssueGridHandler');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+
 class FutureIssueGridHandler extends IssueGridHandler
 {
     //
@@ -34,7 +37,6 @@ class FutureIssueGridHandler extends IssueGridHandler
 
         // Add Create Issue action
         $router = $request->getRouter();
-        import('lib.pkp.classes.linkAction.request.AjaxModal');
         $this->addAction(
             new LinkAction(
                 'addIssue',

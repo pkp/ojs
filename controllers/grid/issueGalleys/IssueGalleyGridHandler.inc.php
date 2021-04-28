@@ -16,6 +16,8 @@
 import('lib.pkp.classes.controllers.grid.GridHandler');
 import('controllers.grid.issueGalleys.IssueGalleyGridRow');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 use PKP\file\TemporaryFileManager;
 
@@ -117,7 +119,6 @@ class IssueGalleyGridHandler extends GridHandler
 
         // Add action
         $router = $request->getRouter();
-        import('lib.pkp.classes.linkAction.request.AjaxModal');
         $this->addAction(
             new LinkAction(
                 'add',

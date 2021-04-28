@@ -13,10 +13,11 @@
  * @brief Public identifiers plugins common functions
  */
 
-import('lib.pkp.classes.plugins.PKPPubIdPlugin');
+namespace APP\plugins;
 
-use \PKP\core\JSONMessage;
-use \PKP\submission\SubmissionFile;
+use PKP\plugins\PKPPubIdPlugin;
+use PKP\core\JSONMessage;
+use PKP\submission\SubmissionFile;
 use PKP\submission\PKPSubmission;
 
 abstract class PubIdPlugin extends PKPPubIdPlugin {
@@ -311,3 +312,6 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	}
 }
 
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\PubIdPlugin', '\PubIdPlugin');
+}

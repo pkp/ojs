@@ -15,6 +15,9 @@
 
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxAction;
+
 class TocGridCellProvider extends GridCellProvider
 {
     /**
@@ -53,7 +56,6 @@ class TocGridCellProvider extends GridCellProvider
      */
     public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
     {
-        import('lib.pkp.classes.linkAction.request.AjaxAction');
         switch ($column->getId()) {
             case 'access':
                 $article = $row->getData(); /* @var $article Submission */

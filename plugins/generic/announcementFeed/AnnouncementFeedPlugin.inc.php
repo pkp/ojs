@@ -13,11 +13,12 @@
  * @brief Annoucement Feed plugin class
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
-
+use PKP\linkAction\LinkAction;
+use PKP\plugins\GenericPlugin;
+use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class AnnouncementFeedPlugin extends GenericPlugin
 {
@@ -124,7 +125,6 @@ class AnnouncementFeedPlugin extends GenericPlugin
     public function getActions($request, $verb)
     {
         $router = $request->getRouter();
-        import('lib.pkp.classes.linkAction.request.AjaxModal');
         return array_merge(
             $this->getEnabled() ? [
                 new LinkAction(

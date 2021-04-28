@@ -16,9 +16,8 @@
  */
 
 use PKP\form\Form;
-
-import('lib.pkp.classes.linkAction.LinkAction');
-import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 import('classes.issue.Issue'); // Bring in constants
 

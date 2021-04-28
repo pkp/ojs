@@ -13,6 +13,11 @@
  * @brief Handle issue grid row requests.
  */
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\request\OpenWindowAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
+
 import('lib.pkp.classes.controllers.grid.GridRow');
 
 class IssueGridRow extends GridRow
@@ -34,7 +39,6 @@ class IssueGridRow extends GridRow
             assert(is_a($issue, 'Issue'));
             $router = $request->getRouter();
 
-            import('lib.pkp.classes.linkAction.request.AjaxModal');
             $this->addAction(
                 new LinkAction(
                     'edit',
@@ -49,7 +53,6 @@ class IssueGridRow extends GridRow
                 )
             );
 
-            import('lib.pkp.classes.linkAction.request.OpenWindowAction');
             $dispatcher = $request->getDispatcher();
             $this->addAction(
                 new LinkAction(
@@ -62,9 +65,7 @@ class IssueGridRow extends GridRow
                 )
             );
 
-            import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
             if ($issue->getDatePublished()) {
-                import('lib.pkp.classes.linkAction.request.AjaxModal');
                 $this->addAction(
                     new LinkAction(
                         'unpublish',

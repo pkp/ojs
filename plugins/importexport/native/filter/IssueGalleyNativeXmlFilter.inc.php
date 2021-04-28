@@ -17,8 +17,6 @@ import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
 use APP\file\IssueFileManager;
 
-use DOMDocument;
-
 class IssueGalleyNativeXmlFilter extends NativeExportFilter
 {
     /**

@@ -15,6 +15,9 @@
 
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+
 class IssueGridCellProvider extends GridCellProvider
 {
     /** @var string */
@@ -43,7 +46,6 @@ class IssueGridCellProvider extends GridCellProvider
             $issue = $row->getData();
             assert(is_a($issue, 'Issue'));
             $router = $request->getRouter();
-            import('lib.pkp.classes.linkAction.request.AjaxModal');
             return [
                 new LinkAction(
                     'edit',

@@ -15,6 +15,10 @@
 
 import('lib.pkp.classes.controllers.grid.GridRow');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
+
 class IssueGalleyGridRow extends GridRow
 {
     /**
@@ -48,7 +52,6 @@ class IssueGalleyGridRow extends GridRow
             assert(is_a($issue, 'IssueGalley'));
             $router = $request->getRouter();
 
-            import('lib.pkp.classes.linkAction.request.AjaxModal');
             $this->addAction(
                 new LinkAction(
                     'edit',
@@ -70,7 +73,6 @@ class IssueGalleyGridRow extends GridRow
                 )
             );
 
-            import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
             $this->addAction(
                 new LinkAction(
                     'delete',

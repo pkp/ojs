@@ -16,7 +16,10 @@
 // Import the base Handler.
 import('lib.pkp.controllers.tab.workflow.PKPWorkflowTabHandler');
 
-use \APP\template\TemplateManager;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+
+use APP\template\TemplateManager;
 
 class WorkflowTabHandler extends PKPWorkflowTabHandler
 {
@@ -32,7 +35,6 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler
         switch ($stageId) {
             case WORKFLOW_STAGE_ID_PRODUCTION:
                 $dispatcher = $request->getDispatcher();
-                import('lib.pkp.classes.linkAction.request.AjaxModal');
                 $schedulePublicationLinkAction = new LinkAction(
                     'schedulePublication',
                     new AjaxModal(

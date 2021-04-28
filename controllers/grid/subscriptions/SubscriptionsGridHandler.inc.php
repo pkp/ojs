@@ -18,6 +18,9 @@ import('lib.pkp.classes.controllers.grid.GridHandler');
 import('controllers.grid.subscriptions.SubscriptionsGridRow');
 import('controllers.grid.subscriptions.SubscriptionsGridCellProvider');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+
 abstract class SubscriptionsGridHandler extends GridHandler
 {
     /**
@@ -66,7 +69,6 @@ abstract class SubscriptionsGridHandler extends GridHandler
         // Grid actions.
         $router = $request->getRouter();
 
-        import('lib.pkp.classes.linkAction.request.AjaxModal');
         $this->addAction(
             new LinkAction(
                 'addSubscription',

@@ -15,6 +15,10 @@
 
 import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RedirectAction;
+use PKP\linkAction\request\AjaxModal;
+
 use APP\core\Services;
 
 class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellProvider
@@ -50,7 +54,6 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
         $columnId = $column->getId();
         assert(is_a($submission, 'Submission') && !empty($columnId));
 
-        import('lib.pkp.classes.linkAction.request.RedirectAction');
         switch ($columnId) {
             case 'title':
                 $this->_titleColumn = $column;
@@ -78,7 +81,6 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
                     // Link to the issue edit modal
                     $application = Application::get();
                     $dispatcher = $application->getDispatcher();
-                    import('lib.pkp.classes.linkAction.request.AjaxModal');
                     return [
                         new LinkAction(
                             'edit',

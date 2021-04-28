@@ -15,6 +15,10 @@
 
 import('lib.pkp.classes.controllers.grid.GridRow');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RedirectAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
+
 class TocGridRow extends GridRow
 {
     /** @var int */
@@ -42,7 +46,6 @@ class TocGridRow extends GridRow
         parent::initialize($request, $template);
 
         $dispatcher = $request->getDispatcher();
-        import('lib.pkp.classes.linkAction.request.RedirectAction');
         $this->addAction(
             new LinkAction(
                 'workflow',
@@ -55,7 +58,6 @@ class TocGridRow extends GridRow
         );
 
         $router = $request->getRouter();
-        import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
         $this->addAction(
             new LinkAction(
                 'removeArticle',

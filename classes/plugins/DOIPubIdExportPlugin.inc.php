@@ -13,7 +13,7 @@
  * @brief Basis class for DOI XML metadata export plugins
  */
 
-import('classes.plugins.PubObjectsExportPlugin');
+namespace APP\plugins;
 
 // Configuration errors.
 define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
@@ -22,8 +22,12 @@ define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
 define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
 
 use PKP\submission\PKPSubmission;
+use PKP\db\DAORegistry;
+use PKP\plugins\PluginRegistry;
+use PKP\core\PKPString;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+use APP\plugins\PubObjectsExportPlugin;
 
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	/**
@@ -231,4 +235,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\DOIPubIdExportPlugin', '\DOIPubIdExportPlugin');
+}

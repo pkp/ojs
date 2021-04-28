@@ -16,6 +16,8 @@
 import('lib.pkp.controllers.grid.settings.SetupGridHandler');
 import('controllers.grid.settings.sections.SectionGridRow');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 
 class SectionGridHandler extends SetupGridHandler
@@ -92,7 +94,6 @@ class SectionGridHandler extends SetupGridHandler
 
         // Add grid-level actions
         $router = $request->getRouter();
-        import('lib.pkp.classes.linkAction.request.AjaxModal');
         $this->addAction(
             new LinkAction(
                 'addSection',

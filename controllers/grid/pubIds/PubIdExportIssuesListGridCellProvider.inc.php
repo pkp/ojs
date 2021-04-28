@@ -15,6 +15,10 @@
 
 import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RedirectAction;
+use PKP\linkAction\request\AjaxModal;
+
 class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider
 {
     /** @var ImportExportPlugin */
@@ -53,7 +57,6 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider
                 // Link to the issue edit modal
                 $application = Application::get();
                 $dispatcher = $application->getDispatcher();
-                import('lib.pkp.classes.linkAction.request.AjaxModal');
                 return [
                     new LinkAction(
                         'edit',
@@ -71,7 +74,6 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider
                 $statusActions = $this->_plugin->getStatusActions($publishedIssue);
                 if ($status && array_key_exists($status, $statusActions)) {
                     assert(array_key_exists($status, $statusNames));
-                    import('lib.pkp.classes.linkAction.request.RedirectAction');
                     return [
                         new LinkAction(
                             'edit',

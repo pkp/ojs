@@ -14,6 +14,8 @@
  */
 
 use PKP\form\Form;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 class DOISettingsForm extends Form
 {
@@ -90,7 +92,6 @@ class DOISettingsForm extends Form
         $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
 
         // for DOI reset requests
-        import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
         $request = Application::get()->getRequest();
         $this->setData('clearPubIdsLinkAction', new LinkAction(
             'reassignDOIs',

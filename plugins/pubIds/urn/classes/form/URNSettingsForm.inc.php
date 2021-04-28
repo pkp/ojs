@@ -14,6 +14,8 @@
  */
 
 use PKP\form\Form;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
+use PKP\linkAction\LinkAction;
 
 use APP\template\TemplateManager;
 
@@ -92,7 +94,6 @@ class URNSettingsForm extends Form
         $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
 
         // for URN reset requests
-        import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
         $request = Application::get()->getRequest();
         $this->setData('clearPubIdsLinkAction', new LinkAction(
             'reassignURNs',

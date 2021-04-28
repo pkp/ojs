@@ -13,7 +13,10 @@
  * @brief Representation of an article galley grid row.
  */
 
-use \PKP\submission\SubmissionFile;
+use PKP\submission\SubmissionFile;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 import('lib.pkp.classes.controllers.grid.GridRow');
 
@@ -66,7 +69,6 @@ class ArticleGalleyGridRow extends GridRow
 
             if ($this->_isEditable) {
                 // Add row-level actions
-                import('lib.pkp.classes.linkAction.request.AjaxModal');
                 $this->addAction(new LinkAction(
                     'editGalley',
                     new AjaxModal(
@@ -81,7 +83,6 @@ class ArticleGalleyGridRow extends GridRow
                 $galley = $this->getData();
                 if ($galley->getRemoteUrl() == '') {
                     import('lib.pkp.controllers.api.file.linkAction.AddFileLinkAction');
-                    import('lib.pkp.classes.submission.SubmissionFile'); // Constants
                     $this->addAction(new AddFileLinkAction(
                         $request,
                         $this->getSubmission()->getId(),
@@ -94,7 +95,6 @@ class ArticleGalleyGridRow extends GridRow
                     ));
                 }
 
-                import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
                 $this->addAction(new LinkAction(
                     'deleteGalley',
                     new RemoteActionConfirmationModal(
