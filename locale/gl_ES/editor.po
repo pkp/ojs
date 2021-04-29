@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-28 15:12+0000\n"
+"PO-Revision-Date: 2021-04-30 07:17+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "gl_ES/>\n"
@@ -150,3 +150,127 @@ msgstr "Reasignar"
 
 msgid "editor.home"
 msgstr "Páxina inicial do editor/a"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Anular a publicación do número"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publicar o número"
+
+msgid "editor.issues.publicId"
+msgstr "Identificador público"
+
+msgid "editor.issues.order"
+msgstr "Ordenar"
+
+msgid "editor.issues.default"
+msgstr "Por defecto"
+
+msgid "editor.issues.saveChanges"
+msgstr "Quere gardar os cambios efectuados no sumario?"
+
+msgid "editor.issues.issueData"
+msgstr "Datos do número"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Este número utiliza unha ordenación de seccións personalizada. <a href=\""
+"{$url}\" class=\"action\">Reiniciar os valores por defecto</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Esta revista utiliza unha ordenación de números personalizada. <a href=\""
+"{$url}\" class=\"action\">Reiniciar os valores por defecto</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Todos os artigos volverán á fila de edición e todos os arquivos asociados "
+"serán eliminados definitivamente. Está seguro/a de que quere eliminar este "
+"número?"
+
+msgid "editor.issues.cover"
+msgstr "Cuberta"
+
+msgid "editor.issues.access"
+msgstr "Acceso"
+
+msgid "editor.issues.identification"
+msgstr "Identificación"
+
+msgid "editor.issues.subscription"
+msgstr "Subscrición"
+
+msgid "editor.issues.openAccess"
+msgstr "Acceso libre"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Mostrar"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Crear unha cuberta para este número cos elementos seguintes."
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Lenda da cuberta"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Quere eliminar a folla de estilo?"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"O formato da folla de estilo non é válido. Asegúrese de que o arquivo "
+"enviado é un CSS válido. (Teña en conta que as follas de estilo con "
+"comentarios ao comezo poden ser rexeitadas.)"
+
+msgid "editor.issues.styleFile"
+msgstr "Folla de estilo"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Formato da imaxe de cuberta non válido.  Os formatos aceptados son .gif, "
+".jpg, or .png."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"A imaxe da cuberta que quere  eliminar non se puido atopar, pode que xa fose "
+"eliminada. Intente recargar a páxina."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"A imaxe da cuberta que quere eliminar non corresponde á deste número. "
+"Recargue a páxina e volva intentalo."
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Quere eliminar a imaxe da cuberta?"
+
+msgid "editor.issues.proofed"
+msgstr "Corrixido"
+
+msgid "editor.issues.remove"
+msgstr "Eliminar"
+
+msgid "editor.issues.uploaded"
+msgstr "Cargado"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Formatos admitidos: .gif, .jpg, .png)"
+
+msgid "editor.issues.coverPage"
+msgstr "Imaxe de cuberta"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Activar o acceso libre diferido"
+
+msgid "editor.issues.accessDate"
+msgstr "Data de acceso libre"
+
+msgid "editor.issues.accessStatus"
+msgstr "Estado de acceso"
+
+msgid "editor.issues.description"
+msgstr "Descrición"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Identificador público do número"
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identificación do número"
