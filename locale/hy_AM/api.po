@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-28 15:12+0000\n"
+"PO-Revision-Date: 2021-04-29 08:04+0000\n"
 "Last-Translator: Liana Arustamyan <lianaarustamyan33@gmail.com>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/api/hy_AM/>"
 "\n"
@@ -52,7 +52,6 @@ msgstr ""
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Դուք չունեք թույլտվություն տեսնելու չհրապարակված համարը։"
 
-#, fuzzy
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Դուք չեք կարող փոխել  ամսագիրը։"
 
