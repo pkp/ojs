@@ -18,6 +18,7 @@ namespace APP\plugins;
 use PKP\plugins\PKPPubIdPlugin;
 use PKP\core\JSONMessage;
 use PKP\submission\SubmissionFile;
+use PKP\db\DAORegistry;
 use PKP\submission\PKPSubmission;
 
 abstract class PubIdPlugin extends PKPPubIdPlugin {
