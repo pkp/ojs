@@ -21,6 +21,9 @@ use PKP\submission\SubmissionFile;
 use PKP\db\DAORegistry;
 use PKP\submission\PKPSubmission;
 
+// FIXME: Add namespacing
+use \NotificationManager;
+
 abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 	/**
