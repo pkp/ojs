@@ -26,6 +26,23 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 - email.smtp_oauth_clientsecret
 - email.smtp_oauth_refreshtoken
 
+3.3.0-6 Build
+-------------
+	#6986: HTML entities displayed in journal title by citationStyleLanguage plugin
+	#6979: [OJS 3.3.0.3] Unassigned submission list not working
+	#6962: OAI resumption tokens never delivered
+	#6956: mEDRA Export: PHP Fatal error after upgrade
+	#6953: Replace getCCLicenseBadge static calls with instance calls
+	#6952: Remove file naming test from the shared library
+	#6949: Issues can be served by ID in the wrong journal
+	#6938: Email templates can not be saved because of data from disabled locales
+	#6931: Clear issue object DOIs does not delete publication DOIs
+	#6909: mEDRA: the calculation of the file size is different for issue and article galleys
+	#6898: Diacritics are stripped from filenames when downloading
+	#6887: Crossref status check errors in 3.3.0-x
+	#6772: Upgrade from 3.2 to 3.3, All Journal custom block become same from last journal custom block
+	#6683: Ordering of sidebar blocks changed upon visiting the settings form
+
 3.3.0-5 Build
 -------------
 	#6910: Use proper identification when issuing HTTP requests
