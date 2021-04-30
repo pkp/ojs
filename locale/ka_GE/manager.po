@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-09 20:14+0000\n"
+"PO-Revision-Date: 2021-04-30 07:17+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ka_GE/>\n"
@@ -2102,3 +2102,21 @@ msgstr "{$x} თვე"
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "დარწმუნებული ხართ, რომ გსურთ გამოწერის წაშლა?"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "პროცესმა ვერ შეძლო სვეტების გამოცემა"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" — \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "ექსპორტის საკითხების შედეგები"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"ამ ჟურნალისთვის პირველადი კონტაქტი არ არის განსაზღვრული. პირველადი კონტაქტის "
+"შეყვანა შეგიძლიათ <a href=\"{$url}\"> ჟურნალის პარამეტრებში </a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"გაგზავნის დადასტურების ელფოსტის ასლი ამ ჟურნალის პირველადი კონტაქტისთვის."
