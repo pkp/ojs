@@ -212,8 +212,8 @@
 
 	<upgrade minversion="3.0.0.0" maxversion="3.3.9.9">
 		<migration class="lib.pkp.classes.migration.upgrade.PKPv3_4_0UpgradeMigration" />
-		<migration class="lib.pkp.classes.migration.upgrade.3_4_0.I4904_UsageStatsTemporaryRecords" />
-		<migration class="classes.migration.upgrade.3_4_0.I6807_SetLastModified" />
+		<migration class="lib.pkp.classes.migration.upgrade.v3_4_0.I4904_UsageStatsTemporaryRecords" />
+		<migration class="classes.migration.upgrade.v3_4_0.I6807_SetLastModified" />
 		<data file="dbscripts/xml/upgrade/3.4.0_preupdate_email_templates.xml" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>

@@ -13,6 +13,8 @@
  * @see https://github.com/pkp/pkp-lib/issues/6872
  */
 
+namespace APP\migration\upgrade;
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
@@ -33,4 +35,8 @@ class OJSv3_3_1_i6872_UrlPathMigration extends Migration
     {
         // This migration is not destructive. A downgrade should leave these url_paths as null.
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\migration\upgrade\OJSv3_3_1_i6872_UrlPathMigration', '\OJSv3_3_1_i6872_UrlPathMigration');
 }

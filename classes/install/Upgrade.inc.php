@@ -21,8 +21,10 @@ use PKP\identity\Identity;
 use PKP\submission\SubmissionFile;
 use PKP\file\FileManager;
 use PKP\install\Installer;
+use PKP\db\DAORegistry;
 
 use APP\file\PublicFileManager;
+use APP\core\Application;
 use APP\template\TemplateManager;
 
 class Upgrade extends Installer
@@ -823,7 +825,7 @@ class Upgrade extends Installer
 
             import('plugins.generic.staticPages.classes.StaticPagesDAO');
 
-            $staticPagesDao = new StaticPagesDAO();
+            $staticPagesDao = new \StaticPagesDAO();
 
             $contexts = $contextDao->getAll();
             while ($context = $contexts->next()) {

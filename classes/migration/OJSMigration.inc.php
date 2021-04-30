@@ -11,6 +11,8 @@
  * @brief Describe database table structures.
  */
 
+namespace APP\migration;
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
@@ -344,4 +346,8 @@ class OJSMigration extends Migration
         Schema::drop('journal_settings');
         Schema::drop('journals');
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\migration\OJSMigration', '\OJSMigration');
 }
