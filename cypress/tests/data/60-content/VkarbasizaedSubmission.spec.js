@@ -163,7 +163,7 @@ describe('Data suite tests', function() {
 		cy.get('#publication button:contains("Create New Version")');
 	});
 
-	it('Remove submisison from TOC', function() {
+	it('Remove submission from TOC', function() {
 		cy.login('dbarnes');
 		cy.visit('index.php/publicknowledge/manageIssues#back');
 		cy.get('span:contains("' + issueTitle + '")').prev('a.show_extras').click();

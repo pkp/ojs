@@ -16,6 +16,7 @@
 namespace APP\Services;
 
 use Pimple\Container;
+
 use PKP\Services\PKPAnnouncementService;
 use PKP\Services\PKPAuthorService;
 use PKP\Services\PKPEmailTemplateService;
