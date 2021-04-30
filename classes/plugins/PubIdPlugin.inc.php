@@ -20,6 +20,7 @@ use PKP\core\JSONMessage;
 use PKP\submission\SubmissionFile;
 use PKP\db\DAORegistry;
 use PKP\submission\PKPSubmission;
+use PKP\core\PKPString;
 
 // FIXME: Add namespacing
 use \NotificationManager;
