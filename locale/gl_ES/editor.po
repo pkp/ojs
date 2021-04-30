@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-30 07:17+0000\n"
+"PO-Revision-Date: 2021-04-30 18:45+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "gl_ES/>\n"
@@ -274,3 +274,200 @@ msgstr "Identificador público do número"
 
 msgid "editor.issues.issueIdentification"
 msgstr "Identificación do número"
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Calquera arquivo xa asignado a unha fase do envío pode engadirse á lista de "
+"corrección de orixinais marcando \"Engadir\" e facendo clic en \"Buscar\": "
+"listaranse todos os arquivos dispoñibles e poderán ser seleccionados para a "
+"súa inclusión."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"O corrector transforma os borradores finais desta lista en versións "
+"revisadas, cargadas a continuación en <span class=\"pkp_help_title\">"
+"Corrección de orixinais</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Seleccionar os arquivos de galerada"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"O/A responsable de maquetaxe prepara estes arquivos para cada galerada e "
+"cárgaos no sitio <span class=\"pkp_help_title\">Probas</span> axeitado para "
+"a súa corrección."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Editar a galerada do número"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "A data de acceso non é válida."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Seguro que quere eliminar este artigo do número? O artigo quedará dispoñible "
+"para outro número."
+
+msgid "editor.article.remove"
+msgstr "Eliminar"
+
+msgid "grid.action.removeArticle"
+msgstr "Eliminar artigo do número"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"A imaxe de cuberta que quería eliminar non se puido atopar, pode que xa fose "
+"eliminada. Inténteo recargando a páxina."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Non se pagou a cota de publicación. Para planificar a publicación dun "
+"artigo, notifique ao autor/a que debe pagar a cota ou pedir a exención do "
+"pagamento."
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Aínda sen asignar"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Publicación planificada en"
+
+msgid "editor.article.editMetadata"
+msgstr "Editar os metadatos da versión"
+
+msgid "editor.article.viewMetadata"
+msgstr "Ver os metadatos da versión"
+
+msgid "editor.article.publishVersion"
+msgstr "Publicar versión"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Mostrar a publicación programada"
+
+msgid "editor.submissions.inSection"
+msgstr "Na sección"
+
+msgid "issues.submissions.issueIds"
+msgstr "Asignado a un número"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Asignado a un editor/a"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Último envío completado"
+
+msgid "editor.submissions.averageTime"
+msgstr "Semanas"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Último envío"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Non hai ningún envío"
+
+msgid "editor.submissions.accept"
+msgstr "Aceptar"
+
+msgid "editor.submissions.invite"
+msgstr "Convidar"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Asignacións activas"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Enviar MM-DD"
+
+msgid "editor.submissions.showBy"
+msgstr "Mostrar por"
+
+msgid "editor.article.decision"
+msgstr "Decisión"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Designar o arquivo orixinal como a versión para revisión"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Números anteriores"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Definir o número actual"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Crear galerada do número"
+
+msgid "grid.action.previewIssue"
+msgstr "Previsualizar"
+
+msgid "grid.action.viewIssue"
+msgstr "Visualizar"
+
+msgid "grid.action.addIssue"
+msgstr "Crear número"
+
+msgid "grid.action.publish"
+msgstr "Publicar número"
+
+msgid "grid.action.addGalley"
+msgstr "Engadir galerada"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Próximos números"
+
+msgid "editor.issues.identifiers"
+msgstr "Identificadores"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Está seguro/a de que quere eliminar esta galerada do número?"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Volver ás galeradas do número"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "O identificador público da galerada deste número xa existe"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Debe precisar a lingua utilizada nas galeradas deste número"
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Requírese unha etiqueta para as galeradas deste número."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Non se publicou ningunha galerada deste número"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publicar as galeradas con todos os contidos do número."
+
+msgid "editor.issues.viewingGalley"
+msgstr "Visualizar a galerada do número"
+
+msgid "editor.issues.galley"
+msgstr "Galerada do número"
+
+msgid "editor.issues.galleys"
+msgstr "Galeradas do número"
+
+msgid "editor.issues.pages"
+msgstr "Páxinas"
+
+msgid "editor.issues.open"
+msgstr "Aberto"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Non hai ningún número activo"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Non foi posible gardar o Id. público para o artigo:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Seguro que quere definir este número como o actual?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Está seguro/a de que quere retirar o número publicado?"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Está seguro/a de que quere publicar o novo número?"
+
+msgid "editor.issues.preview"
+msgstr "Vista previa"
+
+msgid "editor.issues.previewIssue"
+msgstr "Previsualización do número"
