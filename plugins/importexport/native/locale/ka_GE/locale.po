@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-09 08:48+0000\n"
+"PO-Revision-Date: 2021-04-30 07:17+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/ka_GE/>\n"
@@ -18,7 +18,7 @@ msgid "plugins.inportexport.native.uploadFile"
 msgstr "გასაგრძელებლად, გთხოვთ ატვირთოთ ფაილი სექციაში „იმპორტი“."
 
 msgid "plugins.importexport.native.results"
-msgstr "შედეგები"
+msgstr "შედეგების იმპორტი"
 
 msgid "plugins.importexport.native.exportIssues"
 msgstr "გამოცემების ექსპორტი"
