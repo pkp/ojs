@@ -54,7 +54,7 @@ class PaypalPaymentForm extends Form
                 'testMode' => $this->_paypalPaymentPlugin->getSetting($journal->getId(), 'testMode'),
             ]);
             $transaction = $gateway->purchase([
-                'amount' => number_format($this->_queuedPayment->getAmount(), 2),
+                'amount' => number_format($this->_queuedPayment->getAmount(), 2, '.', ''),
                 'currency' => $this->_queuedPayment->getCurrencyCode(),
                 'description' => $paymentManager->getPaymentName($this->_queuedPayment),
                 'returnUrl' => $request->url(null, 'payment', 'plugin', [$this->_paypalPaymentPlugin->getName(), 'return'], ['queuedPaymentId' => $this->_queuedPayment->getId()]),
