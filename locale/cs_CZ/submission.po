@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2021-04-30 07:17+0000\n"
+"PO-Revision-Date: 2021-05-03 22:23+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "cs_CZ/>\n"
@@ -258,7 +258,7 @@ msgid "submission.status.scheduled"
 msgstr "Naplánováno"
 
 msgid "publication.status.unscheduled"
-msgstr "Neplánovaný"
+msgstr "Není naplánováno vydání"
 
 msgid "submission.publications"
 msgstr "Vydání"
@@ -324,16 +324,16 @@ msgid "submission.copyrightOther.description"
 msgstr "Přiřaďte autorská práva k publikovaným příspěvkům následující straně."
 
 msgid "publication.unpublish"
-msgstr "Nepublikovat"
+msgstr "Ukončit zveřejnění"
 
 msgid "publication.unpublish.confirm"
-msgstr "Opravdu nechcete, aby to bylo zveřejněno?"
+msgstr "Opravdu chcete ukončit zveřejnění?"
 
 msgid "publication.unschedule.confirm"
 msgstr "Opravdu si nepřejete, aby to bylo naplánováno na zveřejnění?"
 
 msgid "publication.version.details"
-msgstr "Podrobnosti publikace pro verzi {$version}"
+msgstr "Podrobnosti o zveřejnění pro verzi {$version}"
 
 msgid "submission.queries.production"
 msgstr "Diskuse během produkčního procesu"
