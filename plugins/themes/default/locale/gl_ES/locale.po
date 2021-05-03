@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-22 00:55+0000\n"
-"Last-Translator: Jose Manuel <correo@josemanuel.dev>\n"
+"PO-Revision-Date: 2021-05-03 22:23+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/gl_ES/>\n"
 "Language: gl_ES\n"
@@ -50,3 +50,24 @@ msgstr "Este tema implementa o tema por defecto."
 
 msgid "plugins.themes.default.name"
 msgstr "Tema por defecto"
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: unha combinación complementaria con serif para os títulos e "
+"sen serif para o corpo de texto."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Fonte serif ampla, indicada para ler en liña."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Fonte sen serif, popular e moderna."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: Unha combinación complementaria sen serif para os "
+"títulos e con serif para o corpo de texto."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: Unha combinación complementaria con serif para os "
+"títulos e sen serif para o corpo de texto."
