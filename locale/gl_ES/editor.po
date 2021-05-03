@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-30 18:45+0000\n"
+"PO-Revision-Date: 2021-05-03 22:23+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "gl_ES/>\n"
@@ -60,7 +60,7 @@ msgid "editor.editorAdministration"
 msgstr "Administración do editor/a"
 
 msgid "editor.notifyUsers.includeToc"
-msgstr "Incluír o sumario deste número"
+msgstr "Incluír o sumario deste número:"
 
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
@@ -422,16 +422,16 @@ msgid "editor.issues.backToIssueGalleys"
 msgstr "Volver ás galeradas do número"
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "O identificador público da galerada deste número xa existe"
+msgstr "O identificador público da galerada deste número xa existe."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Debe precisar a lingua utilizada nas galeradas deste número"
+msgstr "Debe precisar a lingua utilizada nas galeradas deste número."
 
 msgid "editor.issues.galleyLabelRequired"
 msgstr "Requírese unha etiqueta para as galeradas deste número."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Non se publicou ningunha galerada deste número"
+msgstr "Non se publicou ningunha galerada deste número."
 
 msgid "editor.issues.issueGalleysDescription"
 msgstr "Publicar as galeradas con todos os contidos do número."
@@ -471,3 +471,12 @@ msgstr "Vista previa"
 
 msgid "editor.issues.previewIssue"
 msgstr "Previsualización do número"
+
+msgid "editor.article.coverImage"
+msgstr "Imaxe da cuberta"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"O identificador público '{$publicIdentifier}' xa existe para outro obxecto "
+"do mesmo tipo. Debe escoller identificadores únicos para os obxectos do "
+"mesmo tipo na súa revista."
