@@ -18,9 +18,9 @@ import('lib.pkp.controllers.tab.pubIds.form.PKPPublicIdentifiersForm');
 use \APP\template\TemplateManager;
 
 // FIXME: Add namespacing
-use Issue;
-use IssueGalley;
-use ArticleGalley;
+//use Issue;
+//use IssueGalley;
+//use ArticleGalley;
 
 class PublicIdentifiersForm extends PKPPublicIdentifiersForm
 {
