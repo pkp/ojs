@@ -22,9 +22,9 @@ use APP\template\TemplateManager;
 use APP\publication\Publication;
 
 // FIXME: Use namespacing
-use \Issue;
-use \IssueGalley;
-use \ArticleGalley;
+//use \Issue;
+//use \IssueGalley;
+//use \ArticleGalley;
 
 class URNPubIdPlugin extends PubIdPlugin
 {

@@ -21,9 +21,9 @@ use APP\plugins\PubIdPlugin;
 use APP\publication\Publication;
 
 // FIXME: Add namespacing
-use \Issue;
-use \IssueGalley;
-use \ArticleGalley;
+//use \Issue;
+//use \IssueGalley;
+//use \ArticleGalley;
 
 class DOIPubIdPlugin extends PubIdPlugin
 {
