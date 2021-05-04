@@ -15,6 +15,7 @@
 
 import('controllers.grid.submissions.ExportPublishedSubmissionsListGridCellProvider');
 
+use APP\submission\Submission;
 
 class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissionsListGridCellProvider
 {
@@ -35,7 +36,7 @@ class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissi
     {
         $submission = $row->getData();
         $columnId = $column->getId();
-        assert(is_a($submission, 'Submission') && !empty($columnId));
+        assert($submission instanceof Submission && !empty($columnId));
 
         switch ($columnId) {
             case 'pubId':

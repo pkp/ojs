@@ -15,6 +15,11 @@
 
 import('lib.pkp.plugins.importexport.native.filter.NativeXmlRepresentationFilter');
 
+use APP\submission\Submission;
+
+// FIXME: Add namespacing
+use DOMElement;
+
 class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
 {
     //
@@ -64,7 +69,7 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
         $submission = $deployment->getSubmission();
-        assert(is_a($submission, 'Submission'));
+        assert($submission instanceof Submission);
 
         $submissionFileRefNodes = $node->getElementsByTagName('submission_file_ref');
         assert($submissionFileRefNodes->length <= 1);
@@ -79,7 +84,7 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
         $representation = parent::handleElement($node);
 
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
             case 'name':
                 // Labels are not localized in OJS ArticleGalleys, but we use the <name locale="....">...</name> structure.

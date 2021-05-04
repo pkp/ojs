@@ -19,6 +19,12 @@ use PKP\linkAction\LinkAction;
 
 use APP\plugins\PubIdPlugin;
 use APP\template\TemplateManager;
+use APP\publication\Publication;
+
+// FIXME: Use namespacing
+use \Issue;
+use \IssueGalley;
+use \ArticleGalley;
 
 class URNPubIdPlugin extends PubIdPlugin
 {
@@ -202,7 +208,8 @@ class URNPubIdPlugin extends PubIdPlugin
         $linkActions = [];
         $request = Application::get()->getRequest();
         $userVars = $request->getUserVars();
-        $userVars['pubIdPlugIn'] = get_class($this);
+        $classNameParts = explode('\\', get_class($this)); // Separate namespace info from class name
+        $userVars['pubIdPlugIn'] = end($classNameParts);
         // Clear object pub id
         $linkActions['clearPubIdLinkActionURN'] = new LinkAction(
             'clearPubId',
@@ -218,7 +225,7 @@ class URNPubIdPlugin extends PubIdPlugin
             __('plugins.pubIds.urn.editor.clearObjectsURN')
         );
 
-        if (is_a($pubObject, 'Issue')) {
+        if ($pubObject instanceof Issue) {
             // Clear issue objects pub ids
             $linkActions['clearIssueObjectsPubIdsLinkActionURN'] = new LinkAction(
                 'clearObjectsPubIds',
@@ -314,12 +321,12 @@ class URNPubIdPlugin extends PubIdPlugin
         $props = $args[2];
 
         // URNs are not supported for IssueGalleys
-        if (get_class($object) === 'IssueGalley') {
+        if ($object instanceof IssueGalley) {
             return;
         }
 
         // URNs are already added to property values for Publications and Galleys
-        if (get_class($object) === 'Publication' || get_class($object) === 'ArticleGalley') {
+        if ($object instanceof Publication || $object instanceof ArticleGalley) {
             return;
         }
 

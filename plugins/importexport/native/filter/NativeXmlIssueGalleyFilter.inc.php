@@ -17,6 +17,9 @@ import('lib.pkp.plugins.importexport.native.filter.NativeImportFilter');
 
 use APP\file\IssueFileManager;
 
+// FIXME: Add namespacing
+use Issue;
+
 class NativeXmlIssueGalleyFilter extends NativeImportFilter
 {
     /**
@@ -79,7 +82,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
         $issue = $deployment->getIssue();
-        assert(is_a($issue, 'Issue'));
+        assert($issue instanceof Issue);
 
         // Create the data object
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */

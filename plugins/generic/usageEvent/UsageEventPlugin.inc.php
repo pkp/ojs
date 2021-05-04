@@ -15,7 +15,8 @@
 
 import('lib.pkp.plugins.generic.usageEvent.PKPUsageEventPlugin');
 
-use \APP\template\TemplateManager;
+use APP\submission\Submission;
+use APP\template\TemplateManager;
 
 class UsageEventPlugin extends PKPUsageEventPlugin
 {
@@ -181,6 +182,6 @@ class UsageEventPlugin extends PKPUsageEventPlugin
      */
     protected function isPubIdObjectType($pubObject)
     {
-        return is_a($pubObject, 'Submission');
+        return $pubObject instanceof Submission;
     }
 }

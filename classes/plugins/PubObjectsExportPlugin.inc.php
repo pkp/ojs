@@ -38,9 +38,13 @@ use PKP\linkAction\request\NullAction;
 use PKP\plugins\ImportExportPlugin;
 use PKP\db\DAORegistry;
 
+use APP\plugins\PubObjectCache;
 use APP\template\TemplateManager;
 use APP\i18n\AppLocale;
 use APP\core\Application;
+
+// FIXME: Add namespacing
+use \NotificationManager;
 
 abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/** @var PubObjectCache */
@@ -51,9 +55,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @return PubObjectCache
 	 */
 	function getCache() {
-		if (!is_a($this->_cache, 'PubObjectCache')) {
+		if (!$this->_cache instanceof PubObjectCache) {
 			// Instantiate the cache.
-			import('classes.plugins.PubObjectCache');
 			$this->_cache = new PubObjectCache();
 		}
 		return $this->_cache;

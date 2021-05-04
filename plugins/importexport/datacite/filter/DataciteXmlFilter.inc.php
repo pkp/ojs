@@ -46,6 +46,12 @@ define('DATACITE_DESCTYPE_OTHER', 'Other');
 
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
+use APP\submission\Submission;
+
+// FIXME: Add namespacing
+use Issue;
+use ArticleGalley;
+
 class DataciteXmlFilter extends NativeExportFilter
 {
     /**
@@ -93,17 +99,17 @@ class DataciteXmlFilter extends NativeExportFilter
 
         // Get all objects
         $issue = $article = $galley = $galleyFile = null;
-        if (is_a($pubObject, 'Issue')) {
+        if ($pubObject instanceof Issue) {
             $issue = $pubObject;
             if (!$cache->isCached('issues', $issue->getId())) {
                 $cache->add($issue, null);
             }
-        } elseif (is_a($pubObject, 'Submission')) {
+        } elseif ($pubObject instanceof Submission) {
             $article = $pubObject;
             if (!$cache->isCached('articles', $article->getId())) {
                 $cache->add($article, null);
             }
-        } elseif (is_a($pubObject, 'ArticleGalley')) {
+        } elseif ($pubObject instanceof ArticleGalley) {
             $galley = $pubObject;
             $galleyFile = $galley->getFile();
             $publication = Services::get('publication')->get($galley->getData('publicationId'));
@@ -731,10 +737,10 @@ class DataciteXmlFilter extends NativeExportFilter
     public function getObjectLocalePrecedence($context, $article, $publication, $galley)
     {
         $locales = [];
-        if (is_a($galley, 'ArticleGalley') && AppLocale::isLocaleValid($galley->getLocale())) {
+        if ($galley instanceof ArticleGalley && AppLocale::isLocaleValid($galley->getLocale())) {
             $locales[] = $galley->getLocale();
         }
-        if (is_a($article, 'Submission')) {
+        if ($article instanceof Submission) {
             if (!is_null($publication->getData('locale'))) {
                 $locales[] = $publication->getData('locale');
             }

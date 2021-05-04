@@ -26,6 +26,11 @@ define('DATACITE_API_URL_TEST', 'https://mds.test.datacite.org/');
 define('DATACITE_EXPORT_FILE_XML', 0x01);
 define('DATACITE_EXPORT_FILE_TAR', 0x02);
 
+use APP\submission\Submission;
+
+// FIXME: Add namespacing
+use ArticleGalley;
+use Issue;
 
 class DataciteExportPlugin extends DOIPubIdExportPlugin
 {
@@ -415,7 +420,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     {
         $router = $request->getRouter();
         // Retrieve the article of article files.
-        if (is_a($object, 'ArticleGalley')) {
+        if ($object instanceof ArticleGalley) {
             $publication = Services::get('publication')->get($object->getData('publicationId'));
             $articleId = $publication->getData('submissionId');
             $cache = $this->getCache();
@@ -424,17 +429,17 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             } else {
                 $article = Services::get('submission')->get($articleId);
             }
-            assert(is_a($article, 'Submission'));
+            assert($article instanceof Submission);
         }
         $url = null;
         switch (true) {
-            case is_a($object, 'Issue'):
+            case $object instanceof Issue:
                 $url = $router->url($request, $context->getPath(), 'issue', 'view', $object->getBestIssueId(), null, null, true);
                 break;
-            case is_a($object, 'Submission'):
+            case $object instanceof Submission:
                 $url = $router->url($request, $context->getPath(), 'article', 'view', $object->getBestId(), null, null, true);
                 break;
-            case is_a($object, 'ArticleGalley'):
+            case $object instanceof ArticleGalley:
                 $url = $router->url($request, $context->getPath(), 'article', 'view', [$article->getBestId(), $object->getBestGalleyId()], null, null, true);
                 break;
         }

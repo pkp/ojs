@@ -17,6 +17,11 @@ import('lib.pkp.controllers.tab.pubIds.form.PKPPublicIdentifiersForm');
 
 use \APP\template\TemplateManager;
 
+// FIXME: Add namespacing
+use Issue;
+use IssueGalley;
+use ArticleGalley;
+
 class PublicIdentifiersForm extends PKPPublicIdentifiersForm
 {
     /**
@@ -41,9 +46,9 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm
         $templateMgr = TemplateManager::getManager($request);
         $enablePublisherId = (array) $request->getContext()->getData('enablePublisherId');
         $templateMgr->assign([
-            'enablePublisherId' => (is_a($this->getPubObject(), 'ArticleGalley') && in_array('galley', $enablePublisherId)) ||
-                    (is_a($this->getPubObject(), 'Issue') && in_array('issue', $enablePublisherId)) ||
-                    (is_a($this->getPubObject(), 'IssueGalley') && in_array('issueGalley', $enablePublisherId)),
+            'enablePublisherId' => ($this->getPubObject() instanceof ArticleGalley && in_array('galley', $enablePublisherId)) ||
+                    ($this->getPubObject() instanceof Issue && in_array('issue', $enablePublisherId)) ||
+                    ($this->getPubObject() instanceof IssueGalley && in_array('issueGalley', $enablePublisherId)),
         ]);
 
         return parent::fetch($request, $template, $display);
@@ -56,7 +61,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm
     {
         parent::execute(...$functionArgs);
         $pubObject = $this->getPubObject();
-        if (is_a($pubObject, 'Issue')) {
+        if ($pubObject instanceof Issue) {
             $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
             $issueDao->updateObject($pubObject);
         }
@@ -71,7 +76,8 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm
     {
         $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
         foreach ($pubIdPlugins as $pubIdPlugin) {
-            if (get_class($pubIdPlugin) == $pubIdPlugInClassName) {
+            $classNameParts = explode('\\', get_class($pubIdPlugin)); // Separate namespace info from class name
+            if (end($classNameParts) == $pubIdPlugInClassName) {
                 $pubIdPlugin->clearIssueObjectsPubIds($this->getPubObject());
             }
         }
@@ -82,7 +88,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm
      */
     public function getAssocType($pubObject)
     {
-        if (is_a($pubObject, 'Issue')) {
+        if ($pubObject instanceof Issue) {
             return ASSOC_TYPE_ISSUE;
         }
         return parent::getAssocType($pubObject);

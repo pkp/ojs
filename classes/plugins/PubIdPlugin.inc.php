@@ -24,6 +24,7 @@ use PKP\core\PKPString;
 
 // FIXME: Add namespacing
 use \NotificationManager;
+use \Issue;
 
 abstract class PubIdPlugin extends PKPPubIdPlugin {
 
@@ -104,7 +105,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 */
 	function getPubObjectTypes() {
 		$pubObjectTypes = parent::getPubObjectTypes();
-		array_push($pubObjectTypes, 'Issue');
+		$pubObjectTypes['Issue'] = '\Issue'; // FIXME: Add namespacing
 		return $pubObjectTypes;
 	}
 
@@ -113,7 +114,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	 */
 	function checkDuplicate($pubId, $pubObjectType, $excludeId, $contextId) {
 		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		foreach ($this->getPubObjectTypes() as $type) {
+		foreach ($this->getPubObjectTypes() as $type => $fqcn) {
 			if ($type === 'Issue') {
 				$excludeTypeId = $type === $pubObjectType ? $excludeId : null;
 				if ($issueDao->pubIdExists($type, $pubId, $excludeTypeId, $contextId)) {
@@ -167,7 +168,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		if (!$objectTypeEnabled) return null;
 
 		// Retrieve the issue.
-		if (!is_a($pubObject, 'Issue')) {
+		if (!$pubObject instanceof Issue) {
 			assert(!is_null($submission));
 			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 			$issue = $issueDao->getBySubmissionId($submission->getId(), $contextId);

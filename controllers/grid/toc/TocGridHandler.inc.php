@@ -20,6 +20,8 @@ import('controllers.grid.toc.TocGridRow');
 use PKP\core\JSONMessage;
 use PKP\submission\PKPSubmission;
 
+use APP\submission\Submission;
+
 class TocGridHandler extends CategoryGridHandler
 {
     public $submissionsBySectionId = [];
@@ -183,7 +185,7 @@ class TocGridHandler extends CategoryGridHandler
      */
     public function getDataElementSequence($object)
     {
-        if (is_a($object, 'Submission')) {
+        if ($object instanceof Submission) {
             return $object->getCurrentPublication()->getData('seq');
         } else { // section
             $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);

@@ -28,6 +28,7 @@ use PKP\core\PKPString;
 
 use APP\template\TemplateManager;
 use APP\plugins\PubObjectsExportPlugin;
+use APP\core\Services;
 
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	/**

@@ -13,9 +13,10 @@
  * @brief Inject Dublin Core meta tags into article views to facilitate indexing.
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\plugins\GenericPlugin;
 
-use \APP\template\TemplateManager;
+use APP\submission\Submission;
+use APP\template\TemplateManager;
 
 class DublinCoreMetaPlugin extends GenericPlugin
 {
@@ -91,7 +92,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
             $templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author->getFullName(false)) . '"/>');
         }
 
-        if (is_a($article, 'Submission') && ($datePublished = $article->getDatePublished())) {
+        if ($article instanceof Submission && ($datePublished = $article->getDatePublished())) {
             $templateMgr->addHeader('dublinCoreDateCreated', '<meta name="DC.Date.created" scheme="ISO8601" content="' . strftime('%Y-%m-%d', strtotime($datePublished)) . '"/>');
         }
         $templateMgr->addHeader('dublinCoreDateSubmitted', '<meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="' . strftime('%Y-%m-%d', strtotime($article->getDateSubmitted())) . '"/>');
@@ -112,7 +113,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
         }
 
         $i = 0;
-        if (is_a($article, 'Submission')) {
+        if ($article instanceof Submission) {
             foreach ($article->getGalleys() as $galley) {
                 $templateMgr->addHeader('dublinCoreFormat' . $i++, '<meta name="DC.Format" scheme="IMT" content="' . htmlspecialchars($galley->getFileType()) . '"/>');
             }

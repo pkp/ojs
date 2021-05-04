@@ -21,6 +21,8 @@
 use PKP\metadata\MetadataDescription;
 use PKP\metadata\MetadataDataObjectAdapter;
 
+use APP\submission\Submission;
+
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
     //
@@ -59,7 +61,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
      */
     public function &extractMetadataFromDataObject(&$article)
     {
-        assert(is_a($article, 'Submission'));
+        assert($article instanceof Submission);
 
         AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_SUBMISSION);
 
@@ -72,7 +74,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $oaiDao = DAORegistry::getDAO('OAIDAO'); /* @var $oaiDao OAIDAO */
         $journal = $oaiDao->getJournal($article->getData('contextId'));
         $section = $oaiDao->getSection($article->getSectionId());
-        if (is_a($article, 'Submission')) { /* @var $article Submission */
+        if ($article instanceof Submission) { /* @var $article Submission */
             $issue = $oaiDao->getIssue($article->getCurrentPublication()->getData('issueId'));
         } else {
             $issue = null;
@@ -120,7 +122,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
 
         // Date
-        if (is_a($article, 'Submission')) {
+        if ($article instanceof Submission) {
             if ($article->getDatePublished()) {
                 $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($article->getDatePublished())));
             } elseif (isset($issue) && $issue->getDatePublished()) {
@@ -142,7 +144,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
 
         // Format
-        if (is_a($article, 'Submission')) {
+        if ($article instanceof Submission) {
             $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
             $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
             $formats = [];
@@ -156,7 +158,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
         $includeUrls = $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
-        if (is_a($article, 'Submission') && $includeUrls) {
+        if ($article instanceof Submission && $includeUrls) {
             $dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'article', 'view', [$article->getBestId()]));
         }
 
@@ -167,7 +169,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             $pages = '; ' . $pages;
         }
         foreach ($sources as $locale => $source) {
-            if (is_a($article, 'Submission')) {
+            if ($article instanceof Submission) {
                 $sources[$locale] .= '; ' . $issue->getIssueIdentification([], $locale);
             }
             $sources[$locale] .= $pages;
@@ -182,14 +184,14 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
         // Get galleys and supp files.
         $galleys = [];
-        if (is_a($article, 'Submission')) {
+        if ($article instanceof Submission) {
             $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
             $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId())->toArray();
         }
 
         // Language
         $locales = [];
-        if (is_a($article, 'Submission')) {
+        if ($article instanceof Submission) {
             foreach ($galleys as $galley) {
                 $galleyLocale = $galley->getLocale();
                 if (!is_null($galleyLocale) && !in_array($galleyLocale, $locales)) {

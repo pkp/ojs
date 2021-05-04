@@ -20,6 +20,7 @@ use PKP\linkAction\request\RedirectAction;
 use PKP\linkAction\request\AjaxModal;
 
 use APP\core\Services;
+use APP\submission\Submission;
 
 class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellProvider
 {
@@ -52,7 +53,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
     {
         $submission = $row->getData();
         $columnId = $column->getId();
-        assert(is_a($submission, 'Submission') && !empty($columnId));
+        assert($submission instanceof Submission && !empty($columnId));
 
         switch ($columnId) {
             case 'title':
@@ -117,7 +118,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
     {
         $submission = $row->getData();
         $columnId = $column->getId();
-        assert(is_a($submission, 'Submission') && !empty($columnId));
+        assert($submission instanceof Submission && !empty($columnId));
 
         switch ($columnId) {
             case 'id':
