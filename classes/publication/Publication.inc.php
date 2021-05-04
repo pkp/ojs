@@ -10,17 +10,17 @@
  * @class Publication
  * @ingroup publication
  *
- * @see PublicationDAO
+ * @see DAO
  *
  * @brief Class for Publication.
  */
 
 namespace APP\publication;
 
-use \PKP\publication\PKPPublication;
+use APP\core\Application;
 
-use \APP\core\Application;
-use \APP\file\PublicFileManager;
+use APP\file\PublicFileManager;
+use PKP\publication\PKPPublication;
 
 class Publication extends PKPPublication
 {
@@ -52,4 +52,3 @@ class Publication extends PKPPublication
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\publication\Publication', '\Publication');
 }
-

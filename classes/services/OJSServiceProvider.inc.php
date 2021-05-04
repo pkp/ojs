@@ -17,7 +17,6 @@ namespace APP\services;
 
 use Pimple\Container;
 
-use PKP\services\PKPAnnouncementService;
 use PKP\services\PKPAuthorService;
 use PKP\services\PKPEmailTemplateService;
 use PKP\services\PKPFileService;
@@ -34,11 +33,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
     public function register(Container $pimple)
     {
 
-        // Announcement service
-        $pimple['announcement'] = function () {
-            return new PKPAnnouncementService();
-        };
-
         // Author service
         $pimple['author'] = function () {
             return new PKPAuthorService();
@@ -47,16 +41,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
         // File service
         $pimple['file'] = function () {
             return new PKPFileService();
-        };
-
-        // Submission service
-        $pimple['submission'] = function () {
-            return new SubmissionService();
-        };
-
-        // Publication service
-        $pimple['publication'] = function () {
-            return new PublicationService();
         };
 
         // Issue service

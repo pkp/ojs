@@ -24,6 +24,7 @@ use APP\file\PublicFileManager;
 use APP\core\Services;
 use APP\core\Application;
 use APP\article\ArticleTombstoneManager;
+use APP\facades\Repo;
 
 class ContextService extends \PKP\services\PKPContextService
 {
@@ -175,8 +176,7 @@ class ContextService extends \PKP\services\PKPContextService
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
         $subscriptionTypeDao->deleteByJournal($context->getId());
 
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO');
-        $submissionDao->deleteByContextId($context->getId());
+        Repo::submission()->deleteByContextId($context->getId());
 
         $publicFileManager = new PublicFileManager();
         $publicFileManager->rmtree($publicFileManager->getContextFilesPath($context->getId()));

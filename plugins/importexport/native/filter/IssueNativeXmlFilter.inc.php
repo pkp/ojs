@@ -13,6 +13,8 @@
  * @brief Base class that converts a set of issues to a Native XML document
  */
 
+use APP\facades\Repo;
+
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
 class IssueNativeXmlFilter extends NativeExportFilter
@@ -215,13 +217,14 @@ class IssueNativeXmlFilter extends NativeExportFilter
         $currentFilter = PKPImportExportFilter::getFilter('article=>native-xml', $this->getDeployment(), $this->opts);
         $currentFilter->setIncludeSubmissionsNode(true);
 
-        $submissionsIterator = Services::get('submission')->getMany([
-            'contextId' => $issue->getJournalId(),
-            'issueIds' => $issue->getId(),
-        ]);
+        $submissions = Repo::submission()->getMany(
+            Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$issue->getJournalId()])
+                ->filterByIssueIds([$issue->getId()])
+        );
 
-        $submissionsArray = iterator_to_array($submissionsIterator);
-        $articlesDoc = $currentFilter->execute($submissionsArray);
+        $articlesDoc = $currentFilter->execute($submissions->toArray());
         if ($articlesDoc->documentElement instanceof DOMElement) {
             $clone = $doc->importNode($articlesDoc->documentElement, true);
             $issueNode->appendChild($clone);

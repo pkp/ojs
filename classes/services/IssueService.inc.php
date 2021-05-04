@@ -15,6 +15,13 @@
 
 namespace APP\services;
 
+use APP\core\Services;
+use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\journal\Journal;
+use APP\services\queryBuilders\IssueQueryBuilder;
+use APP\submission\Submission;
+
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
@@ -22,10 +29,6 @@ use PKP\services\interfaces\EntityPropertyInterface;
 use PKP\services\interfaces\EntityReadInterface;
 use PKP\services\PKPSchemaService;
 
-use APP\core\Services;
-use APP\journal\Journal;
-use APP\services\queryBuilders\IssueQueryBuilder;
-use APP\issue\Issue;
 
 class IssueService implements EntityPropertyInterface, EntityReadInterface
 {
@@ -275,18 +278,19 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface
                     break;
                 case 'articles':
                     $values[$prop] = [];
-                    $submissionsIterator = Services::get('submission')->getMany([
-                        'contextId' => $issue->getJournalId(),
-                        'issueIds' => $issue->getId(),
-                        'count' => 1000, // large upper limit
-                    ]);
-                    foreach ($submissionsIterator as $submission) {
-                        $values[$prop][] = \Services::get('submission')->getSummaryProperties($submission, $args);
+                    $submissions = Repo::submission()->getMany(
+                        Repo::submission()
+                            ->getCollector()
+                            ->filterByContextIds([$issue->getJournalId()])
+                            ->filterByIssueIds([Submission::STATUS_PUBLISHED])
+                    );
+                    foreach ($submissions as $submission) {
+                        $values[$prop][] = Repo::submission()->getSchemaMap()->summarize($submission, $args['userGroups']);
                     }
                     break;
                 case 'sections':
                     $values[$prop] = [];
-                    $sectionDao = \DAORegistry::getDAO('SectionDAO');
+                    $sectionDao = DAORegistry::getDAO('SectionDAO');
                     $sections = $sectionDao->getByIssueId($issue->getId());
                     if (!empty($sections)) {
                         foreach ($sections as $section) {

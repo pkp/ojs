@@ -17,13 +17,12 @@
 
 namespace APP\notification;
 
-use PKP\notification\PKPNotificationManager;
-use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
-
 use APP\core\Application;
+
+use APP\facades\Repo;
 use APP\notification\managerDelegate\ApproveSubmissionNotificationManager;
-use APP\notification\Notification;
+use PKP\notification\PKPNotificationManager;
+use PKP\plugins\HookRegistry;
 
 class NotificationManager extends PKPNotificationManager
 {
@@ -48,7 +47,7 @@ class NotificationManager extends PKPNotificationManager
 
         switch ($notification->getType()) {
             case Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE:
-                return $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'issue', 'current');
+                return $dispatcher->url($request, Application::ROUTE_PAGE, $context->getPath(), 'issue', 'current');
             default:
                 return parent::getNotificationUrl($request, $notification);
         }
@@ -110,8 +109,7 @@ class NotificationManager extends PKPNotificationManager
     {
         assert($notification->getAssocType() == ASSOC_TYPE_SUBMISSION);
         assert(is_numeric($notification->getAssocId()));
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-        $article = $submissionDao->getById($notification->getAssocId());
+        $article = Repo::submission()->get($notification->getAssocId());
         if (!$article) {
             return null;
         }
@@ -155,7 +153,7 @@ class NotificationManager extends PKPNotificationManager
         switch ($notification->getType()) {
             case Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE:
                 return 'notifyIconPublished';
-            case NOTIFICATION_TYPE_NEW_ANNOUNCEMENT:
+            case Notification::NOTIFICATION_TYPE_NEW_ANNOUNCEMENT:
                 return 'notifyIconNewAnnouncement';
             case Notification::NOTIFICATION_TYPE_BOOK_REQUESTED:
             case Notification::NOTIFICATION_TYPE_BOOK_CREATED:
@@ -178,8 +176,8 @@ class NotificationManager extends PKPNotificationManager
     protected function getMgrDelegate($notificationType, $assocType, $assocId)
     {
         switch ($notificationType) {
-            case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
-            case NOTIFICATION_TYPE_VISIT_CATALOG:
+            case Notification::NOTIFICATION_TYPE_APPROVE_SUBMISSION:
+            case Notification::NOTIFICATION_TYPE_VISIT_CATALOG:
                 assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
                 return new ApproveSubmissionNotificationManager($notificationType);
         }

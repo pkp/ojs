@@ -25,8 +25,8 @@ use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\i18n\AppLocale;
+use APP\facades\Repo;
 
 class ArticleSearch extends SubmissionSearch
 {
@@ -53,8 +53,6 @@ class ArticleSearch extends SubmissionSearch
         // slicing it. So this seems to be the most appropriate place, although we
         // may have to retrieve some objects again when formatting results.
         $orderedResults = [];
-        $authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
         $contextDao = Application::getContextDAO();
         $contextTitles = [];
         if ($orderBy == 'popularityAll' || $orderBy == 'popularityMonth') {
@@ -91,12 +89,12 @@ class ArticleSearch extends SubmissionSearch
 
             switch ($orderBy) {
                 case 'authors':
-                    $submission = $submissionDao->getById($submissionId);
+                    $submission = Repo::submission()->get($submissionId);
                     $orderKey = $submission->getAuthorString();
                     break;
 
                 case 'title':
-                    $submission = $submissionDao->getById($submissionId);
+                    $submission = Repo::submission()->get($submissionId);
                     $orderKey = '';
                     if (!empty($submission->getCurrentPublication())) {
                         $orderKey = $submission->getCurrentPublication()->getLocalizedData('title');
@@ -270,7 +268,7 @@ class ArticleSearch extends SubmissionSearch
         foreach ($results as $articleId) {
             // Get the article, storing in cache if necessary.
             if (!isset($articleCache[$articleId])) {
-                $submission = Services::get('submission')->get($articleId);
+                $submission = Repo::submission()->get($articleId);
                 $publishedSubmissionCache[$articleId] = $submission;
                 $articleCache[$articleId] = $submission;
             }
@@ -336,7 +334,7 @@ class ArticleSearch extends SubmissionSearch
         // of the submission for a similarity search.
         if ($result === false) {
             // Retrieve the article.
-            $article = Services::get('submission')->get($submissionId);
+            $article = Repo::submission()->get($submissionId);
             if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                 // Retrieve keywords (if any).
                 $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionSubjectDao SubmissionKeywordDAO */

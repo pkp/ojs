@@ -15,17 +15,17 @@
 
 namespace APP\search;
 
-use PKP\search\SubmissionSearchIndex;
-use PKP\search\SubmissionSearch;
-use PKP\submission\SubmissionFile;
-use PKP\search\SearchFileParser;
-use PKP\plugins\HookRegistry;
-use PKP\db\DAORegistry;
-use PKP\config\Config;
-
-use APP\i18n\AppLocale;
-use APP\search\ArticleSearch;
 use APP\core\Services;
+use APP\facades\Repo;
+use APP\i18n\AppLocale;
+use PKP\config\Config;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
+use PKP\search\SearchFileParser;
+
+use PKP\search\SubmissionSearch;
+use PKP\search\SubmissionSearchIndex;
+use PKP\submission\SubmissionFile;
 
 class ArticleSearchIndex extends SubmissionSearchIndex
 {
@@ -309,8 +309,12 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                     echo __('search.cli.rebuildIndex.indexing', ['journalName' => $journal->getLocalizedName()]) . ' ... ';
                 }
 
-                $submissionsIterator = Services::get('submission')->getMany(['contextId' => $journal->getId()]);
-                foreach ($submissionsIterator as $submission) {
+                $submissions = Repo::submission()->getMany(
+                    Repo::submission()
+                        ->getCollector()
+                        ->filterByContextIds([$journal->getId()])
+                );
+                foreach ($submissions as $submission) {
                     if ($submission->getSubmissionProgress() == 0) { // Not incomplete
                         $this->submissionMetadataChanged($submission);
                         $this->submissionFilesChanged($submission);

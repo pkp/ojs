@@ -15,11 +15,13 @@
 
 import('classes.search.ArticleSearch');
 
-use PKP\submission\PKPSubmission;
+use APP\facades\Repo;
 
-use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\handler\Handler;
+use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
+
+use PKP\submission\PKPSubmission;
 
 class SearchHandler extends Handler
 {
@@ -107,9 +109,13 @@ class SearchHandler extends Handler
         }
 
         // Assign the year range.
-        $yearRange = Services::get('publication')->getDateBoundaries(['contextIds' => $journalId]);
-        $yearStart = substr($yearRange[0], 0, 4);
-        $yearEnd = substr($yearRange[1], 0, 4);
+        $yearRange = Repo::publication()->getDateBoundaries(
+            Repo::publication()
+                ->getCollector()
+                ->filterByContextIds([(int) $journalId])
+        );
+        $yearStart = substr($yearRange->min_date_published, 0, 4);
+        $yearEnd = substr($yearRange->max_date_published, 0, 4);
         $templateMgr->assign([
             'yearStart' => $yearStart,
             'yearEnd' => $yearEnd,
@@ -239,11 +245,11 @@ class SearchHandler extends Handler
                 return $author->getData('publicationId');
             }, $authorRecords);
             $submissionIds = array_filter(array_map(function ($publicationId) {
-                $publication = Services::get('publication')->get($publicationId);
+                $publication = Repo::publication()->get($publicationId);
                 return $publication->getData('status') == PKPSubmission::STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
             }, array_unique($publicationIds)));
             $submissions = array_map(function ($submissionId) {
-                return Services::get('submission')->get($submissionId);
+                return Repo::submission()->get($submissionId);
             }, array_unique($submissionIds));
 
             // Load information associated with each article.

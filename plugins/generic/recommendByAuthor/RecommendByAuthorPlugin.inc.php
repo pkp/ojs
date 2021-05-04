@@ -13,9 +13,10 @@
  * @brief Plugin to recommend articles from the same author.
  */
 
-use PKP\submission\PKPSubmission;
-use PKP\statistics\PKPStatisticsHelper;
+use APP\facades\Repo;
 use PKP\plugins\GenericPlugin;
+use PKP\statistics\PKPStatisticsHelper;
+use PKP\submission\PKPSubmission;
 
 define('RECOMMEND_BY_AUTHOR_PLUGIN_COUNT', 10);
 
@@ -90,7 +91,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
                 $publicationIds[] = $thisAuthor->getData('publicationId');
             }
             $submissionIds = array_map(function ($publicationId) {
-                $publication = Services::get('publication')->get($publicationId);
+                $publication = Repo::publication()->get($publicationId);
                 return $publication->getData('status') == PKPSubmission::STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
             }, array_unique($publicationIds));
             $foundArticles = array_unique(array_merge($foundArticles, $submissionIds));

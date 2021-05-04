@@ -17,13 +17,11 @@
 
 namespace APP\template;
 
-use PKP\template\PKPTemplateManager;
-use PKP\security\Role;
 
 use APP\core\Application;
-use APP\template\TemplateManager;
 use APP\file\PublicFileManager;
-use APP\search\ArticleSearch;
+use PKP\security\Role;
+use PKP\template\PKPTemplateManager;
 
 class TemplateManager extends PKPTemplateManager
 {

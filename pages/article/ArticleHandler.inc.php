@@ -14,17 +14,18 @@
  *
  */
 
-use PKP\submission\SubmissionFile;
-use PKP\submission\PKPSubmission;
-use PKP\security\authorization\ContextRequiredPolicy;
-
-use APP\security\authorization\OjsJournalMustPublishPolicy;
-use APP\template\TemplateManager;
+use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\payment\ojs\OJSPaymentManager;
-use APP\submission\Submission;
+use APP\security\authorization\OjsJournalMustPublishPolicy;
 
+use APP\submission\Submission;
+use APP\template\TemplateManager;
 use Firebase\JWT\JWT;
+use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\submission\PKPSubmission;
+
+use PKP\submission\SubmissionFile;
 
 class ArticleHandler extends Handler
 {
@@ -101,10 +102,10 @@ class ArticleHandler extends Handler
         $urlPath = empty($args) ? 0 : array_shift($args);
 
         // Get the submission that matches the requested urlPath
-        $submission = Services::get('submission')->getByUrlPath($urlPath, $request->getContext()->getId());
+        $submission = Repo::submission()->getByUrlPath($urlPath, $request->getContext()->getId());
 
         if (!$submission && ctype_digit((string) $urlPath)) {
-            $submission = Services::get('submission')->get($urlPath);
+            $submission = Repo::submission()->get($urlPath);
             if (!$submission || $request->getContext()->getId() != $submission->getContextId()) {
                 $submission = null;
             }
@@ -134,7 +135,7 @@ class ArticleHandler extends Handler
         if ($subPath === 'version') {
             $publicationId = (int) array_shift($args);
             $galleyId = empty($args) ? 0 : array_shift($args);
-            foreach ((array) $this->article->getData('publications') as $publication) {
+            foreach ($this->article->getData('publications') as $publication) {
                 if ($publication->getId() === $publicationId) {
                     $this->publication = $publication;
                 }
@@ -204,12 +205,19 @@ class ArticleHandler extends Handler
             'issue' => $issue,
             'article' => $article,
             'publication' => $publication,
-            'firstPublication' => reset($article->getData('publications')),
             'currentPublication' => $article->getCurrentPublication(),
             'galley' => $this->galley,
             'fileId' => $this->fileId,
         ]);
         $this->setupTemplate($request);
+
+        // Get the earliest published publication
+        $firstPublication = $article->getData('publications')->reduce(function ($a, $b) {
+            return empty($a) || strtotime((string) $b->getData('datePublished')) < strtotime((string) $a->getData('datePublished')) ? $b : $a;
+        }, 0);
+        $templateMgr->assign([
+            'firstPublication' => $firstPublication,
+        ]);
 
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
         $templateMgr->assign([
@@ -384,7 +392,7 @@ class ArticleHandler extends Handler
     public function downloadSuppFile($args, $request)
     {
         $articleId = $args[0] ?? 0;
-        $article = Services::get('submission')->get($articleId);
+        $article = Repo::submission()->get($articleId);
         if (!$article) {
             $dispatcher = $request->getDispatcher();
             $dispatcher->handle404();

@@ -16,16 +16,22 @@
 import('controllers.grid.toc.TocGridCategoryRow');
 import('controllers.grid.toc.TocGridRow');
 
-use PKP\controllers\grid\CategoryGridHandler;
-use PKP\core\JSONMessage;
-use PKP\submission\PKPSubmission;
-use PKP\security\authorization\ContextAccessPolicy;
-use PKP\controllers\grid\feature\OrderCategoryGridItemsFeature;
-use PKP\controllers\grid\GridColumn;
-use PKP\security\Role;
-
+use APP\core\Application;
+use APP\facades\Repo;
+use APP\i18n\AppLocale;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
+use PKP\controllers\grid\CategoryGridHandler;
+
+use PKP\controllers\grid\feature\OrderCategoryGridItemsFeature;
+use PKP\controllers\grid\GridColumn;
+use PKP\core\JSONMessage;
+
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\Role;
+use PKP\submission\PKPSubmission;
 
 class TocGridHandler extends CategoryGridHandler
 {
@@ -167,7 +173,7 @@ class TocGridHandler extends CategoryGridHandler
     protected function loadData($request, $filter)
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        $submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $request->getContext()->getId());
+        $submissionsInSections = Repo::submission()->getInSections($issue->getId(), $request->getContext()->getId());
         foreach ($submissionsInSections as $sectionId => $articles) {
             foreach ($articles['articles'] as $article) {
                 $this->submissionsBySectionId[$sectionId][$article->getId()] = $article;
@@ -192,7 +198,7 @@ class TocGridHandler extends CategoryGridHandler
             return $object->getCurrentPublication()->getData('seq');
         } else { // section
             $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
             $customOrdering = $sectionDao->getCustomSectionOrder($issue->getId(), $object->getId());
             if ($customOrdering === null) { // No custom ordering specified; use default section ordering
                 return $object->getSequence();
@@ -207,7 +213,7 @@ class TocGridHandler extends CategoryGridHandler
      */
     public function setDataElementSequence($request, $sectionId, $gridDataElement, $newSequence)
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
         if (!$sectionDao->customSectionOrderingExists($issue->getId())) {
             $sectionDao->setDefaultCustomSectionOrders($issue->getId());
@@ -233,7 +239,7 @@ class TocGridHandler extends CategoryGridHandler
         if ($sectionId != $publication->getData('sectionId')) {
             $params['sectionId'] = $sectionId;
         }
-        $publication = Services::get('publication')->edit($publication, $params, Application::get()->getRequest());
+        Repo::publication()->edit($publication, $params);
     }
 
     //
@@ -250,14 +256,15 @@ class TocGridHandler extends CategoryGridHandler
     public function removeArticle($args, $request)
     {
         $journal = $request->getJournal();
-        $submission = Services::get('submission')->get((int) $request->getUserVar('articleId'));
+        $submission = Repo::submission()->get((int) $request->getUserVar('articleId'));
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
         if ($submission && $request->checkCSRF()) {
-            foreach ((array) $submission->getData('publications') as $publication) {
+            foreach ($submission->getData('publications') as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()
                         && in_array($publication->getData('status'), [PKPSubmission::STATUS_SCHEDULED, PKPSubmission::STATUS_PUBLISHED])) {
-                    $publication = Services::get('publication')->unpublish($publication);
-                    $publication = Services::get('publication')->edit(
+                    Repo::publication()->unpublish($publication);
+                    $publication = Repo::publication()->get($publication->getId());
+                    Repo::publication()->edit(
                         $publication,
                         ['seq' => ''],
                         $request
@@ -266,9 +273,9 @@ class TocGridHandler extends CategoryGridHandler
             }
             // If the article is the only one in the section, delete the section from custom issue ordering
             $sectionId = $submission->getCurrentPublication()->getData('sectionId');
-            $submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $issue->getJournalId());
+            $submissionsInSections = Repo::submission()->getInSections($issue->getId(), $issue->getJournalId());
             if (!empty($submissionsInSections[$sectionId]) && count($submissionsInSections[$sectionId]) === 1) {
-                $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+                $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
                 $sectionDao->deleteCustomSection($issue->getId(), $sectionId);
             }
             return DAO::getDataChangedEvent();
@@ -290,10 +297,10 @@ class TocGridHandler extends CategoryGridHandler
     {
         $articleId = (int) $request->getUserVar('articleId');
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        $submission = Services::get('submission')->get($articleId);
+        $submission = Repo::submission()->get($articleId);
         $publication = $submission ? $submission->getCurrentPublication() : null;
         if ($publication && $publication->getData('issueId') == $issue->getId() && $request->checkCSRF()) {
-            $publication = Services::get('publication')->edit($publication, ['accessStatus' => $request->getUserVar('status')], $request);
+            Repo::publication()->edit($publication, ['accessStatus' => $request->getUserVar('status')]);
             return DAO::getDataChangedEvent();
         }
 

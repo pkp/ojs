@@ -17,16 +17,14 @@
 
 namespace APP\oai\ojs;
 
-use PKP\submission\PKPSubmission;
+use APP\facades\Repo;
+use Illuminate\Support\Facades\DB;
 use PKP\oai\PKPOAIDAO;
 use PKP\oai\OAISet;
 use PKP\plugins\HookRegistry;
 use PKP\db\DAORegistry;
 
-use APP\issue\Issue;
-use APP\core\Services;
-
-use Illuminate\Support\Facades\DB;
+use PKP\submission\PKPSubmission;
 
 class OAIDAO extends PKPOAIDAO
 {
@@ -208,7 +206,7 @@ class OAIDAO extends PKPOAIDAO
         $record->sets = [urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev())];
 
         if ($isRecord) {
-            $submission = Services::get('submission')->get($articleId);
+            $submission = Repo::submission()->get($articleId);
             $issue = $this->getIssue($row['issue_id']);
             $galleys = $this->articleGalleyDao->getByPublicationId($submission->getCurrentPublication()->getId())->toArray();
 

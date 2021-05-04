@@ -13,10 +13,11 @@
  * @brief Handle exportable published submissions list grid requests.
  */
 
+use APP\facades\Repo;
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
-use PKP\controllers\grid\GridHandler;
-use PKP\controllers\grid\GridColumn;
 use PKP\security\Role;
 
 class ExportPublishedSubmissionsListGridHandler extends GridHandler
@@ -238,8 +239,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
         if ($statusId) {
             $pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
         }
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-        return $submissionDao->getExportable(
+        return Repo::submission()->dao->getExportable(
             $context->getId(),
             null,
             $title,

@@ -15,9 +15,10 @@
 
 import('lib.pkp.classes.plugins.ImportExportPlugin');
 
-use PKP\file\FileManager;
-
+use APP\facades\Repo;
 use APP\template\TemplateManager;
+
+use PKP\file\FileManager;
 
 class PubMedExportPlugin extends ImportExportPlugin
 {
@@ -142,14 +143,13 @@ class PubMedExportPlugin extends ImportExportPlugin
 
     public function exportSubmissions($submissionIds, $context, $user)
     {
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
         $filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
         $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
         assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
         $exportFilter = array_shift($pubmedExportFilters);
         $submissions = [];
         foreach ($submissionIds as $submissionId) {
-            $submission = $submissionDao->getById($submissionId);
+            $submission = Repo::submission()->get($submissionId);
             if ($submission && $submission->getData('contextId') == $context->getId()) {
                 $submissions[] = $submission;
             }
@@ -181,12 +181,14 @@ class PubMedExportPlugin extends ImportExportPlugin
         $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
         assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
         $exportFilter = array_shift($pubmedExportFilters);
-        $submissionsIterator = Services::get('submission')->getMany([
-            'contextId' => $context->getId(),
-            'issueIds' => $issueIds,
-        ]);
+        $submissions = Repo::submission()->getMany(
+            Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$context->getId()])
+                ->filterByIssueIds($issueIds)
+        );
         libxml_use_internal_errors(true);
-        $submissionXml = $exportFilter->execute(iterator_to_array($submissionsIterator), true);
+        $submissionXml = $exportFilter->execute($submissions->toArray(), true);
         $xml = $submissionXml->saveXml();
         $errors = array_filter(libxml_get_errors(), function ($a) {
             return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;

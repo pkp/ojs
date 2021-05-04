@@ -30,9 +30,11 @@ define('EXPORT_ACTION_DEPOSIT', 'deposit');
 define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\i18n\AppLocale;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
+use PKP\config\Config;
 use PKP\core\JSONMessage;
 use PKP\db\DAORegistry;
 use PKP\db\SchemaDAO;
@@ -40,7 +42,6 @@ use PKP\file\FileManager;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\NullAction;
 use PKP\notification\PKPNotification;
-
 use PKP\plugins\HookRegistry;
 use PKP\plugins\ImportExportPlugin;
 use PKP\plugins\PluginRegistry;
@@ -73,6 +74,10 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function register($category, $path, $mainContextId = null)
     {
         if (!parent::register($category, $path, $mainContextId)) {
+            return false;
+        }
+
+        if (!Config::getVar('general', 'installed')) {
             return false;
         }
 
@@ -559,8 +564,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function getUnregisteredArticles($context)
     {
         // Retrieve all published submissions that have not yet been registered.
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-        $articles = $submissionDao->getExportable(
+        $articles = Repo::submission()->dao->getExportable(
             $context->getId(),
             null,
             null,
@@ -743,7 +747,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function getPublishedSubmissions($submissionIds, $context)
     {
         $submissions = array_map(function ($submissionId) {
-            return Services::get('submission')->get($submissionId);
+            return Repo::submission()->get($submissionId);
         }, $submissionIds);
         return array_filter($submissions, function ($submission) {
             return $submission->getData('status') === PKPSubmission::STATUS_PUBLISHED;
@@ -855,8 +859,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     protected function _getDAOs()
     {
         return [
-            DAORegistry::getDAO('PublicationDAO'),
-            DAORegistry::getDAO('SubmissionDAO'),
+            Repo::publication()->dao,
+            Repo::submission()->dao,
             Application::getRepresentationDAO(),
             DAORegistry::getDAO('SubmissionFileDAO'),
             DAORegistry::getDAO('IssueDAO'),

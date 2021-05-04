@@ -13,15 +13,15 @@
  * @brief DOI plugin class
  */
 
-use PKP\services\interfaces\EntityWriteInterface;
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\RemoteActionConfirmationModal;
-
+use APP\facades\Repo;
 use APP\plugins\PubIdPlugin;
 use APP\publication\Publication;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
 use APP\article\ArticleGalley;
+
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 class DOIPubIdPlugin extends PubIdPlugin
 {
@@ -324,18 +324,18 @@ class DOIPubIdPlugin extends PubIdPlugin
     public function validatePublicationDoi($hookName, $args)
     {
         $errors = & $args[0];
-        $action = $args[1];
+        $object = $args[1];
         $props = & $args[2];
 
         if (empty($props['pub-id::doi'])) {
             return;
         }
 
-        if ($action === EntityWriteInterface::VALIDATE_ACTION_ADD) {
-            $submission = Services::get('submission')->get($props['submissionId']);
+        if (is_null($object)) {
+            $submission = Repo::submission()->get($props['submissionId']);
         } else {
-            $publication = Services::get('publication')->get($props['id']);
-            $submission = Services::get('submission')->get($publication->getData('submissionId'));
+            $publication = Repo::publication()->get($props['id']);
+            $submission = Repo::submission()->get($publication->getData('submissionId'));
         }
 
         $contextId = $submission->getData('contextId');
@@ -488,7 +488,7 @@ class DOIPubIdPlugin extends PubIdPlugin
             return;
         }
 
-        $submission = Services::get('submission')->get($form->publication->getData('submissionId'));
+        $submission = Repo::submission()->get($form->publication->getData('submissionId'));
         $publicationDoiEnabled = $this->getSetting($submission->getData('contextId'), 'enablePublicationDoi');
         $galleyDoiEnabled = $this->getSetting($submission->getData('contextId'), 'enableRepresentationDoi');
         $warningIconHtml = '<span class="fa fa-exclamation-triangle pkpIcon--inline"></span>';

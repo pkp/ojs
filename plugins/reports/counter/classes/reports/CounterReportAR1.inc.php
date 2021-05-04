@@ -12,9 +12,9 @@
  * @brief Article Report 1
  */
 
-use PKP\statistics\PKPStatisticsHelper;
-
 use APP\statistics\StatisticsHelper;
+
+use PKP\statistics\PKPStatisticsHelper;
 
 import('plugins.reports.counter.classes.CounterReport');
 
@@ -135,8 +135,7 @@ class CounterReportAR1 extends CounterReport
      */
     private function _createReportItem($submissionId, $metrics)
     {
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-        $article = $submissionDao->getById($submissionId);
+        $article = Repo::submission()->get($submissionId);
         if (!$article) {
             return false;
         }

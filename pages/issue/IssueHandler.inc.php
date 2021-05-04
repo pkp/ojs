@@ -17,12 +17,14 @@ use PKP\submission\PKPSubmission;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\db\DAORegistry;
 
-use APP\security\authorization\OjsJournalMustPublishPolicy;
-use APP\security\authorization\OjsIssueRequiredPolicy;
-use APP\handler\Handler;
-use APP\template\TemplateManager;
+use APP\facades\Repo;
 use APP\file\IssueFileManager;
+use APP\handler\Handler;
 use APP\payment\ojs\OJSPaymentManager;
+
+use APP\security\authorization\OjsIssueRequiredPolicy;
+use APP\security\authorization\OjsJournalMustPublishPolicy;
+use APP\template\TemplateManager;
 use APP\i18n\AppLocale;
 use APP\core\Services;
 use APP\core\Application;
@@ -342,14 +344,14 @@ class IssueHandler extends Handler
             $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
         }
 
-        $issueSubmissions = iterator_to_array(Services::get('submission')->getMany([
-            'contextId' => $journal->getId(),
-            'issueIds' => [$issue->getId()],
-            'status' => $allowedStatuses,
-            'orderBy' => 'seq',
-            'orderDirection' => 'ASC',
-        ]));
-
+        $collector = Repo::submission()->getCollector();
+        $issueSubmissions = Repo::submission()->getMany(
+            $collector
+                ->filterByContextIds([$issue->getJournalId()])
+                ->filterByIssueIds([$issue->getId()])
+                ->filterByStatus($allowedStatuses)
+                ->orderBy($collector::ORDERBY_SEQUENCE, $collector::ORDER_DIR_ASC)
+        );
         $sections = Application::get()->getSectionDao()->getByIssueId($issue->getId());
         $issueSubmissionsInSection = [];
         foreach ($sections as $section) {

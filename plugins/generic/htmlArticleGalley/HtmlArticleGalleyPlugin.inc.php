@@ -15,9 +15,12 @@
 
 use PKP\submission\SubmissionFile;
 use PKP\plugins\HookRegistry;
+import('lib.pkp.classes.plugins.GenericPlugin');
+
+use APP\facades\Repo;
+use APP\file\PublicFileManager;
 
 use APP\template\TemplateManager;
-use APP\file\PublicFileManager;
 
 class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
 {
@@ -162,7 +165,6 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $embeddableFiles = iterator_to_array($embeddableFilesIterator);
 
         $referredArticle = null;
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO');
         foreach ($embeddableFiles as $embeddableFile) {
             $params = [];
 
@@ -172,7 +174,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
 
             // Ensure that the $referredArticle object refers to the article we want
             if (!$referredArticle || $referredArticle->getId() != $submissionId) {
-                $referredArticle = $submissionDao->getById($submissionId);
+                $referredArticle = Repo::submission()->get($submissionId);
             }
             $fileUrl = $request->url(null, 'article', 'download', [$referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getId()], $params);
             $pattern = preg_quote(rawurlencode($embeddableFile->getLocalizedData('name')));

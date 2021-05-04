@@ -15,13 +15,14 @@
 
 namespace APP\tasks;
 
-use PKP\scheduledTask\ScheduledTask;
-use PKP\mail\MailTemplate;
-use PKP\db\DAORegistry;
+use APP\core\Application;
+use APP\facades\Repo;
 
 use APP\template\TemplateManager;
-use APP\core\Application;
-use APP\core\Services;
+use PKP\db\DAORegistry;
+use PKP\mail\MailTemplate;
+
+use PKP\scheduledTask\ScheduledTask;
 
 class OpenAccessNotification extends ScheduledTask
 {
@@ -58,7 +59,7 @@ class OpenAccessNotification extends ScheduledTask
             ];
             $email->assignParams($paramArray);
 
-            $submissions = Services::get('submission')->getInSections($issue->getId());
+            $submissions = Repo::submission()->getInSections($issue->getId(), $issue->getJournalId());
             $mimeBoundary = '==boundary_' . md5(microtime());
 
             $templateMgr = TemplateManager::getManager();

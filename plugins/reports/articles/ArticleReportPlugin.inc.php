@@ -13,12 +13,12 @@
  * @brief Article report plugin
  */
 
-use PKP\plugins\ReportPlugin;
-use PKP\submission\PKPSubmission;
+use APP\workflow\EditorDecisionActionsManager;
 use PKP\db\DAORegistry;
 use PKP\security\Role;
+use PKP\plugins\ReportPlugin;
 
-use APP\workflow\EditorDecisionActionsManager;
+use PKP\submission\PKPSubmission;
 
 class ArticleReportPlugin extends ReportPlugin
 {
@@ -76,7 +76,6 @@ class ArticleReportPlugin extends ReportPlugin
         // Add BOM (byte order mark) to fix UTF-8 in Excel
         fprintf($fp, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
         $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
         $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
         $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
@@ -99,7 +98,8 @@ class ArticleReportPlugin extends ReportPlugin
         // (This must be stored before display because we won't know the data
         // dimensions until it has all been loaded.)
         $results = $sectionTitles = [];
-        $submissions = $submissionDao->getByContextId($journal->getId());
+        $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getId()]);
+        $submissions = Repo::submission()->getMany($collector);
         $maxAuthors = $maxEditors = $maxDecisions = 0;
         while ($submission = $submissions->next()) {
             $publication = $submission->getCurrentPublication();
