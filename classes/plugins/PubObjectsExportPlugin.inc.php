@@ -30,6 +30,7 @@ define('EXPORT_ACTION_DEPOSIT', 'deposit');
 define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
 use PKP\core\JSONMessage;
+use PKP\db\SchemaDAO;
 use PKP\plugins\HookRegistry;
 use PKP\submission\PKPSubmission;
 use PKP\file\FileManager;
