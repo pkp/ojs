@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-30 07:17+0000\n"
+"PO-Revision-Date: 2021-05-05 05:28+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ka_GE/>\n"
@@ -948,7 +948,7 @@ msgstr "წყაროებზე ბმულების ჩასმა"
 
 msgid "manager.setup.publishingDescription"
 msgstr ""
-"ეს დეტალები შეიძლება შეიტანოს მეტდანაცემებში, რომლებიც მესამე მხარის "
+"ეს დეტალები შეიძლება შეიტანოს მეტა-მონაცემებში, რომლებიც მესამე მხარის "
 "საარქივო ორგანოებს მიეწოდება."
 
 msgid "manager.setup.publisher"
