@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-05 05:28+0000\n"
+"PO-Revision-Date: 2021-05-05 06:12+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ka_GE/>\n"
@@ -337,7 +337,7 @@ msgstr "ჟურნალის პარამეტრები"
 
 msgid "manager.sections.wordCountInstructions"
 msgstr ""
-"ამ განყოფილების აბსტრაქტში სიტყვების რაოდენობის შეზღუდვა (0 — შეუზღუდის "
+"ამ განყოფილების აბსტრაქტში სიტყვების რაოდენობის შეზღუდვა (0 — შეზღუდვის "
 "გარეშე)"
 
 msgid "manager.sections.unassigned"
