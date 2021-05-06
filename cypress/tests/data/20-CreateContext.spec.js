@@ -29,6 +29,7 @@ describe('Data suite tests', function() {
 		cy.get('input[name="supportedLocales"][value="en_US').check();
 		cy.get('input[name="supportedLocales"][value="fr_CA').check();
 		cy.get('input[name="primaryLocale"][value="en_US').check();
+		cy.get('select[id=context-country-control]').select('Iceland');
 
 		// Test invalid path characters
 		cy.get('input[name=urlPath]').type('public&-)knowledge', {delay: 0});
