@@ -16,10 +16,15 @@
  *
  */
 
+namespace APP\payment\ojs;
+
 use Illuminate\Support\Facades\DB;
 
-import('lib.pkp.classes.payment.CompletedPayment');
-import('classes.payment.ojs.OJSPaymentManager'); // Constants
+use PKP\payment\CompletedPayment;
+use PKP\core\Core;
+use PKP\db\DAOResultFactory;
+
+use APP\payment\ojs\OJSPaymentManager;
 
 class OJSCompletedPaymentDAO extends \PKP\db\DAO
 {
@@ -172,7 +177,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
      */
     public function hasPaidPurchaseArticle($userId, $articleId)
     {
-        return $userId && $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ARTICLE, $articleId);
+        return $userId && $this->getByAssoc($userId, OJSPaymentManager::PAYMENT_TYPE_PURCHASE_ARTICLE, $articleId);
     }
 
     /**
@@ -183,7 +188,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
      */
     public function hasPaidPurchaseIssue($userId, $issueId)
     {
-        return $userId && $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ISSUE, $issueId);
+        return $userId && $this->getByAssoc($userId, OJSPaymentManager::PAYMENT_TYPE_PURCHASE_ISSUE, $issueId);
     }
 
     /**
@@ -194,7 +199,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
      */
     public function hasPaidPublication($userId, $articleId)
     {
-        return $userId && $this->getByAssoc($userId, PAYMENT_TYPE_PUBLICATION, $articleId);
+        return $userId && $this->getByAssoc($userId, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $articleId);
     }
 
     /**
@@ -272,4 +277,8 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
 
         return $payment;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\payment\ojs\OJSCompletedPaymentDAO', '\OJSCompletedPaymentDAO');
 }

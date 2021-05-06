@@ -23,6 +23,7 @@ use PKP\Services\Interfaces\EntityWriteInterface;
 use APP\core\Services;
 use APP\i18n\AppLocale;
 use APP\core\Application;
+use APP\payment\ojs\OJSPaymentManager;
 
 class PublicationService extends PKPPublicationService
 {
@@ -207,7 +208,7 @@ class PublicationService extends PKPPublicationService
         $paymentManager = \Application::getPaymentManager($context);
         $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
         $publicationFeeEnabled = $paymentManager->publicationEnabled();
-        $publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
+        $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());
         if ($publicationFeeEnabled && !$publicationFeePayment) {
             $errors['publicationFeeStatus'] = __('editor.article.payment.publicationFeeNotPaid');
         }

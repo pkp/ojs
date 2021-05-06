@@ -17,6 +17,8 @@ namespace APP\components\forms\publication;
 use PKP\components\forms\FieldRadioInput;
 use PKP\components\forms\FormComponent;
 
+use APP\payment\ojs\OJSPaymentManager;
+
 define('FORM_SUBMISSION_PAYMENTS', 'submissionPayments');
 
 class SubmissionPaymentsForm extends FormComponent
@@ -39,7 +41,7 @@ class SubmissionPaymentsForm extends FormComponent
         $this->action = $action;
 
         $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
-        $publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
+        $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());
 
         $this->addField(new FieldRadioInput('publicationFeeStatus', [
             'label' => __('payment.type.publication'),

@@ -16,21 +16,24 @@
  *
  */
 
-import('lib.pkp.classes.payment.QueuedPayment');
-import('lib.pkp.classes.payment.PaymentManager');
+namespace APP\payment\ojs;
 
-define('PAYMENT_TYPE_MEMBERSHIP', 0x000000001);
-define('PAYMENT_TYPE_RENEW_SUBSCRIPTION', 0x000000002);
-define('PAYMENT_TYPE_PURCHASE_ARTICLE', 0x000000003);
-define('PAYMENT_TYPE_DONATION', 0x000000004);
-define('PAYMENT_TYPE_SUBMISSION', 0x000000005);
-define('PAYMENT_TYPE_FASTTRACK', 0x000000006);
-define('PAYMENT_TYPE_PUBLICATION', 0x000000007);
-define('PAYMENT_TYPE_PURCHASE_SUBSCRIPTION', 0x000000008);
-define('PAYMENT_TYPE_PURCHASE_ISSUE', 0x000000009);
+use PKP\payment\QueuedPayment;
+use PKP\payment\PaymentManager;
+use PKP\payment\CompletedPayment;
 
 class OJSPaymentManager extends PaymentManager
 {
+    public const PAYMENT_TYPE_MEMBERSHIP = 1;
+    public const PAYMENT_TYPE_RENEW_SUBSCRIPTION = 2;
+    public const PAYMENT_TYPE_PURCHASE_ARTICLE = 3;
+    public const PAYMENT_TYPE_DONATION = 4;
+    public const PAYMENT_TYPE_SUBMISSION = 5;
+    public const PAYMENT_TYPE_FASTTRACK = 6;
+    // public const PAYMENT_TYPE_PUBLICATION = 7; // FIXME: Defined in PaymentManager (used in pkp-lib); should be moved here
+    public const PAYMENT_TYPE_PURCHASE_SUBSCRIPTION = 8;
+    public const PAYMENT_TYPE_PURCHASE_ISSUE = 9;
+
     /**
      * Determine whether the payment system is configured.
      *
@@ -65,19 +68,19 @@ class OJSPaymentManager extends PaymentManager
         $dispatcher = $router->getDispatcher();
 
         switch ($type) {
-            case PAYMENT_TYPE_PURCHASE_ARTICLE:
+            case self::PAYMENT_TYPE_PURCHASE_ARTICLE:
                 $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', $assocId));
                 break;
-            case PAYMENT_TYPE_PURCHASE_ISSUE:
+            case self::PAYMENT_TYPE_PURCHASE_ISSUE:
                 $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'view', $assocId));
                 break;
-            case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+            case self::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
                 $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'current'));
                 break;
-            case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
+            case self::PAYMENT_TYPE_RENEW_SUBSCRIPTION:
                 $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'user', 'subscriptions'));
                 break;
-            case PAYMENT_TYPE_PUBLICATION:
+            case self::PAYMENT_TYPE_PUBLICATION:
                 $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
                 $submission = $submissionDao->getById($assocId);
                 if ($submission->getSubmissionProgress() != 0) {
@@ -86,10 +89,10 @@ class OJSPaymentManager extends PaymentManager
                     $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'authorDashboard', 'submission', $submission->getId()));
                 }
                 break;
-            case PAYMENT_TYPE_MEMBERSHIP: // Deprecated
-            case PAYMENT_TYPE_DONATION: // Deprecated
-            case PAYMENT_TYPE_FASTTRACK: // Deprecated
-            case PAYMENT_TYPE_SUBMISSION: // Deprecated
+            case self::PAYMENT_TYPE_MEMBERSHIP: // Deprecated
+            case self::PAYMENT_TYPE_DONATION: // Deprecated
+            case self::PAYMENT_TYPE_FASTTRACK: // Deprecated
+            case self::PAYMENT_TYPE_SUBMISSION: // Deprecated
             default:
                 // Invalid payment type
                 error_log('Invalid payment type "' . $type . '"');
@@ -111,7 +114,6 @@ class OJSPaymentManager extends PaymentManager
      */
     public function createCompletedPayment($queuedPayment, $payMethod, $userId = null)
     {
-        import('lib.pkp.classes.payment.CompletedPayment');
         $payment = new CompletedPayment();
         $payment->setContextId($queuedPayment->getContextId());
         $payment->setType($queuedPayment->getType());
@@ -213,7 +215,7 @@ class OJSPaymentManager extends PaymentManager
         $journal = $request->getContext();
         if ($queuedPayment) {
             switch ($queuedPayment->getType()) {
-            case PAYMENT_TYPE_MEMBERSHIP:
+            case self::PAYMENT_TYPE_MEMBERSHIP:
                 $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
                 $user = $userDao->getById($queuedPayment->getUserId());
                 $dateEnd = $user->getSetting('dateEndMembership', 0);
@@ -231,7 +233,7 @@ class OJSPaymentManager extends PaymentManager
                 $user->updateSetting('dateEndMembership', $dateEnd, 'date', 0);
                 $returner = true;
                 break;
-            case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+            case self::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
                 $subscriptionId = $queuedPayment->getAssocId();
                 $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
                 $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
@@ -278,7 +280,7 @@ class OJSPaymentManager extends PaymentManager
                 }
                 $returner = true;
                 break;
-            case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
+            case self::PAYMENT_TYPE_RENEW_SUBSCRIPTION:
                 $subscriptionId = $queuedPayment->getAssocId();
                 $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
                 $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
@@ -311,14 +313,14 @@ class OJSPaymentManager extends PaymentManager
                 }
                 $returner = true;
                 break;
-            case PAYMENT_TYPE_DONATION:
+            case self::PAYMENT_TYPE_DONATION:
                 assert(false); // Deprecated
                 $returner = true;
                 break;
-            case PAYMENT_TYPE_PURCHASE_ARTICLE:
-            case PAYMENT_TYPE_PURCHASE_ISSUE:
-            case PAYMENT_TYPE_SUBMISSION:
-            case PAYMENT_TYPE_PUBLICATION:
+            case self::PAYMENT_TYPE_PURCHASE_ARTICLE:
+            case self::PAYMENT_TYPE_PURCHASE_ISSUE:
+            case self::PAYMENT_TYPE_SUBMISSION:
+            case self::PAYMENT_TYPE_PUBLICATION:
                 $returner = true;
                 break;
             default:
@@ -344,8 +346,8 @@ class OJSPaymentManager extends PaymentManager
     public function getPaymentName($payment)
     {
         switch ($payment->getType()) {
-            case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
-            case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
+            case self::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+            case self::PAYMENT_TYPE_RENEW_SUBSCRIPTION:
                 $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
 
                 if ($institutionalSubscriptionDao->subscriptionExists($payment->getAssocId())) {
@@ -362,26 +364,43 @@ class OJSPaymentManager extends PaymentManager
                 $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
                 return __('payment.type.subscription') . ' (' . $subscriptionType->getLocalizedName() . ')';
-            case PAYMENT_TYPE_DONATION:
+            case self::PAYMENT_TYPE_DONATION:
                 // DEPRECATED: This is only for display of OJS 2.x data.
                 return __('payment.type.donation');
-            case PAYMENT_TYPE_MEMBERSHIP:
+            case self::PAYMENT_TYPE_MEMBERSHIP:
                 return __('payment.type.membership');
-            case PAYMENT_TYPE_PURCHASE_ARTICLE:
+            case self::PAYMENT_TYPE_PURCHASE_ARTICLE:
                 return __('payment.type.purchaseArticle');
-            case PAYMENT_TYPE_PURCHASE_ISSUE:
+            case self::PAYMENT_TYPE_PURCHASE_ISSUE:
                 return __('payment.type.purchaseIssue');
-            case PAYMENT_TYPE_SUBMISSION:
+            case self::PAYMENT_TYPE_SUBMISSION:
                 // DEPRECATED: This is only for display of OJS 2.x data.
                 return __('payment.type.submission');
-            case PAYMENT_TYPE_FASTTRACK:
+            case self::PAYMENT_TYPE_FASTTRACK:
                 // DEPRECATED: This is only for display of OJS 2.x data.
                 return __('payment.type.fastTrack');
-            case PAYMENT_TYPE_PUBLICATION:
+            case self::PAYMENT_TYPE_PUBLICATION:
                 return __('payment.type.publication');
             default:
                 // Invalid payment type
                 assert(false);
         }
+    }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\payment\ojs\OJSPaymentManager', '\OJSPaymentManager');
+    foreach ([
+        'PAYMENT_TYPE_MEMBERSHIP',
+        'PAYMENT_TYPE_RENEW_SUBSCRIPTION',
+        'PAYMENT_TYPE_PURCHASE_ARTICLE',
+        'PAYMENT_TYPE_DONATION',
+        'PAYMENT_TYPE_SUBMISSION',
+        'PAYMENT_TYPE_FASTTRACK',
+        'PAYMENT_TYPE_PUBLICATION',
+        'PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',
+        'PAYMENT_TYPE_PURCHASE_ISSUE',
+    ] as $constantName) {
+        define($constantName, constant('\OJSPaymentManager::' . $constantName));
     }
 }

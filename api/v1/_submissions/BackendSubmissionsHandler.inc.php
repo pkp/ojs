@@ -14,6 +14,8 @@
  *
  */
 
+use APP\payment\ojs\OJSPaymentManager;
+
 import('lib.pkp.api.v1._submissions.PKPBackendSubmissionsHandler');
 
 class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
@@ -118,7 +120,7 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
         }
 
         $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
-        $publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
+        $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());
 
         switch ($params['publicationFeeStatus']) {
             case 'waived':
@@ -135,7 +137,7 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
                 // Record a waived payment.
                 $queuedPayment = $paymentManager->createQueuedPayment(
                     $request,
-                    PAYMENT_TYPE_PUBLICATION,
+                    OJSPaymentManager::PAYMENT_TYPE_PUBLICATION,
                     $request->getUser()->getId(),
                     $submission->getId(),
                     0,
@@ -161,7 +163,7 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
                 $submitterAssignment = $submitterAssignments->next();
                 $queuedPayment = $paymentManager->createQueuedPayment(
                     $request,
-                    PAYMENT_TYPE_PUBLICATION,
+                    OJSPaymentManager::PAYMENT_TYPE_PUBLICATION,
                     $submitterAssignment->getUserId(),
                     $submission->getId(),
                     $context->getSetting('publicationFee'),

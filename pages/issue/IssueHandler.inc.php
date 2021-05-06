@@ -20,6 +20,7 @@ use PKP\submission\PKPSubmission;
 use APP\handler\Handler;
 use APP\template\TemplateManager;
 use APP\file\IssueFileManager;
+use APP\payment\ojs\OJSPaymentManager;
 
 class IssueHandler extends Handler
 {
@@ -268,7 +269,7 @@ class IssueHandler extends Handler
                             return true;
                         } else {
                             // Otherwise queue an issue purchase payment and display payment form
-                            $queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getData('purchaseIssueFee'));
+                            $queuedPayment = $paymentManager->createQueuedPayment($request, OJSPaymentManager::PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getData('purchaseIssueFee'));
                             $paymentManager->queuePayment($queuedPayment);
 
                             $paymentForm = $paymentManager->getPaymentForm($queuedPayment);
@@ -408,7 +409,6 @@ class IssueHandler extends Handler
                 ($user && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId()))
         ]);
 
-        import('classes.payment.ojs.OJSPaymentManager');
         $paymentManager = Application::getPaymentManager($journal);
         if ($paymentManager->onlyPdfEnabled()) {
             $templateMgr->assign('restrictOnlyPdf', true);

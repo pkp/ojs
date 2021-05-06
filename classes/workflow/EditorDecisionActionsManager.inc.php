@@ -32,6 +32,8 @@ import('lib.pkp.classes.workflow.PKPEditorDecisionActionsManager');
 
 use PKP\submission\PKPSubmission;
 
+use APP\payment\ojs\OJSPaymentManager;
+
 class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager
 {
     /**
@@ -125,7 +127,7 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager
                     'name' => 'accept',
                     'title' => 'editor.submission.decision.accept',
                     'toStage' => 'submission.copyediting',
-                    'paymentType' => $paymentManager->publicationEnabled() ? PAYMENT_TYPE_PUBLICATION : null,
+                    'paymentType' => $paymentManager->publicationEnabled() ? OJSPaymentManager::PAYMENT_TYPE_PUBLICATION : null,
                     'paymentAmount' => $context->getData('publicationFee'),
                     'paymentCurrency' => $context->getData('currency'),
                     'requestPaymentText' => __('payment.requestPublicationFee', ['feeAmount' => $context->getData('publicationFee') . ' ' . $context->getData('currency')]),

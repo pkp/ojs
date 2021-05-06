@@ -19,6 +19,7 @@ use PKP\submission\PKPSubmission;
 
 use APP\template\TemplateManager;
 use APP\handler\Handler;
+use APP\payment\ojs\OJSPaymentManager;
 
 use Firebase\JWT\JWT;
 
@@ -506,7 +507,6 @@ class ArticleHandler extends Handler
                 // Subscription Access
                 $subscribedUser = $issueAction->subscribedUser($user, $context, $issue->getId(), $submission->getId());
 
-                import('classes.payment.ojs.OJSPaymentManager');
                 $paymentManager = Application::get()->getPaymentManager($context);
 
                 $purchasedIssue = false;
@@ -541,7 +541,7 @@ class ArticleHandler extends Handler
                             $this->article = $submission;
                             return true;
                         } elseif ($paymentManager->purchaseArticleEnabled()) {
-                            $queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $submission->getId(), $context->getData('purchaseArticleFee'));
+                            $queuedPayment = $paymentManager->createQueuedPayment($request, OJSPaymentManager::PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $submission->getId(), $context->getData('purchaseArticleFee'));
                             $paymentManager->queuePayment($queuedPayment);
 
                             $paymentForm = $paymentManager->getPaymentForm($queuedPayment);

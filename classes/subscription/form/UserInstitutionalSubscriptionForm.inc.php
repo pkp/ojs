@@ -15,7 +15,8 @@
 
 use PKP\form\Form;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+use APP\payment\ojs\OJSPaymentManager;
 
 class UserInstitutionalSubscriptionForm extends Form
 {
@@ -217,7 +218,7 @@ class UserInstitutionalSubscriptionForm extends Form
             $institutionalSubscriptionDao->insertObject($subscription);
         }
 
-        $queuedPayment = $paymentManager->createQueuedPayment($this->request, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+        $queuedPayment = $paymentManager->createQueuedPayment($this->request, OJSPaymentManager::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
         $paymentManager->queuePayment($queuedPayment);
 
         $paymentForm = $paymentManager->getPaymentForm($queuedPayment);
