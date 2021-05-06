@@ -1,0 +1,210 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-05-06 09:24+0000\n"
+"Last-Translator: Сьянов Дмитрий <Dmitrijsyanov@gmail.com>\n"
+"Language-Team: Belarusian <http://translate.pkp.sfu.ca/projects/ojs/admin/be/"
+">\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Напамін рэцэнзенту"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Апавяшчэнне пра адкрыты доступ"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Напамін пра заканчэнне падпіскі"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Няма запісаных карыстальнікаў."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Вы ўпэўнены, што хочаце аб'яднаць выбраныя {$oldAccountCount} уліковых "
+"запісаў ва ўліковы запіс з імем карыстальніка «{$newUsername}»? Выбраныя "
+"{$oldAccountCount} уліковыя запісы пасля гэтага перастануць існаваць. Гэта "
+"дзеянне нельга адмяніць."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Усе запісаныя карыстальнікі"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Выберыце карыстальніка (або некалькіх) для аб'яднання з іншым уліковым "
+"запісам карыстальніка (напрыклад, калі хто-небудзь зрабіў сабе два ўліковыя "
+"запісы). Уліковы запіс (запісы), выбраны першым, будзе выдалены, а ўсе "
+"звязаныя з ім артыкулы, рэдакцыйныя заданні і г. д. будуць далучаны да "
+"другога ўліковага запісу."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Выберыце карыстальніка, якому будуць перададзены аўтарства папярэдняга "
+"карыстальніка, яго рэдакцыйныя заданні і г. д."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Аб'яднаць"
+
+msgid "admin.mergeUsers"
+msgstr "Аб'яднанне карыстальнікаў"
+
+msgid "admin.journals.importErrors"
+msgstr "Імпартаванне завяршылася няўдачай"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Шлях імпарту абавязковы."
+
+msgid "admin.journals.redirect"
+msgstr "Генераваць код для пераназначэння адрасоў OJS 1 у адрасы OJS 2"
+
+msgid "admin.journals.transcode"
+msgstr "Перакадзіраваць метаданыя артыкулаў з ISO8859-1"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Імпартаваць падпіскі"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Існуючы шлях часопіса або новы шлях для стварэння (напрыклад, «ojs»)."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Апісанне часопіса"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Уключыць паказ гэтага часопіса для ўсіх на сайце"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Выбраны шлях уже выкарыстоўваецца іншым часопісам."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Шлях можа ўтрымліваць толькі літары і лічбы англійскага алфавіта, "
+"падкрэсліванні і дэфісы; шлях павінен пачынацца і заканчвацца літарай або "
+"лічбай."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Шлях ўказваецца абавязкова."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Назва ўказваецца абавязкова."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Гэта павінна быць адно кароткае слова або абрэвіятура, якая ідэнтыфікуе "
+"часопіс. URL-адрас часопіса будзе {$sampleUrl}."
+
+msgid "admin.contexts.create"
+msgstr "Стварыць часопіс"
+
+msgid "admin.journals.noneCreated"
+msgstr "Ні адзін часопіс не быў створаны."
+
+msgid "admin.journals.journalSettings"
+msgstr "Наладкі часопіса"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Вы будзеце аўтаматычна запісаны кіраўніком гэтага часопіса. Пасля стварэння "
+"новага часопіса вы будзеце перанакіраваны на майстар наладкі часопіса для "
+"завяршэння першапачатковай наладкі часопіса."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Параметры канфігурацыі OJS з <tt>config.inc.php</tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "Канфігурацыя OJS"
+
+msgid "admin.systemVersion"
+msgstr "Версія OJS"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Уключыць стварэнне новых карыстальнікаў (калі падтрымліваецца гэтым модулем "
+"аўтэнтыфікацыі). Карыстальнікі, створаныя сродкамі OJS з гэтай крыніцай "
+"аўтэнтыфікацыі, будуць аўтаматычна дабаўлены ў знешнюю крыніцу "
+"аўтэнтыфікацыі, калі яны там адсутнічаюць. Акрамя таго, калі гэта крыніца "
+"з'яўляецца крыніцай аўтэнтыфікацыі па змоўчанні, уліковыя запісы OJS, "
+"створаныя шляхам рэгістрацыі карыстальнікаў, таксама будуць дабаўлены ў "
+"знешнюю крыніцу аўтэнтыфікацыі."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Уключыць змяненне пароля карыстальніка (калі падтрымліваецца гэтым модулем "
+"аўтэнтыфікацыі). Калі гэта наладка ўключана, карыстальнікі могуць змяняць "
+"свой пароль у OJS і выкарыстоўваць магчымасць узнаўлення пароля ў OJS, каб "
+"скінуць забыты пароль. Дадзеныя функцыі не будуць даступны для "
+"карыстальнікаў з гэтай крыніцай аўтэнтыфікацыі, калі гэта наладка выключана."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Уключыць сінхранізацыю профіляў карыстальнікаў (калі падтрымліваецца гэтым "
+"модулем аўтэнтыфікацыі). Інфармацыя профілю карыстальніка будзе аўтаматычна "
+"абнаўляцца са знешняй крыніцы пры ўваходзе карыстальніка ў сістэму, а змены "
+"ў профілі (у тым ліку змена пароля), зробленыя ўнутры OJS, будуць "
+"аўтаматычна ўнесены ў знешнюю крыніцу. Калі гэта наладка выключана, "
+"інфармацыя профілю карыстальніка OJS будзе захоўвацца незалежна ад знешняй "
+"крыніцы інфармацыі пра профіль карыстальніка."
+
+msgid "admin.auth.ojs"
+msgstr "База карыстальнікаў OJS"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Выберыце дадатковыя мовы для ўстаноўкі іх падтрымкі ў гэтай сістэме. Мовы "
+"павінны быць устаноўлены да таго, як іх можна будзе выкарыстоўваць у "
+"размешчаных часопісах. Глядзіце ў дакументацыі OJS інфармацыю пра тое, як "
+"дабавіць падтрымку новых моў."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Вы ўпэўнены, што хочаце выдаліць гэту мову? Гэта можа паўплываць на ўсе "
+"размешчаныя часопісы, якія цяпер выкарыстоўваюць яе."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Падтрымка адзначаных моў можа быць няпоўнай."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Выберыце ўсе мовы для падтрымкі на сайце. Выбраныя мовы будуць даступны для "
+"ўсіх часопісаў, размешчаных на гэтым сайце, а таксама з'явяцца ў меню выбару "
+"моў на кожнай старонцы сайта (гэта наладка можа быць зменена на старонках "
+"канкрэтнага часопіса). Калі выбрана толькі адна мова, меню пераключэння моў "
+"не будзе паказвацца, дадатковыя наладкі моў для часопісаў таксама не будуць "
+"даступны."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Гэта будзе мова па змоўчанні для сайта і для ўсіх размешчаных на ім "
+"часопісаў."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Вы ўпэўнены, што хочаце адключыць гэту мову? Гэта можа паўплываць на ўсе "
+"размешчаныя часопісы, якія цяпер выкарыстоўваюць яе."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tВаша інсталяцыя OJS наладжана на запіс некалькіх метрык выкарыстання. "
+"Статыстыка выкарыстання будзе падавацца ў некалькіх кантэкстах.\n"
+"\t\tЁсць выпадкі, калі павінна прымяняцца толькі адна статыстыка "
+"выкарыстання, напрыклад, каб паказаць упарадкаваны спіс найбольш "
+"запатрабаваных артыкулаў або ранжыраваць\n"
+"\t\tвынікі пошуку. Калі ласка, выберыце адну з наладжаных метрык у якасці "
+"метрыкі па змоўчанні.\n"
+"\t"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Асноўнай старонкай сайта стане галоўная старонка гэтага часопіса. Гэта "
+"зручна, напрыклад, калі на сайце размешчаны толькі адзін часопіс."
+
+msgid "admin.settings.redirect"
+msgstr "Перанакіраванне часопіса"
+
+msgid "admin.hostedContexts"
+msgstr "Часопісы на сайце"

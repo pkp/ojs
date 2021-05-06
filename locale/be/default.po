@@ -1,0 +1,191 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-05-05 12:44+0000\n"
+"Last-Translator: Сьянов Дмитрий <Dmitrijsyanov@gmail.com>\n"
+"Language-Team: Belarusian <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"be/>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "section.default.policy"
+msgstr "Палітыка раздзела па змаўчанні"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Рэц"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Рэцэнзенты"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Рэцэнзент"
+
+msgid "default.genres.sourceTexts"
+msgstr "Зыходныя тэксты"
+
+msgid "default.genres.dataSet"
+msgstr "Набор даных"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Аналіз даных"
+
+msgid "default.genres.transcripts"
+msgstr "Транскрыпты"
+
+msgid "default.genres.researchResults"
+msgstr "Вынікі даследавання"
+
+msgid "default.genres.researchMaterials"
+msgstr "Матэрыялы даследавання"
+
+msgid "default.genres.researchInstrument"
+msgstr "Інструмент даследавання"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "МПадп"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Менеджары па падпісцы"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Менеджар па падпісцы"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "РэдР"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Рэдактары раздзелаў"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Рэдактар раздзелу"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "ЗРэд"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Запрошаныя рэдактары"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Запрошаны рэдактар"
+
+msgid "default.groups.abbrev.editor"
+msgstr "РэдЧ"
+
+msgid "default.groups.plural.editor"
+msgstr "Рэдактары часопіса"
+
+msgid "default.groups.name.editor"
+msgstr "Рэдактар часопіса"
+
+msgid "default.groups.abbrev.manager"
+msgstr "КірЧ"
+
+msgid "default.groups.plural.manager"
+msgstr "Кіраўнікі часопіса"
+
+msgid "default.groups.name.manager"
+msgstr "Кіраўнік часопіса"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Гэты часопіс выкарыстоўвае сістэму CLOCKSS для стварэння размеркаванай "
+"архіўнай сістэмы паміж бібліятэкамі, якія ўдзельнічаюць у гэтай сістэме, і "
+"дазваляе гэтым бібліятэкам ствараць пастаянныя архівы часопіса з мэтамі "
+"захоўвання і аднаўлення. <a href=\"http://clockss.org/\">Падрабязней...</a>"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Гэты часопіс выкарыстоўвае сістэму CLOCKSS для стварэння размеркаванай "
+"архіўнай сістэмы паміж бібліятэкамі, якія ўдзельнічаюць у гэтай сістэме, і "
+"дазваляе гэтым бібліятэкам ствараць пастаянныя архівы часопіса з мэтамі "
+"захоўвання і аднаўлення. <a href=\"http://www.lockss.org/\""
+">Падрабязней...</a>"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Мы спадзяваемся, што супрацоўнікі бібліятэк унясуць гэты часопіс у спіс "
+"электронных часопісаў сваёй бібліятэкі. Варта адзначыць, што адкрытая "
+"выдавецкая сістэма гэтага часопіса таксама падыходзіць для таго, каб "
+"бібліятэкі маглі размяшчаць уласныя электронныя часопісы, у рэдагаванні якіх "
+"удзельнічаюць выкладчыкі і навуковыя супрацоўнікі (падрабязней можна "
+"паглядзець на <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Мы запрашаем нашых чытачоў падпісацца на апавяшчэнні пра выхад новых нумароў "
+"гэтага часопіса. Выкарыстайце спасылку <a href=\"{$indexUrl}/{$journalPath}/"
+"user/register\">РЭГІСТРАЦЫЯ</a> ў верхняй частцы галоўнай старонкі часопіса. "
+"Гэта дазволіць вам атрымліваць на электронную пошту змест кожнага новага "
+"нумара часопіса. Колькасць падпісаных на апавяшчэнні дае магчымасць часопісу "
+"меркаваць пра ўзровень падтрымкі або колькасць чытачоў. Паглядзіце таксама "
+"старонку <a href=\"{$indexUrl}/{$journalPath}/about/submissions#"
+"privacyStatement\">Заява аб канфідэнцыяльнасці</a>, якая дазваляе чытачам "
+"пераканацца ў тым, што іх імя і адрас электроннай пошты не будуць "
+"выкарыстаны з іншымі мэтамі."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Вы хочаце адправіць матэрыял для публікацыі ў гэтым часопісе? Рэкамендуем "
+"вам паглядзець раздзел <a href=\"{$indexUrl}/{$journalPath}/about\">«Пра "
+"часопіс»</a>, у якім вы зможаце даведацца правілы раздзелаў часопіса, а "
+"таксама з <a href=\"{$indexUrl}/{$journalPath}/about/submissions#"
+"authorGuidelines\">«Інструкцыяй для аўтара»</a>. Аўтарам неабходна <a href=\""
+"{$indexUrl}/{$journalPath}/user/register\">зарэгістравацца</a> ў часопісе "
+"перад адпраўкай матэрыялаў, або, калі вы ўжо зарэгістраваны, можна проста <a "
+"href=\"{$indexUrl}/index/login\">увайсці</a> пад сваім уліковым запісам і "
+"пачаць працэс адпраўкі, які складаецца з пяці крокаў."
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Гэты часопіс дае непасрэдны адкрыты доступ да свайго кантэнту, зыходзячы з "
+"наступнага прынцыпу: свабодны адкрыты доступ да вынікаў даследаванняў спрыяе "
+"павелічэнню глабальнага абмену ведамі."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Імёны і адрасы электроннай пошты, уведзеныя на сайце гэтага часопіса, "
+"будуць выкарыстаны выключна для мэт, акрэсленых гэтым часопісам, і не будуць "
+"выкарыстаны для якіх-небудзь іншых мэт або перададзены іншым асобам і "
+"арганізацыям.</p>"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+"Тэкст адпавядае стылістычным і бібліяграфічным патрабаванням, апісаным у <a "
+"href=\"{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines\" "
+"target=\"_new\">Інструкцыя для аўтараў</a>, якую можна знайсці на старонцы «"
+"Пра часопіс»."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"Тэкст набраны з адзінарным міжрадковым інтэрвалам; выкарыстоўваецца кегль "
+"шрыфта ў 12 пунктаў; для выдзялення выкарыстоўваецца курсіў, а не "
+"падкрэсліванне (за выключэннем URL-адрасоў); усе ілюстрацыі, графікі і "
+"табліцы размешчаны ў адпаведных месцах у тэксце, а не ў канцы дакумента."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr ""
+"Прыведзены поўныя інтэрнэт-адрасы (URL) для спасылак там, дзе гэта магчыма."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"Файл з матэрыялам пададзены ў фармаце дакумента OpenOffice, Microsoft Word "
+"або RTF."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"Гэты матэрыял раней не быў апублікаваны, а таксама не быў пададзены для "
+"разгляду і публікацыі ў іншым часопісе (або дадзена тумачэнне гэтаму ў "
+"Каментарыях для рэдактара)."
+
+msgid "default.genres.article"
+msgstr "Тэкст артыкула"
+
+msgid "section.default.abbrev"
+msgstr "АРТ"
+
+msgid "section.default.title"
+msgstr "Артыкулы"

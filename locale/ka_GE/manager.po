@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-09 20:14+0000\n"
+"PO-Revision-Date: 2021-05-05 06:12+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ka_GE/>\n"
@@ -337,7 +337,7 @@ msgstr "ჟურნალის პარამეტრები"
 
 msgid "manager.sections.wordCountInstructions"
 msgstr ""
-"ამ განყოფილების აბსტრაქტში სიტყვების რაოდენობის შეზღუდვა (0 — შეუზღუდის "
+"ამ განყოფილების აბსტრაქტში სიტყვების რაოდენობის შეზღუდვა (0 — შეზღუდვის "
 "გარეშე)"
 
 msgid "manager.sections.unassigned"
@@ -945,6 +945,11 @@ msgstr ""
 
 msgid "manager.setup.referenceLinking"
 msgstr "წყაროებზე ბმულების ჩასმა"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"ეს დეტალები შეიძლება შეიტანოს მეტა-მონაცემებში, რომლებიც მესამე მხარის "
+"საარქივო ორგანოებს მიეწოდება."
 
 msgid "manager.setup.publisher"
 msgstr "გამომცემელი"
@@ -2094,3 +2099,21 @@ msgstr "{$x} თვე"
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "დარწმუნებული ხართ, რომ გსურთ გამოწერის წაშლა?"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "პროცესმა ვერ შეძლო სვეტების გამოცემა"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" — \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "ექსპორტის საკითხების შედეგები"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"ამ ჟურნალისთვის პირველადი კონტაქტი არ არის განსაზღვრული. პირველადი კონტაქტის "
+"შეყვანა შეგიძლიათ <a href=\"{$url}\"> ჟურნალის პარამეტრებში </a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"გაგზავნის დადასტურების ელფოსტის ასლი ამ ჟურნალის პირველადი კონტაქტისთვის."

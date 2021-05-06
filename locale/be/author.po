@@ -1,0 +1,383 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-05-05 12:44+0000\n"
+"Last-Translator: Сьянов Дмитрий <Dmitrijsyanov@gmail.com>\n"
+"Language-Team: Belarusian <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"be/>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr ""
+"Калі ласка, разгледзьце магчымасць адмяніць плату за адпраўку дадзенага "
+"артыкула"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Для адпраўкі матэрыялу ў гэты часопіс патрабуецца ўліковы запіс. Гэта "
+"дазволіць нашым рэдактарам адсочваць адпраўленыя вамі матэрыялы і звязацца з "
+"вамі, калі статус матэрыялу зменіцца або ад вас будзе патрэбна дадатковая "
+"інфармацыя."
+
+msgid "author.article.authorRevisedFile"
+msgstr "Файл аўтара"
+
+msgid "author.article.copyeditedFile"
+msgstr "Файл пасля літаратурнага рэдагавання"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Загрузіць версію аўтара"
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Матэрыял адпраўлены. Дзякуй за інтарэс да публікацыі ў часопісе "
+"«{$journalTitle}»."
+
+msgid "author.submit.finishSubmission"
+msgstr "Завяршыць адпраўку"
+
+msgid "author.submit.filesSummary"
+msgstr "Звесткі пра файлы"
+
+msgid "author.submit.noFiles"
+msgstr "Ні адзін файл не быў далучаны да гэтага матэрыялу для адпраўкі."
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"Націсніце «Завяршыць адпраўку», каб адправіць ваш матэрыял у часопіс "
+"«{$journalTitle}». Асноўны аўтар, указаны для перапіскі з рэдакцыяй, атрымае "
+"пацвярджэнне па электроннай пошце і будзе мець магчымасць сачыць за "
+"праходжаннем матэрыялу праз рэдакцыйны працэс, заходзячы на вэб-сайт "
+"часопіса. Дзякуй за інтарэс да публікацыі ў часопісе «{$journalTitle}»."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Адкрыты ідэнтыфікатар дадатковага файла"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Адкрытая ідэнтыфікацыя дадатковага файла ўжо існуе."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Калі ласка, увядзіце апісанне."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Калі ласка, увядзіце тэму."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Калі ласка, увядзіце назву гэтага дадатковага файла."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Няма загружаных файлаў."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Указаць іншы"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Назва даследавання або іншых крыніц матэрыялу."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Дата збору даных або стварэння інструмента."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Выкарыстоўваць толькі для афіцыйна апублікаваных матэрыялаў."
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Перадаць файл рэцэнзентам (без метаданых), паколькі ён не парушае "
+"патрабаванні сляпога рэцэнзавання."
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Сціслае апісанне"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Зыходны тэкст"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Набор даных"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Аналіз даных"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Транскрыпты"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Вынікі даследавання"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Матэрыялы даследавання"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Інструмент даследавання"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Стваральнік (або ўладальнік) файла"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Дадатковы файл"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Для індэксацыі дадатковага матэрыялу ўкажыце наступныя метаданыя для "
+"загружанага дадатковага файла."
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Метаданыя дадатковага файла"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Рэдагаваць дадатковы файл"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Дабавіць дадатковы файл"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Загрузіць дадатковы файл"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Вы ўпэўнены, што хочаце выдаліць гэты дадатковы файл?"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Вярнуцца да дадатковых файлаў"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Дадатковыя файлы не былі дабаўлены да гэтага матэрыялу."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Вы ўпэўнены, што хочаце працягваць без загрузкі дадатковага файла, які вы "
+"выбралі?"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Націсніце «Захаваць», каб загрузіць файл (пасля гэтага можна будзе загрузіць "
+"іншыя файлы)."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Гэты крок не абавязковы, ён дазваляе дабавіць да вашага матэрыялу дадатковыя "
+"файлы. Гэтыя файлы могуць быць у любым фармаце і ўяўляць сабой (a) "
+"выкарыстаныя для правядзення даследавання праграмы, (b) наборы даных, "
+"арганізаваных у адпаведнасці з прынятымі правіламі этыкі даследаванняў, (c) "
+"крыніцы, якія ў іншым выпадку былі б недаступны чытачам, (d) малюнкі і "
+"табліцы, якія нельга ўставіць у сам тэкст, або іншыя матэрыялы, якія "
+"падвышаюць каштоўнасць самой працы."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr ""
+"Вы ўпэўнены, што хочаце працягнуць без загрузкі файла з матэрыялам для "
+"адпраўкі?"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Файл для адпраўкі не загружаны."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Замяніць файл для адпраўкі"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Загрузіць файл для адпраўкі"
+
+msgid "author.submit.submissionFile"
+msgstr "Файл для адпраўкі"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"Вы перавысілі максімальную колькасць слоў для анатацыі ў гэтым раздзеле."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Калі ласка, увядзіце анатацыю вашага артыкула."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Калі ласка, увядзіце назву вашага артыкула."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr ""
+"Для кожнага аўтара абавязкова патрэбна ўвесці імя, прозвішча і адрас "
+"электроннай пошты."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Мінімум адзін аўтар абавязковы."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"<a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\""
+"_blank\">Дадатковыя коды</a>."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Апішыце геапрасторавы, храналагчны або гістарычны ахоп вашага даследавання і/"
+"або характарыстыкі даследаванага аб'екта."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Укажыце ключавыя словы для індэксавання гэтага матэрыялу; ключавыя словы "
+"раздзяляйце кропкай з коскай (слова1; слова2; слова3)."
+
+msgid "author.submit.deleteAuthor"
+msgstr "Выдаліць аўтара"
+
+msgid "author.submit.addAuthor"
+msgstr "Дабавіць аўтара"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Асноўны аўтар для перапіскі з рэдакцыяй."
+
+msgid "author.submit.reorder"
+msgstr "Перастаўце імя аўтара"
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Пастаўце імёны аўтараў у тым парадку, у якім яны павінны быць указаны ў "
+"публікацыі."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Заява часопіса аб канфідэнцыяльнасці"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Калі ласка, выберыце мову матэрыялу, які адпраўляецца."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Калі ласка, выберыце адпаведны раздзел часопіса для гэтага матэрыялу."
+
+msgid "author.submit.comments"
+msgstr "Увядзіце текст (не абавязкова)"
+
+msgid "submission.submit.coverNote"
+msgstr "Каментарыі для рэдактара"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Каб працягнуць, вы павінны прыняць Умовы перадачы аўтарскіх правоў."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"Аўтары згодны з Умовамі перадачы аўтарскіх правоў, якія будуць ужыты да "
+"гэтага матэрыялу ў выпадку, калі ён будзе апублікаваны гэтым часопісам ("
+"каментарыі для рэдактара могуць быць дабаўлены ніжэй)."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Каб працягнуць, вы павінны пераканацца, што выкананы ўсе пункты ў "
+"кантрольным спісе адпраўкі."
+
+msgid "author.submit.journalSectionDescription"
+msgstr ""
+"Выберыце адпаведны раздзел для гэтага матэрыялу (глядзіце «Раздзелы і "
+"правілы» на старонцы <a href=\"{$aboutUrl}\" target=\"_new\">«Пра "
+"часопіс»</a>)."
+
+msgid "author.submit.journalSection"
+msgstr "Раздзел часопіса"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Няма адпраўленых матэрыялаў."
+
+msgid "author.submissions.viewStatus"
+msgstr "Паказаць статус"
+
+msgid "author.submissions.confirmDelete"
+msgstr ""
+"Вы ўпэўнены, што хочаце выдаліць гэты матэрыял, адпраўка якога не была "
+"завершана?"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Выпраўленні пры карэктуры"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Загрузіць версію, якая прайшла літаратурнае рэдагаванне"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "На рэдакцыі: Патрабуецца карэктура"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "На рэдакцыі: Патрабуецца літаратурнае рэдагаванне"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "На рэцэнзіі: Патрабуюцца змены"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "На рэцэнзіі: (раўнд {$round})"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Калі вы просіце адмяніць плату за адпраўку, то вы павінны ўказаць прычыну ў "
+"адпаведным полі."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Калі ласка, выкарыстайце поле каментарыяў ніжэй для ўказання прычын, чаму "
+"плата павінна быць адменена."
+
+msgid "author.submit.requestWaiver"
+msgstr "Запыт адмены платы"
+
+msgid "author.submit.notAccepting"
+msgstr "Гэты часопіс цяпер не прымае матэрыялы."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Вы можаце закончыць гэту адпраўку пазней, выбраўшы «Актыўныя матэрыялы» на "
+"хатняй старонцы аўтара."
+
+msgid "author.submit.nextSteps"
+msgstr "Наступныя крокі"
+
+msgid "author.submit.confirmation"
+msgstr "Пацвярджэнне"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Загрузка дадатковых файлаў"
+
+msgid "author.submit.metadata"
+msgstr "Увод метаданых"
+
+msgid "author.submit.upload"
+msgstr "Загрузка матэрыялу"
+
+msgid "author.submit.start"
+msgstr "Пачатак"
+
+msgid "author.submit.step5"
+msgstr "Крок 5. Пацвярджэнне адпраўкі матэрыялу"
+
+msgid "author.submit.step4a"
+msgstr "Крок 4a. Дабавіць дадатковы файл"
+
+msgid "author.submit.step4"
+msgstr "Крок 4. Загрузка дадатковых файлаў"
+
+msgid "author.submit.step3"
+msgstr "Крок 3. Увод метаданых матэрыялу"
+
+msgid "author.submit.step2"
+msgstr "Крок 2. Загрузка матэрыялу"
+
+msgid "author.submit.step1"
+msgstr "Крок 1. Пачатак адпраўкі"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Націсніце тут</a>, каб перайсці да "
+"першага з пяці крокаў працэсу адпраўкі."
+
+msgid "author.submit.startHereTitle"
+msgstr "Пачаць адпраўку новага матэрыялу"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Пяць крокаў для адпраўкі"
+
+msgid "author.submit.submitArticle"
+msgstr "Адправіць артыкул"
+
+msgid "author.competingInterests"
+msgstr ""
+"Канфлікт&nbsp;інтарэсаў <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Правілы аб канфлікце інтарэсаў</a>"
+
+msgid "author.track"
+msgstr "Актыўныя матэрыялы"
+
+msgid "author.submit"
+msgstr "Новы матэрыял"

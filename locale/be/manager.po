@@ -1,0 +1,950 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-05-06 09:24+0000\n"
+"Last-Translator: Сьянов Дмитрий <Dmitrijsyanov@gmail.com>\n"
+"Language-Team: Belarusian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"be/>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Колькасць тыдняў для выканання рэцэнзіі"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Каб актывізаваць гэтыя параметры, адміністратар сайта павінен уключыць "
+"параметр <tt>scheduled_tasks</tt> у канфігурацыйным файле OJS. Таксама можа "
+"спатрэбіцца дадатковая наладка сервера для падтрымкі гэтай магчымасці ("
+"выканаць такую наладку можа аказацца немагчыма на канкрэтным серверы), "
+"апісанне гэтай наладкі прыведзена ў дакументацыі OJS."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Аўтаматычны напамін па электроннай пошце"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Параметры рэцэнзавання"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Інструкцыя для рэцэнзентаў"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Карыстальнікі павінны быць зарэгістраваны і ўвайсці ў сістэму пад сваім "
+"уліковым запісам, каб праглядаць сайт часопіса."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Карыстальнікі павінны быць зарэгістраваны і ўвайсці ў сістэму пад сваім "
+"уліковым запісам, каб праглядаць кантэнт, які знаходзіцца ў адкрытым доступе."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Устаўка гіперспасылак на крыніцы"
+
+msgid "manager.setup.publishingDescription"
+msgstr ""
+"Назва арганізацыі, якая выдае часопіс, з'явіцца на старонцы «Пра часопіс»."
+
+msgid "manager.setup.publisher"
+msgstr "Выдавец"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Ідэнтыфікацыя кантэнту часопіса"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Планаванне публікацый"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Матэрыялы часопіса могуць публікавацца разам, як частка выпуску са сваім "
+"уласным зместам. У якасці альтэрнатывы асобныя матэрыялы могуць публікавацца "
+"па меры гатоўнасці і дабаўляцца ў змест «актуальнага» тома. Апішыце чытачам ("
+"на старонцы «Пра часопіс») сістэму публікацыі, якую выкарыстоўвае гэты "
+"часопіс, і мяркуемую перыядычнасць публікацыі."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Планаванне публікацый"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Інструкцыя па карэктуры будзе даступна карэктарам, аўтарам, вярстальшчыкам і "
+"рэдактарам раздзелаў на этапе рэдагавання матэрыялу. Ніжэй прыведзены набор "
+"інструкцый па змоўчанні ў фврмаце HTML, які можа быць у любы момант зменены "
+"або заменены кіраўніком часопіса (у фармаце HTML або звычайнага тэксту)."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Інструкцыя па карэктуры"
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN друкаванай версіі"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Канцэпцыя часопіса, рэцэнзаванне, раздзелы, канфідэнцыяльнасць, бяспека і "
+"дадатковая інфармацыя пра часопіс."
+
+msgid "manager.setup.policies"
+msgstr "Правілы"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Наладка нумарацыі старонак"
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN анлайн-версіі"
+
+msgid "manager.setup.numPageLinks"
+msgstr "Спасылкі на старонкі"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Звярніце ўвагу:</strong> Адпраўка пісьма з пацвярджэннем адпраўкі "
+"матэрыялу ў часопіс цяпер адключана. Каб выкарыстаць гэту магчымасць, "
+"уключыце пісьмо «Пацвярджэнне адпраўкі» ў раздзеле «Пісьмы электроннай "
+"пошты»."
+
+msgid "manager.setup.note"
+msgstr "Заўвага"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Табліца стыляў не загружана."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Файл выявы не загружаны."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Значэнне меткі — тэкставы радок (напрыклад, «Наладка часопіса»), а не ключ "
+"паведамлення для лакалізацыі (напрыклад, «manager.setup»)"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL — гэта абсалютны URL (напрыклад, «http://www.example.com»), а не адносны "
+"шлях на сайце (напрыклад, «/manager/setup»)"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Дабавіць або выдаліць дадатковыя элементы панэлі навігацыі."
+
+msgid "manager.setup.navigationBar"
+msgstr "Панэль навігацыі"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Крок 4. Кіраванне часопісам"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Кіраванне і наладка працэсу публікацыі"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Кіраванне асноўнымі этапамі рэдакцыйнага працэсу"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Доступ і бяспека, планаванне, аб'явы, літаратурнае рэдагаванне, вёрстка і "
+"карэктура."
+
+msgid "manager.setup.management"
+msgstr "Кіраванне"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Верхні калантытул галоўной старонкі, кантэнт, калантытулы часопіса, панэль "
+"навігацыі і табліца стыляў."
+
+msgid "manager.setup.look"
+msgstr "Знешні выгляд часопіса"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Падпішыцеся на сэрвіс CLOCKSS, для чаго наведайце <a href=\"http://clockss."
+"org/\" target=\"_blank\">вэб-сайт CLOCKSS</a>."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Апісанне ліцэнзіі CLOCKSS"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"Ліцэнзія CLOCKSS з'явіцца ў раздзеле «Пра часопіс» пад загалоўкам «Архівацыя "
+"часопіса»: <a href=\"http://clockss.org/\" target=\"_blank\">ліцэнзія "
+"CLOCKSS</a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Уключыць CLOCKSS для захоўвання і распаўсюджвання кантэнту часопіса па "
+"бібліятэках-удзельніцах праз старонку <a href=\"{$clockssUrl}\" target=\""
+"_blank\">маніфеста выдаўца</a> CLOCKSS."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Вызначце 6-10 бібліятэк, якія будуць рэгістраваць і кэшыраваць часопіс. "
+"Напрыклад, звярніцеся да арганізацый, дзе працуюць рэдактары або члены "
+"рэдакцыйнага савета, і/ці да арганізацый, якія ўжо ўдзельнічаюць у LOCKSS. "
+"Глядзіце больш падрабязна ў <a href=\"http://www.lockss.org/community/\" "
+"target=\"_blank\">супольнаці LOCKSS</a>."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Апісанне ліцэнзіі LOCKSS"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"Ліцэнзія LOCKSS з'явіцца ў раздзеле «Пра часопіс» пад загалоўкам «Архівацыя "
+"часопіса»: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\""
+" target=\"_blank\">ліцэнзія LOCKSS</a>"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Уключыць LOCKSS для захоўвання і распаўсюджвання кантэнту часопіса па "
+"бібліятэках-удзельніцах праз старонку <a href=\"{$lockssUrl}\" target=\""
+"_blank\">маніфеста выдаўца</a> LOCKSS."
+
+msgid "manager.setup.lists"
+msgstr "Спісы"
+
+msgid "manager.setup.labelName"
+msgstr "Назва меткі"
+
+msgid "manager.setup.contextTitle"
+msgstr "Назва часопіса"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Маленькі лагатып або вокладка часопіса, якія могуць выкарыстоўвацца ў спісе "
+"часопісаў."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Мініяцюра часопіса"
+
+msgid "manager.setup.journalTheme"
+msgstr "Тэма афармлення часопіса"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Непрымальны фармат табліцы стыляў часопіса. Дазволены фармат .css."
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Ваша наладка часопіса была абноўлена."
+
+msgid "manager.setup.journalSetup"
+msgstr "Наладка часопіса"
+
+msgid "manager.setup.journalPolicies"
+msgstr "Крок 2. Правілы часопіса"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Гэта ніжні калантытул вашаго часопіса. Каб змяніць або абнавіць ніжні "
+"калантытул, устаўце код HTML у тэкставае поле ніжэй. У калантытуле, "
+"напрыклад, можа быць іншая панэль навігацыі, лічыльнік і г. д. Гэты ніжні "
+"калантытул будзе паказвацца на кожнай старонцы."
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Ніжні калантытул старонкі часопіса"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Лагатып часопіса"
+
+msgid "manager.setup.journalLogo"
+msgstr "Лагатып часопіса"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Выберыце тут тэму афармлення часопіса і кампаненты макета. Табліца стыляў "
+"часопіса таксама можа быць загружана на сайт і выкарыстана для "
+"перавызначэння стылю, зададзенага сістэмнымі табліцамі стыляў і табліцай "
+"стыляў тэмы (калі выбрана тэма)."
+
+msgid "manager.setup.journalLayout"
+msgstr "Макет часопіса"
+
+msgid "manager.setup.contextInitials"
+msgstr "Абрэвіятура назвы часопіса"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Графічная версія назвы і лагатыпа часопіса (у выглядзе файла ў фармаце .gif, "
+".jpg або .png) можа быць загружана на галоўную старонку. Гэта версія "
+"заменіць тэкставую версію, якая паказваецца па змоўчанні."
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Загаловак галоўнай старонкі часопіса"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Загаловак галоўнай старонкі часопіса"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Галоўная старонка часопіса па змоўчанні складаецца з навігацыйных спасылак. "
+"Дадатковы кантэнт на галоўнай старонцы можа быць дабаўлены пры дапамозе "
+"аднаго або некалькіх натупных параметраў, якія з'явяцца на старонцы ва "
+"ўказаным парадку. Звярніце ўвагу, што актуальны выпуск заўсёды даступны па "
+"спасылцы «Актуальны выпуск» на панэлі навігацыі."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Кантэнт галоўнай старонкі часопіса"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Уключыце сюды любую інфармацыю пра часопіс, якая можа быць цікава чытачам, "
+"аўтарам або рэцэнзентам. Гэта могуць быць правілы адкрытага доступу, "
+"канцэпцыя часопіса, умовы перадачы аўтарскіх правоў, інфармацыя пра "
+"спонсараў, гісторыя часопіса, заява аб канфідэнцыяльнасці і ўключэнне "
+"матэрыялаў у архіўную сістэму LOCKSS або CLOCKSS."
+
+msgid "manager.setup.contextAbout"
+msgstr "Пра часопіс"
+
+msgid "manager.setup.contextSummary"
+msgstr "Агляд часопіса"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Архівацыя часопіса"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Абрэвіятура назвы часопіса"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Элементаў на старонцы"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Элементы панэлі навігацыі могуць быць дабаўлены да існуючага набору "
+"(«Галоўная», «Пра часопіс», «Старонка карыстальніка» і г. д.), што "
+"паказваецца ў верхняй частцы старонкі."
+
+msgid "manager.setup.institution"
+msgstr "Арганізацыя"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"У залежнасці ад выбранага фармату ўкажыце выпуск, том і/або год выходу "
+"першага выпуску, які будзе апублікаваны з дапамогай OJS:"
+
+msgid "manager.setup.initialIssue"
+msgstr "Першы выпуск"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Для чытачоў"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Для бібліятэк"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Для аўтараў"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Сціслыя апісанні часопіса для бібліятэк, патэнцыяльных аўтараў і чытачоў. "
+"Апісанні будуць даступны на бакавой панэлі сайта пасля таго, як будзе "
+"дабаўлены блок «Інфармацыя»."
+
+msgid "manager.setup.information"
+msgstr "Інфармацыя"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+">Уключыць у адпаведны момант ліцэнзію Creative Commons для ўсіх "
+"апублікаваных прац у часопісах, якія даюць адкрыты доступ адразу або праз "
+"некаторы час."
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Крок 3. Адпраўка матэрыялаў"
+
+msgid "manager.setup.guidelines"
+msgstr "Інструкцыі"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Крок 1. Падрабязнасці пра часопіс"
+
+msgid "manager.setup.generalInformation"
+msgstr "Агульная інфармацыя"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr ""
+"Імя асобы, якая забяспечвае тэхнічную падтрымку, указваеццца абавязкова."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr ""
+"Адрас электроннай пошты асобы, якая забяспечвае тэхнічную падтрымку, "
+"абавязковы."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Колькасць рэцэнзентаў для аднаго матэрыялу ўказваецца абавязкова."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Назва часопіса ўказваецца абавязкова."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Абрэвіятура назвы часопіса ўказваецца абавязкова."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Імя кантактнай асобы ўказваецца абавязкова."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Адрас электроннай пошты кантактнай асобы абавязковы."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Указаны некарэктны ISSN."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS падтрымлівае пратакол збору метаданых <a href=\"http://www.openarchives."
+"org/\" target=\"_blank\">Open Archives Initiative</a>, які становіцца "
+"стандартам для забеспячэння добра індэксаванага доступу да электронных "
+"даследчыцкіх рэсурсаў у сусветным маштабе. Аўтары будуць выкарыстоўваць "
+"аналагічны шаблон для падачы метаданых пра свой матэрыял. Кіраўнік часопіса "
+"павінен выбраць катэгорыі для індэксавання і даць аўтарам адпаведныя "
+"прыклады, каб дапамагчы ў індэксаванні іх матэрыялаў."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Для аўтараў, каб праіндэксаваць іх працу"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Апішыце для аўтараў, чытачоў і бібліятэк дыяпазон артыкулаў і іншых "
+"матэрыялаў, якія будзе публікаваць часопіс."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Канцэпцыя часопіса"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "апошніх аб'яў на галоўнай старонцы часопіса."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Паказаць"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Наведвальнікі могуць зарэгістраваць уліковы запіс у часопісе."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Дазволіць кіраўнікам часопісаў дабаўляць аб'явы ў часопісы"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Падрыхтаваныя пісьмы, якія адпраўляюцца сістэмай ад імя часопіса, будуць "
+"змяшчаць наступны подпіс, дабаўлены ў канцы пісьма."
+
+msgid "manager.setup.emailSignature"
+msgstr "Подпіс"
+
+msgid "manager.setup.emails"
+msgstr "Ідэнтыфікацыя ў пісьме электроннай пошты"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Для выкарыстання гэтай магчымасці адмінстратар сайта павінен уключыць "
+"параметр <tt>allow_envelope_sender</tt> у канфігурацыйным файле OJS. Таксама "
+"можа спатрэбіцца дадатковая наладка сервера для падтрымкі гэтай магчымасці ("
+"выканаць такую наладку можа аказацца немагчыма на канкрэтным серверы), "
+"апісанне гэтай наладкі прыведзена ў дакументацыі OJS."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"У выпадку ўзнікнення праблем з дастаўкай пісьма электроннай пошты "
+"паведамленне пра памылку будзе накіравана на гэты адрас."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Адрас для памылак"
+
+msgid "manager.setup.editorDecision"
+msgstr "Рашэнне рэдакцыі"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Дабавіць змест для актуальнага выпуску (калі ён даступны)."
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr ""
+"Прывядзіце прыклады адпаведных акадэмічных дысцыплін для гэтага часопіса"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(Напрыклад: Гісторыя; Адукацыя; Сацыялогія; Псіхалогія; Культуралогія; Права)"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Карысна прымяняць, калі часопіс выходзіць за межы адной дысцыпліны і/або "
+"аўтары дасылаюць міждысцыплінарныя матэрыялы."
+
+msgid "manager.setup.discipline"
+msgstr "Акадэмічныя дысцыпліны і раздзелы дысцыплін"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Кіраўнік часопіса будзе рэгістраваць усіх карыстаьнікаў. Рэдактары або "
+"рэдактары раздзелаў могуць рэгістраваць уліковыя запісы для рэцэнзентаў."
+
+msgid "manager.setup.details.description"
+msgstr "Назва часопіса, ISSN, кантакты, спонсары і пошукавыя машыны."
+
+msgid "manager.setup.details"
+msgstr "Дэталі"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Крок 5. Наладка знешняга выгляду"
+
+msgid "manager.setup.currentIssue"
+msgstr "Актуальны выпуск"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Гэты тэкст з'явіцца ў раздзеле «Пра часопіс» на сайце і можа быць "
+"выкарыстаны для апісання змянення назваў часопіса, складу рэдакцыі і іншай "
+"інфармацыі, звязанай з гісторыяй выдання часопіса."
+
+msgid "manager.setup.history"
+msgstr "Гісторыя часопіса"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Патрабаваць ад рэцэнзентаў падаваць Дэкларацыю аб канфлікце інтарэсаў з "
+"кожнай адпраўляемай рэцэнзіяй."
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Патрабаваць ад аўтараў падаваць Дэкларацыю аб канфлікце інтарэсаў разам з "
+"адпраўляемым матэрыялам."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(з'явіцца ў раздзеле «Пра часопіс») "
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Увядзіце дадатковую інфармацыю, якая будзе паказана чытачам на старонцы "
+"«Аб'явы»."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Дадатковая інфармацыя"
+
+msgid "manager.setup.announcements"
+msgstr "Аб'явы"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"У якасці альтэрнатывы, замест назвы і лагатыпа, у тэкставае поле ніжэй можа "
+"быць устаўлена HTML-версія загалоўка. Пакіньце тэкставае поле пустым, калі "
+"альтэрнатыўны загаловак не патрэбны."
+
+msgid "manager.setup.alternateHeader"
+msgstr "Альтэрнатыўны загаловак"
+
+msgid "manager.setup.addSponsor"
+msgstr "Дабавіць арганізацыю-спонсара"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Дабавіць новую спасылку на базу даных"
+
+msgid "manager.setup.addNavItem"
+msgstr "Дабавіць элемент"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Дабавіць элемент на старонку «Пра часопіс»"
+
+msgid "manager.setup.addItem"
+msgstr "Дабавіць элемент"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Дабавіць элемент у кантрольны спіс"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Дабавіць інфармацыю пра часопіс"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Кантэнт"
+
+msgid "manager.setup.contextName"
+msgstr "Назва часопіса"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Табліца стыляў часопіса"
+
+msgid "manager.setup.pageHeader"
+msgstr "Верхні калантытул старонкі часопіса"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Галоўная старонка часопіса па змоўчанні складаецца з навігацыйных спасылак. "
+"Дадатковы кантэнт на галоўнай старонцы можа быць дабаўлены пры дапамозе "
+"аднаго або некалькіх натупных параметраў, якія з'явяцца на старонцы ва "
+"ўказаным парадку. Звярніце ўвагу, што актуальны выпуск заўсёды даступны па "
+"спасылцы «Актуальны выпуск» на панэлі навігацыі."
+
+msgid "manager.setup.homepageContent"
+msgstr "Кантэнт галоўнай старонкі часопіса"
+
+msgid "manager.setup.masthead"
+msgstr "Выходныя даныя"
+
+msgid "manager.setup"
+msgstr "Наладкі часопіса"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Абмежаваць колькасць слоў у анатацыі для гэтага раздзела (0 — без "
+"абмежаванняў)"
+
+msgid "manager.sections.wordCount"
+msgstr "Колькасць слоў"
+
+msgid "manager.sections.unassigned"
+msgstr "Даступныя рэдактары раздзелаў"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Матэрыялы, пададзеныя ў гэты раздзел часопіса"
+
+msgid "manager.sections.submissionReview"
+msgstr "Не будзе рэцэнзавацца"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Не будзе улічвацца пры індэксаванні часопіса"
+
+msgid "manager.sections.reviewed"
+msgstr "Рэцэнзуецца"
+
+msgid "manager.sections.readingTools"
+msgstr "Інструменты чытача"
+
+msgid "manager.sections.policy"
+msgstr "Правілы раздзела"
+
+msgid "manager.sections.open"
+msgstr "Адкрыты для прыёму матэрыялаў"
+
+msgid "manager.sections.noneCreated"
+msgstr "Раздзелы не створаны."
+
+msgid "manager.sections.indexed"
+msgstr "Індэксуецца"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"Напрыклад, «Рэцэнзуемы артыкул», «Агляд кнігі», «Каментарый спецыяліста» і "
+"г. д.)"
+
+msgid "manager.sections.identifyType"
+msgstr "Пазначаць матэрыялы, апублікаваныя ў гэтым раздзеле, як"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Выдаліць назву гэтага раздзела са зместу выпускаў."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr ""
+"Выдаліць імёны аўтараў для матэрыялаў гэтага раздзела са зместу выпускаў."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Патрабуецца назва для раздзела."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Калі ласка, пераканайцеся, што вы выбралі правільную форму рэцэнзіі."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Калі ласка, пераканайцеся, што пастаўлена хаця б адна птушка для кожнага "
+"назначэння рэдактара раздзела."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Патрабуецца абрэвіятура назвы для раздзела"
+
+msgid "manager.sections.editors"
+msgstr "Рэдактары раздзелаў"
+
+msgid "manager.sections.editorRestriction"
+msgstr "Артыкулы могуць адпраўляцца толькі рэдактарамі і рэдактарамі раздзелаў."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Дабаўце рэдактара раздзела ў гэты раздзел, каб артыкулы аўтаматычна "
+"прызначаліся рэдактару раздзела. (У іншым выпадку рэдактары раздзелаў могуць "
+"назначацца ўручную пасля атрымання матэрыялу). Калі рэдактар раздзела "
+"назначаны, то ён можа аўтаматычна назначацца на кантроль за працэсам "
+"«РЭЦЭНЗАВАННЕ» і/або за працэсам «РЭДАГАВАННЕ» (літаратурнае рэдагаванне, "
+"вёрстка і карэктура) для матэрыялаў, накіраваных у дадзены раздзел. "
+"Ствараюцца рэдактары раздзелаў праз спасылку «Рэдактары раздзелаў» пад "
+"загалоўкам «Ролі» ў раздзеле «Кіраванне часопісам»."
+
+msgid "manager.sections.create"
+msgstr "Стварыць раздзел"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Перад выдаленнем гэтага раздзела вы павінны перамясціць апублікаваныя "
+"артыкулы ў іншыя раздзелы."
+
+msgid "manager.sections.confirmDelete"
+msgstr "Вы ўпэўнены, што хочаце назаўсёды выдаліць гэты раздзел?"
+
+msgid "manager.sections.assigned"
+msgstr "Рэдактары дадзенага раздзела"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Рэдактары раздзелаў покуль што адсутнічаюць. Спачатку дабаўце гэту ролю хаця "
+"б аднаму карыстальніку праз Адміністраванне > Наладкі > Карыстальнікі &amp; "
+"Ролі."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Не патрабаваць анатацыю"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Сінхранізацыя назначэнняў запіша ўсіх карыстальнікаў, якім нададзена пэўная "
+"роля ў вызначаным часопісе, на такую ж ролю ў гэтым часопісе. Гэта функцыя "
+"дазваляе сінхранізаваць агульны набор карыстальнікаў (напрыклад, рэцэнзентаў)"
+" паміж часопісамі."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Назначыць ролю «{$role}»"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Выберыце карыстальніка, якому будуць перададзены аўтарства папярэдніх "
+"карыстальнікаў, іх рэдакцыйныя заданні і г. д."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Выберыце карыстальніка (або некалькіх) для аб'яднання з іншым уліковым "
+"запісам карыстальніка (напрыклад, калі хто-небудзь зрабіў себе два ўліковыя "
+"запісы). Уліковы запіс (запісы), выбраны першым, будзе выдалены, а ўсе "
+"звязаныя з ім артыкулы, рэдакцыйныя заданні і г. д. будуць далучаны да "
+"другога ўліковага запісу."
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "З часопісам"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Запісаць існуючага карыстальніка"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Выбраць шаблон"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Выдаліць гэтага карыстальніка з дадзенага часопіса? Гэта дзеянне адменіць "
+"усе ролі, назначаныя гэтаму карыстальніку ў дадзеным часопісе."
+
+msgid "manager.people.allUsers"
+msgstr "Усе запісаныя карыстальнікі"
+
+msgid "manager.people.showNoRole"
+msgstr "Паказаць карыстальнікаў, якія не маюць роляў"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Запісаць карыстальніка з гэтага сайта ў дадзены часопіс"
+
+msgid "manager.people.allJournals"
+msgstr "Усе часопісы"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Карыстальнікі, запісаныя ў гэты часопіс"
+
+msgid "manager.payment.userName"
+msgstr "ID плацяжу"
+
+msgid "manager.payment.records"
+msgstr "Запісы"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Выбраныя варыянты, разам з іх апісаннямі і цэнамі (яны могуць быць зменены "
+"ніжэй), з'явяцца на старонцы «Пра часопіс» у раздзеле «Правілы», а таксама "
+"ва ўсіх месцах, дзе патрабуецца аплата."
+
+msgid "manager.payment.readerFees"
+msgstr "Плацяжы чытача"
+
+msgid "manager.payment.paymentType"
+msgstr "Тып плацяжу"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Спосабы плацяжоў"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"З гэтай старонкі вы можаце наладзіць любы з наступных модуляў спосабаў "
+"плацяжоў."
+
+msgid "manager.payment.paymentMethod"
+msgstr "Спосаб плацяжу"
+
+msgid "manager.payment.paymentId"
+msgstr "ID плацяжу"
+
+msgid "manager.payment.options.text"
+msgstr "Апісанне спосабу аплаты"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Уключыць прамы доступ для рэцэнзента"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Доступ рэцэнзента"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Рэцэнзенты атрымаюць доступ да файла матэрыялу толькі пасля таго, як "
+"пагодзяцца даць рэцэнзію."
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Рэдактары будуць ацэньваць якасць працы рэцэнзентаў па пяцібальнай шкале "
+"пасля кожнай рэцэнзіі."
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Купіць выпуск"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Купіць артыкул"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Публікацыя артыкула"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Абмежаваць доступ толькі PDF-версіямі выпускаў і артыкулаў"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Членства ў асацыяцыі"
+
+msgid "manager.payment.options.feeName"
+msgstr "Назва плацяжу"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Апісанне плацяжу"
+
+msgid "manager.payment.options.fee"
+msgstr "Плацеж"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Клікніце тут, каб уключыць модуль «Плацяжы». Вам неабходна сканфігураваць "
+"наладкі плацяжоў, запоўніўшы форму ніжэй. Звярніце ўвагу, што для "
+"правядзення плацяжоў карыстальнікі павінны будуць увайсці на сайт пад сваім "
+"уліковым запісам."
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Гэта актывізуе плацяжы ў раздзеле «Падпіскі», дзе тыпы падпіскі, іх кошт і "
+"працягласць вызначаюцца менеджарам па падпісцы дадзенага часопіса."
+
+msgid "manager.payment.options"
+msgstr "Параметры"
+
+msgid "manager.payment.notFound"
+msgstr "Не знайдзена"
+
+msgid "manager.payment.noPayments"
+msgstr "Няма плацяжоў"
+
+msgid "manager.payment.generalOptions"
+msgstr "Агульныя параметры"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"Спасылка «Членства ў асацыяцыі» з'явіцца на старонцы «Пра часопіс» у "
+"раздзеле «Правілы», а спасылка для ахвяраванняў з'явіцца над полем пошуку ў "
+"фрэйме справа."
+
+msgid "manager.payment.generalFees"
+msgstr "Агульныя плацяжы"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Усе цэны павінны быць дадатнымі лікамі (можна выкарыстоўваць дробавыя "
+"значэнні)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Параметры плацяжоў"
+
+msgid "manager.payment.enable"
+msgstr "Уключыць"
+
+msgid "manager.payment.editSubscription"
+msgstr "Рэдагаваць падпіску"
+
+msgid "manager.payment.details"
+msgstr "Дэталі"
+
+msgid "manager.payment.description"
+msgstr "Апісанне"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS не робіць канвертацыю валют. Калі вы прымаеце плацяжы за падпіскі, "
+"пераканайцеся, што валюта плацяжу за падпіску адпавядае ўказанай тут валюце."
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Выбраныя варыянты, разам з іх апісаннямі і цэнамі (яны могуць быць зменены "
+"ніжэй), з'явяцца падчас Кроку 1 працэсу адпраўкі матэрыялу і на старонцы «"
+"Пра часопіс» у раздзеле «Адпраўка матэрыялаў», а таксама ва ўсіх месцах, дзе "
+"патрабуецца аплата."
+
+msgid "manager.payment.authorFees"
+msgstr "Плацяжы аўтара"
+
+msgid "manager.payment.amount"
+msgstr "Сума"
+
+msgid "manager.payment.addPayment"
+msgstr "Дабавіць плацеж"
+
+msgid "manager.payment.action"
+msgstr "Дзеянне"
+
+msgid "manager.managementPages"
+msgstr "Старонкі кіравання"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Гэта мова будзе мовай па змоўчанні для сайта часопіса."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Прабачце, дадатковыя мовы не даступны. Звяжыцеся з адміністратарам сайта, "
+"калі вы хочаце дабавіць дадатковыя мовы ў гэты часопіс."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS можа быць даступна карыстальнікам на любой мове, якая падтрымліваецца "
+"сістэмай моў. Разам з тым, OJS можа працаваць як шматмоўная сістэма, "
+"дазваляючы карыстальнікам пераключацца паміж мовамі на кожнай старонцы і "
+"ўводзіць пэўныя даныя на некалькіх дадатковых мовах.<br /><br />Калі ў спісе "
+"ніжэй не ўказана мова, якая падтрымлівецца OJS, папрасіце адміністратара "
+"сайта ўстанавіць мову з інтэрфейса адміністравання сайта. Глядзіце ў "
+"дакументацыі OJS інструкцыі па дабаўленні падтрымкі новых моў."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Гэта заменіць усе наладкі часопіса, звязаныя з канкрэтнай мовай, якія вы "
+"зрабілі для гэтай мовы"
+
+msgid "manager.language.forms"
+msgstr "Формы"
+
+msgid "manager.language.submissions"
+msgstr "Адпраўленыя матэрыялы"
+
+msgid "manager.language.ui"
+msgstr "Інтэрфейс карыстальніка"
+
+msgid "manager.journalManagement"
+msgstr "Кіраванне часопісам"
+
+msgid "manager.files.note"
+msgstr ""
+"Увага: файлавы менеджар — гэта дадатковая магчымасць, якая дазваляе "
+"непасрэдна праглядаць і кіраваць файламі і каталогамі, звязанымі з гэтым "
+"часопісам."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Вы ўпэўнены, што хочаце замяніць усе шаблоны пісем для дадзенага часопіса на "
+"шаблоны па змоўчанні? Вы згубіце ўсе зробленыя вамі змены."
+
+msgid "manager.website.archiving"
+msgstr "Архівацыя"

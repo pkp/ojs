@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2020-09-03 16:49+0000\n"
+"PO-Revision-Date: 2021-04-30 07:17+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/author/cs_CZ/>"
 "\n"
@@ -74,10 +74,10 @@ msgid "author.submit.addReasonsForWaiver"
 msgstr "Použijte, prosím, níže umístěné pole pro komentář a uveďte, proč by Vám měl být poplatek prominut."
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Nahrát redigovanou verzi"
+msgstr "Nahrát copyeditovanou verzi"
 
 msgid "author.submissions.proofreadingCorrections"
-msgstr "Korekturní opravy"
+msgstr "Opravy korektur"
 
 msgid "author.submissions.confirmDelete"
 msgstr "Jste si jistý, že chcete smazat tento nedokončený příspěvek?"
@@ -104,7 +104,7 @@ msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Než budete pokračovat, musíte souhlasit s podmínkami uvedenými v Oznámení o copyrightu."
 
 msgid "submission.submit.coverNote"
-msgstr "Komentář pro editora"
+msgstr "Komentáře pro editora"
 
 msgid "author.submit.comments"
 msgstr "Vložte text (nepovinné)"
@@ -113,7 +113,7 @@ msgid "author.submit.form.sectionRequired"
 msgstr "Vyberte prosím vhodnou sekci časopisu pro tento příspěvek."
 
 msgid "submission.submit.privacyStatement"
-msgstr "Prohlášení o soukromí pro tento časopis"
+msgstr "Prohlášení o ochraně osobních údajů tohoto časopisu"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Přeuspořádejte autory tak, aby byli zobrazeni ve stejném pořadí, v jakém mají být uvedeni v publikaci."
@@ -191,7 +191,9 @@ msgid "author.submit.supplementaryFileData"
 msgstr "Metadata doplňkového souboru"
 
 msgid "author.submit.supplementaryFileDataDescription"
-msgstr "Pro indexaci dohoto doplňkového materiálu uveďte následující metadata pro nahraný doplňkový soubor."
+msgstr ""
+"Pro indexaci tohoto doplňkového materiálu uveďte následující metadata pro "
+"nahraný doplňkový soubor."
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Doplňkový soubor"
@@ -223,15 +225,16 @@ msgstr "Zdrojový text"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Stručný popis"
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "Poskytnout soubor recenzentům (bez metadat), aby nebyly narušeny anonymní recenze."
+msgstr ""
+"Soubor lze poskytnout recenzentům (bez metadat), aniž by byla narušena "
+"anonymita recenze."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Použít pouze s formálně publikovanými materiály."
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr "Datum, kdy byla posbírána data nebo vytvořen nástroj."
+msgstr "Datum, kdy byla shromážděna data nebo vytvořen nástroj."
 
 msgid "author.submit.suppFile.sourceDescription"
 msgstr "Název studie nebo jiné určení původu."
@@ -270,13 +273,15 @@ msgid "author.submit.finishSubmission"
 msgstr "Dokončit příspěvek"
 
 msgid "author.submit.submissionComplete"
-msgstr "Odeslání příspěvku dokončeno. Děkujeme za Váš zájem publikovat v {$journalTitle}."
+msgstr ""
+"Odeslání příspěvku dokončeno. Děkujeme za Váš zájem publikovat v časopise "
+"{$journalTitle}."
 
 msgid "author.article.uploadAuthorVersion"
-msgstr "Nahrát verzi od autora"
+msgstr "Nahrát autorovu verzi"
 
 msgid "author.article.copyeditedFile"
-msgstr "Redigovaný soubor"
+msgstr "Copyeditovaný soubor"
 
 msgid "author.article.authorRevisedFile"
 msgstr "Soubor od autora"
@@ -303,13 +308,13 @@ msgid "author.submit.mustEnterWaiverReason"
 msgstr "Pokud žádáte o prominutí platby, musíte do příslušného místa uvést důvod."
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "V recenzním řízení: Vyžaduje přepracování"
+msgstr "V recenzním řízení: Jsou vyžádány menší úpravy"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Redakční úravy: Vyžádáno redigování"
+msgstr "Redakční úpravy: Vyžádáno copyeditování"
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr "Redakční úpravy: Vyžádána korektura"
+msgstr "Redakční úpravy: Vyžádána jazyková korektura"
 
 msgid "author.submit.reorder"
 msgstr "Přeuspořádat jméno autora"
