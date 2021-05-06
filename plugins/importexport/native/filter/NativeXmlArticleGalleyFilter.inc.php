@@ -18,7 +18,7 @@ import('lib.pkp.plugins.importexport.native.filter.NativeXmlRepresentationFilter
 use APP\submission\Submission;
 
 // FIXME: Add namespacing
-use DOMElement;
+// use DOMElement;
 
 class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
 {
