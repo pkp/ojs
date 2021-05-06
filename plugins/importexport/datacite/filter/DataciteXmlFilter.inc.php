@@ -49,8 +49,8 @@ import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 use APP\submission\Submission;
 
 // FIXME: Add namespacing
-use Issue;
-use ArticleGalley;
+// use Issue;
+// use ArticleGalley;
 
 class DataciteXmlFilter extends NativeExportFilter
 {
