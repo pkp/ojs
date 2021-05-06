@@ -2020,14 +2020,6 @@ msgstr ""
 "Recenzenci nie otrzymają dostępu do zgłoszonych plików póki nie wyrażą zgody "
 "na ich zrecenzowanie."
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Te szczegóły mogą być zawarte w metadanych dostarczanych do innego, "
-"archiwalnego zespołu."
-
-msgid "manager.setup.publishing"
-msgstr "Szczegóły publikacji"
-
 msgid "manager.setup.numPageLinks.description"
 msgstr "Ogranicz liczbę wyświetlanych linków na następnych stronach w spisie."
 

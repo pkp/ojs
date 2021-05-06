@@ -791,14 +791,8 @@ msgstr "Planification du calendrier de publication"
 msgid "manager.setup.publicIdentifier"
 msgstr "Identification du contenu de la revue"
 
-msgid "manager.setup.publishing"
-msgstr "Renseignements au sujet de la publication"
-
 msgid "manager.setup.publisher"
 msgstr "Éditeur"
-
-msgid "manager.setup.publishingDescription"
-msgstr "Le nom de l'organisation qui publie la revue pourrait être inclus dans les métadonnées fournies aux agents d'achivage externes."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Lien de référence"

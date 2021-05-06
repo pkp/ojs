@@ -753,9 +753,6 @@ msgstr "Ідентифікація змісту журналу"
 msgid "manager.setup.publisher"
 msgstr "Видавець"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Назва установи-видавця журналу, яка має бути відображена на сторінці \"Про журнал\"."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Гіперпосилання у пристатейній бібліографії"
 

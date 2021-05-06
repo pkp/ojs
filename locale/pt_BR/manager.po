@@ -828,14 +828,8 @@ msgstr "Periodicidade de publicação"
 msgid "manager.setup.publicIdentifier"
 msgstr "Identificação do conteúdo"
 
-msgid "manager.setup.publishing"
-msgstr "Detalhes da publicação"
-
 msgid "manager.setup.publisher"
 msgstr "Editora"
-
-msgid "manager.setup.publishingDescription"
-msgstr "O nome da editora aparecerá na página Sobre a revista."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Links para referências"

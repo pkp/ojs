@@ -611,9 +611,6 @@ msgstr "Aldizkariaren edukiaren identifikazioa"
 msgid "manager.setup.publisher"
 msgstr "Argitaratzailea"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Aldizkaria argitaratzen duen erakundearen izena Aldizkariari buruz orrian agertuko da."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Erreferentziarako esteka"
 

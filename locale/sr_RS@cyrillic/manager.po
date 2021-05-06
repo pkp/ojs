@@ -1303,9 +1303,6 @@ msgstr "Идентификација садржаја часописа"
 msgid "manager.setup.publisher"
 msgstr "Издвач"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Име организације која објављује часопис може бити укључено у метаподатке које дајете трећим лицима за архивирање."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Повезивање референци"
 

@@ -1110,16 +1110,8 @@ msgstr "Người dùng phải được đăng ký và đăng nhập để xem n�
 msgid "manager.setup.referenceLinking"
 msgstr "Link liên kết của các tài liệu tham khảo"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Các chi tiết này có thể được bao gồm trong siêu dữ liệu được cung cấp cho "
-"các cơ quan lưu trữ của bên thứ ba."
-
 msgid "manager.setup.publisher"
 msgstr "Nhà xuất bản"
-
-msgid "manager.setup.publishing"
-msgstr "Chi tiết xuất bản"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "Xác định nội dung tạp chí"

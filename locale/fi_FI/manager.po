@@ -731,9 +731,6 @@ msgstr "Julkaisun sisällön tunnistetiedot"
 msgid "manager.setup.publisher"
 msgstr "Julkaisija"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Julkaisevan organisaation nimi saatetaan sisällyttää metatietoihin, jotka annetaan ulkopuolisille arkistointielimille."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Lähdeviitteiden linkitys"
 
@@ -1696,9 +1693,6 @@ msgstr "Lisää turvallinen linkki arvioijille lähtevään kutsuun."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Rajoita pääsyä tiedostoihin"
-
-msgid "manager.setup.publishing"
-msgstr "Julkaisua koskevat tiedot"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr "Rajoita listauksessa näkyvien sivulinkkien määrää."

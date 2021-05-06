@@ -999,16 +999,8 @@ msgstr ""
 msgid "manager.setup.referenceLinking"
 msgstr "بەستنەوەی سەرچاوەکان"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"ئەم وردەکارییانە لەوانەیە لە ناو زانیاری ناسێنەردا هەبن کە دراون بە "
-"لایەنەکانی سێیەمی ئەرشیفکردن."
-
 msgid "manager.setup.publisher"
 msgstr "دەزگای بڵاوکردنەوە"
-
-msgid "manager.setup.publishing"
-msgstr "وردەکارییەکانی بڵاوکردنەوە"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "پێناسی ناوەڕۆکی گۆڤارەکە"

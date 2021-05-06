@@ -769,9 +769,6 @@ msgstr "Identifiering av innehållet i tidskriften"
 msgid "manager.setup.publisher"
 msgstr "Utgivare"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Namn på tidskriftens utgivare som kan inkluderas i metadatan som skickas till tredje parts arkiv."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Länka referenser"
 
@@ -1656,9 +1653,6 @@ msgstr "{$count} av {$total} artiklar"
 
 msgid "manager.setup.enableOai"
 msgstr "Aktivera OAI"
-
-msgid "manager.setup.publishing"
-msgstr "Publiceringsinformation"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr "Begränsa antalet länkar som visas på varje sida."

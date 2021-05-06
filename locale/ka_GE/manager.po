@@ -946,16 +946,8 @@ msgstr ""
 msgid "manager.setup.referenceLinking"
 msgstr "წყაროებზე ბმულების ჩასმა"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"ეს დეტალები შეიძლება შეიტანოს მეტდანაცემებში, რომლებიც მესამე მხარის "
-"საარქივო ორგანოებს მიეწოდება."
-
 msgid "manager.setup.publisher"
 msgstr "გამომცემელი"
-
-msgid "manager.setup.publishing"
-msgstr "გამოცემის დეტალები"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "ჟურნალის შინაარსის იდენტიფიკაცია"

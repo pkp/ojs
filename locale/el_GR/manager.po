@@ -1856,15 +1856,6 @@ msgstr ""
 "δημοσιεύετε στην πορεία\", μην χρησιμοποιήσετε την ημερομηνία δημοσίευσης "
 "του τεύχους."
 
-#, fuzzy
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Αυτές οι λεπτομέρειες μπορεί να περιλαμβάνονται στα μεταδεδομένα που "
-"εμφανίζονται στην σελίδα \"Σχετικά με το περιοδικό\"."
-
-msgid "manager.setup.publishing"
-msgstr "Λεπτομέρειες Δημοσίευσης"
-
 msgid "manager.setup.privacyStatement.success"
 msgstr "Η δήλωση απορρήτου έχει ενημερωθεί."
 

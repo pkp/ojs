@@ -1919,14 +1919,6 @@ msgstr "Cikk"
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Használja a cikk megjelenésének dátumát"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Ezek az adatok szerepelhetnek harmadik archiváló félnek átadott "
-"metaadatokban."
-
-msgid "manager.setup.publishing"
-msgstr "Megjelenítési részletek"
-
 msgid "manager.setup.siteAccess.view"
 msgstr "Oldal hozzáférés"
 

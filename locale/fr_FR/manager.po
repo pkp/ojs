@@ -670,9 +670,6 @@ msgstr "Identification du contenu de la revue"
 msgid "manager.setup.publisher"
 msgstr "Éditeur"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Le nom de l'organisation qui publie la revue apparaîtra dans À propos de la revue."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Lien de référence"
 
@@ -1852,9 +1849,6 @@ msgstr ""
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Restreindre l'accès aux fichiers"
-
-msgid "manager.setup.publishing"
-msgstr "Renseignements relatifs à la publication"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "La politique de confidentialité a été mise à jour."

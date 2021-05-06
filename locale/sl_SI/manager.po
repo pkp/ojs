@@ -1821,14 +1821,6 @@ msgstr ""
 "Recenzenti ne bodo dobili dostopa do članka dokler se ne bodo strinjali z "
 "opravljanjem recenzije."
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Te podrobnosti so lahko vključene v metapodatke tretjih oseb, ki arhivirajo "
-"ali indeksirajo revijo."
-
-msgid "manager.setup.publishing"
-msgstr "Podrobnosti objavljanja"
-
 msgid "manager.setup.numPageLinks.description"
 msgstr "Omejite število prikazanih povezav do nadaljnjih strani v seznamu."
 

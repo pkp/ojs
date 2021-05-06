@@ -640,9 +640,6 @@ msgstr "期刊内容识别码"
 msgid "manager.setup.publisher"
 msgstr "出版者"
 
-msgid "manager.setup.publishingDescription"
-msgstr "出版这份期刊的组织单位名称会出现在这份期刊的「期刊介绍」中。"
-
 msgid "manager.setup.referenceLinking"
 msgstr "参考文献链接"
 
@@ -1550,9 +1547,6 @@ msgstr "限定文件存取"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr "限定后续页面链接显示数目。"
-
-msgid "manager.setup.publishing"
-msgstr "出版细节"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "隐私声明已更新。"

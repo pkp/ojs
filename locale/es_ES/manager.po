@@ -693,9 +693,6 @@ msgstr "Identificación del contenido de la revista"
 msgid "manager.setup.publisher"
 msgstr "Editorial"
 
-msgid "manager.setup.publishingDescription"
-msgstr "El nombre de la organización que publica la revista aparecerá en la sección Acerca de la revista."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Enlaces de referencia"
 
@@ -1728,9 +1725,6 @@ msgstr ""
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Restringir el acceso al archivo"
-
-msgid "manager.setup.publishing"
-msgstr "Detalles de publicación"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr ""

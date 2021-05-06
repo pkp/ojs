@@ -1090,13 +1090,6 @@ msgstr "प्रकाशन शेड्यूलिंग"
 msgid "manager.setup.publicIdentifier"
 msgstr "जर्नल कंटेंट की पहचान"
 
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"ये विवरण तृतीय-पक्ष अभिलेखीय निकायों को प्रदान किए गए मेटाडेटा में शामिल किए "
-"जा सकते हैं।"
-
 # (pofilter) simplecaps: Different capitalization
 msgid "manager.setup.referenceLinking"
 msgstr "संदर्भ लिंकिंग"
@@ -2631,9 +2624,6 @@ msgstr "स्वचालित ईमेल स्मरणपत्र"
 
 msgid "manager.setup.publisher"
 msgstr "प्रकाशक"
-
-msgid "manager.setup.publishing"
-msgstr "प्रकाशन विवरण"
 
 msgid "manager.setup.policies"
 msgstr "नीतियाँ"

@@ -988,15 +988,8 @@ msgstr ""
 msgid "manager.setup.referenceLinking"
 msgstr "Odkazovanie na referencie"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Názov organizácie vydávajúcej časopis bude zobrazený v časti O časopise."
-
 msgid "manager.setup.publisher"
 msgstr "Vydavateľ"
-
-msgid "manager.setup.publishing"
-msgstr "Podrobnosti o publikovaní"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "Identifikácia obsahu časopisu"

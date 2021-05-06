@@ -631,9 +631,6 @@ msgstr "Identifikace obsahu časopisu"
 msgid "manager.setup.publisher"
 msgstr "Vydavatel"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Název organizace vydávající časopis bude zobrazen v části O časopisu."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Odkazování na reference"
 
@@ -1742,9 +1739,6 @@ msgstr "Zahrnout zabezpečený odkaz do e-mailové pozvánky recenzentům."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Omezte přístup k souborům"
-
-msgid "manager.setup.publishing"
-msgstr "Podrobnosti o publikování"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "Prohlášení o ochraně osobních údajů bylo aktualizováno."

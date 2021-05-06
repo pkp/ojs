@@ -678,9 +678,6 @@ msgstr "Identificació dels continguts de la revista"
 msgid "manager.setup.publisher"
 msgstr "Institució publicadora"
 
-msgid "manager.setup.publishingDescription"
-msgstr "El nom de l’organització que publica la revista apareix a la pàgina «Sobre la revista»."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Enllaços de referència"
 
@@ -1746,8 +1743,6 @@ msgstr ""
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Restringir l'accés a l'arxiu"
 
-msgid "manager.setup.publishing"
-msgstr "Detalls de publicació"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "S'ha actualitzat la declaració de privacitat."

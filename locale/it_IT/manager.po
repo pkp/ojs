@@ -639,9 +639,6 @@ msgstr "Identificatori dei contenuti della rivista"
 msgid "manager.setup.publisher"
 msgstr "Editore"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Il nome dell'organizzazione responsabile della pubblicazione comparirà tra le informazioni sulla rivista."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Gestisci il reference linking"
 
@@ -1787,9 +1784,6 @@ msgstr "Inserire un link sicuro nella mail di invito ai revisori."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Limita l'accesso al file"
-
-msgid "manager.setup.publishing"
-msgstr "Dettagli di pubblicazione"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr "Limita il numero di collegamenti da visualizzare in pagine successive."

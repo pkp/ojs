@@ -1929,16 +1929,8 @@ msgstr ""
 msgid "manager.setup.referenceLinking"
 msgstr "Референтна врска"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Овие детали може да бидат вклучени во метаподатоците доставени до архивски "
-"тела на трети страни."
-
 msgid "manager.setup.publisher"
 msgstr "Издавач"
-
-msgid "manager.setup.publishing"
-msgstr "Детали за објавување"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "Идентификација на содржината на весникот"

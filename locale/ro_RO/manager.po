@@ -1201,16 +1201,8 @@ msgstr ""
 msgid "manager.setup.referenceLinking"
 msgstr "Link referință"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Aceste detalii pot fi incluse în metadatele furnizate unor organisme de "
-"arhivare terțe."
-
 msgid "manager.setup.publisher"
 msgstr "Editor de publicare"
-
-msgid "manager.setup.publishing"
-msgstr "Detalii de publicare"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "Identificarea conținutului jurnalului"

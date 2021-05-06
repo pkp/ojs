@@ -789,14 +789,8 @@ msgstr "Publicatieplanning"
 msgid "manager.setup.publicIdentifier"
 msgstr "Identificatie van tijdschriftinhoud"
 
-msgid "manager.setup.publishing"
-msgstr "Publicatiegegevens"
-
 msgid "manager.setup.publisher"
 msgstr "Uitgever"
-
-msgid "manager.setup.publishingDescription"
-msgstr "Deze gegevens kunnen worden opgenomen in metadata voor externe archiveringsdiensten."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Linken van referenties"

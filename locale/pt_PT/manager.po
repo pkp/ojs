@@ -667,9 +667,6 @@ msgstr "Identificação do Conteúdo da Revista"
 msgid "manager.setup.publisher"
 msgstr "Editora"
 
-msgid "manager.setup.publishingDescription"
-msgstr "O nome da editora aparecerá na secção Sobre a Revista."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Links para Referências"
 
@@ -1782,9 +1779,6 @@ msgstr "Inclua um link seguro nos e-mails de convite aos revisores."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Restringir o acesso aos ficheiros"
-
-msgid "manager.setup.publishing"
-msgstr "Detalhes de publicação"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr "Limite o número de links a aparecerem em páginas seguintes numa lista."

@@ -602,9 +602,6 @@ msgstr "Identifikacija sadržaja časopisa"
 msgid "manager.setup.publisher"
 msgstr "Nakladnik"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Ime nakladnika koje se pojavljuje u časopisu u rubrici \"o časopisu\". Nakladnik je pravna ili fizička osoba koja pokreće objavljivanje publikacije, snosi troškove izdavanja i tiskanja te je odgovorna za proizvodnju i distribuciju."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Bibliografske poveznice"
 
@@ -1685,9 +1682,6 @@ msgstr "Dodajte sigurnu poveznicu u e-mail pozivu recenzentima."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Ograničenje pristupa datoteci"
-
-msgid "manager.setup.publishing"
-msgstr "Detalji objavljivanja"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "Izjava o privatnosti je ažurirana."

@@ -761,11 +761,6 @@ msgstr "Dergi İçeriğinin Tanımlanması"
 msgid "manager.setup.publisher"
 msgstr "Yayıncı"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Bu ayrıntılar, üçüncü taraf arşiv organlarına sağlanan üstverilere dahil "
-"edilebilir."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Referans Linkleme"
 
@@ -1976,9 +1971,6 @@ msgid "manager.setup.searchDescription.description"
 msgstr ""
 "Arama sonuçlarında listelenirken arama motorlarının görüntüleyebileceği "
 "sonuçlar hakkında kısa bir açıklama (50-300 karakter) girin."
-
-msgid "manager.setup.publishing"
-msgstr "Yayın Ayrıntıları"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr ""

@@ -781,16 +781,9 @@ msgid "manager.setup.publicationScheduling"
 msgstr "جدولة النشر"
 
 msgid "manager.setup.publicIdentifier"
-msgstr "ترميز محتوى المجلة"
-
-msgid "manager.setup.publishing"
-msgstr "تفاصيل النشر"
 
 msgid "manager.setup.publisher"
 msgstr "الناشر"
-
-msgid "manager.setup.publishingDescription"
-msgstr "هذه التفاصيل قد يجري تضمينها في بيانات وصفية تذهب إلى أطراف ثالثة عند حفظ محتوى المجلة."
 
 msgid "manager.setup.referenceLinking"
 msgstr "ربط المراجع"

@@ -784,11 +784,6 @@ msgstr "Kennung des Inhalts der Zeitschrift"
 msgid "manager.setup.publisher"
 msgstr "Verlag, Organisation"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Diese Details werden in den Metadaten bereitgestellt, die von Dritten "
-"ausgelesen werden können."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Verlinkung von Literaturverweisen"
 
@@ -1759,9 +1754,6 @@ msgstr ""
 
 msgid "manager.setup.searchEngineIndexing.success"
 msgstr "Die Suchmaschinenindex-Einstellungen wurden aktualisiert."
-
-msgid "manager.setup.publishing"
-msgstr "Veröffentlichungsdetails"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "Die Datenschutzerklärung wurde aktualisiert."

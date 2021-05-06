@@ -667,11 +667,6 @@ msgstr "Identifikation af tidsskriftsindhold"
 msgid "manager.setup.publisher"
 msgstr "Forlægger"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Disse detaljer kan inkluderes i metadata leveret til arkivorganisationer fra "
-"tredjepart."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Angivelse af links til referencer"
 
@@ -1798,9 +1793,6 @@ msgstr "Inkludér et sikkert link i e-mail-invitationen til bedømmere."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Begræns filadgang"
-
-msgid "manager.setup.publishing"
-msgstr "Publiceringsoplysninger"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr ""

@@ -724,9 +724,6 @@ msgstr "شناسایی محتوای مجله"
 msgid "manager.setup.publisher"
 msgstr "ناشر"
 
-msgid "manager.setup.publishingDescription"
-msgstr "نام ناشر در صفحه «درباره مجله» خواهد آمد."
-
 msgid "manager.setup.referenceLinking"
 msgstr "لینک به مراجع"
 

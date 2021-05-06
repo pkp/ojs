@@ -744,9 +744,6 @@ msgstr "Identifikasi Konten Jurnal"
 msgid "manager.setup.publisher"
 msgstr "Penerbit"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Nama organisasi yang menerbitkan jurnal dapat disertakan dalam metadata yang diberikan ke badan pengarsipan luar."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Tautan Referensi"
 
@@ -1744,9 +1741,6 @@ msgstr "Sertakan tautan aman dalam email undangan kepada reviewer."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Batasi Akses File"
-
-msgid "manager.setup.publishing"
-msgstr "Rincian Terbitan"
 
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS dan CLOCKSS"

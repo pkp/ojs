@@ -713,9 +713,6 @@ msgstr "Identifiser tidsskriftinnhold"
 msgid "manager.setup.publisher"
 msgstr "Utgiver"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Navnet til organisasjonen som publiserer tidsskriftet vil bli vist i 'Om' tidsskriftet."
-
 msgid "manager.setup.registerJournalForIndexing"
 msgstr "Registrer tidsskriftet for indeksering (Metadata Harvesting)"
 
@@ -2329,9 +2326,6 @@ msgstr "Inkluder en sikker lenke i e-postinvitasjonen til anmeldere."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Begrens tilgang til fil"
-
-msgid "manager.setup.publishing"
-msgstr "Publiseringsopplysninger"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "Erklæringen om vern av personopplysninger har blitt oppdatert."
