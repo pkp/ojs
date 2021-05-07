@@ -24,8 +24,10 @@ import('controllers.grid.issues.IssueGridRow');
 use PKP\core\JSONMessage;
 use PKP\submission\PKPSubmission;
 use PKP\file\TemporaryFileManager;
+use PKP\security\authorization\ContextAccessPolicy;
 
-use \APP\template\TemplateManager;
+use APP\security\authorization\OjsIssueRequiredPolicy;
+use APP\template\TemplateManager;
 
 class IssueGridHandler extends GridHandler
 {
@@ -59,12 +61,10 @@ class IssueGridHandler extends GridHandler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
         // If a signoff ID was specified, authorize it.
         if ($request->getUserVar('issueId')) {
-            import('classes.security.authorization.OjsIssueRequiredPolicy');
             $this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
         }
 

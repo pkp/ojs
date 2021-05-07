@@ -17,6 +17,7 @@ import('classes.search.ArticleSearch');
 
 use PKP\submission\PKPSubmission;
 
+use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\handler\Handler;
 use APP\template\TemplateManager;
 
@@ -27,7 +28,6 @@ class SearchHandler extends Handler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('classes.security.authorization.OjsJournalMustPublishPolicy');
         if ($request->getContext()) {
             $this->addPolicy(new OjsJournalMustPublishPolicy($request));
         }

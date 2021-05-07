@@ -21,6 +21,7 @@ namespace APP\payment\ojs;
 use PKP\payment\QueuedPayment;
 use PKP\payment\PaymentManager;
 use PKP\payment\CompletedPayment;
+use PKP\plugins\PluginRegistry;
 
 class OJSPaymentManager extends PaymentManager
 {

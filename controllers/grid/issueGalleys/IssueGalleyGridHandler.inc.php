@@ -20,7 +20,10 @@ use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 use PKP\file\TemporaryFileManager;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\authorization\OjsIssueGalleyRequiredPolicy;
 
+use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\file\IssueFileManager;
 
 class IssueGalleyGridHandler extends GridHandler
@@ -49,15 +52,12 @@ class IssueGalleyGridHandler extends GridHandler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
-        import('classes.security.authorization.OjsIssueRequiredPolicy');
         $this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
 
         // If a signoff ID was specified, authorize it.
         if ($request->getUserVar('issueGalleyId')) {
-            import('classes.security.authorization.OjsIssueGalleyRequiredPolicy');
             $this->addPolicy(new OjsIssueGalleyRequiredPolicy($request, $args));
         }
 

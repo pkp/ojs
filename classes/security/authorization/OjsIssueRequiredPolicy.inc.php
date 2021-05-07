@@ -12,7 +12,14 @@
  * @brief Policy that ensures that the request contains a valid issue.
  */
 
-import('lib.pkp.classes.security.authorization.DataObjectRequiredPolicy');
+namespace APP\security\authorization;
+
+use PKP\db\DAORegistry;
+use PKP\security\authorization\AuthorizationPolicy;
+use PKP\security\authorization\DataObjectRequiredPolicy;
+
+// FIXME: Add namespacing
+use \Issue;
 
 class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
 {
@@ -42,15 +49,15 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
     {
         $issueId = $this->getDataObjectId();
         if (!$issueId) {
-            return AUTHORIZATION_DENY;
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
         }
 
         // Make sure the issue belongs to the journal.
         $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         $issue = $issueDao->getByBestId($issueId, $this->journal->getId());
 
-        if (!is_a($issue, 'Issue')) {
-            return AUTHORIZATION_DENY;
+        if (!$issue instanceof Issue) {
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
         }
 
         // The issue must be published, or we must have pre-publication
@@ -65,12 +72,12 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
                 ROLE_ID_ASSISTANT,
             ]
         )) == 0) {
-            return AUTHORIZATION_DENY;
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
         }
 
         // Save the issue to the authorization context.
         $this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE, $issue);
-        return AUTHORIZATION_PERMIT;
+        return AuthorizationPolicy::AUTHORIZATION_PERMIT;
     }
 
     /**
@@ -85,7 +92,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
         // Identify the data object id.
         $router = $this->_request->getRouter();
         switch (true) {
-            case is_a($router, 'PKPPageRouter'):
+            case $router instanceof \PKP\core\PKPPageRouter:
                 if (ctype_digit((string) $this->_request->getUserVar($this->_parameterName))) {
                     // We may expect a object id in the user vars
                     return (int) $this->_request->getUserVar($this->_parameterName);
@@ -101,4 +108,8 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
 
         return false;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\security\authorization\OjsIssueRequiredPolicy', '\OjsIssueRequiredPolicy');
 }

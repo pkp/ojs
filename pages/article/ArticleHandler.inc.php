@@ -16,7 +16,9 @@
 
 use PKP\submission\SubmissionFile;
 use PKP\submission\PKPSubmission;
+use PKP\security\authorization\ContextRequiredPolicy;
 
+use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 use APP\handler\Handler;
 use APP\payment\ojs\OJSPaymentManager;
@@ -80,10 +82,8 @@ class ArticleHandler extends Handler
             }
         }
 
-        import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
         $this->addPolicy(new ContextRequiredPolicy($request));
 
-        import('classes.security.authorization.OjsJournalMustPublishPolicy');
         $this->addPolicy(new OjsJournalMustPublishPolicy($request));
 
         return parent::authorize($request, $args, $roleAssignments);

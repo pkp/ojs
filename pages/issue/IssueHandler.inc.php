@@ -16,7 +16,10 @@
 import('classes.issue.IssueAction');
 
 use PKP\submission\PKPSubmission;
+use PKP\security\authorization\ContextRequiredPolicy;
 
+use APP\security\authorization\OjsJournalMustPublishPolicy;
+use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\handler\Handler;
 use APP\template\TemplateManager;
 use APP\file\IssueFileManager;
@@ -33,13 +36,9 @@ class IssueHandler extends Handler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
         $this->addPolicy(new ContextRequiredPolicy($request));
-
-        import('classes.security.authorization.OjsJournalMustPublishPolicy');
         $this->addPolicy(new OjsJournalMustPublishPolicy($request));
 
-        import('classes.security.authorization.OjsIssueRequiredPolicy');
         // the 'archives' op does not need this policy so it is left out of the operations array.
         $this->addPolicy(new OjsIssueRequiredPolicy($request, $args, ['view', 'download']));
 

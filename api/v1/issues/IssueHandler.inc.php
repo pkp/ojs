@@ -15,7 +15,11 @@
  */
 
 use PKP\handler\APIHandler;
+use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\security\authorization\ContextAccessPolicy;
 
+use APP\security\authorization\OjsIssueRequiredPolicy;
+use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\core\Services;
 
 class IssueHandler extends APIHandler
@@ -61,17 +65,11 @@ class IssueHandler extends APIHandler
             $routeName = $route->getName();
         }
 
-        import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
         $this->addPolicy(new ContextRequiredPolicy($request));
-
-        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
-
-        import('classes.security.authorization.OjsJournalMustPublishPolicy');
         $this->addPolicy(new OjsJournalMustPublishPolicy($request));
 
         if ($routeName === 'get') {
-            import('classes.security.authorization.OjsIssueRequiredPolicy');
             $this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
         }
 

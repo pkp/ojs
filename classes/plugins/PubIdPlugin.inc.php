@@ -22,6 +22,8 @@ use PKP\db\DAORegistry;
 use PKP\submission\PKPSubmission;
 use PKP\core\PKPString;
 
+use APP\core\Services;
+
 // FIXME: Add namespacing
 use \NotificationManager;
 use \Issue;

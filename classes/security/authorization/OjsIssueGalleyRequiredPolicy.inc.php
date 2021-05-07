@@ -12,7 +12,13 @@
  * @brief Policy that ensures that the request contains a valid issue galley.
  */
 
-import('lib.pkp.classes.security.authorization.DataObjectRequiredPolicy');
+namespace APP\security\authorization;
+
+use PKP\security\authorization\DataObjectRequiredPolicy;
+use PKP\security\authorization\AuthorizationPolicy;
+
+// FIXME: Add namespacing
+use \IssueGalley;
 
 class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
 {
@@ -38,19 +44,23 @@ class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
     {
         $issueGalleyId = (int)$this->getDataObjectId();
         if (!$issueGalleyId) {
-            return AUTHORIZATION_DENY;
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
         }
 
         // Make sure the issue galley belongs to the journal.
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
         $issueGalley = $issueGalleyDao->getById($issueGalleyId, $issue->getId());
-        if (!is_a($issueGalley, 'IssueGalley')) {
-            return AUTHORIZATION_DENY;
+        if (!$issueGalley instanceof IssueGalley) {
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
         }
 
         // Save the publication format to the authorization context.
         $this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY, $issueGalley);
-        return AUTHORIZATION_PERMIT;
+        return AuthorizationPolicy::AUTHORIZATION_PERMIT;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\security\authorization\OjsIssueGalleyRequiredPolicy', '\OjsIssueGalleyRequiredPolicy');
 }

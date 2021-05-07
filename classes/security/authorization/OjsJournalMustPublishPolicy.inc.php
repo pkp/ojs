@@ -12,8 +12,10 @@
  * @brief Access policy to limit access to journals that do not publish online.
  */
 
-import('lib.pkp.classes.security.authorization.PolicySet');
-import('lib.pkp.classes.security.authorization.AuthorizationPolicy');
+namespace APP\security\authorization;
+
+use PKP\security\authorization\PolicySet;
+use PKP\security\authorization\AuthorizationPolicy;
 
 class OjsJournalMustPublishPolicy extends AuthorizationPolicy
 {
@@ -36,7 +38,7 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy
     public function effect()
     {
         if (!$this->_context) {
-            return AUTHORIZATION_DENY;
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
         }
 
         // Certain roles are allowed to see unpublished content.
@@ -51,13 +53,17 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy
                 ROLE_ID_SUBSCRIPTION_MANAGER,
             ]
         )) > 0) {
-            return AUTHORIZATION_PERMIT;
+            return AuthorizationPolicy::AUTHORIZATION_PERMIT;
         }
 
         if ($this->_context->getData('publishingMode') == PUBLISHING_MODE_NONE) {
-            return AUTHORIZATION_DENY;
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
         }
 
-        return AUTHORIZATION_PERMIT;
+        return AuthorizationPolicy::AUTHORIZATION_PERMIT;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\security\authorization\OjsJournalMustPublishPolicy', '\OjsJournalMustPublishPolicy');
 }

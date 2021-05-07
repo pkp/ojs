@@ -15,6 +15,9 @@
 
 import('lib.pkp.classes.submission.form.PKPSubmissionSubmitStep4Form');
 
+use APP\log\SubmissionEventLogEntry;
+use PKP\log\SubmissionLog;
+
 class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
 {
     /**
@@ -123,9 +126,7 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
         }
 
         // Log submission.
-        import('classes.log.SubmissionEventLogEntry'); // Constants
-        import('lib.pkp.classes.log.SubmissionLog');
-        SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_SUBMISSION_SUBMIT, 'submission.event.submissionSubmitted');
+        SubmissionLog::logEvent($request, $submission, SubmissionEventLogEntry::SUBMISSION_LOG_SUBMISSION_SUBMIT, 'submission.event.submissionSubmitted');
 
         return $this->submissionId;
     }

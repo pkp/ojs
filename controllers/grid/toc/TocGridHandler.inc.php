@@ -19,7 +19,9 @@ import('controllers.grid.toc.TocGridRow');
 
 use PKP\core\JSONMessage;
 use PKP\submission\PKPSubmission;
+use PKP\security\authorization\ContextAccessPolicy;
 
+use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
 
 class TocGridHandler extends CategoryGridHandler
@@ -48,10 +50,8 @@ class TocGridHandler extends CategoryGridHandler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
-        import('classes.security.authorization.OjsIssueRequiredPolicy');
         $this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
 
         return parent::authorize($request, $args, $roleAssignments);
