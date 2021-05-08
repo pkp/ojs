@@ -47,6 +47,7 @@ define('DATACITE_DESCTYPE_OTHER', 'Other');
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
 use APP\submission\Submission;
+use APP\workflow\EditorDecisionActionsManager;
 
 // FIXME: Add namespacing
 // use Issue;
@@ -407,7 +408,7 @@ class DataciteXmlFilter extends NativeExportFilter
                 $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
                 $editDecisions = $editDecisionDao->getEditorDecisions($article->getId());
                 foreach (array_reverse($editDecisions) as $editDecision) {
-                    if ($editDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
+                    if ($editDecision['decision'] == EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_ACCEPT) {
                         $dates[DATACITE_DATE_ACCEPTED] = $editDecision['dateDecided'];
                     }
                 }

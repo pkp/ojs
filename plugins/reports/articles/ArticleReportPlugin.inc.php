@@ -13,9 +13,11 @@
  * @brief Article report plugin
  */
 
-import('lib.pkp.classes.plugins.ReportPlugin');
+use PKP\plugins\ReportPlugin;
+use PKP\submission\PKPSubmission;
+use PKP\db\DAORegistry;
 
-use \PKP\submission\PKPSubmission;
+use APP\workflow\EditorDecisionActionsManager;
 
 class ArticleReportPlugin extends ReportPlugin
 {
@@ -319,29 +321,28 @@ class ArticleReportPlugin extends ReportPlugin
      */
     public function getDecisionMessage($decision)
     {
-        import('classes.workflow.EditorDecisionActionsManager'); // SUBMISSION_EDITOR_...
         switch ($decision) {
-            case SUBMISSION_EDITOR_DECISION_ACCEPT:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_ACCEPT:
                 return __('editor.submission.decision.accept');
-            case SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS:
                 return __('editor.submission.decision.requestRevisions');
-            case SUBMISSION_EDITOR_DECISION_RESUBMIT:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_RESUBMIT:
                 return __('editor.submission.decision.resubmit');
-            case SUBMISSION_EDITOR_DECISION_DECLINE:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_DECLINE:
                 return __('editor.submission.decision.decline');
-            case SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION:
                 return __('editor.submission.decision.sendToProduction');
-            case SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW:
                 return __('editor.submission.decision.sendExternalReview');
-            case SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE:
                 return __('editor.submission.decision.decline');
-            case SUBMISSION_EDITOR_RECOMMEND_ACCEPT:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_RECOMMEND_ACCEPT:
                 return __('editor.submission.recommendation.display', ['recommendation' => __('editor.submission.decision.accept')]);
-            case SUBMISSION_EDITOR_RECOMMEND_DECLINE:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_RECOMMEND_DECLINE:
                 return __('editor.submission.recommendation.display', ['recommendation' => __('editor.submission.decision.decline')]);
-            case SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS:
                 return __('editor.submission.recommendation.display', ['recommendation' => __('editor.submission.decision.requestRevisions')]);
-            case SUBMISSION_EDITOR_RECOMMEND_RESUBMIT:
+            case EditorDecisionActionsManager::SUBMISSION_EDITOR_RECOMMEND_RESUBMIT:
                 return __('editor.submission.recommendation.display', ['recommendation' => __('editor.submission.decision.resubmit')]);
             default:
                 return '';
