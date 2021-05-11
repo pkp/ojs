@@ -13,7 +13,7 @@
  * @brief DOI plugin class
  */
 
-use PKP\Services\Interfaces\EntityWriteInterface;
+use PKP\services\Interfaces\EntityWriteInterface;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
 

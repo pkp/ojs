@@ -16,7 +16,7 @@
 namespace APP\Services\QueryBuilders;
 
 use Illuminate\Support\Facades\DB;
-use PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface;
+use PKP\services\QueryBuilders\Interfaces\EntityQueryBuilderInterface;
 
 class IssueQueryBuilder implements EntityQueryBuilderInterface
 {
@@ -207,7 +207,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
     }
 
     /**
-     * @copydoc PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getCount()
+     * @copydoc PKP\services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getCount()
      */
     public function getCount()
     {
@@ -219,7 +219,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
     }
 
     /**
-     * @copydoc PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getIds()
+     * @copydoc PKP\services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getIds()
      */
     public function getIds()
     {
@@ -231,7 +231,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
     }
 
     /**
-     * @copydoc PKP\Services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getQuery()
+     * @copydoc PKP\services\QueryBuilders\Interfaces\EntityQueryBuilderInterface::getQuery()
      */
     public function getQuery()
     {

@@ -17,8 +17,8 @@ namespace APP\Services;
 
 use PKP\submission\PKPSubmission;
 use PKP\db\DAORegistry;
-use PKP\Services\PKPPublicationService;
-use PKP\Services\Interfaces\EntityWriteInterface;
+use PKP\services\PKPPublicationService;
+use PKP\services\Interfaces\EntityWriteInterface;
 
 use APP\core\Services;
 use APP\i18n\AppLocale;

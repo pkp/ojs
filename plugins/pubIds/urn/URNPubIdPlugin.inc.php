@@ -13,7 +13,7 @@
  * @brief URN plugin class
  */
 
-use PKP\Services\Interfaces\EntityWriteInterface;
+use PKP\services\Interfaces\EntityWriteInterface;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
 use PKP\linkAction\LinkAction;
 

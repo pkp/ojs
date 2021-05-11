@@ -15,7 +15,7 @@
 
 namespace APP\Services;
 
-class StatsEditorialService extends \PKP\Services\PKPStatsEditorialService
+class StatsEditorialService extends \PKP\services\PKPStatsEditorialService
 {
     /**
      * Process the sectionIds param when getting the query builder

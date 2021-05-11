@@ -25,7 +25,7 @@ use APP\i18n\AppLocale;
 // FIXME: Add namespacing
 use \Validation;
 
-class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService
+class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
 {
     /** types for all ojs default navigationMenuItems */
     public const NMI_TYPE_SUBSCRIPTIONS = 'NMI_TYPE_SUBSCRIPTIONS';

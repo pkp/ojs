@@ -15,7 +15,7 @@
 
 namespace APP\Services;
 
-class StatsService extends \PKP\Services\PKPStatsService
+class StatsService extends \PKP\services\PKPStatsService
 {
     /**
      * Apply the sectionIds query param to the QueryBuilder

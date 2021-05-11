@@ -15,7 +15,7 @@
 
 namespace APP\Services\QueryBuilders;
 
-use PKP\Services\QueryBuilders\PKPStatsEditorialQueryBuilder;
+use PKP\services\QueryBuilders\PKPStatsEditorialQueryBuilder;
 
 class StatsEditorialQueryBuilder extends PKPStatsEditorialQueryBuilder
 {
