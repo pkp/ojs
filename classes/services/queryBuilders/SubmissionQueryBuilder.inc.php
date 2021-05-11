@@ -15,7 +15,7 @@
 
 namespace APP\Services\QueryBuilders;
 
-class SubmissionQueryBuilder extends \PKP\services\QueryBuilders\PKPSubmissionQueryBuilder
+class SubmissionQueryBuilder extends \PKP\services\queryBuilders\PKPSubmissionQueryBuilder
 {
     /** @var int|array Issue ID(s) */
     protected $issueIds = null;

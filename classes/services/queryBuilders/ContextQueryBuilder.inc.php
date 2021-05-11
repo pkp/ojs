@@ -14,14 +14,14 @@
 
 namespace APP\Services\QueryBuilders;
 
-class ContextQueryBuilder extends \PKP\services\QueryBuilders\PKPContextQueryBuilder
+class ContextQueryBuilder extends \PKP\services\queryBuilders\PKPContextQueryBuilder
 {
-    /** @copydoc \PKP\services\QueryBuilders\PKPContextQueryBuilder::$db */
+    /** @copydoc \PKP\services\queryBuilders\PKPContextQueryBuilder::$db */
     protected $db = 'journals';
 
-    /** @copydoc \PKP\services\QueryBuilders\PKPContextQueryBuilder::$dbSettings */
+    /** @copydoc \PKP\services\queryBuilders\PKPContextQueryBuilder::$dbSettings */
     protected $dbSettings = 'journal_settings';
 
-    /** @copydoc \PKP\services\QueryBuilders\PKPContextQueryBuilder::$dbIdColumn */
+    /** @copydoc \PKP\services\queryBuilders\PKPContextQueryBuilder::$dbIdColumn */
     protected $dbIdColumn = 'journal_id';
 }
