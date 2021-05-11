@@ -13,7 +13,7 @@
  * @brief Helper class that encapsulates NavigationMenu business logic
  */
 
-namespace APP\Services;
+namespace APP\services;
 
 use PKP\plugins\HookRegistry;
 use PKP\core\PKPApplication;
@@ -176,6 +176,6 @@ if (!PKP_STRICT_MODE) {
         'NMI_TYPE_CURRENT',
         'NMI_TYPE_ARCHIVES',
     ] as $constantName) {
-        define($constantName, constant('\APP\Services\NavigationMenuService::' . $constantName));
+        define($constantName, constant('\APP\services\NavigationMenuService::' . $constantName));
     }
 }

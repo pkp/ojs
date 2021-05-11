@@ -14,7 +14,7 @@
  *  requirements.
  */
 
-namespace APP\Services;
+namespace APP\services;
 
 use PKP\submission\PKPSubmission;
 use PKP\db\DAORegistry;
@@ -101,12 +101,12 @@ class SubmissionService extends PKPSubmissionService
      *
      * @param $hookName string
      * @param $args array [
-     *      @option \APP\Services\QueryBuilders\SubmissionQueryBuilder
+     *      @option \APP\services\queryBuilders\SubmissionQueryBuilder
      *      @option int Context ID
      *      @option array Request args
      * ]
      *
-     * @return \APP\Services\QueryBuilders\SubmissionQueryBuilder
+     * @return \APP\services\queryBuilders\SubmissionQueryBuilder
      */
     public function modifySubmissionQueryBuilder($hookName, $args)
     {
@@ -128,7 +128,7 @@ class SubmissionService extends PKPSubmissionService
      * @param $hookName string
      * @param $args array [
      *      @option object $queryObject
-     *      @option \APP\Services\QueryBuilders\SubmissionQueryBuilder $queryBuilder
+     *      @option \APP\services\queryBuilders\SubmissionQueryBuilder $queryBuilder
      * ]
      *
      * @return object

@@ -13,7 +13,7 @@
  * @brief Helper class that encapsulates galley business logic
  */
 
-namespace APP\Services;
+namespace APP\services;
 
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
@@ -24,7 +24,7 @@ use PKP\services\interfaces\EntityWriteInterface;
 use PKP\services\PKPSchemaService;
 
 use APP\core\Services;
-use APP\Services\QueryBuilders\GalleyQueryBuilder;
+use APP\services\queryBuilders\GalleyQueryBuilder;
 
 class GalleyService implements EntityReadInterface, EntityWriteInterface, EntityPropertyInterface
 {

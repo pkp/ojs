@@ -13,7 +13,7 @@
  * @brief Submission list Query builder
  */
 
-namespace APP\Services\QueryBuilders;
+namespace APP\services\QueryBuilders;
 
 class SubmissionQueryBuilder extends \PKP\services\queryBuilders\PKPSubmissionQueryBuilder
 {
@@ -28,7 +28,7 @@ class SubmissionQueryBuilder extends \PKP\services\queryBuilders\PKPSubmissionQu
      *
      * @param int|array $issueIds
      *
-     * @return \APP\Services\QueryBuilders\SubmissionQueryBuilder
+     * @return \APP\services\QueryBuilders\SubmissionQueryBuilder
      */
     public function filterByIssues($issueIds)
     {
@@ -44,7 +44,7 @@ class SubmissionQueryBuilder extends \PKP\services\queryBuilders\PKPSubmissionQu
      *
      * @param int|array $sectionIds
      *
-     * @return \APP\Services\QueryBuilders\SubmissionQueryBuilder
+     * @return \APP\services\QueryBuilders\SubmissionQueryBuilder
      */
     public function filterBySections($sectionIds)
     {

@@ -12,7 +12,7 @@
  * @brief Journal list query builder
  */
 
-namespace APP\Services\QueryBuilders;
+namespace APP\services\queryBuilders;
 
 class ContextQueryBuilder extends \PKP\services\queryBuilders\PKPContextQueryBuilder
 {

@@ -13,7 +13,7 @@
  *   editorial stats
  */
 
-namespace APP\Services;
+namespace APP\services;
 
 class StatsEditorialService extends \PKP\services\PKPStatsEditorialService
 {

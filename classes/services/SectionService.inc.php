@@ -13,7 +13,7 @@
 * @brief Helper class that encapsulates section business logic
 */
 
-namespace APP\Services;
+namespace APP\services;
 
 use APP\core\Services;
 use PKP\services\interfaces\EntityPropertyInterface;

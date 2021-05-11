@@ -13,7 +13,7 @@
  * @brief Utility class to package all OJS services
  */
 
-namespace APP\Services;
+namespace APP\services;
 
 use Pimple\Container;
 

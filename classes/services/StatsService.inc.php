@@ -13,7 +13,7 @@
  * @brief Helper class that encapsulates statistics business logic
  */
 
-namespace APP\Services;
+namespace APP\services;
 
 class StatsService extends \PKP\services\PKPStatsService
 {

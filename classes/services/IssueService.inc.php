@@ -13,18 +13,18 @@
 * @brief Helper class that encapsulates issue business logic
 */
 
-namespace APP\Services;
+namespace APP\services;
 
-use APP\core\Services;
-use APP\journal\Journal;
-use APP\Services\QueryBuilders\IssueQueryBuilder;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
-
 use PKP\services\interfaces\EntityPropertyInterface;
 use PKP\services\interfaces\EntityReadInterface;
 use PKP\services\PKPSchemaService;
+
+use APP\core\Services;
+use APP\journal\Journal;
+use APP\services\queryBuilders\IssueQueryBuilder;
 
 class IssueService implements EntityPropertyInterface, EntityReadInterface
 {
@@ -113,7 +113,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface
     /**
      * @copydoc \PKP\services\interfaces\EntityReadInterface::getQueryBuilder()
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function getQueryBuilder($args = [])
     {

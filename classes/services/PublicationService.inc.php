@@ -13,7 +13,7 @@
  *  requirements.
  */
 
-namespace APP\Services;
+namespace APP\services;
 
 use PKP\submission\PKPSubmission;
 use PKP\db\DAORegistry;

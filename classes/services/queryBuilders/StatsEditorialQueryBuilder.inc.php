@@ -13,7 +13,7 @@
  * @brief Editorial statistics list query builder
  */
 
-namespace APP\Services\QueryBuilders;
+namespace APP\services\queryBuilders;
 
 use PKP\services\queryBuilders\PKPStatsEditorialQueryBuilder;
 

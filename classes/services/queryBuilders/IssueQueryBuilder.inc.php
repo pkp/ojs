@@ -13,7 +13,7 @@
  * @brief Issue list Query builder
  */
 
-namespace APP\Services\QueryBuilders;
+namespace APP\services\queryBuilders;
 
 use Illuminate\Support\Facades\DB;
 use PKP\services\queryBuilders\Interfaces\EntityQueryBuilderInterface;
@@ -64,7 +64,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param int|string $contextId
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function filterByContext($contextId)
     {
@@ -78,7 +78,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      * @param string $column
      * @param string $direction
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function orderBy($column, $direction = 'DESC')
     {
@@ -98,7 +98,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param boolean $isPublished
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function filterByPublished($isPublished)
     {
@@ -111,7 +111,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param array $volumes
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function filterByVolumes($volumes)
     {
@@ -127,7 +127,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param array $numbers
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function filterByNumbers($numbers)
     {
@@ -143,7 +143,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param array $years
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function filterByYears($years)
     {
@@ -159,7 +159,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param array $issueIds
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function filterByIds($issueIds)
     {
@@ -172,7 +172,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param string $phrase
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function searchPhrase($phrase)
     {
@@ -185,7 +185,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param int $count
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function limitTo($count)
     {
@@ -198,7 +198,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param int $offset
      *
-     * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+     * @return \APP\services\queryBuilders\IssueQueryBuilder
      */
     public function offsetBy($offset)
     {

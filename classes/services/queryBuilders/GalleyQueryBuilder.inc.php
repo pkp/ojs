@@ -12,7 +12,7 @@
  * @brief Class for building database queries for galleys
  */
 
-namespace APP\Services\QueryBuilders;
+namespace APP\services\queryBuilders;
 
 use Illuminate\Support\Facades\DB;
 use PKP\services\queryBuilders\Interfaces\EntityQueryBuilderInterface;
@@ -30,7 +30,7 @@ class GalleyQueryBuilder implements EntityQueryBuilderInterface
      *
      * @param array|int $publicationIds
      *
-     * @return \APP\Services\QueryBuilders\GalleyQueryBuilder
+     * @return \APP\services\queryBuilders\GalleyQueryBuilder
      */
     public function filterByPublicationIds($publicationIds)
     {
