@@ -13,10 +13,13 @@
  * @brief Form for Step 3 of author submission.
  */
 
-import('lib.pkp.classes.submission.form.PKPSubmissionSubmitStep3Form');
-import('classes.submission.SubmissionMetadataFormImplementation');
+namespace APP\submission\form;
 
-use \APP\template\TemplateManager;
+use PKP\submission\form\PKPSubmissionSubmitStep3Form;
+use PKP\db\DAORegistry;
+
+use APP\submission\SubmissionMetadataFormImplementation;
+use APP\template\TemplateManager;
 
 class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form
 {
@@ -47,4 +50,8 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form
         $templateMgr->assign('wordCount', $wordCount);
         return parent::fetch($request, $template, $display);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\form\SubmissionSubmitStep3Form', '\SubmissionSubmitStep3Form');
 }

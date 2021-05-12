@@ -17,8 +17,8 @@
 
 namespace APP\submission;
 
-use \PKP\submission\PKPSubmissionFileDAO;
-use \PKP\db\DAORegistry;
+use PKP\submission\PKPSubmissionFileDAO;
+use PKP\db\DAORegistry;
 
 class SubmissionFileDAO extends PKPSubmissionFileDAO
 {

@@ -14,7 +14,10 @@
  * implement submission metadata data and form operations.
  */
 
-import('lib.pkp.classes.submission.PKPSubmissionMetadataFormImplementation');
+namespace APP\submission;
+
+use PKP\submission\PKPSubmissionMetadataFormImplementation;
+use PKP\db\DAORegistry;
 
 class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImplementation
 {
@@ -49,4 +52,8 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
             }));
         }
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\SubmissionMetadataFormImplementation', '\SubmissionMetadataFormImplementation');
 }

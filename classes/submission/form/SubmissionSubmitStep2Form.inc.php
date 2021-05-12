@@ -13,15 +13,14 @@
  * @brief Form for Step 2 of author manuscript submission.
  */
 
-import('lib.pkp.classes.submission.form.PKPSubmissionSubmitStep2Form');
+namespace APP\submission\form;
+
+use PKP\submission\form\PKPSubmissionSubmitStep2Form;
 
 class SubmissionSubmitStep2Form extends PKPSubmissionSubmitStep2Form
 {
-    /**
-     * Constructor.
-     */
-    public function __construct($context, $submission)
-    {
-        parent::__construct($context, $submission);
-    }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\form\SubmissionSubmitStep2Form', '\SubmissionSubmitStep2Form');
 }

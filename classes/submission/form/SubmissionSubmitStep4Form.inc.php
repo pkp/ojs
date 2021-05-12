@@ -13,30 +13,21 @@
  * @brief Form for Step 4 of author submission.
  */
 
-import('lib.pkp.classes.submission.form.PKPSubmissionSubmitStep4Form');
+namespace APP\submission\form;
 
+use PKP\submission\form\PKPSubmissionSubmitStep4Form;
 use PKP\log\SubmissionLog;
 use PKP\notification\PKPNotification;
 
 use APP\log\SubmissionEventLogEntry;
+use APP\core\Application;
 use APP\notification\NotificationManager;
+
+// FIXME: Add namespacing
+use \ArticleMailTemplate;
 
 class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
 {
-    /**
-     * Constructor.
-     *
-     * @param $context Context
-     * @param $submission Submission
-     */
-    public function __construct($context, $submission)
-    {
-        parent::__construct(
-            $context,
-            $submission
-        );
-    }
-
     /**
      * Save changes to submission.
      *
@@ -131,4 +122,8 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
 
         return $this->submissionId;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\form\SubmissionSubmitStep4Form', '\SubmissionSubmitStep4Form');
 }
