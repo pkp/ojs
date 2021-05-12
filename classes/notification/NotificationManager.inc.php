@@ -15,7 +15,15 @@
  * @brief Class for Notification Manager.
  */
 
-import('lib.pkp.classes.notification.PKPNotificationManager');
+namespace APP\notification;
+
+use PKP\notification\PKPNotificationManager;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
+
+use APP\core\Application;
+use APP\notification\managerDelegate\ApproveSubmissionNotificationManager;
+use APP\notification\Notification;
 
 class NotificationManager extends PKPNotificationManager
 {
@@ -39,7 +47,7 @@ class NotificationManager extends PKPNotificationManager
         $context = $contextDao->getById($notification->getContextId());
 
         switch ($notification->getType()) {
-            case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
+            case Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE:
                 return $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'issue', 'current');
             default:
                 return parent::getNotificationUrl($request, $notification);
@@ -64,27 +72,27 @@ class NotificationManager extends PKPNotificationManager
         }
 
         switch ($notification->getType()) {
-            case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
+            case Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE:
                 return __('notification.type.issuePublished');
-            case NOTIFICATION_TYPE_BOOK_REQUESTED:
+            case Notification::NOTIFICATION_TYPE_BOOK_REQUESTED:
                 return __('plugins.generic.booksForReview.notification.bookRequested');
-            case NOTIFICATION_TYPE_BOOK_CREATED:
+            case Notification::NOTIFICATION_TYPE_BOOK_CREATED:
                 return __('plugins.generic.booksForReview.notification.bookCreated');
-            case NOTIFICATION_TYPE_BOOK_UPDATED:
+            case Notification::NOTIFICATION_TYPE_BOOK_UPDATED:
                 return __('plugins.generic.booksForReview.notification.bookUpdated');
-            case NOTIFICATION_TYPE_BOOK_DELETED:
+            case Notification::NOTIFICATION_TYPE_BOOK_DELETED:
                 return __('plugins.generic.booksForReview.notification.bookDeleted');
-            case NOTIFICATION_TYPE_BOOK_MAILED:
+            case Notification::NOTIFICATION_TYPE_BOOK_MAILED:
                 return __('plugins.generic.booksForReview.notification.bookMailed');
-            case NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED:
+            case Notification::NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED:
                 return __('plugins.generic.booksForReview.notification.settingsSaved');
-            case NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED:
+            case Notification::NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED:
                 return __('plugins.generic.booksForReview.notification.submissionAssigned');
-            case NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
+            case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
                 return __('plugins.generic.booksForReview.notification.authorAssigned');
-            case NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
+            case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
                 return __('plugins.generic.booksForReview.notification.authorDenied');
-            case NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
+            case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
                 return __('plugins.generic.booksForReview.notification.authorRemoved');
             default:
                 return parent::getNotificationMessage($request, $notification);
@@ -120,16 +128,16 @@ class NotificationManager extends PKPNotificationManager
     public function getStyleClass($notification)
     {
         switch ($notification->getType()) {
-            case NOTIFICATION_TYPE_BOOK_REQUESTED:
-            case NOTIFICATION_TYPE_BOOK_CREATED:
-            case NOTIFICATION_TYPE_BOOK_UPDATED:
-            case NOTIFICATION_TYPE_BOOK_DELETED:
-            case NOTIFICATION_TYPE_BOOK_MAILED:
-            case NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED:
-            case NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED:
-            case NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
-            case NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
-            case NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
+            case Notification::NOTIFICATION_TYPE_BOOK_REQUESTED:
+            case Notification::NOTIFICATION_TYPE_BOOK_CREATED:
+            case Notification::NOTIFICATION_TYPE_BOOK_UPDATED:
+            case Notification::NOTIFICATION_TYPE_BOOK_DELETED:
+            case Notification::NOTIFICATION_TYPE_BOOK_MAILED:
+            case Notification::NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED:
+            case Notification::NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED:
+            case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
+            case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
+            case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
                     return 'notifySuccess';
             default: return parent::getStyleClass($notification);
         }
@@ -145,20 +153,20 @@ class NotificationManager extends PKPNotificationManager
     public function getIconClass($notification)
     {
         switch ($notification->getType()) {
-            case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
+            case Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE:
                 return 'notifyIconPublished';
             case NOTIFICATION_TYPE_NEW_ANNOUNCEMENT:
                 return 'notifyIconNewAnnouncement';
-            case NOTIFICATION_TYPE_BOOK_REQUESTED:
-            case NOTIFICATION_TYPE_BOOK_CREATED:
-            case NOTIFICATION_TYPE_BOOK_UPDATED:
-            case NOTIFICATION_TYPE_BOOK_DELETED:
-            case NOTIFICATION_TYPE_BOOK_MAILED:
-            case NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED:
-            case NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED:
-            case NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
-            case NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
-            case NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
+            case Notification::NOTIFICATION_TYPE_BOOK_REQUESTED:
+            case Notification::NOTIFICATION_TYPE_BOOK_CREATED:
+            case Notification::NOTIFICATION_TYPE_BOOK_UPDATED:
+            case Notification::NOTIFICATION_TYPE_BOOK_DELETED:
+            case Notification::NOTIFICATION_TYPE_BOOK_MAILED:
+            case Notification::NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED:
+            case Notification::NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED:
+            case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
+            case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
+            case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
                 return 'notifyIconSuccess';
             default: return parent::getIconClass($notification);
         }
@@ -173,7 +181,6 @@ class NotificationManager extends PKPNotificationManager
             case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
             case NOTIFICATION_TYPE_VISIT_CATALOG:
                 assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
-                import('classes.notification.managerDelegate.ApproveSubmissionNotificationManager');
                 return new ApproveSubmissionNotificationManager($notificationType);
         }
         // Otherwise, fall back on parent class
@@ -186,11 +193,15 @@ class NotificationManager extends PKPNotificationManager
     public function getNotificationSettingsMap()
     {
         $settingsMap = parent::getNotificationSettingsMap();
-        $settingsMap[NOTIFICATION_TYPE_PUBLISHED_ISSUE] = [
+        $settingsMap[Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE] = [
             'settingName' => 'notificationPublishedIssue',
             'emailSettingName' => 'emailNotificationPublishedIssue',
             'settingKey' => 'notification.type.issuePublished',
         ];
         return $settingsMap;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\notification\NotificationManager', '\NotificationManager');
 }

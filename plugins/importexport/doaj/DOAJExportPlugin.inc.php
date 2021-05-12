@@ -23,7 +23,9 @@ define('DOAJ_API_URL', 'https://doaj.org/api/v2/');
 define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/v2/');
 define('DOAJ_API_OPERATION', 'articles');
 
-use \APP\template\TemplateManager;
+use PKP\notification\PKPNotification;
+
+use APP\template\TemplateManager;
 
 class DOAJExportPlugin extends PubObjectsExportPlugin
 {
@@ -172,7 +174,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
                 $this->_sendNotification(
                     $request->getUser(),
                     $this->getDepositSuccessNotificationMessageKey(),
-                    NOTIFICATION_TYPE_SUCCESS
+                    PKPNotification::NOTIFICATION_TYPE_SUCCESS
                 );
             } else {
                 foreach ($resultErrors as $errors) {
@@ -181,7 +183,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
                         $this->_sendNotification(
                             $request->getUser(),
                             $error[0],
-                            NOTIFICATION_TYPE_ERROR,
+                            PKPNotification::NOTIFICATION_TYPE_ERROR,
                             ($error[1] ?? null)
                         );
                     }

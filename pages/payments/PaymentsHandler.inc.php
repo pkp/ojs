@@ -17,7 +17,8 @@ use APP\handler\Handler;
 
 use PKP\core\JSONMessage;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+use APP\notification\NotificationManager;
 
 class PaymentsHandler extends Handler
 {

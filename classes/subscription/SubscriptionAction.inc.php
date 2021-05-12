@@ -13,7 +13,10 @@
  * Common actions for subscription management functions.
  */
 
-use \PKP\mail\MailTemplate;
+use PKP\mail\MailTemplate;
+use PKP\notification\PKPNotification;
+
+use APP\notification\NotificationManager;
 
 class SubscriptionAction
 {
@@ -85,9 +88,8 @@ class SubscriptionAction
         $mail->setBody($mail->getBody($journal->getPrimaryLocale()));
         $mail->assignParams($paramArray);
         if (!$mail->send()) {
-            import('classes.notification.NotificationManager');
             $notificationMgr = new NotificationManager();
-            $notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
+            $notificationMgr->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
         }
     }
 }

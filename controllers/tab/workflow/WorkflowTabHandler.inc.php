@@ -18,7 +18,9 @@ import('lib.pkp.controllers.tab.workflow.PKPWorkflowTabHandler');
 
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
+use PKP\notification\PKPNotification;
 
+use APP\notification\Notification;
 use APP\template\TemplateManager;
 
 class WorkflowTabHandler extends PKPWorkflowTabHandler
@@ -67,12 +69,12 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler
     protected function getProductionNotificationOptions($submissionId)
     {
         return [
-            NOTIFICATION_LEVEL_NORMAL => [
-                NOTIFICATION_TYPE_VISIT_CATALOG => [ASSOC_TYPE_SUBMISSION, $submissionId],
-                NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER => [ASSOC_TYPE_SUBMISSION, $submissionId],
-                NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS => [ASSOC_TYPE_SUBMISSION, $submissionId],
+            Notification::NOTIFICATION_LEVEL_NORMAL => [
+                PKPNotification::NOTIFICATION_TYPE_VISIT_CATALOG => [ASSOC_TYPE_SUBMISSION, $submissionId],
+                PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER => [ASSOC_TYPE_SUBMISSION, $submissionId],
+                PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS => [ASSOC_TYPE_SUBMISSION, $submissionId],
             ],
-            NOTIFICATION_LEVEL_TRIVIAL => []
+            Notification::NOTIFICATION_LEVEL_TRIVIAL => []
         ];
     }
 }

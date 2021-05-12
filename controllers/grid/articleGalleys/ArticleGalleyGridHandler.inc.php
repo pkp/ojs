@@ -20,8 +20,10 @@ use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 use PKP\submission\PKPSubmission;
+use PKP\notification\PKPNotification;
 
 use APP\template\TemplateManager;
+use APP\notification\NotificationManager;
 
 class ArticleGalleyGridHandler extends GridHandler
 {
@@ -353,7 +355,7 @@ class ArticleGalleyGridHandler extends GridHandler
             $notificationMgr = new NotificationManager();
             $notificationMgr->updateNotification(
                 $request,
-                [NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
+                [PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
                 null,
                 ASSOC_TYPE_SUBMISSION,
                 $this->getSubmission()->getId()
@@ -443,7 +445,7 @@ class ArticleGalleyGridHandler extends GridHandler
                 $notificationMgr = new NotificationManager();
                 $notificationMgr->updateNotification(
                     $request,
-                    [NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
+                    [PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
                     null,
                     ASSOC_TYPE_SUBMISSION,
                     $this->getSubmission()->getId()

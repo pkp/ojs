@@ -16,6 +16,7 @@
 import('classes.plugins.DOIPubIdExportPlugin');
 
 use PKP\file\FileManager;
+use PKP\notification\PKPNotification;
 
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
@@ -156,7 +157,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                         $this->_sendNotification(
                             $request->getUser(),
                             $error[0],
-                            NOTIFICATION_TYPE_ERROR,
+                            PKPNotification::NOTIFICATION_TYPE_ERROR,
                             ($error[1] ?? null)
                         );
                     }
@@ -187,7 +188,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 $this->_sendNotification(
                     $request->getUser(),
                     $this->getDepositSuccessNotificationMessageKey(),
-                    NOTIFICATION_TYPE_SUCCESS
+                    PKPNotification::NOTIFICATION_TYPE_SUCCESS
                 );
             } else {
                 foreach ($resultErrors as $errors) {
@@ -196,7 +197,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                         $this->_sendNotification(
                             $request->getUser(),
                             $error[0],
-                            NOTIFICATION_TYPE_ERROR,
+                            PKPNotification::NOTIFICATION_TYPE_ERROR,
                             ($error[1] ?? null)
                         );
                     }

@@ -19,6 +19,9 @@ import('controllers.grid.settings.sections.SectionGridRow');
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
+use PKP\notification\PKPNotification;
+
+use APP\notification\NotificationManager;
 
 class SectionGridHandler extends SetupGridHandler
 {
@@ -333,7 +336,7 @@ class SectionGridHandler extends SetupGridHandler
             // Create the notification.
             $notificationMgr = new NotificationManager();
             $user = $request->getUser();
-            $notificationMgr->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, ['contents' => __('manager.sections.confirmDeactivateSection.error')]);
+            $notificationMgr->createTrivialNotification($user->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('manager.sections.confirmDeactivateSection.error')]);
             return DAO::getDataChangedEvent($sectionId);
         }
 

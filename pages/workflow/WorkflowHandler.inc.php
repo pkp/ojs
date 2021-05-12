@@ -15,6 +15,8 @@
 
 import('lib.pkp.pages.workflow.PKPWorkflowHandler');
 
+use PKP\notification\PKPNotification;
+
 use APP\template\TemplateManager;
 use APP\file\PublicFileManager;
 
@@ -163,13 +165,13 @@ class WorkflowHandler extends PKPWorkflowHandler
     {
         switch ($stageId) {
             case WORKFLOW_STAGE_ID_SUBMISSION:
-                return NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_SUBMISSION;
+                return PKPNotification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_SUBMISSION;
             case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
-                return NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EXTERNAL_REVIEW;
+                return PKPNotification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EXTERNAL_REVIEW;
             case WORKFLOW_STAGE_ID_EDITING:
-                return NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EDITING;
+                return PKPNotification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EDITING;
             case WORKFLOW_STAGE_ID_PRODUCTION:
-                return NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_PRODUCTION;
+                return PKPNotification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_PRODUCTION;
         }
         return null;
     }

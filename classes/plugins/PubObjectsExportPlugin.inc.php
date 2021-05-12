@@ -38,14 +38,13 @@ use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\NullAction;
 use PKP\plugins\ImportExportPlugin;
 use PKP\db\DAORegistry;
+use PKP\notification\PKPNotification;
 
 use APP\plugins\PubObjectCache;
 use APP\template\TemplateManager;
 use APP\i18n\AppLocale;
 use APP\core\Application;
-
-// FIXME: Add namespacing
-use \NotificationManager;
+use APP\notification\NotificationManager;
 
 abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/** @var PubObjectCache */
@@ -98,7 +97,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				$form->readInputData();
 				if ($form->validate()) {
 					$form->execute();
-					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS);
+					$notificationManager->createTrivialNotification($user->getId(), PKPNotification::NOTIFICATION_TYPE_SUCCESS);
 					return new JSONMessage(true);
 				} else {
 					return new JSONMessage(true, $form->fetch($request));
@@ -215,13 +214,13 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 					$this->_sendNotification(
 						$request->getUser(),
 						'plugins.importexport.common.validation.success',
-						NOTIFICATION_TYPE_SUCCESS
+						PKPNotification::NOTIFICATION_TYPE_SUCCESS
 					);
 				} else {
 					$this->_sendNotification(
 						$request->getUser(),
 						'plugins.importexport.common.validation.fail',
-						NOTIFICATION_TYPE_ERROR
+						PKPNotification::NOTIFICATION_TYPE_ERROR
 					);
 				}
 
@@ -249,7 +248,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				$this->_sendNotification(
 					$request->getUser(),
 					$this->getDepositSuccessNotificationMessageKey(),
-					NOTIFICATION_TYPE_SUCCESS
+					PKPNotification::NOTIFICATION_TYPE_SUCCESS
 				);
 			} else {
 				if (is_array($result)) {
@@ -258,7 +257,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 						$this->_sendNotification(
 							$request->getUser(),
 							$error[0],
-							NOTIFICATION_TYPE_ERROR,
+							PKPNotification::NOTIFICATION_TYPE_ERROR,
 							(isset($error[1]) ? $error[1] : null)
 						);
 					}
@@ -718,7 +717,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	function _sendNotification($user, $message, $notificationType, $param = null) {
 		static $notificationManager = null;
 		if (is_null($notificationManager)) {
-			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 		}
 		if (!is_null($param)) {

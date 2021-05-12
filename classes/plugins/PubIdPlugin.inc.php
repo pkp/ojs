@@ -23,9 +23,9 @@ use PKP\submission\PKPSubmission;
 use PKP\core\PKPString;
 
 use APP\core\Services;
+use APP\notification\NotificationManager;
 
 // FIXME: Add namespacing
-use \NotificationManager;
 use \Issue;
 
 abstract class PubIdPlugin extends PKPPubIdPlugin {

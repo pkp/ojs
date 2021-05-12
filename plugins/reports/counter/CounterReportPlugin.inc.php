@@ -20,7 +20,10 @@ define('COUNTER_CLASS_SUFFIX', '.inc.php');
 import('lib.pkp.classes.plugins.ReportPlugin');
 import('plugins.reports.counter.classes.CounterReport');
 
-use \APP\template\TemplateManager;
+use PKP\notification\PKPNotification;
+
+use APP\template\TemplateManager;
+use APP\notification\NotificationManager;
 
 class CounterReportPlugin extends ReportPlugin
 {
@@ -214,9 +217,8 @@ class CounterReportPlugin extends ReportPlugin
                         $errormessage = __('plugins.reports.counter.error.badRequest');
                     }
                     $user = $request->getUser();
-                    import('classes.notification.NotificationManager');
                     $notificationManager = new NotificationManager();
-                    $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, ['contents' => $errormessage]);
+                    $notificationManager->createTrivialNotification($user->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => $errormessage]);
             }
         }
         $legacyYears = $this->_getYears(true);

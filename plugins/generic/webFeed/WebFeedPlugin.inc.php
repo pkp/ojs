@@ -19,6 +19,7 @@ use PKP\plugins\GenericPlugin;
 use PKP\linkAction\LinkAction;
 
 use APP\template\TemplateManager;
+use APP\notification\NotificationManager;
 
 class WebFeedPlugin extends GenericPlugin
 {

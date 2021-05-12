@@ -15,6 +15,10 @@
 
 import('classes.subscription.form.SubscriptionForm');
 
+use PKP\notification\PKPNotification;
+
+use APP\notification\NotificationManager;
+
 class InstitutionalSubscriptionForm extends SubscriptionForm
 {
     /**
@@ -165,10 +169,9 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         if ($this->_data['notifyEmail'] == 1) {
             $mail = $this->_prepareNotificationEmail('SUBSCRIPTION_NOTIFY');
             if (!$mail->send()) {
-                import('classes.notification.NotificationManager');
                 $notificationMgr = new NotificationManager();
                 $request = Application::get()->getRequest();
-                $notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
+                $notificationMgr->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
             }
         }
     }

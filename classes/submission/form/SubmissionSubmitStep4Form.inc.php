@@ -15,8 +15,11 @@
 
 import('lib.pkp.classes.submission.form.PKPSubmissionSubmitStep4Form');
 
-use APP\log\SubmissionEventLogEntry;
 use PKP\log\SubmissionLog;
+use PKP\notification\PKPNotification;
+
+use APP\log\SubmissionEventLogEntry;
+use APP\notification\NotificationManager;
 
 class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
 {
@@ -110,17 +113,15 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
             ]);
 
             if (!$mail->send($request)) {
-                import('classes.notification.NotificationManager');
                 $notificationMgr = new NotificationManager();
-                $notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
+                $notificationMgr->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
             }
 
             $recipients = $authorMail->getRecipients();
             if (!empty($recipients)) {
                 if (!$authorMail->send($request)) {
-                    import('classes.notification.NotificationManager');
                     $notificationMgr = new NotificationManager();
-                    $notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
+                    $notificationMgr->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
                 }
             }
         }

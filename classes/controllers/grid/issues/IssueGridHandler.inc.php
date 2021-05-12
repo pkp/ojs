@@ -28,6 +28,8 @@ use PKP\security\authorization\ContextAccessPolicy;
 
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\template\TemplateManager;
+use APP\notification\Notification;
+use APP\notification\NotificationManager;
 
 class IssueGridHandler extends GridHandler
 {
@@ -574,7 +576,6 @@ class IssueGridHandler extends GridHandler
 
         // Send a notification to associated users if selected and context is publishing content online with OJS
         if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != PUBLISHING_MODE_NONE) {
-            import('classes.notification.NotificationManager');
             $notificationManager = new NotificationManager();
             $notificationUsers = [];
             $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
@@ -589,7 +590,7 @@ class IssueGridHandler extends GridHandler
                 $notificationManager->createNotification(
                     $request,
                     $userRole['id'],
-                    NOTIFICATION_TYPE_PUBLISHED_ISSUE,
+                    Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE,
                     $contextId,
                     ASSOC_TYPE_ISSUE,
                     $issue->getId()
