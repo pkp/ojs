@@ -15,7 +15,9 @@
  * @brief ReviewerSubmission class.
  */
 
-import('classes.submission.Submission');
+namespace APP\submission\reviewer;
+
+use APP\submission\Submission;
 
 class ReviewerSubmission extends Submission
 {
@@ -430,4 +432,8 @@ class ReviewerSubmission extends Submission
     {
         $this->setData('step', $step);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\reviewer\ReviewerSubmission', '\ReviewerSubmission');
 }

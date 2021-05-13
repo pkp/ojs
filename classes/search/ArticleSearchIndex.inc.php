@@ -157,7 +157,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // If no search plug-in is activated then fall back to the
         // default database search implementation.
         if ($hookResult === false || is_null($hookResult)) {
-            import('lib.pkp.classes.submission.SubmissionFile'); // Constants
             $submissionFilesIterator = Services::get('submissionFile')->getMany([
                 'submissionIds' => [$article->getId()],
                 'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],

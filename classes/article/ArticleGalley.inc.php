@@ -15,7 +15,7 @@
  * @brief A galley is a final presentation version of the full-text of an article.
  */
 
-import('lib.pkp.classes.submission.Representation');
+use PKP\submission\Representation;
 
 class ArticleGalley extends Representation
 {

@@ -15,8 +15,14 @@
  * @brief Operations for retrieving and modifying ReviewerSubmission objects.
  */
 
-import('classes.submission.SubmissionDAO');
-import('classes.submission.reviewer.ReviewerSubmission');
+namespace APP\submission\reviewer;
+
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
+
+use APP\submission\SubmissionDAO;
+use APP\submission\reviewer\ReviewerSubmission;
+use APP\i18n\AppLocale;
 
 class ReviewerSubmissionDAO extends SubmissionDAO
 {
@@ -179,4 +185,8 @@ class ReviewerSubmissionDAO extends SubmissionDAO
             ]
         );
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\reviewer\ReviewerSubmissionDAO', '\ReviewerSubmissionDAO');
 }

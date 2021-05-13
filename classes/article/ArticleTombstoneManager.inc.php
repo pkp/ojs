@@ -69,7 +69,6 @@ class ArticleTombstoneManager
      */
     public function deleteTombstonesByContextId(int $contextId)
     {
-        import('classes.submission.Submission'); // PKPSubmission::STATUS_PUBLISHED
         $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
         $submissionsIterator = Services::get('submission')->getMany(['contextId' => $contextId, 'status' => PKPSubmission::STATUS_PUBLISHED]);
         foreach ($submissionsIterator as $submission) {

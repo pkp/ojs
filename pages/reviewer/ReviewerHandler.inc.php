@@ -13,6 +13,11 @@
  * @brief Handle requests for reviewer functions.
  */
 
+use PKP\security\authorization\SubmissionAccessPolicy;
+
+use APP\submission\reviewer\form\ReviewerReviewStep3Form;
+
+// FIXME: Add namespacing
 import('lib.pkp.pages.reviewer.PKPReviewerHandler');
 
 class ReviewerHandler extends PKPReviewerHandler
@@ -42,7 +47,6 @@ class ReviewerHandler extends PKPReviewerHandler
             $this->_validateAccessKey($request);
         }
 
-        import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
         $router = $request->getRouter();
         $this->addPolicy(new SubmissionAccessPolicy(
             $request,
@@ -118,7 +122,6 @@ class ReviewerHandler extends PKPReviewerHandler
     {
         switch ($step) {
         case 3:
-            import('classes.submission.reviewer.form.ReviewerReviewStep3Form');
             return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
         }
         return parent::getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment);

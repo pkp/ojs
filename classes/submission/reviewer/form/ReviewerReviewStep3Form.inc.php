@@ -13,7 +13,9 @@
  * @brief Form for Step 3 of a review in OJS.
  */
 
-import('lib.pkp.classes.submission.reviewer.form.PKPReviewerReviewStep3Form');
+namespace APP\submission\reviewer\form;
+
+use PKP\submission\reviewer\form\PKPReviewerReviewStep3Form;
 
 class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
 {
@@ -27,4 +29,8 @@ class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
             return isset($recommendation);
         }));
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\reviewer\form\ReviewerReviewStep3Form', '\ReviewerReviewStep3Form');
 }
