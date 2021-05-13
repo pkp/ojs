@@ -59,7 +59,7 @@ class ArticleGalley extends Representation
      */
     public function setLabel($label)
     {
-        return $this->setData('label', $label);
+        $this->setData('label', $label);
     }
 
     /**
@@ -79,7 +79,7 @@ class ArticleGalley extends Representation
      */
     public function setLocale($locale)
     {
-        return $this->setData('locale', $locale);
+        $this->setData('locale', $locale);
     }
 
     /**

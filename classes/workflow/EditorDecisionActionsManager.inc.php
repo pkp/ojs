@@ -68,8 +68,8 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager
 
     /**
      * Check for editor decisions in the review round.
-     *
-     * @param $reviewRound ReviewRound
+     * @param $context \PKP\context\Context
+     * @param $reviewRound \PKP\submission\reviewRound\ReviewRound
      * @param $decisions array
      *
      * @return boolean

@@ -24,7 +24,7 @@ class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
      */
     public function __construct($request, $reviewerSubmission, $reviewAssignment)
     {
-        parent::__construct($request, $reviewerSubmission, $reviewAssignment, 3);
+        parent::__construct($request, $reviewerSubmission, $reviewAssignment);
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'recommendation', 'required', 'reviewer.submission.reviewFormResponse.form.recommendationRequired', function ($recommendation) {
             return isset($recommendation);
         }));
