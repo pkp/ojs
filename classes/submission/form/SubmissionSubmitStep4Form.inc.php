@@ -22,9 +22,7 @@ use PKP\notification\PKPNotification;
 use APP\log\SubmissionEventLogEntry;
 use APP\core\Application;
 use APP\notification\NotificationManager;
-
-// FIXME: Add namespacing
-use \ArticleMailTemplate;
+use APP\mail\ArticleMailTemplate;
 
 class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
 {
@@ -39,7 +37,6 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
 
         $submission = $this->submission;
         // Send author notification email
-        import('classes.mail.ArticleMailTemplate');
         $mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK', null, null, false);
         $authorMail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK_NOT_USER', null, null, false);
 

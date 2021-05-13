@@ -15,7 +15,10 @@
  * This allows for article-specific functionality like logging, etc.
  */
 
-use \PKP\mail\SubmissionMailTemplate;
+namespace APP\mail;
+
+use PKP\mail\SubmissionMailTemplate;
+use PKP\db\DAORegistry;
 
 class ArticleMailTemplate extends SubmissionMailTemplate
 {
@@ -34,4 +37,8 @@ class ArticleMailTemplate extends SubmissionMailTemplate
         }
         parent::assignParams($paramArray);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\mail\ArticleMailTemplate', '\ArticleMailTemplate');
 }
