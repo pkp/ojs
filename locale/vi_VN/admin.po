@@ -164,8 +164,6 @@ msgstr ""
 "Bạn có chắc chắn muốn gỡ cài đặt ngôn ngữ này? Điều này có thể ảnh hưởng đến "
 "bất kỳ tạp chí được lưu trữ hiện đang sử dụng ngôn ngữ này."
 
-<<<<<<< HEAD
-=======
 msgid "admin.languages.downloadUnavailable"
 msgstr ""
 "<p>Tải xuống gói ngôn ngữ từ máy chủ web Dự án Tri thức Công đồng hiện không "
@@ -179,7 +177,6 @@ msgstr ""
 "<p>Có thể tải xuống các gói ngôn ngữ theo cách thủ công từ <a href=\""
 "http://pkp.sfu.ca\">trang web PKP</a>.</p>"
 
->>>>>>> 302147e2e2... Merge pull request #2863 from pkp-translations/stable-3_2_1
 msgid "admin.locale.maybeIncomplete"
 msgstr "Ngôn ngữ được đánh dấu có thể không đầy đủ."
 

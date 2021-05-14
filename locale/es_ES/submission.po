@@ -262,9 +262,6 @@ msgstr ""
 msgid "publication.inactiveSection"
 msgstr "{$section} (Inactivo)"
 
-msgid "submission.publication"
-msgstr "Publicación"
-
 msgid "publication.status.published"
 msgstr "Publicado"
 

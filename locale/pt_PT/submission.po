@@ -62,9 +62,6 @@ msgstr "Formato de publicação aparece na entrada do número"
 msgid "grid.action.issueEntry"
 msgstr "Consultar metadados desta submissão"
 
-msgid "submission.publication"
-msgstr "Publicação"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr ""
 "O formato de publicação do artigo \"{$galleyFormatName}\" está disponível."
