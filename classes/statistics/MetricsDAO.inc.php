@@ -13,7 +13,14 @@
  * @brief Operations for retrieving and adding statistics data.
  */
 
-import('lib.pkp.classes.statistics.PKPMetricsDAO');
+namespace APP\statistics;
+
+use PKP\statistics\PKPMetricsDAO;
+use PKP\db\DAORegistry;
+use PKP\statistics\PKPStatisticsHelper;
+
+use APP\core\Services;
+use APP\statistics\StatisticsHelper;
 
 class MetricsDAO extends PKPMetricsDAO
 {
@@ -28,13 +35,13 @@ class MetricsDAO extends PKPMetricsDAO
         // Do not move this into foreach: https://github.com/pkp/pkp-lib/issues/1615
         $worker = [&$columns, &$filters, &$orderBy];
         foreach ($worker as &$parameter) { // Reference needed.
-            if ($parameter === $filters && array_key_exists(STATISTICS_DIMENSION_ISSUE_ID, $parameter)) {
-                $parameter[STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE] = ASSOC_TYPE_ISSUE;
+            if ($parameter === $filters && array_key_exists(StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID, $parameter)) {
+                $parameter[PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE] = ASSOC_TYPE_ISSUE;
             }
 
-            $key = array_search(STATISTICS_DIMENSION_ISSUE_ID, $parameter);
+            $key = array_search(StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID, $parameter);
             if ($key !== false) {
-                $parameter[] = STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE;
+                $parameter[] = PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE;
             }
             unset($parameter);
         }
@@ -105,4 +112,8 @@ class MetricsDAO extends PKPMetricsDAO
         }
         return $returnArray;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\statistics\MetricsDAO', '\MetricsDAO');
 }

@@ -30,6 +30,8 @@ define('COUNTER_LITERAL_ARTICLE', 'Article');
 define('COUNTER_LITERAL_JOURNAL', 'Journal');
 define('COUNTER_LITERAL_PROPRIETARY', 'Proprietary');
 
+use PKP\statistics\PKPStatisticsHelper;
+
 class CounterReport
 {
     /**
@@ -83,13 +85,13 @@ class CounterReport
     public function getKeyForFiletype($filetype)
     {
         switch ($filetype) {
-            case STATISTICS_FILE_TYPE_HTML:
+            case PKPStatisticsHelper::STATISTICS_FILE_TYPE_HTML:
                 $metricTypeKey = 'ft_html';
                 break;
-            case STATISTICS_FILE_TYPE_PDF:
+            case PKPStatisticsHelper::STATISTICS_FILE_TYPE_PDF:
                 $metricTypeKey = 'ft_pdf';
                 break;
-            case STATISTICS_FILE_TYPE_OTHER:
+            case PKPStatisticsHelper::STATISTICS_FILE_TYPE_OTHER:
             default:
                 $metricTypeKey = 'other';
         }
@@ -159,10 +161,10 @@ class CounterReport
         $journalId = $journal ? $journal->getId() : '';
         // If the request context is at the journal level, the dimension context id must be that same journal id
         if ($journalId) {
-            if (isset($filters[STATISTICS_DIMENSION_CONTEXT_ID]) && $filters[STATISTICS_DIMENSION_CONTEXT_ID] != $journalId) {
+            if (isset($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID]) && $filters[PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID] != $journalId) {
                 $this->setError(new Exception(__('plugins.reports.counter.generic.exception.filter'), COUNTER_EXCEPTION_WARNING | COUNTER_EXCEPTION_BAD_FILTERS));
             }
-            $filters[STATISTICS_DIMENSION_CONTEXT_ID] = $journalId;
+            $filters[PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID] = $journalId;
         }
         return $filters;
     }

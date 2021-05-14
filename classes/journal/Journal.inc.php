@@ -24,9 +24,11 @@
 namespace APP\journal;
 
 use APP\i18n\AppLocale;
+
 use PKP\context\Context;
 use PKP\core\DAORegistry;
 use PKP\plugins\PluginRegistry;
+use PKP\statistics\PKPStatisticsHelper;
 
 define('PUBLISHING_MODE_OPEN', 0);
 define('PUBLISHING_MODE_SUBSCRIPTION', 1);
@@ -172,7 +174,7 @@ class Journal extends Context
     public function getMetrics($metricType = null, $columns = [], $filter = [], $orderBy = [], $range = null)
     {
         // Add a journal filter and run the report.
-        $filter[STATISTICS_DIMENSION_CONTEXT_ID] = $this->getId();
+        $filter[PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID] = $this->getId();
         $application = Application::get();
         return $application->getMetrics($metricType, $columns, $filter, $orderBy, $range);
     }

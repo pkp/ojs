@@ -12,7 +12,9 @@
  * @brief The Legacy COUNTER JR1 (r3) report
  */
 
-use \APP\template\TemplateManager;
+use PKP\statistics\PKPStatisticsHelper;
+
+use APP\template\TemplateManager;
 
 class LegacyJR1
 {
@@ -143,13 +145,13 @@ class LegacyJR1
         for ($i = 1; $i <= 12; $i++) {
             $currTotal = 0;
             foreach ($entries as $entry) {
-                $month = (int) substr($entry[STATISTICS_DIMENSION_MONTH], 4, 2);
+                $month = (int) substr($entry[PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH], 4, 2);
                 if ($i == $month) {
-                    $metric = $entry[STATISTICS_METRIC];
+                    $metric = $entry[PKPStatisticsHelper::STATISTICS_METRIC];
                     $currTotal += $metric;
-                    if ($entry[STATISTICS_DIMENSION_FILE_TYPE] == STATISTICS_FILE_TYPE_HTML) {
+                    if ($entry[PKPStatisticsHelper::STATISTICS_DIMENSION_FILE_TYPE] == PKPStatisticsHelper::STATISTICS_FILE_TYPE_HTML) {
                         $htmlTotal += $metric;
-                    } elseif ($entry[STATISTICS_DIMENSION_FILE_TYPE] == STATISTICS_FILE_TYPE_PDF) {
+                    } elseif ($entry[PKPStatisticsHelper::STATISTICS_DIMENSION_FILE_TYPE] == PKPStatisticsHelper::STATISTICS_FILE_TYPE_PDF) {
                         $pdfTotal += $metric;
                     }
                 }
@@ -268,11 +270,11 @@ class LegacyJR1
             } else {
                 $totalCount = 0;
             }
-            $ret[$workingKey]['count_total'] = $entry[STATISTICS_METRIC] + $totalCount;
-            if ($entry[STATISTICS_DIMENSION_FILE_TYPE] == STATISTICS_FILE_TYPE_HTML) {
-                $ret[$workingKey]['count_html'] = $entry[STATISTICS_METRIC];
-            } elseif ($entry[STATISTICS_DIMENSION_FILE_TYPE] == STATISTICS_FILE_TYPE_PDF) {
-                $ret[$workingKey]['count_pdf'] = $entry[STATISTICS_METRIC];
+            $ret[$workingKey]['count_total'] = $entry[PKPStatisticsHelper::STATISTICS_METRIC] + $totalCount;
+            if ($entry[PKPStatisticsHelper::STATISTICS_DIMENSION_FILE_TYPE] == PKPStatisticsHelper::STATISTICS_FILE_TYPE_HTML) {
+                $ret[$workingKey]['count_html'] = $entry[PKPStatisticsHelper::STATISTICS_METRIC];
+            } elseif ($entry[PKPStatisticsHelper::STATISTICS_DIMENSION_FILE_TYPE] == PKPStatisticsHelper::STATISTICS_FILE_TYPE_PDF) {
+                $ret[$workingKey]['count_pdf'] = $entry[PKPStatisticsHelper::STATISTICS_METRIC];
             }
         }
 
@@ -306,12 +308,12 @@ class LegacyJR1
     {
         $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
         if ($useLegacyStats) {
-            $results = $metricsDao->getMetrics(OJS_METRIC_TYPE_LEGACY_COUNTER, [STATISTICS_DIMENSION_ASSOC_ID]);
-            $fieldId = STATISTICS_DIMENSION_ASSOC_ID;
+            $results = $metricsDao->getMetrics(OJS_METRIC_TYPE_LEGACY_COUNTER, [PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_ID]);
+            $fieldId = PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_ID;
         } else {
-            $filter = [STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION_FILE];
-            $results = $metricsDao->getMetrics(METRIC_TYPE_COUNTER, [STATISTICS_DIMENSION_CONTEXT_ID], $filter);
-            $fieldId = STATISTICS_DIMENSION_CONTEXT_ID;
+            $filter = [PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION_FILE];
+            $results = $metricsDao->getMetrics(METRIC_TYPE_COUNTER, [PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID], $filter);
+            $fieldId = PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID;
         }
         $journalIds = [];
         foreach ($results as $record) {
@@ -336,18 +338,18 @@ class LegacyJR1
         $end = date('Ym', strtotime($end));
 
         $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
-        $columns = [STATISTICS_DIMENSION_MONTH, STATISTICS_DIMENSION_FILE_TYPE];
+        $columns = [PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH, PKPStatisticsHelper::STATISTICS_DIMENSION_FILE_TYPE];
         $filter = [
-            STATISTICS_DIMENSION_MONTH => ['from' => $begin, 'to' => $end]
+            PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH => ['from' => $begin, 'to' => $end]
         ];
 
         if ($useLegacyStats) {
-            $dimension = STATISTICS_DIMENSION_ASSOC_ID;
+            $dimension = PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_ID;
             $metricType = OJS_METRIC_TYPE_LEGACY_COUNTER;
         } else {
-            $dimension = STATISTICS_DIMENSION_CONTEXT_ID;
+            $dimension = PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID;
             $metricType = METRIC_TYPE_COUNTER;
-            $filter[STATISTICS_DIMENSION_ASSOC_TYPE] = ASSOC_TYPE_SUBMISSION_FILE;
+            $filter[PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE] = ASSOC_TYPE_SUBMISSION_FILE;
         }
 
         if ($journalId) {

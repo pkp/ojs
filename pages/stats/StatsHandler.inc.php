@@ -15,7 +15,8 @@
 
 import('lib.pkp.pages.stats.PKPStatsHandler');
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+use APP\statistics\StatisticsHelper;
 
 class StatsHandler extends PKPStatsHandler
 {
@@ -73,8 +74,8 @@ class StatsHandler extends PKPStatsHandler
     {
         $returnValue = parent::getReportRowValue($key, $record);
 
-        if (!$returnValue && $key == STATISTICS_DIMENSION_ISSUE_ID) {
-            $assocId = $record[STATISTICS_DIMENSION_ISSUE_ID];
+        if (!$returnValue && $key == StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID) {
+            $assocId = $record[StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID];
             $assocType = ASSOC_TYPE_ISSUE;
             $returnValue = $this->getObjectTitle($assocId, $assocType);
         }
