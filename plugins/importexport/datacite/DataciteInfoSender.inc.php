@@ -13,8 +13,8 @@
  * @brief Scheduled task to send deposits to DataCite.
  */
 
-import('lib.pkp.classes.scheduledTask.ScheduledTask');
-
+use PKP\scheduledTask\ScheduledTask;
+use PKP\scheduledTask\ScheduledTaskHelper;
 use PKP\file\FileManager;
 
 class DataciteInfoSender extends ScheduledTask
@@ -124,7 +124,7 @@ class DataciteInfoSender extends ScheduledTask
             if ($doiPrefix) {
                 $journals[] = $journal;
             } else {
-                $this->addExecutionLogEntry(__('plugins.importexport.common.senderTask.warning.noDOIprefix', ['path' => $journal->getPath()]), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
+                $this->addExecutionLogEntry(__('plugins.importexport.common.senderTask.warning.noDOIprefix', ['path' => $journal->getPath()]), ScheduledTaskHelper::SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
             }
         }
         return $journals;
@@ -173,13 +173,13 @@ class DataciteInfoSender extends ScheduledTask
                 assert(is_array($error) && count($error) >= 1);
                 $this->addExecutionLogEntry(
                     __($error[0], ['param' => ($error[1] ?? null)]),
-                    SCHEDULED_TASK_MESSAGE_TYPE_WARNING
+                    ScheduledTaskHelper::SCHEDULED_TASK_MESSAGE_TYPE_WARNING
                 );
             }
         } else {
             $this->addExecutionLogEntry(
                 __('plugins.importexport.common.register.error.mdsError', ['param' => ' - ']),
-                SCHEDULED_TASK_MESSAGE_TYPE_WARNING
+                ScheduledTaskHelper::SCHEDULED_TASK_MESSAGE_TYPE_WARNING
             );
         }
     }

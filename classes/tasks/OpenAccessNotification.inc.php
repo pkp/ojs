@@ -13,11 +13,10 @@
  * @brief Class to perform automated email notifications when an issue becomes open access.
  */
 
-import('lib.pkp.classes.scheduledTask.ScheduledTask');
+use PKP\scheduledTask\ScheduledTask;
+use PKP\mail\MailTemplate;
 
-use \PKP\mail\MailTemplate;
-
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class OpenAccessNotification extends ScheduledTask
 {

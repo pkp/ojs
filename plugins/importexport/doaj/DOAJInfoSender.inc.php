@@ -13,8 +13,8 @@
  * @brief Scheduled task to send deposits to DOAJ.
  */
 
-import('lib.pkp.classes.scheduledTask.ScheduledTask');
-
+use PKP\scheduledTask\ScheduledTask;
+use PKP\scheduledTask\ScheduledTaskHelper;
 
 class DOAJInfoSender extends ScheduledTask
 {
@@ -126,7 +126,7 @@ class DOAJInfoSender extends ScheduledTask
                 assert(is_array($error) && count($error) >= 1);
                 $this->addExecutionLogEntry(
                     __($error[0], ['param' => ($error[1] ?? null)]),
-                    SCHEDULED_TASK_MESSAGE_TYPE_WARNING
+                    ScheduledTaskHelper::SCHEDULED_TASK_MESSAGE_TYPE_WARNING
                 );
             }
         }

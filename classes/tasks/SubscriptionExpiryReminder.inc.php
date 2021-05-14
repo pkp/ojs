@@ -13,9 +13,8 @@
  * @brief Class to perform automated reminders for reviewers.
  */
 
-import('lib.pkp.classes.scheduledTask.ScheduledTask');
-
-use \PKP\mail\MailTemplate;
+use PKP\scheduledTask\ScheduledTask;
+use PKP\mail\MailTemplate;
 
 class SubscriptionExpiryReminder extends ScheduledTask
 {
