@@ -202,8 +202,9 @@ describe('Data suite tests', function() {
 		cy.wait(1000);
 		cy.visit('/index.php/publicknowledge/issue/current');
 		cy.contains('Signalling Theory Dividends').should('not.exist');
+                cy.logout();
 		cy.request({
-				url: '/index.php/publicknowledge/article/view/9',
+				url: '/index.php/publicknowledge/article/view/' + submission.id,
 				failOnStatusCode: false
 			})
 			.then((response) => {
@@ -211,6 +212,7 @@ describe('Data suite tests', function() {
 			});
 
 		// Re-publish it
+		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
 		cy.get('#publication-button').click();
 		cy.get('.pkpPublication button').contains('Schedule For Publication').click();
