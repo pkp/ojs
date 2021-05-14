@@ -13,8 +13,13 @@
  * @brief Class to perform automated reminders for reviewers.
  */
 
+namespace APP\tasks;
+
 use PKP\scheduledTask\ScheduledTask;
 use PKP\mail\MailTemplate;
+use PKP\db\DAORegistry;
+
+use APP\i18n\AppLocale;
 
 class SubscriptionExpiryReminder extends ScheduledTask
 {
@@ -287,4 +292,8 @@ class SubscriptionExpiryReminder extends ScheduledTask
         }
         return true;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\tasks\SubscriptionExpiryReminder', '\SubscriptionExpiryReminder');
 }
