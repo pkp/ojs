@@ -780,8 +780,6 @@ msgstr "فقرات المجلة بالإمكان نشرها بشكل جماعي 
 msgid "manager.setup.publicationScheduling"
 msgstr "جدولة النشر"
 
-msgid "manager.setup.publicIdentifier"
-
 msgid "manager.setup.publisher"
 msgstr "الناشر"
 
