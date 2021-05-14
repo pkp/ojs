@@ -58,7 +58,7 @@ class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm
         if ($includeSignature) {
             return new ArticleMailTemplate($submission, $templateKey);
         } else {
-            return new ArticleMailTemplate($submission, $templateKey, null, null, null, false);
+            return new ArticleMailTemplate($submission, $templateKey, null, null, false);
         }
     }
 }
