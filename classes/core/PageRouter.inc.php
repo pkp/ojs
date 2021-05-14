@@ -13,17 +13,21 @@
  * @brief Class providing OJS-specific page routing.
  */
 
-import('lib.pkp.classes.core.PKPPageRouter');
+namespace APP\core;
 
-class PageRouter extends PKPPageRouter {
-
-	/**
-	 * get the cacheable pages
-	 * @return array
-	 */
-	function getCacheablePages() {
-		return array('about', 'announcement', 'help', 'index', 'information', 'issue', '');
-	}
+class PageRouter extends \PKP\core\PKPPageRouter
+{
+    /**
+     * get the cacheable pages
+     *
+     * @return array
+     */
+    public function getCacheablePages()
+    {
+        return ['about', 'announcement', 'help', 'index', 'information', 'issue', ''];
+    }
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\core\PageRouter', '\PageRouter');
+}

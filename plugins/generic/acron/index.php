@@ -19,5 +19,3 @@
 require_once('AcronPlugin.inc.php');
 
 return new AcronPlugin();
-
-

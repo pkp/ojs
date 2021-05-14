@@ -724,9 +724,6 @@ msgstr "شناسایی محتوای مجله"
 msgid "manager.setup.publisher"
 msgstr "ناشر"
 
-msgid "manager.setup.publishingDescription"
-msgstr "نام ناشر در صفحه «درباره مجله» خواهد آمد."
-
 msgid "manager.setup.referenceLinking"
 msgstr "لینک به مراجع"
 
@@ -1578,12 +1575,6 @@ msgstr "ثبت‌نام با موفقیت انجام شد!"
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "پیشوند DOI برای مجله مشخص شده در مسیر {$path} موجود نمی باشد."
-
-msgid "plugins.importexport.common.cliError"
-msgstr "خطا:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "مسیر مجله وارد شده (\"{$journalPath}\") یافت شند."
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "داده مورد نظر یافت نشد"

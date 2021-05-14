@@ -670,9 +670,6 @@ msgstr "Identification du contenu de la revue"
 msgid "manager.setup.publisher"
 msgstr "Éditeur"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Le nom de l'organisation qui publie la revue apparaîtra dans À propos de la revue."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Lien de référence"
 
@@ -1689,17 +1686,11 @@ msgstr ""
 "êtes-vous certains de vouloir réinitialiser les autorisations déjà "
 "rattachées à l'article ? Cette action ne peut pas être annulée."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERREUR :"
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "L'objet spécifié est introuvable."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Envoyer une copie au contact principal, identifié dans les paramètres de la revue."
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Le chemin pour la revue, \"{$journalPath}\", n'existe pas."
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Etes-vous sûr de supprimer cet abonnement ?"
@@ -1858,9 +1849,6 @@ msgstr ""
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Restreindre l'accès aux fichiers"
-
-msgid "manager.setup.publishing"
-msgstr "Renseignements relatifs à la publication"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "La politique de confidentialité a été mise à jour."

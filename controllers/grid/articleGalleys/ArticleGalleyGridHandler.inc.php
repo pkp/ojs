@@ -16,424 +16,480 @@
 // import grid base classes
 import('lib.pkp.classes.controllers.grid.GridHandler');
 
-// Link action & modal classes
-import('lib.pkp.classes.linkAction.request.AjaxModal');
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\core\JSONMessage;
+use PKP\submission\PKPSubmission;
+use PKP\notification\PKPNotification;
 
-class ArticleGalleyGridHandler extends GridHandler {
+use APP\template\TemplateManager;
+use APP\notification\NotificationManager;
 
-	/** @var PKPRequest */
-	var $_request;
+class ArticleGalleyGridHandler extends GridHandler
+{
+    /** @var PKPRequest */
+    public $_request;
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-		$this->addRoleAssignment(
-			array(ROLE_ID_AUTHOR, ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-			array('fetchGrid', 'fetchRow'));
-		$this->addRoleAssignment(
-			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-			array('addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
-	}
-
-
-	//
-	// Getters/Setters
-	//
-	/**
-	 * Get the authorized submission.
-	 * @return Submission
-	 */
-	function getSubmission() {
-		return $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-	}
-
-	/**
-	 * Get the authorized publication.
-	 * @return Publication
-	 */
-	function getPublication() {
-		return $this->getAuthorizedContextObject(ASSOC_TYPE_PUBLICATION);
-	}
-
-	/**
-	 * Get the authorized galley.
-	 * @return ArticleGalley
-	 */
-	function getGalley() {
-		return $this->getAuthorizedContextObject(ASSOC_TYPE_REPRESENTATION);
-	}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->addRoleAssignment(
+            [ROLE_ID_AUTHOR, ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT],
+            ['fetchGrid', 'fetchRow']
+        );
+        $this->addRoleAssignment(
+            [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT],
+            ['addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence']
+        );
+    }
 
 
-	//
-	// Overridden methods from PKPHandler.
-	//
-	/**
-	 * @see GridHandler::getJSHandler()
-	 */
-	public function getJSHandler() {
-		return '$.pkp.controllers.grid.articleGalleys.ArticleGalleyGridHandler';
-	}
+    //
+    // Getters/Setters
+    //
+    /**
+     * Get the authorized submission.
+     *
+     * @return Submission
+     */
+    public function getSubmission()
+    {
+        return $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+    }
 
-	/**
-	 * @copydoc PKPHandler::authorize()
-	 */
-	function authorize($request, &$args, $roleAssignments) {
-		$this->_request = $request;
+    /**
+     * Get the authorized publication.
+     *
+     * @return Publication
+     */
+    public function getPublication()
+    {
+        return $this->getAuthorizedContextObject(ASSOC_TYPE_PUBLICATION);
+    }
 
-		import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
-		$this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', WORKFLOW_STAGE_ID_PRODUCTION));
+    /**
+     * Get the authorized galley.
+     *
+     * @return ArticleGalley
+     */
+    public function getGalley()
+    {
+        return $this->getAuthorizedContextObject(ASSOC_TYPE_REPRESENTATION);
+    }
 
-		import('lib.pkp.classes.security.authorization.PublicationAccessPolicy');
-		$this->addPolicy(new PublicationAccessPolicy($request, $args, $roleAssignments));
 
-		if ($request->getUserVar('representationId')) {
-			import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
-			$this->addPolicy(new RepresentationRequiredPolicy($request, $args));
-		}
+    //
+    // Overridden methods from PKPHandler.
+    //
+    /**
+     * @see GridHandler::getJSHandler()
+     */
+    public function getJSHandler()
+    {
+        return '$.pkp.controllers.grid.articleGalleys.ArticleGalleyGridHandler';
+    }
 
-		return parent::authorize($request, $args, $roleAssignments);
-	}
+    /**
+     * @copydoc PKPHandler::authorize()
+     */
+    public function authorize($request, &$args, $roleAssignments)
+    {
+        $this->_request = $request;
 
-	/**
-	 * @copydoc GridHandler::initialize()
-	 */
-	function initialize($request, $args = null) {
-		parent::initialize($request, $args);
-		$this->setTitle('submission.layout.galleys');
+        import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
+        $this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', WORKFLOW_STAGE_ID_PRODUCTION));
 
-		// Load pkp-lib translations
-		AppLocale::requireComponents(
-			LOCALE_COMPONENT_PKP_SUBMISSION,
-			LOCALE_COMPONENT_PKP_USER,
-			LOCALE_COMPONENT_PKP_EDITOR,
-			LOCALE_COMPONENT_APP_EDITOR
-		);
+        import('lib.pkp.classes.security.authorization.PublicationAccessPolicy');
+        $this->addPolicy(new PublicationAccessPolicy($request, $args, $roleAssignments));
 
-		import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
-		$cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission(), $this->getPublication(), $this->canEdit());
+        if ($request->getUserVar('representationId')) {
+            import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
+            $this->addPolicy(new RepresentationRequiredPolicy($request, $args));
+        }
 
-		// Columns
-		$this->addColumn(new GridColumn(
-			'label',
-			'common.name',
-			null,
-			null,
-			$cellProvider
-		));
+        return parent::authorize($request, $args, $roleAssignments);
+    }
 
-		if ($this->canEdit()) {
-			$this->addAction(new LinkAction(
-				'addGalley',
-				new AjaxModal(
-					$request->getRouter()->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
-					__('submission.layout.newGalley'),
-					'modal_add_item'
-				),
-				__('grid.action.addGalley'),
-				'add_item'
-			));
-		}
-	}
+    /**
+     * @copydoc GridHandler::initialize()
+     *
+     * @param null|mixed $args
+     */
+    public function initialize($request, $args = null)
+    {
+        parent::initialize($request, $args);
+        $this->setTitle('submission.layout.galleys');
 
-	//
-	// Overridden methods from GridHandler
-	//
-	/**
-	 * @copydoc GridHandler::initFeatures()
-	 */
-	function initFeatures($request, $args) {
-		if ($this->canEdit()) {
-			import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
-			return array(new OrderGridItemsFeature());
-		}
+        // Load pkp-lib translations
+        AppLocale::requireComponents(
+            LOCALE_COMPONENT_PKP_SUBMISSION,
+            LOCALE_COMPONENT_PKP_USER,
+            LOCALE_COMPONENT_PKP_EDITOR,
+            LOCALE_COMPONENT_APP_EDITOR
+        );
 
-		return array();
-	}
+        import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
+        $cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission(), $this->getPublication(), $this->canEdit());
 
-	/**
-	 * @copydoc GridHandler::getDataElementSequence()
-	 */
-	function getDataElementSequence($row) {
-		return $row->getSequence();
-	}
+        // Columns
+        $this->addColumn(new GridColumn(
+            'label',
+            'common.name',
+            null,
+            null,
+            $cellProvider
+        ));
 
-	/**
-	 * @copydoc GridHandler::setDataElementSequence()
-	 */
-	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-		$galley = $galleyDao->getById($rowId);
-		$galley->setSequence($newSequence);
-		$galleyDao->updateObject($galley);
-	}
+        if ($this->canEdit()) {
+            $this->addAction(new LinkAction(
+                'addGalley',
+                new AjaxModal(
+                    $request->getRouter()->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
+                    __('submission.layout.newGalley'),
+                    'modal_add_item'
+                ),
+                __('grid.action.addGalley'),
+                'add_item'
+            ));
+        }
+    }
 
-	//
-	// Overridden methods from GridHandler
-	//
-	/**
-	 * @copydoc GridHandler::getRowInstance()
-	 * @return ArticleGalleyGridRow
-	 */
-	function getRowInstance() {
-		import('controllers.grid.articleGalleys.ArticleGalleyGridRow');
-		return new ArticleGalleyGridRow(
-			$this->getSubmission(),
-			$this->getPublication(),
-			$this->canEdit()
-		);
-	}
+    //
+    // Overridden methods from GridHandler
+    //
+    /**
+     * @copydoc GridHandler::initFeatures()
+     */
+    public function initFeatures($request, $args)
+    {
+        if ($this->canEdit()) {
+            import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
+            return [new OrderGridItemsFeature()];
+        }
 
-	/**
-	 * Get the arguments that will identify the data in the grid.
-	 * Overridden by child grids.
-	 * @return array
-	 */
-	function getRequestArgs() {
-		return array(
-			'submissionId' => $this->getSubmission()->getId(),
-			'publicationId' => $this->getPublication()->getId(),
-		);
-	}
+        return [];
+    }
 
-	/**
-	 * @copydoc GridHandler::loadData()
-	 */
-	function loadData($request, $filter = null) {
-		$galleyIterator = Services::get('galley')->getMany([
-			'publicationIds' => [$this->getPublication()->getId()],
-		]);
-		// ArticleGalleyGridRow::initialize expects the array
-		// key to match the galley id
-		$galleys = [];
-		foreach ($galleyIterator as $galley) {
-			$galleys[$galley->getId()] = $galley;
-		}
-		return $galleys;
-	}
+    /**
+     * @copydoc GridHandler::getDataElementSequence()
+     */
+    public function getDataElementSequence($row)
+    {
+        return $row->getSequence();
+    }
 
-	//
-	// Public Galley Grid Actions
-	//
-	/**
-	 * Edit article galley pub ids
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function identifiers($args, $request) {
-		$representationDao = Application::getRepresentationDAO();
-		$representation = $representationDao->getById($request->getUserVar('representationId'));
-		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
-		$form = new PublicIdentifiersForm($representation);
-		$form->initData();
-		return new JSONMessage(true, $form->fetch($request));
-	}
+    /**
+     * @copydoc GridHandler::setDataElementSequence()
+     */
+    public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
+    {
+        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+        $galley = $galleyDao->getById($rowId);
+        $galley->setSequence($newSequence);
+        $galleyDao->updateObject($galley);
+    }
 
-	/**
-	 * Update article galley pub ids
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function updateIdentifiers($args, $request) {
-		$representationDao = Application::getRepresentationDAO();
-		$representation = $representationDao->getById($request->getUserVar('representationId'));
-		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
-		$form = new PublicIdentifiersForm($representation, null, array_merge($this->getRequestArgs(), ['representationId' => $representation->getId()]));
-		$form->readInputData();
-		if ($form->validate()) {
-			$form->execute();
-			return DAO::getDataChangedEvent();
-		} else {
-			return new JSONMessage(true, $form->fetch($request));
-		}
-	}
+    //
+    // Overridden methods from GridHandler
+    //
+    /**
+     * @copydoc GridHandler::getRowInstance()
+     *
+     * @return ArticleGalleyGridRow
+     */
+    public function getRowInstance()
+    {
+        import('controllers.grid.articleGalleys.ArticleGalleyGridRow');
+        return new ArticleGalleyGridRow(
+            $this->getSubmission(),
+            $this->getPublication(),
+            $this->canEdit()
+        );
+    }
 
-	/**
-	 * Clear galley pub id
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function clearPubId($args, $request) {
-		if (!$request->checkCSRF()) return new JSONMessage(false);
+    /**
+     * Get the arguments that will identify the data in the grid.
+     * Overridden by child grids.
+     *
+     * @return array
+     */
+    public function getRequestArgs()
+    {
+        return [
+            'submissionId' => $this->getSubmission()->getId(),
+            'publicationId' => $this->getPublication()->getId(),
+        ];
+    }
 
-		$submission = $this->getSubmission();
-		$representationDao = Application::getRepresentationDAO();
-		$representation = $representationDao->getById($request->getUserVar('representationId'));
-		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
-		$form = new PublicIdentifiersForm($representation);
-		$form->clearPubId($request->getUserVar('pubIdPlugIn'));
-		return new JSONMessage(true);
-	}
+    /**
+     * @copydoc GridHandler::loadData()
+     *
+     * @param null|mixed $filter
+     */
+    public function loadData($request, $filter = null)
+    {
+        $galleyIterator = Services::get('galley')->getMany([
+            'publicationIds' => [$this->getPublication()->getId()],
+        ]);
+        // ArticleGalleyGridRow::initialize expects the array
+        // key to match the galley id
+        $galleys = [];
+        foreach ($galleyIterator as $galley) {
+            $galleys[$galley->getId()] = $galley;
+        }
+        return $galleys;
+    }
 
-	/**
-	 * Add a galley
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function addGalley($args, $request) {
-		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
-		$galleyForm = new ArticleGalleyForm(
-			$request,
-			$this->getSubmission(),
-			$this->getPublication()
-		);
-		$galleyForm->initData();
-		return new JSONMessage(true, $galleyForm->fetch($request));
-	}
+    //
+    // Public Galley Grid Actions
+    //
+    /**
+     * Edit article galley pub ids
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return JSONMessage JSON object
+     */
+    public function identifiers($args, $request)
+    {
+        $representationDao = Application::getRepresentationDAO();
+        $representation = $representationDao->getById($request->getUserVar('representationId'));
+        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+        $form = new PublicIdentifiersForm($representation);
+        $form->initData();
+        return new JSONMessage(true, $form->fetch($request));
+    }
 
-	/**
-	 * Delete a galley.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function deleteGalley($args, $request) {
-		$galley = $this->getGalley();
-		if (!$galley || !$request->checkCSRF()) return new JSONMessage(false);
+    /**
+     * Update article galley pub ids
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return JSONMessage JSON object
+     */
+    public function updateIdentifiers($args, $request)
+    {
+        $representationDao = Application::getRepresentationDAO();
+        $representation = $representationDao->getById($request->getUserVar('representationId'));
+        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+        $form = new PublicIdentifiersForm($representation, null, array_merge($this->getRequestArgs(), ['representationId' => $representation->getId()]));
+        $form->readInputData();
+        if ($form->validate()) {
+            $form->execute();
+            return DAO::getDataChangedEvent();
+        } else {
+            return new JSONMessage(true, $form->fetch($request));
+        }
+    }
 
-		Services::get('galley')->delete($galley);
+    /**
+     * Clear galley pub id
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return JSONMessage JSON object
+     */
+    public function clearPubId($args, $request)
+    {
+        if (!$request->checkCSRF()) {
+            return new JSONMessage(false);
+        }
 
-		$notificationDao = DAORegistry::getDAO('NotificationDAO'); /* @var $notificationDao NotificationDAO */
-		$notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());
+        $submission = $this->getSubmission();
+        $representationDao = Application::getRepresentationDAO();
+        $representation = $representationDao->getById($request->getUserVar('representationId'));
+        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
+        $form = new PublicIdentifiersForm($representation);
+        $form->clearPubId($request->getUserVar('pubIdPlugIn'));
+        return new JSONMessage(true);
+    }
 
-		if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
-			$this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
+    /**
+     * Add a galley
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return JSONMessage JSON object
+     */
+    public function addGalley($args, $request)
+    {
+        import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
+        $galleyForm = new ArticleGalleyForm(
+            $request,
+            $this->getSubmission(),
+            $this->getPublication()
+        );
+        $galleyForm->initData();
+        return new JSONMessage(true, $galleyForm->fetch($request));
+    }
 
-			$notificationMgr = new NotificationManager();
-			$notificationMgr->updateNotification(
-				$request,
-				array(NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS),
-				null,
-				ASSOC_TYPE_SUBMISSION,
-				$this->getSubmission()->getId()
-			);
-		}
+    /**
+     * Delete a galley.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return JSONMessage JSON object
+     */
+    public function deleteGalley($args, $request)
+    {
+        $galley = $this->getGalley();
+        if (!$galley || !$request->checkCSRF()) {
+            return new JSONMessage(false);
+        }
 
-		return DAO::getDataChangedEvent($galley->getId());
-	}
+        Services::get('galley')->delete($galley);
 
-	/**
-	 * Edit a galley metadata modal
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function editGalley($args, $request) {
-		$galley = $this->getGalley();
+        $notificationDao = DAORegistry::getDAO('NotificationDAO'); /* @var $notificationDao NotificationDAO */
+        $notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());
 
-		// Check if this is a remote galley
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign(array(
-			'submissionId' => $this->getSubmission()->getId(),
-			'publicationId' => $this->getPublication()->getId(),
-			'representationId' => $galley->getId(),
-		));
-		$publisherIdEnabled = in_array('galley', (array) $request->getContext()->getData('enablePublisherId'));
-		$pubIdsEnabled = false;
-		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $request->getContext()->getId());
-		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($pubIdPlugin->isObjectTypeEnabled('Representation', $request->getContext()->getId())) {
-				$pubIdsEnabled = true;
-				break;
-			}
-		}
-		if ($publisherIdEnabled || $pubIdsEnabled) {
-			$templateMgr->assign('enableIdentifiers', true);
-		}
-		return new JSONMessage(true, $templateMgr->fetch('controllers/grid/articleGalleys/editFormat.tpl'));
-	}
+        if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
+            $this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
+            $notificationMgr = new NotificationManager();
+            $notificationMgr->updateNotification(
+                $request,
+                [PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
+                null,
+                ASSOC_TYPE_SUBMISSION,
+                $this->getSubmission()->getId()
+            );
+        }
 
-	/**
-	 * Edit a galley
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function editGalleyTab($args, $request) {
-		// Form handling
-		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
-		$galleyForm = new ArticleGalleyForm(
-			$request,
-			$this->getSubmission(),
-			$this->getPublication(),
-			$this->getGalley()
-		);
-		$galleyForm->initData();
-		return new JSONMessage(true, $galleyForm->fetch($request));
-	}
+        return DAO::getDataChangedEvent($galley->getId());
+    }
 
-	/**
-	 * Save a galley
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
-	 */
-	function updateGalley($args, $request) {
-		$galley = $this->getGalley();
+    /**
+     * Edit a galley metadata modal
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return JSONMessage JSON object
+     */
+    public function editGalley($args, $request)
+    {
+        $galley = $this->getGalley();
 
-		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
-		$galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $this->getPublication(), $galley);
-		$galleyForm->readInputData();
+        // Check if this is a remote galley
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign([
+            'submissionId' => $this->getSubmission()->getId(),
+            'publicationId' => $this->getPublication()->getId(),
+            'representationId' => $galley->getId(),
+        ]);
+        $publisherIdEnabled = in_array('galley', (array) $request->getContext()->getData('enablePublisherId'));
+        $pubIdsEnabled = false;
+        $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $request->getContext()->getId());
+        foreach ($pubIdPlugins as $pubIdPlugin) {
+            if ($pubIdPlugin->isObjectTypeEnabled('Representation', $request->getContext()->getId())) {
+                $pubIdsEnabled = true;
+                break;
+            }
+        }
+        if ($publisherIdEnabled || $pubIdsEnabled) {
+            $templateMgr->assign('enableIdentifiers', true);
+        }
+        return new JSONMessage(true, $templateMgr->fetch('controllers/grid/articleGalleys/editFormat.tpl'));
+    }
 
-		if ($galleyForm->validate()) {
-			$galley = $galleyForm->execute();
+    /**
+     * Edit a galley
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return JSONMessage JSON object
+     */
+    public function editGalleyTab($args, $request)
+    {
+        // Form handling
+        import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
+        $galleyForm = new ArticleGalleyForm(
+            $request,
+            $this->getSubmission(),
+            $this->getPublication(),
+            $this->getGalley()
+        );
+        $galleyForm->initData();
+        return new JSONMessage(true, $galleyForm->fetch($request));
+    }
 
-			if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
-				$this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
+    /**
+     * Save a galley
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return JSONMessage JSON object
+     */
+    public function updateGalley($args, $request)
+    {
+        $galley = $this->getGalley();
 
-				$notificationMgr = new NotificationManager();
-				$notificationMgr->updateNotification(
-					$request,
-					array(NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS),
-					null,
-					ASSOC_TYPE_SUBMISSION,
-					$this->getSubmission()->getId()
-				);
-			}
+        import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
+        $galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $this->getPublication(), $galley);
+        $galleyForm->readInputData();
 
-			return DAO::getDataChangedEvent($galley->getId());
-		}
-		return new JSONMessage(true, $galleyForm->fetch($request));
-	}
+        if ($galleyForm->validate()) {
+            $galley = $galleyForm->execute();
 
-	/**
-	 * @copydoc GridHandler::fetchRow()
-	 */
-	function fetchRow($args, $request) {
-		$json = parent::fetchRow($args, $request);
-		if ($row = $this->getRequestedRow($request, $args)) {
-			$galley = $row->getData();
-			if ($galley->getRemoteUrl()=='' && !$galley->getData('submissionFileId')) {
-				$json->setEvent('uploadFile', $galley->getId());
-			}
-		}
+            if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
+                $this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
+                $notificationMgr = new NotificationManager();
+                $notificationMgr->updateNotification(
+                    $request,
+                    [PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
+                    null,
+                    ASSOC_TYPE_SUBMISSION,
+                    $this->getSubmission()->getId()
+                );
+            }
 
-		return $json;
-	}
+            return DAO::getDataChangedEvent($galley->getId());
+        }
+        return new JSONMessage(true, $galleyForm->fetch($request));
+    }
 
-	/**
-	 * Can the current user edit the galleys in this grid?
-	 *
-	 * The user must have an allowed role in one of the assigned stages.
-	 * If the user is not assigned, they can edit if they are an editor
-	 * or admin.
-	 *
-	 * @return boolean
-	 */
-	public function canEdit() {
-		return $this->getPublication()->getData('status') !== STATUS_PUBLISHED &&
-			Services::get('user')->canUserAccessStage(
-				WORKFLOW_STAGE_ID_PRODUCTION,
-				WORKFLOW_TYPE_EDITORIAL,
-				$this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
-				$this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)
-			);
-	}
+    /**
+     * @copydoc GridHandler::fetchRow()
+     */
+    public function fetchRow($args, $request)
+    {
+        $json = parent::fetchRow($args, $request);
+        if ($row = $this->getRequestedRow($request, $args)) {
+            $galley = $row->getData();
+            if ($galley->getRemoteUrl() == '' && !$galley->getData('submissionFileId')) {
+                $json->setEvent('uploadFile', $galley->getId());
+            }
+        }
+
+        return $json;
+    }
+
+    /**
+     * Can the current user edit the galleys in this grid?
+     *
+     * The user must have an allowed role in one of the assigned stages.
+     * If the user is not assigned, they can edit if they are an editor
+     * or admin.
+     *
+     * @return boolean
+     */
+    public function canEdit()
+    {
+        return $this->getPublication()->getData('status') !== PKPSubmission::STATUS_PUBLISHED &&
+            Services::get('user')->canUserAccessStage(
+                WORKFLOW_STAGE_ID_PRODUCTION,
+                PKPApplication::WORKFLOW_TYPE_EDITORIAL,
+                $this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
+                $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)
+            );
+    }
 }
-
-

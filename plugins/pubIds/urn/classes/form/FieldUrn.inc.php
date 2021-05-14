@@ -11,25 +11,28 @@
  *
  * @brief A field for entering a URN and then having the check number generated.
  */
+
 namespace Plugins\Generic\URN;
 
 use PKP\components\forms\FieldText;
 
-class FieldUrn extends FieldText {
-	/** @copydoc Field::$component */
-	public $component = 'field-urn';
+class FieldUrn extends FieldText
+{
+    /** @copydoc Field::$component */
+    public $component = 'field-urn';
 
-	/** @var string The urnPrefix from the urn plugin sttings */
-	public $urnPrefix = '';
+    /** @var string The urnPrefix from the urn plugin sttings */
+    public $urnPrefix = '';
 
-	/**
-	 * @copydoc Field::getConfig()
-	 */
-	public function getConfig() {
-		$config = parent::getConfig();
-		$config['urnPrefix'] = $this->urnPrefix;
-		$config['addCheckNumberLabel'] = __('plugins.pubIds.urn.editor.addCheckNo');
+    /**
+     * @copydoc Field::getConfig()
+     */
+    public function getConfig()
+    {
+        $config = parent::getConfig();
+        $config['urnPrefix'] = $this->urnPrefix;
+        $config['addCheckNumberLabel'] = __('plugins.pubIds.urn.editor.addCheckNo');
 
-		return $config;
-	}
+        return $config;
+    }
 }

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-10 19:19+0000\n"
-"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"PO-Revision-Date: 2021-04-20 16:39+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -17,12 +17,14 @@ msgstr ""
 "\" во \"{$issueTitle}\" бројот се спаруваат различно во секциите на "
 "постоечкото списание."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Посочениот корисник, \"{$userName}\", не постои."
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Непозната секција {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Начин на користење: {$scriptName} {$pluginName} [command] ...\n"
@@ -59,7 +61,7 @@ msgstr ""
 "Ве молиме да ја прикачите датотеката преку \"Импортиај\" за да продолжите."
 
 msgid "plugins.importexport.native.results"
-msgstr "Резултати"
+msgstr "Импортирај Резултати"
 
 msgid "plugins.importexport.native.exportIssues"
 msgstr "Експортирај изданија"

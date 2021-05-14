@@ -13,53 +13,59 @@
  * @brief Handle requests for issue management in publishing.
  */
 
-import('classes.handler.Handler');
+use APP\handler\Handler;
 
-class ManageIssuesHandler extends Handler {
-	/** issue associated with the request **/
-	var $issue;
+use \APP\template\TemplateManager;
 
-	/** @copydoc PKPHandler::_isBackendPage */
-	var $_isBackendPage = true;
+class ManageIssuesHandler extends Handler
+{
+    /** issue associated with the request **/
+    public $issue;
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-		$this->addRoleAssignment(
-			array(ROLE_ID_MANAGER),
-			array(
-				'index',
-			)
-		);
-	}
+    /** @copydoc PKPHandler::_isBackendPage */
+    public $_isBackendPage = true;
 
-	/**
-	 * @copydoc PKPHandler::authorize()
-	 */
-	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
-		$this->addPolicy(new PKPSiteAccessPolicy($request, null, $roleAssignments));
-		return parent::authorize($request, $args, $roleAssignments);
-	}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->addRoleAssignment(
+            [ROLE_ID_MANAGER],
+            [
+                'index',
+            ]
+        );
+    }
 
-	/**
-	 * Displays the issue listings in a tabbed interface.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 * @return string Response contents.
-	 */
-	function index($args, $request) {
-		$this->setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
+    /**
+     * @copydoc PKPHandler::authorize()
+     */
+    public function authorize($request, &$args, $roleAssignments)
+    {
+        import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
+        $this->addPolicy(new PKPSiteAccessPolicy($request, null, $roleAssignments));
+        return parent::authorize($request, $args, $roleAssignments);
+    }
 
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign([
-			'pageTitle' => __('editor.navigation.issues')
-		]);
-		return $templateMgr->display('manageIssues/issues.tpl');
-	}
+    /**
+     * Displays the issue listings in a tabbed interface.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     *
+     * @return string Response contents.
+     */
+    public function index($args, $request)
+    {
+        $this->setupTemplate($request);
+        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
+
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign([
+            'pageTitle' => __('editor.navigation.issues')
+        ]);
+        return $templateMgr->display('manageIssues/issues.tpl');
+    }
 }
-
-

@@ -15,63 +15,72 @@
 
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
-class TocGridCellProvider extends GridCellProvider {
-	/**
-	 * Constructor
-	 */
-	function __construct($translate = false) {
-		parent::__construct();
-	}
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxAction;
 
-	/**
-	 * Extracts variables for a given column from a data element
-	 * so that they may be assigned to template before rendering.
-	 * @param $row GridRow
-	 * @param $column GridColumn
-	 * @return array
-	 */
-	function getTemplateVarsFromRowColumn($row, $column) {
-		$element = $row->getData();
-		$columnId = $column->getId();
-		assert(!empty($columnId));
-		switch ($columnId) {
-			case 'title':
-				return array('label' => $element->getLocalizedTitle());
-			case 'access':
-				return array('selected' => $element->getCurrentPublication()->getData('accessStatus')==ARTICLE_ACCESS_OPEN);
-			default: assert(false);
-		}
-	}
+class TocGridCellProvider extends GridCellProvider
+{
+    /**
+     * Constructor
+     */
+    public function __construct($translate = false)
+    {
+        parent::__construct();
+    }
 
-	/**
-	 * @copydoc GridCellProvider::getCellActions()
-	 */
-	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
-		import('lib.pkp.classes.linkAction.request.AjaxAction');
-		switch ($column->getId()) {
-			case 'access':
-				$article = $row->getData(); /* @var $article Submission */
-				return array(new LinkAction(
-					'disable',
-					new AjaxAction(
-						$request->url(
-							null, null, 'setAccessStatus', null,
-							array_merge(
-								array(
-									'articleId' => $article->getId(),
-									'status' => ($article->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN) ? ARTICLE_ACCESS_ISSUE_DEFAULT : ARTICLE_ACCESS_OPEN,
-									'csrfToken' => $request->getSession()->getCSRFToken(),
-								),
-								$row->getRequestArgs()
-							)
-						)
-					),
-					__('manager.plugins.disable'),
-					null
-				));
-		}
-		return parent::getCellActions($request, $row, $column, $position);
-	}
+    /**
+     * Extracts variables for a given column from a data element
+     * so that they may be assigned to template before rendering.
+     *
+     * @param $row GridRow
+     * @param $column GridColumn
+     *
+     * @return array
+     */
+    public function getTemplateVarsFromRowColumn($row, $column)
+    {
+        $element = $row->getData();
+        $columnId = $column->getId();
+        assert(!empty($columnId));
+        switch ($columnId) {
+            case 'title':
+                return ['label' => $element->getLocalizedTitle()];
+            case 'access':
+                return ['selected' => $element->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN];
+            default: assert(false);
+        }
+    }
+
+    /**
+     * @copydoc GridCellProvider::getCellActions()
+     */
+    public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
+    {
+        switch ($column->getId()) {
+            case 'access':
+                $article = $row->getData(); /* @var $article Submission */
+                return [new LinkAction(
+                    'disable',
+                    new AjaxAction(
+                        $request->url(
+                            null,
+                            null,
+                            'setAccessStatus',
+                            null,
+                            array_merge(
+                                [
+                                    'articleId' => $article->getId(),
+                                    'status' => ($article->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN) ? ARTICLE_ACCESS_ISSUE_DEFAULT : ARTICLE_ACCESS_OPEN,
+                                    'csrfToken' => $request->getSession()->getCSRFToken(),
+                                ],
+                                $row->getRequestArgs()
+                            )
+                        )
+                    ),
+                    __('manager.plugins.disable'),
+                    null
+                )];
+        }
+        return parent::getCellActions($request, $row, $column, $position);
+    }
 }
-
-

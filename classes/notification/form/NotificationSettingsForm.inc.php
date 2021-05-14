@@ -13,24 +13,30 @@
  * @brief Form to edit notification settings.
  */
 
+namespace APP\notification\form;
 
-import('lib.pkp.classes.notification.form.PKPNotificationSettingsForm');
+use PKP\notification\form\PKPNotificationSettingsForm;
 
-class NotificationSettingsForm extends PKPNotificationSettingsForm {
+use APP\notification\Notification;
 
-	/**
-	 * @copydoc PKPNotificationSettingsForm::getNotificationSettingsCategories()
-	 */
-	public function getNotificationSettingCategories() {
-		$categories = parent::getNotificationSettingCategories();
-		for ($i = 0; $i < count($categories); $i++) {
-			if ($categories[$i]['categoryKey'] === 'notification.type.public') {
-				$categories[$i]['settings'][] = NOTIFICATION_TYPE_PUBLISHED_ISSUE;
-				break;
-			}
-		}
-		return $categories;
-	}
+class NotificationSettingsForm extends PKPNotificationSettingsForm
+{
+    /**
+     * @copydoc PKPNotificationSettingsForm::getNotificationSettingsCategories()
+     */
+    public function getNotificationSettingCategories()
+    {
+        $categories = parent::getNotificationSettingCategories();
+        for ($i = 0; $i < count($categories); $i++) {
+            if ($categories[$i]['categoryKey'] === 'notification.type.public') {
+                $categories[$i]['settings'][] = Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE;
+                break;
+            }
+        }
+        return $categories;
+    }
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\notification\form\NotificationSettingsForm', '\NotificationSettingsForm');
+}

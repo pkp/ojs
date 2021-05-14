@@ -12,133 +12,137 @@
  * @brief A preset form for setting a publication's issue, section, categories,
  *  pages, etc.
  */
+
 namespace APP\components\forms\publication;
-use \PKP\components\forms\FormComponent;
-use \PKP\components\forms\FieldOptions;
-use \PKP\components\forms\FieldSelect;
-use \PKP\components\forms\FieldText;
-use \PKP\components\forms\FieldUploadImage;
-use \APP\components\forms\FieldSelectIssue;
+
+use APP\components\forms\FieldSelectIssue;
+use PKP\components\forms\FieldOptions;
+use PKP\components\forms\FieldSelect;
+use PKP\components\forms\FieldText;
+use PKP\components\forms\FieldUploadImage;
+use PKP\components\forms\FormComponent;
 
 define('FORM_ISSUE_ENTRY', 'issueEntry');
 
-class IssueEntryForm extends FormComponent {
-	/** @copydoc FormComponent::$id */
-	public $id = FORM_ISSUE_ENTRY;
+class IssueEntryForm extends FormComponent
+{
+    /** @copydoc FormComponent::$id */
+    public $id = FORM_ISSUE_ENTRY;
 
-	/** @copydoc FormComponent::$method */
-	public $method = 'PUT';
+    /** @copydoc FormComponent::$method */
+    public $method = 'PUT';
 
-	/**
-	 * Constructor
-	 *
-	 * @param $action string URL to submit the form to
-	 * @param $locales array Supported locales
-	 * @param $publication \Publication The publication to change settings for
-	 * @param $publicationContext \Context The context of the publication
-	 * @param $baseUrl string Site's base URL. Used for image previews.
-	 * @param $temporaryFileApiUrl string URL to upload files to
-	 */
-	public function __construct($action, $locales, $publication, $publicationContext, $baseUrl, $temporaryFileApiUrl) {
-		$this->action = $action;
-		$this->locales = $locales;
+    /**
+     * Constructor
+     *
+     * @param $action string URL to submit the form to
+     * @param $locales array Supported locales
+     * @param $publication \Publication The publication to change settings for
+     * @param $publicationContext \Context The context of the publication
+     * @param $baseUrl string Site's base URL. Used for image previews.
+     * @param $temporaryFileApiUrl string URL to upload files to
+     */
+    public function __construct($action, $locales, $publication, $publicationContext, $baseUrl, $temporaryFileApiUrl)
+    {
+        $this->action = $action;
+        $this->locales = $locales;
 
-		// Issue options
-		$issueOptions = [['value' => '', 'label' => '']];
-		$unpublishedIssues = iterator_to_array(\Services::get('issue')->getMany([
-			'contextId' => $publicationContext->getId(),
-			'isPublished' => false,
-		]));
-		if (count($unpublishedIssues)) {
-			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
-			foreach ($unpublishedIssues as $issue) {
-				$issueOptions[] = [
-					'value' => (int) $issue->getId(),
-					'label' => $issue->getIssueIdentification(),
-				];
-			}
-		}
-		$publishedIssues = iterator_to_array(\Services::get('issue')->getMany([
-			'contextId' => $publicationContext->getId(),
-			'isPublished' => true,
-		]));
-		if (count($publishedIssues)) {
-			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
-			foreach ($publishedIssues as $issue) {
-				$issueOptions[] = [
-					'value' => (int) $issue->getId(),
-					'label' => $issue->getIssueIdentification(),
-				];
-			}
-		}
+        // Issue options
+        $issueOptions = [['value' => '', 'label' => '']];
+        $unpublishedIssues = iterator_to_array(\Services::get('issue')->getMany([
+            'contextId' => $publicationContext->getId(),
+            'isPublished' => false,
+        ]));
+        if (count($unpublishedIssues)) {
+            $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
+            foreach ($unpublishedIssues as $issue) {
+                $issueOptions[] = [
+                    'value' => (int) $issue->getId(),
+                    'label' => $issue->getIssueIdentification(),
+                ];
+            }
+        }
+        $publishedIssues = iterator_to_array(\Services::get('issue')->getMany([
+            'contextId' => $publicationContext->getId(),
+            'isPublished' => true,
+        ]));
+        if (count($publishedIssues)) {
+            $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
+            foreach ($publishedIssues as $issue) {
+                $issueOptions[] = [
+                    'value' => (int) $issue->getId(),
+                    'label' => $issue->getIssueIdentification(),
+                ];
+            }
+        }
 
-		// Section options
-		$sections = \Services::get('section')->getSectionList($publicationContext->getId());
-		$sectionOptions = [];
-		foreach ($sections as $section) {
-			$sectionOptions[] = [
-				'label' => (($section['group'])? __('publication.inactiveSection', ['section' => $section['title']]) : $section['title']),
-				'value' => (int) $section['id'],
-			];
-		}
+        // Section options
+        $sections = \Services::get('section')->getSectionList($publicationContext->getId());
+        $sectionOptions = [];
+        foreach ($sections as $section) {
+            $sectionOptions[] = [
+                'label' => (($section['group']) ? __('publication.inactiveSection', ['section' => $section['title']]) : $section['title']),
+                'value' => (int) $section['id'],
+            ];
+        }
 
-		$this->addField(new FieldSelectIssue('issueId', [
-				'label' => __('issue.issue'),
-				'options' => $issueOptions,
-				'publicationStatus' => $publication->getData('status'),
-				'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
-			]))
-			->addField(new FieldSelect('sectionId', [
-				'label' => __('section.section'),
-				'options' => $sectionOptions,
-				'value' => (int) $publication->getData('sectionId'),
-			]));
+        $this->addField(new FieldSelectIssue('issueId', [
+            'label' => __('issue.issue'),
+            'options' => $issueOptions,
+            'publicationStatus' => $publication->getData('status'),
+            'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
+        ]))
+            ->addField(new FieldSelect('sectionId', [
+                'label' => __('section.section'),
+                'options' => $sectionOptions,
+                'value' => (int) $publication->getData('sectionId'),
+            ]));
 
-		// Categories
-		$categoryOptions = [];
-		$categoryDao = \DAORegistry::getDAO('CategoryDAO'); /* @var $categoryDao CategoryDAO */
-		$categories = $categoryDao->getByContextId($publicationContext->getId())->toAssociativeArray();
-		foreach ($categories as $category) {
-			$label = $category->getLocalizedTitle();
-			if ($category->getParentId()) {
-				$label = $categories[$category->getParentId()]->getLocalizedTitle() . ' > ' . $label;
-			}
-			$categoryOptions[] = [
-				'value' => (int) $category->getId(),
-				'label' => $label,
-			];
-		}
-		if (!empty($categoryOptions)) {
-			$this->addField(new FieldOptions('categoryIds', [
-					'label' => __('submission.submit.placement.categories'),
-					'value' => (array) $publication->getData('categoryIds'),
-					'options' => $categoryOptions,
-				]));
-		}
+        // Categories
+        $categoryOptions = [];
+        $categoryDao = \DAORegistry::getDAO('CategoryDAO'); /* @var $categoryDao CategoryDAO */
+        $categories = $categoryDao->getByContextId($publicationContext->getId())->toAssociativeArray();
+        foreach ($categories as $category) {
+            $label = $category->getLocalizedTitle();
+            if ($category->getParentId()) {
+                $label = $categories[$category->getParentId()]->getLocalizedTitle() . ' > ' . $label;
+            }
+            $categoryOptions[] = [
+                'value' => (int) $category->getId(),
+                'label' => $label,
+            ];
+        }
+        if (!empty($categoryOptions)) {
+            $this->addField(new FieldOptions('categoryIds', [
+                'label' => __('submission.submit.placement.categories'),
+                'value' => (array) $publication->getData('categoryIds'),
+                'options' => $categoryOptions,
+            ]));
+        }
 
-		$this->addField(new FieldUploadImage('coverImage', [
-				'label' => __('editor.article.coverImage'),
-				'value' => $publication->getData('coverImage'),
-				'isMultilingual' => true,
-				'baseUrl' => $baseUrl,
-				'options' => [
-					'url' => $temporaryFileApiUrl,
-				],
-			]))
-			->addField(new FieldText('pages', [
-				'label' => __('editor.issues.pages'),
-				'value' => $publication->getData('pages'),
-			]))
-			->addField(new FieldText('urlPath', [
-				'label' => __('publication.urlPath'),
-				'description' => __('publication.urlPath.description'),
-				'value' => $publication->getData('urlPath'),
-			]))
-			->addField(new FieldText('datePublished', [
-				'label' => __('publication.datePublished'),
-				'description' => __('publication.datePublished.description'),
-				'value' => $publication->getData('datePublished'),
-				'size' => 'small',
-			]));
-	}
+        $this->addField(new FieldUploadImage('coverImage', [
+            'label' => __('editor.article.coverImage'),
+            'value' => $publication->getData('coverImage'),
+            'isMultilingual' => true,
+            'baseUrl' => $baseUrl,
+            'options' => [
+                'url' => $temporaryFileApiUrl,
+            ],
+        ]))
+            ->addField(new FieldText('pages', [
+                'label' => __('editor.issues.pages'),
+                'value' => $publication->getData('pages'),
+            ]))
+            ->addField(new FieldText('urlPath', [
+                'label' => __('publication.urlPath'),
+                'description' => __('publication.urlPath.description'),
+                'value' => $publication->getData('urlPath'),
+            ]))
+            ->addField(new FieldText('datePublished', [
+                'label' => __('publication.datePublished'),
+                'description' => __('publication.datePublished.description'),
+                'value' => $publication->getData('datePublished'),
+                'size' => 'small',
+            ]));
+    }
 }

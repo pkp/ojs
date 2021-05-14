@@ -12,264 +12,276 @@
  * @brief Extends the base publication service class with app-specific
  *  requirements.
  */
-namespace APP\Services;
 
-use \Application;
-use \AppLocale;
-use \Core;
-use \Services;
-use \PKP\Services\PKPPublicationService;
-use DAORegistry;
+namespace APP\services;
 
-class PublicationService extends PKPPublicationService {
+use PKP\submission\PKPSubmission;
+use PKP\db\DAORegistry;
+use PKP\services\PKPPublicationService;
+use PKP\services\interfaces\EntityWriteInterface;
 
-	/**
-	 * Initialize hooks for extending PKPPublicationService
-	 */
-	public function __construct() {
-		\HookRegistry::register('Publication::getProperties', [$this, 'getPublicationProperties']);
-		\HookRegistry::register('Publication::validate', [$this, 'validatePublication']);
-		\HookRegistry::register('Publication::validatePublish', [$this, 'validatePublishPublication']);
-		\HookRegistry::register('Publication::version', [$this, 'versionPublication']);
-		\HookRegistry::register('Publication::publish::before', [$this, 'publishPublicationBefore']);
-		\HookRegistry::register('Publication::delete::before', [$this, 'deletePublicationBefore']);
-	}
+use APP\core\Services;
+use APP\i18n\AppLocale;
+use APP\core\Application;
+use APP\payment\ojs\OJSPaymentManager;
 
-	/**
-	 * Add values when retrieving an object's properties
-	 *
-	 * @param $hookName string
-	 * @param $args array [
-	 *		@option array Property values
-	 *		@option Publication
-	 *		@option array The props requested
-	 *		@option array Additional arguments (such as the request object) passed
-	 * ]
-	 */
-	public function getPublicationProperties($hookName, $args) {
-		$values =& $args[0];
-		$publication = $args[1];
-		$props = $args[2];
-		$dependencies = $args[3];
-		$request = $dependencies['request'];
-		$dispatcher = $request->getDispatcher();
+class PublicationService extends PKPPublicationService
+{
+    /**
+     * Initialize hooks for extending PKPPublicationService
+     */
+    public function __construct()
+    {
+        \HookRegistry::register('Publication::getProperties', [$this, 'getPublicationProperties']);
+        \HookRegistry::register('Publication::validate', [$this, 'validatePublication']);
+        \HookRegistry::register('Publication::validatePublish', [$this, 'validatePublishPublication']);
+        \HookRegistry::register('Publication::version', [$this, 'versionPublication']);
+        \HookRegistry::register('Publication::publish::before', [$this, 'publishPublicationBefore']);
+        \HookRegistry::register('Publication::delete::before', [$this, 'deletePublicationBefore']);
+    }
 
-		// Get required submission and context
-		$submission = !empty($args['submission'])
-			? $args['submission']
-			: $args['submission'] = Services::get('submission')->get($publication->getData('submissionId'));
+    /**
+     * Add values when retrieving an object's properties
+     *
+     * @param $hookName string
+     * @param $args array [
+     *		@option array Property values
+     *		@option Publication
+     *		@option array The props requested
+     *		@option array Additional arguments (such as the request object) passed
+     * ]
+     */
+    public function getPublicationProperties($hookName, $args)
+    {
+        $values = & $args[0];
+        $publication = $args[1];
+        $props = $args[2];
+        $dependencies = $args[3];
+        $request = $dependencies['request'];
+        $dispatcher = $request->getDispatcher();
 
-		$submissionContext = !empty($dependencies['context'])
-			? $dependencies['context']
-			: $dependencies['context'] = Services::get('context')->get($submission->getData('contextId'));
+        // Get required submission and context
+        $submission = !empty($args['submission'])
+            ? $args['submission']
+            : $args['submission'] = Services::get('submission')->get($publication->getData('submissionId'));
 
-		foreach ($props as $prop) {
-			switch ($prop) {
-				case 'galleys':
-					$values[$prop] = array_map(
-						function($galley) use ($dependencies) {
-							return Services::get('galley')->getSummaryProperties($galley, $dependencies);
-						},
-						$publication->getData('galleys')
-					);
-					break;
-				case 'urlPublished':
-					$values[$prop] = $dispatcher->url(
-						$request,
-						ROUTE_PAGE,
-						$submissionContext->getData('urlPath'),
-						'article',
-						'view',
-						[$submission->getBestId(), 'version', $publication->getId()]
-					);
-					break;
-			}
-		}
-	}
+        $submissionContext = !empty($dependencies['context'])
+            ? $dependencies['context']
+            : $dependencies['context'] = Services::get('context')->get($submission->getData('contextId'));
 
-	/**
-	 * Make additional validation checks
-	 *
-	 * @param $hookName string
-	 * @param $args array [
-	 *		@option array Validation errors already identified
-		*		@option string One of the VALIDATE_ACTION_* constants
-		*		@option array The props being validated
-		*		@option array The locales accepted for this object
-		*    @option string The primary locale for this object
-		* ]
-		*/
-	public function validatePublication($hookName, $args) {
-		$errors =& $args[0];
-		$action = $args[1];
-		$props = $args[2];
-		$allowedLocales = $args[3];
-		$primaryLocale = $args[4];
+        foreach ($props as $prop) {
+            switch ($prop) {
+                case 'galleys':
+                    $values[$prop] = array_map(
+                        function ($galley) use ($dependencies) {
+                            return Services::get('galley')->getSummaryProperties($galley, $dependencies);
+                        },
+                        $publication->getData('galleys')
+                    );
+                    break;
+                case 'urlPublished':
+                    $values[$prop] = $dispatcher->url(
+                        $request,
+                        \PKPApplication::ROUTE_PAGE,
+                        $submissionContext->getData('urlPath'),
+                        'article',
+                        'view',
+                        [$submission->getBestId(), 'version', $publication->getId()]
+                    );
+                    break;
+            }
+        }
+    }
 
-		// Ensure that the specified section exists
-		$section = null;
-		if (isset($props['sectionId'])) {
-			$section = Application::get()->getSectionDAO()->getById($props['sectionId']);
-			if (!$section) {
-				$errors['sectionId'] = [__('publication.invalidSection')];
-			}
-		}
+    /**
+     * Make additional validation checks
+     *
+     * @param $hookName string
+     * @param $args array [
+     *		@option array Validation errors already identified
+        *		@option string One of the VALIDATE_ACTION_* constants
+        *		@option array The props being validated
+        *		@option array The locales accepted for this object
+        *    @option string The primary locale for this object
+        * ]
+        */
+    public function validatePublication($hookName, $args)
+    {
+        $errors = & $args[0];
+        $action = $args[1];
+        $props = $args[2];
+        $allowedLocales = $args[3];
+        $primaryLocale = $args[4];
 
-		// Get the section so we can validate section abstract requirements
-		if (!$section && isset($props['id'])) {
-			$publication = Services::get('publication')->get($props['id']);
-			$sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-			$section = $sectionDao->getById($publication->getData('sectionId'));
-		}
+        // Ensure that the specified section exists
+        $section = null;
+        if (isset($props['sectionId'])) {
+            $section = Application::get()->getSectionDAO()->getById($props['sectionId']);
+            if (!$section) {
+                $errors['sectionId'] = [__('publication.invalidSection')];
+            }
+        }
 
-		if ($section) {
+        // Get the section so we can validate section abstract requirements
+        if (!$section && isset($props['id'])) {
+            $publication = Services::get('publication')->get($props['id']);
+            $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+            $section = $sectionDao->getById($publication->getData('sectionId'));
+        }
 
-			// Require abstracts if the section requires them
-			if ($action === VALIDATE_ACTION_ADD && !$section->getData('abstractsNotRequired') && empty($props['abstract'])) {
-				$errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
-			}
+        if ($section) {
 
-			if (isset($props['abstract']) && empty($errors['abstract'])) {
+            // Require abstracts if the section requires them
+            if ($action === EntityWriteInterface::VALIDATE_ACTION_ADD && !$section->getData('abstractsNotRequired') && empty($props['abstract'])) {
+                $errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
+            }
 
-				// Require abstracts in the primary language if the section requires them
-				if (!$section->getData('abstractsNotRequired')) {
-					if (empty($props['abstract'][$primaryLocale])) {
-						if (!isset($errors['abstract'])) {
-							$errors['abstract'] = [];
-						};
-						AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
-						$errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
-					}
-				}
+            if (isset($props['abstract']) && empty($errors['abstract'])) {
 
-				// Check the word count on abstracts
-				foreach ($allowedLocales as $localeKey) {
-					if (empty($props['abstract'][$localeKey])) {
-						continue;
-					}
-					$wordCount = count(preg_split('/\s+/', trim(str_replace('&nbsp;', ' ', strip_tags($props['abstract'][$localeKey])))));
-					$wordCountLimit = $section->getData('wordCount');
-					if ($wordCountLimit && $wordCount > $wordCountLimit) {
-						if (!isset($errors['abstract'])) {
-							$errors['abstract'] = [];
-						};
-						$errors['abstract'][$localeKey] = [__('publication.wordCountLong', ['limit' => $wordCountLimit, 'count' => $wordCount])];
-					}
-				}
-			}
-		}
+                // Require abstracts in the primary language if the section requires them
+                if (!$section->getData('abstractsNotRequired')) {
+                    if (empty($props['abstract'][$primaryLocale])) {
+                        if (!isset($errors['abstract'])) {
+                            $errors['abstract'] = [];
+                        };
+                        AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
+                        $errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
+                    }
+                }
 
-		// Ensure that the issueId exists
-		if (isset($props['issueId']) && empty($errors['issueId'])) {
-			$issue = Services::get('issue')->get($props['issueId']);
-			if (!$issue) {
-				$errors['issueId'] = [__('publication.invalidIssue')];
-			}
-		}
-	}
+                // Check the word count on abstracts
+                foreach ($allowedLocales as $localeKey) {
+                    if (empty($props['abstract'][$localeKey])) {
+                        continue;
+                    }
+                    $wordCount = count(preg_split('/\s+/', trim(str_replace('&nbsp;', ' ', strip_tags($props['abstract'][$localeKey])))));
+                    $wordCountLimit = $section->getData('wordCount');
+                    if ($wordCountLimit && $wordCount > $wordCountLimit) {
+                        if (!isset($errors['abstract'])) {
+                            $errors['abstract'] = [];
+                        };
+                        $errors['abstract'][$localeKey] = [__('publication.wordCountLong', ['limit' => $wordCountLimit, 'count' => $wordCount])];
+                    }
+                }
+            }
+        }
 
-	/**
-	 * Make additional validation checks against publishing requirements
-	 *
-	 * @see PKPPublicationService::validatePublish()
-	 * @param $hookName string
-	 * @param $args array [
-	 *		@option array Validation errors already identified
-	 *		@option Publication The publication to validate
-	 *		@option Submission The submission of the publication being validated
-	 *		@option array The locales accepted for this object
-	 *		@option string The primary locale for this object
-	 * ]
-	 */
-	public function validatePublishPublication($hookName, $args) {
-		$errors =& $args[0];
-		$publication = $args[1];
-		$submission = $args[2];
+        // Ensure that the issueId exists
+        if (isset($props['issueId']) && empty($errors['issueId'])) {
+            $issue = Services::get('issue')->get($props['issueId']);
+            if (!$issue) {
+                $errors['issueId'] = [__('publication.invalidIssue')];
+            }
+        }
+    }
 
-		// Every publication must be scheduled in an issue
-		if (!$publication->getData('issueId') || !Services::get('issue')->get($publication->getData('issueId'))) {
-			$errors['issueId'] = __('publication.required.issue');
-		}
+    /**
+     * Make additional validation checks against publishing requirements
+     *
+     * @see PKPPublicationService::validatePublish()
+     *
+     * @param $hookName string
+     * @param $args array [
+     *		@option array Validation errors already identified
+     *		@option Publication The publication to validate
+     *		@option Submission The submission of the publication being validated
+     *		@option array The locales accepted for this object
+     *		@option string The primary locale for this object
+     * ]
+     */
+    public function validatePublishPublication($hookName, $args)
+    {
+        $errors = & $args[0];
+        $publication = $args[1];
+        $submission = $args[2];
 
-		// If submission fees are enabled, check that they're fulfilled
-		$context = Application::get()->getRequest()->getContext();
-		if (!$context || $context->getId() !== $submission->getData('contextId')) {
-			$context = Services::get('context')->get($submission->getData('contextId'));
-		}
-		$paymentManager = \Application::getPaymentManager($context);
-		$completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
-		$publicationFeeEnabled = $paymentManager->publicationEnabled();
-		$publicationFeePayment = $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $submission->getId());
-		if ($publicationFeeEnabled && !$publicationFeePayment) {
-			$errors['publicationFeeStatus'] = __('editor.article.payment.publicationFeeNotPaid');
-		}
-	}
+        // Every publication must be scheduled in an issue
+        if (!$publication->getData('issueId') || !Services::get('issue')->get($publication->getData('issueId'))) {
+            $errors['issueId'] = __('publication.required.issue');
+        }
 
-	/**
-	 * Copy OJS-specific objects when a new publication version is created
-	 *
-	 * @param $hookName string
-	 * @param $args array [
-	 *		@option Publication The new version of the publication
-	 *		@option Publication The old version of the publication
-	 *		@option Request
-	 * ]
-	 */
-	public function versionPublication($hookName, $args) {
-		$newPublication = $args[0];
-		$oldPublication = $args[1];
-		$request = $args[2];
+        // If submission fees are enabled, check that they're fulfilled
+        $context = Application::get()->getRequest()->getContext();
+        if (!$context || $context->getId() !== $submission->getData('contextId')) {
+            $context = Services::get('context')->get($submission->getData('contextId'));
+        }
+        $paymentManager = \Application::getPaymentManager($context);
+        $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+        $publicationFeeEnabled = $paymentManager->publicationEnabled();
+        $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());
+        if ($publicationFeeEnabled && !$publicationFeePayment) {
+            $errors['publicationFeeStatus'] = __('editor.article.payment.publicationFeeNotPaid');
+        }
+    }
 
-		$galleys = $oldPublication->getData('galleys');
-		if (!empty($galleys)) {
-			foreach ($galleys as $galley) {
-				$newGalley = clone $galley;
-				$newGalley->setData('id', null);
-				$newGalley->setData('publicationId', $newPublication->getId());
-				Services::get('galley')->add($newGalley, $request);
-			}
-		}
+    /**
+     * Copy OJS-specific objects when a new publication version is created
+     *
+     * @param $hookName string
+     * @param $args array [
+     *		@option Publication The new version of the publication
+     *		@option Publication The old version of the publication
+     *		@option Request
+     * ]
+     */
+    public function versionPublication($hookName, $args)
+    {
+        $newPublication = $args[0];
+        $oldPublication = $args[1];
+        $request = $args[2];
 
-		$newPublication->setData('galleys', $this->get($newPublication->getId())->getData('galleys'));
-	}
+        $galleys = $oldPublication->getData('galleys');
+        if (!empty($galleys)) {
+            foreach ($galleys as $galley) {
+                $newGalley = clone $galley;
+                $newGalley->setData('id', null);
+                $newGalley->setData('publicationId', $newPublication->getId());
+                Services::get('galley')->add($newGalley, $request);
+            }
+        }
 
-	/**
-	 * Modify a publication before it is published
-	 *
-	 * @param $hookName string
-	 * @param $args array [
-	 *		@option Publication The new version of the publication
-	 *		@option Publication The old version of the publication
-	 * ]
-	 */
-	public function publishPublicationBefore($hookName, $args) {
-		$newPublication = $args[0];
-		$oldPublication = $args[1];
+        $newPublication->setData('galleys', $this->get($newPublication->getId())->getData('galleys'));
+    }
 
-		// In OJS, a publication may be scheduled in a future issue. In such cases,
-		// the datePublished should remain empty and the status should be set to
-		// scheduled.
-		$issue = Services::get('issue')->get($newPublication->getData('issueId'));
-		if ($issue && !$issue->getData('published')) {
-			$newPublication->setData('datePublished', null);
-			$newPublication->setData('status', STATUS_SCHEDULED);
-		}
-	}
+    /**
+     * Modify a publication before it is published
+     *
+     * @param $hookName string
+     * @param $args array [
+     *		@option Publication The new version of the publication
+     *		@option Publication The old version of the publication
+     * ]
+     */
+    public function publishPublicationBefore($hookName, $args)
+    {
+        $newPublication = $args[0];
+        $oldPublication = $args[1];
 
-	/**
-	 * Delete OJS-specific objects before a publication is deleted
-	 *
-	 * @param $hookName string
-	 * @param $args array [
-	 *		@option Publication The publication being deleted
-	 * ]
-	 */
-	public function deletePublicationBefore($hookName, $args) {
-		$publication = $args[0];
+        // In OJS, a publication may be scheduled in a future issue. In such cases,
+        // the datePublished should remain empty and the status should be set to
+        // scheduled.
+        $issue = Services::get('issue')->get($newPublication->getData('issueId'));
+        if ($issue && !$issue->getData('published')) {
+            $newPublication->setData('datePublished', null);
+            $newPublication->setData('status', PKPSubmission::STATUS_SCHEDULED);
+        }
+    }
 
-		$galleysIterator = Services::get('galley')->getMany(['publicationIds' => $publication->getId()]);
-		foreach ($galleysIterator as $galley) {
-			Services::get('galley')->delete($galley);
-		}
-	}
+    /**
+     * Delete OJS-specific objects before a publication is deleted
+     *
+     * @param $hookName string
+     * @param $args array [
+     *		@option Publication The publication being deleted
+     * ]
+     */
+    public function deletePublicationBefore($hookName, $args)
+    {
+        $publication = $args[0];
+
+        $galleysIterator = Services::get('galley')->getMany(['publicationIds' => $publication->getId()]);
+        foreach ($galleysIterator as $galley) {
+            Services::get('galley')->delete($galley);
+        }
+    }
 }

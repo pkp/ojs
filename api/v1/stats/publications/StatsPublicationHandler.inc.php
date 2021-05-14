@@ -16,7 +16,8 @@
 
 import('lib.pkp.api.v1.stats.publications.PKPStatsPublicationHandler');
 
-class StatsPublicationHandler extends PKPStatsPublicationHandler {
-  /** @var string The name of the section ids query param for this application */
-  public $sectionIdsQueryParam = 'sectionIds';
+class StatsPublicationHandler extends PKPStatsPublicationHandler
+{
+    /** @var string The name of the section ids query param for this application */
+    public $sectionIdsQueryParam = 'sectionIds';
 }

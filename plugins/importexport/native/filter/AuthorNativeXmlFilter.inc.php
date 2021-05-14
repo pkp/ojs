@@ -15,25 +15,16 @@
 
 import('lib.pkp.plugins.importexport.native.filter.PKPAuthorNativeXmlFilter');
 
-class AuthorNativeXmlFilter extends PKPAuthorNativeXmlFilter {
-	/**
-	 * Constructor
-	 * @param $filterGroup FilterGroup
-	 */
-	function __construct($filterGroup) {
-		parent::__construct($filterGroup);
-	}
-
-
-	//
-	// Implement template methods from PersistableFilter
-	//
-	/**
-	 * @copydoc PersistableFilter::getClassName()
-	 */
-	function getClassName() {
-		return 'plugins.importexport.native.filter.AuthorNativeXmlFilter';
-	}
+class AuthorNativeXmlFilter extends PKPAuthorNativeXmlFilter
+{
+    //
+    // Implement template methods from PersistableFilter
+    //
+    /**
+     * @copydoc PersistableFilter::getClassName()
+     */
+    public function getClassName()
+    {
+        return 'plugins.importexport.native.filter.AuthorNativeXmlFilter';
+    }
 }
-
-

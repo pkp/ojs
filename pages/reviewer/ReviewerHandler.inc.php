@@ -13,101 +13,117 @@
  * @brief Handle requests for reviewer functions.
  */
 
+use PKP\security\authorization\SubmissionAccessPolicy;
+
+use APP\submission\reviewer\form\ReviewerReviewStep3Form;
+
+// FIXME: Add namespacing
 import('lib.pkp.pages.reviewer.PKPReviewerHandler');
 
-class ReviewerHandler extends PKPReviewerHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-		$this->addRoleAssignment(
-			ROLE_ID_REVIEWER, array(
-				'submission', 'step', 'saveStep',
-				'showDeclineReview', 'saveDeclineReview', 'downloadFile'
-			)
-		);
-	}
+class ReviewerHandler extends PKPReviewerHandler
+{
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->addRoleAssignment(
+            ROLE_ID_REVIEWER,
+            [
+                'submission', 'step', 'saveStep',
+                'showDeclineReview', 'saveDeclineReview', 'downloadFile'
+            ]
+        );
+    }
 
-	/**
-	 * @copydoc PKPHandler::authorize()
-	 */
-	function authorize($request, &$args, $roleAssignments) {
-		$context = $request->getContext();
-		if ($context->getData('reviewerAccessKeysEnabled')) {
-			$this->_validateAccessKey($request);
-		}
+    /**
+     * @copydoc PKPHandler::authorize()
+     */
+    public function authorize($request, &$args, $roleAssignments)
+    {
+        $context = $request->getContext();
+        if ($context->getData('reviewerAccessKeysEnabled')) {
+            $this->_validateAccessKey($request);
+        }
 
-		import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
-		$router = $request->getRouter();
-		$this->addPolicy(new SubmissionAccessPolicy(
-			$request,
-			$args,
-			$roleAssignments
-		));
+        $router = $request->getRouter();
+        $this->addPolicy(new SubmissionAccessPolicy(
+            $request,
+            $args,
+            $roleAssignments
+        ));
 
 
-		return parent::authorize($request, $args, $roleAssignments);
-	}
+        return parent::authorize($request, $args, $roleAssignments);
+    }
 
-	/**
-	 * Tests if the request contains a valid access token. If this is the case
-	 * the regular login process will be skipped
-	 *
-	 * @param $request PKPRequest
-	 * @return void
-	 */
-	protected function _validateAccessKey($request) {
-		$accessKeyCode = $request->getUserVar('key');
-		$reviewId = $request->getUserVar('reviewId');
-		if (!($accessKeyCode && $reviewId)) return;
+    /**
+     * Tests if the request contains a valid access token. If this is the case
+     * the regular login process will be skipped
+     *
+     * @param $request PKPRequest
+     */
+    protected function _validateAccessKey($request)
+    {
+        $accessKeyCode = $request->getUserVar('key');
+        $reviewId = $request->getUserVar('reviewId');
+        if (!($accessKeyCode && $reviewId)) {
+            return;
+        }
 
-		// Check if the user is already logged in
-		$sessionManager = SessionManager::getManager();
-		$session = $sessionManager->getUserSession();
-		if ($session->getUserId()) return;
+        // Check if the user is already logged in
+        $sessionManager = SessionManager::getManager();
+        $session = $sessionManager->getUserSession();
+        if ($session->getUserId()) {
+            return;
+        }
 
-		import('lib.pkp.classes.security.AccessKeyManager');
-		$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO'); /* @var $reviewerSubmissionDao ReviewerSubmissionDAO */
-		$reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
+        import('lib.pkp.classes.security.AccessKeyManager');
+        $reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO'); /* @var $reviewerSubmissionDao ReviewerSubmissionDAO */
+        $reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
+        if (!$reviewerSubmission) {
+            return;
+        } // e.g. deleted review assignment
 
-		// Validate the access key
-		$context = $request->getContext();
-		$accessKeyManager = new AccessKeyManager();
-		$accessKeyHash = AccessKeyManager::generateKeyHash($accessKeyCode);
-		$accessKey = $accessKeyManager->validateKey(
-			$context->getId(),
-			$reviewerSubmission->getReviewerId(),
-			$accessKeyHash
-		);
-		if (!$accessKey) return;
+        // Validate the access key
+        $context = $request->getContext();
+        $accessKeyManager = new AccessKeyManager();
+        $accessKeyHash = AccessKeyManager::generateKeyHash($accessKeyCode);
+        $accessKey = $accessKeyManager->validateKey(
+            $context->getId(),
+            $reviewerSubmission->getReviewerId(),
+            $accessKeyHash
+        );
+        if (!$accessKey) {
+            return;
+        }
 
-		// Get the reviewer user object
-		$userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-		$user = $userDao->getById($accessKey->getUserId());
-		if (!$user) return;
+        // Get the reviewer user object
+        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
+        $user = $userDao->getById($accessKey->getUserId());
+        if (!$user) {
+            return;
+        }
 
-		// Register the user object in the session
-		import('lib.pkp.classes.security.Validation');
-		$reason = null;
-		if (Validation::registerUserSession($user, $reason)) {
-			$this->submission = $reviewerSubmission;
-			$this->user = $user;
-		}
-	}
+        // Register the user object in the session
+        import('lib.pkp.classes.security.Validation');
+        $reason = null;
+        if (Validation::registerUserSession($user, $reason)) {
+            $this->submission = $reviewerSubmission;
+            $this->user = $user;
+        }
+    }
 
-	/**
-	 * @copydoc PKPReviewerHandler::getReviewForm()
-	 */
-	public function getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment) {
-	    switch ($step) {
-	        case 3: 
-	        	import('classes.submission.reviewer.form.ReviewerReviewStep3Form');
-	        	return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
-	    }
-	    return parent::getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment);
-	}
-
+    /**
+     * @copydoc PKPReviewerHandler::getReviewForm()
+     */
+    public function getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment)
+    {
+        switch ($step) {
+        case 3:
+            return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
+        }
+        return parent::getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment);
+    }
 }
-
-

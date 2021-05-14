@@ -693,9 +693,6 @@ msgstr "Identificación del contenido de la revista"
 msgid "manager.setup.publisher"
 msgstr "Editorial"
 
-msgid "manager.setup.publishingDescription"
-msgstr "El nombre de la organización que publica la revista aparecerá en la sección Acerca de la revista."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Enlaces de referencia"
 
@@ -1605,12 +1602,6 @@ msgstr "El archivo cargado {$param} no se puede leer."
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "No se encuentra el prefijo DOI para la revista con la ruta {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERROR:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "La ruta de la revista especificada, \"{$journalPath}\", no existe."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Los objetos especificados no se pueden encontrar."
 
@@ -1734,9 +1725,6 @@ msgstr ""
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Restringir el acceso al archivo"
-
-msgid "manager.setup.publishing"
-msgstr "Detalles de publicación"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr ""

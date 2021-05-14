@@ -16,5 +16,3 @@ require_once('OAIMetadataFormatPlugin_DC.inc.php');
 require_once('OAIMetadataFormat_DC.inc.php');
 
 return new OAIMetadataFormatPlugin_DC();
-
-

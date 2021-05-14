@@ -1,0 +1,176 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-05-05 12:44+0000\n"
+"Last-Translator: Сьянов Дмитрий <Dmitrijsyanov@gmail.com>\n"
+"Language-Team: Belarusian <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/be/>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "section.any"
+msgstr "Любы раздзел"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Гэтыя спецыфікацыі заснаваны на наборы метаданых Dublin Core — міжнародным "
+"стандарце, які выкарыстоўваецца для апісання кантэнту часопіса."
+
+msgid "submission.citationFormat.notFound"
+msgstr ""
+"Запытаны фармат афармлення бібліяграфічных спасылак не можа быць атрыманы."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Калі ласка, выберыце ролю адпраўніка."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Калі ласка, увядзіце анатацыю Вашага артыкула."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Калі ласка, увядзіце назву Вашага артыкула."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr ""
+"Для кожнага аўтара неабходна ўказаць імя, прозвішча і адрас электроннай "
+"пошты."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Патрабуецца як мінімум адзін аўтар."
+
+msgid "submission.submit.contributorRole"
+msgstr "Роля адпраўніка"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Заява аб канфідэнцыяльнасці"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Вы павінны прачытаць і пацвердзіць, што вы выканалі ўсе пералічаныя ніжэй "
+"патрабаванні, перш чым працягнуць адпраўку матэрыялу."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Кантрольны спіс падрыхтоўкі матэрыялу для адпраўкі"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Калі ласка, выберыце мову матэрыялу для адпраўкі."
+
+msgid "submission.incomplete"
+msgstr "Чакае адабрэння"
+
+msgid "submission.complete"
+msgstr "Адобраны"
+
+msgid "submission.upload.fileContents"
+msgstr "Кампанент артыкула"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Метаданыя выпуску для матэрыялу былі абноўлены."
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Адправіць на рэцэнзію"
+
+msgid "workflow.review.externalReview"
+msgstr "Рэцэнзаванне"
+
+msgid "submission.confirmSubmit"
+msgstr "Вы ўпэўнены, што хочаце адправіць гэты артыкул у часопіс?"
+
+msgid "submission.pageProofs"
+msgstr "Карэктура"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Загрузіць файлы, звязаныя з гэтым матэрыялам: артыкул, мультымедыя, наборы "
+"даных, выявы твораў мастацтва і г. д."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Назва і анатацыя"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Гэты чарнавік быў адобраны для ўключэння ў гранку."
+
+msgid "grid.action.approveProof"
+msgstr "Адобрыць гэты чарнавік для ўключэння ў гранку."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Вярстальшчык загружае сюды цалкам гатовыя файлы, якія падрыхтаваны для "
+"публікацыі. Выкарыстоўвайце <em>Назначыць аўдытара</em>, каб назначыць "
+"аўтараў і/ці іншых карыстальнікаў для карэкцыі гранак, загрузкі "
+"адкарэктаваных файлаў і іх адабрэння перад публікацыяй."
+
+msgid "submission.galleyFiles"
+msgstr "Файлы гранак"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Зрабіць гэту гранку даступнай"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Гэту гранку <em>можна зрабіць даступнай</em> чытачам.</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Гэту гранку <em>больш нельга рабіць даступнай</em> чытачам.</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Адабрэнне фармату"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Адкрытыя ідэнтыфікатары адпраўленага матэрыялу абноўлены."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Гранка артыкула «{$galleyFormatName}» зроблена недаступнай."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Гранка артыкула «{$galleyFormatName}» зроблена даступнай."
+
+msgid "grid.action.issueEntry"
+msgstr "Паказаць метаданыя гэтага матэрыялу"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Гранка з'явілася ў выпуску"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Часопіс быў апавешчаны пра адпраўку Вамі матэрыялу, пацвярджэнне запісу было "
+"даслана на Вашу электронную пошту. Як толькі рэдактар паглядзіць Ваш "
+"матэрыял, мы звяжамся з Вамі."
+
+msgid "submission.issueEntry"
+msgstr "Метаданыя"
+
+msgid "grid.action.workflow"
+msgstr "Працэс адпраўкі"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Новы матэрыял"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Пачаць адпраўку новага матэрыялу ў"
+
+msgid "submission.title.tip"
+msgstr ""
+"Тып матэрыялу – гэта звычайна «выява», «тэкст» або іншыя тыпы мультымедыя, у "
+"тым ліку «праграмнае забеспячэнне» або «інтэрактыў». Калі ласка, выберыце "
+"адзін найбольш адпаведны тып для вашага матэрыялу. Прыклады можна знайсці на "
+"<a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "Загаловак артыкула"
+
+msgid "submission.upload.selectComponent"
+msgstr "Выбраць кампанент артыкула"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Выберыце ролю, пад якой вы адпраўляеце артыкул."
+
+msgid "submission.submit.userGroup"
+msgstr "Адправіць з выкарыстаннем маёй ролі ..."
+
+msgid "submission.submit.title"
+msgstr "Адправіць артыкул"

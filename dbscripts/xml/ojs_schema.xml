@@ -461,7 +461,7 @@
 		</field>
 		<field name="status" type="I1">
 			<NOTNULL/>
-			<DEFAULT VALUE="1"/><!-- STATUS_QUEUED -->
+			<DEFAULT VALUE="1"/><!-- PKPSubmission::STATUS_QUEUED -->
 		</field>
 		<field name="url_path" type="C2" size="64" />
 		<field name="version" type="I8" />

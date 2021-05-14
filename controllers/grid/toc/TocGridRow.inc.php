@@ -15,57 +15,62 @@
 
 import('lib.pkp.classes.controllers.grid.GridRow');
 
-class TocGridRow extends GridRow {
-	/** @var int */
-	var $issueId;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RedirectAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
 
-	/**
-	 * Constructor
-	 * @param $issueId int
-	 */
-	function __construct($issueId) {
-		parent::__construct();
-		$this->issueId = $issueId;
-	}
+class TocGridRow extends GridRow
+{
+    /** @var int */
+    public $issueId;
 
-	//
-	// Overridden template methods
-	//
-	/*
-	 * @copydoc GridRow::initialize
-	 */
-	function initialize($request, $template = null) {
-		parent::initialize($request, $template);
+    /**
+     * Constructor
+     *
+     * @param $issueId int
+     */
+    public function __construct($issueId)
+    {
+        parent::__construct();
+        $this->issueId = $issueId;
+    }
 
-		$dispatcher = $request->getDispatcher();
-		import('lib.pkp.classes.linkAction.request.RedirectAction');
-		$this->addAction(
-			new LinkAction(
-				'workflow',
-				new RedirectAction(
-					$dispatcher->url($request, ROUTE_PAGE, null, 'workflow', 'access', array($this->getId()))
-				),
-				__('submission.submission'),
-				'information'
-			)
-		);
+    //
+    // Overridden template methods
+    //
+    /*
+     * @copydoc GridRow::initialize
+     */
+    public function initialize($request, $template = null)
+    {
+        parent::initialize($request, $template);
 
-		$router = $request->getRouter();
-		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-		$this->addAction(
-			new LinkAction(
-				'removeArticle',
-				new RemoteActionConfirmationModal(
-					$request->getSession(),
-					__('editor.article.remove.confirm'),
-					__('grid.action.removeArticle'),
-					$router->url($request, null, null, 'removeArticle', null, array('articleId' => $this->getId(), 'issueId' => $this->issueId)), 'modal_delete'
-				),
-				__('editor.article.remove'),
-				'delete'
-			)
-		);
-	}
+        $dispatcher = $request->getDispatcher();
+        $this->addAction(
+            new LinkAction(
+                'workflow',
+                new RedirectAction(
+                    $dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'workflow', 'access', [$this->getId()])
+                ),
+                __('submission.submission'),
+                'information'
+            )
+        );
+
+        $router = $request->getRouter();
+        $this->addAction(
+            new LinkAction(
+                'removeArticle',
+                new RemoteActionConfirmationModal(
+                    $request->getSession(),
+                    __('editor.article.remove.confirm'),
+                    __('grid.action.removeArticle'),
+                    $router->url($request, null, null, 'removeArticle', null, ['articleId' => $this->getId(), 'issueId' => $this->issueId]),
+                    'modal_delete'
+                ),
+                __('editor.article.remove'),
+                'delete'
+            )
+        );
+    }
 }
-
-

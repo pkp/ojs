@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2020-11-26 18:19+0000\n"
+"PO-Revision-Date: 2021-05-07 08:53+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
@@ -666,11 +666,6 @@ msgstr "Identifikation af tidsskriftsindhold"
 
 msgid "manager.setup.publisher"
 msgstr "Forlægger"
-
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Disse detaljer kan inkluderes i metadata leveret til arkivorganisationer fra "
-"tredjepart."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Angivelse af links til referencer"
@@ -1717,12 +1712,6 @@ msgstr "Godkend XML før eksport og registrering."
 msgid "plugins.importexport.common.export.error.inputFileNotReadable"
 msgstr "Input-filen {$param} er ikke læsbar."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "FEJL:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Den angivne tidsskriftssti, \"{$journalPath}\", findes ikke."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Det angivne objekt blev ikke fundet."
 
@@ -1805,9 +1794,6 @@ msgstr "Inkludér et sikkert link i e-mail-invitationen til bedømmere."
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Begræns filadgang"
 
-msgid "manager.setup.publishing"
-msgstr "Publiceringsoplysninger"
-
 msgid "manager.setup.numPageLinks.description"
 msgstr ""
 "Begræns antallet af links, der skal vises til efterfølgende sider på en "
@@ -1816,7 +1802,7 @@ msgstr ""
 msgid "manager.setup.keyInfo.description"
 msgstr ""
 "Giv en kort beskrivelse af dit tidsskrift og identificer redaktører, "
-"tidsskriftschefer og andre medlemmer af dit redaktion."
+"tidsskriftschefer og andre medlemmer af din redaktion."
 
 msgid "manager.setup.keyInfo"
 msgstr "Nøgleinformation"
@@ -1881,3 +1867,28 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Mindst en sektion skal være aktiv. Gå til workflow-indstillingerne og "
 "deaktiver alle indsendelser til dette tidsskrift."
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr ""
+"Processen var ikke i stand til at tolke nummerets publiceringsklare filer"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Resultatet af eksport-anliggender"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Der er ikke valgt nogen primær kontakt til dette forlag. Du kan indskrive en "
+"primær kontakt under <a href=\"{$url}\">tidsskriftsindstillinger</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Send en kopi af bekræftelses-e-mailen i forbindelse med indsendelse til "
+"dette tidsskrifts primære kontaktperson."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Vælg det land, hvor dette tidsskrift er beliggende, eller det land som er "
+"tilknyttet tidsskriftets eller udgiverens postadresse."

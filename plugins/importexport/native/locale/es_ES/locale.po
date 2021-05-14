@@ -65,6 +65,7 @@ msgstr "Exportar artículos"
 msgid "plugins.importexport.native.exportIssues"
 msgstr "Exportar números"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Uso: {$scriptName} {$pluginName} [command] ...\n"
@@ -95,6 +96,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Sección desconocida {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "El usuario/a especificado (\"{$userName}\") no existe."
 

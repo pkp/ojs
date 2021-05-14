@@ -13,142 +13,161 @@
  * @brief Annoucement Feed plugin class
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\linkAction\LinkAction;
+use PKP\plugins\GenericPlugin;
+use PKP\linkAction\request\AjaxModal;
+use PKP\core\JSONMessage;
 
-class AnnouncementFeedPlugin extends GenericPlugin {
-	/**
-	 * @copydoc Plugin::register()
-	 */
-	public function register($category, $path, $mainContextId = null) {
-		if (!parent::register($category, $path, $mainContextId)) return false;
-		if ($this->getEnabled($mainContextId)) {
-			HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
-			$this->import('AnnouncementFeedBlockPlugin');
-			PluginRegistry::register('blocks', new AnnouncementFeedBlockPlugin($this), $this->getPluginPath());
+use APP\template\TemplateManager;
 
-			$this->import('AnnouncementFeedGatewayPlugin');
-			PluginRegistry::register('gateways', new AnnouncementFeedGatewayPlugin($this), $this->getPluginPath());
-		}
-		return true;
-	}
+class AnnouncementFeedPlugin extends GenericPlugin
+{
+    /**
+     * @copydoc Plugin::register()
+     *
+     * @param null|mixed $mainContextId
+     */
+    public function register($category, $path, $mainContextId = null)
+    {
+        if (!parent::register($category, $path, $mainContextId)) {
+            return false;
+        }
+        if ($this->getEnabled($mainContextId)) {
+            HookRegistry::register('TemplateManager::display', [$this, 'callbackAddLinks']);
+            $this->import('AnnouncementFeedBlockPlugin');
+            PluginRegistry::register('blocks', new AnnouncementFeedBlockPlugin($this), $this->getPluginPath());
 
-	/**
-	 * Get the display name of this plugin
-	 * @return string
-	 */
-	public function getDisplayName() {
-		return __('plugins.generic.announcementfeed.displayName');
-	}
+            $this->import('AnnouncementFeedGatewayPlugin');
+            PluginRegistry::register('gateways', new AnnouncementFeedGatewayPlugin($this), $this->getPluginPath());
+        }
+        return true;
+    }
 
-	/**
-	 * Get the description of this plugin
-	 * @return string
-	 */
-	public function getDescription() {
-		return __('plugins.generic.announcementfeed.description');
-	}
+    /**
+     * Get the display name of this plugin
+     *
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return __('plugins.generic.announcementfeed.displayName');
+    }
 
-	/**
-	 * Add links to the feeds.
-	 * @param $hookName string
-	 * @param $args array
-	 * @return boolean Hook processing status
-	 */
-	public function callbackAddLinks($hookName, $args) {
-		$request = Application::get()->getRequest();
-		if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
-			$templateManager = $args[0];
-			$currentJournal = $templateManager->getTemplateVars('currentJournal');
-			$announcementsEnabled = $currentJournal ? $currentJournal->getData('enableAnnouncements') : false;
+    /**
+     * Get the description of this plugin
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return __('plugins.generic.announcementfeed.description');
+    }
 
-			if (!$announcementsEnabled) {
-				return false;
-			}
+    /**
+     * Add links to the feeds.
+     *
+     * @param $hookName string
+     * @param $args array
+     *
+     * @return boolean Hook processing status
+     */
+    public function callbackAddLinks($hookName, $args)
+    {
+        $request = Application::get()->getRequest();
+        if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
+            $templateManager = $args[0];
+            $currentJournal = $templateManager->getTemplateVars('currentJournal');
+            $announcementsEnabled = $currentJournal ? $currentJournal->getData('enableAnnouncements') : false;
 
-			$displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
+            if (!$announcementsEnabled) {
+                return false;
+            }
 
-			// Define when the <link> elements should appear
-			$contexts = 'frontend';
-			if ($displayPage == 'homepage') {
-				$contexts = array('frontend-index', 'frontend-announcement');
-			} elseif ($displayPage == 'announcement') {
-				$contexts = 'frontend-' . $displayPage;
-			}
+            $displayPage = $currentJournal ? $this->getSetting($currentJournal->getId(), 'displayPage') : null;
 
-			$templateManager->addHeader(
-				'announcementsAtom+xml',
-				'<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'atom')) . '">',
-				array(
-					'contexts' => $contexts,
-				)
-			);
-			$templateManager->addHeader(
-				'announcementsRdf+xml',
-				'<link rel="alternate" type="application/rdf+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss')) . '">',
-				array(
-					'contexts' => $contexts,
-				)
-			);
-			$templateManager->addHeader(
-				'announcementsRss+xml',
-				'<link rel="alternate" type="application/rss+xml" href="'. $request->url(null, 'gateway', 'plugin', array('AnnouncementFeedGatewayPlugin', 'rss2')) . '">',
-				array(
-					'contexts' => $contexts,
-				)
-			);
-		}
+            // Define when the <link> elements should appear
+            $contexts = 'frontend';
+            if ($displayPage == 'homepage') {
+                $contexts = ['frontend-index', 'frontend-announcement'];
+            } elseif ($displayPage == 'announcement') {
+                $contexts = 'frontend-' . $displayPage;
+            }
 
-		return false;
-	}
+            $templateManager->addHeader(
+                'announcementsAtom+xml',
+                '<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', ['AnnouncementFeedGatewayPlugin', 'atom']) . '">',
+                [
+                    'contexts' => $contexts,
+                ]
+            );
+            $templateManager->addHeader(
+                'announcementsRdf+xml',
+                '<link rel="alternate" type="application/rdf+xml" href="' . $request->url(null, 'gateway', 'plugin', ['AnnouncementFeedGatewayPlugin', 'rss']) . '">',
+                [
+                    'contexts' => $contexts,
+                ]
+            );
+            $templateManager->addHeader(
+                'announcementsRss+xml',
+                '<link rel="alternate" type="application/rss+xml" href="' . $request->url(null, 'gateway', 'plugin', ['AnnouncementFeedGatewayPlugin', 'rss2']) . '">',
+                [
+                    'contexts' => $contexts,
+                ]
+            );
+        }
 
-	/**
-	 * @copydoc Plugin::getActions()
-	 */
-	public function getActions($request, $verb) {
-		$router = $request->getRouter();
-		import('lib.pkp.classes.linkAction.request.AjaxModal');
-		return array_merge(
-			$this->getEnabled()?array(
-				new LinkAction(
-					'settings',
-					new AjaxModal(
-						$router->url($request, null, null, 'manage', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic')),
-						$this->getDisplayName()
-					),
-					__('manager.plugins.settings'),
-					null
-				),
-			):array(),
-			parent::getActions($request, $verb)
-		);
-	}
+        return false;
+    }
 
- 	/**
-	 * @copydoc Plugin::manage()
-	 */
-	public function manage($args, $request) {
-		switch ($request->getUserVar('verb')) {
-			case 'settings':
-				$context = $request->getContext();
+    /**
+     * @copydoc Plugin::getActions()
+     */
+    public function getActions($request, $verb)
+    {
+        $router = $request->getRouter();
+        return array_merge(
+            $this->getEnabled() ? [
+                new LinkAction(
+                    'settings',
+                    new AjaxModal(
+                        $router->url($request, null, null, 'manage', null, ['verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic']),
+                        $this->getDisplayName()
+                    ),
+                    __('manager.plugins.settings'),
+                    null
+                ),
+            ] : [],
+            parent::getActions($request, $verb)
+        );
+    }
 
-				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
-				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->registerPlugin('function', 'plugin_url', array($this, 'smartyPluginUrl'));
+    /**
+     * @copydoc Plugin::manage()
+     */
+    public function manage($args, $request)
+    {
+        switch ($request->getUserVar('verb')) {
+            case 'settings':
+                $context = $request->getContext();
 
-				$this->import('AnnouncementFeedSettingsForm');
-				$form = new AnnouncementFeedSettingsForm($this, $context->getId());
+                AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_MANAGER);
+                $templateMgr = TemplateManager::getManager($request);
+                $templateMgr->registerPlugin('function', 'plugin_url', [$this, 'smartyPluginUrl']);
 
-				if ($request->getUserVar('save')) {
-					$form->readInputData();
-					if ($form->validate()) {
-						$form->execute();
-						return new JSONMessage(true);
-					}
-				} else {
-					$form->initData();
-				}
-				return new JSONMessage(true, $form->fetch($request));
-		}
-		return parent::manage($args, $request);
-	}
+                $this->import('AnnouncementFeedSettingsForm');
+                $form = new AnnouncementFeedSettingsForm($this, $context->getId());
+
+                if ($request->getUserVar('save')) {
+                    $form->readInputData();
+                    if ($form->validate()) {
+                        $form->execute();
+                        return new JSONMessage(true);
+                    }
+                } else {
+                    $form->initData();
+                }
+                return new JSONMessage(true, $form->fetch($request));
+        }
+        return parent::manage($args, $request);
+    }
 }

@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-19 12:40+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
+"gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"O DN e o contrasinal do administrador só son necesarios se están activadas "
+"as opcións de sincronización usuario/a - contrasinal ou de creación de "
+"usuarios/as. Pódense omitir estas opcións se se vai utilizar LDAP só para "
+"autenticación."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Contrasinal do administrador"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Por exemplo : « cn=Manager,dc=example,dc=com »"
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "DN Administrador"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Por exemplo : « ou=people,dc=example,dc=com »"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "DN Base"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Opcional. Utiliza por defecto 389 (LDAP) ou 636 (LDAP sobre SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Porto do servidor"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"Por exemplo : « ldap.example.com » ou  « ldaps://ldap.example.com » (para "
+"utilizar SSL)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Nome do servidor"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Configuración de LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Este módulo permite a autenticación e sincronización de contas de usuarios/"
+"as por medio dunha fonte de datos LDAP externa."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Propiedades de seguridade SASL"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "ID de autorización requirida"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Dominio"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Por exemplo, \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Mecanismo SASL"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Utilice SASL en lugar dunha autenticación simple"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Configuración SASL (opcional)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+"Formato Hash para os contrasinais almacenados no servidor. Recoméndase SSHA."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Encriptación de contrasinal"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"O atributo cuxo valor identifica unicamente un obxecto de usuario/a, como "
+"uid ou vc ou sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atributo do nome da conta"

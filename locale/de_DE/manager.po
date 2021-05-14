@@ -784,11 +784,6 @@ msgstr "Kennung des Inhalts der Zeitschrift"
 msgid "manager.setup.publisher"
 msgstr "Verlag, Organisation"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Diese Details werden in den Metadaten bereitgestellt, die von Dritten "
-"ausgelesen werden können."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Verlinkung von Literaturverweisen"
 
@@ -1682,12 +1677,6 @@ msgstr "Registrierung erfolgreich!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI-Präfix fehlt für die Zeitschrift mit dem Pfad {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "FEHLER:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Der angegebene Zeitschriftenpfad, \"{$journalPath}\", existiert nicht."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Die angegebenen Objekte konnten nicht gefunden werden."
 
@@ -1765,9 +1754,6 @@ msgstr ""
 
 msgid "manager.setup.searchEngineIndexing.success"
 msgstr "Die Suchmaschinenindex-Einstellungen wurden aktualisiert."
-
-msgid "manager.setup.publishing"
-msgstr "Veröffentlichungsdetails"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "Die Datenschutzerklärung wurde aktualisiert."

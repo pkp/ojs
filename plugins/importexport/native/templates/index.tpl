@@ -56,16 +56,17 @@
 
 				{fbvFormButtons submitText="plugins.importexport.native.import" hideCancel="true"}
 			{/fbvFormArea}
+			<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 		</form>
 	</div>
 	<div id="exportSubmissions-tab">
 		<script type="text/javascript">
 			$(function() {ldelim}
 				// Attach the form handler.
-				$('#exportXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+				$('#exportXmlForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 			{rdelim});
 		</script>
-		<form id="exportXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
+		<form id="exportXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissionsBounce"}" method="post">
 			{csrf}
 			{fbvFormArea id="submissionsXmlForm"}
 				<submissions-list-panel
@@ -112,14 +113,15 @@
 		<script type="text/javascript">
 			$(function() {ldelim}
 				// Attach the form handler.
-				$('#exportIssuesXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+				$('#exportIssuesXmlForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 			{rdelim});
 		</script>
-		<form id="exportIssuesXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
+		<form id="exportIssuesXmlForm" class="pkp_form" action="{plugin_url path="exportIssuesBounce"}" method="post">
 			{csrf}
 			{fbvFormArea id="issuesXmlForm"}
-				{capture assign="issuesListGridUrl"}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}{/capture}
+				{capture assign="issuesListGridUrl"}{url router=PKPApplication::ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}{/capture}
 				{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
+
 				{fbvFormButtons submitText="plugins.importexport.native.exportIssues" hideCancel="true"}
 			{/fbvFormArea}
 		</form>

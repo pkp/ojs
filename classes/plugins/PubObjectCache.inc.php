@@ -13,6 +13,15 @@
  * @brief A cache for publication objects required during export.
  */
 
+namespace APP\plugins;
+
+use PKP\submission\Genre;
+
+use APP\submission\Submission;
+
+// FIXME: Add namespacing
+use \Issue;
+use \ArticleGalley;
 
 class PubObjectCache {
 	/* @var array */
@@ -28,20 +37,20 @@ class PubObjectCache {
 	 * @param $parent Submission|null Only required when adding a galley.
 	 */
 	function add($object, $parent) {
-		if (is_a($object, 'Issue')) {
+		if ($object instanceof Issue) {
 			$this->_insertInternally($object, 'issues', $object->getId());
 		}
-		if (is_a($object, 'Submission')) {
+		if ($object instanceof Submission) {
 			$this->_insertInternally($object, 'articles', $object->getId());
 			$this->_insertInternally($object, 'articlesByIssue', $object->getcurrentPublication()->getData('issueId'), $object->getId());
 		}
-		if (is_a($object, 'ArticleGalley')) {
-			assert(is_a($parent, 'Submission'));
+		if ($object instanceof ArticleGalley) {
+			assert($parent instanceof Submission);
 			$this->_insertInternally($object, 'galleys', $object->getId());
 			$this->_insertInternally($object, 'galleysByArticle', $object->getData('submissionId'), $object->getId());
 			$this->_insertInternally($object, 'galleysByIssue', $parent->getIssueId(), $object->getId());
 		}
-		if (is_a($object, 'Genre')) {
+		if ($object instanceof Genre) {
 			$this->_insertInternally($object, 'genres', $object->getId());
 		}
 	}
@@ -143,4 +152,6 @@ class PubObjectCache {
 	}
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\PubObjectCache', '\PubObjectCache');
+}

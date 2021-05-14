@@ -988,15 +988,8 @@ msgstr ""
 msgid "manager.setup.referenceLinking"
 msgstr "Odkazovanie na referencie"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Názov organizácie vydávajúcej časopis bude zobrazený v časti O časopise."
-
 msgid "manager.setup.publisher"
 msgstr "Vydavateľ"
-
-msgid "manager.setup.publishing"
-msgstr "Podrobnosti o publikovaní"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "Identifikácia obsahu časopisu"
@@ -1763,12 +1756,6 @@ msgstr ""
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Špecifikované objekty sa nepodarilo nájsť."
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Vybraná adresa časopisu  \"{$journalPath}\" neexistuje."
-
-msgid "plugins.importexport.common.cliError"
-msgstr "CHYBA:"
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Prefix DOI chýba pre časopis na adrese {$path}."

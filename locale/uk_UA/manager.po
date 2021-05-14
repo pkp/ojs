@@ -753,9 +753,6 @@ msgstr "Ідентифікація змісту журналу"
 msgid "manager.setup.publisher"
 msgstr "Видавець"
 
-msgid "manager.setup.publishingDescription"
-msgstr "Назва установи-видавця журналу, яка має бути відображена на сторінці \"Про журнал\"."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Гіперпосилання у пристатейній бібліографії"
 
@@ -1617,12 +1614,6 @@ msgstr "Реєстрація пройшла успішно!"
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Відсутній префікс DOI для журналу з адресою {$path}."
-
-msgid "plugins.importexport.common.cliError"
-msgstr "ПОМИЛКА:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Вказаний шлях журналу \"{$journalPath}\" не існує."
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Не вдалось знайти вказані об'єкти."

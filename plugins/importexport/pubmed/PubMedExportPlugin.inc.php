@@ -15,227 +15,250 @@
 
 import('lib.pkp.classes.plugins.ImportExportPlugin');
 
-class PubMedExportPlugin extends ImportExportPlugin {
-	/**
-	 * @copydoc Plugin::register()
-	 */
-	function register($category, $path, $mainContextId = null) {
-		$success = parent::register($category, $path, $mainContextId);
-		$this->addLocaleData();
-		return $success;
-	}
+use PKP\file\FileManager;
 
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'PubMedExportPlugin';
-	}
+use APP\template\TemplateManager;
 
-	/**
-	 * Get the display name.
-	 * @return string
-	 */
-	function getDisplayName() {
-		return __('plugins.importexport.pubmed.displayName');
-	}
+class PubMedExportPlugin extends ImportExportPlugin
+{
+    /**
+     * @copydoc Plugin::register()
+     *
+     * @param null|mixed $mainContextId
+     */
+    public function register($category, $path, $mainContextId = null)
+    {
+        $success = parent::register($category, $path, $mainContextId);
+        $this->addLocaleData();
+        return $success;
+    }
 
-	/**
-	 * Get the display description.
-	 * @return string
-	 */
-	function getDescription() {
-		return __('plugins.importexport.pubmed.description');
-	}
+    /**
+     * Get the name of this plugin. The name must be unique within
+     * its category.
+     *
+     * @return String name of plugin
+     */
+    public function getName()
+    {
+        return 'PubMedExportPlugin';
+    }
 
-	/**
-	 * Display the plugin.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function display($args, $request) {
-		parent::display($args, $request);
-		$templateMgr = TemplateManager::getManager($request);
-		$context = $request->getContext();
-		switch (array_shift($args)) {
-			case 'index':
-			case '':
-				$apiUrl = $request->getDispatcher()->url($request, ROUTE_API, $context->getPath(), 'submissions');
-				$submissionsListPanel = new \APP\components\listPanels\SubmissionsListPanel(
-					'submissions',
-					__('common.publications'),
-					[
-						'apiUrl' => $apiUrl,
-						'count' => 100,
-						'getParams' => new stdClass(),
-						'lazyLoad' => true,
-					]
-				);
-				$submissionsConfig = $submissionsListPanel->getConfig();
-				$submissionsConfig['addUrl'] = '';
-				$submissionsConfig['filters'] = array_slice($submissionsConfig['filters'], 1);
-				$templateMgr->setState([
-					'components' => [
-						'submissions' => $submissionsConfig,
-					],
-				]);
-				$templateMgr->assign([
-					'pageComponent' => 'ImportExportPage',
-				]);
-				$templateMgr->display($this->getTemplateResource('index.tpl'));
-				break;
-			case 'exportSubmissions':
-				$exportXml = $this->exportSubmissions(
-					(array) $request->getUserVar('selectedSubmissions'),
-					$request->getContext(),
-					$request->getUser()
-				);
-				import('lib.pkp.classes.file.FileManager');
-				$fileManager = new FileManager();
-				$exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $context, '.xml');
-				$fileManager->writeFile($exportFileName, $exportXml);
-				$fileManager->downloadByPath($exportFileName);
-				$fileManager->deleteByPath($exportFileName);
-				break;
-			case 'exportIssues':
-				$exportXml = $this->exportIssues(
-					(array) $request->getUserVar('selectedIssues'),
-					$request->getContext(),
-					$request->getUser()
-				);
-				import('lib.pkp.classes.file.FileManager');
-				$fileManager = new FileManager();
-				$exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $context, '.xml');
-				$fileManager->writeFile($exportFileName, $exportXml);
-				$fileManager->downloadByPath($exportFileName);
-				$fileManager->deleteByPath($exportFileName);
-				break;
-			default:
-				$dispatcher = $request->getDispatcher();
-				$dispatcher->handle404();
-		}
-	}
+    /**
+     * Get the display name.
+     *
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return __('plugins.importexport.pubmed.displayName');
+    }
 
-	/**
-	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
-	 */
-	function getPluginSettingsPrefix() {
-		return 'pubmed';
-	}
+    /**
+     * Get the display description.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return __('plugins.importexport.pubmed.description');
+    }
 
-	function exportSubmissions($submissionIds, $context, $user) {
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
-		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
-		$exportFilter = array_shift($pubmedExportFilters);
-		$submissions = array();
-		foreach ($submissionIds as $submissionId) {
-			$submission = $submissionDao->getById($submissionId);
-			if ($submission && $submission->getData('contextId') == $context->getId()) $submissions[] = $submission;
-		}
-		libxml_use_internal_errors(true);
-		$submissionXml = $exportFilter->execute($submissions, true);
-		$xml = $submissionXml->saveXml();
-		$errors = array_filter(libxml_get_errors(), function($a) {
-			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
-		});
-		if (!empty($errors)) {
-			$this->displayXMLValidationErrors($errors, $xml);
-		}
-		return $xml;
-	}
+    /**
+     * Display the plugin.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     */
+    public function display($args, $request)
+    {
+        parent::display($args, $request);
+        $templateMgr = TemplateManager::getManager($request);
+        $context = $request->getContext();
+        switch (array_shift($args)) {
+            case 'index':
+            case '':
+                $apiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $context->getPath(), 'submissions');
+                $submissionsListPanel = new \APP\components\listPanels\SubmissionsListPanel(
+                    'submissions',
+                    __('common.publications'),
+                    [
+                        'apiUrl' => $apiUrl,
+                        'count' => 100,
+                        'getParams' => new stdClass(),
+                        'lazyLoad' => true,
+                    ]
+                );
+                $submissionsConfig = $submissionsListPanel->getConfig();
+                $submissionsConfig['addUrl'] = '';
+                $submissionsConfig['filters'] = array_slice($submissionsConfig['filters'], 1);
+                $templateMgr->setState([
+                    'components' => [
+                        'submissions' => $submissionsConfig,
+                    ],
+                ]);
+                $templateMgr->assign([
+                    'pageComponent' => 'ImportExportPage',
+                ]);
+                $templateMgr->display($this->getTemplateResource('index.tpl'));
+                break;
+            case 'exportSubmissions':
+                $exportXml = $this->exportSubmissions(
+                    (array) $request->getUserVar('selectedSubmissions'),
+                    $request->getContext(),
+                    $request->getUser()
+                );
+                $fileManager = new FileManager();
+                $exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $context, '.xml');
+                $fileManager->writeFile($exportFileName, $exportXml);
+                $fileManager->downloadByPath($exportFileName);
+                $fileManager->deleteByPath($exportFileName);
+                break;
+            case 'exportIssues':
+                $exportXml = $this->exportIssues(
+                    (array) $request->getUserVar('selectedIssues'),
+                    $request->getContext(),
+                    $request->getUser()
+                );
+                $fileManager = new FileManager();
+                $exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $context, '.xml');
+                $fileManager->writeFile($exportFileName, $exportXml);
+                $fileManager->downloadByPath($exportFileName);
+                $fileManager->deleteByPath($exportFileName);
+                break;
+            default:
+                $dispatcher = $request->getDispatcher();
+                $dispatcher->handle404();
+        }
+    }
 
-	/**
-	 * Get the XML for a set of issues.
-	 * @param $issueIds array Array of issue IDs
-	 * @param $context Context
-	 * @param $user User
-	 * @return string XML contents representing the supplied issue IDs.
-	 */
-	function exportIssues($issueIds, $context, $user) {
-		$filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
-		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
-		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
-		$exportFilter = array_shift($pubmedExportFilters);
-		$submissionsIterator = Services::get('submission')->getMany([
-			'contextId' => $context->getId(),
-			'issueIds' => $issueIds,
-		]);
-		libxml_use_internal_errors(true);
-		$submissionXml = $exportFilter->execute(iterator_to_array($submissionsIterator), true);
-		$xml = $submissionXml->saveXml();
-		$errors = array_filter(libxml_get_errors(), function($a) {
-			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
-		});
-		if (!empty($errors)) {
-			$this->displayXMLValidationErrors($errors, $xml);
-		}
-		return $xml;
-	}
+    /**
+     * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
+     */
+    public function getPluginSettingsPrefix()
+    {
+        return 'pubmed';
+    }
 
-	/**
-	 * Execute import/export tasks using the command-line interface.
-	 * @param $args Parameters to the plugin
-	 */
-	function executeCLI($scriptName, &$args) {
-//		$command = array_shift($args);
-		$xmlFile = array_shift($args);
-		$journalPath = array_shift($args);
+    public function exportSubmissions($submissionIds, $context, $user)
+    {
+        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+        $filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
+        $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
+        assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
+        $exportFilter = array_shift($pubmedExportFilters);
+        $submissions = [];
+        foreach ($submissionIds as $submissionId) {
+            $submission = $submissionDao->getById($submissionId);
+            if ($submission && $submission->getData('contextId') == $context->getId()) {
+                $submissions[] = $submission;
+            }
+        }
+        libxml_use_internal_errors(true);
+        $submissionXml = $exportFilter->execute($submissions, true);
+        $xml = $submissionXml->saveXml();
+        $errors = array_filter(libxml_get_errors(), function ($a) {
+            return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+        });
+        if (!empty($errors)) {
+            $this->displayXMLValidationErrors($errors, $xml);
+        }
+        return $xml;
+    }
 
-		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+    /**
+     * Get the XML for a set of issues.
+     *
+     * @param $issueIds array Array of issue IDs
+     * @param $context Context
+     * @param $user User
+     *
+     * @return string XML contents representing the supplied issue IDs.
+     */
+    public function exportIssues($issueIds, $context, $user)
+    {
+        $filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
+        $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
+        assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
+        $exportFilter = array_shift($pubmedExportFilters);
+        $submissionsIterator = Services::get('submission')->getMany([
+            'contextId' => $context->getId(),
+            'issueIds' => $issueIds,
+        ]);
+        libxml_use_internal_errors(true);
+        $submissionXml = $exportFilter->execute(iterator_to_array($submissionsIterator), true);
+        $xml = $submissionXml->saveXml();
+        $errors = array_filter(libxml_get_errors(), function ($a) {
+            return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+        });
+        if (!empty($errors)) {
+            $this->displayXMLValidationErrors($errors, $xml);
+        }
+        return $xml;
+    }
 
-		$journal = $journalDao->getByPath($journalPath);
+    /**
+     * Execute import/export tasks using the command-line interface.
+     *
+     * @param $args Parameters to the plugin
+     */
+    public function executeCLI($scriptName, &$args)
+    {
+        //		$command = array_shift($args);
+        $xmlFile = array_shift($args);
+        $journalPath = array_shift($args);
 
-		if (!$journal) {
-			if ($journalPath != '') {
-				echo __('plugins.importexport.pubmed.cliError') . "\n";
-				echo __('plugins.importexport.pubmed.error.unknownJournal', array('journalPath' => $journalPath)) . "\n\n";
-			}
-			$this->usage($scriptName);
-			return;
-		}
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
-		if ($xmlFile != '') switch (array_shift($args)) {
-			case 'articles':
-				$articleSearch = new ArticleSearch();
-				$results = $articleSearch->formatResults($args);
-				if (!$this->exportArticles($results, $xmlFile)) {
-					echo __('plugins.importexport.pubmed.cliError') . "\n";
-					echo __('plugins.importexport.pubmed.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
-				}
-				return;
-			case 'issue':
-				$issueId = array_shift($args);
-				$issue = $issueDao->getByBestId($issueId, $journal->getId());
-				if ($issue == null) {
-					echo __('plugins.importexport.pubmed.cliError') . "\n";
-					echo __('plugins.importexport.pubmed.export.error.issueNotFound', array('issueId' => $issueId)) . "\n\n";
-					return;
-				}
-				$issues = array($issue);
-				if (!$this->exportIssues($journal, $issues, $xmlFile)) {
-					echo __('plugins.importexport.pubmed.cliError') . "\n";
-					echo __('plugins.importexport.pubmed.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
-				}
-				return;
-		}
-		$this->usage($scriptName);
+        $journal = $journalDao->getByPath($journalPath);
 
-	}
+        if (!$journal) {
+            if ($journalPath != '') {
+                echo __('plugins.importexport.pubmed.cliError') . "\n";
+                echo __('plugins.importexport.pubmed.error.unknownJournal', ['journalPath' => $journalPath]) . "\n\n";
+            }
+            $this->usage($scriptName);
+            return;
+        }
 
-	/**
-	 * Display the command-line usage information
-	 */
-	function usage($scriptName) {
-		echo __('plugins.importexport.pubmed.cliUsage', array(
-			'scriptName' => $scriptName,
-			'pluginName' => $this->getName()
-		)) . "\n";
-	}
+        if ($xmlFile != '') {
+            switch (array_shift($args)) {
+            case 'articles':
+                $articleSearch = new ArticleSearch();
+                $results = $articleSearch->formatResults($args);
+                if (!$this->exportArticles($results, $xmlFile)) {
+                    echo __('plugins.importexport.pubmed.cliError') . "\n";
+                    echo __('plugins.importexport.pubmed.export.error.couldNotWrite', ['fileName' => $xmlFile]) . "\n\n";
+                }
+                return;
+            case 'issue':
+                $issueId = array_shift($args);
+                $issue = $issueDao->getByBestId($issueId, $journal->getId());
+                if ($issue == null) {
+                    echo __('plugins.importexport.pubmed.cliError') . "\n";
+                    echo __('plugins.importexport.pubmed.export.error.issueNotFound', ['issueId' => $issueId]) . "\n\n";
+                    return;
+                }
+                $issues = [$issue];
+                if (!$this->exportIssues($journal, $issues, $xmlFile)) {
+                    echo __('plugins.importexport.pubmed.cliError') . "\n";
+                    echo __('plugins.importexport.pubmed.export.error.couldNotWrite', ['fileName' => $xmlFile]) . "\n\n";
+                }
+                return;
+        }
+        }
+        $this->usage($scriptName);
+    }
+
+    /**
+     * Display the command-line usage information
+     */
+    public function usage($scriptName)
+    {
+        echo __('plugins.importexport.pubmed.cliUsage', [
+            'scriptName' => $scriptName,
+            'pluginName' => $this->getName()
+        ]) . "\n";
+    }
 }
-
-

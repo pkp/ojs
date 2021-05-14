@@ -13,6 +13,9 @@
  * @brief Handle plugin grid requests.
  */
 
+use PKP\security\authorization\PluginAccessPolicy;
+use PKP\security\authorization\ContextAccessPolicy;
+
 import('lib.pkp.classes.controllers.grid.plugins.PluginGridHandler');
 
 class SettingsPluginGridHandler extends PluginGridHandler {
@@ -73,20 +76,18 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 		$categoryName = $request->getUserVar('category');
 		$pluginName = $request->getUserVar('plugin');
 		if ($categoryName && $pluginName) {
-			import('lib.pkp.classes.security.authorization.PluginAccessPolicy');
 			switch ($request->getRequestedOp()) {
 				case 'enable':
 				case 'disable':
 				case 'manage':
-					$accessMode = ACCESS_MODE_MANAGE;
+					$accessMode = PluginAccessPolicy::ACCESS_MODE_MANAGE;
 					break;
 				default:
-					$accessMode = ACCESS_MODE_ADMIN;
+					$accessMode = PluginAccessPolicy::ACCESS_MODE_ADMIN;
 					break;
 			}
 			$this->addPolicy(new PluginAccessPolicy($request, $args, $roleAssignments, $accessMode));
 		} else {
-			import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
 			$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 		}
 		return parent::authorize($request, $args, $roleAssignments);

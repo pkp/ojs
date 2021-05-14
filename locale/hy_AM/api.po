@@ -1,2 +1,70 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-05-05 12:44+0000\n"
+"Last-Translator: Liana Arustamyan <lianaarustamyan33@gmail.com>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/api/hy_AM/>"
+"\n"
+"Language: hy_AM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Հարցված հրապարակումը այս նյութի մաս չէ։"
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Հարցված հրապարակումը այս ամսագրի մաս չէ։"
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Վճարման ընտրված մեթոդը չի խրախուսվում։"
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Դուք չունեք թույլտվություն էլ․ փոստի այս ձևաչափը այլ ամսագիր տեղափոխելու "
+"համար։"
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Հարցված ամսագիրը չի գտնվել։"
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Դուք չունեք այս ամսագիրը ջնջելու թույլտվություն։"
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Դուք չունեք թույլտվություն այս ամսագիրը խմբագրելու համար։"
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Դուք չեք կարող խմբագրել ամսագիրը կայքի API-ից։"
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Դուք չեք կարող դիտել կամ խմբագրել այս ամսագիրը, քանի դեռ հարցում չեք կատարել "
+"ամսագրի API-ի  կամ ամբողջ կայքի API-ի համար:"
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Դուք չունեք թույլտվություն այս ամսագիրը դիտելու համար։"
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr ""
+"Դուք կարող եք տեսնել միայն այն ամսագրերը, որոնց համար տրված է թույլտվություն։"
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Դուք չունեք թույլտվություն տեսնելու չհրապարակված համարը։"
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Դուք չեք կարող փոխել  ամսագիրը։"
+
+msgid "api.emails.403.disabled"
+msgstr "Մեյլով ծանուցման ֆունկցիան այս ամսագրի համար միացված չէ։"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Ձեր կողմից հարցված հայտարարությունը այս ամսագրի մաս չէ։"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "You can not associate a file from this file stage with a galley."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Նյութ ստեղծելու կամ խմբագրելու համար Դուք պետք է հարցում կատարեք ամսագրի API-"
+"ի վերջնակետին։"

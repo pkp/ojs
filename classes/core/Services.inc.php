@@ -9,20 +9,25 @@
  *
  * @class Services
  * @ingroup core
+ *
  * @see Core
  *
  * @brief Pimple Dependency Injection Container.
  */
 
-import('lib.pkp.classes.core.PKPServices');
+namespace APP\core;
 
-class Services extends PKPServices  {
+class Services extends \PKP\core\PKPServices
+{
+    /**
+     * container initialization
+     */
+    protected function init()
+    {
+        $this->container->register(new \APP\services\OJSServiceProvider());
+    }
+}
 
-	/**
-	 * container initialization
-	 */
-	protected function init() {
-		$this->container->register(new APP\Services\OJSServiceProvider());
-	}
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\core\Services', '\Services');
 }

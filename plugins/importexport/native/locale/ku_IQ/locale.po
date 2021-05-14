@@ -26,12 +26,14 @@ msgstr ""
 "ناونیشانی بەشی\"{$section1Title}\" و ناونیشانی بەشی\"{$section2Title}\" لە \""
 "{$issueTitle}\" لەگەڵ بەشێکی دیکەی گۆڤارەکە هاوشێوەیە."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "بەکارهێنەری دیاریکراو: \"{$userName}\"بەردەست نییە."
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "بەشێکی نەناسراو {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "بەکارهێنان: {$scriptName} {$pluginName} [command] ...\n"

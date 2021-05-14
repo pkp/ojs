@@ -15,4 +15,6 @@
 
 import('lib.pkp.controllers.grid.navigationMenus.form.PKPNavigationMenuItemsForm');
 
-class NavigationMenuItemsForm extends PKPNavigationMenuItemsForm { }
+class NavigationMenuItemsForm extends PKPNavigationMenuItemsForm
+{
+}

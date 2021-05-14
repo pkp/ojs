@@ -9,14 +9,14 @@
  *
  * @class Author
  * @ingroup article
+ *
  * @see AuthorDAO
  *
  * @brief Article author metadata class.
  */
 
+use \PKP\submission\PKPAuthor;
 
-import('lib.pkp.classes.submission.PKPAuthor');
-
-class Author extends PKPAuthor {
+class Author extends PKPAuthor
+{
 }
-

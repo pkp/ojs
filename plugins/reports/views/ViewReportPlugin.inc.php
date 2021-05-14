@@ -16,124 +16,132 @@
 
 import('lib.pkp.classes.plugins.ReportPlugin');
 
-class ViewReportPlugin extends ReportPlugin {
-	/**
-	 * @copydoc Plugin::register()
-	 */
-	function register($category, $path, $mainContextId = null) {
-		$success = parent::register($category, $path, $mainContextId);
-		$this->addLocaleData();
-		return $success;
-	}
+use \PKP\submission\PKPSubmission;
 
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	function getName() {
-		return 'ViewReportPlugin';
-	}
+class ViewReportPlugin extends ReportPlugin
+{
+    /**
+     * @copydoc Plugin::register()
+     *
+     * @param null|mixed $mainContextId
+     */
+    public function register($category, $path, $mainContextId = null)
+    {
+        $success = parent::register($category, $path, $mainContextId);
+        $this->addLocaleData();
+        return $success;
+    }
 
-	function getDisplayName() {
-		return __('plugins.reports.views.displayName');
-	}
+    /**
+     * Get the name of this plugin. The name must be unique within
+     * its category.
+     *
+     * @return String name of plugin
+     */
+    public function getName()
+    {
+        return 'ViewReportPlugin';
+    }
 
-	function getDescription() {
-		return __('plugins.reports.views.description');
-	}
+    public function getDisplayName()
+    {
+        return __('plugins.reports.views.displayName');
+    }
 
-	/**
-	 * @copydoc ReportPlugin::display()
-	 */
-	function display($args, $request) {
-		$context = $request->getContext();
+    public function getDescription()
+    {
+        return __('plugins.reports.views.description');
+    }
 
-		$columns = array(
-			__('plugins.reports.views.articleId'),
-			__('plugins.reports.views.articleTitle'),
-			__('issue.issue'),
-			__('plugins.reports.views.datePublished'),
-			__('plugins.reports.views.abstractViews'),
-			__('plugins.reports.views.galleyViews'),
-		);
-		$galleyLabels = array();
-		$galleyViews = array();
-		$galleyViewTotals = array();
-		$abstractViewCounts = array();
-		$issueIdentifications = array();
-		$issueDatesPublished = array();
-		$articleTitles = array();
-		$articleIssueIdentificationMap = array();
+    /**
+     * @copydoc ReportPlugin::display()
+     */
+    public function display($args, $request)
+    {
+        $context = $request->getContext();
 
-		import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_PUBLISHED
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$submissionsIterator = Services::get('submission')->getMany([
-			'contextId' => $context->getId(),
-			'status' => STATUS_PUBLISHED,
-		]);
-		foreach ($submissionsIterator as $submission) {
-			$articleId = $submission->getId();
-			$issueId = $submission->getCurrentPublication()->getData('issueId');
-			$articleTitles[$articleId] = PKPString::regexp_replace( "/\r|\n/", "", $submission->getLocalizedTitle() );
+        $columns = [
+            __('plugins.reports.views.articleId'),
+            __('plugins.reports.views.articleTitle'),
+            __('issue.issue'),
+            __('plugins.reports.views.datePublished'),
+            __('plugins.reports.views.abstractViews'),
+            __('plugins.reports.views.galleyViews'),
+        ];
+        $galleyLabels = [];
+        $galleyViews = [];
+        $galleyViewTotals = [];
+        $abstractViewCounts = [];
+        $issueIdentifications = [];
+        $issueDatesPublished = [];
+        $articleTitles = [];
+        $articleIssueIdentificationMap = [];
 
-			// Store the abstract view count
-			$abstractViewCounts[$articleId] = $submission->getViews();
-			// Make sure we get the issue identification
-			$articleIssueIdentificationMap[$articleId] = $issueId;
-			if (!isset($issueIdentifications[$issueId])) {
-				$issue = $issueDao->getById($issueId);
-				$issueIdentifications[$issueId] = $issue->getIssueIdentification();
-				$issueDatesPublished[$issueId] = $issue->getDatePublished();
-				unset($issue);
-			}
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+        $submissionsIterator = Services::get('submission')->getMany([
+            'contextId' => $context->getId(),
+            'status' => PKPSubmission::STATUS_PUBLISHED,
+        ]);
+        foreach ($submissionsIterator as $submission) {
+            $articleId = $submission->getId();
+            $issueId = $submission->getCurrentPublication()->getData('issueId');
+            $articleTitles[$articleId] = PKPString::regexp_replace("/\r|\n/", '', $submission->getLocalizedTitle());
 
-			// For each galley, store the label and the count
-			$galleys = $submission->getGalleys();
-			$galleyViews[$articleId] = array();
-			$galleyViewTotals[$articleId] = 0;
-			foreach ($galleys as $galley) {
-				$label = $galley->getGalleyLabel();
-				$i = array_search($label, $galleyLabels);
-				if ($i === false) {
-					$i = count($galleyLabels);
-					$galleyLabels[] = $label;
-				}
+            // Store the abstract view count
+            $abstractViewCounts[$articleId] = $submission->getViews();
+            // Make sure we get the issue identification
+            $articleIssueIdentificationMap[$articleId] = $issueId;
+            if (!isset($issueIdentifications[$issueId])) {
+                $issue = $issueDao->getById($issueId);
+                $issueIdentifications[$issueId] = $issue->getIssueIdentification();
+                $issueDatesPublished[$issueId] = $issue->getDatePublished();
+                unset($issue);
+            }
 
-				// Make sure the array is the same size as in previous iterations
-				//  so that we insert values into the right location
-				$galleyViews[$articleId] = array_pad($galleyViews[$articleId], count($galleyLabels), '');
+            // For each galley, store the label and the count
+            $galleys = $submission->getGalleys();
+            $galleyViews[$articleId] = [];
+            $galleyViewTotals[$articleId] = 0;
+            foreach ($galleys as $galley) {
+                $label = $galley->getGalleyLabel();
+                $i = array_search($label, $galleyLabels);
+                if ($i === false) {
+                    $i = count($galleyLabels);
+                    $galleyLabels[] = $label;
+                }
 
-				$views = $galley->getViews();
-				$galleyViews[$articleId][$i] = $views;
-				$galleyViewTotals[$articleId] += $views;
-			}
-		}
+                // Make sure the array is the same size as in previous iterations
+                //  so that we insert values into the right location
+                $galleyViews[$articleId] = array_pad($galleyViews[$articleId], count($galleyLabels), '');
 
-		header('content-type: text/comma-separated-values');
-		header('content-disposition: attachment; filename=views-' . date('Ymd') . '.csv');
-		$fp = fopen('php://output', 'wt');
-		//Add BOM (byte order mark) to fix UTF-8 in Excel
-		fprintf($fp, chr(0xEF).chr(0xBB).chr(0xBF));
-		fputcsv($fp, array_merge($columns, $galleyLabels));
+                $views = $galley->getViews();
+                $galleyViews[$articleId][$i] = $views;
+                $galleyViewTotals[$articleId] += $views;
+            }
+        }
 
-		ksort($abstractViewCounts);
-		$dateFormatShort = $context->getLocalizedDateFormatShort();
-		foreach ($abstractViewCounts as $articleId => $abstractViewCount) {
-			$values = array(
-				$articleId,
-				$articleTitles[$articleId],
-				$issueIdentifications[$articleIssueIdentificationMap[$articleId]],
-				strftime($dateFormatShort, strtotime($issueDatesPublished[$articleIssueIdentificationMap[$articleId]])),
-				$abstractViewCount,
-				$galleyViewTotals[$articleId]
-			);
+        header('content-type: text/comma-separated-values');
+        header('content-disposition: attachment; filename=views-' . date('Ymd') . '.csv');
+        $fp = fopen('php://output', 'wt');
+        //Add BOM (byte order mark) to fix UTF-8 in Excel
+        fprintf($fp, chr(0xEF) . chr(0xBB) . chr(0xBF));
+        fputcsv($fp, array_merge($columns, $galleyLabels));
 
-			fputcsv($fp, array_merge($values, $galleyViews[$articleId]));
-		}
+        ksort($abstractViewCounts);
+        $dateFormatShort = $context->getLocalizedDateFormatShort();
+        foreach ($abstractViewCounts as $articleId => $abstractViewCount) {
+            $values = [
+                $articleId,
+                $articleTitles[$articleId],
+                $issueIdentifications[$articleIssueIdentificationMap[$articleId]],
+                strftime($dateFormatShort, strtotime($issueDatesPublished[$articleIssueIdentificationMap[$articleId]])),
+                $abstractViewCount,
+                $galleyViewTotals[$articleId]
+            ];
 
-		fclose($fp);
-	}
+            fputcsv($fp, array_merge($values, $galleyViews[$articleId]));
+        }
+
+        fclose($fp);
+    }
 }
-
-

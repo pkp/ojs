@@ -12,51 +12,58 @@
  * @brief Access policy to limit access to journals that do not publish online.
  */
 
-import('lib.pkp.classes.security.authorization.PolicySet');
-import('lib.pkp.classes.security.authorization.AuthorizationPolicy');
+namespace APP\security\authorization;
 
-class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
+use PKP\security\authorization\PolicySet;
+use PKP\security\authorization\AuthorizationPolicy;
 
-	var $_context;
+class OjsJournalMustPublishPolicy extends AuthorizationPolicy
+{
+    public $_context;
 
-	/**
-	 * Constructor
-	 * @param $request PKPRequest
-	 * @param $args array request arguments
-	 * @param $roleAssignments array
-	 */
-	function __construct($request) {
-		parent::__construct('user.authorization.journalDoesNotPublish');
-		$this->_context = $request->getContext();
-	}
+    /**
+     * Constructor
+     *
+     * @param $request PKPRequest
+     */
+    public function __construct($request)
+    {
+        parent::__construct('user.authorization.journalDoesNotPublish');
+        $this->_context = $request->getContext();
+    }
 
-	//
-	// Implement template methods from AuthorizationPolicy
-	//
-	function effect() {
-		if (!$this->_context) return AUTHORIZATION_DENY;
+    //
+    // Implement template methods from AuthorizationPolicy
+    //
+    public function effect()
+    {
+        if (!$this->_context) {
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
+        }
 
-		// Certain roles are allowed to see unpublished content.
-		$userRoles = (array) $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-		if (count(array_intersect(
-			$userRoles,
-			array(
-				ROLE_ID_MANAGER,
-				ROLE_ID_SITE_ADMIN,
-				ROLE_ID_ASSISTANT,
-				ROLE_ID_SUB_EDITOR,
-				ROLE_ID_SUBSCRIPTION_MANAGER,
-			)
-		))>0) {
-			return AUTHORIZATION_PERMIT;
-		}
+        // Certain roles are allowed to see unpublished content.
+        $userRoles = (array) $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        if (count(array_intersect(
+            $userRoles,
+            [
+                ROLE_ID_MANAGER,
+                ROLE_ID_SITE_ADMIN,
+                ROLE_ID_ASSISTANT,
+                ROLE_ID_SUB_EDITOR,
+                ROLE_ID_SUBSCRIPTION_MANAGER,
+            ]
+        )) > 0) {
+            return AuthorizationPolicy::AUTHORIZATION_PERMIT;
+        }
 
-		if ($this->_context->getData('publishingMode') == PUBLISHING_MODE_NONE) {
-			return AUTHORIZATION_DENY;
-		}
+        if ($this->_context->getData('publishingMode') == PUBLISHING_MODE_NONE) {
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
+        }
 
-		return AUTHORIZATION_PERMIT;
-	}
+        return AuthorizationPolicy::AUTHORIZATION_PERMIT;
+    }
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\security\authorization\OjsJournalMustPublishPolicy', '\OjsJournalMustPublishPolicy');
+}

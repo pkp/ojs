@@ -15,76 +15,83 @@
 
 import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
 
-class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
+class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
+{
+    /** @var Submission **/
+    public $_submission;
 
-	/** @var Submission **/
-	var $_submission;
+    /** @var Publication **/
+    public $_publication;
 
-	/** @var Publication **/
-	var $_publication;
+    public $_isEditable;
 
-	var $_isEditable;
+    /**
+     * Constructor
+     *
+     * @param $submission Submission
+     */
+    public function __construct($submission, $publication, $isEditable)
+    {
+        parent::__construct();
+        $this->_submission = $submission;
+        $this->_publication = $publication;
+        $this->_isEditable = $isEditable;
+    }
 
-	/**
-	 * Constructor
-	 * @param $submission Submission
-	 */
-	function __construct($submission, $publication, $isEditable) {
-		parent::__construct();
-		$this->_submission = $submission;
-		$this->_publication = $publication;
-		$this->_isEditable = $isEditable;
-	}
+    //
+    // Template methods from GridCellProvider
+    //
+    /**
+     * @copydoc GridCellProvider::getTemplateVarsFromRowColumn()
+     */
+    public function getTemplateVarsFromRowColumn($row, $column)
+    {
+        $element = $row->getData();
+        $columnId = $column->getId();
+        assert($element instanceof \PKP\core\DataObject && !empty($columnId));
 
-	//
-	// Template methods from GridCellProvider
-	//
-	/**
-	 * @copydoc GridCellProvider::getTemplateVarsFromRowColumn()
-	 */
-	function getTemplateVarsFromRowColumn($row, $column) {
-		$element = $row->getData();
-		$columnId = $column->getId();
-		assert(is_a($element, 'DataObject') && !empty($columnId));
+        switch ($columnId) {
+            case 'label':
+                return [
+                    'label' => ($element->getRemoteUrl() == '' && $element->getFileId()) ? '' : $element->getLabel()
+                ];
+                break;
+            default: assert(false);
+        }
+        return parent::getTemplateVarsFromRowColumn($row, $column);
+    }
 
-		switch ($columnId) {
-			case 'label':
-				return array(
-					'label' => ($element->getRemoteUrl()=='' && $element->getFileId())?'':$element->getLabel()
-				);
-				break;
-			default: assert(false);
-		}
-		return parent::getTemplateVarsFromRowColumn($row, $column);
-	}
+    /**
+     * Get request arguments.
+     *
+     * @param $row GridRow
+     *
+     * @return array
+     */
+    public function getRequestArgs($row)
+    {
+        return [
+            'submissionId' => $this->_submission->getId(),
+            'publicationId' => $this->_publication->getId(),
+        ];
+    }
 
-	/**
-	 * Get request arguments.
-	 * @param $row GridRow
-	 * @return array
-	 */
-	function getRequestArgs($row) {
-		return array(
-			'submissionId' => $this->_submission->getId(),
-			'publicationId' => $this->_publication->getId(),
-		);
-	}
+    /**
+     * @copydoc GridCellProvider::getCellActions()
+     */
+    public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
+    {
+        switch ($column->getId()) {
+            case 'label':
+                $element = $row->getData();
+                if ($element->getRemoteUrl() != '' || !$element->getData('submissionFileId')) {
+                    break;
+                }
 
-	/**
-	 * @copydoc GridCellProvider::getCellActions()
-	 */
-	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
-		switch ($column->getId()) {
-			case 'label':
-				$element = $row->getData();
-				if ($element->getRemoteUrl() != '' || !$element->getData('submissionFileId')) break;
-
-				$submissionFile = Services::get('submissionFile')->get($element->getData('submissionFileId'));
-				import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');
-				return array(new DownloadFileLinkAction($request, $submissionFile, WORKFLOW_STAGE_ID_PRODUCTION, $element->getLabel()));
-		}
-		return parent::getCellActions($request, $row, $column, $position);
-	}
+                $submissionFile = Services::get('submissionFile')->get($element->getData('submissionFileId'));
+                import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');
+                return [new DownloadFileLinkAction($request, $submissionFile, WORKFLOW_STAGE_ID_PRODUCTION, $element->getLabel())];
+        }
+        return parent::getCellActions($request, $row, $column, $position);
+    }
 }
-
-

@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_generic_driver Driver Plugin
  */
- 
+
 /**
  * @file plugins/generic/driver/index.php
  *
@@ -18,5 +18,3 @@
 require_once('DRIVERPlugin.inc.php');
 
 return new DRIVERPlugin();
-
-

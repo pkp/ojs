@@ -1,2 +1,94 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-03-29 17:24+0000\n"
+"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
+"uz_UZ@latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL xavfsizlik xususiyatlari"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Talab qilingan avtorizatsiya identifikatori (ID)"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Domen (Realm)"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Masalan, \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL mexanizmi"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Oddiy autentifikatsiya o'rniga SASL-dan foydalaning"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL sozlamalari (ixtiyoriy)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Serverda saqlangan parollar uchun xash formati. SSHA tavsiya etiladi."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Parolni shifrlash"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"uid yoki cn yoki sAMAccountName kabi qiymati foydalanuvchi ob'ektini noyob "
+"ravishda aniqlaydigan atribut."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Hisob nomi atributi"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"Menejer DN va parol faqat foydalanuvchi profilini / parolni sinxronlash yoki "
+"foydalanuvchi yaratish imkoniyatlari yoqilgan bo'lsa talab qilinadi. Agar "
+"LDAP-dan faqat autentifikatsiya qilish uchun foydalanilsa, u holda ushbu "
+"parametrlarni bekor qilish mumkin."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Menejer paroli"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Masalan, \"cn = menejer, dc = example, dc = com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Menejer DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Masalan, \"ou = odamlar, dc = example, dc = com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "DN bazasi"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Ixtiyoriy. Standartlar 389 (LDAP) yoki 636 (SSL orqali LDAP)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Server porti"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"Masalan, \"ldap.example.com\" yoki \"ldaps: //ldap.example.com\" (SSL dan "
+"foydalanish uchun)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Server nomi"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP sozlamalari"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Ushbu plagin autentifikatsiya qilish va tashqi LDAP ma'lumot manbalariga "
+"nisbatan foydalanuvchi hisoblarini sinxronlashtirishga imkon beradi."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "Modul \"LDAP\""

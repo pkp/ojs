@@ -17,7 +17,6 @@
 <data>
 	<sql>
 		<!-- unsubscribe url #5048 -->
-		<query>UPDATE email_templates_default_data SET body=concat(body, '<hr /> {$unsubscribeLink}') where email_key = 'NOTIFICATION'</query>
-		<query>UPDATE email_templates_data SET body=concat(body, '<hr /> {$unsubscribeLink}') where email_key = 'NOTIFICATION'</query>
+		<query>UPDATE email_templates_default_data SET body=concat(body, '&lt;hr /&gt; {$unsubscribeLink}') where email_key = 'NOTIFICATION' and not body like '%{$unsubscribeLink}%'</query>
 	</sql>
 </data>

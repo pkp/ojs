@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2020-12-13 11:52+0000\n"
+"PO-Revision-Date: 2021-05-07 22:05+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sl_SI/>\n"
@@ -1694,12 +1694,6 @@ msgstr "Registracija je bila uspešna!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Revija s potjo {$path} nima DOI prefiksa."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "NAPAKA:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Podana pot revije, \"{$journalPath}\", ne obstaja."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Izbranih objektov ni bilo mogoče najti."
 
@@ -1827,14 +1821,6 @@ msgstr ""
 "Recenzenti ne bodo dobili dostopa do članka dokler se ne bodo strinjali z "
 "opravljanjem recenzije."
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Te podrobnosti so lahko vključene v metapodatke tretjih oseb, ki arhivirajo "
-"ali indeksirajo revijo."
-
-msgid "manager.setup.publishing"
-msgstr "Podrobnosti objavljanja"
-
 msgid "manager.setup.numPageLinks.description"
 msgstr "Omejite število prikazanih povezav do nadaljnjih strani v seznamu."
 
@@ -1935,3 +1921,25 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Vsaj ena rubrik amora biti aktivna. Če želite preprečiti oddajo novih "
 "prispevkov, to naredite med nastavitvami delovnega toka."
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Proces razčlenjevanja prelomov številk se ni končal uspešno"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Rezultati izvoza številk"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Za revijo ni določenega primarnega kontakta. Primarni kontakt lahko določite "
+"na <a href=\"{$url}\">nastavitvah revije</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "Pošlji kopijo emaila s potrditvijo oddaje na primarni kontakt revije."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Izberite državo lokacije revije, oziroma državo naslova revije ali "
+"izdajatelja."

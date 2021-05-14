@@ -9,20 +9,25 @@
  *
  * @class Dc11MetadataPluginTest
  * @ingroup plugins_metadata_dc11_tests
+ *
  * @see Dc11MetadataPlugin
  *
  * @brief Test class for Dc11MetadataPlugin.
  */
 
+import('classes.core.Request'); // Cause mocked Request to be loaded
+import('classes.i18n.AppLocale'); // Cause mocked AppLocale to be loaded
+
 import('lib.pkp.plugins.metadata.dc11.tests.PKPDc11MetadataPluginTest');
 
-class Dc11MetadataPluginTest extends PKPDc11MetadataPluginTest {
-	/**
-	 * @covers Dc11MetadataPlugin
-	 * @covers PKPDc11MetadataPlugin
-	 */
-	public function testDc11MetadataPlugin($appSpecificFilters = array()) {
-		parent::testDc11MetadataPlugin(array_merge($appSpecificFilters, array(('article=>dc11'))));
-	}
+class Dc11MetadataPluginTest extends PKPDc11MetadataPluginTest
+{
+    /**
+     * @covers Dc11MetadataPlugin
+     * @covers PKPDc11MetadataPlugin
+     */
+    public function testDc11MetadataPlugin($appSpecificFilters = [])
+    {
+        parent::testDc11MetadataPlugin(array_merge($appSpecificFilters, [('article=>dc11')]));
+    }
 }
-

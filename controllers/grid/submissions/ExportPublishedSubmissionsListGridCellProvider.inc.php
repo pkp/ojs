@@ -15,124 +15,133 @@
 
 import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
 
-class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellProvider {
-	/** @var ImportExportPlugin */
-	var $_plugin;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RedirectAction;
+use PKP\linkAction\request\AjaxModal;
 
-	/**
-	 * Constructor
-	 */
-	function __construct($plugin, $authorizedRoles = null) {
-		$this->_plugin  = $plugin;
-		if ($authorizedRoles) {
-			$this->_authorizedRoles = $authorizedRoles;
-		}
-		parent::__construct();
-	}
+use APP\core\Services;
+use APP\submission\Submission;
 
-	//
-	// Template methods from GridCellProvider
-	//
-	/**
-	 * Get cell actions associated with this row/column combination
-	 *
-	 * @copydoc GridCellProvider::getCellActions()
-	 */
-	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
-		$submission = $row->getData();
-		$columnId = $column->getId();
-		assert(is_a($submission, 'Submission') && !empty($columnId));
+class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellProvider
+{
+    /** @var ImportExportPlugin */
+    public $_plugin;
 
-		import('lib.pkp.classes.linkAction.request.RedirectAction');
-		switch ($columnId) {
-			case 'title':
-				$this->_titleColumn = $column;
-				$title = $submission->getLocalizedTitle();
-				if (empty($title)) $title = __('common.untitled');
-				$authorsInTitle = $submission->getShortAuthorString();
-				$title = $authorsInTitle . '; ' . $title;
-				import('classes.core.Services');
-				return array(
-					new LinkAction(
-						'itemWorkflow',
-						new RedirectAction(
-							Services::get('submission')->getWorkflowUrlByUserRoles($submission)
-						),
-						htmlspecialchars($title)
-					)
-				);
-			case 'issue':
-				$contextId = $submission->getContextId();
-				$issueId = $submission->getCurrentPublication()->getData('issueId');
-				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-				$issue = $issueDao->getById($issueId, $contextId);
-				if ($issue) {
-					// Link to the issue edit modal
-					$application = Application::get();
-					$dispatcher = $application->getDispatcher();
-					import('lib.pkp.classes.linkAction.request.AjaxModal');
-					return array(
-						new LinkAction(
-							'edit',
-							new AjaxModal(
-								$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $issue->getId())),
-								__('plugins.importexport.common.settings.DOIPluginSettings')
-							),
-							htmlspecialchars($issue->getIssueIdentification()),
-							null
-						)
-					);
-				}
-				break;
-			case 'status':
-				$status = $submission->getData($this->_plugin->getDepositStatusSettingName());
-				$statusNames = $this->_plugin->getStatusNames();
-				$statusActions = $this->_plugin->getStatusActions($submission);
-				if ($status && array_key_exists($status, $statusActions)) {
-					assert(array_key_exists($status, $statusNames));
-					return array($statusActions[$status]);
-				}
-				break;
-		}
-		return parent::getCellActions($request, $row, $column, $position);
-	}
+    /**
+     * Constructor
+     *
+     * @param null|mixed $authorizedRoles
+     */
+    public function __construct($plugin, $authorizedRoles = null)
+    {
+        $this->_plugin = $plugin;
+        if ($authorizedRoles) {
+            $this->_authorizedRoles = $authorizedRoles;
+        }
+        parent::__construct();
+    }
 
-	/**
-	 * Extracts variables for a given column from a data element
-	 * so that they may be assigned to template before rendering.
-	 *
-	 * @copydoc DataObjectGridCellProvider::getTemplateVarsFromRowColumn()
-	 */
-	function getTemplateVarsFromRowColumn($row, $column) {
-		$submission = $row->getData();
-		$columnId = $column->getId();
-		assert(is_a($submission, 'Submission') && !empty($columnId));
+    //
+    // Template methods from GridCellProvider
+    //
+    /**
+     * Get cell actions associated with this row/column combination
+     *
+     * @copydoc GridCellProvider::getCellActions()
+     */
+    public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
+    {
+        $submission = $row->getData();
+        $columnId = $column->getId();
+        assert($submission instanceof Submission && !empty($columnId));
 
-		switch ($columnId) {
-			case 'id':
-				return array('label' => $submission->getId());
-			case 'title':
-				return array('label' => '');
-			case 'issue':
-				return array('label' => '');
-			case 'status':
-				$status = $submission->getData($this->_plugin->getDepositStatusSettingName());
-				$statusNames = $this->_plugin->getStatusNames();
-				$statusActions = $this->_plugin->getStatusActions($submission);
-				if ($status) {
-					if (array_key_exists($status, $statusActions)) {
-						$label = '';
-					} else {
-						assert(array_key_exists($status, $statusNames));
-						$label = $statusNames[$status];
-					}
-				} else {
-					$label = $statusNames[EXPORT_STATUS_NOT_DEPOSITED];
-				}
-				return array('label' => $label);
-		}
-	}
+        switch ($columnId) {
+            case 'title':
+                $this->_titleColumn = $column;
+                $title = $submission->getLocalizedTitle();
+                if (empty($title)) {
+                    $title = __('common.untitled');
+                }
+                $authorsInTitle = $submission->getShortAuthorString();
+                $title = $authorsInTitle . '; ' . $title;
+                return [
+                    new LinkAction(
+                        'itemWorkflow',
+                        new RedirectAction(
+                            Services::get('submission')->getWorkflowUrlByUserRoles($submission)
+                        ),
+                        htmlspecialchars($title)
+                    )
+                ];
+            case 'issue':
+                $contextId = $submission->getContextId();
+                $issueId = $submission->getCurrentPublication()->getData('issueId');
+                $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+                $issue = $issueDao->getById($issueId, $contextId);
+                if ($issue) {
+                    // Link to the issue edit modal
+                    $application = Application::get();
+                    $dispatcher = $application->getDispatcher();
+                    return [
+                        new LinkAction(
+                            'edit',
+                            new AjaxModal(
+                                $dispatcher->url($request, PKPApplication::ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, ['issueId' => $issue->getId()]),
+                                __('plugins.importexport.common.settings.DOIPluginSettings')
+                            ),
+                            htmlspecialchars($issue->getIssueIdentification()),
+                            null
+                        )
+                    ];
+                }
+                break;
+            case 'status':
+                $status = $submission->getData($this->_plugin->getDepositStatusSettingName());
+                $statusNames = $this->_plugin->getStatusNames();
+                $statusActions = $this->_plugin->getStatusActions($submission);
+                if ($status && array_key_exists($status, $statusActions)) {
+                    assert(array_key_exists($status, $statusNames));
+                    return [$statusActions[$status]];
+                }
+                break;
+        }
+        return parent::getCellActions($request, $row, $column, $position);
+    }
 
+    /**
+     * Extracts variables for a given column from a data element
+     * so that they may be assigned to template before rendering.
+     *
+     * @copydoc DataObjectGridCellProvider::getTemplateVarsFromRowColumn()
+     */
+    public function getTemplateVarsFromRowColumn($row, $column)
+    {
+        $submission = $row->getData();
+        $columnId = $column->getId();
+        assert($submission instanceof Submission && !empty($columnId));
+
+        switch ($columnId) {
+            case 'id':
+                return ['label' => $submission->getId()];
+            case 'title':
+                return ['label' => ''];
+            case 'issue':
+                return ['label' => ''];
+            case 'status':
+                $status = $submission->getData($this->_plugin->getDepositStatusSettingName());
+                $statusNames = $this->_plugin->getStatusNames();
+                $statusActions = $this->_plugin->getStatusActions($submission);
+                if ($status) {
+                    if (array_key_exists($status, $statusActions)) {
+                        $label = '';
+                    } else {
+                        assert(array_key_exists($status, $statusNames));
+                        $label = $statusNames[$status];
+                    }
+                } else {
+                    $label = $statusNames[EXPORT_STATUS_NOT_DEPOSITED];
+                }
+                return ['label' => $label];
+        }
+    }
 }
-
-

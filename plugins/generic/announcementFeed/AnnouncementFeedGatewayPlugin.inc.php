@@ -16,136 +16,158 @@
 
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
-class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
-	protected $_parentPlugin;
+use PKP\db\DBResultRange;
 
-	/**
-	 * Constructor
-	 * @param $parentPlugin AnnouncementFeedPlugin
-	 */
-	function __construct($parentPlugin) {
-		$this->_parentPlugin = $parentPlugin;
-		parent::__construct();
-	}
+use \APP\template\TemplateManager;
 
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	public function getName() {
-		return 'AnnouncementFeedGatewayPlugin';
-	}
+class AnnouncementFeedGatewayPlugin extends GatewayPlugin
+{
+    protected $_parentPlugin;
 
-	/**
-	 * Hide this plugin from the management interface (it's subsidiary)
-	 */
-	public function getHideManagement() {
-		return true;
-	}
+    /**
+     * Constructor
+     *
+     * @param $parentPlugin AnnouncementFeedPlugin
+     */
+    public function __construct($parentPlugin)
+    {
+        $this->_parentPlugin = $parentPlugin;
+        parent::__construct();
+    }
 
-	/**
-	 * @copydoc Plugin::getDisplayName()
-	 */
-	public function getDisplayName() {
-		return __('plugins.generic.announcementfeed.displayName');
-	}
+    /**
+     * Get the name of this plugin. The name must be unique within
+     * its category.
+     *
+     * @return String name of plugin
+     */
+    public function getName()
+    {
+        return 'AnnouncementFeedGatewayPlugin';
+    }
 
-	/**
-	 * @copydoc Plugin::getDescription()
-	 */
-	public function getDescription() {
-		return __('plugins.generic.announcementfeed.description');
-	}
+    /**
+     * Hide this plugin from the management interface (it's subsidiary)
+     */
+    public function getHideManagement()
+    {
+        return true;
+    }
 
-	/**
-	 * Override the builtin to get the correct plugin path.
-	 */
-	public function getPluginPath() {
-		return $this->_parentPlugin->getPluginPath();
-	}
+    /**
+     * @copydoc Plugin::getDisplayName()
+     */
+    public function getDisplayName()
+    {
+        return __('plugins.generic.announcementfeed.displayName');
+    }
 
-	/**
-	 * Get whether or not this plugin is enabled. (Should always return true, as the
-	 * parent plugin will take care of loading this one when needed)
-	 * @return boolean
-	 */
-	public function getEnabled() {
-		return $this->_parentPlugin->getEnabled();
-	}
+    /**
+     * @copydoc Plugin::getDescription()
+     */
+    public function getDescription()
+    {
+        return __('plugins.generic.announcementfeed.description');
+    }
 
-	/**
-	 * Handle fetch requests for this plugin.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	public function fetch($args, $request) {
-		// Make sure we're within a Journal context
-		$journal = $request->getJournal();
-		if (!$journal) return false;
+    /**
+     * Override the builtin to get the correct plugin path.
+     */
+    public function getPluginPath()
+    {
+        return $this->_parentPlugin->getPluginPath();
+    }
 
-		// Make sure announcements and plugin are enabled
-		$announcementsEnabled = $journal->getData('enableAnnouncements');
-		if (!$announcementsEnabled || !$this->_parentPlugin->getEnabled()) return false;
+    /**
+     * Get whether or not this plugin is enabled. (Should always return true, as the
+     * parent plugin will take care of loading this one when needed)
+     *
+     * @return boolean
+     */
+    public function getEnabled()
+    {
+        return $this->_parentPlugin->getEnabled();
+    }
 
-		// Make sure the feed type is specified and valid
-		$type = array_shift($args);
-		$typeMap = array(
-			'rss' => 'rss.tpl',
-			'rss2' => 'rss2.tpl',
-			'atom' => 'atom.tpl'
-		);
-		$mimeTypeMap = array(
-			'rss' => 'application/rdf+xml',
-			'rss2' => 'application/rss+xml',
-			'atom' => 'application/atom+xml'
-		);
-		if (!isset($typeMap[$type])) return false;
+    /**
+     * Handle fetch requests for this plugin.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     */
+    public function fetch($args, $request)
+    {
+        // Make sure we're within a Journal context
+        $journal = $request->getJournal();
+        if (!$journal) {
+            return false;
+        }
 
-		// Get limit setting, if any
-		$recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
+        // Make sure announcements and plugin are enabled
+        $announcementsEnabled = $journal->getData('enableAnnouncements');
+        if (!$announcementsEnabled || !$this->_parentPlugin->getEnabled()) {
+            return false;
+        }
 
-		$announcementDao = DAORegistry::getDAO('AnnouncementDAO'); /* @var $announcementDao AnnouncementDAO */
-		$journalId = $journal->getId();
-		if ($recentItems > 0) {
-			import('lib.pkp.classes.db.DBResultRange');
-			$rangeInfo = new DBResultRange($recentItems, 1);
-			$announcements = $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo)->toArray();
-		} else {
-			$announcements =  $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId)->toArray();
-		}
+        // Make sure the feed type is specified and valid
+        $type = array_shift($args);
+        $typeMap = [
+            'rss' => 'rss.tpl',
+            'rss2' => 'rss2.tpl',
+            'atom' => 'atom.tpl'
+        ];
+        $mimeTypeMap = [
+            'rss' => 'application/rdf+xml',
+            'rss2' => 'application/rss+xml',
+            'atom' => 'application/atom+xml'
+        ];
+        if (!isset($typeMap[$type])) {
+            return false;
+        }
 
-		// Get date of most recent announcement
-		$lastDateUpdated = $this->_parentPlugin->getSetting($journal->getId(), 'dateUpdated');
-		if (empty($announcements)) {
-			if (empty($lastDateUpdated)) {
-				$dateUpdated = Core::getCurrentDate();
-				$this->_parentPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
-			} else {
-				$dateUpdated = $lastDateUpdated;
-			}
-		} else {
-			$mostRecentAnnouncement = $announcementDao->getMostRecentAnnouncementByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
-			$dateUpdated = $mostRecentAnnouncement->getDatetimePosted();
-			if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) {
-				$this->_parentPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
-			}
-		}
+        // Get limit setting, if any
+        $recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
 
-		$versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
-		$version = $versionDao->getCurrentVersion();
+        $announcementDao = DAORegistry::getDAO('AnnouncementDAO'); /* @var $announcementDao AnnouncementDAO */
+        $journalId = $journal->getId();
+        if ($recentItems > 0) {
+            $rangeInfo = new DBResultRange($recentItems, 1);
+            $announcements = $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo)->toArray();
+        } else {
+            $announcements = $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId)->toArray();
+        }
 
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign(array(
-			'ojsVersion' => $version->getVersionString(),
-			'selfUrl' => $request->getCompleteUrl(),
-			'dateUpdated' => $dateUpdated,
-			'announcements' => $announcements,
-			'journal' => $journal,
-		));
+        // Get date of most recent announcement
+        $lastDateUpdated = $this->_parentPlugin->getSetting($journal->getId(), 'dateUpdated');
+        if (empty($announcements)) {
+            if (empty($lastDateUpdated)) {
+                $dateUpdated = Core::getCurrentDate();
+                $this->_parentPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
+            } else {
+                $dateUpdated = $lastDateUpdated;
+            }
+        } else {
+            $mostRecentAnnouncement = $announcementDao->getMostRecentAnnouncementByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
+            $dateUpdated = $mostRecentAnnouncement->getDatetimePosted();
+            if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) {
+                $this->_parentPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
+            }
+        }
 
-		$templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
+        $versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
+        $version = $versionDao->getCurrentVersion();
 
-		return true;
-	}
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign([
+            'ojsVersion' => $version->getVersionString(),
+            'selfUrl' => $request->getCompleteUrl(),
+            'dateUpdated' => $dateUpdated,
+            'announcements' => $announcements,
+            'journal' => $journal,
+        ]);
+
+        $templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
+
+        return true;
+    }
 }

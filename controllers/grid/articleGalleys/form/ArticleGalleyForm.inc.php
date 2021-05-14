@@ -9,171 +9,182 @@
  *
  * @class ArticleGalleyForm
  * @ingroup controllers_grid_articleGalleys_form
+ *
  * @see ArticleGalley
  *
  * @brief Article galley editing form.
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
-class ArticleGalleyForm extends Form {
-	/** @var Submission */
-	var $_submission = null;
+use APP\template\TemplateManager;
+use APP\file\IssueFileManager;
 
-	/** @var Publication */
-	var $_publication = null;
+class ArticleGalleyForm extends Form
+{
+    /** @var Submission */
+    public $_submission = null;
 
-	/** @var ArticleGalley current galley */
-	var $_articleGalley = null;
+    /** @var Publication */
+    public $_publication = null;
 
-	/**
-	 * Constructor.
-	 * @param $submission Submission
-	 * @param $publication Publication
-	 * @param $articleGalley ArticleGalley (optional)
-	 */
-	function __construct($request, $submission, $publication, $articleGalley = null) {
-		parent::__construct('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
-		$this->_submission = $submission;
-		$this->_publication = $publication;
-		$this->_articleGalley = $articleGalley;
+    /** @var ArticleGalley current galley */
+    public $_articleGalley = null;
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
+    /**
+     * Constructor.
+     *
+     * @param $submission Submission
+     * @param $publication Publication
+     * @param $articleGalley ArticleGalley (optional)
+     */
+    public function __construct($request, $submission, $publication, $articleGalley = null)
+    {
+        parent::__construct('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
+        $this->_submission = $submission;
+        $this->_publication = $publication;
+        $this->_articleGalley = $articleGalley;
 
-		$this->addCheck(new FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
-		$this->addCheck(new FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
-		$this->addCheck(new FormValidatorPost($this));
-		$this->addCheck(new FormValidatorCSRF($this));
+        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
-		// Ensure a locale is provided and valid
-		$journal = $request->getJournal();
-		$this->addCheck(
-			new FormValidator(
-				$this,
-				'galleyLocale',
-				'required',
-				'editor.issues.galleyLocaleRequired'
-			),
-			function($galleyLocale) use ($journal) {
-				return in_array($galleyLocale, $journal->getSupportedSubmissionLocaleNames());
-			}
-		);
-	}
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
 
-	/**
-	 * @copydoc Form::fetch()
-	 */
-	function fetch($request, $template = null, $display = false) {
-		$templateMgr = TemplateManager::getManager($request);
-		if ($this->_articleGalley) {
-			$articleGalleyFile = $this->_articleGalley->getFile();
-			$templateMgr->assign([
-				'representationId' => $this->_articleGalley->getId(),
-				'articleGalley' => $this->_articleGalley,
-				'articleGalleyFile' => $articleGalleyFile,
-				'supportsDependentFiles' => $articleGalleyFile ? Services::get('submissionFile')->supportsDependentFiles($articleGalleyFile) : null,
-			]);
-		}
-		$context = $request->getContext();
-		$templateMgr->assign(array(
-			'supportedLocales' => $context->getSupportedSubmissionLocaleNames(),
-			'submissionId' => $this->_submission->getId(),
-			'publicationId' => $this->_publication->getId(),
-		));
+        // Ensure a locale is provided and valid
+        $journal = $request->getJournal();
+        $this->addCheck(
+            new \PKP\form\validation\FormValidator(
+                $this,
+                'galleyLocale',
+                'required',
+                'editor.issues.galleyLocaleRequired'
+            ),
+            function ($galleyLocale) use ($journal) {
+                return in_array($galleyLocale, $journal->getSupportedSubmissionLocaleNames());
+            }
+        );
+    }
 
-		return parent::fetch($request, $template, $display);
-	}
+    /**
+     * @copydoc Form::fetch()
+     *
+     * @param null|mixed $template
+     */
+    public function fetch($request, $template = null, $display = false)
+    {
+        $templateMgr = TemplateManager::getManager($request);
+        if ($this->_articleGalley) {
+            $articleGalleyFile = $this->_articleGalley->getFile();
+            $templateMgr->assign([
+                'representationId' => $this->_articleGalley->getId(),
+                'articleGalley' => $this->_articleGalley,
+                'articleGalleyFile' => $articleGalleyFile,
+                'supportsDependentFiles' => $articleGalleyFile ? Services::get('submissionFile')->supportsDependentFiles($articleGalleyFile) : null,
+            ]);
+        }
+        $context = $request->getContext();
+        $templateMgr->assign([
+            'supportedLocales' => $context->getSupportedSubmissionLocaleNames(),
+            'submissionId' => $this->_submission->getId(),
+            'publicationId' => $this->_publication->getId(),
+        ]);
 
-	/**
-	 * @copydoc Form::validate
-	 */
-	function validate($callHooks = true) {
+        return parent::fetch($request, $template, $display);
+    }
 
-		// Check if urlPath is already being used
-		if ($this->getData('urlPath')) {
-			if (ctype_digit((string) $this->getData('urlPath'))) {
-				$this->addError('urlPath', __('publication.urlPath.numberInvalid'));
-				$this->addErrorField('urlPath');
-			} else {
-				$articleGalley = Application::get()->getRepresentationDAO()->getByBestGalleyId($this->getData('urlPath'), $this->_publication->getId());
-				if ($articleGalley &&
-					(!$this->_articleGalley || $this->_articleGalley->getId() !== $articleGalley->getId())
-				) {
-					$this->addError('urlPath', __('publication.urlPath.duplicate'));
-					$this->addErrorField('urlPath');
-				}
-			}
-		}
+    /**
+     * @copydoc Form::validate
+     */
+    public function validate($callHooks = true)
+    {
 
-		return parent::validate($callHooks);
-	}
+        // Check if urlPath is already being used
+        if ($this->getData('urlPath')) {
+            if (ctype_digit((string) $this->getData('urlPath'))) {
+                $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
+                $this->addErrorField('urlPath');
+            } else {
+                $articleGalley = Application::get()->getRepresentationDAO()->getByBestGalleyId($this->getData('urlPath'), $this->_publication->getId());
+                if ($articleGalley &&
+                    (!$this->_articleGalley || $this->_articleGalley->getId() !== $articleGalley->getId())
+                ) {
+                    $this->addError('urlPath', __('publication.urlPath.duplicate'));
+                    $this->addErrorField('urlPath');
+                }
+            }
+        }
 
-	/**
-	 * Initialize form data from current galley (if applicable).
-	 */
-	function initData() {
-		if ($this->_articleGalley) {
-			$this->_data = array(
-				'label' => $this->_articleGalley->getLabel(),
-				'galleyLocale' => $this->_articleGalley->getLocale(),
-				'urlPath' => $this->_articleGalley->getData('urlPath'),
-				'urlRemote' => $this->_articleGalley->getData('urlRemote'),
-			);
-		} else {
-			$this->_data = array();
-		}
-	}
+        return parent::validate($callHooks);
+    }
 
-	/**
-	 * Assign form data to user-submitted data.
-	 */
-	function readInputData() {
-		$this->readUserVars(
-			array(
-				'label',
-				'galleyLocale',
-				'urlPath',
-				'urlRemote',
-			)
-		);
-	}
+    /**
+     * Initialize form data from current galley (if applicable).
+     */
+    public function initData()
+    {
+        if ($this->_articleGalley) {
+            $this->_data = [
+                'label' => $this->_articleGalley->getLabel(),
+                'galleyLocale' => $this->_articleGalley->getLocale(),
+                'urlPath' => $this->_articleGalley->getData('urlPath'),
+                'urlRemote' => $this->_articleGalley->getData('urlRemote'),
+            ];
+        } else {
+            $this->_data = [];
+        }
+    }
 
-	/**
-	 * Save changes to the galley.
-	 * @return ArticleGalley The resulting article galley.
-	 */
-	function execute(...$functionArgs) {
-		import('classes.file.IssueFileManager');
+    /**
+     * Assign form data to user-submitted data.
+     */
+    public function readInputData()
+    {
+        $this->readUserVars(
+            [
+                'label',
+                'galleyLocale',
+                'urlPath',
+                'urlRemote',
+            ]
+        );
+    }
 
-		$articleGalley = $this->_articleGalley;
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+    /**
+     * Save changes to the galley.
+     *
+     * @return ArticleGalley The resulting article galley.
+     */
+    public function execute(...$functionArgs)
+    {
+        $articleGalley = $this->_articleGalley;
+        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 
-		if ($articleGalley) {
-			$articleGalley->setLabel($this->getData('label'));
-			$articleGalley->setLocale($this->getData('galleyLocale'));
-			$articleGalley->setData('urlPath', $this->getData('urlPath'));
-			$articleGalley->setData('urlRemote', $this->getData('urlRemote'));
+        if ($articleGalley) {
+            $articleGalley->setLabel($this->getData('label'));
+            $articleGalley->setLocale($this->getData('galleyLocale'));
+            $articleGalley->setData('urlPath', $this->getData('urlPath'));
+            $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
-			// Update galley in the db
-			$articleGalleyDao->updateObject($articleGalley);
-		} else {
-			// Create a new galley
-			$articleGalley = $articleGalleyDao->newDataObject();
-			$articleGalley->setData('publicationId', $this->_publication->getId());
-			$articleGalley->setLabel($this->getData('label'));
-			$articleGalley->setLocale($this->getData('galleyLocale'));
-			$articleGalley->setData('urlPath', $this->getData('urlPath'));
-			$articleGalley->setData('urlRemote', $this->getData('urlRemote'));
+            // Update galley in the db
+            $articleGalleyDao->updateObject($articleGalley);
+        } else {
+            // Create a new galley
+            $articleGalley = $articleGalleyDao->newDataObject();
+            $articleGalley->setData('publicationId', $this->_publication->getId());
+            $articleGalley->setLabel($this->getData('label'));
+            $articleGalley->setLocale($this->getData('galleyLocale'));
+            $articleGalley->setData('urlPath', $this->getData('urlPath'));
+            $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
-			// Insert new galley into the db
-			$articleGalleyDao->insertObject($articleGalley);
-			$this->_articleGalley = $articleGalley;
-		}
+            // Insert new galley into the db
+            $articleGalleyDao->insertObject($articleGalley);
+            $this->_articleGalley = $articleGalley;
+        }
 
-		parent::execute(...$functionArgs);
+        parent::execute(...$functionArgs);
 
-		return $articleGalley;
-	}
+        return $articleGalley;
+    }
 }
-
-

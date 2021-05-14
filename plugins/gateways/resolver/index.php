@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_gateways_resolver Resolver Gateway Plugin
  */
- 
+
 /**
  * @file plugins/gateways/resolver/index.php
  *
@@ -19,5 +19,3 @@
 require_once('ResolverPlugin.inc.php');
 
 return new ResolverPlugin();
-
-

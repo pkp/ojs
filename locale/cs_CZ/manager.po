@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2020-12-04 19:12+0000\n"
+"PO-Revision-Date: 2021-05-07 08:53+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs_CZ/"
 ">\n"
@@ -630,9 +630,6 @@ msgstr "Identifikace obsahu časopisu"
 
 msgid "manager.setup.publisher"
 msgstr "Vydavatel"
-
-msgid "manager.setup.publishingDescription"
-msgstr "Název organizace vydávající časopis bude zobrazen v části O časopisu."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Odkazování na reference"
@@ -1587,12 +1584,6 @@ msgstr "Neplatné XML:"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Prefix DOI chybí pro časopis na adrese {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "CHYBA:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Vybraná adresa časopisu  \"{$journalPath}\" neexistuje."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Specifikované objekty nelze najít."
 
@@ -1749,9 +1740,6 @@ msgstr "Zahrnout zabezpečený odkaz do e-mailové pozvánky recenzentům."
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Omezte přístup k souborům"
 
-msgid "manager.setup.publishing"
-msgstr "Podrobnosti o publikování"
-
 msgid "manager.setup.privacyStatement.success"
 msgstr "Prohlášení o ochraně osobních údajů bylo aktualizováno."
 
@@ -1850,3 +1838,27 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Je třeba, aby byla  aktivní alespoň jedna sekce. Chcete-li zakázat všechny "
 "příspěvky do tohoto časopisu, přejděte do nastavení workflow."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Pro tento časopis nebyl definován žádný primární kontakt. Primární kontakt "
+"můžete zadat v <a href=\"{$url}\">nastavení deníku</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Zaslat kopii e-mailu s potvrzením o odeslání primárnímu kontaktu tohoto "
+"časopisu."
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" – \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Procesu se nepovedlo analyzovat sazebnice čísla"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Export výsledků čísla"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Vyberte zemi, kde se tento časopis nachází, nebo zemi ve které má časopis či "
+"jeho vydavatel oficiální adresu."

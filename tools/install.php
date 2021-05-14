@@ -17,34 +17,35 @@ require(dirname(__FILE__) . '/bootstrap.inc.php');
 
 import('lib.pkp.classes.cliTool.InstallTool');
 
-class OJSInstallTool extends InstallTool {
-	/**
-	 * Constructor.
-	 * @param $argv array command-line arguments
-	 */
-	function __construct($argv = array()) {
-		parent::__construct($argv);
-	}
+class OJSInstallTool extends \PKP\cliTool\InstallTool
+{
+    /**
+     * Constructor.
+     *
+     * @param $argv array command-line arguments
+     */
+    public function __construct($argv = [])
+    {
+        parent::__construct($argv);
+    }
 
-	/**
-	 * Read installation parameters from stdin.
-	 * FIXME: May want to implement an abstract "CLIForm" class handling input/validation.
-	 * FIXME: Use readline if available?
-	 */
-	function readParams() {
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_INSTALLER, LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER);
-		printf("%s\n", __('installer.appInstallation'));
+    /**
+     * Read installation parameters from stdin.
+     * FIXME: May want to implement an abstract "CLIForm" class handling input/validation.
+     * FIXME: Use readline if available?
+     */
+    public function readParams()
+    {
+        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_INSTALLER, LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER);
+        printf("%s\n", __('installer.appInstallation'));
 
-		parent::readParams();
+        parent::readParams();
 
-		$this->readParamBoolean('install', 'installer.installApplication');
+        $this->readParamBoolean('install', 'installer.installApplication');
 
-		return $this->params['install'];
-	}
-
+        return $this->params['install'];
+    }
 }
 
-$tool = new OJSInstallTool(isset($argv) ? $argv : array());
+$tool = new OJSInstallTool($argv ?? []);
 $tool->execute();
-
-

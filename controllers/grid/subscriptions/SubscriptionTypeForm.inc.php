@@ -13,171 +13,182 @@
  * @brief Form for journal managers to create/edit subscription types.
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
-class SubscriptionTypeForm extends Form {
-	/** @var $typeId int the ID of the subscription type being edited */
-	var $typeId;
+use APP\template\TemplateManager;
 
-	/** @var $validFormats array keys are valid subscription type formats */
-	var $validFormats;
+class SubscriptionTypeForm extends Form
+{
+    /** @var int $typeId the ID of the subscription type being edited */
+    public $typeId;
 
-	/** @var $validCurrencies array keys are valid subscription type currencies */
-	var $validCurrencies;
+    /** @var array $validFormats keys are valid subscription type formats */
+    public $validFormats;
 
-	/** @var $journalId int Journal ID */
-	var $journalId;
+    /** @var array $validCurrencies keys are valid subscription type currencies */
+    public $validCurrencies;
 
-	/**
-	 * Constructor
-	 * @param $journalId int Journal ID
-	 * @param typeId int leave as default for new subscription type
-	 */
-	function __construct($journalId, $typeId = null) {
-		$this->journalId = $journalId;
+    /** @var int $journalId Journal ID */
+    public $journalId;
 
-		import('classes.subscription.SubscriptionType');
-		$this->validFormats = array (
-			SUBSCRIPTION_TYPE_FORMAT_ONLINE => __('subscriptionTypes.format.online'),
-			SUBSCRIPTION_TYPE_FORMAT_PRINT => __('subscriptionTypes.format.print'),
-			SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => __('subscriptionTypes.format.printOnline')
-		);
+    /**
+     * Constructor
+     *
+     * @param $journalId int Journal ID
+     * @param typeId int leave as default for new subscription type
+     * @param null|mixed $typeId
+     */
+    public function __construct($journalId, $typeId = null)
+    {
+        $this->journalId = $journalId;
 
-		$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
-		$this->validCurrencies = array();
-		foreach ($isoCodes->getCurrencies() as $currency) {
-			$this->validCurrencies[$currency->getLetterCode()] = $currency->getLocalName() . ' (' . $currency->getLetterCode() . ')';
-		}
-		asort($this->validCurrencies);
+        import('classes.subscription.SubscriptionType');
+        $this->validFormats = [
+            SUBSCRIPTION_TYPE_FORMAT_ONLINE => __('subscriptionTypes.format.online'),
+            SUBSCRIPTION_TYPE_FORMAT_PRINT => __('subscriptionTypes.format.print'),
+            SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => __('subscriptionTypes.format.printOnline')
+        ];
 
-		$this->typeId = isset($typeId) ? (int) $typeId : null;
+        $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+        $this->validCurrencies = [];
+        foreach ($isoCodes->getCurrencies() as $currency) {
+            $this->validCurrencies[$currency->getLetterCode()] = $currency->getLocalName() . ' (' . $currency->getLetterCode() . ')';
+        }
+        asort($this->validCurrencies);
 
-		parent::__construct('payments/subscriptionTypeForm.tpl');
+        $this->typeId = isset($typeId) ? (int) $typeId : null;
 
-		// Type name is provided
-		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));
+        parent::__construct('payments/subscriptionTypeForm.tpl');
 
-		// Cost	is provided and is numeric and positive
-		$this->addCheck(new FormValidator($this, 'cost', 'required', 'manager.subscriptionTypes.form.costRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'cost', 'required', 'manager.subscriptionTypes.form.costNumeric', function($cost) {
-			return (is_numeric($cost) && $cost >= 0);
-		}));
+        // Type name is provided
+        $this->addCheck(new \PKP\form\validation\FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));
 
-		// Currency is provided and is valid value
-		$this->addCheck(new FormValidator($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));
-		$this->addCheck(new FormValidatorInSet($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyValid', array_keys($this->validCurrencies)));
+        // Cost	is provided and is numeric and positive
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'cost', 'required', 'manager.subscriptionTypes.form.costRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'cost', 'required', 'manager.subscriptionTypes.form.costNumeric', function ($cost) {
+            return (is_numeric($cost) && $cost >= 0);
+        }));
 
-		// Format is provided and is valid value
-		$this->addCheck(new FormValidator($this, 'format', 'required', 'manager.subscriptionTypes.form.formatRequired'));
-		$this->addCheck(new FormValidatorInSet($this, 'format', 'required', 'manager.subscriptionTypes.form.formatValid', array_keys($this->validFormats)));
+        // Currency is provided and is valid value
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyValid', array_keys($this->validCurrencies)));
 
-		// Institutional flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'institutional', 'optional', 'manager.subscriptionTypes.form.institutionalValid', array('0', '1')));
+        // Format is provided and is valid value
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'format', 'required', 'manager.subscriptionTypes.form.formatRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'format', 'required', 'manager.subscriptionTypes.form.formatValid', array_keys($this->validFormats)));
 
-		$this->addCheck(new FormValidatorPost($this));
-		$this->addCheck(new FormValidatorCSRF($this));
-	}
+        // Institutional flag is valid value
+        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'institutional', 'optional', 'manager.subscriptionTypes.form.institutionalValid', ['0', '1']));
 
-	/**
-	 * Get a list of localized field names for this form
-	 * @return array
-	 */
-	function getLocaleFieldNames() {
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
-		return $subscriptionTypeDao->getLocaleFieldNames();
-	}
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
+    }
 
-	/**
-	 * @copydoc Form::fetch()
-	 */
-	function fetch($request, $template = null, $display = false) {
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign(array(
-			'typeId' =>$this->typeId,
-			'validCurrencies' => $this->validCurrencies,
-			'validFormats' => $this->validFormats,
-		));
-		return parent::fetch($request, $template, $display);
-	}
+    /**
+     * Get a list of localized field names for this form
+     *
+     * @return array
+     */
+    public function getLocaleFieldNames()
+    {
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        return $subscriptionTypeDao->getLocaleFieldNames();
+    }
 
-	/**
-	 * Initialize form data from current subscription type.
-	 */
-	function initData() {
-		if (isset($this->typeId)) {
-			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
-			$subscriptionType = $subscriptionTypeDao->getById($this->typeId, $this->journalId);
+    /**
+     * @copydoc Form::fetch()
+     *
+     * @param null|mixed $template
+     */
+    public function fetch($request, $template = null, $display = false)
+    {
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign([
+            'typeId' => $this->typeId,
+            'validCurrencies' => $this->validCurrencies,
+            'validFormats' => $this->validFormats,
+        ]);
+        return parent::fetch($request, $template, $display);
+    }
 
-			if ($subscriptionType != null) {
-				$this->_data = array(
-					'name' => $subscriptionType->getName(null), // Localized
-					'description' => $subscriptionType->getDescription(null), // Localized
-					'cost' => $subscriptionType->getCost(),
-					'currency' => $subscriptionType->getCurrencyCodeAlpha(),
-					'duration' => $subscriptionType->getDuration(),
-					'format' => $subscriptionType->getFormat(),
-					'institutional' => $subscriptionType->getInstitutional(),
-					'membership' => $subscriptionType->getMembership(),
-					'disable_public_display' => $subscriptionType->getDisablePublicDisplay()
-				);
+    /**
+     * Initialize form data from current subscription type.
+     */
+    public function initData()
+    {
+        if (isset($this->typeId)) {
+            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+            $subscriptionType = $subscriptionTypeDao->getById($this->typeId, $this->journalId);
 
-			} else {
-				$this->typeId = null;
-			}
-		}
-	}
+            if ($subscriptionType != null) {
+                $this->_data = [
+                    'name' => $subscriptionType->getName(null), // Localized
+                    'description' => $subscriptionType->getDescription(null), // Localized
+                    'cost' => $subscriptionType->getCost(),
+                    'currency' => $subscriptionType->getCurrencyCodeAlpha(),
+                    'duration' => $subscriptionType->getDuration(),
+                    'format' => $subscriptionType->getFormat(),
+                    'institutional' => $subscriptionType->getInstitutional(),
+                    'membership' => $subscriptionType->getMembership(),
+                    'disable_public_display' => $subscriptionType->getDisablePublicDisplay()
+                ];
+            } else {
+                $this->typeId = null;
+            }
+        }
+    }
 
-	/**
-	 * Assign form data to user-submitted data.
-	 */
-	function readInputData() {
-		$this->readUserVars(array('name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'disable_public_display'));
+    /**
+     * Assign form data to user-submitted data.
+     */
+    public function readInputData()
+    {
+        $this->readUserVars(['name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'disable_public_display']);
 
-		$this->addCheck(new FormValidatorCustom($this, 'duration', 'optional', 'manager.subscriptionTypes.form.durationNumeric', function($duration) {
-			return (is_numeric($duration) && $duration >= 0);
-		}));
-	}
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'duration', 'optional', 'manager.subscriptionTypes.form.durationNumeric', function ($duration) {
+            return (is_numeric($duration) && $duration >= 0);
+        }));
+    }
 
-	/**
-	 * @copydoc Form::execute()
-	 */
-	function execute(...$functionArgs) {
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+    /**
+     * @copydoc Form::execute()
+     */
+    public function execute(...$functionArgs)
+    {
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 
-		if (isset($this->typeId)) {
-			$subscriptionType = $subscriptionTypeDao->getById($this->typeId, $this->journalId);
-		}
+        if (isset($this->typeId)) {
+            $subscriptionType = $subscriptionTypeDao->getById($this->typeId, $this->journalId);
+        }
 
-		if (!isset($subscriptionType)) {
-			$subscriptionType = $subscriptionTypeDao->newDataObject();
-			$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
-		}
+        if (!isset($subscriptionType)) {
+            $subscriptionType = $subscriptionTypeDao->newDataObject();
+            $subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
+        }
 
-		$request = Application::get()->getRequest();
-		$journal = $request->getJournal();
-		$subscriptionType->setJournalId($journal->getId());
-		$subscriptionType->setName($this->getData('name'), null); // Localized
-		$subscriptionType->setDescription($this->getData('description'), null); // Localized
-		$subscriptionType->setCost(round($this->getData('cost'), 2));
-		$subscriptionType->setCurrencyCodeAlpha($this->getData('currency'));
-		$subscriptionType->setDuration(($duration=$this->getData('duration'))?(int) $duration:null);
-		$subscriptionType->setFormat($this->getData('format'));
-		$subscriptionType->setMembership((int) $this->getData('membership'));
-		$subscriptionType->setDisablePublicDisplay((int) $this->getData('disable_public_display'));
+        $request = Application::get()->getRequest();
+        $journal = $request->getJournal();
+        $subscriptionType->setJournalId($journal->getId());
+        $subscriptionType->setName($this->getData('name'), null); // Localized
+        $subscriptionType->setDescription($this->getData('description'), null); // Localized
+        $subscriptionType->setCost(round($this->getData('cost'), 2));
+        $subscriptionType->setCurrencyCodeAlpha($this->getData('currency'));
+        $subscriptionType->setDuration(($duration = $this->getData('duration')) ? (int) $duration : null);
+        $subscriptionType->setFormat($this->getData('format'));
+        $subscriptionType->setMembership((int) $this->getData('membership'));
+        $subscriptionType->setDisablePublicDisplay((int) $this->getData('disable_public_display'));
 
-		parent::execute(...$functionArgs);
+        parent::execute(...$functionArgs);
 
-		// Update or insert subscription type
-		if ($subscriptionType->getId() != null) {
-			$subscriptionTypeDao->updateObject($subscriptionType);
-		} else {
-			$subscriptionType->setSequence(REALLY_BIG_NUMBER);
-			$subscriptionTypeDao->insertObject($subscriptionType);
+        // Update or insert subscription type
+        if ($subscriptionType->getId() != null) {
+            $subscriptionTypeDao->updateObject($subscriptionType);
+        } else {
+            $subscriptionType->setSequence(REALLY_BIG_NUMBER);
+            $subscriptionTypeDao->insertObject($subscriptionType);
 
-			// Re-order the subscription types so the new one is at the end of the list.
-			$subscriptionTypeDao->resequenceSubscriptionTypes($subscriptionType->getJournalId());
-		}
-	}
+            // Re-order the subscription types so the new one is at the end of the list.
+            $subscriptionTypeDao->resequenceSubscriptionTypes($subscriptionType->getJournalId());
+        }
+    }
 }
-
-

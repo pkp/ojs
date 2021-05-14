@@ -14,78 +14,88 @@
  */
 
 import('lib.pkp.classes.controllers.grid.GridRow');
-import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-import('lib.pkp.classes.linkAction.request.RedirectConfirmationModal');
-import('lib.pkp.classes.linkAction.request.JsEventConfirmationModal');
 
-class SubscriptionsGridRow extends GridRow {
-	//
-	// Overridden methods from GridRow
-	//
-	/**
-	 * @copydoc GridRow::initialize()
-	 */
-	function initialize($request, $template = null) {
-		parent::initialize($request, $template);
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
+use PKP\linkAction\request\RedirectConfirmationModal;
+use PKP\linkAction\request\JsEventConfirmationModal;
 
-		// Is this a new row or an existing row?
-		$element =& $this->getData();
-		assert(is_a($element, 'IndividualSubscription') || is_a($element, 'InstitutionalSubscription'));
+class SubscriptionsGridRow extends GridRow
+{
+    //
+    // Overridden methods from GridRow
+    //
+    /**
+     * @copydoc GridRow::initialize()
+     *
+     * @param null|mixed $template
+     */
+    public function initialize($request, $template = null)
+    {
+        parent::initialize($request, $template);
 
-		$rowId = $this->getId();
+        // Is this a new row or an existing row?
+        $element = & $this->getData();
+        assert(is_a($element, 'IndividualSubscription') || is_a($element, 'InstitutionalSubscription'));
 
-		if (!empty($rowId) && is_numeric($rowId)) {
-			// Only add row actions if this is an existing row
-			$router = $request->getRouter();
-			$actionArgs = array(
-				'gridId' => $this->getGridId(),
-				'rowId' => $rowId
-			);
+        $rowId = $this->getId();
 
-			$actionArgs = array_merge($actionArgs, $this->getRequestArgs());
+        if (!empty($rowId) && is_numeric($rowId)) {
+            // Only add row actions if this is an existing row
+            $router = $request->getRouter();
+            $actionArgs = [
+                'gridId' => $this->getGridId(),
+                'rowId' => $rowId
+            ];
 
-			$this->addAction(new LinkAction(
-				'edit',
-				new AjaxModal(
-					$router->url($request, null, null, 'editSubscription', null, $actionArgs),
-					__('manager.subscriptions.edit'),
-					'modal_edit',
-					true
-				),
-				__('common.edit'),
-				'edit'
-			));
-			if (!$element->isNonExpiring()) $this->addAction(new LinkAction(
-				'renew',
-				new RemoteActionConfirmationModal(
-					$request->getSession(),
-					__('manager.subscriptions.confirmRenew'),
-					__('manager.subscriptions.renew'),
-					$router->url(
-						$request, null, null, 'renewSubscription', null,
-						array_merge($actionArgs, array(
-							'institutional' => is_a($element, 'InstitutionalSubscription')?1:0
-						))
-					),
-					'modal_delete'
-				),
-				__('manager.subscriptions.renew'),
-				'renew'
-			));
-			$this->addAction(new LinkAction(
-				'delete',
-				new RemoteActionConfirmationModal(
-					$request->getSession(),
-					__('subscriptionManager.subscription.confirmRemove'),
-					__('common.delete'),
-					$router->url($request, null, null, 'deleteSubscription', null, $actionArgs),
-					'modal_delete'
-				),
-				__('grid.action.delete'),
-				'delete'
-			));
-		}
-	}
+            $actionArgs = array_merge($actionArgs, $this->getRequestArgs());
+
+            $this->addAction(new LinkAction(
+                'edit',
+                new AjaxModal(
+                    $router->url($request, null, null, 'editSubscription', null, $actionArgs),
+                    __('manager.subscriptions.edit'),
+                    'modal_edit',
+                    true
+                ),
+                __('common.edit'),
+                'edit'
+            ));
+            if (!$element->isNonExpiring()) {
+                $this->addAction(new LinkAction(
+                    'renew',
+                    new RemoteActionConfirmationModal(
+                        $request->getSession(),
+                        __('manager.subscriptions.confirmRenew'),
+                        __('manager.subscriptions.renew'),
+                        $router->url(
+                            $request,
+                            null,
+                            null,
+                            'renewSubscription',
+                            null,
+                            array_merge($actionArgs, [
+                                'institutional' => is_a($element, 'InstitutionalSubscription') ? 1 : 0
+                            ])
+                        ),
+                        'modal_delete'
+                    ),
+                    __('manager.subscriptions.renew'),
+                    'renew'
+                ));
+            }
+            $this->addAction(new LinkAction(
+                'delete',
+                new RemoteActionConfirmationModal(
+                    $request->getSession(),
+                    __('subscriptionManager.subscription.confirmRemove'),
+                    __('common.delete'),
+                    $router->url($request, null, null, 'deleteSubscription', null, $actionArgs),
+                    'modal_delete'
+                ),
+                __('grid.action.delete'),
+                'delete'
+            ));
+        }
+    }
 }
-
-

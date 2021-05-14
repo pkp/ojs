@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2021-01-17 14:53+0000\n"
-"Last-Translator: Frank Peters <fp-66@gmx.de>\n"
+"PO-Revision-Date: 2021-03-08 20:14+0000\n"
+"Last-Translator: Sebastian Wolf <bibliothekswelt@htmlwolf.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/locale/de_DE/"
 ">\n"
 "Language: de_DE\n"
@@ -1987,8 +1987,9 @@ msgstr "{$proofreaderName} hat Beitrag {$submissionId} auf den Zeitplan gesetzt.
 msgid "log.imported"
 msgstr "{$userName} hat Beitrag {$submissionId} importiert."
 
+#, fuzzy
 msgid "metadata.pkp.peerReviewed"
-msgstr "Begutachter Beitrag"
+msgstr "Begutachteter Beitrag"
 
 msgid "notification.type.editing"
 msgstr "Redaktionelle Ereignisse"
@@ -2147,3 +2148,11 @@ msgid "installer.updatingInstructions"
 msgstr ""
 "Wenn Sie eine bestehede OJS-Installation upgraden wollen, klicken Sie  <a "
 "href=\"{$upgradeUrl}\">hier</a>, um fortzufahren."
+
+#, fuzzy
+msgid "payment.waived"
+msgstr "Auf Gebühr verzichtet"
+
+#, fuzzy
+msgid "payment.unpaid"
+msgstr "Nicht bezahlt"

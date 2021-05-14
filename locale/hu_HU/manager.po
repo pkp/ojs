@@ -1728,12 +1728,6 @@ msgstr "A regisztráció sikeres!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Hiányzik a folyóirathoz a DOI előtag az útvonallal {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "HIBA:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "A megadott folyóirat , \"{$journalPath}\", nem létezik."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "A megadott objektum nem található."
 
@@ -1924,14 +1918,6 @@ msgstr "Cikk"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Használja a cikk megjelenésének dátumát"
-
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"Ezek az adatok szerepelhetnek harmadik archiváló félnek átadott "
-"metaadatokban."
-
-msgid "manager.setup.publishing"
-msgstr "Megjelenítési részletek"
 
 msgid "manager.setup.siteAccess.view"
 msgstr "Oldal hozzáférés"

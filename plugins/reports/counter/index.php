@@ -18,11 +18,7 @@
 
 // Because of the use of Namespaces, this plugin now requires PHP 5.3 or better
 if (version_compare(PHP_VERSION, '5.3.0') >= 0) {
+    require_once(dirname(__FILE__) . '/CounterReportPlugin.inc.php');
 
-require_once(dirname(__FILE__) . '/CounterReportPlugin.inc.php');
-
-return new CounterReportPlugin();
-
+    return new CounterReportPlugin();
 }
-
-

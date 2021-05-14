@@ -13,54 +13,59 @@
  * @brief Handle section grid row requests.
  */
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
+
 import('lib.pkp.classes.controllers.grid.GridRow');
 
-class SectionGridRow extends GridRow {
+class SectionGridRow extends GridRow
+{
+    //
+    // Overridden template methods
+    //
+    /**
+     * @copydoc GridRow::initialize()
+     *
+     * @param null|mixed $template
+     */
+    public function initialize($request, $template = null)
+    {
+        parent::initialize($request, $template);
 
-	//
-	// Overridden template methods
-	//
-	/**
-	 * @copydoc GridRow::initialize()
-	 */
-	function initialize($request, $template = null) {
-		parent::initialize($request, $template);
+        // Is this a new row or an existing row?
+        $sectionId = $this->getId();
+        if (!empty($sectionId) && is_numeric($sectionId)) {
+            $router = $request->getRouter();
 
-		// Is this a new row or an existing row?
-		$sectionId = $this->getId();
-		if (!empty($sectionId) && is_numeric($sectionId)) {
-			$router = $request->getRouter();
+            $this->addAction(
+                new LinkAction(
+                    'editSection',
+                    new AjaxModal(
+                        $router->url($request, null, null, 'editSection', null, ['sectionId' => $sectionId]),
+                        __('grid.action.edit'),
+                        'modal_edit',
+                        true
+                    ),
+                    __('grid.action.edit'),
+                    'edit'
+                )
+            );
 
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			$this->addAction(
-				new LinkAction(
-					'editSection',
-					new AjaxModal(
-						$router->url($request, null, null, 'editSection', null, array('sectionId' => $sectionId)),
-						__('grid.action.edit'),
-						'modal_edit',
-						true),
-					__('grid.action.edit'),
-					'edit'
-				)
-			);
-
-			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-			$this->addAction(
-				new LinkAction(
-					'deleteSection',
-					new RemoteActionConfirmationModal(
-						$request->getSession(),
-						__('manager.sections.confirmDelete'),
-						__('grid.action.delete'),
-						$router->url($request, null, null, 'deleteSection', null, array('sectionId' => $sectionId)), 'modal_delete'
-					),
-					__('grid.action.delete'),
-					'delete'
-				)
-			);
-		}
-	}
+            $this->addAction(
+                new LinkAction(
+                    'deleteSection',
+                    new RemoteActionConfirmationModal(
+                        $request->getSession(),
+                        __('manager.sections.confirmDelete'),
+                        __('grid.action.delete'),
+                        $router->url($request, null, null, 'deleteSection', null, ['sectionId' => $sectionId]),
+                        'modal_delete'
+                    ),
+                    __('grid.action.delete'),
+                    'delete'
+                )
+            );
+        }
+    }
 }
-
-

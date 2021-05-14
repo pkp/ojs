@@ -16,128 +16,154 @@
 
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
-class WebFeedGatewayPlugin extends GatewayPlugin {
-	/** @var WebFeedPlugin Parent plugin */
-	protected $_parentPlugin;
+use \PKP\submission\PKPSubmission;
 
-	/**
-	 * @param $parentPlugin WebFeedPlugin
-	 */
-	public function __construct($parentPlugin) {
-		parent::__construct();
-		$this->_parentPlugin = $parentPlugin;
-	}
+use \APP\template\TemplateManager;
 
-	/**
-	 * Hide this plugin from the management interface (it's subsidiary)
-	 */
-	public function getHideManagement() {
-		return true;
-	}
+class WebFeedGatewayPlugin extends GatewayPlugin
+{
+    /** @var WebFeedPlugin Parent plugin */
+    protected $_parentPlugin;
 
-	/**
-	 * Get the name of this plugin. The name must be unique within
-	 * its category.
-	 * @return String name of plugin
-	 */
-	public function getName() {
-		return 'WebFeedGatewayPlugin';
-	}
+    /**
+     * @param $parentPlugin WebFeedPlugin
+     */
+    public function __construct($parentPlugin)
+    {
+        parent::__construct();
+        $this->_parentPlugin = $parentPlugin;
+    }
 
-	/**
-	 * @copydoc Plugin::getDisplayName()
-	 */
-	public function getDisplayName() {
-		return __('plugins.generic.webfeed.displayName');
-	}
+    /**
+     * Hide this plugin from the management interface (it's subsidiary)
+     */
+    public function getHideManagement()
+    {
+        return true;
+    }
 
-	/**
-	 * @copydoc Plugin::getDescription()
-	 */
-	public function getDescription() {
-		return __('plugins.generic.webfeed.description');
-	}
+    /**
+     * Get the name of this plugin. The name must be unique within
+     * its category.
+     *
+     * @return String name of plugin
+     */
+    public function getName()
+    {
+        return 'WebFeedGatewayPlugin';
+    }
 
-	/**
-	 * Override the builtin to get the correct plugin path.
-	 * @return string
-	 */
-	public function getPluginPath() {
-		return $this->_parentPlugin->getPluginPath();
-	}
+    /**
+     * @copydoc Plugin::getDisplayName()
+     */
+    public function getDisplayName()
+    {
+        return __('plugins.generic.webfeed.displayName');
+    }
 
-	/**
-	 * Get whether or not this plugin is enabled. (Should always return true, as the
-	 * parent plugin will take care of loading this one when needed)
-	 * @param $contextId int Context ID (optional)
-	 * @return boolean
-	 */
-	public function getEnabled($contextId = null) {
-		return $this->_parentPlugin->getEnabled($contextId);
-	}
+    /**
+     * @copydoc Plugin::getDescription()
+     */
+    public function getDescription()
+    {
+        return __('plugins.generic.webfeed.description');
+    }
 
-	/**
-	 * Handle fetch requests for this plugin.
-	 * @param $args array Arguments.
-	 * @param $request PKPRequest Request object.
-	 */
-	public function fetch($args, $request) {
-		// Make sure we're within a Journal context
-		$request = Application::get()->getRequest();
-		$journal = $request->getJournal();
-		if (!$journal) return false;
+    /**
+     * Override the builtin to get the correct plugin path.
+     *
+     * @return string
+     */
+    public function getPluginPath()
+    {
+        return $this->_parentPlugin->getPluginPath();
+    }
 
-		// Make sure there's a current issue for this journal
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issue = $issueDao->getCurrent($journal->getId(), true);
-		if (!$issue) return false;
+    /**
+     * Get whether or not this plugin is enabled. (Should always return true, as the
+     * parent plugin will take care of loading this one when needed)
+     *
+     * @param $contextId int Context ID (optional)
+     *
+     * @return boolean
+     */
+    public function getEnabled($contextId = null)
+    {
+        return $this->_parentPlugin->getEnabled($contextId);
+    }
 
-		if (!$this->_parentPlugin->getEnabled($journal->getId())) return false;
+    /**
+     * Handle fetch requests for this plugin.
+     *
+     * @param $args array Arguments.
+     * @param $request PKPRequest Request object.
+     */
+    public function fetch($args, $request)
+    {
+        // Make sure we're within a Journal context
+        $request = Application::get()->getRequest();
+        $journal = $request->getJournal();
+        if (!$journal) {
+            return false;
+        }
 
-		// Make sure the feed type is specified and valid
-		$type = array_shift($args);
-		$typeMap = array(
-			'rss' => 'rss.tpl',
-			'rss2' => 'rss2.tpl',
-			'atom' => 'atom.tpl'
-		);
-		$mimeTypeMap = array(
-			'rss' => 'application/rdf+xml',
-			'rss2' => 'application/rss+xml',
-			'atom' => 'application/atom+xml'
-		);
-		if (!isset($typeMap[$type])) return false;
+        // Make sure there's a current issue for this journal
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+        $issue = $issueDao->getCurrent($journal->getId(), true);
+        if (!$issue) {
+            return false;
+        }
 
-		// Get limit setting from web feeds plugin
-		$displayItems = $this->_parentPlugin->getSetting($journal->getId(), 'displayItems');
-		$recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
+        if (!$this->_parentPlugin->getEnabled($journal->getId())) {
+            return false;
+        }
 
-		if ($displayItems == 'recent' && $recentItems > 0) {
-			$submissionsIterator = Services::get('submission')->getMany(['contextId' => $journal->getId(), 'status' => STATUS_PUBLISHED, 'count' => $recentItems]);
-			$submissionsInSections = [];
-			foreach ($submissionsIterator as $submission) {
-				$submissionsInSections[]['articles'][] = $submission;
-			}
-		} else {
-			$submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $journal->getId());
-		}
+        // Make sure the feed type is specified and valid
+        $type = array_shift($args);
+        $typeMap = [
+            'rss' => 'rss.tpl',
+            'rss2' => 'rss2.tpl',
+            'atom' => 'atom.tpl'
+        ];
+        $mimeTypeMap = [
+            'rss' => 'application/rdf+xml',
+            'rss2' => 'application/rss+xml',
+            'atom' => 'application/atom+xml'
+        ];
+        if (!isset($typeMap[$type])) {
+            return false;
+        }
 
-		$versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
-		$version = $versionDao->getCurrentVersion();
+        // Get limit setting from web feeds plugin
+        $displayItems = $this->_parentPlugin->getSetting($journal->getId(), 'displayItems');
+        $recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
 
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign(array(
-			'ojsVersion' => $version->getVersionString(),
-			'publishedSubmissions' => $submissionsInSections,
-			'journal' => $journal,
-			'issue' => $issue,
-			'showToc' => true,
-		));
+        if ($displayItems == 'recent' && $recentItems > 0) {
+            $submissionsIterator = Services::get('submission')->getMany(['contextId' => $journal->getId(), 'status' => PKPSubmission::STATUS_PUBLISHED, 'count' => $recentItems]);
+            $submissionsInSections = [];
+            foreach ($submissionsIterator as $submission) {
+                $submissionsInSections[]['articles'][] = $submission;
+            }
+        } else {
+            $submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $journal->getId());
+        }
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION); // submission.copyrightStatement
+        $versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
+        $version = $versionDao->getCurrentVersion();
 
-		$templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign([
+            'ojsVersion' => $version->getVersionString(),
+            'publishedSubmissions' => $submissionsInSections,
+            'journal' => $journal,
+            'issue' => $issue,
+            'showToc' => true,
+        ]);
 
-		return true;
-	}
+        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION); // submission.copyrightStatement
+
+        $templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
+
+        return true;
+    }
 }

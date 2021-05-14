@@ -18,17 +18,15 @@
 
 
 switch ($op) {
-	//
-	// Submission Tracking
-	//
-	case 'submission':
-	case 'step':
-	case 'saveStep':
-	case 'showDeclineReview':
-	case 'saveDeclineReview':
-		define('HANDLER_CLASS', 'ReviewerHandler');
-		import('pages.reviewer.ReviewerHandler');
-		break;
+    //
+    // Submission Tracking
+    //
+    case 'submission':
+    case 'step':
+    case 'saveStep':
+    case 'showDeclineReview':
+    case 'saveDeclineReview':
+        define('HANDLER_CLASS', 'ReviewerHandler');
+        import('pages.reviewer.ReviewerHandler');
+        break;
 }
-
-

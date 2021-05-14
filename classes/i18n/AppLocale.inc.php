@@ -14,27 +14,36 @@
  *
  */
 
-import('lib.pkp.classes.i18n.PKPLocale');
+namespace APP\i18n;
 
-class AppLocale extends PKPLocale {
-	/**
-	 * Make a map of components to their respective files.
-	 * @param $locale string
-	 * @return array
-	 */
-	static function makeComponentMap($locale) {
-		$baseDir = "locale/$locale/";
-		return parent::makeComponentMap($locale) + array(
-			LOCALE_COMPONENT_APP_COMMON => $baseDir . 'locale.po',
-			LOCALE_COMPONENT_APP_AUTHOR => $baseDir . 'author.po',
-			LOCALE_COMPONENT_APP_SUBMISSION => $baseDir . 'submission.po',
-			LOCALE_COMPONENT_APP_EDITOR => $baseDir . 'editor.po',
-			LOCALE_COMPONENT_APP_MANAGER => $baseDir . 'manager.po',
-			LOCALE_COMPONENT_APP_ADMIN => $baseDir . 'admin.po',
-			LOCALE_COMPONENT_APP_DEFAULT => $baseDir . 'default.po',
-			LOCALE_COMPONENT_APP_API => $baseDir . 'api.po',
-			LOCALE_COMPONENT_APP_EMAIL => $baseDir . 'emails.po',
-		);
-	}
+use PKP\i18n\PKPLocale;
+
+class AppLocale extends PKPLocale
+{
+    /**
+     * Make a map of components to their respective files.
+     *
+     * @param $locale string
+     *
+     * @return array
+     */
+    public static function makeComponentMap($locale)
+    {
+        $baseDir = "locale/${locale}/";
+        return parent::makeComponentMap($locale) + [
+            LOCALE_COMPONENT_APP_COMMON => $baseDir . 'locale.po',
+            LOCALE_COMPONENT_APP_AUTHOR => $baseDir . 'author.po',
+            LOCALE_COMPONENT_APP_SUBMISSION => $baseDir . 'submission.po',
+            LOCALE_COMPONENT_APP_EDITOR => $baseDir . 'editor.po',
+            LOCALE_COMPONENT_APP_MANAGER => $baseDir . 'manager.po',
+            LOCALE_COMPONENT_APP_ADMIN => $baseDir . 'admin.po',
+            LOCALE_COMPONENT_APP_DEFAULT => $baseDir . 'default.po',
+            LOCALE_COMPONENT_APP_API => $baseDir . 'api.po',
+            LOCALE_COMPONENT_APP_EMAIL => $baseDir . 'emails.po',
+        ];
+    }
 }
 
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\i18n\AppLocale', '\AppLocale');
+}

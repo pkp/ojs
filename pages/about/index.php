@@ -17,13 +17,11 @@
  */
 
 switch ($op) {
-	case 'subscriptions':
-		define('HANDLER_CLASS', 'AboutHandler');
-		import('pages.about.AboutHandler');
-		break;
-	default:
-		// Fall back on pkp-lib implementation
-		require_once('lib/pkp/pages/about/index.php');
+    case 'subscriptions':
+        define('HANDLER_CLASS', 'AboutHandler');
+        import('pages.about.AboutHandler');
+        break;
+    default:
+        // Fall back on pkp-lib implementation
+        require_once('lib/pkp/pages/about/index.php');
 }
-
-

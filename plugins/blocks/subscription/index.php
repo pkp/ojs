@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_blocks_subscription
  */
- 
+
 /**
  * @file plugins/blocks/subscription/index.php
  *
@@ -20,5 +20,3 @@
 require_once('SubscriptionBlockPlugin.inc.php');
 
 return new SubscriptionBlockPlugin();
-
-

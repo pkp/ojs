@@ -12,39 +12,55 @@
  * @brief Policy that ensures that the request contains a valid issue galley.
  */
 
-import('lib.pkp.classes.security.authorization.DataObjectRequiredPolicy');
+namespace APP\security\authorization;
 
-class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy {
-	/**
-	 * Constructor
-	 * @param $request PKPRequest
-	 * @param $args array request parameters
-	 * @param $operations array
-	 */
-	function __construct($request, &$args, $operations = null) {
-		parent::__construct($request, $args, 'issueGalleyId', 'user.authorization.invalidIssueGalley', $operations);
-	}
+use PKP\security\authorization\DataObjectRequiredPolicy;
+use PKP\security\authorization\AuthorizationPolicy;
 
-	//
-	// Implement template methods from AuthorizationPolicy
-	//
-	/**
-	 * @see DataObjectRequiredPolicy::dataObjectEffect()
-	 */
-	function dataObjectEffect() {
-		$issueGalleyId = (int)$this->getDataObjectId();
-		if (!$issueGalleyId) return AUTHORIZATION_DENY;
+// FIXME: Add namespacing
+use \IssueGalley;
 
-		// Make sure the issue galley belongs to the journal.
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-		$issueGalley = $issueGalleyDao->getById($issueGalleyId, $issue->getId());
-		if (!is_a($issueGalley, 'IssueGalley')) return AUTHORIZATION_DENY;
+class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
+{
+    /**
+     * Constructor
+     *
+     * @param $request PKPRequest
+     * @param $args array request parameters
+     * @param $operations array
+     */
+    public function __construct($request, &$args, $operations = null)
+    {
+        parent::__construct($request, $args, 'issueGalleyId', 'user.authorization.invalidIssueGalley', $operations);
+    }
 
-		// Save the publication format to the authorization context.
-		$this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY, $issueGalley);
-		return AUTHORIZATION_PERMIT;
-	}
+    //
+    // Implement template methods from AuthorizationPolicy
+    //
+    /**
+     * @see DataObjectRequiredPolicy::dataObjectEffect()
+     */
+    public function dataObjectEffect()
+    {
+        $issueGalleyId = (int)$this->getDataObjectId();
+        if (!$issueGalleyId) {
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
+        }
+
+        // Make sure the issue galley belongs to the journal.
+        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalley = $issueGalleyDao->getById($issueGalleyId, $issue->getId());
+        if (!$issueGalley instanceof IssueGalley) {
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
+        }
+
+        // Save the publication format to the authorization context.
+        $this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY, $issueGalley);
+        return AuthorizationPolicy::AUTHORIZATION_PERMIT;
+    }
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\security\authorization\OjsIssueGalleyRequiredPolicy', '\OjsIssueGalleyRequiredPolicy');
+}

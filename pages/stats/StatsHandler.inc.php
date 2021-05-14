@@ -15,84 +15,90 @@
 
 import('lib.pkp.pages.stats.PKPStatsHandler');
 
-class StatsHandler extends PKPStatsHandler {
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		parent::__construct();
-		HookRegistry::register ('TemplateManager::display', array($this, 'addSectionFilters'));
-	}
+use \APP\template\TemplateManager;
 
-	/**
-	 * Add OJS-specific configuration options to the stats component data
-	 *
-	 * Fired when the `TemplateManager::display` hook is called.
-	 *
-	 * @param string $hookname
-	 * @param array $args [$templateMgr, $template, $sendContentType, $charset, $output]
-	 */
-	public function addSectionFilters($hookName, $args) {
-		$templateMgr = $args[0];
-		$template = $args[1];
+class StatsHandler extends PKPStatsHandler
+{
+    /**
+     * Constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        HookRegistry::register('TemplateManager::display', [$this, 'addSectionFilters']);
+    }
 
-		if (!in_array($template, ['stats/publications.tpl', 'stats/editorial.tpl'])) {
-			return;
-		}
+    /**
+     * Add OJS-specific configuration options to the stats component data
+     *
+     * Fired when the `TemplateManager::display` hook is called.
+     *
+     * @param array $args [$templateMgr, $template, $sendContentType, $charset, $output]
+     */
+    public function addSectionFilters($hookName, $args)
+    {
+        $templateMgr = $args[0];
+        $template = $args[1];
 
-		$context = Application::get()->getRequest()->getContext();
+        if (!in_array($template, ['stats/publications.tpl', 'stats/editorial.tpl'])) {
+            return;
+        }
 
-		$filters = $templateMgr->getState('filters');
-		if (is_null($filters)) {
-			$filters = [];
-		}
-		$sections = \Services::get('section')->getSectionList($context->getId());
-		$filters[] = [
-			'heading' => __('section.sections'),
-			'filters' => array_map(function($section) {
-				return [
-					'param' => 'sectionIds',
-					'value' => (int) $section['id'],
-					'title' => $section['title'],
-				];
-			}, $sections),
-		];
-		$templateMgr->setState([
-			'filters' => $filters
-		]);
-	}
+        $context = Application::get()->getRequest()->getContext();
 
-	/**
-	 * @copydoc PKPStatsHandler::getReportRowValue()
-	 */
-	protected function getReportRowValue($key, $record) {
-		$returnValue = parent::getReportRowValue($key, $record);
+        $filters = $templateMgr->getState('filters');
+        if (is_null($filters)) {
+            $filters = [];
+        }
+        $sections = \Services::get('section')->getSectionList($context->getId());
+        $filters[] = [
+            'heading' => __('section.sections'),
+            'filters' => array_map(function ($section) {
+                return [
+                    'param' => 'sectionIds',
+                    'value' => (int) $section['id'],
+                    'title' => $section['title'],
+                ];
+            }, $sections),
+        ];
+        $templateMgr->setState([
+            'filters' => $filters
+        ]);
+    }
 
-		if (!$returnValue && $key == STATISTICS_DIMENSION_ISSUE_ID) {
-			$assocId = $record[STATISTICS_DIMENSION_ISSUE_ID];
-			$assocType = ASSOC_TYPE_ISSUE;
-			$returnValue = $this->getObjectTitle($assocId, $assocType);
-		}
+    /**
+     * @copydoc PKPStatsHandler::getReportRowValue()
+     */
+    protected function getReportRowValue($key, $record)
+    {
+        $returnValue = parent::getReportRowValue($key, $record);
 
-		return $returnValue;
-	}
+        if (!$returnValue && $key == STATISTICS_DIMENSION_ISSUE_ID) {
+            $assocId = $record[STATISTICS_DIMENSION_ISSUE_ID];
+            $assocType = ASSOC_TYPE_ISSUE;
+            $returnValue = $this->getObjectTitle($assocId, $assocType);
+        }
 
-	/**
-	 * @copydoc PKPStatsHandler::getObjectTitle()
-	 */
-	protected function getObjectTitle($assocId, $assocType) {
-		$objectTitle = parent::getObjectTitle($assocId, $assocType);
+        return $returnValue;
+    }
 
-		switch ($assocType) {
-			case ASSOC_TYPE_ISSUE:
-				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-				$issue = $issueDao->getById($assocId);
-				if ($issue) {
-					$objectTitle = $issue->getIssueIdentification();
-				}
-				break;
-		}
+    /**
+     * @copydoc PKPStatsHandler::getObjectTitle()
+     */
+    protected function getObjectTitle($assocId, $assocType)
+    {
+        $objectTitle = parent::getObjectTitle($assocId, $assocType);
 
-		return $objectTitle;
-	}
+        switch ($assocType) {
+            case ASSOC_TYPE_ISSUE:
+                $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+                $issue = $issueDao->getById($assocId);
+                if ($issue) {
+                    $objectTitle = $issue->getIssueIdentification();
+                }
+                break;
+        }
+
+        return $objectTitle;
+    }
 }

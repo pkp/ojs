@@ -15,47 +15,53 @@
 
 import('lib.pkp.controllers.grid.pubIds.form.PKPAssignPublicIdentifiersForm');
 
-class AssignPublicIdentifiersForm extends PKPAssignPublicIdentifiersForm {
+use \APP\template\TemplateManager;
 
-	/**
-	 * @var array Parameters to configure the form template.
-	 */
-	var $_formParams;
+class AssignPublicIdentifiersForm extends PKPAssignPublicIdentifiersForm
+{
+    /**
+     * @var array Parameters to configure the form template.
+     */
+    public $_formParams;
 
-	/**
-	 * Constructor.
-	 * @param $template string Form template
-	 * @param $pubObject object
-	 * @param $approval boolean
-	 * @param $confirmationText string
-	 * @param $formParams array
-	 */
-	function __construct($template, $pubObject, $approval, $confirmationText, $formParams = null) {
-		parent::__construct($template, $pubObject, $approval, $confirmationText);
+    /**
+     * Constructor.
+     *
+     * @param $template string Form template
+     * @param $pubObject object
+     * @param $approval boolean
+     * @param $confirmationText string
+     * @param $formParams array
+     */
+    public function __construct($template, $pubObject, $approval, $confirmationText, $formParams = null)
+    {
+        parent::__construct($template, $pubObject, $approval, $confirmationText);
 
-		$this->_formParams = $formParams;
-	}
+        $this->_formParams = $formParams;
+    }
 
-	/**
-	 * @copydoc Form::fetch()
-	 */
-	function fetch($request, $template = null, $display = false) {
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('formParams', $this->getFormParams());
-		return parent::fetch($request, $template, $display);
-	}
+    /**
+     * @copydoc Form::fetch()
+     *
+     * @param null|mixed $template
+     */
+    public function fetch($request, $template = null, $display = false)
+    {
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign('formParams', $this->getFormParams());
+        return parent::fetch($request, $template, $display);
+    }
 
-	//
-	// Getters and Setters
-	//
-	/**
-	 * Get the extra form parameters.
-	 * @return array
-	 */
-	function getFormParams() {
-		return $this->_formParams;
-	}
-
+    //
+    // Getters and Setters
+    //
+    /**
+     * Get the extra form parameters.
+     *
+     * @return array
+     */
+    public function getFormParams()
+    {
+        return $this->_formParams;
+    }
 }
-
-

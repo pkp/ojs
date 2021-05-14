@@ -3,9 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2020-12-09 14:51+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
-"helene.vezina@umontreal.ca>\n"
+"PO-Revision-Date: 2021-05-07 08:53+0000\n"
+"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -791,14 +790,8 @@ msgstr "Planification du calendrier de publication"
 msgid "manager.setup.publicIdentifier"
 msgstr "Identification du contenu de la revue"
 
-msgid "manager.setup.publishing"
-msgstr "Renseignements au sujet de la publication"
-
 msgid "manager.setup.publisher"
 msgstr "Éditeur"
-
-msgid "manager.setup.publishingDescription"
-msgstr "Le nom de l'organisation qui publie la revue pourrait être inclus dans les métadonnées fournies aux agents d'achivage externes."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Lien de référence"
@@ -1704,12 +1697,6 @@ msgstr "Enregistrement réussi !"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Le préfixe du DOI est manquant pour la revue ayant le chemin d'accès {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERREUR :"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Le chemin « {$journalPath} » de la revue n'existe pas."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "L'objet spécifié est introuvable."
 
@@ -1762,3 +1749,6 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Au moins une rubrique doit être active. Consulter les paramètres de flux de "
 "travail pour désactiver toutes les soumissions à cette revue."
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr ""

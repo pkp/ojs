@@ -17,17 +17,15 @@
  */
 
 switch ($op) {
-	case 'access':
-	case 'index':
-	case 'submission':
-	case 'externalReview':
-	case 'editorial':
-	case 'production':
-	case 'editorDecisionActions':
-	case 'submissionProgressBar':
-		define('HANDLER_CLASS', 'WorkflowHandler');
-		import('pages.workflow.WorkflowHandler');
-		break;
+    case 'access':
+    case 'index':
+    case 'submission':
+    case 'externalReview':
+    case 'editorial':
+    case 'production':
+    case 'editorDecisionActions':
+    case 'submissionProgressBar':
+        define('HANDLER_CLASS', 'WorkflowHandler');
+        import('pages.workflow.WorkflowHandler');
+        break;
 }
-
-

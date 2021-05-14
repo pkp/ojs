@@ -41,6 +41,7 @@ msgstr "Будь ласка, завантажте файл у розділ \"І�
 msgid "plugins.importexport.native.importComplete"
 msgstr "Імпортування успішно завершено. Нижченаведені елементи були імпортовані:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Використання: {$scriptName} {$pluginName} [command] ...\n"
@@ -70,6 +71,7 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Невідомий розділ {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Вказаний користувач, \"{$userName}\", не існує."
 

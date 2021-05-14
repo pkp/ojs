@@ -18,5 +18,3 @@
 require_once('UsageEventPlugin.inc.php');
 
 return new UsageEventPlugin();
-
-

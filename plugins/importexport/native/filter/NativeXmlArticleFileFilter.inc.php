@@ -15,25 +15,16 @@
 
 import('lib.pkp.plugins.importexport.native.filter.NativeXmlSubmissionFileFilter');
 
-class NativeXmlArticleFileFilter extends NativeXmlSubmissionFileFilter {
-	/**
-	 * Constructor
-	 * @param $filterGroup FilterGroup
-	 */
-	function __construct($filterGroup) {
-		parent::__construct($filterGroup);
-	}
-
-
-	//
-	// Implement template methods from PersistableFilter
-	//
-	/**
-	 * @copydoc PersistableFilter::getClassName()
-	 */
-	function getClassName() {
-		return 'plugins.importexport.native.filter.NativeXmlArticleFileFilter';
-	}
+class NativeXmlArticleFileFilter extends NativeXmlSubmissionFileFilter
+{
+    //
+    // Implement template methods from PersistableFilter
+    //
+    /**
+     * @copydoc PersistableFilter::getClassName()
+     */
+    public function getClassName()
+    {
+        return 'plugins.importexport.native.filter.NativeXmlArticleFileFilter';
+    }
 }
-
-

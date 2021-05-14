@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2020-11-30 15:32+0000\n"
+"PO-Revision-Date: 2021-04-20 16:39+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -781,16 +781,9 @@ msgid "manager.setup.publicationScheduling"
 msgstr "جدولة النشر"
 
 msgid "manager.setup.publicIdentifier"
-msgstr "ترميز محتوى المجلة"
-
-msgid "manager.setup.publishing"
-msgstr "تفاصيل النشر"
 
 msgid "manager.setup.publisher"
 msgstr "الناشر"
-
-msgid "manager.setup.publishingDescription"
-msgstr "هذه التفاصيل قد يجري تضمينها في بيانات وصفية تذهب إلى أطراف ثالثة عند حفظ محتوى المجلة."
 
 msgid "manager.setup.referenceLinking"
 msgstr "ربط المراجع"
@@ -1675,12 +1668,6 @@ msgstr "نجحت عملية التسجيل!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "بادئة معرف DOI مفقودة للمجلة الموجودة في المسار {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "خطأ:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "المسار المخصص للمجلة، \"{$journalPath}\"، غير موجود."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "المكونات المحددة تعذر العثور عليها."
 
@@ -1732,3 +1719,20 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "ينبغي أن يكون هناك مقطع واحد نشط على الأقل. قم بزيارة إعدادات مخطط سير العمل "
 "لتعطيل كل طلبات التقديم الموجهة إلى هذه المجلة."
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "فشلت العملية في تحليل الألواح الطباعية للعدد"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "تصدير نتائج الأعداد"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"لم يتم تعريف جهة الاتصال الرئيسية لهذه المجلة. يمكنك إدخال جهة الاتصال "
+"الرئيسية عبر <a href=\"{$url}\">إعدادات المجلة</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "إرسال نسخة من رسالة عرفان طلب التقديم إلى جهة الاتصال الرئيسية للمجلة."

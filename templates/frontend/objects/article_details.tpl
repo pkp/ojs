@@ -71,7 +71,7 @@
 <article class="obj_article_details">
 
 	{* Indicate if this is only a preview *}
-	{if $publication->getData('status') !== $smarty.const.STATUS_PUBLISHED}
+	{if $publication->getData('status') !== \PKP\submission\PKPSubmission::STATUS_PUBLISHED}
 	<div class="cmp_notification notice">
 		{capture assign="submissionUrl"}{url page="workflow" op="access" path=$article->getId()}{/capture}
 		{translate key="submission.viewingPreview" url=$submissionUrl}
@@ -414,7 +414,7 @@
 							<div class="value">
 								<ul class="categories">
 									{foreach from=$categories item=category}
-										<li><a href="{url router=$smarty.const.ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
+										<li><a href="{url router=PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
 									{/foreach}
 								</ul>
 							</div>

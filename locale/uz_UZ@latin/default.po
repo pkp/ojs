@@ -1,2 +1,47 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-04-19 14:27+0000\n"
+"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/default/uz_UZ@"
+"latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"Matn bitta qator oralig'i bilan teriladi; shriftning o'lchami 12 ball; "
+"kursiv ta'kidlash uchun ishlatiladi, pastki chiziqlar emas (URL-lardan "
+"tashqari); barcha rasmlar, grafikalar va jadvallar hujjatning oxirida emas, "
+"balki matnning tegishli joylarida joylashgan."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr ""
+"Mumkin bo'lgan joylarda havolalar uchun to'liq Internet-manzillar (URL-lar) "
+"taqdim etiladi."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"Materialli fayl OpenOffice hujjati, Microsoft Word yoki RTF formatida taqdim "
+"etilgan."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"Ushbu material ilgari nashr qilinmagan, shuningdek ko'rib chiqish yoki "
+"boshqa jurnalda nashr etish uchun yuborilmagan (yoki muharrirning "
+"eslatmalarida tushuntirilgan)."
+
+msgid "default.genres.article"
+msgstr "Maqola matni"
+
+msgid "section.default.policy"
+msgstr "Standart bo'lim siyosati"
+
+msgid "section.default.abbrev"
+msgstr "ST"
+
+msgid "section.default.title"
+msgstr "Stati"

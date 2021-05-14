@@ -11,40 +11,44 @@
  *
  * @brief An extension of the FieldSelect for selecting an issue.
  */
+
 namespace APP\components\forms;
+
 use PKP\components\forms\FieldSelect;
 
-class FieldSelectIssue extends FieldSelect {
-	/** @copydoc Field::$component */
-	public $component = 'field-select-issue';
+class FieldSelectIssue extends FieldSelect
+{
+    /** @copydoc Field::$component */
+    public $component = 'field-select-issue';
 
-	/** @var int One of the STATUS_ constants  */
-	public $publicationStatus;
+    /** @var int One of the PKPSubmission::STATUS_ constants  */
+    public $publicationStatus;
 
-	/**
-	 * @copydoc Field::getConfig()
-	 */
-	public function getConfig() {
-		$config = parent::getConfig();
-		$config['publicationStatus'] = $this->publicationStatus;
+    /**
+     * @copydoc Field::getConfig()
+     */
+    public function getConfig()
+    {
+        $config = parent::getConfig();
+        $config['publicationStatus'] = $this->publicationStatus;
 
-		$issueUrlPlaceholder = \Application::get()->getRequest()->getDispatcher()->url(
-			\Application::get()->getRequest(),
-			ROUTE_PAGE,
-			null,
-			'issue',
-			'view',
-			'__issueId__'
-		);
+        $issueUrlPlaceholder = \Application::get()->getRequest()->getDispatcher()->url(
+            \Application::get()->getRequest(),
+            \PKPApplication::ROUTE_PAGE,
+            null,
+            'issue',
+            'view',
+            '__issueId__'
+        );
 
-		$config['assignLabel'] = __('publication.assignToissue');
-		$config['assignedNoticeBase'] = __('publication.assignedToIssue', ['issueUrl' => $issueUrlPlaceholder]);
-		$config['changeIssueLabel'] = __('publication.changeIssue');
-		$config['publishedNoticeBase'] = __('publication.publishedIn', ['issueUrl' => $issueUrlPlaceholder]);
-		$config['scheduledNoticeBase'] = __('publication.scheduledIn', ['issueUrl' => $issueUrlPlaceholder]);
-		$config['unscheduledNotice'] = __('publication.unscheduledIn');
-		$config['unscheduleLabel'] = __('publication.unschedule');
+        $config['assignLabel'] = __('publication.assignToissue');
+        $config['assignedNoticeBase'] = __('publication.assignedToIssue', ['issueUrl' => $issueUrlPlaceholder]);
+        $config['changeIssueLabel'] = __('publication.changeIssue');
+        $config['publishedNoticeBase'] = __('publication.publishedIn', ['issueUrl' => $issueUrlPlaceholder]);
+        $config['scheduledNoticeBase'] = __('publication.scheduledIn', ['issueUrl' => $issueUrlPlaceholder]);
+        $config['unscheduledNotice'] = __('publication.unscheduledIn');
+        $config['unscheduleLabel'] = __('publication.unschedule');
 
-		return $config;
-	}
+        return $config;
+    }
 }

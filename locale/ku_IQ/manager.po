@@ -999,16 +999,8 @@ msgstr ""
 msgid "manager.setup.referenceLinking"
 msgstr "بەستنەوەی سەرچاوەکان"
 
-msgid "manager.setup.publishingDescription"
-msgstr ""
-"ئەم وردەکارییانە لەوانەیە لە ناو زانیاری ناسێنەردا هەبن کە دراون بە "
-"لایەنەکانی سێیەمی ئەرشیفکردن."
-
 msgid "manager.setup.publisher"
 msgstr "دەزگای بڵاوکردنەوە"
-
-msgid "manager.setup.publishing"
-msgstr "وردەکارییەکانی بڵاوکردنەوە"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "پێناسی ناوەڕۆکی گۆڤارەکە"
@@ -1842,9 +1834,6 @@ msgstr ""
 msgid "stats.publications.none"
 msgstr "هیچ توێژینەوەیەک نەدۆزرایەوە کە لەگەڵ ئەم ئامارانە یەک بگرێتەوە."
 
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "ڕێچکەی دیاریکراوی گۆڤار، \"{$journalPath}\"،  بەردەست نییە."
-
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr ""
 "پێشگری ناسێنەری سەرچاوە دیجیتاڵییەکان لەگەڵ ڕێچکەی {$path} ئەم گۆڤارە ونە."
@@ -1926,8 +1915,6 @@ msgstr ""
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "تەنە دیاریکراوەکان نەدۆزرانەوە."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "هەڵە:"
 
 msgid "plugins.importexport.common.register.success"
 msgstr "تۆمارکردنەکە سەرکەوتو بو!"

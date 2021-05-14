@@ -11,4 +11,6 @@
  */
 import('lib.pkp.api.v1._payments.PKPBackendPaymentsSettingsHandler');
 
-class BackendPaymentsSettingsHandler extends PKPBackendPaymentsSettingsHandler {}
+class BackendPaymentsSettingsHandler extends PKPBackendPaymentsSettingsHandler
+{
+}

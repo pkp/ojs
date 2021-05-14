@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2021-01-25 10:19+0000\n"
+"PO-Revision-Date: 2021-05-10 23:12+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "it_IT/>\n"
@@ -638,9 +638,6 @@ msgstr "Identificatori dei contenuti della rivista"
 
 msgid "manager.setup.publisher"
 msgstr "Editore"
-
-msgid "manager.setup.publishingDescription"
-msgstr "Il nome dell'organizzazione responsabile della pubblicazione comparirà tra le informazioni sulla rivista."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Gestisci il reference linking"
@@ -1680,12 +1677,6 @@ msgstr "Il file di input {$param} non è leggibile."
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Il prefisso DOI manca per la rivista con il path {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERRORE:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Il path specificato, \"{$journalPath}\", non esiste."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Gli oggetti specificati non sono stati trovati."
 
@@ -1794,9 +1785,6 @@ msgstr "Inserire un link sicuro nella mail di invito ai revisori."
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Limita l'accesso al file"
 
-msgid "manager.setup.publishing"
-msgstr "Dettagli di pubblicazione"
-
 msgid "manager.setup.numPageLinks.description"
 msgstr "Limita il numero di collegamenti da visualizzare in pagine successive."
 
@@ -1844,3 +1832,28 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Deve essere attiva almeno una tipologia di articolo. Vai alle impostazioni "
 "di workflow per disabilitare la sottomissione alla rivista."
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" -- \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Errore nell'analisi delle gabbie di fascicolo"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Risultati dell'esportazione di fascicoli"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Non è stato impostato un contatto principale per questa rivista. Puoi "
+"indicare un contatto principale in <a href=\"{$url}\""
+">Impostazioni>Testata</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Invia una copia della mail informativa sulla proposta al contatto principale "
+"della rivista."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Selezionare lo stato in cui questa rivista viene pubblicata, o lo stato in "
+"cui ha sede la rivista o il publisher."

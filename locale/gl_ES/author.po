@@ -1,0 +1,377 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-23 11:22+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr ""
+"Teña en conta que pode solicitar a exención da cota de envío para este artigo"
+
+msgid "author.submit.requestWaiver"
+msgstr "Solicitude de exención de cotas"
+
+msgid "author.submit.notAccepting"
+msgstr "Esta revista non acepta envíos neste momento."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Pode completar este envío máis tarde seleccionando Envíos activos na páxina "
+"de inicio do autor/a."
+
+msgid "author.submit.nextSteps"
+msgstr "Seguintes pasos"
+
+msgid "author.submit.confirmation"
+msgstr "Confirmación do envío"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Cargar os arquivos complementarios"
+
+msgid "author.submit.metadata"
+msgstr "Introducir os metadatos"
+
+msgid "author.submit.upload"
+msgstr "Cargar o envío"
+
+msgid "author.submit.start"
+msgstr "Inicio"
+
+msgid "author.submit.step5"
+msgstr "Paso 5. Confirmar o envío"
+
+msgid "author.submit.step4a"
+msgstr "Paso 4a. Engadir un arquivo complementario"
+
+msgid "author.submit.step4"
+msgstr "Paso 4. Cargar os arquivos complementarios"
+
+msgid "author.submit.step3"
+msgstr "Paso 3. Introducir os metadatos do envío"
+
+msgid "author.submit.step2"
+msgstr "Paso 2. Cargar o envío"
+
+msgid "author.submit.step1"
+msgstr "Paso 1. Iniciar o envío"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Faga clic aquí</a> para ir ao "
+"primeiro dos cinco pasos do proceso de envío."
+
+msgid "author.submit.startHereTitle"
+msgstr "Iniciar un novo envío"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Os cinco pasos para realizar un envío"
+
+msgid "author.submit.submitArticle"
+msgstr "Enviar un artigo"
+
+msgid "author.competingInterests"
+msgstr ""
+"Conflito de intereses <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Política relativa aos conflitos de "
+"intereses</a>"
+
+msgid "author.track"
+msgstr "Envíos activos"
+
+msgid "author.submit"
+msgstr "Novo envío"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Utilice o cadro de comentarios que está abaixo para indicar por que solicita "
+"a exención da cota."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Proporcione os termos para a indexación do envío e sepáreos con punto e coma "
+"(termo1 ; termo2 ; termo3)."
+
+msgid "author.submit.deleteAuthor"
+msgstr "Eliminar un autor"
+
+msgid "author.submit.addAuthor"
+msgstr "Engadir un autor"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Contacto principal para a correspondencia editorial."
+
+msgid "author.submit.reorder"
+msgstr "Reordenar o nome do autor/a"
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Reordenar os autores para que aparezan na orde en que serán enumerados na "
+"publicación."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declaración de privacidade da revista"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Seleccione un idioma para o envío."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Seleccione unha sección da revista axeitada para este envío."
+
+msgid "author.submit.comments"
+msgstr "Introduza o texto (opcional)"
+
+msgid "submission.submit.coverNote"
+msgstr "Comentarios para o editor/a"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Debe aceptar as condicións do aviso de dereitos de autor/a para poder "
+"continuar."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"Os autores/as aceptan as condicións deste aviso de dereitos de autor, que se "
+"aplicarán a este envío sempre e cando se publique  nesta revista (máis "
+"abaixo pódense engadir comentarios ao editor/a)."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Antes de continuar, asegúrese de que se cumpren todos os requisitos da lista "
+"de verificación do envío."
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Seleccionar a sección apropiada da revista para enviar os artigos."
+
+msgid "author.submit.journalSection"
+msgstr "Sección da revista"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Ningún envío."
+
+msgid "author.submissions.viewStatus"
+msgstr "Ver estado"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Está seguro/a de que quere eliminar este envío incompleto?"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Modificacións da corrección de probas"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Cargar a versión corrixida"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "En edición: Requírese corrección de probas"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "En edición: Corrección de texto solicitada"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "En revisión: Revisións requiridas"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "En revisión {$round}"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Se solicita a exención da cota, deberá introducir o motivo no espazo "
+"disposto para este efecto."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Utilizar só con materiais oficialmente publicados."
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Presentar o arquivo (sen metadatos) aos revisores/as, de xeito que non "
+"comprometa a avaliación anónima."
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Descrición breve"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Texto orixinal"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Conxunto de datos"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Análise de datos"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transcricións"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Resultados da investigación"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Materiais de investigación"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Ferramenta de investigación"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Creador/a (ou propietario/a) do arquivo"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Arquivo adicional"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Para indexar este material adicional, proporcione os seguintes metadatos a "
+"cada arquivo adicional cargado."
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metadatos do arquivo adicional"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Editar un arquivo adicional"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Engadir un arquivo adicional"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Cargar arquivo adicional"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Está seguro/a de que quere eliminar este arquivo adicional?"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Volver a arquivos adicionais"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Non se engadiu ningún arquivo adicional a este envío."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Está seguro/a de querer continuar sen cargar o arquivo adicional que "
+"seleccionou?"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Faga clic en Gardar para cargar o arquivo (a continuación poderanse cargar "
+"os aquivos adicionais)."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Este paso opcional permite engadir arquivos adicionais ao envío. Estes "
+"archivos, que poden estar en calquera formato, poden incluír (a) ferramentas "
+"de investigación; (b) conxuntos de datos conformes aos termos da revisión "
+"ética da investigación; (c) fontes que doutro xeito non estarían dispoñibles "
+"para os lectores/as, (d) figuras e táboas que non se poden integrar no "
+"texto, ou otros materiais que engaden unha\n"
+"achega ao traballo."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Está seguro/a de querer continuar sen cargar un arquivo de envío?"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Non se cargou ningún arquivo de envío."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Substituír o arquivo de envío"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Cargar o arquivo de envío"
+
+msgid "author.submit.submissionFile"
+msgstr "Arquivo de envío"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"Excedeu o límite máximo de palabras permitido para resumos nesta parte da "
+"sección."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Introduza o resumo do seu artigo."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Introduza o título do seu artigo."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr ""
+"Cómpre inserir o nome, os apelidos e o enderezo de correo electrónico de "
+"cada autor/a."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Requírese polo menos un autor."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Inglés=en; francés=fr; español=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Códigos adicionais</a>."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Fai referencia a unha localización xeoespacial, unha cobertura cronolóxica "
+"ou histórica, e/ou ás características dunha mostraxe  de pescuda."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Introduza unha descrición."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Introduza o título deste arquivo adicional."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Non se cargou ningún arquivo."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Especificar outro"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Nome do estudo ou outro punto de orixe."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Data en que se recompilaron os datos ou se creou o instrumento."
+
+msgid "author.article.authorRevisedFile"
+msgstr "Arquivo do autor/a"
+
+msgid "author.article.copyeditedFile"
+msgstr "Arquivo corrixido"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Cargar a versión do autor/a"
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Envío completado. Grazas polo seu interese en publicar en {$journalTitle}."
+
+msgid "author.submit.finishSubmission"
+msgstr "Finalizar o envío"
+
+msgid "author.submit.filesSummary"
+msgstr "Resumo do arquivo"
+
+msgid "author.submit.noFiles"
+msgstr "Non se anexou  ningún arquivo a este envío."
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"Para enviar o seu manuscrito a {$journalTitle} faga clic en Finalizar envío. "
+"O contacto principal do envío recibirá un xustificante de recepción por "
+"correo electrónico e poderá ver o progreso do envío no proceso editorial "
+"iniciando sesión no sitio web da revista. Grazas polo seu interese en "
+"publicar en {$journalTitle}."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Identificador público do arquivo adicional"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "A identificación pública do arquivo adicional xa existe."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Introduza un tema."
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Cómpre ter unha conta de usuario/a para realizar envíos a esta revista. Isto "
+"permite aos editores/as facer un seguimiento dos seus envíos e participarlle "
+"os cambios no estado destes ou, de ser necesario,  pedirlle información "
+"adicional."

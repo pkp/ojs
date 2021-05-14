@@ -15,68 +15,82 @@
 
 import('lib.pkp.controllers.tab.pubIds.form.PKPPublicIdentifiersForm');
 
-class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
+use \APP\template\TemplateManager;
 
-	/**
-	 * Constructor.
-	 * @param $pubObject object
-	 * @param $stageId integer
-	 * @param $formParams array
-	 */
-	function __construct($pubObject, $stageId = null, $formParams = null) {
-		parent::__construct($pubObject, $stageId, $formParams);
-	}
+// FIXME: Add namespacing
+//use Issue;
+//use IssueGalley;
+//use ArticleGalley;
 
-	/**
-	 * @copydoc Form::fetch()
-	 */
-	function fetch($request, $template = null, $display = false) {
-		$templateMgr = TemplateManager::getManager($request);
-		$enablePublisherId = (array) $request->getContext()->getData('enablePublisherId');
-		$templateMgr->assign([
-			'enablePublisherId' => (is_a($this->getPubObject(), 'ArticleGalley') && in_array('galley', $enablePublisherId)) ||
-					(is_a($this->getPubObject(), 'Issue') && in_array('issue', $enablePublisherId)) ||
-					(is_a($this->getPubObject(), 'IssueGalley') && in_array('issueGalley', $enablePublisherId)),
-		]);
+class PublicIdentifiersForm extends PKPPublicIdentifiersForm
+{
+    /**
+     * Constructor.
+     *
+     * @param $pubObject object
+     * @param $stageId integer
+     * @param $formParams array
+     */
+    public function __construct($pubObject, $stageId = null, $formParams = null)
+    {
+        parent::__construct($pubObject, $stageId, $formParams);
+    }
 
-		return parent::fetch($request, $template, $display);
-	}
+    /**
+     * @copydoc Form::fetch()
+     *
+     * @param null|mixed $template
+     */
+    public function fetch($request, $template = null, $display = false)
+    {
+        $templateMgr = TemplateManager::getManager($request);
+        $enablePublisherId = (array) $request->getContext()->getData('enablePublisherId');
+        $templateMgr->assign([
+            'enablePublisherId' => ($this->getPubObject() instanceof ArticleGalley && in_array('galley', $enablePublisherId)) ||
+                    ($this->getPubObject() instanceof Issue && in_array('issue', $enablePublisherId)) ||
+                    ($this->getPubObject() instanceof IssueGalley && in_array('issueGalley', $enablePublisherId)),
+        ]);
 
-	/**
-	 * @copydoc Form::execute()
-	 */
-	function execute(...$functionArgs) {
-		parent::execute(...$functionArgs);
-		$pubObject = $this->getPubObject();
-		if (is_a($pubObject, 'Issue')) {
-			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issueDao->updateObject($pubObject);
-		}
-	}
+        return parent::fetch($request, $template, $display);
+    }
 
-	/**
-	 * Clear issue objects pub ids.
-	 * @param $pubIdPlugInClassName string
-	 */
-	function clearIssueObjectsPubIds($pubIdPlugInClassName) {
-		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if (get_class($pubIdPlugin) == $pubIdPlugInClassName) {
-				$pubIdPlugin->clearIssueObjectsPubIds($this->getPubObject());
-			}
-		}
-	}
+    /**
+     * @copydoc Form::execute()
+     */
+    public function execute(...$functionArgs)
+    {
+        parent::execute(...$functionArgs);
+        $pubObject = $this->getPubObject();
+        if ($pubObject instanceof Issue) {
+            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+            $issueDao->updateObject($pubObject);
+        }
+    }
 
-	/**
-	 * @copydoc PKPPublicIdentifiersForm::getAssocType()
-	 */
-	function getAssocType($pubObject) {
-		if (is_a($pubObject, 'Issue')) {
-			return ASSOC_TYPE_ISSUE;
-		}
-		return parent::getAssocType($pubObject);
-	}
+    /**
+     * Clear issue objects pub ids.
+     *
+     * @param $pubIdPlugInClassName string
+     */
+    public function clearIssueObjectsPubIds($pubIdPlugInClassName)
+    {
+        $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+        foreach ($pubIdPlugins as $pubIdPlugin) {
+            $classNameParts = explode('\\', get_class($pubIdPlugin)); // Separate namespace info from class name
+            if (end($classNameParts) == $pubIdPlugInClassName) {
+                $pubIdPlugin->clearIssueObjectsPubIds($this->getPubObject());
+            }
+        }
+    }
 
+    /**
+     * @copydoc PKPPublicIdentifiersForm::getAssocType()
+     */
+    public function getAssocType($pubObject)
+    {
+        if ($pubObject instanceof Issue) {
+            return ASSOC_TYPE_ISSUE;
+        }
+        return parent::getAssocType($pubObject);
+    }
 }
-
-

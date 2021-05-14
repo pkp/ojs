@@ -2,7 +2,7 @@
 /**
  * @defgroup plugins_auth_ldap LDAP Authentication Plugin
  */
- 
+
 /**
  * @file plugins/auth/ldap/index.php
  *
@@ -18,5 +18,3 @@
 require_once('LDAPAuthPlugin.inc.php');
 
 return new LDAPAuthPlugin();
-
-

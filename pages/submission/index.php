@@ -13,17 +13,15 @@
  */
 
 switch ($op) {
-	//
-	// Monograph Submission
-	//
-	case 'wizard':
-	case 'step':
-	case 'saveStep':
-	case 'index':
-	case 'fetchChoices':
-		import('pages.submission.SubmissionHandler');
-		define('HANDLER_CLASS', 'SubmissionHandler');
-		break;
+    //
+    // Monograph Submission
+    //
+    case 'wizard':
+    case 'step':
+    case 'saveStep':
+    case 'index':
+    case 'fetchChoices':
+        import('pages.submission.SubmissionHandler');
+        define('HANDLER_CLASS', 'SubmissionHandler');
+        break;
 }
-
-

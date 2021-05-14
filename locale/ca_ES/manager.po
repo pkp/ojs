@@ -678,9 +678,6 @@ msgstr "Identificació dels continguts de la revista"
 msgid "manager.setup.publisher"
 msgstr "Institució publicadora"
 
-msgid "manager.setup.publishingDescription"
-msgstr "El nom de l’organització que publica la revista apareix a la pàgina «Sobre la revista»."
-
 msgid "manager.setup.referenceLinking"
 msgstr "Enllaços de referència"
 
@@ -1428,9 +1425,6 @@ msgstr "Arxivant"
 msgid "manager.section.noSectionEditors"
 msgstr "Encara no hi ha editors/es de secció. Dóna aquest rol a un usuari/ària com a mínim a través de Gestió > Configuració > Users &amp; Roles first."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERROR:"
-
 msgid "manager.setup.masthead"
 msgstr "Capçalera"
 
@@ -1460,9 +1454,6 @@ msgstr "El ISSN especificat no és vàlid."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Falta el prefix DOI per a la revista amb la ruta {$path}."
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "La ruta de revista especificada, \"{$journalPath}\", no existeix."
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Els objectes especificats no es poden trobar."
@@ -1752,8 +1743,6 @@ msgstr ""
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Restringir l'accés a l'arxiu"
 
-msgid "manager.setup.publishing"
-msgstr "Detalls de publicació"
 
 msgid "manager.setup.privacyStatement.success"
 msgstr "S'ha actualitzat la declaració de privacitat."

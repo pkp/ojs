@@ -15,272 +15,302 @@
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
-class HtmlArticleGalleyPlugin extends GenericPlugin {
-	/**
-	 * @see Plugin::register()
-	 */
-	function register($category, $path, $mainContextId = null) {
-		if (!parent::register($category, $path, $mainContextId)) return false;
-		if ($this->getEnabled($mainContextId)) {
-			HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleViewCallback'), HOOK_SEQUENCE_LATE);
-			HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'), HOOK_SEQUENCE_LATE);
-		}
-		return true;
-	}
+use PKP\submission\SubmissionFile;
 
-	/**
-	 * Install default settings on journal creation.
-	 * @return string
-	 */
-	function getContextSpecificPluginSettingsFile() {
-		return $this->getPluginPath() . '/settings.xml';
-	}
+use APP\template\TemplateManager;
+use APP\file\PublicFileManager;
 
-	/**
-	 * Get the display name of this plugin.
-	 * @return String
-	 */
-	function getDisplayName() {
-		return __('plugins.generic.htmlArticleGalley.displayName');
-	}
+class HtmlArticleGalleyPlugin extends GenericPlugin
+{
+    /**
+     * @see Plugin::register()
+     *
+     * @param null|mixed $mainContextId
+     */
+    public function register($category, $path, $mainContextId = null)
+    {
+        if (!parent::register($category, $path, $mainContextId)) {
+            return false;
+        }
+        if ($this->getEnabled($mainContextId)) {
+            HookRegistry::register('ArticleHandler::view::galley', [$this, 'articleViewCallback'], HOOK_SEQUENCE_LATE);
+            HookRegistry::register('ArticleHandler::download', [$this, 'articleDownloadCallback'], HOOK_SEQUENCE_LATE);
+        }
+        return true;
+    }
 
-	/**
-	 * Get a description of the plugin.
-	 */
-	function getDescription() {
-		return __('plugins.generic.htmlArticleGalley.description');
-	}
+    /**
+     * Install default settings on journal creation.
+     *
+     * @return string
+     */
+    public function getContextSpecificPluginSettingsFile()
+    {
+        return $this->getPluginPath() . '/settings.xml';
+    }
 
-	/**
-	 * Present the article wrapper page.
-	 * @param string $hookName
-	 * @param array $args
-	 */
-	function articleViewCallback($hookName, $args) {
-		$request =& $args[0];
-		$issue =& $args[1];
-		$galley =& $args[2];
-		$article =& $args[3];
+    /**
+     * Get the display name of this plugin.
+     *
+     * @return String
+     */
+    public function getDisplayName()
+    {
+        return __('plugins.generic.htmlArticleGalley.displayName');
+    }
 
-		if (!$galley) {
-			return false;
-		}
+    /**
+     * Get a description of the plugin.
+     */
+    public function getDescription()
+    {
+        return __('plugins.generic.htmlArticleGalley.description');
+    }
 
-		$submissionFile = $galley->getFile();
-		if ($submissionFile->getData('mimetype') === 'text/html') {
-			foreach ($article->getData('publications') as $publication) {
-				if ($publication->getId() === $galley->getData('publicationId')) {
-					$galleyPublication = $publication;
-					break;
-				}
-			}
-			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign(array(
-				'issue' => $issue,
-				'article' => $article,
-				'galley' => $galley,
-				'isLatestPublication' => $article->getData('currentPublicationId') === $galley->getData('publicationId'),
-				'galleyPublication' => $galleyPublication,
-			));
-			$templateMgr->display($this->getTemplateResource('display.tpl'));
+    /**
+     * Present the article wrapper page.
+     *
+     * @param string $hookName
+     * @param array $args
+     */
+    public function articleViewCallback($hookName, $args)
+    {
+        $request = & $args[0];
+        $issue = & $args[1];
+        $galley = & $args[2];
+        $article = & $args[3];
 
-			return true;
-		}
+        if (!$galley) {
+            return false;
+        }
 
-		return false;
-	}
+        $submissionFile = $galley->getFile();
+        if ($submissionFile->getData('mimetype') === 'text/html') {
+            foreach ($article->getData('publications') as $publication) {
+                if ($publication->getId() === $galley->getData('publicationId')) {
+                    $galleyPublication = $publication;
+                    break;
+                }
+            }
+            $templateMgr = TemplateManager::getManager($request);
+            $templateMgr->assign([
+                'issue' => $issue,
+                'article' => $article,
+                'galley' => $galley,
+                'isLatestPublication' => $article->getData('currentPublicationId') === $galley->getData('publicationId'),
+                'galleyPublication' => $galleyPublication,
+            ]);
+            $templateMgr->display($this->getTemplateResource('display.tpl'));
 
-	/**
-	 * Present rewritten article HTML.
-	 * @param string $hookName
-	 * @param array $args
-	 */
-	function articleDownloadCallback($hookName, $args) {
-		$article =& $args[0];
-		$galley =& $args[1];
-		$fileId =& $args[2];
-		$request = Application::get()->getRequest();
+            return true;
+        }
 
-		if (!$galley) {
-			return false;
-		}
+        return false;
+    }
 
-		$submissionFile = $galley->getFile();
-		if ($galley->getData('submissionFileId') == $fileId && $submissionFile->getData('mimetype') === 'text/html' && $galley->getData('submissionFileId') == $submissionFile->getId()) {
-			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
-				echo $this->_getHTMLContents($request, $galley);
-				$returner = true;
-				HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', array(&$returner));
-			}
-			return true;
-		}
+    /**
+     * Present rewritten article HTML.
+     *
+     * @param string $hookName
+     * @param array $args
+     */
+    public function articleDownloadCallback($hookName, $args)
+    {
+        $article = & $args[0];
+        $galley = & $args[1];
+        $fileId = & $args[2];
+        $request = Application::get()->getRequest();
 
-		return false;
-	}
+        if (!$galley) {
+            return false;
+        }
 
-	/**
-	 * Return string containing the contents of the HTML file.
-	 * This function performs any necessary filtering, like image URL replacement.
-	 * @param $request PKPRequest
-	 * @param $galley ArticleGalley
-	 * @return string
-	 */
-	protected function _getHTMLContents($request, $galley) {
-		$submissionFile = $galley->getFile();
-		$submissionId = $submissionFile->getData('submissionId');
-		$contents = Services::get('file')->fs->read($submissionFile->getData('path'));
+        $submissionFile = $galley->getFile();
+        if ($galley->getData('submissionFileId') == $fileId && $submissionFile->getData('mimetype') === 'text/html' && $galley->getData('submissionFileId') == $submissionFile->getId()) {
+            if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', [$article,  &$galley, &$fileId])) {
+                echo $this->_getHTMLContents($request, $galley);
+                $returner = true;
+                HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', [&$returner]);
+            }
+            return true;
+        }
 
-		// Replace media file references
-		import('lib.pkp.classes.submission.SubmissionFile'); // Constants
-		$embeddableFilesIterator = Services::get('submissionFile')->getMany([
-			'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
-			'assocIds' => [$submissionFile->getId()],
-			'fileStages' => [SUBMISSION_FILE_DEPENDENT],
-			'includeDependentFiles' => true,
-		]);
-		$embeddableFiles = iterator_to_array($embeddableFilesIterator);
+        return false;
+    }
 
-		$referredArticle = null;
-		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
-		foreach ($embeddableFiles as $embeddableFile) {
-			$params = array();
+    /**
+     * Return string containing the contents of the HTML file.
+     * This function performs any necessary filtering, like image URL replacement.
+     *
+     * @param $request PKPRequest
+     * @param $galley ArticleGalley
+     *
+     * @return string
+     */
+    protected function _getHTMLContents($request, $galley)
+    {
+        $submissionFile = $galley->getFile();
+        $submissionId = $submissionFile->getData('submissionId');
+        $contents = Services::get('file')->fs->read($submissionFile->getData('path'));
 
-			if ($embeddableFile->getData('mimetype') == 'text/plain' || $embeddableFile->getData('mimetype') == 'text/css') {
-				$params['inline'] ='true';
-			}
+        // Replace media file references
+        $embeddableFilesIterator = Services::get('submissionFile')->getMany([
+            'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
+            'assocIds' => [$submissionFile->getId()],
+            'fileStages' => [SubmissionFile::SUBMISSION_FILE_DEPENDENT],
+            'includeDependentFiles' => true,
+        ]);
+        $embeddableFiles = iterator_to_array($embeddableFilesIterator);
 
-			// Ensure that the $referredArticle object refers to the article we want
-			if (!$referredArticle || $referredArticle->getId() != $submissionId) {
-				$referredArticle = $submissionDao->getById($submissionId);
-			}
-			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getId()), $params);
-			$pattern = preg_quote(rawurlencode($embeddableFile->getLocalizedData('name')));
+        $referredArticle = null;
+        $submissionDao = DAORegistry::getDAO('SubmissionDAO');
+        foreach ($embeddableFiles as $embeddableFile) {
+            $params = [];
 
-			$contents = preg_replace(
-				'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
-				'\1="' . $fileUrl . '"',
-				$contents
-			);
-			if ($contents === null) error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
+            if ($embeddableFile->getData('mimetype') == 'text/plain' || $embeddableFile->getData('mimetype') == 'text/css') {
+                $params['inline'] = 'true';
+            }
 
-			// Replacement for Flowplayer
-			$contents = preg_replace(
-				'/[Uu][Rr][Ll]\s*\:\s*\'(' . $pattern . ')\'/',
-				'url:\'' . $fileUrl . '\'',
-				$contents
-			);
-			if ($contents === null) error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
+            // Ensure that the $referredArticle object refers to the article we want
+            if (!$referredArticle || $referredArticle->getId() != $submissionId) {
+                $referredArticle = $submissionDao->getById($submissionId);
+            }
+            $fileUrl = $request->url(null, 'article', 'download', [$referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getId()], $params);
+            $pattern = preg_quote(rawurlencode($embeddableFile->getLocalizedData('name')));
 
-			// Replacement for other players (ested with odeo; yahoo and google player won't work w/ OJS URLs, might work for others)
-			$contents = preg_replace(
-				'/[Uu][Rr][Ll]=([^"]*' . $pattern . ')/',
-				'url=' . $fileUrl ,
-				$contents
-			);
-			if ($contents === null) error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
-		}
+            $contents = preg_replace(
+                '/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
+                '\1="' . $fileUrl . '"',
+                $contents
+            );
+            if ($contents === null) {
+                error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
+            }
 
-		// Perform replacement for ojs://... URLs
-		$contents = preg_replace_callback(
-			'/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
-			array($this, '_handleOjsUrl'),
-			$contents
-		);
-		if ($contents === null) error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
+            // Replacement for Flowplayer
+            $contents = preg_replace(
+                '/[Uu][Rr][Ll]\s*\:\s*\'(' . $pattern . ')\'/',
+                'url:\'' . $fileUrl . '\'',
+                $contents
+            );
+            if ($contents === null) {
+                error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
+            }
 
-		$templateMgr = TemplateManager::getManager($request);
-		$contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
+            // Replacement for other players (ested with odeo; yahoo and google player won't work w/ OJS URLs, might work for others)
+            $contents = preg_replace(
+                '/[Uu][Rr][Ll]=([^"]*' . $pattern . ')/',
+                'url=' . $fileUrl,
+                $contents
+            );
+            if ($contents === null) {
+                error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
+            }
+        }
 
-		// Perform variable replacement for journal, issue, site info
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issue = $issueDao->getBySubmissionId($submissionId);
+        // Perform replacement for ojs://... URLs
+        $contents = preg_replace_callback(
+            '/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
+            [$this, '_handleOjsUrl'],
+            $contents
+        );
+        if ($contents === null) {
+            error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
+        }
 
-		$journal = $request->getJournal();
-		$site = $request->getSite();
+        $templateMgr = TemplateManager::getManager($request);
+        $contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
 
-		$paramArray = array(
-			'issueTitle' => $issue?$issue->getIssueIdentification():__('editor.article.scheduleForPublication.toBeAssigned'),
-			'journalTitle' => $journal->getLocalizedName(),
-			'siteTitle' => $site->getLocalizedTitle(),
-			'currentUrl' => $request->getRequestUrl()
-		);
+        // Perform variable replacement for journal, issue, site info
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+        $issue = $issueDao->getBySubmissionId($submissionId);
 
-		foreach ($paramArray as $key => $value) {
-			$contents = str_replace('{$' . $key . '}', $value, $contents);
-		}
+        $journal = $request->getJournal();
+        $site = $request->getSite();
 
-		return $contents;
-	}
+        $paramArray = [
+            'issueTitle' => $issue ? $issue->getIssueIdentification() : __('editor.article.scheduleForPublication.toBeAssigned'),
+            'journalTitle' => $journal->getLocalizedName(),
+            'siteTitle' => $site->getLocalizedTitle(),
+            'currentUrl' => $request->getRequestUrl()
+        ];
 
-	function _handleOjsUrl($matchArray) {
-		$request = Application::get()->getRequest();
-		$url = $matchArray[2];
-		$anchor = null;
-		if (($i = strpos($url, '#')) !== false) {
-			$anchor = substr($url, $i+1);
-			$url = substr($url, 0, $i);
-		}
-		$urlParts = explode('/', $url);
-		if (isset($urlParts[0])) switch(strtolower_codesafe($urlParts[0])) {
-			case 'journal':
-				$url = $request->url(
-				isset($urlParts[1]) ?
-				$urlParts[1] :
-				$request->getRequestedJournalPath(),
-				null,
-				null,
-				null,
-				null,
-				$anchor
-				);
-				break;
-			case 'article':
-				if (isset($urlParts[1])) {
-					$url = $request->url(
-							null,
-							'article',
-							'view',
-							$urlParts[1],
-							null,
-							$anchor
-					);
-				}
-				break;
-			case 'issue':
-				if (isset($urlParts[1])) {
-					$url = $request->url(
-							null,
-							'issue',
-							'view',
-							$urlParts[1],
-							null,
-							$anchor
-					);
-				} else {
-					$url = $request->url(
-							null,
-							'issue',
-							'current',
-							null,
-							null,
-							$anchor
-					);
-				}
-				break;
-			case 'sitepublic':
-				array_shift($urlParts);
-				import ('classes.file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
-				$url = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
-				break;
-			case 'public':
-				array_shift($urlParts);
-				$journal = $request->getJournal();
-				import ('classes.file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
-				$url = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
-				break;
-		}
-		return $matchArray[1] . $url . $matchArray[3];
-	}
+        foreach ($paramArray as $key => $value) {
+            $contents = str_replace('{$' . $key . '}', $value, $contents);
+        }
+
+        return $contents;
+    }
+
+    public function _handleOjsUrl($matchArray)
+    {
+        $request = Application::get()->getRequest();
+        $url = $matchArray[2];
+        $anchor = null;
+        if (($i = strpos($url, '#')) !== false) {
+            $anchor = substr($url, $i + 1);
+            $url = substr($url, 0, $i);
+        }
+        $urlParts = explode('/', $url);
+        if (isset($urlParts[0])) {
+            switch (strtolower_codesafe($urlParts[0])) {
+            case 'journal':
+                $url = $request->url(
+                    $urlParts[1] ??
+                $request->getRequestedJournalPath(),
+                    null,
+                    null,
+                    null,
+                    null,
+                    $anchor
+                );
+                break;
+            case 'article':
+                if (isset($urlParts[1])) {
+                    $url = $request->url(
+                        null,
+                        'article',
+                        'view',
+                        $urlParts[1],
+                        null,
+                        $anchor
+                    );
+                }
+                break;
+            case 'issue':
+                if (isset($urlParts[1])) {
+                    $url = $request->url(
+                        null,
+                        'issue',
+                        'view',
+                        $urlParts[1],
+                        null,
+                        $anchor
+                    );
+                } else {
+                    $url = $request->url(
+                        null,
+                        'issue',
+                        'current',
+                        null,
+                        null,
+                        $anchor
+                    );
+                }
+                break;
+            case 'sitepublic':
+                array_shift($urlParts);
+                $publicFileManager = new PublicFileManager();
+                $url = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor ? '#' . $anchor : '');
+                break;
+            case 'public':
+                array_shift($urlParts);
+                $journal = $request->getJournal();
+                $publicFileManager = new PublicFileManager();
+                $url = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor ? '#' . $anchor : '');
+                break;
+        }
+        }
+        return $matchArray[1] . $url . $matchArray[3];
+    }
 }

@@ -13,13 +13,22 @@
  * @brief Basis class for DOI XML metadata export plugins
  */
 
-import('classes.plugins.PubObjectsExportPlugin');
+namespace APP\plugins;
 
 // Configuration errors.
 define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
 
 // The name of the setting used to save the registered DOI.
 define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
+
+use PKP\submission\PKPSubmission;
+use PKP\db\DAORegistry;
+use PKP\plugins\PluginRegistry;
+use PKP\core\PKPString;
+
+use APP\template\TemplateManager;
+use APP\plugins\PubObjectsExportPlugin;
+use APP\core\Services;
 
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	/**
@@ -191,7 +200,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 			return Services::get('submission')->get($submissionId);
 		}, $submissionIds);
 		return array_filter($submissions, function($submission) {
-			return $submission->getData('status') === STATUS_PUBLISHED && !!$submission->getStoredPubId('doi');
+			return $submission->getData('status') === PKPSubmission::STATUS_PUBLISHED && !!$submission->getStoredPubId('doi');
 		});
 	}
 
@@ -227,4 +236,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\DOIPubIdExportPlugin', '\DOIPubIdExportPlugin');
+}

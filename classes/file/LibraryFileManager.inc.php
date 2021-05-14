@@ -13,17 +13,14 @@
  * @brief Wrapper class for uploading files to a site/context' library directory.
  */
 
-import('lib.pkp.classes.file.PKPLibraryFileManager');
+namespace APP\file;
 
-class LibraryFileManager extends PKPLibraryFileManager {
+use PKP\file\PKPLibraryFileManager;
 
-	/**
-	 * Constructor
-	 * @param $contextId int
-	 */
-	function __construct($contextId) {
-		parent::__construct($contextId);
-	}
+class LibraryFileManager extends PKPLibraryFileManager
+{
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\file\LibraryFileManager', '\LibraryFileManager');
+}

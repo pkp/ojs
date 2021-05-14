@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2021-02-03 17:44+0000\n"
-"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"PO-Revision-Date: 2021-05-07 08:53+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -344,7 +344,7 @@ msgid "manager.setup"
 msgstr "Configuração"
 
 msgid "manager.setup.masthead"
-msgstr "Equipe Editorial"
+msgstr "Expediente"
 
 msgid "manager.setup.editorialTeam"
 msgstr "Equipe Editorial"
@@ -828,14 +828,8 @@ msgstr "Periodicidade de publicação"
 msgid "manager.setup.publicIdentifier"
 msgstr "Identificação do conteúdo"
 
-msgid "manager.setup.publishing"
-msgstr "Detalhes da publicação"
-
 msgid "manager.setup.publisher"
 msgstr "Editora"
-
-msgid "manager.setup.publishingDescription"
-msgstr "O nome da editora aparecerá na página Sobre a revista."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Links para referências"
@@ -1777,12 +1771,6 @@ msgstr "Registrado com sucesso!"
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "O prefixo DOI está faltando para a revista com o caminho {$path}."
 
-msgid "plugins.importexport.common.cliError"
-msgstr "ERRO:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "O caminho especificado da revista, \"{$journalPath}\", não existe."
-
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Os objetos especificados não puderam ser encontrados."
 
@@ -1894,3 +1882,27 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Pelo menos uma seção deve estar ativa. Verifique as configurações do fluxo "
 "de trabalho para desativar todas as submissões desta revista."
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "O processo falhou ao analisar as composições da edição"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Resultados de exportação das edições"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Nenhum contato principal foi definido para esta revista. Você pode inserir "
+"um contato principal nas <a href=\"{$url}\"> configurações da revista </a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Envie uma cópia do e-mail de confirmação de submissão para o contato "
+"principal desta revista."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Selecione o país onde esta revista está localizada, ou o país do endereço de "
+"correspondência da revista ou editora."

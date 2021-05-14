@@ -9,30 +9,41 @@
  *
  * @class SubmissionFileDAO
  * @ingroup submission
+ *
  * @see SubmissionFile
  *
  * @brief Operations for retrieving and modifying submission files
  */
-import('lib.pkp.classes.submission.PKPSubmissionFileDAO');
 
-class SubmissionFileDAO extends PKPSubmissionFileDAO {
+namespace APP\submission;
 
-	/**
-	 * @copydoc SchemaDAO::insertObject
-	 */
-	public function insertObject($submissionFile) {
-		parent::insertObject($submissionFile);
+use PKP\submission\PKPSubmissionFileDAO;
+use PKP\db\DAORegistry;
 
-		if ($submissionFile->getData('assocType') === ASSOC_TYPE_REPRESENTATION) {
-			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-			$galley = $galleyDao->getById($submissionFile->getData('assocId'));
-			if (!$galley) {
-				throw new Exception('Galley not found when adding submission file.');
-			}
-			$galley->setFileId($submissionFile->getId());
-			$galleyDao->updateObject($galley);
-		}
+class SubmissionFileDAO extends PKPSubmissionFileDAO
+{
+    /**
+     * @copydoc SchemaDAO::insertObject
+     */
+    public function insertObject($submissionFile)
+    {
+        parent::insertObject($submissionFile);
 
-		return $submissionFile->getId();
-	}
+        if ($submissionFile->getData('assocType') === ASSOC_TYPE_REPRESENTATION) {
+            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+            $galley = $galleyDao->getById($submissionFile->getData('assocId'));
+            if (!$galley) {
+                throw new Exception('Galley not found when adding submission file.');
+            }
+            $galley->setFileId($submissionFile->getId());
+            $galleyDao->updateObject($galley);
+        }
+
+        return $submissionFile->getId();
+    }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\SubmissionFileDAO', '\SubmissionFileDAO');
+}
+

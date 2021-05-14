@@ -779,14 +779,8 @@ msgstr "Планирование выпусков"
 msgid "manager.setup.publicIdentifier"
 msgstr "Идентификация контента журнала"
 
-msgid "manager.setup.publishing"
-msgstr "Информация о публикации журнала"
-
 msgid "manager.setup.publisher"
 msgstr "Издатель"
-
-msgid "manager.setup.publishingDescription"
-msgstr "Эта информация может быть включена в метаданные, предоставляемые системам архивирования сторонних разработчиков."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Вставка гиперссылок на источники"
@@ -1677,12 +1671,6 @@ msgstr "Проверка завершилась неудачей."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Отсутствует префикс DOI для журнала с адресом {$path}."
-
-msgid "plugins.importexport.common.cliError"
-msgstr "ОШИБКА:"
-
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Указанный путь журнала «{$journalPath}» не существует."
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Указанные объекты не удается найти."

@@ -58,12 +58,14 @@ msgstr ""
 "{$section2Title} » dans le numéro « {$issueTitle} » sont identiques à des "
 "rubriques existantes dans la revue."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "L'utilisatrice ou utilisateur spécifié, « {$userName] », n'existe pas."
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Section {$param} inconnue"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Utilisation : {$scriptName} {$pluginName} [command] ...\n"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-16 17:16+0000\n"
-"Last-Translator: Қуаныш Жұмабекұлы Жұмабек <kuanysh.zhumabekov@mail.ru>\n"
+"PO-Revision-Date: 2021-04-03 07:08+0000\n"
+"Last-Translator: Nurbol Erbosyn <ErbosynNurbol@gmail.com>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/admin/kk_KZ/>"
 "\n"
 "Language: kk_KZ\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "admin.hostedContexts"
-msgstr "Орналастырылған журналдар"
+msgstr "Орналастырылған Журналдар"
 
 msgid "admin.languages.confirmUninstall"
 msgstr ""
@@ -56,3 +56,178 @@ msgstr ""
 
 msgid "admin.settings.redirect"
 msgstr "Журнал бойынша қайта бағыттау"
+
+msgid "admin.auth.ojs"
+msgstr "OJS Пайдаланушы Дерекқоры"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt> config.inc.php </tt> OJS конфигурациясының параметрлері."
+
+msgid "admin.systemConfiguration"
+msgstr "OJS конфигурациясы"
+
+msgid "admin.systemVersion"
+msgstr "OJS нұсқасы"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Пайдаланушыны құруды қосыңыз (егер бұл аутентификация плагині қолдаса). Осы "
+"түпнұсқалық растама көзімен OJS ішінде құрылған пайдаланушылар, егер олар "
+"жоқ болса, автоматты түрде қашықтағы аутентификация көзіне қосылады. Сонымен "
+"қатар, егер бұл дереккөз түпнұсқалық растама көзі болса, пайдаланушыны "
+"тіркеу арқылы жасалған OJS есептік жазбалары қашықтан аутентификация көзіне "
+"қосылады."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Пайдаланушы паролін өзгертуді қосыңыз (егер бұл аутентификация плагині "
+"қолдаса). Бұл опцияны қосу пайдаланушыларға құпия сөзді OJS ішінен өзгертуге "
+"және ұмытылған парольді қалпына келтіру үшін «жоғалған пароль» OJS "
+"мүмкіндігін пайдалануға мүмкіндік береді. Егер бұл опция қосылмаған болса, "
+"бұл функциялар осы аутентификация көзі бар пайдаланушылар үшін қол жетімді "
+"болмайды."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Пайдаланушы профилін синхрондауды қосыңыз (егер бұл аутентификация плагині "
+"қолдаса). Пайдаланушы кірген кезде пайдаланушының профилі туралы ақпарат "
+"қашықтағы дереккөзден автоматты түрде жаңартылады, ал OJS ішінде жасалған "
+"профиль өзгерістері (парольді қоса) қашықтағы дереккөзге автоматты түрде "
+"жаңартылады. Егер бұл параметр қосылмаған болса, OJS профилі туралы ақпарат "
+"қашықтағы бастапқы профиль туралы ақпараттан бөлек сақталады."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Осы жүйеге қолдау орнату үшін кез-келген қосымша тілдерді таңдаңыз. "
+"Орналастырылған журналдарда қолданар алдында жергілікті тілдер орнатылуы "
+"керек. Жаңа тілдерге қолдау көрсету туралы ақпаратты OJS құжаттамасынан "
+"қараңыз."
+
+msgid "admin.mergeUsers"
+msgstr "Пайдаланушыларды біріктіру"
+
+msgid "admin.journals.journalSettings"
+msgstr "Журнал параметрлері"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Импорттау жолы қажет."
+
+msgid "admin.journals.redirect"
+msgstr "OJS 1 URL-ді OJS 2 URL-ге салыстыру үшін код жасаңыз"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Бұл журналды анықтайтын бір қысқа сөз немесе аббревиатура болуы керек. "
+"Журналдың URL мекенжайы {$sample Url} болады."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Жазылымдарды импорттау"
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Электрондық пошта мүмкіндігі бұл журнал үшін өшірілген. Бұл мүмкіндікті <a "
+"href=\"{$siteSettingsUrl}\"> Admin> Site Settings </a> ішінен қосыңыз."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Журнал менеджері төменде таңдалған рөлдердің кез-келгеніне электрондық "
+"хаттарды жібере алмайды. Бұл параметрді электрондық пошта арқылы "
+"хабарландыру мүмкіндігін теріс пайдалануды шектеу үшін пайдаланыңыз. Мысалы, "
+"оқырмандарға, авторларға немесе басқа электрондық пошта хабарламаларын алуға "
+"келіспеген басқа үлкен пайдаланушылар тобына электрондық хаттарды өшіру "
+"қауіпсізірек болуы мүмкін. <br> <br> Электрондық пошта функциясын <a »"
+"журналына толықтай өшіруге болады. href = «{$ siteSettingsUrl}»> Әкімші> "
+"Сайт параметрлері </a>."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Жаппай электрондық хаттарды жіберуге рұқсат етілген орналастырылған "
+"журналдарды таңдаңыз. Бұл мүмкіндік қосылған кезде журнал менеджері өз "
+"журналында тіркелген барлық қолданушыларға электрондық пошта жібере алады. "
+"<br> <br> Бұл мүмкіндікті қажетсіз электрондық пошта хабарларын жіберу "
+"кейбір юрисдикциялардағы спамға қарсы заңдарды бұзуы мүмкін. сіздің "
+"серверіңіздің спам ретінде бұғатталған электрондық поштаңызда. Бұл "
+"мүмкіндікті қоспас бұрын техникалық кеңес сұраңыз және журналдың "
+"менеджерлерімен ақылдасып, оның дұрыс қолданылуын қамтамасыз етіңіз. <br> "
+"<br> Бұл функцияға одан әрі шектеулер әр журнал үшін <a href = «{$ "
+"hostedContextsUrl}»> Журналдар </a>."
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Шолу туралы еске салу"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Access хабарламасын ашыңыз"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Жазылу мерзімі туралы еске салғыш"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Тіркелген пайдаланушылар жоқ."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Таңдалған {$ oldAccountCount} есептік жазбаларын «{$ newUsername}» "
+"пайдаланушы атымен біріктіргіңіз келетініне сенімдісіз бе? Таңдалған {$ "
+"oldAccountCount} есептік жазбалары кейін болмайды. Бұл әрекет қайтымды емес."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Барлық тіркелген қолданушылар"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Басқа пайдаланушы тіркелгісіне қосылу үшін пайдаланушыны (немесе бірнеше) "
+"таңдаңыз (мысалы, біреудің екі есептік жазбасы болған кезде). Алдымен "
+"таңдалған есептік жазбалар жойылады және кез келген жіберулер, тапсырмалар "
+"және т.б. екінші есептік жазбаға жатқызылады."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Алдыңғы пайдаланушының авторлығын, тағайындауды және т.б. жатқызатын "
+"пайдаланушыны таңдаңыз."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Пайдаланушыларды біріктіру"
+
+msgid "admin.journals.importErrors"
+msgstr "Импорт сәтсіз аяқталды"
+
+msgid "admin.journals.transcode"
+msgstr "ISO8859-1 стандартындағы метадеректердің кодын түрлендіріңіз"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Қолданыстағы журнал жолы немесе құру жолы (мысалы, «ojs»)."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Журнал сипаттамасы"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Бұл журналдың сайтта көпшілік назарына шығуын қосыңыз"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Бастапқы тіл журналдың қолдау көрсетілетін тілдерінің бірі болуы керек."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Сіз берген жолды басқа журнал қолданады."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Жолға тек әріптер, сандар және _ және - таңбалары кіруі мүмкін. Ол әріппен "
+"немесе цифрмен басталып, аяқталуы керек."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Жол қажет."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Тақырып қажет."
+
+msgid "admin.contexts.create"
+msgstr "Журнал құру"
+
+msgid "admin.journals.noneCreated"
+msgstr "Ешқандай журналдар жасалмады."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Сіз автоматты түрде осы журналдың менеджері ретінде тіркелесіз. Жаңа журнал "
+"жасағаннан кейін, сіз журналды бастапқы орнатуды аяқтау үшін оның шеберіне "
+"қайта бағытталасыз."

@@ -38,6 +38,7 @@ msgstr "Dostavite fajl pod \"Uvoz\" kako biste nastavili."
 msgid "plugins.importexport.native.importComplete"
 msgstr "Uvoz podataka je uspešno završen. Uvezeni su sledeći podaci:"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Korišćenje: {$scriptName} {$pluginName} [command] ...\n"
@@ -66,6 +67,7 @@ msgstr ""
 msgid "plugins.importexport.native.cliError"
 msgstr "GREŠKA:"
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Navedeni korisnik, \"{$userName}\", ne postoji."
 

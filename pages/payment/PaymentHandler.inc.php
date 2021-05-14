@@ -13,56 +13,60 @@
  * @brief Handle requests for payment functions.
  */
 
-import('classes.handler.Handler');
+use APP\handler\Handler;
 
-class PaymentHandler extends Handler {
-		 
-	/**
-	 * Pass request to plugin.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function plugin($args, $request) {
-		$paymentMethodPlugins = PluginRegistry::loadCategory('paymethod');
-		$paymentMethodPluginName = array_shift($args);
-		if (empty($paymentMethodPluginName) || !isset($paymentMethodPlugins[$paymentMethodPluginName])) {
-			$request->redirect(null, null, 'index');
-		}
+use \APP\template\TemplateManager;
 
-		$paymentMethodPlugin =& $paymentMethodPlugins[$paymentMethodPluginName];
-		if (!$paymentMethodPlugin->isConfigured($request->getContext())) {
-			$request->redirect(null, null, 'index');
-		}
+class PaymentHandler extends Handler
+{
+    /**
+     * Pass request to plugin.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     */
+    public function plugin($args, $request)
+    {
+        $paymentMethodPlugins = PluginRegistry::loadCategory('paymethod');
+        $paymentMethodPluginName = array_shift($args);
+        if (empty($paymentMethodPluginName) || !isset($paymentMethodPlugins[$paymentMethodPluginName])) {
+            $request->redirect(null, null, 'index');
+        }
 
-		$paymentMethodPlugin->handle($args, $request);
-	}
+        $paymentMethodPlugin = & $paymentMethodPlugins[$paymentMethodPluginName];
+        if (!$paymentMethodPlugin->isConfigured($request->getContext())) {
+            $request->redirect(null, null, 'index');
+        }
 
-	/**
-	 * Present a landing page from which to fulfill a payment.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function pay($args, $request) {
-		if (!Validation::isLoggedIn()) {
-			Validation::redirectLogin();
-		}
+        $paymentMethodPlugin->handle($args, $request);
+    }
 
-		$paymentManager = Application::getPaymentManager($request->getContext());
-		$templateMgr = TemplateManager::getManager($request);
-		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /* @var $queuedPaymentDao QueuedPaymentDAO */
-		$queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = array_shift($args));
-		if (!$queuedPayment) {
-			$templateMgr->assign(array(
-				'pageTitle' => 'common.payment',
-				'message' => 'payment.notFound',
-			));
-			$templateMgr->display('frontend/pages/message.tpl');
-			return;
-		}
+    /**
+     * Present a landing page from which to fulfill a payment.
+     *
+     * @param $args array
+     * @param $request PKPRequest
+     */
+    public function pay($args, $request)
+    {
+        if (!Validation::isLoggedIn()) {
+            Validation::redirectLogin();
+        }
 
-		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
-		$paymentForm->display($request);
-	}
+        $paymentManager = Application::getPaymentManager($request->getContext());
+        $templateMgr = TemplateManager::getManager($request);
+        $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /* @var $queuedPaymentDao QueuedPaymentDAO */
+        $queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = array_shift($args));
+        if (!$queuedPayment) {
+            $templateMgr->assign([
+                'pageTitle' => 'common.payment',
+                'message' => 'payment.notFound',
+            ]);
+            $templateMgr->display('frontend/pages/message.tpl');
+            return;
+        }
+
+        $paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+        $paymentForm->display($request);
+    }
 }
-
-

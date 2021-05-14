@@ -13,19 +13,24 @@
  * @brief Form for Step 3 of a review in OJS.
  */
 
-import('lib.pkp.classes.submission.reviewer.form.PKPReviewerReviewStep3Form');
+namespace APP\submission\reviewer\form;
 
-class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form {
+use PKP\submission\reviewer\form\PKPReviewerReviewStep3Form;
 
-	/**
-	 * @copydoc PKPReviewerReviewStep3Form::__construct()
-	 */
-	function __construct($request, $reviewerSubmission, $reviewAssignment) {
-		parent::__construct($request, $reviewerSubmission, $reviewAssignment, 3);
-		$this->addCheck(new FormValidatorCustom($this, 'recommendation', 'required', 'reviewer.submission.reviewFormResponse.form.recommendationRequired', function($recommendation) {
-			return isset($recommendation);
-		}));		
-	}
+class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
+{
+    /**
+     * @copydoc PKPReviewerReviewStep3Form::__construct()
+     */
+    public function __construct($request, $reviewerSubmission, $reviewAssignment)
+    {
+        parent::__construct($request, $reviewerSubmission, $reviewAssignment);
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'recommendation', 'required', 'reviewer.submission.reviewFormResponse.form.recommendationRequired', function ($recommendation) {
+            return isset($recommendation);
+        }));
+    }
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\reviewer\form\ReviewerReviewStep3Form', '\ReviewerReviewStep3Form');
+}

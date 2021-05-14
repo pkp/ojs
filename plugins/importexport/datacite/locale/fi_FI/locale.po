@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-12 08:52+0000\n"
+"PO-Revision-Date: 2021-04-09 20:13+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-datacite/fi_FI/>\n"
@@ -70,3 +70,12 @@ msgstr ""
 
 msgid "plugins.importexport.datacite.displayName"
 msgstr "DataCite-vientilisäosa"
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Testi DOI-prefiksi"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Testisalasana"
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Testikäyttäjänimi"

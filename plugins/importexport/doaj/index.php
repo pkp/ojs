@@ -19,5 +19,3 @@
 require_once('DOAJExportPlugin.inc.php');
 
 return new DOAJExportPlugin();
-
-

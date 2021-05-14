@@ -57,12 +57,14 @@ msgstr ""
 "{$section2Title}\" trong số \"{$issueTitle}\" phù hợp với sự  khác nhau của "
 "các chuyên mục hiện có của tạp chí."
 
+#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "Người dùng được chỉ định, \"{$userName}\", không tồn tại."
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Chuyên mục không xác định {$param}"
 
+#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Sử dụng: {$scriptName} {$pluginName} [command] ...\n"

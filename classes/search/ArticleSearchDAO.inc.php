@@ -9,66 +9,79 @@
  *
  * @class ArticleSearchDAO
  * @ingroup search
+ *
  * @see ArticleSearch
  *
  * @brief DAO class for article search index.
  */
 
+use PKP\submission\PKPSubmission;
+
 import('classes.search.ArticleSearch');
 import('lib.pkp.classes.search.SubmissionSearchDAO');
 
-class ArticleSearchDAO extends SubmissionSearchDAO {
-	/**
-	 * Retrieve the top results for a phrase.
-	 * @param $journal Journal
-	 * @param $phrase array
-	 * @param $publishedFrom int|null Optional start date
-	 * @param $publishedTo int|null Optional end date
-	 * @param $type int|null ASSOC_TYPE_...
-	 * @param $limit int
-	 * @return array of results (associative arrays)
-	 */
-	public function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500) {
-		if (empty($phrase)) return array();
+class ArticleSearchDAO extends SubmissionSearchDAO
+{
+    /**
+     * Retrieve the top results for a phrase.
+     *
+     * @param $journal Journal
+     * @param $phrase array
+     * @param $publishedFrom int|null Optional start date
+     * @param $publishedTo int|null Optional end date
+     * @param $type int|null ASSOC_TYPE_...
+     * @param $limit int
+     *
+     * @return array of results (associative arrays)
+     */
+    public function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500)
+    {
+        if (empty($phrase)) {
+            return [];
+        }
 
-		$sqlFrom = '';
-		$sqlWhere = '';
-		$params = array();
+        $sqlFrom = '';
+        $sqlWhere = '';
+        $params = [];
 
-		for ($i = 0, $count = count($phrase); $i < $count; $i++) {
-			if (!empty($sqlFrom)) {
-				$sqlFrom .= ', ';
-				$sqlWhere .= ' AND ';
-			}
-			$sqlFrom .= 'submission_search_object_keywords o'.$i.' NATURAL JOIN submission_search_keyword_list k'.$i;
-			if (strstr($phrase[$i], '%') === false) $sqlWhere .= 'k'.$i.'.keyword_text = ?';
-			else $sqlWhere .= 'k'.$i.'.keyword_text LIKE ?';
-			if ($i > 0) $sqlWhere .= ' AND o0.object_id = o'.$i.'.object_id AND o0.pos+'.$i.' = o'.$i.'.pos';
+        for ($i = 0, $count = count($phrase); $i < $count; $i++) {
+            if (!empty($sqlFrom)) {
+                $sqlFrom .= ', ';
+                $sqlWhere .= ' AND ';
+            }
+            $sqlFrom .= 'submission_search_object_keywords o' . $i . ' NATURAL JOIN submission_search_keyword_list k' . $i;
+            if (strstr($phrase[$i], '%') === false) {
+                $sqlWhere .= 'k' . $i . '.keyword_text = ?';
+            } else {
+                $sqlWhere .= 'k' . $i . '.keyword_text LIKE ?';
+            }
+            if ($i > 0) {
+                $sqlWhere .= ' AND o0.object_id = o' . $i . '.object_id AND o0.pos+' . $i . ' = o' . $i . '.pos';
+            }
 
-			$params[] = $phrase[$i];
-		}
+            $params[] = $phrase[$i];
+        }
 
-		if (!empty($type)) {
-			$sqlWhere .= ' AND (o.type & ?) != 0';
-			$params[] = $type;
-		}
+        if (!empty($type)) {
+            $sqlWhere .= ' AND (o.type & ?) != 0';
+            $params[] = $type;
+        }
 
-		if (!empty($publishedFrom)) {
-			$sqlWhere .= ' AND p.date_published >= ' . $this->datetimeToDB($publishedFrom);
-		}
+        if (!empty($publishedFrom)) {
+            $sqlWhere .= ' AND p.date_published >= ' . $this->datetimeToDB($publishedFrom);
+        }
 
-		if (!empty($publishedTo)) {
-			$sqlWhere .= ' AND p.date_published <= ' . $this->datetimeToDB($publishedTo);
-		}
+        if (!empty($publishedTo)) {
+            $sqlWhere .= ' AND p.date_published <= ' . $this->datetimeToDB($publishedTo);
+        }
 
-		if (!empty($journal)) {
-			$sqlWhere .= ' AND i.journal_id = ?';
-			$params[] = $journal->getId();
-		}
+        if (!empty($journal)) {
+            $sqlWhere .= ' AND i.journal_id = ?';
+            $params[] = $journal->getId();
+        }
 
-		import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_PUBLISHED
-		$result = $this->retrieve(
-			'SELECT
+        $result = $this->retrieve(
+            'SELECT
 				o.submission_id,
 				MAX(s.context_id) AS journal_id,
 				MAX(i.date_published) AS i_pub,
@@ -82,24 +95,23 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
 				NATURAL JOIN ' . $sqlFrom . '
 			WHERE
-				s.status = ' . STATUS_PUBLISHED . ' AND
+				s.status = ' . PKPSubmission::STATUS_PUBLISHED . ' AND
 				i.published = 1 AND ' . $sqlWhere . '
 			GROUP BY o.submission_id
 			ORDER BY count DESC
 			LIMIT ' . $limit,
-			$params
-		);
+            $params
+        );
 
-		$returner = [];
-		foreach ($result as $row) {
-			$returner[$row->submission_id] = [
-				'count' => $row->count,
-				'journal_id' => $row->journal_id,
-				'issuePublicationDate' => $this->datetimeFromDB($row->i_pub),
-				'publicationDate' => $this->datetimeFromDB($row->s_pub)
-			];
-		}
-		return $returner;
-	}
+        $returner = [];
+        foreach ($result as $row) {
+            $returner[$row->submission_id] = [
+                'count' => $row->count,
+                'journal_id' => $row->journal_id,
+                'issuePublicationDate' => $this->datetimeFromDB($row->i_pub),
+                'publicationDate' => $this->datetimeFromDB($row->s_pub)
+            ];
+        }
+        return $returner;
+    }
 }
-

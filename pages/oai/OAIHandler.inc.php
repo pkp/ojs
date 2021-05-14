@@ -16,61 +16,68 @@
 define('SESSION_DISABLE_INIT', 1); // FIXME?
 
 import('classes.oai.ojs.JournalOAI');
-import('classes.handler.Handler');
 
-use \Firebase\JWT\JWT;
+use PKP\oai\OAIConfig;
 
-class OAIHandler extends Handler {
+use APP\handler\Handler;
 
-	/**
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function index($args, $request) {
-		$this->validate(null, $request);
+use Firebase\JWT\JWT;
 
-		PluginRegistry::loadCategory('oaiMetadataFormats', true);
+class OAIHandler extends Handler
+{
+    /**
+     * @param $args array
+     * @param $request PKPRequest
+     */
+    public function index($args, $request)
+    {
+        $this->validate(null, $request);
 
-		$oai = new JournalOAI(new OAIConfig($request->url(null, 'oai'), Config::getVar('oai', 'repository_id')));
-		if (!$request->getJournal() && $request->getRequestedJournalPath() != 'index') {
-			$dispatcher = $request->getDispatcher();
-			return $dispatcher->handle404();
-		}
-		$oai->execute();
-	}
+        PluginRegistry::loadCategory('oaiMetadataFormats', true);
 
-	/**
-	 * @copydoc PKPHandler::validate()
-	 */
-	function validate($requiredContexts = null, $request = null) {
-		// Site validation checks not applicable
-		//parent::validate($requiredContexts, $request);
+        $oai = new JournalOAI(new OAIConfig($request->url(null, 'oai'), Config::getVar('oai', 'repository_id')));
+        if (!$request->getJournal() && $request->getRequestedJournalPath() != 'index') {
+            $dispatcher = $request->getDispatcher();
+            return $dispatcher->handle404();
+        }
+        $oai->execute();
+    }
 
-		if (!Config::getVar('oai', 'oai')) {
-			$request->redirect(null, 'index');
-		}
+    /**
+     * @copydoc PKPHandler::validate()
+     *
+     * @param null|mixed $requiredContexts
+     * @param null|mixed $request
+     */
+    public function validate($requiredContexts = null, $request = null)
+    {
+        // Site validation checks not applicable
+        //parent::validate($requiredContexts, $request);
 
-		// Permit the use of the Authorization header and an API key for access to unpublished content (article URLs)
-		if ($header = array_search('Authorization', array_flip(getallheaders()))) {
-			list($bearer, $jwt) = explode(' ', $header);
-			if (strcasecmp($bearer, 'Bearer') == 0) {
-				$apiToken = JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256'));
-				// Compatibility with old API keys
-				// https://github.com/pkp/pkp-lib/issues/6462
-				if (substr($apiToken, 0, 2) === '""') {
-					$apiToken = json_decode($apiToken);
-				}
-				$this->setApiToken($apiToken);
-			}
-		}
-	}
+        if (!Config::getVar('oai', 'oai')) {
+            $request->redirect(null, 'index');
+        }
 
-	/**
-	 * @see PKPHandler::requireSSL()
-	 */
-	function requireSSL() {
-		return false;
-	}
+        // Permit the use of the Authorization header and an API key for access to unpublished content (article URLs)
+        if ($header = array_search('Authorization', array_flip(getallheaders()))) {
+            [$bearer, $jwt] = explode(' ', $header);
+            if (strcasecmp($bearer, 'Bearer') == 0) {
+                $apiToken = JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), ['HS256']);
+                // Compatibility with old API keys
+                // https://github.com/pkp/pkp-lib/issues/6462
+                if (substr($apiToken, 0, 2) === '""') {
+                    $apiToken = json_decode($apiToken);
+                }
+                $this->setApiToken($apiToken);
+            }
+        }
+    }
+
+    /**
+     * @see PKPHandler::requireSSL()
+     */
+    public function requireSSL()
+    {
+        return false;
+    }
 }
-
-

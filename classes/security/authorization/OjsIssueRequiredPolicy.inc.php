@@ -12,84 +12,104 @@
  * @brief Policy that ensures that the request contains a valid issue.
  */
 
-import('lib.pkp.classes.security.authorization.DataObjectRequiredPolicy');
+namespace APP\security\authorization;
 
-class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
-	/** @var Journal */
-	var $journal;
+use PKP\db\DAORegistry;
+use PKP\security\authorization\AuthorizationPolicy;
+use PKP\security\authorization\DataObjectRequiredPolicy;
 
-	/**
-	 * Constructor
-	 * @param $request PKPRequest
-	 * @param $args array request parameters
-	 * @param $operations array
-	 */
-	function __construct($request, &$args, $operations = null) {
-		parent::__construct($request, $args, 'issueId', 'user.authorization.invalidIssue', $operations);
-		$this->journal = $request->getJournal();
-	}
+// FIXME: Add namespacing
+use \Issue;
 
-	//
-	// Implement template methods from AuthorizationPolicy
-	//
-	/**
-	 * @see DataObjectRequiredPolicy::dataObjectEffect()
-	 */
-	function dataObjectEffect() {
-		$issueId = $this->getDataObjectId();
-		if (!$issueId) return AUTHORIZATION_DENY;
+class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
+{
+    /** @var Journal */
+    public $journal;
 
-		// Make sure the issue belongs to the journal.
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issue = $issueDao->getByBestId($issueId,  $this->journal->getId());
+    /**
+     * Constructor
+     *
+     * @param $request PKPRequest
+     * @param $args array request parameters
+     * @param $operations array
+     */
+    public function __construct($request, &$args, $operations = null)
+    {
+        parent::__construct($request, $args, 'issueId', 'user.authorization.invalidIssue', $operations);
+        $this->journal = $request->getJournal();
+    }
 
-		if (!is_a($issue, 'Issue')) return AUTHORIZATION_DENY;
+    //
+    // Implement template methods from AuthorizationPolicy
+    //
+    /**
+     * @see DataObjectRequiredPolicy::dataObjectEffect()
+     */
+    public function dataObjectEffect()
+    {
+        $issueId = $this->getDataObjectId();
+        if (!$issueId) {
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
+        }
 
-		// The issue must be published, or we must have pre-publication
-		// access to it.
-		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-		if (!$issue->getPublished() && count(array_intersect(
-			$userRoles,
-			array(
-				ROLE_ID_SITE_ADMIN,
-				ROLE_ID_MANAGER,
-				ROLE_ID_SUB_EDITOR,
-				ROLE_ID_ASSISTANT,
-			)
-		))==0) {
-			return AUTHORIZATION_DENY;
-		}
+        // Make sure the issue belongs to the journal.
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+        $issue = $issueDao->getByBestId($issueId, $this->journal->getId());
 
-		// Save the issue to the authorization context.
-		$this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE, $issue);
-		return AUTHORIZATION_PERMIT;
-	}
+        if (!$issue instanceof Issue) {
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
+        }
 
-	/**
-	 * @copydoc DataObjectRequiredPolicy::getDataObjectId()
-	 * Considers a not numeric public URL identifier
-	 */
-	function getDataObjectId($lookOnlyByParameterName = false) {
-		if ($lookOnlyByParameterName) throw new Exception('lookOnlyByParameterName not supported for issues.');
-		// Identify the data object id.
-		$router = $this->_request->getRouter();
-		switch(true) {
-			case is_a($router, 'PKPPageRouter'):
-				if ( ctype_digit((string) $this->_request->getUserVar($this->_parameterName)) ) {
-					// We may expect a object id in the user vars
-					return (int) $this->_request->getUserVar($this->_parameterName);
-				} else if (isset($this->_args[0])) {
-					// Or the object id can be expected as the first path in the argument list
-					return $this->_args[0];
-				}
-				break;
+        // The issue must be published, or we must have pre-publication
+        // access to it.
+        $userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        if (!$issue->getPublished() && count(array_intersect(
+            $userRoles,
+            [
+                ROLE_ID_SITE_ADMIN,
+                ROLE_ID_MANAGER,
+                ROLE_ID_SUB_EDITOR,
+                ROLE_ID_ASSISTANT,
+            ]
+        )) == 0) {
+            return AuthorizationPolicy::AUTHORIZATION_DENY;
+        }
 
-			default:
-				return parent::getDataObjectId();
-		}
+        // Save the issue to the authorization context.
+        $this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE, $issue);
+        return AuthorizationPolicy::AUTHORIZATION_PERMIT;
+    }
 
-		return false;
-	}
+    /**
+     * @copydoc DataObjectRequiredPolicy::getDataObjectId()
+     * Considers a not numeric public URL identifier
+     */
+    public function getDataObjectId($lookOnlyByParameterName = false)
+    {
+        if ($lookOnlyByParameterName) {
+            throw new Exception('lookOnlyByParameterName not supported for issues.');
+        }
+        // Identify the data object id.
+        $router = $this->_request->getRouter();
+        switch (true) {
+            case $router instanceof \PKP\core\PKPPageRouter:
+                if (ctype_digit((string) $this->_request->getUserVar($this->_parameterName))) {
+                    // We may expect a object id in the user vars
+                    return (int) $this->_request->getUserVar($this->_parameterName);
+                } elseif (isset($this->_args[0])) {
+                    // Or the object id can be expected as the first path in the argument list
+                    return $this->_args[0];
+                }
+                break;
+
+            default:
+                return parent::getDataObjectId();
+        }
+
+        return false;
+    }
 }
 
-
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\security\authorization\OjsIssueRequiredPolicy', '\OjsIssueRequiredPolicy');
+}

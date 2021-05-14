@@ -1,2 +1,86 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-03-29 14:59+0000\n"
+"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/manager/uz_UZ@"
+"latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS foydalanuvchilarga bir nechta qo'llab-quvvatlanadigan tillarda taqdim "
+"etilishi mumkin. Shuningdek, OJS ko'p tilli tizim sifatida ishlashi mumkin, "
+"bu foydalanuvchilarga har bir sahifadagi tillar o'rtasida almashinish "
+"imkoniyatini beradi va ba'zi ma'lumotlarni bir nechta qo'shimcha tillarga "
+"kiritish imkonini beradi. <br /> <br/> Agar OJS tomonidan qo'llab-"
+"quvvatlanadigan til bo'lsa. quyida ko'rsatilmagan, sayt ma'muridan tilni "
+"sayt ma'muriyati interfeysidan o'rnatishni so'rang. Yangi tillarga ko'mak "
+"qo'shish bo'yicha ko'rsatmalar uchun OJS hujjatlariga murojaat qiling."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Bu ushbu til uchun jurnalga tegishli bo'lgan har qanday mahalliy jurnal "
+"sozlamalarini almashtiradi"
+
+msgid "manager.language.forms"
+msgstr "Shakllar"
+
+msgid "manager.language.submissions"
+msgstr "Materiallarni yuborish"
+
+msgid "manager.language.ui"
+msgstr "Foydalanuvchi interfeysi"
+
+msgid "manager.journalManagement"
+msgstr "Jurnalni boshqarish"
+
+msgid "manager.files.note"
+msgstr ""
+"Izoh: Fayllar brauzeri - bu jurnal bilan bog'liq bo'lgan fayllar va "
+"kataloglarni to'g'ridan-to'g'ri ko'rish va boshqarish imkonini beradigan "
+"rivojlangan xususiyat."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Ushbu jurnaldagi barcha elektron pochta shablonlarini qayta "
+"tiklamoqchimisiz? Siz qilgan har qanday sozlamalarni yo'qotasiz."
+
+msgid "manager.website.archiving"
+msgstr "Arxivlash"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Jurnal uning ba'zi yoki to'liq tarkibiga kirish uchun obunalarni talab "
+"qiladi."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Jurnal uning tarkibiga ochiq kirishni ta'minlaydi."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS jurnal tarkibini onlayn nashr qilish uchun foydalanilmaydi."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Nashriyot rejimi"
+
+msgid "manager.distribution.publication"
+msgstr "Nashr"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Maqolaning nashr etilgan sanasidan foydalaning"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Nashrning nashr etilgan sanasidan foydalaning"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Maqola uchun mualliflik huquqining standart sanasi qachonligini tanlang. "
+"Ushbu standart har bir holat bo'yicha bekor qilinishi mumkin. Agar siz \""
+"borganingizdek nashr qilsangiz\", nashr qilingan sanadan foydalanmang."
+
+msgid "manager.distribution.access"
+msgstr "Kirish"

@@ -16,136 +16,142 @@
 // Import the base ManagementHandler.
 import('lib.pkp.pages.management.ManagementHandler');
 
-class SettingsHandler extends ManagementHandler {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-		$this->addRoleAssignment(
-			array(ROLE_ID_SITE_ADMIN),
-			array(
-				'access',
-			)
-		);
-		$this->addRoleAssignment(
-			ROLE_ID_MANAGER,
-			array(
-				'settings',
-			)
-		);
-	}
+use \APP\template\TemplateManager;
 
-	/**
-	 * Add the workflow settings page
-	 *
-	 * @param $args array
-	 * @param $request Request
-	 */
-	function workflow($args, $request) {
-		parent::workflow($args, $request);
-		TemplateManager::getManager($request)->display('management/workflow.tpl');
-	}
+class SettingsHandler extends ManagementHandler
+{
+    /**
+     * Constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->addRoleAssignment(
+            [ROLE_ID_SITE_ADMIN],
+            [
+                'access',
+            ]
+        );
+        $this->addRoleAssignment(
+            ROLE_ID_MANAGER,
+            [
+                'settings',
+            ]
+        );
+    }
 
-	/**
-	 * Add the archive and payments tabs to the distribution settings page
-	 *
-	 * @param $args array
-	 * @param $request Request
-	 */
-	function distribution($args, $request) {
-		parent::distribution($args, $request);
+    /**
+     * Add the workflow settings page
+     *
+     * @param $args array
+     * @param $request Request
+     */
+    public function workflow($args, $request)
+    {
+        parent::workflow($args, $request);
+        TemplateManager::getManager($request)->display('management/workflow.tpl');
+    }
 
-		$templateMgr = TemplateManager::getManager($request);
-		$context = $request->getContext();
-		$router = $request->getRouter();
-		$dispatcher = $request->getDispatcher();
+    /**
+     * Add the archive and payments tabs to the distribution settings page
+     *
+     * @param $args array
+     * @param $request Request
+     */
+    public function distribution($args, $request)
+    {
+        parent::distribution($args, $request);
 
-		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
-		$lockssUrl = $router->url($request, $context->getPath(), 'gateway', 'lockss');
-		$clockssUrl = $router->url($request, $context->getPath(), 'gateway', 'clockss');
+        $templateMgr = TemplateManager::getManager($request);
+        $context = $request->getContext();
+        $router = $request->getRouter();
+        $dispatcher = $request->getDispatcher();
 
-		$supportedFormLocales = $context->getSupportedFormLocales();
-		$localeNames = AppLocale::getAllLocales();
-		$locales = array_map(function($localeKey) use ($localeNames) {
-			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
-		}, $supportedFormLocales);
+        $apiUrl = $dispatcher->url($request, PKPApplication::ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
+        $lockssUrl = $router->url($request, $context->getPath(), 'gateway', 'lockss');
+        $clockssUrl = $router->url($request, $context->getPath(), 'gateway', 'clockss');
 
-		$accessForm = new \APP\components\forms\context\AccessForm($apiUrl, $locales, $context);
-		$archivingLockssForm = new \APP\components\forms\context\ArchivingLockssForm($apiUrl, $locales, $context, $lockssUrl, $clockssUrl);
+        $supportedFormLocales = $context->getSupportedFormLocales();
+        $localeNames = AppLocale::getAllLocales();
+        $locales = array_map(function ($localeKey) use ($localeNames) {
+            return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
+        }, $supportedFormLocales);
 
-		// Create a dummy "form" for the PKP Preservation Network settings. This
-		// form loads a single field which enables/disables the plugin, and does
-		// not need to be submitted. It's a dirty hack, but we can change this once
-		// an API is in place for plugins and plugin settings.
-		$plnPlugin = PluginRegistry::getPlugin('generic', 'plnplugin');
-		$archivePnForm = new \PKP\components\forms\FormComponent('archivePn', 'PUT', 'dummy', $supportedFormLocales);
-		$archivePnForm->addPage([
-				'id' => 'default',
-				'submitButton' => null,
-			])
-			->addGroup([
-				'id' => 'default',
-				'pageId' => 'default',
-			]);
+        $accessForm = new \APP\components\forms\context\AccessForm($apiUrl, $locales, $context);
+        $archivingLockssForm = new \APP\components\forms\context\ArchivingLockssForm($apiUrl, $locales, $context, $lockssUrl, $clockssUrl);
 
-		if ($plnPlugin) {
-			$plnPlugin = PluginRegistry::getPlugin('generic', 'plnplugin');
-			$pnEnablePluginUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'enable', null, array('plugin' => 'plnplugin', 'category' => 'generic'));
-			$pnDisablePluginUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'disable', null, array('plugin' => 'plnplugin', 'category' => 'generic'));
-			$pnSettingsUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('verb' => 'settings', 'plugin' => 'plnplugin', 'category' => 'generic'));
+        // Create a dummy "form" for the PKP Preservation Network settings. This
+        // form loads a single field which enables/disables the plugin, and does
+        // not need to be submitted. It's a dirty hack, but we can change this once
+        // an API is in place for plugins and plugin settings.
+        $plnPlugin = PluginRegistry::getPlugin('generic', 'plnplugin');
+        $archivePnForm = new \PKP\components\forms\FormComponent('archivePn', 'PUT', 'dummy', $supportedFormLocales);
+        $archivePnForm->addPage([
+            'id' => 'default',
+            'submitButton' => null,
+        ])
+            ->addGroup([
+                'id' => 'default',
+                'pageId' => 'default',
+            ]);
 
-			$archivePnForm->addField(new \APP\components\forms\FieldArchivingPn('pn', [
-				'label' => __('manager.setup.plnPluginArchiving'),
-				'description' => __('manager.setup.plnDescription'),
-				'terms' => __('manager.setup.plnSettingsDescription'),
-				'options' => [
-					[
-						'value' => true,
-						'label' => __('manager.setup.plnPluginEnable'),
-					],
-				],
-				'value' => (bool) $plnPlugin,
-				'enablePluginUrl' => $pnEnablePluginUrl,
-				'disablePluginUrl' => $pnDisablePluginUrl,
-				'settingsUrl' => $pnSettingsUrl,
-				'csrfToken' => $request->getSession()->getCSRFToken(),
-				'groupId' => 'default',
-				'enablePluginSuccess' => __('common.pluginEnabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
-				'disablePluginSuccess' => __('common.pluginDisabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
-			]));
-		} else {
-			$archivePnForm->addField(new \PKP\components\forms\FieldHTML('pn', [
-				'label' => __('manager.setup.plnPluginArchiving'),
-				'description' => __('manager.setup.plnPluginNotInstalled'),
-				'groupId' => 'default',
-			]));
-		}
+        if ($plnPlugin) {
+            $plnPlugin = PluginRegistry::getPlugin('generic', 'plnplugin');
+            $pnEnablePluginUrl = $dispatcher->url($request, PKPApplication::ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'enable', null, ['plugin' => 'plnplugin', 'category' => 'generic']);
+            $pnDisablePluginUrl = $dispatcher->url($request, PKPApplication::ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'disable', null, ['plugin' => 'plnplugin', 'category' => 'generic']);
+            $pnSettingsUrl = $dispatcher->url($request, PKPApplication::ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, ['verb' => 'settings', 'plugin' => 'plnplugin', 'category' => 'generic']);
 
-		// Add forms to the existing settings data
-		$components = $templateMgr->getState('components');
-		$components[$accessForm->id] = $accessForm->getConfig();
-		$components[$archivingLockssForm->id] = $archivingLockssForm->getConfig();
-		$components[$archivePnForm->id] = $archivePnForm->getConfig();
-		$templateMgr->setState(['components' => $components]);
+            $archivePnForm->addField(new \APP\components\forms\FieldArchivingPn('pn', [
+                'label' => __('manager.setup.plnPluginArchiving'),
+                'description' => __('manager.setup.plnDescription'),
+                'terms' => __('manager.setup.plnSettingsDescription'),
+                'options' => [
+                    [
+                        'value' => true,
+                        'label' => __('manager.setup.plnPluginEnable'),
+                    ],
+                ],
+                'value' => (bool) $plnPlugin,
+                'enablePluginUrl' => $pnEnablePluginUrl,
+                'disablePluginUrl' => $pnDisablePluginUrl,
+                'settingsUrl' => $pnSettingsUrl,
+                'csrfToken' => $request->getSession()->getCSRFToken(),
+                'groupId' => 'default',
+                'enablePluginSuccess' => __('common.pluginEnabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
+                'disablePluginSuccess' => __('common.pluginDisabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
+            ]));
+        } else {
+            $archivePnForm->addField(new \PKP\components\forms\FieldHTML('pn', [
+                'label' => __('manager.setup.plnPluginArchiving'),
+                'description' => __('manager.setup.plnPluginNotInstalled'),
+                'groupId' => 'default',
+            ]));
+        }
 
-		// Add a payments link to be added/removed when payments form submitted
-		$templateMgr->setState([
-			'paymentsNavLink' => [
-				'name' => __('common.payments'),
-				'url' => $router->url($request, null, 'payments'),
-				'isCurrent' => false,
-			],
-		]);
+        // Add forms to the existing settings data
+        $components = $templateMgr->getState('components');
+        $components[$accessForm->id] = $accessForm->getConfig();
+        $components[$archivingLockssForm->id] = $archivingLockssForm->getConfig();
+        $components[$archivePnForm->id] = $archivePnForm->getConfig();
+        $templateMgr->setState(['components' => $components]);
 
-		// Hook into the settings templates to add the appropriate tabs
-		HookRegistry::register('Template::Settings::distribution', function($hookName, $args) {
-			$templateMgr = $args[1];
-			$output = &$args[2];
-			$output .= $templateMgr->fetch('management/additionalDistributionTabs.tpl');
-			return false;
-		});
+        // Add a payments link to be added/removed when payments form submitted
+        $templateMgr->setState([
+            'paymentsNavLink' => [
+                'name' => __('common.payments'),
+                'url' => $router->url($request, null, 'payments'),
+                'isCurrent' => false,
+            ],
+        ]);
 
-		$templateMgr->display('management/distribution.tpl');
-	}
+        // Hook into the settings templates to add the appropriate tabs
+        HookRegistry::register('Template::Settings::distribution', function ($hookName, $args) {
+            $templateMgr = $args[1];
+            $output = &$args[2];
+            $output .= $templateMgr->fetch('management/additionalDistributionTabs.tpl');
+            return false;
+        });
+
+        $templateMgr->display('management/distribution.tpl');
+    }
 }
