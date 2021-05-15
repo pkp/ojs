@@ -13,8 +13,6 @@
  * @brief Handle subscription type grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
-
 import('controllers.grid.subscriptions.SubscriptionTypesGridCellProvider');
 import('controllers.grid.subscriptions.SubscriptionTypesGridRow');
 import('controllers.grid.subscriptions.SubscriptionTypeForm');
@@ -23,6 +21,8 @@ use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 use PKP\notification\PKPNotification;
+use PKP\controllers\grid\GridHandler;
+use PKP\controllers\grid\GridColumn;
 
 use APP\notification\NotificationManager;
 

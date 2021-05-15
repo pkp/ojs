@@ -13,6 +13,8 @@
  * @brief Handle exportable submissions with pub ids list grid requests.
  */
 
+use PKP\controllers\grid\GridColumn;
+
 import('controllers.grid.submissions.ExportPublishedSubmissionsListGridHandler');
 
 class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsListGridHandler
@@ -72,7 +74,7 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
                 $this->_plugin->getPubIdDisplayType(),
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 15]
             )
         );

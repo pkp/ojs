@@ -21,6 +21,8 @@ use PKP\identity\Identity;
 use PKP\core\JSONMessage;
 use PKP\user\UserDAO;
 use PKP\notification\PKPNotification;
+use PKP\user\UserDAO;
+use PKP\controllers\grid\GridColumn;
 
 use APP\notification\NotificationManager;
 
@@ -109,7 +111,6 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
     public function renderFilter($request, $filterData = [])
     {
         // Import field constants.
-        import('lib.pkp.classes.user.UserDAO');
         import('classes.subscription.InstitutionalSubscriptionDAO');
 
         $filterData = array_merge($filterData, [

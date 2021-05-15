@@ -13,9 +13,8 @@
  * @brief Handle issues grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
-import('controllers.grid.issueGalleys.IssueGalleyGridRow');
-
+use PKP\controllers\grid\GridHandler;
+use PKP\controllers\grid\GridColumn;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
@@ -25,6 +24,8 @@ use PKP\security\authorization\OjsIssueGalleyRequiredPolicy;
 
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\file\IssueFileManager;
+
+import('controllers.grid.issueGalleys.IssueGalleyGridRow');
 
 class IssueGalleyGridHandler extends GridHandler
 {

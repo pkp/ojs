@@ -13,7 +13,8 @@
  * @brief Grid cell provider for the issue galleys grid
  */
 
-import('lib.pkp.classes.controllers.grid.GridCellProvider');
+use PKP\controllers\grid\GridCellProvider;
+use PKP\controllers\grid\GridColumn;
 
 class IssueGalleyGridCellProvider extends GridCellProvider
 {

@@ -13,7 +13,8 @@
  * @brief Class for a cell provider to display information about payments
  */
 
-import('lib.pkp.classes.controllers.grid.GridCellProvider');
+use PKP\controllers\grid\GridCellProvider;
+use PKP\controllers\grid\GridColumn;
 
 class PaymentsGridCellProvider extends GridCellProvider
 {

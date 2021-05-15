@@ -13,10 +13,11 @@
  * @brief Grid cell provider for the issue management grid
  */
 
-import('lib.pkp.classes.controllers.grid.GridCellProvider');
-
+use PKP\controllers\grid\GridCellProvider;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
+use PKP\controllers\grid\GridHandler;
+use PKP\controllers\grid\GridColumn;
 
 class IssueGridCellProvider extends GridCellProvider
 {
@@ -40,7 +41,7 @@ class IssueGridCellProvider extends GridCellProvider
      *
      * @return array an array of LinkAction instances
      */
-    public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
+    public function getCellActions($request, $row, $column, $position = GridHandler::GRID_ACTION_POSITION_DEFAULT)
     {
         if ($column->getId() == 'identification') {
             $issue = $row->getData();

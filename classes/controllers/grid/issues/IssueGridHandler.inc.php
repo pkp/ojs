@@ -18,9 +18,8 @@
  * @brief Handle issues grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
-import('controllers.grid.issues.IssueGridRow');
-
+use PKP\controllers\grid\GridHandler;
+use PKP\controllers\grid\GridColumn;
 use PKP\core\JSONMessage;
 use PKP\submission\PKPSubmission;
 use PKP\file\TemporaryFileManager;
@@ -30,6 +29,8 @@ use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\template\TemplateManager;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
+
+import('controllers.grid.issues.IssueGridRow');
 
 class IssueGridHandler extends GridHandler
 {

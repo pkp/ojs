@@ -21,6 +21,7 @@ use PKP\identity\Identity;
 use PKP\core\JSONMessage;
 use PKP\user\UserDAO;
 use PKP\notification\PKPNotification;
+use PKP\controllers\grid\GridColumn;
 
 use APP\notification\NotificationManager;
 

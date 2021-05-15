@@ -13,13 +13,15 @@
  * @brief Handle TOC (table of contents) grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.CategoryGridHandler');
 import('controllers.grid.toc.TocGridCategoryRow');
 import('controllers.grid.toc.TocGridRow');
 
+use PKP\controllers\grid\CategoryGridHandler;
 use PKP\core\JSONMessage;
 use PKP\submission\PKPSubmission;
 use PKP\security\authorization\ContextAccessPolicy;
+use PKP\controllers\grid\feature\OrderCategoryGridItemsFeature;
+use PKP\controllers\grid\GridColumn;
 
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
@@ -95,7 +97,7 @@ class TocGridHandler extends CategoryGridHandler
                     null,
                     'controllers/grid/common/cell/selectStatusCell.tpl',
                     $tocGridCellProvider,
-                    ['width' => 20, 'alignment' => COLUMN_ALIGNMENT_CENTER]
+                    ['width' => 20, 'alignment' => GridColumn::COLUMN_ALIGNMENT_CENTER]
                 )
             );
         }
@@ -106,7 +108,7 @@ class TocGridHandler extends CategoryGridHandler
      */
     public function initFeatures($request, $args)
     {
-        return [new OrderCategoryGridItemsFeature(ORDER_CATEGORY_GRID_CATEGORIES_AND_ROWS, true, $this)];
+        return [new OrderCategoryGridItemsFeature(OrderCategoryGridItemsFeature::ORDER_CATEGORY_GRID_CATEGORIES_AND_ROWS, true, $this)];
     }
 
     /**

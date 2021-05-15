@@ -13,6 +13,9 @@
  * @brief Handle issues grid requests.
  */
 
+use PKP\controllers\grid\feature\OrderGridItemsFeature;
+use PKP\controllers\grid\GridColumn;
+
 import('classes.controllers.grid.issues.IssueGridHandler');
 
 class BackIssueGridHandler extends IssueGridHandler
@@ -96,7 +99,6 @@ class BackIssueGridHandler extends IssueGridHandler
      */
     public function initFeatures($request, $args)
     {
-        import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
         return [new OrderGridItemsFeature()];
     }
 

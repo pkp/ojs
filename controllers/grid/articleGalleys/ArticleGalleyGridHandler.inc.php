@@ -13,9 +13,8 @@
  * @brief Handle article galley grid requests.
  */
 
-// import grid base classes
-import('lib.pkp.classes.controllers.grid.GridHandler');
-
+use PKP\controllers\grid\GridHandler;
+use PKP\controllers\grid\GridColumn;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;

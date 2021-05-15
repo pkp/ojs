@@ -13,7 +13,8 @@
  * @brief Class for a cell provider to display information about individual subscriptions
  */
 
-import('lib.pkp.classes.controllers.grid.GridCellProvider');
+use PKP\controllers\grid\GridCellProvider;
+use PKP\controllers\grid\GridColumn;
 
 class SubscriptionTypesGridCellProvider extends GridCellProvider
 {

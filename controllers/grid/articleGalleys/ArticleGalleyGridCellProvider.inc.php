@@ -13,7 +13,8 @@
  * @brief Base class for a cell provider for article galleys.
  */
 
-import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
+use PKP\controllers\grid\DataObjectGridCellProvider;
+use PKP\controllers\grid\GridHandler;
 
 class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
 {
@@ -79,7 +80,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
     /**
      * @copydoc GridCellProvider::getCellActions()
      */
-    public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
+    public function getCellActions($request, $row, $column, $position = GridHandler::GRID_ACTION_POSITION_DEFAULT)
     {
         switch ($column->getId()) {
             case 'label':

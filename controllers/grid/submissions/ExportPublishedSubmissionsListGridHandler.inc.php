@@ -15,8 +15,8 @@
 
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
-
-import('lib.pkp.classes.controllers.grid.GridHandler');
+use PKP\controllers\grid\GridHandler;
+use PKP\controllers\grid\GridColumn;
 
 class ExportPublishedSubmissionsListGridHandler extends GridHandler
 {
@@ -87,7 +87,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
                 __('common.id'),
                 'controllers/grid/gridCell.tpl',
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 10]
             )
         );
@@ -99,7 +99,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
                 null,
                 $cellProvider,
                 ['html' => true,
-                    'alignment' => COLUMN_ALIGNMENT_LEFT]
+                    'alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT]
             )
         );
         $this->addColumn(
@@ -109,7 +109,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
                 null,
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 20]
             )
         );
@@ -123,7 +123,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
                 null,
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 10]
             )
         );
