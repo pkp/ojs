@@ -23,6 +23,7 @@ use PKP\core\JSONMessage;
 use PKP\notification\PKPNotification;
 use PKP\controllers\grid\GridHandler;
 use PKP\controllers\grid\GridColumn;
+use PKP\security\Role;
 
 use APP\notification\NotificationManager;
 
@@ -36,7 +37,7 @@ class SubscriptionTypesGridHandler extends GridHandler
         parent::__construct();
         $this->addRoleAssignment(
             [
-                ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER],
+                Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRow', 'editSubscriptionType', 'updateSubscriptionType',
                 'deleteSubscriptionType', 'addSubscriptionType']
         );

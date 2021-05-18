@@ -15,7 +15,9 @@
 
 import('lib.pkp.controllers.grid.settings.sections.form.PKPSectionForm');
 
-use \APP\template\TemplateManager;
+use PKP\security\Role;
+
+use APP\template\TemplateManager;
 
 class SectionForm extends PKPSectionForm
 {
@@ -72,7 +74,7 @@ class SectionForm extends PKPSectionForm
                 'wordCount' => $section->getAbstractWordCount(),
                 'assignedSubeditors' => Services::get('user')->getIds([
                     'contextId' => Application::get()->getRequest()->getContext()->getId(),
-                    'roleIds' => ROLE_ID_SUB_EDITOR,
+                    'roleIds' => Role::ROLE_ID_SUB_EDITOR,
                     'assignedToSection' => (int) $this->getSectionId(),
                 ]),
             ]);

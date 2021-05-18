@@ -16,6 +16,7 @@
  */
 
 use PKP\submission\PKPSubmission;
+use PKP\security\Role;
 
 class IssueAction
 {
@@ -73,7 +74,7 @@ class IssueAction
             $userId = $user->getId();
 
             $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
-            $stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR, null, $userId);
+            $stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), Role::ROLE_ID_AUTHOR, null, $userId);
             $stageAssignment = $stageAssignments->next();
             if ($stageAssignment) {
                 return true;
@@ -200,10 +201,10 @@ class IssueAction
             $journalId = $journal->getId();
             $userId = $user->getId();
             $subscriptionAssumedRoles = [
-                ROLE_ID_MANAGER,
-                ROLE_ID_SUB_EDITOR,
-                ROLE_ID_ASSISTANT,
-                ROLE_ID_SUBSCRIPTION_MANAGER
+                Role::ROLE_ID_MANAGER,
+                Role::ROLE_ID_SUB_EDITOR,
+                Role::ROLE_ID_ASSISTANT,
+                Role::ROLE_ID_SUBSCRIPTION_MANAGER
             ];
 
             $roles = $roleDao->getByUserId($userId, $journalId);

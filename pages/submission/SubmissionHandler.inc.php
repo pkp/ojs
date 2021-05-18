@@ -13,9 +13,11 @@
  * @brief Handle requests for the submission wizard.
  */
 
-use APP\handler\Handler;
-import('lib.pkp.pages.submission.PKPSubmissionHandler');
+use PKP\security\Role;
 
+use APP\handler\Handler;
+
+import('lib.pkp.pages.submission.PKPSubmissionHandler');
 
 class SubmissionHandler extends PKPSubmissionHandler
 {
@@ -26,7 +28,7 @@ class SubmissionHandler extends PKPSubmissionHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_AUTHOR, ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER],
+            [Role::ROLE_ID_AUTHOR, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_MANAGER],
             ['index', 'wizard', 'step', 'saveStep', 'fetchChoices']
         );
     }

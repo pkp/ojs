@@ -15,6 +15,7 @@
 
 use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
+use PKP\security\Role;
 
 import('classes.controllers.grid.issues.IssueGridHandler');
 
@@ -27,7 +28,7 @@ class BackIssueGridHandler extends IssueGridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             ['saveSequence']
         );
     }

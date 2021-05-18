@@ -24,6 +24,7 @@ use PKP\core\JSONMessage;
 use PKP\submission\PKPSubmission;
 use PKP\file\TemporaryFileManager;
 use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\Role;
 
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\template\TemplateManager;
@@ -41,7 +42,7 @@ class IssueGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             [
                 'fetchGrid', 'fetchRow',
                 'addIssue', 'editIssue', 'editIssueData', 'updateIssue',

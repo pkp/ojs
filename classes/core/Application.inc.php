@@ -20,6 +20,7 @@ namespace APP\core;
 
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
+use PKP\security\Role;
 
 define('REQUIRES_XSL', false);
 
@@ -261,8 +262,8 @@ class Application extends PKPApplication
     public static function getRoleNames($contextOnly = false, $roleIds = null)
     {
         $roleNames = parent::getRoleNames($contextOnly, $roleIds);
-        if (!$roleIds || in_array(ROLE_ID_SUBSCRIPTION_MANAGER, $roleIds)) {
-            $roleNames[ROLE_ID_SUBSCRIPTION_MANAGER] = 'user.role.subscriptionManager';
+        if (!$roleIds || in_array(Role::ROLE_ID_SUBSCRIPTION_MANAGER, $roleIds)) {
+            $roleNames[Role::ROLE_ID_SUBSCRIPTION_MANAGER] = 'user.role.subscriptionManager';
         }
         return $roleNames;
     }

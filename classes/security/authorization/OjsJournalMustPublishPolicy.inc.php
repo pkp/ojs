@@ -16,6 +16,7 @@ namespace APP\security\authorization;
 
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\AuthorizationPolicy;
+use PKP\security\Role;
 
 class OjsJournalMustPublishPolicy extends AuthorizationPolicy
 {
@@ -46,11 +47,11 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy
         if (count(array_intersect(
             $userRoles,
             [
-                ROLE_ID_MANAGER,
-                ROLE_ID_SITE_ADMIN,
-                ROLE_ID_ASSISTANT,
-                ROLE_ID_SUB_EDITOR,
-                ROLE_ID_SUBSCRIPTION_MANAGER,
+                Role::ROLE_ID_MANAGER,
+                Role::ROLE_ID_SITE_ADMIN,
+                Role::ROLE_ID_ASSISTANT,
+                Role::ROLE_ID_SUB_EDITOR,
+                Role::ROLE_ID_SUBSCRIPTION_MANAGER,
             ]
         )) > 0) {
             return AuthorizationPolicy::AUTHORIZATION_PERMIT;

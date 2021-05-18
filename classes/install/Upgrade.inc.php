@@ -22,6 +22,7 @@ use PKP\submission\SubmissionFile;
 use PKP\file\FileManager;
 use PKP\install\Installer;
 use PKP\db\DAORegistry;
+use PKP\security\Role;
 
 use APP\file\PublicFileManager;
 use APP\core\Application;
@@ -93,7 +94,7 @@ class Upgrade extends Installer
         $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
         $journalIterator = $journalDao->getAll();
         while ($journal = $journalIterator->next()) {
-            $managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
+            $managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), Role::ROLE_ID_MANAGER);
             $managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
             $creatorUserId = $managerUsers->next()->getId();
             switch (Config::getVar('database', 'driver')) {
@@ -165,8 +166,6 @@ class Upgrade extends Installer
         $noteDao = DAORegistry::getDAO('NoteDAO'); /* @var $noteDao NoteDAO */
         $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
 
-        import('lib.pkp.classes.security.Role'); // ROLE_ID_...
-
         $commentsResult = $submissionDao->retrieve(
             'SELECT s.submission_id, s.context_id, s.comments_to_ed, s.date_submitted
 			FROM submissions_tmp s
@@ -176,12 +175,12 @@ class Upgrade extends Installer
             $commentsToEd = PKPString::stripUnsafeHtml($row->comments_to_ed);
             if ($commentsToEd != '') {
                 $userId = null;
-                $authorAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($row->submission_id, ROLE_ID_AUTHOR);
+                $authorAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($row->submission_id, Role::ROLE_ID_AUTHOR);
                 if ($authorAssignment = $authorAssignments->next()) {
                     // We assume the results are ordered by stage_assignment_id i.e. first author assignment is first
                     $userId = $authorAssignment->getUserId();
                 } else {
-                    $managerUserGroup = $userGroupDao->getDefaultByRoleId($row->context_id, ROLE_ID_MANAGER);
+                    $managerUserGroup = $userGroupDao->getDefaultByRoleId($row->context_id, Role::ROLE_ID_MANAGER);
                     $managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $row->context_id);
                     $userId = $managerUsers->next()->getId();
                 }
@@ -417,7 +416,7 @@ class Upgrade extends Installer
             'SELECT a.author_id, s.context_id FROM authors a JOIN submissions s ON (a.submission_id = s.submission_id) JOIN user_groups g ON (a.user_group_id = g.user_group_id) WHERE g.context_id <> s.context_id'
         );
         foreach ($result as $row) {
-            $authorGroup = $userGroupDao->getDefaultByRoleId($row->context_id, ROLE_ID_AUTHOR);
+            $authorGroup = $userGroupDao->getDefaultByRoleId($row->context_id, Role::ROLE_ID_AUTHOR);
             if ($authorGroup) {
                 $userGroupDao->update('UPDATE authors SET user_group_id = ? WHERE author_id = ?', [(int) $authorGroup->getId(), $row->author_id]);
             }

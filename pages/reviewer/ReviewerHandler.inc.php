@@ -14,6 +14,7 @@
  */
 
 use PKP\security\authorization\SubmissionAccessPolicy;
+use PKP\security\Role;
 
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
 
@@ -29,7 +30,7 @@ class ReviewerHandler extends PKPReviewerHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            ROLE_ID_REVIEWER,
+            Role::ROLE_ID_REVIEWER,
             [
                 'submission', 'step', 'saveStep',
                 'showDeclineReview', 'saveDeclineReview', 'downloadFile'

@@ -13,10 +13,12 @@
  * @brief Handle requests for editors to make a decision
  */
 
-import('lib.pkp.classes.controllers.modals.editorDecision.PKPEditorDecisionHandler');
-
+use PKP\controllers\modals\editorDecision\PKPEditorDecisionHandler;
 use PKP\core\JSONMessage;
 use PKP\notification\PKPNotification;
+use PKP\security\Role;
+use PKP\security\authorization\EditorDecisionAccessPolicy;
+use PKP\workflow\WorkflowStageDAO;
 
 use APP\workflow\EditorDecisionActionsManager;
 
@@ -30,7 +32,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler
         parent::__construct();
 
         $this->addRoleAssignment(
-            [ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER],
+            [Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_MANAGER],
             array_merge([
                 'externalReview', 'saveExternalReview',
                 'sendReviews', 'saveSendReviews',
@@ -50,7 +52,6 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler
     public function authorize($request, &$args, $roleAssignments)
     {
         $stageId = (int) $request->getUserVar('stageId');
-        import('lib.pkp.classes.security.authorization.EditorDecisionAccessPolicy');
         $this->addPolicy(new EditorDecisionAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId));
         return parent::authorize($request, $args, $roleAssignments);
     }
@@ -104,7 +105,6 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler
         }
 
         // Make sure user has access to the workflow stage.
-        import('lib.pkp.classes.workflow.WorkflowStageDAO');
         $redirectWorkflowStage = WorkflowStageDAO::getIdFromPath($redirectOp);
         $userAccessibleWorkflowStages = $this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES);
         if (!array_key_exists($redirectWorkflowStage, $userAccessibleWorkflowStages)) {

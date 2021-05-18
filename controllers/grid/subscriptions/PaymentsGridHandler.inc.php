@@ -15,6 +15,7 @@
 
 use PKP\controllers\grid\GridHandler;
 use PKP\controllers\grid\GridColumn;
+use PKP\security\Role;
 
 import('controllers.grid.subscriptions.PaymentsGridCellProvider');
 
@@ -28,7 +29,7 @@ class PaymentsGridHandler extends GridHandler
         parent::__construct();
         $this->addRoleAssignment(
             [
-                ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER],
+                Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRow', 'viewPayment']
         );
     }

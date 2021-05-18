@@ -14,12 +14,11 @@
  *   publication
  */
 
-// Import the base Handler.
-use APP\handler\Handler;
-
 use PKP\core\JSONMessage;
+use PKP\security\Role;
 
-use \APP\template\TemplateManager;
+use APP\handler\Handler;
+use APP\template\TemplateManager;
 
 class AssignToIssueHandler extends Handler
 {
@@ -36,7 +35,7 @@ class AssignToIssueHandler extends Handler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER, ROLE_ID_ASSISTANT],
+            [Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_MANAGER, Role::ROLE_ID_ASSISTANT],
             ['assign']
         );
     }

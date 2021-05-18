@@ -65,7 +65,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
     /**
      * Get request arguments.
      *
-     * @param $row GridRow
+     * @param $row \PKP\controllers\grid\GridRow
      *
      * @return array
      */

@@ -16,6 +16,7 @@
 use PKP\plugins\ReportPlugin;
 use PKP\submission\PKPSubmission;
 use PKP\db\DAORegistry;
+use PKP\security\Role;
 
 use APP\workflow\EditorDecisionActionsManager;
 
@@ -89,7 +90,7 @@ class ArticleReportPlugin extends ReportPlugin
         $editorUserGroupIds = array_map(function ($userGroup) {
             return $userGroup->getId();
         }, array_filter($userGroupDao->getByContextId($journal->getId())->toArray(), function ($userGroup) {
-            return in_array($userGroup->getRoleId(), [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR]);
+            return in_array($userGroup->getRoleId(), [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR]);
         }));
 
         AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);

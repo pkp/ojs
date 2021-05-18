@@ -15,6 +15,7 @@
  */
 
 use APP\payment\ojs\OJSPaymentManager;
+use PKP\security\Role;
 
 import('lib.pkp.api.v1._submissions.PKPBackendSubmissionsHandler');
 
@@ -33,9 +34,9 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
                     'pattern' => '/{contextPath}/api/{version}/_submissions/{submissionId:\d+}/payment',
                     'handler' => [$this, 'payment'],
                     'roles' => [
-                        ROLE_ID_SUB_EDITOR,
-                        ROLE_ID_MANAGER,
-                        ROLE_ID_ASSISTANT,
+                        Role::ROLE_ID_SUB_EDITOR,
+                        Role::ROLE_ID_MANAGER,
+                        Role::ROLE_ID_ASSISTANT,
                     ],
                 ],
             ],
@@ -159,7 +160,7 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
 
                 // Record a fulfilled payment.
                 $stageAssignmentDao = \DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
-                $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
+                $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), Role::ROLE_ID_AUTHOR);
                 $submitterAssignment = $submitterAssignments->next();
                 $queuedPayment = $paymentManager->createQueuedPayment(
                     $request,

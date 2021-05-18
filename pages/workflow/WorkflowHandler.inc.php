@@ -16,6 +16,7 @@
 import('lib.pkp.pages.workflow.PKPWorkflowHandler');
 
 use PKP\notification\PKPNotification;
+use PKP\security\Role;
 
 use APP\template\TemplateManager;
 use APP\file\PublicFileManager;
@@ -30,7 +31,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         parent::__construct();
 
         $this->addRoleAssignment(
-            [ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER, ROLE_ID_ASSISTANT],
+            [Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_MANAGER, Role::ROLE_ID_ASSISTANT],
             [
                 'access', 'index', 'submission',
                 'editorDecisionActions', // Submission & review

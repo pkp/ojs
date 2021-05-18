@@ -16,7 +16,9 @@
 // Import the base ManagementHandler.
 import('lib.pkp.pages.management.ManagementHandler');
 
-use \APP\template\TemplateManager;
+use PKP\security\Role;
+
+use APP\template\TemplateManager;
 
 class SettingsHandler extends ManagementHandler
 {
@@ -27,13 +29,13 @@ class SettingsHandler extends ManagementHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_SITE_ADMIN],
+            [Role::ROLE_ID_SITE_ADMIN],
             [
                 'access',
             ]
         );
         $this->addRoleAssignment(
-            ROLE_ID_MANAGER,
+            Role::ROLE_ID_MANAGER,
             [
                 'settings',
             ]

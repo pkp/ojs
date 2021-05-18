@@ -16,6 +16,7 @@
 use PKP\controllers\grid\GridHandler;
 use PKP\user\UserDAO;
 use PKP\controllers\grid\GridColumn;
+use PKP\security\Role;
 
 import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
 
@@ -31,7 +32,7 @@ class SubscriberSelectGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRows']
         );
     }

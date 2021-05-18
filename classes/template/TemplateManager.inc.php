@@ -17,11 +17,12 @@
 
 namespace APP\template;
 
-use \PKP\template\PKPTemplateManager;
+use PKP\template\PKPTemplateManager;
+use PKP\security\Role;
 
-use \APP\core\Application;
-use \APP\template\TemplateManager;
-use \APP\file\PublicFileManager;
+use APP\core\Application;
+use APP\template\TemplateManager;
+use APP\file\PublicFileManager;
 
 // FIXME: Add namespacing
 import('classes.search.ArticleSearch');
@@ -121,7 +122,7 @@ class TemplateManager extends PKPTemplateManager
         $menu = (array) $this->getState('menu');
 
         // Add issues after submissions items
-        if (in_array(ROLE_ID_MANAGER, $userRoles)) {
+        if (in_array(Role::ROLE_ID_MANAGER, $userRoles)) {
             $issuesLink = [
                 'name' => __('editor.navigation.issues'),
                 'url' => $router->url($request, null, 'manageIssues'),
@@ -139,7 +140,7 @@ class TemplateManager extends PKPTemplateManager
         }
 
         // Add payments link before settings
-        if ($request->getContext()->getData('paymentsEnabled') && array_intersect([ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER], $userRoles)) {
+        if ($request->getContext()->getData('paymentsEnabled') && array_intersect([Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER], $userRoles)) {
             $paymentsLink = [
                 'name' => __('common.payments'),
                 'url' => $router->url($request, null, 'payments'),

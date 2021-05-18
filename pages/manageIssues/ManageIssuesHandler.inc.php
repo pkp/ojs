@@ -13,9 +13,10 @@
  * @brief Handle requests for issue management in publishing.
  */
 
-use APP\handler\Handler;
+use PKP\security\Role;
 
-use \APP\template\TemplateManager;
+use APP\handler\Handler;
+use APP\template\TemplateManager;
 
 class ManageIssuesHandler extends Handler
 {
@@ -32,7 +33,7 @@ class ManageIssuesHandler extends Handler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             [
                 'index',
             ]

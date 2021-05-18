@@ -17,6 +17,7 @@
 use PKP\handler\APIHandler;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\Role;
 
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
@@ -30,7 +31,7 @@ class IssueHandler extends APIHandler
     public function __construct()
     {
         $this->_handlerPath = 'issues';
-        $roles = [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR];
+        $roles = [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT, Role::ROLE_ID_REVIEWER, Role::ROLE_ID_AUTHOR];
         $this->_endpoints = [
             'GET' => [
                 [
@@ -167,7 +168,7 @@ class IssueHandler extends APIHandler
         \HookRegistry::call('API::issues::params', [&$params, $slimRequest]);
 
         // You must be a manager or site admin to access unpublished Issues
-        $isAdmin = $currentUser->hasRole([ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([ROLE_ID_SITE_ADMIN], CONTEXT_SITE);
+        $isAdmin = $currentUser->hasRole([Role::ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([Role::ROLE_ID_SITE_ADMIN], CONTEXT_SITE);
         if (isset($params['isPublished']) && !$params['isPublished'] && !$isAdmin) {
             return $response->withStatus(403)->withJsonError('api.submissions.403.unpublishedIssues');
         } elseif (!$isAdmin) {

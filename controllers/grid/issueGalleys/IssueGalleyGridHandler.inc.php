@@ -21,6 +21,7 @@ use PKP\core\JSONMessage;
 use PKP\file\TemporaryFileManager;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\OjsIssueGalleyRequiredPolicy;
+use PKP\security\Role;
 
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\file\IssueFileManager;
@@ -36,7 +37,7 @@ class IssueGalleyGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             [
                 'fetchGrid', 'fetchRow', 'saveSequence',
                 'add', 'edit', 'upload', 'download', 'update', 'delete'
