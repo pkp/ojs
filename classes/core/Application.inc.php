@@ -208,8 +208,7 @@ class Application extends PKPApplication
      */
     public static function getSubmissionSearchIndex()
     {
-        import('classes.search.ArticleSearchIndex');
-        return new \ArticleSearchIndex();
+        return new \APP\search\ArticleSearchIndex();
     }
 
     /**
