@@ -15,19 +15,22 @@
  * @brief Abstract class for retrieving and modifying subscriptions.
  */
 
-use \PKP\identity\Identity;
-use \PKP\user\UserDAO;
+namespace APP\subscription;
 
-import('classes.subscription.Subscription');
-import('classes.subscription.SubscriptionType');
+use PKP\identity\Identity;
+use PKP\user\UserDAO;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
 
-define('SUBSCRIPTION_USER', 0x01);
-define('SUBSCRIPTION_MEMBERSHIP', 0x02);
-define('SUBSCRIPTION_REFERENCE_NUMBER', 0x03);
-define('SUBSCRIPTION_NOTES', 0x04);
+use APP\subscription\Subscription;
+use APP\subscription\SubscriptionType;
 
 abstract class SubscriptionDAO extends \PKP\db\DAO
 {
+    public const SUBSCRIPTION_MEMBERSHIP = 0x02;
+    public const SUBSCRIPTION_REFERENCE_NUMBER = 0x03;
+    public const SUBSCRIPTION_NOTES = 0x04;
+
     /**
      * Retrieve subscription by subscription ID.
      *
@@ -62,12 +65,12 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     public static function getStatusOptions()
     {
         return [
-            SUBSCRIPTION_STATUS_ACTIVE => 'subscriptions.status.active',
-            SUBSCRIPTION_STATUS_NEEDS_INFORMATION => 'subscriptions.status.needsInformation',
-            SUBSCRIPTION_STATUS_NEEDS_APPROVAL => 'subscriptions.status.needsApproval',
-            SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT => 'subscriptions.status.awaitingManualPayment',
-            SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT => 'subscriptions.status.awaitingOnlinePayment',
-            SUBSCRIPTION_STATUS_OTHER => 'subscriptions.status.other'
+            Subscription::SUBSCRIPTION_STATUS_ACTIVE => 'subscriptions.status.active',
+            Subscription::SUBSCRIPTION_STATUS_NEEDS_INFORMATION => 'subscriptions.status.needsInformation',
+            Subscription::SUBSCRIPTION_STATUS_NEEDS_APPROVAL => 'subscriptions.status.needsApproval',
+            Subscription::SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT => 'subscriptions.status.awaitingManualPayment',
+            Subscription::SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT => 'subscriptions.status.awaitingOnlinePayment',
+            Subscription::SUBSCRIPTION_STATUS_OTHER => 'subscriptions.status.other'
         ];
     }
 
@@ -284,7 +287,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
                 }
                 $params[] = $search;
                 break;
-            case SUBSCRIPTION_MEMBERSHIP:
+            case self::SUBSCRIPTION_MEMBERSHIP:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(s.membership) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
@@ -296,7 +299,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
                 }
                 $params[] = $search;
                 break;
-            case SUBSCRIPTION_REFERENCE_NUMBER:
+            case self::SUBSCRIPTION_REFERENCE_NUMBER:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(s.reference_number) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
@@ -308,7 +311,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
                 }
                 $params[] = $search;
                 break;
-            case SUBSCRIPTION_NOTES:
+            case self::SUBSCRIPTION_NOTES:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(s.notes) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
@@ -325,7 +328,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
 
         if (!empty($dateFrom) || !empty($dateTo)) {
             switch ($dateField) {
-            case SUBSCRIPTION_DATE_START:
+            case Subscription::SUBSCRIPTION_DATE_START:
                 if (!empty($dateFrom)) {
                     $searchSql .= ' AND s.date_start >= ' . $this->datetimeToDB($dateFrom);
                 }
@@ -333,7 +336,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
                     $searchSql .= ' AND s.date_start <= ' . $this->datetimeToDB($dateTo);
                 }
                 break;
-            case SUBSCRIPTION_DATE_END:
+            case Subscription::SUBSCRIPTION_DATE_END:
                 if (!empty($dateFrom)) {
                     $searchSql .= ' AND s.date_end >= ' . $this->datetimeToDB($dateFrom);
                 }
@@ -488,5 +491,16 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
 
         $subscription->setDateEnd(mktime(23, 59, 59, date('m', $dateEnd) + $duration, date('d', $dateEnd), date('Y', $dateEnd)));
         $this->updateObject($subscription);
+    }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\SubscriptionDAO', '\SubscriptionDAO');
+    foreach ([
+        'SUBSCRIPTION_MEMBERSHIP',
+        'SUBSCRIPTION_REFERENCE_NUMBER',
+        'SUBSCRIPTION_NOTES',
+    ] as $constantName) {
+        define($constantName, constant('\SubscriptionDAO::' . $constantName));
     }
 }

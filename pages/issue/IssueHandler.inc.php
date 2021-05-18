@@ -403,7 +403,7 @@ class IssueHandler extends Handler
         $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
         $templateMgr->assign([
             'hasAccess' => !$subscriptionRequired ||
-                $issue->getAccessStatus() == ISSUE_ACCESS_OPEN ||
+                $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN ||
                 $subscribedUser || $subscribedDomain ||
                 ($user && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId()))
         ]);

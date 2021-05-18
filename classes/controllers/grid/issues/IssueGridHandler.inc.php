@@ -547,7 +547,7 @@ class IssueGridHandler extends GridHandler
             $delayOpenAccessYear = $curYear + $delayYears + (int)floor(($curMonth + $delayMonths) / 12);
             $delayOpenAccessMonth = (int)fmod($curMonth + $delayMonths, 12);
 
-            $issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);
+            $issue->setAccessStatus(\APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION);
             $issue->setOpenAccessDate(date('Y-m-d H:i:s', mktime(0, 0, 0, $delayOpenAccessMonth, $curDay, $delayOpenAccessYear)));
         }
 

@@ -15,7 +15,14 @@
  * @brief Operations for retrieving and modifying SubscriptionType objects.
  */
 
-import('classes.subscription.SubscriptionType');
+namespace APP\subscription;
+
+use PKP\plugins\HookRegistry;
+use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
+
+use APP\subscription\SubscriptionType;
+use APP\i18n\AppLocale;
 
 use Illuminate\Support\Facades\DB;
 
@@ -388,4 +395,8 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
             $result->next();
         }
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\SubscriptionTypeDAO', '\SubscriptionTypeDAO');
 }

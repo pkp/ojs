@@ -15,11 +15,15 @@
  * @brief DAO operations for the OJS OAI interface.
  */
 
+namespace APP\oai\ojs;
+
 use PKP\submission\PKPSubmission;
 use PKP\oai\PKPOAIDAO;
+use PKP\plugins\HookRegistry;
+use PKP\db\DAORegistry;
 
-// FIXME: use namespaces
-import('classes.issue.Issue');
+use APP\issue\Issue;
+use APP\core\Services;
 
 use Illuminate\Support\Facades\DB;
 
@@ -314,4 +318,8 @@ class OAIDAO extends PKPOAIDAO
             $params
         );
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\oai\ojs\OAIDAO', '\OAIDAO');
 }

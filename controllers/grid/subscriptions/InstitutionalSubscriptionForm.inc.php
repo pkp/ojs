@@ -18,6 +18,8 @@ import('classes.subscription.form.SubscriptionForm');
 use PKP\notification\PKPNotification;
 
 use APP\notification\NotificationManager;
+use APP\subscription\InstitutionalSubscription;
+use APP\subscription\SubscriptionType;
 
 class InstitutionalSubscriptionForm extends SubscriptionForm
 {
@@ -110,7 +112,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         $subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
 
         // If online or print + online, domain or at least one IP range has been provided
-        if ($subscriptionType->getFormat() != SUBSCRIPTION_TYPE_FORMAT_PRINT) {
+        if ($subscriptionType->getFormat() != SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT) {
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'domain', 'optional', 'manager.subscriptions.form.domainIPRangeRequired', function ($domain) use ($ipRangeProvided) {
                 return ($domain != '' || $ipRangeProvided) ? true : false;
             }));
@@ -123,7 +125,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
                     if (!PKPString::regexp_match(
                         '/^' .
                     // IP4 address (with or w/o wildcards) or IP4 address range (with or w/o wildcards) or CIDR IP4 address
-                    '((([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1})|(([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])){3}([\/](([3][0-2]{0,1})|([1-2]{0,1}[0-9])))))' .
+                    '((([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1})|(([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])){3}([\/](([3][0-2]{0,1})|([1-2]{0,1}[0-9])))))' .
                     '$/i',
                         trim($ipRange)
                     )
@@ -143,7 +145,6 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
     {
         $insert = false;
         if (!isset($this->subscription)) {
-            import('classes.subscription.InstitutionalSubscription');
             $this->subscription = new InstitutionalSubscription();
             $insert = true;
         }

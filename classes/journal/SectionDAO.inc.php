@@ -15,10 +15,17 @@
  * @brief Operations for retrieving and modifying Section objects.
  */
 
+namespace APP\journal;
+
 use PKP\submission\PKPSubmission;
 use PKP\context\PKPSectionDAO;
+use PKP\cache\CacheManager;
+use PKP\plugins\HookRegistry;
+use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
 
-import('classes.journal.Section');
+use APP\core\Services;
+use APP\journal\Section;
 
 class SectionDAO extends PKPSectionDAO
 {
@@ -658,4 +665,8 @@ class SectionDAO extends PKPSectionDAO
             [(float) $seq, (int) $issueId, (int) $sectionId]
         );
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\journal\SectionDAO', '\SectionDAO');
 }

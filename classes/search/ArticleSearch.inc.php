@@ -16,9 +16,17 @@
  *
  */
 
+namespace APP\search;
+
 use PKP\submission\PKPSubmission;
 use PKP\statistics\PKPStatisticsHelper;
 use PKP\search\SubmissionSearch;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
+
+use APP\core\Application;
+use APP\core\Services;
+use APP\i18n\AppLocale;
 
 class ArticleSearch extends SubmissionSearch
 {
@@ -412,4 +420,8 @@ class ArticleSearch extends SubmissionSearch
     {
         return DAORegistry::getDAO('ArticleSearchDAO');
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\search\ArticleSearch', '\ArticleSearch');
 }

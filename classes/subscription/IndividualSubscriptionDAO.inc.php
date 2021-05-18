@@ -15,8 +15,17 @@
  * @brief Operations for retrieving and modifying IndividualSubscription objects.
  */
 
-import('classes.subscription.SubscriptionDAO');
-import('classes.subscription.IndividualSubscription');
+namespace APP\subscription;
+
+use PKP\db\DAOResultFactory;
+use PKP\db\DAORegistry;
+use PKP\core\Core;
+use PKP\plugins\HookRegistry;
+
+use APP\subscription\SubscriptionDAO;
+use APP\subscription\IndividualSubscription;
+use APP\subscription\Subscription;
+use APP\subscription\SubscriptionType;
 
 class IndividualSubscriptionDAO extends SubscriptionDAO
 {
@@ -435,7 +444,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      *
      * @return boolean
      */
-    public function isValidIndividualSubscription($userId, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null)
+    public function isValidIndividualSubscription($userId, $journalId, $check = Subscription::SUBSCRIPTION_DATE_BOTH, $checkDate = null)
     {
         if (empty($userId) || empty($journalId)) {
             return false;
@@ -450,10 +459,10 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
         }
 
         switch ($check) {
-            case SUBSCRIPTION_DATE_START:
+            case Subscription::SUBSCRIPTION_DATE_START:
                 $dateSql = sprintf('%s >= s.date_start AND %s >= s.date_start', $checkDate, $today);
                 break;
-            case SUBSCRIPTION_DATE_END:
+            case Subscription::SUBSCRIPTION_DATE_END:
                 $dateSql = sprintf('%s <= s.date_end AND %s >= s.date_start', $checkDate, $today);
                 break;
             default:
@@ -467,11 +476,11 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 			WHERE	s.user_id = ?
 				AND s.journal_id = ?
-				AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+				AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
 				AND st.institutional = 0
 				AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
-				AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
-				OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
+				AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
+				OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
             [(int) $userId, (int) $journalId]
         );
         $row = $result->current();
@@ -503,7 +512,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (u.user_id = s.user_id)
 				' . $userDao->getFetchJoins() . '
-			WHERE	s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+			WHERE	s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
 				AND st.institutional = 0
 				AND EXTRACT(YEAR FROM s.date_end) = ?
 				AND EXTRACT(MONTH FROM s.date_end) = ?
@@ -528,4 +537,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     {
         return $this->_renewSubscription($individualSubscription);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\IndividualSubscriptionDAO', '\IndividualSubscriptionDAO');
 }

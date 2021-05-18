@@ -15,7 +15,11 @@
  * @brief Basic class describing an individual (non-institutional) subscription.
  */
 
-import('classes.subscription.Subscription');
+namespace APP\subscription;
+
+use PKP\db\DAORegistry;
+
+use APP\subscription\Subscription;
 
 class IndividualSubscription extends Subscription
 {
@@ -24,9 +28,13 @@ class IndividualSubscription extends Subscription
      *
      * @param null|mixed $checkDate
      */
-    public function isValid($check = SUBSCRIPTION_DATE_BOTH, $checkDate = null)
+    public function isValid($check = self::SUBSCRIPTION_DATE_BOTH, $checkDate = null)
     {
         $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
         return $subscriptionDao->isValidIndividualSubscription($this->getData('userId'), $this->getData('journalId'), $check, $checkDate);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\IndividualSubscription', '\IndividualSubscription');
 }

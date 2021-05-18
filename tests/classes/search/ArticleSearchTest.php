@@ -337,19 +337,19 @@ class ArticleSearchTest extends PKPTestCase
     private function registerMockSectionDAO()
     {
         // Mock a SectionDAO.
-        $sectionDAO = $this->getMockBuilder(SectionDAO::class)
+        $sectionDao = $this->getMockBuilder(SectionDAO::class)
             ->setMethods(['getSection'])
             ->getMock();
 
         // Mock a section.
-        $section = new Section();
+        $section = $sectionDao->newDataObject();
 
         // Mock the getSection() method.
-        $sectionDAO->expects($this->any())
+        $sectionDao->expects($this->any())
             ->method('getSection')
             ->will($this->returnValue($section));
 
         // Register the mock DAO.
-        DAORegistry::registerDAO('SectionDAO', $sectionDAO);
+        DAORegistry::registerDAO('SectionDAO', $sectionDao);
     }
 }

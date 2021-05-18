@@ -13,12 +13,19 @@
  * @brief Class to maintain the article search index.
  */
 
-use \PKP\search\SubmissionSearchIndex;
-use \PKP\search\SubmissionSearch;
-use \PKP\submission\SubmissionFile;
-use \PKP\search\SearchFileParser;
+namespace APP\search;
 
-use \APP\i18n\AppLocale;
+use PKP\search\SubmissionSearchIndex;
+use PKP\search\SubmissionSearch;
+use PKP\submission\SubmissionFile;
+use PKP\search\SearchFileParser;
+use PKP\plugins\HookRegistry;
+use PKP\db\DAORegistry;
+use PKP\config\Config;
+
+use APP\i18n\AppLocale;
+use APP\search\ArticleSearch;
+use APP\core\Services;
 
 class ArticleSearchIndex extends SubmissionSearchIndex
 {
@@ -53,7 +60,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         }
 
         // Update search index
-        import('classes.search.ArticleSearch');
         $submissionId = $submission->getId();
         $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_AUTHOR, $authorText);
         $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_TITLE, $publication->getFullTitles());
@@ -376,4 +382,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         }
         return $flattenedArray;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\search\ArticleSearchIndex', '\ArticleSearchIndex');
 }

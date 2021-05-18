@@ -13,8 +13,11 @@
  * Common actions for subscription management functions.
  */
 
+namespace APP\subscription;
+
 use PKP\mail\MailTemplate;
 use PKP\notification\PKPNotification;
+use PKP\db\DAORegistry;
 
 use APP\notification\NotificationManager;
 
@@ -92,4 +95,8 @@ class SubscriptionAction
             $notificationMgr->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
         }
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\SubscriptionAction', '\SubscriptionAction');
 }

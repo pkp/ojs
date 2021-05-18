@@ -16,8 +16,13 @@
 namespace APP\services;
 
 use PKP\file\TemporaryFileManager;
+use PKP\db\DAORegistry;
+use PKP\config\Config;
+use PKP\plugins\HookRegistry;
 
 use APP\file\PublicFileManager;
+use APP\core\Services;
+use APP\core\Application;
 
 class ContextService extends \PKP\services\PKPContextService
 {
@@ -30,17 +35,17 @@ class ContextService extends \PKP\services\PKPContextService
     public function __construct()
     {
         $this->installFileDirs = [
-            \Config::getVar('files', 'files_dir') . '/%s/%d',
-            \Config::getVar('files', 'files_dir') . '/%s/%d/articles',
-            \Config::getVar('files', 'files_dir') . '/%s/%d/issues',
-            \Config::getVar('files', 'public_files_dir') . '/%s/%d',
+            Config::getVar('files', 'files_dir') . '/%s/%d',
+            Config::getVar('files', 'files_dir') . '/%s/%d/articles',
+            Config::getVar('files', 'files_dir') . '/%s/%d/issues',
+            Config::getVar('files', 'public_files_dir') . '/%s/%d',
         ];
 
-        \HookRegistry::register('Context::add', [$this, 'afterAddContext']);
-        \HookRegistry::register('Context::edit', [$this, 'afterEditContext']);
-        \HookRegistry::register('Context::delete::before', [$this, 'beforeDeleteContext']);
-        \HookRegistry::register('Context::delete', [$this, 'afterDeleteContext']);
-        \HookRegistry::register('Context::validate', [$this, 'validateContext']);
+        HookRegistry::register('Context::add', [$this, 'afterAddContext']);
+        HookRegistry::register('Context::edit', [$this, 'afterEditContext']);
+        HookRegistry::register('Context::delete::before', [$this, 'beforeDeleteContext']);
+        HookRegistry::register('Context::delete', [$this, 'afterDeleteContext']);
+        HookRegistry::register('Context::validate', [$this, 'validateContext']);
     }
 
     /**
@@ -58,8 +63,8 @@ class ContextService extends \PKP\services\PKPContextService
         $request = $args[1];
 
         // Create a default section
-        $sectionDao = \DAORegistry::getDAO('SectionDAO'); // constants
-        $section = new \Section();
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); // constants
+        $section = $sectionDao->newDataObject();
         $section->setTitle(__('section.default.title'), $context->getPrimaryLocale());
         $section->setAbbrev(__('section.default.abbrev'), $context->getPrimaryLocale());
         $section->setMetaIndexed(true);
@@ -68,7 +73,7 @@ class ContextService extends \PKP\services\PKPContextService
         $section->setEditorRestricted(false);
         $section->setHideTitle(false);
 
-        \Services::get('section')->addSection($section, $context);
+        Services::get('section')->addSection($section, $context);
     }
 
     /**
@@ -157,24 +162,24 @@ class ContextService extends \PKP\services\PKPContextService
     {
         $context = $args[0];
 
-        $sectionDao = \DAORegistry::getDAO('SectionDAO');
+        $sectionDao = DAORegistry::getDAO('SectionDAO');
         $sectionDao->deleteByJournalId($context->getId());
 
-        $issueDao = \DAORegistry::getDAO('IssueDAO');
+        $issueDao = DAORegistry::getDAO('IssueDAO');
         $issueDao->deleteByJournalId($context->getId());
 
-        $subscriptionDao = \DAORegistry::getDAO('IndividualSubscriptionDAO');
+        $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
         $subscriptionDao->deleteByJournalId($context->getId());
-        $subscriptionDao = \DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+        $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
         $subscriptionDao->deleteByJournalId($context->getId());
 
-        $subscriptionTypeDao = \DAORegistry::getDAO('SubscriptionTypeDAO');
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
         $subscriptionTypeDao->deleteByJournal($context->getId());
 
-        $submissionDao = \DAORegistry::getDAO('SubmissionDAO');
+        $submissionDao = DAORegistry::getDAO('SubmissionDAO');
         $submissionDao->deleteByContextId($context->getId());
 
-        $publicFileManager = new \PublicFileManager();
+        $publicFileManager = new PublicFileManager();
         $publicFileManager->rmtree($publicFileManager->getContextFilesPath($context->getId()));
     }
 
@@ -199,9 +204,9 @@ class ContextService extends \PKP\services\PKPContextService
 
         // If a journal thumbnail is passed, check that the temporary file exists
         // and the current user owns it
-        $user = \Application::get()->getRequest()->getUser();
+        $user = Application::get()->getRequest()->getUser();
         $userId = $user ? $user->getId() : null;
-        $temporaryFileManager = new \TemporaryFileManager();
+        $temporaryFileManager = new TemporaryFileManager();
         if (isset($props['journalThumbnail']) && empty($errors['journalThumbnail'])) {
             foreach ($allowedLocales as $localeKey) {
                 if (empty($props['journalThumbnail'][$localeKey]) || empty($props['journalThumbnail'][$localeKey]['temporaryFileId'])) {

@@ -156,11 +156,10 @@ class UserHandler extends PKPUserHandler
             // Ensure subscription can be updated
             $subscription = $subscriptionDao->getById($subscriptionId);
             $subscriptionStatus = $subscription->getStatus();
-            import('classes.subscription.Subscription');
             $validStatus = [
-                SUBSCRIPTION_STATUS_ACTIVE,
-                SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
-                SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
+                Subscription::SUBSCRIPTION_STATUS_ACTIVE,
+                Subscription::SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
+                Subscription::SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
             ];
 
             if (!in_array($subscriptionStatus, $validStatus)) {
@@ -243,11 +242,10 @@ class UserHandler extends PKPUserHandler
             // Ensure subscription can be updated
             $subscription = $subscriptionDao->getById($subscriptionId);
             $subscriptionStatus = $subscription->getStatus();
-            import('classes.subscription.Subscription');
             $validStatus = [
-                SUBSCRIPTION_STATUS_ACTIVE,
-                SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
-                SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
+                Subscription::SUBSCRIPTION_STATUS_ACTIVE,
+                Subscription::SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
+                Subscription::SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
             ];
 
             if (!in_array($subscriptionStatus, $validStatus)) {
@@ -336,8 +334,7 @@ class UserHandler extends PKPUserHandler
 
         $subscription = $subscriptionDao->getById($subscriptionId);
         $subscriptionStatus = $subscription->getStatus();
-        import('classes.subscription.Subscription');
-        $validStatus = [SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT];
+        $validStatus = [Subscription::SUBSCRIPTION_STATUS_ACTIVE, Subscription::SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT];
 
         if (!in_array($subscriptionStatus, $validStatus)) {
             $request->redirect(null, 'index');
@@ -394,12 +391,11 @@ class UserHandler extends PKPUserHandler
             $request->redirect(null, 'index');
         }
 
-        import('classes.subscription.Subscription');
         $subscriptionStatus = $subscription->getStatus();
         $validStatus = [
-            SUBSCRIPTION_STATUS_ACTIVE,
-            SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
-            SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
+            Subscription::SUBSCRIPTION_STATUS_ACTIVE,
+            Subscription::SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
+            Subscription::SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
         ];
 
         if (!in_array($subscriptionStatus, $validStatus)) {

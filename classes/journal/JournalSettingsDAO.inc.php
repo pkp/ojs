@@ -15,6 +15,8 @@
  * @brief Operations for retrieving and modifying journal settings.
  */
 
+namespace APP\journal;
+
 use PKP\db\SettingsDAO;
 
 class JournalSettingsDAO extends SettingsDAO
@@ -36,4 +38,8 @@ class JournalSettingsDAO extends SettingsDAO
     {
         return 'journal_id';
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\journal\JournalSettingsDAO', '\JournalSettingsDAO');
 }

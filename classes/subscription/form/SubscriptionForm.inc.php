@@ -17,6 +17,7 @@ use PKP\form\Form;
 use PKP\mail\MailTemplate;
 
 use APP\template\TemplateManager;
+use APP\subscription\Subscription;
 
 class SubscriptionForm extends Form
 {
@@ -91,8 +92,8 @@ class SubscriptionForm extends Form
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->assign([
             'subscriptionId' => $this->subscription ? $this->subscription->getId() : null,
-            'yearOffsetPast' => SUBSCRIPTION_YEAR_OFFSET_PAST,
-            'yearOffsetFuture' => SUBSCRIPTION_YEAR_OFFSET_FUTURE,
+            'yearOffsetPast' => Subscription::SUBSCRIPTION_YEAR_OFFSET_PAST,
+            'yearOffsetFuture' => Subscription::SUBSCRIPTION_YEAR_OFFSET_FUTURE,
             'validStatus' => $this->validStatus,
             'subscriptionTypes' => $this->subscriptionTypes,
         ]);
@@ -143,8 +144,8 @@ class SubscriptionForm extends Form
             $this->addCheck(new \PKP\form\validation\FormValidator($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartRequired'));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
                 $dateStartYear = strftime('%Y', strtotime($dateStart));
-                $minYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_PAST;
-                $maxYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_FUTURE;
+                $minYear = date('Y') + Subscription::SUBSCRIPTION_YEAR_OFFSET_PAST;
+                $maxYear = date('Y') + Subscription::SUBSCRIPTION_YEAR_OFFSET_FUTURE;
                 return ($dateStartYear >= $minYear && $dateStartYear <= $maxYear);
             }));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
@@ -160,8 +161,8 @@ class SubscriptionForm extends Form
             $this->addCheck(new \PKP\form\validation\FormValidator($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndRequired'));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
                 $dateEndYear = strftime('%Y', strtotime($dateEnd));
-                $minYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_PAST;
-                $maxYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_FUTURE;
+                $minYear = date('Y') + Subscription::SUBSCRIPTION_YEAR_OFFSET_PAST;
+                $maxYear = date('Y') + Subscription::SUBSCRIPTION_YEAR_OFFSET_FUTURE;
                 return ($dateEndYear >= $minYear && $dateEndYear <= $maxYear);
             }));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {

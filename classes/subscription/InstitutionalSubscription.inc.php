@@ -20,14 +20,17 @@
  * @brief Basic class describing an institutional subscription.
  */
 
-import('classes.subscription.Subscription');
+namespace APP\subscription;
 
-define('SUBSCRIPTION_IP_RANGE_RANGE', '-');
-define('SUBSCRIPTION_IP_RANGE_WILDCARD', '*');
+use PKP\db\DAORegistry;
 
+use APP\subscription\Subscription;
 
 class InstitutionalSubscription extends Subscription
 {
+    public const SUBSCRIPTION_IP_RANGE_RANGE = '-';
+    public const SUBSCRIPTION_IP_RANGE_WILDCARD = '*';
+
     //
     // Get/set methods
     //
@@ -143,9 +146,19 @@ class InstitutionalSubscription extends Subscription
      *
      * @return int|false Found subscription ID, or false for none.
      */
-    public function isValid($domain, $IP, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null)
+    public function isValid($domain, $IP, $check = self::SUBSCRIPTION_DATE_BOTH, $checkDate = null)
     {
         $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
         return $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $this->getData('journalId'), $check, $checkDate);
+    }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\InstitutionalSubscription', '\InstitutionalSubscription');
+    foreach ([
+        'SUBSCRIPTION_IP_RANGE_RANGE',
+        'SUBSCRIPTION_IP_RANGE_WILDCARD',
+    ] as $constantName) {
+        define($constantName, constant('\InstitutionalSubscription::' . $constantName));
     }
 }

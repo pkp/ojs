@@ -18,6 +18,8 @@
 use PKP\submission\PKPSubmission;
 use PKP\security\Role;
 
+use APP\subscription\Subscription;
+
 class IssueAction
 {
     /**
@@ -40,7 +42,7 @@ class IssueAction
 
         // Check subscription state.
         $result = $journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION &&
-            $issue->getAccessStatus() != ISSUE_ACCESS_OPEN && (
+            $issue->getAccessStatus() != \APP\issue\Issue::ISSUE_ACCESS_OPEN && (
                 is_null($issue->getOpenAccessDate()) ||
                 strtotime($issue->getOpenAccessDate()) > time()
             );
@@ -124,9 +126,8 @@ class IssueAction
             // publications
             if (!$result && $journal->getData('subscriptionExpiryPartial')) {
                 if (isset($submission) && !empty($submission->getData('publications'))) {
-                    import('classes.subscription.SubscriptionDAO');
                     foreach ($submission->getData('publications') as $publication) {
-                        if ($subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $publication->getData('datePublished'))) {
+                        if ($subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $publication->getData('datePublished'))) {
                             $result = true;
                             break;
                         }

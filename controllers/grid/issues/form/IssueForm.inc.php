@@ -232,11 +232,11 @@ class IssueForm extends Form
             switch ($journal->getData('publishingMode')) {
                 case PUBLISHING_MODE_SUBSCRIPTION:
                 case PUBLISHING_MODE_NONE:
-                    $issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);
+                    $issue->setAccessStatus(\APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION);
                     break;
                 case PUBLISHING_MODE_OPEN:
                 default:
-                    $issue->setAccessStatus(ISSUE_ACCESS_OPEN);
+                    $issue->setAccessStatus(\APP\issue\Issue::ISSUE_ACCESS_OPEN);
                     break;
             }
             $isNewIssue = true;

@@ -15,6 +15,8 @@
  * @brief Article author metadata class.
  */
 
+namespace APP\article;
+
 use \PKP\submission\PKPAuthor;
 
 class Author extends PKPAuthor

@@ -15,16 +15,24 @@
  * @brief Operations for retrieving and modifying InstitutionalSubscription objects.
  */
 
-import('classes.subscription.SubscriptionDAO');
-import('classes.subscription.InstitutionalSubscription');
+namespace APP\subscription;
 
-define('SUBSCRIPTION_INSTITUTION_NAME', 0x20);
-define('SUBSCRIPTION_DOMAIN', 0x21);
-define('SUBSCRIPTION_IP_RANGE', 0x22);
+use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
+use PKP\core\Core;
+use PKP\plugins\HookRegistry;
 
+use APP\subscription\SubscriptionDAO;
+use APP\subscription\InstitutionalSubscription;
+use APP\subscription\Subscription;
+use APP\subscription\SubscriptionType;
 
 class InstitutionalSubscriptionDAO extends SubscriptionDAO
 {
+    public const SUBSCRIPTION_INSTITUTION_NAME = 0x20;
+    public const SUBSCRIPTION_DOMAIN = 0x21;
+    public const SUBSCRIPTION_IP_RANGE = 0x22;
+
     /**
      * Retrieve an institutional subscription by subscription ID.
      *
@@ -443,7 +451,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 
         if (!empty($search)) {
             switch ($searchField) {
-            case SUBSCRIPTION_INSTITUTION_NAME:
+            case self::SUBSCRIPTION_INSTITUTION_NAME:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(iss.institution_name) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
@@ -455,7 +463,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
                 }
                 $params[] = $search;
                 break;
-            case SUBSCRIPTION_DOMAIN:
+            case self::SUBSCRIPTION_DOMAIN:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(iss.domain) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
@@ -467,7 +475,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
                 }
                 $params[] = $search;
                 break;
-            case SUBSCRIPTION_IP_RANGE:
+            case self::SUBSCRIPTION_IP_RANGE:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(isip.ip_string) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
@@ -516,7 +524,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      *
      * @return int|false Found subscription ID, or false for none.
      */
-    public function isValidInstitutionalSubscription($domain, $IP, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null)
+    public function isValidInstitutionalSubscription($domain, $IP, $journalId, $check = Subscription::SUBSCRIPTION_DATE_BOTH, $checkDate = null)
     {
         if (empty($journalId) || (empty($domain) && empty($IP))) {
             return false;
@@ -531,10 +539,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
         }
 
         switch ($check) {
-            case SUBSCRIPTION_DATE_START:
+            case Subscription::SUBSCRIPTION_DATE_START:
                 $dateSql = sprintf('%s >= s.date_start AND %s >= s.date_start', $checkDate, $today);
                 break;
-            case SUBSCRIPTION_DATE_END:
+            case Subscription::SUBSCRIPTION_DATE_END:
                 $dateSql = sprintf('%s <= s.date_end AND %s >= s.date_start', $checkDate, $today);
                 break;
             default:
@@ -552,11 +560,11 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 				WHERE	POSITION(UPPER(LPAD(iss.domain, LENGTH(iss.domain)+1, \'.\')) IN UPPER(LPAD(?, LENGTH(?)+1, \'.\'))) != 0
 					AND iss.domain != \'\'
 					AND s.journal_id = ?
-					AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+					AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
 					AND st.institutional = 1
 					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
-					AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
-					OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
+					AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
+					OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
                 [$domain, $domain, (int) $journalId]
             );
             $row = $result->current();
@@ -577,19 +585,19 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 				WHERE	((isip.ip_end IS NOT NULL
 					AND ? >= isip.ip_start AND ? <= isip.ip_end
 					AND s.journal_id = ?
-					AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+					AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
 					AND st.institutional = 1
 					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
-					AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
-						OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '))
+					AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
+						OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '))
 					OR  (isip.ip_end IS NULL
 					AND ? = isip.ip_start
 					AND s.journal_id = ?
-					AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+					AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
 					AND st.institutional = 1
 					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
-					AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
-					OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))',
+					AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
+					OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))',
                 [$IP, $IP, (int) $journalId, $IP, (int) $journalId]
             );
             $row = $result->current();
@@ -619,7 +627,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-			WHERE	s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+			WHERE	s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
 				AND st.institutional = 1
 				AND EXTRACT(YEAR FROM s.date_end) = ?
 				AND EXTRACT(MONTH FROM s.date_end) = ?
@@ -720,10 +728,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
             $ipEnd = null;
 
             // Parse and check single IP string
-            if (strpos($curIPString, SUBSCRIPTION_IP_RANGE_RANGE) === false) {
+            if (strpos($curIPString, InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_RANGE) === false) {
 
                 // Check for wildcards in IP
-                if (strpos($curIPString, SUBSCRIPTION_IP_RANGE_WILDCARD) === false) {
+                if (strpos($curIPString, InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD) === false) {
 
                     // Get non-CIDR IP
                     if (strpos($curIPString, '/') === false) {
@@ -748,17 +756,17 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 
                     // Convert wildcard IP to IP range
                 } else {
-                    $ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($curIPString))));
-                    $ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($curIPString))));
+                    $ipStart = sprintf('%u', ip2long(str_replace(InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($curIPString))));
+                    $ipEnd = sprintf('%u', ip2long(str_replace(InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($curIPString))));
                 }
 
                 // Convert wildcard IP range to IP range
             } else {
-                [$ipStart, $ipEnd] = explode(SUBSCRIPTION_IP_RANGE_RANGE, $curIPString);
+                [$ipStart, $ipEnd] = explode(InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_RANGE, $curIPString);
 
                 // Replace wildcards in start and end of range
-                $ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($ipStart))));
-                $ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($ipEnd))));
+                $ipStart = sprintf('%u', ip2long(str_replace(InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($ipStart))));
+                $ipEnd = sprintf('%u', ip2long(str_replace(InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($ipEnd))));
             }
 
             // Insert IP or IP range
@@ -797,5 +805,16 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
             'DELETE FROM institutional_subscription_ip WHERE subscription_id = ?',
             [(int) $subscriptionId]
         );
+    }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\InstitutionalSubscriptionDAO', '\InstitutionalSubscriptionDAO');
+    foreach ([
+        'SUBSCRIPTION_INSTITUTION_NAME',
+        'SUBSCRIPTION_DOMAIN',
+        'SUBSCRIPTION_IP_RANGE',
+    ] as $constantName) {
+        define($constantName, constant('\InstitutionalSubscriptionDAO::' . $constantName));
     }
 }

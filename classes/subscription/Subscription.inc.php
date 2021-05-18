@@ -15,23 +15,26 @@
  * @brief Basic class describing a subscription.
  */
 
-define('SUBSCRIPTION_STATUS_ACTIVE', 0x01);
-define('SUBSCRIPTION_STATUS_NEEDS_INFORMATION', 0x02);
-define('SUBSCRIPTION_STATUS_NEEDS_APPROVAL', 0x03);
-define('SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT', 0x04);
-define('SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT', 0x05);
-define('SUBSCRIPTION_STATUS_OTHER', 0x10);
+namespace APP\subscription;
 
-define('SUBSCRIPTION_DATE_START', 0x01);
-define('SUBSCRIPTION_DATE_END', 0x02);
-define('SUBSCRIPTION_DATE_BOTH', 0x03);
-
-define('SUBSCRIPTION_YEAR_OFFSET_PAST', '-10');
-define('SUBSCRIPTION_YEAR_OFFSET_FUTURE', '+10');
-
+use PKP\db\DAORegistry;
 
 class Subscription extends \PKP\core\DataObject
 {
+    public const SUBSCRIPTION_STATUS_ACTIVE = 1;
+    public const SUBSCRIPTION_STATUS_NEEDS_INFORMATION = 2;
+    public const SUBSCRIPTION_STATUS_NEEDS_APPROVAL = 3;
+    public const SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT = 4;
+    public const SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT = 5;
+    public const SUBSCRIPTION_STATUS_OTHER = 16;
+
+    public const SUBSCRIPTION_DATE_START = 1;
+    public const SUBSCRIPTION_DATE_END = 2;
+    public const SUBSCRIPTION_DATE_BOTH = 3;
+
+    public const SUBSCRIPTION_YEAR_OFFSET_PAST = '-10';
+    public const SUBSCRIPTION_YEAR_OFFSET_FUTURE = '+10';
+
     //
     // Get/set methods
     //
@@ -232,17 +235,17 @@ class Subscription extends \PKP\core\DataObject
     public function getStatusString()
     {
         switch ($this->getData('status')) {
-            case SUBSCRIPTION_STATUS_ACTIVE:
+            case self::SUBSCRIPTION_STATUS_ACTIVE:
                 return __('subscriptions.status.active');
-            case SUBSCRIPTION_STATUS_NEEDS_INFORMATION:
+            case self::SUBSCRIPTION_STATUS_NEEDS_INFORMATION:
                 return __('subscriptions.status.needsInformation');
-            case SUBSCRIPTION_STATUS_NEEDS_APPROVAL:
+            case self::SUBSCRIPTION_STATUS_NEEDS_APPROVAL:
                 return __('subscriptions.status.needsApproval');
-            case SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT:
+            case self::SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT:
                 return __('subscriptions.status.awaitingManualPayment');
-            case SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT:
+            case self::SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT:
                 return __('subscriptions.status.awaitingOnlinePayment');
-            case SUBSCRIPTION_STATUS_OTHER:
+            case self::SUBSCRIPTION_STATUS_OTHER:
                 return __('subscriptions.status.other');
             default:
                 return __('subscriptions.status');
@@ -321,5 +324,24 @@ class Subscription extends \PKP\core\DataObject
         } else {
             return false;
         }
+    }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\Subscription', '\Subscription');
+    foreach ([
+        'SUBSCRIPTION_STATUS_ACTIVE',
+        'SUBSCRIPTION_STATUS_NEEDS_INFORMATION',
+        'SUBSCRIPTION_STATUS_NEEDS_APPROVAL',
+        'SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT',
+        'SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT',
+        'SUBSCRIPTION_STATUS_OTHER',
+        'SUBSCRIPTION_DATE_START',
+        'SUBSCRIPTION_DATE_END',
+        'SUBSCRIPTION_DATE_BOTH',
+        'SUBSCRIPTION_YEAR_OFFSET_PAST',
+        'SUBSCRIPTION_YEAR_OFFSET_FUTURE',
+    ] as $constantName) {
+        define($constantName, constant('\Subscription::' . $constantName));
     }
 }

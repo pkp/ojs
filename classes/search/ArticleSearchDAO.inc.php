@@ -15,10 +15,12 @@
  * @brief DAO class for article search index.
  */
 
-use PKP\submission\PKPSubmission;
+namespace APP\search;
 
-import('classes.search.ArticleSearch');
-import('lib.pkp.classes.search.SubmissionSearchDAO');
+use PKP\submission\PKPSubmission;
+use PKP\search\SubmissionSearchDAO;
+
+use APP\search\ArticleSearch;
 
 class ArticleSearchDAO extends SubmissionSearchDAO
 {
@@ -114,4 +116,8 @@ class ArticleSearchDAO extends SubmissionSearchDAO
         }
         return $returner;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\search\ArticleSearchDAO', '\ArticleSearchDAO');
 }
