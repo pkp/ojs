@@ -61,7 +61,7 @@ class IndexHandler extends PKPIndexHandler
 
             $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
             $issue = $issueDao->getCurrent($journal->getId(), true);
-            if (isset($issue) && $journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {
+            if (isset($issue) && $journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
                 import('pages.issue.IssueHandler');
                 // The current issue TOC/cover page should be displayed below the custom home page.
                 IssueHandler::_setupIssueTemplate($request, $issue);

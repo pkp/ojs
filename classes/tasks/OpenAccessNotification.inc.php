@@ -90,7 +90,7 @@ class OpenAccessNotification extends ScheduledTask
     public function sendNotifications($journal, $curDate)
     {
         // Only send notifications if subscriptions and open access notifications are enabled
-        if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $journal->getData('enableOpenAccessNotification')) {
+        if ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION && $journal->getData('enableOpenAccessNotification')) {
             $curYear = $curDate['year'];
             $curMonth = $curDate['month'];
             $curDay = $curDate['day'];

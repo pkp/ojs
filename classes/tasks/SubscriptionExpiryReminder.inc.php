@@ -97,7 +97,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
     protected function sendJournalReminders($journal, $curDate)
     {
         // Only send reminders if subscriptions are enabled
-        if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
+        if ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             $curYear = $curDate['year'];
             $curMonth = $curDate['month'];
             $curDay = $curDate['day'];

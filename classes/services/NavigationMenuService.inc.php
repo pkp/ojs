@@ -104,7 +104,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
         switch ($menuItemType) {
             case self::NMI_TYPE_CURRENT:
             case self::NMI_TYPE_ARCHIVES:
-                $navigationMenuItem->setIsDisplayed($context && $context->getData('publishingMode') != PUBLISHING_MODE_NONE);
+                $navigationMenuItem->setIsDisplayed($context && $context->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE);
                 break;
             case self::NMI_TYPE_SUBSCRIPTIONS:
                 if ($context) {
@@ -115,7 +115,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
             case self::NMI_TYPE_MY_SUBSCRIPTIONS:
                 if ($context) {
                     $paymentManager = Application::getPaymentManager($context);
-                    $navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getData('paymentsEnabled') && $paymentManager->isConfigured() && $context->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION);
+                    $navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getData('paymentsEnabled') && $paymentManager->isConfigured() && $context->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION);
                 }
                 break;
         }

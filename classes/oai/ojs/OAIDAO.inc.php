@@ -19,6 +19,7 @@ namespace APP\oai\ojs;
 
 use PKP\submission\PKPSubmission;
 use PKP\oai\PKPOAIDAO;
+use PKP\oai\OAISet;
 use PKP\plugins\HookRegistry;
 use PKP\db\DAORegistry;
 

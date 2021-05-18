@@ -13,7 +13,14 @@
  * @brief Class defining basic operations for article tombstones.
  */
 
+namespace APP\article;
+
+use PKP\db\DAORegistry;
 use PKP\submission\PKPSubmission;
+use PKP\plugins\HookRegistry;
+use PKP\config\Config;
+
+use APP\core\Services;
 
 class ArticleTombstoneManager
 {
@@ -75,4 +82,8 @@ class ArticleTombstoneManager
             $tombstoneDao->deleteByDataObjectId($submission->getId());
         }
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\article\ArticleTombstoneManager', '\ArticleTombstoneManager');
 }

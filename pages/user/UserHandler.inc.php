@@ -17,6 +17,7 @@ import('lib.pkp.pages.user.PKPUserHandler');
 
 use APP\template\TemplateManager;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\journal\Journal;
 
 class UserHandler extends PKPUserHandler
 {
@@ -33,7 +34,7 @@ class UserHandler extends PKPUserHandler
         $journal = $request->getJournal();
         $user = $request->getUser();
         $templateMgr = TemplateManager::getManager($request);
-        if (!$journal || !$user || $journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+        if (!$journal || !$user || $journal->getData('publishingMode') != Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             $request->redirect(null, 'index');
         }
 
@@ -119,7 +120,7 @@ class UserHandler extends PKPUserHandler
     {
         $this->validate(null, $request);
         $journal = $request->getJournal();
-        if (empty($args) || !$journal || $journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+        if (empty($args) || !$journal || $journal->getData('publishingMode') != Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             $request->redirect(null, 'index');
         }
 
@@ -205,7 +206,7 @@ class UserHandler extends PKPUserHandler
         if (!$journal) {
             $request->redirect(null, 'index');
         }
-        if ($journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+        if ($journal->getData('publishingMode') != Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             $request->redirect(null, 'index');
         }
 
@@ -307,7 +308,7 @@ class UserHandler extends PKPUserHandler
     {
         $this->validate(null, $request);
         $journal = $request->getJournal();
-        if (!$journal || count($args) != 2 || $journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+        if (!$journal || count($args) != 2 || $journal->getData('publishingMode') != Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             $request->redirect(null, 'index');
         }
 
@@ -360,7 +361,7 @@ class UserHandler extends PKPUserHandler
     {
         $this->validate(null, $request);
         $journal = $request->getJournal();
-        if (count($args) != 2 || !$journal || $journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+        if (count($args) != 2 || !$journal || $journal->getData('publishingMode') != Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             $request->redirect(null, 'index');
         }
 

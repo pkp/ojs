@@ -536,7 +536,7 @@ class IssueGridHandler extends GridHandler
 
         // If subscriptions with delayed open access are enabled then
         // update open access date according to open access delay policy
-        if ($context->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $context->getData('delayedOpenAccessDuration'))) {
+        if ($context->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $context->getData('delayedOpenAccessDuration'))) {
             $delayYears = (int)floor($delayDuration / 12);
             $delayMonths = (int)fmod($delayDuration, 12);
 
@@ -576,7 +576,7 @@ class IssueGridHandler extends GridHandler
         }
 
         // Send a notification to associated users if selected and context is publishing content online with OJS
-        if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != PUBLISHING_MODE_NONE) {
+        if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
             $notificationManager = new NotificationManager();
             $notificationUsers = [];
             $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */

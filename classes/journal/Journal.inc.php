@@ -30,12 +30,12 @@ use PKP\core\DAORegistry;
 use PKP\plugins\PluginRegistry;
 use PKP\statistics\PKPStatisticsHelper;
 
-define('PUBLISHING_MODE_OPEN', 0);
-define('PUBLISHING_MODE_SUBSCRIPTION', 1);
-define('PUBLISHING_MODE_NONE', 2);
-
 class Journal extends Context
 {
+    public const PUBLISHING_MODE_OPEN = 0;
+    public const PUBLISHING_MODE_SUBSCRIPTION = 1;
+    public const PUBLISHING_MODE_NONE = 2;
+
     /**
      * Get "localized" journal page title (if applicable).
      *
@@ -182,4 +182,11 @@ class Journal extends Context
 
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\journal\Journal', '\Journal');
+    foreach ([
+        'PUBLISHING_MODE_OPEN',
+        'PUBLISHING_MODE_SUBSCRIPTION',
+        'PUBLISHING_MODE_NONE',
+    ] as $constantName) {
+        define($constantName, constant('\Journal::' . $constantName));
+    }
 }

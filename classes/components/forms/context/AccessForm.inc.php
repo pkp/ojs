@@ -19,6 +19,8 @@ use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FormComponent;
 
+use APP\journal\Journal;
+
 define('FORM_ACCESS', 'access');
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '1');
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '60');
@@ -55,9 +57,9 @@ class AccessForm extends FormComponent
             'label' => __('manager.distribution.publishingMode'),
             'type' => 'radio',
             'options' => [
-                ['value' => PUBLISHING_MODE_OPEN, 'label' => __('manager.distribution.publishingMode.openAccess')],
-                ['value' => PUBLISHING_MODE_SUBSCRIPTION, 'label' => __('manager.distribution.publishingMode.subscription')],
-                ['value' => PUBLISHING_MODE_NONE, 'label' => __('manager.distribution.publishingMode.none')],
+                ['value' => Journal::PUBLISHING_MODE_OPEN, 'label' => __('manager.distribution.publishingMode.openAccess')],
+                ['value' => Journal::PUBLISHING_MODE_SUBSCRIPTION, 'label' => __('manager.distribution.publishingMode.subscription')],
+                ['value' => Journal::PUBLISHING_MODE_NONE, 'label' => __('manager.distribution.publishingMode.none')],
             ],
             'value' => $context->getData('publishingMode'),
         ]))
@@ -65,7 +67,7 @@ class AccessForm extends FormComponent
                 'label' => __('about.delayedOpenAccess'),
                 'options' => $validDelayedOpenAccessDuration,
                 'value' => $context->getData('delayedOpenAccessDuration'),
-                'showWhen' => ['publishingMode', PUBLISHING_MODE_SUBSCRIPTION],
+                'showWhen' => ['publishingMode', Journal::PUBLISHING_MODE_SUBSCRIPTION],
             ]))
             ->addField(new FieldOptions('enableOai', [
                 'label' => __('manager.setup.enableOai'),

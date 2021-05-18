@@ -19,7 +19,7 @@
 
 	{if $currentJournal}
 
-		{if $currentJournal->getData('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+		{if $currentJournal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE}
 			<li>
 				<a href="{url router=PKPApplication::ROUTE_PAGE page="issue" op="current"}">
 					{translate key="navigation.current"}

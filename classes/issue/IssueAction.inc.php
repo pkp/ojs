@@ -41,7 +41,7 @@ class IssueAction
         assert($journal->getId() == $issue->getJournalId());
 
         // Check subscription state.
-        $result = $journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION &&
+        $result = $journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION &&
             $issue->getAccessStatus() != \APP\issue\Issue::ISSUE_ACCESS_OPEN && (
                 is_null($issue->getOpenAccessDate()) ||
                 strtotime($issue->getOpenAccessDate()) > time()

@@ -152,9 +152,9 @@ class DRIVERPlugin extends GenericPlugin
 
             // is open access
             $status = '';
-            if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
+            if ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_OPEN) {
                 $status = DRIVER_ACCESS_OPEN;
-            } elseif ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
+            } elseif ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION) {
                 if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN) {
                     $status = DRIVER_ACCESS_OPEN;
                 } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION) {
@@ -205,9 +205,9 @@ class DRIVERPlugin extends GenericPlugin
 
         // is open access
         $status = '';
-        if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
+        if ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_OPEN) {
             $status = DRIVER_ACCESS_OPEN;
-        } elseif ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
+        } elseif ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN) {
                 $status = DRIVER_ACCESS_OPEN;
             } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION) {

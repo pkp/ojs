@@ -57,7 +57,7 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy
             return AuthorizationPolicy::AUTHORIZATION_PERMIT;
         }
 
-        if ($this->_context->getData('publishingMode') == PUBLISHING_MODE_NONE) {
+        if ($this->_context->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_NONE) {
             return AuthorizationPolicy::AUTHORIZATION_DENY;
         }
 

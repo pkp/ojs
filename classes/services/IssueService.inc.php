@@ -185,11 +185,11 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface
         $accessStatus = null;
 
         switch ($journal->getData('publishingMode')) {
-            case PUBLISHING_MODE_SUBSCRIPTION:
-            case PUBLISHING_MODE_NONE:
+            case \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION:
+            case \APP\journal\Journal::PUBLISHING_MODE_NONE:
                 $accessStatus = Issue::ISSUE_ACCESS_SUBSCRIPTION;
                 break;
-            case PUBLISHING_MODE_OPEN:
+            case \APP\journal\Journal::PUBLISHING_MODE_OPEN:
             default:
                 $accessStatus = Issue::ISSUE_ACCESS_OPEN;
                 break;

@@ -61,7 +61,7 @@ class SubscriptionBlockPlugin extends BlockPlugin
             return '';
         }
 
-        if ($journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+        if ($journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             return '';
         }
 

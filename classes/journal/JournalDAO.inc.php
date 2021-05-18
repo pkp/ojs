@@ -20,9 +20,6 @@ namespace APP\journal;
 use PKP\context\ContextDAO;
 use PKP\metadata\MetadataTypeDescription;
 
-define('JOURNAL_FIELD_TITLE', 1);
-define('JOURNAL_FIELD_SEQUENCE', 2);
-
 class JournalDAO extends ContextDAO
 {
     /** @copydoc SchemaDAO::$schemaName */

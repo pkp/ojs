@@ -21,7 +21,7 @@
 		{if $enableIdentifiers}
 			<li id="identifiersTab"><a href="{url router=PKPApplication::ROUTE_COMPONENT op="identifiers" issueId=$issueId}">{translate key="editor.issues.identifiers"}</a></li>
 		{/if}
-		{if $currentJournal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION}
+		{if $currentJournal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION}
 			<li><a href="{url router=PKPApplication::ROUTE_COMPONENT op="access" issueId=$issueId}">{translate key="editor.issues.access"}</a></li>
 		{/if}
 	</ul>

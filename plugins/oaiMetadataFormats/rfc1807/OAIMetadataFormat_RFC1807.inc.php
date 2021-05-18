@@ -75,7 +75,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
         $url = $request->url($journal->getPath(), 'article', 'view', [$article->getBestId()]);
-        $includeUrls = $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
+        $includeUrls = $journal->getSetting('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
         $response = "<rfc1807\n" .
             "\txmlns=\"http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt\"\n" .
             "\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" .

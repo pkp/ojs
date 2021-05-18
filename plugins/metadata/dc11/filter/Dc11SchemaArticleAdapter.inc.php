@@ -157,7 +157,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
-        $includeUrls = $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
+        $includeUrls = $journal->getSetting('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
         if ($article instanceof Submission && $includeUrls) {
             $dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'article', 'view', [$article->getBestId()]));
         }
