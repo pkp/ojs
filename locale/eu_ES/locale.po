@@ -2,20 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
+"PO-Revision-Date: 2021-05-19 17:34+0000\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/locale/eu/>\n"
+"Language: eu_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:21+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "reviewer.article.enterReviewForm"
-msgstr "Egin klik ikono batean ebaluazio-inprimakia betetzeko."
+msgstr "Egin klik ikonoan ebaluazio-inprimakia betetzeko."
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
-msgstr "Nahitaezko eremuak bete egin behar dira."
+msgstr "Nahitaezko eremuak bete behar dira."
 
 msgid "common.software"
 msgstr "Open Journal Systems"
@@ -45,10 +47,10 @@ msgid "navigation.otherJournals"
 msgstr "Beste aldizkari batzuk"
 
 msgid "navigation.browseByIssue"
-msgstr "Zenbakiz"
+msgstr "Zenbakiaren arabera"
 
 msgid "navigation.browseByAuthor"
-msgstr "Egilez"
+msgstr "Egilearen arabera"
 
 msgid "navigation.infoForAuthors"
 msgstr "Egileentzat"
@@ -93,13 +95,13 @@ msgid "common.queue.long.active"
 msgstr "Bidalketa aktiboak"
 
 msgid "common.queue.short.active"
-msgstr "Aktibo"
+msgstr "Aktiboa"
 
 msgid "common.queue.long.completed"
-msgstr "Artxiboa"
+msgstr ""
 
 msgid "common.queue.short.completed"
-msgstr "Artxiboa"
+msgstr ""
 
 msgid "section.section"
 msgstr "Atala"
@@ -108,7 +110,7 @@ msgid "section.sections"
 msgstr "Aldizkariaren atalak"
 
 msgid "section.title"
-msgstr "Atalaren titulua"
+msgstr "Atalaren izenburua"
 
 msgid "section.abbreviation"
 msgstr "Laburdura"
@@ -129,10 +131,10 @@ msgid "common.publications"
 msgstr "Artikuluak"
 
 msgid "article.submissionId"
-msgstr "Bidalketa ID"
+msgstr "Bidalketaren ID"
 
 msgid "article.title"
-msgstr "Titulua"
+msgstr "Izenburua"
 
 msgid "article.authors"
 msgstr "Egileak"
@@ -291,7 +293,7 @@ msgid "submissions.queuedReview"
 msgstr "Ebaluatzen"
 
 msgid "submissions.published"
-msgstr "Argitaratuta"
+msgstr "Argitaratua"
 
 msgid "submissions.initial"
 msgstr "Lehenengoa"
@@ -1817,3 +1819,24 @@ msgstr ""
 "\t\t</ul>\n"
 "\t</li>\n"
 "</ol>"
+
+msgid "category.category"
+msgstr "Kategoriak"
+
+msgid "section.policy"
+msgstr "Atalaren politika"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Esleitutako editoreak"
+
+msgid "navigation.skip.issue"
+msgstr "Jauzi egin uneko zenbakira"
+
+msgid "navigation.skip.about"
+msgstr "Jauzi egin “Aldizkariari buruz” atalera"
+
+msgid "context.select"
+msgstr "Aukeratu beste aldizkari bat:"
+
+msgid "context.current"
+msgstr "Aukeratutako aldizkaria:"
