@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2021-05-19 17:34+0000\n"
+"PO-Revision-Date: 2021-05-20 12:35+0000\n"
 "Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/locale/eu/>\n"
 "Language: eu_ES\n"
@@ -158,7 +158,7 @@ msgid "article.suppFiles"
 msgstr "Fitxategi osagarria(k)"
 
 msgid "article.suppFilesAbbrev"
-msgstr "Fitxat. osag."
+msgstr "Fitxategi osag."
 
 msgid "article.discipline"
 msgstr "Diziplina eta azpidiziplina akademikoak"
@@ -197,10 +197,10 @@ msgid "article.coverPage.altText"
 msgstr "Azaleko irudia"
 
 msgid "article.accessLogoOpen.altText"
-msgstr "Sarrera librea"
+msgstr "Sarbide irekia"
 
 msgid "article.accessLogoRestricted.altText"
-msgstr "Sarrera mugatua"
+msgstr "Sarrera murriztua"
 
 msgid "article.comments.sectionDefault"
 msgstr "Lehenetsia"
@@ -236,7 +236,7 @@ msgid "submission.editorDecision"
 msgstr "Editorearen erabakia"
 
 msgid "submission.round"
-msgstr "{$round}. buelta"
+msgstr "{$round}. itzulia"
 
 msgid "submission.editorReview"
 msgstr "Editorearen ebaluazioa"
@@ -248,7 +248,7 @@ msgid "submission.notifyEditor"
 msgstr "Jakinarazi editoreari"
 
 msgid "submission.editorAuthorRecord"
-msgstr "Editore/Egile arteko mezu el.en erregistroa"
+msgstr "Editorearen eta egilearen arteko mezu elektronikoen erregistroa"
 
 msgid "submission.reviewersVersion"
 msgstr "Ebaluatzailearen oharrak dituen fitxategi-bertsioa"
@@ -257,7 +257,7 @@ msgid "submission.postReviewVersion"
 msgstr "Ebaluatu osteko fitxategi-bertsioa"
 
 msgid "submission.editorVersion"
-msgstr "Edizio-bertsioa"
+msgstr "Editorearen bertsioa"
 
 msgid "submission.authorsRevisedVersion"
 msgstr "Egileak berrikusitako fitxategi-bertsioa"
@@ -275,13 +275,13 @@ msgid "submission.proofreading"
 msgstr "Proba-zuzenketa"
 
 msgid "submission.scheduling"
-msgstr "Programazioa"
+msgstr "Egutegiaren plangintza"
 
 msgid "submission.scheduledIn"
-msgstr "{$issueName} zenbakian argitaratzeko programatua."
+msgstr "{$issueName}. zenbakian argitaratzeko programatua."
 
 msgid "submission.scheduledIn.tba"
-msgstr "(Adieraziko den)"
+msgstr "(Iragartzeko)"
 
 msgid "submissions.step1"
 msgstr "1. urratsa"
@@ -299,16 +299,16 @@ msgid "submissions.initial"
 msgstr "Lehenengoa"
 
 msgid "submissions.proofread"
-msgstr "Probak zuzenduta"
+msgstr "Probak zuzendu"
 
 msgid "submissions.initialProof"
-msgstr "Lehen proba"
+msgstr "Lehenengo proba"
 
 msgid "submissions.postAuthor"
-msgstr "Post-Author"
+msgstr "Egilearen ondokoa"
 
 msgid "submissions.reviewRound"
-msgstr "Ebaluazio-buelta"
+msgstr "Ebaluazio-itzulia"
 
 msgid "submissions.proof"
 msgstr "Proba"
@@ -317,10 +317,10 @@ msgid "submissions.editorDecision"
 msgstr "Editorearen erabakia"
 
 msgid "submissions.editorRuling"
-msgstr "Editorearen ebazpena"
+msgstr "Editorearen azken erabakia"
 
 msgid "submission.eventLog"
-msgstr "Gertaeren loga"
+msgstr "Gertaera-erregistroa"
 
 msgid "submissions.copyeditComplete"
 msgstr "Zuzenduta"
@@ -350,7 +350,7 @@ msgid "user.showAllJournals"
 msgstr "Erakutsi nire aldizkariak"
 
 msgid "user.registerForOtherJournals"
-msgstr "Erregistratu beste aldizkari batzuetan"
+msgstr "Izena eman beste aldizkari batzuetan"
 
 msgid "user.myJournals"
 msgstr "Nire aldizkariak"
@@ -359,19 +359,23 @@ msgid "user.noRoles.chooseJournal"
 msgstr "Zure kontua ez dago ezein aldizkarirekin lotuta. Aukeratu aldizkari bat:"
 
 msgid "user.noRoles.noRolesForJournal"
-msgstr "Zure kontuak ez du funtziorik aldizkari honetan. Aukeratu beheko ekintzetako bat:"
+msgstr ""
+"Zure kontuak ez du inongo rolik aldizkari honetan. Aukeratu beheko "
+"ekintzetariko bat:"
 
 msgid "user.noRoles.submitArticle"
 msgstr "Bidali proposamen bat"
 
 msgid "user.noRoles.submitArticleRegClosed"
-msgstr "Bidali artikulu bat: Egile-erregistratzea desgaituta dago orain."
+msgstr "Bidali artikulu bat: egilearen izen-ematea desgaituta dago une honetan."
 
 msgid "user.noRoles.regReviewer"
-msgstr "Erregistratu ebaluatzaile gisa"
+msgstr "Izena eman ebaluatzaile gisa"
 
 msgid "user.noRoles.regReviewerClosed"
-msgstr "Erregistratu ebaluatzaile gisa: Ebaluatzaile-erregistratzea desgaituta dago orain."
+msgstr ""
+"Izena eman ebaluatzaile gisa: ebaluatzailearen izen-ematea desgaituta dago "
+"une honetan."
 
 msgid "user.role.manager"
 msgstr "Aldizkariaren kudeatzailea"
@@ -395,10 +399,10 @@ msgid "issue.issues"
 msgstr "Zenbakiak"
 
 msgid "issue.title"
-msgstr "Titulua"
+msgstr "Izenburua"
 
 msgid "issue.volume"
-msgstr "Bolumena"
+msgstr "Liburukia"
 
 msgid "issue.number"
 msgstr "Zenbakia"
@@ -1840,3 +1844,58 @@ msgstr "Aukeratu beste aldizkari bat:"
 
 msgid "context.current"
 msgstr "Aukeratutako aldizkaria:"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Ikusi {$identification}"
+
+msgid "editor.navigation.issues"
+msgstr "Zenbakiak"
+
+msgid "user.role.journalAssistants"
+msgstr "Aldizkariko laguntzaileak"
+
+msgid "user.role.journalAssistant"
+msgstr "Aldizkariko laguntzailea"
+
+msgid "user.role.subEditors"
+msgstr "Ataleko editoreak"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Aldizkariren bateko ebaluatzailea izatea eskatu baduzu, adierazi zure arloko "
+"gaiak."
+
+msgid "user.register.otherContextRoles"
+msgstr "Eskatu hurrengo rolak."
+
+msgid "user.register.contextsPrompt"
+msgstr "Webgune honetako zein aldizkaritan eman nahi duzu izena?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Bai, nirekin harremanetan jartzea nahi nuke aldizkari honetarako bidalketak "
+"ebaluatzeko eskariekin."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Bai, eskatu {$userGroup} rola."
+
+msgid "user.reviewerPrompt"
+msgstr "Aldizkari honetarako bidalketarik ebaluatu nahi zenuke?"
+
+msgid "user.profile.profileImage"
+msgstr "Profileko irudia"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Sartu rolik gabeko erabiltzaileak aldizkari honetan."
+
+msgid "user.authorization.representationNotFound"
+msgstr "Eskatutako galerada ezin izan da aurkitu"
+
+msgid "journal.viewAllIssues"
+msgstr "Ikusi zenbaki guztiak"
+
+msgid "submission.search"
+msgstr "Bilatu artikulua"
+
+msgid "article.return"
+msgstr "Itzuli artikuluaren xehetasunetara"
