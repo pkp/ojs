@@ -23,6 +23,7 @@ use PKP\plugins\HookRegistry;
 use APP\file\PublicFileManager;
 use APP\core\Services;
 use APP\core\Application;
+use APP\article\ArticleTombstoneManager;
 
 class ContextService extends \PKP\services\PKPContextService
 {
@@ -116,8 +117,7 @@ class ContextService extends \PKP\services\PKPContextService
         // If the context is enabled or disabled, create or delete
         // tombstones for all published submissions
         if ($newContext->getData('enabled') !== $currentContext->getData('enabled')) {
-            import('classes.article.ArticleTombstoneManager');
-            $articleTombstoneManager = new \ArticleTombstoneManager();
+            $articleTombstoneManager = new ArticleTombstoneManager();
             if ($newContext->getData('enabled')) {
                 $articleTombstoneManager->deleteTombstonesByContextId($newContext->getId());
             } else {
@@ -144,8 +144,7 @@ class ContextService extends \PKP\services\PKPContextService
         $context = $args[0];
 
         // Create tombstones for all published submissions
-        import('classes.article.ArticleTombstoneManager');
-        $articleTombstoneManager = new \ArticleTombstoneManager();
+        $articleTombstoneManager = new ArticleTombstoneManager();
         $articleTombstoneManager->insertTombstonesByContext($context);
     }
 

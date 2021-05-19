@@ -19,10 +19,12 @@ namespace APP\services;
 use PKP\submission\PKPSubmission;
 use PKP\db\DAORegistry;
 use PKP\services\PKPSubmissionService;
+use PKP\plugins\HookRegistry;
 
 use APP\submission\Submission;
 use APP\core\Services;
 use APP\core\Application;
+use APP\article\ArticleTombstoneManager;
 
 class SubmissionService extends PKPSubmissionService
 {
@@ -31,10 +33,10 @@ class SubmissionService extends PKPSubmissionService
      */
     public function __construct()
     {
-        \HookRegistry::register('API::submissions::params', [$this, 'modifyAPISubmissionsParams']);
-        \HookRegistry::register('Submission::getMany::queryBuilder', [$this, 'modifySubmissionQueryBuilder']);
-        \HookRegistry::register('Submission::getMany::queryObject', [$this, 'modifySubmissionListQueryObject']);
-        \HookRegistry::register('Submission::getProperties::values', [$this, 'modifyPropertyValues']);
+        HookRegistry::register('API::submissions::params', [$this, 'modifyAPISubmissionsParams']);
+        HookRegistry::register('Submission::getMany::queryBuilder', [$this, 'modifySubmissionQueryBuilder']);
+        HookRegistry::register('Submission::getMany::queryObject', [$this, 'modifySubmissionListQueryObject']);
+        HookRegistry::register('Submission::getProperties::values', [$this, 'modifyPropertyValues']);
     }
 
     /**
@@ -57,8 +59,7 @@ class SubmissionService extends PKPSubmissionService
             } else {
                 $context = Services::get('context')->get($submission->getData('contextId'));
             }
-            import('classes.article.ArticleTombstoneManager');
-            $articleTombstoneManager = new \ArticleTombstoneManager();
+            $articleTombstoneManager = new ArticleTombstoneManager();
             $articleTombstoneManager->insertArticleTombstone($submission, $context);
         }
 
@@ -168,7 +169,7 @@ class SubmissionService extends PKPSubmissionService
                 case 'urlPublished':
                     $values[$prop] = $dispatcher->url(
                         $request,
-                        \PKPApplication::ROUTE_PAGE,
+                        \PKP\core\PKPApplication::ROUTE_PAGE,
                         $context->getPath(),
                         'article',
                         'view',

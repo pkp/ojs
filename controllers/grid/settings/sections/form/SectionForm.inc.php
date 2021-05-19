@@ -170,7 +170,6 @@ class SectionForm extends PKPSectionForm
         if ($this->getSectionId()) {
             $section = $sectionDao->getById($this->getSectionId(), $journal->getId());
         } else {
-            import('classes.journal.Section');
             $section = $sectionDao->newDataObject();
             $section->setJournalId($journal->getId());
         }
