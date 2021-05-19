@@ -119,7 +119,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface
     public function getQueryBuilder($args = [])
     {
         $defaultArgs = [
-            'contextId' => CONTEXT_ID_NONE,
+            'contextId' => \PKP\core\PKPApplication::CONTEXT_ID_NONE,
             'orderBy' => 'datePublished',
             'orderDirection' => 'DESC',
             'isPublished' => null,

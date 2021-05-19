@@ -13,9 +13,7 @@
  * @brief Class for block component of web feed plugin
  */
 
-import('lib.pkp.classes.plugins.BlockPlugin');
-
-class WebFeedBlockPlugin extends BlockPlugin
+class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
 {
     /** @var WebFeedPlugin Parent plugin */
     protected $_parentPlugin;

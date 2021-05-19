@@ -276,7 +276,6 @@ class Application extends PKPApplication
      */
     public static function getPaymentManager($context)
     {
-        import('classes.payment.ojs.OJSPaymentManager');
-        return new \OJSPaymentManager($context);
+        return new \APP\payment\ojs\OJSPaymentManager($context);
     }
 }

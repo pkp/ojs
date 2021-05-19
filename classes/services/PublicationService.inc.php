@@ -19,6 +19,7 @@ use PKP\submission\PKPSubmission;
 use PKP\db\DAORegistry;
 use PKP\services\PKPPublicationService;
 use PKP\services\interfaces\EntityWriteInterface;
+use PKP\plugins\HookRegistry;
 
 use APP\core\Services;
 use APP\i18n\AppLocale;
@@ -32,12 +33,12 @@ class PublicationService extends PKPPublicationService
      */
     public function __construct()
     {
-        \HookRegistry::register('Publication::getProperties', [$this, 'getPublicationProperties']);
-        \HookRegistry::register('Publication::validate', [$this, 'validatePublication']);
-        \HookRegistry::register('Publication::validatePublish', [$this, 'validatePublishPublication']);
-        \HookRegistry::register('Publication::version', [$this, 'versionPublication']);
-        \HookRegistry::register('Publication::publish::before', [$this, 'publishPublicationBefore']);
-        \HookRegistry::register('Publication::delete::before', [$this, 'deletePublicationBefore']);
+        HookRegistry::register('Publication::getProperties', [$this, 'getPublicationProperties']);
+        HookRegistry::register('Publication::validate', [$this, 'validatePublication']);
+        HookRegistry::register('Publication::validatePublish', [$this, 'validatePublishPublication']);
+        HookRegistry::register('Publication::version', [$this, 'versionPublication']);
+        HookRegistry::register('Publication::publish::before', [$this, 'publishPublicationBefore']);
+        HookRegistry::register('Publication::delete::before', [$this, 'deletePublicationBefore']);
     }
 
     /**

@@ -17,13 +17,13 @@
 <nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
 	<ol>
 		<li>
-			<a href="{url page="index" router=PKPApplication::ROUTE_PAGE}">
+			<a href="{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}">
 				{translate key="common.homepageNavigationLabel"}
 			</a>
 			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
 		</li>
 		<li>
-			<a href="{url router=PKPApplication::ROUTE_PAGE page="issue" op="archive"}">
+			<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}">
 				{translate key="navigation.archives"}
 			</a>
 			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>

@@ -22,7 +22,7 @@
 
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="institutionalSubscriptionNotification"}
 
-	{capture assign=subscriberSelectGridUrl}{url router=PKPApplication::ROUTE_COMPONENT component="grid.users.subscriberSelect.SubscriberSelectGridHandler" op="fetchGrid" escape=false userId=$userId}{/capture}
+	{capture assign=subscriberSelectGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.users.subscriberSelect.SubscriberSelectGridHandler" op="fetchGrid" escape=false userId=$userId}{/capture}
 	{load_url_in_div id='subscriberSelectGridContainer' url=$subscriberSelectGridUrl}
 
 	{fbvFormArea id="institutionalSubscriptionFormArea"}

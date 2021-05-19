@@ -13,7 +13,7 @@
  * @brief Issue file class.
  */
 
-import('lib.pkp.classes.file.PKPFile');
+use PKP\file\PKPFile;
 
 /* File content type IDs */
 define('ISSUE_FILE_PUBLIC', 0x000001);

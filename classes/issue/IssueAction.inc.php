@@ -17,6 +17,8 @@
 
 use PKP\submission\PKPSubmission;
 use PKP\security\Role;
+use PKP\plugins\HookRegistry;
+use PKP\db\DAORegistry;
 
 use APP\subscription\Subscription;
 

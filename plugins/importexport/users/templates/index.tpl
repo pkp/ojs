@@ -68,7 +68,7 @@
 			<form id="exportXmlForm" class="pkp_form" action="{plugin_url path="export"}" method="post">
 				{csrf}
 				{fbvFormArea id="exportForm"}
-					{capture assign=usersGridUrl}{url router=PKPApplication::ROUTE_COMPONENT component="grid.users.exportableUsers.ExportableUsersGridHandler" pluginName="UserImportExportPlugin" op="fetchGrid" escape=false}{/capture}
+					{capture assign=usersGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.users.exportableUsers.ExportableUsersGridHandler" pluginName="UserImportExportPlugin" op="fetchGrid" escape=false}{/capture}
 					{load_url_in_div id="usersGridContainer" url=$usersGridUrl}
 					{fbvFormButtons submitText="plugins.importexport.users.export.exportUsers" hideCancel="true"}
 				{/fbvFormArea}

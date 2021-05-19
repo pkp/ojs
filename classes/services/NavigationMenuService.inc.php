@@ -17,13 +17,11 @@ namespace APP\services;
 
 use PKP\plugins\HookRegistry;
 use PKP\core\PKPApplication;
+use PKP\security\Validation;
 
 use APP\template\TemplateManager;
 use APP\core\Application;
 use APP\i18n\AppLocale;
-
-// FIXME: Add namespacing
-use \Validation;
 
 class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
 {
@@ -90,7 +88,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
 
         $request = Application::get()->getRequest();
         $dispatcher = $request->getDispatcher();
-        $templateMgr = TemplateManager::getManager(\Application::get()->getRequest());
+        $templateMgr = TemplateManager::getManager(Application::get()->getRequest());
 
         $isUserLoggedIn = Validation::isLoggedIn();
         $isUserLoggedInAs = Validation::isLoggedInAs();

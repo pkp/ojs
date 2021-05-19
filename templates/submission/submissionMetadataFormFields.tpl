@@ -11,7 +11,7 @@
 {capture assign="languagesField"}
 	{capture assign="sectionDescription"}{if !$readOnly}submission.submit.metadataForm.tip{/if}{/capture}
 	{fbvFormSection description=$sectionDescription label="common.languages" required=$languagesRequired}
-		{capture assign=languagesSourceUrl}{url router=PKPApplication::ROUTE_PAGE page="submission" op="fetchChoices" list="languages"}{/capture}
+		{capture assign=languagesSourceUrl}{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="submission" op="fetchChoices" list="languages"}{/capture}
 		{fbvElement type="keyword" id="languages" subLabelTranslate=true multilingual=true current=$languages sourceUrl=$languagesSourceUrl disabled=$readOnly}
 	{/fbvFormSection}
 {/capture}

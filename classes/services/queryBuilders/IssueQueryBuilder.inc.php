@@ -246,7 +246,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface
         // Never permit a query without a context_id clause unless the CONTEXT_ID_ALL wildcard
         // has been set explicitely.
         if (is_null($this->contextId)) {
-            $q->where('i.journal_id', '=', CONTEXT_ID_NONE);
+            $q->where('i.journal_id', '=', \PKP\core\PKPApplication::CONTEXT_ID_NONE);
         } elseif ($this->contextId !== CONTEXT_ID_ALL) {
             $q->where('i.journal_id', '=', $this->contextId);
         }

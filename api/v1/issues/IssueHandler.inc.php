@@ -168,7 +168,7 @@ class IssueHandler extends APIHandler
         \HookRegistry::call('API::issues::params', [&$params, $slimRequest]);
 
         // You must be a manager or site admin to access unpublished Issues
-        $isAdmin = $currentUser->hasRole([Role::ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([Role::ROLE_ID_SITE_ADMIN], CONTEXT_SITE);
+        $isAdmin = $currentUser->hasRole([Role::ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([Role::ROLE_ID_SITE_ADMIN], \PKP\core\PKPApplication::CONTEXT_SITE);
         if (isset($params['isPublished']) && !$params['isPublished'] && !$isAdmin) {
             return $response->withStatus(403)->withJsonError('api.submissions.403.unpublishedIssues');
         } elseif (!$isAdmin) {

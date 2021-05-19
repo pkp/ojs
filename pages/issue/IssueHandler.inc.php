@@ -17,6 +17,7 @@ import('classes.issue.IssueAction');
 
 use PKP\submission\PKPSubmission;
 use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\db\DAORegistry;
 
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\security\authorization\OjsIssueRequiredPolicy;
@@ -24,6 +25,9 @@ use APP\handler\Handler;
 use APP\template\TemplateManager;
 use APP\file\IssueFileManager;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\i18n\AppLocale;
+use APP\core\Services;
+use APP\core\Application;
 
 class IssueHandler extends Handler
 {

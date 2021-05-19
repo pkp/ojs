@@ -14,13 +14,11 @@
  *
  */
 
-import('lib.pkp.classes.plugins.GatewayPlugin');
+use PKP\submission\PKPSubmission;
 
-use \PKP\submission\PKPSubmission;
+use APP\template\TemplateManager;
 
-use \APP\template\TemplateManager;
-
-class WebFeedGatewayPlugin extends GatewayPlugin
+class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
 {
     /** @var WebFeedPlugin Parent plugin */
     protected $_parentPlugin;

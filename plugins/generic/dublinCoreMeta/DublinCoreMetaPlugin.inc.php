@@ -14,6 +14,7 @@
  */
 
 use PKP\plugins\GenericPlugin;
+use PKP\plugins\HookRegistry;
 
 use APP\submission\Submission;
 use APP\template\TemplateManager;
