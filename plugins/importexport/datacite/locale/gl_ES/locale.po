@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-19 11:48+0000\n"
+"PO-Revision-Date: 2021-05-20 12:35+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-datacite/gl_ES/>\n"
@@ -52,3 +52,34 @@ msgstr ""
 
 msgid "plugins.importexport.datacite.displayName"
 msgstr "Complemento de exportación/rexistro DataCite"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Uso:\n"
+"{$scriptName} {$pluginName} export [outputFileName] [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys}"
+" objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "Tarefa de rexistro automático DataCite"
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Prefixo DOI de test"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Contrasinal de test"
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Nome de usuario/a de test"
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr ""
+"Utilice o prefixo de proba DataCite para o rexistro dos DOI. Non esqueza "
+"desactivar esta opción na versión de produción."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS depositará os DOI automaticamente en DataCite. Teña en conta que este "
+"proceso pode demorarse certo tempo tras a publicación (p.ex. en función da "
+"súa configuración cron). Pode comprobar todos os DOI non rexistrados."
