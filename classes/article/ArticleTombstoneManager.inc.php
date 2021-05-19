@@ -19,6 +19,7 @@ use PKP\db\DAORegistry;
 use PKP\submission\PKPSubmission;
 use PKP\plugins\HookRegistry;
 use PKP\config\Config;
+use PKP\context\Context;
 
 use APP\core\Services;
 
