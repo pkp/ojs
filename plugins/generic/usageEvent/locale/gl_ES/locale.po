@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-18 15:09+0000\n"
+"PO-Revision-Date: 2021-05-19 11:48+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-usageEvent/gl_ES/>\n"
@@ -13,3 +13,6 @@ msgstr ""
 
 msgid "plugins.generic.usageEvent.displayName"
 msgstr "Evento de uso"
+
+msgid "plugins.generic.usageEvent.description"
+msgstr "Crea un conector que proporciona eventos de uso nun formato definido."
