@@ -158,7 +158,7 @@ class DRIVERPlugin extends GenericPlugin
                 if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN) {
                     $status = DRIVER_ACCESS_OPEN;
                 } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION) {
-                    if ($publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN) {
+                    if ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN) {
                         $status = DRIVER_ACCESS_OPEN;
                     } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != null) {
                         $status = DRIVER_ACCESS_EMBARGOED;
@@ -211,7 +211,7 @@ class DRIVERPlugin extends GenericPlugin
             if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN) {
                 $status = DRIVER_ACCESS_OPEN;
             } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION) {
-                if ($publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN) {
+                if ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN) {
                     $status = DRIVER_ACCESS_OPEN;
                 } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != null) {
                     $status = DRIVER_ACCESS_EMBARGOED;

@@ -19,8 +19,7 @@ use PKP\security\authorization\AuthorizationPolicy;
 use PKP\security\authorization\DataObjectRequiredPolicy;
 use PKP\security\Role;
 
-// FIXME: Add namespacing
-use \Issue;
+use APP\issue\Issue;
 
 class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
 {

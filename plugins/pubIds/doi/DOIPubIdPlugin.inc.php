@@ -19,11 +19,9 @@ use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 use APP\plugins\PubIdPlugin;
 use APP\publication\Publication;
-
-// FIXME: Add namespacing
-//use \Issue;
-//use \IssueGalley;
-//use \ArticleGalley;
+use APP\issue\Issue;
+use APP\issue\IssueGalley;
+use APP\article\ArticleGalley;
 
 class DOIPubIdPlugin extends PubIdPlugin
 {

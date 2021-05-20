@@ -19,9 +19,7 @@ use PKP\submission\action\EditorAction;
 use PKP\submission\reviewRound\ReviewRound;
 
 use APP\workflow\EditorDecisionActionsManager;
-
-// FIXME: Add namespacing
-import('lib.pkp.classes.controllers.modals.editorDecision.form.EditorDecisionForm');
+use PKP\controllers\modals\editorDecision\form\EditorDecisionForm;
 
 class InitiateExternalReviewForm extends EditorDecisionForm
 {

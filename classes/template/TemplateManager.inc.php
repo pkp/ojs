@@ -23,9 +23,7 @@ use PKP\security\Role;
 use APP\core\Application;
 use APP\template\TemplateManager;
 use APP\file\PublicFileManager;
-
-// FIXME: Add namespacing
-import('classes.search.ArticleSearch');
+use APP\search\ArticleSearch;
 
 class TemplateManager extends PKPTemplateManager
 {

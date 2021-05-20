@@ -19,6 +19,8 @@ use PKP\linkAction\request\AjaxAction;
 use PKP\controllers\grid\GridHandler;
 use PKP\controllers\grid\GridColumn;
 
+use APP\submission\Submission;
+
 class TocGridCellProvider extends GridCellProvider
 {
     /**
@@ -47,7 +49,7 @@ class TocGridCellProvider extends GridCellProvider
             case 'title':
                 return ['label' => $element->getLocalizedTitle()];
             case 'access':
-                return ['selected' => $element->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN];
+                return ['selected' => $element->getCurrentPublication()->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN];
             default: assert(false);
         }
     }
@@ -71,7 +73,7 @@ class TocGridCellProvider extends GridCellProvider
                             array_merge(
                                 [
                                     'articleId' => $article->getId(),
-                                    'status' => ($article->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN) ? ARTICLE_ACCESS_ISSUE_DEFAULT : ARTICLE_ACCESS_OPEN,
+                                    'status' => ($article->getCurrentPublication()->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN) ? Submission::ARTICLE_ACCESS_ISSUE_DEFAULT : Submission::ARTICLE_ACCESS_OPEN,
                                     'csrfToken' => $request->getSession()->getCSRFToken(),
                                 ],
                                 $row->getRequestArgs()

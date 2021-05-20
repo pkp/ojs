@@ -13,10 +13,10 @@
  * @brief DataCite export/registration plugin.
  */
 
-import('classes.plugins.DOIPubIdExportPlugin');
-
 use PKP\file\FileManager;
 use PKP\notification\PKPNotification;
+
+use APP\plugins\DOIPubIdExportPlugin;
 
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
@@ -28,10 +28,8 @@ define('DATACITE_EXPORT_FILE_XML', 0x01);
 define('DATACITE_EXPORT_FILE_TAR', 0x02);
 
 use APP\submission\Submission;
-
-// FIXME: Add namespacing
-// use ArticleGalley;
-// use Issue;
+use APP\article\ArticleGalley;
+use APP\issue\Issue;
 
 class DataciteExportPlugin extends DOIPubIdExportPlugin
 {

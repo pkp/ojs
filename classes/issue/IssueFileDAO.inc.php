@@ -20,9 +20,7 @@ namespace APP\issue;
 use PKP\db\DAO;
 use PKP\plugins\HookRegistry;
 
-// FIXME: Add namespacing
-import('classes.issue.IssueFile');
-use IssueFile;
+use APP\issue\IssueFile;
 
 class IssueFileDAO extends DAO
 {

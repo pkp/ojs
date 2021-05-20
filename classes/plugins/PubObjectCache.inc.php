@@ -18,10 +18,8 @@ namespace APP\plugins;
 use PKP\submission\Genre;
 
 use APP\submission\Submission;
-
-// FIXME: Add namespacing
-use \Issue;
-use \ArticleGalley;
+use APP\issue\Issue;
+use APP\article\ArticleGalley;
 
 class PubObjectCache {
 	/* @var array */

@@ -22,6 +22,7 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 use APP\handler\Handler;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\submission\Submission;
 
 use Firebase\JWT\JWT;
 
@@ -313,7 +314,7 @@ class ArticleHandler extends Handler
             $templateMgr->assign(
                 'hasAccess',
                 !$subscriptionRequired ||
-                $publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN ||
+                $publication->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN ||
                 $subscribedUser || $subscribedDomain ||
                 ($user && $issue && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId())) ||
                 ($user && $completedPaymentDao->hasPaidPurchaseArticle($user->getId(), $article->getId()))
@@ -514,7 +515,7 @@ class ArticleHandler extends Handler
                     $purchasedIssue = $completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId());
                 }
 
-                if (!(!$subscriptionRequired || $submission->getCurrentPublication()->getData('accessStatus') == ARTICLE_ACCESS_OPEN || $subscribedUser || $purchasedIssue)) {
+                if (!(!$subscriptionRequired || $submission->getCurrentPublication()->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN || $subscribedUser || $purchasedIssue)) {
                     if ($paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled()) {
                         /* if only pdf files are being restricted, then approve all non-pdf galleys
                          * and continue checking if it is a pdf galley */

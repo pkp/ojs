@@ -15,12 +15,10 @@
 
 import('lib.pkp.controllers.tab.pubIds.form.PKPPublicIdentifiersForm');
 
-use \APP\template\TemplateManager;
-
-// FIXME: Add namespacing
-//use Issue;
-//use IssueGalley;
-//use ArticleGalley;
+use APP\template\TemplateManager;
+use APP\issue\Issue;
+use APP\issue\IssueGalley;
+use APP\article\ArticleGalley;
 
 class PublicIdentifiersForm extends PKPPublicIdentifiersForm
 {

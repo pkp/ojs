@@ -20,11 +20,9 @@ use PKP\linkAction\LinkAction;
 use APP\plugins\PubIdPlugin;
 use APP\template\TemplateManager;
 use APP\publication\Publication;
-
-// FIXME: Use namespacing
-//use \Issue;
-//use \IssueGalley;
-//use \ArticleGalley;
+use APP\issue\Issue;
+use APP\issue\IssueGalley;
+use APP\article\ArticleGalley;
 
 class URNPubIdPlugin extends PubIdPlugin
 {
