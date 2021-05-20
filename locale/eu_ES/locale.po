@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2021-05-20 12:35+0000\n"
-"Last-Translator: Julen Manterola <julen.manterola@ehu.eus>\n"
+"PO-Revision-Date: 2021-05-20 13:22+0000\n"
+"Last-Translator: Aitor Renobales <aitor.renobales@ehu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/locale/eu/>\n"
 "Language: eu_ES\n"
 "MIME-Version: 1.0\n"
@@ -408,10 +408,10 @@ msgid "issue.number"
 msgstr "Zenbakia"
 
 msgid "issue.vol"
-msgstr "bol:"
+msgstr "Lib."
 
 msgid "issue.no"
-msgstr "zk:"
+msgstr "Zk."
 
 msgid "issue.year"
 msgstr "Urtea"
@@ -429,112 +429,114 @@ msgid "issue.coverPage.altText"
 msgstr "Azala"
 
 msgid "submission.event.general.defaultEvent"
-msgstr "Bidalketako gertaera"
+msgstr "Bidalketaren gertaera"
 
 msgid "submission.event.general.issueScheduled"
-msgstr "Artikulua argitaratzera bidali"
+msgstr "Bidalketa zenbakiaren programazio-ilarara bidali da"
 
 msgid "submission.event.general.issueAssigned"
-msgstr "Artikulua zenbaki batera esleitu"
+msgstr "Bidalketa zenbaki bati esleitu zaio"
 
 msgid "submission.event.general.articlePublished"
-msgstr "Artikulua argitaratu"
+msgstr "Artikulua argitaratu da"
 
 msgid "submission.event.author.authorRevision"
-msgstr "Egilearen berrikuspena bidali"
+msgstr "Egilearen berrikuspena bidali da"
 
 msgid "submission.event.general.authorRevision"
-msgstr "Egilearen berrikuspen-fitxategia eguneratu"
+msgstr "Egilearen berrikuspen-fitxategia eguneratu da"
 
 msgid "submission.event.editor.editorAssigned"
-msgstr "Editorea izendatu"
+msgstr "Editore bat esleitu zaio bidalketari"
 
 msgid "submission.event.editor.editorUnassigned"
-msgstr "Editorea kendu"
+msgstr "Editorea kendu da bidalketatik"
 
 msgid "submission.event.editor.editorDecision"
-msgstr "Editorearen erabakia bidali"
+msgstr "Editorearen erabakia bidali da"
 
 msgid "submission.event.editor.editorFile"
-msgstr "Edizio-fitxategia eguneratu"
+msgstr "Editorearen fitxategia eguneratu da"
 
 msgid "submission.event.editor.submissionArchived"
-msgstr "Artikulua artxibora bidali"
+msgstr "Bidalketa artxibora bidali da"
 
 msgid "submission.event.editor.submissionRestored"
-msgstr "Artikulua artxibotik leheneratu"
+msgstr "Bidalketa artxibotik berreskuratu da"
 
 msgid "submission.event.copyedit.copyeditorAssigned"
-msgstr "Zuzentzailea izendatu"
+msgstr "Zuzentzailea esleitu zaio bidalketari"
 
 msgid "submission.event.copyedit.copyeditorUnassigned"
-msgstr "Zuzentzailea kendu"
+msgstr "Zuzentzailea kendu da bidalketatik"
 
 msgid "submission.event.copyedit.copyeditInitiated"
-msgstr "Zuzenketa hasi"
+msgstr "Zuzenketaren esleipena hasi da"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Zuzentzailearen aldaketen fitxategia eguneratu"
+msgstr "Zuzentzailearen aldaketen fitxategia eguneratu da"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
-msgstr "Lehenengo zuzenketa bukatu"
+msgstr "Lehen zuzenketa bukatu da"
 
 msgid "submission.event.copyedit.copyeditFinalCompleted"
-msgstr "Azken zuzenketa bukatu"
+msgstr "Azken zuzenketa bukatu da"
 
 msgid "submission.event.copyedit.copyeditSetFile"
-msgstr "Zuzenketa-fitxategia eguneratu"
+msgstr "Zuzenketa-fitxategia eguneratu da"
 
 msgid "submission.event.proofread.proofreaderAssigned"
-msgstr "Proba-zuzentzailea izendatu"
+msgstr "Proba-zuzentzailea esleitu zaio bidalketari"
 
 msgid "submission.event.proofread.proofreaderUnassigned"
-msgstr "Proba-zuzentzailea kendu"
+msgstr "Proba-zuzentzailea kendu da bidalketatik"
 
 msgid "submission.event.proofread.proofreadInitiated"
-msgstr "Proba-zuzenketa hasi"
+msgstr "Proba-zuzenketaren esleipena hasi da"
 
 msgid "submission.event.proofread.proofreadRevision"
-msgstr "Proba-zuzentzailearen aldaketen fitxategia eguneratu"
+msgstr "Proba-zuzentzailearen aldaketen fitxategia eguneratu da"
 
 msgid "submission.event.proofread.proofreadCompleted"
-msgstr "Proba-zuzenketa bukatu"
+msgstr "Proba-zuzenketaren esleipena bukatu da"
 
 msgid "submission.event.layout.layoutEditorAssigned"
-msgstr "Maketatzailea izendatu"
+msgstr "Maketatzailea esleitu zaio bidalketari"
 
 msgid "submission.event.layout.layoutEditorUnassigned"
-msgstr "Maketatzailea kendu"
+msgstr "Maketatzailea kendu da bidalketatik"
 
 msgid "submission.event.layout.layoutInitiated"
-msgstr "Maketaziosi"
+msgstr "Maketazioaren esleipena hasi da"
 
 msgid "submission.event.layout.layoutGalleyCreated"
-msgstr "Maketazioko galerada eguneratu"
+msgstr "Maketazioko galerada eguneratu da"
 
 msgid "submission.event.layout.layoutComplete"
-msgstr "Maketazioa bukatu"
+msgstr "Maketazioaren esleipena bukatu da"
 
 msgid "reader.subscribersOnly"
-msgstr "Harpidedunak bakarrik"
+msgstr "Harpidedunak soilik"
 
 msgid "reader.subscriptionRequiredLoginText"
 msgstr "Harpidetuta egon behar da lan hau atzitzeko. Harpidetza egiaztatzeko, hasi saioa aldizkarian."
 
 msgid "reader.openAccess"
-msgstr "Sarrera librea"
+msgstr "Sarbide irekia"
 
 msgid "reader.subscriptionAccess"
-msgstr "Harpidedunen sarrera"
+msgstr "Harpidetuta egotea beharrezkoa da"
 
 msgid "reader.subscriptionOrFeeAccess"
-msgstr "Harpidetza edo Sarrera librea"
+msgstr "Harpidetuta egotea edo ordaintzea  beharrezkoa da"
 
 msgid "comments.commentsOnArticle"
-msgstr "Artikulu honi buruzko iruzkinak"
+msgstr "Artikulu honi buruzko oharrak"
 
 msgid "comments.authenticated"
-msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+msgstr ""
+"<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a> "
+"erabiltzaileak egiaztatuta"
 
 msgid "admin.auth.defaultSourceDescription"
 msgstr ""
@@ -1542,7 +1544,7 @@ msgid "user.manageMySubscriptions"
 msgstr "Kudeatu nire harpidetzak"
 
 msgid "subscriptionTypes.currency"
-msgstr "Moneta:"
+msgstr "Dibisa"
 
 msgid "subscriptionTypes.year"
 msgstr "urtea"
@@ -1566,19 +1568,19 @@ msgid "subscriptionTypes.format.online"
 msgstr "Linean"
 
 msgid "subscriptionTypes.format.print"
-msgstr "Inprimatu"
+msgstr "Paperezkoa"
 
 msgid "subscriptionTypes.format.printOnline"
-msgstr "Inprimatu eta linean"
+msgstr "Paperezkoa eta lineakoa"
 
 msgid "subscriptions.inactive"
-msgstr "Inaktibo"
+msgstr "Ez-aktiboa"
 
 msgid "subscriptions.status"
 msgstr "Egoera"
 
 msgid "subscriptions.status.active"
-msgstr "Aktibo"
+msgstr "Aktiboa"
 
 msgid "subscriptions.status.needsInformation"
 msgstr "Informazioa behar du."
@@ -1593,16 +1595,22 @@ msgid "subscriptions.status.awaitingOnlinePayment"
 msgstr "Lineako ordainketaren zain"
 
 msgid "subscriptions.status.other"
-msgstr "Bestela, ikus oharrak."
+msgstr "Besterik. Ikusi oharrak"
 
 msgid "subscriptions.individualDescription"
 msgstr "Harpidetza indibidualek saioa hasi behar dute harpidetza-edukira sartzeko."
 
 msgid "subscriptions.institutionalDescription"
-msgstr "Harpidetza instituzionalek ez dute zertan saiorik hasi. Erabiltzailearen domeinua eta/edo IP helbidea erabiliko da harpidetza-edukira sartzeko."
+msgstr ""
+"Harpidetza instituzionalek ez dute zertan saiorik hasi. Erabiltzailearen "
+"domeinua eta/edo IP helbidea erabiltzen da harpidetutako edukira sarbidea "
+"emateko."
 
 msgid "subscriptions.institutionalOnlinePaymentDescription"
-msgstr "<strong>Oharra:</strong>Linean erositako harpidetza instituzionalek domeinua eta IP barrutia onartuta izan behar dituzte harpidetza aktibatu baino lehen."
+msgstr ""
+"<strong>Adi:</strong> Linean egindako harpidetza instituzionalei beren "
+"domeinua eta IP barrutia onartu behar zaizkie harpidetza aktibatu baino "
+"lehen."
 
 msgid "subscriptionManager.individualSubscriptions"
 msgstr "Harpidetza indibidualak"
@@ -1815,13 +1823,13 @@ msgid "navigation.categories.browse"
 msgstr "Arakatu"
 
 msgid "issue.fullIssue"
-msgstr "Edizio osoa"
+msgstr "Zenbaki osoa"
 
 msgid "issue.nonpdf.title"
-msgstr "Edizioa jaistea"
+msgstr "Zenbakia jaitsi"
 
 msgid "issue.viewIssue"
-msgstr "Ikus edizioa"
+msgstr "Ikus zenbakia"
 
 msgid "site.noJournals"
 msgstr "Ez dago aldizkaririk eskuragarri."
@@ -1987,3 +1995,21 @@ msgstr "Ordaindu gabe"
 
 msgid "help.goToEditPage"
 msgstr "Editatu {$sectionTitle}"
+
+msgid "search.results.orderBy.article"
+msgstr "Artikuluaren izenburua"
+
+msgid "search.results.orderBy"
+msgstr "Antolatu emaitzak honen arabera"
+
+msgid "reader.purchasePrice"
+msgstr "{{$price}{$currency}}"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artikulua bidalita"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Ez daukazu harpidetza aktibo bat."
+
+msgid "issue.return"
+msgstr "Itzuli zenbakiaren xehetasunetara"
