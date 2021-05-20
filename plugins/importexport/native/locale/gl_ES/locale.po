@@ -1,2 +1,43 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-05-20 12:35+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-native/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.native.importComplete"
+msgstr ""
+"A importación completouse correctamente. Importáronse os elementos seguintes:"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Cargue un arquivo no apartado \"Importar\" para continuar."
+
+msgid "plugins.importexport.native.results"
+msgstr "Resultados da importación"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Exportar números"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Exportar artigos"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Seleccione os artigos para exportar"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Cargar arquivo XML para importar"
+
+msgid "plugins.importexport.native.import"
+msgstr "Importar"
+
+msgid "plugins.importexport.native.description"
+msgstr "Importar e exportar artigos e números no formato XML orixinario de OJS."
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Complemento XML nativo"
