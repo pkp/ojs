@@ -17,12 +17,9 @@
 
 namespace APP\issue;
 
-// FIXME: Add namespacing
-import('classes.issue.IssueGalley');
-use \IssueGalley;
-
 use PKP\plugins\HookRegistry;
 
+use APP\issue\IssueGalley;
 use APP\file\IssueFileManager;
 
 class IssueGalleyDAO extends \PKP\db\DAO

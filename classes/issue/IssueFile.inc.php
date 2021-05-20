@@ -13,14 +13,16 @@
  * @brief Issue file class.
  */
 
-use PKP\file\PKPFile;
+namespace APP\issue;
 
-/* File content type IDs */
-define('ISSUE_FILE_PUBLIC', 0x000001);
+use PKP\file\PKPFile;
 
 
 class IssueFile extends PKPFile
 {
+/* File content type IDs */
+    public const ISSUE_FILE_PUBLIC = 1;
+
     //
     // Get/set methods
     //
@@ -82,4 +84,9 @@ class IssueFile extends PKPFile
     {
         return $this->setData('dateModified', $dateModified);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\issue\IssueFile', '\IssueFile');
+    define('ISSUE_FILE_PUBLIC', \IssueFile::ISSUE_FILE_PUBLIC);
 }

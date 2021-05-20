@@ -13,8 +13,6 @@
  * @brief Handle requests for issue functions.
  */
 
-import('classes.issue.IssueAction');
-
 use PKP\submission\PKPSubmission;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\db\DAORegistry;
@@ -28,6 +26,7 @@ use APP\payment\ojs\OJSPaymentManager;
 use APP\i18n\AppLocale;
 use APP\core\Services;
 use APP\core\Application;
+use APP\issue\IssueAction;
 
 class IssueHandler extends Handler
 {
@@ -220,7 +219,6 @@ class IssueHandler extends Handler
      */
     public function userCanViewGalley($request)
     {
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
 
         $journal = $request->getJournal();
@@ -376,7 +374,6 @@ class IssueHandler extends Handler
         ]);
 
         // Subscription Access
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
         $subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
         $subscribedUser = $issueAction->subscribedUser($user, $journal);

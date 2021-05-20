@@ -20,7 +20,7 @@ use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 use PKP\file\TemporaryFileManager;
 use PKP\security\authorization\ContextAccessPolicy;
-use PKP\security\authorization\OjsIssueGalleyRequiredPolicy;
+use APP\security\authorization\OjsIssueGalleyRequiredPolicy;
 use PKP\security\Role;
 
 use APP\security\authorization\OjsIssueRequiredPolicy;

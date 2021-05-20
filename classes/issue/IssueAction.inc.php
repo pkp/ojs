@@ -15,6 +15,8 @@
  * @brief IssueAction class.
  */
 
+namespace APP\issue;
+
 use PKP\submission\PKPSubmission;
 use PKP\security\Role;
 use PKP\plugins\HookRegistry;
@@ -38,8 +40,8 @@ class IssueAction
      */
     public function subscriptionRequired($issue, $journal)
     {
-        assert(is_a($issue, 'Issue'));
-        assert(is_a($journal, 'Journal'));
+        assert($issue instanceof \APP\issue\Issue);
+        assert($journal instanceof \APP\journal\Journal);
         assert($journal->getId() == $issue->getJournalId());
 
         // Check subscription state.
@@ -219,4 +221,8 @@ class IssueAction
         }
         return false;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\issue\IssueAction', '\IssueAction');
 }

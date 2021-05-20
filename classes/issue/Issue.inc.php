@@ -694,4 +694,3 @@ if (!PKP_STRICT_MODE) {
         define($constantName, constant('\Issue::' . $constantName));
     }
 }
-
