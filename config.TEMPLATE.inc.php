@@ -513,6 +513,8 @@ log_web_service_info = Off
 
 [queues]
 
+; Default queue driver to be used
+default_connection = "database"
 ; Default queue to be used if someone forgot to associate a queue during Queue::push();
 default_queue = null
 ; Flag to enable the jobs to run at php shutdown
