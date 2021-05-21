@@ -21,6 +21,7 @@ namespace APP\oai\ojs;
 
 use PKP\oai\OAI;
 use PKP\oai\OAIRepository;
+use PKP\oai\OAIResumptionToken;
 use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
 
