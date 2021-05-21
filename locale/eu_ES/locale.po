@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2021-05-21 08:10+0000\n"
+"PO-Revision-Date: 2021-05-21 10:36+0000\n"
 "Last-Translator: Aitor Renobales <aitor.renobales@ehu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/locale/eu/>\n"
 "Language: eu_ES\n"
@@ -98,10 +98,10 @@ msgid "common.queue.short.active"
 msgstr "Aktiboa"
 
 msgid "common.queue.long.completed"
-msgstr ""
+msgstr "Artxibatu"
 
 msgid "common.queue.short.completed"
-msgstr ""
+msgstr "Artxibatu"
 
 msgid "section.section"
 msgstr "Atala"
@@ -783,7 +783,7 @@ msgid "layoutEditor.completedEditorialAssignments"
 msgstr "Bukatutako edizio-lanak"
 
 msgid "layoutEditor.noActiveAssignments"
-msgstr "Ez dago edizio-lanik une honetan"
+msgstr "Ez dago edizio-lanik une honetan."
 
 msgid "layoutEditor.layoutEditingAssignments"
 msgstr "Maketazio-lanak"
@@ -1448,6 +1448,7 @@ msgstr "OJS bertsio-berritzea"
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS {$version} bertsioa</h4>\n"
+"\n"
 "<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal "
 "Systems</strong> jaisteagatik. Aurrera egin aurretik, irakur ezazu mesedez "
 "software honekin batera ematen den <a href=\"{$baseUrl}/docs/README.md\""
@@ -1466,11 +1467,11 @@ msgstr ""
 "<ul>\n"
 "\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
 "{$phpRequiredVersion}; une honetan PHP {$phpVersion}{$wrongPhpText} "
-"daukazu.</li>\n"
-"<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 edo "
-"<a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= "
-"9.1.5</li>\n"
-"<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"daukazu</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"edo <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> "
+">= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
 "1.3.2x edo >= 2.0.4x edo Microsoft IIS 6</li>\n"
 "\t<li>Sistema eragilea: goiko softwarea onartzen duen edozein SE, besteak "
 "beste: <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a "
@@ -1484,7 +1485,7 @@ msgstr ""
 "posible guztiak probatzeko adina baliabide eta, beraz, ezin du bermatu denek "
 "ondo funtzionatuko dutenik.</p>\n"
 "\n"
-"<p>Instalazioa egin ondoren ezarpen hauek aldatu ahal izango dira, OJSren\n"
+"<p>Instalazioa egin ondoren ezarpen hauek aldatu ahal izango dira, OJSren "
 "oinarriko direktorioko <tt>config.inc.php</tt> fitxategia editatuz, edo gune-"
 "administratzailearen web interfazearen bidez.</p>\n"
 "\n"
@@ -1499,6 +1500,7 @@ msgstr ""
 msgid "installer.upgradeInstructions"
 msgstr ""
 "<h4>OJS {$version} bertsioa</h4>\n"
+"\n"
 "<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal "
 "Systems</strong> jaisteagatik. Aurrera egin aurretik, irakur itzazu mesedez "
 "software honekin batera ematen diren <a href=\"{$baseUrl}/docs/README.md\""
@@ -1561,8 +1563,16 @@ msgstr ""
 msgid "installer.installationComplete"
 msgstr ""
 "<p>OJS ondo instalatu da.</p>\n"
-"<p>Sistema erabiltzen hasteko, <a href=\"{$loginUrl}\">hasi saioa</a> aurreko orrian sartutako erabiltzaile-izenarekin eta pasahitzarekin.</p>\n"
-"<p>Albisteen eta eguneratzeen berri jakin nahi baduzu, <strong>erregistratu <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> helbidean.</strong> Galderarik edo oharrik egin nahi baduzu, bisitatu <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">laguntza teknikoko foroa</a>.</p>"
+"<p>Sistema erabiltzen hasteko, <a href=\"{$loginUrl}\">hasi saioa</a> "
+"aurreko orrian sartutako erabiltzaile-izenarekin eta pasahitzarekin.</p>\n"
+"<p>PKP komunitatearen parte izan nahi baduzu:</p>\n"
+"<ol>\n"
+"  <li>Irakurri <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP "
+"bloga</a> eta jarraitu <a href=\"http://pkp.sfu.ca/blog/feed\" target=\""
+"_new\">RSS jarioa</a> albisteen eta eguneratzeen berri izateko.</li>\n"
+"<li>Bisitatu <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">laguntza "
+"teknikoko foroa</a> galderarik edo oharrik egin nahi baduzu.</li>\n"
+"</ol>"
 
 msgid "installer.upgradeComplete"
 msgstr ""
@@ -1615,7 +1625,7 @@ msgid "log.review.reviewFileByProxy"
 msgstr "{$userName} editoreak {$submissionId} artikuluaren {$round}. bueltako ebaluazio-fitxategia kargatu du, {$reviewerName} ebaluatzailearen izenean."
 
 msgid "log.review.reviewerFile"
-msgstr "Ebaluazio-fitxategi bat kargatu da."
+msgstr "Ebaluazio-fitxategi bat igo da."
 
 msgid "log.editor.decision"
 msgstr "{$editorName} editoreak {$submissionId} artikuluari buruzko erabakia ({$decision}) grabatu du."
@@ -1633,16 +1643,20 @@ msgid "log.copyedit.finalEditComplete"
 msgstr "{$copyeditorName} zuzentzaileak amaitu du {$submissionId} artikuluaren azken zuzenketa."
 
 msgid "log.copyedit.copyeditorAssigned"
-msgstr "{$copyeditorName} zuzentzaileari esleitu zaio {$submissionId} artikuluaren zuzenketa."
+msgstr ""
+"{$copyeditorName} zuzentzaileari esleitu zaio {$submissionId} bidalketaren "
+"zuzenketa."
 
 msgid "log.copyedit.copyeditorFile"
-msgstr "Bidalketa-fitxategiaren zuzenketa-bertsio bat kargatu da."
+msgstr "Bidalketa-fitxategiaren zuzenketa-bertsio bat igo da."
 
 msgid "log.copyedit.authorFile"
-msgstr "Egileak zuzendutako bidalketa-fitxategiaren bertsio bat kargatu da."
+msgstr "Egileak zuzendutako bidalketa-fitxategiaren bertsio bat igo da."
 
 msgid "log.layout.layoutEditorAssigned"
-msgstr "{$editorName} maketatzaileari esleitu zaio {$submissionId} artikuluaren maketazioa."
+msgstr ""
+"{$editorName} izendatu da arduradun gisa {$submissionId} bidalketaren "
+"maketaziorako."
 
 msgid "log.layout.layoutEditorUnassigned"
 msgstr "{$editorName} maketatzaileari kendu egin zaio {$submissionId} artikuluaren maketazioa egiteko esleipena."
@@ -1654,16 +1668,16 @@ msgid "log.editor.metadataModified"
 msgstr "{$editorName} editoreak artikulu honen metadatuak aldatu ditu."
 
 msgid "log.editor.editorFile"
-msgstr "Bidalketa-fitxategiaren edizio-bertsio bat kargatu da."
+msgstr "Bidalketa-fitxategiaren edizio-bertsio bat igo da."
 
 msgid "log.editor.archived"
 msgstr "{$submissionId} artikulua artxibatu da."
 
 msgid "log.editor.restored"
-msgstr "{$submissionId} artikulua ilarara itzuli da."
+msgstr "{$submissionId} bidalketa ilaran berrezarri da."
 
 msgid "log.editor.editorAssigned"
-msgstr "{$editorName} editoreari esleitu zaio {$submissionId} artikulua."
+msgstr "{$editorName} izendatu da {$submissionId} bidalketaren editore gisa."
 
 msgid "log.proofread.assign"
 msgstr ""
@@ -1796,7 +1810,7 @@ msgid "user.subscriptions.statusDescription"
 msgstr "Deskribapena"
 
 msgid "user.subscriptions.status.needsInformationDescription"
-msgstr "Informazio osagarria zehaztu behar da harpidetza aktibatu baino lehen."
+msgstr "Informazio osagarria zehaztu behar da harpidetza aktibatu baino lehen"
 
 msgid "user.subscriptions.status.needsApprovalDescription"
 msgstr "Harpidetza ebaluatu behar da aktibatu baino lehen"
@@ -1936,16 +1950,17 @@ msgid "installer.upgradeApplication"
 msgstr "Bertsio-berritu Open Journal Systems"
 
 msgid "notification.type.editing"
-msgstr "Gertaerak editatzen"
+msgstr "Edizio-lanaren gertaerak"
 
 msgid "notification.type.editorDecisionComment"
-msgstr "Editoreak erabakitzeko iruzkin bat utzi da \"{$title}\" artikuluan."
+msgstr ""
+"Ohar bat utzi da editoreak \"{$title}\" artikuluaz harturiko erabakiari buruz"
 
 msgid "notification.type.galleyModified"
 msgstr "Galerada bat aldatu da \"{$title}\" artikuluan."
 
 msgid "notification.type.issuePublished"
-msgstr "Gai bat argitaratu da."
+msgstr "Zenbaki bat argitaratu da."
 
 msgid "notification.type.newAnnouncement"
 msgstr "Jakinarazpen berria sortu da."
@@ -1954,7 +1969,7 @@ msgid "notification.type.reviewerFormComment"
 msgstr "Ebaluazio-inprimaki baten ebaluazioa bidali da \"{$title}\" artikuluarentzat."
 
 msgid "notification.type.reviewing"
-msgstr "Gertaerak ebaluatzen"
+msgstr "Ebaluazioaren gertaerak"
 
 msgid "notification.type.site"
 msgstr "Guneko gertaerak"
@@ -1963,10 +1978,10 @@ msgid "notification.type.submissionComment"
 msgstr "Editore batek iruzkin bat egin du \"{$title}\" artikuluari buruz."
 
 msgid "notification.type.submissions"
-msgstr "Aurkezpenen gertaerak"
+msgstr "Bidalketaren gertaerak"
 
 msgid "notification.type.userComment"
-msgstr "Irakurle batek iruzkin bat egin du  \"{$title}\" artikuluari buruz."
+msgstr "Irakurle batek iruzkin bat egin du  \"{$title}\" artikuluari buruz"
 
 msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Sarbidea ukatuta! Ez zaizu esleitu artikulu honen zuzenketa egitea."
@@ -1975,7 +1990,9 @@ msgid "user.authorization.sectionAssignment"
 msgstr "Zure atalekoa ez den artikulu batean sartu nahi duzu."
 
 msgid "user.authorization.invalidCopyditorSubmission"
-msgstr "Zuzentzailearen aurkezpena ez da baliozkoa edo ez da kontsultatu zuzentzailearen aurkezpenik!"
+msgstr ""
+"Zuzentzailearen bidalketa ez da baliozkoa edo ez da eskatu zuzentzailearen "
+"bidalketarik!"
 
 msgid "navigation.categories"
 msgstr "Kategoriak"
@@ -2018,7 +2035,13 @@ msgid "site.upgradeAvailable.admin"
 msgstr "OJSren bertsio berri bat dago eskuragarri! Gaur egun OJS {$currentVersion} erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, zoaz <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this page</a> orrira azken bertsioa kargatzeko eta eguneratzeko argibideak aurkitzeko."
 
 msgid "site.upgradeAvailable.manager"
-msgstr "OJSren bertsio berri bat dago eskuragarri! Une honetan OJS {$currentVersion} erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, jarri harremanetan zure Webguneko Administratzailearekin ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) bertsio berria atera dela jakinarazteko. Informazio gehiago aurki daiteke hemen: <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">here</a>."
+msgstr ""
+"OJSren bertsio berri bat dago eskuragarri! Une honetan OJS {$currentVersion} "
+"erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, jarri "
+"harremanetan zure Webguneko Administratzailearekin ({$siteAdminName}, <a "
+"href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) bertsio berria "
+"atera dela jakinarazteko. Informazio gehiago aurki daiteke <a href=\""
+"http://pkp.sfu.ca/ojs_download\" target=\"_new\">hemen</a>."
 
 msgid "editor.submissionEditing.notes"
 msgstr ""
@@ -2102,7 +2125,7 @@ msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Sartu rolik gabeko erabiltzaileak aldizkari honetan."
 
 msgid "user.authorization.representationNotFound"
-msgstr "Eskatutako galerada ezin izan da aurkitu"
+msgstr "Eskatutako galerada ezin izan da aurkitu."
 
 msgid "journal.viewAllIssues"
 msgstr "Ikusi zenbaki guztiak"
@@ -2150,7 +2173,7 @@ msgid "payment.requestPublicationFee"
 msgstr "Eskatu argitaratze-tarifa ({$feeAmount})"
 
 msgid "payment.type.publication.required"
-msgstr "Argitalpen-tarifa ordaintzeko dago"
+msgstr "Argitalpen-tarifa ordaintzeko dago."
 
 msgid "payment.waived"
 msgstr "Salbuetsia"
@@ -2284,3 +2307,103 @@ msgstr "Galerada hau webgune bereizi batean egongo da erabilgarri."
 
 msgid "about.aboutSoftware"
 msgstr "Open Journal Systems-i buruz"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Aukeratu nola antolatu artikuluak kategoria honetan."
+
+msgid "catalog.sortBy"
+msgstr "Artikuluen hurrenkera"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} editoreak bere gain hartu du {$submissionId} artikuluaren "
+"edizio-prozesuaren ardura."
+
+msgid "navigation.subscriptions"
+msgstr "Harpidetzak"
+
+msgid "editor.issues.futureIssues"
+msgstr "Hurrengo zenbakiak"
+
+msgid "editor.issues.backIssues"
+msgstr "Aurreko zenbakiak"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "\"{$journalPath}\" sarbideak ez darama inongo aldizkaritara."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr ""
+"Bilaketa-inplementazio honek ez du onartzen aldizkariaren araberako "
+"berrindexatzea."
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "\"{$journalName}\" indexatzen"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Ezeztatu galerada honen onarpena.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Onartu galerada hau argitaratzeko.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Galeradaren onarpena"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Onarpenaren zain"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Onartua"
+
+msgid "article.view.interstitial"
+msgstr "Mesedez, aukeratu artikulu-fitxategia jaisteko."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Ezkutatu beste aldizkariak"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Izena eman beste aldizkari batzuetan"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Onarpenaren zain."
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Bidalketa hau une honetan onespenaren zain dago, zenbaki honetan agertu "
+"baino lehen."
+
+msgid "grid.action.createContext"
+msgstr "Sortu aldizkari berria"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Zenbaki baliogabea eskatu duzu!"
+
+msgid "user.authorization.noContext"
+msgstr "Ez dago aldizkaririk testuinguru honetan!"
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Galeraden zain."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Erabiltzaile bati eskatu galeradak sor ditzan parte-hartzaileen zerrendako \""
+"Esleitu\" esteka erabiliz."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Artikulu berri bat bidali da eta editorea esleitu behar zaio."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Zenbakiaren argitaratze-metadatuak gorde dira."
+
+msgid "notification.type.public"
+msgstr "Jakinarazpen publikoak"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Artikulu berria, \"{$title},\" bidali da."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"{$editorName} editoreak {$submissionId} bidalketari buruzko gomendioa "
+"({$decision}) grabatu du."
+
+msgid "article.download"
+msgstr "PDF fitxategi hau jaitsi"
