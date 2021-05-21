@@ -221,19 +221,9 @@ class OAIDAO extends PKPOAIDAO
     }
 
     /**
-     * Get a OAI records record set.
-     *
-     * @param $setIds array Objects ids that specify an OAI set,
-     * in hierarchical order.
-     * @param $from int/string *nix timestamp or ISO datetime string
-     * @param $until int/string *nix timestamp or ISO datetime string
-     * @param $set string
-     * @param $submissionId int optional
-     * @param $orderBy string UNFILTERED
-     *
-     * @return Iterable
+     * @copydoc PKPOAIDAO::_getRecordsRecordSet
      */
-    public function _getRecordsRecordSet($setIds, $from, $until, $set, $submissionId = null, $orderBy = 'journal_id, submission_id')
+    public function _getRecordsRecordSetQuery($setIds, $from, $until, $set, $submissionId = null, $orderBy = 'journal_id, submission_id', $offset = null, $limit = null)
     {
         $journalId = array_shift($setIds);
         $sectionId = array_shift($setIds);
@@ -250,72 +240,64 @@ class OAIDAO extends PKPOAIDAO
             ->pluck('journal_id')
             ->all();
 
-        $params = [(int) PKPSubmission::STATUS_PUBLISHED];
-        if (isset($journalId)) {
-            $params[] = (int) $journalId;
-        }
-        if (isset($sectionId)) {
-            $params[] = (int) $sectionId;
-        }
-        if ($submissionId) {
-            $params[] = (int) $submissionId;
-        }
-        if (isset($journalId)) {
-            $params[] = (int) $journalId;
-        }
-        if (isset($sectionId)) {
-            $params[] = (int) $sectionId;
-        }
-        if (isset($set)) {
-            $params[] = $set;
-            $params[] = $set . ':%';
-        }
-        if ($submissionId) {
-            $params[] = (int) $submissionId;
-        }
-        return $this->retrieve(
-            'SELECT	GREATEST(a.last_modified, i.last_modified) AS last_modified,
-				a.submission_id AS submission_id,
-				j.journal_id AS journal_id,
-				s.section_id AS section_id,
-				i.issue_id,
-				NULL AS tombstone_id,
-				NULL AS set_spec,
-				NULL AS oai_identifier
-			FROM
-				submissions a
-				JOIN publications p ON (a.current_publication_id = p.publication_id)
-				JOIN publication_settings psissue ON (psissue.publication_id = p.publication_id AND psissue.setting_name=\'issueId\' AND psissue.locale=\'\')
-				JOIN issues i ON (CAST(i.issue_id AS CHAR(20)) = psissue.setting_value)
-				JOIN sections s ON (s.section_id = p.section_id)
-				JOIN journals j ON (j.journal_id = a.context_id)
-			WHERE	i.published = 1 AND j.enabled = 1 AND a.status = ?
-				' . ($excludeJournals ? ' AND j.journal_id NOT IN (' . implode(',', $excludeJournals) . ')' : '') . '
-				' . (isset($journalId) ? ' AND j.journal_id = ?' : '') . '
-				' . (isset($sectionId) ? ' AND p.section_id = ?' : '') . '
-				' . ($from ? ' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from) : '') . '
-				' . ($until ? ' AND GREATEST(a.last_modified, i.last_modified) <= ' . $this->datetimeToDB($until) : '') . '
-				' . ($submissionId ? ' AND a.submission_id = ?' : '') . '
-			UNION
-			SELECT	dot.date_deleted AS last_modified,
-				dot.data_object_id AS submission_id,
-				' . (isset($journalId) ? 'tsoj.assoc_id' : 'NULL') . ' AS assoc_id,' . '
-				' . (isset($sectionId) ? 'tsos.assoc_id' : 'NULL') . ' AS section_id,
-				NULL AS issue_id,
-				dot.tombstone_id,
-				dot.set_spec,
-				dot.oai_identifier
-			FROM	data_object_tombstones dot' . '
-				' . (isset($journalId) ? 'JOIN data_object_tombstone_oai_set_objects tsoj ON (tsoj.tombstone_id = dot.tombstone_id AND tsoj.assoc_type = ' . ASSOC_TYPE_JOURNAL . ' AND tsoj.assoc_id = ?)' : '') . '
-				' . (isset($sectionId) ? 'JOIN data_object_tombstone_oai_set_objects tsos ON (tsos.tombstone_id = dot.tombstone_id AND tsos.assoc_type = ' . ASSOC_TYPE_SECTION . ' AND tsos.assoc_id = ?)' : '') . '
-			WHERE	1=1
-				' . (isset($set) ? ' AND (dot.set_spec = ? OR dot.set_spec LIKE ?)' : '') . '
-				' . ($from ? ' AND dot.date_deleted >= ' . $this->datetimeToDB($from) : '') . '
-				' . ($until ? ' AND dot.date_deleted <= ' . $this->datetimeToDB($until) : '') . '
-				' . ($submissionId ? ' AND dot.data_object_id = ?' : '') . '
-			ORDER BY ' . $orderBy,
-            $params
-        );
+        $submissionsQuery = DB::table('submissions AS a')
+            ->select(DB::raw('GREATEST(a.last_modified, i.last_modified) AS last_modified,
+                                a.submission_id AS submission_id,
+                                j.journal_id AS journal_id,
+                                s.section_id AS section_id,
+                                i.issue_id,
+                                NULL AS tombstone_id,
+                                NULL AS set_spec,
+                                NULL AS oai_identifier'))
+            ->join('publications AS p', 'a.current_publication_id', '=', 'p.publication_id')
+            ->join('publication_settings AS psissue', function($join) {
+                $join->on('psissue.publication_id', '=', 'p.publication_id');
+                $join->where('psissue.setting_name', '=', DB::raw('\'issueId\''));
+                $join->where('psissue.locale', '=', DB::raw('\'\''));
+            })
+            ->join('issues AS i', function($join) {
+                $join->on(DB::raw('CAST(i.issue_id AS CHAR(20))'), '=', 'psissue.setting_value');
+            })
+            ->join('sections AS s', 's.section_id', '=', 'p.section_id')
+            ->join('journals AS j', 'j.journal_id', '=', 'a.context_id')
+            ->where('i.published', '=', 1)
+            ->where('j.enabled', '=', 1)
+            ->where('a.status', '=', PKPSubmission::STATUS_PUBLISHED);
+        if ($excludeJournals) $submissionsQuery->whereNotIn('j.journal_id', $excludeJournals);
+        if (isset($journalId)) $submissionsQuery->where('j.journal_id', '=', (int) $journalId);
+        if (isset($sectionId)) $submissionsQuery->where('p.section_id', '=', (int) $sectionId);
+        if ($from) $submissionsQuery->where('GREATEST(a.last_modified, i.last_modified)', '>=', $from);
+        if ($until) $submissionsQuery->where('GREATEST(a.last_modified, i.last_modified)', '<=', $until);
+        if ($submissionId) $submissionsQuery->where('a.submission_id', '=', (int) $submissionId);
+
+        $tombstonesQuery = DB::table('data_object_tombstones AS dot')
+            ->select(DB::raw('dot.date_deleted AS last_modified,
+                                dot.data_object_id AS submission_id,
+                                ' . (isset($journalId) ? 'tsoj.assoc_id' : 'NULL') . ' AS assoc_id,' . '
+                                ' . (isset($sectionId) ? 'tsos.assoc_id' : 'NULL') . ' AS section_id,
+                                NULL AS issue_id,
+                                dot.tombstone_id,
+                                dot.set_spec,
+                                dot.oai_identifier'));
+        if (isset($journalId)) $tombstonesQuery->join('data_object_tombstone_oai_set_objects AS tsoj', function($join) use ($journalId) {
+            $join->on('tsoj.tombstone_id', '=', 'dot.tombstone_id');
+            $join->where('tsoj.assoc_type', '=', ASSOC_TYPE_JOURNAL);
+            $join->where('tsoj.assoc_id', '=', (int) $journalId);
+        });
+        if (isset($sectionId)) $tombstonesQuery->join('data_object_tombstone_oai_set_objects AS tsos', function($join) use ($sectionId) {
+            $join->on('tsos.tombstone_id', '=', 'dot.tombstone_id');
+            $join->where('tsos.assoc_type', '=', ASSOC_TYPE_SECTION);
+            $join->where('tsos.assoc_id', '=', (int) $sectionId);
+        });
+        if (isset($set)) $tombstonesQuery->where('dot.set_spec', '=', $set)
+                ->orWhere('dot.set_spec', 'like', $set . ':%');
+        if ($from) $tombstonesQuery->where('dot.date_deleted', '>=', $from);
+        if ($until) $tombstonesQuery->where('dot.date_deleted', '<=', $until);
+        if ($submissionId) $tombstonesQuery->where('dot.data_object_id', '=', (int) $submissionId);
+
+        return $submissionsQuery
+            ->union($tombstonesQuery)
+            ->orderBy(DB::raw($orderBy));
     }
 }
 
