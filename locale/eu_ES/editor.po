@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
+"PO-Revision-Date: 2021-05-22 12:35+0000\n"
+"Last-Translator: Aitor Renobales <aitor.renobales@ehu.eus>\n"
+"Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/editor/eu/>\n"
+"Language: eu_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:21+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
 msgstr "Editorearen hasierako orria"
@@ -276,7 +278,7 @@ msgid "editor.submissions.lastCompleted"
 msgstr "Azkeneko bukatua"
 
 msgid "editor.submissions.assignedTo"
-msgstr "Honi esleitua"
+msgstr "Editore bati esleituta"
 
 msgid "editor.submissions.inSection"
 msgstr "Atala"
@@ -367,3 +369,110 @@ msgstr "Ziur al zaude alearen galera proba hau ezabatu nahi duzula?"
 
 msgid "editor.article.coverImage"
 msgstr "Azaleko irudia"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Kendu nahi zenuen azalaren irudia ez dator bat zenbaki honetakoarekin. Web-"
+"orria birkargatu eta saiatu berriro."
+
+msgid "editor.issues.datePublished"
+msgstr "Argitaratze data"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"'{$ PublicIdentifier}' identifikatzaile publikoa badago mota bereko beste "
+"objektu batentzat. Mesedez, aukeratu identifikatzaile bakarrak zure "
+"aldizkarian mota bereko objektuentzat."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Bidalketa fasetan dagoeneko kargatu izan dadin edozein fitxategi Berrikuspen "
+"zerrendara gehi daiteke \"Sartu\" izeneko hurrengo laukia markatuz eta \""
+"Bilatu\" klik eginez: eskuragarri dauden fitxategi guztiak zerrendatuko dira "
+"eta sartzeko aukeratu daitezke."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Zerrenda honetako azken zirriborroak zuzentzaileak bertsio berrikusitak "
+"bihurtzen ditu, eta ondoren <span class=\"pkp_help_title\">Jatorrizkoen "
+"zuzenketa</span> kargatzen ditu."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Galerada fitxategiak aukeratu"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Diseinu editoreak fitxategi hauek prestatuko ditu galerada bakoitzeentzat "
+"eta <span class = \"pkp_help_title\"> Probak </span> gunera igoko ditu "
+"zuzentzeko."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Zenbakiaren galerada editatu"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Ziur zaude elementu hau aletik kendu nahi duzula? Artikulu hau beste zenbaki "
+"batean programatzeko erabilgarri egongo da."
+
+msgid "grid.action.removeArticle"
+msgstr "Artikulua zenbakitik ezabatu"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Ezabatu nahi zenuen azalaren irudia ezin izan da aurkitu, baliteke dagoeneko "
+"ezabatuta egotea. Web-orria berriro kargatu."
+
+msgid "editor.article.editMetadata"
+msgstr "Bertsioaren metadatuak editatu"
+
+msgid "editor.article.viewMetadata"
+msgstr "Bertsioaren metadatuak ikusi"
+
+msgid "editor.article.publishVersion"
+msgstr "Bertsioa argitaratu"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Programatutako argitalpena erakutsi"
+
+msgid "issues.submissions.issueIds"
+msgstr "Zenbaki bati esleituta"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Uneko zenbakia aukeratu"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Zenbakiaren galerada sortu"
+
+msgid "grid.action.previewIssue"
+msgstr "Aurreikusi"
+
+msgid "grid.action.viewIssue"
+msgstr "Ikusi"
+
+msgid "grid.action.addIssue"
+msgstr "Zenbakia sortu"
+
+msgid "grid.action.publish"
+msgstr "Zenbakia argitaratu"
+
+msgid "grid.action.addGalley"
+msgstr "Galerada gehitu"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikatzaileak"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Ziur zenbaki hau unekoa gisa jarri nahi duzula?"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Azalaren formatua baliogabea da. Onartutako formatuak .gif, .jpg edo .png "
+"dira."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Ezabatu nahi zenuen azalaren irudia ezin izan da aurkitu, baliteke dagoeneko "
+"ezabatuta egotea. Saiatu orria berriro kargatzen."
+
+msgid "editor.issues.editIssue"
+msgstr "Zenbakiaren kudeaketa: {$issueIdentification}"
