@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-22 12:35+0000\n"
+"PO-Revision-Date: 2021-05-24 10:19+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/gl_ES/>\n"
@@ -12,13 +12,13 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.importexport.pubmed.export.selectArticle"
-msgstr "Seleccionar artigos para exportar"
+msgstr "Seleccionar artigos para exportar."
 
 msgid "plugins.importexport.pubmed.export.articles"
 msgstr "Exportar os artigos"
 
 msgid "plugins.importexport.pubmed.export.selectIssue"
-msgstr "Seleccionar un número para exportar"
+msgstr "Seleccionar un número para exportar."
 
 msgid "plugins.importexport.pubmed.export.issues"
 msgstr "Exportar os números"
@@ -33,3 +33,19 @@ msgstr ""
 
 msgid "plugins.importexport.pubmed.displayName"
 msgstr "Complemento de exportación XML PubMed"
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "Ningún artigo corresponde ao ID do artigo indicado \"{$articleId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "Ningún número  coincide co ID de número indicado \"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "ERRO:"
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+"Uso: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] artigos [articleId1]"
+" [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] número [issueId]\n"
