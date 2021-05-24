@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-24 10:19+0000\n"
+"PO-Revision-Date: 2021-05-25 11:35+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/gl_ES/>\n"
@@ -24,7 +24,7 @@ msgid "plugins.importexport.pubmed.export.issues"
 msgstr "Exportar os números"
 
 msgid "plugins.importexport.pubmed.export"
-msgstr "Exportar os datos"
+msgstr "Exportar datos"
 
 msgid "plugins.importexport.pubmed.description"
 msgstr ""
