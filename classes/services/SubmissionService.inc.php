@@ -21,9 +21,9 @@ use PKP\plugins\HookRegistry;
 use PKP\services\PKPSubmissionService;
 use PKP\submission\PKPSubmission;
 
-use APP\submission\Submission;
-use APP\core\Services;
 use APP\core\Application;
+use APP\core\Services;
+use APP\submission\Submission;
 
 class SubmissionService extends PKPSubmissionService
 {
