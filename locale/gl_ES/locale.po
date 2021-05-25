@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-25 11:35+0000\n"
+"PO-Revision-Date: 2021-05-26 09:50+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "article.fontSize.medium.altText"
-msgstr "Medio"
+msgstr "Mediano"
 
 msgid "article.fontSize.small.altText"
 msgstr "Pequeno"
@@ -243,3 +243,144 @@ msgstr "Cambiar a outra revista:"
 
 msgid "context.current"
 msgstr "Revista actual:"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Non se puido atopar a galerada solicitada."
+
+msgid "journal.viewAllIssues"
+msgstr "Ver todos os números"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Revista"
+
+msgid "journal.path"
+msgstr "Ruta"
+
+msgid "context.contexts"
+msgstr "Revistas"
+
+msgid "journal.currentIssue"
+msgstr "Número actual"
+
+msgid "submission.search"
+msgstr "Busca de artigos"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Corrección de probas concluída"
+
+msgid "submissions.layoutComplete"
+msgstr "Maquetaxe"
+
+msgid "submissions.copyeditComplete"
+msgstr "Orixinais corrixidos"
+
+msgid "submission.eventLog"
+msgstr "Rexistro de eventos"
+
+msgid "submissions.editorRuling"
+msgstr "Resolución do editor"
+
+msgid "submissions.editorDecision"
+msgstr "Decisión do editor/a"
+
+msgid "submissions.proof"
+msgstr "Proba"
+
+msgid "submissions.reviewRound"
+msgstr "Rolda de revisión"
+
+msgid "submissions.postAuthor"
+msgstr "Postautor/a"
+
+msgid "submissions.initialProof"
+msgstr "Proba inicial"
+
+msgid "submissions.proofread"
+msgstr "Corrixir probas"
+
+msgid "submissions.initial"
+msgstr "Inicial"
+
+msgid "submissions.published"
+msgstr "Publicada"
+
+msgid "submissions.queuedReview"
+msgstr "En revisión"
+
+msgid "submissions.step3"
+msgstr "Paso 3"
+
+msgid "submissions.step1"
+msgstr "Paso 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "Por anunciar"
+
+msgid "submission.scheduledIn"
+msgstr "Programado para publicar en {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Planificación"
+
+msgid "submission.proofreading"
+msgstr "Corrección de probas"
+
+msgid "submission.copyedit"
+msgstr "Corrección de orixinais"
+
+msgid "submission.copyediting"
+msgstr "Corrección"
+
+msgid "submission.authorVersion"
+msgstr "Versión do autor/a"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Versión do arquivo revisada polo autor/a"
+
+msgid "submission.editorVersion"
+msgstr "Versión do editor/a"
+
+msgid "submission.postReviewVersion"
+msgstr "Versión do arquivo posterior á revisión"
+
+msgid "submission.reviewersVersion"
+msgstr "Versión do arquivo anotada polo revisor/a"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Rexistro de mensaxes de correo electrónico editor/a-autor/a"
+
+msgid "submission.notifyEditor"
+msgstr "Notificar ao editor/a"
+
+msgid "submission.notifyAuthor"
+msgstr "Notificar ao autor/a"
+
+msgid "submission.editorReview"
+msgstr "Revisión do editor/a"
+
+msgid "submission.round"
+msgstr "Rolda&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Decisión do editor/a"
+
+msgid "submission.sent"
+msgstr "Enviado"
+
+msgid "submission.changeSection"
+msgstr "Cambiar a"
+
+msgid "submission.submissionEditing"
+msgstr "Edición do envío"
+
+msgid "category.category"
+msgstr "Categorías"
+
+msgid "article.return"
+msgstr "Volver aos detalles do artigo"
+
+msgid "article.fontSize.large.altText"
+msgstr "Grande"
