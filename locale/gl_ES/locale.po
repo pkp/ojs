@@ -1,2 +1,245 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-05-25 11:35+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Medio"
+
+msgid "article.fontSize.small.altText"
+msgstr "Pequeno"
+
+msgid "article.fontSize"
+msgstr "Tamaño de fonte"
+
+msgid "article.comments.enable"
+msgstr "Activar"
+
+msgid "article.comments.disable"
+msgstr "Desactivar"
+
+msgid "article.comments.sectionDefault"
+msgstr "Por defecto"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Acceso restrinxido"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Acceso libre"
+
+msgid "article.coverPage.altText"
+msgstr "Imaxe da cuberta"
+
+msgid "article.abstract"
+msgstr "Resumo"
+
+msgid "article.details"
+msgstr "Detalles"
+
+msgid "article.submissions"
+msgstr "Envíos"
+
+msgid "article.submission"
+msgstr "Envío"
+
+msgid "article.commentsToEditor"
+msgstr "Comentarios do autor/a"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Lingua"
+
+msgid "article.type"
+msgstr "Tipo, método ou enfoque"
+
+msgid "article.coverage"
+msgstr "Cobertura"
+
+msgid "article.subject"
+msgstr "Palabras clave"
+
+msgid "article.discipline"
+msgstr "Disciplina e subdisciplinas académicas"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Arquivos supl."
+
+msgid "article.suppFiles"
+msgstr "Arquivo(s) suplementario(s)"
+
+msgid "article.suppFile"
+msgstr "Arquivo suplementario"
+
+msgid "article.file"
+msgstr "Arquivo"
+
+msgid "article.journalSection"
+msgstr "Sección da revista"
+
+msgid "article.metadata"
+msgstr "Metadatos"
+
+msgid "article.indexingInformation"
+msgstr "Información de indexación"
+
+msgid "article.authors"
+msgstr "Autores/as"
+
+msgid "article.title"
+msgstr "Título"
+
+msgid "article.submissionId"
+msgstr "ID do envío"
+
+msgid "common.publications"
+msgstr "Artigos"
+
+msgid "common.publication"
+msgstr "Artigo"
+
+msgid "article.articles"
+msgstr "Artigos"
+
+msgid "article.article"
+msgstr "Artigo"
+
+msgid "section.policy"
+msgstr "Política de sección"
+
+msgid "section.abbreviation.example"
+msgstr "(Por exemplo, artigos=ART)"
+
+msgid "section.abbreviation"
+msgstr "Abreviatura"
+
+msgid "section.title"
+msgstr "Título de sección"
+
+msgid "section.sections"
+msgstr "Seccións da revista"
+
+msgid "section.section"
+msgstr "Sección"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Editores/as asignados"
+
+msgid "common.queue.short.completed"
+msgstr "Arquivo"
+
+msgid "common.queue.long.completed"
+msgstr "Arquivo"
+
+msgid "common.queue.short.active"
+msgstr "Activa"
+
+msgid "common.queue.long.active"
+msgstr "Envíos activos"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arquivos"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arquivos"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "En revisión"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Envíos en revisión"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "En edición"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Envíos en edición"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Non asignado"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Non asignado"
+
+msgid "navigation.skip.issue"
+msgstr "Ir ao número actual"
+
+msgid "navigation.skip.about"
+msgstr "Ir ao apartado \"Sobre a revista\""
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Información para os bibliotecarios/as"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Información para os autores/as"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Directrices sobre conflitos de intereses"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Para os bibliotecarios/as"
+
+msgid "navigation.infoForAuthors"
+msgstr "Para os autores/as"
+
+msgid "navigation.browseByAuthor"
+msgstr "Por autor/a"
+
+msgid "navigation.browseByIssue"
+msgstr "Por número"
+
+msgid "navigation.otherJournals"
+msgstr "Outras revistas"
+
+msgid "navigation.current"
+msgstr "Número actual"
+
+msgid "navigation.journalHelp"
+msgstr "Axuda da revista"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Imaxe da páxina inicial da revista"
+
+msgid "common.homePageHeader.altText"
+msgstr "Cabeceira da páxina inicial"
+
+msgid "common.payments"
+msgstr "Pagamentos"
+
+msgid "common.payment"
+msgstr "Pagamento"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Está seguro/a de que quere marcar esta tarefa como concluída? Non poderá "
+"realizar cambios máis adiante."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Cubra os campos obrigatorios."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Faga clic sobre a icona para cubrir o formulario de revisión."
+
+msgid "navigation.categories.browse"
+msgstr "Navegar"
+
+msgid "navigation.categories"
+msgstr "Categorías"
+
+msgid "context.select"
+msgstr "Cambiar a outra revista:"
+
+msgid "context.current"
+msgstr "Revista actual:"
