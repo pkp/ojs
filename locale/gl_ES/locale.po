@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-26 09:50+0000\n"
+"PO-Revision-Date: 2021-05-27 20:32+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -384,3 +384,241 @@ msgstr "Volver aos detalles do artigo"
 
 msgid "article.fontSize.large.altText"
 msgstr "Grande"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "A asignación do editor ao envío foi anulada"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Asignouse un editor/a ao envío"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Actualizouse o arquivo de revisión do autor/a"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Revisión do autor/a enviada"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artigo publicado"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Envío asignado a un número"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Envío mandado á cola de planificación de números"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artigo enviado"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Evento de envío"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Nota:</strong> As subscricions institucionais adquiridas en liña "
+"requiren a aprobación do dominio e dos intervalos IP antes da súa activación."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"As subscricións institucionais non requiren o inicio de sesión. O dominio do "
+"usuario/a e/ou o enderezo IP utilízanse para proporcionar acceso ao contido "
+"restrinxido aos subscritores."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"As subscricións individuais requiren o inicio de sesión para acceder ao "
+"contido restrinxido."
+
+msgid "subscriptions.status.other"
+msgstr "Outro, ver notas"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Non ten unha subscrición activa."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Esperando pagamento en liña"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Esperando pagamento manual"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Necesita aprobación"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Necesita información"
+
+msgid "subscriptions.status.active"
+msgstr "Activo"
+
+msgid "subscriptions.status"
+msgstr "Estado"
+
+msgid "subscriptions.inactive"
+msgstr "Inactivo"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "En papel e en liña"
+
+msgid "subscriptionTypes.format.print"
+msgstr "En papel"
+
+msgid "subscriptionTypes.format.online"
+msgstr "En liña"
+
+msgid "subscriptionTypes.format"
+msgstr "Formato"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Sen caducidade"
+
+msgid "subscriptionTypes.months"
+msgstr "meses"
+
+msgid "subscriptionTypes.month"
+msgstr "mes"
+
+msgid "subscriptionTypes.years"
+msgstr "anos"
+
+msgid "subscriptionTypes.year"
+msgstr "ano"
+
+msgid "subscriptionTypes.currency"
+msgstr "Moeda"
+
+msgid "issue.return"
+msgstr "Volver aos detalles do número"
+
+msgid "issue.viewIssue"
+msgstr "Ver o número"
+
+msgid "issue.nonpdf.title"
+msgstr "Descargar o número"
+
+msgid "issue.fullIssue"
+msgstr "Número completo"
+
+msgid "issue.coverPage.altText"
+msgstr "Cuberta"
+
+msgid "issue.abstract"
+msgstr "Resumo"
+
+msgid "issue.toc"
+msgstr "Táboa de contidos"
+
+msgid "issue.noIssues"
+msgstr "Non hai ningún número"
+
+msgid "issue.year"
+msgstr "Ano"
+
+msgid "issue.no"
+msgstr "Núm."
+
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "issue.number"
+msgstr "Número"
+
+msgid "issue.volume"
+msgstr "Volume"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Ver {$identification}"
+
+msgid "issue.title"
+msgstr "Título"
+
+msgid "issue.issues"
+msgstr "Números"
+
+msgid "issue.issue"
+msgstr "Número"
+
+msgid "user.role.journalAssistants"
+msgstr "Asistentes de revista"
+
+msgid "user.role.journalAssistant"
+msgstr "Asistente de revista"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Administradores/as de subscricións"
+
+msgid "user.role.subEditors"
+msgstr "Editores/as de sección"
+
+msgid "user.role.managers"
+msgstr "Administradores/oras de revistes"
+
+msgid "user.role.subscriptionManager"
+msgstr "Administrador/a de subscricións"
+
+msgid "user.role.subEditor"
+msgstr "Editor/a de sección"
+
+msgid "user.role.manager"
+msgstr "Administrador/a da revista"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Rexistrarse como revisor/a: O rexistro de revisores/as neste momento está "
+"desactivado."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Rexistrarse como revisor/a"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr ""
+"Envíe un artigo: o rexistro de autores/as neste momento está desactivado."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Envíe unha proposta"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"A súa conta aínda non ten ningún rol nesta revista. Escolla unha das accións "
+"seguintes:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"A súa conta aínda non está asociada a ningunha revista. Escolla unha revista:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Xestionar as miñas subscricións"
+
+msgid "user.myJournals"
+msgstr "As miñas revistas"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Se solicitou ser revisor/a nalgunha revista, introduza os temas que lle "
+"interesan."
+
+msgid "user.register.otherContextRoles"
+msgstr "Solicitar os roles seguintes."
+
+msgid "user.register.contextsPrompt"
+msgstr "En que revistas deste sitio se quere rexistrar?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Si, gustariame que contactasen comigo para revisar artigos desta revista."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Si, solicitar o rol {$userGroup}."
+
+msgid "user.reviewerPrompt"
+msgstr "Estaría disposto a revisar envíos para esta revista?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Inscribirse noutras revistas"
+
+msgid "user.showAllJournals"
+msgstr "Mostrar as miñas revistas"
+
+msgid "user.profile.profileImage"
+msgstr "Imaxe do perfil"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Incluír usuarios/as que non teñen ningún rol nesta revista."
