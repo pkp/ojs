@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-27 20:32+0000\n"
+"PO-Revision-Date: 2021-05-29 13:35+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -622,3 +622,176 @@ msgstr "Imaxe do perfil"
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Incluír usuarios/as que non teñen ningún rol nesta revista."
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Os complementos xenéricos utilízanse para ampliar as funcionalidades de Open "
+"Journal Systems non incluídas  noutras categorías de complementos."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Os complementos de autorización permiten que Open Journal Systems delegue as "
+"tarefas de autenticación de usuarios/as a outros sistemas, como os "
+"servidores LDAP."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Os complementos de galerada de artigo ofrecen soporte para mostrar "
+"diferentes tipos de documento como galeradas de artigo."
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Complementos de galerada dos artigos"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Tipos de subscricións"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Subscricións institucionais"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Subscricións individuais"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Administración das subscricións"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOTA!</h4> <p>O sistema non puido modificar automaticamente o arquivo de "
+"configuración. Para aplicar os cambios na configuración cómpre abrir o "
+"arquivo <tt>config.inc.php</tt> nun editor de texto axeitado e substituír o "
+"seu contido polo que se encontra no campo de texto que se mostra a "
+"continuación.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Establecer como fonte de autenticación predeterminada outra diferente de "
+"OJS producirá o efecto seguinte:</p> <ul> <li>Se un usuario/a intenta "
+"rexistrar unha conta nova neste sitio web cun nome de usuario/a xa existente "
+"na fonte de autenticación (pero non na base de datos de OJS), o intento de "
+"rexistro só se permitirá se o contrasinal proporcionado é válido para esta "
+"conta de usuario/a.</li> </ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "documentos similares"
+
+msgid "search.results.orderDir.desc"
+msgstr "Descendente"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascendente"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevancia"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularidade (último mes)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularidade (desde o comezo)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Título da revista"
+
+msgid "search.results.orderBy.issue"
+msgstr "Número"
+
+msgid "search.results.orderBy.date"
+msgstr "Data de publicación"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor/a"
+
+msgid "search.results.orderBy.article"
+msgstr "Título do artigo"
+
+msgid "search.results.orderBy"
+msgstr "Ordenar resultados por"
+
+msgid "comments.authenticated"
+msgstr "por <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "Comentarios sobre este artigo"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Acceso mediante subscrición ou pagamento"
+
+msgid "reader.subscriptionAccess"
+msgstr "Acceso mediante subscrición"
+
+msgid "reader.openAccess"
+msgstr "Acceso libre"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Cómpre estar subscrito para ter acceso a este artigo. Acceda á revista para "
+"verificar a súa subscrición."
+
+msgid "reader.subscribersOnly"
+msgstr "Só para subscritores/as"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Completouse a asignación da maquetaxe"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Actualizáronse as galeradas de maquetaxe"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Iniciouse a asignación da maquetaxe"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Anulouse a asignación do responsable da maquetaxe do envío"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Responsable da maquetaxe asignado ao envío"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Completouse a asignación da corrección de probas"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Actualizouse o arquivo de revisións do corrector/a de probas"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Iniciouse a asignación da corrección de probas"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Anulouse a asignación do corrector/a de probas do envío"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Asignouse un corrector/a de probas ao envío"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Actualizouse o arquivo de corrección de orixinais"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Completouse a corrección final de orixinais"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Completouse a corrección inicial de orixinais"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Actualizouse o arquivo de revisións do corrector/a de orixinais"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Iniciouse a asignación da corrección de orixinais"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Anulouse a asignación do corrector/a de orixinais do envío"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Asignouse un corrector/a de orixinais ao envío"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Envío recuperado do arquivo"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Mandado o envío para o arquivo"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Actualizado o arquivo do editor/a"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Enviada a decisión do editor/a"
