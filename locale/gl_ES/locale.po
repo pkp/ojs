@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-01 05:55+0000\n"
+"PO-Revision-Date: 2021-06-02 18:24+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -841,3 +841,204 @@ msgstr ""
 "as citacións da obra publicada. (Véxase <a target=\"_new\" href=\""
 "http://opcit.eprints.org/oacitation-biblio.html\">O efecto do acceso "
 "libre</a>).</li> </ol>"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Arquivos cargados"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Comentarios"
+
+msgid "reviewer.article.submitReview"
+msgstr "Enviar a revisión ao editor/a"
+
+msgid "reviewer.article.recommendation"
+msgstr "Recomendación"
+
+msgid "reviewer.article.automatic"
+msgstr "(Automático)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Enviar un recordatorio"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor/a por introducir"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Escriba ou pegue os comentarios de revisión aquí"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Editor/a do envío"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "O envío estará dispoñible cando o revisor/a acepte o encargo"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Non pode facer a revisión"
+
+msgid "reviewer.article.canDoReview"
+msgstr "fará a revisión"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Notificar ao editor/a"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Arquivo por revisar"
+
+msgid "reviewer.averageQuality"
+msgstr "Puntuación"
+
+msgid "reviewer.completedReviews"
+msgstr "Feito"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artigos pendentes de revisión"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL de contido aloxado remotamente"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Esta galerada estará dispoñible nun sitio web distinto."
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"O formato da imaxe non é válido. Os formatos admitidos son .gif, .jpg, e "
+".png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Cargar un arquivo adicional"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Substituír o arquivo"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Cargar o formato para as galeradas"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Asignacións de maquetaxe"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Non hai ningunha tarefa editorial activa."
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Tarefas editoriais completadas"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Tarefas editoriais activas"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Crear un revisor/a novo"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Dar de alta un usuario/a xa existente como revisor/a"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Resultado"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Encargo rexeitado"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Encargos que o revisor/a rexeitou e cancelacións"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Decisión do editor/a, rolda {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Avaliación de expertos/as, rolda {$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Ver os encargos rexeitados, os cancelados e as roldas anteriores"
+
+msgid "sectionEditor.regrets"
+msgstr "Encargos rexeitados"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} Encargos rexeitados, cancelacións e roldas anteriores do "
+"revisor/a"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Encargos rexeitados"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Se volve enviar esta notificación ao corrector/a de probas, reiniciarase a "
+"tarefa asignada. Está seguro/a de que quere facelo?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Se volve enviar a notificación ao/á responsable da maquetaxe, reiniciarase a "
+"tarefa asignada. Está seguro/a de que quere facelo?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Se volve enviar a notificación  ao autor/a, reiniciarase a tarefa asignada. "
+"Está seguro/a de que quere facelo?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Se volve enviar a notificación ao corrector de orixinais, reiniciarase a "
+"tarefa asignada. Está seguro/a de que quere facelo?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Non se asignou ningún envío"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Tarefas editoriais completadas"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Tarefas editoriais activas"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol> <li>Os elementos salientados indican que cómpre unha acción por parte "
+"do editor/a, tal como se mostra a continuación: <ul> <li class=\""
+"highlightCopyediting\">Cómpre unha acción na fase de corrección de "
+"orixinais</li> <li class=\"highlightLayoutEditing\">Cómpre unha acción na "
+"fase de maquetaxe</li> <li class=\"higlightProofreading\">Cómpre unha acción "
+"na fase de corrección de probas</li> </ul> </li> </ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol> <li>Os elementos salientados indican que cómpre unha acción por parte "
+"do editor/a e son etiquetadas da maneira seguinte: <ul> <li class=\""
+"highlightReviewerNotNotified\">Un revisor/a foi asignado pero non recibiu a "
+"notificación por correo electrónico</li> <li class=\"highlightNoDecision\">"
+"Todos os revisores/as enviaron os seus comentarios, pero non se rexistrou "
+"ningunha decisión</li> <li class=\"highlightRevisedCopyUploaded\">O autor/a "
+"cargou unha versión revisada do manuscrito</li> <li class=\""
+"highlightReviewerConfirmationOverdue\">O revisor/a demorouse en aceptar a "
+"petición de avaliación</li> <li class=\"highlightReviewerCompletionOverdue\">"
+"O revisor/a demorouse en entregar a revisión</li> </ul> </li> <li>A opción \""
+"Pendente\" queda marcada cando un revisor/a acepta a petición de revisión; "
+"aparece o número de semanas ata a data de vencemento da revisión ou (-) de "
+"semanas de atraso.</li> </ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Non ten dereitos administrativos sobre este usuario/a. Isto pode ser debido "
+"a algún destes motivos: <ul> <li>O usuario/a é un administrador/a do sitio "
+"web</li> <li>O usuario/a está activo en revistas que vostede non "
+"xestiona</li> </ul> Esta tarefa debe ser efectuada por un administrador/a do "
+"sitio web.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Desactivar este usuario/a? Isto impediralle iniciar sesión no sistema. Pode "
+"proporcionarlle ao usuario/a unha razón para desactivar a súa conta."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Para axudar aos lectores/as a atopar as versións en liña das obras "
+"citadas por un autor/a, están dispoñibles as opcións seguintes:</p> <ol> "
+"<li><strong> Engadir unha ferramenta de lectura</strong><p>O administrador/a "
+"da revista pode engadir a opción \"Buscar referencias\" ás ferramentas de "
+"lectura que acompañan os artigos publicados, o que permitirá aos lectores/as "
+"inserir o título dunha referencia e buscar a obra citada nas bases de datos "
+"académicas preseleccionadas.</p></li> <li><strong>Enlaces incorporados nas "
+"referencias</strong><p>O responsable da maquetaxe pode engadir enlaces ás "
+"referencias publicadas en liña, mediante as instrucións seguintes (que se "
+"poden editar).</p></li> </ol>"
