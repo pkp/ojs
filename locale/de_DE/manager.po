@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2021-05-21 10:36+0000\n"
+"PO-Revision-Date: 2021-06-02 18:24+0000\n"
 "Last-Translator: Sebastian Wolf <bibliothekswelt@htmlwolf.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "de_DE/>\n"
@@ -799,8 +799,9 @@ msgstr "Begutachtungsrichtlinien"
 msgid "manager.setup.reviewOptions"
 msgstr "Optionen für die Begutachtung"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "Automatische Erinnerung der Gutachter/innen per E-Mail (aus den OJS-Standard-E-Mails) kann an zwei Stellen erfolgen. Die Redakteurin/der Redakteur kann hingegen den Gutachter/innen zu jeder Zeit direkt eine E-Mail schicken"
+msgstr "Automatische E-Mail-Erinnerung"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
@@ -809,8 +810,9 @@ msgstr ""
 "Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können "
 "erforderlich sein, siehe OJS-Dokumentation."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
-msgstr "Vorgesehener Zeitaufwand für eine Begutachtung"
+msgstr "Vorgesehener Zeitaufwand (in Wochen) für eine Begutachtung"
 
 msgid "manager.setup.reviewOptions.onQuality"
 msgstr "Redakteur/innen bewerten die Gutachter/innen nach jeder Begutachtung auf einer fünfstufigen Skala."
