@@ -1,0 +1,1716 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-27T09:54:39-07:00\n"
+"PO-Revision-Date: 2020-12-03 15:43+0000\n"
+"Last-Translator: Edvin Erdtman <edvin.erdtman@liu.se>\n"
+"Language-Team: English (United States) <http://translate.pkp.sfu.ca/projects/"
+"ojs/manager/en_US/>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.distribution.access"
+msgstr "Access"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "Choose how a default copyright date is selected for an article. This default can be overridden on a case-by-case basis. If you \"publish as you go\", don't use the issue's publication date."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Use the issue's publication date"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Use the article's publication date"
+
+msgid "manager.distribution.publication"
+msgstr "Publication"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Publishing Mode"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS will not be used to publish the journal's contents online."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "The journal will provide open access to its contents."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "The journal will require subscriptions to access some or all of its contents."
+
+msgid "manager.website.archiving"
+msgstr "Archiving"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made."
+
+msgid "manager.files.note"
+msgstr "Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly."
+
+msgid "manager.journalManagement"
+msgstr "Journal Management"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "Submissions"
+
+msgid "manager.language.forms"
+msgstr "Forms"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "This will replace any locale-specific journal settings you had for this locale"
+
+msgid "manager.languages.languageInstructions"
+msgstr "OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "This will be the default language for the journal site."
+
+msgid "manager.managementPages"
+msgstr "Management Pages"
+
+msgid "manager.payment.action"
+msgstr "Action"
+
+msgid "manager.payment.addPayment"
+msgstr "Add Payment"
+
+msgid "manager.payment.amount"
+msgstr "Amount"
+
+msgid "manager.payment.authorFees"
+msgstr "Author Fees"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Enter fee amounts below in order to enable author processing charges."
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here."
+
+msgid "manager.payment.description"
+msgstr "Description"
+
+msgid "manager.payment.details"
+msgstr "Details"
+
+msgid "manager.payment.editSubscription"
+msgstr "Edit Subscription"
+
+msgid "manager.payment.enable"
+msgstr "Enable"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Fee Payment Options"
+
+msgid "manager.payment.form.numeric"
+msgstr "All costs must be positive numeric values (decimal points are allowed)"
+
+msgid "manager.payment.generalFees"
+msgstr "General Fees"
+
+#, fuzzy
+msgid "manager.payment.generalFeesDescription"
+msgstr "The Association Membership will appear in About the Journal under Policies."
+
+msgid "manager.payment.generalOptions"
+msgstr "General Options"
+
+msgid "manager.payment.noPayments"
+msgstr "No Payments"
+
+msgid "manager.payment.notFound"
+msgstr "Not Found"
+
+msgid "manager.payment.options"
+msgstr "Options"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Are you sure you wish to delete this subscription?"
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Payments will be enabled for this journal. Note that users will be required to log in to make payments."
+
+msgid "manager.payment.options.fee"
+msgstr "Fee"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Fee Description"
+
+msgid "manager.payment.options.feeName"
+msgstr "Fee Name"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Association Membership"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Only Restrict Access to PDF version of issues and articles"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Article Processing Charge"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Purchase Article"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Purchase Issue"
+
+msgid "manager.payment.options.text"
+msgstr "Description of Payment Method"
+
+msgid "manager.payment.paymentId"
+msgstr "Payment ID"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Payment Method"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "You may configure any of the following Payment Method Plugins from this screen."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Fee Payment Methods"
+
+msgid "manager.payment.paymentType"
+msgstr "Payment Type"
+
+msgid "manager.payment.readerFees"
+msgstr "Reader Fees"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required."
+
+msgid "manager.payment.records"
+msgstr "Records"
+
+msgid "manager.paymentTypes"
+msgstr "Payment Types"
+
+msgid "manager.payment.userName"
+msgstr "Payment ID"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Users Enrolled in this Journal"
+
+msgid "manager.people.allJournals"
+msgstr "All Journals"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Enroll a User from this Site in this Journal"
+
+msgid "manager.people.showNoRole"
+msgstr "Show users with no role"
+
+msgid "manager.people.allUsers"
+msgstr "All Enrolled Users"
+
+msgid "manager.people.confirmRemove"
+msgstr "Remove this user from this journal? This action will unenroll the user from all roles within this journal."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Select a template"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Enroll an Existing User"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "With journal"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Select a user to whom to attribute the previous users' authorships, editing assignments, etc."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} Enrollment"
+
+msgid "manager.people.syncUserDescription"
+msgstr "Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Do not require abstracts"
+
+msgid "manager.section.noSectionEditors"
+msgstr "There are no section editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first."
+
+msgid "manager.sections.assigned"
+msgstr "This Section's Editors"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Are you sure you want to permanently delete this section?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Before this section can be deleted, you must move articles submitted to it into other sections."
+
+msgid "manager.sections.create"
+msgstr "Create Section"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Add a Section Editor to this section to have submissions automatically assigned to the Section Editor. (Otherwise, Section Editors can be assigned manually, after a submission comes in.) If added, a Section Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking Section Editors under Roles in Journal Management."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Items can only be submitted by Editors and Section Editors."
+
+msgid "manager.sections.editors"
+msgstr "Section editors"
+
+#, fuzzy
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"At least one section must be active. Visit the workflow settings to disable "
+"all submissions to this journal."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "An abbreviated title is required for the section"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Please ensure that at least one checkbox is checked for each Section Editor assignment."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Please ensure that you have chosen a valid review form."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "A title is required for the section."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Omit author names for section items from issues' table of contents."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Omit the title of this section from issues' table of contents."
+
+msgid "manager.sections.identifyType"
+msgstr "Identify items published in this section as a(n)"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(For example, \"Peer-reviewed Article\", \"Non-refereed Book Review\", \"Invited Commentary\", etc.)"
+
+msgid "manager.sections.indexed"
+msgstr "Indexed"
+
+msgid "manager.sections.noneCreated"
+msgstr "No sections have been created."
+
+msgid "manager.sections.open"
+msgstr "Open Submissions"
+
+msgid "manager.sections.policy"
+msgstr "Section Policy"
+
+msgid "manager.sections.readingTools"
+msgstr "Reading Tools"
+
+msgid "manager.sections.reviewed"
+msgstr "Peer Reviewed"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Will not be included in the indexing of the journal"
+
+msgid "manager.sections.submissionReview"
+msgstr "Will not be peer-reviewed"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Submissions made to this section of the journal"
+
+msgid "manager.sections.unassigned"
+msgstr "Available Section Editors"
+
+msgid "manager.sections.wordCount"
+msgstr "Word Count"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Limit abstract word counts for this section (0 for no limit)"
+
+msgid "manager.setup"
+msgstr "Journal Settings"
+
+msgid "manager.setup.masthead"
+msgstr "Masthead"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Editorial Team"
+
+msgid "manager.setup.homepageContent"
+msgstr "Journal Homepage Content"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Journal style sheet"
+
+msgid "manager.setup.contextName"
+msgstr "Journal Name"
+
+msgid "manager.setup.pageHeader"
+msgstr "Journal Page Header"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Content"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Add About Item"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Add Checklist Item"
+
+msgid "manager.setup.addItem"
+msgstr "Add Item"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Add Item to Appear in \"About the Journal\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Add Item"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Add New Database Link"
+
+msgid "manager.setup.addSponsor"
+msgstr "Add Sponsoring Organization"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Alternate Header"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required."
+
+msgid "manager.setup.announcements"
+msgstr "Announcements"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introduction"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Enter any information you would like to appear on your announcements page."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(To appear in About the Journal) "
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "Require submitting Authors to file a Competing Interest (CI) statement with their submission."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Require Reviewers to file a CI statement with each peer review they submit."
+
+msgid "manager.setup.history"
+msgstr "Journal History"
+
+msgid "manager.setup.historyDescription"
+msgstr "This text will appear in the \"About\" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history."
+
+msgid "manager.setup.currentIssue"
+msgstr "Current issue"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Step 5. Customizing the Look"
+
+msgid "manager.setup.details"
+msgstr "Details"
+
+msgid "manager.setup.details.description"
+msgstr "Name of journal, ISSN, contacts, sponsors, and search engines."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "The Journal Manager will register all user accounts. Editors or Section Editors may register user accounts for reviewers."
+
+msgid "manager.setup.discipline"
+msgstr "Academic Discipline and Sub-Disciplines"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Provide examples of relevant academic disciplines for this journal"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Add the table of contents for the current issue (if available)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Editor Decision"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Bounce Address"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "Any undeliverable emails will result in an error message to this address."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation."
+
+msgid "manager.setup.emails"
+msgstr "Email Identification"
+
+msgid "manager.setup.emailSignature"
+msgstr "Signature"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Enable announcements"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Display on Homepage"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "How many announcements to display on the homepage. Leave this empty to display none."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Visitors can register a user account with the journal."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Focus and scope"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Describe to authors, readers, and librarians the range of articles and other items the journal will publish."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "For Authors to Index Their Work"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS adheres to the <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "The specified ISSN is not valid."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "The primary contact email is required."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "The primary contact name is required."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "The journal initials are required."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "The journal title is required."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "The number of reviewers per submission is required."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "The support email is required."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "The support name is required."
+
+msgid "manager.setup.generalInformation"
+msgstr "General Information"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Step 1. Getting Down the Details"
+
+msgid "manager.setup.guidelines"
+msgstr "Guidelines"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Step 3. Guiding Submissions"
+
+msgid "manager.setup.identity"
+msgstr "Journal Identity"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time."
+
+msgid "manager.setup.information"
+msgstr "Information"
+
+msgid "manager.setup.information.description"
+msgstr "Brief descriptions of the journal for librarians and prospective authors and readers. These are made available in the site's sidebar when the Information block has been added."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "For Authors"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "For Librarians"
+
+msgid "manager.setup.information.forReaders"
+msgstr "For Readers"
+
+msgid "manager.setup.initialIssue"
+msgstr "Initial issue"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:"
+
+msgid "manager.setup.institution"
+msgstr "Institution"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Items per page"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr "Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page."
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Journal Abbreviation"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Journal Archiving"
+
+msgid "manager.setup.contextSummary"
+msgstr "Journal Summary"
+
+msgid "manager.setup.contextAbout"
+msgstr "About the Journal"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Journal Homepage Content"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Journal Homepage Header"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Journal Homepage Header"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears."
+
+msgid "manager.setup.contextInitials"
+msgstr "Journal initials"
+
+msgid "manager.setup.journalLayout"
+msgstr "Journal Layout"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen)."
+
+msgid "manager.setup.journalLogo"
+msgstr "Journal Logo"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Journal Logo"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Journal Page Footer"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Step 2. Journal Policies"
+
+msgid "manager.setup.journalSetup"
+msgstr "Journal Setup"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Your journal setup has been updated."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Invalid journal stylesheet format. Accepted format is .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Journal Theme"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Journal thumbnail"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "A small logo or representation of the journal that can be used in lists of journals."
+
+msgid "manager.setup.contextTitle"
+msgstr "Journal title"
+
+msgid "manager.setup.keyInfo"
+msgstr "Key Information"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "Provide a short description of your journal and identify editors, managing directors and other members of your editorial team."
+
+msgid "manager.setup.labelName"
+msgstr "Label name"
+
+msgid "manager.setup.lists"
+msgstr "Lists"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Enable the PKP PN plugin"
+
+msgid "manager.setup.plnDescription"
+msgstr "The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "View the <button>plugin settings</button> to accept the terms of use for the PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS and CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr "Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> page."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "A LOCKSS license will appear in About the Journal under Archiving: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS License Description"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href=\"http://www.lockss.org/community/\" target=\"_blank\">the LOCKSS community</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> page."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "A CLOCKSS license will appear in About the Journal under Archiving: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS License Description"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Sign up for the CLOCKSS service by visiting <a href=\"http://clockss.org/\" target=\"_blank\">the CLOCKSS website</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "The Look"
+
+msgid "manager.setup.look.description"
+msgstr "Homepage header, content, journal header, footer, navigation bar, and style sheet."
+
+msgid "manager.setup.management"
+msgstr "Management"
+
+msgid "manager.setup.management.description"
+msgstr "Access and security, scheduling, announcements, copyediting, layout, and proofreading."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Management of Basic Editorial Steps"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Management and Publishing Setup"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Step 4. Managing the Journal"
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigation Bar"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Add or remove additional navigation bar items."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL is an absolute URL (e.g., \"http://www.example.com\") rather than a path relative to the site (e.g., \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "The label value is a literal string (e.g., \"Journal Setup\") rather than a localization message key (e.g., \"manager.setup\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "No image file uploaded."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "No style sheet uploaded."
+
+msgid "manager.setup.note"
+msgstr "Note"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the \"Submission Ack\" email in Emails."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Page links"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Limit the number of links to display to subsequent pages in a list."
+
+msgid "manager.setup.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Page Number Option"
+
+msgid "manager.setup.policies"
+msgstr "Policies"
+
+msgid "manager.setup.policies.description"
+msgstr "Focus, peer review, sections, privacy, security, and additional about items."
+
+msgid "manager.setup.printIssn"
+msgstr "Print ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Proofing Instructions"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Publication Schedule"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the \"current\" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Publication Scheduling"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Identification of Journal Content"
+
+msgid "manager.setup.publishing"
+msgstr "Publishing Details"
+
+msgid "manager.setup.publisher"
+msgstr "Publisher"
+
+msgid "manager.setup.publishingDescription"
+msgstr "These details may be included in metadata provided to third-party archival bodies."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Reference Linking"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Users must be registered and log in to view open access content."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Users must be registered and log in to view the journal site."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Review Guidelines"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Review Options"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Automated Email Reminders"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "To send automated email reminders, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required as indicated in the OJS documentation."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Weeks allowed to complete the review"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Editors will rate reviewers on a five-point quality scale after each review."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Restrict File Access"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "Reviewers will not be given access to the submission file until they have agreed to review it."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Reviewer Access"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "One-click Reviewer Access"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "Reviewers can be sent a secure link in the email invitation, which will allow them to access the review without logging in. Access to other pages requires them to log in."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Include a secure link in the email invitation to reviewers."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Reviewer Ratings"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Reviewer Reminders"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Review Policy"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Search Indexing"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Help search engines like Google discover and display your site. You are encouraged to submit your <a href=\"{$sitemapUrl}\" target=\"_blank\">sitemap</a>."
+
+msgid "manager.setup.searchDescription.description"
+msgstr "Provide a brief description (50-300 characters) of the journal which search engines can display when listing the journal in search results."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Sections and Section Editors"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(If sections are not added, then items are submitted to the Articles section by default.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "The journal editor who will see it through the editorial process."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "The journal section for which the item will be considered."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Always show galley links and indicate restricted access."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Site Access"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "View Article Content"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Five Steps to a Journal Web Site"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Keywords"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Provide examples of keywords or topics as a guide for authors"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Submission guidelines"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Submission Preparation Checklist"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission."
+
+msgid "manager.setup.submissions"
+msgstr "Submissions"
+
+msgid "manager.setup.submissions.description"
+msgstr "Author guidelines, copyright, and indexing (including registration)."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr "Prevent users from submitting new articles to the journal. Submissions can be disabled for individual journal sections on the <a href="{$url}">journal sections</a> settings page."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr "This journal is not accepting submissions at this time. Visit the workflow settings to allow submissions."
+
+msgid "manager.setup.enableOai"
+msgstr "Enable OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr "Provide metadata to third-party indexing services through the <a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.typeExamples"
+msgstr "(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Type (Method/Approach)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Provide examples of relevant research types, methods, and approaches for this field"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Unique Identifier"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "An editorial/review board will be used by the journal."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Thumbnail"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Title image"
+
+msgid "manager.setup.userRegistration"
+msgstr "User Registration"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Title text"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tYour journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.\n"
+"\t\tThere are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank\n"
+"\t\tsearch results. Please select one of the configured metrics as a default.\n"
+"\t"
+
+msgid "manager.statistics.statistics"
+msgstr "Journal Statistics"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Article View Counts (for Authors only)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Accept"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Decline"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Resubmit"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Days to review"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Days to publication"
+
+msgid "manager.statistics.statistics.description"
+msgstr "OJS calculates the following statistics for each journal. The \"days to review\" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the \"days to publish\" is measured for accepted submissions from its original uploading to its publication."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Items published"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Check items to be made available to readers in About the Journal."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Issues published"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Total submissions"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Peer reviewed"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Registered readers"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "No. assigned"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Reviewers"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Editor score"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "No. of reviews"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Select the sections for calculating this journal's peer-reviewed statistics."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Subscriptions"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Article file downloads"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Article abstract page views"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Article abstract page views and downloads"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Journal main page views"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Issue table of contents page views"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Narrow results by context (issues and/or article)."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Narrow results by object type (journal, issue, article, file types) and/or by one or more object id(s)."
+
+msgid "manager.subscriptionPolicies"
+msgstr "Subscription Policies"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Delayed Open Access"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Please use the checkbox provided."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Subscription Expiry"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Full expiry"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Readers are denied access to all subscription content upon subscription expiry."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Partial expiry"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Readers are denied access to recently published subscription content, but retain access to subscription content published prior to the subscription expiry date."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Months"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Weeks"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Notify subscribers by email after subscription expiry"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Notify subscribers by email after subscription expiry."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Notify subscribers by email before subscription expiry."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Notify subscribers by email before subscription expiry."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Subscription Expiry Reminders"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Automated email reminders (available for editing by Journal Managers in OJS's Emails) can be sent to subscribers both before and after a subscription has expired."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Select one of the following:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTML can be used in textarea (for font size, color, etc.), with \"returns\" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Please select a valid value for the number of months after subscription expiry."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Please select a valid value for the number of months before subscription expiry."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Please select a valid value for the number of weeks after subscription expiry."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Please select a valid value for the number of weeks before subscription expiry."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Registered readers will have the option of receiving the table of contents by email when an issue becomes open access."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Online Payment Notifications"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Automated email notifications (available for editing by Journal Managers in OJS's Emails) can be sent to the Subscription Manager upon the completion of subscription online payments."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Notify Subscription Manager by email upon online purchase of an Individual subscription."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Notify Subscription Manager by email upon online renewal of an Individual subscription."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Notify Subscription Manager by email upon online renewal of an Institutional subscription."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Note:</strong> Institutional subscriptions purchased online require approval of the provided domain and IP ranges and activation of the subscription by the Subscription Manager."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Open Access Options For Subscription Journals"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Subscription journals can provide \"delayed open access\" to their published content, as well as permit \"author self-archiving\" (both of which increase readership and citation of content)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Subscription Information"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "The Subscription Types and fee structure will be displayed on the subscriptions page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Subscription Manager"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "These contact details will be listed on the subscription page for customers with enquiries related to subscriptions."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Please enter a valid email."
+
+msgid "manager.subscriptions"
+msgstr "Subscriptions"
+
+msgid "manager.individualSubscriptions"
+msgstr "Individual Subscriptions"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Institutional Subscriptions"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Are you sure you want to renew this subscription?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Are you sure you want to delete this subscription?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Subscriptions Summary"
+
+msgid "manager.subscriptions.create"
+msgstr "Create New Subscription"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Create"
+
+msgid "manager.subscriptions.renew"
+msgstr "Renew"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "End"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "End Date"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Start"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Start Date"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domain"
+
+msgid "manager.subscriptions.edit"
+msgstr "Edit Subscription"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Edit"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "With Status"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "All"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Status"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "A subscription status is required."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Please select a valid subscription status."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Subscription type"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "A subscription type is required."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Please select a valid subscription type."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Start date"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "A subscription start date is required."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Please select a valid subscription start date."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "End date"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "A subscription end date is required."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "This is a non-expiring subscription type; please do not specify a start date."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "This is a non-expiring subscription type; please do not specify an end date."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Please select a valid subscription end date."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Note: All changes below are to user's system-wide profile."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "User"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Contact"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "A user is required."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Please select a valid user."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Please select a valid country."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Send the user an email with their username and subscription details."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Please use the checkbox provided."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Membership"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Reference Number"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Enter membership information if the subscription type requires that subscribers belong to an association or organization."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "The selected subscription type requires membership information."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Notes"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domain"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Institution name"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "An institution name is required."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Mailing address"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "The selected subscription type requires a domain and/or an IP range for subscription authentication."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Please enter a valid domain."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP ranges"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Please enter a valid IP range."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Delete"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Add"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Save and Create Another"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "In order to send the user a notification email, the subscription contact name and email address must be specified in the journal Setup."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "This user already has a subscription for this journal."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "A subscription type must be created before new subscriptions can be made."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP Range"
+
+msgid "manager.subscriptions.membership"
+msgstr "Membership"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Reference Number"
+
+msgid "manager.subscriptions.notes"
+msgstr "Notes"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "No subscriptions"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Select Subscription Contact"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Select User"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Subscription access privileges are automatically granted to the journal's Journal Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders."
+
+msgid "manager.subscriptions.select"
+msgstr "Select"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Subscription created successfully."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Subscription Type"
+
+msgid "manager.subscriptions.user"
+msgstr "User"
+
+msgid "manager.subscriptions.contact"
+msgstr "Contact Name"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Institution Name"
+
+msgid "manager.subscriptionTypes"
+msgstr "Subscription Types"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Warning! All subscriptions with this subscription type will also be deleted. Are you sure you want to continue and delete this subscription type?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Cost"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Subscriptions"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individual"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institutional"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Create New Subscription Type"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Create"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Duration"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Edit Subscription Type"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Edit"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Cost"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Enter a numeric value (e.g. 40 or 40.00) without symbol (e.g., $)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "The cost must be a positive, numeric value."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "A cost is required."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Currency"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "A currency is required."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Please select a valid currency."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Description"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Expires after"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "months (e.g. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Never expires"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Please use the provided options."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Duration"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "The number of months the subscription lasts (e.g. 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "The duration must be a positive, numeric value."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "A duration is required."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "A subscription type format is required."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Please select a valid subscription type format."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Subscriptions"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individual (users are validated via login)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Institutional (users are validated via domain or IP address)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Please use the provided options."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Subscriptions require membership information (e.g. of an association, organization, consortium, etc.)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Please use the checkbox provided."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Options"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Do not make this subscription type publicly available or visible on the website."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Please use the checkbox provided."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Save and Create Another"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Name of Type"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "A subscription type with this name already exists."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "A subscription type name is required."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Subscription type"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "No subscription types have been created."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Subscription type created successfully."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Link to a page describing the subscriptions you offer."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Link to a page describing the visitor's current and past subscriptions."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "This link will only be displayed when a visitor is logged in."
+
+msgid "manager.setup.categories"
+msgstr "Categories"
+
+msgid "manager.setup.categories.description"
+msgstr "Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete journal set."
+
+msgid "grid.category.path"
+msgstr "Path"
+
+msgid "grid.action.addSection"
+msgstr "Add Section"
+
+msgid "manager.setup.section.description"
+msgstr "Articles within published issues of a journal are organized in Sections, typically by theme or content type (e.g. Review Articles, Research, etc)."
+
+msgid "settings.roles.gridDescription"
+msgstr "Roles are groups of users in the journal who are given access to different permission levels and associated workflows within the journal. There are five different permission levels: Journal Managers have access to everything in the journal (all content and settings); Section Editors have complete access to all assigned content; Journal Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; Reviewers can see and perform the submissions they have been assigned to review; and Authors can see and interact with a limited amount of information on their own submissions. Additionally, there are five different stage assignments that roles may be given access to: Submission, Internal Review, Review, Editorial, and Production."
+
+msgid "manager.publication.library"
+msgstr "Publisher Library"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Base new article's copyright year on"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Article: default year will be drawn from the article's publication date, as in \"publish-as-you-go\"."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Issue: default year will be drawn from the issue's publication date."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Reset Article Permissions"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Are you sure you wish to reset permissions data for all articles? This action can not be undone."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "Remove the copyright statement and license information for every published article, reverting them to the journal's current default settings. This will permanently remove all prior copyright and licensing information attached to articles. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the articles published in your journal."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Article permissions were successfully reset."
+
+msgid "grid.genres.title.short"
+msgstr "Components"
+
+msgid "grid.genres.title"
+msgstr "Article Components"
+
+msgid "grid.genres.description"
+msgstr "These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Settings"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI Plugin Settings"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Articles"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Issues"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Galleys"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Plugin requirements not met"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "In order to use this plugin please go to the \"Public Identifier\" plugin category, enable and configure the DOI plugin and specify a valid DOI prefix there."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "The plugin is not fully set up."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "No publishing objects are selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Password"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Please note that the password will be saved as plain text, i.e. not encrypted."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Any Issue"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Any Status"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Not Deposited"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Marked registered"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Registered"
+
+msgid "plugins.importexport.common.action"
+msgstr "Action"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Export"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Mark registered"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Register"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Validate XML before the export and registration."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "No objects selected."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Could not convert selected objects."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Invalid XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "The output file {$param} is not writable."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "The input file {$param} is not readable."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Registration was not successful! The DOI registration server returned an error: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registration successful!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Validation successful!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Validation Failed."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "DOI prefix is missing for the journal with the path {$path}."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "ERROR:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "The specified journal path, \"{$journalPath}\", does not exist."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "The specified objects could not be found."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Send a copy to the primary contact, identified in the Journal Settings."
+
+msgid "stats.publicationStats"
+msgstr "Article Stats"
+
+msgid "stats.publications.details"
+msgstr "Article Details"
+
+msgid "stats.publications.none"
+msgstr "No articles were found with usage statistics matching these parameters."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Total abstract views by date"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Total file views by date"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} of {$total} articles"
+
+msgid "stats.publications.abstracts"
+msgstr "Abstracts"
+
+msgid "stats.publications.galleys"
+msgstr "Files"
