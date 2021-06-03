@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-02 18:24+0000\n"
+"PO-Revision-Date: 2021-06-05 03:03+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -1042,3 +1042,143 @@ msgstr ""
 "referencias</strong><p>O responsable da maquetaxe pode engadir enlaces ás "
 "referencias publicadas en liña, mediante as instrucións seguintes (que se "
 "poden editar).</p></li> </ol>"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Para cargar un manuscrito na revista, siga os seguintes pasos:</p> <ol> "
+"<li>Nesta páxina, faga clic en Navegar (ou Seleccionar arquivo) para abrir a "
+"ventá desde onde poderá localizar o arquivo no disco duro do seu "
+"ordenador.</li> <li>Busque o arquivo que quere enviar e seleccióneo.</li> "
+"<li>Faga clic en Abrir na ventá de selección de arquivo para introducir o "
+"nome do arquivo nesta páxina.</li> <li>Faga clic en Cargar nesta páxina para "
+"enviar o arquivo desde o disco duro ao sitio web da revista. O sistema "
+"cambiará o nome do arquivo para adaptalo ás convencións da revista.</li> <li>"
+"Unha vez cargado o envío, faga clic en Gardar e continuar na parte inferior "
+"desta páxina.</li> </ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Non hai ningunha asignación de corrección de probas"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Arquivo do corrector de orixinais"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Arquivo do corrector/a de orixinais"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Arquivo por corrixir"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Unha vez que rexistre unha decisión, non poderá facer cambios nesta "
+"revisión. Está seguro/a de que quere continuar?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Non se seleccionou ningunha recomendación. Debe seleccionar a recomendación "
+"que vai enviar."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Configure ou axuste a recomendación do revisor/a."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Seleccione unha recomendación e envíe a revisión para completar o proceso. "
+"Debe introducir unha revisión ou cargar un arquivo antes de seleccionar unha "
+"recomendación."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Ademais, pode cargar arquivos de consulta para o editor/a e/ou o autor/a."
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Faga clic na icona para inserir (ou pegar) a revisión deste envío."
+
+msgid "reviewer.competingInterests"
+msgstr "Conflito de intereses"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Declare se ten algún conflito de intereses respecto a esta investigación ("
+"ver <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">&nbsp;Política de CI</a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Faga clic nos nomes dos arquivos que quere descargar e revise os asociados a "
+"este envío. Pode facelo en pantalla ou ben imprimilos."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Se aceptou facer a revisión, consulte as directrices para o revisor/a."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "se acepta facer a revisión."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Notificar ao editor/a do envío"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"As directrices de revisión proporcionan aos revisores/as os criterios para "
+"xulgar a idoneidade dun envío para ser publicado na revista, e poden incluír "
+"calquera instrución especial necesaria para a preparación dunha revisión "
+"eficaz e útil. Ao realizar a revisión, os revisores/as atoparán dous cadros "
+"de texto en branco: o primeiro \"para o autor/a e o editor/a\" e o segundo \""
+"para o editor/a\". De maneira alternativa, o administrador/a da revista pode "
+"crear unha avaliación de expertos/as en \"Formularios de revisión\". En "
+"todos os casos, os editores/as terán a opción de incluír as revisións na "
+"correspondencia co autor/a."
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Directrices para o revisor/a"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Pasos para a revisión"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Planificación da revisión"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Envío por revisar"
+
+msgid "reviewer.article.schedule"
+msgstr "Planificación"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Ver os comentarios"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Rexeitar o envío"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Volver enviar a outra publicación"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Modificar para volver avaliar"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Publicable con modificacións"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Aceptar o envío"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Vencemento da revisión"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Revisión enviada"
+
+msgid "reviewer.article.schedule.response"
+msgstr "A súa resposta"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Petición do editor/a"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Se quere introducir comentarios no arquivo, para o editor/a, gárdeo no seu "
+"disco duro e utilice Explorar/Cargar.)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Versión cargada polo revisor/a"
