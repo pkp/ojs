@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @file tools/runScheduledTasks.php
  *
@@ -19,5 +21,11 @@ class runScheduledTasks extends \PKP\cliTool\ScheduledTaskTool
 {
 }
 
-$tool = new runScheduledTasks($argv ?? []);
-$tool->execute();
+try {
+    app('pkpQueue')->runQueuedJobs();
+
+    $tool = new runScheduledTasks($argv ?? []);
+    $tool->execute();
+} catch (\Exception $e) {
+    error_log($e->getTraceAsString());
+}
