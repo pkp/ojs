@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-05 03:03+0000\n"
+"PO-Revision-Date: 2021-06-08 06:06+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -1182,3 +1182,105 @@ msgstr ""
 
 msgid "reviewer.article.reviewersAnnotatedVersion"
 msgstr "Versión cargada polo revisor/a"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Comentarios da corrección de orixinais"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Correspondencia editor/a-autor/a"
+
+msgid "submission.logType.proofread"
+msgstr "Probas corrixidas"
+
+msgid "submission.logType.layout"
+msgstr "Maquetaxe"
+
+msgid "submission.logType.copyedit"
+msgstr "Corrección de orixinais"
+
+msgid "submission.logType.review"
+msgstr "Revisión"
+
+msgid "submission.logType.editor"
+msgstr "Editor/a"
+
+msgid "submission.logType.author"
+msgstr "Autor/a"
+
+msgid "submission.logType.article"
+msgstr "Artigo"
+
+msgid "submission.proofread.instructions"
+msgstr "Instrucións para a corrección de probas"
+
+msgid "submission.proofread.corrections"
+msgstr "Correccions da corrección de probas"
+
+msgid "submission.proofreadingComments"
+msgstr "Comentarios de corrección de probas"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Enlaces de referencia"
+
+msgid "submission.layout.instructions"
+msgstr "Instrucións de maquetaxe"
+
+msgid "submission.layout.layoutComments"
+msgstr "Comentarios de maquetaxe"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Substituír maquetador/a"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Asignar maquetador/a"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "O identificador público de galerada xa existe."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Ningún (cargue a versión final da corrección como versión maquetada antes de "
+"enviar a solicitude)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instrucións para a corrección de orixinais"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Comentarios da corrección de orixinais"
+
+msgid "submission.copyedit.useFile"
+msgstr "Utilizar o arquivo"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Asignar un corrector/a de orixinais"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Versión do corrector/a"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Corrección de orixinais final"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Corrección de orixinais do autor/a"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Corrección de orixinais do editor/a"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Corrección de orixinais inicial"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Non se pode enviar unha mensaxe de solicitude por correo electrónico mentres "
+"non se cargue un arquivo para a corrección de orixinais."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Non se pode enviar unha mensaxe de solicitude por correo electrónico mentres "
+"non se seleccione un arquivo para a corrección de orixinais en Decisión do "
+"editor/a, na páxina de Revisión."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Non se pode enviar unha mensaxe de solicitude por correo electrónico mentres "
+"non haxa unha versión de revisión."
