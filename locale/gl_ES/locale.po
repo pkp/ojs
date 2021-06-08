@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-08 06:06+0000\n"
+"PO-Revision-Date: 2021-06-09 02:55+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -1284,3 +1284,93 @@ msgid "submission.review.mustUploadFileForReview"
 msgstr ""
 "Non se pode enviar unha mensaxe de solicitude por correo electrónico mentres "
 "non haxa unha versión de revisión."
+
+msgid "user.register.noJournals"
+msgstr ""
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr ""
+
+msgid "user.subscriptions.statusDescription"
+msgstr ""
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr ""
+
+msgid "submission.comments.forEditor"
+msgstr ""
+
+msgid "user.register.registrationDisabled"
+msgstr ""
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr ""
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr ""
+
+msgid "user.register.reviewerDescription"
+msgstr ""
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr ""
+
+msgid "user.register.authorDescription"
+msgstr ""
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr ""
+
+msgid "user.register.readerDescription"
+msgstr ""
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr ""
+
+msgid "user.subscriptions.status"
+msgstr ""
+
+msgid "user.register.privacyStatement"
+msgstr ""
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr ""
+
+msgid "user.register.form.missingSiteConsent"
+msgstr ""
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr ""
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr ""
+
+msgid "user.register.selectContext"
+msgstr ""
+
+msgid "submission.comments.forAuthorEditor"
+msgstr ""
