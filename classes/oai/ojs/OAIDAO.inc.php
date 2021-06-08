@@ -228,7 +228,7 @@ class OAIDAO extends PKPOAIDAO
         $journalId = array_shift($setIds);
         $sectionId = array_shift($setIds);
 
-        # Exlude all journals that do not have Oai specifically turned on, see #pkp/pkp-lib#6503
+        // Exclude all journals that do not have OAI-PMH specifically turned on, see #pkp/pkp-lib#6503
         $excludeJournals = DB::table('journals')
             ->whereNotIn('journal_id', function ($query) {
                 $query->select('journal_id')
@@ -240,64 +240,90 @@ class OAIDAO extends PKPOAIDAO
             ->pluck('journal_id')
             ->all();
 
-        $submissionsQuery = DB::table('submissions AS a')
-            ->select(DB::raw('GREATEST(a.last_modified, i.last_modified) AS last_modified,
-                                a.submission_id AS submission_id,
-                                j.journal_id AS journal_id,
-                                s.section_id AS section_id,
-                                i.issue_id,
-                                NULL AS tombstone_id,
-                                NULL AS set_spec,
-                                NULL AS oai_identifier'))
+        return DB::table('submissions AS a')
+            ->select([
+                DB::raw('GREATEST(a.last_modified, i.last_modified) AS last_modified'),
+                'a.submission_id AS submission_id',
+                'i.issue_id',
+                DB::raw('NULL AS tombstone_id'),
+                DB::raw('NULL AS set_spec'),
+                DB::raw('NULL AS oai_identifier'),
+                'j.journal_id AS journal_id',
+                's.section_id AS section_id',
+            ])
             ->join('publications AS p', 'a.current_publication_id', '=', 'p.publication_id')
             ->join('publication_settings AS psissue', function($join) {
                 $join->on('psissue.publication_id', '=', 'p.publication_id');
                 $join->where('psissue.setting_name', '=', DB::raw('\'issueId\''));
                 $join->where('psissue.locale', '=', DB::raw('\'\''));
             })
-            ->join('issues AS i', function($join) {
-                $join->on(DB::raw('CAST(i.issue_id AS CHAR(20))'), '=', 'psissue.setting_value');
-            })
+            ->join('issues AS i', DB::raw('CAST(i.issue_id AS CHAR(20))'), '=', 'psissue.setting_value')
             ->join('sections AS s', 's.section_id', '=', 'p.section_id')
             ->join('journals AS j', 'j.journal_id', '=', 'a.context_id')
             ->where('i.published', '=', 1)
             ->where('j.enabled', '=', 1)
-            ->where('a.status', '=', PKPSubmission::STATUS_PUBLISHED);
-        if ($excludeJournals) $submissionsQuery->whereNotIn('j.journal_id', $excludeJournals);
-        if (isset($journalId)) $submissionsQuery->where('j.journal_id', '=', (int) $journalId);
-        if (isset($sectionId)) $submissionsQuery->where('p.section_id', '=', (int) $sectionId);
-        if ($from) $submissionsQuery->where('GREATEST(a.last_modified, i.last_modified)', '>=', $from);
-        if ($until) $submissionsQuery->where('GREATEST(a.last_modified, i.last_modified)', '<=', $until);
-        if ($submissionId) $submissionsQuery->where('a.submission_id', '=', (int) $submissionId);
-
-        $tombstonesQuery = DB::table('data_object_tombstones AS dot')
-            ->select(DB::raw('dot.date_deleted AS last_modified,
-                                dot.data_object_id AS submission_id,
-                                ' . (isset($journalId) ? 'tsoj.assoc_id' : 'NULL') . ' AS assoc_id,' . '
-                                ' . (isset($sectionId) ? 'tsos.assoc_id' : 'NULL') . ' AS section_id,
-                                NULL AS issue_id,
-                                dot.tombstone_id,
-                                dot.set_spec,
-                                dot.oai_identifier'));
-        if (isset($journalId)) $tombstonesQuery->join('data_object_tombstone_oai_set_objects AS tsoj', function($join) use ($journalId) {
-            $join->on('tsoj.tombstone_id', '=', 'dot.tombstone_id');
-            $join->where('tsoj.assoc_type', '=', ASSOC_TYPE_JOURNAL);
-            $join->where('tsoj.assoc_id', '=', (int) $journalId);
-        });
-        if (isset($sectionId)) $tombstonesQuery->join('data_object_tombstone_oai_set_objects AS tsos', function($join) use ($sectionId) {
-            $join->on('tsos.tombstone_id', '=', 'dot.tombstone_id');
-            $join->where('tsos.assoc_type', '=', ASSOC_TYPE_SECTION);
-            $join->where('tsos.assoc_id', '=', (int) $sectionId);
-        });
-        if (isset($set)) $tombstonesQuery->where('dot.set_spec', '=', $set)
-                ->orWhere('dot.set_spec', 'like', $set . ':%');
-        if ($from) $tombstonesQuery->where('dot.date_deleted', '>=', $from);
-        if ($until) $tombstonesQuery->where('dot.date_deleted', '<=', $until);
-        if ($submissionId) $tombstonesQuery->where('dot.data_object_id', '=', (int) $submissionId);
-
-        return $submissionsQuery
-            ->union($tombstonesQuery)
-            ->orderBy(DB::raw($orderBy));
+            ->where('a.status', '=', PKPSubmission::STATUS_PUBLISHED)
+            ->when($excludeJournals, function($query, $excludeJournals) {
+                return $query->whereNotIn('j.journal_id', $excludeJournals);
+            })
+            ->when(isset($journalId), function($query) use ($journalId) {
+                return $query->where('j.journal_id', '=', (int) $journalId);
+            })
+            ->when(isset($sectionId), function($query) use ($sectionId) {
+                return $query->where('p.section_id', '=', (int) $sectionId);
+            })
+            ->when($from, function($query, $from) {
+                return $query->where('GREATEST(a.last_modified, i.last_modified)', '>=', $from);
+            })
+            ->when($until, function($query, $until) {
+                return $query->where('GREATEST(a.last_modified, i.last_modified)', '<=', $until);
+            })
+            ->when($submissionId, function($query, $submissionId) {
+                return $query->where('a.submission_id', '=', (int) $submissionId);
+            })
+            ->union(
+                DB::table('data_object_tombstones AS dot')
+                ->select([
+                        'dot.date_deleted AS last_modified',
+                        'dot.data_object_id AS submission_id',
+                        DB::raw('NULL AS issue_id'),
+                        'dot.tombstone_id',
+                        'dot.set_spec',
+                        'dot.oai_identifier'
+                ])
+                ->when(isset($journalId), function($query, $journalId) {
+                    return $query->join('data_object_tombstone_oai_set_objects AS tsoj', function($join) use ($journalId) {
+                          $join->on('tsoj.tombstone_id', '=', 'dot.tombstone_id');
+                          $join->where('tsoj.assoc_type', '=', ASSOC_TYPE_JOURNAL);
+                          $join->where('tsoj.assoc_id', '=', (int) $journalId);
+                        })->addSelect(['tsoj.assoc_id']);
+                    }, function($query) {
+                        return $query->addSelect([DB::raw('NULL AS assoc_id')]);
+                })
+                ->when(isset($sectionId), function($query) use ($sectionId) {
+                    return $query->join('data_object_tombstone_oai_set_objects AS tsos', function($join) use ($sectionId) {
+                        $join->on('tsos.tombstone_id', '=', 'dot.tombstone_id');
+                        $join->where('tsos.assoc_type', '=', ASSOC_TYPE_SECTION);
+                        $join->where('tsos.assoc_id', '=', (int) $sectionId);
+                    })->addSelect(['tsos.assoc_id']);
+                }, function($query) {
+                    return $query->addSelect([DB::raw('NULL AS assoc_id')]);
+                })
+                ->when(isset($set), function($query) use ($set) {
+                    return $query->where('dot.set_spec', '=', $set)
+                        ->orWhere('dot.set_spec', 'like', $set . ':%');
+                })
+                ->when($from, function($query, $from) {
+                    return $query->where('dot.date_deleted', '>=', $from);
+                })
+                ->when($until, function($query, $until) {
+                    return $query->where('dot.date_deleted', '<=', $until);
+                })
+                ->when($submissionId, function($query, $submissionId) {
+                    return $query->where('dot.data_object_id', '=', (int) $submissionId);
+                })
+            )
+        ->orderBy(DB::raw($orderBy));
     }
 }
 
