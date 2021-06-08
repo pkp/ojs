@@ -223,7 +223,7 @@ class OAIDAO extends PKPOAIDAO
     /**
      * @copydoc PKPOAIDAO::_getRecordsRecordSet
      */
-    public function _getRecordsRecordSetQuery($setIds, $from, $until, $set, $submissionId = null, $orderBy = 'journal_id, submission_id', $offset = null, $limit = null)
+    public function _getRecordsRecordSetQuery($setIds, $from, $until, $set, $submissionId = null, $orderBy = 'journal_id, submission_id')
     {
         $journalId = array_shift($setIds);
         $sectionId = array_shift($setIds);
