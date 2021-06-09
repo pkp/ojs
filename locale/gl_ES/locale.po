@@ -1,2 +1,1286 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-06-08 06:06+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Mediano"
+
+msgid "article.fontSize.small.altText"
+msgstr "Pequeno"
+
+msgid "article.fontSize"
+msgstr "Tamaño de fonte"
+
+msgid "article.comments.enable"
+msgstr "Activar"
+
+msgid "article.comments.disable"
+msgstr "Desactivar"
+
+msgid "article.comments.sectionDefault"
+msgstr "Por defecto"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Acceso restrinxido"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Acceso libre"
+
+msgid "article.coverPage.altText"
+msgstr "Imaxe da cuberta"
+
+msgid "article.abstract"
+msgstr "Resumo"
+
+msgid "article.details"
+msgstr "Detalles"
+
+msgid "article.submissions"
+msgstr "Envíos"
+
+msgid "article.submission"
+msgstr "Envío"
+
+msgid "article.commentsToEditor"
+msgstr "Comentarios do autor/a"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Lingua"
+
+msgid "article.type"
+msgstr "Tipo, método ou enfoque"
+
+msgid "article.coverage"
+msgstr "Cobertura"
+
+msgid "article.subject"
+msgstr "Palabras clave"
+
+msgid "article.discipline"
+msgstr "Disciplina e subdisciplinas académicas"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Arquivos supl."
+
+msgid "article.suppFiles"
+msgstr "Arquivo(s) suplementario(s)"
+
+msgid "article.suppFile"
+msgstr "Arquivo suplementario"
+
+msgid "article.file"
+msgstr "Arquivo"
+
+msgid "article.journalSection"
+msgstr "Sección da revista"
+
+msgid "article.metadata"
+msgstr "Metadatos"
+
+msgid "article.indexingInformation"
+msgstr "Información de indexación"
+
+msgid "article.authors"
+msgstr "Autores/as"
+
+msgid "article.title"
+msgstr "Título"
+
+msgid "article.submissionId"
+msgstr "ID do envío"
+
+msgid "common.publications"
+msgstr "Artigos"
+
+msgid "common.publication"
+msgstr "Artigo"
+
+msgid "article.articles"
+msgstr "Artigos"
+
+msgid "article.article"
+msgstr "Artigo"
+
+msgid "section.policy"
+msgstr "Política de sección"
+
+msgid "section.abbreviation.example"
+msgstr "(Por exemplo, artigos=ART)"
+
+msgid "section.abbreviation"
+msgstr "Abreviatura"
+
+msgid "section.title"
+msgstr "Título de sección"
+
+msgid "section.sections"
+msgstr "Seccións da revista"
+
+msgid "section.section"
+msgstr "Sección"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Editores/as asignados"
+
+msgid "common.queue.short.completed"
+msgstr "Arquivo"
+
+msgid "common.queue.long.completed"
+msgstr "Arquivo"
+
+msgid "common.queue.short.active"
+msgstr "Activa"
+
+msgid "common.queue.long.active"
+msgstr "Envíos activos"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arquivos"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arquivos"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "En revisión"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Envíos en revisión"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "En edición"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Envíos en edición"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Non asignado"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Non asignado"
+
+msgid "navigation.skip.issue"
+msgstr "Ir ao número actual"
+
+msgid "navigation.skip.about"
+msgstr "Ir ao apartado \"Sobre a revista\""
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Información para os bibliotecarios/as"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Información para os autores/as"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Directrices sobre conflitos de intereses"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Para os bibliotecarios/as"
+
+msgid "navigation.infoForAuthors"
+msgstr "Para os autores/as"
+
+msgid "navigation.browseByAuthor"
+msgstr "Por autor/a"
+
+msgid "navigation.browseByIssue"
+msgstr "Por número"
+
+msgid "navigation.otherJournals"
+msgstr "Outras revistas"
+
+msgid "navigation.current"
+msgstr "Número actual"
+
+msgid "navigation.journalHelp"
+msgstr "Axuda da revista"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Imaxe da páxina inicial da revista"
+
+msgid "common.homePageHeader.altText"
+msgstr "Cabeceira da páxina inicial"
+
+msgid "common.payments"
+msgstr "Pagamentos"
+
+msgid "common.payment"
+msgstr "Pagamento"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Está seguro/a de que quere marcar esta tarefa como concluída? Non poderá "
+"realizar cambios máis adiante."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Cubra os campos obrigatorios."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Faga clic sobre a icona para cubrir o formulario de revisión."
+
+msgid "navigation.categories.browse"
+msgstr "Navegar"
+
+msgid "navigation.categories"
+msgstr "Categorías"
+
+msgid "context.select"
+msgstr "Cambiar a outra revista:"
+
+msgid "context.current"
+msgstr "Revista actual:"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Non se puido atopar a galerada solicitada."
+
+msgid "journal.viewAllIssues"
+msgstr "Ver todos os números"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Revista"
+
+msgid "journal.path"
+msgstr "Ruta"
+
+msgid "context.contexts"
+msgstr "Revistas"
+
+msgid "journal.currentIssue"
+msgstr "Número actual"
+
+msgid "submission.search"
+msgstr "Busca de artigos"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Corrección de probas concluída"
+
+msgid "submissions.layoutComplete"
+msgstr "Maquetaxe"
+
+msgid "submissions.copyeditComplete"
+msgstr "Orixinais corrixidos"
+
+msgid "submission.eventLog"
+msgstr "Rexistro de eventos"
+
+msgid "submissions.editorRuling"
+msgstr "Resolución do editor"
+
+msgid "submissions.editorDecision"
+msgstr "Decisión do editor/a"
+
+msgid "submissions.proof"
+msgstr "Proba"
+
+msgid "submissions.reviewRound"
+msgstr "Rolda de revisión"
+
+msgid "submissions.postAuthor"
+msgstr "Postautor/a"
+
+msgid "submissions.initialProof"
+msgstr "Proba inicial"
+
+msgid "submissions.proofread"
+msgstr "Corrixir probas"
+
+msgid "submissions.initial"
+msgstr "Inicial"
+
+msgid "submissions.published"
+msgstr "Publicada"
+
+msgid "submissions.queuedReview"
+msgstr "En revisión"
+
+msgid "submissions.step3"
+msgstr "Paso 3"
+
+msgid "submissions.step1"
+msgstr "Paso 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "Por anunciar"
+
+msgid "submission.scheduledIn"
+msgstr "Programado para publicar en {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Planificación"
+
+msgid "submission.proofreading"
+msgstr "Corrección de probas"
+
+msgid "submission.copyedit"
+msgstr "Corrección de orixinais"
+
+msgid "submission.copyediting"
+msgstr "Corrección"
+
+msgid "submission.authorVersion"
+msgstr "Versión do autor/a"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Versión do arquivo revisada polo autor/a"
+
+msgid "submission.editorVersion"
+msgstr "Versión do editor/a"
+
+msgid "submission.postReviewVersion"
+msgstr "Versión do arquivo posterior á revisión"
+
+msgid "submission.reviewersVersion"
+msgstr "Versión do arquivo anotada polo revisor/a"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Rexistro de mensaxes de correo electrónico editor/a-autor/a"
+
+msgid "submission.notifyEditor"
+msgstr "Notificar ao editor/a"
+
+msgid "submission.notifyAuthor"
+msgstr "Notificar ao autor/a"
+
+msgid "submission.editorReview"
+msgstr "Revisión do editor/a"
+
+msgid "submission.round"
+msgstr "Rolda&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Decisión do editor/a"
+
+msgid "submission.sent"
+msgstr "Enviado"
+
+msgid "submission.changeSection"
+msgstr "Cambiar a"
+
+msgid "submission.submissionEditing"
+msgstr "Edición do envío"
+
+msgid "category.category"
+msgstr "Categorías"
+
+msgid "article.return"
+msgstr "Volver aos detalles do artigo"
+
+msgid "article.fontSize.large.altText"
+msgstr "Grande"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "A asignación do editor ao envío foi anulada"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Asignouse un editor/a ao envío"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Actualizouse o arquivo de revisión do autor/a"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Revisión do autor/a enviada"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artigo publicado"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Envío asignado a un número"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Envío mandado á cola de planificación de números"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artigo enviado"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Evento de envío"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Nota:</strong> As subscricions institucionais adquiridas en liña "
+"requiren a aprobación do dominio e dos intervalos IP antes da súa activación."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"As subscricións institucionais non requiren o inicio de sesión. O dominio do "
+"usuario/a e/ou o enderezo IP utilízanse para proporcionar acceso ao contido "
+"restrinxido aos subscritores."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"As subscricións individuais requiren o inicio de sesión para acceder ao "
+"contido restrinxido."
+
+msgid "subscriptions.status.other"
+msgstr "Outro, ver notas"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Non ten unha subscrición activa."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Esperando pagamento en liña"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Esperando pagamento manual"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Necesita aprobación"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Necesita información"
+
+msgid "subscriptions.status.active"
+msgstr "Activo"
+
+msgid "subscriptions.status"
+msgstr "Estado"
+
+msgid "subscriptions.inactive"
+msgstr "Inactivo"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "En papel e en liña"
+
+msgid "subscriptionTypes.format.print"
+msgstr "En papel"
+
+msgid "subscriptionTypes.format.online"
+msgstr "En liña"
+
+msgid "subscriptionTypes.format"
+msgstr "Formato"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Sen caducidade"
+
+msgid "subscriptionTypes.months"
+msgstr "meses"
+
+msgid "subscriptionTypes.month"
+msgstr "mes"
+
+msgid "subscriptionTypes.years"
+msgstr "anos"
+
+msgid "subscriptionTypes.year"
+msgstr "ano"
+
+msgid "subscriptionTypes.currency"
+msgstr "Moeda"
+
+msgid "issue.return"
+msgstr "Volver aos detalles do número"
+
+msgid "issue.viewIssue"
+msgstr "Ver o número"
+
+msgid "issue.nonpdf.title"
+msgstr "Descargar o número"
+
+msgid "issue.fullIssue"
+msgstr "Número completo"
+
+msgid "issue.coverPage.altText"
+msgstr "Cuberta"
+
+msgid "issue.abstract"
+msgstr "Resumo"
+
+msgid "issue.toc"
+msgstr "Táboa de contidos"
+
+msgid "issue.noIssues"
+msgstr "Non hai ningún número"
+
+msgid "issue.year"
+msgstr "Ano"
+
+msgid "issue.no"
+msgstr "Núm."
+
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "issue.number"
+msgstr "Número"
+
+msgid "issue.volume"
+msgstr "Volume"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Ver {$identification}"
+
+msgid "issue.title"
+msgstr "Título"
+
+msgid "issue.issues"
+msgstr "Números"
+
+msgid "issue.issue"
+msgstr "Número"
+
+msgid "user.role.journalAssistants"
+msgstr "Asistentes de revista"
+
+msgid "user.role.journalAssistant"
+msgstr "Asistente de revista"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Administradores/as de subscricións"
+
+msgid "user.role.subEditors"
+msgstr "Editores/as de sección"
+
+msgid "user.role.managers"
+msgstr "Administradores/oras de revistes"
+
+msgid "user.role.subscriptionManager"
+msgstr "Administrador/a de subscricións"
+
+msgid "user.role.subEditor"
+msgstr "Editor/a de sección"
+
+msgid "user.role.manager"
+msgstr "Administrador/a da revista"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Rexistrarse como revisor/a: O rexistro de revisores/as neste momento está "
+"desactivado."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Rexistrarse como revisor/a"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr ""
+"Envíe un artigo: o rexistro de autores/as neste momento está desactivado."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Envíe unha proposta"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"A súa conta aínda non ten ningún rol nesta revista. Escolla unha das accións "
+"seguintes:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"A súa conta aínda non está asociada a ningunha revista. Escolla unha revista:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Xestionar as miñas subscricións"
+
+msgid "user.myJournals"
+msgstr "As miñas revistas"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Se solicitou ser revisor/a nalgunha revista, introduza os temas que lle "
+"interesan."
+
+msgid "user.register.otherContextRoles"
+msgstr "Solicitar os roles seguintes."
+
+msgid "user.register.contextsPrompt"
+msgstr "En que revistas deste sitio se quere rexistrar?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Si, gustariame que contactasen comigo para revisar artigos desta revista."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Si, solicitar o rol {$userGroup}."
+
+msgid "user.reviewerPrompt"
+msgstr "Estaría disposto a revisar envíos para esta revista?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Inscribirse noutras revistas"
+
+msgid "user.showAllJournals"
+msgstr "Mostrar as miñas revistas"
+
+msgid "user.profile.profileImage"
+msgstr "Imaxe do perfil"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Incluír usuarios/as que non teñen ningún rol nesta revista."
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Os complementos xenéricos utilízanse para ampliar as funcionalidades de Open "
+"Journal Systems non incluídas  noutras categorías de complementos."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Os complementos de autorización permiten que Open Journal Systems delegue as "
+"tarefas de autenticación de usuarios/as a outros sistemas, como os "
+"servidores LDAP."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Os complementos de galerada de artigo ofrecen soporte para mostrar "
+"diferentes tipos de documento como galeradas de artigo."
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Complementos de galerada dos artigos"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Tipos de subscricións"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Subscricións institucionais"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Subscricións individuais"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Administración das subscricións"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOTA!</h4> <p>O sistema non puido modificar automaticamente o arquivo de "
+"configuración. Para aplicar os cambios na configuración cómpre abrir o "
+"arquivo <tt>config.inc.php</tt> nun editor de texto axeitado e substituír o "
+"seu contido polo que se encontra no campo de texto que se mostra a "
+"continuación.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Establecer como fonte de autenticación predeterminada outra diferente de "
+"OJS producirá o efecto seguinte:</p> <ul> <li>Se un usuario/a intenta "
+"rexistrar unha conta nova neste sitio web cun nome de usuario/a xa existente "
+"na fonte de autenticación (pero non na base de datos de OJS), o intento de "
+"rexistro só se permitirá se o contrasinal proporcionado é válido para esta "
+"conta de usuario/a.</li> </ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "documentos similares"
+
+msgid "search.results.orderDir.desc"
+msgstr "Descendente"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascendente"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevancia"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularidade (último mes)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularidade (desde o comezo)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Título da revista"
+
+msgid "search.results.orderBy.issue"
+msgstr "Número"
+
+msgid "search.results.orderBy.date"
+msgstr "Data de publicación"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor/a"
+
+msgid "search.results.orderBy.article"
+msgstr "Título do artigo"
+
+msgid "search.results.orderBy"
+msgstr "Ordenar resultados por"
+
+msgid "comments.authenticated"
+msgstr "por <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "Comentarios sobre este artigo"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Acceso mediante subscrición ou pagamento"
+
+msgid "reader.subscriptionAccess"
+msgstr "Acceso mediante subscrición"
+
+msgid "reader.openAccess"
+msgstr "Acceso libre"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Cómpre estar subscrito para ter acceso a este artigo. Acceda á revista para "
+"verificar a súa subscrición."
+
+msgid "reader.subscribersOnly"
+msgstr "Só para subscritores/as"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Completouse a asignación da maquetaxe"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Actualizáronse as galeradas de maquetaxe"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Iniciouse a asignación da maquetaxe"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Anulouse a asignación do responsable da maquetaxe do envío"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Responsable da maquetaxe asignado ao envío"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Completouse a asignación da corrección de probas"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Actualizouse o arquivo de revisións do corrector/a de probas"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Iniciouse a asignación da corrección de probas"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Anulouse a asignación do corrector/a de probas do envío"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Asignouse un corrector/a de probas ao envío"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Actualizouse o arquivo de corrección de orixinais"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Completouse a corrección final de orixinais"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Completouse a corrección inicial de orixinais"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Actualizouse o arquivo de revisións do corrector/a de orixinais"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Iniciouse a asignación da corrección de orixinais"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Anulouse a asignación do corrector/a de orixinais do envío"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Asignouse un corrector/a de orixinais ao envío"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Envío recuperado do arquivo"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Mandado o envío para o arquivo"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Actualizado o arquivo do editor/a"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Enviada a decisión do editor/a"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Pasos: Cola de envío &gt; Revisión de envíos &gt; Edición de envíos &gt; "
+"Táboa de contidos.<br /><br /> Seleccione un modelo para administrar estes "
+"aspectos do proceso editorial. (Para designar un editor/a de xestión e os "
+"editores/as de sección, acceda á sección \"Editores/as\" en \"Administración "
+"da revista».)"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Propostas de avisos de dereitos de autor de Creative Commons</h3> <h4>1. "
+"Política proposta para revistas que ofrecen acceso libre</h4> Os autores/as "
+"que publican nesta revista aceptan os termos seguintes: <ol type=\"a\"> <li>"
+"Os autores/as conservan os seus dereitos de autor e conceden á revista o "
+"dereito de primeira publicación da súa obra, rexistrada baixo unha <a target="
+"\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Licenza de "
+"recoñecemento de Creative Commons</a>, que permite compartir a obra sempre "
+"que se indique a autoría e a primeira publicación nesta revista.</li> <li>Os "
+"autores/as poden establecer, independentemente, outras disposicións "
+"contractuais que permitan a publicación da versión publicada nesta revista "
+"noutros medios (p. ex.: nun repositorio institucional ou nun libro) co "
+"recoñecemento da publicación inicial nesta revista.</li> <li>Permítese e "
+"recoméndase aos autores/as difundir a súa obra a través de Internet (p. ex.: "
+"en repositorios institucionais ou na súa páxina web) antes e durante o "
+"proceso de envío, porque pode producir bos resultados e aumentar as "
+"citacións da obra publicada. (Véxase <a target=\"_new\" href=\""
+"http://opcit.eprints.org/oacitation-biblio.html\">O efecto do acceso "
+"libre</a>).</li> </ol> <h4>2. Política proposta para revistas que ofrecen "
+"acceso libre diferido</h4> Os autores/as que publican nesta revista aceptan "
+"os termos seguintes: <ol type=\"a\"> <li>Os autores/as conservan os dereitos "
+"de autor e conceden á revista o dereito de primeira publicación da obra ["
+"ESPECIFICAR PERÍODO DE TEMPO], que queda simultaneamente rexistrada baixo "
+"unha   <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/"
+"\">Licenza de recoñecemento de Creative Commons</a> que permite compartir a "
+"obra sempre que se indique a autoría e a primeira publicación nesta "
+"revista.</li> <li>Os autores/as poden establecer, independentemente, outras "
+"disposicións contractuais que permitan a publicación da versión publicada "
+"nesta revista noutros medios (p. ex.: nun repositorio institucional ou nun "
+"libro ) sempre que se indique a publicación inicial nesta revista.</li> <li>"
+"Permítese e recoméndase aos autores/as difundir a súa obra a través de "
+"Internet (p. ex.: en repositorios institucionais ou na súa páxina web) antes "
+"e durante o proceso de envío, porque pode producir bos resultados e aumentar "
+"as citacións da obra publicada. (Véxase <a target=\"_new\" href=\""
+"http://opcit.eprints.org/oacitation-biblio.html\">O efecto do acceso "
+"libre</a>).</li> </ol>"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Arquivos cargados"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Comentarios"
+
+msgid "reviewer.article.submitReview"
+msgstr "Enviar a revisión ao editor/a"
+
+msgid "reviewer.article.recommendation"
+msgstr "Recomendación"
+
+msgid "reviewer.article.automatic"
+msgstr "(Automático)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Enviar un recordatorio"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor/a por introducir"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Escriba ou pegue os comentarios de revisión aquí"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Editor/a do envío"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "O envío estará dispoñible cando o revisor/a acepte o encargo"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Non pode facer a revisión"
+
+msgid "reviewer.article.canDoReview"
+msgstr "fará a revisión"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Notificar ao editor/a"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Arquivo por revisar"
+
+msgid "reviewer.averageQuality"
+msgstr "Puntuación"
+
+msgid "reviewer.completedReviews"
+msgstr "Feito"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artigos pendentes de revisión"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL de contido aloxado remotamente"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Esta galerada estará dispoñible nun sitio web distinto."
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"O formato da imaxe non é válido. Os formatos admitidos son .gif, .jpg, e "
+".png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Cargar un arquivo adicional"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Substituír o arquivo"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Cargar o formato para as galeradas"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Asignacións de maquetaxe"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Non hai ningunha tarefa editorial activa."
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Tarefas editoriais completadas"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Tarefas editoriais activas"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Crear un revisor/a novo"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Dar de alta un usuario/a xa existente como revisor/a"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Resultado"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Encargo rexeitado"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Encargos que o revisor/a rexeitou e cancelacións"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Decisión do editor/a, rolda {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Avaliación de expertos/as, rolda {$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Ver os encargos rexeitados, os cancelados e as roldas anteriores"
+
+msgid "sectionEditor.regrets"
+msgstr "Encargos rexeitados"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} Encargos rexeitados, cancelacións e roldas anteriores do "
+"revisor/a"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Encargos rexeitados"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Se volve enviar esta notificación ao corrector/a de probas, reiniciarase a "
+"tarefa asignada. Está seguro/a de que quere facelo?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Se volve enviar a notificación ao/á responsable da maquetaxe, reiniciarase a "
+"tarefa asignada. Está seguro/a de que quere facelo?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Se volve enviar a notificación  ao autor/a, reiniciarase a tarefa asignada. "
+"Está seguro/a de que quere facelo?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Se volve enviar a notificación ao corrector de orixinais, reiniciarase a "
+"tarefa asignada. Está seguro/a de que quere facelo?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Non se asignou ningún envío"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Tarefas editoriais completadas"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Tarefas editoriais activas"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol> <li>Os elementos salientados indican que cómpre unha acción por parte "
+"do editor/a, tal como se mostra a continuación: <ul> <li class=\""
+"highlightCopyediting\">Cómpre unha acción na fase de corrección de "
+"orixinais</li> <li class=\"highlightLayoutEditing\">Cómpre unha acción na "
+"fase de maquetaxe</li> <li class=\"higlightProofreading\">Cómpre unha acción "
+"na fase de corrección de probas</li> </ul> </li> </ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol> <li>Os elementos salientados indican que cómpre unha acción por parte "
+"do editor/a e son etiquetadas da maneira seguinte: <ul> <li class=\""
+"highlightReviewerNotNotified\">Un revisor/a foi asignado pero non recibiu a "
+"notificación por correo electrónico</li> <li class=\"highlightNoDecision\">"
+"Todos os revisores/as enviaron os seus comentarios, pero non se rexistrou "
+"ningunha decisión</li> <li class=\"highlightRevisedCopyUploaded\">O autor/a "
+"cargou unha versión revisada do manuscrito</li> <li class=\""
+"highlightReviewerConfirmationOverdue\">O revisor/a demorouse en aceptar a "
+"petición de avaliación</li> <li class=\"highlightReviewerCompletionOverdue\">"
+"O revisor/a demorouse en entregar a revisión</li> </ul> </li> <li>A opción \""
+"Pendente\" queda marcada cando un revisor/a acepta a petición de revisión; "
+"aparece o número de semanas ata a data de vencemento da revisión ou (-) de "
+"semanas de atraso.</li> </ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Non ten dereitos administrativos sobre este usuario/a. Isto pode ser debido "
+"a algún destes motivos: <ul> <li>O usuario/a é un administrador/a do sitio "
+"web</li> <li>O usuario/a está activo en revistas que vostede non "
+"xestiona</li> </ul> Esta tarefa debe ser efectuada por un administrador/a do "
+"sitio web.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Desactivar este usuario/a? Isto impediralle iniciar sesión no sistema. Pode "
+"proporcionarlle ao usuario/a unha razón para desactivar a súa conta."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Para axudar aos lectores/as a atopar as versións en liña das obras "
+"citadas por un autor/a, están dispoñibles as opcións seguintes:</p> <ol> "
+"<li><strong> Engadir unha ferramenta de lectura</strong><p>O administrador/a "
+"da revista pode engadir a opción \"Buscar referencias\" ás ferramentas de "
+"lectura que acompañan os artigos publicados, o que permitirá aos lectores/as "
+"inserir o título dunha referencia e buscar a obra citada nas bases de datos "
+"académicas preseleccionadas.</p></li> <li><strong>Enlaces incorporados nas "
+"referencias</strong><p>O responsable da maquetaxe pode engadir enlaces ás "
+"referencias publicadas en liña, mediante as instrucións seguintes (que se "
+"poden editar).</p></li> </ol>"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Para cargar un manuscrito na revista, siga os seguintes pasos:</p> <ol> "
+"<li>Nesta páxina, faga clic en Navegar (ou Seleccionar arquivo) para abrir a "
+"ventá desde onde poderá localizar o arquivo no disco duro do seu "
+"ordenador.</li> <li>Busque o arquivo que quere enviar e seleccióneo.</li> "
+"<li>Faga clic en Abrir na ventá de selección de arquivo para introducir o "
+"nome do arquivo nesta páxina.</li> <li>Faga clic en Cargar nesta páxina para "
+"enviar o arquivo desde o disco duro ao sitio web da revista. O sistema "
+"cambiará o nome do arquivo para adaptalo ás convencións da revista.</li> <li>"
+"Unha vez cargado o envío, faga clic en Gardar e continuar na parte inferior "
+"desta páxina.</li> </ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Non hai ningunha asignación de corrección de probas"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Arquivo do corrector de orixinais"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Arquivo do corrector/a de orixinais"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Arquivo por corrixir"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Unha vez que rexistre unha decisión, non poderá facer cambios nesta "
+"revisión. Está seguro/a de que quere continuar?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Non se seleccionou ningunha recomendación. Debe seleccionar a recomendación "
+"que vai enviar."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Configure ou axuste a recomendación do revisor/a."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Seleccione unha recomendación e envíe a revisión para completar o proceso. "
+"Debe introducir unha revisión ou cargar un arquivo antes de seleccionar unha "
+"recomendación."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Ademais, pode cargar arquivos de consulta para o editor/a e/ou o autor/a."
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Faga clic na icona para inserir (ou pegar) a revisión deste envío."
+
+msgid "reviewer.competingInterests"
+msgstr "Conflito de intereses"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Declare se ten algún conflito de intereses respecto a esta investigación ("
+"ver <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">&nbsp;Política de CI</a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Faga clic nos nomes dos arquivos que quere descargar e revise os asociados a "
+"este envío. Pode facelo en pantalla ou ben imprimilos."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Se aceptou facer a revisión, consulte as directrices para o revisor/a."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "se acepta facer a revisión."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Notificar ao editor/a do envío"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"As directrices de revisión proporcionan aos revisores/as os criterios para "
+"xulgar a idoneidade dun envío para ser publicado na revista, e poden incluír "
+"calquera instrución especial necesaria para a preparación dunha revisión "
+"eficaz e útil. Ao realizar a revisión, os revisores/as atoparán dous cadros "
+"de texto en branco: o primeiro \"para o autor/a e o editor/a\" e o segundo \""
+"para o editor/a\". De maneira alternativa, o administrador/a da revista pode "
+"crear unha avaliación de expertos/as en \"Formularios de revisión\". En "
+"todos os casos, os editores/as terán a opción de incluír as revisións na "
+"correspondencia co autor/a."
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Directrices para o revisor/a"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Pasos para a revisión"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Planificación da revisión"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Envío por revisar"
+
+msgid "reviewer.article.schedule"
+msgstr "Planificación"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Ver os comentarios"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Rexeitar o envío"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Volver enviar a outra publicación"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Modificar para volver avaliar"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Publicable con modificacións"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Aceptar o envío"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Vencemento da revisión"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Revisión enviada"
+
+msgid "reviewer.article.schedule.response"
+msgstr "A súa resposta"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Petición do editor/a"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Se quere introducir comentarios no arquivo, para o editor/a, gárdeo no seu "
+"disco duro e utilice Explorar/Cargar.)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Versión cargada polo revisor/a"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Comentarios da corrección de orixinais"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Correspondencia editor/a-autor/a"
+
+msgid "submission.logType.proofread"
+msgstr "Probas corrixidas"
+
+msgid "submission.logType.layout"
+msgstr "Maquetaxe"
+
+msgid "submission.logType.copyedit"
+msgstr "Corrección de orixinais"
+
+msgid "submission.logType.review"
+msgstr "Revisión"
+
+msgid "submission.logType.editor"
+msgstr "Editor/a"
+
+msgid "submission.logType.author"
+msgstr "Autor/a"
+
+msgid "submission.logType.article"
+msgstr "Artigo"
+
+msgid "submission.proofread.instructions"
+msgstr "Instrucións para a corrección de probas"
+
+msgid "submission.proofread.corrections"
+msgstr "Correccions da corrección de probas"
+
+msgid "submission.proofreadingComments"
+msgstr "Comentarios de corrección de probas"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Enlaces de referencia"
+
+msgid "submission.layout.instructions"
+msgstr "Instrucións de maquetaxe"
+
+msgid "submission.layout.layoutComments"
+msgstr "Comentarios de maquetaxe"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Substituír maquetador/a"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Asignar maquetador/a"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "O identificador público de galerada xa existe."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Ningún (cargue a versión final da corrección como versión maquetada antes de "
+"enviar a solicitude)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instrucións para a corrección de orixinais"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Comentarios da corrección de orixinais"
+
+msgid "submission.copyedit.useFile"
+msgstr "Utilizar o arquivo"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Asignar un corrector/a de orixinais"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Versión do corrector/a"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Corrección de orixinais final"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Corrección de orixinais do autor/a"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Corrección de orixinais do editor/a"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Corrección de orixinais inicial"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Non se pode enviar unha mensaxe de solicitude por correo electrónico mentres "
+"non se cargue un arquivo para a corrección de orixinais."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Non se pode enviar unha mensaxe de solicitude por correo electrónico mentres "
+"non se seleccione un arquivo para a corrección de orixinais en Decisión do "
+"editor/a, na páxina de Revisión."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Non se pode enviar unha mensaxe de solicitude por correo electrónico mentres "
+"non haxa unha versión de revisión."
