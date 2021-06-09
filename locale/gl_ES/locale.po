@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-09 02:55+0000\n"
+"PO-Revision-Date: 2021-06-09 08:36+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -1298,7 +1298,7 @@ msgid "user.subscriptions.status.needsApprovalDescription"
 msgstr ""
 
 msgid "submission.comments.forEditor"
-msgstr ""
+msgstr "Para o editor/a"
 
 msgid "user.register.registrationDisabled"
 msgstr ""
@@ -1307,7 +1307,7 @@ msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
 
 msgid "submission.comments.canShareWithAuthor"
-msgstr ""
+msgstr "Para o autor/a e o editor/a"
 
 msgid "user.subscriptions.statusInformation"
 msgstr ""
@@ -1320,6 +1320,8 @@ msgstr ""
 
 msgid "submission.comments.blindCcReviewers"
 msgstr ""
+"Despois do envío, presente unha copia CCO editable para mandárllela aos "
+"revisores/as."
 
 msgid "user.subscriptions.mySubscriptions"
 msgstr ""
@@ -1332,6 +1334,8 @@ msgstr ""
 
 msgid "submission.comments.viewableDescription"
 msgstr ""
+"Estes comentarios pódense compartir co autor/a.<br /> (Logo de gardalos, "
+"pódense engadir máis comentarios.)"
 
 msgid "user.register.form.missingContextConsent"
 msgstr ""
@@ -1358,7 +1362,7 @@ msgid "user.register.privacyStatement"
 msgstr ""
 
 msgid "submission.comments.cannotShareWithAuthor"
-msgstr ""
+msgstr "Para o editor/a"
 
 msgid "user.register.form.missingSiteConsent"
 msgstr ""
@@ -1373,4 +1377,7 @@ msgid "user.register.selectContext"
 msgstr ""
 
 msgid "submission.comments.forAuthorEditor"
-msgstr ""
+msgstr "Para o autor/a e o editor/a"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Esta revista non publica os seus contidos en liña."
