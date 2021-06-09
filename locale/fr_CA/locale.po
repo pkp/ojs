@@ -14,7 +14,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-# localization file for fr_CA. Last revision 2019-10-22T10:57:22 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "La revue ne publie pas ses contenus en ligne."
+
 msgid "context.current"
 msgstr "Revue sélectionnée :"
 
