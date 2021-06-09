@@ -46,10 +46,10 @@ define('DATACITE_DESCTYPE_OTHER', 'Other');
 
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
+use APP\article\ArticleGalley;
+use APP\issue\Issue;
 use APP\submission\Submission;
 use APP\workflow\EditorDecisionActionsManager;
-use APP\issue\Issue;
-use APP\article\ArticleGalley;
 
 class DataciteXmlFilter extends NativeExportFilter
 {
@@ -181,15 +181,20 @@ class DataciteXmlFilter extends NativeExportFilter
         // Publication Year (mandatory)
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publicationYear', date('Y', strtotime($publicationDate))));
         // Subjects
-        $subject = null;
+        $subjects = [];
         if (!empty($galleyFile) && !empty($genre) && $genre->getSupplementary()) {
-            $subject = $this->getPrimaryTranslation($galleyFile->getSubject(null), $objectLocalePrecedence);
+            $subjects = (array) $this->getPrimaryTranslation($galleyFile->getData('subject'), $objectLocalePrecedence);
         } elseif (!empty($article) && !empty($publication)) {
-            $subject = $this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence);
+            $subjects = array_merge(
+                $this->getPrimaryTranslation($publication->getData('keywords'), $objectLocalePrecedence),
+                $this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence)
+            );
         }
-        if (!empty($subject)) {
+        if (!empty($subjects)) {
             $subjectsNode = $doc->createElementNS($deployment->getNamespace(), 'subjects');
-            $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
+            foreach ($subjects as $subject) {
+                $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
+            }
             $rootNode->appendChild($subjectsNode);
         }
         // Dates
@@ -278,7 +283,7 @@ class DataciteXmlFilter extends NativeExportFilter
         switch (true) {
             case (isset($galleyFile) && ($genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
                 // Check whether we have a supp file creator set...
-                $creator = $this->getPrimaryTranslation($galleyFile->getCreator(null), $objectLocalePrecedence);
+                $creator = $this->getPrimaryTranslation($galleyFile->getData('creator'), $objectLocalePrecedence);
                 if (!empty($creator)) {
                     $creators[] = $creator;
                     break;
@@ -380,7 +385,7 @@ class DataciteXmlFilter extends NativeExportFilter
                 $genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
                 if ($genre->getSupplementary()) {
                     // Created date (for supp files only): supp file date created.
-                    $createdDate = $galleyFile->getDateCreated();
+                    $createdDate = $galleyFile->getData('dateCreated');
                     if (!empty($createdDate)) {
                         $dates[DATACITE_DATE_CREATED] = $createdDate;
                     }
@@ -681,7 +686,7 @@ class DataciteXmlFilter extends NativeExportFilter
             case isset($galley):
                 $genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
                 if ($genre->getSupplementary()) {
-                    $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getDescription(null), $objectLocalePrecedence);
+                    $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getData('description'), $objectLocalePrecedence);
                     if (!empty($suppFileDesc)) {
                         $descriptions[DATACITE_DESCTYPE_OTHER] = $suppFileDesc;
                     }
