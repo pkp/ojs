@@ -347,6 +347,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			return;
 		}
 
+		PluginRegistry::loadCategory('pubIds', true, $journal->getId());
+
 		if ($xmlFile && $this->isRelativePath($xmlFile)) {
 			$xmlFile = PWD . '/' . $xmlFile;
 		}

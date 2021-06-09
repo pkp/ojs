@@ -55,7 +55,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 		$this->addLocaleData();
-		
+
 		HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
 		foreach ($this->_getDAOs() as $dao) {
 			if ($dao instanceof SchemaDAO) {
@@ -194,7 +194,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
-			
+
 			if ($onlyValidateExport) {
 				if (isset($exportXml)) {
 					$this->_sendNotification(
@@ -440,7 +440,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
 			$additionalFields[] = $fieldName;
 		}
-		
+
 		return false;
 	}
 
@@ -560,6 +560,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			$this->usage($scriptName);
 			return;
 		}
+
+		PluginRegistry::loadCategory('pubIds', true, $context->getId());
 
 		if ($outputFile) {
 			if ($this->isRelativePath($outputFile)) {
