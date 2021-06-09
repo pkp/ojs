@@ -11,6 +11,9 @@ msgstr ""
 "PO-Revision-Date: 2019-09-27T09:54:39-07:00\n"
 "Language: \n"
 
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "This journal does not publish its content online."
+
 msgid "context.current"
 msgstr "Current Journal:"
 
