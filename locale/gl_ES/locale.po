@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-09 08:36+0000\n"
+"PO-Revision-Date: 2021-06-09 13:28+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -981,7 +981,7 @@ msgstr ""
 "tarefa asignada. Está seguro/a de que quere facelo?"
 
 msgid "sectionEditor.noneAssigned"
-msgstr "Non se asignou ningún envío"
+msgstr "Non se asignou ningún envío."
 
 msgid "sectionEditor.completedEditorialAssignments"
 msgstr "Tarefas editoriais completadas"
@@ -1286,37 +1286,43 @@ msgstr ""
 "non haxa unha versión de revisión."
 
 msgid "user.register.noJournals"
-msgstr ""
+msgstr "Este sitio web non contén ningunha revista na que se poida rexistrar."
 
 msgid "user.register.form.passwordLengthTooShort"
-msgstr ""
+msgstr "O contrasinal que introduciu non é longo abondo."
 
 msgid "user.subscriptions.statusDescription"
-msgstr ""
+msgstr "Descrición"
 
 msgid "user.subscriptions.status.needsApprovalDescription"
-msgstr ""
+msgstr "A subscrición ten que ser revisada antes de poder activala"
 
 msgid "submission.comments.forEditor"
 msgstr "Para o editor/a"
 
 msgid "user.register.registrationDisabled"
-msgstr ""
+msgstr "Neste momento esta revista non acepta rexistros de usuarios/as."
 
 msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
+"Si, acepto que os meus datos sexan recollidos e almacenados consonte a <a "
+"href=\"{$privacyUrl}\" target=\"_blank\">declaración de privacidade</a> "
+"desta revista."
 
 msgid "submission.comments.canShareWithAuthor"
 msgstr "Para o autor/a e o editor/a"
 
 msgid "user.subscriptions.statusInformation"
 msgstr ""
+"As subscricións activas e caducadas móstranse abaixo onda a data de "
+"vencemento. Ademais, a seguinte información sobre o estado pode ser incluída "
+"en cada subscrición."
 
 msgid "user.subscriptions.subscriptionStatus"
-msgstr ""
+msgstr "Estado da subscrición"
 
 msgid "user.register.reviewerDescription"
-msgstr ""
+msgstr "Estou disposto a realizar a avaliación por pares dos envíos ao sitio."
 
 msgid "submission.comments.blindCcReviewers"
 msgstr ""
@@ -1324,13 +1330,15 @@ msgstr ""
 "revisores/as."
 
 msgid "user.subscriptions.mySubscriptions"
-msgstr ""
+msgstr "As miñas subscricións"
 
 msgid "user.register.authorDescription"
-msgstr ""
+msgstr "Pode enviar artigos á revista."
 
 msgid "user.register.form.emailConsentAllContexts"
 msgstr ""
+"Si, gustariame que me informasen das novas publicacións e noticias de todas "
+"as revistas en que me rexistrei."
 
 msgid "submission.comments.viewableDescription"
 msgstr ""
@@ -1339,45 +1347,197 @@ msgstr ""
 
 msgid "user.register.form.missingContextConsent"
 msgstr ""
+"Debe aceptar a declaración de privacidade de todas as revistas en que se "
+"rexistre."
 
 msgid "user.register.openAccessNotificationDescription"
 msgstr ""
+"Recibirá unha notificación por correo electrónico cando un número da revista "
+"ofreza acceso libre."
 
 msgid "user.register.reviewerInterests"
 msgstr ""
+"Indique os seus intereses de revisión (áreas de coñecemento e métodos de "
+"investigación):"
 
 msgid "user.register.reviewerDescriptionNoInterests"
-msgstr ""
+msgstr "Quero realizar avaliacións por pares dos artigos da revista."
 
 msgid "user.register.readerDescription"
 msgstr ""
+"Recibirá unha notificación por correo electrónico cando se publique un novo "
+"número da revista."
 
 msgid "submission.comments.saveAndEmailEditor"
-msgstr ""
+msgstr "Gardar e enviar por correo electrónico ao editor/a"
 
 msgid "user.subscriptions.status"
-msgstr ""
+msgstr "Estado"
 
 msgid "user.register.privacyStatement"
-msgstr ""
+msgstr "Declaración de privacidade"
 
 msgid "submission.comments.cannotShareWithAuthor"
 msgstr "Para o editor/a"
 
 msgid "user.register.form.missingSiteConsent"
-msgstr ""
+msgstr "Debe aceptar a declaración de privacidade deste sitio."
 
 msgid "user.subscriptions.status.needsInformationDescription"
-msgstr ""
+msgstr "É necesaria información adicional antes de activar a subscrición"
 
 msgid "submission.comments.saveAndEmailAuthor"
-msgstr ""
+msgstr "Gardar e enviar por correo electrónico ao autor/a"
 
 msgid "user.register.selectContext"
-msgstr ""
+msgstr "Seleccione unha revista para rexistrarse:"
 
 msgid "submission.comments.forAuthorEditor"
 msgstr "Para o autor/a e o editor/a"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Esta revista non publica os seus contidos en liña."
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Consellos de busca: <ul>\n"
+"<li>Os termos de busca non distinguen entre maiúsculas e minúsculas</li>\n"
+"<li>As palabras comúns ignóranse</li>\n"
+"<li>Por defecte só se devolven os artigos que conteñen <em>todos</em> os "
+"termos da consulta (p. ex., <em>I</em> está implícito)</li>\n"
+"<li>Combine múltiples palabras con with <em>OU</em> para atopar artigos que "
+"conteñan un ou outro termo; p. ex., <em>educación OU investigación</em></li>"
+"\n"
+"<li>Utilice parénteses para crear consultas máis complexas; p. ex., <em>"
+"arquivo ((revista OU conferencia) NON teses)</em></li>\n"
+"<li>Pode buscar unha frase exacta poñéndoa entre comiñas; p. ex., <em>\""
+"publicacións de acceso libre\"</em></li>\n"
+"<li>Pode excluír unha palabra poñendo o prefixo <strong>-</strong> ou "
+"<em>NON</em>; p. ex. <em>en liña -políticas</em> ou <em>en liña NON "
+"políticas</em></li>\n"
+"<li>Utilice <strong>*</strong> nun termo como comodín para atopar todas as "
+"secuencias de caracteres que coincidan; p. ex., <em>soci* moralidade</em> "
+"faría aparecer documentos que contivesen \"sociolóxico\" ou \"social\"</li>\n"
+"</ul>"
+
+msgid "search.authorDetails"
+msgstr "Detalles do autor/a"
+
+msgid "search.authorIndex"
+msgstr "Navegar polo índice de autores/as"
+
+msgid "search.allJournals"
+msgstr "Todas as revistas"
+
+msgid "search.withinJournal"
+msgstr "Dentro de"
+
+msgid "search.searchFor"
+msgstr "Buscar artigos por"
+
+msgid "search.browseAuthorIndex"
+msgstr "Explorar o índice de autores/as"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Engadir"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Eliminar"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Introduza un intervalo IP válido."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Se se introducen intervalos IP aquí, o dominio é opcional.<br />Os valores "
+"válidos inclúen un enderezo IP (p. ex., 142.58.103.1), un intervalo IP (p. "
+"ex., 142.58.103.1 - 142.58.103.4), un intervalo IP con comodín '*' (p. ex., "
+"142.58.*.*), e un intervalo IP con CIDR (p. ex., 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Intervalos IP"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Introduza un dominio válido."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"O tipo de subscrición seleccionado require un dominio e/ou un intervalo IP "
+"para a autenticación da subscrición."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Se introduce un dominio aquí, os intervalos IP serán opcionais.<br />Os "
+"valores válidos son nomes de dominio (p. ex., lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domain"
+msgstr "Dominio"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Enderezo postal"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Ten que introducir o nome da institución."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Nome da institución"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr ""
+"Información sobre a afiliación, no caso de ser necesaria para o tipo de "
+"subscrición seleccionado."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Esta conta de usuario/a xa ten unha subscrición individual."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Seleccione un tipo de subscrición válido."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr ""
+"O tipo de subscrición seleccionado require información sobre a afiliación."
+
+msgid "user.subscriptions.form.membership"
+msgstr "Afiliación"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Tipo de subscrición"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Ver os tipos de subscripcións dispoñibles"
+
+msgid "user.subscriptions.expired"
+msgstr "Vencida:  {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Vencemento: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Comprar unha subscrición institucional"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Comprar unha subscrición individual"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Comprar unha nova subscrición"
+
+msgid "user.subscriptions.purchase"
+msgstr "Comprar"
+
+msgid "user.subscriptions.renew"
+msgstr "Renovar"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Subscricions institucionais"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Subscrición individual"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Iniciouse un pagamento en liña, pero cancelouse ou non se completou"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Iniciouse o pagamento manual, pero aínda non se recibiu"
