@@ -23,8 +23,8 @@ use PKP\cache\CacheManager;
 use PKP\plugins\HookRegistry;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
-
 use APP\core\Services;
+use APP\facades\Repo;
 use APP\journal\Section;
 
 class SectionDAO extends PKPSectionDAO
@@ -327,12 +327,15 @@ class SectionDAO extends PKPSectionDAO
      */
     public function deleteById($sectionId, $contextId = null)
     {
+        // No articles should exist in this section
+        $collector = Repo::submission()->getCollector()->filterBySectionIds([(int) $sectionId]);
+        $count = Repo::submission()->getCount($collector);
+        if ($count) {
+            throw new Exception('Tried to delete a section that has one or more submissions assigned to it.');
+        }
+
         $subEditorsDao = DAORegistry::getDAO('SubEditorsDAO'); /* @var $subEditorsDao SubEditorsDAO */
         $subEditorsDao->deleteBySubmissionGroupId($sectionId, ASSOC_TYPE_SECTION, $contextId);
-
-        // Remove articles from this section
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-        $submissionDao->removeSubmissionsFromSection($sectionId);
 
         if (isset($contextId) && !$this->sectionExists($sectionId, $contextId)) {
             return false;
@@ -395,13 +398,15 @@ class SectionDAO extends PKPSectionDAO
         if (!$issue->getPublished()) {
             $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
         }
-        $submissionsIterator = Services::get('submission')->getMany([
-            'contextId' => $issue->getJournalId(),
-            'issueIds' => $issueId,
-            'status' => $allowedStatuses,
-        ]);
+        $collector = Repo::submission()->getCollector();
+        $collector
+            ->filterByContextIds([$issue->getJournalId()])
+            ->filterByIssueIds([$issueId])
+            ->filterByStatus($allowedStatuses)
+            ->orderBy($collector::ORDERBY_SEQUENCE, $collector::ORDER_DIR_ASC);
+        $submissions = Repo::submission()->getMany($collector);
         $sectionIds = [];
-        foreach ($submissionsIterator as $submission) {
+        foreach ($submissions as $submission) {
             $sectionIds[] = $submission->getCurrentPublication()->getData('sectionId');
         }
         if (empty($sectionIds)) {

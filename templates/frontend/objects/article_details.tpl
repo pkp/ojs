@@ -294,7 +294,7 @@
 					</h2>
 					<div class="value">
 						{* If this is the original version *}
-						{if $firstPublication->getID() === $publication->getId()}
+						{if $firstPublication->getId() === $publication->getId()}
 							<span>{$firstPublication->getData('datePublished')|date_format:$dateFormatShort}</span>
 						{* If this is an updated version *}
 						{else}

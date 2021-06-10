@@ -13,14 +13,14 @@
  * @brief Class for a cell provider that can retrieve labels from submissions
  */
 
-use PKP\controllers\grid\DataObjectGridCellProvider;
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\RedirectAction;
-use PKP\linkAction\request\AjaxModal;
-use PKP\controllers\grid\GridHandler;
-
-use APP\core\Services;
+use APP\facades\Repo;
 use APP\submission\Submission;
+use PKP\controllers\grid\DataObjectGridCellProvider;
+use PKP\controllers\grid\GridHandler;
+use PKP\linkAction\LinkAction;
+
+use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\request\RedirectAction;
 
 class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellProvider
 {
@@ -68,7 +68,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
                     new LinkAction(
                         'itemWorkflow',
                         new RedirectAction(
-                            Services::get('submission')->getWorkflowUrlByUserRoles($submission)
+                            Repo::submission()->getWorkflowUrlByUserRoles($submission)
                         ),
                         htmlspecialchars($title)
                     )

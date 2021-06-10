@@ -16,7 +16,6 @@
 namespace APP\services;
 
 use PKP\plugins\HookRegistry;
-use PKP\core\PKPApplication;
 use PKP\security\Validation;
 
 use APP\template\TemplateManager;
@@ -32,7 +31,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
     public const NMI_TYPE_ARCHIVES = 'NMI_TYPE_ARCHIVES';
 
     /**
-     * Initialize hooks for extending PKPSubmissionService
+     * Initialize hooks for extending PKPNavigationMenuService
      */
     public function __construct()
     {
@@ -125,7 +124,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
                 case self::NMI_TYPE_CURRENT:
                     $navigationMenuItem->setUrl($dispatcher->url(
                         $request,
-                        PKPApplication::ROUTE_PAGE,
+                        Application::ROUTE_PAGE,
                         null,
                         'issue',
                         'current',
@@ -135,7 +134,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
                 case self::NMI_TYPE_ARCHIVES:
                     $navigationMenuItem->setUrl($dispatcher->url(
                         $request,
-                        PKPApplication::ROUTE_PAGE,
+                        Application::ROUTE_PAGE,
                         null,
                         'issue',
                         'archive',
@@ -145,7 +144,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
                 case self::NMI_TYPE_SUBSCRIPTIONS:
                     $navigationMenuItem->setUrl($dispatcher->url(
                         $request,
-                        PKPApplication::ROUTE_PAGE,
+                        Application::ROUTE_PAGE,
                         null,
                         'about',
                         'subscriptions',
@@ -155,7 +154,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
                 case self::NMI_TYPE_MY_SUBSCRIPTIONS:
                     $navigationMenuItem->setUrl($dispatcher->url(
                         $request,
-                        PKPApplication::ROUTE_PAGE,
+                        Application::ROUTE_PAGE,
                         null,
                         'user',
                         'subscriptions',

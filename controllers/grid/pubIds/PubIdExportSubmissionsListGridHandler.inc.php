@@ -13,6 +13,7 @@
  * @brief Handle exportable submissions with pub ids list grid requests.
  */
 
+use APP\facades\Repo;
 use PKP\controllers\grid\GridColumn;
 
 import('controllers.grid.submissions.ExportPublishedSubmissionsListGridHandler');
@@ -36,8 +37,7 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
         if ($statusId) {
             $pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
         }
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /** @var SubmissionDAO $submissionDao */
-        return $submissionDao->getExportable(
+        return Repo::submission()->dao->getExportable(
             $context->getId(),
             $this->_plugin->getPubIdType(),
             $title,

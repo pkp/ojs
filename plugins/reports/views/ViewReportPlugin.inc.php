@@ -16,7 +16,8 @@
 
 import('lib.pkp.classes.plugins.ReportPlugin');
 
-use \PKP\submission\PKPSubmission;
+use APP\facades\Repo;
+use APP\submission\Submission;
 
 class ViewReportPlugin extends ReportPlugin
 {
@@ -78,11 +79,13 @@ class ViewReportPlugin extends ReportPlugin
         $articleIssueIdentificationMap = [];
 
         $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $submissionsIterator = Services::get('submission')->getMany([
-            'contextId' => $context->getId(),
-            'status' => PKPSubmission::STATUS_PUBLISHED,
-        ]);
-        foreach ($submissionsIterator as $submission) {
+        $submissions = Repo::submission()->getMany(
+            Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$context->getId()])
+                ->filterByStageIds([Submission::STATUS_PUBLISHED])
+        );
+        foreach ($submissions as $submission) {
             $articleId = $submission->getId();
             $issueId = $submission->getCurrentPublication()->getData('issueId');
             $articleTitles[$articleId] = PKPString::regexp_replace("/\r|\n/", '', $submission->getLocalizedTitle());

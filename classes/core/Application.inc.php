@@ -113,7 +113,6 @@ class Application extends PKPApplication
     public function getDAOMap()
     {
         return array_merge(parent::getDAOMap(), [
-            'SubmissionDAO' => 'APP\submission\SubmissionDAO',
             'ArticleGalleyDAO' => 'APP\article\ArticleGalleyDAO',
             'ArticleSearchDAO' => 'APP\search\ArticleSearchDAO',
             'AuthorDAO' => 'APP\article\AuthorDAO',
@@ -169,18 +168,6 @@ class Application extends PKPApplication
     public static function getContextDAO()
     {
         return DAORegistry::getDAO('JournalDAO');
-    }
-
-    /**
-     * Get the submission DAO.
-     *
-     * @deprecated Just get the DAO directly.
-     *
-     * @return SubmissionDAO
-     */
-    public static function getSubmissionDAO()
-    {
-        return DAORegistry::getDAO('SubmissionDAO');
     }
 
     /**

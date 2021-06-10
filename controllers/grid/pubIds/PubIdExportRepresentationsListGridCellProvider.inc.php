@@ -13,13 +13,14 @@
  * @brief Class for a cell provider that can retrieve labels from representations with pub ids
  */
 
-use PKP\controllers\grid\DataObjectGridCellProvider;
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\RedirectAction;
-use PKP\linkAction\request\AjaxModal;
-use PKP\controllers\grid\GridHandler;
+use APP\facades\Repo;
 
-use APP\core\Services;
+use PKP\controllers\grid\DataObjectGridCellProvider;
+use PKP\controllers\grid\GridHandler;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+
+use PKP\linkAction\request\RedirectAction;
 
 class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellProvider
 {
@@ -54,8 +55,8 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
         $columnId = $column->getId();
         assert(is_a($galley, 'ArticleGalley') && !empty($columnId));
 
-        $publication = Services::get('publication')->get($galley->getData('publicationId'));
-        $submission = Services::get('submission')->get($publication->getData('submissionId'));
+        $publication = Repo::publication()->get($galley->getData('publicationId'));
+        $submission = Repo::submission()->get($publication->getData('submissionId'));
         switch ($columnId) {
             case 'title':
                 $this->_titleColumn = $column;
@@ -69,7 +70,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
                     new LinkAction(
                         'itemWorkflow',
                         new RedirectAction(
-                            Services::get('submission')->getWorkflowUrlByUserRoles($submission)
+                            Repo::submission()->getWorkflowUrlByUserRoles($submission)
                         ),
                         htmlspecialchars($title)
                     )

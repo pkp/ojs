@@ -17,9 +17,10 @@
 
 namespace APP\issue;
 
+use APP\facades\Repo;
+use PKP\plugins\HookRegistry;
 use PKP\submission\PKPSubmission;
 use PKP\security\Role;
-use PKP\plugins\HookRegistry;
 use PKP\db\DAORegistry;
 
 use APP\subscription\Subscription;
@@ -115,8 +116,7 @@ class IssueAction
     public function subscribedUser($user, $journal, $issueId = null, $articleId = null)
     {
         $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-        $submission = $submissionDao->getById($articleId);
+        $submission = Repo::submission()->get((int) $articleId);
         $result = false;
         if (isset($user) && isset($journal)) {
             if ($submission && $this->allowedPrePublicationAccess($journal, $submission, $user)) {
@@ -170,7 +170,7 @@ class IssueAction
             // that was valid during publication date of requested content
             if (!$result && $journal->getData('subscriptionExpiryPartial')) {
                 if (isset($articleId)) {
-                    $submission = Services::get('submission')->get($articleId);
+                    $submission = Repo::submission()->get($articleId);
                     if ($submission->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                         $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $submission->getDatePublished());
                     }

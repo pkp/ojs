@@ -317,9 +317,11 @@
 						"type": "string",
 						"default": "dateSubmitted",
 						"enum": [
+							"datePublished",
 							"dateSubmitted",
-							"dateLastActivity",
+							"lastActivity",
 							"lastModified",
+							"sequence",
 							"title"
 						]
 					},

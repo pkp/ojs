@@ -13,6 +13,8 @@
  * @brief DRIVER plugin class
  */
 
+use APP\facades\Repo;
+
 define('DRIVER_ACCESS_OPEN', 0);
 define('DRIVER_ACCESS_CLOSED', 1);
 define('DRIVER_ACCESS_EMBARGOED', 2);
@@ -148,7 +150,7 @@ class DRIVERPlugin extends GenericPlugin
             $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
             $journal = $journalDao->getById($row['journal_id']);
-            $submission = Services::get('submission')->get($row['submission_id']);
+            $submission = Repo::submission()->get($row['submission_id']);
             $publication = $submission->getCurrentPublication();
             $issue = $issueDao->getById($publication->getData('issueId'));
 
@@ -201,7 +203,7 @@ class DRIVERPlugin extends GenericPlugin
         $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
         $journal = $journalDao->getById($journalId);
-        $submission = Services::get('submission')->get($articleId);
+        $submission = Repo::submission()->get($articleId);
         $publication = $submission->getCurrentPublication();
         $issue = $issueDao->getById($publication->getData('issueId'));
 

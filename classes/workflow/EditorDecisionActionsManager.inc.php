@@ -15,15 +15,16 @@
 
 namespace APP\workflow;
 
-use PKP\workflow\PKPEditorDecisionActionsManager;
-use PKP\submission\PKPSubmission;
+use APP\core\Application;
+use APP\payment\ojs\OJSPaymentManager;
 use PKP\db\DAORegistry;
 
-use APP\payment\ojs\OJSPaymentManager;
-use APP\core\Application;
+use PKP\submission\PKPSubmission;
+use PKP\workflow\PKPEditorDecisionActionsManager;
 
 class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager
 {
+    // Submission stage decision actions.
     public const SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW = 8;
 
     // Submission and review stages decision actions.
@@ -68,6 +69,7 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager
 
     /**
      * Check for editor decisions in the review round.
+     *
      * @param $context \PKP\context\Context
      * @param $reviewRound \PKP\submission\reviewRound\ReviewRound
      * @param $decisions array
@@ -80,8 +82,7 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager
         $editorDecisions = $editDecisionDao->getEditorDecisions($reviewRound->getSubmissionId(), $reviewRound->getStageId(), $reviewRound->getRound());
 
         if (empty($decisions)) {
-            $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-            $submission = $submissionDao->getById($reviewRound->getSubmissionId());
+            $submission = Repo::submission()->get($reviewRound->getSubmissionId());
             $decisions = array_keys($this->_externalReviewStageDecisions($context, $submission));
         }
         $takenDecision = false;
@@ -173,5 +174,4 @@ if (!PKP_STRICT_MODE) {
     ] as $constantName) {
         define($constantName, constant('\EditorDecisionActionsManager::' . $constantName));
     }
-
 }

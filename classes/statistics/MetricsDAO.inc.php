@@ -15,12 +15,11 @@
 
 namespace APP\statistics;
 
-use PKP\statistics\PKPMetricsDAO;
+use APP\facades\Repo;
 use PKP\db\DAORegistry;
-use PKP\statistics\PKPStatisticsHelper;
+use PKP\statistics\PKPMetricsDAO;
 
-use APP\core\Services;
-use APP\statistics\StatisticsHelper;
+use PKP\statistics\PKPStatisticsHelper;
 
 class MetricsDAO extends PKPMetricsDAO
 {
@@ -106,7 +105,7 @@ class MetricsDAO extends PKPMetricsDAO
         $returnArray = parent::getAssocObjectInfo($submissionId, $contextId);
 
         // Submissions in OJS are associated with an Issue.
-        $submission = Services::get('submission')->get($submissionId);
+        $submission = Repo::submission()->get($submissionId);
         if ($submission->getCurrentPublication()->getData('issueId')) {
             $returnArray = [ASSOC_TYPE_ISSUE, $submission->getCurrentPublication()->getData('issueId')];
         }

@@ -15,16 +15,16 @@
 
 namespace APP\services;
 
+use APP\core\Application;
 use PKP\db\DAORegistry;
-use PKP\search\SubmissionSearch;
 use PKP\plugins\HookRegistry;
 
-use APP\core\Application;
+use PKP\search\SubmissionSearch;
 
 class SubmissionFileService extends \PKP\services\PKPSubmissionFileService
 {
     /**
-     * Initialize hooks for extending PKPSubmissionService
+     * Initialize hooks for extending PKPSubmissionFileService
      */
     public function __construct()
     {

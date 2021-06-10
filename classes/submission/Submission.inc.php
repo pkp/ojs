@@ -16,7 +16,7 @@
  * @class Submission
  * @ingroup submission
  *
- * @see SubmissionDAO
+ * @see DAO
  *
  * @brief Article class.
  */
@@ -341,4 +341,3 @@ if (!PKP_STRICT_MODE) {
         define($constantName, constant('\Submission::' . $constantName));
     }
 }
-

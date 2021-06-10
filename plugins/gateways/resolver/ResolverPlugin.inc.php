@@ -15,7 +15,8 @@
 
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
-use \APP\template\TemplateManager;
+use APP\facades\Repo;
+use APP\template\TemplateManager;
 
 class ResolverPlugin extends GatewayPlugin
 {
@@ -76,8 +77,7 @@ class ResolverPlugin extends GatewayPlugin
         switch ($scheme) {
             case 'doi':
                 $doi = implode('/', $args);
-                $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-                $article = $submissionDao->getByPubId('doi', $doi, $request->getJournal());
+                $article = Repo::submission()->getByPubId('doi', $doi, $request->getJournal());
                 if ($article) {
                     $request->redirect(null, 'article', 'view', $article->getBestId());
                 }
@@ -112,10 +112,13 @@ class ResolverPlugin extends GatewayPlugin
                 }
                 unset($issues);
 
-                $submissionsIterator = Services::get('submission')->getMany([
-                    'issueIds' => $issue->getId(),
-                ]);
-                foreach ($submissionsIterator as $submission) {
+                $submissions = Repo::submission()->getMany(
+                    Repo::submission()
+                        ->getCollector()
+                        ->filterByContextIds([$issue->getJournalId()])
+                        ->filterByIssueIds([$issue->getId()])
+                );
+                foreach ($submissions as $submission) {
                     // Look for the correct page in the list of articles.
                     $matches = null;
                     if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $submission->getPages(), $matches)) {
