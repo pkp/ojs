@@ -1,2 +1,72 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-06-10 11:44+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "A galerada do artigo \"{$galleyFormatName}\" xa non está dispoñibel."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "A galerada do artigo \"{$galleyFormatName}\" xa está dispoñibel."
+
+msgid "grid.action.issueEntry"
+msgstr "Ver os metadatos deste envío"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "A galerada aparece na entrada do número"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"A revista recibiu unha notificación do teu envío e recibiches por correo "
+"electrónico unha confirmación dos teus rexistros. Unha vez que o editor "
+"revise o envío, porase en contacto contigo."
+
+msgid "submission.issueEntry"
+msgstr "Metadatos"
+
+msgid "submission.submit.noContext"
+msgstr "Non se puido atopar este envío."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "O resumo deberá ter un máximo de {$wordCount} palabras."
+
+msgid "grid.action.workflow"
+msgstr "Fluxo de traballo do envío"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Novo envío"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Comezar un novo envío en"
+
+msgid "submission.title.tip"
+msgstr ""
+"O tipo de envío adoita ser de \"imaxe\", \"texto\" ou outros tipos "
+"multimedia, incluído \"software\" ou \"interactivo\". Escolla o máis "
+"relevante para a súa presentación. Pódense atopar exemplos en <a target=\""
+"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type\">http://dublincore.org/documents/12/04/2001/usageguide/"
+"generic.shtml # type</a>"
+
+msgid "submission.title"
+msgstr "Título do artigo"
+
+msgid "submission.upload.selectComponent"
+msgstr "Selecione o compoñente do artigo"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Escolla o rol baixo o cal envía este artigo."
+
+msgid "submission.submit.userGroup"
+msgstr "Enviar na meu rol de..."
+
+msgid "submission.submit.title"
+msgstr "Enviar un artigo"
