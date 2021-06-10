@@ -20,7 +20,7 @@ namespace APP\submission;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\identity\Identity;
-use PKP\observers\events\DeletedSubmission;
+use PKP\observers\events\SubmissionDeleted;
 use PKP\submission\PKPSubmission;
 use PKP\submission\PKPSubmissionDAO;
 
@@ -56,7 +56,7 @@ class SubmissionDAO extends PKPSubmissionDAO
         $articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $articleSearchDao ArticleSearchDAO */
         $articleSearchDao->deleteSubmissionKeywords($submissionId);
 
-        event(new DeletedSubmission($submissionId));
+        event(new SubmissionDeleted($submissionId));
 
         parent::deleteById($submissionId);
 
