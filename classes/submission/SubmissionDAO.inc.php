@@ -24,8 +24,6 @@ use PKP\observers\events\SubmissionDeleted;
 use PKP\submission\PKPSubmission;
 use PKP\submission\PKPSubmissionDAO;
 
-use APP\submission\Submission;
-
 class SubmissionDAO extends PKPSubmissionDAO
 {
     /**
