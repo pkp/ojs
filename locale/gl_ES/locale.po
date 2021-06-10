@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-09 13:28+0000\n"
+"PO-Revision-Date: 2021-06-10 11:44+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -1541,3 +1541,122 @@ msgstr "Iniciouse un pagamento en liña, pero cancelouse ou non se completou"
 
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
 msgstr "Iniciouse o pagamento manual, pero aínda non se recibiu"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Listaxe de verificación para preparar envíos"
+
+msgid "about.authorGuidelines"
+msgstr "Directrices para o autor/a"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Ver os seus envíos pendentes"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Realizar un novo envío"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Efectuar un novo envío á sección <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} ou {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Necesita {$login} ou {$register} para realizar un envío."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Rexistrarse"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Ir ao inicio de sesión"
+
+msgid "about.submissions"
+msgstr "Envíos"
+
+msgid "about.sectionPolicies"
+msgstr "Políticas de seccións"
+
+msgid "about.focusAndScope"
+msgstr "Enfoque e alcance"
+
+msgid "about.editorialPolicies"
+msgstr "Políticas editoriais"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografía"
+
+msgid "about.editorialTeam"
+msgstr "Equipo editorial"
+
+msgid "about.history"
+msgstr "Historia da revista"
+
+msgid "about.aboutContext"
+msgstr "Sobre a revista"
+
+msgid "about.contact"
+msgstr "Contacto"
+
+msgid "about.statistics"
+msgstr "Estatísticas"
+
+msgid "archive.issueUnavailable"
+msgstr "O número non está dispoñible"
+
+msgid "archive.browse"
+msgstr "Navegar polos números anteriores"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arquivos - Páxina {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Arquivos"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Esta revista non publicou ningún número."
+
+msgid "current.noCurrentIssue"
+msgstr "Non hai ningún número actual"
+
+msgid "current.current"
+msgstr "Último número"
+
+msgid "site.noJournals"
+msgstr "Non hai revistas dispoñibles."
+
+msgid "site.journalCurrent"
+msgstr "Número actual"
+
+msgid "site.journalRegister"
+msgstr "Rexistrarse"
+
+msgid "site.journalView"
+msgstr "Acceder á revista"
+
+msgid "site.journalsHosted"
+msgstr "Revistas aloxadas neste sitio web"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"O arquivo seleccionado comezará a descargarse automaticamente. De non ser "
+"así, faga clic no seguinte enlace. Teña en conta que pode necesitar un "
+"visualizador ou un complemento especial para este arquivo.<br /><br />Se non "
+"se descarga automaticamente, <a href=\"{$url}\">faga clic aquí</a>."
+
+msgid "article.nonpdf.title"
+msgstr "Descargar o artigo"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>O arquivo PDF que seleccionou debería cargarse aquí se o seu navegador "
+"ten instalado un complemento de lectura de PDF  (por exemplo, unha versión "
+"recente de <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat "
+"Reader</a>).</p>"
+
+msgid "article.download"
+msgstr "Descargar este arquivo PDF"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.pageTitle"
+msgstr "Vista de {$title}"
