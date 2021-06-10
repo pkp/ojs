@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-10 11:44+0000\n"
+"PO-Revision-Date: 2021-06-11 06:37+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -1660,3 +1660,85 @@ msgstr "Portable Document Format (PDF)"
 
 msgid "article.pageTitle"
 msgstr "Vista de {$title}"
+
+msgid "about.aboutSoftware"
+msgstr "Acerca de Open Journal Systems"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Proceso editorial e de publicación de l’OJS"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Máis información acerca do sistema de publicación, da plataforma e do fluxo "
+"de traballo de OJS/PKP."
+
+msgid "about.memberships"
+msgstr "Afiliacións"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Tipos de subscricións"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Prezo"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Duración"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formato"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nome"
+
+msgid "about.subscriptionsContact"
+msgstr "Contacto para as subscricións"
+
+msgid "about.subscriptions.institutional"
+msgstr "Subscricións institucionais"
+
+msgid "about.subscriptions.individual"
+msgstr "Subscricións individuais"
+
+msgid "about.subscriptions"
+msgstr "Subscricións"
+
+msgid "about.archiving"
+msgstr "Arquivamento"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "mes/es despois da publicación dun número."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr ""
+"Os contidos desta revista estarán dispoñibles en formato de acceso libre"
+
+msgid "about.delayedOpenAccess"
+msgstr "Acceso libre diferido"
+
+msgid "about.openAccessPolicy"
+msgstr "Política de acceso libre"
+
+msgid "about.publicationFrequency"
+msgstr "Frecuencia de publicación"
+
+msgid "about.peerReviewProcess"
+msgstr "Proceso de avaliación por pares"
+
+msgid "about.authorFeesMessage"
+msgstr "Esta revista aplícalles aos autores/as as cotas seguintes."
+
+msgid "about.authorFees"
+msgstr "Cotas dos autores/as"
+
+msgid "about.privacyStatement"
+msgstr "Declaración de privacidade"
+
+msgid "about.copyrightNotice"
+msgstr "Aviso de dereitos de autor/a"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Como parte integrante do proceso de envío, os autores/as teñen que "
+"asegurarse de que o seu envío cumpra todas as condicións que veñen a "
+"continuación.  No caso de non se seguiren estas directrices, os envíos "
+"poderanse devolver aos autores/as."
