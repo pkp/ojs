@@ -3,17 +3,13 @@ matrix:
   include:
   # Validation
   - env: TEST=validation
-    php: 7.3
+    php: 7.4
   # PostgreSQL / various PHP
-  - env: TEST=pgsql
-    php: 7.3
   - env: TEST=pgsql
     php: 7.4
   - env: TEST=pgsql
     php: 8.0
   # MySQL / various PHP
-  - env: TEST=mysql
-    php: 7.3
   - env: TEST=mysql
     php: 7.4
   - env: TEST=mysql
