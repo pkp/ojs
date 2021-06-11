@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-11 11:09+0000\n"
+"PO-Revision-Date: 2021-06-12 20:02+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -1813,3 +1813,111 @@ msgstr ""
 "http://pkp.sfu.ca/\">obter máis información sobre o software</a>. Por favor, "
 "<a href=\"{$contactUrl}\">contacte coa revista</a> directamente para "
 "calquera pregunta acerca dela e os envíos."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>Versión OJS {$version}</h4>\n"
+"\n"
+"<p>Grazas por descargar <strong>Open Journal Systems</strong> de Public "
+"Knowledge Project. Antes de continuar, lea o arquivo <a href=\"{$baseUrl}/"
+"docs/README.md\">README</a> incluído neste software. Para obter máis "
+"información sobre Public Knowledge Project e os seus proxectos de software, "
+"visite o <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">lloc web de PKP</a>"
+". Se quere informar dalgún erro ou ten preguntas sobre asistencia técnica de "
+"Open Journal Systems, consulte o <a href=\"http://forum.pkp.sfu.ca\" target="
+"\"_blank\">foro de soporte</a> ou visite o <a href=\"https://github.com/pkp/"
+"pkp-lib#issues\" target=\"_blank\">sistema de rexistro de erros</a> en liña "
+"de PKP. Aínda que o foro de soporte é o método de contacto prioritario, "
+"tamén pode enviar un correo electrónico ao noso equipo ao enderezo <a href=\""
+"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Estase actualizando unha instalación de OJS xa existente, faga clic <a href="
+"\"{$upgradeUrl}\">aquí</a> para continuar."
+
+msgid "installer.ojsUpgrade"
+msgstr "Actualización de OJS"
+
+msgid "installer.appInstallation"
+msgstr "Instalación de OJS"
+
+msgid "payment.subscription.expires"
+msgstr "Vencemento"
+
+msgid "payment.subscription.renew"
+msgstr "Renovar a subscrición"
+
+msgid "payment.subscription.purchase"
+msgstr "Comprar unha subscrición"
+
+msgid "payment.membership.ends"
+msgstr "Finaliza"
+
+msgid "payment.membership.renewMembership"
+msgstr "Renovar a afiliación individual"
+
+msgid "payment.membership.buyMembership"
+msgstr "Comprar unha afiliación individual"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Cota de publicación pagada"
+
+msgid "payment.publication.payPublication"
+msgstr "Pagar por publicar"
+
+msgid "payment.submission.paySubmission"
+msgstr "Pagar a cota de envío"
+
+msgid "payment.donation.makeDonation"
+msgstr "Facer unha doazón"
+
+msgid "payment.notFound"
+msgstr ""
+"Solicitouse un pagamento, pero a solicitude expirou. Contacte co "
+"administrador/a da revista para máis detalles."
+
+msgid "payment.requestPublicationFee"
+msgstr "Solicitar a taxa de publicación ({$feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "Doazóns"
+
+msgid "payment.type.subscription"
+msgstr "Cota de subscrición"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Cota por comprar números"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Cota por compra de artigos"
+
+msgid "payment.type.membership"
+msgstr "Cota de afiliación individual"
+
+msgid "payment.type.fastTrack"
+msgstr "Cota de revisión rápida"
+
+msgid "payment.type.publication.required"
+msgstr "A taxa de publicación está pendente de pagamento."
+
+msgid "payment.type.publication"
+msgstr "Cota de publicación"
+
+msgid "payment.type.submission"
+msgstr "Cota de envío"
+
+msgid "payment.authorFees"
+msgstr "Cotas dos autores/as"
+
+msgid "payment.paymentSent"
+msgstr "Xa se enviou o pagamento"
+
+msgid "payment.paymentReceived"
+msgstr "Pagamento recibido"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Active esta opción se xa mandou o pagamento á revista para finalizar o "
+"proceso de envío. O envío non se revisará ata a recepción do pagamento. Faga "
+"clic en \"Pagar agora\" para ver as instrucións de pagamento."
