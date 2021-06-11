@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-11 06:37+0000\n"
+"PO-Revision-Date: 2021-06-11 11:09+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -1742,3 +1742,74 @@ msgstr ""
 "asegurarse de que o seu envío cumpra todas as condicións que veñen a "
 "continuación.  No caso de non se seguiren estas directrices, os envíos "
 "poderanse devolver aos autores/as."
+
+msgid "payment.alreadyPaid"
+msgstr "Xa pagado"
+
+msgid "payment.waive"
+msgstr "Exención"
+
+msgid "payment.payNow"
+msgstr "Pagar agora"
+
+msgid "payment.waived"
+msgstr "Non esixido"
+
+msgid "payment.unpaid"
+msgstr "Non pagado"
+
+msgid "payment.paid"
+msgstr "Pagado"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Debe iniciar a sesión para realizar unha doazón."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Para acceder a este artigo debe facer a subscrición ou efectuar o pagamento "
+"do número correspondente. Inicie a sesión na revista para verificar a "
+"subscrición, acceder a unha compra anterior ou adquirir un número."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Para acceder a este elemento requírese facer a subscrición ou o pagamento do "
+"artigo. Inicie a sesión na revista para verificar a subscrición, acceder a "
+"unha compra anterior ou adquirir un artigo."
+
+msgid "payment.loginRequired"
+msgstr "Debe iniciar a sesión para poder efectuar un pagamento."
+
+msgid "donations.thankYouMessage"
+msgstr "Grazas pola súa contribución, é moi valiosa."
+
+msgid "donations.thankYou"
+msgstr "Grazas"
+
+msgid "help.goToEditPage"
+msgstr "Editar {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Volver aos resultados da busca"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Axuda de OJS"
+
+msgid "help.ojsHelp"
+msgstr "Axuda de Open Journal Systems"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Este sitio utiliza Open Journal Systems {$ojsVersion}, un software de código "
+"aberto para a xestión e a publicación de revistas que foi desenvolvido, "
+"impulsado e distribuído libremente polo <a href=\"http://pkp.sfu.ca/\">"
+"Public Knowledge Project</a> baixo a Licenza Pública Xeral GNU."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Esta revista utiliza Open Journal Systems {$ojsVersion}, un software de "
+"xestión e publicación de revistas de código aberto que foi desenvolvido, "
+"impulsado e distribuído de forma gratuíta por Public Knowledge Project baixo "
+"unha licenza pública xeral GNU. Visite a páxina web de PKP para <a href=\""
+"http://pkp.sfu.ca/\">obter máis información sobre o software</a>. Por favor, "
+"<a href=\"{$contactUrl}\">contacte coa revista</a> directamente para "
+"calquera pregunta acerca dela e os envíos."
