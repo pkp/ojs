@@ -13,7 +13,7 @@
  * @brief DAO operations for DRIVER.
  */
 
-use PKP\oai\OAIDAO;
+use APP\oai\ojs\OAIDAO;
 
 class DRIVERDAO extends OAIDAO
 {
@@ -48,7 +48,7 @@ class DRIVERDAO extends OAIDAO
     {
         $records = [];
 
-        $result = $this->_getRecordsRecordSet($setIds, $from, $until, null);
+        $result = new \ArrayIterator($this->_getRecordsRecordSetQuery($setIds, $from, $until, null)->get());
 
         $total = 0;
         for ($i = 0; $i < $offset; $i++) {
