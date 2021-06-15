@@ -13,18 +13,18 @@
  * @brief Handle issues grid requests.
  */
 
-use PKP\controllers\grid\GridHandler;
+use APP\file\IssueFileManager;
+use APP\security\authorization\OjsIssueGalleyRequiredPolicy;
+use APP\security\authorization\OjsIssueRequiredPolicy;
 use PKP\controllers\grid\GridColumn;
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\AjaxModal;
+use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
 use PKP\file\TemporaryFileManager;
-use PKP\security\authorization\ContextAccessPolicy;
-use APP\security\authorization\OjsIssueGalleyRequiredPolicy;
-use PKP\security\Role;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
 
-use APP\security\authorization\OjsIssueRequiredPolicy;
-use APP\file\IssueFileManager;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\Role;
 
 import('controllers.grid.issueGalleys.IssueGalleyGridRow');
 

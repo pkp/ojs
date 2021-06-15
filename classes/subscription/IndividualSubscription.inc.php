@@ -19,8 +19,6 @@ namespace APP\subscription;
 
 use PKP\db\DAORegistry;
 
-use APP\subscription\Subscription;
-
 class IndividualSubscription extends Subscription
 {
     /**

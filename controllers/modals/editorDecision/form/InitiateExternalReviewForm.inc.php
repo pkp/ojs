@@ -15,11 +15,11 @@
  */
 
 
-use PKP\submission\action\EditorAction;
-use PKP\submission\reviewRound\ReviewRound;
-
 use APP\workflow\EditorDecisionActionsManager;
 use PKP\controllers\modals\editorDecision\form\EditorDecisionForm;
+
+use PKP\submission\action\EditorAction;
+use PKP\submission\reviewRound\ReviewRound;
 
 class InitiateExternalReviewForm extends EditorDecisionForm
 {

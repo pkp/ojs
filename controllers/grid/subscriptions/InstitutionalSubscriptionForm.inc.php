@@ -15,11 +15,11 @@
 
 import('classes.subscription.form.SubscriptionForm');
 
-use PKP\notification\PKPNotification;
-
 use APP\notification\NotificationManager;
+
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\SubscriptionType;
+use PKP\notification\PKPNotification;
 
 class InstitutionalSubscriptionForm extends SubscriptionForm
 {

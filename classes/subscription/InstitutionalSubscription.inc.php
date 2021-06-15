@@ -24,8 +24,6 @@ namespace APP\subscription;
 
 use PKP\db\DAORegistry;
 
-use APP\subscription\Subscription;
-
 class InstitutionalSubscription extends Subscription
 {
     public const SUBSCRIPTION_IP_RANGE_RANGE = '-';

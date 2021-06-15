@@ -17,11 +17,11 @@
 
 namespace APP\article;
 
-use PKP\submission\Representation;
-
 use APP\core\Application;
+
 use APP\core\Services;
 use APP\i18n\AppLocale;
+use PKP\submission\Representation;
 
 class ArticleGalley extends Representation
 {

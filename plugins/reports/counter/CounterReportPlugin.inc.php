@@ -19,12 +19,12 @@ define('COUNTER_CLASS_SUFFIX', '.inc.php');
 
 import('plugins.reports.counter.classes.CounterReport');
 
-use PKP\plugins\ReportPlugin;
-use PKP\notification\PKPNotification;
-use PKP\statistics\PKPStatisticsHelper;
-
-use APP\template\TemplateManager;
 use APP\notification\NotificationManager;
+use APP\template\TemplateManager;
+use PKP\notification\PKPNotification;
+
+use PKP\plugins\ReportPlugin;
+use PKP\statistics\PKPStatisticsHelper;
 
 class CounterReportPlugin extends ReportPlugin
 {

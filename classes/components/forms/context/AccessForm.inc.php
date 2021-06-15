@@ -15,11 +15,11 @@
 
 namespace APP\components\forms\context;
 
+use APP\journal\Journal;
 use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
-use PKP\components\forms\FormComponent;
 
-use APP\journal\Journal;
+use PKP\components\forms\FormComponent;
 
 define('FORM_ACCESS', 'access');
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '1');

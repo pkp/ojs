@@ -17,10 +17,8 @@
 
 namespace APP\search;
 
-use PKP\submission\PKPSubmission;
 use PKP\search\SubmissionSearchDAO;
-
-use APP\search\ArticleSearch;
+use PKP\submission\PKPSubmission;
 
 class ArticleSearchDAO extends SubmissionSearchDAO
 {

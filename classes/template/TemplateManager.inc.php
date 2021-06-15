@@ -17,7 +17,6 @@
 
 namespace APP\template;
 
-
 use APP\core\Application;
 use APP\file\PublicFileManager;
 use PKP\security\Role;

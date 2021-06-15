@@ -15,9 +15,9 @@
 
 namespace APP\notification\form;
 
-use PKP\notification\form\PKPNotificationSettingsForm;
-
 use APP\notification\Notification;
+
+use PKP\notification\form\PKPNotificationSettingsForm;
 
 class NotificationSettingsForm extends PKPNotificationSettingsForm
 {

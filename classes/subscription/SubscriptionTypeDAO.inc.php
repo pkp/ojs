@@ -17,14 +17,13 @@
 
 namespace APP\subscription;
 
-use PKP\plugins\HookRegistry;
+use APP\i18n\AppLocale;
+use Illuminate\Support\Facades\DB;
 use PKP\db\DAORegistry;
+
 use PKP\db\DAOResultFactory;
 
-use APP\subscription\SubscriptionType;
-use APP\i18n\AppLocale;
-
-use Illuminate\Support\Facades\DB;
+use PKP\plugins\HookRegistry;
 
 class SubscriptionTypeDAO extends \PKP\db\DAO
 {

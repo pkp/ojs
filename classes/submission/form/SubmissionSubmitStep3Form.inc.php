@@ -15,11 +15,11 @@
 
 namespace APP\submission\form;
 
-use PKP\submission\form\PKPSubmissionSubmitStep3Form;
-use PKP\db\DAORegistry;
-
 use APP\submission\SubmissionMetadataFormImplementation;
 use APP\template\TemplateManager;
+
+use PKP\db\DAORegistry;
+use PKP\submission\form\PKPSubmissionSubmitStep3Form;
 
 class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form
 {

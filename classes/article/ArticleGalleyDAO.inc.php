@@ -17,14 +17,12 @@
 
 namespace APP\article;
 
-use PKP\plugins\PKPPubIdPluginDAO;
+use PKP\db\DAOResultFactory;
 use PKP\db\SchemaDAO;
 use PKP\identity\Identity;
+use PKP\plugins\PKPPubIdPluginDAO;
 use PKP\services\PKPSchemaService;
 use PKP\submission\PKPSubmission;
-use PKP\db\DAOResultFactory;
-
-use APP\article\ArticleGalley;
 
 class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
 {

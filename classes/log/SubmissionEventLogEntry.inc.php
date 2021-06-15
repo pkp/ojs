@@ -17,7 +17,7 @@
 
 namespace APP\log;
 
-use \PKP\log\PKPSubmissionEventLogEntry;
+use PKP\log\PKPSubmissionEventLogEntry;
 
 // Log entry associative types. All types must be defined here
 

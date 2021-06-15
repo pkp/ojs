@@ -13,10 +13,10 @@
  * @brief Handle exportable representations with pub ids list grid requests.
  */
 
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
-use PKP\controllers\grid\GridHandler;
-use PKP\controllers\grid\GridColumn;
 use PKP\security\Role;
 
 import('controllers.grid.pubIds.PubIdExportRepresentationsListGridCellProvider');

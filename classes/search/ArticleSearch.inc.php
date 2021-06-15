@@ -18,15 +18,15 @@
 
 namespace APP\search;
 
-use PKP\submission\PKPSubmission;
-use PKP\statistics\PKPStatisticsHelper;
-use PKP\search\SubmissionSearch;
+use APP\core\Application;
+use APP\facades\Repo;
+use APP\i18n\AppLocale;
 use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
 
-use APP\core\Application;
-use APP\i18n\AppLocale;
-use APP\facades\Repo;
+use PKP\search\SubmissionSearch;
+use PKP\statistics\PKPStatisticsHelper;
+use PKP\submission\PKPSubmission;
 
 class ArticleSearch extends SubmissionSearch
 {

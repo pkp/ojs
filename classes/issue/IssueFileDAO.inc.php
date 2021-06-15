@@ -20,8 +20,6 @@ namespace APP\issue;
 use PKP\db\DAO;
 use PKP\plugins\HookRegistry;
 
-use APP\issue\IssueFile;
-
 class IssueFileDAO extends DAO
 {
     /** @var array MIME types that can be displayed inline in a browser */

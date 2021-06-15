@@ -15,10 +15,10 @@
  * @brief Form to edit an issue's access settings
  */
 
-use PKP\form\Form;
+use APP\issue\Issue;
 
 use APP\template\TemplateManager;
-use APP\issue\Issue;
+use PKP\form\Form;
 
 class IssueAccessForm extends Form
 {

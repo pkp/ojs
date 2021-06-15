@@ -13,11 +13,11 @@
  * @brief Base form class for subscription create/edits.
  */
 
+use APP\subscription\Subscription;
+use APP\template\TemplateManager;
+
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
-
-use APP\template\TemplateManager;
-use APP\subscription\Subscription;
 
 class SubscriptionForm extends Form
 {

@@ -14,16 +14,16 @@
  *
  */
 
-use PKP\handler\APIHandler;
-use PKP\security\authorization\ContextRequiredPolicy;
-use PKP\security\authorization\ContextAccessPolicy;
-use PKP\security\Role;
-
+use APP\core\Services;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
-use APP\core\Services;
-
 use PKP\db\DAORegistry;
+
+use PKP\handler\APIHandler;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\authorization\ContextRequiredPolicy;
+
+use PKP\security\Role;
 
 class IssueHandler extends APIHandler
 {

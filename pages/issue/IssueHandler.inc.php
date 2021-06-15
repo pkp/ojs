@@ -13,22 +13,22 @@
  * @brief Handle requests for issue functions.
  */
 
-use PKP\submission\PKPSubmission;
-use PKP\security\authorization\ContextRequiredPolicy;
-use PKP\db\DAORegistry;
-
+use APP\core\Application;
+use APP\core\Services;
 use APP\facades\Repo;
+
 use APP\file\IssueFileManager;
 use APP\handler\Handler;
-use APP\payment\ojs\OJSPaymentManager;
+use APP\i18n\AppLocale;
+use APP\issue\IssueAction;
 
+use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
-use APP\i18n\AppLocale;
-use APP\core\Services;
-use APP\core\Application;
-use APP\issue\IssueAction;
+use PKP\db\DAORegistry;
+use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\submission\PKPSubmission;
 
 class IssueHandler extends Handler
 {

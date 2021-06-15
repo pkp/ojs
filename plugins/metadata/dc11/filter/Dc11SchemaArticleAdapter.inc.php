@@ -18,10 +18,10 @@
  *  a Submission object.
  */
 
-use PKP\metadata\MetadataDescription;
+use APP\submission\Submission;
 use PKP\metadata\MetadataDataObjectAdapter;
 
-use APP\submission\Submission;
+use PKP\metadata\MetadataDescription;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {

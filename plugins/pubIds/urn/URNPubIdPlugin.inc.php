@@ -14,12 +14,12 @@
  */
 
 
+use APP\article\ArticleGalley;
 use APP\facades\Repo;
-use APP\plugins\PubIdPlugin;
-use APP\publication\Publication;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
-use APP\article\ArticleGalley;
+use APP\plugins\PubIdPlugin;
+use APP\publication\Publication;
 
 use APP\template\TemplateManager;
 use PKP\linkAction\LinkAction;

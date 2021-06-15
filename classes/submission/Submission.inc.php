@@ -23,14 +23,12 @@
 
 namespace APP\submission;
 
-
-
-use PKP\submission\PKPSubmission;
-use PKP\db\DAORegistry;
-
 use APP\core\Application;
 use APP\core\Services;
+
 use APP\i18n\AppLocale;
+use PKP\db\DAORegistry;
+use PKP\submission\PKPSubmission;
 
 class Submission extends PKPSubmission
 {

@@ -13,9 +13,9 @@
  * @brief Form for journal managers to modify announcement feed plugin settings
  */
 
-use PKP\form\Form;
-
 use APP\template\TemplateManager;
+
+use PKP\form\Form;
 
 class AnnouncementFeedSettingsForm extends Form
 {

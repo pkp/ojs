@@ -15,14 +15,14 @@
  * @brief Form to create or edit an issue
  */
 
+use APP\file\PublicFileManager;
+use APP\template\TemplateManager;
 use PKP\form\Form;
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 import('classes.issue.Issue'); // Bring in constants
 
-use APP\template\TemplateManager;
-use APP\file\PublicFileManager;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 class IssueForm extends Form
 {

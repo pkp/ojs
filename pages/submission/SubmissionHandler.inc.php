@@ -15,8 +15,6 @@
 
 use PKP\security\Role;
 
-use APP\handler\Handler;
-
 import('lib.pkp.pages.submission.PKPSubmissionHandler');
 
 class SubmissionHandler extends PKPSubmissionHandler

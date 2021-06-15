@@ -15,11 +15,11 @@
 
 namespace APP\tasks;
 
-use PKP\scheduledTask\ScheduledTask;
-use PKP\mail\MailTemplate;
-use PKP\db\DAORegistry;
-
 use APP\i18n\AppLocale;
+use PKP\db\DAORegistry;
+use PKP\mail\MailTemplate;
+
+use PKP\scheduledTask\ScheduledTask;
 
 class SubscriptionExpiryReminder extends ScheduledTask
 {

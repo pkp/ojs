@@ -17,15 +17,14 @@
 
 namespace APP\journal;
 
-use PKP\submission\PKPSubmission;
-use PKP\context\PKPSectionDAO;
-use PKP\cache\CacheManager;
-use PKP\plugins\HookRegistry;
-use PKP\db\DAORegistry;
-use PKP\db\DAOResultFactory;
 use APP\core\Services;
 use APP\facades\Repo;
-use APP\journal\Section;
+use PKP\cache\CacheManager;
+use PKP\context\PKPSectionDAO;
+use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
+use PKP\plugins\HookRegistry;
+use PKP\submission\PKPSubmission;
 
 class SectionDAO extends PKPSectionDAO
 {

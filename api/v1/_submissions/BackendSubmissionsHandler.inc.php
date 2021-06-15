@@ -15,8 +15,8 @@
  */
 
 use APP\payment\ojs\OJSPaymentManager;
-use PKP\security\Role;
 use APP\submission\Collector;
+use PKP\security\Role;
 
 import('lib.pkp.api.v1._submissions.PKPBackendSubmissionsHandler');
 

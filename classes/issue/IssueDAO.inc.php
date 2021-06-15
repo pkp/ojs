@@ -17,16 +17,15 @@
 
 namespace APP\issue;
 
-use PKP\submission\PKPSubmission;
-use PKP\plugins\PKPPubIdPluginDAO;
+use APP\file\IssueFileManager;
+use APP\file\PublicFileManager;
+use PKP\cache\CacheManager;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\plugins\HookRegistry;
-use PKP\cache\CacheManager;
 
-use APP\file\PublicFileManager;
-use APP\file\IssueFileManager;
-use APP\issue\Issue;
+use PKP\plugins\PKPPubIdPluginDAO;
+use PKP\submission\PKPSubmission;
 
 class IssueDAO extends \PKP\db\DAO implements PKPPubIdPluginDAO
 {

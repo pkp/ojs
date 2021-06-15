@@ -15,7 +15,7 @@
 
 import('lib.pkp.pages.about.AboutContextHandler');
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class AboutHandler extends AboutContextHandler
 {

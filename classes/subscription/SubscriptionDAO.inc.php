@@ -17,13 +17,10 @@
 
 namespace APP\subscription;
 
-use PKP\identity\Identity;
-use PKP\user\UserDAO;
 use PKP\db\DAORegistry;
+use PKP\identity\Identity;
 use PKP\plugins\HookRegistry;
-
-use APP\subscription\Subscription;
-use APP\subscription\SubscriptionType;
+use PKP\user\UserDAO;
 
 abstract class SubscriptionDAO extends \PKP\db\DAO
 {

@@ -17,21 +17,21 @@ namespace APP\install;
 
 use APP\core\Application;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\file\PublicFileManager;
+
+use APP\template\TemplateManager;
 use APP\template\TemplateManager;
 use Illuminate\Support\Facades\DB;
-
+use PKP\db\DAORegistry;
 use PKP\db\DAORegistry;
 use PKP\file\FileManager;
+
 use PKP\identity\Identity;
 use PKP\install\Installer;
-use PKP\db\DAORegistry;
 use PKP\security\Role;
-
-use APP\file\PublicFileManager;
-use APP\core\Application;
-use APP\template\TemplateManager;
 use PKP\submission\SubmissionFile;
 
 class Upgrade extends Installer

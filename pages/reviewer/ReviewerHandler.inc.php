@@ -13,10 +13,10 @@
  * @brief Handle requests for reviewer functions.
  */
 
-use PKP\security\authorization\SubmissionAccessPolicy;
-use PKP\security\Role;
-
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
+use PKP\security\authorization\SubmissionAccessPolicy;
+
+use PKP\security\Role;
 
 // FIXME: Add namespacing
 import('lib.pkp.pages.reviewer.PKPReviewerHandler');

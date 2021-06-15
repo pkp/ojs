@@ -17,15 +17,15 @@ import('controllers.grid.subscriptions.SubscriptionTypesGridCellProvider');
 import('controllers.grid.subscriptions.SubscriptionTypesGridRow');
 import('controllers.grid.subscriptions.SubscriptionTypeForm');
 
+use APP\notification\NotificationManager;
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
+use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\core\JSONMessage;
 use PKP\notification\PKPNotification;
-use PKP\controllers\grid\GridHandler;
-use PKP\controllers\grid\GridColumn;
-use PKP\security\Role;
 
-use APP\notification\NotificationManager;
+use PKP\security\Role;
 
 class SubscriptionTypesGridHandler extends GridHandler
 {

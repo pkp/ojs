@@ -13,15 +13,15 @@
  * @brief Handle section grid requests.
  */
 
+use APP\notification\NotificationManager;
 use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
-use PKP\security\Role;
+use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\core\JSONMessage;
 use PKP\notification\PKPNotification;
 
-use APP\notification\NotificationManager;
+use PKP\security\Role;
 
 import('lib.pkp.controllers.grid.settings.SetupGridHandler');
 import('controllers.grid.settings.sections.SectionGridRow');

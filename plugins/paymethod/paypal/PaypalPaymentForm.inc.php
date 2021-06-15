@@ -13,9 +13,9 @@
  *
  */
 
-use PKP\form\Form;
+use APP\template\TemplateManager;
 
-use \APP\template\TemplateManager;
+use PKP\form\Form;
 
 class PaypalPaymentForm extends Form
 {

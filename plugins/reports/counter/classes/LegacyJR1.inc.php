@@ -12,9 +12,9 @@
  * @brief The Legacy COUNTER JR1 (r3) report
  */
 
-use PKP\statistics\PKPStatisticsHelper;
-
 use APP\template\TemplateManager;
+
+use PKP\statistics\PKPStatisticsHelper;
 
 class LegacyJR1
 {

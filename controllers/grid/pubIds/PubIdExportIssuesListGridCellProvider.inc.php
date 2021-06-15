@@ -16,8 +16,8 @@
 use PKP\controllers\grid\DataObjectGridCellProvider;
 use PKP\controllers\grid\GridHandler;
 use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\RedirectAction;
 use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\request\RedirectAction;
 
 class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider
 {

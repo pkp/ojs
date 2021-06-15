@@ -13,11 +13,11 @@
  * @brief Form class for user purchase of individual subscription.
  */
 
-use PKP\form\Form;
-
-use APP\template\TemplateManager;
 use APP\payment\ojs\OJSPaymentManager;
+
 use APP\subscription\Subscription;
+use APP\template\TemplateManager;
+use PKP\form\Form;
 
 class UserIndividualSubscriptionForm extends Form
 {

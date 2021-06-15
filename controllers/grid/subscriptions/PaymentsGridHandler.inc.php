@@ -13,8 +13,8 @@
  * @brief Handle payment grid requests.
  */
 
-use PKP\controllers\grid\GridHandler;
 use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
 use PKP\security\Role;
 
 import('controllers.grid.subscriptions.PaymentsGridCellProvider');

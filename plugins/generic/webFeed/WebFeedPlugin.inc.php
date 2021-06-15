@@ -13,16 +13,15 @@
  * @brief Web Feeds plugin class
  */
 
+use APP\core\Application;
+use APP\notification\NotificationManager;
 use PKP\core\JSONMessage;
+use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
+
 use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
-use PKP\linkAction\LinkAction;
-
-use APP\template\TemplateManager;
-use APP\notification\NotificationManager;
-use APP\core\Application;
 
 class WebFeedPlugin extends GenericPlugin
 {
