@@ -13,10 +13,10 @@
  * @brief Form for journal managers to create/edit subscription types.
  */
 
-use PKP\form\Form;
+use APP\subscription\SubscriptionType;
 
 use APP\template\TemplateManager;
-use APP\subscription\SubscriptionType;
+use PKP\form\Form;
 
 class SubscriptionTypeForm extends Form
 {

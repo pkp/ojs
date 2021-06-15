@@ -17,15 +17,10 @@
 
 namespace APP\subscription;
 
-use PKP\db\DAOResultFactory;
-use PKP\db\DAORegistry;
 use PKP\core\Core;
+use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
 use PKP\plugins\HookRegistry;
-
-use APP\subscription\SubscriptionDAO;
-use APP\subscription\IndividualSubscription;
-use APP\subscription\Subscription;
-use APP\subscription\SubscriptionType;
 
 class IndividualSubscriptionDAO extends SubscriptionDAO
 {

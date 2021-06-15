@@ -13,11 +13,11 @@
  * @brief Form for journal managers to setup URN plugin
  */
 
+use APP\template\TemplateManager;
 use PKP\form\Form;
-use PKP\linkAction\request\RemoteActionConfirmationModal;
 use PKP\linkAction\LinkAction;
 
-use APP\template\TemplateManager;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 class URNSettingsForm extends Form
 {

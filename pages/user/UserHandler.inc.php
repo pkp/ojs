@@ -15,9 +15,9 @@
 
 import('lib.pkp.pages.user.PKPUserHandler');
 
-use APP\template\TemplateManager;
-use APP\payment\ojs\OJSPaymentManager;
 use APP\journal\Journal;
+use APP\payment\ojs\OJSPaymentManager;
+use APP\template\TemplateManager;
 
 class UserHandler extends PKPUserHandler
 {

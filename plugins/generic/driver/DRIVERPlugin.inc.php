@@ -21,8 +21,8 @@ define('DRIVER_ACCESS_EMBARGOED', 2);
 define('DRIVER_ACCESS_DELAYED', 3);
 define('DRIVER_ACCESS_RESTRICTED', 4);
 
-use PKP\plugins\GenericPlugin;
 use PKP\db\DAORegistry;
+use PKP\plugins\GenericPlugin;
 use PKP\plugins\HookRegistry;
 
 class DRIVERPlugin extends GenericPlugin

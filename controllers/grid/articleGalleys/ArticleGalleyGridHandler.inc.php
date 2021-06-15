@@ -13,17 +13,17 @@
  * @brief Handle article galley grid requests.
  */
 
-use PKP\controllers\grid\GridHandler;
+use APP\notification\NotificationManager;
+use APP\template\TemplateManager;
 use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
+use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\core\JSONMessage;
-use PKP\submission\PKPSubmission;
 use PKP\notification\PKPNotification;
-use PKP\security\Role;
 
-use APP\template\TemplateManager;
-use APP\notification\NotificationManager;
+use PKP\security\Role;
+use PKP\submission\PKPSubmission;
 
 class ArticleGalleyGridHandler extends GridHandler
 {

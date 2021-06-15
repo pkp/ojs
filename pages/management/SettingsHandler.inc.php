@@ -16,9 +16,9 @@
 // Import the base ManagementHandler.
 import('lib.pkp.pages.management.ManagementHandler');
 
-use PKP\security\Role;
-
 use APP\template\TemplateManager;
+
+use PKP\security\Role;
 
 class SettingsHandler extends ManagementHandler
 {

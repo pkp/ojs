@@ -13,12 +13,12 @@
  * @brief Form class for user purchase of institutional subscription.
  */
 
-use PKP\form\Form;
-
-use APP\template\TemplateManager;
 use APP\payment\ojs\OJSPaymentManager;
+
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\Subscription;
+use APP\template\TemplateManager;
+use PKP\form\Form;
 
 class UserInstitutionalSubscriptionForm extends Form
 {

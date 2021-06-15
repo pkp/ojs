@@ -13,12 +13,12 @@
  * @brief Handle requests for payment management.
  */
 
+use APP\handler\Handler;
+use APP\notification\NotificationManager;
+
+use APP\template\TemplateManager;
 use PKP\core\JSONMessage;
 use PKP\security\Role;
-
-use APP\handler\Handler;
-use APP\template\TemplateManager;
-use APP\notification\NotificationManager;
 
 class PaymentsHandler extends Handler
 {

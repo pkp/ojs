@@ -15,10 +15,10 @@
 
 import('lib.pkp.controllers.tab.pubIds.form.PKPPublicIdentifiersForm');
 
-use APP\template\TemplateManager;
+use APP\article\ArticleGalley;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
-use APP\article\ArticleGalley;
+use APP\template\TemplateManager;
 
 class PublicIdentifiersForm extends PKPPublicIdentifiersForm
 {

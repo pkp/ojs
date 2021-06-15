@@ -17,7 +17,7 @@
 
 namespace APP\article;
 
-use \PKP\submission\PKPAuthor;
+use PKP\submission\PKPAuthor;
 
 class Author extends PKPAuthor
 {

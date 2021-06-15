@@ -22,11 +22,10 @@
 
 namespace APP\issue;
 
-use PKP\core\DAORegistry;
-
-use APP\issue\IssueFile;
-use APP\i18n\AppLocale;
 use APP\core\Application;
+
+use APP\i18n\AppLocale;
+use PKP\core\DAORegistry;
 
 class IssueGalley extends IssueFile
 {

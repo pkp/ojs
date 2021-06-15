@@ -22,12 +22,12 @@
 
 namespace APP\issue;
 
-use PKP\core\Core;
-use PKP\i18n\PKPLocale;
-use PKP\db\DAORegistry;
-
 use APP\file\PublicFileManager;
 use APP\i18n\AppLocale;
+use PKP\core\Core;
+
+use PKP\db\DAORegistry;
+use PKP\i18n\PKPLocale;
 
 class Issue extends \PKP\core\DataObject
 {

@@ -16,12 +16,12 @@
 // Import the base Handler.
 import('lib.pkp.controllers.tab.workflow.PKPWorkflowTabHandler');
 
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\AjaxModal;
-use PKP\notification\PKPNotification;
-
 use APP\notification\Notification;
 use APP\template\TemplateManager;
+use PKP\linkAction\LinkAction;
+
+use PKP\linkAction\request\AjaxModal;
+use PKP\notification\PKPNotification;
 
 class WorkflowTabHandler extends PKPWorkflowTabHandler
 {

@@ -15,16 +15,16 @@
 
 namespace APP\services;
 
-use PKP\file\TemporaryFileManager;
-use PKP\db\DAORegistry;
-use PKP\config\Config;
-use PKP\plugins\HookRegistry;
+use APP\article\ArticleTombstoneManager;
+use APP\core\Application;
+use APP\core\Services;
+use APP\facades\Repo;
 
 use APP\file\PublicFileManager;
-use APP\core\Services;
-use APP\core\Application;
-use APP\article\ArticleTombstoneManager;
-use APP\facades\Repo;
+use PKP\config\Config;
+use PKP\db\DAORegistry;
+use PKP\file\TemporaryFileManager;
+use PKP\plugins\HookRegistry;
 
 class ContextService extends \PKP\services\PKPContextService
 {

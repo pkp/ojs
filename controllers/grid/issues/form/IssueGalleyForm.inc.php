@@ -15,10 +15,10 @@
  * @brief Issue galley editing form.
  */
 
-use PKP\form\Form;
+use APP\file\IssueFileManager;
 
 use APP\template\TemplateManager;
-use APP\file\IssueFileManager;
+use PKP\form\Form;
 
 class IssueGalleyForm extends Form
 {

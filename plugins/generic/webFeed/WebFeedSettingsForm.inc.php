@@ -13,9 +13,9 @@
  * @brief Form for managers to modify web feeds plugin settings
  */
 
-use PKP\form\Form;
-
 use APP\template\TemplateManager;
+
+use PKP\form\Form;
 
 class WebFeedSettingsForm extends Form
 {

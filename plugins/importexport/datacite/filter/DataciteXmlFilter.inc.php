@@ -13,11 +13,11 @@
  * @brief Class that converts an Issue to a DataCite XML document.
  */
 
+use APP\article\ArticleGalley;
 use APP\facades\Repo;
+use APP\issue\Issue;
 use APP\submission\Submission;
 use APP\workflow\EditorDecisionActionsManager;
-use APP\issue\Issue;
-use APP\article\ArticleGalley;
 
 // Title types
 define('DATACITE_TITLETYPE_TRANSLATED', 'TranslatedTitle');

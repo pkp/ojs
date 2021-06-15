@@ -17,10 +17,9 @@ namespace APP\issue;
 
 use PKP\file\PKPFile;
 
-
 class IssueFile extends PKPFile
 {
-/* File content type IDs */
+    /* File content type IDs */
     public const ISSUE_FILE_PUBLIC = 1;
 
     //

@@ -17,15 +17,15 @@ import('controllers.grid.subscriptions.SubscriptionsGridHandler');
 
 import('controllers.grid.subscriptions.InstitutionalSubscriptionForm');
 
-use PKP\identity\Identity;
-use PKP\core\JSONMessage;
-use PKP\user\UserDAO;
-use PKP\notification\PKPNotification;
-use PKP\controllers\grid\GridColumn;
-
 use APP\notification\NotificationManager;
 use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\SubscriptionDAO;
+use PKP\controllers\grid\GridColumn;
+use PKP\core\JSONMessage;
+
+use PKP\identity\Identity;
+use PKP\notification\PKPNotification;
+use PKP\user\UserDAO;
 
 class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
 {

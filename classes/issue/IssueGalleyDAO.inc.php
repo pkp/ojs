@@ -17,10 +17,9 @@
 
 namespace APP\issue;
 
-use PKP\plugins\HookRegistry;
-
-use APP\issue\IssueGalley;
 use APP\file\IssueFileManager;
+
+use PKP\plugins\HookRegistry;
 
 class IssueGalleyDAO extends \PKP\db\DAO
 {

@@ -13,13 +13,13 @@
  * @brief Grid cell provider for the TOC (Table of Contents) category grid
  */
 
-use PKP\controllers\grid\GridCellProvider;
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\AjaxAction;
-use PKP\controllers\grid\GridHandler;
-use PKP\controllers\grid\GridColumn;
-
 use APP\submission\Submission;
+use PKP\controllers\grid\GridCellProvider;
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
+use PKP\linkAction\LinkAction;
+
+use PKP\linkAction\request\AjaxAction;
 
 class TocGridCellProvider extends GridCellProvider
 {

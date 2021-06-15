@@ -15,11 +15,11 @@
 
 import('lib.pkp.pages.workflow.PKPWorkflowHandler');
 
+use APP\file\PublicFileManager;
+use APP\template\TemplateManager;
+
 use PKP\notification\PKPNotification;
 use PKP\security\Role;
-
-use APP\template\TemplateManager;
-use APP\file\PublicFileManager;
 
 class WorkflowHandler extends PKPWorkflowHandler
 {

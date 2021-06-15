@@ -13,11 +13,11 @@
  * @brief Inject Dublin Core meta tags into article views to facilitate indexing.
  */
 
-use PKP\plugins\GenericPlugin;
-use PKP\plugins\HookRegistry;
-
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\HookRegistry;
 
 class DublinCoreMetaPlugin extends GenericPlugin
 {

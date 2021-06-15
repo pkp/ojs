@@ -29,7 +29,6 @@ use PKP\services\interfaces\EntityPropertyInterface;
 use PKP\services\interfaces\EntityReadInterface;
 use PKP\services\PKPSchemaService;
 
-
 class IssueService implements EntityPropertyInterface, EntityReadInterface
 {
     /**

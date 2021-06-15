@@ -15,8 +15,8 @@
 
 use APP\workflow\EditorDecisionActionsManager;
 use PKP\db\DAORegistry;
-use PKP\security\Role;
 use PKP\plugins\ReportPlugin;
+use PKP\security\Role;
 
 use PKP\submission\PKPSubmission;
 

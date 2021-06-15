@@ -13,10 +13,10 @@
  * @brief Manual payment plugin class
  */
 
-use PKP\mail\MailTemplate;
+use APP\template\TemplateManager;
 use PKP\form\Form;
 
-use APP\template\TemplateManager;
+use PKP\mail\MailTemplate;
 
 import('lib.pkp.classes.plugins.PaymethodPlugin');
 

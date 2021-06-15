@@ -15,10 +15,9 @@
  * @brief Article galley editing form.
  */
 
-use PKP\form\Form;
-
 use APP\template\TemplateManager;
-use APP\file\IssueFileManager;
+
+use PKP\form\Form;
 
 class ArticleGalleyForm extends Form
 {

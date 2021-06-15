@@ -17,8 +17,6 @@ import('lib.pkp.classes.controllers.grid.GridRow');
 
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
-use PKP\linkAction\request\RedirectConfirmationModal;
-use PKP\linkAction\request\JsEventConfirmationModal;
 
 class SubscriptionsGridRow extends GridRow
 {

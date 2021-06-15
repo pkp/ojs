@@ -18,8 +18,8 @@ namespace APP\plugins;
 use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
-use APP\notification\NotificationManager;
 use APP\issue\Issue;
+use APP\notification\NotificationManager;
 
 use APP\submission\Submission;
 use PKP\core\JSONMessage;

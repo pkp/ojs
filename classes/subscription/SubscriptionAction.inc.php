@@ -15,11 +15,11 @@
 
 namespace APP\subscription;
 
-use PKP\mail\MailTemplate;
-use PKP\notification\PKPNotification;
-use PKP\db\DAORegistry;
-
 use APP\notification\NotificationManager;
+use PKP\db\DAORegistry;
+use PKP\mail\MailTemplate;
+
+use PKP\notification\PKPNotification;
 
 class SubscriptionAction
 {

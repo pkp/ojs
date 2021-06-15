@@ -18,12 +18,12 @@
 namespace APP\issue;
 
 use APP\facades\Repo;
-use PKP\plugins\HookRegistry;
-use PKP\submission\PKPSubmission;
-use PKP\security\Role;
-use PKP\db\DAORegistry;
-
 use APP\subscription\Subscription;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
+use PKP\security\Role;
+
+use PKP\submission\PKPSubmission;
 
 class IssueAction
 {

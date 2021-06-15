@@ -13,8 +13,8 @@
  * @brief Default theme
  */
 
-use APP\i18n\AppLocale;
 use APP\core\Application;
+use APP\i18n\AppLocale;
 
 class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 {

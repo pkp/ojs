@@ -15,9 +15,9 @@
 
 import('lib.pkp.pages.index.PKPIndexHandler');
 
-use PKP\db\DAORegistry;
-
 use APP\template\TemplateManager;
+
+use PKP\db\DAORegistry;
 
 class IndexHandler extends PKPIndexHandler
 {

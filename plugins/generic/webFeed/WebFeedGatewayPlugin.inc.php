@@ -14,8 +14,8 @@
  *
  */
 
-use APP\template\TemplateManager;
 use APP\facades\Repo;
+use APP\template\TemplateManager;
 use PKP\submission\PKPSubmission;
 
 class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin

@@ -14,11 +14,11 @@
  *   publication
  */
 
-use PKP\core\JSONMessage;
-use PKP\security\Role;
-
 use APP\handler\Handler;
 use APP\template\TemplateManager;
+
+use PKP\core\JSONMessage;
+use PKP\security\Role;
 
 class AssignToIssueHandler extends Handler
 {

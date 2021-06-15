@@ -13,9 +13,9 @@
  * @brief Class that converts a Article to a PubMed XML document.
  */
 
-use PKP\filter\PersistableFilter;
-
 use APP\workflow\EditorDecisionActionsManager;
+
+use PKP\filter\PersistableFilter;
 
 class ArticlePubMedXmlFilter extends PersistableFilter
 {

@@ -15,13 +15,13 @@
 
 namespace APP\article;
 
-use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
-use PKP\config\Config;
-
 use APP\facades\Repo;
 use APP\submission\Submission;
+use PKP\config\Config;
+
 use PKP\context\Context;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
 
 class ArticleTombstoneManager
 {

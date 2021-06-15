@@ -13,14 +13,15 @@
  * @brief Class for HtmlArticleGalley plugin
  */
 
-use PKP\submission\SubmissionFile;
-use PKP\plugins\HookRegistry;
-import('lib.pkp.classes.plugins.GenericPlugin');
-
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 
+import('lib.pkp.classes.plugins.GenericPlugin');
+
 use APP\template\TemplateManager;
+use PKP\plugins\HookRegistry;
+
+use PKP\submission\SubmissionFile;
 
 class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
 {

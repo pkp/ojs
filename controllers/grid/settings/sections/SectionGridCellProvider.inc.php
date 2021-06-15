@@ -12,10 +12,10 @@
 * @brief Grid cell provider for section grid
  */
 
-use PKP\linkAction\LinkAction;
 use PKP\controllers\grid\GridCellProvider;
-use PKP\controllers\grid\GridHandler;
 use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
+use PKP\linkAction\LinkAction;
 
 class SectionGridCellProvider extends GridCellProvider
 {

@@ -13,10 +13,10 @@
  * @brief Handle subscriber selector grid requests.
  */
 
-use PKP\controllers\grid\GridHandler;
-use PKP\user\UserDAO;
 use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
 use PKP\security\Role;
+use PKP\user\UserDAO;
 
 import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
 

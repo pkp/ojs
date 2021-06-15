@@ -15,7 +15,7 @@
 
 use APP\handler\Handler;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class PaymentHandler extends Handler
 {

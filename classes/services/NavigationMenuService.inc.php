@@ -15,12 +15,12 @@
 
 namespace APP\services;
 
-use PKP\plugins\HookRegistry;
-use PKP\security\Validation;
-
-use APP\template\TemplateManager;
 use APP\core\Application;
 use APP\i18n\AppLocale;
+
+use APP\template\TemplateManager;
+use PKP\plugins\HookRegistry;
+use PKP\security\Validation;
 
 class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
 {

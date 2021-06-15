@@ -13,10 +13,10 @@
  * @brief Handle requests for issue management in publishing.
  */
 
-use PKP\security\Role;
-
 use APP\handler\Handler;
+
 use APP\template\TemplateManager;
+use PKP\security\Role;
 
 class ManageIssuesHandler extends Handler
 {
