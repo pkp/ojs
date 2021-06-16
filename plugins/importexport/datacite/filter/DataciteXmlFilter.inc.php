@@ -18,6 +18,8 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\submission\Submission;
 use APP\workflow\EditorDecisionActionsManager;
+use Illuminate\Support\Facades\App;
+use PKP\core\FileService;
 
 // Title types
 define('DATACITE_TITLETYPE_TRANSLATED', 'TranslatedTitle');
@@ -54,6 +56,8 @@ import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
 class DataciteXmlFilter extends NativeExportFilter
 {
+    protected FileService $fileService;
+
     /**
      * Constructor
      *
@@ -63,6 +67,7 @@ class DataciteXmlFilter extends NativeExportFilter
     {
         $this->setDisplayName('DataCite XML export');
         parent::__construct($filterGroup);
+        $this->fileService = App::make(FileService::class);
     }
 
     //
@@ -635,8 +640,8 @@ class DataciteXmlFilter extends NativeExportFilter
                 // The galley represents the article.
                 $pages = $publication->getData('pages');
                 $path = $galleyFile->getData('path');
-                $size = Services::get('file')->fs->getSize($path);
-                $sizes[] = Services::get('file')->getNiceFileSize($size);
+                $size = $this->fileService->fs->getSize($path);
+                $sizes[] = $this->fileService->getNiceFileSize($size);
                 break;
             case isset($article):
                 $pages = $publication->getData('pages');

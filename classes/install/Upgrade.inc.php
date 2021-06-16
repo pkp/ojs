@@ -475,10 +475,10 @@ class Upgrade extends Installer
                 );
                 $wrongFilePath = $submissionDir . '/' . $this->_fileStageToPath($revisionRow->file_stage) . '/' . $wrongFilename;
                 $newFilePath = $submissionDir . '/' . $this->_fileStageToPath(SubmissionFile::SUBMISSION_FILE_REVIEW_ATTACHMENT) . '/' . $newFilename;
-                if (Services::get('file')->fs->has($newFilePath)) {
+                if ($this->fileService->fs->has($newFilePath)) {
                     continue;
                 }
-                if (!Services::get('file')->fs->rename($wrongFilePath, $newFilePath)) {
+                if (!$this->fileService->fs->rename($wrongFilePath, $newFilePath)) {
                     error_log("Unable to move \"${wrongFilePath}\" to \"${newFilePath}\".");
                 }
             }
@@ -706,10 +706,10 @@ class Upgrade extends Installer
                         $timestamp = date('Ymd', strtotime($row->date_uploaded));
                         $wrongFileName = $submissionId . '-' . '1' . '-' . $row->file_id . '-' . $row->revision . '-' . $row->file_stage . '-' . $timestamp . '.' . strtolower_codesafe($fileManager->parseFileExtension($row->original_file_name));
                         $sourceFilename = $submissionDir . '/' . $this->_fileStageToPath($row->file_stage) . '/' . $wrongFileName;
-                        if (Services::get('file')->fs->has($targetFilename)) {
+                        if ($this->fileService->fs->has($targetFilename)) {
                             continue;
                         }
-                        if (!Services::get('file')->fs->rename($sourceFilename, $targetFilename)) {
+                        if (!$this->fileService->fs->rename($sourceFilename, $targetFilename)) {
                             error_log("Unable to move \"${sourceFilename}\" to \"${targetFilename}\".");
                         }
                     }
@@ -755,7 +755,7 @@ class Upgrade extends Installer
                 $submissionDir = Services::get('submissionFile')->getSubmissionDir($journal->getId(), $row->submission_id);
                 $sourceFilename = $submissionDir . '/public' . '/' . $wrongServerName;
                 $targetFilename = $submissionDir . '/submission/proof' . '/' . $newServerName;
-                if (!Services::get('file')->fs->rename($sourceFilename, $targetFilename)) {
+                if (!$this->fileService->fs->rename($sourceFilename, $targetFilename)) {
                     error_log("Unable to move \"${sourceFilename}\" to \"${targetFilename}\".");
                 }
             }
@@ -805,7 +805,7 @@ class Upgrade extends Installer
             );
             $oldFileName = $submissionDir . '/' . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedOldFilename;
             $newFileName = $submissionDir . '/' . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedNewFilename;
-            if (!Services::get('file')->fs->rename($oldFileName, $newFileName)) {
+            if (!$this->fileService->fs->rename($oldFileName, $newFileName)) {
                 error_log("Unable to move \"${oldFileName}\" to \"${newFileName}\".");
             }
             DB::table('submission_files')

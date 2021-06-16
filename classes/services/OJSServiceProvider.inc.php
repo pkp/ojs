@@ -15,11 +15,12 @@
 
 namespace APP\services;
 
+use Illuminate\Support\Facades\App;
 use Pimple\Container;
 
+use PKP\core\FileService;
 use PKP\services\PKPAuthorService;
 use PKP\services\PKPEmailTemplateService;
-use PKP\services\PKPFileService;
 use PKP\services\PKPSchemaService;
 use PKP\services\PKPSiteService;
 use PKP\services\PKPUserService;
@@ -36,11 +37,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
         // Author service
         $pimple['author'] = function () {
             return new PKPAuthorService();
-        };
-
-        // File service
-        $pimple['file'] = function () {
-            return new PKPFileService();
         };
 
         // Issue service
@@ -80,7 +76,9 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
 
         // Submission file service
         $pimple['submissionFile'] = function () {
-            return new SubmissionFileService();
+            return new SubmissionFileService(
+                App::make(FileService::class)
+            );
         };
 
         // Email Templates service
