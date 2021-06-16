@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-15 16:20+0000\n"
+"PO-Revision-Date: 2021-06-17 09:48+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -2111,3 +2111,109 @@ msgstr ""
 "o arquivo de configuración. Antes de intentar utilizar o sistema, abra o "
 "arquivo <tt>config.inc.php</tt> nun editor de textos axeitado e substitúa os "
 "contidos polos datos que aparecen no campo de texto seguinte.</p>"
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} foi asignado/a para o envío de corrección de orixinais "
+"{$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} rematou a corrección de orixinais final do envío "
+"{$submissionId}."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} concluíu a corrección de orixinais inicial do envío "
+"{$submissionId}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Seleccionouse o arquivo de corrección de orixinais por defecto."
+
+msgid "log.copyedit.initiate"
+msgstr "{$copyeditorName} comezou a revisión do envío {$submissionId}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"{$editorName} rexistrou unha recomendación editorial para o artigo "
+"{$submissionId}: ({$decision})."
+
+msgid "log.editor.decision"
+msgstr ""
+"{$editorName} rexistrou unha decisión do editor/a ({$decision}) para o "
+"artigo {$submissionId}."
+
+msgid "log.review.reviewerFile"
+msgstr "Cargouse un arquivo do revisor/a."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"O editor/a {$userName} cargou un arquivo de revisión para a rolda {$round} "
+"do envío {$submissionId} en nome do revisor/a, {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} aceptou en nome de {$reviewerName} a rolda {$round} de revisión "
+"para o envío {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} rexeitou en nome de {$reviewerName} a rolda {$round} de revisión "
+"para o envío {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} aceptou a rolda {$round} de revisión para o envío "
+"{$submissionId}."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} rexeitou a rolda {$round} de revisión para o envío "
+"{$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "O envío {$submissionId} volveuse mandar para a súa revisión."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"En nome do revisor/a, {$reviewerName}, o editor/a {$editorName} determinou a "
+"recomendación para a rolda {$round} de revisión do envío {$submissionId}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Definiuse a recomendación para a rolda {$round} de revisión do envío "
+"{$submissionId} por {$reviewerName}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Determinouse a data de vencemento para a rolda {$round} de revisión do envío "
+"{$submissionId} asignada a {$reviewerName}: {$dueDate}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} foi clasificado para a rolda {$round} de revisión do envío "
+"{$submissionId}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"Iniciouse a rolda {$round} de revisión asignada a {$reviewerName} para o "
+"envío {$submissionId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"A {$reviewerName} non se lle asignou a revisión do envío {$submissionId} "
+"para a rolda de revisión {$round}."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} revisou o artigo {$submissionId}. O novo identificador do "
+"arquivo é {$fileId}."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Hai unha nova versión de OJS dispoñible! Actualmente está utilizando OJS "
+"{$currentVersion}. A versión máis recente é OJS {$latestVersion}. Contacte "
+"co administrador/a do sitio web ({$siteAdminName}, <a href=\""
+"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) para notificarlle a nova "
+"versión. Poderá atopar máis información <a href=\"http://pkp.sfu.ca/"
+"ojs_download\" target=\"_new\">aquí</a>."
