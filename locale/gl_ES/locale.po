@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-17 09:48+0000\n"
+"PO-Revision-Date: 2021-06-17 11:12+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -2217,3 +2217,15 @@ msgstr ""
 "mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) para notificarlle a nova "
 "versión. Poderá atopar máis información <a href=\"http://pkp.sfu.ca/"
 "ojs_download\" target=\"_new\">aquí</a>."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} foi asignado como responsable da maquetaxe do envío "
+"{$submissionId}."
+
+msgid "log.copyedit.authorFile"
+msgstr "Cargouse unha versión do arquivo do envío corrixida polo autor/a."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr ""
+"Cargouse unha versión do corrector/a de orixinais para o arquivo do envío."
