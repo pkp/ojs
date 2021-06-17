@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-17 11:12+0000\n"
+"PO-Revision-Date: 2021-06-18 10:03+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -2229,3 +2229,93 @@ msgstr "Cargouse unha versión do arquivo do envío corrixida polo autor/a."
 msgid "log.copyedit.copyeditorFile"
 msgstr ""
 "Cargouse unha versión do corrector/a de orixinais para o arquivo do envío."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Esperando galeradas."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Asignar un usuario/a para crear galeradas utilizando o enlace \"Engadir\" da "
+"listaxe de participantes."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Enviouse un novo artigo e cómpre asignarlle un editor/a."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Gardáronse os metadatos de publicación do número."
+
+msgid "notification.type.public"
+msgstr "Anuncios públicos"
+
+msgid "notification.type.userComment"
+msgstr "Un lector/a fixo un comentario sobre \"{$title}\""
+
+msgid "notification.type.submissions"
+msgstr "Eventos relacionados cos envíos"
+
+msgid "notification.type.submissionComment"
+msgstr "Un editor/a fixo un comentario sobre \"{$title}\"."
+
+msgid "notification.type.site"
+msgstr "Eventos do sitio"
+
+msgid "notification.type.reviewing"
+msgstr "Eventos de revisión"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Enviouse a revisión do formulario de avaliación para \"{$title}\"."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Creouse un novo anuncio."
+
+msgid "notification.type.issuePublished"
+msgstr "Publicouse un número."
+
+msgid "notification.type.galleyModified"
+msgstr "Modificouse unha galerada para \"{$title}\"."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Deixouse un comentario relativo á decisión editorial para \"{$title}\"."
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Enviouse un novo artigo: \"{$title}\"."
+
+msgid "notification.type.editing"
+msgstr "Eventos editoriais"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Artigo revisado por pares"
+
+msgid "log.imported"
+msgstr "{$userName} importou o artigo {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} enviou {$submissionId} para a planificación."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} asignou {$proofreaderName} para a corrección de probas do "
+"envío {$submissionId}."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} foi asignado como editor/a do envío {$submissionId}."
+
+msgid "log.editor.restored"
+msgstr "O envío {$submissionId} foi recolocado na fila de espera."
+
+msgid "log.editor.archived"
+msgstr "Arquivouse o envío {$submissionId}."
+
+msgid "log.editor.editorFile"
+msgstr "Cargouse unha versión do editor/a para este arquivo de envío."
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName} modificou os metadatos deste artigo."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} finalizou a maquetaxe para o envío {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} non foi asignado como responsable da maquetaxe do envío "
+"{$submissionId}."
