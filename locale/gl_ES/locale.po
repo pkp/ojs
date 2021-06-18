@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-18 10:03+0000\n"
+"PO-Revision-Date: 2021-06-18 11:01+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -2319,3 +2319,17 @@ msgid "log.layout.layoutEditorUnassigned"
 msgstr ""
 "{$editorName} non foi asignado como responsable da maquetaxe do envío "
 "{$submissionId}."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Solicitude de número non válida!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Intenta acceder a un artigo que non pertence á súa sección."
+
+msgid "user.authorization.noContext"
+msgstr "Non hai revistas neste contexto!"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Acceso denegado! Non foi asignado como corrector/a de orixinais para este "
+"artigo."
