@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-18 11:01+0000\n"
+"PO-Revision-Date: 2021-06-19 03:25+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -2333,3 +2333,72 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr ""
 "Acceso denegado! Non foi asignado como corrector/a de orixinais para este "
 "artigo."
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Cancelar a aceptación desta galerada.</p>"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Escolla a maneira de ordenar os artigos nesta categoría."
+
+msgid "catalog.sortBy"
+msgstr "Orde dos artigos"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} farase cargo do proceso de edición do artigo {$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Subscricións"
+
+msgid "editor.issues.futureIssues"
+msgstr "Próximos números"
+
+msgid "editor.issues.backIssues"
+msgstr "Números anteriores"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "A ruta proporcionada \"{$journalPath}\" non conduce a ningunha revista."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "A implementación da busca non permite a reindexación por revista."
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexando \"{$journalName}\""
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Aceptar esta galerada para a publicación.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Aprobación da galerada"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Á espera de aprobación"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Aprobado"
+
+msgid "article.view.interstitial"
+msgstr "Escolla un arquivo para descargar."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Ocultar outras revistas"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Rexistrarse noutras revistas"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Á espera de aprobación."
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Este envío está actualmente esperando a aprobación antes de que apareza no "
+"número."
+
+msgid "editor.navigation.issues"
+msgstr "Números"
+
+msgid "grid.action.createContext"
+msgstr "Crear unha nova revista"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Envío do corrector/a de orixinais non válido ou non solicitado!"
