@@ -22,6 +22,19 @@
 		<query>CREATE INDEX temp_submissions_s_id ON temp_submissions (submission_id)</query>
 		<query>CREATE TABLE temp_submission_galleys AS SELECT * FROM submission_galleys</query>
 		<query>CREATE INDEX temp_submission_galleys_s_id ON temp_submission_galleys (submission_id)</query>
+
+		<!--
+			temp_submission_galleys does not have an auto increment primary key when it is copied. When
+			moving supplementary files over to galleys, new entries are added to the table, so the table
+			needs to fully mimic the original table re: functionality.
+		 -->
+		<query driver="mysql,mysqli">ALTER TABLE temp_submission_galleys MODIFY COLUMN galley_id bigint NOT NULL AUTO_INCREMENT PRIMARY KEY;</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">CREATE SEQUENCE galleySeq INCREMENT 1 OWNED BY temp_submission_galleys.galley_id</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">SELECT setval('galleySeq', (SELECT max(galley_id) FROM temp_submission_galleys))</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">ALTER TABLE temp_submission_galleys ALTER column galley_id SET DEFAULT nextval('galleySeq')</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">ALTER TABLE temp_submission_galleys ALTER column galley_id SET NOT NULL</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">ALTER TABLE temp_submission_galleys ADD PRIMARY KEY (galley_id)</query>
+
 		<query>CREATE TABLE temp_published_submissions AS SELECT * FROM published_submissions</query>
 		<query>CREATE INDEX temp_published_submissions_s_id ON temp_published_submissions (submission_id)</query>
 		<query>CREATE TABLE temp_citations AS SELECT * FROM citations</query>

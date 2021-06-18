@@ -624,7 +624,7 @@ class Upgrade extends Installer {
 					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, assoc_object_type, assoc_object_id)
 					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, ag.submission_id, count(tr.metric), a.context_id, ' . ASSOC_TYPE_ISSUE . ', pa.issue_id
 					FROM usage_stats_temporary_records AS tr
-					LEFT JOIN submission_galleys AS ag ON ag.galley_id = tr.assoc_id
+					LEFT JOIN temp_submission_galleys AS ag ON ag.galley_id = tr.assoc_id
 					LEFT JOIN submissions AS a ON a.submission_id = ag.submission_id
 					LEFT JOIN published_submissions AS pa ON pa.submission_id = ag.submission_id
 					WHERE tr.load_id = ? AND tr.assoc_type = ? AND a.context_id IS NOT NULL AND pa.issue_id IS NOT NULL
@@ -1088,7 +1088,7 @@ class Upgrade extends Installer {
 
 				// Converted from DAO call to raw SQL because submission_id is no longer available post-schema sync.
 				$articleGalleyDao->update(
-					'INSERT INTO submission_galleys (locale, submission_id, remote_url, label) VALUES (?, ?, ?, ?)',
+					'INSERT INTO temp_submission_galleys (locale, submission_id, remote_url, label) VALUES (?, ?, ?, ?)',
 					array(
 						$article->getLocale(),
 						$article->getId(),
@@ -1101,7 +1101,7 @@ class Upgrade extends Installer {
 				// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
 				foreach ($extraRemoteGalleySettings as $name => $value) {
 					$submissionFileDao->update(
-						'INSERT INTO submission_galley_settings (galley_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
+						'INSERT INTO temp_submission_galley_settings (galley_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
 						array(
 							$galleyId,
 							$name,
@@ -1433,12 +1433,12 @@ class Upgrade extends Installer {
 				if ($article->getStatus() == STATUS_PUBLISHED) {
 					// Converted from DAO call to raw SQL because submission_id is no longer available post-schema sync.
 					$articleGalleyDao->update(
-						'INSERT INTO submission_galleys (locale, submission_id, file_id, label) VALUES (?, ?, ?, ?)',
+						'INSERT INTO temp_submission_galleys (locale, submission_id, file_id, label) VALUES (?, ?, ?, ?)',
 						array(
-							$article->getLocale(),
+							empty($article->getLocale()) ? AppLocale::getPrimaryLocale() : $article->getLocale(),
 							$article->getId(),
 							$submissionFile->getFileId(),
-							$submissionFile->getName($article->getLocale())
+							$submissionFile->getName(empty($article->getLocale()) ? AppLocale::getPrimaryLocale() : $article->getLocale())
 						)
 					);
 					$galleyId = $articleGalleyDao->getInsertId();
@@ -2337,7 +2337,7 @@ class Upgrade extends Installer {
 		$genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-		$result = $submissionFileDao->retrieve('SELECT df.file_id AS dependent_file_id, gf.file_id AS galley_file_id FROM submission_files df, submission_files gf, submission_html_galley_images i, submission_galleys g WHERE i.galley_id = g.galley_id AND g.file_id = gf.file_id AND i.file_id = df.file_id');
+		$result = $submissionFileDao->retrieve('SELECT df.file_id AS dependent_file_id, gf.file_id AS galley_file_id FROM submission_files df, submission_files gf, submission_html_galley_images i, temp_submission_galleys g WHERE i.galley_id = g.galley_id AND g.file_id = gf.file_id AND i.file_id = df.file_id');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['dependent_file_id']);
@@ -2675,7 +2675,7 @@ class Upgrade extends Installer {
 			'issue_galleys', 'issue_galley_settings', 'issue_settings', 'journal_settings', 'library_file_settings', 'metadata_description_settings',
 			'navigation_menu_item_assignment_settings', 'navigation_menu_item_settings', 'notification_settings', 'referral_settings',
 			'review_form_element_settings', 'review_form_settings', 'review_object_metadata_settings', 'review_object_type_settings', 'section_settings', 'site_settings',
-			'static_page_settings', 'submissions', 'submission_file_settings', 'submission_galleys', 'submission_galley_settings', 'submission_settings', 'subscription_type_settings',
+			'static_page_settings', 'submissions', 'submission_file_settings', 'temp_submission_galleys', 'submission_galley_settings', 'submission_settings', 'subscription_type_settings',
 			'user_group_settings', 'user_settings',
 		);
 		foreach ($dbTables as $dbTable) {
