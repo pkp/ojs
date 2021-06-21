@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-25 11:35+0000\n"
+"PO-Revision-Date: 2021-06-21 10:28+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "gl_ES/>\n"
@@ -13,3 +13,363 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "Acceso"
+
+msgid "manager.setup.categories"
+msgstr "Categorías"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Esta ligazón só se amosará cando un visitante inicie sesión."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Ligazón a unha páxina que describe as subscricións actuais e anteriores do "
+"visitante."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Ligazón a unha páxina que describe as subscricións dispoñibeis."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "O tipo de subscrición creouse correctamente."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Non se creou ningún tipo de subscrición."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Tipo de subscrición"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "É necesario un nome de tipo de subscrición."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Xa existe un tipo de subscrición con este nome."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Nome do tipo de subscrición"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Gardar e crear outro"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Use a caixa de verificación que se fornece."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Non fagas que este tipo de subscrición estea dispoñible publicamente nin "
+"sexa visible no sitio web.<br />(p. ex., no apartado Subscripcións da "
+"sección Acerca da revista)."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Opcións"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Use a caixa de verificación que se fornece."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"As subscricións requiren información da afiliación (por exemplo, dunha "
+"asociación, organización, consorcio, etc.)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Utiliza as opcións proporcionadas."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Institucional (os usuarios valídanse mediante dominio ou enderezo IP)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individual (os usuarios valídanse mediante o inicio de sesión)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Subscricións"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Seleccione un tipo de formato de subscrición válido."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "É necesario un formato de subscrición."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Formato"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "É necesaria unha duración."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "A duración debe ser un valor numérico positivo."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Número de meses que dura a subscrición (por exemplo, 12)."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Duración"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Utiliza as opcións proporcionadas."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Non caduca"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "meses (p. ex., 12)"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Exportar resultados dos Números"
+
+msgid "manager.payment.authorFees"
+msgstr "Cotas dos autores/as"
+
+msgid "manager.payment.amount"
+msgstr "Importe"
+
+msgid "manager.payment.addPayment"
+msgstr "Engadir un pagamento"
+
+msgid "manager.payment.action"
+msgstr "Acción"
+
+msgid "manager.managementPages"
+msgstr "Páxinas de administración"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Esta será a lingua predeterminada para o sitio web da revista."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Non hai ningunha lingua adicional dispoñible. Se quere utilizar outras "
+"linguas para esta revista, póñase en contacto co administrador/a do sitio."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Non se definiu ningún contacto principal para esta revista. Podes introducir "
+"un contacto principal na <a href=\"{$url}\">configuración da ravista</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Envíe unha copia do correo electrónico de confirmación de envío ao contacto "
+"principal desta revista."
+
+msgid "stats.publications.galleys"
+msgstr "Arquivos"
+
+msgid "stats.publications.abstracts"
+msgstr "Resumos"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} de {$total} artigos"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Total de visualizacións do arquivo por data"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Total de visualizacións do resumo por data"
+
+msgid "stats.publications.none"
+msgstr ""
+"Non se atoparon artigos con estatísticas de uso que coincidan con estes "
+"parámetros."
+
+msgid "stats.publications.details"
+msgstr "Detalles do artigo"
+
+msgid "stats.publicationStats"
+msgstr "Estatísticas do artigo"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Envíe unha copia ao contacto principal, identificado na configuración da "
+"revista."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Non se puideron atopar os obxectos especificados."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Falta o prefixo DOI para a revista  coa ruta {$path}."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Fallou a validación."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Validación realizada correctamente!"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Rexistro realizado correctamente!"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"O rexistro non foi correcto. O servidor de rexistro do DOI devolveu un erro: "
+"'{$param}'."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "O arquivo de entrada {$param} non se pode ler."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "O arquivo de saída {$param} non se pode editar."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "XML inválido:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Non se puideron converter os obxectos seleccionados."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Non hai obxectos seleccionados."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Validar o XML antes da exportación e rexistro."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Rexistrarse"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Marcar como rexistrado"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Exportar"
+
+msgid "plugins.importexport.common.action"
+msgstr "Acción"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Rexistrado"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Marcado como rexistrado"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Non depositado"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Calquera estado"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Calquera número"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Ten en conta que o contrasinal gardarase como texto plano, é dicir, non "
+"cifrado."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Contrasinal"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"Non hai ningún elemento publicable seleccionado para a asignación de DOI no "
+"complemento de identificador público DOI, polo que non hai posibilidade de "
+"depósito nin exportación neste complemento."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "O complemento non está completamente configurado."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Para empregar este complemento, vai á categoría de complementos \""
+"Identificador público\", activa e configura o complemento DOI e especifica "
+"alí un prefixo DOI válido."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Non se cumpren os requisitos do complemento"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Galeradas"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Números"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Artigos"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Configuración do complemento DOI"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Axustes"
+
+msgid "grid.genres.description"
+msgstr ""
+"Estes compoñentes úsanse con fins de nomeamento de arquivos e preséntanse "
+"nun menú despregable ao cargar ficheiros. Os xéneros designados como ## "
+"permiten ao usuario asociar o arquivo tanto coa presentación enteira 99Z ou "
+"cun compoñente determinado por número (por exemplo, 02)."
+
+msgid "grid.genres.title"
+msgstr "Compoñentes do artigo"
+
+msgid "grid.genres.title.short"
+msgstr "Compoñentes"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "O proceso non puido analizar as galeradas do número"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS pódese poñer a disposición dos usuarios en calquera dos idiomas "
+"compatibles. OJS tamén pode funcionar como un sistema multilingüe, "
+"proporcionando aos usuarios a posibilidade de alternar entre idiomas en cada "
+"páxina e permitindo que se introduzan determinados datos en varios idiomas "
+"adicionais. <br /> <br/> Se un idioma soportado por OJS non aparece na lista "
+"de abaixo, solicite ao administrador do sitio que instale o idioma desde a "
+"interface de administración do sitio. Para obter instrucións sobre como "
+"engadir soporte para novos idiomas, consulte a documentación de OJS."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Isto substituirá a configuración específica da revista que se establecera "
+"anteriormente para esta configuración local"
+
+msgid "manager.language.forms"
+msgstr "Formularios"
+
+msgid "manager.language.submissions"
+msgstr "Envíos"
+
+msgid "manager.language.ui"
+msgstr "Interface do usuario"
+
+msgid "manager.journalManagement"
+msgstr "Administración da revista"
+
+msgid "manager.files.note"
+msgstr ""
+"Nota: o explorador de arquivos é unha función avanzada que permite ver e "
+"manipular directamente os ficheiros e directorios asociados a unha revista."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Estás seguro de que queres restablecer todos os modelos de correo "
+"electrónico desta revista? Perderás as personalizacións que fixeras."
+
+msgid "manager.website.archiving"
+msgstr "Arquivar"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"A revista requirirá subscricións para acceder a algúns ou a todos os seus "
+"contidos."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "A revista proporcionará acceso aberto aos seus contidos."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS non se utilizará para publicar o contido da revista en liña."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Modo de publicación"
+
+msgid "manager.distribution.publication"
+msgstr "Publicación"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Usa a data de publicación do artigo"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Usa a data de publicación do número"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Escolla como se selecciona a data de copyright predeterminada para un "
+"artigo. Este valor predeterminado pode modificarse manualmente en cada caso. "
+"Si o seu modelo basease na publicación artigo a artigo non uses a data de "
+"publicación do número."
