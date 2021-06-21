@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-21 10:28+0000\n"
+"PO-Revision-Date: 2021-06-21 12:52+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "gl_ES/>\n"
@@ -373,3 +373,515 @@ msgstr ""
 "artigo. Este valor predeterminado pode modificarse manualmente en cada caso. "
 "Si o seu modelo basease na publicación artigo a artigo non uses a data de "
 "publicación do número."
+
+msgid "manager.payment.readerFees"
+msgstr "Cotas para os lectores/as"
+
+msgid "manager.payment.paymentType"
+msgstr "Tipo de pagamento"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Modos de pagamento da cota"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Desde esta pantalla pode configurar calquera dos complementos de modos de "
+"pagamento seguintes."
+
+msgid "manager.payment.paymentMethod"
+msgstr "Modo de pagamento"
+
+msgid "manager.payment.paymentId"
+msgstr "ID do pagamento"
+
+msgid "manager.payment.options.text"
+msgstr "Descrición do modo de pagamento"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Comprar o número"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Comprar o artigo"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Publicación do artigo"
+
+msgid "manager.payment.options.onlypdf"
+msgstr ""
+"Restrinxir o acceso unicamente á versión en PDF dos números e dos artigos"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Afiliación á asociación"
+
+msgid "manager.payment.options.feeName"
+msgstr "Nome da cota"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Descrición da cota"
+
+msgid "manager.payment.options.fee"
+msgstr "Cota"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Faga clic aquí para activar o complemento \"Pagamentos\". Debe cubrir o "
+"formulario que se mostra a continuación para configurar as opcións de "
+"pagamento. Teña en conta que os usuarios deben conectarse para poder "
+"efectuar pagamentos."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Está seguro de querer eliminar esta subscrición?"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Isto activará os pagamentos para as subscricións, cuxos tipos, cotas e "
+"duración son xestionados polo administrador/a (de subscricións)."
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Dominio"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Notas"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "O tipo de subscrición seleccionado require información de afiliación."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Insira información da afiliación se o tipo de subscrición require que os "
+"subscritores pertenzan a unha asociación ou organización."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Número de referencia"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Afiliación"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Use a caixa de verificación que se fornece."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Envía ao usuario/a un correo electrónico co seu nome de usuario/a e detalles "
+"da subscrición."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Selecciona un país válido."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Seleccione un usuario/a valido/a."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "É necesario un usuario/a."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Contacto"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Usuario/a"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Nota: Todos os cambios que se indican a continuación aplícanse ao perfil de "
+"sistema do usuario."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Selecciona unha data de finalización da subscrición válida."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Este é un tipo de subscrición que non caduca; por favor, non especifique "
+"unha data de finalización."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Este é un tipo de subscrición que non caduca; por favor, non especifique "
+"unha data de inicio."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "É necesaria unha data de fin da subscrición."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Data de fin"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Selecciona unha data de inicio da subscrición válida."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "É necesaria unha data de inicio da subscrición."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Data de inicio"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Selecciona un tipo de subscrición válido."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "É necesario un tipo de subscrición."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Tipo de subscrición"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Selecciona un estado de subscrición válido."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "É necesario un estado de subscrición."
+
+msgid "manager.subscriptions.form.status"
+msgstr "Estado"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Todos"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Co estado"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Editar"
+
+msgid "manager.subscriptions.edit"
+msgstr "Editar subscrición"
+
+msgid "manager.subscriptions.domain"
+msgstr "Dominio"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Data de inicio"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Data de inicio"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Data de fin"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Data de fin"
+
+msgid "manager.subscriptions.renew"
+msgstr "Renovar"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Crear"
+
+msgid "manager.subscriptions.create"
+msgstr "Crear unha nova subscrición"
+
+msgid "manager.subscriptions.summary"
+msgstr "Resumo de subscricións"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Seguro/a que queres eliminar esta subscrición?"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Seguro/a que queres renovar esta subscrición?"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Subscricións institucionais"
+
+msgid "manager.individualSubscriptions"
+msgstr "Subscricións individuais"
+
+msgid "manager.subscriptions"
+msgstr "Subscricións"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Insire un correo electrónico válido."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Estes datos de contacto aparecerán no apartado Subscricións  na sección "
+"Acerca da revista."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Xestor de subscricións"
+
+msgid "manager.payment.options"
+msgstr "Opcións"
+
+msgid "manager.payment.notFound"
+msgstr "Non se atopou"
+
+msgid "manager.payment.noPayments"
+msgstr "Sen pagamentos"
+
+msgid "manager.payment.generalOptions"
+msgstr "Opcións xerais"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"Os membros da asociación aparecerán na sección \"Sobre a revista\", baixo o "
+"apartado \"Políticas\"."
+
+msgid "manager.payment.generalFees"
+msgstr "Cotas xerais"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Todos os custos deben ser valores numéricos positivos (admítense decimais)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Opcións de pagamento de cotas"
+
+msgid "manager.payment.enable"
+msgstr "Activar"
+
+msgid "manager.payment.editSubscription"
+msgstr "Editar a subscrición"
+
+msgid "manager.payment.details"
+msgstr "Detalles"
+
+msgid "manager.payment.description"
+msgstr "Descrición"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS non efectúa conversións de moeda. Se acepta pagamentos polas "
+"subscricións, asegúrese de que a moeda da subscrición coincida coa  que se "
+"indica aquí."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Caduca despois do"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Descrición"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Selecciona unha moeda válida."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "É necesaria unha moeda."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Moeda"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Requírese un custo."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "O custo debe ser un valor numérico positivo."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Introduza un valor numérico (por exemplo, 40 ou 40,00) sen símbolo (€)."
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Custo"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Editar"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Editar o tipo de subscrición"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Vixencia"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Crear"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Crear un novo tipo de subscrición"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institucional"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individual"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Subscricións"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Custo"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Aviso! Esta acción tamén elimina tódalas subscricións con este tipo de "
+"subscrición. Seguro/a que queres continuar e eliminar este tipo de "
+"subscrición?"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"As opcións seleccionadas, xunto coa descrición e as cotas correspondentes ("
+"que se poden editar máis abaixo), aparecen no paso 1 do proceso de envío, na "
+"páxina Sobre a revista, sección Envíos, así como nos pasos en que se require "
+"facer pagamentos."
+
+msgid "manager.subscriptionTypes"
+msgstr "Tipos de subscrición"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Nome da institución"
+
+msgid "manager.subscriptions.contact"
+msgstr "Nome do contacto"
+
+msgid "manager.subscriptions.user"
+msgstr "Usuario/a"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Tipo de subscrición"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "A subscrición creouse correctamente."
+
+msgid "manager.subscriptions.select"
+msgstr "Seleccionar"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Os privilexios de acceso á subscrición concédense automaticamente aos "
+"xestores de revistas, editores, editores de seccións, maquetadores e "
+"correctores."
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Selecciona un usuario/a"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Selecciona o contacto da subscrición"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Non hai subscricións"
+
+msgid "manager.subscriptions.notes"
+msgstr "Notas"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Número de referencia"
+
+msgid "manager.subscriptions.membership"
+msgstr "Afiliación"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Rango de IP"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+"Debe crearse un tipo de subscrición antes de que se poidan facer novas "
+"subscricións."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Este usuario/a xa ten unha subscrición a esta revista."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Para enviar ao usuario un correo electrónico de notificación, o nome de "
+"contacto da subscrición e o enderezo de correo electrónico deben "
+"especificarse na configuración da revista."
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Gardar e engadir outro"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Engadir"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Eliminar"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Insira un rango de IP válido."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Se se introducen rangos de IP aquí, o dominio é opcional.<br />Os valores "
+"válidos inclúen un enderezo IP (por exemplo, 142.58.103.1), rango de IP (por "
+"exemplo, 142.58.103.1 - 142.58.103.4), rango de IP con comodín '*' ( por "
+"exemplo, 142.58. *. *) e un rango de IP con CIDR (por exemplo, 142.58.100.0/"
+"24)."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Rangos de IP"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Insira un dominio válido."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"O tipo de subscrición seleccionado require un dominio e/ou un rango de IP "
+"para a autenticación da subscrición."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Se se introduce un dominio aquí, os rangos de IP son opcionais.<br />Os "
+"valores válidos son nomes de dominio (por exemplo, lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Enderezo postal"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "É necesario o nome da institución."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Nome da institución"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Restablecéronse correctamente os permisos do artigo."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Eliminar a declaración de copyright e a información de licenza de cada "
+"artigo publicado e volve á configuración predeterminada actual da revista. "
+"Isto eliminará permanentemente toda a información previa sobre dereitos de "
+"autor e licenzas adxunta aos artigos. Nalgúns casos, é posible que non se "
+"lle permita legalmente cambiar  a licenza dos traballos publicados con unha "
+"licenza distinta. Teña precaución cando use esta ferramenta e consulte con "
+"coñecemento legal se non está seguro de que dereitos ten sobre os artigos "
+"publicados na sua revista."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Estás seguro/a de que desexas restablecer os datos de permisos para todos os "
+"artigos? Esta acción non se pode desfacer."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Reiniciar os permisos do artigo"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr ""
+"Número: o ano predeterminado extraerase da data de publicación do número."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Artigo: o ano predeterminado extraerase da data de publicación do artigo, "
+"como no caso da publicación inmediata."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Establecer o ano do copyright do artigo"
+
+msgid "manager.publication.library"
+msgstr "Biblioteca do editor/a"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Os roles son grupos de usuarios da revista aos que se lles dá acceso a "
+"diferentes niveis de permisos e fluxos de traballo asociados dentro da "
+"revista. Hai cinco niveis de permisos diferentes: os xestores de revistas "
+"teñen acceso a todo o que hai na revista (todo o contido e a configuración); "
+"Os editores de sección teñen acceso completo a todo o contido asignado; Os "
+"asistentes do xornal teñen un acceso limitado a todos os envíos que un "
+"editor lles asignou de xeito explícito; Os revisores poden ver e realizar os "
+"envíos que teñen asignados para revisar; e os autores poden ver e "
+"interactuar cunha cantidade limitada de información nos seus propios envíos. "
+"Ademais, hai cinco tarefas diferentes ás que se pode acceder ás funcións: "
+"envío, revisión interna, revisión, editorial e produción."
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Os artigos dos números publicados dunha revista están organizados en "
+"seccións, normalmente por tema ou tipo de contido (por exemplo, artigos de "
+"revisión, investigación, etc.)."
+
+msgid "grid.action.addSection"
+msgstr "Engadir Sección"
+
+msgid "grid.category.path"
+msgstr "Ruta"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Escolla as categorías máis axeitadas da lista anterior. Os lectores/as "
+"poderán navegar por categorías desde o conxunto completo da revista."
