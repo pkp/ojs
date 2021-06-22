@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-22 10:47+0000\n"
+"PO-Revision-Date: 2021-06-23 13:07+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "gl_ES/>\n"
@@ -1270,3 +1270,236 @@ msgstr "Texto do título"
 
 msgid "manager.setup.userRegistration"
 msgstr "Rexistro de usuarios/as"
+
+msgid "manager.setup.discipline"
+msgstr "Disciplina e subdisciplinas académicas"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"O administrador/a da revista rexistra todos os usuarios/as. Os editores/as e "
+"os editores/as de sección só poden rexistrar os revisores/as."
+
+msgid "manager.setup.details.description"
+msgstr "Nome da revista, ISSN, contactos, patrocinadores e motores de busca."
+
+msgid "manager.setup.details"
+msgstr "Detalles"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Paso 5. Personalización do deseño"
+
+msgid "manager.setup.currentIssue"
+msgstr "Número actual"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Este texto aparecerá na páxina \"Sobre a revista\" do sitio web da revista e "
+"pódese utilizar para describir cambios nos títulos, no consello de redacción "
+"e outros elementos relevantes para a historia da publicación da revista."
+
+msgid "manager.setup.history"
+msgstr "Historia da revista"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Pedir aos revisores/as que presenten unha declaración de CI por cada "
+"avaliación por pares que envíen."
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Pedir aos autores/as que presenten unha declaración de conflitos de "
+"intereses (CI) xuntamente co seu envío."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Aparecerá en \"Sobre a revista\"). "
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Introduza a información adicional que quere que vexan os lectores na páxina "
+"\"Avisos\"."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introdución"
+
+msgid "manager.setup.announcements"
+msgstr "Avisos"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Se o prefire, no canto de inserir un título e un logotipo como cabeceira de "
+"páxina, pode inserir unha cabeceira en formato HTML no cadro de texto que "
+"hai a continuación. Deixe este cadro en branco se non quere utilizar esta "
+"opción."
+
+msgid "manager.setup.alternateHeader"
+msgstr "Cabeceira de páxina alternativa"
+
+msgid "manager.setup.addSponsor"
+msgstr "Engadir unha organización patrocinadora"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Engadir un enlace novo á base de datos"
+
+msgid "manager.setup.addNavItem"
+msgstr "Engadir un elemento"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Engadir un elemento á páxina \"Sobre a revista\""
+
+msgid "manager.setup.addItem"
+msgstr "Engadir un elemento"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Engadir un elemento \"Lista de verificación\""
+
+msgid "manager.setup.addAboutItem"
+msgstr "Engadir un elemento \"Sobre...\""
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Contido"
+
+msgid "manager.setup.pageHeader"
+msgstr "Cabeceira da revista"
+
+msgid "manager.setup.contextName"
+msgstr "Nome da revista"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Folla de estilo da revista"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"A páxina de inicio da revista consta de enlaces de navegación por defecto. "
+"Pódeselle engadir contido adicional mediante unha ou todas as opcións "
+"seguintes, que aparecerán na orde amosada."
+
+msgid "manager.setup.homepageContent"
+msgstr "Contido da páxina de inicio da revista"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Equipo editorial"
+
+msgid "manager.setup.masthead"
+msgstr "Cabeceira"
+
+msgid "manager.setup"
+msgstr "Configuración"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Limitar o número de palabras do resumo para esta sección (0 se non quere "
+"poñer límite)"
+
+msgid "manager.sections.wordCount"
+msgstr "Reconto de palabras"
+
+msgid "manager.sections.unassigned"
+msgstr "Editores/as de sección dispoñibles"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Envíos efectuados a esta sección da revista"
+
+msgid "manager.sections.submissionReview"
+msgstr "Non serán avaliados por pares"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Non se incluirán na indexación da revista"
+
+msgid "manager.sections.reviewed"
+msgstr "Avaliado por pares"
+
+msgid "manager.sections.readingTools"
+msgstr "Ferramentas de lectura"
+
+msgid "manager.sections.policy"
+msgstr "Política da sección"
+
+msgid "manager.sections.open"
+msgstr "Envíos abertos"
+
+msgid "manager.sections.noneCreated"
+msgstr "Non se creou ningunha sección."
+
+msgid "manager.sections.indexed"
+msgstr "Indexado"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Por exemplo, \"Artigo avaliado por pares\", \"Recensión de libro sen "
+"revisión\", \"Comentario dun lector\" etc.)"
+
+msgid "manager.sections.identifyType"
+msgstr "Identificar os elementos publicados nesta sección como"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Omitir o título desta sección da táboa de contidos dos números."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr ""
+"Omitir os nomes dos autores/as nos elementos de sección da táboa de contidos "
+"dos números."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Debe introducir un título para a sección."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Asegúrese de que escolleu un formulario de revisión válido."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Asegúrese de que se activou polo menos unha opción de selección para cada "
+"asignación a un editor/a de sección."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Debe introducir un título abreviado para a sección"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Debe estar activa polo menos unha sección. Visite a configuración do fluxo "
+"de traballo para desactivar todos os envíos á revista."
+
+msgid "manager.sections.editors"
+msgstr "Editores/as de sección"
+
+msgid "manager.sections.editorRestriction"
+msgstr "Só os editores/as e mais os editores/as de sección poden facer envíos."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Engadir un editor/a de sección para que os envíos se lle asignen de forma "
+"automática. (De forma alternativa, pódense asignar editores/as de sección "
+"manualmente cando entra un envío.) No caso de que se engadise un editor/a de "
+"sección, pódeselle asignar automaticamente unha supervisión da REVISIÓN ("
+"avaliación por pares) ou da EDICIÓN (corrección de orixinais, maquetaxe e "
+"corrección de probas) dos envíos que teñen como destino esta sección. Os "
+"editores/as de sección créanse facendo clic en \"Editores/as de sección\", "
+"na sección \"Roles\" do apartado \"Administración da revista\"."
+
+msgid "manager.sections.create"
+msgstr "Crear unha sección"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Antes de eliminar esta sección, cómpre desprazar os artigos publicados nela "
+"a oturas seccións."
+
+msgid "manager.sections.confirmDelete"
+msgstr "Está seguro/a de que quere eliminar esta sección de forma permanente?"
+
+msgid "manager.sections.assigned"
+msgstr "Editores/as desta sección"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Aínda non hai editores/as de sección. Engada este rol polo menos a un "
+"usuario vía  Administración > Configuración > Users &amp; Roles first."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Non requirir resumos"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"A sincronización de altas inscribe todos os usuarios/as inseridos no rol e "
+"na revista indicados dentro do mesmo rol nesta revista. Esta función permite "
+"a un grupo común de usuarios/as (p. ex., os revisores/as) estar sincronizado "
+"entre diversas revistas."
