@@ -17,8 +17,8 @@ use APP\facades\Repo;
 use APP\plugins\DOIPubIdExportPlugin;
 
 use APP\submission\Submission;
-use ArticleGalley;
-use Issue;
+use APP\article\ArticleGalley;
+use APP\issue\Issue;
 use PKP\file\FileManager;
 
 use PKP\notification\PKPNotification;
