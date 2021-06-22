@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-21 12:52+0000\n"
+"PO-Revision-Date: 2021-06-22 10:47+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "gl_ES/>\n"
@@ -885,3 +885,388 @@ msgid "manager.setup.categories.description"
 msgstr ""
 "Escolla as categorías máis axeitadas da lista anterior. Os lectores/as "
 "poderán navegar por categorías desde o conxunto completo da revista."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Aos revisores pódeselles enviarpor correo electrónico unha ligazón segura na "
+"invitación, que lles permitirá acceder á revisión sen iniciar sesión. Para "
+"acceder a outras páxinas, é necesario que inicien sesión."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Inscrición en calidade de {$role}"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Seleccione o usuario/a a quen asignar as características do usuario/a "
+"anterior (autorías, encargos de edición etc.)."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Seleccione un usuario/a (ou máis) para fusionar con outra conta de usuario/a "
+"(p. ex., un usuario/a que teña dúas contas). Con esta acción elimínase a "
+"primeira conta que seleccionou, e os seus envíos, tarefas etc. asígnanse á "
+"segunda conta."
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Coa revista"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Dar de alta un usuario existente"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Seleccionar un padrón"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Quere eliminar este usuario/a da revista? Con esta acción dará de baixa o "
+"usuario/a de todos os roles nesta revista."
+
+msgid "manager.people.allUsers"
+msgstr "Todos os usuarios/as inscritos"
+
+msgid "manager.people.showNoRole"
+msgstr "Mostrar os usuarios/as que non teñen ningún rol"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Acceso para revisores/as nun clic"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Acceso para os/as revisores/as"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Os/as revisores/as non terán acceso ao arquivo de envío ata que acorden "
+"revisalo."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Restrinxir o acceso aos arquivos"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Inscribir un usuario/a deste sitio nesta revista"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Os editores/as valorarán aos revisores/as nunha escala de cinco puntos "
+"despois de cada revisión."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Número de semanas permitidas para completar a revisión"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Os tipos de subscrición e a estrutura de tarifas mostraranse na páxina de "
+"subscricións, xunto co nome e a información de contacto do Xestor de "
+"subscricións. Aquí pódese engadir información adicional sobre as "
+"subscricións, como métodos de pagamento ou asistencia para os subscritores "
+"en países en desenvolvemento."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Información de subscrición"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"As revistas que requiran subscrición poden proporcionar un \"acceso aberto "
+"adiado\" ao seu contido, así como permitir o \"autoarquivo do autor\" (o que "
+"aumenta o número de lectores e a cita do contido)."
+
+msgid "manager.people.allJournals"
+msgstr "Todas as revistas"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Usuarios/as inscritos nesta revista"
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Opcións de acceso aberto para revistas de subscrición"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Nota:</strong> Para habilitar estas opcións, o Xestor/a de revistas "
+"debe habilitar o complemento de pagamentos en liña, incluídos os pagamentos "
+"en liña para subscricións, en Taxas para lectores/as."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Nota:</strong> As subscricións institucionais mercadas en liña "
+"requiren a aprobación do dominio e os intervalos de IP proporcionados e a "
+"activación da subscrición polo Xestor/a de subscricións."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Notificar ao xestor/a de subscricións por correo electrónico despois da "
+"renovación en liña dunha subscrición institucional."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Notificar ao xestor/a de subscricións por correo electrónico despois da "
+"renovación en liña dunha subscrición individual."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Notificar ao xestor/a de subscricións por correo electrónico cando se merque "
+"en liña unha subscrición institucional (recomendado)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Notificar ao xestor/a de subscricións por correo electrónico cando se merque "
+"en liña unha subscrición individual."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Unha vez completados os pagamentos en liña da subscrición pódense enviar ao "
+"xestor de subscricións as notificacións por correo electrónico automatizadas "
+"(dispoñibles para a súa edición polos xestores de revistas nos correos "
+"electrónicos de OJS)."
+
+msgid "manager.payment.userName"
+msgstr "ID do pagamento"
+
+msgid "manager.paymentTypes"
+msgstr "Tipos de pagamento"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Notificacións de pagamento en liña"
+
+msgid "manager.payment.records"
+msgstr "Rexistros"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"As opcións seleccionadas, xunto coa descrición e as cotas correspondentes ("
+"que se poden editar máis abaixo), aparecerán na páxina \"Sobre a revista\", "
+"sección \"Políticas\", así como nos pasos en que se require facer pagamentos."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Nota:</strong> Para activar esta opción, o administrador do sitio "
+"debe habilitar a opción <tt>schedul_tasks</tt> no arquivo de configuración "
+"de OJS. É posíbel que sexa necesaria unha configuración adicional de "
+"servidor para soportar esta funcionalidade (que pode non ser posíbel en "
+"todos os servidores), como se indica na documentación de OJS."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Os lectores rexistrados terán a opción de recibir por correo electrónico a "
+"táboa de contidos dun número cando se converta en acceso aberto."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Seleccione un valor válido para o número de semanas antes do vencemento da "
+"subscrición."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Seleccione un valor válido para o número de semanas despois do vencemento da "
+"subscrición."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Seleccione un valor válido para o número de meses antes do vencemento da "
+"subscrición."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Seleccione un valor válido para o número de meses despois do vencemento da "
+"subscrición."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"O HTML pódese usar na área de texto (para tamaño de letra, cor, etc.), con \""
+"devolucións\" tratadas como <tt>&lt;br&gt;</tt>; O editor HTML funciona cos "
+"navegadores Firefox."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Selecciona unha das seguintes opcións:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Nota:</strong> Para activar estas opcións, o administrador do sitio "
+"debe habilitar a opción <tt>schedul_tasks</tt> no arquivo de configuración "
+"de OJS. É posíbel que sexa necesaria unha configuración adicional de "
+"servidor para soportar esta funcionalidade (que pode non ser posíbel en "
+"todos os servidores), como se indica na documentación de OJS."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Antes ou despois do vencemento da subscrición pódense enviar aos "
+"subscritores recordatorios de correo electrónico automáticos (dispoñibles "
+"para a súa edición polos xestores de revistas nos correos electrónicos de "
+"OJS)."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Recordatorios do vencemento da subscrición"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr ""
+"Notificar aos subscritores por correo electrónico antes do vencemento da "
+"subscrición."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr ""
+"Notificar aos subscritores por correo electrónico antes do vencemento da "
+"subscrición."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr ""
+"Notificar aos subscritores por correo electrónico tras o vencemento da "
+"subscrición."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr ""
+"Notificar aos subscritores por correo electrónico tras o vencemento da "
+"subscrición"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} semanas"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} meses"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Os lectores non teñen acceso ao contido da revista publicado recentemente, "
+"pero conservan o acceso ao contido publicado antes da data de vencemento da "
+"subscrición."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Vencemento parcial"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Aos lectores denégaselles o acceso a todo o contido da revista ao caducar a "
+"subscrición."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Vencemento total"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Ao caducar a subscrición, aos lectores pódeselles denegar o acceso a todo o "
+"contido da subscrición ou poden continuar mantendo acceso ao contido "
+"publicado antes da data de caducidade da subscrición."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Vencemento da subscrición"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Use a caixa de verificación que se fornece."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Acceso aberto adiado"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Políticas de subscricións"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"Restrinxir os resultados por tipo de obxecto (revista, número, artigo, tipos "
+"de arquivos) e/ou por un ou mais IDs de obxectos."
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Restrinxir os resultados por contexto (número e/ou artigo)."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Visualizacións da taboa de contidos do número"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Visualizacións da páxina principal da revista"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Resumo do artigo e descargas"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Visualizacións da páxina do resumo do artigo"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Descargas do arquivo do artigo"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Subscricións"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Selecciona as seccións da revista para calcular as estatísticas de "
+"evaluación por pares desta revista."
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Núm. de revisións"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Valoración do editor/a"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Revisores/as"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Núm. de asignacións"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Lectores rexistrados"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Revisión por pares"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Total de envíos"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Números publicados"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Nota: as porcentaxes de envíos revisados por pares poden non sumar o 100%, "
+"xa que os elementos enviados de novo son aceptados, rexeitados ou aínda "
+"están en proceso."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Consulte os elementos que se porán a disposición dos lectores en \"Acerca da "
+"revista\"."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Artigos publicados"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS calcula as seguintes estatísticas para cada revista. Os \"días para "
+"revisar\" calcúlanse desde a data de envío (ou designación da versión de "
+"revisión) ata a decisión inicial do editor, mentres que os \"días para "
+"publicar\" mídense para os envíos aceptados desde a súa carga orixinal ata a "
+"súa publicación."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Días para a publicación"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Días para a revisión"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Reenviado"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Rexeitar"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Aceptar"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Reconto de vistas de artigos (só para autores)"
+
+msgid "manager.statistics.statistics"
+msgstr "Estatísticas da revista"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tA sua revista está configurada para rexistrar máis dunha métrica de uso. "
+"As estatísticas de uso amosaranse en varios contextos.\n"
+"\t\tHai casos nos que se debe empregar unha única estatística de uso, por "
+"exemplo. para amosar unha lista ordenada dos artigos\t\n"
+"\t\tmáis usados ou para clasificar resultados da busca.\n"
+"\t\tSeleccione unha das métricas configuradas como predeterminada.\n"
+"\t"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Texto do título"
+
+msgid "manager.setup.userRegistration"
+msgstr "Rexistro de usuarios/as"
