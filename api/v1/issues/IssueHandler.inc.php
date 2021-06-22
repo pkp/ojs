@@ -216,7 +216,7 @@ class IssueHandler extends APIHandler
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
 
-        $userGroupDao = DAORegistry::getDAO('UserGroupDao'); /** @var UserGroupDAO $userGroupDao */
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
         $userGroups = $userGroupDao->getByContextId($context->getId());
 
         $data = Services::get('issue')->getFullProperties($issue, [
@@ -246,7 +246,7 @@ class IssueHandler extends APIHandler
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
 
-        $userGroupDao = DAORegistry::getDAO('UserGroupDao'); /** @var UserGroupDAO $userGroupDao */
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
         $userGroups = $userGroupDao->getByContextId($context->getId());
 
         $data = Services::get('issue')->getFullProperties($issue, [
