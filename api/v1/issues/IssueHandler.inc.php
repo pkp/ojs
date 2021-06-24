@@ -247,7 +247,7 @@ class IssueHandler extends APIHandler
         }
 
         $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
-        $userGroups = $userGroupDao->getByContextId($context->getId());
+        $userGroups = $userGroupDao->getByContextId($request->getContext()->getId());
 
         $data = Services::get('issue')->getFullProperties($issue, [
             'request' => $request,
