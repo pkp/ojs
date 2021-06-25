@@ -1,7 +1,7 @@
 # Real Academia Galega <reacagal@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-25 09:17+0000\n"
+"PO-Revision-Date: 2021-06-25 12:42+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "gl_ES/>\n"
@@ -1789,3 +1789,372 @@ msgid "manager.setup.submissions.description"
 msgstr ""
 "Indicacións para o autor/a, dereitos de autor/a e indexación (incluído o "
 "rexistro)."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Número de anuncios  que se amosarán na páxina de inicio. Deixe este campo "
+"baleiro se non se vai amosar ningún."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Os visitantes poden rexistrar unha conta de usuario/a na revista."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Enfoque e alcance"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Son necesarias as iniciais da revista."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "O nome do contacto principal é obrigatorio."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "É necesario o correo electrónico do contacto principal."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "O ISSN especificado non é válido."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS adhírese ao protocolo <a href=\"http://www.openarchives.org/\" target=\""
+"_blank\">Open Archives Initiative</a> (OAI) para a recolección de metadatos, "
+"que é o estándar emerxente para proporcionar acceso ben indexado a recursos "
+"electrónicos de investigación a escala mundial. Os autores/as utilizarán un "
+"modelo similar para proporcionar metadatos para o seu envío. O Administrador "
+"da revista debería seleccionar as categorías para indexar e presentar aos "
+"autores exemplos relevantes para axudalos a indexar o seu traballo."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Para que os autores/as indexen o seu traballo"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Describa aos autores/as, lectores/as e bibliotecarios/as a gama de artigos e "
+"outros elementos que publicará a revista."
+
+msgid "manager.setup.information.forReaders"
+msgstr "Para lectores/as"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Para bibliotecarios/as"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Para os autores/as"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Na sección de Información na barra lateral amósase unha breve descrición da "
+"revista para bibliotecarios/as e futuros/as autores/as e lectores/as."
+
+msgid "manager.setup.information"
+msgstr "Información"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Para as revistas que ofrezan acceso aberto inmediato ou adiado, inclúa unha "
+"licenza Creative Commons con todos os traballos publicados no momento "
+"adecuado."
+
+msgid "manager.setup.identity"
+msgstr "Identidade da revista"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Paso 3. Pautas para os envíos"
+
+msgid "manager.setup.guidelines"
+msgstr "Pautas"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Paso 1. Detalles da revista"
+
+msgid "manager.setup.generalInformation"
+msgstr "Información xeral"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "O nome do Soporte Técnico é obrigatorio."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "É necesario o correo electrónico de soporte."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "É necesario o número de revisores por envío."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "O título da revista é obrigatorio."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Inclúe calquera información sobre a revista que poida interesar aos lectores/"
+"as, autores/as ou revisores/as. Isto podería incluír a política de acceso "
+"aberto, o enfoque e alcance da revista, aviso de dereitos de autor/a, "
+"divulgación de patrocinios, historial da revista, declaración de privacidade "
+"e inclusión en calquera sistema de arquivo LOCKSS ou CLOCKSS."
+
+msgid "manager.setup.contextAbout"
+msgstr "Acerca da revista"
+
+msgid "manager.setup.contextSummary"
+msgstr "Índice da revista"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Arquivo da revista"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Abreviatura da revista"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Limita o número de elementos (por exemplo, envíos, usuarios ou tarefas de "
+"edición) para amosar nunha listaxe antes de amosar os elementos posteriores "
+"noutra páxina."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Elementos por páxina"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Pódense engadir elementos á barra de navagación actual (Inicio, Acerca de, "
+"Área persoal, etc.) que se amosa na parte superior da páxina."
+
+msgid "manager.setup.institution"
+msgstr "Institución"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Dependendo do formato escollido, identifique o número, o volume e/ou o ano "
+"do primeiro número que se publicará con OJS:"
+
+msgid "manager.setup.initialIssue"
+msgstr "Primeiro número"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Engada ou elimine elementos adicionais da barra de navegación."
+
+msgid "manager.setup.navigationBar"
+msgstr "Barra de navegación"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Paso 4. Administración da revista"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Configuración da administración e a publicación"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Administración das etapas editoriais básicas"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Acceso e seguridade, planificación, anuncios, redacción, maquetación e "
+"corrección de probas."
+
+msgid "manager.setup.management"
+msgstr "Administración"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Cabeceira da páxina de inicio, contido, cabeceira da revista, pé de páxina, "
+"barra de navegación e folla de estilo."
+
+msgid "manager.setup.look"
+msgstr "Aparencia"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Rexístrate no servizo CLOCKSS visitando <a href=\"http://clockss.org/\" "
+"target=\"_blank\">o sitio web de CLOCKSS</a>."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Descrición da licenza CLOCKSS"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"Unha licenza CLOCKSS aparecerá en Acerca da revista en Arquivo: <a href=\""
+"http://clockss.org/\" target=\"_blank\">Licenza CLOCKSS</a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Habilite CLOCKSS para almacenar e distribuír o contido da publicación nas "
+"bibliotecas participantes a través dunha páxina CLOCKSS <a href=\""
+"{$clockssUrl}\" target=\"_blank\">Manifesto do editor</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Identifique 6-10 bibliotecas que rexistrarán e almacenarán en caché a "
+"revista. Por exemplo, diríxete a institucións onde traballan os editores/as "
+"ou membros do Consello e/ou institucións que xa participan en LOCKSS. "
+"Consulta <a href=\"http://www.lockss.org/community/\" target=\"_blank\">a "
+"comunidade LOCKSS</a>."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Descrición da licenza LOCKSS"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"Unha licenza LOCKSS aparecerá en Acerca da revista en Arquivo: <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"Licenza LOCKSS</a>"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Habilite LOCKSS para almacenar e distribuír contido da publicación nas "
+"bibliotecas participantes a través dunha páxina LOCKSS <a href=\"{$lockssUrl}"
+"\" target=\"_blank\">Manifesto do editor</a>."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS e CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"A PKP Preservation Network (PN) ofrece servizos gratuítos de preservación "
+"para calquera revista OJS que cumpra cuns criterios básicos. O complemento "
+"PKP PN para OJS 3 está actualmente en desenvolvemento e pronto estará "
+"dispoñible na galería de complementos."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Consulte a <button>configuración do complemento</button> para aceptar os "
+"termos de uso do PKP PN."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"A PKP Preservation Network (PN) ofrece servizos gratuítos de preservación "
+"para calquera revista OJS que cumpra cuns criterios básicos."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Habilite o complemento PKP PN"
+
+msgid "manager.setup.lists"
+msgstr "Listaxes"
+
+msgid "manager.setup.labelName"
+msgstr "Nome da etiqueta"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Ofrece unha breve descrición da tua publicación e identifica editores/as, "
+"directores/as xerentes e outros membros do equipo editorial."
+
+msgid "manager.setup.keyInfo"
+msgstr "Información chave"
+
+msgid "manager.setup.contextTitle"
+msgstr "Título da revista"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Un pequeno logotipo ou imaxe da revista que se pode empregar nas listaxes de "
+"revistas."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Miniatura da revista"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Mostrar na páxina de inicio"
+
+msgid "manager.setup.journalTheme"
+msgstr "Tema (visual) da revista"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "O formato da folla de estilo non é válido. O formato aceptado é .css."
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Pódense publicar avisos para informar os lectores/as de noticias e eventos "
+"relativos á revista. Os avisos publicados aparecen na páxina Avisos."
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Actualizouse a configuración da súa revista."
+
+msgid "manager.setup.journalSetup"
+msgstr "Configuración da revista"
+
+msgid "manager.setup.journalPolicies"
+msgstr "Paso 2. Políticas da revista"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Este é o pé de páxina da súa revista. Para cambiar ou actualizar o pé de "
+"páxina, pega o código HTML no cadro de texto seguinte. Por exemplo o pé de "
+"páxina pode incluir outra barra de navegación, un contador, etc. Este pé de "
+"páxina aparecerá en todas as páxinas."
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Pé de páxina da revista"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Logotipo da revista"
+
+msgid "manager.setup.journalLogo"
+msgstr "Logotipo da revista"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Aquí pode escoller un tema e o estilo da revista e seleccionare os "
+"compoñentes do deseño. Tamén se pode cargar unha folla de estilo, que "
+"substituirá os datos de estilo nas follas de estilo de todo o sistema e na "
+"folla de estilo do tema (se se elixe un tema)."
+
+msgid "manager.setup.journalLayout"
+msgstr "Maquetación da revista"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Seleccione o país onde se atopa esta revista ou o país do enderezo postal da "
+"revista ou da editora."
+
+msgid "manager.setup.contextInitials"
+msgstr "Sigla da revista"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Para a páxina de inicio pódese cargar unha versión gráfica do título e "
+"logotipo da revista (como .gif, .jpg ou .png) que substituirá a versión de "
+"texto que es amosa por defecto."
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Cabeceira da páxina de inicio da revista"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Activar os avisos"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Os padróns das mensaxes de correo electrónico que o sistema envíe en nome da "
+"revista incluirán a sinatura seguinte ao final. O corpo do texto pódese "
+"editar na sección Administración da revista."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Cabeceira de páxina de inicio da revista"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Por defecto, a páxina de inicio consta de ligazóns de navegación. Pódese "
+"engadir contido adicional na páxina de inicio usando unha ou varias das "
+"seguintes opcións, que se amosarán na seguinte orde. Teña en conta que o "
+"número actual sempre é accesible a través da ligazón Actual na barra de "
+"navegación."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Contido da páxina de inicio da revista"
+
+msgid "manager.setup.emailSignature"
+msgstr "Sinatura"
+
+msgid "manager.setup.emails"
+msgstr "Identificación por correo electrónico"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Para activar esta opción, o administrador/a do sitio web debe activar a "
+"opción <code>allow_envelope_sender</code> no arquivo de configuración do "
+"sistema. É posible que se requira unha configuración adicional do servidor "
+"para que o programa admita esta función, tal como se indica na documentación "
+"de OJS."
