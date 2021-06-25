@@ -1,6 +1,7 @@
+# Real Academia Galega <reacagal@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-23 13:07+0000\n"
+"PO-Revision-Date: 2021-06-25 09:17+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "gl_ES/>\n"
@@ -1503,3 +1504,288 @@ msgstr ""
 "na revista indicados dentro do mesmo rol nesta revista. Esta función permite "
 "a un grupo común de usuarios/as (p. ex., os revisores/as) estar sincronizado "
 "entre diversas revistas."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Enviarase unha mensaxe de erro a este enderezo cada vez que non se poida "
+"entregar unha mensaxe de correo electrónico."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Enderezo de retorno"
+
+msgid "manager.setup.editorDecision"
+msgstr "Decisión do editor/a"
+
+msgid "manager.setup.submissions"
+msgstr "Envíos"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"Ao facer un envío á revista, pídese aos autores/as que comproben cada "
+"elemento da lista de verificación de preparación de envíos antes de "
+"continuar. A lista de verificación tamén aparece nas Directrices do autor, "
+"en Acerca da revista. A lista pódese editar a continuación, pero todos os "
+"elementos da lista requirirán unha verificación antes de que os autores "
+"poidan continuar co envío."
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Engadir a táboa de contidos para o número actual (se está dispoñible)."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Lista de verificación para preparar o envío"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Pautas de envío"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr ""
+"Proporciona exemplos de palabras chave ou temas que sirvan como guía aos "
+"autores/as"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Palabras chave"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(Por exemplo, fotosíntese; buratos negros; Teorema das catro cores; Teoría "
+"de Bayes)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Indique exemplos de disciplinas académicas relevantes para esta revista"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Cinco pasos para crear o sitio web da revista"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Ver o contido do artigo"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Acceso ao sitio"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr ""
+"Amosa sempre as ligazóns as galeradas e indica que o acceso é restrinxido."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "A sección da revista para a que se considerará o envío."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "O editor/a da revista que supervisará o proceso editorial."
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(P. ex., historia, educación, socioloxía, psicoloxía, estudos culturais, "
+"dereito)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Para crear ou modificar seccións na revista (por exemplo, artigos, reseñas "
+"de libros, etc.), vai a Xestión das seccións.<br /><br />Os autores que "
+"envíen elementos á revista designarán ..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Se non se engaden seccións, os elementos envíanse por defecto á sección "
+"Artigos.)"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Esta opción é útil cando a revista traspasa os límites dunha disciplina ou "
+"cando os autores envían artigos multidisciplinarios."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Seccións e editores/as de seccións"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Ofrece unha breve descrición (50-300 caracteres) da revista que os motores "
+"de busca poden amosar ao listar a publicación nos resultados da procura."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Axuda aos motores de busca como Google a descubrir e amosar o seu sitio web. "
+"Animámosche a enviar o teu <a href=\"{$sitemapUrl}\" target=\"_blank\">mapa "
+"do sitio</a>."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Indexación para os motores de busca"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Política de revisión"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Recordatorios aos revisores/as"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Valoracións dos/as revisores/as"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+"Inclúa unha ligazón segura no correo electrónico de invitación aos revisores."
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Para enviar recordatorios de correo automáticos, o administrador/a do sitio "
+"debe habilitar a opción <tt>schedul_tasks</tt> no arquivo de configuración "
+"de OJS. É posible que sexa necesaria unha configuración adicional do "
+"servidor segundo se indica na documentación de OJS."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Recordatorios de correo electrónico automatizados"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Opcións de revisión"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Pautas de revisión"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Os usuarios/as deben estar rexistrados/as e iniciar sesión para ver o sitio "
+"da revista."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Os usuarios/as deben estar rexistrados/as e iniciar sesión para ver o "
+"contido de acceso aberto."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Ligazóns de referencia"
+
+msgid "manager.setup.publisher"
+msgstr "Editora"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Identificación do contido da revista"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Programación da publicación"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Os elementos da revista pódense publicar de xeito colectivo, como parte dun "
+"número cunha táboa de contidos propia. Como alternativa, pódense publicar "
+"individualmente en canto estean listos engadíndoos á táboa de contidos do "
+"volume \"actual\". Proporcione aos lectores/as, en Acerca da revista, unha "
+"declaración sobre o sistema que empregará esta revista e a súa frecuencia de "
+"publicación prevista."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Calendario de publicación"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"As instrucións de corrección de probas estarán dispoñibles para correctores/"
+"as, autores/as, editores/as de maquetación e editores/as de sección na etapa "
+"de edición do envío. Abaixo amósase un conxunto de instrucións en HTML, que "
+"pode ser editado ou substituído polo Xestor/a da revista en calquera momento "
+"(en HTML ou texto plano)."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Instrucións para a corrección de probas"
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN de impresión"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Temática, revisión por pares, seccións, privacidade, seguridade e "
+"información adicional."
+
+msgid "manager.setup.policies"
+msgstr "Políticas"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Opcións de numeración de páxina"
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN en liña"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Limita o número de ligazóns que se amosarán ás páxinas seguintes dunha lista."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Ligazóns"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Nota:</strong> O correo electrónico de confirmación de envío está "
+"desactivado actualmente. Para empregar esta función, habilite o correo "
+"electrónico \"Submission Ack\" nos correos electrónicos."
+
+msgid "manager.setup.note"
+msgstr "Nota"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Non se cargou ningunha folla de estilo."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Non se cargou ningún arquivo de imaxe."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"O valor da etiqueta é unha cadea literal (por exemplo, \"Configuración da "
+"revista\") en lugar dunha chave de mensaxe de localización (por exemplo, \""
+"manager.setup\")"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"O URL é un URL absoluto (por exemplo, \"http://www.example.com\") en lugar "
+"dunha ruta relativa ao sitio (por exemplo, \"/manager/setup\")"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Imaxe do título"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Miniatura da revista"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "A revista dispoñerá dun consello de redacción/de revisión."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Os artigos e números poden etiquetarse cun número de identificación ou "
+"cadea, empregando un sistema de rexistro como o Sistema de identificación de "
+"obxectos dixitais (DOI)."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Identificador único"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Forneza exemplos de tipos de investigación, métodos e enfoques relevantes "
+"para este campo"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Tipo (método/enfoque)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(P. ex., investigación histórica; cuasi-experimental; análise literaria; "
+"enquisa/entrevista)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Proporcione metadatos a servizos de indexación de terceiros a través da <a "
+"href=\"https://www.openarchives.org/\">Iniciativa de arquivos abertos</a> "
+"(OAI)."
+
+msgid "manager.setup.enableOai"
+msgstr "Habilitar OAI"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Esta revista non acepta envíos neste momento. Visita a configuración do "
+"fluxo de traballo para permitir os envíos."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Evita que os usuarios/as envíen novos artigos á revista. Os envíos pódense "
+"deshabilitar individualmente para seccións da revista na páxina de "
+"configuración das <a href=\"{$url}\">seccións da revista</a>."
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Indicacións para o autor/a, dereitos de autor/a e indexación (incluído o "
+"rexistro)."
