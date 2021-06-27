@@ -135,4 +135,12 @@ describe('Data suite tests', function() {
 		cy.get('div[id=contact').find('button').contains('Save').click();
 		cy.get('#contact [role="status"]').contains('Saved');
 	});
+
+	it ('Activates plugin for testing locale keys', function() {
+		cy.login('admin', 'admin');
+		cy.visit('index.php/' + context + '/management/settings/website');
+		cy.get('button[id="plugins-button"]').click();
+		cy.get('input[id^="select-cell-missinglocaleexceptionplugin"').check();
+		cy.contains('The plugin "Missing Locale Exception" has been enabled.');
+	});
 })
