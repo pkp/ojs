@@ -131,11 +131,11 @@ sitewide_privacy_statement = Off
 driver = mysqli
 host = mariadb
 username = root
-password = 
-name = demo
+password =
+name = ojs_db
 ; Set the non-standard port and/or socket, if used
-; port = 3306
-; unix_socket = /var/run/mysqld/mysqld.sock
+;port = 3306
+;unix_socket = /var/run/mysqld/mysqld.sock
 
 ; Database collation
 collation = utf8_general_ci
@@ -197,7 +197,7 @@ client_charset = utf-8
 ; Must be set to "Off" if not supported by the database server
 ; If enabled, must be the same character set as "client_charset"
 ; (although the actual name may differ slightly depending on the server)
-connection_charset = utf-8
+connection_charset = utf8
 
 
 ;;;;;;;;;;;;;;;;;
@@ -209,7 +209,7 @@ connection_charset = utf-8
 ; Complete path to directory to store uploaded files
 ; (This directory should not be directly web-accessible)
 ; Windows users should use forward slashes
-files_dir = var/www/files
+files_dir = /var/www/files
 
 ; Path to the directory to store public uploaded files
 ; (This directory should be web-accessible and the specified path
@@ -516,6 +516,6 @@ deprecation_warnings = Off
 log_web_service_info = Off
 
 ; declare a cainfo path if a certificate other than PHP's default should be used for curl calls.
-; This setting overrides the 'curl.cainfo' parameter of the php.ini configuration file. 
+; This setting overrides the 'curl.cainfo' parameter of the php.ini configuration file.
 [curl]
 ; cainfo = ""
