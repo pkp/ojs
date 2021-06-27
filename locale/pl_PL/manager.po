@@ -1,10 +1,11 @@
+# Dariusz Lis <Dariusz@Lis.PL>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:29+00:00\n"
-"PO-Revision-Date: 2020-12-07 11:32+0000\n"
-"Last-Translator: rl <biuro@fimagis.pl>\n"
+"PO-Revision-Date: 2021-06-28 09:03+0000\n"
+"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "pl_PL/>\n"
 "Language: pl_PL\n"
@@ -1525,7 +1526,7 @@ msgid "stats.publications.galleys"
 msgstr "Pliki"
 
 msgid "stats.publications.abstracts"
-msgstr "Abstrakty"
+msgstr "Streszczenia"
 
 msgid "stats.publications.countOfTotal"
 msgstr "{$count} z {$total} artykułów"
@@ -2080,3 +2081,24 @@ msgstr ""
 "artykułu. Ustawienia domyślne mogą być nadpisane do każdego przypadku "
 "oddzielnie. Jeśli wybierasz model \"publish as you go\", nie używaj daty "
 "publikacji numeru."
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Wyniki eksportu wydań"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Nie zdefiniowano podstawowego kontaktu e-mail dla czasopisma. Można go "
+"zdefiniować w <a href=\"{$url}\">ustawieniach czasopisma</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Wyślij na adres e-mail głównego kontaktu czasopisma kopię wiadomości e-mail "
+"potwierdzającej złożenie zgłoszenia w czasopiśmie."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Wskaż państwo głównej siedziby czasopisma lub państwo adresu pocztowego "
+"czasopisma lub wydawcy."
