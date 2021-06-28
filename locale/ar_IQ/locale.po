@@ -1,9 +1,10 @@
+# M. Ali <vorteem@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2021-01-30 12:54+0000\n"
+"PO-Revision-Date: 2021-06-28 09:03+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/locale/ar_IQ/"
 ">\n"
@@ -2111,3 +2112,6 @@ msgstr "مخصوم"
 
 msgid "payment.unpaid"
 msgstr "غير مدفوع"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "هذه المجلة لا تنشر محتوياتها على الإنترنت."
