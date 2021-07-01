@@ -1,2 +1,41 @@
+# Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-07-02 11:03+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.genres.article"
+msgstr "Мақала мәтіні"
+
+msgid "section.default.title"
+msgstr "Мақалалар"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Электронды журналға енгізілген атаулар мен электрондық пошта мекенжайлары "
+"тек қана осы журналда айқындалған мақсаттар үшін ғана пайдаланылады</p>"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+"Мақала мәтіні <a href=\"{$indexUrl}/{$contextPath}/about/submissions#"
+"authorGuidelines\" target=\"_new\">авторлар нұсқаулығында</a> көрсетілген "
+"барлық стилистикалық және библиографиялық талаптарға сәйкес келеді."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"Құжат OpenOffice, Microsoft Word немесе RTF  файл пішімдерінің бірінде "
+"жазылған."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"Бұл жұмыс бұрын соңды жарияланбаған, сонымен қатар басқа журнал "
+"редакцияларында да жариялауға ұсынылмаған (немесе редакторға түсініктеме "
+"беру бөлімінде толығырақ түсініктеме берілген)."
