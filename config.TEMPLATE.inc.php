@@ -518,4 +518,4 @@ log_web_service_info = Off
 ; declare a cainfo path if a certificate other than PHP's default should be used for curl calls.
 ; This setting overrides the 'curl.cainfo' parameter of the php.ini configuration file.
 [curl]
-; cainfo = ""
+; cainfo = ""/var/www/html
