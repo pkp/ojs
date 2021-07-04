@@ -11,25 +11,51 @@ RUN apk add --update \
   sudo \
   curl \
   libcurl \
-  ca-certificates \
-  php7-fpm \
+  php7-bcmath		\
+	php7-bz2		\
+	php7-calendar \
   php7-ctype \
   php7-curl \
+	php7-exif		\
+	php7-fileinfo	\
+  php7-fpm \
+	php7-ftp		\
+	php7-gettext	\
+	php7-iconv		\
   php7-intl \
   php7-json \
   php7-mbstring \
   php7-mysqli \
   php7-mysqlnd \
   php7-opcache \
+	php7-openssl	\
+	php7-posix		\
   php7-pecl-redis \
   php7-pecl-apcu \
   php7-pdo \
   php7-pdo_mysql \
   php7-session \
   php7-pdo_sqlite \
-  php7-xml;
-
+	php7-shmop		\
+	php7-sockets	\
+	php7-sysvmsg	\
+	php7-sysvsem	\
+	php7-sysvshm	\
+  php7-xml \
+	php7-xmlreader	\
+	php7-zip		\
+	php7-zlib ;
+  
 RUN apk add --update \
+  apache2 		\
+	apache2-ssl 	\
+	apache2-utils 	\
+	ca-certificates \
+	ttf-freefont	\
+	dcron 			\
+	php7-apache2	\
+	runit 			\
+	supervisor \
   git \
   nodejs \
   npm \
