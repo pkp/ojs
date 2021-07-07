@@ -1,8 +1,6 @@
-<div width="200" align="center"><img src="webroot/images/cdlilogo.svg" width="300"/></div>
-
 ## OJS(OPEN JOURNALS SYSTEM) Framework
 
-===================================
+    ===================================
 	=== Open Journal Systems
 	=== The Public Knowledge Project
 	=== Version: 3.2.1.4
@@ -24,21 +22,17 @@ OJS Setup is a three step process:
 # STEP-1: 
 To clone ojs submodules:-
  
-    1.1 Shift to the ojs directory
-    ```        
+1.1 Shift to the ojs directory:
+            
         cd framework/app/tools/ojs
-    ```         
+             
+1.2 Initialize your local configuration file
 
-    1.2 Initialize your local configuration file
-
-    ```
         git submodule init
-    ```
-    1.3 Fetch all the data from that submodules
+	
+1.3 Fetch all the data from that submodules
 
-    ```
         git submodule update
-    ```
 
 # STEP-2:
 To build ojs container:-
@@ -56,9 +50,7 @@ Alternative way is to the import the ojs database manually.
 
 RUN the framework using following command 
 
-    ```
         ./dev/cdlidev.py up
-    ```
 
 If it runs fine, you will be having the ojs framework running at http://127.0.0.1:8081
 
@@ -71,21 +63,21 @@ Checkout submodules and copy default configuration :
 
 Install or update dependencies via Composer (https://getcomposer.org/):
 
-    Install composer 
+  Install composer 
 
     php7 -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     php7 composer-setup.php --install-dir=/usr/local/bin --filename=composer
     rm -f composer-setup.php
-    ```
-    Update dependencies via Composer 
-    ```
+   
+  Update dependencies via Composer 
+    
     composer --working-dir=lib/pkp install
     composer --working-dir=plugins/paymethod/paypal install
     composer --working-dir=plugins/generic/citationStyleLanguage install
 
 Install or update dependencies via [NPM](https://www.npmjs.com/):
 
-    # install [nodejs](https://nodejs.org/en/) if you don't already have it
+  # install [nodejs](https://nodejs.org/en/) if you don't already have it
     npm install
     npm run build
 
