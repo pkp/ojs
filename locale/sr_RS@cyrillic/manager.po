@@ -1,15 +1,20 @@
+# Biljana Cubrovic <biljana.cubrovic@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:33+00:00\n"
+"PO-Revision-Date: 2021-07-08 13:00+0000\n"
+"Last-Translator: Biljana Cubrovic <biljana.cubrovic@gmail.com>\n"
+"Language-Team: Serbian (cyrillic) <http://translate.pkp.sfu.ca/projects/ojs/"
+"manager/sr_Cyrl/>\n"
+"Language: sr_RS@cyrillic\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:33+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:33+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr "Да ли сте сигурни да желите да ресетујете све имејл шаблоне? Изгубићете сва подешавања која сте урадили."
@@ -18,7 +23,7 @@ msgid "manager.files.note"
 msgstr "Напомена: прегледач фајлова је додатак који омогућује директно управљање сви фајловима и директоријима који су везани за часопис."
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr "Купи издање"
+msgstr "Купи цео број"
 
 msgid "manager.setup.resetPermissions"
 msgstr "Врати на почетно стање дозволе у вези чланка."
@@ -368,7 +373,7 @@ msgid "manager.payment.options.enablePayments"
 msgstr "Кликните овде да укључите модул Плаћања. Морате конфигурисати подешавања за плаћања компшлетирањем обрасца испод.  Корисници ће морати да се пријаве у систем да би извршили плаћање."
 
 msgid "manager.payment.options.publicationFee"
-msgstr "Објављивање чланка"
+msgstr "Накнада за објављивање чланка"
 
 msgid "manager.payment.options.purchaseArticleFee"
 msgstr "Купи чланак"
@@ -419,7 +424,9 @@ msgid "manager.people.allUsers"
 msgstr "Сви уписани корисници"
 
 msgid "manager.people.confirmRemove"
-msgstr "Уклоните корисника из овог часописа? Овим поступком ћете уклонити корисника из свих улога у опвом часопису."
+msgstr ""
+"Уклоните корисника из овог часописа? Овим поступком ћете уклонити корисника "
+"из свих улога у овом часопису."
 
 msgid "manager.languages.languageInstructions"
 msgstr "OJS је доступан корисницима у било којем од мноштва подржаних језика. OJS може функционисати и као мултилингвални систем који омогућава корисницима да лако изаберу било који од укључених језика притиском на дугме.  OJS омогућава да се разни подаци унесу на више језика. <br /><br/> Ако неки од језика није излистан у избору језика замолите администратора да инсталира тај језик. Погледајте у OJS документацији како се додаје подршка за друге језике."
@@ -626,37 +633,48 @@ msgid "manager.sections.abstractsNotRequired"
 msgstr "Није потребан апстракт"
 
 msgid "manager.section.noSectionEditors"
-msgstr "Нема уредника секција/рубрика. Додајте ову улогу барем једном од корисника у Управљање > Подешавања > Корисници &amp; Улоге."
+msgstr ""
+"Нема уредника рубрика. Додајте ову улогу барем једном од корисника у "
+"Управљање > Подешавања > Корисници &amp; Улоге."
 
 msgid "manager.sections.assigned"
 msgstr "Уредници ове секције"
 
 msgid "manager.sections.confirmDelete"
-msgstr "Да ли сте сигурни да желите трајно обрисати ову секцију?"
+msgstr "Да ли сте сигурни да желите трајно обрисати ову рубрику?"
 
 msgid "manager.sections.create"
-msgstr "Креирај секцију/рубрику"
+msgstr "Креирај рубрику"
 
 msgid "manager.section.sectionEditorInstructions"
-msgstr "Додајте Уредника секције/рубрике како би се пријављени чланци аутоматски доделили Уреднику секције. (Супротно, Уредници секције могу бити додати ручно након пријављеног чланка.)  кад се дода, Уредник секције може бити аутоматски додељен да надгледа рецензије (стручна рецензија) и/или уређивање (коректура, лектура, изглед) пријављених чланака у секцију/рубрику. Уредници секција се креирају тако што се кликне на Уредници Секције у Улоге и Управљање часописом."
+msgstr ""
+"Додајте Уредника рубрике како би се пријављени чланци аутоматски доделили "
+"Уреднику рубрике. (У супротном, Уредници рибрике могу бити додати ручно "
+"након пријављеног чланка.)  Кад се дода, Уредник рубрике може бити "
+"аутоматски додељен да надгледа рецензије (стручна рецензија) и/или уређивање "
+"(коректура, лектура, изглед) пријављених чланака у секцију/рубрику. Уредници "
+"рубрика се креирају тако што се кликне на Уредници рубрике у Улоге и "
+"Управљање часописом."
 
 msgid "manager.sections.editorRestriction"
-msgstr "Само Уредници и Уредници секција могу пријавити чланке"
+msgstr "Само Уредници и Уредници рубрике могу пријавити чланке."
 
 msgid "manager.sections.editors"
-msgstr "Уредници секција"
+msgstr "Уредници рубрика"
 
 msgid "manager.sections.form.abbrevRequired"
-msgstr "Неопходан је скраћени назив за ову секцију"
+msgstr "Неопходан је скраћени назив за ову рубрику"
 
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "Проверите да ли је означена барем једна кутијица за означавање за сваки задатк Уредника секције."
+msgstr ""
+"Проверите да ли је означена барем једна кутијица за означавање за сваки "
+"задатак Уредника рубрике."
 
 msgid "manager.sections.form.reviewFormId"
 msgstr "Проверите да ли сте одабрали исправан рецензентски образац."
 
 msgid "manager.sections.form.titleRequired"
-msgstr "Потребан је наслов за ову секцију."
+msgstr "Потребан је наслов за ову рубрику."
 
 msgid "manager.sections.hideAbout"
 msgstr "Изостави ову секцију/рубрику из стране О часопису."
@@ -683,7 +701,7 @@ msgid "manager.sections.open"
 msgstr "Отворене пријаве"
 
 msgid "manager.sections.policy"
-msgstr "Политика секције"
+msgstr "Правила рубрике"
 
 msgid "manager.sections.readingTools"
 msgstr "Алати за читање"
@@ -1244,7 +1262,9 @@ msgid "manager.setup.noImageFileUploaded"
 msgstr "Није постављен на сервер фајл слике."
 
 msgid "manager.people.mergeUsers.into.description"
-msgstr "Одаберите корисника којем желите да доделите ауторства, задатке итд претходног корисника."
+msgstr ""
+"Одаберите корисника којем желите да доделите ауторства, задатке итд. "
+"претходног корисника."
 
 msgid "manager.setup.lockssRegister"
 msgstr "Идентификујте 6-10 библиотека које ће регистровати и сачувати код себе копије вашег часописа. На пример, обратите се институцијамагде раде ваши уредници, чланови редакције и/или институцијама које већ учествују у LOCKSS. See <a href=\"http://www.lockss.org/community/\" target=\"_blank\">the LOCKSS заједница</a>."
@@ -1427,7 +1447,9 @@ msgid "manager.setup.submissions.description"
 msgstr "Упутсво ауторима, ауторска права и индексирање (уклјучујући регистрацију)."
 
 msgid "manager.distribution.publishingMode.subscription"
-msgstr "Овај часопис захтева претплату за пристзуп неким садржајима или целокупном садржају."
+msgstr ""
+"Овај часопис захтева претплату за приступ неким садржајима или целокупном "
+"садржају."
 
 msgid "manager.distribution.publishingMode.none"
 msgstr "OJS неће бити коришћен за објављивање садржаја часописа онлајн."
@@ -1560,3 +1582,9 @@ msgstr "Часописи који имају претплату могу да п
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
 msgstr "Типови претплата и структура накнада ће бити аутоматски смештене у делу Претплате на страни О часопису заједно са именом и контактом Управника за претплате.  Додатне информације о претплатама као што су методи плаћања или подршка за претплатнике у земљама у развоју може да се овде дода."
+
+msgid "manager.paymentTypes"
+msgstr "Тип плаћања"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Да ли сте сигурни да желите да обришете претплату?"
