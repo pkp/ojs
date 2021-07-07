@@ -1,4 +1,4 @@
-## OJS(OPEN JOURNALS SYSTEM) Framework
+## OJS(OPEN JOURNALS SYSTEM) 
 
     ===================================
 	=== Open Journal Systems
@@ -41,7 +41,7 @@ To build ojs container:-
         ./cdlidev -- build ojs
     ```
  
-# STEP-3;
+# STEP-3:
 The ojs database is imported directly in phpmyadmin using the volume 
 
 ./conf/init:/docker-entrypoint-initdb.d/:ro
