@@ -81,8 +81,11 @@ RUN set -ex; \
 RUN php7 -r "copy('https://getcomposer.org/installer', 'composer-setup.php');";
 RUN php7 composer-setup.php --install-dir=/usr/local/bin --filename=composer;
 RUN rm -f composer-setup.php;
+
 RUN ln -s -f /usr/bin/php7 /usr/bin/php
+
 RUN cp config.TEMPLATE.inc.php config.inc.php
+
 RUN yes | composer --working-dir=lib/pkp install --ignore-platform-reqs
 RUN yes | composer --working-dir=plugins/paymethod/paypal install
 RUN yes | composer --working-dir=plugins/generic/citationStyleLanguage install --ignore-platform-reqs
