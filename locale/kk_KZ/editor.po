@@ -1,7 +1,7 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-08 15:32+0000\n"
+"PO-Revision-Date: 2021-07-10 04:03+0000\n"
 "Last-Translator: Madi <nmdbzk@gmail.com>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/editor/kk_KZ/"
 ">\n"
@@ -117,3 +117,366 @@ msgstr "Барлық тіркелген ұйымдар ({$count})"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
 msgstr "Барлық тіркелушілер ({$count})"
+
+msgid "editor.article.coverImage"
+msgstr "Мұқаба суреті"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"\"{$publicIdentifier}\" ашық идентификаторы басқа нысанға тиесілі. "
+"Журналдағы бірдей типтегі нысандар үшін бірегей идентификаторларды таңдаңыз."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Материалды жіберудің кез-келген кезеңінде жүктелген барлық файлдарды \""
+"Корректура\" тізіміне қосуға болады, ол үшін төмендегі \"Қосу\" белгісін "
+"қойып, \"Іздеу\" батырмасын басыңыз: барлық қол жетімді файлдар тізімде "
+"көрсетіледі және оларды қосу үшін таңдауға болады."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Осы тізімдегі соңғы файл жобалары <span class=\"pkp_help_title\">Әдебиет "
+"редакторы</span>көмегімен мақаланың өңделген нұсқасына түрлендіріледі."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Электронды қолжазба файлын таңдау"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Сайт редакторы бұл файлдарды әр электронды қолжазба үшін дайындайды, содан "
+"кейін тиісті <span class=\"pkp_help_title\">өзгерістерді</span> жүктейді."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Шығарылымның электронды қолжабасын өзгерту"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Деректерге қол жеткізу мерзімі қате."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Мақаланы журналдың шығарылымнан өшіру керек пе? Мақаланы өзге шығарылымдарда "
+"жариялау мүмкіндігі бар."
+
+msgid "editor.article.remove"
+msgstr "Өшіру"
+
+msgid "grid.action.removeArticle"
+msgstr "Мақаланы журнал шығарылымынан өшіру"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Сіз өшіргелі отырған мұқаба сурете жүйеден табылмады. Бетті қайта жүктеп "
+"көріңіз."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Мақаланы жариялау төлемі түскен жоқ. Мақаланы жариялау үшін авторға төлем "
+"жасау керетігін ескертіңіз немесе төлемді болдырмау қажеттілігі туралы "
+"хабарлаңыз."
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Кейінірек тағайындалады"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Келесі жерде мақаланы жариялауға дайындау"
+
+msgid "editor.article.editMetadata"
+msgstr "Мақала нұсқасының метадеректерін көрсету"
+
+msgid "editor.article.viewMetadata"
+msgstr "Мақала нұсқасының метадеректерін көрсету"
+
+msgid "editor.article.publishVersion"
+msgstr "Мақала нұсқасын жариялау"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Жоспарланған мақаланың шығарылымын көрсету"
+
+msgid "editor.submissions.inSection"
+msgstr "Бөлімде"
+
+msgid "issues.submissions.issueIds"
+msgstr "Шығарылымға бекітілген"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Редщаторға бекітілген"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Соңғы аяқталған"
+
+msgid "editor.submissions.averageTime"
+msgstr "Апта"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Соңғы"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Жіберілген материалдар жоқ"
+
+msgid "editor.submissions.accept"
+msgstr "Қабылдау"
+
+msgid "editor.submissions.invite"
+msgstr "Шақыру"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Редакциадағы аяқталмаған тапсырмалар"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "MM-DD жіберу"
+
+msgid "editor.submissions.showBy"
+msgstr "Келесі нұсқаулар бойынша көрсету"
+
+msgid "editor.article.decision"
+msgstr "Шешім"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Бастапқы файлды шолу нұсқасы ретінде белгілеу"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Алдыңғы шығарылымдар"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Ағымдағы шыарылымды орнату"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Шығарылымның жаңа электронды қолжазбасы"
+
+msgid "grid.action.previewIssue"
+msgstr "Алдын ала қарау"
+
+msgid "grid.action.viewIssue"
+msgstr "Көрсету"
+
+msgid "grid.action.addIssue"
+msgstr "Жаңа шығарылым"
+
+msgid "grid.action.publish"
+msgstr "Шығарылымды енгізу"
+
+msgid "grid.action.addGalley"
+msgstr "Жаңа электронды қолжазбаны енгізу"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Болашақ журнал шығарылымдары"
+
+msgid "editor.issues.identifiers"
+msgstr "Идентификаторлар"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Электрондық қолжазбаны жою керек пе?"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Шығарылымның электрондық қолжазбасына кейін қайту"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Шығарылымның электронды қолжазбасың идентификаторы орнатылған."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Шығарылымның электронды қолжазбасының жазылу тілін көрсету міндетті."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Шығарылымның электронды қолжазбасының белгісін көрсету міндетті."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Жарияланған электронды қолжазбалар жоқ."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr ""
+"Мақаланың электронды қолжазбасын шығарылымның толық мазмұнымен жариялау."
+
+msgid "editor.issues.viewingGalley"
+msgstr "Шығарылымың электронды қолжазбасын қарау"
+
+msgid "editor.issues.galley"
+msgstr "Шығарылымның электронды қолжазбасы"
+
+msgid "editor.issues.galleys"
+msgstr "Шығарылымның электронды қолжазбалары"
+
+msgid "editor.issues.pages"
+msgstr "Беттер"
+
+msgid "editor.issues.open"
+msgstr "Ашу"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Жарияланған журнал шығарылымдары жоқ"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Мақаланың идентификаторын сақтау мүмкін емес:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr ""
+"Сіз бұл шығарылымды ағымдағы шығарылым ретінде орнатқыңыз келетініне "
+"сенімдісіз бе?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr ""
+"Сіз осы жарияланған шығарылымды жариялаудан бас тартқыңыз келетініне "
+"сенімдісіз бе?"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Журналдың жаңа шығарылымын жариялау керектігін растаңыз?"
+
+msgid "editor.issues.preview"
+msgstr "Алдын ала қарау"
+
+msgid "editor.issues.previewIssue"
+msgstr "Шығарылымды алдын ала қарау"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Шығарылымды жариялауды болдырмау"
+
+msgid "editor.issues.publishIssue"
+msgstr "Жарияланған шығарылым"
+
+msgid "editor.issues.publicId"
+msgstr "Ашық ID"
+
+msgid "editor.issues.order"
+msgstr "Сұрыптау"
+
+msgid "editor.issues.default"
+msgstr "Бастапқы"
+
+msgid "editor.issues.saveChanges"
+msgstr "Шығарылым мазмұнындағы өзгерістерді сақтау керек пе?"
+
+msgid "editor.issues.issueData"
+msgstr "Шығарылым туралы дерек"
+
+msgid "editor.issues.access"
+msgstr "Қол жеткізу"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Том нөмірі міндетті және оң сан болуы керек."
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Барлық жарияланған авторлар ({$count})"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Бұл журналда қолданушы орнатқан шығарылымды сұрыптау ережесі қолданылады. <a "
+"href= \"{$url}\" class= \"action\">Бастапқы сұрыптау ережесіне қайтару.</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Бұл журнал шығарылымында қолданушы орнатқан бөлімді сұрыптау ережесі "
+"қолданылады. <a href=\"{$url}\" class= \"action\">Жүйенің бастапқы сұрыптау "
+"ережесіне қайтару</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Барлық мақалалар редакциялау кезегіне қайтарылады және олармен байланысты "
+"барлық файлдар біржола жойылады. Сіз бұл шығарылымды жойғыңыз келетініне "
+"сенімдісіз бе?"
+
+msgid "editor.issues.cover"
+msgstr "Обложка"
+
+msgid "editor.issues.identification"
+msgstr "Идентификация"
+
+msgid "editor.issues.subscription"
+msgstr "Жазылым"
+
+msgid "editor.issues.openAccess"
+msgstr "Ащық"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Көрсету"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Келесілердің көмегімен осы шығарылым үшін мұқаба құрастырыңыз."
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Мұқабадағы жазу"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Стиль кестесін жою керек пе?"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Стиль кестесінің пішімі қате. Жіберілген файлдың синтаксистік құрылымы CSS "
+"тіліне сәйкес екеніне көз жеткізіңіз. (Файылдың басында түсініктемелері бар "
+"стиль кестелері жүйеде қабылданбауы мүмкін екенін ескеріңіз.)"
+
+msgid "editor.issues.styleFile"
+msgstr "Стильдер кестесі"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Мұқаба пішімі қате. Рұқсат етілген пішімдер  — .gif, .jpg, немесе .png."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Сіздң өшіргелі отырған мұқаба суреті жүйеден табылмады. Бетті қайта "
+"жүктеуіңізді сұраймыз."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Сіздң өшіргелі отырған мұқаба суреті осы шығарылымның мұқабасына сәйкес "
+"келмейді. Бетті қайта жүктеуіңізді сұраймыз."
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Мұқаба суретін өшіру керек пе?"
+
+msgid "editor.issues.proofed"
+msgstr "Тексерілді"
+
+msgid "editor.issues.remove"
+msgstr "Өшіру"
+
+msgid "editor.issues.uploaded"
+msgstr "Жүктелген"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Рұқсат етілген файл пішімдері:.gif, .jpg, немесе .png)"
+
+msgid "editor.issues.coverPage"
+msgstr "Мұқабаның суреті"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Шығалымды жариялауды кейінге қалдыру"
+
+msgid "editor.issues.accessDate"
+msgstr "Шығаралым уақыты"
+
+msgid "editor.issues.accessStatus"
+msgstr "Шығарылым мәртебесі"
+
+msgid "editor.issues.description"
+msgstr "Сипаттама"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Шығарылымның ашық идентификациясы"
+
+msgid "editor.issues.issueIdentification"
+msgstr "Шығарылым идентификациясы"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Шығарылымның идентификациясы міндетті. Шығарылымңың кем дегенде бір "
+"идентификациясын таңдаңыз."
+
+msgid "editor.issues.titleRequired"
+msgstr "Шығарылым атауы міндетті."
+
+msgid "editor.issues.yearRequired"
+msgstr "Жыл нөмірі міндетті және оң сан болуы керек."
+
+msgid "editor.issues.numberRequired"
+msgstr "Шығарылым нөмірі міндетті әрі оң сан болуы тиіс."
+
+msgid "editor.issues.datePublished"
+msgstr "Жариялану уақыты"
+
+msgid "editor.issues.unpublished"
+msgstr "Жарияланбаған"
+
+msgid "editor.issues.published"
+msgstr "Жарияланды"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Сіз бұл шығарылымды біржолата жойғыңыз келетініне сенімдісіз бе?"
