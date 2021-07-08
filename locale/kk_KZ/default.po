@@ -1,7 +1,7 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-02 11:03+0000\n"
+"PO-Revision-Date: 2021-07-08 13:00+0000\n"
 "Last-Translator: Madi <nmdbzk@gmail.com>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "kk_KZ/>\n"
@@ -37,5 +37,147 @@ msgstr ""
 msgid "default.contextSettings.checklist.notPreviouslyPublished"
 msgstr ""
 "Бұл жұмыс бұрын соңды жарияланбаған, сонымен қатар басқа журнал "
-"редакцияларында да жариялауға ұсынылмаған (немесе редакторға түсініктеме "
-"беру бөлімінде толығырақ түсініктеме берілген)."
+"редакцияларында да жариялауға ұсынылмаған (немесе редактордың анықтама "
+"бөлімінде толығырақ түсініктеме берілген)."
+
+msgid "section.default.policy"
+msgstr "Бөлімнің негізгі ережелері"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "ӨРед"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Өзге редакторлар"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Өзге редактор"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Рец"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Рецензенттер"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Рецензент"
+
+msgid "default.genres.sourceTexts"
+msgstr "Мәтіннің түпнұсқасы"
+
+msgid "default.genres.dataSet"
+msgstr "Деректер жиыны"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Деректерді талдау"
+
+msgid "default.genres.transcripts"
+msgstr "Транскрипттер"
+
+msgid "default.genres.researchResults"
+msgstr "Зерттеу нәтижелері"
+
+msgid "default.genres.researchMaterials"
+msgstr "Зерттеу материалдары"
+
+msgid "default.genres.researchInstrument"
+msgstr "Зерттеу құралдары"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "ХМ"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Хабарлама басқармасы"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Хабарлама меңгерушісі"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "БР"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Бөлім редакторлары"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Бөлім редакторы"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ЖР"
+
+msgid "default.groups.plural.editor"
+msgstr "Журнал редакторлары"
+
+msgid "default.groups.name.editor"
+msgstr "Журнал редакторы"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ЖМ"
+
+msgid "default.groups.plural.manager"
+msgstr "Журнал басқармасы"
+
+msgid "default.groups.name.manager"
+msgstr "Журнал меңгерушісі"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Жүйеде тіркелген кітапханалар арасында үлестірілген мұрағат жүйесін орнату "
+"және кітапханаларға деректерді сақтау және қалпына келтіру мүмкіндігін "
+"қамтамасыз ететін тұрақты журнал мұрағаттарын құру мақсатында LOCKSS жүйесі "
+"қолданылады. \n"
+"<a href=\"http://www.lockss.org/\">Толығырақ...</a>"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Жүйеде тіркелген кітапханалар арасында үлестірілген мұрағат жүйесін орнату "
+"және кітапханаларға деректерді сақтау және қалпына келтіру мүмкіндігін "
+"қамтамасыз ететін тұрақты журнал мұрағаттарын құру мақсатында LOCKSS жүйесі "
+"қолданылады. \n"
+"<a href=\"http://www.lockss.org/\">Толығырақ...</a>"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Біз кітапхана қызметкерлері бұл журналды өз кітапханаларындағы электрондық "
+"журналдарының тізіміне енгізеді деген үміттеміз. Айта кету керек, бұл "
+"журналдың ашық баспа жүйесі кітапханаларға өздерінің электронды журналдарын "
+"орналастыруға мүмкіндік береді, олардың редакциясына оқытушылар мен ғалымдар "
+"қатысады (толығырақ <a href= \"http://pkp.sfu.ca/ojs\" >Open Journal "
+"Systems</a>."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Егер редакцияға жаңа мақала жібергіңіз келсе <a href=\""
+"{$indexUrl}/{$contextPath}/about\">«Журнал туралы ақпарат»</a> бөлімімен "
+"танысуыңызды сұраймыз. Бұл жерде сіз Журнал ережелерімен қатар <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Авторлар "
+"нұсқаулығы</a> туралы ақпарат ала аласыз. Авторлар ең алдымен жүйеге <a href="
+"\"{$indexUrl}/index/login\">енуі</a>  немесе жүйеге тіркелмеген жағдайда <a "
+"href=\"{$indexUrl}/{$contextPath}/user/register\">тіркелуі</a> тиіс. "
+"Мақаланы редакцияға жіберу 5 қадамнан тұрады."
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Біз журнал оқырмандарын журналдың жаңа санының шығу хабарламасына тіркелуін "
+"сұраймыз. Ол үшін <a href=\"{$indexUrl}/{$contextPath}/user/register\""
+">Тіркелу</a>сілтемесіне өтіңіз. Жүйеге тіркелгеннен кейін оқырманның "
+"электрондық поштасына журналдың жаңа саны туралы хабарлама келіп отырады. "
+"Сіздің электрондық поштаңыз өзге мақсаттарда пайдаланылмайтындығына көз "
+"жеткізу үшін <a href=\"{$indexUrl}/{$contextPath}/about/submissions#"
+"privacyStatement\">Құпиялылық мәлімдемесі</a> бөлімімен танысыңыз."
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Журнал мазмұны білім алмасудың ашық қағидасына сәйкес көпшілікке қолжетімді."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"Мәтін бірінші өлшемдегі жоларалық интервалмен және 12-ші қаріппен терілген; "
+"Сөз тіркестерін ерекшелеу мақсатында курсив қолданылған (URL адрестерден "
+"өзге); суреттер мен кестелер мәтіннің мазмұнына сәйкес орналастырылған."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr ""
+"Мүмкіндігінше барлық пайдаланылған сілтемелерде интернет-адрестер (URL) "
+"толықтай көрсетілген."
