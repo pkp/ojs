@@ -1,8 +1,77 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-07-08 13:00+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/editor/kk_KZ/"
+">\n"
 "Language: kk_KZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Барлық оқырмандар ({$count})"
+
+msgid "editor.notifyUsers"
+msgstr "Пайдаланушыларды хабардар ету"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Редакцияның мақаланы Авторлық  кезеңіне өткізу шешімін мақала авторына "
+"хабарлау үшін «Авторды хабарлау» сілтемесін пайдаланыңыз және редакция "
+"шешімінің керек нұсқасын таңдаңыз."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Бұл материал «Авторды хабардар ету» хабарламасы жөнелтілгеннен кейін немесе «"
+"Хабарлама жібермеу» батырмасын басқан жағдайда мұрағатқа жіберіледі."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Сіз бұл шешімді жазып алғыңыз келетініне сенімдісіз бе?"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Материалдар мұрағатындағы өзгерістерді сақтау. Жою үшін белгіленген "
+"материалдар жүйеден толықтай жойылады."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Мұрағатта материалдар тіркелмеген."
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"«{$publicIdentifier}» идентификаторы өзге нысанның меншігінде (шығарылымдар, "
+"мақалалар, гранкалар немесе қосымша файл). Журнал көлеміндегі бірегей "
+"идентификаторды таңдауыңызды сұраймыз."
+
+msgid "editor.me"
+msgstr "Мен"
+
+msgid "editor.allEditors"
+msgstr "Барлық редакторлар"
+
+msgid "editor.allSections"
+msgstr "Барлық бөлімдер"
+
+msgid "editor.publishedIssues"
+msgstr "Публикация нөмірі"
+
+msgid "editor.publishing"
+msgstr "Публикация"
+
+msgid "editor.submissionArchive"
+msgstr "Материалдар мұрағаты"
+
+msgid "editor.submissionQueue"
+msgstr "Материалдар кезегі"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Материалдар мен публикациялар"
+
+msgid "editor.reassign"
+msgstr "Қайта тағайындау"
+
+msgid "editor.home"
+msgstr "Редактордың басты беті"
