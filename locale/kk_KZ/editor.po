@@ -1,7 +1,7 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-08 13:00+0000\n"
+"PO-Revision-Date: 2021-07-08 15:32+0000\n"
 "Last-Translator: Madi <nmdbzk@gmail.com>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/editor/kk_KZ/"
 ">\n"
@@ -75,3 +75,45 @@ msgstr "Қайта тағайындау"
 
 msgid "editor.home"
 msgstr "Редактордың басты беті"
+
+msgid "editor.issues.noArticles"
+msgstr "Дәл қазір бұл шығарылым үшін жоспарланған мақалалар жоқ."
+
+msgid "editor.issues.numArticles"
+msgstr "Мақалалар саны"
+
+msgid "editor.issues.currentIssue"
+msgstr "Ағымдағы шығарылым"
+
+msgid "editor.issues.editIssue"
+msgstr "Шығарылымды басқару: {$issueIdentification}"
+
+msgid "editor.issues.createIssue"
+msgstr "Жаңа  шығарылым"
+
+msgid "editor.editorAdministration"
+msgstr "Редактор әкімшілігі"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Осы санның мазмұнын қосу:"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Хабарламаны осы журналмен байланысты және хабарлама алып тұруға келіскен "
+"қолданушыларға ғана жіберу ({$count})"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Осы журналмен байланысты барлық қолданушыларға хабарламаны жіберу ({$count})"
+
+msgid "editor.usersNotified"
+msgstr "Қолданушылар хабарланды"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Сайт қолданушыларына хабарлама жіберілуде..."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Барлық тіркелген ұйымдар ({$count})"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Барлық тіркелушілер ({$count})"
