@@ -1,8 +1,360 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-07-10 04:03+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/locale/kk_KZ/"
+">\n"
 "Language: kk_KZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submissions.copyeditComplete"
+msgstr "Әдеби редакциялаудан өтті"
+
+msgid "submission.eventLog"
+msgstr "Әрекеттер журналы"
+
+msgid "submissions.editorRuling"
+msgstr "Редвкторлар ережесі"
+
+msgid "submissions.editorDecision"
+msgstr "Редактордың шешімі"
+
+msgid "submissions.proof"
+msgstr "Корр."
+
+msgid "submissions.reviewRound"
+msgstr "Рецензиялау кезеңі"
+
+msgid "submissions.postAuthor"
+msgstr "Кейінгі автор"
+
+msgid "submissions.initialProof"
+msgstr "Бастапқы корректура"
+
+msgid "submissions.proofread"
+msgstr "Корректура"
+
+msgid "submissions.initial"
+msgstr "Бастапқы"
+
+msgid "submissions.published"
+msgstr "Жарияланды"
+
+msgid "submissions.queuedReview"
+msgstr "Рецензияда"
+
+msgid "submissions.step3"
+msgstr "3-шi қадам"
+
+msgid "submissions.step1"
+msgstr "1-шi қадам"
+
+msgid "submission.scheduledIn.tba"
+msgstr "Кейінірек тағайындалады"
+
+msgid "submission.scheduledIn"
+msgstr "\"{$issueName}\" шығарылымында жариялау жоспарланған."
+
+msgid "submission.scheduling"
+msgstr "Жоспарлау"
+
+msgid "submission.proofreading"
+msgstr "Корректура"
+
+msgid "submission.copyedit"
+msgstr "Әд.Ред."
+
+msgid "submission.copyediting"
+msgstr "Әдеби редакциялау"
+
+msgid "submission.authorVersion"
+msgstr "Автордың нұсқасы"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Автормен түзетілген файл нұсқасы"
+
+msgid "submission.editorVersion"
+msgstr "Редактордың нұсқасы"
+
+msgid "submission.postReviewVersion"
+msgstr "Шолудан кейінгі файл нұсқасы"
+
+msgid "submission.reviewersVersion"
+msgstr "Рецензенттің ескертулері бар файл нұсқасы"
+
+msgid "submission.editorAuthorRecord"
+msgstr "\"Редактор / Автор\" хат алмасу жазбасы"
+
+msgid "submission.notifyEditor"
+msgstr "Редакторға хабарлау"
+
+msgid "submission.notifyAuthor"
+msgstr "Авторға хабарлау"
+
+msgid "submission.editorReview"
+msgstr "Редактордың пікірі"
+
+msgid "submission.round"
+msgstr "{$round}&nbsp;раунд"
+
+msgid "submission.editorDecision"
+msgstr "Редактордың шешімі"
+
+msgid "submission.sent"
+msgstr "Жіберілді"
+
+msgid "submission.changeSection"
+msgstr "Келесіге өзгерту"
+
+msgid "submission.submissionEditing"
+msgstr "Жіберілген материалды өңдеу"
+
+msgid "category.category"
+msgstr "Санаттар"
+
+msgid "article.return"
+msgstr "Мақала туралы мәліметтерге оралу"
+
+msgid "article.fontSize.large.altText"
+msgstr "Үлкен"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Орташа"
+
+msgid "article.fontSize.small.altText"
+msgstr "Ұсақ"
+
+msgid "article.fontSize"
+msgstr "Қаріп өлшемі"
+
+msgid "article.comments.enable"
+msgstr "Қосу"
+
+msgid "article.comments.disable"
+msgstr "Сөндіру"
+
+msgid "article.comments.sectionDefault"
+msgstr "Бастапқы"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Шектеулі қатынас"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Ашық қол жеткізу"
+
+msgid "article.coverPage.altText"
+msgstr "Мұқаба суреті"
+
+msgid "article.abstract"
+msgstr "Аңдатпа"
+
+msgid "article.details"
+msgstr "Толық ақпарат"
+
+msgid "article.submissions"
+msgstr "Материалдар"
+
+msgid "article.submission"
+msgstr "Материал"
+
+msgid "article.commentsToEditor"
+msgstr "Автордың түсініктемелері"
+
+msgid "article.sectionEditor"
+msgstr "БР"
+
+msgid "article.language"
+msgstr "Тіл"
+
+msgid "article.type"
+msgstr "Түр, әдіс немесе тәсіл"
+
+msgid "article.coverage"
+msgstr "Қамту"
+
+msgid "article.subject"
+msgstr "Кілт сөздер"
+
+msgid "article.discipline"
+msgstr "Академиялық пәндер және пәндер бөлімдері"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Қос. файлдар"
+
+msgid "article.suppFiles"
+msgstr "Қосымша файлдар"
+
+msgid "article.suppFile"
+msgstr "Қосымша файл"
+
+msgid "article.file"
+msgstr "Файл"
+
+msgid "article.journalSection"
+msgstr "Журнал бөлімі"
+
+msgid "article.metadata"
+msgstr "Метадеректер"
+
+msgid "article.indexingInformation"
+msgstr "Индексациялауға арналған ақпарат"
+
+msgid "article.authors"
+msgstr "Авторлар"
+
+msgid "article.title"
+msgstr "Атауы"
+
+msgid "article.submissionId"
+msgstr "Мақала ID"
+
+msgid "common.publications"
+msgstr "Мақалалар"
+
+msgid "common.publication"
+msgstr "Мақала"
+
+msgid "article.articles"
+msgstr "Мақалалар"
+
+msgid "article.article"
+msgstr "Мақала"
+
+msgid "section.policy"
+msgstr "Бөлім ережелері"
+
+msgid "section.abbreviation.example"
+msgstr "(Мысалы, Мақалалар=МАҚ)"
+
+msgid "section.abbreviation"
+msgstr "Қысқартылған атау"
+
+msgid "section.title"
+msgstr "Бөлімнің атауы"
+
+msgid "section.sections"
+msgstr "Журнал бөлімдері"
+
+msgid "section.section"
+msgstr "Бөлім"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Тағайындалған редакторлар"
+
+msgid "common.queue.short.completed"
+msgstr "Мұрағат"
+
+msgid "common.queue.long.completed"
+msgstr "Мұрағат"
+
+msgid "common.queue.short.active"
+msgstr "Өңделуде"
+
+msgid "common.queue.long.active"
+msgstr "Өңделуде"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Мұрағат"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Мұрағат"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Мақала рцензияда"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Мақала рецензиялау қадамында"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Мақала редакция қарауында"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Мақала өңделуде"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Жаңа"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Тағайындалмаған"
+
+msgid "navigation.skip.issue"
+msgstr "Ағымдағы шығарылымға өту"
+
+msgid "navigation.skip.about"
+msgstr "Журнал туралы ақпаратқа өту"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Кітапханаларға арналған ақпарат"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Авторларға арналған ақпарат"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Мүдделер қақтығысы туралы декларацияны толтыру жөніндегі Нұсқаулық"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Кітапханаларға арналған анықтама"
+
+msgid "navigation.infoForAuthors"
+msgstr "Авторларға арналған анықтама"
+
+msgid "navigation.browseByAuthor"
+msgstr "Автор бойынша"
+
+msgid "navigation.browseByIssue"
+msgstr "Шығарылым бойынша"
+
+msgid "navigation.otherJournals"
+msgstr "Өзге журналдар"
+
+msgid "navigation.current"
+msgstr "Ағымдағы шығарылым"
+
+msgid "navigation.journalHelp"
+msgstr "Көмек"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Журнал басты бетінің суреті"
+
+msgid "common.homePageHeader.altText"
+msgstr "Басты бет атауы"
+
+msgid "common.payments"
+msgstr "Төлем"
+
+msgid "common.payment"
+msgstr "Төлем"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Мақаланы журналдың шығарылымнан өшіру керек пе? Мақаланы өзге шығарылымдарда "
+"жариялау мүмкіндігі бар."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Міндетті жолақтарды толтырыңыз."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Рецензия жолағын толтыру үшін белгішені белгілеңіз."
+
+msgid "navigation.categories.browse"
+msgstr "Шолу"
+
+msgid "navigation.categories"
+msgstr "Санаттар"
+
+msgid "context.select"
+msgstr "Басқа журналға ауыстыру:"
+
+msgid "context.current"
+msgstr "Ағымдағы журнал:"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Бұл журнал өз мазмұнын интернетте жарияламайды."
