@@ -1,7 +1,7 @@
 # Mohd Raheemmi Mohd Yasin <raheemmiyasin@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-08 13:00+0000\n"
+"PO-Revision-Date: 2021-07-10 04:03+0000\n"
 "Last-Translator: Mohd Raheemmi Mohd Yasin <raheemmiyasin@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/admin/ms/>\n"
 "Language: ms\n"
@@ -33,3 +33,9 @@ msgstr "Ubah hala jurnal"
 
 msgid "admin.hostedContexts"
 msgstr "Jurnal yang Dihoskan"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Pemberitahuan Akses Terbuka"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Peringatan Ulasan"
