@@ -1,7 +1,7 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-10 04:03+0000\n"
+"PO-Revision-Date: 2021-07-12 13:40+0000\n"
 "Last-Translator: Madi <nmdbzk@gmail.com>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/locale/kk_KZ/"
 ">\n"
@@ -358,3 +358,439 @@ msgstr "Ағымдағы журнал:"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Бұл журнал өз мазмұнын интернетте жарияламайды."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Авторизация модульдері Open Journal Systems-те қолданушыларды "
+"аутентификациялауды LDAP серверлері секілді басқа жүйелермен байланыстырға "
+"мүмкіндік береді."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Мақала қолжазбасының модульдері мақала қолжазбасы ретінде әр түрлі "
+"құжаттарды көрсетуге мүмкіндік береді."
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Мақаланың қолжазбасының модульдері"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Тіркелу түрлері"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Ұйымға жазылу"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Жеке жазылымдар"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Хабарламаларды басқару"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4> назар аударыңыз!</h4>\n"
+"<p>жүйе конфигурация файлын автоматты түрде қайта жаза алмайды. Өзгертілген "
+"конфигурация параметрлерін қолдану үшін <tt>config ашу керек.inc.php</tt> "
+"тиісті мәтіндік редакторда және оның мазмұнын төмендегі мәтін өрісінің "
+"мазмұнымен ауыстырыңыз.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p> OJS-тен  өзге негізгі аутентификация көзін көрсету келесі жағдайларға "
+"әкеледі:</p>\n"
+"<ul>\n"
+"\t<li>Егер қолданушы жүйеде жаңа есептік жазбаны осы сайтта тіркелген "
+"қолданушы есімімен тіркеуге тырысса, аутентификация барысында көрсетілген "
+"құпия сөз қолданушының деректеріне сәйкес келсе ғана тіркеуге рұқсат "
+"етіледі.</li>\n"
+"</ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "Ұқсас құжаттар"
+
+msgid "search.results.orderDir.desc"
+msgstr "Кему реті бойынша"
+
+msgid "search.results.orderDir.asc"
+msgstr "Өсу реті бойынша"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Өзектілігі"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Көп қарастырылған (соңғы айда)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Көп қарастырылған (барлық уақыт аралығында)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Журнал атауы"
+
+msgid "search.results.orderBy.issue"
+msgstr "Шығарылым"
+
+msgid "search.results.orderBy.date"
+msgstr "Жарияланған уақыты"
+
+msgid "search.results.orderBy.author"
+msgstr "Автор"
+
+msgid "search.results.orderBy.article"
+msgstr "Мақала атауы"
+
+msgid "search.results.orderBy"
+msgstr "Нәтижелерді сұрыптау"
+
+msgid "comments.authenticated"
+msgstr "(<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>)"
+
+msgid "comments.commentsOnArticle"
+msgstr "Осы мақалаға түсініктемелер"
+
+msgid "reader.purchasePrice"
+msgstr "({$price} {$currency})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Тіркелу немесе төлем қажет"
+
+msgid "reader.subscriptionAccess"
+msgstr "Тіркелу қажет"
+
+msgid "reader.openAccess"
+msgstr "Ашық"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Бұл материалға қол жеткізу үшін тіркелу қажет. Тіркелу мәртебесін тексеру "
+"үшін журналдың веб-сайтына есептік жазбаңызбен кіріңіз."
+
+msgid "reader.subscribersOnly"
+msgstr "Тек тіркелген оқырмандар үшін"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Сайтты редакциялау аяқталды"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Материалдың электрондық нұсқасы жаңартылды"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Сайтты редакциялау басталды"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Материалғдан сайт редакторы алып тасталды"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Материалға сайт редакторы тағайындалды"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Корректура аяқталды"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Корректор файлы жаңартылды"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Корректурва басталды"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Материалға арналған корректор кері қайтарылды"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Материалға корректор тағайындалды"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Әдеби өңдеу файлы жаңартылды"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Соңғы әдеби редакциялау аяқталды"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Бастапқы әдеби редакциялау аяқталды"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Әдеби редактордың өңдеулері бар Файл жаңартылды"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Әдеби редакциялау басталды"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Материалға арналған әдеби редактор алып тасталды"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Материалға әдеби редактор тағайындалды"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Материал мұрағаттан қалпына келтірілді"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Материал мұрағатқа жіберілді"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Редактор файлы жаңартылды"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Редактордың шешімі жіберілді"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Материалға арналған редактор кері қайтарылды"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Материалға редактор тағайындалды"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Авторлық түзету файлы жаңартылды"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Автор түзетілген нұсқасын жіберді"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Мақала жарияланды"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Мақала шығарылымға тағайындалды"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Мақала нөмірге жоспарланған кезекке жіберілді"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Мақала жіберілді"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Жөнелту оқиғасы"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Ескерту:</strong> Сайт арқылы сатып алынған жазылымдар жазылым іске "
+"қосылмас бұрын Домен мен IP адрестерін растауды талап етеді."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Ұйымға жазылу пайдаланушылардың сайтқа кіруін талап етпейді. Жазылым арқылы "
+"берілген мазмұнға қол жеткізу үшін пайдаланушы домені және/немесе IP "
+"мекенжайы қолданылады."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Жеке жазылымдар жазылым арқылы берілген мазмұнға қол жеткізу үшін сайтқа "
+"тіркелуді қажет етеді."
+
+msgid "subscriptions.status.other"
+msgstr "Басқа, ескертулерді қараңыз"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Сізде белсенді жазылымдар жоқ."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Онлайн-төлемді күту"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Төлемді күту"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Растау қажет"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Ақпарат қажет"
+
+msgid "subscriptions.status.active"
+msgstr "Белсенді"
+
+msgid "subscriptions.status"
+msgstr "Мәртебе"
+
+msgid "subscriptions.inactive"
+msgstr "Белсенді емес"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Электронды және баспалы"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Баспалы"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Электронды"
+
+msgid "subscriptionTypes.format"
+msgstr "Пішім"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Мерзімсіз"
+
+msgid "subscriptionTypes.months"
+msgstr "айлар"
+
+msgid "subscriptionTypes.month"
+msgstr "ай"
+
+msgid "subscriptionTypes.years"
+msgstr "жылдар"
+
+msgid "subscriptionTypes.year"
+msgstr "жыл"
+
+msgid "subscriptionTypes.currency"
+msgstr "Валюта"
+
+msgid "issue.return"
+msgstr "Шығарылым туралы мәліметтерге оралу"
+
+msgid "issue.viewIssue"
+msgstr "Шығарылымды қарау"
+
+msgid "issue.nonpdf.title"
+msgstr "Шығараылымды жадқа сақтау"
+
+msgid "issue.fullIssue"
+msgstr "Барлық шығарылымдар"
+
+msgid "issue.coverPage.altText"
+msgstr "Мұқаба"
+
+msgid "issue.abstract"
+msgstr "Аңдатпа"
+
+msgid "issue.toc"
+msgstr "Мазмұны"
+
+msgid "issue.noIssues"
+msgstr "Шығарылымдар жоқ"
+
+msgid "issue.year"
+msgstr "Жыл"
+
+msgid "issue.no"
+msgstr "№"
+
+msgid "issue.vol"
+msgstr "Нөмір"
+
+msgid "issue.number"
+msgstr "Нөмір"
+
+msgid "issue.volume"
+msgstr "Журналдың нөмірі"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Көрсету  {$identification}"
+
+msgid "issue.title"
+msgstr "Атауы"
+
+msgid "issue.issues"
+msgstr "Журналдың сандары"
+
+msgid "issue.issue"
+msgstr "Журналдың саны"
+
+msgid "user.role.journalAssistants"
+msgstr "Журнал көмекшілері"
+
+msgid "user.role.journalAssistant"
+msgstr "Журнал көмекшісі"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Хабарлама басқармасы"
+
+msgid "user.role.subEditors"
+msgstr "Бөлім редакторлары"
+
+msgid "user.role.managers"
+msgstr "Журнал басқармасы"
+
+msgid "user.role.subscriptionManager"
+msgstr "Хабарлама меңгерушісі"
+
+msgid "user.role.subEditor"
+msgstr "Бөлім редакторы"
+
+msgid "user.role.manager"
+msgstr "Журнал меңгерушісі"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Рецензент ретінде тіркелу."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Рецензент ретінде тіркелу"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Мақаланы жіберу: дәл азір тіркелу мүмкін емес."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Мақаланы ұсыну"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Сіздің есептік жазбаңызға ешқандай рөл тіркелмеген. Төменде ұсынылған "
+"әрекеттердің бірін таңдаңыз:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Сіздің есептік жазбаңыз ешқандай журналға тіркелмеген. Журналды таңдаңыз:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Жазылымдарды басқару"
+
+msgid "user.myJournals"
+msgstr "Меніі журналдарым"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Егерде сіз қандай да бір журналда рецензент рөлін сұрасаңыз, сізді рецензент "
+"ретінде қызықтыратын тақырыптарды енгізіңіз."
+
+msgid "user.register.otherContextRoles"
+msgstr "Келесі рөлдерді сұрау."
+
+msgid "user.register.contextsPrompt"
+msgstr "Жүйедегі қай журналға тіркелгіңіз келеді?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Мақаланы рецензиялауға келіп түскен ұсыныстарды қабылдауға келісімімді "
+"беремін."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "\"{$userGroup}\" рөлін сұрау."
+
+msgid "user.reviewerPrompt"
+msgstr "Журнал мақалаларына реңензия беру?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Басқа журналдар үшін тіркеу"
+
+msgid "user.showAllJournals"
+msgstr "Менің журналдарымды көрсету"
+
+msgid "user.profile.profileImage"
+msgstr "Профиль суреті"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Қолданушыларды осы журналда тағайындалған рөлдерсіз қосыңыз."
+
+msgid "user.authorization.representationNotFound"
+msgstr "Сұралған мақаланың электрондық нұсқасы табылған жоқ."
+
+msgid "journal.viewAllIssues"
+msgstr "Барлық шығарылымдарды көрсету"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Журнал"
+
+msgid "journal.path"
+msgstr "Жол"
+
+msgid "context.contexts"
+msgstr "Журналдар"
+
+msgid "journal.currentIssue"
+msgstr "Ағымдағы шығарылым"
+
+msgid "submission.search"
+msgstr "Мақаланы іздеу"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Корректурадан өтті"
+
+msgid "submissions.layoutComplete"
+msgstr "Макет өңделді"
