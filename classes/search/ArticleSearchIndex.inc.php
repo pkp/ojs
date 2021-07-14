@@ -25,7 +25,7 @@ use PKP\search\SearchFileParser;
 
 use PKP\search\SubmissionSearch;
 use PKP\search\SubmissionSearchIndex;
-use PKP\submission\SubmissionFile;
+use PKP\submissionFile\SubmissionFile;
 
 class ArticleSearchIndex extends SubmissionSearchIndex
 {
@@ -162,12 +162,24 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // If no search plug-in is activated then fall back to the
         // default database search implementation.
         if ($hookResult === false || is_null($hookResult)) {
-            $submissionFilesIterator = Services::get('submissionFile')->getMany([
-                'submissionIds' => [$article->getId()],
-                'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
-            ]);
+            $collector = Repo::submissionFiles()
+                ->getCollector()
+                ->filterBySubmissionIds([$article->getId()])
+                ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF]);
+            $submissionFilesIterator = Repo::submissionFiles()
+                ->getMany($collector);
             foreach ($submissionFilesIterator as $submissionFile) {
                 $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
+                $innerCollector = Repo::submissionFiles()
+                    ->getCollector()
+                    ->filterByAssoc(
+                        [ASSOC_TYPE_SUBMISSION_FILE],
+                        [$submissionFile->getId()]
+                    )
+                    ->filterBySubmissionIds([$article->getId()])
+                    ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
+                    ->filterByIncludeDependentFiles(true);
+    
                 $dependentFilesIterator = Services::get('submissionFile')->getMany([
                     'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
                     'assocIds' => [$submissionFile->getId()],
