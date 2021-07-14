@@ -1,12 +1,13 @@
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2020-12-19 09:52+0000\n"
+"PO-Revision-Date: 2021-07-14 06:03+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"id/>\n"
+"id_ID/>\n"
 "Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1817,3 +1818,26 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Minimal satu seksi sudah aktif. Kunjungi pengaturan alur kerja untuk menutup "
 "semua naskah masuk ke jurnal ini."
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Proses gagal memparsing galei terbitan"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Ekspor Terbitan"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Belum ada kontak utama yang disertakan pada jurnal ini. Kontak utama dapat "
+"ditambahkan melalui menu <a href=\"{$url}\">pengaturan jurnal</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Kirim salinan email pernytaan naskah telah diterima ke kontak utama jurnal."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Pilih negara di mana jurnal berada, atau negara alamat korespondensi jurnal "
+"atau penerbit."
