@@ -82,8 +82,7 @@ class MetricsDAO extends PKPMetricsDAO
                         $issueId = $assocObjId;
                     }
 
-                    $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-                    $issue = $issueDao->getById($issueId);
+                    $issue = Repo::issue()->get($issueId);
 
                     if (!$issue) {
                         throw new Exception('Cannot load record: invalid issue id.');

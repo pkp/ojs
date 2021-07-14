@@ -137,8 +137,7 @@ class IssueAction
                         }
                     }
                 } elseif (isset($issueId)) {
-                    $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-                    $issue = $issueDao->getById($issueId);
+                    $issue = Repo::issue()->get($issueId);
                     if (isset($issue) && $issue->getPublished()) {
                         $result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $issue->getDatePublished());
                     }
@@ -175,8 +174,7 @@ class IssueAction
                         $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $submission->getDatePublished());
                     }
                 } elseif (isset($issueId)) {
-                    $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-                    $issue = $issueDao->getById($issueId);
+                    $issue = Repo::issue()->get($issueId);
                     if (isset($issue) && $issue->getPublished()) {
                         $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $issue->getDatePublished());
                     }

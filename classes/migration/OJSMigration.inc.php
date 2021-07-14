@@ -33,6 +33,7 @@ class OJSMigration extends Migration
             $table->string('primary_locale', 14);
             $table->smallInteger('enabled')->default(1)->comment('Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)');
             $table->unique(['path'], 'journals_path');
+            $table->bigInteger('current_issue_id')->nullable()->default(null);
         });
 
         // Journal settings.
@@ -82,7 +83,6 @@ class OJSMigration extends Migration
             $table->string('number', 40)->nullable();
             $table->smallInteger('year')->nullable();
             $table->smallInteger('published')->default(0);
-            $table->smallInteger('current')->default(0);
             $table->datetime('date_published')->nullable();
             $table->datetime('date_notified')->nullable();
             $table->datetime('last_modified')->nullable();
@@ -105,7 +105,7 @@ class OJSMigration extends Migration
             $table->string('locale', 14)->default('');
             $table->string('setting_name', 255);
             $table->text('setting_value')->nullable();
-            $table->string('setting_type', 6);
+            $table->string('setting_type', 6)->nullable();
             $table->index(['issue_id'], 'issue_settings_issue_id');
             $table->unique(['issue_id', 'locale', 'setting_name'], 'issue_settings_pkey');
         });
@@ -315,6 +315,11 @@ class OJSMigration extends Migration
             $table->float('amount', 8, 2);
             $table->string('currency_code_alpha', 3)->nullable();
             $table->string('payment_method_plugin_name', 80)->nullable();
+        });
+
+        // Add additional foreign key constraints once all tables have been created
+        Schema::table('journals', function (Blueprint $table) {
+            $table->foreign('current_issue_id')->references('issue_id')->on('issues');
         });
     }
 

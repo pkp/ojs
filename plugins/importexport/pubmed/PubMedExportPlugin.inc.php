@@ -211,7 +211,6 @@ class PubMedExportPlugin extends ImportExportPlugin
         $journalPath = array_shift($args);
 
         $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
         $journal = $journalDao->getByPath($journalPath);
 
@@ -236,7 +235,7 @@ class PubMedExportPlugin extends ImportExportPlugin
                 return;
             case 'issue':
                 $issueId = array_shift($args);
-                $issue = $issueDao->getByBestId($issueId, $journal->getId());
+                $issue = Repo::issue()->getByBestId($issueId, $journal->getId());
                 if ($issue == null) {
                     echo __('plugins.importexport.pubmed.cliError') . "\n";
                     echo __('plugins.importexport.pubmed.export.error.issueNotFound', ['issueId' => $issueId]) . "\n\n";

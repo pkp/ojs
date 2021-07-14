@@ -1,5 +1,7 @@
 <?php
 
+use APP\facades\Repo;
+
 /**
  * @file plugins/generic/webFeed/WebFeedBlockPlugin.inc.php
  *
@@ -93,8 +95,7 @@ class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
     public function getContents($templateMgr, $request = null)
     {
         $journal = $request->getJournal();
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        if ($issueDao->getCurrent($journal->getId(), true)) {
+        if (Repo::issue()->getCurrent($journal->getId(), true)) {
             return parent::getContents($templateMgr, $request);
         }
         return '';

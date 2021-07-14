@@ -16,6 +16,7 @@
 namespace APP\components\forms\publication;
 
 use APP\components\forms\FieldSelectIssue;
+use APP\facades\Repo;
 use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FieldText;
@@ -49,10 +50,12 @@ class IssueEntryForm extends FormComponent
 
         // Issue options
         $issueOptions = [['value' => '', 'label' => '']];
-        $unpublishedIssues = iterator_to_array(\Services::get('issue')->getMany([
-            'contextId' => $publicationContext->getId(),
-            'isPublished' => false,
-        ]));
+
+        $unpublishedCollector = Repo::issue()->getCollector()
+            ->filterByContextIds([$publicationContext->getId()])
+            ->filterByPublished(false);
+        $unpublishedIssues = Repo::issue()->getMany($unpublishedCollector)->toArray();
+
         if (count($unpublishedIssues)) {
             $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
             foreach ($unpublishedIssues as $issue) {
@@ -62,10 +65,11 @@ class IssueEntryForm extends FormComponent
                 ];
             }
         }
-        $publishedIssues = iterator_to_array(\Services::get('issue')->getMany([
-            'contextId' => $publicationContext->getId(),
-            'isPublished' => true,
-        ]));
+        $publishedCollector = Repo::issue()->getCollector()
+            ->filterByContextIds([$publicationContext->getId()])
+            ->filterByPublished(true);
+        $publishedIssues = Repo::issue()->getMany($publishedCollector)->toArray();
+
         if (count($publishedIssues)) {
             $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
             foreach ($publishedIssues as $issue) {

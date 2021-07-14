@@ -224,8 +224,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
 
         // Perform variable replacement for journal, issue, site info
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $issue = $issueDao->getBySubmissionId($submissionId);
+        $issue = Repo::issue()->getBySubmissionId($submissionId);
 
         $journal = $request->getJournal();
         $site = $request->getSite();

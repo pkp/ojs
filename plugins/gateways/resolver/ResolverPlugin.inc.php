@@ -16,6 +16,7 @@
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
 use APP\facades\Repo;
+use APP\issue\Collector;
 use APP\template\TemplateManager;
 
 class ResolverPlugin extends GatewayPlugin
@@ -102,14 +103,28 @@ class ResolverPlugin extends GatewayPlugin
                 $number = array_shift($args);
                 $page = (int) array_shift($args);
 
-                $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-                $issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), $volume, $number, $year);
+                $issueCollector = Repo::issue()->getCollector()
+                    ->filterByContextIds([$journal->getId()]);
+
+                if ($volume !== null) {
+                    $issueCollector->filterByVolumes([$volume]);
+                }
+
+                if ($number !== null) {
+                    $issueCollector->filterByNumbers([$number]);
+                }
+
+                if ($year !== null) {
+                    $issueCollector->filterByYears([$year]);
+                }
+
+                $issues = Repo::issue()->getMany($issueCollector);
 
                 // Ensure only one issue matched, and fetch it.
-                $issue = $issues->next();
-                if (!$issue || $issues->next()) {
+                if ($issues->count() != 1) {
                     break;
                 }
+                $issue = $issues->first();
                 unset($issues);
 
                 $submissions = Repo::submission()->getMany(
@@ -156,18 +171,21 @@ class ResolverPlugin extends GatewayPlugin
     public function exportHoldings()
     {
         $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         $journals = $journalDao->getAll(true);
         $request = Application::get()->getRequest();
         header('content-type: text/plain');
         header('content-disposition: attachment; filename=holdings.txt');
         echo "title\tissn\te_issn\tstart_date\tend_date\tembargo_months\tembargo_days\tjournal_url\tvol_start\tvol_end\tiss_start\tiss_end\n";
         while ($journal = $journals->next()) {
-            $issues = $issueDao->getPublishedIssues($journal->getId());
+            $publishedIssuesCollector = Repo::issue()->getCollector()
+                ->filterByContextIds([$journal->getId()])
+                ->filterByPublished(true)
+                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
+            $issues = Repo::issue()->getMany($publishedIssuesCollector);
             $startDate = $endDate = null;
             $startNumber = $endNumber = null;
             $startVolume = $endVolume = null;
-            while ($issue = $issues->next()) {
+            foreach ($issues as $issue) {
                 $datePublished = $issue->getDatePublished();
                 if ($datePublished !== null) {
                     $datePublished = strtotime($datePublished);

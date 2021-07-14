@@ -99,7 +99,11 @@ class IssueNativeXmlFilter extends NativeExportFilter
         $this->addIdentifiers($doc, $issueNode, $issue);
 
         $issueNode->setAttribute('published', $issue->getPublished());
-        $issueNode->setAttribute('current', $issue->getCurrent());
+
+        $currentIssue = Repo::issue()->getCurrent($issue->getJournalId());
+        $isCurrentIssue = $currentIssue != null && $issue->getId() == $currentIssue->getId();
+
+        $issueNode->setAttribute('current', $isCurrentIssue);
         $issueNode->setAttribute('access_status', $issue->getAccessStatus());
         $issueNode->setAttribute('url_path', $issue->getData('urlPath'));
 

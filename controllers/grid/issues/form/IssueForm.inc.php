@@ -15,6 +15,7 @@
  * @brief Form to create or edit an issue
  */
 
+use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
 use PKP\form\Form;
@@ -56,17 +57,6 @@ class IssueForm extends Form
         $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
         $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
         $this->issue = $issue;
-    }
-
-    /**
-     * Get a list of fields for which localization should be used.
-     *
-     * @return array
-     */
-    public function getLocaleFieldNames()
-    {
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        return $issueDao->getLocaleFieldNames();
     }
 
     /**
@@ -139,8 +129,7 @@ class IssueForm extends Form
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
             } else {
-                $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-                $issue = $issueDao->getByBestId($this->getData('urlPath'), Application::get()->getRequest()->getContext()->getId());
+                $issue = Repo::issue()->getByBestId($this->getData('urlPath'), Application::get()->getRequest()->getContext()->getId());
                 if ($issue &&
                     (!$this->issue || $this->issue->getId() !== $issue->getId())
                 ) {
@@ -223,12 +212,11 @@ class IssueForm extends Form
         $request = Application::get()->getRequest();
         $journal = $request->getJournal();
 
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         if ($this->issue) {
             $isNewIssue = false;
             $issue = $this->issue;
         } else {
-            $issue = $issueDao->newDataObject();
+            $issue = Repo::issue()->newDataObject();
             switch ($journal->getData('publishingMode')) {
                 case \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION:
                 case \APP\journal\Journal::PUBLISHING_MODE_NONE:
@@ -264,8 +252,7 @@ class IssueForm extends Form
         // because the cover name needs an issue id.
         if ($isNewIssue) {
             $issue->setPublished(0);
-            $issue->setCurrent(0);
-            $issueDao->insertObject($issue);
+            Repo::issue()->add($issue);
         }
 
         $locale = AppLocale::getLocale();
@@ -280,13 +267,13 @@ class IssueForm extends Form
             $journal = $request->getJournal();
             $publicFileManager->copyContextFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
             $issue->setCoverImage($newFileName, $locale);
-            $issueDao->updateObject($issue);
+            Repo::issue()->edit($issue, []);
         }
 
         $issue->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
 
         HookRegistry::call('issueform::execute', [$this, $issue]);
 
-        $issueDao->updateObject($issue);
+        Repo::issue()->edit($issue, []);
     }
 }

@@ -13,6 +13,8 @@
  * @brief Class that converts a Publication to a Native XML document.
  */
 
+use APP\facades\Repo;
+
 import('lib.pkp.plugins.importexport.native.filter.PKPPublicationNativeXmlFilter');
 
 class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter
@@ -69,8 +71,7 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter
         // if this is a published submission and not part/subelement of an issue element
         // add issue identification element
         if ($entity->getData('issueId') && !$deployment->getIssue()) {
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /** @var IssueDAO $issueDao */
-            $issue = $issueDao->getById($entity->getData('issueId'));
+            $issue = Repo::issue()->get($entity->getData('issueId'));
             import('plugins.importexport.native.filter.NativeFilterHelper');
             $nativeFilterHelper = new NativeFilterHelper();
             $entityNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));

@@ -25,6 +25,7 @@ define('SUBMISSION_SEARCH_TEST_ARTICLE_FROM_PLUGIN', 2);
 
 use APP\journal\Journal;
 
+use Illuminate\Support\Facades\App;
 use PKP\core\PKPRouter;
 
 class ArticleSearchTest extends PKPTestCase
@@ -43,7 +44,7 @@ class ArticleSearchTest extends PKPTestCase
         $mockedDaos = parent::getMockedDAOs();
         $mockedDaos += [
             'ArticleSearchDAO',
-            'IssueDAO', 'JournalDAO', 'SectionDAO'
+            'JournalDAO', 'SectionDAO'
         ];
         return $mockedDaos;
     }
@@ -58,7 +59,6 @@ class ArticleSearchTest extends PKPTestCase
 
         // Prepare the mock environment for this test.
         $this->registerMockArticleSearchDAO();
-        $this->registerMockIssueDAO();
         $this->registerMockJournalDAO();
         $this->registerMockSectionDAO();
 
@@ -76,6 +76,8 @@ class ArticleSearchTest extends PKPTestCase
     {
         HookRegistry::resetCalledHooks();
         parent::tearDown();
+        // See: http://docs.mockery.io/en/latest/reference/phpunit_integration.html
+        Mockery::close();
     }
 
 
@@ -109,7 +111,13 @@ class ArticleSearchTest extends PKPTestCase
 
         // Make sure that articles from unpublished issues will
         // be filtered out.
-        $this->registerMockIssueDAO(false);
+        $issue = new \APP\issue\Issue();
+        $issue->setPublished(false);
+
+        App::instance(\APP\issue\DAO::class, Mockery::mock(\APP\issue\DAO::class, function ($mock) use ($issue) {
+            $mock->shouldReceive('get')->withAnyArgs()->andReturn($issue);
+        }));
+
         $this->registerMockArticleSearchDAO(); // This is necessary to instantiate a fresh iterator.
         $keywords = [null => 'test'];
         $searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
@@ -243,29 +251,6 @@ class ArticleSearchTest extends PKPTestCase
         DAORegistry::registerDAO('ArticleSearchDAO', $articleSearchDAO);
     }
 
-    /**
-     * Mock and register an IssueDAO as a test
-     * back end for the ArticleSearch class.
-     */
-    private function registerMockIssueDAO($published = true)
-    {
-        // Mock an IssueDAO.
-        $issueDAO = $this->getMockBuilder(IssueDAO::class)
-            ->setMethods(['getById'])
-            ->getMock();
-
-        // Mock an issue.
-        $issue = $issueDAO->newDataObject();
-        $issue->setPublished($published);
-
-        // Mock the getById() method.
-        $issueDAO->expects($this->any())
-            ->method('getById')
-            ->will($this->returnValue($issue));
-
-        // Register the mock DAO.
-        DAORegistry::registerDAO('IssueDAO', $issueDAO);
-    }
 
     /**
      * Mock and register an JournalDAO as a test

@@ -13,6 +13,8 @@
  * @brief Class that converts an Article to a DOAJ JSON string.
  */
 
+use APP\facades\Repo;
+
 import('lib.pkp.classes.plugins.importexport.PKPImportExportFilter');
 
 
@@ -64,8 +66,8 @@ class DOAJJsonFilter extends PKPImportExportFilter
         if ($cache->isCached('issues', $issueId)) {
             $issue = $cache->get('issues', $issueId);
         } else {
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-            $issue = $issueDao->getById($issueId, $context->getId());
+            $issue = Repo::issue()->get($issueId);
+            $issue = $issue->getJournalId() == $context->getId() ? $issue : null;
             if ($issue) {
                 $cache->add($issue, null);
             }

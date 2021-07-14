@@ -7,6 +7,9 @@
 			"readOnly": true,
 			"apiSummary": true
 		},
+		"accessStatus": {
+			"type": "integer"
+		},
 		"articles": {
 			"type": "array",
 			"readOnly": true,
@@ -65,9 +68,9 @@
 			"readOnly": true,
 			"apiSummary": true
 		},
-		"isCurrent": {
-			"type": "boolean",
-			"readOnly": true
+		"journalId": {
+			"type": "integer",
+			"apiSummary": true
 		},
 		"lastModified": {
 			"type": "string",
@@ -77,6 +80,19 @@
 		},
 		"number": {
 			"type": "string",
+			"apiSummary": true
+		},
+		"openAccessDate": {
+			"type": "string",
+			"validation": [
+				"date:Y-m-d H:i:s"
+			]
+		},
+		"originalStyleFileName": {
+		  "type": "string"
+		},
+		"published": {
+			"type": "boolean",
 			"apiSummary": true
 		},
 		"publishedUrl": {
@@ -92,6 +108,21 @@
 			"items": {
 				"$ref": "#/definitions/SectionSummary"
 			}
+		},
+		"showNumber": {
+		  "type": "boolean"
+		},
+		"showTitle": {
+		  	"type": "boolean"
+		},
+		"showVolume": {
+			"type": "boolean"
+		},
+		"showYear": {
+			"type": "boolean"
+		},
+		"styleFileName": {
+			"type": "string"
 		},
 		"title": {
 			"type": "string",

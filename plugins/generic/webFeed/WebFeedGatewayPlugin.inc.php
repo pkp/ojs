@@ -106,8 +106,7 @@ class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
         }
 
         // Make sure there's a current issue for this journal
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $issue = $issueDao->getCurrent($journal->getId(), true);
+        $issue = Repo::issue()->getCurrent($journal->getId(), true);
         if (!$issue) {
             return false;
         }

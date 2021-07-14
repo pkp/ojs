@@ -18,6 +18,7 @@ namespace APP\tasks;
 use APP\core\Application;
 use APP\facades\Repo;
 
+use APP\issue\Collector;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\mail\MailTemplate;
@@ -97,10 +98,13 @@ class OpenAccessNotification extends ScheduledTask
             $curDay = $curDate['day'];
 
             // Check if the current date corresponds to the open access date of any issues
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-            $issues = $issueDao->getPublishedIssues($journal->getId());
+            $publishedIssuesCollector = Repo::issue()->getCollector()
+                ->filterByContextIds([$journal->getId()])
+                ->filterByPublished(true)
+                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
+            $issues = Repo::issue()->getMany($publishedIssuesCollector);
 
-            while ($issue = $issues->next()) {
+            foreach ($issues as $issue) {
                 $accessStatus = $issue->getAccessStatus();
                 $openAccessDate = $issue->getOpenAccessDate();
 

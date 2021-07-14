@@ -25,6 +25,10 @@
 				"in:issue,submission"
 			]
 		},
+		"currentIssueId": {
+			"type": "integer",
+			"apiSummary": true
+		},
 		"delayedOpenAccessDuration": {
 			"type": "integer",
 			"validation": [

@@ -15,6 +15,8 @@
 
 import('classes.controllers.grid.issues.IssueGridHandler');
 
+use APP\facades\Repo;
+use APP\issue\Collector;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 
@@ -57,8 +59,11 @@ class FutureIssueGridHandler extends IssueGridHandler
     protected function loadData($request, $filter)
     {
         $journal = $request->getJournal();
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        return $issueDao->getUnpublishedIssues($journal->getId());
+        $unpublishedIssuesCollector = Repo::issue()->getCollector()
+            ->filterByContextIds([$journal->getId()])
+            ->filterByPublished(false)
+            ->orderBy(Collector::ORDERBY_UNPUBLISHED_ISSUES);
+        return Repo::issue()->getMany($unpublishedIssuesCollector);
     }
 
     /**

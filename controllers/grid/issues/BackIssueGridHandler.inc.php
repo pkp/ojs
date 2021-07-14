@@ -13,6 +13,8 @@
  * @brief Handle issues grid requests.
  */
 
+use APP\facades\Repo;
+use APP\issue\Collector;
 use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\security\Role;
@@ -74,8 +76,7 @@ class BackIssueGridHandler extends IssueGridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $issueDao->moveCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId(), $newSequence);
+        Repo::issue()->dao->moveCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId(), $newSequence);
     }
 
     /**
@@ -83,13 +84,13 @@ class BackIssueGridHandler extends IssueGridHandler
      */
     public function getDataElementSequence($gridDataElement)
     {
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $customOrder = $issueDao->getCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId());
+        $customOrder = Repo::issue()->dao->getCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId());
         if ($customOrder !== null) {
             return $customOrder;
         }
 
-        if ($gridDataElement->getCurrent()) {
+        $currentIssue = Repo::issue()->getCurrent($gridDataElement->getJournalId());
+        if ($currentIssue != null && $gridDataElement->getId() == $currentIssue->getId()) {
             return 0;
         }
         return $gridDataElement->getDatePublished();
@@ -109,8 +110,11 @@ class BackIssueGridHandler extends IssueGridHandler
     protected function loadData($request, $filter)
     {
         $journal = $request->getJournal();
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        return $issueDao->getPublishedIssues($journal->getId());
+        $publishedIssuesCollector = Repo::issue()->getCollector()
+            ->filterByContextIds([$journal->getId()])
+            ->filterByPublished(true)
+            ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
+        return Repo::issue()->getMany($publishedIssuesCollector)->toArray();
     }
 
     /**

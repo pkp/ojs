@@ -13,6 +13,7 @@
  * @brief Handle issue grid row requests.
  */
 
+use APP\facades\Repo;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\OpenWindowAction;
@@ -102,7 +103,9 @@ class IssueGridRow extends GridRow
                 );
             }
 
-            if ($issue->getDatePublished() && !$issue->getCurrent()) {
+            $currentIssue = Repo::issue()->getCurrent($issue->getJournalId());
+            $isCurrentIssue = $currentIssue != null && $issue->getId() == $currentIssue->getId();
+            if ($issue->getDatePublished() && !$isCurrentIssue) {
                 $this->addAction(
                     new LinkAction(
                         'setCurrentIssue',

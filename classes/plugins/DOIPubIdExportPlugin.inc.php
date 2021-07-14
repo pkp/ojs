@@ -166,8 +166,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     public function getUnregisteredIssues($context)
     {
         // Retrieve all issues that have not yet been registered.
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $issuesFactory = $issueDao->getExportable(
+        $issuesFactory = Repo::issue()->dao->getExportable(
             $context->getId(),
             $this->getPubIdType(),
             $this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI,
@@ -237,9 +236,9 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     public function getPublishedIssues($issueIds, $context)
     {
         $publishedIssues = [];
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         foreach ($issueIds as $issueId) {
-            $publishedIssue = $issueDao->getById($issueId, $context->getId());
+            $publishedIssue = Repo::issue()->get($issueId);
+            $publishedIssue = $publishedIssue->getJournalId() == $context->getId() ? $publishedIssue : null;
             if ($publishedIssue && $publishedIssue->getStoredPubId('doi')) {
                 $publishedIssues[] = $publishedIssue;
             }

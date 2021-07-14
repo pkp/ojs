@@ -16,6 +16,7 @@
 import('lib.pkp.controllers.tab.pubIds.form.PKPPublicIdentifiersForm');
 
 use APP\article\ArticleGalley;
+use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
 use APP\template\TemplateManager;
@@ -60,8 +61,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm
         parent::execute(...$functionArgs);
         $pubObject = $this->getPubObject();
         if ($pubObject instanceof Issue) {
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-            $issueDao->updateObject($pubObject);
+            Repo::issue()->edit($pubObject, []);
         }
     }
 
