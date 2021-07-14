@@ -25,7 +25,7 @@ use Firebase\JWT\JWT;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\submission\PKPSubmission;
 
-use PKP\submission\SubmissionFile;
+use PKP\submissionFile\SubmissionFile;
 
 class ArticleHandler extends Handler
 {

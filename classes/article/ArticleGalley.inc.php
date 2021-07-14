@@ -19,7 +19,7 @@ namespace APP\article;
 
 use APP\core\Application;
 
-use APP\core\Services;
+use APP\facades\Repo;
 use APP\i18n\AppLocale;
 use PKP\submission\Representation;
 
@@ -135,8 +135,10 @@ class ArticleGalley extends Representation
     public function getFile()
     {
         if (!isset($this->_submissionFile)) {
-            $this->_submissionFile = Services::get('submissionFile')->get($this->getData('submissionFileId'));
+            $this->_submissionFile = Repo::submissionFiles()
+                ->get($this->getData('submissionFileId'));
         }
+
         return $this->_submissionFile;
     }
 
