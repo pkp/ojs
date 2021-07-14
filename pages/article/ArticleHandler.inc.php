@@ -158,6 +158,11 @@ class ArticleHandler extends Handler
                 if ($galley->getBestGalleyId() == $galleyId) {
                     $this->galley = $galley;
                     break;
+
+                // In some cases, a URL to a galley may use the ID when it should use
+                // the urlPath. Redirect to the galley's correct URL.
+                } elseif (ctype_digit($galleyId) && $galley->getId() == $galleyId) {
+                    $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$submission->getBestId(), $galley->getBestGalleyId()]);
                 }
             }
             // Redirect to the most recent version of the submission if the request
