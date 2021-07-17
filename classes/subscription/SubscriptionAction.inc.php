@@ -16,9 +16,9 @@
 namespace APP\subscription;
 
 use APP\notification\NotificationManager;
+use APP\facades\Repo;
 use PKP\db\DAORegistry;
 use PKP\mail\MailTemplate;
-
 use PKP\notification\PKPNotification;
 
 class SubscriptionAction
@@ -57,8 +57,7 @@ class SubscriptionAction
             return false;
         }
 
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-        $user = $userDao->getById($subscription->getUserId());
+        $user = Repo::user()->get($subscription->getUserId());
 
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
         $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId());

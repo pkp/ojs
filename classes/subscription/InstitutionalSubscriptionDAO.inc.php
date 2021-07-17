@@ -439,8 +439,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      */
     public function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null)
     {
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-        $params = array_merge($userDao->getFetchParameters(), [(int) $journalId]);
+        $params = [(int) $journalId];
         $ipRangeSql1 = $ipRangeSql2 = '';
         $searchSql = $this->_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
 
@@ -489,13 +488,11 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 
 
         $result = $this->retrieveRange(
-            $sql = 'SELECT DISTINCT s.*, iss.institution_name, iss.mailing_address, iss.domain,
-				' . $userDao->getFetchColumns() . '
+            $sql = 'SELECT DISTINCT s.*, iss.institution_name, iss.mailing_address, iss.domain
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (s.user_id = u.user_id)
 				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-				' . $userDao->getFetchJoins() . '
 				' . $ipRangeSql1 . '
 			WHERE	st.institutional = 1
 				' . $ipRangeSql2 . '
