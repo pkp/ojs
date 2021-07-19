@@ -16,9 +16,10 @@
 namespace APP\services;
 
 use APP\core\Application;
+use PKP\core\FileService;
 use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
 
+use PKP\plugins\HookRegistry;
 use PKP\search\SubmissionSearch;
 
 class SubmissionFileService extends \PKP\services\PKPSubmissionFileService
@@ -26,8 +27,9 @@ class SubmissionFileService extends \PKP\services\PKPSubmissionFileService
     /**
      * Initialize hooks for extending PKPSubmissionFileService
      */
-    public function __construct()
+    public function __construct(FileService $fileService)
     {
+        parent::__construct($fileService);
         HookRegistry::register('SubmissionFile::delete::before', [$this, 'deleteSubmissionFile']);
     }
 

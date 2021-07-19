@@ -22,6 +22,8 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\JWT;
+use Illuminate\Support\Facades\App;
+use PKP\core\FileService;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\submission\PKPSubmission;
 
@@ -461,16 +463,17 @@ class ArticleHandler extends Handler
 
             if (!HookRegistry::call('ArticleHandler::download', [$this->article, &$this->galley, &$this->fileId])) {
                 $submissionFile = Services::get('submissionFile')->get($this->fileId);
+                $fileService = App::make(FileService::class);
 
-                if (!Services::get('file')->fs->has($submissionFile->getData('path'))) {
+                if (!$fileService->fs->has($submissionFile->getData('path'))) {
                     $request->getDispatcher()->handle404();
                 }
 
-                $filename = Services::get('file')->formatFilename($submissionFile->getData('path'), $submissionFile->getLocalizedData('name'));
+                $filename = $fileService->formatFilename($submissionFile->getData('path'), $submissionFile->getLocalizedData('name'));
 
                 $returner = true;
                 HookRegistry::call('FileManager::downloadFileFinished', [&$returner]);
-                Services::get('file')->download($submissionFile->getData('fileId'), $filename);
+                $fileService->download($submissionFile->getData('fileId'), $filename);
             }
         } else {
             header('HTTP/1.0 403 Forbidden');

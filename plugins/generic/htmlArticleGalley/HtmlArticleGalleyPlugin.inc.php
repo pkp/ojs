@@ -19,8 +19,9 @@ use APP\file\PublicFileManager;
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 use APP\template\TemplateManager;
+use Illuminate\Support\Facades\App;
+use PKP\core\FileService;
 use PKP\plugins\HookRegistry;
-
 use PKP\submission\SubmissionFile;
 
 class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
@@ -154,7 +155,8 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
     {
         $submissionFile = $galley->getFile();
         $submissionId = $submissionFile->getData('submissionId');
-        $contents = Services::get('file')->fs->read($submissionFile->getData('path'));
+        $fileService = App::make(FileService::class);
+        $contents = $fileService->fs->read($submissionFile->getData('path'));
 
         // Replace media file references
         $embeddableFilesIterator = Services::get('submissionFile')->getMany([
