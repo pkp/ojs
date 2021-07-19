@@ -11,12 +11,12 @@
     "fix": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/classes/VueRegistry.js && php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php_cs --allow-risky=yes"
   },
   "dependencies": {
-    "@tinymce/tinymce-vue": "^1.1.0",
+    "@tinymce/tinymce-vue": "^3",
     "chart.js": "^2.9.4",
     "clone-deep": "^4.0.1",
     "debounce": "^1.2.0",
     "moment": "^2.27.0",
-    "tinymce": "^5.7.0",
+    "tinymce": "^5.8.2",
     "v-tooltip": "^2.0.3",
     "vue": "^2.6.12",
     "vue-autosuggest": "^2.2.0",
@@ -29,14 +29,14 @@
   },
   "devDependencies": {
     "@foreachbe/cypress-tinymce": "^1.0.0",
-    "@vue/cli-plugin-babel": "^4.5.9",
-    "@vue/cli-plugin-eslint": "^4.5.9",
-    "@vue/cli-service": "^4.5.9",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-eslint": "^3.1.1",
+    "@vue/cli-service": "^4.5.13",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.1.0",
     "cypress": "^4.12.1",
     "cypress-failed-log": "^2.7.0",
-    "cypress-file-upload": "^3.5.1",
+    "cypress-file-upload": "^5.0.8",
     "cypress-wait-until": "^1.7.1",
     "element-resize-event": "^3.0.3",
     "eslint": "^5.16.0",
@@ -45,7 +45,7 @@
     "husky": "^4.3.8",
     "less": "^3.12.2",
     "less-loader": "^4.1.0",
-    "lint-staged": "^8.2.1",
+    "lint-staged": "^11.0.1",
     "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
