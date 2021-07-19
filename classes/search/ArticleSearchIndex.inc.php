@@ -15,7 +15,6 @@
 
 namespace APP\search;
 
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\i18n\AppLocale;
 use PKP\config\Config;
