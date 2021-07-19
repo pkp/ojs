@@ -19,6 +19,7 @@ use APP\core\Services;
 use APP\facades\Repo;
 use APP\i18n\AppLocale;
 use PKP\config\Config;
+use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
 use PKP\search\SearchFileParser;
@@ -173,22 +174,21 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 $innerCollector = Repo::submissionFiles()
                     ->getCollector()
                     ->filterByAssoc(
-                        [ASSOC_TYPE_SUBMISSION_FILE],
+                        [PKPApplication::ASSOC_TYPE_SUBMISSION_FILE],
                         [$submissionFile->getId()]
                     )
                     ->filterBySubmissionIds([$article->getId()])
                     ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
                     ->filterByIncludeDependentFiles(true);
-    
-                $dependentFilesIterator = Services::get('submissionFile')->getMany([
-                    'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
-                    'assocIds' => [$submissionFile->getId()],
-                    'submissionIds' => [$article->getId()],
-                    'fileStages' => [SubmissionFile::SUBMISSION_FILE_DEPENDENT],
-                    'includeDependentFiles' => true,
-                ]);
+
+                $dependentFilesIterator = Repo::submissionFiles()
+                    ->getMany($innerCollector);
                 foreach ($dependentFilesIterator as $dependentFile) {
-                    $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $dependentFile);
+                    $this->submissionFileChanged(
+                        $article->getId(),
+                        SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE,
+                        $dependentFile
+                    );
                 }
             }
         }
