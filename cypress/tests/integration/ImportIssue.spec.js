@@ -27,8 +27,8 @@ describe('Data suite tests', function() {
 
 		cy.wait(250);
 		cy.fixture('export-issues.xml', 'utf8').then(fileContent => {
-			cy.get('input[type=file]').upload(
-				{fileContent, 'fileName': 'uploadedFile.xml', 'mimeType': 'text/xml', 'encoding': 'utf8'},
+			cy.get('input[type=file]').attachFile(
+				{fileContent, 'filePath': 'uploadedFile.xml', 'mimeType': 'text/xml', 'encoding': 'utf8'},
 			);
 		});
 
