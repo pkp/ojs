@@ -72,7 +72,7 @@ class ArticleSearchIndexTest extends PKPTestCase
         HookRegistry::register('ArticleSearchIndex::submissionFileChanged', [$this, 'callbackUpdateFileIndex']);
 
         // Simulate updating an article file via hook.
-        import('lib.pkp.classes.submission.SubmissionFile');
+        import('lib.pkp.classes.submissionFile.SubmissionFile');
         $submissionFile = new SubmissionFile();
         $submissionFile->setId(2);
         $articleSearchIndex = Application::getSubmissionSearchIndex();
