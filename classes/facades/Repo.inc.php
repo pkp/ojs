@@ -27,4 +27,9 @@ class Repo extends \PKP\facades\Repo
     {
         return App::make(\APP\submission\Repository::class);
     }
+
+    public static function articleGalley(): \APP\articleGalley\Repository
+    {
+        return App::make(\APP\articleGalley\Repository::class);
+    }
 }
